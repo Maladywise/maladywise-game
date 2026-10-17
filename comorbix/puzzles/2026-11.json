@@ -1,0 +1,942 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 16,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Blood thinners",
+    "level": 2,
+    "words": [
+     "WARFARIN",
+     "HEPARIN",
+     "APIXABAN",
+     "RIVAROXABAN"
+    ]
+   },
+   {
+    "label": "Newborn words",
+    "level": 3,
+    "words": [
+     "APGAR",
+     "VERNIX",
+     "LANUGO",
+     "MECONIUM"
+    ]
+   },
+   {
+    "label": "___ pressure",
+    "level": 4,
+    "words": [
+     "BLOOD",
+     "PEER",
+     "TYRE",
+     "WATER"
+    ]
+   },
+   {
+    "label": "Body parts that are verbs",
+    "level": 4,
+    "words": [
+     "ELBOW",
+     "SHOULDER",
+     "STOMACH",
+     "FOOT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "number": 17,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Facial features",
+    "level": 1,
+    "words": [
+     "NOSE",
+     "CHIN",
+     "CHEEK",
+     "BROW"
+    ]
+   },
+   {
+    "label": "Painkillers",
+    "level": 1,
+    "words": [
+     "PARACETAMOL",
+     "IBUPROFEN",
+     "CODEINE",
+     "ASPIRIN"
+    ]
+   },
+   {
+    "label": "Types of arthritis",
+    "level": 2,
+    "words": [
+     "GOUT",
+     "PSORIATIC",
+     "RHEUMATOID",
+     "OSTEO"
+    ]
+   },
+   {
+    "label": "Ear and balance problems",
+    "level": 2,
+    "words": [
+     "TINNITUS",
+     "VERTIGO",
+     "OTITIS",
+     "GLUE EAR"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 18,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Pain words",
+    "level": 1,
+    "words": [
+     "ACHE",
+     "STING",
+     "THROB",
+     "CRAMP"
+    ]
+   },
+   {
+    "label": "Types of teeth",
+    "level": 1,
+    "words": [
+     "INCISOR",
+     "CANINE",
+     "PREMOLAR",
+     "MOLAR"
+    ]
+   },
+   {
+    "label": "Asthma medicines",
+    "level": 2,
+    "words": [
+     "SALBUTAMOL",
+     "BUDESONIDE",
+     "FLUTICASONE",
+     "MONTELUKAST"
+    ]
+   },
+   {
+    "label": "Types of joint",
+    "level": 2,
+    "words": [
+     "HINGE",
+     "PIVOT",
+     "SADDLE",
+     "BALL AND SOCKET"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 19,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Vital signs",
+    "level": 1,
+    "words": [
+     "PULSE",
+     "TEMPERATURE",
+     "SATS",
+     "RESP RATE"
+    ]
+   },
+   {
+    "label": "Anticonvulsants",
+    "level": 2,
+    "words": [
+     "VALPROATE",
+     "LEVETIRACETAM",
+     "LAMOTRIGINE",
+     "CARBAMAZEPINE"
+    ]
+   },
+   {
+    "label": "Hand conditions",
+    "level": 2,
+    "words": [
+     "CARPAL TUNNEL",
+     "TRIGGER FINGER",
+     "DUPUYTREN",
+     "DE QUERVAIN"
+    ]
+   },
+   {
+    "label": "Lung volumes",
+    "level": 3,
+    "words": [
+     "TIDAL",
+     "RESIDUAL",
+     "VITAL",
+     "FEV1"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 20,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Hormones",
+    "level": 1,
+    "words": [
+     "INSULIN",
+     "CORTISOL",
+     "ADRENALINE",
+     "THYROXINE"
+    ]
+   },
+   {
+    "label": "Beta blockers",
+    "level": 2,
+    "words": [
+     "METOPROLOL",
+     "ATENOLOL",
+     "BISOPROLOL",
+     "PROPRANOLOL"
+    ]
+   },
+   {
+    "label": "Wrist bones",
+    "level": 2,
+    "words": [
+     "SCAPHOID",
+     "LUNATE",
+     "HAMATE",
+     "PISIFORM"
+    ]
+   },
+   {
+    "label": "Bone cells",
+    "level": 3,
+    "words": [
+     "OSTEOBLAST",
+     "OSTEOCLAST",
+     "OSTEOCYTE",
+     "CHONDROCYTE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 21,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Rotator cuff",
+    "level": 2,
+    "words": [
+     "SUPRASPINATUS",
+     "INFRASPINATUS",
+     "TERES MINOR",
+     "SUBSCAPULARIS"
+    ]
+   },
+   {
+    "label": "Pituitary hormones",
+    "level": 3,
+    "words": [
+     "GH",
+     "TSH",
+     "ACTH",
+     "PROLACTIN"
+    ]
+   },
+   {
+    "label": "Signs of appendicitis",
+    "level": 3,
+    "words": [
+     "ROVSING",
+     "PSOAS",
+     "OBTURATOR",
+     "MCBURNEY"
+    ]
+   },
+   {
+    "label": "Named after animals (Latin/Greek)",
+    "level": 4,
+    "words": [
+     "LUPUS",
+     "CANCER",
+     "MUSCLE",
+     "HIPPOCAMPUS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 22,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Skin lesions",
+    "level": 2,
+    "words": [
+     "MACULE",
+     "PAPULE",
+     "VESICLE",
+     "PUSTULE"
+    ]
+   },
+   {
+    "label": "___ attack",
+    "level": 3,
+    "words": [
+     "HEART",
+     "PANIC",
+     "ASTHMA",
+     "DROP"
+    ]
+   },
+   {
+    "label": "___ cell",
+    "level": 3,
+    "words": [
+     "STEM",
+     "SICKLE",
+     "SQUAMOUS",
+     "KILLER"
+    ]
+   },
+   {
+    "label": "Cold ___",
+    "level": 4,
+    "words": [
+     "FEET",
+     "SHOULDER",
+     "SORE",
+     "SWEAT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 23,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Foot problems",
+    "level": 2,
+    "words": [
+     "BUNION",
+     "CORN",
+     "HAMMER TOE",
+     "PLANTAR FASCIITIS"
+    ]
+   },
+   {
+    "label": "Planes of the body",
+    "level": 3,
+    "words": [
+     "SAGITTAL",
+     "CORONAL",
+     "TRANSVERSE",
+     "AXIAL"
+    ]
+   },
+   {
+    "label": "Named after myths",
+    "level": 4,
+    "words": [
+     "ATLAS",
+     "ACHILLES",
+     "MORPHINE",
+     "HYGIENE"
+    ]
+   },
+   {
+    "label": "Hidden body part",
+    "level": 4,
+    "words": [
+     "CHINESE",
+     "SHINDIG",
+     "BEARDED",
+     "WHIPLASH"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 24,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Parts of the airway",
+    "level": 1,
+    "words": [
+     "TRACHEA",
+     "BRONCHI",
+     "ALVEOLI",
+     "LARYNX"
+    ]
+   },
+   {
+    "label": "Blood groups",
+    "level": 1,
+    "words": [
+     "A",
+     "B",
+     "AB",
+     "O"
+    ]
+   },
+   {
+    "label": "White blood cells",
+    "level": 2,
+    "words": [
+     "NEUTROPHIL",
+     "EOSINOPHIL",
+     "BASOPHIL",
+     "MONOCYTE"
+    ]
+   },
+   {
+    "label": "Bacterial shapes",
+    "level": 2,
+    "words": [
+     "COCCI",
+     "BACILLI",
+     "SPIROCHAETES",
+     "VIBRIOS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 25,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Imaging",
+    "level": 1,
+    "words": [
+     "X-RAY",
+     "CT",
+     "MRI",
+     "ULTRASOUND"
+    ]
+   },
+   {
+    "label": "Cancer types",
+    "level": 1,
+    "words": [
+     "LYMPHOMA",
+     "MELANOMA",
+     "SARCOMA",
+     "LEUKAEMIA"
+    ]
+   },
+   {
+    "label": "DNA bases",
+    "level": 2,
+    "words": [
+     "ADENINE",
+     "GUANINE",
+     "CYTOSINE",
+     "THYMINE"
+    ]
+   },
+   {
+    "label": "Eye conditions",
+    "level": 2,
+    "words": [
+     "GLAUCOMA",
+     "CATARACT",
+     "CONJUNCTIVITIS",
+     "KERATOCONUS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 26,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Hospital staff",
+    "level": 1,
+    "words": [
+     "NURSE",
+     "SURGEON",
+     "PHARMACIST",
+     "PARAMEDIC"
+    ]
+   },
+   {
+    "label": "Opioids",
+    "level": 2,
+    "words": [
+     "MORPHINE",
+     "OXYCODONE",
+     "FENTANYL",
+     "TRAMADOL"
+    ]
+   },
+   {
+    "label": "Types of fracture",
+    "level": 2,
+    "words": [
+     "GREENSTICK",
+     "COMMINUTED",
+     "SPIRAL",
+     "STRESS"
+    ]
+   },
+   {
+    "label": "Food poisoning bugs",
+    "level": 3,
+    "words": [
+     "SALMONELLA",
+     "LISTERIA",
+     "CAMPYLOBACTER",
+     "NOROVIRUS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 27,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Body fluids",
+    "level": 1,
+    "words": [
+     "SALIVA",
+     "SWEAT",
+     "TEARS",
+     "BILE"
+    ]
+   },
+   {
+    "label": "Cranial nerves",
+    "level": 2,
+    "words": [
+     "VAGUS",
+     "FACIAL",
+     "OPTIC",
+     "TRIGEMINAL"
+    ]
+   },
+   {
+    "label": "Facial bones",
+    "level": 2,
+    "words": [
+     "MAXILLA",
+     "MANDIBLE",
+     "ZYGOMA",
+     "NASAL"
+    ]
+   },
+   {
+    "label": "Infections named after places",
+    "level": 3,
+    "words": [
+     "LYME",
+     "EBOLA",
+     "ZIKA",
+     "MARBURG"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "number": 28,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Heart rhythm problems",
+    "level": 2,
+    "words": [
+     "FIBRILLATION",
+     "FLUTTER",
+     "BRADYCARDIA",
+     "ECTOPICS"
+    ]
+   },
+   {
+    "label": "Pregnancy structures",
+    "level": 3,
+    "words": [
+     "PLACENTA",
+     "AMNION",
+     "CHORION",
+     "CORD"
+    ]
+   },
+   {
+    "label": "Tumour markers",
+    "level": 3,
+    "words": [
+     "PSA",
+     "CEA",
+     "CA-125",
+     "AFP"
+    ]
+   },
+   {
+    "label": "Words for courage",
+    "level": 4,
+    "words": [
+     "GUTS",
+     "SPINE",
+     "NERVE",
+     "BACKBONE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 29,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Diabetes medicines",
+    "level": 2,
+    "words": [
+     "METFORMIN",
+     "GLICLAZIDE",
+     "EMPAGLIFLOZIN",
+     "SITAGLIPTIN"
+    ]
+   },
+   {
+    "label": "Named fractures",
+    "level": 3,
+    "words": [
+     "COLLES",
+     "SMITH",
+     "BENNETT",
+     "MONTEGGIA"
+    ]
+   },
+   {
+    "label": "Checked in spinal fluid",
+    "level": 3,
+    "words": [
+     "PROTEIN",
+     "GLUCOSE",
+     "CELL COUNT",
+     "OPENING PRESSURE"
+    ]
+   },
+   {
+    "label": "Can be broken",
+    "level": 4,
+    "words": [
+     "HEART",
+     "BONE",
+     "RECORD",
+     "WIND"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 30,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Named diseases",
+    "level": 2,
+    "words": [
+     "CROHN",
+     "ADDISON",
+     "GRAVES",
+     "PARKINSON"
+    ]
+   },
+   {
+    "label": "Antidotes",
+    "level": 3,
+    "words": [
+     "NALOXONE",
+     "FLUMAZENIL",
+     "ACETYLCYSTEINE",
+     "ATROPINE"
+    ]
+   },
+   {
+    "label": "Findings named after food",
+    "level": 4,
+    "words": [
+     "STRAWBERRY",
+     "APPLE CORE",
+     "CAULIFLOWER",
+     "REDCURRANT"
+    ]
+   },
+   {
+    "label": "Things with a 'bridge'",
+    "level": 4,
+    "words": [
+     "NOSE",
+     "DENTAL",
+     "GLASSES",
+     "GUITAR"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 31,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Blood vessels",
+    "level": 1,
+    "words": [
+     "ARTERY",
+     "VEIN",
+     "CAPILLARY",
+     "ARTERIOLE"
+    ]
+   },
+   {
+    "label": "Heart valves",
+    "level": 1,
+    "words": [
+     "MITRAL",
+     "AORTIC",
+     "TRICUSPID",
+     "PULMONARY"
+    ]
+   },
+   {
+    "label": "Anatomical directions",
+    "level": 2,
+    "words": [
+     "SUPERIOR",
+     "INFERIOR",
+     "MEDIAL",
+     "LATERAL"
+    ]
+   },
+   {
+    "label": "Organelles",
+    "level": 2,
+    "words": [
+     "MITOCHONDRIA",
+     "RIBOSOME",
+     "NUCLEUS",
+     "LYSOSOME"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 32,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Body noises",
+    "level": 1,
+    "words": [
+     "HICCUP",
+     "SNEEZE",
+     "YAWN",
+     "BURP"
+    ]
+   },
+   {
+    "label": "Types of headache",
+    "level": 1,
+    "words": [
+     "TENSION",
+     "MIGRAINE",
+     "CLUSTER",
+     "SINUS"
+    ]
+   },
+   {
+    "label": "Childhood vaccines protect against",
+    "level": 2,
+    "words": [
+     "TETANUS",
+     "POLIO",
+     "PERTUSSIS",
+     "DIPHTHERIA"
+    ]
+   },
+   {
+    "label": "Knee structures",
+    "level": 2,
+    "words": [
+     "ACL",
+     "PCL",
+     "MCL",
+     "MENISCUS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 33,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "First-aid kit",
+    "level": 1,
+    "words": [
+     "BANDAGE",
+     "PLASTER",
+     "GAUZE",
+     "SPLINT"
+    ]
+   },
+   {
+    "label": "Childhood illnesses",
+    "level": 2,
+    "words": [
+     "CROUP",
+     "BRONCHIOLITIS",
+     "COLIC",
+     "HAND FOOT MOUTH"
+    ]
+   },
+   {
+    "label": "Gut conditions",
+    "level": 2,
+    "words": [
+     "COELIAC",
+     "COLITIS",
+     "GASTRITIS",
+     "DIVERTICULITIS"
+    ]
+   },
+   {
+    "label": "Antivirals",
+    "level": 3,
+    "words": [
+     "ACICLOVIR",
+     "OSELTAMIVIR",
+     "VALACICLOVIR",
+     "TENOFOVIR"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 34,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Allergens",
+    "level": 1,
+    "words": [
+     "PEANUT",
+     "POLLEN",
+     "LATEX",
+     "DUST MITE"
+    ]
+   },
+   {
+    "label": "Places to feel a pulse",
+    "level": 2,
+    "words": [
+     "RADIAL",
+     "CAROTID",
+     "FEMORAL",
+     "POPLITEAL"
+    ]
+   },
+   {
+    "label": "Full blood count",
+    "level": 2,
+    "words": [
+     "HAEMOGLOBIN",
+     "PLATELETS",
+     "MCV",
+     "WHITE CELLS"
+    ]
+   },
+   {
+    "label": "Medical pioneers",
+    "level": 3,
+    "words": [
+     "FLEMING",
+     "JENNER",
+     "LISTER",
+     "SNOW"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 35,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Types of shock",
+    "level": 2,
+    "words": [
+     "SEPTIC",
+     "CARDIOGENIC",
+     "HYPOVOLAEMIC",
+     "ANAPHYLACTIC"
+    ]
+   },
+   {
+    "label": "___phobia",
+    "level": 3,
+    "words": [
+     "ARACHNO",
+     "CLAUSTRO",
+     "AGORA",
+     "ACRO"
+    ]
+   },
+   {
+    "label": "Antibodies",
+    "level": 3,
+    "words": [
+     "IGA",
+     "IGE",
+     "IGG",
+     "IGM"
+    ]
+   },
+   {
+    "label": "Named after jobs and sports",
+    "level": 4,
+    "words": [
+     "TENNIS",
+     "HOUSEMAID",
+     "GAMEKEEPER",
+     "SURFER"
+    ]
+   }
+  ]
+ }
+]

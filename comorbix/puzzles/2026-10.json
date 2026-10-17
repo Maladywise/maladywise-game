@@ -1,0 +1,707 @@
+[
+ {
+  "date": "2026-10-17",
+  "number": 1,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Endocrine glands",
+    "level": 2,
+    "words": [
+     "THYROID",
+     "PITUITARY",
+     "ADRENAL",
+     "PANCREAS"
+    ]
+   },
+   {
+    "label": "Reflexes",
+    "level": 3,
+    "words": [
+     "KNEE",
+     "ANKLE",
+     "TRICEPS",
+     "PLANTAR"
+    ]
+   },
+   {
+    "label": "___ pox",
+    "level": 3,
+    "words": [
+     "CHICKEN",
+     "MONKEY",
+     "SMALL",
+     "COW"
+    ]
+   },
+   {
+    "label": "Hidden 'ear'",
+    "level": 4,
+    "words": [
+     "LEARN",
+     "HEARSE",
+     "PEARL",
+     "BEARD"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-18",
+  "number": 2,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Statins",
+    "level": 2,
+    "words": [
+     "ATORVASTATIN",
+     "ROSUVASTATIN",
+     "SIMVASTATIN",
+     "PRAVASTATIN"
+    ]
+   },
+   {
+    "label": "___'s sign",
+    "level": 3,
+    "words": [
+     "MURPHY",
+     "BABINSKI",
+     "TINEL",
+     "TROUSSEAU"
+    ]
+   },
+   {
+    "label": "-omas that aren't cancers",
+    "level": 4,
+    "words": [
+     "HAEMATOMA",
+     "GRANULOMA",
+     "ATHEROMA",
+     "GLAUCOMA"
+    ]
+   },
+   {
+    "label": "___bone",
+    "level": 4,
+    "words": [
+     "FUNNY",
+     "COLLAR",
+     "WISH",
+     "CHEEK"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-19",
+  "number": 3,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Medical specialties",
+    "level": 1,
+    "words": [
+     "DERMATOLOGY",
+     "NEUROLOGY",
+     "ONCOLOGY",
+     "PSYCHIATRY"
+    ]
+   },
+   {
+    "label": "Parts of the eye",
+    "level": 1,
+    "words": [
+     "CORNEA",
+     "IRIS",
+     "RETINA",
+     "LENS"
+    ]
+   },
+   {
+    "label": "Bones of the upper limb",
+    "level": 2,
+    "words": [
+     "HUMERUS",
+     "RADIUS",
+     "ULNA",
+     "SCAPULA"
+    ]
+   },
+   {
+    "label": "Primary survey",
+    "level": 2,
+    "words": [
+     "AIRWAY",
+     "BREATHING",
+     "CIRCULATION",
+     "DISABILITY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-20",
+  "number": 4,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Organs",
+    "level": 1,
+    "words": [
+     "HEART",
+     "LIVER",
+     "KIDNEY",
+     "SPLEEN"
+    ]
+   },
+   {
+    "label": "Fingers",
+    "level": 1,
+    "words": [
+     "THUMB",
+     "INDEX",
+     "RING",
+     "LITTLE"
+    ]
+   },
+   {
+    "label": "Regions of the spine",
+    "level": 2,
+    "words": [
+     "CERVICAL",
+     "THORACIC",
+     "LUMBAR",
+     "SACRAL"
+    ]
+   },
+   {
+    "label": "Talking therapies",
+    "level": 2,
+    "words": [
+     "CBT",
+     "DBT",
+     "EMDR",
+     "ACT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-21",
+  "number": 5,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Muscles",
+    "level": 1,
+    "words": [
+     "BICEPS",
+     "DELTOID",
+     "TRAPEZIUS",
+     "GLUTEUS"
+    ]
+   },
+   {
+    "label": "Parts of a neuron",
+    "level": 2,
+    "words": [
+     "AXON",
+     "DENDRITE",
+     "MYELIN",
+     "SYNAPSE"
+    ]
+   },
+   {
+    "label": "Diuretics",
+    "level": 2,
+    "words": [
+     "FUROSEMIDE",
+     "SPIRONOLACTONE",
+     "HYDROCHLOROTHIAZIDE",
+     "INDAPAMIDE"
+    ]
+   },
+   {
+    "label": "Breathing patterns",
+    "level": 3,
+    "words": [
+     "CHEYNE-STOKES",
+     "KUSSMAUL",
+     "BIOT",
+     "AGONAL"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-22",
+  "number": 6,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Bones of the leg",
+    "level": 1,
+    "words": [
+     "FEMUR",
+     "TIBIA",
+     "FIBULA",
+     "PATELLA"
+    ]
+   },
+   {
+    "label": "Antipsychotics",
+    "level": 2,
+    "words": [
+     "OLANZAPINE",
+     "QUETIAPINE",
+     "RISPERIDONE",
+     "ARIPIPRAZOLE"
+    ]
+   },
+   {
+    "label": "Named syndromes",
+    "level": 2,
+    "words": [
+     "DOWN",
+     "TURNER",
+     "MARFAN",
+     "CUSHING"
+    ]
+   },
+   {
+    "label": "Types of seizure",
+    "level": 3,
+    "words": [
+     "ABSENCE",
+     "TONIC-CLONIC",
+     "FOCAL",
+     "MYOCLONIC"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-23",
+  "number": 7,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Venomous bites and stings",
+    "level": 2,
+    "words": [
+     "FUNNEL-WEB",
+     "REDBACK",
+     "BROWN SNAKE",
+     "BOX JELLYFISH"
+    ]
+   },
+   {
+    "label": "Antifungals",
+    "level": 3,
+    "words": [
+     "FLUCONAZOLE",
+     "NYSTATIN",
+     "TERBINAFINE",
+     "CLOTRIMAZOLE"
+    ]
+   },
+   {
+    "label": "Heart sounds and murmurs",
+    "level": 3,
+    "words": [
+     "S3",
+     "S4",
+     "GALLOP",
+     "SYSTOLIC"
+    ]
+   },
+   {
+    "label": "Causes of finger clubbing",
+    "level": 4,
+    "words": [
+     "BRONCHIECTASIS",
+     "ENDOCARDITIS",
+     "CIRRHOSIS",
+     "LUNG CANCER"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-24",
+  "number": 8,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Sleep disorders",
+    "level": 2,
+    "words": [
+     "INSOMNIA",
+     "NARCOLEPSY",
+     "APNOEA",
+     "PARASOMNIA"
+    ]
+   },
+   {
+    "label": "Neurotransmitters",
+    "level": 3,
+    "words": [
+     "DOPAMINE",
+     "SEROTONIN",
+     "GABA",
+     "ACETYLCHOLINE"
+    ]
+   },
+   {
+    "label": "Types of tremor",
+    "level": 3,
+    "words": [
+     "RESTING",
+     "INTENTION",
+     "ESSENTIAL",
+     "PHYSIOLOGICAL"
+    ]
+   },
+   {
+    "label": "___ shot",
+    "level": 4,
+    "words": [
+     "BOOSTER",
+     "FLU",
+     "MUG",
+     "LONG"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-25",
+  "number": 9,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Chest infections",
+    "level": 2,
+    "words": [
+     "PNEUMONIA",
+     "BRONCHITIS",
+     "INFLUENZA",
+     "TUBERCULOSIS"
+    ]
+   },
+   {
+    "label": "Dosing abbreviations",
+    "level": 3,
+    "words": [
+     "BD",
+     "TDS",
+     "QID",
+     "PRN"
+    ]
+   },
+   {
+    "label": "Medicines from plants",
+    "level": 4,
+    "words": [
+     "DIGOXIN",
+     "QUININE",
+     "ATROPINE",
+     "COLCHICINE"
+    ]
+   },
+   {
+    "label": "___ fever",
+    "level": 4,
+    "words": [
+     "HAY",
+     "SCARLET",
+     "GLANDULAR",
+     "CABIN"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-26",
+  "number": 10,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Lobes of the brain",
+    "level": 1,
+    "words": [
+     "FRONTAL",
+     "PARIETAL",
+     "TEMPORAL",
+     "OCCIPITAL"
+    ]
+   },
+   {
+    "label": "Surgical instruments",
+    "level": 1,
+    "words": [
+     "SCALPEL",
+     "FORCEPS",
+     "RETRACTOR",
+     "CLAMP"
+    ]
+   },
+   {
+    "label": "Parts of the kidney",
+    "level": 2,
+    "words": [
+     "GLOMERULUS",
+     "NEPHRON",
+     "URETER",
+     "CALYX"
+    ]
+   },
+   {
+    "label": "ACE inhibitors",
+    "level": 2,
+    "words": [
+     "RAMIPRIL",
+     "PERINDOPRIL",
+     "ENALAPRIL",
+     "LISINOPRIL"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "number": 11,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Electrolytes",
+    "level": 1,
+    "words": [
+     "SODIUM",
+     "POTASSIUM",
+     "CALCIUM",
+     "MAGNESIUM"
+    ]
+   },
+   {
+    "label": "Common symptoms",
+    "level": 1,
+    "words": [
+     "NAUSEA",
+     "DIZZINESS",
+     "FATIGUE",
+     "HEADACHE"
+    ]
+   },
+   {
+    "label": "Mosquito-borne infections",
+    "level": 2,
+    "words": [
+     "DENGUE",
+     "MALARIA",
+     "ROSS RIVER",
+     "MURRAY VALLEY"
+    ]
+   },
+   {
+    "label": "SSRIs",
+    "level": 2,
+    "words": [
+     "SERTRALINE",
+     "FLUOXETINE",
+     "ESCITALOPRAM",
+     "PAROXETINE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "number": 12,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Skin conditions",
+    "level": 1,
+    "words": [
+     "ECZEMA",
+     "PSORIASIS",
+     "ACNE",
+     "ROSACEA"
+    ]
+   },
+   {
+    "label": "STIs",
+    "level": 2,
+    "words": [
+     "CHLAMYDIA",
+     "GONORRHOEA",
+     "SYPHILIS",
+     "HERPES"
+    ]
+   },
+   {
+    "label": "Reflux medicines",
+    "level": 2,
+    "words": [
+     "OMEPRAZOLE",
+     "PANTOPRAZOLE",
+     "ESOMEPRAZOLE",
+     "RABEPRAZOLE"
+    ]
+   },
+   {
+    "label": "Units",
+    "level": 3,
+    "words": [
+     "MMOL",
+     "MCG",
+     "IU",
+     "MG"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "number": 13,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Lung sounds",
+    "level": 1,
+    "words": [
+     "WHEEZE",
+     "CRACKLES",
+     "STRIDOR",
+     "RUB"
+    ]
+   },
+   {
+    "label": "Parts of the ear",
+    "level": 2,
+    "words": [
+     "COCHLEA",
+     "INCUS",
+     "STAPES",
+     "MALLEUS"
+    ]
+   },
+   {
+    "label": "Parts of the gut",
+    "level": 2,
+    "words": [
+     "OESOPHAGUS",
+     "DUODENUM",
+     "JEJUNUM",
+     "ILEUM"
+    ]
+   },
+   {
+    "label": "Nail signs",
+    "level": 3,
+    "words": [
+     "CLUBBING",
+     "KOILONYCHIA",
+     "SPLINTER",
+     "PITTING"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "number": 14,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Viral rashes of childhood",
+    "level": 2,
+    "words": [
+     "MEASLES",
+     "RUBELLA",
+     "CHICKENPOX",
+     "ROSEOLA"
+    ]
+   },
+   {
+    "label": "Types of stone",
+    "level": 3,
+    "words": [
+     "KIDNEY",
+     "GALL",
+     "BLADDER",
+     "TONSIL"
+    ]
+   },
+   {
+    "label": "Back of the brain",
+    "level": 3,
+    "words": [
+     "PONS",
+     "MEDULLA",
+     "MIDBRAIN",
+     "CEREBELLUM"
+    ]
+   },
+   {
+    "label": "___ tooth",
+    "level": 4,
+    "words": [
+     "SWEET",
+     "WISDOM",
+     "BABY",
+     "MILK"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-31",
+  "number": 15,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Liver function tests",
+    "level": 2,
+    "words": [
+     "ALT",
+     "AST",
+     "GGT",
+     "ALP"
+    ]
+   },
+   {
+    "label": "Fungal infections",
+    "level": 3,
+    "words": [
+     "TINEA",
+     "THRUSH",
+     "ASPERGILLOSIS",
+     "CRYPTOCOCCUS"
+    ]
+   },
+   {
+    "label": "Inherited blood disorders",
+    "level": 3,
+    "words": [
+     "HAEMOPHILIA",
+     "THALASSAEMIA",
+     "SICKLE CELL",
+     "SPHEROCYTOSIS"
+    ]
+   },
+   {
+    "label": "Anagrams of organs",
+    "level": 4,
+    "words": [
+     "EARTH",
+     "VILER",
+     "SLUNG",
+     "BAIRN"
+    ]
+   }
+  ]
+ }
+]
