@@ -10,7 +10,7 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="stx-eyebrow">Suturix</span><span class="badge" id="stx-badge" hidden></span></div>' +
-    ' <div class="theme"><span>Today’s theme</span><b id="stx-clue"></b></div>' +
+    ' <div class="theme"><span>Today\u2019s theme</span><b id="stx-clue"></b></div>' +
     ' <div class="count" id="stx-count"></div>' +
     ' <div class="cur" id="stx-cur" aria-live="polite"></div>' +
     ' <div class="board" id="stx-board"><svg id="stx-svg" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg><div class="cells" id="stx-cells"></div></div>' +
@@ -44,7 +44,7 @@
     theme: ["Neat stitch.", "Nice. That one holds.", "Sutured.", "Clean closure.", "Textbook."],
     span: ["Spangram! Edge to edge, like a good incision.", "Spangram. The whole theme, in one stroke."],
     extra: ["Real word, not on theme. Banked towards a hint.", "Valid, but off topic. Like a ward round tangent.", "A word, sure. Not today's word. Hint credit earned."],
-    dupe: ["Already found that one.", "Déjà vu. Already got it."],
+    dupe: ["Already found that one.", "D\u00e9j\u00e0 vu. Already got it."],
     nope: ["Not a word. Not even in Latin.", "That's not in the dictionary. Or any dictionary.", "Keyboard smash detected.", "Nope. Try actual English."],
     short: ["Four letters minimum. Even 'ouch' qualifies.", "Too short. Commit to the bit."],
     wrongspot: ["Right word, wrong stitch. Try another route."],
@@ -61,7 +61,7 @@
   function samePath(a, b) { if (a.length !== b.length) return false; for (var i = 0; i < a.length; i++) if (a[i][0] !== b[i][0] || a[i][1] !== b[i][1]) return false; return true; }
 
   // ---------- render ----------
-  var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠", Einstein: "⚛️" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function ctr(p) { return (p[1] * 100 + 50) + "," + (p[0] * 100 + 50); }
   function render() {
     if (!P) return;
@@ -92,9 +92,9 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var em = { t: "🔵", s: "🟡", h: "💡" }, seq = st.log.map(function (x) { return em[x]; }), lines = [];
+    var em = { t: "\ud83d\udd35", s: "\ud83d\udfe1", h: "\ud83d\udca1" }, seq = st.log.map(function (x) { return em[x]; }), lines = [];
     for (var i = 0; i < seq.length; i += 4) lines.push(seq.slice(i, i + 4).join(""));
-    var share = "Suturix #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " " + ICON[P.difficulty] + "\n“" + P.clue + "”\n" + lines.join("\n") + "\nmaladywise.com";
+    var share = "Suturix #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\u201c" + P.clue + "\u201d\n" + lines.join("\n") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="found">' + P.words.map(function (w, i) { return '<span class="' + (i === 0 ? "s" : "") + '">' + esc(w.w) + "</span>"; }).join("") + "</p>" +
@@ -123,7 +123,7 @@
       stats.dist[Math.min(st.hints, 4)]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say("⚛️ Einstein solved. A once-in-100-days theme, closed up neatly. Screenshot this.");
+      say("\u269b\ufe0f Einstein solved. A once-in-100-days theme, closed up neatly. Screenshot this.");
       if (isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "suturix" && t.d === today; })) { tro.push({ g: "suturix", d: today }); put("mw-einstein", tro); } }
     } else say(st.hints ? "Closed, with " + st.hints + " hint" + (st.hints > 1 ? "s" : "") + ". Still counts. Mostly." : pick(SASS.win));
   }
@@ -206,9 +206,9 @@
     today = date; loadDay(); path = []; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today’s theme is still in theatre. Back tomorrow."); $("ctrls").hidden = true; $("cells").innerHTML = ""; $("svg").innerHTML = ""; return; }
+      if (!P) { say("Today\u2019s theme is still in theatre. Back tomorrow."); $("ctrls").hidden = true; $("cells").innerHTML = ""; $("svg").innerHTML = ""; return; }
       $("clue").textContent = P.clue;
-      $("eyebrow").textContent = (isLive() ? "Suturix" : "Archive") + " · #" + P.number + " · " + nice(date);
+      $("eyebrow").textContent = (isLive() ? "Suturix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive theme. Already done." : "Archive theme. Doesn't count towards your streak.");
       else if (st.done) say("Closed up. Come back tomorrow.");
@@ -220,11 +220,11 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("stx-day-" + x.date, null), mark = !s || !s.done ? "" : " ✓";
-        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+        var s = load("stx-day-" + x.date, null), mark = !s || !s.done ? "" : " \u2713";
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="stx-back">Back to today</button>';
-      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past themes yet. Today is #1. You’re early.</p>");
+      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past themes yet. Today is #1. You\u2019re early.</p>");
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); }; });
       if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
     });
