@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-17c";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-10-17d";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
@@ -247,6 +247,7 @@
     });
   }
 
+  window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
   render();
   setInterval(tick, 60000);
   show(today);
