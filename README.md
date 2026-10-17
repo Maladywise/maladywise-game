@@ -1,4 +1,4 @@
-# Diagnosis Wordle · Malady Wise
+# Daily Dx · Malady Wise
 
 A daily medical puzzle. One fictional case per day (Sydney time), six clues, one diagnosis.
 
