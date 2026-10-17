@@ -1,4 +1,4 @@
-/* Diagnosis Wordle — Malady Wise
+/* Diagnosis Wordle \u2014 Malady Wise
    One case per day (Sydney time). Cases live in cases/YYYY-MM.json, each with a "date".
    To add cases: add entries to the right month file. Nothing else needs changing. */
 (function () {
@@ -6,27 +6,28 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
+  var BUILD = "2026-10-17b";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
   if (!root) { root = document.createElement("div"); root.id = "dxw"; script.parentNode.insertBefore(root, script); }
   if (!document.querySelector('link[data-dxw]')) {
-    var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "game.css"; l.setAttribute("data-dxw", "");
+    var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "game.css?v=" + BUILD; l.setAttribute("data-dxw", "");
     document.head.appendChild(l);
   }
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Malady Wise · Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
+    ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Malady Wise \u00b7 Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
     '  <h1>Diagnosis Wordle</h1>' +
     '  <p class="sub">Six clues. One diagnosis. Wrong guesses unlock clues.</p></div>' +
         ' <section class="slip" aria-live="polite">' +
-    '  <div class="slip-head"><span class="case-title" id="dxw-title">Loading today’s case…</span><div class="dots" id="dxw-dots"></div></div>' +
+    '  <div class="slip-head"><span class="case-title" id="dxw-title">Loading today\u2019s case\u2026</span><div class="dots" id="dxw-dots"></div></div>' +
     '  <ol class="clues" id="dxw-clues"></ol>' +
     '  <p class="sass" id="dxw-sass"></p>' +
     '  <div class="guesses" id="dxw-guesses"></div>' +
     '  <form id="dxw-form" autocomplete="off" hidden>' +
     '   <label for="dxw-guess" style="position:absolute;left:-9999px">Your diagnosis</label>' +
-    '   <input id="dxw-guess" placeholder="Your diagnosis…" autocapitalize="off" spellcheck="false">' +
+    '   <input id="dxw-guess" placeholder="Your diagnosis\u2026" autocapitalize="off" spellcheck="false">' +
     '   <button class="btn" type="submit">Guess</button>' +
     '   <button class="btn ghost" type="button" id="dxw-skip">Next clue</button>' +
     '  </form>' +
@@ -35,7 +36,7 @@
     ' <div class="stats" id="dxw-stats" hidden></div>' +
     ' <div class="week" id="dxw-week"></div>' +
     ' <p class="note" id="dxw-next"></p>' +
-    ' <details class="archive" id="dxw-archive"><summary>Past cases</summary><div id="dxw-alist"><p class="note">Loading…</p></div></details>' +
+    ' <details class="archive" id="dxw-archive"><summary>Past cases</summary><div id="dxw-alist"><p class="note">Loading\u2026</p></div></details>' +
     ' <p class="note">All cases are fictional. General education, not personal medical advice.</p>' +
     '</div>';
   var $ = function (id) { return document.getElementById("dxw-" + id); };
@@ -65,38 +66,38 @@
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
   var SASS = {
     wrong: ["Yeah, nah.", "Respectfully: no.", "Bold choice. Wrong, but bold.", "The patient would like a second opinion.",
-      "That’s a no from the consultant.", "Interesting. Incorrect, but interesting.", "Swing and a miss.",
+      "That\u2019s a no from the consultant.", "Interesting. Incorrect, but interesting.", "Swing and a miss.",
       "Not even on the differential, mate.", "Back to the textbook.", "Close the tabs, open your eyes."],
     close: ["Warm. Annoyingly warm.", "Right neighbourhood, wrong house.", "So close the patient almost felt better.",
       "Nearly. Be more specific."],
-    nonsense: ["That’s not a diagnosis, that’s a sneeze.", "Keyboard mash isn’t a differential.",
-      "I’m going to pretend you didn’t type that.", "Autocorrect can’t save you here."],
+    nonsense: ["That\u2019s not a diagnosis, that\u2019s a sneeze.", "Keyboard mash isn\u2019t a differential.",
+      "I\u2019m going to pretend you didn\u2019t type that.", "Autocorrect can\u2019t save you here."],
     repeat: ["You already tried that. Bold strategy.", "Same guess, same answer: no."],
-    skip: ["Tactical retreat. Respect.", "Fair. Here’s another clue.", "Calling for backup. Wise."],
+    skip: ["Tactical retreat. Respect.", "Fair. Here\u2019s another clue.", "Calling for backup. Wise."],
     vague: [
-      [/^(a )?(virus|viral|viral illness|infection|a bug|bug|gastro)$/, "“A virus” is what we say when we don’t know. Try harder."],
+      [/^(a )?(virus|viral|viral illness|infection|a bug|bug|gastro)$/, "\u201cA virus\u201d is what we say when we don\u2019t know. Try harder."],
       [/^(stress|anxiety|anxious|burnout|depression)$/, "Blaming stress? Very 5 pm on a Friday of you."],
-      [/^(old age|ageing|aging|getting old|age)$/, "“Getting old” isn’t a diagnosis. Ask any 90-year-old."],
+      [/^(old age|ageing|aging|getting old|age)$/, "\u201cGetting old\u201d isn\u2019t a diagnosis. Ask any 90-year-old."],
       [/^(dehydration|dehydrated)$/, "Have a glass of water and try again."],
       [/^(idk|dunno|no idea|pass|not sure|unknown|no clue|\?+)$/, "Honesty. Refreshing. Still wrong."],
       [/^(covid|covid 19|covid-19|coronavirus|long covid)$/, "Not everything is COVID. Some things are just interesting."],
       [/^(cancer|tumour|tumor|malignancy|a tumour)$/, "Too broad. Which one? Where? Why?"],
       [/^(lupus|sle)$/, "Lupus. The classic hedge. Not today."],
       [/^(google|dr google|chatgpt|ai|claude)$/, "Dr Google has left the chat."],
-      [/^(fatigue|tired|tiredness|unwell|sick|pain)$/, "That’s a symptom, not a diagnosis."],
+      [/^(fatigue|tired|tiredness|unwell|sick|pain)$/, "That\u2019s a symptom, not a diagnosis."],
       [/^(hypochondria|hypochondriac|faking|malingering|psychosomatic|its in their head|in their head)$/, "Careful. The fictional patient is offended."],
       [/^(death|dead|dying)$/, "Dark. Also wrong."]
     ],
-    win: { 1: "First clue? Genius, or you’ve seen this before. Insufferable either way.",
+    win: { 1: "First clue? Genius, or you\u2019ve seen this before. Insufferable either way.",
       2: "Two clues. Your registrar is shook.", 3: "Three clues. The consultant nods slightly.",
-      4: "Got there. That’s what counts.", 5: "Scraped in like a 4:59 pm Friday referral.",
+      4: "Got there. That\u2019s what counts.", 5: "Scraped in like a 4:59 pm Friday referral.",
       6: "Last clue. A diagnostic buzzer-beater." },
-    lose: ["Stumped. The patient’s fictional. Your pride isn’t.", "The case wins today. Rematch tomorrow.",
+    lose: ["Stumped. The patient\u2019s fictional. Your pride isn\u2019t.", "The case wins today. Rematch tomorrow.",
       "Out of clues. Off to the library with you."]
   };
   var STOP = { syndrome: 1, disease: 1, deficiency: 1, poisoning: 1, acute: 1, chronic: 1, primary: 1, secondary: 1, the: 1, and: 1, with: 1, infection: 1, disorder: 1, type: 1 };
   function norm(s) {
-    return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[’']/g, "'")
+    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[\u2019']/g, "'")
       .replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
   }
   function tokens(s) { return norm(s).replace(/'/g, "").split(" ").filter(function (w) { return w.length >= 4 && !STOP[w]; }); }
@@ -112,7 +113,7 @@
   function say(t) { var el = $("sass"); el.textContent = t; el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
 
   // ---------- render ----------
-  var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0" };
   function dots() {
     return Array.from({ length: MAX }, function (_, i) {
       if (st.done && st.win && i === st.revealed - 1) return "hit";
@@ -126,7 +127,7 @@
       .map(function (x) { return '<div class="stat"><b>' + x[1] + '</b><span>' + x[0] + '</span></div>'; }).join("");
   }
   function renderWeek() {
-    $("week").textContent = "Easy Mon–Tue · Medium Wed–Thu · Hard Fri–Sat · Genius Sun";
+    $("week").textContent = "Easy Mon\u2013Tue \u00b7 Medium Wed\u2013Thu \u00b7 Hard Fri\u2013Sat \u00b7 Genius Sun";
   }
   function tick() {
     var t = "A new case arrives at midnight, Sydney time.";
@@ -142,21 +143,21 @@
     renderStats(); renderWeek(); tick();
     if (!C) return;
     var date = new Date(dayNum(today) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
-    $("eyebrow").textContent = (isLive() ? "Malady Wise" : "Archive") + " · #" + C.number + " · " + date;
+    $("eyebrow").textContent = (isLive() ? "Malady Wise" : "Archive") + " \u00b7 #" + C.number + " \u00b7 " + date;
     var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.textContent = C.difficulty;
     $("title").textContent = C.title;
     $("dots").innerHTML = dots().map(function (k) { return '<span class="dot ' + k + '"></span>'; }).join("");
     var shown = st.done ? C.clues.length : st.revealed, left = C.clues.length - shown;
     $("clues").innerHTML = C.clues.slice(0, shown).map(function (cl, i) {
       return '<li class="' + (cl.d ? "data " : "") + (fresh && i === shown - 1 ? "new" : "") + '">' + esc(cl.t) + "</li>";
-    }).join("") + (left ? '<li class="more">🔒 ' + left + " more clue" + (left > 1 ? "s" : "") + " locked</li>" : "");
+    }).join("") + (left ? '<li class="more">\ud83d\udd12 ' + left + " more clue" + (left > 1 ? "s" : "") + " locked</li>" : "");
     $("guesses").innerHTML = st.wrong.map(function (g) { return "<span>" + esc(g) + "</span>"; }).join("");
     $("form").hidden = st.done;
     $("stats").hidden = !st.done;
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var grid = dots().map(function (k) { return k === "hit" ? "🟩" : k === "miss" ? "🟥" : "⬜"; }).join("");
-    var share = "Diagnosis Wordle #" + C.number + (isLive() ? "" : " (archive)") + " · " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
+    var grid = dots().map(function (k) { return k === "hit" ? "\ud83d\udfe9" : k === "miss" ? "\ud83d\udfe5" : "\u2b1c"; }).join("");
+    var share = "Diagnosis Wordle #" + C.number + (isLive() ? "" : " (archive)") + " \u00b7 " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
       (st.win ? "Solved on clue " + st.revealed + "/6" : "Stumped") + "\nmaladywise.com";
     var max = Math.max.apply(null, stats.dist.concat([1]));
     var mine = st.win ? st.revealed - 1 : 6;
@@ -218,12 +219,12 @@
 
   function show(date) {
     today = date; loadDay(); C = null;
-    $("result").hidden = true; $("sass").textContent = ""; $("title").textContent = "Loading…";
+    $("result").hidden = true; $("sass").textContent = ""; $("title").textContent = "Loading\u2026";
     return month(date.slice(0, 7)).then(function (list) {
       C = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!C) { $("title").textContent = "Today’s case is still in triage."; $("form").hidden = true; say("Back tomorrow. Fresh cases are on the way."); render(); return; }
-      if (!isLive()) say(st.done ? "Archive case. You’ve already done this one." : "Archive case. Doesn’t count towards your streak.");
-      else if (st.done) say(st.win ? "Already solved. Show-off. Come back tomorrow." : "You’ve had your go. Patience is a clinical skill.");
+      if (!C) { $("title").textContent = "Today\u2019s case is still in triage."; $("form").hidden = true; say("Back tomorrow. Fresh cases are on the way."); render(); return; }
+      if (!isLive()) say(st.done ? "Archive case. You\u2019ve already done this one." : "Archive case. Doesn\u2019t count towards your streak.");
+      else if (st.done) say(st.win ? "Already solved. Show-off. Come back tomorrow." : "You\u2019ve had your go. Patience is a clinical skill.");
       render(); renderArchive();
     });
   }
@@ -233,11 +234,11 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (lists) {
       var past = [].concat(lists[0], lists[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("dxw-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
+        var s = load("dxw-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
         var d = new Date(dayNum(x.date) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
-        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + d + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + d + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
-      var back = isLive() ? "" : '<button type="button" class="btn ghost" id="dxw-back">Back to today’s case</button>';
+      var back = isLive() ? "" : '<button type="button" class="btn ghost" id="dxw-back">Back to today\u2019s case</button>';
       $("alist").innerHTML = back + (rows || '<p class="note">No past cases yet. Today is #1.</p>');
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) {
         b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); };
