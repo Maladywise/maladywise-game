@@ -8,7 +8,7 @@ window.MW_SITE = {
   quip: "Made by a GP who should probably be doing paperwork."
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
-window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"] };
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"], suturix: ["2026-10-22"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -93,7 +93,16 @@ window.MW_GAMES = [
     tagline: "A five-by-five crossword. Small grid, big ego bruise.",
     accent: "#3A3150", accentDark: "#CFC6E3",
     icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="#fff"><rect x="8" y="8" width="10" height="10"/><rect x="19" y="8" width="10" height="10"/><rect x="30" y="8" width="10" height="10"/><rect x="8" y="19" width="10" height="10"/><rect x="30" y="19" width="10" height="10"/><rect x="8" y="30" width="10" height="10"/><rect x="19" y="30" width="10" height="10"/><rect x="30" y="30" width="10" height="10"/></g></svg>' },
-  { id: "suturix", name: "Suturix", path: "suturix/", live: false,
+  { id: "suturix", name: "Suturix", path: "suturix/", live: true, store: { stats: "stx-stats", day: "stx-day-", labels: ["0", "1", "2", "3", "4+"], distTitle: " (hints per solve)" },
+    quip: "Every letter belongs to something. Like a well-run ward.",
+    helpQuip: "If you're stuck, find any random words. They buy hints.",
+    help: [
+      "Find the theme words. Together they use every letter, once.",
+      "Drag across letters to spell a word, or tap them one by one and tap the last letter again to submit. Diagonals count.",
+      "The spangram (gold) names the theme and runs edge to edge.",
+      "Every 3 non-theme words earns a hint.",
+      "New theme every day at midnight, Sydney time."
+    ],
     tagline: "Find the theme words woven through the grid. Neat stitches only.",
     accent: "#C2553A", accentDark: "#EE8A6A",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0"/><path d="M12 18l4 6M22 20l2 7M32 22l-2 6M38 18l-3 6"/></svg>' }
