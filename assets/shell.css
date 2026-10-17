@@ -153,3 +153,7 @@ footer.site a{color:var(--muted)}
 .navlink{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 6px;white-space:nowrap}
 .navlink.on{color:var(--brand)}
 .tools{align-items:center}
+.mast-top{display:flex;justify-content:space-between;align-items:center;gap:8px 14px;flex-wrap:wrap}
+.daypill{align-self:center;flex:0 0 auto;font-size:12px;padding:6px 12px}
+.daypill.d-Easy{background:#2F7D4A}.daypill.d-Medium{background:#9A6A12}.daypill.d-Hard{background:#B4472F}.daypill.d-Genius{background:#4A3480}
+:root[data-theme="dark"] .daypill.d-Genius{background:#6B55B0}
