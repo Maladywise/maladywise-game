@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-17e";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-10-17f";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
@@ -21,7 +21,7 @@
     '  <h1>Dxtective</h1>' +
     '  <p class="sub">Six clues. One diagnosis. Wrong guesses unlock clues.</p></div>' +
         ' <section class="slip" aria-live="polite">' +
-    '  <div class="slip-head"><span class="case-title" id="dxw-title">Loading today\u2019s case\u2026</span><div class="dots" id="dxw-dots"></div></div>' +
+    '  <div class="slip-head"><span class="case-title" id="dxw-title">Scrubbing in\u2026</span><div class="dots" id="dxw-dots"></div></div>' +
     '  <ol class="clues" id="dxw-clues"></ol>' +
     '  <p class="sass" id="dxw-sass"></p>' +
     '  <div class="guesses" id="dxw-guesses"></div>' +
@@ -133,7 +133,7 @@
     var t = "A new case arrives at midnight, Sydney time.";
     try {
       var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
-      var left = 1440 - (p[0] * 60 + p[1]); t = "Next case in " + Math.floor(left / 60) + "h " + (left % 60) + "m.";
+      var left = 1440 - (p[0] * 60 + p[1]); t = "Next case in " + Math.floor(left / 60) + "h " + (left % 60) + "m. Go see a real patient.";
     } catch (e) {}
     $("next").textContent = t;
   }
@@ -239,7 +239,7 @@
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + d + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn ghost" id="dxw-back">Back to today\u2019s case</button>';
-      $("alist").innerHTML = back + (rows || '<p class="note">No past cases yet. Today is #1.</p>');
+      $("alist").innerHTML = back + (rows || '<p class="note">No past cases yet. Today is #1. You\u2019re early.</p>');
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) {
         b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); };
       });
