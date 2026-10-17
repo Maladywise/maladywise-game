@@ -47,8 +47,8 @@ html[data-theme="dark"] #grx .cell.cur b{color:#fff}
 #grx .clues{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:520px){#grx .clues{grid-template-columns:1fr}}
 #grx .clues h4{margin:0 0 6px;font:700 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-#grx .cl{display:block;width:100%;text-align:left;border:0;background:transparent;color:var(--ink);font:400 14px/1.35 var(--body);padding:6px 8px;border-radius:8px;cursor:pointer}
-#grx .cl b{display:inline-block;min-width:18px}
+#grx .cl{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;border:0;background:transparent;color:var(--ink);font:400 14px/1.35 var(--body);padding:6px 8px;border-radius:8px;cursor:pointer}
+#grx .cl b{flex:0 0 16px}
 #grx .cl.on{background:var(--hl)}
 #grx .result{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px}
 #grx .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;text-align:center}

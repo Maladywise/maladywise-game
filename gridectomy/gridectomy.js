@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2";
   var root = document.getElementById("grx");
   if (!document.querySelector("link[data-grx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "gridectomy.css?v=" + BUILD; l.setAttribute("data-grx", ""); document.head.appendChild(l);
@@ -91,7 +91,7 @@
     var cl = ["a", "d"].map(function (d) {
       var list = d === "a" ? P.across : P.down;
       return '<div><h4>' + (d === "a" ? "Across" : "Down") + "</h4>" + list.map(function (x) {
-        var on = e && x === e && !st.done; return '<button type="button" class="cl' + (on ? " on" : "") + '" data-d="' + d + '" data-n="' + x.n + '"><b>' + x.n + "</b> " + esc(x.clue) + "</button>";
+        var on = e && x === e && !st.done; return '<button type="button" class="cl' + (on ? " on" : "") + '" data-d="' + d + '" data-n="' + x.n + '"><b>' + x.n + "</b><span>" + esc(x.clue) + "</span></button>";
       }).join("") + "</div>";
     }).join("");
     $("clues").innerHTML = cl;
