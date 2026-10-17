@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /case-1/
+Disallow: /iron/
+Disallow: /b12/
+
+Sitemap: https://maladywise.com/sitemap.xml
