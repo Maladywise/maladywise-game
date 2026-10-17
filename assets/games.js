@@ -8,7 +8,7 @@ window.MW_SITE = {
   quip: "Made by a GP who should probably be doing paperwork."
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
-window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"] };
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -80,7 +80,16 @@ window.MW_GAMES = [
     tagline: "Blood, pressure, sore, throat. Link the chain without dropping it.",
     accent: "#2F5DA8", accentDark: "#6E98E0",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="5" y="17" width="20" height="14" rx="7"/><rect x="23" y="17" width="20" height="14" rx="7"/></svg>' },
-  { id: "gridectomy", name: "Gridectomy", path: "gridectomy/", live: false,
+  { id: "gridectomy", name: "Gridectomy", path: "gridectomy/", live: true, store: { stats: "grx-stats", day: "grx-day-", labels: ["<1m", "<2m", "<3m", "<5m", "<10m", "10m+", "Help"], distTitle: " (solve time)" },
+    quip: "Five by five. Small incision, big recovery.",
+    helpQuip: "Speed counts. So does not peeking.",
+    help: [
+      "Fill the 5x5 grid. Every row and column is a word.",
+      "Tap a square to select it. Tap it again, or the clue bar, to switch Across/Down.",
+      "The arrows (or Tab) jump between clues. The timer pauses when you leave.",
+      "Check marks wrong letters red. Reveal square or Give up means no clean solve.",
+      "New grid every day at midnight, Sydney time."
+    ],
     tagline: "A five-by-five crossword. Small grid, big ego bruise.",
     accent: "#3A3150", accentDark: "#CFC6E3",
     icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="#fff"><rect x="8" y="8" width="10" height="10"/><rect x="19" y="8" width="10" height="10"/><rect x="30" y="8" width="10" height="10"/><rect x="8" y="19" width="10" height="10"/><rect x="30" y="19" width="10" height="10"/><rect x="8" y="30" width="10" height="10"/><rect x="19" y="30" width="10" height="10"/><rect x="30" y="30" width="10" height="10"/></g></svg>' },
