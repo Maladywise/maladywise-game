@@ -110,3 +110,20 @@ footer.site a{color:var(--muted)}
 .doc .meta{color:var(--muted);font-size:13px}
 .doc a{color:var(--brand)}
 .backlink{display:inline-block;margin:6px 0 0;font-weight:600;color:var(--muted);text-decoration:none;font-size:14px}
+
+/* keep-playing strip inside game pages */
+.mwx{border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:8px;font-family:Poppins,"Segoe UI",system-ui,sans-serif}
+.mwx-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.mwx-head b{font:700 17px Lora,Georgia,serif;color:var(--ink)}
+.mwx-head span{font-size:13px;color:var(--muted)}
+.mwx-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.mwx-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--paper,var(--card,#fff));color:var(--ink);text-decoration:none;font-size:14px;min-height:48px}
+.mwx-ic{flex:0 0 32px;height:32px;border-radius:8px;background:var(--ga);display:grid;place-items:center}
+.mwx-ic svg{width:20px;height:20px}
+.mwx-nm{flex:1;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mwx-st{font-size:16px;color:var(--muted);white-space:nowrap}
+.mwx-row:not(.done) .mwx-st{color:var(--ink);font-weight:600}
+.mwx-row.done{opacity:.7}
+.mwx-all{justify-self:center;font-size:13px;font-weight:600;color:var(--muted)}
+.mwx-more{width:100%;padding:8px;border-radius:10px;border:1px dashed var(--line);background:transparent;color:var(--muted);font:600 13px Poppins,"Segoe UI",system-ui,sans-serif;cursor:pointer}
+.mwx-row[hidden],.arow[hidden]{display:none!important}

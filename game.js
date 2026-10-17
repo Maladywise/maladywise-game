@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-17g";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-10-18a";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
