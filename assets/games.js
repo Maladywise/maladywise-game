@@ -33,7 +33,16 @@ window.MW_GAMES = [
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
       "A new word arrives at midnight, Sydney time."
     ] },
-  { id: "comorbix", name: "Comorbix", path: "comorbix/", live: false,
+  { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"] },
+    quip: "Like a multidisciplinary meeting, but everyone agrees at the end.",
+    helpQuip: "Red herrings are deliberate. Trust no one.",
+    help: [
+      "Find four groups of four terms that share something.",
+      "Tap four tiles and press Submit. Get a group right and it locks in.",
+      "You can make four mistakes. Three out of four gets a warning.",
+      "Groups get trickier by colour: yellow, green, blue, then purple (usually wordplay).",
+      "Difficulty rises through the week. New puzzle at midnight, Sydney time."
+    ],
     tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3" opacity=".7"/><rect x="8" y="26" width="14" height="14" rx="3" opacity=".7"/><rect x="26" y="26" width="14" height="14" rx="3"/></svg>' },
