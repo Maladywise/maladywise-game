@@ -90,7 +90,7 @@ footer.site a{color:var(--muted)}
 .mstats b{display:block;font-family:var(--title);font-size:26px}
 .mstats span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .mdist{display:grid;gap:4px;font-size:13px;font-variant-numeric:tabular-nums}
-.mdist div{display:grid;grid-template-columns:18px 1fr;gap:6px;align-items:center}
+.mdist div{display:grid;grid-template-columns:minmax(18px,max-content) 1fr;gap:6px;align-items:center}
 .mdist i{display:block;height:18px;border-radius:3px;background:var(--line);font-style:normal;padding:0 6px;text-align:right;line-height:18px;min-width:22px}
 .opt{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
 .seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
