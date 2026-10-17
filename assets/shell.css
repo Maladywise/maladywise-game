@@ -46,14 +46,20 @@ button{font-family:inherit}
 .status b{color:var(--ink)}
 .soon .band{filter:saturate(.5)}
 .soon .play{background:transparent;color:var(--muted);border:1px solid var(--line)}
-.card.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
-.feature .band{min-height:190px}
-.feature .band svg{width:84px;height:84px}
-.feature .cbody{padding:22px 24px;justify-content:center;gap:8px}
-.feature .name{font-size:30px}
+.card.feature{grid-column:span 2;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.feature .band{min-height:0}
+.feature .band svg{width:64px;height:64px}
+.feature .cbody{padding:18px 20px;justify-content:center;gap:6px}
+.feature .name{font-size:26px}
+@media (max-width:520px){.card.feature{grid-column:1/-1}}
 .pill{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent);color:#fff}
 @media (max-width:620px){
-  .card.feature{grid-template-columns:1fr}.feature .band{min-height:120px}
+  .card.feature{grid-template-columns:88px minmax(0,1fr);border-radius:14px}
+  .feature .band svg{width:40px;height:40px}
+  .feature .cbody{padding:12px 14px;gap:4px}
+  .feature .name{font-size:22px}
+  .feature .tag{font-size:13px}
+  .feature .play{padding:6px 14px;font-size:13px}
   .grid{gap:10px}
   .card:not(.feature){display:grid;grid-template-columns:72px minmax(0,1fr);border-radius:14px}
   .card:not(.feature) .band{min-height:0}
