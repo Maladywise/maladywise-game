@@ -68,15 +68,14 @@
   }
 
   // ---------- per-game stats readers ----------
-  var STATS = {
-    dx: function () {
-      var s = get("dxw-stats-v2", null) || { played: 0, wins: 0, streak: 0, best: 0, dist: [0, 0, 0, 0, 0, 0, 0] };
-      var today = get("dxw-day-" + sydToday(), null);
-      return { s: s, done: !!(today && today.done), win: !!(today && today.win), labels: ["1", "2", "3", "4", "5", "6", "X"] };
-    }
-  };
+  function readStats(g) {
+    if (!g || !g.store) return null;
+    var s = get(g.store.stats, null) || { played: 0, wins: 0, streak: 0, best: 0, dist: [0, 0, 0, 0, 0, 0, 0] };
+    var today = get(g.store.day + sydToday(), null);
+    return { s: s, done: !!(today && today.done), win: !!(today && today.win), labels: ["1", "2", "3", "4", "5", "6", "X"] };
+  }
   function statsModal(g) {
-    var r = STATS[g.id] ? STATS[g.id]() : null;
+    var r = readStats(g);
     if (!r) { modal("Stats", "<p>No stats yet.</p>"); return; }
     var s = r.s, pct = s.played ? Math.round(s.wins / s.played * 100) : 0, max = Math.max.apply(null, (s.dist || [0]).concat([1]));
     modal(g.name + " stats",
@@ -111,13 +110,13 @@
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
     var main = document.getElementById("hub");
     function card(g) {
-      var st = g.live && STATS[g.id] ? STATS[g.id]() : null;
+      var st = g.live ? readStats(g) : null;
       var status = !st ? "" : st.done ? (st.win ? "Solved " : "Done ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
       var btn = !g.live ? "Coming soon" : st && st.done ? "See results" : "Play";
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
-        '<div class="cbody">' + (g.featured ? '<span class="pill">Daily case &middot; ' + DIFF[dow] + "</span>" : "") +
+        '<div class="cbody">' + (g.featured ? '<span class="pill">Today &middot; ' + DIFF[dow] + "</span>" : "") +
         '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
     }
@@ -135,7 +134,7 @@
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0];
     topBar(g);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
-    var st = STATS[id] ? STATS[id]() : null;
+    var st = readStats(g);
     var sp = document.getElementById("splash"), box = document.getElementById("game");
     var q = new URLSearchParams(location.search);
     function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
