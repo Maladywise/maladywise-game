@@ -64,7 +64,7 @@
   }
 
   // ---------- render ----------
-  var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠", Einstein: "⚛️" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function render(shake) {
     if (!P) return;
     fixAct();
@@ -96,11 +96,11 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var sq = [1, 2, 3, 4].map(function (i) { var s = st.w[i]; return s.s !== 1 ? "🟥" : s.rev > 1 ? "🟨" : "🟩"; }).join("");
-    var share = "Linkase #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " " + ICON[P.difficulty] + "\n🔗" + sq + "🔗 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
+    var sq = [1, 2, 3, 4].map(function (i) { var s = st.w[i]; return s.s !== 1 ? "\ud83d\udfe5" : s.rev > 1 ? "\ud83d\udfe8" : "\ud83d\udfe9"; }).join("");
+    var share = "Linkase #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
-    r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < 5 ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" · ").toLowerCase() + "</p>" +
+    r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < 5 ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" \u00b7 ").toLowerCase() + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<pre id="lnk-share">' + share + '</pre><button class="btn solid" type="button" id="lnk-copy">Copy result</button>';
     $("copy").onclick = function () {
@@ -120,7 +120,7 @@
     $("kb").innerHTML = rows.map(function (r) {
       return '<div class="kr">' + r.split("").map(function (k) {
         if (k === "+") return '<button class="key wide" data-k="enter" type="button">Enter</button>';
-        if (k === "-") return '<button class="key wide" data-k="back" type="button" aria-label="Delete">⌫</button>';
+        if (k === "-") return '<button class="key wide" data-k="back" type="button" aria-label="Delete">\u232b</button>';
         return '<button class="key" data-k="' + k + '" type="button">' + k + "</button>";
       }).join("") + "</div>";
     }).join("");
@@ -136,7 +136,7 @@
       stats.dist[win ? Math.min(st.mistakes, 4) : 5]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "⚛️ Einstein solved. Roughly a once-in-100-days chain, and you held it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-100-days chain, and you held it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put("mw-einstein", tro); } }
     } else say(win ? SASS.win[Math.min(st.mistakes, 4)] : pick(SASS.lose));
   }
@@ -194,8 +194,8 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today’s chain is still in triage. Back tomorrow."); $("kb").hidden = true; $("chain").innerHTML = ""; $("mist").innerHTML = ""; return; }
-      $("eyebrow").textContent = (isLive() ? "Linkase" : "Archive") + " · #" + P.number + " · " + nice(date);
+      if (!P) { say("Today\u2019s chain is still in triage. Back tomorrow."); $("kb").hidden = true; $("chain").innerHTML = ""; $("mist").innerHTML = ""; return; }
+      $("eyebrow").textContent = (isLive() ? "Linkase" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive chain. Already done." : "Archive chain. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Linked. Come back tomorrow." : "You've had your go. Back tomorrow.");
@@ -207,11 +207,11 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("lnk-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
-        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+        var s = load("lnk-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="lnk-back">Back to today</button>';
-      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past chains yet. Today is #1. You’re early.</p>");
+      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past chains yet. Today is #1. You\u2019re early.</p>");
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); }; });
       if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
     });
