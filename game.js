@@ -18,9 +18,8 @@
     '<div class="wrap">' +
     ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Malady Wise · Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
     '  <h1>Diagnosis Wordle</h1>' +
-    '  <p class="sub">Six clues, one diagnosis. Every wrong guess unlocks the next clue.</p></div>' +
-    ' <div class="stats" id="dxw-stats"></div>' +
-    ' <section class="slip" aria-live="polite">' +
+    '  <p class="sub">Six clues. One diagnosis. Wrong guesses unlock clues.</p></div>' +
+        ' <section class="slip" aria-live="polite">' +
     '  <div class="slip-head"><span class="case-title" id="dxw-title">Loading today’s case…</span><div class="dots" id="dxw-dots"></div></div>' +
     '  <ol class="clues" id="dxw-clues"></ol>' +
     '  <p class="sass" id="dxw-sass"></p>' +
@@ -33,6 +32,7 @@
     '  </form>' +
     '  <div class="result" id="dxw-result" hidden></div>' +
     ' </section>' +
+    ' <div class="stats" id="dxw-stats" hidden></div>' +
     ' <div class="week" id="dxw-week"></div>' +
     ' <p class="note" id="dxw-next"></p>' +
     ' <p class="note">All cases are fictional. General education, not personal medical advice.</p>' +
@@ -123,9 +123,7 @@
       .map(function (x) { return '<div class="stat"><b>' + x[1] + '</b><span>' + x[0] + '</span></div>'; }).join("");
   }
   function renderWeek() {
-    var lab = [["Mon", "Easy"], ["Tue", "Easy"], ["Wed", "Medium"], ["Thu", "Medium"], ["Fri", "Hard"], ["Sat", "Hard"], ["Sun", "Genius"]];
-    var idx = (dow + 6) % 7;
-    $("week").innerHTML = lab.map(function (x, i) { return '<span class="' + (i === idx ? "on" : "") + '">' + x[0] + " · " + x[1] + "</span>"; }).join("");
+    $("week").textContent = "Easy Mon–Tue · Medium Wed–Thu · Hard Fri–Sat · Genius Sun";
   }
   function tick() {
     var t = "A new case arrives at midnight, Sydney time.";
@@ -145,13 +143,13 @@
     var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.textContent = C.difficulty;
     $("title").textContent = C.title;
     $("dots").innerHTML = dots().map(function (k) { return '<span class="dot ' + k + '"></span>'; }).join("");
-    $("clues").innerHTML = C.clues.map(function (cl, i) {
-      return (i < st.revealed || st.done)
-        ? '<li class="' + (cl.d ? "data " : "") + (fresh && i === st.revealed - 1 ? "new" : "") + '">' + esc(cl.t) + "</li>"
-        : '<li class="locked">Locked</li>';
-    }).join("");
+    var shown = st.done ? C.clues.length : st.revealed, left = C.clues.length - shown;
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (cl, i) {
+      return '<li class="' + (cl.d ? "data " : "") + (fresh && i === shown - 1 ? "new" : "") + '">' + esc(cl.t) + "</li>";
+    }).join("") + (left ? '<li class="more">🔒 ' + left + " more clue" + (left > 1 ? "s" : "") + " locked</li>" : "");
     $("guesses").innerHTML = st.wrong.map(function (g) { return "<span>" + esc(g) + "</span>"; }).join("");
     $("form").hidden = st.done;
+    $("stats").hidden = !st.done;
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = dots().map(function (k) { return k === "hit" ? "🟩" : k === "miss" ? "🟥" : "⬜"; }).join("");
@@ -213,7 +211,7 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (list) {
       C = list.filter(function (c) { return c.date === today; })[0] || null;
-      if (!C) { $("title").textContent = "Today’s case is still in triage."; say("Back tomorrow. Adam’s writing more."); return; }
+      if (!C) { $("title").textContent = "Today’s case is still in triage."; say("Back tomorrow. Fresh cases are on the way."); return; }
       if (st.done) say(st.win ? "Already solved. Show-off. Come back tomorrow." : "You’ve had your go. Patience is a clinical skill.");
       render();
     })
