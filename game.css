@@ -8,6 +8,9 @@
   --display:Lora,Georgia,serif; --body:Poppins,"Segoe UI",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
 #dxw *{box-sizing:border-box}
+html[data-theme="dark"] #dxw{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:#B4A8CF;--line:#342B45;--soft:#2A2238;--accent:#B9A6EC;--empty:#3A3050;--miss:#E0745A;--hit:#5DBB80;color-scheme:dark}
+html[data-theme="dark"] #dxw .btn{color:#16121F}
+html[data-theme="dark"] #dxw input{border-color:#4A3E60}
 #dxw [hidden]{display:none!important}
 #dxw .wrap{max-width:580px;margin:0 auto;padding:4px 16px 28px;display:grid;gap:12px}
 #dxw .top{display:grid;gap:2px}
