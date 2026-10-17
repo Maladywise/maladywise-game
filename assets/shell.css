@@ -157,3 +157,16 @@ footer.site a{color:var(--muted)}
 .daypill{align-self:center;flex:0 0 auto;font-size:12px;padding:6px 12px}
 .daypill.d-Easy{background:#2F7D4A}.daypill.d-Medium{background:#9A6A12}.daypill.d-Hard{background:#B4472F}.daypill.d-Genius{background:#4A3480}
 :root[data-theme="dark"] .daypill.d-Genius{background:#6B55B0}
+/* newsletter */
+.nl{min-width:0;display:grid;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.nl-txt{display:grid;gap:4px}
+.nl-txt b{font:700 21px var(--title);color:var(--ink)}
+.nl-txt span{font-size:14px;color:var(--muted)}
+.mw-nl{display:flex;gap:8px;flex-wrap:wrap}
+.mw-nl input[type=email]{flex:1 1 180px;min-width:0;width:100%;font:16px var(--body);padding:11px 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
+.mw-nl button{font:600 15px var(--body);padding:11px 20px;border-radius:999px;border:0;background:var(--brand);color:var(--bg);cursor:pointer}
+.mw-nl button:disabled{opacity:.6}
+.nl-msg{margin:0;font-size:14px;font-weight:600;color:var(--brand);min-height:0}
+.nl-msg:empty{display:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.doc .nl{margin-top:18px}
