@@ -109,7 +109,7 @@
   function tick() {
     var t = "A new word arrives at midnight, Sydney time.";
     try { var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
-      var left = 1440 - (p[0] * 60 + p[1]); t = "Next word in " + Math.floor(left / 60) + "h " + (left % 60) + "m."; } catch (e) {}
+      var left = 1440 - (p[0] * 60 + p[1]); t = "Next word in " + Math.floor(left / 60) + "h " + (left % 60) + "m. Go hydrate."; } catch (e) {}
     $("next").textContent = t;
   }
 
@@ -160,7 +160,7 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today's word is still in triage. Back tomorrow."); $("kb").hidden = true; return; }
+      if (!P) { say("Today\u2019s word is still in triage. Back tomorrow."); $("kb").hidden = true; return; }
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.textContent = P.difficulty;
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
@@ -177,7 +177,7 @@
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="wde-back">Back to today</button>';
-      $("alist").innerHTML = back + (rows || '<p class="note">No past puzzles yet. Today is #1.</p>');
+      $("alist").innerHTML = back + (rows || '<p class="note">No past puzzles yet. Today is #1. You\u2019re early.</p>');
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); }; });
       if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
     });

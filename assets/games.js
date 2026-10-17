@@ -4,11 +4,14 @@ window.MW_SITE = {
   name: "Malady Wise",
   sub: "Games",
   footer: "All puzzles are fictional/educational. General education, not personal medical advice.",
-  home: "https://www.maladywise.com"
+  home: "https://www.maladywise.com",
+  quip: "Made by a GP who should probably be doing paperwork."
 };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
+    quip: "Zero excuses. The patient is fictional, your ego isn't.",
+    helpQuip: "Typing \"stress\" or \"a virus\" will be judged. Harshly.",
     accent: "#4A3480", accentDark: "#8E74D6",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="28" height="34" rx="4"/><path d="M18 8V6h12v2M24 18v12M18 24h12"/></svg>',
     help: [
@@ -19,6 +22,8 @@ window.MW_GAMES = [
     ] },
   { id: "wordemic", name: "Wordemic", path: "wordemic/", live: true, store: { stats: "wde-stats", day: "wde-day-" },
     tagline: "Guess the five-letter medical word in six tries.",
+    quip: "Your med school fees, finally paying off.",
+    helpQuip: "Made-up words get rejected. And roasted.",
     accent: "#2E7D6B", accentDark: "#4FB39C",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="3" y="18" width="7" height="12" rx="1.5"/><rect x="12" y="18" width="7" height="12" rx="1.5" opacity=".7"/><rect x="21" y="18" width="7" height="12" rx="1.5"/><rect x="30" y="18" width="7" height="12" rx="1.5" opacity=".7"/><rect x="39" y="18" width="7" height="12" rx="1.5"/></svg>',
     help: [
@@ -29,23 +34,23 @@ window.MW_GAMES = [
       "A new word arrives at midnight, Sydney time."
     ] },
   { id: "comorbix", name: "Comorbix", path: "comorbix/", live: false,
-    tagline: "Sixteen terms. Four hidden groups. Four mistakes allowed.",
+    tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3" opacity=".7"/><rect x="8" y="26" width="14" height="14" rx="3" opacity=".7"/><rect x="26" y="26" width="14" height="14" rx="3"/></svg>' },
   { id: "morphemia", name: "Morphemia", path: "morphemia/", live: false,
-    tagline: "Seven letters. Build medical words. Climb from Intern to Genius.",
+    tagline: "Seven letters. Build medical words. Intern to Genius, if you're lucky.",
     accent: "#B07A0C", accentDark: "#F0B940",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l15 8.5v17L24 40 9 31.5v-17z"/><path d="M24 17l6 3.5v7L24 31l-6-3.5v-7z" fill="#fff"/></svg>' },
   { id: "linkase", name: "Linkase", path: "linkase/", live: false,
-    tagline: "Link the chain, one term at a time. Blood, pressure, sore, throat.",
+    tagline: "Blood, pressure, sore, throat. Link the chain without dropping it.",
     accent: "#2F5DA8", accentDark: "#6E98E0",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="5" y="17" width="20" height="14" rx="7"/><rect x="23" y="17" width="20" height="14" rx="7"/></svg>' },
   { id: "gridectomy", name: "Gridectomy", path: "gridectomy/", live: false,
-    tagline: "A five-by-five mini crossword with medical clues.",
+    tagline: "A five-by-five crossword. Small grid, big ego bruise.",
     accent: "#3A3150", accentDark: "#CFC6E3",
     icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="#fff"><rect x="8" y="8" width="10" height="10"/><rect x="19" y="8" width="10" height="10"/><rect x="30" y="8" width="10" height="10"/><rect x="8" y="19" width="10" height="10"/><rect x="30" y="19" width="10" height="10"/><rect x="8" y="30" width="10" height="10"/><rect x="19" y="30" width="10" height="10"/><rect x="30" y="30" width="10" height="10"/></g></svg>' },
   { id: "suturix", name: "Suturix", path: "suturix/", live: false,
-    tagline: "Find the hidden theme words woven through the grid.",
+    tagline: "Find the theme words woven through the grid. Neat stitches only.",
     accent: "#C2553A", accentDark: "#EE8A6A",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0"/><path d="M12 18l4 6M22 20l2 7M32 22l-2 6M38 18l-3 6"/></svg>' }
 ];

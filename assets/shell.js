@@ -23,6 +23,18 @@
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
   function nice(d, opts) { return new Date(dayNum(d) * 864e5).toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, opts)); }
   var DIFF = ["Genius", "Easy", "Easy", "Medium", "Medium", "Hard", "Hard"];
+  var DIFFQ = { Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
+  var DAYQ = [
+    "Sunday. Genius day. Bring your A-game and a strong coffee.",
+    "Monday. Ease in. The waiting room is already full.",
+    "Tuesday. Still easy. Enjoy it while it lasts.",
+    "Wednesday. Hump day. The cases get cheekier.",
+    "Thursday. Nearly there. Concentrate.",
+    "Friday. Hard mode. Don't phone it in before the weekend.",
+    "Saturday. Hard again. No locum to save you."
+  ];
+  function pickDay(a, d) { return a[dayNum(d) % a.length]; }
+  var SOON = ["In theatre", "Still in the lab", "Awaiting ethics approval", "On the waitlist", "Pending review"];
 
   // ---------- icons ----------
   var I = {
@@ -54,7 +66,7 @@
         return '<button type="button" data-v="' + o[0] + '" aria-pressed="' + (o[0] === cur) + '">' + o[1] + "</button>";
       }).join("") + "</div>";
     }
-    var s = modal("Settings",
+    var s = modal("Settings. Fiddle away.",
       '<div class="opt"><span>Theme</span>' + seg("mw-theme", [["system", "Auto"], ["light", "Light"], ["dark", "Dark"]], t) + "</div>" +
       '<div class="opt"><span>Animations</span>' + seg("mw-motion", [["full", "On"], ["reduce", "Off"]], m) + "</div>");
     Array.prototype.forEach.call(s.querySelectorAll(".seg"), function (g) {
@@ -76,12 +88,12 @@
   }
   function statsModal(g) {
     var r = readStats(g);
-    if (!r) { modal("Stats", "<p>No stats yet.</p>"); return; }
+    if (!r) { modal("Stats", "<p>No stats yet. Play something, doctor.</p>"); return; }
     var s = r.s, pct = s.played ? Math.round(s.wins / s.played * 100) : 0, max = Math.max.apply(null, (s.dist || [0]).concat([1]));
     modal(g.name + " stats",
       '<div class="mstats"><div><b>' + s.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + s.streak + '</b><span>Streak</span></div><div><b>' + s.best + '</b><span>Best</span></div></div>' +
       '<div class="mdist">' + (s.dist || []).map(function (n, i) { return '<div><span>' + r.labels[i] + '</span><i style="width:' + Math.max(8, Math.round(n / max * 100)) + '%">' + n + "</i></div>"; }).join("") + "</div>" +
-      '<p style="margin:0;color:var(--muted);font-size:13px">Stats are saved in this browser on this device.</p>');
+      '<p style="margin:0;color:var(--muted);font-size:13px">Saved in this browser on this device. Clear your browser, lose your glory.</p>');
   }
 
   // ---------- top bar ----------
@@ -98,7 +110,7 @@
       var a = b.getAttribute("data-a");
       if (a === "settings") settings();
       if (a === "stats") statsModal(g);
-      if (a === "help") modal("How to play", "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>");
+      if (a === "help") modal("How to play", "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : ""));
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }
     });
     document.body.insertBefore(bar, document.body.firstChild);
@@ -111,8 +123,8 @@
     var main = document.getElementById("hub");
     function card(g) {
       var st = g.live ? readStats(g) : null;
-      var status = !st ? "" : st.done ? (st.win ? "Solved " : "Done ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
-      var btn = !g.live ? "Coming soon" : st && st.done ? "See results" : "Play";
+      var status = !st ? "" : st.done ? (st.win ? "Solved. Smug. " : "Done. Humbled. ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
+      var btn = !g.live ? SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length] : st && st.done ? "Admire your work" : "Play";
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
@@ -122,9 +134,9 @@
     }
     function draw() {
       main.innerHTML = '<section class="mast"><h1>' + nice(today, { weekday: "long" }) + "&rsquo;s puzzles</h1><p>" +
-        nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p></section>" +
+        nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p></section>" +
         '<div class="grid">' + MW_GAMES.map(card).join("") + "</div>" +
-        '<footer class="site">' + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a></footer>';
+        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a></footer>';
     }
     draw(); window.MW_onTheme = draw;
   }
@@ -140,9 +152,9 @@
     function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
-    sp.innerHTML = '<div class="splash-in"><div class="tile">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" +
-      '<button class="big" type="button" id="mw-play">' + (st && st.done ? "See results" : "Play") + "</button>" +
-      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>Today: " + DIFF[dow] +
+    sp.innerHTML = '<div class="splash-in"><div class="tile">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
+      '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Admire your work" : "Play") + "</button>" +
+      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>Today: " + DIFF[dow] + ". " + DIFFQ[DIFF[dow]] +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
     document.getElementById("mw-play").onclick = start;
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
