@@ -8,7 +8,7 @@ window.MW_SITE = {
   quip: "Made by a GP who should probably be doing paperwork."
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
-window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"] };
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -37,7 +37,7 @@ window.MW_GAMES = [
       "A new word arrives at midnight, Sydney time.",
       "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
     ] },
-  { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"] },
+  { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"], distTitle: " (mistakes per win)" },
     quip: "Like a multidisciplinary meeting, but everyone agrees at the end.",
     helpQuip: "Red herrings are deliberate. Trust no one.",
     help: [
@@ -51,7 +51,19 @@ window.MW_GAMES = [
     tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3" opacity=".7"/><rect x="8" y="26" width="14" height="14" rx="3" opacity=".7"/><rect x="26" y="26" width="14" height="14" rx="3"/></svg>' },
-  { id: "morphemia", name: "Morphemia", path: "morphemia/", live: false,
+  { id: "morphemia", name: "Morphemia", path: "morphemia/", live: true,
+    store: { stats: "mph-stats", day: "mph-day-", labels: ["Stu", "Int", "Res", "Reg", "Con", "Pro", "Gen"], distTitle: " (best rank per day)" },
+    quip: "Spelling bee for people who can pronounce sphygmomanometer.",
+    helpQuip: "Inventing diseases is frowned upon. And rejected.",
+    help: [
+      "Make words of four or more letters from the seven on the hive.",
+      "Every word must use the centre letter. Letters can be reused.",
+      "4-letter words score 1. Longer words score one point per letter.",
+      "Medical words score double. A pangram uses all seven letters and earns 7 bonus points.",
+      "Climb the ranks: Student, Intern, Resident, Registrar, Consultant, Professor, Genius.",
+      "Difficulty rises through the week. New letters at midnight, Sydney time.",
+      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
+    ],
     tagline: "Seven letters. Build medical words. Intern to Genius, if you're lucky.",
     accent: "#B07A0C", accentDark: "#F0B940",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l15 8.5v17L24 40 9 31.5v-17z"/><path d="M24 17l6 3.5v7L24 31l-6-3.5v-7z" fill="#fff"/></svg>' },

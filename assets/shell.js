@@ -93,7 +93,7 @@
     var r = readStats(g);
     if (!r) { modal("Stats", "<p>No stats yet. Play something, doctor.</p>"); return; }
     var s = r.s, pct = s.played ? Math.round(s.wins / s.played * 100) : 0, max = Math.max.apply(null, (s.dist || [0]).concat([1]));
-    modal(g.name + " stats" + (g.store && g.store.labels ? " (mistakes per win)" : ""),
+    modal(g.name + " stats" + ((g.store && g.store.distTitle) || ""),
       '<div class="mstats"><div><b>' + s.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + s.streak + '</b><span>Streak</span></div><div><b>' + s.best + '</b><span>Best</span></div></div>' +
       '<div class="mdist">' + (s.dist || []).map(function (n, i) { return '<div><span>' + r.labels[i] + '</span><i style="width:' + Math.max(8, Math.round(n / max * 100)) + '%">' + n + "</i></div>"; }).join("") + "</div>" +
       '<p style="margin:0;color:var(--muted);font-size:13px">Saved in this browser on this device. Clear your browser, lose your glory.</p>');
