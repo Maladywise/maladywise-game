@@ -8,7 +8,7 @@ window.MW_SITE = {
   quip: "Made by a GP who should probably be doing paperwork."
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
-window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"] };
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -67,7 +67,16 @@ window.MW_GAMES = [
     tagline: "Seven letters. Build medical words. Intern to Genius, if you're lucky.",
     accent: "#B07A0C", accentDark: "#F0B940",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l15 8.5v17L24 40 9 31.5v-17z"/><path d="M24 17l6 3.5v7L24 31l-6-3.5v-7z" fill="#fff"/></svg>' },
-  { id: "linkase", name: "Linkase", path: "linkase/", live: false,
+  { id: "linkase", name: "Linkase", path: "linkase/", live: true, store: { stats: "lnk-stats", day: "lnk-day-", labels: ["0", "1", "2", "3", "4", "X"], distTitle: " (strikes per win)" },
+    quip: "Word association, but with consequences.",
+    helpQuip: "If it sounds like something a registrar would mutter, it's probably right.",
+    help: [
+      "Six words in a chain. You see the first and the last.",
+      "Each word pairs with the next to make a common phrase: blood \u2192 pressure \u2192 sore \u2192 throat.",
+      "Guess the hidden words from the top or the bottom. Tap a dashed word to switch ends.",
+      "Each wrong guess reveals another letter and costs a strike. Five strikes and the chain snaps.",
+      "New chain every day at midnight, Sydney time."
+    ],
     tagline: "Blood, pressure, sore, throat. Link the chain without dropping it.",
     accent: "#2F5DA8", accentDark: "#6E98E0",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="5" y="17" width="20" height="14" rx="7"/><rect x="23" y="17" width="20" height="14" rx="7"/></svg>' },

@@ -1,0 +1,267 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 16,
+  "difficulty": "Genius",
+  "chain": [
+   "BELLY",
+   "BUTTON",
+   "HOLE",
+   "PUNCH",
+   "LINE",
+   "MANAGER"
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "number": 17,
+  "difficulty": "Easy",
+  "chain": [
+   "RUNNY",
+   "NOSE",
+   "RING",
+   "FINGER",
+   "NAIL",
+   "POLISH"
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 18,
+  "difficulty": "Easy",
+  "chain": [
+   "WISDOM",
+   "TOOTH",
+   "BRUSH",
+   "STROKE",
+   "UNIT",
+   "PRICE"
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 19,
+  "difficulty": "Medium",
+  "chain": [
+   "FOOD",
+   "ALLERGY",
+   "TEST",
+   "CASE",
+   "STUDY",
+   "GROUP"
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 20,
+  "difficulty": "Medium",
+  "chain": [
+   "HAY",
+   "FEVER",
+   "PITCH",
+   "BLACK",
+   "EYE",
+   "CONTACT"
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 21,
+  "difficulty": "Hard",
+  "chain": [
+   "NERVE",
+   "BLOCK",
+   "PARTY",
+   "ANIMAL",
+   "PRINT",
+   "OUT"
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 22,
+  "difficulty": "Hard",
+  "chain": [
+   "BIRTH",
+   "DAY",
+   "CARE",
+   "PACKAGE",
+   "DEAL",
+   "BREAKER"
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 23,
+  "difficulty": "Genius",
+  "chain": [
+   "TRICK",
+   "KNEE",
+   "PAD",
+   "LOCK",
+   "JAW",
+   "BONE"
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 24,
+  "difficulty": "Easy",
+  "chain": [
+   "COLD",
+   "BLOOD",
+   "BANK",
+   "HOLIDAY",
+   "HOME",
+   "VISIT"
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 25,
+  "difficulty": "Easy",
+  "chain": [
+   "RED",
+   "HOT",
+   "WATER",
+   "BOTTLE",
+   "NECK",
+   "BRACE"
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 26,
+  "difficulty": "Medium",
+  "chain": [
+   "BED",
+   "REST",
+   "HOME",
+   "RUN",
+   "DOWN",
+   "TIME"
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 27,
+  "difficulty": "Medium",
+  "chain": [
+   "GLUE",
+   "EAR",
+   "DRUM",
+   "ROLL",
+   "CALL",
+   "CENTRE"
+  ],
+  "alt": {
+   "CENTRE": [
+    "CENTER"
+   ]
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "number": 28,
+  "difficulty": "Hard",
+  "chain": [
+   "FIRST",
+   "AID",
+   "WORKER",
+   "BEE",
+   "STING",
+   "RAY"
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 29,
+  "difficulty": "Hard",
+  "chain": [
+   "GALL",
+   "BLADDER",
+   "STONE",
+   "COLD",
+   "SORE",
+   "LOSER"
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 30,
+  "difficulty": "Genius",
+  "chain": [
+   "PILLOW",
+   "TALK",
+   "THERAPY",
+   "DOG",
+   "TAG",
+   "LINE"
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 31,
+  "difficulty": "Easy",
+  "chain": [
+   "BRAIN",
+   "STEM",
+   "CELL",
+   "WALL",
+   "FLOWER",
+   "BED"
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 32,
+  "difficulty": "Easy",
+  "chain": [
+   "CHEST",
+   "INFECTION",
+   "CONTROL",
+   "GROUP",
+   "THERAPY",
+   "SESSION"
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 33,
+  "difficulty": "Medium",
+  "chain": [
+   "CARPAL",
+   "TUNNEL",
+   "VISION",
+   "BOARD",
+   "GAME",
+   "PLAN"
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 34,
+  "difficulty": "Medium",
+  "chain": [
+   "SPINAL",
+   "TAP",
+   "WATER",
+   "BIRTH",
+   "CONTROL",
+   "PANEL"
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 35,
+  "difficulty": "Hard",
+  "chain": [
+   "SUN",
+   "SCREEN",
+   "TEST",
+   "TUBE",
+   "FEEDING",
+   "TIME"
+  ]
+ }
+]
