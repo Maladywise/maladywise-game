@@ -1,4 +1,4 @@
-/* Diagnosis Wordle \u2014 Malady Wise
+/* Daily Dx \u2014 Malady Wise
    One case per day (Sydney time). Cases live in cases/YYYY-MM.json, each with a "date".
    To add cases: add entries to the right month file. Nothing else needs changing. */
 (function () {
@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-17b";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-10-17c";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
@@ -18,7 +18,7 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Malady Wise \u00b7 Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
-    '  <h1>Diagnosis Wordle</h1>' +
+    '  <h1>Daily Dx</h1>' +
     '  <p class="sub">Six clues. One diagnosis. Wrong guesses unlock clues.</p></div>' +
         ' <section class="slip" aria-live="polite">' +
     '  <div class="slip-head"><span class="case-title" id="dxw-title">Loading today\u2019s case\u2026</span><div class="dots" id="dxw-dots"></div></div>' +
@@ -157,7 +157,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = dots().map(function (k) { return k === "hit" ? "\ud83d\udfe9" : k === "miss" ? "\ud83d\udfe5" : "\u2b1c"; }).join("");
-    var share = "Diagnosis Wordle #" + C.number + (isLive() ? "" : " (archive)") + " \u00b7 " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
+    var share = "Daily Dx #" + C.number + (isLive() ? "" : " (archive)") + " \u00b7 " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
       (st.win ? "Solved on clue " + st.revealed + "/6" : "Stumped") + "\nmaladywise.com";
     var max = Math.max.apply(null, stats.dist.concat([1]));
     var mine = st.win ? st.revealed - 1 : 6;
