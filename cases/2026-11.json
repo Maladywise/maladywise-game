@@ -1,0 +1,760 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 16,
+  "difficulty": "Genius",
+  "title": "Burning since childhood",
+  "answer": "Fabry disease",
+  "accept": [
+   "fabry",
+   "fabrys",
+   "fabry's",
+   "fabry disease",
+   "fabry's disease",
+   "anderson fabry",
+   "anderson-fabry disease",
+   "alpha galactosidase a deficiency"
+  ],
+  "clues": [
+   {
+    "t": "32-year-old man with burning pain in his hands and feet since he was a boy."
+   },
+   {
+    "t": "It's worse in heat, with fever, or during exercise. He barely sweats."
+   },
+   {
+    "t": "Clusters of tiny dark red spots around his navel and swimwear area."
+   },
+   {
+    "t": "Urine dipstick: protein 2+",
+    "d": 1
+   },
+   {
+    "t": "His uncle had kidney failure and a stroke in his 40s."
+   },
+   {
+    "t": "Eye exam: whorl-like patterns in both corneas"
+   }
+  ],
+  "pearl": "An X-linked lysosomal storage disease. Women can be affected too, often more mildly. Childhood burning pain plus reduced sweating is a classic early clue. Enzyme replacement and oral therapies exist, so diagnosis matters."
+ },
+ {
+  "date": "2026-11-02",
+  "number": 17,
+  "difficulty": "Easy",
+  "title": "Moon face, thin skin",
+  "answer": "Cushing's syndrome",
+  "accept": [
+   "cushings",
+   "cushing's",
+   "cushing",
+   "cushings syndrome",
+   "cushing's syndrome",
+   "cushing syndrome",
+   "hypercortisolism",
+   "cushings disease",
+   "cushing's disease"
+  ],
+  "clues": [
+   {
+    "t": "41-year-old woman, gained 12 kg mostly around her middle."
+   },
+   {
+    "t": "Struggles to get up from a low chair."
+   },
+   {
+    "t": "Bruises with minor knocks. Skin feels thin."
+   },
+   {
+    "t": "Wide purple stretch marks on her abdomen."
+   },
+   {
+    "t": "New hypertension and fasting glucose 7.4 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "1 mg overnight dexamethasone test: 9 am cortisol 310 nmol/L",
+    "d": 1
+   }
+  ],
+  "pearl": "Exogenous steroids are the commonest cause, so ask about creams, inhalers, joint injections and supplements. Proximal weakness, easy bruising and wide purple striae are the most discriminating signs."
+ },
+ {
+  "date": "2026-11-03",
+  "number": 18,
+  "difficulty": "Easy",
+  "title": "Heavy lids by dinner",
+  "answer": "Myasthenia gravis",
+  "accept": [
+   "myasthenia",
+   "myasthenia gravis",
+   "mg",
+   "ocular myasthenia",
+   "ocular myasthenia gravis"
+  ],
+  "clues": [
+   {
+    "t": "34-year-old woman with double vision when reading at night."
+   },
+   {
+    "t": "Her left eyelid droops by evening. Fine in the morning."
+   },
+   {
+    "t": "Jaw gets tired chewing steak."
+   },
+   {
+    "t": "Pupils normal. No pain. No headache."
+   },
+   {
+    "t": "An ice pack on the eyelid for 2 minutes clearly lifts the droop."
+   },
+   {
+    "t": "Acetylcholine receptor antibodies positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Fatigability is the key feature, so examine with sustained upgaze. About half of purely ocular cases are antibody-negative. Order a CT chest to look for thymoma."
+ },
+ {
+  "date": "2026-11-04",
+  "number": 19,
+  "difficulty": "Medium",
+  "title": "Wetland weekend",
+  "answer": "Ross River virus",
+  "accept": [
+   "ross river",
+   "ross river virus",
+   "ross river fever",
+   "rrv",
+   "epidemic polyarthritis"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old woman with painful, stiff hands, wrists and ankles."
+   },
+   {
+    "t": "Exhausted. Struggling to open jars for 3 weeks."
+   },
+   {
+    "t": "A faint red rash on her trunk came and went in the first week."
+   },
+   {
+    "t": "Low-grade fever at the start. No history of joint problems."
+   },
+   {
+    "t": "Went camping near coastal wetlands in late summer and was bitten a lot."
+   },
+   {
+    "t": "Alphavirus IgM positive, IgG rising on repeat serology",
+    "d": 1
+   }
+  ],
+  "pearl": "Australia's commonest mosquito-borne infection. Symptoms can last months. Confirm with paired serology, as a single IgM is often a false positive. Treatment is supportive; it's notifiable in NSW."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 20,
+  "difficulty": "Medium",
+  "title": "The cat is sleepy too",
+  "answer": "Carbon monoxide poisoning",
+  "accept": [
+   "carbon monoxide",
+   "carbon monoxide poisoning",
+   "co poisoning",
+   "co toxicity",
+   "carboxyhaemoglobin",
+   "carbon monoxide toxicity"
+  ],
+  "clues": [
+   {
+    "t": "35-year-old man with headaches and nausea for 2 weeks."
+   },
+   {
+    "t": "Worse at home in the evenings, better at work."
+   },
+   {
+    "t": "His partner and child have similar headaches."
+   },
+   {
+    "t": "The family cat has been unusually lethargic."
+   },
+   {
+    "t": "SpO₂ 99% on room air.",
+    "d": 1
+   },
+   {
+    "t": "They started using an old gas space heater this month."
+   }
+  ],
+  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+ },
+ {
+  "date": "2026-11-06",
+  "number": 21,
+  "difficulty": "Hard",
+  "title": "The renovator",
+  "answer": "Lead poisoning",
+  "accept": [
+   "lead poisoning",
+   "lead toxicity",
+   "plumbism",
+   "lead",
+   "heavy metal poisoning",
+   "chronic lead poisoning"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man with crampy abdominal pain and constipation for 2 months."
+   },
+   {
+    "t": "Irritable and forgetful. His partner says he's \"not himself\"."
+   },
+   {
+    "t": "Hb 104 g/L, microcytic, but ferritin is normal",
+    "d": 1
+   },
+   {
+    "t": "Blood film: basophilic stippling of red cells",
+    "d": 1
+   },
+   {
+    "t": "He's been restoring a 1920s Newcastle terrace on weekends."
+   },
+   {
+    "t": "He dry-sands the old paint with no mask."
+   }
+  ],
+  "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 µg/dL. Ask about hobbies and renovations, and check the whole household, especially children."
+ },
+ {
+  "date": "2026-11-07",
+  "number": 22,
+  "difficulty": "Hard",
+  "title": "Top End wet season",
+  "answer": "Melioidosis",
+  "accept": [
+   "melioidosis",
+   "burkholderia pseudomallei",
+   "b pseudomallei",
+   "burkholderia",
+   "whitmore's disease",
+   "whitmores disease"
+  ],
+  "clues": [
+   {
+    "t": "57-year-old man with fever, cough and rigors for 5 days."
+   },
+   {
+    "t": "He has type 2 diabetes and drinks heavily."
+   },
+   {
+    "t": "Chest X-ray: upper lobe consolidation",
+    "d": 1
+   },
+   {
+    "t": "He lives near Darwin and spent the monsoon week clearing his flooded garden."
+   },
+   {
+    "t": "CT: multiple small abscesses in the spleen and prostate",
+    "d": 1
+   },
+   {
+    "t": "Blood culture: gram-negative bacillus with a \"safety pin\" look",
+    "d": 1
+   }
+  ],
+  "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
+ },
+ {
+  "date": "2026-11-08",
+  "number": 23,
+  "difficulty": "Genius",
+  "title": "Dark on the windowsill",
+  "answer": "Acute intermittent porphyria",
+  "accept": [
+   "acute intermittent porphyria",
+   "aip",
+   "porphyria",
+   "acute porphyria",
+   "acute hepatic porphyria"
+  ],
+  "clues": [
+   {
+    "t": "26-year-old woman with severe abdominal pain. Third ED visit this year."
+   },
+   {
+    "t": "CT, ultrasound and scopes have all been normal."
+   },
+   {
+    "t": "Anxious and confused this time. Her arms feel weak."
+   },
+   {
+    "t": "Na 124 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "Attacks follow crash diets. This one started after a new medicine."
+   },
+   {
+    "t": "A urine sample left on the windowsill turned dark reddish-brown"
+   }
+  ],
+  "pearl": "Severe abdominal pain with normal imaging, plus hyponatraemia or neurological signs, should prompt a urine porphobilinogen test during the attack. Fasting and many medicines can trigger attacks."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 24,
+  "difficulty": "Easy",
+  "title": "Prawns and regret",
+  "answer": "Gout",
+  "accept": [
+   "gout",
+   "gouty arthritis",
+   "acute gout",
+   "podagra",
+   "crystal arthritis",
+   "urate arthritis"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old man woke at 3 am with a screaming pain in his foot."
+   },
+   {
+    "t": "The base of his big toe is red, hot and swollen. Even the bedsheet hurts."
+   },
+   {
+    "t": "Boxing Day. He had prawns, ham and \"a few\" beers yesterday."
+   },
+   {
+    "t": "He started a fluid tablet for his blood pressure last month."
+   },
+   {
+    "t": "Serum urate 0.38 mmol/L (upper normal)",
+    "d": 1
+   },
+   {
+    "t": "Joint aspirate: needle-shaped crystals, negatively birefringent",
+    "d": 1
+   }
+  ],
+  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 25,
+  "difficulty": "Easy",
+  "title": "One-sided story",
+  "answer": "Shingles (herpes zoster)",
+  "accept": [
+   "shingles",
+   "herpes zoster",
+   "zoster",
+   "hz",
+   "varicella zoster",
+   "varicella zoster reactivation",
+   "vzv"
+  ],
+  "clues": [
+   {
+    "t": "71-year-old woman with burning pain around the right side of her chest for 3 days."
+   },
+   {
+    "t": "ECG and troponin are normal.",
+    "d": 1
+   },
+   {
+    "t": "The pain stops exactly at the midline, front and back."
+   },
+   {
+    "t": "Her skin there is exquisitely tender to light touch."
+   },
+   {
+    "t": "Today, clusters of small blisters on a red base have appeared in a band."
+   },
+   {
+    "t": "She had chickenpox as a child."
+   }
+  ],
+  "pearl": "Pain often comes 2–3 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 26,
+  "difficulty": "Medium",
+  "title": "Ring doesn't fit",
+  "answer": "Acromegaly",
+  "accept": [
+   "acromegaly",
+   "growth hormone excess",
+   "gh excess",
+   "gh secreting pituitary adenoma",
+   "somatotroph adenoma"
+  ],
+  "clues": [
+   {
+    "t": "48-year-old man, sweating more than ever."
+   },
+   {
+    "t": "Partner says his snoring is now unbearable."
+   },
+   {
+    "t": "Had his wedding ring resized twice. Shoe size went up one."
+   },
+   {
+    "t": "Gaps have appeared between his lower teeth."
+   },
+   {
+    "t": "Carpal tunnel symptoms in both hands, new hypertension."
+   },
+   {
+    "t": "IGF-1 three times the upper limit of normal",
+    "d": 1
+   }
+  ],
+  "pearl": "Changes are so slow that family often miss them, so compare old photos. IGF-1 is the screening test; confirm with GH failing to suppress on a glucose tolerance test, then pituitary MRI."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 27,
+  "difficulty": "Medium",
+  "title": "Tea and toast",
+  "answer": "Scurvy (vitamin C deficiency)",
+  "accept": [
+   "scurvy",
+   "vitamin c deficiency",
+   "ascorbic acid deficiency",
+   "vit c deficiency"
+  ],
+  "clues": [
+   {
+    "t": "67-year-old man, living alone since his wife died."
+   },
+   {
+    "t": "Gums bleed when he brushes his teeth."
+   },
+   {
+    "t": "Painful legs and swollen ankles."
+   },
+   {
+    "t": "Tiny bleeds around hair follicles on his shins, with corkscrew-shaped hairs."
+   },
+   {
+    "t": "A leg graze from 2 months ago still hasn't healed."
+   },
+   {
+    "t": "Diet is mostly toast and tea. No fruit or vegetables."
+   }
+  ],
+  "pearl": "Not just a sailor's disease. It still turns up with restrictive diets, alcohol use disorder and in older men living alone. Symptoms respond within days of vitamin C replacement."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 28,
+  "difficulty": "Hard",
+  "title": "Wet, wobbly, wacky",
+  "answer": "Normal pressure hydrocephalus",
+  "accept": [
+   "normal pressure hydrocephalus",
+   "nph",
+   "normal-pressure hydrocephalus",
+   "hydrocephalus"
+  ],
+  "clues": [
+   {
+    "t": "74-year-old man whose walking has slowly changed over a year."
+   },
+   {
+    "t": "Short, shuffling steps. His feet look glued to the floor."
+   },
+   {
+    "t": "Now he can't always make it to the toilet in time."
+   },
+   {
+    "t": "His wife says he's become slow and vague."
+   },
+   {
+    "t": "No tremor. Arms swing normally."
+   },
+   {
+    "t": "CT: enlarged ventricles out of proportion to brain shrinkage",
+    "d": 1
+   }
+  ],
+  "pearl": "Gait problems, incontinence and confusion together form the classic triad. Gait usually comes first. A large-volume lumbar puncture that improves walking predicts benefit from a shunt. It's one of the few reversible causes of cognitive decline."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 29,
+  "difficulty": "Hard",
+  "title": "Barely a sting",
+  "answer": "Irukandji syndrome",
+  "accept": [
+   "irukandji",
+   "irukandji syndrome",
+   "irukandji sting",
+   "carukia barnesi",
+   "jellyfish sting",
+   "box jellyfish"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old tourist with severe lower back pain that came on suddenly."
+   },
+   {
+    "t": "Drenched in sweat. Vomiting. Says she feels like she's going to die."
+   },
+   {
+    "t": "BP 190/110, HR 125",
+    "d": 1
+   },
+   {
+    "t": "She was swimming off a beach near Cairns in December, 40 minutes ago."
+   },
+   {
+    "t": "She felt a small prick on her arm. Barely a mark there now."
+   },
+   {
+    "t": "Troponin rising",
+    "d": 1
+   }
+  ],
+  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20–40 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 30,
+  "difficulty": "Genius",
+  "title": "Hot is cold",
+  "answer": "Ciguatera poisoning",
+  "accept": [
+   "ciguatera",
+   "ciguatera poisoning",
+   "ciguatera fish poisoning",
+   "ciguatoxin",
+   "fish poisoning",
+   "marine toxin"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old man with vomiting and diarrhoea, starting 4 hours after dinner."
+   },
+   {
+    "t": "Next day: tingling lips and fingers. His teeth ache, as if they're loose."
+   },
+   {
+    "t": "Cold drinks feel like they're burning his mouth."
+   },
+   {
+    "t": "HR 48",
+    "d": 1
+   },
+   {
+    "t": "Three friends at the same dinner feel the same."
+   },
+   {
+    "t": "They ate a large Spanish mackerel caught on a trip off Queensland."
+   }
+  ],
+  "pearl": "Hot–cold reversal is the giveaway. The toxin comes from large reef fish and isn't destroyed by cooking or freezing. Symptoms can last weeks. Advise avoiding alcohol and fish for a while, as both can bring symptoms back."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 31,
+  "difficulty": "Easy",
+  "title": "Turned down to low",
+  "answer": "Hypothyroidism",
+  "accept": [
+   "hypothyroidism",
+   "hypothyroid",
+   "underactive thyroid",
+   "hashimotos",
+   "hashimoto's",
+   "hashimoto",
+   "hashimoto thyroiditis",
+   "hashimotos thyroiditis",
+   "autoimmune thyroiditis",
+   "myxoedema",
+   "myxedema"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old woman, tired all the time and gaining weight without eating more."
+   },
+   {
+    "t": "Always cold. Wears a cardigan in January."
+   },
+   {
+    "t": "Constipated. Dry skin. Her hair is coming out in the shower."
+   },
+   {
+    "t": "Her ankle reflexes relax slowly after the tap."
+   },
+   {
+    "t": "Her mother takes \"a little pill for her neck\"."
+   },
+   {
+    "t": "TSH 28 mIU/L · free T4 low",
+    "d": 1
+   }
+  ],
+  "pearl": "Hashimoto's thyroiditis is the commonest cause in Australia. Lithium and amiodarone can cause it too. Recheck TSH about 6 weeks after any dose change."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 32,
+  "difficulty": "Easy",
+  "title": "The night shift",
+  "answer": "Obstructive sleep apnoea",
+  "accept": [
+   "obstructive sleep apnoea",
+   "obstructive sleep apnea",
+   "sleep apnoea",
+   "sleep apnea",
+   "osa",
+   "osahs"
+  ],
+  "clues": [
+   {
+    "t": "49-year-old truck driver, exhausted despite 8 hours in bed."
+   },
+   {
+    "t": "Wakes with headaches most mornings."
+   },
+   {
+    "t": "Nodded off at the lights twice last week."
+   },
+   {
+    "t": "His partner moved to the spare room because of the snoring."
+   },
+   {
+    "t": "She says he stops breathing, then gasps."
+   },
+   {
+    "t": "BMI 34, collar size 46 cm, BP high on three medicines"
+   }
+  ],
+  "pearl": "Witnessed apnoeas plus daytime sleepiness is the classic pair. Untreated OSA drives resistant hypertension. Commercial drivers have specific fitness-to-drive standards in Australia."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 33,
+  "difficulty": "Medium",
+  "title": "Broken heart",
+  "answer": "Takotsubo cardiomyopathy",
+  "accept": [
+   "takotsubo",
+   "takotsubo cardiomyopathy",
+   "takotsubo syndrome",
+   "broken heart syndrome",
+   "stress cardiomyopathy",
+   "stress induced cardiomyopathy",
+   "apical ballooning syndrome"
+  ],
+  "clues": [
+   {
+    "t": "66-year-old woman with sudden crushing chest pain."
+   },
+   {
+    "t": "It started at her husband's funeral this morning."
+   },
+   {
+    "t": "ECG: ST elevation in the anterior leads",
+    "d": 1
+   },
+   {
+    "t": "Troponin raised",
+    "d": 1
+   },
+   {
+    "t": "Coronary angiogram: no significant blockages",
+    "d": 1
+   },
+   {
+    "t": "Echo: apex of the left ventricle balloons out, base contracts normally",
+    "d": 1
+   }
+  ],
+  "pearl": "It mimics a STEMI and must be managed as one until angiography. Usually triggered by emotional or physical stress in postmenopausal women. Function mostly recovers within weeks, but it isn't benign: complications and recurrence occur."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 34,
+  "difficulty": "Medium",
+  "title": "The three Ps",
+  "answer": "Phaeochromocytoma",
+  "accept": [
+   "phaeochromocytoma",
+   "pheochromocytoma",
+   "phaeo",
+   "pheo",
+   "phaeochromocytoma paraganglioma",
+   "pheochromocytoma paraganglioma",
+   "ppgl"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old man with attacks of pounding headache."
+   },
+   {
+    "t": "He drenches his shirt with sweat during each one."
+   },
+   {
+    "t": "Heart races and he feels a sense of doom. Episodes last 20 minutes."
+   },
+   {
+    "t": "BP between episodes is normal.",
+    "d": 1
+   },
+   {
+    "t": "BP during an episode measured at the pharmacy: 210/120",
+    "d": 1
+   },
+   {
+    "t": "Plasma free metanephrines markedly raised",
+    "d": 1
+   }
+  ],
+  "pearl": "Headache, sweating and palpitations together are the classic triad. Never start a beta-blocker before an alpha-blocker, as unopposed alpha stimulation can trigger a hypertensive crisis. About a third are hereditary."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 35,
+  "difficulty": "Hard",
+  "title": "Cream crackers",
+  "answer": "Sjögren's syndrome",
+  "accept": [
+   "sjogrens",
+   "sjogren's",
+   "sjogren",
+   "sjogrens syndrome",
+   "sjogren's syndrome",
+   "sjogren syndrome",
+   "sjögren's syndrome",
+   "sjögren",
+   "sicca syndrome",
+   "primary sjogrens"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old woman whose eyes feel gritty, like sand under the lids."
+   },
+   {
+    "t": "She can't eat a dry cracker without a glass of water."
+   },
+   {
+    "t": "Her dentist found five new cavities this year."
+   },
+   {
+    "t": "Both cheeks near her jaw are swollen and puffy."
+   },
+   {
+    "t": "Aching joints. Tired all the time."
+   },
+   {
+    "t": "Anti-Ro and anti-La antibodies positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Dry eyes plus dry mouth is the core of it. Schirmer's test measures tear production. Lymphoma risk is raised, so a persistently enlarged parotid gland needs review."
+ }
+]
