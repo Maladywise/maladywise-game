@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", MAXM = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", MAXM = 4;
   var root = document.getElementById("cmx");
   if (!document.querySelector("link[data-cmx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "comorbix.css?v=" + BUILD; l.setAttribute("data-cmx", ""); document.head.appendChild(l);
@@ -54,7 +54,7 @@
   function remaining() { return order.filter(function (w) { return st.solved.indexOf(groupOf(w)) < 0; }); }
 
   // ---------- render ----------
-  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   var SQ = ["\ud83d\udfe8", "\ud83d\udfe9", "\ud83d\udfe6", "\ud83d\udfea"];
   function render(shake) {
     if (!P) return;
@@ -103,7 +103,10 @@
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
       stats.dist[win ? st.mistakes : 4]++; stats.last = today; put(SKEY, stats);
     }
-    say(win ? SASS.win[st.mistakes] : pick(SASS.lose));
+    if (P.difficulty === "Einstein") {
+      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-100-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put("mw-einstein", tro); } }
+    } else say(win ? SASS.win[st.mistakes] : pick(SASS.lose));
   }
   $("grid").addEventListener("click", function (e) {
     var b = e.target.closest(".t"); if (!b || st.done) return;
@@ -149,7 +152,7 @@
       var all = []; P.groups.forEach(function (g) { all = all.concat(g.words); });
       order = st.order && st.order.length === 16 ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
       $("eyebrow").textContent = (isLive() ? "Comorbix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
-      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.textContent = P.difficulty;
+      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Solved. Come back tomorrow." : "You've had your go. Back tomorrow.");
       render(); renderArchive();

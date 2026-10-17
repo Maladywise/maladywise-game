@@ -1,0 +1,34 @@
+[
+ {
+  "difficulty": "Medium",
+  "title": "Tea and toast",
+  "answer": "Scurvy (vitamin C deficiency)",
+  "accept": [
+   "scurvy",
+   "vitamin c deficiency",
+   "ascorbic acid deficiency",
+   "vit c deficiency"
+  ],
+  "clues": [
+   {
+    "t": "67-year-old man, living alone since his wife died."
+   },
+   {
+    "t": "Gums bleed when he brushes his teeth."
+   },
+   {
+    "t": "Painful legs and swollen ankles."
+   },
+   {
+    "t": "Tiny bleeds around hair follicles on his shins, with corkscrew-shaped hairs."
+   },
+   {
+    "t": "A leg graze from 2 months ago still hasn't healed."
+   },
+   {
+    "t": "Diet is mostly toast and tea. No fruit or vegetables."
+   }
+  ],
+  "pearl": "Not just a sailor's disease. It still turns up with restrictive diets, alcohol use disorder and in older men living alone. Symptoms respond within days of vitamin C replacement."
+ }
+]

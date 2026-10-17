@@ -1,0 +1,47 @@
+[
+ {
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Lung sounds",
+    "level": 1,
+    "words": [
+     "WHEEZE",
+     "CRACKLES",
+     "STRIDOR",
+     "RUB"
+    ]
+   },
+   {
+    "label": "Parts of the ear",
+    "level": 2,
+    "words": [
+     "COCHLEA",
+     "INCUS",
+     "STAPES",
+     "MALLEUS"
+    ]
+   },
+   {
+    "label": "Parts of the gut",
+    "level": 2,
+    "words": [
+     "OESOPHAGUS",
+     "DUODENUM",
+     "JEJUNUM",
+     "ILEUM"
+    ]
+   },
+   {
+    "label": "Nail signs",
+    "level": 3,
+    "words": [
+     "CLUBBING",
+     "KOILONYCHIA",
+     "SPLINTER",
+     "PITTING"
+    ]
+   }
+  ]
+ }
+]

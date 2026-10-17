@@ -23,7 +23,9 @@
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
   function nice(d, opts) { return new Date(dayNum(d) * 864e5).toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, opts)); }
   var DIFF = ["Genius", "Easy", "Easy", "Medium", "Medium", "Hard", "Hard"];
-  var DIFFQ = { Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
+  function diffFor(g, d, dow) { return (window.MW_EINSTEIN && (MW_EINSTEIN[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; }
+  var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
+  var DIFFQ = { Einstein: "Roughly one day in 100. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
   var DAYQ = [
     "Sunday. Genius day. Bring your A-game and a strong coffee.",
     "Monday. Ease in. The waiting room is already full.",
@@ -129,13 +131,13 @@
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
-        '<div class="cbody">' + (g.featured ? '<span class="pill">Today &middot; ' + DIFF[dow] + "</span>" : "") +
+        '<div class="cbody">' + (diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : g.featured ? '<span class="pill">Today &middot; ' + DIFF[dow] + "</span>" : "") +
         '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
     }
     function draw() {
       main.innerHTML = '<section class="mast"><h1>' + nice(today, { weekday: "long" }) + "&rsquo;s puzzles</h1><p>" +
-        nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p></section>" +
+        nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p>" + (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         '<div class="grid">' + MW_GAMES.map(card).join("") + "</div>" +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a></footer>';
     }
@@ -153,9 +155,10 @@
     function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
-    sp.innerHTML = '<div class="splash-in"><div class="tile">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
+    var einToday = diffFor(g, today, dow) === "Einstein";
+    sp.innerHTML = '<div class="splash-in">' + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Admire your work" : "Play") + "</button>" +
-      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>Today: " + DIFF[dow] + ". " + DIFFQ[DIFF[dow]] +
+      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)] +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
     document.getElementById("mw-play").onclick = start;
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };

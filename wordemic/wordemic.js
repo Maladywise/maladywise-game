@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). Guess list in words.txt. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2";
   var ROWS = 6, LEN = 5;
   var root = document.getElementById("wde");
   if (!document.querySelector("link[data-wde]")) {
@@ -53,7 +53,7 @@
   }
 
   // ---------- render ----------
-  var cur = "", ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0" };
+  var cur = "", ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function buildBoard() {
     var h = ""; for (var r = 0; r < ROWS; r++) { h += '<div class="row" data-r="' + r + '">'; for (var c = 0; c < LEN; c++) h += '<div class="tile"></div>'; h += "</div>"; }
     $("board").innerHTML = h;
@@ -123,7 +123,10 @@
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
       stats.dist[win ? st.guesses.length - 1 : 6]++; stats.last = today; put(SKEY, stats);
     }
-    say(win ? SASS.win[st.guesses.length - 1] : "It was " + P.word + ". " + pick(SASS.lose));
+    if (P.difficulty === "Einstein") {
+      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-100-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
+      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put("mw-einstein", tro); } }
+    } else say(win ? SASS.win[st.guesses.length - 1] : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
     if (!P || st.done || !WORDS) return;
@@ -162,7 +165,7 @@
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) { say("Today\u2019s word is still in triage. Back tomorrow."); $("kb").hidden = true; return; }
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
-      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.textContent = P.difficulty;
+      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Solved. Come back tomorrow." : "You've had your go. Back tomorrow.");
       paint(); renderArchive();

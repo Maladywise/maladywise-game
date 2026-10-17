@@ -7,6 +7,8 @@ window.MW_SITE = {
   home: "https://www.maladywise.com",
   quip: "Made by a GP who should probably be doing paperwork."
 };
+/* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -18,7 +20,8 @@ window.MW_GAMES = [
       "Read the first clue and type your diagnosis.",
       "Each wrong guess (or Next clue) unlocks another clue. You get six.",
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
-      "A new case arrives at midnight, Sydney time. Past cases live in the archive."
+      "A new case arrives at midnight, Sydney time. Past cases live in the archive.",
+      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
     ] },
   { id: "wordemic", name: "Wordemic", path: "wordemic/", live: true, store: { stats: "wde-stats", day: "wde-day-" },
     tagline: "Guess the five-letter medical word in six tries.",
@@ -31,7 +34,8 @@ window.MW_GAMES = [
       "Green: right letter, right spot. Yellow: in the word, wrong spot. Grey: not in the word.",
       "Every guess must be a real five-letter word.",
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
-      "A new word arrives at midnight, Sydney time."
+      "A new word arrives at midnight, Sydney time.",
+      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
     ] },
   { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"] },
     quip: "Like a multidisciplinary meeting, but everyone agrees at the end.",
@@ -41,7 +45,8 @@ window.MW_GAMES = [
       "Tap four tiles and press Submit. Get a group right and it locks in.",
       "You can make four mistakes. Three out of four gets a warning.",
       "Groups get trickier by colour: yellow, green, blue, then purple (usually wordplay).",
-      "Difficulty rises through the week. New puzzle at midnight, Sydney time."
+      "Difficulty rises through the week. New puzzle at midnight, Sydney time.",
+      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
     ],
     tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",

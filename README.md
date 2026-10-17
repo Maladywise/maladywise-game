@@ -23,3 +23,7 @@ Mon–Tue Easy · Wed–Thu Medium · Fri–Sat Hard · Sun Genius
 ## Adding cases
 Add objects to the right month file with a new `date` and the next `number`.
 All cases are fictional. General education, not personal medical advice.
+
+## Einstein days
+Rare top tier, about 1 day in 100 per game. Listed in `assets/games.js` (`MW_EINSTEIN`) and set as `"difficulty": "Einstein"` in that day's puzzle.
+When generating new batches, roll ~1% per day per game for Einstein. Displaced puzzles go to each game's `reserve.json`.
