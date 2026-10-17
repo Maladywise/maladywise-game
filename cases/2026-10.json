@@ -1,0 +1,570 @@
+[
+ {
+  "date": "2026-10-17",
+  "number": 1,
+  "difficulty": "Hard",
+  "title": "Toasty shins",
+  "answer": "Erythema ab igne",
+  "accept": [
+   "erythema ab igne",
+   "toasted skin syndrome",
+   "toasted skin",
+   "eai"
+  ],
+  "clues": [
+   {
+    "t": "71-year-old woman with a painless rash on the fronts of both shins."
+   },
+   {
+    "t": "Net-like, reddish-brown pattern. Not itchy, not raised."
+   },
+   {
+    "t": "The backs of her legs are completely spared."
+   },
+   {
+    "t": "It appeared over winter and has slowly darkened."
+   },
+   {
+    "t": "Lives alone in an old, poorly insulated house."
+   },
+   {
+    "t": "Spends every evening with a bar heater about 30 cm from her legs."
+   }
+  ],
+  "pearl": "Chronic low-level heat causes reticulated pigmentation. Modern versions come from laptops on thighs and heat packs. Remove the heat source; biopsy only if a lesion ulcerates or changes, as SCC can rarely develop."
+ },
+ {
+  "date": "2026-10-18",
+  "number": 2,
+  "difficulty": "Genius",
+  "title": "Don't scratch that",
+  "answer": "Systemic mastocytosis",
+  "accept": [
+   "systemic mastocytosis",
+   "mastocytosis",
+   "mast cell disease",
+   "indolent systemic mastocytosis",
+   "urticaria pigmentosa",
+   "cutaneous mastocytosis"
+  ],
+  "clues": [
+   {
+    "t": "41-year-old man with episodes of flushing and a pounding heart."
+   },
+   {
+    "t": "Diarrhoea and cramps after hot showers or alcohol."
+   },
+   {
+    "t": "Small reddish-brown spots on his trunk for years."
+   },
+   {
+    "t": "When a spot is rubbed, it swells into a hive within minutes."
+   },
+   {
+    "t": "Anaphylaxis to a wasp sting last summer. DEXA: osteoporosis at 41."
+   },
+   {
+    "t": "Baseline serum tryptase 48 µg/L",
+    "d": 1
+   }
+  ],
+  "pearl": "Rubbing a spot until it hives is Darier's sign. A baseline tryptase above 20 µg/L is a diagnostic criterion. Anyone with insect-sting anaphylaxis and a high baseline tryptase should be checked for mastocytosis."
+ },
+ {
+  "date": "2026-10-19",
+  "number": 3,
+  "difficulty": "Easy",
+  "title": "Iron that won't stick",
+  "answer": "Coeliac disease",
+  "accept": [
+   "coeliac",
+   "coeliac disease",
+   "celiac",
+   "celiac disease",
+   "gluten sensitive enteropathy",
+   "gluten-sensitive enteropathy"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old woman, tired for two years."
+   },
+   {
+    "t": "Iron deficiency anaemia that hasn't improved despite 6 months of oral iron."
+   },
+   {
+    "t": "Intermittent bloating and recurrent mouth ulcers."
+   },
+   {
+    "t": "DEXA after a wrist fracture shows osteopenia. She's premenopausal."
+   },
+   {
+    "t": "Her sister has type 1 diabetes."
+   },
+   {
+    "t": "tTG-IgA 120 U/mL (ref <15) · Total IgA normal",
+    "d": 1
+   }
+  ],
+  "pearl": "Test while she is still eating gluten, and check total IgA or the result can be falsely negative. Iron deficiency that fails oral replacement should prompt coeliac serology."
+ },
+ {
+  "date": "2026-10-20",
+  "number": 4,
+  "difficulty": "Easy",
+  "title": "Bones, stones, groans",
+  "answer": "Primary hyperparathyroidism",
+  "accept": [
+   "primary hyperparathyroidism",
+   "hyperparathyroidism",
+   "parathyroid adenoma",
+   "phpt"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old woman, recently passed a kidney stone."
+   },
+   {
+    "t": "Constipated, thirsty, up twice a night to pass urine."
+   },
+   {
+    "t": "Says her mood has been flat and she feels 'foggy'."
+   },
+   {
+    "t": "Aching bones. Not on any supplements."
+   },
+   {
+    "t": "Corrected calcium 2.85 mmol/L (ref 2.10–2.60)",
+    "d": 1
+   },
+   {
+    "t": "PTH 9.8 pmol/L (ref 1.6–6.9) · Vitamin D normal",
+    "d": 1
+   }
+  ],
+  "pearl": "High calcium with a PTH that isn't suppressed means primary hyperparathyroidism until proven otherwise. Check a 24-hour urine calcium to exclude familial hypocalciuric hypercalcaemia before referral."
+ },
+ {
+  "date": "2026-10-21",
+  "number": 5,
+  "difficulty": "Medium",
+  "title": "Rusty joints",
+  "answer": "Hereditary haemochromatosis",
+  "accept": [
+   "haemochromatosis",
+   "hemochromatosis",
+   "hereditary haemochromatosis",
+   "hereditary hemochromatosis",
+   "iron overload",
+   "hfe haemochromatosis"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old man, tired for a year. \"Just getting old, doc.\""
+   },
+   {
+    "t": "Painful 2nd and 3rd MCP joints, both hands. Squeezing a handshake hurts."
+   },
+   {
+    "t": "Partner says he looks tanned all year. He works in an office."
+   },
+   {
+    "t": "New diagnosis of type 2 diabetes last month. BMI 23."
+   },
+   {
+    "t": "ALT 88 U/L · Ferritin 1,450 µg/L",
+    "d": 1
+   },
+   {
+    "t": "Transferrin saturation 78%",
+    "d": 1
+   }
+  ],
+  "pearl": "Ferritin alone is non-specific. A transferrin saturation over 45% is the clue to order HFE genotyping. Hook-like osteophytes on the 2nd/3rd MCPs are the classic X-ray sign."
+ },
+ {
+  "date": "2026-10-22",
+  "number": 6,
+  "difficulty": "Medium",
+  "title": "Standing ovation",
+  "answer": "POTS (postural orthostatic tachycardia syndrome)",
+  "accept": [
+   "pots",
+   "postural orthostatic tachycardia",
+   "postural orthostatic tachycardia syndrome",
+   "postural tachycardia syndrome",
+   "postural tachycardia"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman. Dizzy and foggy since a viral illness 6 months ago."
+   },
+   {
+    "t": "Heart pounds when she stands in the shower queue or at the checkout."
+   },
+   {
+    "t": "Feels better lying down. Worse in heat and after big meals."
+   },
+   {
+    "t": "ECG normal. FBC, TSH, ferritin and cortisol all normal.",
+    "d": 1
+   },
+   {
+    "t": "Lying: HR 68, BP 112/70 · Standing 10 min: HR 112, BP 110/72",
+    "d": 1
+   },
+   {
+    "t": "Symptoms persist over 3 months. No orthostatic hypotension.",
+    "d": 1
+   }
+  ],
+  "pearl": "Sustained HR rise of 30+ bpm (40+ under 20) within 10 minutes of standing, without a BP drop, plus 3+ months of symptoms. A GP-room active stand test does the job before any tilt table."
+ },
+ {
+  "date": "2026-10-23",
+  "number": 7,
+  "difficulty": "Hard",
+  "title": "Copper eyes",
+  "answer": "Wilson disease",
+  "accept": [
+   "wilson",
+   "wilsons",
+   "wilson's",
+   "wilson disease",
+   "wilsons disease",
+   "wilson's disease",
+   "hepatolenticular degeneration"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old man whose handwriting has deteriorated over a year."
+   },
+   {
+    "t": "A tremor that gets worse when he holds his arms out."
+   },
+   {
+    "t": "Family say he's become irritable and his marks have dropped."
+   },
+   {
+    "t": "ALT mildly raised. Not drinking, no medications.",
+    "d": 1
+   },
+   {
+    "t": "Golden-brown ring at the edge of each cornea."
+   },
+   {
+    "t": "Caeruloplasmin low",
+    "d": 1
+   }
+  ],
+  "pearl": "Consider it in anyone under 40 with unexplained liver disease plus neurological or psychiatric change. Kayser-Fleischer rings may need a slit lamp. It's treatable, and siblings need screening."
+ },
+ {
+  "date": "2026-10-24",
+  "number": 8,
+  "difficulty": "Hard",
+  "title": "Bendy and dizzy",
+  "answer": "Hypermobile Ehlers-Danlos syndrome (hEDS)",
+  "accept": [
+   "ehlers danlos",
+   "ehlers-danlos",
+   "ehlers danlos syndrome",
+   "ehlers-danlos syndrome",
+   "hypermobile ehlers danlos",
+   "hypermobile ehlers-danlos",
+   "hypermobile ehlers danlos syndrome",
+   "heds",
+   "eds",
+   "hypermobility spectrum disorder"
+  ],
+  "clues": [
+   {
+    "t": "22-year-old woman with widespread joint pain since her teens."
+   },
+   {
+    "t": "Her shoulders have partly dislocated several times with minor movements."
+   },
+   {
+    "t": "Soft, velvety, slightly stretchy skin. Wide, thin scars."
+   },
+   {
+    "t": "Dizzy and racing heart on standing for long periods."
+   },
+   {
+    "t": "Her mother was always 'double-jointed'."
+   },
+   {
+    "t": "Beighton score 7/9",
+    "d": 1
+   }
+  ],
+  "pearl": "hEDS is a clinical diagnosis using the 2017 criteria; there's no genetic test for it. It often travels with POTS. Thin, translucent skin, arterial or organ rupture point to vascular EDS, which needs urgent genetics referral."
+ },
+ {
+  "date": "2026-10-25",
+  "number": 9,
+  "difficulty": "Genius",
+  "title": "Swelling with no itch",
+  "answer": "Hereditary angioedema",
+  "accept": [
+   "hereditary angioedema",
+   "hae",
+   "c1 esterase inhibitor deficiency",
+   "c1 inhibitor deficiency",
+   "c1-inh deficiency",
+   "hereditary angio-oedema",
+   "hereditary angiooedema",
+   "angioedema"
+  ],
+  "clues": [
+   {
+    "t": "23-year-old woman with recurrent swelling of her hands and lips."
+   },
+   {
+    "t": "Each episode lasts 2–4 days. No hives. No itch."
+   },
+   {
+    "t": "Antihistamines, steroids and even adrenaline don't help."
+   },
+   {
+    "t": "Twice she's had severe abdominal pain and vomiting. Scans showed swollen bowel wall."
+   },
+   {
+    "t": "Swelling followed a dental procedure. It worsened on the combined pill."
+   },
+   {
+    "t": "C4 low · C1-inhibitor level low",
+    "d": 1
+   }
+  ],
+  "pearl": "Swelling without hives that doesn't respond to anaphylaxis treatment points away from allergy. It's bradykinin, not histamine. Low C4 between attacks is a good screen. Throat swelling is life-threatening and needs C1-inhibitor or icatibant."
+ },
+ {
+  "date": "2026-10-26",
+  "number": 10,
+  "difficulty": "Easy",
+  "title": "Brushing hurts",
+  "answer": "Giant cell arteritis",
+  "accept": [
+   "giant cell arteritis",
+   "gca",
+   "temporal arteritis",
+   "cranial arteritis"
+  ],
+  "clues": [
+   {
+    "t": "74-year-old woman with a new headache over 3 weeks. She never gets headaches."
+   },
+   {
+    "t": "Her scalp is tender when she brushes her hair."
+   },
+   {
+    "t": "Her jaw aches after chewing for a minute, then eases with rest."
+   },
+   {
+    "t": "Aching shoulders and hips in the morning. Lost 3 kg."
+   },
+   {
+    "t": "ESR 92 mm/h · CRP 68 mg/L",
+    "d": 1
+   },
+   {
+    "t": "Yesterday her vision went blurry in one eye for 10 minutes."
+   }
+  ],
+  "pearl": "Transient visual loss is a warning before permanent blindness. Start high-dose prednisolone the same day and arrange urgent ultrasound or biopsy. Steroids don't spoil the biopsy for 1–2 weeks."
+ },
+ {
+  "date": "2026-10-27",
+  "number": 11,
+  "difficulty": "Easy",
+  "title": "Pins, needles, pills",
+  "answer": "Vitamin B12 deficiency (metformin-related)",
+  "accept": [
+   "b12 deficiency",
+   "vitamin b12 deficiency",
+   "b12",
+   "cobalamin deficiency",
+   "pernicious anaemia",
+   "pernicious anemia",
+   "metformin induced b12 deficiency",
+   "subacute combined degeneration"
+  ],
+  "clues": [
+   {
+    "t": "62-year-old man with tingling in both feet for 6 months."
+   },
+   {
+    "t": "Unsteady walking in the dark. Fine with the lights on."
+   },
+   {
+    "t": "Type 2 diabetes for 12 years, HbA1c well controlled."
+   },
+   {
+    "t": "Sore, smooth, red tongue."
+   },
+   {
+    "t": "Hb 128 g/L · MCV 106 fL",
+    "d": 1
+   },
+   {
+    "t": "On metformin 1 g twice daily since diagnosis."
+   }
+  ],
+  "pearl": "Not every neuropathy in diabetes is diabetic. Long-term metformin lowers B12 absorption, and neurological damage can occur before anaemia appears. Check B12 (or holotranscobalamin) periodically."
+ },
+ {
+  "date": "2026-10-28",
+  "number": 12,
+  "difficulty": "Medium",
+  "title": "Salt of the earth",
+  "answer": "Addison's disease (primary adrenal insufficiency)",
+  "accept": [
+   "addisons",
+   "addison's",
+   "addison",
+   "addisons disease",
+   "addison's disease",
+   "addison disease",
+   "primary adrenal insufficiency",
+   "adrenal insufficiency",
+   "hypoadrenalism",
+   "primary hypoadrenalism"
+  ],
+  "clues": [
+   {
+    "t": "34-year-old woman. Exhausted, lost 6 kg without trying."
+   },
+   {
+    "t": "Craves salty food. Adds salt to her chips twice."
+   },
+   {
+    "t": "Light-headed on standing. Nauseated most mornings."
+   },
+   {
+    "t": "Palmar creases and gums look darker than her baseline."
+   },
+   {
+    "t": "Na 128 mmol/L · K 5.7 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "9 am cortisol 62 nmol/L · ACTH markedly raised",
+    "d": 1
+   }
+  ],
+  "pearl": "Hyponatraemia with hyperkalaemia is the tell. Raised ACTH means the problem is in the adrenal (primary), which causes the pigmentation. If she's unwell, give hydrocortisone before you wait on tests."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 13,
+  "difficulty": "Medium",
+  "title": "Slaughterhouse fever",
+  "answer": "Q fever",
+  "accept": [
+   "q fever",
+   "qfever",
+   "coxiella",
+   "coxiella burnetii",
+   "q-fever"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man with high fevers and sweats for 5 days."
+   },
+   {
+    "t": "Severe headache behind the eyes and aching muscles."
+   },
+   {
+    "t": "Dry cough. Chest X-ray shows patchy changes.",
+    "d": 1
+   },
+   {
+    "t": "ALT 140 U/L · Platelets 98 ×10⁹/L",
+    "d": 1
+   },
+   {
+    "t": "Lives in the Upper Hunter. Not vaccinated against anything since school."
+   },
+   {
+    "t": "Works at an abattoir processing cattle and goats."
+   }
+  ],
+  "pearl": "Ask every febrile patient what they do for work. Q fever is notifiable. Prevention is Q-Vax, but workers need skin and serology testing first because vaccinating someone already immune can cause severe reactions."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 14,
+  "difficulty": "Hard",
+  "title": "Red lumps, big glands",
+  "answer": "Sarcoidosis (Löfgren syndrome)",
+  "accept": [
+   "sarcoidosis",
+   "sarcoid",
+   "lofgren",
+   "lofgren syndrome",
+   "lofgrens syndrome",
+   "lofgren's syndrome",
+   "acute sarcoidosis"
+  ],
+  "clues": [
+   {
+    "t": "35-year-old woman with tender red lumps on both shins."
+   },
+   {
+    "t": "Swollen, painful ankles. Low-grade fever."
+   },
+   {
+    "t": "A dry cough for 4 weeks."
+   },
+   {
+    "t": "Not pregnant, no recent sore throat, no new medications."
+   },
+   {
+    "t": "Chest X-ray: bilateral hilar lymphadenopathy",
+    "d": 1
+   },
+   {
+    "t": "Serum ACE raised · calcium upper normal",
+    "d": 1
+   }
+  ],
+  "pearl": "Erythema nodosum plus bilateral hilar lymphadenopathy plus ankle arthritis is Löfgren syndrome, the acute form of sarcoidosis. It usually settles on its own within 1–2 years and often doesn't need biopsy."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 15,
+  "difficulty": "Hard",
+  "title": "After the dentist",
+  "answer": "Infective endocarditis",
+  "accept": [
+   "infective endocarditis",
+   "endocarditis",
+   "bacterial endocarditis",
+   "subacute bacterial endocarditis",
+   "sbe",
+   "ie"
+  ],
+  "clues": [
+   {
+    "t": "63-year-old man with fevers and night sweats for 3 weeks."
+   },
+   {
+    "t": "Lost 4 kg. Aching joints. \"Feels like a flu that won't leave.\""
+   },
+   {
+    "t": "He had a tooth extracted 6 weeks ago."
+   },
+   {
+    "t": "He has a known heart murmur from rheumatic fever as a child."
+   },
+   {
+    "t": "Thin dark streaks under two fingernails. Tender red lumps on his finger pads."
+   },
+   {
+    "t": "2 of 3 blood cultures grow viridans streptococci",
+    "d": 1
+   }
+  ],
+  "pearl": "Take three sets of blood cultures before any antibiotics. Splinter haemorrhages and Osler's nodes are late but classic. Prolonged fever plus a murmur is endocarditis until proven otherwise."
+ }
+]
