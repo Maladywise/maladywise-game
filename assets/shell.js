@@ -99,6 +99,23 @@
       '<p style="margin:0;color:var(--muted);font-size:13px">Saved in this browser on this device. Clear your browser, lose your glory.</p>');
   }
 
+
+  // ---------- newsletter (Buttondown) ----------
+  var NL_HTML = '<section class="nl"><div class="nl-txt"><b>Get the weekly case by email</b><span>A medical puzzle, a fictional case and the odd zebra. Once a week. Unsubscribe any time.</span></div>' +
+    '<form class="mw-nl" action="https://buttondown.com/api/emails/embed-subscribe/maladywise" method="post" target="_blank">' +
+    '<label class="sr" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">' +
+    '<input type="hidden" name="embed" value="1"><button type="submit">Subscribe</button></form><p class="nl-msg" aria-live="polite"></p></section>';
+  document.addEventListener("submit", function (e) {
+    var f = e.target; if (!f.classList || !f.classList.contains("mw-nl") || !window.fetch) return;
+    e.preventDefault();
+    var msg = f.parentNode.querySelector(".nl-msg"), btn = f.querySelector("button");
+    btn.disabled = true; btn.textContent = "Sending\u2026";
+    fetch(f.action, { method: "POST", mode: "no-cors", body: new FormData(f) }).then(function () {
+      f.hidden = true; msg.textContent = "Nearly there. Check your inbox and tap the confirm link.";
+    }).catch(function () { btn.disabled = false; btn.textContent = "Subscribe"; msg.textContent = "Couldn't reach the mail server. Try again in a minute."; });
+  });
+  window.MW_NL = NL_HTML;
+
   // ---------- top bar ----------
   function topBar(g, home) {
     var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
@@ -158,7 +175,7 @@
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><h1>Today&rsquo;s medical puzzles</h1><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + "</span></div><p>" +
         nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p>" + (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
-        '<div class="grid">' + MW_GAMES.map(card).join("") + house() + "</div>" + homeBottom() +
+        '<div class="grid">' + MW_GAMES.map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
     draw(); window.MW_onTheme = draw;
@@ -218,6 +235,6 @@
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 
-  function page() { topBar(null, "/"); }
+  function page() { topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; }
   window.MW = { hub: hub, game: game, modal: modal, page: page };
 })();
