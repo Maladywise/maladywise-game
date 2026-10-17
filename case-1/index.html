@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Case #1: Rusty joints · Malady Wise</title>
+<meta name="description" content="A fictional teaching case from an Australian GP. Read the clues, make your guess, then reveal the answer.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<meta property="og:title" content="Case #1: Rusty joints · Malady Wise">
+<meta property="og:description" content="A fictional teaching case from an Australian GP. Read the clues, make your guess, then reveal the answer.">
+<meta property="og:image" content="https://play.maladywise.com/assets/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/shell.css?v=12">
+<script src="/assets/games.js?v=12"></script>
+<script src="/assets/site.js?v=1"></script>
+<script src="/assets/shell.js?v=12"></script>
+</head>
+<body>
+<main class="wrap doc">
+<p class="meta">Case #1 · Fictional teaching case</p>
+<h1>Rusty joints</h1>
+<p class="lede">Read the clues, make your guess, then reveal more. No peeking.</p>
+<ol class="cl">
+<li>A 52-year-old man has been tired for a year. “Just getting old, doc.”</li>
+<li>His 2nd and 3rd knuckles ache in both hands. A firm handshake hurts.</li>
+<li>His partner says he looks tanned all year round. He works in an office.</li>
+</ol>
+<p><b>What would you ask next? What tests would you order?</b></p>
+<button class="reveal" type="button" id="more">Show more clues</button>
+<div id="part2" hidden>
+<ol class="cl" start="4" style="counter-reset:c 3">
+<li>He was diagnosed with type 2 diabetes last month. His BMI is 23.</li>
+<li>Blood tests: ALT 88 U/L, ferritin 1,450 µg/L.</li>
+</ol>
+<p><b>Changed your answer?</b></p>
+<button class="reveal" type="button" id="ans">Show the answer</button>
+</div>
+<div id="part3" hidden>
+<ol class="cl" style="counter-reset:c 5">
+<li>Transferrin saturation 78%.</li>
+</ol>
+<div class="ans">
+<h2>Answer: hereditary haemochromatosis</h2>
+<p>The body absorbs too much iron from food and stores it in the liver, pancreas, joints and skin. It’s one of the most common genetic conditions in people of Northern European descent.</p>
+<h2>Teaching points</h2>
+<ul>
+<li>A high ferritin on its own is non-specific. Inflammation, alcohol and fatty liver raise it too.</li>
+<li>A transferrin saturation over 45% is the clue that points to iron overload and prompts HFE gene testing.</li>
+<li>Arthritis in the 2nd and 3rd knuckles is a classic early sign.</li>
+<li>Treatment is regular venesection (removing blood). Australian Red Cross Lifeblood can accept the blood as a donation.</li>
+<li>First-degree relatives should be offered testing.</li>
+</ul>
+</div>
+<a class="play-cta" href="/dx/">Fancy another? Play today’s Dxtective ›</a>
+</div>
+<p class="meta"><em>All cases are fictional. General education, not personal medical advice.</em></p>
+<script>
+document.getElementById("more").onclick=function(){document.getElementById("part2").hidden=false;this.hidden=true;};
+document.getElementById("ans").onclick=function(){document.getElementById("part3").hidden=false;this.hidden=true;};
+</script>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a></footer>
+</main>
+<script>MW.page();</script>
+</body>
+</html>

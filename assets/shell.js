@@ -100,9 +100,10 @@
   }
 
   // ---------- top bar ----------
-  function topBar(g) {
+  function topBar(g, home) {
+    var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
     var bar = el('<header class="bar"><div class="bar-in">' +
-      (g ? '<a class="back" href="../">' + I.back + MW_SITE.name + "</a>" : '<a class="logo" href="./">' + MW_SITE.name + "<span>" + MW_SITE.sub + "</span></a>") +
+      (g ? '<a class="back" href="../">' + I.back + MW_SITE.name + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
            '<button class="icon-btn" data-a="stats" aria-label="Stats">' + I.stats + "</button>" +
@@ -135,10 +136,22 @@
         '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
     }
+    function homeTop() {
+      var H = window.MW_HOME; if (!H) return "";
+      return '<section class="hero"><h1>' + H.tagline + '</h1><p>' + H.intro + '</p><nav class="chips" aria-label="Sections">' +
+        H.nav.map(function (n) { return '<a href="' + (n[1].charAt(0) === "#" ? location.pathname + n[1] : n[1]) + '">' + n[0] + "</a>"; }).join("") + "</nav></section>";
+    }
+    function homeBottom() {
+      var H = window.MW_HOME; if (!H) return "";
+      return H.sections.map(function (sec) {
+        return '<section class="sec" id="' + sec.id + '"><div class="sec-head"><h2>' + sec.title + "</h2>" + (sec.note ? "<span>" + sec.note + "</span>" : "") + '</div><div class="sgrid">' +
+          sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
+      }).join("");
+    }
     function draw() {
-      main.innerHTML = '<section class="mast"><h1>' + nice(today, { weekday: "long" }) + "&rsquo;s puzzles</h1><p>" +
+      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><h1>' + nice(today, { weekday: "long" }) + "&rsquo;s puzzles</h1><p>" +
         nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p>" + (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
-        '<div class="grid">' + MW_GAMES.map(card).join("") + "</div>" +
+        '<div class="grid">' + MW_GAMES.map(card).join("") + "</div>" + homeBottom() +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a></footer>';
     }
     draw(); window.MW_onTheme = draw;
@@ -198,5 +211,6 @@
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 
-  window.MW = { hub: hub, game: game, modal: modal };
+  function page() { topBar(null, "/"); }
+  window.MW = { hub: hub, game: game, modal: modal, page: page };
 })();
