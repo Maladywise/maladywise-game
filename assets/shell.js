@@ -144,6 +144,39 @@
     draw(); window.MW_onTheme = draw;
   }
 
+
+  // ---------- in-game extras: "keep playing" strip + last 7 days open ----------
+  function extras(g, box, today) {
+    var arch = box.querySelector("details.archive");
+    if (!arch) return;
+    var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id; }).map(function (x) { return { g: x, st: readStats(x) }; });
+    others.sort(function (a, b) { return (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
+    var left = others.filter(function (o) { return !(o.st && o.st.done); }).length;
+    var strip = el('<section class="mwx"><div class="mwx-head"><b>Keep playing</b><span>' + (left ? left + " left today" : "All done today. Show-off.") + '</span></div><div class="mwx-list">' +
+      others.map(function (o) {
+        var done = o.st && o.st.done;
+        return '<a class="mwx-row' + (done ? " done" : "") + '" href="../' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><span class="mwx-ic">' + o.g.icon + '</span><span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (done ? (o.st.win ? "\u2713" : "Done") : "\u203a") + "</span></a>";
+      }).join("") + '</div><a class="mwx-all" href="../">All puzzles</a></section>');
+    arch.parentNode.insertBefore(strip, arch);
+    // show the last 7 days straight away, older ones behind a button
+    arch.open = true;
+    var sum = arch.querySelector("summary"); if (sum) sum.textContent = "Past puzzles";
+    var expanded = false, obs;
+    function limit() {
+      if (obs) obs.disconnect();
+      var rows = arch.querySelectorAll(".arow"), list = rows.length ? rows[0].parentNode : null;
+      Array.prototype.forEach.call(rows, function (r, i) { r.hidden = !expanded && i >= 7; });
+      var more = arch.querySelector(".mwx-more");
+      if (list && rows.length > 7 && !expanded) {
+        if (!more) { more = document.createElement("button"); more.type = "button"; more.className = "mwx-more"; more.onclick = function () { expanded = true; limit(); }; }
+        more.textContent = "Show " + (rows.length - 7) + " older"; if (more.parentNode !== list || list.lastChild !== more) list.appendChild(more);
+      } else if (more) more.remove();
+      if (obs) obs.observe(arch, { childList: true, subtree: true });
+    }
+    obs = new MutationObserver(function () { expanded = false; limit(); });
+    limit();
+  }
+
   // ---------- game page ----------
   function game(id) {
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0];
@@ -153,6 +186,7 @@
     var sp = document.getElementById("splash"), box = document.getElementById("game");
     var q = new URLSearchParams(location.search);
     function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
+    extras(g, box, today);
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = diffFor(g, today, dow) === "Einstein";
