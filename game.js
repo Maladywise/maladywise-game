@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-17f";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-10-17g";                 // bump on every release so phones pick up new styles
 
   // ---------- mount ----------
   var root = document.getElementById("dxw");
@@ -113,7 +113,7 @@
   function say(t) { var el = $("sass"); el.textContent = t; el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
 
   // ---------- render ----------
-  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function dots() {
     return Array.from({ length: MAX }, function (_, i) {
       if (st.done && st.win && i === st.revealed - 1) return "hit";
@@ -144,7 +144,7 @@
     if (!C) return;
     var date = new Date(dayNum(today) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
     $("eyebrow").textContent = (isLive() ? "Malady Wise" : "Archive") + " \u00b7 #" + C.number + " \u00b7 " + date;
-    var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.textContent = C.difficulty;
+    var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.innerHTML = (C.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + C.difficulty; root.classList.toggle("einstein", C.difficulty === "Einstein");
     $("title").textContent = C.title;
     $("dots").innerHTML = dots().map(function (k) { return '<span class="dot ' + k + '"></span>'; }).join("");
     var shown = st.done ? C.clues.length : st.revealed, left = C.clues.length - shown;
@@ -188,7 +188,10 @@
       stats.dist[win ? st.revealed - 1 : 6]++;
       stats.last = today; put(SKEY, stats);
     }
-    say(win ? SASS.win[st.revealed] : pick(SASS.lose));
+    if (C.difficulty === "Einstein") {
+      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-100-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "dx" && t.d === today; })) { tro.push({ g: "dx", d: today }); put("mw-einstein", tro); } }
+    } else say(win ? SASS.win[st.revealed] : pick(SASS.lose));
   }
   function burn(label, line) {
     if (label) st.wrong.push(label);

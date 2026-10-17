@@ -564,51 +564,51 @@
   ]
  },
  {
-  "date": "2026-10-29",
-  "number": 13,
-  "difficulty": "Medium",
   "groups": [
    {
-    "label": "Lung sounds",
+    "label": "Bones named after shapes",
     "level": 1,
     "words": [
-     "WHEEZE",
-     "CRACKLES",
-     "STRIDOR",
-     "RUB"
+     "CUBOID",
+     "NAVICULAR",
+     "PISIFORM",
+     "CUNEIFORM"
     ]
    },
    {
-    "label": "Parts of the ear",
+    "label": "Radiology signs",
     "level": 2,
     "words": [
-     "COCHLEA",
-     "INCUS",
-     "STAPES",
-     "MALLEUS"
+     "STEEPLE",
+     "COFFEE BEAN",
+     "BIRD'S BEAK",
+     "STRING"
     ]
    },
    {
-    "label": "Parts of the gut",
-    "level": 2,
-    "words": [
-     "OESOPHAGUS",
-     "DUODENUM",
-     "JEJUNUM",
-     "ILEUM"
-    ]
-   },
-   {
-    "label": "Nail signs",
+    "label": "Syndromes named after fiction",
     "level": 3,
     "words": [
-     "CLUBBING",
-     "KOILONYCHIA",
-     "SPLINTER",
-     "PITTING"
+     "PICKWICKIAN",
+     "MUNCHAUSEN",
+     "OTHELLO",
+     "ALICE IN WONDERLAND"
+    ]
+   },
+   {
+    "label": "Hidden numbers",
+    "level": 4,
+    "words": [
+     "BONE",
+     "TENDON",
+     "CANINE",
+     "HEIGHT"
     ]
    }
-  ]
+  ],
+  "date": "2026-10-29",
+  "number": 13,
+  "difficulty": "Einstein"
  },
  {
   "date": "2026-10-30",

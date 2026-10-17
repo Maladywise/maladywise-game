@@ -96,3 +96,7 @@ footer.site a{color:var(--muted)}
 .seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .seg button{border:0;background:transparent;color:var(--ink);padding:7px 12px;font-size:13px;cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.pill.ein,.splash .pill.ein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B);color:#FFE9A8;display:inline-flex;align-items:center;gap:6px;box-shadow:inset 0 0 0 1px #E8C66A}
+.splash .pill{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.splash .tile.ein{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #E8C66A}
+.trophy{display:flex;align-items:center;gap:6px;color:var(--brand)!important;font-weight:500}

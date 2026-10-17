@@ -179,14 +179,14 @@
     "t": "The family cat has been unusually lethargic."
    },
    {
-    "t": "SpO₂ 99% on room air.",
+    "t": "SpO\u2082 99% on room air.",
     "d": 1
    },
    {
     "t": "They started using an old gas space heater this month."
    }
   ],
-  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO\u2082 is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
  },
  {
   "date": "2026-11-06",
@@ -224,7 +224,7 @@
     "t": "He dry-sands the old paint with no mask."
    }
   ],
-  "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 µg/dL. Ask about hobbies and renovations, and check the whole household, especially children."
+  "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 \u00b5g/dL. Ask about hobbies and renovations, and check the whole household, especially children."
  },
  {
   "date": "2026-11-07",
@@ -375,7 +375,7 @@
     "t": "She had chickenpox as a child."
    }
   ],
-  "pearl": "Pain often comes 2–3 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
+  "pearl": "Pain often comes 2\u20133 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
  },
  {
   "date": "2026-11-11",
@@ -414,38 +414,46 @@
   "pearl": "Changes are so slow that family often miss them, so compare old photos. IGF-1 is the screening test; confirm with GH failing to suppress on a glucose tolerance test, then pituitary MRI."
  },
  {
-  "date": "2026-11-12",
-  "number": 27,
-  "difficulty": "Medium",
-  "title": "Tea and toast",
-  "answer": "Scurvy (vitamin C deficiency)",
+  "title": "Slow burn",
+  "answer": "Whipple's disease",
   "accept": [
-   "scurvy",
-   "vitamin c deficiency",
-   "ascorbic acid deficiency",
-   "vit c deficiency"
+   "whipple",
+   "whipples",
+   "whipple's",
+   "whipple disease",
+   "whipples disease",
+   "whipple's disease",
+   "tropheryma whipplei",
+   "tropheryma",
+   "t whipplei",
+   "intestinal lipodystrophy"
   ],
   "clues": [
    {
-    "t": "67-year-old man, living alone since his wife died."
+    "t": "55-year-old man who has lost 12 kg over a year."
    },
    {
-    "t": "Gums bleed when he brushes his teeth."
+    "t": "Chronic diarrhoea and bloating. Coeliac serology negative.",
+    "d": 1
    },
    {
-    "t": "Painful legs and swollen ankles."
+    "t": "Years of migrating joint pains, long before any gut symptoms."
    },
    {
-    "t": "Tiny bleeds around hair follicles on his shins, with corkscrew-shaped hairs."
+    "t": "His skin has darkened and he runs low-grade fevers."
    },
    {
-    "t": "A leg graze from 2 months ago still hasn't healed."
+    "t": "Now forgetful, with rhythmic jaw movements in time with slow eye convergence."
    },
    {
-    "t": "Diet is mostly toast and tea. No fruit or vegetables."
+    "t": "Duodenal biopsy: PAS-positive foamy macrophages",
+    "d": 1
    }
   ],
-  "pearl": "Not just a sailor's disease. It still turns up with restrictive diets, alcohol use disorder and in older men living alone. Symptoms respond within days of vitamin C replacement."
+  "pearl": "Caused by Tropheryma whipplei. Joint pains often come years before the gut symptoms. Rhythmic eye convergence with jaw movement (oculomasticatory myorhythmia) is pathognomonic. Very treatable with antibiotics, fatal if missed.",
+  "date": "2026-11-12",
+  "number": 27,
+  "difficulty": "Einstein"
  },
  {
   "date": "2026-11-13",
@@ -518,7 +526,7 @@
     "d": 1
    }
   ],
-  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20–40 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
+  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20\u201340 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
  },
  {
   "date": "2026-11-15",
@@ -555,7 +563,7 @@
     "t": "They ate a large Spanish mackerel caught on a trip off Queensland."
    }
   ],
-  "pearl": "Hot–cold reversal is the giveaway. The toxin comes from large reef fish and isn't destroyed by cooking or freezing. Symptoms can last weeks. Advise avoiding alcohol and fish for a while, as both can bring symptoms back."
+  "pearl": "Hot\u2013cold reversal is the giveaway. The toxin comes from large reef fish and isn't destroyed by cooking or freezing. Symptoms can last weeks. Advise avoiding alcohol and fish for a while, as both can bring symptoms back."
  },
  {
   "date": "2026-11-16",
@@ -593,7 +601,7 @@
     "t": "Her mother takes \"a little pill for her neck\"."
    },
    {
-    "t": "TSH 28 mIU/L · free T4 low",
+    "t": "TSH 28 mIU/L \u00b7 free T4 low",
     "d": 1
    }
   ],
@@ -721,7 +729,7 @@
   "number": 35,
   "difficulty": "Hard",
   "title": "Cream crackers",
-  "answer": "Sjögren's syndrome",
+  "answer": "Sj\u00f6gren's syndrome",
   "accept": [
    "sjogrens",
    "sjogren's",
@@ -729,8 +737,8 @@
    "sjogrens syndrome",
    "sjogren's syndrome",
    "sjogren syndrome",
-   "sjögren's syndrome",
-   "sjögren",
+   "sj\u00f6gren's syndrome",
+   "sj\u00f6gren",
    "sicca syndrome",
    "primary sjogrens"
   ],
