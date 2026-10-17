@@ -35,6 +35,7 @@
     ' <div class="stats" id="dxw-stats" hidden></div>' +
     ' <div class="week" id="dxw-week"></div>' +
     ' <p class="note" id="dxw-next"></p>' +
+    ' <details class="archive" id="dxw-archive"><summary>Past cases</summary><div id="dxw-alist"><p class="note">Loading…</p></div></details>' +
     ' <p class="note">All cases are fictional. General education, not personal medical advice.</p>' +
     '</div>';
   var $ = function (id) { return document.getElementById("dxw-" + id); };
@@ -46,15 +47,17 @@
     } catch (e) { return new Date().toISOString().slice(0, 10); }
   }
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
-  var q = new URLSearchParams(location.search).get("date");          // preview: ?date=2026-11-01
-  var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : sydToday();
-  var dow = new Date(dayNum(today) * 864e5).getUTCDay();
+  var REAL = sydToday();                                            // the real date in Sydney
+  var q = new URLSearchParams(location.search).get("date");          // preview any day: ?date=2026-11-01
+  var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;      // the day being shown
+  function isLive() { return today === REAL; }
 
   // ---------- storage (this browser only) ----------
   function load(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  var KEY = "dxw-day-" + today, SKEY = "dxw-stats-v2";
-  var st = load(KEY, { revealed: 1, wrong: [], done: false, win: false });
+  var SKEY = "dxw-stats-v2", KEY, st;
+  function loadDay() { KEY = "dxw-day-" + today; st = load(KEY, { revealed: 1, wrong: [], done: false, win: false }); }
+  loadDay();
   var stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
   var C = null;
 
@@ -139,7 +142,7 @@
     renderStats(); renderWeek(); tick();
     if (!C) return;
     var date = new Date(dayNum(today) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
-    $("eyebrow").textContent = "Malady Wise · #" + C.number + " · " + date;
+    $("eyebrow").textContent = (isLive() ? "Malady Wise" : "Archive") + " · #" + C.number + " · " + date;
     var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.textContent = C.difficulty;
     $("title").textContent = C.title;
     $("dots").innerHTML = dots().map(function (k) { return '<span class="dot ' + k + '"></span>'; }).join("");
@@ -153,7 +156,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = dots().map(function (k) { return k === "hit" ? "🟩" : k === "miss" ? "🟥" : "⬜"; }).join("");
-    var share = "Diagnosis Wordle #" + C.number + " · " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
+    var share = "Diagnosis Wordle #" + C.number + (isLive() ? "" : " (archive)") + " · " + C.difficulty + " " + ICON[C.difficulty] + "\n" + grid + "\n" +
       (st.win ? "Solved on clue " + st.revealed + "/6" : "Stumped") + "\nmaladywise.com";
     var max = Math.max.apply(null, stats.dist.concat([1]));
     var mine = st.win ? st.revealed - 1 : 6;
@@ -176,7 +179,7 @@
 
   function finish(win) {
     st.done = true; st.win = win; put(KEY, st);
-    if (stats.last !== today && !q) {
+    if (isLive() && stats.last !== today) {
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (win) stats.wins++;
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0;
@@ -205,15 +208,45 @@
   $("skip").onclick = function () { burn(null, pick(SASS.skip)); };
 
   // ---------- load today's case ----------
+  var cache = {};
+  function month(m) {
+    if (!cache[m]) cache[m] = fetch(BASE + "cases/" + m + ".json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    return cache[m];
+  }
+  function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
+
+  function show(date) {
+    today = date; loadDay(); C = null;
+    $("result").hidden = true; $("sass").textContent = ""; $("title").textContent = "Loading…";
+    return month(date.slice(0, 7)).then(function (list) {
+      C = list.filter(function (x) { return x.date === date; })[0] || null;
+      if (!C) { $("title").textContent = "Today’s case is still in triage."; $("form").hidden = true; say("Back tomorrow. Fresh cases are on the way."); render(); return; }
+      if (!isLive()) say(st.done ? "Archive case. You’ve already done this one." : "Archive case. Doesn’t count towards your streak.");
+      else if (st.done) say(st.win ? "Already solved. Show-off. Come back tomorrow." : "You’ve had your go. Patience is a clinical skill.");
+      render(); renderArchive();
+    });
+  }
+
+  function renderArchive() {
+    var m = REAL.slice(0, 7);
+    Promise.all([month(prevMonth(m)), month(m)]).then(function (lists) {
+      var past = [].concat(lists[0], lists[1]).filter(function (x) { return x.date < REAL; }).reverse();
+      var rows = past.map(function (x) {
+        var s = load("dxw-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
+        var d = new Date(dayNum(x.date) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + d + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+      }).join("");
+      var back = isLive() ? "" : '<button type="button" class="btn ghost" id="dxw-back">Back to today’s case</button>';
+      $("alist").innerHTML = back + (rows || '<p class="note">No past cases yet. Today is #1.</p>');
+      Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) {
+        b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); };
+      });
+      if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
+    });
+  }
+
   render();
   setInterval(tick, 60000);
-  fetch(BASE + "cases/" + today.slice(0, 7) + ".json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (list) {
-      C = list.filter(function (c) { return c.date === today; })[0] || null;
-      if (!C) { $("title").textContent = "Today’s case is still in triage."; say("Back tomorrow. Fresh cases are on the way."); return; }
-      if (st.done) say(st.win ? "Already solved. Show-off. Come back tomorrow." : "You’ve had your go. Patience is a clinical skill.");
-      render();
-    })
-    .catch(function () { $("title").textContent = "Couldn’t load today’s case."; say("Refresh the page in a minute."); });
+  show(today);
 })();

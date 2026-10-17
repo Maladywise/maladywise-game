@@ -64,3 +64,12 @@
 #dxw .week{text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted)}
 #dxw .week span{padding:2px 8px;border-radius:999px;border:1px solid var(--line)}
 #dxw .week span.on{border-color:var(--accent);color:var(--accent);font-weight:600}
+#dxw .archive{border-top:1px dashed var(--line);padding-top:10px}
+#dxw .archive summary{cursor:pointer;text-align:center;font-weight:600;color:var(--accent);font-size:14px;list-style:none}
+#dxw .archive summary::-webkit-details-marker{display:none}
+#dxw .archive summary::after{content:" ▾"}
+#dxw .archive[open] summary::after{content:" ▴"}
+#dxw #dxw-alist{display:grid;gap:6px;margin-top:10px}
+#dxw .arow{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:500 14px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;text-align:left}
+#dxw .arow.on{border-color:var(--accent)}
+#dxw .arow .badge{font-size:10px;padding:2px 8px}
