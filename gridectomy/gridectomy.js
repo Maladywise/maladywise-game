@@ -12,7 +12,7 @@
     ' <div class="head"><span class="eyebrow" id="grx-eyebrow">Gridectomy</span><span class="badge" id="grx-badge" hidden></span></div>' +
     ' <div class="bar"><span class="timer" id="grx-timer">0:00</span><span class="tools" id="grx-tools"><button class="btn sm" type="button" id="grx-check">Check</button><button class="btn sm" type="button" id="grx-reveal">Reveal square</button><button class="btn sm" type="button" id="grx-giveup">Give up</button></span></div>' +
     ' <div class="grid" id="grx-grid" role="grid" aria-label="Crossword grid"></div>' +
-    ' <div class="cluebar" id="grx-cluebar"><button type="button" class="arr" id="grx-prev" aria-label="Previous clue">‹</button><div class="ctext" id="grx-ctext"></div><button type="button" class="arr" id="grx-nxt" aria-label="Next clue">›</button></div>' +
+    ' <div class="cluebar" id="grx-cluebar"><button type="button" class="arr" id="grx-prev" aria-label="Previous clue">\u2039</button><div class="ctext" id="grx-ctext"></div><button type="button" class="arr" id="grx-nxt" aria-label="Next clue">\u203a</button></div>' +
     ' <div class="msg" id="grx-msg" aria-live="polite"></div>' +
     ' <div class="kb" id="grx-kb"></div>' +
     ' <div class="result" id="grx-result" hidden></div>' +
@@ -73,7 +73,7 @@
   function fixSel() { if (!entryAt(sel.r, sel.c, sel.dir)) sel.dir = sel.dir === "a" ? "d" : "a"; }
 
   // ---------- render ----------
-  var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠", Einstein: "⚛️" };
+  var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function render() {
     if (!P) return;
     var e = entryAt(sel.r, sel.c, sel.dir), inE = {}, nums = {}, h = "";
@@ -102,8 +102,8 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var extra = st.win ? (st.checks ? " · " + st.checks + " check" + (st.checks > 1 ? "s" : "") : " · clean") : "";
-    var share = "Gridectomy #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "⏱ " + fmt(st.t) + extra : "🏳️ Grid won today") + "\nmaladywise.com";
+    var extra = st.win ? (st.checks ? " \u00b7 " + st.checks + " check" + (st.checks > 1 ? "s" : "") : " \u00b7 clean") : "";
+    var share = "Gridectomy #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "\u23f1 " + fmt(st.t) + extra : "\ud83c\udff3\ufe0f Grid won today") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -124,7 +124,7 @@
     var rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm-"];
     $("kb").innerHTML = rows.map(function (r) {
       return '<div class="kr">' + r.split("").map(function (k) {
-        if (k === "-") return '<button class="key wide" data-k="back" type="button" aria-label="Delete">⌫</button>';
+        if (k === "-") return '<button class="key wide" data-k="back" type="button" aria-label="Delete">\u232b</button>';
         return '<button class="key" data-k="' + k + '" type="button">' + k + "</button>";
       }).join("") + "</div>";
     }).join("");
@@ -153,7 +153,7 @@
       stats.dist[b]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "⚛️ Einstein solved in " + fmt(st.t) + ". A once-in-100-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      say(win ? "\u269b\ufe0f Einstein solved in " + fmt(st.t) + ". A once-in-100-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "gridectomy" && t.d === today; })) { tro.push({ g: "gridectomy", d: today }); put("mw-einstein", tro); } }
     } else say(win ? SASS.win(st.t) : st.reveals && correct0 ? "Finished, with a peek or two. Doesn't count as a clean solve." : pick(SASS.giveup));
   }
@@ -259,10 +259,10 @@
     today = date; loadDay(); P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today’s grid is still in theatre. Back tomorrow."); $("kb").hidden = true; $("grid").innerHTML = ""; $("cluebar").hidden = true; $("tools").hidden = true; return; }
+      if (!P) { say("Today\u2019s grid is still in theatre. Back tomorrow."); $("kb").hidden = true; $("grid").innerHTML = ""; $("cluebar").hidden = true; $("tools").hidden = true; return; }
       if (!st.g) st.g = [0, 1, 2, 3, 4].map(function () { return ["", "", "", "", ""]; });
       var first = P.across[0]; sel = { r: first.r, c: first.c, dir: "a" };
-      $("eyebrow").textContent = (isLive() ? "Gridectomy" : "Archive") + " · #" + P.number + " · " + nice(date);
+      $("eyebrow").textContent = (isLive() ? "Gridectomy" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive grid. Already done." : "Archive grid. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Solved in " + fmt(st.t) + ". Come back tomorrow." : "You've had your go. Back tomorrow.");
@@ -274,11 +274,11 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("grx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
-        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+        var s = load("grx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="grx-back">Back to today</button>';
-      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past grids yet. Today is #1. You’re early.</p>");
+      $("alist").innerHTML = back + (rows || "<p class=\"note\">No past grids yet. Today is #1. You\u2019re early.</p>");
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); }; });
       if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
     });
