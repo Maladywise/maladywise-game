@@ -11,14 +11,14 @@ A daily medical puzzle. One fictional case per day (Sydney time), six clues, one
 ## Embed in Squarespace (Code block, HTML)
 ```html
 <div id="dxw"></div>
-<script src="https://play.maladywise.com/game.js"></script>
+<script src="https://maladywise.com/game.js"></script>
 ```
 
 ## Difficulty rhythm
 Mon–Tue Easy · Wed–Thu Medium · Fri–Sat Hard · Sun Genius
 
 ## Preview a future day
-`https://play.maladywise.com/?date=2026-11-01` (doesn't count towards stats)
+`https://maladywise.com/?date=2026-11-01` (doesn't count towards stats)
 
 ## Adding cases
 Add objects to the right month file with a new `date` and the next `number`.

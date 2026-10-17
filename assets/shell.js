@@ -149,10 +149,16 @@
           sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
       }).join("");
     }
+    function house() {
+      var h = MW_SITE.house; if (!h) return "";
+      return '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
+        '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
+        '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>";
+    }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><h1>Today&rsquo;s medical puzzles</h1><p>' +
         nice(today, { weekday: "long", day: "numeric", month: "long" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p>" + (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
-        '<div class="grid">' + MW_GAMES.map(card).join("") + "</div>" + homeBottom() +
+        '<div class="grid">' + MW_GAMES.map(card).join("") + house() + "</div>" + homeBottom() +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a></footer>';
     }
     draw(); window.MW_onTheme = draw;
