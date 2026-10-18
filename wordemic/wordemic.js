@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). Guess list in words.txt. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3";
   var ROWS = 6, LEN = 5;
   var root = document.getElementById("wde");
   if (!document.querySelector("link[data-wde]")) {
@@ -59,7 +59,7 @@
     $("board").innerHTML = h;
   }
   function buildKb() {
-    var rows = ["qwertyuiop", "asdfghjkl", "+zxcvbnm-"];
+    var rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm-", "+"];
     $("kb").innerHTML = rows.map(function (r) {
       return '<div class="kr">' + r.split("").map(function (k) {
         if (k === "+") return '<button class="key wide" data-k="enter" type="button">Enter</button>';
