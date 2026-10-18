@@ -61,7 +61,7 @@
   var DIFF = ["Genius", "Easy", "Easy", "Medium", "Medium", "Hard", "Hard"];
   function diffFor(g, d, dow) { return (window.MW_EINSTEIN && (MW_EINSTEIN[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; }
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
-  var DIFFQ = { Einstein: "Roughly one day in 100. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
+  var DIFFQ = { Einstein: "Roughly one day in 50. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
   var DAYQ = [
     "Genius day. Bring your A-game and a strong coffee.",
     "Ease in. The waiting room is already full.",
@@ -277,6 +277,12 @@
     var sp = document.getElementById("splash"), box = document.getElementById("game");
     var q = new URLSearchParams(location.search);
     function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
+    if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
+      var gt = document.createElement("header"); gt.className = "gtitle";
+      gt.style.setProperty("--ga", g.accent); gt.style.setProperty("--gad", g.accentDark);
+      gt.innerHTML = "<h1>" + g.name + "</h1><p>" + g.tagline + "</p>";
+      box.insertBefore(gt, box.firstChild);
+    }
     extras(g, box, today);
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));

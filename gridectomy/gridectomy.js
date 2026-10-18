@@ -153,7 +153,7 @@
       stats.dist[b]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "\u269b\ufe0f Einstein solved in " + fmt(st.t) + ". A once-in-100-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      say(win ? "\u269b\ufe0f Einstein solved in " + fmt(st.t) + ". A once-in-50-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "gridectomy" && t.d === today; })) { tro.push({ g: "gridectomy", d: today }); put("mw-einstein", tro); } }
     } else say(win ? SASS.win(st.t) : st.reveals && correct0 ? "Finished, with a peek or two. Doesn't count as a clean solve." : pick(SASS.giveup));
   }

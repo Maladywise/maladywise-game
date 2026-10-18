@@ -124,7 +124,7 @@
       stats.dist[Math.min(st.hints, 4)]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say("\u269b\ufe0f Einstein solved. A once-in-100-days theme, closed up neatly. Screenshot this.");
+      say("\u269b\ufe0f Einstein solved. A once-in-50-days theme, closed up neatly. Screenshot this.");
       if (isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "suturix" && t.d === today; })) { tro.push({ g: "suturix", d: today }); put("mw-einstein", tro); } }
     } else say(st.hints ? "Closed, with " + st.hints + " hint" + (st.hints > 1 ? "s" : "") + ". Still counts. Mostly." : pick(SASS.win));
   }

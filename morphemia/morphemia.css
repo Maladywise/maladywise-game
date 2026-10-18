@@ -60,3 +60,7 @@ html[data-motion="reduce"] #mph *{animation:none!important;transition:none!impor
 #mph .arow{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:500 14px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
 #mph .arow.on{border-color:var(--accent)}
 #mph .arow .badge{font-size:10px;padding:2px 8px}
+#mph .legend summary{cursor:pointer;list-style:none}
+#mph .legend summary::-webkit-details-marker{display:none}
+#mph .legend u{color:var(--ink);text-underline-offset:2px}
+#mph .legend ul{list-style:none;padding:8px 0 0;margin:0;display:grid;gap:2px;font-size:13px;color:var(--ink)}
