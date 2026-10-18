@@ -194,3 +194,16 @@ footer.site .soc b{font-weight:600;font-size:13px}
 .gtitle h1{margin:0;font:700 34px/1.1 Lora,Georgia,serif;color:var(--ga)}
 html[data-theme="dark"] .gtitle h1{color:var(--gad)}
 .gtitle p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+
+.navwrap{display:flex;align-items:center;gap:4px}
+.subpill{margin-left:6px;padding:7px 14px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap}
+html[data-theme="dark"] .subpill{color:#16121F}
+.burger{display:none}
+@media (max-width:760px){
+  .burger{display:grid}
+  .navwrap{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px max(16px,env(safe-area-inset-left,0px)) 14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+  .navwrap.open{display:flex}
+  .navwrap .navlink{padding:12px 4px;font-size:16px;border-bottom:1px solid var(--line)}
+  .subpill{margin:12px 0 0;text-align:center;padding:11px 14px;font-size:15px}
+}
+.bar-in{position:relative}
