@@ -5,6 +5,42 @@
   function get(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
+  // ---------- analytics: GoatCounter (cookie-free, no personal data) ----------
+  (function () {
+    var h = location.hostname;
+    if (!/(^|\.)maladywise\.com$/.test(h) || document.querySelector("script[data-goatcounter]")) return;
+    var sc = document.createElement("script"); sc.async = true; sc.src = "https://gc.zgo.at/count.js";
+    sc.setAttribute("data-goatcounter", "https://maladywise.goatcounter.com/count");
+    document.head.appendChild(sc);
+  })();
+  var sent = {};
+  function track(name, title) {
+    if (sent[name]) return; sent[name] = 1;
+    (function go(n) {
+      if (window.goatcounter && goatcounter.count) { try { goatcounter.count({ path: name, title: title || name, event: true }); } catch (e) {} }
+      else if (n < 20) setTimeout(function () { go(n + 1); }, 500);
+    })(0);
+  }
+  window.MW_track = track;
+  // Fire a "finished" event the first time a game saves today's result as done.
+  function watchDone(g) {
+    if (!g || !g.store || !g.store.day) return;
+    var pre = g.store.day, orig = Storage.prototype.setItem;
+    Storage.prototype.setItem = function (k, v) {
+      try {
+        if (this === window.localStorage && typeof k === "string" && k.indexOf(pre) === 0 && /"done":true/.test(v)) {
+          var prev = this.getItem(k);
+          if (!prev || !/"done":true/.test(prev)) {
+            var win = /"win":true/.test(v);
+            track("finished/" + g.id, g.name + " finished");
+            if (win) track("won/" + g.id, g.name + " won");
+          }
+        }
+      } catch (e) {}
+      return orig.apply(this, arguments);
+    };
+  }
+
   // ---------- theme + motion ----------
   var mq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
   function applyTheme() {
@@ -234,6 +270,7 @@
   // ---------- game page ----------
   function game(id) { setTimeout(social, 0);
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0];
+    watchDone(g);
     topBar(g);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
     var st = readStats(g);
