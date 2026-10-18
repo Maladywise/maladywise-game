@@ -171,17 +171,20 @@
    "ASSIST",
    "ASSISTED",
    "ASSISTS",
+   "BABIED",
    "BABIES",
    "BAIT",
    "BASIS",
    "BASSIST",
    "BEDSIDE",
+   "BEDSIDES",
    "BESIDE",
    "BESIDES",
    "BIAS",
    "BIASED",
    "BIASES",
    "BIDET",
+   "BIDETS",
    "BIDS",
    "BITE",
    "BITES",
@@ -195,6 +198,7 @@
    "DIED",
    "DIES",
    "DIET",
+   "DIETED",
    "DIETS",
    "DISEASE",
    "DISEASED",
@@ -207,15 +211,21 @@
    "IDEA",
    "IDEAS",
    "SADIST",
+   "SADISTS",
    "SAID",
    "SEASIDE",
    "SIDE",
    "SIDED",
    "SIDES",
    "SITE",
+   "SITED",
    "SITES",
    "SITS",
+   "STADIA",
    "STASIS",
+   "STEADIED",
+   "STEADIES",
+   "TABBIES",
    "TESTIS",
    "TIBIA",
    "TIBIAE",
@@ -225,11 +235,21 @@
    "TIES"
   ],
   "medical": [
+   "BABIED",
+   "BEDSIDES",
    "BIDET",
+   "BIDETS",
    "DIABETES",
    "DIASTASE",
    "DIET",
+   "DIETED",
    "SADIST",
+   "SADISTS",
+   "SITED",
+   "STADIA",
+   "STEADIED",
+   "STEADIES",
+   "TABBIES",
    "TESTIS",
    "TIBIA",
    "TIBIAE"
@@ -237,7 +257,7 @@
   "pangrams": [
    "DIABETES"
   ],
-  "max": 335
+  "max": 469
  },
  {
   "date": "2026-10-20",
@@ -248,6 +268,7 @@
   "words": [
    "EERIE",
    "ENTIRE",
+   "EPITOPE",
    "INEPT",
    "INERT",
    "INNER",
@@ -261,6 +282,7 @@
    "INTERPRETER",
    "INTO",
    "INTRO",
+   "INTRON",
    "IRON",
    "NINE",
    "NINETEEN",
@@ -317,8 +339,10 @@
    "TROPONIN"
   ],
   "medical": [
+   "EPITOPE",
    "INERT",
    "INTERN",
+   "INTRON",
    "IRON",
    "NITRE",
    "NITRITE",
@@ -334,7 +358,7 @@
    "PROTEIN",
    "REPETITION"
   ],
-  "max": 468
+  "max": 494
  },
  {
   "date": "2026-10-21",
@@ -345,12 +369,14 @@
   "words": [
    "BERIBERI",
    "BERRIES",
+   "BICEP",
    "BICEPS",
    "BRIBE",
    "BRIBES",
    "BRIE",
    "CIRRI",
    "CRIB",
+   "CRIBS",
    "CRIES",
    "CRISES",
    "CRISIS",
@@ -359,7 +385,9 @@
    "EERIE",
    "EPIC",
    "EPICS",
+   "ICES",
    "IRIS",
+   "IRISES",
    "PIECE",
    "PIECES",
    "PIER",
@@ -373,9 +401,11 @@
    "PISSES",
    "PRECISE",
    "PRESCRIBE",
+   "PRESCRIBES",
    "PRICE",
    "PRICES",
    "PRISE",
+   "PRISES",
    "RECIPE",
    "RECIPES",
    "REPRISE",
@@ -399,18 +429,25 @@
   ],
   "medical": [
    "BERIBERI",
+   "BICEP",
    "BICEPS",
    "CIRRI",
+   "CRIBS",
+   "ICES",
    "IRIS",
+   "IRISES",
    "PRESCRIBE",
+   "PRESCRIBES",
    "PRISE",
+   "PRISES",
    "RIBS",
    "SEPSIS"
   ],
   "pangrams": [
-   "PRESCRIBE"
+   "PRESCRIBE",
+   "PRESCRIBES"
   ],
-  "max": 292
+  "max": 372
  },
  {
   "date": "2026-10-22",
@@ -908,6 +945,7 @@
    "MAIL",
    "MAILED",
    "MAIM",
+   "MAIMED",
    "MALE",
    "MALICE",
    "MALL",
@@ -938,6 +976,7 @@
    "LAME",
    "LEMMA",
    "MAIM",
+   "MAIMED",
    "MEDIAL",
    "MEDICAL"
   ],
@@ -947,7 +986,7 @@
    "DECIMAL",
    "MEDICAL"
   ],
-  "max": 380
+  "max": 392
  },
  {
   "date": "2026-10-28",
@@ -956,6 +995,7 @@
   "centre": "S",
   "outer": "GITARC",
   "words": [
+   "ACACIAS",
    "ACTS",
    "AIRS",
    "ARCS",
@@ -967,7 +1007,9 @@
    "ARTS",
    "ASSIST",
    "ASSISTS",
+   "ATTICS",
    "ATTRACTS",
+   "CARATS",
    "CARCASS",
    "CARS",
    "CARTS",
@@ -975,12 +1017,14 @@
    "CASSIA",
    "CAST",
    "CASTS",
+   "CATARACTS",
    "CATS",
    "CIGARS",
    "CRASS",
    "CRISIS",
    "CRITICS",
    "GAGS",
+   "GAITS",
    "GASTRIC",
    "GASTRITIS",
    "GIGS",
@@ -994,6 +1038,7 @@
    "RAGS",
    "RATS",
    "RIGS",
+   "SACRA",
    "SAGA",
    "SARCASTIC",
    "SARI",
@@ -1024,33 +1069,43 @@
    "STRAITS",
    "STRATA",
    "STRIA",
+   "STRIATA",
    "STRICT",
    "TACTICS",
    "TAGS",
    "TARSI",
+   "TARTARS",
    "TARTS",
    "TRACTS",
    "TRAITS",
    "TSAR"
   ],
   "medical": [
+   "ACACIAS",
    "ARRAS",
+   "ATTICS",
+   "CARATS",
    "CASCARA",
    "CASSIA",
+   "CATARACTS",
+   "GAITS",
    "GASTRIC",
    "GASTRITIS",
    "IRIS",
+   "SACRA",
    "SCAR",
    "SCIATIC",
    "SCIATICA",
    "STATICS",
    "STRIA",
-   "TARSI"
+   "STRIATA",
+   "TARSI",
+   "TARTARS"
   ],
   "pangrams": [
    "GASTRIC"
   ],
-  "max": 422
+  "max": 526
  },
  {
   "date": "2026-10-29",
@@ -1084,6 +1139,7 @@
    "DENOTED",
    "DENT",
    "DENTATE",
+   "DENTED",
    "DENTINE",
    "DENTITION",
    "DETAIN",
@@ -1094,6 +1150,7 @@
    "DETONATION",
    "DIED",
    "DIET",
+   "DIETED",
    "DIETITIAN",
    "DINE",
    "DINED",
@@ -1132,11 +1189,14 @@
    "TEND",
    "TENDED",
    "TENDON",
+   "TENTED",
    "TIDE",
    "TIED",
    "TINTED",
    "TOAD",
-   "TONED"
+   "TOED",
+   "TONED",
+   "TOOTED"
   ],
   "medical": [
    "ADENINE",
@@ -1144,16 +1204,21 @@
    "ANODE",
    "ANTIDOTE",
    "DENTATE",
+   "DENTED",
    "DENTINE",
    "DENTITION",
    "DIET",
+   "DIETED",
    "DIETITIAN",
    "IDEATION",
    "INDENTATION",
    "IODIDE",
    "NAIAD",
    "NODE",
-   "TENDON"
+   "TENDON",
+   "TENTED",
+   "TOED",
+   "TOOTED"
   ],
   "pangrams": [
    "ANOINTED",
@@ -1162,7 +1227,7 @@
    "IDEATION",
    "INDENTATION"
   ],
-  "max": 573
+  "max": 623
  },
  {
   "date": "2026-10-30",
@@ -1224,6 +1289,7 @@
    "RETAILER",
    "RETALIATE",
    "RETIRE",
+   "RIAL",
    "RIPE",
    "RIPPER",
    "RIPPLE",
@@ -1265,6 +1331,7 @@
    "PILL",
    "PIPETTE",
    "PITTA",
+   "RIAL",
    "TALI",
    "TAPIR",
    "TRILATERAL",
@@ -1274,7 +1341,7 @@
   "pangrams": [
    "PARIETAL"
   ],
-  "max": 511
+  "max": 513
  },
  {
   "date": "2026-10-31",
