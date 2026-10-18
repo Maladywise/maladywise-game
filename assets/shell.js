@@ -284,7 +284,8 @@
       var gt = document.createElement("header"); gt.className = "gtitle";
       gt.style.setProperty("--ga", g.accent); gt.style.setProperty("--gad", g.accentDark);
       gt.innerHTML = "<h1>" + g.name + "</h1><p>" + g.tagline + "</p>";
-      box.insertBefore(gt, box.firstChild);
+      var hd = box.querySelector(".head");
+      if (hd) hd.parentNode.insertBefore(gt, hd.nextSibling); else box.insertBefore(gt, box.firstChild);
     }
     extras(g, box, today);
     if (q.get("date") || q.get("play") !== null) { start(); return; }
