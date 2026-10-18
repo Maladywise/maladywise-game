@@ -1,0 +1,758 @@
+[
+ {
+  "week": "2026-10-18",
+  "number": 1,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Which city, founded around 1325 on an island in Lake Texcoco, was the capital of the Aztec Empire?",
+    "a": "Tenochtitlan",
+    "e": "Modern Mexico City sits on top of it."
+   },
+   {
+    "c": "Science",
+    "q": "Which metal has the highest melting point?",
+    "a": "Tungsten",
+    "e": "About 3,422\u00b0C. Hence light-bulb filaments."
+   },
+   {
+    "c": "Geography",
+    "q": "What is the capital of Bhutan?",
+    "a": "Thimphu",
+    "e": "One of the few capitals with no traffic lights."
+   },
+   {
+    "c": "Literature",
+    "q": "Which novel opens: \u2018Happy families are all alike; every unhappy family is unhappy in its own way\u2019?",
+    "a": "Anna Karenina",
+    "e": "Leo Tolstoy, 1878."
+   },
+   {
+    "c": "Art",
+    "q": "Who painted \u2018The Garden of Earthly Delights\u2019?",
+    "a": "Hieronymus Bosch",
+    "e": "Dutch, around 1500. It hangs in the Prado."
+   },
+   {
+    "c": "Music",
+    "q": "Whose ballet \u2018The Rite of Spring\u2019 caused a near-riot at its 1913 Paris premiere?",
+    "a": "Igor Stravinsky",
+    "e": "Booing, fights, and a lot of very offended Parisians."
+   },
+   {
+    "c": "Sport",
+    "q": "Which country won the first FIFA World Cup, in 1930?",
+    "a": "Uruguay",
+    "e": "They hosted it too, beating Argentina 4\u20132 in the final."
+   },
+   {
+    "c": "Language",
+    "q": "What does the Latin phrase \u2018caveat emptor\u2019 mean?",
+    "a": "Let the buyer beware",
+    "e": ""
+   },
+   {
+    "c": "Nature",
+    "q": "Which animal is the fastest on Earth, when diving?",
+    "a": "Peregrine falcon",
+    "e": "Over 300 km/h in a stoop."
+   },
+   {
+    "c": "Food",
+    "q": "Which spice comes from the dried stigmas of a crocus flower?",
+    "a": "Saffron",
+    "e": "Each flower gives three stigmas. Hence the price."
+   },
+   {
+    "c": "Film",
+    "q": "Which film won the very first Academy Award for Best Picture?",
+    "a": "Wings",
+    "e": "A 1927 silent war film, honoured at the 1929 ceremony."
+   },
+   {
+    "c": "Medicine",
+    "q": "Which Hungarian obstetrician championed handwashing in the 1840s and died in an asylum?",
+    "a": "Ignaz Semmelweis",
+    "e": "Proven right after his death. Wash your hands."
+   },
+   {
+    "c": "Space",
+    "q": "On which planet is a day longer than a year?",
+    "a": "Venus",
+    "e": "About 243 Earth days to spin once; 225 to orbit the Sun."
+   },
+   {
+    "c": "History",
+    "q": "Which 1494 treaty divided newly discovered lands between Spain and Portugal?",
+    "a": "Treaty of Tordesillas",
+    "e": "Why Brazil speaks Portuguese."
+   },
+   {
+    "c": "Geography",
+    "q": "What is the longest river in Europe?",
+    "a": "The Volga",
+    "e": "About 3,500 km, entirely within Russia."
+   },
+   {
+    "c": "Science",
+    "q": "What is the SI unit of electrical capacitance?",
+    "a": "The farad",
+    "e": "Named after Michael Faraday."
+   },
+   {
+    "c": "Maths",
+    "q": "What is the next prime number after 89?",
+    "a": "97",
+    "e": "91 is the trap: 7 \u00d7 13."
+   },
+   {
+    "c": "Mythology",
+    "q": "In Greek myth, who was the mother of Perseus?",
+    "a": "Dana\u00eb",
+    "e": "Zeus visited her as a shower of gold."
+   },
+   {
+    "c": "Literature",
+    "q": "What was George Orwell\u2019s real name?",
+    "a": "Eric Arthur Blair",
+    "e": ""
+   },
+   {
+    "c": "Brain-melter",
+    "q": "How many squares of any size are there on a standard chessboard?",
+    "a": "204",
+    "e": "64 + 49 + 36 + 25 + 16 + 9 + 4 + 1."
+   }
+  ]
+ },
+ {
+  "week": "2026-10-25",
+  "number": 2,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Which Roman emperor reputedly planned to make his horse, Incitatus, a consul?",
+    "a": "Caligula",
+    "e": "Probably satire. Probably."
+   },
+   {
+    "c": "Science",
+    "q": "Which mineral sits at 9 on the Mohs hardness scale?",
+    "a": "Corundum",
+    "e": "Ruby and sapphire are both corundum."
+   },
+   {
+    "c": "Geography",
+    "q": "What is the capital of Kazakhstan?",
+    "a": "Astana",
+    "e": "Called Nur-Sultan from 2019 to 2022, then renamed back."
+   },
+   {
+    "c": "Literature",
+    "q": "Who wrote \u2018One Hundred Years of Solitude\u2019?",
+    "a": "Gabriel Garc\u00eda M\u00e1rquez",
+    "e": "Colombian, Nobel Prize 1982."
+   },
+   {
+    "c": "Art",
+    "q": "Which Dutch artist painted \u2018Girl with a Pearl Earring\u2019?",
+    "a": "Johannes Vermeer",
+    "e": "Fewer than 40 of his paintings survive."
+   },
+   {
+    "c": "Music",
+    "q": "Which instrument did jazz great John Coltrane mainly play?",
+    "a": "Saxophone",
+    "e": "Tenor and soprano."
+   },
+   {
+    "c": "Sport",
+    "q": "In golf, what is three under par on a single hole called?",
+    "a": "An albatross",
+    "e": "Also called a double eagle."
+   },
+   {
+    "c": "Language",
+    "q": "Which language has the most native speakers?",
+    "a": "Mandarin Chinese",
+    "e": "English wins only when you add second-language speakers."
+   },
+   {
+    "c": "Nature",
+    "q": "What is the largest living species of lizard?",
+    "a": "Komodo dragon",
+    "e": "Up to 3 m. Venomous, too."
+   },
+   {
+    "c": "Food",
+    "q": "Which country does Manchego cheese come from?",
+    "a": "Spain",
+    "e": "From the La Mancha region, made with sheep\u2019s milk."
+   },
+   {
+    "c": "Film",
+    "q": "Who directed \u2018Seven Samurai\u2019 (1954)?",
+    "a": "Akira Kurosawa",
+    "e": "Later remade as \u2018The Magnificent Seven\u2019."
+   },
+   {
+    "c": "Medicine",
+    "q": "Which two scientists won the 2005 Nobel Prize for discovering that H. pylori causes ulcers?",
+    "a": "Barry Marshall and Robin Warren",
+    "e": "Marshall drank a culture to prove it."
+   },
+   {
+    "c": "Space",
+    "q": "Who was the first woman in space?",
+    "a": "Valentina Tereshkova",
+    "e": "Vostok 6, 1963."
+   },
+   {
+    "c": "History",
+    "q": "Which queen ruled England for just nine days in 1553?",
+    "a": "Lady Jane Grey",
+    "e": "Executed the following year."
+   },
+   {
+    "c": "Geography",
+    "q": "Which country has three capital cities?",
+    "a": "South Africa",
+    "e": "Pretoria, Cape Town and Bloemfontein."
+   },
+   {
+    "c": "Science",
+    "q": "Which subatomic particle did J. J. Thomson discover in 1897?",
+    "a": "The electron",
+    "e": ""
+   },
+   {
+    "c": "Maths",
+    "q": "What do the interior angles of a hexagon add up to?",
+    "a": "720 degrees",
+    "e": "(6 \u2212 2) \u00d7 180."
+   },
+   {
+    "c": "Mythology",
+    "q": "In Norse myth, what is the name of the great world tree?",
+    "a": "Yggdrasil",
+    "e": "An ash tree linking the nine worlds."
+   },
+   {
+    "c": "Literature",
+    "q": "In \u2018Moby-Dick\u2019, what is the name of Captain Ahab\u2019s ship?",
+    "a": "The Pequod",
+    "e": "The coffee chain is named after its first mate, Starbuck."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "How many keys are on a standard modern piano?",
+    "a": "88",
+    "e": "52 white, 36 black."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-01",
+  "number": 3,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Which Byzantine emperor built the Hagia Sophia that stands today, completed in 537?",
+    "a": "Justinian I",
+    "e": ""
+   },
+   {
+    "c": "Science",
+    "q": "What is the chemical symbol for tin?",
+    "a": "Sn",
+    "e": "From the Latin stannum."
+   },
+   {
+    "c": "Geography",
+    "q": "What is the deepest lake in the world?",
+    "a": "Lake Baikal",
+    "e": "Over 1,600 m deep, in Siberia."
+   },
+   {
+    "c": "Literature",
+    "q": "Which Bront\u00eb sister wrote \u2018The Tenant of Wildfell Hall\u2019?",
+    "a": "Anne Bront\u00eb",
+    "e": "The forgotten Bront\u00eb. Not today."
+   },
+   {
+    "c": "Art",
+    "q": "Who sculpted \u2018The Thinker\u2019?",
+    "a": "Auguste Rodin",
+    "e": ""
+   },
+   {
+    "c": "Music",
+    "q": "Which Baroque composer wrote \u2018The Four Seasons\u2019?",
+    "a": "Antonio Vivaldi",
+    "e": "Also a priest, nicknamed the Red Priest."
+   },
+   {
+    "c": "Sport",
+    "q": "How long is a marathon, in kilometres?",
+    "a": "42.195 km",
+    "e": "Accept 42.2."
+   },
+   {
+    "c": "Language",
+    "q": "What does the German word \u2018Schadenfreude\u2019 mean?",
+    "a": "Pleasure at someone else\u2019s misfortune",
+    "e": ""
+   },
+   {
+    "c": "Nature",
+    "q": "How many hearts does an octopus have?",
+    "a": "Three",
+    "e": "Two for the gills, one for the body. Blue blood, too."
+   },
+   {
+    "c": "Food",
+    "q": "Which nut is the main ingredient of marzipan?",
+    "a": "Almond",
+    "e": ""
+   },
+   {
+    "c": "Film",
+    "q": "What is the name of the hotel in Kubrick\u2019s \u2018The Shining\u2019?",
+    "a": "The Overlook Hotel",
+    "e": ""
+   },
+   {
+    "c": "Medicine",
+    "q": "Who performed the first human heart transplant, in 1967?",
+    "a": "Christiaan Barnard",
+    "e": "At Groote Schuur Hospital, Cape Town."
+   },
+   {
+    "c": "Space",
+    "q": "What is the largest volcano in the solar system?",
+    "a": "Olympus Mons",
+    "e": "On Mars. About 2.5 times the height of Everest."
+   },
+   {
+    "c": "History",
+    "q": "Who was the first emperor of a unified China?",
+    "a": "Qin Shi Huang",
+    "e": "Buried with the Terracotta Army."
+   },
+   {
+    "c": "Geography",
+    "q": "Which country has the most time zones, counting overseas territories?",
+    "a": "France",
+    "e": "12, thanks to its territories scattered around the globe."
+   },
+   {
+    "c": "Science",
+    "q": "What is absolute zero in degrees Celsius?",
+    "a": "\u2212273.15\u00b0C",
+    "e": ""
+   },
+   {
+    "c": "Maths",
+    "q": "What is 1999 in Roman numerals?",
+    "a": "MCMXCIX",
+    "e": ""
+   },
+   {
+    "c": "Mythology",
+    "q": "Which Egyptian god has the head of a jackal?",
+    "a": "Anubis",
+    "e": "God of embalming and the dead."
+   },
+   {
+    "c": "Literature",
+    "q": "Who wrote the 1922 poem \u2018The Waste Land\u2019?",
+    "a": "T. S. Eliot",
+    "e": ""
+   },
+   {
+    "c": "Brain-melter",
+    "q": "What colour is an aircraft\u2019s \u2018black box\u2019 flight recorder?",
+    "a": "Orange",
+    "e": "Bright orange, to be found in wreckage."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-08",
+  "number": 4,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Which Carthaginian general crossed the Alps with war elephants?",
+    "a": "Hannibal",
+    "e": "218 BC, to attack Rome."
+   },
+   {
+    "c": "Science",
+    "q": "Which element has the chemical symbol K?",
+    "a": "Potassium",
+    "e": "From the Latin kalium."
+   },
+   {
+    "c": "Geography",
+    "q": "Which country is completely surrounded by South Africa?",
+    "a": "Lesotho",
+    "e": "Its lowest point is higher than any other country\u2019s."
+   },
+   {
+    "c": "Literature",
+    "q": "Who wrote \u2018The Master and Margarita\u2019?",
+    "a": "Mikhail Bulgakov",
+    "e": "Published decades after his death. Features a giant talking cat."
+   },
+   {
+    "c": "Art",
+    "q": "Which Mexican artist is famous for her self-portraits with a unibrow?",
+    "a": "Frida Kahlo",
+    "e": ""
+   },
+   {
+    "c": "Music",
+    "q": "Which band released \u2018The Dark Side of the Moon\u2019 in 1973?",
+    "a": "Pink Floyd",
+    "e": "Stayed on the Billboard 200 for over 900 weeks."
+   },
+   {
+    "c": "Sport",
+    "q": "In snooker, how many points is the black ball worth?",
+    "a": "Seven",
+    "e": "A maximum break is 147."
+   },
+   {
+    "c": "Language",
+    "q": "What is a sentence that uses every letter of the alphabet called?",
+    "a": "A pangram",
+    "e": "The quick brown fox, etc."
+   },
+   {
+    "c": "Nature",
+    "q": "Which is the only bird that can fly backwards?",
+    "a": "Hummingbird",
+    "e": ""
+   },
+   {
+    "c": "Food",
+    "q": "The croissant descends from the kipferl. Which country does the kipferl come from?",
+    "a": "Austria",
+    "e": "Accept Vienna."
+   },
+   {
+    "c": "Film",
+    "q": "Who composed the scores for \u2018Jaws\u2019 and \u2018Star Wars\u2019?",
+    "a": "John Williams",
+    "e": ""
+   },
+   {
+    "c": "Medicine",
+    "q": "What is the smallest bone in the human body?",
+    "a": "The stapes",
+    "e": "In the middle ear. About 3 mm."
+   },
+   {
+    "c": "Space",
+    "q": "Roughly how long does sunlight take to reach Earth?",
+    "a": "About 8 minutes",
+    "e": "About 8 minutes 20 seconds."
+   },
+   {
+    "c": "History",
+    "q": "Which civilisation built Machu Picchu?",
+    "a": "The Inca",
+    "e": "Built in the 15th century."
+   },
+   {
+    "c": "Geography",
+    "q": "Which is the highest capital city in the world?",
+    "a": "La Paz",
+    "e": "Bolivia\u2019s seat of government, at about 3,600 m."
+   },
+   {
+    "c": "Science",
+    "q": "What is the bond between two amino acids called?",
+    "a": "A peptide bond",
+    "e": ""
+   },
+   {
+    "c": "Maths",
+    "q": "What is 0! (zero factorial)?",
+    "a": "1",
+    "e": "By definition. Yes, really."
+   },
+   {
+    "c": "Mythology",
+    "q": "Who is the Roman equivalent of the Greek god Hermes?",
+    "a": "Mercury",
+    "e": ""
+   },
+   {
+    "c": "Literature",
+    "q": "In \u2018Nineteen Eighty-Four\u2019, which room holds your worst fear?",
+    "a": "Room 101",
+    "e": ""
+   },
+   {
+    "c": "Brain-melter",
+    "q": "What is the national animal of Scotland?",
+    "a": "The unicorn",
+    "e": ""
+   }
+  ]
+ },
+ {
+  "week": "2026-11-15",
+  "number": 5,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Whose tomb did Howard Carter open in 1922?",
+    "a": "Tutankhamun",
+    "e": ""
+   },
+   {
+    "c": "Science",
+    "q": "What does DNA stand for?",
+    "a": "Deoxyribonucleic acid",
+    "e": ""
+   },
+   {
+    "c": "Geography",
+    "q": "Which river flows through Baghdad?",
+    "a": "The Tigris",
+    "e": ""
+   },
+   {
+    "c": "Literature",
+    "q": "Who wrote \u2018Things Fall Apart\u2019?",
+    "a": "Chinua Achebe",
+    "e": "Nigerian, published 1958."
+   },
+   {
+    "c": "Art",
+    "q": "In which city is the Prado Museum?",
+    "a": "Madrid",
+    "e": ""
+   },
+   {
+    "c": "Music",
+    "q": "Which opera features the aria \u2018Nessun dorma\u2019?",
+    "a": "Turandot",
+    "e": "By Puccini. Left unfinished at his death."
+   },
+   {
+    "c": "Sport",
+    "q": "How many players per side are on the field in rugby union?",
+    "a": "15",
+    "e": "Rugby league has 13."
+   },
+   {
+    "c": "Language",
+    "q": "What is the Greek-style plural of \u2018octopus\u2019?",
+    "a": "Octopodes",
+    "e": "Accept octopuses. \u2018Octopi\u2019 is the wrong answer."
+   },
+   {
+    "c": "Nature",
+    "q": "Strictly speaking, what kind of creature is the Portuguese man o\u2019 war?",
+    "a": "A siphonophore",
+    "e": "A colony of organisms, not a jellyfish."
+   },
+   {
+    "c": "Food",
+    "q": "Besides chickpeas, what is the main ingredient of traditional hummus?",
+    "a": "Tahini",
+    "e": "Sesame paste."
+   },
+   {
+    "c": "Film",
+    "q": "What was Disney\u2019s first feature-length animated film?",
+    "a": "Snow White and the Seven Dwarfs",
+    "e": "1937."
+   },
+   {
+    "c": "Medicine",
+    "q": "Which blood type is the universal donor for red cells?",
+    "a": "O negative",
+    "e": ""
+   },
+   {
+    "c": "Space",
+    "q": "Which moon of Saturn has a thick nitrogen atmosphere and lakes of methane?",
+    "a": "Titan",
+    "e": ""
+   },
+   {
+    "c": "History",
+    "q": "Which war did the Peace of Westphalia end in 1648?",
+    "a": "The Thirty Years\u2019 War",
+    "e": "Accept the Eighty Years\u2019 War."
+   },
+   {
+    "c": "Geography",
+    "q": "Which country is Mount Kilimanjaro in?",
+    "a": "Tanzania",
+    "e": ""
+   },
+   {
+    "c": "Science",
+    "q": "What does a Geiger counter detect?",
+    "a": "Ionising radiation",
+    "e": ""
+   },
+   {
+    "c": "Maths",
+    "q": "What is the square root of 1,764?",
+    "a": "42",
+    "e": "The answer to everything, apparently."
+   },
+   {
+    "c": "Mythology",
+    "q": "Which Greek hero killed the Minotaur?",
+    "a": "Theseus",
+    "e": "With help from Ariadne\u2019s thread."
+   },
+   {
+    "c": "Literature",
+    "q": "What is the first name of Sherlock Holmes\u2019s older brother?",
+    "a": "Mycroft",
+    "e": ""
+   },
+   {
+    "c": "Brain-melter",
+    "q": "How many dots are there in total on a standard six-sided die?",
+    "a": "21",
+    "e": "1 + 2 + 3 + 4 + 5 + 6."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-22",
+  "number": 6,
+  "questions": [
+   {
+    "c": "History",
+    "q": "Who was the first person to win Nobel Prizes in two different sciences?",
+    "a": "Marie Curie",
+    "e": "Physics in 1903, chemistry in 1911."
+   },
+   {
+    "c": "Science",
+    "q": "What is the hardest substance in the human body?",
+    "a": "Tooth enamel",
+    "e": ""
+   },
+   {
+    "c": "Geography",
+    "q": "What is the capital of Mongolia?",
+    "a": "Ulaanbaatar",
+    "e": ""
+   },
+   {
+    "c": "Literature",
+    "q": "Who wrote \u2018Don Quixote\u2019?",
+    "a": "Miguel de Cervantes",
+    "e": ""
+   },
+   {
+    "c": "Art",
+    "q": "Who painted \u2018The Birth of Venus\u2019?",
+    "a": "Sandro Botticelli",
+    "e": "In the Uffizi, Florence."
+   },
+   {
+    "c": "Music",
+    "q": "Which Beatle wrote \u2018Something\u2019?",
+    "a": "George Harrison",
+    "e": ""
+   },
+   {
+    "c": "Sport",
+    "q": "In cricket, what is it called when a batter is out to their first ball?",
+    "a": "A golden duck",
+    "e": ""
+   },
+   {
+    "c": "Language",
+    "q": "Which is the only letter that appears in no US state name?",
+    "a": "Q",
+    "e": ""
+   },
+   {
+    "c": "Nature",
+    "q": "Which land mammal has the longest pregnancy?",
+    "a": "The elephant",
+    "e": "About 22 months."
+   },
+   {
+    "c": "Food",
+    "q": "Which fruit is the liqueur kirsch made from?",
+    "a": "Cherries",
+    "e": ""
+   },
+   {
+    "c": "Film",
+    "q": "Which 1941 film turns on the word \u2018Rosebud\u2019?",
+    "a": "Citizen Kane",
+    "e": ""
+   },
+   {
+    "c": "Medicine",
+    "q": "Which disease did Edward Jenner vaccinate against in 1796?",
+    "a": "Smallpox",
+    "e": "Using cowpox. Vaccinia, from vacca: cow."
+   },
+   {
+    "c": "Space",
+    "q": "Which star is closest to the Sun?",
+    "a": "Proxima Centauri",
+    "e": "About 4.2 light years away."
+   },
+   {
+    "c": "History",
+    "q": "Who co-wrote \u2018The Communist Manifesto\u2019 with Karl Marx?",
+    "a": "Friedrich Engels",
+    "e": ""
+   },
+   {
+    "c": "Geography",
+    "q": "What is the largest desert in the world?",
+    "a": "Antarctica",
+    "e": "Deserts are defined by low precipitation, not heat."
+   },
+   {
+    "c": "Science",
+    "q": "What is the most abundant protein in the human body?",
+    "a": "Collagen",
+    "e": ""
+   },
+   {
+    "c": "Maths",
+    "q": "What is pi to five decimal places?",
+    "a": "3.14159",
+    "e": ""
+   },
+   {
+    "c": "Mythology",
+    "q": "Who was condemned to roll a boulder uphill for eternity?",
+    "a": "Sisyphus",
+    "e": ""
+   },
+   {
+    "c": "Literature",
+    "q": "Which Shakespeare play has the line \u2018Out, damned spot!\u2019?",
+    "a": "Macbeth",
+    "e": "Lady Macbeth, sleepwalking."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "What is the collective noun for a group of owls?",
+    "a": "A parliament",
+    "e": ""
+   }
+  ]
+ }
+]
