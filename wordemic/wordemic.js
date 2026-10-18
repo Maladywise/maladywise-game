@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). Guess list in words.txt. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
   var ROWS = 6, LEN = 5;
   var root = document.getElementById("wde");
   if (!document.querySelector("link[data-wde]")) {
