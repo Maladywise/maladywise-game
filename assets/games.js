@@ -12,7 +12,7 @@ window.MW_SITE = {
   house: { name: "Follow along", text: "New puzzles, fictional cases and the odd zebra. Follow @MaladyWise on X.", cta: "Follow on X", href: "https://x.com/MaladyWise", accent: "#6B5A93", accentDark: "#9C8CC4" }
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
-window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"], suturix: ["2026-10-22"], triviosis: ["2026-11-18"] };
+window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"], suturix: ["2026-10-22"], triviosis: ["2026-11-18"], zebroid: ["2026-11-10"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
@@ -122,6 +122,18 @@ window.MW_GAMES = [
     ],
     accent: "#1F7A8C", accentDark: "#5BC0D3",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8z"/><path d="M20 17a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5"/><circle cx="24" cy="27.5" r=".8" fill="#fff"/></svg>' },
+  { id: "zebroid", name: "Zebroid", path: "zebroid/", live: true, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
+    tagline: "Name a correct answer. The rarer it is, the more it scores.",
+    quip: "Think horses, and you\u2019ll score like one.",
+    helpQuip: "Lung cancer causes clubbing. So does thyroid acropachy. Guess which scores more.",
+    help: [
+      "Three prompts a day, like \u2018Name a cause of finger clubbing\u2019.",
+      "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93).",
+      "Three tries per prompt. Answers not on our list don\u2019t count against you, they just use a try.",
+      "Spelling is forgiven within reason. New prompts every day at midnight, Sydney time."
+    ],
+    accent: "#3C4A57", accentDark: "#A7B8C8",
+    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M9 13c6 3 10 3 15 0s9-3 15 0"/><path d="M9 24c6 3 10 3 15 0s9-3 15 0"/><path d="M9 35c6 3 10 3 15 0s9-3 15 0"/></svg>' },
   { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
     tagline: "Twenty hard medical questions. No options. New every Sunday.",
     quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
