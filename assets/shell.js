@@ -27,13 +27,13 @@
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
   var DIFFQ = { Einstein: "Roughly one day in 100. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
   var DAYQ = [
-    "Sunday. Genius day. Bring your A-game and a strong coffee.",
-    "Monday. Ease in. The waiting room is already full.",
-    "Tuesday. Still easy. Enjoy it while it lasts.",
-    "Wednesday. Hump day. The cases get cheekier.",
-    "Thursday. Nearly there. Concentrate.",
-    "Friday. Hard mode. Don't phone it in before the weekend.",
-    "Saturday. Hard again. No locum to save you."
+    "Genius day. Bring your A-game and a strong coffee.",
+    "Ease in. The waiting room is already full.",
+    "Still easy. Enjoy it while it lasts.",
+    "Hump day. The cases get cheekier.",
+    "Nearly there. Concentrate.",
+    "Hard mode. Don't phone it in before the weekend.",
+    "Hard again. No locum to save you."
   ];
   function pickDay(a, d) { return a[dayNum(d) % a.length]; }
   var SOON = ["In theatre", "Still in the lab", "Awaiting ethics approval", "On the waitlist", "Pending review"];
