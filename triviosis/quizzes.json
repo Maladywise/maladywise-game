@@ -1,0 +1,751 @@
+[
+ {
+  "week": "2026-10-12",
+  "number": 1,
+  "theme": "Infectious diseases",
+  "questions": [
+   {
+    "q": "Which organism causes Lyme disease?",
+    "a": "Borrelia burgdorferi",
+    "w": [
+     "Treponema pallidum",
+     "Rickettsia rickettsii",
+     "Leptospira interrogans"
+    ],
+    "e": "A tick-borne spirochaete. The classic sign is erythema migrans, the expanding bullseye rash."
+   },
+   {
+    "q": "Koplik spots are a sign of which infection?",
+    "a": "Measles",
+    "w": [
+     "Mumps",
+     "Rubella",
+     "Scarlet fever"
+    ],
+    "e": "Tiny white spots on the inside of the cheek, often appearing a day or two before the measles rash."
+   },
+   {
+    "q": "Which bacterium causes stomach ulcers and earned two Perth researchers a Nobel Prize?",
+    "a": "Helicobacter pylori",
+    "w": [
+     "Campylobacter jejuni",
+     "Clostridioides difficile",
+     "Escherichia coli"
+    ],
+    "e": "Barry Marshall and Robin Warren won the 2005 Nobel Prize. Marshall famously drank a culture to prove it."
+   },
+   {
+    "q": "\u201cRice-water\u201d stools are classic for which infection?",
+    "a": "Cholera",
+    "w": [
+     "Typhoid",
+     "Giardiasis",
+     "Shigellosis"
+    ],
+    "e": "Vibrio cholerae toxin causes massive watery diarrhoea. Rehydration is the life-saving treatment."
+   },
+   {
+    "q": "Which is the most commonly notified mosquito-borne virus in Australia?",
+    "a": "Ross River virus",
+    "w": [
+     "Dengue virus",
+     "Murray Valley encephalitis virus",
+     "Barmah Forest virus"
+    ],
+    "e": "Ross River virus causes fever, rash and joint pain that can linger for months."
+   },
+   {
+    "q": "\u201cSlapped cheek\u201d rash in a child is caused by?",
+    "a": "Parvovirus B19",
+    "w": [
+     "Human herpesvirus 6",
+     "Coxsackievirus A16",
+     "Rubella virus"
+    ],
+    "e": "Also called fifth disease. Usually mild, but it matters in pregnancy and in people with haemolytic anaemias."
+   },
+   {
+    "q": "Q fever is caused by which organism?",
+    "a": "Coxiella burnetii",
+    "w": [
+     "Brucella abortus",
+     "Bartonella henselae",
+     "Francisella tularensis"
+    ],
+    "e": "First described in Queensland abattoir workers. The \u201cQ\u201d stands for query, not Queensland."
+   },
+   {
+    "q": "Australian bat lyssavirus is closely related to which virus?",
+    "a": "Rabies virus",
+    "w": [
+     "Hendra virus",
+     "Nipah virus",
+     "Ebola virus"
+    ],
+    "e": "It causes a rabies-like illness. Only vaccinated, trained people should handle bats."
+   },
+   {
+    "q": "Melioidosis, found in tropical northern Australia, is caused by?",
+    "a": "Burkholderia pseudomallei",
+    "w": [
+     "Pseudomonas aeruginosa",
+     "Mycobacterium ulcerans",
+     "Vibrio vulnificus"
+    ],
+    "e": "Lives in soil and water. Cases rise after heavy wet-season rain."
+   },
+   {
+    "q": "Mycobacterium ulcerans causes which skin ulcer?",
+    "a": "Buruli ulcer",
+    "w": [
+     "Marjolin ulcer",
+     "Curling ulcer",
+     "Cushing ulcer"
+    ],
+    "e": "Also known in Australia as the Bairnsdale or Daintree ulcer. Possums and mosquitoes are implicated in spread."
+   }
+  ]
+ },
+ {
+  "week": "2026-10-19",
+  "number": 2,
+  "theme": "Eponyms",
+  "questions": [
+   {
+    "q": "Pain in the right lower quadrant when the left lower quadrant is pressed is called?",
+    "a": "Rovsing\u2019s sign",
+    "w": [
+     "Murphy\u2019s sign",
+     "McBurney\u2019s sign",
+     "Psoas sign"
+    ],
+    "e": "A classic, if imperfect, sign of appendicitis."
+   },
+   {
+    "q": "Virchow\u2019s node sits where?",
+    "a": "Left supraclavicular fossa",
+    "w": [
+     "Right axilla",
+     "Umbilicus",
+     "Left groin"
+    ],
+    "e": "An enlarged node here can signal abdominal cancer, especially gastric. The umbilicus is Sister Mary Joseph\u2019s."
+   },
+   {
+    "q": "Erb\u2019s palsy affects which nerve roots?",
+    "a": "C5\u2013C6",
+    "w": [
+     "C8\u2013T1",
+     "L4\u2013L5",
+     "C3\u2013C4"
+    ],
+    "e": "Gives the \u201cwaiter\u2019s tip\u201d posture. C8\u2013T1 is Klumpke\u2019s."
+   },
+   {
+    "q": "Kussmaul breathing is classically seen in?",
+    "a": "Diabetic ketoacidosis",
+    "w": [
+     "Opioid overdose",
+     "Acute asthma",
+     "Pneumothorax"
+    ],
+    "e": "Deep, laboured breathing that blows off CO\u2082 to offset metabolic acidosis."
+   },
+   {
+    "q": "Low blood pressure, raised neck veins and muffled heart sounds make up which triad?",
+    "a": "Beck\u2019s triad",
+    "w": [
+     "Virchow\u2019s triad",
+     "Cushing\u2019s triad",
+     "Charcot\u2019s triad"
+    ],
+    "e": "Points to cardiac tamponade."
+   },
+   {
+    "q": "Cushing\u2019s triad of raised intracranial pressure is hypertension, bradycardia and?",
+    "a": "Irregular breathing",
+    "w": [
+     "Fever",
+     "Tachycardia",
+     "Hypoglycaemia"
+    ],
+    "e": "A late and ominous sign."
+   },
+   {
+    "q": "Fever, jaundice and right upper quadrant pain (Charcot\u2019s triad) point to?",
+    "a": "Ascending cholangitis",
+    "w": [
+     "Acute pancreatitis",
+     "Acute cholecystitis",
+     "Appendicitis"
+    ],
+    "e": "Add confusion and shock and it becomes Reynolds\u2019 pentad."
+   },
+   {
+    "q": "Bruising behind the ear (Battle\u2019s sign) suggests?",
+    "a": "Basal skull fracture",
+    "w": [
+     "Parotitis",
+     "Otitis externa",
+     "Mandible fracture"
+    ],
+    "e": "Often appears a day or more after the injury."
+   },
+   {
+    "q": "Carpal spasm when a BP cuff is inflated (Trousseau\u2019s sign) suggests?",
+    "a": "Hypocalcaemia",
+    "w": [
+     "Hypokalaemia",
+     "Hypernatraemia",
+     "Hyperkalaemia"
+    ],
+    "e": "Chvostek\u2019s sign, a facial twitch when tapping the cheek, is its partner."
+   },
+   {
+    "q": "Conn\u2019s syndrome is an excess of which hormone?",
+    "a": "Aldosterone",
+    "w": [
+     "Cortisol",
+     "ADH",
+     "Parathyroid hormone"
+    ],
+    "e": "Causes hypertension, often with low potassium."
+   }
+  ]
+ },
+ {
+  "week": "2026-10-26",
+  "number": 3,
+  "theme": "Pharmacology",
+  "questions": [
+   {
+    "q": "What is the antidote for paracetamol overdose?",
+    "a": "Acetylcysteine",
+    "w": [
+     "Naloxone",
+     "Flumazenil",
+     "Atropine"
+    ],
+    "e": "Most effective when given early. It replenishes glutathione."
+   },
+   {
+    "q": "Naloxone reverses which drugs?",
+    "a": "Opioids",
+    "w": [
+     "Benzodiazepines",
+     "Warfarin",
+     "Heparin"
+    ],
+    "e": "It can wear off before long-acting opioids do, so people need watching."
+   },
+   {
+    "q": "Warfarin is reversed with vitamin...?",
+    "a": "K",
+    "w": [
+     "B12",
+     "D",
+     "C"
+    ],
+    "e": "Prothrombinex or fresh frozen plasma are used when reversal is urgent."
+   },
+   {
+    "q": "Which antibiotic class can cause tendon rupture?",
+    "a": "Fluoroquinolones",
+    "w": [
+     "Macrolides",
+     "Penicillins",
+     "Tetracyclines"
+    ],
+    "e": "The Achilles tendon is most at risk, especially with steroids or older age."
+   },
+   {
+    "q": "Grapefruit juice raises levels of many drugs by blocking which enzyme?",
+    "a": "CYP3A4",
+    "w": [
+     "Monoamine oxidase",
+     "Acetylcholinesterase",
+     "Xanthine oxidase"
+    ],
+    "e": "Simvastatin and some calcium channel blockers are classic examples."
+   },
+   {
+    "q": "ACE inhibitor cough is caused by build-up of?",
+    "a": "Bradykinin",
+    "w": [
+     "Histamine",
+     "Angiotensin II",
+     "Serotonin"
+    ],
+    "e": "Switching to an ARB usually fixes it."
+   },
+   {
+    "q": "Which drug traces its origins to willow bark?",
+    "a": "Aspirin",
+    "w": [
+     "Morphine",
+     "Digoxin",
+     "Quinine"
+    ],
+    "e": "Salicylates from willow were used for pain and fever for thousands of years."
+   },
+   {
+    "q": "Digoxin comes from which plant?",
+    "a": "Foxglove",
+    "w": [
+     "Willow",
+     "Opium poppy",
+     "Cinchona"
+    ],
+    "e": "William Withering described foxglove for \u201cdropsy\u201d in 1785."
+   },
+   {
+    "q": "Which antipsychotic needs regular blood tests for agranulocytosis?",
+    "a": "Clozapine",
+    "w": [
+     "Olanzapine",
+     "Risperidone",
+     "Aripiprazole"
+    ],
+    "e": "Very effective for treatment-resistant schizophrenia, with strict monitoring."
+   },
+   {
+    "q": "Metformin\u2019s rare but serious side effect is?",
+    "a": "Lactic acidosis",
+    "w": [
+     "Hypoglycaemia on its own",
+     "Hyperkalaemia",
+     "Pancreatitis"
+    ],
+    "e": "Risk rises with kidney impairment, dehydration and contrast."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-02",
+  "number": 4,
+  "theme": "Anatomy",
+  "questions": [
+   {
+    "q": "What is the smallest bone in the body?",
+    "a": "Stapes",
+    "w": [
+     "Incus",
+     "Malleus",
+     "Pisiform"
+    ],
+    "e": "About 3 mm long, in the middle ear."
+   },
+   {
+    "q": "What is the longest bone in the body?",
+    "a": "Femur",
+    "w": [
+     "Tibia",
+     "Humerus",
+     "Fibula"
+    ],
+    "e": "Roughly a quarter of your height."
+   },
+   {
+    "q": "How many bones are in the adult human body?",
+    "a": "206",
+    "w": [
+     "186",
+     "226",
+     "256"
+    ],
+    "e": "Babies start with about 300. Many fuse as we grow."
+   },
+   {
+    "q": "Which nerve is the \u201cfunny bone\u201d?",
+    "a": "Ulnar nerve",
+    "w": [
+     "Radial nerve",
+     "Median nerve",
+     "Axillary nerve"
+    ],
+    "e": "It runs behind the medial epicondyle of the elbow with little padding."
+   },
+   {
+    "q": "Which cranial nerve wanders all the way to the abdomen?",
+    "a": "Vagus nerve",
+    "w": [
+     "Trigeminal nerve",
+     "Facial nerve",
+     "Hypoglossal nerve"
+    ],
+    "e": "Cranial nerve X. \u201cVagus\u201d means wandering."
+   },
+   {
+    "q": "Which heart valve has only two cusps?",
+    "a": "Mitral valve",
+    "w": [
+     "Tricuspid valve",
+     "Aortic valve",
+     "Pulmonary valve"
+    ],
+    "e": "Also called the bicuspid valve. Some people are born with a bicuspid aortic valve too."
+   },
+   {
+    "q": "What is the largest organ of the body?",
+    "a": "Skin",
+    "w": [
+     "Liver",
+     "Lungs",
+     "Brain"
+    ],
+    "e": "The liver is the largest internal organ."
+   },
+   {
+    "q": "Which part of the brain coordinates balance and movement?",
+    "a": "Cerebellum",
+    "w": [
+     "Medulla",
+     "Hypothalamus",
+     "Thalamus"
+    ],
+    "e": "Damage can cause an ataxic, wide-based gait."
+   },
+   {
+    "q": "The islets of Langerhans are found in the?",
+    "a": "Pancreas",
+    "w": [
+     "Liver",
+     "Spleen",
+     "Kidney"
+    ],
+    "e": "They make insulin, glucagon and somatostatin."
+   },
+   {
+    "q": "Which carpal bone is most commonly fractured?",
+    "a": "Scaphoid",
+    "w": [
+     "Lunate",
+     "Hamate",
+     "Trapezium"
+    ],
+    "e": "Tenderness in the anatomical snuffbox is the clue. X-rays can miss it early."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-09",
+  "number": 5,
+  "theme": "Medical history",
+  "questions": [
+   {
+    "q": "Who discovered penicillin in 1928?",
+    "a": "Alexander Fleming",
+    "w": [
+     "Howard Florey",
+     "Louis Pasteur",
+     "Joseph Lister"
+    ],
+    "e": "Australian Howard Florey later turned it into a usable drug, sharing the 1945 Nobel Prize."
+   },
+   {
+    "q": "Who developed the first smallpox vaccine?",
+    "a": "Edward Jenner",
+    "w": [
+     "Louis Pasteur",
+     "Robert Koch",
+     "Jonas Salk"
+    ],
+    "e": "In 1796, using cowpox. \u201cVaccine\u201d comes from vacca, Latin for cow."
+   },
+   {
+    "q": "Who pushed for handwashing on maternity wards in 1840s Vienna?",
+    "a": "Ignaz Semmelweis",
+    "w": [
+     "Joseph Lister",
+     "John Snow",
+     "Florence Nightingale"
+    ],
+    "e": "Deaths from childbed fever fell sharply. He was largely ignored at the time."
+   },
+   {
+    "q": "John Snow\u2019s 1854 Broad Street pump investigation was about?",
+    "a": "Cholera",
+    "w": [
+     "Typhoid",
+     "Plague",
+     "Smallpox"
+    ],
+    "e": "Removing the pump handle became a founding story of epidemiology."
+   },
+   {
+    "q": "Who discovered X-rays in 1895?",
+    "a": "Wilhelm R\u00f6ntgen",
+    "w": [
+     "Marie Curie",
+     "Thomas Edison",
+     "Niels Bohr"
+    ],
+    "e": "One of the first images was his wife\u2019s hand, wedding ring and all."
+   },
+   {
+    "q": "Insulin was first isolated in 1921 in which country?",
+    "a": "Canada",
+    "w": [
+     "United Kingdom",
+     "United States",
+     "Germany"
+    ],
+    "e": "Banting and Best, working in Toronto."
+   },
+   {
+    "q": "Who pioneered the multichannel cochlear implant (the \u201cbionic ear\u201d)?",
+    "a": "Graeme Clark",
+    "w": [
+     "Fiona Wood",
+     "Fred Hollows",
+     "Victor Chang"
+    ],
+    "e": "Developed in Melbourne. The first implant was in 1978."
+   },
+   {
+    "q": "Who developed spray-on skin for burns?",
+    "a": "Fiona Wood",
+    "w": [
+     "Graeme Clark",
+     "Ian Frazer",
+     "Barry Marshall"
+    ],
+    "e": "Used widely after the 2002 Bali bombings."
+   },
+   {
+    "q": "Who co-developed the technology behind the HPV vaccine?",
+    "a": "Ian Frazer",
+    "w": [
+     "Fiona Stanley",
+     "Gustav Nossal",
+     "Peter Doherty"
+    ],
+    "e": "With the late Jian Zhou, at the University of Queensland."
+   },
+   {
+    "q": "Who invented the stethoscope in 1816?",
+    "a": "Ren\u00e9 Laennec",
+    "w": [
+     "William Harvey",
+     "Hippocrates",
+     "Andreas Vesalius"
+    ],
+    "e": "The first one was a rolled-up tube of paper."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-16",
+  "number": 6,
+  "theme": "The body by numbers",
+  "questions": [
+   {
+    "q": "What is a normal adult resting heart rate?",
+    "a": "60\u2013100 beats per minute",
+    "w": [
+     "40\u201360 beats per minute",
+     "100\u2013140 beats per minute",
+     "30\u201350 beats per minute"
+    ],
+    "e": "Fit athletes can sit lower without any problem."
+   },
+   {
+    "q": "Normal core body temperature is about?",
+    "a": "37.0\u00b0C",
+    "w": [
+     "35.0\u00b0C",
+     "38.5\u00b0C",
+     "39.5\u00b0C"
+    ],
+    "e": "It varies through the day and by where it\u2019s measured."
+   },
+   {
+    "q": "How long does a red blood cell live?",
+    "a": "About 120 days",
+    "w": [
+     "About 7 days",
+     "About 30 days",
+     "About 1 year"
+    ],
+    "e": "Old cells are cleared mainly by the spleen."
+   },
+   {
+    "q": "How much blood does an average adult have?",
+    "a": "About 5 litres",
+    "w": [
+     "About 2 litres",
+     "About 8 litres",
+     "About 12 litres"
+    ],
+    "e": "Roughly 7% of body weight."
+   },
+   {
+    "q": "What is a normal adult breathing rate at rest?",
+    "a": "12\u201320 breaths per minute",
+    "w": [
+     "4\u20138 breaths per minute",
+     "25\u201335 breaths per minute",
+     "40\u201360 breaths per minute"
+    ],
+    "e": "A raised breathing rate is one of the earliest signs of a sick patient."
+   },
+   {
+    "q": "How many teeth are in a full adult set?",
+    "a": "32",
+    "w": [
+     "28",
+     "20",
+     "36"
+    ],
+    "e": "Including the four wisdom teeth."
+   },
+   {
+    "q": "How many baby (primary) teeth do children have?",
+    "a": "20",
+    "w": [
+     "24",
+     "16",
+     "28"
+    ],
+    "e": "They usually start appearing around 6 months."
+   },
+   {
+    "q": "What is the normal range for blood sodium?",
+    "a": "135\u2013145 mmol/L",
+    "w": [
+     "3.5\u20135.0 mmol/L",
+     "95\u2013105 mmol/L",
+     "2.1\u20132.6 mmol/L"
+    ],
+    "e": "The other ranges are roughly potassium, chloride and calcium."
+   },
+   {
+    "q": "How many vertebrae are in the neck?",
+    "a": "7",
+    "w": [
+     "5",
+     "8",
+     "12"
+    ],
+    "e": "Almost all mammals have seven, giraffes included."
+   },
+   {
+    "q": "Roughly what share of an adult man\u2019s body weight is water?",
+    "a": "60%",
+    "w": [
+     "40%",
+     "75%",
+     "90%"
+    ],
+    "e": "A little lower in women and older adults."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-23",
+  "number": 7,
+  "theme": "Bites, stings and poisons",
+  "questions": [
+   {
+    "q": "What is the first aid for a suspected funnel-web spider bite?",
+    "a": "Pressure immobilisation bandage",
+    "w": [
+     "Ice pack",
+     "Tourniquet",
+     "Sucking out the venom"
+    ],
+    "e": "Then call 000. Antivenom is available."
+   },
+   {
+    "q": "What should you pour on a tropical box jellyfish sting?",
+    "a": "Vinegar",
+    "w": [
+     "Fresh water",
+     "Methylated spirits",
+     "Urine"
+    ],
+    "e": "Vinegar stops undischarged stingers firing. Call 000 and start CPR if needed."
+   },
+   {
+    "q": "What is the first aid for a redback spider bite?",
+    "a": "A cold pack",
+    "w": [
+     "Pressure immobilisation bandage",
+     "Tourniquet",
+     "Heat pack"
+    ],
+    "e": "Unlike funnel-web bites, redback venom moves slowly. Pressure bandaging can make the pain worse."
+   },
+   {
+    "q": "Botulinum toxin works by blocking the release of?",
+    "a": "Acetylcholine",
+    "w": [
+     "Dopamine",
+     "GABA",
+     "Adrenaline"
+    ],
+    "e": "This causes a descending flaccid paralysis. Tiny doses are used in medicine."
+   },
+   {
+    "q": "Tetrodotoxin is found in which animal?",
+    "a": "Pufferfish",
+    "w": [
+     "Stonefish",
+     "Box jellyfish",
+     "Redback spider"
+    ],
+    "e": "Also in the blue-ringed octopus. It blocks sodium channels."
+   },
+   {
+    "q": "Carbon monoxide binds haemoglobin about how much more strongly than oxygen?",
+    "a": "About 200\u2013250 times",
+    "w": [
+     "About 2 times",
+     "About 20 times",
+     "About 2,000 times"
+    ],
+    "e": "Pulse oximeters can read falsely normal in CO poisoning."
+   },
+   {
+    "q": "Which drug is a key antidote for organophosphate poisoning?",
+    "a": "Atropine",
+    "w": [
+     "Naloxone",
+     "Flumazenil",
+     "Vitamin K"
+    ],
+    "e": "Given until the chest is dry. Pralidoxime may be added."
+   },
+   {
+    "q": "Which snakes cause the most snakebite deaths in Australia?",
+    "a": "Brown snakes",
+    "w": [
+     "Taipans",
+     "Tiger snakes",
+     "Death adders"
+    ],
+    "e": "Their venom affects clotting. Pressure immobilisation and an ambulance are key."
+   },
+   {
+    "q": "Cyanide is classically said to smell of?",
+    "a": "Bitter almonds",
+    "w": [
+     "Rotten eggs",
+     "Garlic",
+     "Pear drops"
+    ],
+    "e": "Not everyone can smell it. Rotten eggs is hydrogen sulphide."
+   },
+   {
+    "q": "Methanol poisoning can permanently cause?",
+    "a": "Blindness",
+    "w": [
+     "Hearing loss",
+     "Hair loss",
+     "Hiccups"
+    ],
+    "e": "Its breakdown product, formic acid, damages the optic nerve."
+   }
+  ]
+ }
+]
