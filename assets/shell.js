@@ -149,7 +149,7 @@
   }
 
   // ---------- hub ----------
-  function hub() {
+  function hub() { setTimeout(social, 0);
     topBar(null);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
     var main = document.getElementById("hub");
@@ -232,7 +232,7 @@
   }
 
   // ---------- game page ----------
-  function game(id) {
+  function game(id) { setTimeout(social, 0);
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0];
     topBar(g);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
@@ -252,6 +252,14 @@
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 
-  function page() { topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; }
+  // ---------- social links in every footer (edit MW_SITE.social to add more) ----------
+  function social() {
+    var f = document.querySelector("footer.site"), L = (window.MW_SITE && MW_SITE.social) || [];
+    if (!f || !L.length || f.querySelector(".soc")) return;
+    var d = document.createElement("div"); d.className = "soc";
+    d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
+    f.insertBefore(d, f.firstChild);
+  }
+  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; }
   window.MW = { hub: hub, game: game, modal: modal, page: page };
 })();
