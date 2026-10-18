@@ -136,7 +136,7 @@ window.MW_GAMES = [
     accent: "#3C4A57", accentDark: "#A7B8C8",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M9 13c6 3 10 3 15 0s9-3 15 0"/><path d="M9 24c6 3 10 3 15 0s9-3 15 0"/><path d="M9 35c6 3 10 3 15 0s9-3 15 0"/></svg>' },
   { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
-    tagline: "Twenty hard medical questions. No options. New every Sunday.",
+    tagline: "Twenty hard medical trivia questions. No options. New every Sunday.",
     quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
     helpQuip: "No multiple choice to hide behind. Just you and your memory.",
     help: [
