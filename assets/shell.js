@@ -156,7 +156,7 @@
     function card(g) {
       var st = g.live ? readStats(g) : null;
       var status = !st ? "" : st.done ? (st.win ? "Solved. Smug. " : "Done. Humbled. ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
-      var btn = !g.live ? SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length] : st && st.done ? "Admire your work" : "Play";
+      var btn = !g.live ? SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length] : st && st.done ? "Review" : "Play";
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
@@ -245,7 +245,7 @@
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = !g.weekly && diffFor(g, today, dow) === "Einstein";
     sp.innerHTML = '<div class="splash-in">' + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
-      '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Admire your work" : "Play") + "</button>" +
+      '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
     document.getElementById("mw-play").onclick = start;
