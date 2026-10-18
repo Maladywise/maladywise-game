@@ -104,7 +104,7 @@
       stats.dist[win ? st.mistakes : 4]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-100-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
+      say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put("mw-einstein", tro); } }
     } else say(win ? SASS.win[st.mistakes] : pick(SASS.lose));
   }

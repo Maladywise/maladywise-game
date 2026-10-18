@@ -105,7 +105,7 @@
   "pangrams": [
    "ALVEOLUS"
   ],
-  "max": 404
+  "max": 440
  },
  {
   "date": "2026-11-02",
@@ -202,7 +202,7 @@
    "STOMACH",
    "STOMACHS"
   ],
-  "max": 341
+  "max": 365
  },
  {
   "date": "2026-11-03",
@@ -311,7 +311,7 @@
    "SWELLINGS",
    "WILLINGNESS"
   ],
-  "max": 465
+  "max": 552
  },
  {
   "date": "2026-11-04",
@@ -413,7 +413,7 @@
    "CHARIOT",
    "THORACIC"
   ],
-  "max": 446
+  "max": 570
  },
  {
   "date": "2026-11-05",
@@ -485,7 +485,7 @@
   "pangrams": [
    "FRONTAL"
   ],
-  "max": 210
+  "max": 250
  },
  {
   "date": "2026-11-06",
@@ -540,7 +540,7 @@
   "pangrams": [
    "LYMPHOMA"
   ],
-  "max": 137
+  "max": 153
  },
  {
   "date": "2026-11-07",
@@ -637,7 +637,7 @@
   "pangrams": [
    "KERATIN"
   ],
-  "max": 400
+  "max": 481
  },
  {
   "date": "2026-11-08",
@@ -709,7 +709,7 @@
   "pangrams": [
    "APNOEIC"
   ],
-  "max": 245
+  "max": 255
  },
  {
   "date": "2026-11-09",
@@ -821,7 +821,7 @@
   "pangrams": [
    "ADRENALINE"
   ],
-  "max": 525
+  "max": 625
  },
  {
   "date": "2026-11-10",
@@ -917,7 +917,7 @@
   "pangrams": [
    "THERAPY"
   ],
-  "max": 350
+  "max": 382
  },
  {
   "date": "2026-11-11",
@@ -1006,7 +1006,7 @@
   "pangrams": [
    "IMPLANT"
   ],
-  "max": 303
+  "max": 329
  },
  {
   "date": "2026-11-12",
@@ -1119,7 +1119,7 @@
    "CERVICAL",
    "VARICELLA"
   ],
-  "max": 458
+  "max": 542
  },
  {
   "date": "2026-11-13",
@@ -1213,7 +1213,7 @@
    "PANCREAS",
    "PANCREASES"
   ],
-  "max": 436
+  "max": 579
  },
  {
   "date": "2026-11-14",
@@ -1293,7 +1293,7 @@
   "pangrams": [
    "PACEMAKER"
   ],
-  "max": 240
+  "max": 268
  },
  {
   "date": "2026-11-15",
@@ -1357,7 +1357,7 @@
   "pangrams": [
    "BRACHIAL"
   ],
-  "max": 207
+  "max": 255
  },
  {
   "date": "2026-11-16",
@@ -1451,7 +1451,7 @@
   "pangrams": [
    "HEALING"
   ],
-  "max": 426
+  "max": 502
  },
  {
   "date": "2026-11-17",
@@ -1558,7 +1558,7 @@
    "SKELETON",
    "SKELETONS"
   ],
-  "max": 411
+  "max": 455
  },
  {
   "date": "2026-11-18",
@@ -1697,7 +1697,7 @@
    "MALTING",
    "MANTLING"
   ],
-  "max": 813
+  "max": 1110
  },
  {
   "date": "2026-11-19",
@@ -1816,7 +1816,7 @@
    "NOSTRILS",
    "TRILLIONS"
   ],
-  "max": 482
+  "max": 554
  },
  {
   "date": "2026-11-20",
@@ -1894,6 +1894,6 @@
    "ATROPHY",
    "PHYTOPHTHORA"
   ],
-  "max": 302
+  "max": 348
  }
 ]

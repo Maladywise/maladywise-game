@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
   var root = document.getElementById("mph");
   if (!document.querySelector("link[data-mph]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "morphemia.css?v=" + BUILD; l.setAttribute("data-mph", ""); document.head.appendChild(l);
@@ -18,7 +18,7 @@
     ' <div class="entry" id="mph-entry"></div>' +
     ' <div class="hive" id="mph-hive"></div>' +
     ' <div class="ctrls"><button class="btn" type="button" id="mph-del">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter">Enter</button></div>' +
-    ' <p class="legend"><b>Medical words</b> score double. Using all seven letters earns a pangram bonus.</p>' +
+    ' <details class="legend"><summary><b>Medical words</b> score double. Long words earn bonuses. <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li><li>Medical word: whole score doubled</li></ul></details>' +
     ' <div class="result" id="mph-result" hidden></div>' +
     ' <p class="note" id="mph-next"></p>' +
     ' <details class="archive" id="mph-archive"><summary>Past puzzles</summary><div class="alist" id="mph-alist"></div></details>' +
@@ -48,14 +48,17 @@
     good: ["Good.", "Nice.", "Solid.", "Tidy.", "Yep."],
     med: ["\u2695 Medical word. Double points.", "\u2695 Clinical. Double points.", "\u2695 Now we're talking. Double."],
     pan: "PANGRAM! Every letter. Absolute show-off.",
+    long: { 8: ["Eight letters. Someone\u2019s been reading.", "Eight letters. Bonus earned."], 9: ["Nine letters. Registrar vocabulary.", "Nine letters. Big word energy."], 10: ["Ten letters! The consultant is impressed.", "Ten letters. That\u2019s a whole diagnosis."], 11: ["Eleven-plus letters. Absolutely unhinged. Love it.", "That word has its own postcode."] },
     rank: function (r) { return "Promoted to " + r + "."; },
     genius: "Genius. Go and tell someone who will pretend to care.",
-    ein: "\u269b\ufe0f Einstein day, Genius reached. Roughly a once-in-100-days achievement. Screenshot this."
+    ein: "\u269b\ufe0f Einstein day, Genius reached. Roughly a once-in-50-days achievement. Screenshot this."
   };
   function say(t) { $("msg").textContent = t; }
 
   function letters() { return P.centre + P.outer; }
-  function points(w) { var p = w.length === 4 ? 1 : w.length; if (P.pangrams.indexOf(w) >= 0) p += 7; if (P.medical.indexOf(w) >= 0) p *= 2; return p; }
+  var LONG = { 8: 8, 9: 10, 10: 12 };
+  function longBonus(n) { return n >= 11 ? 15 : LONG[n] || 0; }
+  function points(w) { var p = w.length === 4 ? 1 : w.length; p += longBonus(w.length); if (P.pangrams.indexOf(w) >= 0) p += 7; if (P.medical.indexOf(w) >= 0) p *= 2; return p; }
   function rankIdx(score) { var pct = P.max ? score / P.max * 100 : 0, r = 0; RANKS.forEach(function (x, i) { if (pct >= x[1]) r = i; }); return r; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
@@ -133,6 +136,7 @@
     if (st.found.length === 1) recordPlay();
     var after = rankIdx(st.score), m;
     if (P.pangrams.indexOf(w) >= 0) m = SASS.pan;
+    else if (w.length >= 8) m = pick(SASS.long[Math.min(w.length, 11)]) + (P.medical.indexOf(w) >= 0 ? " \u2695 Double." : "");
     else if (P.medical.indexOf(w) >= 0) m = pick(SASS.med);
     else m = pick(SASS.good);
     m += " +" + pts;

@@ -11,7 +11,7 @@ window.MW_SITE = {
   ],
   house: { name: "Follow along", text: "New puzzles, fictional cases and the odd zebra. Follow @MaladyWise on X.", cta: "Follow on X", href: "https://x.com/MaladyWise", accent: "#6B5A93", accentDark: "#9C8CC4" }
 };
-/* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
+/* Einstein days: the rare top tier (about 1 day in 50 per game). Dates in Sydney time. */
 window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"], suturix: ["2026-10-22"], triviosis: ["2026-11-18"], zebritis: ["2026-11-10"] };
 window.MW_GAMES = [
   { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
@@ -25,7 +25,7 @@ window.MW_GAMES = [
       "Each wrong guess (or Next clue) unlocks another clue. You get six.",
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
       "A new case arrives at midnight, Sydney time. Past cases live in the archive.",
-      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
+      "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ] },
   { id: "wordemic", name: "Wordemic", path: "wordemic/", live: true, store: { stats: "wde-stats", day: "wde-day-" },
     tagline: "Guess the five-letter medical word in six tries.",
@@ -39,7 +39,7 @@ window.MW_GAMES = [
       "Every guess must be a real five-letter word.",
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
       "A new word arrives at midnight, Sydney time.",
-      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
+      "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ] },
   { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"], distTitle: " (mistakes per win)" },
     quip: "Like a multidisciplinary meeting, but everyone agrees at the end.",
@@ -50,7 +50,7 @@ window.MW_GAMES = [
       "You can make four mistakes. Three out of four gets a warning.",
       "Groups get trickier by colour: yellow, green, blue, then purple (usually wordplay).",
       "Difficulty rises through the week. New puzzle at midnight, Sydney time.",
-      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
+      "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ],
     tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",
@@ -64,9 +64,10 @@ window.MW_GAMES = [
       "Every word must use the centre letter. Letters can be reused.",
       "4-letter words score 1. Longer words score one point per letter.",
       "Medical words score double. A pangram uses all seven letters and earns 7 bonus points.",
+      "Long words earn bonuses: 8 letters +8, 9 letters +10, 10 letters +12, 11 or more +15.",
       "Climb the ranks: Student, Intern, Resident, Registrar, Consultant, Professor, Genius.",
       "Difficulty rises through the week. New letters at midnight, Sydney time.",
-      "Rarely, about one day in 100, you get an Einstein. You will know it when you see it."
+      "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ],
     tagline: "Seven letters. Build medical words. Intern to Genius, if you're lucky.",
     accent: "#B07A0C", accentDark: "#F0B940",

@@ -82,7 +82,7 @@
   "pangrams": [
    "ERYTHEMA"
   ],
-  "max": 262
+  "max": 286
  },
  {
   "date": "2026-10-18",
@@ -153,7 +153,7 @@
   "pangrams": [
    "AURICLE"
   ],
-  "max": 248
+  "max": 294
  },
  {
   "date": "2026-10-19",
@@ -257,7 +257,7 @@
   "pangrams": [
    "DIABETES"
   ],
-  "max": 469
+  "max": 581
  },
  {
   "date": "2026-10-20",
@@ -358,7 +358,7 @@
    "PROTEIN",
    "REPETITION"
   ],
-  "max": 494
+  "max": 691
  },
  {
   "date": "2026-10-21",
@@ -447,7 +447,7 @@
    "PRESCRIBE",
    "PRESCRIBES"
   ],
-  "max": 372
+  "max": 432
  },
  {
   "date": "2026-10-22",
@@ -537,7 +537,7 @@
    "CARCINOMA",
    "MACARONI"
   ],
-  "max": 345
+  "max": 401
  },
  {
   "date": "2026-10-23",
@@ -614,7 +614,7 @@
   "pangrams": [
    "UMBILICAL"
   ],
-  "max": 262
+  "max": 290
  },
  {
   "date": "2026-10-24",
@@ -696,7 +696,7 @@
    "HAIRLINE",
    "INHALER"
   ],
-  "max": 280
+  "max": 296
  },
  {
   "date": "2026-10-25",
@@ -757,7 +757,7 @@
   "pangrams": [
    "LEUKAEMIA"
   ],
-  "max": 146
+  "max": 166
  },
  {
   "date": "2026-10-26",
@@ -873,7 +873,7 @@
   "pangrams": [
    "FRACTURE"
   ],
-  "max": 477
+  "max": 577
  },
  {
   "date": "2026-10-27",
@@ -986,7 +986,7 @@
    "DECIMAL",
    "MEDICAL"
   ],
-  "max": 392
+  "max": 426
  },
  {
   "date": "2026-10-28",
@@ -1105,7 +1105,7 @@
   "pangrams": [
    "GASTRIC"
   ],
-  "max": 526
+  "max": 630
  },
  {
   "date": "2026-10-29",
@@ -1227,7 +1227,7 @@
    "IDEATION",
    "INDENTATION"
   ],
-  "max": 623
+  "max": 859
  },
  {
   "date": "2026-10-30",
@@ -1341,7 +1341,7 @@
   "pangrams": [
    "PARIETAL"
   ],
-  "max": 513
+  "max": 713
  },
  {
   "date": "2026-10-31",
@@ -1432,6 +1432,6 @@
   "pangrams": [
    "FEMORAL"
   ],
-  "max": 314
+  "max": 366
  }
 ]

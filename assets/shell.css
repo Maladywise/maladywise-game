@@ -189,3 +189,8 @@ footer.site .soc a{display:inline-flex;align-items:center;gap:6px;padding:6px 12
 footer.site .soc a:hover{border-color:var(--brand)}
 footer.site .soc svg{width:14px;height:14px}
 footer.site .soc b{font-weight:600;font-size:13px}
+
+.gtitle{max-width:560px;margin:0 auto 6px;padding:0 2px}
+.gtitle h1{margin:0;font:700 34px/1.1 Lora,Georgia,serif;color:var(--ga)}
+html[data-theme="dark"] .gtitle h1{color:var(--gad)}
+.gtitle p{margin:4px 0 0;font-size:14px;color:var(--muted)}
