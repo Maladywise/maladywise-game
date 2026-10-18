@@ -199,8 +199,8 @@
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
-        '<div class="cbody">' + (g.weekly ? '<span class="pill">Weekly</span>' : diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
-        '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
+        '<div class="cbody">' + (!g.weekly && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
+        '<h2 class="name">' + g.name + "</h2>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
     }
     function homeTop() {

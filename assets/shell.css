@@ -211,3 +211,5 @@ html[data-theme="dark"] .subpill{color:#16121F}
 
 .doc ul.news{list-style:none;padding:0;display:grid;gap:10px}
 .doc ul.news b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+.card .pill.wk{margin:2px 0 4px}
