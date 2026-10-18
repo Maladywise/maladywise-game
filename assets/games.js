@@ -106,5 +106,17 @@ window.MW_GAMES = [
     ],
     tagline: "Find the theme words woven through the grid. Neat stitches only.",
     accent: "#C2553A", accentDark: "#EE8A6A",
-    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0"/><path d="M12 18l4 6M22 20l2 7M32 22l-2 6M38 18l-3 6"/></svg>' }
+    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0"/><path d="M12 18l4 6M22 20l2 7M32 22l-2 6M38 18l-3 6"/></svg>' },
+  { id: "triviosis", name: "Triviosis", path: "triviosis/", live: true, weekly: true, store: { stats: "trv-stats", day: "trv-week-", weekly: true, labels: ["10", "8-9", "6-7", "4-5", "0-3"], distTitle: " (scores)" },
+    tagline: "Ten questions. One theme. New every Monday.",
+    quip: "Pub trivia, but the pub is a hospital and nobody\u2019s had a break.",
+    helpQuip: "Wrong answers come with an explanation. Pretend you knew.",
+    help: [
+      "Ten multiple-choice questions on one medical theme.",
+      "Tap an answer to lock it in. You\u2019ll see the right answer and a short explanation.",
+      "Six or more is a pass. Ten is bragging rights.",
+      "A new quiz every Monday at midnight, Sydney time. Past quizzes stay in the archive."
+    ],
+    accent: "#1F7A8C", accentDark: "#5BC0D3",
+    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8z"/><path d="M20 17a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5"/><circle cx="24" cy="27.5" r=".8" fill="#fff"/></svg>' },
 ];
