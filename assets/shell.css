@@ -148,7 +148,8 @@ footer.site a{color:var(--muted)}
 .doc .reveal{font:600 15px var(--body);padding:11px 20px;border-radius:999px;border:0;background:var(--brand);color:var(--bg);cursor:pointer;margin:6px 0}
 .doc .ans{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 16px 10px;margin-top:8px}
 .doc .ans h2:first-child{margin-top:12px}
-.doc .callout{background:var(--card);border-left:4px solid var(--brand);border-radius:8px;padding:10px 14px}
+.doc .callout{background:var(--card);border-left:4px solid var(--brand);border-radius:8px;padding:12px 16px;margin:28px 0 8px}
+.doc footer.site{margin-top:32px}
 .doc .play-cta{display:inline-block;margin-top:8px;font-weight:600;color:var(--brand)}
 .navlink{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 6px;white-space:nowrap}
 .navlink.on{color:var(--brand)}
