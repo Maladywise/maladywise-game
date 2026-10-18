@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram) */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", R = 8, C = 6, PER_HINT = 3;
   var root = document.getElementById("stx");
   if (!document.querySelector("link[data-stx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "suturix.css?v=" + BUILD; l.setAttribute("data-stx", ""); document.head.appendChild(l);

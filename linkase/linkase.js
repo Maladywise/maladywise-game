@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", MAXM = 5;
   var root = document.getElementById("lnk");
   if (!document.querySelector("link[data-lnk]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "linkase.css?v=" + BUILD; l.setAttribute("data-lnk", ""); document.head.appendChild(l);

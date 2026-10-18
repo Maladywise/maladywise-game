@@ -1,5 +1,5 @@
 /* Triviosis: scoped under #trv */
-#trv{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;
+#trv{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2340;--muted:#6B5A93;--line:#D9D1E3;--soft:#F1ECF8;--accent:#1F7A8C;
   --ok:#2F7D4A;--okbg:#DCEFD9;--no:#B4472F;--nobg:#F6DCD4;
   --title:Lora,Georgia,serif;--body:Poppins,"Segoe UI",system-ui,sans-serif;

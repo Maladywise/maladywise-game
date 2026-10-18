@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap");
 
 /* Diagnosis Wordle — everything scoped under #dxw so it can't restyle the host site */
-#dxw{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;
+#dxw{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2; --paper:#FFFFFF; --ink:#2B2340; --muted:#6B5A93; --line:#E4DCEC; --soft:#F1ECF8;
   --accent:#4A3480; --dotline:#BDB0D3; --miss:#B4472F; --hit:#2F7D4A; --empty:#E9E3EF;
   --easy:#2F7D4A; --medium:#9A6A12; --hard:#B4472F; --genius:#4A3480;

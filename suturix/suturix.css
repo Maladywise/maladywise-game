@@ -1,5 +1,5 @@
 /* Suturix: scoped under #stx */
-#stx{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;
+#stx{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2340;--muted:#6B5A93;--line:#D9D1E3;--accent:#C2553A;
   --theme:#93B5E1;--span:#F2D36B;--sel:#E2D8EE;--lineT:#93B5E1;--lineS:#F2D36B;--lineC:#C9BBDD;
   --easy:#2F7D4A;--medium:#9A6A12;--hard:#B4472F;--genius:#4A3480;

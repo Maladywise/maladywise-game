@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
   var root = document.getElementById("grx");
   if (!document.querySelector("link[data-grx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "gridectomy.css?v=" + BUILD; l.setAttribute("data-grx", ""); document.head.appendChild(l);

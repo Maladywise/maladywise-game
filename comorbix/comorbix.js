@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", MAXM = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", MAXM = 4;
   var root = document.getElementById("cmx");
   if (!document.querySelector("link[data-cmx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "comorbix.css?v=" + BUILD; l.setAttribute("data-cmx", ""); document.head.appendChild(l);
