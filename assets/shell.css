@@ -177,3 +177,5 @@ footer.site a{color:var(--muted)}
 .nl-msg:empty{display:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .doc .nl{margin-top:18px}
+
+html{touch-action:manipulation}
