@@ -182,3 +182,10 @@ footer.site a{color:var(--muted)}
 html{touch-action:manipulation}
 html,body{overflow-x:clip}
 #grx .wrap>*,#wde .wrap>*,#lnk .wrap>*{min-width:0}
+
+footer.site .soc{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+footer.site .soc>span{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+footer.site .soc a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--card)}
+footer.site .soc a:hover{border-color:var(--brand)}
+footer.site .soc svg{width:14px;height:14px}
+footer.site .soc b{font-weight:600;font-size:13px}

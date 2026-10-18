@@ -6,6 +6,9 @@ window.MW_SITE = {
   footer: "All puzzles are fictional/educational. General education, not personal medical advice.",
   home: "https://www.maladywise.com",
   quip: "Made by a GP who should probably be doing paperwork.",
+  social: [
+    ["X", "https://x.com/MaladyWise", "@MaladyWise", '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-6.3L6.4 22H3.3l7.3-8.3L1 2h6.3l4.4 5.8zm-1.1 18h1.7L6.3 3.9H4.5z"/></svg>']
+  ],
   house: { name: "Follow along", text: "New puzzles, fictional cases and the odd zebra. Follow @MaladyWise on X.", cta: "Follow on X", href: "https://x.com/MaladyWise", accent: "#6B5A93", accentDark: "#9C8CC4" }
 };
 /* Einstein days: the rare top tier (about 1 day in 100 per game). Dates in Sydney time. */
