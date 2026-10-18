@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -102,7 +102,7 @@
   }
   function reveal(x, p) {
     var tiers = [10, 6, 3, 1];
-    return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>See every answer on the list</summary>' + tiers.map(function (t) {
+    return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers</summary>' + tiers.map(function (t) {
       var items = x.a.filter(function (a) { return a[1] === t; });
       if (!items.length) return "";
       return '<div class="tier"><span class="th">' + TIER[t].e + " " + TIER[t].n + " \u00b7 " + t + '</span><span class="ti">' + items.map(function (a) { return (x.a.indexOf(a) === p ? "<mark>" + esc(cap(a[0])) + "</mark>" : esc(cap(a[0]))); }).join(", ") + "</span></div>";
