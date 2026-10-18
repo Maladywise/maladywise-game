@@ -99,7 +99,7 @@ window.MW_GAMES = [
     helpQuip: "If you're stuck, find any random words. They buy hints.",
     help: [
       "Find the theme words. Together they use every letter, once.",
-      "Drag across letters to spell a word, or tap them one by one and tap the last letter again to submit. Diagonals count.",
+      "Drag across letters, or tap them one by one, then press Enter. Diagonals count.",
       "The spangram (gold) names the theme and runs edge to edge.",
       "Every 3 non-theme words earns a hint.",
       "New theme every day at midnight, Sydney time."

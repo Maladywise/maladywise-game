@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram) */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", R = 8, C = 6, PER_HINT = 3;
   var root = document.getElementById("stx");
   if (!document.querySelector("link[data-stx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "suturix.css?v=" + BUILD; l.setAttribute("data-stx", ""); document.head.appendChild(l);
@@ -14,7 +14,7 @@
     ' <div class="count" id="stx-count"></div>' +
     ' <div class="cur" id="stx-cur" aria-live="polite"></div>' +
     ' <div class="board" id="stx-board"><svg id="stx-svg" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg><div class="cells" id="stx-cells"></div></div>' +
-    ' <div class="ctrls" id="stx-ctrls"><button class="btn hint" type="button" id="stx-hint"><i id="stx-hfill"></i><span>Hint</span></button><button class="btn" type="button" id="stx-clear">Clear</button></div>' +
+    ' <div class="ctrls" id="stx-ctrls"><button class="enter" type="button" id="stx-enter" disabled>Enter</button><button class="btn hint" type="button" id="stx-hint"><i id="stx-hfill"></i><span>Hint</span></button><button class="btn" type="button" id="stx-clear">Clear</button></div>' +
     ' <div class="result" id="stx-result" hidden></div>' +
     ' <p class="note" id="stx-next"></p>' +
     ' <details class="archive" id="stx-archive"><summary>Past puzzles</summary><div class="alist" id="stx-alist"></div></details>' +
@@ -86,6 +86,7 @@
     $("hfill").style.width = Math.min(100, st.pts / PER_HINT * 100) + "%";
     $("hint").classList.toggle("ready", st.pts >= PER_HINT && st.hint < 0);
     $("ctrls").hidden = st.done;
+    $("enter").disabled = path.length < 2;
     renderResult();
   }
   function showCur() { if (path.length) say(word(), "word"); }
@@ -184,6 +185,7 @@
     showCur(); render(); var nb = $("cells").querySelector('[data-r="' + p[0] + '"][data-c="' + p[1] + '"]'); if (nb) nb.focus();
   });
   $("clear").onclick = function () { path = []; say(""); render(); };
+  $("enter").onclick = function () { if (path.length && !st.done) submit(); };
   $("hint").onclick = function () {
     if (st.done) return;
     if (st.hint >= 0) { say("Hint's already showing. The dashed letters spell a theme word."); return; }
