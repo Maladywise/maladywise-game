@@ -56,3 +56,7 @@ html[data-motion="reduce"] #wde *{animation:none!important}
 #wde .arow .badge{font-size:10px;padding:2px 8px}
 #wde .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B);color:#FFE9A8;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
 #wde.einstein{box-shadow:inset 0 3px 0 #E8C66A}
+
+#wde .key[data-k="enter"]{max-width:none;flex:1 1 100%;height:48px;background:#4A3480;color:#fff;font-size:15px;letter-spacing:.06em}
+html[data-theme="dark"] #wde .key[data-k="enter"]{background:#7E68C8}
+#wde .key[data-k="back"]{max-width:72px;flex:1.6 1 0;font-size:18px}

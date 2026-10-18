@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", MAXM = 5;
   var root = document.getElementById("lnk");
   if (!document.querySelector("link[data-lnk]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "linkase.css?v=" + BUILD; l.setAttribute("data-lnk", ""); document.head.appendChild(l);
@@ -116,7 +116,7 @@
     $("next").textContent = t;
   }
   function buildKb() {
-    var rows = ["qwertyuiop", "asdfghjkl", "+zxcvbnm-"];
+    var rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm-", "+"];
     $("kb").innerHTML = rows.map(function (r) {
       return '<div class="kr">' + r.split("").map(function (k) {
         if (k === "+") return '<button class="key wide" data-k="enter" type="button">Enter</button>';
