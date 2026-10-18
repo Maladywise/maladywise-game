@@ -1,16 +1,16 @@
-/* Triviosis: weekly themed medical trivia. 10 questions, new set every Monday (Sydney time).
-   Quizzes in quizzes.json: [{week: "YYYY-MM-DD" (a Monday), number, theme, questions:[{q, a, w:[3 wrong], e}]}] */
+/* Triviosis: daily themed medical trivia. 10 questions, new set every day at midnight (Sydney time).
+   Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", PASS = 6;
   var root = document.getElementById("trv");
   if (!document.querySelector("link[data-trv]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "triviosis.css?v=" + BUILD; l.setAttribute("data-trv", ""); document.head.appendChild(l);
   }
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="trv-eyebrow">Triviosis</span><span class="badge">Weekly</span></div>' +
-    ' <div class="theme"><span>This week\u2019s theme</span><b id="trv-theme"></b></div>' +
+    ' <div class="head"><span class="eyebrow" id="trv-eyebrow">Triviosis</span><span class="badge" id="trv-badge"></span></div>' +
+    ' <div class="theme"><span>Today\u2019s theme</span><b id="trv-theme"></b></div>' +
     ' <div class="prog" id="trv-prog"></div>' +
     ' <div class="qcard" id="trv-card"></div>' +
     ' <div class="result" id="trv-result" hidden></div>' +
@@ -27,13 +27,13 @@
   function load(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  var REAL = monday(sydToday()), q = new URLSearchParams(location.search).get("date");
-  var week = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? monday(q) : REAL;
+  var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
+  var week = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return week === REAL; }
   // dist buckets: 10, 8-9, 6-7, 4-5, 0-3
   var SKEY = "trv-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, Z = null, all = [];
-  function loadWeek() { KEY = "trv-week-" + week; st = load(KEY, { ans: [], done: false, win: false }); }
+  function loadWeek() { KEY = "trv-day-" + week; st = load(KEY, { ans: [], done: false, win: false }); }
   loadWeek();
 
   // ---------- sass ----------
@@ -46,7 +46,7 @@
       if (s >= 8) return "Excellent. Registrar exam energy.";
       if (s >= 6) return "Solid pass. The college would approve.";
       if (s >= 4) return "Borderline. Revision recommended.";
-      return "Rough week. There\u2019s always next Monday.";
+      return "Rough one. There\u2019s always tomorrow.";
     }
   };
 
@@ -54,8 +54,8 @@
   function seeded(a) { a = a >>> 0; return function () { a = (a + 0x6D2B79F5) >>> 0; var t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
   // Answer spread evenly across A-D for each quiz, order shuffled per week
   var SLOTS = null;
-  function slots() { var n = Z.questions.length, a = [], r = seeded(dayNum(Z.week) * 97 + 11); for (var k = 0; k < n; k++) a.push(k % 4); for (k = n - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; } return a; }
-  function options(i) { var x = Z.questions[i], o = x.w.slice(), r = seeded(dayNum(Z.week) * 31 + i * 7 + 3); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = o[k]; o[k] = o[j]; o[j] = t; } if (!SLOTS || SLOTS.w !== Z.week) { SLOTS = slots(); SLOTS.w = Z.week; } o.splice(Math.min(SLOTS[i], o.length), 0, x.a); return o; }
+  function slots() { var n = Z.questions.length, a = [], r = seeded(dayNum(Z.date) * 97 + 11); for (var k = 0; k < n; k++) a.push(k % 4); for (k = n - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; } return a; }
+  function options(i) { var x = Z.questions[i], o = x.w.slice(), r = seeded(dayNum(Z.date) * 31 + i * 7 + 3); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = o[k]; o[k] = o[j]; o[j] = t; } if (!SLOTS || SLOTS.w !== Z.date) { SLOTS = slots(); SLOTS.w = Z.date; } o.splice(Math.min(SLOTS[i], o.length), 0, x.a); return o; }
   function score() { return st.ans.filter(function (a, i) { return a === Z.questions[i].a; }).length; }
 
   // ---------- render ----------
@@ -87,7 +87,7 @@
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="score">' + s + '<span>/10</span></p><p class="verdict">' + esc(SASS.end(s)) + "</p>" +
-      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Pass %</span></div><div><b>' + stats.streak + '</b><span>Week streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
+      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Pass %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<pre id="trv-share">' + share + '</pre><button class="btn solid" type="button" id="trv-copy">Copy result</button>' +
       '<details class="review"><summary>Review answers</summary><ol>' + Z.questions.map(function (x, i) {
         var ok = st.ans[i] === x.a;
@@ -100,19 +100,22 @@
     };
   }
   function tick() {
-    var t = "New quiz every Monday, midnight Sydney time.";
-    try {
-      var today = sydToday(), days = 7 - ((new Date(dayNum(today) * 864e5).getUTCDay() + 6) % 7);
-      t = days === 1 ? "New quiz tonight at midnight. Revise accordingly." : "New quiz in " + days + " days. Monday, midnight Sydney time.";
-    } catch (e) {}
-    $("next").textContent = t;
+    function f() {
+      try {
+        var now = new Date(), parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).formatToParts(now), v = {};
+        parts.forEach(function (x) { v[x.type] = +x.value; });
+        var left = 86400 - ((v.hour % 24) * 3600 + v.minute * 60 + v.second), h = Math.floor(left / 3600), m = Math.floor(left % 3600 / 60);
+        $("next").textContent = "New quiz in " + h + "h " + m + "m. Midnight, Sydney time.";
+      } catch (e) { $("next").textContent = "New quiz every day at midnight, Sydney time."; }
+    }
+    f(); setInterval(f, 30000);
   }
 
   // ---------- play ----------
   function finish() {
     st.done = true; var s = score(); st.win = s >= PASS; put(KEY, st);
     if (isLive() && stats.last !== week) {
-      var consecutive = stats.last && dayNum(week) - dayNum(stats.last) === 7;
+      var consecutive = stats.last && dayNum(week) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
       stats.streak = consecutive ? stats.streak + 1 : 1; stats.best = Math.max(stats.best, stats.streak);
       stats.dist[s === 10 ? 0 : s >= 8 ? 1 : s >= 6 ? 2 : s >= 4 ? 3 : 4]++; stats.last = week; put(SKEY, stats);
@@ -127,19 +130,19 @@
 
   // ---------- load ----------
   function show(w) {
-    week = w; loadWeek(); Z = all.filter(function (x) { return x.week === w; })[0] || null;
-    if (!Z) { $("theme").textContent = "Still in the lab"; $("card").innerHTML = '<p class="note">This week\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
+    week = w; loadWeek(); Z = all.filter(function (x) { return x.date === w; })[0] || null;
+    if (!Z) { $("theme").textContent = "Still in the lab"; $("card").innerHTML = '<p class="note">Today\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
     $("theme").textContent = Z.theme;
-    $("eyebrow").textContent = (isLive() ? "Triviosis" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 Week of " + nice(Z.week);
+    $("eyebrow").textContent = (isLive() ? "Triviosis" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 " + nice(Z.date); $("badge").textContent = Z.difficulty || ""; $("badge").className = "badge" + (Z.difficulty === "Einstein" ? " ein" : "");
     render(); renderArchive();
   }
   function renderArchive() {
-    var past = all.filter(function (x) { return x.week < REAL; }).reverse();
+    var past = all.filter(function (x) { return x.date < REAL; }).reverse();
     var rows = past.map(function (x) {
-      var s = load("trv-week-" + x.week, null), mark = s && s.done ? " \u2713" : "";
-      return '<button type="button" class="arow' + (x.week === week ? " on" : "") + '" data-w="' + x.week + '"><span>#' + x.number + " \u00b7 " + esc(x.theme) + mark + "</span><span>" + nice(x.week) + "</span></button>";
+      var s = load("trv-day-" + x.date, null), mark = s && s.done ? " \u2713" : "";
+      return '<button type="button" class="arow' + (x.date === week ? " on" : "") + '" data-w="' + x.date + '"><span>#' + x.number + " \u00b7 " + esc(x.theme) + mark + "</span><span>" + nice(x.date) + "</span></button>";
     }).join("");
-    var back = isLive() ? "" : '<button type="button" class="btn" id="trv-back">Back to this week</button>';
+    var back = isLive() ? "" : '<button type="button" class="btn" id="trv-back">Back to today</button>';
     $("alist").innerHTML = back + (rows || '<p class="note">No past quizzes yet. This is #1.</p>');
     Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-w")); root.scrollIntoView({ behavior: "smooth" }); }; });
     if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };

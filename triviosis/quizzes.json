@@ -1,114 +1,8 @@
 [
  {
-  "week": "2026-10-12",
+  "date": "2026-10-18",
   "number": 1,
-  "theme": "Infectious diseases",
-  "questions": [
-   {
-    "q": "Which organism causes Lyme disease?",
-    "a": "Borrelia burgdorferi",
-    "w": [
-     "Treponema pallidum",
-     "Rickettsia rickettsii",
-     "Leptospira interrogans"
-    ],
-    "e": "A tick-borne spirochaete. The classic sign is erythema migrans, the expanding bullseye rash."
-   },
-   {
-    "q": "Koplik spots are a sign of which infection?",
-    "a": "Measles",
-    "w": [
-     "Mumps",
-     "Rubella",
-     "Scarlet fever"
-    ],
-    "e": "Tiny white spots on the inside of the cheek, often appearing a day or two before the measles rash."
-   },
-   {
-    "q": "Which bacterium causes stomach ulcers and earned two Perth researchers a Nobel Prize?",
-    "a": "Helicobacter pylori",
-    "w": [
-     "Campylobacter jejuni",
-     "Clostridioides difficile",
-     "Escherichia coli"
-    ],
-    "e": "Barry Marshall and Robin Warren won the 2005 Nobel Prize. Marshall famously drank a culture to prove it."
-   },
-   {
-    "q": "\u201cRice-water\u201d stools are classic for which infection?",
-    "a": "Cholera",
-    "w": [
-     "Typhoid",
-     "Giardiasis",
-     "Shigellosis"
-    ],
-    "e": "Vibrio cholerae toxin causes massive watery diarrhoea. Rehydration is the life-saving treatment."
-   },
-   {
-    "q": "Which is the most commonly notified mosquito-borne virus in Australia?",
-    "a": "Ross River virus",
-    "w": [
-     "Dengue virus",
-     "Murray Valley encephalitis virus",
-     "Barmah Forest virus"
-    ],
-    "e": "Ross River virus causes fever, rash and joint pain that can linger for months."
-   },
-   {
-    "q": "\u201cSlapped cheek\u201d rash in a child is caused by?",
-    "a": "Parvovirus B19",
-    "w": [
-     "Human herpesvirus 6",
-     "Coxsackievirus A16",
-     "Rubella virus"
-    ],
-    "e": "Also called fifth disease. Usually mild, but it matters in pregnancy and in people with haemolytic anaemias."
-   },
-   {
-    "q": "Q fever is caused by which organism?",
-    "a": "Coxiella burnetii",
-    "w": [
-     "Brucella abortus",
-     "Bartonella henselae",
-     "Francisella tularensis"
-    ],
-    "e": "First described in Queensland abattoir workers. The \u201cQ\u201d stands for query, not Queensland."
-   },
-   {
-    "q": "Australian bat lyssavirus is closely related to which virus?",
-    "a": "Rabies virus",
-    "w": [
-     "Hendra virus",
-     "Nipah virus",
-     "Ebola virus"
-    ],
-    "e": "It causes a rabies-like illness. Only vaccinated, trained people should handle bats."
-   },
-   {
-    "q": "Melioidosis, found in tropical northern Australia, is caused by?",
-    "a": "Burkholderia pseudomallei",
-    "w": [
-     "Pseudomonas aeruginosa",
-     "Mycobacterium ulcerans",
-     "Vibrio vulnificus"
-    ],
-    "e": "Lives in soil and water. Cases rise after heavy wet-season rain."
-   },
-   {
-    "q": "Mycobacterium ulcerans causes which skin ulcer?",
-    "a": "Buruli ulcer",
-    "w": [
-     "Marjolin ulcer",
-     "Curling ulcer",
-     "Cushing ulcer"
-    ],
-    "e": "Also known in Australia as the Bairnsdale or Daintree ulcer. Possums and mosquitoes are implicated in spread."
-   }
-  ]
- },
- {
-  "week": "2026-10-19",
-  "number": 2,
+  "difficulty": "Genius",
   "theme": "Eponyms",
   "questions": [
    {
@@ -214,115 +108,117 @@
   ]
  },
  {
-  "week": "2026-10-26",
-  "number": 3,
-  "theme": "Pharmacology",
+  "date": "2026-10-19",
+  "number": 2,
+  "difficulty": "Easy",
+  "theme": "Infectious diseases",
   "questions": [
    {
-    "q": "What is the antidote for paracetamol overdose?",
-    "a": "Acetylcysteine",
+    "q": "Which organism causes Lyme disease?",
+    "a": "Borrelia burgdorferi",
     "w": [
-     "Naloxone",
-     "Flumazenil",
-     "Atropine"
+     "Treponema pallidum",
+     "Rickettsia rickettsii",
+     "Leptospira interrogans"
     ],
-    "e": "Most effective when given early. It replenishes glutathione."
+    "e": "A tick-borne spirochaete. The classic sign is erythema migrans, the expanding bullseye rash."
    },
    {
-    "q": "Naloxone reverses which drugs?",
-    "a": "Opioids",
+    "q": "Koplik spots are a sign of which infection?",
+    "a": "Measles",
     "w": [
-     "Benzodiazepines",
-     "Warfarin",
-     "Heparin"
+     "Mumps",
+     "Rubella",
+     "Scarlet fever"
     ],
-    "e": "It can wear off before long-acting opioids do, so people need watching."
+    "e": "Tiny white spots on the inside of the cheek, often appearing a day or two before the measles rash."
    },
    {
-    "q": "Warfarin is reversed with vitamin...?",
-    "a": "K",
+    "q": "Which bacterium causes stomach ulcers and earned two Perth researchers a Nobel Prize?",
+    "a": "Helicobacter pylori",
     "w": [
-     "B12",
-     "D",
-     "C"
+     "Campylobacter jejuni",
+     "Clostridioides difficile",
+     "Escherichia coli"
     ],
-    "e": "Prothrombinex or fresh frozen plasma are used when reversal is urgent."
+    "e": "Barry Marshall and Robin Warren won the 2005 Nobel Prize. Marshall famously drank a culture to prove it."
    },
    {
-    "q": "Which antibiotic class can cause tendon rupture?",
-    "a": "Fluoroquinolones",
+    "q": "\u201cRice-water\u201d stools are classic for which infection?",
+    "a": "Cholera",
     "w": [
-     "Macrolides",
-     "Penicillins",
-     "Tetracyclines"
+     "Typhoid",
+     "Giardiasis",
+     "Shigellosis"
     ],
-    "e": "The Achilles tendon is most at risk, especially with steroids or older age."
+    "e": "Vibrio cholerae toxin causes massive watery diarrhoea. Rehydration is the life-saving treatment."
    },
    {
-    "q": "Grapefruit juice raises levels of many drugs by blocking which enzyme?",
-    "a": "CYP3A4",
+    "q": "Which is the most commonly notified mosquito-borne virus in Australia?",
+    "a": "Ross River virus",
     "w": [
-     "Monoamine oxidase",
-     "Acetylcholinesterase",
-     "Xanthine oxidase"
+     "Dengue virus",
+     "Murray Valley encephalitis virus",
+     "Barmah Forest virus"
     ],
-    "e": "Simvastatin and some calcium channel blockers are classic examples."
+    "e": "Ross River virus causes fever, rash and joint pain that can linger for months."
    },
    {
-    "q": "ACE inhibitor cough is caused by build-up of?",
-    "a": "Bradykinin",
+    "q": "\u201cSlapped cheek\u201d rash in a child is caused by?",
+    "a": "Parvovirus B19",
     "w": [
-     "Histamine",
-     "Angiotensin II",
-     "Serotonin"
+     "Human herpesvirus 6",
+     "Coxsackievirus A16",
+     "Rubella virus"
     ],
-    "e": "Switching to an ARB usually fixes it."
+    "e": "Also called fifth disease. Usually mild, but it matters in pregnancy and in people with haemolytic anaemias."
    },
    {
-    "q": "Which drug traces its origins to willow bark?",
-    "a": "Aspirin",
+    "q": "Q fever is caused by which organism?",
+    "a": "Coxiella burnetii",
     "w": [
-     "Morphine",
-     "Digoxin",
-     "Quinine"
+     "Brucella abortus",
+     "Bartonella henselae",
+     "Francisella tularensis"
     ],
-    "e": "Salicylates from willow were used for pain and fever for thousands of years."
+    "e": "First described in Queensland abattoir workers. The \u201cQ\u201d stands for query, not Queensland."
    },
    {
-    "q": "Digoxin comes from which plant?",
-    "a": "Foxglove",
+    "q": "Australian bat lyssavirus is closely related to which virus?",
+    "a": "Rabies virus",
     "w": [
-     "Willow",
-     "Opium poppy",
-     "Cinchona"
+     "Hendra virus",
+     "Nipah virus",
+     "Ebola virus"
     ],
-    "e": "William Withering described foxglove for \u201cdropsy\u201d in 1785."
+    "e": "It causes a rabies-like illness. Only vaccinated, trained people should handle bats."
    },
    {
-    "q": "Which antipsychotic needs regular blood tests for agranulocytosis?",
-    "a": "Clozapine",
+    "q": "Melioidosis, found in tropical northern Australia, is caused by?",
+    "a": "Burkholderia pseudomallei",
     "w": [
-     "Olanzapine",
-     "Risperidone",
-     "Aripiprazole"
+     "Pseudomonas aeruginosa",
+     "Mycobacterium ulcerans",
+     "Vibrio vulnificus"
     ],
-    "e": "Very effective for treatment-resistant schizophrenia, with strict monitoring."
+    "e": "Lives in soil and water. Cases rise after heavy wet-season rain."
    },
    {
-    "q": "Metformin\u2019s rare but serious side effect is?",
-    "a": "Lactic acidosis",
+    "q": "Mycobacterium ulcerans causes which skin ulcer?",
+    "a": "Buruli ulcer",
     "w": [
-     "Hypoglycaemia on its own",
-     "Hyperkalaemia",
-     "Pancreatitis"
+     "Marjolin ulcer",
+     "Curling ulcer",
+     "Cushing ulcer"
     ],
-    "e": "Risk rises with kidney impairment, dehydration and contrast."
+    "e": "Also known in Australia as the Bairnsdale or Daintree ulcer. Possums and mosquitoes are implicated in spread."
    }
   ]
  },
  {
-  "week": "2026-11-02",
-  "number": 4,
+  "date": "2026-10-20",
+  "number": 3,
+  "difficulty": "Easy",
   "theme": "Anatomy",
   "questions": [
    {
@@ -428,8 +324,333 @@
   ]
  },
  {
-  "week": "2026-11-09",
+  "date": "2026-10-21",
+  "number": 4,
+  "difficulty": "Medium",
+  "theme": "Cardiology",
+  "questions": [
+   {
+    "q": "Which ECG change is classic for hyperkalaemia?",
+    "a": "Peaked T waves",
+    "w": [
+     "Delta waves",
+     "U waves",
+     "J waves"
+    ],
+    "e": "Tall, tented T waves come first. Then the QRS widens. Then everyone moves faster."
+   },
+   {
+    "q": "The heart\u2019s natural pacemaker is the?",
+    "a": "Sinoatrial node",
+    "w": [
+     "Atrioventricular node",
+     "Bundle of His",
+     "Purkinje fibres"
+    ],
+    "e": "The SA node, high in the right atrium."
+   },
+   {
+    "q": "Which coronary artery is nicknamed the \u2018widowmaker\u2019?",
+    "a": "Left anterior descending",
+    "w": [
+     "Right coronary artery",
+     "Circumflex artery",
+     "Posterior descending artery"
+    ],
+    "e": "A proximal LAD blockage takes out a lot of the left ventricle."
+   },
+   {
+    "q": "A continuous \u2018machinery\u2019 murmur suggests?",
+    "a": "Patent ductus arteriosus",
+    "w": [
+     "Aortic stenosis",
+     "Mitral regurgitation",
+     "Ventricular septal defect"
+    ],
+    "e": "The fetal ductus that forgot to close."
+   },
+   {
+    "q": "Which valve is most often damaged by rheumatic heart disease?",
+    "a": "Mitral valve",
+    "w": [
+     "Aortic valve",
+     "Tricuspid valve",
+     "Pulmonary valve"
+    ],
+    "e": "Still common in remote communities. Prevention starts with treating strep throat."
+   },
+   {
+    "q": "Which blood test is most specific for heart muscle damage?",
+    "a": "Troponin",
+    "w": [
+     "Creatine kinase",
+     "LDH",
+     "Myoglobin"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Delta waves on an ECG are a feature of?",
+    "a": "Wolff\u2013Parkinson\u2013White syndrome",
+    "w": [
+     "Brugada syndrome",
+     "Long QT syndrome",
+     "Pericarditis"
+    ],
+    "e": "An extra pathway pre-excites the ventricles, slurring the QRS upstroke."
+   },
+   {
+    "q": "Widespread saddle-shaped ST elevation suggests?",
+    "a": "Pericarditis",
+    "w": [
+     "Inferior STEMI",
+     "Hypothermia",
+     "Hypokalaemia"
+    ],
+    "e": "Often with PR depression and pain that eases sitting forward."
+   },
+   {
+    "q": "Takotsubo cardiomyopathy is also called?",
+    "a": "Broken heart syndrome",
+    "w": [
+     "Holiday heart syndrome",
+     "Athlete\u2019s heart",
+     "Stone heart"
+    ],
+    "e": "Triggered by intense stress. The ventricle balloons like a Japanese octopus pot."
+   },
+   {
+    "q": "What is the most common sustained arrhythmia in adults?",
+    "a": "Atrial fibrillation",
+    "w": [
+     "Atrial flutter",
+     "Ventricular tachycardia",
+     "Supraventricular tachycardia"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-10-22",
   "number": 5,
+  "difficulty": "Medium",
+  "theme": "Pharmacology",
+  "questions": [
+   {
+    "q": "What is the antidote for paracetamol overdose?",
+    "a": "Acetylcysteine",
+    "w": [
+     "Naloxone",
+     "Flumazenil",
+     "Atropine"
+    ],
+    "e": "Most effective when given early. It replenishes glutathione."
+   },
+   {
+    "q": "Naloxone reverses which drugs?",
+    "a": "Opioids",
+    "w": [
+     "Benzodiazepines",
+     "Warfarin",
+     "Heparin"
+    ],
+    "e": "It can wear off before long-acting opioids do, so people need watching."
+   },
+   {
+    "q": "Warfarin is reversed with vitamin...?",
+    "a": "K",
+    "w": [
+     "B12",
+     "D",
+     "C"
+    ],
+    "e": "Prothrombinex or fresh frozen plasma are used when reversal is urgent."
+   },
+   {
+    "q": "Which antibiotic class can cause tendon rupture?",
+    "a": "Fluoroquinolones",
+    "w": [
+     "Macrolides",
+     "Penicillins",
+     "Tetracyclines"
+    ],
+    "e": "The Achilles tendon is most at risk, especially with steroids or older age."
+   },
+   {
+    "q": "Grapefruit juice raises levels of many drugs by blocking which enzyme?",
+    "a": "CYP3A4",
+    "w": [
+     "Monoamine oxidase",
+     "Acetylcholinesterase",
+     "Xanthine oxidase"
+    ],
+    "e": "Simvastatin and some calcium channel blockers are classic examples."
+   },
+   {
+    "q": "ACE inhibitor cough is caused by build-up of?",
+    "a": "Bradykinin",
+    "w": [
+     "Histamine",
+     "Angiotensin II",
+     "Serotonin"
+    ],
+    "e": "Switching to an ARB usually fixes it."
+   },
+   {
+    "q": "Which drug traces its origins to willow bark?",
+    "a": "Aspirin",
+    "w": [
+     "Morphine",
+     "Digoxin",
+     "Quinine"
+    ],
+    "e": "Salicylates from willow were used for pain and fever for thousands of years."
+   },
+   {
+    "q": "Digoxin comes from which plant?",
+    "a": "Foxglove",
+    "w": [
+     "Willow",
+     "Opium poppy",
+     "Cinchona"
+    ],
+    "e": "William Withering described foxglove for \u201cdropsy\u201d in 1785."
+   },
+   {
+    "q": "Which antipsychotic needs regular blood tests for agranulocytosis?",
+    "a": "Clozapine",
+    "w": [
+     "Olanzapine",
+     "Risperidone",
+     "Aripiprazole"
+    ],
+    "e": "Very effective for treatment-resistant schizophrenia, with strict monitoring."
+   },
+   {
+    "q": "Metformin\u2019s rare but serious side effect is?",
+    "a": "Lactic acidosis",
+    "w": [
+     "Hypoglycaemia on its own",
+     "Hyperkalaemia",
+     "Pancreatitis"
+    ],
+    "e": "Risk rises with kidney impairment, dehydration and contrast."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-23",
+  "number": 6,
+  "difficulty": "Hard",
+  "theme": "Neurology",
+  "questions": [
+   {
+    "q": "Which cranial nerve is affected in Bell\u2019s palsy?",
+    "a": "Facial nerve (VII)",
+    "w": [
+     "Trigeminal nerve (V)",
+     "Vestibulocochlear nerve (VIII)",
+     "Hypoglossal nerve (XII)"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Parkinson\u2019s disease involves loss of dopamine neurons in the?",
+    "a": "Substantia nigra",
+    "w": [
+     "Locus coeruleus",
+     "Caudate nucleus",
+     "Red nucleus"
+    ],
+    "e": "Literally \u2018black substance\u2019."
+   },
+   {
+    "q": "The usual first-line drug for trigeminal neuralgia is?",
+    "a": "Carbamazepine",
+    "w": [
+     "Gabapentin",
+     "Amitriptyline",
+     "Sumatriptan"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Damage to Broca\u2019s area causes which kind of aphasia?",
+    "a": "Expressive (non-fluent) aphasia",
+    "w": [
+     "Receptive aphasia",
+     "Conduction aphasia",
+     "Global aphasia"
+    ],
+    "e": "Understanding is relatively spared; getting words out is the problem."
+   },
+   {
+    "q": "Swaying when standing with feet together and eyes closed is a positive?",
+    "a": "Romberg\u2019s test",
+    "w": [
+     "Babinski sign",
+     "Hoffmann sign",
+     "Tinel\u2019s sign"
+    ],
+    "e": "Points to loss of position sense, not cerebellar disease."
+   },
+   {
+    "q": "An upgoing big toe when the sole is stroked indicates?",
+    "a": "An upper motor neurone lesion",
+    "w": [
+     "A lower motor neurone lesion",
+     "A peripheral neuropathy",
+     "A cerebellar lesion"
+    ],
+    "e": "The Babinski sign. Normal in babies."
+   },
+   {
+    "q": "Which antibody is found in most people with myasthenia gravis?",
+    "a": "Acetylcholine receptor antibody",
+    "w": [
+     "Anti-GQ1b antibody",
+     "Voltage-gated calcium channel antibody",
+     "Anti-NMDA receptor antibody"
+    ],
+    "e": "A minority have anti-MuSK antibodies instead."
+   },
+   {
+    "q": "A sudden \u2018thunderclap\u2019 headache is a red flag for?",
+    "a": "Subarachnoid haemorrhage",
+    "w": [
+     "Migraine",
+     "Cluster headache",
+     "Tension headache"
+    ],
+    "e": "Worst headache of life, peaking within a minute."
+   },
+   {
+    "q": "Guillain\u2013Barr\u00e9 syndrome typically causes weakness that?",
+    "a": "Ascends from the legs",
+    "w": [
+     "Descends from the face",
+     "Affects one side only",
+     "Fluctuates through the day"
+    ],
+    "e": "Often after a gut or chest infection."
+   },
+   {
+    "q": "Lhermitte\u2019s sign (an electric shock down the spine on bending the neck) is linked with?",
+    "a": "Multiple sclerosis",
+    "w": [
+     "Parkinson\u2019s disease",
+     "Motor neurone disease",
+     "Huntington\u2019s disease"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-10-24",
+  "number": 7,
+  "difficulty": "Hard",
   "theme": "Medical history",
   "questions": [
    {
@@ -535,8 +756,441 @@
   ]
  },
  {
-  "week": "2026-11-16",
-  "number": 6,
+  "date": "2026-10-25",
+  "number": 8,
+  "difficulty": "Genius",
+  "theme": "Haematology",
+  "questions": [
+   {
+    "q": "Which inherited condition causes iron overload and is common in people of Northern European descent?",
+    "a": "Haemochromatosis",
+    "w": [
+     "Thalassaemia",
+     "Porphyria",
+     "Wilson\u2019s disease"
+    ],
+    "e": "Usually the C282Y mutation in the HFE gene. Treatment: venesection."
+   },
+   {
+    "q": "Schistocytes (fragmented red cells) on a blood film suggest?",
+    "a": "Microangiopathic haemolysis",
+    "w": [
+     "Iron deficiency",
+     "B12 deficiency",
+     "Hereditary spherocytosis"
+    ],
+    "e": "Think TTP, HUS or DIC."
+   },
+   {
+    "q": "Haemophilia A is a deficiency of which clotting factor?",
+    "a": "Factor VIII",
+    "w": [
+     "Factor IX",
+     "Factor XI",
+     "Factor XII"
+    ],
+    "e": "Haemophilia B is factor IX."
+   },
+   {
+    "q": "What is the most common inherited bleeding disorder?",
+    "a": "Von Willebrand disease",
+    "w": [
+     "Haemophilia A",
+     "Haemophilia B",
+     "Factor V Leiden"
+    ],
+    "e": "Factor V Leiden is the opposite: it makes blood clot more."
+   },
+   {
+    "q": "Factor V Leiden increases the risk of?",
+    "a": "Venous blood clots",
+    "w": [
+     "Bleeding",
+     "Anaemia",
+     "Leukaemia"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Auer rods on a blood film are seen in?",
+    "a": "Acute myeloid leukaemia",
+    "w": [
+     "Chronic lymphocytic leukaemia",
+     "Acute lymphoblastic leukaemia",
+     "Hodgkin lymphoma"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018Smudge cells\u2019 on a blood film are typical of?",
+    "a": "Chronic lymphocytic leukaemia",
+    "w": [
+     "Acute myeloid leukaemia",
+     "Chronic myeloid leukaemia",
+     "Multiple myeloma"
+    ],
+    "e": "Fragile lymphocytes squashed when the slide is made."
+   },
+   {
+    "q": "Howell\u2013Jolly bodies suggest the patient has?",
+    "a": "No working spleen",
+    "w": [
+     "Lead poisoning",
+     "Iron deficiency",
+     "Malaria"
+    ],
+    "e": "The spleen normally removes these nuclear remnants."
+   },
+   {
+    "q": "Which test is used to monitor warfarin?",
+    "a": "INR",
+    "w": [
+     "APTT",
+     "Anti-Xa level",
+     "Platelet count"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Small red cells, target cells and a normal ferritin suggest?",
+    "a": "Thalassaemia trait",
+    "w": [
+     "Iron deficiency",
+     "B12 deficiency",
+     "Anaemia of chronic disease"
+    ],
+    "e": "Don\u2019t give iron to fix a thalassaemia trait."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-26",
+  "number": 9,
+  "difficulty": "Easy",
+  "theme": "Respiratory",
+  "questions": [
+   {
+    "q": "Which lung has three lobes?",
+    "a": "The right lung",
+    "w": [
+     "The left lung",
+     "Both lungs",
+     "Neither lung"
+    ],
+    "e": "The left makes room for the heart."
+   },
+   {
+    "q": "Blue asthma reliever puffers usually contain?",
+    "a": "Salbutamol",
+    "w": [
+     "Budesonide",
+     "Montelukast",
+     "Tiotropium"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the main muscle of breathing?",
+    "a": "The diaphragm",
+    "w": [
+     "The intercostal muscles",
+     "Sternocleidomastoid",
+     "Pectoralis major"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Where does gas exchange happen in the lungs?",
+    "a": "The alveoli",
+    "w": [
+     "The bronchioles",
+     "The pleura",
+     "The trachea"
+    ],
+    "e": "About 300\u2013500 million of them."
+   },
+   {
+    "q": "What does COPD stand for?",
+    "a": "Chronic obstructive pulmonary disease",
+    "w": [
+     "Chronic oxygen perfusion disorder",
+     "Combined obstructive pleural disease",
+     "Chronic organic pulmonary dysfunction"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A normal oxygen saturation in a healthy adult is?",
+    "a": "95\u2013100%",
+    "w": [
+     "88\u201392%",
+     "80\u201385%",
+     "70\u201375%"
+    ],
+    "e": "88\u201392% is a common target in some people with COPD."
+   },
+   {
+    "q": "Which gene is faulty in cystic fibrosis?",
+    "a": "CFTR",
+    "w": [
+     "BRCA1",
+     "HFE",
+     "APOE"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Asbestos exposure is linked to which cancer of the lung lining?",
+    "a": "Mesothelioma",
+    "w": [
+     "Small cell carcinoma",
+     "Lymphoma",
+     "Sarcoidosis"
+    ],
+    "e": "Can appear decades after exposure."
+   },
+   {
+    "q": "A collapsed lung caused by air in the chest cavity is called?",
+    "a": "Pneumothorax",
+    "w": [
+     "Pleurisy",
+     "Emphysema",
+     "Bronchiectasis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Whooping cough is caused by?",
+    "a": "Bordetella pertussis",
+    "w": [
+     "Haemophilus influenzae",
+     "Streptococcus pneumoniae",
+     "Mycoplasma pneumoniae"
+    ],
+    "e": "The \u2018100-day cough\u2019."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "number": 10,
+  "difficulty": "Easy",
+  "theme": "Skin deep",
+  "questions": [
+   {
+    "q": "What is the most common skin cancer?",
+    "a": "Basal cell carcinoma",
+    "w": [
+     "Melanoma",
+     "Squamous cell carcinoma",
+     "Merkel cell carcinoma"
+    ],
+    "e": ""
+   },
+   {
+    "q": "In the ABCDE check for melanoma, what does the D stand for?",
+    "a": "Diameter",
+    "w": [
+     "Darkness",
+     "Depth",
+     "Dermis"
+    ],
+    "e": "Asymmetry, Border, Colour, Diameter, Evolving."
+   },
+   {
+    "q": "Ringworm is caused by?",
+    "a": "A fungus",
+    "w": [
+     "A worm",
+     "A virus",
+     "A bacterium"
+    ],
+    "e": "No worms were harmed."
+   },
+   {
+    "q": "Scabies is caused by?",
+    "a": "A mite",
+    "w": [
+     "A louse",
+     "A flea",
+     "A fungus"
+    ],
+    "e": "Sarcoptes scabiei. Treat the whole household."
+   },
+   {
+    "q": "Silvery, scaly plaques on the elbows and knees suggest?",
+    "a": "Psoriasis",
+    "w": [
+     "Eczema",
+     "Rosacea",
+     "Vitiligo"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Honey-crusted sores around a child\u2019s nose suggest?",
+    "a": "Impetigo",
+    "w": [
+     "Cold sores",
+     "Eczema",
+     "Chickenpox"
+    ],
+    "e": "School sores. Usually staph or strep."
+   },
+   {
+    "q": "Which vitamin does skin make in sunlight?",
+    "a": "Vitamin D",
+    "w": [
+     "Vitamin A",
+     "Vitamin C",
+     "Vitamin K"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Shingles is a reactivation of which virus?",
+    "a": "Varicella-zoster virus",
+    "w": [
+     "Herpes simplex virus",
+     "Epstein\u2013Barr virus",
+     "Cytomegalovirus"
+    ],
+    "e": "The chickenpox virus, back for a sequel."
+   },
+   {
+    "q": "What does SPF stand for?",
+    "a": "Sun protection factor",
+    "w": [
+     "Skin protection formula",
+     "Solar protection filter",
+     "Sun power factor"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Patchy loss of skin pigment is called?",
+    "a": "Vitiligo",
+    "w": [
+     "Melasma",
+     "Albinism",
+     "Pityriasis rosea"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "number": 11,
+  "difficulty": "Medium",
+  "theme": "Hormones",
+  "questions": [
+   {
+    "q": "Which gland is called the \u2018master gland\u2019?",
+    "a": "Pituitary",
+    "w": [
+     "Thyroid",
+     "Adrenal",
+     "Pineal"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Graves\u2019 disease causes?",
+    "a": "An overactive thyroid",
+    "w": [
+     "An underactive thyroid",
+     "Adrenal failure",
+     "Diabetes insipidus"
+    ],
+    "e": "Often with bulging eyes."
+   },
+   {
+    "q": "HbA1c reflects average blood glucose over roughly?",
+    "a": "3 months",
+    "w": [
+     "1 week",
+     "1 month",
+     "1 year"
+    ],
+    "e": "About the life of a red cell."
+   },
+   {
+    "q": "Insulin is made by which cells?",
+    "a": "Beta cells of the pancreas",
+    "w": [
+     "Alpha cells of the pancreas",
+     "Delta cells of the pancreas",
+     "Acinar cells of the pancreas"
+    ],
+    "e": "Alpha cells make glucagon."
+   },
+   {
+    "q": "Too much growth hormone in adults causes?",
+    "a": "Acromegaly",
+    "w": [
+     "Gigantism",
+     "Cushing\u2019s syndrome",
+     "Addison\u2019s disease"
+    ],
+    "e": "In children, before growth plates close, it causes gigantism."
+   },
+   {
+    "q": "In diabetes, hypoglycaemia is usually treated when glucose drops below?",
+    "a": "4 mmol/L",
+    "w": [
+     "6 mmol/L",
+     "2 mmol/L",
+     "8 mmol/L"
+    ],
+    "e": "\u2018Four is the floor.\u2019"
+   },
+   {
+    "q": "Diabetes insipidus is a problem with which hormone?",
+    "a": "ADH (vasopressin)",
+    "w": [
+     "Insulin",
+     "Glucagon",
+     "Cortisol"
+    ],
+    "e": "Lots of dilute urine. Nothing to do with sugar."
+   },
+   {
+    "q": "Addison\u2019s disease is failure of the?",
+    "a": "Adrenal cortex",
+    "w": [
+     "Thyroid",
+     "Pancreas",
+     "Pituitary"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Iodine deficiency can cause a swollen thyroid called a?",
+    "a": "Goitre",
+    "w": [
+     "Nodule",
+     "Thyroiditis",
+     "Thymoma"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which hormone peaks around waking and follows a daily rhythm?",
+    "a": "Cortisol",
+    "w": [
+     "Melatonin",
+     "Insulin",
+     "Thyroxine"
+    ],
+    "e": "Melatonin does the opposite, rising at night."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "number": 12,
+  "difficulty": "Medium",
   "theme": "The body by numbers",
   "questions": [
    {
@@ -642,8 +1296,117 @@
   ]
  },
  {
-  "week": "2026-11-23",
-  "number": 7,
+  "date": "2026-10-30",
+  "number": 13,
+  "difficulty": "Hard",
+  "theme": "Gut feelings",
+  "questions": [
+   {
+    "q": "Coeliac disease is triggered by?",
+    "a": "Gluten",
+    "w": [
+     "Lactose",
+     "Fructose",
+     "Casein"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Tenderness at McBurney\u2019s point suggests?",
+    "a": "Appendicitis",
+    "w": [
+     "Cholecystitis",
+     "Pancreatitis",
+     "Diverticulitis"
+    ],
+    "e": "Two-thirds of the way from the navel to the right hip bone."
+   },
+   {
+    "q": "Besides hepatitis A, which hepatitis virus spreads mainly through contaminated food and water?",
+    "a": "Hepatitis E",
+    "w": [
+     "Hepatitis B",
+     "Hepatitis C",
+     "Hepatitis D"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018Coffee ground\u2019 vomit suggests?",
+    "a": "Upper GI bleeding",
+    "w": [
+     "Bowel obstruction",
+     "Gastroenteritis",
+     "Gallstones"
+    ],
+    "e": "Blood altered by stomach acid."
+   },
+   {
+    "q": "Barrett\u2019s oesophagus increases the risk of?",
+    "a": "Oesophageal adenocarcinoma",
+    "w": [
+     "Gastric lymphoma",
+     "Pancreatic cancer",
+     "Liver cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Crohn\u2019s disease can affect?",
+    "a": "Anywhere from mouth to anus",
+    "w": [
+     "Only the colon",
+     "Only the small bowel",
+     "Only the rectum"
+    ],
+    "e": "Ulcerative colitis sticks to the colon."
+   },
+   {
+    "q": "A raised lipase is the key test for?",
+    "a": "Pancreatitis",
+    "w": [
+     "Hepatitis",
+     "Gallstones",
+     "Appendicitis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Gilbert\u2019s syndrome causes a mildly raised?",
+    "a": "Unconjugated bilirubin",
+    "w": [
+     "ALT",
+     "ALP",
+     "Conjugated bilirubin"
+    ],
+    "e": "Harmless. Often noticed when fasting or unwell."
+   },
+   {
+    "q": "The low FODMAP diet is mainly used for?",
+    "a": "Irritable bowel syndrome",
+    "w": [
+     "Coeliac disease",
+     "Gallstones",
+     "Reflux"
+    ],
+    "e": "Developed at Monash University."
+   },
+   {
+    "q": "Murphy\u2019s sign is used to assess the?",
+    "a": "Gallbladder",
+    "w": [
+     "Appendix",
+     "Pancreas",
+     "Spleen"
+    ],
+    "e": "Pain stops the breath in when pressing under the right ribs."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-31",
+  "number": 14,
+  "difficulty": "Hard",
   "theme": "Bites, stings and poisons",
   "questions": [
    {
@@ -745,6 +1508,2166 @@
      "Hiccups"
     ],
     "e": "Its breakdown product, formic acid, damages the optic nerve."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-01",
+  "number": 15,
+  "difficulty": "Genius",
+  "theme": "Medical Latin and Greek",
+  "questions": [
+   {
+    "q": "The prefix \u2018nephr-\u2019 refers to which organ?",
+    "a": "Kidney",
+    "w": [
+     "Nerve",
+     "Liver",
+     "Lung"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The suffix \u2018-ectomy\u2019 means?",
+    "a": "Surgical removal",
+    "w": [
+     "Cutting into",
+     "Inflammation",
+     "Looking inside"
+    ],
+    "e": "-otomy cuts in, -itis inflames, -oscopy looks."
+   },
+   {
+    "q": "\u2018Hepat-\u2019 refers to the?",
+    "a": "Liver",
+    "w": [
+     "Heart",
+     "Blood",
+     "Spleen"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018QID\u2019 on a prescription means?",
+    "a": "Four times a day",
+    "w": [
+     "Every other day",
+     "Every four hours",
+     "As needed"
+    ],
+    "e": "Quater in die."
+   },
+   {
+    "q": "The prefix \u2018dys-\u2019 means?",
+    "a": "Difficult or abnormal",
+    "w": [
+     "Absent",
+     "Fast",
+     "Double"
+    ],
+    "e": "As in dyspnoea, dysphagia, dysuria."
+   },
+   {
+    "q": "\u2018-aemia\u2019 at the end of a word refers to?",
+    "a": "Blood",
+    "w": [
+     "The heart",
+     "Fluid",
+     "Iron"
+    ],
+    "e": "As in anaemia and septicaemia."
+   },
+   {
+    "q": "The \u2018cholecyst\u2019 is the?",
+    "a": "Gallbladder",
+    "w": [
+     "Bile duct",
+     "Urinary bladder",
+     "Colon"
+    ],
+    "e": "Chole: bile. Kystis: bladder."
+   },
+   {
+    "q": "\u2018Pyrexia\u2019 means?",
+    "a": "Fever",
+    "w": [
+     "Itch",
+     "Burning pain",
+     "Pus"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Testing for \u2018dysdiadochokinesia\u2019 checks the ability to?",
+    "a": "Do rapid alternating movements",
+    "w": [
+     "Stand still",
+     "Swallow",
+     "Recognise objects by touch"
+    ],
+    "e": "A cerebellar sign. Also excellent Scrabble."
+   },
+   {
+    "q": "\u2018Stat\u2019 comes from the Latin statim, meaning?",
+    "a": "Immediately",
+    "w": [
+     "Steady",
+     "Standing",
+     "Daily"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "number": 16,
+  "difficulty": "Easy",
+  "theme": "Medicine on screen",
+  "questions": [
+   {
+    "q": "Which TV doctor insisted \u2018It\u2019s never lupus\u2019?",
+    "a": "Dr Gregory House",
+    "w": [
+     "Dr John Carter",
+     "Dr Meredith Grey",
+     "Dr Perry Cox"
+    ],
+    "e": "It was lupus once."
+   },
+   {
+    "q": "\u2018Grey\u2019s Anatomy\u2019 is a pun on which textbook?",
+    "a": "Gray\u2019s Anatomy",
+    "w": [
+     "Netter\u2019s Atlas",
+     "Davidson\u2019s Medicine",
+     "The Oxford Handbook"
+    ],
+    "e": "First published in 1858."
+   },
+   {
+    "q": "Which city is \u2018ER\u2019 set in?",
+    "a": "Chicago",
+    "w": [
+     "New York",
+     "Boston",
+     "Seattle"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which city is \u2018The Pitt\u2019 set in?",
+    "a": "Pittsburgh",
+    "w": [
+     "Philadelphia",
+     "Portland",
+     "Baltimore"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which show follows JD at Sacred Heart?",
+    "a": "Scrubs",
+    "w": [
+     "ER",
+     "Chicago Med",
+     "House"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which war is \u2018M*A*S*H\u2019 set in?",
+    "a": "The Korean War",
+    "w": [
+     "The Vietnam War",
+     "World War II",
+     "The Gulf War"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the hospital in \u2018Grey\u2019s Anatomy\u2019 called now?",
+    "a": "Grey Sloan Memorial",
+    "w": [
+     "Sacred Heart",
+     "Princeton-Plainsboro",
+     "County General"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Princeton-Plainsboro is the hospital in?",
+    "a": "House",
+    "w": [
+     "Scrubs",
+     "ER",
+     "The Good Doctor"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which comedy is based on junior doctor Adam Kay\u2019s diaries?",
+    "a": "This Is Going to Hurt",
+    "w": [
+     "Green Wing",
+     "Doc Martin",
+     "Peep Show"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Who won an Oscar playing psychiatrist Hannibal Lecter?",
+    "a": "Anthony Hopkins",
+    "w": [
+     "Brian Cox",
+     "Mads Mikkelsen",
+     "Gary Oldman"
+    ],
+    "e": "For \u2018The Silence of the Lambs\u2019 (1991)."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 17,
+  "difficulty": "Easy",
+  "theme": "Vitamins and nutrition",
+  "questions": [
+   {
+    "q": "Scurvy is caused by a lack of?",
+    "a": "Vitamin C",
+    "w": [
+     "Vitamin D",
+     "Vitamin B12",
+     "Vitamin A"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Rickets in children is caused by a lack of?",
+    "a": "Vitamin D",
+    "w": [
+     "Vitamin C",
+     "Vitamin K",
+     "Vitamin E"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Vitamin B12 comes mostly from?",
+    "a": "Animal foods",
+    "w": [
+     "Fruit",
+     "Grains",
+     "Leafy greens"
+    ],
+    "e": "Vegans need a supplement or fortified foods."
+   },
+   {
+    "q": "Folic acid before and in early pregnancy helps prevent?",
+    "a": "Neural tube defects",
+    "w": [
+     "Down syndrome",
+     "Club foot",
+     "Newborn jaundice"
+    ],
+    "e": "Such as spina bifida."
+   },
+   {
+    "q": "Night blindness is an early sign of lacking?",
+    "a": "Vitamin A",
+    "w": [
+     "Vitamin B1",
+     "Vitamin C",
+     "Vitamin K"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Newborns get a vitamin K injection to prevent?",
+    "a": "Bleeding",
+    "w": [
+     "Jaundice",
+     "Infection",
+     "Rickets"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Wernicke\u2019s encephalopathy is caused by a lack of?",
+    "a": "Thiamine (vitamin B1)",
+    "w": [
+     "Niacin",
+     "Vitamin B12",
+     "Folate"
+    ],
+    "e": "Confusion, wobbly gait, eye movement problems."
+   },
+   {
+    "q": "What is the most common nutrient deficiency in the world?",
+    "a": "Iron",
+    "w": [
+     "Zinc",
+     "Calcium",
+     "Magnesium"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Beta-carotene in carrots is turned into?",
+    "a": "Vitamin A",
+    "w": [
+     "Vitamin D",
+     "Vitamin E",
+     "Vitamin K"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which vitamins are fat-soluble?",
+    "a": "A, D, E and K",
+    "w": [
+     "B and C",
+     "B, C and D",
+     "C, D and K"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 18,
+  "difficulty": "Medium",
+  "theme": "Kidneys",
+  "questions": [
+   {
+    "q": "What is the functional unit of the kidney?",
+    "a": "The nephron",
+    "w": [
+     "The neuron",
+     "The alveolus",
+     "The lobule"
+    ],
+    "e": "About a million per kidney."
+   },
+   {
+    "q": "eGFR estimates?",
+    "a": "How well the kidneys filter",
+    "w": [
+     "Liver function",
+     "Blood glucose",
+     "Bladder capacity"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the most common type of kidney stone?",
+    "a": "Calcium oxalate",
+    "w": [
+     "Uric acid",
+     "Struvite",
+     "Cystine"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which hormone from the kidneys drives red cell production?",
+    "a": "Erythropoietin",
+    "w": [
+     "Renin",
+     "Aldosterone",
+     "Calcitriol"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Adult polycystic kidney disease is inherited how?",
+    "a": "Autosomal dominant",
+    "w": [
+     "Autosomal recessive",
+     "X-linked",
+     "Mitochondrial"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Heavy protein in the urine, swelling and low albumin suggest?",
+    "a": "Nephrotic syndrome",
+    "w": [
+     "Nephritic syndrome",
+     "Acute tubular necrosis",
+     "Renal colic"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The kidneys sit in which space?",
+    "a": "The retroperitoneum",
+    "w": [
+     "The pelvis",
+     "The peritoneal cavity",
+     "The mediastinum"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Where is urea made?",
+    "a": "The liver",
+    "w": [
+     "The kidneys",
+     "The muscles",
+     "The pancreas"
+    ],
+    "e": "The kidneys just get rid of it."
+   },
+   {
+    "q": "Which electrolyte is the big danger in kidney failure?",
+    "a": "Potassium",
+    "w": [
+     "Sodium",
+     "Chloride",
+     "Calcium"
+    ],
+    "e": "High potassium can stop the heart."
+   },
+   {
+    "q": "Cola-coloured urine a few weeks after strep throat suggests?",
+    "a": "Post-streptococcal glomerulonephritis",
+    "w": [
+     "Kidney stones",
+     "Bladder cancer",
+     "A urinary tract infection"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 19,
+  "difficulty": "Medium",
+  "theme": "Eyes",
+  "questions": [
+   {
+    "q": "Which retinal cells detect colour?",
+    "a": "Cones",
+    "w": [
+     "Rods",
+     "Ganglion cells",
+     "Bipolar cells"
+    ],
+    "e": "Rods handle dim light."
+   },
+   {
+    "q": "A cataract is clouding of the?",
+    "a": "Lens",
+    "w": [
+     "Cornea",
+     "Retina",
+     "Vitreous"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Raised eye pressure damaging the optic nerve is?",
+    "a": "Glaucoma",
+    "w": [
+     "Macular degeneration",
+     "Cataract",
+     "Keratitis"
+    ],
+    "e": "The \u2018silent thief of sight\u2019."
+   },
+   {
+    "q": "What is the leading cause of blindness in older Australians?",
+    "a": "Age-related macular degeneration",
+    "w": [
+     "Glaucoma",
+     "Cataract",
+     "Diabetic retinopathy"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Short-sightedness is called?",
+    "a": "Myopia",
+    "w": [
+     "Hyperopia",
+     "Presbyopia",
+     "Astigmatism"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A \u2018curtain\u2019 coming down over the vision suggests?",
+    "a": "Retinal detachment",
+    "w": [
+     "Migraine aura",
+     "Conjunctivitis",
+     "Cataract"
+    ],
+    "e": "An emergency."
+   },
+   {
+    "q": "The blind spot is where the?",
+    "a": "Optic nerve leaves the eye",
+    "w": [
+     "Fovea sits",
+     "Lens attaches",
+     "Iris ends"
+    ],
+    "e": "No photoreceptors there."
+   },
+   {
+    "q": "Which plates are used to test colour vision?",
+    "a": "Ishihara plates",
+    "w": [
+     "Snellen chart",
+     "Amsler grid",
+     "Landolt rings"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A drooping upper eyelid is called?",
+    "a": "Ptosis",
+    "w": [
+     "Proptosis",
+     "Miosis",
+     "Chalazion"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Pupils that react to focusing but not to light (Argyll Robertson pupils) suggest?",
+    "a": "Neurosyphilis",
+    "w": [
+     "Diabetes",
+     "Horner syndrome",
+     "Opioid use"
+    ],
+    "e": "The \u2018prostitute\u2019s pupil\u2019: accommodates but doesn\u2019t react."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 20,
+  "difficulty": "Hard",
+  "theme": "Psychiatry",
+  "questions": [
+   {
+    "q": "Lithium is mainly used to treat?",
+    "a": "Bipolar disorder",
+    "w": [
+     "Schizophrenia",
+     "ADHD",
+     "Anorexia nervosa"
+    ],
+    "e": "Needs regular blood level checks."
+   },
+   {
+    "q": "Sertraline and fluoxetine belong to which class?",
+    "a": "SSRIs",
+    "w": [
+     "SNRIs",
+     "Tricyclics",
+     "MAOIs"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Fever, rigidity and confusion after starting an antipsychotic suggest?",
+    "a": "Neuroleptic malignant syndrome",
+    "w": [
+     "Serotonin syndrome",
+     "Malignant hyperthermia",
+     "Delirium tremens"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Clonus, agitation and diarrhoea after combining serotonergic drugs suggest?",
+    "a": "Serotonin syndrome",
+    "w": [
+     "Neuroleptic malignant syndrome",
+     "Anticholinergic toxicity",
+     "Opioid withdrawal"
+    ],
+    "e": "Clonus is the clue."
+   },
+   {
+    "q": "Who publishes the DSM?",
+    "a": "The American Psychiatric Association",
+    "w": [
+     "The World Health Organization",
+     "The British Medical Association",
+     "The Royal College of Psychiatrists"
+    ],
+    "e": "The WHO publishes the ICD."
+   },
+   {
+    "q": "Capgras delusion is the belief that?",
+    "a": "A loved one has been replaced by an impostor",
+    "w": [
+     "You are dead",
+     "You are infested with parasites",
+     "A celebrity is in love with you"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Cotard delusion is the belief that?",
+    "a": "You are dead",
+    "w": [
+     "A loved one is an impostor",
+     "You are infested with parasites",
+     "A celebrity is in love with you"
+    ],
+    "e": "Also called walking corpse syndrome."
+   },
+   {
+    "q": "ECT stands for?",
+    "a": "Electroconvulsive therapy",
+    "w": [
+     "Electro-cortical treatment",
+     "Emotional cognitive therapy",
+     "Extended clinical trial"
+    ],
+    "e": "Very effective for severe depression."
+   },
+   {
+    "q": "Methylphenidate is used mainly for?",
+    "a": "ADHD",
+    "w": [
+     "Depression",
+     "Insomnia",
+     "Psychosis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Korsakoff syndrome mainly affects?",
+    "a": "Memory",
+    "w": [
+     "Mood",
+     "Movement",
+     "Speech"
+    ],
+    "e": "From thiamine deficiency. Confabulation fills the gaps."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 21,
+  "difficulty": "Hard",
+  "theme": "Bones and joints",
+  "questions": [
+   {
+    "q": "Gout is caused by crystals of?",
+    "a": "Monosodium urate",
+    "w": [
+     "Calcium pyrophosphate",
+     "Cholesterol",
+     "Calcium oxalate"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Pseudogout is caused by crystals of?",
+    "a": "Calcium pyrophosphate",
+    "w": [
+     "Monosodium urate",
+     "Cholesterol",
+     "Cystine"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which joint does gout classically attack first?",
+    "a": "The big toe",
+    "w": [
+     "The knee",
+     "The wrist",
+     "The hip"
+    ],
+    "e": "Podagra."
+   },
+   {
+    "q": "Rheumatoid arthritis typically affects?",
+    "a": "Small hand joints on both sides",
+    "w": [
+     "One large joint",
+     "The spine only",
+     "The fingertip joints only"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Heberden\u2019s nodes in osteoarthritis are at which joints?",
+    "a": "The fingertip (DIP) joints",
+    "w": [
+     "The middle finger (PIP) joints",
+     "The knuckles (MCP joints)",
+     "The wrist"
+    ],
+    "e": "Bouchard\u2019s nodes are at the PIP joints."
+   },
+   {
+    "q": "Ankylosing spondylitis is strongly linked to which gene?",
+    "a": "HLA-B27",
+    "w": [
+     "HLA-DR4",
+     "BRCA2",
+     "HFE"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A Colles fracture is a break of the?",
+    "a": "Distal radius",
+    "w": [
+     "Scaphoid",
+     "Ulnar shaft",
+     "Fifth metacarpal"
+    ],
+    "e": "Fall on an outstretched hand."
+   },
+   {
+    "q": "A boxer\u2019s fracture is a break of the?",
+    "a": "Fifth metacarpal",
+    "w": [
+     "Distal radius",
+     "Scaphoid",
+     "Thumb"
+    ],
+    "e": "Punching walls rarely wins."
+   },
+   {
+    "q": "Osteoporosis is diagnosed on a bone density scan with a T-score of?",
+    "a": "\u22122.5 or lower",
+    "w": [
+     "\u22121.0 or lower",
+     "0 or lower",
+     "+2.5 or higher"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which tendon ruptures with a \u2018kicked in the calf\u2019 feeling?",
+    "a": "Achilles tendon",
+    "w": [
+     "Patellar tendon",
+     "Hamstring tendon",
+     "Rotator cuff"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 22,
+  "difficulty": "Genius",
+  "theme": "Genetics",
+  "questions": [
+   {
+    "q": "Down syndrome is trisomy of which chromosome?",
+    "a": "21",
+    "w": [
+     "13",
+     "18",
+     "23"
+    ],
+    "e": "Trisomy 13 is Patau, 18 is Edwards."
+   },
+   {
+    "q": "How many chromosomes are in a typical human cell?",
+    "a": "46",
+    "w": [
+     "23",
+     "44",
+     "48"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the karyotype in Turner syndrome?",
+    "a": "45,X",
+    "w": [
+     "47,XXY",
+     "47,XYY",
+     "46,XX"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the karyotype in Klinefelter syndrome?",
+    "a": "47,XXY",
+    "w": [
+     "45,X",
+     "47,XYY",
+     "47,XXX"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Huntington\u2019s disease is caused by repeats of which triplet?",
+    "a": "CAG",
+    "w": [
+     "CGG",
+     "GAA",
+     "CTG"
+    ],
+    "e": "CGG is fragile X; GAA is Friedreich\u2019s ataxia; CTG is myotonic dystrophy."
+   },
+   {
+    "q": "Fragile X syndrome involves repeats of which triplet?",
+    "a": "CGG",
+    "w": [
+     "CAG",
+     "GAA",
+     "CTG"
+    ],
+    "e": ""
+   },
+   {
+    "q": "How is cystic fibrosis inherited?",
+    "a": "Autosomal recessive",
+    "w": [
+     "Autosomal dominant",
+     "X-linked recessive",
+     "Mitochondrial"
+    ],
+    "e": ""
+   },
+   {
+    "q": "How is haemophilia A inherited?",
+    "a": "X-linked recessive",
+    "w": [
+     "Autosomal recessive",
+     "Autosomal dominant",
+     "Mitochondrial"
+    ],
+    "e": "Mostly affects males."
+   },
+   {
+    "q": "Mitochondrial DNA is inherited from?",
+    "a": "The mother",
+    "w": [
+     "The father",
+     "Both parents equally",
+     "Neither parent"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A disease that worsens or starts earlier in each generation shows?",
+    "a": "Anticipation",
+    "w": [
+     "Imprinting",
+     "Mosaicism",
+     "Penetrance"
+    ],
+    "e": "Typical of triplet repeat disorders."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 23,
+  "difficulty": "Easy",
+  "theme": "Babies and kids",
+  "questions": [
+   {
+    "q": "A barking cough with stridor in a toddler suggests?",
+    "a": "Croup",
+    "w": [
+     "Whooping cough",
+     "Bronchiolitis",
+     "Asthma"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Croup is usually caused by?",
+    "a": "Parainfluenza virus",
+    "w": [
+     "RSV",
+     "Streptococcus",
+     "Influenza B"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Bronchiolitis in babies is most often caused by?",
+    "a": "RSV",
+    "w": [
+     "Parainfluenza virus",
+     "Measles",
+     "Mumps"
+    ],
+    "e": "Respiratory syncytial virus."
+   },
+   {
+    "q": "A baby\u2019s soft spot is called the?",
+    "a": "Fontanelle",
+    "w": [
+     "Philtrum",
+     "Suture",
+     "Sinus"
+    ],
+    "e": ""
+   },
+   {
+    "q": "When is the first APGAR score done?",
+    "a": "1 minute after birth",
+    "w": [
+     "10 seconds after birth",
+     "30 minutes after birth",
+     "1 hour after birth"
+    ],
+    "e": "Then again at 5 minutes."
+   },
+   {
+    "q": "Hand, foot and mouth disease is usually caused by?",
+    "a": "Coxsackievirus",
+    "w": [
+     "Measles virus",
+     "Streptococcus",
+     "Varicella-zoster virus"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Projectile vomiting in a 4-week-old suggests?",
+    "a": "Pyloric stenosis",
+    "w": [
+     "Intussusception",
+     "Reflux",
+     "Appendicitis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018Redcurrant jelly\u2019 stools in an infant suggest?",
+    "a": "Intussusception",
+    "w": [
+     "Pyloric stenosis",
+     "Gastroenteritis",
+     "Coeliac disease"
+    ],
+    "e": "Bowel telescoping into itself."
+   },
+   {
+    "q": "Babies usually double their birth weight by about?",
+    "a": "4\u20136 months",
+    "w": [
+     "2 weeks",
+     "12 months",
+     "2 years"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which vaccine is given at birth in Australia?",
+    "a": "Hepatitis B",
+    "w": [
+     "MMR",
+     "Rotavirus",
+     "Chickenpox"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 24,
+  "difficulty": "Easy",
+  "theme": "Teeth and mouths",
+  "questions": [
+   {
+    "q": "Which mineral added to drinking water helps prevent tooth decay?",
+    "a": "Fluoride",
+    "w": [
+     "Calcium",
+     "Iodine",
+     "Iron"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Wisdom teeth are the?",
+    "a": "Third molars",
+    "w": [
+     "Second premolars",
+     "Canines",
+     "Second molars"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Inflammation of the gums is called?",
+    "a": "Gingivitis",
+    "w": [
+     "Glossitis",
+     "Stomatitis",
+     "Cheilitis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which bacterium is most linked to tooth decay?",
+    "a": "Streptococcus mutans",
+    "w": [
+     "Streptococcus pyogenes",
+     "Staphylococcus aureus",
+     "Escherichia coli"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Inflammation of the tongue is called?",
+    "a": "Glossitis",
+    "w": [
+     "Gingivitis",
+     "Parotitis",
+     "Cheilitis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Angular cheilitis affects the?",
+    "a": "Corners of the mouth",
+    "w": [
+     "Tongue",
+     "Gums",
+     "Tonsils"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Mumps classically swells which gland?",
+    "a": "Parotid gland",
+    "w": [
+     "Thyroid gland",
+     "Pituitary gland",
+     "Thymus"
+    ],
+    "e": "The hamster look."
+   },
+   {
+    "q": "Teeth grinding is called?",
+    "a": "Bruxism",
+    "w": [
+     "Trismus",
+     "Halitosis",
+     "Xerostomia"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A dry mouth is called?",
+    "a": "Xerostomia",
+    "w": [
+     "Halitosis",
+     "Trismus",
+     "Dysgeusia"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Halitosis is the medical term for?",
+    "a": "Bad breath",
+    "w": [
+     "A dry mouth",
+     "Mouth ulcers",
+     "Gum disease"
+    ],
+    "e": "Usually from the mouth itself, not the stomach."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 25,
+  "difficulty": "Medium",
+  "theme": "Vaccines",
+  "questions": [
+   {
+    "q": "MMR protects against measles, mumps and?",
+    "a": "Rubella",
+    "w": [
+     "Rotavirus",
+     "Rabies",
+     "Roseola"
+    ],
+    "e": ""
+   },
+   {
+    "q": "In 1885, Louis Pasteur first vaccinated a person against?",
+    "a": "Rabies",
+    "w": [
+     "Anthrax",
+     "Cholera",
+     "Smallpox"
+    ],
+    "e": "A boy bitten by a rabid dog. He survived."
+   },
+   {
+    "q": "Which disease has been eradicated worldwide by vaccination?",
+    "a": "Smallpox",
+    "w": [
+     "Polio",
+     "Measles",
+     "Diphtheria"
+    ],
+    "e": "Declared eradicated in 1980."
+   },
+   {
+    "q": "mRNA vaccines instruct cells to make?",
+    "a": "A viral protein",
+    "w": [
+     "Antibodies directly",
+     "A whole virus",
+     "New DNA"
+    ],
+    "e": "The immune system learns from the protein."
+   },
+   {
+    "q": "Measles herd immunity needs vaccination coverage of roughly?",
+    "a": "95%",
+    "w": [
+     "50%",
+     "70%",
+     "80%"
+    ],
+    "e": "Measles is extremely contagious."
+   },
+   {
+    "q": "The HPV vaccine mainly prevents?",
+    "a": "Cervical and other HPV-related cancers",
+    "w": [
+     "Breast cancer",
+     "Ovarian cancer",
+     "Bowel cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The BCG vaccine protects against?",
+    "a": "Tuberculosis",
+    "w": [
+     "Diphtheria",
+     "Polio",
+     "Typhoid"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Toxoid vaccines such as tetanus target?",
+    "a": "Bacterial toxins",
+    "w": [
+     "Viral RNA",
+     "Fungal cell walls",
+     "Parasite eggs"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The oral (Sabin) polio vaccine uses?",
+    "a": "Live weakened virus",
+    "w": [
+     "Inactivated virus",
+     "mRNA",
+     "A toxoid"
+    ],
+    "e": "The injected Salk vaccine is inactivated."
+   },
+   {
+    "q": "Shingrix, the newer shingles vaccine, is?",
+    "a": "A non-live recombinant vaccine",
+    "w": [
+     "A live attenuated vaccine",
+     "An mRNA vaccine",
+     "A toxoid vaccine"
+    ],
+    "e": "So it can be given to many people with weakened immunity."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 26,
+  "difficulty": "Medium",
+  "theme": "Ear, nose and throat",
+  "questions": [
+   {
+    "q": "\u2018Glue ear\u2019 is?",
+    "a": "Fluid behind the eardrum",
+    "w": [
+     "A wax build-up",
+     "An outer ear infection",
+     "A perforated eardrum"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Swimmer\u2019s ear is infection of the?",
+    "a": "Outer ear canal",
+    "w": [
+     "Middle ear",
+     "Inner ear",
+     "Mastoid"
+    ],
+    "e": "Otitis externa."
+   },
+   {
+    "q": "Brief spinning when rolling over in bed suggests?",
+    "a": "BPPV",
+    "w": [
+     "M\u00e9ni\u00e8re\u2019s disease",
+     "Labyrinthitis",
+     "Vestibular migraine"
+    ],
+    "e": "Benign paroxysmal positional vertigo. Loose ear crystals."
+   },
+   {
+    "q": "Which manoeuvre treats posterior canal BPPV?",
+    "a": "The Epley manoeuvre",
+    "w": [
+     "The Dix\u2013Hallpike test",
+     "The Valsalva manoeuvre",
+     "The Heimlich manoeuvre"
+    ],
+    "e": "Dix\u2013Hallpike diagnoses it; Epley fixes it."
+   },
+   {
+    "q": "M\u00e9ni\u00e8re\u2019s disease is vertigo, tinnitus, ear fullness and?",
+    "a": "Hearing loss",
+    "w": [
+     "Facial weakness",
+     "Headache",
+     "Nosebleeds"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Most nosebleeds come from?",
+    "a": "Little\u2019s area",
+    "w": [
+     "The adenoids",
+     "The tips of the turbinates",
+     "The sinuses"
+    ],
+    "e": "Also called Kiesselbach\u2019s plexus, at the front of the septum."
+   },
+   {
+    "q": "The voice box is the?",
+    "a": "Larynx",
+    "w": [
+     "Pharynx",
+     "Trachea",
+     "Epiglottis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Quinsy is?",
+    "a": "A peritonsillar abscess",
+    "w": [
+     "A tonsil stone",
+     "Throat cancer",
+     "Croup"
+    ],
+    "e": "Trismus and a \u2018hot potato\u2019 voice."
+   },
+   {
+    "q": "The three ossicles are the malleus, incus and?",
+    "a": "Stapes",
+    "w": [
+     "Hyoid",
+     "Vomer",
+     "Cochlea"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The Weber and Rinne tests use a?",
+    "a": "Tuning fork",
+    "w": [
+     "Otoscope",
+     "Audiometer",
+     "Tongue depressor"
+    ],
+    "e": "512 Hz."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "number": 27,
+  "difficulty": "Hard",
+  "theme": "Pregnancy and birth",
+  "questions": [
+   {
+    "q": "A typical full-term pregnancy lasts about how many weeks?",
+    "a": "40",
+    "w": [
+     "32",
+     "36",
+     "44"
+    ],
+    "e": "Counted from the last menstrual period."
+   },
+   {
+    "q": "Which hormone do pregnancy tests detect?",
+    "a": "hCG",
+    "w": [
+     "Oestrogen",
+     "Progesterone",
+     "Prolactin"
+    ],
+    "e": ""
+   },
+   {
+    "q": "High blood pressure plus protein in the urine after 20 weeks suggests?",
+    "a": "Pre-eclampsia",
+    "w": [
+     "Placental abruption",
+     "Gestational diabetes",
+     "Hyperemesis gravidarum"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A placenta lying over the cervix is called?",
+    "a": "Placenta praevia",
+    "w": [
+     "Placental abruption",
+     "Placenta accreta",
+     "Vasa praevia"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Severe vomiting in pregnancy is called?",
+    "a": "Hyperemesis gravidarum",
+    "w": [
+     "Pica",
+     "Chloasma",
+     "Ptyalism"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which hormone drives contractions and milk let-down?",
+    "a": "Oxytocin",
+    "w": [
+     "Prolactin",
+     "Relaxin",
+     "hCG"
+    ],
+    "e": "Prolactin makes the milk; oxytocin moves it."
+   },
+   {
+    "q": "Naegele\u2019s rule estimates?",
+    "a": "The due date",
+    "w": [
+     "The baby\u2019s weight",
+     "How long labour will take",
+     "The chance of twins"
+    ],
+    "e": "LMP plus 9 months and 7 days."
+   },
+   {
+    "q": "Rhesus-negative mothers may be given which injection?",
+    "a": "Anti-D",
+    "w": [
+     "Vitamin K",
+     "Hepatitis B vaccine",
+     "Oxytocin"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Gestational diabetes is usually screened for at around?",
+    "a": "24\u201328 weeks",
+    "w": [
+     "8\u201312 weeks",
+     "16\u201318 weeks",
+     "36\u201340 weeks"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A newborn\u2019s first stool is called?",
+    "a": "Meconium",
+    "w": [
+     "Vernix",
+     "Lanugo",
+     "Colostrum"
+    ],
+    "e": "Tar-like. Parents are rarely warned."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 28,
+  "difficulty": "Hard",
+  "theme": "Emergency medicine",
+  "questions": [
+   {
+    "q": "What is the recommended adult CPR compression rate?",
+    "a": "100\u2013120 per minute",
+    "w": [
+     "60\u201380 per minute",
+     "80\u201390 per minute",
+     "140\u2013160 per minute"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the adult compression-to-breath ratio in CPR?",
+    "a": "30:2",
+    "w": [
+     "15:2",
+     "5:1",
+     "30:1"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the first-line drug for anaphylaxis?",
+    "a": "Adrenaline",
+    "w": [
+     "An antihistamine",
+     "Hydrocortisone",
+     "Salbutamol"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Where is intramuscular adrenaline given in anaphylaxis?",
+    "a": "The outer mid-thigh",
+    "w": [
+     "The upper arm",
+     "The buttock",
+     "The abdomen"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The Glasgow Coma Scale ranges from?",
+    "a": "3 to 15",
+    "w": [
+     "0 to 15",
+     "1 to 10",
+     "0 to 20"
+    ],
+    "e": "You can\u2019t score below 3. Even a rock gets 3."
+   },
+   {
+    "q": "In the FAST stroke check, what does T stand for?",
+    "a": "Time",
+    "w": [
+     "Temperature",
+     "Tongue",
+     "Tremor"
+    ],
+    "e": "Face, Arms, Speech, Time."
+   },
+   {
+    "q": "The shockable cardiac arrest rhythms are VF and?",
+    "a": "Pulseless VT",
+    "w": [
+     "Asystole",
+     "PEA",
+     "Sinus bradycardia"
+    ],
+    "e": ""
+   },
+   {
+    "q": "What is the immediate treatment for a tension pneumothorax?",
+    "a": "Decompress the chest",
+    "w": [
+     "Wait for a chest X-ray",
+     "Oxygen alone",
+     "Antibiotics"
+    ],
+    "e": "A clinical diagnosis. Don\u2019t wait for imaging."
+   },
+   {
+    "q": "Pulse oximetry can be falsely normal in which poisoning?",
+    "a": "Carbon monoxide",
+    "w": [
+     "Paracetamol",
+     "Alcohol",
+     "Aspirin"
+    ],
+    "e": "Carboxyhaemoglobin reads like oxyhaemoglobin."
+   },
+   {
+    "q": "Which word is famously never said aloud in an emergency department?",
+    "a": "Quiet",
+    "w": [
+     "Busy",
+     "Coffee",
+     "Handover"
+    ],
+    "e": "Say it and the ambulances arrive."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 29,
+  "difficulty": "Genius",
+  "theme": "Oncology",
+  "questions": [
+   {
+    "q": "PSA is a blood marker for which cancer?",
+    "a": "Prostate cancer",
+    "w": [
+     "Pancreatic cancer",
+     "Bowel cancer",
+     "Bladder cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "CA-125 is a marker most associated with?",
+    "a": "Ovarian cancer",
+    "w": [
+     "Breast cancer",
+     "Liver cancer",
+     "Bowel cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Alpha-fetoprotein is raised in?",
+    "a": "Hepatocellular carcinoma",
+    "w": [
+     "Melanoma",
+     "Lung cancer",
+     "Prostate cancer"
+    ],
+    "e": "Also in some testicular germ cell tumours."
+   },
+   {
+    "q": "Australia\u2019s National Bowel Cancer Screening Program uses?",
+    "a": "A faecal immunochemical test",
+    "w": [
+     "Colonoscopy",
+     "CT colonography",
+     "A blood test"
+    ],
+    "e": "A home poo test, every two years."
+   },
+   {
+    "q": "BRCA1 mutations raise the risk of breast and?",
+    "a": "Ovarian cancer",
+    "w": [
+     "Thyroid cancer",
+     "Lung cancer",
+     "Kidney cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Lynch syndrome raises the risk mainly of?",
+    "a": "Bowel and endometrial cancer",
+    "w": [
+     "Lung cancer",
+     "Skin cancer",
+     "Brain cancer"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The Philadelphia chromosome is the hallmark of?",
+    "a": "Chronic myeloid leukaemia",
+    "w": [
+     "Chronic lymphocytic leukaemia",
+     "Hairy cell leukaemia",
+     "Acute myeloid leukaemia"
+    ],
+    "e": "The BCR-ABL fusion. Imatinib changed everything."
+   },
+   {
+    "q": "Which virus causes most cervical cancers?",
+    "a": "HPV",
+    "w": [
+     "Herpes simplex virus",
+     "Epstein\u2013Barr virus",
+     "HIV"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Epstein\u2013Barr virus is linked to which cancer?",
+    "a": "Nasopharyngeal carcinoma",
+    "w": [
+     "Prostate cancer",
+     "Bladder cancer",
+     "Thyroid cancer"
+    ],
+    "e": "Also Burkitt and Hodgkin lymphoma."
+   },
+   {
+    "q": "Tamoxifen blocks which receptor?",
+    "a": "The oestrogen receptor",
+    "w": [
+     "The progesterone receptor",
+     "HER2",
+     "The androgen receptor"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 30,
+  "difficulty": "Easy",
+  "theme": "Sleep",
+  "questions": [
+   {
+    "q": "Most vivid dreaming happens in which sleep stage?",
+    "a": "REM sleep",
+    "w": [
+     "Stage 1",
+     "Stage 2",
+     "Deep (stage 3) sleep"
+    ],
+    "e": ""
+   },
+   {
+    "q": "REM stands for?",
+    "a": "Rapid eye movement",
+    "w": [
+     "Restorative energy mode",
+     "Reduced electrical motion",
+     "Regular eye muscle"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Repeated pauses in breathing during sleep with snoring suggest?",
+    "a": "Obstructive sleep apnoea",
+    "w": [
+     "Narcolepsy",
+     "Insomnia",
+     "Restless legs syndrome"
+    ],
+    "e": ""
+   },
+   {
+    "q": "CPAP stands for?",
+    "a": "Continuous positive airway pressure",
+    "w": [
+     "Constant pulmonary air pump",
+     "Controlled pressure air passage",
+     "Continuous pharyngeal airway pump"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Sudden muscle weakness triggered by laughing (cataplexy) occurs in?",
+    "a": "Narcolepsy",
+    "w": [
+     "Sleep apnoea",
+     "Insomnia",
+     "Sleepwalking"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which hormone rises in darkness to promote sleep?",
+    "a": "Melatonin",
+    "w": [
+     "Cortisol",
+     "Adrenaline",
+     "Thyroxine"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Restless legs syndrome is linked to low?",
+    "a": "Iron",
+    "w": [
+     "Sodium",
+     "Vitamin C",
+     "Glucose"
+    ],
+    "e": "Check ferritin."
+   },
+   {
+    "q": "How much sleep do adults generally need each night?",
+    "a": "7\u20139 hours",
+    "w": [
+     "4\u20135 hours",
+     "5\u20136 hours",
+     "10\u201312 hours"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Sleepwalking is called?",
+    "a": "Somnambulism",
+    "w": [
+     "Somniloquy",
+     "Bruxism",
+     "Hypnagogia"
+    ],
+    "e": "Somniloquy is sleep talking."
+   },
+   {
+    "q": "Which scale rates daytime sleepiness?",
+    "a": "The Epworth Sleepiness Scale",
+    "w": [
+     "The Glasgow Coma Scale",
+     "The Beck Depression Inventory",
+     "The APGAR score"
+    ],
+    "e": "Developed in Melbourne."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 31,
+  "difficulty": "Easy",
+  "theme": "Sport and exercise",
+  "questions": [
+   {
+    "q": "A \u2018pop\u2019 and fast swelling after twisting the knee suggests which ligament?",
+    "a": "Anterior cruciate ligament",
+    "w": [
+     "Posterior cruciate ligament",
+     "Patellar tendon",
+     "Lateral collateral ligament"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Tennis elbow affects the?",
+    "a": "Outer (lateral) elbow",
+    "w": [
+     "Inner (medial) elbow",
+     "Back of the elbow",
+     "Front of the elbow"
+    ],
+    "e": "Golfer\u2019s elbow is the inner side."
+   },
+   {
+    "q": "The medical name for \u2018shin splints\u2019 is?",
+    "a": "Medial tibial stress syndrome",
+    "w": [
+     "Compartment syndrome",
+     "Plantar fasciitis",
+     "Osgood\u2013Schlatter disease"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Which condition is a leading cause of sudden cardiac death in young athletes?",
+    "a": "Hypertrophic cardiomyopathy",
+    "w": [
+     "Mitral valve prolapse",
+     "Atrial fibrillation",
+     "Pericarditis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "RICE stands for rest, ice, compression and?",
+    "a": "Elevation",
+    "w": [
+     "Exercise",
+     "Electrolytes",
+     "Elastic"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Heel pain that is worst with the first steps in the morning suggests?",
+    "a": "Plantar fasciitis",
+    "w": [
+     "Achilles rupture",
+     "Gout",
+     "Stress fracture"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Osgood\u2013Schlatter disease causes a painful lump below the?",
+    "a": "Kneecap",
+    "w": [
+     "Heel",
+     "Hip",
+     "Elbow"
+    ],
+    "e": "Common in active teens."
+   },
+   {
+    "q": "Guidelines recommend adults do how much moderate activity each week?",
+    "a": "150\u2013300 minutes",
+    "w": [
+     "30 minutes",
+     "60 minutes",
+     "600 minutes"
+    ],
+    "e": ""
+   },
+   {
+    "q": "The rotator cuff is part of the?",
+    "a": "Shoulder",
+    "w": [
+     "Hip",
+     "Knee",
+     "Wrist"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Low sodium in marathon runners is usually caused by?",
+    "a": "Drinking too much water",
+    "w": [
+     "Not sweating enough",
+     "Too much salt",
+     "Too much caffeine"
+    ],
+    "e": "Exercise-associated hyponatraemia."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 32,
+  "difficulty": "Einstein",
+  "theme": "Zebras",
+  "questions": [
+   {
+    "q": "\u2018When you hear hoofbeats, think horses, not zebras\u2019 is credited to?",
+    "a": "Theodore Woodward",
+    "w": [
+     "William Osler",
+     "Hippocrates",
+     "Gregory House"
+    ],
+    "e": "A Maryland professor, in the 1940s."
+   },
+   {
+    "q": "Fabry disease is a deficiency of which enzyme?",
+    "a": "Alpha-galactosidase A",
+    "w": [
+     "Glucocerebrosidase",
+     "Hexosaminidase A",
+     "Sphingomyelinase"
+    ],
+    "e": "The others are Gaucher, Tay\u2013Sachs and Niemann\u2013Pick."
+   },
+   {
+    "q": "Kayser\u2013Fleischer rings in the eyes point to?",
+    "a": "Wilson\u2019s disease",
+    "w": [
+     "Haemochromatosis",
+     "Fabry disease",
+     "Gaucher disease"
+    ],
+    "e": "Copper deposits in the cornea."
+   },
+   {
+    "q": "Blue sclerae, frequent fractures and hearing loss suggest?",
+    "a": "Osteogenesis imperfecta",
+    "w": [
+     "Marfan syndrome",
+     "Ehlers\u2013Danlos syndrome",
+     "Paget\u2019s disease"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Ash-leaf macules and seizures suggest?",
+    "a": "Tuberous sclerosis",
+    "w": [
+     "Neurofibromatosis type 1",
+     "Sturge\u2013Weber syndrome",
+     "Von Hippel\u2013Lindau disease"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Caf\u00e9-au-lait spots and Lisch nodules suggest?",
+    "a": "Neurofibromatosis type 1",
+    "w": [
+     "Tuberous sclerosis",
+     "Sturge\u2013Weber syndrome",
+     "Neurofibromatosis type 2"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Kuru was spread through?",
+    "a": "Funerary cannibalism",
+    "w": [
+     "Mosquito bites",
+     "Contaminated water",
+     "Tick bites"
+    ],
+    "e": "A prion disease of the Fore people of Papua New Guinea."
+   },
+   {
+    "q": "Fatal familial insomnia is a?",
+    "a": "Prion disease",
+    "w": [
+     "Mitochondrial disease",
+     "Channelopathy",
+     "Autoimmune encephalitis"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Alice in Wonderland syndrome distorts?",
+    "a": "Perception of size",
+    "w": [
+     "Smell",
+     "Memory",
+     "Speech"
+    ],
+    "e": "Often linked with migraine."
+   },
+   {
+    "q": "Foreign accent syndrome is most often caused by?",
+    "a": "Stroke",
+    "w": [
+     "Hearing loss",
+     "A viral infection",
+     "Vitamin deficiency"
+    ],
+    "e": ""
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 33,
+  "difficulty": "Medium",
+  "theme": "Abbreviations and jargon",
+  "questions": [
+   {
+    "q": "\u2018NBM\u2019 on a chart means?",
+    "a": "Nil by mouth",
+    "w": [
+     "No bowel movement",
+     "Not before morning",
+     "Normal blood measurement"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018PRN\u2019 on a medication chart means?",
+    "a": "As needed",
+    "w": [
+     "Every morning",
+     "Before meals",
+     "Twice a day"
+    ],
+    "e": "Pro re nata."
+   },
+   {
+    "q": "\u2018BD\u2019 on a prescription means?",
+    "a": "Twice a day",
+    "w": [
+     "Before dinner",
+     "At bedtime",
+     "Every two days"
+    ],
+    "e": "Bis die."
+   },
+   {
+    "q": "\u2018NAD\u2019 in the notes usually means?",
+    "a": "No abnormality detected",
+    "w": [
+     "Not available today",
+     "Normal adult dose",
+     "Needs another doctor"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018SOB\u2019 in the notes means?",
+    "a": "Shortness of breath",
+    "w": [
+     "Sick on bed",
+     "Swelling of bowel",
+     "Start of bleeding"
+    ],
+    "e": "Context matters."
+   },
+   {
+    "q": "To \u2018turf\u2019 a patient means to?",
+    "a": "Transfer them to another team",
+    "w": [
+     "Discharge them home",
+     "Sedate them",
+     "Admit them overnight"
+    ],
+    "e": ""
+   },
+   {
+    "q": "DNR stands for?",
+    "a": "Do not resuscitate",
+    "w": [
+     "Did not respond",
+     "Discharge, no review",
+     "Daily nursing review"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018Obs\u2019 are the patient\u2019s?",
+    "a": "Vital signs",
+    "w": [
+     "Obstetric history",
+     "Observation ward notes",
+     "Objective symptoms"
+    ],
+    "e": ""
+   },
+   {
+    "q": "A \u2018frequent flyer\u2019 is?",
+    "a": "A patient who often re-presents",
+    "w": [
+     "A transferred patient",
+     "A travelling doctor",
+     "A patient who needs a flight"
+    ],
+    "e": ""
+   },
+   {
+    "q": "\u2018TTO\u2019 or \u2018TTA\u2019 medications are?",
+    "a": "Medications to take home",
+    "w": [
+     "Medications to avoid",
+     "Trial treatment only",
+     "Medications given at the time of admission"
+    ],
+    "e": "To take out, or to take away."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 34,
+  "difficulty": "Hard",
+  "theme": "Surgery through history",
+  "questions": [
+   {
+    "q": "Which antiseptic did Joseph Lister use?",
+    "a": "Carbolic acid",
+    "w": [
+     "Iodine",
+     "Alcohol",
+     "Chlorine"
+    ],
+    "e": "Phenol, sprayed in the air and on wounds."
+   },
+   {
+    "q": "Who performed the first human heart transplant?",
+    "a": "Christiaan Barnard",
+    "w": [
+     "Michael DeBakey",
+     "Denton Cooley",
+     "Norman Shumway"
+    ],
+    "e": "Cape Town, 1967."
+   },
+   {
+    "q": "The first public demonstration of ether anaesthesia, in 1846, was in?",
+    "a": "Boston",
+    "w": [
+     "London",
+     "Edinburgh",
+     "Paris"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Who introduced chloroform anaesthesia in 1847?",
+    "a": "James Young Simpson",
+    "w": [
+     "Joseph Lister",
+     "William Morton",
+     "Humphry Davy"
+    ],
+    "e": "An Edinburgh obstetrician."
+   },
+   {
+    "q": "Which monarch made chloroform in childbirth fashionable?",
+    "a": "Queen Victoria",
+    "w": [
+     "Elizabeth I",
+     "Mary I",
+     "Queen Anne"
+    ],
+    "e": "For Prince Leopold, in 1853. John Snow gave it."
+   },
+   {
+    "q": "The red and white of a barber\u2019s pole recall?",
+    "a": "Blood and bandages",
+    "w": [
+     "Royal colours",
+     "Hair and soap",
+     "Wine and bread"
+    ],
+    "e": "Barbers once did bloodletting and surgery."
+   },
+   {
+    "q": "The first successful kidney transplant, in 1954, was between?",
+    "a": "Identical twins",
+    "w": [
+     "A mother and son",
+     "Two strangers",
+     "A husband and wife"
+    ],
+    "e": "No rejection to worry about."
+   },
+   {
+    "q": "Who is called the father of modern neurosurgery?",
+    "a": "Harvey Cushing",
+    "w": [
+     "Wilder Penfield",
+     "Victor Horsley",
+     "Walter Dandy"
+    ],
+    "e": ""
+   },
+   {
+    "q": "Laparoscopic surgery is better known as?",
+    "a": "Keyhole surgery",
+    "w": [
+     "Open surgery",
+     "Laser surgery",
+     "Robotic surgery"
+    ],
+    "e": ""
+   },
+   {
+    "q": "William Halsted introduced which item to the operating theatre around 1890?",
+    "a": "Rubber gloves",
+    "w": [
+     "Surgical masks",
+     "Scalpels",
+     "Sutures"
+    ],
+    "e": "Originally to protect his scrub nurse\u2019s hands."
    }
   ]
  }
