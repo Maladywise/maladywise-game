@@ -10,7 +10,7 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="trv-eyebrow">Triviosis</span><span class="badge">Weekly</span></div>' +
-    ' <div class="theme"><span>This week’s theme</span><b id="trv-theme"></b></div>' +
+    ' <div class="theme"><span>This week\u2019s theme</span><b id="trv-theme"></b></div>' +
     ' <div class="prog" id="trv-prog"></div>' +
     ' <div class="qcard" id="trv-card"></div>' +
     ' <div class="result" id="trv-result" hidden></div>' +
@@ -39,14 +39,14 @@
   // ---------- sass ----------
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
   var SASS = {
-    right: ["Correct. Smug is allowed.", "Nailed it.", "Textbook.", "Consultant-level recall.", "Right. Don’t let it go to your head."],
-    wrong: ["Nope. Read the explanation, then pretend you knew.", "Not quite. We’ll call it a learning opportunity.", "Wrong, but confidently wrong.", "Missed. Even consultants Google things."],
+    right: ["Correct. Smug is allowed.", "Nailed it.", "Textbook.", "Consultant-level recall.", "Right. Don\u2019t let it go to your head."],
+    wrong: ["Nope. Read the explanation, then pretend you knew.", "Not quite. We\u2019ll call it a learning opportunity.", "Wrong, but confidently wrong.", "Missed. Even consultants Google things."],
     end: function (s) {
       if (s === 10) return "10 out of 10. Unbearable. Frame it.";
       if (s >= 8) return "Excellent. Registrar exam energy.";
       if (s >= 6) return "Solid pass. The college would approve.";
       if (s >= 4) return "Borderline. Revision recommended.";
-      return "Rough week. There’s always next Monday.";
+      return "Rough week. There\u2019s always next Monday.";
     }
   };
 
@@ -76,11 +76,11 @@
       (chosen !== null ? '<div class="explain"><b>' + esc(msg || (chosen === x.a ? "Correct." : "Not quite.")) + "</b> " + esc(x.e) + '</div><button type="button" class="next" id="trv-go">' + (i + 1 < total ? "Next question" : "See your score") + "</button>" : "");
     if ($("go")) $("go").onclick = function () { st.pending = false; if (st.ans.length >= total) finish(); put(KEY, st); render(); window.scrollTo({ top: root.getBoundingClientRect().top + scrollY - 70, behavior: "smooth" }); };
   }
-  var ICON = "🧠";
+  var ICON = "\ud83e\udde0";
   function renderResult() {
     var r = $("result"), s = score();
-    var sq = Z.questions.map(function (x, i) { return st.ans[i] === x.a ? "🟩" : "🟥"; }).join("");
-    var share = "Triviosis #" + Z.number + (isLive() ? "" : " (archive)") + " · " + Z.theme + "\n" + sq + " " + s + "/10\nmaladywise.com";
+    var sq = Z.questions.map(function (x, i) { return st.ans[i] === x.a ? "\ud83d\udfe9" : "\ud83d\udfe5"; }).join("");
+    var share = "Triviosis #" + Z.number + (isLive() ? "" : " (archive)") + " \u00b7 " + Z.theme + "\n" + sq + " " + s + "/10\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="score">' + s + '<span>/10</span></p><p class="verdict">' + esc(SASS.end(s)) + "</p>" +
@@ -88,7 +88,7 @@
       '<pre id="trv-share">' + share + '</pre><button class="btn solid" type="button" id="trv-copy">Copy result</button>' +
       '<details class="review"><summary>Review answers</summary><ol>' + Z.questions.map(function (x, i) {
         var ok = st.ans[i] === x.a;
-        return "<li><b>" + esc(x.q) + '</b><span class="' + (ok ? "ok" : "no") + '">' + (ok ? "✓ " : "✕ ") + esc(st.ans[i] || "") + "</span>" + (ok ? "" : '<span class="ok">Answer: ' + esc(x.a) + "</span>") + "<em>" + esc(x.e) + "</em></li>";
+        return "<li><b>" + esc(x.q) + '</b><span class="' + (ok ? "ok" : "no") + '">' + (ok ? "\u2713 " : "\u2715 ") + esc(st.ans[i] || "") + "</span>" + (ok ? "" : '<span class="ok">Answer: ' + esc(x.a) + "</span>") + "<em>" + esc(x.e) + "</em></li>";
       }).join("") + "</ol></details>";
     $("copy").onclick = function () {
       var b = this;
@@ -125,16 +125,16 @@
   // ---------- load ----------
   function show(w) {
     week = w; loadWeek(); Z = all.filter(function (x) { return x.week === w; })[0] || null;
-    if (!Z) { $("theme").textContent = "Still in the lab"; $("card").innerHTML = '<p class="note">This week’s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
+    if (!Z) { $("theme").textContent = "Still in the lab"; $("card").innerHTML = '<p class="note">This week\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
     $("theme").textContent = Z.theme;
-    $("eyebrow").textContent = (isLive() ? "Triviosis" : "Archive") + " · #" + Z.number + " · Week of " + nice(Z.week);
+    $("eyebrow").textContent = (isLive() ? "Triviosis" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 Week of " + nice(Z.week);
     render(); renderArchive();
   }
   function renderArchive() {
     var past = all.filter(function (x) { return x.week < REAL; }).reverse();
     var rows = past.map(function (x) {
-      var s = load("trv-week-" + x.week, null), mark = s && s.done ? " ✓" : "";
-      return '<button type="button" class="arow' + (x.week === week ? " on" : "") + '" data-w="' + x.week + '"><span>#' + x.number + " · " + esc(x.theme) + mark + "</span><span>" + nice(x.week) + "</span></button>";
+      var s = load("trv-week-" + x.week, null), mark = s && s.done ? " \u2713" : "";
+      return '<button type="button" class="arow' + (x.week === week ? " on" : "") + '" data-w="' + x.week + '"><span>#' + x.number + " \u00b7 " + esc(x.theme) + mark + "</span><span>" + nice(x.week) + "</span></button>";
     }).join("");
     var back = isLive() ? "" : '<button type="button" class="btn" id="trv-back">Back to this week</button>';
     $("alist").innerHTML = back + (rows || '<p class="note">No past quizzes yet. This is #1.</p>');
