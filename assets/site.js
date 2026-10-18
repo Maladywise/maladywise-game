@@ -1,5 +1,5 @@
-/* Main-site settings (used when maladywise.com points here). Add sections here later: cases, fact sheets. */
+/* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
-  nav: [["Puzzles", "/"], ["About", "/about/"]],
+  nav: [["Puzzles", "/"], ["Reads", "/reads/"], ["Cases", "/cases/"], ["Fact sheets", "/fact-sheets/"], ["Tools", "/tools/"]],
   sections: []
 };
