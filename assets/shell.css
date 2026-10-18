@@ -107,7 +107,7 @@ footer.site a{color:var(--muted)}
 .backlink{display:inline-block;margin:6px 0 0;font-weight:600;color:var(--muted);text-decoration:none;font-size:14px}
 
 /* keep-playing strip inside game pages */
-.mwx{border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:8px;font-family:Poppins,"Segoe UI",system-ui,sans-serif}
+.mwx{border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:8px;width:100%;align-self:stretch;font-family:Poppins,"Segoe UI",system-ui,sans-serif}
 .mwx-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .mwx-head b{font:700 17px Lora,Georgia,serif;color:var(--ink)}
 .mwx-head span{font-size:13px;color:var(--muted)}
