@@ -138,7 +138,7 @@
 
 
   // ---------- newsletter (Buttondown) ----------
-  var NL_HTML = '<section class="nl" id="newsletter"><div class="nl-txt"><b>Get the monthly newsletter</b><span>Monthly medical puzzles, trivia, news, updates, a fictional case and the odd zebra. From an Australian GP. Unsubscribe any time.</span></div>' +
+  var NL_HTML = '<section class="nl" id="newsletter"><div class="nl-txt"><b>Get Zebra Mail \ud83e\udd93</b><span>A monthly email of medical puzzles, a fictional zebra case and three things I learned. From an Australian GP. Unsubscribe any time.</span></div>' +
     '<form class="mw-nl" action="https://buttondown.com/api/emails/embed-subscribe/maladywise" method="post" target="_blank">' +
     '<label class="sr" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">' +
     '<input type="hidden" name="embed" value="1"><button type="submit">Subscribe</button></form><p class="nl-msg" aria-live="polite"></p></section>';
