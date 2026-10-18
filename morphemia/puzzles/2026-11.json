@@ -9,7 +9,9 @@
    "ALAS",
    "ALES",
    "ALLELE",
+   "ALLELES",
    "ALOE",
+   "ALOES",
    "ALSO",
    "ALVEOLUS",
    "EELS",
@@ -39,11 +41,14 @@
    "LULL",
    "LULU",
    "OVAL",
+   "OVALS",
    "OVULE",
+   "OVULES",
    "SALE",
    "SALES",
    "SALSA",
    "SALVE",
+   "SALVES",
    "SEAL",
    "SEALS",
    "SELL",
@@ -75,25 +80,32 @@
    "VELA",
    "VESSEL",
    "VESSELS",
-   "VOLE"
+   "VOLE",
+   "VOLES"
   ],
   "medical": [
    "ALES",
+   "ALLELES",
+   "ALOES",
    "ALVEOLUS",
    "LOUSE",
+   "OVALS",
    "OVULE",
+   "OVULES",
    "SALVE",
+   "SALVES",
    "SOLE",
    "UVULA",
    "VALVE",
    "VALVELESS",
    "VELA",
-   "VOLE"
+   "VOLE",
+   "VOLES"
   ],
   "pangrams": [
    "ALVEOLUS"
   ],
-  "max": 336
+  "max": 404
  },
  {
   "date": "2026-11-02",
@@ -152,6 +164,7 @@
    "SHOT",
    "SHOTS",
    "SMOOTH",
+   "SMOOTHS",
    "SOOT",
    "STACCATO",
    "STASH",
@@ -171,22 +184,25 @@
    "TOMATO",
    "TOOT",
    "TOOTH",
+   "TOOTS",
    "TOSS",
    "TOTS"
   ],
   "medical": [
    "ASTHMA",
+   "SMOOTHS",
    "STACCATO",
    "STOMA",
    "STOMACH",
    "STOMATA",
-   "TOOTH"
+   "TOOTH",
+   "TOOTS"
   ],
   "pangrams": [
    "STOMACH",
    "STOMACHS"
   ],
-  "max": 317
+  "max": 341
  },
  {
   "date": "2026-11-03",
@@ -228,6 +244,7 @@
    "LESSEN",
    "LIEGE",
    "LIEN",
+   "LIENS",
    "LIES",
    "LILIES",
    "LINE",
@@ -252,15 +269,19 @@
    "SEWN",
    "SIEGE",
    "SINE",
+   "SINES",
    "SINEW",
+   "SINEWS",
    "SINGLE",
    "SINGLES",
    "SLEW",
    "SWELL",
    "SWELLING",
+   "SWELLINGS",
    "SWELLS",
    "SWINE",
    "WELL",
+   "WELLING",
    "WELLNESS",
    "WELLS",
    "WIGGLE",
@@ -276,15 +297,21 @@
    "GINSENG",
    "ILLNESS",
    "LENS",
+   "LIENS",
    "SESSILE",
+   "SINES",
    "SINEW",
-   "SWELLING"
+   "SINEWS",
+   "SWELLING",
+   "SWELLINGS",
+   "WELLING"
   ],
   "pangrams": [
    "SWELLING",
+   "SWELLINGS",
    "WILLINGNESS"
   ],
-  "max": 387
+  "max": 465
  },
  {
   "date": "2026-11-04",
@@ -700,6 +727,7 @@
    "ALIEN",
    "ANILINE",
    "ANNEAL",
+   "ANNEALED",
    "ANNELID",
    "ARENA",
    "DANDER",
@@ -749,10 +777,12 @@
    "NAILED",
    "NANA",
    "NEAR",
+   "NEARED",
    "NEARER",
    "NEED",
    "NEEDED",
    "NEEDLE",
+   "NEEDLED",
    "NERD",
    "NINE",
    "RADIAN",
@@ -762,6 +792,7 @@
    "REIN",
    "REINDEER",
    "RELEARN",
+   "RELEARNED",
    "RENAL",
    "RENDER",
    "RENDERED",
@@ -774,19 +805,23 @@
    "ALANINE",
    "ANILINE",
    "ANNEAL",
+   "ANNEALED",
    "ANNELID",
    "DANDER",
    "NAIAD",
    "NAIL",
+   "NEARED",
    "NEEDLE",
+   "NEEDLED",
    "RADIAN",
    "RELEARN",
+   "RELEARNED",
    "RENAL"
   ],
   "pangrams": [
    "ADRENALINE"
   ],
-  "max": 465
+  "max": 525
  },
  {
   "date": "2026-11-10",
@@ -945,6 +980,7 @@
    "TALI",
    "TALL",
    "TANNIN",
+   "TIMPANI",
    "TITAN"
   ],
   "medical": [
@@ -964,12 +1000,13 @@
    "PAPILLA",
    "PITTA",
    "TALI",
-   "TANNIN"
+   "TANNIN",
+   "TIMPANI"
   ],
   "pangrams": [
    "IMPLANT"
   ],
-  "max": 289
+  "max": 303
  },
  {
   "date": "2026-11-12",
@@ -993,6 +1030,7 @@
    "CALL",
    "CALLA",
    "CALLER",
+   "CALVE",
    "CARE",
    "CAREER",
    "CARRIER",
@@ -1010,6 +1048,7 @@
    "CLAVICLE",
    "CLEAR",
    "CLEARER",
+   "CLEAVE",
    "CLEAVER",
    "CLERICAL",
    "CRAVE",
@@ -1040,6 +1079,7 @@
    "RECALL",
    "REVEAL",
    "REVIVAL",
+   "RIAL",
    "RIVAL",
    "RIVIERA",
    "VALE",
@@ -1058,14 +1098,17 @@
    "ALLELIC",
    "AREAL",
    "CALLA",
+   "CALVE",
    "CARE",
    "CELERIAC",
    "CERVICAL",
    "CILIA",
    "CLAVICLE",
+   "CLEAVE",
    "ILEA",
    "ILIA",
    "ILIAC",
+   "RIAL",
    "VALVE",
    "VARICELLA",
    "VELA",
@@ -1076,7 +1119,7 @@
    "CERVICAL",
    "VARICELLA"
   ],
-  "max": 434
+  "max": 458
  },
  {
   "date": "2026-11-13",
@@ -1104,12 +1147,17 @@
    "EARNER",
    "EARNERS",
    "EARNS",
+   "ENCASE",
+   "ENCASES",
    "ESSENCE",
+   "ESSENCES",
    "NANA",
    "NAPS",
    "NEAR",
    "NEARER",
+   "NEARS",
    "PANCREAS",
+   "PANCREASES",
    "PANE",
    "PANS",
    "PECAN",
@@ -1117,6 +1165,7 @@
    "PENCE",
    "PENS",
    "PREEN",
+   "PREENS",
    "PRESENCE",
    "SANE",
    "SANS",
@@ -1138,6 +1187,7 @@
    "SNAPPER",
    "SNAPS",
    "SNARE",
+   "SNARES",
    "SPAN",
    "SPANS"
   ],
@@ -1146,16 +1196,24 @@
    "CAESAREAN",
    "CANCER",
    "CANE",
+   "ENCASE",
+   "ENCASES",
+   "ESSENCES",
+   "NEARS",
    "PANCREAS",
+   "PANCREASES",
    "PREEN",
+   "PREENS",
    "SCAN",
-   "SENESCENCE"
+   "SENESCENCE",
+   "SNARES"
   ],
   "pangrams": [
    "APPEARANCES",
-   "PANCREAS"
+   "PANCREAS",
+   "PANCREASES"
   ],
-  "max": 326
+  "max": 436
  },
  {
   "date": "2026-11-14",
@@ -1280,7 +1338,8 @@
    "LIRA",
    "RABBI",
    "RACIAL",
-   "RAIL"
+   "RAIL",
+   "RIAL"
   ],
   "medical": [
    "ARABICA",
@@ -1292,12 +1351,13 @@
    "CILIA",
    "HAIRBALL",
    "ILIA",
-   "ILIAC"
+   "ILIAC",
+   "RIAL"
   ],
   "pangrams": [
    "BRACHIAL"
   ],
-  "max": 205
+  "max": 207
  },
  {
   "date": "2026-11-16",
@@ -1333,6 +1393,7 @@
    "GALA",
    "GALE",
    "GALL",
+   "GALLING",
    "GANG",
    "GANGLIA",
    "GELLING",
@@ -1350,8 +1411,10 @@
    "HANGING",
    "HANGNAIL",
    "HEALING",
+   "HEELING",
    "HIGH",
    "HINGE",
+   "HINGING",
    "ILLEGAL",
    "INHALING",
    "INNING",
@@ -1373,6 +1436,7 @@
    "ANGINA",
    "ANNEALING",
    "GALL",
+   "GALLING",
    "GANGLIA",
    "GELLING",
    "GENE",
@@ -1380,12 +1444,14 @@
    "GENII",
    "HANGNAIL",
    "HEALING",
+   "HEELING",
+   "HINGING",
    "LIGNIN"
   ],
   "pangrams": [
    "HEALING"
   ],
-  "max": 384
+  "max": 426
  },
  {
   "date": "2026-11-17",
@@ -1397,8 +1463,10 @@
    "KEEN",
    "KENNEL",
    "KETONE",
+   "KETONES",
    "KNEE",
    "KNEEL",
+   "KNEELS",
    "KNEES",
    "KNOLL",
    "KNOT",
@@ -1419,6 +1487,7 @@
    "NESTS",
    "NETS",
    "NETTLE",
+   "NETTLES",
    "NOEL",
    "NONE",
    "NONSENSE",
@@ -1431,6 +1500,7 @@
    "NOTES",
    "ONES",
    "ONSET",
+   "ONSETS",
    "ONTO",
    "SEEN",
    "SENSE",
@@ -1444,8 +1514,10 @@
    "SONS",
    "SOON",
    "STENT",
+   "STENTS",
    "STOLEN",
    "STOLON",
+   "STOLONS",
    "STONE",
    "STONES",
    "TEEN",
@@ -1454,6 +1526,7 @@
    "TENETS",
    "TENS",
    "TENSE",
+   "TENSES",
    "TENT",
    "TENTS",
    "TOKEN",
@@ -1466,19 +1539,26 @@
   ],
   "medical": [
    "KETONE",
+   "KETONES",
    "KNEE",
+   "KNEELS",
    "LENS",
    "NETTLE",
+   "NETTLES",
    "NOSE",
+   "ONSETS",
    "SKELETON",
    "STENT",
-   "STOLON"
+   "STENTS",
+   "STOLON",
+   "STOLONS",
+   "TENSES"
   ],
   "pangrams": [
    "SKELETON",
    "SKELETONS"
   ],
-  "max": 321
+  "max": 411
  },
  {
   "date": "2026-11-18",
@@ -1488,14 +1568,17 @@
   "outer": "LTIAMG",
   "words": [
    "AGAIN",
+   "AGITATING",
    "AILING",
    "AIMING",
    "ALIGN",
    "ALIGNING",
+   "AMALGAMATING",
    "AMANITA",
    "ANGINA",
    "ANGLING",
    "ANIMAL",
+   "ANIMATING",
    "ANTI",
    "ATTAIN",
    "ATTAINING",
@@ -1503,9 +1586,11 @@
    "GAIN",
    "GAINING",
    "GALLANT",
+   "GALLING",
    "GAMING",
    "GANG",
    "GANGLIA",
+   "GATING",
    "GIANT",
    "GIGGLING",
    "GNAT",
@@ -1517,22 +1602,29 @@
    "INNING",
    "LAGGING",
    "LAMINA",
+   "LAMINATING",
+   "LAMING",
+   "LIGATING",
    "LIGNIN",
+   "LIMING",
    "LIMITING",
    "LING",
    "LINING",
    "LINT",
    "MAILING",
+   "MAIMING",
    "MAIN",
    "MAINTAIN",
    "MAINTAINING",
    "MALIGNANT",
+   "MALTING",
    "MAMMALIAN",
    "MANAGING",
    "MANGA",
    "MANIA",
    "MANNA",
    "MANNING",
+   "MANTLING",
    "MATING",
    "MILITANT",
    "MILLING",
@@ -1542,6 +1634,7 @@
    "MINIMAL",
    "MINING",
    "MINT",
+   "MINTING",
    "MITIGATING",
    "NAGGING",
    "NAIL",
@@ -1550,9 +1643,11 @@
    "NANA",
    "NATAL",
    "TAGGING",
+   "TAILING",
    "TAINT",
    "TAMING",
    "TANG",
+   "TANGLING",
    "TANNIN",
    "TANNING",
    "TILTING",
@@ -1560,28 +1655,49 @@
    "TING",
    "TINGLING",
    "TINT",
+   "TINTING",
    "TITAN"
   ],
   "medical": [
+   "AGITATING",
+   "AMALGAMATING",
    "AMANITA",
    "ANGINA",
+   "ANIMATING",
+   "GALLING",
    "GANGLIA",
+   "GATING",
    "GNAT",
    "LAMINA",
+   "LAMINATING",
+   "LAMING",
+   "LIGATING",
    "LIGNIN",
+   "LIMING",
    "LINT",
+   "MAIMING",
    "MALIGNANT",
+   "MALTING",
    "MANIA",
    "MANNA",
+   "MANTLING",
    "MINIM",
    "MINIMA",
+   "MINTING",
    "NAIL",
-   "TANNIN"
+   "TAILING",
+   "TANGLING",
+   "TANNIN",
+   "TINTING"
   ],
   "pangrams": [
-   "MALIGNANT"
+   "AMALGAMATING",
+   "LAMINATING",
+   "MALIGNANT",
+   "MALTING",
+   "MANTLING"
   ],
-  "max": 509
+  "max": 813
  },
  {
   "date": "2026-11-19",
@@ -1595,13 +1711,16 @@
    "INSISTS",
    "INTO",
    "INTRO",
+   "INTRON",
    "INTRONS",
    "LINT",
+   "LINTS",
    "LIST",
    "LISTS",
    "LOOT",
    "LOST",
    "LOTION",
+   "LOTIONS",
    "LOTS",
    "LOTTO",
    "NITRO",
@@ -1620,6 +1739,7 @@
    "SILT",
    "SITS",
    "SLIT",
+   "SLITS",
    "SLOT",
    "SLOTS",
    "SNORT",
@@ -1635,25 +1755,31 @@
    "STIR",
    "STIRS",
    "STOLON",
+   "STOLONS",
    "STOOL",
    "STOOLS",
    "STROLL",
    "TILL",
    "TILT",
+   "TILTS",
    "TINS",
    "TINT",
+   "TINTS",
    "TOIL",
    "TOLL",
    "TOLLS",
    "TONS",
    "TONSIL",
    "TONSILLITIS",
+   "TONSILS",
    "TOOL",
    "TOOLS",
    "TOOT",
+   "TOOTS",
    "TORN",
    "TORSION",
    "TORSO",
+   "TORSOS",
    "TORT",
    "TOSS",
    "TOTS",
@@ -1666,21 +1792,31 @@
   ],
   "medical": [
    "INOSITOL",
+   "INTRON",
    "INTRONS",
    "LINT",
+   "LINTS",
    "LOTION",
+   "LOTIONS",
    "NOSTRIL",
+   "SLITS",
    "STOLON",
+   "STOLONS",
+   "TILTS",
+   "TINTS",
    "TONSIL",
    "TONSILLITIS",
-   "TORSION"
+   "TONSILS",
+   "TOOTS",
+   "TORSION",
+   "TORSOS"
   ],
   "pangrams": [
    "NOSTRIL",
    "NOSTRILS",
    "TRILLIONS"
   ],
-  "max": 366
+  "max": 482
  },
  {
   "date": "2026-11-20",
