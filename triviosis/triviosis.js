@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{week: "YYYY-MM-DD" (a Monday), number, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", PASS = 6;
   var root = document.getElementById("trv");
   if (!document.querySelector("link[data-trv]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "triviosis.css?v=" + BUILD; l.setAttribute("data-trv", ""); document.head.appendChild(l);
@@ -51,8 +51,11 @@
   };
 
   // ---------- helpers ----------
-  function seeded(seed) { var s = seed % 2147483647; if (s <= 0) s += 2147483646; return function () { s = s * 16807 % 2147483647; return (s - 1) / 2147483646; }; }
-  function options(i) { var x = Z.questions[i], o = [x.a].concat(x.w), r = seeded(dayNum(Z.week) * 31 + i * 7 + 3); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = o[k]; o[k] = o[j]; o[j] = t; } return o; }
+  function seeded(a) { a = a >>> 0; return function () { a = (a + 0x6D2B79F5) >>> 0; var t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  // Answer spread evenly across A-D for each quiz, order shuffled per week
+  var SLOTS = null;
+  function slots() { var n = Z.questions.length, a = [], r = seeded(dayNum(Z.week) * 97 + 11); for (var k = 0; k < n; k++) a.push(k % 4); for (k = n - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; } return a; }
+  function options(i) { var x = Z.questions[i], o = x.w.slice(), r = seeded(dayNum(Z.week) * 31 + i * 7 + 3); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = o[k]; o[k] = o[j]; o[j] = t; } if (!SLOTS || SLOTS.w !== Z.week) { SLOTS = slots(); SLOTS.w = Z.week; } o.splice(Math.min(SLOTS[i], o.length), 0, x.a); return o; }
   function score() { return st.ans.filter(function (a, i) { return a === Z.questions[i].a; }).length; }
 
   // ---------- render ----------
