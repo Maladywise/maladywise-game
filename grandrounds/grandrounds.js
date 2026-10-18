@@ -3,7 +3,7 @@
    quizzes.json: [{week: "YYYY-MM-DD" (a Sunday), number, questions:[{c, q, a, e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", PASS = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", PASS = 10;
   var root = document.getElementById("gdr");
   if (!document.querySelector("link[data-gdr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "grandrounds.css?v=" + BUILD; l.setAttribute("data-gdr", ""); document.head.appendChild(l);
