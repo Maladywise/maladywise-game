@@ -119,13 +119,13 @@ window.MW_GAMES = [
     ],
     accent: "#1F7A8C", accentDark: "#5BC0D3",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8z"/><path d="M20 17a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5"/><circle cx="24" cy="27.5" r=".8" fill="#fff"/></svg>' },
-  { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
-    tagline: "Twenty hard questions. No options. New every Sunday.",
-    quip: "Built for Sunday mornings in bed, quizzing whoever\u2019s next to you.",
+  { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
+    tagline: "Twenty hard medical questions. No options. New every Sunday.",
+    quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
     helpQuip: "No multiple choice to hide behind. Just you and your memory.",
     help: [
-      "Twenty hard general knowledge questions, from history to the brain-melter at the end.",
-      "Play solo, or pick \u2018Two of us\u2019: one reads aloud, the other answers.",
+      "Twenty hard medical and medical-adjacent questions, ending with a brain-melter.",
+      "Play solo, or pick Head to head: one reads aloud, the other answers.",
       "Tap Show answer, then mark who got it. Be honest. Or don\u2019t.",
       "Ten or more is a good Sunday. A new quiz every Sunday at midnight, Sydney time."
     ],

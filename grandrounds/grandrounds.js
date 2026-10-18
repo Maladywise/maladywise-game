@@ -3,7 +3,7 @@
    quizzes.json: [{week: "YYYY-MM-DD" (a Sunday), number, questions:[{c, q, a, e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", PASS = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", PASS = 10;
   var root = document.getElementById("gdr");
   if (!document.querySelector("link[data-gdr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "grandrounds.css?v=" + BUILD; l.setAttribute("data-gdr", ""); document.head.appendChild(l);
@@ -39,21 +39,21 @@
 
   var SASS = {
     end: function (s) {
-      if (s === 20) return "20 out of 20. Insufferable. We\u2019re checking for a phone under the pillow.";
-      if (s >= 16) return "Formidable. The pub quiz team wants you back.";
-      if (s >= 12) return "Strong. Coffee earned.";
-      if (s >= 8) return "Respectable, for a Sunday.";
-      if (s >= 4) return "Still waking up, clearly.";
-      return "Go back to sleep. Try again next week.";
+      if (s === 20) return "20 out of 20. Insufferable. We\u2019re checking your pockets for a textbook.";
+      if (s >= 16) return "Formidable. Consultant material.";
+      if (s >= 12) return "Strong. Registrar energy.";
+      if (s >= 8) return "Respectable. You\u2019d survive the ward round.";
+      if (s >= 4) return "Patchy. Revision recommended.";
+      return "Rough. Back to the textbooks. New quiz next Sunday.";
     },
     duo: function (a, b, na, nb) {
-      if (a === b) return "A dead heat. Breakfast is a shared responsibility.";
+      if (a === b) return "A dead heat. Rematch next Sunday.";
       var w = a > b ? na : nb, d = Math.abs(a - b);
-      return d >= 5 ? w + " wins by a distance. " + (a > b ? nb : na) + " makes the coffee." : w + " edges it. Someone is going to mention this all day.";
+      return d >= 5 ? w + " wins by a distance. " + (a > b ? nb : na) + " buys the coffee." : w + " edges it. Expect to hear about this all week.";
     }
   };
 
-  function names() { return (st && st.names) || load(NKEY, ["You", "Partner"]); }
+  function names() { return (st && st.names) || load(NKEY, ["You", "Opponent"]); }
   function tally(p) { return st.marks.reduce(function (t, m) { return t + (m[p] ? 1 : 0); }, 0); }
 
   // ---------- render ----------
@@ -88,13 +88,13 @@
   }
 
   function renderSetup() {
-    var nm = load(NKEY, ["You", "Partner"]);
+    var nm = load(NKEY, ["You", "Opponent"]);
     $("prog").innerHTML = "";
     $("result").hidden = true; $("card").hidden = false;
     $("card").innerHTML = '<div class="qtop"><span class="qn">Before you start</span></div><h2 class="qt">Twenty questions. No options. Just you and what you remember.</h2>' +
-      '<p class="hint">Best played in bed with a coffee and someone to quiz. One reads, the other answers. Or swap.</p>' +
-      '<div class="modes"><button type="button" class="mode" data-mode="solo"><b>Just me</b><span>Mark yourself honestly</span></button><button type="button" class="mode" data-mode="duo"><b>Two of us</b><span>Keep score for both</span></button></div>' +
-      '<div class="names" id="gdr-names" hidden><label>Player one<input id="gdr-n0" maxlength="14" value="' + esc(nm[0]) + '"></label><label>Player two<input id="gdr-n1" maxlength="14" value="' + esc(nm[1]) + '"></label><button type="button" class="next" id="gdr-begin">Start</button></div>';
+      '<p class="hint">Play solo, or head to head: one reads aloud, the other answers. Then swap.</p>' +
+      '<div class="modes"><button type="button" class="mode" data-mode="solo"><b>Just me</b><span>Mark yourself honestly</span></button><button type="button" class="mode" data-mode="duo"><b>Head to head</b><span>Keep score for two</span></button></div>' +
+      '<div class="names" id="gdr-names" hidden><label>You<input id="gdr-n0" maxlength="14" value="' + esc(nm[0]) + '"></label><label>Opponent<input id="gdr-n1" maxlength="14" value="' + esc(nm[1]) + '"></label><button type="button" class="next" id="gdr-begin">Start</button></div>';
   }
 
   function renderResult() {
@@ -118,7 +118,7 @@
         var tag = duo ? (m[0] ? "\u2713" : "\u2715") + " " + esc(nm[0]) + " \u00b7 " + (m[1] ? "\u2713" : "\u2715") + " " + esc(nm[1]) : m[0] ? "\u2713 Got it" : "\u2715 Missed";
         return "<li><b>" + esc(x.q) + '</b><span class="ok">' + esc(x.a) + '</span><span class="' + (m[0] || (duo && m[1]) ? "ok" : "no") + ' sm">' + tag + "</span>" + (x.e ? "<em>" + esc(x.e) + "</em>" : "") + "</li>";
       }).join("") + "</ol></details>" +
-      '<button type="button" class="btn" id="gdr-again">Play again with someone else</button>';
+      '<button type="button" class="btn" id="gdr-again">Rematch with someone new</button>';
     $("copy").onclick = function () {
       var bt = this;
       function selx() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); bt.textContent = "Selected. Copy it"; }
@@ -160,7 +160,7 @@
       $("names").hidden = false; Array.prototype.forEach.call($("card").querySelectorAll(".mode"), function (x) { x.classList.toggle("on", x === b); }); $("n0").focus(); return;
     }
     if (b.id === "gdr-begin") {
-      var nm = [($("n0").value || "").trim() || "You", ($("n1").value || "").trim() || "Partner"];
+      var nm = [($("n0").value || "").trim() || "You", ($("n1").value || "").trim() || "Opponent"];
       put(NKEY, nm); st = { mode: "duo", names: nm, marks: [], shown: false, cur: [0, 0], done: false }; put(KEY, st); render(); return;
     }
     if (!st || st.done) return;

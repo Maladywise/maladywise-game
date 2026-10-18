@@ -4,124 +4,124 @@
   "number": 1,
   "questions": [
    {
-    "c": "History",
-    "q": "Which city, founded around 1325 on an island in Lake Texcoco, was the capital of the Aztec Empire?",
-    "a": "Tenochtitlan",
-    "e": "Modern Mexico City sits on top of it."
-   },
-   {
-    "c": "Science",
-    "q": "Which metal has the highest melting point?",
-    "a": "Tungsten",
-    "e": "About 3,422\u00b0C. Hence light-bulb filaments."
-   },
-   {
-    "c": "Geography",
-    "q": "What is the capital of Bhutan?",
-    "a": "Thimphu",
-    "e": "One of the few capitals with no traffic lights."
-   },
-   {
-    "c": "Literature",
-    "q": "Which novel opens: \u2018Happy families are all alike; every unhappy family is unhappy in its own way\u2019?",
-    "a": "Anna Karenina",
-    "e": "Leo Tolstoy, 1878."
-   },
-   {
-    "c": "Art",
-    "q": "Who painted \u2018The Garden of Earthly Delights\u2019?",
-    "a": "Hieronymus Bosch",
-    "e": "Dutch, around 1500. It hangs in the Prado."
-   },
-   {
-    "c": "Music",
-    "q": "Whose ballet \u2018The Rite of Spring\u2019 caused a near-riot at its 1913 Paris premiere?",
-    "a": "Igor Stravinsky",
-    "e": "Booing, fights, and a lot of very offended Parisians."
-   },
-   {
-    "c": "Sport",
-    "q": "Which country won the first FIFA World Cup, in 1930?",
-    "a": "Uruguay",
-    "e": "They hosted it too, beating Argentina 4\u20132 in the final."
-   },
-   {
-    "c": "Language",
-    "q": "What does the Latin phrase \u2018caveat emptor\u2019 mean?",
-    "a": "Let the buyer beware",
-    "e": ""
-   },
-   {
-    "c": "Nature",
-    "q": "Which animal is the fastest on Earth, when diving?",
-    "a": "Peregrine falcon",
-    "e": "Over 300 km/h in a stoop."
-   },
-   {
-    "c": "Food",
-    "q": "Which spice comes from the dried stigmas of a crocus flower?",
-    "a": "Saffron",
-    "e": "Each flower gives three stigmas. Hence the price."
-   },
-   {
-    "c": "Film",
-    "q": "Which film won the very first Academy Award for Best Picture?",
-    "a": "Wings",
-    "e": "A 1927 silent war film, honoured at the 1929 ceremony."
-   },
-   {
-    "c": "Medicine",
+    "c": "History of medicine",
     "q": "Which Hungarian obstetrician championed handwashing in the 1840s and died in an asylum?",
     "a": "Ignaz Semmelweis",
     "e": "Proven right after his death. Wash your hands."
    },
    {
-    "c": "Space",
-    "q": "On which planet is a day longer than a year?",
-    "a": "Venus",
-    "e": "About 243 Earth days to spin once; 225 to orbit the Sun."
+    "c": "Anatomy",
+    "q": "Which bone is the only one in the body that doesn\u2019t articulate with another bone?",
+    "a": "The hyoid",
+    "e": "Held in place by muscles and ligaments alone."
    },
    {
-    "c": "History",
-    "q": "Which 1494 treaty divided newly discovered lands between Spain and Portugal?",
-    "a": "Treaty of Tordesillas",
-    "e": "Why Brazil speaks Portuguese."
+    "c": "Pharmacology",
+    "q": "William Withering described which heart drug in 1785, from the foxglove plant?",
+    "a": "Digitalis",
+    "e": "Accept digoxin."
    },
    {
-    "c": "Geography",
-    "q": "What is the longest river in Europe?",
-    "a": "The Volga",
-    "e": "About 3,500 km, entirely within Russia."
+    "c": "Eponyms",
+    "q": "\u2018Saturday night palsy\u2019 is a compression injury of which nerve?",
+    "a": "The radial nerve",
+    "e": "Arm draped over a chair after a big night. Wrist drop follows."
    },
    {
-    "c": "Science",
-    "q": "What is the SI unit of electrical capacitance?",
-    "a": "The farad",
-    "e": "Named after Michael Faraday."
+    "c": "Microbiology",
+    "q": "Which fungus causes \u2018rose gardener\u2019s disease\u2019?",
+    "a": "Sporothrix schenckii",
+    "e": "Sporotrichosis, from a thorn prick."
    },
    {
-    "c": "Maths",
-    "q": "What is the next prime number after 89?",
-    "a": "97",
-    "e": "91 is the trap: 7 \u00d7 13."
+    "c": "On screen",
+    "q": "In the early seasons of \u2018Grey\u2019s Anatomy\u2019, what was the hospital called?",
+    "a": "Seattle Grace Hospital",
+    "e": "Later Seattle Grace Mercy West, then Grey Sloan Memorial."
    },
    {
-    "c": "Mythology",
-    "q": "In Greek myth, who was the mother of Perseus?",
-    "a": "Dana\u00eb",
-    "e": "Zeus visited her as a shower of gold."
+    "c": "Etymology",
+    "q": "The word \u2018malaria\u2019 comes from Italian for what?",
+    "a": "Bad air",
+    "e": "Mala aria. Blame the swamps, not the mosquitoes."
    },
    {
-    "c": "Literature",
-    "q": "What was George Orwell\u2019s real name?",
-    "a": "Eric Arthur Blair",
+    "c": "Physiology",
+    "q": "How long does a red blood cell live, on average?",
+    "a": "About 120 days",
+    "e": ""
+   },
+   {
+    "c": "Famous patients",
+    "q": "Which US president secretly had Addison\u2019s disease?",
+    "a": "John F. Kennedy",
+    "e": ""
+   },
+   {
+    "c": "Language",
+    "q": "What is the fear of long words called?",
+    "a": "Hippopotomonstrosesquippedaliophobia",
+    "e": "Cruel, really."
+   },
+   {
+    "c": "Nobel Prizes",
+    "q": "Who shared the 1923 Nobel Prize for the discovery of insulin?",
+    "a": "Frederick Banting and John Macleod",
+    "e": "Banting shared his half with Charles Best."
+   },
+   {
+    "c": "Pathology",
+    "q": "What is the most common primary malignant bone tumour in adolescents?",
+    "a": "Osteosarcoma",
+    "e": ""
+   },
+   {
+    "c": "By the numbers",
+    "q": "Roughly how many litres of blood does the heart pump per minute at rest?",
+    "a": "About 5 litres",
+    "e": "Cardiac output: heart rate \u00d7 stroke volume."
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which poison is classically said to smell of bitter almonds?",
+    "a": "Cyanide",
+    "e": "Not everyone can smell it. It\u2019s genetic."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which Persian physician wrote \u2018The Canon of Medicine\u2019 around 1025?",
+    "a": "Avicenna",
+    "e": "Ibn Sina. A standard textbook for 600 years."
+   },
+   {
+    "c": "Anatomy",
+    "q": "What is the longest nerve in the human body?",
+    "a": "The sciatic nerve",
+    "e": ""
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Aspirin\u2019s ancestor came from the bark of which tree?",
+    "a": "Willow",
+    "e": "Salicylates, from Salix."
+   },
+   {
+    "c": "In print",
+    "q": "Which creator of Sherlock Holmes was also a doctor?",
+    "a": "Arthur Conan Doyle",
+    "e": "Holmes was based on his teacher, Dr Joseph Bell."
+   },
+   {
+    "c": "Eponyms",
+    "q": "What are the transverse grooves across the nails after a severe illness called?",
+    "a": "Beau\u2019s lines",
     "e": ""
    },
    {
     "c": "Brain-melter",
-    "q": "How many squares of any size are there on a standard chessboard?",
-    "a": "204",
-    "e": "64 + 49 + 36 + 25 + 16 + 9 + 4 + 1."
+    "q": "What is the longest word in major English dictionaries, a lung disease from fine silica dust?",
+    "a": "Pneumonoultramicroscopicsilicovolcanoconiosis",
+    "e": "Invented in 1935 to be the longest word. It worked."
    }
   ]
  },
@@ -130,124 +130,124 @@
   "number": 2,
   "questions": [
    {
-    "c": "History",
-    "q": "Which Roman emperor reputedly planned to make his horse, Incitatus, a consul?",
-    "a": "Caligula",
-    "e": "Probably satire. Probably."
+    "c": "History of medicine",
+    "q": "Who gave the first public demonstration of ether anaesthesia, in Boston in 1846?",
+    "a": "William Morton",
+    "e": "At Massachusetts General. The room is now the Ether Dome."
    },
    {
-    "c": "Science",
-    "q": "Which mineral sits at 9 on the Mohs hardness scale?",
-    "a": "Corundum",
-    "e": "Ruby and sapphire are both corundum."
+    "c": "Anatomy",
+    "q": "What is the smallest skeletal muscle in the body?",
+    "a": "Stapedius",
+    "e": "It dampens the stapes against loud noise."
    },
    {
-    "c": "Geography",
-    "q": "What is the capital of Kazakhstan?",
-    "a": "Astana",
-    "e": "Called Nur-Sultan from 2019 to 2022, then renamed back."
+    "c": "Pharmacology",
+    "q": "Drugs ending in \u2018-pril\u2019 belong to which class?",
+    "a": "ACE inhibitors",
+    "e": "Ramipril, perindopril and friends. Hello, dry cough."
    },
    {
-    "c": "Literature",
-    "q": "Who wrote \u2018One Hundred Years of Solitude\u2019?",
-    "a": "Gabriel Garc\u00eda M\u00e1rquez",
-    "e": "Colombian, Nobel Prize 1982."
+    "c": "Eponyms",
+    "q": "Kernig\u2019s and Brudzinski\u2019s signs are classic signs of what?",
+    "a": "Meningitis",
+    "e": "Classic, but not very sensitive."
    },
    {
-    "c": "Art",
-    "q": "Which Dutch artist painted \u2018Girl with a Pearl Earring\u2019?",
-    "a": "Johannes Vermeer",
-    "e": "Fewer than 40 of his paintings survive."
-   },
-   {
-    "c": "Music",
-    "q": "Which instrument did jazz great John Coltrane mainly play?",
-    "a": "Saxophone",
-    "e": "Tenor and soprano."
-   },
-   {
-    "c": "Sport",
-    "q": "In golf, what is three under par on a single hole called?",
-    "a": "An albatross",
-    "e": "Also called a double eagle."
-   },
-   {
-    "c": "Language",
-    "q": "Which language has the most native speakers?",
-    "a": "Mandarin Chinese",
-    "e": "English wins only when you add second-language speakers."
-   },
-   {
-    "c": "Nature",
-    "q": "What is the largest living species of lizard?",
-    "a": "Komodo dragon",
-    "e": "Up to 3 m. Venomous, too."
-   },
-   {
-    "c": "Food",
-    "q": "Which country does Manchego cheese come from?",
-    "a": "Spain",
-    "e": "From the La Mancha region, made with sheep\u2019s milk."
-   },
-   {
-    "c": "Film",
-    "q": "Who directed \u2018Seven Samurai\u2019 (1954)?",
-    "a": "Akira Kurosawa",
-    "e": "Later remade as \u2018The Magnificent Seven\u2019."
-   },
-   {
-    "c": "Medicine",
-    "q": "Which two scientists won the 2005 Nobel Prize for discovering that H. pylori causes ulcers?",
-    "a": "Barry Marshall and Robin Warren",
-    "e": "Marshall drank a culture to prove it."
-   },
-   {
-    "c": "Space",
-    "q": "Who was the first woman in space?",
-    "a": "Valentina Tereshkova",
-    "e": "Vostok 6, 1963."
-   },
-   {
-    "c": "History",
-    "q": "Which queen ruled England for just nine days in 1553?",
-    "a": "Lady Jane Grey",
-    "e": "Executed the following year."
-   },
-   {
-    "c": "Geography",
-    "q": "Which country has three capital cities?",
-    "a": "South Africa",
-    "e": "Pretoria, Cape Town and Bloemfontein."
-   },
-   {
-    "c": "Science",
-    "q": "Which subatomic particle did J. J. Thomson discover in 1897?",
-    "a": "The electron",
+    "c": "Microbiology",
+    "q": "Which bacterium causes cat-scratch disease?",
+    "a": "Bartonella henselae",
     "e": ""
    },
    {
-    "c": "Maths",
-    "q": "What do the interior angles of a hexagon add up to?",
-    "a": "720 degrees",
-    "e": "(6 \u2212 2) \u00d7 180."
+    "c": "On screen",
+    "q": "Who played paediatrician Doug Ross in \u2018ER\u2019?",
+    "a": "George Clooney",
+    "e": ""
    },
    {
-    "c": "Mythology",
-    "q": "In Norse myth, what is the name of the great world tree?",
-    "a": "Yggdrasil",
-    "e": "An ash tree linking the nine worlds."
+    "c": "Etymology",
+    "q": "\u2018Influenza\u2019 comes from the Italian for what?",
+    "a": "Influence",
+    "e": "Of the stars, supposedly."
    },
    {
-    "c": "Literature",
-    "q": "In \u2018Moby-Dick\u2019, what is the name of Captain Ahab\u2019s ship?",
-    "a": "The Pequod",
-    "e": "The coffee chain is named after its first mate, Starbuck."
+    "c": "Physiology",
+    "q": "Which hormone does the pineal gland secrete?",
+    "a": "Melatonin",
+    "e": ""
+   },
+   {
+    "c": "Famous patients",
+    "q": "Which physicist lived with motor neurone disease for over 50 years?",
+    "a": "Stephen Hawking",
+    "e": "Diagnosed at 21. Died at 76."
+   },
+   {
+    "c": "Language",
+    "q": "What is a borborygmus?",
+    "a": "A rumbling stomach",
+    "e": "Plural: borborygmi."
+   },
+   {
+    "c": "Nobel Prizes",
+    "q": "Who shared the 1962 Nobel Prize with Watson and Crick for DNA\u2019s structure?",
+    "a": "Maurice Wilkins",
+    "e": "Rosalind Franklin had died in 1958."
+   },
+   {
+    "c": "Pathology",
+    "q": "Reed\u2013Sternberg cells are the hallmark of which cancer?",
+    "a": "Hodgkin lymphoma",
+    "e": "The \u2018owl\u2019s eye\u2019 cells."
+   },
+   {
+    "c": "By the numbers",
+    "q": "How many bones are in one human hand and wrist?",
+    "a": "27",
+    "e": "8 carpals, 5 metacarpals, 14 phalanges."
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which plant poison was used to execute Socrates?",
+    "a": "Hemlock",
+    "e": ""
+   },
+   {
+    "c": "History of medicine",
+    "q": "Who pioneered antiseptic surgery using carbolic acid in the 1860s?",
+    "a": "Joseph Lister",
+    "e": "Yes, Listerine."
+   },
+   {
+    "c": "Anatomy",
+    "q": "What are you actually hitting when you bang your \u2018funny bone\u2019?",
+    "a": "The ulnar nerve",
+    "e": "Not funny. Not a bone."
+   },
+   {
+    "c": "Pharmacology",
+    "q": "What is the antidote to paracetamol overdose?",
+    "a": "N-acetylcysteine",
+    "e": "Accept NAC or acetylcysteine."
+   },
+   {
+    "c": "On screen",
+    "q": "In \u2018Scrubs\u2019, who is JD\u2019s reluctant mentor?",
+    "a": "Dr Perry Cox",
+    "e": ""
+   },
+   {
+    "c": "Eponyms",
+    "q": "Which spots inside the mouth are an early sign of measles?",
+    "a": "Koplik spots",
+    "e": "Grains of salt on a red background."
    },
    {
     "c": "Brain-melter",
-    "q": "How many keys are on a standard modern piano?",
-    "a": "88",
-    "e": "52 white, 36 black."
+    "q": "What is the medical term for brain freeze?",
+    "a": "Sphenopalatine ganglioneuralgia",
+    "e": "From eating ice cream too fast."
    }
   ]
  },
@@ -256,124 +256,124 @@
   "number": 3,
   "questions": [
    {
-    "c": "History",
-    "q": "Which Byzantine emperor built the Hagia Sophia that stands today, completed in 537?",
-    "a": "Justinian I",
-    "e": ""
-   },
-   {
-    "c": "Science",
-    "q": "What is the chemical symbol for tin?",
-    "a": "Sn",
-    "e": "From the Latin stannum."
-   },
-   {
-    "c": "Geography",
-    "q": "What is the deepest lake in the world?",
-    "a": "Lake Baikal",
-    "e": "Over 1,600 m deep, in Siberia."
-   },
-   {
-    "c": "Literature",
-    "q": "Which Bront\u00eb sister wrote \u2018The Tenant of Wildfell Hall\u2019?",
-    "a": "Anne Bront\u00eb",
-    "e": "The forgotten Bront\u00eb. Not today."
-   },
-   {
-    "c": "Art",
-    "q": "Who sculpted \u2018The Thinker\u2019?",
-    "a": "Auguste Rodin",
-    "e": ""
-   },
-   {
-    "c": "Music",
-    "q": "Which Baroque composer wrote \u2018The Four Seasons\u2019?",
-    "a": "Antonio Vivaldi",
-    "e": "Also a priest, nicknamed the Red Priest."
-   },
-   {
-    "c": "Sport",
-    "q": "How long is a marathon, in kilometres?",
-    "a": "42.195 km",
-    "e": "Accept 42.2."
-   },
-   {
-    "c": "Language",
-    "q": "What does the German word \u2018Schadenfreude\u2019 mean?",
-    "a": "Pleasure at someone else\u2019s misfortune",
-    "e": ""
-   },
-   {
-    "c": "Nature",
-    "q": "How many hearts does an octopus have?",
-    "a": "Three",
-    "e": "Two for the gills, one for the body. Blue blood, too."
-   },
-   {
-    "c": "Food",
-    "q": "Which nut is the main ingredient of marzipan?",
-    "a": "Almond",
-    "e": ""
-   },
-   {
-    "c": "Film",
-    "q": "What is the name of the hotel in Kubrick\u2019s \u2018The Shining\u2019?",
-    "a": "The Overlook Hotel",
-    "e": ""
-   },
-   {
-    "c": "Medicine",
-    "q": "Who performed the first human heart transplant, in 1967?",
+    "c": "History of medicine",
+    "q": "Who performed the first human-to-human heart transplant, in 1967?",
     "a": "Christiaan Barnard",
     "e": "At Groote Schuur Hospital, Cape Town."
    },
    {
-    "c": "Space",
-    "q": "What is the largest volcano in the solar system?",
-    "a": "Olympus Mons",
-    "e": "On Mars. About 2.5 times the height of Everest."
-   },
-   {
-    "c": "History",
-    "q": "Who was the first emperor of a unified China?",
-    "a": "Qin Shi Huang",
-    "e": "Buried with the Terracotta Army."
-   },
-   {
-    "c": "Geography",
-    "q": "Which country has the most time zones, counting overseas territories?",
-    "a": "France",
-    "e": "12, thanks to its territories scattered around the globe."
-   },
-   {
-    "c": "Science",
-    "q": "What is absolute zero in degrees Celsius?",
-    "a": "\u2212273.15\u00b0C",
+    "c": "Anatomy",
+    "q": "Which organ contains the islets of Langerhans?",
+    "a": "The pancreas",
     "e": ""
    },
    {
-    "c": "Maths",
-    "q": "What is 1999 in Roman numerals?",
-    "a": "MCMXCIX",
+    "c": "Pharmacology",
+    "q": "Sildenafil (Viagra) was first trialled for which condition?",
+    "a": "Angina",
+    "e": "The side effect stole the show."
+   },
+   {
+    "c": "Eponyms",
+    "q": "Erb\u2019s palsy is an injury to which nerve network?",
+    "a": "The brachial plexus",
+    "e": "Upper roots, C5\u2013C6. \u2018Waiter\u2019s tip\u2019 posture."
+   },
+   {
+    "c": "Microbiology",
+    "q": "Which virus causes both chickenpox and shingles?",
+    "a": "Varicella-zoster virus",
+    "e": "It never really leaves."
+   },
+   {
+    "c": "On screen",
+    "q": "Which city is the emergency department in \u2018The Pitt\u2019 set in?",
+    "a": "Pittsburgh",
     "e": ""
    },
    {
-    "c": "Mythology",
-    "q": "Which Egyptian god has the head of a jackal?",
-    "a": "Anubis",
-    "e": "God of embalming and the dead."
+    "c": "Etymology",
+    "q": "\u2018Quarantine\u2019 comes from the Italian for what?",
+    "a": "Forty days",
+    "e": "Quaranta giorni. Venice made plague ships wait."
    },
    {
-    "c": "Literature",
-    "q": "Who wrote the 1922 poem \u2018The Waste Land\u2019?",
-    "a": "T. S. Eliot",
+    "c": "Physiology",
+    "q": "What is the normal pH range of arterial blood?",
+    "a": "7.35 to 7.45",
     "e": ""
+   },
+   {
+    "c": "Famous patients",
+    "q": "Which US president was paralysed by an illness diagnosed as polio in 1921?",
+    "a": "Franklin D. Roosevelt",
+    "e": "Some now suspect Guillain\u2013Barr\u00e9 syndrome."
+   },
+   {
+    "c": "Language",
+    "q": "What is the medical term for hiccups?",
+    "a": "Singultus",
+    "e": ""
+   },
+   {
+    "c": "Nobel Prizes",
+    "q": "Which two scientists shared the 1945 Nobel Prize with Alexander Fleming?",
+    "a": "Howard Florey and Ernst Chain",
+    "e": "They turned penicillin into a usable drug."
+   },
+   {
+    "c": "Pathology",
+    "q": "Deficiency of which vitamin causes beriberi?",
+    "a": "Thiamine (vitamin B1)",
+    "e": ""
+   },
+   {
+    "c": "By the numbers",
+    "q": "Roughly how many protein-coding genes are in the human genome?",
+    "a": "About 20,000",
+    "e": "Fewer than a grape has."
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which metal caused the \u2018mad hatter\u2019 symptoms in hat makers?",
+    "a": "Mercury",
+    "e": "Used to treat felt."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Who was known as \u2018the Lady with the Lamp\u2019?",
+    "a": "Florence Nightingale",
+    "e": "Also a pioneering statistician."
+   },
+   {
+    "c": "Anatomy",
+    "q": "Which chamber of the heart has the thickest wall?",
+    "a": "The left ventricle",
+    "e": ""
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Which chemotherapy drug was first isolated from the Pacific yew tree?",
+    "a": "Paclitaxel",
+    "e": "Accept Taxol."
+   },
+   {
+    "c": "On screen",
+    "q": "Which 1966 film shrinks a medical team to travel through a man\u2019s bloodstream?",
+    "a": "Fantastic Voyage",
+    "e": ""
+   },
+   {
+    "c": "Eponyms",
+    "q": "Virchow\u2019s triad describes the causes of what?",
+    "a": "Thrombosis",
+    "e": "Stasis, endothelial injury and hypercoagulability."
    },
    {
     "c": "Brain-melter",
-    "q": "What colour is an aircraft\u2019s \u2018black box\u2019 flight recorder?",
-    "a": "Orange",
-    "e": "Bright orange, to be found in wreckage."
+    "q": "Which parts of the body have the highest density of sweat glands?",
+    "a": "The palms and soles",
+    "e": "Hence sweaty palms in exams."
    }
   ]
  },
@@ -382,124 +382,124 @@
   "number": 4,
   "questions": [
    {
-    "c": "History",
-    "q": "Which Carthaginian general crossed the Alps with war elephants?",
-    "a": "Hannibal",
-    "e": "218 BC, to attack Rome."
+    "c": "History of medicine",
+    "q": "Who discovered X-rays in 1895?",
+    "a": "Wilhelm R\u00f6ntgen",
+    "e": "The first X-ray image was his wife\u2019s hand."
    },
    {
-    "c": "Science",
-    "q": "Which element has the chemical symbol K?",
-    "a": "Potassium",
-    "e": "From the Latin kalium."
-   },
-   {
-    "c": "Geography",
-    "q": "Which country is completely surrounded by South Africa?",
-    "a": "Lesotho",
-    "e": "Its lowest point is higher than any other country\u2019s."
-   },
-   {
-    "c": "Literature",
-    "q": "Who wrote \u2018The Master and Margarita\u2019?",
-    "a": "Mikhail Bulgakov",
-    "e": "Published decades after his death. Features a giant talking cat."
-   },
-   {
-    "c": "Art",
-    "q": "Which Mexican artist is famous for her self-portraits with a unibrow?",
-    "a": "Frida Kahlo",
-    "e": ""
-   },
-   {
-    "c": "Music",
-    "q": "Which band released \u2018The Dark Side of the Moon\u2019 in 1973?",
-    "a": "Pink Floyd",
-    "e": "Stayed on the Billboard 200 for over 900 weeks."
-   },
-   {
-    "c": "Sport",
-    "q": "In snooker, how many points is the black ball worth?",
-    "a": "Seven",
-    "e": "A maximum break is 147."
-   },
-   {
-    "c": "Language",
-    "q": "What is a sentence that uses every letter of the alphabet called?",
-    "a": "A pangram",
-    "e": "The quick brown fox, etc."
-   },
-   {
-    "c": "Nature",
-    "q": "Which is the only bird that can fly backwards?",
-    "a": "Hummingbird",
-    "e": ""
-   },
-   {
-    "c": "Food",
-    "q": "The croissant descends from the kipferl. Which country does the kipferl come from?",
-    "a": "Austria",
-    "e": "Accept Vienna."
-   },
-   {
-    "c": "Film",
-    "q": "Who composed the scores for \u2018Jaws\u2019 and \u2018Star Wars\u2019?",
-    "a": "John Williams",
-    "e": ""
-   },
-   {
-    "c": "Medicine",
+    "c": "Anatomy",
     "q": "What is the smallest bone in the human body?",
     "a": "The stapes",
     "e": "In the middle ear. About 3 mm."
    },
    {
-    "c": "Space",
-    "q": "Roughly how long does sunlight take to reach Earth?",
-    "a": "About 8 minutes",
-    "e": "About 8 minutes 20 seconds."
+    "c": "Pharmacology",
+    "q": "Semaglutide (Ozempic) mimics which gut hormone?",
+    "a": "GLP-1",
+    "e": "Glucagon-like peptide-1."
    },
    {
-    "c": "History",
-    "q": "Which civilisation built Machu Picchu?",
-    "a": "The Inca",
-    "e": "Built in the 15th century."
+    "c": "Eponyms",
+    "q": "Whose sign is calf pain on dorsiflexion of the foot, once taught for DVT?",
+    "a": "Homans\u2019 sign",
+    "e": "Now considered unreliable."
    },
    {
-    "c": "Geography",
-    "q": "Which is the highest capital city in the world?",
-    "a": "La Paz",
-    "e": "Bolivia\u2019s seat of government, at about 3,600 m."
+    "c": "Microbiology",
+    "q": "\u2018Typhoid Mary\u2019 was a carrier of which bacterium?",
+    "a": "Salmonella Typhi",
+    "e": "A cook. Never ill herself."
    },
    {
-    "c": "Science",
-    "q": "What is the bond between two amino acids called?",
-    "a": "A peptide bond",
+    "c": "On screen",
+    "q": "What was Derek Shepherd\u2019s nickname in \u2018Grey\u2019s Anatomy\u2019?",
+    "a": "McDreamy",
     "e": ""
    },
    {
-    "c": "Maths",
-    "q": "What is 0! (zero factorial)?",
-    "a": "1",
-    "e": "By definition. Yes, really."
+    "c": "Etymology",
+    "q": "\u2018Vaccine\u2019 comes from the Latin for which animal?",
+    "a": "Cow",
+    "e": "Vacca. Jenner used cowpox."
    },
    {
-    "c": "Mythology",
-    "q": "Who is the Roman equivalent of the Greek god Hermes?",
-    "a": "Mercury",
+    "c": "Physiology",
+    "q": "Which ion mainly sets the resting membrane potential of cells?",
+    "a": "Potassium",
     "e": ""
    },
    {
-    "c": "Literature",
-    "q": "In \u2018Nineteen Eighty-Four\u2019, which room holds your worst fear?",
-    "a": "Room 101",
+    "c": "Famous patients",
+    "q": "Patient H.M. lost the ability to form new memories after surgery removed which structures?",
+    "a": "The hippocampi",
+    "e": "Both medial temporal lobes, in 1953."
+   },
+   {
+    "c": "Language",
+    "q": "What is the medical term for goosebumps?",
+    "a": "Piloerection",
+    "e": "Accept cutis anserina."
+   },
+   {
+    "c": "Nobel Prizes",
+    "q": "Which two scientists won the 2005 Nobel Prize for showing H. pylori causes ulcers?",
+    "a": "Barry Marshall and Robin Warren",
+    "e": "Marshall drank a culture to prove it."
+   },
+   {
+    "c": "Pathology",
+    "q": "The Philadelphia chromosome is a swap between which two chromosomes?",
+    "a": "9 and 22",
+    "e": "The BCR-ABL fusion gene."
+   },
+   {
+    "c": "By the numbers",
+    "q": "Roughly what is an average adult\u2019s total lung capacity?",
+    "a": "About 6 litres",
+    "e": ""
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which toxin, one of the most lethal known, is injected to smooth wrinkles?",
+    "a": "Botulinum toxin",
+    "e": ""
+   },
+   {
+    "c": "History of medicine",
+    "q": "In 1854, John Snow removed the handle of a cholera-spreading pump on which London street?",
+    "a": "Broad Street",
+    "e": "The birth of epidemiology."
+   },
+   {
+    "c": "Anatomy",
+    "q": "What is the largest internal organ?",
+    "a": "The liver",
+    "e": ""
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Morphine is named after which Greek god?",
+    "a": "Morpheus",
+    "e": "God of dreams."
+   },
+   {
+    "c": "On screen",
+    "q": "What is the hospital called in \u2018Scrubs\u2019?",
+    "a": "Sacred Heart",
+    "e": ""
+   },
+   {
+    "c": "Eponyms",
+    "q": "Cushing\u2019s, Addison\u2019s and Conn\u2019s syndromes all involve which gland?",
+    "a": "The adrenal gland",
     "e": ""
    },
    {
     "c": "Brain-melter",
-    "q": "What is the national animal of Scotland?",
-    "a": "The unicorn",
-    "e": ""
+    "q": "Which hormone was the first medicine made using recombinant DNA?",
+    "a": "Insulin",
+    "e": "Human insulin, approved in 1982."
    }
   ]
  },
@@ -508,124 +508,124 @@
   "number": 5,
   "questions": [
    {
-    "c": "History",
-    "q": "Whose tomb did Howard Carter open in 1922?",
-    "a": "Tutankhamun",
+    "c": "History of medicine",
+    "q": "Who developed the first effective polio vaccine, the injected inactivated one?",
+    "a": "Jonas Salk",
+    "e": "He didn\u2019t patent it. \u2018Could you patent the sun?\u2019"
+   },
+   {
+    "c": "Anatomy",
+    "q": "Which valve sits between the left atrium and left ventricle?",
+    "a": "The mitral valve",
+    "e": "Named for its resemblance to a bishop\u2019s mitre."
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Before it was a medicine, what was warfarin sold as?",
+    "a": "Rat poison",
+    "e": "Named after WARF, the Wisconsin foundation that patented it."
+   },
+   {
+    "c": "Eponyms",
+    "q": "Which disease is known as \u2018Lou Gehrig\u2019s disease\u2019 in the US?",
+    "a": "Motor neurone disease",
+    "e": "Accept ALS."
+   },
+   {
+    "c": "Microbiology",
+    "q": "Which organism is the classic cause of \u2018walking pneumonia\u2019?",
+    "a": "Mycoplasma pneumoniae",
+    "e": "No cell wall, so penicillins do nothing."
+   },
+   {
+    "c": "On screen",
+    "q": "What is Dr House\u2019s first name?",
+    "a": "Gregory",
+    "e": "It\u2019s never lupus. Except once."
+   },
+   {
+    "c": "Etymology",
+    "q": "\u2018Muscle\u2019 comes from the Latin for what?",
+    "a": "Little mouse",
+    "e": "Musculus. A flexed bicep looks like a mouse under the skin."
+   },
+   {
+    "c": "Physiology",
+    "q": "Which part of the brain is the body\u2019s thermostat?",
+    "a": "The hypothalamus",
     "e": ""
    },
    {
-    "c": "Science",
-    "q": "What does DNA stand for?",
-    "a": "Deoxyribonucleic acid",
-    "e": ""
-   },
-   {
-    "c": "Geography",
-    "q": "Which river flows through Baghdad?",
-    "a": "The Tigris",
-    "e": ""
-   },
-   {
-    "c": "Literature",
-    "q": "Who wrote \u2018Things Fall Apart\u2019?",
-    "a": "Chinua Achebe",
-    "e": "Nigerian, published 1958."
-   },
-   {
-    "c": "Art",
-    "q": "In which city is the Prado Museum?",
-    "a": "Madrid",
-    "e": ""
-   },
-   {
-    "c": "Music",
-    "q": "Which opera features the aria \u2018Nessun dorma\u2019?",
-    "a": "Turandot",
-    "e": "By Puccini. Left unfinished at his death."
-   },
-   {
-    "c": "Sport",
-    "q": "How many players per side are on the field in rugby union?",
-    "a": "15",
-    "e": "Rugby league has 13."
+    "c": "Famous patients",
+    "q": "Henrietta Lacks\u2019s cancer cells became which famous cell line?",
+    "a": "HeLa",
+    "e": "Taken in 1951 without her consent."
    },
    {
     "c": "Language",
-    "q": "What is the Greek-style plural of \u2018octopus\u2019?",
-    "a": "Octopodes",
-    "e": "Accept octopuses. \u2018Octopi\u2019 is the wrong answer."
-   },
-   {
-    "c": "Nature",
-    "q": "Strictly speaking, what kind of creature is the Portuguese man o\u2019 war?",
-    "a": "A siphonophore",
-    "e": "A colony of organisms, not a jellyfish."
-   },
-   {
-    "c": "Food",
-    "q": "Besides chickpeas, what is the main ingredient of traditional hummus?",
-    "a": "Tahini",
-    "e": "Sesame paste."
-   },
-   {
-    "c": "Film",
-    "q": "What was Disney\u2019s first feature-length animated film?",
-    "a": "Snow White and the Seven Dwarfs",
-    "e": "1937."
-   },
-   {
-    "c": "Medicine",
-    "q": "Which blood type is the universal donor for red cells?",
-    "a": "O negative",
+    "q": "What is the medical term for a black eye?",
+    "a": "Periorbital haematoma",
     "e": ""
    },
    {
-    "c": "Space",
-    "q": "Which moon of Saturn has a thick nitrogen atmosphere and lakes of methane?",
-    "a": "Titan",
+    "c": "Nobel Prizes",
+    "q": "Which surgeon won the 1912 Nobel Prize for techniques to suture blood vessels?",
+    "a": "Alexis Carrel",
     "e": ""
    },
    {
-    "c": "History",
-    "q": "Which war did the Peace of Westphalia end in 1648?",
-    "a": "The Thirty Years\u2019 War",
-    "e": "Accept the Eighty Years\u2019 War."
+    "c": "Pathology",
+    "q": "Deficiency of which vitamin causes pellagra?",
+    "a": "Niacin (vitamin B3)",
+    "e": "Dermatitis, diarrhoea, dementia, death."
    },
    {
-    "c": "Geography",
-    "q": "Which country is Mount Kilimanjaro in?",
-    "a": "Tanzania",
+    "c": "By the numbers",
+    "q": "Roughly how long is the adult small intestine?",
+    "a": "About 6 metres",
+    "e": "Accept 5 to 7 metres."
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which mushroom causes most fatal mushroom poisonings worldwide?",
+    "a": "The death cap",
+    "e": "Amanita phalloides."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which Greek physician in Rome treated gladiators and dominated anatomy for 1,400 years?",
+    "a": "Galen",
+    "e": "Much of it from dissecting animals."
+   },
+   {
+    "c": "Anatomy",
+    "q": "What is the first cervical vertebra called?",
+    "a": "The atlas",
+    "e": "It holds up the head, like the Titan held up the sky."
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Metformin traces back to which medicinal plant?",
+    "a": "French lilac",
+    "e": "Also called goat\u2019s rue, Galega officinalis."
+   },
+   {
+    "c": "On screen",
+    "q": "Which 1975 film is set in a psychiatric hospital run by Nurse Ratched?",
+    "a": "One Flew Over the Cuckoo\u2019s Nest",
     "e": ""
    },
    {
-    "c": "Science",
-    "q": "What does a Geiger counter detect?",
-    "a": "Ionising radiation",
-    "e": ""
-   },
-   {
-    "c": "Maths",
-    "q": "What is the square root of 1,764?",
-    "a": "42",
-    "e": "The answer to everything, apparently."
-   },
-   {
-    "c": "Mythology",
-    "q": "Which Greek hero killed the Minotaur?",
-    "a": "Theseus",
-    "e": "With help from Ariadne\u2019s thread."
-   },
-   {
-    "c": "Literature",
-    "q": "What is the first name of Sherlock Holmes\u2019s older brother?",
-    "a": "Mycroft",
-    "e": ""
+    "c": "Eponyms",
+    "q": "Kussmaul breathing is a sign of what?",
+    "a": "Metabolic acidosis",
+    "e": "Classically DKA. Accept diabetic ketoacidosis."
    },
    {
     "c": "Brain-melter",
-    "q": "How many dots are there in total on a standard six-sided die?",
-    "a": "21",
-    "e": "1 + 2 + 3 + 4 + 5 + 6."
+    "q": "Which tissue has no blood supply and gets its oxygen straight from the air?",
+    "a": "The cornea",
+    "e": ""
    }
   ]
  },
@@ -634,124 +634,124 @@
   "number": 6,
   "questions": [
    {
-    "c": "History",
-    "q": "Who was the first person to win Nobel Prizes in two different sciences?",
-    "a": "Marie Curie",
-    "e": "Physics in 1903, chemistry in 1911."
+    "c": "History of medicine",
+    "q": "Who was the first woman to qualify as a doctor in Britain, in 1865?",
+    "a": "Elizabeth Garrett Anderson",
+    "e": "Elizabeth Blackwell was registered earlier, with a US degree."
    },
    {
-    "c": "Science",
-    "q": "What is the hardest substance in the human body?",
-    "a": "Tooth enamel",
+    "c": "Anatomy",
+    "q": "Which flap of cartilage covers the windpipe when you swallow?",
+    "a": "The epiglottis",
     "e": ""
    },
    {
-    "c": "Geography",
-    "q": "What is the capital of Mongolia?",
-    "a": "Ulaanbaatar",
+    "c": "Pharmacology",
+    "q": "Drugs ending in \u2018-olol\u2019 belong to which class?",
+    "a": "Beta blockers",
     "e": ""
    },
    {
-    "c": "Literature",
-    "q": "Who wrote \u2018Don Quixote\u2019?",
-    "a": "Miguel de Cervantes",
-    "e": ""
+    "c": "Eponyms",
+    "q": "Which neurologist gave his name to the \u2018march\u2019 of a focal seizure?",
+    "a": "John Hughlings Jackson",
+    "e": "The Jacksonian march."
    },
    {
-    "c": "Art",
-    "q": "Who painted \u2018The Birth of Venus\u2019?",
-    "a": "Sandro Botticelli",
-    "e": "In the Uffizi, Florence."
+    "c": "Microbiology",
+    "q": "Which disease does Mycobacterium leprae cause?",
+    "a": "Leprosy",
+    "e": "Also called Hansen\u2019s disease."
    },
    {
-    "c": "Music",
-    "q": "Which Beatle wrote \u2018Something\u2019?",
-    "a": "George Harrison",
-    "e": ""
+    "c": "On screen",
+    "q": "Which actor starred in both \u2018ER\u2019 and \u2018The Pitt\u2019?",
+    "a": "Noah Wyle",
+    "e": "Dr John Carter, then Dr Robby."
    },
    {
-    "c": "Sport",
-    "q": "In cricket, what is it called when a batter is out to their first ball?",
-    "a": "A golden duck",
-    "e": ""
+    "c": "Etymology",
+    "q": "\u2018Glaucoma\u2019 comes from the Greek for which colour?",
+    "a": "Bluish grey",
+    "e": "Glaukos. Accept grey-blue or blue-green."
+   },
+   {
+    "c": "Physiology",
+    "q": "Which organ makes bile?",
+    "a": "The liver",
+    "e": "The gallbladder only stores it."
+   },
+   {
+    "c": "Famous patients",
+    "q": "An iron rod passed through which lobe of Phineas Gage\u2019s brain in 1848?",
+    "a": "The frontal lobe",
+    "e": "He survived. His personality didn\u2019t."
    },
    {
     "c": "Language",
-    "q": "Which is the only letter that appears in no US state name?",
-    "a": "Q",
+    "q": "What is the anatomical name for the Adam\u2019s apple?",
+    "a": "The laryngeal prominence",
     "e": ""
    },
    {
-    "c": "Nature",
-    "q": "Which land mammal has the longest pregnancy?",
-    "a": "The elephant",
-    "e": "About 22 months."
+    "c": "Nobel Prizes",
+    "q": "Who won the 2015 Nobel Prize for discovering artemisinin for malaria?",
+    "a": "Tu Youyou",
+    "e": "She found it in ancient Chinese texts."
    },
    {
-    "c": "Food",
-    "q": "Which fruit is the liqueur kirsch made from?",
-    "a": "Cherries",
+    "c": "Pathology",
+    "q": "What is the most common cause of dementia?",
+    "a": "Alzheimer\u2019s disease",
     "e": ""
    },
    {
-    "c": "Film",
-    "q": "Which 1941 film turns on the word \u2018Rosebud\u2019?",
-    "a": "Citizen Kane",
+    "c": "By the numbers",
+    "q": "What is the usual lower limit of a normal adult platelet count?",
+    "a": "150 \u00d7 10\u2079 per litre",
+    "e": "Accept 150."
+   },
+   {
+    "c": "Toxicology",
+    "q": "Which drug reverses a benzodiazepine overdose?",
+    "a": "Flumazenil",
+    "e": "Use with care. It can trigger seizures."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which pandemic killed perhaps a third of Europe in the 1340s?",
+    "a": "The Black Death",
+    "e": "Yersinia pestis."
+   },
+   {
+    "c": "Anatomy",
+    "q": "What is the largest muscle in the body?",
+    "a": "Gluteus maximus",
     "e": ""
    },
    {
-    "c": "Medicine",
-    "q": "Which disease did Edward Jenner vaccinate against in 1796?",
-    "a": "Smallpox",
-    "e": "Using cowpox. Vaccinia, from vacca: cow."
+    "c": "Pharmacology",
+    "q": "Which antibiotic, discovered in 1943, was the first effective treatment for tuberculosis?",
+    "a": "Streptomycin",
+    "e": "From soil bacteria. Nobel Prize in 1952."
    },
    {
-    "c": "Space",
-    "q": "Which star is closest to the Sun?",
-    "a": "Proxima Centauri",
-    "e": "About 4.2 light years away."
-   },
-   {
-    "c": "History",
-    "q": "Who co-wrote \u2018The Communist Manifesto\u2019 with Karl Marx?",
-    "a": "Friedrich Engels",
+    "c": "On screen",
+    "q": "Who played the teenage title doctor in \u2018Doogie Howser, M.D.\u2019?",
+    "a": "Neil Patrick Harris",
     "e": ""
    },
    {
-    "c": "Geography",
-    "q": "What is the largest desert in the world?",
-    "a": "Antarctica",
-    "e": "Deserts are defined by low precipitation, not heat."
-   },
-   {
-    "c": "Science",
-    "q": "What is the most abundant protein in the human body?",
-    "a": "Collagen",
+    "c": "Eponyms",
+    "q": "Murphy\u2019s sign points to inflammation of which organ?",
+    "a": "The gallbladder",
     "e": ""
-   },
-   {
-    "c": "Maths",
-    "q": "What is pi to five decimal places?",
-    "a": "3.14159",
-    "e": ""
-   },
-   {
-    "c": "Mythology",
-    "q": "Who was condemned to roll a boulder uphill for eternity?",
-    "a": "Sisyphus",
-    "e": ""
-   },
-   {
-    "c": "Literature",
-    "q": "Which Shakespeare play has the line \u2018Out, damned spot!\u2019?",
-    "a": "Macbeth",
-    "e": "Lady Macbeth, sleepwalking."
    },
    {
     "c": "Brain-melter",
-    "q": "What is the collective noun for a group of owls?",
-    "a": "A parliament",
-    "e": ""
+    "q": "What is the fear of doctors called?",
+    "a": "Iatrophobia",
+    "e": "Not to be confused with a reasonable fear of waiting rooms."
    }
   ]
  }
