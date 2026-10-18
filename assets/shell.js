@@ -86,7 +86,7 @@
     if (!g || !g.store) return null;
     var L = g.store.labels || ["1", "2", "3", "4", "5", "6", "X"];
     var s = get(g.store.stats, null) || { played: 0, wins: 0, streak: 0, best: 0, dist: L.map(function () { return 0; }) };
-    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key); key = new Date((n - (new Date(n * 864e5).getUTCDay() + 6) % 7) * 864e5).toISOString().slice(0, 10); }
+    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key), wd = new Date(n * 864e5).getUTCDay(); key = new Date((n - (g.store.weekStart === 0 ? wd : (wd + 6) % 7)) * 864e5).toISOString().slice(0, 10); }
     var today = get(g.store.day + key, null);
     return { s: s, done: !!(today && today.done), win: !!(today && today.win), labels: L };
   }
@@ -246,7 +246,7 @@
     var einToday = !g.weekly && diffFor(g, today, dow) === "Einstein";
     sp.innerHTML = '<div class="splash-in">' + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Admire your work" : "Play") + "</button>" +
-      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.weekly ? "A new quiz every Monday. Ten questions, one theme." : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
+      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
     document.getElementById("mw-play").onclick = start;
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
