@@ -1,5 +1,5 @@
 /* Morphemia: scoped under #mph */
-#mph{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;
+#mph{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2340;--muted:#6B5A93;--line:#D9D1E3;--hex:#ECE6DC;--gold:#E3B23C;--accent:#9A6A0A;--med:#2E7D6B;
   --easy:#2F7D4A;--medium:#9A6A12;--hard:#B4472F;--genius:#4A3480;
   --title:Lora,Georgia,serif;--body:Poppins,"Segoe UI",system-ui,sans-serif;

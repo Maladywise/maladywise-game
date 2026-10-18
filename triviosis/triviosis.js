@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{week: "YYYY-MM-DD" (a Monday), number, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", PASS = 6;
   var root = document.getElementById("trv");
   if (!document.querySelector("link[data-trv]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "triviosis.css?v=" + BUILD; l.setAttribute("data-trv", ""); document.head.appendChild(l);

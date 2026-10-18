@@ -1,5 +1,5 @@
 /* Comorbix: scoped under #cmx */
-#cmx{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;
+#cmx{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2340;--muted:#6B5A93;--line:#D9D1E3;--tile:#EFEAE2;--sel:#4E4566;--accent:#B23A6F;
   --l1:#F2D36B;--l2:#9CC48A;--l3:#93B5E1;--l4:#C29BDB;
   --easy:#2F7D4A;--medium:#9A6A12;--hard:#B4472F;--genius:#4A3480;

@@ -179,3 +179,5 @@ footer.site a{color:var(--muted)}
 .doc .nl{margin-top:18px}
 
 html{touch-action:manipulation}
+html,body{overflow-x:clip}
+#grx .wrap>*,#wde .wrap>*,#lnk .wrap>*{min-width:0}
