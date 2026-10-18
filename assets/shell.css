@@ -208,3 +208,6 @@ html[data-theme="dark"] .subpill{color:#16121F}
   .subpill{margin:12px 0 0;text-align:center;padding:11px 14px;font-size:15px}
 }
 .bar-in{position:relative}
+
+.doc ul.news{list-style:none;padding:0;display:grid;gap:10px}
+.doc ul.news b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
