@@ -4,350 +4,6 @@
   "number": 16,
   "difficulty": "Genius",
   "rows": [
-   "##SEA",
-   "SCALP",
-   "NOISE",
-   "ANNEX",
-   "PET##"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "Ocean"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Where lice live"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Din"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Add-on building"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 3,
-    "clue": "Scan with a radioactive tracer"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Very good person"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Or ___"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Where the heart beats loudest"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Sudden break"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 1,
-    "len": 4,
-    "clue": "Cell in the retina for colour"
-   }
-  ]
- },
- {
-  "date": "2026-11-02",
-  "number": 17,
-  "difficulty": "Easy",
-  "rows": [
-   "#EGO#",
-   "BLAND",
-   "ABUSE",
-   "DOZEN",
-   "#WET#"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 3,
-    "clue": "Self-importance"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Hospital food, often"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Misuse"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Twelve"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 1,
-    "len": 3,
-    "clue": "Soaked"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Tennis ___"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Wound dressing fabric"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Start of symptoms"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 3,
-    "clue": "Not good"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 4,
-    "len": 3,
-    "clue": "Lion's lair"
-   }
-  ]
- },
- {
-  "date": "2026-11-03",
-  "number": 18,
-  "difficulty": "Easy",
-  "rows": [
-   "#HEAL",
-   "PEACE",
-   "ULTRA",
-   "BLEED",
-   "SONS#"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Get better, like a wound"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Opposite of war"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "___ marathon"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "What a nosebleed does"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 4,
-    "clue": "Male children"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Greeting"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Consumed"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Old farm units"
-   },
-   {
-    "n": 4,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Heavy toxic metal"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Places for a counter meal"
-   }
-  ]
- },
- {
-  "date": "2026-11-04",
-  "number": 19,
-  "difficulty": "Medium",
-  "rows": [
-   "##FOR",
-   "ARENA",
-   "RAVEN",
-   "CREST",
-   "HER##"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "In favour of"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Stadium"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Black bird"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Iliac ___ (top of the hip bone)"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 3,
-    "clue": "That woman"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Raised temperature"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Singles"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Long angry speech"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Fallen ___ (flat foot)"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 1,
-    "len": 4,
-    "clue": "Like a zebra diagnosis"
-   }
-  ]
- },
- {
-  "date": "2026-11-05",
-  "number": 20,
-  "difficulty": "Medium",
-  "rows": [
    "CLOT#",
    "HUMID",
    "ENEMA",
@@ -418,14 +74,358 @@
     "r": 0,
     "c": 3,
     "len": 5,
-    "clue": "Multiplied by"
+    "clue": "Doses per day, on a script"
    },
    {
     "n": 6,
     "r": 1,
     "c": 4,
     "len": 4,
-    "clue": "Quick run"
+    "clue": "Quick run to the bathroom"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "number": 17,
+  "difficulty": "Easy",
+  "rows": [
+   "SHE##",
+   "TOXIN",
+   "AMINO",
+   "RESTS",
+   "##TOE"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "That woman"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Poison made by a living thing"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "___ acid (protein building block)"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Takes it easy"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
+    "len": 3,
+    "clue": "Gout's favourite target"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Gold ___ (for a good patient)"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Nursing ___"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Be real"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 3,
+    "len": 4,
+    "clue": "Keen on"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Organ that runs in winter"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 18,
+  "difficulty": "Easy",
+  "rows": [
+   "##CUT",
+   "NURSE",
+   "ALIEN",
+   "INERT",
+   "LAD##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Laceration"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Ward hero"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "From another planet"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Chemically unreactive, like a placebo"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Young bloke"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Wept, like a newborn"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "One on the end of a needle exchange"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Oxygen ___"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Fingertip cover"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Forearm bone, pinky side"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 19,
+  "difficulty": "Medium",
+  "rows": [
+   "SCAB#",
+   "WOMAN",
+   "ARISE",
+   "PANIC",
+   "#LOCK"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Healing crust"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Female adult"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Get up after a nap"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "___ attack"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
+    "len": 4,
+    "clue": "___jaw (old name for tetanus)"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Exchange"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Reef material, or a pinkish shade"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "___ acid (protein building block)"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "___ life support (BLS)"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Where the thyroid lives"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 20,
+  "difficulty": "Medium",
+  "rows": [
+   "##ADD",
+   "MANIA",
+   "URGES",
+   "TEETH",
+   "EAR##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Sum up, like a fluid balance chart"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Elevated mood state"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Strong desires"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Adults have 32"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Organ with a cochlea"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Second stage of grief"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Eating plan"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Quick run to the bathroom"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Silent"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Catchment, for a GP clinic"
    }
   ]
  },
@@ -434,84 +434,84 @@
   "number": 21,
   "difficulty": "Hard",
   "rows": [
-   "##BED",
-   "UVULA",
-   "NOISY",
-   "TILES",
-   "ODD##"
+   "BUT##",
+   "ALOUD",
+   "SNORE",
+   "EATEN",
+   "##HAY"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
+    "c": 0,
     "len": 3,
-    "clue": "Cot"
+    "clue": "However"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Throat dangler"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Loud"
+    "clue": "Not silently, as a ward round discussion"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Floor squares"
+    "clue": "Sound of sleep apnoea"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
+    "len": 5,
+    "clue": "Consumed"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
     "len": 3,
-    "clue": "Strange"
+    "clue": "___ fever"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Physique"
+    "c": 0,
+    "len": 4,
+    "clue": "Opposite of acid, chemically"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
+    "c": 1,
     "len": 4,
-    "clue": "Otherwise"
+    "clue": "Forearm bone, pinky side"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Weeks have seven"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Do ___ others"
+    "c": 2,
+    "len": 5,
+    "clue": "Molar or incisor"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 1,
+    "c": 3,
     "len": 4,
-    "clue": "Pass urine, formally"
+    "clue": "Waste product measured with creatinine"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Refuse, as in the first stage of grief"
    }
   ]
  },
@@ -520,47 +520,47 @@
   "number": 22,
   "difficulty": "Hard",
   "rows": [
-   "MASH#",
-   "ULNAR",
-   "STATE",
-   "TAKEN",
-   "#REST"
+   "BUT##",
+   "ARISE",
+   "REBEL",
+   "NAILS",
+   "##ALE"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Potato prep"
+    "len": 3,
+    "clue": "However"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Funny-bone nerve"
+    "clue": "Get up after a nap"
    },
    {
     "n": 7,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Condition"
+    "clue": "Non-compliant type"
    },
    {
     "n": 8,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Swallowed, as pills"
+    "clue": "Clubbed ___ (clinical sign)"
    },
    {
     "n": 9,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "RICE starter"
+    "c": 2,
+    "len": 3,
+    "clue": "Pub pint, not on the diet sheet"
    }
   ],
   "down": [
@@ -569,35 +569,35 @@
     "r": 0,
     "c": 0,
     "len": 4,
-    "clue": "Have to"
+    "clue": "Farm shed"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 5,
-    "clue": "Church table"
+    "len": 4,
+    "clue": "Waste product measured with creatinine"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Bite to ask about in rural ED"
+    "clue": "Shin bone"
    },
    {
-    "n": 4,
-    "r": 0,
+    "n": 5,
+    "r": 1,
     "c": 3,
-    "len": 5,
-    "clue": "Loathes"
+    "len": 4,
+    "clue": "Flog"
    },
    {
     "n": 6,
     "r": 1,
     "c": 4,
     "len": 4,
-    "clue": "Weekly cost"
+    "clue": "Otherwise"
    }
   ]
  },
@@ -606,84 +606,84 @@
   "number": 23,
   "difficulty": "Genius",
   "rows": [
-   "#CAB#",
-   "BOLUS",
-   "ADORE",
-   "TENSE",
-   "#SEA#"
+   "SCUM#",
+   "TONIC",
+   "AMINO",
+   "BITES",
+   "#CYST"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 3,
-    "clue": "Taxi"
+    "c": 0,
+    "len": 4,
+    "clue": "Film on a pond"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Fast IV push"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Love"
+    "clue": "Gin's partner, or a muscle state"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Like a pneumothorax, at worst"
+    "clue": "___ acid (protein building block)"
    },
    {
     "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Mozzie souvenirs"
+   },
+   {
+    "n": 9,
     "r": 4,
     "c": 1,
-    "len": 3,
-    "clue": "Ocean"
+    "len": 4,
+    "clue": "Fluid-filled sac"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Arrest calls"
+    "c": 0,
+    "len": 4,
+    "clue": "___ wound"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 2,
+    "c": 1,
     "len": 5,
-    "clue": "Isolated"
+    "clue": "Funny person, or doctor-turned-standup"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 3,
+    "c": 2,
     "len": 5,
-    "clue": "Fluid sac at the knee or elbow"
+    "clue": "Togetherness"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 3,
-    "clue": "Cricket gear"
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Dig sites"
    },
    {
-    "n": 5,
+    "n": 6,
     "r": 1,
     "c": 4,
-    "len": 3,
-    "clue": "Watch"
+    "len": 4,
+    "clue": "Out-of-pocket ___ (gap fee)"
    }
   ]
  },
@@ -692,84 +692,84 @@
   "number": 24,
   "difficulty": "Easy",
   "rows": [
-   "#PETS",
-   "MOVIE",
+   "##RUN",
+   "OBESE",
+   "RISES",
    "ALERT",
-   "LINES",
-   "LOTS#"
+   "LET##"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Cats and dogs"
+    "c": 2,
+    "len": 3,
+    "clue": "Jog"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Film"
+    "clue": "BMI over 30"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Wide awake"
+    "clue": "Goes up, like a fever"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Queues"
+    "clue": "Wide awake, as on AVPU"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
-    "len": 4,
-    "clue": "Plenty"
+    "len": 3,
+    "clue": "Allow"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
+    "c": 2,
     "len": 5,
-    "clue": "Disease the Salk vaccine took on"
+    "clue": "Defibrillate, loosely"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Happening"
+    "c": 3,
+    "len": 4,
+    "clue": "One on the end of a needle exchange"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Wears out"
+    "c": 4,
+    "len": 4,
+    "clue": "Where eggs are kept"
    },
    {
     "n": 4,
-    "r": 0,
-    "c": 4,
+    "r": 1,
+    "c": 0,
     "len": 4,
-    "clue": "Puts down"
+    "clue": "By mouth"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 0,
+    "c": 1,
     "len": 4,
-    "clue": "Shopping centre"
+    "clue": "Green fluid stored in the gallbladder"
    }
   ]
  },
@@ -778,11 +778,11 @@
   "number": 25,
   "difficulty": "Easy",
   "rows": [
-   "#STAR",
-   "WHOLE",
-   "HOTEL",
-   "OVARY",
-   "MELT#"
+   "#SWIM",
+   "SHINE",
+   "NAVEL",
+   "ALERT",
+   "PEST#"
   ],
   "across": [
    {
@@ -790,35 +790,35 @@
     "r": 0,
     "c": 1,
     "len": 4,
-    "clue": "Celebrity"
+    "clue": "Low-impact exercise"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Complete"
+    "clue": "Gleam"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Place with a minibar"
+    "clue": "Belly button"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Egg-making organ"
+    "clue": "Wide awake, as on AVPU"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
     "len": 4,
-    "clue": "Turn from ice to water"
+    "clue": "Nuisance"
    }
   ],
   "down": [
@@ -827,35 +827,35 @@
     "r": 0,
     "c": 1,
     "len": 5,
-    "clue": "Push rudely"
+    "clue": "Fracking rock"
    },
    {
     "n": 2,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Sum"
+    "clue": "Spouses"
    },
    {
     "n": 3,
     "r": 0,
     "c": 3,
     "len": 5,
-    "clue": "GCS 15 patient, in a word"
+    "clue": "Chemically unreactive, like a placebo"
    },
    {
     "n": 4,
     "r": 0,
     "c": 4,
     "len": 4,
-    "clue": "Depend"
+    "clue": "Turn liquid"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 4,
-    "clue": "To ___ it may concern"
+    "clue": "Sudden break"
    }
   ]
  },
@@ -864,84 +864,84 @@
   "number": 26,
   "difficulty": "Medium",
   "rows": [
-   "#SNAP",
-   "SHALE",
-   "CASES",
-   "APART",
-   "BELT#"
+   "SPA##",
+   "COLON",
+   "URINE",
+   "MEETS",
+   "##NOT"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Quick photo"
+    "c": 0,
+    "len": 3,
+    "clue": "Place for a soak"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Rock used in fracking"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Patients, in a case report"
+    "clue": "Large bowel"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Separated"
+    "clue": "Sample in a jar"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
-    "len": 4,
-    "clue": "Seat ___"
+    "len": 5,
+    "clue": "Gets together, like an MDT"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
+    "len": 3,
+    "clue": "Negative word"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Form"
+    "c": 0,
+    "len": 4,
+    "clue": "Film on a pond"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Like some sprays"
+    "c": 1,
+    "len": 4,
+    "clue": "Skin opening"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 3,
+    "c": 2,
     "len": 5,
-    "clue": "Awake and oriented"
-   },
-   {
-    "n": 4,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Nuisance"
+    "clue": "From another planet"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 0,
+    "c": 3,
     "len": 4,
-    "clue": "Healing crust"
+    "clue": "Wise to"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Where eggs are kept"
    }
   ]
  },
@@ -950,84 +950,84 @@
   "number": 27,
   "difficulty": "Medium",
   "rows": [
-   "##VAN",
-   "PROMO",
-   "AIMED",
-   "SPINE",
-   "SET##"
+   "SCUM#",
+   "CORAL",
+   "ALIKE",
+   "BONES",
+   "#NEST"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "Ambulance, basically"
+    "c": 0,
+    "len": 4,
+    "clue": "Film on a pond"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Ad, for short"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Pointed"
+    "clue": "Reef material, or a pinkish shade"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Backbone"
+    "clue": "Similar, like identical twins"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
-    "len": 3,
-    "clue": "Put a broken bone back"
+    "len": 5,
+    "clue": "There are 206 in an adult"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
+    "len": 4,
+    "clue": "Where eggs are kept"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Emesis, plainly"
+    "c": 0,
+    "len": 4,
+    "clue": "Healing crust"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Final word of a prayer"
+    "c": 1,
+    "len": 5,
+    "clue": "Large bowel"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Lymph ___"
+    "c": 2,
+    "len": 5,
+    "clue": "Sample in a jar"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Exam result you want"
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Produces, as the marrow does blood"
    },
    {
-    "n": 5,
+    "n": 6,
     "r": 1,
-    "c": 1,
+    "c": 4,
     "len": 4,
-    "clue": "Ready to eat"
+    "clue": "In case"
    }
   ]
  },
@@ -1036,11 +1036,11 @@
   "number": 28,
   "difficulty": "Hard",
   "rows": [
-   "##SUM",
-   "MAPLE",
-   "ARENA",
-   "RENAL",
-   "SAT##"
+   "##PUS",
+   "BURSA",
+   "ALIEN",
+   "SNORE",
+   "EAR##"
   ],
   "across": [
    {
@@ -1048,35 +1048,35 @@
     "r": 0,
     "c": 2,
     "len": 3,
-    "clue": "Total"
+    "clue": "Infected fluid"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Syrup tree"
+    "clue": "Fluid sac at the elbow or knee"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Venue"
+    "clue": "From another planet"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Of the kidneys"
+    "clue": "Sound of sleep apnoea"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
     "len": 3,
-    "clue": "Oxygen ___ (pulse ox reading)"
+    "clue": "Organ with a cochlea"
    }
   ],
   "down": [
@@ -1085,35 +1085,35 @@
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Exhausted"
+    "clue": "Previous, as history"
    },
    {
     "n": 2,
     "r": 0,
     "c": 3,
     "len": 4,
-    "clue": "Forearm bone on the pinky side"
+    "clue": "One on the end of a needle exchange"
    },
    {
     "n": 3,
     "r": 0,
     "c": 4,
     "len": 4,
-    "clue": "Dinner"
+    "clue": "Of sound mind"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 4,
-    "clue": "Red planet"
+    "clue": "Opposite of acid, chemically"
    },
    {
     "n": 5,
     "r": 1,
     "c": 1,
     "len": 4,
-    "clue": "Zone"
+    "clue": "Forearm bone, pinky side"
    }
   ]
  },
@@ -1122,84 +1122,84 @@
   "number": 29,
   "difficulty": "Hard",
   "rows": [
-   "##BAR",
-   "CILIA",
-   "USERS",
-   "FLESH",
-   "FED##"
+   "THUS#",
+   "EUROS",
+   "AMINO",
+   "MANIA",
+   "#NECK"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "Pub counter"
+    "c": 0,
+    "len": 4,
+    "clue": "Therefore"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Tiny hairs that sweep the airways"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Ones who use"
+    "clue": "Currency for a European conference"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Meat"
+    "clue": "___ acid (protein building block)"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
-    "len": 3,
-    "clue": "Nourished"
+    "len": 5,
+    "clue": "Elevated mood state"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
+    "len": 4,
+    "clue": "Where the thyroid lives"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Haemorrhage"
+    "c": 0,
+    "len": 4,
+    "clue": "MDT, for short"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Pretensions"
+    "c": 1,
+    "len": 5,
+    "clue": "___ papillomavirus"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Hasty"
+    "c": 2,
+    "len": 5,
+    "clue": "Sample in a jar"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Rotator ___"
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Of sound waves"
    },
    {
-    "n": 5,
+    "n": 6,
     "r": 1,
-    "c": 1,
+    "c": 4,
     "len": 4,
-    "clue": "Small island"
+    "clue": "Steep, like a sore foot"
    }
   ]
  },
@@ -1294,47 +1294,47 @@
   "number": 31,
   "difficulty": "Easy",
   "rows": [
-   "VIA##",
-   "ATLAS",
-   "SCARE",
-   "THREE",
-   "##MAN"
+   "SENT#",
+   "TROUT",
+   "URINE",
+   "DOSES",
+   "#REST"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 3,
-    "clue": "By way of"
+    "len": 4,
+    "clue": "Referred, as to a specialist"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Map book, or the top neck vertebra"
+    "clue": "Fish high in omega-3"
    },
    {
     "n": 7,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Give a fright"
+    "clue": "Sample in a jar"
    },
    {
     "n": 8,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Number of bones in the middle ear"
+    "clue": "Measured amounts of a drug"
    },
    {
     "n": 9,
     "r": 4,
-    "c": 2,
-    "len": 3,
-    "clue": "Adult male"
+    "c": 1,
+    "len": 4,
+    "clue": "RICE starter"
    }
   ],
   "down": [
@@ -1343,35 +1343,35 @@
     "r": 0,
     "c": 0,
     "len": 4,
-    "clue": "Huge"
+    "clue": "Earring type"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "Mozzie bite symptom"
+    "len": 5,
+    "clue": "Medication ___ (incident report trigger)"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Annoying 6 am sound"
+    "clue": "Din on a busy ward"
    },
    {
-    "n": 5,
-    "r": 1,
+    "n": 4,
+    "r": 0,
     "c": 3,
-    "len": 4,
-    "clue": "Length times width"
+    "len": 5,
+    "clue": "Music for the waiting room"
    },
    {
     "n": 6,
     "r": 1,
     "c": 4,
     "len": 4,
-    "clue": "Spotted"
+    "clue": "Blood ___"
    }
   ]
  },
@@ -1380,84 +1380,84 @@
   "number": 32,
   "difficulty": "Easy",
   "rows": [
-   "##SAT",
-   "TITLE",
-   "AROSE",
-   "COLON",
-   "ONE##"
+   "#STAB",
+   "STYLE",
+   "PORES",
+   "INERT",
+   "TEST#"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "Took a seat"
+    "c": 1,
+    "len": 4,
+    "clue": "___ wound"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Dr or Prof"
+    "clue": "Fashion"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Got up"
+    "clue": "Sweat outlets"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Large bowel, or a punctuation mark"
+    "clue": "Chemically unreactive, like a placebo"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
-    "len": 3,
-    "clue": "Single"
+    "len": 4,
+    "clue": "Blood ___"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
+    "c": 1,
     "len": 5,
-    "clue": "Pinched"
+    "clue": "Kidney ___"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Too"
+    "c": 2,
+    "len": 5,
+    "clue": "Rubber wheels"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "13 to 19"
+    "c": 3,
+    "len": 5,
+    "clue": "Wide awake, as on AVPU"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
+    "r": 0,
+    "c": 4,
     "len": 4,
-    "clue": "Folded Mexican dish"
+    "clue": "___ practice"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 1,
+    "c": 0,
     "len": 4,
-    "clue": "Low in anaemia, often"
+    "clue": "Saliva"
    }
   ]
  },
@@ -1466,11 +1466,97 @@
   "number": 33,
   "difficulty": "Medium",
   "rows": [
-   "##PIG",
-   "SPICE",
+   "TEAR#",
+   "AUDIT",
+   "PROSE",
+   "SORES",
+   "#SENT"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Rotator cuff ___"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Clinical ___ (quality check)"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Ordinary writing, unlike doctors' notes"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Ulcers"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
+    "len": 4,
+    "clue": "Referred, as to a specialist"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Light touches, like percussion"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Currency for a European conference"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Love dearly"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Up, like temperature"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Blood ___"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 34,
+  "difficulty": "Medium",
+  "rows": [
+   "##AID",
+   "SLICE",
    "COLON",
-   "ALONE",
-   "BET##"
+   "AGENT",
+   "ROD##"
   ],
   "across": [
    {
@@ -1478,35 +1564,35 @@
     "r": 0,
     "c": 2,
     "len": 3,
-    "clue": "Guinea ___ (test subject)"
+    "clue": "First ___"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Pepper or cumin"
+    "clue": "CT image, essentially"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Where most of the gut flora live"
+    "clue": "Large bowel"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Solo"
+    "clue": "Infectious ___ (bug behind a disease)"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
     "len": 3,
-    "clue": "Wager"
+    "clue": "Retinal cell for dim light"
    }
   ],
   "down": [
@@ -1515,7 +1601,7 @@
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Small trial study"
+    "clue": "Was unwell"
    },
    {
     "n": 2,
@@ -1529,107 +1615,21 @@
     "r": 0,
     "c": 4,
     "len": 4,
-    "clue": "Unit of heredity"
+    "clue": "Depression, like a skull fracture"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 4,
-    "clue": "Don't pick it"
+    "clue": "Mark left by healing"
    },
    {
     "n": 5,
     "r": 1,
     "c": 1,
     "len": 4,
-    "clue": "Ski stick"
-   }
-  ]
- },
- {
-  "date": "2026-11-19",
-  "number": 34,
-  "difficulty": "Medium",
-  "rows": [
-   "##POP",
-   "CRANE",
-   "LANCE",
-   "ORDER",
-   "TEA##"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 3,
-    "clue": "Burst a bubble"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Long-necked bird, or building-site machine"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Drain an abscess"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Command"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 3,
-    "clue": "Cuppa"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Bamboo eater"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "One time"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "___ review"
-   },
-   {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "DVT component"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 1,
-    "len": 4,
-    "clue": "Uncommon"
+    "clue": "Brand symbol"
    }
   ]
  },
@@ -1638,84 +1638,84 @@
   "number": 35,
   "difficulty": "Hard",
   "rows": [
-   "#ROCK",
-   "COLON",
-   "AUDIO",
-   "STENT",
-   "HERS#"
+   "SCAB#",
+   "PANIC",
+   "UNITY",
+   "NAMES",
+   "#LEST"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
+    "c": 0,
     "len": 4,
-    "clue": "Stone"
+    "clue": "Healing crust"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Bowel part that's sigmoid at one end"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Sound"
+    "clue": "___ attack"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Tube to keep a vessel open"
+    "clue": "Togetherness"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
+    "len": 5,
+    "clue": "Eponyms, basically"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
     "len": 4,
-    "clue": "Not his"
+    "clue": "In case"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Way given, e.g. IV or IM"
+    "c": 0,
+    "len": 4,
+    "clue": "Centrifuged, like a blood sample"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 2,
+    "c": 1,
     "len": 5,
-    "clue": "More senior"
+    "clue": "Ear ___ (where wax lives)"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 3,
+    "c": 2,
     "len": 5,
-    "clue": "Change"
+    "clue": "Japanese cartoons"
    },
    {
     "n": 4,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Surgical tie"
+    "c": 3,
+    "len": 5,
+    "clue": "Mozzie souvenirs"
    },
    {
-    "n": 5,
+    "n": 6,
     "r": 1,
-    "c": 0,
+    "c": 4,
     "len": 4,
-    "clue": "Money"
+    "clue": "Fluid-filled sac"
    }
   ]
  }
