@@ -1,4 +1,4 @@
-/* Zebroid: name a correct answer; the rarer it is, the more it scores. Three prompts a day (Sydney time).
+/* Zebritis: name a correct answer; the rarer it is, the more it scores. Three prompts a day (Sydney time).
    Puzzles in puzzles/YYYY-MM.json: [{date, number, difficulty, prompts:[{q, a:[[name, tier, [synonyms]]...]}]}]
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra. */
 (function () {
@@ -6,7 +6,7 @@
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
-    var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebroid.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
+    var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
   }
   var TIER = {
     1: { e: "\ud83d\udc34", n: "Horse", m: ["Horse. Textbook, if a little predictable.", "Horse. Correct, and so is everyone else.", "Horse. The waiting room thanks you."] },
@@ -17,7 +17,7 @@
   var MISS = ["Not on our list. Try another.", "Hmm, not one we\u2019ve got. Another?", "Not on the list. Could be right, could be a guess. Try again.", "Nope. Think wider."];
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="zbr-eyebrow">Zebroid</span><span class="badge" id="zbr-badge"></span></div>' +
+    ' <div class="head"><span class="eyebrow" id="zbr-eyebrow">Zebritis</span><span class="badge" id="zbr-badge"></span></div>' +
     ' <p class="legend"><span>\ud83d\udc34 1</span><span>\ud83d\udc0e 3</span><span>\ud83e\udecf 6</span><span>\ud83e\udd93 10</span></p>' +
     ' <div class="prog" id="zbr-prog"></div>' +
     ' <div class="zcard" id="zbr-card"></div>' +
@@ -111,7 +111,7 @@
   function renderResult() {
     var r = $("result"), s = score(), max = P.prompts.length * 10;
     var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c"; }).join("");
-    var share = "Zebroid #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
+    var share = "Zebritis #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     var verdict = s >= 25 ? "A dazzle of zebras. Unbearable." : s >= 18 ? "Strong stripes. Consultant material." : s >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
     r.hidden = false;
@@ -177,7 +177,7 @@
     month(d).then(function (list) {
       P = list.filter(function (x) { return x.date === d; })[0] || null;
       if (!P) { $("card").innerHTML = '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; return; }
-      $("eyebrow").textContent = (isLive() ? "Zebroid" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
+      $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
       $("badge").textContent = P.difficulty || ""; $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
       render(); renderArchive();
     });
