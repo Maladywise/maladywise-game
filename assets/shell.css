@@ -153,7 +153,14 @@ footer.site a{color:var(--muted)}
 .navlink{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 6px;white-space:nowrap}
 .navlink.on{color:var(--brand)}
 .tools{align-items:center}
-.mast-top{display:flex;justify-content:space-between;align-items:center;gap:8px 14px;flex-wrap:wrap}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px 20px;flex-wrap:wrap}
+.mast-l{display:grid;gap:4px;min-width:0}
+.mast-l h1{margin-bottom:8px}
+.mast .mdate{color:var(--ink);font-weight:600}
+.mast-r{display:grid;justify-items:end;gap:6px;padding-top:8px}
+.nextin{font-size:13px;color:var(--muted);white-space:nowrap}
+.nextin b{color:var(--ink);font-variant-numeric:tabular-nums}
+@media (max-width:620px){.mast-r{justify-items:start;padding-top:0;grid-auto-flow:column;align-items:center;gap:10px}}
 .daypill{align-self:center;flex:0 0 auto;font-size:12px;padding:6px 12px}
 .daypill.d-Easy{background:#2F7D4A}.daypill.d-Medium{background:#9A6A12}.daypill.d-Hard{background:#B4472F}.daypill.d-Genius{background:#4A3480}
 :root[data-theme="dark"] .daypill.d-Genius{background:#6B55B0}

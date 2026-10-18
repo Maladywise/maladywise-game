@@ -138,6 +138,15 @@
     document.body.insertBefore(bar, document.body.firstChild);
   }
 
+  function countdown() {
+    try {
+      var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
+      var left = 86400 - ((p[0] % 24) * 3600 + p[1] * 60 + p[2]);
+      var h = Math.floor(left / 3600), m = Math.floor(left % 3600 / 60), sec = left % 60;
+      return h + "h " + ("0" + m).slice(-2) + "m " + ("0" + sec).slice(-2) + "s";
+    } catch (e) { return "at midnight"; }
+  }
+
   // ---------- hub ----------
   function hub() {
     topBar(null);
@@ -173,12 +182,19 @@
         '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>";
     }
     function draw() {
-      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><h1>Today&rsquo;s medical puzzles</h1><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + "</span></div><p>" +
-        nice(today, { day: "numeric", month: "long", year: "numeric" }) + " &middot; New puzzles at midnight, Sydney time</p><p>" + DAYQ[dow] + "</p>" + (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
+      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><h1>Today&rsquo;s medical puzzles</h1>' +
+        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p></div>" +
+        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
+        (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         '<div class="grid">' + MW_GAMES.map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="' + MW_SITE.home + '">maladywise.com</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
     draw(); window.MW_onTheme = draw;
+    if (!window.MW_tick) window.MW_tick = setInterval(function () {
+      var c = document.getElementById("mw-count"); if (!c) return;
+      if (sydToday() !== today) { location.reload(); return; }
+      c.textContent = countdown();
+    }, 1000);
   }
 
 
