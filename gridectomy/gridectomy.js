@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
   var root = document.getElementById("grx");
   if (!document.querySelector("link[data-grx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "gridectomy.css?v=" + BUILD; l.setAttribute("data-grx", ""); document.head.appendChild(l);
@@ -12,9 +12,9 @@
     ' <div class="head"><span class="eyebrow" id="grx-eyebrow">Gridectomy</span><span class="badge" id="grx-badge" hidden></span></div>' +
     ' <div class="bar"><span class="timer" id="grx-timer">0:00</span><span class="tools" id="grx-tools"><button class="btn sm" type="button" id="grx-check">Check</button><button class="btn sm" type="button" id="grx-reveal">Reveal square</button><button class="btn sm" type="button" id="grx-giveup">Give up</button></span></div>' +
     ' <div class="grid" id="grx-grid" role="grid" aria-label="Crossword grid"></div>' +
-    ' <div class="cluebar" id="grx-cluebar"><button type="button" class="arr" id="grx-prev" aria-label="Previous clue">\u2039</button><div class="ctext" id="grx-ctext"></div><button type="button" class="arr" id="grx-nxt" aria-label="Next clue">\u203a</button></div>' +
+    ' <div class="dock" id="grx-dock"><div class="cluebar" id="grx-cluebar"><button type="button" class="arr" id="grx-prev" aria-label="Previous clue">\u2039</button><div class="ctext" id="grx-ctext"></div><button type="button" class="arr" id="grx-nxt" aria-label="Next clue">\u203a</button></div>' +
     ' <div class="msg" id="grx-msg" aria-live="polite"></div>' +
-    ' <div class="kb" id="grx-kb"></div>' +
+    ' <div class="kb" id="grx-kb"></div></div>' +
     ' <div class="result" id="grx-result" hidden></div>' +
     ' <div class="clues" id="grx-clues"></div>' +
     ' <p class="note" id="grx-next"></p>' +
