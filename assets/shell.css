@@ -157,6 +157,8 @@ footer.site a{color:var(--muted)}
 .mast-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px 20px;flex-wrap:wrap}
 .mast-l{display:grid;gap:4px;min-width:0}
 .mast-l h1{margin-bottom:8px}
+.mast-l .tagl{margin:0;font:600 12px Poppins,"Segoe UI",system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B5A93}
+html[data-theme="dark"] .mast-l .tagl{color:#B4A8CF}
 .mast .mdate{color:var(--ink);font-weight:600}
 .mast-r{display:grid;justify-items:end;gap:6px;padding-top:8px}
 .nextin{font-size:13px;color:var(--muted);white-space:nowrap}
