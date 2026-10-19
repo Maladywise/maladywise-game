@@ -49,16 +49,29 @@ button{font-family:inherit}
 
 .pill{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent);color:#fff}
 @media (max-width:620px){
-  .grid{gap:10px}
-  .card{display:grid;grid-template-columns:72px minmax(0,1fr);border-radius:14px}
-  .card .band{min-height:0}
-  .card .band svg{width:34px;height:34px}
-  .card .cbody{padding:10px 12px;gap:2px}
-  .card .name{font-size:18px}
-  .card .tag{font-size:13px}
-  .card .cfoot{margin-top:4px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card{border-radius:14px}
+  .card .band{min-height:58px}
+  .card .band svg{width:30px;height:30px}
+  .card .cbody{padding:9px 11px 11px;gap:2px}
+  .card .name{font-size:17px}
+  .card .tag,.card .status{display:none}
+  .card .cfoot{margin-top:6px}
   .card .play{padding:5px 12px;font-size:12px}
+  .card .pill.wk{margin:3px 0 0;font-size:9px;padding:3px 7px}
+  .card.feature{grid-column:1/-1;display:grid;grid-template-columns:72px minmax(0,1fr)}
+  .card.feature .band{min-height:0}
+  .card.feature .tag{display:block;font-size:13px}
+  .card.done{opacity:.72}
 }
+.band{position:relative}
+.band .tick{position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;background:#fff;color:#2F7D4A;font:700 13px/22px Poppins,system-ui,sans-serif;text-align:center}
+.mwprog{display:grid;gap:6px;margin:-4px 0 14px}
+.mwbar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.mwbar i{display:block;height:100%;background:#4A3480;border-radius:999px}
+html[data-theme="dark"] .mwbar i{background:#9C8CC4}
+.mwprog p{margin:0;font-size:14px;color:var(--muted)}
+.mwprog b{color:var(--ink)}
 a.card:hover .play{opacity:.85}
 footer.site{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px;text-align:center;line-height:1.6}
 footer.site a{color:var(--muted)}
