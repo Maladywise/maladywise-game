@@ -199,7 +199,7 @@
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + "</div>" +
-        '<div class="cbody">' + (!g.weekly && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
+        '<div class="cbody">' + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
         '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
     }
@@ -290,10 +290,10 @@
     extras(g, box, today);
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
-    var einToday = !g.weekly && diffFor(g, today, dow) === "Einstein";
+    var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
     sp.innerHTML = '<div class="splash-in">' + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
-      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
+      '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
     document.getElementById("mw-play").onclick = start;
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
