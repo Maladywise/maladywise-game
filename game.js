@@ -63,17 +63,13 @@
   var C = null;
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    wrong: ["Yeah, nah.", "Respectfully: no.", "Bold choice. Wrong, but bold.", "The patient would like a second opinion.",
-      "That\u2019s a no from the consultant.", "Interesting. Incorrect, but interesting.", "Swing and a miss.",
-      "Not even on the differential, mate.", "Back to the textbook.", "Close the tabs, open your eyes."],
-    close: ["Warm. Annoyingly warm.", "Right neighbourhood, wrong house.", "So close the patient almost felt better.",
-      "Nearly. Be more specific."],
-    nonsense: ["That\u2019s not a diagnosis, that\u2019s a sneeze.", "Keyboard mash isn\u2019t a differential.",
-      "I\u2019m going to pretend you didn\u2019t type that.", "Autocorrect can\u2019t save you here."],
-    repeat: ["You already tried that. Bold strategy.", "Same guess, same answer: no."],
-    skip: ["Tactical retreat. Respect.", "Fair. Here\u2019s another clue.", "Calling for backup. Wise."],
+    wrong: ["Yeah, nah.", "Respectfully: no.", "Bold choice. Wrong, but bold.", "The patient would like a second opinion.", "That\u2019s a no from the consultant.", "Interesting. Incorrect, but interesting.", "Swing and a miss.", "Not even on the differential.", "Back to the textbook.", "Close the tabs, open your eyes.", "The nurse is quietly shaking her head.", "Even the med student looks worried.", "Confidently incorrect. A classic.", "That\u2019s a diagnosis. Just not this one.", "Plausible. Also wrong.", "Somewhere a pathologist sighed.", "No. But keep that energy for the next clue.", "The fictional patient has questions.", "Wrong ward, doctor.", "Lovely guess. Shame about the accuracy.", "Not quite the vibe of this case.", "The exam board would like a word.", "That\u2019s a horse. This might be a zebra.", "Strong opening. Wrong ending.", "Nope. Read the clues again. Slowly.", "Your differential needs a differential.", "Cross that one off the whiteboard.", "Incorrect, with conviction.", "Ambitious. Unfounded, but ambitious.", "Not this time. The clues are trying to help."],
+    close: ["Warm. Annoyingly warm.", "Right neighbourhood, wrong house.", "So close the patient almost felt better.", "Nearly. Be more specific.", "Same chapter, wrong page.", "Getting warmer. Narrow it down.", "Close. The examiner wants the exact term.", "Right system, wrong diagnosis.", "Ooh. Almost. Sharpen it.", "You\u2019re circling it. Land the plane.", "Nearly there. One more step.", "Correct family. Wrong sibling."],
+    nonsense: ["That\u2019s not a diagnosis, that\u2019s a sneeze.", "Keyboard mash isn\u2019t a differential.", "I\u2019m going to pretend you didn\u2019t type that.", "Autocorrect can\u2019t save you here.", "Was that a diagnosis or a cat on the keyboard?", "Not a word. Not in any textbook, anyway.", "That\u2019s a password, not a diagnosis.", "Bold use of the alphabet.", "The coding department can\u2019t bill that.", "We\u2019ve consulted the dictionary. It declined to comment."],
+    repeat: ["You already tried that. Bold strategy.", "Same guess, same answer: no.", "D\u00e9j\u00e0 vu. Still wrong.", "Repeating it won\u2019t make it true.", "Groundhog Day. Try something new.", "Still no. It hasn\u2019t changed in the last minute."],
+    skip: ["Tactical retreat. Respect.", "Fair. Here\u2019s another clue.", "Calling for backup. Wise.", "Asking for more history. Very thorough.", "Ordering more tests. Classic.", "Fair enough. More data incoming.", "Skipping. The patient waits patiently.", "Next clue, coming right up."],
     vague: [
       [/^(a )?(virus|viral|viral illness|infection|a bug|bug|gastro)$/, "\u201cA virus\u201d is what we say when we don\u2019t know. Try harder."],
       [/^(stress|anxiety|anxious|burnout|depression)$/, "Blaming stress? Very 5 pm on a Friday of you."],
@@ -88,12 +84,8 @@
       [/^(hypochondria|hypochondriac|faking|malingering|psychosomatic|its in their head|in their head)$/, "Careful. The fictional patient is offended."],
       [/^(death|dead|dying)$/, "Dark. Also wrong."]
     ],
-    win: { 1: "First clue? Genius, or you\u2019ve seen this before. Insufferable either way.",
-      2: "Two clues. Your registrar is shook.", 3: "Three clues. The consultant nods slightly.",
-      4: "Got there. That\u2019s what counts.", 5: "Scraped in like a 4:59 pm Friday referral.",
-      6: "Last clue. A diagnostic buzzer-beater." },
-    lose: ["Stumped. The patient\u2019s fictional. Your pride isn\u2019t.", "The case wins today. Rematch tomorrow.",
-      "Out of clues. Off to the library with you."]
+    win: {"1": ["First clue? Genius, or you\u2019ve seen this before. Insufferable either way.", "One clue. Are you the examiner?", "First clue. Put that on your CV.", "One and done. Suspiciously good."], "2": ["Two clues. Your registrar is shook.", "Two clues. Frankly showing off.", "Second clue. Sharp as a scalpel.", "Two clues. The students are taking notes."], "3": ["Three clues. The consultant nods slightly.", "Three clues. Textbook work.", "Third clue. Solid clinical reasoning.", "Three clues. Very respectable."], "4": ["Got there. That\u2019s what counts.", "Four clues. Steady and safe.", "Four clues. The patient is grateful.", "Fourth clue. Methodical. We like it."], "5": ["Scraped in like a 4:59 pm Friday referral.", "Five clues. A nervous win, but a win.", "Fifth clue. Sweaty palms, correct answer.", "Five clues. Close call. Still counts."], "6": ["Last clue. A diagnostic buzzer-beater.", "Final clue. Living dangerously.", "Six clues. Every test ordered, diagnosis made.", "Last clue. Phew. For everyone."]},
+    lose: ["Stumped. The patient\u2019s fictional. Your pride isn\u2019t.", "The case wins today. Rematch tomorrow.", "Out of clues. Off to the library with you.", "Missed it. It happens to the best of us. Usually not this badly.", "The case has been referred on. To tomorrow.", "Diagnosis: humbled. Prognosis: good, with practice.", "Not today. Read the answer, nod wisely, move on.", "The zebra got away.", "Stumped. Even the consultant would have Googled it.", "No diagnosis. Document it and move on."]
   };
   var STOP = { syndrome: 1, disease: 1, deficiency: 1, poisoning: 1, acute: 1, chronic: 1, primary: 1, secondary: 1, the: 1, and: 1, with: 1, infection: 1, disorder: 1, type: 1 };
   function norm(s) {
@@ -191,7 +183,7 @@
     if (C.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "dx" && t.d === today; })) { tro.push({ g: "dx", d: today }); put("mw-einstein", tro); } }
-    } else say(win ? SASS.win[st.revealed] : pick(SASS.lose));
+    } else say(win ? pick(SASS.win[st.revealed]) : pick(SASS.lose));
   }
   function burn(label, line) {
     if (label) st.wrong.push(label);
