@@ -135,18 +135,6 @@ window.MW_GAMES = [
     ],
     accent: "#3C4A57", accentDark: "#A7B8C8",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M9 13c6 3 10 3 15 0s9-3 15 0"/><path d="M9 24c6 3 10 3 15 0s9-3 15 0"/><path d="M9 35c6 3 10 3 15 0s9-3 15 0"/></svg>' },
-  { id: "mergeon", name: "Mergeon", path: "mergeon/", live: true, dailyLine: "Same drop order for everyone today. One run counts, practice as much as you like.", store: { stats: "mrg-stats", day: "mrg-day-", labels: ["\ud83e\udde0", "\ud83e\udec1", "\ud83e\udec0", "\ud83e\uddb4", "Less"], distTitle: " (top organ)" },
-    tagline: "Drop organs. Match two. Merge your way from microbe to brain.",
-    quip: "Surgery, but the organs are round and nobody signed a consent form.",
-    helpQuip: "Two brains merging disappear for 100 points. Big brain energy.",
-    help: [
-      "Move to aim, then tap (or press space) to drop an organ.",
-      "Two matching organs touch and merge into the next one up: microbe, blood drop, tooth, eye, ear, tongue, nose, bone, heart, lungs, brain.",
-      "Bigger merges score more. If anything sits above the dashed line for too long, it\u2019s game over.",
-      "Everyone gets the same drop order each day, and your first run counts. Practise as much as you like after. Making a heart counts as a win."
-    ],
-    accent: "#5E7A2E", accentDark: "#A8C77A",
-    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" aria-hidden="true"><circle cx="14" cy="32" r="7"/><circle cx="29" cy="32" r="7"/><circle cx="24" cy="15" r="9"/></svg>' },
   { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
     tagline: "Twenty hard medical trivia questions. No options. New every Sunday.",
     quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
