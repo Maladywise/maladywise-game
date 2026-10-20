@@ -35,12 +35,12 @@
   loadDay();
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    short: ["Five letters. Count them.", "Not enough letters, doctor.", "Short and wrong. Try again."],
-    invalid: ["Not in the word list. Not even in Latin.", "That's not a word. Dr Google is also confused.", "Made that one up, did we?", "Respectfully: not a word."],
-    win: ["First go? Suspicious. Very suspicious.", "Two guesses. Show-off.", "Three. Registrar energy.", "Four. Steady hands.", "Five. Bit of a sweat, that.", "Six. Code blue averted."],
-    lose: ["Back to anatomy class.", "The word wins today. Rematch tomorrow.", "Off to the textbook with you."]
+    short: ["Five letters. Count them.", "Not enough letters, doctor.", "Short and wrong. Try again.", "Five. The number is five.", "Missing a letter or two.", "Short-staffed on letters there."],
+    invalid: ["Not in the word list. Not even in Latin.", "That's not a word. Dr Google is also confused.", "Made that one up, did we?", "Respectfully: not a word.", "Not a word. Not even an eponym.", "The dictionary has never heard of it.", "That looks like a typo with ambition.", "Nice try. Not a word.", "Even the pharmacist can\u2019t read that.", "That\u2019s doctor handwriting, not a word."],
+    win: [["First go? Suspicious. Very suspicious.", "One guess. Witchcraft.", "First try. Buy a lottery ticket.", "One guess. Are you inside our database?"], ["Two guesses. Show-off.", "Two. Outrageously good.", "Second guess. Sharp.", "Two guesses. Smug is allowed."], ["Three. Registrar energy.", "Three guesses. Very tidy.", "Three. Textbook.", "Third guess. Nicely reasoned."], ["Four. Steady hands.", "Four guesses. Safe and solid.", "Four. A good honest day\u2019s work.", "Fourth guess. Calm under pressure."], ["Five. Bit of a sweat, that.", "Five guesses. Cutting it fine.", "Five. Heart rate slightly raised.", "Fifth guess. Got there in the end."], ["Six. Code blue averted.", "Last guess. Living dangerously.", "Six. Pulse restored.", "Final guess. Everyone breathe out."]],
+    lose: ["Back to anatomy class.", "The word wins today. Rematch tomorrow.", "Off to the textbook with you.", "Six guesses, no diagnosis. Happens.", "The word escaped. Tomorrow\u2019s another shift.", "Not today. Revise and return.", "Out of guesses. Out of luck.", "The word has been discharged. Without you.", "Stumped. Even the spellchecker is embarrassed."]
   };
   function say(t) { $("msg").textContent = t; }
 
@@ -126,7 +126,7 @@
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put("mw-einstein", tro); } }
-    } else say(win ? SASS.win[st.guesses.length - 1] : "It was " + P.word + ". " + pick(SASS.lose));
+    } else say(win ? pick(SASS.win[st.guesses.length - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
     if (!P || st.done || !WORDS) return;

@@ -37,16 +37,13 @@
   loadWeek();
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    right: ["Correct. Smug is allowed.", "Nailed it.", "Textbook.", "Consultant-level recall.", "Right. Don\u2019t let it go to your head."],
-    wrong: ["Nope. Read the explanation, then pretend you knew.", "Not quite. We\u2019ll call it a learning opportunity.", "Wrong, but confidently wrong.", "Missed. Even consultants Google things."],
+    right: ["Correct. Smug is allowed.", "Nailed it.", "Textbook.", "Consultant-level recall.", "Right. Don\u2019t let it go to your head.", "Correct. The examiner smiles.", "Spot on.", "Right. Annoyingly right.", "Yes. Gold star.", "Correct. Someone did the reading.", "Bang on.", "Right first time.", "Correct. Teaching registrar material.", "Yes. Clinical pearl secured.", "Correct. Quietly impressive.", "Right. Write that one down for the pub quiz.", "Exactly right.", "Correct. Your study notes thank you.", "Yes. Brain fully perfused.", "Correct. Carry on, doctor."],
+    wrong: ["Nope. Read the explanation, then pretend you knew.", "Not quite. We\u2019ll call it a learning opportunity.", "Wrong, but confidently wrong.", "Missed. Even consultants Google things.", "No. But now you\u2019ll never forget it.", "Wrong. The explanation is right there.", "Not this time.", "Close. Ish. Not really.", "Incorrect. Plausible, though.", "No. File under \u2018things I knew yesterday\u2019.", "Wrong. Blame the night shift.", "Missed. Happens to everyone, apparently.", "Nope. Good guess, wrong answer.", "Not quite. Read on and redeem yourself.", "Wrong. The textbook would like a word.", "No. A reasonable mistake. Still a mistake.", "Incorrect. Next one\u2019s yours.", "Nope. Consider this free CPD.", "Wrong answer, right attitude."],
     end: function (s) {
-      if (s === 10) return "10 out of 10. Unbearable. Frame it.";
-      if (s >= 8) return "Excellent. Registrar exam energy.";
-      if (s >= 6) return "Solid pass. The college would approve.";
-      if (s >= 4) return "Borderline. Revision recommended.";
-      return "Rough one. There\u2019s always tomorrow.";
+      var E = {"10": ["10 out of 10. Unbearable. Frame it.", "Perfect score. Insufferable. Well done.", "10/10. Are you writing these?", "Flawless. Take the rest of the day off."], "8": ["Excellent. Registrar exam energy.", "Very strong. The college is impressed.", "Top marks, nearly. Smugness permitted.", "Great round. Knowledge: excellent."], "6": ["Solid pass. The college would approve.", "A comfortable pass. Respectable.", "Good effort. Above the line.", "Pass. Not flashy, but safe."], "4": ["Borderline. Revision recommended.", "Borderline. A few gaps on the ward round.", "Scraped through. Maybe.", "Middling. Coffee, then revision."], "0": ["Rough one. There\u2019s always tomorrow.", "Tough round. Tomorrow\u2019s a new quiz.", "Ouch. Read the explanations and try again tomorrow.", "Not your day. The explanations are worth a read."]};
+      return pick(E[s === 10 ? 10 : s >= 8 ? 8 : s >= 6 ? 6 : s >= 4 ? 4 : 0]);
     }
   };
 
