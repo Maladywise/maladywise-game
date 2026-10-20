@@ -35,7 +35,8 @@
             track("finished/" + g.id, g.name + " finished");
             if (win) track("won/" + g.id, g.name + " won");
             if (!g.store.weekly && k === pre + sydToday()) markDay();
-            setTimeout(nlPrompt, 1800);
+            setTimeout(nlPrompt, 2600);
+            (function (val) { setTimeout(function () { try { celebrate(g.id, JSON.parse(val)); } catch (x) {} }, 450); })(v);
           }
         }
       } catch (e) {}
@@ -61,6 +62,35 @@
     return { n: c, today: !!seen[sydToday()] };
   }
   window.MW_siteStreak = siteStreak;
+
+  // ---------- celebrations on finishing a puzzle ----------
+  function quiet() { return root.getAttribute("data-motion") === "reduce" || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); }
+  var SCENES = {
+    dx: function (st) {
+      if (!st.win) return null;
+      var gold = st.revealed === 1;
+      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">CASE<br>CLOSED</div><p class="cb-cap">' + (gold ? "First clue. Frankly suspicious." : "Diagnosed on clue " + st.revealed + ".") + "</p>" };
+    },
+    wordemic: function (st) {
+      if (!st.win) return null;
+      var n = (st.guesses || []).length, gold = n <= 2;
+      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (gold ? "Pulse restored in " + n + ". Show-off." : "Pulse restored. Solved in " + n + ".") + "</p>" };
+    },
+    zebritis: function (st) {
+      if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
+      if (st.zeb || st.win) return { cls: "cb-run", html: '<div class="cb-runner">\ud83e\udd93</div><p class="cb-cap">' + (st.zeb ? "Stripes earned." : "Solid round.") + "</p>" };
+      return null;
+    }
+  };
+  function celebrate(id, st) {
+    var f = SCENES[id]; if (!f || !st) return;
+    var sc = f(st); if (!sc) return;
+    var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to continue</span></div>');
+    function bye() { if (!o.parentNode) return; o.classList.add("out"); setTimeout(function () { o.remove(); }, 260); }
+    o.addEventListener("click", bye); document.body.appendChild(o);
+    setTimeout(bye, quiet() ? 1800 : 2600);
+  }
+  window.MW_celebrate = celebrate;
 
   // ---------- Zebra Mail nudge after finishing a game ----------
   function nlPrompt() {
