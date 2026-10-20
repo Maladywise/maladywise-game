@@ -1,9 +1,9 @@
 /* Zebritis: name a correct answer; the rarer it is, the more it scores. Three prompts a day (Sydney time).
    Puzzles in puzzles/YYYY-MM.json: [{date, number, difficulty, prompts:[{q, a:[[name, tier, [synonyms]]...]}]}]
-   Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra. */
+   Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -12,13 +12,14 @@
     1: { e: "\ud83d\udc34", n: "Horse", m: ["Horse. Textbook, if a little predictable.", "Horse. Correct, and so is everyone else.", "Horse. The waiting room thanks you.", "Horse. Safe. Sensible. One point.", "Horse. Common things are common.", "Horse. Your GP supervisor would approve."] },
     3: { e: "\ud83d\udc0e", n: "Pony", m: ["Pony. Respectable.", "Pony. Off the beaten track, slightly.", "Pony. Registrar-level.", "Pony. A little less obvious. Nice.", "Pony. Good thinking.", "Pony. Above average."] },
     6: { e: "\ud83e\udecf", n: "Donkey", m: ["Donkey. Now we\u2019re talking.", "Donkey. Stubbornly obscure. Love it.", "Donkey. Consultant-level recall.", "Donkey. That\u2019s deep in the textbook.", "Donkey. Rare-ish. Lovely.", "Donkey. Someone stayed for the lecture."] },
-    10: { e: "\ud83e\udd93", n: "Zebra", m: ["Zebra! Hoofbeats, but stripes.", "Zebra! Someone read the footnotes.", "Zebra! Frame it. Then go outside.", "Zebra! That\u2019s a case report.", "Zebra! The registrar is googling it.", "Zebra! Absolute stripes."] }
+    10: { e: "\ud83e\udd93", n: "Zebra", m: ["Zebra! Hoofbeats, but stripes.", "Zebra! Someone read the footnotes.", "Zebra! Frame it. Then go outside.", "Zebra! That\u2019s a case report.", "Zebra! The registrar is googling it.", "Zebra! Absolute stripes."] },
+    20: { e: "\ud83e\udd84", n: "Unicorn", m: ["UNICORN! The single rarest answer. Mythical.", "Unicorn! Nobody else will get that. Probably.", "Unicorn! That\u2019s not a diagnosis, that\u2019s a legend.", "Unicorn! Write it up. Submit it. Retire.", "Unicorn! The textbook authors are taking notes."] }
   };
   var MISS = ["Not on our list. Try another.", "Hmm, not one we\u2019ve got. Another?", "Not on the list. Could be right, could be a guess. Try again.", "Nope. Think wider.", "Not on our list. Might be true, but not today.", "No match. Try a different angle.", "Not one of ours. Next.", "Not on the list. Think about mechanisms.", "No luck. Try another system.", "Not on our list. Spelling check?"];
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="zbr-eyebrow">Zebritis</span><span class="badge" id="zbr-badge"></span></div>' +
-    ' <p class="legend"><span>\ud83d\udc34 1</span><span>\ud83d\udc0e 3</span><span>\ud83e\udecf 6</span><span>\ud83e\udd93 10</span></p>' +
+    ' <p class="legend"><span>\ud83d\udc34 1</span><span>\ud83d\udc0e 3</span><span>\ud83e\udecf 6</span><span>\ud83e\udd93 10</span><span>\ud83e\udd84 20</span></p>' +
     ' <div class="prog" id="zbr-prog"></div>' +
     ' <div class="zcard" id="zbr-card"></div>' +
     ' <div class="result" id="zbr-result" hidden></div>' +
@@ -101,7 +102,7 @@
     var inp = $("in"); if (inp && (bad || (msg === undefined && window.innerWidth > 700))) inp.focus();
   }
   function reveal(x, p) {
-    var tiers = [10, 6, 3, 1];
+    var tiers = [20, 10, 6, 3, 1];
     return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers</summary>' + tiers.map(function (t) {
       var items = x.a.filter(function (a) { return a[1] === t; });
       if (!items.length) return "";
@@ -109,11 +110,11 @@
     }).join("") + "</details>";
   }
   function renderResult() {
-    var r = $("result"), s = score(), max = P.prompts.length * 10;
+    var r = $("result"), s = score(), max = P.prompts.length * 20;
     var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c"; }).join("");
     var share = "Zebritis #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
-    var verdict = s >= 25 ? "A dazzle of zebras. Unbearable." : s >= 18 ? "Strong stripes. Consultant material." : s >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
+    var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : s >= 25 ? "A dazzle of zebras. Unbearable." : s >= 18 ? "Strong stripes. Consultant material." : s >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
     r.hidden = false;
     r.innerHTML = '<p class="em-row">' + em + '</p><p class="score">' + s + "<span>/" + max + '</span></p><p class="verdict">' + esc(verdict) + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>10+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
