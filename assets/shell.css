@@ -58,7 +58,7 @@ button{font-family:inherit}
   .card .tag,.card .status{display:none}
   .card .cfoot{margin-top:6px}
   .card .play{padding:5px 12px;font-size:12px}
-  .card .pill.wk{margin:3px 0 0;font-size:9px;padding:3px 7px}
+  .card .pill.wk{margin:6px 0 0;font-size:9px;padding:3px 7px}
   .card.done{opacity:.72}
 }
 .band{position:relative}
@@ -224,7 +224,7 @@ html[data-theme="dark"] .subpill{color:#16121F}
 .doc ul.news{list-style:none;padding:0;display:grid;gap:10px}
 .doc ul.news b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
-.card .pill.wk{margin:6px 0 2px;justify-self:start;align-self:start}
+.card .pill.wk{margin:8px 0 0;justify-self:start;align-self:start}
 
 .mwstreak{display:inline-block;font-size:14px;color:var(--ink);background:var(--soft,#F1ECF8);border-radius:999px;padding:4px 12px;justify-self:start}
 .mwstreak b{color:#B4472F}
