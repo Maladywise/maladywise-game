@@ -275,3 +275,72 @@ html[data-theme="dark"] .cb-stamp{mix-blend-mode:normal}
 /* still version for reduced motion */
 .cb.still,.cb.still *,.cb.still::before,.cb.still::after{animation:none!important}
 .cb.still .cb-line path{stroke-dashoffset:0}
+
+/* confetti */
+.cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.9}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+/* Comorbix bars */
+.cb-stack{display:grid;gap:8px;width:min(70vw,280px)}
+.cb-stack i{display:block;height:30px;border-radius:8px;background:var(--c);animation:cbbar .35s cubic-bezier(.2,1.4,.4,1) both}
+.cb-stack i:nth-child(2){animation-delay:.12s}.cb-stack i:nth-child(3){animation-delay:.24s}.cb-stack i:nth-child(4){animation-delay:.36s}
+@keyframes cbbar{from{transform:translateX(-120vw)}}
+/* Morphemia honeycomb */
+.cb-comb{width:180px;height:180px}
+.cb-comb .hx{fill:#F2D36B;stroke:#B07A0C;stroke-width:3;opacity:.15;animation:cbhex .35s ease-out forwards}
+@keyframes cbhex{to{opacity:1}}
+.cb-cap-top{font-size:54px;line-height:1;animation:cbcapdrop .6s cubic-bezier(.3,1.5,.5,1) 1s both}
+@keyframes cbcapdrop{from{transform:translateY(-60vh) rotate(-30deg)}}
+/* Linkase chain */
+.cb-links{width:min(84vw,340px);height:80px;overflow:visible}
+.cb-links .lk{fill:none;stroke:#2F5DA8;stroke-width:7;animation:cblink .45s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(var(--i) * .1s)}
+@keyframes cblink{from{transform:translateX(calc((var(--i) - 2) * 40px));opacity:0}}
+.cb-chain .cb-links{animation:cbtight .3s ease-in-out .8s 2 alternate}
+@keyframes cbtight{to{transform:scaleX(.94)}}
+/* Gridectomy stitches + plaster */
+.cb-sq{position:relative;width:160px;height:160px}
+.cb-sq svg{width:100%;height:100%}
+.cb-sq rect{fill:var(--card,#fff);stroke:#3A3150;stroke-width:5;stroke-dasharray:12 8;stroke-dashoffset:400;animation:cbstitch 1s linear forwards}
+.cb-grid.gold .cb-sq rect{stroke:#B8860B}
+@keyframes cbstitch{to{stroke-dashoffset:0}}
+.cb-plaster{position:absolute;right:-10px;top:-14px;font-size:62px;transform:rotate(35deg);animation:cbstick .35s cubic-bezier(.2,1.6,.4,1) .95s both}
+@keyframes cbstick{from{transform:rotate(35deg) scale(2.4);opacity:0}}
+/* Suturix wound */
+.cb-wound{width:min(84vw,340px);height:90px;overflow:visible}
+.cb-wound .cut{fill:none;stroke:#C2553A;stroke-width:5;stroke-linecap:round;stroke-dasharray:340;stroke-dashoffset:340;animation:cbecg .5s ease-out forwards}
+.cb-wound .st{fill:none;stroke:#2B2340;stroke-width:4;stroke-linecap:round;opacity:0;animation:cbhex .2s ease-out forwards}
+html[data-theme="dark"] .cb-wound .st{stroke:#F1ECF8}
+.cb-sut .cb-wound .cut{animation:cbecg .5s ease-out forwards,cbheal .5s ease-in 1.4s forwards}
+@keyframes cbheal{to{stroke:#E8B4A6;stroke-width:2}}
+/* Triviosis exam card */
+.cb-card{display:grid;gap:2px;justify-items:center;background:var(--card,#fff);border:2px solid #1F7A8C;border-radius:14px;padding:18px 34px;box-shadow:0 10px 30px rgba(0,0,0,.12);animation:cbslide .45s cubic-bezier(.2,1.3,.4,1) both;position:relative}
+.cb-card span{font:600 11px Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cb-card b{font:700 46px/1.1 Lora,Georgia,serif;color:var(--ink)}
+.cb-card em{position:absolute;right:-18px;top:-18px;font:800 26px Poppins,system-ui,sans-serif;font-style:normal;color:#B4472F;border:4px solid #B4472F;border-radius:50%;width:60px;height:60px;display:grid;place-items:center;transform:rotate(14deg);background:var(--card,#fff);animation:cbstamp2 .35s cubic-bezier(.2,1.6,.4,1) .55s both}
+@keyframes cbstamp2{from{transform:rotate(14deg) scale(2.4);opacity:0}}
+@keyframes cbslide{from{transform:translateY(40vh);opacity:0}}
+/* Grand Rounds */
+.cb-claps{font-size:64px;display:flex;gap:10px}
+.cb-claps span{animation:cbclap .35s ease-in-out infinite alternate}
+.cb-claps span:nth-child(2){animation-delay:.12s}.cb-claps span:nth-child(3){animation-delay:.24s}
+@keyframes cbclap{to{transform:scale(1.18) rotate(-8deg)}}
+.cb-podium{display:flex;align-items:flex-end;gap:6px}
+.cb-podium i{display:grid;place-items:start center;width:74px;border-radius:8px 8px 0 0;background:#3B4C9B;color:#fff;font:700 22px Poppins,system-ui,sans-serif;font-style:normal;padding-top:8px;animation:cbrise .5s cubic-bezier(.2,1.3,.4,1) both;transform-origin:bottom}
+.cb-podium .p1{height:120px;font-size:40px;animation-delay:.3s}.cb-podium .p2{height:80px;background:#6C7BC4}.cb-podium .p3{height:56px;background:#93A5F2;animation-delay:.15s}
+@keyframes cbrise{from{transform:scaleY(0)}}
+/* Cryptogenic newspaper */
+.cb-paper{display:grid;gap:4px;justify-items:center;background:#FBF8F0;color:#1E1A16;border:1px solid #CFC6B4;padding:16px 26px 18px;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:cbspin .7s cubic-bezier(.2,1.2,.4,1) both}
+.cb-paper .mast{font:700 13px Lora,Georgia,serif;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid #1E1A16;padding-bottom:4px}
+.cb-paper b{font:900 56px/1 Lora,Georgia,serif;letter-spacing:.02em}
+.cb-paper .sig{font:italic 600 16px Lora,Georgia,serif;color:#7A3E8C}
+@keyframes cbspin{from{transform:rotate(-540deg) scale(.1);opacity:0}}
+/* Einstein */
+.cb-atom{width:170px;height:170px;animation:cbrot 3s linear infinite}
+.cb-atom ellipse{fill:none;stroke:#B8860B;stroke-width:4}
+.cb-atom .nuc{fill:#B8860B}
+@keyframes cbrot{to{transform:rotate(360deg)}}
+/* streak badge + ward round */
+.cb-medal{font-size:92px;line-height:1;animation:cbpop .5s cubic-bezier(.2,1.6,.4,1) both}
+.cb-big{font:700 44px/1.05 Lora,Georgia,serif;color:#4A3480;animation:cbpop .5s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes cbpop{0%{transform:scale(2.2);opacity:0}60%{transform:scale(.94);opacity:1}100%{transform:none}}
+html[data-theme="dark"] .cb-big{color:#CFC6E3}

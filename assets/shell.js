@@ -36,7 +36,7 @@
             if (win) track("won/" + g.id, g.name + " won");
             if (!g.store.weekly && k === pre + sydToday()) markDay();
             setTimeout(nlPrompt, 2600);
-            (function (val) { setTimeout(function () { try { celebrate(g.id, JSON.parse(val)); } catch (x) {} }, 450); })(v);
+            (function (val, live) { setTimeout(function () { try { celebrate(g.id, JSON.parse(val)); if (live) afterLive(g, JSON.parse(val)); } catch (x) {} }, 450); })(v, !g.store.weekly && k === pre + sydToday());
           }
         }
       } catch (e) {}
@@ -64,6 +64,7 @@
   window.MW_siteStreak = siteStreak;
 
   // ---------- celebrations on finishing a puzzle ----------
+  function esc2(x) { return String(x).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function quiet() { return root.getAttribute("data-motion") === "reduce" || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); }
   var SCENES = {
     dx: function (st) {
@@ -76,19 +77,87 @@
       var n = (st.guesses || []).length, gold = n <= 2;
       return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (gold ? "Pulse restored in " + n + ". Show-off." : "Pulse restored. Solved in " + n + ".") + "</p>" };
     },
+    comorbix: function (st) {
+      if (!st.win) return null; var m = st.mistakes || 0;
+      return { cls: "cb-bars", html: confetti(["#E9C46A", "#2A9D8F", "#457B9D", "#9B5DE5"], 40) + '<div class="cb-stack"><i style="--c:#E9C46A"></i><i style="--c:#2A9D8F"></i><i style="--c:#457B9D"></i><i style="--c:#9B5DE5"></i></div><p class="cb-cap">' + (m ? "Discharged, with " + m + " slip" + (m > 1 ? "s" : "") + "." : "Clean discharge. Not one mistake.") + "</p>" };
+    },
+    morphemia: function (st) {
+      if (!st.win) return null;
+      var hx = function (x, y, i) { return '<polygon class="hx" style="animation-delay:' + (i * .12) + 's" points="' + [0, 1, 2, 3, 4, 5].map(function (k) { var a = Math.PI / 3 * k + Math.PI / 6; return (x + 22 * Math.cos(a)).toFixed(1) + "," + (y + 22 * Math.sin(a)).toFixed(1); }).join(" ") + '"/>'; };
+      var c = [[0, 0], [0, -38], [33, -19], [33, 19], [0, 38], [-33, 19], [-33, -19]];
+      return { cls: "cb-hex", html: '<div class="cb-cap-top">\ud83c\udf93</div><svg class="cb-comb" viewBox="-70 -70 140 140" aria-hidden="true">' + c.map(function (p, i) { return hx(p[0], p[1], i); }).join("") + '</svg><p class="cb-cap">Genius. Go and tell someone.</p>' };
+    },
+    linkase: function (st) {
+      if (!st.win) return null; var m = st.mistakes || 0;
+      return { cls: "cb-chain", html: '<svg class="cb-links" viewBox="0 0 300 60" aria-hidden="true">' + [0, 1, 2, 3, 4].map(function (i) { return '<rect class="lk" style="--i:' + i + '" x="' + (8 + i * 56) + '" y="15" width="64" height="30" rx="15"/>'; }).join("") + '</svg><p class="cb-cap">' + (m ? "Chain held. " + m + " slip" + (m > 1 ? "s" : "") + "." : "Unbreakable. Not one slip.") + "</p>" };
+    },
+    gridectomy: function (st) {
+      if (!st.win) return null; var gold = (st.t || 999) < 120 && !st.reveals;
+      return { cls: "cb-grid" + (gold ? " gold" : ""), html: '<div class="cb-sq"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="10" y="10" width="100" height="100" rx="6"/></svg><span class="cb-plaster">\ud83e\ude79</span></div><p class="cb-cap">' + (gold ? "Under two minutes. Neat stitches." : "Grid closed. Lovely work.") + "</p>" };
+    },
+    suturix: function (st) {
+      if (!st.win) return null;
+      return { cls: "cb-sut", html: '<svg class="cb-wound" viewBox="0 0 300 80" aria-hidden="true"><path class="cut" d="M10 40 C 60 20, 100 60, 150 40 S 240 20, 290 40"/>' + [40, 85, 130, 175, 220, 260].map(function (x, i) { return '<path class="st" style="animation-delay:' + (.3 + i * .14) + 's" d="M' + (x - 8) + " 26 L" + (x + 8) + " 54 M" + (x + 8) + " 26 L" + (x - 8) + ' 54"/>'; }).join("") + '</svg><p class="cb-cap">' + (st.hints ? "Closed, with a little help." : "Wound closed. Not a stitch out of place.") + "</p>" };
+    },
+    triviosis: function (st) {
+      if (!st.win || st.score == null) return null; var s2 = st.score, gr = s2 === 10 ? "A+" : s2 >= 9 ? "A" : s2 >= 8 ? "B+" : s2 >= 7 ? "B" : "C";
+      return { cls: "cb-exam" + (s2 === 10 ? " perfect" : ""), html: (s2 === 10 ? confetti(["#1F7A8C", "#5BC0D3", "#F2D36B", "#4A3480"], 40) : "") + '<div class="cb-card"><span>Exam result</span><b>' + s2 + '/10</b><em>' + gr + '</em></div><p class="cb-cap">' + (s2 === 10 ? "Perfect. Mortarboards in the air. \ud83c\udf93" : "Passed. The college approves.") + "</p>" };
+    },
+    grandrounds: function (st) {
+      if (!st.done) return null;
+      if (st.mode === "duo" && st.sb != null) {
+        var nm = st.names || ["You", "Opponent"], a = st.sa || 0, b = st.sb || 0;
+        if (a === b) return { cls: "cb-clap", html: '<div class="cb-claps">\ud83e\udd1d</div><p class="cb-cap">Dead heat, ' + a + " all. Rematch next Sunday.</p>" };
+        var w = a > b ? nm[0] : nm[1];
+        return { cls: "cb-pod", html: confetti(["#3B4C9B", "#93A5F2", "#F2D36B"], 40) + '<div class="cb-podium"><i class="p2"><span>2</span></i><i class="p1"><span>\ud83c\udfc6</span></i><i class="p3"><span>3</span></i></div><p class="cb-cap">' + esc2(w) + " wins, " + Math.max(a, b) + " to " + Math.min(a, b) + ".</p>" };
+      }
+      if (!st.win) return null;
+      return { cls: "cb-clap", html: '<div class="cb-claps"><span>\ud83d\udc4f</span><span>\ud83d\udc4f</span><span>\ud83d\udc4f</span></div><p class="cb-cap">' + (st.sa || 0) + "/20. Applause from the back row.</p>" };
+    },
+    cryptogenic: function (st) {
+      if ((st.hints || 0) >= 20) return null;
+      var m = Math.floor((st.t || 0) / 60), sec = ("0" + ((st.t || 0) % 60)).slice(-2);
+      return { cls: "cb-news", html: '<div class="cb-paper"><span class="mast">The Malady Wise Times</span><b>SOLVED</b><span class="sig">in ' + m + ":" + sec + (st.hints ? " \u00b7 " + st.hints + " hints" : " \u00b7 unaided") + "</span></div>" + '<p class="cb-cap">' + (st.hints ? "Signed, sealed, solved." : "Unaided. Hold the front page.") + "</p>" };
+    },
     zebritis: function (st) {
       if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
       if (st.zeb || st.win) return { cls: "cb-run", html: '<div class="cb-runner">\ud83e\udd93</div><p class="cb-cap">' + (st.zeb ? "Stripes earned." : "Solid round.") + "</p>" };
       return null;
     }
   };
+  function confetti(cols, n) {
+    var h = ""; for (var i = 0; i < (n || 36); i++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[i % cols.length] + ";animation-delay:" + (Math.random() * .5).toFixed(2) + "s;animation-duration:" + (1.4 + Math.random() * 1.1).toFixed(2) + "s;transform:rotate(" + Math.round(Math.random() * 360) + 'deg)"></i>';
+    return '<div class="cf-wrap" aria-hidden="true">' + h + "</div>";
+  }
+  var Q = [], busy = false;
+  function show(sc) {
+    busy = true;
+    var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to continue</span></div>');
+    var done = false;
+    function bye() { if (done) return; done = true; o.classList.add("out"); setTimeout(function () { o.remove(); busy = false; if (Q.length) show(Q.shift()); }, 260); }
+    o.addEventListener("click", bye); document.body.appendChild(o);
+    setTimeout(bye, sc.ms || (quiet() ? 1800 : 2600));
+  }
+  function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function celebrate(id, st) {
     var f = SCENES[id]; if (!f || !st) return;
-    var sc = f(st); if (!sc) return;
-    var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to continue</span></div>');
-    function bye() { if (!o.parentNode) return; o.classList.add("out"); setTimeout(function () { o.remove(); }, 260); }
-    o.addEventListener("click", bye); document.body.appendChild(o);
-    setTimeout(bye, quiet() ? 1800 : 2600);
+    queue(f(st));
+    var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
+    if (g && st.win && !g.weekly && !g.dailyLine) { var t = sydToday(); if (diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
+  }
+  var BADGES = { 3: ["Intern", "\ud83e\ude7a"], 7: ["Registrar", "\ud83e\udd47"], 14: ["Fellow", "\ud83c\udf93"], 30: ["Consultant", "\ud83c\udfc6"], 100: ["Professor", "\ud83d\udc51"] };
+  function afterLive(g) {
+    var t = sydToday(), sk = siteStreak().n, b = BADGES[sk];
+    if (b && get("mw-badge-" + sk, "") !== t && !get("mw-badge-" + sk + "-got", 0)) {
+      set("mw-badge-" + sk + "-got", 1);
+      queue({ cls: "cb-badge", ms: 3200, html: '<div class="cb-medal">' + b[1] + '</div><p class="cb-cap">\ud83d\udd25 ' + sk + "-day streak. Promoted to " + b[0] + ".</p>" });
+    }
+    var daily = (window.MW_GAMES || []).filter(function (x) { return x.live && !x.weekly && x.store; });
+    var all = daily.every(function (x) { var s2 = get(x.store.day + t, null); return s2 && s2.done; });
+    if (all && get("mw-wrc", "") !== t) {
+      set("mw-wrc", t);
+      queue({ cls: "cb-wrc", ms: 3600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">Ward round<br>complete</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
+    }
   }
   window.MW_celebrate = celebrate;
 
