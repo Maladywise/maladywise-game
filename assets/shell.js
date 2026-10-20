@@ -304,7 +304,7 @@
       var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly; }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
       var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
-      return '<div class="mwprog"><div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div>" + installChip() + "</div>";
+      return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div></div>";
     }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">Think like a doctor.</p><h1>Today&rsquo;s medical puzzles</h1>' +

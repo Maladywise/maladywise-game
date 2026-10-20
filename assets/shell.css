@@ -229,7 +229,8 @@ html[data-theme="dark"] .subpill{color:#16121F}
 .mwstreak{display:inline-block;font-size:14px;color:var(--muted);white-space:nowrap}
 .mwline{display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap}
 .mwline p{flex:1 1 260px}
-.mwprog .mw-install{margin-top:4px}
+.mwprog .mw-install{justify-content:flex-end;margin:0 0 2px}
+.mwline .mwstreak{margin-left:auto}
 .mast-r{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
 @media (max-width:620px){.mast-r{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:8px 10px;padding-top:0;grid-auto-flow:unset}}
 .mwstreak b{color:#B4472F}
