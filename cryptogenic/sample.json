@@ -1,0 +1,277 @@
+{
+ "number": 0,
+ "title": "Sample cryptic",
+ "date": "2026-10-24",
+ "setter": "Malady Wise",
+ "rows": [
+  "GAIT#GLAUCOMA",
+  "E#M#T#A#L#P#B",
+  "NEPHRON#CUTIS",
+  "E#L#E#C#E#I#C",
+  "SPASM#EARACHE",
+  "##N#O#T#####S",
+  "ARTERY#UTERUS",
+  "S#####N#I#E##",
+  "CANNULA#BELCH",
+  "I#E#R#U#I#A#I",
+  "TARSI#SCALPEL",
+  "E#V#N#E#L#S#U",
+  "SKELETAL#GERM"
+ ],
+ "across": [
+  {
+   "n": 1,
+   "r": 0,
+   "c": 0,
+   "len": 4,
+   "clue": "Way of walking heard at the entrance",
+   "enum": "(4)",
+   "expl": "Sounds like GATE (entrance)."
+  },
+  {
+   "n": 3,
+   "r": 0,
+   "c": 5,
+   "len": 8,
+   "clue": "Eye condition: a coal mug smashed",
+   "enum": "(8)",
+   "expl": "Anagram (smashed) of A COAL MUG."
+  },
+  {
+   "n": 9,
+   "r": 2,
+   "c": 0,
+   "len": 7,
+   "clue": "Kidney unit: phone RN in a muddle",
+   "enum": "(7)",
+   "expl": "Anagram (in a muddle) of PHONE + RN (registered nurse)."
+  },
+  {
+   "n": 10,
+   "r": 2,
+   "c": 8,
+   "len": 5,
+   "clue": "Gash is the skin, in Latin",
+   "enum": "(5)",
+   "expl": "CUT (gash) + IS. Cutis is Latin for skin."
+  },
+  {
+   "n": 11,
+   "r": 4,
+   "c": 0,
+   "len": 5,
+   "clue": "Health resort with sergeant major gets cramp",
+   "enum": "(5)",
+   "expl": "SPA (health resort) + SM (sergeant major)."
+  },
+  {
+   "n": 12,
+   "r": 4,
+   "c": 6,
+   "len": 7,
+   "clue": "Are each upset over this childhood complaint",
+   "enum": "(7)",
+   "expl": "Anagram (upset) of ARE EACH."
+  },
+  {
+   "n": 13,
+   "r": 6,
+   "c": 0,
+   "len": 6,
+   "clue": "Art very, losing five, for a vessel",
+   "enum": "(6)",
+   "expl": "ART + VERY minus V (five)."
+  },
+  {
+   "n": 14,
+   "r": 6,
+   "c": 7,
+   "len": 6,
+   "clue": "Organ: true, us, rearranged",
+   "enum": "(6)",
+   "expl": "Anagram (rearranged) of TRUE + US."
+  },
+  {
+   "n": 18,
+   "r": 8,
+   "c": 0,
+   "len": 7,
+   "clue": "Drip line: tin, mostly void, a",
+   "enum": "(7)",
+   "expl": "CAN (tin) + NUL(L) (void, mostly) + A."
+  },
+  {
+   "n": 21,
+   "r": 8,
+   "c": 8,
+   "len": 5,
+   "clue": "Live with learner at church, and burp",
+   "enum": "(5)",
+   "expl": "BE (live) + L (learner) + CH (church)."
+  },
+  {
+   "n": 23,
+   "r": 10,
+   "c": 0,
+   "len": 5,
+   "clue": "Sailors and I find ankle bones",
+   "enum": "(5)",
+   "expl": "TARS (sailors) + I."
+  },
+  {
+   "n": 24,
+   "r": 10,
+   "c": 6,
+   "len": 7,
+   "clue": "Surgeon's tool places learner awkwardly",
+   "enum": "(7)",
+   "expl": "Anagram (awkwardly) of PLACES + L (learner)."
+  },
+  {
+   "n": 25,
+   "r": 12,
+   "c": 0,
+   "len": 8,
+   "clue": "Very thin elk's tale twisted",
+   "enum": "(8)",
+   "expl": "Anagram (twisted) of ELK'S TALE."
+  },
+  {
+   "n": 26,
+   "r": 12,
+   "c": 9,
+   "len": 4,
+   "clue": "Microbe found in hamburger mustard",
+   "enum": "(4)",
+   "expl": "Hidden in hambur(GER M)ustard."
+  }
+ ],
+ "down": [
+  {
+   "n": 1,
+   "r": 0,
+   "c": 0,
+   "len": 5,
+   "clue": "Inherited units sound like denim trousers",
+   "enum": "(5)",
+   "expl": "Sounds like JEANS."
+  },
+  {
+   "n": 2,
+   "r": 0,
+   "c": 2,
+   "len": 7,
+   "clue": "I'm a factory? Insert it surgically",
+   "enum": "(7)",
+   "expl": "I'M + PLANT (factory)."
+  },
+  {
+   "n": 4,
+   "r": 0,
+   "c": 6,
+   "len": 6,
+   "clue": "Medical journal, or a small sharp blade",
+   "enum": "(6)",
+   "expl": "Double definition: The Lancet, and a lancet."
+  },
+  {
+   "n": 5,
+   "r": 0,
+   "c": 8,
+   "len": 5,
+   "clue": "Cruel twist leading to a sore",
+   "enum": "(5)",
+   "expl": "Anagram (twist) of CRUEL."
+  },
+  {
+   "n": 6,
+   "r": 0,
+   "c": 10,
+   "len": 5,
+   "clue": "Topic rearranged for the eye",
+   "enum": "(5)",
+   "expl": "Anagram (rearranged) of TOPIC."
+  },
+  {
+   "n": 7,
+   "r": 0,
+   "c": 12,
+   "len": 7,
+   "clue": "Abdominal muscles, then tax, give a collection of pus",
+   "enum": "(7)",
+   "expl": "ABS (abdominal muscles) + CESS (a tax)."
+  },
+  {
+   "n": 8,
+   "r": 1,
+   "c": 4,
+   "len": 6,
+   "clue": "Shake as Tom, err, wobbles",
+   "enum": "(6)",
+   "expl": "Anagram (wobbles) of TOM ERR."
+  },
+  {
+   "n": 13,
+   "r": 6,
+   "c": 0,
+   "len": 7,
+   "clue": "Abdominal fluid: castes, I, wrecked",
+   "enum": "(7)",
+   "expl": "Anagram (wrecked) of CASTES + I."
+  },
+  {
+   "n": 15,
+   "r": 6,
+   "c": 8,
+   "len": 6,
+   "clue": "Of the shin, a bone with a learner",
+   "enum": "(6)",
+   "expl": "TIBIA (bone) + L (learner)."
+  },
+  {
+   "n": 16,
+   "r": 6,
+   "c": 10,
+   "len": 7,
+   "clue": "Pleaser upset by return of illness",
+   "enum": "(7)",
+   "expl": "Anagram (upset) of PLEASER."
+  },
+  {
+   "n": 17,
+   "r": 7,
+   "c": 6,
+   "len": 6,
+   "clue": "Sodium use, a sickly feeling",
+   "enum": "(6)",
+   "expl": "NA (sodium) + USE + A."
+  },
+  {
+   "n": 19,
+   "r": 8,
+   "c": 2,
+   "len": 5,
+   "clue": "Courage? It's trapped in sciatica",
+   "enum": "(5)",
+   "expl": "Double definition: courage, and the sciatic nerve."
+  },
+  {
+   "n": 20,
+   "r": 8,
+   "c": 4,
+   "len": 5,
+   "clue": "Sample found in Turin, Easter",
+   "enum": "(5)",
+   "expl": "Hidden in T(URIN E)aster."
+  },
+  {
+   "n": 22,
+   "r": 8,
+   "c": 12,
+   "len": 5,
+   "clue": "Greeting chimney at the root of the lung",
+   "enum": "(5)",
+   "expl": "HI (greeting) + LUM (Scottish chimney)."
+  }
+ ]
+}
