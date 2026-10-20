@@ -39,17 +39,17 @@
   fetch(BASE + "words.txt?v=" + BUILD).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { dict = new Set(t.split("\n")); }).catch(function () { dict = new Set(); });
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    theme: ["Neat stitch.", "Nice. That one holds.", "Sutured.", "Clean closure.", "Textbook."],
-    span: ["Spangram! Edge to edge, like a good incision.", "Spangram. The whole theme, in one stroke."],
-    extra: ["Real word, not on theme. Banked towards a hint.", "Valid, but off topic. Like a ward round tangent.", "A word, sure. Not today's word. Hint credit earned."],
-    dupe: ["Already found that one.", "D\u00e9j\u00e0 vu. Already got it."],
-    nope: ["Not a word. Not even in Latin.", "That's not in the dictionary. Or any dictionary.", "Keyboard smash detected.", "Nope. Try actual English."],
-    short: ["Four letters minimum. Even 'ouch' qualifies.", "Too short. Commit to the bit."],
-    wrongspot: ["Right word, wrong stitch. Try another route."],
+    theme: ["Neat stitch.", "Nice. That one holds.", "Sutured.", "Clean closure.", "Textbook.", "Tidy.", "Good knot.", "Holding nicely.", "Stitched.", "Nice and neat.", "Secure."],
+    span: ["Spangram! Edge to edge, like a good incision.", "Spangram. The whole theme, in one stroke.", "Spangram! The main event.", "Spangram found. The theme, unmasked."],
+    extra: ["Real word, not on theme. Banked towards a hint.", "Valid, but off topic. Like a ward round tangent.", "A word, sure. Not today's word. Hint credit earned.", "Off theme, but it counts towards a hint.", "Not on theme. Hint progress, though."],
+    dupe: ["Already found that one.", "D\u00e9j\u00e0 vu. Already got it.", "Got that one already.", "Already stitched."],
+    nope: ["Not a word. Not even in Latin.", "That's not in the dictionary. Or any dictionary.", "Keyboard smash detected.", "Nope. Try actual English.", "Not a word. Nice shape, though.", "Made-up word detected.", "That\u2019s not a word. Unpick it."],
+    short: ["Four letters minimum. Even 'ouch' qualifies.", "Too short. Commit to the bit.", "Needs four or more letters.", "Too short to stitch."],
+    wrongspot: ["Right word, wrong stitch. Try another route.", "Right word, wrong path.", "Correct word, different route.", "Good word. Trace it another way."],
     hintNo: ["Find " + PER_HINT + " non-theme words to earn a hint.", "No freebies. Earn it: " + PER_HINT + " bonus words."],
-    win: ["All closed. Not a stitch out of place.", "Done. Tidy work, Doctor.", "Wound closed. Patient thrilled. Probably."]
+    win: ["All closed. Not a stitch out of place.", "Done. Tidy work, Doctor.", "Wound closed. Patient thrilled. Probably.", "Fully closed. Plastic surgeon standard.", "All words found. Lovely needlework.", "Closed. Minimal scarring.", "Done. Neat as a theatre list."]
   };
   function say(t, cls) { var e = $("cur"); e.textContent = t; e.className = "cur " + (cls || "msg"); }
 

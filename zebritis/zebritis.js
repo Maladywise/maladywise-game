@@ -9,12 +9,12 @@
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
   }
   var TIER = {
-    1: { e: "\ud83d\udc34", n: "Horse", m: ["Horse. Textbook, if a little predictable.", "Horse. Correct, and so is everyone else.", "Horse. The waiting room thanks you."] },
-    3: { e: "\ud83d\udc0e", n: "Pony", m: ["Pony. Respectable.", "Pony. Off the beaten track, slightly.", "Pony. Registrar-level."] },
-    6: { e: "\ud83e\udecf", n: "Donkey", m: ["Donkey. Now we\u2019re talking.", "Donkey. Stubbornly obscure. Love it.", "Donkey. Consultant-level recall."] },
-    10: { e: "\ud83e\udd93", n: "Zebra", m: ["Zebra! Hoofbeats, but stripes.", "Zebra! Someone read the footnotes.", "Zebra! Frame it. Then go outside."] }
+    1: { e: "\ud83d\udc34", n: "Horse", m: ["Horse. Textbook, if a little predictable.", "Horse. Correct, and so is everyone else.", "Horse. The waiting room thanks you.", "Horse. Safe. Sensible. One point.", "Horse. Common things are common.", "Horse. Your GP supervisor would approve."] },
+    3: { e: "\ud83d\udc0e", n: "Pony", m: ["Pony. Respectable.", "Pony. Off the beaten track, slightly.", "Pony. Registrar-level.", "Pony. A little less obvious. Nice.", "Pony. Good thinking.", "Pony. Above average."] },
+    6: { e: "\ud83e\udecf", n: "Donkey", m: ["Donkey. Now we\u2019re talking.", "Donkey. Stubbornly obscure. Love it.", "Donkey. Consultant-level recall.", "Donkey. That\u2019s deep in the textbook.", "Donkey. Rare-ish. Lovely.", "Donkey. Someone stayed for the lecture."] },
+    10: { e: "\ud83e\udd93", n: "Zebra", m: ["Zebra! Hoofbeats, but stripes.", "Zebra! Someone read the footnotes.", "Zebra! Frame it. Then go outside.", "Zebra! That\u2019s a case report.", "Zebra! The registrar is googling it.", "Zebra! Absolute stripes."] }
   };
-  var MISS = ["Not on our list. Try another.", "Hmm, not one we\u2019ve got. Another?", "Not on the list. Could be right, could be a guess. Try again.", "Nope. Think wider."];
+  var MISS = ["Not on our list. Try another.", "Hmm, not one we\u2019ve got. Another?", "Not on the list. Could be right, could be a guess. Try again.", "Nope. Think wider.", "Not on our list. Might be true, but not today.", "No match. Try a different angle.", "Not one of ours. Next.", "Not on the list. Think about mechanisms.", "No luck. Try another system.", "Not on our list. Spelling check?"];
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="zbr-eyebrow">Zebritis</span><span class="badge" id="zbr-badge"></span></div>' +
@@ -33,7 +33,7 @@
   function load(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
   var REAL = sydToday(), qd = new URLSearchParams(location.search).get("date");

@@ -38,15 +38,15 @@
   function loadDay() { KEY = "mph-day-" + today; st = load(KEY, { found: [], score: 0, done: false, win: false, rank: 0 }); }
   loadDay();
 
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    short: "Four letters minimum. This isn't a text message.",
-    centre: "Forgot the centre letter. It's the important one.",
-    bad: "Those letters aren't on the tray.",
-    not: ["Not in our dictionary. Not even in Latin.", "Nice try. Not a word.", "Did you just invent a disease?", "That's not a word. Your spellcheck is crying."],
-    dupe: "Already found. Short-term memory check?",
-    good: ["Good.", "Nice.", "Solid.", "Tidy.", "Yep."],
-    med: ["\u2695 Medical word. Double points.", "\u2695 Clinical. Double points.", "\u2695 Now we're talking. Double."],
+    short: ["Four letters minimum. This isn't a text message.", "Too short. Four letters, please.", "Short. Even \u2018ache\u2019 has four letters.", "Needs at least four letters, doctor."],
+    centre: ["Forgot the centre letter. It's the important one.", "Centre letter missing. It\u2019s compulsory.", "No centre letter. Like a consult with no history.", "Every word needs the middle letter."],
+    bad: ["Those letters aren't on the tray.", "Off-menu letters detected.", "Not on the tray. Use what you\u2019ve got.", "Imported letters. Not allowed."],
+    not: ["Not in our dictionary. Not even in Latin.", "Nice try. Not a word.", "Did you just invent a disease?", "That's not a word. Your spellcheck is crying.", "Not a word. Lovely sound, though.", "The dictionary declined that one.", "Made up. We can tell.", "That\u2019s not a word. That\u2019s a sneeze.", "Close to a word. Not a word.", "Not in the list. Some real words aren\u2019t either. Sorry."],
+    dupe: ["Already found. Short-term memory check?", "Got that one already.", "Already banked.", "You found that earlier. Still counts once."],
+    good: ["Good.", "Nice.", "Solid.", "Tidy.", "Yep.", "Lovely.", "Banked.", "Nice find.", "Sure.", "Good word.", "Keep going.", "Noted."],
+    med: ["\u2695 Medical word. Double points.", "\u2695 Clinical. Double points.", "\u2695 Now we're talking. Double.", "\u2695 Proper medicine. Double.", "\u2695 That\u2019s on the syllabus. Double.", "\u2695 Medical. Your registrar approves. Double.", "\u2695 Clinical vocab. Double points."],
     pan: "PANGRAM! Every letter. Absolute show-off.",
     long: { 8: ["Eight letters. Someone\u2019s been reading.", "Eight letters. Bonus earned."], 9: ["Nine letters. Registrar vocabulary.", "Nine letters. Big word energy."], 10: ["Ten letters! The consultant is impressed.", "Ten letters. That\u2019s a whole diagnosis."], 11: ["Eleven-plus letters. Absolutely unhinged. Love it.", "That word has its own postcode."] },
     rank: function (r) { return "Promoted to " + r + "."; },
@@ -125,11 +125,11 @@
   function fail(m) { say(m); drawEntry(true); var was = cur; clearTimeout(clearT); clearT = setTimeout(function () { if (cur === was) { cur = ""; drawEntry(); } }, 450); }
   function submit() {
     var w = cur; if (!P) return;
-    if (w.length < 4) { fail(SASS.short); return; }
+    if (w.length < 4) { fail(pick(SASS.short)); return; }
     var L = letters();
-    if (w.split("").some(function (c) { return L.indexOf(c) < 0; })) { fail(SASS.bad); return; }
-    if (w.indexOf(P.centre) < 0) { fail(SASS.centre); return; }
-    if (st.found.indexOf(w) >= 0) { fail(SASS.dupe); return; }
+    if (w.split("").some(function (c) { return L.indexOf(c) < 0; })) { fail(pick(SASS.bad)); return; }
+    if (w.indexOf(P.centre) < 0) { fail(pick(SASS.centre)); return; }
+    if (st.found.indexOf(w) >= 0) { fail(pick(SASS.dupe)); return; }
     if (P.words.indexOf(w) < 0) { fail(pick(SASS.not)); return; }
     var before = rankIdx(st.score), pts = points(w);
     st.found.push(w); st.score += pts; cur = "";

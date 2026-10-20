@@ -38,14 +38,14 @@
   loadDay();
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    wrong: ["Nobody has ever said that phrase. Nobody.", "Bold link. Wrong, but bold.", "That chain just snapped.", "Creative. Also incorrect.", "Close your eyes and say it out loud. Yeah, no.", "Not a thing. Here's a letter for your trouble."],
-    right: ["Linked.", "Clean join.", "Smooth.", "Textbook anastomosis.", "Click. Next."],
-    given: ["Fully spelled out for you. That one doesn't count.", "Gave it away. We all have off days."],
+    wrong: ["Nobody has ever said that phrase. Nobody.", "Bold link. Wrong, but bold.", "That chain just snapped.", "Creative. Also incorrect.", "Close your eyes and say it out loud. Yeah, no.", "Not a thing. Here's a letter for your trouble.", "That link doesn\u2019t hold weight.", "Not a phrase. Not even in a discharge summary.", "Wrong link. Here\u2019s a letter.", "Nope. Say both pairs out loud.", "Missing link. Try again.", "That\u2019s a loose connection.", "Plausible. Not it.", "Wrong word. The chain wobbles."],
+    right: ["Linked.", "Clean join.", "Smooth.", "Textbook anastomosis.", "Click. Next.", "Connected.", "Secure.", "Nice link.", "That holds.", "Joined.", "Chain grows."],
+    given: ["Fully spelled out for you. That one doesn't count.", "Gave it away. We all have off days.", "Revealed in full. No credit, no shame.", "Spelt out for you. Moving on."],
     len: function (n) { return "Needs " + n + " letters. Count them, Doctor."; },
-    win: ["Flawless chain. Not one slip. Insufferable, frankly.", "One slip. Still a strong chain.", "Two slips. Holding together.", "Three slips. Rusty links, but it held.", "Four slips. Held together with tape."],
-    lose: ["Chain snapped. Here's how it went.", "Five strikes. The links win today.", "Dropped it. Rematch tomorrow."]
+    win: [["Flawless chain. Not one slip. Insufferable, frankly.", "Zero slips. Linked like a surgeon.", "Perfect chain. Unbreakable.", "No mistakes. Show-off."], ["One slip. Still a strong chain.", "One slip. Barely a wobble.", "One mistake, then smooth.", "Strong chain. One kink."], ["Two slips. Holding together.", "Two slips. Still solid.", "Two kinks. Chain intact.", "Two slips. Good recovery."], ["Three slips. Rusty links, but it held.", "Three slips. Creaky but intact.", "Three wobbles. It held.", "Three slips. Close call."], ["Four slips. Held together with tape.", "Four slips. Barely attached.", "Held together by hope.", "Four slips. Somehow it held."]],
+    lose: ["Chain snapped. Here's how it went.", "Five strikes. The links win today.", "Dropped it. Rematch tomorrow.", "Chain broken. Here\u2019s the full set.", "Too many slips. The chain gave out.", "Snapped. Tomorrow\u2019s chain is stronger. Probably."]
   };
   function say(t) { $("msg").textContent = t; }
 
@@ -138,7 +138,7 @@
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days chain, and you held it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put("mw-einstein", tro); } }
-    } else say(win ? SASS.win[Math.min(st.mistakes, 4)] : pick(SASS.lose));
+    } else say(win ? pick(SASS.win[Math.min(st.mistakes, 4)]) : pick(SASS.lose));
   }
   function submit() {
     if (!P || st.done || !st.act) return;
