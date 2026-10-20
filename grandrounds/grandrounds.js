@@ -136,7 +136,7 @@
 
   // ---------- play ----------
   function finish() {
-    st.done = true; var s = tally(0); st.win = s >= PASS; put(KEY, st);
+    st.done = true; var s = tally(0); st.win = s >= PASS; st.sa = s; st.sb = tally(1); put(KEY, st);
     if (isLive() && stats.last !== week && !replay) {
       var consecutive = stats.last && dayNum(week) - dayNum(stats.last) === 7;
       stats.played++; if (st.win) stats.wins++;

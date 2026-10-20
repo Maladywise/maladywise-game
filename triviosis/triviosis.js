@@ -110,7 +110,7 @@
 
   // ---------- play ----------
   function finish() {
-    st.done = true; var s = score(); st.win = s >= PASS; put(KEY, st);
+    st.done = true; var s = score(); st.win = s >= PASS; st.score = s; put(KEY, st);
     if (isLive() && stats.last !== week) {
       var consecutive = stats.last && dayNum(week) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
