@@ -225,3 +225,13 @@ html[data-theme="dark"] .subpill{color:#16121F}
 .doc ul.news b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
 .card .pill.wk{margin:6px 0 2px;justify-self:start;align-self:start}
+
+.mwstreak{display:inline-block;font-size:14px;color:var(--ink);background:var(--soft,#F1ECF8);border-radius:999px;padding:4px 12px;justify-self:start}
+.mwstreak b{color:#B4472F}
+.mw-install{margin:0;display:flex;align-items:center;gap:6px}
+.mw-install[hidden]{display:none}
+.mw-install button#mw-install-go{font:600 13px Poppins,system-ui,sans-serif;border:1px solid var(--line);background:var(--card,#fff);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.nl-x{border:0;background:transparent;color:var(--muted);font-size:15px;cursor:pointer;padding:4px 8px;line-height:1}
+.nl.nl-after{position:relative;width:100%;align-self:stretch;margin:4px 0 8px}
+.nl.nl-after>.nl-x{position:absolute;top:8px;right:8px}
+.mw-share{margin-left:8px}

@@ -34,11 +34,77 @@
             var win = /"win":true/.test(v);
             track("finished/" + g.id, g.name + " finished");
             if (win) track("won/" + g.id, g.name + " won");
+            if (!g.store.weekly && k === pre + sydToday()) markDay();
+            setTimeout(nlPrompt, 1800);
           }
         }
       } catch (e) {}
       return orig.apply(this, arguments);
     };
+  }
+
+  // ---------- overall daily streak (any daily game finished on the day it was live) ----------
+  function markDay() { var d = get("mw-days", []), t = sydToday(); if (d.indexOf(t) < 0) { d.push(t); d = d.slice(-400); set("mw-days", d); } }
+  function playedDays() {
+    var seen = {}; get("mw-days", []).forEach(function (d) { seen[d] = 1; });
+    (window.MW_GAMES || []).forEach(function (g) {
+      if (!g.live || !g.store || g.store.weekly) return;
+      var s = get(g.store.stats, null), t = get(g.store.day + sydToday(), null);
+      if (t && t.done) seen[sydToday()] = 1;
+      if (s && s.last && s.streak) for (var i = 0; i < s.streak; i++) seen[new Date((dayNum(s.last) - i) * 864e5).toISOString().slice(0, 10)] = 1;
+    });
+    return seen;
+  }
+  function siteStreak() {
+    var seen = playedDays(), n = dayNum(sydToday()), k = seen[sydToday()] ? n : n - 1, c = 0;
+    while (seen[new Date(k * 864e5).toISOString().slice(0, 10)]) { c++; k--; }
+    return { n: c, today: !!seen[sydToday()] };
+  }
+  window.MW_siteStreak = siteStreak;
+
+  // ---------- Zebra Mail nudge after finishing a game ----------
+  function nlPrompt() {
+    if (get("mw-nl-sub", 0) || document.getElementById("nl-after") || document.getElementById("newsletter")) return;
+    var snooze = get("mw-nl-snooze", 0); if (snooze && Date.now() < snooze) return;
+    var box = document.getElementById("game"); if (!box) return;
+    var card = el(NL_HTML.replace('id="newsletter"', 'id="nl-after"').replace(/nl-email/g, "nl-email2").replace("<b>Get Zebra Mail \ud83e\udd93</b>", "<b>Enjoyed that? Get Zebra Mail \ud83e\udd93</b>").replace('<section class="nl"', '<section class="nl nl-after"'));
+    var x = el('<button type="button" class="nl-x" aria-label="Not now">\u2715</button>');
+    x.onclick = function () { set("mw-nl-snooze", Date.now() + 14 * 864e5); card.remove(); };
+    card.insertBefore(x, card.firstChild);
+    var strip = box.querySelector(".mwx"); if (strip) strip.parentNode.insertBefore(card, strip); else box.appendChild(card);
+  }
+
+  // ---------- native share button next to every "Copy result" ----------
+  function addShare(root) {
+    if (!navigator.share) return;
+    Array.prototype.forEach.call((root || document).querySelectorAll('button[id$="-copy"]:not([data-mws])'), function (b) {
+      b.setAttribute("data-mws", "1");
+      var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
+      if (!pre) return;
+      var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className.replace(/\bsolid\b/, "").trim() + " mw-share"; sb.textContent = "Share";
+      sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*maladywise\.com\s*$/, ""), url: "https://maladywise.com/" + (location.pathname.split("/")[1] ? location.pathname.split("/")[1] + "/" : "") }).catch(function () {}); };
+      b.parentNode.insertBefore(sb, b.nextSibling);
+    });
+  }
+  if (window.MutationObserver) new MutationObserver(function () { addShare(); }).observe(document.documentElement, { childList: true, subtree: true });
+
+  // ---------- add to home screen (PWA) ----------
+  var installEvt = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; var c = document.getElementById("mw-install"); if (c) c.hidden = false; });
+  function standalone() { return (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone; }
+  function isIOS() { return /iphone|ipad|ipod/i.test(navigator.userAgent); }
+  function installChip() {
+    if (standalone() || get("mw-install-x", 0)) return "";
+    return '<p class="mw-install" id="mw-install"' + (installEvt || isIOS() ? "" : " hidden") + '><button type="button" id="mw-install-go">\ud83d\udcf2 Add Malady Wise to your home screen</button><button type="button" class="nl-x" id="mw-install-x" aria-label="Hide">\u2715</button></p>';
+  }
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest && e.target.closest("#mw-install-go, #mw-install-x"); if (!t) return;
+    if (t.id === "mw-install-x") { set("mw-install-x", 1); document.getElementById("mw-install").remove(); return; }
+    if (installEvt) { installEvt.prompt(); installEvt.userChoice.then(function () { installEvt = null; var c = document.getElementById("mw-install"); if (c) c.remove(); }); }
+    else modal("Add to home screen", "<ol><li>Tap the <b>Share</b> button in Safari (the square with an arrow).</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. Malady Wise now opens like an app.</li></ol>");
+  });
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });
   }
 
   // ---------- theme + motion ----------
@@ -148,7 +214,7 @@
     var msg = f.parentNode.querySelector(".nl-msg"), btn = f.querySelector("button");
     btn.disabled = true; btn.textContent = "Sending\u2026";
     fetch(f.action, { method: "POST", mode: "no-cors", body: new FormData(f) }).then(function () {
-      f.hidden = true; msg.textContent = "Nearly there. Check your inbox and tap the confirm link.";
+      f.hidden = true; set("mw-nl-sub", 1); msg.textContent = "Nearly there. Check your inbox and tap the confirm link.";
     }).catch(function () { btn.disabled = false; btn.textContent = "Subscribe"; msg.textContent = "Couldn't reach the mail server. Try again in a minute."; });
   });
   window.MW_NL = NL_HTML;
@@ -232,7 +298,8 @@
       var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly; }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
       var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
-      return '<div class="mwprog"><div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><p><b>' + d + " of " + n + "</b> done today. " + q + "</p></div>";
+      var sk = siteStreak(), sl = sk.n ? '<span class="mwstreak">\ud83d\udd25 <b>' + sk.n + "-day</b> streak" + (sk.today ? "" : ". Play one today to keep it") + "</span>" : "";
+      return '<div class="mwprog"><div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + sl + installChip() + "</div>";
     }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">Think like a doctor.</p><h1>Today&rsquo;s medical puzzles</h1>' +
@@ -292,7 +359,10 @@
     var st = readStats(g);
     var sp = document.getElementById("splash"), box = document.getElementById("game");
     var q = new URLSearchParams(location.search);
-    function start() { sp.hidden = true; box.hidden = false; window.scrollTo(0, 0); }
+    function start() {
+      sp.hidden = true; box.hidden = false; window.scrollTo(0, 0);
+      if (g.help && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '<p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Find this again under the ? icon.</p>'); }, 350); }
+    }
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";
       gt.style.setProperty("--ga", g.accent); gt.style.setProperty("--gad", g.accentDark);

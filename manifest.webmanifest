@@ -1,0 +1,15 @@
+{
+  "name": "Malady Wise",
+  "short_name": "Malady Wise",
+  "description": "Think like a doctor. Daily medical puzzles from an Australian GP.",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#4A3480",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

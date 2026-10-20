@@ -17,7 +17,7 @@
   }
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Malady Wise \u00b7 Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
+    ' <div class="top"><div class="row"><span class="eyebrow" id="dxw-eyebrow">Dxtective \u00b7 Daily case</span><span class="badge" id="dxw-badge" hidden></span></div>' +
     '  <h1>Dxtective</h1>' +
     '  <p class="sub">Six clues. One diagnosis. Wrong guesses unlock clues.</p></div>' +
         ' <section class="slip" aria-live="polite">' +
@@ -135,7 +135,7 @@
     renderStats(); renderWeek(); tick();
     if (!C) return;
     var date = new Date(dayNum(today) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
-    $("eyebrow").textContent = (isLive() ? "Malady Wise" : "Archive") + " \u00b7 #" + C.number + " \u00b7 " + date;
+    $("eyebrow").textContent = (isLive() ? "Dxtective" : "Archive") + " \u00b7 #" + C.number + " \u00b7 " + date;
     var b = $("badge"); b.hidden = false; b.className = "badge " + C.difficulty; b.innerHTML = (C.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + C.difficulty; root.classList.toggle("einstein", C.difficulty === "Einstein");
     $("title").textContent = C.title;
     $("dots").innerHTML = dots().map(function (k) { return '<span class="dot ' + k + '"></span>'; }).join("");
