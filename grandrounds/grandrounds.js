@@ -27,7 +27,7 @@
   function load(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var REAL = sunday(sydToday()), qd = new URLSearchParams(location.search).get("date");
   var week = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd)) ? sunday(qd) : REAL;
   function isLive() { return week === REAL; }
@@ -39,17 +39,14 @@
 
   var SASS = {
     end: function (s) {
-      if (s === 20) return "20 out of 20. Insufferable. We\u2019re checking your pockets for a textbook.";
-      if (s >= 16) return "Formidable. Consultant material.";
-      if (s >= 12) return "Strong. Registrar energy.";
-      if (s >= 8) return "Respectable. You\u2019d survive the ward round.";
-      if (s >= 4) return "Patchy. Revision recommended.";
-      return "Rough. Back to the textbooks. New quiz next Sunday.";
+      var E = {"20": ["20 out of 20. Insufferable. We\u2019re checking your pockets for a textbook.", "Perfect 20. Are you the examiner?", "20/20. Hindsight and foresight."], "16": ["Formidable. Consultant material.", "Superb. The college would like your notes.", "Outstanding round."], "12": ["Strong. Registrar energy.", "Solid. A good Sunday\u2019s work.", "Strong showing."], "8": ["Respectable. You\u2019d survive the ward round.", "Decent. Not bad for a weekend.", "Respectable. Coffee earned."], "4": ["Patchy. Revision recommended.", "Patchy. A few gaps to fill.", "Some gaps. It\u2019s Sunday, we\u2019ll allow it."], "0": ["Rough. Back to the textbooks. New quiz next Sunday.", "Tough one. Next Sunday\u2019s yours.", "Brutal quiz. Brutal score. Rematch next week."]};
+      return pick(E[s === 20 ? 20 : s >= 16 ? 16 : s >= 12 ? 12 : s >= 8 ? 8 : s >= 4 ? 4 : 0]);
     },
     duo: function (a, b, na, nb) {
-      if (a === b) return "A dead heat. Rematch next Sunday.";
-      var w = a > b ? na : nb, d = Math.abs(a - b);
-      return d >= 5 ? w + " wins by a distance. " + (a > b ? nb : na) + " buys the coffee." : w + " edges it. Expect to hear about this all week.";
+      if (a === b) return pick(["A dead heat. Rematch next Sunday.", "Tied. Nobody buys the coffee.", "Level. Honours even, egos intact."]);
+      var w = a > b ? na : nb, l = a > b ? nb : na, d = Math.abs(a - b);
+      return d >= 5 ? pick([w + " wins by a distance. " + l + " buys the coffee.", w + " cruises home. " + l + " is on dishes.", "Comfortable win for " + w + ". " + l + ", revision awaits."])
+        : pick([w + " edges it. Expect to hear about this all week.", w + " wins by a whisker. Rematch demanded.", "Close one. " + w + " takes it. " + l + " wants a recount."]);
     }
   };
 

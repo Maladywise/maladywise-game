@@ -22,11 +22,9 @@
     { e: "🫁", n: "Lungs", r: 97, c: "#F3BBC0" },
     { e: "🧠", n: "Brain", r: 112, c: "#CDBBEA" }
   ];
-  var SASS = {
-    5: "Tongue. Say aah.", 6: "Nose. Getting nosy now.", 7: "Bone. Structurally sound.",
-    8: "Heart! Pumped for you.", 9: "Lungs! Genuinely breathtaking.", 10: "Brain! Finally, someone using one."
-  };
-  var POP = "Two brains, one big thought. Gone. +100";
+  var SASS = {"5": ["Tongue. Say aah.", "Tongue. Quite the mouthful.", "Tongue. Bit cheeky."], "6": ["Nose. Getting nosy now.", "Nose. You\u2019ve sniffed out a combo.", "Nose. Right under your nose."], "7": ["Bone. Structurally sound.", "Bone. Humerus, isn\u2019t it?", "Bone. Holding it all together."], "8": ["Heart! Pumped for you.", "Heart! You\u2019ve got the beat.", "Heart! Cardio-logical."], "9": ["Lungs! Genuinely breathtaking.", "Lungs! Take a deep breath.", "Lungs! Inspired."], "10": ["Brain! Finally, someone using one.", "Brain! Big thoughts.", "Brain! Think like a doctor, indeed."]};
+  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  var POPS = ["Two brains, one big thought. Gone. +100", "Brain merger. Mind blown. +100", "Two brains cancelled out. Typical committee. +100"];
   var DIST = ["🧠", "🫁", "🫀", "🦴", "Less"];
 
   root.innerHTML =
@@ -89,12 +87,12 @@
     merges.forEach(function (m) {
       var a = m[0], b = m[1], lv = a.lv;
       C.remove(engine.world, a); C.remove(engine.world, b);
-      if (lv === O.length - 1) { score += 100; toast(POP); return; }
+      if (lv === O.length - 1) { score += 100; toast(pick(POPS)); return; }
       var n = lv + 1, x = (a.position.x + b.position.x) / 2, y = (a.position.y + b.position.y) / 2;
       var o = add(n, x, y); Bd.setVelocity(o, { x: (a.velocity.x + b.velocity.x) / 2, y: Math.min(a.velocity.y, b.velocity.y, 0) - 1 });
       o.born = performance.now();
       score += (n + 1) * (n + 2) / 2;
-      if (n > top) { top = n; if (SASS[n]) toast(SASS[n]); }
+      if (n > top) { top = n; if (SASS[n]) toast(pick(SASS[n])); }
     });
     if (merges.length) hud();
     merges = [];

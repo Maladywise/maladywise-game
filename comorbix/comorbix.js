@@ -36,14 +36,14 @@
   loadDay();
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    wrong: ["Nope. Those four have nothing in common. Like a bad MDT.", "Wrong group. Bold, though.", "Not a syndrome. Just a coincidence.", "That's a differential, not a diagnosis.", "Respectfully: no."],
-    one: ["One away. So close it hurts.", "Three out of four. One impostor.", "One away. Someone's in the wrong ward.", "Nearly. One doesn't belong."],
-    dupe: ["Tried that already. Same answer.", "You've submitted that exact four. Still wrong."],
-    right: ["Nailed it.", "Clean diagnosis.", "Consultant-approved.", "Textbook.", "Smooth."],
-    win: ["Perfect. Not a single mistake. Smug is allowed.", "Solved with one slip. Still very respectable.", "Two mistakes. Got there.", "Three mistakes. Living dangerously."],
-    lose: ["Out of strikes. The groups win today.", "Code blue. Here's what you missed.", "Off to the textbook. Rematch tomorrow."]
+    wrong: ["Nope. Those four have nothing in common. Like a bad MDT.", "Wrong group. Bold, though.", "Not a syndrome. Just a coincidence.", "That's a differential, not a diagnosis.", "Respectfully: no.", "Four strangers at a bus stop. Not a group.", "That grouping wouldn\u2019t survive peer review.", "Nope. Correlation isn\u2019t causation.", "Those four have never met.", "Wrong. The red herring got you.", "That\u2019s a referral to the wrong specialty.", "Not a group. A random sample.", "Confident clustering. Incorrect clustering.", "No. Reshuffle and rethink.", "Interesting theory. Unsupported by evidence."],
+    one: ["One away. So close it hurts.", "Three out of four. One impostor.", "One away. Someone's in the wrong ward.", "Nearly. One doesn't belong.", "One away. There\u2019s a mole in the group.", "Three right. One gatecrasher.", "So close. Swap one out.", "One away. Spot the odd one out.", "Nearly. One of them is misfiled."],
+    dupe: ["Tried that already. Same answer.", "You've submitted that exact four. Still wrong.", "Same four. Same result. Science.", "D\u00e9j\u00e0 vu. That group failed last time too."],
+    right: ["Nailed it.", "Clean diagnosis.", "Consultant-approved.", "Textbook.", "Smooth.", "Spot on.", "Group sorted.", "Tidy.", "Yes. Well spotted.", "That\u2019s the one.", "Correct. Next.", "Sharp eyes."],
+    win: [["Perfect. Not a single mistake. Smug is allowed.", "Zero mistakes. Clinical precision.", "Flawless. Are you the puzzle setter?", "Clean sweep. Frame it."], ["Solved with one slip. Still very respectable.", "One mistake. Barely a blemish.", "One slip, then flawless. Nice recovery.", "Solved, one stumble. Strong work."], ["Two mistakes. Got there.", "Two slips. A safe pair of hands, mostly.", "Two mistakes. Solved is solved.", "Got there with two wobbles."], ["Three mistakes. Living dangerously.", "Three slips. Heart rate elevated.", "Solved on the last life. Dramatic.", "Three mistakes. Nail-biter."]],
+    lose: ["Out of strikes. The groups win today.", "Code blue. Here's what you missed.", "Off to the textbook. Rematch tomorrow.", "Four strikes. The red herrings win.", "Not today. Study the groups and come back swinging.", "Out of lives. The puzzle setter is smirking.", "Stumped. It happens. Tomorrow\u2019s grid awaits.", "The groups escaped. Here they are."]
   };
   function say(t) { $("msg").textContent = t; }
 
@@ -106,7 +106,7 @@
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put("mw-einstein", tro); } }
-    } else say(win ? SASS.win[st.mistakes] : pick(SASS.lose));
+    } else say(win ? pick(SASS.win[st.mistakes]) : pick(SASS.lose));
   }
   $("grid").addEventListener("click", function (e) {
     var b = e.target.closest(".t"); if (!b || st.done) return;

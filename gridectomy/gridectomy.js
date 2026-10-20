@@ -39,20 +39,16 @@
   loadDay();
 
   // ---------- sass ----------
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    full: ["Grid's full, but something's off. Like a normal-looking CXR with a missed nodule.", "Full, not right. Check your working.", "Close, but one of these is a misdiagnosis."],
-    check0: ["All correct so far. Carry on.", "Nothing wrong yet. Suspicious."],
-    check1: ["Wrong ones flagged in red. No judgement. Some judgement.", "Red squares are wrong. Rethink them."],
-    reveal: ["Revealed. That one won't count as a clean solve.", "Peeked. We saw that."],
-    giveup: ["Grid revealed. Rematch tomorrow.", "Fair enough. Here are the answers."],
+    full: ["Grid's full, but something's off. Like a normal-looking CXR with a missed nodule.", "Full, not right. Check your working.", "Close, but one of these is a misdiagnosis.", "Full grid, wrong somewhere. Hunt it down.", "Something\u2019s not right. Try Check.", "Full but faulty. One rogue letter, maybe more."],
+    check0: ["All correct so far. Carry on.", "Nothing wrong yet. Suspicious.", "Clean so far.", "All good. Keep going.", "No errors. Smug-adjacent."],
+    check1: ["Wrong ones flagged in red. No judgement. Some judgement.", "Red squares are wrong. Rethink them.", "Flagged in red. Fix and carry on.", "A few reds. Easily treated."],
+    reveal: ["Revealed. That one won't count as a clean solve.", "Peeked. We saw that.", "Square revealed. No shame. Some shame.", "One square, on the house."],
+    giveup: ["Grid revealed. Rematch tomorrow.", "Fair enough. Here are the answers.", "Answers out. Study them, return stronger.", "Surrendered. The grid wins today."],
     win: function (s) {
-      if (s < 60) return "Under a minute. Who hurt you?";
-      if (s < 120) return "Under two minutes. Show-off.";
-      if (s < 180) return "Solid time. Consultant pace.";
-      if (s < 300) return "Done. Unhurried, like a good history.";
-      if (s < 600) return "Got there. Slow and thorough.";
-      return "Solved. Eventually. Was the kettle on?";
+      var W = {"60": ["Under a minute. Who hurt you?", "Sub-minute. Are you a robot?", "Under a minute. Outrageous."], "120": ["Under two minutes. Show-off.", "Under two. Sharp.", "Fast. Very fast."], "180": ["Solid time. Consultant pace.", "Brisk. Nicely done.", "Good time. Efficient."], "300": ["Done. Unhurried, like a good history.", "Steady solve.", "Done. Calm and methodical."], "600": ["Got there. Slow and thorough.", "Thorough. Like a full examination.", "Done. No rush, no fuss."], "0": ["Solved. Eventually. Was the kettle on?", "Got there. Eventually. Still counts.", "Solved. Slowly, but solved."]};
+      return pick(W[s < 60 ? 60 : s < 120 ? 120 : s < 180 ? 180 : s < 300 ? 300 : s < 600 ? 600 : 0]);
     }
   };
   function say(t) { $("msg").textContent = t; }
