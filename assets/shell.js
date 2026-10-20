@@ -304,12 +304,12 @@
       var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly; }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
       var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
-      return '<div class="mwprog"><div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><p><b>' + d + " of " + n + "</b> done today. " + q + "</p></div>";
+      return '<div class="mwrow">' + streakPill() + installChip() + '</div><div class="mwprog"><div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><p><b>' + d + " of " + n + "</b> done today. " + q + "</p></div>";
     }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">Think like a doctor.</p><h1>Today&rsquo;s medical puzzles</h1>' +
         '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p></div>" +
-        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span>" + streakPill() + installChip() + "</div></div>" +
+        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
         (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
