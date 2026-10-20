@@ -226,7 +226,10 @@ html[data-theme="dark"] .subpill{color:#16121F}
 
 .card .pill.wk{margin:8px 0 0;justify-self:start;align-self:start}
 
-.mwstreak{display:inline-block;font-size:14px;color:var(--ink);background:var(--soft,#F1ECF8);border-radius:999px;padding:4px 12px;justify-self:start}
+.mwstreak{display:inline-block;font-size:14px;color:var(--ink);background:var(--soft,#F1ECF8);border-radius:999px;padding:4px 12px}
+html[data-theme="dark"] .mwstreak{background:#2A2238}
+.mast-r{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+@media (max-width:620px){.mast-r{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:8px 10px;padding-top:0;grid-auto-flow:unset}.mast-r .mw-install{flex-basis:100%}}
 .mwstreak b{color:#B4472F}
 .mw-install{margin:0;display:flex;align-items:center;gap:6px}
 .mw-install[hidden]{display:none}
