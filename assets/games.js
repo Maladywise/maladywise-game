@@ -136,6 +136,19 @@ window.MW_GAMES = [
     ],
     accent: "#3C4A57", accentDark: "#A7B8C8",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M9 13c6 3 10 3 15 0s9-3 15 0"/><path d="M9 24c6 3 10 3 15 0s9-3 15 0"/><path d="M9 35c6 3 10 3 15 0s9-3 15 0"/></svg>' },
+  { id: "cryptogenic", name: "Cryptogenic", path: "cryptogenic/", live: true, weekly: true, from: "2026-10-24", weeklyLine: "A new cryptic every Saturday. Twenty-eight clues, every answer medical.", store: { stats: "cry-stats", day: "cry-day-", weekly: true, weekStart: 6, labels: ["Unaided", "1-3", "4-9", "10+"], distTitle: " (hints used)" },
+    tagline: "A medical cryptic crossword. Every answer is medical. New every Saturday.",
+    quip: "Every clue is fair. Most of them are rude about it.",
+    helpQuip: "Stuck? Solve the easy anagrams first. They\u2019re the gateway drug.",
+    help: [
+      "Each clue has a straight definition at one end, plus wordplay that builds the same answer.",
+      "Wordplay includes anagrams, hidden words, sound-alikes and words built from parts. The number in brackets is the answer length.",
+      "Tap a square to choose it, tap again to switch across or down. Use \u2039 \u203a to move between clues.",
+      "Check word and Reveal letter help if you\u2019re stuck. Solve a clue, then tap it in the list to see how it works.",
+      "Progress saves automatically. A new cryptic every Saturday at midnight, Sydney time."
+    ],
+    accent: "#7A3E8C", accentDark: "#D59BE6",
+    icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="26" height="26" rx="2"/><path d="M17 8v26M25 8v26M8 17h26M8 25h26"/><path d="M30 40l10-10 3 3-10 10h-3z" fill="#fff"/></svg>' },
   { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
     tagline: "Twenty hard medical trivia questions. No options. New every Sunday.",
     quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
@@ -149,3 +162,5 @@ window.MW_GAMES = [
     accent: "#3B4C9B", accentDark: "#93A5F2",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 8a14 14 0 1 0 10 22A12 12 0 0 1 30 8z"/><path d="M36 10v6M33 13h6"/></svg>' },
 ];
+/* Games with a future 'from' date show as coming soon until then (Sydney time). */
+(function () { var t; try { t = new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney" }).format(new Date()); } catch (e) { t = new Date().toISOString().slice(0, 10); } window.MW_GAMES.forEach(function (g) { if (g.from && g.from > t) g.live = false; }); })();
