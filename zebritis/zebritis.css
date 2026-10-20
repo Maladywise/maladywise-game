@@ -51,9 +51,16 @@ html[data-theme="dark"] #zbr .go,html[data-theme="dark"] #zbr .next{background:#
 #zbr .hit.t10 i{color:var(--gold)}
 #zbr .hit.t20{background:linear-gradient(135deg,#FBE3F1,#E6DDFB,#DDF3F7);border-color:#B05FC7}
 html[data-theme="dark"] #zbr .hit.t20{background:linear-gradient(135deg,#3A2140,#2B2445,#1E3A40)}
-#zbr .hit.t20 .em{animation:zbruni 1.2s ease-out}
-@keyframes zbruni{0%{transform:scale(.4) rotate(-20deg)}60%{transform:scale(1.3) rotate(8deg)}100%{transform:none}}
-@media (prefers-reduced-motion:reduce){#zbr .hit.t20 .em{animation:none}}
+#zbr .hit.t20{position:relative;overflow:visible;background-size:220% 220%;animation:zbrshim 4s ease-in-out infinite;box-shadow:0 0 0 0 rgba(176,95,199,.5)}
+#zbr .hit.t20 .em{font-size:40px;display:inline-block;transform-origin:50% 90%;animation:zbruni 1.6s cubic-bezier(.3,1.4,.5,1) both,zbrpulse 2.4s ease-in-out 1.6s infinite}
+#zbr .hit.t20::before,#zbr .hit.t20::after{content:"\2728";position:absolute;font-size:18px;pointer-events:none;opacity:0}
+#zbr .hit.t20::before{left:10px;top:-6px;animation:zbrspark 1.8s ease-out .2s 3}
+#zbr .hit.t20::after{left:46px;bottom:-4px;animation:zbrspark 1.8s ease-out .8s 3}
+@keyframes zbruni{0%{transform:scale(.3) translateY(10px) rotate(-25deg);opacity:0}25%{transform:scale(1.35) translateY(-14px) rotate(10deg);opacity:1}42%{transform:scale(1) translateY(0) rotate(-6deg)}58%{transform:translateY(-9px) rotate(4deg)}72%{transform:translateY(0) rotate(-2deg)}84%{transform:translateY(-4px)}100%{transform:none}}
+@keyframes zbrpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08) rotate(-3deg)}}
+@keyframes zbrspark{0%{opacity:0;transform:translateY(6px) scale(.4) rotate(0)}30%{opacity:1;transform:translateY(-6px) scale(1.1) rotate(20deg)}100%{opacity:0;transform:translateY(-22px) scale(.6) rotate(60deg)}}
+@keyframes zbrshim{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media (prefers-reduced-motion:reduce){#zbr .hit.t20,#zbr .hit.t20 .em,#zbr .hit.t20::before,#zbr .hit.t20::after{animation:none}}
 #zbr .hit.t6{border-color:var(--accent)}
 #zbr .hit.t0{background:var(--nobg);border-color:var(--no)}
 #zbr .list summary{cursor:pointer;display:inline-flex;align-items:center;gap:6px;font:600 13px var(--body);color:var(--accent);border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px;list-style:none}
