@@ -242,3 +242,36 @@ html[data-theme="dark"] .subpill{color:#16121F}
 .nl.nl-after{position:relative;width:100%;align-self:stretch;margin:4px 0 8px}
 .nl.nl-after>.nl-x{position:absolute;top:8px;right:8px}
 .mw-share{margin-left:8px}
+
+/* ---------- celebrations ---------- */
+.cb{position:fixed;inset:0;z-index:40;display:grid;place-content:center;justify-items:center;gap:14px;background:rgba(250,247,242,.94);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);animation:cbin .2s ease-out;cursor:pointer;overflow:hidden;text-align:center;padding:24px}
+html[data-theme="dark"] .cb{background:rgba(22,18,31,.94)}
+.cb.out{animation:cbout .26s ease-in forwards}
+@keyframes cbin{from{opacity:0}}
+@keyframes cbout{to{opacity:0}}
+.cb-cap{margin:0;font:700 20px Lora,Georgia,serif;color:var(--ink);max-width:320px;animation:cbcap .4s ease-out .5s both}
+@keyframes cbcap{from{opacity:0;transform:translateY(8px)}}
+.cb-tap{position:absolute;bottom:28px;left:0;right:0;font:500 12px Poppins,system-ui,sans-serif;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+/* Dxtective stamp */
+.cb-stamp{font:800 44px/1 Poppins,system-ui,sans-serif;letter-spacing:.08em;color:#B4472F;border:6px solid #B4472F;border-radius:10px;padding:14px 22px;transform:rotate(-12deg);animation:cbstamp .45s cubic-bezier(.2,1.6,.4,1) both;text-shadow:0 0 1px #B4472F;mix-blend-mode:multiply}
+html[data-theme="dark"] .cb-stamp{mix-blend-mode:normal}
+.cb-dx.gold .cb-stamp{color:#B8860B;border-color:#B8860B;box-shadow:0 0 0 4px rgba(184,134,11,.18)}
+@keyframes cbstamp{0%{transform:rotate(-12deg) scale(2.6);opacity:0}60%{transform:rotate(-12deg) scale(.92);opacity:1}100%{transform:rotate(-12deg) scale(1)}}
+.cb-dx{animation:cbin .2s ease-out,cbshake .3s .4s}
+@keyframes cbshake{25%{transform:translate(3px,-2px)}50%{transform:translate(-3px,2px)}75%{transform:translate(2px,1px)}}
+/* Wordemic ECG */
+.cb-line{width:min(86vw,520px);height:130px;overflow:visible}
+.cb-line path{fill:none;stroke:#2F7D4A;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:900;animation:cbecg 1.1s ease-out forwards;filter:drop-shadow(0 0 6px rgba(47,125,74,.45))}
+.cb-ecg.gold .cb-line path{stroke:#B8860B;filter:drop-shadow(0 0 8px rgba(184,134,11,.55))}
+@keyframes cbecg{to{stroke-dashoffset:0}}
+/* Zebritis runner */
+.cb-runner{font-size:96px;line-height:1;animation:cbrun 1.9s cubic-bezier(.45,.05,.55,.95) both}
+@keyframes cbrun{0%{transform:translateX(-80vw) translateY(0)}20%{transform:translateX(-45vw) translateY(-18px)}35%{transform:translateX(-25vw) translateY(0)}50%{transform:translateX(0) translateY(-18px)}62%{transform:translateX(0) translateY(0)}100%{transform:translateX(0)}}
+.cb-run.uni .cb-trail{position:absolute;left:0;top:50%;height:46px;margin-top:-58px;width:52vw;background:linear-gradient(90deg,transparent,#F28AB2,#F7C873,#9BE3B0,#8AB8F2,#C49BF2);border-radius:999px;opacity:.75;animation:cbtrail 1.9s ease-out both;transform-origin:left}
+@keyframes cbtrail{0%{transform:scaleX(0)}55%{transform:scaleX(1);opacity:.75}100%{transform:scaleX(1);opacity:0}}
+.cb-run.uni::before,.cb-run.uni::after{content:"\2728";position:absolute;font-size:30px;top:38%;left:58%;animation:cbspark 1.2s ease-out 1s 2 both}
+.cb-run.uni::after{top:54%;left:36%;animation-delay:1.3s}
+@keyframes cbspark{0%{opacity:0;transform:scale(.3)}40%{opacity:1;transform:scale(1.2) rotate(20deg)}100%{opacity:0;transform:scale(.6) translateY(-30px) rotate(60deg)}}
+/* still version for reduced motion */
+.cb.still,.cb.still *,.cb.still::before,.cb.still::after{animation:none!important}
+.cb.still .cb-line path{stroke-dashoffset:0}

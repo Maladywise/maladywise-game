@@ -142,7 +142,7 @@
 
   // ---------- play ----------
   function finish() {
-    st.done = true; var s = score(); st.win = s >= WIN; put(KEY, st);
+    st.done = true; var s = score(); st.win = s >= WIN; st.uni = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }); st.zeb = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 10; }); put(KEY, st);
     if (isLive() && stats.last !== day) {
       var consecutive = stats.last && dayNum(day) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
