@@ -129,7 +129,7 @@ window.MW_GAMES = [
     helpQuip: "Lung cancer causes clubbing. So does thyroid acropachy. Guess which scores more.",
     help: [
       "Three prompts a day, like \u2018Name a cause of finger clubbing\u2019.",
-      "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93).",
+      "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93). Each prompt has one unicorn (\ud83e\udd84): the single rarest answer, worth 20.",
       "Three tries per prompt. Answers not on our list don\u2019t count against you, they just use a try.",
       "Spelling is forgiven within reason. New prompts every day at midnight, Sydney time."
     ],
