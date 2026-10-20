@@ -8,7 +8,7 @@ window.MW_SITE = {
   quip: "Made by a GP who should probably be doing paperwork.",
   social: [
     ["X", "https://x.com/MaladyWise", "@MaladyWise", '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-6.3L6.4 22H3.3l7.3-8.3L1 2h6.3l4.4 5.8zm-1.1 18h1.7L6.3 3.9H4.5z"/></svg>'],
-    ["Ko-fi", "https://ko-fi.com/maladywise98927", "Buy me a coffee", '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg>']
+    ["Ko-fi", "https://ko-fi.com/maladywise", "Buy me a coffee", '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg>']
   ],
   house: { name: "Follow along", text: "New puzzles, fictional cases and the odd zebra. Follow @MaladyWise on X.", cta: "Follow on X", href: "https://x.com/MaladyWise", accent: "#6B5A93", accentDark: "#9C8CC4" }
 };

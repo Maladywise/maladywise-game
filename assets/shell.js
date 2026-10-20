@@ -286,7 +286,7 @@
       return '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
         '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>" +
-        '<a class="card house" href="https://ko-fi.com/maladywise98927" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#D9A066" : "#A8642A") + '">' +
+        '<a class="card house" href="https://ko-fi.com/maladywise" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#D9A066" : "#A8642A") + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/></svg></div>' +
         '<div class="cbody"><h2 class="name">Buy me a coffee</h2><p class="tag">Free, no ads, made after hours. A coffee keeps new puzzles coming.</p><div class="cfoot"><span class="play">Ko-fi \u2615</span></div></div></a>';
     }
