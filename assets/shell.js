@@ -251,7 +251,7 @@
       var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
       var left = 86400 - ((p[0] % 24) * 3600 + p[1] * 60 + p[2]);
       var h = Math.floor(left / 3600), m = Math.floor(left % 3600 / 60), sec = left % 60;
-      return h + "h " + ("0" + m).slice(-2) + "m " + ("0" + sec).slice(-2) + "s";
+      return h + "h " + ("0" + m).slice(-2) + "m";
     } catch (e) { return "at midnight"; }
   }
 
