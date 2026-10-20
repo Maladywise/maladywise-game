@@ -190,7 +190,7 @@
     if (!g || !g.store) return null;
     var L = g.store.labels || ["1", "2", "3", "4", "5", "6", "X"];
     var s = get(g.store.stats, null) || { played: 0, wins: 0, streak: 0, best: 0, dist: L.map(function () { return 0; }) };
-    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key), wd = new Date(n * 864e5).getUTCDay(); key = new Date((n - (g.store.weekStart === 0 ? wd : (wd + 6) % 7)) * 864e5).toISOString().slice(0, 10); }
+    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key), wd = new Date(n * 864e5).getUTCDay(); key = new Date((n - (wd - (g.store.weekStart == null ? 1 : g.store.weekStart) + 7) % 7) * 864e5).toISOString().slice(0, 10); }
     var today = get(g.store.day + key, null);
     return { s: s, done: !!(today && today.done), win: !!(today && today.win), labels: L };
   }
@@ -263,7 +263,7 @@
     function card(g) {
       var st = g.live ? readStats(g) : null;
       var status = !st ? "" : st.done ? (st.win ? "Solved. Smug. " : "Done. Humbled. ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
-      var btn = !g.live ? SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length] : st && st.done ? "Review" : "Play";
+      var btn = !g.live ? (g.from ? "From " + nice(g.from, { weekday: "short", day: "numeric", month: "short" }) : SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length]) : st && st.done ? "Review" : "Play";
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +

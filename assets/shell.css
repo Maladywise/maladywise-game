@@ -60,6 +60,7 @@ button{font-family:inherit}
   .card .play{padding:5px 12px;font-size:12px}
   .card .pill.wk{margin:6px 0 0;font-size:9px;padding:3px 7px}
   .card.done{opacity:.72}
+  .grid>.card:last-child:nth-child(odd){grid-column:1/-1}
 }
 .band{position:relative}
 .band .tick{position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;background:#fff;color:#2F7D4A;font:700 13px/22px Poppins,system-ui,sans-serif;text-align:center}
