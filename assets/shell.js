@@ -266,8 +266,8 @@
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
-        '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") +
-        '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div></div></" + tag + ">";
+        '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
+        '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") + "</div></" + tag + ">";
     }
     function homeTop() {
       var H = window.MW_HOME; if (!H || !H.tagline) return "";
