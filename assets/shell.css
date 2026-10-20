@@ -59,9 +59,6 @@ button{font-family:inherit}
   .card .cfoot{margin-top:6px}
   .card .play{padding:5px 12px;font-size:12px}
   .card .pill.wk{margin:3px 0 0;font-size:9px;padding:3px 7px}
-  .card.feature{grid-column:1/-1;display:grid;grid-template-columns:72px minmax(0,1fr)}
-  .card.feature .band{min-height:0}
-  .card.feature .tag{display:block;font-size:13px}
   .card.done{opacity:.72}
 }
 .band{position:relative}
