@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise events calendar, used by the weekly topical run (and the monthly build). holidays: theme that day's Triviosis plus 1-2 other puzzles around puzzle_theme (full day for Halloween and Christmas Day); tag light = just 1-2 puzzles; gentle = respectful tone. anniversaries (MM-DD, every year): theme 1-2 puzzles, ideally Triviosis or Dxtective, and mention the anniversary in a hint or explanation. If a health day (data/health-days.json) falls on the same date, the health day leads. Australian-specific holidays are deliberately left out. Facts must be double-checked before use.",
+ "_about": "Malady Wise events calendar, used by the weekly topical run (and the monthly build). holidays: theme that day's Triviosis plus 1-2 other puzzles around puzzle_theme (full day for Halloween and Christmas Day); tag light = just 1-2 puzzles; gentle = respectful tone. anniversaries (MM-DD, every year): theme 1-2 puzzles, ideally Triviosis or Dxtective, and mention the anniversary in a hint or explanation. If a health day (data/health-days.json) falls on the same date, the health day leads. Facts must be double-checked before use.",
  "updated": "2026-10-21",
  "holidays": [
   {
@@ -149,6 +149,56 @@
     "2028": "2028-12-31"
    },
    "puzzle_theme": "Party medicine: alcohol, hangovers, fireworks burns and eye injuries",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "id": "australiaday",
+   "name": "Australia Day",
+   "dates": {
+    "2027": "2027-01-26",
+    "2028": "2028-01-26"
+   },
+   "puzzle_theme": "Summer medicine: sunburn, melanoma, heatstroke, bluebottle and snake bites",
+   "tags": [
+    "light",
+    "gentle"
+   ]
+  },
+  {
+   "id": "anzac",
+   "name": "Anzac Day",
+   "dates": {
+    "2027": "2027-04-25",
+    "2028": "2028-04-25"
+   },
+   "puzzle_theme": "Military medicine history: triage, trench foot, blood transfusion, plastic surgery origins",
+   "tags": [
+    "gentle"
+   ]
+  },
+  {
+   "id": "fathersday",
+   "name": "Father's Day",
+   "dates": {
+    "2027": "2027-09-05",
+    "2028": "2028-09-03"
+   },
+   "puzzle_theme": "Men's health: prostate, testicular cancer, heart health",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "id": "melbcup",
+   "name": "Melbourne Cup",
+   "dates": {
+    "2026": "2026-11-03",
+    "2027": "2027-11-02",
+    "2028": "2028-11-07"
+   },
+   "puzzle_theme": "Horses, not zebras: common diagnoses, equine-named signs and terms (hoof, horseshoe kidney, cauda equina)",
    "tags": [
     "light"
    ]
