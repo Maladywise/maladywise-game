@@ -394,3 +394,4 @@ html[data-theme="dark"] .ev.s{background:#1F3A29;color:#9FD9B0}html[data-theme="
   .print-url{display:block;font-size:11px;margin-top:10px;color:#333}
   @page{margin:14mm}
 }
+.nl.nl-game{width:100%;align-self:stretch;margin:18px 0 4px}
