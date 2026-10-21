@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -161,6 +161,9 @@
       stats.dist[s3 >= 25 ? 0 : s3 >= 18 ? 1 : s3 >= 10 ? 2 : s3 >= 1 ? 3 : 4]++; stats.last = day; put(SKEY, stats);
     }
   }
+  function logAns(name) {
+    if (isLive() && window.MW_track) MW_track("zebritis-answer/" + day + "/" + (st.i + 1) + "/" + norm(name).replace(/ /g, "-"), "Zebritis answer: " + P.prompts[st.i].q + " \u2192 " + name);
+  }
   function lock(p, msg) { st.picks[st.i] = p; put(KEY, st); render(msg); }
   root.addEventListener("submit", function (e) {
     if (e.target.id !== "zbr-form") return; e.preventDefault();
@@ -168,9 +171,9 @@
     var x = P.prompts[st.i], tries = st.tries[st.i] = st.tries[st.i] || [];
     if (tries.some(function (t) { return core(t) === core(g); })) { render("You\u2019ve tried that one.", true); return; }
     var m = match(g, x);
-    if (m >= 0) { lock(m, pick(TIER[x.a[m][1]].m)); return; }
+    if (m >= 0) { logAns(x.a[m][0]); lock(m, pick(TIER[x.a[m][1]].m)); return; }
     tries.push(g); put(KEY, st);
-    if (tries.length >= TRIES) lock(-1, "Three strikes. Here\u2019s what we had.");
+    if (tries.length >= TRIES) { logAns("none"); lock(-1, "Three strikes. Here\u2019s what we had."); }
     else { render(pick(MISS), true); var c = $("card"); c.classList.remove("shake"); void c.offsetWidth; c.classList.add("shake"); }
   });
   root.addEventListener("click", function (e) {
@@ -181,7 +184,7 @@
       if (window.MW_track) MW_track("zebritis-suggest/" + day + "/" + (st.i + 1) + "/" + norm(t).slice(0, 40).replace(/ /g, "-"), "Zebritis suggestion: " + P.prompts[st.i].q + " \u2192 " + norm(t).slice(0, 40));
       render(); return;
     }
-    if (b.id === "zbr-skip") { lock(-1, "Given up. No shame. Some shame."); return; }
+    if (b.id === "zbr-skip") { logAns("none"); lock(-1, "Given up. No shame. Some shame."); return; }
     if (b.id === "zbr-go") {
       st.i++; if (st.i >= P.prompts.length) { st.i = P.prompts.length - 1; finish(); }
       put(KEY, st); render(); window.scrollTo({ top: root.getBoundingClientRect().top + scrollY - 70, behavior: "smooth" });

@@ -124,12 +124,12 @@ window.MW_GAMES = [
     ],
     accent: "#1F7A8C", accentDark: "#5BC0D3",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8z"/><path d="M20 17a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5"/><circle cx="24" cy="27.5" r=".8" fill="#fff"/></svg>' },
-  { id: "zebritis", name: "Zebritis", path: "zebritis/", live: true, special: { dow: 0, short: "\ud83e\udd84 Super Sunday", label: "\ud83e\udd84 Super Zebritis \u00b7 5 prompts" }, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
+  { id: "zebritis", name: "Zebritis", path: "zebritis/", live: true, special: { dow: 3, short: "\ud83e\udd84 Super Wed", label: "\ud83e\udd84 Super Zebritis \u00b7 5 prompts" }, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
     tagline: "Name a correct answer. The rarer it is, the more it scores.",
     quip: "Think horses, and you\u2019ll score like one.",
     helpQuip: "Lung cancer causes clubbing. So does thyroid acropachy. Guess which scores more.",
     help: [
-      "Three prompts a day, like \u2018Name a cause of finger clubbing\u2019. Sundays are Super Zebritis: five prompts.",
+      "Three prompts a day, like \u2018Name a cause of finger clubbing\u2019. Wednesdays are Super Zebritis: five prompts.",
       "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93). Each prompt has one unicorn (\ud83e\udd84): the single rarest answer, worth 20.",
       "Three tries per prompt. Answers not on our list don\u2019t count against you, they just use a try.",
       "Spelling is forgiven within reason. New prompts every day at midnight, Sydney time."
