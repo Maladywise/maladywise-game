@@ -353,18 +353,18 @@
 
   // ---------- seasonal logo icon ----------
   var SEASONS = [
-    ["10-24", "10-31", "\ud83c\udf83", "Happy Halloween"],
-    ["2026-11-03", "", "\ud83d\udc0e", "Melbourne Cup. Think horses."], ["2027-11-02", "", "\ud83d\udc0e", "Melbourne Cup. Think horses."], ["2028-11-07", "", "\ud83d\udc0e", "Melbourne Cup. Think horses."],
-    ["12-01", "12-26", "\ud83c\udf84", "Merry Christmas"],
-    ["12-31", "12-31", "\ud83c\udf86", "Happy New Year"], ["01-01", "01-01", "\ud83c\udf86", "Happy New Year"],
-    ["2027-02-06", "", "\ud83e\udde7", "Happy Lunar New Year"], ["2028-01-26", "", "\ud83e\udde7", "Happy Lunar New Year"],
-    ["2027-02-09", "", "\ud83e\udd5e", "Pancake Day"], ["2028-02-29", "", "\ud83e\udd5e", "Pancake Day"],
-    ["02-14", "02-14", "\ud83d\udc98", "Happy Valentine\u2019s Day"],
-    ["03-17", "03-17", "\u2618\ufe0f", "Happy St Patrick\u2019s Day"],
-    ["04-01", "04-01", "\ud83c\udccf", "April Fools\u2019 Day"],
-    ["2027-03-26", "2027-03-29", "\ud83d\udc23", "Happy Easter"], ["2028-04-14", "2028-04-17", "\ud83d\udc23", "Happy Easter"],
-    ["2027-05-09", "", "\ud83c\udf37", "Happy Mother\u2019s Day"], ["2028-05-14", "", "\ud83c\udf37", "Happy Mother\u2019s Day"],
-    ["2027-09-05", "", "\ud83d\udc54", "Happy Father\u2019s Day"], ["2028-09-03", "", "\ud83d\udc54", "Happy Father\u2019s Day"]
+    ["10-24", "10-31", "halloween", "Happy Halloween"],
+    ["2026-11-03", "", "melbcup", "Melbourne Cup. Think horses."], ["2027-11-02", "", "melbcup", "Melbourne Cup. Think horses."], ["2028-11-07", "", "melbcup", "Melbourne Cup. Think horses."],
+    ["12-01", "12-26", "christmas", "Merry Christmas"],
+    ["12-31", "12-31", "newyear", "Happy New Year"], ["01-01", "01-01", "newyear", "Happy New Year"],
+    ["2027-02-06", "", "lunar", "Happy Lunar New Year"], ["2028-01-26", "", "lunar", "Happy Lunar New Year"],
+    ["2027-02-09", "", "pancake", "Pancake Day"], ["2028-02-29", "", "pancake", "Pancake Day"],
+    ["02-14", "02-14", "valentine", "Happy Valentine\u2019s Day"],
+    ["03-17", "03-17", "stpatrick", "Happy St Patrick\u2019s Day"],
+    ["04-01", "04-01", "aprilfools", "April Fools\u2019 Day"],
+    ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"],
+    ["2027-05-09", "", "mothersday", "Happy Mother\u2019s Day"], ["2028-05-14", "", "mothersday", "Happy Mother\u2019s Day"],
+    ["2027-09-05", "", "fathersday", "Happy Father\u2019s Day"], ["2028-09-03", "", "fathersday", "Happy Father\u2019s Day"]
   ];
   function season() {
     var t = sydToday(), md = t.slice(5), hit = null;
@@ -372,7 +372,7 @@
       var full = x[0].length > 5, a = x[0], b = x[1] || x[0], v = full ? t : md;
       if (v >= a && v <= b) hit = x;
     });
-    return hit ? '<span class="season" title="' + hit[3] + '" aria-label="' + hit[3] + '">' + hit[2] + "</span>" : "";
+    return hit ? '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '" title="' + hit[3] + '">' : "";
   }
 
   // ---------- top bar ----------

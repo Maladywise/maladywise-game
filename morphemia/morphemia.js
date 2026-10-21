@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
   var root = document.getElementById("mph");
   if (!document.querySelector("link[data-mph]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "morphemia.css?v=" + BUILD; l.setAttribute("data-mph", ""); document.head.appendChild(l);
@@ -13,7 +13,7 @@
     ' <div class="head"><span class="eyebrow" id="mph-eyebrow">Morphemia</span><span class="badge" id="mph-badge" hidden></span></div>' +
     ' <div class="rank"><div class="rank-top"><span class="rank-name" id="mph-rank">Student</span><span class="rank-score" id="mph-score">0 pts</span></div>' +
     '  <div class="bar"><i id="mph-bar" style="width:0"></i></div><div class="ticks" id="mph-ticks"></div></div>' +
-    ' <details class="found" id="mph-found"><summary><span id="mph-fcount">You have found 0 words</span><span>&#9662;</span></summary><div class="words" id="mph-words"></div></details>' +
+    ' <details class="found" id="mph-found" open><summary><span id="mph-fcount">You have found 0 words</span><span>&#9662;</span></summary><div class="words" id="mph-words"></div></details>' +
     ' <div class="msg" id="mph-msg" aria-live="polite"></div>' +
     ' <div class="entry" id="mph-entry"></div>' +
     ' <div class="hive" id="mph-hive"></div>' +

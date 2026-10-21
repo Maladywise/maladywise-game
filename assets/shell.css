@@ -410,7 +410,7 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .pill.sup,.splash .pill.sup{background:linear-gradient(135deg,#FF8FC7,#B48CFF 50%,#7FD3FF);color:#2A1240;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
 .card .kind{display:none}
 @media (max-width:620px){.card .kind{display:block;margin:2px 0 8px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--muted);line-height:1.3}}
-.season{display:inline-block;margin-left:6px;font-size:.9em;line-height:1;transform-origin:50% 90%;animation:mwSeason 1.2s ease-in-out 2}
+.season{display:inline-block;margin-left:7px;width:1.15em;height:1.15em;vertical-align:-.2em;transform-origin:50% 90%;animation:mwSeason 1.2s ease-in-out 2}
 @keyframes mwSeason{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
 @media (prefers-reduced-motion:reduce){.season{animation:none}}
 .doc .drug-tags{margin:2px 0 8px;display:flex;gap:6px;flex-wrap:wrap}
