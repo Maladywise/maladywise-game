@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Iron Infusion Dose Calculator | Malady Wise</title>
+<meta name="description" content="Ferric carboxymaltose dose calculator for clinicians: Ganzoni iron deficit and the simplified dosing table from the Australian product information.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:title" content="Iron Infusion Dose Calculator | Malady Wise">
+<meta property="og:description" content="Ferric carboxymaltose dose calculator for clinicians: Ganzoni iron deficit and the simplified dosing table from the Australian product information.">
+<meta property="og:image" content="https://maladywise.com/assets/share.jpg?v=2">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/shell.css?v=85">
+<script src="/assets/games.js?v=60"></script>
+<script src="/assets/site.js?v=6"></script>
+<script src="/assets/shell.js?v=76"></script>
+<style>
+#ic .form{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+#ic label{display:grid;gap:4px;font-size:13px;font-weight:600;color:var(--ink)}
+#ic label small{font-weight:400;color:var(--muted);font-size:12px}
+#ic input{font:500 17px var(--body);width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:44px}
+#ic input:focus{outline:2px solid var(--brand);outline-offset:1px}
+#ic .chips{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--muted)}
+#ic .chip{font:600 12.5px var(--body);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;min-height:34px}
+#ic .chip[aria-pressed="true"]{background:var(--brand);color:var(--bg);border-color:var(--brand)}
+#ic .out{display:grid;gap:10px;margin:12px 0}
+#ic .res{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:10px 14px}
+#ic .res h2{margin:2px 0 4px;font-size:15px}
+#ic .icbig{font:700 28px var(--title);color:var(--brand);margin:2px 0}
+#ic .res p,#ic .res li{font-size:14px;margin:3px 0}
+#ic .res ul{margin:4px 0;padding-left:18px}
+#ic .warn{color:#8A2F1C;font-weight:600}
+html[data-theme="dark"] #ic .warn{color:#F0A898}
+#ic .bands{list-style:none;padding:0;display:grid;gap:6px;margin:8px 0}
+#ic .bands li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px}
+#ic .bands li.on{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+#ic .bands b{display:block;font-size:13px;color:var(--muted);font-weight:600}
+#ic .callout{margin-top:14px}
+@media (max-width:360px){#ic .form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap doc" id="ic">
+<p class="meta">Clinician tool</p>
+<h1>Iron Infusion Dose Calculator</h1>
+<p class="lede">Ferric carboxymaltose (Ferinject and generics) for adults and adolescents 14 and over. Ganzoni deficit, the product information table and a dose plan.</p>
+<p class="callout"><b>For clinicians.</b> Check the current product information and your local protocol before prescribing. Adult and adolescent (14+) dosing only. This doesn’t replace clinical judgement. Nothing you enter leaves this device.</p>
+
+<form class="form" id="ic-form" onsubmit="return false" autocomplete="off">
+<label>Weight (kg)<input id="ic-wt" type="number" inputmode="decimal" min="10" max="250" step="0.1" placeholder="e.g. 65"><small>Pre-pregnancy weight if pregnant</small></label>
+<label>Current Hb (g/L)<input id="ic-hb" type="number" inputmode="decimal" min="30" max="200" step="1" placeholder="e.g. 95"><small>g/L, not g/dL</small></label>
+<label>Target Hb (g/L)<input id="ic-tg" type="number" inputmode="decimal" min="80" max="170" step="1" value="150"><small id="ic-tg-note">PI: 150 if ≥35 kg</small></label>
+<label>Iron stores (mg)<input id="ic-st" type="number" inputmode="decimal" min="0" max="1000" step="10" value="500"><small id="ic-st-note">PI: 500 mg if ≥35 kg</small></label>
+<div class="chips" role="group" aria-label="Target Hb presets">Target: <button type="button" class="chip" data-tg="150" aria-pressed="true">150 (PI)</button><button type="button" class="chip" data-tg="130" aria-pressed="false">130</button></div>
+</form>
+
+<div class="out" id="ic-out" aria-live="polite"><p class="meta">Enter weight and Hb to see the doses.</p></div>
+
+<h2>Simplified table (body weight ≥35 kg)</h2>
+<p class="meta">Total iron need, ferric carboxymaltose. Your patient’s row is highlighted.</p>
+<ul class="bands" id="ic-bands">
+<li data-b="0"><b>Hb under 100 g/L</b>35 to under 70 kg: 1500 mg · 70 kg and over: 2000 mg</li>
+<li data-b="1"><b>Hb 100 to under 140 g/L</b>35 to under 70 kg: 1000 mg · 70 kg and over: 1500 mg</li>
+<li data-b="2"><b>Hb 140 g/L or more</b>500 mg (either weight). Recheck iron studies before any repeat dose.</li>
+</ul>
+<p class="meta">The PI advises caution with the simplified method because it rests on limited trial data.</p>
+
+<h2>Limits per administration</h2>
+<ul>
+<li>Single dose: no more than 20 mg/kg, and no more than 1000 mg (20 mL).</li>
+<li>No more than 1000 mg per week. Give any further dose at least 7 days later.</li>
+<li>Under 35 kg: use Ganzoni only, with target Hb 130 g/L and stores 15 mg/kg (filled in automatically).</li>
+<li>Ganzoni rounding (PI): round down to the nearest 100 mg if 66 kg or less, round up if over 66 kg.</li>
+</ul>
+
+<h2>Safety</h2>
+<ul>
+<li><b>Low phosphate.</b> Common after ferric carboxymaltose, usually silent and short-lived. Repeat doses and risk factors (malnutrition, malabsorption, low vitamin D, hyperparathyroidism) can lead to osteomalacia and fractures. Check phosphate before repeat courses; ask about bone pain or tiredness.</li>
+<li><b>Skin staining.</b> Extravasation can cause long-lasting brown staining. Stop the infusion at once if leakage occurs, and warn the patient beforehand.</li>
+<li>Hypersensitivity: give where resuscitation is available and observe for at least 30 minutes.</li>
+</ul>
+
+<h2>Alternative: ferric derisomaltose</h2>
+<p>Ferric derisomaltose (Monofer) is another high-dose IV iron. Trials show lower rates of low phosphate than ferric carboxymaltose, so it can suit patients at risk. Its doses and limits differ: use its own product information, not this calculator.</p>
+
+<h2>Sources</h2>
+<ul class="src">
+<li><a href="https://www.medsafe.govt.nz/profs/datasheet/f/ferinjectinj.pdf">Ferinject data sheet (CSL Vifor), revised 18 July 2024</a>. Simplified table, Ganzoni method, dose limits, phosphate and extravasation warnings.</li>
+<li><a href="https://medsinfo.com.au/api/documents/Ferric_Carboxymaltose-Teva_PI?format=pdf">Ferric Carboxymaltose Teva, Australian PI (approved 22 Sept 2025)</a>. Same table and limits.</li>
+<li><a href="https://medsinfo.com.au/api/documents/Ferrive_PI?format=pdf">Ferrive (ferric carboxymaltose), Australian PI (Nov 2025)</a>. Same table and limits.</li>
+<li><a href="https://www.nps.org.au/assets/p160-Canning-Grannell.pdf">Australian Prescriber: Skin staining from iron infusions</a></li>
+</ul>
+<p class="meta"><em>Checked October 2026. Education for clinicians, not a prescription. Check the current PI and local protocols.</em></p>
+<div id="nl-slot"></div>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script id="ic-calc">
+/* Pure calculation, no DOM. Tested in Node. Sources: Ferinject PI/data sheet section 4.2. */
+function ironCalc(o) {
+  var w = +o.weight, hb = +o.hb;
+  if (!(w > 0) || !(hb > 0)) return null;
+  var small = w < 35;
+  var target = o.target != null && o.target !== "" ? +o.target : (small ? 130 : 150);
+  var stores = o.stores != null && o.stores !== "" ? +o.stores : (small ? 15 * w : 500);
+  var gap = Math.max(0, target - hb);
+  var raw = w * gap * 0.24 + stores;
+  var rounded = w > 66 ? Math.ceil(raw / 100) * 100 : Math.floor(raw / 100) * 100;
+  var band = hb < 100 ? 0 : hb < 140 ? 1 : 2;
+  var simplified = null;
+  if (!small) simplified = band === 2 ? 500 : band === 0 ? (w < 70 ? 1500 : 2000) : (w < 70 ? 1000 : 1500);
+  var cap = Math.min(20 * w, 1000);
+  return { small: small, target: target, stores: stores, ganzoniRaw: raw, ganzoni: rounded,
+           band: band, simplified: simplified, maxSingle: cap,
+           planGanzoni: plan(rounded, cap), planSimplified: simplified ? plan(simplified, cap) : null };
+}
+function plan(total, cap) {
+  var d = [], left = total;
+  while (left > 0 && d.length < 10) { var x = Math.min(left, cap); d.push(Math.round(x)); left -= x; }
+  return d;
+}
+if (typeof module !== "undefined") module.exports = { ironCalc: ironCalc, plan: plan };
+</script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var wt = $("ic-wt"), hb = $("ic-hb"), tg = $("ic-tg"), st = $("ic-st"), out = $("ic-out");
+  var tgTouched = false, stTouched = false;
+  var chips = document.querySelectorAll("#ic .chip");
+  function n(x) { return Math.round(x).toLocaleString("en-AU"); }
+  function planText(p) {
+    if (!p || !p.length) return "";
+    if (p.length === 1) return "One dose of " + n(p[0]) + " mg.";
+    return p.map(function (x, i) { return "Dose " + (i + 1) + ": " + n(x) + " mg"; }).join(" · ") + ". At least 7 days apart.";
+  }
+  function setChips(v) { chips.forEach(function (c) { c.setAttribute("aria-pressed", String(+c.dataset.tg === +v)); }); }
+  chips.forEach(function (c) { c.addEventListener("click", function () { tg.value = c.dataset.tg; tgTouched = true; setChips(c.dataset.tg); run(); }); });
+  tg.addEventListener("input", function () { tgTouched = true; setChips(tg.value); run(); });
+  st.addEventListener("input", function () { stTouched = true; run(); });
+  wt.addEventListener("input", run); hb.addEventListener("input", run);
+  function run() {
+    var w = parseFloat(wt.value);
+    if (w > 0 && w < 35) {
+      if (!tgTouched) { tg.value = 130; setChips(130); }
+      if (!stTouched) st.value = Math.round(15 * w);
+      $("ic-tg-note").textContent = "PI: 130 if under 35 kg"; $("ic-st-note").textContent = "PI: 15 mg/kg if under 35 kg";
+    } else if (w >= 35) {
+      if (!tgTouched) { tg.value = 150; setChips(150); }
+      if (!stTouched) st.value = 500;
+      $("ic-tg-note").textContent = "PI: 150 if ≥35 kg"; $("ic-st-note").textContent = "PI: 500 mg if ≥35 kg";
+    }
+    var r = ironCalc({ weight: wt.value, hb: hb.value, target: tg.value, stores: st.value });
+    document.querySelectorAll("#ic-bands li").forEach(function (li) { li.classList.toggle("on", !!r && !r.small && +li.dataset.b === r.band); });
+    if (!r) { out.innerHTML = '<p class="meta">Enter weight and Hb to see the doses.</p>'; return; }
+    var h = "";
+    if (+hb.value < 30 || +hb.value > 200) h += '<p class="warn">Check the Hb: enter it in g/L (e.g. 95, not 9.5).</p>';
+    h += '<div class="res"><h2>Ganzoni iron deficit</h2><p class="icbig">' + n(r.ganzoni) + ' mg</p>' +
+      '<p>' + n(+wt.value) + ' kg × (' + n(r.target) + ' − ' + n(+hb.value) + ') × 0.24 + ' + n(r.stores) + ' = ' + n(r.ganzoniRaw) + ' mg, rounded ' + (+wt.value > 66 ? "up" : "down") + ' to the nearest 100 mg.</p>' +
+      (+hb.value >= r.target ? '<p class="warn">Hb is at or above target: this is iron stores only.</p>' : '') +
+      '<p>' + planText(r.planGanzoni) + '</p></div>';
+    if (r.small) {
+      h += '<div class="res"><h2>Simplified table</h2><p class="warn">Not for under 35 kg. Use the Ganzoni result.</p></div>';
+    } else {
+      h += '<div class="res"><h2>Simplified table (PI)</h2><p class="icbig">' + n(r.simplified) + ' mg</p>' +
+        (r.band === 2 ? '<p>Hb 140 or more: give 500 mg, then recheck iron studies before any repeat.</p>' : '') +
+        '<p>' + planText(r.planSimplified) + '</p></div>';
+    }
+    h += '<div class="res"><h2>Maximum single dose</h2><p class="icbig">' + n(r.maxSingle) + ' mg</p><p>Lower of 20 mg/kg and 1000 mg. Max 1000 mg per week.</p></div>';
+    out.innerHTML = h;
+  }
+})();
+</script>
+<script>MW.page();</script>
+</body>
+</html>
