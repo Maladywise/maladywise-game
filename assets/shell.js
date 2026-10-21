@@ -398,8 +398,8 @@
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
-        '<h2 class="name">' + g.name + '</h2><p class="tag">' + g.tagline + "</p>" +
-        '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") + (g.special && g.live && g.special.dow === dow ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + "</div></" + tag + ">";
+        '<h2 class="name">' + g.name + "</h2>" + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + '<p class="tag">' + g.tagline + "</p>" +
+        '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + "</div></" + tag + ">";
     }
     function homeTop() {
       var H = window.MW_HOME; if (!H || !H.tagline) return "";
@@ -546,7 +546,7 @@
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
-    sp.innerHTML = '<div class="splash-in">' + (g.special && g.special.dow === dow ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
+    sp.innerHTML = '<div class="splash-in">' + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><h1>" + g.name + "</h1><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";

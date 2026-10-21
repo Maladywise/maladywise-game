@@ -15,7 +15,7 @@ window.MW_SITE = {
 /* Einstein days: the rare top tier (about 1 day in 50 per game). Dates in Sydney time. */
 window.MW_EINSTEIN = { dx: ["2026-11-12"], wordemic: ["2026-11-04"], comorbix: ["2026-10-29"], morphemia: ["2026-11-08"], linkase: ["2026-10-25"], gridectomy: ["2026-11-15"], suturix: ["2026-10-22"], triviosis: ["2026-11-18"], zebritis: ["2026-11-10"] };
 window.MW_GAMES = [
-  { id: "dx", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
+  { id: "dx", kind: "Guess the diagnosis", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     tagline: "Six clues, one diagnosis. Every wrong guess unlocks the next clue.",
     quip: "Zero excuses. The patient is fictional, your ego isn't.",
     helpQuip: "Typing \"stress\" or \"a virus\" will be judged. Harshly.",
@@ -28,7 +28,7 @@ window.MW_GAMES = [
       "A new case arrives at midnight, Sydney time. Past cases live in the archive.",
       "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ] },
-  { id: "wordemic", name: "Wordemic", path: "wordemic/", live: true, store: { stats: "wde-stats", day: "wde-day-" },
+  { id: "wordemic", kind: "Wordle-style", name: "Wordemic", path: "wordemic/", live: true, store: { stats: "wde-stats", day: "wde-day-" },
     tagline: "Guess the five-letter medical word in six tries.",
     quip: "Your med school fees, finally paying off.",
     helpQuip: "Made-up words get rejected. And roasted.",
@@ -42,7 +42,7 @@ window.MW_GAMES = [
       "A new word arrives at midnight, Sydney time.",
       "Rarely, about one day in 50, you get an Einstein. You will know it when you see it."
     ] },
-  { id: "comorbix", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"], distTitle: " (mistakes per win)" },
+  { id: "comorbix", kind: "Connections-style", name: "Comorbix", path: "comorbix/", live: true, store: { stats: "cmx-stats", day: "cmx-day-", labels: ["0", "1", "2", "3", "X"], distTitle: " (mistakes per win)" },
     quip: "Like a multidisciplinary meeting, but everyone agrees at the end.",
     helpQuip: "Red herrings are deliberate. Trust no one.",
     help: [
@@ -56,7 +56,7 @@ window.MW_GAMES = [
     tagline: "Sixteen terms. Four hidden groups. Trust issues guaranteed.",
     accent: "#B23A6F", accentDark: "#E06E9E",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3" opacity=".7"/><rect x="8" y="26" width="14" height="14" rx="3" opacity=".7"/><rect x="26" y="26" width="14" height="14" rx="3"/></svg>' },
-  { id: "morphemia", name: "Morphemia", path: "morphemia/", live: true,
+  { id: "morphemia", kind: "Spelling Bee-style", name: "Morphemia", path: "morphemia/", live: true,
     store: { stats: "mph-stats", day: "mph-day-", labels: ["Stu", "Int", "Res", "Reg", "Con", "Pro", "Gen"], distTitle: " (best rank per day)" },
     quip: "Spelling bee for people who can pronounce sphygmomanometer.",
     helpQuip: "Inventing diseases is frowned upon. And rejected.",
@@ -73,7 +73,7 @@ window.MW_GAMES = [
     tagline: "Seven letters. Build medical words. Intern to Genius, if you're lucky.",
     accent: "#B07A0C", accentDark: "#F0B940",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l15 8.5v17L24 40 9 31.5v-17z"/><path d="M24 17l6 3.5v7L24 31l-6-3.5v-7z" fill="#fff"/></svg>' },
-  { id: "linkase", name: "Linkase", path: "linkase/", live: true, store: { stats: "lnk-stats", day: "lnk-day-", labels: ["0", "1", "2", "3", "4", "X"], distTitle: " (strikes per win)" },
+  { id: "linkase", kind: "Word chain", name: "Linkase", path: "linkase/", live: true, store: { stats: "lnk-stats", day: "lnk-day-", labels: ["0", "1", "2", "3", "4", "X"], distTitle: " (strikes per win)" },
     quip: "Word association, but with consequences.",
     helpQuip: "If it sounds like something a registrar would mutter, it's probably right.",
     help: [
@@ -86,7 +86,7 @@ window.MW_GAMES = [
     tagline: "Blood, pressure, sore, throat. Link the chain without dropping it.",
     accent: "#2F5DA8", accentDark: "#6E98E0",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="5" y="17" width="20" height="14" rx="7"/><rect x="23" y="17" width="20" height="14" rx="7"/></svg>' },
-  { id: "gridectomy", name: "Gridectomy", path: "gridectomy/", live: true, store: { stats: "grx-stats", day: "grx-day-", labels: ["<1m", "<2m", "<3m", "<5m", "<10m", "10m+", "Help"], distTitle: " (solve time)" },
+  { id: "gridectomy", kind: "Mini crossword", name: "Gridectomy", path: "gridectomy/", live: true, store: { stats: "grx-stats", day: "grx-day-", labels: ["<1m", "<2m", "<3m", "<5m", "<10m", "10m+", "Help"], distTitle: " (solve time)" },
     quip: "Five by five. Small incision, big recovery.",
     helpQuip: "Speed counts. So does not peeking.",
     help: [
@@ -99,7 +99,7 @@ window.MW_GAMES = [
     tagline: "A five-by-five crossword. Small grid, big ego bruise.",
     accent: "#3A3150", accentDark: "#CFC6E3",
     icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="#fff"><rect x="8" y="8" width="10" height="10"/><rect x="19" y="8" width="10" height="10"/><rect x="30" y="8" width="10" height="10"/><rect x="8" y="19" width="10" height="10"/><rect x="30" y="19" width="10" height="10"/><rect x="8" y="30" width="10" height="10"/><rect x="19" y="30" width="10" height="10"/><rect x="30" y="30" width="10" height="10"/></g></svg>' },
-  { id: "suturix", name: "Suturix", path: "suturix/", live: true, store: { stats: "stx-stats", day: "stx-day-", labels: ["0", "1", "2", "3", "4+"], distTitle: " (hints per solve)" },
+  { id: "suturix", kind: "Strands-style", name: "Suturix", path: "suturix/", live: true, store: { stats: "stx-stats", day: "stx-day-", labels: ["0", "1", "2", "3", "4+"], distTitle: " (hints per solve)" },
     quip: "Every letter belongs to something. Like a well-run ward.",
     helpQuip: "If you're stuck, find any random words. They buy hints.",
     help: [
@@ -112,7 +112,7 @@ window.MW_GAMES = [
     tagline: "Find the theme words woven through the grid. Neat stitches only.",
     accent: "#C2553A", accentDark: "#EE8A6A",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-12 12-12 18 0s12 12 18 0"/><path d="M12 18l4 6M22 20l2 7M32 22l-2 6M38 18l-3 6"/></svg>' },
-  { id: "triviosis", name: "Triviosis", path: "triviosis/", live: true, store: { stats: "trv-stats", day: "trv-day-", labels: ["10", "8-9", "6-7", "4-5", "0-3"], distTitle: " (scores)" },
+  { id: "triviosis", kind: "Daily quiz", name: "Triviosis", path: "triviosis/", live: true, store: { stats: "trv-stats", day: "trv-day-", labels: ["10", "8-9", "6-7", "4-5", "0-3"], distTitle: " (scores)" },
     tagline: "Ten questions. One theme. New every day.",
     quip: "Pub trivia, but the pub is a hospital and nobody\u2019s had a break.",
     helpQuip: "Wrong answers come with an explanation. Pretend you knew.",
@@ -124,7 +124,7 @@ window.MW_GAMES = [
     ],
     accent: "#1F7A8C", accentDark: "#5BC0D3",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8z"/><path d="M20 17a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5"/><circle cx="24" cy="27.5" r=".8" fill="#fff"/></svg>' },
-  { id: "zebritis", name: "Zebritis", path: "zebritis/", live: true, special: { dow: 3, short: "\ud83e\udd84 Super Wed", label: "\ud83e\udd84 Super Zebritis \u00b7 5 prompts" }, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
+  { id: "zebritis", kind: "Rarest answer wins", name: "Zebritis", path: "zebritis/", live: true, special: { dow: 3, from: "2026-10-28", short: "\ud83e\udd84 Super Wed", label: "\ud83e\udd84 Super Zebritis \u00b7 5 prompts" }, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
     tagline: "Name a correct answer. The rarer it is, the more it scores.",
     quip: "Think horses, and you\u2019ll score like one.",
     helpQuip: "Lung cancer causes clubbing. So does thyroid acropachy. Guess which scores more.",
@@ -136,7 +136,7 @@ window.MW_GAMES = [
     ],
     accent: "#3C4A57", accentDark: "#A7B8C8",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M9 13c6 3 10 3 15 0s9-3 15 0"/><path d="M9 24c6 3 10 3 15 0s9-3 15 0"/><path d="M9 35c6 3 10 3 15 0s9-3 15 0"/></svg>' },
-  { id: "cryptogenic", name: "Cryptogenic", path: "cryptogenic/", live: true, weekly: true, from: "2026-10-24", weeklyLine: "A new cryptic every Saturday. Twenty-eight clues, every answer medical.", store: { stats: "cry-stats", day: "cry-day-", weekly: true, weekStart: 6, labels: ["Unaided", "1-3", "4-9", "10+"], distTitle: " (hints used)" },
+  { id: "cryptogenic", kind: "Cryptic crossword", name: "Cryptogenic", path: "cryptogenic/", live: true, weekly: true, from: "2026-10-24", weeklyLine: "A new cryptic every Saturday. Twenty-eight clues, every answer medical.", store: { stats: "cry-stats", day: "cry-day-", weekly: true, weekStart: 6, labels: ["Unaided", "1-3", "4-9", "10+"], distTitle: " (hints used)" },
     tagline: "A medical cryptic crossword. Every answer is medical. New every Saturday.",
     quip: "Every clue is fair. Most of them are rude about it.",
     helpQuip: "Stuck? Solve the easy anagrams first. They\u2019re the gateway drug.",
@@ -149,7 +149,7 @@ window.MW_GAMES = [
     ],
     accent: "#7A3E8C", accentDark: "#D59BE6",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="26" height="26" rx="2"/><path d="M17 8v26M25 8v26M8 17h26M8 25h26"/><path d="M30 40l10-10 3 3-10 10h-3z" fill="#fff"/></svg>' },
-  { id: "grandrounds", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
+  { id: "grandrounds", kind: "Hard trivia", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
     tagline: "Twenty hard medical trivia questions. No options. New every Sunday.",
     quip: "Quiz yourself, or take on a colleague. No options to hide behind.",
     helpQuip: "No multiple choice to hide behind. Just you and your memory.",
