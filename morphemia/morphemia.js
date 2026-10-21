@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8";
   var root = document.getElementById("mph");
   if (!document.querySelector("link[data-mph]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "morphemia.css?v=" + BUILD; l.setAttribute("data-mph", ""); document.head.appendChild(l);
