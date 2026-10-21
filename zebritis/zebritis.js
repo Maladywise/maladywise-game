@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -76,6 +76,7 @@
     });
     return best;
   }
+  function sc3(s) { return s * 3 / P.prompts.length; }
   function score() { return st.picks.reduce(function (t, p, i) { return t + (p >= 0 ? P.prompts[i].a[p][1] : 0); }, 0); }
 
   // ---------- render ----------
@@ -122,9 +123,9 @@
   function renderResult() {
     var r = $("result"), s = score(), max = P.prompts.length * 20;
     var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c"; }).join("");
-    var share = "Zebritis #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
+    var share = (P.prompts.length > 3 ? "Super Zebritis #" : "Zebritis #") + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
-    var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : s >= 25 ? "A dazzle of zebras. Unbearable." : s >= 18 ? "Strong stripes. Consultant material." : s >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
+    var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : sc3(s) >= 25 ? "A dazzle of zebras. Unbearable." : sc3(s) >= 18 ? "Strong stripes. Consultant material." : sc3(s) >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
     r.hidden = false;
     r.innerHTML = '<p class="em-row">' + em + '</p><p class="score">' + s + "<span>/" + max + '</span></p><p class="verdict">' + esc(verdict) + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>10+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -152,12 +153,12 @@
 
   // ---------- play ----------
   function finish() {
-    st.done = true; var s = score(); st.win = s >= WIN; st.uni = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }); st.zeb = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 10; }); put(KEY, st);
+    st.done = true; var s = score(), s3 = sc3(s); st.win = s3 >= WIN; st.uni = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }); st.zeb = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 10; }); put(KEY, st);
     if (isLive() && stats.last !== day) {
       var consecutive = stats.last && dayNum(day) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
       stats.streak = consecutive ? stats.streak + 1 : 1; stats.best = Math.max(stats.best, stats.streak);
-      stats.dist[s >= 25 ? 0 : s >= 18 ? 1 : s >= 10 ? 2 : s >= 1 ? 3 : 4]++; stats.last = day; put(SKEY, stats);
+      stats.dist[s3 >= 25 ? 0 : s3 >= 18 ? 1 : s3 >= 10 ? 2 : s3 >= 1 ? 3 : 4]++; stats.last = day; put(SKEY, stats);
     }
   }
   function lock(p, msg) { st.picks[st.i] = p; put(KEY, st); render(msg); }
@@ -195,7 +196,7 @@
       P = list.filter(function (x) { return x.date === d; })[0] || null;
       if (!P) { $("card").innerHTML = '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; return; }
       $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
-      $("badge").textContent = P.difficulty || ""; $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
+      $("badge").textContent = (P.prompts.length > 3 ? "Super \u00b7 " : "") + (P.difficulty || ""); $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
       render(); renderArchive();
     });
   }
