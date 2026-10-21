@@ -109,8 +109,8 @@ footer.site a{color:var(--muted)}
 
 .doc{display:block;max-width:640px;margin:0 auto;padding:8px 16px 24px}
 .doc p,.doc ul{margin:6px 0}
-.doc h1{font:700 30px var(--title);margin:8px 0 4px;color:var(--ink)}
-.doc h2{font:700 17px Poppins,"Segoe UI",system-ui,sans-serif;margin:22px 0 4px;color:var(--ink)}
+.doc h1{font:700 30px var(--title);margin:8px 0 11px;color:var(--ink)}
+.doc h2{font:700 17px Poppins,"Segoe UI",system-ui,sans-serif;margin:22px 0 11px;color:var(--ink)}
 .doc p,.doc li{font-size:15px;line-height:1.6;color:var(--ink)}
 .doc ul{padding-left:20px}
 .doc .meta{color:var(--muted);font-size:13px}
@@ -377,7 +377,7 @@ html[data-theme="dark"] .ev.s{background:#1F3A29;color:#9FD9B0}html[data-theme="
   .bar,header.bar,footer.site,.printbtn,.mwsocial,.social,#mw-nav,.nl{display:none!important}
   html,body{background:#fff!important;color:#000!important}
   .doc{max-width:none;padding:0}
-  .doc h1{font-size:24px}.doc h2{font-size:14px;margin-top:12px}
+  .doc h1{font-size:24px}.doc h2{font-size:14px;margin:12px 0 6px}
   .doc p,.doc li{font-size:11.5px;line-height:1.4}
   .doc ul.tx{gap:3px;margin:4px 0}
   .doc ul.tx li{border:0;border-bottom:1px solid #ddd;border-radius:0;padding:2px 0 3px;break-inside:avoid}

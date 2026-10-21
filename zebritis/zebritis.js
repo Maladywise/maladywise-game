@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -67,7 +67,11 @@
         if (!c) return;
         if (c === g || cs === gs) { if (bestD > 0) { best = idx; bestD = 0; } return; }
         var tol = cs.length >= 10 ? 2 : cs.length >= 5 ? 1 : 0, dd = lev(gs, cs);
-        if (dd <= tol && dd < bestD) { best = idx; bestD = dd; }
+        if (dd <= tol && dd < bestD) { best = idx; bestD = dd; return; }
+        // word overlap: "orbital fracture" ~ "orbital floor fracture"; "duchenne muscular dystrophy" ~ "muscular dystrophy"
+        var gw = g.split(" "), cw = c.split(" ");
+        function inside(a, b) { return a.every(function (w) { return b.some(function (x) { return x === w || (w.length > 4 && lev(w, x) <= 1); }); }); }
+        if (bestD > 1 && ((gw.length >= 2 && inside(gw, cw)) || (cw.length >= 2 && cs.length >= 8 && inside(cw, gw)))) { best = idx; bestD = 1.5; }
       });
     });
     return best;
@@ -96,6 +100,12 @@
       var p = st.picks[i];
       h += p >= 0 ? '<div class="hit t' + x.a[p][1] + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span></div><i>+" + x.a[p][1] + "</i></div>"
         : '<div class="hit t0"><span class="em">\u2b1c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
+      if (tries.length) {
+        var sent = (st.sug || {})[i] || [];
+        h += '<div class="sug"><p>Think one of yours should count?</p>' + tries.map(function (t, k) {
+          return sent.indexOf(k) >= 0 ? '<span class="sent">\u2713 ' + esc(t) + " \u00b7 thanks, we\u2019ll review it</span>" : '<button type="button" class="link" data-sug="' + k + '">Suggest \u201c' + esc(t) + '\u201d</button>';
+        }).join("") + "</div>";
+      }
       h += reveal(x, p) + '<button type="button" class="next" id="zbr-go">' + (i + 1 < n ? "Next prompt" : "See your score") + "</button>";
     }
     $("card").innerHTML = h;
@@ -164,6 +174,12 @@
   });
   root.addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b || !P || st.done) return;
+    if (b.dataset.sug) {
+      var k = +b.dataset.sug, t = (st.tries[st.i] || [])[k]; if (t === undefined) return;
+      st.sug = st.sug || {}; (st.sug[st.i] = st.sug[st.i] || []).push(k); put(KEY, st);
+      if (window.MW_track) MW_track("zebritis-suggest/" + day + "/" + (st.i + 1) + "/" + norm(t).slice(0, 40).replace(/ /g, "-"), "Zebritis suggestion: " + P.prompts[st.i].q + " \u2192 " + norm(t).slice(0, 40));
+      render(); return;
+    }
     if (b.id === "zbr-skip") { lock(-1, "Given up. No shame. Some shame."); return; }
     if (b.id === "zbr-go") {
       st.i++; if (st.i >= P.prompts.length) { st.i = P.prompts.length - 1; finish(); }
