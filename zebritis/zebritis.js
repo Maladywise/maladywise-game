@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
