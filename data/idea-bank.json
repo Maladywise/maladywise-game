@@ -1,0 +1,2072 @@
+{
+ "_about": "Malady Wise idea bank: original-wording seeds for Dxtective cases, Zebritis prompts and Triviosis/Grand Rounds questions, distilled from the old site notes and fact-checked. Fictional cases only; no individual treatment advice. Puzzle-writing tasks should pick unused items and set \"used\": true.",
+ "updated": "2026-10-22",
+ "cases": [
+  {
+   "diagnosis": "Cannabinoid hyperemesis syndrome",
+   "difficulty": "Medium",
+   "clues": [
+    "A 24-year-old man has had bouts of vomiting every few weeks for a year.",
+    "Between bouts he feels completely well.",
+    "His bloods, scans and gastroscopy are all normal.",
+    "He has found that long, very hot showers are the only thing that settles the nausea.",
+    "Anti-nausea injections in the ED barely help.",
+    "He has smoked cannabis every day since he was at school."
+   ],
+   "teaching_point": "Cyclical vomiting eased by hot showers in a long-term daily cannabis user is the classic picture, and only sustained abstinence brings lasting relief.",
+   "used": false
+  },
+  {
+   "diagnosis": "Amatoxin (death cap mushroom) poisoning",
+   "difficulty": "Hard",
+   "clues": [
+    "A 52-year-old man and his flatmate both have vomiting and watery diarrhoea.",
+    "It started about 10 hours after a home-cooked dinner.",
+    "By the next morning they feel much better and want to go home.",
+    "Their second set of liver tests is far worse than the first.",
+    "The flatmate picked the mushrooms for the meal under oak trees in Canberra.",
+    "Leftover mushrooms have a greenish cap, white gills, a skirt-like ring and a cup at the base."
+   ],
+   "teaching_point": "Mushroom symptoms that begin 6 or more hours after a meal, followed by a deceptive 'recovery', suggest amatoxin poisoning and need urgent Poisons Information advice even when the patient looks well.",
+   "used": false
+  },
+  {
+   "diagnosis": "Kawasaki disease",
+   "difficulty": "Medium",
+   "clues": [
+    "A 3-year-old girl has had a fever for five days.",
+    "Paracetamol brings the temperature down, but only for a few hours.",
+    "Both eyes are red but there is no discharge.",
+    "Her lips are red and cracked and her tongue looks like a strawberry.",
+    "Her hands and feet are puffy and she has one large lump in her neck.",
+    "Two weeks later, the skin on her fingertips starts to peel."
+   ],
+   "teaching_point": "Five days of fever plus red eyes, mouth changes, rash, swollen extremities or a neck node in a young child needs prompt treatment to reduce the risk of coronary artery aneurysms.",
+   "used": false
+  },
+  {
+   "diagnosis": "Pyoderma gangrenosum",
+   "difficulty": "Hard",
+   "clues": [
+    "A 41-year-old woman has a painful sore on her shin.",
+    "It began as a small pustule after she bumped her leg.",
+    "It grew quickly into an ulcer with a purple, overhanging edge.",
+    "Antibiotics did nothing, and a surgical clean-up made it much bigger.",
+    "She has had bouts of bloody diarrhoea for years.",
+    "A biopsy shows sheets of neutrophils and no infection."
+   ],
+   "teaching_point": "An ulcer that worsens after debridement (pathergy) should prompt thoughts of pyoderma gangrenosum, which is often linked to inflammatory bowel disease.",
+   "used": false
+  },
+  {
+   "diagnosis": "Multiple system atrophy",
+   "difficulty": "Genius",
+   "clues": [
+    "A 59-year-old man has struggled to reach the toilet in time for three years.",
+    "He now feels faint whenever he stands up.",
+    "His wife says he makes a strange high-pitched noise when breathing at night.",
+    "He has developed a slow, stiff walk.",
+    "Levodopa helped only a little, and not for long.",
+    "His MRI shows a cross-shaped pattern in the pons."
+   ],
+   "teaching_point": "Early bladder and blood pressure problems, night-time stridor and a poor levodopa response point to MSA rather than Parkinson's disease; the 'hot cross bun' sign is a classic MRI clue.",
+   "used": false
+  },
+  {
+   "diagnosis": "CADASIL",
+   "difficulty": "Genius",
+   "clues": [
+    "A 44-year-old woman has had migraine with aura since her twenties.",
+    "She has now had two small strokes despite normal blood pressure and cholesterol.",
+    "Her mood has dropped and her memory is slipping.",
+    "Her father had strokes and dementia in his fifties.",
+    "Her MRI shows widespread white-matter changes, including the front of the temporal lobes.",
+    "Genetic testing finds a variant in the NOTCH3 gene."
+   ],
+   "teaching_point": "Migraine with aura, early strokes and a strong family history suggest CADASIL, an inherited disease of the brain's small blood vessels.",
+   "used": false
+  },
+  {
+   "diagnosis": "Transient global amnesia",
+   "difficulty": "Medium",
+   "clues": [
+    "A 63-year-old man is brought in confused after a swim in cold ocean water.",
+    "He asks the same few questions every couple of minutes.",
+    "He knows his own name and recognises his wife.",
+    "He can't remember the last few hours and can't form new memories.",
+    "The rest of his neurological examination is normal.",
+    "By evening he is back to himself, apart from a gap in his memory of the day."
+   ],
+   "teaching_point": "Sudden, isolated memory loss with repetitive questioning that clears within 24 hours is typical of TGA, which does not raise stroke or dementia risk.",
+   "used": false
+  },
+  {
+   "diagnosis": "Narcolepsy type 1",
+   "difficulty": "Hard",
+   "clues": [
+    "A 17-year-old boy falls asleep in class most afternoons.",
+    "He sleeps a full night but never wakes refreshed.",
+    "Sometimes he can't move for a minute after waking.",
+    "He sees vivid dream-like figures as he drifts off.",
+    "When he laughs at a joke, his knees buckle and his face goes slack.",
+    "A sleep study shows he enters REM sleep within minutes of falling asleep."
+   ],
+   "teaching_point": "Excessive daytime sleepiness plus brief muscle weakness triggered by emotion (cataplexy) points to narcolepsy type 1.",
+   "used": false
+  },
+  {
+   "diagnosis": "NF2-related schwannomatosis",
+   "difficulty": "Hard",
+   "clues": [
+    "A 26-year-old man has been losing his hearing for two years.",
+    "Both ears are now affected, and both ring.",
+    "He has had a few falls when walking in the dark.",
+    "He had a cataract removed as a teenager.",
+    "Small lumps under his skin turned out to be nerve sheath tumours.",
+    "His MRI shows a tumour on the hearing and balance nerve on each side."
+   ],
+   "teaching_point": "Bilateral vestibular schwannomas are the hallmark of NF2-related schwannomatosis, the 2022 name for neurofibromatosis type 2.",
+   "used": false
+  },
+  {
+   "diagnosis": "Eosinophilic oesophagitis",
+   "difficulty": "Medium",
+   "clues": [
+    "A 19-year-old man says food 'goes down slowly'.",
+    "He chews for ages and drinks water with every mouthful.",
+    "He has asthma, eczema and hay fever.",
+    "Reflux tablets have made little difference.",
+    "Last week a piece of steak got stuck and he needed it removed in hospital.",
+    "Gastroscopy shows rings and long furrows along his oesophagus."
+   ],
+   "teaching_point": "A young person with allergies, swallowing trouble and food getting stuck needs biopsies for eosinophilic oesophagitis.",
+   "used": false
+  },
+  {
+   "diagnosis": "Food protein-induced enterocolitis syndrome (FPIES)",
+   "difficulty": "Hard",
+   "clues": [
+    "A 6-month-old girl has just started solids.",
+    "Two hours after a bowl of rice cereal, she vomits again and again.",
+    "She becomes pale and floppy and is rushed to hospital.",
+    "She is treated for possible sepsis, but all cultures are clear.",
+    "The same thing happened after her first taste of rice a month ago.",
+    "Her allergy skin prick test is negative."
+   ],
+   "teaching_point": "Repeated vomiting 1 to 4 hours after a food, with pallor and floppiness, suggests FPIES, a non-IgE food allergy in which rice is a common trigger in Australia.",
+   "used": false
+  },
+  {
+   "diagnosis": "Functional neurological disorder (functional leg weakness)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 34-year-old woman has had a heavy, dragging right leg for two months.",
+    "It started after a viral illness and a minor fall.",
+    "Her MRI of the brain and spine is normal.",
+    "Her leg strength varies a lot from one moment to the next.",
+    "When she lifts her left leg against resistance, her 'weak' right heel presses firmly down.",
+    "Her neurologist explains it as a problem with the body's software, not its hardware."
+   ],
+   "teaching_point": "Functional neurological disorder is diagnosed on positive examination signs such as Hoover's sign, not just by ruling everything else out, and it is real and treatable.",
+   "used": false
+  },
+  {
+   "diagnosis": "Limited cutaneous systemic sclerosis (CREST)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 52-year-old woman's fingers turn white, then blue, in the cold.",
+    "Over several years her fingers have become tight and shiny.",
+    "She has small red spots on her face and lips.",
+    "Food sometimes sticks and she has bad heartburn.",
+    "X-rays show chalky deposits under the skin of her fingertips.",
+    "Her blood test shows anticentromere antibodies."
+   ],
+   "teaching_point": "Raynaud's with skin tightening, telangiectasia and calcinosis points to limited systemic sclerosis, and regular screening for pulmonary hypertension matters.",
+   "used": false
+  },
+  {
+   "diagnosis": "Paget-Schroetter syndrome (effort thrombosis)",
+   "difficulty": "Hard",
+   "clues": [
+    "A 21-year-old competitive swimmer has a heavy, aching right arm.",
+    "It started after a week of extra training.",
+    "Her arm is swollen and slightly blue.",
+    "Veins stand out across her shoulder and upper chest.",
+    "She has no cancer, no clotting history and takes no hormones.",
+    "Ultrasound shows a clot in the subclavian vein where it passes the first rib."
+   ],
+   "teaching_point": "A clot in the arm of a young athlete after heavy overhead activity suggests venous thoracic outlet syndrome.",
+   "used": false
+  },
+  {
+   "diagnosis": "MELAS (mitochondrial disease)",
+   "difficulty": "Genius",
+   "clues": [
+    "A 30-year-old woman has migraines and is shorter than her siblings.",
+    "She was diagnosed with hearing loss and diabetes in her twenties.",
+    "She now has sudden loss of vision on one side.",
+    "Her MRI shows stroke-like lesions that don't fit any single artery.",
+    "Her blood lactate is high.",
+    "Her mother and her mother's brother also have diabetes and deafness."
+   ],
+   "teaching_point": "Stroke-like episodes with deafness, diabetes and short stature passed down the maternal line suggest MELAS, a mitochondrial disease.",
+   "used": false
+  },
+  {
+   "diagnosis": "Leber hereditary optic neuropathy",
+   "difficulty": "Genius",
+   "clues": [
+    "A 23-year-old man notices blurry central vision in one eye.",
+    "It doesn't hurt.",
+    "Six weeks later, his other eye goes the same way.",
+    "His optic discs look swollen, but they don't leak dye on angiography.",
+    "His mother's brother lost his sight in his twenties.",
+    "Genetic testing finds a variant in his mitochondrial DNA."
+   ],
+   "teaching_point": "Painless central vision loss in one eye then the other, in a young man with affected maternal relatives, suggests LHON.",
+   "used": false
+  },
+  {
+   "diagnosis": "Acute pericarditis",
+   "difficulty": "Easy",
+   "clues": [
+    "A 28-year-old man has sharp central chest pain.",
+    "He had a cold last week.",
+    "The pain is worse lying flat and when he breathes in.",
+    "It eases when he sits up and leans forward.",
+    "The pain spreads to the ridge of muscle along the top of his left shoulder.",
+    "His ECG shows widespread ST elevation and PR depression."
+   ],
+   "teaching_point": "Sharp, positional chest pain that spreads to the trapezius ridge, with widespread ST elevation and PR depression, is typical of pericarditis.",
+   "used": false
+  },
+  {
+   "diagnosis": "Patulous Eustachian tube",
+   "difficulty": "Hard",
+   "clues": [
+    "A 29-year-old woman says her own voice sounds too loud in her head.",
+    "She can hear herself breathing in her right ear.",
+    "It began after she lost 12 kg.",
+    "It disappears when she lies down or puts her head between her knees.",
+    "Her hearing test is normal.",
+    "Her right eardrum moves in and out as she breathes."
+   ],
+   "teaching_point": "Hearing your own voice and breath loudly, relieved by lying down and often after weight loss, suggests a patulous (stuck-open) Eustachian tube.",
+   "used": false
+  },
+  {
+   "diagnosis": "Accelerated silicosis (engineered stone)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 32-year-old man has had a dry cough and breathlessness for a year.",
+    "He has lost weight and tires quickly at work.",
+    "He has never smoked.",
+    "His chest CT shows many small nodules, mostly in the upper lungs.",
+    "For ten years he has cut and polished kitchen benchtops.",
+    "Several of his workmates have the same diagnosis."
+   ],
+   "teaching_point": "Engineered stone contains very high levels of silica, and Australia banned it from 1 July 2024 after a surge of silicosis in young stonemasons.",
+   "used": false
+  },
+  {
+   "diagnosis": "Pityriasis rosea",
+   "difficulty": "Easy",
+   "clues": [
+    "A 19-year-old woman has a rash on her trunk.",
+    "It began a week ago with a single oval pink patch.",
+    "Now many smaller patches have appeared.",
+    "Each patch has a fine collar of scale.",
+    "On her back, the patches line up like the branches of a Christmas tree.",
+    "It is only mildly itchy and her doctor expects it to fade without treatment."
+   ],
+   "teaching_point": "A 'herald patch' followed by a Christmas-tree pattern rash is classic pityriasis rosea, which usually clears by itself within a few months.",
+   "used": false
+  },
+  {
+   "diagnosis": "Periorificial dermatitis",
+   "difficulty": "Easy",
+   "clues": [
+    "A 27-year-old woman has a bumpy red rash around her mouth.",
+    "It burns more than it itches.",
+    "She has been putting her partner's steroid cream on it.",
+    "The cream helps for a day, then the rash returns worse.",
+    "She also uses a steroid nasal spray for hay fever.",
+    "A thin rim of skin right next to her lips is clear."
+   ],
+   "teaching_point": "Small bumps around the mouth that spare the lip border and flare when steroid creams stop suggest periorificial dermatitis.",
+   "used": false
+  },
+  {
+   "diagnosis": "Glandular fever (EBV) with amoxicillin rash",
+   "difficulty": "Easy",
+   "clues": [
+    "An 18-year-old woman has had a sore throat and fever for a week.",
+    "She is more exhausted than she has ever been.",
+    "Her tonsils are swollen with a white coating.",
+    "She has tender lumps at the back of her neck.",
+    "Two days after starting amoxicillin, an itchy red rash appears all over her body.",
+    "Her blood film shows atypical lymphocytes."
+   ],
+   "teaching_point": "A widespread rash after amoxicillin in a young person with sore throat and swollen neck glands is a classic clue to glandular fever, and isn't necessarily a true penicillin allergy.",
+   "used": false
+  },
+  {
+   "diagnosis": "Blue-ringed octopus envenomation",
+   "difficulty": "Medium",
+   "clues": [
+    "A 10-year-old boy was exploring rock pools on the NSW coast.",
+    "He picked up a small, sandy-coloured creature to show his dad.",
+    "He felt no more than a tiny nip on his hand.",
+    "Ten minutes later his lips and tongue go numb.",
+    "He then struggles to speak, swallow and breathe.",
+    "The creature flashed bright blue rings when he picked it up."
+   ],
+   "teaching_point": "Blue-ringed octopus bites are often painless, but tetrodotoxin can cause rapid paralysis, and breathing support is needed until it wears off.",
+   "used": false
+  },
+  {
+   "diagnosis": "Cyclic vomiting syndrome",
+   "difficulty": "Hard",
+   "clues": [
+    "An 8-year-old boy has bouts of severe vomiting.",
+    "Each bout starts in the early hours of the morning and lasts a day or two.",
+    "Between bouts he is completely well.",
+    "Attacks often follow excitement, such as birthdays or the night before holidays.",
+    "His mother has migraines.",
+    "All his tests are normal and every episode looks almost identical."
+   ],
+   "teaching_point": "Repeated, near-identical episodes of vomiting with complete wellness in between, often in families with migraine, suggest cyclic vomiting syndrome.",
+   "used": false
+  },
+  {
+   "diagnosis": "Marfan syndrome",
+   "difficulty": "Medium",
+   "clues": [
+    "A 17-year-old basketballer is very tall and slim.",
+    "His arm span is longer than his height.",
+    "His breastbone sticks outwards.",
+    "The lens in one of his eyes has shifted out of place.",
+    "When he grips his wrist, his thumb and little finger overlap.",
+    "An echo shows a widened aortic root."
+   ],
+   "teaching_point": "Tall stature with lens dislocation and a widened aortic root points to Marfan syndrome, and regular aortic monitoring has transformed life expectancy.",
+   "used": false
+  },
+  {
+   "diagnosis": "Carcinoid syndrome (neuroendocrine tumour)",
+   "difficulty": "Hard",
+   "clues": [
+    "A 61-year-old woman has episodes of hot, red facial flushing.",
+    "She also has watery diarrhoea several times a day.",
+    "Sometimes she wheezes during a flush.",
+    "Her liver is enlarged and feels lumpy.",
+    "A new murmur is heard on the right side of her heart.",
+    "Her 24-hour urine shows a high level of 5-HIAA."
+   ],
+   "teaching_point": "Flushing, diarrhoea and wheeze with liver deposits and right-sided heart valve disease suggest carcinoid syndrome from a neuroendocrine tumour.",
+   "used": false
+  },
+  {
+   "diagnosis": "Glucagonoma",
+   "difficulty": "Genius",
+   "clues": [
+    "A 55-year-old woman has lost 10 kg without trying.",
+    "She was recently diagnosed with diabetes.",
+    "A red, blistering rash spreads around her groin and buttocks, crusts, then moves on.",
+    "Her tongue is red and smooth and the corners of her mouth are cracked.",
+    "She had a clot in her leg last month.",
+    "A scan shows a mass in the tail of her pancreas."
+   ],
+   "teaching_point": "A migrating, blistering rash (necrolytic migratory erythema) with weight loss, new diabetes and clots points to a glucagonoma.",
+   "used": false
+  },
+  {
+   "diagnosis": "Vitamin B6 toxicity (sensory neuropathy)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 45-year-old woman has tingling feet that has spread to her hands.",
+    "She feels unsteady in the shower when she closes her eyes.",
+    "Her diabetes and B12 tests are normal.",
+    "She takes a magnesium powder for cramps, a daily energy drink and a 'stress' B complex.",
+    "Added together, the labels show a large daily dose of pyridoxine.",
+    "Her blood B6 level is very high."
+   ],
+   "teaching_point": "Vitamin B6 hides in many supplements and can build up to cause nerve damage, which is why the TGA is moving 50 to 200 mg daily-dose products to pharmacist-only from mid-2027.",
+   "used": false
+  },
+  {
+   "diagnosis": "Symmetrical drug-related intertriginous and flexural exanthema (SDRIFE, 'baboon syndrome')",
+   "difficulty": "Genius",
+   "clues": [
+    "A 30-year-old man develops a rash a few hours after a dose of medicine.",
+    "He feels well and has no fever.",
+    "The rash is bright red with sharp edges.",
+    "It covers both buttocks and the inner thighs.",
+    "There are no blisters and his mouth is clear.",
+    "He had just started amoxicillin for a chest infection."
+   ],
+   "teaching_point": "A sharply marked, symmetrical red rash on the buttocks and groin soon after a drug is SDRIFE, nicknamed 'baboon syndrome'.",
+   "used": false
+  },
+  {
+   "diagnosis": "Acute mountain sickness",
+   "difficulty": "Easy",
+   "clues": [
+    "A fit 35-year-old trekker has a pounding headache.",
+    "She says it feels like the worst hangover of her life.",
+    "She has no appetite and feels sick.",
+    "She barely slept in the teahouse last night.",
+    "She flew into Lukla and climbed quickly over two days.",
+    "She is now sleeping at 3,800 m."
+   ],
+   "teaching_point": "Headache with nausea, fatigue or poor sleep after a fast climb is acute mountain sickness, and being fit gives no protection.",
+   "used": false
+  },
+  {
+   "diagnosis": "Restless legs syndrome (iron deficiency)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 38-year-old woman can't sit through a film any more.",
+    "In the evenings she has an urge to move her legs.",
+    "Getting up and walking eases it straight away.",
+    "Her partner says her legs jerk while she sleeps.",
+    "She donates blood every few months.",
+    "Her ferritin is low at 18 micrograms per litre."
+   ],
+   "teaching_point": "Restless legs often reflect low iron stores, and frequent blood donors are at particular risk.",
+   "used": false
+  },
+  {
+   "diagnosis": "Bladder pain syndrome (interstitial cystitis)",
+   "difficulty": "Medium",
+   "clues": [
+    "A 34-year-old woman has pelvic pain that builds as her bladder fills.",
+    "Emptying her bladder brings relief.",
+    "She passes urine up to 15 times a day.",
+    "Every urine culture has been negative.",
+    "Coffee, chilli and fizzy drinks make it flare.",
+    "Cystoscopy has ruled out other causes."
+   ],
+   "teaching_point": "Bladder pain with frequency and repeatedly negative urine cultures suggests bladder pain syndrome, a diagnosis made after other causes are excluded.",
+   "used": false
+  },
+  {
+   "diagnosis": "Chronic cough from ear wax (Arnold's ear-cough reflex)",
+   "difficulty": "Genius",
+   "clues": [
+    "A 70-year-old man has had a dry cough for four months.",
+    "His chest X-ray and lung function tests are normal.",
+    "He doesn't take blood pressure tablets and has no reflux.",
+    "Asthma inhalers have done nothing.",
+    "He mentions his right ear has felt blocked for months.",
+    "His cough stops the week his ear is cleared."
+   ],
+   "teaching_point": "A branch of the vagus nerve supplies the ear canal, so wax or a foreign body in the ear can trigger a chronic cough.",
+   "used": false
+  },
+  {
+   "diagnosis": "Levamisole-adulterated cocaine vasculopathy",
+   "difficulty": "Genius",
+   "clues": [
+    "A 33-year-old man has painful purple patches on both ears.",
+    "Similar net-like patches appear on his cheeks and legs.",
+    "Some areas have turned black.",
+    "His white cell count is low.",
+    "His ANCA test is strongly positive.",
+    "He uses cocaine most weekends."
+   ],
+   "teaching_point": "Levamisole, a common cocaine cutting agent, can cause purple ear lesions, a low neutrophil count and positive ANCA.",
+   "used": false
+  },
+  {
+   "diagnosis": "Telogen effluvium",
+   "difficulty": "Easy",
+   "clues": [
+    "A 33-year-old woman's hair is coming out in handfuls.",
+    "Her ponytail is thinner, but there are no bald patches.",
+    "A gentle tug pulls out several hairs with tiny white bulbs.",
+    "Her scalp looks healthy.",
+    "She had a baby four months ago.",
+    "Her doctor reassures her that regrowth usually follows within months."
+   ],
+   "teaching_point": "Diffuse shedding 2 to 4 months after a big stressor such as childbirth, illness or surgery is telogen effluvium, and it usually recovers.",
+   "used": false
+  },
+  {
+   "diagnosis": "Greater trochanteric pain syndrome (gluteal tendinopathy)",
+   "difficulty": "Easy",
+   "clues": [
+    "A 56-year-old woman has pain on the outside of her hip.",
+    "She can't lie on that side at night.",
+    "Stairs and standing on one leg make it worse.",
+    "Pressing on the bony point of her hip is very tender.",
+    "Her hip joint itself moves freely.",
+    "Ultrasound shows a damaged gluteal tendon."
+   ],
+   "teaching_point": "Outer hip pain once labelled 'trochanteric bursitis' is usually a gluteal tendon problem.",
+   "used": false
+  },
+  {
+   "diagnosis": "Familial hypercholesterolaemia",
+   "difficulty": "Medium",
+   "clues": [
+    "A 34-year-old man has a heart attack while playing squash.",
+    "He doesn't smoke and isn't overweight.",
+    "His father died of a heart attack at 46.",
+    "He has firm lumps on his Achilles tendons.",
+    "There is a pale ring around the edge of each cornea.",
+    "His LDL cholesterol is 7.2 mmol/L."
+   ],
+   "teaching_point": "Very high LDL with tendon xanthomas and early heart disease in the family suggests FH, which affects about 1 in 250 to 300 people, so relatives should be tested.",
+   "used": false
+  },
+  {
+   "diagnosis": "Lynch syndrome",
+   "difficulty": "Hard",
+   "clues": [
+    "A 41-year-old woman is diagnosed with bowel cancer.",
+    "The tumour is on the right side of her colon.",
+    "Her mother had womb cancer at 48.",
+    "Her uncle had bowel cancer at 45.",
+    "Her tumour is missing mismatch repair proteins on testing.",
+    "A blood test finds a variant in the MLH1 gene."
+   ],
+   "teaching_point": "Early bowel and womb cancers across generations point to Lynch syndrome, and each child of a carrier has a 1 in 2 chance of inheriting it.",
+   "used": false
+  },
+  {
+   "diagnosis": "Benign paroxysmal positional vertigo (BPPV)",
+   "difficulty": "Easy",
+   "clues": [
+    "A 66-year-old woman wakes and the room spins as she rolls over.",
+    "It lasts less than a minute.",
+    "It happens again when she looks up to reach a high shelf.",
+    "She has no hearing loss or ringing.",
+    "Between episodes she feels fine.",
+    "Lying her back quickly with her head turned brings on a burst of rotating eye movements."
+   ],
+   "teaching_point": "Brief spinning triggered by head position, with a positive Dix-Hallpike test, is BPPV.",
+   "used": false
+  },
+  {
+   "diagnosis": "Duffy-null associated neutrophil count",
+   "difficulty": "Genius",
+   "clues": [
+    "A 28-year-old man has a routine blood test before starting a new job.",
+    "His neutrophil count is low at 1.1.",
+    "He feels well and has never had serious infections.",
+    "His blood tests over the past 10 years show the same result.",
+    "His family comes from Sudan.",
+    "Testing shows his red cells lack the Duffy antigen."
+   ],
+   "teaching_point": "A lower neutrophil count linked to the Duffy-null blood group is common and harmless in people of African and Middle Eastern ancestry, and recognising it avoids needless tests.",
+   "used": false
+  },
+  {
+   "diagnosis": "Yellow fever",
+   "difficulty": "Hard",
+   "clues": [
+    "A 30-year-old backpacker develops fever, headache and back pain.",
+    "It started a few days after a jungle tour in South America.",
+    "Despite a temperature of 39.8 degrees, his pulse is only 70.",
+    "He improves for a day, then turns yellow.",
+    "He starts bleeding from his gums.",
+    "He skipped one travel vaccine because 'it wasn't compulsory'."
+   ],
+   "teaching_point": "High fever with a slow pulse (Faget sign), a brief remission, then jaundice and bleeding suggests yellow fever, and one vaccine dose protects for life.",
+   "used": false
+  }
+ ],
+ "zebritis": [
+  {
+   "q": "Name a cause of angioedema",
+   "unicorn": "Gleich syndrome (episodic angioedema with eosinophilia)",
+   "examples": [
+    "ACE inhibitor",
+    "Peanut allergy",
+    "Insect sting",
+    "Shellfish allergy",
+    "NSAIDs",
+    "Chronic spontaneous urticaria",
+    "Hereditary angioedema",
+    "Alteplase (clot-busting drug)",
+    "Acquired C1 inhibitor deficiency",
+    "Gleich syndrome (episodic angioedema with eosinophilia)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of chronic diarrhoea",
+   "unicorn": "VIPoma",
+   "examples": [
+    "Irritable bowel syndrome",
+    "Coeliac disease",
+    "Lactose intolerance",
+    "Crohn's disease",
+    "Ulcerative colitis",
+    "Metformin",
+    "Microscopic colitis",
+    "Bile acid malabsorption",
+    "Giardiasis",
+    "VIPoma"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of difficulty swallowing",
+   "unicorn": "Dysphagia lusoria (aberrant subclavian artery)",
+   "examples": [
+    "Stroke",
+    "Reflux stricture",
+    "Oesophageal cancer",
+    "Eosinophilic oesophagitis",
+    "Parkinson's disease",
+    "Achalasia",
+    "Pharyngeal pouch",
+    "Schatzki ring",
+    "Plummer-Vinson syndrome",
+    "Dysphagia lusoria (aberrant subclavian artery)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of facial nerve weakness",
+   "unicorn": "Melkersson-Rosenthal syndrome",
+   "examples": [
+    "Bell's palsy",
+    "Stroke",
+    "Ramsay Hunt syndrome",
+    "Middle ear infection",
+    "Parotid tumour",
+    "Head injury",
+    "Lyme disease",
+    "Sarcoidosis",
+    "Guillain-Barre syndrome",
+    "Melkersson-Rosenthal syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a high ferritin",
+   "unicorn": "Hereditary hyperferritinaemia-cataract syndrome",
+   "examples": [
+    "Fatty liver",
+    "Alcohol",
+    "Infection",
+    "Inflammatory arthritis",
+    "Haemochromatosis",
+    "Iron infusion",
+    "Repeated blood transfusions",
+    "Adult-onset Still's disease",
+    "Haemophagocytic lymphohistiocytosis (HLH)",
+    "Hereditary hyperferritinaemia-cataract syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of fever of unknown origin",
+   "unicorn": "Kikuchi-Fujimoto disease",
+   "examples": [
+    "Tuberculosis",
+    "Infective endocarditis",
+    "Lymphoma",
+    "Hidden abscess",
+    "Giant cell arteritis",
+    "Drug fever",
+    "Adult-onset Still's disease",
+    "Q fever",
+    "Atrial myxoma",
+    "Kikuchi-Fujimoto disease"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a low neutrophil count",
+   "unicorn": "WHIM syndrome",
+   "examples": [
+    "Viral infection",
+    "Chemotherapy",
+    "Clozapine",
+    "Carbimazole",
+    "B12 or folate deficiency",
+    "Lupus",
+    "Duffy-null associated neutrophil count",
+    "Felty syndrome",
+    "Cyclic neutropenia",
+    "WHIM syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of skin blisters",
+   "unicorn": "Epidermolysis bullosa acquisita",
+   "examples": [
+    "Burns",
+    "Friction",
+    "Chickenpox",
+    "Impetigo",
+    "Cold sores (herpes simplex)",
+    "Contact dermatitis",
+    "Bullous pemphigoid",
+    "Pemphigus vulgaris",
+    "Porphyria cutanea tarda",
+    "Epidermolysis bullosa acquisita"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of night sweats",
+   "unicorn": "Castleman disease",
+   "examples": [
+    "Menopause",
+    "Infection",
+    "Alcohol",
+    "Antidepressants",
+    "Overactive thyroid",
+    "Tuberculosis",
+    "Lymphoma",
+    "Infective endocarditis",
+    "Phaeochromocytoma",
+    "Castleman disease"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a high prolactin",
+   "unicorn": "Chest wall shingles",
+   "examples": [
+    "Pregnancy",
+    "Breastfeeding",
+    "Stress",
+    "Antipsychotics",
+    "Metoclopramide",
+    "Underactive thyroid",
+    "Prolactinoma",
+    "Kidney failure",
+    "Macroprolactinaemia",
+    "Chest wall shingles"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a droopy eyelid",
+   "unicorn": "Marcus Gunn jaw-winking",
+   "examples": [
+    "Ageing",
+    "Long-term contact lens use",
+    "Botox",
+    "Horner's syndrome",
+    "Third nerve palsy",
+    "Myasthenia gravis",
+    "Myotonic dystrophy",
+    "Oculopharyngeal muscular dystrophy",
+    "Kearns-Sayre syndrome",
+    "Marcus Gunn jaw-winking"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a low magnesium",
+   "unicorn": "Familial hypomagnesaemia with secondary hypocalcaemia",
+   "examples": [
+    "Proton pump inhibitors",
+    "Diuretics",
+    "Alcohol",
+    "Diarrhoea",
+    "Poorly controlled diabetes",
+    "Refeeding syndrome",
+    "Cisplatin",
+    "Hungry bone syndrome",
+    "Gitelman syndrome",
+    "Familial hypomagnesaemia with secondary hypocalcaemia"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a high platelet count",
+   "unicorn": "Hereditary thrombocythaemia",
+   "examples": [
+    "Iron deficiency",
+    "Infection",
+    "Inflammation",
+    "Recent surgery",
+    "Spleen removal",
+    "Cancer",
+    "Essential thrombocythaemia",
+    "Polycythaemia vera",
+    "Chronic myeloid leukaemia",
+    "Hereditary thrombocythaemia"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a drug that can cause a lupus-like illness",
+   "unicorn": "Quinidine",
+   "examples": [
+    "Hydralazine",
+    "Procainamide",
+    "Isoniazid",
+    "Minocycline",
+    "TNF inhibitors",
+    "Methyldopa",
+    "Terbinafine",
+    "Hydrochlorothiazide",
+    "Chlorpromazine",
+    "Quinidine"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a venomous or stinging sea creature found in Australia",
+   "unicorn": "Morbakka (fire jelly)",
+   "examples": [
+    "Bluebottle",
+    "Stingray",
+    "Box jellyfish",
+    "Stonefish",
+    "Irukandji jellyfish",
+    "Blue-ringed octopus",
+    "Sea snake",
+    "Cone snail",
+    "Crown-of-thorns starfish",
+    "Morbakka (fire jelly)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of Raynaud's phenomenon",
+   "unicorn": "Vinyl chloride exposure",
+   "examples": [
+    "Primary Raynaud's",
+    "Scleroderma",
+    "Lupus",
+    "Beta blockers",
+    "Smoking",
+    "Vibrating power tools",
+    "Sjogren's syndrome",
+    "Cryoglobulinaemia",
+    "Bleomycin",
+    "Vinyl chloride exposure"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of erythema nodosum",
+   "unicorn": "Coccidioidomycosis",
+   "examples": [
+    "Strep throat",
+    "Pregnancy",
+    "Oral contraceptive pill",
+    "Sarcoidosis",
+    "Crohn's disease",
+    "Tuberculosis",
+    "Sulfonamide antibiotics",
+    "Behcet's disease",
+    "Yersinia infection",
+    "Coccidioidomycosis"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of heavy periods",
+   "unicorn": "Uterine arteriovenous malformation",
+   "examples": [
+    "Fibroids",
+    "Endometrial polyps",
+    "Adenomyosis",
+    "Copper IUD",
+    "Anticoagulants",
+    "Underactive thyroid",
+    "Von Willebrand disease",
+    "Endometrial hyperplasia",
+    "Endometrial cancer",
+    "Uterine arteriovenous malformation"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of loss of smell",
+   "unicorn": "Kallmann syndrome",
+   "examples": [
+    "Common cold",
+    "COVID-19",
+    "Sinusitis",
+    "Nasal polyps",
+    "Ageing",
+    "Smoking",
+    "Head injury",
+    "Parkinson's disease",
+    "Intranasal zinc products",
+    "Kallmann syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a hoarse voice",
+   "unicorn": "Ortner's syndrome (cardiovocal)",
+   "examples": [
+    "Laryngitis",
+    "Voice overuse",
+    "Reflux",
+    "Smoking",
+    "Vocal cord nodules",
+    "Inhaled steroids",
+    "Underactive thyroid",
+    "Laryngeal cancer",
+    "Recurrent laryngeal nerve palsy",
+    "Ortner's syndrome (cardiovocal)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of excessive thirst",
+   "unicorn": "Wolfram syndrome",
+   "examples": [
+    "Diabetes mellitus",
+    "Dehydration",
+    "Diuretics",
+    "High calcium",
+    "Low potassium",
+    "Lithium",
+    "Psychogenic polydipsia",
+    "Cranial diabetes insipidus (AVP deficiency)",
+    "Sickle cell disease",
+    "Wolfram syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a hot, swollen joint",
+   "unicorn": "Tenosynovial giant cell tumour (PVNS)",
+   "examples": [
+    "Gout",
+    "Septic arthritis",
+    "Pseudogout",
+    "Injury",
+    "Rheumatoid arthritis",
+    "Reactive arthritis",
+    "Psoriatic arthritis",
+    "Haemophilia (bleeding into the joint)",
+    "Rheumatic fever",
+    "Tenosynovial giant cell tumour (PVNS)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of unusual skin colour",
+   "unicorn": "Ochronosis (alkaptonuria)",
+   "examples": [
+    "Jaundice",
+    "Cyanosis",
+    "Carotenaemia",
+    "Addison's disease",
+    "Haemochromatosis",
+    "Amiodarone",
+    "Minocycline",
+    "Methaemoglobinaemia",
+    "Argyria (silver)",
+    "Ochronosis (alkaptonuria)"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a collapsed lung (pneumothorax)",
+   "unicorn": "Birt-Hogg-Dube syndrome",
+   "examples": [
+    "Primary spontaneous pneumothorax",
+    "Chest injury",
+    "COPD",
+    "Asthma",
+    "Medical procedure",
+    "Cystic fibrosis",
+    "Marfan syndrome",
+    "Pneumocystis pneumonia",
+    "Catamenial pneumothorax",
+    "Birt-Hogg-Dube syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of a high eosinophil count",
+   "unicorn": "Eosinophilia-myalgia syndrome",
+   "examples": [
+    "Asthma",
+    "Hay fever",
+    "Eczema",
+    "Drug reaction",
+    "Worm infection",
+    "Strongyloides",
+    "DRESS syndrome",
+    "Eosinophilic granulomatosis with polyangiitis",
+    "Hodgkin lymphoma",
+    "Eosinophilia-myalgia syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of recurrent vomiting",
+   "unicorn": "Superior mesenteric artery syndrome",
+   "examples": [
+    "Gastroenteritis",
+    "Pregnancy",
+    "Migraine",
+    "Medication side effects",
+    "Cannabinoid hyperemesis syndrome",
+    "Gastroparesis",
+    "Cyclic vomiting syndrome",
+    "Addison's disease",
+    "Acute intermittent porphyria",
+    "Superior mesenteric artery syndrome"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of stroke in a young adult",
+   "unicorn": "MELAS",
+   "examples": [
+    "Arterial dissection",
+    "Patent foramen ovale",
+    "Stimulant drugs",
+    "Antiphospholipid syndrome",
+    "Migraine with aura",
+    "Sickle cell disease",
+    "Moyamoya disease",
+    "Fabry disease",
+    "CADASIL",
+    "MELAS"
+   ],
+   "used": false
+  },
+  {
+   "q": "Name a cause of food poisoning",
+   "unicorn": "Botulism",
+   "examples": [
+    "Norovirus",
+    "Campylobacter",
+    "Salmonella",
+    "Staphylococcus aureus toxin",
+    "Bacillus cereus (fried rice)",
+    "Clostridium perfringens",
+    "Listeria",
+    "Scombroid",
+    "Ciguatera",
+    "Botulism"
+   ],
+   "used": false
+  }
+ ],
+ "trivia": [
+  {
+   "q": "Smoking raises the risk of Crohn's disease. What does it do to the risk of ulcerative colitis?",
+   "a": "Lowers it",
+   "wrong": [
+    "Raises it even more",
+    "Has no effect",
+    "Doubles it in women only"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "About how many Australians have coeliac disease?",
+   "a": "1 in 70",
+   "wrong": [
+    "1 in 700",
+    "1 in 7",
+    "1 in 7,000"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "A negative HLA-DQ2/DQ8 gene test does what for coeliac disease?",
+   "a": "Virtually rules it out",
+   "wrong": [
+    "Confirms it",
+    "Means you need a biopsy",
+    "Means it will appear later"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Roughly how many times a day does a person swallow?",
+   "a": "About 600",
+   "wrong": [
+    "About 60",
+    "About 6,000",
+    "About 25"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "What proportion of people with silent gallstones develop symptoms over 10 to 15 years?",
+   "a": "About 15 to 25%",
+   "wrong": [
+    "About 75%",
+    "Almost all",
+    "Under 1%"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Which type of fibre helps irritable bowel syndrome: psyllium or bran?",
+   "a": "Psyllium (soluble fibre)",
+   "wrong": [
+    "Bran (insoluble fibre)",
+    "Both equally",
+    "Neither"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Does avoiding nuts, corn and seeds prevent diverticulitis flares?",
+   "a": "No, there is no good evidence it helps",
+   "wrong": [
+    "Yes, it halves flares",
+    "Only seeds matter",
+    "Only in people over 80"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Which chronic vomiting syndrome is classically relieved by long hot showers?",
+   "a": "Cannabinoid hyperemesis syndrome",
+   "wrong": [
+    "Gastroparesis",
+    "Pyloric stenosis",
+    "Hyperemesis gravidarum"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "In FPIES, which food is a common trigger in Australian babies?",
+   "a": "Rice",
+   "wrong": [
+    "Strawberries",
+    "Honey",
+    "Banana"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Where on the clock face do most anal fissures sit (patient lying on their back)?",
+   "a": "6 o'clock (back midline)",
+   "wrong": [
+    "3 o'clock",
+    "9 o'clock",
+    "12 o'clock (front)"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Craving and chewing ice is called pagophagia. What deficiency is it classically linked to?",
+   "a": "Iron",
+   "wrong": [
+    "Vitamin C",
+    "Zinc",
+    "Vitamin D"
+   ],
+   "topic": "Gut",
+   "used": false
+  },
+  {
+   "q": "Does cooking destroy death cap mushroom toxin?",
+   "a": "No, amatoxin survives cooking",
+   "wrong": [
+    "Yes, boiling destroys it",
+    "Only frying destroys it",
+    "Only freezing destroys it"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "After the first bout of vomiting, death cap poisoning often shows what misleading phase?",
+   "a": "A false recovery while liver damage worsens",
+   "wrong": [
+    "A rash that proves it is harmless",
+    "A fever that signals recovery",
+    "Hiccups"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "What is the recommended first aid for a bluebottle sting in Australia?",
+   "a": "Hot water immersion (about 45 degrees) for 20 minutes",
+   "wrong": [
+    "Vinegar",
+    "Urine",
+    "Ice and alcohol"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "Which jellyfish sting is treated first with vinegar?",
+   "a": "Box jellyfish",
+   "wrong": [
+    "Bluebottle",
+    "Moon jelly",
+    "None"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "The blue-ringed octopus paralyses with which toxin?",
+   "a": "Tetrodotoxin",
+   "wrong": [
+    "Ciguatoxin",
+    "Botulinum toxin",
+    "Amatoxin"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "Which fish poisoning makes cold things feel hot and hot things feel cold?",
+   "a": "Ciguatera",
+   "wrong": [
+    "Scombroid",
+    "Pufferfish poisoning",
+    "Salmonella"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "Why can a pulse oximeter look normal in carbon monoxide poisoning?",
+   "a": "It reads carboxyhaemoglobin as oxygenated haemoglobin",
+   "wrong": [
+    "CO speeds up the heart",
+    "CO turns fingers blue",
+    "CO only affects the lungs"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "Levamisole, which can cause ear purpura and low neutrophils, is a common cutting agent in which drug?",
+   "a": "Cocaine",
+   "wrong": [
+    "Heroin",
+    "Cannabis",
+    "MDMA"
+   ],
+   "topic": "Bites, stings and poisons",
+   "used": false
+  },
+  {
+   "q": "Hoover's sign tests for functional weakness by checking which movement in the 'weak' leg?",
+   "a": "Involuntary hip extension when the other leg lifts",
+   "wrong": [
+    "Knee jerk reflex",
+    "Toe curling when tickled",
+    "Ankle clonus"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Which MRI sign in the pons is a classic clue to multiple system atrophy?",
+   "a": "Hot cross bun sign",
+   "wrong": [
+    "Mickey Mouse sign",
+    "Eye of the tiger sign",
+    "Swallow tail sign"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "What is cataplexy, a key feature of narcolepsy type 1?",
+   "a": "Sudden muscle weakness triggered by emotion, like laughter",
+   "wrong": [
+    "A fear of falling asleep",
+    "Sleepwalking",
+    "Seizures during sleep"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Which 2009 flu vaccine was linked to a rise in narcolepsy in Europe?",
+   "a": "Pandemrix",
+   "wrong": [
+    "Fluvax",
+    "Gardasil",
+    "Shingrix"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Transient global amnesia does what to future stroke risk?",
+   "a": "Does not increase it",
+   "wrong": [
+    "Triples it",
+    "Doubles it",
+    "Makes a stroke likely within a week"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Which of these is a recognised trigger for transient global amnesia?",
+   "a": "A plunge into cold water",
+   "wrong": [
+    "Eating cheese",
+    "Watching TV",
+    "Sneezing"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "In 2022, neurofibromatosis type 2 was renamed what?",
+   "a": "NF2-related schwannomatosis",
+   "wrong": [
+    "Von Recklinghausen disease",
+    "Gorlin syndrome",
+    "Bilateral acoustic syndrome"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "CADASIL is caused by variants in which gene?",
+   "a": "NOTCH3",
+   "wrong": [
+    "BRCA1",
+    "HTT",
+    "APOE"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Vertigo lasting only seconds when rolling in bed most likely suggests what?",
+   "a": "BPPV",
+   "wrong": [
+    "Meniere's disease",
+    "Vestibular neuritis",
+    "Migraine"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "The 2024 Lancet Commission listed how many modifiable risk factors for dementia?",
+   "a": "14",
+   "wrong": [
+    "9",
+    "3",
+    "25"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Which of these is one of the biggest modifiable risk factors for dementia?",
+   "a": "Hearing loss",
+   "wrong": [
+    "Left-handedness",
+    "Short stature",
+    "Blue eyes"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Tic severity in Tourette syndrome usually peaks around what age?",
+   "a": "10 to 12",
+   "wrong": [
+    "2 to 3",
+    "18 to 20",
+    "Over 40"
+   ],
+   "topic": "Neurology",
+   "used": false
+  },
+  {
+   "q": "Pityriasis rosea often starts with a single larger patch called what?",
+   "a": "Herald patch",
+   "wrong": [
+    "Mother spot",
+    "Sentinel blister",
+    "Leader plaque"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "On the back, pityriasis rosea patches line up in what shape?",
+   "a": "Christmas tree",
+   "wrong": [
+    "Bullseye",
+    "Spiral",
+    "Zigzag"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Lichen striatus follows which invisible lines on the skin?",
+   "a": "Blaschko's lines",
+   "wrong": [
+    "Langer's lines",
+    "Dermatomes",
+    "Kraissl's lines"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "What is SDRIFE also nicknamed?",
+   "a": "Baboon syndrome",
+   "wrong": [
+    "Monkey rash",
+    "Zebra syndrome",
+    "Pink panther rash"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Pyoderma gangrenosum worsening after surgery or injury is called what?",
+   "a": "Pathergy",
+   "wrong": [
+    "Koebner's reaction",
+    "Nikolsky's sign",
+    "Darier's sign"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Necrolytic migratory erythema is a tell-tale rash of which tumour?",
+   "a": "Glucagonoma",
+   "wrong": [
+    "Insulinoma",
+    "Gastrinoma",
+    "Phaeochromocytoma"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Periorificial dermatitis typically spares what?",
+   "a": "A thin rim of skin next to the lips",
+   "wrong": [
+    "The chin",
+    "The nose",
+    "The cheeks"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Benzoyl peroxide acne products are notorious for doing what to towels?",
+   "a": "Bleaching them",
+   "wrong": [
+    "Turning them green",
+    "Making them waterproof",
+    "Shrinking them"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "How many scalp hairs a day is it normal to shed?",
+   "a": "About 50 to 100",
+   "wrong": [
+    "About 5",
+    "About 1,000",
+    "None"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "Green nail syndrome is caused by which bacterium?",
+   "a": "Pseudomonas",
+   "wrong": [
+    "Staphylococcus",
+    "Streptococcus",
+    "E. coli"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "A rash appearing after amoxicillin is a classic clue to which infection?",
+   "a": "Glandular fever (EBV)",
+   "wrong": [
+    "Strep throat",
+    "Measles",
+    "Shingles"
+   ],
+   "topic": "Skin deep",
+   "used": false
+  },
+  {
+   "q": "When you lie on your side, which nostril tends to block?",
+   "a": "The lower one",
+   "wrong": [
+    "The upper one",
+    "Both equally",
+    "Neither"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "A patulous Eustachian tube makes you hear your own voice loudly. What usually relieves it?",
+   "a": "Lying down",
+   "wrong": [
+    "Running",
+    "Chewing gum",
+    "Flying"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Which reflex explains a cough triggered by ear wax?",
+   "a": "Arnold's ear-cough reflex",
+   "wrong": [
+    "Moro reflex",
+    "Bezold-Jarisch reflex",
+    "Cushing reflex"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Pulling the cheek sideways to see if nasal breathing improves is called what?",
+   "a": "Cottle's manoeuvre",
+   "wrong": [
+    "Valsalva manoeuvre",
+    "Epley manoeuvre",
+    "Heimlich manoeuvre"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Bilateral vestibular schwannomas are the hallmark of which condition?",
+   "a": "NF2-related schwannomatosis",
+   "wrong": [
+    "Meniere's disease",
+    "Otosclerosis",
+    "Usher syndrome"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Hiccups lasting more than how long should prompt a search for a cause?",
+   "a": "48 hours",
+   "wrong": [
+    "10 minutes",
+    "1 hour",
+    "1 year"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Which kitchen item is a real, published hiccup remedy?",
+   "a": "A teaspoon of dry sugar",
+   "wrong": [
+    "A spoonful of salt",
+    "A raw egg",
+    "A cup of vinegar"
+   ],
+   "topic": "Ear, nose and throat",
+   "used": false
+  },
+  {
+   "q": "Pericarditis pain that spreads to which area is near-specific for the diagnosis?",
+   "a": "The trapezius ridge",
+   "wrong": [
+    "The jaw",
+    "The left arm",
+    "The lower back"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "Which ECG lead often shows PR elevation and ST depression in pericarditis?",
+   "a": "aVR",
+   "wrong": [
+    "V6",
+    "Lead I",
+    "aVL"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "About how many people have heterozygous familial hypercholesterolaemia?",
+   "a": "1 in 250 to 300",
+   "wrong": [
+    "1 in 30",
+    "1 in 30,000",
+    "1 in 3"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "Each LDL particle carries how many ApoB proteins?",
+   "a": "Exactly one",
+   "wrong": [
+    "Two",
+    "None",
+    "About fifty"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "Above what blood pressure does cardiovascular risk start rising steadily?",
+   "a": "115/75",
+   "wrong": [
+    "160/100",
+    "140/90",
+    "180/110"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "High-dose omega-3 supplements have been linked to a higher risk of what?",
+   "a": "Atrial fibrillation",
+   "wrong": [
+    "Hair loss",
+    "Gallstones",
+    "Kidney stones"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "Marfan syndrome life expectancy rose from about 32 years in the early 1970s to about what today?",
+   "a": "About 70 or more",
+   "wrong": [
+    "About 40",
+    "About 100",
+    "Unchanged"
+   ],
+   "topic": "Cardiology",
+   "used": false
+  },
+  {
+   "q": "Faget sign, a high fever with a slow pulse, is classic for which infection?",
+   "a": "Yellow fever",
+   "wrong": [
+    "Malaria",
+    "Dengue",
+    "Influenza"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "How long is a yellow fever vaccination certificate valid?",
+   "a": "For life",
+   "wrong": [
+    "10 years",
+    "1 year",
+    "5 years"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "Which direction of flight usually causes worse jet lag?",
+   "a": "Eastward",
+   "wrong": [
+    "Westward",
+    "North-south",
+    "They are identical"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "Does physical fitness protect against altitude sickness?",
+   "a": "No",
+   "wrong": [
+    "Yes, completely",
+    "Only for marathon runners",
+    "Only above 6,000 m"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "Pityriasis rosea is linked to reactivation of which viruses?",
+   "a": "HHV-6 and HHV-7",
+   "wrong": [
+    "HPV",
+    "Hepatitis B",
+    "HIV"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "How many colds a year can a healthy young child catch?",
+   "a": "Eight or more",
+   "wrong": [
+    "None",
+    "One",
+    "Exactly two"
+   ],
+   "topic": "Infectious diseases",
+   "used": false
+  },
+  {
+   "q": "How many days of fever are part of the classic definition of Kawasaki disease?",
+   "a": "5",
+   "wrong": [
+    "1",
+    "14",
+    "30"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "Without treatment, about what proportion of children with Kawasaki disease develop coronary aneurysms?",
+   "a": "About 25%",
+   "wrong": [
+    "About 1%",
+    "About 90%",
+    "None"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "What late sign appears on the fingertips in Kawasaki disease?",
+   "a": "Peeling skin",
+   "wrong": [
+    "Clubbing",
+    "Blue nails",
+    "Warts"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "In cyclic vomiting syndrome, children's attacks often begin at what time?",
+   "a": "Early morning",
+   "wrong": [
+    "Midday",
+    "Straight after dinner",
+    "Only on weekends"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "Some itchy kids with hay fever make a clicking noise by doing what?",
+   "a": "Scratching their palate with their tongue",
+   "wrong": [
+    "Cracking their knuckles",
+    "Grinding their teeth",
+    "Tapping their ears"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "Prune belly syndrome mostly affects which group?",
+   "a": "Boys",
+   "wrong": [
+    "Girls",
+    "Twins only",
+    "Adults"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "A white pupil in a child's photo (leukocoria) needs what?",
+   "a": "Urgent eye review",
+   "wrong": [
+    "No action",
+    "Glasses",
+    "Eye drops from the chemist"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "Childhood migraine is often linked with which of these?",
+   "a": "Motion sickness",
+   "wrong": [
+    "Left-handedness",
+    "Freckles",
+    "Flat feet"
+   ],
+   "topic": "Babies and kids",
+   "used": false
+  },
+  {
+   "q": "About how many Australians live with a rare disease?",
+   "a": "1 in 12",
+   "wrong": [
+    "1 in 1,000",
+    "1 in 2",
+    "1 in 100,000"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "Which inheritance pattern do LHON and MELAS share?",
+   "a": "Maternal (mitochondrial)",
+   "wrong": [
+    "Y-linked",
+    "Autosomal dominant only",
+    "Paternal only"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "Ashkenazi Jewish people carry a BRCA variant at about what rate?",
+   "a": "1 in 40",
+   "wrong": [
+    "1 in 4",
+    "1 in 4,000",
+    "1 in 400,000"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "About how many people carry Lynch syndrome?",
+   "a": "About 1 in 300",
+   "wrong": [
+    "About 1 in 30",
+    "About 1 in 30,000",
+    "About 1 in 3"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "In hereditary angioedema, which blood test is usually low, even between attacks?",
+   "a": "C4",
+   "wrong": [
+    "Tryptase",
+    "IgE",
+    "CRP"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "Why don't antihistamines help the swelling of hereditary angioedema?",
+   "a": "It is driven by bradykinin, not histamine",
+   "wrong": [
+    "It is a virus",
+    "It is caused by antihistamines",
+    "It is purely psychological"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "The anti-Scl-70 antibody is linked to which disease?",
+   "a": "Diffuse systemic sclerosis",
+   "wrong": [
+    "Lupus",
+    "Coeliac disease",
+    "Myasthenia gravis"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "Carcinoid tumours can divert so much tryptophan to serotonin that patients develop which deficiency?",
+   "a": "Pellagra (niacin)",
+   "wrong": [
+    "Scurvy (vitamin C)",
+    "Rickets (vitamin D)",
+    "Beriberi (thiamine)"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "Duffy-null associated neutrophil count is most common in people of which ancestry?",
+   "a": "African and Middle Eastern",
+   "wrong": [
+    "Scandinavian",
+    "East Asian",
+    "Pacific Islander"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "What does the 'C' stand for in CREST syndrome?",
+   "a": "Calcinosis",
+   "wrong": [
+    "Cataract",
+    "Cirrhosis",
+    "Cyanosis"
+   ],
+   "topic": "Zebras",
+   "used": false
+  },
+  {
+   "q": "From what date did Australia ban engineered stone benchtops?",
+   "a": "1 July 2024",
+   "wrong": [
+    "1 January 2020",
+    "1 July 2030",
+    "It hasn't"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "From what age can Australians start free bowel screening kits?",
+   "a": "45",
+   "wrong": [
+    "60",
+    "30",
+    "70"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "Australia's National Lung Cancer Screening Program started in which year?",
+   "a": "2025",
+   "wrong": [
+    "1995",
+    "2010",
+    "2030"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "From mid-2027, Australian vitamin B6 products with 50 to 200 mg per daily dose become what?",
+   "a": "Pharmacist-only",
+   "wrong": [
+    "Banned",
+    "Supermarket-only",
+    "Free on the PBS"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "In the Australian D-Health trial, monthly high-dose vitamin D did what to death rates?",
+   "a": "Did not lower them",
+   "wrong": [
+    "Halved them",
+    "Doubled them",
+    "Wiped out cancer"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "Disc bulges show up on MRI in up to about what share of people with NO back pain?",
+   "a": "Two-thirds",
+   "wrong": [
+    "Almost none",
+    "1 in 100",
+    "All of them"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "A 400 mL bottle of orange juice has roughly how much sugar?",
+   "a": "About 34 g",
+   "wrong": [
+    "About 3 g",
+    "About 100 g",
+    "None, it's natural"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "WHO's ideal limit for free sugars is about how many grams a day for an adult?",
+   "a": "About 25 g",
+   "wrong": [
+    "About 250 g",
+    "About 5 g",
+    "There is no limit"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "Athletes who kept playing after a concussion took about how long to recover, compared with 22 days if pulled off straight away?",
+   "a": "About 44 days",
+   "wrong": [
+    "About 22 days",
+    "About 2 days",
+    "About 1 year"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "In one lab study, people slept about how much less near a full moon?",
+   "a": "About 20 minutes",
+   "wrong": [
+    "About 3 hours",
+    "None at all",
+    "About 2 minutes"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "Roughly how big is a normal adult prostate?",
+   "a": "Walnut",
+   "wrong": [
+    "Orange",
+    "Grapefruit",
+    "Pea"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  },
+  {
+   "q": "Drugs like finasteride lower PSA by roughly how much?",
+   "a": "About half",
+   "wrong": [
+    "Not at all",
+    "They double it",
+    "About 99%"
+   ],
+   "topic": "The body by numbers",
+   "used": false
+  }
+ ]
+}
