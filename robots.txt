@@ -16,5 +16,13 @@ Disallow: /warts/
 Disallow: /boils/
 Disallow: /haemorrhoids/
 Disallow: /anal-fissure/
+Disallow: /hip-pain/
+Disallow: /pms/
+Disallow: /sleep/
+Disallow: /jet-lag/
+Disallow: /endometriosis/
+Disallow: /diverticulitis/
+Disallow: /marine-stings/
+Disallow: /blood-pressure/
 
 Sitemap: https://maladywise.com/sitemap.xml
