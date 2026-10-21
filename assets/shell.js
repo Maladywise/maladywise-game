@@ -177,11 +177,11 @@
 
   // ---------- native share button next to every "Copy result" ----------
   function addShare(root) {
-    if (!navigator.share) return;
     Array.prototype.forEach.call((root || document).querySelectorAll('button[id$="-copy"]:not([data-mws])'), function (b) {
       b.setAttribute("data-mws", "1");
+      if (!b.parentNode.classList.contains("mw-sharerow")) { var row = document.createElement("div"); row.className = "mw-sharerow"; b.parentNode.insertBefore(row, b); row.appendChild(b); }
       var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
-      if (!pre) return;
+      if (!pre || !navigator.share) return;
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className.replace(/\bsolid\b/, "").trim() + " mw-share"; sb.textContent = "Share";
       sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*maladywise\.com\s*$/, ""), url: "https://maladywise.com/" + (location.pathname.split("/")[1] ? location.pathname.split("/")[1] + "/" : "") }).catch(function () {}); };
       b.parentNode.insertBefore(sb, b.nextSibling);
@@ -421,8 +421,8 @@
       var tag = g.live ? "a" : "div";
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
-        '<div class="cbody">' + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") +
-        '<h2 class="name">' + g.name + "</h2>" + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + '<p class="tag">' + g.tagline + "</p>" +
+        '<div class="cbody">' +
+        '<h2 class="name">' + g.name + "</h2>" + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + (g.weekly ? '<span class="pill wk">Weekly</span>' : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + "</div></" + tag + ">";
     }
     function homeTop() {
