@@ -428,3 +428,9 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mw-sharerow>button{margin:0!important}
 .cb-dx .cb-cap{margin-top:34px}
 .card .pill.einc{margin:4px 0 6px;font-size:9.5px;padding:3px 8px}
+.doc #fs-q{width:100%;box-sizing:border-box;font:500 16px Poppins,system-ui,sans-serif;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);margin:6px 0 10px}
+.doc ul.fslist{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.doc ul.fslist li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 14px;line-height:1.4}
+.doc ul.fslist li a{text-decoration:none;color:var(--ink)}
+.doc ul.fslist li span{display:block;font-size:13.5px;color:var(--muted)}
+@media (min-width:700px){.doc ul.fslist{grid-template-columns:1fr 1fr}}
