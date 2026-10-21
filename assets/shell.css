@@ -434,3 +434,4 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .doc ul.fslist li a{text-decoration:none;color:var(--ink)}
 .doc ul.fslist li span{display:block;font-size:13.5px;color:var(--muted)}
 @media (min-width:700px){.doc ul.fslist{grid-template-columns:1fr 1fr}}
+.card .pill.wk{margin:4px 0 8px}
