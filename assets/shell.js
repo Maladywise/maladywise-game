@@ -405,6 +405,41 @@
       var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
       return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div></div>";
     }
+    // Health days banner (data/health-days.json). Days and weeks only; months are background themes.
+    var HD = null;
+    function healthDay() {
+      if (HD === null) {
+        HD = false;
+        fetch("/data/health-days.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (j) { HD = (j && j.days) || []; healthDay(); }).catch(function () {});
+        return;
+      }
+      if (!HD || !HD.length) return;
+      var yr = today.slice(0, 4);
+      var on = HD.filter(function (x) {
+        var d = x.dates && x.dates[yr]; if (!d || x.kind === "month") return false;
+        return d.end ? d.start <= today && today <= d.end : d.start === today;
+      });
+      if (!on.length) return;
+      var normal = on.filter(function (x) { return x.tags.indexOf("sensitive") < 0; })
+        .sort(function (a, b) { return a.priority - b.priority; });
+      var sens = on.filter(function (x) { return x.tags.indexOf("sensitive") >= 0; });
+      var html = "";
+      if (normal.length) {
+        var lead = normal[0], first = lead.dates[yr].start === today;
+        var themed = lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb);
+        html += '<section class="hday"><span class="hday-k">' + (lead.kind === "week" ? "This week" : "Today") + '</span>' +
+          "<h2>" + esc2(lead.name) + "</h2><p>" + esc2(lead.blurb) + (themed ? " <b>Today’s puzzles are on the theme.</b>" : "") + "</p>" +
+          (normal.length > 1 ? '<p class="hday-also">Also: ' + normal.slice(1).map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + esc2(x.name) + "</a>" : esc2(x.name); }).join(", ") + "</p>" : "") +
+          (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + "</section>";
+      }
+      sens.forEach(function (x) {
+        html += '<section class="hday quiet"><p><b>' + esc2(x.name) + ".</b> " + esc2(x.blurb) + (x.link ? ' <a href="' + esc2(x.link) + '" target="_blank" rel="noopener">More</a>' : "") + "</p></section>";
+      });
+      var old = main.querySelectorAll(".hday"); Array.prototype.forEach.call(old, function (n) { n.remove(); });
+      var mast = document.getElementById("puzzles");
+      if (mast) mast.insertAdjacentHTML("afterend", html);
+    }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">Think like a doctor.</p><h1>Today&rsquo;s medical puzzles</h1>' +
         '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p></div>" +
@@ -413,7 +448,8 @@
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
-    draw(); window.MW_onTheme = draw;
+    draw(); window.MW_onTheme = function () { draw(); healthDay(); };
+    healthDay();
     if (!window.MW_tick) window.MW_tick = setInterval(function () {
       var c = document.getElementById("mw-count"); if (!c) return;
       if (sydToday() !== today) { location.reload(); return; }

@@ -1,0 +1,1851 @@
+{
+ "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling.",
+ "updated": "2026-10-21",
+ "days": [
+  {
+   "id": "ntd",
+   "name": "World Neglected Tropical Diseases Day",
+   "kind": "day",
+   "rule": "01-30",
+   "dates": {
+    "2026": {
+     "start": "2026-01-30"
+    },
+    "2027": {
+     "start": "2027-01-30"
+    },
+    "2028": {
+     "start": "2028-01-30"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-ntd-day",
+   "blurb": "A billion-plus people live with diseases most doctors only meet in exams. Today they get the spotlight.",
+   "puzzle_theme": "Neglected tropical diseases: leprosy, schisto, trachoma, dengue, leishmaniasis"
+  },
+  {
+   "id": "cancer",
+   "name": "World Cancer Day",
+   "kind": "day",
+   "rule": "02-04",
+   "dates": {
+    "2026": {
+     "start": "2026-02-04"
+    },
+    "2027": {
+     "start": "2027-02-04"
+    },
+    "2028": {
+     "start": "2028-02-04"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldcancerday.org",
+   "blurb": "Prevention, screening and catching it early. Today's puzzles are all about cancer.",
+   "puzzle_theme": "Oncology: tumour types, screening, markers, staging"
+  },
+  {
+   "id": "epilepsy",
+   "name": "International Epilepsy Day",
+   "kind": "day",
+   "rule": "nth:2:0:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-09"
+    },
+    "2027": {
+     "start": "2027-02-08"
+    },
+    "2028": {
+     "start": "2028-02-14"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.epilepsy.org",
+   "blurb": "Seizures are more than shaking. Brush up on epilepsy today.",
+   "puzzle_theme": "Epilepsy and seizures: types, EEG, triggers, history of neurology"
+  },
+  {
+   "id": "childcancer",
+   "name": "International Childhood Cancer Day",
+   "kind": "day",
+   "rule": "02-15",
+   "dates": {
+    "2026": {
+     "start": "2026-02-15"
+    },
+    "2027": {
+     "start": "2027-02-15"
+    },
+    "2028": {
+     "start": "2028-02-15"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.siop-online.org",
+   "blurb": "Children's cancers are rare, and survival has climbed hugely. Today is for them.",
+   "puzzle_theme": "Paediatric oncology: leukaemia, neuroblastoma, Wilms, retinoblastoma"
+  },
+  {
+   "id": "encephalitis",
+   "name": "World Encephalitis Day",
+   "kind": "day",
+   "rule": "02-22",
+   "dates": {
+    "2026": {
+     "start": "2026-02-22"
+    },
+    "2027": {
+     "start": "2027-02-22"
+    },
+    "2028": {
+     "start": "2028-02-22"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.encephalitis.info",
+   "blurb": "Brain inflammation is rare, serious and often missed. Know the signs.",
+   "puzzle_theme": "Encephalitis: viral, autoimmune (anti-NMDA), meningitis vs encephalitis"
+  },
+  {
+   "id": "rare",
+   "name": "Rare Disease Day",
+   "kind": "day",
+   "rule": "lastday:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-29"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.rarediseaseday.org",
+   "blurb": "When you hear hoofbeats, sometimes it IS a zebra. Today is all zebras.",
+   "puzzle_theme": "Rare diseases and zebras: eponymous syndromes, genetic conditions"
+  },
+  {
+   "id": "hearing",
+   "name": "World Hearing Day",
+   "kind": "day",
+   "rule": "03-03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-03"
+    },
+    "2027": {
+     "start": "2027-03-03"
+    },
+    "2028": {
+     "start": "2028-03-03"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-hearing-day",
+   "blurb": "Turn it down a notch. Today is about ears and hearing.",
+   "puzzle_theme": "ENT and hearing: ear anatomy, hearing loss, tinnitus, audiology"
+  },
+  {
+   "id": "obesity",
+   "name": "World Obesity Day",
+   "kind": "day",
+   "rule": "03-04",
+   "dates": {
+    "2026": {
+     "start": "2026-03-04"
+    },
+    "2027": {
+     "start": "2027-03-04"
+    },
+    "2028": {
+     "start": "2028-03-04"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldobesityday.org",
+   "blurb": "Obesity is a chronic disease, not a character flaw. Today's puzzles take it seriously.",
+   "puzzle_theme": "Obesity medicine: metabolism, hormones (leptin, GLP-1), bariatrics. No body-shaming."
+  },
+  {
+   "id": "kidney",
+   "name": "World Kidney Day",
+   "kind": "day",
+   "rule": "nth:2:3:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-12"
+    },
+    "2027": {
+     "start": "2027-03-11"
+    },
+    "2028": {
+     "start": "2028-03-09"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldkidneyday.org",
+   "blurb": "Two bean-shaped organs filtering about 180 litres a day. Show them some love.",
+   "puzzle_theme": "Nephrology: nephron, eGFR, dialysis, kidney stones, transplant"
+  },
+  {
+   "id": "sleep",
+   "name": "World Sleep Day",
+   "kind": "day",
+   "rule": "sleep",
+   "dates": {
+    "2026": {
+     "start": "2026-03-13"
+    },
+    "2027": {
+     "start": "2027-03-19"
+    },
+    "2028": {
+     "start": "2028-03-17"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://worldsleepday.org",
+   "blurb": "Sleep is medicine. Today's puzzles are best done well-rested.",
+   "puzzle_theme": "Sleep medicine: circadian rhythm, sleep apnoea, narcolepsy, melatonin"
+  },
+  {
+   "id": "oral",
+   "name": "World Oral Health Day",
+   "kind": "day",
+   "rule": "03-20",
+   "dates": {
+    "2026": {
+     "start": "2026-03-20"
+    },
+    "2027": {
+     "start": "2027-03-20"
+    },
+    "2028": {
+     "start": "2028-03-20"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldoralhealthday.org",
+   "blurb": "Your mouth is part of your body too. Today is for teeth and gums.",
+   "puzzle_theme": "Dentistry and oral health: teeth, gums, salivary glands, oral signs of disease"
+  },
+  {
+   "id": "downs",
+   "name": "World Down Syndrome Day",
+   "kind": "day",
+   "rule": "03-21",
+   "dates": {
+    "2026": {
+     "start": "2026-03-21"
+    },
+    "2027": {
+     "start": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-21"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worlddownsyndromeday.org",
+   "blurb": "21/3 for three copies of chromosome 21. Celebrate, include, learn.",
+   "puzzle_theme": "Genetics and trisomies: chromosomes, karyotypes, inclusion. Respectful tone."
+  },
+  {
+   "id": "optometry",
+   "name": "World Optometry Day",
+   "kind": "day",
+   "rule": "03-23",
+   "dates": {
+    "2026": {
+     "start": "2026-03-23"
+    },
+    "2027": {
+     "start": "2027-03-23"
+    },
+    "2028": {
+     "start": "2028-03-23"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://worldcouncilofoptometry.info",
+   "blurb": "Eyes front. Today celebrates optometrists.",
+   "puzzle_theme": "Optometry: refraction, myopia, lenses, eye anatomy"
+  },
+  {
+   "id": "tb",
+   "name": "World TB Day",
+   "kind": "day",
+   "rule": "03-24",
+   "dates": {
+    "2026": {
+     "start": "2026-03-24"
+    },
+    "2027": {
+     "start": "2027-03-24"
+    },
+    "2028": {
+     "start": "2028-03-24"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-tb-day",
+   "blurb": "TB is one of the world's deadliest infectious diseases, and it's curable. Learn the history.",
+   "puzzle_theme": "Tuberculosis: Koch, Mantoux, BCG, consumption in history, treatment"
+  },
+  {
+   "id": "bipolar",
+   "name": "World Bipolar Day",
+   "kind": "day",
+   "rule": "03-30",
+   "dates": {
+    "2026": {
+     "start": "2026-03-30"
+    },
+    "2027": {
+     "start": "2027-03-30"
+    },
+    "2028": {
+     "start": "2028-03-30"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.isbd.org",
+   "blurb": "Van Gogh's birthday. Today is about understanding bipolar disorder.",
+   "puzzle_theme": "Mood disorders, gently: history, lithium, neuroscience. No jokes about patients."
+  },
+  {
+   "id": "autism",
+   "name": "World Autism Awareness Day",
+   "kind": "day",
+   "rule": "04-02",
+   "dates": {
+    "2026": {
+     "start": "2026-04-02"
+    },
+    "2027": {
+     "start": "2027-04-02"
+    },
+    "2028": {
+     "start": "2028-04-02"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/autism-day",
+   "blurb": "Neurodiversity day. Different brains, not broken ones.",
+   "puzzle_theme": "Neurodiversity: autism history, sensory processing, strengths. Respectful."
+  },
+  {
+   "id": "health",
+   "name": "World Health Day",
+   "kind": "day",
+   "rule": "04-07",
+   "dates": {
+    "2026": {
+     "start": "2026-04-07"
+    },
+    "2027": {
+     "start": "2027-04-07"
+    },
+    "2028": {
+     "start": "2028-04-07"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-health-day",
+   "blurb": "The WHO's birthday. Today's puzzles cover the whole of global health.",
+   "puzzle_theme": "Global health: WHO history, public health milestones, epidemics, vaccines"
+  },
+  {
+   "id": "parkinsons",
+   "name": "World Parkinson's Day",
+   "kind": "day",
+   "rule": "04-11",
+   "dates": {
+    "2026": {
+     "start": "2026-04-11"
+    },
+    "2027": {
+     "start": "2027-04-11"
+    },
+    "2028": {
+     "start": "2028-04-11"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.epda.eu.com",
+   "blurb": "James Parkinson's birthday. Today is about the shaking palsy.",
+   "puzzle_theme": "Movement disorders: dopamine, substantia nigra, tremor, levodopa history"
+  },
+  {
+   "id": "chagas",
+   "name": "World Chagas Disease Day",
+   "kind": "day",
+   "rule": "04-14",
+   "dates": {
+    "2026": {
+     "start": "2026-04-14"
+    },
+    "2027": {
+     "start": "2027-04-14"
+    },
+    "2028": {
+     "start": "2028-04-14"
+    }
+   },
+   "tags": [
+    "who",
+    "zebra"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-chagas-disease-day",
+   "blurb": "The kissing bug's not-so-romantic gift. A classic zebra.",
+   "puzzle_theme": "Parasitology: Chagas, trypanosomes, vectors, tropical cardiomyopathy"
+  },
+  {
+   "id": "haemophilia",
+   "name": "World Haemophilia Day",
+   "kind": "day",
+   "rule": "04-17",
+   "dates": {
+    "2026": {
+     "start": "2026-04-17"
+    },
+    "2027": {
+     "start": "2027-04-17"
+    },
+    "2028": {
+     "start": "2028-04-17"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://wfh.org",
+   "blurb": "Royal blood, literally. Today is about bleeding disorders.",
+   "puzzle_theme": "Haematology: clotting cascade, factor VIII/IX, von Willebrand, royal history"
+  },
+  {
+   "id": "immunization",
+   "name": "World Immunization Week",
+   "kind": "week",
+   "rule": "range:04-24:04-30",
+   "dates": {
+    "2026": {
+     "start": "2026-04-24",
+     "end": "2026-04-30"
+    },
+    "2027": {
+     "start": "2027-04-24",
+     "end": "2027-04-30"
+    },
+    "2028": {
+     "start": "2028-04-24",
+     "end": "2028-04-30"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-immunization-week",
+   "blurb": "Vaccines: the most successful prevention in history. Celebrate them this week.",
+   "puzzle_theme": "Vaccines and immunology: Jenner, smallpox, herd immunity, antibodies"
+  },
+  {
+   "id": "malaria",
+   "name": "World Malaria Day",
+   "kind": "day",
+   "rule": "04-25",
+   "dates": {
+    "2026": {
+     "start": "2026-04-25"
+    },
+    "2027": {
+     "start": "2027-04-25"
+    },
+    "2028": {
+     "start": "2028-04-25"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-malaria-day",
+   "blurb": "A mosquito-borne parasite that's shaped human history. Today we take it on.",
+   "puzzle_theme": "Malaria: Plasmodium, Anopheles, quinine, sickle cell link, Ross"
+  },
+  {
+   "id": "eds",
+   "name": "Ehlers-Danlos Syndromes Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.ehlers-danlos.com",
+   "blurb": "May is EDS month. Bendy, often missed, and the original medical zebra.",
+   "puzzle_theme": "Connective tissue and zebras: collagen, hypermobility, dysautonomia"
+  },
+  {
+   "id": "asthma",
+   "name": "World Asthma Day",
+   "kind": "day",
+   "rule": "nth:1:1:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-05"
+    },
+    "2027": {
+     "start": "2027-05-04"
+    },
+    "2028": {
+     "start": "2028-05-02"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://ginasthma.org",
+   "blurb": "Breathe in, breathe out. Today is about airways.",
+   "puzzle_theme": "Respiratory: asthma, bronchi, spirometry, inhalers history"
+  },
+  {
+   "id": "midwife",
+   "name": "International Day of the Midwife",
+   "kind": "day",
+   "rule": "05-05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-05"
+    },
+    "2027": {
+     "start": "2027-05-05"
+    },
+    "2028": {
+     "start": "2028-05-05"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://internationalmidwives.org",
+   "blurb": "Midwives have been catching babies since forever. Today is theirs.",
+   "puzzle_theme": "Midwifery and obstetrics: pregnancy, labour, newborn care"
+  },
+  {
+   "id": "handhygiene",
+   "name": "World Hand Hygiene Day",
+   "kind": "day",
+   "rule": "05-05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-05"
+    },
+    "2027": {
+     "start": "2027-05-05"
+    },
+    "2028": {
+     "start": "2028-05-05"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-hand-hygiene-day",
+   "blurb": "Semmelweis was right. Wash your hands.",
+   "puzzle_theme": "Infection prevention: Semmelweis, germ theory, hand hygiene"
+  },
+  {
+   "id": "thalassaemia",
+   "name": "World Thalassaemia Day",
+   "kind": "day",
+   "rule": "05-08",
+   "dates": {
+    "2026": {
+     "start": "2026-05-08"
+    },
+    "2027": {
+     "start": "2027-05-08"
+    },
+    "2028": {
+     "start": "2028-05-08"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://thalassaemia.org.cy",
+   "blurb": "Today is about haemoglobin gone slightly wrong.",
+   "puzzle_theme": "Haemoglobinopathies: thalassaemia, globin genes, transfusion"
+  },
+  {
+   "id": "lupus",
+   "name": "World Lupus Day",
+   "kind": "day",
+   "rule": "05-10",
+   "dates": {
+    "2026": {
+     "start": "2026-05-10"
+    },
+    "2027": {
+     "start": "2027-05-10"
+    },
+    "2028": {
+     "start": "2028-05-10"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.worldlupusday.org",
+   "blurb": "It's not always lupus... but today it is.",
+   "puzzle_theme": "Autoimmunity: lupus, ANA, butterfly rash, mimics"
+  },
+  {
+   "id": "nurses",
+   "name": "International Nurses Day",
+   "kind": "day",
+   "rule": "05-12",
+   "dates": {
+    "2026": {
+     "start": "2026-05-12"
+    },
+    "2027": {
+     "start": "2027-05-12"
+    },
+    "2028": {
+     "start": "2028-05-12"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.icn.ch",
+   "blurb": "Florence Nightingale's birthday. Every puzzle today is for nurses.",
+   "puzzle_theme": "Nursing: Nightingale, observations, wards, nursing history and skills"
+  },
+  {
+   "id": "hypertension",
+   "name": "World Hypertension Day",
+   "kind": "day",
+   "rule": "05-17",
+   "dates": {
+    "2026": {
+     "start": "2026-05-17"
+    },
+    "2027": {
+     "start": "2027-05-17"
+    },
+    "2028": {
+     "start": "2028-05-17"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.whleague.org",
+   "blurb": "The silent killer. Know your numbers.",
+   "puzzle_theme": "Hypertension and BP: Korotkoff, sphygmomanometers, cardiovascular risk"
+  },
+  {
+   "id": "familydoctor",
+   "name": "World Family Doctor Day",
+   "kind": "day",
+   "rule": "05-19",
+   "dates": {
+    "2026": {
+     "start": "2026-05-19"
+    },
+    "2027": {
+     "start": "2027-05-19"
+    },
+    "2028": {
+     "start": "2028-05-19"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.globalfamilydoctor.com",
+   "blurb": "Here's to GPs, the first port of call. Today's puzzles are for general practice.",
+   "puzzle_theme": "General practice: common presentations, history-taking, preventive care"
+  },
+  {
+   "id": "emergency",
+   "name": "World Emergency Medicine Day",
+   "kind": "day",
+   "rule": "05-27",
+   "dates": {
+    "2026": {
+     "start": "2026-05-27"
+    },
+    "2027": {
+     "start": "2027-05-27"
+    },
+    "2028": {
+     "start": "2028-05-27"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.ifem.cc",
+   "blurb": "Today is for the people running towards the chaos.",
+   "puzzle_theme": "Emergency medicine: triage, resus, ABCDE, trauma, toxicology"
+  },
+  {
+   "id": "ms",
+   "name": "World MS Day",
+   "kind": "day",
+   "rule": "05-30",
+   "dates": {
+    "2026": {
+     "start": "2026-05-30"
+    },
+    "2027": {
+     "start": "2027-05-30"
+    },
+    "2028": {
+     "start": "2028-05-30"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://worldmsday.org",
+   "blurb": "Multiple sclerosis: myelin under attack. Learn about it today.",
+   "puzzle_theme": "Neurology: MS, myelin, demyelination, MRI, Charcot"
+  },
+  {
+   "id": "tobacco",
+   "name": "World No Tobacco Day",
+   "kind": "day",
+   "rule": "05-31",
+   "dates": {
+    "2026": {
+     "start": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-31"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-no-tobacco-day",
+   "blurb": "Today is all about the lungs, and what tobacco does to them.",
+   "puzzle_theme": "Tobacco harm: lungs, COPD, cancers, nicotine, quitting"
+  },
+  {
+   "id": "eatingdisorders",
+   "name": "World Eating Disorders Action Day",
+   "kind": "day",
+   "rule": "06-02",
+   "dates": {
+    "2026": {
+     "start": "2026-06-02"
+    },
+    "2027": {
+     "start": "2027-06-02"
+    },
+    "2028": {
+     "start": "2028-06-02"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.worldeatingdisordersday.org",
+   "blurb": "Today is World Eating Disorders Action Day. Support is available: Butterfly Foundation 1800 33 4673.",
+   "puzzle_theme": null
+  },
+  {
+   "id": "foodsafety",
+   "name": "World Food Safety Day",
+   "kind": "day",
+   "rule": "06-07",
+   "dates": {
+    "2026": {
+     "start": "2026-06-07"
+    },
+    "2027": {
+     "start": "2027-06-07"
+    },
+    "2028": {
+     "start": "2028-06-07"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-food-safety-day",
+   "blurb": "Today's puzzles are about what's lurking in your lunch.",
+   "puzzle_theme": "Foodborne illness: Salmonella, Listeria, botulism, gastro"
+  },
+  {
+   "id": "blood",
+   "name": "World Blood Donor Day",
+   "kind": "day",
+   "rule": "06-14",
+   "dates": {
+    "2026": {
+     "start": "2026-06-14"
+    },
+    "2027": {
+     "start": "2027-06-14"
+    },
+    "2028": {
+     "start": "2028-06-14"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-blood-donor-day",
+   "blurb": "Karl Landsteiner's birthday. Blood groups all day.",
+   "puzzle_theme": "Transfusion: blood groups, Landsteiner, donation, plasma"
+  },
+  {
+   "id": "elderabuse",
+   "name": "World Elder Abuse Awareness Day",
+   "kind": "day",
+   "rule": "06-15",
+   "dates": {
+    "2026": {
+     "start": "2026-06-15"
+    },
+    "2027": {
+     "start": "2027-06-15"
+    },
+    "2028": {
+     "start": "2028-06-15"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.un.org/en/observances/elder-abuse-awareness-day",
+   "blurb": "Today is World Elder Abuse Awareness Day.",
+   "puzzle_theme": null
+  },
+  {
+   "id": "sicklecell",
+   "name": "World Sickle Cell Day",
+   "kind": "day",
+   "rule": "06-19",
+   "dates": {
+    "2026": {
+     "start": "2026-06-19"
+    },
+    "2027": {
+     "start": "2027-06-19"
+    },
+    "2028": {
+     "start": "2028-06-19"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/sickle-cell-day",
+   "blurb": "One amino acid swap, huge consequences. Today is about sickle cell.",
+   "puzzle_theme": "Sickle cell disease: HbS, crises, malaria protection, genetics"
+  },
+  {
+   "id": "vitiligo",
+   "name": "World Vitiligo Day",
+   "kind": "day",
+   "rule": "06-25",
+   "dates": {
+    "2026": {
+     "start": "2026-06-25"
+    },
+    "2027": {
+     "start": "2027-06-25"
+    },
+    "2028": {
+     "start": "2028-06-25"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://vrfoundation.org",
+   "blurb": "Skin with a story. Today is about vitiligo and pigment.",
+   "puzzle_theme": "Dermatology: melanocytes, pigment disorders, autoimmune skin"
+  },
+  {
+   "id": "paramedics",
+   "name": "International Paramedics Day",
+   "kind": "day",
+   "rule": "07-08",
+   "dates": {
+    "2026": {
+     "start": "2026-07-08"
+    },
+    "2027": {
+     "start": "2027-07-08"
+    },
+    "2028": {
+     "start": "2028-07-08"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.paramedicsday.com",
+   "blurb": "Lights, sirens, respect. Today is for paramedics.",
+   "puzzle_theme": "Prehospital care: trauma, CPR, defibrillation, ambulance history"
+  },
+  {
+   "id": "brain",
+   "name": "World Brain Day",
+   "kind": "day",
+   "rule": "07-22",
+   "dates": {
+    "2026": {
+     "start": "2026-07-22"
+    },
+    "2027": {
+     "start": "2027-07-22"
+    },
+    "2028": {
+     "start": "2028-07-22"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://wfneurology.org",
+   "blurb": "Today's puzzles are about the organ doing the puzzles.",
+   "puzzle_theme": "Neuroanatomy: lobes, cranial nerves, neurons, famous brain cases"
+  },
+  {
+   "id": "drowning",
+   "name": "World Drowning Prevention Day",
+   "kind": "day",
+   "rule": "07-25",
+   "dates": {
+    "2026": {
+     "start": "2026-07-25"
+    },
+    "2027": {
+     "start": "2027-07-25"
+    },
+    "2028": {
+     "start": "2028-07-25"
+    }
+   },
+   "tags": [
+    "who",
+    "gentle"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-drowning-prevention-day",
+   "blurb": "Drowning is preventable. Supervise, swim, learn CPR.",
+   "puzzle_theme": "Water safety and resuscitation: CPR, hypothermia, physiology. No jokes about drowning."
+  },
+  {
+   "id": "hepatitis",
+   "name": "World Hepatitis Day",
+   "kind": "day",
+   "rule": "07-28",
+   "dates": {
+    "2026": {
+     "start": "2026-07-28"
+    },
+    "2027": {
+     "start": "2027-07-28"
+    },
+    "2028": {
+     "start": "2028-07-28"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-hepatitis-day",
+   "blurb": "Baruch Blumberg's birthday. Hep A to E today.",
+   "puzzle_theme": "Liver and hepatitis: viruses A–E, LFTs, cirrhosis, Blumberg"
+  },
+  {
+   "id": "breastfeeding",
+   "name": "World Breastfeeding Week",
+   "kind": "week",
+   "rule": "range:08-01:08-07",
+   "dates": {
+    "2026": {
+     "start": "2026-08-01",
+     "end": "2026-08-07"
+    },
+    "2027": {
+     "start": "2027-08-01",
+     "end": "2027-08-07"
+    },
+    "2028": {
+     "start": "2028-08-01",
+     "end": "2028-08-07"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://worldbreastfeedingweek.org",
+   "blurb": "This week is about infant feeding and the science of milk.",
+   "puzzle_theme": "Lactation and infant nutrition: milk science, newborns"
+  },
+  {
+   "id": "mosquito",
+   "name": "World Mosquito Day",
+   "kind": "day",
+   "rule": "08-20",
+   "dates": {
+    "2026": {
+     "start": "2026-08-20"
+    },
+    "2027": {
+     "start": "2027-08-20"
+    },
+    "2028": {
+     "start": "2028-08-20"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.lshtm.ac.uk",
+   "blurb": "Ross proved mosquitoes carry malaria on this day in 1897. The deadliest animal, all day.",
+   "puzzle_theme": "Vector-borne disease: mosquitoes, dengue, Zika, yellow fever, malaria"
+  },
+  {
+   "id": "physio",
+   "name": "World Physiotherapy Day",
+   "kind": "day",
+   "rule": "09-08",
+   "dates": {
+    "2026": {
+     "start": "2026-09-08"
+    },
+    "2027": {
+     "start": "2027-09-08"
+    },
+    "2028": {
+     "start": "2028-09-08"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://world.physio",
+   "blurb": "Move it. Today is for physios.",
+   "puzzle_theme": "Physiotherapy and musculoskeletal: muscles, joints, rehab"
+  },
+  {
+   "id": "suicideprev",
+   "name": "World Suicide Prevention Day",
+   "kind": "day",
+   "rule": "09-10",
+   "dates": {
+    "2026": {
+     "start": "2026-09-10"
+    },
+    "2027": {
+     "start": "2027-09-10"
+    },
+    "2028": {
+     "start": "2028-09-10"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.who.int/campaigns/world-suicide-prevention-day",
+   "blurb": "Today is World Suicide Prevention Day. If you're struggling, reach out: Lifeline 13 11 14.",
+   "puzzle_theme": null
+  },
+  {
+   "id": "firstaid",
+   "name": "World First Aid Day",
+   "kind": "day",
+   "rule": "nth:2:5:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-12"
+    },
+    "2027": {
+     "start": "2027-09-11"
+    },
+    "2028": {
+     "start": "2028-09-09"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.ifrc.org",
+   "blurb": "A few skills can save a life. Today is about first aid.",
+   "puzzle_theme": "First aid: DRSABCD, CPR, bleeding, burns, choking"
+  },
+  {
+   "id": "sepsis",
+   "name": "World Sepsis Day",
+   "kind": "day",
+   "rule": "09-13",
+   "dates": {
+    "2026": {
+     "start": "2026-09-13"
+    },
+    "2027": {
+     "start": "2027-09-13"
+    },
+    "2028": {
+     "start": "2028-09-13"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldsepsisday.org",
+   "blurb": "Sepsis kills more people than many cancers. Know the signs.",
+   "puzzle_theme": "Sepsis and infection: SIRS, lactate, antibiotics, shock"
+  },
+  {
+   "id": "patientsafety",
+   "name": "World Patient Safety Day",
+   "kind": "day",
+   "rule": "09-17",
+   "dates": {
+    "2026": {
+     "start": "2026-09-17"
+    },
+    "2027": {
+     "start": "2027-09-17"
+    },
+    "2028": {
+     "start": "2028-09-17"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-patient-safety-day",
+   "blurb": "First, do no harm. Today is about safer care.",
+   "puzzle_theme": "Patient safety: errors, checklists, handover, famous safety lessons"
+  },
+  {
+   "id": "alzheimers",
+   "name": "World Alzheimer's Day",
+   "kind": "day",
+   "rule": "09-21",
+   "dates": {
+    "2026": {
+     "start": "2026-09-21"
+    },
+    "2027": {
+     "start": "2027-09-21"
+    },
+    "2028": {
+     "start": "2028-09-21"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.alzint.org",
+   "blurb": "Memory matters. Today is about dementia.",
+   "puzzle_theme": "Dementia: Alzheimer, plaques and tangles, memory, cognition. Respectful."
+  },
+  {
+   "id": "pharmacists",
+   "name": "World Pharmacists Day",
+   "kind": "day",
+   "rule": "09-25",
+   "dates": {
+    "2026": {
+     "start": "2026-09-25"
+    },
+    "2027": {
+     "start": "2027-09-25"
+    },
+    "2028": {
+     "start": "2028-09-25"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.fip.org",
+   "blurb": "Here's to the people who decode our handwriting. Today is for pharmacists.",
+   "puzzle_theme": "Pharmacology: drug classes, history of drugs, pharmacy"
+  },
+  {
+   "id": "lung",
+   "name": "World Lung Day",
+   "kind": "day",
+   "rule": "09-25",
+   "dates": {
+    "2026": {
+     "start": "2026-09-25"
+    },
+    "2027": {
+     "start": "2027-09-25"
+    },
+    "2028": {
+     "start": "2028-09-25"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.firsnet.org",
+   "blurb": "Your lungs take about 20,000 breaths a day. Today we thank them.",
+   "puzzle_theme": "Respiratory: lungs, alveoli, gas exchange, lung disease"
+  },
+  {
+   "id": "rabies",
+   "name": "World Rabies Day",
+   "kind": "day",
+   "rule": "09-28",
+   "dates": {
+    "2026": {
+     "start": "2026-09-28"
+    },
+    "2027": {
+     "start": "2027-09-28"
+    },
+    "2028": {
+     "start": "2028-09-28"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-rabies-day",
+   "blurb": "Louis Pasteur died on this day. Rabies is almost 100% fatal and fully preventable.",
+   "puzzle_theme": "Rabies and zoonoses: Pasteur, bats, vaccines, Negri bodies"
+  },
+  {
+   "id": "heart",
+   "name": "World Heart Day",
+   "kind": "day",
+   "rule": "09-29",
+   "dates": {
+    "2026": {
+     "start": "2026-09-29"
+    },
+    "2027": {
+     "start": "2027-09-29"
+    },
+    "2028": {
+     "start": "2028-09-29"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://world-heart-federation.org",
+   "blurb": "About 100,000 beats a day. Today is all heart.",
+   "puzzle_theme": "Cardiology: ECG, valves, coronary arteries, heart history"
+  },
+  {
+   "id": "dysautonomia",
+   "name": "Dysautonomia Awareness Month",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.dysautonomiainternational.org",
+   "blurb": "October is for POTS and dysautonomia. Stand up slowly.",
+   "puzzle_theme": "Autonomic nervous system: POTS, orthostatic hypotension, MCAS"
+  },
+  {
+   "id": "mentalhealth",
+   "name": "World Mental Health Day",
+   "kind": "day",
+   "rule": "10-10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-10"
+    },
+    "2027": {
+     "start": "2027-10-10"
+    },
+    "2028": {
+     "start": "2028-10-10"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.who.int/campaigns/world-mental-health-day",
+   "blurb": "Mental health is health. Look after yours.",
+   "puzzle_theme": "Mental health, gently: history of psychiatry, neuroscience, wellbeing. No jokes about patients."
+  },
+  {
+   "id": "arthritis",
+   "name": "World Arthritis Day",
+   "kind": "day",
+   "rule": "10-12",
+   "dates": {
+    "2026": {
+     "start": "2026-10-12"
+    },
+    "2027": {
+     "start": "2027-10-12"
+    },
+    "2028": {
+     "start": "2028-10-12"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.eular.org",
+   "blurb": "Creaky joints, all day.",
+   "puzzle_theme": "Rheumatology: RA, OA, gout, joints, autoimmune arthritis"
+  },
+  {
+   "id": "thrombosis",
+   "name": "World Thrombosis Day",
+   "kind": "day",
+   "rule": "10-13",
+   "dates": {
+    "2026": {
+     "start": "2026-10-13"
+    },
+    "2027": {
+     "start": "2027-10-13"
+    },
+    "2028": {
+     "start": "2028-10-13"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldthrombosisday.org",
+   "blurb": "Rudolf Virchow's birthday. Clots, triads and anticoagulants today.",
+   "puzzle_theme": "Thrombosis: Virchow's triad, DVT, PE, anticoagulation"
+  },
+  {
+   "id": "sight",
+   "name": "World Sight Day",
+   "kind": "day",
+   "rule": "nth:2:3:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-08"
+    },
+    "2027": {
+     "start": "2027-10-14"
+    },
+    "2028": {
+     "start": "2028-10-12"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.iapb.org",
+   "blurb": "Today's puzzles focus on the eyes.",
+   "puzzle_theme": "Ophthalmology: retina, cataract, glaucoma, visual pathways"
+  },
+  {
+   "id": "handwashing",
+   "name": "Global Handwashing Day",
+   "kind": "day",
+   "rule": "10-15",
+   "dates": {
+    "2026": {
+     "start": "2026-10-15"
+    },
+    "2027": {
+     "start": "2027-10-15"
+    },
+    "2028": {
+     "start": "2028-10-15"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://globalhandwashing.org",
+   "blurb": "Soap: the original public health tech.",
+   "puzzle_theme": "Hygiene and infection: germs, soap, outbreaks"
+  },
+  {
+   "id": "anaesthesia",
+   "name": "World Anaesthesia Day",
+   "kind": "day",
+   "rule": "10-16",
+   "dates": {
+    "2026": {
+     "start": "2026-10-16"
+    },
+    "2027": {
+     "start": "2027-10-16"
+    },
+    "2028": {
+     "start": "2028-10-16"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://wfsahq.org",
+   "blurb": "Ether Day, 1846: the first public anaesthetic. Every puzzle today is for the gas crew.",
+   "puzzle_theme": "Anaesthetics: ether, airway, induction agents, monitoring, ASA grades"
+  },
+  {
+   "id": "osteoporosis",
+   "name": "World Osteoporosis Day",
+   "kind": "day",
+   "rule": "10-20",
+   "dates": {
+    "2026": {
+     "start": "2026-10-20"
+    },
+    "2027": {
+     "start": "2027-10-20"
+    },
+    "2028": {
+     "start": "2028-10-20"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.worldosteoporosisday.org",
+   "blurb": "Bones are living tissue. Keep them strong.",
+   "puzzle_theme": "Bone health: osteoporosis, DEXA, calcium, vitamin D, fractures"
+  },
+  {
+   "id": "polio",
+   "name": "World Polio Day",
+   "kind": "day",
+   "rule": "10-24",
+   "dates": {
+    "2026": {
+     "start": "2026-10-24"
+    },
+    "2027": {
+     "start": "2027-10-24"
+    },
+    "2028": {
+     "start": "2028-10-24"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.endpolio.org",
+   "blurb": "Jonas Salk's birthday. Polio is nearly gone.",
+   "puzzle_theme": "Polio and vaccines: Salk, Sabin, iron lungs, eradication"
+  },
+  {
+   "id": "ot",
+   "name": "World Occupational Therapy Day",
+   "kind": "day",
+   "rule": "10-27",
+   "dates": {
+    "2026": {
+     "start": "2026-10-27"
+    },
+    "2027": {
+     "start": "2027-10-27"
+    },
+    "2028": {
+     "start": "2028-10-27"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://wfot.org",
+   "blurb": "Today is for OTs, who get people back to doing what matters.",
+   "puzzle_theme": "Occupational therapy: function, ADLs, rehab, adaptive equipment"
+  },
+  {
+   "id": "stroke",
+   "name": "World Stroke Day",
+   "kind": "day",
+   "rule": "10-29",
+   "dates": {
+    "2026": {
+     "start": "2026-10-29"
+    },
+    "2027": {
+     "start": "2027-10-29"
+    },
+    "2028": {
+     "start": "2028-10-29"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.world-stroke.org",
+   "blurb": "Time is brain. Today is about stroke.",
+   "puzzle_theme": "Stroke: FAST, ischaemic vs haemorrhagic, vascular territories, thrombolysis"
+  },
+  {
+   "id": "psoriasis",
+   "name": "World Psoriasis Day",
+   "kind": "day",
+   "rule": "10-29",
+   "dates": {
+    "2026": {
+     "start": "2026-10-29"
+    },
+    "2027": {
+     "start": "2027-10-29"
+    },
+    "2028": {
+     "start": "2028-10-29"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://ifpa-pso.com",
+   "blurb": "More than skin deep. Today is about psoriasis.",
+   "puzzle_theme": "Dermatology: psoriasis, plaques, nail signs, psoriatic arthritis"
+  },
+  {
+   "id": "radiology",
+   "name": "International Day of Radiology",
+   "kind": "day",
+   "rule": "11-08",
+   "dates": {
+    "2026": {
+     "start": "2026-11-08"
+    },
+    "2027": {
+     "start": "2027-11-08"
+    },
+    "2028": {
+     "start": "2028-11-08"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.internationaldayofradiology.com",
+   "blurb": "Röntgen discovered X-rays on this day in 1895. Today's puzzles are for radiology.",
+   "puzzle_theme": "Radiology and imaging: X-ray, CT, MRI, ultrasound, famous films"
+  },
+  {
+   "id": "pneumonia",
+   "name": "World Pneumonia Day",
+   "kind": "day",
+   "rule": "11-12",
+   "dates": {
+    "2026": {
+     "start": "2026-11-12"
+    },
+    "2027": {
+     "start": "2027-11-12"
+    },
+    "2028": {
+     "start": "2028-11-12"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://stoppneumonia.org",
+   "blurb": "The old man's friend, and a leading killer of kids. Today is about pneumonia.",
+   "puzzle_theme": "Respiratory infection: pneumonia, consolidation, organisms, CXR"
+  },
+  {
+   "id": "diabetes",
+   "name": "World Diabetes Day",
+   "kind": "day",
+   "rule": "11-14",
+   "dates": {
+    "2026": {
+     "start": "2026-11-14"
+    },
+    "2027": {
+     "start": "2027-11-14"
+    },
+    "2028": {
+     "start": "2028-11-14"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://worlddiabetesday.org",
+   "blurb": "Frederick Banting's birthday. Insulin, glucose and HbA1c all day.",
+   "puzzle_theme": "Diabetes: insulin, Banting and Best, pancreas, HbA1c, complications"
+  },
+  {
+   "id": "prematurity",
+   "name": "World Prematurity Day",
+   "kind": "day",
+   "rule": "11-15",
+   "dates": {
+    "2026": {
+     "start": "2026-11-15"
+    },
+    "2027": {
+     "start": "2027-11-15"
+    },
+    "2028": {
+     "start": "2028-11-15"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-prematurity-day",
+   "blurb": "About 1 in 10 babies arrive early. Today is for them.",
+   "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care"
+  },
+  {
+   "id": "cervical",
+   "name": "World Cervical Cancer Elimination Day",
+   "kind": "day",
+   "rule": "11-17",
+   "dates": {
+    "2026": {
+     "start": "2026-11-17"
+    },
+    "2027": {
+     "start": "2027-11-17"
+    },
+    "2028": {
+     "start": "2028-11-17"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-cervical-cancer-elimination-day",
+   "blurb": "The first cancer we could eliminate. HPV vaccines and screening make it possible.",
+   "puzzle_theme": "Cervical cancer: HPV, Pap smear history, screening, vaccines"
+  },
+  {
+   "id": "copd",
+   "name": "World COPD Day",
+   "kind": "day",
+   "rule": "nth:3:2:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-18"
+    },
+    "2027": {
+     "start": "2027-11-17"
+    },
+    "2028": {
+     "start": "2028-11-15"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://goldcopd.org",
+   "blurb": "Today is about COPD.",
+   "puzzle_theme": "COPD: emphysema, bronchitis, spirometry, smoking"
+  },
+  {
+   "id": "amr",
+   "name": "World AMR Awareness Week",
+   "kind": "week",
+   "rule": "range:11-18:11-24",
+   "dates": {
+    "2026": {
+     "start": "2026-11-18",
+     "end": "2026-11-24"
+    },
+    "2027": {
+     "start": "2027-11-18",
+     "end": "2027-11-24"
+    },
+    "2028": {
+     "start": "2028-11-18",
+     "end": "2028-11-24"
+    }
+   },
+   "tags": [
+    "who"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-amr-awareness-week",
+   "blurb": "Antibiotics are running out of road. Use them wisely.",
+   "puzzle_theme": "Antimicrobials: Fleming, penicillin, resistance, superbugs (MRSA)"
+  },
+  {
+   "id": "gbv",
+   "name": "16 Days of Activism against Gender-Based Violence",
+   "kind": "week",
+   "rule": "range:11-25:12-10",
+   "dates": {
+    "2026": {
+     "start": "2026-11-25",
+     "end": "2026-12-10"
+    },
+    "2027": {
+     "start": "2027-11-25",
+     "end": "2027-12-10"
+    },
+    "2028": {
+     "start": "2028-11-25",
+     "end": "2028-12-10"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.unwomen.org",
+   "blurb": "Support is available: 1800RESPECT (1800 737 732).",
+   "puzzle_theme": null
+  },
+  {
+   "id": "aids",
+   "name": "World AIDS Day",
+   "kind": "day",
+   "rule": "12-01",
+   "dates": {
+    "2026": {
+     "start": "2026-12-01"
+    },
+    "2027": {
+     "start": "2027-12-01"
+    },
+    "2028": {
+     "start": "2028-12-01"
+    }
+   },
+   "tags": [
+    "who",
+    "gentle"
+   ],
+   "priority": 2,
+   "link": "https://www.who.int/campaigns/world-aids-day",
+   "blurb": "From a death sentence to a manageable condition. Today is about HIV.",
+   "puzzle_theme": "HIV and immunology: CD4, antiretrovirals, history. No jokes about patients."
+  },
+  {
+   "id": "disability",
+   "name": "International Day of Persons with Disabilities",
+   "kind": "day",
+   "rule": "12-03",
+   "dates": {
+    "2026": {
+     "start": "2026-12-03"
+    },
+    "2027": {
+     "start": "2027-12-03"
+    },
+    "2028": {
+     "start": "2028-12-03"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/day-of-persons-with-disabilities",
+   "blurb": "Accessibility is for everyone.",
+   "puzzle_theme": "Disability and inclusion, gently: accessibility, rehab, adaptive tech."
+  },
+  {
+   "id": "uhc",
+   "name": "Universal Health Coverage Day",
+   "kind": "day",
+   "rule": "12-12",
+   "dates": {
+    "2026": {
+     "start": "2026-12-12"
+    },
+    "2027": {
+     "start": "2027-12-12"
+    },
+    "2028": {
+     "start": "2028-12-12"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.who.int/campaigns/universal-health-coverage-day",
+   "blurb": "Health care for everyone, everywhere. Today is about health systems.",
+   "puzzle_theme": "Health systems: public health, history of medicine, global health"
+  }
+ ]
+}

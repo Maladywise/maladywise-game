@@ -344,3 +344,16 @@ html[data-theme="dark"] .cb-wound .st{stroke:#F1ECF8}
 .cb-big{font:700 44px/1.05 Lora,Georgia,serif;color:#4A3480;animation:cbpop .5s cubic-bezier(.2,1.6,.4,1) both}
 @keyframes cbpop{0%{transform:scale(2.2);opacity:0}60%{transform:scale(.94);opacity:1}100%{transform:none}}
 html[data-theme="dark"] .cb-big{color:#CFC6E3}
+
+/* health-day banner */
+.hday{background:#F1ECF8;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:14px;padding:14px 16px;display:grid;gap:6px;margin:-6px 0 2px}
+:root[data-theme="dark"] .hday{background:#2A2240}
+.hday-k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hday h2{font-family:var(--title);font-weight:700;font-size:20px;line-height:1.2;margin:0}
+.hday p{margin:0;font-size:14px;line-height:1.5}
+.hday b{font-weight:600}
+.hday a{color:var(--brand)}
+.hday-also{color:var(--muted)}
+.hday-go{justify-self:start;margin-top:2px;padding:7px 16px;border-radius:999px;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:600;font-size:14px}
+:root[data-theme="dark"] .hday-go{color:#16121F!important}
+.hday.quiet{background:var(--card);border-left-color:var(--muted)}
