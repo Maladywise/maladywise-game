@@ -8,5 +8,6 @@ Disallow: /acne/
 Disallow: /back-pain/
 Disallow: /uti/
 Disallow: /migraine/
+Disallow: /drugs/
 
 Sitemap: https://maladywise.com/sitemap.xml
