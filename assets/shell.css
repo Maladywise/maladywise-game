@@ -357,3 +357,36 @@ html[data-theme="dark"] .cb-big{color:#CFC6E3}
 .hday-go{justify-self:start;margin-top:2px;padding:7px 16px;border-radius:999px;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:600;font-size:14px}
 :root[data-theme="dark"] .hday-go{color:#16121F!important}
 .hday.quiet{background:var(--card);border-left-color:var(--muted)}
+/* ---------- fact sheets ---------- */
+.fs-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.printbtn{font:600 13px Poppins,system-ui,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.doc ul.tx{list-style:none;padding:0;display:grid;gap:8px;margin:8px 0}
+.doc ul.tx li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;line-height:1.5}
+.doc ul.tx li b{display:block}
+.ev{display:inline-block;font:600 10.5px Poppins,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 8px;margin:0 0 3px;vertical-align:middle}
+.ev.s{background:#DCEFD9;color:#1F5A33}.ev.m{background:#E6EEF9;color:#24497F}.ev.l{background:#F4EEDB;color:#6E5714}.ev.n{background:#F6DCD4;color:#8A2F1C}
+html[data-theme="dark"] .ev.s{background:#1F3A29;color:#9FD9B0}html[data-theme="dark"] .ev.m{background:#22314A;color:#A9C4EC}html[data-theme="dark"] .ev.l{background:#3A3020;color:#E5CD8A}html[data-theme="dark"] .ev.n{background:#3E231C;color:#F0A898}
+.doc .evkey{font-size:12.5px;color:var(--muted);margin:2px 0 6px}
+.doc .src{font-size:13px;color:var(--muted)}
+.doc .src li{font-size:13px}
+.print-url{display:none}
+@media print{
+  .bar,header.bar,footer.site,.printbtn,.mwsocial,.social,#mw-nav,.nl{display:none!important}
+  html,body{background:#fff!important;color:#000!important}
+  .doc{max-width:none;padding:0}
+  .doc h1{font-size:24px}.doc h2{font-size:14px;margin-top:12px}
+  .doc p,.doc li{font-size:11.5px;line-height:1.4}
+  .doc ul.tx{gap:3px;margin:4px 0}
+  .doc ul.tx li{border:0;border-bottom:1px solid #ddd;border-radius:0;padding:2px 0 3px;break-inside:avoid}
+  .doc ul.tx li b{display:inline;margin:0 4px}
+  .doc ul.tx li b::after{content:":"}
+  .ev{font-size:8px;padding:0 5px;margin:0}
+  .doc .lede{font-size:12px;margin:2px 0 4px}
+  .doc .evkey,.doc .meta{font-size:10px}
+  .doc ul{margin:2px 0}.doc .callout{margin:8px 0;padding:6px 10px}
+  .ev{border:1px solid #888;background:none!important;color:#000!important}
+  .doc .callout{border-left:3px solid #000;background:none}
+  .doc a{color:#000;text-decoration:none}
+  .print-url{display:block;font-size:11px;margin-top:10px;color:#333}
+  @page{margin:14mm}
+}
