@@ -187,7 +187,36 @@
       b.parentNode.insertBefore(sb, b.nextSibling);
     });
   }
-  if (window.MutationObserver) new MutationObserver(function () { addShare(); }).observe(document.documentElement, { childList: true, subtree: true });
+  // ---------- share "ticket" card built from each game's share text ----------
+  function ticketify() {
+    Array.prototype.forEach.call(document.querySelectorAll('pre[id$="-share"]:not([data-tk]),pre[id$="-sharetext"]:not([data-tk])'), function (pre) {
+      pre.setAttribute("data-tk", "1");
+      var lines = pre.textContent.replace(/\s+$/, "").split("\n"), url = "";
+      if (/maladywise\.com\s*$/i.test(lines[lines.length - 1])) { url = lines.pop(); }
+      var head = lines.shift() || "", parts = head.split(" \u00b7 "), title = parts.shift(), pill = parts.join(" \u00b7 ");
+      var tm = title.match(/^(.*?#\d+(?: \(archive\))?)\s*(.*)$/); var big0 = ""; if (tm) { title = tm[1]; big0 = tm[2]; }
+      var sc0 = ""; var pm = pill.match(/^(.*?)\s{2,}(\S.*)$/); if (pm) { pill = pm[1]; sc0 = pm[2]; }
+      pill = pill.replace(/[^\x00-\x7F\u2019]+/g, "").trim();
+      var g = window.MW_curGame, acc = g ? accentOf(g) : "#4A3480", body = "";
+      if (big0) body += '<div class="em bigem">' + esc2(big0) + "</div>";
+      var ems = [], texts = [];
+      lines.forEach(function (ln) {
+        ln = ln.trim(); if (!ln) return;
+        if (/^[\u201c"]/.test(ln)) { texts.push('<div class="q">' + esc2(ln) + "</div>"); return; }
+        var m = ln.match(/^([^A-Za-z0-9]+?)\s+([A-Za-z0-9].*)$/);
+        if (m) { ems.push(m[1]); texts.push('<div class="sc">' + esc2(m[2]) + "</div>"); }
+        else if (!/[A-Za-z0-9]/.test(ln)) ems.push(ln);
+        else texts.push('<div class="sc">' + esc2(ln) + "</div>");
+      });
+      var q = texts.filter(function (t) { return t.indexOf('class="q"') >= 0; }).join("");
+      var rest = texts.filter(function (t) { return t.indexOf('class="q"') < 0; }).join("");
+      var emh = ems.length ? '<div class="em' + (ems.length === 1 && Array.from(ems[0].replace(/\s/g, "")).length <= 4 ? " bigem" : "") + '">' + ems.map(esc2).join("<br>") + "</div>" : "";
+      if (sc0) rest += '<div class="sc">' + esc2(sc0) + "</div>";
+      var tk = el('<div class="mw-ticket" style="--a:' + acc + '"><div class="t">' + esc2(title) + "</div>" + (pill ? '<div class="d">' + esc2(pill) + "</div>" : "") + q + body + emh + rest + (url ? '<div class="u">MALADYWISE.COM</div>' : "") + "</div>");
+      pre.parentNode.insertBefore(tk, pre); pre.classList.add("mw-sr");
+    });
+  }
+  if (window.MutationObserver) new MutationObserver(function () { ticketify(); addShare(); }).observe(document.documentElement, { childList: true, subtree: true });
 
   // ---------- add to home screen (PWA) ----------
   var installEvt = null;
@@ -495,7 +524,7 @@
 
   // ---------- game page ----------
   function game(id) { setTimeout(social, 0);
-    var g = MW_GAMES.filter(function (x) { return x.id === id; })[0];
+    var g = MW_GAMES.filter(function (x) { return x.id === id; })[0]; window.MW_curGame = g;
     watchDone(g);
     topBar(g);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
