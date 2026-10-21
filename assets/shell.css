@@ -241,7 +241,7 @@ html[data-theme="dark"] .subpill{color:#16121F}
 .nl-x{border:0;background:transparent;color:var(--muted);font-size:15px;cursor:pointer;padding:4px 8px;line-height:1}
 .nl.nl-after{position:relative;width:100%;align-self:stretch;margin:4px 0 8px}
 .nl.nl-after>.nl-x{position:absolute;top:8px;right:8px}
-.mw-share{margin-left:8px}
+.mw-share{margin-left:0}
 
 /* ---------- celebrations ---------- */
 .cb{position:fixed;inset:0;z-index:40;display:grid;place-content:center;justify-items:center;gap:14px;background:rgba(250,247,242,.94);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);animation:cbin .2s ease-out;cursor:pointer;overflow:hidden;text-align:center;padding:24px}
@@ -422,3 +422,9 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .doc .se-v{--se:#C0392B}.doc .se-c{--se:#E08A2E}.doc .se-u{--se:#C9B037}.doc .se-r{--se:#7A2E8C}
 @media print{.doc .se{gap:3px 8px;grid-template-columns:1fr 1fr}.doc .se-g{padding:2px 8px 0;border-width:0 0 0 3px}.doc .se-g ul{margin:1px 0 3px}.doc .se-h{font-size:10px}}
 @media print{.doc .se~h2,.doc .se~ul{margin-top:4px}.doc h2{margin:7px 0 2px}.doc ul{margin:2px 0}.doc li{line-height:1.3}.doc .callout{padding:4px 8px;margin:4px 0}}
+.doc .se-vr{--se:#5A2E8C}.doc .se-n{--se:#888}.doc .se-g li b{font-weight:700}
+@media print{.doc .se{grid-template-columns:1fr 1fr 1fr}.doc .se-g li{font-size:9.5px;line-height:1.25}.doc .se-g ul{padding-left:12px}}
+.mw-sharerow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;width:100%;margin:10px auto}
+.mw-sharerow>button{margin:0!important}
+.cb-dx .cb-cap{margin-top:34px}
+.card .pill.einc{margin:4px 0 6px;font-size:9.5px;padding:3px 8px}
