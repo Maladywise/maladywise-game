@@ -24,5 +24,20 @@ Disallow: /endometriosis/
 Disallow: /diverticulitis/
 Disallow: /marine-stings/
 Disallow: /blood-pressure/
+Disallow: /rosacea/
+Disallow: /psoriasis/
+Disallow: /paronychia/
+Disallow: /ankle-sprain/
+Disallow: /ibs/
+Disallow: /gallstones/
+Disallow: /hiccups/
+Disallow: /coeliac/
+Disallow: /pots/
+Disallow: /restless-legs/
+Disallow: /eustachian-tube/
+Disallow: /tinnitus/
+Disallow: /hives/
+Disallow: /tools/iron-infusion/
+Disallow: /tools/vertigo/
 
 Sitemap: https://maladywise.com/sitemap.xml

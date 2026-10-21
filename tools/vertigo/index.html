@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vertigo Sorter | Malady Wise</title>
+<meta name="description" content="A step-by-step vertigo sorter for clinicians, using timing and triggers: BPPV, vestibular migraine, Ménière’s, vestibular neuritis, stroke and HINTS.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:title" content="Vertigo Sorter | Malady Wise">
+<meta property="og:description" content="A step-by-step vertigo sorter for clinicians, using timing and triggers: BPPV, vestibular migraine, Ménière’s, vestibular neuritis, stroke and HINTS.">
+<meta property="og:image" content="https://maladywise.com/assets/share.jpg?v=2">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/shell.css?v=85">
+<script src="/assets/games.js?v=60"></script>
+<script src="/assets/site.js?v=6"></script>
+<script src="/assets/shell.js?v=76"></script>
+<style>
+#vs .flags{background:#FBEDE9;border:1px solid #E9B7A8;border-left:4px solid #B23A1E;border-radius:10px;padding:10px 14px;margin:10px 0}
+#vs .flags h2{margin:0 0 4px;font-size:15px;color:#8A2F1C}
+#vs .flags ul{margin:2px 0;padding-left:18px}
+#vs .flags li{font-size:14px;line-height:1.45}
+html[data-theme="dark"] #vs .flags{background:#3E231C;border-color:#6B3A2E;border-left-color:#F0A898}
+html[data-theme="dark"] #vs .flags h2{color:#F0A898}
+#vs .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:12px 0}
+#vs .step h2{margin:2px 0 8px;font-size:16px}
+#vs .q{font-size:14px;color:var(--muted);margin:0 0 8px}
+#vs .opts{display:grid;gap:8px}
+#vs .opt{display:block;width:100%;text-align:left;font:500 14.5px/1.4 var(--body);padding:12px 14px;min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);cursor:pointer}
+#vs .opt b{display:block;font-weight:600;color:var(--brand);font-size:15px;margin-bottom:2px}
+#vs .opt:hover,#vs .opt:focus-visible{border-color:var(--brand)}
+#vs .nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#vs .navb{font:600 13px var(--body);border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:38px}
+#vs .crumb{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+#vs .rs h3{font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:12px 0 2px}
+#vs .rs ul{margin:2px 0;padding-left:18px}
+#vs .rs li{font-size:14.5px;line-height:1.5}
+#vs .rs .urgent{color:#8A2F1C;font-weight:600}
+html[data-theme="dark"] #vs .rs .urgent{color:#F0A898}
+#vs details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:8px 0}
+#vs summary{font-weight:600;cursor:pointer;padding:4px 0}
+#vs details li{font-size:14px}
+</style>
+</head>
+<body>
+<main class="wrap doc" id="vs">
+<p class="meta">Clinician tool</p>
+<h1>Vertigo Sorter</h1>
+<p class="lede">Sort the dizzy patient by timing and triggers (the TiTrATE approach), then do the matching bedside tests.</p>
+
+<div class="flags" role="note">
+<h2>Red flags: send to emergency</h2>
+<ul>
+<li>New severe or sudden headache, or neck pain (think dissection)</li>
+<li>Any new neuro sign: double vision, slurred speech, trouble swallowing, facial or limb weakness or numbness, limb ataxia</li>
+<li>Can’t walk or stand unaided (truncal ataxia)</li>
+<li>Sudden hearing loss, especially with vertigo</li>
+<li>Continuous vertigo in someone with vascular risk factors, or central signs on HINTS</li>
+</ul>
+</div>
+
+<div class="step" id="vs-step" aria-live="polite"></div>
+
+<details>
+<summary>HINTS exam in brief</summary>
+<ul>
+<li><b>Only for</b> continuous vertigo (acute vestibular syndrome) with nystagmus present at the time of the exam. Not for episodic or positional dizziness.</li>
+<li><b>Head impulse:</b> a corrective catch-up saccade is reassuring (peripheral). A normal head impulse in an acutely vertiginous patient is worrying (central).</li>
+<li><b>Nystagmus:</b> one direction, horizontal, dampened by fixation is peripheral. Direction-changing on gaze, vertical or purely torsional is central.</li>
+<li><b>Test of skew:</b> alternate cover test. Any vertical refixation is central.</li>
+<li>Any one central finding means stroke until proven otherwise. Adding new hearing loss (“HINTS plus”) raises sensitivity.</li>
+<li>Highly accurate in trained hands, but it needs training and practice. If unsure, refer.</li>
+<li>Early CT misses most posterior fossa strokes, and even early MRI can be falsely negative.</li>
+</ul>
+</details>
+
+<details>
+<summary>Positional tests and manoeuvres</summary>
+<ul>
+<li><b>Dix-Hallpike</b> (posterior canal): brief delay, then up-beating torsional nystagmus towards the lower ear, fading within a minute. Treat with the <b>Epley</b> manoeuvre on the affected side.</li>
+<li><b>Supine roll test</b> (horizontal canal): do it if the Dix-Hallpike is negative but the story fits. Horizontal nystagmus on turning either way. Treat with the <b>barbecue (Lempert) roll</b> or Gufoni manoeuvre.</li>
+<li>Repeat the manoeuvre if symptoms persist. Atypical nystagmus or failure after a few goes means reconsider the diagnosis.</li>
+<li>Vestibular physiotherapy helps recurrent or residual symptoms.</li>
+</ul>
+</details>
+
+<p class="callout"><b>For clinicians, education only.</b> A teaching aid, not a diagnosis. It doesn’t replace clinical judgement or local stroke pathways.</p>
+
+<h2>Sources</h2>
+<ul class="src">
+<li><a href="https://www.aafp.org/pubs/afp/issues/2023/0500/dizziness.html">Rogers TS et al. Dizziness: evaluation and management. Am Fam Physician 2023;107(5):514-523</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/">Newman-Toker DE, Edlow JA. TiTrATE: a novel approach to diagnosing acute dizziness and vertigo. Neurol Clin 2015</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/28248609/">Bhattacharyya N et al. Clinical practice guideline: BPPV (update). Otolaryngol Head Neck Surg 2017</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19762709/">Kattah JC et al. HINTS to diagnose stroke in the acute vestibular syndrome. Stroke 2009</a></li>
+</ul>
+<p class="meta"><em>Reviewed October 2026. Education for clinicians, not personal medical advice.</em></p>
+<div id="nl-slot"></div>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script>
+(function () {
+  var Q = {
+    start: { t: "How does it behave?", q: "Ask about timing first, then triggers. “Spinning” versus “light-headed” is less reliable.", o: [
+      ["Brief spells, seconds to a minute", "Set off by lying down, rolling in bed or looking up", "bppv"],
+      ["On standing up", "Light-headed or faint, settles when sitting or lying", "ortho"],
+      ["Spontaneous episodes, minutes to hours", "No clear trigger, comes and goes", "episodic"],
+      ["Continuous for a day or more", "Came on acutely, nausea, unsteady, worse with head movement", "avs"],
+      ["Continuous after a new drug, toxin or head injury", "Clear trigger, then persistent", "trig"],
+      ["Persistent for months", "Daily unsteadiness, worse upright, in busy places or with moving visuals", "pppd"]
+    ]},
+    episodic: { t: "Spontaneous episodes: what goes with them?", q: "Pick the best fit.", o: [
+      ["Hearing loss, tinnitus or fullness in one ear", "Episodes 20 minutes to 12 hours", "meniere"],
+      ["Migraine history, headache, light or sound sensitivity", "Episodes 5 minutes to 72 hours", "vm"],
+      ["Older or vascular risk factors, minutes long", "Especially with any other neuro symptom", "tia"],
+      ["None of these, or not sure", "", "epiunsure"]
+    ]}
+  };
+  var R = {
+    bppv: { t: "Benign paroxysmal positional vertigo (BPPV)", c: ["BPPV: the most common cause, mainly posterior canal, sometimes horizontal canal", "Less often: central positional nystagmus (atypical pattern, no response to manoeuvres)"],
+      x: ["Dix-Hallpike both sides", "Supine roll test if Dix-Hallpike negative", "Brief neuro exam and gait"],
+      s: ["Epley manoeuvre for posterior canal; barbecue (Lempert) roll for horizontal canal", "Repeat at review if needed; teach home manoeuvres", "No routine imaging or vestibular suppressants", "Discuss falls risk"],
+      r: ["Vestibular physio for recurrent or residual symptoms", "ENT or neurology if atypical nystagmus, central signs or no response after repeated manoeuvres"] },
+    ortho: { t: "Orthostatic hypotension (not true vertigo)", c: ["Postural hypotension: drugs (antihypertensives, diuretics, alpha-blockers, antidepressants), dehydration, autonomic failure", "Also consider arrhythmia, anaemia, hypoglycaemia, vasovagal"],
+      x: ["Lying and standing BP: a fall of 20 systolic or 10 diastolic within 3 minutes", "ECG; FBC, electrolytes, glucose if indicated"],
+      s: ["Review and reduce culprit drugs", "Fluids, slow rising, compression stockings", "Treat the cause"],
+      r: ["Syncope, exertional symptoms, abnormal ECG or palpitations: urgent cardiac assessment", "Suspected autonomic failure: neurology"] },
+    meniere: { t: "Ménière’s disease", c: ["Ménière’s: recurrent vertigo 20 minutes to 12 hours with fluctuating low-frequency hearing loss, tinnitus or fullness in the same ear", "Consider vestibular migraine (overlaps) and acoustic neuroma if hearing loss is asymmetric"],
+      x: ["Otoscopy and tuning forks", "Audiogram, ideally near an attack", "Look for nystagmus during attacks"],
+      s: ["Short course of an antiemetic or vestibular suppressant for attacks only", "Betahistine is widely used but evidence is weak", "Salt and caffeine advice is traditional, with limited evidence"],
+      r: ["ENT for confirmation and stepwise treatment (e.g. intratympanic steroids)", "MRI internal auditory canals for asymmetric sensorineural loss", "Sudden hearing loss: same-day ENT or emergency"] },
+    vm: { t: "Vestibular migraine", c: ["Vestibular migraine: the most common cause of spontaneous episodic vertigo", "Overlaps with Ménière’s; consider TIA if older or vascular risk"],
+      x: ["Normal neuro exam between attacks", "Headache diary, triggers", "Hearing check if any ear symptoms"],
+      s: ["Explain the diagnosis; sleep, meals and trigger management", "Acute migraine treatment and an antiemetic for attacks", "Prevention if frequent (e.g. propranolol, amitriptyline, topiramate)", "Vestibular physio can help"],
+      r: ["Neurology if uncertain or not settling with prevention", "New pattern, thunderclap or worst headache, or neuro signs: emergency"] },
+    tia: { t: "Possible TIA (vertebrobasilar)", c: ["Posterior circulation TIA: can present with isolated episodic vertigo, often minutes long", "Also cardiac arrhythmia"],
+      x: ["Full neuro exam, gait", "BP, pulse rhythm, ECG", "Ask about diplopia, dysarthria, dysphagia, numbness, weakness"],
+      s: ["Treat as TIA: same-day assessment under your local stroke or TIA pathway"],
+      r: ["Emergency if symptoms are ongoing or neuro signs are present", "Otherwise urgent TIA clinic and vascular imaging"], u: true },
+    epiunsure: { t: "Spontaneous episodic vertigo: undifferentiated", c: ["Vestibular migraine (most common)", "Ménière’s disease", "Vertebrobasilar TIA (older, vascular risk)", "Also: arrhythmia, hypoglycaemia, panic"],
+      x: ["Neuro exam and gait", "BP, ECG", "Hearing check or audiogram", "Symptom and headache diary"],
+      s: ["Look for ear symptoms and migraine features over time", "Treat any vascular risk factors"],
+      r: ["Same-day assessment if TIA is possible", "ENT or neurology if recurrent and unclear"] },
+    avs: { t: "Acute vestibular syndrome", c: ["Vestibular neuritis: severe continuous vertigo, nausea, unidirectional nystagmus, can still walk", "Labyrinthitis: the same plus hearing loss", "Posterior circulation stroke: up to 1 in 5 of these patients, often with no limb signs"],
+      x: ["HINTS (only if nystagmus is present and you are trained): any central finding means stroke", "Check hearing (new loss can mean stroke)", "Gait: unable to walk unaided is central until proven otherwise", "Full neuro exam"],
+      s: ["Central signs, unable to walk, vascular risk or not confident with HINTS: emergency for stroke assessment", "Neuritis: antiemetic or vestibular suppressant for the first few days only", "Then get moving early and start vestibular exercises", "Steroids: evidence is mixed, not routine"],
+      r: ["Emergency as above", "Vestibular physio if not improving over a few weeks", "New hearing loss: urgent ENT"], u: true },
+    trig: { t: "Continuous vertigo with a clear trigger", c: ["Drugs: anticonvulsants, aminoglycosides, alcohol, sedatives, antihypertensives", "Head injury: post-traumatic BPPV, concussion, labyrinthine injury", "Carbon monoxide exposure"],
+      x: ["Medication and exposure history", "Neuro exam; Dix-Hallpike after head injury", "Drug levels where relevant"],
+      s: ["Stop or reduce the culprit drug", "Manage the injury; treat BPPV if present"],
+      r: ["Emergency for head injury with neuro signs, anticoagulation or suspected CO poisoning", "ENT if hearing loss after trauma or ototoxic drugs"] },
+    pppd: { t: "Persistent postural-perceptual dizziness (PPPD)", c: ["PPPD: daily dizziness for 3 months or more, often after an acute vestibular event, worse upright and with visual motion", "Also: uncompensated vestibular loss, anxiety, medication effects"],
+      x: ["Normal neuro exam", "Look for an initial trigger event", "Screen for anxiety and depression"],
+      s: ["Explain the diagnosis: a real, treatable problem", "Vestibular physio with graded exposure", "CBT; an SSRI or SNRI can help", "Avoid long-term vestibular suppressants"],
+      r: ["Vestibular physio first", "Neurology or a dizziness clinic if unclear"] }
+  };
+  var box = document.getElementById("vs-step"), hist = [];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function li(a) { return "<ul>" + a.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>"; }
+  function nav() { return '<div class="nav">' + (hist.length > 1 ? '<button type="button" class="navb" data-act="back">← Back</button>' : "") + (hist.length > 1 ? '<button type="button" class="navb" data-act="restart">Start again</button>' : "") + "</div>"; }
+  function show(id, focus) {
+    var h;
+    if (Q[id]) {
+      var s = Q[id];
+      h = "<h2>" + esc(s.t) + '</h2><p class="q">' + esc(s.q) + '</p><div class="opts">' + s.o.map(function (o) {
+        return '<button type="button" class="opt" data-go="' + o[2] + '"><b>' + esc(o[0]) + "</b>" + esc(o[1]) + "</button>";
+      }).join("") + "</div>";
+    } else {
+      var r = R[id];
+      h = '<div class="rs"><p class="crumb">Result</p><h2>' + esc(r.t) + "</h2>" +
+        (r.u ? '<p class="urgent">Can be serious: assess the same day.</p>' : "") +
+        "<h3>Likely causes</h3>" + li(r.c) + "<h3>Key bedside tests</h3>" + li(r.x) +
+        "<h3>First steps</h3>" + li(r.s) + "<h3>When to refer</h3>" + li(r.r) + "</div>";
+    }
+    box.innerHTML = h + nav();
+    box.dataset.view = id;
+    if (focus) { var f = box.querySelector("h2"); f.setAttribute("tabindex", "-1"); f.focus({ preventScroll: true }); box.scrollIntoView({ block: "start", behavior: "smooth" }); }
+  }
+  function go(id) { hist.push(id); show(id, hist.length > 1); }
+  box.addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.go) go(b.dataset.go);
+    else if (b.dataset.act === "back") { hist.pop(); show(hist[hist.length - 1], true); }
+    else if (b.dataset.act === "restart") { hist = []; go("start"); }
+  });
+  go("start");
+})();
+</script>
+<script>MW.page();</script>
+</body>
+</html>
