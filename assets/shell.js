@@ -92,8 +92,10 @@
       return { cls: "cb-chain", html: '<svg class="cb-links" viewBox="0 0 300 60" aria-hidden="true">' + [0, 1, 2, 3, 4].map(function (i) { return '<rect class="lk" style="--i:' + i + '" x="' + (8 + i * 56) + '" y="15" width="64" height="30" rx="15"/>'; }).join("") + '</svg><p class="cb-cap">' + (m ? "Chain held. " + m + " slip" + (m > 1 ? "s" : "") + "." : "Unbreakable. Not one slip.") + "</p>" };
     },
     gridectomy: function (st) {
-      if (!st.win) return null; var gold = (st.t || 999) < 120 && !st.reveals;
-      return { cls: "cb-grid" + (gold ? " gold" : ""), html: '<div class="cb-sq"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="10" y="10" width="100" height="100" rx="6"/></svg><span class="cb-plaster">\ud83e\ude79</span></div><p class="cb-cap">' + (gold ? "Under two minutes. Neat stitches." : "Grid closed. Lovely work.") + "</p>" };
+      if (!st.win) return null; var gold = (st.t || 999) < 120 && !st.reveals, h = "";
+      var order = []; for (var r = 4; r >= 0; r--) for (var c = 0; c < 5; c++) order.push([r, c]);
+      order.forEach(function (rc, k) { h += '<i style="grid-row:' + (rc[0] + 1) + ";grid-column:" + (rc[1] + 1) + ";animation-delay:" + (k * 0.045).toFixed(3) + 's"></i>'; });
+      return { cls: "cb-grid" + (gold ? " gold" : ""), html: '<div class="cb-blocks">' + h + '</div><p class="cb-cap">' + (gold ? "Under two minutes. Locked in." : "Grid locked. Lovely work.") + "</p>" };
     },
     suturix: function (st) {
       if (!st.win) return null;

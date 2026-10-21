@@ -297,14 +297,15 @@ html[data-theme="dark"] .cb-stamp{mix-blend-mode:normal}
 @keyframes cblink{from{transform:translateX(calc((var(--i) - 2) * 40px));opacity:0}}
 .cb-chain .cb-links{animation:cbtight .3s ease-in-out .8s 2 alternate}
 @keyframes cbtight{to{transform:scaleX(.94)}}
-/* Gridectomy stitches + plaster */
-.cb-sq{position:relative;width:160px;height:160px}
-.cb-sq svg{width:100%;height:100%}
-.cb-sq rect{fill:var(--card,#fff);stroke:#3A3150;stroke-width:5;stroke-dasharray:12 8;stroke-dashoffset:400;animation:cbstitch 1s linear forwards}
-.cb-grid.gold .cb-sq rect{stroke:#B8860B}
-@keyframes cbstitch{to{stroke-dashoffset:0}}
-.cb-plaster{position:absolute;right:-10px;top:-14px;font-size:62px;transform:rotate(35deg);animation:cbstick .35s cubic-bezier(.2,1.6,.4,1) .95s both}
-@keyframes cbstick{from{transform:rotate(35deg) scale(2.4);opacity:0}}
+/* Gridectomy falling blocks */
+.cb-blocks{display:grid;grid-template-columns:repeat(5,30px);grid-template-rows:repeat(5,30px);gap:4px;padding:8px;border-radius:10px;animation:cblock .45s ease-out 1.35s both}
+.cb-blocks i{display:block;border-radius:5px;background:#3A3150;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25),inset 0 2px 0 rgba(255,255,255,.18);animation:cbdrop .32s cubic-bezier(.5,0,.6,1.4) both}
+html[data-theme="dark"] .cb-blocks i{background:#8E7FC0}
+.cb-grid.gold .cb-blocks i{background:#C99A1E}
+@keyframes cbdrop{from{transform:translateY(-70vh)}}
+@keyframes cblock{0%{box-shadow:0 0 0 0 rgba(74,52,128,0)}40%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(74,52,128,.18)}100%{transform:none;box-shadow:0 0 0 0 rgba(74,52,128,0)}}
+.cb-grid.gold .cb-blocks{animation-name:cblockg}
+@keyframes cblockg{40%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(201,154,30,.3)}}
 /* Suturix wound */
 .cb-wound{width:min(84vw,340px);height:90px;overflow:visible}
 .cb-wound .cut{fill:none;stroke:#C2553A;stroke-width:5;stroke-linecap:round;stroke-dasharray:340;stroke-dashoffset:340;animation:cbecg .5s ease-out forwards}
