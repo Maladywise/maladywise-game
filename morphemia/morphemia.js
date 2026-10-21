@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7";
   var root = document.getElementById("mph");
   if (!document.querySelector("link[data-mph]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "morphemia.css?v=" + BUILD; l.setAttribute("data-mph", ""); document.head.appendChild(l);
@@ -160,7 +160,33 @@
     if (k === "back") { cur = cur.slice(0, -1); drawEntry(); return; }
     if (/^[A-Z]$/.test(k) && cur.length < 19) { if (clearT && $("entry").classList.contains("shake")) { clearTimeout(clearT); clearT = null; cur = ""; $("entry").classList.remove("shake"); } cur += k; say(""); drawEntry(); }
   }
-  $("hive").addEventListener("click", function (e) { var b = e.target.closest(".hx"); if (b) { press(b.getAttribute("data-l")); b.blur(); } });
+  $("hive").addEventListener("click", function (e) { if (dragged) { dragged = false; return; } var b = e.target.closest(".hx"); if (b) { press(b.getAttribute("data-l")); b.blur(); } });
+  // drag outer letters to swap them
+  var drag = null, dragged = false;
+  $("hive").addEventListener("pointerdown", function (e) {
+    var b = e.target.closest(".hx"); if (!b || b.classList.contains("ctr")) return;
+    drag = { b: b, x: e.clientX, y: e.clientY, on: false, id: e.pointerId }; dragged = false;
+  });
+  document.addEventListener("pointermove", function (e) {
+    if (!drag || e.pointerId !== drag.id) return;
+    var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.on && dx * dx + dy * dy > 81) { drag.on = true; drag.b.classList.add("dragging"); try { drag.b.setPointerCapture(e.pointerId); } catch (x) {} }
+    if (drag.on) { e.preventDefault(); drag.b.style.transform = "translate(" + dx + "px," + dy + "px) scale(1.08)"; }
+  }, { passive: false });
+  function endDrag(e) {
+    if (!drag || e.pointerId !== drag.id) return;
+    var d = drag; drag = null;
+    if (!d.on) return;
+    dragged = true; setTimeout(function () { dragged = false; }, 400);
+    d.b.style.pointerEvents = "none";
+    var over = document.elementFromPoint(e.clientX, e.clientY), t = over && over.closest && over.closest(".hx");
+    d.b.style.pointerEvents = ""; d.b.style.transform = ""; d.b.classList.remove("dragging");
+    if (t && t !== d.b && !t.classList.contains("ctr")) {
+      var i = outer.indexOf(d.b.getAttribute("data-l")), j = outer.indexOf(t.getAttribute("data-l"));
+      if (i >= 0 && j >= 0) { var tmp = outer[i]; outer[i] = outer[j]; outer[j] = tmp; drawHive(); }
+    }
+  }
+  document.addEventListener("pointerup", endDrag); document.addEventListener("pointercancel", endDrag);
   $("del").onclick = function () { press("back"); };
   $("enter").onclick = function () { press("enter"); };
   $("shuf").onclick = function () { for (var i = outer.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = outer[i]; outer[i] = outer[j]; outer[j] = t; } drawHive(); };
