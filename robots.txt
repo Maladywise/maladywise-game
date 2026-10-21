@@ -9,5 +9,12 @@ Disallow: /back-pain/
 Disallow: /uti/
 Disallow: /migraine/
 Disallow: /drugs/
+Disallow: /quit-smoking/
+Disallow: /perioral-dermatitis/
+Disallow: /molluscum/
+Disallow: /warts/
+Disallow: /boils/
+Disallow: /haemorrhoids/
+Disallow: /anal-fissure/
 
 Sitemap: https://maladywise.com/sitemap.xml
