@@ -141,9 +141,19 @@
     setTimeout(bye, sc.ms || (quiet() ? 1800 : 2600));
   }
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
+  function mascotHelp(g) {
+    var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
+    return '<div class="mw-masc-help"><img src="/assets/mascots/' + g.id + '.svg" alt="" width="72" height="72"><p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + '. Here\u2019s how ' + g.name + ' works.</p></div>';
+  }
+  function mascotCheer(id) {
+    var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
+    var line = m.cheer[Math.floor(Math.random() * m.cheer.length)];
+    return '<div class="cb-masc"><span class="cb-bub">' + line + '</span><img src="/assets/mascots/' + id + '.svg" alt="' + m.name + '" width="96" height="96"><span class="cb-mname">' + m.name + "</span></div>";
+  }
   function celebrate(id, st) {
     var f = SCENES[id]; if (!f || !st) return;
-    queue(f(st));
+    var sc0 = f(st); if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = Math.max(sc0.ms || 0, 3000); }
+    queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
     if (g && st.win && !g.weekly && !g.dailyLine) { var t = sydToday(); if (diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
   }
@@ -394,7 +404,7 @@
       if (a === "sub") { var t = document.getElementById("newsletter"); if (t) { e.preventDefault(); var nv2 = document.getElementById("mw-nav"); if (nv2) nv2.classList.remove("open"); t.scrollIntoView({ behavior: "smooth", block: "center" }); var inp = t.querySelector("input[type=email]"); if (inp) setTimeout(function () { inp.focus({ preventScroll: true }); }, 400); } else { e.preventDefault(); location.href = "/#newsletter"; } }
       if (a === "settings") settings();
       if (a === "stats") statsModal(g);
-      if (a === "help") modal("How to play", "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : ""));
+      if (a === "help") modal("How to play", mascotHelp(g) + "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : ""));
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }
     });
     document.body.insertBefore(bar, document.body.firstChild);
@@ -557,7 +567,7 @@
     var q = new URLSearchParams(location.search);
     function start() {
       sp.hidden = true; box.hidden = false; window.scrollTo(0, 0);
-      if (g.help && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '<p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Find this again under the ? icon.</p>'); }, 350); }
+      if (g.help && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, mascotHelp(g) + "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '<p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Find this again under the ? icon.</p>'); }, 350); }
     }
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";

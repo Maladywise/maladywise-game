@@ -435,3 +435,15 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .doc ul.fslist li span{display:block;font-size:13.5px;color:var(--muted)}
 @media (min-width:700px){.doc ul.fslist{grid-template-columns:1fr 1fr}}
 .card .pill.wk{margin:4px 0 8px}
+.mw-masc-help{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+.mw-masc-help img{flex:none;width:72px;height:72px;animation:mascBob 2.4s ease-in-out infinite}
+.mw-masc-help p{margin:0;font-size:14.5px;line-height:1.4}
+.cb-masc{position:absolute;right:max(14px,4vw);bottom:max(70px,10vh);display:flex;flex-direction:column;align-items:center;gap:2px;animation:mascIn .5s cubic-bezier(.3,1.6,.5,1) .35s both}
+.cb-masc img{width:96px;height:96px;animation:mascHop .7s ease-in-out .9s 3}
+.cb-bub{background:#fff;color:#2B2340;font:700 13.5px Poppins,system-ui,sans-serif;padding:7px 11px;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.15);max-width:170px;text-align:center;position:relative;margin-bottom:4px}
+.cb-bub::after{content:"";position:absolute;bottom:-6px;left:50%;margin-left:-6px;border:6px solid transparent;border-top-color:#fff;border-bottom:0}
+.cb-mname{font:600 10px Poppins,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6B5A93}
+@keyframes mascIn{from{transform:translateY(40px) scale(.6);opacity:0}to{transform:none;opacity:1}}
+@keyframes mascHop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px) rotate(-4deg)}70%{transform:translateY(0) rotate(3deg)}}
+@keyframes mascBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.cb-masc,.cb-masc img,.mw-masc-help img{animation:none}}
