@@ -447,3 +447,4 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 @keyframes mascHop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px) rotate(-4deg)}70%{transform:translateY(0) rotate(3deg)}}
 @keyframes mascBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.cb-masc,.cb-masc img,.mw-masc-help img{animation:none}}
+.cb-masc{right:auto;left:50%;margin-left:-90px;width:180px}
