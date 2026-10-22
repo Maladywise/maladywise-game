@@ -134,12 +134,12 @@
   "number": 11,
   "difficulty": "Easy",
   "chain": [
-   "HEAD",
-   "INJURY",
-   "TIME",
-   "BOMB",
-   "SQUAD",
-   "CAR"
+   "SHOWER",
+   "CHAIR",
+   "LIFT",
+   "OFF",
+   "SIDE",
+   "EFFECT"
   ]
  },
  {
@@ -147,12 +147,12 @@
   "number": 12,
   "difficulty": "Medium",
   "chain": [
-   "HEAD",
-   "COLD",
-   "SWEAT",
-   "SHOP",
-   "FLOOR",
-   "PLAN"
+   "BROKEN",
+   "LEG",
+   "SPIN",
+   "DOCTOR",
+   "SHOPPING",
+   "LIST"
   ]
  },
  {
@@ -160,12 +160,12 @@
   "number": 13,
   "difficulty": "Medium",
   "chain": [
-   "KIDNEY",
-   "STONE",
-   "AGE",
-   "SPOT",
-   "CHECK",
-   "UP"
+   "WARNING",
+   "SIGN",
+   "LANGUAGE",
+   "BARRIER",
+   "CREAM",
+   "CHEESE"
   ]
  },
  {
@@ -173,12 +173,12 @@
   "number": 14,
   "difficulty": "Hard",
   "chain": [
-   "FATTY",
-   "LIVER",
-   "SPOT",
-   "LIGHT",
-   "HOUSE",
-   "ARREST"
+   "DEEP",
+   "FROZEN",
+   "SHOULDER",
+   "CHARGE",
+   "NURSE",
+   "PRACTITIONER"
   ]
  },
  {
@@ -186,12 +186,12 @@
   "number": 15,
   "difficulty": "Hard",
   "chain": [
-   "IRON",
-   "LUNG",
-   "CANCER",
-   "WARD",
-   "ROUND",
-   "TRIP"
+   "GAG",
+   "REFLEX",
+   "HAMMER",
+   "HORROR",
+   "STORY",
+   "BOOK"
   ]
  }
 ]

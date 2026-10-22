@@ -43,5 +43,140 @@
     ]
    }
   ]
+ },
+ {
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Electrolytes",
+    "level": 1,
+    "words": [
+     "SODIUM",
+     "POTASSIUM",
+     "CALCIUM",
+     "MAGNESIUM"
+    ]
+   },
+   {
+    "label": "Common symptoms",
+    "level": 1,
+    "words": [
+     "NAUSEA",
+     "DIZZINESS",
+     "FATIGUE",
+     "HEADACHE"
+    ]
+   },
+   {
+    "label": "Mosquito-borne infections",
+    "level": 2,
+    "words": [
+     "DENGUE",
+     "MALARIA",
+     "ROSS RIVER",
+     "MURRAY VALLEY"
+    ]
+   },
+   {
+    "label": "SSRIs",
+    "level": 2,
+    "words": [
+     "SERTRALINE",
+     "FLUOXETINE",
+     "ESCITALOPRAM",
+     "PAROXETINE"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Einstein",
+  "groups": [
+   {
+    "label": "Bones named after shapes",
+    "level": 1,
+    "words": [
+     "CUBOID",
+     "NAVICULAR",
+     "PISIFORM",
+     "CUNEIFORM"
+    ]
+   },
+   {
+    "label": "Radiology signs",
+    "level": 2,
+    "words": [
+     "STEEPLE",
+     "COFFEE BEAN",
+     "BIRD'S BEAK",
+     "STRING"
+    ]
+   },
+   {
+    "label": "Syndromes named after fiction",
+    "level": 3,
+    "words": [
+     "PICKWICKIAN",
+     "MUNCHAUSEN",
+     "OTHELLO",
+     "ALICE IN WONDERLAND"
+    ]
+   },
+   {
+    "label": "Hidden numbers",
+    "level": 4,
+    "words": [
+     "BONE",
+     "TENDON",
+     "CANINE",
+     "HEIGHT"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Liver function tests",
+    "level": 2,
+    "words": [
+     "ALT",
+     "AST",
+     "GGT",
+     "ALP"
+    ]
+   },
+   {
+    "label": "Fungal infections",
+    "level": 3,
+    "words": [
+     "TINEA",
+     "THRUSH",
+     "ASPERGILLOSIS",
+     "CRYPTOCOCCUS"
+    ]
+   },
+   {
+    "label": "Inherited blood disorders",
+    "level": 3,
+    "words": [
+     "HAEMOPHILIA",
+     "THALASSAEMIA",
+     "SICKLE CELL",
+     "SPHEROCYTOSIS"
+    ]
+   },
+   {
+    "label": "Anagrams of organs",
+    "level": 4,
+    "words": [
+     "EARTH",
+     "VILER",
+     "SLUNG",
+     "BAIRN"
+    ]
+   }
+  ]
  }
 ]

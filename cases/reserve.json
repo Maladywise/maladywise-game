@@ -30,5 +30,152 @@
    }
   ],
   "pearl": "Not just a sailor's disease. It still turns up with restrictive diets, alcohol use disorder and in older men living alone. Symptoms respond within days of vitamin C replacement."
+ },
+ {
+  "difficulty": "Easy",
+  "title": "Pins, needles, pills",
+  "answer": "Vitamin B12 deficiency (metformin-related)",
+  "accept": [
+   "b12 deficiency",
+   "vitamin b12 deficiency",
+   "b12",
+   "cobalamin deficiency",
+   "pernicious anaemia",
+   "pernicious anemia",
+   "metformin induced b12 deficiency",
+   "subacute combined degeneration"
+  ],
+  "clues": [
+   {
+    "t": "62-year-old man with tingling in both feet for 6 months."
+   },
+   {
+    "t": "Unsteady walking in the dark. Fine with the lights on."
+   },
+   {
+    "t": "Type 2 diabetes for 12 years, HbA1c well controlled."
+   },
+   {
+    "t": "Sore, smooth, red tongue."
+   },
+   {
+    "t": "Hb 128 g/L · MCV 106 fL",
+    "d": 1
+   },
+   {
+    "t": "On metformin 1 g twice daily since diagnosis."
+   }
+  ],
+  "pearl": "Not every neuropathy in diabetes is diabetic. Long-term metformin lowers B12 absorption, and neurological damage can occur before anaemia appears. Check B12 (or holotranscobalamin) periodically."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "Salt of the earth",
+  "answer": "Addison's disease (primary adrenal insufficiency)",
+  "accept": [
+   "addisons",
+   "addison's",
+   "addison",
+   "addisons disease",
+   "addison's disease",
+   "addison disease",
+   "primary adrenal insufficiency",
+   "adrenal insufficiency",
+   "hypoadrenalism",
+   "primary hypoadrenalism"
+  ],
+  "clues": [
+   {
+    "t": "34-year-old woman. Exhausted, lost 6 kg without trying."
+   },
+   {
+    "t": "Craves salty food. Adds salt to her chips twice."
+   },
+   {
+    "t": "Light-headed on standing. Nauseated most mornings."
+   },
+   {
+    "t": "Palmar creases and gums look darker than her baseline."
+   },
+   {
+    "t": "Na 128 mmol/L · K 5.7 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "9 am cortisol 62 nmol/L · ACTH markedly raised",
+    "d": 1
+   }
+  ],
+  "pearl": "Hyponatraemia with hyperkalaemia is the tell. Raised ACTH means the problem is in the adrenal (primary), which causes the pigmentation. If she's unwell, give hydrocortisone before you wait on tests."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "Slaughterhouse fever",
+  "answer": "Q fever",
+  "accept": [
+   "q fever",
+   "qfever",
+   "coxiella",
+   "coxiella burnetii",
+   "q-fever"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man with high fevers and sweats for 5 days."
+   },
+   {
+    "t": "Severe headache behind the eyes and aching muscles."
+   },
+   {
+    "t": "Dry cough. Chest X-ray shows patchy changes.",
+    "d": 1
+   },
+   {
+    "t": "ALT 140 U/L · Platelets 98 ×10⁹/L",
+    "d": 1
+   },
+   {
+    "t": "Lives in the Upper Hunter. Not vaccinated against anything since school."
+   },
+   {
+    "t": "Works at an abattoir processing cattle and goats."
+   }
+  ],
+  "pearl": "Ask every febrile patient what they do for work. Q fever is notifiable. Prevention is Q-Vax, but workers need skin and serology testing first because vaccinating someone already immune can cause severe reactions."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "After the dentist",
+  "answer": "Infective endocarditis",
+  "accept": [
+   "infective endocarditis",
+   "endocarditis",
+   "bacterial endocarditis",
+   "subacute bacterial endocarditis",
+   "sbe",
+   "ie"
+  ],
+  "clues": [
+   {
+    "t": "63-year-old man with fevers and night sweats for 3 weeks."
+   },
+   {
+    "t": "Lost 4 kg. Aching joints. \"Feels like a flu that won't leave.\""
+   },
+   {
+    "t": "He had a tooth extracted 6 weeks ago."
+   },
+   {
+    "t": "He has a known heart murmur from rheumatic fever as a child."
+   },
+   {
+    "t": "Thin dark streaks under two fingernails. Tender red lumps on his finger pads."
+   },
+   {
+    "t": "2 of 3 blood cultures grow viridans streptococci",
+    "d": 1
+   }
+  ],
+  "pearl": "Take three sets of blood cultures before any antibiotics. Splinter haemorrhages and Osler's nodes are late but classic. Prolonged fever plus a murmur is endocarditis until proven otherwise."
  }
 ]
