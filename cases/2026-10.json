@@ -377,119 +377,141 @@
   "date": "2026-10-27",
   "number": 11,
   "difficulty": "Easy",
-  "title": "Pins, needles, pills",
-  "answer": "Vitamin B12 deficiency (metformin-related)",
+  "title": "Lifting the baby",
+  "answer": "De Quervain's tenosynovitis",
   "accept": [
-   "b12 deficiency",
-   "vitamin b12 deficiency",
-   "b12",
-   "cobalamin deficiency",
-   "pernicious anaemia",
-   "pernicious anemia",
-   "metformin induced b12 deficiency",
-   "subacute combined degeneration"
+   "de quervain's tenosynovitis",
+   "de quervains tenosynovitis",
+   "de quervain tenosynovitis",
+   "de quervain's",
+   "de quervains",
+   "de quervain",
+   "dequervains",
+   "de quervain's disease",
+   "de quervain disease",
+   "de quervain's tendinopathy",
+   "mummy thumb",
+   "mommy thumb",
+   "mother's thumb",
+   "mothers wrist",
+   "washerwoman's sprain",
+   "radial styloid tenosynovitis",
+   "first dorsal compartment tenosynovitis",
+   "stenosing tenosynovitis"
   ],
   "clues": [
    {
-    "t": "62-year-old man with tingling in both feet for 6 months."
+    "t": "31-year-old woman with pain on the thumb side of her wrist for 4 weeks."
    },
    {
-    "t": "Unsteady walking in the dark. Fine with the lights on."
+    "t": "Her baby is 3 months old. Scooping him out of the cot makes it much worse."
    },
    {
-    "t": "Type 2 diabetes for 12 years, HbA1c well controlled."
+    "t": "Wringing out a cloth sends pain up the forearm."
    },
    {
-    "t": "Sore, smooth, red tongue."
+    "t": "Tender, slightly swollen spot just above the base of the thumb. No numbness or tingling."
    },
    {
-    "t": "Hb 128 g/L · MCV 106 fL",
+    "t": "Tucking the thumb into a fist and tilting the wrist towards the little finger reproduces the pain."
+   },
+   {
+    "t": "Ultrasound: thickened sheath around the tendons of the first extensor compartment.",
     "d": 1
-   },
-   {
-    "t": "On metformin 1 g twice daily since diagnosis."
    }
   ],
-  "pearl": "Not every neuropathy in diabetes is diabetic. Long-term metformin lowers B12 absorption, and neurological damage can occur before anaemia appears. Check B12 (or holotranscobalamin) periodically."
+  "pearl": "Abductor pollicis longus and extensor pollicis brevis rub in their tunnel. Very common after a new baby. OTs and hand therapists often make a thumb splint and teach easier ways to lift. Happy World OT Day."
  },
  {
   "date": "2026-10-28",
   "number": 12,
   "difficulty": "Medium",
-  "title": "Salt of the earth",
-  "answer": "Addison's disease (primary adrenal insufficiency)",
+  "title": "Bowled over",
+  "answer": "Spondylolysis (pars stress fracture)",
   "accept": [
-   "addisons",
-   "addison's",
-   "addison",
-   "addisons disease",
-   "addison's disease",
-   "addison disease",
-   "primary adrenal insufficiency",
-   "adrenal insufficiency",
-   "hypoadrenalism",
-   "primary hypoadrenalism"
+   "spondylolysis",
+   "pars fracture",
+   "pars stress fracture",
+   "pars defect",
+   "pars interarticularis fracture",
+   "pars interarticularis stress fracture",
+   "pars interarticularis defect",
+   "pars stress reaction",
+   "lumbar stress fracture",
+   "lumbar spine stress fracture",
+   "lumbar bone stress injury",
+   "bone stress injury",
+   "stress fracture",
+   "stress fracture of the pars",
+   "vertebral stress fracture",
+   "l4 pars fracture"
   ],
   "clues": [
    {
-    "t": "34-year-old woman. Exhausted, lost 6 kg without trying."
+    "t": "17-year-old with low back pain for 6 weeks."
    },
    {
-    "t": "Craves salty food. Adds salt to her chips twice."
+    "t": "He's a right-arm fast bowler who has just stepped up to senior cricket."
    },
    {
-    "t": "Light-headed on standing. Nauseated most mornings."
+    "t": "Worse arching backwards and after a long spell. Better with rest. No leg pain or tingling."
    },
    {
-    "t": "Palmar creases and gums look darker than her baseline."
+    "t": "Standing on his left leg and leaning back reproduces pain just left of the spine."
    },
    {
-    "t": "Na 128 mmol/L · K 5.7 mmol/L",
+    "t": "Plain X-rays of the lumbar spine are normal.",
     "d": 1
    },
    {
-    "t": "9 am cortisol 62 nmol/L · ACTH markedly raised",
+    "t": "MRI: bone oedema in the left L4 pars interarticularis.",
     "d": 1
    }
   ],
-  "pearl": "Hyponatraemia with hyperkalaemia is the tell. Raised ACTH means the problem is in the adrenal (primary), which causes the pigmentation. If she's unwell, give hydrocortisone before you wait on tests."
+  "pearl": "Fast bowlers usually stress the pars on the side opposite the bowling arm, at L4 or L5, often around 17 or 18 when workloads jump. Plain films miss early injuries. With a Test series on this week, the quicks are earning their ice baths."
  },
  {
   "date": "2026-10-29",
   "number": 13,
   "difficulty": "Medium",
-  "title": "Slaughterhouse fever",
-  "answer": "Q fever",
+  "title": "Pain in the neck",
+  "answer": "Carotid artery dissection",
   "accept": [
-   "q fever",
-   "qfever",
-   "coxiella",
-   "coxiella burnetii",
-   "q-fever"
+   "carotid artery dissection",
+   "carotid dissection",
+   "internal carotid artery dissection",
+   "internal carotid dissection",
+   "ica dissection",
+   "cervical artery dissection",
+   "cervical arterial dissection",
+   "arterial dissection",
+   "dissection",
+   "carotid artery tear",
+   "dissected carotid"
   ],
   "clues": [
    {
-    "t": "38-year-old man with high fevers and sweats for 5 days."
+    "t": "42-year-old man with sudden pain on the left side of his neck and a left-sided headache."
    },
    {
-    "t": "Severe headache behind the eyes and aching muscles."
+    "t": "It began 2 days ago after a vigorous neck stretch at the gym."
    },
    {
-    "t": "Dry cough. Chest X-ray shows patchy changes.",
+    "t": "His left upper eyelid droops slightly and his left pupil is small."
+   },
+   {
+    "t": "This morning his right hand went clumsy and weak for 20 minutes, then recovered."
+   },
+   {
+    "t": "BP 128/80 · ECG: sinus rhythm · Glucose normal",
     "d": 1
    },
    {
-    "t": "ALT 140 U/L · Platelets 98 ×10⁹/L",
+    "t": "CT angiogram: long, tapering narrowing of the left internal carotid artery.",
     "d": 1
-   },
-   {
-    "t": "Lives in the Upper Hunter. Not vaccinated against anything since school."
-   },
-   {
-    "t": "Works at an abattoir processing cattle and goats."
    }
   ],
-  "pearl": "Ask every febrile patient what they do for work. Q fever is notifiable. Prevention is Q-Vax, but workers need skin and serology testing first because vaccinating someone already immune can cause severe reactions."
+  "pearl": "A leading cause of stroke under 50. Neck pain plus a partial Horner's syndrome plus a TIA or stroke is the classic trio. The Horner's is usually partial because sweating fibres to the face travel with the external carotid. Happy World Stroke Day."
  },
  {
   "date": "2026-10-30",
@@ -534,37 +556,44 @@
   "date": "2026-10-31",
   "number": 15,
   "difficulty": "Hard",
-  "title": "After the dentist",
-  "answer": "Infective endocarditis",
+  "title": "Cold feet",
+  "answer": "Ergotism (ergotamine toxicity)",
   "accept": [
-   "infective endocarditis",
-   "endocarditis",
-   "bacterial endocarditis",
-   "subacute bacterial endocarditis",
-   "sbe",
-   "ie"
+   "ergotism",
+   "ergotamine toxicity",
+   "ergotamine poisoning",
+   "ergot poisoning",
+   "ergot toxicity",
+   "ergot alkaloid toxicity",
+   "ergotamine induced vasospasm",
+   "ergot induced vasospasm",
+   "st anthony's fire",
+   "saint anthony's fire",
+   "st anthonys fire",
+   "ergotamine interaction",
+   "ergotamine clarithromycin interaction"
   ],
   "clues": [
    {
-    "t": "63-year-old man with fevers and night sweats for 3 weeks."
+    "t": "58-year-old woman with burning pain and coldness in both feet for 2 days."
    },
    {
-    "t": "Lost 4 kg. Aching joints. \"Feels like a flu that won't leave.\""
+    "t": "Her toes go white, then a dusky blue. Walking a short way makes her calves ache."
    },
    {
-    "t": "He had a tooth extracted 6 weeks ago."
+    "t": "She started clarithromycin for a chest infection 4 days ago."
    },
    {
-    "t": "He has a known heart murmur from rheumatic fever as a child."
+    "t": "Foot pulses are barely felt. Heart rhythm is regular."
    },
    {
-    "t": "Thin dark streaks under two fingernails. Tender red lumps on his finger pads."
+    "t": "For years she has taken an old migraine tablet a few times a month."
    },
    {
-    "t": "2 of 3 blood cultures grow viridans streptococci",
+    "t": "Angiogram: smooth, tapered narrowing of arteries in both legs. No clots.",
     "d": 1
    }
   ],
-  "pearl": "Take three sets of blood cultures before any antibiotics. Splinter haemorrhages and Osler's nodes are late but classic. Prolonged fever plus a murmur is endocarditis until proven otherwise."
+  "pearl": "Clarithromycin blocks CYP3A4, so ergotamine builds up and clamps arteries shut. In the Middle Ages, ergot-infected rye caused ‘St Anthony's fire’. A 1976 paper even blamed the Salem witch trials on it, though historians remain unconvinced. Happy Halloween."
  }
 ]

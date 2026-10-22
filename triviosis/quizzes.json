@@ -867,107 +867,107 @@
   "date": "2026-10-26",
   "number": 9,
   "difficulty": "Easy",
-  "theme": "Respiratory",
+  "theme": "Nobel nerves",
   "questions": [
    {
-    "q": "Which lung has three lobes?",
-    "a": "The right lung",
+    "q": "The 2026 Nobel Prize in Physiology or Medicine went to pioneers of which technique?",
+    "a": "Optogenetics",
     "w": [
-     "The left lung",
-     "Both lungs",
-     "Neither lung"
+     "CRISPR gene editing",
+     "mRNA vaccines",
+     "Deep brain stimulation"
     ],
-    "e": "The left makes room for the heart."
+    "e": "Announced on 5 October. Switching nerve cells on and off with light."
    },
    {
-    "q": "Blue asthma reliever puffers usually contain?",
-    "a": "Salbutamol",
+    "q": "The light-sensitive protein behind optogenetics was first found in?",
+    "a": "A single-celled green alga",
     "w": [
-     "Budesonide",
-     "Montelukast",
-     "Tiotropium"
+     "A firefly",
+     "A glowing jellyfish",
+     "A deep-sea fish"
+    ],
+    "e": "Channelrhodopsin, from Chlamydomonas. Pond life, Nobel-adjacent."
+   },
+   {
+    "q": "Channelrhodopsin opens when it is hit by which colour of light?",
+    "a": "Blue",
+    "w": [
+     "Red",
+     "Yellow",
+     "Infrared"
+    ],
+    "e": "Shine blue light, and the nerve cell fires."
+   },
+   {
+    "q": "What is the gap between two nerve cells called?",
+    "a": "Synapse",
+    "w": [
+     "Axon",
+     "Dendrite",
+     "Node of Ranvier"
     ],
     "e": ""
    },
    {
-    "q": "What is the main muscle of breathing?",
-    "a": "The diaphragm",
+    "q": "Which fatty coating speeds up nerve signals?",
+    "a": "Myelin",
     "w": [
-     "The intercostal muscles",
-     "Sternocleidomastoid",
-     "Pectoralis major"
+     "Collagen",
+     "Keratin",
+     "Surfactant"
+    ],
+    "e": "It's what gets damaged in multiple sclerosis."
+   },
+   {
+    "q": "The light-detecting rods and cones sit in which part of the eye?",
+    "a": "The retina",
+    "w": [
+     "The cornea",
+     "The lens",
+     "The iris"
+    ],
+    "e": "Their pigment, rhodopsin, is a distant cousin of the Nobel protein."
+   },
+   {
+    "q": "Movement of the left hand is controlled mainly by?",
+    "a": "The right side of the brain",
+    "w": [
+     "The left side of the brain",
+     "The cerebellum alone",
+     "The spinal cord alone"
+    ],
+    "e": "The wiring crosses over."
+   },
+   {
+    "q": "An EEG records?",
+    "a": "Electrical activity of the brain",
+    "w": [
+     "Blood flow to the brain",
+     "Brain size",
+     "Pressure inside the skull"
     ],
     "e": ""
    },
    {
-    "q": "Where does gas exchange happen in the lungs?",
-    "a": "The alveoli",
+    "q": "Nerve cells pass a signal to the next cell using?",
+    "a": "Neurotransmitters",
     "w": [
-     "The bronchioles",
-     "The pleura",
-     "The trachea"
+     "Antibodies",
+     "Platelets",
+     "Enzymes from the liver"
     ],
-    "e": "About 300\u2013500 million of them."
+    "e": "Chemicals such as dopamine and serotonin."
    },
    {
-    "q": "What does COPD stand for?",
-    "a": "Chronic obstructive pulmonary disease",
+    "q": "Today, optogenetics is mainly?",
+    "a": "A research tool",
     "w": [
-     "Chronic oxygen perfusion disorder",
-     "Combined obstructive pleural disease",
-     "Chronic organic pulmonary dysfunction"
+     "A routine migraine treatment",
+     "A standard eye test",
+     "A hair removal method"
     ],
-    "e": ""
-   },
-   {
-    "q": "A normal oxygen saturation in a healthy adult is?",
-    "a": "95\u2013100%",
-    "w": [
-     "88\u201392%",
-     "80\u201385%",
-     "70\u201375%"
-    ],
-    "e": "88\u201392% is a common target in some people with COPD."
-   },
-   {
-    "q": "Which gene is faulty in cystic fibrosis?",
-    "a": "CFTR",
-    "w": [
-     "BRCA1",
-     "HFE",
-     "APOE"
-    ],
-    "e": ""
-   },
-   {
-    "q": "Asbestos exposure is linked to which cancer of the lung lining?",
-    "a": "Mesothelioma",
-    "w": [
-     "Small cell carcinoma",
-     "Lymphoma",
-     "Sarcoidosis"
-    ],
-    "e": "Can appear decades after exposure."
-   },
-   {
-    "q": "A collapsed lung caused by air in the chest cavity is called?",
-    "a": "Pneumothorax",
-    "w": [
-     "Pleurisy",
-     "Emphysema",
-     "Bronchiectasis"
-    ],
-    "e": ""
-   },
-   {
-    "q": "Whooping cough is caused by?",
-    "a": "Bordetella pertussis",
-    "w": [
-     "Haemophilus influenzae",
-     "Streptococcus pneumoniae",
-     "Mycoplasma pneumoniae"
-    ],
-    "e": "The \u2018100-day cough\u2019."
+    "e": "Early human trials exist, including one where a man with retinitis pigmentosa regained partial sight. Still experimental."
    }
   ]
  },
@@ -975,107 +975,107 @@
   "date": "2026-10-27",
   "number": 10,
   "difficulty": "Easy",
-  "theme": "Skin deep",
+  "theme": "Back to everyday life",
   "questions": [
    {
-    "q": "What is the most common skin cancer?",
-    "a": "Basal cell carcinoma",
+    "q": "What do occupational therapists mainly help people do?",
+    "a": "Get back to everyday activities",
     "w": [
-     "Melanoma",
-     "Squamous cell carcinoma",
-     "Merkel cell carcinoma"
+     "Find a new job",
+     "Dispense medicines",
+     "Read X-rays"
+    ],
+    "e": "\u2018Occupation\u2019 means anything that fills your day. World OT Day has been held on 27 October since 2010."
+   },
+   {
+    "q": "In healthcare, what does ADL stand for?",
+    "a": "Activities of daily living",
+    "w": [
+     "Adult disability level",
+     "Acute drug list",
+     "Allied discharge letter"
     ],
     "e": ""
    },
    {
-    "q": "In the ABCDE check for melanoma, what does the D stand for?",
-    "a": "Diameter",
+    "q": "Which of these is a basic ADL?",
+    "a": "Showering",
     "w": [
-     "Darkness",
-     "Depth",
-     "Dermis"
+     "Grocery shopping",
+     "Managing money",
+     "Using a phone"
     ],
-    "e": "Asymmetry, Border, Colour, Diameter, Evolving."
+    "e": "Shopping, money and phones are \u2018instrumental\u2019 ADLs."
    },
    {
-    "q": "Ringworm is caused by?",
-    "a": "A fungus",
+    "q": "Carpal tunnel syndrome squashes which nerve?",
+    "a": "The median nerve",
     "w": [
-     "A worm",
-     "A virus",
-     "A bacterium"
+     "The ulnar nerve",
+     "The radial nerve",
+     "The axillary nerve"
     ],
-    "e": "No worms were harmed."
+    "e": "Night-time tingling in the thumb, index and middle fingers is classic."
    },
    {
-    "q": "Scabies is caused by?",
-    "a": "A mite",
+    "q": "A grabber for picking things up without bending is usually called a?",
+    "a": "Reacher",
     "w": [
-     "A louse",
-     "A flea",
-     "A fungus"
-    ],
-    "e": "Sarcoptes scabiei. Treat the whole household."
-   },
-   {
-    "q": "Silvery, scaly plaques on the elbows and knees suggest?",
-    "a": "Psoriasis",
-    "w": [
-     "Eczema",
-     "Rosacea",
-     "Vitiligo"
+     "Rollator",
+     "Commode",
+     "Hoist"
     ],
     "e": ""
    },
    {
-    "q": "Honey-crusted sores around a child\u2019s nose suggest?",
-    "a": "Impetigo",
+    "q": "A walking frame with wheels, brakes and a seat is a?",
+    "a": "Rollator",
     "w": [
-     "Cold sores",
-     "Eczema",
-     "Chickenpox"
+     "Zimmer frame",
+     "Tilt table",
+     "Gurney"
     ],
-    "e": "School sores. Usually staph or strep."
+    "e": "The frame without wheels is the Zimmer."
    },
    {
-    "q": "Which vitamin does skin make in sunlight?",
-    "a": "Vitamin D",
+    "q": "After a right-sided stroke, ignoring everything on the left is called?",
+    "a": "Neglect",
     "w": [
-     "Vitamin A",
-     "Vitamin C",
-     "Vitamin K"
+     "Aphasia",
+     "Ataxia",
+     "Agnosia"
+    ],
+    "e": "OTs train people to scan towards the ignored side."
+   },
+   {
+    "q": "Trouble carrying out planned movements, like using a toothbrush, despite normal strength is?",
+    "a": "Apraxia",
+    "w": [
+     "Aphasia",
+     "Ataxia",
+     "Dysarthria"
     ],
     "e": ""
    },
    {
-    "q": "Shingles is a reactivation of which virus?",
-    "a": "Varicella-zoster virus",
+    "q": "Grip strength is measured with a?",
+    "a": "Dynamometer",
     "w": [
-     "Herpes simplex virus",
-     "Epstein\u2013Barr virus",
-     "Cytomegalovirus"
+     "Goniometer",
+     "Spirometer",
+     "Tonometer"
     ],
-    "e": "The chickenpox virus, back for a sequel."
+    "e": "A goniometer measures joint angles. Weak grip also tracks frailty."
    },
    {
-    "q": "What does SPF stand for?",
-    "a": "Sun protection factor",
+    "q": "A raised toilet seat mainly helps people who struggle with?",
+    "a": "Getting up from low seats",
     "w": [
-     "Skin protection formula",
-     "Solar protection filter",
-     "Sun power factor"
+     "Bladder control",
+     "Seeing in the dark",
+     "Swallowing"
     ],
-    "e": ""
-   },
-   {
-    "q": "Patchy loss of skin pigment is called?",
-    "a": "Vitiligo",
-    "w": [
-     "Melasma",
-     "Albinism",
-     "Pityriasis rosea"
-    ],
-    "e": ""
+    "e": "Often after a hip replacement."
    }
   ]
  },
@@ -1191,107 +1191,107 @@
   "date": "2026-10-29",
   "number": 12,
   "difficulty": "Medium",
-  "theme": "The body by numbers",
+  "theme": "Time is brain",
   "questions": [
    {
-    "q": "What is a normal adult resting heart rate?",
-    "a": "60\u2013100 beats per minute",
+    "q": "Most strokes are caused by?",
+    "a": "A blocked artery (ischaemic)",
     "w": [
-     "40\u201360 beats per minute",
-     "100\u2013140 beats per minute",
-     "30\u201350 beats per minute"
+     "A bleed (haemorrhagic)",
+     "An infection",
+     "Low blood sugar"
     ],
-    "e": "Fit athletes can sit lower without any problem."
+    "e": "Roughly 8 in 10 are ischaemic."
    },
    {
-    "q": "Normal core body temperature is about?",
-    "a": "37.0\u00b0C",
+    "q": "The World Stroke Organization says your lifetime risk of stroke is about?",
+    "a": "1 in 4",
     "w": [
-     "35.0\u00b0C",
-     "38.5\u00b0C",
-     "39.5\u00b0C"
+     "1 in 20",
+     "1 in 100",
+     "1 in 2"
     ],
-    "e": "It varies through the day and by where it\u2019s measured."
+    "e": "Today is World Stroke Day, held every 29 October since 2006."
    },
    {
-    "q": "How long does a red blood cell live?",
-    "a": "About 120 days",
+    "q": "In an untreated large ischaemic stroke, about how many brain cells are lost each minute?",
+    "a": "About 1.9 million",
     "w": [
-     "About 7 days",
-     "About 30 days",
-     "About 1 year"
+     "About 1,900",
+     "About 19,000",
+     "About 19 billion"
     ],
-    "e": "Old cells are cleared mainly by the spleen."
+    "e": "Jeffrey Saver's 2006 estimate. Hence \u2018time is brain\u2019."
    },
    {
-    "q": "How much blood does an average adult have?",
-    "a": "About 5 litres",
+    "q": "A stroke in the left middle cerebral artery usually weakens the?",
+    "a": "Right face and arm",
     "w": [
-     "About 2 litres",
-     "About 8 litres",
-     "About 12 litres"
+     "Left face and arm",
+     "Both legs equally",
+     "Left leg only"
     ],
-    "e": "Roughly 7% of body weight."
+    "e": "And often affects language too."
    },
    {
-    "q": "What is a normal adult breathing rate at rest?",
-    "a": "12\u201320 breaths per minute",
+    "q": "A TIA is?",
+    "a": "Stroke symptoms that fully go away, usually within an hour",
     "w": [
-     "4\u20138 breaths per minute",
-     "25\u201335 breaths per minute",
-     "40\u201360 breaths per minute"
+     "A small bleed in the brain",
+     "A stroke during sleep",
+     "A stroke that only affects vision"
     ],
-    "e": "A raised breathing rate is one of the earliest signs of a sick patient."
+    "e": "A warning shot. Same-day assessment matters."
    },
    {
-    "q": "How many teeth are in a full adult set?",
-    "a": "32",
+    "q": "Damage to Wernicke's area causes trouble with?",
+    "a": "Understanding speech",
     "w": [
-     "28",
-     "20",
-     "36"
+     "Swallowing",
+     "Balance",
+     "Seeing colours"
     ],
-    "e": "Including the four wisdom teeth."
+    "e": "Speech flows but makes little sense."
    },
    {
-    "q": "How many baby (primary) teeth do children have?",
-    "a": "20",
+    "q": "Bleeding into the brain tissue is most strongly linked to?",
+    "a": "High blood pressure",
     "w": [
-     "24",
-     "16",
-     "28"
+     "Low cholesterol",
+     "Asthma",
+     "Short-sightedness"
     ],
-    "e": "They usually start appearing around 6 months."
+    "e": ""
    },
    {
-    "q": "What is the normal range for blood sodium?",
-    "a": "135\u2013145 mmol/L",
+    "q": "Alteplase, the clot-busting drug, is a?",
+    "a": "Tissue plasminogen activator",
     "w": [
-     "3.5\u20135.0 mmol/L",
-     "95\u2013105 mmol/L",
-     "2.1\u20132.6 mmol/L"
+     "Platelet inhibitor",
+     "Vitamin K antagonist",
+     "Factor Xa inhibitor"
     ],
-    "e": "The other ranges are roughly potassium, chloride and calcium."
+    "e": "It must be given within hours of onset, in carefully chosen patients."
    },
    {
-    "q": "How many vertebrae are in the neck?",
-    "a": "7",
+    "q": "A stroke in the back of the brain (posterior circulation) classically causes?",
+    "a": "Vertigo, double vision and unsteadiness",
     "w": [
-     "5",
-     "8",
-     "12"
+     "Isolated hiccups",
+     "Hair loss",
+     "Itchy skin"
     ],
-    "e": "Almost all mammals have seven, giraffes included."
+    "e": "Easily mistaken for an inner ear problem."
    },
    {
-    "q": "Roughly what share of an adult man\u2019s body weight is water?",
-    "a": "60%",
+    "q": "Psoriasis plaques classically appear on the?",
+    "a": "Elbows and knees (extensor surfaces)",
     "w": [
-     "40%",
-     "75%",
-     "90%"
+     "Elbow creases and backs of knees",
+     "Palms only",
+     "Eyelids only"
     ],
-    "e": "A little lower in women and older adults."
+    "e": "Also World Psoriasis Day. Severe psoriasis is linked with higher heart and stroke risk."
    }
   ]
  },
@@ -1407,37 +1407,57 @@
   "date": "2026-10-31",
   "number": 14,
   "difficulty": "Hard",
-  "theme": "Bites, stings and poisons",
+  "theme": "Spooky medicine",
   "questions": [
    {
-    "q": "What is the first aid for a suspected funnel-web spider bite?",
-    "a": "Pressure immobilisation bandage",
+    "q": "In 1985 a chemist suggested which rare disease might explain vampire legends?",
+    "a": "Porphyria",
     "w": [
-     "Ice pack",
-     "Tourniquet",
-     "Sucking out the venom"
+     "Rabies",
+     "Haemophilia",
+     "Albinism"
     ],
-    "e": "Then call 000. Antivenom is available."
+    "e": "Congenital erythropoietic porphyria, said David Dolphin. Historians and doctors were not convinced."
    },
    {
-    "q": "What should you pour on a tropical box jellyfish sting?",
-    "a": "Vinegar",
+    "q": "\u2018Werewolf syndrome\u2019 is a nickname for?",
+    "a": "Hypertrichosis",
     "w": [
-     "Fresh water",
-     "Methylated spirits",
-     "Urine"
+     "Hirsutism",
+     "Clinical lycanthropy",
+     "Alopecia"
     ],
-    "e": "Vinegar stops undischarged stingers firing. Call 000 and start CPR if needed."
+    "e": "Excess hair growth all over. Clinical lycanthropy is the belief you're turning into an animal."
    },
    {
-    "q": "What is the first aid for a redback spider bite?",
-    "a": "A cold pack",
+    "q": "A \u2018zombie\u2019 state of staring, stiff stillness and no response can be?",
+    "a": "Catatonia",
     "w": [
-     "Pressure immobilisation bandage",
-     "Tourniquet",
-     "Heat pack"
+     "Narcolepsy",
+     "Sleepwalking",
+     "Restless legs"
     ],
-    "e": "Unlike funnel-web bites, redback venom moves slowly. Pressure bandaging can make the pain worse."
+    "e": "It often responds well to treatment."
+   },
+   {
+    "q": "Rigor mortis happens because muscles run out of?",
+    "a": "ATP",
+    "w": [
+     "Calcium",
+     "Glucose",
+     "Water"
+    ],
+    "e": "Without ATP, myosin can't let go of actin."
+   },
+   {
+    "q": "Goosebumps are caused by tiny muscles called?",
+    "a": "Arrector pili",
+    "w": [
+     "Erector spinae",
+     "Platysma",
+     "Lumbricals"
+    ],
+    "e": "Left over from furrier ancestors puffing up to look scary."
    },
    {
     "q": "Botulinum toxin works by blocking the release of?",
@@ -1455,39 +1475,9 @@
     "w": [
      "Stonefish",
      "Box jellyfish",
-     "Redback spider"
+     "Stingray"
     ],
-    "e": "Also in the blue-ringed octopus. It blocks sodium channels."
-   },
-   {
-    "q": "Carbon monoxide binds haemoglobin about how much more strongly than oxygen?",
-    "a": "About 200\u2013250 times",
-    "w": [
-     "About 2 times",
-     "About 20 times",
-     "About 2,000 times"
-    ],
-    "e": "Pulse oximeters can read falsely normal in CO poisoning."
-   },
-   {
-    "q": "Which drug is a key antidote for organophosphate poisoning?",
-    "a": "Atropine",
-    "w": [
-     "Naloxone",
-     "Flumazenil",
-     "Vitamin K"
-    ],
-    "e": "Given until the chest is dry. Pralidoxime may be added."
-   },
-   {
-    "q": "Which snakes cause the most snakebite deaths in Australia?",
-    "a": "Brown snakes",
-    "w": [
-     "Taipans",
-     "Tiger snakes",
-     "Death adders"
-    ],
-    "e": "Their venom affects clotting. Pressure immobilisation and an ambulance are key."
+    "e": "It blocks sodium channels. One ethnobotanist claimed it was in Haitian \u2018zombie powder\u2019, a disputed idea."
    },
    {
     "q": "Cyanide is classically said to smell of?",
@@ -1508,6 +1498,16 @@
      "Hiccups"
     ],
     "e": "Its breakdown product, formic acid, damages the optic nerve."
+   },
+   {
+    "q": "The adult skull is made of how many bones, not counting the ear ossicles?",
+    "a": "22",
+    "w": [
+     "8",
+     "14",
+     "32"
+    ],
+    "e": "Eight cranial and fourteen facial."
    }
   ]
  },

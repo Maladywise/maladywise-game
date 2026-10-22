@@ -475,43 +475,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Electrolytes",
+    "label": "Mobility aids",
     "level": 1,
     "words": [
-     "SODIUM",
-     "POTASSIUM",
-     "CALCIUM",
-     "MAGNESIUM"
+     "WALKER",
+     "CRUTCHES",
+     "WHEELCHAIR",
+     "WALKING STICK"
     ]
    },
    {
-    "label": "Common symptoms",
-    "level": 1,
-    "words": [
-     "NAUSEA",
-     "DIZZINESS",
-     "FATIGUE",
-     "HEADACHE"
-    ]
-   },
-   {
-    "label": "Mosquito-borne infections",
+    "label": "Basic activities of daily living",
     "level": 2,
     "words": [
-     "DENGUE",
-     "MALARIA",
-     "ROSS RIVER",
-     "MURRAY VALLEY"
+     "BATHING",
+     "DRESSING",
+     "FEEDING",
+     "TOILETING"
     ]
    },
    {
-    "label": "SSRIs",
+    "label": "Instrumental activities of daily living",
     "level": 2,
     "words": [
-     "SERTRALINE",
-     "FLUOXETINE",
-     "ESCITALOPRAM",
-     "PAROXETINE"
+     "SHOPPING",
+     "COOKING",
+     "BANKING",
+     "DRIVING"
+    ]
+   },
+   {
+    "label": "Types of hand grip",
+    "level": 3,
+    "words": [
+     "POWER",
+     "PINCH",
+     "HOOK",
+     "TRIPOD"
     ]
    }
   ]
@@ -566,43 +566,43 @@
  {
   "groups": [
    {
-    "label": "Bones named after shapes",
+    "label": "Stroke risk factors",
     "level": 1,
     "words": [
-     "CUBOID",
-     "NAVICULAR",
-     "PISIFORM",
-     "CUNEIFORM"
+     "SMOKING",
+     "DIABETES",
+     "HYPERTENSION",
+     "ATRIAL FIBRILLATION"
     ]
    },
    {
-    "label": "Radiology signs",
+    "label": "Signs of a stroke",
     "level": 2,
     "words": [
-     "STEEPLE",
-     "COFFEE BEAN",
-     "BIRD'S BEAK",
-     "STRING"
+     "FACIAL DROOP",
+     "SLURRED SPEECH",
+     "ARM WEAKNESS",
+     "NUMBNESS"
     ]
    },
    {
-    "label": "Syndromes named after fiction",
+    "label": "Types of psoriasis",
     "level": 3,
     "words": [
-     "PICKWICKIAN",
-     "MUNCHAUSEN",
-     "OTHELLO",
-     "ALICE IN WONDERLAND"
+     "PLAQUE",
+     "GUTTATE",
+     "PUSTULAR",
+     "INVERSE"
     ]
    },
    {
-    "label": "Hidden numbers",
+    "label": "___ stroke",
     "level": 4,
     "words": [
-     "BONE",
-     "TENDON",
-     "CANINE",
-     "HEIGHT"
+     "HEAT",
+     "BRUSH",
+     "MASTER",
+     "BACK"
     ]
    }
   ],
@@ -663,43 +663,43 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Liver function tests",
+    "label": "Classic poisons",
+    "level": 1,
+    "words": [
+     "ARSENIC",
+     "CYANIDE",
+     "STRYCHNINE",
+     "HEMLOCK"
+    ]
+   },
+   {
+    "label": "Bones of the skull",
     "level": 2,
     "words": [
-     "ALT",
-     "AST",
-     "GGT",
-     "ALP"
+     "SPHENOID",
+     "ETHMOID",
+     "VOMER",
+     "LACRIMAL"
     ]
    },
    {
-    "label": "Fungal infections",
+    "label": "Diseases blamed for monster myths",
     "level": 3,
     "words": [
-     "TINEA",
-     "THRUSH",
-     "ASPERGILLOSIS",
-     "CRYPTOCOCCUS"
+     "PORPHYRIA",
+     "HYPERTRICHOSIS",
+     "CATATONIA",
+     "RABIES"
     ]
    },
    {
-    "label": "Inherited blood disorders",
-    "level": 3,
-    "words": [
-     "HAEMOPHILIA",
-     "THALASSAEMIA",
-     "SICKLE CELL",
-     "SPHEROCYTOSIS"
-    ]
-   },
-   {
-    "label": "Anagrams of organs",
+    "label": "___ mortis",
     "level": 4,
     "words": [
-     "EARTH",
-     "VILER",
-     "SLUNG",
-     "BAIRN"
+     "RIGOR",
+     "LIVOR",
+     "ALGOR",
+     "PALLOR"
     ]
    }
   ]
