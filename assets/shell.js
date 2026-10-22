@@ -147,7 +147,7 @@
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
-    var line = m.cheer[Math.floor(Math.random() * m.cheer.length)];
+    var last = get("mw-cheer-" + id, -1), k = Math.floor(Math.random() * m.cheer.length); if (k === last) k = (k + 1) % m.cheer.length; set("mw-cheer-" + id, k); var line = m.cheer[k];
     return '<div class="cb-masc"><span class="cb-bub">' + line + '</span><img src="/assets/mascots/' + id + '.svg" alt="' + m.name + '" width="96" height="96"><span class="cb-mname">' + m.name + "</span></div>";
   }
   function celebrate(id, st) {
