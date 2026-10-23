@@ -66,7 +66,8 @@
     "t": "On metformin 1 g twice daily since diagnosis."
    }
   ],
-  "pearl": "Not every neuropathy in diabetes is diabetic. Long-term metformin lowers B12 absorption, and neurological damage can occur before anaemia appears. Check B12 (or holotranscobalamin) periodically."
+  "pearl": "Not every neuropathy in diabetes is diabetic. Long-term metformin lowers B12 absorption, and neurological damage can occur before anaemia appears. Check B12 (or holotranscobalamin) periodically.",
+  "fact": "/b12/"
  },
  {
   "difficulty": "Medium",
@@ -286,7 +287,8 @@
     "d": 1
    }
   ],
-  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20–40 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
+  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20–40 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital.",
+  "fact": "/marine-stings/"
  },
  {
   "difficulty": "Genius",
@@ -355,7 +357,8 @@
     "t": "BMI 34, collar size 46 cm, BP high on three medicines"
    }
   ],
-  "pearl": "Witnessed apnoeas plus daytime sleepiness is the classic pair. Untreated OSA drives resistant hypertension. Commercial drivers have specific fitness-to-drive standards in Australia."
+  "pearl": "Witnessed apnoeas plus daytime sleepiness is the classic pair. Untreated OSA drives resistant hypertension. Commercial drivers have specific fitness-to-drive standards in Australia.",
+  "fact": "/sleep-apnoea/"
  },
  {
   "difficulty": "Medium",

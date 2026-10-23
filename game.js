@@ -160,6 +160,7 @@
     r.innerHTML = '<span class="verdict ' + (st.win ? "win" : "lose") + '">' + (st.win ? "Solved on clue " + st.revealed + " of 6" : "Out of clues") + "</span>" +
       "<h2>" + esc(C.answer) + "</h2>" +
       '<p class="pearl"><b>Pearl:</b> ' + esc(C.pearl) + "</p>" +
+      (/^\/[a-z0-9\/-]+\/$/.test(C.fact || "") ? '<div class="share"><a class="btn ghost" style="text-decoration:none" href="' + esc(C.fact) + '">Read the fact sheet ›</a></div>' : "") +
       '<div class="dist" aria-label="Your solve history">' + dist + "</div>" +
       '<pre class="sharetext" id="dxw-sharetext">' + esc(share) + "</pre>" +
       '<div class="share"><button class="btn" type="button" id="dxw-copy">Copy result</button></div>';
