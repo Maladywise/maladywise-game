@@ -346,7 +346,7 @@
 
 
   // ---------- newsletter (Buttondown) ----------
-  var NL_HTML = '<section class="nl" id="newsletter"><div class="nl-txt"><b>Get Zebra Mail \ud83e\udd93</b><span>A monthly email of medical puzzles, a fictional zebra case and three things I learned. From an Australian GP. Unsubscribe any time.</span></div>' +
+  var NL_HTML = '<section class="nl" id="newsletter"><div class="nl-txt"><b>Get Zebra Mail \ud83e\udd93</b><span>The Weekly Dose: a quick, funny breakdown of the week in health and medicine, every Friday, with puzzles at the end. From an Australian GP. Unsubscribe any time.</span></div>' +
     '<form class="mw-nl" action="https://buttondown.com/api/emails/embed-subscribe/maladywise" method="post" target="_blank">' +
     '<label class="sr" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">' +
     '<input type="hidden" name="embed" value="1"><button type="submit">Subscribe</button></form><p class="nl-msg" aria-live="polite"></p></section>';
@@ -450,9 +450,9 @@
     function house() {
       var h = MW_SITE.house; if (!h) return "";
       var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
-      return '<a class="card house" href="/fact-sheets/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
+      return '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12M26 18v12"/></svg></div>' +
-        '<div class="cbody"><h2 class="name">Patient info</h2><p class="kind">Facts, drugs and tools</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>' +
+        '<div class="cbody"><h2 class="name">Patient info</h2><p class="kind">Conditions, medicines and tools</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>' +
         '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
         '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>" +
