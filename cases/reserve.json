@@ -177,5 +177,223 @@
    }
   ],
   "pearl": "Take three sets of blood cultures before any antibiotics. Splinter haemorrhages and Osler's nodes are late but classic. Prolonged fever plus a murmur is endocarditis until proven otherwise."
+ },
+ {
+  "difficulty": "Genius",
+  "title": "Dark on the windowsill",
+  "answer": "Acute intermittent porphyria",
+  "accept": [
+   "acute intermittent porphyria",
+   "aip",
+   "porphyria",
+   "acute porphyria",
+   "acute hepatic porphyria"
+  ],
+  "clues": [
+   {
+    "t": "26-year-old woman with severe abdominal pain. Third ED visit this year."
+   },
+   {
+    "t": "CT, ultrasound and scopes have all been normal."
+   },
+   {
+    "t": "Anxious and confused this time. Her arms feel weak."
+   },
+   {
+    "t": "Na 124 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "Attacks follow crash diets. This one started after a new medicine."
+   },
+   {
+    "t": "A urine sample left on the windowsill turned dark reddish-brown"
+   }
+  ],
+  "pearl": "Severe abdominal pain with normal imaging, plus hyponatraemia or neurological signs, should prompt a urine porphobilinogen test during the attack. Fasting and many medicines can trigger attacks."
+ },
+ {
+  "title": "Slow burn",
+  "answer": "Whipple's disease",
+  "accept": [
+   "whipple",
+   "whipples",
+   "whipple's",
+   "whipple disease",
+   "whipples disease",
+   "whipple's disease",
+   "tropheryma whipplei",
+   "tropheryma",
+   "t whipplei",
+   "intestinal lipodystrophy"
+  ],
+  "clues": [
+   {
+    "t": "55-year-old man who has lost 12 kg over a year."
+   },
+   {
+    "t": "Chronic diarrhoea and bloating. Coeliac serology negative.",
+    "d": 1
+   },
+   {
+    "t": "Years of migrating joint pains, long before any gut symptoms."
+   },
+   {
+    "t": "His skin has darkened and he runs low-grade fevers."
+   },
+   {
+    "t": "Now forgetful, with rhythmic jaw movements in time with slow eye convergence."
+   },
+   {
+    "t": "Duodenal biopsy: PAS-positive foamy macrophages",
+    "d": 1
+   }
+  ],
+  "pearl": "Caused by Tropheryma whipplei. Joint pains often come years before the gut symptoms. Rhythmic eye convergence with jaw movement (oculomasticatory myorhythmia) is pathognomonic. Very treatable with antibiotics, fatal if missed.",
+  "difficulty": "Einstein"
+ },
+ {
+  "difficulty": "Hard",
+  "title": "Barely a sting",
+  "answer": "Irukandji syndrome",
+  "accept": [
+   "irukandji",
+   "irukandji syndrome",
+   "irukandji sting",
+   "carukia barnesi",
+   "jellyfish sting",
+   "box jellyfish"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old tourist with severe lower back pain that came on suddenly."
+   },
+   {
+    "t": "Drenched in sweat. Vomiting. Says she feels like she's going to die."
+   },
+   {
+    "t": "BP 190/110, HR 125",
+    "d": 1
+   },
+   {
+    "t": "She was swimming off a beach near Cairns in December, 40 minutes ago."
+   },
+   {
+    "t": "She felt a small prick on her arm. Barely a mark there now."
+   },
+   {
+    "t": "Troponin rising",
+    "d": 1
+   }
+  ],
+  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20–40 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
+ },
+ {
+  "difficulty": "Genius",
+  "title": "Hot is cold",
+  "answer": "Ciguatera poisoning",
+  "accept": [
+   "ciguatera",
+   "ciguatera poisoning",
+   "ciguatera fish poisoning",
+   "ciguatoxin",
+   "fish poisoning",
+   "marine toxin"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old man with vomiting and diarrhoea, starting 4 hours after dinner."
+   },
+   {
+    "t": "Next day: tingling lips and fingers. His teeth ache, as if they're loose."
+   },
+   {
+    "t": "Cold drinks feel like they're burning his mouth."
+   },
+   {
+    "t": "HR 48",
+    "d": 1
+   },
+   {
+    "t": "Three friends at the same dinner feel the same."
+   },
+   {
+    "t": "They ate a large Spanish mackerel caught on a trip off Queensland."
+   }
+  ],
+  "pearl": "Hot–cold reversal is the giveaway. The toxin comes from large reef fish and isn't destroyed by cooking or freezing. Symptoms can last weeks. Advise avoiding alcohol and fish for a while, as both can bring symptoms back."
+ },
+ {
+  "difficulty": "Easy",
+  "title": "The night shift",
+  "answer": "Obstructive sleep apnoea",
+  "accept": [
+   "obstructive sleep apnoea",
+   "obstructive sleep apnea",
+   "sleep apnoea",
+   "sleep apnea",
+   "osa",
+   "osahs"
+  ],
+  "clues": [
+   {
+    "t": "49-year-old truck driver, exhausted despite 8 hours in bed."
+   },
+   {
+    "t": "Wakes with headaches most mornings."
+   },
+   {
+    "t": "Nodded off at the lights twice last week."
+   },
+   {
+    "t": "His partner moved to the spare room because of the snoring."
+   },
+   {
+    "t": "She says he stops breathing, then gasps."
+   },
+   {
+    "t": "BMI 34, collar size 46 cm, BP high on three medicines"
+   }
+  ],
+  "pearl": "Witnessed apnoeas plus daytime sleepiness is the classic pair. Untreated OSA drives resistant hypertension. Commercial drivers have specific fitness-to-drive standards in Australia."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "Broken heart",
+  "answer": "Takotsubo cardiomyopathy",
+  "accept": [
+   "takotsubo",
+   "takotsubo cardiomyopathy",
+   "takotsubo syndrome",
+   "broken heart syndrome",
+   "stress cardiomyopathy",
+   "stress induced cardiomyopathy",
+   "apical ballooning syndrome"
+  ],
+  "clues": [
+   {
+    "t": "66-year-old woman with sudden crushing chest pain."
+   },
+   {
+    "t": "It started at her husband's funeral this morning."
+   },
+   {
+    "t": "ECG: ST elevation in the anterior leads",
+    "d": 1
+   },
+   {
+    "t": "Troponin raised",
+    "d": 1
+   },
+   {
+    "t": "Coronary angiogram: no significant blockages",
+    "d": 1
+   },
+   {
+    "t": "Echo: apex of the left ventricle balloons out, base contracts normally",
+    "d": 1
+   }
+  ],
+  "pearl": "It mimics a STEMI and must be managed as one until angiography. Usually triggered by emotional or physical stress in postmenopausal women. Function mostly recovers within weeks, but it isn't benign: complications and recurrence occur."
  }
 ]

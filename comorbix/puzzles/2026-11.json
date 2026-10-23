@@ -334,43 +334,43 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Foot problems",
+    "label": "Imaging pioneers",
     "level": 2,
     "words": [
-     "BUNION",
-     "CORN",
-     "HAMMER TOE",
-     "PLANTAR FASCIITIS"
+     "RONTGEN",
+     "HOUNSFIELD",
+     "CURIE",
+     "MANSFIELD"
     ]
    },
    {
-    "label": "Planes of the body",
+    "label": "MRI sequences",
     "level": 3,
     "words": [
-     "SAGITTAL",
-     "CORONAL",
-     "TRANSVERSE",
-     "AXIAL"
+     "T1",
+     "T2",
+     "FLAIR",
+     "DIFFUSION"
     ]
    },
    {
-    "label": "Named after myths",
+    "label": "Imaging signs named after food",
     "level": 4,
     "words": [
-     "ATLAS",
-     "ACHILLES",
-     "MORPHINE",
-     "HYGIENE"
+     "COFFEE BEAN",
+     "APPLE CORE",
+     "POPCORN",
+     "SALT AND PEPPER"
     ]
    },
    {
-    "label": "Hidden body part",
+    "label": "Imaging signs named after animals",
     "level": 4,
     "words": [
-     "CHINESE",
-     "SHINDIG",
-     "BEARDED",
-     "WHIPLASH"
+     "BAT WING",
+     "BIRD'S BEAK",
+     "RAT BITE",
+     "HUMMINGBIRD"
     ]
    }
   ]
@@ -522,43 +522,43 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Body fluids",
+    "label": "Pneumonia symptoms",
     "level": 1,
     "words": [
-     "SALIVA",
-     "SWEAT",
-     "TEARS",
-     "BILE"
+     "COUGH",
+     "FEVER",
+     "CHILLS",
+     "SPUTUM"
     ]
    },
    {
-    "label": "Cranial nerves",
+    "label": "Pneumonia bugs",
     "level": 2,
     "words": [
-     "VAGUS",
-     "FACIAL",
-     "OPTIC",
-     "TRIGEMINAL"
+     "PNEUMOCOCCUS",
+     "LEGIONELLA",
+     "MYCOPLASMA",
+     "KLEBSIELLA"
     ]
    },
    {
-    "label": "Facial bones",
+    "label": "Parts of the lungs",
     "level": 2,
     "words": [
-     "MAXILLA",
-     "MANDIBLE",
-     "ZYGOMA",
-     "NASAL"
+     "LOBE",
+     "BRONCHUS",
+     "ALVEOLUS",
+     "PLEURA"
     ]
    },
    {
-    "label": "Infections named after places",
+    "label": "In the CURB-65 score",
     "level": 3,
     "words": [
-     "LYME",
-     "EBOLA",
-     "ZIKA",
-     "MARBURG"
+     "CONFUSION",
+     "UREA",
+     "BLOOD PRESSURE",
+     "AGE"
     ]
    }
   ]
@@ -616,43 +616,43 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Diabetes medicines",
+    "label": "Diabetes complications",
     "level": 2,
     "words": [
-     "METFORMIN",
-     "GLICLAZIDE",
-     "EMPAGLIFLOZIN",
-     "SITAGLIPTIN"
+     "RETINOPATHY",
+     "NEUROPATHY",
+     "NEPHROPATHY",
+     "GASTROPARESIS"
     ]
    },
    {
-    "label": "Named fractures",
+    "label": "Islet hormones",
     "level": 3,
     "words": [
-     "COLLES",
-     "SMITH",
-     "BENNETT",
-     "MONTEGGIA"
+     "INSULIN",
+     "GLUCAGON",
+     "SOMATOSTATIN",
+     "AMYLIN"
     ]
    },
    {
-    "label": "Checked in spinal fluid",
+    "label": "Insulin's discovery team",
     "level": 3,
     "words": [
-     "PROTEIN",
-     "GLUCOSE",
-     "CELL COUNT",
-     "OPENING PRESSURE"
+     "BANTING",
+     "BEST",
+     "MACLEOD",
+     "COLLIP"
     ]
    },
    {
-    "label": "Can be broken",
+    "label": "___ sugar",
     "level": 4,
     "words": [
-     "HEART",
-     "BONE",
-     "RECORD",
-     "WIND"
+     "BLOOD",
+     "ICING",
+     "CANE",
+     "BROWN"
     ]
    }
   ]
@@ -663,43 +663,43 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Named diseases",
+    "label": "NICU kit",
     "level": 2,
     "words": [
-     "CROHN",
-     "ADDISON",
-     "GRAVES",
-     "PARKINSON"
+     "HUMIDICRIB",
+     "VENTILATOR",
+     "FEEDING TUBE",
+     "MONITOR"
     ]
    },
    {
-    "label": "Antidotes",
+    "label": "Conditions of prematurity",
     "level": 3,
     "words": [
-     "NALOXONE",
-     "FLUMAZENIL",
-     "ACETYLCYSTEINE",
-     "ATROPINE"
+     "RDS",
+     "PDA",
+     "NEC",
+     "ROP"
     ]
    },
    {
-    "label": "Findings named after food",
+    "label": "___ care",
     "level": 4,
     "words": [
-     "STRAWBERRY",
-     "APPLE CORE",
-     "CAULIFLOWER",
-     "REDCURRANT"
+     "KANGAROO",
+     "INTENSIVE",
+     "HEALTH",
+     "SKIN"
     ]
    },
    {
-    "label": "Things with a 'bridge'",
+    "label": "Early ___",
     "level": 4,
     "words": [
-     "NOSE",
-     "DENTAL",
-     "GLASSES",
-     "GUITAR"
+     "BIRD",
+     "RISER",
+     "WARNING",
+     "ADOPTER"
     ]
    }
   ]
@@ -757,43 +757,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Body noises",
+    "label": "Female reproductive organs",
     "level": 1,
     "words": [
-     "HICCUP",
-     "SNEEZE",
-     "YAWN",
-     "BURP"
+     "CERVIX",
+     "UTERUS",
+     "OVARY",
+     "FALLOPIAN TUBE"
     ]
    },
    {
-    "label": "Types of headache",
+    "label": "National cancer screening programs",
     "level": 1,
     "words": [
-     "TENSION",
-     "MIGRAINE",
-     "CLUSTER",
-     "SINUS"
+     "BOWEL",
+     "BREAST",
+     "CERVICAL",
+     "LUNG"
     ]
    },
    {
-    "label": "Childhood vaccines protect against",
+    "label": "Types of wart (all HPV)",
     "level": 2,
     "words": [
-     "TETANUS",
-     "POLIO",
-     "PERTUSSIS",
-     "DIPHTHERIA"
+     "PLANTAR",
+     "GENITAL",
+     "COMMON",
+     "FLAT"
     ]
    },
    {
-    "label": "Knee structures",
+    "label": "Viruses known by initials",
     "level": 2,
     "words": [
-     "ACL",
-     "PCL",
-     "MCL",
-     "MENISCUS"
+     "HPV",
+     "HIV",
+     "RSV",
+     "EBV"
     ]
    }
   ]
@@ -804,43 +804,43 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "First-aid kit",
+    "label": "Breathing tests",
     "level": 1,
     "words": [
-     "BANDAGE",
-     "PLASTER",
-     "GAUZE",
-     "SPLINT"
+     "SPIROMETRY",
+     "PEAK FLOW",
+     "OXIMETRY",
+     "BLOOD GAS"
     ]
    },
    {
-    "label": "Childhood illnesses",
+    "label": "Superbugs",
     "level": 2,
     "words": [
-     "CROUP",
-     "BRONCHIOLITIS",
-     "COLIC",
-     "HAND FOOT MOUTH"
+     "MRSA",
+     "VRE",
+     "CRE",
+     "ESBL"
     ]
    },
    {
-    "label": "Gut conditions",
+    "label": "COPD symptoms",
     "level": 2,
     "words": [
-     "COELIAC",
-     "COLITIS",
-     "GASTRITIS",
-     "DIVERTICULITIS"
+     "BREATHLESSNESS",
+     "WHEEZE",
+     "PHLEGM",
+     "CHEST TIGHTNESS"
     ]
    },
    {
-    "label": "Antivirals",
+    "label": "Antibiotic pioneers",
     "level": 3,
     "words": [
-     "ACICLOVIR",
-     "OSELTAMIVIR",
-     "VALACICLOVIR",
-     "TENOFOVIR"
+     "FLOREY",
+     "CHAIN",
+     "DOMAGK",
+     "EHRLICH"
     ]
    }
   ]

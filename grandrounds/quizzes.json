@@ -509,123 +509,123 @@
   "questions": [
    {
     "c": "History of medicine",
-    "q": "Who developed the first effective polio vaccine, the injected inactivated one?",
-    "a": "Jonas Salk",
-    "e": "He didn\u2019t patent it. \u2018Could you patent the sun?\u2019"
+    "q": "Which Paris obstetrician introduced incubators for premature babies in 1880, inspired by chicken incubators at the zoo?",
+    "a": "St\u00e9phane Tarnier",
+    "e": "The poultry incubators were at the Jardin d\u2019Acclimatation."
    },
    {
     "c": "Anatomy",
-    "q": "Which valve sits between the left atrium and left ventricle?",
-    "a": "The mitral valve",
-    "e": "Named for its resemblance to a bishop\u2019s mitre."
+    "q": "Which fetal vessel joins the pulmonary artery to the aorta, and often stays open in premature babies?",
+    "a": "The ductus arteriosus",
+    "e": "Its remnant is the ligamentum arteriosum."
    },
    {
     "c": "Pharmacology",
-    "q": "Before it was a medicine, what was warfarin sold as?",
-    "a": "Rat poison",
-    "e": "Named after WARF, the Wisconsin foundation that patented it."
+    "q": "Which steroid did Liggins and Howie give mothers in their 1972 Auckland trial to mature preterm babies\u2019 lungs?",
+    "a": "Betamethasone",
+    "e": "One of the great trials in obstetrics."
    },
    {
     "c": "Eponyms",
-    "q": "Which disease is known as \u2018Lou Gehrig\u2019s disease\u2019 in the US?",
-    "a": "Motor neurone disease",
-    "e": "Accept ALS."
+    "q": "The Ballard score estimates what in a newborn?",
+    "a": "Gestational age",
+    "e": "From physical and neuromuscular signs."
    },
    {
     "c": "Microbiology",
-    "q": "Which organism is the classic cause of \u2018walking pneumonia\u2019?",
-    "a": "Mycoplasma pneumoniae",
-    "e": "No cell wall, so penicillins do nothing."
+    "q": "Which bacterium, carried harmlessly by many pregnant women, is a leading cause of early newborn sepsis?",
+    "a": "Group B streptococcus",
+    "e": "Streptococcus agalactiae. Accept GBS."
    },
    {
     "c": "On screen",
-    "q": "What is Dr House\u2019s first name?",
-    "a": "Gregory",
-    "e": "It\u2019s never lupus. Except once."
+    "q": "Which BBC drama follows midwives and nuns in Poplar, in London\u2019s East End, from the late 1950s?",
+    "a": "Call the Midwife",
+    "e": "Based on Jennifer Worth\u2019s memoirs."
    },
    {
     "c": "Etymology",
-    "q": "\u2018Muscle\u2019 comes from the Latin for what?",
-    "a": "Little mouse",
-    "e": "Musculus. A flexed bicep looks like a mouse under the skin."
+    "q": "\u2018Neonate\u2019 comes from Greek and Latin roots meaning what?",
+    "a": "Newly born",
+    "e": "Neos, new; natus, born."
    },
    {
     "c": "Physiology",
-    "q": "Which part of the brain is the body\u2019s thermostat?",
-    "a": "The hypothalamus",
-    "e": ""
+    "q": "Fetal haemoglobin has two alpha chains and two of which other chain?",
+    "a": "Gamma",
+    "e": "It grabs oxygen more tightly than adult haemoglobin."
    },
    {
     "c": "Famous patients",
-    "q": "Henrietta Lacks\u2019s cancer cells became which famous cell line?",
-    "a": "HeLa",
-    "e": "Taken in 1951 without her consent."
+    "q": "Which scientist, born prematurely on Christmas Day 1642, was said to be small enough to fit in a quart pot?",
+    "a": "Isaac Newton",
+    "e": "His mother\u2019s description. He lived to 84."
    },
    {
     "c": "Language",
-    "q": "What is the medical term for a black eye?",
-    "a": "Periorbital haematoma",
-    "e": ""
+    "q": "What is the medical term for a baby\u2019s first stool?",
+    "a": "Meconium",
+    "e": "From the Greek for poppy juice, after its dark colour."
    },
    {
     "c": "Nobel Prizes",
-    "q": "Which surgeon won the 1912 Nobel Prize for techniques to suture blood vessels?",
-    "a": "Alexis Carrel",
-    "e": ""
+    "q": "Who won the 2010 Nobel Prize for developing IVF?",
+    "a": "Robert Edwards",
+    "e": "Louise Brown, the first IVF baby, was born in 1978."
    },
    {
     "c": "Pathology",
-    "q": "Deficiency of which vitamin causes pellagra?",
-    "a": "Niacin (vitamin B3)",
-    "e": "Dermatitis, diarrhoea, dementia, death."
+    "q": "\u2018Hyaline membrane disease\u2019 is an old name for which condition of premature babies?",
+    "a": "Respiratory distress syndrome",
+    "e": "Caused by a lack of surfactant. Accept RDS."
    },
    {
     "c": "By the numbers",
-    "q": "Roughly how long is the adult small intestine?",
-    "a": "About 6 metres",
-    "e": "Accept 5 to 7 metres."
+    "q": "Below what birth weight is a baby classed as low birth weight?",
+    "a": "2,500 grams",
+    "e": "Accept 2.5 kg. Under 1,500 g is very low birth weight."
    },
    {
     "c": "Toxicology",
-    "q": "Which mushroom causes most fatal mushroom poisonings worldwide?",
-    "a": "The death cap",
-    "e": "Amanita phalloides."
+    "q": "Which antibiotic caused \u2018grey baby syndrome\u2019 in newborns?",
+    "a": "Chloramphenicol",
+    "e": "Newborn livers can\u2019t clear it fast enough."
    },
    {
     "c": "History of medicine",
-    "q": "Which Greek physician in Rome treated gladiators and dominated anatomy for 1,400 years?",
-    "a": "Galen",
-    "e": "Much of it from dissecting animals."
+    "q": "In 1922 Julius Hess opened the first US unit for premature babies in which city?",
+    "a": "Chicago",
+    "e": "At Michael Reese Hospital."
    },
    {
     "c": "Anatomy",
-    "q": "What is the first cervical vertebra called?",
-    "a": "The atlas",
-    "e": "It holds up the head, like the Titan held up the sky."
+    "q": "Which opening between the atria normally closes soon after birth?",
+    "a": "The foramen ovale",
+    "e": "It stays open in about 1 in 4 adults."
    },
    {
     "c": "Pharmacology",
-    "q": "Metformin traces back to which medicinal plant?",
-    "a": "French lilac",
-    "e": "Also called goat\u2019s rue, Galega officinalis."
+    "q": "Which drug, also found in coffee, is used for apnoea of prematurity?",
+    "a": "Caffeine",
+    "e": "As caffeine citrate. Some of the world\u2019s smallest caffeine users."
    },
    {
     "c": "On screen",
-    "q": "Which 1975 film is set in a psychiatric hospital run by Nurse Ratched?",
-    "a": "One Flew Over the Cuckoo\u2019s Nest",
-    "e": ""
+    "q": "In \u2018Friends\u2019, who gives birth in \u2018The One with the Birth\u2019?",
+    "a": "Carol",
+    "e": "Ross\u2019s ex-wife, to baby Ben."
    },
    {
     "c": "Eponyms",
-    "q": "Kussmaul breathing is a sign of what?",
-    "a": "Metabolic acidosis",
-    "e": "Classically DKA. Accept diabetic ketoacidosis."
+    "q": "Which newborn reflex makes a baby fling out its arms when startled?",
+    "a": "The Moro reflex",
+    "e": "Named after Austrian paediatrician Ernst Moro."
    },
    {
     "c": "Brain-melter",
-    "q": "Which tissue has no blood supply and gets its oxygen straight from the air?",
-    "a": "The cornea",
-    "e": ""
+    "q": "Which Bogot\u00e1 paediatrician introduced kangaroo mother care in 1978, when incubators were scarce?",
+    "a": "Edgar Rey Sanabria",
+    "e": "Parents became the incubator. Happy World Prematurity Day."
    }
   ]
  },

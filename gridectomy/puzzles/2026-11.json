@@ -606,84 +606,84 @@
   "number": 23,
   "difficulty": "Genius",
   "rows": [
-   "SCUM#",
-   "TONIC",
-   "AMINO",
-   "BITES",
-   "#CYST"
+   "#DOSE",
+   "MERCY",
+   "ALGAE",
+   "STAND",
+   "SANS#"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
+    "c": 1,
     "len": 4,
-    "clue": "Film on a pond"
+    "clue": "Radiation ___ (what the lead apron is for)"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Gin's partner, or a muscle state"
+    "clue": "Clemency"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "___ acid (protein building block)"
+    "clue": "Pond scum, scientifically"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Mozzie souvenirs"
+    "clue": "Chest X-ray instruction: ___ against the plate and breathe in"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 1,
+    "c": 0,
     "len": 4,
-    "clue": "Fluid-filled sac"
+    "clue": "Without, à la française"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "___ wound"
+    "c": 1,
+    "len": 5,
+    "clue": "Greek D, or a fan-shaped river mouth"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
+    "c": 2,
     "len": 5,
-    "clue": "Funny person, or doctor-turned-standup"
+    "clue": "Liver or spleen, on any abdominal CT"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
+    "c": 3,
     "len": 5,
-    "clue": "Togetherness"
+    "clue": "CTs and MRIs"
    },
    {
     "n": 4,
     "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Dig sites"
-   },
-   {
-    "n": 6,
-    "r": 1,
     "c": 4,
     "len": 4,
-    "clue": "Out-of-pocket ___ (gap fee)"
+    "clue": "Looked over, as a radiologist does a film"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Incidental ___ (the dreaded 'incidentaloma')"
    }
   ]
  },
@@ -950,84 +950,84 @@
   "number": 27,
   "difficulty": "Medium",
   "rows": [
-   "SCUM#",
-   "CORAL",
-   "ALIKE",
-   "BONES",
-   "#NEST"
+   "##LOT",
+   "SHOVE",
+   "LOBES",
+   "APART",
+   "PER##"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Film on a pond"
+    "c": 2,
+    "len": 3,
+    "clue": "Heaps"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Reef material, or a pinkish shade"
+    "clue": "Push roughly"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Similar, like identical twins"
+    "clue": "The right lung has three, the left has two"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "There are 206 in an adult"
+    "clue": "In pieces"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "Where eggs are kept"
+    "c": 0,
+    "len": 3,
+    "clue": "For each"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Healing crust"
+    "c": 2,
+    "len": 5,
+    "clue": "Like pneumonia that fills one whole lobe"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Large bowel"
+    "c": 3,
+    "len": 4,
+    "clue": "Six balls, in cricket"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Sample in a jar"
+    "c": 4,
+    "len": 4,
+    "clue": "Sputum culture, for one"
    },
    {
     "n": 4,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Produces, as the marrow does blood"
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "___ cheek (parvovirus rash)"
    },
    {
-    "n": 6,
+    "n": 5,
     "r": 1,
-    "c": 4,
+    "c": 1,
     "len": 4,
-    "clue": "In case"
+    "clue": "Optimism"
    }
   ]
  },
@@ -1122,84 +1122,84 @@
   "number": 29,
   "difficulty": "Hard",
   "rows": [
-   "THUS#",
-   "EUROS",
-   "AMINO",
-   "MANIA",
-   "#NECK"
+   "##BIT",
+   "THESE",
+   "ROLLS",
+   "ISLET",
+   "PEE##"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Therefore"
+    "c": 2,
+    "len": 3,
+    "clue": "Small amount"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Currency for a European conference"
+    "clue": "Those, but closer"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "___ acid (protein building block)"
+    "clue": "Bread ___ (carbs to count)"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Elevated mood state"
+    "clue": "___ of Langerhans, home of the beta cell"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "Where the thyroid lives"
+    "c": 0,
+    "len": 3,
+    "clue": "Do lots of, in untreated diabetes"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "MDT, for short"
+    "c": 2,
+    "len": 5,
+    "clue": "Beauty of the ball"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "___ papillomavirus"
+    "c": 3,
+    "len": 4,
+    "clue": "Small island"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Sample in a jar"
+    "c": 4,
+    "len": 4,
+    "clue": "Finger-prick ___"
    },
    {
     "n": 4,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Of sound waves"
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Journey, or a stumble"
    },
    {
-    "n": 6,
+    "n": 5,
     "r": 1,
-    "c": 4,
+    "c": 1,
     "len": 4,
-    "clue": "Steep, like a sore foot"
+    "clue": "Garden ___"
    }
   ]
  },
@@ -1208,11 +1208,11 @@
   "number": 30,
   "difficulty": "Einstein",
   "rows": [
-   "THUMB",
-   "RURAL",
-   "AMINO",
-   "PANIC",
-   "SNEAK"
+   "BLOAT",
+   "EARLY",
+   "ANGER",
+   "SCARE",
+   "TENTS"
   ],
   "across": [
    {
@@ -1220,35 +1220,35 @@
     "r": 0,
     "c": 0,
     "len": 5,
-    "clue": "Rule of ___ (not an actual rule)"
+    "clue": "Swell up, post-Christmas lunch"
    },
    {
     "n": 6,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Like practice where the nearest specialist is 400 km away"
+    "clue": "Before term, or before your first coffee"
    },
    {
     "n": 7,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Glycine is the simplest ___ acid"
+    "clue": "Ire"
    },
    {
     "n": 8,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Disorder with a sense of impending doom"
+    "clue": "Give a fright"
    },
    {
     "n": 9,
     "r": 4,
     "c": 0,
     "len": 5,
-    "clue": "___ peek (preview)"
+    "clue": "Things pitched at a campsite"
    }
   ],
   "down": [
@@ -1257,35 +1257,35 @@
     "r": 0,
     "c": 0,
     "len": 5,
-    "clue": "Shrug-powered muscles, gym slang"
+    "clue": "Brute"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
     "len": 5,
-    "clue": "Homo sapiens"
+    "clue": "Pierce, as for a newborn heel-prick test"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "What a dipstick dips into"
+    "clue": "Lung, liver or kidney"
    },
    {
     "n": 4,
     "r": 0,
     "c": 3,
     "len": 5,
-    "clue": "Mood that's beyond hypo-"
+    "clue": "Wide awake, like a NICU nurse at 3 am"
    },
    {
     "n": 5,
     "r": 0,
     "c": 4,
     "len": 5,
-    "clue": "Femoral or digital ___"
+    "clue": "Pram parts that go flat at the worst moment"
    }
   ]
  },
@@ -1380,9 +1380,9 @@
   "number": 32,
   "difficulty": "Easy",
   "rows": [
-   "#STAB",
-   "STYLE",
-   "PORES",
+   "#SWAB",
+   "SHALE",
+   "PILES",
    "INERT",
    "TEST#"
   ],
@@ -1392,35 +1392,35 @@
     "r": 0,
     "c": 1,
     "len": 4,
-    "clue": "___ wound"
+    "clue": "Self-collected sample for cervical screening"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Fashion"
+    "clue": "Layered rock"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Sweat outlets"
+    "clue": "Haemorrhoids, informally"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Chemically unreactive, like a placebo"
+    "clue": "Chemically unreactive"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
     "len": 4,
-    "clue": "Blood ___"
+    "clue": "Cervical Screening ___, due every 5 years"
    }
   ],
   "down": [
@@ -1429,28 +1429,28 @@
     "r": 0,
     "c": 1,
     "len": 5,
-    "clue": "Kidney ___"
+    "clue": "Glow"
    },
    {
     "n": 2,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Rubber wheels"
+    "clue": "Country with a dragon on its flag"
    },
    {
     "n": 3,
     "r": 0,
     "c": 3,
     "len": 5,
-    "clue": "Wide awake, as on AVPU"
+    "clue": "Wide awake"
    },
    {
     "n": 4,
     "r": 0,
     "c": 4,
     "len": 4,
-    "clue": "___ practice"
+    "clue": "Top"
    },
    {
     "n": 5,
@@ -1466,84 +1466,84 @@
   "number": 33,
   "difficulty": "Medium",
   "rows": [
-   "TEAR#",
-   "AUDIT",
-   "PROSE",
-   "SORES",
-   "#SENT"
+   "##BUG",
+   "THESE",
+   "EAGER",
+   "ALARM",
+   "MEN##"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Rotator cuff ___"
+    "c": 2,
+    "len": 3,
+    "clue": "Germ, or a superbug's shorter cousin"
    },
    {
-    "n": 5,
+    "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Clinical ___ (quality check)"
+    "clue": "Not those"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Ordinary writing, unlike doctors' notes"
+    "clue": "Keen"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Ulcers"
+    "clue": "Smoke ___"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "Referred, as to a specialist"
+    "c": 0,
+    "len": 3,
+    "clue": "Gents"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Light touches, like percussion"
+    "c": 2,
+    "len": 5,
+    "clue": "Started"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Currency for a European conference"
+    "c": 3,
+    "len": 4,
+    "clue": "Inhaler ___"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Love dearly"
+    "c": 4,
+    "len": 4,
+    "clue": "Microbe that may shrug off antibiotics"
    },
    {
     "n": 4,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Up, like temperature"
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Multidisciplinary ___"
    },
    {
-    "n": 6,
+    "n": 5,
     "r": 1,
-    "c": 4,
+    "c": 1,
     "len": 4,
-    "clue": "Blood ___"
+    "clue": "___ and hearty"
    }
   ]
  },
