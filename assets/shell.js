@@ -457,7 +457,12 @@
         '<div class="cbody"><h2 class="name">Buy me a coffee</h2><p class="tag">Free, no ads, made after hours. A coffee keeps new puzzles coming.</p><div class="cfoot"><span class="play">Ko-fi \u2615</span></div></div></a>';
     }
     function order() {
-      return MW_GAMES.map(function (g, i) { var st = g.live ? readStats(g) : null; return { g: g, i: i, d: st && st.done ? 1 : 0 }; })
+      var ORD = window.MW_ORDER || [], DAYS = { Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
+      return MW_GAMES.map(function (g, i) {
+        var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
+        if (g.live && g.relday && DAYS[g.relday] === dw) k = 0.5; // release day: right after Dxtective
+        return { g: g, i: k, d: st && st.done ? 1 : 0 };
+      })
         .sort(function (a, b) { return a.d - b.d || a.i - b.i; }).map(function (x) { return x.g; });
     }
     function streakPill() {
