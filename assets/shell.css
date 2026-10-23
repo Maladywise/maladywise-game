@@ -448,3 +448,4 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 @keyframes mascBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.cb-masc,.cb-masc img,.mw-masc-help img{animation:none}}
 .cb-masc{right:auto;left:50%;margin-left:-90px;width:180px}
+.card .pillrow{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px}.card .pillrow .pill.wk{margin:0}.card .pill.wk.day{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
