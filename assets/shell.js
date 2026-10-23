@@ -496,7 +496,10 @@
       });
       if (!on.length) return;
       var normal = on.filter(function (x) { return x.tags.indexOf("sensitive") < 0; })
-        .sort(function (a, b) { return a.priority - b.priority; });
+        .sort(function (a, b) {
+          var fa = a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "day" || b.dates[yr].start === today ? 0 : 1;
+          return fa - fb || a.priority - b.priority;
+        });
       var sens = on.filter(function (x) { return x.tags.indexOf("sensitive") >= 0; });
       var html = "";
       if (normal.length) {
