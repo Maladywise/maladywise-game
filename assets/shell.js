@@ -449,7 +449,11 @@
     }
     function house() {
       var h = MW_SITE.house; if (!h) return "";
-      return '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
+      var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
+      return '<a class="card house" href="/fact-sheets/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
+        '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12M26 18v12"/></svg></div>' +
+        '<div class="cbody"><h2 class="name">Patient info</h2><p class="kind">Facts, drugs and tools</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>' +
+        '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
         '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>" +
         '<a class="card house" href="https://ko-fi.com/maladywise" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#D9A066" : "#A8642A") + '">' +
@@ -582,6 +586,12 @@
       if (hd) hd.parentNode.insertBefore(gt, hd.nextSibling); else box.insertBefore(gt, box.firstChild);
     }
     extras(g, box, today);
+    var ab = window.MW_ABOUT && MW_ABOUT[g.id];
+    if (ab) {
+      box.appendChild(el('<section class="mw-about"><h2>About ' + g.name + '</h2><p>' + ab[0] + '</p>' + ab[1].map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("") + "</section>"));
+      var ld = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: ab[1].map(function (q) { return { "@type": "Question", name: q[0], acceptedAnswer: { "@type": "Answer", text: q[1] } }; }) };
+      var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
+    }
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
@@ -601,6 +611,24 @@
     d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
     f.insertBefore(d, f.firstChild);
   }
-  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; }
+  function infoExtras() {
+    var F = window.MW_FACTS, p = location.pathname.replace(/index\.html$/, ""), me = F && F[p]; if (!me) return;
+    var main = document.querySelector("main"), h1 = main && main.querySelector("h1"); if (!h1) return;
+    var rev = (document.body.textContent.match(/Reviewed ([A-Z][a-z]+ \d{4})/) || [])[1] || "";
+    h1.insertAdjacentHTML("afterend", '<p class="trust">\u2714 Written and reviewed by an Australian GP' + (rev ? " \u00b7 " + rev : "") + "</p>");
+    var rel = (me.r || []).filter(function (q) { return F[q]; });
+    var foot = main.querySelector("footer.site"), anchor = main.querySelector(".print-url") || foot;
+    if (rel.length && anchor) anchor.insertAdjacentHTML("beforebegin", '<section class="related"><h2>Related</h2><ul>' + rel.map(function (q) { return '<li><a href="' + q + '"><span>' + { fact: "Fact sheet", drug: "Drug", tool: "Tool" }[F[q].k] + "</span>" + F[q].t + "</a></li>"; }).join("") + "</ul></section>");
+    var pu = main.querySelector(".print-url"), qr = "/assets/qr/" + p.replace(/^\/|\/$/g, "").replace(/\//g, "-") + ".svg";
+    if (pu) pu.insertAdjacentHTML("beforebegin", '<img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
+    else if (foot) foot.insertAdjacentHTML("beforebegin", '<p class="print-url">maladywise.com' + p + '</p><img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
+    var desc = (document.querySelector('meta[name="description"]') || {}).content || "";
+    var ld = { "@context": "https://schema.org", "@type": "MedicalWebPage", name: me.t, url: "https://maladywise.com" + p, description: desc, inLanguage: "en-AU",
+      audience: { "@type": "PeopleAudience", audienceType: me.k === "tool" ? "Clinicians" : "Patients" }, author: { "@type": "Organization", name: "Malady Wise", url: "https://maladywise.com/" },
+      reviewedBy: { "@type": "Person", jobTitle: "General Practitioner", description: "Australian GP" } };
+    if (rev) { var d = new Date(rev + " 1"); if (!isNaN(d)) ld.lastReviewed = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); }
+    var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
+  }
+  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); }
   window.MW = { hub: hub, game: game, modal: modal, page: page };
 })();
