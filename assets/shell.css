@@ -465,3 +465,5 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mw-about h2{font:700 17px Lora,Georgia,serif;margin:0 0 6px}.mw-about p{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:var(--ink)}
 .mw-about details{border-top:1px solid var(--line);padding:8px 0}.mw-about summary{font-weight:600;font-size:14px;cursor:pointer}.mw-about details p{margin:6px 0 0;color:var(--muted)}
 @media print{main.doc{position:relative}.print-qr{position:absolute;top:0;right:0;float:none;margin:0;width:58px;height:58px}.doc .trust{display:none}}
+
+.hday{position:relative}.hday.has-ic h2,.hday.has-ic .hday-k{padding-right:92px}.hday.has-ic h2+p{padding-right:64px}.hday-ic{position:absolute;right:12px;top:10px;width:84px;height:84px}

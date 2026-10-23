@@ -505,7 +505,7 @@
       if (normal.length) {
         var lead = normal[0], first = lead.dates[yr].start === today;
         var themed = lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb);
-        html += '<section class="hday"><span class="hday-k">' + (lead.kind === "week" ? "This week" : "Today") + '</span>' +
+        html += '<section class="hday' + (lead.icon ? ' has-ic' : '') + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : '') + '<span class="hday-k">'  + (lead.kind === "week" ? "This week" : "Today") + '</span>' +
           "<h2>" + esc2(lead.name) + "</h2><p>" + esc2(lead.blurb) + (themed ? " <b>Today’s puzzles are on the theme.</b>" : "") + "</p>" +
           (normal.length > 1 ? '<p class="hday-also">Also: ' + normal.slice(1).map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + esc2(x.name) + "</a>" : esc2(x.name); }).join(", ") + "</p>" : "") +
           (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + "</section>";
