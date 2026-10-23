@@ -1656,25 +1656,26 @@
    "id": "prematurity",
    "name": "World Prematurity Day",
    "kind": "day",
-   "rule": "11-15",
+   "rule": "11-17",
    "dates": {
     "2026": {
-     "start": "2026-11-15"
+     "start": "2026-11-17"
     },
     "2027": {
-     "start": "2027-11-15"
+     "start": "2027-11-17"
     },
     "2028": {
-     "start": "2028-11-15"
+     "start": "2028-11-17"
     }
    },
    "tags": [
     "who"
    ],
-   "priority": 2,
+   "priority": 3,
    "link": "https://www.who.int/campaigns/world-prematurity-day",
    "blurb": "About 1 in 10 babies arrive early. Today is for them.",
-   "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care"
+   "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care",
+   "_note": "Real date is 17 Nov (WHO). Shares the date with Cervical Cancer Elimination Day, which leads; prematurity shows as \"Also\"."
   },
   {
    "id": "cervical",

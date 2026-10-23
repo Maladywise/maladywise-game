@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise events calendar, used by the weekly topical run (and the monthly build). holidays: theme that day's Triviosis plus 1-2 other puzzles around puzzle_theme (full day for Halloween and Christmas Day); tag light = just 1-2 puzzles; gentle = respectful tone. anniversaries (MM-DD, every year): theme 1-2 puzzles, ideally Triviosis or Dxtective, and mention the anniversary in a hint or explanation. If a health day (data/health-days.json) falls on the same date, the health day leads. Facts must be double-checked before use.",
+ "_about": "Malady Wise events calendar, used by the weekly topical run (and the monthly build). holidays: theme that day's Triviosis plus 1-2 other puzzles around puzzle_theme (full day for Halloween and Christmas Day); tag light = just 1-2 puzzles; gentle = respectful tone. anniversaries (MM-DD, every year): theme 1-2 puzzles, ideally Triviosis or Dxtective, and mention the anniversary in a hint or explanation. If a health day (data/health-days.json) falls on the same date, the health day leads. Facts must be double-checked before use. Each holiday has a \"link\" (official site or Wikipedia) for newsletters and banners; anniversaries may add one.",
  "updated": "2026-10-21",
  "holidays": [
   {
@@ -10,7 +10,8 @@
     "2028": "2028-01-01"
    },
    "puzzle_theme": "Resolutions and habits: exercise, sleep, quitting smoking, hangovers",
-   "tags": []
+   "tags": [],
+   "link": "https://en.wikipedia.org/wiki/New_Year%27s_Day"
   },
   {
    "id": "lunarny",
@@ -22,7 +23,8 @@
    "puzzle_theme": "Traditional and herbal medicine origins: ephedra, artemisinin, acupuncture",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Lunar_New_Year"
   },
   {
    "id": "pancake",
@@ -34,7 +36,8 @@
    "puzzle_theme": "Breakfast biochemistry: carbs, gluten, coeliac disease, eggs, allergies",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Shrove_Tuesday"
   },
   {
    "id": "valentine",
@@ -44,7 +47,8 @@
     "2028": "2028-02-14"
    },
    "puzzle_theme": "The heart: cardiology, love hormones (oxytocin, dopamine), broken heart syndrome",
-   "tags": []
+   "tags": [],
+   "link": "https://en.wikipedia.org/wiki/Valentine%27s_Day"
   },
   {
    "id": "stpatrick",
@@ -56,7 +60,8 @@
    "puzzle_theme": "Green things in medicine: bile, Pseudomonas, chloroma, green urine; alcohol and the liver",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day"
   },
   {
    "id": "aprilfools",
@@ -68,7 +73,8 @@
    "puzzle_theme": "Medical myths and fakers: placebo, factitious disorder, mimics, red herrings",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/April_Fools%27_Day"
   },
   {
    "id": "easter",
@@ -78,7 +84,8 @@
     "2028": "2028-04-16"
    },
    "puzzle_theme": "Eggs and chocolate: cholesterol, egg allergy, theobromine, caffeine, dental caries",
-   "tags": []
+   "tags": [],
+   "link": "https://en.wikipedia.org/wiki/Easter"
   },
   {
    "id": "mothersday",
@@ -90,7 +97,8 @@
    "puzzle_theme": "Obstetrics and maternal health: pregnancy, birth, breastfeeding",
    "tags": [
     "gentle"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Mother%27s_Day"
   },
   {
    "id": "halloween",
@@ -101,7 +109,8 @@
     "2028": "2028-10-31"
    },
    "puzzle_theme": "Spooky medicine: bones, blood, zombies (catatonia), vampires (porphyria), werewolves (hypertrichosis), poisons",
-   "tags": []
+   "tags": [],
+   "link": "https://en.wikipedia.org/wiki/Halloween"
   },
   {
    "id": "christmasev",
@@ -114,7 +123,8 @@
    "puzzle_theme": "Festive hazards: overeating, gout, food poisoning, button batteries",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Christmas_Eve"
   },
   {
    "id": "christmas",
@@ -125,7 +135,8 @@
     "2028": "2028-12-25"
    },
    "puzzle_theme": "Christmas medicine: Christmas disease (haemophilia B), holly and mistletoe poisoning, reindeer red noses",
-   "tags": []
+   "tags": [],
+   "link": "https://en.wikipedia.org/wiki/Christmas"
   },
   {
    "id": "boxingday",
@@ -138,7 +149,8 @@
    "puzzle_theme": "Sports medicine and leftovers: boxer's fracture, concussion, food safety",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Boxing_Day"
   },
   {
    "id": "nye",
@@ -151,7 +163,8 @@
    "puzzle_theme": "Party medicine: alcohol, hangovers, fireworks burns and eye injuries",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/New_Year%27s_Eve"
   },
   {
    "id": "australiaday",
@@ -164,7 +177,8 @@
    "tags": [
     "light",
     "gentle"
-   ]
+   ],
+   "link": "https://www.australiaday.gov.au"
   },
   {
    "id": "anzac",
@@ -176,7 +190,8 @@
    "puzzle_theme": "Military medicine history: triage, trench foot, blood transfusion, plastic surgery origins",
    "tags": [
     "gentle"
-   ]
+   ],
+   "link": "https://www.awm.gov.au/commemoration/anzac-day"
   },
   {
    "id": "fathersday",
@@ -188,7 +203,8 @@
    "puzzle_theme": "Men's health: prostate, testicular cancer, heart health",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://en.wikipedia.org/wiki/Father%27s_Day"
   },
   {
    "id": "melbcup",
@@ -201,7 +217,8 @@
    "puzzle_theme": "Horses, not zebras: common diagnoses, equine-named signs and terms (hoof, horseshoe kidney, cauda equina)",
    "tags": [
     "light"
-   ]
+   ],
+   "link": "https://www.vrc.com.au/melbourne-cup-carnival/"
   }
  ],
  "anniversaries": [
@@ -210,14 +227,16 @@
    "year": 1922,
    "event": "First insulin injection (Leonard Thompson, Toronto)",
    "puzzle_theme": "Diabetes and insulin",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "01-23",
    "year": 1849,
    "event": "Elizabeth Blackwell becomes the first woman to earn a medical degree in the US",
    "puzzle_theme": "Women in medicine",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "02-01",
@@ -226,21 +245,24 @@
    "puzzle_theme": "Health systems and bulk billing history",
    "tags": [
     "light"
-   ]
+   ],
+   "link": null
   },
   {
    "date": "03-01",
    "year": 1896,
    "event": "Becquerel discovers radioactivity",
    "puzzle_theme": "Radiation, radiotherapy, nuclear medicine",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "03-06",
    "year": 1899,
    "event": "Bayer registers the trademark Aspirin",
    "puzzle_theme": "Aspirin and NSAIDs",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "03-11",
@@ -249,14 +271,16 @@
    "puzzle_theme": "Pandemics and vaccines",
    "tags": [
     "gentle"
-   ]
+   ],
+   "link": null
   },
   {
    "date": "04-12",
    "year": 1955,
    "event": "Salk polio vaccine announced safe and effective",
    "puzzle_theme": "Polio and vaccines",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "04-12",
@@ -265,35 +289,40 @@
    "puzzle_theme": "Space medicine",
    "tags": [
     "light"
-   ]
+   ],
+   "link": null
   },
   {
    "date": "04-14",
    "year": 2003,
    "event": "Human Genome Project completed",
    "puzzle_theme": "Genetics and genomics",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "04-25",
    "year": 1953,
    "event": "Watson and Crick publish the structure of DNA",
    "puzzle_theme": "DNA and genetics",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "05-08",
    "year": 1980,
    "event": "WHO declares smallpox eradicated",
    "puzzle_theme": "Smallpox and eradication",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "05-14",
    "year": 1796,
    "event": "Edward Jenner gives the first smallpox vaccination (James Phipps)",
    "puzzle_theme": "Vaccines and immunology",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "06-05",
@@ -302,21 +331,24 @@
    "puzzle_theme": "HIV medicine and progress",
    "tags": [
     "gentle"
-   ]
+   ],
+   "link": null
   },
   {
    "date": "07-05",
    "year": 1996,
    "event": "Dolly the sheep is born, the first cloned mammal",
    "puzzle_theme": "Cloning, stem cells, genetics",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "07-06",
    "year": 1885,
    "event": "Pasteur gives the first rabies vaccine (Joseph Meister)",
    "puzzle_theme": "Rabies and Pasteur",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "07-20",
@@ -325,63 +357,72 @@
    "puzzle_theme": "Space medicine: microgravity, bone loss, radiation",
    "tags": [
     "light"
-   ]
+   ],
+   "link": null
   },
   {
    "date": "07-25",
    "year": 1978,
    "event": "Louise Brown, the first IVF baby, is born",
    "puzzle_theme": "Fertility and IVF",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "09-08",
    "year": 1854,
    "event": "John Snow has the Broad Street pump handle removed",
    "puzzle_theme": "Cholera and epidemiology",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "09-28",
    "year": 1928,
    "event": "Fleming notices penicillin killing bacteria",
    "puzzle_theme": "Antibiotics and penicillin",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "10-16",
    "year": 1846,
    "event": "First public demonstration of ether anaesthesia (Ether Day)",
    "puzzle_theme": "Anaesthesia",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "11-08",
    "year": 1895,
    "event": "Röntgen discovers X-rays",
    "puzzle_theme": "Radiology and imaging",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "12-02",
    "year": 1982,
    "event": "First permanent artificial heart implanted (Jarvik-7)",
    "puzzle_theme": "Cardiac devices and the heart",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "12-03",
    "year": 1967,
    "event": "First human heart transplant (Christiaan Barnard, Cape Town)",
    "puzzle_theme": "Transplants and the heart",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "12-23",
    "year": 1954,
    "event": "First successful kidney transplant (identical twins, Boston)",
    "puzzle_theme": "Kidneys and transplants",
-   "tags": []
+   "tags": [],
+   "link": null
   },
   {
    "date": "12-26",
@@ -390,7 +431,8 @@
    "puzzle_theme": "Radiation and Marie Curie",
    "tags": [
     "light"
-   ]
+   ],
+   "link": null
   }
  ]
 }
