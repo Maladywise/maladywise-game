@@ -1,3 +1,4 @@
+import sys; sys.exit("Retired: edit data/health-days.json directly. Re-running this would wipe hand-added days.")
 import json, datetime as dt, calendar
 
 W="https://www.who.int/campaigns/"
