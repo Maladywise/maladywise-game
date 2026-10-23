@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling.",
+ "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run).",
  "updated": "2026-10-23",
  "days": [
   {
@@ -2942,6 +2942,790 @@
    "link": "https://www.transhub.org.au",
    "blurb": "Today is Transgender Day of Remembrance. QLife (1800 184 527) is there if you need support.",
    "puzzle_theme": null
+  },
+  {
+   "id": "febfast",
+   "name": "FebFast",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.febfast.org.au",
+   "blurb": "A month off the booze (or another habit) for a good cause. February is short, which helps.",
+   "puzzle_theme": "Alcohol and habits: liver health, dependence, behaviour change",
+   "_note": "2026 run as a fundraiser for Lifeline (1-28 Feb)."
+  },
+  {
+   "id": "wearred",
+   "name": "National Wear Red Day (Go Red for Women)",
+   "kind": "day",
+   "rule": "nth:1:4:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-06"
+    },
+    "2027": {
+     "start": "2027-02-05"
+    },
+    "2028": {
+     "start": "2028-02-04"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://goredforwomen.org/WearRedDay",
+   "blurb": "Red today for women's hearts: heart disease is still the leading killer, and it doesn't always clutch its chest.",
+   "puzzle_theme": "Heart disease in women: atypical presentations, SCAD, risk factors",
+   "_note": "US (American Heart Association), first Friday of February; 2026 confirmed 6 Feb, 2027-2028 computed."
+  },
+  {
+   "id": "ovarianmonth",
+   "name": "Ovarian Cancer Awareness Month",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://ovariancancer.net.au/ovarian-cancer-awareness-month/",
+   "blurb": "Teal for February: the cancer with quiet symptoms and no screening test. Know the signs.",
+   "puzzle_theme": "Ovarian cancer: symptoms, CA-125, BRCA, why there's no screening test",
+   "_note": "Ovarian Cancer Australia. Teal Ribbon Day was reported on 28 Feb in 2026 (same day as Rare Disease Day) but OCA's site doesn't list it, so it isn't a separate entry."
+  },
+  {
+   "id": "hearingweek",
+   "name": "Hearing Awareness Week",
+   "kind": "week",
+   "rule": "range:03-01:03-07",
+   "dates": {
+    "2026": {
+     "start": "2026-03-01",
+     "end": "2026-03-07"
+    },
+    "2027": {
+     "start": "2027-03-01",
+     "end": "2027-03-07"
+    },
+    "2028": {
+     "start": "2028-03-01",
+     "end": "2028-03-07"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.deafnessforum.org.au",
+   "blurb": "A week to hear out the one in six Australians living with hearing loss. Pardon? Exactly.",
+   "puzzle_theme": "Hearing loss: conductive vs sensorineural, audiograms, noise protection",
+   "_note": "Deafness Forum of Australia, 1-7 March each year; contains World Hearing Day (3 March). Shares 1 March with Zero Discrimination Day."
+  },
+  {
+   "id": "greatestshave",
+   "name": "World's Greatest Shave",
+   "kind": "month",
+   "rule": "month:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-01",
+     "end": "2026-03-31"
+    },
+    "2027": {
+     "start": "2027-03-01",
+     "end": "2027-03-31"
+    },
+    "2028": {
+     "start": "2028-03-01",
+     "end": "2028-03-31"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.worldsgreatestshave.com",
+   "blurb": "Shave, cut or colour in March for the Leukaemia Foundation and people living with blood cancer.",
+   "puzzle_theme": "Blood cancers: leukaemia, lymphoma, myeloma",
+   "_note": "Leukaemia Foundation runs it through March; individual shave events are set by participants."
+  },
+  {
+   "id": "purpleday",
+   "name": "Purple Day",
+   "kind": "day",
+   "rule": "03-26",
+   "dates": {
+    "2026": {
+     "start": "2026-03-26"
+    },
+    "2027": {
+     "start": "2027-03-26"
+    },
+    "2028": {
+     "start": "2028-03-26"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.purpleday.org",
+   "blurb": "Purple for epilepsy today. Started by a nine-year-old in Canada, now worn worldwide.",
+   "puzzle_theme": "Epilepsy: seizure types, seizure first aid, anti-seizure medicines"
+  },
+  {
+   "id": "heartweek",
+   "name": "Heart Week (Australia)",
+   "kind": "week",
+   "rule": "week:nth:1:0:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-04",
+     "end": "2026-05-10"
+    },
+    "2027": {
+     "start": "2027-05-03",
+     "end": "2027-05-09"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-07"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.heartfoundation.org.au/heart-week",
+   "blurb": "Heart Foundation's week for heart health checks. Your ticker deserves a service.",
+   "puzzle_theme": "Heart health checks: blood pressure, cholesterol, absolute CVD risk",
+   "_note": "2026 confirmed 4-10 May; 2027-2028 computed as the first Monday-Sunday week of May, verify with the Heart Foundation."
+  },
+  {
+   "id": "dolly",
+   "name": "Do It For Dolly Day",
+   "kind": "day",
+   "rule": "nth:2:4:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-08"
+    },
+    "2027": {
+     "start": "2027-05-14"
+    },
+    "2028": {
+     "start": "2028-05-12"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://support.dollysdream.org.au/do-it-for-dolly-day",
+   "blurb": "Go blue to end bullying. Dolly's Dream funds a 24/7 support line and school programs.",
+   "puzzle_theme": "Bullying and youth mental health: impact, warning signs, getting help",
+   "_note": "2025 (9 May) and 2026 (8 May) were the second Friday of May; 2027-2028 computed. In 2028 it falls on 12 May with International Nurses Day."
+  },
+  {
+   "id": "mothersdayclassic",
+   "name": "Mother's Day Classic",
+   "kind": "day",
+   "rule": "nth:2:6:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-10"
+    },
+    "2027": {
+     "start": "2027-05-09"
+    },
+    "2028": {
+     "start": "2028-05-14"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.mothersdayclassic.com.au",
+   "blurb": "Walk or run on Mother's Day for breast and ovarian cancer research.",
+   "puzzle_theme": "Breast and ovarian cancer: research, screening, survival gains",
+   "_note": "Held on Mother's Day (second Sunday of May); 2026 confirmed 10 May, 2027-2028 computed. In 2026 it shares the date with World Lupus Day."
+  },
+  {
+   "id": "starlight",
+   "name": "Starlight Day",
+   "kind": "day",
+   "rule": "nth:3:1:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-19"
+    },
+    "2027": {
+     "start": "2027-05-18"
+    },
+    "2028": {
+     "start": "2028-05-16"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.starlight.org.au",
+   "blurb": "Starlight Children's Foundation brings fun and distraction to sick kids in hospital.",
+   "puzzle_theme": "Paediatrics: children's hospitals, childhood illness, play in healing",
+   "_note": "2026 confirmed Tuesday 19 May (third Tuesday of May); 2027-2028 computed, not yet announced. In 2026 it shares the date with World Family Doctor Day (priority 1 leads)."
+  },
+  {
+   "id": "biggestmorningtea",
+   "name": "Australia's Biggest Morning Tea",
+   "kind": "day",
+   "rule": "Thursday in late May, set yearly by Cancer Council",
+   "dates": {
+    "2026": {
+     "start": "2026-05-21"
+    },
+    "2027": {
+     "start": "2027-05-27"
+    },
+    "2028": {
+     "start": "2028-05-25"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.biggestmorningtea.com.au",
+   "blurb": "Cancer Council's cuppa for a cause. Scones fund research, prevention and support.",
+   "puzzle_theme": "Cancer: prevention, risk factors and screening",
+   "_note": "2026 (21 May) and 2027 (27 May) confirmed; 2028 computed as the fourth Thursday of May, not yet announced. Morning teas can be hosted any time in May or June."
+  },
+  {
+   "id": "bowelmonth",
+   "name": "Bowel Cancer Awareness Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.bowelcanceraustralia.org",
+   "blurb": "June is for talking about poo. Bowel cancer is very treatable when caught early.",
+   "puzzle_theme": "Bowel cancer: iFOBT screening, colonoscopy, red-flag symptoms"
+  },
+  {
+   "id": "dryjuly",
+   "name": "Dry July",
+   "kind": "month",
+   "rule": "month:07",
+   "dates": {
+    "2026": {
+     "start": "2026-07-01",
+     "end": "2026-07-31"
+    },
+    "2027": {
+     "start": "2027-07-01",
+     "end": "2027-07-31"
+    },
+    "2028": {
+     "start": "2028-07-01",
+     "end": "2028-07-31"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.dryjuly.com",
+   "blurb": "A month off alcohol to fund support for people affected by cancer. Your liver says thanks.",
+   "puzzle_theme": "Alcohol and health: liver disease, cancer risk, drinking guidelines"
+  },
+  {
+   "id": "donatelifeweek",
+   "name": "DonateLife Week",
+   "kind": "week",
+   "rule": "week:last:6:07 (Sun-Sun)",
+   "dates": {
+    "2026": {
+     "start": "2026-07-26",
+     "end": "2026-08-02"
+    },
+    "2027": {
+     "start": "2027-07-25",
+     "end": "2027-08-01"
+    },
+    "2028": {
+     "start": "2028-07-30",
+     "end": "2028-08-06"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.donatelife.gov.au/donatelife-week",
+   "blurb": "Organ and tissue donation week. One conversation with family can save lives.",
+   "puzzle_theme": "Organ donation and transplantation: brain death, matching, rejection",
+   "_note": "Australian Government DonateLife (not a fundraising charity). 2026 confirmed Sun 26 Jul - Sun 2 Aug; 2027-2028 computed from the last Sunday of July."
+  },
+  {
+   "id": "jeansforgenes",
+   "name": "Jeans for Genes Day",
+   "kind": "day",
+   "rule": "nth:1:3:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-06"
+    },
+    "2027": {
+     "start": "2027-08-05"
+    },
+    "2028": {
+     "start": "2028-08-03"
+    }
+   },
+   "tags": [
+    "charity",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.jeansforgenes.org.au",
+   "blurb": "Denim for discovery: Children's Medical Research Institute research into genetic disease.",
+   "puzzle_theme": "Genetics: inheritance patterns, genetic disease, gene therapy",
+   "_note": "2026 confirmed Thursday 6 August (2025 was a Friday). 2027-2028 computed as the first Thursday of August, verify each year. Falls inside Dental Health Week, which leads on priority."
+  },
+  {
+   "id": "strokeweek",
+   "name": "National Stroke Week",
+   "kind": "week",
+   "rule": "week:nth:1:0:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-03",
+     "end": "2026-08-09"
+    },
+    "2027": {
+     "start": "2027-08-02",
+     "end": "2027-08-08"
+    },
+    "2028": {
+     "start": "2028-08-07",
+     "end": "2028-08-13"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://strokefoundation.org.au",
+   "blurb": "Stroke Foundation's week to learn F.A.S.T. Face, Arms, Speech, Time: call 000.",
+   "puzzle_theme": "Stroke: F.A.S.T. signs, thrombolysis and clot retrieval, prevention",
+   "_note": "2026 confirmed 3-9 August; 2027-2028 computed. Same week as Dental Health Week and Homelessness Week (Dental Health Week leads on priority)."
+  },
+  {
+   "id": "kidneyweek",
+   "name": "Kidney Action Week",
+   "kind": "week",
+   "rule": "week:nth:2:0:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-10",
+     "end": "2026-08-17"
+    },
+    "2027": {
+     "start": "2027-08-09",
+     "end": "2027-08-16"
+    },
+    "2028": {
+     "start": "2028-08-14",
+     "end": "2028-08-21"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://kidney.org.au",
+   "blurb": "Kidney Health Australia's week: kidneys can lose 90% of function before you notice.",
+   "puzzle_theme": "Kidney health: CKD, eGFR and ACR, risk factors, dialysis",
+   "_note": "Formerly Kidney Health Week. 2026 listed as 10-17 August; 2027-2028 computed from the second Monday of August, verify with Kidney Health Australia."
+  },
+  {
+   "id": "daffodil",
+   "name": "Daffodil Day",
+   "kind": "day",
+   "rule": "Thursday in August, set yearly by Cancer Council",
+   "dates": {
+    "2026": {
+     "start": "2026-08-20"
+    },
+    "2027": {
+     "start": "2027-08-19"
+    },
+    "2028": {
+     "start": "2028-08-17"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.daffodilday.com.au",
+   "blurb": "Daffodils for Cancer Council: research, prevention and support for everyone touched by cancer.",
+   "puzzle_theme": "Cancer: types, screening, oncology history",
+   "_note": "2026 confirmed Thursday 20 August (third Thursday); 2025 was a Friday. 2027-2028 computed as the third Thursday of August, not yet announced."
+  },
+  {
+   "id": "rednose",
+   "name": "Red Nose Day",
+   "kind": "day",
+   "rule": "nth:4:3:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-27"
+    },
+    "2027": {
+     "start": "2027-08-26"
+    },
+    "2028": {
+     "start": "2028-08-24"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://rednose.org.au/support-red-nose/red-nose-day/",
+   "blurb": "Red Nose Australia funds research, education and bereavement support so fewer families lose a baby.",
+   "puzzle_theme": "Safe sleep and pregnancy care: SIDS risk reduction, stillbirth prevention",
+   "_note": "Red Nose now holds it on the fourth Thursday of August; 2026 date (27 Aug) inferred from the official 'Red Nose Day Eve' on Wed 26 Aug. 2027-2028 computed. Keep puzzle wording gentle; no jokes about babies or loss."
+  },
+  {
+   "id": "jerseyday",
+   "name": "Jersey Day",
+   "kind": "day",
+   "rule": "nth:1:4:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-04"
+    },
+    "2027": {
+     "start": "2027-09-03"
+    },
+    "2028": {
+     "start": "2028-09-01"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.donatelife.gov.au/news-events/events/2026/jersey-day-2026",
+   "blurb": "Wear your team's jersey to start a chat about organ donation. Started in memory of Nick Ross.",
+   "puzzle_theme": "Organ donation: who can donate, consent, transplant immunology",
+   "_note": "2026 confirmed Friday 4 September (first Friday of September); 2027-2028 computed. Update the year-specific link annually."
+  },
+  {
+   "id": "prostatemonth",
+   "name": "Prostate Cancer Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.pcfa.org.au",
+   "blurb": "September is for prostates. Australia's most commonly diagnosed cancer in men.",
+   "puzzle_theme": "Prostate cancer: PSA testing debate, diagnosis, treatment"
+  },
+  {
+   "id": "steptember",
+   "name": "Steptember",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.steptember.org.au",
+   "blurb": "10,000 steps a day through September for Cerebral Palsy Alliance. Walk, wheel or swim it.",
+   "puzzle_theme": "Cerebral palsy and the benefits of physical activity",
+   "_note": "Runs 1-30 September."
+  },
+  {
+   "id": "ruok",
+   "name": "R U OK? Day",
+   "kind": "day",
+   "rule": "nth:2:3:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-10"
+    },
+    "2027": {
+     "start": "2027-09-09"
+    },
+    "2028": {
+     "start": "2028-09-14"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle",
+    "sensitive"
+   ],
+   "priority": 3,
+   "link": "https://www.ruok.org.au",
+   "blurb": "Ask someone 'Are you OK?' today, and listen properly to the answer.",
+   "puzzle_theme": "Mental health: depression, anxiety, starting a conversation, getting help",
+   "_note": "Second Thursday of September; 2026 confirmed 10 Sep. In 2026 it shares the date with World Suicide Prevention Day (sensitive, shown separately); keep puzzles strictly on supportive themes that day."
+  },
+  {
+   "id": "breastmonth",
+   "name": "Breast Cancer Awareness Month",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://nbcf.org.au",
+   "blurb": "Pink October: funding breast cancer research, and a nudge to book that mammogram.",
+   "puzzle_theme": "Breast cancer: screening, BRCA, treatment advances",
+   "_note": "National Breast Cancer Foundation. Cancer Council's Pink Ribbon Day (historically the fourth Monday of October) could not be confirmed for 2026, so it isn't a separate entry."
+  },
+  {
+   "id": "mhmnsw",
+   "name": "Mental Health Month (NSW)",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://wayahead.org.au/mentalhealthmonth/about-us/",
+   "blurb": "October in NSW is Mental Health Month, coordinated by WayAhead.",
+   "puzzle_theme": "Mental health and wellbeing: common conditions, support, stigma"
+  },
+  {
+   "id": "greatcycle",
+   "name": "Great Cycle Challenge",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://greatcyclechallenge.com.au",
+   "blurb": "Riders clock up kilometres in October to fight kids' cancer, funding Children's Medical Research Institute.",
+   "puzzle_theme": "Childhood cancer: leukaemia, brain tumours, survival gains"
+  },
+  {
+   "id": "loudshirt",
+   "name": "Loud Shirt Day",
+   "kind": "day",
+   "rule": "nth:3:4:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-16"
+    },
+    "2027": {
+     "start": "2027-10-15"
+    },
+    "2028": {
+     "start": "2028-10-20"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://www.loudshirtday.org",
+   "blurb": "Wear your loudest shirt for kids who are deaf or hard of hearing. Subtlety optional.",
+   "puzzle_theme": "Childhood hearing loss: newborn screening, cochlear implants, glue ear",
+   "_note": "2024 (18 Oct) and 2025 (17 Oct) were the third Friday of October; 2026-2028 computed, 2026 date not confirmed. In 2026 it shares 16 October with World Anaesthesia Day (priority 1 leads)."
+  },
+  {
+   "id": "bandanna",
+   "name": "Bandanna Day",
+   "kind": "day",
+   "rule": "last:3:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-29"
+    },
+    "2027": {
+     "start": "2027-10-28"
+    },
+    "2028": {
+     "start": "2028-10-26"
+    }
+   },
+   "tags": [
+    "charity",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://canteen.org.au/how-to-support-canteen/bandanna-day",
+   "blurb": "Bandannas on for Canteen, supporting young people aged 12-25 affected by cancer.",
+   "puzzle_theme": "Adolescent and young adult cancer: types, treatment, survivorship",
+   "_note": "Last Thursday of October; 2026 confirmed 29 Oct. In 2026 it shares the date with World Stroke Day and World Psoriasis Day (earlier entries lead at equal priority)."
+  },
+  {
+   "id": "lungmonth",
+   "name": "Lung Health Awareness Month",
+   "kind": "month",
+   "rule": "month:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01",
+     "end": "2026-11-30"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-30"
+    },
+    "2028": {
+     "start": "2028-11-01",
+     "end": "2028-11-30"
+    }
+   },
+   "tags": [
+    "charity"
+   ],
+   "priority": 3,
+   "link": "https://lungfoundation.com.au",
+   "blurb": "Lung Foundation Australia's month for lungs. Take a deep breath. Now notice it.",
+   "puzzle_theme": "Lung health: COPD, lung cancer, spirometry, smoking and vaping"
   }
  ]
 }
