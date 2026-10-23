@@ -79,7 +79,7 @@ footer.site a{color:var(--muted)}
 .splash-in{display:grid;gap:12px;justify-items:center;max-width:420px}
 .splash .tile{width:88px;height:88px;border-radius:20px;background:var(--accent);display:grid;place-items:center}
 .splash .tile svg{width:56px;height:56px}
-.splash h1{font-family:var(--title);font-weight:700;font-size:40px;margin:4px 0 0;line-height:1.05}
+.splash h1,.splash .sp-title{font-family:var(--title);font-weight:700;font-size:40px;margin:4px 0 0;line-height:1.05}
 .splash p{margin:0;font-size:18px;line-height:1.45;color:var(--ink)}
 .splash .meta{font-size:14px;color:var(--muted);line-height:1.5}
 .splash .meta b{color:var(--ink)}
