@@ -1220,35 +1220,35 @@
     "r": 0,
     "c": 2,
     "len": 3,
-    "clue": "Do something (or a piece of legislation)"
+    "clue": "Put on a costume and ___ the part"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Back tooth"
+    "clue": "Back tooth, less famous than the vampire's canine"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Fluid given from below"
+    "clue": "Fluid given from below: the scariest treat of all"
    },
    {
     "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Bug behind many sore throats"
+    "clue": "Bug behind a sore throat (not all that screaming)"
    },
    {
     "n": 8,
     "r": 4,
     "c": 0,
     "len": 3,
-    "clue": "Febrile, informally"
+    "clue": "Febrile, informally, or a witch's cauldron"
    }
   ],
   "down": [
@@ -1257,35 +1257,35 @@
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Wide awake, as on AVPU"
+    "clue": "Wide awake after a jump scare, as on AVPU"
    },
    {
     "n": 2,
     "r": 0,
     "c": 3,
     "len": 4,
-    "clue": "Arrived"
+    "clue": "Arrived, like the trick-or-treaters"
    },
    {
     "n": 3,
     "r": 0,
     "c": 4,
     "len": 4,
-    "clue": "Snare"
+    "clue": "Snare for a ghost"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 4,
-    "clue": "Hernia repair material"
+    "clue": "Hernia repair material, not a mummy's bandage"
    },
    {
     "n": 5,
     "r": 1,
     "c": 1,
     "len": 4,
-    "clue": "Wise to"
+    "clue": "Wise to the costume"
    }
   ]
  }
