@@ -96,3 +96,4 @@ html[data-theme="dark"] #zbr .hit.t20{background:linear-gradient(135deg,#3A2140,
 #zbr .sug{margin:12px 0 0;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 #zbr .sug p{margin:0;font-size:14px;color:var(--muted)}
 #zbr .sug .sent{font-size:13px;color:var(--muted)}
+#zbr .dym{margin:10px 0;padding:12px;border-radius:12px;background:#F1ECF8;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}#zbr .dym p{margin:0;width:100%;font-size:15px}#zbr .dym .go{padding:8px 18px}
