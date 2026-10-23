@@ -1,6 +1,6 @@
 {
  "_about": "Malady Wise idea bank: original-wording seeds for Dxtective cases, Zebritis prompts and Triviosis/Grand Rounds questions, distilled from the old site notes and fact-checked. Fictional cases only; no individual treatment advice. Puzzle-writing tasks should pick unused items and set \"used\": true.",
- "updated": "2026-10-22",
+ "updated": "2026-10-24",
  "cases": [
   {
    "diagnosis": "Cannabinoid hyperemesis syndrome",
@@ -1053,6 +1053,1741 @@
     "Botulism"
    ],
    "used": false
+  },
+  {
+   "q": "Name a poison featured in Kathryn Harkup's 'A is for Arsenic: The Poisons of Agatha Christie'",
+   "unicorn": "Eserine",
+   "examples": [
+    "Arsenic",
+    "Cyanide",
+    "Strychnine",
+    "Hemlock",
+    "Belladonna",
+    "Digitalis",
+    "Ricin",
+    "Nicotine",
+    "Opium",
+    "Eserine"
+   ],
+   "used": false,
+   "source": "Kathryn Harkup, 'A is for Arsenic: The Poisons of Agatha Christie' (Bloomsbury Sigma, 2015)",
+   "ranked": false,
+   "note": "Harkup (2015), 14 chapters, each paired with a Christie novel: arsenic (Murder is Easy), belladonna (The Labours of Hercules), cyanide (Sparkling Cyanide), digitalis (Appointment with Death), eserine (Crooked House), hemlock (Five Little Pigs), monkshood (4.50 from Paddington), nicotine (Three Act Tragedy), opium (Sad Cypress), phosphorus (Dumb Witness), ricin (Partners in Crime), strychnine (The Mysterious Affair at Styles), thallium (The Pale Horse), Veronal (Lord Edgware Dies).",
+   "answers_full": [
+    [
+     "Arsenic",
+     1,
+     [
+      "arsenic trioxide",
+      "white arsenic"
+     ],
+     "Arsenic poisoning"
+    ],
+    [
+     "Cyanide",
+     1,
+     [
+      "hydrogen cyanide",
+      "prussic acid",
+      "potassium cyanide"
+     ],
+     "Cyanide poisoning"
+    ],
+    [
+     "Strychnine",
+     1,
+     [],
+     "Strychnine"
+    ],
+    [
+     "Hemlock",
+     3,
+     [
+      "poison hemlock",
+      "coniine",
+      "Conium maculatum"
+     ],
+     "Conium maculatum"
+    ],
+    [
+     "Belladonna",
+     3,
+     [
+      "deadly nightshade",
+      "atropine",
+      "Atropa belladonna"
+     ],
+     "Atropa belladonna"
+    ],
+    [
+     "Digitalis",
+     3,
+     [
+      "foxglove",
+      "digoxin",
+      "digitoxin"
+     ],
+     "Digitalis"
+    ],
+    [
+     "Ricin",
+     3,
+     [
+      "castor bean",
+      "castor oil plant"
+     ],
+     "Ricin"
+    ],
+    [
+     "Nicotine",
+     6,
+     [],
+     "Nicotine poisoning"
+    ],
+    [
+     "Opium",
+     6,
+     [
+      "morphine",
+      "laudanum"
+     ],
+     "Opium"
+    ],
+    [
+     "Thallium",
+     6,
+     [
+      "thallium poisoning"
+     ],
+     "Thallium poisoning"
+    ],
+    [
+     "Monkshood",
+     10,
+     [
+      "aconite",
+      "aconitine",
+      "wolfsbane",
+      "Aconitum"
+     ],
+     "Aconitum"
+    ],
+    [
+     "Phosphorus",
+     10,
+     [
+      "white phosphorus",
+      "yellow phosphorus"
+     ],
+     "White phosphorus"
+    ],
+    [
+     "Veronal",
+     10,
+     [
+      "barbital",
+      "barbitone",
+      "barbiturate"
+     ],
+     "Barbital"
+    ],
+    [
+     "Eserine",
+     20,
+     [
+      "physostigmine",
+      "Calabar bean"
+     ],
+     "Physostigmine"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 12 original 'dirty dozen' chemicals of the Stockholm Convention on Persistent Organic Pollutants (2001)",
+   "unicorn": "Mirex",
+   "examples": [
+    "DDT",
+    "Polychlorinated biphenyls",
+    "Dioxins",
+    "Dieldrin",
+    "Aldrin",
+    "Chlordane",
+    "Furans",
+    "Heptachlor",
+    "Hexachlorobenzene",
+    "Mirex"
+   ],
+   "used": false,
+   "source": "Stockholm Convention Secretariat, 'The 12 initial POPs under the Stockholm Convention' (chm.pops.int; Convention adopted 2001)",
+   "ranked": false,
+   "note": "The 12 initial POPs: aldrin, chlordane, DDT, dieldrin, endrin, heptachlor, hexachlorobenzene, mirex, toxaphene, PCBs, polychlorinated dibenzo-p-dioxins and dibenzofurans. Mostly organochlorine pesticides plus industrial chemicals and combustion by-products.",
+   "answers_full": [
+    [
+     "DDT",
+     1,
+     [
+      "dichlorodiphenyltrichloroethane"
+     ],
+     "DDT"
+    ],
+    [
+     "Polychlorinated biphenyls",
+     1,
+     [
+      "PCBs",
+      "PCB"
+     ],
+     "Polychlorinated biphenyl"
+    ],
+    [
+     "Dioxins",
+     1,
+     [
+      "dioxin",
+      "polychlorinated dibenzo-p-dioxins",
+      "PCDD",
+      "PCDDs"
+     ],
+     "Polychlorinated dibenzodioxins"
+    ],
+    [
+     "Dieldrin",
+     3,
+     [],
+     "Dieldrin"
+    ],
+    [
+     "Aldrin",
+     3,
+     [],
+     "Aldrin"
+    ],
+    [
+     "Chlordane",
+     3,
+     [],
+     "Chlordane"
+    ],
+    [
+     "Furans",
+     6,
+     [
+      "polychlorinated dibenzofurans",
+      "PCDF",
+      "PCDFs",
+      "dibenzofurans"
+     ],
+     "Polychlorinated dibenzofurans"
+    ],
+    [
+     "Heptachlor",
+     6,
+     [],
+     "Heptachlor"
+    ],
+    [
+     "Hexachlorobenzene",
+     6,
+     [
+      "HCB"
+     ],
+     "Hexachlorobenzene"
+    ],
+    [
+     "Endrin",
+     10,
+     [],
+     "Endrin"
+    ],
+    [
+     "Toxaphene",
+     10,
+     [
+      "camphechlor"
+     ],
+     "Toxaphene"
+    ],
+    [
+     "Mirex",
+     20,
+     [],
+     "Mirex"
+    ]
+   ]
+  },
+  {
+   "q": "Name a chemical added to the Stockholm Convention on Persistent Organic Pollutants since 2009",
+   "unicorn": "Dechlorane Plus",
+   "examples": [
+    "PFOS",
+    "PFOA",
+    "Lindane",
+    "Endosulfan",
+    "Chlorpyrifos",
+    "PFHxS",
+    "Pentachlorophenol",
+    "Decabromodiphenyl ether",
+    "Short-chain chlorinated paraffins",
+    "Dechlorane Plus"
+   ],
+   "used": false,
+   "source": "Stockholm Convention Secretariat, 'The new POPs under the Stockholm Convention' (chm.pops.int, to COP-12, 2025)",
+   "ranked": false,
+   "note": "New POPs listed at COP-4 (2009) to COP-12 (2025): alpha- and beta-HCH, chlordecone, hexabromobiphenyl, hexa/heptaBDE, lindane, pentachlorobenzene, PFOS, tetra/pentaBDE (2009); endosulfan (2011); HBCD (2013); hexachlorobutadiene, pentachlorophenol, PCNs (2015); decaBDE, SCCPs (2017); dicofol, PFOA (2019); PFHxS (2022); methoxychlor, Dechlorane Plus, UV-328 (2023); chlorpyrifos, long-chain PFCAs, MCCPs (2025).",
+   "answers_full": [
+    [
+     "PFOS",
+     1,
+     [
+      "perfluorooctane sulfonic acid",
+      "perfluorooctanesulfonic acid",
+      "perfluorooctane sulfonate"
+     ],
+     "Perfluorooctanesulfonic acid"
+    ],
+    [
+     "PFOA",
+     1,
+     [
+      "perfluorooctanoic acid",
+      "C8"
+     ],
+     "Perfluorooctanoic acid"
+    ],
+    [
+     "Lindane",
+     1,
+     [
+      "gamma-HCH",
+      "gamma-hexachlorocyclohexane"
+     ],
+     "Lindane"
+    ],
+    [
+     "Endosulfan",
+     3,
+     [],
+     "Endosulfan"
+    ],
+    [
+     "Chlorpyrifos",
+     3,
+     [],
+     "Chlorpyrifos"
+    ],
+    [
+     "PFHxS",
+     3,
+     [
+      "perfluorohexane sulfonic acid",
+      "perfluorohexanesulfonic acid"
+     ],
+     "Perfluorohexanesulfonic acid"
+    ],
+    [
+     "Pentachlorophenol",
+     6,
+     [
+      "PCP"
+     ],
+     "Pentachlorophenol"
+    ],
+    [
+     "Decabromodiphenyl ether",
+     6,
+     [
+      "decaBDE",
+      "deca-BDE"
+     ],
+     "Decabromodiphenyl ether"
+    ],
+    [
+     "Short-chain chlorinated paraffins",
+     6,
+     [
+      "SCCPs",
+      "SCCP"
+     ],
+     "Chlorinated paraffins"
+    ],
+    [
+     "Hexabromocyclododecane",
+     6,
+     [
+      "HBCD",
+      "HBCDD"
+     ],
+     "Hexabromocyclododecane"
+    ],
+    [
+     "Chlordecone",
+     10,
+     [
+      "Kepone"
+     ],
+     "Chlordecone"
+    ],
+    [
+     "Alpha-hexachlorocyclohexane",
+     10,
+     [
+      "alpha-HCH"
+     ],
+     "Hexachlorocyclohexane"
+    ],
+    [
+     "Beta-hexachlorocyclohexane",
+     10,
+     [
+      "beta-HCH"
+     ],
+     "Hexachlorocyclohexane"
+    ],
+    [
+     "Tetrabromodiphenyl ether and pentabromodiphenyl ether",
+     10,
+     [
+      "pentaBDE",
+      "tetraBDE",
+      "penta-BDE",
+      "pentabromodiphenyl ether",
+      "tetrabromodiphenyl ether"
+     ],
+     "Pentabromodiphenyl ether"
+    ],
+    [
+     "Hexabromodiphenyl ether and heptabromodiphenyl ether",
+     10,
+     [
+      "octaBDE",
+      "hexaBDE",
+      "heptaBDE",
+      "hexabromodiphenyl ether",
+      "heptabromodiphenyl ether"
+     ],
+     "Octabromodiphenyl ether"
+    ],
+    [
+     "Hexabromobiphenyl",
+     10,
+     [
+      "HBB"
+     ],
+     "Hexabromobiphenyl"
+    ],
+    [
+     "Pentachlorobenzene",
+     10,
+     [
+      "PeCB"
+     ],
+     "Pentachlorobenzene"
+    ],
+    [
+     "Hexachlorobutadiene",
+     10,
+     [
+      "HCBD"
+     ],
+     "Hexachlorobutadiene"
+    ],
+    [
+     "Polychlorinated naphthalenes",
+     10,
+     [
+      "PCNs",
+      "PCN"
+     ],
+     "Polychlorinated naphthalene"
+    ],
+    [
+     "Dicofol",
+     10,
+     [],
+     "Dicofol"
+    ],
+    [
+     "Methoxychlor",
+     10,
+     [],
+     "Methoxychlor"
+    ],
+    [
+     "UV-328",
+     10,
+     [
+      "UV 328"
+     ],
+     "UV-328"
+    ],
+    [
+     "Long-chain perfluorocarboxylic acids",
+     10,
+     [
+      "LC-PFCAs",
+      "long-chain PFCAs"
+     ],
+     "Perfluorinated carboxylic acid"
+    ],
+    [
+     "Medium-chain chlorinated paraffins",
+     10,
+     [
+      "MCCPs",
+      "MCCP"
+     ],
+     "Chlorinated paraffins"
+    ],
+    [
+     "Dechlorane Plus",
+     20,
+     [],
+     "Dechlorane plus"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 snake groups that caused envenoming in the Australian Snakebite Project (2005-2015)",
+   "unicorn": "Collett's snake",
+   "examples": [
+    "Brown snake",
+    "Tiger snake",
+    "Red-bellied black snake",
+    "Taipan",
+    "Death adder",
+    "Sea snake",
+    "Mulga snake",
+    "Rough-scaled snake",
+    "Hoplocephalus",
+    "Collett's snake"
+   ],
+   "used": false,
+   "source": "Johnston CI et al., 'The Australian Snakebite Project, 2005-2015 (ASP-20)', Med J Aust 2017;207(3):119-125",
+   "ranked": true,
+   "note": "ASP-20 (Johnston et al., MJA 2017), 718 envenomings with snake identified: brown snake 41%, tiger snake 16%, red-bellied black snake 16%, rough-scaled snake 9%, taipan 4%, mulga snake 4%, Hoplocephalus spp. 4%, death adder 3%, sea snake 1%, Collett's snake 0.4%. Brown snakes caused 17 of the 23 deaths.",
+   "answers_full": [
+    [
+     "Brown snake",
+     1,
+     [
+      "eastern brown snake",
+      "western brown snake",
+      "Pseudonaja",
+      "dugite",
+      "gwardar"
+     ],
+     "Pseudonaja"
+    ],
+    [
+     "Tiger snake",
+     1,
+     [
+      "Notechis",
+      "Notechis scutatus"
+     ],
+     "Tiger snake"
+    ],
+    [
+     "Red-bellied black snake",
+     1,
+     [
+      "red belly black snake",
+      "black snake",
+      "Pseudechis porphyriacus"
+     ],
+     "Red-bellied black snake"
+    ],
+    [
+     "Taipan",
+     1,
+     [
+      "coastal taipan",
+      "inland taipan",
+      "Oxyuranus",
+      "fierce snake"
+     ],
+     "Taipan"
+    ],
+    [
+     "Death adder",
+     3,
+     [
+      "Acanthophis",
+      "common death adder"
+     ],
+     "Death adder"
+    ],
+    [
+     "Sea snake",
+     3,
+     [
+      "sea snakes"
+     ],
+     "Sea snake"
+    ],
+    [
+     "Mulga snake",
+     6,
+     [
+      "king brown",
+      "king brown snake",
+      "Pseudechis australis"
+     ],
+     "Mulga snake"
+    ],
+    [
+     "Rough-scaled snake",
+     10,
+     [
+      "Clarence River snake",
+      "Tropidechis carinatus"
+     ],
+     "Rough-scaled snake"
+    ],
+    [
+     "Hoplocephalus",
+     10,
+     [
+      "broad-headed snake",
+      "Stephens' banded snake",
+      "pale-headed snake"
+     ],
+     "Hoplocephalus"
+    ],
+    [
+     "Collett's snake",
+     20,
+     [
+      "Colletts snake",
+      "Pseudechis colletti"
+     ],
+     "Collett's snake"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the top 20 substances on the US ATSDR Substance Priority List (2025)",
+   "unicorn": "Dibenz(a,h)anthracene",
+   "examples": [
+    "Lead",
+    "Arsenic",
+    "Cadmium",
+    "Benzene",
+    "Vinyl chloride",
+    "Nickel",
+    "Dioxin (2,3,7,8-TCDD)",
+    "Chloroform",
+    "Trichloroethylene",
+    "Dibenz(a,h)anthracene"
+   ],
+   "used": false,
+   "source": "Agency for Toxic Substances and Disease Registry (ATSDR), Substance Priority List 2025",
+   "ranked": true,
+   "note": "ATSDR 2025 SPL (ranked on frequency at US Superfund sites, toxicity and exposure potential): 1 lead, 2 arsenic, 3 cadmium, 4 vinyl chloride, 5 trichloroethylene, 6 nickel, 7 benzo(a)pyrene, 8 benzene, 9 beryllium, 10 manganese, 11 2,3,7,8-TCDD (dioxin), 12 tetrachloroethylene, 13 chloroform, 14 dieldrin, 15 1,2-dichloroethane, 16 PAHs, 17 naphthalene, 18 phenanthrene, 19 dibenz(a,h)anthracene, 20 benz(a)anthracene. PCBs are 21st and mercury 23rd.",
+   "answers_full": [
+    [
+     "Lead",
+     1,
+     [
+      "Pb"
+     ],
+     "Lead poisoning"
+    ],
+    [
+     "Arsenic",
+     1,
+     [],
+     "Arsenic"
+    ],
+    [
+     "Cadmium",
+     1,
+     [],
+     "Cadmium"
+    ],
+    [
+     "Benzene",
+     1,
+     [],
+     "Benzene"
+    ],
+    [
+     "Vinyl chloride",
+     3,
+     [
+      "chloroethene",
+      "PVC monomer"
+     ],
+     "Vinyl chloride"
+    ],
+    [
+     "Nickel",
+     3,
+     [],
+     "Nickel"
+    ],
+    [
+     "Dioxin (2,3,7,8-TCDD)",
+     3,
+     [
+      "dioxin",
+      "TCDD",
+      "2,3,7,8-tetrachlorodibenzo-p-dioxin",
+      "tetrachlorodibenzodioxin"
+     ],
+     "2,3,7,8-Tetrachlorodibenzodioxin"
+    ],
+    [
+     "Chloroform",
+     3,
+     [
+      "trichloromethane"
+     ],
+     "Chloroform"
+    ],
+    [
+     "Trichloroethylene",
+     6,
+     [
+      "TCE",
+      "trichloroethene"
+     ],
+     "Trichloroethylene"
+    ],
+    [
+     "Beryllium",
+     6,
+     [],
+     "Beryllium"
+    ],
+    [
+     "Manganese",
+     6,
+     [],
+     "Manganese"
+    ],
+    [
+     "Polycyclic aromatic hydrocarbons",
+     6,
+     [
+      "PAHs",
+      "PAH"
+     ],
+     "Polycyclic aromatic hydrocarbon"
+    ],
+    [
+     "Naphthalene",
+     6,
+     [
+      "mothballs"
+     ],
+     "Naphthalene"
+    ],
+    [
+     "Benzo(a)pyrene",
+     10,
+     [
+      "benzopyrene",
+      "BaP"
+     ],
+     "Benzo(a)pyrene"
+    ],
+    [
+     "Tetrachloroethylene",
+     10,
+     [
+      "perchloroethylene",
+      "PCE",
+      "perc",
+      "tetrachloroethene"
+     ],
+     "Tetrachloroethylene"
+    ],
+    [
+     "Dieldrin",
+     10,
+     [],
+     "Dieldrin"
+    ],
+    [
+     "1,2-Dichloroethane",
+     10,
+     [
+      "ethylene dichloride",
+      "EDC"
+     ],
+     "1,2-Dichloroethane"
+    ],
+    [
+     "Phenanthrene",
+     10,
+     [],
+     "Phenanthrene"
+    ],
+    [
+     "Benz(a)anthracene",
+     10,
+     [
+      "benzo(a)anthracene",
+      "benzanthracene",
+      "tetraphene"
+     ],
+     "Benz(a)anthracene"
+    ],
+    [
+     "Dibenz(a,h)anthracene",
+     20,
+     [
+      "dibenzo(a,h)anthracene",
+      "dibenzanthracene"
+     ],
+     "Dibenz(a,h)anthracene"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 substance groups most often involved in young children's exposures reported to US poison centres (NPDS, 2024)",
+   "unicorn": "Topical preparations",
+   "examples": [
+    "Household cleaning products",
+    "Painkillers (analgesics)",
+    "Cosmetics and personal care products",
+    "Foreign bodies and toys",
+    "Dietary supplements, herbals and homeopathics",
+    "Antihistamines",
+    "Vitamins",
+    "Pesticides",
+    "Plants",
+    "Topical preparations"
+   ],
+   "used": false,
+   "source": "America's Poison Centers, 2024 Annual Report of the National Poison Data System (Beuhler et al., Clin Toxicol 2025), via poison.org national statistics",
+   "ranked": true,
+   "note": "America's Poison Centers NPDS 2024, children 5 and under, % of substances: household cleaning substances 10.1, analgesics 9.1, cosmetics/personal care 9.1, foreign bodies/toys/miscellaneous 8.0, dietary supplements/herbals/homeopathic 6.9, antihistamines 4.7, vitamins 4.7, topical preparations 3.9, pesticides 3.4, plants 3.3. Reflects what children get into, not what is most toxic.",
+   "answers_full": [
+    [
+     "Household cleaning products",
+     1,
+     [
+      "cleaning substances",
+      "cleaning products",
+      "cleaners",
+      "household cleaners",
+      "bleach",
+      "detergent",
+      "laundry pods",
+      "dishwasher detergent"
+     ],
+     "Household chemicals"
+    ],
+    [
+     "Painkillers (analgesics)",
+     1,
+     [
+      "analgesics",
+      "painkillers",
+      "pain relievers",
+      "paracetamol",
+      "acetaminophen",
+      "Panadol",
+      "Tylenol",
+      "ibuprofen",
+      "Nurofen",
+      "Advil"
+     ],
+     "Analgesic"
+    ],
+    [
+     "Cosmetics and personal care products",
+     1,
+     [
+      "cosmetics",
+      "personal care products",
+      "toiletries",
+      "makeup",
+      "soap",
+      "shampoo",
+      "nail polish",
+      "perfume"
+     ],
+     "Cosmetics"
+    ],
+    [
+     "Foreign bodies and toys",
+     3,
+     [
+      "foreign bodies",
+      "foreign body",
+      "toys",
+      "foreign objects"
+     ],
+     "Foreign body"
+    ],
+    [
+     "Dietary supplements, herbals and homeopathics",
+     3,
+     [
+      "dietary supplements",
+      "supplements",
+      "herbal remedies",
+      "herbals",
+      "homeopathic remedies",
+      "melatonin"
+     ],
+     "Dietary supplement"
+    ],
+    [
+     "Antihistamines",
+     3,
+     [
+      "antihistamine",
+      "diphenhydramine",
+      "Benadryl",
+      "allergy medicine"
+     ],
+     "Antihistamine"
+    ],
+    [
+     "Vitamins",
+     3,
+     [
+      "vitamin",
+      "multivitamins",
+      "gummy vitamins",
+      "vitamin gummies"
+     ],
+     "Vitamin"
+    ],
+    [
+     "Pesticides",
+     6,
+     [
+      "pesticide",
+      "insecticide",
+      "insect spray",
+      "rat poison",
+      "rodenticide",
+      "ant bait"
+     ],
+     "Pesticide poisoning"
+    ],
+    [
+     "Plants",
+     6,
+     [
+      "plant",
+      "houseplants",
+      "poisonous plants"
+     ],
+     "List of poisonous plants"
+    ],
+    [
+     "Topical preparations",
+     20,
+     [
+      "topicals",
+      "creams",
+      "ointments",
+      "nappy rash cream",
+      "diaper rash cream"
+     ],
+     "Topical medication"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 substance groups most often involved in adult exposures reported to US poison centres (NPDS, 2024)",
+   "unicorn": "Hormones and hormone antagonists",
+   "examples": [
+    "Painkillers (analgesics)",
+    "Antidepressants",
+    "Household cleaning products",
+    "Cardiovascular drugs",
+    "Sedatives, hypnotics and antipsychotics",
+    "Alcohols",
+    "Anticonvulsants",
+    "Antihistamines",
+    "Pesticides",
+    "Hormones and hormone antagonists"
+   ],
+   "used": false,
+   "source": "America's Poison Centers, 2024 Annual Report of the National Poison Data System (Beuhler et al., Clin Toxicol 2025), via poison.org national statistics",
+   "ranked": true,
+   "note": "America's Poison Centers NPDS 2024, adults 20+, % of substances: analgesics 10.4, cardiovascular drugs 7.6, antidepressants 7.3, sedative/hypnotics/antipsychotics 6.9, cleaning substances 5.9, alcohols 4.2, hormones and hormone antagonists 3.9, anticonvulsants 3.8, antihistamines 3.7, pesticides 3.1.",
+   "answers_full": [
+    [
+     "Painkillers (analgesics)",
+     1,
+     [
+      "analgesics",
+      "painkillers",
+      "pain relievers",
+      "paracetamol",
+      "acetaminophen",
+      "Panadol",
+      "Tylenol",
+      "ibuprofen",
+      "opioids"
+     ],
+     "Analgesic"
+    ],
+    [
+     "Antidepressants",
+     1,
+     [
+      "antidepressant",
+      "SSRIs",
+      "SSRI",
+      "sertraline",
+      "Zoloft"
+     ],
+     "Antidepressant"
+    ],
+    [
+     "Household cleaning products",
+     1,
+     [
+      "cleaning substances",
+      "cleaning products",
+      "cleaners",
+      "bleach",
+      "detergent"
+     ],
+     "Household chemicals"
+    ],
+    [
+     "Cardiovascular drugs",
+     3,
+     [
+      "heart medications",
+      "blood pressure medications",
+      "antihypertensives",
+      "beta blockers",
+      "calcium channel blockers"
+     ],
+     "Cardiovascular drug"
+    ],
+    [
+     "Sedatives, hypnotics and antipsychotics",
+     3,
+     [
+      "sedatives",
+      "hypnotics",
+      "sleeping pills",
+      "benzodiazepines",
+      "antipsychotics",
+      "quetiapine"
+     ],
+     "Sedative"
+    ],
+    [
+     "Alcohols",
+     3,
+     [
+      "alcohol",
+      "ethanol"
+     ],
+     "Alcohol intoxication"
+    ],
+    [
+     "Anticonvulsants",
+     6,
+     [
+      "anticonvulsant",
+      "antiepileptics",
+      "antiepileptic drugs",
+      "seizure medications"
+     ],
+     "Anticonvulsant"
+    ],
+    [
+     "Antihistamines",
+     6,
+     [
+      "antihistamine",
+      "diphenhydramine",
+      "Benadryl"
+     ],
+     "Antihistamine"
+    ],
+    [
+     "Pesticides",
+     10,
+     [
+      "pesticide",
+      "insecticide",
+      "rat poison",
+      "rodenticide",
+      "weedkiller"
+     ],
+     "Pesticide poisoning"
+    ],
+    [
+     "Hormones and hormone antagonists",
+     20,
+     [
+      "hormones",
+      "insulin",
+      "diabetes medications",
+      "thyroid hormone",
+      "levothyroxine"
+     ],
+     "Hormonal agent"
+    ]
+   ]
+  },
+  {
+   "q": "Name an antidote on the WHO Model List of Essential Medicines (2023)",
+   "unicorn": "Sodium calcium edetate",
+   "examples": [
+    "Activated charcoal",
+    "Naloxone",
+    "Acetylcysteine",
+    "Atropine",
+    "Calcium gluconate",
+    "Methylene blue",
+    "Deferoxamine",
+    "Dimercaprol",
+    "Fomepizole",
+    "Sodium calcium edetate"
+   ],
+   "used": false,
+   "source": "WHO Model List of Essential Medicines, 23rd list (2023), section 4",
+   "ranked": false,
+   "note": "WHO EML 23rd list (2023), section 4 'Antidotes and other substances used in poisonings': non-specific - activated charcoal; specific - acetylcysteine, atropine, calcium gluconate, methylthioninium chloride (methylene blue), naloxone, penicillamine, Prussian blue, sodium nitrite, sodium thiosulfate; complementary - deferoxamine, dimercaprol, fomepizole, sodium calcium edetate, succimer. Antivenoms sit in a separate section.",
+   "answers_full": [
+    [
+     "Activated charcoal",
+     1,
+     [
+      "charcoal"
+     ],
+     "Activated carbon"
+    ],
+    [
+     "Naloxone",
+     1,
+     [
+      "Narcan",
+      "Nyxoid"
+     ],
+     "Naloxone"
+    ],
+    [
+     "Acetylcysteine",
+     1,
+     [
+      "N-acetylcysteine",
+      "NAC",
+      "Parvolex"
+     ],
+     "Acetylcysteine"
+    ],
+    [
+     "Atropine",
+     3,
+     [],
+     "Atropine"
+    ],
+    [
+     "Calcium gluconate",
+     6,
+     [],
+     "Calcium gluconate"
+    ],
+    [
+     "Methylene blue",
+     6,
+     [
+      "methylthioninium chloride",
+      "methylthioninium"
+     ],
+     "Methylene blue"
+    ],
+    [
+     "Deferoxamine",
+     6,
+     [
+      "desferrioxamine",
+      "Desferal"
+     ],
+     "Deferoxamine"
+    ],
+    [
+     "Dimercaprol",
+     6,
+     [
+      "BAL",
+      "British anti-Lewisite"
+     ],
+     "Dimercaprol"
+    ],
+    [
+     "Fomepizole",
+     6,
+     [
+      "4-methylpyrazole",
+      "Antizol"
+     ],
+     "Fomepizole"
+    ],
+    [
+     "Sodium thiosulfate",
+     6,
+     [
+      "sodium thiosulphate",
+      "thiosulfate",
+      "thiosulphate"
+     ],
+     "Sodium thiosulfate"
+    ],
+    [
+     "Sodium nitrite",
+     10,
+     [
+      "nitrite"
+     ],
+     "Sodium nitrite"
+    ],
+    [
+     "Penicillamine",
+     10,
+     [
+      "D-penicillamine"
+     ],
+     "Penicillamine"
+    ],
+    [
+     "Succimer",
+     10,
+     [
+      "DMSA",
+      "dimercaptosuccinic acid"
+     ],
+     "Dimercaptosuccinic acid"
+    ],
+    [
+     "Prussian blue",
+     10,
+     [
+      "potassium ferric hexacyanoferrate",
+      "Radiogardase"
+     ],
+     "Prussian blue"
+    ],
+    [
+     "Sodium calcium edetate",
+     20,
+     [
+      "calcium disodium EDTA",
+      "edetate calcium disodium",
+      "calcium EDTA",
+      "EDTA",
+      "sodium calcium EDTA"
+     ],
+     "Edetate calcium disodium"
+    ]
+   ]
+  },
+  {
+   "q": "Name a schedule of Australia's Poisons Standard (SUSMP)",
+   "unicorn": "Schedule 1",
+   "examples": [
+    "Prescription Only Medicine (Schedule 4)",
+    "Controlled Drug (Schedule 8)",
+    "Pharmacy Medicine (Schedule 2)",
+    "Pharmacist Only Medicine (Schedule 3)",
+    "Prohibited Substance (Schedule 9)",
+    "Poison (Schedule 6)",
+    "Dangerous Poison (Schedule 7)",
+    "Caution (Schedule 5)",
+    "Schedule 10",
+    "Schedule 1"
+   ],
+   "used": false,
+   "source": "Therapeutic Goods Administration, 'Scheduling basics: medicines and chemicals in Australia' (Poisons Standard)",
+   "ranked": false,
+   "note": "TGA Poisons Standard: S1 (not currently in use), S2 Pharmacy Medicine, S3 Pharmacist Only Medicine, S4 Prescription Only Medicine or Prescription Animal Remedy, S5 Caution, S6 Poison, S7 Dangerous Poison, S8 Controlled Drug, S9 Prohibited Substance, S10 substances of such danger to health as to warrant prohibition of sale, supply and use.",
+   "answers_full": [
+    [
+     "Prescription Only Medicine (Schedule 4)",
+     1,
+     [
+      "Schedule 4",
+      "S4",
+      "prescription only",
+      "prescription animal remedy"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Controlled Drug (Schedule 8)",
+     1,
+     [
+      "Schedule 8",
+      "S8",
+      "controlled drugs"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Pharmacy Medicine (Schedule 2)",
+     3,
+     [
+      "Schedule 2",
+      "S2"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Pharmacist Only Medicine (Schedule 3)",
+     3,
+     [
+      "Schedule 3",
+      "S3",
+      "pharmacist only"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Prohibited Substance (Schedule 9)",
+     3,
+     [
+      "Schedule 9",
+      "S9"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Poison (Schedule 6)",
+     6,
+     [
+      "Schedule 6",
+      "S6"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Dangerous Poison (Schedule 7)",
+     6,
+     [
+      "Schedule 7",
+      "S7"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Caution (Schedule 5)",
+     10,
+     [
+      "Schedule 5",
+      "S5"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Schedule 10",
+     10,
+     [
+      "S10",
+      "substances of such danger to health as to warrant prohibition of sale supply and use"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ],
+    [
+     "Schedule 1",
+     20,
+     [
+      "S1"
+     ],
+     "Standard for the Uniform Scheduling of Medicines and Poisons"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 substances most often reported to New Zealand's National Poisons Centre (Safekids Aotearoa)",
+   "unicorn": "Teething gel",
+   "examples": [
+    "Paracetamol",
+    "Ibuprofen",
+    "Dishwashing liquid",
+    "Hand sanitiser",
+    "Silica gel",
+    "Toilet bowl discs",
+    "Ant killer",
+    "Glowsticks",
+    "Black nightshade",
+    "Teething gel"
+   ],
+   "used": false,
+   "source": "Safekids Aotearoa / Starship Child Health, 'Poisons' reference card v4.0 (undated)",
+   "ranked": true,
+   "note": "Safekids Aotearoa / Starship 'Poisons' reference card (v4.0, undated; hospitalisation data 2013-2017), top 10 substances reported to the National Poisons Centre: 1 paracetamol, 2 ibuprofen, 3 silica gel, 4 toilet bowl discs, 5 dishwashing liquid, 6 ant killer, 7 black nightshade, 8 glowsticks, 9 hand sanitiser, 10 teething gel.",
+   "answers_full": [
+    [
+     "Paracetamol",
+     1,
+     [
+      "Panadol",
+      "Pamol",
+      "acetaminophen",
+      "Tylenol"
+     ],
+     "Paracetamol"
+    ],
+    [
+     "Ibuprofen",
+     1,
+     [
+      "Nurofen",
+      "Advil",
+      "Brufen"
+     ],
+     "Ibuprofen"
+    ],
+    [
+     "Dishwashing liquid",
+     3,
+     [
+      "dish soap",
+      "dishwashing detergent",
+      "washing-up liquid",
+      "detergent"
+     ],
+     "Dishwashing liquid"
+    ],
+    [
+     "Hand sanitiser",
+     3,
+     [
+      "hand sanitizer",
+      "alcohol gel",
+      "hand gel"
+     ],
+     "Hand sanitizer"
+    ],
+    [
+     "Silica gel",
+     3,
+     [
+      "desiccant",
+      "silica gel sachets"
+     ],
+     "Silica gel"
+    ],
+    [
+     "Toilet bowl discs",
+     6,
+     [
+      "toilet cleaner",
+      "toilet blocks",
+      "toilet bowl cleaner",
+      "toilet discs"
+     ],
+     "Toilet cleaner"
+    ],
+    [
+     "Ant killer",
+     6,
+     [
+      "ant bait",
+      "ant poison",
+      "ant spray"
+     ],
+     "Ant bait"
+    ],
+    [
+     "Glowsticks",
+     6,
+     [
+      "glow sticks",
+      "glow stick",
+      "glowstick"
+     ],
+     "Glow stick"
+    ],
+    [
+     "Black nightshade",
+     10,
+     [
+      "nightshade",
+      "Solanum nigrum"
+     ],
+     "Solanum nigrum"
+    ],
+    [
+     "Teething gel",
+     20,
+     [
+      "teething gels",
+      "Bonjela"
+     ],
+     "Teething"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 substance groups most often involved in exposures reported to Australian Poisons Information Centres (2015)",
+   "unicorn": "Antipsychotics",
+   "examples": [
+    "Household cleaning products",
+    "Paracetamol",
+    "Antidepressants",
+    "Cosmetics and personal care products",
+    "NSAIDs",
+    "Bites and stings",
+    "Cardiovascular medicines",
+    "Sedatives",
+    "Pesticides",
+    "Antipsychotics"
+   ],
+   "used": false,
+   "source": "Huynh A et al., 'Patterns of poisoning exposure at different ages: the 2015 annual report of the Australian Poisons Information Centres', Med J Aust 2018;209(2):74-79",
+   "ranked": true,
+   "note": "Huynh et al., MJA 2018, 2015 annual report of the Australian PICs (164,363 exposures): household cleaning substances 10.2%, paracetamol-containing analgesics 7.3%, antidepressants 4.2%, cosmetics/personal care/toiletries 4.2%, NSAIDs 3.9%, cardiovascular agents 3.4%, bites/stings 3.3%, sedatives 2.9%, pesticides 2.8%, antipsychotics 2.7%.",
+   "answers_full": [
+    [
+     "Household cleaning products",
+     1,
+     [
+      "cleaning substances",
+      "cleaning products",
+      "cleaners",
+      "household cleaners",
+      "bleach",
+      "detergent"
+     ],
+     "Household chemicals"
+    ],
+    [
+     "Paracetamol",
+     1,
+     [
+      "paracetamol-containing analgesics",
+      "Panadol",
+      "acetaminophen",
+      "Panadeine"
+     ],
+     "Paracetamol"
+    ],
+    [
+     "Antidepressants",
+     3,
+     [
+      "antidepressant",
+      "SSRIs",
+      "sertraline",
+      "Zoloft"
+     ],
+     "Antidepressant"
+    ],
+    [
+     "Cosmetics and personal care products",
+     3,
+     [
+      "cosmetics",
+      "personal care products",
+      "toiletries",
+      "soap"
+     ],
+     "Cosmetics"
+    ],
+    [
+     "NSAIDs",
+     3,
+     [
+      "NSAID",
+      "non-steroidal anti-inflammatory drugs",
+      "anti-inflammatories",
+      "ibuprofen",
+      "Nurofen"
+     ],
+     "Nonsteroidal anti-inflammatory drug"
+    ],
+    [
+     "Bites and stings",
+     6,
+     [
+      "bites",
+      "stings",
+      "spider bite",
+      "snakebite",
+      "bee sting",
+      "envenomation"
+     ],
+     "Envenomation"
+    ],
+    [
+     "Cardiovascular medicines",
+     6,
+     [
+      "cardiovascular agents",
+      "heart medications",
+      "blood pressure medications",
+      "beta blockers",
+      "metoprolol"
+     ],
+     "Cardiovascular drug"
+    ],
+    [
+     "Sedatives",
+     6,
+     [
+      "sedative",
+      "benzodiazepines",
+      "diazepam",
+      "Valium",
+      "sleeping pills"
+     ],
+     "Sedative"
+    ],
+    [
+     "Pesticides",
+     10,
+     [
+      "pesticide",
+      "insecticide",
+      "pyrethrins",
+      "pyrethroids",
+      "fly spray",
+      "rat poison"
+     ],
+     "Pesticide poisoning"
+    ],
+    [
+     "Antipsychotics",
+     20,
+     [
+      "antipsychotic",
+      "quetiapine",
+      "Seroquel",
+      "olanzapine"
+     ],
+     "Antipsychotic"
+    ]
+   ]
+  },
+  {
+   "q": "Name one of the 10 substances most often involved in calls to the Victorian Poisons Information Centre (2018)",
+   "unicorn": "All-purpose cleaner",
+   "examples": [
+    "Paracetamol",
+    "Ibuprofen",
+    "Bleach",
+    "Diazepam",
+    "Hand sanitiser",
+    "Dishwashing detergent",
+    "Quetiapine",
+    "Silica gel",
+    "Toilet bowl cleaner",
+    "All-purpose cleaner"
+   ],
+   "used": false,
+   "source": "Victorian Poisons Information Centre (Austin Health), Annual Report 2018",
+   "ranked": true,
+   "note": "VPIC Annual Report 2018, top 10 exposure substances (calls incl. recalls): paracetamol 2,718; ibuprofen 1,326; quetiapine 847; diazepam 612; topical antiseptics/hand sanitisers 600; bleach (hypochlorite) 552; silica gel desiccant 456; toilet bowl cleaner/deodoriser (cage/disc) 424; hand dish detergent 408; all-purpose/hard-surface cleaner 401. The report notes these are the most accessible substances, not the most toxic.",
+   "answers_full": [
+    [
+     "Paracetamol",
+     1,
+     [
+      "Panadol",
+      "Panamax",
+      "acetaminophen"
+     ],
+     "Paracetamol"
+    ],
+    [
+     "Ibuprofen",
+     1,
+     [
+      "Nurofen",
+      "Advil",
+      "Brufen"
+     ],
+     "Ibuprofen"
+    ],
+    [
+     "Bleach",
+     1,
+     [
+      "hypochlorite",
+      "sodium hypochlorite",
+      "White King"
+     ],
+     "Bleach"
+    ],
+    [
+     "Diazepam",
+     3,
+     [
+      "Valium"
+     ],
+     "Diazepam"
+    ],
+    [
+     "Hand sanitiser",
+     3,
+     [
+      "hand sanitizer",
+      "topical antiseptics",
+      "antiseptic",
+      "alcohol gel"
+     ],
+     "Hand sanitizer"
+    ],
+    [
+     "Dishwashing detergent",
+     3,
+     [
+      "dishwashing liquid",
+      "dish detergent",
+      "hand dish detergent",
+      "dish soap"
+     ],
+     "Dishwashing liquid"
+    ],
+    [
+     "Quetiapine",
+     6,
+     [
+      "Seroquel"
+     ],
+     "Quetiapine"
+    ],
+    [
+     "Silica gel",
+     6,
+     [
+      "desiccant",
+      "silica gel sachets"
+     ],
+     "Silica gel"
+    ],
+    [
+     "Toilet bowl cleaner",
+     6,
+     [
+      "toilet cleaner",
+      "toilet deodoriser",
+      "toilet cage",
+      "toilet disc",
+      "toilet block"
+     ],
+     "Toilet cleaner"
+    ],
+    [
+     "All-purpose cleaner",
+     20,
+     [
+      "multi-purpose cleaner",
+      "hard surface cleaner",
+      "surface spray",
+      "all purpose cleaner"
+     ],
+     "Household chemicals"
+    ]
+   ]
   }
  ],
  "trivia": [
@@ -2067,6 +3802,554 @@
    ],
    "topic": "The body by numbers",
    "used": false
+  },
+  {
+   "q": "Prussian blue is used as an antidote for poisoning with which metal?",
+   "a": "Thallium",
+   "wrong": [
+    "Lead",
+    "Arsenic",
+    "Copper"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Hydroxocobalamin, a form of vitamin B12, is an antidote for which poison?",
+   "a": "Cyanide",
+   "wrong": [
+    "Carbon monoxide",
+    "Iron",
+    "Lithium"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Desferrioxamine is used to treat poisoning with which metal?",
+   "a": "Iron",
+   "wrong": [
+    "Lead",
+    "Copper",
+    "Mercury"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Flumazenil reverses which class of drugs?",
+   "a": "Benzodiazepines",
+   "wrong": [
+    "Opioids",
+    "Antidepressants",
+    "Antipsychotics"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Idarucizumab is a reversal agent for which anticoagulant?",
+   "a": "Dabigatran",
+   "wrong": [
+    "Warfarin",
+    "Heparin",
+    "Aspirin"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Fomepizole treats methanol and ethylene glycol poisoning by blocking which enzyme?",
+   "a": "Alcohol dehydrogenase",
+   "wrong": [
+    "Acetylcholinesterase",
+    "Monoamine oxidase",
+    "Cytochrome P450 3A4"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Atropine and pralidoxime are used for poisoning with which type of pesticide?",
+   "a": "Organophosphates",
+   "wrong": [
+    "Pyrethroids",
+    "Paraquat",
+    "Glyphosate"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Octreotide is used for low blood sugar after overdose of which diabetes medicines?",
+   "a": "Sulfonylureas",
+   "wrong": [
+    "Metformin",
+    "SGLT2 inhibitors",
+    "DPP-4 inhibitors"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Calcium gluconate gel is the specific treatment for skin burns from which acid?",
+   "a": "Hydrofluoric acid",
+   "wrong": [
+    "Sulfuric acid",
+    "Hydrochloric acid",
+    "Nitric acid"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Methylene blue is used to treat which blood problem caused by some poisons?",
+   "a": "Methaemoglobinaemia",
+   "wrong": [
+    "Haemolysis",
+    "Thrombocytopenia",
+    "Polycythaemia"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Australian funnel-web spider antivenom is raised in which animal?",
+   "a": "Rabbits",
+   "wrong": [
+    "Horses",
+    "Sheep",
+    "Dogs"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Who is regarded as the father of modern toxicology, author of 'Traite des poisons' (1813)?",
+   "a": "Mathieu Orfila",
+   "wrong": [
+    "Paracelsus",
+    "James Marsh",
+    "Robert Christison"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "The word 'plumber' comes from the Latin word for which metal?",
+   "a": "Lead",
+   "wrong": [
+    "Copper",
+    "Iron",
+    "Tin"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Japan's itai-itai ('it hurts, it hurts') disease was caused by which metal?",
+   "a": "Cadmium",
+   "wrong": [
+    "Mercury",
+    "Lead",
+    "Thallium"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "The phrase 'mad as a hatter' is linked to hat makers' exposure to which metal?",
+   "a": "Mercury",
+   "wrong": [
+    "Lead",
+    "Arsenic",
+    "Antimony"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "The 1920s 'Radium Girls' were exposed while painting what?",
+   "a": "Glow-in-the-dark watch dials",
+   "wrong": [
+    "X-ray machines",
+    "Ceramic tiles",
+    "Theatre sets"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Former Russian agent Alexander Litvinenko was poisoned in London in 2006 with which substance?",
+   "a": "Polonium-210",
+   "wrong": [
+    "Ricin",
+    "Thallium",
+    "Arsenic"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Besides the lead additive in petrol, Thomas Midgley also developed which chemicals?",
+   "a": "CFCs (chlorofluorocarbons)",
+   "wrong": [
+    "DDT",
+    "PCBs",
+    "Teflon"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "In which year did Australia ban leaded petrol?",
+   "a": "2002",
+   "wrong": [
+    "1986",
+    "1995",
+    "2010"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "The WA town of Wittenoom was taken off the map because of which hazard?",
+   "a": "Blue asbestos",
+   "wrong": [
+    "Uranium",
+    "Lead dust",
+    "Arsenic in groundwater"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Rachel Carson's 'Silent Spring' (1962) turned public opinion against which pesticide?",
+   "a": "DDT",
+   "wrong": [
+    "Paraquat",
+    "Glyphosate",
+    "Malathion"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "In the Australian Snakebite Project (2005-2015), which snake caused most snakebite deaths?",
+   "a": "Brown snake",
+   "wrong": [
+    "Tiger snake",
+    "Inland taipan",
+    "Death adder"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Irukandji syndrome takes its name from?",
+   "a": "The Irukandji people of the Cairns region",
+   "wrong": [
+    "The doctor who described it",
+    "A Queensland beach",
+    "A ship's crew who were stung"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Bites from Australia's paralysis tick are linked to an allergy to what?",
+   "a": "Red meat",
+   "wrong": [
+    "Shellfish",
+    "Peanuts",
+    "Eggs"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Which Australian mammal is venomous?",
+   "a": "Platypus",
+   "wrong": [
+    "Echidna",
+    "Wombat",
+    "Quoll"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "How many deaths from funnel-web spider bites have been recorded since antivenom arrived in 1981?",
+   "a": "None",
+   "wrong": [
+    "About one a year",
+    "About 10",
+    "About 30"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Which Sydney funnel-web is considered more dangerous?",
+   "a": "The male",
+   "wrong": [
+    "The female",
+    "Juveniles",
+    "Both are equal"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Deadly nightshade was called 'belladonna' (beautiful lady) because it was used to?",
+   "a": "Dilate the pupils",
+   "wrong": [
+    "Whiten the skin",
+    "Redden the lips",
+    "Thin the waist"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Rhubarb leaves are toxic mainly because of which chemical?",
+   "a": "Oxalic acid",
+   "wrong": [
+    "Solanine",
+    "Cyanide",
+    "Ricin"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Ricin comes from the seeds of which plant?",
+   "a": "Castor oil plant",
+   "wrong": [
+    "Oleander",
+    "Foxglove",
+    "Rosary pea"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Eating unripe ackee fruit can cause a dangerous drop in what?",
+   "a": "Blood sugar",
+   "wrong": [
+    "Blood pressure",
+    "Sodium",
+    "Platelets"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "The mnemonic SLUDGE (salivation, lacrimation, urination...) describes which toxidrome?",
+   "a": "Cholinergic",
+   "wrong": [
+    "Anticholinergic",
+    "Sympathomimetic",
+    "Opioid"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Under the Hunter criteria, which sign is most specific for serotonin toxicity?",
+   "a": "Clonus",
+   "wrong": [
+    "Fever",
+    "Dilated pupils",
+    "Sweating"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "In 2015, about what share of poisoning exposures reported to Australian Poisons Information Centres were unintentional?",
+   "a": "About two-thirds",
+   "wrong": [
+    "About one-tenth",
+    "About one-third",
+    "Nearly all"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Which single substance led calls to the Victorian Poisons Information Centre in 2018?",
+   "a": "Paracetamol",
+   "wrong": [
+    "Ibuprofen",
+    "Bleach",
+    "Silica gel"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Australia's mandatory button battery safety standards took effect in which year?",
+   "a": "2022",
+   "wrong": [
+    "2013",
+    "2017",
+    "2025"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Ringing in the ears is a classic early sign of poisoning with which medicine?",
+   "a": "Aspirin",
+   "wrong": [
+    "Paracetamol",
+    "Ibuprofen",
+    "Codeine"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Agatha Christie learned about poisons working in which job during World War I?",
+   "a": "Hospital dispensary assistant",
+   "wrong": [
+    "Police laboratory assistant",
+    "Mortuary attendant",
+    "University chemistry tutor"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "What poison kills Emily Inglethorp in Christie's first novel, 'The Mysterious Affair at Styles'?",
+   "a": "Strychnine",
+   "wrong": [
+    "Arsenic",
+    "Cyanide",
+    "Digitalis"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  },
+  {
+   "q": "Readers of which Christie novel later recognised real cases of thallium poisoning?",
+   "a": "The Pale Horse",
+   "wrong": [
+    "Sparkling Cyanide",
+    "Five Little Pigs",
+    "Sad Cypress"
+   ],
+   "topic": "Toxicology",
+   "used": false
+  }
+ ],
+ "triviosis_quizzes": [
+  {
+   "difficulty": "Medium",
+   "theme": "Toxicology",
+   "questions": [
+    {
+     "q": "Who said \u201cthe dose makes the poison\u201d?",
+     "a": "Paracelsus",
+     "w": [
+      "Hippocrates",
+      "Galen",
+      "Avicenna"
+     ],
+     "e": "The 16th-century Swiss physician\u2019s idea still underpins toxicology."
+    },
+    {
+     "q": "Socrates was executed by drinking?",
+     "a": "Hemlock",
+     "w": [
+      "Arsenic",
+      "Belladonna",
+      "Monkshood"
+     ],
+     "e": "Athens, 399 BC."
+    },
+    {
+     "q": "Minamata disease in Japan was caused by?",
+     "a": "Methylmercury",
+     "w": [
+      "Cadmium",
+      "Lead",
+      "Arsenic"
+     ],
+     "e": "Factory wastewater contaminated seafood; first recognised in 1956."
+    },
+    {
+     "q": "Digoxin was first derived from which plant?",
+     "a": "Foxglove",
+     "w": [
+      "Deadly nightshade",
+      "Willow",
+      "Opium poppy"
+     ],
+     "e": "William Withering described foxglove for dropsy in 1785."
+    },
+    {
+     "q": "Who developed pressure immobilisation first aid for snakebite?",
+     "a": "Struan Sutherland",
+     "w": [
+      "Jack Barnes",
+      "Howard Florey",
+      "Fiona Wood"
+     ],
+     "e": "Developed in Melbourne in the 1970s; he also led work on funnel-web antivenom."
+    },
+    {
+     "q": "\u201cHot as a hare, blind as a bat, dry as a bone, red as a beet, mad as a hatter\u201d describes which toxidrome?",
+     "a": "Anticholinergic",
+     "w": [
+      "Cholinergic",
+      "Opioid",
+      "Serotonergic"
+     ],
+     "e": "Fever, dilated pupils, dry skin, flushing and delirium."
+    },
+    {
+     "q": "The Hunter criteria for serotonin toxicity come from which Australian city?",
+     "a": "Newcastle",
+     "w": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+     ],
+     "e": "Developed by the Hunter Area Toxicology Service (Dunkley et al., 2003)."
+    },
+    {
+     "q": "Australia\u2019s Poisons Information Centre phone number is?",
+     "a": "13 11 26",
+     "w": [
+      "13 14 50",
+      "1800 022 222",
+      "13 43 25 84"
+     ],
+     "e": "Answered 24 hours a day, 7 days a week, from anywhere in Australia."
+    },
+    {
+     "q": "Carbon monoxide binds haemoglobin about how many times more strongly than oxygen?",
+     "a": "About 200 to 250 times",
+     "w": [
+      "About 2 times",
+      "About 20 times",
+      "About 2,000 times"
+     ],
+     "e": "That is why small amounts in the air are so dangerous."
+    },
+    {
+     "q": "In 1961, how did Dr Jack Barnes prove a tiny jellyfish caused Irukandji syndrome?",
+     "a": "He stung himself, his son and a lifeguard",
+     "w": [
+      "He studied stung fish",
+      "He tested the venom on mice",
+      "He analysed hospital records"
+     ],
+     "e": "The jellyfish was later named Carukia barnesi after him."
+    }
+   ]
   }
  ]
 }
