@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
@@ -58,6 +58,24 @@
     for (i = 1; i <= a.length; i++) for (j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
     return d[a.length][b.length];
   }
+  // spelling-tolerant key: drop medical endings and normalise sounds (toxoplasma ~ toxoplasmosis, neumonia ~ pneumonia)
+  function phon(w) { return w.replace(/^pn/, "n").replace(/^ps/, "s").replace(/ph/g, "f").replace(/ae|oe/g, "e").replace(/y/g, "i").replace(/ck/g, "k").replace(/c(?=[aoult])/g, "k").replace(/c(?=[eiy])/g, "s").replace(/rh/g, "r").replace(/th/g, "t").replace(/kh/g, "k").replace(/qu/g, "kw").replace(/x/g, "ks").replace(/([a-z])\1+/g, "$1"); }
+  function stemw(w) { if (w.length < 6) return w; var r = w.replace(/(iasis|osis|ism|ical|ic|al|ae|ia|us|um|es|a|e|s)$/, ""); return r.length >= 4 ? r : w; }
+  function key(s) { return norm(s).replace(STOP, " ").replace(/\s+/g, " ").trim().split(" ").map(function (w) { return stemw(phon(w)); }).join(""); }
+  function lev2(a, b) { if (Math.abs(a.length - b.length) > 4) return 9; var d = [], i, j; for (i = 0; i <= a.length; i++) d[i] = [i]; for (j = 1; j <= b.length; j++) d[0][j] = j; for (i = 1; i <= a.length; i++) for (j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[a.length][b.length]; }
+  function near(guess, prompt) {
+    var gk = key(guess); if (gk.length < 4) return -1;
+    var best = -1, bd = 9;
+    prompt.a.forEach(function (ans, idx) {
+      [ans[0]].concat(ans[2] || []).forEach(function (s) {
+        var k = key(s); if (k.length < 4) return;
+        var d = lev2(gk, k); if ((k.indexOf(gk) === 0 || gk.indexOf(k) === 0) && Math.min(gk.length, k.length) >= 5) d = Math.min(d, 2);
+        var tol = k.length >= 10 ? 4 : k.length >= 6 ? 3 : 2;
+        if (d <= tol && d < bd) { bd = d; best = idx; }
+      });
+    });
+    return best;
+  }
   function match(guess, prompt) {
     var g = core(guess), gs = g.replace(/ /g, ""); if (!g) return -1;
     var best = -1, bestD = 9;
@@ -66,6 +84,8 @@
         var c = core(s), cs = c.replace(/ /g, "");
         if (!c) return;
         if (c === g || cs === gs) { if (bestD > 0) { best = idx; bestD = 0; } return; }
+        var ks = key(s), kg = key(guess);
+        if (ks && ks === kg) { if (bestD > 0.5) { best = idx; bestD = 0.5; } return; }
         var tol = cs.length >= 10 ? 2 : cs.length >= 5 ? 1 : 0, dd = lev(gs, cs);
         if (dd <= tol && dd < bestD) { best = idx; bestD = dd; return; }
         // word overlap: "orbital fracture" ~ "orbital floor fracture"; "duchenne muscular dystrophy" ~ "muscular dystrophy"
@@ -94,8 +114,9 @@
     if (!answered) {
       var left = TRIES - tries.length;
       h += '<form class="ask" id="zbr-form" autocomplete="off"><input id="zbr-in" type="text" inputmode="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Type an answer" maxlength="60" aria-label="Your answer"><button type="submit" class="go">Submit</button></form>' +
-        '<div class="zmeta"><span class="tries">' + Array(left + 1).join("\u25cf") + Array(tries.length + 1).join("\u25cb") + " " + left + (left === 1 ? " try" : " tries") + ' left</span><button type="button" class="link" id="zbr-skip">Give up</button></div>' +
-        (tries.length ? '<p class="missed">Not on the list: ' + tries.map(esc).join(", ") + "</p>" : "") +
+        '<div class="zmeta"><span class="tries">' + Array(left + 1).join("\u25cf") + Array(tries.length + 1).join("\u25cb") + " " + left + (left === 1 ? " try" : " tries") + ' left</span>' + (P.spare && st.swap === undefined ? '<button type="button" class="link" id="zbr-swap">Swap prompt</button>' : "") + '<button type="button" class="link" id="zbr-skip">Give up</button></div>' +
+        (pend ? '<div class="dym"><p>Did you mean <b>' + esc(cap(x.a[pend.i][0])) + '</b>?</p><button type="button" class="go" id="zbr-yes">Yes</button><button type="button" class="link" id="zbr-no">No, something else</button></div>' : "") +
+                (tries.length ? '<p class="missed">Not on the list: ' + tries.map(esc).join(", ") + "</p>" : "") +
         (msg ? '<p class="say' + (bad ? " bad" : "") + '">' + esc(msg) + "</p>" : '<p class="hint">Any correct answer scores. Rarer answers score more.</p>');
     } else {
       var p = st.picks[i];
@@ -164,7 +185,8 @@
   function logAns(name) {
     if (isLive() && window.MW_track) MW_track("zebritis-answer/" + day + "/" + (st.i + 1) + "/" + norm(name).replace(/ /g, "-"), "Zebritis answer: " + P.prompts[st.i].q + " \u2192 " + name);
   }
-  function lock(p, msg) { st.picks[st.i] = p; put(KEY, st); render(msg); }
+  var pend = null;
+  function lock(p, msg) { pend = null; st.picks[st.i] = p; put(KEY, st); render(msg); }
   root.addEventListener("submit", function (e) {
     if (e.target.id !== "zbr-form") return; e.preventDefault();
     var inp = $("in"), g = (inp.value || "").trim(); if (!g || st.done) return;
@@ -172,6 +194,8 @@
     if (tries.some(function (t) { return core(t) === core(g); })) { render("You\u2019ve tried that one.", true); return; }
     var m = match(g, x);
     if (m >= 0) { logAns(x.a[m][0]); lock(m, pick(TIER[x.a[m][1]].m)); return; }
+    var nr = near(g, x);
+    if (nr >= 0) { pend = { i: nr, g: g }; render(); return; }
     tries.push(g); put(KEY, st);
     if (tries.length >= TRIES) { logAns("none"); lock(-1, "Three strikes. Here\u2019s what we had."); }
     else { render(pick(MISS), true); var c = $("card"); c.classList.remove("shake"); void c.offsetWidth; c.classList.add("shake"); }
@@ -184,6 +208,9 @@
       if (window.MW_track) MW_track("zebritis-suggest/" + day + "/" + (st.i + 1) + "/" + norm(t).slice(0, 40).replace(/ /g, "-"), "Zebritis suggestion: " + P.prompts[st.i].q + " \u2192 " + norm(t).slice(0, 40));
       render(); return;
     }
+    if (b.id === "zbr-yes" && pend) { var xx = P.prompts[st.i], pi = pend.i; pend = null; logAns(xx.a[pi][0]); lock(pi, pick(TIER[xx.a[pi][1]].m)); return; }
+    if (b.id === "zbr-no" && pend) { var tr = st.tries[st.i] = st.tries[st.i] || []; tr.push(pend.g); pend = null; put(KEY, st); if (tr.length >= TRIES) { logAns("none"); lock(-1, "Three strikes. Here\u2019s what we had."); } else render(pick(MISS), true); return; }
+    if (b.id === "zbr-swap" && P.spare && st.swap === undefined) { st.swap = st.i; st.tries[st.i] = []; P.prompts[st.i] = P.spare; pend = null; put(KEY, st); render("Swapped. Fresh prompt, same stakes."); return; }
     if (b.id === "zbr-skip") { logAns("none"); lock(-1, "Given up. No shame. Some shame."); return; }
     if (b.id === "zbr-go") {
       st.i++; if (st.i >= P.prompts.length) { st.i = P.prompts.length - 1; finish(); }
@@ -194,10 +221,11 @@
   // ---------- load ----------
   function month(d) { var m = d.slice(0, 7); if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); return cache[m]; }
   function show(d) {
-    day = d; loadDay();
+    day = d; loadDay(); pend = null;
     month(d).then(function (list) {
       P = list.filter(function (x) { return x.date === d; })[0] || null;
       if (!P) { $("card").innerHTML = '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; return; }
+      if (P.spare && st.swap !== undefined && st.swap !== null) P.prompts[st.swap] = P.spare;
       $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
       $("badge").textContent = (P.prompts.length > 3 ? "Super \u00b7 " : "") + (P.difficulty || ""); $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
       render(); renderArchive();
