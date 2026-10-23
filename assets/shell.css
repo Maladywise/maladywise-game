@@ -469,3 +469,10 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .hday{position:relative}.hday.has-ic h2,.hday.has-ic .hday-k{padding-right:92px}.hday.has-ic h2+p{padding-right:64px}.hday-ic{position:absolute;right:12px;top:10px;width:84px;height:84px}
 .doc .faq details{border-top:1px solid var(--line);padding:8px 0}.doc .faq details:last-child{border-bottom:1px solid var(--line)}.doc .faq summary{font-weight:600;font-size:15px;cursor:pointer}.doc .faq details p{margin:6px 0 0;color:var(--muted)}
 @media print{.doc .faq{display:none!important}}
+
+.mwx-next{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}.mwx-next span{font-size:13px;color:var(--muted)}
+.mwx-nextbtn,.mwx-nexttop button{border:0;border-radius:999px;background:var(--ga,#4A3480);background:#4A3480;color:#fff;font:600 14px Poppins,system-ui,sans-serif;padding:9px 16px;cursor:pointer}
+.mwx-next.big .mwx-nextbtn{font-size:15px;padding:11px 20px}.mwx-nexttop{text-align:center;margin:12px 0 4px}
+.mwx-info{margin:28px 0 8px}.mwx-masc{width:34px;height:34px;flex:none}
+@media print{.mwx-info{display:none!important}}
+.mwx-info .mwx-st{font-size:20px;color:var(--muted)}

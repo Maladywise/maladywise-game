@@ -564,8 +564,34 @@
       } else if (more) more.remove();
       if (obs) obs.observe(arch, { childList: true, subtree: true });
     }
-    obs = new MutationObserver(function () { expanded = false; limit(); });
+    obs = new MutationObserver(function () { expanded = false; limit(); nextUnsolved(); });
     limit();
+    var nx = el('<div class="mwx-next" hidden></div>'); strip.insertBefore(nx, strip.querySelector(".mwx-list"));
+    function rowDate(r) { return r.getAttribute("data-d") || r.getAttribute("data-w"); }
+    function nextUnsolved() {
+      if (!g.store || !g.store.day) return;
+      var rows = Array.prototype.slice.call(arch.querySelectorAll(".arow")), t = sydToday(), cur = (rows.filter(function (r) { return r.classList.contains("on"); })[0]);
+      var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || t);
+      var curSt = get(g.store.day + curD, null);
+      var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
+      if (!rows.length) { nx.hidden = true; return; }
+      if (!todo.length) { nx.removeAttribute("data-h"); nx.innerHTML = '<span>\u2714 All caught up on past ' + g.name + ' puzzles.</span>'; nx.hidden = !(curSt && curSt.done); return; }
+      var r0 = todo[0], d0 = rowDate(r0);
+      var h = '<button type="button" class="mwx-nextbtn">\u25B6 Next unsolved: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + '</button><span>' + todo.length + ' unsolved in the archive</span>';
+      if (nx.getAttribute("data-h") !== h) { nx.innerHTML = h; nx.setAttribute("data-h", h); }
+      nx.hidden = false;
+      nx.querySelector("button").onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
+      var done = curSt && curSt.done; nx.classList.toggle("big", !!done);
+      if (done && !document.getElementById("mw-next-top")) {
+        var res = box.querySelector(".mw-sharerow");
+        if (res) res.insertAdjacentHTML("afterend", '<p id="mw-next-top" class="mwx-nexttop"><button type="button">\u25B6 Play the next unsolved ' + g.name + '</button></p>');
+        var tb = document.getElementById("mw-next-top"); if (tb) tb.querySelector("button").onclick = function () { tb.remove(); nx.querySelector("button").click(); };
+      }
+      if (!done) { var tb2 = document.getElementById("mw-next-top"); if (tb2) tb2.remove(); }
+    }
+    nextUnsolved();
+    window.addEventListener("storage", nextUnsolved);
+    setInterval(nextUnsolved, 1500);
   }
 
   // ---------- game page ----------
@@ -631,6 +657,14 @@
       reviewedBy: { "@type": "Person", jobTitle: "General Practitioner", description: "Australian GP" } };
     if (rev) { var d = new Date(rev + " 1"); if (!isNaN(d)) ld.lastReviewed = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); }
     var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
+    if (window.MW_GAMES && foot) {
+      var gl = MW_GAMES.filter(function (x) { return x.live; }).map(function (x) { return { g: x, st: readStats(x) }; });
+      gl.sort(function (a, b) { return (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
+      var left2 = gl.filter(function (o) { return !(o.st && o.st.done); }).length;
+      foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today\u2019s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
+        gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><img class="mwx-masc" src="/assets/mascots/' + o.g.id + '.svg" alt="" width="34" height="34"><span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203A") + "</span></a>"; }).join("") +
+        '</div><a class="mwx-all" href="/">All puzzles</a></section>');
+    }
   }
   function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); }
   window.MW = { hub: hub, game: game, modal: modal, page: page };
