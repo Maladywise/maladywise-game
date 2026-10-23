@@ -269,37 +269,45 @@
   "date": "2026-11-08",
   "number": 23,
   "difficulty": "Genius",
-  "title": "Dark on the windowsill",
-  "answer": "Acute intermittent porphyria",
+  "title": "Mirror image",
+  "answer": "Kartagener syndrome (primary ciliary dyskinesia)",
   "accept": [
-   "acute intermittent porphyria",
-   "aip",
-   "porphyria",
-   "acute porphyria",
-   "acute hepatic porphyria"
+   "kartagener syndrome",
+   "kartagener's syndrome",
+   "kartageners syndrome",
+   "kartagener",
+   "kartageners",
+   "kartagener's",
+   "primary ciliary dyskinesia",
+   "pcd",
+   "ciliary dyskinesia",
+   "immotile cilia syndrome",
+   "kartagener syndrome primary ciliary dyskinesia"
   ],
   "clues": [
    {
-    "t": "26-year-old woman with severe abdominal pain. Third ED visit this year."
+    "t": "34-year-old man with a wet cough he says he's had 'since forever'."
    },
    {
-    "t": "CT, ultrasound and scopes have all been normal."
+    "t": "Blocked nose and sinus infections since childhood. Grommets twice as a kid."
    },
    {
-    "t": "Anxious and confused this time. Her arms feel weak."
+    "t": "He and his partner have been trying for a baby for 3 years."
    },
    {
-    "t": "Na 124 mmol/L",
+    "t": "Semen analysis: normal count, but the sperm barely move",
     "d": 1
    },
    {
-    "t": "Attacks follow crash diets. This one started after a new medicine."
+    "t": "CT chest: bronchiectasis in both lower lobes",
+    "d": 1
    },
    {
-    "t": "A urine sample left on the windowsill turned dark reddish-brown"
+    "t": "Chest X-ray: heart and stomach bubble on the right. The radiographer re-checked the side marker.",
+    "d": 1
    }
   ],
-  "pearl": "Severe abdominal pain with normal imaging, plus hyponatraemia or neurological signs, should prompt a urine porphobilinogen test during the attack. Fasting and many medicines can trigger attacks."
+  "pearl": "Primary ciliary dyskinesia: cilia that can't beat properly cause a lifelong wet cough, sinusitis and bronchiectasis, and the same fault slows sperm. About half of people with it have their organs mirror-flipped (situs inversus), which makes it Kartagener syndrome. Always check the side marker before calling dextrocardia. Happy International Day of Radiology."
  },
  {
   "date": "2026-11-09",
@@ -414,46 +422,48 @@
   "pearl": "Changes are so slow that family often miss them, so compare old photos. IGF-1 is the screening test; confirm with GH failing to suppress on a glucose tolerance test, then pituitary MRI."
  },
  {
-  "title": "Slow burn",
-  "answer": "Whipple's disease",
+  "date": "2026-11-12",
+  "number": 27,
+  "difficulty": "Einstein",
+  "title": "Slippery slope",
+  "answer": "Lipoid pneumonia (exogenous)",
   "accept": [
-   "whipple",
-   "whipples",
-   "whipple's",
-   "whipple disease",
-   "whipples disease",
-   "whipple's disease",
-   "tropheryma whipplei",
-   "tropheryma",
-   "t whipplei",
-   "intestinal lipodystrophy"
+   "lipoid pneumonia",
+   "exogenous lipoid pneumonia",
+   "lipid pneumonia",
+   "lipoid pneumonitis",
+   "exogenous lipid pneumonia",
+   "oil aspiration",
+   "paraffin aspiration",
+   "mineral oil aspiration",
+   "aspiration of mineral oil",
+   "liquid paraffin aspiration",
+   "paraffinoma"
   ],
   "clues": [
    {
-    "t": "55-year-old man who has lost 12 kg over a year."
+    "t": "78-year-old man with a dry cough and breathlessness for 6 months."
    },
    {
-    "t": "Chronic diarrhoea and bloating. Coeliac serology negative.",
+    "t": "Two courses of antibiotics for 'pneumonia'. The shadows on his X-ray haven't budged."
+   },
+   {
+    "t": "Afebrile \u00b7 CRP 6 \u00b7 WCC normal",
     "d": 1
    },
    {
-    "t": "Years of migrating joint pains, long before any gut symptoms."
+    "t": "CT: lower-lobe consolidation measuring \u221290 Hounsfield units",
+    "d": 1
    },
    {
-    "t": "His skin has darkened and he runs low-grade fevers."
+    "t": "For years he's taken a spoonful of liquid paraffin at bedtime, for constipation, then lain straight down."
    },
    {
-    "t": "Now forgetful, with rhythmic jaw movements in time with slow eye convergence."
-   },
-   {
-    "t": "Duodenal biopsy: PAS-positive foamy macrophages",
+    "t": "Bronchoscopy washings: macrophages stuffed with oil droplets",
     "d": 1
    }
   ],
-  "pearl": "Caused by Tropheryma whipplei. Joint pains often come years before the gut symptoms. Rhythmic eye convergence with jaw movement (oculomasticatory myorhythmia) is pathognomonic. Very treatable with antibiotics, fatal if missed.",
-  "date": "2026-11-12",
-  "number": 27,
-  "difficulty": "Einstein"
+  "pearl": "Oil gets into the lungs from mineral oil laxatives taken at night, oily nose drops, or fire-eating. It mimics pneumonia or cancer, but CT shows fat density (negative Hounsfield units) inside the consolidation. Antibiotics won't shift oil, so ask about it. Happy World Pneumonia Day."
  },
  {
   "date": "2026-11-13",
@@ -494,76 +504,85 @@
   "date": "2026-11-14",
   "number": 29,
   "difficulty": "Hard",
-  "title": "Barely a sting",
-  "answer": "Irukandji syndrome",
+  "title": "Runs in the family",
+  "answer": "MODY (maturity-onset diabetes of the young)",
   "accept": [
-   "irukandji",
-   "irukandji syndrome",
-   "irukandji sting",
-   "carukia barnesi",
-   "jellyfish sting",
-   "box jellyfish"
+   "mody",
+   "maturity onset diabetes of the young",
+   "maturity-onset diabetes of the young",
+   "monogenic diabetes",
+   "hnf1a mody",
+   "hnf1a",
+   "hnf1a diabetes",
+   "mody3",
+   "mody 3",
+   "hnf1-alpha mody",
+   "hnf1 alpha mody"
   ],
   "clues": [
    {
-    "t": "29-year-old tourist with severe lower back pain that came on suddenly."
+    "t": "24-year-old woman, slim and well. A work health check flagged a high fasting glucose."
    },
    {
-    "t": "Drenched in sweat. Vomiting. Says she feels like she's going to die."
-   },
-   {
-    "t": "BP 190/110, HR 125",
+    "t": "HbA1c 51 mmol/mol \u00b7 BMI 22 \u00b7 No ketones",
     "d": 1
    },
    {
-    "t": "She was swimming off a beach near Cairns in December, 40 minutes ago."
+    "t": "Her mum was diagnosed at 25 and her grandfather at 30. Both were told 'type 2'. Neither was overweight."
    },
    {
-    "t": "She felt a small prick on her arm. Barely a mark there now."
+    "t": "GAD and IA-2 antibodies negative \u00b7 C-peptide normal",
+    "d": 1
    },
    {
-    "t": "Troponin rising",
+    "t": "Her urine dipstick shows glucose even when her blood glucose is only mildly raised."
+   },
+   {
+    "t": "Genetic testing: HNF1A variant",
     "d": 1
    }
   ],
-  "pearl": "The sting is often trivial, then severe pain, sweating, hypertension and dread arrive 20\u201340 minutes later. Douse tropical stings with vinegar and call 000. It can cause heart failure, so monitor in hospital."
+  "pearl": "Monogenic diabetes, passed down in an autosomal dominant pattern. Think of it when diabetes appears before about 35 in generation after generation, without antibodies and with C-peptide preserved. It's often mislabelled as type 1 or type 2, and getting the label right changes management and family testing. Happy World Diabetes Day, and happy birthday, Frederick Banting."
  },
  {
   "date": "2026-11-15",
   "number": 30,
   "difficulty": "Genius",
-  "title": "Hot is cold",
-  "answer": "Ciguatera poisoning",
+  "title": "Still open",
+  "answer": "Patent ductus arteriosus",
   "accept": [
-   "ciguatera",
-   "ciguatera poisoning",
-   "ciguatera fish poisoning",
-   "ciguatoxin",
-   "fish poisoning",
-   "marine toxin"
+   "patent ductus arteriosus",
+   "pda",
+   "patent ductus",
+   "persistent ductus arteriosus",
+   "open ductus arteriosus",
+   "ductus arteriosus",
+   "patent arterial duct",
+   "persistent arterial duct"
   ],
   "clues": [
    {
-    "t": "45-year-old man with vomiting and diarrhoea, starting 4 hours after dinner."
+    "t": "Baby girl born at 27 weeks, now 5 days old in the NICU."
    },
    {
-    "t": "Next day: tingling lips and fingers. His teeth ache, as if they're loose."
+    "t": "She'd been improving, but now needs more breathing support again."
    },
    {
-    "t": "Cold drinks feel like they're burning his mouth."
+    "t": "Her pulses feel unusually bounding, even in her palms."
    },
    {
-    "t": "HR 48",
+    "t": "BP 48/20",
     "d": 1
    },
    {
-    "t": "Three friends at the same dinner feel the same."
+    "t": "A new murmur at the upper left sternal edge."
    },
    {
-    "t": "They ate a large Spanish mackerel caught on a trip off Queensland."
+    "t": "Echo: blood shunting left to right, from the aorta into the pulmonary artery",
+    "d": 1
    }
   ],
-  "pearl": "Hot\u2013cold reversal is the giveaway. The toxin comes from large reef fish and isn't destroyed by cooking or freezing. Symptoms can last weeks. Advise avoiding alcohol and fish for a while, as both can bring symptoms back."
+  "pearl": "The ductus arteriosus usually closes within days of birth. In very premature babies it often stays open, so extra blood floods the lungs and runs off from the body: bounding pulses and a wide pulse pressure are the clues. Many close on their own; the NICU team decides whether it needs help. Happy World Prematurity Day to every early arrival and their families."
  },
  {
   "date": "2026-11-16",
@@ -611,78 +630,80 @@
   "date": "2026-11-17",
   "number": 32,
   "difficulty": "Easy",
-  "title": "The night shift",
-  "answer": "Obstructive sleep apnoea",
+  "title": "Overdue",
+  "answer": "Cervical cancer",
   "accept": [
-   "obstructive sleep apnoea",
-   "obstructive sleep apnea",
-   "sleep apnoea",
-   "sleep apnea",
-   "osa",
-   "osahs"
+   "cervical cancer",
+   "cancer of the cervix",
+   "cervical carcinoma",
+   "carcinoma of the cervix",
+   "cervix cancer",
+   "squamous cell carcinoma of the cervix",
+   "cervical squamous cell carcinoma",
+   "cervical scc",
+   "cervical adenocarcinoma"
   ],
   "clues": [
    {
-    "t": "49-year-old truck driver, exhausted despite 8 hours in bed."
+    "t": "46-year-old woman with bleeding after sex for 3 months."
    },
    {
-    "t": "Wakes with headaches most mornings."
+    "t": "Also spotting between periods. Her cycles used to be like clockwork."
    },
    {
-    "t": "Nodded off at the lights twice last week."
+    "t": "Her last screening test was 'probably 15 years ago'. Life got busy."
    },
    {
-    "t": "His partner moved to the spare room because of the snoring."
+    "t": "She left school before the HPV vaccine program began."
    },
    {
-    "t": "She says he stops breathing, then gasps."
+    "t": "Speculum exam: an irregular lesion on the cervix that bleeds on touch."
    },
    {
-    "t": "BMI 34, collar size 46 cm, BP high on three medicines"
+    "t": "HPV 16 detected",
+    "d": 1
    }
   ],
-  "pearl": "Witnessed apnoeas plus daytime sleepiness is the classic pair. Untreated OSA drives resistant hypertension. Commercial drivers have specific fitness-to-drive standards in Australia."
+  "pearl": "Almost all cervical cancers are caused by HPV, and most are found in people who are under-screened or never screened. Bleeding after sex always deserves a look. In Australia the Cervical Screening Test, which can be self-collected, is for women and people with a cervix aged 25 to 74, every 5 years. Australia aims to eliminate cervical cancer as a public health problem by 2035."
  },
  {
   "date": "2026-11-18",
   "number": 33,
   "difficulty": "Medium",
-  "title": "Broken heart",
-  "answer": "Takotsubo cardiomyopathy",
+  "title": "Out of puff",
+  "answer": "COPD (chronic obstructive pulmonary disease)",
   "accept": [
-   "takotsubo",
-   "takotsubo cardiomyopathy",
-   "takotsubo syndrome",
-   "broken heart syndrome",
-   "stress cardiomyopathy",
-   "stress induced cardiomyopathy",
-   "apical ballooning syndrome"
+   "copd",
+   "chronic obstructive pulmonary disease",
+   "chronic obstructive lung disease",
+   "chronic obstructive airways disease",
+   "coad",
+   "emphysema",
+   "chronic bronchitis",
+   "chronic obstructive airway disease"
   ],
   "clues": [
    {
-    "t": "66-year-old woman with sudden crushing chest pain."
+    "t": "63-year-old man, breathless walking up the hill to the shops."
    },
    {
-    "t": "It started at her husband's funeral this morning."
+    "t": "A phlegmy cough most mornings for years. 'Just a smoker's cough,' he says."
    },
    {
-    "t": "ECG: ST elevation in the anterior leads",
-    "d": 1
+    "t": "Three chest infections in the last two winters."
    },
    {
-    "t": "Troponin raised",
-    "d": 1
+    "t": "Smoked 30 a day from 16 until 58."
    },
    {
-    "t": "Coronary angiogram: no significant blockages",
-    "d": 1
+    "t": "Barrel chest. Quiet breath sounds. Long, wheezy breaths out."
    },
    {
-    "t": "Echo: apex of the left ventricle balloons out, base contracts normally",
+    "t": "Spirometry after a puffer: FEV1/FVC 0.55",
     "d": 1
    }
   ],
-  "pearl": "It mimics a STEMI and must be managed as one until angiography. Usually triggered by emotional or physical stress in postmenopausal women. Function mostly recovers within weeks, but it isn't benign: complications and recurrence occur."
+  "pearl": "Airflow limitation that doesn't fully reverse: FEV1/FVC stays below 0.7 after a bronchodilator. Smoking is the main cause in Australia; worldwide, smoke from cooking and heating fuels matters too. Spirometry makes the diagnosis, a stethoscope can't. Happy World COPD Day, and welcome to World AMR Awareness Week."
  },
  {
   "date": "2026-11-19",

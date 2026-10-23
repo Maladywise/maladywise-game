@@ -2271,107 +2271,107 @@
   "date": "2026-11-08",
   "number": 22,
   "difficulty": "Genius",
-  "theme": "Genetics",
+  "theme": "Seeing through you",
   "questions": [
    {
-    "q": "Down syndrome is trisomy of which chromosome?",
-    "a": "21",
+    "q": "R\u00f6ntgen discovered X-rays on 8 November 1895 in which German city?",
+    "a": "W\u00fcrzburg",
     "w": [
-     "13",
-     "18",
-     "23"
+     "Berlin",
+     "Munich",
+     "Heidelberg"
     ],
-    "e": "Trisomy 13 is Patau, 18 is Edwards."
+    "e": "Working late in his lab. Today is the International Day of Radiology."
    },
    {
-    "q": "How many chromosomes are in a typical human cell?",
-    "a": "46",
+    "q": "The first famous X-ray photograph showed?",
+    "a": "His wife\u2019s hand",
     "w": [
-     "23",
-     "44",
-     "48"
+     "His own skull",
+     "A frog",
+     "A coin in a purse"
     ],
-    "e": ""
+    "e": "Anna Bertha\u2019s hand, ring and all. She reportedly said, \u2018I have seen my death.\u2019"
    },
    {
-    "q": "What is the karyotype in Turner syndrome?",
-    "a": "45,X",
+    "q": "Why did R\u00f6ntgen call them X-rays?",
+    "a": "X stood for unknown",
     "w": [
-     "47,XXY",
-     "47,XYY",
-     "46,XX"
+     "They crossed in an X",
+     "After a colleague called Xavier",
+     "They were the tenth ray found"
     ],
-    "e": ""
+    "e": "In German they\u2019re still often called R\u00f6ntgen rays."
    },
    {
-    "q": "What is the karyotype in Klinefelter syndrome?",
-    "a": "47,XXY",
+    "q": "In 1901 R\u00f6ntgen won the first ever Nobel Prize in?",
+    "a": "Physics",
     "w": [
-     "45,X",
-     "47,XYY",
-     "47,XXX"
+     "Physiology or Medicine",
+     "Chemistry",
+     "Peace"
     ],
-    "e": ""
+    "e": "He gave the prize money to his university and never patented X-rays."
    },
    {
-    "q": "Huntington\u2019s disease is caused by repeats of which triplet?",
-    "a": "CAG",
+    "q": "Who built the first CT scanner, sharing the 1979 Nobel Prize?",
+    "a": "Godfrey Hounsfield",
     "w": [
-     "CGG",
-     "GAA",
-     "CTG"
+     "Paul Lauterbur",
+     "Ian Donald",
+     "Raymond Damadian"
     ],
-    "e": "CGG is fragile X; GAA is Friedreich\u2019s ataxia; CTG is myotonic dystrophy."
+    "e": "With Allan Cormack. Hounsfield worked for EMI, the Beatles\u2019 record label."
    },
    {
-    "q": "Fragile X syndrome involves repeats of which triplet?",
-    "a": "CGG",
+    "q": "On CT, water is 0 Hounsfield units. Air is about?",
+    "a": "\u22121000",
     "w": [
-     "CAG",
-     "GAA",
-     "CTG"
+     "\u2212100",
+     "+100",
+     "+1000"
     ],
-    "e": ""
+    "e": "Dense bone sits up around +1000."
    },
    {
-    "q": "How is cystic fibrosis inherited?",
-    "a": "Autosomal recessive",
+    "q": "MRI signal mostly comes from the nuclei of which atoms?",
+    "a": "Hydrogen",
     "w": [
-     "Autosomal dominant",
-     "X-linked recessive",
-     "Mitochondrial"
+     "Carbon",
+     "Oxygen",
+     "Calcium"
     ],
-    "e": ""
+    "e": "Protons in water and fat, lined up by a very big magnet."
    },
    {
-    "q": "How is haemophilia A inherited?",
-    "a": "X-linked recessive",
+    "q": "Who pioneered obstetric ultrasound in Glasgow in the 1950s?",
+    "a": "Ian Donald",
     "w": [
-     "Autosomal recessive",
-     "Autosomal dominant",
-     "Mitochondrial"
+     "Karl Dussik",
+     "Godfrey Hounsfield",
+     "Robert Watson-Watt"
     ],
-    "e": "Mostly affects males."
+    "e": "He borrowed an industrial flaw detector from a boilermaker."
    },
    {
-    "q": "Mitochondrial DNA is inherited from?",
-    "a": "The mother",
+    "q": "Marie Curie\u2019s mobile X-ray vans in World War I were nicknamed?",
+    "a": "Petites Curies",
     "w": [
-     "The father",
-     "Both parents equally",
-     "Neither parent"
+     "Curie carts",
+     "Radium wagons",
+     "Little Maries"
     ],
-    "e": ""
+    "e": "She learned to drive so she could take them to the front herself."
    },
    {
-    "q": "A disease that worsens or starts earlier in each generation shows?",
-    "a": "Anticipation",
+    "q": "A \u2018double bubble\u2019 on a newborn\u2019s abdominal X-ray suggests?",
+    "a": "Duodenal atresia",
     "w": [
-     "Imprinting",
-     "Mosaicism",
-     "Penetrance"
+     "Pyloric stenosis",
+     "Hirschsprung disease",
+     "Intussusception"
     ],
-    "e": "Typical of triplet repeat disorders."
+    "e": "Gas in the stomach and first part of the duodenum, then nothing."
    }
   ]
  },
@@ -2703,107 +2703,107 @@
   "date": "2026-11-12",
   "number": 26,
   "difficulty": "Medium",
-  "theme": "Ear, nose and throat",
+  "theme": "Catch your breath",
   "questions": [
    {
-    "q": "\u2018Glue ear\u2019 is?",
-    "a": "Fluid behind the eardrum",
+    "q": "The most common bacterial cause of community-acquired pneumonia is?",
+    "a": "Streptococcus pneumoniae",
     "w": [
-     "A wax build-up",
-     "An outer ear infection",
-     "A perforated eardrum"
+     "Staphylococcus aureus",
+     "Haemophilus influenzae",
+     "Escherichia coli"
     ],
-    "e": ""
+    "e": "The pneumococcus. Today is World Pneumonia Day."
    },
    {
-    "q": "Swimmer\u2019s ear is infection of the?",
-    "a": "Outer ear canal",
+    "q": "William Osler called pneumonia \u2018the friend of the\u2019?",
+    "a": "Old man",
     "w": [
-     "Middle ear",
-     "Inner ear",
-     "Mastoid"
+     "Young doctor",
+     "Surgeon",
+     "Undertaker"
     ],
-    "e": "Otitis externa."
+    "e": "Because it often brought a quick, peaceful end."
    },
    {
-    "q": "Brief spinning when rolling over in bed suggests?",
-    "a": "BPPV",
+    "q": "Worldwide, pneumonia is the leading infectious cause of death in?",
+    "a": "Children under 5",
     "w": [
-     "M\u00e9ni\u00e8re\u2019s disease",
-     "Labyrinthitis",
-     "Vestibular migraine"
+     "Teenagers",
+     "Pregnant women",
+     "Young adults"
     ],
-    "e": "Benign paroxysmal positional vertigo. Loose ear crystals."
+    "e": "Most of those deaths are preventable."
    },
    {
-    "q": "Which manoeuvre treats posterior canal BPPV?",
-    "a": "The Epley manoeuvre",
+    "q": "On a chest X-ray, bacterial pneumonia typically shows?",
+    "a": "Consolidation",
     "w": [
-     "The Dix\u2013Hallpike test",
-     "The Valsalva manoeuvre",
-     "The Heimlich manoeuvre"
+     "Hyperinflation",
+     "Free gas under the diaphragm",
+     "A completely black lung"
     ],
-    "e": "Dix\u2013Hallpike diagnoses it; Epley fixes it."
+    "e": "Air spaces filled with fluid and pus. Air bronchograms are a clue."
    },
    {
-    "q": "M\u00e9ni\u00e8re\u2019s disease is vertigo, tinnitus, ear fullness and?",
-    "a": "Hearing loss",
+    "q": "Legionnaires\u2019 disease is named after a 1976 convention outbreak in?",
+    "a": "Philadelphia",
     "w": [
-     "Facial weakness",
-     "Headache",
-     "Nosebleeds"
+     "Chicago",
+     "Boston",
+     "New York"
     ],
-    "e": ""
+    "e": "At an American Legion convention."
    },
    {
-    "q": "Most nosebleeds come from?",
-    "a": "Little\u2019s area",
+    "q": "In Australia, Legionella longbeachae is famously linked to?",
+    "a": "Potting mix",
     "w": [
-     "The adenoids",
-     "The tips of the turbinates",
-     "The sinuses"
+     "Swimming pools",
+     "Raw oysters",
+     "Cat litter"
     ],
-    "e": "Also called Kiesselbach\u2019s plexus, at the front of the septum."
+    "e": "Bagged soils and composts carry it. Gardeners, take note."
    },
    {
-    "q": "The voice box is the?",
-    "a": "Larynx",
+    "q": "\u2018Redcurrant jelly\u2019 sputum is the textbook sign of which bug?",
+    "a": "Klebsiella pneumoniae",
     "w": [
-     "Pharynx",
-     "Trachea",
-     "Epiglottis"
+     "Mycoplasma pneumoniae",
+     "Legionella pneumophila",
+     "Streptococcus pyogenes"
     ],
-    "e": ""
+    "e": "Textbooks love it. Real sputum rarely reads the textbook."
    },
    {
-    "q": "Quinsy is?",
-    "a": "A peritonsillar abscess",
+    "q": "\u2018Walking pneumonia\u2019 is classically caused by?",
+    "a": "Mycoplasma pneumoniae",
     "w": [
-     "A tonsil stone",
-     "Throat cancer",
-     "Croup"
+     "Pseudomonas aeruginosa",
+     "Klebsiella oxytoca",
+     "Clostridioides difficile"
     ],
-    "e": "Trismus and a \u2018hot potato\u2019 voice."
+    "e": "Unwell, but still up and about."
    },
    {
-    "q": "The three ossicles are the malleus, incus and?",
-    "a": "Stapes",
+    "q": "In the CURB-65 severity score, C stands for?",
+    "a": "Confusion",
     "w": [
-     "Hyoid",
-     "Vomer",
-     "Cochlea"
+     "Cough",
+     "Crackles",
+     "Cyanosis"
     ],
-    "e": ""
+    "e": "Then urea, respiratory rate, blood pressure and age 65 or over."
    },
    {
-    "q": "The Weber and Rinne tests use a?",
-    "a": "Tuning fork",
+    "q": "Inhaled material most often ends up in which lung?",
+    "a": "The right lung",
     "w": [
-     "Otoscope",
-     "Audiometer",
-     "Tongue depressor"
+     "The left lung",
+     "Both equally",
+     "Whichever side you sleep on"
     ],
-    "e": "512 Hz."
+    "e": "Its main bronchus is wider and more vertical. Peanuts go right too."
    }
   ]
  },
@@ -2919,107 +2919,107 @@
   "date": "2026-11-14",
   "number": 28,
   "difficulty": "Hard",
-  "theme": "Emergency medicine",
+  "theme": "Sweet science",
   "questions": [
    {
-    "q": "What is the recommended adult CPR compression rate?",
-    "a": "100\u2013120 per minute",
+    "q": "World Diabetes Day is held on 14 November because it\u2019s whose birthday?",
+    "a": "Frederick Banting",
     "w": [
-     "60\u201380 per minute",
-     "80\u201390 per minute",
-     "140\u2013160 per minute"
+     "Charles Best",
+     "John Macleod",
+     "Elliott Joslin"
+    ],
+    "e": "Born in 1891 in Ontario."
+   },
+   {
+    "q": "Banting and Best first isolated insulin in 1921 at which university?",
+    "a": "University of Toronto",
+    "w": [
+     "McGill University",
+     "Harvard University",
+     "University of Edinburgh"
     ],
     "e": ""
    },
    {
-    "q": "What is the adult compression-to-breath ratio in CPR?",
-    "a": "30:2",
+    "q": "In January 1922, the first person treated with insulin was 14-year-old?",
+    "a": "Leonard Thompson",
     "w": [
-     "15:2",
-     "5:1",
-     "30:1"
+     "Elizabeth Hughes",
+     "Ted Ryder",
+     "James Havens"
+    ],
+    "e": "The other three were famous early patients too."
+   },
+   {
+    "q": "Banting shared the 1923 Nobel Prize with?",
+    "a": "John Macleod",
+    "w": [
+     "Charles Best",
+     "James Collip",
+     "Frederick Sanger"
+    ],
+    "e": "Banting split his money with Best; Macleod split his with Collip."
+   },
+   {
+    "q": "\u2018Diabetes mellitus\u2019 literally means?",
+    "a": "Honey-sweet siphon",
+    "w": [
+     "Sugar sickness of the blood",
+     "Thirsty kidneys",
+     "Sweet urine fever"
+    ],
+    "e": "Diabetes is Greek for siphon; mellitus is Latin for honeyed. Early doctors tasted urine."
+   },
+   {
+    "q": "In Australia, an HbA1c at or above what level can diagnose diabetes?",
+    "a": "48 mmol/mol (6.5%)",
+    "w": [
+     "36 mmol/mol (5.4%)",
+     "42 mmol/mol (6.0%)",
+     "64 mmol/mol (8.0%)"
     ],
     "e": ""
    },
    {
-    "q": "What is the first-line drug for anaphylaxis?",
-    "a": "Adrenaline",
+    "q": "Type 1 diabetes is mainly caused by?",
+    "a": "Autoimmune destruction of beta cells",
     "w": [
-     "An antihistamine",
-     "Hydrocortisone",
-     "Salbutamol"
+     "Insulin resistance",
+     "Eating too much sugar",
+     "A pancreatic tumour"
     ],
-    "e": ""
+    "e": "Not caused by lifestyle. No lolly-shaming."
    },
    {
-    "q": "Where is intramuscular adrenaline given in anaphylaxis?",
-    "a": "The outer mid-thigh",
+    "q": "In diabetic ketoacidosis, the breath may smell of?",
+    "a": "Pear drops",
     "w": [
-     "The upper arm",
-     "The buttock",
-     "The abdomen"
+     "Bitter almonds",
+     "Fish",
+     "Ammonia"
     ],
-    "e": ""
+    "e": "Acetone. Not everyone can smell it."
    },
    {
-    "q": "The Glasgow Coma Scale ranges from?",
-    "a": "3 to 15",
+    "q": "Which test is used to diagnose gestational diabetes in Australia?",
+    "a": "Oral glucose tolerance test",
     "w": [
-     "0 to 15",
-     "1 to 10",
-     "0 to 20"
+     "Urine dipstick",
+     "HbA1c",
+     "Fasting insulin level"
     ],
-    "e": "You can\u2019t score below 3. Even a rock gets 3."
+    "e": "Usually done at 24 to 28 weeks."
    },
    {
-    "q": "In the FAST stroke check, what does T stand for?",
-    "a": "Time",
+    "q": "Charcot foot in diabetes is?",
+    "a": "Destructive joint disease in a numb foot",
     "w": [
-     "Temperature",
-     "Tongue",
-     "Tremor"
+     "A fungal nail infection",
+     "A type of gout",
+     "A blocked foot artery"
     ],
-    "e": "Face, Arms, Speech, Time."
-   },
-   {
-    "q": "The shockable cardiac arrest rhythms are VF and?",
-    "a": "Pulseless VT",
-    "w": [
-     "Asystole",
-     "PEA",
-     "Sinus bradycardia"
-    ],
-    "e": ""
-   },
-   {
-    "q": "What is the immediate treatment for a tension pneumothorax?",
-    "a": "Decompress the chest",
-    "w": [
-     "Wait for a chest X-ray",
-     "Oxygen alone",
-     "Antibiotics"
-    ],
-    "e": "A clinical diagnosis. Don\u2019t wait for imaging."
-   },
-   {
-    "q": "Pulse oximetry can be falsely normal in which poisoning?",
-    "a": "Carbon monoxide",
-    "w": [
-     "Paracetamol",
-     "Alcohol",
-     "Aspirin"
-    ],
-    "e": "Carboxyhaemoglobin reads like oxyhaemoglobin."
-   },
-   {
-    "q": "Which word is famously never said aloud in an emergency department?",
-    "a": "Quiet",
-    "w": [
-     "Busy",
-     "Coffee",
-     "Handover"
-    ],
-    "e": "Say it and the ambulances arrive."
+    "e": "Neuropathy hides the pain, so a hot, swollen foot can be the only clue."
    }
   ]
  },
@@ -3027,107 +3027,107 @@
   "date": "2026-11-15",
   "number": 29,
   "difficulty": "Genius",
-  "theme": "Oncology",
+  "theme": "Born early",
   "questions": [
    {
-    "q": "PSA is a blood marker for which cancer?",
-    "a": "Prostate cancer",
+    "q": "A baby is called preterm if born before how many weeks?",
+    "a": "37",
     "w": [
-     "Pancreatic cancer",
-     "Bowel cancer",
-     "Bladder cancer"
+     "40",
+     "34",
+     "32"
+    ],
+    "e": "Today is World Prematurity Day."
+   },
+   {
+    "q": "About how many babies are born preterm worldwide each year?",
+    "a": "About 13 million",
+    "w": [
+     "About 1 million",
+     "About 50 million",
+     "About 300,000"
+    ],
+    "e": "Roughly 1 in 10 births (WHO, 2020)."
+   },
+   {
+    "q": "Very premature babies often lack which substance that stops air sacs collapsing?",
+    "a": "Surfactant",
+    "w": [
+     "Mucus",
+     "Collagen",
+     "Fibrinogen"
+    ],
+    "e": "Mary Ellen Avery linked its absence to breathing trouble in newborns in 1959."
+   },
+   {
+    "q": "In Australian NICUs, a \u2018humidicrib\u2019 is?",
+    "a": "An incubator",
+    "w": [
+     "A cot with a mosquito net",
+     "A heated bath",
+     "A rocking cradle"
+    ],
+    "e": "Keeps tiny babies warm, with humidified air."
+   },
+   {
+    "q": "In the early 1900s, Martin Couney showed premature babies in incubators at?",
+    "a": "Coney Island",
+    "w": [
+     "Times Square",
+     "Niagara Falls",
+     "Hollywood"
+    ],
+    "e": "Fairgoers paid to look; the babies\u2019 care was free."
+   },
+   {
+    "q": "Lanugo, common in premature babies, is?",
+    "a": "Fine, downy body hair",
+    "w": [
+     "A white waxy coating",
+     "A birthmark",
+     "The first stool"
+    ],
+    "e": "The waxy coating is vernix."
+   },
+   {
+    "q": "Retinopathy of prematurity, screened for in very early babies, affects the?",
+    "a": "Eyes",
+    "w": [
+     "Lungs",
+     "Bowel",
+     "Hearing"
+    ],
+    "e": "Abnormal blood vessel growth in the retina."
+   },
+   {
+    "q": "NEC, a serious bowel condition of prematurity, stands for?",
+    "a": "Necrotising enterocolitis",
+    "w": [
+     "Neonatal erosive colitis",
+     "Nutritional enteric cramping",
+     "Neonatal enzyme cascade"
     ],
     "e": ""
    },
    {
-    "q": "CA-125 is a marker most associated with?",
-    "a": "Ovarian cancer",
+    "q": "A baby born before 28 weeks is described as?",
+    "a": "Extremely preterm",
     "w": [
-     "Breast cancer",
-     "Liver cancer",
-     "Bowel cancer"
+     "Very preterm",
+     "Moderately preterm",
+     "Late preterm"
     ],
-    "e": ""
+    "e": "28 to 32 weeks is very preterm; 32 to 37 is moderate to late."
    },
    {
-    "q": "Alpha-fetoprotein is raised in?",
-    "a": "Hepatocellular carcinoma",
+    "q": "Who devised the newborn score checked at 1 and 5 minutes?",
+    "a": "Virginia Apgar",
     "w": [
-     "Melanoma",
-     "Lung cancer",
-     "Prostate cancer"
+     "Benjamin Spock",
+     "Mary Ellen Avery",
+     "Cicely Williams"
     ],
-    "e": "Also in some testicular germ cell tumours."
-   },
-   {
-    "q": "Australia\u2019s National Bowel Cancer Screening Program uses?",
-    "a": "A faecal immunochemical test",
-    "w": [
-     "Colonoscopy",
-     "CT colonography",
-     "A blood test"
-    ],
-    "e": "A home poo test, every two years."
-   },
-   {
-    "q": "BRCA1 mutations raise the risk of breast and?",
-    "a": "Ovarian cancer",
-    "w": [
-     "Thyroid cancer",
-     "Lung cancer",
-     "Kidney cancer"
-    ],
-    "e": ""
-   },
-   {
-    "q": "Lynch syndrome raises the risk mainly of?",
-    "a": "Bowel and endometrial cancer",
-    "w": [
-     "Lung cancer",
-     "Skin cancer",
-     "Brain cancer"
-    ],
-    "e": ""
-   },
-   {
-    "q": "The Philadelphia chromosome is the hallmark of?",
-    "a": "Chronic myeloid leukaemia",
-    "w": [
-     "Chronic lymphocytic leukaemia",
-     "Hairy cell leukaemia",
-     "Acute myeloid leukaemia"
-    ],
-    "e": "The BCR-ABL fusion. Imatinib changed everything."
-   },
-   {
-    "q": "Which virus causes most cervical cancers?",
-    "a": "HPV",
-    "w": [
-     "Herpes simplex virus",
-     "Epstein\u2013Barr virus",
-     "HIV"
-    ],
-    "e": ""
-   },
-   {
-    "q": "Epstein\u2013Barr virus is linked to which cancer?",
-    "a": "Nasopharyngeal carcinoma",
-    "w": [
-     "Prostate cancer",
-     "Bladder cancer",
-     "Thyroid cancer"
-    ],
-    "e": "Also Burkitt and Hodgkin lymphoma."
-   },
-   {
-    "q": "Tamoxifen blocks which receptor?",
-    "a": "The oestrogen receptor",
-    "w": [
-     "The progesterone receptor",
-     "HER2",
-     "The androgen receptor"
-    ],
-    "e": ""
+    "e": "An American anaesthetist, in the early 1950s."
    }
   ]
  },
@@ -3243,107 +3243,107 @@
   "date": "2026-11-17",
   "number": 31,
   "difficulty": "Easy",
-  "theme": "Sport and exercise",
+  "theme": "Screen time",
   "questions": [
    {
-    "q": "A \u2018pop\u2019 and fast swelling after twisting the knee suggests which ligament?",
-    "a": "Anterior cruciate ligament",
+    "q": "Almost all cervical cancers are caused by?",
+    "a": "Human papillomavirus",
     "w": [
-     "Posterior cruciate ligament",
-     "Patellar tendon",
-     "Lateral collateral ligament"
+     "Herpes simplex virus",
+     "Thrush",
+     "Epstein\u2013Barr virus"
     ],
-    "e": ""
+    "e": "Today is World Cervical Cancer Elimination Day."
    },
    {
-    "q": "Tennis elbow affects the?",
-    "a": "Outer (lateral) elbow",
+    "q": "The Pap smear is named after?",
+    "a": "Georgios Papanicolaou",
     "w": [
-     "Inner (medial) elbow",
-     "Back of the elbow",
-     "Front of the elbow"
+     "The papillae of the cervix",
+     "Papua New Guinea",
+     "A Dr Pap of Vienna"
     ],
-    "e": "Golfer\u2019s elbow is the inner side."
+    "e": "A Greek-American doctor."
    },
    {
-    "q": "The medical name for \u2018shin splints\u2019 is?",
-    "a": "Medial tibial stress syndrome",
+    "q": "For most people aged 25 to 74 with a normal result, the Cervical Screening Test is due every?",
+    "a": "5 years",
     "w": [
-     "Compartment syndrome",
-     "Plantar fasciitis",
-     "Osgood\u2013Schlatter disease"
+     "Year",
+     "2 years",
+     "10 years"
     ],
-    "e": ""
+    "e": "It replaced the two-yearly Pap test in December 2017."
    },
    {
-    "q": "Which condition is a leading cause of sudden cardiac death in young athletes?",
-    "a": "Hypertrophic cardiomyopathy",
+    "q": "Since July 2022, everyone eligible for cervical screening in Australia can?",
+    "a": "Collect their own sample",
     "w": [
-     "Mitral valve prolapse",
-     "Atrial fibrillation",
-     "Pericarditis"
+     "Skip screening after 30",
+     "Screen with a blood test",
+     "Screen with a urine test"
     ],
-    "e": ""
+    "e": "A self-collected vaginal swab is as accurate for HPV as a clinician-collected one."
    },
    {
-    "q": "RICE stands for rest, ice, compression and?",
-    "a": "Elevation",
+    "q": "The technology behind the HPV vaccine was developed at which university?",
+    "a": "University of Queensland",
     "w": [
-     "Exercise",
-     "Electrolytes",
-     "Elastic"
+     "University of Sydney",
+     "University of Melbourne",
+     "Monash University"
     ],
-    "e": ""
+    "e": "By Ian Frazer and the late Jian Zhou, in 1991."
    },
    {
-    "q": "Heel pain that is worst with the first steps in the morning suggests?",
-    "a": "Plantar fasciitis",
+    "q": "Australia\u2019s school HPV vaccine program began for girls in?",
+    "a": "2007",
     "w": [
-     "Achilles rupture",
-     "Gout",
-     "Stress fracture"
+     "1997",
+     "2015",
+     "2020"
     ],
-    "e": ""
+    "e": "Boys were added in 2013."
    },
    {
-    "q": "Osgood\u2013Schlatter disease causes a painful lump below the?",
-    "a": "Kneecap",
+    "q": "The WHO elimination threshold is fewer than how many cervical cancers per 100,000 women a year?",
+    "a": "4",
     "w": [
-     "Heel",
-     "Hip",
-     "Elbow"
+     "40",
+     "1",
+     "10"
     ],
-    "e": "Common in active teens."
+    "e": "Australia aims to get there by 2035."
    },
    {
-    "q": "Guidelines recommend adults do how much moderate activity each week?",
-    "a": "150\u2013300 minutes",
+    "q": "Henrietta Lacks\u2019s cervical cancer cells became?",
+    "a": "The HeLa cell line",
     "w": [
-     "30 minutes",
-     "60 minutes",
-     "600 minutes"
+     "The first HPV vaccine",
+     "The first Pap smear slide",
+     "The first IVF embryo"
     ],
-    "e": ""
+    "e": "Taken in 1951 without her consent. Still used in labs worldwide."
    },
    {
-    "q": "The rotator cuff is part of the?",
-    "a": "Shoulder",
+    "q": "Who won a Nobel Prize for showing HPV causes cervical cancer?",
+    "a": "Harald zur Hausen",
     "w": [
-     "Hip",
-     "Knee",
-     "Wrist"
+     "Barry Marshall",
+     "Luc Montagnier",
+     "Peter Doherty"
     ],
-    "e": ""
+    "e": "In 2008. Montagnier shared that year\u2019s prize for discovering HIV."
    },
    {
-    "q": "Low sodium in marathon runners is usually caused by?",
-    "a": "Drinking too much water",
+    "q": "Which two HPV types cause most cervical cancers?",
+    "a": "16 and 18",
     "w": [
-     "Not sweating enough",
-     "Too much salt",
-     "Too much caffeine"
+     "6 and 11",
+     "1 and 2",
+     "31 and 33"
     ],
-    "e": "Exercise-associated hyponatraemia."
+    "e": "About 70% of them. Types 6 and 11 cause most genital warts."
    }
   ]
  },
@@ -3351,107 +3351,107 @@
   "date": "2026-11-18",
   "number": 32,
   "difficulty": "Einstein",
-  "theme": "Zebras",
+  "theme": "Breathless and resistant",
   "questions": [
    {
-    "q": "\u2018When you hear hoofbeats, think horses, not zebras\u2019 is credited to?",
-    "a": "Theodore Woodward",
+    "q": "COPD is confirmed when FEV1/FVC after a bronchodilator is below?",
+    "a": "0.7",
     "w": [
-     "William Osler",
-     "Hippocrates",
-     "Gregory House"
+     "0.9",
+     "0.5",
+     "1.0"
     ],
-    "e": "A Maryland professor, in the 1940s."
+    "e": "Today is World COPD Day."
    },
    {
-    "q": "Fabry disease is a deficiency of which enzyme?",
-    "a": "Alpha-galactosidase A",
+    "q": "The old labels \u2018pink puffer\u2019 and \u2018blue bloater\u2019 meant?",
+    "a": "Emphysema and chronic bronchitis",
     "w": [
-     "Glucocerebrosidase",
-     "Hexosaminidase A",
-     "Sphingomyelinase"
+     "Asthma and COPD",
+     "Pneumonia and TB",
+     "Heart failure and COPD"
     ],
-    "e": "The others are Gaucher, Tay\u2013Sachs and Niemann\u2013Pick."
+    "e": "Retired labels. Most people have a mix."
    },
    {
-    "q": "Kayser\u2013Fleischer rings in the eyes point to?",
-    "a": "Wilson\u2019s disease",
+    "q": "Which inherited deficiency causes early emphysema, sometimes with liver disease?",
+    "a": "Alpha-1 antitrypsin deficiency",
     "w": [
-     "Haemochromatosis",
-     "Fabry disease",
-     "Gaucher disease"
+     "Cystic fibrosis",
+     "Hereditary haemochromatosis",
+     "Glucose-6-phosphate dehydrogenase deficiency"
     ],
-    "e": "Copper deposits in the cornea."
+    "e": "The ZZ genotype is the classic."
    },
    {
-    "q": "Blue sclerae, frequent fractures and hearing loss suggest?",
-    "a": "Osteogenesis imperfecta",
+    "q": "Chronic bronchitis means a productive cough for 3 months a year, for at least how many years in a row?",
+    "a": "2",
     "w": [
-     "Marfan syndrome",
-     "Ehlers\u2013Danlos syndrome",
-     "Paget\u2019s disease"
+     "1",
+     "5",
+     "10"
     ],
     "e": ""
    },
    {
-    "q": "Ash-leaf macules and seizures suggest?",
-    "a": "Tuberous sclerosis",
+    "q": "Apart from tobacco, a major cause of COPD worldwide is smoke from?",
+    "a": "Cooking and heating fires",
     "w": [
-     "Neurofibromatosis type 1",
-     "Sturge\u2013Weber syndrome",
-     "Von Hippel\u2013Lindau disease"
+     "Birthday candles",
+     "Incense",
+     "Bushfire documentaries"
     ],
-    "e": ""
+    "e": "Biomass fuels in poorly ventilated homes."
    },
    {
-    "q": "Caf\u00e9-au-lait spots and Lisch nodules suggest?",
-    "a": "Neurofibromatosis type 1",
+    "q": "Howard Florey, who turned penicillin into a usable medicine, was born in?",
+    "a": "Adelaide",
     "w": [
-     "Tuberous sclerosis",
-     "Sturge\u2013Weber syndrome",
-     "Neurofibromatosis type 2"
+     "Melbourne",
+     "Sydney",
+     "Perth"
     ],
-    "e": ""
+    "e": "Shared the 1945 Nobel Prize with Fleming and Chain. World AMR Awareness Week starts today."
    },
    {
-    "q": "Kuru was spread through?",
-    "a": "Funerary cannibalism",
+    "q": "In 1941 the first patient given purified penicillin was a policeman named?",
+    "a": "Albert Alexander",
     "w": [
-     "Mosquito bites",
-     "Contaminated water",
-     "Tick bites"
+     "Norman Heatley",
+     "Arthur Florey",
+     "Ernst Chain"
     ],
-    "e": "A prion disease of the Fore people of Papua New Guinea."
+    "e": "A rose-thorn scratch had turned septic. He improved, then supplies ran out."
    },
    {
-    "q": "Fatal familial insomnia is a?",
-    "a": "Prion disease",
+    "q": "The M in MRSA stands for?",
+    "a": "Methicillin",
     "w": [
-     "Mitochondrial disease",
-     "Channelopathy",
-     "Autoimmune encephalitis"
+     "Multidrug",
+     "Mupirocin",
+     "Macrolide"
     ],
-    "e": ""
+    "e": "Methicillin-resistant Staphylococcus aureus. First reported in the UK in 1961."
    },
    {
-    "q": "Alice in Wonderland syndrome distorts?",
-    "a": "Perception of size",
+    "q": "In his 1945 Nobel lecture, Fleming warned that?",
+    "a": "Underdosing could breed resistant bacteria",
     "w": [
-     "Smell",
-     "Memory",
-     "Speech"
+     "Penicillin would cure cancer",
+     "Moulds would replace vaccines",
+     "Penicillin was too toxic for children"
     ],
-    "e": "Often linked with migraine."
+    "e": "He was right."
    },
    {
-    "q": "Foreign accent syndrome is most often caused by?",
-    "a": "Stroke",
+    "q": "Bacteria swap plasmids carrying resistance genes mainly by?",
+    "a": "Conjugation",
     "w": [
-     "Hearing loss",
-     "A viral infection",
-     "Vitamin deficiency"
+     "Sporulation",
+     "Mitosis",
+     "Binary fission"
     ],
-    "e": ""
+    "e": "Bacterial sharing, via a little bridge called a pilus."
    }
   ]
  },

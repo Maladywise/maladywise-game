@@ -95,12 +95,12 @@
   "number": 23,
   "difficulty": "Genius",
   "chain": [
-   "TRICK",
-   "KNEE",
-   "PAD",
-   "LOCK",
-   "JAW",
-   "BONE"
+   "PLAIN",
+   "FILM",
+   "STAR",
+   "FISH",
+   "BONE",
+   "SCAN"
   ]
  },
  {
@@ -147,18 +147,13 @@
   "number": 27,
   "difficulty": "Medium",
   "chain": [
-   "GLUE",
-   "EAR",
-   "DRUM",
-   "ROLL",
-   "CALL",
-   "CENTRE"
-  ],
-  "alt": {
-   "CENTRE": [
-    "CENTER"
-   ]
-  }
+   "SUPER",
+   "NATURAL",
+   "BEAUTY",
+   "SLEEP",
+   "WALKING",
+   "PNEUMONIA"
+  ]
  },
  {
   "date": "2026-11-13",
@@ -178,12 +173,12 @@
   "number": 29,
   "difficulty": "Hard",
   "chain": [
-   "GALL",
-   "BLADDER",
-   "STONE",
-   "COLD",
-   "SORE",
-   "LOSER"
+   "BLOOD",
+   "SUGAR",
+   "CANE",
+   "TOAD",
+   "STOOL",
+   "SAMPLE"
   ]
  },
  {
@@ -191,12 +186,12 @@
   "number": 30,
   "difficulty": "Genius",
   "chain": [
-   "PILLOW",
-   "TALK",
-   "THERAPY",
-   "DOG",
-   "TAG",
-   "LINE"
+   "KANGAROO",
+   "CARE",
+   "FREE",
+   "HAND",
+   "FULL",
+   "TERM"
   ]
  },
  {
@@ -217,12 +212,12 @@
   "number": 32,
   "difficulty": "Easy",
   "chain": [
-   "CHEST",
-   "INFECTION",
-   "CONTROL",
-   "GROUP",
-   "THERAPY",
-   "SESSION"
+   "PAP",
+   "SMEAR",
+   "TEST",
+   "DRIVE",
+   "WAY",
+   "OUT"
   ]
  },
  {
@@ -230,12 +225,12 @@
   "number": 33,
   "difficulty": "Medium",
   "chain": [
-   "CARPAL",
-   "TUNNEL",
-   "VISION",
-   "BOARD",
-   "GAME",
-   "PLAN"
+   "JUNK",
+   "FOOD",
+   "CHAIN",
+   "SMOKE",
+   "FREE",
+   "RADICAL"
   ]
  },
  {

@@ -1036,84 +1036,84 @@
   "number": 13,
   "difficulty": "Medium",
   "rows": [
-   "SPA##",
-   "CORAL",
-   "ARENA",
-   "BEATS",
-   "##SIT"
+   "#FAST",
+   "PITCH",
+   "AGREE",
+   "SHINY",
+   "STAT#"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 3,
-    "clue": "Place for a soak"
+    "c": 1,
+    "len": 4,
+    "clue": "Stroke check: Face, Arms, Speech, Time"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Reef material, or a pinkish shade"
+    "clue": "Cricket strip, or how high a voice goes"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Big venue"
+    "clue": "Concur, like a second opinion that matches yours"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "What a heart does, about 100,000 times a day"
+    "clue": "Silvery, like the scale on a psoriasis plaque"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 2,
-    "len": 3,
-    "clue": "Take a seat in the waiting room"
+    "c": 0,
+    "len": 4,
+    "clue": "Right now, in ward-speak. Time is brain"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Healing crust"
+    "c": 1,
+    "len": 5,
+    "clue": "___-or-flight response"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Skin opening"
+    "c": 2,
+    "len": 5,
+    "clue": "Chambers that fibrillate in AF, a big stroke risk"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
+    "c": 3,
     "len": 5,
-    "clue": "Zones, like those of a hospital"
+    "clue": "What a sniffer dog follows"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Pronoun for a group, or for one person who prefers it"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 3,
+    "c": 0,
     "len": 4,
-    "clue": "Prefix with -biotic or -septic"
-   },
-   {
-    "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Final"
+    "clue": "What every registrar hopes to do in the fellowship exam"
    }
   ]
  },

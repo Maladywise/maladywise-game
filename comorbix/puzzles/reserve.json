@@ -178,5 +178,275 @@
     ]
    }
   ]
+ },
+ {
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Foot problems",
+    "level": 2,
+    "words": [
+     "BUNION",
+     "CORN",
+     "HAMMER TOE",
+     "PLANTAR FASCIITIS"
+    ]
+   },
+   {
+    "label": "Planes of the body",
+    "level": 3,
+    "words": [
+     "SAGITTAL",
+     "CORONAL",
+     "TRANSVERSE",
+     "AXIAL"
+    ]
+   },
+   {
+    "label": "Named after myths",
+    "level": 4,
+    "words": [
+     "ATLAS",
+     "ACHILLES",
+     "MORPHINE",
+     "HYGIENE"
+    ]
+   },
+   {
+    "label": "Hidden body part",
+    "level": 4,
+    "words": [
+     "CHINESE",
+     "SHINDIG",
+     "BEARDED",
+     "WHIPLASH"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Body fluids",
+    "level": 1,
+    "words": [
+     "SALIVA",
+     "SWEAT",
+     "TEARS",
+     "BILE"
+    ]
+   },
+   {
+    "label": "Cranial nerves",
+    "level": 2,
+    "words": [
+     "VAGUS",
+     "FACIAL",
+     "OPTIC",
+     "TRIGEMINAL"
+    ]
+   },
+   {
+    "label": "Facial bones",
+    "level": 2,
+    "words": [
+     "MAXILLA",
+     "MANDIBLE",
+     "ZYGOMA",
+     "NASAL"
+    ]
+   },
+   {
+    "label": "Infections named after places",
+    "level": 3,
+    "words": [
+     "LYME",
+     "EBOLA",
+     "ZIKA",
+     "MARBURG"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Diabetes medicines",
+    "level": 2,
+    "words": [
+     "METFORMIN",
+     "GLICLAZIDE",
+     "EMPAGLIFLOZIN",
+     "SITAGLIPTIN"
+    ]
+   },
+   {
+    "label": "Named fractures",
+    "level": 3,
+    "words": [
+     "COLLES",
+     "SMITH",
+     "BENNETT",
+     "MONTEGGIA"
+    ]
+   },
+   {
+    "label": "Checked in spinal fluid",
+    "level": 3,
+    "words": [
+     "PROTEIN",
+     "GLUCOSE",
+     "CELL COUNT",
+     "OPENING PRESSURE"
+    ]
+   },
+   {
+    "label": "Can be broken",
+    "level": 4,
+    "words": [
+     "HEART",
+     "BONE",
+     "RECORD",
+     "WIND"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Named diseases",
+    "level": 2,
+    "words": [
+     "CROHN",
+     "ADDISON",
+     "GRAVES",
+     "PARKINSON"
+    ]
+   },
+   {
+    "label": "Antidotes",
+    "level": 3,
+    "words": [
+     "NALOXONE",
+     "FLUMAZENIL",
+     "ACETYLCYSTEINE",
+     "ATROPINE"
+    ]
+   },
+   {
+    "label": "Findings named after food",
+    "level": 4,
+    "words": [
+     "STRAWBERRY",
+     "APPLE CORE",
+     "CAULIFLOWER",
+     "REDCURRANT"
+    ]
+   },
+   {
+    "label": "Things with a 'bridge'",
+    "level": 4,
+    "words": [
+     "NOSE",
+     "DENTAL",
+     "GLASSES",
+     "GUITAR"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Body noises",
+    "level": 1,
+    "words": [
+     "HICCUP",
+     "SNEEZE",
+     "YAWN",
+     "BURP"
+    ]
+   },
+   {
+    "label": "Types of headache",
+    "level": 1,
+    "words": [
+     "TENSION",
+     "MIGRAINE",
+     "CLUSTER",
+     "SINUS"
+    ]
+   },
+   {
+    "label": "Childhood vaccines protect against",
+    "level": 2,
+    "words": [
+     "TETANUS",
+     "POLIO",
+     "PERTUSSIS",
+     "DIPHTHERIA"
+    ]
+   },
+   {
+    "label": "Knee structures",
+    "level": 2,
+    "words": [
+     "ACL",
+     "PCL",
+     "MCL",
+     "MENISCUS"
+    ]
+   }
+  ]
+ },
+ {
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "First-aid kit",
+    "level": 1,
+    "words": [
+     "BANDAGE",
+     "PLASTER",
+     "GAUZE",
+     "SPLINT"
+    ]
+   },
+   {
+    "label": "Childhood illnesses",
+    "level": 2,
+    "words": [
+     "CROUP",
+     "BRONCHIOLITIS",
+     "COLIC",
+     "HAND FOOT MOUTH"
+    ]
+   },
+   {
+    "label": "Gut conditions",
+    "level": 2,
+    "words": [
+     "COELIAC",
+     "COLITIS",
+     "GASTRITIS",
+     "DIVERTICULITIS"
+    ]
+   },
+   {
+    "label": "Antivirals",
+    "level": 3,
+    "words": [
+     "ACICLOVIR",
+     "OSELTAMIVIR",
+     "VALACICLOVIR",
+     "TENOFOVIR"
+    ]
+   }
+  ]
  }
 ]
