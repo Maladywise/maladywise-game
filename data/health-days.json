@@ -1,6 +1,6 @@
 {
  "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling.",
- "updated": "2026-10-21",
+ "updated": "2026-10-23",
  "days": [
   {
    "id": "ntd",
@@ -1846,6 +1846,1102 @@
    "link": "https://www.who.int/campaigns/universal-health-coverage-day",
    "blurb": "Health care for everyone, everywhere. Today is about health systems.",
    "puzzle_theme": "Health systems: public health, history of medicine, global health"
+  },
+  {
+   "id": "womeninscience",
+   "name": "International Day of Women and Girls in Science",
+   "kind": "day",
+   "rule": "02-11",
+   "dates": {
+    "2026": {
+     "start": "2026-02-11"
+    },
+    "2027": {
+     "start": "2027-02-11"
+    },
+    "2028": {
+     "start": "2028-02-11"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.un.org/en/observances/women-and-girls-in-science-day",
+   "blurb": "From Curie to Blackburn, science has never been a boys' club. Today's puzzles prove it.",
+   "puzzle_theme": "Women in medical science: Curie, Franklin, Elion, Tu Youyou, Blackburn, Barré-Sinoussi"
+  },
+  {
+   "id": "socialwork",
+   "name": "World Social Work Day",
+   "kind": "day",
+   "rule": "nth:3:1:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-17"
+    },
+    "2027": {
+     "start": "2027-03-16"
+    },
+    "2028": {
+     "start": "2028-03-21"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.ifsw.org",
+   "blurb": "Social workers untangle the stuff no prescription can fix. Today is theirs.",
+   "puzzle_theme": "Social work and social determinants of health: housing, carers, safeguarding, community",
+   "_note": "Third Tuesday of March (IFSW); 2026 confirmed 17 March. In 2028 it falls on 21 March with World Down Syndrome Day."
+  },
+  {
+   "id": "brainweek",
+   "name": "Brain Awareness Week",
+   "kind": "week",
+   "rule": "week:nth:3:0:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-16",
+     "end": "2026-03-22"
+    },
+    "2027": {
+     "start": "2027-03-15",
+     "end": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-20",
+     "end": "2028-03-26"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://dana.org/faqs/when-is-brain-awareness-week/",
+   "blurb": "A week for the three-pound universe between your ears. Neuroscience leads off.",
+   "puzzle_theme": "Neuroscience: neurons, synapses, neurotransmitters, famous experiments",
+   "_note": "Third week of March, Monday to Sunday (Dana Foundation); 2026 and 2027 confirmed, 2028 computed."
+  },
+  {
+   "id": "globalpublichealth",
+   "name": "Global Public Health Week",
+   "kind": "week",
+   "rule": "week:nth:1:0:04 (Mon-Fri)",
+   "dates": {
+    "2026": {
+     "start": "2026-04-06",
+     "end": "2026-04-10"
+    },
+    "2027": {
+     "start": "2027-04-05",
+     "end": "2027-04-09"
+    },
+    "2028": {
+     "start": "2028-04-03",
+     "end": "2028-04-07"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.wfpha.org/global-public-health-week/",
+   "blurb": "Clean water, vaccines, seatbelts: public health's wins are invisible until they're gone. Celebrate them.",
+   "puzzle_theme": "Public health: John Snow, prevention, sanitation, tobacco control, screening",
+   "_note": "WFPHA. 2026 confirmed as 6-10 April; 2027-2028 computed as the first Monday-Friday of April, verify each year."
+  },
+  {
+   "id": "biomedlabsci",
+   "name": "International Biomedical Laboratory Science Day",
+   "kind": "day",
+   "rule": "04-15",
+   "dates": {
+    "2026": {
+     "start": "2026-04-15"
+    },
+    "2027": {
+     "start": "2027-04-15"
+    },
+    "2028": {
+     "start": "2028-04-15"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://ifbls.org/index.php/about-ifbls/international-biomedical-laboratory-science-day",
+   "blurb": "About 70% of medical decisions lean on a lab result. Thank a medical scientist.",
+   "puzzle_theme": "Laboratory science: pipettes, centrifuges, quality control, specimens, PCR",
+   "_note": "The '70%' figure is a widely quoted estimate; drop it from the blurb if you prefer only hard numbers."
+  },
+  {
+   "id": "labweek",
+   "name": "Medical Laboratory Professionals Week",
+   "kind": "week",
+   "rule": "last full Sun-Sat week of April",
+   "dates": {
+    "2026": {
+     "start": "2026-04-19",
+     "end": "2026-04-25"
+    },
+    "2027": {
+     "start": "2027-04-18",
+     "end": "2027-04-24"
+    },
+    "2028": {
+     "start": "2028-04-23",
+     "end": "2028-04-29"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 3,
+   "link": "https://ascp.org/labweek",
+   "blurb": "Lab Week: for everyone behind the 'results pending' message.",
+   "puzzle_theme": "Pathology and lab medicine: blood films, cultures, biochemistry, histology",
+   "_note": "US-based (ASCP/ASCLS). 2026 confirmed 19-25 April; 2027-2028 computed. Priority 3 so it doesn't crowd the Australian/IFBLS lab day."
+  },
+  {
+   "id": "dnaday",
+   "name": "National DNA Day",
+   "kind": "day",
+   "rule": "04-25",
+   "dates": {
+    "2026": {
+     "start": "2026-04-25"
+    },
+    "2027": {
+     "start": "2027-04-25"
+    },
+    "2028": {
+     "start": "2028-04-25"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 3,
+   "link": "https://www.genome.gov/dna-day",
+   "blurb": "The double helix paper (1953) and the Human Genome Project (2003) both landed in late April. Unzip today's puzzles.",
+   "puzzle_theme": "Genetics and genomics: DNA, Franklin, Watson and Crick, CRISPR, inheritance",
+   "_note": "US NHGRI day. Clashes with Anzac Day and World Malaria Day (priority 2 leads), so mention only."
+  },
+  {
+   "id": "immunology",
+   "name": "International Day of Immunology",
+   "kind": "day",
+   "rule": "04-29",
+   "dates": {
+    "2026": {
+     "start": "2026-04-29"
+    },
+    "2027": {
+     "start": "2027-04-29"
+    },
+    "2028": {
+     "start": "2028-04-29"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://iuis.org/activities/international-day-of-immunology",
+   "blurb": "Your immune system is the world's best-trained bouncer. Today, it's on the guest list.",
+   "puzzle_theme": "Immunology: T cells, antibodies, Burnet, Doherty, tolerance, cytokines"
+  },
+  {
+   "id": "dietitiansweek",
+   "name": "Dietitians Week (Australia)",
+   "kind": "week",
+   "rule": "mid-May, set yearly by Dietitians Australia",
+   "dates": {
+    "2026": {
+     "start": "2026-05-11",
+     "end": "2026-05-17"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://dietitiansaustralia.org.au/dietitians-week",
+   "blurb": "Food is complicated. Dietitians make it less so. This week is theirs.",
+   "puzzle_theme": "Nutrition and dietetics: vitamins, macronutrients, deficiencies, food science",
+   "_note": "Only 2026 dates confirmed (11-17 May); 2027-2028 not yet announced."
+  },
+  {
+   "id": "clinicaltrials",
+   "name": "International Clinical Trials Day",
+   "kind": "day",
+   "rule": "05-20",
+   "dates": {
+    "2026": {
+     "start": "2026-05-20"
+    },
+    "2027": {
+     "start": "2027-05-20"
+    },
+    "2028": {
+     "start": "2028-05-20"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://ecrin.org/ictd",
+   "blurb": "On 20 May 1747 James Lind started handing sailors citrus. Every trial since owes him one.",
+   "puzzle_theme": "Clinical trials and evidence: Lind, randomisation, placebo, Cochrane, landmark trials"
+  },
+  {
+   "id": "orthoptics",
+   "name": "World Orthoptic Day",
+   "kind": "day",
+   "rule": "nth:1:0:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01"
+    },
+    "2027": {
+     "start": "2027-06-07"
+    },
+    "2028": {
+     "start": "2028-06-05"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://internationalorthoptics.org",
+   "blurb": "Lazy eye, squint, double vision: orthoptists line things up. Eyes front, both of them.",
+   "puzzle_theme": "Orthoptics and eye movements: strabismus, amblyopia, cranial nerves III, IV, VI",
+   "_note": "First Monday of June (International Orthoptic Association). In 2027 it falls on 7 June with World Food Safety Day."
+  },
+  {
+   "id": "dentalweek",
+   "name": "Dental Health Week (Australia)",
+   "kind": "week",
+   "rule": "week:nth:1:0:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-03",
+     "end": "2026-08-09"
+    },
+    "2027": {
+     "start": "2027-08-02",
+     "end": "2027-08-08"
+    },
+    "2028": {
+     "start": "2028-08-07",
+     "end": "2028-08-13"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.teeth.org.au/dental-health-week",
+   "blurb": "Floss. We'll wait. This week is for dentists and everyone who works on teeth.",
+   "puzzle_theme": "Dentistry and oral health: teeth, gums, fluoride, oral signs of disease",
+   "_note": "Australian Dental Association; 2026 confirmed 3-9 August (first full Mon-Sun week of August); 2027-2028 computed. Overlaps the end of World Breastfeeding Week, which only themes its first day."
+  },
+  {
+   "id": "atsihealthworkers",
+   "name": "National Day of Recognition for Aboriginal and Torres Strait Islander Health Workers and Health Practitioners",
+   "kind": "day",
+   "rule": "08-07",
+   "dates": {
+    "2026": {
+     "start": "2026-08-07"
+    },
+    "2027": {
+     "start": "2027-08-07"
+    },
+    "2028": {
+     "start": "2028-08-07"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.atsihealthpracticeboard.gov.au/News/2023-08-07-national-day-of-recognition.aspx",
+   "blurb": "Culturally safe care starts with this workforce. Today we recognise Aboriginal and Torres Strait Islander Health Workers and Practitioners.",
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health: health workforce, rheumatic heart disease, trachoma, ear health. Respectful tone.",
+   "_note": "Respectful tone; avoid jokey puzzle wording on this day."
+  },
+  {
+   "id": "speechpathology",
+   "name": "Speech Pathology Week (Australia)",
+   "kind": "week",
+   "rule": "week:nth:4:6:08 (Sun-Sat)",
+   "dates": {
+    "2026": {
+     "start": "2026-08-23",
+     "end": "2026-08-29"
+    },
+    "2027": {
+     "start": "2027-08-22",
+     "end": "2027-08-28"
+    },
+    "2028": {
+     "start": "2028-08-27",
+     "end": "2028-09-02"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.speechpathologyaustralia.org.au/SPweek",
+   "blurb": "Talking, swallowing, stuttering, reading: speech pathologists cover the lot. Say it loud.",
+   "puzzle_theme": "Speech pathology: language, swallowing (dysphagia), aphasia, voice, larynx",
+   "_note": "2026 confirmed 23-29 August; 2027-2028 computed from the fourth Sunday of August, verify with Speech Pathology Australia."
+  },
+  {
+   "id": "microorganism",
+   "name": "International Microorganism Day",
+   "kind": "day",
+   "rule": "09-17",
+   "dates": {
+    "2026": {
+     "start": "2026-09-17"
+    },
+    "2027": {
+     "start": "2027-09-17"
+    },
+    "2028": {
+     "start": "2028-09-17"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 3,
+   "link": "https://fems-microbiology.org/international-microorganism-day/",
+   "blurb": "On 17 September 1683 van Leeuwenhoek wrote about his 'animalcules'. Microbes have been stealing the show ever since.",
+   "puzzle_theme": "Microbiology: bacteria, viruses, fungi, Gram stain, van Leeuwenhoek",
+   "_note": "Shares the date with World Patient Safety Day (WHO, priority 2 leads)."
+  },
+  {
+   "id": "cancerresearch",
+   "name": "World Cancer Research Day",
+   "kind": "day",
+   "rule": "09-24",
+   "dates": {
+    "2026": {
+     "start": "2026-09-24"
+    },
+    "2027": {
+     "start": "2027-09-24"
+    },
+    "2028": {
+     "start": "2028-09-24"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.uicc.org/news/world-cancer-research-day-september-24th",
+   "blurb": "Cancer survival has risen thanks to research, one trial at a time. Today's for the lab coats.",
+   "puzzle_theme": "Cancer research: oncogenes, p53, HeLa, immunotherapy, HPV vaccine"
+  },
+  {
+   "id": "palliative",
+   "name": "World Hospice and Palliative Care Day",
+   "kind": "day",
+   "rule": "nth:2:5:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-10"
+    },
+    "2027": {
+     "start": "2027-10-09"
+    },
+    "2028": {
+     "start": "2028-10-14"
+    }
+   },
+   "tags": [
+    "specialty",
+    "gentle"
+   ],
+   "priority": 1,
+   "link": "https://thewhpca.org",
+   "blurb": "Care until the very end is still care. Today honours palliative care teams.",
+   "puzzle_theme": "Palliative care, gently: symptom control, hospice history (Cicely Saunders), teamwork. No jokes about dying.",
+   "_note": "Second Saturday of October (WHPCA). In 2026 it falls on 10 October with World Mental Health Day; consider letting Mental Health Day lead that year. In 2028 it falls on 14 October with Allied Health Professions Day."
+  },
+  {
+   "id": "alliedhealth",
+   "name": "Allied Health Professions Day (Australia)",
+   "kind": "day",
+   "rule": "10-14",
+   "dates": {
+    "2026": {
+     "start": "2026-10-14"
+    },
+    "2027": {
+     "start": "2027-10-14"
+    },
+    "2028": {
+     "start": "2028-10-14"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.ahpa.com.au/allied-health-professions-day",
+   "blurb": "Physios, OTs, speechies, dietitians, podiatrists and many more. Healthcare runs on allied health.",
+   "puzzle_theme": "Allied health: physiotherapy, OT, speech pathology, dietetics, podiatry, audiology, psychology"
+  },
+  {
+   "id": "clinicalengineering",
+   "name": "Global Clinical Engineering Day",
+   "kind": "day",
+   "rule": "10-21",
+   "dates": {
+    "2026": {
+     "start": "2026-10-21"
+    },
+    "2027": {
+     "start": "2027-10-21"
+    },
+    "2028": {
+     "start": "2028-10-21"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://ifmbe.org/global-clinical-engineering-day/",
+   "blurb": "Somebody has to keep the ventilators breathing and the pacemakers pacing. Today, it's them.",
+   "puzzle_theme": "Biomedical engineering: pacemakers, dialysis, cochlear implants, stents, ECG"
+  },
+  {
+   "id": "pathologyweek",
+   "name": "National Pathology Week (UK)",
+   "kind": "week",
+   "rule": "week:nth:1:0:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-02",
+     "end": "2026-11-08"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-07"
+    },
+    "2028": {
+     "start": "2028-11-06",
+     "end": "2028-11-12"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 3,
+   "link": "https://www.rcpath.org/discover-pathology/events-landing-page/national-pathology-week.html",
+   "blurb": "Behind every diagnosis is a pathologist with a microscope. Celebrate the people who read the slides.",
+   "puzzle_theme": "Pathology: histology, stains, blood films, biochemistry, microbiology",
+   "_note": "UK (Royal College of Pathologists). 2025 was 3-9 Nov and 2026 is 2-8 Nov; 2027-2028 computed. No equivalent Australian pathology week found."
+  },
+  {
+   "id": "medicalphysics",
+   "name": "International Day of Medical Physics",
+   "kind": "day",
+   "rule": "11-07",
+   "dates": {
+    "2026": {
+     "start": "2026-11-07"
+    },
+    "2027": {
+     "start": "2027-11-07"
+    },
+    "2028": {
+     "start": "2028-11-07"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.iomp.org",
+   "blurb": "Marie Curie's birthday. Today is for the physicists who make sure your scan dose is right.",
+   "puzzle_theme": "Medical physics: X-rays, Röntgen, Curie, radiation units, MRI, radiotherapy",
+   "_note": "IOMP chose Marie Curie's birthday (7 November). The day before International Day of Radiology."
+  },
+  {
+   "id": "psychweek",
+   "name": "Psychology Week (Australia)",
+   "kind": "week",
+   "rule": "set yearly by the Australian Psychological Society",
+   "dates": {
+    "2026": {
+     "start": "2026-11-16",
+     "end": "2026-11-22"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://psychology.org.au/insights/psychology-week-2026-save-the-date",
+   "blurb": "Minds matter. This week celebrates psychologists and the science of behaviour.",
+   "puzzle_theme": "Psychology: memory, perception, famous experiments, CBT history. Respectful tone about mental illness.",
+   "_note": "Dates move (2025 was 29 Sep-5 Oct; 2026 is 16-22 Nov). 2027-2028 not yet announced."
+  },
+  {
+   "id": "socialjustice",
+   "name": "World Day of Social Justice",
+   "kind": "day",
+   "rule": "02-20",
+   "dates": {
+    "2026": {
+     "start": "2026-02-20"
+    },
+    "2027": {
+     "start": "2027-02-20"
+    },
+    "2028": {
+     "start": "2028-02-20"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/social-justice-day",
+   "blurb": "Your postcode shouldn't predict your health. Today is about fairness.",
+   "puzzle_theme": "Social determinants of health: the social gradient, inverse care law, Marmot, housing and income"
+  },
+  {
+   "id": "zerodiscrimination",
+   "name": "Zero Discrimination Day",
+   "kind": "day",
+   "rule": "03-01",
+   "dates": {
+    "2026": {
+     "start": "2026-03-01"
+    },
+    "2027": {
+     "start": "2027-03-01"
+    },
+    "2028": {
+     "start": "2028-03-01"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.unaids.org/en/zerodiscrimination",
+   "blurb": "Everyone deserves care without judgement. That's the whole point of today.",
+   "puzzle_theme": "Stigma-free care: HIV history, inclusive practice, interpreters, accessibility"
+  },
+  {
+   "id": "iwd",
+   "name": "International Women's Day",
+   "kind": "day",
+   "rule": "03-08",
+   "dates": {
+    "2026": {
+     "start": "2026-03-08"
+    },
+    "2027": {
+     "start": "2027-03-08"
+    },
+    "2028": {
+     "start": "2028-03-08"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/womens-day",
+   "blurb": "From Yentl syndrome to endometriosis delays: today is about getting women's health right.",
+   "puzzle_theme": "Women's health equity: endometriosis, SCAD, women's heart disease, cervical screening"
+  },
+  {
+   "id": "endomonth",
+   "name": "Endometriosis Awareness Month",
+   "kind": "month",
+   "rule": "month:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-01",
+     "end": "2026-03-31"
+    },
+    "2027": {
+     "start": "2027-03-01",
+     "end": "2027-03-31"
+    },
+    "2028": {
+     "start": "2028-03-01",
+     "end": "2028-03-31"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://endometriosisaustralia.org",
+   "blurb": "About 1 in 7 Australian women are diagnosed with endometriosis by their late 40s.",
+   "puzzle_theme": "Endometriosis and pelvic pain: symptoms, diagnosis, diagnostic delay"
+  },
+  {
+   "id": "closethegap",
+   "name": "National Close the Gap Day",
+   "kind": "day",
+   "rule": "nth:3:3:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-19"
+    },
+    "2027": {
+     "start": "2027-03-18"
+    },
+    "2028": {
+     "start": "2028-03-16"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://humanrights.gov.au/our-work/aboriginal-and-torres-strait-islander-social-justice/projects/close-gap-indigenous-health",
+   "blurb": "Community-controlled, culturally safe care works. Today celebrates it and keeps the push going.",
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, the 715 check, trachoma and RHD elimination"
+  },
+  {
+   "id": "tdov",
+   "name": "International Transgender Day of Visibility",
+   "kind": "day",
+   "rule": "03-31",
+   "dates": {
+    "2026": {
+     "start": "2026-03-31"
+    },
+    "2027": {
+     "start": "2027-03-31"
+    },
+    "2028": {
+     "start": "2028-03-31"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.transhub.org.au",
+   "blurb": "Celebrating trans and gender diverse people, and the health care that affirms them.",
+   "puzzle_theme": "Inclusive, gender-affirming practice: respectful language, LGBTIQA+ health history. No jokes about identity."
+  },
+  {
+   "id": "flyingdoctor",
+   "name": "Flying Doctor Day",
+   "kind": "day",
+   "rule": "05-15",
+   "dates": {
+    "2026": {
+     "start": "2026-05-15"
+    },
+    "2027": {
+     "start": "2027-05-15"
+    },
+    "2028": {
+     "start": "2028-05-15"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.flyingdoctor.org.au",
+   "blurb": "Since 1928, the Flying Doctor has been the mantle of safety over the outback.",
+   "puzzle_theme": "Rural and remote health: RFDS history, John Flynn, pedal radio, retrieval medicine, outback medicine"
+  },
+  {
+   "id": "idahobit",
+   "name": "IDAHOBIT (International Day Against Homophobia, Biphobia, Interphobia and Transphobia)",
+   "kind": "day",
+   "rule": "05-17",
+   "dates": {
+    "2026": {
+     "start": "2026-05-17"
+    },
+    "2027": {
+     "start": "2027-05-17"
+    },
+    "2028": {
+     "start": "2028-05-17"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://may17.org",
+   "blurb": "On 17 May 1990 the WHO took homosexuality out of the ICD. Today marks how far care has come.",
+   "puzzle_theme": "LGBTIQA+ health: history (DSM 1973, ICD 1990, PrEP), inclusive practice, intersex awareness. Respectful, no jokes about identity."
+  },
+  {
+   "id": "sorryday",
+   "name": "National Sorry Day",
+   "kind": "day",
+   "rule": "05-26",
+   "dates": {
+    "2026": {
+     "start": "2026-05-26"
+    },
+    "2027": {
+     "start": "2027-05-26"
+    },
+    "2028": {
+     "start": "2028-05-26"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.reconciliation.org.au",
+   "blurb": "Today is National Sorry Day, remembering the Stolen Generations. 13YARN (13 92 76) is there if you need to talk.",
+   "puzzle_theme": null
+  },
+  {
+   "id": "reconciliation",
+   "name": "National Reconciliation Week",
+   "kind": "week",
+   "rule": "range:05-27:06-03",
+   "dates": {
+    "2026": {
+     "start": "2026-05-27",
+     "end": "2026-06-03"
+    },
+    "2027": {
+     "start": "2027-05-27",
+     "end": "2027-06-03"
+    },
+    "2028": {
+     "start": "2028-05-27",
+     "end": "2028-06-03"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.reconciliation.org.au",
+   "blurb": "From the 1967 referendum to the Mabo decision: a week to learn, share and walk together.",
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health and history, strengths-based: ACCHOs, first Aboriginal doctors, cultural safety"
+  },
+  {
+   "id": "menshealthweek",
+   "name": "Men's Health Week",
+   "kind": "week",
+   "rule": "weekending:3:6:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-15",
+     "end": "2026-06-21"
+    },
+    "2027": {
+     "start": "2027-06-14",
+     "end": "2027-06-20"
+    },
+    "2028": {
+     "start": "2028-06-12",
+     "end": "2028-06-18"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://westernsydney.edu.au/mens-health-week",
+   "blurb": "Blokes, book the check-up you've been putting off.",
+   "puzzle_theme": "Men's health: life expectancy gap, prostate and testicular health, heart disease, Movember"
+  },
+  {
+   "id": "refugeeday",
+   "name": "World Refugee Day",
+   "kind": "day",
+   "rule": "06-20",
+   "dates": {
+    "2026": {
+     "start": "2026-06-20"
+    },
+    "2027": {
+     "start": "2027-06-20"
+    },
+    "2028": {
+     "start": "2028-06-20"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/refugee-day",
+   "blurb": "Welcoming people who've been forced from home starts with good care.",
+   "puzzle_theme": "Refugee and multicultural health: interpreters, post-arrival screening, strongyloides, latent TB, healthy migrant effect"
+  },
+  {
+   "id": "naidoc",
+   "name": "NAIDOC Week",
+   "kind": "week",
+   "rule": "firstsunday-range:07:7",
+   "dates": {
+    "2026": {
+     "start": "2026-07-05",
+     "end": "2026-07-12"
+    },
+    "2027": {
+     "start": "2027-07-04",
+     "end": "2027-07-11"
+    },
+    "2028": {
+     "start": "2028-07-02",
+     "end": "2028-07-09"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.naidoc.org.au",
+   "blurb": "Celebrating the history, cultures and achievements of Aboriginal and Torres Strait Islander peoples.",
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, AIDA, first Aboriginal doctors and surgeons"
+  },
+  {
+   "id": "childrensday",
+   "name": "National Aboriginal and Torres Strait Islander Children's Day",
+   "kind": "day",
+   "rule": "08-04",
+   "dates": {
+    "2026": {
+     "start": "2026-08-04"
+    },
+    "2027": {
+     "start": "2027-08-04"
+    },
+    "2028": {
+     "start": "2028-08-04"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.snaicc.org.au",
+   "blurb": "Strong in culture, strong in health: today celebrates Aboriginal and Torres Strait Islander children.",
+   "puzzle_theme": "Child health, strengths-based: healthy birthweight, ear and eye health, trachoma elimination, the 715 check for kids"
+  },
+  {
+   "id": "homelessnessweek",
+   "name": "Homelessness Week",
+   "kind": "week",
+   "rule": "nth:1:0:08+6",
+   "dates": {
+    "2026": {
+     "start": "2026-08-03",
+     "end": "2026-08-09"
+    },
+    "2027": {
+     "start": "2027-08-02",
+     "end": "2027-08-08"
+    },
+    "2028": {
+     "start": "2028-08-07",
+     "end": "2028-08-13"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://homelessnessaustralia.org.au/homelessness-week/",
+   "blurb": "Over 122,000 people were homeless on Census night 2021. Health starts with a home.",
+   "puzzle_theme": "Homelessness and health: social determinants, scurvy and food insecurity, inverse care law. No jokes about people experiencing homelessness."
+  },
+  {
+   "id": "indigenouspeoples",
+   "name": "International Day of the World's Indigenous Peoples",
+   "kind": "day",
+   "rule": "08-09",
+   "dates": {
+    "2026": {
+     "start": "2026-08-09"
+    },
+    "2027": {
+     "start": "2027-08-09"
+    },
+    "2028": {
+     "start": "2028-08-09"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/indigenous-day",
+   "blurb": "From Aotearoa to Sápmi, Indigenous-led health care is leading the way.",
+   "puzzle_theme": "Global Indigenous health: Te Whare Tapa Whā, Jordan's Principle, UNDRIP, Sámi, First Nations"
+  },
+  {
+   "id": "wearitpurple",
+   "name": "Wear It Purple Day",
+   "kind": "day",
+   "rule": "last:4:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-28"
+    },
+    "2027": {
+     "start": "2027-08-27"
+    },
+    "2028": {
+     "start": "2028-08-25"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.wearitpurple.org",
+   "blurb": "Purple today for rainbow young people: you belong.",
+   "puzzle_theme": "LGBTIQA+ youth health and inclusive practice. Respectful, no jokes about identity."
+  },
+  {
+   "id": "signlanguages",
+   "name": "International Day of Sign Languages",
+   "kind": "day",
+   "rule": "09-23",
+   "dates": {
+    "2026": {
+     "start": "2026-09-23"
+    },
+    "2027": {
+     "start": "2027-09-23"
+    },
+    "2028": {
+     "start": "2028-09-23"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.un.org/en/observances/sign-languages-day",
+   "blurb": "Auslan is a full language, with its own grammar and Deaf culture behind it.",
+   "puzzle_theme": "Deaf culture and accessibility: Auslan, hearing, interpreters, the social model of disability"
+  },
+  {
+   "id": "antipoverty",
+   "name": "Anti-Poverty Week",
+   "kind": "week",
+   "rule": "sunweek-containing:10-17",
+   "dates": {
+    "2026": {
+     "start": "2026-10-11",
+     "end": "2026-10-17"
+    },
+    "2027": {
+     "start": "2027-10-17",
+     "end": "2027-10-23"
+    },
+    "2028": {
+     "start": "2028-10-15",
+     "end": "2028-10-21"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://antipovertyweek.org.au",
+   "blurb": "Poverty is a health condition with a social cure.",
+   "puzzle_theme": "Social determinants: Marmot, Whitehall, the inverse care law, Medicare history, health literacy"
+  },
+  {
+   "id": "intersex",
+   "name": "Intersex Awareness Day",
+   "kind": "day",
+   "rule": "10-26",
+   "dates": {
+    "2026": {
+     "start": "2026-10-26"
+    },
+    "2027": {
+     "start": "2027-10-26"
+    },
+    "2028": {
+     "start": "2028-10-26"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://intersexday.org",
+   "blurb": "Intersex people are a natural part of human diversity.",
+   "puzzle_theme": "Intersex awareness and inclusive care, gently: history of Intersex Awareness Day, the Darlington Statement. No jokes about bodies or identity."
+  },
+  {
+   "id": "movember",
+   "name": "Movember",
+   "kind": "month",
+   "rule": "month:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01",
+     "end": "2026-11-30"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-30"
+    },
+    "2028": {
+     "start": "2028-11-01",
+     "end": "2028-11-30"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://movember.com",
+   "blurb": "Mo season: prostate, testicular and men's mental health.",
+   "puzzle_theme": "Men's health: prostate and testicular cancer, men's mental health, life expectancy gap"
+  },
+  {
+   "id": "tdor",
+   "name": "Transgender Day of Remembrance",
+   "kind": "day",
+   "rule": "11-20",
+   "dates": {
+    "2026": {
+     "start": "2026-11-20"
+    },
+    "2027": {
+     "start": "2027-11-20"
+    },
+    "2028": {
+     "start": "2028-11-20"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://www.transhub.org.au",
+   "blurb": "Today is Transgender Day of Remembrance. QLife (1800 184 527) is there if you need support.",
+   "puzzle_theme": null
   }
  ]
 }
