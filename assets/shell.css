@@ -467,3 +467,5 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 @media print{main.doc{position:relative}.print-qr{position:absolute;top:0;right:0;float:none;margin:0;width:58px;height:58px}.doc .trust{display:none}}
 
 .hday{position:relative}.hday.has-ic h2,.hday.has-ic .hday-k{padding-right:92px}.hday.has-ic h2+p{padding-right:64px}.hday-ic{position:absolute;right:12px;top:10px;width:84px;height:84px}
+.doc .faq details{border-top:1px solid var(--line);padding:8px 0}.doc .faq details:last-child{border-bottom:1px solid var(--line)}.doc .faq summary{font-weight:600;font-size:15px;cursor:pointer}.doc .faq details p{margin:6px 0 0;color:var(--muted)}
+@media print{.doc .faq{display:none!important}}
