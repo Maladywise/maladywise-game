@@ -535,8 +535,8 @@
         var done = o.st && o.st.done;
         return '<a class="mwx-row' + (done ? " done" : "") + '" href="../' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><span class="mwx-ic">' + o.g.icon + '</span><span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (done ? (o.st.win ? "\u2713" : "Done") : "\u203a") + "</span></a>";
       }).join("") + '</div><a class="mwx-all" href="../">All puzzles</a></section>');
-    arch.parentNode.insertBefore(strip, arch.nextSibling);
-    if (!document.getElementById("newsletter")) { var nl = el(NL_HTML); nl.classList.add("nl-game"); strip.parentNode.insertBefore(nl, strip.nextSibling); }
+    arch.parentNode.insertBefore(strip, arch);
+    if (!document.getElementById("newsletter")) { var nl = el(NL_HTML); nl.classList.add("nl-game"); arch.parentNode.insertBefore(nl, arch.nextSibling); }
     // show the last 7 days straight away, older ones behind a button
     arch.open = true;
     var sum = arch.querySelector("summary"); if (sum) sum.textContent = "Past puzzles";
