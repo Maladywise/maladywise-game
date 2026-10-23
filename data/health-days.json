@@ -24,7 +24,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-ntd-day",
    "blurb": "A billion-plus people live with diseases most doctors only meet in exams. Today they get the spotlight.",
-   "puzzle_theme": "Neglected tropical diseases: leprosy, schisto, trachoma, dengue, leishmaniasis"
+   "puzzle_theme": "Neglected tropical diseases: leprosy, schisto, trachoma, dengue, leishmaniasis",
+   "icon": "bednet"
   },
   {
    "id": "cancer",
@@ -46,7 +47,8 @@
    "priority": 3,
    "link": "https://www.worldcancerday.org",
    "blurb": "Prevention, screening and catching it early. Today's puzzles are all about cancer.",
-   "puzzle_theme": "Oncology: tumour types, screening, markers, staging"
+   "puzzle_theme": "Oncology: tumour types, screening, markers, staging",
+   "icon": "ribbon-lavender"
   },
   {
    "id": "epilepsy",
@@ -68,7 +70,8 @@
    "priority": 3,
    "link": "https://www.epilepsy.org",
    "blurb": "Seizures are more than shaking. Brush up on epilepsy today.",
-   "puzzle_theme": "Epilepsy and seizures: types, EEG, triggers, history of neurology"
+   "puzzle_theme": "Epilepsy and seizures: types, EEG, triggers, history of neurology",
+   "icon": "brain"
   },
   {
    "id": "childcancer",
@@ -90,7 +93,8 @@
    "priority": 3,
    "link": "https://www.siop-online.org",
    "blurb": "Children's cancers are rare, and survival has climbed hugely. Today is for them.",
-   "puzzle_theme": "Paediatric oncology: leukaemia, neuroblastoma, Wilms, retinoblastoma"
+   "puzzle_theme": "Paediatric oncology: leukaemia, neuroblastoma, Wilms, retinoblastoma",
+   "icon": "ribbon-gold"
   },
   {
    "id": "encephalitis",
@@ -112,7 +116,8 @@
    "priority": 3,
    "link": "https://www.encephalitis.info",
    "blurb": "Brain inflammation is rare, serious and often missed. Know the signs.",
-   "puzzle_theme": "Encephalitis: viral, autoimmune (anti-NMDA), meningitis vs encephalitis"
+   "puzzle_theme": "Encephalitis: viral, autoimmune (anti-NMDA), meningitis vs encephalitis",
+   "icon": "brain"
   },
   {
    "id": "rare",
@@ -136,7 +141,8 @@
    "priority": 3,
    "link": "https://www.rarediseaseday.org",
    "blurb": "When you hear hoofbeats, sometimes it IS a zebra. Today is all zebras.",
-   "puzzle_theme": "Rare diseases and zebras: eponymous syndromes, genetic conditions"
+   "puzzle_theme": "Rare diseases and zebras: eponymous syndromes, genetic conditions",
+   "icon": "dna"
   },
   {
    "id": "hearing",
@@ -160,7 +166,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-hearing-day",
    "blurb": "Turn it down a notch. Today is about ears and hearing.",
-   "puzzle_theme": "ENT and hearing: ear anatomy, hearing loss, tinnitus, audiology"
+   "puzzle_theme": "ENT and hearing: ear anatomy, hearing loss, tinnitus, audiology",
+   "icon": "ear"
   },
   {
    "id": "obesity",
@@ -182,7 +189,8 @@
    "priority": 3,
    "link": "https://www.worldobesityday.org",
    "blurb": "Obesity is a chronic disease, not a character flaw. Today's puzzles take it seriously.",
-   "puzzle_theme": "Obesity medicine: metabolism, hormones (leptin, GLP-1), bariatrics. No body-shaming."
+   "puzzle_theme": "Obesity medicine: metabolism, hormones (leptin, GLP-1), bariatrics. No body-shaming.",
+   "icon": "apple"
   },
   {
    "id": "kidney",
@@ -204,7 +212,8 @@
    "priority": 3,
    "link": "https://www.worldkidneyday.org",
    "blurb": "Two bean-shaped organs filtering about 180 litres a day. Show them some love.",
-   "puzzle_theme": "Nephrology: nephron, eGFR, dialysis, kidney stones, transplant"
+   "puzzle_theme": "Nephrology: nephron, eGFR, dialysis, kidney stones, transplant",
+   "icon": "kidney"
   },
   {
    "id": "sleep",
@@ -226,7 +235,8 @@
    "priority": 3,
    "link": "https://worldsleepday.org",
    "blurb": "Sleep is medicine. Today's puzzles are best done well-rested.",
-   "puzzle_theme": "Sleep medicine: circadian rhythm, sleep apnoea, narcolepsy, melatonin"
+   "puzzle_theme": "Sleep medicine: circadian rhythm, sleep apnoea, narcolepsy, melatonin",
+   "icon": "sleepy-moon"
   },
   {
    "id": "oral",
@@ -248,7 +258,8 @@
    "priority": 3,
    "link": "https://www.worldoralhealthday.org",
    "blurb": "Your mouth is part of your body too. Today is for teeth and gums.",
-   "puzzle_theme": "Dentistry and oral health: teeth, gums, salivary glands, oral signs of disease"
+   "puzzle_theme": "Dentistry and oral health: teeth, gums, salivary glands, oral signs of disease",
+   "icon": "tooth"
   },
   {
    "id": "downs",
@@ -270,7 +281,8 @@
    "priority": 3,
    "link": "https://www.worlddownsyndromeday.org",
    "blurb": "21/3 for three copies of chromosome 21. Celebrate, include, learn.",
-   "puzzle_theme": "Genetics and trisomies: chromosomes, karyotypes, inclusion. Respectful tone."
+   "puzzle_theme": "Genetics and trisomies: chromosomes, karyotypes, inclusion. Respectful tone.",
+   "icon": "socks"
   },
   {
    "id": "optometry",
@@ -294,7 +306,8 @@
    "priority": 1,
    "link": "https://worldcouncilofoptometry.info",
    "blurb": "Eyes front. Today celebrates optometrists.",
-   "puzzle_theme": "Optometry: refraction, myopia, lenses, eye anatomy"
+   "puzzle_theme": "Optometry: refraction, myopia, lenses, eye anatomy",
+   "icon": "glasses"
   },
   {
    "id": "tb",
@@ -318,7 +331,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-tb-day",
    "blurb": "TB is one of the world's deadliest infectious diseases, and it's curable. Learn the history.",
-   "puzzle_theme": "Tuberculosis: Koch, Mantoux, BCG, consumption in history, treatment"
+   "puzzle_theme": "Tuberculosis: Koch, Mantoux, BCG, consumption in history, treatment",
+   "icon": "lungs"
   },
   {
    "id": "bipolar",
@@ -342,7 +356,8 @@
    "priority": 3,
    "link": "https://www.isbd.org",
    "blurb": "Van Gogh's birthday. Today is about understanding bipolar disorder.",
-   "puzzle_theme": "Mood disorders, gently: history, lithium, neuroscience. No jokes about patients."
+   "puzzle_theme": "Mood disorders, gently: history, lithium, neuroscience. No jokes about patients.",
+   "icon": "ribbon-green"
   },
   {
    "id": "autism",
@@ -366,7 +381,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/autism-day",
    "blurb": "Neurodiversity day. Different brains, not broken ones.",
-   "puzzle_theme": "Neurodiversity: autism history, sensory processing, strengths. Respectful."
+   "puzzle_theme": "Neurodiversity: autism history, sensory processing, strengths. Respectful.",
+   "icon": "infinity"
   },
   {
    "id": "health",
@@ -390,7 +406,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-health-day",
    "blurb": "The WHO's birthday. Today's puzzles cover the whole of global health.",
-   "puzzle_theme": "Global health: WHO history, public health milestones, epidemics, vaccines"
+   "puzzle_theme": "Global health: WHO history, public health milestones, epidemics, vaccines",
+   "icon": "globe"
   },
   {
    "id": "parkinsons",
@@ -412,7 +429,8 @@
    "priority": 3,
    "link": "https://www.epda.eu.com",
    "blurb": "James Parkinson's birthday. Today is about the shaking palsy.",
-   "puzzle_theme": "Movement disorders: dopamine, substantia nigra, tremor, levodopa history"
+   "puzzle_theme": "Movement disorders: dopamine, substantia nigra, tremor, levodopa history",
+   "icon": "brain"
   },
   {
    "id": "chagas",
@@ -437,7 +455,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-chagas-disease-day",
    "blurb": "The kissing bug's not-so-romantic gift. A classic zebra.",
-   "puzzle_theme": "Parasitology: Chagas, trypanosomes, vectors, tropical cardiomyopathy"
+   "puzzle_theme": "Parasitology: Chagas, trypanosomes, vectors, tropical cardiomyopathy",
+   "icon": "bednet"
   },
   {
    "id": "haemophilia",
@@ -459,7 +478,8 @@
    "priority": 3,
    "link": "https://wfh.org",
    "blurb": "Royal blood, literally. Today is about bleeding disorders.",
-   "puzzle_theme": "Haematology: clotting cascade, factor VIII/IX, von Willebrand, royal history"
+   "puzzle_theme": "Haematology: clotting cascade, factor VIII/IX, von Willebrand, royal history",
+   "icon": "blood-drop"
   },
   {
    "id": "immunization",
@@ -486,7 +506,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-immunization-week",
    "blurb": "Vaccines: the most successful prevention in history. Celebrate them this week.",
-   "puzzle_theme": "Vaccines and immunology: Jenner, smallpox, herd immunity, antibodies"
+   "puzzle_theme": "Vaccines and immunology: Jenner, smallpox, herd immunity, antibodies",
+   "icon": "syringe"
   },
   {
    "id": "malaria",
@@ -510,7 +531,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-malaria-day",
    "blurb": "A mosquito-borne parasite that's shaped human history. Today we take it on.",
-   "puzzle_theme": "Malaria: Plasmodium, Anopheles, quinine, sickle cell link, Ross"
+   "puzzle_theme": "Malaria: Plasmodium, Anopheles, quinine, sickle cell link, Ross",
+   "icon": "bednet"
   },
   {
    "id": "eds",
@@ -537,7 +559,8 @@
    "priority": 3,
    "link": "https://www.ehlers-danlos.com",
    "blurb": "May is EDS month. Bendy, often missed, and the original medical zebra.",
-   "puzzle_theme": "Connective tissue and zebras: collagen, hypermobility, dysautonomia"
+   "puzzle_theme": "Connective tissue and zebras: collagen, hypermobility, dysautonomia",
+   "icon": "dna"
   },
   {
    "id": "asthma",
@@ -559,7 +582,8 @@
    "priority": 3,
    "link": "https://ginasthma.org",
    "blurb": "Breathe in, breathe out. Today is about airways.",
-   "puzzle_theme": "Respiratory: asthma, bronchi, spirometry, inhalers history"
+   "puzzle_theme": "Respiratory: asthma, bronchi, spirometry, inhalers history",
+   "icon": "lungs"
   },
   {
    "id": "midwife",
@@ -583,7 +607,8 @@
    "priority": 1,
    "link": "https://internationalmidwives.org",
    "blurb": "Midwives have been catching babies since forever. Today is theirs.",
-   "puzzle_theme": "Midwifery and obstetrics: pregnancy, labour, newborn care"
+   "puzzle_theme": "Midwifery and obstetrics: pregnancy, labour, newborn care",
+   "icon": "swaddle-star"
   },
   {
    "id": "handhygiene",
@@ -607,7 +632,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-hand-hygiene-day",
    "blurb": "Semmelweis was right. Wash your hands.",
-   "puzzle_theme": "Infection prevention: Semmelweis, germ theory, hand hygiene"
+   "puzzle_theme": "Infection prevention: Semmelweis, germ theory, hand hygiene",
+   "icon": "soap"
   },
   {
    "id": "thalassaemia",
@@ -629,7 +655,8 @@
    "priority": 3,
    "link": "https://thalassaemia.org.cy",
    "blurb": "Today is about haemoglobin gone slightly wrong.",
-   "puzzle_theme": "Haemoglobinopathies: thalassaemia, globin genes, transfusion"
+   "puzzle_theme": "Haemoglobinopathies: thalassaemia, globin genes, transfusion",
+   "icon": "blood-drop"
   },
   {
    "id": "lupus",
@@ -653,7 +680,8 @@
    "priority": 3,
    "link": "https://www.worldlupusday.org",
    "blurb": "It's not always lupus... but today it is.",
-   "puzzle_theme": "Autoimmunity: lupus, ANA, butterfly rash, mimics"
+   "puzzle_theme": "Autoimmunity: lupus, ANA, butterfly rash, mimics",
+   "icon": "butterfly"
   },
   {
    "id": "nurses",
@@ -677,7 +705,8 @@
    "priority": 1,
    "link": "https://www.icn.ch",
    "blurb": "Florence Nightingale's birthday. Every puzzle today is for nurses.",
-   "puzzle_theme": "Nursing: Nightingale, observations, wards, nursing history and skills"
+   "puzzle_theme": "Nursing: Nightingale, observations, wards, nursing history and skills",
+   "icon": "fob-watch"
   },
   {
    "id": "hypertension",
@@ -699,7 +728,8 @@
    "priority": 3,
    "link": "https://www.whleague.org",
    "blurb": "The silent killer. Know your numbers.",
-   "puzzle_theme": "Hypertension and BP: Korotkoff, sphygmomanometers, cardiovascular risk"
+   "puzzle_theme": "Hypertension and BP: Korotkoff, sphygmomanometers, cardiovascular risk",
+   "icon": "heart"
   },
   {
    "id": "familydoctor",
@@ -723,7 +753,8 @@
    "priority": 1,
    "link": "https://www.globalfamilydoctor.com",
    "blurb": "Here's to GPs, the first port of call. Today's puzzles are for general practice.",
-   "puzzle_theme": "General practice: common presentations, history-taking, preventive care"
+   "puzzle_theme": "General practice: common presentations, history-taking, preventive care",
+   "icon": "stethoscope"
   },
   {
    "id": "emergency",
@@ -747,7 +778,8 @@
    "priority": 1,
    "link": "https://www.ifem.cc",
    "blurb": "Today is for the people running towards the chaos.",
-   "puzzle_theme": "Emergency medicine: triage, resus, ABCDE, trauma, toxicology"
+   "puzzle_theme": "Emergency medicine: triage, resus, ABCDE, trauma, toxicology",
+   "icon": "ambulance"
   },
   {
    "id": "ms",
@@ -769,7 +801,8 @@
    "priority": 3,
    "link": "https://worldmsday.org",
    "blurb": "Multiple sclerosis: myelin under attack. Learn about it today.",
-   "puzzle_theme": "Neurology: MS, myelin, demyelination, MRI, Charcot"
+   "puzzle_theme": "Neurology: MS, myelin, demyelination, MRI, Charcot",
+   "icon": "brain"
   },
   {
    "id": "tobacco",
@@ -793,7 +826,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-no-tobacco-day",
    "blurb": "Today is all about the lungs, and what tobacco does to them.",
-   "puzzle_theme": "Tobacco harm: lungs, COPD, cancers, nicotine, quitting"
+   "puzzle_theme": "Tobacco harm: lungs, COPD, cancers, nicotine, quitting",
+   "icon": "lungs"
   },
   {
    "id": "eatingdisorders",
@@ -817,7 +851,8 @@
    "priority": 0,
    "link": "https://www.worldeatingdisordersday.org",
    "blurb": "Today is World Eating Disorders Action Day. Support is available: Butterfly Foundation 1800 33 4673.",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "hands-heart"
   },
   {
    "id": "foodsafety",
@@ -841,7 +876,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-food-safety-day",
    "blurb": "Today's puzzles are about what's lurking in your lunch.",
-   "puzzle_theme": "Foodborne illness: Salmonella, Listeria, botulism, gastro"
+   "puzzle_theme": "Foodborne illness: Salmonella, Listeria, botulism, gastro",
+   "icon": "apple"
   },
   {
    "id": "blood",
@@ -865,7 +901,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-blood-donor-day",
    "blurb": "Karl Landsteiner's birthday. Blood groups all day.",
-   "puzzle_theme": "Transfusion: blood groups, Landsteiner, donation, plasma"
+   "puzzle_theme": "Transfusion: blood groups, Landsteiner, donation, plasma",
+   "icon": "blood-drop"
   },
   {
    "id": "elderabuse",
@@ -889,7 +926,8 @@
    "priority": 0,
    "link": "https://www.un.org/en/observances/elder-abuse-awareness-day",
    "blurb": "Today is World Elder Abuse Awareness Day.",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "hands-heart"
   },
   {
    "id": "sicklecell",
@@ -911,7 +949,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/sickle-cell-day",
    "blurb": "One amino acid swap, huge consequences. Today is about sickle cell.",
-   "puzzle_theme": "Sickle cell disease: HbS, crises, malaria protection, genetics"
+   "puzzle_theme": "Sickle cell disease: HbS, crises, malaria protection, genetics",
+   "icon": "blood-drop"
   },
   {
    "id": "vitiligo",
@@ -933,7 +972,8 @@
    "priority": 3,
    "link": "https://vrfoundation.org",
    "blurb": "Skin with a story. Today is about vitiligo and pigment.",
-   "puzzle_theme": "Dermatology: melanocytes, pigment disorders, autoimmune skin"
+   "puzzle_theme": "Dermatology: melanocytes, pigment disorders, autoimmune skin",
+   "icon": "lotion"
   },
   {
    "id": "paramedics",
@@ -957,7 +997,8 @@
    "priority": 1,
    "link": "https://www.paramedicsday.com",
    "blurb": "Lights, sirens, respect. Today is for paramedics.",
-   "puzzle_theme": "Prehospital care: trauma, CPR, defibrillation, ambulance history"
+   "puzzle_theme": "Prehospital care: trauma, CPR, defibrillation, ambulance history",
+   "icon": "ambulance"
   },
   {
    "id": "brain",
@@ -979,7 +1020,8 @@
    "priority": 3,
    "link": "https://wfneurology.org",
    "blurb": "Today's puzzles are about the organ doing the puzzles.",
-   "puzzle_theme": "Neuroanatomy: lobes, cranial nerves, neurons, famous brain cases"
+   "puzzle_theme": "Neuroanatomy: lobes, cranial nerves, neurons, famous brain cases",
+   "icon": "brain"
   },
   {
    "id": "drowning",
@@ -1004,7 +1046,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-drowning-prevention-day",
    "blurb": "Drowning is preventable. Supervise, swim, learn CPR.",
-   "puzzle_theme": "Water safety and resuscitation: CPR, hypothermia, physiology. No jokes about drowning."
+   "puzzle_theme": "Water safety and resuscitation: CPR, hypothermia, physiology. No jokes about drowning.",
+   "icon": "lifebuoy"
   },
   {
    "id": "hepatitis",
@@ -1028,7 +1071,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-hepatitis-day",
    "blurb": "Baruch Blumberg's birthday. Hep A to E today.",
-   "puzzle_theme": "Liver and hepatitis: viruses A–E, LFTs, cirrhosis, Blumberg"
+   "puzzle_theme": "Liver and hepatitis: viruses A–E, LFTs, cirrhosis, Blumberg",
+   "icon": "liver"
   },
   {
    "id": "breastfeeding",
@@ -1053,7 +1097,8 @@
    "priority": 3,
    "link": "https://worldbreastfeedingweek.org",
    "blurb": "This week is about infant feeding and the science of milk.",
-   "puzzle_theme": "Lactation and infant nutrition: milk science, newborns"
+   "puzzle_theme": "Lactation and infant nutrition: milk science, newborns",
+   "icon": "swaddle-star"
   },
   {
    "id": "mosquito",
@@ -1075,7 +1120,8 @@
    "priority": 3,
    "link": "https://www.lshtm.ac.uk",
    "blurb": "Ross proved mosquitoes carry malaria on this day in 1897. The deadliest animal, all day.",
-   "puzzle_theme": "Vector-borne disease: mosquitoes, dengue, Zika, yellow fever, malaria"
+   "puzzle_theme": "Vector-borne disease: mosquitoes, dengue, Zika, yellow fever, malaria",
+   "icon": "bednet"
   },
   {
    "id": "physio",
@@ -1099,7 +1145,8 @@
    "priority": 1,
    "link": "https://world.physio",
    "blurb": "Move it. Today is for physios.",
-   "puzzle_theme": "Physiotherapy and musculoskeletal: muscles, joints, rehab"
+   "puzzle_theme": "Physiotherapy and musculoskeletal: muscles, joints, rehab",
+   "icon": "sneaker"
   },
   {
    "id": "suicideprev",
@@ -1123,7 +1170,8 @@
    "priority": 0,
    "link": "https://www.who.int/campaigns/world-suicide-prevention-day",
    "blurb": "Today is World Suicide Prevention Day. If you're struggling, reach out: Lifeline 13 11 14.",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "candle"
   },
   {
    "id": "firstaid",
@@ -1145,7 +1193,8 @@
    "priority": 3,
    "link": "https://www.ifrc.org",
    "blurb": "A few skills can save a life. Today is about first aid.",
-   "puzzle_theme": "First aid: DRSABCD, CPR, bleeding, burns, choking"
+   "puzzle_theme": "First aid: DRSABCD, CPR, bleeding, burns, choking",
+   "icon": "ambulance"
   },
   {
    "id": "sepsis",
@@ -1167,7 +1216,8 @@
    "priority": 3,
    "link": "https://www.worldsepsisday.org",
    "blurb": "Sepsis kills more people than many cancers. Know the signs.",
-   "puzzle_theme": "Sepsis and infection: SIRS, lactate, antibiotics, shock"
+   "puzzle_theme": "Sepsis and infection: SIRS, lactate, antibiotics, shock",
+   "icon": "amr"
   },
   {
    "id": "patientsafety",
@@ -1191,7 +1241,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-patient-safety-day",
    "blurb": "First, do no harm. Today is about safer care.",
-   "puzzle_theme": "Patient safety: errors, checklists, handover, famous safety lessons"
+   "puzzle_theme": "Patient safety: errors, checklists, handover, famous safety lessons",
+   "icon": "clipboard"
   },
   {
    "id": "alzheimers",
@@ -1215,7 +1266,8 @@
    "priority": 3,
    "link": "https://www.alzint.org",
    "blurb": "Memory matters. Today is about dementia.",
-   "puzzle_theme": "Dementia: Alzheimer, plaques and tangles, memory, cognition. Respectful."
+   "puzzle_theme": "Dementia: Alzheimer, plaques and tangles, memory, cognition. Respectful.",
+   "icon": "ribbon-purple"
   },
   {
    "id": "pharmacists",
@@ -1239,7 +1291,8 @@
    "priority": 1,
    "link": "https://www.fip.org",
    "blurb": "Here's to the people who decode our handwriting. Today is for pharmacists.",
-   "puzzle_theme": "Pharmacology: drug classes, history of drugs, pharmacy"
+   "puzzle_theme": "Pharmacology: drug classes, history of drugs, pharmacy",
+   "icon": "pill-bottle"
   },
   {
    "id": "lung",
@@ -1261,7 +1314,8 @@
    "priority": 3,
    "link": "https://www.firsnet.org",
    "blurb": "Your lungs take about 20,000 breaths a day. Today we thank them.",
-   "puzzle_theme": "Respiratory: lungs, alveoli, gas exchange, lung disease"
+   "puzzle_theme": "Respiratory: lungs, alveoli, gas exchange, lung disease",
+   "icon": "lungs"
   },
   {
    "id": "rabies",
@@ -1285,7 +1339,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-rabies-day",
    "blurb": "Louis Pasteur died on this day. Rabies is almost 100% fatal and fully preventable.",
-   "puzzle_theme": "Rabies and zoonoses: Pasteur, bats, vaccines, Negri bodies"
+   "puzzle_theme": "Rabies and zoonoses: Pasteur, bats, vaccines, Negri bodies",
+   "icon": "syringe"
   },
   {
    "id": "heart",
@@ -1307,7 +1362,8 @@
    "priority": 3,
    "link": "https://world-heart-federation.org",
    "blurb": "About 100,000 beats a day. Today is all heart.",
-   "puzzle_theme": "Cardiology: ECG, valves, coronary arteries, heart history"
+   "puzzle_theme": "Cardiology: ECG, valves, coronary arteries, heart history",
+   "icon": "heart"
   },
   {
    "id": "dysautonomia",
@@ -1334,7 +1390,8 @@
    "priority": 3,
    "link": "https://www.dysautonomiainternational.org",
    "blurb": "October is for POTS and dysautonomia. Stand up slowly.",
-   "puzzle_theme": "Autonomic nervous system: POTS, orthostatic hypotension, MCAS"
+   "puzzle_theme": "Autonomic nervous system: POTS, orthostatic hypotension, MCAS",
+   "icon": "heart"
   },
   {
    "id": "mentalhealth",
@@ -1358,7 +1415,8 @@
    "priority": 3,
    "link": "https://www.who.int/campaigns/world-mental-health-day",
    "blurb": "Mental health is health. Look after yours.",
-   "puzzle_theme": "Mental health, gently: history of psychiatry, neuroscience, wellbeing. No jokes about patients."
+   "puzzle_theme": "Mental health, gently: history of psychiatry, neuroscience, wellbeing. No jokes about patients.",
+   "icon": "ribbon-green"
   },
   {
    "id": "arthritis",
@@ -1380,7 +1438,8 @@
    "priority": 3,
    "link": "https://www.eular.org",
    "blurb": "Creaky joints, all day.",
-   "puzzle_theme": "Rheumatology: RA, OA, gout, joints, autoimmune arthritis"
+   "puzzle_theme": "Rheumatology: RA, OA, gout, joints, autoimmune arthritis",
+   "icon": "bone"
   },
   {
    "id": "thrombosis",
@@ -1402,7 +1461,8 @@
    "priority": 3,
    "link": "https://www.worldthrombosisday.org",
    "blurb": "Rudolf Virchow's birthday. Clots, triads and anticoagulants today.",
-   "puzzle_theme": "Thrombosis: Virchow's triad, DVT, PE, anticoagulation"
+   "puzzle_theme": "Thrombosis: Virchow's triad, DVT, PE, anticoagulation",
+   "icon": "blood-drop"
   },
   {
    "id": "sight",
@@ -1424,7 +1484,8 @@
    "priority": 3,
    "link": "https://www.iapb.org",
    "blurb": "Today's puzzles focus on the eyes.",
-   "puzzle_theme": "Ophthalmology: retina, cataract, glaucoma, visual pathways"
+   "puzzle_theme": "Ophthalmology: retina, cataract, glaucoma, visual pathways",
+   "icon": "glasses"
   },
   {
    "id": "handwashing",
@@ -1446,7 +1507,8 @@
    "priority": 3,
    "link": "https://globalhandwashing.org",
    "blurb": "Soap: the original public health tech.",
-   "puzzle_theme": "Hygiene and infection: germs, soap, outbreaks"
+   "puzzle_theme": "Hygiene and infection: germs, soap, outbreaks",
+   "icon": "soap"
   },
   {
    "id": "anaesthesia",
@@ -1470,7 +1532,8 @@
    "priority": 1,
    "link": "https://wfsahq.org",
    "blurb": "Ether Day, 1846: the first public anaesthetic. Every puzzle today is for the gas crew.",
-   "puzzle_theme": "Anaesthetics: ether, airway, induction agents, monitoring, ASA grades"
+   "puzzle_theme": "Anaesthetics: ether, airway, induction agents, monitoring, ASA grades",
+   "icon": "monitor"
   },
   {
    "id": "osteoporosis",
@@ -1492,7 +1555,8 @@
    "priority": 3,
    "link": "https://www.worldosteoporosisday.org",
    "blurb": "Bones are living tissue. Keep them strong.",
-   "puzzle_theme": "Bone health: osteoporosis, DEXA, calcium, vitamin D, fractures"
+   "puzzle_theme": "Bone health: osteoporosis, DEXA, calcium, vitamin D, fractures",
+   "icon": "bone"
   },
   {
    "id": "polio",
@@ -1514,7 +1578,8 @@
    "priority": 3,
    "link": "https://www.endpolio.org",
    "blurb": "Jonas Salk's birthday. Polio is nearly gone.",
-   "puzzle_theme": "Polio and vaccines: Salk, Sabin, iron lungs, eradication"
+   "puzzle_theme": "Polio and vaccines: Salk, Sabin, iron lungs, eradication",
+   "icon": "polio"
   },
   {
    "id": "ot",
@@ -1538,7 +1603,8 @@
    "priority": 1,
    "link": "https://wfot.org",
    "blurb": "Today is for OTs, who get people back to doing what matters.",
-   "puzzle_theme": "Occupational therapy: function, ADLs, rehab, adaptive equipment"
+   "puzzle_theme": "Occupational therapy: function, ADLs, rehab, adaptive equipment",
+   "icon": "hands-heart"
   },
   {
    "id": "stroke",
@@ -1560,7 +1626,8 @@
    "priority": 3,
    "link": "https://www.world-stroke.org",
    "blurb": "Time is brain: an untreated stroke kills about 1.9 million neurons a minute. Today is about stroke.",
-   "puzzle_theme": "Stroke: FAST, ischaemic vs haemorrhagic, vascular territories, thrombolysis"
+   "puzzle_theme": "Stroke: FAST, ischaemic vs haemorrhagic, vascular territories, thrombolysis",
+   "icon": "stroke"
   },
   {
    "id": "psoriasis",
@@ -1582,7 +1649,8 @@
    "priority": 3,
    "link": "https://ifpa-pso.com",
    "blurb": "More than skin deep. Today is about psoriasis.",
-   "puzzle_theme": "Dermatology: psoriasis, plaques, nail signs, psoriatic arthritis"
+   "puzzle_theme": "Dermatology: psoriasis, plaques, nail signs, psoriatic arthritis",
+   "icon": "lotion"
   },
   {
    "id": "radiology",
@@ -1606,7 +1674,8 @@
    "priority": 1,
    "link": "https://www.internationaldayofradiology.com",
    "blurb": "Röntgen discovered X-rays on this day in 1895. Today's puzzles are for radiology.",
-   "puzzle_theme": "Radiology and imaging: X-ray, CT, MRI, ultrasound, famous films"
+   "puzzle_theme": "Radiology and imaging: X-ray, CT, MRI, ultrasound, famous films",
+   "icon": "radiology"
   },
   {
    "id": "pneumonia",
@@ -1628,7 +1697,8 @@
    "priority": 3,
    "link": "https://stoppneumonia.org",
    "blurb": "The old man's friend, and a leading killer of kids. Today is about pneumonia.",
-   "puzzle_theme": "Respiratory infection: pneumonia, consolidation, organisms, CXR"
+   "puzzle_theme": "Respiratory infection: pneumonia, consolidation, organisms, CXR",
+   "icon": "lungs"
   },
   {
    "id": "diabetes",
@@ -1650,7 +1720,8 @@
    "priority": 3,
    "link": "https://worlddiabetesday.org",
    "blurb": "Frederick Banting's birthday. Insulin, glucose and HbA1c all day.",
-   "puzzle_theme": "Diabetes: insulin, Banting and Best, pancreas, HbA1c, complications"
+   "puzzle_theme": "Diabetes: insulin, Banting and Best, pancreas, HbA1c, complications",
+   "icon": "diabetes"
   },
   {
    "id": "prematurity",
@@ -1675,7 +1746,8 @@
    "link": "https://www.who.int/campaigns/world-prematurity-day",
    "blurb": "About 1 in 10 babies arrive early. Today is for them.",
    "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care",
-   "_note": "Real date is 17 Nov (WHO). Shares the date with Cervical Cancer Elimination Day, which leads; prematurity shows as \"Also\"."
+   "_note": "Real date is 17 Nov (WHO). Shares the date with Cervical Cancer Elimination Day, which leads; prematurity shows as \"Also\".",
+   "icon": "swaddle-star"
   },
   {
    "id": "cervical",
@@ -1699,7 +1771,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-cervical-cancer-elimination-day",
    "blurb": "The first cancer we could eliminate. HPV vaccines and screening make it possible.",
-   "puzzle_theme": "Cervical cancer: HPV, Pap smear history, screening, vaccines"
+   "puzzle_theme": "Cervical cancer: HPV, Pap smear history, screening, vaccines",
+   "icon": "syringe"
   },
   {
    "id": "copd",
@@ -1721,7 +1794,8 @@
    "priority": 3,
    "link": "https://goldcopd.org",
    "blurb": "Breathless isn't just getting older. Today is about COPD.",
-   "puzzle_theme": "COPD: emphysema, bronchitis, spirometry, smoking"
+   "puzzle_theme": "COPD: emphysema, bronchitis, spirometry, smoking",
+   "icon": "lungs"
   },
   {
    "id": "amr",
@@ -1748,7 +1822,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-amr-awareness-week",
    "blurb": "Antibiotics are running out of road. Use them wisely.",
-   "puzzle_theme": "Antimicrobials: Fleming, penicillin, resistance, superbugs (MRSA)"
+   "puzzle_theme": "Antimicrobials: Fleming, penicillin, resistance, superbugs (MRSA)",
+   "icon": "amr"
   },
   {
    "id": "gbv",
@@ -1775,7 +1850,8 @@
    "priority": 0,
    "link": "https://www.unwomen.org",
    "blurb": "Support is available: 1800RESPECT (1800 737 732).",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "ribbon-orange"
   },
   {
    "id": "aids",
@@ -1800,7 +1876,8 @@
    "priority": 2,
    "link": "https://www.who.int/campaigns/world-aids-day",
    "blurb": "From a death sentence to a manageable condition. Today is about HIV.",
-   "puzzle_theme": "HIV and immunology: CD4, antiretrovirals, history. No jokes about patients."
+   "puzzle_theme": "HIV and immunology: CD4, antiretrovirals, history. No jokes about patients.",
+   "icon": "ribbon-red"
   },
   {
    "id": "disability",
@@ -1824,7 +1901,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/day-of-persons-with-disabilities",
    "blurb": "Accessibility is for everyone. About 1 in 5 Australians has a disability.",
-   "puzzle_theme": "Disability and inclusion, gently: accessibility, rehab, adaptive tech."
+   "puzzle_theme": "Disability and inclusion, gently: accessibility, rehab, adaptive tech.",
+   "icon": "access"
   },
   {
    "id": "uhc",
@@ -1846,7 +1924,8 @@
    "priority": 3,
    "link": "https://www.who.int/campaigns/universal-health-coverage-day",
    "blurb": "Health care for everyone, everywhere. Today is about health systems.",
-   "puzzle_theme": "Health systems: public health, history of medicine, global health"
+   "puzzle_theme": "Health systems: public health, history of medicine, global health",
+   "icon": "globe"
   },
   {
    "id": "womeninscience",
@@ -1870,7 +1949,8 @@
    "priority": 1,
    "link": "https://www.un.org/en/observances/women-and-girls-in-science-day",
    "blurb": "From Curie to Blackburn, science has never been a boys' club. Today's puzzles prove it.",
-   "puzzle_theme": "Women in medical science: Curie, Franklin, Elion, Tu Youyou, Blackburn, Barré-Sinoussi"
+   "puzzle_theme": "Women in medical science: Curie, Franklin, Elion, Tu Youyou, Blackburn, Barré-Sinoussi",
+   "icon": "microscope"
   },
   {
    "id": "socialwork",
@@ -1895,7 +1975,8 @@
    "link": "https://www.ifsw.org",
    "blurb": "Social workers untangle the stuff no prescription can fix. Today is theirs.",
    "puzzle_theme": "Social work and social determinants of health: housing, carers, safeguarding, community",
-   "_note": "Third Tuesday of March (IFSW); 2026 confirmed 17 March. In 2028 it falls on 21 March with World Down Syndrome Day."
+   "_note": "Third Tuesday of March (IFSW); 2026 confirmed 17 March. In 2028 it falls on 21 March with World Down Syndrome Day.",
+   "icon": "hands-heart"
   },
   {
    "id": "brainweek",
@@ -1923,7 +2004,8 @@
    "link": "https://dana.org/faqs/when-is-brain-awareness-week/",
    "blurb": "A week for the three-pound universe between your ears. Neuroscience leads off.",
    "puzzle_theme": "Neuroscience: neurons, synapses, neurotransmitters, famous experiments",
-   "_note": "Third week of March, Monday to Sunday (Dana Foundation); 2026 and 2027 confirmed, 2028 computed."
+   "_note": "Third week of March, Monday to Sunday (Dana Foundation); 2026 and 2027 confirmed, 2028 computed.",
+   "icon": "brain"
   },
   {
    "id": "globalpublichealth",
@@ -1951,7 +2033,8 @@
    "link": "https://www.wfpha.org/global-public-health-week/",
    "blurb": "Clean water, vaccines, seatbelts: public health's wins are invisible until they're gone. Celebrate them.",
    "puzzle_theme": "Public health: John Snow, prevention, sanitation, tobacco control, screening",
-   "_note": "WFPHA. 2026 confirmed as 6-10 April; 2027-2028 computed as the first Monday-Friday of April, verify each year."
+   "_note": "WFPHA. 2026 confirmed as 6-10 April; 2027-2028 computed as the first Monday-Friday of April, verify each year.",
+   "icon": "globe"
   },
   {
    "id": "biomedlabsci",
@@ -1976,7 +2059,8 @@
    "link": "https://ifbls.org/index.php/about-ifbls/international-biomedical-laboratory-science-day",
    "blurb": "About 70% of medical decisions lean on a lab result. Thank a medical scientist.",
    "puzzle_theme": "Laboratory science: pipettes, centrifuges, quality control, specimens, PCR",
-   "_note": "The '70%' figure is a widely quoted estimate; drop it from the blurb if you prefer only hard numbers."
+   "_note": "The '70%' figure is a widely quoted estimate; drop it from the blurb if you prefer only hard numbers.",
+   "icon": "microscope"
   },
   {
    "id": "labweek",
@@ -2004,7 +2088,8 @@
    "link": "https://ascp.org/labweek",
    "blurb": "Lab Week: for everyone behind the 'results pending' message.",
    "puzzle_theme": "Pathology and lab medicine: blood films, cultures, biochemistry, histology",
-   "_note": "US-based (ASCP/ASCLS). 2026 confirmed 19-25 April; 2027-2028 computed. Priority 3 so it doesn't crowd the Australian/IFBLS lab day."
+   "_note": "US-based (ASCP/ASCLS). 2026 confirmed 19-25 April; 2027-2028 computed. Priority 3 so it doesn't crowd the Australian/IFBLS lab day.",
+   "icon": "microscope"
   },
   {
    "id": "dnaday",
@@ -2029,7 +2114,8 @@
    "link": "https://www.genome.gov/dna-day",
    "blurb": "The double helix paper (1953) and the Human Genome Project (2003) both landed in late April. Unzip today's puzzles.",
    "puzzle_theme": "Genetics and genomics: DNA, Franklin, Watson and Crick, CRISPR, inheritance",
-   "_note": "US NHGRI day. Clashes with Anzac Day and World Malaria Day (priority 2 leads), so mention only."
+   "_note": "US NHGRI day. Clashes with Anzac Day and World Malaria Day (priority 2 leads), so mention only.",
+   "icon": "dna"
   },
   {
    "id": "immunology",
@@ -2053,7 +2139,8 @@
    "priority": 1,
    "link": "https://iuis.org/activities/international-day-of-immunology",
    "blurb": "Your immune system is the world's best-trained bouncer. Today, it's on the guest list.",
-   "puzzle_theme": "Immunology: T cells, antibodies, Burnet, Doherty, tolerance, cytokines"
+   "puzzle_theme": "Immunology: T cells, antibodies, Burnet, Doherty, tolerance, cytokines",
+   "icon": "syringe"
   },
   {
    "id": "dietitiansweek",
@@ -2073,7 +2160,8 @@
    "link": "https://dietitiansaustralia.org.au/dietitians-week",
    "blurb": "Food is complicated. Dietitians make it less so. This week is theirs.",
    "puzzle_theme": "Nutrition and dietetics: vitamins, macronutrients, deficiencies, food science",
-   "_note": "Only 2026 dates confirmed (11-17 May); 2027-2028 not yet announced."
+   "_note": "Only 2026 dates confirmed (11-17 May); 2027-2028 not yet announced.",
+   "icon": "apple"
   },
   {
    "id": "clinicaltrials",
@@ -2097,7 +2185,8 @@
    "priority": 1,
    "link": "https://ecrin.org/ictd",
    "blurb": "On 20 May 1747 James Lind started handing sailors citrus. Every trial since owes him one.",
-   "puzzle_theme": "Clinical trials and evidence: Lind, randomisation, placebo, Cochrane, landmark trials"
+   "puzzle_theme": "Clinical trials and evidence: Lind, randomisation, placebo, Cochrane, landmark trials",
+   "icon": "clipboard"
   },
   {
    "id": "orthoptics",
@@ -2122,7 +2211,8 @@
    "link": "https://internationalorthoptics.org",
    "blurb": "Lazy eye, squint, double vision: orthoptists line things up. Eyes front, both of them.",
    "puzzle_theme": "Orthoptics and eye movements: strabismus, amblyopia, cranial nerves III, IV, VI",
-   "_note": "First Monday of June (International Orthoptic Association). In 2027 it falls on 7 June with World Food Safety Day."
+   "_note": "First Monday of June (International Orthoptic Association). In 2027 it falls on 7 June with World Food Safety Day.",
+   "icon": "glasses"
   },
   {
    "id": "dentalweek",
@@ -2150,7 +2240,8 @@
    "link": "https://www.teeth.org.au/dental-health-week",
    "blurb": "Floss. We'll wait. This week is for dentists and everyone who works on teeth.",
    "puzzle_theme": "Dentistry and oral health: teeth, gums, fluoride, oral signs of disease",
-   "_note": "Australian Dental Association; 2026 confirmed 3-9 August (first full Mon-Sun week of August); 2027-2028 computed. Overlaps the end of World Breastfeeding Week, which only themes its first day."
+   "_note": "Australian Dental Association; 2026 confirmed 3-9 August (first full Mon-Sun week of August); 2027-2028 computed. Overlaps the end of World Breastfeeding Week, which only themes its first day.",
+   "icon": "tooth"
   },
   {
    "id": "atsihealthworkers",
@@ -2175,7 +2266,8 @@
    "link": "https://www.atsihealthpracticeboard.gov.au/News/2023-08-07-national-day-of-recognition.aspx",
    "blurb": "Culturally safe care starts with this workforce. Today we recognise Aboriginal and Torres Strait Islander Health Workers and Practitioners.",
    "puzzle_theme": "Aboriginal and Torres Strait Islander health: health workforce, rheumatic heart disease, trachoma, ear health. Respectful tone.",
-   "_note": "Respectful tone; avoid jokey puzzle wording on this day."
+   "_note": "Respectful tone; avoid jokey puzzle wording on this day.",
+   "icon": "stethoscope"
   },
   {
    "id": "speechpathology",
@@ -2203,7 +2295,8 @@
    "link": "https://www.speechpathologyaustralia.org.au/SPweek",
    "blurb": "Talking, swallowing, stuttering, reading: speech pathologists cover the lot. Say it loud.",
    "puzzle_theme": "Speech pathology: language, swallowing (dysphagia), aphasia, voice, larynx",
-   "_note": "2026 confirmed 23-29 August; 2027-2028 computed from the fourth Sunday of August, verify with Speech Pathology Australia."
+   "_note": "2026 confirmed 23-29 August; 2027-2028 computed from the fourth Sunday of August, verify with Speech Pathology Australia.",
+   "icon": "chat-calm"
   },
   {
    "id": "microorganism",
@@ -2228,7 +2321,8 @@
    "link": "https://fems-microbiology.org/international-microorganism-day/",
    "blurb": "On 17 September 1683 van Leeuwenhoek wrote about his 'animalcules'. Microbes have been stealing the show ever since.",
    "puzzle_theme": "Microbiology: bacteria, viruses, fungi, Gram stain, van Leeuwenhoek",
-   "_note": "Shares the date with World Patient Safety Day (WHO, priority 2 leads)."
+   "_note": "Shares the date with World Patient Safety Day (WHO, priority 2 leads).",
+   "icon": "microscope"
   },
   {
    "id": "cancerresearch",
@@ -2252,7 +2346,8 @@
    "priority": 1,
    "link": "https://www.uicc.org/news/world-cancer-research-day-september-24th",
    "blurb": "Cancer survival has risen thanks to research, one trial at a time. Today's for the lab coats.",
-   "puzzle_theme": "Cancer research: oncogenes, p53, HeLa, immunotherapy, HPV vaccine"
+   "puzzle_theme": "Cancer research: oncogenes, p53, HeLa, immunotherapy, HPV vaccine",
+   "icon": "microscope"
   },
   {
    "id": "palliative",
@@ -2278,7 +2373,8 @@
    "link": "https://thewhpca.org",
    "blurb": "Care until the very end is still care. Today honours palliative care teams.",
    "puzzle_theme": "Palliative care, gently: symptom control, hospice history (Cicely Saunders), teamwork. No jokes about dying.",
-   "_note": "Second Saturday of October (WHPCA). In 2026 it falls on 10 October with World Mental Health Day; consider letting Mental Health Day lead that year. In 2028 it falls on 14 October with Allied Health Professions Day."
+   "_note": "Second Saturday of October (WHPCA). In 2026 it falls on 10 October with World Mental Health Day; consider letting Mental Health Day lead that year. In 2028 it falls on 14 October with Allied Health Professions Day.",
+   "icon": "hands-heart"
   },
   {
    "id": "alliedhealth",
@@ -2302,7 +2398,8 @@
    "priority": 1,
    "link": "https://www.ahpa.com.au/allied-health-professions-day",
    "blurb": "Physios, OTs, speechies, dietitians, podiatrists and many more. Healthcare runs on allied health.",
-   "puzzle_theme": "Allied health: physiotherapy, OT, speech pathology, dietetics, podiatry, audiology, psychology"
+   "puzzle_theme": "Allied health: physiotherapy, OT, speech pathology, dietetics, podiatry, audiology, psychology",
+   "icon": "hands-heart"
   },
   {
    "id": "clinicalengineering",
@@ -2326,7 +2423,8 @@
    "priority": 1,
    "link": "https://ifmbe.org/global-clinical-engineering-day/",
    "blurb": "Somebody has to keep the ventilators breathing and the pacemakers pacing. Today, it's them.",
-   "puzzle_theme": "Biomedical engineering: pacemakers, dialysis, cochlear implants, stents, ECG"
+   "puzzle_theme": "Biomedical engineering: pacemakers, dialysis, cochlear implants, stents, ECG",
+   "icon": "monitor"
   },
   {
    "id": "pathologyweek",
@@ -2354,7 +2452,8 @@
    "link": "https://www.rcpath.org/discover-pathology/events-landing-page/national-pathology-week.html",
    "blurb": "Behind every diagnosis is a pathologist with a microscope. Celebrate the people who read the slides.",
    "puzzle_theme": "Pathology: histology, stains, blood films, biochemistry, microbiology",
-   "_note": "UK (Royal College of Pathologists). 2025 was 3-9 Nov and 2026 is 2-8 Nov; 2027-2028 computed. No equivalent Australian pathology week found."
+   "_note": "UK (Royal College of Pathologists). 2025 was 3-9 Nov and 2026 is 2-8 Nov; 2027-2028 computed. No equivalent Australian pathology week found.",
+   "icon": "microscope"
   },
   {
    "id": "medicalphysics",
@@ -2379,7 +2478,8 @@
    "link": "https://www.iomp.org",
    "blurb": "Marie Curie's birthday. Today is for the physicists who make sure your scan dose is right.",
    "puzzle_theme": "Medical physics: X-rays, Röntgen, Curie, radiation units, MRI, radiotherapy",
-   "_note": "IOMP chose Marie Curie's birthday (7 November). The day before International Day of Radiology."
+   "_note": "IOMP chose Marie Curie's birthday (7 November). The day before International Day of Radiology.",
+   "icon": "radiology"
   },
   {
    "id": "psychweek",
@@ -2399,7 +2499,8 @@
    "link": "https://psychology.org.au/insights/psychology-week-2026-save-the-date",
    "blurb": "Minds matter. This week celebrates psychologists and the science of behaviour.",
    "puzzle_theme": "Psychology: memory, perception, famous experiments, CBT history. Respectful tone about mental illness.",
-   "_note": "Dates move (2025 was 29 Sep-5 Oct; 2026 is 16-22 Nov). 2027-2028 not yet announced."
+   "_note": "Dates move (2025 was 29 Sep-5 Oct; 2026 is 16-22 Nov). 2027-2028 not yet announced.",
+   "icon": "brain"
   },
   {
    "id": "socialjustice",
@@ -2423,7 +2524,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/social-justice-day",
    "blurb": "Your postcode shouldn't predict your health. Today is about fairness.",
-   "puzzle_theme": "Social determinants of health: the social gradient, inverse care law, Marmot, housing and income"
+   "puzzle_theme": "Social determinants of health: the social gradient, inverse care law, Marmot, housing and income",
+   "icon": "hands-heart"
   },
   {
    "id": "zerodiscrimination",
@@ -2447,7 +2549,8 @@
    "priority": 3,
    "link": "https://www.unaids.org/en/zerodiscrimination",
    "blurb": "Everyone deserves care without judgement. That's the whole point of today.",
-   "puzzle_theme": "Stigma-free care: HIV history, inclusive practice, interpreters, accessibility"
+   "puzzle_theme": "Stigma-free care: HIV history, inclusive practice, interpreters, accessibility",
+   "icon": "hands-heart"
   },
   {
    "id": "iwd",
@@ -2471,7 +2574,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/womens-day",
    "blurb": "From Yentl syndrome to endometriosis delays: today is about getting women's health right.",
-   "puzzle_theme": "Women's health equity: endometriosis, SCAD, women's heart disease, cervical screening"
+   "puzzle_theme": "Women's health equity: endometriosis, SCAD, women's heart disease, cervical screening",
+   "icon": "heart-calm"
   },
   {
    "id": "endomonth",
@@ -2498,7 +2602,8 @@
    "priority": 3,
    "link": "https://endometriosisaustralia.org",
    "blurb": "About 1 in 7 Australian women are diagnosed with endometriosis by their late 40s.",
-   "puzzle_theme": "Endometriosis and pelvic pain: symptoms, diagnosis, diagnostic delay"
+   "puzzle_theme": "Endometriosis and pelvic pain: symptoms, diagnosis, diagnostic delay",
+   "icon": "ribbon-yellow"
   },
   {
    "id": "closethegap",
@@ -2522,7 +2627,8 @@
    "priority": 3,
    "link": "https://humanrights.gov.au/our-work/aboriginal-and-torres-strait-islander-social-justice/projects/close-gap-indigenous-health",
    "blurb": "Community-controlled, culturally safe care works. Today celebrates it and keeps the push going.",
-   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, the 715 check, trachoma and RHD elimination"
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, the 715 check, trachoma and RHD elimination",
+   "icon": "sunrise"
   },
   {
    "id": "tdov",
@@ -2546,7 +2652,8 @@
    "priority": 3,
    "link": "https://www.transhub.org.au",
    "blurb": "Celebrating trans and gender diverse people, and the health care that affirms them.",
-   "puzzle_theme": "Inclusive, gender-affirming practice: respectful language, LGBTIQA+ health history. No jokes about identity."
+   "puzzle_theme": "Inclusive, gender-affirming practice: respectful language, LGBTIQA+ health history. No jokes about identity.",
+   "icon": "heart-rainbow"
   },
   {
    "id": "flyingdoctor",
@@ -2568,7 +2675,8 @@
    "priority": 3,
    "link": "https://www.flyingdoctor.org.au",
    "blurb": "Since 1928, the Flying Doctor has been the mantle of safety over the outback.",
-   "puzzle_theme": "Rural and remote health: RFDS history, John Flynn, pedal radio, retrieval medicine, outback medicine"
+   "puzzle_theme": "Rural and remote health: RFDS history, John Flynn, pedal radio, retrieval medicine, outback medicine",
+   "icon": "stethoscope"
   },
   {
    "id": "idahobit",
@@ -2592,7 +2700,8 @@
    "priority": 3,
    "link": "https://may17.org",
    "blurb": "On 17 May 1990 the WHO took homosexuality out of the ICD. Today marks how far care has come.",
-   "puzzle_theme": "LGBTIQA+ health: history (DSM 1973, ICD 1990, PrEP), inclusive practice, intersex awareness. Respectful, no jokes about identity."
+   "puzzle_theme": "LGBTIQA+ health: history (DSM 1973, ICD 1990, PrEP), inclusive practice, intersex awareness. Respectful, no jokes about identity.",
+   "icon": "heart-rainbow"
   },
   {
    "id": "sorryday",
@@ -2616,7 +2725,8 @@
    "priority": 0,
    "link": "https://www.reconciliation.org.au",
    "blurb": "Today is National Sorry Day, remembering the Stolen Generations. 13YARN (13 92 76) is there if you need to talk.",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "sunrise"
   },
   {
    "id": "reconciliation",
@@ -2643,7 +2753,8 @@
    "priority": 3,
    "link": "https://www.reconciliation.org.au",
    "blurb": "From the 1967 referendum to the Mabo decision: a week to learn, share and walk together.",
-   "puzzle_theme": "Aboriginal and Torres Strait Islander health and history, strengths-based: ACCHOs, first Aboriginal doctors, cultural safety"
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health and history, strengths-based: ACCHOs, first Aboriginal doctors, cultural safety",
+   "icon": "sunrise"
   },
   {
    "id": "menshealthweek",
@@ -2668,7 +2779,8 @@
    "priority": 3,
    "link": "https://westernsydney.edu.au/mens-health-week",
    "blurb": "Blokes, book the check-up you've been putting off.",
-   "puzzle_theme": "Men's health: life expectancy gap, prostate and testicular health, heart disease, Movember"
+   "puzzle_theme": "Men's health: life expectancy gap, prostate and testicular health, heart disease, Movember",
+   "icon": "moustache"
   },
   {
    "id": "refugeeday",
@@ -2692,7 +2804,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/refugee-day",
    "blurb": "Welcoming people who've been forced from home starts with good care.",
-   "puzzle_theme": "Refugee and multicultural health: interpreters, post-arrival screening, strongyloides, latent TB, healthy migrant effect"
+   "puzzle_theme": "Refugee and multicultural health: interpreters, post-arrival screening, strongyloides, latent TB, healthy migrant effect",
+   "icon": "hands-heart"
   },
   {
    "id": "naidoc",
@@ -2719,7 +2832,8 @@
    "priority": 3,
    "link": "https://www.naidoc.org.au",
    "blurb": "Celebrating the history, cultures and achievements of Aboriginal and Torres Strait Islander peoples.",
-   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, AIDA, first Aboriginal doctors and surgeons"
+   "puzzle_theme": "Aboriginal and Torres Strait Islander health, strengths-based: ACCHOs, Aboriginal Health Practitioners, AIDA, first Aboriginal doctors and surgeons",
+   "icon": "sunrise"
   },
   {
    "id": "childrensday",
@@ -2743,7 +2857,8 @@
    "priority": 3,
    "link": "https://www.snaicc.org.au",
    "blurb": "Strong in culture, strong in health: today celebrates Aboriginal and Torres Strait Islander children.",
-   "puzzle_theme": "Child health, strengths-based: healthy birthweight, ear and eye health, trachoma elimination, the 715 check for kids"
+   "puzzle_theme": "Child health, strengths-based: healthy birthweight, ear and eye health, trachoma elimination, the 715 check for kids",
+   "icon": "sunrise"
   },
   {
    "id": "homelessnessweek",
@@ -2770,7 +2885,8 @@
    "priority": 3,
    "link": "https://homelessnessaustralia.org.au/homelessness-week/",
    "blurb": "Over 122,000 people were homeless on Census night 2021. Health starts with a home.",
-   "puzzle_theme": "Homelessness and health: social determinants, scurvy and food insecurity, inverse care law. No jokes about people experiencing homelessness."
+   "puzzle_theme": "Homelessness and health: social determinants, scurvy and food insecurity, inverse care law. No jokes about people experiencing homelessness.",
+   "icon": "hands-heart"
   },
   {
    "id": "indigenouspeoples",
@@ -2794,7 +2910,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/indigenous-day",
    "blurb": "From Aotearoa to Sápmi, Indigenous-led health care is leading the way.",
-   "puzzle_theme": "Global Indigenous health: Te Whare Tapa Whā, Jordan's Principle, UNDRIP, Sámi, First Nations"
+   "puzzle_theme": "Global Indigenous health: Te Whare Tapa Whā, Jordan's Principle, UNDRIP, Sámi, First Nations",
+   "icon": "sunrise"
   },
   {
    "id": "wearitpurple",
@@ -2818,7 +2935,8 @@
    "priority": 3,
    "link": "https://www.wearitpurple.org",
    "blurb": "Purple today for rainbow young people: you belong.",
-   "puzzle_theme": "LGBTIQA+ youth health and inclusive practice. Respectful, no jokes about identity."
+   "puzzle_theme": "LGBTIQA+ youth health and inclusive practice. Respectful, no jokes about identity.",
+   "icon": "heart-rainbow"
   },
   {
    "id": "signlanguages",
@@ -2842,7 +2960,8 @@
    "priority": 3,
    "link": "https://www.un.org/en/observances/sign-languages-day",
    "blurb": "Auslan is a full language, with its own grammar and Deaf culture behind it.",
-   "puzzle_theme": "Deaf culture and accessibility: Auslan, hearing, interpreters, the social model of disability"
+   "puzzle_theme": "Deaf culture and accessibility: Auslan, hearing, interpreters, the social model of disability",
+   "icon": "hands-heart"
   },
   {
    "id": "antipoverty",
@@ -2869,7 +2988,8 @@
    "priority": 3,
    "link": "https://antipovertyweek.org.au",
    "blurb": "Poverty is a health condition with a social cure.",
-   "puzzle_theme": "Social determinants: Marmot, Whitehall, the inverse care law, Medicare history, health literacy"
+   "puzzle_theme": "Social determinants: Marmot, Whitehall, the inverse care law, Medicare history, health literacy",
+   "icon": "hands-heart"
   },
   {
    "id": "intersex",
@@ -2893,7 +3013,8 @@
    "priority": 3,
    "link": "https://intersexday.org",
    "blurb": "Intersex people are a natural part of human diversity.",
-   "puzzle_theme": "Intersex awareness and inclusive care, gently: history of Intersex Awareness Day, the Darlington Statement. No jokes about bodies or identity."
+   "puzzle_theme": "Intersex awareness and inclusive care, gently: history of Intersex Awareness Day, the Darlington Statement. No jokes about bodies or identity.",
+   "icon": "heart-calm"
   },
   {
    "id": "movember",
@@ -2918,7 +3039,8 @@
    "priority": 3,
    "link": "https://movember.com",
    "blurb": "Mo season: prostate, testicular and men's mental health.",
-   "puzzle_theme": "Men's health: prostate and testicular cancer, men's mental health, life expectancy gap"
+   "puzzle_theme": "Men's health: prostate and testicular cancer, men's mental health, life expectancy gap",
+   "icon": "moustache"
   },
   {
    "id": "tdor",
@@ -2942,7 +3064,8 @@
    "priority": 0,
    "link": "https://www.transhub.org.au",
    "blurb": "Today is Transgender Day of Remembrance. QLife (1800 184 527) is there if you need support.",
-   "puzzle_theme": null
+   "puzzle_theme": null,
+   "icon": "candle"
   },
   {
    "id": "febfast",
@@ -2970,7 +3093,8 @@
    "link": "https://www.febfast.org.au",
    "blurb": "A month off the booze (or another habit) for a good cause. February is short, which helps.",
    "puzzle_theme": "Alcohol and habits: liver health, dependence, behaviour change",
-   "_note": "2026 run as a fundraiser for Lifeline (1-28 Feb)."
+   "_note": "2026 run as a fundraiser for Lifeline (1-28 Feb).",
+   "icon": "water-glass"
   },
   {
    "id": "wearred",
@@ -2995,7 +3119,8 @@
    "link": "https://goredforwomen.org/WearRedDay",
    "blurb": "Red today for women's hearts: heart disease is still the leading killer, and it doesn't always clutch its chest.",
    "puzzle_theme": "Heart disease in women: atypical presentations, SCAD, risk factors",
-   "_note": "US (American Heart Association), first Friday of February; 2026 confirmed 6 Feb, 2027-2028 computed."
+   "_note": "US (American Heart Association), first Friday of February; 2026 confirmed 6 Feb, 2027-2028 computed.",
+   "icon": "heart"
   },
   {
    "id": "ovarianmonth",
@@ -3024,7 +3149,8 @@
    "link": "https://ovariancancer.net.au/ovarian-cancer-awareness-month/",
    "blurb": "Teal for February: the cancer with quiet symptoms and no screening test. Know the signs.",
    "puzzle_theme": "Ovarian cancer: symptoms, CA-125, BRCA, why there's no screening test",
-   "_note": "Ovarian Cancer Australia. Teal Ribbon Day was reported on 28 Feb in 2026 (same day as Rare Disease Day) but OCA's site doesn't list it, so it isn't a separate entry."
+   "_note": "Ovarian Cancer Australia. Teal Ribbon Day was reported on 28 Feb in 2026 (same day as Rare Disease Day) but OCA's site doesn't list it, so it isn't a separate entry.",
+   "icon": "ribbon-teal"
   },
   {
    "id": "hearingweek",
@@ -3052,7 +3178,8 @@
    "link": "https://www.deafnessforum.org.au",
    "blurb": "A week to hear out the one in six Australians living with hearing loss. Pardon? Exactly.",
    "puzzle_theme": "Hearing loss: conductive vs sensorineural, audiograms, noise protection",
-   "_note": "Deafness Forum of Australia, 1-7 March each year; contains World Hearing Day (3 March). Shares 1 March with Zero Discrimination Day."
+   "_note": "Deafness Forum of Australia, 1-7 March each year; contains World Hearing Day (3 March). Shares 1 March with Zero Discrimination Day.",
+   "icon": "ear"
   },
   {
    "id": "greatestshave",
@@ -3081,7 +3208,8 @@
    "link": "https://www.worldsgreatestshave.com",
    "blurb": "Shave, cut or colour in March for the Leukaemia Foundation and people living with blood cancer.",
    "puzzle_theme": "Blood cancers: leukaemia, lymphoma, myeloma",
-   "_note": "Leukaemia Foundation runs it through March; individual shave events are set by participants."
+   "_note": "Leukaemia Foundation runs it through March; individual shave events are set by participants.",
+   "icon": "ribbon-orange"
   },
   {
    "id": "purpleday",
@@ -3105,7 +3233,8 @@
    "priority": 3,
    "link": "https://www.purpleday.org",
    "blurb": "Purple for epilepsy today. Started by a nine-year-old in Canada, now worn worldwide.",
-   "puzzle_theme": "Epilepsy: seizure types, seizure first aid, anti-seizure medicines"
+   "puzzle_theme": "Epilepsy: seizure types, seizure first aid, anti-seizure medicines",
+   "icon": "brain"
   },
   {
    "id": "heartweek",
@@ -3133,7 +3262,8 @@
    "link": "https://www.heartfoundation.org.au/heart-week",
    "blurb": "Heart Foundation's week for heart health checks. Your ticker deserves a service.",
    "puzzle_theme": "Heart health checks: blood pressure, cholesterol, absolute CVD risk",
-   "_note": "2026 confirmed 4-10 May; 2027-2028 computed as the first Monday-Sunday week of May, verify with the Heart Foundation."
+   "_note": "2026 confirmed 4-10 May; 2027-2028 computed as the first Monday-Sunday week of May, verify with the Heart Foundation.",
+   "icon": "heart"
   },
   {
    "id": "dolly",
@@ -3159,7 +3289,8 @@
    "link": "https://support.dollysdream.org.au/do-it-for-dolly-day",
    "blurb": "Go blue to end bullying. Dolly's Dream funds a 24/7 support line and school programs.",
    "puzzle_theme": "Bullying and youth mental health: impact, warning signs, getting help",
-   "_note": "2025 (9 May) and 2026 (8 May) were the second Friday of May; 2027-2028 computed. In 2028 it falls on 12 May with International Nurses Day."
+   "_note": "2025 (9 May) and 2026 (8 May) were the second Friday of May; 2027-2028 computed. In 2028 it falls on 12 May with International Nurses Day.",
+   "icon": "heart-calm"
   },
   {
    "id": "mothersdayclassic",
@@ -3185,7 +3316,8 @@
    "link": "https://www.mothersdayclassic.com.au",
    "blurb": "Walk or run on Mother's Day for breast and ovarian cancer research.",
    "puzzle_theme": "Breast and ovarian cancer: research, screening, survival gains",
-   "_note": "Held on Mother's Day (second Sunday of May); 2026 confirmed 10 May, 2027-2028 computed. In 2026 it shares the date with World Lupus Day."
+   "_note": "Held on Mother's Day (second Sunday of May); 2026 confirmed 10 May, 2027-2028 computed. In 2026 it shares the date with World Lupus Day.",
+   "icon": "ribbon-pink"
   },
   {
    "id": "starlight",
@@ -3211,7 +3343,8 @@
    "link": "https://www.starlight.org.au",
    "blurb": "Starlight Children's Foundation brings fun and distraction to sick kids in hospital.",
    "puzzle_theme": "Paediatrics: children's hospitals, childhood illness, play in healing",
-   "_note": "2026 confirmed Tuesday 19 May (third Tuesday of May); 2027-2028 computed, not yet announced. In 2026 it shares the date with World Family Doctor Day (priority 1 leads)."
+   "_note": "2026 confirmed Tuesday 19 May (third Tuesday of May); 2027-2028 computed, not yet announced. In 2026 it shares the date with World Family Doctor Day (priority 1 leads).",
+   "icon": "star"
   },
   {
    "id": "biggestmorningtea",
@@ -3237,7 +3370,8 @@
    "link": "https://www.biggestmorningtea.com.au",
    "blurb": "Cancer Council's cuppa for a cause. Scones fund research, prevention and support.",
    "puzzle_theme": "Cancer: prevention, risk factors and screening",
-   "_note": "2026 (21 May) and 2027 (27 May) confirmed; 2028 computed as the fourth Thursday of May, not yet announced. Morning teas can be hosted any time in May or June."
+   "_note": "2026 (21 May) and 2027 (27 May) confirmed; 2028 computed as the fourth Thursday of May, not yet announced. Morning teas can be hosted any time in May or June.",
+   "icon": "teacup"
   },
   {
    "id": "bowelmonth",
@@ -3265,7 +3399,8 @@
    "priority": 3,
    "link": "https://www.bowelcanceraustralia.org",
    "blurb": "June is for talking about poo. Bowel cancer is very treatable when caught early.",
-   "puzzle_theme": "Bowel cancer: iFOBT screening, colonoscopy, red-flag symptoms"
+   "puzzle_theme": "Bowel cancer: iFOBT screening, colonoscopy, red-flag symptoms",
+   "icon": "ribbon-blue"
   },
   {
    "id": "dryjuly",
@@ -3292,7 +3427,8 @@
    "priority": 3,
    "link": "https://www.dryjuly.com",
    "blurb": "A month off alcohol to fund support for people affected by cancer. Your liver says thanks.",
-   "puzzle_theme": "Alcohol and health: liver disease, cancer risk, drinking guidelines"
+   "puzzle_theme": "Alcohol and health: liver disease, cancer risk, drinking guidelines",
+   "icon": "water-glass"
   },
   {
    "id": "donatelifeweek",
@@ -3320,7 +3456,8 @@
    "link": "https://www.donatelife.gov.au/donatelife-week",
    "blurb": "Organ and tissue donation week. One conversation with family can save lives.",
    "puzzle_theme": "Organ donation and transplantation: brain death, matching, rejection",
-   "_note": "Australian Government DonateLife (not a fundraising charity). 2026 confirmed Sun 26 Jul - Sun 2 Aug; 2027-2028 computed from the last Sunday of July."
+   "_note": "Australian Government DonateLife (not a fundraising charity). 2026 confirmed Sun 26 Jul - Sun 2 Aug; 2027-2028 computed from the last Sunday of July.",
+   "icon": "heart"
   },
   {
    "id": "jeansforgenes",
@@ -3346,7 +3483,8 @@
    "link": "https://www.jeansforgenes.org.au",
    "blurb": "Denim for discovery: Children's Medical Research Institute research into genetic disease.",
    "puzzle_theme": "Genetics: inheritance patterns, genetic disease, gene therapy",
-   "_note": "2026 confirmed Thursday 6 August (2025 was a Friday). 2027-2028 computed as the first Thursday of August, verify each year. Falls inside Dental Health Week, which leads on priority."
+   "_note": "2026 confirmed Thursday 6 August (2025 was a Friday). 2027-2028 computed as the first Thursday of August, verify each year. Falls inside Dental Health Week, which leads on priority.",
+   "icon": "dna"
   },
   {
    "id": "strokeweek",
@@ -3374,7 +3512,8 @@
    "link": "https://strokefoundation.org.au",
    "blurb": "Stroke Foundation's week to learn F.A.S.T. Face, Arms, Speech, Time: call 000.",
    "puzzle_theme": "Stroke: F.A.S.T. signs, thrombolysis and clot retrieval, prevention",
-   "_note": "2026 confirmed 3-9 August; 2027-2028 computed. Same week as Dental Health Week and Homelessness Week (Dental Health Week leads on priority)."
+   "_note": "2026 confirmed 3-9 August; 2027-2028 computed. Same week as Dental Health Week and Homelessness Week (Dental Health Week leads on priority).",
+   "icon": "stroke"
   },
   {
    "id": "kidneyweek",
@@ -3402,7 +3541,8 @@
    "link": "https://kidney.org.au",
    "blurb": "Kidney Health Australia's week: kidneys can lose 90% of function before you notice.",
    "puzzle_theme": "Kidney health: CKD, eGFR and ACR, risk factors, dialysis",
-   "_note": "Formerly Kidney Health Week. 2026 listed as 10-17 August; 2027-2028 computed from the second Monday of August, verify with Kidney Health Australia."
+   "_note": "Formerly Kidney Health Week. 2026 listed as 10-17 August; 2027-2028 computed from the second Monday of August, verify with Kidney Health Australia.",
+   "icon": "kidney"
   },
   {
    "id": "daffodil",
@@ -3428,7 +3568,8 @@
    "link": "https://www.daffodilday.com.au",
    "blurb": "Daffodils for Cancer Council: research, prevention and support for everyone touched by cancer.",
    "puzzle_theme": "Cancer: types, screening, oncology history",
-   "_note": "2026 confirmed Thursday 20 August (third Thursday); 2025 was a Friday. 2027-2028 computed as the third Thursday of August, not yet announced."
+   "_note": "2026 confirmed Thursday 20 August (third Thursday); 2025 was a Friday. 2027-2028 computed as the third Thursday of August, not yet announced.",
+   "icon": "daffodil"
   },
   {
    "id": "rednose",
@@ -3454,7 +3595,8 @@
    "link": "https://rednose.org.au/support-red-nose/red-nose-day/",
    "blurb": "Red Nose Australia funds research, education and bereavement support so fewer families lose a baby.",
    "puzzle_theme": "Safe sleep and pregnancy care: SIDS risk reduction, stillbirth prevention",
-   "_note": "Red Nose now holds it on the fourth Thursday of August; 2026 date (27 Aug) inferred from the official 'Red Nose Day Eve' on Wed 26 Aug. 2027-2028 computed. Keep puzzle wording gentle; no jokes about babies or loss."
+   "_note": "Red Nose now holds it on the fourth Thursday of August; 2026 date (27 Aug) inferred from the official 'Red Nose Day Eve' on Wed 26 Aug. 2027-2028 computed. Keep puzzle wording gentle; no jokes about babies or loss.",
+   "icon": "star"
   },
   {
    "id": "jerseyday",
@@ -3480,7 +3622,8 @@
    "link": "https://www.donatelife.gov.au/news-events/events/2026/jersey-day-2026",
    "blurb": "Wear your team's jersey to start a chat about organ donation. Started in memory of Nick Ross.",
    "puzzle_theme": "Organ donation: who can donate, consent, transplant immunology",
-   "_note": "2026 confirmed Friday 4 September (first Friday of September); 2027-2028 computed. Update the year-specific link annually."
+   "_note": "2026 confirmed Friday 4 September (first Friday of September); 2027-2028 computed. Update the year-specific link annually.",
+   "icon": "heart-calm"
   },
   {
    "id": "prostatemonth",
@@ -3508,7 +3651,8 @@
    "priority": 3,
    "link": "https://www.pcfa.org.au",
    "blurb": "September is for prostates. Australia's most commonly diagnosed cancer in men.",
-   "puzzle_theme": "Prostate cancer: PSA testing debate, diagnosis, treatment"
+   "puzzle_theme": "Prostate cancer: PSA testing debate, diagnosis, treatment",
+   "icon": "ribbon-blue"
   },
   {
    "id": "steptember",
@@ -3536,7 +3680,8 @@
    "link": "https://www.steptember.org.au",
    "blurb": "10,000 steps a day through September for Cerebral Palsy Alliance. Walk, wheel or swim it.",
    "puzzle_theme": "Cerebral palsy and the benefits of physical activity",
-   "_note": "Runs 1-30 September."
+   "_note": "Runs 1-30 September.",
+   "icon": "sneaker"
   },
   {
    "id": "ruok",
@@ -3563,7 +3708,8 @@
    "link": "https://www.ruok.org.au",
    "blurb": "Ask someone 'Are you OK?' today, and listen properly to the answer.",
    "puzzle_theme": "Mental health: depression, anxiety, starting a conversation, getting help",
-   "_note": "Second Thursday of September; 2026 confirmed 10 Sep. In 2026 it shares the date with World Suicide Prevention Day (sensitive, shown separately); keep puzzles strictly on supportive themes that day."
+   "_note": "Second Thursday of September; 2026 confirmed 10 Sep. In 2026 it shares the date with World Suicide Prevention Day (sensitive, shown separately); keep puzzles strictly on supportive themes that day.",
+   "icon": "chat-calm"
   },
   {
    "id": "breastmonth",
@@ -3592,7 +3738,8 @@
    "link": "https://nbcf.org.au",
    "blurb": "Pink October: funding breast cancer research, and a nudge to book that mammogram.",
    "puzzle_theme": "Breast cancer: screening, BRCA, treatment advances",
-   "_note": "National Breast Cancer Foundation. Cancer Council's Pink Ribbon Day (historically the fourth Monday of October) could not be confirmed for 2026, so it isn't a separate entry."
+   "_note": "National Breast Cancer Foundation. Cancer Council's Pink Ribbon Day (historically the fourth Monday of October) could not be confirmed for 2026, so it isn't a separate entry.",
+   "icon": "ribbon-pink"
   },
   {
    "id": "mhmnsw",
@@ -3620,7 +3767,8 @@
    "priority": 3,
    "link": "https://wayahead.org.au/mentalhealthmonth/about-us/",
    "blurb": "October in NSW is Mental Health Month, coordinated by WayAhead.",
-   "puzzle_theme": "Mental health and wellbeing: common conditions, support, stigma"
+   "puzzle_theme": "Mental health and wellbeing: common conditions, support, stigma",
+   "icon": "ribbon-green"
   },
   {
    "id": "greatcycle",
@@ -3648,7 +3796,8 @@
    "priority": 3,
    "link": "https://greatcyclechallenge.com.au",
    "blurb": "Riders clock up kilometres in October to fight kids' cancer, funding Children's Medical Research Institute.",
-   "puzzle_theme": "Childhood cancer: leukaemia, brain tumours, survival gains"
+   "puzzle_theme": "Childhood cancer: leukaemia, brain tumours, survival gains",
+   "icon": "ribbon-gold"
   },
   {
    "id": "loudshirt",
@@ -3673,7 +3822,8 @@
    "link": "https://www.loudshirtday.org",
    "blurb": "Wear your loudest shirt for kids who are deaf or hard of hearing. Subtlety optional.",
    "puzzle_theme": "Childhood hearing loss: newborn screening, cochlear implants, glue ear",
-   "_note": "2024 (18 Oct) and 2025 (17 Oct) were the third Friday of October; 2026-2028 computed, 2026 date not confirmed. In 2026 it shares 16 October with World Anaesthesia Day (priority 1 leads)."
+   "_note": "2024 (18 Oct) and 2025 (17 Oct) were the third Friday of October; 2026-2028 computed, 2026 date not confirmed. In 2026 it shares 16 October with World Anaesthesia Day (priority 1 leads).",
+   "icon": "ear"
   },
   {
    "id": "bandanna",
@@ -3699,7 +3849,8 @@
    "link": "https://canteen.org.au/how-to-support-canteen/bandanna-day",
    "blurb": "Bandannas on for Canteen, supporting young people aged 12-25 affected by cancer.",
    "puzzle_theme": "Adolescent and young adult cancer: types, treatment, survivorship",
-   "_note": "Last Thursday of October; 2026 confirmed 29 Oct. In 2026 it shares the date with World Stroke Day and World Psoriasis Day (earlier entries lead at equal priority)."
+   "_note": "Last Thursday of October; 2026 confirmed 29 Oct. In 2026 it shares the date with World Stroke Day and World Psoriasis Day (earlier entries lead at equal priority).",
+   "icon": "ribbon-gold"
   },
   {
    "id": "lungmonth",
@@ -3726,7 +3877,8 @@
    "priority": 3,
    "link": "https://lungfoundation.com.au",
    "blurb": "Lung Foundation Australia's month for lungs. Take a deep breath. Now notice it.",
-   "puzzle_theme": "Lung health: COPD, lung cancer, spirometry, smoking and vaping"
+   "puzzle_theme": "Lung health: COPD, lung cancer, spirometry, smoking and vaping",
+   "icon": "lungs"
   }
  ]
 }
