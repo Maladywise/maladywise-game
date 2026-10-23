@@ -142,7 +142,8 @@
    "link": "https://www.rarediseaseday.org",
    "blurb": "When you hear hoofbeats, sometimes it IS a zebra. Today is all zebras.",
    "puzzle_theme": "Rare diseases and zebras: eponymous syndromes, genetic conditions",
-   "icon": "dna"
+   "icon": "zebra-rare",
+   "icon_fact": "Every zebra's stripe pattern is unique, like a fingerprint."
   },
   {
    "id": "hearing",
@@ -167,7 +168,8 @@
    "link": "https://www.who.int/campaigns/world-hearing-day",
    "blurb": "Turn it down a notch. Today is about ears and hearing.",
    "puzzle_theme": "ENT and hearing: ear anatomy, hearing loss, tinnitus, audiology",
-   "icon": "ear"
+   "icon": "echo-ear",
+   "icon_fact": "Birds can regrow the hair cells in their inner ear; humans can't, so noise damage is permanent for us."
   },
   {
    "id": "obesity",
@@ -213,7 +215,8 @@
    "link": "https://www.worldkidneyday.org",
    "blurb": "Two bean-shaped organs filtering about 180 litres a day. Show them some love.",
    "puzzle_theme": "Nephrology: nephron, eGFR, dialysis, kidney stones, transplant",
-   "icon": "kidney"
+   "icon": "camel",
+   "icon_fact": "A camel's hump stores fat, not water. Its kidneys do the water-saving, making very concentrated urine."
   },
   {
    "id": "sleep",
@@ -236,7 +239,8 @@
    "link": "https://worldsleepday.org",
    "blurb": "Sleep is medicine. Today's puzzles are best done well-rested.",
    "puzzle_theme": "Sleep medicine: circadian rhythm, sleep apnoea, narcolepsy, melatonin",
-   "icon": "sleepy-moon"
+   "icon": "locum-sleep",
+   "icon_fact": "Little brown bats sleep about 20 hours a day."
   },
   {
    "id": "oral",
@@ -259,7 +263,8 @@
    "link": "https://www.worldoralhealthday.org",
    "blurb": "Your mouth is part of your body too. Today is for teeth and gums.",
    "puzzle_theme": "Dentistry and oral health: teeth, gums, salivary glands, oral signs of disease",
-   "icon": "tooth"
+   "icon": "beaver",
+   "icon_fact": "Beaver tooth enamel contains iron, which makes it tougher and more acid-resistant than ours."
   },
   {
    "id": "downs",
@@ -307,7 +312,8 @@
    "link": "https://worldcouncilofoptometry.info",
    "blurb": "Eyes front. Today celebrates optometrists.",
    "puzzle_theme": "Optometry: refraction, myopia, lenses, eye anatomy",
-   "icon": "glasses"
+   "icon": "cipher-cat",
+   "icon_fact": "Cats can see in light about six times dimmer than we need, thanks to a mirror layer behind the retina."
   },
   {
    "id": "tb",
@@ -332,7 +338,8 @@
    "link": "https://www.who.int/campaigns/world-tb-day",
    "blurb": "TB is one of the world's deadliest infectious diseases, and it's curable. Learn the history.",
    "puzzle_theme": "Tuberculosis: Koch, Mantoux, BCG, consumption in history, treatment",
-   "icon": "lungs"
+   "icon": "rat",
+   "icon_fact": "Giant African pouched rats are trained to sniff out TB in sputum samples, far faster than a microscope."
   },
   {
    "id": "bipolar",
@@ -407,7 +414,8 @@
    "link": "https://www.who.int/campaigns/world-health-day",
    "blurb": "The WHO's birthday. Today's puzzles cover the whole of global health.",
    "puzzle_theme": "Global health: WHO history, public health milestones, epidemics, vaccines",
-   "icon": "globe"
+   "icon": "cadi-rod",
+   "icon_fact": "The Rod of Asclepius, one snake on one staff, is medicine's true symbol, and it sits on the WHO logo."
   },
   {
    "id": "parkinsons",
@@ -430,7 +438,8 @@
    "link": "https://www.epda.eu.com",
    "blurb": "James Parkinson's birthday. Today is about the shaking palsy.",
    "puzzle_theme": "Movement disorders: dopamine, substantia nigra, tremor, levodopa history",
-   "icon": "brain"
+   "icon": "elephant",
+   "icon_fact": "Elephants have the biggest brain of any land animal, at around 5 kg."
   },
   {
    "id": "chagas",
@@ -456,7 +465,8 @@
    "link": "https://www.who.int/campaigns/world-chagas-disease-day",
    "blurb": "The kissing bug's not-so-romantic gift. A classic zebra.",
    "puzzle_theme": "Parasitology: Chagas, trypanosomes, vectors, tropical cardiomyopathy",
-   "icon": "bednet"
+   "icon": "zebra-rare",
+   "icon_fact": "Zebra stripes seem to confuse biting flies, which fumble their landings and fly off."
   },
   {
    "id": "haemophilia",
@@ -507,7 +517,8 @@
    "link": "https://www.who.int/campaigns/world-immunization-week",
    "blurb": "Vaccines: the most successful prevention in history. Celebrate them this week.",
    "puzzle_theme": "Vaccines and immunology: Jenner, smallpox, herd immunity, antibodies",
-   "icon": "syringe"
+   "icon": "bea-syringe",
+   "icon_fact": "In 2023 the US approved the first-ever vaccine for honeybees, against American foulbrood."
   },
   {
    "id": "malaria",
@@ -532,7 +543,8 @@
    "link": "https://www.who.int/campaigns/world-malaria-day",
    "blurb": "A mosquito-borne parasite that's shaped human history. Today we take it on.",
    "puzzle_theme": "Malaria: Plasmodium, Anopheles, quinine, sickle cell link, Ross",
-   "icon": "bednet"
+   "icon": "frog",
+   "icon_fact": "When frogs died out across Central America, malaria cases rose: tadpoles and frogs help keep mosquitoes down."
   },
   {
    "id": "eds",
@@ -560,7 +572,8 @@
    "link": "https://www.ehlers-danlos.com",
    "blurb": "May is EDS month. Bendy, often missed, and the original medical zebra.",
    "puzzle_theme": "Connective tissue and zebras: collagen, hypermobility, dysautonomia",
-   "icon": "dna"
+   "icon": "zebra-rare",
+   "icon_fact": "Doctors say 'think horses, not zebras'. People with EDS adopted the zebra because sometimes it is one. And every zebra's stripes are unique."
   },
   {
    "id": "asthma",
@@ -583,7 +596,8 @@
    "link": "https://ginasthma.org",
    "blurb": "Breathe in, breathe out. Today is about airways.",
    "puzzle_theme": "Respiratory: asthma, bronchi, spirometry, inhalers history",
-   "icon": "lungs"
+   "icon": "cipher-inhaler",
+   "icon_fact": "Cats get asthma too, and are treated with puffers through a cat-sized spacer and mask."
   },
   {
    "id": "midwife",
@@ -608,7 +622,8 @@
    "link": "https://internationalmidwives.org",
    "blurb": "Midwives have been catching babies since forever. Today is theirs.",
    "puzzle_theme": "Midwifery and obstetrics: pregnancy, labour, newborn care",
-   "icon": "swaddle-star"
+   "icon": "seahorse",
+   "icon_fact": "In seahorses the dad gets pregnant: males carry the eggs in a pouch and give birth."
   },
   {
    "id": "handhygiene",
@@ -633,7 +648,8 @@
    "link": "https://www.who.int/campaigns/world-hand-hygiene-day",
    "blurb": "Semmelweis was right. Wash your hands.",
    "puzzle_theme": "Infection prevention: Semmelweis, germ theory, hand hygiene",
-   "icon": "soap"
+   "icon": "vira-soap",
+   "icon_fact": "Soap breaks open the fatty coat on viruses like flu and COVID, so Vira is right to be nervous."
   },
   {
    "id": "thalassaemia",
@@ -656,7 +672,8 @@
    "link": "https://thalassaemia.org.cy",
    "blurb": "Today is about haemoglobin gone slightly wrong.",
    "puzzle_theme": "Haemoglobinopathies: thalassaemia, globin genes, transfusion",
-   "icon": "blood-drop"
+   "icon": "icefish",
+   "icon_fact": "Antarctic icefish have no haemoglobin at all, so their blood is clear."
   },
   {
    "id": "lupus",
@@ -681,7 +698,8 @@
    "link": "https://www.worldlupusday.org",
    "blurb": "It's not always lupus... but today it is.",
    "puzzle_theme": "Autoimmunity: lupus, ANA, butterfly rash, mimics",
-   "icon": "butterfly"
+   "icon": "lupus-butterfly",
+   "icon_fact": "Butterflies taste with their feet."
   },
   {
    "id": "nurses",
@@ -706,7 +724,8 @@
    "link": "https://www.icn.ch",
    "blurb": "Florence Nightingale's birthday. Every puzzle today is for nurses.",
    "puzzle_theme": "Nursing: Nightingale, observations, wards, nursing history and skills",
-   "icon": "fob-watch"
+   "icon": "bea-nurse",
+   "icon_fact": "Young worker honeybees start out as 'nurse bees', feeding and caring for the larvae."
   },
   {
    "id": "hypertension",
@@ -729,7 +748,8 @@
    "link": "https://www.whleague.org",
    "blurb": "The silent killer. Know your numbers.",
    "puzzle_theme": "Hypertension and BP: Korotkoff, sphygmomanometers, cardiovascular risk",
-   "icon": "heart"
+   "icon": "giraffe",
+   "icon_fact": "Giraffes have the highest blood pressure of any land animal, about double ours, to push blood up that neck."
   },
   {
    "id": "familydoctor",
@@ -754,7 +774,8 @@
    "link": "https://www.globalfamilydoctor.com",
    "blurb": "Here's to GPs, the first port of call. Today's puzzles are for general practice.",
    "puzzle_theme": "General practice: common presentations, history-taking, preventive care",
-   "icon": "stethoscope"
+   "icon": "cadi-rod",
+   "icon_fact": "The Rod of Asclepius, one snake on one staff, is medicine's true symbol, and it sits on the WHO logo."
   },
   {
    "id": "emergency",
@@ -779,7 +800,8 @@
    "link": "https://www.ifem.cc",
    "blurb": "Today is for the people running towards the chaos.",
    "puzzle_theme": "Emergency medicine: triage, resus, ABCDE, trauma, toxicology",
-   "icon": "ambulance"
+   "icon": "locum-pager",
+   "icon_fact": "Bats are the only mammals that truly fly, and many find their way in pitch darkness by echolocation."
   },
   {
    "id": "ms",
@@ -802,7 +824,8 @@
    "link": "https://worldmsday.org",
    "blurb": "Multiple sclerosis: myelin under attack. Learn about it today.",
    "puzzle_theme": "Neurology: MS, myelin, demyelination, MRI, Charcot",
-   "icon": "brain"
+   "icon": "elephant",
+   "icon_fact": "Elephants have the biggest brain of any land animal, at around 5 kg."
   },
   {
    "id": "tobacco",
@@ -827,7 +850,8 @@
    "link": "https://www.who.int/campaigns/world-no-tobacco-day",
    "blurb": "Today is all about the lungs, and what tobacco does to them.",
    "puzzle_theme": "Tobacco harm: lungs, COPD, cancers, nicotine, quitting",
-   "icon": "lungs"
+   "icon": "canary",
+   "icon_fact": "Canaries were used in British coal mines until 1986 to warn of carbon monoxide, the same gas found in cigarette smoke."
   },
   {
    "id": "eatingdisorders",
@@ -877,7 +901,8 @@
    "link": "https://www.who.int/campaigns/world-food-safety-day",
    "blurb": "Today's puzzles are about what's lurking in your lunch.",
    "puzzle_theme": "Foodborne illness: Salmonella, Listeria, botulism, gastro",
-   "icon": "apple"
+   "icon": "bea-honey",
+   "icon_fact": "Honey is too acidic and dry for bacteria to grow, but it can carry botulism spores, so no honey for babies under 12 months."
   },
   {
    "id": "blood",
@@ -902,7 +927,8 @@
    "link": "https://www.who.int/campaigns/world-blood-donor-day",
    "blurb": "Karl Landsteiner's birthday. Blood groups all day.",
    "puzzle_theme": "Transfusion: blood groups, Landsteiner, donation, plasma",
-   "icon": "blood-drop"
+   "icon": "locum-blood",
+   "icon_fact": "Vampire bats donate: a bat that fed will share a blood meal with a roost-mate who missed out."
   },
   {
    "id": "elderabuse",
@@ -950,7 +976,8 @@
    "link": "https://www.un.org/en/observances/sickle-cell-day",
    "blurb": "One amino acid swap, huge consequences. Today is about sickle cell.",
    "puzzle_theme": "Sickle cell disease: HbS, crises, malaria protection, genetics",
-   "icon": "blood-drop"
+   "icon": "deer",
+   "icon_fact": "Many deer have red blood cells that form sickle shapes, yet the deer stay perfectly healthy."
   },
   {
    "id": "vitiligo",
@@ -973,7 +1000,8 @@
    "link": "https://vrfoundation.org",
    "blurb": "Skin with a story. Today is about vitiligo and pigment.",
    "puzzle_theme": "Dermatology: melanocytes, pigment disorders, autoimmune skin",
-   "icon": "lotion"
+   "icon": "hippo",
+   "icon_fact": "Hippos ooze a red-orange 'blood sweat' that works as a natural sunscreen and may fight germs."
   },
   {
    "id": "paramedics",
@@ -998,7 +1026,8 @@
    "link": "https://www.paramedicsday.com",
    "blurb": "Lights, sirens, respect. Today is for paramedics.",
    "puzzle_theme": "Prehospital care: trauma, CPR, defibrillation, ambulance history",
-   "icon": "ambulance"
+   "icon": "locum-pager",
+   "icon_fact": "Bats are the only mammals that truly fly, and many find their way in pitch darkness by echolocation."
   },
   {
    "id": "brain",
@@ -1021,7 +1050,8 @@
    "link": "https://wfneurology.org",
    "blurb": "Today's puzzles are about the organ doing the puzzles.",
    "puzzle_theme": "Neuroanatomy: lobes, cranial nerves, neurons, famous brain cases",
-   "icon": "brain"
+   "icon": "elephant",
+   "icon_fact": "Elephants have the biggest brain of any land animal, at around 5 kg."
   },
   {
    "id": "drowning",
@@ -1072,7 +1102,8 @@
    "link": "https://www.who.int/campaigns/world-hepatitis-day",
    "blurb": "Baruch Blumberg's birthday. Hep A to E today.",
    "puzzle_theme": "Liver and hepatitis: viruses A–E, LFTs, cirrhosis, Blumberg",
-   "icon": "liver"
+   "icon": "polar-bear",
+   "icon_fact": "A polar bear's liver holds so much vitamin A that eating it can poison a person."
   },
   {
    "id": "breastfeeding",
@@ -1098,7 +1129,8 @@
    "link": "https://worldbreastfeedingweek.org",
    "blurb": "This week is about infant feeding and the science of milk.",
    "puzzle_theme": "Lactation and infant nutrition: milk science, newborns",
-   "icon": "swaddle-star"
+   "icon": "platypus",
+   "icon_fact": "Platypuses have no nipples: mothers release milk through patches of skin on their belly."
   },
   {
    "id": "mosquito",
@@ -1121,7 +1153,8 @@
    "link": "https://www.lshtm.ac.uk",
    "blurb": "Ross proved mosquitoes carry malaria on this day in 1897. The deadliest animal, all day.",
    "puzzle_theme": "Vector-borne disease: mosquitoes, dengue, Zika, yellow fever, malaria",
-   "icon": "bednet"
+   "icon": "frog",
+   "icon_fact": "Many tadpoles eat mosquito larvae, and frogs snack on the adults: natural mosquito control."
   },
   {
    "id": "physio",
@@ -1146,7 +1179,8 @@
    "link": "https://world.physio",
    "blurb": "Move it. Today is for physios.",
    "puzzle_theme": "Physiotherapy and musculoskeletal: muscles, joints, rehab",
-   "icon": "sneaker"
+   "icon": "flamingo",
+   "icon_fact": "A flamingo can stand on one leg with almost no muscle effort: its weight locks the joint in place."
   },
   {
    "id": "suicideprev",
@@ -1194,7 +1228,8 @@
    "link": "https://www.ifrc.org",
    "blurb": "A few skills can save a life. Today is about first aid.",
    "puzzle_theme": "First aid: DRSABCD, CPR, bleeding, burns, choking",
-   "icon": "ambulance"
+   "icon": "silk-plaster",
+   "icon_fact": "Spider silk is tougher than Kevlar for its weight and has been tested as a surgical suture."
   },
   {
    "id": "sepsis",
@@ -1217,7 +1252,8 @@
    "link": "https://www.worldsepsisday.org",
    "blurb": "Sepsis kills more people than many cancers. Know the signs.",
    "puzzle_theme": "Sepsis and infection: SIRS, lactate, antibiotics, shock",
-   "icon": "amr"
+   "icon": "horseshoe-crab",
+   "icon_fact": "Horseshoe crab blue blood is used to test injectable drugs and vaccines for bacterial toxins."
   },
   {
    "id": "patientsafety",
@@ -1242,7 +1278,8 @@
    "link": "https://www.who.int/campaigns/world-patient-safety-day",
    "blurb": "First, do no harm. Today is about safer care.",
    "puzzle_theme": "Patient safety: errors, checklists, handover, famous safety lessons",
-   "icon": "clipboard"
+   "icon": "meerkat",
+   "icon_fact": "Meerkats post a sentry who watches for danger while the rest of the group feeds."
   },
   {
    "id": "alzheimers",
@@ -1292,7 +1329,8 @@
    "link": "https://www.fip.org",
    "blurb": "Here's to the people who decode our handwriting. Today is for pharmacists.",
    "puzzle_theme": "Pharmacology: drug classes, history of drugs, pharmacy",
-   "icon": "pill-bottle"
+   "icon": "cadi-bowl",
+   "icon_fact": "Captopril, the first ACE inhibitor, was developed from the venom of a Brazilian pit viper."
   },
   {
    "id": "lung",
@@ -1315,7 +1353,8 @@
    "link": "https://www.firsnet.org",
    "blurb": "Your lungs take about 20,000 breaths a day. Today we thank them.",
    "puzzle_theme": "Respiratory: lungs, alveoli, gas exchange, lung disease",
-   "icon": "lungs"
+   "icon": "goose",
+   "icon_fact": "Bar-headed geese fly over the Himalayas, where each breath holds only about a third of the oxygen at sea level."
   },
   {
    "id": "rabies",
@@ -1340,7 +1379,8 @@
    "link": "https://www.who.int/campaigns/world-rabies-day",
    "blurb": "Louis Pasteur died on this day. Rabies is almost 100% fatal and fully preventable.",
    "puzzle_theme": "Rabies and zoonoses: Pasteur, bats, vaccines, Negri bodies",
-   "icon": "syringe"
+   "icon": "dog",
+   "icon_fact": "Up to 99% of human rabies cases come from dog bites, so vaccinating dogs is the best way to stop it."
   },
   {
    "id": "heart",
@@ -1363,7 +1403,8 @@
    "link": "https://world-heart-federation.org",
    "blurb": "About 100,000 beats a day. Today is all heart.",
    "puzzle_theme": "Cardiology: ECG, valves, coronary arteries, heart history",
-   "icon": "heart"
+   "icon": "hummingbird",
+   "icon_fact": "A hummingbird's heart can beat about 1,200 times a minute in flight."
   },
   {
    "id": "dysautonomia",
@@ -1391,7 +1432,8 @@
    "link": "https://www.dysautonomiainternational.org",
    "blurb": "October is for POTS and dysautonomia. Stand up slowly.",
    "puzzle_theme": "Autonomic nervous system: POTS, orthostatic hypotension, MCAS",
-   "icon": "heart"
+   "icon": "zebra-rare",
+   "icon_fact": "Every zebra's stripe pattern is unique, like a fingerprint."
   },
   {
    "id": "mentalhealth",
@@ -1439,7 +1481,8 @@
    "link": "https://www.eular.org",
    "blurb": "Creaky joints, all day.",
    "puzzle_theme": "Rheumatology: RA, OA, gout, joints, autoimmune arthritis",
-   "icon": "bone"
+   "icon": "tess-bone",
+   "icon_fact": "A tortoise shell is living bone: ribs and spine fused into armour that grows for life."
   },
   {
    "id": "thrombosis",
@@ -1462,7 +1505,8 @@
    "link": "https://www.worldthrombosisday.org",
    "blurb": "Rudolf Virchow's birthday. Clots, triads and anticoagulants today.",
    "puzzle_theme": "Thrombosis: Virchow's triad, DVT, PE, anticoagulation",
-   "icon": "blood-drop"
+   "icon": "giraffe",
+   "icon_fact": "Tight skin on a giraffe's legs works like a built-in compression stocking, stopping blood pooling in its feet."
   },
   {
    "id": "sight",
@@ -1485,7 +1529,8 @@
    "link": "https://www.iapb.org",
    "blurb": "Today's puzzles focus on the eyes.",
    "puzzle_theme": "Ophthalmology: retina, cataract, glaucoma, visual pathways",
-   "icon": "glasses"
+   "icon": "owl",
+   "icon_fact": "Owl eyes are tubes, not balls, so they can't move them. Instead owls turn their heads up to 270 degrees."
   },
   {
    "id": "handwashing",
@@ -1508,7 +1553,8 @@
    "link": "https://globalhandwashing.org",
    "blurb": "Soap: the original public health tech.",
    "puzzle_theme": "Hygiene and infection: germs, soap, outbreaks",
-   "icon": "soap"
+   "icon": "raccoon",
+   "icon_fact": "Raccoons dunk their food in water not to clean it, but because wet paws seem to feel more."
   },
   {
    "id": "anaesthesia",
@@ -1533,7 +1579,8 @@
    "link": "https://wfsahq.org",
    "blurb": "Ether Day, 1846: the first public anaesthetic. Every puzzle today is for the gas crew.",
    "puzzle_theme": "Anaesthetics: ether, airway, induction agents, monitoring, ASA grades",
-   "icon": "monitor"
+   "icon": "sloth",
+   "icon_fact": "Wild sloths sleep only about 10 hours a day, not the 16 once reported from zoos."
   },
   {
    "id": "osteoporosis",
@@ -1556,7 +1603,8 @@
    "link": "https://www.worldosteoporosisday.org",
    "blurb": "Bones are living tissue. Keep them strong.",
    "puzzle_theme": "Bone health: osteoporosis, DEXA, calcium, vitamin D, fractures",
-   "icon": "bone"
+   "icon": "tess-bone",
+   "icon_fact": "A tortoise shell is living bone: ribs and spine fused into armour that grows for life."
   },
   {
    "id": "polio",
@@ -1579,7 +1627,8 @@
    "link": "https://www.endpolio.org",
    "blurb": "Jonas Salk's birthday. Polio is nearly gone.",
    "puzzle_theme": "Polio and vaccines: Salk, Sabin, iron lungs, eradication",
-   "icon": "polio"
+   "icon": "bea-syringe",
+   "icon_fact": "In 2023 the US approved the first-ever vaccine for honeybees, against American foulbrood."
   },
   {
    "id": "ot",
@@ -1604,7 +1653,8 @@
    "link": "https://wfot.org",
    "blurb": "Today is for OTs, who get people back to doing what matters.",
    "puzzle_theme": "Occupational therapy: function, ADLs, rehab, adaptive equipment",
-   "icon": "hands-heart"
+   "icon": "octavia-ot",
+   "icon_fact": "About two-thirds of an octopus's neurons are in its arms, so each arm can feel, taste and grasp on its own."
   },
   {
    "id": "stroke",
@@ -1627,7 +1677,8 @@
    "link": "https://www.world-stroke.org",
    "blurb": "Time is brain: an untreated stroke kills about 1.9 million neurons a minute. Today is about stroke.",
    "puzzle_theme": "Stroke: FAST, ischaemic vs haemorrhagic, vascular territories, thrombolysis",
-   "icon": "stroke"
+   "icon": "cheetah",
+   "icon_fact": "Cheetahs can sprint at around 100 km/h, the fastest of any land animal."
   },
   {
    "id": "psoriasis",
@@ -1650,7 +1701,8 @@
    "link": "https://ifpa-pso.com",
    "blurb": "More than skin deep. Today is about psoriasis.",
    "puzzle_theme": "Dermatology: psoriasis, plaques, nail signs, psoriatic arthritis",
-   "icon": "lotion"
+   "icon": "hippo",
+   "icon_fact": "Hippos ooze a red-orange 'blood sweat' that works as a natural sunscreen and may fight germs."
   },
   {
    "id": "radiology",
@@ -1675,7 +1727,8 @@
    "link": "https://www.internationaldayofradiology.com",
    "blurb": "Röntgen discovered X-rays on this day in 1895. Today's puzzles are for radiology.",
    "puzzle_theme": "Radiology and imaging: X-ray, CT, MRI, ultrasound, famous films",
-   "icon": "radiology"
+   "icon": "dolphin",
+   "icon_fact": "Dolphins 'see' with sound: their echolocation uses the same physics as medical ultrasound."
   },
   {
    "id": "pneumonia",
@@ -1698,7 +1751,8 @@
    "link": "https://stoppneumonia.org",
    "blurb": "The old man's friend, and a leading killer of kids. Today is about pneumonia.",
    "puzzle_theme": "Respiratory infection: pneumonia, consolidation, organisms, CXR",
-   "icon": "lungs"
+   "icon": "penguin",
+   "icon_fact": "Emperor penguins can hold their breath for over 20 minutes on a deep dive."
   },
   {
    "id": "diabetes",
@@ -1721,7 +1775,8 @@
    "link": "https://worlddiabetesday.org",
    "blurb": "Frederick Banting's birthday. Insulin, glucose and HbA1c all day.",
    "puzzle_theme": "Diabetes: insulin, Banting and Best, pancreas, HbA1c, complications",
-   "icon": "diabetes"
+   "icon": "gila-monster",
+   "icon_fact": "The diabetes drug exenatide came from a hormone found in Gila monster saliva."
   },
   {
    "id": "prematurity",
@@ -1747,7 +1802,8 @@
    "blurb": "About 1 in 10 babies arrive early. Today is for them.",
    "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care",
    "_note": "Real date is 17 Nov (WHO). Shares the date with Cervical Cancer Elimination Day, which leads; prematurity shows as \"Also\".",
-   "icon": "swaddle-star"
+   "icon": "kangaroo",
+   "icon_fact": "A newborn joey is jellybean-sized and finishes growing in the pouch, the idea behind 'kangaroo care' skin-to-skin for preterm babies."
   },
   {
    "id": "cervical",
@@ -1795,7 +1851,8 @@
    "link": "https://goldcopd.org",
    "blurb": "Breathless isn't just getting older. Today is about COPD.",
    "puzzle_theme": "COPD: emphysema, bronchitis, spirometry, smoking",
-   "icon": "lungs"
+   "icon": "goose",
+   "icon_fact": "Bar-headed geese fly over the Himalayas, where each breath holds only about a third of the oxygen at sea level."
   },
   {
    "id": "amr",
@@ -1823,7 +1880,8 @@
    "link": "https://www.who.int/campaigns/world-amr-awareness-week",
    "blurb": "Antibiotics are running out of road. Use them wisely.",
    "puzzle_theme": "Antimicrobials: Fleming, penicillin, resistance, superbugs (MRSA)",
-   "icon": "amr"
+   "icon": "ant",
+   "icon_fact": "Leafcutter ants carry antibiotic-making bacteria on their bodies to protect their fungus gardens."
   },
   {
    "id": "gbv",
@@ -1925,7 +1983,8 @@
    "link": "https://www.who.int/campaigns/universal-health-coverage-day",
    "blurb": "Health care for everyone, everywhere. Today is about health systems.",
    "puzzle_theme": "Health systems: public health, history of medicine, global health",
-   "icon": "globe"
+   "icon": "cadi-rod",
+   "icon_fact": "The Rod of Asclepius, one snake on one staff, is medicine's true symbol, and it sits on the WHO logo."
   },
   {
    "id": "womeninscience",
@@ -1950,7 +2009,8 @@
    "link": "https://www.un.org/en/observances/women-and-girls-in-science-day",
    "blurb": "From Curie to Blackburn, science has never been a boys' club. Today's puzzles prove it.",
    "puzzle_theme": "Women in medical science: Curie, Franklin, Elion, Tu Youyou, Blackburn, Barré-Sinoussi",
-   "icon": "microscope"
+   "icon": "chimp",
+   "icon_fact": "In 1960 Jane Goodall saw chimps making tools to fish for termites, overturning the idea that only humans make tools."
   },
   {
    "id": "socialwork",
@@ -1976,7 +2036,8 @@
    "blurb": "Social workers untangle the stuff no prescription can fix. Today is theirs.",
    "puzzle_theme": "Social work and social determinants of health: housing, carers, safeguarding, community",
    "_note": "Third Tuesday of March (IFSW); 2026 confirmed 17 March. In 2028 it falls on 21 March with World Down Syndrome Day.",
-   "icon": "hands-heart"
+   "icon": "dog",
+   "icon_fact": "Ten minutes of patting a dog or cat lowered students' cortisol, the stress hormone, in a 2019 study."
   },
   {
    "id": "brainweek",
@@ -2005,7 +2066,8 @@
    "blurb": "A week for the three-pound universe between your ears. Neuroscience leads off.",
    "puzzle_theme": "Neuroscience: neurons, synapses, neurotransmitters, famous experiments",
    "_note": "Third week of March, Monday to Sunday (Dana Foundation); 2026 and 2027 confirmed, 2028 computed.",
-   "icon": "brain"
+   "icon": "elephant",
+   "icon_fact": "Elephants have the biggest brain of any land animal, at around 5 kg."
   },
   {
    "id": "globalpublichealth",
@@ -2034,7 +2096,8 @@
    "blurb": "Clean water, vaccines, seatbelts: public health's wins are invisible until they're gone. Celebrate them.",
    "puzzle_theme": "Public health: John Snow, prevention, sanitation, tobacco control, screening",
    "_note": "WFPHA. 2026 confirmed as 6-10 April; 2027-2028 computed as the first Monday-Friday of April, verify each year.",
-   "icon": "globe"
+   "icon": "cadi-rod",
+   "icon_fact": "The Rod of Asclepius, one snake on one staff, is medicine's true symbol, and it sits on the WHO logo."
   },
   {
    "id": "biomedlabsci",
@@ -2060,7 +2123,8 @@
    "blurb": "About 70% of medical decisions lean on a lab result. Thank a medical scientist.",
    "puzzle_theme": "Laboratory science: pipettes, centrifuges, quality control, specimens, PCR",
    "_note": "The '70%' figure is a widely quoted estimate; drop it from the blurb if you prefer only hard numbers.",
-   "icon": "microscope"
+   "icon": "dex-lab",
+   "icon_fact": "Red foxes seem to use Earth's magnetic field to aim their pounces: they hit more often facing north-east."
   },
   {
    "id": "labweek",
@@ -2089,7 +2153,8 @@
    "blurb": "Lab Week: for everyone behind the 'results pending' message.",
    "puzzle_theme": "Pathology and lab medicine: blood films, cultures, biochemistry, histology",
    "_note": "US-based (ASCP/ASCLS). 2026 confirmed 19-25 April; 2027-2028 computed. Priority 3 so it doesn't crowd the Australian/IFBLS lab day.",
-   "icon": "microscope"
+   "icon": "dex-lab",
+   "icon_fact": "Red foxes seem to use Earth's magnetic field to aim their pounces: they hit more often facing north-east."
   },
   {
    "id": "dnaday",
@@ -2115,7 +2180,8 @@
    "blurb": "The double helix paper (1953) and the Human Genome Project (2003) both landed in late April. Unzip today's puzzles.",
    "puzzle_theme": "Genetics and genomics: DNA, Franklin, Watson and Crick, CRISPR, inheritance",
    "_note": "US NHGRI day. Clashes with Anzac Day and World Malaria Day (priority 2 leads), so mention only.",
-   "icon": "dna"
+   "icon": "sheep",
+   "icon_fact": "Dolly the sheep, born in 1996, was the first mammal cloned from an adult cell."
   },
   {
    "id": "immunology",
@@ -2140,7 +2206,8 @@
    "link": "https://iuis.org/activities/international-day-of-immunology",
    "blurb": "Your immune system is the world's best-trained bouncer. Today, it's on the guest list.",
    "puzzle_theme": "Immunology: T cells, antibodies, Burnet, Doherty, tolerance, cytokines",
-   "icon": "syringe"
+   "icon": "bea-syringe",
+   "icon_fact": "Honeybee queens pass fragments of germs into their eggs, giving their young a head start on immunity."
   },
   {
    "id": "dietitiansweek",
@@ -2161,7 +2228,8 @@
    "blurb": "Food is complicated. Dietitians make it less so. This week is theirs.",
    "puzzle_theme": "Nutrition and dietetics: vitamins, macronutrients, deficiencies, food science",
    "_note": "Only 2026 dates confirmed (11-17 May); 2027-2028 not yet announced.",
-   "icon": "apple"
+   "icon": "panda",
+   "icon_fact": "Pandas have a meat-eater's gut but live on bamboo, so they spend up to 14 hours a day eating."
   },
   {
    "id": "clinicaltrials",
@@ -2186,7 +2254,8 @@
    "link": "https://ecrin.org/ictd",
    "blurb": "On 20 May 1747 James Lind started handing sailors citrus. Every trial since owes him one.",
    "puzzle_theme": "Clinical trials and evidence: Lind, randomisation, placebo, Cochrane, landmark trials",
-   "icon": "clipboard"
+   "icon": "mouse",
+   "icon_fact": "Mice and humans share most of their genes: our protein-coding DNA is about 85% identical."
   },
   {
    "id": "orthoptics",
@@ -2212,7 +2281,8 @@
    "blurb": "Lazy eye, squint, double vision: orthoptists line things up. Eyes front, both of them.",
    "puzzle_theme": "Orthoptics and eye movements: strabismus, amblyopia, cranial nerves III, IV, VI",
    "_note": "First Monday of June (International Orthoptic Association). In 2027 it falls on 7 June with World Food Safety Day.",
-   "icon": "glasses"
+   "icon": "mantis-shrimp",
+   "icon_fact": "Each mantis shrimp eye moves on its own and can judge depth by itself."
   },
   {
    "id": "dentalweek",
@@ -2241,7 +2311,8 @@
    "blurb": "Floss. We'll wait. This week is for dentists and everyone who works on teeth.",
    "puzzle_theme": "Dentistry and oral health: teeth, gums, fluoride, oral signs of disease",
    "_note": "Australian Dental Association; 2026 confirmed 3-9 August (first full Mon-Sun week of August); 2027-2028 computed. Overlaps the end of World Breastfeeding Week, which only themes its first day.",
-   "icon": "tooth"
+   "icon": "beaver",
+   "icon_fact": "Beaver tooth enamel contains iron, which makes it tougher and more acid-resistant than ours."
   },
   {
    "id": "atsihealthworkers",
@@ -2296,7 +2367,8 @@
    "blurb": "Talking, swallowing, stuttering, reading: speech pathologists cover the lot. Say it loud.",
    "puzzle_theme": "Speech pathology: language, swallowing (dysphagia), aphasia, voice, larynx",
    "_note": "2026 confirmed 23-29 August; 2027-2028 computed from the fourth Sunday of August, verify with Speech Pathology Australia.",
-   "icon": "chat-calm"
+   "icon": "echo-speech",
+   "icon_fact": "Parrots have no vocal cords: they talk with a voice box called the syrinx, plus their tongue."
   },
   {
    "id": "microorganism",
@@ -2322,7 +2394,8 @@
    "blurb": "On 17 September 1683 van Leeuwenhoek wrote about his 'animalcules'. Microbes have been stealing the show ever since.",
    "puzzle_theme": "Microbiology: bacteria, viruses, fungi, Gram stain, van Leeuwenhoek",
    "_note": "Shares the date with World Patient Safety Day (WHO, priority 2 leads).",
-   "icon": "microscope"
+   "icon": "dex-lab",
+   "icon_fact": "Red foxes seem to use Earth's magnetic field to aim their pounces: they hit more often facing north-east."
   },
   {
    "id": "cancerresearch",
@@ -2347,7 +2420,8 @@
    "link": "https://www.uicc.org/news/world-cancer-research-day-september-24th",
    "blurb": "Cancer survival has risen thanks to research, one trial at a time. Today's for the lab coats.",
    "puzzle_theme": "Cancer research: oncogenes, p53, HeLa, immunotherapy, HPV vaccine",
-   "icon": "microscope"
+   "icon": "axolotl",
+   "icon_fact": "Axolotls can regrow whole limbs, parts of the spinal cord and even heart tissue."
   },
   {
    "id": "palliative",
@@ -2399,7 +2473,8 @@
    "link": "https://www.ahpa.com.au/allied-health-professions-day",
    "blurb": "Physios, OTs, speechies, dietitians, podiatrists and many more. Healthcare runs on allied health.",
    "puzzle_theme": "Allied health: physiotherapy, OT, speech pathology, dietetics, podiatry, audiology, psychology",
-   "icon": "hands-heart"
+   "icon": "octavia-tools",
+   "icon_fact": "Veined octopuses carry coconut shells around to use as portable shelters, a rare case of tool use."
   },
   {
    "id": "clinicalengineering",
@@ -2424,7 +2499,8 @@
    "link": "https://ifmbe.org/global-clinical-engineering-day/",
    "blurb": "Somebody has to keep the ventilators breathing and the pacemakers pacing. Today, it's them.",
    "puzzle_theme": "Biomedical engineering: pacemakers, dialysis, cochlear implants, stents, ECG",
-   "icon": "monitor"
+   "icon": "octavia-tools",
+   "icon_fact": "Veined octopuses carry coconut shells around to use as portable shelters, a rare case of tool use."
   },
   {
    "id": "pathologyweek",
@@ -2453,7 +2529,8 @@
    "blurb": "Behind every diagnosis is a pathologist with a microscope. Celebrate the people who read the slides.",
    "puzzle_theme": "Pathology: histology, stains, blood films, biochemistry, microbiology",
    "_note": "UK (Royal College of Pathologists). 2025 was 3-9 Nov and 2026 is 2-8 Nov; 2027-2028 computed. No equivalent Australian pathology week found.",
-   "icon": "microscope"
+   "icon": "dex-lab",
+   "icon_fact": "Red foxes seem to use Earth's magnetic field to aim their pounces: they hit more often facing north-east."
   },
   {
    "id": "medicalphysics",
@@ -2479,7 +2556,8 @@
    "blurb": "Marie Curie's birthday. Today is for the physicists who make sure your scan dose is right.",
    "puzzle_theme": "Medical physics: X-rays, Röntgen, Curie, radiation units, MRI, radiotherapy",
    "_note": "IOMP chose Marie Curie's birthday (7 November). The day before International Day of Radiology.",
-   "icon": "radiology"
+   "icon": "dolphin",
+   "icon_fact": "Dolphins 'see' with sound: their echolocation uses the same physics as medical ultrasound."
   },
   {
    "id": "psychweek",
@@ -2500,7 +2578,8 @@
    "blurb": "Minds matter. This week celebrates psychologists and the science of behaviour.",
    "puzzle_theme": "Psychology: memory, perception, famous experiments, CBT history. Respectful tone about mental illness.",
    "_note": "Dates move (2025 was 29 Sep-5 Oct; 2026 is 16-22 Nov). 2027-2028 not yet announced.",
-   "icon": "brain"
+   "icon": "dog",
+   "icon_fact": "Ten minutes of patting a dog or cat lowered students' cortisol, the stress hormone, in a 2019 study."
   },
   {
    "id": "socialjustice",
@@ -2676,7 +2755,8 @@
    "link": "https://www.flyingdoctor.org.au",
    "blurb": "Since 1928, the Flying Doctor has been the mantle of safety over the outback.",
    "puzzle_theme": "Rural and remote health: RFDS history, John Flynn, pedal radio, retrieval medicine, outback medicine",
-   "icon": "stethoscope"
+   "icon": "locum-pager",
+   "icon_fact": "Bats are the only mammals that truly fly, and many find their way in pitch darkness by echolocation."
   },
   {
    "id": "idahobit",
@@ -2780,7 +2860,8 @@
    "link": "https://westernsydney.edu.au/mens-health-week",
    "blurb": "Blokes, book the check-up you've been putting off.",
    "puzzle_theme": "Men's health: life expectancy gap, prostate and testicular health, heart disease, Movember",
-   "icon": "moustache"
+   "icon": "walrus",
+   "icon_fact": "A walrus moustache has up to about 700 whiskers, sensitive enough to find clams on a dark seabed."
   },
   {
    "id": "refugeeday",
@@ -3040,7 +3121,8 @@
    "link": "https://movember.com",
    "blurb": "Mo season: prostate, testicular and men's mental health.",
    "puzzle_theme": "Men's health: prostate and testicular cancer, men's mental health, life expectancy gap",
-   "icon": "moustache"
+   "icon": "walrus",
+   "icon_fact": "A walrus moustache has up to about 700 whiskers, sensitive enough to find clams on a dark seabed."
   },
   {
    "id": "tdor",
@@ -3094,7 +3176,8 @@
    "blurb": "A month off the booze (or another habit) for a good cause. February is short, which helps.",
    "puzzle_theme": "Alcohol and habits: liver health, dependence, behaviour change",
    "_note": "2026 run as a fundraiser for Lifeline (1-28 Feb).",
-   "icon": "water-glass"
+   "icon": "camel",
+   "icon_fact": "A camel's hump stores fat, not water. Its kidneys do the water-saving, making very concentrated urine."
   },
   {
    "id": "wearred",
@@ -3120,7 +3203,8 @@
    "blurb": "Red today for women's hearts: heart disease is still the leading killer, and it doesn't always clutch its chest.",
    "puzzle_theme": "Heart disease in women: atypical presentations, SCAD, risk factors",
    "_note": "US (American Heart Association), first Friday of February; 2026 confirmed 6 Feb, 2027-2028 computed.",
-   "icon": "heart"
+   "icon": "octavia-hearts",
+   "icon_fact": "Octopuses have three hearts and blue blood."
   },
   {
    "id": "ovarianmonth",
@@ -3179,7 +3263,8 @@
    "blurb": "A week to hear out the one in six Australians living with hearing loss. Pardon? Exactly.",
    "puzzle_theme": "Hearing loss: conductive vs sensorineural, audiograms, noise protection",
    "_note": "Deafness Forum of Australia, 1-7 March each year; contains World Hearing Day (3 March). Shares 1 March with Zero Discrimination Day.",
-   "icon": "ear"
+   "icon": "echo-ear",
+   "icon_fact": "Birds can regrow the hair cells in their inner ear; humans can't, so noise damage is permanent for us."
   },
   {
    "id": "greatestshave",
@@ -3263,7 +3348,8 @@
    "blurb": "Heart Foundation's week for heart health checks. Your ticker deserves a service.",
    "puzzle_theme": "Heart health checks: blood pressure, cholesterol, absolute CVD risk",
    "_note": "2026 confirmed 4-10 May; 2027-2028 computed as the first Monday-Sunday week of May, verify with the Heart Foundation.",
-   "icon": "heart"
+   "icon": "hummingbird",
+   "icon_fact": "A hummingbird's heart can beat about 1,200 times a minute in flight."
   },
   {
    "id": "dolly",
@@ -3428,7 +3514,8 @@
    "link": "https://www.dryjuly.com",
    "blurb": "A month off alcohol to fund support for people affected by cancer. Your liver says thanks.",
    "puzzle_theme": "Alcohol and health: liver disease, cancer risk, drinking guidelines",
-   "icon": "water-glass"
+   "icon": "camel",
+   "icon_fact": "A camel's hump stores fat, not water. Its kidneys do the water-saving, making very concentrated urine."
   },
   {
    "id": "donatelifeweek",
@@ -3457,7 +3544,8 @@
    "blurb": "Organ and tissue donation week. One conversation with family can save lives.",
    "puzzle_theme": "Organ donation and transplantation: brain death, matching, rejection",
    "_note": "Australian Government DonateLife (not a fundraising charity). 2026 confirmed Sun 26 Jul - Sun 2 Aug; 2027-2028 computed from the last Sunday of July.",
-   "icon": "heart"
+   "icon": "pig",
+   "icon_fact": "In 2024 surgeons transplanted a gene-edited pig kidney into a living patient for the first time."
   },
   {
    "id": "jeansforgenes",
@@ -3484,7 +3572,8 @@
    "blurb": "Denim for discovery: Children's Medical Research Institute research into genetic disease.",
    "puzzle_theme": "Genetics: inheritance patterns, genetic disease, gene therapy",
    "_note": "2026 confirmed Thursday 6 August (2025 was a Friday). 2027-2028 computed as the first Thursday of August, verify each year. Falls inside Dental Health Week, which leads on priority.",
-   "icon": "dna"
+   "icon": "sheep",
+   "icon_fact": "Dolly the sheep, born in 1996, was the first mammal cloned from an adult cell."
   },
   {
    "id": "strokeweek",
@@ -3513,7 +3602,8 @@
    "blurb": "Stroke Foundation's week to learn F.A.S.T. Face, Arms, Speech, Time: call 000.",
    "puzzle_theme": "Stroke: F.A.S.T. signs, thrombolysis and clot retrieval, prevention",
    "_note": "2026 confirmed 3-9 August; 2027-2028 computed. Same week as Dental Health Week and Homelessness Week (Dental Health Week leads on priority).",
-   "icon": "stroke"
+   "icon": "cheetah",
+   "icon_fact": "Cheetahs can sprint at around 100 km/h, the fastest of any land animal."
   },
   {
    "id": "kidneyweek",
@@ -3542,7 +3632,8 @@
    "blurb": "Kidney Health Australia's week: kidneys can lose 90% of function before you notice.",
    "puzzle_theme": "Kidney health: CKD, eGFR and ACR, risk factors, dialysis",
    "_note": "Formerly Kidney Health Week. 2026 listed as 10-17 August; 2027-2028 computed from the second Monday of August, verify with Kidney Health Australia.",
-   "icon": "kidney"
+   "icon": "camel",
+   "icon_fact": "A camel's hump stores fat, not water. Its kidneys do the water-saving, making very concentrated urine."
   },
   {
    "id": "daffodil",
@@ -3681,7 +3772,8 @@
    "blurb": "10,000 steps a day through September for Cerebral Palsy Alliance. Walk, wheel or swim it.",
    "puzzle_theme": "Cerebral palsy and the benefits of physical activity",
    "_note": "Runs 1-30 September.",
-   "icon": "sneaker"
+   "icon": "cheetah",
+   "icon_fact": "Cheetahs can sprint at around 100 km/h, the fastest of any land animal."
   },
   {
    "id": "ruok",
@@ -3823,7 +3915,8 @@
    "blurb": "Wear your loudest shirt for kids who are deaf or hard of hearing. Subtlety optional.",
    "puzzle_theme": "Childhood hearing loss: newborn screening, cochlear implants, glue ear",
    "_note": "2024 (18 Oct) and 2025 (17 Oct) were the third Friday of October; 2026-2028 computed, 2026 date not confirmed. In 2026 it shares 16 October with World Anaesthesia Day (priority 1 leads).",
-   "icon": "ear"
+   "icon": "echo-ear",
+   "icon_fact": "Birds can regrow the hair cells in their inner ear; humans can't, so noise damage is permanent for us."
   },
   {
    "id": "bandanna",
@@ -3878,7 +3971,8 @@
    "link": "https://lungfoundation.com.au",
    "blurb": "Lung Foundation Australia's month for lungs. Take a deep breath. Now notice it.",
    "puzzle_theme": "Lung health: COPD, lung cancer, spirometry, smoking and vaping",
-   "icon": "lungs"
+   "icon": "goose",
+   "icon_fact": "Bar-headed geese fly over the Himalayas, where each breath holds only about a third of the oxygen at sea level."
   }
  ]
 }
