@@ -558,3 +558,17 @@ main .stats,main .dist{display:none!important}
 .mw-mode button[aria-pressed="true"] span[aria-hidden]:not(.mm-t){background:#fff;border-radius:50%;width:24px;height:24px;display:inline-grid;place-items:center;font-size:15px;line-height:1;margin:-4px -3px;box-shadow:0 0 0 1px rgba(255,255,255,.6)}
 .mw-mode button[aria-pressed="true"] span[aria-hidden]:not(.mm-t){margin-right:3px}
 .mw-mode button[aria-pressed="true"] .mm-t{margin-left:2px}
+
+/* My stats links + badge toast */
+.mw-melink{display:block;margin-top:10px;font-weight:600;font-size:14px;color:var(--brand);text-decoration:none}
+.mw-melink:hover{text-decoration:underline}
+.mw-mestat{margin-left:auto;font-size:14px;font-weight:600;color:var(--brand);text-decoration:none;white-space:nowrap}
+.mw-mestat:hover{text-decoration:underline}
+.mw-btoast{position:fixed;left:50%;bottom:max(16px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;width:min(420px,calc(100vw - 32px));display:flex;align-items:center;gap:6px;background:var(--card);color:var(--ink);border:2px solid var(--brand);border-radius:16px;box-shadow:0 10px 30px rgba(30,22,45,.28);padding:8px 8px 8px 12px;animation:mwbt .45s cubic-bezier(.2,1.4,.4,1)}
+.mw-btoast a{flex:1;display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-size:14px;line-height:1.35}
+.mw-btoast b{color:var(--brand)}
+.mw-btoast small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+.mw-btoast .bt-ic{font-size:30px;line-height:1;flex:none}
+.mw-btoast .nl-x{position:static;flex:none}
+.mw-btoast.out{opacity:0;transform:translate(-50%,12px);transition:.3s}
+@keyframes mwbt{from{opacity:0;transform:translate(-50%,24px) scale(.9)}to{opacity:1;transform:translate(-50%,0)}}

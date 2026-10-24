@@ -85,6 +85,8 @@
             track("finished/" + g.id, g.name + " finished");
             if (win) track("won/" + g.id, g.name + " won");
             if (!g.store.weekly && k === pre + sydToday()) markDay();
+            logFinish(g, k, v);
+            setTimeout(checkBadges, 1500);
             setTimeout(nlPrompt, 2600);
             (function (val, live) { setTimeout(function () { try { celebrate(g.id, JSON.parse(val)); if (live) afterLive(g, JSON.parse(val)); } catch (x) {} }, 450); })(v, !g.store.weekly && k === pre + sydToday());
           }
@@ -226,6 +228,124 @@
     }
   }
   window.MW_celebrate = celebrate;
+
+  // ---------- My stats + badges (all from localStorage; /me/ renders it) ----------
+  // Finish log: when + which puzzle date, so archive dives and night owls can be counted. Mode-aware (mk).
+  function logFinish(g, k, v) {
+    var L = get(mk("mw-log"), []);
+    L.push({ g: g.id, d: k.slice(g.store.day.length), at: sydToday(), h: new Date().getHours(), w: /"win":true/.test(v) ? 1 : 0 });
+    set(mk("mw-log"), L.slice(-600));
+  }
+  var BADGE_DEFS = [
+    ["first", "🩸", "First Blood", "Solve your first puzzle."],
+    ["hattrick", "🎩", "Hat-trick", "Finish three different games in one day."],
+    ["fullward", "🏥", "Full Ward Round", "Finish every daily game in one day."],
+    ["week", "📅", "Week Warrior", "Play seven days in a row."],
+    ["month", "🩺", "Month on the Wards", "Play thirty days in a row."],
+    ["century", "💯", "Centurion", "Solve 100 puzzles."],
+    ["einstein", "⚛️", "Einstein", "Solve an Einstein-day puzzle (about one day in 50)."],
+    ["unicorn", "🦄", "Unicorn Hunter", "Find a Zebritis unicorn: the single rarest answer."],
+    ["superzeb", "🦓", "Super Zebritis", "Finish a five-prompt Super Zebritis Wednesday."],
+    ["sunday", "🦇", "Sunday Scholar", "Score 18 or more in Grand Rounds."],
+    ["cryptic", "🕵️", "Cryptic Crusader", "Finish a Cryptogenic without giving up.", "medical"],
+    ["clean", "🧼", "Clean Sheet", "Solve Comorbix with zero mistakes."],
+    ["hole", "⛳", "Hole in One", "Solve Wordemic in one or two guesses."],
+    ["firstclue", "🔎", "First-clue Wonder", "Solve Dxtective on the first clue."],
+    ["queen", "🐝", "Queen Bee", "Reach Genius in Morphemia."],
+    ["knowall", "🎓", "Know-it-all", "Score a perfect 10 in Triviosis."],
+    ["speed", "⏱️", "Speed Surgeon", "Solve Gridectomy in under a minute, no reveals."],
+    ["chain", "🔗", "Unbreakable", "Solve Linkase without a single strike."],
+    ["mend", "🪡", "Invisible Mend", "Solve Suturix without a hint."],
+    ["archive", "🗄️", "Archive Diver", "Finish five past puzzles in one day."],
+    ["owl", "🦉", "Night Owl", "Finish a puzzle between midnight and 4am."],
+    ["tourist", "😎", "Normie Tourist", "Finish a puzzle in Normie mode.", "global"],
+    ["both", "☯️", "Both Sides", "Finish puzzles in both modes on the same day.", "global"]
+  ];
+  function myStats(mode) {
+    var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
+    function dstr(n) { return new Date(n * 864e5).toISOString().slice(0, 10); }
+    var games = (window.MW_GAMES || []).filter(function (g) { return g.store && (!N || g.normie); });
+    var keys = []; try { for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i)); } catch (e) {}
+    function J(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
+    var rec = {}, logged = {}, days = {}, dayG = {};
+    function hit(d, id) { days[d] = (days[d] || 0) + 1; (dayG[d] = dayG[d] || {})[id] = 1; }
+    var log = get(P + "mw-log", []);
+    log.forEach(function (x) { logged[x.g + "|" + x.d] = 1; hit(x.at, x.g); });
+    var rows = games.map(function (g) {
+      var base = g.medStore || g.store, sk = (N ? "n-" : "") + base.stats, dk = (N ? "n-" : "") + base.day, R = rec[g.id] = {};
+      keys.forEach(function (k) { if (k && k.indexOf(dk) === 0 && /^\d{4}-\d\d-\d\d$/.test(k.slice(dk.length))) { var v = J(k); if (v && v.done) R[k.slice(dk.length)] = v; } });
+      Object.keys(R).forEach(function (d) { if (!base.weekly && !logged[g.id + "|" + d] && d <= today) hit(d, g.id); });
+      var s = J(sk) || {}, ds = Object.keys(R), wins = ds.filter(function (d) { return R[d].win; }).length;
+      var played = Math.max(s.played || 0, 0), sw = s.wins || 0, cur = s.streak || 0;
+      if (!played && ds.length) { played = ds.length; sw = wins; }
+      if (s.last && tn - dayNum(s.last) > (base.weekly ? 7 : 1)) cur = 0;
+      var dk2 = today; if (base.weekly) { var wd = new Date(tn * 864e5).getUTCDay(); dk2 = dstr(tn - (wd - (base.weekStart == null ? 1 : base.weekStart) + 7) % 7); }
+      return { g: g, played: played, wins: sw, pct: played ? Math.round(sw / played * 100) : 0, streak: cur, best: Math.max(s.best || 0, cur), solved: wins, today: !!R[dk2], weekly: !!base.weekly };
+    });
+    get(P + "mw-days", []).forEach(function (d) { if (!days[d]) days[d] = 1; dayG[d] = dayG[d] || {}; });
+    var dl = Object.keys(days).filter(function (d) { return days[d] > 0 && d <= today; }).sort(), best = 0, run = 0, prev = null;
+    dl.forEach(function (d) { run = prev !== null && dayNum(d) - prev === 1 ? run + 1 : 1; prev = dayNum(d); if (run > best) best = run; });
+    var k = days[today] ? tn : tn - 1, cur = 0; while (days[dstr(k)]) { cur++; k--; }
+    var solved = rows.reduce(function (a, r) { return a + r.solved; }, 0);
+    var playedToday = rows.filter(function (r) { return r.today; }).length;
+    log.forEach(function (x) { if (x.at === today && !rows.some(function (r) { return r.g.id === x.g && r.today; })) { rows.forEach(function (r) { if (r.g.id === x.g) r.today = true; }); playedToday++; } });
+    function any(id, f) { var R = rec[id] || {}; return Object.keys(R).some(function (d) { return f(R[d], d); }); }
+    var daily = rows.filter(function (r) { return !r.weekly && r.g.live; }).map(function (r) { return r.g.id; });
+    var EINS = (N ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {};
+    var zg = (window.MW_GAMES || []).filter(function (g) { return g.id === "zebritis"; })[0], zfrom = (zg && zg.special && zg.special.from) || "2026-10-28";
+    var arch = {}; log.forEach(function (x) { var gg = rows.filter(function (r) { return r.g.id === x.g; })[0]; if (gg && !gg.weekly && x.d !== x.at) arch[x.at] = (arch[x.at] || 0) + 1; });
+    var mdays = {}, ndays = {};
+    function addAll(o, p) { get(p + "mw-days", []).forEach(function (d) { o[d] = 1; }); get(p + "mw-log", []).forEach(function (x) { o[x.at] = 1; }); }
+    addAll(mdays, ""); addAll(ndays, "n-");
+    var nAny = keys.some(function (q) { return /^n-[a-z]+-(day|week)-\d/.test(q || "") && /"done":true/.test(localStorage.getItem(q) || ""); }) || Object.keys(ndays).length > 0;
+    var T = {
+      first: solved >= 1,
+      hattrick: Object.keys(dayG).some(function (d) { return Object.keys(dayG[d]).length >= 3; }),
+      fullward: !!get(P + "mw-wrc", "") || (daily.length > 0 && Object.keys(dayG).some(function (d) { return daily.every(function (id) { return rec[id] && rec[id][d]; }); })),
+      week: best >= 7, month: best >= 30, century: solved >= 100,
+      einstein: get(P + "mw-einstein", []).length > 0 || Object.keys(EINS).some(function (id) { return (EINS[id] || []).some(function (d) { return rec[id] && rec[id][d] && rec[id][d].win; }); }),
+      unicorn: any("zebritis", function (v) { return v.uni; }),
+      superzeb: any("zebritis", function (v, d) { return (v.picks && v.picks.length >= 5) || (d >= zfrom && new Date(dayNum(d) * 864e5).getUTCDay() === 3); }),
+      sunday: any("grandrounds", function (v) { return (v.sa || 0) >= 18; }),
+      cryptic: any("cryptogenic", function (v) { return (v.hints || 0) < 20; }),
+      clean: any("comorbix", function (v) { return v.win && !v.mistakes; }),
+      hole: any("wordemic", function (v) { return v.win && (v.guesses || []).length <= 2; }),
+      firstclue: any("dx", function (v) { return v.win && v.revealed === 1; }),
+      queen: any("morphemia", function (v) { return v.win || (v.rank || 0) >= 6; }),
+      knowall: any("triviosis", function (v) { return v.score === 10; }),
+      speed: any("gridectomy", function (v) { return v.win && (v.t || 999) < 60 && !v.reveals; }),
+      chain: any("linkase", function (v) { return v.win && !v.mistakes; }),
+      mend: any("suturix", function (v) { return v.win && !v.hints; }),
+      archive: Object.keys(arch).some(function (d) { return arch[d] >= 5; }),
+      owl: log.some(function (x) { return x.h >= 0 && x.h < 4; }),
+      tourist: nAny,
+      both: Object.keys(mdays).some(function (d) { return ndays[d]; })
+    };
+    var badges = BADGE_DEFS.filter(function (b) { return !(b[4] === "medical" && N); }).map(function (b) { return { id: b[0], icon: b[1], name: b[2], how: b[3], global: b[4] === "global", got: !!T[b[0]] }; });
+    return { mode: N ? "normie" : "medical", rows: rows, days: days, solved: solved, cur: cur, best: Math.max(best, cur), today: playedToday, badges: badges };
+  }
+  window.MW_myStats = myStats;
+  function seenKey(b, mode) { return (b.global || mode !== "normie" ? "" : "n-") + "mw-badges-seen"; }
+  function markSeen(st) { st.badges.forEach(function (b) { if (!b.got) return; var k = seenKey(b, st.mode), s = get(k, []); if (s.indexOf(b.id) < 0) { s.push(b.id); set(k, s); } }); }
+  window.MW_markBadges = markSeen;
+  function badgeToast(list) {
+    if (!list.length) return;
+    if (busy || Q.length) { setTimeout(function () { badgeToast(list); }, 700); return; }
+    var old = document.getElementById("mw-btoast"); if (old) old.remove();
+    var txt = list.length === 1 ? "Badge unlocked: <b>" + esc2(list[0].name) + "</b>" : list.length + " badges unlocked: <b>" + list.slice(0, 2).map(function (b) { return esc2(b.name); }).join("</b>, <b>") + "</b>" + (list.length > 2 ? " and more" : "");
+    var t = el('<div class="mw-btoast" id="mw-btoast" role="status" aria-live="polite"><a href="/me/"><span class="bt-ic" aria-hidden="true">' + (list.length === 1 ? list[0].icon : "🏅") + '</span><span>🏅 ' + txt + '<small>See your badges ›</small></span></a><button type="button" class="nl-x" aria-label="Dismiss">✕</button></div>');
+    t.querySelector("button").onclick = function () { t.remove(); };
+    document.body.appendChild(t);
+    track("badge/" + list[0].id, "Badge " + list[0].name);
+    setTimeout(function () { if (t.parentNode) { t.classList.add("out"); setTimeout(function () { t.remove(); }, 300); } }, 7000);
+  }
+  function checkBadges() {
+    try {
+      var st = myStats(MODE), fresh = st.badges.filter(function (b) { return b.got && get(seenKey(b, st.mode), []).indexOf(b.id) < 0; });
+      markSeen(st); badgeToast(fresh);
+    } catch (e) {}
+  }
+  window.MW_checkBadges = checkBadges;
 
   // ---------- Zebra Mail nudge after finishing a game ----------
   function nlPrompt() {
@@ -389,7 +509,8 @@
     }
     var s = modal("Settings. Fiddle away.",
       '<div class="opt"><span>Theme</span>' + seg("mw-theme", [["system", "Auto"], ["light", "Light"], ["dark", "Dark"]], t) + "</div>" +
-      '<div class="opt"><span>Animations</span>' + seg("mw-motion", [["full", "On"], ["reduce", "Off"]], m) + "</div>");
+      '<div class="opt"><span>Animations</span>' + seg("mw-motion", [["full", "On"], ["reduce", "Off"]], m) + "</div>" +
+      '<a class="mw-melink" href="/me/">\ud83c\udfc5 My stats, streaks and badges \u203a</a>');
     Array.prototype.forEach.call(s.querySelectorAll(".seg"), function (g) {
       g.onclick = function (e) {
         var b = e.target.closest("button"); if (!b) return;
@@ -416,7 +537,8 @@
     modal(g.name + " stats" + ((g.store && g.store.distTitle) || ""),
       '<div class="mstats"><div><b>' + s.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + s.streak + '</b><span>Streak</span></div><div><b>' + s.best + '</b><span>Best</span></div></div>' +
       '<div class="mdist">' + (s.dist || []).map(function (n, i) { return '<div><span>' + r.labels[i] + '</span><i style="width:' + Math.max(8, Math.round(n / max * 100)) + '%">' + n + "</i></div>"; }).join("") + "</div>" +
-      '<p style="margin:0;color:var(--muted);font-size:13px">Saved in this browser on this device. Clear your browser, lose your glory.</p>');
+      '<p style="margin:0;color:var(--muted);font-size:13px">Saved in this browser on this device. Clear your browser, lose your glory.</p>' +
+      '<a class="mw-melink" href="/me/">\ud83c\udfc5 See all my stats and badges \u203a</a>');
   }
 
 
@@ -552,7 +674,7 @@
       var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly && inMode(g); }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
       var q = d === 0 ? (NORMIE ? "None yet. Kettle on, let's go." : "None yet. The waiting room is full.") : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? (NORMIE ? "Nearly there. Finish strong." : "Nearly there. Finish the round.") : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
-      return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div></div>";
+      return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + '<a class="mw-mestat" href="/me/">\ud83c\udfc5 My stats</a>' + "</div></div>";
     }
     // Health days banner (data/health-days.json). Days and weeks only; months are background themes.
     var HD = null;
