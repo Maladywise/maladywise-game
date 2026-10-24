@@ -537,6 +537,7 @@
     }
     // Health days banner (data/health-days.json). Days and weeks only; months are background themes.
     var HD = null;
+    function inAU() { try { var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; if (/^Australia\//.test(tz)) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
     function healthDay() {
       if (HD === null) {
         HD = false;
@@ -548,6 +549,7 @@
       var yr = today.slice(0, 4);
       var on = HD.filter(function (x) {
         var d = x.dates && x.dates[yr]; if (!d || x.kind === "month") return false;
+        if (x.tags && x.tags.indexOf("au") >= 0 && !inAU()) return false;
         return d.end ? d.start <= today && today <= d.end : d.start === today;
       });
       if (!on.length) return;
