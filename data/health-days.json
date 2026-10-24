@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run).",
+ "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis.",
  "updated": "2026-10-23",
  "days": [
   {
@@ -2221,7 +2221,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://dietitiansaustralia.org.au/dietitians-week",
@@ -2304,7 +2305,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://www.teeth.org.au/dental-health-week",
@@ -2331,7 +2333,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://www.atsihealthpracticeboard.gov.au/News/2023-08-07-national-day-of-recognition.aspx",
@@ -2360,7 +2363,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://www.speechpathologyaustralia.org.au/SPweek",
@@ -2467,7 +2471,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://www.ahpa.com.au/allied-health-professions-day",
@@ -2571,7 +2576,8 @@
     }
    },
    "tags": [
-    "specialty"
+    "specialty",
+    "au"
    ],
    "priority": 1,
    "link": "https://psychology.org.au/insights/psychology-week-2026-save-the-date",
@@ -2701,7 +2707,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://humanrights.gov.au/our-work/aboriginal-and-torres-strait-islander-social-justice/projects/close-gap-indigenous-health",
@@ -2750,7 +2757,9 @@
      "start": "2028-05-15"
     }
    },
-   "tags": [],
+   "tags": [
+    "au"
+   ],
    "priority": 3,
    "link": "https://www.flyingdoctor.org.au",
    "blurb": "Since 1928, the Flying Doctor has been the mantle of safety over the outback.",
@@ -2800,7 +2809,8 @@
     }
    },
    "tags": [
-    "sensitive"
+    "sensitive",
+    "au"
    ],
    "priority": 0,
    "link": "https://www.reconciliation.org.au",
@@ -2828,7 +2838,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.reconciliation.org.au",
@@ -2908,7 +2919,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.naidoc.org.au",
@@ -2933,7 +2945,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.snaicc.org.au",
@@ -2961,7 +2974,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://homelessnessaustralia.org.au/homelessness-week/",
@@ -3011,7 +3025,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.wearitpurple.org",
@@ -3064,7 +3079,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://antipovertyweek.org.au",
@@ -3169,7 +3185,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.febfast.org.au",
@@ -3227,7 +3244,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://ovariancancer.net.au/ovarian-cancer-awareness-month/",
@@ -3256,7 +3274,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.deafnessforum.org.au",
@@ -3287,7 +3306,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.worldsgreatestshave.com",
@@ -3341,7 +3361,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.heartfoundation.org.au/heart-week",
@@ -3369,7 +3390,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://support.dollysdream.org.au/do-it-for-dolly-day",
@@ -3396,7 +3418,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.mothersdayclassic.com.au",
@@ -3423,7 +3446,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.starlight.org.au",
@@ -3450,7 +3474,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.biggestmorningtea.com.au",
@@ -3480,7 +3505,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.bowelcanceraustralia.org",
@@ -3508,7 +3534,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.dryjuly.com",
@@ -3537,7 +3564,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.donatelife.gov.au/donatelife-week",
@@ -3565,7 +3593,8 @@
    },
    "tags": [
     "charity",
-    "zebra"
+    "zebra",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.jeansforgenes.org.au",
@@ -3595,7 +3624,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://strokefoundation.org.au",
@@ -3625,7 +3655,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://kidney.org.au",
@@ -3653,7 +3684,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.daffodilday.com.au",
@@ -3680,7 +3712,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://rednose.org.au/support-red-nose/red-nose-day/",
@@ -3707,7 +3740,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.donatelife.gov.au/news-events/events/2026/jersey-day-2026",
@@ -3765,7 +3799,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.steptember.org.au",
@@ -3794,7 +3829,8 @@
    "tags": [
     "charity",
     "gentle",
-    "sensitive"
+    "sensitive",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.ruok.org.au",
@@ -3854,7 +3890,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://wayahead.org.au/mentalhealthmonth/about-us/",
@@ -3883,7 +3920,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://greatcyclechallenge.com.au",
@@ -3908,7 +3946,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://www.loudshirtday.org",
@@ -3936,7 +3975,8 @@
    },
    "tags": [
     "charity",
-    "gentle"
+    "gentle",
+    "au"
    ],
    "priority": 3,
    "link": "https://canteen.org.au/how-to-support-canteen/bandanna-day",
@@ -3965,7 +4005,8 @@
     }
    },
    "tags": [
-    "charity"
+    "charity",
+    "au"
    ],
    "priority": 3,
    "link": "https://lungfoundation.com.au",
