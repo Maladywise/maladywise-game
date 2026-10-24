@@ -3354,104 +3354,104 @@
   "theme": "Breathless and resistant",
   "questions": [
    {
-    "q": "COPD is confirmed when FEV1/FVC after a bronchodilator is below?",
-    "a": "0.7",
+    "q": "In GOLD spirometric grading, GOLD 3 (severe) COPD means a post-bronchodilator FEV1 of?",
+    "a": "30\u201349% predicted",
     "w": [
-     "0.9",
-     "0.5",
-     "1.0"
+     "50\u201379% predicted",
+     "Under 30% predicted",
+     "60\u201369% predicted"
     ],
-    "e": "Today is World COPD Day."
+    "e": "GOLD 1 is 80% or more, 2 is 50\u201379%, 4 is under 30%. Today is World COPD Day."
    },
    {
-    "q": "The old labels \u2018pink puffer\u2019 and \u2018blue bloater\u2019 meant?",
-    "a": "Emphysema and chronic bronchitis",
+    "q": "The BODE index predicts death in COPD. Besides BMI, FEV1 and breathlessness, it scores?",
+    "a": "Six-minute walk distance",
     "w": [
-     "Asthma and COPD",
-     "Pneumonia and TB",
-     "Heart failure and COPD"
+     "Exacerbations per year",
+     "Arterial PaCO2",
+     "Pack-years smoked"
     ],
-    "e": "Retired labels. Most people have a mix."
+    "e": "Celli and colleagues, NEJM 2004. The E is exercise capacity."
    },
    {
-    "q": "Which inherited deficiency causes early emphysema, sometimes with liver disease?",
-    "a": "Alpha-1 antitrypsin deficiency",
+    "q": "Long-term oxygen improves survival in hypoxaemic COPD. The two landmark trials were NOTT and?",
+    "a": "The MRC trial",
     "w": [
-     "Cystic fibrosis",
-     "Hereditary haemochromatosis",
-     "Glucose-6-phosphate dehydrogenase deficiency"
+     "UPLIFT",
+     "TORCH",
+     "ECLIPSE"
     ],
-    "e": "The ZZ genotype is the classic."
+    "e": "Both published around 1980\u201381. UPLIFT and TORCH tested inhalers; ECLIPSE was an observational cohort."
    },
    {
-    "q": "Chronic bronchitis means a productive cough for 3 months a year, for at least how many years in a row?",
-    "a": "2",
+    "q": "GOLD says inhaled corticosteroids help COPD exacerbations most when blood eosinophils are at least?",
+    "a": "300 cells/\u00b5L",
     "w": [
-     "1",
-     "5",
-     "10"
+     "50 cells/\u00b5L",
+     "1,000 cells/\u00b5L",
+     "3,000 cells/\u00b5L"
     ],
-    "e": ""
+    "e": "Under 100 cells/\u00b5L, benefit is small and pneumonia risk still applies."
    },
    {
-    "q": "Apart from tobacco, a major cause of COPD worldwide is smoke from?",
-    "a": "Cooking and heating fires",
+    "q": "The emphysema of alpha-1 antitrypsin deficiency is classically?",
+    "a": "Panacinar, worst in the lower lobes",
     "w": [
-     "Birthday candles",
-     "Incense",
-     "Bushfire documentaries"
+     "Centriacinar, worst in the upper lobes",
+     "Paraseptal, at the apices",
+     "Bullous, in the lingula only"
     ],
-    "e": "Biomass fuels in poorly ventilated homes."
+    "e": "Smoking-related emphysema is usually centriacinar and upper-lobe."
    },
    {
-    "q": "Howard Florey, who turned penicillin into a usable medicine, was born in?",
-    "a": "Adelaide",
+    "q": "In 1940, before purified penicillin had been given to a single patient, Abraham and Chain described a bacterial enzyme that destroys it, called?",
+    "a": "Penicillinase",
     "w": [
-     "Melbourne",
-     "Sydney",
-     "Perth"
+     "Lysozyme",
+     "Transpeptidase",
+     "Beta-galactosidase"
     ],
-    "e": "Shared the 1945 Nobel Prize with Fleming and Chain. World AMR Awareness Week starts today."
+    "e": "Resistance was spotted before the drug reached the clinic. World AMR Awareness Week starts today."
    },
    {
-    "q": "In 1941 the first patient given purified penicillin was a policeman named?",
-    "a": "Albert Alexander",
+    "q": "The NDM-1 carbapenemase, described in 2009, is named after?",
+    "a": "New Delhi",
     "w": [
-     "Norman Heatley",
-     "Arthur Florey",
-     "Ernst Chain"
+     "Nairobi",
+     "Dhaka",
+     "Karachi"
     ],
-    "e": "A rose-thorn scratch had turned septic. He improved, then supplies ran out."
+    "e": "New Delhi metallo-beta-lactamase, first found in a Swedish patient treated in India."
    },
    {
-    "q": "The M in MRSA stands for?",
-    "a": "Methicillin",
+    "q": "The mcr-1 gene, reported from China in 2015, spreads resistance to which last-line antibiotic?",
+    "a": "Colistin",
     "w": [
-     "Multidrug",
-     "Mupirocin",
-     "Macrolide"
+     "Vancomycin",
+     "Meropenem",
+     "Linezolid"
     ],
-    "e": "Methicillin-resistant Staphylococcus aureus. First reported in the UK in 1961."
+    "e": "It sits on a plasmid, so it moves between bacteria. It was found in pigs, raw meat and people."
    },
    {
-    "q": "In his 1945 Nobel lecture, Fleming warned that?",
-    "a": "Underdosing could breed resistant bacteria",
+    "q": "The GRAM study (Lancet, 2022) estimated deaths directly attributable to bacterial AMR in 2019 at about?",
+    "a": "1.27 million",
     "w": [
-     "Penicillin would cure cancer",
-     "Moulds would replace vaccines",
-     "Penicillin was too toxic for children"
+     "127,000",
+     "4.95 million",
+     "12.7 million"
     ],
-    "e": "He was right."
+    "e": "4.95 million deaths were associated with AMR. 1.27 million were directly caused by it."
    },
    {
-    "q": "Bacteria swap plasmids carrying resistance genes mainly by?",
-    "a": "Conjugation",
+    "q": "VanA vancomycin-resistant enterococci swap the cell-wall end D-Ala-D-Ala for?",
+    "a": "D-Ala-D-Lac",
     "w": [
-     "Sporulation",
-     "Mitosis",
-     "Binary fission"
+     "D-Ala-D-Ser",
+     "L-Ala-L-Ala",
+     "D-Glu-D-Ala"
     ],
-    "e": "Bacterial sharing, via a little bridge called a pilus."
+    "e": "Vancomycin binds D-Ala-D-Lac about 1,000 times less tightly. D-Ala-D-Ser is the low-level VanC trick."
    }
   ]
  },

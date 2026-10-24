@@ -1208,11 +1208,11 @@
   "number": 30,
   "difficulty": "Einstein",
   "rows": [
-   "BLOAT",
-   "EARLY",
-   "ANGER",
-   "SCARE",
-   "TENTS"
+   "ICTUS",
+   "SHONE",
+   "LUPIN",
+   "ETHOS",
+   "SEINE"
   ],
   "across": [
    {
@@ -1220,35 +1220,35 @@
     "r": 0,
     "c": 0,
     "len": 5,
-    "clue": "Swell up, post-Christmas lunch"
+    "clue": "Fit for a poet’s stress?"
    },
    {
     "n": 6,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Before term, or before your first coffee"
+    "clue": "Glowed, like a pupil under the penlight"
    },
    {
     "n": 7,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Ire"
+    "clue": "Garden bloom with a wolf in its Latin roots (not lupus)"
    },
    {
     "n": 8,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Give a fright"
+    "clue": "A ward’s culture, the Greek way"
    },
    {
     "n": 9,
     "r": 4,
     "c": 0,
     "len": 5,
-    "clue": "Things pitched at a campsite"
+    "clue": "Net that runs through Paris"
    }
   ],
   "down": [
@@ -1257,35 +1257,35 @@
     "r": 0,
     "c": 0,
     "len": 5,
-    "clue": "Brute"
+    "clue": "Islets, before they shrank"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
     "len": 5,
-    "clue": "Pierce, as for a newborn heel-prick test"
+    "clue": "Slide that sounds like a shot"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
     "len": 5,
-    "clue": "Lung, liver or kidney"
+    "clue": "Chalky lumps that aren’t kidney stones"
    },
    {
     "n": 4,
     "r": 0,
     "c": 3,
     "len": 5,
-    "clue": "Wide awake, like a NICU nurse at 3 am"
+    "clue": "A fracture’s happy ending"
    },
    {
     "n": 5,
     "r": 0,
     "c": 4,
     "len": 5,
-    "clue": "Pram parts that go flat at the worst moment"
+    "clue": "One of five. Also what this grid may not make"
    }
   ]
  },
