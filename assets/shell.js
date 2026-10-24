@@ -122,7 +122,7 @@
     dx: function (st) {
       if (!st.win) return null;
       var gold = st.revealed === 1;
-      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">CASE<br>CLOSED</div><p class="cb-cap">' + (gold ? "First clue. Frankly suspicious." : "Diagnosed on clue " + st.revealed + ".") + "</p>" };
+      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">CASE<br>CLOSED</div><p class="cb-cap">' + (gold ? "First clue. Frankly suspicious." : (NORMIE ? "Solved on clue " : "Diagnosed on clue ") + st.revealed + ".") + "</p>" };
     },
     wordemic: function (st) {
       if (!st.win) return null;
