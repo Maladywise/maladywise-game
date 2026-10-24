@@ -1,0 +1,763 @@
+[
+ {
+  "week": "2026-10-25",
+  "number": 1,
+  "questions": [
+   {
+    "c": "Art",
+    "q": "A late painting called ‘Iris’ sold for €50 million in Paris on Thursday, a French auction record. Which Impressionist painted it?",
+    "a": "Claude Monet",
+    "e": "Accept Monet. If you said Manet, one vowel cost you €50 million."
+   },
+   {
+    "c": "Telly",
+    "q": "Disney+ and Hulu confirmed a reboot of which Ryan Murphy musical series, originally set at an Ohio high school?",
+    "a": "Glee",
+    "e": "Slushies at the ready. Release date TBC."
+   },
+   {
+    "c": "Formula 1",
+    "q": "Ahead of the US Grand Prix, Guinness certified the world’s largest what at Austin’s Circuit of the Americas?",
+    "a": "Cowboy hat",
+    "e": "Accept hat. About 13 metres wide. Yee-haw, as they say in Austin."
+   },
+   {
+    "c": "Football",
+    "q": "Barcelona’s 11-game winning start to the season ended with a 4–2 Champions League defeat to which club?",
+    "a": "Paris Saint-Germain",
+    "e": "Accept PSG or Paris. Lamine Yamal scored. Didn’t help."
+   },
+   {
+    "c": "Space",
+    "q": "The Orionid meteor shower peaked this week. It’s made of debris from which famous comet?",
+    "a": "Halley’s Comet",
+    "e": "Accept Halley. Not Hailey, not Haley’s. Spelling counts in space."
+   },
+   {
+    "c": "Baseball",
+    "q": "Two teams who have never won a World Series are meeting in this year’s one. Name both.",
+    "a": "Milwaukee Brewers and Tampa Bay Rays",
+    "e": "Accept Brewers and Rays. Need both. Milwaukee’s first World Series since 1982."
+   },
+   {
+    "c": "Football",
+    "q": "Champions League debutants from which Italian lakeside city thrashed Manchester United 4–1 on Wednesday?",
+    "a": "Como",
+    "e": "Accept Como 1907. George Clooney’s neighbours, now giant-killers."
+   },
+   {
+    "c": "Astronomy",
+    "q": "Astronomers at Warwick reported the first known white dwarf star that would look which colour to the human eye?",
+    "a": "Green",
+    "e": "Not white. That was the trap."
+   },
+   {
+    "c": "Mysteries",
+    "q": "Researchers say which undeciphered 15th-century manuscript, held at Yale, may have been bound in the wrong order?",
+    "a": "The Voynich manuscript",
+    "e": "Accept Voynich. Still unreadable, just possibly more unreadable than we thought."
+   },
+   {
+    "c": "Space",
+    "q": "Japan’s MMX probe launched this week to collect samples from which moon of Mars?",
+    "a": "Phobos",
+    "e": "Not Deimos, though it gets flybys. Samples due back in 2031."
+   },
+   {
+    "c": "History",
+    "q": "A rare coin of ‘Olaf the Holy’ was revealed from a Viking hoard this week. He was king, and is now patron saint, of which country?",
+    "a": "Norway",
+    "e": "Fewer than 20 of his coins are known. Not Denmark. Not Sweden. Close, though."
+   },
+   {
+    "c": "MotoGP",
+    "q": "This weekend is Phillip Island’s last MotoGP. Which city’s street circuit takes over the Australian round from 2027?",
+    "a": "Adelaide",
+    "e": "Big weekend for the Island. Bigger crowds for Adelaide, presumably."
+   },
+   {
+    "c": "History",
+    "q": "Archaeologists think a medieval abbot was buried in a reused Roman sarcophagus at which famous London church?",
+    "a": "Westminster Abbey",
+    "e": "Probably Abbot Aelfwig, who died around 1020. Recycling, the medieval way."
+   },
+   {
+    "c": "Space",
+    "q": "Webb found surprisingly metal-rich gas around the black hole at the centre of our galaxy. What is that black hole called?",
+    "a": "Sagittarius A*",
+    "e": "Accept Sagittarius A, Sgr A* or Sag A star."
+   },
+   {
+    "c": "Records",
+    "q": "South Africa ran a 7.6 km, 696-wagon iron-ore train this week, breaking which Australian miner’s 25-year-old record?",
+    "a": "BHP",
+    "e": "Accept BHP Billiton or BHP Iron Ore. BHP’s 2001 train had 682 wagons."
+   },
+   {
+    "c": "Baseball",
+    "q": "The Brewers are in their first World Series since which year?",
+    "a": "1982",
+    "e": "They lost that one to St Louis. In seven."
+   },
+   {
+    "c": "MotoGP",
+    "q": "Heading into this weekend’s Australian round, which Spaniard led Marc Márquez in the MotoGP standings by just two points?",
+    "a": "Jorge Martín",
+    "e": "Accept Martín or Martinator. 355 to 353 with five rounds left."
+   },
+   {
+    "c": "Football",
+    "q": "Which Argentine scored twice and set up another in Como’s 4–1 win over Manchester United?",
+    "a": "Nico Paz",
+    "e": "Accept Paz. Real Madrid alumnus, Como’s main man."
+   },
+   {
+    "c": "Space",
+    "q": "How many grams of Phobos does Japan’s MMX mission aim to bring back to Earth?",
+    "a": "10 grams",
+    "e": "Accept 10. Small jar, long trip. Due home in 2031."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "The rover hitching a ride on Japan’s Phobos mission is called Idefix, after a comic-strip dog. What is that dog called in English?",
+    "a": "Dogmatix",
+    "e": "Obelix’s dog in Asterix. Idéfix in French, a pun on ‘idée fixe’. Melted yet?"
+   }
+  ]
+ },
+ {
+  "week": "2026-11-01",
+  "number": 2,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Weird but true",
+    "q": "Wombats produce poo in what shape?",
+    "a": "Cubes",
+    "e": "Accept cube or cube-shaped. Stackable. Very tidy animals."
+   },
+   {
+    "c": "Weird but true",
+    "q": "How many hearts does an octopus have?",
+    "a": "Three",
+    "e": "Two for the gills, one for everything else."
+   },
+   {
+    "c": "Weird but true",
+    "q": "What is Scotland’s national animal?",
+    "a": "The unicorn",
+    "e": "Not the Highland cow. Sorry, Highland cow."
+   },
+   {
+    "c": "Weird but true",
+    "q": "What colour is a polar bear’s skin, under the fur?",
+    "a": "Black",
+    "e": "The fur isn’t even white. It’s clear."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Which bird is the only one that can fly backwards?",
+    "a": "The hummingbird",
+    "e": "Accept hummingbird. Not the emu. Emus don’t do forwards either."
+   },
+   {
+    "c": "Weird but true",
+    "q": "In seahorses, which parent carries the eggs and gives birth?",
+    "a": "The male",
+    "e": "Accept the father or dad. Equality, seahorse-style."
+   },
+   {
+    "c": "Weird but true",
+    "q": "What is the collective noun for a group of flamingos?",
+    "a": "A flamboyance",
+    "e": "Accept flamboyance. Also a stand. Flamboyance is better."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Archaeologists have found what food, thousands of years old and still edible, in ancient Egyptian tombs?",
+    "a": "Honey",
+    "e": "It basically never spoils. Your sourdough starter could never."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Which planet has a day that’s longer than its year?",
+    "a": "Venus",
+    "e": "243 Earth days to spin, 225 to orbit. Slow mornings."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Bananas are slightly radioactive because they contain which element?",
+    "a": "Potassium",
+    "e": "Potassium-40, to be exact. You’d need millions at once."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Botanically, strawberries aren’t berries. Which long yellow fruit is?",
+    "a": "The banana",
+    "e": "Accept banana. Botany doesn’t care about your feelings."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Sharks have been around longer than which tall living things you’d find in any forest?",
+    "a": "Trees",
+    "e": "Sharks: about 450 million years. Trees: about 385 million."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Which country has more ancient pyramids than Egypt?",
+    "a": "Sudan",
+    "e": "Around 200 to 255 of them, mostly Nubian."
+   },
+   {
+    "c": "Weird but true",
+    "q": "What is the dot over a lowercase i or j called?",
+    "a": "A tittle",
+    "e": "Yes, really. Go on, giggle."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Which is the only mammal capable of true powered flight?",
+    "a": "The bat",
+    "e": "Accept bat. Flying squirrels just glide. Show-offs."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Cleopatra lived closer in time to the Moon landing than to the building of which structure?",
+    "a": "The Great Pyramid of Giza",
+    "e": "Accept the Great Pyramid or the pyramids at Giza."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Teaching at Oxford University began before which Mesoamerican people founded their capital, Tenochtitlan?",
+    "a": "The Aztecs",
+    "e": "Accept Aztec or Mexica. Oxford: by 1096. Tenochtitlan: 1325."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Whose fingerprints are so like a human’s they’re hard to tell apart, even under a microscope?",
+    "a": "The koala",
+    "e": "Accept koala. Cute and forensically awkward."
+   },
+   {
+    "c": "Weird but true",
+    "q": "Male platypuses have what on their hind legs, unusually for a mammal?",
+    "a": "Venomous spurs",
+    "e": "Accept venom spurs, spurs or venom. Egg-laying, duck-billed and venomous. Showing off, frankly."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which is the only letter of the alphabet that doesn’t appear in the name of any US state?",
+    "a": "Q",
+    "e": "Fifty states and not one Q. Count them if you must. We’ll wait."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-08",
+  "number": 3,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "What is the capital of Canada?",
+    "a": "Ottawa",
+    "e": "Not Toronto. Not Vancouver. Never Montreal."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "What is the smallest country in the world by area?",
+    "a": "Vatican City",
+    "e": "Accept the Vatican or Holy See. About 0.44 square kilometres."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "How many keys does a standard modern piano have?",
+    "a": "88",
+    "e": "52 white, 36 black."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which country gave the Statue of Liberty to the United States?",
+    "a": "France",
+    "e": "Unveiled in 1886. Gustave Eiffel designed the frame."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Who painted ‘The Persistence of Memory’, with the melting clocks?",
+    "a": "Salvador Dalí",
+    "e": "Accept Dalí. Moustache not included."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which composer wrote ‘The Four Seasons’?",
+    "a": "Antonio Vivaldi",
+    "e": "Accept Vivaldi."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "In which year did the first Harry Potter book come out in the UK?",
+    "a": "1997",
+    "e": "Philosopher’s Stone. Not Sorcerer’s. Not here."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which language has the most native speakers in the world?",
+    "a": "Mandarin Chinese",
+    "e": "Accept Mandarin or Chinese. English wins on total speakers, not native ones."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which planet has the most known moons?",
+    "a": "Saturn",
+    "e": "Accept Saturn. Jupiter keeps trying. Saturn keeps winning."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "What is the chemical symbol W short for?",
+    "a": "Tungsten",
+    "e": "From its old name, wolfram. Accept wolfram, smarty."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Counting cold deserts, what is the largest desert in the world?",
+    "a": "Antarctica",
+    "e": "Not the Sahara. The Sahara is the largest hot one."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which Shakespeare play features the moneylender Shylock?",
+    "a": "The Merchant of Venice",
+    "e": "Accept Merchant of Venice."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Who was the first woman to win a Nobel Prize?",
+    "a": "Marie Curie",
+    "e": "Accept Curie. Physics in 1903, chemistry in 1911. Overachiever."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "What is the currency of Vietnam?",
+    "a": "The dong",
+    "e": "Accept dong. Yes, sniggering is allowed."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Who wrote ‘One Hundred Years of Solitude’?",
+    "a": "Gabriel García Márquez",
+    "e": "Accept García Márquez or Márquez. Gabo to his fans."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which sea has no coastline at all?",
+    "a": "The Sargasso Sea",
+    "e": "Accept Sargasso. Bounded by ocean currents, not land."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "In which city is the Atomium, a giant model of an iron crystal built for the 1958 World’s Fair?",
+    "a": "Brussels",
+    "e": "Not Paris. Paris got the tower. Brussels got the molecule."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which two countries share the world’s longest international border?",
+    "a": "Canada and the United States",
+    "e": "Accept Canada and the US. Need both. About 8,890 km."
+   },
+   {
+    "c": "Pub trivia: hard mode",
+    "q": "Which landlocked European country is so small it’s also doubly landlocked, bordered by Switzerland and Austria?",
+    "a": "Liechtenstein",
+    "e": "Only it and Uzbekistan are doubly landlocked."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "What is the only number whose letters, spelled out in English, are in alphabetical order?",
+    "a": "Forty",
+    "e": "F, O, R, T, Y. Go on, check. We’ll wait."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-15",
+  "number": 4,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Records and firsts",
+    "q": "Who was the first person to walk on the Moon?",
+    "a": "Neil Armstrong",
+    "e": "Accept Armstrong. Buzz Aldrin was second. Nobody remembers second."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "What is the tallest building in the world?",
+    "a": "The Burj Khalifa",
+    "e": "Accept Burj Khalifa. Dubai, about 828 metres."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "What is the fastest land animal?",
+    "a": "The cheetah",
+    "e": "Accept cheetah. Your Uber driver doesn’t count."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Which city hosted the first modern Olympic Games, in 1896?",
+    "a": "Athens",
+    "e": "Accept Athens or Greece."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Which is the largest ocean on Earth?",
+    "a": "The Pacific",
+    "e": "Accept Pacific."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "In 1893, which country became the first to give women the vote in national elections?",
+    "a": "New Zealand",
+    "e": "Beat Australia by nine years. Don’t bring it up at the barbecue."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who holds the men’s 100 metres world record?",
+    "a": "Usain Bolt",
+    "e": "Accept Bolt. 9.58 seconds, Berlin, 2009."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who was the first woman in space?",
+    "a": "Valentina Tereshkova",
+    "e": "Accept Tereshkova. Vostok 6, 1963."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who led the first expedition to reach the South Pole, in 1911?",
+    "a": "Roald Amundsen",
+    "e": "Accept Amundsen. Beat Scott by about five weeks."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who is the longest-reigning British monarch?",
+    "a": "Elizabeth II",
+    "e": "Accept Queen Elizabeth II. 70 years. Victoria managed 63."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "What was Disney’s first feature-length animated film?",
+    "a": "Snow White and the Seven Dwarfs",
+    "e": "Accept Snow White. 1937."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Which New Zealander was first to the summit of Everest, with Tenzing Norgay?",
+    "a": "Edmund Hillary",
+    "e": "Accept Hillary. 1953."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "What is the deepest known point in the ocean?",
+    "a": "The Challenger Deep",
+    "e": "Accept Mariana Trench. About 11 km down."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Measured from base to peak, what is the tallest mountain on Earth?",
+    "a": "Mauna Kea",
+    "e": "About 10,200 m, mostly underwater. Everest wins above sea level only."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Which is the longest-running show in Broadway history?",
+    "a": "The Phantom of the Opera",
+    "e": "Accept Phantom. Nearly 14,000 performances before closing in 2023."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who was the first person recorded swimming the English Channel without help, in 1875?",
+    "a": "Matthew Webb",
+    "e": "Accept Captain Webb or Webb. Nearly 22 hours."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Who sent the first email between computers, in 1971, and picked the @ sign for it?",
+    "a": "Ray Tomlinson",
+    "e": "Accept Tomlinson. He said he couldn’t remember what it said."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "What was the first home video game console, released in 1972?",
+    "a": "The Magnavox Odyssey",
+    "e": "Accept Odyssey or Magnavox. Before Atari, believe it or not."
+   },
+   {
+    "c": "Records and firsts",
+    "q": "Which Australian natural wonder is often called the largest structure built by living things?",
+    "a": "The Great Barrier Reef",
+    "e": "Accept Great Barrier Reef. Visible from space, on a clear day."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "What was the first product scanned by barcode at a supermarket till, in Ohio in 1974?",
+    "a": "A packet of Wrigley’s Juicy Fruit gum",
+    "e": "Accept Juicy Fruit or chewing gum. 10 packs, 67 cents. Now in the Smithsonian."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-22",
+  "number": 5,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Origins",
+    "q": "The sandwich is named after an 18th-century Earl of where?",
+    "a": "Sandwich",
+    "e": "Not a trick. Mostly."
+   },
+   {
+    "c": "Origins",
+    "q": "The hamburger takes its name from which German city?",
+    "a": "Hamburg",
+    "e": "Not from ham. There’s no ham in it. Never was."
+   },
+   {
+    "c": "Origins",
+    "q": "Which country invented paper?",
+    "a": "China",
+    "e": "Around 2,000 years ago. Credit usually goes to Cai Lun."
+   },
+   {
+    "c": "Origins",
+    "q": "The QWERTY layout was designed for which machine?",
+    "a": "The typewriter",
+    "e": "Accept typewriter. Long before your laptop."
+   },
+   {
+    "c": "Origins",
+    "q": "LEGO comes from the Danish ‘leg godt’. What does that mean?",
+    "a": "Play well",
+    "e": "Accept play well. Stepping on one is not playing well."
+   },
+   {
+    "c": "Origins",
+    "q": "Velcro was inspired by what clinging to a Swiss engineer’s dog after a walk?",
+    "a": "Burrs",
+    "e": "Accept burdock burrs or seeds. George de Mestral, 1940s."
+   },
+   {
+    "c": "Origins",
+    "q": "Bubble wrap was first invented in 1957 as what?",
+    "a": "Textured wallpaper",
+    "e": "Accept wallpaper. Nobody wanted it. Then everybody did."
+   },
+   {
+    "c": "Origins",
+    "q": "Post-it Notes came from a failed attempt to make a super-strong what?",
+    "a": "Glue",
+    "e": "Accept adhesive or glue. Spencer Silver at 3M."
+   },
+   {
+    "c": "Origins",
+    "q": "What does the Japanese word ‘emoji’ mean?",
+    "a": "Picture character",
+    "e": "Accept picture plus character or picture letter. Nothing to do with emotion. Mind blown."
+   },
+   {
+    "c": "Origins",
+    "q": "The word ‘robot’ comes from a 1920 play by a writer from which country?",
+    "a": "Czechoslovakia",
+    "e": "Accept Czech Republic or Czechia. Karel Čapek’s R.U.R."
+   },
+   {
+    "c": "Origins",
+    "q": "Jeans are named after which Italian city, where the cloth was made?",
+    "a": "Genoa",
+    "e": "Denim comes from ‘de Nîmes’, in France."
+   },
+   {
+    "c": "Origins",
+    "q": "The croissant’s crescent-shaped ancestor, the kipferl, came from which country?",
+    "a": "Austria",
+    "e": "Accept Austria or Vienna. France just made it flakier."
+   },
+   {
+    "c": "Origins",
+    "q": "Which Australian science agency developed key Wi-Fi technology in the 1990s?",
+    "a": "CSIRO",
+    "e": "Accept CSIRO."
+   },
+   {
+    "c": "Origins",
+    "q": "The microwave oven was invented after radar melted what in engineer Percy Spencer’s pocket?",
+    "a": "A chocolate bar",
+    "e": "Accept chocolate or a candy bar. 1945."
+   },
+   {
+    "c": "Origins",
+    "q": "Which board game was first called Lexiko, then Criss-Crosswords?",
+    "a": "Scrabble",
+    "e": "Alfred Butts, an out-of-work architect, 1930s."
+   },
+   {
+    "c": "Origins",
+    "q": "In Italian, the @ symbol is called ‘chiocciola’. What animal is that?",
+    "a": "A snail",
+    "e": "Accept snail. Look at it. It’s a snail."
+   },
+   {
+    "c": "Origins",
+    "q": "The Frisbee is named after a bakery whose empty pie tins students threw. What was the bakery called?",
+    "a": "The Frisbie Pie Company",
+    "e": "Accept Frisbie or Frisbie Baking Company. Bridgeport, Connecticut."
+   },
+   {
+    "c": "Origins",
+    "q": "The word ‘pyjamas’ came into English from which language?",
+    "a": "Hindi",
+    "e": "Accept Hindi, Urdu or Persian. ‘Leg garment’."
+   },
+   {
+    "c": "Origins",
+    "q": "The tuxedo is named after a town in which US state?",
+    "a": "New York",
+    "e": "Tuxedo Park, a 19th-century country club. Accept New York State."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "The word ‘nerd’ first appeared in print in a 1950 children’s book by which author?",
+    "a": "Dr Seuss",
+    "e": "‘If I Ran the Zoo’. Accept Theodor Geisel. Nerdy of you to know."
+   }
+  ]
+ },
+ {
+  "week": "2026-11-29",
+  "number": 6,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Strange geography",
+    "q": "Which continent has no countries at all?",
+    "a": "Antarctica",
+    "e": "Plenty of claims. Zero countries. Lots of penguins."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which country is shaped like a boot?",
+    "a": "Italy",
+    "e": "Kicking Sicily, apparently."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which city sits on two continents, Europe and Asia?",
+    "a": "Istanbul",
+    "e": "Accept Istanbul. Not Constantinople. Not any more."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Lake Hillier in Western Australia is famous for being which colour?",
+    "a": "Pink",
+    "e": "Algae and salt. Not food colouring."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which is the world’s largest lake by area?",
+    "a": "The Caspian Sea",
+    "e": "Accept Caspian. A sea in name only."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which country is completely surrounded by South Africa?",
+    "a": "Lesotho",
+    "e": "Accept Lesotho. Eswatini only nearly."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which African country was formerly called Abyssinia?",
+    "a": "Ethiopia",
+    "e": ""
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which is the only country whose national flag is neither a rectangle nor a square?",
+    "a": "Nepal",
+    "e": "Two stacked triangles. Rule-breaker."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which Bolivian city is the world’s highest seat of government?",
+    "a": "La Paz",
+    "e": "About 3,640 metres up. Bring a jumper."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Counting overseas territories, which country has the most time zones?",
+    "a": "France",
+    "e": "Twelve. Russia has eleven. Thanks, overseas territories."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Australia is wider from east to west than which body’s diameter?",
+    "a": "The Moon",
+    "e": "Accept Moon. About 4,000 km versus 3,474 km."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which country has the most islands?",
+    "a": "Sweden",
+    "e": "Over 260,000. Accept Sweden only. Not the Philippines. Not Indonesia."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which US state is closest to Africa?",
+    "a": "Maine",
+    "e": "Not Florida. Look at a globe, not a flat map."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Point Nemo, the place furthest from any land, is in which ocean?",
+    "a": "The Pacific",
+    "e": "Accept South Pacific. Nearest humans are often on the space station."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Bir Tawil is land that no country claims. Which two countries is it between?",
+    "a": "Egypt and Sudan",
+    "e": "Need both. Neither wants it, for complicated reasons."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Name a country whose flag shows a map of the country itself.",
+    "a": "Cyprus",
+    "e": "Accept Cyprus or Kosovo."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which river flows through more countries than any other?",
+    "a": "The Danube",
+    "e": "Accept Danube. Ten countries, four capitals."
+   },
+   {
+    "c": "Strange geography",
+    "q": "Which two countries are the only doubly landlocked ones in the world?",
+    "a": "Liechtenstein and Uzbekistan",
+    "e": "Need both. Surrounded only by other landlocked countries."
+   },
+   {
+    "c": "Strange geography",
+    "q": "What is the world’s southernmost national capital?",
+    "a": "Wellington",
+    "e": "Accept Wellington, New Zealand. About 41 degrees south."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which country shares France’s longest land border?",
+    "a": "Brazil",
+    "e": "Via French Guiana. 730 km, longer than the border with Spain. Melted yet?"
+   }
+  ]
+ }
+]
