@@ -428,43 +428,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Lobes of the brain",
+    "label": "Sex hormones",
     "level": 1,
     "words": [
-     "FRONTAL",
-     "PARIETAL",
-     "TEMPORAL",
-     "OCCIPITAL"
+     "OESTROGEN",
+     "PROGESTERONE",
+     "TESTOSTERONE",
+     "OESTRADIOL"
     ]
    },
    {
-    "label": "Surgical instruments",
-    "level": 1,
-    "words": [
-     "SCALPEL",
-     "FORCEPS",
-     "RETRACTOR",
-     "CLAMP"
-    ]
-   },
-   {
-    "label": "Parts of the kidney",
+    "label": "Corticosteroids",
     "level": 2,
     "words": [
-     "GLOMERULUS",
-     "NEPHRON",
-     "URETER",
-     "CALYX"
+     "PREDNISONE",
+     "CORTISONE",
+     "BUDESONIDE",
+     "FLUTICASONE"
     ]
    },
    {
-    "label": "ACE inhibitors",
-    "level": 2,
+    "label": "Chromosome terms",
+    "level": 3,
     "words": [
-     "RAMIPRIL",
-     "PERINDOPRIL",
-     "ENALAPRIL",
-     "LISINOPRIL"
+     "GENE",
+     "ALLELE",
+     "LOCUS",
+     "KARYOTYPE"
+    ]
+   },
+   {
+    "label": "Hidden body parts",
+    "level": 4,
+    "words": [
+     "SHINGLES",
+     "LEGIONELLA",
+     "PHARMACY",
+     "HIPPOCAMPUS"
     ]
    }
   ]
@@ -478,10 +478,10 @@
     "label": "Mobility aids",
     "level": 1,
     "words": [
-     "WALKER",
      "CRUTCHES",
-     "WHEELCHAIR",
-     "WALKING STICK"
+     "WALKER",
+     "SCOOTER",
+     "ROLLATOR"
     ]
    },
    {
@@ -496,22 +496,22 @@
    },
    {
     "label": "Instrumental activities of daily living",
-    "level": 2,
+    "level": 3,
     "words": [
      "SHOPPING",
-     "COOKING",
      "BANKING",
-     "DRIVING"
+     "DRIVING",
+     "COOKING"
     ]
    },
    {
-    "label": "Types of hand grip",
-    "level": 3,
+    "label": "___ chair",
+    "level": 4,
     "words": [
-     "POWER",
-     "PINCH",
-     "HOOK",
-     "TRIPOD"
+     "WHEEL",
+     "SHOWER",
+     "COMMODE",
+     "HIGH"
     ]
    }
   ]
@@ -522,7 +522,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Skin conditions",
+    "label": "Inflammatory skin conditions",
     "level": 1,
     "words": [
      "ECZEMA",
@@ -532,17 +532,7 @@
     ]
    },
    {
-    "label": "STIs",
-    "level": 2,
-    "words": [
-     "CHLAMYDIA",
-     "GONORRHOEA",
-     "SYPHILIS",
-     "HERPES"
-    ]
-   },
-   {
-    "label": "Reflux medicines",
+    "label": "Proton pump inhibitors",
     "level": 2,
     "words": [
      "OMEPRAZOLE",
@@ -552,63 +542,73 @@
     ]
    },
    {
-    "label": "Units",
+    "label": "Thrush treatments",
     "level": 3,
     "words": [
-     "MMOL",
-     "MCG",
-     "IU",
-     "MG"
+     "FLUCONAZOLE",
+     "CLOTRIMAZOLE",
+     "MICONAZOLE",
+     "NYSTATIN"
+    ]
+   },
+   {
+    "label": "___ rash",
+    "level": 4,
+    "words": [
+     "NAPPY",
+     "HEAT",
+     "BUTTERFLY",
+     "RAZOR"
     ]
    }
   ]
  },
  {
-  "groups": [
-   {
-    "label": "Stroke risk factors",
-    "level": 1,
-    "words": [
-     "SMOKING",
-     "DIABETES",
-     "HYPERTENSION",
-     "ATRIAL FIBRILLATION"
-    ]
-   },
-   {
-    "label": "Signs of a stroke",
-    "level": 2,
-    "words": [
-     "FACIAL DROOP",
-     "SLURRED SPEECH",
-     "ARM WEAKNESS",
-     "NUMBNESS"
-    ]
-   },
-   {
-    "label": "Types of psoriasis",
-    "level": 3,
-    "words": [
-     "PLAQUE",
-     "GUTTATE",
-     "PUSTULAR",
-     "INVERSE"
-    ]
-   },
-   {
-    "label": "___ stroke",
-    "level": 4,
-    "words": [
-     "HEAT",
-     "BRUSH",
-     "MASTER",
-     "BACK"
-    ]
-   }
-  ],
   "date": "2026-10-29",
   "number": 13,
-  "difficulty": "Einstein"
+  "difficulty": "Einstein",
+  "groups": [
+   {
+    "label": "Stroke mimics",
+    "level": 1,
+    "words": [
+     "MIGRAINE",
+     "SEIZURE",
+     "HYPOGLYCAEMIA",
+     "BELL'S PALSY"
+    ]
+   },
+   {
+    "label": "Brainstem stroke syndromes",
+    "level": 2,
+    "words": [
+     "WALLENBERG",
+     "WEBER",
+     "BENEDIKT",
+     "LOCKED-IN"
+    ]
+   },
+   {
+    "label": "Psoriasis eponyms",
+    "level": 3,
+    "words": [
+     "AUSPITZ",
+     "KOEBNER",
+     "WORONOFF",
+     "MUNRO"
+    ]
+   },
+   {
+    "label": "Hidden TIA",
+    "level": 4,
+    "words": [
+     "DEMENTIA",
+     "INERTIA",
+     "ESSENTIAL",
+     "POTENTIAL"
+    ]
+   }
+  ]
  },
  {
   "date": "2026-10-30",
@@ -617,42 +617,42 @@
   "groups": [
    {
     "label": "Viral rashes of childhood",
-    "level": 2,
+    "level": 1,
     "words": [
      "MEASLES",
      "RUBELLA",
-     "CHICKENPOX",
-     "ROSEOLA"
-    ]
-   },
-   {
-    "label": "Types of stone",
-    "level": 3,
-    "words": [
-     "KIDNEY",
-     "GALL",
-     "BLADDER",
-     "TONSIL"
-    ]
-   },
-   {
-    "label": "Back of the brain",
-    "level": 3,
-    "words": [
-     "PONS",
-     "MEDULLA",
-     "MIDBRAIN",
-     "CEREBELLUM"
+     "ROSEOLA",
+     "CHICKENPOX"
     ]
    },
    {
     "label": "___ tooth",
-    "level": 4,
+    "level": 2,
     "words": [
      "SWEET",
      "WISDOM",
-     "BABY",
-     "MILK"
+     "MILK",
+     "EYE"
+    ]
+   },
+   {
+    "label": "___ stone",
+    "level": 3,
+    "words": [
+     "KIDNEY",
+     "GALL",
+     "MILE",
+     "BLADDER"
+    ]
+   },
+   {
+    "label": "Numbered rash 'diseases'",
+    "level": 4,
+    "words": [
+     "FIRST",
+     "SECOND",
+     "FIFTH",
+     "SIXTH"
     ]
    }
   ]
@@ -663,33 +663,33 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Classic poisons",
+    "label": "Toxic elements",
     "level": 1,
     "words": [
      "ARSENIC",
-     "CYANIDE",
-     "STRYCHNINE",
-     "HEMLOCK"
+     "THALLIUM",
+     "MERCURY",
+     "LEAD"
     ]
    },
    {
-    "label": "Bones of the skull",
+    "label": "Poisonous plants",
     "level": 2,
     "words": [
-     "SPHENOID",
-     "ETHMOID",
-     "VOMER",
-     "LACRIMAL"
+     "HEMLOCK",
+     "FOXGLOVE",
+     "BELLADONNA",
+     "WOLFSBANE"
     ]
    },
    {
-    "label": "Diseases blamed for monster myths",
+    "label": "Diseases behind monster myths",
     "level": 3,
     "words": [
      "PORPHYRIA",
-     "HYPERTRICHOSIS",
-     "CATATONIA",
-     "RABIES"
+     "RABIES",
+     "PELLAGRA",
+     "CATATONIA"
     ]
    },
    {

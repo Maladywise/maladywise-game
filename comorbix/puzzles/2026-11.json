@@ -5,43 +5,43 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Blood thinners",
-    "level": 2,
+    "label": "Anticoagulants",
+    "level": 1,
     "words": [
      "WARFARIN",
      "HEPARIN",
      "APIXABAN",
-     "RIVAROXABAN"
+     "DABIGATRAN"
     ]
    },
    {
-    "label": "Newborn words",
+    "label": "NSAIDs",
+    "level": 2,
+    "words": [
+     "IBUPROFEN",
+     "NAPROXEN",
+     "DICLOFENAC",
+     "ASPIRIN"
+    ]
+   },
+   {
+    "label": "Prostate cancer drugs",
     "level": 3,
     "words": [
-     "APGAR",
-     "VERNIX",
-     "LANUGO",
-     "MECONIUM"
+     "GOSERELIN",
+     "BICALUTAMIDE",
+     "ENZALUTAMIDE",
+     "ABIRATERONE"
     ]
    },
    {
-    "label": "Rugby league positions",
+    "label": "Moustache styles",
     "level": 4,
     "words": [
-     "PROP",
-     "LOCK",
-     "CENTRE",
-     "FULLBACK"
-    ]
-   },
-   {
-    "label": "Body parts that are verbs",
-    "level": 4,
-    "words": [
-     "ELBOW",
-     "SHOULDER",
-     "STOMACH",
-     "FOOT"
+     "HANDLEBAR",
+     "WALRUS",
+     "PENCIL",
+     "HORSESHOE"
     ]
    }
   ]
@@ -52,43 +52,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Facial features",
+    "label": "Pathology samples",
     "level": 1,
     "words": [
-     "NOSE",
-     "CHIN",
-     "CHEEK",
-     "BROW"
+     "URINE",
+     "STOOL",
+     "SPUTUM",
+     "SWAB"
     ]
    },
    {
-    "label": "Painkillers",
-    "level": 1,
-    "words": [
-     "PARACETAMOL",
-     "IBUPROFEN",
-     "CODEINE",
-     "ASPIRIN"
-    ]
-   },
-   {
-    "label": "Types of arthritis",
+    "label": "White cells",
     "level": 2,
     "words": [
-     "GOUT",
-     "PSORIATIC",
-     "RHEUMATOID",
-     "OSTEO"
+     "NEUTROPHIL",
+     "LYMPHOCYTE",
+     "MONOCYTE",
+     "BASOPHIL"
     ]
    },
    {
     "label": "Ear and balance problems",
-    "level": 2,
+    "level": 3,
     "words": [
      "TINNITUS",
      "VERTIGO",
      "OTITIS",
      "GLUE EAR"
+    ]
+   },
+   {
+    "label": "___ cell",
+    "level": 4,
+    "words": [
+     "SICKLE",
+     "STEM",
+     "KILLER",
+     "GOBLET"
     ]
    }
   ]
@@ -98,16 +98,6 @@
   "number": 18,
   "difficulty": "Easy",
   "groups": [
-   {
-    "label": "Pain words",
-    "level": 1,
-    "words": [
-     "ACHE",
-     "STING",
-     "THROB",
-     "CRAMP"
-    ]
-   },
    {
     "label": "Types of teeth",
     "level": 1,
@@ -119,23 +109,33 @@
     ]
    },
    {
-    "label": "Asthma medicines",
+    "label": "Inhaled medicines",
     "level": 2,
     "words": [
      "SALBUTAMOL",
-     "BUDESONIDE",
-     "FLUTICASONE",
-     "MONTELUKAST"
+     "TIOTROPIUM",
+     "FORMOTEROL",
+     "IPRATROPIUM"
     ]
    },
    {
-    "label": "Types of joint",
-    "level": 2,
+    "label": "Beta blockers",
+    "level": 3,
     "words": [
-     "HINGE",
-     "PIVOT",
-     "SADDLE",
-     "BALL AND SOCKET"
+     "ATENOLOL",
+     "METOPROLOL",
+     "PROPRANOLOL",
+     "BISOPROLOL"
+    ]
+   },
+   {
+    "label": "___ache",
+    "level": 4,
+    "words": [
+     "TOOTH",
+     "BELLY",
+     "HEAD",
+     "EAR"
     ]
    }
   ]
@@ -156,33 +156,33 @@
     ]
    },
    {
-    "label": "Anticonvulsants",
+    "label": "Lung function measures",
     "level": 2,
-    "words": [
-     "VALPROATE",
-     "LEVETIRACETAM",
-     "LAMOTRIGINE",
-     "CARBAMAZEPINE"
-    ]
-   },
-   {
-    "label": "Hand conditions",
-    "level": 2,
-    "words": [
-     "CARPAL TUNNEL",
-     "TRIGGER FINGER",
-     "DUPUYTREN",
-     "DE QUERVAIN"
-    ]
-   },
-   {
-    "label": "Lung volumes",
-    "level": 3,
     "words": [
      "TIDAL",
      "RESIDUAL",
      "VITAL",
      "FEV1"
+    ]
+   },
+   {
+    "label": "Hand eponyms",
+    "level": 3,
+    "words": [
+     "DUPUYTREN",
+     "DE QUERVAIN",
+     "HEBERDEN",
+     "BOUCHARD"
+    ]
+   },
+   {
+    "label": "___ finger",
+    "level": 4,
+    "words": [
+     "TRIGGER",
+     "MALLET",
+     "JERSEY",
+     "SAUSAGE"
     ]
    }
   ]
@@ -203,33 +203,33 @@
     ]
    },
    {
-    "label": "Beta blockers",
-    "level": 2,
-    "words": [
-     "METOPROLOL",
-     "ATENOLOL",
-     "BISOPROLOL",
-     "PROPRANOLOL"
-    ]
-   },
-   {
     "label": "Wrist bones",
     "level": 2,
     "words": [
      "SCAPHOID",
      "LUNATE",
      "HAMATE",
-     "PISIFORM"
+     "TRAPEZIUM"
     ]
    },
    {
-    "label": "Bone cells",
+    "label": "Back and shoulder muscles",
     "level": 3,
     "words": [
-     "OSTEOBLAST",
-     "OSTEOCLAST",
-     "OSTEOCYTE",
-     "CHONDROCYTE"
+     "TRAPEZIUS",
+     "DELTOID",
+     "LATISSIMUS",
+     "RHOMBOID"
+    ]
+   },
+   {
+    "label": "___ storm",
+    "level": 4,
+    "words": [
+     "THYROID",
+     "BRAIN",
+     "SYMPATHETIC",
+     "ELECTRICAL"
     ]
    }
   ]
@@ -240,28 +240,8 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Rotator cuff",
-    "level": 2,
-    "words": [
-     "SUPRASPINATUS",
-     "INFRASPINATUS",
-     "TERES MINOR",
-     "SUBSCAPULARIS"
-    ]
-   },
-   {
-    "label": "Pituitary hormones",
-    "level": 3,
-    "words": [
-     "GH",
-     "TSH",
-     "ACTH",
-     "PROLACTIN"
-    ]
-   },
-   {
     "label": "Signs of appendicitis",
-    "level": 3,
+    "level": 1,
     "words": [
      "ROVSING",
      "PSOAS",
@@ -270,13 +250,33 @@
     ]
    },
    {
-    "label": "Named after animals (Latin/Greek)",
+    "label": "Liver function tests",
+    "level": 2,
+    "words": [
+     "ALT",
+     "AST",
+     "GGT",
+     "ALP"
+    ]
+   },
+   {
+    "label": "Biliary eponyms",
+    "level": 3,
+    "words": [
+     "MURPHY",
+     "COURVOISIER",
+     "CHARCOT",
+     "MIRIZZI"
+    ]
+   },
+   {
+    "label": "Abbreviations said as words",
     "level": 4,
     "words": [
-     "LUPUS",
-     "CANCER",
-     "MUSCLE",
-     "HIPPOCAMPUS"
+     "CABG",
+     "NSAID",
+     "SCID",
+     "PEG"
     ]
    }
   ]
@@ -287,43 +287,43 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Skin lesions",
+    "label": "Ionising radiation",
+    "level": 1,
+    "words": [
+     "ALPHA",
+     "BETA",
+     "GAMMA",
+     "X-RAY"
+    ]
+   },
+   {
+    "label": "Radioactivity and dose units",
     "level": 2,
     "words": [
-     "MACULE",
-     "PAPULE",
-     "VESICLE",
-     "PUSTULE"
+     "GRAY",
+     "SIEVERT",
+     "BECQUEREL",
+     "CURIE"
     ]
    },
    {
-    "label": "___ attack",
+    "label": "Nobel prizes for CT and MRI",
     "level": 3,
     "words": [
-     "HEART",
-     "PANIC",
-     "ASTHMA",
-     "DROP"
+     "HOUNSFIELD",
+     "CORMACK",
+     "LAUTERBUR",
+     "MANSFIELD"
     ]
    },
    {
-    "label": "___ cell",
-    "level": 3,
-    "words": [
-     "STEM",
-     "SICKLE",
-     "SQUAMOUS",
-     "KILLER"
-    ]
-   },
-   {
-    "label": "Cold ___",
+    "label": "Hidden units",
     "level": 4,
     "words": [
-     "FEET",
-     "SHOULDER",
-     "SORE",
-     "SWEAT"
+     "MAMMOGRAM",
+     "CRAMP",
+     "PERITONEUM",
+     "PINCH"
     ]
    }
   ]
@@ -334,43 +334,43 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Imaging pioneers",
-    "level": 2,
-    "words": [
-     "RONTGEN",
-     "HOUNSFIELD",
-     "CURIE",
-     "MANSFIELD"
-    ]
-   },
-   {
     "label": "MRI sequences",
-    "level": 3,
+    "level": 1,
     "words": [
-     "T1",
-     "T2",
      "FLAIR",
-     "DIFFUSION"
+     "STIR",
+     "DWI",
+     "T2"
     ]
    },
    {
     "label": "Imaging signs named after food",
-    "level": 4,
+    "level": 2,
     "words": [
      "COFFEE BEAN",
      "APPLE CORE",
      "POPCORN",
-     "SALT AND PEPPER"
+     "DOUGHNUT"
     ]
    },
    {
-    "label": "Imaging signs named after animals",
+    "label": "Imaging signs named after objects",
+    "level": 3,
+    "words": [
+     "LEAD PIPE",
+     "STEEPLE",
+     "CORKSCREW",
+     "SAIL"
+    ]
+   },
+   {
+    "label": "Hidden animals",
     "level": 4,
     "words": [
-     "BAT WING",
-     "BIRD'S BEAK",
-     "RAT BITE",
-     "HUMMINGBIRD"
+     "SCATTER",
+     "ECHOGENIC",
+     "PHANTOM",
+     "ENDOGRAFT"
     ]
    }
   ]
@@ -385,39 +385,39 @@
     "level": 1,
     "words": [
      "TRACHEA",
-     "BRONCHI",
-     "ALVEOLI",
-     "LARYNX"
+     "LARYNX",
+     "BRONCHUS",
+     "ALVEOLI"
     ]
    },
    {
-    "label": "Blood groups",
-    "level": 1,
+    "label": "Fat-soluble vitamins",
+    "level": 2,
     "words": [
      "A",
-     "B",
-     "AB",
-     "O"
+     "D",
+     "E",
+     "K"
     ]
    },
    {
-    "label": "White blood cells",
-    "level": 2,
+    "label": "Water-soluble vitamins",
+    "level": 3,
     "words": [
-     "NEUTROPHIL",
-     "EOSINOPHIL",
-     "BASOPHIL",
-     "MONOCYTE"
+     "C",
+     "B12",
+     "FOLATE",
+     "THIAMINE"
     ]
    },
    {
-    "label": "Bacterial shapes",
-    "level": 2,
+    "label": "___ box",
+    "level": 4,
     "words": [
-     "COCCI",
-     "BACILLI",
-     "SPIROCHAETES",
-     "VIBRIOS"
+     "SHARPS",
+     "PILL",
+     "VOICE",
+     "BRAIN"
     ]
    }
   ]
@@ -428,28 +428,28 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Imaging",
+    "label": "Common eye conditions",
     "level": 1,
     "words": [
-     "X-RAY",
-     "CT",
-     "MRI",
-     "ULTRASOUND"
+     "GLAUCOMA",
+     "CATARACT",
+     "STYE",
+     "KERATOCONUS"
     ]
    },
    {
-    "label": "Cancer types",
-    "level": 1,
+    "label": "Cancers",
+    "level": 2,
     "words": [
      "LYMPHOMA",
      "MELANOMA",
      "SARCOMA",
-     "LEUKAEMIA"
+     "CARCINOMA"
     ]
    },
    {
     "label": "DNA bases",
-    "level": 2,
+    "level": 3,
     "words": [
      "ADENINE",
      "GUANINE",
@@ -458,13 +458,13 @@
     ]
    },
    {
-    "label": "Eye conditions",
-    "level": 2,
+    "label": "___ eye",
+    "level": 4,
     "words": [
-     "GLAUCOMA",
-     "CATARACT",
-     "CONJUNCTIVITIS",
-     "KERATOCONUS"
+     "LAZY",
+     "PINK",
+     "DRY",
+     "BLACK"
     ]
    }
   ]
@@ -475,42 +475,42 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Hospital staff",
-    "level": 1,
-    "words": [
-     "NURSE",
-     "SURGEON",
-     "PHARMACIST",
-     "PARAMEDIC"
-    ]
-   },
-   {
     "label": "Opioids",
-    "level": 2,
+    "level": 1,
     "words": [
      "MORPHINE",
      "OXYCODONE",
      "FENTANYL",
-     "TRAMADOL"
+     "CODEINE"
     ]
    },
    {
-    "label": "Types of fracture",
+    "label": "Stimulants",
     "level": 2,
     "words": [
-     "GREENSTICK",
-     "COMMINUTED",
-     "SPIRAL",
-     "STRESS"
+     "CAFFEINE",
+     "NICOTINE",
+     "COCAINE",
+     "AMPHETAMINE"
     ]
    },
    {
-    "label": "Food poisoning bugs",
+    "label": "Bacteria named after people",
     "level": 3,
     "words": [
      "SALMONELLA",
      "LISTERIA",
-     "CAMPYLOBACTER",
+     "SHIGELLA",
+     "BRUCELLA"
+    ]
+   },
+   {
+    "label": "Infections named after places",
+    "level": 4,
+    "words": [
+     "LYME",
+     "EBOLA",
+     "ZIKA",
      "NOROVIRUS"
     ]
    }
@@ -522,33 +522,23 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Pneumonia symptoms",
+    "label": "Parts of the lung",
     "level": 1,
     "words": [
-     "COUGH",
-     "FEVER",
-     "CHILLS",
-     "SPUTUM"
+     "LOBE",
+     "PLEURA",
+     "ALVEOLUS",
+     "HILUM"
     ]
    },
    {
     "label": "Pneumonia bugs",
     "level": 2,
     "words": [
-     "PNEUMOCOCCUS",
-     "LEGIONELLA",
+     "KLEBSIELLA",
      "MYCOPLASMA",
-     "KLEBSIELLA"
-    ]
-   },
-   {
-    "label": "Parts of the lungs",
-    "level": 2,
-    "words": [
-     "LOBE",
-     "BRONCHUS",
-     "ALVEOLUS",
-     "PLEURA"
+     "HAEMOPHILUS",
+     "LEGIONELLA"
     ]
    },
    {
@@ -557,8 +547,18 @@
     "words": [
      "CONFUSION",
      "UREA",
-     "BLOOD PRESSURE",
+     "RESP RATE",
      "AGE"
+    ]
+   },
+   {
+    "label": "___coccus",
+    "level": 4,
+    "words": [
+     "PNEUMO",
+     "STREPTO",
+     "MENINGO",
+     "GONO"
     ]
    }
   ]
@@ -569,23 +569,23 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Heart rhythm problems",
-    "level": 2,
-    "words": [
-     "FIBRILLATION",
-     "FLUTTER",
-     "BRADYCARDIA",
-     "ECTOPICS"
-    ]
-   },
-   {
     "label": "Pregnancy structures",
-    "level": 3,
+    "level": 1,
     "words": [
      "PLACENTA",
      "AMNION",
      "CHORION",
      "CORD"
+    ]
+   },
+   {
+    "label": "Heart rhythm problems",
+    "level": 2,
+    "words": [
+     "AF",
+     "FLUTTER",
+     "ECTOPICS",
+     "BRADYCARDIA"
     ]
    },
    {
@@ -599,7 +599,7 @@
     ]
    },
    {
-    "label": "Words for courage",
+    "label": "Body words for courage",
     "level": 4,
     "words": [
      "GUTS",
@@ -616,28 +616,18 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Diabetes complications",
-    "level": 2,
+    "label": "Diabetic ___opathies",
+    "level": 1,
     "words": [
      "RETINOPATHY",
      "NEUROPATHY",
      "NEPHROPATHY",
-     "GASTROPARESIS"
-    ]
-   },
-   {
-    "label": "Islet hormones",
-    "level": 3,
-    "words": [
-     "INSULIN",
-     "GLUCAGON",
-     "SOMATOSTATIN",
-     "AMYLIN"
+     "ANGIOPATHY"
     ]
    },
    {
     "label": "Insulin's discovery team",
-    "level": 3,
+    "level": 2,
     "words": [
      "BANTING",
      "BEST",
@@ -646,13 +636,23 @@
     ]
    },
    {
-    "label": "___ sugar",
+    "label": "Pancreas eponyms",
+    "level": 3,
+    "words": [
+     "LANGERHANS",
+     "WIRSUNG",
+     "SANTORINI",
+     "VATER"
+    ]
+   },
+   {
+    "label": "___ foot",
     "level": 4,
     "words": [
-     "BLOOD",
-     "ICING",
-     "CANE",
-     "BROWN"
+     "ATHLETE'S",
+     "TRENCH",
+     "CLUB",
+     "CHARCOT"
     ]
    }
   ]
@@ -663,43 +663,43 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "NICU kit",
+    "label": "Cranial nerves",
+    "level": 1,
+    "words": [
+     "OPTIC",
+     "VAGUS",
+     "FACIAL",
+     "TRIGEMINAL"
+    ]
+   },
+   {
+    "label": "Brachial plexus nerves",
     "level": 2,
     "words": [
-     "HUMIDICRIB",
-     "VENTILATOR",
-     "FEEDING TUBE",
-     "MONITOR"
+     "MEDIAN",
+     "ULNAR",
+     "RADIAL",
+     "AXILLARY"
     ]
    },
    {
-    "label": "Conditions of prematurity",
+    "label": "Lumbosacral plexus nerves",
     "level": 3,
     "words": [
-     "RDS",
-     "PDA",
-     "NEC",
-     "ROP"
+     "SCIATIC",
+     "FEMORAL",
+     "TIBIAL",
+     "OBTURATOR"
     ]
    },
    {
-    "label": "___ care",
+    "label": "Anagrams of body parts",
     "level": 4,
     "words": [
-     "KANGAROO",
-     "INTENSIVE",
-     "HEALTH",
-     "SKIN"
-    ]
-   },
-   {
-    "label": "Early ___",
-    "level": 4,
-    "words": [
-     "BIRD",
-     "RISER",
-     "WARNING",
-     "ADOPTER"
+     "EARTH",
+     "LAMP",
+     "VINE",
+     "BELOW"
     ]
    }
   ]
@@ -709,16 +709,6 @@
   "number": 31,
   "difficulty": "Easy",
   "groups": [
-   {
-    "label": "Blood vessels",
-    "level": 1,
-    "words": [
-     "ARTERY",
-     "VEIN",
-     "CAPILLARY",
-     "ARTERIOLE"
-    ]
-   },
    {
     "label": "Heart valves",
     "level": 1,
@@ -730,23 +720,33 @@
     ]
    },
    {
-    "label": "Anatomical directions",
+    "label": "Blood vessel types",
     "level": 2,
     "words": [
-     "SUPERIOR",
-     "INFERIOR",
-     "MEDIAL",
-     "LATERAL"
+     "ARTERY",
+     "VEIN",
+     "CAPILLARY",
+     "ARTERIOLE"
     ]
    },
    {
     "label": "Organelles",
-    "level": 2,
+    "level": 3,
     "words": [
-     "MITOCHONDRIA",
-     "RIBOSOME",
      "NUCLEUS",
-     "LYSOSOME"
+     "RIBOSOME",
+     "LYSOSOME",
+     "MITOCHONDRIA"
+    ]
+   },
+   {
+    "label": "Hidden numbers",
+    "level": 4,
+    "words": [
+     "BONE",
+     "TENDON",
+     "CANINE",
+     "WEIGHT"
     ]
    }
   ]
@@ -757,43 +757,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Female reproductive organs",
+    "label": "NICU kit",
     "level": 1,
     "words": [
-     "CERVIX",
-     "UTERUS",
-     "OVARY",
-     "FALLOPIAN TUBE"
+     "INCUBATOR",
+     "VENTILATOR",
+     "FEEDING TUBE",
+     "CPAP"
     ]
    },
    {
-    "label": "National cancer screening programs",
-    "level": 1,
-    "words": [
-     "BOWEL",
-     "BREAST",
-     "CERVICAL",
-     "LUNG"
-    ]
-   },
-   {
-    "label": "Types of wart (all HPV)",
+    "label": "Conditions of prematurity",
     "level": 2,
     "words": [
-     "PLANTAR",
-     "GENITAL",
-     "COMMON",
-     "FLAT"
+     "RDS",
+     "NEC",
+     "ROP",
+     "PDA"
     ]
    },
    {
     "label": "Viruses known by initials",
-    "level": 2,
+    "level": 3,
     "words": [
      "HPV",
      "HIV",
      "RSV",
      "EBV"
+    ]
+   },
+   {
+    "label": "Cervical ___",
+    "level": 4,
+    "words": [
+     "COLLAR",
+     "SPINE",
+     "SCREENING",
+     "RIB"
     ]
    }
   ]
@@ -804,7 +804,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Breathing tests",
+    "label": "Tests in COPD",
     "level": 1,
     "words": [
      "SPIROMETRY",
@@ -824,23 +824,23 @@
     ]
    },
    {
-    "label": "COPD symptoms",
-    "level": 2,
-    "words": [
-     "BREATHLESSNESS",
-     "WHEEZE",
-     "PHLEGM",
-     "CHEST TIGHTNESS"
-    ]
-   },
-   {
     "label": "Antibiotic pioneers",
     "level": 3,
     "words": [
+     "FLEMING",
      "FLOREY",
      "CHAIN",
-     "DOMAGK",
-     "EHRLICH"
+     "DOMAGK"
+    ]
+   },
+   {
+    "label": "___ bug",
+    "level": 4,
+    "words": [
+     "SUPER",
+     "BED",
+     "STOMACH",
+     "FLU"
     ]
    }
   ]
@@ -851,43 +851,43 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Allergens",
+    "label": "Prostate symptoms",
     "level": 1,
     "words": [
-     "PEANUT",
-     "POLLEN",
-     "LATEX",
-     "DUST MITE"
+     "NOCTURIA",
+     "HESITANCY",
+     "FREQUENCY",
+     "DRIBBLING"
     ]
    },
    {
-    "label": "Places to feel a pulse",
+    "label": "Scrotal lumps",
     "level": 2,
     "words": [
-     "RADIAL",
-     "CAROTID",
-     "FEMORAL",
-     "POPLITEAL"
+     "HYDROCELE",
+     "VARICOCELE",
+     "HERNIA",
+     "SEMINOMA"
     ]
    },
    {
-    "label": "Full blood count",
-    "level": 2,
-    "words": [
-     "HAEMOGLOBIN",
-     "PLATELETS",
-     "MCV",
-     "WHITE CELLS"
-    ]
-   },
-   {
-    "label": "Medical pioneers",
+    "label": "Pelvic organ prolapse",
     "level": 3,
     "words": [
-     "FLEMING",
-     "JENNER",
-     "LISTER",
-     "SNOW"
+     "CYSTOCELE",
+     "RECTOCELE",
+     "ENTEROCELE",
+     "PROCIDENTIA"
+    ]
+   },
+   {
+    "label": "Hidden MO (for Movember)",
+    "level": 4,
+    "words": [
+     "PNEUMONIA",
+     "HORMONE",
+     "SMOKING",
+     "OSMOSIS"
     ]
    }
   ]
@@ -898,27 +898,27 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Types of shock",
+    "label": "The four classes of shock",
+    "level": 1,
+    "words": [
+     "HYPOVOLAEMIC",
+     "CARDIOGENIC",
+     "OBSTRUCTIVE",
+     "DISTRIBUTIVE"
+    ]
+   },
+   {
+    "label": "Gell and Coombs reactions",
     "level": 2,
     "words": [
-     "SEPTIC",
-     "CARDIOGENIC",
-     "HYPOVOLAEMIC",
-     "ANAPHYLACTIC"
+     "ANAPHYLACTIC",
+     "CYTOTOXIC",
+     "IMMUNE COMPLEX",
+     "DELAYED"
     ]
    },
    {
-    "label": "___phobia",
-    "level": 3,
-    "words": [
-     "ARACHNO",
-     "CLAUSTRO",
-     "AGORA",
-     "ACRO"
-    ]
-   },
-   {
-    "label": "Antibodies",
+    "label": "Immunoglobulins",
     "level": 3,
     "words": [
      "IGA",
@@ -928,7 +928,7 @@
     ]
    },
    {
-    "label": "Named after jobs and sports",
+    "label": "Occupational eponyms",
     "level": 4,
     "words": [
      "TENNIS",
