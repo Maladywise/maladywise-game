@@ -718,7 +718,7 @@
     }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">' + (NORMIE ? "\ud83d\ude42 No medical degree required." : "Think like a doctor.") + '</p><h1>Today&rsquo;s ' + (NORMIE ? "" : "medical ") + 'puzzles</h1>' +
-        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Medical-only games are at the bottom.</span></p>" : "") + "</div>" +
+        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Just puzzles.</span></p>" : "") + "</div>" +
         '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
         (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
