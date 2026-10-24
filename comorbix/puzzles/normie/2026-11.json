@@ -5,18 +5,8 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Dips",
-    "level": 1,
-    "words": [
-     "HUMMUS",
-     "GUACAMOLE",
-     "TZATZIKI",
-     "AIOLI"
-    ]
-   },
-   {
     "label": "Showbiz awards",
-    "level": 2,
+    "level": 1,
     "words": [
      "OSCAR",
      "GRAMMY",
@@ -25,23 +15,33 @@
     ]
    },
    {
-    "label": "Ballroom and Latin dances",
-    "level": 3,
+    "label": "Dips",
+    "level": 2,
     "words": [
-     "WALTZ",
-     "RUMBA",
-     "FOXTROT",
-     "SALSA"
+     "HUMMUS",
+     "GUACAMOLE",
+     "SALSA",
+     "TZATZIKI"
     ]
    },
    {
-    "label": "NATO alphabet",
+    "label": "Standard ballroom dances",
+    "level": 3,
+    "words": [
+     "WALTZ",
+     "FOXTROT",
+     "QUICKSTEP",
+     "TANGO"
+    ]
+   },
+   {
+    "label": "Hidden dances",
     "level": 4,
     "words": [
-     "HOTEL",
-     "VICTOR",
-     "SIERRA",
-     "DELTA"
+     "JIGSAW",
+     "TAPAS",
+     "DISCOVER",
+     "REELING"
     ]
    }
   ]
@@ -52,43 +52,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Vegetables",
+    "label": "Vegetables you dig up",
     "level": 1,
     "words": [
      "CARROT",
      "POTATO",
      "ONION",
-     "PEA"
+     "PARSNIP"
     ]
    },
    {
-    "label": "Farm animals",
+    "label": "Farm mammals",
     "level": 2,
     "words": [
-     "COW",
      "PIG",
      "SHEEP",
-     "GOAT"
+     "GOAT",
+     "HORSE"
     ]
    },
    {
-    "label": "Colours",
+    "label": "Rainbow colours",
     "level": 3,
     "words": [
      "RED",
-     "BLUE",
+     "YELLOW",
      "GREEN",
-     "YELLOW"
+     "ORANGE"
     ]
    },
    {
-    "label": "___ corn",
+    "label": "___berry",
     "level": 4,
     "words": [
-     "POP",
-     "PEPPER",
-     "SWEET",
-     "CANDY"
+     "BLACK",
+     "STRAW",
+     "GOOSE",
+     "RASP"
     ]
    }
   ]
@@ -99,8 +99,28 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "South American countries",
+    "label": "Kitchen appliances",
     "level": 1,
+    "words": [
+     "KETTLE",
+     "TOASTER",
+     "FRIDGE",
+     "BLENDER"
+    ]
+   },
+   {
+    "label": "Nuts",
+    "level": 2,
+    "words": [
+     "CASHEW",
+     "ALMOND",
+     "PECAN",
+     "BRAZIL"
+    ]
+   },
+   {
+    "label": "Spanish-speaking South American countries",
+    "level": 3,
     "words": [
      "PERU",
      "CHILE",
@@ -109,33 +129,13 @@
     ]
    },
    {
-    "label": "Hot drinks",
-    "level": 2,
-    "words": [
-     "COFFEE",
-     "TEA",
-     "COCOA",
-     "CHAI"
-    ]
-   },
-   {
-    "label": "Kitchen appliances",
-    "level": 3,
-    "words": [
-     "KETTLE",
-     "TOASTER",
-     "FRIDGE",
-     "OVEN"
-    ]
-   },
-   {
-    "label": "Nuts",
+    "label": "___ bean",
     "level": 4,
     "words": [
-     "CASHEW",
-     "ALMOND",
-     "PECAN",
-     "BRAZIL"
+     "JELLY",
+     "BROAD",
+     "LIMA",
+     "VANILLA"
     ]
    }
   ]
@@ -146,18 +146,8 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Racket sports",
-    "level": 1,
-    "words": [
-     "TENNIS",
-     "SQUASH",
-     "BADMINTON",
-     "PADEL"
-    ]
-   },
-   {
     "label": "Pasta shapes",
-    "level": 2,
+    "level": 1,
     "words": [
      "PENNE",
      "FUSILLI",
@@ -166,13 +156,23 @@
     ]
    },
    {
-    "label": "Hello around the world",
+    "label": "Ways to say thank you",
+    "level": 2,
+    "words": [
+     "GRACIAS",
+     "MERCI",
+     "DANKE",
+     "ARIGATO"
+    ]
+   },
+   {
+    "label": "Ways to say goodbye",
     "level": 3,
     "words": [
-     "HOLA",
-     "BONJOUR",
-     "NAMASTE",
-     "CIAO"
+     "ADIOS",
+     "SAYONARA",
+     "ARRIVEDERCI",
+     "FAREWELL"
     ]
    },
    {
@@ -193,43 +193,43 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Breakfast foods",
+    "label": "Wizards",
     "level": 1,
     "words": [
-     "PANCAKE",
-     "WAFFLE",
-     "CROISSANT",
-     "CEREAL"
-    ]
-   },
-   {
-    "label": "Wizards",
-    "level": 2,
-    "words": [
-     "MERLIN",
      "GANDALF",
      "DUMBLEDORE",
+     "MERLIN",
      "OZ"
     ]
    },
    {
-    "label": "Birds of prey",
-    "level": 3,
+    "label": "Breakfast bowls",
+    "level": 2,
     "words": [
-     "FALCON",
-     "HAWK",
-     "KESTREL",
-     "OSPREY"
+     "PORRIDGE",
+     "MUESLI",
+     "CEREAL",
+     "GRANOLA"
     ]
    },
    {
     "label": "Talk on and on",
-    "level": 4,
+    "level": 3,
     "words": [
      "RAMBLE",
      "PRATTLE",
      "NATTER",
-     "BABBLE"
+     "WAFFLE"
+    ]
+   },
+   {
+    "label": "Starts with cookware",
+    "level": 4,
+    "words": [
+     "PANCAKE",
+     "POTTERY",
+     "WOKEN",
+     "JUGGLER"
     ]
    }
   ]
@@ -243,20 +243,20 @@
     "label": "European capitals",
     "level": 1,
     "words": [
-     "ROME",
      "OSLO",
      "VIENNA",
-     "ATHENS"
+     "ATHENS",
+     "LISBON"
     ]
    },
    {
     "label": "European football clubs",
     "level": 2,
     "words": [
-     "AJAX",
      "BENFICA",
      "CELTIC",
-     "PORTO"
+     "PORTO",
+     "JUVENTUS"
     ]
    },
    {
@@ -265,18 +265,18 @@
     "words": [
      "HECTOR",
      "HELEN",
-     "PARIS",
-     "ODYSSEUS"
+     "PRIAM",
+     "AGAMEMNON"
     ]
    },
    {
-    "label": "Anagrams of LEAST",
+    "label": "Hidden capitals",
     "level": 4,
     "words": [
-     "STEAL",
-     "SLATE",
-     "TALES",
-     "STALE"
+     "COMPARISON",
+     "CABERNET",
+     "PROMENADE",
+     "CLIMATE"
     ]
    }
   ]
@@ -287,43 +287,43 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Gemstones",
+    "label": "Green gemstones",
     "level": 1,
     "words": [
-     "RUBY",
      "EMERALD",
-     "OPAL",
-     "TOPAZ"
+     "JADE",
+     "PERIDOT",
+     "MALACHITE"
     ]
    },
    {
-    "label": "Snakes",
+    "label": "Venomous snakes",
     "level": 2,
     "words": [
      "COBRA",
-     "ADDER",
      "VIPER",
-     "PYTHON"
+     "MAMBA",
+     "RATTLESNAKE"
     ]
    },
    {
-    "label": "Indonesian islands",
+    "label": "Programming languages",
     "level": 3,
     "words": [
-     "BALI",
-     "SUMATRA",
-     "BORNEO",
-     "LOMBOK"
+     "PYTHON",
+     "RUBY",
+     "SWIFT",
+     "RUST"
     ]
    },
    {
-    "label": "___ script",
+    "label": "Hidden snakes",
     "level": 4,
     "words": [
-     "JAVA",
-     "MANU",
-     "TYPE",
-     "POST"
+     "ASPEN",
+     "BOAST",
+     "LADDER",
+     "PRATTLER"
     ]
    }
   ]
@@ -334,37 +334,37 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Shakespeare plays",
+    "label": "Shakespeare tragedies",
     "level": 1,
     "words": [
      "HAMLET",
      "MACBETH",
      "LEAR",
-     "TEMPEST"
+     "OTHELLO"
     ]
    },
    {
-    "label": "Tabletop games",
+    "label": "Games played with dice",
     "level": 2,
     "words": [
-     "OTHELLO",
-     "RISK",
      "LUDO",
-     "CHESS"
+     "YAHTZEE",
+     "BACKGAMMON",
+     "MONOPOLY"
     ]
    },
    {
-    "label": "Strong winds",
+    "label": "Storms",
     "level": 3,
     "words": [
+     "TEMPEST",
      "GALE",
      "SQUALL",
-     "CYCLONE",
-     "BLIZZARD"
+     "CYCLONE"
     ]
    },
    {
-    "label": "Start with a male animal",
+    "label": "Starts with a male animal",
     "level": 4,
     "words": [
      "BOARD",
@@ -381,41 +381,41 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Ocean animals",
+    "label": "Big cats",
     "level": 1,
     "words": [
-     "SHARK",
-     "WHALE",
-     "DOLPHIN",
-     "OCTOPUS"
+     "CHEETAH",
+     "JAGUAR",
+     "PUMA",
+     "LEOPARD"
     ]
    },
    {
-    "label": "Birthday party",
+    "label": "Sea mammals",
     "level": 2,
     "words": [
-     "CAKE",
-     "BALLOON",
-     "CANDLE",
-     "PRESENT"
+     "PORPOISE",
+     "SEAL",
+     "WALRUS",
+     "MANATEE"
     ]
    },
    {
-    "label": "Big cats",
+    "label": "Black-and-white animals",
     "level": 3,
     "words": [
-     "LION",
-     "TIGER",
-     "LEOPARD",
-     "CHEETAH"
+     "PENGUIN",
+     "PANDA",
+     "SKUNK",
+     "MAGPIE"
     ]
    },
    {
-    "label": "___ fish",
+    "label": "___fish",
     "level": 4,
     "words": [
      "SWORD",
-     "GOLD",
+     "CAT",
      "JELLY",
      "STAR"
     ]
@@ -432,19 +432,19 @@
     "level": 1,
     "words": [
      "CIRCLE",
-     "SQUARE",
      "TRIANGLE",
-     "OVAL"
+     "OVAL",
+     "HEXAGON"
     ]
    },
    {
     "label": "Insects",
     "level": 2,
     "words": [
-     "ANT",
      "BEETLE",
      "WASP",
-     "MOTH"
+     "MOTH",
+     "CRICKET"
     ]
    },
    {
@@ -458,13 +458,13 @@
     ]
    },
    {
-    "label": "___ ball",
+    "label": "Superheroes ending in -MAN",
     "level": 4,
     "words": [
-     "BASKET",
-     "SNOW",
-     "BASE",
-     "MEAT"
+     "SPIDER",
+     "BAT",
+     "SUPER",
+     "AQUA"
     ]
    }
   ]
@@ -481,37 +481,37 @@
      "BAGEL",
      "BAGUETTE",
      "NAAN",
-     "BRIOCHE"
-    ]
-   },
-   {
-    "label": "Cheeses",
-    "level": 2,
-    "words": [
-     "BRIE",
-     "CHEDDAR",
-     "FETA",
-     "GOUDA"
+     "CIABATTA"
     ]
    },
    {
     "label": "Rivers",
-    "level": 3,
+    "level": 2,
     "words": [
      "NILE",
-     "AMAZON",
      "THAMES",
-     "DANUBE"
+     "DANUBE",
+     "AMAZON"
     ]
    },
    {
-    "label": "Anagrams of STOP",
+    "label": "Soft cheeses",
+    "level": 3,
+    "words": [
+     "RICOTTA",
+     "MOZZARELLA",
+     "MASCARPONE",
+     "BURRATA"
+    ]
+   },
+   {
+    "label": "Foods named after places",
     "level": 4,
     "words": [
-     "POTS",
-     "TOPS",
-     "SPOT",
-     "OPTS"
+     "CHEDDAR",
+     "GOUDA",
+     "PARMESAN",
+     "TANGERINE"
     ]
    }
   ]
@@ -528,27 +528,27 @@
      "JAZZ",
      "BLUES",
      "REGGAE",
-     "FUNK"
+     "DISCO"
     ]
    },
    {
-    "label": "Sharks",
+    "label": "Kinds of shark",
     "level": 2,
     "words": [
      "HAMMERHEAD",
      "MAKO",
      "TIGER",
-     "BULL"
+     "LEMON"
     ]
    },
    {
-    "label": "___ dog",
+    "label": "Kinds of whale",
     "level": 3,
     "words": [
-     "HOT",
-     "TOP",
-     "UNDER",
-     "SHEEP"
+     "HUMPBACK",
+     "MINKE",
+     "BELUGA",
+     "NARWHAL"
     ]
    },
    {
@@ -569,13 +569,13 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Cocktails",
+    "label": "Star signs",
     "level": 1,
     "words": [
-     "MOJITO",
-     "MARGARITA",
-     "DAIQUIRI",
-     "NEGRONI"
+     "LEO",
+     "LIBRA",
+     "VIRGO",
+     "TAURUS"
     ]
    },
    {
@@ -585,27 +585,27 @@
      "APOLLO",
      "ARTEMIS",
      "VOYAGER",
-     "GEMINI"
+     "CASSINI"
     ]
    },
    {
-    "label": "Star signs",
+    "label": "Rum cocktails",
     "level": 3,
     "words": [
-     "LEO",
-     "LIBRA",
-     "VIRGO",
-     "TAURUS"
+     "MOJITO",
+     "DAIQUIRI",
+     "ZOMBIE",
+     "HURRICANE"
     ]
    },
    {
     "label": "Hidden metals",
     "level": 4,
     "words": [
+     "MARTINI",
      "PLEAD",
      "IRONY",
-     "MARIGOLD",
-     "MARTINI"
+     "MARIGOLD"
     ]
    }
   ]
@@ -616,28 +616,8 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Cat breeds",
-    "level": 1,
-    "words": [
-     "SIAMESE",
-     "PERSIAN",
-     "SPHYNX",
-     "RAGDOLL"
-    ]
-   },
-   {
-    "label": "Tigers",
-    "level": 2,
-    "words": [
-     "SIBERIAN",
-     "SUMATRAN",
-     "MALAYAN",
-     "BENGAL"
-    ]
-   },
-   {
     "label": "Toys",
-    "level": 3,
+    "level": 1,
     "words": [
      "YOYO",
      "KITE",
@@ -646,13 +626,33 @@
     ]
    },
    {
+    "label": "Cat breeds",
+    "level": 2,
+    "words": [
+     "PERSIAN",
+     "SPHYNX",
+     "RAGDOLL",
+     "BENGAL"
+    ]
+   },
+   {
+    "label": "Cat coat patterns",
+    "level": 3,
+    "words": [
+     "TABBY",
+     "CALICO",
+     "TUXEDO",
+     "GINGER"
+    ]
+   },
+   {
     "label": "___ bear",
     "level": 4,
     "words": [
-     "TEDDY",
      "POLAR",
      "GRIZZLY",
-     "GUMMY"
+     "GUMMY",
+     "KOALA"
     ]
    }
   ]
@@ -667,9 +667,9 @@
     "level": 1,
     "words": [
      "LATTE",
-     "MOCHA",
-     "ESPRESSO",
-     "AMERICANO"
+     "AMERICANO",
+     "MACCHIATO",
+     "CORTADO"
     ]
    },
    {
@@ -677,9 +677,9 @@
     "level": 2,
     "words": [
      "TAUPE",
-     "KHAKI",
      "UMBER",
-     "CHESTNUT"
+     "SEPIA",
+     "CARAMEL"
     ]
    },
    {
@@ -689,7 +689,7 @@
      "DOUGH",
      "COCO",
      "BUTTER",
-     "PEA"
+     "CHEST"
     ]
    },
    {
@@ -720,7 +720,7 @@
     ]
    },
    {
-    "label": "Kitchen utensils",
+    "label": "Kitchen hand tools",
     "level": 2,
     "words": [
      "WHISK",
@@ -730,7 +730,7 @@
     ]
    },
    {
-    "label": "Fairy tale characters",
+    "label": "Storybook characters",
     "level": 3,
     "words": [
      "CINDERELLA",
@@ -740,13 +740,13 @@
     ]
    },
    {
-    "label": "___ light",
+    "label": "___cake",
     "level": 4,
     "words": [
-     "MOON",
-     "FLASH",
-     "SPOT",
-     "TRAFFIC"
+     "PAN",
+     "CUP",
+     "CHEESE",
+     "FISH"
     ]
    }
   ]
@@ -757,28 +757,8 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Sports",
-    "level": 1,
-    "words": [
-     "CRICKET",
-     "GOLF",
-     "RUGBY",
-     "HOCKEY"
-    ]
-   },
-   {
-    "label": "Famous jumpers",
-    "level": 2,
-    "words": [
-     "KANGAROO",
-     "FROG",
-     "FLEA",
-     "GRASSHOPPER"
-    ]
-   },
-   {
     "label": "Ice cream flavours",
-    "level": 3,
+    "level": 1,
     "words": [
      "VANILLA",
      "CHOCOLATE",
@@ -787,13 +767,33 @@
     ]
    },
    {
+    "label": "Team sports",
+    "level": 2,
+    "words": [
+     "RUGBY",
+     "HOCKEY",
+     "VOLLEYBALL",
+     "BASEBALL"
+    ]
+   },
+   {
+    "label": "Animals known for jumping",
+    "level": 3,
+    "words": [
+     "KANGAROO",
+     "FROG",
+     "FLEA",
+     "GRASSHOPPER"
+    ]
+   },
+   {
     "label": "___ club",
     "level": 4,
     "words": [
+     "GOLF",
      "BOOK",
      "FAN",
-     "NIGHT",
-     "CHESS"
+     "NIGHT"
     ]
    }
   ]
@@ -804,7 +804,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Mountains",
+    "label": "Famous mountains",
     "level": 1,
     "words": [
      "EVEREST",
@@ -814,23 +814,23 @@
     ]
    },
    {
-    "label": "Moons",
+    "label": "Moons of Jupiter",
     "level": 2,
     "words": [
-     "TITAN",
      "EUROPA",
      "IO",
-     "GANYMEDE"
+     "GANYMEDE",
+     "CALLISTO"
     ]
    },
    {
-    "label": "Absolutely huge",
+    "label": "Words for something huge",
     "level": 3,
     "words": [
      "GIANT",
      "MAMMOTH",
      "JUMBO",
-     "COLOSSAL"
+     "TITAN"
     ]
    },
    {
@@ -851,33 +851,33 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "In a deck of cards",
+    "label": "Card suits",
     "level": 1,
     "words": [
-     "ACE",
-     "KING",
-     "QUEEN",
-     "JOKER"
+     "HEARTS",
+     "CLUBS",
+     "SPADES",
+     "DIAMONDS"
     ]
    },
    {
-    "label": "Flightless birds",
+    "label": "Garden birds",
     "level": 2,
     "words": [
-     "EMU",
-     "KIWI",
-     "OSTRICH",
-     "DODO"
+     "ROBIN",
+     "WREN",
+     "SPARROW",
+     "FINCH"
     ]
    },
    {
     "label": "Batman villains",
     "level": 3,
     "words": [
-     "PENGUIN",
+     "JOKER",
      "RIDDLER",
      "BANE",
-     "CATWOMAN"
+     "PENGUIN"
     ]
    },
    {
@@ -902,29 +902,29 @@
     "level": 1,
     "words": [
      "BASIL",
-     "THYME",
      "ROSEMARY",
-     "SAGE"
+     "OREGANO",
+     "DILL"
+    ]
+   },
+   {
+    "label": "Spices",
+    "level": 2,
+    "words": [
+     "CINNAMON",
+     "NUTMEG",
+     "CUMIN",
+     "PAPRIKA"
     ]
    },
    {
     "label": "Wise ones",
-    "level": 2,
+    "level": 3,
     "words": [
      "GURU",
      "ORACLE",
      "MENTOR",
      "PUNDIT"
-    ]
-   },
-   {
-    "label": "Things with needles",
-    "level": 3,
-    "words": [
-     "CACTUS",
-     "COMPASS",
-     "PINE",
-     "PORCUPINE"
     ]
    },
    {
@@ -961,27 +961,27 @@
      "CRIMSON",
      "SCARLET",
      "CARMINE",
-     "MAROON"
+     "VERMILION"
+    ]
+   },
+   {
+    "label": "Shades of purple",
+    "level": 3,
+    "words": [
+     "MAUVE",
+     "LILAC",
+     "VIOLET",
+     "PLUM"
     ]
    },
    {
     "label": "Leave behind",
-    "level": 3,
-    "words": [
-     "STRAND",
-     "DESERT",
-     "DITCH",
-     "JILT"
-    ]
-   },
-   {
-    "label": "Hidden capitals",
     "level": 4,
     "words": [
-     "CLIMATE",
-     "CHROME",
-     "COMPARISON",
-     "MOSQUITO"
+     "STRAND",
+     "DITCH",
+     "ABANDON",
+     "JILT"
     ]
    }
   ]
@@ -1005,20 +1005,20 @@
     "label": "Harry Potter characters",
     "level": 2,
     "words": [
-     "DRACO",
      "HERMIONE",
      "HAGRID",
-     "DOBBY"
+     "SIRIUS",
+     "LUNA"
     ]
    },
    {
-    "label": "Ninja Turtles",
+    "label": "Renaissance artists",
     "level": 3,
     "words": [
-     "LEONARDO",
      "RAPHAEL",
-     "DONATELLO",
-     "MICHELANGELO"
+     "TITIAN",
+     "BOTTICELLI",
+     "DONATELLO"
     ]
    },
    {
@@ -1049,18 +1049,8 @@
     ]
    },
    {
-    "label": "At the beach",
-    "level": 2,
-    "words": [
-     "SAND",
-     "SHELL",
-     "TOWEL",
-     "UMBRELLA"
-    ]
-   },
-   {
     "label": "Sweets",
-    "level": 3,
+    "level": 2,
     "words": [
      "LOLLIPOP",
      "TOFFEE",
@@ -1069,13 +1059,23 @@
     ]
    },
    {
-    "label": "___ crossing",
+    "label": "Beach kit",
+    "level": 3,
+    "words": [
+     "TOWEL",
+     "BUCKET",
+     "SPADE",
+     "PARASOL"
+    ]
+   },
+   {
+    "label": "Sand___",
     "level": 4,
     "words": [
-     "LEVEL",
-     "BORDER",
-     "RAILWAY",
-     "PEDESTRIAN"
+     "CASTLE",
+     "PAPER",
+     "PIPER",
+     "STORM"
     ]
    }
   ]
@@ -1092,37 +1092,37 @@
      "SCARF",
      "GLOVES",
      "BEANIE",
-     "COAT"
+     "MITTENS"
     ]
    },
    {
-    "label": "Space objects",
+    "label": "Things that orbit the Sun",
     "level": 2,
     "words": [
-     "ROCKET",
      "COMET",
-     "METEOR",
-     "SATELLITE"
+     "ASTEROID",
+     "EARTH",
+     "JUPITER"
     ]
    },
    {
-    "label": "Salad leaves",
+    "label": "___dust",
     "level": 3,
     "words": [
-     "LETTUCE",
-     "SPINACH",
-     "KALE",
-     "CRESS"
+     "STAR",
+     "SAW",
+     "GOLD",
+     "PIXIE"
     ]
    },
    {
-    "label": "___ shop",
+    "label": "Honey___",
     "level": 4,
     "words": [
-     "COFFEE",
-     "BARBER",
-     "GIFT",
-     "CHARITY"
+     "COMB",
+     "BEE",
+     "DEW",
+     "POT"
     ]
    }
   ]
@@ -1133,33 +1133,33 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Fish",
+    "label": "Sea fish",
     "level": 1,
     "words": [
-     "SALMON",
-     "TUNA",
      "COD",
-     "TROUT"
+     "TUNA",
+     "HADDOCK",
+     "MACKEREL"
+    ]
+   },
+   {
+    "label": "Freshwater fish",
+    "level": 2,
+    "words": [
+     "TROUT",
+     "PIKE",
+     "CARP",
+     "PERCH"
     ]
    },
    {
     "label": "Shades of pink",
-    "level": 2,
+    "level": 3,
     "words": [
      "CORAL",
      "MAGENTA",
      "BLUSH",
-     "ROSE"
-    ]
-   },
-   {
-    "label": "Flowers",
-    "level": 3,
-    "words": [
-     "DAISY",
-     "TULIP",
-     "LILY",
-     "POPPY"
+     "CERISE"
     ]
    },
    {
@@ -1186,7 +1186,7 @@
      "COLOSSEUM",
      "STONEHENGE",
      "PARTHENON",
-     "ALHAMBRA"
+     "PETRA"
     ]
    },
    {
@@ -1196,7 +1196,7 @@
      "MILE",
      "ACRE",
      "PINT",
-     "INCH"
+     "YARD"
     ]
    },
    {
@@ -1242,18 +1242,18 @@
     "words": [
      "WOOF",
      "YAP",
-     "HOWL",
-     "GROWL"
+     "YELP",
+     "BAY"
     ]
    },
    {
-    "label": "Parts of a tree",
+    "label": "Cat noises",
     "level": 3,
     "words": [
-     "TRUNK",
-     "BRANCH",
-     "ROOT",
-     "LEAF"
+     "PURR",
+     "MEOW",
+     "HISS",
+     "CATERWAUL"
     ]
    },
    {
@@ -1262,8 +1262,8 @@
     "words": [
      "LIST",
      "HANDLE",
-     "BARK",
-     "RAVEL"
+     "BIRD",
+     "FORAY"
     ]
    }
   ]
@@ -1284,23 +1284,23 @@
     ]
    },
    {
-    "label": "Bands",
+    "label": "Desert animals",
     "level": 2,
     "words": [
-     "QUEEN",
-     "ABBA",
-     "BLONDIE",
-     "OASIS"
+     "CAMEL",
+     "SCORPION",
+     "MEERKAT",
+     "VULTURE"
     ]
    },
    {
-    "label": "Desert sights",
+    "label": "Sci-fi films",
     "level": 3,
     "words": [
      "DUNE",
-     "MIRAGE",
-     "CAMEL",
-     "SCORPION"
+     "ALIEN",
+     "AVATAR",
+     "INCEPTION"
     ]
    },
    {
@@ -1321,33 +1321,33 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Famous cartoon and film dogs",
-    "level": 1,
-    "words": [
-     "LASSIE",
-     "SNOOPY",
-     "ODIE",
-     "BOLT"
-    ]
-   },
-   {
     "label": "Roman gods",
-    "level": 2,
+    "level": 1,
     "words": [
      "JUNO",
      "MARS",
-     "NEPTUNE",
-     "PLUTO"
+     "VULCAN",
+     "CUPID"
     ]
    },
    {
-    "label": "Bands with one short name",
+    "label": "Greek gods",
+    "level": 2,
+    "words": [
+     "ZEUS",
+     "HERMES",
+     "ATHENA",
+     "HADES"
+    ]
+   },
+   {
+    "label": "Bands with four-letter names",
     "level": 3,
     "words": [
      "KISS",
      "BLUR",
      "TOTO",
-     "MUSE"
+     "ABBA"
     ]
    },
    {
@@ -1368,28 +1368,18 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Pets",
-    "level": 1,
-    "words": [
-     "HAMSTER",
-     "RABBIT",
-     "GOLDFISH",
-     "TORTOISE"
-    ]
-   },
-   {
     "label": "Video games",
-    "level": 2,
+    "level": 1,
     "words": [
      "TETRIS",
      "PACMAN",
      "MINECRAFT",
-     "FORTNITE"
+     "SONIC"
     ]
    },
    {
     "label": "Sandwich fillings",
-    "level": 3,
+    "level": 2,
     "words": [
      "HAM",
      "CHEESE",
@@ -1398,13 +1388,23 @@
     ]
    },
    {
-    "label": "___ hole",
+    "label": "Rodents",
+    "level": 3,
+    "words": [
+     "HAMSTER",
+     "GERBIL",
+     "SQUIRREL",
+     "BEAVER"
+    ]
+   },
+   {
+    "label": "___hole",
     "level": 4,
     "words": [
      "BLACK",
      "KEY",
      "PORT",
-     "POT"
+     "RABBIT"
     ]
    }
   ]
