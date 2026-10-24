@@ -5,123 +5,123 @@
   "questions": [
    {
     "c": "Art",
-    "q": "A late painting called ‘Iris’ sold for €50 million in Paris on Thursday, a French auction record. Which Impressionist painted it?",
+    "q": "A long-hidden painting called ‘Iris’ sold for €50 million in Paris on Thursday, a French auction record. Which Impressionist painted it?",
     "a": "Claude Monet",
-    "e": "Accept Monet. If you said Manet, one vowel cost you €50 million."
+    "e": "Accept Monet. Sotheby’s Paris, 22 October: about US$56 million, smashing the estimate. If you said Manet, one vowel just cost you €50 million."
    },
    {
     "c": "Telly",
-    "q": "Disney+ and Hulu confirmed a reboot of which Ryan Murphy musical series, originally set at an Ohio high school?",
+    "q": "Disney+ and Hulu greenlit a reboot of which Ryan Murphy musical series, originally set at an Ohio high school?",
     "a": "Glee",
-    "e": "Slushies at the ready. Release date TBC."
+    "e": "Confirmed 21 October. Cast and date TBC. Slushies at the ready."
+   },
+   {
+    "c": "Basketball",
+    "q": "LeBron James made his debut for his fourth NBA team on opening night, beating the Knicks 106–100. Which team?",
+    "a": "Philadelphia 76ers",
+    "e": "Accept the Sixers or Philadelphia. 20 October (US time), kicking off a record 24th season at 41. Some of us need a lie-down after one."
    },
    {
     "c": "Formula 1",
     "q": "Ahead of the US Grand Prix, Guinness certified the world’s largest what at Austin’s Circuit of the Americas?",
     "a": "Cowboy hat",
-    "e": "Accept hat. About 13 metres wide. Yee-haw, as they say in Austin."
+    "e": "Accept hat. Unveiled 19 October, about 13 metres wide and 5 metres tall. Yee-haw, as they say in Austin."
    },
    {
     "c": "Football",
-    "q": "Barcelona’s 11-game winning start to the season ended with a 4–2 Champions League defeat to which club?",
+    "q": "Barcelona’s 11-game winning run ended with a 4–2 Champions League defeat to which club on Tuesday?",
     "a": "Paris Saint-Germain",
-    "e": "Accept PSG or Paris. Lamine Yamal scored. Didn’t help."
+    "e": "Accept PSG or Paris. 20 October at the Parc des Princes. The holders don’t do hospitality."
    },
    {
     "c": "Space",
     "q": "The Orionid meteor shower peaked this week. It’s made of debris from which famous comet?",
     "a": "Halley’s Comet",
-    "e": "Accept Halley. Not Hailey, not Haley’s. Spelling counts in space."
+    "e": "Accept Halley. Peak around 21–22 October. Not Hailey, not Haley’s. Spelling counts in space."
    },
    {
     "c": "Baseball",
-    "q": "Two teams who have never won a World Series are meeting in this year’s one. Name both.",
+    "q": "Two teams who have never won a World Series are meeting in this year’s. Name both.",
     "a": "Milwaukee Brewers and Tampa Bay Rays",
-    "e": "Accept Brewers and Rays. Need both. Milwaukee’s first World Series since 1982."
+    "e": "Need both; Brewers and Rays will do. Set on 20 October when the Rays won the ALCS. A first-time champion is guaranteed."
    },
    {
     "c": "Football",
-    "q": "Champions League debutants from which Italian lakeside city thrashed Manchester United 4–1 on Wednesday?",
+    "q": "Champions League newcomers from which Italian lakeside city thrashed Manchester United 4–1 on Wednesday?",
     "a": "Como",
-    "e": "Accept Como 1907. George Clooney’s neighbours, now giant-killers."
-   },
-   {
-    "c": "Astronomy",
-    "q": "Astronomers at Warwick reported the first known white dwarf star that would look which colour to the human eye?",
-    "a": "Green",
-    "e": "Not white. That was the trap."
+    "e": "Accept Como 1907. 21 October. The scenery is lovely; the scoreline less so, if you’re United."
    },
    {
     "c": "Mysteries",
     "q": "Researchers say which undeciphered 15th-century manuscript, held at Yale, may have been bound in the wrong order?",
     "a": "The Voynich manuscript",
-    "e": "Accept Voynich. Still unreadable, just possibly more unreadable than we thought."
+    "e": "Accept Voynich. Study published 19 October. Still unreadable, just possibly unreadable in a different order."
    },
    {
     "c": "Space",
     "q": "Japan’s MMX probe launched this week to collect samples from which moon of Mars?",
     "a": "Phobos",
-    "e": "Not Deimos, though it gets flybys. Samples due back in 2031."
+    "e": "Launched on an H3 rocket from Tanegashima on 20 October (Japan time). Not Deimos, though it gets a flyby. Samples due home in 2031."
    },
    {
     "c": "History",
-    "q": "A rare coin of ‘Olaf the Holy’ was revealed from a Viking hoard this week. He was king, and is now patron saint, of which country?",
+    "q": "A rare coin of ‘Olaf the Holy’ turned up in a Viking hoard. He was king, and is now patron saint, of which country?",
     "a": "Norway",
-    "e": "Fewer than 20 of his coins are known. Not Denmark. Not Sweden. Close, though."
+    "e": "Reported 21 October from the Mørstad hoard near Rena. Fewer than 20 of his coins were known. Not Denmark. Not Sweden. Close, though."
    },
    {
     "c": "MotoGP",
     "q": "This weekend is Phillip Island’s last MotoGP. Which city’s street circuit takes over the Australian round from 2027?",
     "a": "Adelaide",
-    "e": "Big weekend for the Island. Bigger crowds for Adelaide, presumably."
+    "e": "Accept Adelaide. Phillip Island hosts its final race this weekend, 23–25 October; Adelaide gets a city-centre track from November 2027."
    },
    {
     "c": "History",
-    "q": "Archaeologists think a medieval abbot was buried in a reused Roman sarcophagus at which famous London church?",
+    "q": "Archaeologists think a medieval abbot was buried in a recycled Roman sarcophagus at which famous London church?",
     "a": "Westminster Abbey",
-    "e": "Probably Abbot Aelfwig, who died around 1020. Recycling, the medieval way."
+    "e": "Reported 21 October: probably Abbot Aelfwig, who died around 1020. Recycling, the medieval way."
    },
    {
-    "c": "Space",
-    "q": "Webb found surprisingly metal-rich gas around the black hole at the centre of our galaxy. What is that black hole called?",
-    "a": "Sagittarius A*",
-    "e": "Accept Sagittarius A, Sgr A* or Sag A star."
+    "c": "Basketball",
+    "q": "Before opening night, the New York Knicks raised a banner for their first NBA title in how many years?",
+    "a": "53",
+    "e": "Accept 53. 20 October (US time). Their previous title was in 1973. Patience is a virtue; 53 years is a lifestyle."
    },
    {
     "c": "Records",
     "q": "South Africa ran a 7.6 km, 696-wagon iron-ore train this week, breaking which Australian miner’s 25-year-old record?",
     "a": "BHP",
-    "e": "Accept BHP Billiton or BHP Iron Ore. BHP’s 2001 train had 682 wagons."
+    "e": "Accept BHP Billiton or BHP Iron Ore. Transnet’s train ran on 18 October; BHP’s 2001 train had 682 wagons over 7.35 km. Mind the level crossing."
    },
    {
     "c": "Baseball",
     "q": "The Brewers are in their first World Series since which year?",
     "a": "1982",
-    "e": "They lost that one to St Louis. In seven."
-   },
-   {
-    "c": "MotoGP",
-    "q": "Heading into this weekend’s Australian round, which Spaniard led Marc Márquez in the MotoGP standings by just two points?",
-    "a": "Jorge Martín",
-    "e": "Accept Martín or Martinator. 355 to 353 with five rounds left."
+    "e": "Accept 1982. Confirmed 20 October. They lost that one to St Louis, in seven. No pressure."
    },
    {
     "c": "Football",
     "q": "Which Argentine scored twice and set up another in Como’s 4–1 win over Manchester United?",
     "a": "Nico Paz",
-    "e": "Accept Paz. Real Madrid alumnus, Como’s main man."
+    "e": "Accept Paz. 21 October: a goal inside two minutes, an assist, then another. Busy night."
+   },
+   {
+    "c": "Baseball",
+    "q": "Jacob Misiorowski threw the fastest pitch in World Series history in Friday’s Game 1. To the nearest mph, how fast?",
+    "a": "103.5 mph",
+    "e": "Accept 103 or 104 mph (about 166 km/h). His first pitch, 23 October. The Brewers won 3–2. The batter is still looking for it."
    },
    {
     "c": "Space",
     "q": "How many grams of Phobos does Japan’s MMX mission aim to bring back to Earth?",
     "a": "10 grams",
-    "e": "Accept 10. Small jar, long trip. Due home in 2031."
+    "e": "Accept 10, or ‘at least 10’. Launched 20 October. Small jar, long trip: home in 2031."
    },
    {
     "c": "Brain-melter",
-    "q": "The rover hitching a ride on Japan’s Phobos mission is called Idefix, after a comic-strip dog. What is that dog called in English?",
+    "q": "The little rover riding along on Japan’s Phobos mission is called Idefix, after a comic-strip dog. What is that dog called in English?",
     "a": "Dogmatix",
-    "e": "Obelix’s dog in Asterix. Idéfix in French, a pun on ‘idée fixe’. Melted yet?"
+    "e": "Obelix’s dog in Asterix. The French-German rover launched with MMX on 20 October. Idéfix is a pun on ‘idée fixe’. Melted yet?"
    }
   ]
  },
