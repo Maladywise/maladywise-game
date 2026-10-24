@@ -425,45 +425,51 @@
   "date": "2026-11-12",
   "number": 27,
   "difficulty": "Einstein",
-  "title": "Slippery slope",
-  "answer": "Lipoid pneumonia (exogenous)",
+  "title": "New habits",
+  "answer": "Acute eosinophilic pneumonia",
   "accept": [
-   "lipoid pneumonia",
-   "exogenous lipoid pneumonia",
-   "lipid pneumonia",
-   "lipoid pneumonitis",
-   "exogenous lipid pneumonia",
-   "oil aspiration",
-   "paraffin aspiration",
-   "mineral oil aspiration",
-   "aspiration of mineral oil",
-   "liquid paraffin aspiration",
-   "paraffinoma"
+   "acute eosinophilic pneumonia",
+   "eosinophilic pneumonia",
+   "aep",
+   "acute eosinophilic pneumonitis",
+   "eosinophilic pneumonitis",
+   "idiopathic acute eosinophilic pneumonia",
+   "smoking induced eosinophilic pneumonia",
+   "smoking-induced acute eosinophilic pneumonia",
+   "smoking related eosinophilic pneumonia",
+   "cigarette induced eosinophilic pneumonia",
+   "eosinophilic lung disease",
+   "acute eosinophilic lung disease",
+   "pulmonary eosinophilia",
+   "acute pulmonary eosinophilia",
+   "eosinophilic pneumonia acute",
+   "acute eosinophilic pneumonia aep",
+   "acute eosinophilic pneumonia smoking"
   ],
   "clues": [
    {
-    "t": "78-year-old man with a dry cough and breathlessness for 6 months."
+    "t": "21-year-old man, fit and well, with 4 days of fever, dry cough and pain on deep breaths."
    },
    {
-    "t": "Two courses of antibiotics for 'pneumonia'. The shadows on his X-ray haven't budged."
+    "t": "He's now breathless walking to the bathroom. SpO2 87% on room air."
    },
    {
-    "t": "Afebrile \u00b7 CRP 6 \u00b7 WCC normal",
+    "t": "Chest X-ray: bilateral hazy shadows and small effusions. Two days of IV ceftriaxone and azithromycin haven't touched it.",
     "d": 1
    },
    {
-    "t": "CT: lower-lobe consolidation measuring \u221290 Hounsfield units",
+    "t": "Full blood count: neutrophils up, eosinophils normal. Influenza, COVID-19 and Legionella tests negative.",
     "d": 1
    },
    {
-    "t": "For years he's taken a spoonful of liquid paraffin at bedtime, for constipation, then lain straight down."
+    "t": "Three weeks ago, on a gap-year trip, he started smoking for the first time."
    },
    {
-    "t": "Bronchoscopy washings: macrophages stuffed with oil droplets",
+    "t": "Bronchoalveolar lavage: 42% eosinophils. Cultures sterile.",
     "d": 1
    }
   ],
-  "pearl": "Oil gets into the lungs from mineral oil laxatives taken at night, oily nose drops, or fire-eating. It mimics pneumonia or cancer, but CT shows fat density (negative Hounsfield units) inside the consolidation. Antibiotics won't shift oil, so ask about it. Happy World Pneumonia Day."
+  "pearl": "Acute eosinophilic pneumonia can follow taking up smoking (or a big change in smoking or vaping habits) within weeks. It looks like severe atypical pneumonia or ARDS, and blood eosinophils are often normal at first, so the answer hides in the lavage. It responds fast to steroids and rarely comes back if the trigger stops. Happy World Pneumonia Day."
  },
  {
   "date": "2026-11-13",
