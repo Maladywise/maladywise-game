@@ -45,7 +45,7 @@
   function modeSwitch() {
     return '<div class="mw-mode" role="group" aria-label="Puzzle mode">' +
       [["medical", "\ud83e\ude7a", "Medical"], ["normie", "\ud83d\ude42", "Normie"]].map(function (o) {
-        var norm = o[0] === "normie" && NORMIE;
+        var norm = false;
         return '<button type="button" data-mode="' + o[0] + '" aria-pressed="' + (MODE === o[0]) + '" aria-label="' + o[2] + ' mode" title="' + o[2] + ' mode">' + (norm ? '<img class="mm-norm" src="/assets/mascots/normie/norm.svg" alt="" width="20" height="20" onerror="var s=this.nextSibling;if(s)s.hidden=false;this.remove()"><span aria-hidden="true" hidden>' : '<span aria-hidden="true">') + o[1] + '</span><span class="mm-t" aria-hidden="true">' + o[2] + "</span></button>";
       }).join("") + "</div>";
   }
@@ -333,6 +333,15 @@
     "Hard mode. Don't phone it in before the weekend.",
     "Hard again. No locum to save you."
   ];
+  var DAYQ_N = [
+    "Genius day. Bring your A-game and a strong coffee.",
+    "Ease in. Nobody's judging. Yet.",
+    "Still easy. Enjoy it while it lasts.",
+    "Hump day. The puzzles get cheekier.",
+    "Nearly there. Concentrate.",
+    "Hard mode. Don't phone it in before the weekend.",
+    "Hard again. Your weekend brain is not an excuse."
+  ];
   function pickDay(a, d) { return a[dayNum(d) % a.length]; }
   var SOON = ["In theatre", "Still in the lab", "Awaiting ethics approval", "On the waitlist", "Pending review"];
 
@@ -532,7 +541,7 @@
     function progress() {
       var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly && inMode(g); }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
-      var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
+      var q = d === 0 ? (NORMIE ? "None yet. Kettle on, let's go." : "None yet. The waiting room is full.") : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? (NORMIE ? "Nearly there. Finish strong." : "Nearly there. Finish the round.") : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
       return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div></div>";
     }
     // Health days banner (data/health-days.json). Days and weeks only; months are background themes.
@@ -577,7 +586,7 @@
     }
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">' + (NORMIE ? "\ud83d\ude42 No medical degree required." : "Think like a doctor.") + '</p><h1>Today&rsquo;s ' + (NORMIE ? "" : "medical ") + 'puzzles</h1>' +
-        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Medical-only games are at the bottom.</span></p>" : "") + "</div>" +
+        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Medical-only games are at the bottom.</span></p>" : "") + "</div>" +
         '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
         (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
