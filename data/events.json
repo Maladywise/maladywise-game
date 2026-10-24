@@ -88,19 +88,6 @@
       "link": "https://en.wikipedia.org/wiki/Easter"
     },
     {
-      "id": "mothersday",
-      "name": "Mother's Day",
-      "dates": {
-        "2027": "2027-05-09",
-        "2028": "2028-05-14"
-      },
-      "puzzle_theme": "Obstetrics and maternal health: pregnancy, birth, breastfeeding",
-      "tags": [
-        "gentle"
-      ],
-      "link": "https://en.wikipedia.org/wiki/Mother%27s_Day"
-    },
-    {
       "id": "halloween",
       "name": "Halloween",
       "dates": {
@@ -194,20 +181,6 @@
         "au"
       ],
       "link": "https://www.awm.gov.au/commemoration/anzac-day"
-    },
-    {
-      "id": "fathersday",
-      "name": "Father's Day",
-      "dates": {
-        "2027": "2027-09-05",
-        "2028": "2028-09-03"
-      },
-      "puzzle_theme": "Men's health: prostate, testicular cancer, heart health",
-      "tags": [
-        "light",
-        "au"
-      ],
-      "link": "https://en.wikipedia.org/wiki/Father%27s_Day"
     },
     {
       "id": "melbcup",
