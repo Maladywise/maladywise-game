@@ -644,11 +644,11 @@
       nx.hidden = true;
       var done = curSt && curSt.done, tb = document.getElementById("mw-next-top");
       // today's next unplayed game in this mode
-      var ng = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x)) return false; var r = readStats(x); return !(r && r.done); })[0];
+      var left = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x)) return false; var r = readStats(x); return !(r && r.done); });
+      var ng = left[0];
       var r0 = todo[0], d0 = r0 ? rowDate(r0) : null;
       if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
-      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Today\u2019s next puzzle</a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More unsolved</button>' : "") + '</div><small>' +
-        [ng ? "Up next: " + ng.name : "All today\u2019s puzzles done", r0 ? todo.length + " older " + g.name + " unsolved" : ""].filter(Boolean).join(" \u00b7 ") + "</small>";
+      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Today\u2019s next puzzle<small>' + left.length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
       if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
       if (tb.getAttribute("data-h") === th) return;
       tb.innerHTML = th; tb.setAttribute("data-h", th);

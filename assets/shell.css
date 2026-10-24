@@ -543,3 +543,5 @@ main .stats,main .dist{display:none!important}
 .mwx-btns{flex-wrap:nowrap;width:100%;max-width:400px;margin:0 auto}
 .mwx-btns>*{flex:1 1 0;min-width:0;font-size:13px;padding:10px 8px;text-align:center}
 .mwx-btns>*{display:flex;align-items:center;justify-content:center}
+.mwx-btns>*{flex-direction:column;gap:1px;line-height:1.15}.mwx-btns small{font-size:11.5px;font-weight:500;opacity:.85}
+.mwx-nexttop .mwx-btns small{color:inherit}
