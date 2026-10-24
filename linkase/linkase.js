@@ -3,7 +3,9 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", MAXM = 5;
+  // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Linkase (Normie)" : "Linkase";
   var root = document.getElementById("lnk");
   if (!document.querySelector("link[data-lnk]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "linkase.css?v=" + BUILD; l.setAttribute("data-lnk", ""); document.head.appendChild(l);
@@ -31,10 +33,10 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "lnk-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0] });
+  var SKEY = PFX + "lnk-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0] });
   var KEY, st, P = null, cur = "";
   // st.w[i] for i=1..4: {rev: letters shown, s: 0 open | 1 solved | 2 given}
-  function loadDay() { KEY = "lnk-day-" + today; st = load(KEY, null); if (!st) st = { w: [null, { rev: 1, s: 0 }, { rev: 1, s: 0 }, { rev: 1, s: 0 }, { rev: 1, s: 0 }], mistakes: 0, act: 1, done: false, win: false }; }
+  function loadDay() { KEY = PFX + "lnk-day-" + today; st = load(KEY, null); if (!st) st = { w: [null, { rev: 1, s: 0 }, { rev: 1, s: 0 }, { rev: 1, s: 0 }, { rev: 1, s: 0 }], mistakes: 0, act: 1, done: false, win: false }; }
   loadDay();
 
   // ---------- sass ----------
@@ -47,6 +49,12 @@
     win: [["Flawless chain. Not one slip. Insufferable, frankly.", "Zero slips. Linked like a surgeon.", "Perfect chain. Unbreakable.", "No mistakes. Show-off."], ["One slip. Still a strong chain.", "One slip. Barely a wobble.", "One mistake, then smooth.", "Strong chain. One kink."], ["Two slips. Holding together.", "Two slips. Still solid.", "Two kinks. Chain intact.", "Two slips. Good recovery."], ["Three slips. Rusty links, but it held.", "Three slips. Creaky but intact.", "Three wobbles. It held.", "Three slips. Close call."], ["Four slips. Held together with tape.", "Four slips. Barely attached.", "Held together by hope.", "Four slips. Somehow it held."]],
     lose: ["Chain snapped. Here's how it went.", "Five strikes. The links win today.", "Dropped it. Rematch tomorrow.", "Chain broken. Here\u2019s the full set.", "Too many slips. The chain gave out.", "Snapped. Tomorrow\u2019s chain is stronger. Probably."]
   };
+  if (NORMIE) {
+    SASS.wrong = SASS.wrong.map(function (x) { return x === "Not a phrase. Not even in a discharge summary." ? "Not a phrase. Not even in a group chat." : x; });
+    SASS.right = SASS.right.map(function (x) { return x === "Textbook anastomosis." ? "Textbook." : x; });
+    SASS.len = function (n) { return "Needs " + n + " letters. Count them."; };
+    SASS.win[0] = ["Flawless chain. Not one slip. Insufferable, frankly.", "Zero slips. Linked like a pro.", "Perfect chain. Unbreakable.", "No mistakes. Show-off."];
+  }
   function say(t) { $("msg").textContent = t; }
 
   // ---------- helpers ----------
@@ -97,7 +105,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var sq = [1, 2, 3, 4].map(function (i) { var s = st.w[i]; return s.s !== 1 ? "\ud83d\udfe5" : s.rev > 1 ? "\ud83d\udfe8" : "\ud83d\udfe9"; }).join("");
-    var share = "Linkase #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < 5 ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" \u00b7 ").toLowerCase() + "</p>" +
@@ -137,7 +145,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days chain, and you held it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put("mw-einstein", tro); } }
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[Math.min(st.mistakes, 4)]) : pick(SASS.lose));
   }
   function submit() {
@@ -185,7 +193,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -194,7 +202,12 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today\u2019s chain is still in triage. Back tomorrow."); $("kb").hidden = true; $("chain").innerHTML = ""; $("mist").innerHTML = ""; return; }
+      if (!P) {
+        $("kb").hidden = true; $("mist").innerHTML = ""; $("result").hidden = true;
+        if (NORMIE && window.MW_noNormie) { say(""); $("chain").innerHTML = MW_noNormie("chain"); }
+        else { say("Today\u2019s chain is still in triage. Back tomorrow."); $("chain").innerHTML = ""; }
+        renderArchive(); return;
+      }
       $("eyebrow").textContent = (isLive() ? "Linkase" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive chain. Already done." : "Archive chain. Doesn't count towards your streak.");
@@ -207,7 +220,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("lnk-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        var s = load(PFX + "lnk-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="lnk-back">Back to today</button>';

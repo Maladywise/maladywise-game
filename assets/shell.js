@@ -23,7 +23,7 @@
     if (!g.normie) return;
     var n = typeof g.normie === "object" ? g.normie : {};
     ["kind", "tagline", "quip", "helpQuip", "help", "weeklyLine"].forEach(function (f) { if (n[f] !== undefined) g[f] = n[f]; else if (f === "helpQuip") delete g.helpQuip; });
-    if (g.store) { var st0 = {}; Object.keys(g.store).forEach(function (k) { st0[k] = g.store[k]; }); st0.stats = "n-" + g.store.stats; st0.day = "n-" + g.store.day; g.medStore = g.store; g.store = st0; }
+    if (g.store) { var st0 = {}; Object.keys(g.store).forEach(function (k) { st0[k] = g.store[k]; }); st0.stats = "n-" + g.store.stats; st0.day = "n-" + g.store.day; if (n.labels) st0.labels = n.labels; g.medStore = g.store; g.store = st0; }
     g.nmode = true;
   });
   if (NORMIE && window.MW_ABOUT_N && window.MW_ABOUT) Object.keys(MW_ABOUT_N).forEach(function (k) { MW_ABOUT[k] = MW_ABOUT_N[k]; });
@@ -131,7 +131,7 @@
     },
     comorbix: function (st) {
       if (!st.win) return null; var m = st.mistakes || 0;
-      return { cls: "cb-bars", html: confetti(["#E9C46A", "#2A9D8F", "#457B9D", "#9B5DE5"], 40) + '<div class="cb-stack"><i style="--c:#E9C46A"></i><i style="--c:#2A9D8F"></i><i style="--c:#457B9D"></i><i style="--c:#9B5DE5"></i></div><p class="cb-cap">' + (m ? "Discharged, with " + m + " slip" + (m > 1 ? "s" : "") + "." : "Clean discharge. Not one mistake.") + "</p>" };
+      return { cls: "cb-bars", html: confetti(["#E9C46A", "#2A9D8F", "#457B9D", "#9B5DE5"], 40) + '<div class="cb-stack"><i style="--c:#E9C46A"></i><i style="--c:#2A9D8F"></i><i style="--c:#457B9D"></i><i style="--c:#9B5DE5"></i></div><p class="cb-cap">' + (m ? (NORMIE ? "All sorted, with " : "Discharged, with ") + m + " slip" + (m > 1 ? "s" : "") + "." : NORMIE ? "All sorted. Not one mistake." : "Clean discharge. Not one mistake.") + "</p>" };
     },
     morphemia: function (st) {
       if (!st.win) return null;
@@ -151,7 +151,7 @@
     },
     suturix: function (st) {
       if (!st.win) return null;
-      return { cls: "cb-sut", html: '<svg class="cb-wound" viewBox="0 0 300 80" aria-hidden="true"><path class="cut" d="M10 40 C 60 20, 100 60, 150 40 S 240 20, 290 40"/>' + [40, 85, 130, 175, 220, 260].map(function (x, i) { return '<path class="st" style="animation-delay:' + (.3 + i * .14) + 's" d="M' + (x - 8) + " 26 L" + (x + 8) + " 54 M" + (x + 8) + " 26 L" + (x - 8) + ' 54"/>'; }).join("") + '</svg><p class="cb-cap">' + (st.hints ? "Closed, with a little help." : "Wound closed. Not a stitch out of place.") + "</p>" };
+      return { cls: "cb-sut", html: '<svg class="cb-wound" viewBox="0 0 300 80" aria-hidden="true"><path class="cut" d="M10 40 C 60 20, 100 60, 150 40 S 240 20, 290 40"/>' + [40, 85, 130, 175, 220, 260].map(function (x, i) { return '<path class="st" style="animation-delay:' + (.3 + i * .14) + 's" d="M' + (x - 8) + " 26 L" + (x + 8) + " 54 M" + (x + 8) + " 26 L" + (x - 8) + ' 54"/>'; }).join("") + '</svg><p class="cb-cap">' + (st.hints ? (NORMIE ? "Sewn up, with a little help." : "Closed, with a little help.") : NORMIE ? "Sewn up. Not a stitch out of place." : "Wound closed. Not a stitch out of place.") + "</p>" };
     },
     triviosis: function (st) {
       if (!st.win || st.score == null) return null; var s2 = st.score, gr = s2 === 10 ? "A+" : s2 >= 9 ? "A" : s2 >= 8 ? "B+" : s2 >= 7 ? "B" : "C";
@@ -195,7 +195,7 @@
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function mascotHelp(g) {
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
-    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + '. Here\u2019s how ' + g.name + ' works.</p></div>';
+    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + (NORMIE && g.nmode && g.normieMascot ? " (off duty)" : "") + '. Here\u2019s how ' + g.name + ' works.</p></div>';
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
@@ -222,7 +222,7 @@
     var all = daily.every(function (x) { var s2 = get(x.store.day + t, null); return s2 && s2.done; });
     if (all && get(mk("mw-wrc"), "") !== t) {
       set(mk("mw-wrc"), t);
-      queue({ cls: "cb-wrc", ms: 3600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">Ward round<br>complete</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
+      queue({ cls: "cb-wrc", ms: 3600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">' + (NORMIE ? "Clean<br>sweep" : "Ward round<br>complete") + '</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
     }
   }
   window.MW_celebrate = celebrate;
@@ -461,7 +461,7 @@
            '<button class="icon-btn" data-a="archive" aria-label="Past puzzles">' + I.archive + "</button>" : "") +
       '<button class="icon-btn" data-a="settings" aria-label="Settings">' + I.gear + "</button></nav></div></header>");
     bar.addEventListener("click", function (e) {
-      var mb = e.target.closest("[data-mode]");
+      var mb = e.target.closest(".mw-mode [data-mode]");
       if (mb) { var nm = mb.getAttribute("data-mode"); if (nm !== MODE) { Array.prototype.forEach.call(mb.parentNode.children, function (c) { c.setAttribute("aria-pressed", c === mb); }); setMode(nm); } return; }
       var b = e.target.closest("[data-a]"); if (!b) return;
       var a = b.getAttribute("data-a");
