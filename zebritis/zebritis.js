@@ -208,6 +208,7 @@
   root.addEventListener("submit", function (e) {
     if (e.target.id !== "zbr-form") return; e.preventDefault();
     var inp = $("in"), g = (inp.value || "").trim(); if (!g || st.done) return;
+    var sw = window.MW_swear && MW_swear(g); if (sw) { inp.value = ""; render(sw, true); return; }
     var x = P.prompts[st.i], tries = st.tries[st.i] = st.tries[st.i] || [];
     if (tries.some(function (t) { return core(t) === core(g); })) { render("You\u2019ve tried that one.", true); return; }
     var m = match(g, x);
