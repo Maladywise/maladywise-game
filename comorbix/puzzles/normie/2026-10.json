@@ -1,0 +1,378 @@
+[
+ {
+  "date": "2026-10-24",
+  "number": 1,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Planets",
+    "level": 1,
+    "words": [
+     "VENUS",
+     "SATURN",
+     "NEPTUNE",
+     "JUPITER"
+    ]
+   },
+   {
+    "label": "Chocolate bars",
+    "level": 2,
+    "words": [
+     "TWIX",
+     "BOUNTY",
+     "GALAXY",
+     "SNICKERS"
+    ]
+   },
+   {
+    "label": "___ ring",
+    "level": 3,
+    "words": [
+     "BOXING",
+     "ONION",
+     "KEY",
+     "WEDDING"
+    ]
+   },
+   {
+    "label": "Hidden numbers",
+    "level": 4,
+    "words": [
+     "OFTEN",
+     "LONELY",
+     "WEIGHT",
+     "CANINE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-25",
+  "number": 2,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Shades of blue",
+    "level": 1,
+    "words": [
+     "NAVY",
+     "COBALT",
+     "AZURE",
+     "SAPPHIRE"
+    ]
+   },
+   {
+    "label": "Card games",
+    "level": 2,
+    "words": [
+     "POKER",
+     "BRIDGE",
+     "RUMMY",
+     "CANASTA"
+    ]
+   },
+   {
+    "label": "Chess pieces",
+    "level": 3,
+    "words": [
+     "KING",
+     "QUEEN",
+     "ROOK",
+     "PAWN"
+    ]
+   },
+   {
+    "label": "New word when reversed",
+    "level": 4,
+    "words": [
+     "REWARD",
+     "STRESSED",
+     "PARTS",
+     "LIVED"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-26",
+  "number": 3,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Fruits",
+    "level": 1,
+    "words": [
+     "MANGO",
+     "PEAR",
+     "KIWI",
+     "PLUM"
+    ]
+   },
+   {
+    "label": "Birds",
+    "level": 2,
+    "words": [
+     "ROBIN",
+     "EAGLE",
+     "OWL",
+     "PARROT"
+    ]
+   },
+   {
+    "label": "Up in the sky",
+    "level": 3,
+    "words": [
+     "CLOUD",
+     "RAINBOW",
+     "MOON",
+     "SUN"
+    ]
+   },
+   {
+    "label": "___ cake",
+    "level": 4,
+    "words": [
+     "CUP",
+     "PAN",
+     "CHEESE",
+     "FISH"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "number": 4,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Musical instruments",
+    "level": 1,
+    "words": [
+     "GUITAR",
+     "PIANO",
+     "DRUM",
+     "VIOLIN"
+    ]
+   },
+   {
+    "label": "Sports with a net",
+    "level": 2,
+    "words": [
+     "TENNIS",
+     "VOLLEYBALL",
+     "BADMINTON",
+     "NETBALL"
+    ]
+   },
+   {
+    "label": "Wild weather",
+    "level": 3,
+    "words": [
+     "THUNDER",
+     "FOG",
+     "HAIL",
+     "SLEET"
+    ]
+   },
+   {
+    "label": "___ board",
+    "level": 4,
+    "words": [
+     "KEY",
+     "SKATE",
+     "SURF",
+     "CHALK"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "number": 5,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Pizza toppings",
+    "level": 1,
+    "words": [
+     "PEPPERONI",
+     "MUSHROOM",
+     "OLIVE",
+     "PINEAPPLE"
+    ]
+   },
+   {
+    "label": "Classic board games",
+    "level": 2,
+    "words": [
+     "CHESS",
+     "RISK",
+     "MONOPOLY",
+     "SCRABBLE"
+    ]
+   },
+   {
+    "label": "Famous fictional bears",
+    "level": 3,
+    "words": [
+     "PADDINGTON",
+     "BALOO",
+     "POOH",
+     "YOGI"
+    ]
+   },
+   {
+    "label": "___ apple",
+    "level": 4,
+    "words": [
+     "BIG",
+     "CRAB",
+     "TOFFEE",
+     "CANDY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "number": 6,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Desserts",
+    "level": 1,
+    "words": [
+     "TIRAMISU",
+     "BROWNIE",
+     "PAVLOVA",
+     "TRIFLE"
+    ]
+   },
+   {
+    "label": "Superheroes",
+    "level": 2,
+    "words": [
+     "BATMAN",
+     "SUPERMAN",
+     "THOR",
+     "HULK"
+    ]
+   },
+   {
+    "label": "Things with shells",
+    "level": 3,
+    "words": [
+     "TORTOISE",
+     "SNAIL",
+     "EGG",
+     "TACO"
+    ]
+   },
+   {
+    "label": "Thunder ___",
+    "level": 4,
+    "words": [
+     "BOLT",
+     "STORM",
+     "CLAP",
+     "BIRD"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "number": 7,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Dog breeds",
+    "level": 1,
+    "words": [
+     "BOXER",
+     "POODLE",
+     "BEAGLE",
+     "PUG"
+    ]
+   },
+   {
+    "label": "Fabrics",
+    "level": 2,
+    "words": [
+     "SILK",
+     "DENIM",
+     "TWEED",
+     "VELVET"
+    ]
+   },
+   {
+    "label": "Fictional detectives",
+    "level": 3,
+    "words": [
+     "HOLMES",
+     "POIROT",
+     "MARPLE",
+     "COLUMBO"
+    ]
+   },
+   {
+    "label": "___ code",
+    "level": 4,
+    "words": [
+     "MORSE",
+     "AREA",
+     "POST",
+     "DRESS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-31",
+  "number": 8,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Halloween costumes",
+    "level": 1,
+    "words": [
+     "WITCH",
+     "GHOST",
+     "ZOMBIE",
+     "VAMPIRE"
+    ]
+   },
+   {
+    "label": "Witch's kit",
+    "level": 2,
+    "words": [
+     "CAULDRON",
+     "BROOMSTICK",
+     "WAND",
+     "POTION"
+    ]
+   },
+   {
+    "label": "Fictional monsters",
+    "level": 3,
+    "words": [
+     "DRACULA",
+     "FRANKENSTEIN",
+     "GODZILLA",
+     "SHREK"
+    ]
+   },
+   {
+    "label": "Hidden bat",
+    "level": 4,
+    "words": [
+     "ACROBAT",
+     "BATTERY",
+     "DEBATE",
+     "WOMBAT"
+    ]
+   }
+  ]
+ }
+]
