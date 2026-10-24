@@ -134,6 +134,7 @@
   function fail(m) { say(m); drawEntry(true); var was = cur; clearTimeout(clearT); clearT = setTimeout(function () { if (cur === was) { cur = ""; drawEntry(); } }, 450); }
   function submit() {
     var w = cur; if (!P) return;
+    var sw = window.MW_swear && MW_swear(w); if (sw) { fail(sw); return; }
     if (w.length < 4) { fail(pick(SASS.short)); return; }
     var L = letters();
     if (w.split("").some(function (c) { return L.indexOf(c) < 0; })) { fail(pick(SASS.bad)); return; }

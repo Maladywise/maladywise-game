@@ -212,7 +212,8 @@
   $("form").onsubmit = function (e) {
     e.preventDefault();
     var raw = $("guess").value.trim(); if (!raw) { say(NORMIE ? "Type something. Anything. Ideally a guess." : "Type something. Anything. Ideally a diagnosis."); return; }
-    var n = norm(raw); $("guess").value = "";
+var sw0 = window.MW_swear && MW_swear(raw); if (sw0) { $("guess").value = ""; say(sw0); return; }
+        var n = norm(raw); $("guess").value = "";
     if ((C.accept || []).some(function (a) { return norm(a) === n; }) || norm(C.answer) === n) { finish(true); render(); return; }
     if (st.wrong.some(function (w) { return norm(w) === n; })) { say(pick(SASS.repeat)); return; }
     if (isNonsense(n)) { say(pick(SASS.nonsense)); return; }              // no clue burned

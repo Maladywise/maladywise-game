@@ -239,6 +239,18 @@
     var strip = box.querySelector(".mwx"); if (strip) strip.parentNode.insertBefore(card, strip); else box.appendChild(card);
   }
 
+
+  // ---------- sassy reply to swearing (no penalty) ----------
+  window.MW_swear = function (raw) {
+    var t = String(raw || "").toLowerCase().replace(/[^a-z ]+/g, " ").replace(/\s+/g, " ").trim(); if (!t) return "";
+    var strong = /(^| )(fuck|motherf|shit|bullshit|cunt|wank|bollock|arsehole|asshole|dickhead|bellend|twat)/, weak = /^(piss|pissed|crap|arse|ass|damn|dammit|bloody|bugger|cock|dick|prick|tits|boobs|slut|whore|bitch|bastard|tosser|shite|feck|frig|frigging|wtf|omfg|stfu)$/;
+    if (!strong.test(t) && !weak.test(t)) return "";
+    var N = window.MW_mode && MW_mode() === "normie";
+    var L = N ? ["Language! Someone’s nan plays this.", "Bold. Wrong, but bold.", "Swearing reduces pain. Not your score.", "It’s a word. Just not here.", "Rude. And not on the list.", "Save it for the traffic.", "We’ll pretend we didn’t see that.", "Feel better? Now try a real guess."]
+      : ["Language! This is a medical facility.", "Wash your mouth out with chlorhexidine.", "Swearing raises pain tolerance. Not your score.", "Noted in your file under ‘behaviour’.", "The nurses heard that.", "Save it for the car park.", "Ah, the 3am night-shift vocabulary.", "Mouth like a surgeon. Score like a student.", "That’s not a diagnosis. That’s a mood."];
+    try { if (window.goatcounter && goatcounter.count) {} } catch (e) {}
+    return L[Math.floor(Math.random() * L.length)] + " (No guess used.)";
+  };
   // ---------- native share button next to every "Copy result" ----------
   function addShare(root) {
     Array.prototype.forEach.call((root || document).querySelectorAll('button[id$="-copy"]:not([data-mws])'), function (b) {

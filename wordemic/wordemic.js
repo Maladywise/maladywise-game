@@ -135,6 +135,7 @@
     if (k === "back") { cur = cur.slice(0, -1); say(""); paint(); return; }
     if (k === "enter") {
       if (cur.length < LEN) { say(pick(SASS.short)); shake(); return; }
+      var sw = window.MW_swear && MW_swear(cur); if (sw) { say(sw); shake(); return; }
       if (!WORDS.__any && !WORDS[cur] && cur !== P.word.toLowerCase()) { say(pick(SASS.invalid)); shake(); return; }
       st.guesses.push(cur); cur = ""; say("");
       var win = st.guesses[st.guesses.length - 1] === P.word.toLowerCase();
