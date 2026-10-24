@@ -1136,12 +1136,12 @@
     "e": "In children, before growth plates close, it causes gigantism."
    },
    {
-    "q": "In diabetes, hypoglycaemia is usually treated when glucose drops below?",
-    "a": "4 mmol/L",
+    "q": "In diabetes, hypoglycaemia is usually treated when blood glucose drops below?",
+    "a": "4 mmol/L (about 70 mg/dL)",
     "w": [
-     "6 mmol/L",
-     "2 mmol/L",
-     "8 mmol/L"
+     "7 mmol/L (126 mg/dL)",
+     "2 mmol/L (36 mg/dL)",
+     "10 mmol/L (180 mg/dL)"
     ],
     "e": "\u2018Four is the floor.\u2019"
    },
@@ -1980,7 +1980,7 @@
     "e": "The \u2018silent thief of sight\u2019."
    },
    {
-    "q": "What is the leading cause of blindness in older Australians?",
+    "q": "What is the leading cause of blindness in older people in high-income countries?",
     "a": "Age-related macular degeneration",
     "w": [
      "Glaucoma",
@@ -2472,7 +2472,7 @@
     "e": ""
    },
    {
-    "q": "Which vaccine is given at birth in Australia?",
+    "q": "Which vaccine does WHO recommend giving to all babies within 24 hours of birth?",
     "a": "Hepatitis B",
     "w": [
      "MMR",
@@ -2756,7 +2756,7 @@
     "e": "At an American Legion convention."
    },
    {
-    "q": "In Australia, Legionella longbeachae is famously linked to?",
+    "q": "Legionella longbeachae is famously linked to?",
     "a": "Potting mix",
     "w": [
      "Swimming pools",
@@ -2972,7 +2972,7 @@
     "e": "Diabetes is Greek for siphon; mellitus is Latin for honeyed. Early doctors tasted urine."
    },
    {
-    "q": "In Australia, an HbA1c at or above what level can diagnose diabetes?",
+    "q": "According to WHO, an HbA1c at or above what level can diagnose diabetes?",
     "a": "48 mmol/mol (6.5%)",
     "w": [
      "36 mmol/mol (5.4%)",
@@ -3002,7 +3002,7 @@
     "e": "Acetone. Not everyone can smell it."
    },
    {
-    "q": "Which test is used to diagnose gestational diabetes in Australia?",
+    "q": "Which test is the standard way to diagnose gestational diabetes?",
     "a": "Oral glucose tolerance test",
     "w": [
      "Urine dipstick",
@@ -3060,14 +3060,14 @@
     "e": "Mary Ellen Avery linked its absence to breathing trouble in newborns in 1959."
    },
    {
-    "q": "In Australian NICUs, a \u2018humidicrib\u2019 is?",
-    "a": "An incubator",
+    "q": "\u2018Kangaroo care\u2019 for premature babies means?",
+    "a": "Skin-to-skin contact on a parent\u2019s chest",
     "w": [
-     "A cot with a mosquito net",
-     "A heated bath",
-     "A rocking cradle"
+     "Carrying the baby in a sling all day",
+     "Feeding every hour",
+     "Keeping the baby in a dark incubator"
     ],
-    "e": "Keeps tiny babies warm, with humidified air."
+    "e": "WHO recommends it for small and preterm babies: it helps warmth, breastfeeding and survival."
    },
    {
     "q": "In the early 1900s, Martin Couney showed premature babies in incubators at?",
@@ -3266,24 +3266,24 @@
     "e": "A Greek-American doctor."
    },
    {
-    "q": "For most people aged 25 to 74 with a normal result, the Cervical Screening Test is due every?",
-    "a": "5 years",
+    "q": "For people with a normal HPV test, WHO recommends cervical screening every?",
+    "a": "5 to 10 years",
     "w": [
      "Year",
      "2 years",
-     "10 years"
+     "20 years"
     ],
-    "e": "It replaced the two-yearly Pap test in December 2017."
+    "e": "WHO\u2019s 2021 guideline prefers HPV DNA testing over Pap smears, starting at age 30 for most women."
    },
    {
-    "q": "Since July 2022, everyone eligible for cervical screening in Australia can?",
-    "a": "Collect their own sample",
+    "q": "To reach more people, many countries now let people screen for cervical cancer by?",
+    "a": "Collecting their own vaginal swab",
     "w": [
-     "Skip screening after 30",
-     "Screen with a blood test",
-     "Screen with a urine test"
+     "A blood test",
+     "A urine test only",
+     "An ultrasound"
     ],
-    "e": "A self-collected vaginal swab is as accurate for HPV as a clinician-collected one."
+    "e": "Self-collected HPV tests are about as accurate as clinician-collected ones, and WHO recommends offering them."
    },
    {
     "q": "The technology behind the HPV vaccine was developed at which university?",
@@ -3296,14 +3296,14 @@
     "e": "By Ian Frazer and the late Jian Zhou, in 1991."
    },
    {
-    "q": "Australia\u2019s school HPV vaccine program began for girls in?",
-    "a": "2007",
+    "q": "WHO\u2019s cervical cancer elimination strategy aims for 90% of girls to be fully vaccinated against HPV by age?",
+    "a": "15",
     "w": [
-     "1997",
-     "2015",
-     "2020"
+     "10",
+     "21",
+     "30"
     ],
-    "e": "Boys were added in 2013."
+    "e": "The 90-70-90 targets: vaccinate 90% of girls, screen 70% of women, treat 90% of those who need it, all by 2030."
    },
    {
     "q": "The WHO elimination threshold is fewer than how many cervical cancers per 100,000 women a year?",
