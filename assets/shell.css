@@ -556,3 +556,5 @@ main .stats,main .dist{display:none!important}
 }
 /* mode toggle: white disc behind the active emoji so the stethoscope shows on purple */
 .mw-mode button[aria-pressed="true"] span[aria-hidden]:not(.mm-t){background:#fff;border-radius:50%;width:24px;height:24px;display:inline-grid;place-items:center;font-size:15px;line-height:1;margin:-4px -3px;box-shadow:0 0 0 1px rgba(255,255,255,.6)}
+.mw-mode button[aria-pressed="true"] span[aria-hidden]:not(.mm-t){margin-right:3px}
+.mw-mode button[aria-pressed="true"] .mm-t{margin-left:2px}
