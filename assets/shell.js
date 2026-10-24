@@ -342,7 +342,7 @@
   function checkBadges() {
     try {
       var st = myStats(MODE), fresh = st.badges.filter(function (b) { return b.got && get(seenKey(b, st.mode), []).indexOf(b.id) < 0; });
-      markSeen(st); badgeToast(fresh);
+      markSeen(st); /* badge popup removed by request */
     } catch (e) {}
   }
   window.MW_checkBadges = checkBadges;
