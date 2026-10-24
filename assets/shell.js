@@ -586,7 +586,7 @@
     var bar = el('<header class="bar"><div class="bar-in">' +
       (g ? '<a class="back" href="../" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
-      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
+      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.filter(function (n) { return !NORMIE || !/^\/(conditions|medicines|tools)\//.test(n[1]); }).map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
            '<button class="icon-btn" data-a="stats" aria-label="Stats">' + I.stats + "</button>" +
@@ -647,9 +647,9 @@
     function house() {
       var h = MW_SITE.house; if (!h) return "";
       var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
-      return '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
+      return (NORMIE ? "" : '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12M26 18v12"/></svg></div>' +
-        '<div class="cbody"><h2 class="name">Conditions &amp; Medicines</h2><p class="kind">Plain-English health info</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>' +
+        '<div class="cbody"><h2 class="name">Conditions &amp; Medicines</h2><p class="kind">Plain-English health info</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>') +
         '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
         '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>" +
