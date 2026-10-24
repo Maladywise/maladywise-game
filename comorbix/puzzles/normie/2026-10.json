@@ -99,43 +99,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Fruits",
+    "label": "Fruits that grow on trees",
     "level": 1,
     "words": [
      "MANGO",
      "PEAR",
-     "KIWI",
-     "PLUM"
+     "PLUM",
+     "CHERRY"
     ]
    },
    {
-    "label": "Birds",
+    "label": "Birds that can fly",
     "level": 2,
     "words": [
      "ROBIN",
      "EAGLE",
      "OWL",
-     "PARROT"
+     "SWAN"
     ]
    },
    {
-    "label": "Up in the sky",
+    "label": "Flightless birds",
     "level": 3,
     "words": [
-     "CLOUD",
-     "RAINBOW",
-     "MOON",
-     "SUN"
+     "KIWI",
+     "EMU",
+     "OSTRICH",
+     "PENGUIN"
     ]
    },
    {
-    "label": "___ cake",
+    "label": "___fly",
     "level": 4,
     "words": [
-     "CUP",
-     "PAN",
-     "CHEESE",
-     "FISH"
+     "BUTTER",
+     "DRAGON",
+     "FIRE",
+     "HORSE"
     ]
    }
   ]
@@ -146,43 +146,43 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Musical instruments",
+    "label": "Stringed instruments",
     "level": 1,
     "words": [
      "GUITAR",
-     "PIANO",
-     "DRUM",
-     "VIOLIN"
+     "VIOLIN",
+     "CELLO",
+     "HARP"
     ]
    },
    {
-    "label": "Sports with a net",
+    "label": "Sports played over a net",
     "level": 2,
     "words": [
      "TENNIS",
      "VOLLEYBALL",
      "BADMINTON",
-     "NETBALL"
+     "PICKLEBALL"
     ]
    },
    {
-    "label": "Wild weather",
+    "label": "Vegetables",
     "level": 3,
     "words": [
-     "THUNDER",
-     "FOG",
-     "HAIL",
-     "SLEET"
+     "SQUASH",
+     "LEEK",
+     "PARSNIP",
+     "RADISH"
     ]
    },
    {
-    "label": "___ board",
+    "label": "___stick",
     "level": 4,
     "words": [
-     "KEY",
-     "SKATE",
-     "SURF",
-     "CHALK"
+     "DRUM",
+     "LIP",
+     "CHOP",
+     "JOY"
     ]
    }
   ]
@@ -193,28 +193,8 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Pizza toppings",
+    "label": "Fictional bears",
     "level": 1,
-    "words": [
-     "PEPPERONI",
-     "MUSHROOM",
-     "OLIVE",
-     "PINEAPPLE"
-    ]
-   },
-   {
-    "label": "Classic board games",
-    "level": 2,
-    "words": [
-     "CHESS",
-     "RISK",
-     "MONOPOLY",
-     "SCRABBLE"
-    ]
-   },
-   {
-    "label": "Famous fictional bears",
-    "level": 3,
     "words": [
      "PADDINGTON",
      "BALOO",
@@ -223,13 +203,33 @@
     ]
    },
    {
-    "label": "___ apple",
+    "label": "Board games",
+    "level": 2,
+    "words": [
+     "CHESS",
+     "MONOPOLY",
+     "SCRABBLE",
+     "LUDO"
+    ]
+   },
+   {
+    "label": "Spinning storms",
+    "level": 3,
+    "words": [
+     "TWISTER",
+     "CYCLONE",
+     "TYPHOON",
+     "HURRICANE"
+    ]
+   },
+   {
+    "label": "Starts with a fruit",
     "level": 4,
     "words": [
-     "BIG",
-     "CRAB",
-     "TOFFEE",
-     "CANDY"
+     "PEARL",
+     "PLUMBER",
+     "LIMERICK",
+     "BANANAGRAMS"
     ]
    }
   ]
@@ -240,43 +240,43 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Desserts",
+    "label": "Italian desserts",
     "level": 1,
     "words": [
      "TIRAMISU",
-     "BROWNIE",
-     "PAVLOVA",
-     "TRIFLE"
+     "GELATO",
+     "CANNOLI",
+     "AFFOGATO"
     ]
    },
    {
-    "label": "Superheroes",
+    "label": "Marvel heroes",
     "level": 2,
     "words": [
-     "BATMAN",
-     "SUPERMAN",
      "THOR",
-     "HULK"
+     "HULK",
+     "HAWKEYE",
+     "VISION"
     ]
    },
    {
-    "label": "Things with shells",
+    "label": "Give way",
     "level": 3,
     "words": [
-     "TORTOISE",
-     "SNAIL",
-     "EGG",
-     "TACO"
+     "CRUMBLE",
+     "BUCKLE",
+     "CAVE",
+     "FOLD"
     ]
    },
    {
-    "label": "Thunder ___",
+    "label": "___light",
     "level": 4,
     "words": [
-     "BOLT",
-     "STORM",
-     "CLAP",
-     "BIRD"
+     "FLASH",
+     "SPOT",
+     "MOON",
+     "HIGH"
     ]
    }
   ]
@@ -287,43 +287,43 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Dog breeds",
+    "label": "Animal fibres",
     "level": 1,
     "words": [
-     "BOXER",
-     "POODLE",
-     "BEAGLE",
-     "PUG"
+     "SILK",
+     "WOOL",
+     "MOHAIR",
+     "FLEECE"
     ]
    },
    {
-    "label": "Fabrics",
+    "label": "Small dog breeds",
     "level": 2,
     "words": [
-     "SILK",
-     "DENIM",
-     "TWEED",
-     "VELVET"
+     "PUG",
+     "CORGI",
+     "DACHSHUND",
+     "BEAGLE"
     ]
    },
    {
-    "label": "Fictional detectives",
+    "label": "Like a rough voice",
     "level": 3,
     "words": [
-     "HOLMES",
-     "POIROT",
-     "MARPLE",
-     "COLUMBO"
+     "HUSKY",
+     "GRAVELLY",
+     "RASPY",
+     "CROAKY"
     ]
    },
    {
-    "label": "___ code",
+    "label": "Named after places",
     "level": 4,
     "words": [
-     "MORSE",
-     "AREA",
-     "POST",
-     "DRESS"
+     "DENIM",
+     "BIKINI",
+     "MARATHON",
+     "HAMBURGER"
     ]
    }
   ]
@@ -334,18 +334,8 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Halloween costumes",
-    "level": 1,
-    "words": [
-     "WITCH",
-     "GHOST",
-     "ZOMBIE",
-     "VAMPIRE"
-    ]
-   },
-   {
     "label": "Witch's kit",
-    "level": 2,
+    "level": 1,
     "words": [
      "CAULDRON",
      "BROOMSTICK",
@@ -354,13 +344,23 @@
     ]
    },
    {
-    "label": "Fictional monsters",
+    "label": "Undead",
+    "level": 2,
+    "words": [
+     "ZOMBIE",
+     "VAMPIRE",
+     "MUMMY",
+     "GHOUL"
+    ]
+   },
+   {
+    "label": "Night-flying wildlife",
     "level": 3,
     "words": [
-     "DRACULA",
-     "FRANKENSTEIN",
-     "GODZILLA",
-     "SHREK"
+     "OWL",
+     "MOTH",
+     "FIREFLY",
+     "NIGHTJAR"
     ]
    },
    {
