@@ -55,6 +55,7 @@
   "outer": "DENOUR",
   "words": [
    "DEGREE",
+   "DENGUE",
    "DODGE",
    "DODGED",
    "DODGER",
@@ -62,6 +63,8 @@
    "DREDGE",
    "DREDGED",
    "DRUDGE",
+   "DRUG",
+   "DRUGGED",
    "DUNG",
    "DUNGEON",
    "EDGE",
@@ -120,7 +123,7 @@
    "UNDERGONE",
    "UNDERGROUND"
   ],
-  "max": 387
+  "max": 401
  },
  {
   "date": "2026-10-26",
@@ -216,6 +219,7 @@
   "outer": "APLEHT",
   "words": [
    "ANTE",
+   "ANTENATAL",
    "ANTENNA",
    "ANTENNAE",
    "APPELLANT",
@@ -260,7 +264,7 @@
   "pangrams": [
    "ELEPHANT"
   ],
-  "max": 199
+  "max": 218
  },
  {
   "date": "2026-10-29",
@@ -315,7 +319,9 @@
   "outer": "KBNAET",
   "words": [
    "ABLE",
+   "ALLELE",
    "ANKLE",
+   "ANTENATAL",
    "BABBLE",
    "BABEL",
    "BALE",
@@ -368,7 +374,7 @@
   "pangrams": [
    "BLANKET"
   ],
-  "max": 207
+  "max": 232
  },
  {
   "date": "2026-10-31",
