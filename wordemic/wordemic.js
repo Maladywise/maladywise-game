@@ -4,6 +4,8 @@
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7";
   var ROWS = 6, LEN = 5;
+  // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
   var root = document.getElementById("wde");
   if (!document.querySelector("link[data-wde]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "wordemic.css?v=" + BUILD; l.setAttribute("data-wde", ""); document.head.appendChild(l);
@@ -29,9 +31,9 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "wde-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
+  var SKEY = PFX + "wde-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
   var KEY, st, P = null, WORDS = null;
-  function loadDay() { KEY = "wde-day-" + today; st = load(KEY, { guesses: [], done: false, win: false }); }
+  function loadDay() { KEY = PFX + "wde-day-" + today; st = load(KEY, { guesses: [], done: false, win: false }); }
   loadDay();
 
   // ---------- sass ----------
@@ -93,7 +95,7 @@
     if (!st.done) { r.hidden = true; return; }
     var word = P.word.toLowerCase();
     var grid = st.guesses.map(function (g) { return score(g, word).map(function (s) { return s === "hit" ? "\ud83d\udfe9" : s === "near" ? "\ud83d\udfe8" : "\u2b1c"; }).join(""); }).join("\n");
-    var share = "Wordemic #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/6\n" + grid + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/6\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = st.win ? st.guesses.length - 1 : 6;
     r.hidden = false;
     r.innerHTML = "<h2>" + P.word + '</h2><p class="def">' + P.definition + "</p>" +
@@ -125,7 +127,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put("mw-einstein", tro); } }
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[st.guesses.length - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
@@ -155,7 +157,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -163,7 +165,13 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today\u2019s word is still in triage. Back tomorrow."); $("kb").hidden = true; return; }
+      if (!P) {
+        $("kb").hidden = true; $("result").hidden = true;
+        if (NORMIE && window.MW_noNormie) { say(""); $("board").innerHTML = MW_noNormie("word"); }
+        else say("Today\u2019s word is still in triage. Back tomorrow.");
+        renderArchive(); return;
+      }
+      if (!$("board").querySelector(".row")) buildBoard();
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
@@ -176,7 +184,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("wde-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        var s = load(PFX + "wde-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="wde-back">Back to today</button>';

@@ -4,6 +4,8 @@
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", PASS = 6;
   var root = document.getElementById("trv");
+  // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
   if (!document.querySelector("link[data-trv]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "triviosis.css?v=" + BUILD; l.setAttribute("data-trv", ""); document.head.appendChild(l);
   }
@@ -31,9 +33,9 @@
   var week = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return week === REAL; }
   // dist buckets: 10, 8-9, 6-7, 4-5, 0-3
-  var SKEY = "trv-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
+  var SKEY = PFX + "trv-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, Z = null, all = [];
-  function loadWeek() { KEY = "trv-day-" + week; st = load(KEY, { ans: [], done: false, win: false }); }
+  function loadWeek() { KEY = PFX + "trv-day-" + week; st = load(KEY, { ans: [], done: false, win: false }); }
   loadWeek();
 
   // ---------- sass ----------
@@ -80,7 +82,7 @@
   function renderResult() {
     var r = $("result"), s = score();
     var sq = Z.questions.map(function (x, i) { return st.ans[i] === x.a ? "\ud83d\udfe9" : "\ud83d\udfe5"; }).join("");
-    var share = "Triviosis #" + Z.number + (isLive() ? "" : " (archive)") + " \u00b7 " + Z.theme + "\n" + sq + " " + s + "/10\nmaladywise.com";
+    var share = "Triviosis" + (NORMIE ? " (Normie)" : "") + " #" + Z.number + (isLive() ? "" : " (archive)") + " \u00b7 " + Z.theme + "\n" + sq + " " + s + "/10\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="score">' + s + '<span>/10</span></p><p class="verdict">' + esc(SASS.end(s)) + "</p>" +
@@ -128,7 +130,7 @@
   // ---------- load ----------
   function show(w) {
     week = w; loadWeek(); Z = all.filter(function (x) { return x.date === w; })[0] || null;
-    if (!Z) { $("theme").textContent = "Still in the lab"; $("card").innerHTML = '<p class="note">Today\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
+    if (!Z) { $("theme").textContent = NORMIE ? "No quiz yet" : "Still in the lab"; $("card").hidden = false; $("result").hidden = true; $("card").innerHTML = NORMIE && window.MW_noNormie ? MW_noNormie("quiz") : '<p class="note">Today\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; renderArchive(); return; }
     $("theme").textContent = Z.theme;
     $("eyebrow").textContent = (isLive() ? "Triviosis" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 " + nice(Z.date); $("badge").textContent = Z.difficulty || ""; $("badge").className = "badge" + (Z.difficulty === "Einstein" ? " ein" : "");
     render(); renderArchive();
@@ -136,7 +138,7 @@
   function renderArchive() {
     var past = all.filter(function (x) { return x.date < REAL; }).reverse();
     var rows = past.map(function (x) {
-      var s = load("trv-day-" + x.date, null), mark = s && s.done ? " \u2713" : "";
+      var s = load(PFX + "trv-day-" + x.date, null), mark = s && s.done ? " \u2713" : "";
       return '<button type="button" class="arow' + (x.date === week ? " on" : "") + '" data-w="' + x.date + '"><span>#' + x.number + " \u00b7 " + esc(x.theme) + mark + "</span><span>" + nice(x.date) + "</span></button>";
     }).join("");
     var back = isLive() ? "" : '<button type="button" class="btn" id="trv-back">Back to today</button>';
@@ -146,5 +148,5 @@
   }
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
   tick();
-  fetch(BASE + "quizzes.json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(function (list) { all = list; show(week); });
+  fetch(BASE + FILE + "?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(function (list) { all = list; show(week); });
 })();
