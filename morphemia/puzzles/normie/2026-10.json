@@ -218,6 +218,7 @@
   "centre": "N",
   "outer": "APLEHT",
   "words": [
+   "ANAL",
    "ANTE",
    "ANTENATAL",
    "ANTENNA",
@@ -264,7 +265,7 @@
   "pangrams": [
    "ELEPHANT"
   ],
-  "max": 218
+  "max": 219
  },
  {
   "date": "2026-10-29",
@@ -320,6 +321,7 @@
   "words": [
    "ABLE",
    "ALLELE",
+   "ANAL",
    "ANKLE",
    "ANTENATAL",
    "BABBLE",
@@ -374,7 +376,7 @@
   "pangrams": [
    "BLANKET"
   ],
-  "max": 232
+  "max": 233
  },
  {
   "date": "2026-10-31",
