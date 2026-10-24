@@ -2,7 +2,9 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram) */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", R = 8, C = 6, PER_HINT = 3;
+  // Normie mode: everyday themes from puzzles/normie/, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Suturix (Normie)" : "Suturix";
   var root = document.getElementById("stx");
   if (!document.querySelector("link[data-stx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "suturix.css?v=" + BUILD; l.setAttribute("data-stx", ""); document.head.appendChild(l);
@@ -31,10 +33,10 @@
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
   // dist: hints used 0,1,2,3,4+
-  var SKEY = "stx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
+  var SKEY = PFX + "stx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, P = null, path = [], dict = null;
   // st.found: indexes into P.words in order found; st.log: share sequence ("t","s","h"); st.extra: non-theme words; st.pts: hint points; st.hint: word index or -1
-  function loadDay() { KEY = "stx-day-" + today; st = load(KEY, { found: [], log: [], extra: [], pts: 0, hints: 0, hint: -1, done: false, win: false }); }
+  function loadDay() { KEY = PFX + "stx-day-" + today; st = load(KEY, { found: [], log: [], extra: [], pts: 0, hints: 0, hint: -1, done: false, win: false }); }
   loadDay();
   fetch(BASE + "words.txt?v=" + BUILD).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { dict = new Set(t.split("\n")); }).catch(function () { dict = new Set(); });
 
@@ -51,6 +53,13 @@
     hintNo: ["Find " + PER_HINT + " non-theme words to earn a hint.", "No freebies. Earn it: " + PER_HINT + " bonus words."],
     win: ["All closed. Not a stitch out of place.", "Done. Tidy work, Doctor.", "Wound closed. Patient thrilled. Probably.", "Fully closed. Plastic surgeon standard.", "All words found. Lovely needlework.", "Closed. Minimal scarring.", "Done. Neat as a theatre list."]
   };
+  if (NORMIE) {
+    SASS.theme = ["Neat stitch.", "Nice. That one holds.", "Sewn in.", "Clean finish.", "Textbook.", "Tidy.", "Good knot.", "Holding nicely.", "Stitched.", "Nice and neat.", "Secure."];
+    SASS.span = ["Spangram! Edge to edge, like a good seam.", "Spangram. The whole theme, in one stroke.", "Spangram! The main event.", "Spangram found. The theme, unmasked."];
+    SASS.extra = ["Real word, not on theme. Banked towards a hint.", "Valid, but off topic. Like a group chat tangent.", "A word, sure. Not today's word. Hint credit earned.", "Off theme, but it counts towards a hint.", "Not on theme. Hint progress, though."];
+    SASS.nope = ["Not a word.", "That's not in the dictionary. Or any dictionary.", "Keyboard smash detected.", "Nope. Try actual English.", "Not a word. Nice shape, though.", "Made-up word detected.", "That\u2019s not a word. Unpick it."];
+    SASS.win = ["All sewn up. Not a stitch out of place.", "Done. Tidy work.", "Every thread found. Lovely.", "All words found. Lovely needlework.", "Sewn up. Seamless.", "Done. Neat as a pin."];
+  }
   function say(t, cls) { var e = $("cur"); e.textContent = t; e.className = "cur " + (cls || "msg"); }
 
   // ---------- helpers ----------
@@ -95,7 +104,7 @@
     if (!st.done) { r.hidden = true; return; }
     var em = { t: "\ud83d\udd35", s: "\ud83d\udfe1", h: "\ud83d\udca1" }, seq = st.log.map(function (x) { return em[x]; }), lines = [];
     for (var i = 0; i < seq.length; i += 4) lines.push(seq.slice(i, i + 4).join(""));
-    var share = "Suturix #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\u201c" + P.clue + "\u201d\n" + lines.join("\n") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\u201c" + P.clue + "\u201d\n" + lines.join("\n") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="found">' + P.words.map(function (w, i) { return '<span class="' + (i === 0 ? "s" : "") + '">' + esc(w.w) + "</span>"; }).join("") + "</p>" +
@@ -125,7 +134,7 @@
     }
     if (P.difficulty === "Einstein") {
       say("\u269b\ufe0f Einstein solved. A once-in-50-days theme, closed up neatly. Screenshot this.");
-      if (isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "suturix" && t.d === today; })) { tro.push({ g: "suturix", d: today }); put("mw-einstein", tro); } }
+      if (isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "suturix" && t.d === today; })) { tro.push({ g: "suturix", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(st.hints ? "Closed, with " + st.hints + " hint" + (st.hints > 1 ? "s" : "") + ". Still counts. Mostly." : pick(SASS.win));
   }
   function submit() {
@@ -199,7 +208,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -208,7 +217,13 @@
     today = date; loadDay(); path = []; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today\u2019s theme is still in theatre. Back tomorrow."); $("ctrls").hidden = true; $("cells").innerHTML = ""; $("svg").innerHTML = ""; return; }
+      $("board").hidden = !P; root.querySelector(".theme").hidden = !P;
+      if (!P) {
+        $("ctrls").hidden = true; $("cells").innerHTML = ""; $("svg").innerHTML = ""; $("result").hidden = true;
+        if (NORMIE && window.MW_noNormie) { say(""); $("count").innerHTML = MW_noNormie("theme"); }
+        else { say("Today\u2019s theme is still in theatre. Back tomorrow."); $("count").innerHTML = ""; }
+        renderArchive(); return;
+      }
       $("clue").textContent = P.clue;
       $("eyebrow").textContent = (isLive() ? "Suturix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
@@ -222,7 +237,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("stx-day-" + x.date, null), mark = !s || !s.done ? "" : " \u2713";
+        var s = load(PFX + "stx-day-" + x.date, null), mark = !s || !s.done ? "" : " \u2713";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="stx-back">Back to today</button>';

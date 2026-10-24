@@ -2,7 +2,9 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7";
+  // Normie mode: everyday clues from puzzles/normie/, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Gridectomy (Normie)" : "Gridectomy";
   var root = document.getElementById("grx");
   if (!document.querySelector("link[data-grx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "gridectomy.css?v=" + BUILD; l.setAttribute("data-grx", ""); document.head.appendChild(l);
@@ -33,9 +35,9 @@
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
   // dist buckets: <1m, <2m, <3m, <5m, <10m, 10m+, gave up / revealed
-  var SKEY = "grx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
+  var SKEY = PFX + "grx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
   var KEY, st, P = null, sel = { r: 0, c: 0, dir: "a" }, ticking = null;
-  function loadDay() { KEY = "grx-day-" + today; st = load(KEY, { g: null, t: 0, checks: 0, reveals: 0, done: false, win: false, bad: [] }); }
+  function loadDay() { KEY = PFX + "grx-day-" + today; st = load(KEY, { g: null, t: 0, checks: 0, reveals: 0, done: false, win: false, bad: [] }); }
   loadDay();
 
   // ---------- sass ----------
@@ -51,6 +53,17 @@
       return pick(W[s < 60 ? 60 : s < 120 ? 120 : s < 180 ? 180 : s < 300 ? 300 : s < 600 ? 600 : 0]);
     }
   };
+  if (NORMIE) {
+    SASS.full = ["Grid's full, but something's off.", "Full, not right. Check your working.", "Close, but one of these is a typo.", "Full grid, wrong somewhere. Hunt it down.", "Something\u2019s not right. Try Check.", "Full but faulty. One rogue letter, maybe more."];
+    SASS.check1 = ["Wrong ones flagged in red. No judgement. Some judgement.", "Red squares are wrong. Rethink them.", "Flagged in red. Fix and carry on.", "A few reds. Easily fixed."];
+    var W0 = SASS.win;
+    SASS.win = function (s) {
+      if (s >= 120 && s < 180) return pick(["Solid time. Pro pace.", "Brisk. Nicely done.", "Good time. Efficient."]);
+      if (s >= 180 && s < 300) return pick(["Done. Unhurried, like a Sunday drive.", "Steady solve.", "Done. Calm and methodical."]);
+      if (s >= 300 && s < 600) return pick(["Got there. Slow and thorough.", "Thorough. Like reading the instructions.", "Done. No rush, no fuss."]);
+      return W0(s);
+    };
+  }
   function say(t) { $("msg").textContent = t; }
 
   // ---------- model ----------
@@ -83,7 +96,7 @@
       h += '<div class="' + cls + '" data-r="' + r + '" data-c="' + c + '" role="gridcell">' + (nums[k] ? "<i>" + nums[k] + "</i>" : "") + "<b>" + esc(st.g[r][c] || "") + "</b></div>";
     }
     $("grid").innerHTML = h;
-    $("ctext").innerHTML = e && !st.done ? "<b>" + e.n + (sel.dir === "a" ? "A" : "D") + "</b> " + esc(e.clue) : (st.done ? "Done. Clues below for the post-mortem." : "");
+    $("ctext").innerHTML = e && !st.done ? "<b>" + e.n + (sel.dir === "a" ? "A" : "D") + "</b> " + esc(e.clue) : (st.done ? (NORMIE ? "Done. Clues below for the replay." : "Done. Clues below for the post-mortem.") : "");
     var cl = ["a", "d"].map(function (d) {
       var list = d === "a" ? P.across : P.down;
       return '<div><h4>' + (d === "a" ? "Across" : "Down") + "</h4>" + list.map(function (x) {
@@ -99,7 +112,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var extra = st.win ? (st.checks ? " \u00b7 " + st.checks + " check" + (st.checks > 1 ? "s" : "") : " \u00b7 clean") : "";
-    var share = "Gridectomy #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "\u23f1 " + fmt(st.t) + extra : "\ud83c\udff3\ufe0f Grid won today") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "\u23f1 " + fmt(st.t) + extra : "\ud83c\udff3\ufe0f Grid won today") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -150,7 +163,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved in " + fmt(st.t) + ". A once-in-50-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "gridectomy" && t.d === today; })) { tro.push({ g: "gridectomy", d: today }); put("mw-einstein", tro); } }
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "gridectomy" && t.d === today; })) { tro.push({ g: "gridectomy", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? SASS.win(st.t) : st.reveals && correct0 ? "Finished, with a peek or two. Doesn't count as a clean solve." : pick(SASS.giveup));
   }
   function nextCell(back) {
@@ -246,7 +259,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -255,7 +268,13 @@
     today = date; loadDay(); P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today\u2019s grid is still in theatre. Back tomorrow."); $("kb").hidden = true; $("grid").innerHTML = ""; $("cluebar").hidden = true; $("tools").hidden = true; return; }
+      $("grid").hidden = !P;
+      if (!P) {
+        $("kb").hidden = true; $("grid").innerHTML = ""; $("cluebar").hidden = true; $("tools").hidden = true; $("result").hidden = true; $("timer").textContent = "";
+        if (NORMIE && window.MW_noNormie) { say(""); $("clues").innerHTML = MW_noNormie("grid"); }
+        else { say("Today\u2019s grid is still in theatre. Back tomorrow."); $("clues").innerHTML = ""; }
+        renderArchive(); return;
+      }
       if (!st.g) st.g = [0, 1, 2, 3, 4].map(function () { return ["", "", "", "", ""]; });
       var first = P.across[0]; sel = { r: first.r, c: first.c, dir: "a" };
       $("eyebrow").textContent = (isLive() ? "Gridectomy" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
@@ -270,7 +289,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("grx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        var s = load(PFX + "grx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="grx-back">Back to today</button>';

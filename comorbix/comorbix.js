@@ -2,7 +2,9 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", MAXM = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", MAXM = 4;
+  // Normie mode: everyday groups from puzzles/normie/, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Comorbix (Normie)" : "Comorbix";
   var root = document.getElementById("cmx");
   if (!document.querySelector("link[data-cmx]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "comorbix.css?v=" + BUILD; l.setAttribute("data-cmx", ""); document.head.appendChild(l);
@@ -30,9 +32,9 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "cmx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
+  var SKEY = PFX + "cmx-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, P = null, order = [], sel = [];
-  function loadDay() { KEY = "cmx-day-" + today; st = load(KEY, { solved: [], tries: [], mistakes: 0, done: false, win: false, order: null }); }
+  function loadDay() { KEY = PFX + "cmx-day-" + today; st = load(KEY, { solved: [], tries: [], mistakes: 0, done: false, win: false, order: null }); }
   loadDay();
 
   // ---------- sass ----------
@@ -45,6 +47,15 @@
     win: [["Perfect. Not a single mistake. Smug is allowed.", "Zero mistakes. Clinical precision.", "Flawless. Are you the puzzle setter?", "Clean sweep. Frame it."], ["Solved with one slip. Still very respectable.", "One mistake. Barely a blemish.", "One slip, then flawless. Nice recovery.", "Solved, one stumble. Strong work."], ["Two mistakes. Got there.", "Two slips. A safe pair of hands, mostly.", "Two mistakes. Solved is solved.", "Got there with two wobbles."], ["Three mistakes. Living dangerously.", "Three slips. Heart rate elevated.", "Solved on the last life. Dramatic.", "Three mistakes. Nail-biter."]],
     lose: ["Out of strikes. The groups win today.", "Code blue. Here's what you missed.", "Off to the textbook. Rematch tomorrow.", "Four strikes. The red herrings win.", "Not today. Study the groups and come back swinging.", "Out of lives. The puzzle setter is smirking.", "Stumped. It happens. Tomorrow\u2019s grid awaits.", "The groups escaped. Here they are."]
   };
+  if (NORMIE) {
+    SASS.wrong = ["Nope. Those four have nothing in common.", "Wrong group. Bold, though.", "Not a group. Just a coincidence.", "Respectfully: no.", "Four strangers at a bus stop. Not a group.", "Nope. Correlation isn\u2019t causation.", "Those four have never met.", "Wrong. The red herring got you.", "Not a group. A random sample.", "Confident clustering. Incorrect clustering.", "No. Reshuffle and rethink.", "Interesting theory. Zero evidence."];
+    SASS.one = ["One away. So close it hurts.", "Three out of four. One impostor.", "One away. Someone\u2019s at the wrong party.", "Nearly. One doesn\u2019t belong.", "One away. There\u2019s a mole in the group.", "Three right. One gatecrasher.", "So close. Swap one out.", "One away. Spot the odd one out."];
+    SASS.right = ["Nailed it.", "Clean sweep.", "Textbook.", "Smooth.", "Spot on.", "Group sorted.", "Tidy.", "Yes. Well spotted.", "That\u2019s the one.", "Correct. Next.", "Sharp eyes."];
+    SASS.win[1] = ["Solved with one slip. Still very respectable.", "One mistake. Barely a blemish.", "One slip, then flawless. Nice recovery.", "Solved, one stumble. Strong work."];
+    SASS.win[2] = ["Two mistakes. Got there.", "Two slips. A safe pair of hands, mostly.", "Two mistakes. Solved is solved.", "Got there with two wobbles."];
+    SASS.win[3] = ["Three mistakes. Living dangerously.", "Three slips. That was a nail-biter.", "Solved on the last life. Dramatic.", "Three mistakes. Squeaky bum time."];
+    SASS.lose = ["Out of strikes. The groups win today.", "Game over. Here\u2019s what you missed.", "Four strikes. The red herrings win.", "Not today. Study the groups and come back swinging.", "Out of lives. The puzzle setter is smirking.", "Stumped. It happens. Tomorrow\u2019s grid awaits.", "The groups escaped. Here they are."];
+  }
   function say(t) { $("msg").textContent = t; }
 
   // ---------- helpers ----------
@@ -76,7 +87,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = st.tries.map(function (t) { return t.map(function (w) { return SQ[P.groups[groupOf(w)].level - 1]; }).join(""); }).join("\n");
-    var share = "Comorbix #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + grid + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -105,7 +116,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put("mw-einstein", tro); } }
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[st.mistakes]) : pick(SASS.lose));
   }
   $("grid").addEventListener("click", function (e) {
@@ -140,7 +151,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -148,7 +159,12 @@
     today = date; loadDay(); sel = []; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today's groups are still in triage. Back tomorrow."); $("ctrls").hidden = true; $("grid").innerHTML = ""; return; }
+      if (!P) {
+        $("ctrls").hidden = true; $("mist").innerHTML = ""; $("result").hidden = true;
+        if (NORMIE && window.MW_noNormie) { say(""); $("grid").innerHTML = '<div style="grid-column:1/-1">' + MW_noNormie("groups") + "</div>"; }
+        else { say("Today's groups are still in triage. Back tomorrow."); $("grid").innerHTML = ""; }
+        renderArchive(); return;
+      }
       var all = []; P.groups.forEach(function (g) { all = all.concat(g.words); });
       order = st.order && st.order.length === 16 ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
       $("eyebrow").textContent = (isLive() ? "Comorbix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
@@ -163,7 +179,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("cmx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
+        var s = load(PFX + "cmx-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="cmx-back">Back to today</button>';

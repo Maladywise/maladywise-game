@@ -2,23 +2,26 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
+  // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
   if (!document.querySelector("link[data-mph]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "morphemia.css?v=" + BUILD; l.setAttribute("data-mph", ""); document.head.appendChild(l);
   }
-  var RANKS = [["Student", 0], ["Intern", 2], ["Resident", 8], ["Registrar", 20], ["Consultant", 35], ["Professor", 50], ["Genius", 70]];
+  var RANKS = NORMIE ? [["Beginner", 0], ["Good start", 2], ["Moving up", 8], ["Solid", 20], ["Great", 35], ["Amazing", 50], ["Genius", 70]] : [["Student", 0], ["Intern", 2], ["Resident", 8], ["Registrar", 20], ["Consultant", 35], ["Professor", 50], ["Genius", 70]];
+  var TOP = NORMIE ? "Queen Bee" : "Head of Department";
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="mph-eyebrow">Morphemia</span><span class="badge" id="mph-badge" hidden></span></div>' +
-    ' <div class="rank"><div class="rank-top"><span class="rank-name" id="mph-rank">Student</span><span class="rank-score" id="mph-score">0 pts</span></div>' +
+    ' <div class="rank"><div class="rank-top"><span class="rank-name" id="mph-rank">' + RANKS[0][0] + '</span><span class="rank-score" id="mph-score">0 pts</span></div>' +
     '  <div class="bar"><i id="mph-bar" style="width:0"></i></div><div class="ticks" id="mph-ticks"></div></div>' +
     ' <details class="found" id="mph-found" open><summary><span id="mph-fcount">You have found 0 words</span><span>&#9662;</span></summary><div class="words" id="mph-words"></div></details>' +
     ' <div class="msg" id="mph-msg" aria-live="polite"></div>' +
     ' <div class="entry" id="mph-entry"></div>' +
     ' <div class="hive" id="mph-hive"></div>' +
     ' <div class="ctrls"><button class="btn" type="button" id="mph-del">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter">Enter</button></div>' +
-    ' <details class="legend"><summary><b>Medical words</b> score double. Long words earn bonuses. <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li><li>Medical word: whole score doubled</li></ul></details>' +
+    ' <details class="legend"><summary>' + (NORMIE ? "Long words earn bonuses." : "<b>Medical words</b> score double. Long words earn bonuses.") + ' <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li>' + (NORMIE ? "" : "<li>Medical word: whole score doubled</li>") + '</ul></details>' +
     ' <div class="result" id="mph-result" hidden></div>' +
     ' <p class="note" id="mph-next"></p>' +
     ' <details class="archive" id="mph-archive"><summary>Past puzzles</summary><div class="alist" id="mph-alist"></div></details>' +
@@ -33,9 +36,9 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "mph-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
+  var SKEY = PFX + "mph-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
   var KEY, st, P = null, cur = "", outer = [];
-  function loadDay() { KEY = "mph-day-" + today; st = load(KEY, { found: [], score: 0, done: false, win: false, rank: 0 }); }
+  function loadDay() { KEY = PFX + "mph-day-" + today; st = load(KEY, { found: [], score: 0, done: false, win: false, rank: 0 }); }
   loadDay();
 
   function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
@@ -53,6 +56,12 @@
     genius: "Genius. Go and tell someone who will pretend to care.",
     ein: "\u269b\ufe0f Einstein day, Genius reached. Roughly a once-in-50-days achievement. Screenshot this."
   };
+  if (NORMIE) {
+    SASS.short = ["Four letters minimum. This isn't a text message.", "Too short. Four letters, please.", "Short. Even \u2018cake\u2019 has four letters.", "Needs at least four letters."];
+    SASS.centre = ["Forgot the centre letter. It's the important one.", "Centre letter missing. It\u2019s compulsory.", "No centre letter. Like a sandwich with no filling.", "Every word needs the middle letter."];
+    SASS.not = ["Not in our dictionary.", "Nice try. Not a word.", "Did you just invent a word?", "That's not a word. Your spellcheck is crying.", "Not a word. Lovely sound, though.", "The dictionary declined that one.", "Made up. We can tell.", "That\u2019s not a word. That\u2019s a sneeze.", "Close to a word. Not a word.", "Not in the list. Some real words aren\u2019t either. Sorry."];
+    SASS.long = { 8: ["Eight letters. Someone\u2019s been reading.", "Eight letters. Bonus earned."], 9: ["Nine letters. Big vocabulary.", "Nine letters. Big word energy."], 10: ["Ten letters! The dictionary is impressed.", "Ten letters. That\u2019s practically a sentence."], 11: ["Eleven-plus letters. Absolutely unhinged. Love it.", "That word has its own postcode."] };
+  }
   function say(t) { $("msg").textContent = t; }
 
   function letters() { return P.centre + P.outer; }
@@ -79,7 +88,7 @@
   function render() {
     if (!P) return;
     var r = rankIdx(st.score), pct = Math.min(100, P.max ? st.score / P.max * 100 / 0.7 * 1 : 0);
-    $("rank").textContent = st.found.length === P.words.length ? "Head of Department" : RANKS[r][0];
+    $("rank").textContent = st.found.length === P.words.length ? TOP : RANKS[r][0];
     $("score").textContent = st.score + " pts \u00b7 Genius at " + Math.ceil(P.max * 0.7);
     $("bar").style.width = Math.min(100, st.score / (P.max * 0.7) * 100) + "%";
     $("ticks").innerHTML = RANKS.map(function (x, i) { return '<span class="' + (i <= r ? "on" : "") + '" title="' + x[0] + '"></span>'; }).join("");
@@ -90,14 +99,14 @@
     $("words").innerHTML = list.map(function (w) {
       var cls = (P.medical.indexOf(w) >= 0 ? "med " : "") + (P.pangrams.indexOf(w) >= 0 ? "pan " : "") + (st.found.indexOf(w) < 0 ? "miss" : "");
       return '<span class="' + cls + '">' + w.toLowerCase() + (P.medical.indexOf(w) >= 0 ? " \u2695" : "") + "</span>";
-    }).join("") || '<span class="miss">Nothing yet. The clock is ticking, doctor.</span>';
+    }).join("") || '<span class="miss">Nothing yet. The clock is ticking' + (NORMIE ? "" : ", doctor") + '.</span>';
     renderResult(nMed);
   }
   function renderResult(nMed) {
     var r = $("result");
     if (!st.found.length) { r.hidden = true; return; }
-    var rk = st.found.length === P.words.length ? "Head of Department" : RANKS[rankIdx(st.score)][0];
-    var share = "Morphemia #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\nRank: " + rk + " \u00b7 " + st.found.length + " words \u00b7 " + nMed + " medical\nmaladywise.com";
+    var rk = st.found.length === P.words.length ? TOP : RANKS[rankIdx(st.score)][0];
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\nRank: " + rk + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? "" : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
     r.hidden = false;
     r.innerHTML = '<pre id="mph-share">' + esc(share) + '</pre><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid" type="button" id="mph-copy">Copy result</button>' +
       (!isLive() ? '<button class="btn" type="button" id="mph-reveal">' + (st.reveal ? "Hide answers" : "Reveal all answers") + "</button>" : "") + "</div>";
@@ -146,12 +155,12 @@
         if (after > (st.rank || 0)) { stats.dist[after]++; if (st.rank) stats.dist[st.rank]--; put(SKEY, stats); }
         if (after === RANKS.length - 1 && !st.win) {
           st.done = true; st.win = true; stats.wins++; put(SKEY, stats);
-          if (P.difficulty === "Einstein") { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "morphemia" && t.d === today; })) { tro.push({ g: "morphemia", d: today }); put("mw-einstein", tro); } }
+          if (P.difficulty === "Einstein") { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "morphemia" && t.d === today; })) { tro.push({ g: "morphemia", d: today }); put(PFX + "mw-einstein", tro); } }
         }
       }
       st.rank = after;
     }
-    if (st.found.length === P.words.length) m = "Every word. Head of Department. Absolutely unhinged.";
+    if (st.found.length === P.words.length) m = "Every word. " + TOP + ". Absolutely unhinged.";
     put(KEY, st); say(m); drawEntry(); render();
   }
   function press(k) {
@@ -204,7 +213,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -213,7 +222,15 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { say("Today's letters are still in triage. Back tomorrow."); return; }
+      var parts = root.querySelectorAll(".rank,.found,.entry,.hive,.ctrls,.legend");
+      Array.prototype.forEach.call(parts, function (x) { x.hidden = !P; });
+      if (!P) {
+        $("result").hidden = true;
+        if (NORMIE && window.MW_noNormie) $("msg").innerHTML = MW_noNormie("letters");
+        else say("Today's letters are still in triage. Back tomorrow.");
+        renderArchive(); return;
+      }
+      if (NORMIE || !P.medical) P.medical = [];
       outer = P.outer.split("");
       $("eyebrow").textContent = (isLive() ? "Morphemia" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty;
@@ -227,7 +244,7 @@
     Promise.all([month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("mph-day-" + x.date, null), mark = s && s.found && s.found.length ? " \u00b7 " + s.found.length + " words" : "";
+        var s = load(PFX + "mph-day-" + x.date, null), mark = s && s.found && s.found.length ? " \u00b7 " + s.found.length + " words" : "";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="mph-back">Back to today</button>';
