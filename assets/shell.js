@@ -641,22 +641,19 @@
       var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || t);
       var curSt = get(g.store.day + curD, null);
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
-      if (!rows.length) { nx.hidden = true; return; }
-      if (!todo.length) { var tbx = document.getElementById("mw-next-top"); if (tbx) tbx.remove(); nx.removeAttribute("data-h"); nx.innerHTML = '<span>\u2714 All caught up on past ' + g.name + ' puzzles.</span>'; nx.hidden = !(curSt && curSt.done); return; }
-      var r0 = todo[0], d0 = rowDate(r0);
-      var h = '<button type="button" class="mwx-nextbtn">\u25B6 Next unsolved: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + '</button><span>' + todo.length + ' unsolved in the archive</span>';
-      if (nx.getAttribute("data-h") !== h) { nx.innerHTML = h; nx.setAttribute("data-h", h); }
       nx.hidden = true;
-      nx.querySelector("button").onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
-      var done = curSt && curSt.done; nx.classList.toggle("big", !!done);
-      var th = '<button type="button">More unsolved ' + g.name + ' \u2192</button><small>Next: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + ' \u00b7 ' + todo.length + ' unsolved</small>';
-      var tb = document.getElementById("mw-next-top");
-      if (done && !tb) {
-        var res = box.querySelector(".mw-sharerow");
-        if (res) { res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
-      }
-      if (tb && tb.getAttribute("data-h") !== th) { tb.innerHTML = th; tb.setAttribute("data-h", th); tb.querySelector("button").onclick = function () { tb.remove(); nx.querySelector("button").click(); }; }
-      if (!done) { var tb2 = document.getElementById("mw-next-top"); if (tb2) tb2.remove(); }
+      var done = curSt && curSt.done, tb = document.getElementById("mw-next-top");
+      // today's next unplayed game in this mode
+      var ng = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x)) return false; var r = readStats(x); return !(r && r.done); })[0];
+      var r0 = todo[0], d0 = r0 ? rowDate(r0) : null;
+      if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
+      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Today\u2019s next puzzle</a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More unsolved</button>' : "") + '</div><small>' +
+        [ng ? "Up next: " + ng.name : "All today\u2019s puzzles done", r0 ? todo.length + " older " + g.name + " unsolved" : ""].filter(Boolean).join(" \u00b7 ") + "</small>";
+      if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
+      if (tb.getAttribute("data-h") === th) return;
+      tb.innerHTML = th; tb.setAttribute("data-h", th);
+      var mb = tb.querySelector(".mwx-more2"); if (mb) mb.onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); tb.remove(); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
+      var tl = tb.querySelector(".mwx-today"); if (tl) tl.onclick = function () { track("next-today/" + g.id, g.name + " next today"); };
     }
     nextUnsolved();
     window.addEventListener("storage", nextUnsolved);
