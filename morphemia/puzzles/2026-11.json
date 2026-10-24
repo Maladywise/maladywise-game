@@ -148,7 +148,6 @@
    "HOST",
    "HOSTA",
    "HOSTS",
-   "MAHATMA",
    "MAMMOTH",
    "MASCOT",
    "MASCOTS",
@@ -156,7 +155,6 @@
    "MATCH",
    "MATHS",
    "MATS",
-   "MATT",
    "MOAT",
    "MOOT",
    "MOST",
@@ -212,7 +210,7 @@
    "STOMACH",
    "STOMACHS"
   ],
-  "max": 383
+  "max": 375
  },
  {
   "date": "2026-11-03",
@@ -351,7 +349,6 @@
    "CHARIOT",
    "CHART",
    "CHAT",
-   "CHIT",
    "CIRRHOTIC",
    "CITRIC",
    "COAT",
@@ -426,7 +423,7 @@
    "CHARIOT",
    "THORACIC"
   ],
-  "max": 553
+  "max": 552
  },
  {
   "date": "2026-11-05",
@@ -440,7 +437,6 @@
    "ALOOF",
    "ALTO",
    "ANNATTO",
-   "ANON",
    "AORTA",
    "FLATFOOT",
    "FLOAT",
@@ -501,7 +497,7 @@
   "pangrams": [
    "FRONTAL"
   ],
-  "max": 256
+  "max": 255
  },
  {
   "date": "2026-11-06",
@@ -513,7 +509,6 @@
    "ALLOY",
    "ALLY",
    "ALLYL",
-   "ALOHA",
    "ALPHA",
    "AMYL",
    "APPLY",
@@ -524,7 +519,6 @@
    "HOLM",
    "HOLY",
    "HYPHAL",
-   "LAMA",
    "LAMP",
    "LLAMA",
    "LOOM",
@@ -534,7 +528,6 @@
    "LYMPHOMA",
    "MALL",
    "MAMMAL",
-   "MOLLY",
    "OPAL",
    "PALL",
    "PALM",
@@ -560,7 +553,7 @@
   "pangrams": [
    "LYMPHOMA"
   ],
-  "max": 167
+  "max": 156
  },
  {
   "date": "2026-11-07",
@@ -606,7 +599,6 @@
    "KITTEN",
    "KNEE",
    "KNIT",
-   "NANA",
    "NEAR",
    "NEARER",
    "NEAT",
@@ -663,7 +655,7 @@
   "pangrams": [
    "KERATIN"
   ],
-  "max": 519
+  "max": 518
  },
  {
   "date": "2026-11-08",
@@ -686,7 +678,6 @@
    "DRAM",
    "DRAMA",
    "GAMMA",
-   "GRAD",
    "GRAM",
    "GRAMMAR",
    "IMAGO",
@@ -696,10 +687,8 @@
    "MAGMA",
    "MAID",
    "MAIM",
-   "MAMA",
    "MAMMA",
    "MAMMOGRAM",
-   "MARIA",
    "ORIGAMI",
    "RADAR",
    "RADII",
@@ -718,7 +707,7 @@
   "pangrams": [
    "RADIOGRAM"
   ],
-  "max": 162
+  "max": 155
  },
  {
   "date": "2026-11-09",
@@ -792,7 +781,6 @@
    "NAIAD",
    "NAIL",
    "NAILED",
-   "NANA",
    "NEAR",
    "NEARED",
    "NEARER",
@@ -805,7 +793,6 @@
    "RADIAN",
    "RAIN",
    "RAINED",
-   "RAND",
    "REIN",
    "REINDEER",
    "RELEARN",
@@ -831,7 +818,7 @@
   "pangrams": [
    "ADRENALINE"
   ],
-  "max": 585
+  "max": 583
  },
  {
   "date": "2026-11-10",
@@ -868,7 +855,6 @@
    "PATH",
    "PATTY",
    "PEAT",
-   "PETER",
    "PETTY",
    "PREHEAT",
    "PRETTY",
@@ -923,7 +909,7 @@
   "pangrams": [
    "THERAPY"
   ],
-  "max": 359
+  "max": 354
  },
  {
   "date": "2026-11-11",
@@ -945,7 +931,6 @@
    "IMPLANT",
    "INITIAL",
    "INTIMA",
-   "LAMA",
    "LAMINA",
    "LAMININ",
    "LAMP",
@@ -957,21 +942,18 @@
    "MAINTAIN",
    "MALL",
    "MALT",
-   "MAMA",
    "MAMMA",
    "MAMMAL",
    "MAMMALIAN",
    "MANIA",
    "MANNA",
    "MANNAN",
-   "MATT",
    "MILIA",
    "MILITANT",
    "MILITIA",
    "MINIMA",
    "MINIMAL",
    "NAIL",
-   "NANA",
    "NATAL",
    "PAIN",
    "PAINT",
@@ -981,7 +963,6 @@
    "PALP",
    "PANAMA",
    "PANT",
-   "PAPA",
    "PAPAIN",
    "PAPAL",
    "PAPILLA",
@@ -1026,7 +1007,7 @@
   "pangrams": [
    "IMPLANT"
   ],
-  "max": 396
+  "max": 391
  },
  {
   "date": "2026-11-12",
@@ -1170,7 +1151,6 @@
    "ENCASES",
    "ESSENCE",
    "ESSENCES",
-   "NANA",
    "NAPS",
    "NARES",
    "NEAR",
@@ -1229,7 +1209,7 @@
    "PANCREAS",
    "PANCREASES"
   ],
-  "max": 560
+  "max": 559
  },
  {
   "date": "2026-11-14",
@@ -1269,7 +1249,6 @@
    "LEES",
    "LEGS",
    "LESS",
-   "LOCO",
    "LOCUS",
    "LOGE",
    "LOGES",
@@ -1308,7 +1287,7 @@
   "pangrams": [
    "GLUCOSE"
   ],
-  "max": 287
+  "max": 286
  },
  {
   "date": "2026-11-15",
@@ -1327,7 +1306,6 @@
    "AURUM",
    "ERUPT",
    "MATURE",
-   "MEETUP",
    "MURMUR",
    "MUTE",
    "MUTT",
@@ -1372,7 +1350,7 @@
    "PREMATURE",
    "TEMPERATURE"
   ],
-  "max": 299
+  "max": 293
  },
  {
   "date": "2026-11-16",
@@ -1448,8 +1426,7 @@
    "LING",
    "LINING",
    "NAGGING",
-   "NAILING",
-   "NIGH"
+   "NAILING"
   ],
   "medical": [
    "AILING",
@@ -1469,7 +1446,7 @@
   "pangrams": [
    "HEALING"
   ],
-  "max": 515
+  "max": 514
  },
  {
   "date": "2026-11-17",
@@ -1596,7 +1573,6 @@
   "centre": "A",
   "outer": "HPMYES",
   "words": [
-   "AHEM",
    "AMPS",
    "APES",
    "APPEASE",
@@ -1624,7 +1600,6 @@
    "HEAP",
    "HEAPS",
    "HYPHAE",
-   "MAMA",
    "MAMMA",
    "MAPS",
    "MASH",
@@ -1632,7 +1607,6 @@
    "MASSES",
    "MAYHEM",
    "MESA",
-   "PAPA",
    "PAPAYA",
    "PAPAYAS",
    "PASHA",
@@ -1673,7 +1647,7 @@
   "pangrams": [
    "EMPHYSEMA"
   ],
-  "max": 272
+  "max": 269
  },
  {
   "date": "2026-11-19",
