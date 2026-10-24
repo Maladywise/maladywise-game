@@ -649,7 +649,7 @@
       nx.hidden = true;
       nx.querySelector("button").onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
       var done = curSt && curSt.done; nx.classList.toggle("big", !!done);
-      var th = '<button type="button">Catch up: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + ' \u2192</button><small>' + todo.length + ' older ' + g.name + (todo.length === 1 ? ' puzzle' : ' puzzles') + ' unsolved</small>';
+      var th = '<button type="button">More unsolved ' + g.name + ' \u2192</button><small>Next: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + ' \u00b7 ' + todo.length + ' unsolved</small>';
       var tb = document.getElementById("mw-next-top");
       if (done && !tb) {
         var res = box.querySelector(".mw-sharerow");
