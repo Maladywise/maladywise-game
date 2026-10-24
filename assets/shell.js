@@ -245,8 +245,8 @@
       b.setAttribute("data-mws", "1");
       if (!b.parentNode.classList.contains("mw-sharerow")) { var row = document.createElement("div"); row.className = "mw-sharerow"; b.parentNode.insertBefore(row, b); row.appendChild(b); }
       var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
-      if (!pre || !navigator.share) return;
-      var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className.replace(/\bsolid\b/, "").trim() + " mw-share"; sb.textContent = "Share";
+      if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
+      var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
       sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*maladywise\.com\s*$/, ""), url: "https://maladywise.com/" + (location.pathname.split("/")[1] ? location.pathname.split("/")[1] + "/" : "") }).catch(function () {}); };
       b.parentNode.insertBefore(sb, b.nextSibling);
     });
@@ -642,18 +642,20 @@
       var curSt = get(g.store.day + curD, null);
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
       if (!rows.length) { nx.hidden = true; return; }
-      if (!todo.length) { nx.removeAttribute("data-h"); nx.innerHTML = '<span>\u2714 All caught up on past ' + g.name + ' puzzles.</span>'; nx.hidden = !(curSt && curSt.done); return; }
+      if (!todo.length) { var tbx = document.getElementById("mw-next-top"); if (tbx) tbx.remove(); nx.removeAttribute("data-h"); nx.innerHTML = '<span>\u2714 All caught up on past ' + g.name + ' puzzles.</span>'; nx.hidden = !(curSt && curSt.done); return; }
       var r0 = todo[0], d0 = rowDate(r0);
       var h = '<button type="button" class="mwx-nextbtn">\u25B6 Next unsolved: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + '</button><span>' + todo.length + ' unsolved in the archive</span>';
       if (nx.getAttribute("data-h") !== h) { nx.innerHTML = h; nx.setAttribute("data-h", h); }
-      nx.hidden = false;
+      nx.hidden = true;
       nx.querySelector("button").onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
       var done = curSt && curSt.done; nx.classList.toggle("big", !!done);
-      if (done && !document.getElementById("mw-next-top")) {
+      var th = '<button type="button">Catch up: ' + nice(d0, { weekday: "short", day: "numeric", month: "short" }) + ' \u2192</button><small>' + todo.length + ' older ' + g.name + (todo.length === 1 ? ' puzzle' : ' puzzles') + ' unsolved</small>';
+      var tb = document.getElementById("mw-next-top");
+      if (done && !tb) {
         var res = box.querySelector(".mw-sharerow");
-        if (res) res.insertAdjacentHTML("afterend", '<p id="mw-next-top" class="mwx-nexttop"><button type="button">\u25B6 Play the next unsolved ' + g.name + '</button></p>');
-        var tb = document.getElementById("mw-next-top"); if (tb) tb.querySelector("button").onclick = function () { tb.remove(); nx.querySelector("button").click(); };
+        if (res) { res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
       }
+      if (tb && tb.getAttribute("data-h") !== th) { tb.innerHTML = th; tb.setAttribute("data-h", th); tb.querySelector("button").onclick = function () { tb.remove(); nx.querySelector("button").click(); }; }
       if (!done) { var tb2 = document.getElementById("mw-next-top"); if (tb2) tb2.remove(); }
     }
     nextUnsolved();
