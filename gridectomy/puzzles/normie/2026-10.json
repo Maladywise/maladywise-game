@@ -1,0 +1,690 @@
+[
+ {
+  "date": "2026-10-24",
+  "number": 1,
+  "difficulty": "Hard",
+  "rows": [
+   "#RATS",
+   "TERRY",
+   "OCEAN",
+   "PANIC",
+   "SPAN#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "\"Darn!\""
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Towelling fabric"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Pacific, though not always peaceful"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "___ room or ___ button"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Attention ___"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "\"Previously on...\""
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Gladiators' workplace"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Bridal gown's trailing bit"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Lip-___ (mime along)"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Beats"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-25",
+  "number": 2,
+  "difficulty": "Genius",
+  "rows": [
+   "#BEER",
+   "CRAVE",
+   "HATED",
+   "OVERS",
+   "PONY#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Pint, perhaps"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Long for"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Loathed"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Bowlers' sets of six"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Small horse"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Cheer before an encore"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Polished off"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Each"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Wines, or snooker balls"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Karate move"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-26",
+  "number": 3,
+  "difficulty": "Easy",
+  "rows": [
+   "BUS##",
+   "UNCLE",
+   "STOOD",
+   "YOUNG",
+   "##TEE"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "Double-decker"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Mum's brother"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Was upright"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Not old"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
+    "len": 3,
+    "clue": "Golf peg"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Run off one's feet"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "To, old-style"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Badge-collecting youngster"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 3,
+    "len": 4,
+    "clue": "Solitary"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Cutting ___ (latest tech)"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "number": 4,
+  "difficulty": "Easy",
+  "rows": [
+   "LAY##",
+   "ERASE",
+   "AIRED",
+   "FADED",
+   "##SKY"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "Put down"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Rub out"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Was on TV"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Like old jeans"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
+    "len": 3,
+    "clue": "Blue yonder"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Autumn faller"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Opera solo"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Football gains"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 3,
+    "len": 4,
+    "clue": "Hide and ___"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Swirl in a river"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "number": 5,
+  "difficulty": "Medium",
+  "rows": [
+   "#ALTO",
+   "SWORD",
+   "WAVED",
+   "AREAS",
+   "NEST#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Choir voice below soprano"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Knight's weapon"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Said goodbye from the platform"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Regions"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Bird's home"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "In the know"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Zero scores in tennis"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Trick's alternative"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Bookie's numbers"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Graceful lake bird"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "number": 6,
+  "difficulty": "Medium",
+  "rows": [
+   "#SURF",
+   "DINER",
+   "INDIE",
+   "SCENE",
+   "HERS#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Ride the waves, or the web"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Retro roadside eatery"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Non-mainstream, musically"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Part of an act"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Not his"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "From then on"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Beneath"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Horse's steering"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "No charge"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Satellite receiver, or a plate"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "number": 7,
+  "difficulty": "Hard",
+  "rows": [
+   "##ADD",
+   "AGREE",
+   "RISEN",
+   "IVORY",
+   "DEN##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Tot up"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "See eye to eye"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Up, like dough left in a warm spot"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Off-white"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Fox's hideout"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Firebug's crime"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Hart or hind"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Say it isn't so"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Like the Sahara"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Have some flex"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-31",
+  "number": 8,
+  "difficulty": "Hard",
+  "rows": [
+   "ARC##",
+   "GHOST",
+   "EERIE",
+   "SANDS",
+   "##YET"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "Rainbow shape"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Sheet-wearing trick-or-treater"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Spooky"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Hourglass contents"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 2,
+    "len": 3,
+    "clue": "So far"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "How long a mummy's been wrapped up"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Flightless South American bird"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Like most Halloween jokes"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 3,
+    "len": 4,
+    "clue": "The dark ___"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Nerve ___ (haunted house, say)"
+   }
+  ]
+ }
+]
