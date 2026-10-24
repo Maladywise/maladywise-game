@@ -1045,7 +1045,6 @@
    "LACE",
    "LACED",
    "LAID",
-   "LAMA",
    "LAME",
    "LAMELLA",
    "LAMELLAE",
@@ -1066,12 +1065,10 @@
    "MALIC",
    "MALICE",
    "MALL",
-   "MAMA",
    "MAMMA",
    "MAMMAL",
    "MEAD",
    "MEAL",
-   "MECCA",
    "MEDAL",
    "MEDIA",
    "MEDIAL",
@@ -1101,7 +1098,7 @@
    "DECIMAL",
    "MEDICAL"
   ],
-  "max": 479
+  "max": 472
  },
  {
   "date": "2026-10-28",
@@ -1342,7 +1339,6 @@
    "LAPILLI",
    "LIAR",
    "LIRA",
-   "LITE",
    "LITERAL",
    "LITERATE",
    "LITRE",
@@ -1430,7 +1426,7 @@
   "pangrams": [
    "PARIETAL"
   ],
-  "max": 714
+  "max": 713
  },
  {
   "date": "2026-10-31",
@@ -1454,7 +1450,6 @@
    "FEEL",
    "FEELER",
    "FELL",
-   "FELLA",
    "FEMALE",
    "FEMORA",
    "FEMORAL",
@@ -1523,6 +1518,6 @@
   "pangrams": [
    "FEMORAL"
   ],
-  "max": 378
+  "max": 373
  }
 ]
