@@ -262,14 +262,14 @@
     "e": "Also hovers, and beats its wings up to around 80 times a second. Show-off."
    },
    {
-    "q": "Which animal has fingerprints so like ours they could confuse a crime scene?",
-    "a": "Koala",
+    "q": "A wood frog can survive the winter by?",
+    "a": "Freezing almost solid",
     "w": [
-     "Raccoon",
-     "Possum",
-     "Sloth"
+     "Hibernating in a hot spring",
+     "Burrowing 3 metres down",
+     "Migrating south"
     ],
-    "e": "Koala prints are spookily close to human ones, even under a microscope."
+    "e": "Its heart stops and up to two-thirds of its body water freezes. In spring it thaws and hops off."
    },
    {
     "q": "Where is a shrimp\u2019s heart?",
@@ -282,14 +282,14 @@
     "e": "Technically the head-and-chest section. Thinking with its heart, literally."
    },
    {
-    "q": "What does a platypus do under ultraviolet light?",
-    "a": "Glows blue-green",
+    "q": "How do bottlenose dolphins sleep?",
+    "a": "Half their brain at a time",
     "w": [
-     "Turns invisible",
-     "Changes to red",
-     "Nothing at all"
+     "Floating upside down",
+     "Only in caves",
+     "They never sleep"
     ],
-    "e": "Discovered in 2020. As if it wasn\u2019t weird enough already."
+    "e": "One half rests while the other keeps watch and remembers to breathe."
    },
    {
     "q": "Which of these animals can\u2019t jump?",
@@ -694,7 +694,7 @@
     "e": "George de Mestral went for a walk and came back with an idea and a very clingy dog."
    },
    {
-    "q": "The ice block on a stick was supposedly invented in 1905 by a?",
+    "q": "The ice pop (ice lolly) on a stick was supposedly invented in 1905 by a?",
     "a": "Boy aged 11",
     "w": [
      "Dairy farmer",
@@ -1083,107 +1083,107 @@
   "date": "2026-11-03",
   "number": 11,
   "difficulty": "Easy",
-  "theme": "Melbourne Cup",
+  "theme": "Famous animals",
   "questions": [
    {
-    "q": "The Melbourne Cup is run on the first Tuesday of which month?",
-    "a": "November",
+    "q": "Which horse did the Roman emperor Caligula supposedly plan to make a consul?",
+    "a": "Incitatus",
     "w": [
-     "October",
-     "March",
-     "December"
+     "Bucephalus",
+     "Pegasus",
+     "Marengo"
     ],
-    "e": "Which is today, in case the office sweep hasn\u2019t reminded you."
+    "e": "Incitatus reportedly had a marble stall and an ivory manger. The consulship may have been a joke. May."
    },
    {
-    "q": "At which racecourse is the Melbourne Cup held?",
-    "a": "Flemington",
+    "q": "Bucephalus was the famous warhorse of?",
+    "a": "Alexander the Great",
     "w": [
-     "Randwick",
-     "Caulfield",
-     "Moonee Valley"
+     "Julius Caesar",
+     "Napoleon",
+     "Genghis Khan"
     ],
-    "e": "Caulfield has its own Cup. Randwick is in Sydney, which Melbourne would like noted."
+    "e": "Alexander tamed him as a boy by turning him to face the sun, so he couldn't see his own shadow."
    },
    {
-    "q": "Where is champion racehorse Phar Lap\u2019s heart today?",
-    "a": "National Museum of Australia, Canberra",
+    "q": "Laika, the first animal to orbit the Earth, was a?",
+    "a": "Dog",
     "w": [
-     "Melbourne Museum",
-     "Te Papa, Wellington",
-     "Flemington"
+     "Monkey",
+     "Cat",
+     "Chimpanzee"
     ],
-    "e": "His hide is in Melbourne and his skeleton in New Zealand. Shared custody."
+    "e": "A stray from the streets of Moscow, launched on Sputnik 2 in 1957."
    },
    {
-    "q": "In Australia, all racehorses officially have the same birthday. When is it?",
-    "a": "1 August",
+    "q": "Dolly, the first mammal cloned from an adult cell, was a?",
+    "a": "Sheep",
     "w": [
-     "1 January",
-     "1 July",
-     "First Tuesday in November"
+     "Cow",
+     "Goat",
+     "Pig"
     ],
-    "e": "Makes age groups simple. Terrible for individual cake."
+    "e": "Born in Scotland in 1996, cloned from a mammary cell and named after Dolly Parton."
    },
    {
-    "q": "How many Melbourne Cups did Makybe Diva win?",
-    "a": "Three",
+    "q": "Hachik\u014d, the dog who waited at a Tokyo station for years after his owner died, was which breed?",
+    "a": "Akita",
     "w": [
-     "Two",
-     "Four",
-     "Five"
+     "Shiba Inu",
+     "Labrador",
+     "Husky"
     ],
-    "e": "Three in a row, 2003 to 2005. Greedy, frankly."
+    "e": "He waited at Shibuya station for almost ten years. He now has a statue there."
    },
    {
-    "q": "Michelle Payne became the first woman to ride a Cup winner in 2015. Her horse started at?",
-    "a": "100 to 1",
+    "q": "Paul the Octopus became famous in 2010 for?",
+    "a": "Predicting World Cup results",
     "w": [
-     "5 to 1",
-     "20 to 1",
-     "Even money"
+     "Opening jars on TV",
+     "Escaping his aquarium",
+     "Painting pictures"
     ],
-    "e": "Prince of Penzance. Bookies still have nightmares."
+    "e": "He picked from two food boxes marked with flags. He got all eight of his 2010 predictions right."
    },
    {
-    "q": "In which state is Melbourne Cup Day a public holiday?",
-    "a": "Victoria",
+    "q": "Ham, the first great ape launched into space in 1961, was a?",
+    "a": "Chimpanzee",
     "w": [
-     "New South Wales",
-     "Queensland",
-     "Every state"
+     "Gorilla",
+     "Orangutan",
+     "Rhesus monkey"
     ],
-    "e": "The rest of the country just watches from work. \u2018Watches\u2019."
+    "e": "He pulled levers on cue during the flight and came home safely."
    },
    {
-    "q": "What is the Melbourne Cup\u2019s famous nickname?",
-    "a": "The race that stops a nation",
+    "q": "Secretariat is famous for winning the 1973 Belmont Stakes by about?",
+    "a": "31 lengths",
     "w": [
-     "The run for the roses",
-     "The sport of kings",
-     "The great race"
+     "3 lengths",
+     "A nose",
+     "10 lengths"
     ],
-    "e": "The run for the roses is the Kentucky Derby. Wrong hemisphere."
+    "e": "It sealed the US Triple Crown. His record time still stands."
    },
    {
-    "q": "The first Melbourne Cup in 1861 was older than?",
-    "a": "Australian Federation",
+    "q": "What kind of animal was Knut, a celebrity at Berlin Zoo?",
+    "a": "Polar bear",
     "w": [
-     "The city of Melbourne",
-     "Flemington racecourse",
-     "The colony of Victoria"
+     "Panda",
+     "Penguin",
+     "Gorilla"
     ],
-    "e": "Federation came in 1901. The Cup came before the country did."
+    "e": "Hand-raised by a keeper after his mother rejected him. Merchandise followed."
    },
    {
-    "q": "A horse\u2019s height is traditionally measured in?",
-    "a": "Hands",
+    "q": "Cher Ami, a hero of the First World War, was a?",
+    "a": "Carrier pigeon",
     "w": [
-     "Feet",
-     "Spans",
-     "Rods"
+     "Messenger dog",
+     "Cavalry horse",
+     "Mascot cat"
     ],
-    "e": "One hand is four inches. Very scientific, very old."
+    "e": "Shot through the breast, he still delivered a message that saved nearly 200 American soldiers."
    }
   ]
  },
@@ -1264,14 +1264,14 @@
     "e": "Sound designer Ben Burtt, mixing junk into magic."
    },
    {
-    "q": "Which Australian played James Bond, for just one film?",
+    "q": "Which actor played James Bond in just one official film, On Her Majesty\u2019s Secret Service?",
     "a": "George Lazenby",
     "w": [
-     "Hugh Jackman",
-     "Mel Gibson",
-     "Russell Crowe"
+     "Timothy Dalton",
+     "Roger Moore",
+     "David Niven"
     ],
-    "e": "1969. Then he quit. Very Australian."
+    "e": "He was a model with almost no acting experience. Turned down a seven-film deal."
    },
    {
     "q": "Some velociraptor noises in Jurassic Park came from recordings of?",
@@ -1362,14 +1362,14 @@
     "e": "Earth bulges at the equator, giving this Ecuadorian peak the edge. Everest is taller from sea level."
    },
    {
-    "q": "Lake Hillier in Western Australia is famous for being?",
-    "a": "Bright pink",
+    "q": "Which major river crosses the Equator twice?",
+    "a": "Congo",
     "w": [
-     "Boiling hot",
-     "Perfectly round",
-     "Always frozen"
+     "Nile",
+     "Amazon",
+     "Niger"
     ],
-    "e": "Thanks to algae and bacteria. Looks like a strawberry milkshake."
+    "e": "It loops north and then back south of the line on its way to the Atlantic."
    },
    {
     "q": "Which is wider: Australia or the Moon?",
@@ -1490,14 +1490,14 @@
     "e": "The 2024 buyer then ate the banana. The tape survived."
    },
    {
-    "q": "Which Australian painted Ned Kelly in a black square helmet in a famous series?",
-    "a": "Sidney Nolan",
+    "q": "Which painter cut off part of his own ear in 1888?",
+    "a": "Vincent van Gogh",
     "w": [
-     "Arthur Boyd",
-     "Brett Whiteley",
-     "Albert Namatjira"
+     "Paul Gauguin",
+     "Claude Monet",
+     "Edvard Munch"
     ],
-    "e": "Instantly recognisable, deeply weird, very Australian."
+    "e": "It happened after an argument with Gauguin in Arles. He later painted a self-portrait with the bandage."
    },
    {
     "q": "Rembrandt\u2019s The Night Watch is actually set?",
@@ -1716,14 +1716,14 @@
     "e": "Hillary and Tenzing had oxygen tanks in 1953."
    },
    {
-    "q": "Where was the first ever Test cricket match played, in 1877?",
-    "a": "MCG",
+    "q": "The oldest known photo of a person, taken in Paris in 1838, shows a man?",
+    "a": "Having his boots shined",
     "w": [
-     "Lord\u2019s",
-     "The Oval",
-     "SCG"
+     "Riding a horse",
+     "Reading a newspaper",
+     "Waving a flag"
     ],
-    "e": "Australia beat England. The rivalry never recovered."
+    "e": "Daguerre\u2019s long exposure erased all the moving traffic. Only the man standing still for his shoeshine stayed."
    }
   ]
  },
@@ -1764,24 +1764,24 @@
     "e": "Brought in for outback transport, then released. Now there are a lot."
    },
    {
-    "q": "The Big Banana is in which town?",
-    "a": "Coffs Harbour",
+    "q": "The Great Barrier Reef, the world\u2019s biggest reef system, was built by?",
+    "a": "Tiny coral polyps",
     "w": [
-     "Cairns",
-     "Bundaberg",
-     "Tweed Heads"
+     "Volcanoes",
+     "Oysters",
+     "Ancient sea walls"
     ],
-    "e": "Built in 1964 and kicked off Australia\u2019s obsession with Big Things."
+    "e": "Billions of tiny animals, building limestone skeletons for thousands of years. Big enough to see from space."
    },
    {
-    "q": "Some of the cleanest air in the world is measured at?",
-    "a": "Cape Grim, Tasmania",
+    "q": "Kangaroos find it almost impossible to?",
+    "a": "Walk backwards",
     "w": [
-     "Uluru",
-     "Mount Kosciuszko",
-     "Cape York"
+     "Swim",
+     "Jump",
+     "Sleep lying down"
     ],
-    "e": "Wind straight off the Southern Ocean. Tasmanians are smug about it."
+    "e": "It\u2019s partly why the kangaroo and emu are on Australia\u2019s coat of arms: both are said to only go forward."
    },
    {
     "q": "Vegemite is made mainly from?",
@@ -1794,14 +1794,14 @@
     "e": "A by-product of beer. Spread thinly, or regret it."
    },
    {
-    "q": "The Hills Hoist is a famous Aussie?",
-    "a": "Rotary clothesline",
+    "q": "Male lyrebirds are famous for mimicking?",
+    "a": "Chainsaws and camera shutters",
     "w": [
-     "Lawnmower",
-     "Pool cleaner",
-     "Barbecue"
+     "Human laughter only",
+     "Thunder",
+     "Car horns only"
     ],
-    "e": "Every backyard had one. Kids used it as a ride."
+    "e": "They copy other birds too, sometimes 20 species in a single song."
    },
    {
     "q": "Roughly how many tiles cover the Sydney Opera House roof?",
@@ -1842,14 +1842,14 @@
   "theme": "TV trivia",
   "questions": [
    {
-    "q": "What is the name of the street in Neighbours?",
-    "a": "Ramsay Street",
+    "q": "What is the name of Jon Snow\u2019s direwolf in Game of Thrones?",
+    "a": "Ghost",
     "w": [
-     "Summer Bay",
-     "Wisteria Lane",
-     "Coronation Street"
+     "Shadow",
+     "Winter",
+     "Grey Wind"
     ],
-    "e": "Summer Bay is Home and Away. Rival soaps, please don\u2019t mix them."
+    "e": "The white runt of the litter. Fans felt he deserved more screen time and at least one hug."
    },
    {
     "q": "Which Simpsons catchphrase made it into the Oxford English Dictionary?",
@@ -1872,14 +1872,14 @@
     "e": "An Australian Cattle Dog. Her dad Bandit is one too."
    },
    {
-    "q": "Bluey is made in which city?",
-    "a": "Brisbane",
+    "q": "Squid Game comes from which country?",
+    "a": "South Korea",
     "w": [
-     "Sydney",
-     "Melbourne",
-     "Adelaide"
+     "Japan",
+     "China",
+     "Thailand"
     ],
-    "e": "By Ludo Studio. The suburbs on screen look very Brisbane."
+    "e": "Netflix\u2019s most-watched series ever. The creator spent ten years trying to get it made."
    },
    {
     "q": "What is the coffee shop in Friends called?",
@@ -1922,14 +1922,14 @@
     "e": "Named after a physicist. Chemistry teachers, take note."
    },
    {
-    "q": "Home and Away is set in which fictional town?",
-    "a": "Summer Bay",
+    "q": "Stranger Things is set in which fictional town?",
+    "a": "Hawkins, Indiana",
     "w": [
-     "Erinsborough",
-     "Wentworth",
-     "Bay City"
+     "Twin Peaks, Washington",
+     "Derry, Maine",
+     "Springfield, Ohio"
     ],
-    "e": "Erinsborough is Neighbours. Two soaps, one confused nation."
+    "e": "Home of the Upside Down, a suspicious lab and an excellent arcade."
    },
    {
     "q": "David Brent is the boss in which show?",
@@ -1990,24 +1990,24 @@
     "e": "By Laurence Binyon: \u2018They shall grow not old, as we that are left grow old.\u2019"
    },
    {
-    "q": "In Australia, how long is the silence observed at 11am on Remembrance Day?",
-    "a": "One minute",
+    "q": "In the UK, how long is the silence traditionally kept at 11am on Armistice Day?",
+    "a": "Two minutes",
     "w": [
-     "Two minutes",
      "Thirty seconds",
-     "Five minutes"
+     "Five minutes",
+     "Eleven minutes"
     ],
-    "e": "Britain traditionally observes two minutes; Australia observes one."
+    "e": "Many countries keep one minute; Britain has kept two since 1919."
    },
    {
-    "q": "Australia\u2019s Tomb of the Unknown Australian Soldier is at the?",
-    "a": "Australian War Memorial, Canberra",
+    "q": "The Tomb of the Unknown Warrior, opened in 1920, is in which London building?",
+    "a": "Westminster Abbey",
     "w": [
-     "Shrine of Remembrance, Melbourne",
-     "Anzac Memorial, Sydney",
-     "Kings Park, Perth"
+     "St Paul\u2019s Cathedral",
+     "The Tower of London",
+     "Buckingham Palace"
     ],
-    "e": "An unknown soldier from the Western Front was laid there in 1993."
+    "e": "It\u2019s the only tomb in the Abbey that nobody walks on."
    },
    {
     "q": "The Gallipoli peninsula is in which modern country?",
@@ -2040,14 +2040,14 @@
     "e": "Renamed after World War II to honour those who died in all wars."
    },
    {
-    "q": "Australia\u2019s \u2018worst 24 hours\u2019 in war refers to which 1916 battle?",
-    "a": "Fromelles",
+    "q": "On Christmas Day 1914, many British and German soldiers famously?",
+    "a": "Held an unofficial truce",
     "w": [
-     "Pozi\u00e8res",
-     "Passchendaele",
-     "Gallipoli"
+     "Fought the war\u2019s biggest battle",
+     "Signed a peace treaty",
+     "Swapped uniforms"
     ],
-    "e": "Around 5500 Australian casualties in one night in July 1916."
+    "e": "They sang carols, swapped gifts and, by some accounts, played football in no man\u2019s land."
    }
   ]
  },
@@ -2068,14 +2068,14 @@
     "e": "In a world where firemen start fires. Cheery stuff."
    },
    {
-    "q": "Who wrote The Magic Pudding, about a cranky pudding that never runs out?",
-    "a": "Norman Lindsay",
+    "q": "Agatha Christie also wrote romance novels under which pen name?",
+    "a": "Mary Westmacott",
     "w": [
-     "May Gibbs",
-     "Banjo Paterson",
-     "Mem Fox"
+     "Ellis Bell",
+     "Robert Galbraith",
+     "George Eliot"
     ],
-    "e": "May Gibbs did the gumnut babies. Lindsay did the grumpy dessert."
+    "e": "She kept the secret for nearly 20 years."
    },
    {
     "q": "Dr Seuss wrote Green Eggs and Ham to win a bet that he couldn\u2019t use only?",
@@ -2148,14 +2148,14 @@
     "e": "A Canadian black bear. Christopher Robin Milne adored her."
    },
    {
-    "q": "Who wrote My Brilliant Career, and has Australia\u2019s top literary prize named after her?",
-    "a": "Miles Franklin",
+    "q": "Jane Austen\u2019s Pride and Prejudice was originally titled?",
+    "a": "First Impressions",
     "w": [
-     "Ruth Park",
-     "Henry Handel Richardson",
-     "Thea Astley"
+     "Elizabeth",
+     "Mr Darcy",
+     "The Bennet Sisters"
     ],
-    "e": "She published under a name that hid that she was a woman."
+    "e": "Rejected by a publisher in 1797 without being read. Their loss."
    }
   ]
  },
@@ -2462,24 +2462,24 @@
     "e": "Snake Island. Visitors need special permission and nerves."
    },
    {
-    "q": "Ball\u2019s Pyramid, near Lord Howe Island, is famous for the rediscovery of?",
-    "a": "A giant stick insect",
+    "q": "Lemurs live in the wild only on which island?",
+    "a": "Madagascar",
     "w": [
-     "A flightless parrot",
-     "A blind fish",
-     "A tree kangaroo"
+     "Borneo",
+     "Sri Lanka",
+     "Mauritius"
     ],
-    "e": "Thought extinct for decades, found clinging to one bush in 2001."
+    "e": "About 90% of Madagascar\u2019s wildlife is found nowhere else on Earth."
    },
    {
-    "q": "Since 2023, Fraser Island\u2019s official name is?",
-    "a": "K\u2019gari",
+    "q": "According to the sagas, why did Erik the Red name Greenland \u2018Greenland\u2019?",
+    "a": "To attract settlers",
     "w": [
-     "Minjerribah",
-     "Mulgumpin",
-     "Wadjemup"
+     "It was green back then",
+     "After his favourite colour",
+     "To confuse rivals"
     ],
-    "e": "Minjerribah is North Stradbroke, Mulgumpin is Moreton, Wadjemup is Rottnest."
+    "e": "Arguably history\u2019s first real estate marketing. Most of it is ice."
    }
   ]
  },
@@ -2766,14 +2766,14 @@
     "e": "A wombat the size of a car. Megalania was a giant lizard."
    },
    {
-    "q": "Winton, a major dinosaur fossil site, is in which state?",
-    "a": "Queensland",
+    "q": "Which was the first dinosaur ever to be scientifically named, in 1824?",
+    "a": "Megalosaurus",
     "w": [
-     "Western Australia",
-     "South Australia",
-     "New South Wales"
+     "Tyrannosaurus",
+     "Iguanodon",
+     "Brontosaurus"
     ],
-    "e": "Home to the Australian Age of Dinosaurs museum."
+    "e": "Named by William Buckland from bones found near Oxford. The word \u2018dinosaur\u2019 didn\u2019t exist yet."
    },
    {
     "q": "The word \u2018dinosaur\u2019 means?",
@@ -2992,14 +2992,14 @@
     "e": "The Hall of Records. It holds panels explaining the monument."
    },
    {
-    "q": "What is the Sydney Harbour Bridge\u2019s nickname?",
-    "a": "The Coathanger",
+    "q": "The Taj Mahal was built as a?",
+    "a": "Tomb",
     "w": [
-     "The Big Arch",
-     "The Iron Lady",
-     "The Steel Rainbow"
+     "Palace",
+     "Fort",
+     "Temple"
     ],
-    "e": "The Iron Lady is the Eiffel Tower. Sydney went for something from the wardrobe."
+    "e": "Shah Jahan built it for his wife Mumtaz Mahal, who died in 1631. It took about 20 years."
    },
    {
     "q": "Barcelona\u2019s Sagrada Fam\u00edlia has been under construction since?",
@@ -3276,14 +3276,14 @@
     "e": "About 8 mph in a 2 mph zone. Reckless."
    },
    {
-    "q": "The Ghan train is named after?",
-    "a": "Afghan cameleers",
+    "q": "Which of these countries drives on the left?",
+    "a": "Japan",
     "w": [
-     "A famous racehorse",
-     "A desert plant",
-     "Its first driver"
+     "China",
+     "South Korea",
+     "Russia"
     ],
-    "e": "They carried supplies through the outback before the railway."
+    "e": "So do the UK, India, Australia and about 70 other countries and territories."
    },
    {
     "q": "Melbourne has the world\u2019s largest urban network of?",
@@ -3316,24 +3316,24 @@
     "e": "Faster than the Earth spins, so you\u2019d land \u2018before\u2019 you left, local time."
    },
    {
-    "q": "In Australia, what does a red or green \u2018P\u2019 plate show?",
-    "a": "Provisional driver",
+    "q": "London\u2019s Underground is nicknamed?",
+    "a": "The Tube",
     "w": [
-     "Parking permit",
-     "Professional driver",
-     "Passenger vehicle"
+     "The Pipe",
+     "The Drain",
+     "The Burrow"
     ],
-    "e": "Red first, then green. Then freedom."
+    "e": "Opened in 1863, it\u2019s the oldest underground railway in the world."
    },
    {
-    "q": "The Indian Pacific train runs between Sydney and?",
-    "a": "Perth",
+    "q": "The Trans-Siberian Railway runs from Moscow to?",
+    "a": "Vladivostok",
     "w": [
-     "Darwin",
-     "Melbourne",
-     "Cairns"
+     "Beijing",
+     "St Petersburg",
+     "Novosibirsk"
     ],
-    "e": "Coast to coast, two oceans, one very long straight."
+    "e": "About 9,300 km and seven time zones. Bring snacks."
    },
    {
     "q": "What is Japan\u2019s high-speed bullet train called?",
@@ -3384,14 +3384,14 @@
     "e": "Around 30,000\u00b0C. The Sun\u2019s surface is a mere 5500\u00b0C."
    },
    {
-    "q": "The \u2018Southerly Buster\u2019 is a sudden wind change famous in?",
-    "a": "Sydney",
+    "q": "A \u2018haboob\u2019 is a?",
+    "a": "Massive dust storm",
     "w": [
-     "Perth",
-     "Darwin",
-     "Hobart"
+     "Desert flash flood",
+     "Warm mountain wind",
+     "Ball of lightning"
     ],
-    "e": "It can drop the temperature by 10 degrees in minutes. Pack a jumper."
+    "e": "A wall of dust that can be over a kilometre tall. Common in Sudan and Arizona."
    },
    {
     "q": "Fog is basically?",
@@ -3428,10 +3428,10 @@
     "a": "Death Valley, USA",
     "w": [
      "The Sahara",
-     "Oodnadatta, SA",
+     "Basra, Iraq",
      "Kuwait"
     ],
-    "e": "Back in 1913. Oodnadatta holds Australia\u2019s record at 50.7\u00b0C."
+    "e": "Back in 1913. Some experts doubt the reading, but it still stands as the official record."
    },
    {
     "q": "Thunder and lightning during a snowstorm is called?",
@@ -3542,14 +3542,14 @@
     "e": "\u2018Pika\u2019 is a sparkle, \u2018chu\u2019 a mouse squeak. Adorable onomatopoeia."
    },
    {
-    "q": "Fruit Ninja was made by a studio from which Australian city?",
-    "a": "Brisbane",
+    "q": "Sonic the Hedgehog is blue because?",
+    "a": "It matched Sega\u2019s logo",
     "w": [
-     "Melbourne",
-     "Sydney",
-     "Adelaide"
+     "Blue paint was cheapest",
+     "His creator was colour-blind",
+     "Blue hedgehogs are common in Japan"
     ],
-    "e": "Halfbrick Studios. Brisbane\u2019s contribution to slicing things."
+    "e": "Sega wanted a mascot to rival Mario. The shoes were inspired by Michael Jackson."
    },
    {
     "q": "Which 1972 game was the first big arcade hit?",
@@ -3600,14 +3600,14 @@
     "e": "Some are taller than a person. Ownership changes without moving them."
    },
    {
-    "q": "In 2019, people noticed Australia\u2019s new $50 note misspelt which word, on millions of notes?",
-    "a": "Responsibility",
+    "q": "Which country is credited with the world\u2019s first paper money?",
+    "a": "China",
     "w": [
-     "Parliament",
-     "Australia",
-     "Government"
+     "Italy",
+     "Egypt",
+     "Greece"
     ],
-    "e": "Printed tiny in a speech excerpt. Missing an \u2018i\u2019. Ironic."
+    "e": "Used during the Tang and Song dynasties, about 1,000 years ago."
    },
    {
     "q": "Why do some coins have ridged edges?",
@@ -3630,14 +3630,14 @@
     "e": "The \u2018thaler\u2019, from Joachimsthal. Now in the Czech Republic."
    },
    {
-    "q": "In which year did Australia switch to decimal currency?",
-    "a": "1966",
+    "q": "Euro notes and coins went into circulation in which year?",
+    "a": "2002",
     "w": [
-     "1910",
-     "1956",
-     "1975"
+     "1992",
+     "1999",
+     "2008"
     ],
-    "e": "Goodbye pounds, hello dollars, on 14 February. Romantic."
+    "e": "The euro existed on paper from 1999; the cash came three years later."
    },
    {
     "q": "How many pence were in a pre-decimal British shilling?",
@@ -3675,107 +3675,107 @@
   "date": "2026-11-27",
   "number": 35,
   "difficulty": "Hard",
-  "theme": "Cricket quirks",
+  "theme": "Sports nobody expected",
   "questions": [
    {
-    "q": "What was Don Bradman\u2019s Test batting average?",
-    "a": "99.94",
+    "q": "At the Wife Carrying World Championships, the winner traditionally receives?",
+    "a": "The wife\u2019s weight in beer",
     "w": [
-     "100.00",
-     "95.14",
-     "89.78"
+     "A gold ring",
+     "A year\u2019s salary",
+     "A new car"
     ],
-    "e": "A duck in his final innings cost him 100. Cricket is cruel."
+    "e": "The event is held in Sonkaj\u00e4rvi, Finland. The \u2018wife\u2019 doesn\u2019t have to be your wife."
    },
    {
-    "q": "A \u2018golden duck\u2019 means being out?",
-    "a": "First ball, for zero",
+    "q": "In the Cooper\u2019s Hill race in Gloucestershire, England, competitors chase?",
+    "a": "A wheel of cheese",
     "w": [
-     "For exactly 50",
-     "Hit wicket",
-     "In the final over"
+     "A greased pig",
+     "A runaway barrel",
+     "A hare"
     ],
-    "e": "A regular duck is just zero. Golden is zero, immediately."
+    "e": "The cheese can reach about 110 km/h. Nobody catches it. Somebody always breaks something."
    },
    {
-    "q": "The tiny Ashes urn is said to contain the ashes of a burnt?",
-    "a": "Bail",
+    "q": "Chessboxing alternates rounds of chess with rounds of?",
+    "a": "Boxing",
     "w": [
-     "Ball",
-     "Bat",
-     "Scorecard"
+     "Fencing",
+     "Arm wrestling",
+     "Sprinting"
     ],
-    "e": "Probably a bail, burnt in Melbourne in 1883. The legend is half the fun."
+    "e": "You can win by checkmate or knockout. Both are equally final."
    },
    {
-    "q": "Which ground is known as the \u2018Home of Cricket\u2019?",
-    "a": "Lord\u2019s",
+    "q": "Sepak takraw, popular in Southeast Asia, is like volleyball but players mostly use their?",
+    "a": "Feet",
     "w": [
-     "The Oval",
-     "MCG",
-     "Edgbaston"
+     "Heads only",
+     "Elbows",
+     "Rackets"
     ],
-    "e": "In London. The MCG has the crowds, Lord\u2019s has the title."
+    "e": "Overhead bicycle-kick spikes are standard. Hands are banned."
    },
    {
-    "q": "Shane Warne\u2019s 1993 \u2018Ball of the Century\u2019 bowled which England batter?",
-    "a": "Mike Gatting",
+    "q": "Quidditch, played by real people with brooms between their legs, was renamed in 2022 to?",
+    "a": "Quadball",
     "w": [
-     "Graham Gooch",
-     "Robin Smith",
-     "Alec Stewart"
+     "Broomball",
+     "Snitchball",
+     "Hoopball"
     ],
-    "e": "His first ball in an Ashes Test. Gatting\u2019s face said it all."
+    "e": "Partly to distance the sport from the books\u2019 author, partly for trademark reasons."
    },
    {
-    "q": "What is the highest individual score in Test cricket?",
-    "a": "400 not out",
+    "q": "Underwater hockey is also known as?",
+    "a": "Octopush",
     "w": [
-     "380",
-     "375",
-     "365 not out"
+     "Seaball",
+     "Aquapuck",
+     "Snorkelball"
     ],
-    "e": "Brian Lara, 2004. Hayden\u2019s 380 held the record for about six months."
+    "e": "Players push a puck along the bottom of a pool with short sticks, while holding their breath."
    },
    {
-    "q": "Who bowled the infamous underarm delivery against New Zealand in 1981?",
-    "a": "Trevor Chappell",
+    "q": "Hurling, often called the fastest game on grass, is mainly played in?",
+    "a": "Ireland",
     "w": [
-     "Greg Chappell",
-     "Dennis Lillee",
-     "Ian Chappell"
+     "Scotland",
+     "New Zealand",
+     "Canada"
     ],
-    "e": "Greg, the captain, told his brother to do it. New Zealand has not forgotten."
+    "e": "Players use a wooden stick called a hurley to hit a small ball, the sliotar, at well over 100 km/h. It\u2019s over 3,000 years old."
    },
    {
-    "q": "The longest Test match, in 1939, was abandoned after 10 days because?",
-    "a": "England had to catch their ship home",
+    "q": "Bossaball, invented in Spain, combines volleyball and football with?",
+    "a": "An inflatable court and trampolines",
     "w": [
-     "It snowed",
-     "The ball was lost",
-     "Both teams collapsed"
+     "A swimming pool",
+     "Roller skates",
+     "Horses"
     ],
-    "e": "Played in Durban and declared a draw. The boat waited for no one."
+    "e": "Played to a soundtrack of samba music. Possibly the most fun sport ever invented."
    },
    {
-    "q": "Australian Test cricket once used overs of how many balls?",
-    "a": "Eight",
+    "q": "In extreme ironing, people iron clothes?",
+    "a": "In unlikely places, like mountaintops",
     "w": [
-     "Six",
-     "Five",
-     "Ten"
+     "As fast as possible in a relay",
+     "Blindfolded",
+     "Only underwater"
     ],
-    "e": "Until the late 1970s. More balls, same tea break."
+    "e": "Started in England in 1997. It\u2019s been done on cliff faces, in canoes and under ice."
    },
    {
-    "q": "In cricket, DRS stands for?",
-    "a": "Decision Review System",
+    "q": "The Palio di Siena in Italy is a famously chaotic race of?",
+    "a": "Bareback horses around a town square",
     "w": [
-     "Delivery Replay System",
-     "Direct Run Signal",
-     "Dismissal Ruling Standard"
+     "Wooden carts down a hill",
+     "Gondolas",
+     "Running bulls"
     ],
-    "e": "The umpire\u2019s best friend and worst enemy."
+    "e": "Held twice each summer in the Piazza del Campo. A horse can win without its rider."
    }
   ]
  },

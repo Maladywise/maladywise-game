@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
@@ -77,12 +77,15 @@
   function near(guess, prompt) {
     var gk = key(guess); if (gk.length < 4) return -1;
     var gt = tailTok(guess);
-    var best = -1, bd = 9;
+    var best = -1, bd = 9, pre = {};
+    // a guess that is the start of several different answers (e.g. "Harry Potter") is ambiguous: no prefix shortcut
+    prompt.a.forEach(function (ans, idx) { [ans[0]].concat(ans[2] || []).forEach(function (s) { var k = key(s); if (k.length > gk.length && k.indexOf(gk) === 0) pre[idx] = 1; }); });
+    var ambig = Object.keys(pre).length > 1;
     prompt.a.forEach(function (ans, idx) {
       [ans[0]].concat(ans[2] || []).forEach(function (s) {
         var k = key(s); if (k.length < 4) return;
         var st = tailTok(s); if (gt && st && gt !== st) return;
-        var d = lev2(gk, k); if ((k.indexOf(gk) === 0 || gk.indexOf(k) === 0) && Math.min(gk.length, k.length) >= 5) d = Math.min(d, 2);
+        var d = lev2(gk, k); if (!ambig && (k.indexOf(gk) === 0 || gk.indexOf(k) === 0) && Math.min(gk.length, k.length) >= 5) d = Math.min(d, 2);
         var tol = k.length >= 10 ? 4 : k.length >= 6 ? 3 : 2;
         if (d <= tol && d < bd) { bd = d; best = idx; }
       });
@@ -91,7 +94,7 @@
   }
   function match(guess, prompt) {
     var g = core(guess), gs = g.replace(/ /g, ""); if (!g) return -1;
-    var best = -1, bestD = 9;
+    var best = -1, bestD = 9, ov = {}, gt = tailTok(guess);
     prompt.a.forEach(function (ans, idx) {
       [ans[0]].concat(ans[2] || []).forEach(function (s) {
         var c = core(s), cs = c.replace(/ /g, "");
@@ -99,14 +102,16 @@
         if (c === g || cs === gs) { if (bestD > 0) { best = idx; bestD = 0; } return; }
         var ks = key(s), kg = key(guess);
         if (ks && ks === kg) { if (bestD > 0.5) { best = idx; bestD = 0.5; } return; }
+        var st = tailTok(s); if (gt && st && gt !== st) return;
         var tol = cs.length >= 10 ? 2 : cs.length >= 5 ? 1 : 0, dd = lev(gs, cs);
         if (dd <= tol && dd < bestD) { best = idx; bestD = dd; return; }
         // word overlap: "orbital fracture" ~ "orbital floor fracture"; "duchenne muscular dystrophy" ~ "muscular dystrophy"
         var gw = g.split(" "), cw = c.split(" ");
         function inside(a, b) { return a.every(function (w) { return b.some(function (x) { return x === w || (w.length > 4 && lev(w, x) <= 1); }); }); }
-        if (bestD > 1 && ((gw.length >= 2 && inside(gw, cw)) || (cw.length >= 2 && cs.length >= 8 && inside(cw, gw)))) { best = idx; bestD = 1.5; }
+        if ((gw.length >= 2 && inside(gw, cw)) || (cw.length >= 2 && cs.length >= 8 && inside(cw, gw))) { ov[idx] = 1; if (bestD > 1) { best = idx; bestD = 1.5; } }
       });
     });
+    if (bestD === 1.5 && Object.keys(ov).length > 1) return -1;
     return best;
   }
   function sc3(s) { return s * 3 / P.prompts.length; }
@@ -209,6 +214,8 @@
     if (m >= 0) { logAns(x.a[m][0]); lock(m, pick(TIER[x.a[m][1]].m)); return; }
     var nr = near(g, x);
     if (nr >= 0) { pend = { i: nr, g: g }; render(); return; }
+    var gw = core(g).split(" ").filter(Boolean), hits = x.a.filter(function (ans) { return [ans[0]].concat(ans[2] || []).some(function (t) { var tw = core(t).split(" "); return gw.length && gw.every(function (w) { return tw.indexOf(w) >= 0; }) && tw.length > gw.length; }); }).length;
+    if (hits > 1) { render("That fits more than one answer. Be more specific (no try used).", true); return; }
     tries.push(g); put(KEY, st);
     if (tries.length >= TRIES) { logAns("none"); lock(-1, "Three strikes. Here\u2019s what we had."); }
     else { render(pick(MISS), true); var c = $("card"); c.classList.remove("shake"); void c.offsetWidth; c.classList.add("shake"); }
