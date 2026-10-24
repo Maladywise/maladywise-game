@@ -247,7 +247,7 @@
     ["unicorn", "🦄", "Unicorn Hunter", "Find a Zebritis unicorn: the single rarest answer."],
     ["superzeb", "🦓", "Super Zebritis", "Finish a five-prompt Super Zebritis Wednesday."],
     ["sunday", "🦇", "Sunday Scholar", "Score 18 or more in Grand Rounds."],
-    ["cryptic", "🕵️", "Cryptic Crusader", "Finish a Cryptogenic without giving up.", "medical"],
+    ["cryptic", "🕵️", "Cryptic Crusader", "Finish a Cryptogenic without giving up."],
     ["clean", "🧼", "Clean Sheet", "Solve Comorbix with zero mistakes."],
     ["hole", "⛳", "Hole in One", "Solve Wordemic in one or two guesses."],
     ["firstclue", "🔎", "First-clue Wonder", "Solve Dxtective on the first clue."],
