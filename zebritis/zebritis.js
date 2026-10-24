@@ -3,7 +3,7 @@
    Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
@@ -65,12 +65,23 @@
   function stemw(w) { if (w.length < 6) return w; var r = w.replace(/(iasis|osis|ism|ical|ic|al|ae|ia|us|um|es|a|e|s)$/, ""); return r.length >= 4 ? r : w; }
   function key(s) { return norm(s).replace(STOP, " ").replace(/\s+/g, " ").trim().split(" ").map(function (w) { return stemw(phon(w)); }).join(""); }
   function lev2(a, b) { if (Math.abs(a.length - b.length) > 4) return 9; var d = [], i, j; for (i = 0; i <= a.length; i++) d[i] = [i]; for (j = 1; j <= b.length; j++) d[0][j] = j; for (i = 1; i <= a.length; i++) for (j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[a.length][b.length]; }
+  // last "number-like" token: digits, Roman numerals or a single letter (Factor VII, Elizabeth II, Hepatitis B, HHV-6)
+  function tailTok(s) {
+    var t = String(s).toLowerCase().replace(/[^a-z0-9 ]+/g, " ").trim().split(/\s+/), w = t[t.length - 1] || "";
+    if (t.length < 2 && !/\d/.test(w)) return null;
+    var m = w.match(/(\d+)$/); if (m) return "n" + (+m[1]);
+    if (/^[ivxlcdm]+$/.test(w) && w.length <= 6) { var R = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 }, n = 0, k; for (k = 0; k < w.length; k++) { var c = R[w[k]], nx = R[w[k + 1]] || 0; n += c < nx ? -c : c; } return "n" + n; }
+    if (w.length === 1) return "l" + w;
+    return null;
+  }
   function near(guess, prompt) {
     var gk = key(guess); if (gk.length < 4) return -1;
+    var gt = tailTok(guess);
     var best = -1, bd = 9;
     prompt.a.forEach(function (ans, idx) {
       [ans[0]].concat(ans[2] || []).forEach(function (s) {
         var k = key(s); if (k.length < 4) return;
+        var st = tailTok(s); if (gt && st && gt !== st) return;
         var d = lev2(gk, k); if ((k.indexOf(gk) === 0 || gk.indexOf(k) === 0) && Math.min(gk.length, k.length) >= 5) d = Math.min(d, 2);
         var tol = k.length >= 10 ? 4 : k.length >= 6 ? 3 : 2;
         if (d <= tol && d < bd) { bd = d; best = idx; }
