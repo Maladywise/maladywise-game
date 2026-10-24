@@ -167,13 +167,13 @@
   ],
   "clues": [
    {
-    "t": "35-year-old man with headaches and nausea for 2 weeks."
+    "t": "35-year-old woman with headaches and nausea for 2 weeks."
    },
    {
     "t": "Worse at home in the evenings, better at work."
    },
    {
-    "t": "His partner and child have similar headaches."
+    "t": "Her wife and their son have similar headaches."
    },
    {
     "t": "The family cat has been unusually lethargic."
@@ -263,7 +263,7 @@
     "d": 1
    }
   ],
-  "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
+  "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Rates are several times higher in Aboriginal and Torres Strait Islander people, especially in remote communities, where diabetes, kidney disease and soil exposure are all more common. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
  },
  {
   "date": "2026-11-08",
@@ -345,7 +345,7 @@
     "d": 1
    }
   ],
-  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard."
+  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard. Gout is especially common in M\u0101ori and Pacific men, largely because of inherited differences in how the body clears urate. It's not just the prawns."
  },
  {
   "date": "2026-11-10",
@@ -670,7 +670,7 @@
     "d": 1
    }
   ],
-  "pearl": "Almost all cervical cancers are caused by HPV, and most are found in people who are under-screened or never screened. Bleeding after sex always deserves a look. In Australia the Cervical Screening Test, which can be self-collected, is for women and people with a cervix aged 25 to 74, every 5 years. Australia aims to eliminate cervical cancer as a public health problem by 2035."
+  "pearl": "Almost all cervical cancers are caused by HPV, and most are found in people who are under-screened or never screened. Bleeding after sex always deserves a look. In Australia the Cervical Screening Test, which can be self-collected, is for women and people with a cervix aged 25 to 74, every 5 years. Self-collection is helping reach people who screen less, including many Aboriginal and Torres Strait Islander women and LGBTIQA+ people. Australia aims to eliminate cervical cancer as a public health problem by 2035."
  },
  {
   "date": "2026-11-18",
@@ -728,10 +728,10 @@
   ],
   "clues": [
    {
-    "t": "44-year-old man with attacks of pounding headache."
+    "t": "44-year-old woman with attacks of pounding headache."
    },
    {
-    "t": "He drenches his shirt with sweat during each one."
+    "t": "She drenches her shirt with sweat during each one."
    },
    {
     "t": "Heart races and he feels a sense of doom. Episodes last 20 minutes."

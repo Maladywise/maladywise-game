@@ -1116,14 +1116,14 @@
     "e": "About the life of a red cell."
    },
    {
-    "q": "Insulin is made by which cells?",
-    "a": "Beta cells of the pancreas",
+    "q": "Hot flushes around menopause are mainly driven by falling levels of?",
+    "a": "Oestrogen",
     "w": [
-     "Alpha cells of the pancreas",
-     "Delta cells of the pancreas",
-     "Acinar cells of the pancreas"
+     "Progesterone",
+     "Testosterone",
+     "Prolactin"
     ],
-    "e": "Alpha cells make glucagon."
+    "e": "Most women get them at some point. Hormone therapy and non-hormonal options both help."
    },
    {
     "q": "Too much growth hormone in adults causes?",
@@ -1716,14 +1716,14 @@
     "e": ""
    },
    {
-    "q": "Who won an Oscar playing psychiatrist Hannibal Lecter?",
-    "a": "Anthony Hopkins",
+    "q": "Who created \u2018Grey\u2019s Anatomy\u2019?",
+    "a": "Shonda Rhimes",
     "w": [
-     "Brian Cox",
-     "Mads Mikkelsen",
-     "Gary Oldman"
+     "Ryan Murphy",
+     "Dick Wolf",
+     "David Shore"
     ],
-    "e": "For \u2018The Silence of the Lambs\u2019 (1991)."
+    "e": "Her company, Shondaland, went on to make Scandal and Bridgerton. David Shore made House."
    }
   ]
  },
@@ -1990,14 +1990,14 @@
     "e": ""
    },
    {
-    "q": "Short-sightedness is called?",
-    "a": "Myopia",
+    "q": "Australia is the only high-income country where which infectious eye disease is still endemic?",
+    "a": "Trachoma",
     "w": [
-     "Hyperopia",
-     "Presbyopia",
-     "Astigmatism"
+     "River blindness",
+     "Acanthamoeba keratitis",
+     "Measles keratitis"
     ],
-    "e": ""
+    "e": "It persists in some remote Aboriginal communities. Clean faces, safe water and community-led programs are driving it down."
    },
    {
     "q": "A \u2018curtain\u2019 coming down over the vision suggests?",
@@ -2294,14 +2294,14 @@
     "e": "Anna Bertha\u2019s hand, ring and all. She reportedly said, \u2018I have seen my death.\u2019"
    },
    {
-    "q": "Why did R\u00f6ntgen call them X-rays?",
-    "a": "X stood for unknown",
+    "q": "Rosalind Franklin\u2019s \u2018Photo 51\u2019, key to cracking the structure of DNA, was made using?",
+    "a": "X-ray diffraction",
     "w": [
-     "They crossed in an X",
-     "After a colleague called Xavier",
-     "They were the tenth ray found"
+     "An electron microscope",
+     "An early MRI scanner",
+     "Ultrasound"
     ],
-    "e": "In German they\u2019re still often called R\u00f6ntgen rays."
+    "e": "Taken in 1952 in her lab at King\u2019s College London. Watson saw it without her knowledge."
    },
    {
     "q": "In 1901 R\u00f6ntgen won the first ever Nobel Prize in?",
@@ -2628,14 +2628,14 @@
     "e": "Declared eradicated in 1980."
    },
    {
-    "q": "mRNA vaccines instruct cells to make?",
-    "a": "A viral protein",
+    "q": "Katalin Karik\u00f3 shared the 2023 Nobel Prize for work that made which vaccines possible?",
+    "a": "mRNA vaccines",
     "w": [
-     "Antibodies directly",
-     "A whole virus",
-     "New DNA"
+     "Live attenuated vaccines",
+     "Toxoid vaccines",
+     "Conjugate vaccines"
     ],
-    "e": "The immune system learns from the protein."
+    "e": "With Drew Weissman. Tweaking mRNA\u2019s building blocks stopped it triggering inflammation, which paved the way for the COVID-19 vaccines."
    },
    {
     "q": "Measles herd immunity needs vaccination coverage of roughly?",
@@ -2952,14 +2952,14 @@
     "e": "The other three were famous early patients too."
    },
    {
-    "q": "Banting shared the 1923 Nobel Prize with?",
-    "a": "John Macleod",
+    "q": "Which Nobel laureate spent 35 years working out the 3D structure of insulin, finally solving it in 1969?",
+    "a": "Dorothy Hodgkin",
     "w": [
-     "Charles Best",
-     "James Collip",
-     "Frederick Sanger"
+     "Rosalind Franklin",
+     "Marie Curie",
+     "Gerty Cori"
     ],
-    "e": "Banting split his money with Best; Macleod split his with Collip."
+    "e": "She\u2019d already won the 1964 Chemistry Nobel for penicillin and vitamin B12, while living with rheumatoid arthritis."
    },
    {
     "q": "\u2018Diabetes mellitus\u2019 literally means?",
@@ -3640,24 +3640,24 @@
     "e": "No rejection to worry about."
    },
    {
-    "q": "Who is called the father of modern neurosurgery?",
-    "a": "Harvey Cushing",
+    "q": "In 1893 in Chicago, Daniel Hale Williams, one of America\u2019s first Black heart surgeons, successfully repaired a stab wound to the?",
+    "a": "Pericardium",
     "w": [
-     "Wilder Penfield",
-     "Victor Horsley",
-     "Walter Dandy"
+     "Aorta",
+     "Carotid artery",
+     "Oesophagus"
     ],
-    "e": ""
+    "e": "The patient survived. Williams also founded Provident Hospital, which trained Black nurses and doctors when most hospitals wouldn\u2019t."
    },
    {
-    "q": "Laparoscopic surgery is better known as?",
-    "a": "Keyhole surgery",
+    "q": "Mary Edwards Walker, a US Civil War surgeon, remains the only woman awarded the?",
+    "a": "Medal of Honor",
     "w": [
-     "Open surgery",
-     "Laser surgery",
-     "Robotic surgery"
+     "Victoria Cross",
+     "Purple Heart",
+     "Congressional Gold Medal"
     ],
-    "e": ""
+    "e": "It was taken away in 1917 and restored in 1977. She was also arrested for wearing trousers."
    },
    {
     "q": "William Halsted introduced which item to the operating theatre around 1890?",
