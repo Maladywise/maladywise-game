@@ -58,21 +58,35 @@
    "DODGE",
    "DODGED",
    "DODGER",
+   "DOGGED",
    "DREDGE",
+   "DREDGED",
+   "DRUDGE",
    "DUNG",
    "DUNGEON",
    "EDGE",
    "EDGED",
+   "EGGED",
+   "EGGNOG",
+   "ENGENDER",
+   "ENGENDERED",
+   "ERGO",
    "GENDER",
    "GENDERED",
    "GENE",
    "GENRE",
+   "GOER",
    "GONE",
+   "GONER",
    "GONG",
    "GOOD",
    "GOON",
    "GORE",
    "GORGE",
+   "GORGON",
+   "GOUGE",
+   "GOUGED",
+   "GOURD",
    "GREED",
    "GREEN",
    "GREENER",
@@ -84,7 +98,9 @@
    "GUNNER",
    "GURU",
    "NUDGE",
+   "NUDGED",
    "OGRE",
+   "RENEGED",
    "ROGUE",
    "ROUGE",
    "RUGGED",
@@ -104,7 +120,7 @@
    "UNDERGONE",
    "UNDERGROUND"
   ],
-  "max": 277
+  "max": 387
  },
  {
   "date": "2026-10-26",
@@ -122,17 +138,22 @@
    "BARROW",
    "BOAR",
    "BORN",
+   "BORON",
    "BORROW",
    "BRAIN",
    "BRAN",
+   "BRAWN",
+   "BRIAR",
    "BROW",
    "BROWN",
+   "INBORN",
    "IRON",
    "NARROW",
    "RABBI",
    "RAIN",
    "RAINBOW",
    "RIBBON",
+   "ROAN",
    "ROAR",
    "ROBIN",
    "ROWAN",
@@ -144,7 +165,7 @@
   "pangrams": [
    "RAINBOW"
   ],
-  "max": 111
+  "max": 133
  },
  {
   "date": "2026-10-27",
@@ -160,26 +181,32 @@
    "HECK",
    "HIKE",
    "KEEN",
+   "KETCH",
    "KICK",
    "KINETIC",
    "KINK",
    "KITCHEN",
    "KITE",
+   "KITH",
    "KITTEN",
    "KNEE",
    "KNIT",
    "NECK",
+   "NECKTIE",
    "NICK",
    "THICK",
+   "THICKEN",
+   "THICKET",
    "THINK",
    "TICK",
    "TICKET"
   ],
   "medical": [],
   "pangrams": [
-   "KITCHEN"
+   "KITCHEN",
+   "THICKEN"
   ],
-  "max": 76
+  "max": 110
  },
  {
   "date": "2026-10-28",
@@ -191,21 +218,31 @@
    "ANTE",
    "ANTENNA",
    "ANTENNAE",
+   "APPELLANT",
    "EATEN",
    "ELEPHANT",
+   "ENTENTE",
+   "ETHANE",
    "HAPPEN",
    "HEATHEN",
+   "HENNA",
    "LANE",
    "LATENT",
    "LEAN",
    "LENT",
+   "NAAN",
+   "NAPE",
    "NATAL",
    "NEAT",
+   "NETTLE",
+   "PAEAN",
    "PANE",
    "PANEL",
    "PANT",
    "PATENT",
    "PENAL",
+   "PENNANT",
+   "PENT",
    "PLAN",
    "PLANE",
    "PLANET",
@@ -223,7 +260,7 @@
   "pangrams": [
    "ELEPHANT"
   ],
-  "max": 141
+  "max": 199
  },
  {
   "date": "2026-10-29",
@@ -232,14 +269,18 @@
   "centre": "M",
   "outer": "HAROTN",
   "words": [
+   "AMARANTH",
    "AMMO",
    "AROMA",
    "ATOM",
    "HARM",
    "MAMMOTH",
+   "MANNA",
    "MANOR",
+   "MANTA",
    "MANTRA",
    "MARATHON",
+   "MARMOT",
    "MAROON",
    "MATRON",
    "MOAN",
@@ -264,7 +305,7 @@
   "pangrams": [
    "MARATHON"
   ],
-  "max": 106
+  "max": 138
  },
  {
   "date": "2026-10-30",
@@ -275,9 +316,12 @@
   "words": [
    "ABLE",
    "ANKLE",
+   "BABBLE",
+   "BABEL",
    "BALE",
    "BALL",
    "BALLET",
+   "BANAL",
    "BATTLE",
    "BEETLE",
    "BELL",
@@ -293,6 +337,8 @@
    "KENNEL",
    "KETTLE",
    "KNEEL",
+   "KNELL",
+   "KNELT",
    "LABEL",
    "LAKE",
    "LANE",
@@ -301,23 +347,28 @@
    "LATTE",
    "LEAK",
    "LEAN",
+   "LEEK",
    "LENT",
    "NATAL",
    "NETBALL",
+   "NETTLE",
    "TABLE",
    "TABLET",
    "TALE",
    "TALENT",
    "TALK",
    "TALL",
+   "TATTLE",
    "TEAL",
-   "TELL"
+   "TELL",
+   "TELLTALE",
+   "TENABLE"
   ],
   "medical": [],
   "pangrams": [
    "BLANKET"
   ],
-  "max": 145
+  "max": 207
  },
  {
   "date": "2026-10-31",
@@ -326,6 +377,8 @@
   "centre": "G",
   "outer": "AVYDRE",
   "words": [
+   "ADAGE",
+   "AGAVE",
    "AGED",
    "AGREE",
    "AGREED",
@@ -338,10 +391,12 @@
    "DRAG",
    "DRAGGED",
    "DREDGE",
+   "DREDGED",
    "EAGER",
    "EDGE",
    "EDGED",
    "EDGY",
+   "EGGED",
    "GARAGE",
    "GAVE",
    "GEAR",
@@ -358,16 +413,19 @@
    "RAGE",
    "RAGED",
    "RAGGED",
+   "RAGGEDY",
+   "RAVAGE",
    "RAVAGED",
    "REGARD",
    "REGARDED",
    "REGGAE",
-   "VERGE"
+   "VERGE",
+   "YARDAGE"
   ],
   "medical": [],
   "pangrams": [
    "GRAVEYARD"
   ],
-  "max": 227
+  "max": 269
  }
 ]
