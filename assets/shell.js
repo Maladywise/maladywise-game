@@ -447,9 +447,7 @@
     ["02-14", "02-14", "valentine", "Happy Valentine\u2019s Day"],
     ["03-17", "03-17", "stpatrick", "Happy St Patrick\u2019s Day"],
     ["04-01", "04-01", "aprilfools", "April Fools\u2019 Day"],
-    ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"],
-    ["2027-05-09", "", "mothersday", "Happy Mother\u2019s Day"], ["2028-05-14", "", "mothersday", "Happy Mother\u2019s Day"],
-    ["2027-09-05", "", "fathersday", "Happy Father\u2019s Day"], ["2028-09-03", "", "fathersday", "Happy Father\u2019s Day"]
+    ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"]
   ];
   function season() {
     var t = sydToday(), md = t.slice(5), hit = null;
