@@ -1,0 +1,4106 @@
+[
+ {
+  "date": "2026-10-24",
+  "number": 1,
+  "difficulty": "Hard",
+  "theme": "Capitals with commitment issues",
+  "questions": [
+   {
+    "q": "What is the capital of Kazakhstan?",
+    "a": "Astana",
+    "w": [
+     "Almaty",
+     "Tashkent",
+     "Bishkek"
+    ],
+    "e": "It was Astana, then Nur-Sultan, then Astana again. The city has commitment issues."
+   },
+   {
+    "q": "Myanmar moved its capital in the mid-2000s to which purpose-built city?",
+    "a": "Naypyidaw",
+    "w": [
+     "Yangon",
+     "Mandalay",
+     "Bago"
+    ],
+    "e": "Famous for 20-lane highways with almost no cars. Yangon lost the job."
+   },
+   {
+    "q": "Brazil\u2019s capital Bras\u00edlia was built from scratch in about how many years?",
+    "a": "Four",
+    "w": [
+     "Fourteen",
+     "Forty",
+     "One"
+    ],
+    "e": "Opened in 1960, shaped roughly like an aeroplane. Rio was not consulted."
+   },
+   {
+    "q": "Bolivia\u2019s constitutional capital is?",
+    "a": "Sucre",
+    "w": [
+     "La Paz",
+     "Santa Cruz",
+     "Cochabamba"
+    ],
+    "e": "La Paz runs the government; Sucre keeps the title. Sharing is caring."
+   },
+   {
+    "q": "Sri Lanka\u2019s parliament sits in which capital?",
+    "a": "Sri Jayawardenepura Kotte",
+    "w": [
+     "Colombo",
+     "Kandy",
+     "Galle"
+    ],
+    "e": "Colombo is the commercial capital. Kotte is the one that wins pub quizzes."
+   },
+   {
+    "q": "Officially, Switzerland\u2019s law calls Bern its?",
+    "a": "Federal city",
+    "w": [
+     "Capital",
+     "Royal seat",
+     "Canton of honour"
+    ],
+    "e": "Switzerland technically has no capital. Bern just hosts the parliament and the bears."
+   },
+   {
+    "q": "How many capital cities does South Africa have?",
+    "a": "Three",
+    "w": [
+     "One",
+     "Two",
+     "Four"
+    ],
+    "e": "Pretoria (government), Cape Town (parliament), Bloemfontein (courts). Spread the load."
+   },
+   {
+    "q": "Liberia\u2019s capital, Monrovia, is named after a?",
+    "a": "US president",
+    "w": [
+     "British queen",
+     "Portuguese explorer",
+     "French saint"
+    ],
+    "e": "James Monroe, the fifth US president. Freed American slaves founded the colony."
+   },
+   {
+    "q": "Kuala Lumpur\u2019s name translates roughly as?",
+    "a": "Muddy confluence",
+    "w": [
+     "Royal river",
+     "City of gardens",
+     "Golden harbour"
+    ],
+    "e": "Founded where two rivers meet in tin-mining mud. Honest branding."
+   },
+   {
+    "q": "Which is the southernmost capital city of a sovereign country?",
+    "a": "Wellington",
+    "w": [
+     "Canberra",
+     "Buenos Aires",
+     "Montevideo"
+    ],
+    "e": "Windy Welly wins it. Canberra isn\u2019t even close."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-25",
+  "number": 2,
+  "difficulty": "Genius",
+  "theme": "Mythology\u2019s weirdest bits",
+  "questions": [
+   {
+    "q": "Who ferried souls across the rivers of the Greek underworld, for a coin?",
+    "a": "Charon",
+    "w": [
+     "Hermes",
+     "Cerberus",
+     "Hades"
+    ],
+    "e": "Hermes only walked you to the bank. Charon wanted paying for the trip."
+   },
+   {
+    "q": "Odin\u2019s two ravens are Huginn and Muninn. What do their names mean?",
+    "a": "Thought and Memory",
+    "w": [
+     "Day and Night",
+     "Life and Death",
+     "Sun and Moon"
+    ],
+    "e": "They fly the world each day and report back. The original newsfeed."
+   },
+   {
+    "q": "In Norse myth, Ratatoskr is a squirrel who runs up and down the world tree to?",
+    "a": "Carry insults between an eagle and a dragon",
+    "w": [
+     "Deliver acorns to the gods",
+     "Guard the roots",
+     "Wake the giants"
+    ],
+    "e": "A gossiping squirrel stirring up a feud. Mythology predicted comment sections."
+   },
+   {
+    "q": "Which Titan had his liver eaten daily by an eagle for giving fire to humans?",
+    "a": "Prometheus",
+    "w": [
+     "Sisyphus",
+     "Tantalus",
+     "Ixion"
+    ],
+    "e": "Sisyphus got the boulder. Prometheus got the worst breakfast guest ever."
+   },
+   {
+    "q": "Which Titan held up the sky and briefly tricked Heracles into taking a shift?",
+    "a": "Atlas",
+    "w": [
+     "Cronus",
+     "Hyperion",
+     "Oceanus"
+    ],
+    "e": "Heracles then tricked him back. Classic workplace handover."
+   },
+   {
+    "q": "In Norse myth, the world will end with a battle called?",
+    "a": "Ragnar\u00f6k",
+    "w": [
+     "Valhalla",
+     "Yggdrasil",
+     "Bifr\u00f6st"
+    ],
+    "e": "Valhalla is the hall, Yggdrasil the tree, Bifr\u00f6st the bridge. Ragnar\u00f6k is the finale."
+   },
+   {
+    "q": "The Graeae, three sisters of Greek myth, famously shared?",
+    "a": "One eye and one tooth",
+    "w": [
+     "One body",
+     "One voice",
+     "One shadow"
+    ],
+    "e": "They passed them around. Perseus stole the eye. Rude, but effective."
+   },
+   {
+    "q": "In Greek myth, King Midas was given donkey\u2019s ears for?",
+    "a": "Judging a music contest badly",
+    "w": [
+     "Stealing a golden apple",
+     "Insulting Zeus",
+     "Eating sacred cattle"
+    ],
+    "e": "He preferred Pan\u2019s piping to Apollo\u2019s lyre. Apollo did not take feedback well."
+   },
+   {
+    "q": "In Norse myth, which god gave birth to the eight-legged horse Sleipnir?",
+    "a": "Loki",
+    "w": [
+     "Freyja",
+     "Frigg",
+     "Heimdall"
+    ],
+    "e": "Loki, while disguised as a mare. Norse myth does not do boring."
+   },
+   {
+    "q": "Pandora\u2019s famous \u2018box\u2019 was originally a?",
+    "a": "Jar",
+    "w": [
+     "Chest",
+     "Basket",
+     "Urn"
+    ],
+    "e": "A 16th-century translation turned the jar into a box. Mistakes were unleashed."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-26",
+  "number": 3,
+  "difficulty": "Easy",
+  "theme": "Animals behaving weirdly",
+  "questions": [
+   {
+    "q": "What shape is wombat poo?",
+    "a": "Cubes",
+    "w": [
+     "Spirals",
+     "Perfect spheres",
+     "Flat discs"
+    ],
+    "e": "Cubes, so they don\u2019t roll off rocks. Nature\u2019s tidiest toilet."
+   },
+   {
+    "q": "How many hearts does an octopus have?",
+    "a": "Three",
+    "w": [
+     "One",
+     "Two",
+     "Eight"
+    ],
+    "e": "Eight arms, three hearts, blue blood. Overachiever."
+   },
+   {
+    "q": "Why do sea otters hold hands while they sleep?",
+    "a": "So they don\u2019t drift apart",
+    "w": [
+     "To keep warm",
+     "To stop sharks",
+     "It\u2019s a mating ritual"
+    ],
+    "e": "Also wrap themselves in kelp. Adorable and practical."
+   },
+   {
+    "q": "Which bird can fly backwards?",
+    "a": "Hummingbird",
+    "w": [
+     "Kingfisher",
+     "Swift",
+     "Owl"
+    ],
+    "e": "Also hovers, and beats its wings up to around 80 times a second. Show-off."
+   },
+   {
+    "q": "Which animal has fingerprints so like ours they could confuse a crime scene?",
+    "a": "Koala",
+    "w": [
+     "Raccoon",
+     "Possum",
+     "Sloth"
+    ],
+    "e": "Koala prints are spookily close to human ones, even under a microscope."
+   },
+   {
+    "q": "Where is a shrimp\u2019s heart?",
+    "a": "In its head",
+    "w": [
+     "In its tail",
+     "In its legs",
+     "It doesn\u2019t have one"
+    ],
+    "e": "Technically the head-and-chest section. Thinking with its heart, literally."
+   },
+   {
+    "q": "What does a platypus do under ultraviolet light?",
+    "a": "Glows blue-green",
+    "w": [
+     "Turns invisible",
+     "Changes to red",
+     "Nothing at all"
+    ],
+    "e": "Discovered in 2020. As if it wasn\u2019t weird enough already."
+   },
+   {
+    "q": "Which of these animals can\u2019t jump?",
+    "a": "Elephant",
+    "w": [
+     "Horse",
+     "Rhino",
+     "Giraffe"
+    ],
+    "e": "At least one foot always stays on the ground. Built for stomping, not bouncing."
+   },
+   {
+    "q": "What shape are a goat\u2019s pupils?",
+    "a": "Rectangular",
+    "w": [
+     "Round",
+     "Star-shaped",
+     "Vertical slits"
+    ],
+    "e": "Helps spot predators across a wide view. And unsettle humans."
+   },
+   {
+    "q": "Cheetahs can\u2019t roar. What do they do instead?",
+    "a": "Purr and chirp",
+    "w": [
+     "Hiss only",
+     "Bark",
+     "Stay completely silent"
+    ],
+    "e": "A chirping cheetah sounds like a bird. Fastest cat, cutest noises."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "number": 4,
+  "difficulty": "Easy",
+  "theme": "Food that isn\u2019t what you think",
+  "questions": [
+   {
+    "q": "Botanically speaking, peanuts are?",
+    "a": "Legumes",
+    "w": [
+     "Nuts",
+     "Seeds of a tree",
+     "Grains"
+    ],
+    "e": "They grow underground like peas. The \u2018nut\u2019 part is marketing."
+   },
+   {
+    "q": "Which of these is botanically a berry?",
+    "a": "Banana",
+    "w": [
+     "Strawberry",
+     "Raspberry",
+     "Blackberry"
+    ],
+    "e": "Strawberries aren\u2019t berries. Bananas are. Botany is chaos."
+   },
+   {
+    "q": "White chocolate contains no?",
+    "a": "Cocoa solids",
+    "w": [
+     "Sugar",
+     "Milk",
+     "Fat"
+    ],
+    "e": "Just cocoa butter, sugar and milk. Chocolate-adjacent."
+   },
+   {
+    "q": "The \u2018wasabi\u2019 served in most restaurants is usually mostly?",
+    "a": "Horseradish",
+    "w": [
+     "Ginger",
+     "Mustard seed only",
+     "Seaweed"
+    ],
+    "e": "Dyed green. Real wasabi is pricey and fussy to grow."
+   },
+   {
+    "q": "Fortune cookies were popularised in which country?",
+    "a": "USA",
+    "w": [
+     "China",
+     "Hong Kong",
+     "Taiwan"
+    ],
+    "e": "Most people in China have never seen one. California made them famous."
+   },
+   {
+    "q": "Which food has been found still edible in ancient Egyptian tombs?",
+    "a": "Honey",
+    "w": [
+     "Bread",
+     "Cheese",
+     "Dates"
+    ],
+    "e": "Low moisture and high acidity mean it basically never spoils."
+   },
+   {
+    "q": "Before the 1600s, most cultivated carrots were?",
+    "a": "Purple or yellow",
+    "w": [
+     "Orange",
+     "White only",
+     "Green"
+    ],
+    "e": "The Dutch popularised orange ones. The royal tribute story is probably a legend."
+   },
+   {
+    "q": "The Caesar salad is named after?",
+    "a": "A restaurateur in Mexico",
+    "w": [
+     "Julius Caesar",
+     "A Roman chef",
+     "A Hollywood actor"
+    ],
+    "e": "Caesar Cardini, Tijuana, 1920s. Julius never had a crouton."
+   },
+   {
+    "q": "Hawaiian pizza was invented in which country?",
+    "a": "Canada",
+    "w": [
+     "USA",
+     "Australia",
+     "Hawaii"
+    ],
+    "e": "By a Greek-Canadian in Ontario in 1962. Hawaii had nothing to do with it."
+   },
+   {
+    "q": "The pavlova is named after a?",
+    "a": "Russian ballerina",
+    "w": [
+     "Opera singer",
+     "Racehorse",
+     "Princess"
+    ],
+    "e": "Anna Pavlova. Australia and New Zealand are still fighting over who made it first."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "number": 5,
+  "difficulty": "Medium",
+  "theme": "Space is weird",
+  "questions": [
+   {
+    "q": "On Venus, which is longer?",
+    "a": "A day",
+    "w": [
+     "A year",
+     "They\u2019re equal",
+     "Neither, it doesn\u2019t spin"
+    ],
+    "e": "It spins so slowly that one day outlasts its year. Also, it spins backwards."
+   },
+   {
+    "q": "Given a big enough bathtub, which planet would float?",
+    "a": "Saturn",
+    "w": [
+     "Jupiter",
+     "Neptune",
+     "Mars"
+    ],
+    "e": "It\u2019s less dense than water. Good luck finding the bath."
+   },
+   {
+    "q": "Uranus\u2019s upper clouds contain hydrogen sulphide, which smells like?",
+    "a": "Rotten eggs",
+    "w": [
+     "Roses",
+     "Burnt toast",
+     "Nothing at all"
+    ],
+    "e": "Yes, Uranus smells. The jokes write themselves."
+   },
+   {
+    "q": "What colour are sunsets on Mars?",
+    "a": "Blue",
+    "w": [
+     "Red",
+     "Green",
+     "Purple"
+    ],
+    "e": "The red planet does blue sunsets. Dust scatters light the opposite way to ours."
+   },
+   {
+    "q": "Astronauts often say space smells like?",
+    "a": "Seared steak and hot metal",
+    "w": [
+     "Fresh rain",
+     "Absolutely nothing",
+     "Rotten eggs"
+    ],
+    "e": "The smell clings to suits after spacewalks. Barbecue in orbit."
+   },
+   {
+    "q": "A teaspoon of neutron star would weigh roughly?",
+    "a": "A billion tonnes",
+    "w": [
+     "About a kilogram",
+     "About a tonne",
+     "As much as a car"
+    ],
+    "e": "Crushed atoms. Do not attempt to stir your tea with it."
+   },
+   {
+    "q": "Since being discovered in 1930, how many full orbits of the Sun has Pluto completed?",
+    "a": "None",
+    "w": [
+     "One",
+     "Three",
+     "Ten"
+    ],
+    "e": "One lap takes about 248 years. Its first \u2018birthday\u2019 is in 2178."
+   },
+   {
+    "q": "Why will the Apollo astronauts\u2019 footprints last so long?",
+    "a": "The Moon has no wind or rain",
+    "w": [
+     "They were cemented",
+     "Moon dust is magnetic",
+     "They\u2019re protected by NASA"
+    ],
+    "e": "They could last millions of years. Littering, but historic."
+   },
+   {
+    "q": "Olympus Mons, the biggest volcano in the solar system, is on?",
+    "a": "Mars",
+    "w": [
+     "Venus",
+     "Io",
+     "Earth"
+    ],
+    "e": "About two and a half times the height of Everest. Io has more volcanoes, but smaller."
+   },
+   {
+    "q": "When you look at the Sun, the light you see left it about how long ago?",
+    "a": "8 minutes",
+    "w": [
+     "8 seconds",
+     "8 hours",
+     "8 days"
+    ],
+    "e": "You\u2019re always looking at the Sun\u2019s past. Slightly spooky."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "number": 6,
+  "difficulty": "Medium",
+  "theme": "Music oddities",
+  "questions": [
+   {
+    "q": "A performance of John Cage\u2019s \u2018As Slow As Possible\u2019 in a German church is due to end in which year?",
+    "a": "2640",
+    "w": [
+     "2030",
+     "2100",
+     "3000"
+    ],
+    "e": "It started in 2001. Chord changes are a big event, every few years."
+   },
+   {
+    "q": "John Cage\u2019s famous piece 4\u203233\u2033 consists of?",
+    "a": "Musicians playing nothing",
+    "w": [
+     "One very long note",
+     "Random noise",
+     "A single drum hit"
+    ],
+    "e": "The music is the room\u2019s sounds. Coughing is part of the performance."
+   },
+   {
+    "q": "Which was the first musical instrument played in space, in 1965?",
+    "a": "Harmonica",
+    "w": [
+     "Guitar",
+     "Flute",
+     "Ukulele"
+    ],
+    "e": "Smuggled aboard Gemini 6 to play Jingle Bells. Festive astronauts."
+   },
+   {
+    "q": "Until a 2016 settlement, which song were companies paid royalties for?",
+    "a": "Happy Birthday to You",
+    "w": [
+     "Jingle Bells",
+     "Auld Lang Syne",
+     "Twinkle Twinkle Little Star"
+    ],
+    "e": "A court found the copyright claim invalid. Now everyone can sing it badly for free."
+   },
+   {
+    "q": "Beethoven\u2019s \u2018Ode to Joy\u2019 is the official anthem of?",
+    "a": "The European Union",
+    "w": [
+     "The Olympics",
+     "The United Nations",
+     "Germany"
+    ],
+    "e": "Played without words, so nobody argues about language."
+   },
+   {
+    "q": "According to Guinness, what is the best-selling single of all time?",
+    "a": "White Christmas",
+    "w": [
+     "Candle in the Wind 1997",
+     "Bohemian Rhapsody",
+     "Shape of You"
+    ],
+    "e": "Bing Crosby, 1942. Every December renews its lead."
+   },
+   {
+    "q": "Since 2015, which non-European country competes in Eurovision?",
+    "a": "Australia",
+    "w": [
+     "Canada",
+     "USA",
+     "Japan"
+    ],
+    "e": "Geography is optional. Glitter is not."
+   },
+   {
+    "q": "Which country\u2019s national anthem has no official lyrics?",
+    "a": "Spain",
+    "w": [
+     "Italy",
+     "France",
+     "Portugal"
+    ],
+    "e": "Fans just hum along. Very relaxed."
+   },
+   {
+    "q": "The piano\u2019s full original name, \u2018pianoforte\u2019, means?",
+    "a": "Soft-loud",
+    "w": [
+     "Little harp",
+     "Hammer box",
+     "King of instruments"
+    ],
+    "e": "It could play both, unlike the harpsichord. Revolutionary."
+   },
+   {
+    "q": "The theremin is unusual because it\u2019s played?",
+    "a": "Without touching it",
+    "w": [
+     "Only underwater",
+     "With the feet",
+     "By blowing into strings"
+    ],
+    "e": "You wave your hands near two antennas. Sounds like every 1950s alien film."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "number": 7,
+  "difficulty": "Hard",
+  "theme": "Accidental inventions",
+  "questions": [
+   {
+    "q": "Which invention came after a chocolate bar melted in an engineer\u2019s pocket near radar gear?",
+    "a": "Microwave oven",
+    "w": [
+     "Toaster",
+     "Refrigerator",
+     "Electric kettle"
+    ],
+    "e": "Percy Spencer, 1945. Snacks have been reheated unevenly ever since."
+   },
+   {
+    "q": "Bubble wrap was first invented as?",
+    "a": "Wallpaper",
+    "w": [
+     "Shower curtains",
+     "Pool covers",
+     "Raincoat lining"
+    ],
+    "e": "Textured wallpaper, 1957. Nobody wanted it on walls; everyone wanted to pop it."
+   },
+   {
+    "q": "Post-it Notes came from a glue that was?",
+    "a": "Too weak",
+    "w": [
+     "Too sticky",
+     "Toxic",
+     "Waterproof"
+    ],
+    "e": "A failed super-glue that turned into a stationery cupboard staple."
+   },
+   {
+    "q": "Velcro was inspired by?",
+    "a": "Burrs stuck to a dog\u2019s fur",
+    "w": [
+     "Gecko feet",
+     "Bat wings",
+     "Spider webs"
+    ],
+    "e": "George de Mestral went for a walk and came back with an idea and a very clingy dog."
+   },
+   {
+    "q": "The ice block on a stick was supposedly invented in 1905 by a?",
+    "a": "Boy aged 11",
+    "w": [
+     "Dairy farmer",
+     "Ship\u2019s cook",
+     "Ice-cream baron"
+    ],
+    "e": "Frank Epperson left his drink outside overnight with the stirrer in. Genius by neglect."
+   },
+   {
+    "q": "Play-Doh was originally sold as?",
+    "a": "Wallpaper cleaner",
+    "w": [
+     "Modelling clay for dentists",
+     "Bread dough",
+     "Window putty"
+    ],
+    "e": "Coal heating went out of fashion, so it was rebranded as a toy."
+   },
+   {
+    "q": "The Slinky was invented by a naval engineer who?",
+    "a": "Knocked a spring off a shelf",
+    "w": [
+     "Tripped on stairs",
+     "Fixed a submarine",
+     "Coiled a phone cord"
+    ],
+    "e": "It \u2018walked\u2019 instead of falling. Ships\u2019 loss, kids\u2019 gain."
+   },
+   {
+    "q": "Super glue was first rejected because, while making clear plastic gun sights, it?",
+    "a": "Stuck to everything",
+    "w": [
+     "Smelled awful",
+     "Melted in heat",
+     "Turned yellow"
+    ],
+    "e": "Harry Coover\u2019s team found it too sticky. Years later, that was the point."
+   },
+   {
+    "q": "Which sweetener was discovered when a chemist didn\u2019t wash his hands before dinner?",
+    "a": "Saccharin",
+    "w": [
+     "Aspartame",
+     "Stevia",
+     "Sucralose"
+    ],
+    "e": "1879. His bread tasted sweet. Hygiene: optional, apparently."
+   },
+   {
+    "q": "Teflon was discovered in 1938 by a chemist trying to make a new?",
+    "a": "Refrigerant",
+    "w": [
+     "Paint",
+     "Glue",
+     "Rocket fuel"
+    ],
+    "e": "A gas cylinder turned into slippery white powder. Hello, non-stick pans."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-31",
+  "number": 8,
+  "difficulty": "Hard",
+  "theme": "Halloween",
+  "questions": [
+   {
+    "q": "Halloween has roots in which Celtic festival?",
+    "a": "Samhain",
+    "w": [
+     "Beltane",
+     "Imbolc",
+     "Lughnasadh"
+    ],
+    "e": "Beltane is the May one. Samhain marked summer\u2019s end and spooky season."
+   },
+   {
+    "q": "In Ireland and Scotland, jack-o\u2019-lanterns were originally carved from?",
+    "a": "Turnips",
+    "w": [
+     "Pumpkins",
+     "Potatoes",
+     "Melons"
+    ],
+    "e": "Pumpkins won in America because they\u2019re easier to carve. Turnip faces are terrifying."
+   },
+   {
+    "q": "How many times did Dracula author Bram Stoker visit Transylvania?",
+    "a": "Never",
+    "w": [
+     "Once",
+     "Twice",
+     "He lived there"
+    ],
+    "e": "He researched it from libraries. Imagination is cheaper than flights."
+   },
+   {
+    "q": "In Mary Shelley\u2019s novel, the monster\u2019s creator is called?",
+    "a": "Victor Frankenstein",
+    "w": [
+     "Igor Frankenstein",
+     "Henry Frankenstein",
+     "Doctor Igor"
+    ],
+    "e": "Frankenstein is the doctor, not the monster. And Igor isn\u2019t in the book at all."
+   },
+   {
+    "q": "Mary Shelley wrote Frankenstein during a gloomy \u2018year without a summer\u2019 caused by?",
+    "a": "A volcanic eruption",
+    "w": [
+     "A solar eclipse",
+     "A plague",
+     "A meteor strike"
+    ],
+    "e": "Mount Tambora erupted in 1815. Bad weather, great horror."
+   },
+   {
+    "q": "In Scotland, children dressing up and performing for treats is traditionally called?",
+    "a": "Guising",
+    "w": [
+     "Mumming",
+     "Souling",
+     "Wassailing"
+    ],
+    "e": "You had to earn the sweets with a joke or song. No freeloading."
+   },
+   {
+    "q": "Vlad the Impaler, Dracula\u2019s inspiration, ruled which region?",
+    "a": "Wallachia",
+    "w": [
+     "Transylvania",
+     "Moldavia",
+     "Bohemia"
+    ],
+    "e": "Transylvania gets the castle tourism. Wallachia got the actual Vlad."
+   },
+   {
+    "q": "Which famous escape artist died on Halloween in 1926?",
+    "a": "Harry Houdini",
+    "w": [
+     "Howard Thurston",
+     "Harry Kellar",
+     "David Devant"
+    ],
+    "e": "A spooky date for the man who escaped everything else."
+   },
+   {
+    "q": "Candy corn was originally marketed under which name?",
+    "a": "Chicken Feed",
+    "w": [
+     "Corn Sweets",
+     "Harvest Teeth",
+     "Witch Kernels"
+    ],
+    "e": "Corn was mostly animal feed back then. Delicious branding."
+   },
+   {
+    "q": "Which Michael Jackson track features a creepy voice-over by Vincent Price?",
+    "a": "Thriller",
+    "w": [
+     "Bad",
+     "Smooth Criminal",
+     "Ghosts"
+    ],
+    "e": "\u2018Ghosts\u2019 was a good guess, but Thriller had the cackle."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-01",
+  "number": 9,
+  "difficulty": "Genius",
+  "theme": "Words with secret histories",
+  "questions": [
+   {
+    "q": "\u2018Salary\u2019 comes from a Latin word linked to?",
+    "a": "Salt",
+    "w": [
+     "Silver",
+     "Soldiers",
+     "Sun"
+    ],
+    "e": "The \u2018paid in salt\u2019 legend is shakier than the word itself."
+   },
+   {
+    "q": "The \u00b6 symbol is called a?",
+    "a": "Pilcrow",
+    "w": [
+     "Obelus",
+     "Ampersand",
+     "Interpunct"
+    ],
+    "e": "The obelus is the \u00f7 sign. The pilcrow marks paragraphs and pub-quiz smugness."
+   },
+   {
+    "q": "The word \u2018robot\u2019 comes from a Czech word meaning?",
+    "a": "Forced labour",
+    "w": [
+     "Metal man",
+     "Thinking machine",
+     "Servant of the king"
+    ],
+    "e": "Coined in Karel \u010capek\u2019s 1920 play. Bleak origins for a vacuum cleaner."
+   },
+   {
+    "q": "\u2018Disaster\u2019 literally means?",
+    "a": "Bad star",
+    "w": [
+     "Broken ship",
+     "Lost battle",
+     "Falling tower"
+    ],
+    "e": "Blame the astrologers."
+   },
+   {
+    "q": "The word \u2018nice\u2019 originally meant?",
+    "a": "Foolish",
+    "w": [
+     "Kind",
+     "Tidy",
+     "Wealthy"
+    ],
+    "e": "From Latin \u2018nescius\u2019, ignorant. Calling someone nice used to be an insult."
+   },
+   {
+    "q": "\u2018Shampoo\u2019 entered English from which language?",
+    "a": "Hindi",
+    "w": [
+     "Arabic",
+     "Persian",
+     "French"
+    ],
+    "e": "From \u2018champo\u2019, to press or massage. The French did not invent everything fancy."
+   },
+   {
+    "q": "\u2018Avocado\u2019 comes from an Aztec (Nahuatl) word that also meant?",
+    "a": "Testicle",
+    "w": [
+     "Green butter",
+     "Heart",
+     "Tree egg"
+    ],
+    "e": "Look at a pair hanging on a tree. You\u2019ll see it now. Sorry."
+   },
+   {
+    "q": "A \u2018clue\u2019 was originally a?",
+    "a": "Ball of thread",
+    "w": [
+     "Footprint",
+     "Riddle",
+     "Key"
+    ],
+    "e": "Theseus followed one out of the labyrinth. Solving mysteries ever since."
+   },
+   {
+    "q": "\u2018Sesquipedalian\u2019 describes?",
+    "a": "Using long words",
+    "w": [
+     "Having many feet",
+     "Being very tall",
+     "Walking slowly"
+    ],
+    "e": "Literally \u2018a foot and a half long\u2019. Fittingly, it is one."
+   },
+   {
+    "q": "A misheard song lyric is called a?",
+    "a": "Mondegreen",
+    "w": [
+     "Eggcorn",
+     "Homophone",
+     "Solecism"
+    ],
+    "e": "From \u2018laid him on the green\u2019 heard as \u2018Lady Mondegreen\u2019. Everyone sings them wrong."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "number": 10,
+  "difficulty": "Easy",
+  "theme": "Flags are weird",
+  "questions": [
+   {
+    "q": "Which country has the only non-rectangular national flag?",
+    "a": "Nepal",
+    "w": [
+     "Bhutan",
+     "Qatar",
+     "Oman"
+    ],
+    "e": "Two stacked triangles. Rectangles are for the unadventurous."
+   },
+   {
+    "q": "Which country\u2019s flag is square?",
+    "a": "Switzerland",
+    "w": [
+     "Austria",
+     "Denmark",
+     "Sweden"
+    ],
+    "e": "Vatican City is square too. Everyone else stuck with rectangles."
+   },
+   {
+    "q": "Which country\u2019s flag features an AK-47 rifle?",
+    "a": "Mozambique",
+    "w": [
+     "Angola",
+     "Zimbabwe",
+     "Kenya"
+    ],
+    "e": "Crossed with a hoe and a book. Unique, to say the least."
+   },
+   {
+    "q": "Which country\u2019s flag features a dragon?",
+    "a": "Bhutan",
+    "w": [
+     "China",
+     "Vietnam",
+     "Mongolia"
+    ],
+    "e": "The \u2018Land of the Thunder Dragon\u2019. China has loads of dragons, just not on its flag."
+   },
+   {
+    "q": "Which country\u2019s flag has a different design on each side?",
+    "a": "Paraguay",
+    "w": [
+     "Uruguay",
+     "Peru",
+     "Bolivia"
+    ],
+    "e": "Different emblems front and back. Double the printing, double the fun."
+   },
+   {
+    "q": "Which country\u2019s flag is widely recognised as the oldest still in use?",
+    "a": "Denmark",
+    "w": [
+     "England",
+     "Japan",
+     "Netherlands"
+    ],
+    "e": "The Dannebrog. Legend says it fell from the sky in 1219."
+   },
+   {
+    "q": "From 1977 to 2011, which country\u2019s flag was plain green, with nothing else on it?",
+    "a": "Libya",
+    "w": [
+     "Saudi Arabia",
+     "Pakistan",
+     "Mauritania"
+    ],
+    "e": "Easiest flag ever to draw. Now it has stripes and a crescent."
+   },
+   {
+    "q": "Which country\u2019s flag shows a map of the country itself?",
+    "a": "Cyprus",
+    "w": [
+     "Malta",
+     "Greece",
+     "Iceland"
+    ],
+    "e": "Copper-coloured island on white. Hard to get lost."
+   },
+   {
+    "q": "The flags of Indonesia and Monaco are?",
+    "a": "Nearly identical",
+    "w": [
+     "Exact opposites",
+     "Both all-red",
+     "Both with stars"
+    ],
+    "e": "Red over white. Only the proportions differ. Awkward."
+   },
+   {
+    "q": "The Union Jack combines the crosses of England, Scotland and?",
+    "a": "Ireland",
+    "w": [
+     "Wales",
+     "Cornwall",
+     "Isle of Man"
+    ],
+    "e": "St Patrick\u2019s cross. Wales got left out; the dragon is still sulking."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 11,
+  "difficulty": "Easy",
+  "theme": "Melbourne Cup",
+  "questions": [
+   {
+    "q": "The Melbourne Cup is run on the first Tuesday of which month?",
+    "a": "November",
+    "w": [
+     "October",
+     "March",
+     "December"
+    ],
+    "e": "Which is today, in case the office sweep hasn\u2019t reminded you."
+   },
+   {
+    "q": "At which racecourse is the Melbourne Cup held?",
+    "a": "Flemington",
+    "w": [
+     "Randwick",
+     "Caulfield",
+     "Moonee Valley"
+    ],
+    "e": "Caulfield has its own Cup. Randwick is in Sydney, which Melbourne would like noted."
+   },
+   {
+    "q": "Where is champion racehorse Phar Lap\u2019s heart today?",
+    "a": "National Museum of Australia, Canberra",
+    "w": [
+     "Melbourne Museum",
+     "Te Papa, Wellington",
+     "Flemington"
+    ],
+    "e": "His hide is in Melbourne and his skeleton in New Zealand. Shared custody."
+   },
+   {
+    "q": "In Australia, all racehorses officially have the same birthday. When is it?",
+    "a": "1 August",
+    "w": [
+     "1 January",
+     "1 July",
+     "First Tuesday in November"
+    ],
+    "e": "Makes age groups simple. Terrible for individual cake."
+   },
+   {
+    "q": "How many Melbourne Cups did Makybe Diva win?",
+    "a": "Three",
+    "w": [
+     "Two",
+     "Four",
+     "Five"
+    ],
+    "e": "Three in a row, 2003 to 2005. Greedy, frankly."
+   },
+   {
+    "q": "Michelle Payne became the first woman to ride a Cup winner in 2015. Her horse started at?",
+    "a": "100 to 1",
+    "w": [
+     "5 to 1",
+     "20 to 1",
+     "Even money"
+    ],
+    "e": "Prince of Penzance. Bookies still have nightmares."
+   },
+   {
+    "q": "In which state is Melbourne Cup Day a public holiday?",
+    "a": "Victoria",
+    "w": [
+     "New South Wales",
+     "Queensland",
+     "Every state"
+    ],
+    "e": "The rest of the country just watches from work. \u2018Watches\u2019."
+   },
+   {
+    "q": "What is the Melbourne Cup\u2019s famous nickname?",
+    "a": "The race that stops a nation",
+    "w": [
+     "The run for the roses",
+     "The sport of kings",
+     "The great race"
+    ],
+    "e": "The run for the roses is the Kentucky Derby. Wrong hemisphere."
+   },
+   {
+    "q": "The first Melbourne Cup in 1861 was older than?",
+    "a": "Australian Federation",
+    "w": [
+     "The city of Melbourne",
+     "Flemington racecourse",
+     "The colony of Victoria"
+    ],
+    "e": "Federation came in 1901. The Cup came before the country did."
+   },
+   {
+    "q": "A horse\u2019s height is traditionally measured in?",
+    "a": "Hands",
+    "w": [
+     "Feet",
+     "Spans",
+     "Rods"
+    ],
+    "e": "One hand is four inches. Very scientific, very old."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 12,
+  "difficulty": "Medium",
+  "theme": "Movie magic secrets",
+  "questions": [
+   {
+    "q": "In the original book, Dorothy\u2019s magic slippers are?",
+    "a": "Silver",
+    "w": [
+     "Ruby",
+     "Gold",
+     "Glass"
+    ],
+    "e": "The film made them ruby to show off Technicolor. Glass is Cinderella."
+   },
+   {
+    "q": "The crew nicknamed the mechanical shark in Jaws?",
+    "a": "Bruce",
+    "w": [
+     "Jeff",
+     "Steve",
+     "Big Ted"
+    ],
+    "e": "Reportedly after Spielberg\u2019s lawyer. It kept breaking, so you barely see it."
+   },
+   {
+    "q": "The blood in Psycho\u2019s famous shower scene was actually?",
+    "a": "Chocolate syrup",
+    "w": [
+     "Tomato sauce",
+     "Red wine",
+     "Beetroot juice"
+    ],
+    "e": "In black and white, syrup looked better. Hitchcock knew his sauces."
+   },
+   {
+    "q": "The \u2018Wilhelm scream\u2019 is famous for being?",
+    "a": "A sound effect reused in hundreds of films",
+    "w": [
+     "A lost horror film",
+     "A singer\u2019s highest note",
+     "A stunt that went wrong"
+    ],
+    "e": "Star Wars, Indiana Jones, Toy Story. Same scream, many unlucky extras."
+   },
+   {
+    "q": "In Citizen Kane, \u2018Rosebud\u2019 turns out to be a?",
+    "a": "Sled",
+    "w": [
+     "Horse",
+     "Woman",
+     "Boat"
+    ],
+    "e": "Spoiler, from 1941. You\u2019ve had time."
+   },
+   {
+    "q": "Mad Max: Fury Road was mainly filmed in?",
+    "a": "Namibia",
+    "w": [
+     "Australia",
+     "Morocco",
+     "USA"
+    ],
+    "e": "Outback Broken Hill turned green after rain. An Aussie franchise, exported to Africa."
+   },
+   {
+    "q": "The lightsaber hum in Star Wars was created from?",
+    "a": "An old projector motor and TV interference",
+    "w": [
+     "A vacuum cleaner",
+     "A guitar amp",
+     "Bees in a jar"
+    ],
+    "e": "Sound designer Ben Burtt, mixing junk into magic."
+   },
+   {
+    "q": "Which Australian played James Bond, for just one film?",
+    "a": "George Lazenby",
+    "w": [
+     "Hugh Jackman",
+     "Mel Gibson",
+     "Russell Crowe"
+    ],
+    "e": "1969. Then he quit. Very Australian."
+   },
+   {
+    "q": "Some velociraptor noises in Jurassic Park came from recordings of?",
+    "a": "Tortoises mating",
+    "w": [
+     "Angry geese",
+     "Pigs at feeding time",
+     "Dolphins"
+    ],
+    "e": "Terrifying on screen. Much less so in context."
+   },
+   {
+    "q": "During World War II, Oscar statuettes were made of?",
+    "a": "Painted plaster",
+    "w": [
+     "Wood",
+     "Glass",
+     "Real gold"
+    ],
+    "e": "Metal was rationed. Winners swapped them for metal ones after the war."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 13,
+  "difficulty": "Medium",
+  "theme": "Geography gone weird",
+  "questions": [
+   {
+    "q": "Which country covers the most time zones, counting territories?",
+    "a": "France",
+    "w": [
+     "Russia",
+     "USA",
+     "China"
+    ],
+    "e": "Thanks to islands everywhere. China, huge as it is, uses just one."
+   },
+   {
+    "q": "Which country has the most natural lakes?",
+    "a": "Canada",
+    "w": [
+     "Finland",
+     "Russia",
+     "USA"
+    ],
+    "e": "Finland is \u2018the land of a thousand lakes\u2019. Canada has way more."
+   },
+   {
+    "q": "What is the world\u2019s largest desert?",
+    "a": "Antarctica",
+    "w": [
+     "Sahara",
+     "Arabian",
+     "Gobi"
+    ],
+    "e": "Deserts are about dryness, not heat. The Sahara gets bronze-level sulking."
+   },
+   {
+    "q": "At their closest, Russia and the USA are about how far apart?",
+    "a": "4 km",
+    "w": [
+     "40 km",
+     "400 km",
+     "4000 km"
+    ],
+    "e": "Two Diomede islands in the Bering Strait. Also almost a day apart in time."
+   },
+   {
+    "q": "Point Nemo, the most remote spot in the ocean, is used as a?",
+    "a": "Spacecraft graveyard",
+    "w": [
+     "Whale nursery",
+     "Submarine base",
+     "Shipping lane"
+    ],
+    "e": "Dead satellites get crashed there. The nearest humans are often astronauts."
+   },
+   {
+    "q": "Which mountain\u2019s summit is the farthest point from Earth\u2019s centre?",
+    "a": "Chimborazo",
+    "w": [
+     "Everest",
+     "K2",
+     "Kilimanjaro"
+    ],
+    "e": "Earth bulges at the equator, giving this Ecuadorian peak the edge. Everest is taller from sea level."
+   },
+   {
+    "q": "Lake Hillier in Western Australia is famous for being?",
+    "a": "Bright pink",
+    "w": [
+     "Boiling hot",
+     "Perfectly round",
+     "Always frozen"
+    ],
+    "e": "Thanks to algae and bacteria. Looks like a strawberry milkshake."
+   },
+   {
+    "q": "Which is wider: Australia or the Moon?",
+    "a": "Australia",
+    "w": [
+     "The Moon",
+     "They\u2019re exactly equal",
+     "Depends on the season"
+    ],
+    "e": "Australia is about 4000 km wide. The Moon is about 3500 km across."
+   },
+   {
+    "q": "Which country is completely surrounded by South Africa?",
+    "a": "Lesotho",
+    "w": [
+     "Eswatini",
+     "Botswana",
+     "Namibia"
+    ],
+    "e": "Eswatini also borders Mozambique. Lesotho is fully hugged."
+   },
+   {
+    "q": "What is the world\u2019s smallest country?",
+    "a": "Vatican City",
+    "w": [
+     "Monaco",
+     "San Marino",
+     "Liechtenstein"
+    ],
+    "e": "Smaller than many golf courses. Monaco is a distant second."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 14,
+  "difficulty": "Hard",
+  "theme": "Art\u2019s strangest stories",
+  "questions": [
+   {
+    "q": "Banksy\u2019s Girl with Balloon shredded itself at auction. What happened next?",
+    "a": "It became worth more",
+    "w": [
+     "It was thrown out",
+     "The sale was cancelled",
+     "Banksy was arrested"
+    ],
+    "e": "Renamed Love is in the Bin and resold for millions more."
+   },
+   {
+    "q": "The pigment ultramarine was originally made from?",
+    "a": "Lapis lazuli",
+    "w": [
+     "Malachite",
+     "Cobalt",
+     "Indigo"
+    ],
+    "e": "Ground-up gemstone, once pricier than gold. Painters used it sparingly."
+   },
+   {
+    "q": "When the Mona Lisa was stolen in 1911, which artist was questioned by police?",
+    "a": "Pablo Picasso",
+    "w": [
+     "Claude Monet",
+     "Henri Matisse",
+     "Salvador Dal\u00ed"
+    ],
+    "e": "He was cleared. The thief was a museum handyman who hid it under his coat."
+   },
+   {
+    "q": "Michelangelo\u2019s David was originally meant to stand?",
+    "a": "High up on Florence Cathedral",
+    "w": [
+     "In a garden",
+     "In a church crypt",
+     "At the city gate"
+    ],
+    "e": "Too heavy to lift up there. Lucky for our necks."
+   },
+   {
+    "q": "\u2018Mummy brown\u2019, a pigment used by painters, was made from?",
+    "a": "Ground-up mummies",
+    "w": [
+     "Brown clay",
+     "Burnt coffee",
+     "Tree resin"
+    ],
+    "e": "Really. Some artists buried their tubes once they found out."
+   },
+   {
+    "q": "Between 1912 and 1948, the Olympics awarded medals for?",
+    "a": "Art",
+    "w": [
+     "Chess",
+     "Cooking",
+     "Dancing"
+    ],
+    "e": "Painting, sculpture, music and literature. Very sporty."
+   },
+   {
+    "q": "Marcel Duchamp\u2019s famous 1917 artwork \u2018Fountain\u2019 is a?",
+    "a": "Urinal",
+    "w": [
+     "Bathtub",
+     "Garden hose",
+     "Teapot"
+    ],
+    "e": "Signed \u2018R. Mutt\u2019. Art history was never the same."
+   },
+   {
+    "q": "Maurizio Cattelan\u2019s artwork \u2018Comedian\u2019, sold for millions, is?",
+    "a": "A banana taped to a wall",
+    "w": [
+     "A painted clown nose",
+     "A rubber chicken",
+     "An empty frame"
+    ],
+    "e": "The 2024 buyer then ate the banana. The tape survived."
+   },
+   {
+    "q": "Which Australian painted Ned Kelly in a black square helmet in a famous series?",
+    "a": "Sidney Nolan",
+    "w": [
+     "Arthur Boyd",
+     "Brett Whiteley",
+     "Albert Namatjira"
+    ],
+    "e": "Instantly recognisable, deeply weird, very Australian."
+   },
+   {
+    "q": "Rembrandt\u2019s The Night Watch is actually set?",
+    "a": "In daytime",
+    "w": [
+     "At midnight",
+     "At dawn",
+     "Indoors by candlelight"
+    ],
+    "e": "Darkened varnish fooled everyone. Wrong name, stuck forever."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 15,
+  "difficulty": "Hard",
+  "theme": "History\u2019s weirdest moments",
+  "questions": [
+   {
+    "q": "In 1932, Australian soldiers with machine guns went to war against?",
+    "a": "Emus",
+    "w": [
+     "Rabbits",
+     "Kangaroos",
+     "Cane toads"
+    ],
+    "e": "The Great Emu War. The emus won."
+   },
+   {
+    "q": "The shortest war in recorded history lasted about?",
+    "a": "40 minutes",
+    "w": [
+     "4 hours",
+     "4 days",
+     "40 days"
+    ],
+    "e": "Britain versus Zanzibar, 1896. Over before morning tea."
+   },
+   {
+    "q": "Napoleon was actually?",
+    "a": "About average height",
+    "w": [
+     "Very short",
+     "Unusually tall",
+     "Of unknown height"
+    ],
+    "e": "The \u2018tiny Napoleon\u2019 idea was mostly British cartoons and unit confusion."
+   },
+   {
+    "q": "Real Viking helmets had?",
+    "a": "No horns",
+    "w": [
+     "Two horns",
+     "Wings",
+     "Antlers"
+    ],
+    "e": "Horns came from 19th-century opera costumes. Very impractical in battle."
+   },
+   {
+    "q": "Cleopatra lived closer in time to which event than to the building of the Great Pyramid?",
+    "a": "The Moon landing",
+    "w": [
+     "The Battle of Hastings",
+     "The fall of Rome",
+     "Columbus reaching America"
+    ],
+    "e": "The pyramid was already ancient to her. Time is weird."
+   },
+   {
+    "q": "Oxford University is older than?",
+    "a": "The Aztec Empire",
+    "w": [
+     "Ancient Rome",
+     "The pyramids",
+     "The Great Wall"
+    ],
+    "e": "Teaching began around 1096. Tenochtitlan was founded in 1325."
+   },
+   {
+    "q": "Ancient Roman laundries used what to clean clothes?",
+    "a": "Urine",
+    "w": [
+     "Seawater",
+     "Olive oil",
+     "Wine"
+    ],
+    "e": "Collected from public pots. Emperor Vespasian even taxed it."
+   },
+   {
+    "q": "In 1919, a giant wave of what flooded part of Boston?",
+    "a": "Molasses",
+    "w": [
+     "Beer",
+     "Milk",
+     "Maple syrup"
+    ],
+    "e": "A tank burst. The street smelled sweet for decades."
+   },
+   {
+    "q": "Workers building the Egyptian pyramids received daily rations including?",
+    "a": "Beer",
+    "w": [
+     "Wine",
+     "Honey cakes only",
+     "Goat\u2019s milk"
+    ],
+    "e": "Not slaves, and well fed. Beer was a staple."
+   },
+   {
+    "q": "Which of the Seven Wonders of the Ancient World is still standing?",
+    "a": "Great Pyramid of Giza",
+    "w": [
+     "Lighthouse of Alexandria",
+     "Colossus of Rhodes",
+     "Hanging Gardens of Babylon"
+    ],
+    "e": "The oldest is the only survivor. Built to last."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 16,
+  "difficulty": "Genius",
+  "theme": "Weird firsts",
+  "questions": [
+   {
+    "q": "What were the first animals deliberately sent into space, in 1947?",
+    "a": "Fruit flies",
+    "w": [
+     "Dogs",
+     "Monkeys",
+     "Mice"
+    ],
+    "e": "Launched on a captured V-2 rocket. They came back alive."
+   },
+   {
+    "q": "The first item sold on eBay was a?",
+    "a": "Broken laser pointer",
+    "w": [
+     "Signed baseball",
+     "Used toaster",
+     "Beanie Baby"
+    ],
+    "e": "The buyer said he collected broken laser pointers. The internet was born."
+   },
+   {
+    "q": "The first ever YouTube video, \u2018Me at the zoo\u2019, is about?",
+    "a": "Elephants",
+    "w": [
+     "Penguins",
+     "Lions",
+     "Monkeys"
+    ],
+    "e": "Their trunks are \u2018really, really long\u2019. Riveting stuff."
+   },
+   {
+    "q": "The world\u2019s first webcam watched a?",
+    "a": "Coffee pot",
+    "w": [
+     "Fish tank",
+     "Front door",
+     "Car park"
+    ],
+    "e": "At Cambridge University, so people knew whether there was coffee. Priorities."
+   },
+   {
+    "q": "The first ever text message, sent in 1992, said?",
+    "a": "Merry Christmas",
+    "w": [
+     "Hello",
+     "Testing",
+     "Can you hear me?"
+    ],
+    "e": "Sent from a computer to a phone. Still more festive than most texts."
+   },
+   {
+    "q": "The first product scanned with a barcode, in 1974, was?",
+    "a": "A pack of chewing gum",
+    "w": [
+     "A can of soup",
+     "A box of cereal",
+     "A loaf of bread"
+    ],
+    "e": "Wrigley\u2019s Juicy Fruit. Now in a museum."
+   },
+   {
+    "q": "Who led the first expedition to reach the South Pole?",
+    "a": "Roald Amundsen",
+    "w": [
+     "Robert Falcon Scott",
+     "Ernest Shackleton",
+     "Douglas Mawson"
+    ],
+    "e": "Amundsen beat Scott by about five weeks in 1911, using sled dogs."
+   },
+   {
+    "q": "Which was the first self-governing country to give women the vote?",
+    "a": "New Zealand",
+    "w": [
+     "Australia",
+     "Finland",
+     "United Kingdom"
+    ],
+    "e": "1893. Australia followed nationally in 1902."
+   },
+   {
+    "q": "Who made the first ascent of Everest without bottled oxygen, in 1978, with Peter Habeler?",
+    "a": "Reinhold Messner",
+    "w": [
+     "Edmund Hillary",
+     "George Mallory",
+     "Tenzing Norgay"
+    ],
+    "e": "Hillary and Tenzing had oxygen tanks in 1953."
+   },
+   {
+    "q": "Where was the first ever Test cricket match played, in 1877?",
+    "a": "MCG",
+    "w": [
+     "Lord\u2019s",
+     "The Oval",
+     "SCG"
+    ],
+    "e": "Australia beat England. The rivalry never recovered."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 17,
+  "difficulty": "Easy",
+  "theme": "Australia is weird",
+  "questions": [
+   {
+    "q": "Why was Canberra built as the capital?",
+    "a": "Sydney and Melbourne couldn\u2019t agree",
+    "w": [
+     "Gold was found there",
+     "It was the geographic centre",
+     "The Queen picked it"
+    ],
+    "e": "A compromise city, built between the two bickering siblings."
+   },
+   {
+    "q": "The Dingo Fence is roughly how long?",
+    "a": "5600 km",
+    "w": [
+     "560 km",
+     "56 km",
+     "56,000 km"
+    ],
+    "e": "One of the longest fences on Earth. The dingoes are unimpressed."
+   },
+   {
+    "q": "Australia has the world\u2019s largest wild population of?",
+    "a": "Camels",
+    "w": [
+     "Horses",
+     "Water buffalo",
+     "Goats"
+    ],
+    "e": "Brought in for outback transport, then released. Now there are a lot."
+   },
+   {
+    "q": "The Big Banana is in which town?",
+    "a": "Coffs Harbour",
+    "w": [
+     "Cairns",
+     "Bundaberg",
+     "Tweed Heads"
+    ],
+    "e": "Built in 1964 and kicked off Australia\u2019s obsession with Big Things."
+   },
+   {
+    "q": "Some of the cleanest air in the world is measured at?",
+    "a": "Cape Grim, Tasmania",
+    "w": [
+     "Uluru",
+     "Mount Kosciuszko",
+     "Cape York"
+    ],
+    "e": "Wind straight off the Southern Ocean. Tasmanians are smug about it."
+   },
+   {
+    "q": "Vegemite is made mainly from?",
+    "a": "Leftover brewer\u2019s yeast",
+    "w": [
+     "Molasses",
+     "Burnt toast",
+     "Soy paste"
+    ],
+    "e": "A by-product of beer. Spread thinly, or regret it."
+   },
+   {
+    "q": "The Hills Hoist is a famous Aussie?",
+    "a": "Rotary clothesline",
+    "w": [
+     "Lawnmower",
+     "Pool cleaner",
+     "Barbecue"
+    ],
+    "e": "Every backyard had one. Kids used it as a ride."
+   },
+   {
+    "q": "Roughly how many tiles cover the Sydney Opera House roof?",
+    "a": "Over a million",
+    "w": [
+     "About 10,000",
+     "About 100,000",
+     "About 50 million"
+    ],
+    "e": "1,056,006 of them, made in Sweden. Self-cleaning, too."
+   },
+   {
+    "q": "The Trans-Australian Railway across the Nullarbor has the world\u2019s longest straight stretch, about?",
+    "a": "478 km",
+    "w": [
+     "48 km",
+     "150 km",
+     "1000 km"
+    ],
+    "e": "Not a single curve. Drivers stay awake somehow."
+   },
+   {
+    "q": "Uluru is in which state or territory?",
+    "a": "Northern Territory",
+    "w": [
+     "South Australia",
+     "Western Australia",
+     "Queensland"
+    ],
+    "e": "Smack in the Red Centre. It\u2019s sandstone that glows red at sunset."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 18,
+  "difficulty": "Easy",
+  "theme": "TV trivia",
+  "questions": [
+   {
+    "q": "What is the name of the street in Neighbours?",
+    "a": "Ramsay Street",
+    "w": [
+     "Summer Bay",
+     "Wisteria Lane",
+     "Coronation Street"
+    ],
+    "e": "Summer Bay is Home and Away. Rival soaps, please don\u2019t mix them."
+   },
+   {
+    "q": "Which Simpsons catchphrase made it into the Oxford English Dictionary?",
+    "a": "D\u2019oh!",
+    "w": [
+     "Ay, caramba!",
+     "Eat my shorts!",
+     "Excellent!"
+    ],
+    "e": "Added in 2001. Homer, lexicographer."
+   },
+   {
+    "q": "What breed of dog is Bluey?",
+    "a": "Blue Heeler",
+    "w": [
+     "Kelpie",
+     "Border Collie",
+     "Dingo"
+    ],
+    "e": "An Australian Cattle Dog. Her dad Bandit is one too."
+   },
+   {
+    "q": "Bluey is made in which city?",
+    "a": "Brisbane",
+    "w": [
+     "Sydney",
+     "Melbourne",
+     "Adelaide"
+    ],
+    "e": "By Ludo Studio. The suburbs on screen look very Brisbane."
+   },
+   {
+    "q": "What is the coffee shop in Friends called?",
+    "a": "Central Perk",
+    "w": [
+     "MacLaren\u2019s",
+     "Monk\u2019s Caf\u00e9",
+     "The Bronze"
+    ],
+    "e": "MacLaren\u2019s is a bar from How I Met Your Mother. Different couch."
+   },
+   {
+    "q": "What is Doctor Who\u2019s time machine called?",
+    "a": "TARDIS",
+    "w": [
+     "DeLorean",
+     "Enterprise",
+     "Millennium Falcon"
+    ],
+    "e": "Time And Relative Dimension In Space. Bigger on the inside."
+   },
+   {
+    "q": "The first official TV advert, in the US in 1941, was for?",
+    "a": "A watch",
+    "w": [
+     "Cigarettes",
+     "Soap",
+     "A car"
+    ],
+    "e": "A Bulova clock face for about ten seconds. Advertising has grown louder since."
+   },
+   {
+    "q": "In Breaking Bad, what alias does Walter White use?",
+    "a": "Heisenberg",
+    "w": [
+     "Einstein",
+     "Newton",
+     "Oppenheimer"
+    ],
+    "e": "Named after a physicist. Chemistry teachers, take note."
+   },
+   {
+    "q": "Home and Away is set in which fictional town?",
+    "a": "Summer Bay",
+    "w": [
+     "Erinsborough",
+     "Wentworth",
+     "Bay City"
+    ],
+    "e": "Erinsborough is Neighbours. Two soaps, one confused nation."
+   },
+   {
+    "q": "David Brent is the boss in which show?",
+    "a": "The Office (UK)",
+    "w": [
+     "Extras",
+     "Peep Show",
+     "The IT Crowd"
+    ],
+    "e": "Before America got Michael Scott, Slough had David Brent."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 19,
+  "difficulty": "Medium",
+  "theme": "Remembrance Day",
+  "questions": [
+   {
+    "q": "The armistice ending fighting in World War I took effect at 11am on 11 November of which year?",
+    "a": "1918",
+    "w": [
+     "1914",
+     "1917",
+     "1919"
+    ],
+    "e": "The eleventh hour of the eleventh day of the eleventh month."
+   },
+   {
+    "q": "The red poppy as a symbol of remembrance was inspired by which poem?",
+    "a": "In Flanders Fields",
+    "w": [
+     "Dulce et Decorum Est",
+     "For the Fallen",
+     "The Soldier"
+    ],
+    "e": "Written by Canadian John McCrae in 1915."
+   },
+   {
+    "q": "Why did poppies bloom across the Western Front battlefields?",
+    "a": "They thrive in disturbed soil",
+    "w": [
+     "Soldiers planted them",
+     "They were dropped by aircraft",
+     "They grow best in cold weather"
+    ],
+    "e": "Churned earth let dormant seeds sprout. A striking sight among the devastation."
+   },
+   {
+    "q": "The Ode recited at Remembrance services comes from which poem?",
+    "a": "For the Fallen",
+    "w": [
+     "In Flanders Fields",
+     "Anthem for Doomed Youth",
+     "High Flight"
+    ],
+    "e": "By Laurence Binyon: \u2018They shall grow not old, as we that are left grow old.\u2019"
+   },
+   {
+    "q": "In Australia, how long is the silence observed at 11am on Remembrance Day?",
+    "a": "One minute",
+    "w": [
+     "Two minutes",
+     "Thirty seconds",
+     "Five minutes"
+    ],
+    "e": "Britain traditionally observes two minutes; Australia observes one."
+   },
+   {
+    "q": "Australia\u2019s Tomb of the Unknown Australian Soldier is at the?",
+    "a": "Australian War Memorial, Canberra",
+    "w": [
+     "Shrine of Remembrance, Melbourne",
+     "Anzac Memorial, Sydney",
+     "Kings Park, Perth"
+    ],
+    "e": "An unknown soldier from the Western Front was laid there in 1993."
+   },
+   {
+    "q": "The Gallipoli peninsula is in which modern country?",
+    "a": "T\u00fcrkiye",
+    "w": [
+     "Greece",
+     "Bulgaria",
+     "Cyprus"
+    ],
+    "e": "Allied troops landed there on 25 April 1915, now marked as Anzac Day."
+   },
+   {
+    "q": "The Last Post is traditionally played on which instrument?",
+    "a": "Bugle",
+    "w": [
+     "Bagpipes",
+     "Drum",
+     "Flute"
+    ],
+    "e": "Once a camp signal marking the end of the day, it now farewells the fallen."
+   },
+   {
+    "q": "Remembrance Day was originally known as?",
+    "a": "Armistice Day",
+    "w": [
+     "Victory Day",
+     "Anzac Day",
+     "Veterans Day"
+    ],
+    "e": "Renamed after World War II to honour those who died in all wars."
+   },
+   {
+    "q": "Australia\u2019s \u2018worst 24 hours\u2019 in war refers to which 1916 battle?",
+    "a": "Fromelles",
+    "w": [
+     "Pozi\u00e8res",
+     "Passchendaele",
+     "Gallipoli"
+    ],
+    "e": "Around 5500 Australian casualties in one night in July 1916."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 20,
+  "difficulty": "Medium",
+  "theme": "Bookish oddities",
+  "questions": [
+   {
+    "q": "In Fahrenheit 451, what does the title refer to?",
+    "a": "The temperature at which book paper burns",
+    "w": [
+     "A street address",
+     "A year in the future",
+     "A prison number"
+    ],
+    "e": "In a world where firemen start fires. Cheery stuff."
+   },
+   {
+    "q": "Who wrote The Magic Pudding, about a cranky pudding that never runs out?",
+    "a": "Norman Lindsay",
+    "w": [
+     "May Gibbs",
+     "Banjo Paterson",
+     "Mem Fox"
+    ],
+    "e": "May Gibbs did the gumnut babies. Lindsay did the grumpy dessert."
+   },
+   {
+    "q": "Dr Seuss wrote Green Eggs and Ham to win a bet that he couldn\u2019t use only?",
+    "a": "50 different words",
+    "w": [
+     "10 different words",
+     "One vowel",
+     "Words of one syllable"
+    ],
+    "e": "He won. The publisher reportedly never paid up."
+   },
+   {
+    "q": "The made-up language spoken by Roald Dahl\u2019s BFG is called?",
+    "a": "Gobblefunk",
+    "w": [
+     "Snozzspeak",
+     "Whizzpop",
+     "Dahlish"
+    ],
+    "e": "Snozzcumbers and whizzpopping are words from it. Delumptious."
+   },
+   {
+    "q": "In the original Sherlock Holmes stories, how often does he say \u2018Elementary, my dear Watson\u2019?",
+    "a": "Never",
+    "w": [
+     "Once",
+     "In every story",
+     "Only in the last book"
+    ],
+    "e": "The exact phrase came from later adaptations. Myth, my dear reader."
+   },
+   {
+    "q": "The 1939 novel Gadsby is famous for never using the letter?",
+    "a": "E",
+    "w": [
+     "A",
+     "S",
+     "T"
+    ],
+    "e": "Over 50,000 words without English\u2019s most common letter. Exhausting."
+   },
+   {
+    "q": "Which novel begins \u2018Call me Ishmael\u2019?",
+    "a": "Moby-Dick",
+    "w": [
+     "Treasure Island",
+     "Robinson Crusoe",
+     "The Old Man and the Sea"
+    ],
+    "e": "It flopped on release. Then became a classic about a very large grudge."
+   },
+   {
+    "q": "The first print run of the first Harry Potter hardback was about how many copies?",
+    "a": "500",
+    "w": [
+     "5000",
+     "50,000",
+     "500,000"
+    ],
+    "e": "Many went to libraries. A first edition now sells for a fortune."
+   },
+   {
+    "q": "Winnie-the-Pooh was named after a real bear called Winnipeg that lived in?",
+    "a": "London Zoo",
+    "w": [
+     "A Canadian circus",
+     "Sydney\u2019s Taronga Zoo",
+     "A Scottish castle"
+    ],
+    "e": "A Canadian black bear. Christopher Robin Milne adored her."
+   },
+   {
+    "q": "Who wrote My Brilliant Career, and has Australia\u2019s top literary prize named after her?",
+    "a": "Miles Franklin",
+    "w": [
+     "Ruth Park",
+     "Henry Handel Richardson",
+     "Thea Astley"
+    ],
+    "e": "She published under a name that hid that she was a woman."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "number": 21,
+  "difficulty": "Hard",
+  "theme": "Friday the 13th",
+  "questions": [
+   {
+    "q": "Fear of the number 13 is called?",
+    "a": "Triskaidekaphobia",
+    "w": [
+     "Hexakosioihexekontahexaphobia",
+     "Tetraphobia",
+     "Arithmophobia"
+    ],
+    "e": "Fear of Friday the 13th has its own word too: paraskevidekatriaphobia. Happy Friday."
+   },
+   {
+    "q": "Breaking a mirror supposedly brings how many years of bad luck?",
+    "a": "Seven",
+    "w": [
+     "Three",
+     "Ten",
+     "Thirteen"
+    ],
+    "e": "Seven years, plus the cost of a new mirror."
+   },
+   {
+    "q": "In Japan and China, which number is unlucky because it sounds like \u2018death\u2019?",
+    "a": "Four",
+    "w": [
+     "Thirteen",
+     "Six",
+     "Eight"
+    ],
+    "e": "Some buildings skip the 4th floor entirely. Eight is the lucky one."
+   },
+   {
+    "q": "In Italy, which number is traditionally unlucky?",
+    "a": "17",
+    "w": [
+     "13",
+     "4",
+     "9"
+    ],
+    "e": "XVII rearranges to VIXI, Latin for \u2018I have lived\u2019. Ominous."
+   },
+   {
+    "q": "In Spain and much of Latin America, the unlucky day is?",
+    "a": "Tuesday the 13th",
+    "w": [
+     "Friday the 13th",
+     "Monday the 13th",
+     "Wednesday the 13th"
+    ],
+    "e": "Today would be fine there. Tuesday is when they hide."
+   },
+   {
+    "q": "Which number is famously lucky in Chinese culture because it sounds like \u2018prosper\u2019?",
+    "a": "Eight",
+    "w": [
+     "Four",
+     "Seven",
+     "Three"
+    ],
+    "e": "The Beijing Olympics opened at 8pm on 8/8/08. No coincidence."
+   },
+   {
+    "q": "In Britain and Australia, \u2018knock on wood\u2019 is usually said as?",
+    "a": "Touch wood",
+    "w": [
+     "Tap the timber",
+     "Bless the wood",
+     "Wood for luck"
+    ],
+    "e": "Same idea. Less knocking, more touching."
+   },
+   {
+    "q": "Spilt salt is traditionally thrown over which shoulder?",
+    "a": "Left",
+    "w": [
+     "Right",
+     "Both",
+     "Neither"
+    ],
+    "e": "Supposedly into the eye of the devil lurking there. Rude, but effective."
+   },
+   {
+    "q": "Which Shakespeare play\u2019s name is considered unlucky to say inside a theatre?",
+    "a": "Macbeth",
+    "w": [
+     "Hamlet",
+     "King Lear",
+     "Othello"
+    ],
+    "e": "Actors call it \u2018the Scottish play\u2019. Say it, and you may be sent outside to spin."
+   },
+   {
+    "q": "What do actors traditionally say instead of \u2018good luck\u2019?",
+    "a": "Break a leg",
+    "w": [
+     "Knock \u2019em dead",
+     "Fingers crossed",
+     "Bon voyage"
+    ],
+    "e": "Wishing good luck is considered, ironically, bad luck."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 22,
+  "difficulty": "Hard",
+  "theme": "Elements behaving badly",
+  "questions": [
+   {
+    "q": "Which metal melts in your hand?",
+    "a": "Gallium",
+    "w": [
+     "Mercury",
+     "Tin",
+     "Sodium"
+    ],
+    "e": "Melts at about 30\u00b0C. Mercury is already liquid, so it\u2019s cheating."
+   },
+   {
+    "q": "Tungsten\u2019s symbol is W because of its other name?",
+    "a": "Wolfram",
+    "w": [
+     "Wolfite",
+     "Westium",
+     "Wiremetal"
+    ],
+    "e": "Chemistry loves a hidden backstory."
+   },
+   {
+    "q": "Marie Curie named polonium after?",
+    "a": "Her homeland, Poland",
+    "w": [
+     "A Greek god",
+     "Her husband",
+     "A star"
+    ],
+    "e": "A political statement at a time when Poland wasn\u2019t on the map."
+   },
+   {
+    "q": "Can a diamond burn?",
+    "a": "Yes, it\u2019s carbon",
+    "w": [
+     "No, never",
+     "Only underwater",
+     "Only fake ones"
+    ],
+    "e": "Hot enough with oxygen and it goes up in smoke. Romantic."
+   },
+   {
+    "q": "Helium was discovered first where?",
+    "a": "In the Sun",
+    "w": [
+     "In a gas well",
+     "In a balloon",
+     "In seawater"
+    ],
+    "e": "Spotted in sunlight in 1868, named after the Greek sun god Helios."
+   },
+   {
+    "q": "The Swedish village of Ytterby gave its name to how many elements?",
+    "a": "Four",
+    "w": [
+     "One",
+     "Two",
+     "Seven"
+    ],
+    "e": "Yttrium, ytterbium, terbium and erbium. One quarry, lots of naming."
+   },
+   {
+    "q": "Which everyday fruit is slightly radioactive?",
+    "a": "Banana",
+    "w": [
+     "Apple",
+     "Orange",
+     "Grape"
+    ],
+    "e": "Thanks to potassium-40. Completely harmless, unless you\u2019re a Geiger counter."
+   },
+   {
+    "q": "Most \u2018neon\u2019 signs that aren\u2019t red-orange actually use?",
+    "a": "Other gases or coatings",
+    "w": [
+     "Coloured neon",
+     "LED only",
+     "Liquid neon"
+    ],
+    "e": "True neon glows red-orange. Everything else is a pretender."
+   },
+   {
+    "q": "Gold leaf can be beaten so thin that light shining through it looks?",
+    "a": "Green",
+    "w": [
+     "Red",
+     "Gold",
+     "Black"
+    ],
+    "e": "Thin gold lets greenish light through. Surprising, and very shiny."
+   },
+   {
+    "q": "Phosphorus was first discovered in 1669 by an alchemist boiling down?",
+    "a": "Urine",
+    "w": [
+     "Seawater",
+     "Bones",
+     "Wine"
+    ],
+    "e": "He was hunting for gold. He found a glowing substance instead."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 23,
+  "difficulty": "Genius",
+  "theme": "Strange islands",
+  "questions": [
+   {
+    "q": "What is the world\u2019s second-largest island?",
+    "a": "New Guinea",
+    "w": [
+     "Borneo",
+     "Madagascar",
+     "Baffin Island"
+    ],
+    "e": "After Greenland. Borneo is third."
+   },
+   {
+    "q": "Easter Island\u2019s famous moai statues are often more than heads. They have?",
+    "a": "Buried bodies",
+    "w": [
+     "Hollow insides",
+     "Hidden faces on the back",
+     "Feet in the sea"
+    ],
+    "e": "Many have whole torsos underground. They\u2019re not just heads, they\u2019re buried statues."
+   },
+   {
+    "q": "Which island is famous for umbrella-shaped dragon\u2019s blood trees?",
+    "a": "Socotra",
+    "w": [
+     "Madagascar",
+     "Gal\u00e1pagos",
+     "Tasmania"
+    ],
+    "e": "Off Yemen. Looks like another planet."
+   },
+   {
+    "q": "Every year, tens of millions of red crabs migrate across which Australian island?",
+    "a": "Christmas Island",
+    "w": [
+     "Kangaroo Island",
+     "Norfolk Island",
+     "Lord Howe Island"
+    ],
+    "e": "Roads close for crab traffic. Locals sweep them along."
+   },
+   {
+    "q": "Napoleon died in exile on which island?",
+    "a": "Saint Helena",
+    "w": [
+     "Elba",
+     "Corsica",
+     "Malta"
+    ],
+    "e": "He escaped Elba. Saint Helena was far enough to stop that nonsense."
+   },
+   {
+    "q": "Canada and Denmark had a decades-long \u2018Whisky War\u2019 over Hans Island, ended in 2022 by?",
+    "a": "Splitting it in half",
+    "w": [
+     "A drinking contest",
+     "Giving it to Greenland",
+     "Selling it"
+    ],
+    "e": "They used to leave bottles of whisky and schnapps for each other. Very polite war."
+   },
+   {
+    "q": "Japan\u2019s \u014ckunoshima is famous for being overrun with?",
+    "a": "Rabbits",
+    "w": [
+     "Cats",
+     "Deer",
+     "Monkeys"
+    ],
+    "e": "Cat Island and deer-filled Nara exist too. This one\u2019s the bunny one."
+   },
+   {
+    "q": "Brazil\u2019s Ilha da Queimada Grande is closed to the public because it\u2019s full of?",
+    "a": "Venomous snakes",
+    "w": [
+     "Unexploded bombs",
+     "Quicksand",
+     "Wild boars"
+    ],
+    "e": "Snake Island. Visitors need special permission and nerves."
+   },
+   {
+    "q": "Ball\u2019s Pyramid, near Lord Howe Island, is famous for the rediscovery of?",
+    "a": "A giant stick insect",
+    "w": [
+     "A flightless parrot",
+     "A blind fish",
+     "A tree kangaroo"
+    ],
+    "e": "Thought extinct for decades, found clinging to one bush in 2001."
+   },
+   {
+    "q": "Since 2023, Fraser Island\u2019s official name is?",
+    "a": "K\u2019gari",
+    "w": [
+     "Minjerribah",
+     "Mulgumpin",
+     "Wadjemup"
+    ],
+    "e": "Minjerribah is North Stradbroke, Mulgumpin is Moreton, Wadjemup is Rottnest."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 24,
+  "difficulty": "Easy",
+  "theme": "Sport\u2019s strangest bits",
+  "questions": [
+   {
+    "q": "The marathon is 42.195 km because of?",
+    "a": "The 1908 London Olympics route",
+    "w": [
+     "A Greek soldier\u2019s exact run",
+     "A metric rounding error",
+     "The length of a Roman road"
+    ],
+    "e": "The course was set to finish in front of the royal box. The extra bit stuck."
+   },
+   {
+    "q": "In tennis, a score of zero is called?",
+    "a": "Love",
+    "w": [
+     "Nil",
+     "Duck",
+     "Blank"
+    ],
+    "e": "Nobody is quite sure why. A duck is cricket. Wrong heartbreak."
+   },
+   {
+    "q": "What did astronaut Alan Shepard do on the Moon in 1971?",
+    "a": "Hit golf balls",
+    "w": [
+     "Played cricket",
+     "Kicked a football",
+     "Threw a boomerang"
+    ],
+    "e": "One-handed, in a spacesuit. Still the most out-of-bounds shot ever."
+   },
+   {
+    "q": "Which of these was once an Olympic sport?",
+    "a": "Tug of war",
+    "w": [
+     "Pillow fighting",
+     "Chess boxing",
+     "Hopscotch"
+    ],
+    "e": "Contested from 1900 to 1920. Britain did quite well."
+   },
+   {
+    "q": "Olympic gold medals are mostly made of?",
+    "a": "Silver",
+    "w": [
+     "Gold",
+     "Bronze",
+     "Copper"
+    ],
+    "e": "Just a gold coating. The last solid gold ones were in 1912."
+   },
+   {
+    "q": "Wimbledon uses what to scare off pigeons?",
+    "a": "A hawk",
+    "w": [
+     "A robot owl",
+     "Loud music",
+     "A trained dog"
+    ],
+    "e": "His name is Rufus. He has his own fans."
+   },
+   {
+    "q": "When the World Cup trophy was stolen in 1966, who found it?",
+    "a": "A dog named Pickles",
+    "w": [
+     "A taxi driver",
+     "A schoolboy",
+     "Scotland Yard"
+    ],
+    "e": "Wrapped in newspaper under a hedge. Pickles was a national hero."
+   },
+   {
+    "q": "Basketball was first played with?",
+    "a": "Peach baskets",
+    "w": [
+     "Fishing nets",
+     "Buckets",
+     "Hoops of rope"
+    ],
+    "e": "Someone had to climb up to get the ball out after every basket."
+   },
+   {
+    "q": "The longest tennis match ever, at Wimbledon in 2010, lasted about?",
+    "a": "11 hours over 3 days",
+    "w": [
+     "5 hours",
+     "8 hours in one day",
+     "2 days straight"
+    ],
+    "e": "The final set ended 70\u201368. The scoreboard broke."
+   },
+   {
+    "q": "Before ice hockey games, pucks are?",
+    "a": "Frozen",
+    "w": [
+     "Heated",
+     "Oiled",
+     "Weighed in public"
+    ],
+    "e": "Frozen pucks bounce less. Very cool."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 25,
+  "difficulty": "Easy",
+  "theme": "Colours that lie",
+  "questions": [
+   {
+    "q": "What colour is a giraffe\u2019s tongue?",
+    "a": "Dark blue-black",
+    "w": [
+     "Pink",
+     "Red",
+     "Green"
+    ],
+    "e": "Possibly to stop sunburn while eating all day. Very practical."
+   },
+   {
+    "q": "What really makes a bull charge at a matador\u2019s cape?",
+    "a": "The movement",
+    "w": [
+     "The red colour",
+     "The noise",
+     "The smell"
+    ],
+    "e": "Bulls can\u2019t see red well at all. The waving is what annoys them."
+   },
+   {
+    "q": "Despite the name, what colour are aircraft \u2018black box\u2019 recorders?",
+    "a": "Orange",
+    "w": [
+     "Black",
+     "Yellow",
+     "Silver"
+    ],
+    "e": "Bright orange, so they\u2019re easier to find. \u2018Black box\u2019 is just branding."
+   },
+   {
+    "q": "Why are flamingos pink?",
+    "a": "Their diet",
+    "w": [
+     "They\u2019re born pink",
+     "Sunburn",
+     "To attract mates"
+    ],
+    "e": "Pigments in algae and shrimp. Chicks start out grey."
+   },
+   {
+    "q": "What are the three primary colours of light?",
+    "a": "Red, green and blue",
+    "w": [
+     "Red, yellow and blue",
+     "Cyan, magenta and yellow",
+     "Red, orange and blue"
+    ],
+    "e": "Red, yellow and blue is paint. Your TV uses RGB."
+   },
+   {
+    "q": "What colour is a polar bear\u2019s skin?",
+    "a": "Black",
+    "w": [
+     "White",
+     "Pink",
+     "Grey"
+    ],
+    "e": "The fur is see-through and the skin is black. The white is an illusion."
+   },
+   {
+    "q": "A sapphire and a ruby are?",
+    "a": "The same mineral",
+    "w": [
+     "Both glass",
+     "Made of carbon",
+     "Unrelated stones"
+    ],
+    "e": "Both corundum. Red ones are rubies; the rest are sapphires."
+   },
+   {
+    "q": "Which colour can\u2019t be found in the rainbow, so your brain invents it?",
+    "a": "Magenta",
+    "w": [
+     "Indigo",
+     "Violet",
+     "Orange"
+    ],
+    "e": "No single wavelength of light is magenta. Your brain mixes it up."
+   },
+   {
+    "q": "Mixing blue and yellow paint makes?",
+    "a": "Green",
+    "w": [
+     "Purple",
+     "Orange",
+     "Brown"
+    ],
+    "e": "Purple is red and blue. Brown is everything at once."
+   },
+   {
+    "q": "Cerulean is a shade of?",
+    "a": "Blue",
+    "w": [
+     "Green",
+     "Red",
+     "Yellow"
+    ],
+    "e": "A sky blue. The Devil Wears Prada gave it a whole speech."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 26,
+  "difficulty": "Medium",
+  "theme": "Dinosaurs: the weird bits",
+  "questions": [
+   {
+    "q": "Tyrannosaurus rex lived during which period?",
+    "a": "Cretaceous",
+    "w": [
+     "Jurassic",
+     "Triassic",
+     "Permian"
+    ],
+    "e": "Despite the film title, T. rex wasn\u2019t Jurassic. Stegosaurus was."
+   },
+   {
+    "q": "Who lived closer in time to T. rex?",
+    "a": "Humans",
+    "w": [
+     "Stegosaurus",
+     "They lived at the same time",
+     "Neither"
+    ],
+    "e": "Stegosaurus died out about 80 million years before T. rex appeared."
+   },
+   {
+    "q": "Which animals are living dinosaurs?",
+    "a": "Birds",
+    "w": [
+     "Crocodiles",
+     "Lizards",
+     "Sharks"
+    ],
+    "e": "Crocodiles are cousins. Your backyard magpie is the real deal."
+   },
+   {
+    "q": "Which of these was NOT a dinosaur?",
+    "a": "Pterodactyl",
+    "w": [
+     "Velociraptor",
+     "Stegosaurus",
+     "Triceratops"
+    ],
+    "e": "Pterosaurs were flying reptiles, not dinosaurs. Pedants rejoice."
+   },
+   {
+    "q": "A real Velociraptor was roughly the size of a?",
+    "a": "Turkey",
+    "w": [
+     "Horse",
+     "Human",
+     "Elephant"
+    ],
+    "e": "Feathered and turkey-sized. Jurassic Park exaggerated a bit."
+   },
+   {
+    "q": "What was the largest marsupial that ever lived?",
+    "a": "Diprotodon",
+    "w": [
+     "Thylacoleo",
+     "Thylacine",
+     "Megalania"
+    ],
+    "e": "A wombat the size of a car. Megalania was a giant lizard."
+   },
+   {
+    "q": "Winton, a major dinosaur fossil site, is in which state?",
+    "a": "Queensland",
+    "w": [
+     "Western Australia",
+     "South Australia",
+     "New South Wales"
+    ],
+    "e": "Home to the Australian Age of Dinosaurs museum."
+   },
+   {
+    "q": "The word \u2018dinosaur\u2019 means?",
+    "a": "Terrible lizard",
+    "w": [
+     "Giant beast",
+     "Ancient bird",
+     "Thunder foot"
+    ],
+    "e": "Coined in 1842. Not lizards, and not all terrible."
+   },
+   {
+    "q": "The spikes on a Stegosaurus tail are nicknamed the?",
+    "a": "Thagomizer",
+    "w": [
+     "Spikerod",
+     "Tailclub",
+     "Quadspine"
+    ],
+    "e": "From a Far Side cartoon. Palaeontologists loved it and kept it."
+   },
+   {
+    "q": "Woolly mammoths survived until about 4000 years ago on which island?",
+    "a": "Wrangel Island",
+    "w": [
+     "Greenland",
+     "Iceland",
+     "Tasmania"
+    ],
+    "e": "The Great Pyramid was already standing by then."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 27,
+  "difficulty": "Medium",
+  "theme": "Weird laws",
+  "questions": [
+   {
+    "q": "Selling chewing gum has been banned since 1992 in?",
+    "a": "Singapore",
+    "w": [
+     "Japan",
+     "Switzerland",
+     "Dubai"
+    ],
+    "e": "Mostly to stop gum gumming up the trains."
+   },
+   {
+    "q": "In Switzerland, it\u2019s illegal to keep just one of which pet?",
+    "a": "Guinea pig",
+    "w": [
+     "Hamster",
+     "Tortoise",
+     "Snake"
+    ],
+    "e": "They\u2019re social, so they need a friend. You can even rent one."
+   },
+   {
+    "q": "In Germany, it\u2019s an offence to run out of fuel on the?",
+    "a": "Autobahn",
+    "w": [
+     "Bridges",
+     "City streets",
+     "Ferry ramps"
+    ],
+    "e": "Stopping unnecessarily on the Autobahn is banned, and that includes running dry."
+   },
+   {
+    "q": "Since 2009, which footwear is banned at Greece\u2019s ancient sites?",
+    "a": "High heels",
+    "w": [
+     "Thongs",
+     "Boots",
+     "Bare feet"
+    ],
+    "e": "They damage the ancient stone. Sensible shoes for the Acropolis."
+   },
+   {
+    "q": "Since 2019, you can be fined for sitting on which Rome landmark?",
+    "a": "Spanish Steps",
+    "w": [
+     "Trevi Fountain",
+     "Colosseum",
+     "Pantheon"
+    ],
+    "e": "Steps are for walking, apparently. Gelato elsewhere."
+   },
+   {
+    "q": "In Denmark, new babies\u2019 names must generally come from?",
+    "a": "An approved list",
+    "w": [
+     "A family tree",
+     "A national lottery",
+     "Royal suggestions"
+    ],
+    "e": "Anything off the list needs official approval. Creative spelling is not welcome."
+   },
+   {
+    "q": "Under the UK Salmon Act 1986, it\u2019s an offence to handle salmon?",
+    "a": "In suspicious circumstances",
+    "w": [
+     "On a Sunday",
+     "Without gloves",
+     "Near a river"
+    ],
+    "e": "It\u2019s about poached fish. Still the funniest phrase in British law."
+   },
+   {
+    "q": "Which \u2018weird British law\u2019 is actually a myth?",
+    "a": "Dying in Parliament is illegal",
+    "w": [
+     "Handling salmon suspiciously",
+     "Flying a kite in London streets",
+     "Being drunk in a pub"
+    ],
+    "e": "The others are real. Dying anywhere is not a crime, thankfully."
+   },
+   {
+    "q": "Which country banned strong beer until 1989?",
+    "a": "Iceland",
+    "w": [
+     "Norway",
+     "Finland",
+     "Sweden"
+    ],
+    "e": "Beer Day on 1 March celebrates the end of it. Sk\u00e1l."
+   },
+   {
+    "q": "An 1839 law makes it an offence to fly a kite to the annoyance of others in?",
+    "a": "London streets",
+    "w": [
+     "Edinburgh parks",
+     "Dublin beaches",
+     "Cardiff squares"
+    ],
+    "e": "The Metropolitan Police Act. Annoying kite flyers, you\u2019ve been warned."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 28,
+  "difficulty": "Hard",
+  "theme": "Landmark secrets",
+  "questions": [
+   {
+    "q": "In summer heat, the Eiffel Tower?",
+    "a": "Grows up to about 15 cm taller",
+    "w": [
+     "Shrinks by a metre",
+     "Leans to one side",
+     "Changes colour"
+    ],
+    "e": "The iron expands. It was also meant to be temporary."
+   },
+   {
+    "q": "The Sydney Opera House\u2019s designer, J\u00f8rn Utzon, saw the finished building?",
+    "a": "Never",
+    "w": [
+     "On opening night",
+     "Every year",
+     "Only from a plane"
+    ],
+    "e": "He quit mid-build in 1966 and never returned to see it."
+   },
+   {
+    "q": "The Leaning Tower of Pisa was built as a?",
+    "a": "Bell tower",
+    "w": [
+     "Lighthouse",
+     "Watchtower",
+     "Clock tower"
+    ],
+    "e": "Started leaning while still being built. Soft soil, firm commitment."
+   },
+   {
+    "q": "What is the official colour of San Francisco\u2019s Golden Gate Bridge?",
+    "a": "International Orange",
+    "w": [
+     "Golden Red",
+     "Rust Red",
+     "Sunset Orange"
+    ],
+    "e": "Not golden at all. The name comes from the strait it spans."
+   },
+   {
+    "q": "When it was new, the Statue of Liberty was what colour?",
+    "a": "Shiny copper-brown",
+    "w": [
+     "Green",
+     "White",
+     "Gold"
+    ],
+    "e": "Copper turns green over time. She went full patina within a few decades."
+   },
+   {
+    "q": "Strictly speaking, \u2018Big Ben\u2019 is the name of the?",
+    "a": "Bell",
+    "w": [
+     "Tower",
+     "Clock face",
+     "Whole Parliament"
+    ],
+    "e": "The tower is the Elizabeth Tower. Ben just does the bonging."
+   },
+   {
+    "q": "Behind Mount Rushmore\u2019s heads there is a?",
+    "a": "Hidden chamber",
+    "w": [
+     "Secret railway",
+     "Waterfall",
+     "Bunker for presidents"
+    ],
+    "e": "The Hall of Records. It holds panels explaining the monument."
+   },
+   {
+    "q": "What is the Sydney Harbour Bridge\u2019s nickname?",
+    "a": "The Coathanger",
+    "w": [
+     "The Big Arch",
+     "The Iron Lady",
+     "The Steel Rainbow"
+    ],
+    "e": "The Iron Lady is the Eiffel Tower. Sydney went for something from the wardrobe."
+   },
+   {
+    "q": "Barcelona\u2019s Sagrada Fam\u00edlia has been under construction since?",
+    "a": "1882",
+    "w": [
+     "1982",
+     "1932",
+     "1782"
+    ],
+    "e": "Gaud\u00ed reportedly said his client was not in a hurry."
+   },
+   {
+    "q": "Can you see the Great Wall of China from space with the naked eye?",
+    "a": "No, it\u2019s a myth",
+    "w": [
+     "Yes, easily",
+     "Only at night",
+     "Only from the Moon"
+    ],
+    "e": "Too narrow and the same colour as the land. Astronauts have checked."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 29,
+  "difficulty": "Hard",
+  "theme": "Oceans are weird",
+  "questions": [
+   {
+    "q": "In a group of clownfish, what happens when the dominant female dies?",
+    "a": "The dominant male becomes female",
+    "w": [
+     "The group splits up",
+     "A new female arrives",
+     "The youngest takes over"
+    ],
+    "e": "Finding Nemo quietly skipped that part."
+   },
+   {
+    "q": "Which sea creature has blue blood?",
+    "a": "Octopus",
+    "w": [
+     "Shark",
+     "Dolphin",
+     "Sea turtle"
+    ],
+    "e": "Copper-based blood. Royal, technically."
+   },
+   {
+    "q": "What is the largest fish in the world?",
+    "a": "Whale shark",
+    "w": [
+     "Basking shark",
+     "Great white shark",
+     "Manta ray"
+    ],
+    "e": "Up to about 18 metres, and it eats plankton. Gentle giant."
+   },
+   {
+    "q": "Which seahorse parent gives birth?",
+    "a": "The male",
+    "w": [
+     "The female",
+     "Both",
+     "Neither, they lay eggs on coral"
+    ],
+    "e": "The female deposits eggs in his pouch. He does the rest."
+   },
+   {
+    "q": "Which jellyfish is nicknamed \u2018immortal\u2019?",
+    "a": "Turritopsis dohrnii",
+    "w": [
+     "Box jellyfish",
+     "Moon jellyfish",
+     "Lion\u2019s mane jellyfish"
+    ],
+    "e": "It can revert to its youthful polyp stage. Envious, aren\u2019t we?"
+   },
+   {
+    "q": "Which of the major oceans is the saltiest?",
+    "a": "Atlantic",
+    "w": [
+     "Pacific",
+     "Indian",
+     "Arctic"
+    ],
+    "e": "The Arctic is the least salty. Melting ice dilutes it."
+   },
+   {
+    "q": "A narwhal\u2019s tusk is actually a?",
+    "a": "Tooth",
+    "w": [
+     "Horn",
+     "Bone",
+     "Nose"
+    ],
+    "e": "An overgrown tooth that can reach three metres. Ultimate snaggletooth."
+   },
+   {
+    "q": "Which mammal holds the record for the deepest dive?",
+    "a": "Cuvier\u2019s beaked whale",
+    "w": [
+     "Sperm whale",
+     "Elephant seal",
+     "Blue whale"
+    ],
+    "e": "Nearly 3 km down. The sperm whale is impressive, but second."
+   },
+   {
+    "q": "Which sea has no coastline?",
+    "a": "Sargasso Sea",
+    "w": [
+     "Dead Sea",
+     "Coral Sea",
+     "Caspian Sea"
+    ],
+    "e": "Bounded by ocean currents, not land. The Dead Sea is really a lake."
+   },
+   {
+    "q": "Roughly what share of Earth\u2019s surface is ocean?",
+    "a": "71%",
+    "w": [
+     "50%",
+     "60%",
+     "85%"
+    ],
+    "e": "Planet Earth is mostly Planet Water."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 30,
+  "difficulty": "Genius",
+  "theme": "Composers behaving oddly",
+  "questions": [
+   {
+    "q": "After Haydn was buried, what happened to his skull?",
+    "a": "It was stolen, and reunited in 1954",
+    "w": [
+     "It was put on display in his piano",
+     "It was sent to Mozart\u2019s family",
+     "Nothing, he rests peacefully"
+    ],
+    "e": "Phrenology fans nicked it. Head and body were apart for about 145 years."
+   },
+   {
+    "q": "Mozart kept a pet starling that could sing part of?",
+    "a": "One of his piano concertos",
+    "w": [
+     "Twinkle Twinkle Little Star",
+     "The Austrian anthem",
+     "A drinking song"
+    ],
+    "e": "It sang it with its own wrong notes. Mozart wrote them down anyway."
+   },
+   {
+    "q": "Tchaikovsky\u2019s 1812 Overture famously calls for?",
+    "a": "Cannon fire",
+    "w": [
+     "A choir of children",
+     "Church bells only",
+     "A thunderstorm machine"
+    ],
+    "e": "Bells too. Orchestra managers dread it."
+   },
+   {
+    "q": "Erik Satie\u2019s piano piece \u2018Vexations\u2019 is meant to be repeated how many times?",
+    "a": "840",
+    "w": [
+     "12",
+     "100",
+     "1000"
+    ],
+    "e": "A full performance can take well over 12 hours. Bring snacks."
+   },
+   {
+    "q": "Ravel\u2019s Bol\u00e9ro is built on one long?",
+    "a": "Crescendo",
+    "w": [
+     "Fugue",
+     "Key change",
+     "Solo"
+    ],
+    "e": "Same tune for about 15 minutes, just louder and louder."
+   },
+   {
+    "q": "Stravinsky\u2019s The Rite of Spring caused near-riots at its 1913 premiere in?",
+    "a": "Paris",
+    "w": [
+     "Vienna",
+     "St Petersburg",
+     "London"
+    ],
+    "e": "Audiences booed, fought and threw things. Tough crowd."
+   },
+   {
+    "q": "Haydn\u2019s \u2018Surprise\u2019 Symphony got its name from?",
+    "a": "A sudden loud chord",
+    "w": [
+     "A secret cameo by Mozart",
+     "An exploding candle",
+     "A missing final page"
+    ],
+    "e": "A quiet tune, then BANG. Waking dozing audiences since 1792."
+   },
+   {
+    "q": "Who wrote the \u2018Unfinished\u2019 Symphony?",
+    "a": "Franz Schubert",
+    "w": [
+     "Gustav Mahler",
+     "Anton Bruckner",
+     "Wolfgang Amadeus Mozart"
+    ],
+    "e": "Two movements, then nothing. Relatable."
+   },
+   {
+    "q": "Rossini reportedly wrote The Barber of Seville in about?",
+    "a": "Three weeks",
+    "w": [
+     "Three years",
+     "Three days",
+     "Three months"
+    ],
+    "e": "And it\u2019s still one of the most performed operas. Show-off."
+   },
+   {
+    "q": "\u2018A cappella\u2019 literally means?",
+    "a": "In the manner of the chapel",
+    "w": [
+     "From the heart",
+     "Without voices",
+     "All together"
+    ],
+    "e": "Singing with no instruments. Pitch Perfect didn\u2019t invent it."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 31,
+  "difficulty": "Easy",
+  "theme": "Getting around, weirdly",
+  "questions": [
+   {
+    "q": "The world\u2019s shortest scheduled flight, between two Orkney islands, takes about?",
+    "a": "90 seconds",
+    "w": [
+     "10 minutes",
+     "30 seconds",
+     "25 minutes"
+    ],
+    "e": "Westray to Papa Westray. With a tailwind it\u2019s under a minute. Don\u2019t bother with the movie."
+   },
+   {
+    "q": "In 1967 Sweden switched from driving on the left to the right?",
+    "a": "Overnight",
+    "w": [
+     "Over ten years",
+     "One county at a time",
+     "Only on Sundays"
+    ],
+    "e": "\u2018Dagen H\u2019. Everyone stopped, swapped sides, and carried on."
+   },
+   {
+    "q": "The first speeding ticket, in England in 1896, was for going about?",
+    "a": "13 km/h",
+    "w": [
+     "50 km/h",
+     "100 km/h",
+     "30 km/h"
+    ],
+    "e": "About 8 mph in a 2 mph zone. Reckless."
+   },
+   {
+    "q": "The Ghan train is named after?",
+    "a": "Afghan cameleers",
+    "w": [
+     "A famous racehorse",
+     "A desert plant",
+     "Its first driver"
+    ],
+    "e": "They carried supplies through the outback before the railway."
+   },
+   {
+    "q": "Melbourne has the world\u2019s largest urban network of?",
+    "a": "Trams",
+    "w": [
+     "Monorails",
+     "Ferries",
+     "Cable cars"
+    ],
+    "e": "Hook turns included at no extra charge."
+   },
+   {
+    "q": "In Venice, a \u2018vaporetto\u2019 is a?",
+    "a": "Water bus",
+    "w": [
+     "Gondola",
+     "Ice-cream cart",
+     "Canal bridge"
+    ],
+    "e": "Gondolas are for tourists and proposals. Locals catch the vaporetto."
+   },
+   {
+    "q": "Concorde could fly from London to New York in about?",
+    "a": "3.5 hours",
+    "w": [
+     "1 hour",
+     "6 hours",
+     "8 hours"
+    ],
+    "e": "Faster than the Earth spins, so you\u2019d land \u2018before\u2019 you left, local time."
+   },
+   {
+    "q": "In Australia, what does a red or green \u2018P\u2019 plate show?",
+    "a": "Provisional driver",
+    "w": [
+     "Parking permit",
+     "Professional driver",
+     "Passenger vehicle"
+    ],
+    "e": "Red first, then green. Then freedom."
+   },
+   {
+    "q": "The Indian Pacific train runs between Sydney and?",
+    "a": "Perth",
+    "w": [
+     "Darwin",
+     "Melbourne",
+     "Cairns"
+    ],
+    "e": "Coast to coast, two oceans, one very long straight."
+   },
+   {
+    "q": "What is Japan\u2019s high-speed bullet train called?",
+    "a": "Shinkansen",
+    "w": [
+     "TGV",
+     "Maglev",
+     "ICE"
+    ],
+    "e": "Delays are measured in seconds. The TGV is French."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 32,
+  "difficulty": "Easy",
+  "theme": "Weird weather",
+  "questions": [
+   {
+    "q": "In the Atlantic, a tropical cyclone is called a?",
+    "a": "Hurricane",
+    "w": [
+     "Typhoon",
+     "Monsoon",
+     "Tornado"
+    ],
+    "e": "Typhoon is the north-west Pacific name. Same storm, different postcode."
+   },
+   {
+    "q": "To see a rainbow, where should the sun be?",
+    "a": "Behind you",
+    "w": [
+     "In front of you",
+     "Directly overhead",
+     "Below the horizon"
+    ],
+    "e": "Facing the sun gets you nothing but squinting."
+   },
+   {
+    "q": "A lightning bolt can be roughly how hot compared to the Sun\u2019s surface?",
+    "a": "About five times hotter",
+    "w": [
+     "About half as hot",
+     "About the same",
+     "About ten times cooler"
+    ],
+    "e": "Around 30,000\u00b0C. The Sun\u2019s surface is a mere 5500\u00b0C."
+   },
+   {
+    "q": "The \u2018Southerly Buster\u2019 is a sudden wind change famous in?",
+    "a": "Sydney",
+    "w": [
+     "Perth",
+     "Darwin",
+     "Hobart"
+    ],
+    "e": "It can drop the temperature by 10 degrees in minutes. Pack a jumper."
+   },
+   {
+    "q": "Fog is basically?",
+    "a": "A cloud at ground level",
+    "w": [
+     "Smoke from the sea",
+     "Steam from the ground",
+     "Frozen rain"
+    ],
+    "e": "So walking through fog is walking through a cloud. Fancy."
+   },
+   {
+    "q": "Counting from lightning flash to thunder, about how many seconds equal one kilometre?",
+    "a": "Three",
+    "w": [
+     "One",
+     "Five",
+     "Ten"
+    ],
+    "e": "Five seconds is roughly a mile. Different units, same rumble."
+   },
+   {
+    "q": "When it \u2018rains fish\u2019, the likely cause is?",
+    "a": "Storm updraughts sucking them up",
+    "w": [
+     "Birds dropping them",
+     "Fish jumping in storms",
+     "Fishermen\u2019s pranks"
+    ],
+    "e": "It\u2019s been reported in outback Australia too. Bring an umbrella and a pan."
+   },
+   {
+    "q": "The hottest air temperature officially recorded on Earth, 56.7\u00b0C, was in?",
+    "a": "Death Valley, USA",
+    "w": [
+     "The Sahara",
+     "Oodnadatta, SA",
+     "Kuwait"
+    ],
+    "e": "Back in 1913. Oodnadatta holds Australia\u2019s record at 50.7\u00b0C."
+   },
+   {
+    "q": "Thunder and lightning during a snowstorm is called?",
+    "a": "Thundersnow",
+    "w": [
+     "Snowstrike",
+     "Blizzbolt",
+     "Frostflash"
+    ],
+    "e": "Rare and very dramatic. Weather nerds lose their minds."
+   },
+   {
+    "q": "The \u2018Morning Glory\u2019, a giant tube-shaped cloud, is famous near which Australian town?",
+    "a": "Burketown, Queensland",
+    "w": [
+     "Broome, WA",
+     "Alice Springs, NT",
+     "Ballarat, Victoria"
+    ],
+    "e": "Glider pilots surf it. Seriously."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 33,
+  "difficulty": "Medium",
+  "theme": "Video game secrets",
+  "questions": [
+   {
+    "q": "Before he was Mario, Nintendo\u2019s hero was called?",
+    "a": "Jumpman",
+    "w": [
+     "Mr Video",
+     "Plumberman",
+     "Hammer Joe"
+    ],
+    "e": "In Donkey Kong, 1981. Then named after a landlord, the story goes."
+   },
+   {
+    "q": "In his first game, Mario\u2019s job was?",
+    "a": "Carpenter",
+    "w": [
+     "Plumber",
+     "Builder\u2019s apprentice",
+     "Chef"
+    ],
+    "e": "The plumbing came later. Career pivot."
+   },
+   {
+    "q": "Pac-Man\u2019s creator said the shape was inspired by?",
+    "a": "A pizza with a slice missing",
+    "w": [
+     "A clock face",
+     "A coin",
+     "An open mouth emoji"
+    ],
+    "e": "Hungry design, hungry character."
+   },
+   {
+    "q": "Tetris was created in which country?",
+    "a": "Soviet Union",
+    "w": [
+     "Japan",
+     "USA",
+     "Finland"
+    ],
+    "e": "By Alexey Pajitnov in 1984. Falling blocks, from behind the Iron Curtain."
+   },
+   {
+    "q": "What is the best-selling video game of all time?",
+    "a": "Minecraft",
+    "w": [
+     "Tetris",
+     "Grand Theft Auto V",
+     "Wii Sports"
+    ],
+    "e": "Over 300 million copies of block-placing joy."
+   },
+   {
+    "q": "In The Legend of Zelda, what is the hero\u2019s name?",
+    "a": "Link",
+    "w": [
+     "Zelda",
+     "Ganon",
+     "Epona"
+    ],
+    "e": "Zelda is the princess. Calling him Zelda is gaming\u2019s oldest mistake."
+   },
+   {
+    "q": "\u2018Up, up, down, down, left, right, left, right, B, A\u2019 is the famous?",
+    "a": "Konami Code",
+    "w": [
+     "Nintendo Key",
+     "Sega Secret",
+     "Atari Unlock"
+    ],
+    "e": "Originally to make a game easier. Now hidden in websites everywhere."
+   },
+   {
+    "q": "Pikachu\u2019s name comes from Japanese sounds for?",
+    "a": "Sparkle and squeak",
+    "w": [
+     "Yellow and fast",
+     "Thunder and cat",
+     "Cute and small"
+    ],
+    "e": "\u2018Pika\u2019 is a sparkle, \u2018chu\u2019 a mouse squeak. Adorable onomatopoeia."
+   },
+   {
+    "q": "Fruit Ninja was made by a studio from which Australian city?",
+    "a": "Brisbane",
+    "w": [
+     "Melbourne",
+     "Sydney",
+     "Adelaide"
+    ],
+    "e": "Halfbrick Studios. Brisbane\u2019s contribution to slicing things."
+   },
+   {
+    "q": "Which 1972 game was the first big arcade hit?",
+    "a": "Pong",
+    "w": [
+     "Space Invaders",
+     "Asteroids",
+     "Pac-Man"
+    ],
+    "e": "Two paddles, one dot. The first machine broke because it was stuffed with coins."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 34,
+  "difficulty": "Medium",
+  "theme": "Money\u2019s weird side",
+  "questions": [
+   {
+    "q": "Australia was the first country to issue banknotes made of?",
+    "a": "Polymer",
+    "w": [
+     "Hemp",
+     "Linen",
+     "Aluminium"
+    ],
+    "e": "1988. Survives the washing machine, unlike your receipts."
+   },
+   {
+    "q": "In 2010, a man paid 10,000 bitcoin for?",
+    "a": "Two pizzas",
+    "w": [
+     "A used car",
+     "A laptop",
+     "A beer"
+    ],
+    "e": "Worth hundreds of millions of dollars or more today. Expensive dinner."
+   },
+   {
+    "q": "On the island of Yap, traditional money includes?",
+    "a": "Giant stone discs",
+    "w": [
+     "Shark teeth",
+     "Dried fish",
+     "Feathers"
+    ],
+    "e": "Some are taller than a person. Ownership changes without moving them."
+   },
+   {
+    "q": "In 2019, people noticed Australia\u2019s new $50 note misspelt which word, on millions of notes?",
+    "a": "Responsibility",
+    "w": [
+     "Parliament",
+     "Australia",
+     "Government"
+    ],
+    "e": "Printed tiny in a speech excerpt. Missing an \u2018i\u2019. Ironic."
+   },
+   {
+    "q": "Why do some coins have ridged edges?",
+    "a": "To stop people shaving off metal",
+    "w": [
+     "For grip",
+     "For blind users only",
+     "To make them roll"
+    ],
+    "e": "When coins held real silver, clippers trimmed the edges. Ridges exposed them."
+   },
+   {
+    "q": "The word \u2018dollar\u2019 comes from a silver coin minted in?",
+    "a": "Bohemia",
+    "w": [
+     "Spain",
+     "England",
+     "The Netherlands"
+    ],
+    "e": "The \u2018thaler\u2019, from Joachimsthal. Now in the Czech Republic."
+   },
+   {
+    "q": "In which year did Australia switch to decimal currency?",
+    "a": "1966",
+    "w": [
+     "1910",
+     "1956",
+     "1975"
+    ],
+    "e": "Goodbye pounds, hello dollars, on 14 February. Romantic."
+   },
+   {
+    "q": "How many pence were in a pre-decimal British shilling?",
+    "a": "12",
+    "w": [
+     "10",
+     "20",
+     "240"
+    ],
+    "e": "240 was pence in a pound. Old money was a maths test."
+   },
+   {
+    "q": "Which is the most expensive property on the UK Monopoly board?",
+    "a": "Mayfair",
+    "w": [
+     "Park Lane",
+     "Bond Street",
+     "Oxford Street"
+    ],
+    "e": "Park Lane is second. Mayfair is where the arguments start."
+   },
+   {
+    "q": "What pseudonym does Bitcoin\u2019s mysterious creator use?",
+    "a": "Satoshi Nakamoto",
+    "w": [
+     "Hal Finney",
+     "Vitalik Buterin",
+     "Nick Szabo"
+    ],
+    "e": "Vitalik made Ethereum. Satoshi\u2019s true identity remains unknown."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 35,
+  "difficulty": "Hard",
+  "theme": "Cricket quirks",
+  "questions": [
+   {
+    "q": "What was Don Bradman\u2019s Test batting average?",
+    "a": "99.94",
+    "w": [
+     "100.00",
+     "95.14",
+     "89.78"
+    ],
+    "e": "A duck in his final innings cost him 100. Cricket is cruel."
+   },
+   {
+    "q": "A \u2018golden duck\u2019 means being out?",
+    "a": "First ball, for zero",
+    "w": [
+     "For exactly 50",
+     "Hit wicket",
+     "In the final over"
+    ],
+    "e": "A regular duck is just zero. Golden is zero, immediately."
+   },
+   {
+    "q": "The tiny Ashes urn is said to contain the ashes of a burnt?",
+    "a": "Bail",
+    "w": [
+     "Ball",
+     "Bat",
+     "Scorecard"
+    ],
+    "e": "Probably a bail, burnt in Melbourne in 1883. The legend is half the fun."
+   },
+   {
+    "q": "Which ground is known as the \u2018Home of Cricket\u2019?",
+    "a": "Lord\u2019s",
+    "w": [
+     "The Oval",
+     "MCG",
+     "Edgbaston"
+    ],
+    "e": "In London. The MCG has the crowds, Lord\u2019s has the title."
+   },
+   {
+    "q": "Shane Warne\u2019s 1993 \u2018Ball of the Century\u2019 bowled which England batter?",
+    "a": "Mike Gatting",
+    "w": [
+     "Graham Gooch",
+     "Robin Smith",
+     "Alec Stewart"
+    ],
+    "e": "His first ball in an Ashes Test. Gatting\u2019s face said it all."
+   },
+   {
+    "q": "What is the highest individual score in Test cricket?",
+    "a": "400 not out",
+    "w": [
+     "380",
+     "375",
+     "365 not out"
+    ],
+    "e": "Brian Lara, 2004. Hayden\u2019s 380 held the record for about six months."
+   },
+   {
+    "q": "Who bowled the infamous underarm delivery against New Zealand in 1981?",
+    "a": "Trevor Chappell",
+    "w": [
+     "Greg Chappell",
+     "Dennis Lillee",
+     "Ian Chappell"
+    ],
+    "e": "Greg, the captain, told his brother to do it. New Zealand has not forgotten."
+   },
+   {
+    "q": "The longest Test match, in 1939, was abandoned after 10 days because?",
+    "a": "England had to catch their ship home",
+    "w": [
+     "It snowed",
+     "The ball was lost",
+     "Both teams collapsed"
+    ],
+    "e": "Played in Durban and declared a draw. The boat waited for no one."
+   },
+   {
+    "q": "Australian Test cricket once used overs of how many balls?",
+    "a": "Eight",
+    "w": [
+     "Six",
+     "Five",
+     "Ten"
+    ],
+    "e": "Until the late 1970s. More balls, same tea break."
+   },
+   {
+    "q": "In cricket, DRS stands for?",
+    "a": "Decision Review System",
+    "w": [
+     "Delivery Replay System",
+     "Direct Run Signal",
+     "Dismissal Ruling Standard"
+    ],
+    "e": "The umpire\u2019s best friend and worst enemy."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 36,
+  "difficulty": "Hard",
+  "theme": "Numbers are weird",
+  "questions": [
+   {
+    "q": "What is zero factorial (0!)?",
+    "a": "1",
+    "w": [
+     "0",
+     "Undefined",
+     "Infinity"
+    ],
+    "e": "There\u2019s exactly one way to arrange nothing. Mathematicians find this hilarious."
+   },
+   {
+    "q": "A googol is 1 followed by how many zeros?",
+    "a": "100",
+    "w": [
+     "10",
+     "1000",
+     "1 million"
+    ],
+    "e": "Google\u2019s name came from a misspelling of it. Spelling is hard."
+   },
+   {
+    "q": "How many is a baker\u2019s dozen?",
+    "a": "13",
+    "w": [
+     "12",
+     "14",
+     "15"
+    ],
+    "e": "Bakers threw in an extra to avoid being fined for short loaves."
+   },
+   {
+    "q": "A well-shuffled deck of 52 cards is almost certainly?",
+    "a": "In an order never seen before",
+    "w": [
+     "In order of suits",
+     "Repeated every few years",
+     "Impossible to shuffle twice the same"
+    ],
+    "e": "There are more possible orders than atoms on Earth. Your shuffle is unique."
+   },
+   {
+    "q": "How many people need to be in a room for a better than even chance two share a birthday?",
+    "a": "23",
+    "w": [
+     "183",
+     "50",
+     "365"
+    ],
+    "e": "The birthday paradox. Your intuition is wrong, and that\u2019s fine."
+   },
+   {
+    "q": "What is 111,111,111 \u00d7 111,111,111?",
+    "a": "12,345,678,987,654,321",
+    "w": [
+     "11,111,111,111,111,111",
+     "123,456,789",
+     "99,999,999,999"
+    ],
+    "e": "Counts up to 9 and back down. Maths showing off."
+   },
+   {
+    "q": "Which number, written in English, has its letters in alphabetical order?",
+    "a": "Forty",
+    "w": [
+     "Fifty",
+     "Eighty",
+     "Sixty"
+    ],
+    "e": "F-O-R-T-Y. The only one. Check if you don\u2019t believe it."
+   },
+   {
+    "q": "Which number did the Roman numeral system have no symbol for?",
+    "a": "Zero",
+    "w": [
+     "One thousand",
+     "Five",
+     "Fifty"
+    ],
+    "e": "Romans just didn\u2019t write nothing. Reasonable."
+   },
+   {
+    "q": "What is pi rounded to three decimal places?",
+    "a": "3.142",
+    "w": [
+     "3.141",
+     "3.146",
+     "3.124"
+    ],
+    "e": "3.14159... rounds up to 3.142. Truncating is cheating."
+   },
+   {
+    "q": "What is the smallest prime number?",
+    "a": "2",
+    "w": [
+     "1",
+     "3",
+     "0"
+    ],
+    "e": "1 doesn\u2019t count as prime. 2 is also the only even one. Special."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 37,
+  "difficulty": "Genius",
+  "theme": "Science is weird",
+  "questions": [
+   {
+    "q": "The claim that hot water can sometimes freeze faster than cold is called the?",
+    "a": "Mpemba effect",
+    "w": [
+     "Doppler effect",
+     "Leidenfrost effect",
+     "Butterfly effect"
+    ],
+    "e": "Named after a Tanzanian schoolboy who noticed it with ice cream. Scientists still argue about it."
+   },
+   {
+    "q": "Old church windows thicker at the bottom are proof that glass?",
+    "a": "Was made unevenly, nothing more",
+    "w": [
+     "Flows like a slow liquid",
+     "Absorbs rain",
+     "Melts in sunlight"
+    ],
+    "e": "Glass is an amorphous solid. The \u2018slow liquid\u2019 story is a myth."
+   },
+   {
+    "q": "Thanks to gravity, clocks tick very slightly faster?",
+    "a": "On top of a mountain",
+    "w": [
+     "At sea level",
+     "Underground",
+     "Underwater"
+    ],
+    "e": "Less gravity, faster time. Einstein, being weird again."
+   },
+   {
+    "q": "Sound can\u2019t travel through?",
+    "a": "A vacuum",
+    "w": [
+     "Water",
+     "Steel",
+     "Wood"
+    ],
+    "e": "In space, no one can hear you. That\u2019s physics, not just a tagline."
+   },
+   {
+    "q": "Which colour of visible light has the longest wavelength?",
+    "a": "Red",
+    "w": [
+     "Violet",
+     "Blue",
+     "Green"
+    ],
+    "e": "Violet has the shortest. Red is the laid-back one."
+   },
+   {
+    "q": "What animal is in Schr\u00f6dinger\u2019s famous thought experiment?",
+    "a": "A cat",
+    "w": [
+     "A dog",
+     "A mouse",
+     "A rabbit"
+    ],
+    "e": "Both alive and dead until you look. No actual cats were harmed."
+   },
+   {
+    "q": "The half-life of carbon-14 is about?",
+    "a": "5730 years",
+    "w": [
+     "573 years",
+     "57,300 years",
+     "1000 years"
+    ],
+    "e": "Which is why carbon dating gives up after about 50,000 years."
+   },
+   {
+    "q": "In which year did CERN announce the discovery of the Higgs boson?",
+    "a": "2012",
+    "w": [
+     "2008",
+     "1998",
+     "2016"
+    ],
+    "e": "2008 was when the Large Hadron Collider switched on. The particle took longer."
+   },
+   {
+    "q": "Absolute zero is about how many degrees Celsius?",
+    "a": "\u2212273.15",
+    "w": [
+     "\u2212100",
+     "\u2212459.67",
+     "\u2212373.15"
+    ],
+    "e": "\u2212459.67 is Fahrenheit. Same zero, worse units."
+   },
+   {
+    "q": "Light from the Sun is white, but the sky is blue because?",
+    "a": "Air scatters blue light most",
+    "w": [
+     "It reflects the ocean",
+     "Space is blue",
+     "Ozone is blue"
+    ],
+    "e": "The ocean reflects the sky, not the other way round."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 38,
+  "difficulty": "Easy",
+  "theme": "Scotland is weird",
+  "questions": [
+   {
+    "q": "Today is St Andrew\u2019s Day. Andrew is patron saint of?",
+    "a": "Scotland",
+    "w": [
+     "Ireland",
+     "Wales",
+     "England"
+    ],
+    "e": "Ireland has Patrick, Wales David, England George. Andrew gets the haggis."
+   },
+   {
+    "q": "Edinburgh Castle sits on top of?",
+    "a": "An extinct volcano",
+    "w": [
+     "A Roman fort",
+     "A glacier",
+     "A coal mine"
+    ],
+    "e": "Castle Rock. The city is built on old lava. Very metal."
+   },
+   {
+    "q": "What is Scotland\u2019s national animal?",
+    "a": "Unicorn",
+    "w": [
+     "Lion",
+     "Stag",
+     "Golden eagle"
+    ],
+    "e": "Yes, really. A mythical beast for a mythically stubborn nation."
+   },
+   {
+    "q": "Glasgow\u2019s statue of the Duke of Wellington is famous for usually wearing?",
+    "a": "A traffic cone",
+    "w": [
+     "A kilt",
+     "A football scarf",
+     "Sunglasses"
+    ],
+    "e": "Locals keep putting it back. It\u2019s practically official now."
+   },
+   {
+    "q": "What is the Loch Ness Monster\u2019s nickname?",
+    "a": "Nessie",
+    "w": [
+     "Lochy",
+     "Nelly",
+     "Monny"
+    ],
+    "e": "Sightings remain unconfirmed. Tourism remains excellent."
+   },
+   {
+    "q": "Haggis is traditionally cooked in a sheep\u2019s?",
+    "a": "Stomach",
+    "w": [
+     "Skin",
+     "Bladder",
+     "Wool"
+    ],
+    "e": "Delicious if you don\u2019t think about it."
+   },
+   {
+    "q": "What is Scotland\u2019s national flower?",
+    "a": "Thistle",
+    "w": [
+     "Heather",
+     "Rose",
+     "Shamrock"
+    ],
+    "e": "The rose is England\u2019s, the shamrock Ireland\u2019s. The thistle is suitably prickly."
+   },
+   {
+    "q": "What is the highest mountain in the UK?",
+    "a": "Ben Nevis",
+    "w": [
+     "Snowdon",
+     "Scafell Pike",
+     "Ben Macdui"
+    ],
+    "e": "1345 metres. Snowdon is only Wales\u2019s highest."
+   },
+   {
+    "q": "Who wrote the words of \u2018Auld Lang Syne\u2019?",
+    "a": "Robert Burns",
+    "w": [
+     "Walter Scott",
+     "Lord Byron",
+     "Robert Louis Stevenson"
+    ],
+    "e": "Sung every New Year by people who know only the first verse."
+   },
+   {
+    "q": "Which Scottish town is known as the \u2018Home of Golf\u2019?",
+    "a": "St Andrews",
+    "w": [
+     "Carnoustie",
+     "Gleneagles",
+     "Muirfield"
+    ],
+    "e": "Golf\u2019s been played there since the 1400s. Fittingly, it shares today\u2019s saint\u2019s name."
+   }
+  ]
+ }
+]
