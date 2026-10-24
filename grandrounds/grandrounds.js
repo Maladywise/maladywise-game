@@ -5,6 +5,8 @@
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", PASS = 10;
   var root = document.getElementById("gdr");
+  // Normie mode: "week that was" quiz from normie.json, stats under "n-" keys.
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
   if (!document.querySelector("link[data-gdr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "grandrounds.css?v=" + BUILD; l.setAttribute("data-gdr", ""); document.head.appendChild(l);
   }
@@ -32,9 +34,9 @@
   var week = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd)) ? sunday(qd) : REAL;
   function isLive() { return week === REAL; }
   // dist buckets: 18-20, 14-17, 10-13, 5-9, 0-4 (player one / solo)
-  var SKEY = "gdr-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
+  var SKEY = PFX + "gdr-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var NKEY = "gdr-names", KEY, st, Z = null, all = [];
-  function loadWeek() { KEY = "gdr-week-" + week; st = load(KEY, null); }
+  function loadWeek() { KEY = PFX + "gdr-week-" + week; st = load(KEY, null); }
   loadWeek();
 
   var SASS = {
@@ -97,7 +99,7 @@
   function renderResult() {
     var r = $("result"), nm = names(), duo = st.mode === "duo", a = tally(0), b = tally(1), total = Z.questions.length;
     var row = function (p) { var s = st.marks.map(function (m) { return m[p] ? "\ud83d\udfe9" : "\u2b1c"; }); return s.slice(0, 10).join("") + "\n" + s.slice(10).join(""); };
-    var head = "Grand Rounds #" + Z.number + (isLive() ? "" : " (archive)");
+    var head = "Grand Rounds" + (NORMIE ? " (Normie)" : "") + " #" + Z.number + (isLive() ? "" : " (archive)");
     var share = duo
       ? head + "\n" + nm[0] + " " + a + "/" + total + " \u00b7 " + nm[1] + " " + b + "/" + total + "\nmaladywise.com"
       : head + "\n" + row(0) + "\n" + a + "/" + total + "\nmaladywise.com";
@@ -170,14 +172,14 @@
   // ---------- load ----------
   function show(w) {
     week = w; loadWeek(); replay = false; Z = all.filter(function (x) { return x.week === w; })[0] || null;
-    if (!Z) { $("eyebrow").textContent = "Grand Rounds"; $("card").innerHTML = '<p class="note">This week\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; return; }
+    if (!Z) { $("eyebrow").textContent = "Grand Rounds"; $("card").hidden = false; if ($("result")) $("result").hidden = true; $("card").innerHTML = NORMIE && window.MW_noNormie ? MW_noNormie("quiz this week") : '<p class="note">This week\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; renderArchive(); return; }
     $("eyebrow").textContent = (isLive() ? "Grand Rounds" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 " + nice(Z.week);
     render(); renderArchive();
   }
   function renderArchive() {
     var past = all.filter(function (x) { return x.week < REAL; }).reverse();
     var rows = past.map(function (x) {
-      var s = load("gdr-week-" + x.week, null), mark = s && s.done ? " \u2713" : "";
+      var s = load(PFX + "gdr-week-" + x.week, null), mark = s && s.done ? " \u2713" : "";
       return '<button type="button" class="arow' + (x.week === week ? " on" : "") + '" data-w="' + x.week + '"><span>#' + x.number + mark + "</span><span>" + nice(x.week) + "</span></button>";
     }).join("");
     var back = isLive() ? "" : '<button type="button" class="btn" id="gdr-back">Back to this week</button>';
@@ -187,5 +189,5 @@
   }
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
   tick();
-  fetch(BASE + "quizzes.json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(function (list) { all = list; show(week); });
+  fetch(BASE + FILE + "?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(function (list) { all = list; show(week); });
 })();

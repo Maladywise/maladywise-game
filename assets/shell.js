@@ -5,6 +5,55 @@
   function get(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
+  // ---------- mode: "medical" (default) or "normie" (no-medicine versions of some games) ----------
+  // localStorage "mw-mode"; ?mode=normie / ?mode=medical sets and remembers it (deep links, Zebra Mail).
+  var MODE = (function () {
+    var m = null; try { m = new URLSearchParams(location.search).get("mode"); } catch (e) {}
+    if (m === "normie" || m === "medical") set("mw-mode", m);
+    var v = get("mw-mode", "medical"); return v === "normie" ? "normie" : "medical";
+  })();
+  var NORMIE = MODE === "normie";
+  root.setAttribute("data-mode", MODE);
+  window.MW_mode = function () { return MODE; };
+  function mk(k) { return NORMIE ? "n-" + k : k; } // mode-aware site-wide keys (streak, badges, trophies)
+  window.MW_key = mk;
+  // In Normie mode, games with a "normie" block swap their text and use "n-" prefixed store keys,
+  // so every reader below (readStats, watchDone, extras, celebrate...) is mode-aware for free.
+  if (NORMIE) (window.MW_GAMES || []).forEach(function (g) {
+    if (!g.normie) return;
+    var n = typeof g.normie === "object" ? g.normie : {};
+    ["kind", "tagline", "quip", "helpQuip", "help", "weeklyLine"].forEach(function (f) { if (n[f] !== undefined) g[f] = n[f]; else if (f === "helpQuip") delete g.helpQuip; });
+    if (g.store) { var st0 = {}; Object.keys(g.store).forEach(function (k) { st0[k] = g.store[k]; }); st0.stats = "n-" + g.store.stats; st0.day = "n-" + g.store.day; g.medStore = g.store; g.store = st0; }
+    g.nmode = true;
+  });
+  if (NORMIE && window.MW_ABOUT_N && window.MW_ABOUT) Object.keys(MW_ABOUT_N).forEach(function (k) { MW_ABOUT[k] = MW_ABOUT_N[k]; });
+  function setMode(m) {
+    set("mw-mode", m);
+    track("mode/" + m, "Switched to " + m + " mode");
+    var u = new URL(location.href); u.searchParams.delete("mode"); u.searchParams.delete("date");
+    setTimeout(function () { location.replace(u.pathname + (u.search || "") + u.hash); }, 60);
+  }
+  window.MW_setMode = setMode;
+  // Mascot image: in Normie mode, games with normieMascot use the "day off" outfit (falls back to the normal one if missing).
+  function mascImg(id, alt, w, cls) {
+    var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0], std = "/assets/mascots/" + id + ".svg";
+    var src = NORMIE && g && g.normieMascot ? "/assets/mascots/normie/" + id + ".svg" : std;
+    return '<img' + (cls ? ' class="' + cls + '"' : "") + ' src="' + src + '"' + (src !== std ? " onerror=\"this.onerror=null;this.src='" + std + "'\"" : "") + ' alt="' + (alt || "") + '" width="' + w + '" height="' + w + '">';
+  }
+  // Norm, the Normie host mascot. Hidden if the SVG is missing.
+  function normImg(cls, w) { return '<img class="' + cls + '" src="/assets/mascots/normie/norm.svg" alt="" width="' + w + '" height="' + w + '" onerror="this.remove()">'; }
+  function modeSwitch() {
+    return '<div class="mw-mode" role="group" aria-label="Puzzle mode">' +
+      [["medical", "\ud83e\ude7a", "Medical"], ["normie", "\ud83d\ude42", "Normie"]].map(function (o) {
+        var norm = o[0] === "normie" && NORMIE;
+        return '<button type="button" data-mode="' + o[0] + '" aria-pressed="' + (MODE === o[0]) + '" aria-label="' + o[2] + ' mode" title="' + o[2] + ' mode">' + (norm ? '<img class="mm-norm" src="/assets/mascots/normie/norm.svg" alt="" width="20" height="20" onerror="var s=this.nextSibling;if(s)s.hidden=false;this.remove()"><span aria-hidden="true" hidden>' : '<span aria-hidden="true">') + o[1] + '</span><span class="mm-t" aria-hidden="true">' + o[2] + "</span></button>";
+      }).join("") + "</div>";
+  }
+  // Friendly fallback for a game script when the Normie file for today is missing.
+  window.MW_noNormie = function (what) {
+    return '<div class="mw-nonorm"><p><b>No Normie ' + (what || "puzzle") + ' today.</b> Try Medical instead.</p><button type="button" class="btn" onclick="MW_setMode(\'medical\')">\ud83e\ude7a Switch to Medical</button></div>';
+  };
+
   // ---------- analytics: GoatCounter (cookie-free, no personal data) ----------
   (function () {
     var h = location.hostname;
@@ -15,6 +64,7 @@
   })();
   var sent = {};
   function track(name, title) {
+    if (NORMIE && window.MW_curGame && MW_curGame.nmode && !/^mode\//.test(name)) { name = "normie/" + name; title = "(Normie) " + (title || name); }
     if (sent[name]) return; sent[name] = 1;
     (function go(n) {
       if (window.goatcounter && goatcounter.count) { try { goatcounter.count({ path: name, title: title || name, event: true }); } catch (e) {} }
@@ -45,11 +95,13 @@
   }
 
   // ---------- overall daily streak (any daily game finished on the day it was live) ----------
-  function markDay() { var d = get("mw-days", []), t = sydToday(); if (d.indexOf(t) < 0) { d.push(t); d = d.slice(-400); set("mw-days", d); } }
+  function markDay() { var d = get(mk("mw-days"), []), t = sydToday(); if (d.indexOf(t) < 0) { d.push(t); d = d.slice(-400); set(mk("mw-days"), d); } }
+  // Games that count in the current mode (Normie mode: only Normie-capable games).
+  function inMode(g) { return !NORMIE || !!g.nmode; }
   function playedDays() {
-    var seen = {}; get("mw-days", []).forEach(function (d) { seen[d] = 1; });
+    var seen = {}; get(mk("mw-days"), []).forEach(function (d) { seen[d] = 1; });
     (window.MW_GAMES || []).forEach(function (g) {
-      if (!g.live || !g.store || g.store.weekly) return;
+      if (!g.live || !g.store || g.store.weekly || !inMode(g)) return;
       var s = get(g.store.stats, null), t = get(g.store.day + sydToday(), null);
       if (t && t.done) seen[sydToday()] = 1;
       if (s && s.last && s.streak) for (var i = 0; i < s.streak; i++) seen[new Date((dayNum(s.last) - i) * 864e5).toISOString().slice(0, 10)] = 1;
@@ -143,12 +195,14 @@
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function mascotHelp(g) {
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
-    return '<div class="mw-masc-help"><img src="/assets/mascots/' + g.id + '.svg" alt="" width="72" height="72"><p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + '. Here\u2019s how ' + g.name + ' works.</p></div>';
+    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + '. Here\u2019s how ' + g.name + ' works.</p></div>';
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
     var last = get("mw-cheer-" + id, -1), k = Math.floor(Math.random() * m.cheer.length); if (k === last) k = (k + 1) % m.cheer.length; set("mw-cheer-" + id, k); var line = m.cheer[k];
-    return '<div class="cb-masc"><span class="cb-bub">' + line + '</span><img src="/assets/mascots/' + id + '.svg" alt="' + m.name + '" width="96" height="96"><span class="cb-mname">' + m.name + "</span></div>";
+    var gg = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0], NC = window.MW_NORMIE_CHEER;
+    if (NORMIE && gg && gg.nmode && NC && NC.length) { var kn = get("mw-ncheer", -1), j = Math.floor(Math.random() * NC.length); if (j === kn) j = (j + 1) % NC.length; set("mw-ncheer", j); line = NC[j]; }
+    return '<div class="cb-masc"><span class="cb-bub">' + line + '</span>' + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>";
   }
   function celebrate(id, st) {
     var f = SCENES[id]; if (!f || !st) return;
@@ -160,14 +214,14 @@
   var BADGES = { 3: ["Intern", "\ud83e\ude7a"], 7: ["Registrar", "\ud83e\udd47"], 14: ["Fellow", "\ud83c\udf93"], 30: ["Consultant", "\ud83c\udfc6"], 100: ["Professor", "\ud83d\udc51"] };
   function afterLive(g) {
     var t = sydToday(), sk = siteStreak().n, b = BADGES[sk];
-    if (b && get("mw-badge-" + sk, "") !== t && !get("mw-badge-" + sk + "-got", 0)) {
-      set("mw-badge-" + sk + "-got", 1);
+    if (b && get(mk("mw-badge-" + sk), "") !== t && !get(mk("mw-badge-" + sk + "-got"), 0)) {
+      set(mk("mw-badge-" + sk + "-got"), 1);
       queue({ cls: "cb-badge", ms: 3200, html: '<div class="cb-medal">' + b[1] + '</div><p class="cb-cap">\ud83d\udd25 ' + sk + "-day streak. Promoted to " + b[0] + ".</p>" });
     }
-    var daily = (window.MW_GAMES || []).filter(function (x) { return x.live && !x.weekly && x.store; });
+    var daily = (window.MW_GAMES || []).filter(function (x) { return x.live && !x.weekly && x.store && inMode(x); });
     var all = daily.every(function (x) { var s2 = get(x.store.day + t, null); return s2 && s2.done; });
-    if (all && get("mw-wrc", "") !== t) {
-      set("mw-wrc", t);
+    if (all && get(mk("mw-wrc"), "") !== t) {
+      set(mk("mw-wrc"), t);
       queue({ cls: "cb-wrc", ms: 3600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">Ward round<br>complete</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
     }
   }
@@ -267,7 +321,7 @@
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
   function nice(d, opts) { return new Date(dayNum(d) * 864e5).toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, opts)); }
   var DIFF = ["Genius", "Easy", "Easy", "Medium", "Medium", "Hard", "Hard"];
-  function diffFor(g, d, dow) { return (window.MW_EINSTEIN && (MW_EINSTEIN[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; }
+  function diffFor(g, d, dow) { if (g.nmode) return (window.MW_EINSTEIN_N && (MW_EINSTEIN_N[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; return (window.MW_EINSTEIN && (MW_EINSTEIN[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; }
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
   var DIFFQ = { Einstein: "Roughly one day in 50. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
   var DAYQ = [
@@ -389,8 +443,8 @@
   function topBar(g, home) {
     var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
     var bar = el('<header class="bar"><div class="bar-in">' +
-      (g ? '<a class="back" href="../">' + I.back + MW_SITE.name + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
-      '<nav class="tools" aria-label="Tools">' +
+      (g ? '<a class="back" href="../" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
+      '<nav class="tools" aria-label="Tools">' + modeSwitch() +
       (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
@@ -398,6 +452,8 @@
            '<button class="icon-btn" data-a="archive" aria-label="Past puzzles">' + I.archive + "</button>" : "") +
       '<button class="icon-btn" data-a="settings" aria-label="Settings">' + I.gear + "</button></nav></div></header>");
     bar.addEventListener("click", function (e) {
+      var mb = e.target.closest("[data-mode]");
+      if (mb) { var nm = mb.getAttribute("data-mode"); if (nm !== MODE) { Array.prototype.forEach.call(mb.parentNode.children, function (c) { c.setAttribute("aria-pressed", c === mb); }); setMode(nm); } return; }
       var b = e.target.closest("[data-a]"); if (!b) return;
       var a = b.getAttribute("data-a");
       if (a === "menu") { var nv = document.getElementById("mw-nav"), op = nv.classList.toggle("open"); b.setAttribute("aria-expanded", op ? "true" : "false"); }
@@ -428,11 +484,11 @@
       var st = g.live ? readStats(g) : null;
       var status = !st ? "" : st.done ? (st.win ? "Solved. Smug. " : "Done. Humbled. ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
       var btn = !g.live ? (g.from ? "From " + nice(g.from, { weekday: "short", day: "numeric", month: "short" }) : SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length]) : st && st.done ? "Review" : "Play";
-      var tag = g.live ? "a" : "div";
-      return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
+      var tag = g.live ? "a" : "div", med = NORMIE && !g.nmode;
+      return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (med ? " medonly" : "") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' +
-        '<h2 class="name">' + g.name + "</h2>" + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow"><span class="pill wk">Weekly</span>' + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
+        '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow"><span class="pill wk">Weekly</span>' + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + "</div></" + tag + ">";
     }
     function homeTop() {
@@ -465,16 +521,16 @@
       return MW_GAMES.map(function (g, i) {
         var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
         if (g.live && g.relday && DAYS[g.relday] === dw) k = 0.5; // release day: right after Dxtective
-        return { g: g, i: k, d: st && st.done ? 1 : 0 };
+        return { g: g, i: k, d: st && st.done ? 1 : 0, m: inMode(g) ? 0 : 1 };
       })
-        .sort(function (a, b) { return a.d - b.d || a.i - b.i; }).map(function (x) { return x.g; });
+        .sort(function (a, b) { return a.m - b.m || a.d - b.d || a.i - b.i; }).map(function (x) { return x.g; });
     }
     function streakPill() {
       var sk = siteStreak();
       return '<span class="mwstreak">\ud83d\udd25 <b>' + sk.n + "-day</b> streak" + (sk.n === 0 ? ". Start one today" : sk.today ? "" : ". Play today to keep it") + "</span>";
     }
     function progress() {
-      var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly; }), n = daily.length;
+      var daily = MW_GAMES.filter(function (g) { return g.live && !g.weekly && inMode(g); }), n = daily.length;
       var d = daily.filter(function (g) { var st = readStats(g); return st && st.done; }).length;
       var q = d === 0 ? "None yet. The waiting room is full." : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? "Nearly there. Finish the round." : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
       return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + "</div></div>";
@@ -504,7 +560,7 @@
       var html = "";
       if (normal.length) {
         var lead = normal[0], first = lead.dates[yr].start === today;
-        var themed = lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb);
+        var themed = !NORMIE && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb);
         html += '<section class="hday' + (lead.icon ? ' has-ic' : '') + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : '') + '<span class="hday-k">'  + (lead.kind === "week" ? "This week" : "Today") + '</span>' +
           "<h2>" + esc2(lead.name) + "</h2><p>" + esc2(lead.blurb) + (themed ? " <b>Today’s puzzles are on the theme.</b>" : "") + "</p>" +
           (normal.length > 1 ? '<p class="hday-also">Also: ' + normal.slice(1).map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + esc2(x.name) + "</a>" : esc2(x.name); }).join(", ") + "</p>" : "") +
@@ -518,10 +574,10 @@
       if (mast) mast.insertAdjacentHTML("afterend", html);
     }
     function draw() {
-      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">Think like a doctor.</p><h1>Today&rsquo;s medical puzzles</h1>' +
-        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p></div>" +
+      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">' + (NORMIE ? "\ud83d\ude42 No medical degree required." : "Think like a doctor.") + '</p><h1>Today&rsquo;s ' + (NORMIE ? "" : "medical ") + 'puzzles</h1>' +
+        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + DAYQ[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Medical-only games are at the bottom.</span></p>" : "") + "</div>" +
         '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
-        (function () { var t = get("mw-einstein", []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
+        (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
@@ -539,13 +595,13 @@
   function extras(g, box, today) {
     var arch = box.querySelector("details.archive");
     if (!arch) return;
-    var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id; }).map(function (x) { return { g: x, st: readStats(x) }; });
-    others.sort(function (a, b) { return (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
-    var left = others.filter(function (o) { return !(o.st && o.st.done); }).length;
+    var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id; }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
+    others.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
+    var left = others.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
     var strip = el('<section class="mwx"><div class="mwx-head"><b>Keep playing</b><span>' + (left ? left + " left today" : "All done today. Show-off.") + '</span></div><div class="mwx-list">' +
       others.map(function (o) {
         var done = o.st && o.st.done;
-        return '<a class="mwx-row' + (done ? " done" : "") + '" href="../' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><span class="mwx-ic">' + o.g.icon + '</span><span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (done ? (o.st.win ? "\u2713" : "Done") : "\u203a") + "</span></a>";
+        return '<a class="mwx-row' + (done ? " done" : "") + (o.m ? " medonly" : "") + '" href="../' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><span class="mwx-ic">' + o.g.icon + '</span><span class="mwx-nm">' + o.g.name + (o.m ? '<small class="mw-medtag">Medical only</small>' : "") + '</span><span class="mwx-st">' + (done ? (o.st.win ? "\u2713" : "Done") : "\u203a") + "</span></a>";
       }).join("") + '</div><a class="mwx-all" href="../">All puzzles</a></section>');
     arch.parentNode.insertBefore(strip, arch);
     if (!document.getElementById("newsletter")) { var nl = el(NL_HTML); nl.classList.add("nl-game"); arch.parentNode.insertBefore(nl, arch.nextSibling); }
@@ -610,21 +666,23 @@
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";
       gt.style.setProperty("--ga", g.accent); gt.style.setProperty("--gad", g.accentDark);
-      gt.innerHTML = "<h1>" + g.name + "</h1><p>" + g.tagline + "</p>";
+      gt.innerHTML = "<h1>" + g.name + (g.nmode ? ' <span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + "</h1><p>" + g.tagline + "</p>";
       var hd = box.querySelector(".head");
       if (hd) hd.parentNode.insertBefore(gt, hd.nextSibling); else box.insertBefore(gt, box.firstChild);
     }
+    var medNote = NORMIE && !g.nmode ? '<p class="mw-mednote">\ud83e\ude7a This one\u2019s medical only. Normie versions: ' + MW_GAMES.filter(function (x) { return x.nmode; }).map(function (x) { return '<a href="/' + x.path + '">' + x.name + "</a>"; }).join(", ") + ".</p>" : "";
+    if (medNote && box) box.insertAdjacentHTML("afterbegin", medNote);
     extras(g, box, today);
     var ab = window.MW_ABOUT && MW_ABOUT[g.id];
     if (ab) {
       (box.querySelector(".wrap") || box).appendChild(el('<section class="mw-about"><h2>About ' + g.name + '</h2><p>' + ab[0] + '</p>' + ab[1].map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("") + "</section>"));
       var ld = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: ab[1].map(function (q) { return { "@type": "Question", name: q[0], acceptedAnswer: { "@type": "Answer", text: q[1] } }; }) };
-      var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
+      if (!g.nmode) { var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc); }
     }
     if (q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
-    sp.innerHTML = '<div class="splash-in">' + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
+    sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
@@ -658,11 +716,11 @@
     if (rev) { var d = new Date(rev + " 1"); if (!isNaN(d)) ld.lastReviewed = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); }
     var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
     if (window.MW_GAMES && foot) {
-      var gl = MW_GAMES.filter(function (x) { return x.live; }).map(function (x) { return { g: x, st: readStats(x) }; });
-      gl.sort(function (a, b) { return (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
-      var left2 = gl.filter(function (o) { return !(o.st && o.st.done); }).length;
+      var gl = MW_GAMES.filter(function (x) { return x.live; }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
+      gl.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
+      var left2 = gl.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
       foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today\u2019s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
-        gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '"><img class="mwx-masc" src="/assets/mascots/' + o.g.id + '.svg" alt="" width="34" height="34"><span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203A") + "</span></a>"; }).join("") +
+        gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + (o.m ? " medonly" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + (o.m ? '<small class="mw-medtag">Medical only</small>' : "") + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203A") + "</span></a>"; }).join("") +
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
     }
   }

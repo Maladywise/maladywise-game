@@ -5,6 +5,8 @@
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
+  // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
   if (!document.querySelector("link[data-zbr]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "zebritis.css?v=" + BUILD; l.setAttribute("data-zbr", ""); document.head.appendChild(l);
   }
@@ -40,9 +42,9 @@
   var REAL = sydToday(), qd = new URLSearchParams(location.search).get("date");
   var day = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd)) ? qd : REAL;
   function isLive() { return day === REAL; }
-  var SKEY = "zbr-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
+  var SKEY = PFX + "zbr-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, P = null, cache = {};
-  function loadDay() { KEY = "zbr-day-" + day; st = load(KEY, { i: 0, picks: [], tries: [], done: false, win: false }); }
+  function loadDay() { KEY = PFX + "zbr-day-" + day; st = load(KEY, { i: 0, picks: [], tries: [], done: false, win: false }); }
 
   // ---------- matching ----------
   var STOP = /\b(the|a|an|disease|syndrome|sign|of|deficiency)\b/g;
@@ -144,7 +146,7 @@
   function renderResult() {
     var r = $("result"), s = score(), max = P.prompts.length * 20;
     var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c"; }).join("");
-    var share = (P.prompts.length > 3 ? "Super Zebritis #" : "Zebritis #") + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
+    var share = (P.prompts.length > 3 ? "Super Zebritis" : "Zebritis") + (NORMIE ? " (Normie)" : "") + " #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : sc3(s) >= 25 ? "A dazzle of zebras. Unbearable." : sc3(s) >= 18 ? "Strong stripes. Consultant material." : sc3(s) >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
     r.hidden = false;
@@ -219,12 +221,12 @@
   });
 
   // ---------- load ----------
-  function month(d) { var m = d.slice(0, 7); if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); return cache[m]; }
+  function month(d) { var m = d.slice(0, 7); if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); return cache[m]; }
   function show(d) {
     day = d; loadDay(); pend = null;
     month(d).then(function (list) {
       P = list.filter(function (x) { return x.date === d; })[0] || null;
-      if (!P) { $("card").innerHTML = '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; return; }
+      if (!P) { $("card").hidden = false; $("card").innerHTML = NORMIE && window.MW_noNormie ? MW_noNormie("prompts") : '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; renderArchive(); return; }
       if (P.spare && st.swap !== undefined && st.swap !== null) P.prompts[st.swap] = P.spare;
       $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
       $("badge").textContent = (P.prompts.length > 3 ? "Super \u00b7 " : "") + (P.difficulty || ""); $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
@@ -232,10 +234,10 @@
     });
   }
   function renderArchive() {
-    var days = [], n = dayNum(REAL), first = dayNum("2026-10-18");
+    var days = [], n = dayNum(REAL), first = dayNum(FIRST);
     for (var k = n - 1; k >= first; k--) days.push(new Date(k * 864e5).toISOString().slice(0, 10));
     var rows = days.map(function (d) {
-      var s = load("zbr-day-" + d, null), mark = s && s.done ? " \u2713" : "";
+      var s = load(PFX + "zbr-day-" + d, null), mark = s && s.done ? " \u2713" : "";
       return '<button type="button" class="arow' + (d === day ? " on" : "") + '" data-d="' + d + '"><span>' + nice(d) + mark + "</span><span>#" + (dayNum(d) - first + 1) + "</span></button>";
     }).join("");
     var back = isLive() ? "" : '<button type="button" class="btn" id="zbr-back">Back to today</button>';

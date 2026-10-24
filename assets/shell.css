@@ -476,3 +476,57 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mwx-info{margin:28px 0 8px}.mwx-masc{width:34px;height:34px;flex:none}
 @media print{.mwx-info{display:none!important}}
 .mwx-info .mwx-st{font-size:20px;color:var(--muted)}
+
+/* ---------- Medical / Normie mode switch ---------- */
+.mw-mode{display:inline-flex;align-items:center;flex:none;padding:3px;border-radius:999px;border:1px solid var(--line);background:var(--card);gap:2px}
+.mw-mode button{display:inline-flex;align-items:center;gap:5px;border:0;background:transparent;color:var(--muted);font-weight:600;font-size:13px;line-height:1;padding:7px 11px;border-radius:999px;cursor:pointer;white-space:nowrap;min-height:32px}
+.mw-mode button[aria-pressed="true"]{background:var(--brand);color:#fff;box-shadow:0 1px 3px rgba(74,52,128,.35)}
+:root[data-theme="dark"] .mw-mode button[aria-pressed="true"]{color:#16121F}
+.mw-mode button:not([aria-pressed="true"]):hover{color:var(--ink);background:rgba(74,52,128,.08)}
+:root[data-theme="dark"] .mw-mode button:not([aria-pressed="true"]):hover{background:rgba(185,166,236,.12)}
+.mw-mode span[aria-hidden]:first-child{font-size:15px}
+.back-t{white-space:nowrap}
+@media (max-width:560px){
+  .mw-mode .mm-t{display:none}
+  .mw-mode button{padding:6px 9px}
+}
+@media (max-width:520px){ .bar .back .back-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
+@media (max-width:400px){
+  .bar .icon-btn{width:36px;height:36px}
+  .bar .tools{gap:4px}
+  .bar .logo{font-size:20px}
+  .bar-in{gap:6px}
+}
+/* Normie pill + medical-only tags */
+.mw-npill{display:inline-block;vertical-align:middle;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.04em;line-height:1;padding:4px 9px;border-radius:999px;background:#EFE9FA;color:#4A3480;white-space:nowrap}
+:root[data-theme="dark"] .mw-npill{background:#342B45;color:#D9CCF7}
+.gtitle h1 .mw-npill{position:relative;top:-3px;margin-left:6px}
+.splash .mw-npill{margin:0 auto 4px}
+.card .mw-npill{align-self:flex-start;margin:2px 0 4px;font-size:10px;padding:3px 8px}
+.mw-medtag{display:inline-block;align-self:flex-start;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--bg);margin:2px 0 4px;white-space:nowrap}
+.card.medonly{opacity:.62;filter:saturate(.55)}
+.card.medonly:hover,.card.medonly:focus-visible{opacity:.9;filter:none}
+.mwx-row.medonly{opacity:.6}
+.mwx-nm .mw-medtag{margin:0 0 0 8px;vertical-align:middle;font-size:9px;padding:2px 6px}
+.mw-mednote{margin:0;padding:10px 14px;border-radius:12px;background:#EFE9FA;color:#3A2A66;font-size:14px;line-height:1.45}
+.mw-mednote a{color:inherit;font-weight:600}
+:root[data-theme="dark"] .mw-mednote{background:#2A2240;color:#E3DAF7}
+.splash .mw-mednote{margin:0 0 6px;text-align:center}
+.mw-nonorm{text-align:center;padding:22px 16px;border:1px dashed var(--line);border-radius:16px;display:grid;gap:10px;justify-items:center}
+.mw-nonorm p{margin:0;font-size:15px}
+.mw-nonorm .btn{cursor:pointer;padding:10px 18px;border-radius:999px;border:0;background:var(--brand);color:#fff;font-weight:600;font-size:14px}
+:root[data-theme="dark"] .mw-nonorm .btn{color:#16121F}
+.mw-mode .mm-norm{width:20px;height:20px;border-radius:50%;background:#fff;flex:none;margin:-3px 0}
+.mw-mode span[aria-hidden]:not(.mm-t){font-size:15px}
+.mw-normline{display:flex;align-items:center;gap:10px;margin:8px 0 0!important;font-size:14px;color:var(--muted)}
+.mw-normline .mw-norm{width:40px;height:40px;flex:none}
+.doc .mw-normhero{float:right;width:96px;height:96px;margin:0 0 8px 12px}
+/* room for the mode switch: compact switch under 1040px, burger menu up to 900px */
+@media (max-width:1040px){ .mw-mode .mm-t{display:none} .mw-mode button{padding:6px 9px} }
+@media (min-width:761px) and (max-width:900px){
+  .burger{display:grid}
+  .navwrap{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px max(16px,env(safe-area-inset-left,0px)) 14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+  .navwrap.open{display:flex}
+  .navwrap .navlink{padding:12px 4px;font-size:16px;border-bottom:1px solid var(--line)}
+  .subpill{margin:12px 0 0;text-align:center;padding:11px 14px;font-size:15px}
+}
