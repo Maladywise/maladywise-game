@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/panelysis/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Panelysis: Daily Blood Test Puzzle (Interpret the Results) | Malady Wise</title>
+<meta name="description" content="Panelysis is a daily blood test puzzle: read a fictional patient’s blood results and pick the diagnosis in three tries. Free medical game for doctors, nurses and students.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Malady Wise Games">
+<meta property="og:title" content="Panelysis: Daily Blood Test Puzzle (Interpret the Results) | Malady Wise">
+<meta property="og:description" content="Panelysis is a daily blood test puzzle: read a fictional patient’s blood results and pick the diagnosis in three tries. Free medical game for doctors, nurses and students.">
+<meta property="og:url" content="https://maladywise.com/panelysis/">
+<meta property="og:image" content="https://maladywise.com/assets/og/panelysis.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panelysis: Daily Blood Test Puzzle (Interpret the Results) | Malady Wise">
+<meta name="twitter:description" content="Panelysis is a daily blood test puzzle: read a fictional patient’s blood results and pick the diagnosis in three tries. Free medical game for doctors, nurses and students.">
+<meta name="twitter:image" content="https://maladywise.com/assets/og/panelysis.png?v=1">
+<link rel="stylesheet" href="../assets/shell.css?v=110">
+<script src="../assets/games.js?v=70"></script>
+<!-- Local fallback until panelysis is added to assets/games.js (safe to delete afterwards). -->
+<script>window.MW_GAMES&&!MW_GAMES.some(function(g){return g.id==="panelysis"})&&MW_GAMES.push({"id": "panelysis", "kind": "Blood test puzzle", "name": "Panelysis", "path": "panelysis/", "live": true, "from": "2026-10-26", "store": {"stats": "pnl-stats", "day": "pnl-day-", "labels": ["1", "2", "3", "X"], "distTitle": " (tries per solve)"}, "tagline": "One patient. One blood panel. Name the diagnosis in three tries.", "quip": "Reference ranges are a guide. Your answer is not.", "helpQuip": "Every wrong pick earns a hint. And a raised eyebrow.", "help": ["Read the patient’s story and their blood results. H is high, L is low, * is abnormal.", "Pick the diagnosis from six options. You get three tries.", "Each wrong pick reveals a hint and highlights the results that matter.", "When you finish, see why: the clinching values and a teaching pearl.", "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.", "A new panel arrives at midnight, Sydney time. Past panels live in the archive."], "accent": "#A62639", "accentDark": "#F2727F", "icon": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 7h14M12 7v29a4 4 0 0 0 8 0V7\"/><path d=\"M12 22h8v14a4 4 0 0 1-8 0z\" fill=\"#fff\"/><path d=\"M34 12c-3.5 5.5-7 9.5-7 13.5a7 7 0 0 0 14 0c0-4-3.5-8-7-13.5z\" fill=\"#fff\"/></svg>"});window.MW_ABOUT&&!MW_ABOUT.panelysis&&(MW_ABOUT.panelysis=["Panelysis is a daily blood test puzzle. Each day you get a fictional patient and their results: blood counts, electrolytes, liver, thyroid, iron, blood gases and more. Read the panel and pick the diagnosis in three tries; every wrong pick reveals a hint.", [["Who is it for?", "Doctors, nurses, students and anyone learning to read blood results. Easy days are gentle; Genius days hide subtle patterns."], ["Are the reference ranges real?", "They are typical Australian adult ranges. Every lab differs slightly, so always use the range printed on a real report."]]]);window.MW_MASCOTS&&!MW_MASCOTS.panelysis&&(MW_MASCOTS.panelysis={"name": "Ruby", "what": "a blood-drop vampire (strictly for science)", "cheer": ["Results reviewed. Brilliantly.", "Within normal limits of genius.", "Flagged H, for hero.", "Abnormally clever.", "Pathologist approved.", "Signed off. No repeat needed.", "I’d let you read my bloods.", "A critical value of smart.", "Sharp as a 21-gauge.", "Not a drop wasted."]});</script>
+<script src="../assets/shell.js?v=110"></script>
+</head>
+<body>
+<main class="wrap">
+  <section class="splash" id="splash"></section>
+  <section id="game" hidden>
+    <div id="pnl"></div>
+    <script src="panelysis.js?v=1"></script>
+  </section>
+  <footer class="site">All puzzles are fictional/educational. General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script>MW.game("panelysis");</script>
+</body>
+</html>
