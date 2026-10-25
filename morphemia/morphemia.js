@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -19,8 +19,10 @@
     ' <details class="found" id="mph-found" open><summary><span id="mph-fcount">You have found 0 words</span><span>&#9662;</span></summary><div class="words" id="mph-words"></div></details>' +
     ' <div class="msg" id="mph-msg" aria-live="polite"></div>' +
     ' <div class="entry" id="mph-entry"></div>' +
+    ' <form class="pk-form" id="mph-pkform" hidden><input id="mph-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="19" aria-label="Type a word with your phone keyboard, Enter to submit"></form>' +
     ' <div class="hive" id="mph-hive"></div>' +
-    ' <div class="ctrls"><button class="btn" type="button" id="mph-del">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter">Enter</button></div>' +
+    ' <div class="ctrls"><button class="btn" type="button" id="mph-del" aria-label="Delete last letter">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter" aria-label="Submit word">Enter</button></div>' +
+    ' <div class="pk"><button class="pk-tog" type="button" id="mph-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button></div>' +
     ' <details class="legend"><summary>' + (NORMIE ? "Long words earn bonuses." : "<b>Medical words</b> score double. Long words earn bonuses.") + ' <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li>' + (NORMIE ? "" : "<li>Medical word: whole score doubled</li>") + '</ul></details>' +
     ' <div class="result" id="mph-result" hidden></div>' +
     ' <p class="note" id="mph-next"></p>' +
@@ -77,13 +79,14 @@
   function drawHive() {
     var ls = [P.centre].concat(outer);
     $("hive").innerHTML = ls.map(function (c, i) {
-      return '<button type="button" class="hx' + (i === 0 ? " ctr" : "") + '" data-l="' + c + '" style="left:' + POS[i][0] + "%;top:" + POS[i][1] + '%">' + c + "</button>";
-    }).join("");
+      return '<button type="button" class="hx' + (i === 0 ? " ctr" : "") + '" data-l="' + c + '" aria-label="' + (i === 0 ? "Centre letter " : "Letter ") + c + '" style="left:' + POS[i][0] + "%;top:" + POS[i][1] + '%">' + c + "</button>";
+    }).join("") + '<svg class="trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline id="mph-trail" points="" fill="none" vector-effect="non-scaling-stroke"/></svg>';
   }
   function drawEntry(shake) {
     var e = $("entry"), L = letters();
     e.innerHTML = cur.split("").map(function (c) { return '<span class="' + (c === P.centre ? "c" : L.indexOf(c) < 0 ? "x" : "") + '">' + c + "</span>"; }).join("") + '<span class="cursor"></span>';
     if (shake) { e.classList.remove("shake"); void e.offsetWidth; e.classList.add("shake"); }
+    pkSync();
   }
   function render() {
     if (!P) return;
@@ -170,33 +173,87 @@
     if (k === "back") { cur = cur.slice(0, -1); drawEntry(); return; }
     if (/^[A-Z]$/.test(k) && cur.length < 19) { if (clearT && $("entry").classList.contains("shake")) { clearTimeout(clearT); clearT = null; cur = ""; $("entry").classList.remove("shake"); } cur += k; say(""); drawEntry(); }
   }
-  $("hive").addEventListener("click", function (e) { if (dragged) { dragged = false; return; } var b = e.target.closest(".hx"); if (b) { press(b.getAttribute("data-l")); b.blur(); } });
-  // drag outer letters to swap them
-  var drag = null, dragged = false;
+  $("hive").addEventListener("click", function (e) { if (slid) { slid = false; return; } var b = e.target.closest(".hx"); if (b) { press(b.getAttribute("data-l")); b.blur(); } });
+
+  // ---------- slide to spell ----------
+  // Drag across hexes to build a word. Back onto the previous hex = undo. Re-enter a hex or pause ~350 ms on it = letter again.
+  // Release submits if 4+ letters. Plain taps fall through to the click handler above (screen readers use click too).
+  var HW = 33, HH = 29, DWELL = 350, JIT = 8, sl = null, slid = false;
+  function hexEls() { return $("hive").querySelectorAll(".hx"); }
+  function geo() { // re-measured on every move: the message line above can reflow mid-swipe
+    var r = $("hive").getBoundingClientRect(); sl.rect = r;
+    sl.c = POS.map(function (p) { return { x: r.left + (p[0] + HW / 2) / 100 * r.width, y: r.top + (p[1] + HH / 2) / 100 * r.height }; });
+  }
+  function hexAt(x, y) {
+    var w = sl.rect.width, best = -1, bd = 1e9, i, d;
+    if (sl.cur >= 0 && Math.hypot(x - sl.c[sl.cur].x, y - sl.c[sl.cur].y) < w * 0.17) return sl.cur; // hysteresis: stay put on jitter
+    for (i = 0; i < 7; i++) { d = Math.hypot(x - sl.c[i].x, y - sl.c[i].y); if (d < bd) { bd = d; best = i; } }
+    return bd < w * 0.14 ? best : -1;
+  }
+  function drawTrail(x, y) {
+    var t = $("trail"); if (!t || !sl) return;
+    var pts = sl.nodes.map(function (n) { return (POS[n][0] + HW / 2) + "," + (POS[n][1] + HH / 2); });
+    if (pts.length && x != null) pts.push(((x - sl.rect.left) / sl.rect.width * 100).toFixed(1) + "," + ((y - sl.rect.top) / sl.rect.height * 100).toFixed(1));
+    t.setAttribute("points", pts.join(" "));
+    var els = hexEls(); for (var i = 0; i < els.length; i++) els[i].classList.toggle("on", sl.nodes.indexOf(i) >= 0);
+  }
+  function addHex(h, pulse) {
+    if (cur.length >= 19) return;
+    if (clearT && $("entry").classList.contains("shake")) { clearTimeout(clearT); clearT = null; cur = ""; $("entry").classList.remove("shake"); }
+    cur += [P.centre].concat(outer)[h]; sl.nodes.push(h); say(""); drawEntry();
+    if (pulse) { var b = hexEls()[h]; if (b) { b.classList.remove("pulse"); void b.offsetWidth; b.classList.add("pulse"); } }
+  }
+  function armDwell(x, y) {
+    clearTimeout(sl.dw); sl.ax = x; sl.ay = y;
+    var h = sl.cur; if (h < 0) return;
+    sl.dw = setTimeout(function () {
+      if (!sl || sl.cur !== h) return;
+      if (!sl.on) startSlide(true); else addHex(h, true);
+      drawTrail(sl.x, sl.y);
+    }, DWELL);
+  }
+  function startSlide(pulse) {
+    sl.on = true;
+    try { $("hive").setPointerCapture(sl.id); } catch (x) {}
+    addHex(sl.start, pulse);
+  }
+  function enterHex(h) {
+    var n = sl.nodes, last = n[n.length - 1], j = n.length - 1;
+    while (j >= 0 && n[j] === last) j--;
+    if (j >= 0 && n[j] === h) { while (n.length && n[n.length - 1] === last) { n.pop(); cur = cur.slice(0, -1); } say(""); drawEntry(); }
+    else addHex(h, false);
+  }
   $("hive").addEventListener("pointerdown", function (e) {
-    var b = e.target.closest(".hx"); if (!b || b.classList.contains("ctr")) return;
-    drag = { b: b, x: e.clientX, y: e.clientY, on: false, id: e.pointerId }; dragged = false;
+    slid = false;
+    if (!P || sl || (e.pointerType === "mouse" && e.button !== 0)) return;
+    var b = e.target.closest(".hx"); if (!b) return;
+    sl = { id: e.pointerId, start: Array.prototype.indexOf.call(hexEls(), b), cur: -1, on: false, nodes: [], x: e.clientX, y: e.clientY };
+    geo(); sl.cur = sl.start;
+    armDwell(e.clientX, e.clientY);
   });
   document.addEventListener("pointermove", function (e) {
-    if (!drag || e.pointerId !== drag.id) return;
-    var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-    if (!drag.on && dx * dx + dy * dy > 81) { drag.on = true; drag.b.classList.add("dragging"); try { drag.b.setPointerCapture(e.pointerId); } catch (x) {} }
-    if (drag.on) { e.preventDefault(); drag.b.style.transform = "translate(" + dx + "px," + dy + "px) scale(1.08)"; }
+    if (!sl || e.pointerId !== sl.id) return;
+    sl.x = e.clientX; sl.y = e.clientY; geo();
+    var h = hexAt(e.clientX, e.clientY);
+    if (h !== sl.cur) {
+      var was = sl.cur; sl.cur = h;
+      if (!sl.on) { startSlide(false); if (h >= 0 && h !== was) enterHex(h); }
+      else if (h >= 0) enterHex(h);
+      armDwell(e.clientX, e.clientY);
+    } else if (Math.hypot(e.clientX - sl.ax, e.clientY - sl.ay) > JIT) armDwell(e.clientX, e.clientY);
+    if (sl.on) { e.preventDefault(); drawTrail(e.clientX, e.clientY); }
   }, { passive: false });
-  function endDrag(e) {
-    if (!drag || e.pointerId !== drag.id) return;
-    var d = drag; drag = null;
-    if (!d.on) return;
-    dragged = true; setTimeout(function () { dragged = false; }, 400);
-    d.b.style.pointerEvents = "none";
-    var over = document.elementFromPoint(e.clientX, e.clientY), t = over && over.closest && over.closest(".hx");
-    d.b.style.pointerEvents = ""; d.b.style.transform = ""; d.b.classList.remove("dragging");
-    if (t && t !== d.b && !t.classList.contains("ctr")) {
-      var i = outer.indexOf(d.b.getAttribute("data-l")), j = outer.indexOf(t.getAttribute("data-l"));
-      if (i >= 0 && j >= 0) { var tmp = outer[i]; outer[i] = outer[j]; outer[j] = tmp; drawHive(); }
-    }
+  function endSlide(e) {
+    if (!sl || e.pointerId !== sl.id) return;
+    var d = sl; clearTimeout(d.dw); sl = null;
+    if (!d.on) return; // a plain tap: the click handler adds the letter
+    slid = true;
+    try { $("hive").releasePointerCapture(d.id); } catch (x) {}
+    var t = $("trail"); if (t) t.setAttribute("points", "");
+    Array.prototype.forEach.call(hexEls(), function (b) { b.classList.remove("on"); });
+    if (e.type === "pointerup" && cur.length >= 4) submit();
   }
-  document.addEventListener("pointerup", endDrag); document.addEventListener("pointercancel", endDrag);
+  document.addEventListener("pointerup", endSlide); document.addEventListener("pointercancel", endSlide);
   $("del").onclick = function () { press("back"); };
   $("enter").onclick = function () { press("enter"); };
   $("shuf").onclick = function () { for (var i = outer.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = outer[i]; outer[i] = outer[j]; outer[j] = t; } drawHive(); };
@@ -211,6 +268,34 @@
     else if (/^[a-zA-Z]$/.test(e.key)) press(e.key.toUpperCase());
   });
 
+  // ---------- phone keyboard ----------
+  // Real <input> so the phone's own keyboard (incl. glide typing) can be used. Mirrors `cur`; shared pref "mw-phonekb".
+  var pkOn = false, pkComp = false, pkIn = $("pkin");
+  try { pkOn = localStorage.getItem("mw-phonekb") === "1"; } catch (e) {}
+  function pkSync() { if (pkOn && !pkComp && pkIn.value.toUpperCase() !== cur) pkIn.value = cur; }
+  function pkApply(focus) {
+    $("pkform").hidden = !pkOn; $("pktog").setAttribute("aria-pressed", pkOn ? "true" : "false");
+    $("pktog").classList.toggle("on", pkOn); root.classList.toggle("pkon", pkOn);
+    if (pkOn) { pkIn.value = cur; if (focus) pkIn.focus(); } else pkIn.blur();
+  }
+  function pkInput() {
+    if (!P) { pkIn.value = ""; return; }
+    var L = letters(), v = pkIn.value.toUpperCase().split("").filter(function (c) { return L.indexOf(c) >= 0; }).join("").slice(0, 19);
+    if (clearT && $("entry").classList.contains("shake")) {
+      clearTimeout(clearT); clearT = null; $("entry").classList.remove("shake");
+      v = v.indexOf(cur) === 0 ? v.slice(cur.length) : v;
+    }
+    if (v !== cur) { cur = v; say(""); }
+    drawEntry();
+  }
+  pkIn.addEventListener("input", pkInput);
+  pkIn.addEventListener("compositionstart", function () { pkComp = true; });
+  pkIn.addEventListener("compositionend", function () { pkComp = false; pkInput(); });
+  $("pkform").addEventListener("submit", function (e) { e.preventDefault(); pkComp = false; pkInput(); press("enter"); pkSync(); });
+  $("pktog").onclick = function () { pkOn = !pkOn; try { localStorage.setItem("mw-phonekb", pkOn ? "1" : "0"); } catch (e) {} pkApply(true); };
+  $("entry").addEventListener("click", function () { if (pkOn) pkIn.focus(); });
+  pkApply(false);
+
   // ---------- load ----------
   var cache = {};
   function month(m) {
@@ -223,7 +308,7 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      var parts = root.querySelectorAll(".rank,.found,.entry,.hive,.ctrls,.legend");
+      var parts = root.querySelectorAll(".rank,.found,.entry,.hive,.ctrls,.legend,.pk");
       Array.prototype.forEach.call(parts, function (x) { x.hidden = !P; });
       if (!P) {
         $("result").hidden = true;
