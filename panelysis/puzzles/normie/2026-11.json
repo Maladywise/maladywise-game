@@ -1,0 +1,2478 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 7,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "A cold, pale world that does things sideways.",
+  "theme": "Planet",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Axial tilt",
+      "98",
+      "°",
+      "15–35",
+      "H"
+     ],
+     [
+      "Day length",
+      "17",
+      "hours",
+      "20–28",
+      "L"
+     ],
+     [
+      "Year length",
+      "84",
+      "Earth years",
+      "0.5–2",
+      "H"
+     ],
+     [
+      "Coldest atmosphere temp",
+      "−224",
+      "°C",
+      "−90–60",
+      "L"
+     ],
+     [
+      "Surface gravity",
+      "0.89",
+      "× Earth",
+      "0.9–1.1",
+      "L"
+     ],
+     [
+      "Rings",
+      "13",
+      "",
+      "<1",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Uranus",
+  "wrong": [
+   "Neptune",
+   "Saturn",
+   "Jupiter",
+   "Pluto",
+   "Venus"
+  ],
+  "hints": [
+   [
+    "That axial tilt means it’s spinning on its side.",
+    [
+     "Axial tilt"
+    ]
+   ],
+   [
+    "Neptune’s year is about 165 Earth years. This one is half that.",
+    [
+     "Year length",
+     "Coldest atmosphere temp"
+    ]
+   ]
+  ],
+  "key": [
+   "Axial tilt",
+   "Year length",
+   "Coldest atmosphere temp"
+  ],
+  "why": "Tipped over at about 98°, so it rolls around the Sun on its side, with an 84-year orbit and the coldest atmosphere measured on any planet, down to about −224 °C. It’s Uranus. Neptune is the natural guess, but Neptune is further out, takes about 165 years to orbit and isn’t lying down on the job.",
+  "pearl": "Because of the tilt, each pole gets about 42 years of sunlight followed by about 42 years of darkness."
+ },
+ {
+  "date": "2026-11-02",
+  "number": 8,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Islands, bullet trains and a lot of birthday cakes with 100 candles.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "124",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "Islands",
+      "14,125",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Life expectancy",
+      "84",
+      "years",
+      "65–78",
+      "H"
+     ],
+     [
+      "Centenarians per 100,000 people",
+      "80",
+      "",
+      "<30",
+      "H"
+     ],
+     [
+      "Early classic novel written by a woman (c. 1010)",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Japan",
+  "wrong": [
+   "South Korea",
+   "Taiwan",
+   "Philippines",
+   "Indonesia",
+   "New Zealand"
+  ],
+  "hints": [
+   [
+    "People here live a very long time.",
+    [
+     "Life expectancy",
+     "Centenarians per 100,000 people"
+    ]
+   ],
+   [
+    "A court lady wrote a famous novel about a thousand years ago.",
+    [
+     "Early classic novel written by a woman (c. 1010)"
+    ]
+   ]
+  ],
+  "key": [
+   "Life expectancy",
+   "Centenarians per 100,000 people",
+   "Early classic novel written by a woman (c. 1010)"
+  ],
+  "why": "About 124 million people across 14,125 islands, life expectancy around 84, and nearly 100,000 people aged 100 or over (nearly 9 in 10 are women). It’s Japan. Indonesia has more islands, but nowhere near as many centenarians. Picking New Zealand was brave. Wrong, but brave.",
+  "pearl": "The Tale of Genji, by Murasaki Shikibu, a woman at the Japanese imperial court, is often called the world’s first novel."
+ },
+ {
+  "date": "2026-11-03",
+  "number": 9,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Very tall, very calm and always first to see rain coming.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical large mammal",
+    "rows": [
+     [
+      "Height",
+      "5.5",
+      "m",
+      "1–3",
+      "H"
+     ],
+     [
+      "Neck bones",
+      "7",
+      "",
+      "<8",
+      ""
+     ],
+     [
+      "Tongue length",
+      "45",
+      "cm",
+      "<30",
+      "H"
+     ],
+     [
+      "Blood pressure (at the heart)",
+      "220",
+      "mmHg",
+      "100–140",
+      "H"
+     ],
+     [
+      "Drop at birth",
+      "1.5",
+      "m",
+      "<0.5",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Giraffe",
+  "wrong": [
+   "Okapi",
+   "Camel",
+   "Moose",
+   "Ostrich",
+   "Llama"
+  ],
+  "hints": [
+   [
+    "Check the height. It’s not a typo.",
+    [
+     "Height"
+    ]
+   ],
+   [
+    "Pumping blood up that neck takes serious pressure.",
+    [
+     "Blood pressure (at the heart)",
+     "Tongue length"
+    ]
+   ]
+  ],
+  "key": [
+   "Height",
+   "Blood pressure (at the heart)",
+   "Tongue length"
+  ],
+  "why": "Up to about 5.5 m tall, a tongue around 45 cm long, blood pressure about double ours to push blood up to the brain, and a 1.5-metre drop at birth. It’s a giraffe. Fun twist: its neck has 7 bones, the same as yours. Picked the ostrich? Tall, yes. Mammal, no.",
+  "pearl": "The okapi is the giraffe’s closest living relative. It looks like a zebra-horse mix but has the same long, dark tongue."
+ },
+ {
+  "date": "2026-11-04",
+  "number": 10,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Where the bus is a boat and the streets are wet.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical European city",
+    "rows": [
+     [
+      "Islands",
+      "118",
+      "",
+      "<5",
+      "H"
+     ],
+     [
+      "Bridges",
+      "400",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Historic-centre residents",
+      "49",
+      "thousand",
+      "100–2000",
+      "L"
+     ],
+     [
+      "Cars in the historic centre",
+      "None",
+      "",
+      "Lots",
+      "!"
+     ],
+     [
+      "Height above sea level",
+      "1",
+      "m",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Venice",
+  "wrong": [
+   "Amsterdam",
+   "Bruges",
+   "Hamburg",
+   "Copenhagen",
+   "Stockholm"
+  ],
+  "hints": [
+   [
+    "Count the islands. Then look for the cars.",
+    [
+     "Islands",
+     "Cars in the historic centre"
+    ]
+   ],
+   [
+    "Lots of visitors, very few locals.",
+    [
+     "Historic-centre residents"
+    ]
+   ]
+  ],
+  "key": [
+   "Islands",
+   "Cars in the historic centre",
+   "Historic-centre residents"
+  ],
+  "why": "About 118 islands joined by roughly 400 bridges, no cars at all in the historic centre, and fewer than 50,000 residents there since 2022. It’s Venice. Amsterdam is a respectable guess. But you can’t cycle up to a gondola.",
+  "pearl": "In 2010, Giorgia Boscolo became Venice’s first licensed female gondolier, breaking about 900 years of men-only tradition."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 11,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "A famous lady who has held the same pose since 1886.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical public statue",
+    "rows": [
+     [
+      "Height (heel to torch)",
+      "46",
+      "m",
+      "2–20",
+      "H"
+     ],
+     [
+      "Skin thickness",
+      "2.4",
+      "mm",
+      "",
+      ""
+     ],
+     [
+      "Colour",
+      "Green",
+      "",
+      "Bronze or stone",
+      "!"
+     ],
+     [
+      "Lightning strikes",
+      "600",
+      "per year",
+      "<10",
+      "H"
+     ],
+     [
+      "Index finger",
+      "2.4",
+      "m",
+      "",
+      ""
+     ],
+     [
+      "Year dedicated",
+      "1886",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Statue of Liberty",
+  "wrong": [
+   "Angel of the North",
+   "The Kelpies",
+   "The Little Mermaid",
+   "Statue of Unity",
+   "Manneken Pis"
+  ],
+  "hints": [
+   [
+    "Copper turns green over time.",
+    [
+     "Colour",
+     "Skin thickness"
+    ]
+   ],
+   [
+    "She stands on an island and gets hit by lightning a lot.",
+    [
+     "Lightning strikes"
+    ]
+   ]
+  ],
+  "key": [
+   "Colour",
+   "Height (heel to torch)",
+   "Lightning strikes"
+  ],
+  "why": "A copper skin only about as thick as two coins (about 2.4 mm), weathered green, 46 m from heel to torch, dedicated in 1886 and reportedly struck by lightning around 600 times a year. It’s the Statue of Liberty. Her inner frame was designed by Gustave Eiffel, yes, that Eiffel. The Little Mermaid is just 1.25 m tall. Close, if you squint.",
+  "pearl": "The poem on her pedestal, ‘The New Colossus’ (‘Give me your tired, your poor…’), was written by Emma Lazarus in 1883."
+ },
+ {
+  "date": "2026-11-06",
+  "number": 12,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Lives underground in a colony with a queen. No, not a bee.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical rodent",
+    "rows": [
+     [
+      "Weight",
+      "35",
+      "g",
+      "20–500",
+      ""
+     ],
+     [
+      "Maximum lifespan",
+      "37",
+      "years",
+      "1–5",
+      "H"
+     ],
+     [
+      "Survives without oxygen",
+      "18",
+      "minutes",
+      "<2",
+      "H"
+     ],
+     [
+      "Colony size",
+      "80",
+      "",
+      "1–20",
+      "H"
+     ],
+     [
+      "Breeding females per colony",
+      "1",
+      "",
+      "2–20",
+      "L"
+     ],
+     [
+      "Body temperature",
+      "Follows surroundings",
+      "",
+      "Stays steady",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Naked mole-rat",
+  "wrong": [
+   "Damaraland mole-rat",
+   "Blind mole-rat",
+   "Star-nosed mole",
+   "Pocket gopher",
+   "Hamster"
+  ],
+  "hints": [
+   [
+    "This rodent lives about ten times longer than it should.",
+    [
+     "Maximum lifespan",
+     "Survives without oxygen"
+    ]
+   ],
+   [
+    "One queen runs a huge colony. Like an ant nest with teeth.",
+    [
+     "Breeding females per colony",
+     "Colony size"
+    ]
+   ]
+  ],
+  "key": [
+   "Maximum lifespan",
+   "Survives without oxygen",
+   "Breeding females per colony"
+  ],
+  "why": "A rodent that can live more than 37 years, survive about 18 minutes without oxygen, barely regulates its own temperature and lives in colonies of around 80 with a single breeding queen. It’s the naked mole-rat. The Damaraland mole-rat also has a queen, so that guess was clever. Just not long-lived enough.",
+  "pearl": "Naked mole-rats very rarely get cancer, which is why scientists study them closely."
+ },
+ {
+  "date": "2026-11-07",
+  "number": 13,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Big skies, lots of space and more horses than people.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "3.5",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "People per km²",
+      "2",
+      "",
+      "25–150",
+      "L"
+     ],
+     [
+      "Horses per person",
+      "1.3",
+      "",
+      "<0.1",
+      "H"
+     ],
+     [
+      "Livestock per person",
+      "16",
+      "",
+      "<2",
+      "H"
+     ],
+     [
+      "Capital’s January average",
+      "−21",
+      "°C",
+      "−5–15",
+      "L"
+     ],
+     [
+      "Share living in the capital",
+      "48",
+      "%",
+      "5–25",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Mongolia",
+  "wrong": [
+   "Kazakhstan",
+   "Kyrgyzstan",
+   "Bhutan",
+   "Nepal",
+   "Turkmenistan"
+  ],
+  "hints": [
+   [
+    "Count the horses per person.",
+    [
+     "Horses per person",
+     "Livestock per person"
+    ]
+   ],
+   [
+    "The emptiest country on Earth, with the coldest capital.",
+    [
+     "People per km²",
+     "Capital’s January average"
+    ]
+   ]
+  ],
+  "key": [
+   "People per km²",
+   "Horses per person",
+   "Capital’s January average"
+  ],
+  "why": "The least densely populated country in the world at about 2 people per km², roughly 4.7 million horses for 3.5 million people, nearly 58 million farm animals, and Ulaanbaatar, the coldest capital city, averaging about −21 °C in January. It’s Mongolia. Kazakhstan was a sensible guess. But it has fewer horses per person.",
+  "pearl": "Nearly half of all Mongolians live in Ulaanbaatar, yet many families still move with their herds and live in a ger (yurt)."
+ },
+ {
+  "date": "2026-11-08",
+  "number": 14,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Has weather, rivers, lakes and rain. Just not the kind you know.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Diameter",
+      "5,150",
+      "km",
+      "12000–13500",
+      "L"
+     ],
+     [
+      "Surface gravity",
+      "0.14",
+      "× Earth",
+      "0.9–1.1",
+      "L"
+     ],
+     [
+      "Surface pressure",
+      "1.5",
+      "× Earth",
+      "0.9–1.1",
+      "H"
+     ],
+     [
+      "Surface temperature",
+      "−180",
+      "°C",
+      "−90–60",
+      "L"
+     ],
+     [
+      "Main gas in the air",
+      "Nitrogen",
+      "",
+      "Nitrogen",
+      ""
+     ],
+     [
+      "Lakes are made of",
+      "Methane",
+      "",
+      "Water",
+      "!"
+     ],
+     [
+      "Day length",
+      "16",
+      "Earth days",
+      "0.9–1.1",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Titan",
+  "wrong": [
+   "Ganymede",
+   "Europa",
+   "Triton",
+   "Callisto",
+   "Mars"
+  ],
+  "hints": [
+   [
+    "Thicker air than Earth, on something so small and cold?",
+    [
+     "Surface pressure",
+     "Surface temperature"
+    ]
+   ],
+   [
+    "Lakes and rivers, but not of water.",
+    [
+     "Lakes are made of"
+    ]
+   ]
+  ],
+  "key": [
+   "Surface pressure",
+   "Lakes are made of",
+   "Day length"
+  ],
+  "why": "The only moon with a thick atmosphere (mostly nitrogen, like ours, at about 1.5 times Earth’s surface pressure), lakes and rain of liquid methane at about −180 °C, and a day of about 16 Earth days. It’s Titan, Saturn’s largest moon. Ganymede is a sharp guess, as it’s a bit bigger, but it has almost no air.",
+  "pearl": "Titan is bigger than the planet Mercury. In 2005 the Huygens probe landed there, the furthest landing ever made."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 15,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Rainforest, football and your morning coffee.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Area",
+      "8.5",
+      "million km²",
+      "<1",
+      "H"
+     ],
+     [
+      "Population",
+      "213",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "Share of world coffee",
+      "35",
+      "%",
+      "<5",
+      "H"
+     ],
+     [
+      "Share of the Amazon rainforest",
+      "60",
+      "%",
+      "",
+      ""
+     ],
+     [
+      "Men’s World Cup wins",
+      "5",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "Home of the all-time top World Cup scorer",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Brazil",
+  "wrong": [
+   "Argentina",
+   "Colombia",
+   "Peru",
+   "Mexico",
+   "Chile"
+  ],
+  "hints": [
+   [
+    "Check the coffee share and the football trophies.",
+    [
+     "Share of world coffee",
+     "Men’s World Cup wins"
+    ]
+   ],
+   [
+    "She has scored more World Cup goals than anyone, man or woman.",
+    [
+     "Home of the all-time top World Cup scorer"
+    ]
+   ]
+  ],
+  "key": [
+   "Share of world coffee",
+   "Men’s World Cup wins",
+   "Home of the all-time top World Cup scorer"
+  ],
+  "why": "The world’s biggest coffee grower (about a third of the world’s beans), five men’s World Cups, about 60% of the Amazon, and Marta, who has scored 17 World Cup goals, more than any player in history. It’s Brazil. Argentina is a fair shout on football, but it doesn’t grow much coffee.",
+  "pearl": "Brazil has been the world’s largest coffee producer for more than 150 years."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 16,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Sleepy, fussy eater, lives up a tree.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical tree-dwelling mammal",
+    "rows": [
+     [
+      "Sleep",
+      "20",
+      "hours/day",
+      "8–14",
+      "H"
+     ],
+     [
+      "Weight",
+      "8",
+      "kg",
+      "1–15",
+      ""
+     ],
+     [
+      "Thumbs per hand",
+      "2",
+      "",
+      "0–1",
+      "H"
+     ],
+     [
+      "Fingerprints",
+      "Human-like",
+      "",
+      "None",
+      "!"
+     ],
+     [
+      "Size at birth",
+      "2",
+      "cm",
+      "5–20",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Koala",
+  "wrong": [
+   "Sloth",
+   "Wombat",
+   "Red panda",
+   "Common brushtail possum",
+   "Sugar glider"
+  ],
+  "hints": [
+   [
+    "Champion sleeper. Very fussy eater.",
+    [
+     "Sleep"
+    ]
+   ],
+   [
+    "Its fingerprints could confuse a detective.",
+    [
+     "Fingerprints",
+     "Thumbs per hand"
+    ]
+   ]
+  ],
+  "key": [
+   "Sleep",
+   "Fingerprints",
+   "Size at birth"
+  ],
+  "why": "Sleeps about 18 to 22 hours a day to cope with a low-energy eucalyptus diet, has two thumbs on each hand and fingerprints almost impossible to tell apart from ours, and is born about the size of a peanut. It’s a koala. Picked the sloth? Good instinct for naps. Wrong continent.",
+  "pearl": "Koalas are marsupials, not bears. A newborn joey lives in its mother’s pouch for about six months."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 17,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Neon, trains on time and a lot of very good dinners.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big city",
+    "rows": [
+     [
+      "Metro population",
+      "37",
+      "million",
+      "5–15",
+      "H"
+     ],
+     [
+      "Michelin-starred restaurants",
+      "190",
+      "",
+      "<30",
+      "H"
+     ],
+     [
+      "Busiest station, passengers per day",
+      "3.5",
+      "million",
+      "<1",
+      "H"
+     ],
+     [
+      "Country’s life expectancy",
+      "84",
+      "years",
+      "70–82",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Tokyo",
+  "wrong": [
+   "Osaka",
+   "Seoul",
+   "Shanghai",
+   "Jakarta",
+   "Paris"
+  ],
+  "hints": [
+   [
+    "Someone’s eating well. Look at the stars.",
+    [
+     "Michelin-starred restaurants"
+    ]
+   ],
+   [
+    "One station handles more people a day than most cities have.",
+    [
+     "Busiest station, passengers per day",
+     "Metro population"
+    ]
+   ]
+  ],
+  "key": [
+   "Michelin-starred restaurants",
+   "Busiest station, passengers per day",
+   "Metro population"
+  ],
+  "why": "Around 37 million people in the greater area, more Michelin-starred restaurants than any other city (about 190 in the 2026 guide) and Shinjuku, the world’s busiest station, with about 3.5 million passengers a day. It’s Tokyo. Paris has fewer stars. Don’t tell Paris.",
+  "pearl": "Shinjuku Station has about 200 exits. Getting lost there is practically a local tradition."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 18,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Often hidden by fog. Very orange underneath.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical big suspension bridge",
+    "rows": [
+     [
+      "Main span",
+      "1,280",
+      "m",
+      "500–1100",
+      "H"
+     ],
+     [
+      "Tower height above water",
+      "227",
+      "m",
+      "50–200",
+      "H"
+     ],
+     [
+      "Year opened",
+      "1937",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Colour",
+      "International Orange",
+      "",
+      "Grey",
+      "!"
+     ],
+     [
+      "Wire in each main cable",
+      "129",
+      "thousand km",
+      "<40",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Golden Gate Bridge",
+  "wrong": [
+   "Brooklyn Bridge",
+   "Sydney Harbour Bridge",
+   "Tower Bridge",
+   "Akashi Kaikyō Bridge",
+   "Verrazzano-Narrows Bridge"
+  ],
+  "hints": [
+   [
+    "That colour has its own name.",
+    [
+     "Colour"
+    ]
+   ],
+   [
+    "The longest suspension span in the world from 1937 to 1964.",
+    [
+     "Main span",
+     "Year opened"
+    ]
+   ]
+  ],
+  "key": [
+   "Colour",
+   "Main span",
+   "Wire in each main cable"
+  ],
+  "why": "A 1,280 m main span (the world’s longest from 1937 until 1964), towers 227 m above the water, about 129,000 km of wire in each main cable (more than three laps of Earth), all painted International Orange. It’s the Golden Gate Bridge. Tower Bridge is a lovely guess. But it opens up. It doesn’t hang.",
+  "pearl": "The orange was first chosen as a primer. The architect liked how it stood out in the fog and kept it."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 19,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Cold water, slow life, very long memory.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical shark",
+    "rows": [
+     [
+      "Length",
+      "5",
+      "m",
+      "1–6",
+      ""
+     ],
+     [
+      "Estimated lifespan",
+      "400",
+      "years",
+      "20–70",
+      "H"
+     ],
+     [
+      "Growth per year",
+      "1",
+      "cm",
+      "5–30",
+      "L"
+     ],
+     [
+      "Age when grown up",
+      "150",
+      "years",
+      "5–20",
+      "H"
+     ],
+     [
+      "Cruising speed",
+      "1.2",
+      "km/h",
+      "3–10",
+      "L"
+     ],
+     [
+      "Water temperature",
+      "2",
+      "°C",
+      "10–30",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Greenland shark",
+  "wrong": [
+   "Basking shark",
+   "Whale shark",
+   "Pacific sleeper shark",
+   "Bowhead whale",
+   "Ocean quahog"
+  ],
+  "hints": [
+   [
+    "Look at how long it lives.",
+    [
+     "Estimated lifespan",
+     "Age when grown up"
+    ]
+   ],
+   [
+    "Slow and very cold. Think Arctic.",
+    [
+     "Cruising speed",
+     "Water temperature"
+    ]
+   ]
+  ],
+  "key": [
+   "Estimated lifespan",
+   "Age when grown up",
+   "Growth per year"
+  ],
+  "why": "Estimated to live about 400 years (somewhere between 272 and 512), growing about a centimetre a year, not grown up until about 150, cruising at about 1 km/h in near-freezing Arctic water. It’s the Greenland shark, the longest-lived animal with a backbone. The ocean quahog clam can live over 500 years, a clever pick, but it’s a clam.",
+  "pearl": "Some Greenland sharks swimming today may have hatched in the 1600s, or even earlier."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 20,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Fire, ice and very warm swimming pools.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "0.39",
+      "million",
+      "2–50",
+      "L"
+     ],
+     [
+      "Electricity from renewables",
+      "100",
+      "%",
+      "10–60",
+      "H"
+     ],
+     [
+      "Homes heated by geothermal",
+      "90",
+      "%",
+      "<5",
+      "H"
+     ],
+     [
+      "Electricity made per person",
+      "55",
+      "thousand kWh",
+      "1–15",
+      "H"
+     ],
+     [
+      "McDonald’s restaurants",
+      "0",
+      "",
+      ">5",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Iceland",
+  "wrong": [
+   "Norway",
+   "New Zealand",
+   "Ireland",
+   "Faroe Islands",
+   "Greenland"
+  ],
+  "hints": [
+   [
+    "Most houses are heated by the ground.",
+    [
+     "Homes heated by geothermal"
+    ]
+   ],
+   [
+    "Tiny population, huge power output.",
+    [
+     "Population",
+     "Electricity made per person"
+    ]
+   ]
+  ],
+  "key": [
+   "Homes heated by geothermal",
+   "Electricity made per person",
+   "Population"
+  ],
+  "why": "Only about 390,000 people, nearly all electricity from hydro and geothermal, about 9 in 10 homes heated by hot water from the ground, more electricity made per person than anywhere, and no McDonald’s since 2009. It’s Iceland. Norway also runs almost all on renewables, so that guess was sharp. But Norway heats with electricity, not volcanoes.",
+  "pearl": "In 1980 Iceland elected Vigdís Finnbogadóttir, the world’s first woman voted in as president in a national election."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 21,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Small, fast and either baking or freezing.",
+  "theme": "Planet",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Diameter",
+      "4,880",
+      "km",
+      "12000–13500",
+      "L"
+     ],
+     [
+      "Year length",
+      "88",
+      "Earth days",
+      "330–400",
+      "L"
+     ],
+     [
+      "Sunrise to sunrise",
+      "176",
+      "Earth days",
+      "0.9–1.1",
+      "H"
+     ],
+     [
+      "Daytime high",
+      "430",
+      "°C",
+      "−90–60",
+      "H"
+     ],
+     [
+      "Night-time low",
+      "−180",
+      "°C",
+      "−90–60",
+      "L"
+     ],
+     [
+      "Surface gravity",
+      "0.38",
+      "× Earth",
+      "0.9–1.1",
+      "L"
+     ],
+     [
+      "Core size (share of radius)",
+      "85",
+      "%",
+      "45–60",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Mercury",
+  "wrong": [
+   "Mars",
+   "The Moon",
+   "Venus",
+   "Pluto",
+   "Ceres"
+  ],
+  "hints": [
+   [
+    "Its year is shorter than its day.",
+    [
+     "Year length",
+     "Sunrise to sunrise"
+    ]
+   ],
+   [
+    "Huge swing from day to night, and almost all core.",
+    [
+     "Daytime high",
+     "Night-time low",
+     "Core size (share of radius)"
+    ]
+   ]
+  ],
+  "key": [
+   "Year length",
+   "Sunrise to sunrise",
+   "Core size (share of radius)"
+  ],
+  "why": "An 88-day year but 176 Earth days from one sunrise to the next, 430 °C by day and −180 °C at night, and an iron core about 85% of its width. It’s Mercury. Mars has exactly the same gravity (0.38), so that guess was a proper trap. But Mars’ day is about 24.6 hours.",
+  "pearl": "Despite being closest to the Sun, Mercury probably has water ice hiding in permanently shadowed craters at its poles."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 22,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Huge, chilly in places and very sweet on syrup.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Area",
+      "9.98",
+      "million km²",
+      "<1",
+      "H"
+     ],
+     [
+      "People per km²",
+      "4",
+      "",
+      "25–150",
+      "L"
+     ],
+     [
+      "Coastline",
+      "243",
+      "thousand km",
+      "<10",
+      "H"
+     ],
+     [
+      "Share of world maple syrup",
+      "75",
+      "%",
+      "<5",
+      "H"
+     ],
+     [
+      "Countries it borders",
+      "1",
+      "",
+      "2–8",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Canada",
+  "wrong": [
+   "Russia",
+   "United States",
+   "Norway",
+   "Sweden",
+   "Finland"
+  ],
+  "hints": [
+   [
+    "The longest coastline in the world.",
+    [
+     "Coastline"
+    ]
+   ],
+   [
+    "Only one neighbour, and a lot of maple trees.",
+    [
+     "Countries it borders",
+     "Share of world maple syrup"
+    ]
+   ]
+  ],
+  "key": [
+   "Coastline",
+   "Share of world maple syrup",
+   "Countries it borders"
+  ],
+  "why": "The world’s longest coastline at about 243,000 km, the second-largest country, only about 4 people per km², a single land neighbour, and over 75% of the world’s maple syrup. It’s Canada. Russia is bigger, but it borders 14 countries. Chose Norway? Pretty fjords, wrong syrup.",
+  "pearl": "In 1992 neurologist Roberta Bondar became Canada’s first woman in space, flying on the Space Shuttle Discovery."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 23,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Huge, smart and run by grandmothers.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical large land mammal",
+    "rows": [
+     [
+      "Weight",
+      "6,000",
+      "kg",
+      "50–1000",
+      "H"
+     ],
+     [
+      "Pregnancy",
+      "22",
+      "months",
+      "3–12",
+      "H"
+     ],
+     [
+      "Sleep (wild)",
+      "2",
+      "hours/day",
+      "6–14",
+      "L"
+     ],
+     [
+      "Heart rate",
+      "30",
+      "bpm",
+      "60–120",
+      "L"
+     ],
+     [
+      "Herd leader",
+      "Oldest female",
+      "",
+      "Dominant male",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "African elephant",
+  "wrong": [
+   "Hippopotamus",
+   "White rhinoceros",
+   "Giraffe",
+   "Walrus",
+   "Blue whale"
+  ],
+  "hints": [
+   [
+    "Nearly two years to make a baby.",
+    [
+     "Pregnancy",
+     "Weight"
+    ]
+   ],
+   [
+    "The herd follows its wise old matriarch.",
+    [
+     "Herd leader"
+    ]
+   ]
+  ],
+  "key": [
+   "Weight",
+   "Pregnancy",
+   "Herd leader"
+  ],
+  "why": "About 6 tonnes, a 22-month pregnancy (the longest of any land mammal), only about 2 hours of sleep a night in the wild, and herds led by the oldest female. It’s the African elephant, the largest animal on land. Picked the blue whale? Big thinking. Wet thinking.",
+  "pearl": "Matriarchs remember water holes and dangers for decades, and herds with older leaders tend to survive droughts better."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 24,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Breathtaking views. Literally.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical capital city",
+    "rows": [
+     [
+      "Altitude",
+      "3,640",
+      "m",
+      "<1500",
+      "H"
+     ],
+     [
+      "Water boils at",
+      "88",
+      "°C",
+      "98–100",
+      "L"
+     ],
+     [
+      "Air pressure",
+      "65",
+      "% of sea level",
+      "85–100",
+      "L"
+     ],
+     [
+      "Cable car network",
+      "30",
+      "km",
+      "<2",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "La Paz",
+  "wrong": [
+   "Quito",
+   "Bogotá",
+   "Cusco",
+   "Lhasa",
+   "Mexico City"
+  ],
+  "hints": [
+   [
+    "Very high up. Pasta takes longer here.",
+    [
+     "Altitude",
+     "Water boils at"
+    ]
+   ],
+   [
+    "Commuters ride to work in the sky.",
+    [
+     "Cable car network"
+    ]
+   ]
+  ],
+  "key": [
+   "Altitude",
+   "Cable car network",
+   "Water boils at"
+  ],
+  "why": "About 3,640 m up, where water boils at roughly 88 °C, and home to Mi Teleférico, the world’s largest urban cable car network at about 30 km over 10 lines. It’s La Paz, Bolivia. Lhasa is almost exactly as high, so nice try. But it doesn’t commute by gondola.",
+  "pearl": "The ‘Cholita climbers’, Indigenous Aymara women, climb some of South America’s highest peaks wearing their traditional layered skirts."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 25,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "A stone city in the clouds that kept a low profile for centuries.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical ancient site",
+    "rows": [
+     [
+      "Altitude",
+      "2,430",
+      "m",
+      "<1000",
+      "H"
+     ],
+     [
+      "Built around",
+      "1450",
+      "AD",
+      "",
+      ""
+     ],
+     [
+      "Mortar between stones",
+      "None",
+      "",
+      "Yes",
+      "!"
+     ],
+     [
+      "Became world-famous",
+      "1911",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Buildings",
+      "200",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Machu Picchu",
+  "wrong": [
+   "Petra",
+   "Chichén Itzá",
+   "Teotihuacan",
+   "Great Zimbabwe",
+   "Mesa Verde"
+  ],
+  "hints": [
+   [
+    "High in the mountains. Think Andes.",
+    [
+     "Altitude"
+    ]
+   ],
+   [
+    "Stones cut so precisely they need no glue.",
+    [
+     "Mortar between stones"
+    ]
+   ]
+  ],
+  "key": [
+   "Altitude",
+   "Mortar between stones"
+  ],
+  "why": "Perched about 2,430 m up on an Andean ridge, built around 1450, about 200 stone structures fitted without mortar, and brought to world attention in 1911. It’s Machu Picchu, Peru. Teotihuacan is nearly as high, so good thinking, but it’s well over 1,000 years older and sits in a wide valley, not on a ridge.",
+  "pearl": "The fitted stone walls helped the buildings ride out earthquakes: the stones can shift slightly and settle back into place."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 26,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Forever young, always smiling, regrows what it loses.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical salamander",
+    "rows": [
+     [
+      "Length",
+      "23",
+      "cm",
+      "10–30",
+      ""
+     ],
+     [
+      "Keeps its gills as an adult",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Regrows limbs and spinal cord",
+      "Yes",
+      "",
+      "Limited",
+      "!"
+     ],
+     [
+      "Genome size vs human",
+      "10",
+      "×",
+      "",
+      ""
+     ],
+     [
+      "Wild home: lake systems",
+      "1",
+      "",
+      ">10",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Axolotl",
+  "wrong": [
+   "Olm",
+   "Mudpuppy",
+   "Tiger salamander",
+   "Hellbender",
+   "Fire salamander"
+  ],
+  "hints": [
+   [
+    "It only lives wild in one place, near a capital city.",
+    [
+     "Wild home: lake systems"
+    ]
+   ],
+   [
+    "Superpower: regrowing body parts.",
+    [
+     "Regrows limbs and spinal cord"
+    ]
+   ]
+  ],
+  "key": [
+   "Wild home: lake systems",
+   "Regrows limbs and spinal cord",
+   "Keeps its gills as an adult"
+  ],
+  "why": "Keeps its feathery gills for life, regrows limbs, spinal cord and even parts of its heart, has a genome about 10 times bigger than ours (about 32 billion letters), and lives wild only in the canals of Xochimilco in Mexico City. It’s the axolotl. The olm also keeps its gills, so that guess was a thinker, but it lives in dark caves in the Balkans, including Slovenia.",
+  "pearl": "Axolotls come in pink, gold and dark ‘wild’ colours. Almost all the pink ones are bred in aquariums."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 27,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Small, green and seriously into beef and football.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "3.4",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Cattle per person",
+      "3.5",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "Electricity from renewables",
+      "95",
+      "%",
+      "10–60",
+      "H"
+     ],
+     [
+      "First men’s World Cup host and winner",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "First to give every school child a laptop",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Uruguay",
+  "wrong": [
+   "Paraguay",
+   "Argentina",
+   "Chile",
+   "Costa Rica",
+   "New Zealand"
+  ],
+  "hints": [
+   [
+    "Count the cows.",
+    [
+     "Cattle per person"
+    ]
+   ],
+   [
+    "It hosted and won the very first World Cup in 1930.",
+    [
+     "First men’s World Cup host and winner"
+    ]
+   ]
+  ],
+  "key": [
+   "Cattle per person",
+   "First men’s World Cup host and winner",
+   "Electricity from renewables"
+  ],
+  "why": "About 3.4 million people and roughly 12 million cattle (about 3.5 per person), most electricity from wind, hydro and other renewables, the 1930 World Cup host and champion, and the first country to give every primary student a laptop. It’s Uruguay. Argentina is the obvious neighbour guess, but it has far more people per cow.",
+  "pearl": "Uruguay’s ‘One Laptop per Child’ program, Plan Ceibal, began in 2007 and reached every public primary school student."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 28,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "The most volcanic place in the solar system.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Diameter",
+      "3,640",
+      "km",
+      "12000–13500",
+      "L"
+     ],
+     [
+      "Surface gravity",
+      "0.18",
+      "× Earth",
+      "0.9–1.1",
+      "L"
+     ],
+     [
+      "Day length",
+      "42",
+      "hours",
+      "20–28",
+      "H"
+     ],
+     [
+      "Active volcanoes",
+      "400",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Tallest volcanic plumes",
+      "400",
+      "km",
+      "<50",
+      "H"
+     ],
+     [
+      "Surface water",
+      "Almost none",
+      "",
+      "Oceans",
+      "!"
+     ],
+     [
+      "Surface colour",
+      "Yellow (sulphur)",
+      "",
+      "Blue and green",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Io",
+  "wrong": [
+   "Europa",
+   "The Moon",
+   "Enceladus",
+   "Triton",
+   "Venus"
+  ],
+  "hints": [
+   [
+    "Those plumes are ten times taller than any Earth eruption.",
+    [
+     "Tallest volcanic plumes"
+    ]
+   ],
+   [
+    "Bone dry and coated in sulphur.",
+    [
+     "Surface water",
+     "Surface colour"
+    ]
+   ]
+  ],
+  "key": [
+   "Tallest volcanic plumes",
+   "Surface water",
+   "Surface colour"
+  ],
+  "why": "About 400 active volcanoes, plumes reaching around 400 km high, a yellow sulphur-stained surface and almost no water, on a moon just a bit bigger than ours. It’s Io, Jupiter’s innermost large moon. Enceladus has plumes too, so that pick had logic, but they spray ice, not lava.",
+  "pearl": "Io’s heat comes from Jupiter’s gravity squeezing and stretching it, like a stress ball, as it orbits about every 42 hours."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 29,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Very dry, very old and lives along one river.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "108",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "Average rainfall",
+      "51",
+      "mm/yr",
+      "300–1500",
+      "L"
+     ],
+     [
+      "People living along one river",
+      "97",
+      "%",
+      "",
+      ""
+     ],
+     [
+      "Years its tallest building held the world record",
+      "3,800",
+      "",
+      "<100",
+      "H"
+     ],
+     [
+      "Famous female pharaoh",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Egypt",
+  "wrong": [
+   "Morocco",
+   "Sudan",
+   "Jordan",
+   "Tunisia",
+   "Algeria"
+  ],
+  "hints": [
+   [
+    "Hardly any rain, so everyone lives by the river.",
+    [
+     "Average rainfall",
+     "People living along one river"
+    ]
+   ],
+   [
+    "One tomb was the tallest structure on Earth for nearly 4,000 years.",
+    [
+     "Years its tallest building held the world record"
+    ]
+   ]
+  ],
+  "key": [
+   "Average rainfall",
+   "Years its tallest building held the world record",
+   "Famous female pharaoh"
+  ],
+  "why": "About 108 million people, roughly 51 mm of rain a year on average, about 97% of the population living in the Nile valley and delta, and a Great Pyramid that was the world’s tallest human-made structure for around 3,800 years. It’s Egypt. Sudan is a crafty guess: it actually has more pyramids than Egypt.",
+  "pearl": "Hatshepsut ruled Egypt as pharaoh for about 20 years around 1470 BC and is remembered for her trade expeditions and huge building projects."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 30,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Hangs around all day and takes life very, very slowly.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical mammal",
+    "rows": [
+     [
+      "Top speed",
+      "0.24",
+      "km/h",
+      "10–60",
+      "L"
+     ],
+     [
+      "Neck bones",
+      "9",
+      "",
+      "<8",
+      "H"
+     ],
+     [
+      "Toilet trips",
+      "1",
+      "per week",
+      "7–30",
+      "L"
+     ],
+     [
+      "Body temperature",
+      "32",
+      "°C",
+      "36–39",
+      "L"
+     ],
+     [
+      "Algae growing in its fur",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Three-toed sloth",
+  "wrong": [
+   "Koala",
+   "Slow loris",
+   "Giant anteater",
+   "Armadillo",
+   "Tree kangaroo"
+  ],
+  "hints": [
+   [
+    "Check the top speed. That’s a decimal point.",
+    [
+     "Top speed"
+    ]
+   ],
+   [
+    "Green fur and one bathroom trip a week.",
+    [
+     "Algae growing in its fur",
+     "Toilet trips"
+    ]
+   ]
+  ],
+  "key": [
+   "Top speed",
+   "Toilet trips",
+   "Algae growing in its fur"
+  ],
+  "why": "A top speed of about 0.24 km/h, one trip down the tree a week to go to the toilet, a lowish body temperature, algae growing in its fur, and extra neck bones (9 instead of the usual 7) for turning its head. It’s a three-toed sloth. Picked the koala? Great nap energy, wrong rainforest.",
+  "pearl": "Sloths are surprisingly good swimmers, moving about three times faster in water than on land."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 31,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Hot, humid, green and growing. Physically.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big city",
+    "rows": [
+     [
+      "Land added since the 1960s",
+      "28",
+      "%",
+      "<2",
+      "H"
+     ],
+     [
+      "Average humidity",
+      "82",
+      "%",
+      "50–75",
+      "H"
+     ],
+     [
+      "Rainfall",
+      "2,340",
+      "mm/yr",
+      "500–1500",
+      "H"
+     ],
+     [
+      "Highest point",
+      "164",
+      "m",
+      "",
+      ""
+     ],
+     [
+      "Street-food stall with a Michelin star",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Singapore",
+  "wrong": [
+   "Hong Kong",
+   "Kuala Lumpur",
+   "Bangkok",
+   "Dubai",
+   "Taipei"
+  ],
+  "hints": [
+   [
+    "This city keeps making more land.",
+    [
+     "Land added since the 1960s"
+    ]
+   ],
+   [
+    "Hawker stall dining, Michelin style.",
+    [
+     "Street-food stall with a Michelin star"
+    ]
+   ]
+  ],
+  "key": [
+   "Land added since the 1960s",
+   "Street-food stall with a Michelin star",
+   "Average humidity"
+  ],
+  "why": "Grown from about 582 km² to about 745 km² by reclaiming land from the sea, around 82% humidity and about 2,340 mm of rain a year, a highest point of just 164 m, and hawker stalls that have won Michelin stars. It’s Singapore. Dubai has reclaimed land too, a reasonable pick, but it gets about 100 mm of rain a year.",
+  "pearl": "In 2016 a soya sauce chicken stall at Chinatown Complex became one of the world’s first street-food stalls to earn a Michelin star."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 32,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Very tall. No, taller than that.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical supertall skyscraper",
+    "rows": [
+     [
+      "Height",
+      "828",
+      "m",
+      "300–650",
+      "H"
+     ],
+     [
+      "Floors",
+      "163",
+      "",
+      "60–130",
+      "H"
+     ],
+     [
+      "Year opened",
+      "2010",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Seen from up to",
+      "95",
+      "km",
+      "",
+      ""
+     ],
+     [
+      "Top cooler than the base by",
+      "6",
+      "°C",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Burj Khalifa",
+  "wrong": [
+   "Merdeka 118",
+   "Shanghai Tower",
+   "Taipei 101",
+   "Tokyo Skytree",
+   "Petronas Towers"
+  ],
+  "hints": [
+   [
+    "Nothing else is this tall. Nothing.",
+    [
+     "Height"
+    ]
+   ],
+   [
+    "Count the floors.",
+    [
+     "Floors"
+    ]
+   ]
+  ],
+  "key": [
+   "Height",
+   "Floors"
+  ],
+  "why": "828 m tall with 163 floors, opened in 2010, visible from about 95 km away, and up to 6 °C cooler at the top than at street level. It’s the Burj Khalifa in Dubai, the tallest building in the world. Merdeka 118 in Kuala Lumpur is second at about 679 m, a smart pick, but nearly 150 m short.",
+  "pearl": "The Burj Khalifa took about six years to build and is covered in about 26,000 glass panels."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 33,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Stocky, burrowing and surprisingly quick off the mark.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical burrowing mammal",
+    "rows": [
+     [
+      "Weight",
+      "30",
+      "kg",
+      "1–40",
+      ""
+     ],
+     [
+      "Top speed",
+      "40",
+      "km/h",
+      "10–25",
+      "H"
+     ],
+     [
+      "Pouch opens",
+      "Backwards",
+      "",
+      "Forwards",
+      "!"
+     ],
+     [
+      "Droppings per night",
+      "90",
+      "",
+      "<20",
+      "H"
+     ],
+     [
+      "Droppings shape",
+      "Cubes",
+      "",
+      "Round",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Wombat",
+  "wrong": [
+   "Badger",
+   "Koala",
+   "Tasmanian devil",
+   "Capybara",
+   "Groundhog"
+  ],
+  "hints": [
+   [
+    "A backwards pouch keeps dirt out while digging.",
+    [
+     "Pouch opens",
+     "Top speed"
+    ]
+   ],
+   [
+    "The poo is the giveaway. Look at the shape.",
+    [
+     "Droppings shape",
+     "Droppings per night"
+    ]
+   ]
+  ],
+  "key": [
+   "Droppings shape",
+   "Pouch opens",
+   "Top speed"
+  ],
+  "why": "Sprints at up to about 40 km/h, has a backwards-facing pouch so it doesn’t fill with dirt while digging, and leaves around 80 to 100 cube-shaped droppings a night to mark its patch. It’s a wombat. Picked the badger? Good digger, round poo.",
+  "pearl": "Wombats are the only animals known to make cube-shaped poo, which helps it stay put on rocks and logs."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 34,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Small, green and buzzing.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "2.1",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Forest cover",
+      "58",
+      "%",
+      "10–45",
+      "H"
+     ],
+     [
+      "Registered caves",
+      "15,844",
+      "",
+      "<1000",
+      "H"
+     ],
+     [
+      "Beekeepers per 1,000 people",
+      "5",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "Coastline",
+      "47",
+      "km",
+      "200–5000",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Slovenia",
+  "wrong": [
+   "Slovakia",
+   "Croatia",
+   "Austria",
+   "Montenegro",
+   "Estonia"
+  ],
+  "hints": [
+   [
+    "Look at the bees.",
+    [
+     "Beekeepers per 1,000 people"
+    ]
+   ],
+   [
+    "Very short coast, lots of caves underneath.",
+    [
+     "Coastline",
+     "Registered caves"
+    ]
+   ]
+  ],
+  "key": [
+   "Beekeepers per 1,000 people",
+   "Registered caves",
+   "Coastline"
+  ],
+  "why": "About 2.1 million people, nearly 60% forest, almost 16,000 registered caves, about 5 beekeepers per 1,000 people and only about 47 km of coastline. It’s Slovenia. Slovakia is the classic mix-up, and no shame in it. But Slovakia has no coast at all.",
+  "pearl": "Climber Janja Garnbret, widely called the best sport climber ever, won Olympic gold for Slovenia in 2021 and 2024. Slovenia also proposed World Bee Day (20 May)."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 35,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Icy on the outside, maybe very interesting on the inside.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Diameter",
+      "3,120",
+      "km",
+      "12000–13500",
+      "L"
+     ],
+     [
+      "Surface gravity",
+      "0.13",
+      "× Earth",
+      "0.9–1.1",
+      "L"
+     ],
+     [
+      "Surface temperature (equator)",
+      "−160",
+      "°C",
+      "−90–60",
+      "L"
+     ],
+     [
+      "Ice crust thickness",
+      "20",
+      "km",
+      "<4",
+      "H"
+     ],
+     [
+      "Water in its hidden ocean",
+      "2",
+      "× Earth’s oceans",
+      "0.9–1.1",
+      "H"
+     ],
+     [
+      "Orbits once every",
+      "3.5",
+      "Earth days",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Europa",
+  "wrong": [
+   "Enceladus",
+   "Ganymede",
+   "Callisto",
+   "Titan",
+   "Triton"
+  ],
+  "hints": [
+   [
+    "A moon smaller than ours with more water than Earth.",
+    [
+     "Water in its hidden ocean",
+     "Diameter"
+    ]
+   ],
+   [
+    "A very thick ice shell on top.",
+    [
+     "Ice crust thickness"
+    ]
+   ]
+  ],
+  "key": [
+   "Water in its hidden ocean",
+   "Ice crust thickness",
+   "Diameter"
+  ],
+  "why": "Slightly smaller than our Moon, about −160 °C at the equator, with an ice shell roughly 15 to 25 km thick over a salty ocean that may hold about twice as much water as all of Earth’s oceans. It’s Europa, one of Jupiter’s moons. Enceladus also hides an ocean, so that guess had brains, but it’s tiny, only about 500 km across.",
+  "pearl": "NASA’s Europa Clipper launched in 2024 and is due to reach Jupiter in 2030 to study whether Europa could support life."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 36,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Pasta, history and two whole countries tucked inside.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "59",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "UNESCO World Heritage Sites",
+      "62",
+      "",
+      "<20",
+      "H"
+     ],
+     [
+      "Pasta per person",
+      "23",
+      "kg/yr",
+      "1–10",
+      "H"
+     ],
+     [
+      "Countries entirely inside it",
+      "2",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "First woman to earn a university doctorate",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Italy",
+  "wrong": [
+   "Spain",
+   "Greece",
+   "France",
+   "Portugal",
+   "Croatia"
+  ],
+  "hints": [
+   [
+    "Check the pasta.",
+    [
+     "Pasta per person"
+    ]
+   ],
+   [
+    "More World Heritage Sites than any other country, and two countries inside it.",
+    [
+     "UNESCO World Heritage Sites",
+     "Countries entirely inside it"
+    ]
+   ]
+  ],
+  "key": [
+   "Pasta per person",
+   "UNESCO World Heritage Sites",
+   "Countries entirely inside it"
+  ],
+  "why": "More UNESCO World Heritage Sites than any other country (62), about 23 kg of pasta per person a year, and San Marino and Vatican City sitting entirely inside its borders. It’s Italy. Picked France? Lovely food, but it eats far less pasta.",
+  "pearl": "In 1678 Elena Cornaro Piscopia earned a doctorate at the University of Padua, the first woman known to receive a doctoral degree."
+ }
+]
