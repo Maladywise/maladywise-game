@@ -1,7 +1,126 @@
 [
  {
-  "date": "2026-11-01",
-  "number": 7,
+  "difficulty": "Easy",
+  "vignette": "A 27-year-old woman, three days into a chest infection, says her heart is racing. Temperature 38.4 °C. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 124,
+    "pr": 140
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Sinus tachycardia",
+  "options": [
+   "Sinus tachycardia",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial flutter with 2:1 block",
+   "Atrial fibrillation",
+   "Ventricular tachycardia",
+   "Multifocal atrial tachycardia"
+  ],
+  "hints": [
+   "Is there a P wave in front of every QRS?",
+   "Upright P before every beat, regular, about 120/min. Nothing fancy."
+  ],
+  "explanation": "A regular narrow-complex rhythm at about 125/min with an upright P wave before every QRS and a constant PR interval. That is sinus rhythm, just fast. Fever, pain, dehydration, anaemia, anxiety, PE and thyrotoxicosis are the usual drivers; the real job is finding the cause.",
+  "features": [
+   "Rate about 125/min, regular",
+   "Upright P wave before every QRS in lead II",
+   "Constant PR (about 140 ms), narrow QRS"
+  ],
+  "pearl": "Sinus tachycardia is a sign, not a diagnosis. A rate fixed at exactly 150/min should make you hunt for flutter waves instead.",
+  "seed": "2026-10-26"
+ },
+ {
+  "difficulty": "Easy",
+  "vignette": "A 71-year-old woman on a beta blocker and diltiazem has a routine ECG at her GP check-up. She feels fine.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 64,
+    "pr": 290
+   }
+  },
+  "highlight": {
+   "marks": [
+    "pr"
+   ]
+  },
+  "answer": "First-degree AV block",
+  "options": [
+   "First-degree AV block",
+   "Second-degree AV block, Mobitz I",
+   "Second-degree AV block, Mobitz II",
+   "Complete heart block",
+   "Sinus bradycardia",
+   "Junctional rhythm"
+  ],
+  "hints": [
+   "Measure from the start of the P wave to the start of the QRS.",
+   "Every P conducts. The PR is long, but it never changes."
+  ],
+  "explanation": "Every P wave is followed by a QRS, the rhythm is regular, and the PR interval is fixed at about 290 ms. A PR over 200 ms (one big square) with no dropped beats is first-degree AV block. AV-nodal drugs, like this combination, are a classic cause; so are high vagal tone in athletes and age-related conduction disease.",
+  "features": [
+   "PR interval about 290 ms (normal 120–200 ms)",
+   "PR constant from beat to beat",
+   "Every P wave conducts: no dropped beats"
+  ],
+  "pearl": "One big square is 200 ms. If the PR is longer than one big square, it is first-degree block. It is really 'AV delay', not block: nothing is actually blocked.",
+  "seed": "2026-10-27"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 22-year-old non-binary university rower has a pre-season ECG. They feel well; resting pulse is slow and a little irregular.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "wenck",
+    "rate": 78,
+    "prs": [
+     190,
+     290,
+     340
+    ],
+    "phase": 1
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "pr",
+    "dropped"
+   ]
+  },
+  "answer": "Second-degree AV block, Mobitz I (Wenckebach)",
+  "options": [
+   "Second-degree AV block, Mobitz I (Wenckebach)",
+   "Second-degree AV block, Mobitz II",
+   "First-degree AV block",
+   "Complete heart block",
+   "Sinus arrhythmia",
+   "Blocked atrial ectopics"
+  ],
+  "hints": [
+   "Look at the PR interval, beat by beat.",
+   "The PR stretches, then one P wave stands alone with no QRS."
+  ],
+  "explanation": "The PR interval lengthens with each beat (about 190, 290, then 340 ms) until a P wave fails to conduct; the cycle then resets with the shortest PR. That gives grouped beating. The block is usually in the AV node, so it is often benign in athletes, during sleep and with high vagal tone, though drugs and inferior MI can cause it too.",
+  "features": [
+   "Progressive PR prolongation",
+   "Then a non-conducted P wave (dropped QRS)",
+   "Shortest PR straight after the pause; grouped beating"
+  ],
+  "pearl": "Compare the PR just before and just after the dropped beat. Different: Wenckebach. Identical: think Mobitz II.",
+  "seed": "2026-10-28"
+ },
+ {
   "difficulty": "Genius",
   "vignette": "A 41-year-old Filipino man fainted overnight while sleeping off a fever of 39.5 °C. His uncle died suddenly in his sleep at 45.",
   "ecg": {
@@ -43,11 +162,10 @@
    "ST slopes down into inverted T waves",
    "r′ in V1, no reciprocal change, other leads normal"
   ],
-  "pearl": "Recording V1–V2 one or two rib spaces higher increases the chance of catching a type 1 pattern."
+  "pearl": "Recording V1–V2 one or two rib spaces higher increases the chance of catching a type 1 pattern.",
+  "seed": "2026-11-01"
  },
  {
-  "date": "2026-11-02",
-  "number": 8,
   "difficulty": "Easy",
   "vignette": "A 31-year-old wheelchair basketballer in the national Paralympic squad has a routine pre-season ECG. She feels great.",
   "ecg": {
@@ -83,11 +201,10 @@
    "Normal P before every QRS; PR about 170 ms",
    "Regular, narrow QRS"
   ],
-  "pearl": "Rate shortcut: 300 ÷ number of big squares between R waves. About six and a half big squares here, so roughly 46/min."
+  "pearl": "Rate shortcut: 300 ÷ number of big squares between R waves. About six and a half big squares here, so roughly 46/min.",
+  "seed": "2026-11-02"
  },
  {
-  "date": "2026-11-03",
-  "number": 9,
   "difficulty": "Easy",
   "vignette": "A 63-year-old man with a heart attack two years ago has palpitations and feels light-headed. BP 92/60.",
   "ecg": {
@@ -123,11 +240,10 @@
    "Broad QRS (about 165 ms), all the same shape",
    "Dissociated P waves visible here and there"
   ],
-  "pearl": "Assume any broad-complex tachycardia is VT until proven otherwise. After a previous MI, the vast majority are."
+  "pearl": "Assume any broad-complex tachycardia is VT until proven otherwise. After a previous MI, the vast majority are.",
+  "seed": "2026-11-03"
  },
  {
-  "date": "2026-11-04",
-  "number": 10,
   "difficulty": "Medium",
   "vignette": "A 70-year-old woman with COPD has felt 'fluttery' and short of breath since yesterday.",
   "ecg": {
@@ -171,11 +287,10 @@
    "Variable conduction: 2:1, 3:1 and 4:1",
    "Narrow QRS"
   ],
-  "pearl": "Flutter waves arrive once every big square (200 ms = 300/min). An organised, regular baseline means flutter, even when the QRS rhythm is irregular."
+  "pearl": "Flutter waves arrive once every big square (200 ms = 300/min). An organised, regular baseline means flutter, even when the QRS rhythm is irregular.",
+  "seed": "2026-11-04"
  },
  {
-  "date": "2026-11-05",
-  "number": 11,
   "difficulty": "Medium",
   "vignette": "A 79-year-old woman has had two blackouts this week, one while sitting watching TV.",
   "ecg": {
@@ -241,11 +356,10 @@
    "Constant PR (about 180 ms) in conducted beats",
    "Sudden non-conducted P wave; broad QRS"
   ],
-  "pearl": "Mobitz I: PR stretches, then drops (usually the AV node, often benign). Mobitz II: PR fixed, then drops (usually below the node, high risk)."
+  "pearl": "Mobitz I: PR stretches, then drops (usually the AV node, often benign). Mobitz II: PR fixed, then drops (usually below the node, high risk).",
+  "seed": "2026-11-05"
  },
  {
-  "date": "2026-11-06",
-  "number": 12,
   "difficulty": "Hard",
   "vignette": "A 72-year-old woman with heart failure has a pre-op ECG before cataract surgery. No chest pain.",
   "ecg": {
@@ -301,11 +415,10 @@
    "Broad notched R in I, aVL, V5–V6; no septal q",
    "Discordant ST-T changes"
   ],
-  "pearl": "WiLLiaM MaRRoW: W in V1 and M in V6 is LBBB; M in V1 and W in V6 is RBBB. LBBB hides ischaemia; the Sgarbossa criteria help in the right setting."
+  "pearl": "WiLLiaM MaRRoW: W in V1 and M in V6 is LBBB; M in V1 and W in V6 is RBBB. LBBB hides ischaemia; the Sgarbossa criteria help in the right setting.",
+  "seed": "2026-11-06"
  },
  {
-  "date": "2026-11-07",
-  "number": 13,
   "difficulty": "Hard",
   "vignette": "A 26-year-old man has had sharp chest pain for two days, worse lying flat and better leaning forward. He had a cold last week.",
   "ecg": {
@@ -359,59 +472,10 @@
    "aVR: ST depression with PR elevation",
    "No reciprocal change except aVR and V1"
   ],
-  "pearl": "PR elevation in aVR is the quiet tell of pericarditis. An ST/T ratio over 0.25 in V6 favours pericarditis over early repolarisation."
+  "pearl": "PR elevation in aVR is the quiet tell of pericarditis. An ST/T ratio over 0.25 in V6 favours pericarditis over early repolarisation.",
+  "seed": "2026-11-07"
  },
  {
-  "date": "2026-11-08",
-  "number": 14,
-  "difficulty": "Genius",
-  "vignette": "A 54-year-old woman had 20 minutes of chest pain while gardening yesterday. She is pain-free in the emergency department now.",
-  "ecg": {
-   "layout": "12",
-   "preset": "wellens",
-   "rhythm": {
-    "type": "sinus",
-    "rate": 70
-   }
-  },
-  "highlight": {
-   "boxes": [
-    {
-     "leads": [
-      "V2",
-      "V3",
-      "V4"
-     ],
-     "label": "deep symmetric T"
-    }
-   ],
-   "marks": []
-  },
-  "answer": "Wellens syndrome",
-  "options": [
-   "Wellens syndrome",
-   "Anterior STEMI",
-   "Posterior MI",
-   "Hypokalaemia",
-   "Left ventricular hypertrophy with strain",
-   "Acute pericarditis"
-  ],
-  "hints": [
-   "She's pain-free. Look at the T waves in V2 and V3.",
-   "Deep, symmetrical T inversion, preserved R waves, almost no ST elevation."
-  ],
-  "explanation": "Deep, symmetrical T-wave inversion in V2–V4 (type B Wellens; type A is biphasic), with preserved R waves, no Q waves and minimal ST change, recorded after chest pain has settled. This pattern points to a critical proximal left anterior descending (LAD) stenosis and a high risk of a large anterior MI in the coming days.",
-  "features": [
-   "Deep symmetrical T inversion in V2–V4",
-   "Preserved R waves, no Q waves",
-   "Isoelectric or minimally raised ST",
-   "Recorded in a pain-free period"
-  ],
-  "pearl": "Wellens is a pain-free ECG. If the pain returns, the T waves can 'pseudo-normalise', so a normal-looking repeat ECG can be falsely reassuring."
- },
- {
-  "date": "2026-11-09",
-  "number": 15,
   "difficulty": "Easy",
   "vignette": "A 19-year-old woman felt her heart start pounding suddenly while bending to tie her shoelaces. She is otherwise well.",
   "ecg": {
@@ -445,11 +509,10 @@
    "Narrow QRS",
    "No P waves visible before the QRS"
   ],
-  "pearl": "In AVNRT, look for a 'pseudo-r′' in V1 or 'pseudo-S' in the inferior leads: the retrograde P wave hiding at the end of the QRS."
+  "pearl": "In AVNRT, look for a 'pseudo-r′' in V1 or 'pseudo-S' in the inferior leads: the retrograde P wave hiding at the end of the QRS.",
+  "seed": "2026-11-09"
  },
  {
-  "date": "2026-11-10",
-  "number": 16,
   "difficulty": "Easy",
   "vignette": "A 48-year-old woman notices 'skipped beats' after her third coffee of the morning.",
   "ecg": {
@@ -484,13 +547,12 @@
    "PVC: early, broad (about 150 ms), no P wave",
    "Discordant T wave and full compensatory pause"
   ],
-  "pearl": "Full compensatory pause: the sinus beat after a PVC lands exactly two cycles after the one before it, because the sinus node never noticed the PVC."
+  "pearl": "Full compensatory pause: the sinus beat after a PVC lands exactly two cycles after the one before it, because the sinus node never noticed the PVC.",
+  "seed": "2026-11-10"
  },
  {
-  "date": "2026-11-11",
-  "number": 17,
   "difficulty": "Medium",
-  "vignette": "Remembrance Day. An 82-year-old woman feels exhausted and dizzy. Pulse 38 and regular.",
+  "vignette": "An 82-year-old woman feels exhausted and dizzy. Pulse 38 and regular.",
   "ecg": {
    "layout": "strip",
    "rhythm": {
@@ -526,11 +588,10 @@
    "No consistent PR: complete AV dissociation",
    "P waves hide in QRS and T waves"
   ],
-  "pearl": "In complete heart block the atria beat faster than the ventricles. If the ventricles are faster, think of another cause of AV dissociation, such as VT."
+  "pearl": "In complete heart block the atria beat faster than the ventricles. If the ventricles are faster, think of another cause of AV dissociation, such as VT.",
+  "seed": "2026-11-11"
  },
  {
-  "date": "2026-11-12",
-  "number": 18,
   "difficulty": "Medium",
   "vignette": "A 69-year-old man on digoxin and a beta blocker feels tired. Pulse 48 and regular.",
   "ecg": {
@@ -564,11 +625,10 @@
    "Narrow QRS",
    "No P before the QRS; retrograde inverted P just after"
   ],
-  "pearl": "Escape rates: sinus 60–100, junction 40–60, ventricle 20–40. Narrow at 40–60 is junctional; broad at 20–40 is ventricular."
+  "pearl": "Escape rates: sinus 60–100, junction 40–60, ventricle 20–40. Narrow at 40–60 is junctional; broad at 20–40 is ventricular.",
+  "seed": "2026-11-12"
  },
  {
-  "date": "2026-11-13",
-  "number": 19,
   "difficulty": "Hard",
   "vignette": "A 58-year-old woman has a routine ECG for a new job. She is well, with no symptoms.",
   "ecg": {
@@ -622,11 +682,10 @@
    "Wide slurred S in I, aVL, V5–V6",
    "Secondary T inversion in V1–V2"
   ],
-  "pearl": "Unlike LBBB, RBBB doesn't hide a STEMI: the start of the QRS is normal, so ST elevation stays readable."
+  "pearl": "Unlike LBBB, RBBB doesn't hide a STEMI: the start of the QRS is normal, so ST elevation stays readable.",
+  "seed": "2026-11-13"
  },
  {
-  "date": "2026-11-14",
-  "number": 20,
   "difficulty": "Hard",
   "vignette": "A 54-year-old Aboriginal man presents to a remote clinic in the Northern Territory with an hour of crushing central chest pain.",
   "ecg": {
@@ -679,11 +738,10 @@
    "ST elevation in I and aVL",
    "Reciprocal ST depression in III and aVF"
   ],
-  "pearl": "ST elevation in aVL with inferior ST depression points to a proximal LAD occlusion, so a bigger territory is at risk."
+  "pearl": "ST elevation in aVL with inferior ST depression points to a proximal LAD occlusion, so a bigger territory is at risk.",
+  "seed": "2026-11-14"
  },
  {
-  "date": "2026-11-15",
-  "number": 21,
   "difficulty": "Genius",
   "vignette": "A 66-year-old woman with diabetes has had two hours of upper abdominal discomfort and breathlessness. 'Just indigestion,' she says.",
   "ecg": {
@@ -726,11 +784,10 @@
    "Upright T waves in V1–V3",
    "Tall, broad R in V2 (R/S > 1)"
   ],
-  "pearl": "Flip the ECG over and hold it up to the light: the V1–V3 changes turn into Q waves and ST elevation."
+  "pearl": "Flip the ECG over and hold it up to the light: the V1–V3 changes turn into Q waves and ST elevation.",
+  "seed": "2026-11-15"
  },
  {
-  "date": "2026-11-16",
-  "number": 22,
   "difficulty": "Easy",
   "vignette": "A 57-year-old man collapses at a footy club barbecue. Bystanders start CPR; compressions pause while the AED analyses the rhythm.",
   "ecg": {
@@ -762,11 +819,10 @@
    "Chaotic, irregular waveform",
    "Varying amplitude (coarse VF)"
   ],
-  "pearl": "Coarse VF fades to fine VF, then asystole, over minutes. Survival drops by roughly 10% for every minute without CPR and defibrillation. Learn CPR."
+  "pearl": "Coarse VF fades to fine VF, then asystole, over minutes. Survival drops by roughly 10% for every minute without CPR and defibrillation. Learn CPR.",
+  "seed": "2026-11-16"
  },
  {
-  "date": "2026-11-17",
-  "number": 23,
   "difficulty": "Easy",
   "vignette": "A 17-year-old high-school runner has a sports ECG. The machine flagged 'irregular rhythm' and her mum is worried.",
   "ecg": {
@@ -803,11 +859,10 @@
    "Constant PR interval",
    "R-R intervals vary smoothly and cyclically"
   ],
-  "pearl": "Healthy hearts are not metronomes. Loss of sinus arrhythmia with age or diabetes reflects reduced vagal tone."
+  "pearl": "Healthy hearts are not metronomes. Loss of sinus arrhythmia with age or diabetes reflects reduced vagal tone.",
+  "seed": "2026-11-17"
  },
  {
-  "date": "2026-11-18",
-  "number": 24,
   "difficulty": "Medium",
   "vignette": "A 76-year-old woman admitted with a severe COPD flare is breathless on the ward. The monitor alarms for an irregular tachycardia.",
   "ecg": {
@@ -842,55 +897,10 @@
    "Three or more distinct P-wave shapes",
    "Varying PR intervals"
   ],
-  "pearl": "The same picture under 100/min is called a wandering atrial pacemaker."
+  "pearl": "The same picture under 100/min is called a wandering atrial pacemaker.",
+  "seed": "2026-11-18"
  },
  {
-  "date": "2026-11-19",
-  "number": 25,
-  "difficulty": "Medium",
-  "vignette": "A 34-year-old woman on methadone, recently started on a macrolide antibiotic, suddenly collapses. The ward monitor shows:",
-  "ecg": {
-   "layout": "strip",
-   "rhythm": {
-    "type": "torsades",
-    "rate": 64,
-    "from": 3.4,
-    "trate": 228,
-    "tw": 2.1,
-    "pr": 170
-   },
-   "qtc": 0.6
-  },
-  "highlight": {
-   "marks": [
-    "qt",
-    "twist"
-   ]
-  },
-  "answer": "Torsades de pointes",
-  "options": [
-   "Torsades de pointes",
-   "Ventricular fibrillation",
-   "Monomorphic ventricular tachycardia",
-   "Atrial fibrillation with WPW",
-   "Monitor artefact",
-   "SVT with aberrancy"
-  ],
-  "hints": [
-   "Look at the beats before it started. Check the QT.",
-   "Polymorphic VT whose QRS amplitude twists around the baseline."
-  ],
-  "explanation": "Sinus beats with a very long QT, then an early beat lands on the T wave and triggers a fast polymorphic broad-complex tachycardia whose amplitude waxes and wanes, appearing to twist around the baseline. That is torsades de pointes, a polymorphic VT driven by QT prolongation, here from two QT-prolonging drugs. Low potassium and magnesium add fuel.",
-  "features": [
-   "Long QT in the preceding sinus beats",
-   "Polymorphic VT at about 230/min",
-   "Amplitude waxes and wanes: 'twisting of the points'"
-  ],
-  "pearl": "A QTc over 500 ms markedly raises torsades risk, especially when QT-prolonging drugs (methadone, macrolides, ondansetron, some antipsychotics) are combined."
- },
- {
-  "date": "2026-11-20",
-  "number": 26,
   "difficulty": "Hard",
   "vignette": "A 23-year-old woman has had episodes of sudden fast palpitations since her teens. This ECG is between episodes.",
   "ecg": {
@@ -944,11 +954,10 @@
    "Broad QRS (about 130 ms)",
    "Dominant R in V1; pseudo-Q in III"
   ],
-  "pearl": "AF in WPW looks like an irregular, very fast broad-complex tachycardia. It is dangerous because the accessory pathway has no 'speed limit' like the AV node."
+  "pearl": "AF in WPW looks like an irregular, very fast broad-complex tachycardia. It is dangerous because the accessory pathway has no 'speed limit' like the AV node.",
+  "seed": "2026-11-20"
  },
  {
-  "date": "2026-11-21",
-  "number": 27,
   "difficulty": "Hard",
   "vignette": "A 19-year-old woman fainted the moment her alarm clock went off this morning. Her brother died suddenly and unexpectedly at 24.",
   "ecg": {
@@ -994,11 +1003,10 @@
    "T wave ends beyond the R-R midpoint",
    "Broad, notched (bifid) T waves"
   ],
-  "pearl": "Triggers by type: LQT1 exercise and swimming, LQT2 sudden noise or emotion, LQT3 rest and sleep."
+  "pearl": "Triggers by type: LQT1 exercise and swimming, LQT2 sudden noise or emotion, LQT3 rest and sleep.",
+  "seed": "2026-11-21"
  },
  {
-  "date": "2026-11-22",
-  "number": 28,
   "difficulty": "Genius",
   "vignette": "A 70-year-old woman is rescued after a fall on an overnight bushwalk in the Tasmanian highlands. Core temperature 30.5 °C; she is shivering.",
   "ecg": {
@@ -1045,11 +1053,10 @@
    "Long QT",
    "Shivering artefact"
   ],
-  "pearl": "Osborn waves are not unique to cold: hypercalcaemia, brain injury and subarachnoid haemorrhage can produce them too."
+  "pearl": "Osborn waves are not unique to cold: hypercalcaemia, brain injury and subarachnoid haemorrhage can produce them too.",
+  "seed": "2026-11-22"
  },
  {
-  "date": "2026-11-23",
-  "number": 29,
   "difficulty": "Easy",
   "vignette": "An 84-year-old woman with a pacemaker attends her routine device check. She feels well.",
   "ecg": {
@@ -1084,11 +1091,10 @@
    "Ventricular spike, then a broad QRS",
    "Regular at the programmed rate, about 70/min"
   ],
-  "pearl": "Right ventricular apical pacing gives an LBBB-like QRS with a superior axis, so the QRS is negative in II, III and aVF."
+  "pearl": "Right ventricular apical pacing gives an LBBB-like QRS with a superior axis, so the QRS is negative in II, III and aVF.",
+  "seed": "2026-11-23"
  },
  {
-  "date": "2026-11-24",
-  "number": 30,
   "difficulty": "Easy",
   "vignette": "A 38-year-old woman notices occasional 'thuds' in her chest when lying in bed at night.",
   "ecg": {
@@ -1132,11 +1138,10 @@
    "Narrow QRS, same shape as the sinus beats",
    "Non-compensatory pause (sinus node reset)"
   ],
-  "pearl": "PVC: broad, no P wave, full compensatory pause. PAC: narrow, odd P wave, non-compensatory pause."
+  "pearl": "PVC: broad, no P wave, full compensatory pause. PAC: narrow, odd P wave, non-compensatory pause.",
+  "seed": "2026-11-24"
  },
  {
-  "date": "2026-11-25",
-  "number": 31,
   "difficulty": "Medium",
   "vignette": "A 61-year-old man's heart has been 'just racing' since this morning. The monitor shows a rate stuck at 150.",
   "ecg": {
@@ -1173,11 +1178,10 @@
    "Sawtooth F waves at 300/min",
    "Every second F wave buried in the QRS or T"
   ],
-  "pearl": "Any regular narrow-complex tachycardia at 150/min is flutter with 2:1 block until proven otherwise."
+  "pearl": "Any regular narrow-complex tachycardia at 150/min is flutter with 2:1 block until proven otherwise.",
+  "seed": "2026-11-25"
  },
  {
-  "date": "2026-11-26",
-  "number": 32,
   "difficulty": "Medium",
   "vignette": "A 74-year-old woman reports brief light-headed spells. This strip catches one.",
   "ecg": {
@@ -1217,11 +1221,10 @@
    "No P wave during the pause",
    "Pause not an exact multiple of the P-P interval"
   ],
-  "pearl": "Pause an exact multiple of P-P: sinoatrial exit block. Not a multiple: sinus arrest. A P wave hiding in the preceding T: blocked PAC, the commonest cause of a pause."
+  "pearl": "Pause an exact multiple of P-P: sinoatrial exit block. Not a multiple: sinus arrest. A P wave hiding in the preceding T: blocked PAC, the commonest cause of a pause.",
+  "seed": "2026-11-26"
  },
  {
-  "date": "2026-11-27",
-  "number": 33,
   "difficulty": "Hard",
   "vignette": "A 60-year-old woman with long-standing high blood pressure has become breathless walking uphill.",
   "ecg": {
@@ -1273,11 +1276,10 @@
    "R in aVL about 11 mm",
    "Lateral downsloping ST depression with asymmetric T inversion"
   ],
-  "pearl": "Voltage criteria are insensitive, and young, slim people can exceed them without LVH. Strain changes make true LVH much more likely."
+  "pearl": "Voltage criteria are insensitive, and young, slim people can exceed them without LVH. Strain changes make true LVH much more likely.",
+  "seed": "2026-11-27"
  },
  {
-  "date": "2026-11-28",
-  "number": 34,
   "difficulty": "Hard",
   "vignette": "A 45-year-old woman has had three weeks of vomiting and diarrhoea and now has muscle cramps and weakness.",
   "ecg": {
@@ -1321,11 +1323,10 @@
    "Mild ST depression",
    "Long QU interval"
   ],
-  "pearl": "In hypokalaemia, the T falls and the U rises. Mistaking the U for the T gives a falsely long QT."
+  "pearl": "In hypokalaemia, the T falls and the U rises. Mistaking the U for the T gives a falsely long QT.",
+  "seed": "2026-11-28"
  },
  {
-  "date": "2026-11-29",
-  "number": 35,
   "difficulty": "Genius",
   "vignette": "A 49-year-old woman has had 30 minutes of crushing chest pain that started while shovelling soil. She is still in pain.",
   "ecg": {
@@ -1377,11 +1378,10 @@
    "Mild ST elevation in aVR",
    "Ongoing chest pain"
   ],
-  "pearl": "Tall T waves plus upsloping ST depression plus pain: think de Winter. Wellens, by contrast, appears once the pain has gone."
+  "pearl": "Tall T waves plus upsloping ST depression plus pain: think de Winter. Wellens, by contrast, appears once the pain has gone.",
+  "seed": "2026-11-29"
  },
  {
-  "date": "2026-11-30",
-  "number": 36,
   "difficulty": "Easy",
   "vignette": "A 33-year-old woman, 20 weeks pregnant, has an ECG for occasional palpitations. This trace was recorded during one.",
   "ecg": {
@@ -1417,6 +1417,7 @@
    "Regular, with a P wave before every QRS",
    "Normal PR and QRS"
   ],
-  "pearl": "Read every ECG the same way: rate, rhythm, axis, intervals, morphology. A system beats a hunch."
+  "pearl": "Read every ECG the same way: rate, rhythm, axis, intervals, morphology. A system beats a hunch.",
+  "seed": "2026-11-30"
  }
 ]

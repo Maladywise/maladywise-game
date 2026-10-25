@@ -175,6 +175,14 @@
       var m = Math.floor((st.t || 0) / 60), sec = ("0" + ((st.t || 0) % 60)).slice(-2);
       return { cls: "cb-news", html: '<div class="cb-paper"><span class="mast">The Malady Wise Times</span><b>SOLVED</b><span class="sig">in ' + m + ":" + sec + (st.hints ? " \u00b7 " + st.hints + " hints" : " \u00b7 unaided") + "</span></div>" + '<p class="cb-cap">' + (st.hints ? "Signed, sealed, solved." : "Unaided. Hold the front page.") + "</p>" };
     },
+    panelysis: function (st) {
+      if (!st.win) return null; var n = (st.picks || []).length;
+      return { cls: "cb-dx" + (n === 1 ? " gold" : ""), html: '<div class="cb-stamp">RESULTS<br>REVIEWED</div><p class="cb-cap">' + (n === 1 ? "First pick. Pathologist energy." : "Diagnosed on try " + n + ".") + "</p>" };
+    },
+    arrhythmix: function (st) {
+      if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
+      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (gold ? "Read on the first try. Show-off." : "Rhythm read on try " + n + ".") + "</p>" };
+    },
     zebritis: function (st) {
       if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
       if (st.zeb || st.win) return { cls: "cb-run", html: '<div class="cb-runner">\ud83e\udd93</div><p class="cb-cap">' + (st.zeb ? "Stripes earned." : "Solid round.") + "</p>" };
@@ -252,6 +260,8 @@
     ["clean", "🧼", "Clean Sheet", "Solve Comorbix with zero mistakes."],
     ["hole", "⛳", "Hole in One", "Solve Wordemic in one or two guesses."],
     ["firstclue", "🔎", "First-clue Wonder", "Solve Dxtective on the first clue."],
+    ["panel", "🧪", "Panel Beater", "Solve Panelysis on the first pick.", "medical"],
+    ["rhythm", "🫀", "Rhythm Master", "Read the Arrhythmix ECG on the first pick.", "medical"],
     ["queen", "🐝", "Queen Bee", "Reach Genius in Morphemia."],
     ["knowall", "🎓", "Know-it-all", "Score a perfect 10 in Triviosis."],
     ["speed", "⏱️", "Speed Surgeon", "Solve Gridectomy in under a minute, no reveals."],
@@ -292,6 +302,7 @@
     log.forEach(function (x) { if (x.at === today && !rows.some(function (r) { return r.g.id === x.g && r.today; })) { rows.forEach(function (r) { if (r.g.id === x.g) r.today = true; }); playedToday++; } });
     function any(id, f) { var R = rec[id] || {}; return Object.keys(R).some(function (d) { return f(R[d], d); }); }
     var daily = rows.filter(function (r) { return !r.weekly && r.g.live; }).map(function (r) { return r.g.id; });
+    var dfrom = {}; rows.forEach(function (r) { if (r.g.from) dfrom[r.g.id] = r.g.from; }); // newer games only count from their launch day
     var EINS = (N ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {};
     var zg = (window.MW_GAMES || []).filter(function (g) { return g.id === "zebritis"; })[0], zfrom = (zg && zg.special && zg.special.from) || "2026-10-28";
     var arch = {}; log.forEach(function (x) { var gg = rows.filter(function (r) { return r.g.id === x.g; })[0]; if (gg && !gg.weekly && x.d !== x.at) arch[x.at] = (arch[x.at] || 0) + 1; });
@@ -302,7 +313,7 @@
     var T = {
       first: solved >= 1,
       hattrick: Object.keys(dayG).some(function (d) { return Object.keys(dayG[d]).length >= 3; }),
-      fullward: !!get(P + "mw-wrc", "") || (daily.length > 0 && Object.keys(dayG).some(function (d) { return daily.every(function (id) { return rec[id] && rec[id][d]; }); })),
+      fullward: !!get(P + "mw-wrc", "") || (daily.length > 0 && Object.keys(dayG).some(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); })),
       week: best >= 7, month: best >= 30, century: solved >= 100,
       einstein: get(P + "mw-einstein", []).length > 0 || Object.keys(EINS).some(function (id) { return (EINS[id] || []).some(function (d) { return rec[id] && rec[id][d] && rec[id][d].win; }); }),
       unicorn: any("zebritis", function (v) { return v.uni; }),
@@ -312,6 +323,8 @@
       clean: any("comorbix", function (v) { return v.win && !v.mistakes; }),
       hole: any("wordemic", function (v) { return v.win && (v.guesses || []).length <= 2; }),
       firstclue: any("dx", function (v) { return v.win && v.revealed === 1; }),
+      panel: any("panelysis", function (v) { return v.win && (v.picks || []).length === 1; }),
+      rhythm: any("arrhythmix", function (v) { return v.win && (v.picks || []).length === 1; }),
       queen: any("morphemia", function (v) { return v.win || (v.rank || 0) >= 6; }),
       knowall: any("triviosis", function (v) { return v.score === 10; }),
       speed: any("gridectomy", function (v) { return v.win && (v.t || 999) < 60 && !v.reveals; }),
@@ -626,7 +639,7 @@
       var st = g.live ? readStats(g) : null;
       var status = !st ? "" : st.done ? (st.win ? "Solved. Smug. " : "Done. Humbled. ") + (st.s.streak ? "&middot; Streak <b>&#128293; " + st.s.streak + "</b>" : "") : st.s.streak ? "Streak <b>&#128293; " + st.s.streak + "</b>" : "";
       var btn = !g.live ? (g.from ? "From " + nice(g.from, { weekday: "short", day: "numeric", month: "short" }) : SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length]) : st && st.done ? "Review" : "Play";
-      var tag = g.live ? "a" : "div", med = NORMIE && !g.nmode;
+      var tag = g.live ? "a" : "div", med = false; // medical-only games are filtered out of Normie mode entirely
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (med ? " medonly" : "") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' +
@@ -659,8 +672,8 @@
         '<div class="cbody"><h2 class="name">Buy me a coffee</h2><p class="tag">Free, no ads, made after hours. A coffee keeps new puzzles coming.</p><div class="cfoot"><span class="play">Ko-fi \u2615</span></div></div></a>';
     }
     function order() {
-      var ORD = window.MW_ORDER || [], DAYS = { Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
-      return MW_GAMES.map(function (g, i) {
+      var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
+      return MW_GAMES.filter(inMode).map(function (g, i) {
         var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
         if (g.live && g.relday && DAYS[g.relday] === dw) k = 0.5; // release day: right after Dxtective
         return { g: g, i: k, d: st && st.done ? 1 : 0, m: inMode(g) ? 0 : 1 };
@@ -739,7 +752,7 @@
   function extras(g, box, today) {
     var arch = box.querySelector("details.archive");
     if (!arch) return;
-    var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id; }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
+    var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
     others.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
     var left = others.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
     var strip = el('<section class="mwx"><div class="mwx-head"><b>Keep playing</b><span>' + (left ? left + " left today" : "All done today. Show-off.") + '</span></div><div class="mwx-list">' +
@@ -772,6 +785,7 @@
       if (!g.store || !g.store.day) return;
       var rows = Array.prototype.slice.call(arch.querySelectorAll(".arow")), t = sydToday(), cur = (rows.filter(function (r) { return r.classList.contains("on"); })[0]);
       var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || t);
+      if (!cur && g.store.weekly && /^\d{4}-\d\d-\d\d$/.test(curD)) { var cn = dayNum(curD), cw = new Date(cn * 864e5).getUTCDay(); curD = new Date((cn - (cw - (g.store.weekStart == null ? 1 : g.store.weekStart) + 7) % 7) * 864e5).toISOString().slice(0, 10); } // weekly: this week's release day
       var curSt = get(g.store.day + curD, null);
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
       nx.hidden = true;
@@ -804,7 +818,7 @@
     var q = new URLSearchParams(location.search);
     function start() {
       sp.hidden = true; box.hidden = false; window.scrollTo(0, 0);
-      if (g.help && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, mascotHelp(g) + "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '<p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Find this again under the ? icon.</p>'); }, 350); }
+      if (g.help && !medOnly && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, mascotHelp(g) + "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '<p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Find this again under the ? icon.</p>'); }, 350); }
     }
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";
@@ -813,8 +827,8 @@
       var hd = box.querySelector(".head");
       if (hd) hd.parentNode.insertBefore(gt, hd.nextSibling); else box.insertBefore(gt, box.firstChild);
     }
-    var medNote = NORMIE && !g.nmode ? '<p class="mw-mednote">\ud83e\ude7a This one\u2019s medical only. Normie versions: ' + MW_GAMES.filter(function (x) { return x.nmode; }).map(function (x) { return '<a href="/' + x.path + '">' + x.name + "</a>"; }).join(", ") + ".</p>" : "";
-    if (medNote && box) box.insertAdjacentHTML("afterbegin", medNote);
+    // Medical-only games (no "normie" block) show their own "switch to Medical" note in Normie mode: no splash, no help pop-up.
+    var medOnly = NORMIE && !g.nmode, medNote = "";
     extras(g, box, today);
     var ab = window.MW_ABOUT && MW_ABOUT[g.id];
     if (ab) {
@@ -822,7 +836,7 @@
       var ld = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: ab[1].map(function (q) { return { "@type": "Question", name: q[0], acceptedAnswer: { "@type": "Answer", text: q[1] } }; }) };
       if (!g.nmode) { var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc); }
     }
-    if (q.get("date") || q.get("play") !== null) { start(); return; }
+    if (medOnly || q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
     sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
@@ -859,7 +873,7 @@
     if (rev) { var d = new Date(rev + " 1"); if (!isNaN(d)) ld.lastReviewed = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); }
     var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
     if (window.MW_GAMES && foot) {
-      var gl = MW_GAMES.filter(function (x) { return x.live; }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
+      var gl = MW_GAMES.filter(function (x) { return x.live && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
       gl.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
       var left2 = gl.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
       foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today\u2019s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
