@@ -183,6 +183,11 @@
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
       return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="' + (NORMIE ? "M0 104 L50 96 L90 100 L140 78 L190 84 L240 52 L290 60 L340 24 L400 12" : "M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400") + '"/></svg><p class="cb-cap">' + (NORMIE ? (gold ? "Nailed the trend. First try." : "Nailed the trend on try " + n + ".") : gold ? "Read on the first try. Show-off." : "Rhythm read on try " + n + ".") + "</p>" };
     },
+    sudokrine: function (st) {
+      if (!st.win) return null; var gold = !st.hints, m = Math.floor((st.t || 0) / 60), sec = ("0" + ((st.t || 0) % 60)).slice(-2), h = "";
+      for (var k = 0; k < 9; k++) h += '<i style="animation-delay:' + (k * 0.07).toFixed(2) + 's"></i>';
+      return { cls: "cb-skr" + (gold ? " gold" : ""), html: '<div class="cb-sgrid">' + h + '</div><p class="cb-cap">' + (NORMIE ? (gold ? "Grid complete in " + m + ":" + sec + ". No hints." : "Grid complete in " + m + ":" + sec + ".") : (gold ? "Perfect balance. " + m + ":" + sec + ", no hints." : "Homeostasis restored in " + m + ":" + sec + ".")) + "</p>" };
+    },
     zebritis: function (st) {
       if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
       if (st.zeb || st.win) return { cls: "cb-run", html: '<div class="cb-runner">\ud83e\udd93</div><p class="cb-cap">' + (st.zeb ? "Stripes earned." : "Solid round.") + "</p>" };
@@ -267,6 +272,7 @@
     ["speed", "⏱️", "Speed Surgeon", "Solve Gridectomy in under a minute, no reveals."],
     ["chain", "🔗", "Unbreakable", "Solve Linkase without a single strike."],
     ["mend", "🪡", "Invisible Mend", "Solve Suturix without a hint."],
+    ["balance", "⚖️", "Hormone Balance", "Solve a Genius or Einstein Sudokrine (9x9) without a hint."],
     ["archive", "🗄️", "Archive Diver", "Finish five past puzzles in one day."],
     ["owl", "🦉", "Night Owl", "Finish a puzzle between midnight and 4am."],
     ["tourist", "😎", "Normie Tourist", "Finish a puzzle in Normie mode.", "global"],
@@ -330,6 +336,7 @@
       speed: any("gridectomy", function (v) { return v.win && (v.t || 999) < 60 && !v.reveals; }),
       chain: any("linkase", function (v) { return v.win && !v.mistakes; }),
       mend: any("suturix", function (v) { return v.win && !v.hints; }),
+      balance: any("sudokrine", function (v, d) { return v.win && !v.hints && (v.d === "Genius" || v.d === "Einstein" || new Date(dayNum(d) * 864e5).getUTCDay() === 0 || ((EINS.sudokrine || []).indexOf(d) >= 0)); }),
       archive: Object.keys(arch).some(function (d) { return arch[d] >= 5; }),
       owl: log.some(function (x) { return x.h >= 0 && x.h < 4; }),
       tourist: nAny,
