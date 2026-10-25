@@ -760,7 +760,8 @@
     var arch = box.querySelector("details.archive");
     if (!arch) return;
     var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
-    others.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
+    var OK = window.MW_ORDER || []; function oi(x) { var i = OK.indexOf(x.g.id); return i < 0 ? 99 : i; }
+    others.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0) || oi(a) - oi(b); });
     var left = others.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
     var strip = el('<section class="mwx"><div class="mwx-head"><b>Keep playing</b><span>' + (left ? left + " left today" : "All done today. Show-off.") + '</span></div><div class="mwx-list">' +
       others.map(function (o) {
@@ -798,16 +799,21 @@
       nx.hidden = true;
       var done = curSt && curSt.done, tb = document.getElementById("mw-next-top");
       // today's next unplayed game in this mode
-      var left = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x)) return false; var r = readStats(x); return !(r && r.done); });
-      var ng = left[0];
+      var ORDx = window.MW_ORDER || [], tday = sydToday(), skipK = "mw-skip-" + tday, skips = get(skipK, []) || [];
+      var left = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x) || (x.from && x.from > tday)) return false; var r = readStats(x); return !(r && r.done); })
+        .sort(function (a, b) { var ia = ORDx.indexOf(a.id), ib = ORDx.indexOf(b.id); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
+      var pool = left.filter(function (x) { return skips.indexOf(x.id) < 0; }); if (!pool.length) { pool = left; if (skips.length) set(skipK, []); }
+      var ng = pool[0];
       var r0 = todo[0], d0 = r0 ? rowDate(r0) : null;
       if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
-      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Today\u2019s next puzzle<small>' + left.length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
+      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Next: ' + ng.name + '<small>' + left.length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
+      if (ng && left.length > 1) th += '<button type="button" class="mwx-skip">Skip ' + ng.name + ' \u203a</button>';
       if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
       if (tb.getAttribute("data-h") === th) return;
       tb.innerHTML = th; tb.setAttribute("data-h", th);
       var mb = tb.querySelector(".mwx-more2"); if (mb) mb.onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); tb.remove(); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
       var tl = tb.querySelector(".mwx-today"); if (tl) tl.onclick = function () { track("next-today/" + g.id, g.name + " next today"); };
+      var sk = tb.querySelector(".mwx-skip"); if (sk) sk.onclick = function () { var l = get(skipK, []) || []; if (l.indexOf(ng.id) < 0) l.push(ng.id); set(skipK, l); track("next-skip/" + ng.id, "skip " + ng.name); nextUnsolved(); };
     }
     nextUnsolved();
     window.addEventListener("storage", nextUnsolved);
