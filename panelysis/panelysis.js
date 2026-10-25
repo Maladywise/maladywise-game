@@ -1,11 +1,15 @@
 /* Panelysis: read the blood results, pick the diagnosis. Three tries; each wrong pick reveals a hint.
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, patient, story, theme?, panels:[{name, rows:[[test, value, unit, range, flag]]}],
    answer, wrong:[5], hints:[[text, [tests]] x2], key:[tests], why, pearl}. Flags: H, L, ! (abnormal text). Check with panelysis/check.py.
-   Medical mode only: Normie mode shows a friendly note instead. */
+   Normie mode ("mystery stats card"): puzzles/normie/YYYY-MM.json, same entry format (patient = the card's subject line,
+   range = typical range), "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", TRIES = 3;
-  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = "Panelysis";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", TRIES = 3;
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Panelysis (Normie)" : "Panelysis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
+  // Normie wording swaps
+  var T = NORMIE ? { aria: "Mystery stats", q: "What’s the mystery?", past: "Past cards", foot: "Stats are real-world figures, rounded. Just for fun.", head: "Mystery stats", lab: "Malady Wise · for fun", ref: "Typical ", key: "The giveaways", pearl: "Fun fact", unit: "card" }
+    : { aria: "Blood results", q: "What’s the diagnosis?", past: "Past panels", foot: "All patients are fictional. Reference ranges vary between labs. General education, not personal medical advice.", head: "Pathology report", lab: "Malady Wise Labs · fictional", ref: "Ref ", key: "The clinchers", pearl: "Teaching pearl", unit: "panel" };
   var root = document.getElementById("pnl");
   if (!document.querySelector("link[data-pnl]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "panelysis.css?v=" + BUILD; l.setAttribute("data-pnl", ""); document.head.appendChild(l);
@@ -13,17 +17,17 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="pnl-eyebrow">Panelysis</span><span class="badge" id="pnl-badge" hidden></span></div>' +
-    ' <section class="report" id="pnl-report" aria-label="Blood results"></section>' +
+    ' <section class="report" id="pnl-report" aria-label="' + T.aria + '"></section>' +
     ' <div class="pzl" id="pnl-play" hidden>' +
-    '  <div class="tries"><span class="tl">What’s the diagnosis?</span><span class="vials" id="pnl-vials" aria-label="Tries left"></span></div>' +
+    '  <div class="tries"><span class="tl">' + T.q + '</span><span class="vials" id="pnl-vials" aria-label="Tries left"></span></div>' +
     '  <div class="msg" id="pnl-msg" aria-live="polite"></div>' +
     '  <div class="hints" id="pnl-hints"></div>' +
     '  <div class="opts" id="pnl-opts"></div>' +
     ' </div>' +
     ' <div class="result" id="pnl-result" hidden></div>' +
     ' <p class="note" id="pnl-next"></p>' +
-    ' <details class="archive" id="pnl-archive"><summary>Past panels</summary><div class="alist" id="pnl-alist"></div></details>' +
-    ' <p class="note">All patients are fictional. Reference ranges vary between labs. General education, not personal medical advice.</p>' +
+    ' <details class="archive" id="pnl-archive"><summary>' + T.past + '</summary><div class="alist" id="pnl-alist"></div></details>' +
+    ' <p class="note">' + T.foot + '</p>' +
     "</div>";
   var $ = function (id) { return document.getElementById("pnl-" + id); };
 
@@ -37,9 +41,9 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "pnl-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
+  var SKEY = PFX + "pnl-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
   var KEY, st, P = null;
-  function loadDay() { KEY = "pnl-day-" + today; st = load(KEY, { picks: [], done: false, win: false }); }
+  function loadDay() { KEY = PFX + "pnl-day-" + today; st = load(KEY, { picks: [], done: false, win: false }); }
   loadDay();
 
   // ---------- sass (mocks the guess, never the patient) ----------
@@ -49,6 +53,11 @@
     win: [["First pick. Did you write the report?", "One look and done. Pathologist energy.", "First try. Frame those results.", "Straight to the answer. Suspiciously good."], ["Second pick. Nicely reasoned.", "Two tries. The hint helped. We saw.", "Got there on two. Solid.", "Second guess. Registrar-level."], ["Last try. Phew. For everyone.", "Third time. A buzzer-beater.", "Scraped in. A diagnosis is a diagnosis.", "Final pick. Sweaty, but correct."]],
     lose: ["The bloods win today. Rematch tomorrow.", "Out of tries. Read the explanation and nod wisely.", "Missed it. The results were trying to tell you.", "Not today. Tomorrow’s panel is already in the analyser.", "Stumped. Even the pathologist checked twice.", "Haemolysed. Your confidence, not the sample."]
   };
+  if (NORMIE) SASS = {
+    wrong: ["Respectfully: no.", "The numbers have questions.", "Bold. Wrong, but bold.", "That’s a guess. Just not this one.", "The stats disagree.", "Somewhere a statistician sighed.", "Plausible. Also wrong.", "Read the card again. Slowly.", "Confidently incorrect. A classic.", "Not what the numbers are saying.", "Outside the typical range of right answers.", "Interesting. Incorrect, but interesting.", "The spreadsheet would like a word."],
+    win: [["First pick. Did you write the card?", "One look and done. Quiz-show energy.", "First try. Frame that.", "Straight to the answer. Suspiciously good."], ["Second pick. Nicely reasoned.", "Two tries. The hint helped. We saw.", "Got there on two. Solid.", "Second guess. Sharp."], ["Last try. Phew. For everyone.", "Third time. A buzzer-beater.", "Scraped in. Still counts.", "Final pick. Sweaty, but correct."]],
+    lose: ["The numbers win today. Rematch tomorrow.", "Out of tries. Read the explanation and nod wisely.", "Missed it. The stats were trying to tell you.", "Not today. Tomorrow’s card is already printing.", "Stumped. Even the fact-checker checked twice."]
+  };
   function say(t) { var m = $("msg"); m.textContent = t; m.classList.remove("pop"); void m.offsetWidth; if (t) m.classList.add("pop"); }
 
   // ---------- helpers ----------
@@ -57,7 +66,7 @@
   function rowsByTest() { var m = {}; P.panels.forEach(function (pn) { pn.rows.forEach(function (r) { m[r[0]] = r; }); }); return m; }
   var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠", Einstein: "⚛️" };
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
-  var FLAG = { H: "High", L: "Low", "!": "Abnormal" };
+  var FLAG = { H: "High", L: "Low", "!": NORMIE ? "Notable" : "Abnormal" };
 
   // ---------- render ----------
   function hlSet() {
@@ -69,16 +78,16 @@
   function renderReport() {
     var hs = hlSet();
     $("report").innerHTML =
-      '<div class="rhead"><span>Pathology report</span><span>Malady Wise Labs · fictional</span></div>' +
-      '<div class="pt"><b>' + esc(P.patient) + "</b>" + (P.theme ? '<span class="theme">' + esc(P.theme) + "</span>" : "") + "<p>" + esc(P.story) + "</p></div>" +
+      '<div class="rhead"><span>' + T.head + '</span><span>' + T.lab + '</span></div>' +
+      '<div class="pt"><b>' + esc(P.patient || P.subject || P.title || T.aria) + "</b>" + (P.theme ? '<span class="theme">' + esc(P.theme) + "</span>" : "") + "<p>" + esc(P.story || P.intro || "") + "</p></div>" +
       P.panels.map(function (pn) {
         return '<div class="pn"><h3>' + esc(pn.name) + "</h3>" + pn.rows.map(function (r) {
           var t = r[0], v = r[1], u = r[2], rg = r[3], f = r[4], txt = !/^[<>]?[+−-]?[\d,.]+$/.test(v);
-          var ref = rg ? "Ref " + rg + (u && !txt ? " " + u : "") : (u && !txt ? u : "");
+          var ref = rg ? T.ref + rg + (u && !txt ? " " + u : "") : (u && !txt ? u : "");
           return '<div class="r' + (f ? " ab" : "") + (hs[t] ? " " + hs[t] : "") + '"><span class="tn">' + esc(t) + (ref ? "<small>" + esc(ref) + "</small>" : "") + '</span><span class="tv' + (txt ? " txt" : "") + '">' + esc(v) + (u && !txt ? "<i>" + esc(u) + "</i>" : "") + '</span><span class="fl' + (f ? " f" + (f === "!" ? "A" : f) : "") + '"' + (f ? ' title="' + FLAG[f] + '" aria-label="' + FLAG[f] + '"' : "") + ">" + (f === "!" ? "*" : esc(f || "")) + "</span></div>";
         }).join("") + "</div>";
       }).join("") +
-      '<p class="legend"><span class="fl fH">H</span> high <span class="fl fL">L</span> low <span class="fl fA">*</span> abnormal</p>';
+      '<p class="legend"><span class="fl fH">H</span> high <span class="fl fL">L</span> low <span class="fl fA">*</span> ' + (NORMIE ? "notable" : "abnormal") + '</p>';
   }
   function renderPlay() {
     var wrong = st.picks.filter(function (x) { return x !== P.answer; });
@@ -96,15 +105,15 @@
     if (!st.done) { r.hidden = true; return; }
     var n = st.picks.length, rows = rowsByTest();
     var grid = st.picks.map(function (x) { return x === P.answer ? "🟩" : "🟥"; }).join("") + (st.win ? new Array(TRIES - n + 1).join("⬜") : "");
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " 🩸  " + (st.win ? n : "X") + "/" + TRIES + "\n" + grid + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🔎  " : " 🩸  ") + (st.win ? n : "X") + "/" + TRIES + "\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = st.win ? n - 1 : 3;
     r.hidden = false;
     r.innerHTML = '<p class="verdict ' + (st.win ? "ok" : "no") + '">' + (st.win ? "Solved on try " + n + " of " + TRIES : "Not this time") + "</p>" +
       "<h2>" + esc(P.answer) + "</h2>" +
       (st.picks.length && !st.win ? '<p class="yours">Your picks: ' + st.picks.map(esc).join(" · ") + "</p>" : "") +
       '<div class="why"><b>Why</b><p>' + esc(P.why) + "</p></div>" +
-      '<div class="clinch"><b>The clinchers</b><div class="chips">' + P.key.map(function (t) { var x = rows[t]; if (!x) return ""; var txt = !/^[<>]?[+−-]?[\d,.]+$/.test(x[1]); return '<span class="chip">' + esc(t) + " <b>" + esc(x[1]) + (x[2] && !txt ? " " + esc(x[2]) : "") + "</b>" + (x[4] ? ' <em class="fl f' + (x[4] === "!" ? "A" : x[4]) + '">' + (x[4] === "!" ? "*" : x[4]) + "</em>" : "") + "</span>"; }).join("") + "</div></div>" +
-      '<div class="pearl"><b>Teaching pearl</b><p>' + esc(P.pearl) + "</p></div>" +
+      '<div class="clinch"><b>' + T.key + '</b><div class="chips">' + P.key.map(function (t) { var x = rows[t]; if (!x) return ""; var txt = !/^[<>]?[+−-]?[\d,.]+$/.test(x[1]); return '<span class="chip">' + esc(t) + " <b>" + esc(x[1]) + (x[2] && !txt ? " " + esc(x[2]) : "") + "</b>" + (x[4] ? ' <em class="fl f' + (x[4] === "!" ? "A" : x[4]) + '">' + (x[4] === "!" ? "*" : x[4]) + "</em>" : "") + "</span>"; }).join("") + "</div></div>" +
+      '<div class="pearl"><b>' + T.pearl + '</b><p>' + esc(P.pearl) + "</p></div>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<div class="dist">' + stats.dist.map(function (c, i) { return "<div><span>" + (i < 3 ? i + 1 : "X") + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(c / max * 100)) + '%">' + c + "</i></div>"; }).join("") + "</div>" +
       '<pre id="pnl-share">' + esc(share) + '</pre><button class="btn" type="button" id="pnl-copy">Copy result</button>';
@@ -116,9 +125,9 @@
   }
   function paint() { renderReport(); renderPlay(); renderResult(); }
   function tick() {
-    var t = "A new panel arrives at midnight, Sydney time.";
+    var t = "A new " + T.unit + " arrives at midnight, Sydney time.";
     try { var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
-      var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = "Next panel in " + Math.floor(left / 60) + "h " + (left % 60) + "m. Stay hydrated, it helps the bloods."; } catch (e) {}
+      var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = "Next " + T.unit + " in " + Math.floor(left / 60) + "h " + (left % 60) + "m. " + (NORMIE ? "Go stretch your legs." : "Stay hydrated, it helps the bloods."); } catch (e) {}
     $("next").textContent = t;
   }
 
@@ -132,8 +141,8 @@
       stats.dist[win ? st.picks.length - 1 : 3]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "⚛️ Einstein solved. Roughly a once-in-50-days panel, and you read it. Screenshot this." : "Even Einstein would have ordered more tests. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "panelysis" && t.d === today; })) { tro.push({ g: "panelysis", d: today }); put("mw-einstein", tro); } }
+      say(win ? (NORMIE ? "⚛️ Einstein solved. Roughly a once-in-50-days card, and you cracked it. Screenshot this." : "⚛️ Einstein solved. Roughly a once-in-50-days panel, and you read it. Screenshot this.") : (NORMIE ? "Even Einstein would have asked for more data. Respect for taking on the rare one." : "Even Einstein would have ordered more tests. Respect for taking on the rare one."));
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "panelysis" && t.d === today; })) { tro.push({ g: "panelysis", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[st.picks.length - 1]) : pick(SASS.lose));
   }
   $("opts").addEventListener("click", function (e) {
@@ -149,7 +158,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -159,13 +168,14 @@
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
         $("play").hidden = true; $("result").hidden = true; $("badge").hidden = true;
-        $("report").innerHTML = '<p class="empty">' + (date < "2026-10-26" ? "Panelysis opens Monday 26 October. The analyser is warming up." : "Today’s panel is still in the analyser. Back tomorrow.") + "</p>";
+        $("report").innerHTML = date < "2026-10-26" ? '<p class="empty">Panelysis opens Monday 26 October. ' + (NORMIE ? "The numbers are warming up." : "The analyser is warming up.") + "</p>"
+          : NORMIE && window.MW_noNormie ? MW_noNormie("stats card") : '<p class="empty">Today’s panel is still in the analyser. Back tomorrow.</p>';
         renderArchive(); return;
       }
       $("eyebrow").textContent = (isLive() ? "Panelysis" : "Archive") + " · #" + P.number + " · " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       say("");
-      if (!isLive()) say(st.done ? "Archive panel. Already reported." : "Archive panel. Doesn’t count towards your streak.");
+      if (!isLive()) say(st.done ? "Archive " + T.unit + ". Already " + (NORMIE ? "cracked." : "reported.") : "Archive " + T.unit + ". Doesn’t count towards your streak.");
       else if (st.done) say(st.win ? "Solved. Come back tomorrow." : "You’ve had your go. Back tomorrow.");
       paint(); renderArchive();
     });
@@ -175,11 +185,11 @@
     Promise.all([prevMonth(m) < "2026-10" ? Promise.resolve([]) : month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("pnl-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
+        var s = load(PFX + "pnl-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="pnl-back">Back to today</button>';
-      $("alist").innerHTML = back + (rows || '<p class="note">No past panels yet. You’re early.</p>');
+      $("alist").innerHTML = back + (rows || '<p class="note">No past ' + T.unit + 's yet. You’re early.</p>');
       Array.prototype.forEach.call($("alist").querySelectorAll(".arow"), function (b) { b.onclick = function () { show(b.getAttribute("data-d")); root.scrollIntoView({ behavior: "smooth" }); }; });
       if ($("back")) $("back").onclick = function () { show(REAL); root.scrollIntoView({ behavior: "smooth" }); };
     });
@@ -187,12 +197,5 @@
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
 
   tick(); setInterval(tick, 60000);
-  if (NORMIE) {
-    // Medical-only game: no Normie version. Friendly note with a switch button, no puzzle.
-    $("badge").hidden = true; $("next").hidden = true;
-    $("report").className = "report off";
-    $("report").innerHTML = '<div class="mw-nonorm"><img src="/assets/mascots/panelysis.svg" alt="" width="72" height="72"><p><b>Panelysis is Medical-mode only.</b> It’s blood tests all the way down, so there’s no Normie version. Switch to Medical to play.</p><button type="button" class="btn" id="pnl-tomed">🩺 Switch to Medical</button></div>';
-    $("tomed").onclick = function () { if (window.MW_setMode) MW_setMode("medical"); };
-    $("alist").innerHTML = '<p class="note">Past panels are in Medical mode.</p>';
-  } else show(today);
+  show(today);
 })();
