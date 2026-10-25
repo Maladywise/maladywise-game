@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", MAXM = 5;
   // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Linkase (Normie)" : "Linkase";
   var root = document.getElementById("lnk");
@@ -17,6 +17,8 @@
     ' <div class="chain" id="lnk-chain"></div>' +
     ' <div class="msg" id="lnk-msg" aria-live="polite"></div>' +
     ' <div class="mist" id="lnk-mist"></div>' +
+    ' <div class="pk" id="lnk-pk" hidden><button class="pk-tog" type="button" id="lnk-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button>' +
+    '  <form class="pk-form" id="lnk-pkform" hidden><input id="lnk-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Type the rest of the highlighted word with your phone keyboard, Enter to submit"></form></div>' +
     ' <div class="kb" id="lnk-kb"></div>' +
     ' <div class="result" id="lnk-result" hidden></div>' +
     ' <p class="note" id="lnk-next"></p>' +
@@ -98,7 +100,10 @@
     if (shake) { var a = ch2.querySelector(".act"); if (a) { a.classList.remove("shake"); void a.offsetWidth; a.classList.add("shake"); } }
     var m = ""; for (var k = 0; k < MAXM; k++) m += '<i class="' + (k < st.mistakes ? "used" : "") + '"></i>';
     $("mist").innerHTML = st.done ? "" : "Strikes left " + m + (f.length > 1 ? '<span class="tip">Tap the other open word to switch ends.</span>' : "");
-    $("kb").hidden = st.done;
+    $("kb").hidden = st.done || pkOn;
+    $("pk").hidden = st.done;
+    if (st.act) { var aw = word(st.act), ar = st.w[st.act].rev; pkIn.maxLength = aw.length; pkIn.placeholder = aw.slice(0, ar) + Array(aw.length - ar + 1).join("\u00b7"); }
+    pkSync();
     renderResult();
   }
   function renderResult() {
@@ -127,7 +132,7 @@
     var rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm-", "+"];
     $("kb").innerHTML = rows.map(function (r) {
       return '<div class="kr">' + r.split("").map(function (k) {
-        if (k === "+") return '<button class="key wide" data-k="enter" type="button">Enter</button>';
+        if (k === "+") return '<button class="key wide" data-k="enter" type="button" aria-label="Submit word">Enter</button>';
         if (k === "-") return '<button class="key wide" data-k="back" type="button" aria-label="Delete">\u232b</button>';
         return '<button class="key" data-k="' + k + '" type="button">' + k + "</button>";
       }).join("") + "</div>";
@@ -190,6 +195,37 @@
     else if (/^[a-zA-Z]$/.test(e.key)) press(e.key.toLowerCase());
   });
 
+  // ---------- phone keyboard ----------
+  // Real <input> so the phone's own keyboard (incl. glide typing) can be used. Feeds the active slot; shared pref "mw-phonekb".
+  var pkOn = false, pkComp = false, pkIn = $("pkin");
+  try { pkOn = localStorage.getItem("mw-phonekb") === "1"; } catch (e) {}
+  function pkSync() {
+    if (!pkOn || pkComp) return;
+    var w = cur.toUpperCase(), v = pkIn.value.toUpperCase().replace(/[^A-Z]/g, "");
+    if (v !== w && !(P && st.act && v === word(st.act).slice(0, st.w[st.act].rev).toUpperCase() + w)) pkIn.value = w;
+  }
+  function pkApply(focus) {
+    $("pkform").hidden = !pkOn; $("pktog").setAttribute("aria-pressed", pkOn ? "true" : "false"); $("pktog").classList.toggle("on", pkOn);
+    if (P && !st.done) $("kb").hidden = pkOn;
+    if (pkOn) { pkIn.value = cur.toUpperCase(); if (focus) pkIn.focus(); } else pkIn.blur();
+  }
+  function pkInput() {
+    if (!P || st.done || !st.act) { pkIn.value = ""; return; }
+    var w = word(st.act).toLowerCase(), rev = st.w[st.act].rev, pre = w.slice(0, rev), need = w.length - rev, v = pkIn.value.toLowerCase().replace(/[^a-z]/g, "");
+    // Accept the whole word (glide typing) or just the hidden part: drop the shown prefix if typed.
+    if (v.indexOf(pre) === 0 && w.slice(rev).indexOf(pre) !== 0) v = v.slice(rev);
+    v = v.slice(0, need);
+    if (v !== cur) { cur = v; say(""); }
+    render();
+  }
+  pkIn.addEventListener("input", pkInput);
+  pkIn.addEventListener("compositionstart", function () { pkComp = true; });
+  pkIn.addEventListener("compositionend", function () { pkComp = false; pkInput(); });
+  $("pkform").addEventListener("submit", function (e) { e.preventDefault(); pkComp = false; pkInput(); press("enter"); pkSync(); });
+  $("pktog").onclick = function () { pkOn = !pkOn; try { localStorage.setItem("mw-phonekb", pkOn ? "1" : "0"); } catch (e) {} pkApply(true); };
+  $("chain").addEventListener("click", function (e) { if (pkOn && P && !st.done && e.target.closest(".link.act,.link.can")) pkIn.focus(); });
+  pkApply(false);
+
   // ---------- load ----------
   var cache = {};
   function month(m) {
@@ -203,7 +239,7 @@
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
-        $("kb").hidden = true; $("mist").innerHTML = ""; $("result").hidden = true;
+        $("kb").hidden = true; $("pk").hidden = true; $("mist").innerHTML = ""; $("result").hidden = true;
         if (NORMIE && window.MW_noNormie) { say(""); $("chain").innerHTML = MW_noNormie("chain"); }
         else { say("Today\u2019s chain is still in triage. Back tomorrow."); $("chain").innerHTML = ""; }
         renderArchive(); return;

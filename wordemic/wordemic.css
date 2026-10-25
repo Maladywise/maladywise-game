@@ -60,3 +60,10 @@ html[data-motion="reduce"] #wde *{animation:none!important}
 #wde .key[data-k="enter"]{max-width:none;flex:1 1 100%;height:48px;background:#4A3480;color:#fff;font-size:15px;letter-spacing:.06em}
 html[data-theme="dark"] #wde .key[data-k="enter"]{background:#7E68C8}
 #wde .key[data-k="back"]{max-width:72px;flex:1.6 1 0;font-size:18px}
+/* phone keyboard */
+#wde .pk{width:100%;display:grid;gap:8px;justify-items:center}
+#wde .pk-tog{font:600 13px var(--body);padding:7px 14px;border-radius:999px;border:1px dashed var(--line);background:transparent;color:var(--muted);cursor:pointer}
+#wde .pk-tog.on{border-style:solid;border-color:var(--accent);color:var(--accent)}
+#wde .pk-tog:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#wde .pk-form{width:100%;display:flex;justify-content:center}
+#wde .pk-form input{width:min(320px,100%);font:700 20px var(--body);letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:9px 12px;border-radius:12px;border:2px solid var(--accent);background:var(--paper);color:var(--ink);outline:none}
