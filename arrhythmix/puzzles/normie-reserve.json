@@ -1,0 +1,1180 @@
+[
+ {
+  "difficulty": "Medium",
+  "vignette": "Worldwide searches for something, week by week, over three years. What were people looking for?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Week (2023 to early 2026)",
+   "ylabel": "Search interest (peak = 100)",
+   "x": [
+    "2023-01-01",
+    "2023-01-08",
+    "2023-01-15",
+    "2023-01-22",
+    "2023-01-29",
+    "2023-02-05",
+    "2023-02-12",
+    "2023-02-19",
+    "2023-02-26",
+    "2023-03-05",
+    "2023-03-12",
+    "2023-03-19",
+    "2023-03-26",
+    "2023-04-02",
+    "2023-04-09",
+    "2023-04-16",
+    "2023-04-23",
+    "2023-04-30",
+    "2023-05-07",
+    "2023-05-14",
+    "2023-05-21",
+    "2023-05-28",
+    "2023-06-04",
+    "2023-06-11",
+    "2023-06-18",
+    "2023-06-25",
+    "2023-07-02",
+    "2023-07-09",
+    "2023-07-16",
+    "2023-07-23",
+    "2023-07-30",
+    "2023-08-06",
+    "2023-08-13",
+    "2023-08-20",
+    "2023-08-27",
+    "2023-09-03",
+    "2023-09-10",
+    "2023-09-17",
+    "2023-09-24",
+    "2023-10-01",
+    "2023-10-08",
+    "2023-10-15",
+    "2023-10-22",
+    "2023-10-29",
+    "2023-11-05",
+    "2023-11-12",
+    "2023-11-19",
+    "2023-11-26",
+    "2023-12-03",
+    "2023-12-10",
+    "2023-12-17",
+    "2023-12-24",
+    "2023-12-31",
+    "2024-01-07",
+    "2024-01-14",
+    "2024-01-21",
+    "2024-01-28",
+    "2024-02-04",
+    "2024-02-11",
+    "2024-02-18",
+    "2024-02-25",
+    "2024-03-03",
+    "2024-03-10",
+    "2024-03-17",
+    "2024-03-24",
+    "2024-03-31",
+    "2024-04-07",
+    "2024-04-14",
+    "2024-04-21",
+    "2024-04-28",
+    "2024-05-05",
+    "2024-05-12",
+    "2024-05-19",
+    "2024-05-26",
+    "2024-06-02",
+    "2024-06-09",
+    "2024-06-16",
+    "2024-06-23",
+    "2024-06-30",
+    "2024-07-07",
+    "2024-07-14",
+    "2024-07-21",
+    "2024-07-28",
+    "2024-08-04",
+    "2024-08-11",
+    "2024-08-18",
+    "2024-08-25",
+    "2024-09-01",
+    "2024-09-08",
+    "2024-09-15",
+    "2024-09-22",
+    "2024-09-29",
+    "2024-10-06",
+    "2024-10-13",
+    "2024-10-20",
+    "2024-10-27",
+    "2024-11-03",
+    "2024-11-10",
+    "2024-11-17",
+    "2024-11-24",
+    "2024-12-01",
+    "2024-12-08",
+    "2024-12-15",
+    "2024-12-22",
+    "2024-12-29",
+    "2025-01-05",
+    "2025-01-12",
+    "2025-01-19",
+    "2025-01-26",
+    "2025-02-02",
+    "2025-02-09",
+    "2025-02-16",
+    "2025-02-23",
+    "2025-03-02",
+    "2025-03-09",
+    "2025-03-16",
+    "2025-03-23",
+    "2025-03-30",
+    "2025-04-06",
+    "2025-04-13",
+    "2025-04-20",
+    "2025-04-27",
+    "2025-05-04",
+    "2025-05-11",
+    "2025-05-18",
+    "2025-05-25",
+    "2025-06-01",
+    "2025-06-08",
+    "2025-06-15",
+    "2025-06-22",
+    "2025-06-29",
+    "2025-07-06",
+    "2025-07-13",
+    "2025-07-20",
+    "2025-07-27",
+    "2025-08-03",
+    "2025-08-10",
+    "2025-08-17",
+    "2025-08-24",
+    "2025-08-31",
+    "2025-09-07",
+    "2025-09-14",
+    "2025-09-21",
+    "2025-09-28",
+    "2025-10-05",
+    "2025-10-12",
+    "2025-10-19",
+    "2025-10-26",
+    "2025-11-02",
+    "2025-11-09",
+    "2025-11-16",
+    "2025-11-23",
+    "2025-11-30",
+    "2025-12-07",
+    "2025-12-14",
+    "2025-12-21",
+    "2025-12-28",
+    "2026-01-04"
+   ],
+   "y": [
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    5,
+    5,
+    10,
+    19,
+    30,
+    44,
+    60,
+    78,
+    100,
+    22,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    5,
+    5,
+    10,
+    19,
+    30,
+    44,
+    60,
+    78,
+    100,
+    22,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    5,
+    5,
+    10,
+    19,
+    30,
+    44,
+    60,
+    78,
+    100,
+    22,
+    6
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "Jan 23"
+    },
+    {
+     "i": 13,
+     "label": "Apr"
+    },
+    {
+     "i": 26,
+     "label": "Jul"
+    },
+    {
+     "i": 39,
+     "label": "Oct"
+    },
+    {
+     "i": 53,
+     "label": "Jan 24"
+    },
+    {
+     "i": 66,
+     "label": "Apr"
+    },
+    {
+     "i": 79,
+     "label": "Jul"
+    },
+    {
+     "i": 92,
+     "label": "Oct"
+    },
+    {
+     "i": 105,
+     "label": "Jan 25"
+    },
+    {
+     "i": 118,
+     "label": "Apr"
+    },
+    {
+     "i": 131,
+     "label": "Jul"
+    },
+    {
+     "i": 144,
+     "label": "Oct"
+    },
+    {
+     "i": 157,
+     "label": "Jan 26"
+    }
+   ],
+   "yticks": [
+    0,
+    25,
+    50,
+    75,
+    100
+   ],
+   "yrange": [
+    0,
+    110
+   ],
+   "highlights": [
+    {
+     "from": 47,
+     "to": 51,
+     "label": "the build-up"
+    },
+    {
+     "from": 99,
+     "to": 103,
+     "label": "the build-up"
+    },
+    {
+     "from": 151,
+     "to": 155,
+     "label": "the build-up"
+    }
+   ]
+  },
+  "answer": "Christmas songs",
+  "options": [
+   "Christmas songs",
+   "Black Friday deals",
+   "New Year's resolutions",
+   "Halloween costumes",
+   "Advent calendars",
+   "Snow"
+  ],
+  "hints": [
+   "Look at what happens every December, and on the day after the peak.",
+   "Climbs from early November, peaks in the week of 25 December, gone by mid-January. Not a deal, not a resolution."
+  ],
+  "explanation": "Almost nothing for 10 months, a slow climb from early November, a peak in Christmas week, then a crash the moment it's over: searches for \"Christmas songs\" (the same shape as streams of a certain Mariah Carey track). Advent calendars peak in late November, Black Friday on one week in November, and New Year's resolutions in the first week of January. The tiny July blip is \"Christmas in July\". Values are approximate, drawn to match the Google Trends shape.",
+  "features": [
+   "Near zero most of the year",
+   "Slow climb from early November",
+   "Peak in the week of 25 December",
+   "Crash immediately after"
+  ],
+  "pearl": "A long ramp and a sharp cliff is the signature of a festive deadline. The steeper the cliff, the more people never want to hear it again."
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "Something measured once a day for two months. Name it.",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Day (January to February 2025)",
+   "ylabel": "Percent",
+   "x": [
+    "2025-01-01",
+    "2025-01-02",
+    "2025-01-03",
+    "2025-01-04",
+    "2025-01-05",
+    "2025-01-06",
+    "2025-01-07",
+    "2025-01-08",
+    "2025-01-09",
+    "2025-01-10",
+    "2025-01-11",
+    "2025-01-12",
+    "2025-01-13",
+    "2025-01-14",
+    "2025-01-15",
+    "2025-01-16",
+    "2025-01-17",
+    "2025-01-18",
+    "2025-01-19",
+    "2025-01-20",
+    "2025-01-21",
+    "2025-01-22",
+    "2025-01-23",
+    "2025-01-24",
+    "2025-01-25",
+    "2025-01-26",
+    "2025-01-27",
+    "2025-01-28",
+    "2025-01-29",
+    "2025-01-30",
+    "2025-01-31",
+    "2025-02-01",
+    "2025-02-02",
+    "2025-02-03",
+    "2025-02-04",
+    "2025-02-05",
+    "2025-02-06",
+    "2025-02-07",
+    "2025-02-08",
+    "2025-02-09",
+    "2025-02-10",
+    "2025-02-11",
+    "2025-02-12",
+    "2025-02-13",
+    "2025-02-14",
+    "2025-02-15",
+    "2025-02-16",
+    "2025-02-17",
+    "2025-02-18",
+    "2025-02-19",
+    "2025-02-20",
+    "2025-02-21",
+    "2025-02-22",
+    "2025-02-23",
+    "2025-02-24",
+    "2025-02-25",
+    "2025-02-26",
+    "2025-02-27",
+    "2025-02-28"
+   ],
+   "y": [
+    3,
+    7,
+    13,
+    21,
+    31,
+    41,
+    51,
+    62,
+    72,
+    81,
+    88,
+    94,
+    98,
+    100,
+    99,
+    97,
+    92,
+    85,
+    77,
+    67,
+    57,
+    46,
+    36,
+    26,
+    17,
+    10,
+    5,
+    1,
+    0,
+    1,
+    4,
+    10,
+    17,
+    25,
+    35,
+    46,
+    56,
+    67,
+    76,
+    85,
+    91,
+    96,
+    99,
+    100,
+    98,
+    95,
+    89,
+    81,
+    72,
+    62,
+    52,
+    41,
+    31,
+    22,
+    14,
+    7,
+    3,
+    0,
+    0
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1 Jan"
+    },
+    {
+     "i": 14,
+     "label": "15 Jan"
+    },
+    {
+     "i": 31,
+     "label": "1 Feb"
+    },
+    {
+     "i": 45,
+     "label": "15 Feb"
+    }
+   ],
+   "yticks": [
+    0,
+    25,
+    50,
+    75,
+    100
+   ],
+   "yrange": [
+    0,
+    105
+   ],
+   "highlights": [
+    {
+     "from": 12,
+     "to": 13,
+     "label": "100%"
+    },
+    {
+     "from": 28,
+     "to": 29,
+     "label": "0%"
+    }
+   ]
+  },
+  "answer": "Moon illumination",
+  "options": [
+   "Moon illumination",
+   "Earth–Moon distance",
+   "Tide height",
+   "Day length",
+   "Cloud cover",
+   "Sea ice extent"
+  ],
+  "hints": [
+   "Count the days between peaks. About a month, isn't it? A fair few things repeat about monthly.",
+   "It goes right from 0% to 100% and back every 29½ days. Look up tonight."
+  ],
+  "explanation": "A smooth wave from 0% to 100% and back, repeating every 29.5 days: the fraction of the Moon's face that's lit, from new moon (0%, 29 January 2025) to full moon (100%, 13 January and 12 February 2025). The Earth–Moon distance repeats every 27.6 days but never goes near zero; tides follow a two-week spring–neap cycle; day length changes over a year, not a month. Calculated from the lunar cycle, rounded to whole percent.",
+  "features": [
+   "Smooth wave from 0% to 100%",
+   "About 29.5 days between peaks",
+   "Full moon 13 Jan and 12 Feb; new moon 29 Jan"
+  ],
+  "pearl": "Period tells you the clock: 29.5 days is the Moon's phases, 27.6 its distance, 14.8 the spring–neap tides, 365 the Sun."
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "Something counted in billions, from 1800 to today. What is it?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Billions",
+   "x": [
+    1800,
+    1850,
+    1900,
+    1927,
+    1950,
+    1960,
+    1974,
+    1987,
+    1999,
+    2011,
+    2022,
+    2025
+   ],
+   "y": [
+    1.0,
+    1.26,
+    1.65,
+    2.0,
+    2.5,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    8.2
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1800"
+    },
+    {
+     "i": 1,
+     "label": "1850"
+    },
+    {
+     "i": 2,
+     "label": "1900"
+    },
+    {
+     "i": 4,
+     "label": "1950"
+    },
+    {
+     "i": 11,
+     "label": "2025"
+    }
+   ],
+   "yticks": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ],
+   "yrange": [
+    0,
+    9
+   ],
+   "highlights": [
+    {
+     "from": 4,
+     "to": 7,
+     "label": "steepest rise"
+    }
+   ]
+  },
+  "answer": "World population",
+  "options": [
+   "World population",
+   "Cattle on Earth",
+   "Chickens on Earth",
+   "Mobile phones in use",
+   "Trees on Earth",
+   "Books printed each year"
+  ],
+  "hints": [
+   "It took all of history to reach the first billion by 1800. Phones and books didn't do that.",
+   "One more billion roughly every 12 years since the 1970s, now just over 8."
+  ],
+  "explanation": "About 1 billion in 1800, 2 billion by 1927, 3 billion in 1960, then a new billion roughly every 12–13 years to 8 billion in 2022: world population (UN estimates). Cattle number about 1.5 billion and chickens over 30 billion; mobile phones didn't exist in 1800, and trees number in the trillions and are falling. Values are rounded.",
+  "features": [
+   "About 1 billion in 1800",
+   "Slow rise to 2.5 billion by 1950",
+   "Steep near-straight rise since 1950",
+   "8 billion reached in 2022"
+  ],
+  "pearl": "The line is still rising, but more slowly: the gap between billions is now stretching, and the UN expects a peak around the 2080s."
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "Average daily maximum temperature, month by month, for a famous city. Which one?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Month",
+   "ylabel": "Average daily high (°C)",
+   "x": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+   ],
+   "y": [
+    30.6,
+    31.6,
+    32.2,
+    32.6,
+    32.4,
+    32.0,
+    31.5,
+    31.4,
+    31.5,
+    31.7,
+    31.0,
+    30.4
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "Jan"
+    },
+    {
+     "i": 1,
+     "label": "Feb"
+    },
+    {
+     "i": 2,
+     "label": "Mar"
+    },
+    {
+     "i": 3,
+     "label": "Apr"
+    },
+    {
+     "i": 4,
+     "label": "May"
+    },
+    {
+     "i": 5,
+     "label": "Jun"
+    },
+    {
+     "i": 6,
+     "label": "Jul"
+    },
+    {
+     "i": 7,
+     "label": "Aug"
+    },
+    {
+     "i": 8,
+     "label": "Sep"
+    },
+    {
+     "i": 9,
+     "label": "Oct"
+    },
+    {
+     "i": 10,
+     "label": "Nov"
+    },
+    {
+     "i": 11,
+     "label": "Dec"
+    }
+   ],
+   "yticks": [
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ],
+   "yrange": [
+    15,
+    45
+   ],
+   "highlights": [
+    {
+     "from": 0,
+     "to": 11,
+     "label": "always about 31 °C"
+    }
+   ]
+  },
+  "answer": "Singapore",
+  "options": [
+   "Singapore",
+   "Mumbai",
+   "Honolulu",
+   "Dubai",
+   "Quito",
+   "Lima"
+  ],
+  "hints": [
+   "No winter, no summer. What kind of place has that?",
+   "About 31 °C every month, with no midsummer monsoon dip. It's barely 1° from the equator, at sea level."
+  ],
+  "explanation": "An almost flat line around 30–33 °C all year: Singapore, about 1° north of the equator. Mumbai looks similar but dips in July–August under monsoon cloud; Honolulu peaks in August and is cooler in January; Dubai swings from about 24 °C to over 40 °C. Quito is also on the equator, but it's 2,800 m up, so its highs sit near 19 °C. Lima has a clear cool season. Values are approximate long-term averages.",
+  "features": [
+   "Range of only about 2 °C across the year",
+   "Slightly warmest in April–May",
+   "No dip for a monsoon or winter"
+  ],
+  "pearl": "Near the equator, height beats latitude: same sun, but every 1,000 m up costs about 6.5 °C."
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "Worldwide searches for one word, month by month, 2020 to 2025. Which word went viral?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Month (2020 to 2025)",
+   "ylabel": "Search interest (peak = 100)",
+   "x": [
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07",
+    "2020-08",
+    "2020-09",
+    "2020-10",
+    "2020-11",
+    "2020-12",
+    "2021-01",
+    "2021-02",
+    "2021-03",
+    "2021-04",
+    "2021-05",
+    "2021-06",
+    "2021-07",
+    "2021-08",
+    "2021-09",
+    "2021-10",
+    "2021-11",
+    "2021-12",
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2022-07",
+    "2022-08",
+    "2022-09",
+    "2022-10",
+    "2022-11",
+    "2022-12",
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+   ],
+   "y": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    9,
+    100,
+    86,
+    58,
+    45,
+    39,
+    35,
+    33,
+    31,
+    30,
+    29,
+    28,
+    28,
+    27,
+    26,
+    26,
+    26,
+    25,
+    25,
+    25,
+    24,
+    24,
+    24,
+    23,
+    23,
+    23,
+    22,
+    22,
+    22,
+    21,
+    21,
+    21,
+    20,
+    20,
+    20,
+    19,
+    19,
+    19,
+    18,
+    18,
+    18,
+    17,
+    17,
+    17,
+    16,
+    16,
+    16,
+    15,
+    15
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "2020"
+    },
+    {
+     "i": 12,
+     "label": "2021"
+    },
+    {
+     "i": 24,
+     "label": "2022"
+    },
+    {
+     "i": 36,
+     "label": "2023"
+    },
+    {
+     "i": 48,
+     "label": "2024"
+    },
+    {
+     "i": 60,
+     "label": "2025"
+    }
+   ],
+   "yticks": [
+    0,
+    25,
+    50,
+    75,
+    100
+   ],
+   "yrange": [
+    0,
+    110
+   ],
+   "highlights": [
+    {
+     "from": 24,
+     "to": 25,
+     "label": "the craze"
+    }
+   ]
+  },
+  "answer": "Wordle",
+  "options": [
+   "Wordle",
+   "Squid Game",
+   "Among Us",
+   "Sourdough",
+   "Fidget spinner",
+   "Pokémon Go"
+  ],
+  "hints": [
+   "Read the timing. It was nothing until late 2021, then exploded at the start of 2022.",
+   "Five letters, six tries, green and yellow squares. Sound familiar?"
+  ],
+  "explanation": "Zero until late 2021, an explosion in January 2022, then a long slow fade that never quite reaches zero: Wordle. Squid Game peaked in October 2021; Among Us in autumn 2020; sourdough in April 2020 (lockdown baking); fidget spinners in 2017 and Pokémon Go in 2016 (both before this chart starts). Values are approximate, drawn to match the Google Trends shape.",
+  "features": [
+   "Nothing before November 2021",
+   "Peak in January 2022",
+   "Long tail of daily players afterwards"
+  ],
+  "pearl": "Fads crash; habits plateau. A slow tail that stays well above zero means people kept playing, every single day."
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "The price of something in the United States, in US dollars, from 1986 to 2025. What is it?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Price (US$)",
+   "x": [
+    1986,
+    1990,
+    1995,
+    2000,
+    2005,
+    2010,
+    2015,
+    2020,
+    2025
+   ],
+   "y": [
+    1.6,
+    2.2,
+    2.32,
+    2.51,
+    3.06,
+    3.73,
+    4.79,
+    5.71,
+    5.79
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1986"
+    },
+    {
+     "i": 1,
+     "label": "1990"
+    },
+    {
+     "i": 2,
+     "label": "1995"
+    },
+    {
+     "i": 3,
+     "label": "2000"
+    },
+    {
+     "i": 4,
+     "label": "2005"
+    },
+    {
+     "i": 5,
+     "label": "2010"
+    },
+    {
+     "i": 6,
+     "label": "2015"
+    },
+    {
+     "i": 7,
+     "label": "2020"
+    },
+    {
+     "i": 8,
+     "label": "2025"
+    }
+   ],
+   "yticks": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ],
+   "yrange": [
+    0,
+    8
+   ],
+   "highlights": [
+    {
+     "from": 5,
+     "to": 7,
+     "label": "fastest rise"
+    }
+   ]
+  },
+  "answer": "A Big Mac",
+  "options": [
+   "A Big Mac",
+   "A cinema ticket",
+   "A first-class stamp",
+   "A gallon of petrol",
+   "A dozen eggs",
+   "A cup of coffee"
+  ],
+  "hints": [
+   "Check the y-axis: $1.60 to about $5.80. A smooth rise, no wild spikes. That rules out the volatile stuff.",
+   "The Economist has tracked this exact price since 1986 to compare currencies. Two all-beef patties..."
+  ],
+  "explanation": "From $1.60 in 1986 to about $5.80 in 2025: the US price of a Big Mac, used by The Economist's Big Mac Index since 1986 to compare currencies. A cinema ticket went from about $3.70 to over $11; a stamp from 22 to 78 cents; petrol and eggs jump around with crises rather than rising smoothly. Values are approximate and rounded.",
+  "features": [
+   "$1.60 in 1986",
+   "Slow rise to about $2.50 in 2000",
+   "Faster rise 2010–2020",
+   "About $5.80 in 2025"
+  ],
+  "pearl": "Same burger, different price: the Big Mac Index shows whether a currency is over- or undervalued, one bun at a time."
+ }
+]
