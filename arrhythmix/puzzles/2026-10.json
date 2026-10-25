@@ -1,0 +1,272 @@
+[
+ {
+  "date": "2026-10-26",
+  "number": 1,
+  "difficulty": "Easy",
+  "vignette": "A 27-year-old woman, three days into a chest infection, says her heart is racing. Temperature 38.4 °C. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 124,
+    "pr": 140
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Sinus tachycardia",
+  "options": [
+   "Sinus tachycardia",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial flutter with 2:1 block",
+   "Atrial fibrillation",
+   "Ventricular tachycardia",
+   "Multifocal atrial tachycardia"
+  ],
+  "hints": [
+   "Is there a P wave in front of every QRS?",
+   "Upright P before every beat, regular, about 120/min. Nothing fancy."
+  ],
+  "explanation": "A regular narrow-complex rhythm at about 125/min with an upright P wave before every QRS and a constant PR interval. That is sinus rhythm, just fast. Fever, pain, dehydration, anaemia, anxiety, PE and thyrotoxicosis are the usual drivers; the real job is finding the cause.",
+  "features": [
+   "Rate about 125/min, regular",
+   "Upright P wave before every QRS in lead II",
+   "Constant PR (about 140 ms), narrow QRS"
+  ],
+  "pearl": "Sinus tachycardia is a sign, not a diagnosis. A rate fixed at exactly 150/min should make you hunt for flutter waves instead."
+ },
+ {
+  "date": "2026-10-27",
+  "number": 2,
+  "difficulty": "Easy",
+  "vignette": "A 71-year-old woman on a beta blocker and diltiazem has a routine ECG at her GP check-up. She feels fine.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 64,
+    "pr": 290
+   }
+  },
+  "highlight": {
+   "marks": [
+    "pr"
+   ]
+  },
+  "answer": "First-degree AV block",
+  "options": [
+   "First-degree AV block",
+   "Second-degree AV block, Mobitz I",
+   "Second-degree AV block, Mobitz II",
+   "Complete heart block",
+   "Sinus bradycardia",
+   "Junctional rhythm"
+  ],
+  "hints": [
+   "Measure from the start of the P wave to the start of the QRS.",
+   "Every P conducts. The PR is long, but it never changes."
+  ],
+  "explanation": "Every P wave is followed by a QRS, the rhythm is regular, and the PR interval is fixed at about 290 ms. A PR over 200 ms (one big square) with no dropped beats is first-degree AV block. AV-nodal drugs, like this combination, are a classic cause; so are high vagal tone in athletes and age-related conduction disease.",
+  "features": [
+   "PR interval about 290 ms (normal 120–200 ms)",
+   "PR constant from beat to beat",
+   "Every P wave conducts: no dropped beats"
+  ],
+  "pearl": "One big square is 200 ms. If the PR is longer than one big square, it is first-degree block. It is really 'AV delay', not block: nothing is actually blocked."
+ },
+ {
+  "date": "2026-10-28",
+  "number": 3,
+  "difficulty": "Medium",
+  "vignette": "A 22-year-old non-binary university rower has a pre-season ECG. They feel well; resting pulse is slow and a little irregular.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "wenck",
+    "rate": 78,
+    "prs": [
+     190,
+     290,
+     340
+    ],
+    "phase": 1
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "pr",
+    "dropped"
+   ]
+  },
+  "answer": "Second-degree AV block, Mobitz I (Wenckebach)",
+  "options": [
+   "Second-degree AV block, Mobitz I (Wenckebach)",
+   "Second-degree AV block, Mobitz II",
+   "First-degree AV block",
+   "Complete heart block",
+   "Sinus arrhythmia",
+   "Blocked atrial ectopics"
+  ],
+  "hints": [
+   "Look at the PR interval, beat by beat.",
+   "The PR stretches, then one P wave stands alone with no QRS."
+  ],
+  "explanation": "The PR interval lengthens with each beat (about 190, 290, then 340 ms) until a P wave fails to conduct; the cycle then resets with the shortest PR. That gives grouped beating. The block is usually in the AV node, so it is often benign in athletes, during sleep and with high vagal tone, though drugs and inferior MI can cause it too.",
+  "features": [
+   "Progressive PR prolongation",
+   "Then a non-conducted P wave (dropped QRS)",
+   "Shortest PR straight after the pause; grouped beating"
+  ],
+  "pearl": "Compare the PR just before and just after the dropped beat. Different: Wenckebach. Identical: think Mobitz II."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 4,
+  "difficulty": "Medium",
+  "vignette": "World Stroke Day. A 74-year-old woman with high blood pressure and type 2 diabetes says her smartwatch keeps flagging an irregular pulse.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "af",
+    "rate": 104,
+    "f": 0.07
+   }
+  },
+  "highlight": {
+   "marks": [
+    "f",
+    "rr"
+   ]
+  },
+  "answer": "Atrial fibrillation",
+  "options": [
+   "Atrial fibrillation",
+   "Atrial flutter with variable block",
+   "Multifocal atrial tachycardia",
+   "Sinus arrhythmia",
+   "Sinus rhythm with atrial ectopics",
+   "Second-degree AV block, Mobitz I"
+  ],
+  "hints": [
+   "Try to find one clear, repeatable P wave. Go on.",
+   "Measure a few R-R intervals. Is there any pattern at all?"
+  ],
+  "explanation": "An irregularly irregular narrow-complex rhythm with no identifiable P waves and a wavy fibrillatory baseline: atrial fibrillation. Fitting for World Stroke Day: AF raises stroke risk around five-fold, and about one in four strokes is linked to it. Age, high blood pressure and diabetes all add to that risk, which is why scores like CHA₂DS₂-VA exist.",
+  "features": [
+   "Irregularly irregular R-R intervals",
+   "No P waves; fine fibrillatory baseline",
+   "Narrow QRS, rate about 100/min"
+  ],
+  "pearl": "Irregularly irregular with no P waves is AF until proven otherwise. MAT is also irregular, but it has P waves in at least three different shapes."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 5,
+  "difficulty": "Hard",
+  "vignette": "A 63-year-old woman has had 40 minutes of heavy central chest pain spreading to her jaw. She is sweaty and nauseated. 12-lead ECG:",
+  "ecg": {
+   "layout": "12",
+   "preset": "inferiorSTEMI",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 78
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "ST elevation"
+    },
+    {
+     "leads": [
+      "I",
+      "aVL"
+     ],
+     "label": "reciprocal",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Inferior STEMI",
+  "options": [
+   "Inferior STEMI",
+   "Acute pericarditis",
+   "Anterior STEMI",
+   "Posterior MI",
+   "Left bundle branch block",
+   "Benign early repolarisation"
+  ],
+  "hints": [
+   "Which leads are elevated, and which leads mirror them?",
+   "ST elevation in III bigger than II, with ST depression in aVL."
+  ],
+  "explanation": "ST elevation in II, III and aVF with reciprocal ST depression and T inversion in aVL (and I): an inferior STEMI. Elevation in III greater than II points to the right coronary artery. Reciprocal change argues strongly against pericarditis. Right-sided leads (V4R) look for right ventricular involvement.",
+  "features": [
+   "ST elevation in II, III and aVF (III > II)",
+   "Reciprocal ST depression and T inversion in aVL and I",
+   "Early Q wave forming in III"
+  ],
+  "pearl": "Reciprocal depression in aVL is often the first clue to an inferior STEMI, sometimes before the inferior elevation is obvious."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 6,
+  "difficulty": "Hard",
+  "vignette": "Halloween. A 66-year-old woman on haemodialysis has missed two sessions and now feels weak, with palpitations.",
+  "ecg": {
+   "layout": "12",
+   "preset": "hyperk",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 62
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "peaked T"
+    }
+   ],
+   "marks": [
+    "pr",
+    "qrs"
+   ]
+  },
+  "answer": "Hyperkalaemia",
+  "options": [
+   "Hyperkalaemia",
+   "Hypokalaemia",
+   "Anterior STEMI (hyperacute T waves)",
+   "Long QT syndrome",
+   "Left bundle branch block",
+   "Hypercalcaemia"
+  ],
+  "hints": [
+   "Look at the shape of the T waves: tall, narrow and pointed.",
+   "Then look at the P waves and the QRS: flat and wide."
+  ],
+  "explanation": "Tall, narrow, symmetrical 'tented' T waves, flattened P waves, a long PR (about 230 ms) and a widening QRS. The classic sequence as potassium rises: peaked T waves, then PR prolongation and P-wave flattening, then QRS widening, then a sine-wave pattern, VF or asystole. The ECG is a poor guide to the actual level and can deteriorate quickly.",
+  "features": [
+   "Tall, narrow, peaked T waves (V2–V4, II)",
+   "Flattened, broad P waves; PR about 230 ms",
+   "QRS widening (about 135 ms)"
+  ],
+  "pearl": "Hyperacute T waves of a STEMI are broad-based and bulky. Hyperkalaemic T waves are narrow-based and pointed, like a tent."
+ }
+]

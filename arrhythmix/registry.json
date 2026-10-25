@@ -1,0 +1,75 @@
+{
+ "MW_GAMES_entry": {
+  "id": "arrhythmix",
+  "kind": "Read the ECG",
+  "name": "Arrhythmix",
+  "path": "arrhythmix/",
+  "live": true,
+  "store": {
+   "stats": "arx-stats",
+   "day": "arx-day-",
+   "labels": [
+    "1",
+    "2",
+    "3",
+    "X"
+   ],
+   "distTitle": " (tries per win)"
+  },
+  "tagline": "One ECG, six diagnoses, three tries. Read the rhythm.",
+  "quip": "Squiggles in, diagnosis out. Calipers optional.",
+  "helpQuip": "“Sinus rhythm” is not a personality. Read the strip.",
+  "help": [
+   "Read the short case and the ECG, then pick the diagnosis from six options.",
+   "You get three tries. Each wrong pick unlocks a hint.",
+   "Tap Zoom (or the ECG) to enlarge it. Standard paper: 25 mm/s and 10 mm/mV, so one small square is 40 ms and 0.1 mV.",
+   "Easy and Medium days show a lead II rhythm strip. Hard and Genius days show a 12-lead.",
+   "After you finish, Key features highlights what to look for on the trace.",
+   "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
+   "A new ECG arrives at midnight, Sydney time. Past ECGs live in the archive."
+  ],
+  "accent": "#C62839",
+  "accentDark": "#F2707F",
+  "icon": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 27h8l3-5 3 5h3l3-17 4 28 3-11h4l3-4 3 4h3\"/></svg>"
+ },
+ "MW_ABOUT": {
+  "arrhythmix": [
+   "Arrhythmix is a daily ECG quiz. Each day brings a short fictional case and an ECG drawn on standard ECG paper. Pick the diagnosis from six options in three tries; wrong picks unlock hints, and every answer comes with the key features highlighted on the trace and a teaching pearl.",
+   [
+    [
+     "Who is it for?",
+     "Students, nurses, paramedics, doctors and anyone learning ECGs. Monday’s rhythm strips are gentle; Sunday’s 12-leads are not."
+    ],
+    [
+     "Are the ECGs real?",
+     "No. Every trace is computer-generated from parameters to show the textbook features, and every case is fictional. General education, not medical advice."
+    ]
+   ]
+  ]
+ },
+ "MW_MASCOTS": {
+  "arrhythmix": {
+   "name": "Riff",
+   "what": "a heart with headphones",
+   "cheer": [
+    "You’ve got the beat.",
+    "Calipers? Never needed them.",
+    "Every P wave accounted for.",
+    "Read in perfect time.",
+    "My heart skipped a beat. The good kind.",
+    "QRS: Quite Remarkably Smart.",
+    "Tuned in. Nailed it.",
+    "That read had rhythm.",
+    "Cardiology wants your number.",
+    "Sinus rhythm of genius."
+   ]
+  }
+ },
+ "notes": {
+  "MW_ORDER": "add \"arrhythmix\" where you want it on the hub",
+  "medicalOnly": "no normie block: hub shows it as Medical only in Normie mode",
+  "shell_SCENES_optional": "arrhythmix: function (st) { if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1; return { cls: \"cb-ecg\" + (gold ? \" gold\" : \"\"), html: '<svg class=\"cb-line\" viewBox=\"0 0 400 120\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400\"/></svg><p class=\"cb-cap\">' + (gold ? \"Read on the first try. Show-off.\" : \"Rhythm read in \" + n + \".\") + \"</p>\" }; }",
+  "sitemap": "https://maladywise.com/arrhythmix/",
+  "og_image": "assets/og/arrhythmix.png (not created; index.html references it)"
+ }
+}

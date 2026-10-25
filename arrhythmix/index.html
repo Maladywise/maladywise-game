@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/arrhythmix/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arrhythmix: Daily ECG Quiz (Read the Rhythm) | Malady Wise</title>
+<meta name="description" content="Arrhythmix is a free daily ECG quiz: read a rhythm strip or 12-lead, pick the diagnosis in three tries, and learn the key features. No sign-up.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Malady Wise Games">
+<meta property="og:title" content="Arrhythmix: Daily ECG Quiz (Read the Rhythm) | Malady Wise">
+<meta property="og:description" content="Arrhythmix is a free daily ECG quiz: read a rhythm strip or 12-lead, pick the diagnosis in three tries, and learn the key features. No sign-up.">
+<meta property="og:url" content="https://maladywise.com/arrhythmix/">
+<meta property="og:image" content="https://maladywise.com/assets/og/arrhythmix.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arrhythmix: Daily ECG Quiz (Read the Rhythm) | Malady Wise">
+<meta name="twitter:description" content="Arrhythmix is a free daily ECG quiz: read a rhythm strip or 12-lead, pick the diagnosis in three tries, and learn the key features. No sign-up.">
+<meta name="twitter:image" content="https://maladywise.com/assets/og/arrhythmix.png?v=1">
+<link rel="stylesheet" href="../assets/shell.css?v=110">
+<script src="../assets/games.js?v=70"></script>
+<script>/* local testing only: registers Arrhythmix if assets/games.js doesn't have it yet (see registry.json) */
+window.MW_GAMES&&!MW_GAMES.some(g=>g.id==="arrhythmix")&&MW_GAMES.push({"id": "arrhythmix", "kind": "Read the ECG", "name": "Arrhythmix", "path": "arrhythmix/", "live": true, "store": {"stats": "arx-stats", "day": "arx-day-", "labels": ["1", "2", "3", "X"], "distTitle": " (tries per win)"}, "tagline": "One ECG, six diagnoses, three tries. Read the rhythm.", "quip": "Squiggles in, diagnosis out. Calipers optional.", "helpQuip": "“Sinus rhythm” is not a personality. Read the strip.", "help": ["Read the short case and the ECG, then pick the diagnosis from six options.", "You get three tries. Each wrong pick unlocks a hint.", "Tap Zoom (or the ECG) to enlarge it. Standard paper: 25 mm/s and 10 mm/mV, so one small square is 40 ms and 0.1 mV.", "Easy and Medium days show a lead II rhythm strip. Hard and Genius days show a 12-lead.", "After you finish, Key features highlights what to look for on the trace.", "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.", "A new ECG arrives at midnight, Sydney time. Past ECGs live in the archive."], "accent": "#C62839", "accentDark": "#F2707F", "icon": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 27h8l3-5 3 5h3l3-17 4 28 3-11h4l3-4 3 4h3\"/></svg>"});
+window.MW_ABOUT&&!MW_ABOUT.arrhythmix&&(MW_ABOUT.arrhythmix=["Arrhythmix is a daily ECG quiz. Each day brings a short fictional case and an ECG drawn on standard ECG paper. Pick the diagnosis from six options in three tries; wrong picks unlock hints, and every answer comes with the key features highlighted on the trace and a teaching pearl.", [["Who is it for?", "Students, nurses, paramedics, doctors and anyone learning ECGs. Monday’s rhythm strips are gentle; Sunday’s 12-leads are not."], ["Are the ECGs real?", "No. Every trace is computer-generated from parameters to show the textbook features, and every case is fictional. General education, not medical advice."]]]);
+window.MW_MASCOTS&&!MW_MASCOTS.arrhythmix&&(MW_MASCOTS.arrhythmix={"name": "Riff", "what": "a heart with headphones", "cheer": ["You’ve got the beat.", "Calipers? Never needed them.", "Every P wave accounted for.", "Read in perfect time.", "My heart skipped a beat. The good kind.", "QRS: Quite Remarkably Smart.", "Tuned in. Nailed it.", "That read had rhythm.", "Cardiology wants your number.", "Sinus rhythm of genius."]});</script>
+<script src="../assets/shell.js?v=110"></script>
+</head>
+<body>
+<main class="wrap">
+  <section class="splash" id="splash"></section>
+  <section id="game" hidden>
+    <div id="arx"></div>
+    <script src="ecg.js?v=1"></script>
+    <script src="arrhythmix.js?v=1"></script>
+  </section>
+  <footer class="site">All puzzles are fictional/educational. General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script>MW.game("arrhythmix");</script>
+</body>
+</html>
