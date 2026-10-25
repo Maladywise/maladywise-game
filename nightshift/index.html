@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Night Shift | Malady Wise</title>
+<meta name="description" content="Shh. A secret Malady Wise game.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#2E1F57">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<link rel="stylesheet" href="../assets/shell.css?v=110">
+<link rel="stylesheet" href="nightshift.css?v=1">
+<script src="../assets/games.js?v=70"></script>
+<script src="../assets/shell.js?v=111"></script>
+</head>
+<body>
+<main class="wrap ns-page">
+  <section class="ns-intro" id="ns-intro">
+    <img class="ns-masc" id="ns-masc" src="/assets/mascots/grandrounds.svg" alt="Locum the night-shift bat" width="112" height="112">
+    <p class="ns-found">&#129415; You found the secret game</p>
+    <h1>Night Shift</h1>
+    <p class="ns-lede" id="ns-lede">Fly Locum through the hospital from 11pm to 7am. Grab coffee, dodge pagers, IV poles and ringing phones. Three lives. Handover is at 7.</p>
+    <p class="ns-how"><b>Tap</b> or press <b>Space</b> to flap.</p>
+    <button class="big ns-play" type="button" id="ns-play">Start shift</button>
+    <p class="ns-best" id="ns-best"></p>
+    <p class="ns-hush">Shh. It&rsquo;s not on the menu. Keep it between us.</p>
+  </section>
+
+  <section class="ns-game" id="ns-game" hidden aria-label="Night Shift game">
+    <div class="ns-hud" id="ns-hud">
+      <div class="ns-time"><small>Survived until</small><b id="ns-clock">11:00 pm</b></div>
+      <div class="ns-cof" aria-label="Coffees"><span aria-hidden="true">&#9749;</span> <b id="ns-coffee">0</b></div>
+      <div class="ns-lives" id="ns-lives" aria-label="Lives"></div>
+      <button class="ns-ibtn" type="button" id="ns-mute" aria-label="Sound off" title="Sound">&#128263;</button>
+      <button class="ns-ibtn" type="button" id="ns-pause" aria-label="Pause" title="Pause">&#10074;&#10074;</button>
+    </div>
+    <div class="ns-stage" id="ns-stage">
+      <canvas id="ns-canvas" aria-label="Locum flying through a hospital corridor at night"></canvas>
+      <div class="ns-over" id="ns-over" hidden>
+        <div class="ns-card">
+          <img class="ns-omasc" id="ns-omasc" src="/assets/mascots/grandrounds.svg" alt="" width="72" height="72">
+          <p class="ns-otitle" id="ns-otitle">Handover.</p>
+          <p class="ns-omsg" id="ns-omsg"></p>
+          <div class="ns-ostats"><span><small>Survived until</small><b id="ns-otime">11:00 pm</b></span><span><small>Coffees</small><b id="ns-ocof">0</b></span></div>
+          <p class="ns-obest" id="ns-obest"></p>
+          <div class="ns-obtns">
+            <button class="big" type="button" id="ns-again">Another shift</button>
+            <button class="ns-sbtn" type="button" id="ns-sharebtn">Share</button>
+          </div>
+          <p class="ns-ohint">Space to restart</p>
+        </div>
+      </div>
+    </div>
+    <p class="ns-foot"><a href="/">&larr; Back to the puzzles</a></p>
+  </section>
+
+  <footer class="site">A secret game. Not medical advice, just bats and caffeine.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<div class="ns-toast" id="ns-toast" role="status" aria-live="polite" hidden></div>
+<script>if (window.MW && MW.page) MW.page();</script>
+<script src="nightshift.js?v=1"></script>
+</body>
+</html>
