@@ -177,11 +177,11 @@
     },
     panelysis: function (st) {
       if (!st.win) return null; var n = (st.picks || []).length;
-      return { cls: "cb-dx" + (n === 1 ? " gold" : ""), html: '<div class="cb-stamp">RESULTS<br>REVIEWED</div><p class="cb-cap">' + (n === 1 ? "First pick. Pathologist energy." : "Diagnosed on try " + n + ".") + "</p>" };
+      return { cls: "cb-dx" + (n === 1 ? " gold" : ""), html: (NORMIE ? '<div class="cb-stamp">CASE<br>CRACKED</div><p class="cb-cap">' + (n === 1 ? "First pick. Quiz-show energy." : "Case cracked on try " + n + ".") : '<div class="cb-stamp">RESULTS<br>REVIEWED</div><p class="cb-cap">' + (n === 1 ? "First pick. Pathologist energy." : "Diagnosed on try " + n + ".")) + "</p>" };
     },
     arrhythmix: function (st) {
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
-      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (gold ? "Read on the first try. Show-off." : "Rhythm read on try " + n + ".") + "</p>" };
+      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="' + (NORMIE ? "M0 104 L50 96 L90 100 L140 78 L190 84 L240 52 L290 60 L340 24 L400 12" : "M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400") + '"/></svg><p class="cb-cap">' + (NORMIE ? (gold ? "Nailed the trend. First try." : "Nailed the trend on try " + n + ".") : gold ? "Read on the first try. Show-off." : "Rhythm read on try " + n + ".") + "</p>" };
     },
     zebritis: function (st) {
       if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
