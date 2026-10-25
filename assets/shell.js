@@ -129,7 +129,7 @@
     wordemic: function (st) {
       if (!st.win) return null;
       var n = (st.guesses || []).length, gold = n <= 2;
-      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (gold ? "Pulse restored in " + n + ". Show-off." : "Pulse restored. Solved in " + n + ".") + "</p>" };
+      return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400"/></svg><p class="cb-cap">' + (NORMIE ? (gold ? "Got it in " + n + ". Show-off." : "Cracked it in " + n + ".") : (gold ? "Pulse restored in " + n + ". Show-off." : "Pulse restored. Solved in " + n + ".")) + "</p>" };
     },
     comorbix: function (st) {
       if (!st.win) return null; var m = st.mistakes || 0;
@@ -197,7 +197,7 @@
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function mascotHelp(g) {
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
-    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + m.what + (NORMIE && g.nmode && g.normieMascot ? " (off duty)" : "") + '. Here\u2019s how ' + g.name + ' works.</p></div>';
+    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p></div>';
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
@@ -214,6 +214,7 @@
     if (g && st.win && !g.weekly && !g.dailyLine) { var t = sydToday(); if (diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
   }
   var BADGES = { 3: ["Intern", "\ud83e\ude7a"], 7: ["Registrar", "\ud83e\udd47"], 14: ["Fellow", "\ud83c\udf93"], 30: ["Consultant", "\ud83c\udfc6"], 100: ["Professor", "\ud83d\udc51"] };
+  if (NORMIE) BADGES = { 3: ["Regular", "\u2b50"], 7: ["Enthusiast", "\ud83e\udd47"], 14: ["Expert", "\ud83c\udf93"], 30: ["Legend", "\ud83c\udfc6"], 100: ["Grandmaster", "\ud83d\udc51"] };
   function afterLive(g) {
     var t = sydToday(), sk = siteStreak().n, b = BADGES[sk];
     if (b && get(mk("mw-badge-" + sk), "") !== t && !get(mk("mw-badge-" + sk + "-got"), 0)) {
