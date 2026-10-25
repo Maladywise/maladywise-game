@@ -1,0 +1,507 @@
+[
+ {
+  "date": "2026-10-26",
+  "number": 1,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Long winters, short summers and a very relaxed attitude to sitting in hot rooms.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "5.6",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Coffee per person",
+      "12",
+      "kg/yr",
+      "1–5",
+      "H"
+     ],
+     [
+      "Saunas per person",
+      "0.6",
+      "",
+      "<0.05",
+      "H"
+     ],
+     [
+      "Forest cover",
+      "74",
+      "%",
+      "10–45",
+      "H"
+     ],
+     [
+      "Metal bands per 100,000 people",
+      "53",
+      "",
+      "<5",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Finland",
+  "wrong": [
+   "Sweden",
+   "Norway",
+   "Denmark",
+   "Iceland",
+   "Estonia"
+  ],
+  "hints": [
+   [
+    "Check the coffee. And the saunas.",
+    [
+     "Coffee per person",
+     "Saunas per person"
+    ]
+   ],
+   [
+    "Lots of trees, lots of headbanging.",
+    [
+     "Forest cover",
+     "Metal bands per 100,000 people"
+    ]
+   ]
+  ],
+  "key": [
+   "Saunas per person",
+   "Coffee per person",
+   "Metal bands per 100,000 people"
+  ],
+  "why": "Around three million saunas for about 5.6 million people, the world’s biggest coffee habit at roughly 12 kg a head, three-quarters forest and more metal bands per person than anywhere. That’s Finland. Sweden is a fair guess, but Sweden drinks less coffee and has far fewer saunas per person.",
+  "pearl": "Finland was the first country in the world to elect women to parliament: 19 women won seats in 1907."
+ },
+ {
+  "date": "2026-10-27",
+  "number": 2,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "A spotty sprinter that would rather run than fight.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical big cat",
+    "rows": [
+     [
+      "Top speed",
+      "100",
+      "km/h",
+      "50–80",
+      "H"
+     ],
+     [
+      "Weight",
+      "50",
+      "kg",
+      "40–250",
+      ""
+     ],
+     [
+      "Stride length",
+      "7",
+      "m",
+      "2–5",
+      "H"
+     ],
+     [
+      "Can roar",
+      "No",
+      "",
+      "Yes",
+      "!"
+     ],
+     [
+      "Claws fully retract",
+      "No",
+      "",
+      "Yes",
+      "!"
+     ],
+     [
+      "Hunts mainly",
+      "By day",
+      "",
+      "At night",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Cheetah",
+  "wrong": [
+   "Leopard",
+   "Lion",
+   "Jaguar",
+   "Pronghorn",
+   "Greyhound"
+  ],
+  "hints": [
+   [
+    "That top speed is not normal for a cat.",
+    [
+     "Top speed",
+     "Stride length"
+    ]
+   ],
+   [
+    "A big cat that can’t roar and keeps its claws out, like running spikes.",
+    [
+     "Can roar",
+     "Claws fully retract"
+    ]
+   ]
+  ],
+  "key": [
+   "Top speed",
+   "Can roar",
+   "Claws fully retract"
+  ],
+  "why": "The fastest land animal reaches about 100 km/h in short bursts, with strides of around 7 metres. Cheetahs can’t roar (they purr, chirp and yelp instead) and their claws stay partly out for grip, like a sprinter’s spikes. If you picked the lion, respect the confidence. The lion is still catching its breath.",
+  "pearl": "A cheetah can only hold top speed for a few hundred metres before it overheats, so most chases are over in under a minute."
+ },
+ {
+  "date": "2026-10-28",
+  "number": 3,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Flat, watery and very keen on two wheels.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical European city",
+    "rows": [
+     [
+      "Population",
+      "930",
+      "thousand",
+      "200–2000",
+      ""
+     ],
+     [
+      "Canals",
+      "100",
+      "km",
+      "<10",
+      "H"
+     ],
+     [
+      "Bikes per resident",
+      "1",
+      "",
+      "<0.5",
+      "H"
+     ],
+     [
+      "Bikes fished out of canals",
+      "12,000",
+      "per year",
+      "<100",
+      "H"
+     ],
+     [
+      "Houseboats",
+      "2,500",
+      "",
+      "<100",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Amsterdam",
+  "wrong": [
+   "Copenhagen",
+   "Utrecht",
+   "Venice",
+   "Bruges",
+   "Hamburg"
+  ],
+  "hints": [
+   [
+    "Those bike numbers are doing a lot of work.",
+    [
+     "Bikes per resident",
+     "Bikes fished out of canals"
+    ]
+   ],
+   [
+    "Plenty of water, but people live on it too.",
+    [
+     "Canals",
+     "Houseboats"
+    ]
+   ]
+  ],
+  "key": [
+   "Bikes per resident",
+   "Bikes fished out of canals",
+   "Canals"
+  ],
+  "why": "About 100 km of canals, roughly a bike for every resident, and an estimated 12,000 to 15,000 bikes hauled out of the water every year. That’s Amsterdam. Venice has the canals but no bikes, and Copenhagen has the bikes but far fewer canals. Picked Venice? Lovely, but try cycling over a gondola.",
+  "pearl": "Amsterdam’s canal ring was built in the 1600s and is UNESCO World Heritage listed. The city uses a special boat with a grabber to fish out the bikes."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 4,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Built for a fair, meant to be temporary, never left.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical observation tower",
+    "rows": [
+     [
+      "Height",
+      "330",
+      "m",
+      "150–550",
+      ""
+     ],
+     [
+      "Year opened",
+      "1889",
+      "",
+      "1950–2000",
+      "L"
+     ],
+     [
+      "Main material",
+      "Puddle iron",
+      "",
+      "Steel or concrete",
+      "!"
+     ],
+     [
+      "Rivets",
+      "2.5",
+      "million",
+      "",
+      ""
+     ],
+     [
+      "Paint per repaint",
+      "60",
+      "tonnes",
+      "",
+      ""
+     ],
+     [
+      "Steps to the top",
+      "1,665",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Visitors per year",
+      "6",
+      "million",
+      "<3",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Eiffel Tower",
+  "wrong": [
+   "Tokyo Tower",
+   "Blackpool Tower",
+   "CN Tower",
+   "Space Needle",
+   "Berlin TV Tower"
+  ],
+  "hints": [
+   [
+    "This tower is much older than most of its rivals.",
+    [
+     "Year opened",
+     "Main material"
+    ]
+   ],
+   [
+    "Few towers pull this many visitors a year.",
+    [
+     "Visitors per year"
+    ]
+   ]
+  ],
+  "key": [
+   "Year opened",
+   "Main material",
+   "Visitors per year"
+  ],
+  "why": "Opened in 1889 for the Paris World’s Fair, built from about 2.5 million rivets and puddle iron, repainted roughly every 7 years with about 60 tonnes of paint, and visited by around 6 million people a year. It’s the Eiffel Tower. Tokyo Tower is a cheeky guess: it’s 3 m taller but nearly 70 years younger.",
+  "pearl": "It was meant to stand for only 20 years. It survived partly because it was useful as a giant radio antenna."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 5,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Tiny, shiny and running on sugar.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical small bird",
+    "rows": [
+     [
+      "Weight",
+      "3",
+      "g",
+      "10–40",
+      "L"
+     ],
+     [
+      "Heart rate (active)",
+      "1,200",
+      "bpm",
+      "300–600",
+      "H"
+     ],
+     [
+      "Heart rate (asleep)",
+      "50",
+      "bpm",
+      "200–400",
+      "L"
+     ],
+     [
+      "Wingbeats",
+      "80",
+      "per second",
+      "10–25",
+      "H"
+     ],
+     [
+      "Can fly backwards",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Hummingbird",
+  "wrong": [
+   "Sunbird",
+   "Swift",
+   "Wren",
+   "Kingfisher",
+   "Bee-eater"
+  ],
+  "hints": [
+   [
+    "Look at that daytime heart rate, then the night-time one.",
+    [
+     "Heart rate (active)",
+     "Heart rate (asleep)"
+    ]
+   ],
+   [
+    "Which bird can reverse out of a flower?",
+    [
+     "Can fly backwards",
+     "Wingbeats"
+    ]
+   ]
+  ],
+  "key": [
+   "Heart rate (active)",
+   "Wingbeats",
+   "Can fly backwards"
+  ],
+  "why": "A heart rate over 1,200 bpm by day, falling to about 50 at night in a state called torpor, wings beating around 80 times a second, and the only birds that can truly fly backwards. It’s a hummingbird. Sunbirds look similar and also sip nectar, but they mostly perch to feed instead of hovering.",
+  "pearl": "Hummingbirds live only in the Americas. Sunbirds fill the same nectar-drinking role in Africa, Asia and Australia."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 6,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Happy Halloween. Castles, forests and a certain famous count.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with its Eastern European neighbours",
+    "rows": [
+     [
+      "Population",
+      "19",
+      "million",
+      "2–40",
+      ""
+     ],
+     [
+      "Brown bears",
+      "6",
+      "thousand",
+      "<1",
+      "H"
+     ],
+     [
+      "Language family",
+      "Romance",
+      "",
+      "Slavic",
+      "!"
+     ],
+     [
+      "First perfect 10 in Olympic gymnastics",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Castle tied to the Dracula legend",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Romania",
+  "wrong": [
+   "Hungary",
+   "Bulgaria",
+   "Slovakia",
+   "Serbia",
+   "Poland"
+  ],
+  "hints": [
+   [
+    "Its language is closer to Italian than to its neighbours’.",
+    [
+     "Language family"
+    ]
+   ],
+   [
+    "A gymnast scored a perfect 10 in 1976. And there’s that castle.",
+    [
+     "First perfect 10 in Olympic gymnastics",
+     "Castle tied to the Dracula legend"
+    ]
+   ]
+  ],
+  "key": [
+   "Language family",
+   "First perfect 10 in Olympic gymnastics",
+   "Castle tied to the Dracula legend"
+  ],
+  "why": "A Romance language in a mostly Slavic neighbourhood, at least 6,000 brown bears (over a third of Europe’s outside Russia), Bran Castle in Transylvania, and Nadia Comăneci, who at 14 scored the first perfect 10 in Olympic gymnastics in 1976. It’s Romania. Picked Hungary? Spooky, but no castle with fangs.",
+  "pearl": "The scoreboard at the 1976 Olympics couldn’t display 10.00, so Comăneci’s perfect score showed up as 1.00."
+ }
+]
