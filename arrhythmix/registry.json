@@ -4,10 +4,16 @@
   "kind": "Read the ECG",
   "name": "Arrhythmix",
   "path": "arrhythmix/",
-  "live": true,
+  "live": false,
+  "weekly": true,
+  "from": "2026-10-29",
+  "relday": "Thursdays",
+  "weeklyLine": "A new ECG every Thursday. Strip or 12-lead, you’ll know it when you see it.",
   "store": {
    "stats": "arx-stats",
    "day": "arx-day-",
+   "weekly": true,
+   "weekStart": 4,
    "labels": [
     "1",
     "2",
@@ -16,17 +22,16 @@
    ],
    "distTitle": " (tries per win)"
   },
-  "tagline": "One ECG, six diagnoses, three tries. Read the rhythm.",
+  "tagline": "ECG Thursday: one ECG, six diagnoses, three tries. Read the rhythm.",
   "quip": "Squiggles in, diagnosis out. Calipers optional.",
   "helpQuip": "“Sinus rhythm” is not a personality. Read the strip.",
   "help": [
    "Read the short case and the ECG, then pick the diagnosis from six options.",
    "You get three tries. Each wrong pick unlocks a hint.",
    "Tap Zoom (or the ECG) to enlarge it. Standard paper: 25 mm/s and 10 mm/mV, so one small square is 40 ms and 0.1 mV.",
-   "Easy and Medium days show a lead II rhythm strip. Hard and Genius days show a 12-lead.",
+   "One new ECG every Thursday. Difficulty varies week to week (rhythm strips are usually gentler, 12-leads harder) and is shown on the badge.",
    "After you finish, Key features highlights what to look for on the trace.",
-   "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun.",
-   "A new ECG arrives at midnight, Sydney time. Past ECGs live in the archive."
+   "Released at midnight Sydney time each Thursday. Past ECGs live in the archive."
   ],
   "accent": "#C62839",
   "accentDark": "#F2707F",
@@ -34,11 +39,11 @@
  },
  "MW_ABOUT": {
   "arrhythmix": [
-   "Arrhythmix is a daily ECG quiz. Each day brings a short fictional case and an ECG drawn on standard ECG paper. Pick the diagnosis from six options in three tries; wrong picks unlock hints, and every answer comes with the key features highlighted on the trace and a teaching pearl.",
+   "Arrhythmix is a weekly ECG quiz: ECG Thursday. Every Thursday brings a short fictional case and an ECG drawn on standard ECG paper. Pick the diagnosis from six options in three tries; wrong picks unlock hints, and every answer comes with the key features highlighted on the trace and a teaching pearl.",
    [
     [
      "Who is it for?",
-     "Students, nurses, paramedics, doctors and anyone learning ECGs. Monday’s rhythm strips are gentle; Sunday’s 12-leads are not."
+     "Students, nurses, paramedics, doctors and anyone learning ECGs. Difficulty varies week to week: rhythm strips are usually gentler, 12-leads harder. The badge on each ECG shows how hard it is."
     ],
     [
      "Are the ECGs real?",
@@ -70,6 +75,7 @@
   "medicalOnly": "no normie block: hub shows it as Medical only in Normie mode",
   "shell_SCENES_optional": "arrhythmix: function (st) { if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1; return { cls: \"cb-ecg\" + (gold ? \" gold\" : \"\"), html: '<svg class=\"cb-line\" viewBox=\"0 0 400 120\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M0 60 H120 L135 60 L145 25 L158 100 L170 10 L184 92 L196 60 H260 L270 60 L278 40 L288 80 L298 60 H400\"/></svg><p class=\"cb-cap\">' + (gold ? \"Read on the first try. Show-off.\" : \"Rhythm read in \" + n + \".\") + \"</p>\" }; }",
   "sitemap": "https://maladywise.com/arrhythmix/",
-  "og_image": "assets/og/arrhythmix.png (not created; index.html references it)"
+  "og_image": "assets/og/arrhythmix.png",
+  "weekly": "ECG Thursday: weekly, release Thursday 00:00 Sydney (weekStart 4). puzzles/puzzles.json = dated Thursdays; puzzles/reserve.json = spares (no date/number); 'seed' keeps traces stable when re-dated."
  }
 }

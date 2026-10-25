@@ -1,0 +1,245 @@
+[
+ {
+  "date": "2026-10-29",
+  "number": 1,
+  "difficulty": "Medium",
+  "seed": "2026-10-29",
+  "vignette": "World Stroke Day. A 74-year-old woman with high blood pressure and type 2 diabetes says her smartwatch keeps flagging an irregular pulse.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "af",
+    "rate": 104,
+    "f": 0.07
+   }
+  },
+  "highlight": {
+   "marks": [
+    "f",
+    "rr"
+   ]
+  },
+  "answer": "Atrial fibrillation",
+  "options": [
+   "Atrial fibrillation",
+   "Atrial flutter with variable block",
+   "Multifocal atrial tachycardia",
+   "Sinus arrhythmia",
+   "Sinus rhythm with atrial ectopics",
+   "Second-degree AV block, Mobitz I"
+  ],
+  "hints": [
+   "Try to find one clear, repeatable P wave. Go on.",
+   "Measure a few R-R intervals. Is there any pattern at all?"
+  ],
+  "explanation": "An irregularly irregular narrow-complex rhythm with no identifiable P waves and a wavy fibrillatory baseline: atrial fibrillation. Fitting for World Stroke Day: AF raises stroke risk around five-fold, and about one in four strokes is linked to it. Age, high blood pressure and diabetes all add to that risk, which is why scores like CHA₂DS₂-VA exist.",
+  "features": [
+   "Irregularly irregular R-R intervals",
+   "No P waves; fine fibrillatory baseline",
+   "Narrow QRS, rate about 100/min"
+  ],
+  "pearl": "Irregularly irregular with no P waves is AF until proven otherwise. MAT is also irregular, but it has P waves in at least three different shapes."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 2,
+  "difficulty": "Hard",
+  "seed": "2026-10-30",
+  "vignette": "A 63-year-old woman has had 40 minutes of heavy central chest pain spreading to her jaw. She is sweaty and nauseated. 12-lead ECG:",
+  "ecg": {
+   "layout": "12",
+   "preset": "inferiorSTEMI",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 78
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "ST elevation"
+    },
+    {
+     "leads": [
+      "I",
+      "aVL"
+     ],
+     "label": "reciprocal",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Inferior STEMI",
+  "options": [
+   "Inferior STEMI",
+   "Acute pericarditis",
+   "Anterior STEMI",
+   "Posterior MI",
+   "Left bundle branch block",
+   "Benign early repolarisation"
+  ],
+  "hints": [
+   "Which leads are elevated, and which leads mirror them?",
+   "ST elevation in III bigger than II, with ST depression in aVL."
+  ],
+  "explanation": "ST elevation in II, III and aVF with reciprocal ST depression and T inversion in aVL (and I): an inferior STEMI. Elevation in III greater than II points to the right coronary artery. Reciprocal change argues strongly against pericarditis. Right-sided leads (V4R) look for right ventricular involvement.",
+  "features": [
+   "ST elevation in II, III and aVF (III > II)",
+   "Reciprocal ST depression and T inversion in aVL and I",
+   "Early Q wave forming in III"
+  ],
+  "pearl": "Reciprocal depression in aVL is often the first clue to an inferior STEMI, sometimes before the inferior elevation is obvious."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 3,
+  "difficulty": "Hard",
+  "seed": "2026-10-31",
+  "vignette": "A 66-year-old woman on haemodialysis has missed two sessions and now feels weak, with palpitations.",
+  "ecg": {
+   "layout": "12",
+   "preset": "hyperk",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 62
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "peaked T"
+    }
+   ],
+   "marks": [
+    "pr",
+    "qrs"
+   ]
+  },
+  "answer": "Hyperkalaemia",
+  "options": [
+   "Hyperkalaemia",
+   "Hypokalaemia",
+   "Anterior STEMI (hyperacute T waves)",
+   "Long QT syndrome",
+   "Left bundle branch block",
+   "Hypercalcaemia"
+  ],
+  "hints": [
+   "Look at the shape of the T waves: tall, narrow and pointed.",
+   "Then look at the P waves and the QRS: flat and wide."
+  ],
+  "explanation": "Tall, narrow, symmetrical 'tented' T waves, flattened P waves, a long PR (about 230 ms) and a widening QRS. The classic sequence as potassium rises: peaked T waves, then PR prolongation and P-wave flattening, then QRS widening, then a sine-wave pattern, VF or asystole. The ECG is a poor guide to the actual level and can deteriorate quickly.",
+  "features": [
+   "Tall, narrow, peaked T waves (V2–V4, II)",
+   "Flattened, broad P waves; PR about 230 ms",
+   "QRS widening (about 135 ms)"
+  ],
+  "pearl": "Hyperacute T waves of a STEMI are broad-based and bulky. Hyperkalaemic T waves are narrow-based and pointed, like a tent."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 4,
+  "difficulty": "Hard",
+  "seed": "2026-11-19",
+  "vignette": "A 34-year-old woman on methadone, recently started on a macrolide antibiotic, suddenly collapses. The ward monitor shows:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "torsades",
+    "rate": 64,
+    "from": 3.4,
+    "trate": 228,
+    "tw": 2.1,
+    "pr": 170
+   },
+   "qtc": 0.6
+  },
+  "highlight": {
+   "marks": [
+    "qt",
+    "twist"
+   ]
+  },
+  "answer": "Torsades de pointes",
+  "options": [
+   "Torsades de pointes",
+   "Ventricular fibrillation",
+   "Monomorphic ventricular tachycardia",
+   "Atrial fibrillation with WPW",
+   "Monitor artefact",
+   "SVT with aberrancy"
+  ],
+  "hints": [
+   "Look at the beats before it started. Check the QT.",
+   "Polymorphic VT whose QRS amplitude twists around the baseline."
+  ],
+  "explanation": "Sinus beats with a very long QT, then an early beat lands on the T wave and triggers a fast polymorphic broad-complex tachycardia whose amplitude waxes and wanes, appearing to twist around the baseline. That is torsades de pointes, a polymorphic VT driven by QT prolongation, here from two QT-prolonging drugs. Low potassium and magnesium add fuel.",
+  "features": [
+   "Long QT in the preceding sinus beats",
+   "Polymorphic VT at about 230/min",
+   "Amplitude waxes and wanes: 'twisting of the points'"
+  ],
+  "pearl": "A QTc over 500 ms markedly raises torsades risk, especially when QT-prolonging drugs (methadone, macrolides, ondansetron, some antipsychotics) are combined."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 5,
+  "difficulty": "Genius",
+  "seed": "2026-11-08",
+  "vignette": "A 54-year-old woman had 20 minutes of chest pain while gardening yesterday. She is pain-free in the emergency department now.",
+  "ecg": {
+   "layout": "12",
+   "preset": "wellens",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "deep symmetric T"
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Wellens syndrome",
+  "options": [
+   "Wellens syndrome",
+   "Anterior STEMI",
+   "Posterior MI",
+   "Hypokalaemia",
+   "Left ventricular hypertrophy with strain",
+   "Acute pericarditis"
+  ],
+  "hints": [
+   "She's pain-free. Look at the T waves in V2 and V3.",
+   "Deep, symmetrical T inversion, preserved R waves, almost no ST elevation."
+  ],
+  "explanation": "Deep, symmetrical T-wave inversion in V2–V4 (type B Wellens; type A is biphasic), with preserved R waves, no Q waves and minimal ST change, recorded after chest pain has settled. This pattern points to a critical proximal left anterior descending (LAD) stenosis and a high risk of a large anterior MI in the coming days.",
+  "features": [
+   "Deep symmetrical T inversion in V2–V4",
+   "Preserved R waves, no Q waves",
+   "Isoelectric or minimally raised ST",
+   "Recorded in a pain-free period"
+  ],
+  "pearl": "Wellens is a pain-free ECG. If the pain returns, the T waves can 'pseudo-normalise', so a normal-looking repeat ECG can be falsely reassuring."
+ }
+]
