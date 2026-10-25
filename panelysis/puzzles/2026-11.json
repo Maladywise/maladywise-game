@@ -1,0 +1,3368 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 7,
+  "difficulty": "Genius",
+  "patient": "Desmond, 70, male",
+  "story": "Back pain for three months, tired, and his third chest infection this winter. The lab has flagged his sodium.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "128",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "4.6",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Chloride",
+      "98",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "24",
+      "mmol/L",
+      "22–32",
+      ""
+     ],
+     [
+      "Urea",
+      "10.2",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "168",
+      "µmol/L",
+      "60–110",
+      "H"
+     ],
+     [
+      "Osmolality",
+      "289",
+      "mOsm/kg",
+      "275–295",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Proteins and bone",
+    "rows": [
+     [
+      "Total protein",
+      "114",
+      "g/L",
+      "60–80",
+      "H"
+     ],
+     [
+      "Albumin",
+      "30",
+      "g/L",
+      "35–50",
+      "L"
+     ],
+     [
+      "Globulin",
+      "84",
+      "g/L",
+      "25–45",
+      "H"
+     ],
+     [
+      "Calcium",
+      "2.74",
+      "mmol/L",
+      "2.10–2.60",
+      "H"
+     ],
+     [
+      "Corrected calcium",
+      "2.94",
+      "mmol/L",
+      "2.10–2.60",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Haematology",
+    "rows": [
+     [
+      "Haemoglobin",
+      "97",
+      "g/L",
+      "130–180",
+      "L"
+     ],
+     [
+      "ESR",
+      "112",
+      "mm/h",
+      "<35",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Multiple myeloma (pseudohyponatraemia)",
+  "wrong": [
+   "SIADH from lung cancer",
+   "Primary hyperparathyroidism",
+   "Hypothyroidism",
+   "Sarcoidosis",
+   "Dehydration"
+  ],
+  "hints": [
+   [
+    "The sodium is low, but the measured osmolality is normal. Is the sodium real?",
+    [
+     "Sodium",
+     "Osmolality"
+    ]
+   ],
+   [
+    "Look at the gap between total protein and albumin.",
+    [
+     "Total protein",
+     "Globulin"
+    ]
+   ]
+  ],
+  "key": [
+   "Osmolality",
+   "Globulin",
+   "Corrected calcium"
+  ],
+  "why": "A low sodium with a normal measured osmolality is pseudohyponatraemia: a huge load of protein takes up plasma volume, and many lab methods then under-read the sodium. The extra protein is globulin, 84 g/L. Add anaemia, high calcium, kidney impairment, bone pain, recurrent infections and an ESR over 100, and this is myeloma until proven otherwise. Sneaky bonus clue: the anion gap is only 6 (128 − 98 − 24), because positively charged paraprotein fills the gap.",
+  "pearl": "CRAB: high Calcium, Renal impairment, Anaemia, Bone lesions. A big gap between total protein and albumin should prompt serum protein electrophoresis and free light chains."
+ },
+ {
+  "date": "2026-11-02",
+  "number": 8,
+  "difficulty": "Easy",
+  "patient": "Siobhan, 19, female",
+  "story": "A week of severe sore throat, fevers and exhaustion, with swollen glands in her neck. Just started uni.",
+  "theme": "Pathology Week",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "132",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "WCC",
+      "13.6",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Neutrophils",
+      "3.1",
+      "×10⁹/L",
+      "2.0–7.5",
+      ""
+     ],
+     [
+      "Lymphocytes",
+      "9.2",
+      "×10⁹/L",
+      "1.0–4.0",
+      "H"
+     ],
+     [
+      "Platelets",
+      "142",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ],
+     [
+      "Blood film",
+      "Many atypical (reactive) lymphocytes",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Liver function",
+    "rows": [
+     [
+      "Bilirubin",
+      "14",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "ALT",
+      "96",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "AST",
+      "72",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "ALP",
+      "118",
+      "U/L",
+      "30–110",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Serology",
+    "rows": [
+     [
+      "Heterophile antibody (Monospot)",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Glandular fever (EBV)",
+  "wrong": [
+   "Streptococcal tonsillitis",
+   "Acute leukaemia",
+   "Hepatitis A",
+   "Chronic lymphocytic leukaemia",
+   "Influenza"
+  ],
+  "hints": [
+   [
+    "Which white cell is up? Then read the film.",
+    [
+     "Lymphocytes",
+     "Blood film"
+    ]
+   ],
+   [
+    "The liver is grumbling too, and one antibody test seals it.",
+    [
+     "ALT",
+     "Heterophile antibody (Monospot)"
+    ]
+   ]
+  ],
+  "key": [
+   "Lymphocytes",
+   "Blood film",
+   "Heterophile antibody (Monospot)"
+  ],
+  "why": "Lots of lymphocytes, many of them atypical (reactive), mildly raised liver enzymes and a positive heterophile antibody test, in a young adult with fever, sore throat and big neck glands. That's glandular fever (infectious mononucleosis), caused by Epstein–Barr virus. Bacterial tonsillitis usually raises neutrophils, not lymphocytes.",
+  "pearl": "The spleen often swells in glandular fever, which is why contact sport is usually off for a few weeks. The Monospot can be negative early on and in young children; EBV serology helps then."
+ },
+ {
+  "date": "2026-11-03",
+  "number": 9,
+  "difficulty": "Easy",
+  "patient": "Priya, 29, female",
+  "story": "Palpitations, sweaty, tremor, and 6 kg lighter without trying. Her eyes feel gritty and look 'starey'.",
+  "panels": [
+   {
+    "name": "Thyroid function",
+    "rows": [
+     [
+      "TSH",
+      "<0.01",
+      "mU/L",
+      "0.40–4.00",
+      "L"
+     ],
+     [
+      "Free T4",
+      "46",
+      "pmol/L",
+      "10.0–20.0",
+      "H"
+     ],
+     [
+      "Free T3",
+      "17.2",
+      "pmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "TSH receptor antibodies",
+      "11.4",
+      "IU/L",
+      "<1.8",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "ALP",
+      "128",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "Calcium",
+      "2.55",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Graves' disease",
+  "wrong": [
+   "Toxic multinodular goitre",
+   "Subacute (de Quervain's) thyroiditis",
+   "Hashimoto's thyroiditis",
+   "TSH-secreting pituitary tumour",
+   "Anxiety disorder"
+  ],
+  "hints": [
+   [
+    "TSH is on the floor and T4 is through the roof. Overactive. But why?",
+    [
+     "TSH",
+     "Free T4"
+    ]
+   ],
+   [
+    "One antibody is specific for the cause, and her eyes are a clue.",
+    [
+     "TSH receptor antibodies"
+    ]
+   ]
+  ],
+  "key": [
+   "TSH",
+   "Free T4",
+   "TSH receptor antibodies"
+  ],
+  "why": "A suppressed TSH with high free T4 and T3 means the thyroid itself is overactive, with the pituitary trying to turn it down. Positive TSH receptor antibodies (which switch the thyroid on) plus eye symptoms make it Graves' disease, the commonest cause in young women. The ALP is up because thyroid hormone speeds up bone turnover.",
+  "pearl": "Thyroid eye disease is specific to Graves' and smoking makes it worse. A TSH-secreting pituitary tumour is the rare exception where TSH is normal or high despite a high T4."
+ },
+ {
+  "date": "2026-11-04",
+  "number": 10,
+  "difficulty": "Medium",
+  "patient": "Liam, 48, male",
+  "story": "Aching knuckles (index and middle fingers), tired, and a low libido. Has two beers most nights. His dad had 'liver trouble'.",
+  "theme": "Movember",
+  "panels": [
+   {
+    "name": "Iron studies",
+    "rows": [
+     [
+      "Ferritin",
+      "1480",
+      "µg/L",
+      "30–500",
+      "H"
+     ],
+     [
+      "Iron",
+      "41",
+      "µmol/L",
+      "10–30",
+      "H"
+     ],
+     [
+      "Transferrin",
+      "1.9",
+      "g/L",
+      "2.0–3.6",
+      "L"
+     ],
+     [
+      "Transferrin saturation",
+      "86",
+      "%",
+      "15–45",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Liver function",
+    "rows": [
+     [
+      "Bilirubin",
+      "12",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "ALT",
+      "74",
+      "U/L",
+      "<40",
+      "H"
+     ],
+     [
+      "AST",
+      "48",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "GGT",
+      "62",
+      "U/L",
+      "<50",
+      "H"
+     ],
+     [
+      "ALP",
+      "96",
+      "U/L",
+      "30–110",
+      ""
+     ],
+     [
+      "Albumin",
+      "42",
+      "g/L",
+      "35–50",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Glucose (fasting)",
+      "6.6",
+      "mmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "CRP",
+      "2",
+      "mg/L",
+      "<5",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Hereditary haemochromatosis",
+  "wrong": [
+   "Alcohol-related liver disease",
+   "Fatty liver disease (MASLD)",
+   "Anaemia of inflammation",
+   "Iron overload from transfusions",
+   "Gout"
+  ],
+  "hints": [
+   [
+    "Ferritin is huge, but ferritin also rises with inflammation, alcohol and fatty liver. Which iron result is harder to fake?",
+    [
+     "Ferritin",
+     "Transferrin saturation"
+    ]
+   ],
+   [
+    "Saturation way over 45%, plus a family history of liver trouble. Think genes.",
+    [
+     "Transferrin saturation"
+    ]
+   ]
+  ],
+  "key": [
+   "Transferrin saturation",
+   "Ferritin",
+   "ALT"
+  ],
+  "why": "Ferritin rises in lots of conditions (inflammation, alcohol, fatty liver). The tell is transferrin saturation: at 86% the iron transport protein is overloaded, the hallmark of true iron overload. With arthritis in the index and middle knuckles, abnormal liver tests, a creeping fasting glucose, low libido and a family history, hereditary haemochromatosis (usually HFE C282Y) leads the list. Two beers a night doesn't push saturation to 86%, and the CRP is normal.",
+  "pearl": "Haemochromatosis is one of the commonest genetic conditions in people of northern European ancestry. Men tend to show it earlier than women, as periods and pregnancy offload iron. Found early, complications like cirrhosis are largely preventable."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 11,
+  "difficulty": "Medium",
+  "patient": "Mele, 66, female",
+  "story": "Type 2 diabetes. Woke with nausea, jaw ache and breathlessness. No chest pain, and she thinks it's reflux. ECG shows no ST elevation.",
+  "panels": [
+   {
+    "name": "Cardiac",
+    "rows": [
+     [
+      "hs-Troponin T (0 h)",
+      "38",
+      "ng/L",
+      "<14",
+      "H"
+     ],
+     [
+      "hs-Troponin T (3 h)",
+      "214",
+      "ng/L",
+      "<14",
+      "H"
+     ],
+     [
+      "D-dimer",
+      "0.3",
+      "mg/L FEU",
+      "<0.5",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "Creatinine",
+      "72",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Potassium",
+      "4.2",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Glucose (random)",
+      "12.4",
+      "mmol/L",
+      "3.0–7.7",
+      "H"
+     ],
+     [
+      "Lipase",
+      "34",
+      "U/L",
+      "<60",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "NSTEMI (heart attack)",
+  "wrong": [
+   "Unstable angina",
+   "Reflux (GORD)",
+   "Pulmonary embolism",
+   "Acute pericarditis",
+   "Troponin leak from kidney disease"
+  ],
+  "hints": [
+   [
+    "Two troponins, three hours apart. Look at the change, not just the number.",
+    [
+     "hs-Troponin T (0 h)",
+     "hs-Troponin T (3 h)"
+    ]
+   ],
+   [
+    "Unstable angina has no troponin rise. Her kidneys and D-dimer are normal.",
+    [
+     "Creatinine",
+     "D-dimer"
+    ]
+   ]
+  ],
+  "key": [
+   "hs-Troponin T (0 h)",
+   "hs-Troponin T (3 h)"
+  ],
+  "why": "A troponin climbing from 38 to 214 ng/L in three hours means acute heart muscle injury. With this story, that's a heart attack until proven otherwise, and without ST elevation it's an NSTEMI. Unstable angina, by definition, has no troponin rise. Normal kidney function, D-dimer and lipase make kidney-related troponin, PE and pancreatitis unlikely.",
+  "pearl": "Women, older people and people with diabetes are more likely to have heart attacks without classic chest pain: nausea, jaw or back ache, breathlessness or exhaustion. Women's heart attacks are still more likely to be missed or treated late."
+ },
+ {
+  "date": "2026-11-06",
+  "number": 12,
+  "difficulty": "Hard",
+  "patient": "Eleni, 27, female",
+  "story": "Planning a pregnancy, so her GP ordered 'pre-pregnancy bloods'. Feels well. Her family is from Cyprus, and a cousin has 'thin blood'.",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "109",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "Red cell count",
+      "5.9",
+      "×10¹²/L",
+      "3.8–5.8",
+      "H"
+     ],
+     [
+      "MCV",
+      "63",
+      "fL",
+      "80–100",
+      "L"
+     ],
+     [
+      "MCH",
+      "18.5",
+      "pg",
+      "27–33",
+      "L"
+     ],
+     [
+      "RDW",
+      "14.2",
+      "%",
+      "11.5–15.0",
+      ""
+     ],
+     [
+      "Platelets",
+      "260",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Iron studies",
+    "rows": [
+     [
+      "Ferritin",
+      "74",
+      "µg/L",
+      "30–200",
+      ""
+     ],
+     [
+      "Transferrin saturation",
+      "28",
+      "%",
+      "15–45",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Haemoglobin studies",
+    "rows": [
+     [
+      "HbA2",
+      "5.4",
+      "%",
+      "2.0–3.3",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Beta thalassaemia trait",
+  "wrong": [
+   "Iron deficiency anaemia",
+   "Alpha thalassaemia trait",
+   "Anaemia of inflammation",
+   "Sideroblastic anaemia",
+   "Lead poisoning"
+  ],
+  "hints": [
+   [
+    "Tiny cells, but lots of them. Divide the MCV by the red cell count.",
+    [
+     "MCV",
+     "Red cell count"
+    ]
+   ],
+   [
+    "Iron stores are fine. One type of haemoglobin is over-represented.",
+    [
+     "Ferritin",
+     "HbA2"
+    ]
+   ]
+  ],
+  "key": [
+   "Red cell count",
+   "MCV",
+   "Ferritin",
+   "HbA2"
+  ],
+  "why": "Very small cells (MCV 63) but a high red cell count and only mild anaemia. MCV ÷ red cell count = 10.7; a Mentzer index under 13 favours thalassaemia over iron deficiency, and the normal ferritin and RDW agree. A raised HbA2 (above about 3.5%) is the signature of beta thalassaemia trait; alpha thalassaemia trait usually has a normal HbA2.",
+  "pearl": "Thalassaemia trait matters most before pregnancy: if both partners carry a trait, their baby could have a serious thalassaemia, which is why partner testing is offered. Iron tablets won't fix thalassaemia's small cells."
+ },
+ {
+  "date": "2026-11-07",
+  "number": 13,
+  "difficulty": "Hard",
+  "patient": "Mariam, 34, female",
+  "story": "Months of fatigue, weight loss, salt cravings and dizziness on standing. Her skin creases and gums have darkened. Has Hashimoto's, on thyroxine.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "127",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "5.9",
+      "mmol/L",
+      "3.5–5.2",
+      "H"
+     ],
+     [
+      "Chloride",
+      "96",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "20",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Urea",
+      "9.8",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "92",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Glucose (random)",
+      "3.4",
+      "mmol/L",
+      "3.0–7.7",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Eosinophils",
+      "0.8",
+      "×10⁹/L",
+      "<0.5",
+      "H"
+     ],
+     [
+      "Cortisol (9 am)",
+      "48",
+      "nmol/L",
+      "140–550",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Addison's disease (primary adrenal insufficiency)",
+  "wrong": [
+   "Secondary (pituitary) adrenal insufficiency",
+   "SIADH",
+   "Hypothyroidism",
+   "Diuretic-induced hyponatraemia",
+   "Gastroenteritis with dehydration"
+  ],
+  "hints": [
+   [
+    "Low sodium AND high potassium. That pair points at one missing hormone.",
+    [
+     "Sodium",
+     "Potassium"
+    ]
+   ],
+   [
+    "Morning cortisol is very low. Does the darker skin tell you where the problem is: adrenal or pituitary?",
+    [
+     "Cortisol (9 am)"
+    ]
+   ]
+  ],
+  "key": [
+   "Sodium",
+   "Potassium",
+   "Cortisol (9 am)"
+  ],
+  "why": "Low sodium with high potassium suggests missing aldosterone, and a very low 9 am cortisol confirms adrenal insufficiency. Raised eosinophils and a dry-looking urea fit. Darker skin creases and gums mean ACTH is very high (it shares a precursor with melanocyte-stimulating hormone), so the adrenals themselves have failed: primary adrenal insufficiency, usually autoimmune, and she already has one autoimmune condition. In pituitary failure, aldosterone is spared, potassium stays normal and the skin is pale.",
+  "pearl": "An adrenal crisis can be fatal and can be triggered by infection, surgery or vomiting. People with Addison's carry steroid emergency cards and learn 'sick-day rules'."
+ },
+ {
+  "date": "2026-11-08",
+  "number": 14,
+  "difficulty": "Genius",
+  "patient": "Norma, 81, female",
+  "story": "Feels well. Routine bloods for her blood pressure tablets, taken at home by a new collector. Her ECG is normal.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "140",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "7.9",
+      "mmol/L",
+      "3.5–5.2",
+      "H"
+     ],
+     [
+      "Chloride",
+      "103",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "25",
+      "mmol/L",
+      "22–32",
+      ""
+     ],
+     [
+      "Creatinine",
+      "74",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Bone and liver",
+    "rows": [
+     [
+      "Calcium",
+      "0.61",
+      "mmol/L",
+      "2.10–2.60",
+      "L"
+     ],
+     [
+      "Magnesium",
+      "0.32",
+      "mmol/L",
+      "0.70–1.10",
+      "L"
+     ],
+     [
+      "Albumin",
+      "40",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "ALP",
+      "14",
+      "U/L",
+      "30–110",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "EDTA contamination of the sample",
+  "wrong": [
+   "Acute kidney injury",
+   "Hypoparathyroidism",
+   "Tumour lysis syndrome",
+   "Addison's disease",
+   "Haemolysed sample"
+  ],
+  "hints": [
+   [
+    "A potassium of 7.9 in a well woman with a normal ECG and normal kidneys? Suspect the tube, not the patient.",
+    [
+     "Potassium",
+     "Creatinine"
+    ]
+   ],
+   [
+    "Calcium, magnesium and ALP are all strangely low. What in a purple-top tube grabs metal ions?",
+    [
+     "Calcium",
+     "Magnesium",
+     "ALP"
+    ]
+   ]
+  ],
+  "key": [
+   "Potassium",
+   "Calcium",
+   "Magnesium",
+   "ALP"
+  ],
+  "why": "A dangerous potassium plus a calcium that would normally cause spasms and seizures, in a well woman with a normal ECG, doesn't add up. Purple-top (FBC) tubes contain potassium EDTA, which adds potassium and grabs calcium, magnesium and zinc. ALP needs zinc and magnesium to work, so it reads falsely low too. The usual culprit is the wrong order of draw, or pouring blood between tubes. A haemolysed sample raises potassium but doesn't crash the calcium.",
+  "pearl": "Spurious hyperkalaemia has several causes: haemolysis, EDTA contamination, delays in processing, fist clenching, and very high white cell or platelet counts. If the numbers and the patient don't match, check the ECG and get a careful, prompt recollection."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 15,
+  "difficulty": "Easy",
+  "patient": "Daniel, 44, male",
+  "story": "Severe upper abdominal pain boring through to his back since last night, with vomiting. It was a big weekend on the drink.",
+  "panels": [
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "Lipase",
+      "2380",
+      "U/L",
+      "<60",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "15",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "ALT",
+      "38",
+      "U/L",
+      "<40",
+      ""
+     ],
+     [
+      "ALP",
+      "88",
+      "U/L",
+      "30–110",
+      ""
+     ],
+     [
+      "GGT",
+      "140",
+      "U/L",
+      "<50",
+      "H"
+     ],
+     [
+      "Calcium",
+      "2.18",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Glucose (random)",
+      "9.1",
+      "mmol/L",
+      "3.0–7.7",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Inflammation",
+    "rows": [
+     [
+      "WCC",
+      "14.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "CRP",
+      "38",
+      "mg/L",
+      "<5",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Acute pancreatitis",
+  "wrong": [
+   "Perforated peptic ulcer",
+   "Biliary colic",
+   "Acute hepatitis",
+   "Myocardial infarction",
+   "Gastroenteritis"
+  ],
+  "hints": [
+   [
+    "One enzyme is more than 30 times the upper limit.",
+    [
+     "Lipase"
+    ]
+   ],
+   [
+    "The GGT and the weekend hint at the cause.",
+    [
+     "GGT"
+    ]
+   ]
+  ],
+  "key": [
+   "Lipase",
+   "GGT"
+  ],
+  "why": "Lipase more than three times the upper limit plus typical pain (upper abdomen, boring through to the back, with vomiting) makes acute pancreatitis. Normal bilirubin and ALT make a gallstone a bit less likely; a raised GGT after a heavy weekend points to alcohol, the other big cause.",
+  "pearl": "Gallstones and alcohol cause most acute pancreatitis. How high the lipase goes doesn't predict how sick someone will get; a high urea, low calcium and rising CRP matter more."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 16,
+  "difficulty": "Easy",
+  "patient": "Thanh, 26, female",
+  "story": "New bruises and tiny red spots on her shins, and her gums bleed when she brushes. Had a cold two weeks ago. Otherwise well.",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "131",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "WCC",
+      "6.4",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Neutrophils",
+      "3.8",
+      "×10⁹/L",
+      "2.0–7.5",
+      ""
+     ],
+     [
+      "Platelets",
+      "9",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ],
+     [
+      "Blood film",
+      "Large platelets; red and white cells normal",
+      "",
+      "",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Coagulation",
+    "rows": [
+     [
+      "INR",
+      "1.0",
+      "",
+      "0.9–1.2",
+      ""
+     ],
+     [
+      "APTT",
+      "30",
+      "s",
+      "25–38",
+      ""
+     ],
+     [
+      "Fibrinogen",
+      "3.0",
+      "g/L",
+      "2.0–4.0",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "LDH",
+      "180",
+      "U/L",
+      "120–250",
+      ""
+     ],
+     [
+      "Bilirubin",
+      "9",
+      "µmol/L",
+      "<20",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Immune thrombocytopenia (ITP)",
+  "wrong": [
+   "Acute leukaemia",
+   "Thrombotic thrombocytopenic purpura (TTP)",
+   "Disseminated intravascular coagulation (DIC)",
+   "Haemophilia A",
+   "Aplastic anaemia"
+  ],
+  "hints": [
+   [
+    "Only one cell line is in trouble. Which one?",
+    [
+     "Platelets",
+     "Haemoglobin",
+     "WCC"
+    ]
+   ],
+   [
+    "Clotting is normal and the film shows big young platelets. Where are they all going?",
+    [
+     "Blood film",
+     "INR",
+     "APTT"
+    ]
+   ]
+  ],
+  "key": [
+   "Platelets",
+   "Blood film",
+   "APTT"
+  ],
+  "why": "A very low platelet count on its own, with normal red and white cells, normal clotting and a film showing only large (young) platelets. The marrow is making platelets, but they're being destroyed. In a well young person after a viral illness, that's immune thrombocytopenia. No red cell fragments or haemolysis (not TTP), normal clotting (not DIC or haemophilia), and the other cell lines are fine (leukaemia and aplastic anaemia unlikely).",
+  "pearl": "Always look at the film. Platelets clumping in the tube can fake a low count (pseudothrombocytopenia), which disappears when the count is repeated in a citrate tube."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 17,
+  "difficulty": "Medium",
+  "patient": "Bill, 71, male",
+  "story": "Heart failure, on ramipril and furosemide. Started over-the-counter ibuprofen for knee pain 10 days ago. Now weak and passing less urine. Usual creatinine 95.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "133",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "6.4",
+      "mmol/L",
+      "3.5–5.2",
+      "H"
+     ],
+     [
+      "Chloride",
+      "101",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "18",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Urea",
+      "19.8",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "212",
+      "µmol/L",
+      "60–110",
+      "H"
+     ],
+     [
+      "eGFR",
+      "26",
+      "mL/min/1.73m²",
+      ">90",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Creatine kinase",
+      "140",
+      "U/L",
+      "<200",
+      ""
+     ],
+     [
+      "Sample haemolysis",
+      "None detected",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "AKI from the 'triple whammy'",
+  "wrong": [
+   "Addison's disease",
+   "Rhabdomyolysis",
+   "Spurious hyperkalaemia (haemolysed sample)",
+   "Bladder outlet obstruction",
+   "Tumour lysis syndrome"
+  ],
+  "hints": [
+   [
+    "Compare the creatinine with his usual 95.",
+    [
+     "Creatinine",
+     "Urea"
+    ]
+   ],
+   [
+    "Read his medication list like a pharmacist. Three drugs, one pair of kidneys.",
+    [
+     "eGFR"
+    ]
+   ]
+  ],
+  "key": [
+   "Creatinine",
+   "Potassium",
+   "Sample haemolysis"
+  ],
+  "why": "Creatinine has more than doubled from his usual 95: acute kidney injury, with high potassium and a mild metabolic acidosis. CK is normal and the sample isn't haemolysed, so the potassium is real. The cause is in his drug list: a diuretic (less fluid), an ACE inhibitor (relaxes the kidney's outflow vessel) and an NSAID (tightens its inflow vessel). Together they starve the kidney's filters of pressure. The 'triple whammy'.",
+  "pearl": "Over-the-counter anti-inflammatories are a common, avoidable cause of kidney injury in older people on blood pressure or heart failure medicines. That's why pharmacists ask what else you take."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 18,
+  "difficulty": "Medium",
+  "patient": "Ana, 58, female",
+  "story": "Home from a cruise five days ago. High fevers, dry cough and diarrhoea, and her husband says she's muddled. Smokes.",
+  "theme": "World Pneumonia Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "WCC",
+      "14.6",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Neutrophils",
+      "12.9",
+      "×10⁹/L",
+      "2.0–7.5",
+      "H"
+     ],
+     [
+      "Lymphocytes",
+      "0.6",
+      "×10⁹/L",
+      "1.0–4.0",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "Sodium",
+      "126",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "3.6",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Urea",
+      "8.9",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "96",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Phosphate",
+      "0.58",
+      "mmol/L",
+      "0.75–1.50",
+      "L"
+     ],
+     [
+      "ALT",
+      "92",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "AST",
+      "85",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "Creatine kinase",
+      "1240",
+      "U/L",
+      "<150",
+      "H"
+     ],
+     [
+      "CRP",
+      "320",
+      "mg/L",
+      "<5",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Legionella pneumonia",
+  "wrong": [
+   "Pneumococcal pneumonia",
+   "Influenza",
+   "Viral gastroenteritis",
+   "Mycoplasma pneumonia",
+   "Hepatitis A"
+  ],
+  "hints": [
+   [
+    "Pneumonia plus a low sodium, an angry liver and sore muscles. Which bug hits all of those?",
+    [
+     "Sodium",
+     "ALT",
+     "Creatine kinase"
+    ]
+   ],
+   [
+    "Think about where she's been: big water systems, spa pools, air-conditioning.",
+    []
+   ]
+  ],
+  "key": [
+   "Sodium",
+   "Creatine kinase",
+   "CRP"
+  ],
+  "why": "Severe pneumonia with diarrhoea, confusion, a low sodium, deranged liver tests, raised CK, low phosphate and a CRP over 300 is the classic Legionella pattern. A cruise (big water systems, spa pools) and smoking add to the suspicion. Pneumococcus can do some of these things, but rarely all at once.",
+  "pearl": "Legionnaires' disease is usually confirmed with a urine antigen test and PCR on sputum. It's notifiable in Australia, because one case can point to a contaminated water source affecting others."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 19,
+  "difficulty": "Hard",
+  "patient": "Adaeze, 38, female",
+  "story": "Two days of headache, fever and confusion. Purple spots on her legs. Not pregnant.",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "81",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "WCC",
+      "9.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Platelets",
+      "13",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ],
+     [
+      "Reticulocytes",
+      "236",
+      "×10⁹/L",
+      "20–100",
+      "H"
+     ],
+     [
+      "Blood film",
+      "Red cell fragments (schistocytes) ++",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Haemolysis screen",
+    "rows": [
+     [
+      "LDH",
+      "1640",
+      "U/L",
+      "120–250",
+      "H"
+     ],
+     [
+      "Haptoglobin",
+      "<0.1",
+      "g/L",
+      "0.3–2.0",
+      "L"
+     ],
+     [
+      "Bilirubin",
+      "41",
+      "µmol/L",
+      "<20",
+      "H"
+     ],
+     [
+      "Direct antiglobulin test",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Coagulation and kidneys",
+    "rows": [
+     [
+      "INR",
+      "1.1",
+      "",
+      "0.9–1.2",
+      ""
+     ],
+     [
+      "APTT",
+      "31",
+      "s",
+      "25–38",
+      ""
+     ],
+     [
+      "Fibrinogen",
+      "3.2",
+      "g/L",
+      "2.0–4.0",
+      ""
+     ],
+     [
+      "Creatinine",
+      "104",
+      "µmol/L",
+      "45–90",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Thrombotic thrombocytopenic purpura (TTP)",
+  "wrong": [
+   "Disseminated intravascular coagulation (DIC)",
+   "Immune thrombocytopenia (ITP)",
+   "Evans syndrome",
+   "Meningococcal sepsis",
+   "Acute leukaemia"
+  ],
+  "hints": [
+   [
+    "Low platelets AND haemolysis. Is it immune? Check the DAT, then the film.",
+    [
+     "Direct antiglobulin test",
+     "Blood film"
+    ]
+   ],
+   [
+    "Fragmented red cells, but clotting tests are normal. That rules out one big alternative.",
+    [
+     "INR",
+     "APTT",
+     "Fibrinogen"
+    ]
+   ]
+  ],
+  "key": [
+   "Platelets",
+   "Blood film",
+   "Direct antiglobulin test",
+   "Fibrinogen"
+  ],
+  "why": "Red cells being shredded in small vessels (fragments on the film, high LDH, no haptoglobin, negative DAT) plus very low platelets, with fever, confusion and mild kidney involvement. Normal clotting tests and fibrinogen separate this from DIC, where clotting factors get used up. The pattern is TTP, caused by a lack of ADAMTS13, the enzyme that trims von Willebrand factor.",
+  "pearl": "TTP is a medical emergency. It used to kill most people who had it; with urgent specialist treatment most now survive. You don't need all five textbook features: low platelets plus fragmented red cells is enough to act."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 20,
+  "difficulty": "Hard",
+  "patient": "Arthur, 78, male",
+  "story": "Type 2 diabetes. A week of drinking lots of soft drink and passing lots of urine, then 'off his legs' and confused. Lives alone.",
+  "theme": "World Diabetes Day",
+  "panels": [
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "Glucose",
+      "48.6",
+      "mmol/L",
+      "3.0–7.7",
+      "H"
+     ],
+     [
+      "Sodium",
+      "151",
+      "mmol/L",
+      "135–145",
+      "H"
+     ],
+     [
+      "Potassium",
+      "4.8",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Chloride",
+      "112",
+      "mmol/L",
+      "95–110",
+      "H"
+     ],
+     [
+      "Bicarbonate",
+      "23",
+      "mmol/L",
+      "22–32",
+      ""
+     ],
+     [
+      "Urea",
+      "24.5",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "168",
+      "µmol/L",
+      "60–110",
+      "H"
+     ],
+     [
+      "Osmolality",
+      "378",
+      "mOsm/kg",
+      "275–295",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Acid–base",
+    "rows": [
+     [
+      "pH (venous)",
+      "7.35",
+      "",
+      "7.32–7.42",
+      ""
+     ],
+     [
+      "Ketones (β-hydroxybutyrate)",
+      "0.8",
+      "mmol/L",
+      "<0.6",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Hyperosmolar hyperglycaemic state (HHS)",
+  "wrong": [
+   "Diabetic ketoacidosis (DKA)",
+   "Euglycaemic DKA",
+   "Diabetes insipidus",
+   "SIADH",
+   "Lactic acidosis"
+  ],
+  "hints": [
+   [
+    "The glucose is enormous. But is he acidotic and full of ketones?",
+    [
+     "pH (venous)",
+     "Bicarbonate",
+     "Ketones (β-hydroxybutyrate)"
+    ]
+   ],
+   [
+    "Work out the osmolality: 2 × sodium + glucose + urea.",
+    [
+     "Osmolality"
+    ]
+   ]
+  ],
+  "key": [
+   "Glucose",
+   "Osmolality",
+   "Ketones (β-hydroxybutyrate)",
+   "pH (venous)"
+  ],
+  "why": "Glucose over 30, osmolality over 320, only a whiff of ketones (well under 3) and no acidosis (pH above 7.3, bicarbonate above 15): hyperosmolar hyperglycaemic state. Days of very high glucose pull water out through the urine, leaving him dry, high in sodium and confused. In DKA, ketones are high and bicarbonate low.",
+  "pearl": "High glucose pulls water out of cells and dilutes the sodium, so a 'normal' sodium in severe hyperglycaemia can hide serious dehydration. Here the sodium is already 151 before any correction, which tells you how dry he is."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 21,
+  "difficulty": "Genius",
+  "patient": "Deepa, 56, female",
+  "story": "Type 2 diabetes on metformin and empagliflozin. Two days after keyhole gallbladder surgery: barely eating, vomiting and breathing fast.",
+  "panels": [
+   {
+    "name": "Venous blood gas",
+    "rows": [
+     [
+      "pH (venous)",
+      "7.18",
+      "",
+      "7.32–7.42",
+      "L"
+     ],
+     [
+      "pCO2 (venous)",
+      "22",
+      "mmHg",
+      "41–51",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "8",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Lactate",
+      "1.3",
+      "mmol/L",
+      "<2.0",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Chemistry",
+    "rows": [
+     [
+      "Glucose",
+      "9.6",
+      "mmol/L",
+      "3.0–7.7",
+      "H"
+     ],
+     [
+      "Ketones (β-hydroxybutyrate)",
+      "5.8",
+      "mmol/L",
+      "<0.6",
+      "H"
+     ],
+     [
+      "Sodium",
+      "137",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "4.6",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Chloride",
+      "103",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Creatinine",
+      "80",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Euglycaemic DKA (SGLT2 inhibitor)",
+  "wrong": [
+   "Metformin-associated lactic acidosis",
+   "Starvation ketosis",
+   "Hyperosmolar hyperglycaemic state",
+   "Sepsis with lactic acidosis",
+   "Alcoholic ketoacidosis"
+  ],
+  "hints": [
+   [
+    "Severe acidosis with a big anion gap. Work out the gap, then find the acid.",
+    [
+     "Bicarbonate",
+     "Ketones (β-hydroxybutyrate)",
+     "Lactate"
+    ]
+   ],
+   [
+    "Ketones are high but glucose is barely raised. Which diabetes tablet allows that?",
+    [
+     "Glucose"
+    ]
+   ]
+  ],
+  "key": [
+   "Bicarbonate",
+   "Ketones (β-hydroxybutyrate)",
+   "Lactate",
+   "Glucose"
+  ],
+  "why": "pH 7.18, bicarbonate 8 and an anion gap of 26 (137 − 103 − 8): a severe high anion gap metabolic acidosis. Lactate is normal and ketones are very high, so it's ketoacidosis. The glucose is only 9.6 because SGLT2 inhibitors (the '-gliflozins') keep flushing glucose into the urine. Surgery, fasting and vomiting are classic triggers. Starvation ketosis alone rarely drops the bicarbonate this low.",
+  "pearl": "Euglycaemic DKA is easy to miss because the glucose looks reassuring. Ketones are worth checking in anyone on an SGLT2 inhibitor who becomes unwell, and these medicines are usually paused before surgery and on sick days."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 22,
+  "difficulty": "Easy",
+  "patient": "Aisling, 23, female",
+  "story": "Bloating, loose stools and tired for a year. Iron tablets 'never seem to work'. Her mum has type 1 diabetes.",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "106",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "MCV",
+      "78",
+      "fL",
+      "80–100",
+      "L"
+     ],
+     [
+      "RDW",
+      "16.4",
+      "%",
+      "11.5–15.0",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Haematinics",
+    "rows": [
+     [
+      "Ferritin",
+      "8",
+      "µg/L",
+      "30–200",
+      "L"
+     ],
+     [
+      "Transferrin saturation",
+      "6",
+      "%",
+      "15–45",
+      "L"
+     ],
+     [
+      "Serum folate",
+      "4.2",
+      "nmol/L",
+      ">7.0",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Coeliac serology",
+    "rows": [
+     [
+      "Tissue transglutaminase IgA",
+      "142",
+      "U/mL",
+      "<20",
+      "H"
+     ],
+     [
+      "Total IgA",
+      "2.1",
+      "g/L",
+      "0.7–4.0",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Coeliac disease",
+  "wrong": [
+   "Irritable bowel syndrome",
+   "Crohn's disease",
+   "Iron deficiency from heavy periods",
+   "Lactose intolerance",
+   "Giardiasis"
+  ],
+  "hints": [
+   [
+    "Iron AND folate are low. Where in the gut are both absorbed?",
+    [
+     "Ferritin",
+     "Serum folate"
+    ]
+   ],
+   [
+    "One antibody is wildly positive, and her total IgA is normal, so we can trust it.",
+    [
+     "Tissue transglutaminase IgA",
+     "Total IgA"
+    ]
+   ]
+  ],
+  "key": [
+   "Serum folate",
+   "Tissue transglutaminase IgA",
+   "Total IgA"
+  ],
+  "why": "Iron and folate are both absorbed in the upper small bowel, the part coeliac disease damages. Iron deficiency that doesn't respond to tablets is a classic clue. A strongly positive tTG-IgA with a normal total IgA makes coeliac disease very likely; a small bowel biopsy confirms it. A family history of autoimmune disease adds weight.",
+  "pearl": "Keep eating gluten until testing is finished: going gluten-free first can make both the blood test and the biopsy falsely negative. IgA deficiency is more common in coeliac disease and can hide a positive tTG-IgA, which is why total IgA is checked too."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 23,
+  "difficulty": "Easy",
+  "patient": "Fatima, 30, female",
+  "story": "26 weeks pregnant with her first baby and feels well. Her early pregnancy bloods were normal. This is her routine 75 g glucose tolerance test.",
+  "panels": [
+   {
+    "name": "Glucose tolerance test (pregnancy)",
+    "rows": [
+     [
+      "Glucose (fasting)",
+      "5.4",
+      "mmol/L",
+      "<5.1",
+      "H"
+     ],
+     [
+      "Glucose (1 hour)",
+      "10.6",
+      "mmol/L",
+      "<10.0",
+      "H"
+     ],
+     [
+      "Glucose (2 hours)",
+      "8.2",
+      "mmol/L",
+      "<8.5",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "HbA1c",
+      "5.3",
+      "%",
+      "<6.0",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Gestational diabetes",
+  "wrong": [
+   "Normal pregnancy",
+   "Pre-existing type 2 diabetes",
+   "Type 1 diabetes",
+   "Reactive hypoglycaemia",
+   "Impaired glucose tolerance (non-pregnant criteria)"
+  ],
+  "hints": [
+   [
+    "Pregnancy has its own, lower glucose cut-offs. How many values are over?",
+    [
+     "Glucose (fasting)",
+     "Glucose (1 hour)"
+    ]
+   ],
+   [
+    "On the pregnancy test, just one high value is enough.",
+    []
+   ]
+  ],
+  "key": [
+   "Glucose (fasting)",
+   "Glucose (1 hour)"
+  ],
+  "why": "Australian criteria for diabetes in pregnancy (75 g test at 24–28 weeks) need just one of: fasting 5.1 or more, 1-hour 10.0 or more, or 2-hour 8.5 or more. Fatima has two. Normal early pregnancy bloods and a normal HbA1c make diabetes from before pregnancy unlikely.",
+  "pearl": "HbA1c isn't reliable for diagnosing diabetes in pregnancy because red cell turnover changes. Gestational diabetes usually settles after birth but raises the future risk of type 2 diabetes, so glucose checks after pregnancy, and every few years after that, are recommended."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 24,
+  "difficulty": "Medium",
+  "patient": "Joyce, 72, female",
+  "story": "COPD, ex-smoker of 50 pack-years. Three days of worse breathlessness and green sputum, now drowsy. Given high-flow oxygen in the ambulance.",
+  "theme": "World COPD Day",
+  "panels": [
+   {
+    "name": "Arterial blood gas (on oxygen)",
+    "rows": [
+     [
+      "pH",
+      "7.27",
+      "",
+      "7.35–7.45",
+      "L"
+     ],
+     [
+      "pCO2",
+      "70",
+      "mmHg",
+      "35–45",
+      "H"
+     ],
+     [
+      "pO2",
+      "96",
+      "mmHg",
+      "80–100",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "31",
+      "mmol/L",
+      "22–26",
+      "H"
+     ],
+     [
+      "Base excess",
+      "+5",
+      "mmol/L",
+      "−2 to +2",
+      "H"
+     ],
+     [
+      "Lactate",
+      "1.1",
+      "mmol/L",
+      "<2.0",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Acute-on-chronic respiratory acidosis",
+  "wrong": [
+   "Chronic compensated respiratory acidosis",
+   "Acute respiratory acidosis",
+   "Metabolic alkalosis",
+   "Metabolic acidosis",
+   "Type 1 respiratory failure"
+  ],
+  "hints": [
+   [
+    "pH low, CO2 high: respiratory acidosis. Is the bicarbonate what you'd expect if this all started today?",
+    [
+     "pH",
+     "pCO2"
+    ]
+   ],
+   [
+    "Bicarbonate is up, so the kidneys have had days to weeks to compensate. But the pH is still low.",
+    [
+     "Bicarbonate"
+    ]
+   ]
+  ],
+  "key": [
+   "pH",
+   "pCO2",
+   "Bicarbonate"
+  ],
+  "why": "Low pH and high CO2 make a respiratory acidosis. If this were purely acute, bicarbonate would rise about 1 for every 10 mmHg of CO2 (expected about 27). If fully chronic, about 3.5 to 4 per 10 (expected about 34 to 36). At 31 it sits in between, with the pH still low: long-term CO2 retention with an acute worsening on top. High-flow oxygen can push CO2 higher in some people with COPD.",
+  "pearl": "In people at risk of CO2 retention, oxygen is usually aimed at saturations of 88–92%, not 'as high as possible'. More oxygen isn't always better."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 25,
+  "difficulty": "Medium",
+  "patient": "Josh, 32, male",
+  "story": "He and his partner have been trying for a baby for two years. Tall, with small firm testes and sparse body hair. Semen analysis: no sperm seen.",
+  "theme": "Movember",
+  "panels": [
+   {
+    "name": "Hormones (9 am)",
+    "rows": [
+     [
+      "Testosterone",
+      "6.9",
+      "nmol/L",
+      "8.0–29.0",
+      "L"
+     ],
+     [
+      "LH",
+      "22.5",
+      "IU/L",
+      "1.5–9.0",
+      "H"
+     ],
+     [
+      "FSH",
+      "41",
+      "IU/L",
+      "1.5–12.0",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Haemoglobin",
+      "127",
+      "g/L",
+      "130–180",
+      "L"
+     ],
+     [
+      "Prolactin",
+      "210",
+      "mU/L",
+      "<400",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Klinefelter syndrome (primary testicular failure)",
+  "wrong": [
+   "Pituitary (secondary) hypogonadism",
+   "Anabolic steroid use",
+   "Prolactinoma",
+   "Normal age-related decline",
+   "Kallmann syndrome"
+  ],
+  "hints": [
+   [
+    "Testosterone is low. Is the pituitary trying to fix it, or asleep?",
+    [
+     "LH",
+     "FSH"
+    ]
+   ],
+   [
+    "High LH and FSH mean the testes aren't responding. Tall, small testes, no sperm: think chromosomes.",
+    [
+     "Testosterone"
+    ]
+   ]
+  ],
+  "key": [
+   "Testosterone",
+   "LH",
+   "FSH"
+  ],
+  "why": "Low testosterone with high LH and FSH is primary hypogonadism: the pituitary is shouting and the testes can't answer. A very high FSH, no sperm and small firm testes in a tall man point to Klinefelter syndrome (47,XXY), confirmed with a karyotype. Pituitary disease, Kallmann syndrome, prolactinoma and steroid use all give low or normal LH and FSH. The mild anaemia is from low testosterone.",
+  "pearl": "Klinefelter syndrome affects about 1 in 600 males, yet most are never diagnosed, and infertility is often how it's found. Fertility specialists can sometimes retrieve sperm directly from the testes."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 26,
+  "difficulty": "Hard",
+  "patient": "Ben, 29, male",
+  "story": "Noticed a painless, hard lump in his left testicle a month ago, with a mild dragging ache. No fever, no urinary symptoms.",
+  "theme": "Movember",
+  "panels": [
+   {
+    "name": "Tumour markers",
+    "rows": [
+     [
+      "AFP",
+      "380",
+      "µg/L",
+      "<10",
+      "H"
+     ],
+     [
+      "β-hCG",
+      "62",
+      "IU/L",
+      "<5",
+      "H"
+     ],
+     [
+      "LDH",
+      "410",
+      "U/L",
+      "120–250",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "WCC",
+      "7.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "CRP",
+      "3",
+      "mg/L",
+      "<5",
+      ""
+     ],
+     [
+      "ALT",
+      "25",
+      "U/L",
+      "<40",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Non-seminomatous germ cell tumour",
+  "wrong": [
+   "Pure seminoma",
+   "Epididymo-orchitis",
+   "Testicular lymphoma",
+   "Hepatocellular carcinoma",
+   "Hydrocele"
+  ],
+  "hints": [
+   [
+    "Normal CRP and white cells with a painless lump: infection is unlikely. Which markers are up?",
+    [
+     "CRP",
+     "AFP",
+     "β-hCG"
+    ]
+   ],
+   [
+    "Seminomas can make a little hCG. Do they make AFP?",
+    [
+     "AFP"
+    ]
+   ]
+  ],
+  "key": [
+   "AFP",
+   "β-hCG",
+   "CRP"
+  ],
+  "why": "A painless, hard testicular lump in a young man is cancer until proven otherwise. AFP, β-hCG and LDH are all raised. Pure seminomas don't make AFP, so a raised AFP means non-seminomatous elements (such as yolk sac tumour), even if the tumour looks like seminoma under the microscope. Normal CRP and white cells argue against infection, and normal liver tests make a liver source of AFP unlikely.",
+  "pearl": "Testicular cancer is the commonest cancer in young men, and one of the most curable. The tumour markers help with diagnosis, staging and follow-up. Know what's normal for you, and get any new lump checked."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 27,
+  "difficulty": "Hard",
+  "patient": "Ruth, 69, female",
+  "story": "Rheumatoid arthritis, flaring for two months. Taking ibuprofen most days. More tired and breathless than usual.",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "94",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "MCV",
+      "78",
+      "fL",
+      "80–100",
+      "L"
+     ],
+     [
+      "MCH",
+      "25",
+      "pg",
+      "27–33",
+      "L"
+     ],
+     [
+      "Platelets",
+      "455",
+      "×10⁹/L",
+      "150–400",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Iron studies",
+    "rows": [
+     [
+      "Ferritin",
+      "86",
+      "µg/L",
+      "30–200",
+      ""
+     ],
+     [
+      "Iron",
+      "4",
+      "µmol/L",
+      "10–30",
+      "L"
+     ],
+     [
+      "Transferrin",
+      "3.0",
+      "g/L",
+      "2.0–3.6",
+      ""
+     ],
+     [
+      "Transferrin saturation",
+      "5",
+      "%",
+      "15–45",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Inflammation",
+    "rows": [
+     [
+      "CRP",
+      "64",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "ESR",
+      "58",
+      "mm/h",
+      "<40",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Iron deficiency plus anaemia of inflammation",
+  "wrong": [
+   "Anaemia of inflammation alone",
+   "Beta thalassaemia trait",
+   "Vitamin B12 deficiency",
+   "Myelodysplastic syndrome",
+   "Sideroblastic anaemia"
+  ],
+  "hints": [
+   [
+    "The ferritin looks 'normal'. What does inflammation do to ferritin?",
+    [
+     "Ferritin",
+     "CRP"
+    ]
+   ],
+   [
+    "Saturation is very low, the cells are small, and she takes anti-inflammatories daily. Where could her iron be going?",
+    [
+     "Transferrin saturation",
+     "MCV"
+    ]
+   ]
+  ],
+  "key": [
+   "Ferritin",
+   "CRP",
+   "Transferrin saturation",
+   "MCV"
+  ],
+  "why": "Ferritin is an acute-phase protein: inflammation pushes it up and can hide iron deficiency. With a CRP of 64, a ferritin of 86 isn't reassuring. In inflammation alone the cells are usually normal-sized and transferrin is low. Here the MCV is 78, saturation is 5% and transferrin is mid-normal, which together point to true iron deficiency on top. Daily NSAIDs make gut blood loss a prime suspect.",
+  "pearl": "When CRP is raised, a ferritin under about 100 µg/L can still mean iron deficiency. Soluble transferrin receptor, or the response to iron, can help settle it."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 28,
+  "difficulty": "Genius",
+  "patient": "Halina, 74, female",
+  "story": "Day six in intensive care with severe pneumonia, now improving. Routine bloods. No thyroid history and no goitre.",
+  "panels": [
+   {
+    "name": "Thyroid function",
+    "rows": [
+     [
+      "TSH",
+      "0.21",
+      "mU/L",
+      "0.40–4.00",
+      "L"
+     ],
+     [
+      "Free T4",
+      "11.5",
+      "pmol/L",
+      "10.0–20.0",
+      ""
+     ],
+     [
+      "Free T3",
+      "1.8",
+      "pmol/L",
+      "3.0–6.0",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "CRP",
+      "168",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "Albumin",
+      "24",
+      "g/L",
+      "35–50",
+      "L"
+     ],
+     [
+      "Sodium",
+      "136",
+      "mmol/L",
+      "135–145",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Sick euthyroid syndrome",
+  "wrong": [
+   "Secondary (pituitary) hypothyroidism",
+   "Subclinical hyperthyroidism",
+   "Hashimoto's thyroiditis",
+   "Thyroid storm",
+   "Amiodarone-induced thyrotoxicosis"
+  ],
+  "hints": [
+   [
+    "A low TSH, but a low T3? Look at all three numbers together.",
+    [
+     "TSH",
+     "Free T4",
+     "Free T3"
+    ]
+   ],
+   [
+    "Very sick bodies turn T3 down to save energy. Where is she?",
+    [
+     "CRP",
+     "Albumin"
+    ]
+   ]
+  ],
+  "key": [
+   "Free T3",
+   "TSH",
+   "CRP"
+  ],
+  "why": "In severe illness the body converts less T4 into active T3 (and more into inactive reverse T3), and TSH is often dampened, especially with steroids or dopamine. A low T3, low-normal T4 and slightly low TSH in an intensive care patient is non-thyroidal illness ('sick euthyroid'), not thyroid disease. Hyperthyroidism and thyroid storm need a high T4 or T3. Pituitary failure can look similar, which is why the tests are repeated after recovery rather than acted on in ICU.",
+  "pearl": "Thyroid tests in acutely unwell people are best avoided unless there's a real clinical question. Repeated four to six weeks after recovery, most 'abnormal' results settle on their own."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 29,
+  "difficulty": "Easy",
+  "patient": "Kai, 22, male",
+  "story": "Back at the gym after a year off: heavy squats, then a spin class. Two days later, very sore thighs and cola-coloured urine.",
+  "panels": [
+   {
+    "name": "Muscle and kidneys",
+    "rows": [
+     [
+      "Creatine kinase",
+      "48,600",
+      "U/L",
+      "<200",
+      "H"
+     ],
+     [
+      "Potassium",
+      "5.5",
+      "mmol/L",
+      "3.5–5.2",
+      "H"
+     ],
+     [
+      "Urea",
+      "9.4",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "148",
+      "µmol/L",
+      "60–110",
+      "H"
+     ],
+     [
+      "Phosphate",
+      "1.72",
+      "mmol/L",
+      "0.75–1.50",
+      "H"
+     ],
+     [
+      "Calcium",
+      "2.02",
+      "mmol/L",
+      "2.10–2.60",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Liver enzymes",
+    "rows": [
+     [
+      "AST",
+      "410",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "ALT",
+      "128",
+      "U/L",
+      "<40",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Urine",
+    "rows": [
+     [
+      "Urine dipstick blood",
+      "3+",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "Urine red cells",
+      "2",
+      "×10⁶/L",
+      "<10",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Rhabdomyolysis",
+  "wrong": [
+   "Acute hepatitis",
+   "Haemolytic anaemia",
+   "Glomerulonephritis",
+   "Kidney stones",
+   "Myocardial infarction"
+  ],
+  "hints": [
+   [
+    "One muscle enzyme is in the tens of thousands.",
+    [
+     "Creatine kinase"
+    ]
+   ],
+   [
+    "The dipstick says 'blood' but there are no red cells. What else turns it positive?",
+    [
+     "Urine dipstick blood",
+     "Urine red cells"
+    ]
+   ]
+  ],
+  "key": [
+   "Creatine kinase",
+   "Urine dipstick blood",
+   "Urine red cells"
+  ],
+  "why": "A CK of 48,600 after unaccustomed exercise means muscle breakdown. Damaged muscle spills myoglobin (dark urine, and a dipstick that reads 'blood' with no red cells), potassium, phosphate, and AST and ALT, which live in muscle as well as liver, so this isn't hepatitis. Myoglobin can injure the kidneys, hence the rising creatinine.",
+  "pearl": "AST and ALT aren't liver-only. After heavy exercise, check a CK before blaming the liver. Calcium can be low early in rhabdomyolysis because it gets deposited in damaged muscle."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 30,
+  "difficulty": "Easy",
+  "patient": "Ethan, 20, male",
+  "story": "His mates noticed his eyes look yellow after a few days of flu and barely eating. Otherwise well. It happened once before, during exams.",
+  "panels": [
+   {
+    "name": "Liver function",
+    "rows": [
+     [
+      "Bilirubin",
+      "46",
+      "µmol/L",
+      "<20",
+      "H"
+     ],
+     [
+      "Conjugated bilirubin",
+      "3",
+      "µmol/L",
+      "<4",
+      ""
+     ],
+     [
+      "ALT",
+      "22",
+      "U/L",
+      "<40",
+      ""
+     ],
+     [
+      "AST",
+      "20",
+      "U/L",
+      "<35",
+      ""
+     ],
+     [
+      "ALP",
+      "74",
+      "U/L",
+      "30–110",
+      ""
+     ],
+     [
+      "GGT",
+      "18",
+      "U/L",
+      "<50",
+      ""
+     ],
+     [
+      "Albumin",
+      "45",
+      "g/L",
+      "35–50",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Haemolysis check",
+    "rows": [
+     [
+      "Haemoglobin",
+      "152",
+      "g/L",
+      "130–180",
+      ""
+     ],
+     [
+      "Reticulocytes",
+      "54",
+      "×10⁹/L",
+      "20–100",
+      ""
+     ],
+     [
+      "LDH",
+      "170",
+      "U/L",
+      "120–250",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Gilbert syndrome",
+  "wrong": [
+   "Acute hepatitis A",
+   "Haemolytic anaemia",
+   "Gallstone blocking the bile duct",
+   "Crigler–Najjar syndrome type 1",
+   "Alcohol-related liver disease"
+  ],
+  "hints": [
+   [
+    "Is the bilirubin conjugated or unconjugated?",
+    [
+     "Bilirubin",
+     "Conjugated bilirubin"
+    ]
+   ],
+   [
+    "Unconjugated, with no haemolysis and a happy liver. And it flares with fasting.",
+    [
+     "Reticulocytes",
+     "LDH"
+    ]
+   ]
+  ],
+  "key": [
+   "Bilirubin",
+   "Conjugated bilirubin",
+   "LDH"
+  ],
+  "why": "The bilirubin is raised but almost none of it is conjugated, the liver enzymes are normal, and there's no sign of haemolysis (normal Hb, retics and LDH). It flares with fasting, illness and stress. That's Gilbert syndrome: a common, harmless, inherited dip in the liver enzyme (UGT1A1) that processes bilirubin.",
+  "pearl": "Gilbert syndrome affects up to 1 in 10 people and needs no treatment. Crigler–Najjar syndrome is its rare, severe cousin, with much higher bilirubin from birth."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 31,
+  "difficulty": "Medium",
+  "patient": "Hodan, 38, female",
+  "story": "Born in Somalia, lives in Melbourne, and wears covering clothing outdoors. Aching hips and thighs, and she struggles to climb stairs.",
+  "panels": [
+   {
+    "name": "Bone profile",
+    "rows": [
+     [
+      "Calcium",
+      "2.12",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Albumin",
+      "41",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "2.10",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Phosphate",
+      "0.68",
+      "mmol/L",
+      "0.75–1.50",
+      "L"
+     ],
+     [
+      "ALP",
+      "196",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "PTH",
+      "17.8",
+      "pmol/L",
+      "1.6–6.9",
+      "H"
+     ],
+     [
+      "25-OH vitamin D",
+      "11",
+      "nmol/L",
+      ">50",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Kidneys",
+    "rows": [
+     [
+      "Creatinine",
+      "62",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Osteomalacia (vitamin D deficiency)",
+  "wrong": [
+   "Primary hyperparathyroidism",
+   "Paget's disease of bone",
+   "Chronic kidney disease–mineral bone disorder",
+   "Bone metastases",
+   "Polymyalgia rheumatica"
+  ],
+  "hints": [
+   [
+    "PTH is high but calcium is only just in range. Is the parathyroid the cause, or responding to something?",
+    [
+     "PTH",
+     "Corrected calcium"
+    ]
+   ],
+   [
+    "Check the vitamin D, and look at the phosphate.",
+    [
+     "25-OH vitamin D",
+     "Phosphate"
+    ]
+   ]
+  ],
+  "key": [
+   "25-OH vitamin D",
+   "PTH",
+   "Phosphate",
+   "ALP"
+  ],
+  "why": "Very low vitamin D means less calcium absorbed from the gut, so the parathyroids work overtime (secondary hyperparathyroidism) to hold calcium in range. PTH also makes the kidneys dump phosphate, so phosphate falls. Poorly mineralised bone drives up ALP, and bone pain with weak thigh and hip muscles completes the picture of osteomalacia. In primary hyperparathyroidism, calcium would be high. Normal kidneys rule out CKD bone disease.",
+  "pearl": "Darker skin and covering clothing both reduce vitamin D made from sunlight, so deficiency is common in many migrant and refugee communities in Australia. It's easy to test for and very treatable."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 32,
+  "difficulty": "Medium",
+  "patient": "Sione, 35, male",
+  "story": "Five days of repeated vomiting and he can't keep fluids down. No diarrhoea. Takes no regular medicines.",
+  "panels": [
+   {
+    "name": "Venous blood gas",
+    "rows": [
+     [
+      "pH (venous)",
+      "7.53",
+      "",
+      "7.32–7.42",
+      "H"
+     ],
+     [
+      "pCO2 (venous)",
+      "50",
+      "mmHg",
+      "41–51",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "133",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "2.7",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "84",
+      "mmol/L",
+      "95–110",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "38",
+      "mmol/L",
+      "22–32",
+      "H"
+     ],
+     [
+      "Urea",
+      "13.1",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "124",
+      "µmol/L",
+      "60–110",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Urine",
+    "rows": [
+     [
+      "Urine chloride",
+      "<10",
+      "mmol/L",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Metabolic alkalosis from vomiting",
+  "wrong": [
+   "Conn's syndrome",
+   "Diuretic use",
+   "Diabetic ketoacidosis",
+   "Bartter syndrome",
+   "Respiratory alkalosis"
+  ],
+  "hints": [
+   [
+    "High pH and high bicarbonate: metabolic alkalosis. Now look at the chloride.",
+    [
+     "pH (venous)",
+     "Bicarbonate",
+     "Chloride"
+    ]
+   ],
+   [
+    "Very low urine chloride means the kidneys are hoarding salt and water. Diuretics and Bartter syndrome make urine chloride high.",
+    [
+     "Urine chloride"
+    ]
+   ]
+  ],
+  "key": [
+   "Bicarbonate",
+   "Chloride",
+   "Urine chloride"
+  ],
+  "why": "Vomiting loses stomach acid (HCl), so bicarbonate rises and chloride falls. Dehydration makes the kidneys cling to sodium and bicarbonate, and aldosterone wastes potassium: a low-chloride, low-potassium metabolic alkalosis, with the CO2 drifting up as compensation. The very low urine chloride is the clincher. Diuretics and Bartter syndrome give the same blood picture, but with plenty of chloride in the urine.",
+  "pearl": "Metabolic alkalosis splits neatly by urine chloride: low (under about 20 mmol/L) points to vomiting or nasogastric losses; high points to diuretics, Bartter or Gitelman syndrome, or mineralocorticoid excess."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 33,
+  "difficulty": "Hard",
+  "patient": "Lin, 44, female",
+  "story": "Blood pressure 168/102 despite three medicines. Muscle cramps and weakness. Not on a diuretic.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "144",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "2.9",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "101",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Bicarbonate",
+      "33",
+      "mmol/L",
+      "22–32",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "70",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Hormones",
+    "rows": [
+     [
+      "Renin (direct)",
+      "<2",
+      "mU/L",
+      "3–40",
+      "L"
+     ],
+     [
+      "Aldosterone:renin ratio",
+      "410",
+      "",
+      "<70",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Primary hyperaldosteronism (Conn's)",
+  "wrong": [
+   "Cushing's syndrome",
+   "Renal artery stenosis",
+   "Liquorice excess",
+   "Phaeochromocytoma",
+   "Diuretic-induced hypokalaemia"
+  ],
+  "hints": [
+   [
+    "Resistant high blood pressure, low potassium, high bicarbonate. Which hormone does all three?",
+    [
+     "Potassium",
+     "Bicarbonate"
+    ]
+   ],
+   [
+    "Renin is switched off but the ratio is sky-high. Is aldosterone being asked for, or acting alone?",
+    [
+     "Renin (direct)",
+     "Aldosterone:renin ratio"
+    ]
+   ]
+  ],
+  "key": [
+   "Potassium",
+   "Renin (direct)",
+   "Aldosterone:renin ratio"
+  ],
+  "why": "Blood pressure that won't settle, low potassium and a metabolic alkalosis suggest too much mineralocorticoid. Renin is suppressed while the aldosterone:renin ratio is very high, so aldosterone is being made without being asked: primary hyperaldosteronism. Renal artery stenosis raises renin and aldosterone together. Liquorice mimics the picture but suppresses both.",
+  "pearl": "Primary aldosteronism is the commonest cause of secondary hypertension, found in up to 1 in 10 people with high blood pressure (more with resistant hypertension), yet it's rarely tested for. Many blood pressure medicines affect the ratio, so results need careful interpretation."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 34,
+  "difficulty": "Hard",
+  "patient": "Minh, 41, male",
+  "story": "Born in Vietnam, moved to Australia as a child. His mum has hepatitis B. Feels well. Routine screening bloods.",
+  "panels": [
+   {
+    "name": "Hepatitis B serology",
+    "rows": [
+     [
+      "HBsAg",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "Anti-HBs",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "Anti-HBc (total)",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "Anti-HBc IgM",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "HBeAg",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "Anti-HBe",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "HBV DNA",
+      "2,400",
+      "IU/mL",
+      "Not detected",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "ALT",
+      "52",
+      "U/L",
+      "<40",
+      "H"
+     ],
+     [
+      "Platelets",
+      "210",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ],
+     [
+      "Hepatitis C antibody",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Chronic hepatitis B (HBeAg-negative)",
+  "wrong": [
+   "Resolved past hepatitis B",
+   "Immune from vaccination",
+   "Acute hepatitis B",
+   "Hepatitis C",
+   "Isolated core antibody (false positive)"
+  ],
+  "hints": [
+   [
+    "Surface antigen means the virus is there right now. Is it new or old?",
+    [
+     "HBsAg",
+     "Anti-HBc IgM"
+    ]
+   ],
+   [
+    "Core IgM is negative and Mum has hep B, so this has been around a long time. Now check the e-antigen.",
+    [
+     "HBeAg",
+     "Anti-HBe"
+    ]
+   ]
+  ],
+  "key": [
+   "HBsAg",
+   "Anti-HBc IgM",
+   "HBeAg",
+   "Anti-HBe"
+  ],
+  "why": "A positive HBsAg means current infection. Total core antibody positive with core IgM negative means it isn't new, and with his background (born in a high-prevalence region, mum affected) it was likely acquired around birth: chronic hepatitis B. e-antigen negative, anti-HBe positive, a modest viral load and a mildly raised ALT make it HBeAg-negative chronic hepatitis B, which still needs regular monitoring. Vaccination gives anti-HBs only; resolved infection has anti-HBs and anti-HBc but no HBsAg.",
+  "pearl": "In Australia, hepatitis B mostly affects people born in high-prevalence regions and Aboriginal and Torres Strait Islander communities, and over a quarter of people living with it don't know. Regular monitoring and liver cancer surveillance save lives."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 35,
+  "difficulty": "Genius",
+  "patient": "Olivia, 35, female",
+  "story": "Thinning hair, so she started a couple of 'hair, skin and nails' supplements. Feels completely well. Pulse 68, no tremor, no goitre.",
+  "panels": [
+   {
+    "name": "Thyroid function",
+    "rows": [
+     [
+      "TSH",
+      "0.04",
+      "mU/L",
+      "0.40–4.00",
+      "L"
+     ],
+     [
+      "Free T4",
+      "39",
+      "pmol/L",
+      "10.0–20.0",
+      "H"
+     ],
+     [
+      "Free T3",
+      "12.6",
+      "pmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "TSH receptor antibodies",
+      "4.9",
+      "IU/L",
+      "<1.8",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Biotin interfering with the tests",
+  "wrong": [
+   "Graves' disease",
+   "Subacute thyroiditis",
+   "Thyroid hormone resistance",
+   "Taking thyroid hormone (factitious)",
+   "Painless thyroiditis"
+  ],
+  "hints": [
+   [
+    "The numbers scream hyperthyroid. Does she?",
+    [
+     "TSH",
+     "Free T4"
+    ]
+   ],
+   [
+    "Some 'hair, skin and nails' supplements contain mega-doses of a B vitamin that sabotages many lab tests.",
+    []
+   ]
+  ],
+  "key": [
+   "TSH",
+   "Free T4",
+   "TSH receptor antibodies"
+  ],
+  "why": "These results look exactly like Graves' disease, antibodies and all, yet she is clinically completely well. High-dose biotin (vitamin B7, common in hair and nail supplements) interferes with streptavidin–biotin immunoassays: it falsely lowers 'sandwich' assays (like TSH) and falsely raises 'competitive' assays (like free T4, free T3 and TSH receptor antibodies). When results don't fit the patient, suspect the test.",
+  "pearl": "Labs usually suggest stopping biotin for a few days (longer with very high doses) before repeating the tests. Biotin has also caused falsely low troponin results, so it's worth asking about supplements."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 36,
+  "difficulty": "Easy",
+  "patient": "June, 79, female",
+  "story": "A Wiradjuri elder. Three days of gastro and barely drinking. Dizzy when she stands. Her usual creatinine is 70.",
+  "panels": [
+   {
+    "name": "Urea and electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "147",
+      "mmol/L",
+      "135–145",
+      "H"
+     ],
+     [
+      "Potassium",
+      "3.3",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "115",
+      "mmol/L",
+      "95–110",
+      "H"
+     ],
+     [
+      "Bicarbonate",
+      "20",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Urea",
+      "22.4",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "156",
+      "µmol/L",
+      "45–90",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Haemoglobin",
+      "148",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "Urine sodium",
+      "8",
+      "mmol/L",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Pre-renal AKI from dehydration",
+  "wrong": [
+   "Chronic kidney disease",
+   "Rhabdomyolysis",
+   "Urinary retention (post-renal)",
+   "Acute glomerulonephritis",
+   "Acute tubular necrosis"
+  ],
+  "hints": [
+   [
+    "Compare the creatinine with her usual 70. Then compare the urea with the creatinine.",
+    [
+     "Creatinine",
+     "Urea"
+    ]
+   ],
+   [
+    "A low urine sodium means her kidneys are still working hard to hold on to salt and water.",
+    [
+     "Urine sodium"
+    ]
+   ]
+  ],
+  "key": [
+   "Creatinine",
+   "Urea",
+   "Urine sodium"
+  ],
+  "why": "Creatinine has more than doubled from her usual 70, so this is acute, not chronic. Urea has risen much more than creatinine (urea is reabsorbed when the kidneys are short of fluid), sodium is high from losing more water than salt, the high chloride and low bicarbonate come from bicarbonate lost in diarrhoea, and the very low urine sodium shows healthy kidney tubules hanging on to salt and water. Pre-renal AKI from dehydration. Damaged tubules (ATN) would leak sodium into the urine.",
+  "pearl": "Older people dehydrate faster: thirst fades with age, and many take blood pressure tablets or diuretics. A sick-day plan about which tablets to pause during vomiting or diarrhoea is worth having before it's needed."
+ }
+]
