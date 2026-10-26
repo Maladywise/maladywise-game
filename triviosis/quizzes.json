@@ -2163,107 +2163,107 @@
   "date": "2026-11-07",
   "number": 21,
   "difficulty": "Hard",
-  "theme": "Bones and joints",
+  "theme": "Physics in the clinic",
   "questions": [
    {
-    "q": "Gout is caused by crystals of?",
-    "a": "Monosodium urate",
+    "q": "Marie Curie, born on 7 November 1867, won Nobel Prizes in which two sciences?",
+    "a": "Physics and chemistry",
     "w": [
-     "Calcium pyrophosphate",
-     "Cholesterol",
-     "Calcium oxalate"
+     "Physics and medicine",
+     "Chemistry and medicine",
+     "Physics and astronomy"
     ],
-    "e": ""
+    "e": "Physics in 1903, chemistry in 1911. She is still the only person to win in two different sciences."
    },
    {
-    "q": "Pseudogout is caused by crystals of?",
-    "a": "Calcium pyrophosphate",
+    "q": "The sievert, the unit of effective radiation dose, honours medical physicist Rolf Sievert. Where was he from?",
+    "a": "Sweden",
     "w": [
-     "Monosodium urate",
-     "Cholesterol",
-     "Cystine"
+     "Germany",
+     "Denmark",
+     "Austria"
     ],
-    "e": ""
+    "e": "He measured doses from radium and X-ray treatments in Stockholm."
    },
    {
-    "q": "Which joint does gout classically attack first?",
-    "a": "The big toe",
+    "q": "One gray (Gy) of absorbed dose means?",
+    "a": "One joule of energy absorbed per kilogram",
     "w": [
-     "The knee",
-     "The wrist",
-     "The hip"
+     "One radioactive decay per second",
+     "One X-ray photon per square centimetre",
+     "One hour next to a radium source"
     ],
-    "e": "Podagra."
+    "e": "Decays per second are becquerels. The sievert weights dose for biological harm."
    },
    {
-    "q": "Rheumatoid arthritis typically affects?",
-    "a": "Small hand joints on both sides",
+    "q": "Most external-beam radiotherapy today is delivered by a?",
+    "a": "Linear accelerator",
     "w": [
-     "One large joint",
-     "The spine only",
-     "The fingertip joints only"
+     "Cyclotron",
+     "Van de Graaff generator",
+     "Particle collider"
     ],
-    "e": ""
+    "e": "A linac speeds up electrons to make high-energy X-ray beams."
    },
    {
-    "q": "Heberden\u2019s nodes in osteoarthritis are at which joints?",
-    "a": "The fingertip (DIP) joints",
+    "q": "Proton therapy spares tissue beyond a tumour because protons dump most of their energy in the?",
+    "a": "Bragg peak",
     "w": [
-     "The middle finger (PIP) joints",
-     "The knuckles (MCP joints)",
-     "The wrist"
+     "Compton edge",
+     "Cherenkov cone",
+     "Larmor band"
     ],
-    "e": "Bouchard\u2019s nodes are at the PIP joints."
+    "e": "Named after William Henry Bragg, who described it in the early 1900s."
    },
    {
-    "q": "Ankylosing spondylitis is strongly linked to which gene?",
-    "a": "HLA-B27",
+    "q": "The superconducting magnet in most MRI scanners is kept cold with?",
+    "a": "Liquid helium",
     "w": [
-     "HLA-DR4",
-     "BRCA2",
-     "HFE"
+     "Liquid nitrogen",
+     "Dry ice",
+     "Chilled saltwater"
     ],
-    "e": ""
+    "e": "About minus 269 \u00b0C, just above absolute zero."
    },
    {
-    "q": "A Colles fracture is a break of the?",
-    "a": "Distal radius",
+    "q": "A PET scanner detects pairs of photons made when a positron meets?",
+    "a": "An electron",
     "w": [
-     "Scaphoid",
-     "Ulnar shaft",
-     "Fifth metacarpal"
+     "A proton",
+     "A neutron",
+     "A neutrino"
     ],
-    "e": "Fall on an outstretched hand."
+    "e": "The two photons fly off in opposite directions, so the scanner can work out where they came from."
    },
    {
-    "q": "A boxer\u2019s fracture is a break of the?",
-    "a": "Fifth metacarpal",
+    "q": "Which radioisotope is used in most nuclear medicine scans?",
+    "a": "Technetium-99m",
     "w": [
-     "Distal radius",
-     "Scaphoid",
-     "Thumb"
+     "Iodine-131",
+     "Cobalt-60",
+     "Uranium-235"
     ],
-    "e": "Punching walls rarely wins."
+    "e": "Its six-hour half-life is long enough to image and short enough to fade quickly."
    },
    {
-    "q": "Osteoporosis is diagnosed on a bone density scan with a T-score of?",
-    "a": "\u22122.5 or lower",
+    "q": "ARPANSA says the average Australian gets about how much natural background radiation a year?",
+    "a": "About 1.5 mSv",
     "w": [
-     "\u22121.0 or lower",
-     "0 or lower",
-     "+2.5 or higher"
+     "About 0.01 mSv",
+     "About 15 mSv",
+     "About 150 mSv"
     ],
-    "e": ""
+    "e": "A chest X-ray adds about 0.02 mSv, roughly a few days of background."
    },
    {
-    "q": "Which tendon ruptures with a \u2018kicked in the calf\u2019 feeling?",
-    "a": "Achilles tendon",
+    "q": "Physicist Rosalyn Yalow shared the 1977 Nobel Prize in Physiology or Medicine for developing?",
+    "a": "Radioimmunoassay",
     "w": [
-     "Patellar tendon",
-     "Hamstring tendon",
-     "Rotator cuff"
+     "The CT scanner",
+     "Medical ultrasound",
+     "The cardiac pacemaker"
     ],
-    "e": ""
+    "e": "Radioactive tags let labs measure tiny amounts of hormones such as insulin."
    }
   ]
  },

@@ -520,84 +520,84 @@
   "number": 22,
   "difficulty": "Hard",
   "rows": [
-   "BUT##",
-   "ARISE",
-   "REBEL",
-   "NAILS",
-   "##ALE"
+   "##RAD",
+   "AGONY",
+   "BRUTE",
+   "LASER",
+   "EYE##"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
+    "c": 2,
     "len": 3,
-    "clue": "However"
+    "clue": "Old unit of absorbed radiation dose, replaced by the gray"
    },
    {
     "n": 4,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Get up after a nap"
+    "clue": "Pain at 10 out of 10"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Non-compliant type"
+    "clue": "Beast"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "Clubbed ___ (clinical sign)"
+    "clue": "Beam that reshapes the cornea in LASIK"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 2,
+    "c": 0,
     "len": 3,
-    "clue": "Pub pint, not on the diet sheet"
+    "clue": "Organ checked with a slit lamp"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Farm shed"
+    "c": 2,
+    "len": 5,
+    "clue": "Wake, as a drowsy patient"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
+    "c": 3,
     "len": 4,
-    "clue": "Waste product measured with creatinine"
+    "clue": "Poker stake, or a prefix meaning 'before'"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Shin bone"
+    "c": 4,
+    "len": 4,
+    "clue": "Fabric colourer"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Fit, as on a work certificate"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 3,
+    "c": 1,
     "len": 4,
-    "clue": "Flog"
-   },
-   {
-    "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Otherwise"
+    "clue": "SI unit of absorbed dose: one joule per kilogram"
    }
   ]
  },

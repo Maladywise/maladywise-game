@@ -111,36 +111,39 @@
     "date": "2026-10-27",
     "number": 4,
     "difficulty": "Easy",
-    "title": "Iron lady",
-    "answer": "Eiffel Tower",
+    "title": "Brush with greatness",
+    "answer": "Electric toothbrush",
     "accept": [
-      "eiffel tower",
-      "the eiffel tower",
-      "tour eiffel",
-      "la tour eiffel",
-      "eiffel"
+      "electric toothbrush",
+      "electric tooth brush",
+      "electric toothbrushes",
+      "power toothbrush",
+      "powered toothbrush",
+      "battery toothbrush",
+      "sonic toothbrush",
+      "electronic toothbrush"
     ],
     "clues": [
       {
-        "t": "I grow up to 15 cm taller in summer."
+        "t": "I was invented in Switzerland in 1954."
       },
       {
-        "t": "I get a fresh coat of paint about every seven years, roughly 60 tonnes of it."
+        "t": "I was first designed for people with limited hand movement, and for people wearing braces."
       },
       {
-        "t": "I was only supposed to stand for 20 years. Being handy as a radio mast saved me."
+        "t": "The earliest versions of me plugged straight into a wall socket."
       },
       {
-        "t": "My designer kept a private apartment near my top for entertaining guests."
+        "t": "Some of me spin; some of me buzz tens of thousands of times a minute."
       },
       {
-        "t": "I was the tallest structure humans had ever built until 1930."
+        "t": "Dentists say two minutes, twice a day."
       },
       {
-        "t": "I'm made of wrought iron, built for the 1889 World's Fair in Paris."
+        "t": "I'm the battery-powered way to clean your teeth."
       }
     ],
-    "pearl": "Many Parisian artists signed a petition calling it a monstrosity. Now it's the city's most famous selfie backdrop."
+    "pearl": "Lots of gadgets made for disabled people end up in every home. Occupational therapists are experts at finding the right tool for the job. Happy World OT Day."
   },
   {
     "date": "2026-10-28",
@@ -180,38 +183,37 @@
     "date": "2026-10-29",
     "number": 6,
     "difficulty": "Medium",
-    "title": "Mind the gap",
-    "answer": "Zip",
+    "title": "Head office",
+    "answer": "Brain",
     "accept": [
-      "zip",
-      "zipper",
-      "zip fastener",
-      "zips",
-      "zippers",
-      "slide fastener",
-      "zipper fastener"
+      "brain",
+      "the brain",
+      "human brain",
+      "a brain",
+      "my brain",
+      "your brain"
     ],
     "clues": [
       {
-        "t": "My earliest version was called the 'clasp locker'."
+        "t": "I'm about as soft as tofu."
       },
       {
-        "t": "A Swedish-American engineer made me actually work in 1913."
+        "t": "In 1848 Phineas Gage survived an iron rod blasting through me."
       },
       {
-        "t": "My famous name came from a rubber company selling galoshes in the 1920s."
+        "t": "Albert Einstein's version of me was kept after he died and sliced up for study."
       },
       {
-        "t": "One Japanese company, YKK, makes around half of all of me worldwide."
+        "t": "I have no pain receptors of my own, so surgeons can operate on me while you're awake."
       },
       {
-        "t": "I have two rows of teeth and a slider, but I don't bite. Mostly."
+        "t": "I'm wrinkly, which lets more of me fit in a small space."
       },
       {
-        "t": "You do me up on jeans, jackets and bags. Check your fly."
+        "t": "I sit inside your skull and do all your thinking."
       }
     ],
-    "pearl": "YKK stands for Yoshida Kōgyō Kabushiki-gaisha. Look at your nearest zip; it's probably theirs."
+    "pearl": "Time is brain. If someone's face droops, an arm goes weak or their speech slurs, call 000 straight away. Today is World Stroke Day."
   },
   {
     "date": "2026-10-30",

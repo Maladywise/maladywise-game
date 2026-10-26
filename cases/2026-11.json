@@ -230,40 +230,42 @@
   "date": "2026-11-07",
   "number": 22,
   "difficulty": "Hard",
-  "title": "Top End wet season",
-  "answer": "Melioidosis",
+  "title": "Straight edges",
+  "answer": "Radiation pneumonitis",
   "accept": [
-   "melioidosis",
-   "burkholderia pseudomallei",
-   "b pseudomallei",
-   "burkholderia",
-   "whitmore's disease",
-   "whitmores disease"
+   "radiation pneumonitis",
+   "radiation induced pneumonitis",
+   "radiation-induced pneumonitis",
+   "radiotherapy pneumonitis",
+   "radiation lung injury",
+   "radiation induced lung injury",
+   "radiation-induced lung injury",
+   "radiation pneumonopathy",
+   "radiation lung"
   ],
   "clues": [
    {
-    "t": "57-year-old man with fever, cough and rigors for 5 days."
+    "t": "62-year-old woman with a dry cough and breathlessness for 2 weeks."
    },
    {
-    "t": "He has type 2 diabetes and drinks heavily."
+    "t": "Low-grade fevers. Two courses of antibiotics haven't helped."
    },
    {
-    "t": "Chest X-ray: upper lobe consolidation",
+    "t": "She finished treatment for right breast cancer 8 weeks ago."
+   },
+   {
+    "t": "Fine crackles over the right upper chest only. Oxygen saturation 94% on room air."
+   },
+   {
+    "t": "Chest X-ray: hazy right upper zone shadowing with an oddly straight edge",
     "d": 1
    },
    {
-    "t": "He lives near Darwin and spent the monsoon week clearing his flooded garden."
-   },
-   {
-    "t": "CT: multiple small abscesses in the spleen and prostate",
-    "d": 1
-   },
-   {
-    "t": "Blood culture: gram-negative bacillus with a \"safety pin\" look",
+    "t": "CT: ground-glass change matching the shape of her radiotherapy field, ignoring the lobe boundaries",
     "d": 1
    }
   ],
-  "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Rates are several times higher in Aboriginal and Torres Strait Islander people, especially in remote communities, where diabetes, kidney disease and soil exposure are all more common. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
+  "pearl": "Radiation pneumonitis usually appears 1 to 6 months after chest radiotherapy. The clue is a shadow that follows the beam, not the anatomy. Medical physicists plan every beam to keep lung dose low, which is why it's uncommon. Mild cases settle on their own; more troublesome ones usually respond to steroids."
  },
  {
   "date": "2026-11-08",
