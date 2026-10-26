@@ -1947,75 +1947,128 @@
   "date": "2026-11-17",
   "number": 23,
   "difficulty": "Easy",
-  "patient": "Fatima, 30, female",
-  "story": "26 weeks pregnant with her first baby and feels well. Her early pregnancy bloods were normal. This is her routine 75 g glucose tolerance test.",
+  "patient": "Mei, 29, female",
+  "story": "33 weeks pregnant with her first baby. Two days of headache and swollen face and hands; today she's seeing flashing lights. Blood pressure 162/108.",
   "panels": [
    {
-    "name": "Glucose tolerance test (pregnancy)",
+    "name": "Full blood count",
     "rows": [
      [
-      "Glucose (fasting)",
-      "5.4",
-      "mmol/L",
-      "<5.1",
+      "Haemoglobin",
+      "121",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "White cells",
+      "9.6",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Platelets",
+      "92",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Kidneys and liver",
+    "rows": [
+     [
+      "Creatinine",
+      "94",
+      "µmol/L",
+      "45–90",
       "H"
      ],
      [
-      "Glucose (1 hour)",
-      "10.6",
+      "Urate",
+      "0.43",
       "mmol/L",
-      "<10.0",
+      "0.15–0.35",
       "H"
      ],
      [
-      "Glucose (2 hours)",
-      "8.2",
+      "ALT",
+      "86",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "11",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "LDH",
+      "205",
+      "U/L",
+      "120–250",
+      ""
+     ],
+     [
+      "Glucose",
+      "4.9",
       "mmol/L",
-      "<8.5",
+      "3.0–7.8",
       ""
      ]
     ]
    },
    {
-    "name": "Other",
+    "name": "Urine",
     "rows": [
      [
-      "HbA1c",
-      "5.3",
-      "%",
-      "<6.0",
-      ""
+      "Urine protein:creatinine ratio",
+      "88",
+      "mg/mmol",
+      "<30",
+      "H"
      ]
     ]
    }
   ],
-  "answer": "Gestational diabetes",
+  "answer": "Pre-eclampsia with severe features",
   "wrong": [
-   "Normal pregnancy",
-   "Pre-existing type 2 diabetes",
-   "Type 1 diabetes",
-   "Reactive hypoglycaemia",
-   "Impaired glucose tolerance (non-pregnant criteria)"
+   "Gestational hypertension",
+   "Acute fatty liver of pregnancy",
+   "Intrahepatic cholestasis of pregnancy",
+   "Gestational thrombocytopenia",
+   "Thrombotic thrombocytopenic purpura"
   ],
   "hints": [
    [
-    "Pregnancy has its own, lower glucose cut-offs. How many values are over?",
+    "New high blood pressure in pregnancy. What turns it into something more?",
     [
-     "Glucose (fasting)",
-     "Glucose (1 hour)"
+     "Urine protein:creatinine ratio"
     ]
    ],
    [
-    "On the pregnancy test, just one high value is enough.",
-    []
+    "Which organs are feeling the strain?",
+    [
+     "Platelets",
+     "ALT",
+     "Creatinine"
+    ]
    ]
   ],
   "key": [
-   "Glucose (fasting)",
-   "Glucose (1 hour)"
+   "Urine protein:creatinine ratio",
+   "Platelets",
+   "ALT",
+   "Creatinine",
+   "Urate"
   ],
-  "why": "Australian criteria for diabetes in pregnancy (75 g test at 24–28 weeks) need just one of: fasting 5.1 or more, 1-hour 10.0 or more, or 2-hour 8.5 or more. Fatima has two. Normal early pregnancy bloods and a normal HbA1c make diabetes from before pregnancy unlikely.",
-  "pearl": "HbA1c isn't reliable for diagnosing diabetes in pregnancy because red cell turnover changes. Gestational diabetes usually settles after birth but raises the future risk of type 2 diabetes, so glucose checks after pregnancy, and every few years after that, are recommended."
+  "why": "New hypertension after 20 weeks plus protein in the urine is pre-eclampsia. Low platelets, a raised ALT, a creatinine that's high for pregnancy (it normally falls) and visual symptoms are signs of severe disease. A normal LDH and bilirubin mean no haemolysis, so it isn't full HELLP syndrome, and a normal glucose and bilirubin make acute fatty liver unlikely. Gestational hypertension has no protein or organ involvement.",
+  "pearl": "Pre-eclampsia is one of the commonest reasons babies are born early: the only cure is delivering the placenta, so it's a balance between mum's safety and baby's maturity. Steroid injections before an early birth help the baby's lungs. Low-dose aspirin from early pregnancy cuts the risk in women at high risk."
  },
  {
   "date": "2026-11-18",

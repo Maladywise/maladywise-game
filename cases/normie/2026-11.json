@@ -216,35 +216,42 @@
     "date": "2026-11-07",
     "number": 15,
     "difficulty": "Hard",
-    "title": "Lady Lindy",
-    "answer": "Amelia Earhart",
+    "title": "Glowing reputation",
+    "answer": "Marie Curie",
     "accept": [
-      "amelia earhart",
-      "earhart",
-      "amelia",
-      "amelia mary earhart"
+      "marie curie",
+      "curie",
+      "madame curie",
+      "maria sklodowska",
+      "marie sklodowska curie",
+      "marie sklodowska-curie",
+      "maria sklodowska-curie",
+      "maria skłodowska",
+      "marie skłodowska-curie",
+      "maria skłodowska-curie",
+      "madam curie"
     ],
     "clues": [
       {
-        "t": "I launched my own lines of clothing and luggage."
+        "t": "I studied at a secret 'Flying University', because women couldn't enrol at the official one at home."
       },
       {
-        "t": "I once whisked the First Lady away from a White House dinner for a night flight."
+        "t": "My notebooks are still so radioactive they're stored in lead-lined boxes."
       },
       {
-        "t": "In 1935 I was the first person to fly solo from Hawaii to California."
+        "t": "In World War I I drove mobile X-ray vans to the front."
       },
       {
-        "t": "In 1932 I became the first woman to fly solo across the Atlantic."
+        "t": "I named an element after my homeland, Poland."
       },
       {
-        "t": "I vanished over the Pacific in 1937 trying to fly around the world."
+        "t": "I was the first woman to win a Nobel Prize, and then I won a second."
       },
       {
-        "t": "America's most famous aviatrix. Search parties are still looking."
+        "t": "Born Maria Skłodowska in Warsaw on 7 November 1867. Radioactivity was my life's work."
       }
     ],
-    "pearl": "She was hunting for tiny Howland Island when contact was lost. The mystery still sells documentaries."
+    "pearl": "Today is International Day of Medical Physics, chosen for her birthday. Her work paved the way for radiotherapy, which still treats many cancers."
   },
   {
     "date": "2026-11-08",
@@ -457,39 +464,38 @@
     "date": "2026-11-14",
     "number": 22,
     "difficulty": "Hard",
-    "title": "Poetical science",
-    "answer": "Ada Lovelace",
+    "title": "Sweet discovery",
+    "answer": "Frederick Banting",
     "accept": [
-      "ada lovelace",
-      "lovelace",
-      "augusta ada king",
-      "ada king",
-      "ada byron",
-      "augusta ada byron",
-      "countess of lovelace",
-      "ada"
+      "frederick banting",
+      "banting",
+      "sir frederick banting",
+      "fred banting",
+      "frederick grant banting",
+      "sir frederick grant banting",
+      "dr banting"
     ],
     "clues": [
       {
-        "t": "At 12 I planned a flying machine and wrote a guide called 'Flyology'."
+        "t": "I was wounded in the arm in World War I and won the Military Cross."
       },
       {
-        "t": "My father was a scandalous poet I never got to know."
+        "t": "I was also a keen painter and went sketching with Canada's Group of Seven."
       },
       {
-        "t": "My mother had me tutored in maths to keep any poetic madness at bay."
+        "t": "My big idea came in the middle of the night in 1920, after reading a journal article."
       },
       {
-        "t": "A US military programming language is named after me."
+        "t": "Our team sold a life-saving patent to the University of Toronto for one dollar each."
       },
       {
-        "t": "In 1843 I published notes that included what many call the first computer program."
+        "t": "At 32 I became the youngest-ever winner of the Nobel Prize in medicine."
       },
       {
-        "t": "I worked with Charles Babbage on his Analytical Engine. Countess, coder, legend."
+        "t": "With Charles Best I discovered insulin. World Diabetes Day falls on my birthday."
       }
     ],
-    "pearl": "Her father was Lord Byron, who left when she was a baby. Ada Lovelace Day is the second Tuesday of October."
+    "pearl": "He shared his Nobel prize money with Charles Best, who'd been left off the award. Insulin turned type 1 diabetes from a death sentence into a condition people live long lives with."
   },
   {
     "date": "2026-11-15",
@@ -566,36 +572,38 @@
     "date": "2026-11-17",
     "number": 25,
     "difficulty": "Easy",
-    "title": "Sails that never leave port",
-    "answer": "Sydney Opera House",
+    "title": "Pocket rocket",
+    "answer": "Kangaroo",
     "accept": [
-      "sydney opera house",
-      "the sydney opera house",
-      "opera house",
-      "sydney opera",
-      "sydney's opera house"
+      "kangaroo",
+      "kangaroos",
+      "a kangaroo",
+      "roo",
+      "red kangaroo",
+      "grey kangaroo",
+      "eastern grey kangaroo"
     ],
     "clues": [
       {
-        "t": "My design won an international competition in 1957."
+        "t": "My newborns are about the size of a jellybean."
       },
       {
-        "t": "I was budgeted at $7 million and ended up costing $102 million."
+        "t": "Straight after birth my baby crawls into a pouch and stays for months."
       },
       {
-        "t": "The first person to perform here sang to construction workers on their lunch break."
+        "t": "A way of cuddling premature babies skin to skin is named after me."
       },
       {
-        "t": "My roof shells were all cut from the geometry of a single sphere."
+        "t": "I find it very hard to walk backwards."
       },
       {
-        "t": "My white tiles came from Sweden, and Queen Elizabeth II opened me in 1973."
+        "t": "I'm on Australia's coat of arms, next to an emu."
       },
       {
-        "t": "Shells (or sails) on Bennelong Point, beside a famous harbour bridge."
+        "t": "I hop, I box, and I'm very Australian."
       }
     ],
-    "pearl": "That first lunchtime singer was Paul Robeson in 1960. Bonus: it's World Heritage-listed, one of the youngest buildings ever to make the list."
+    "pearl": "Kangaroo care, holding a premature baby skin to skin on a parent's chest, helps keep babies warm and supports feeding. It began in Bogotá, Colombia, in 1978. Today is World Prematurity Day."
   },
   {
     "date": "2026-11-18",

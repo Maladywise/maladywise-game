@@ -327,107 +327,107 @@
   "date": "2026-10-27",
   "number": 4,
   "difficulty": "Easy",
-  "theme": "Food that isn\u2019t what you think",
+  "theme": "Clever everyday helpers",
   "questions": [
    {
-    "q": "Botanically speaking, peanuts are?",
-    "a": "Legumes",
+    "q": "The OXO Good Grips peeler, with its big soft handle, was inspired by?",
+    "a": "The inventor's wife's arthritis",
     "w": [
-     "Nuts",
-     "Seeds of a tree",
-     "Grains"
+     "A chef's burnt hand",
+     "A bike handlebar",
+     "A child's toy"
     ],
-    "e": "They grow underground like peas. The \u2018nut\u2019 part is marketing."
+    "e": "Sam Farber designed it in 1990 after watching his wife Betsey struggle with a metal peeler."
    },
    {
-    "q": "Which of these is botanically a berry?",
-    "a": "Banana",
+    "q": "Bendy straws were invented in the 1930s after the inventor watched?",
+    "a": "His young daughter struggle with a straight straw",
     "w": [
-     "Strawberry",
-     "Raspberry",
-     "Blackberry"
+     "A giraffe drinking",
+     "A plumber fixing a pipe",
+     "A trumpet player"
     ],
-    "e": "Strawberries aren\u2019t berries. Bananas are. Botany is chaos."
+    "e": "Hospitals soon used them so patients could drink lying down."
    },
    {
-    "q": "White chocolate contains no?",
-    "a": "Cocoa solids",
+    "q": "An early typewriter, built in Italy around 1808, was made so that?",
+    "a": "A blind countess could write letters",
     "w": [
-     "Sugar",
-     "Milk",
-     "Fat"
+     "Monks could copy books faster",
+     "Spies could send coded notes",
+     "Children could learn spelling"
     ],
-    "e": "Just cocoa butter, sugar and milk. Chocolate-adjacent."
+    "e": "Pellegrino Turri built it for his friend, Countess Carolina Fantoni da Fivizzano."
    },
    {
-    "q": "The \u2018wasabi\u2019 served in most restaurants is usually mostly?",
-    "a": "Horseradish",
+    "q": "Louis Braille developed his reading system at about what age?",
+    "a": "15",
     "w": [
-     "Ginger",
-     "Mustard seed only",
-     "Seaweed"
+     "8",
+     "40",
+     "65"
     ],
-    "e": "Dyed green. Real wasabi is pricey and fussy to grow."
+    "e": "He lost his sight after an accident in his father's workshop as a small boy."
    },
    {
-    "q": "Fortune cookies were popularised in which country?",
-    "a": "USA",
+    "q": "Braille grew out of?",
+    "a": "A French army code for reading in the dark",
     "w": [
-     "China",
-     "Hong Kong",
-     "Taiwan"
+     "Morse code",
+     "Egyptian hieroglyphs",
+     "Knitting patterns"
     ],
-    "e": "Most people in China have never seen one. California made them famous."
+    "e": "Charles Barbier's 'night writing' used raised dots. Braille made it simpler."
    },
    {
-    "q": "Which food has been found still edible in ancient Egyptian tombs?",
-    "a": "Honey",
+    "q": "Zenith's 1950 TV remote, the 'Lazy Bones', was connected to the TV by?",
+    "a": "A cable",
     "w": [
-     "Bread",
-     "Cheese",
-     "Dates"
+     "Infrared light",
+     "Bluetooth",
+     "A pulley"
     ],
-    "e": "Low moisture and high acidity mean it basically never spoils."
+    "e": "People kept tripping over it."
    },
    {
-    "q": "Before the 1600s, most cultivated carrots were?",
-    "a": "Purple or yellow",
+    "q": "When something designed for disabled people ends up helping everyone, like footpath ramps helping prams and suitcases, it's called?",
+    "a": "The curb-cut effect",
     "w": [
-     "Orange",
-     "White only",
-     "Green"
+     "The domino effect",
+     "The Mandela effect",
+     "The Streisand effect"
     ],
-    "e": "The Dutch popularised orange ones. The royal tribute story is probably a legend."
+    "e": ""
    },
    {
-    "q": "The Caesar salad is named after?",
-    "a": "A restaurateur in Mexico",
+    "q": "'Talking books' on records were first made in the 1930s for?",
+    "a": "Blind readers, including blinded war veterans",
     "w": [
-     "Julius Caesar",
-     "A Roman chef",
-     "A Hollywood actor"
+     "Long-haul truck drivers",
+     "Busy chefs",
+     "Astronauts"
     ],
-    "e": "Caesar Cardini, Tijuana, 1920s. Julius never had a crouton."
+    "e": "Audiobooks went mainstream decades later."
    },
    {
-    "q": "Hawaiian pizza was invented in which country?",
-    "a": "Canada",
+    "q": "Occupational therapy grew as a profession partly to help people recover from?",
+    "a": "World War I",
     "w": [
-     "USA",
-     "Australia",
-     "Hawaii"
+     "The gold rush",
+     "The Black Death",
+     "The Industrial Revolution"
     ],
-    "e": "By a Greek-Canadian in Ontario in 1962. Hawaii had nothing to do with it."
+    "e": "'Reconstruction aides' helped wounded soldiers get back to everyday life."
    },
    {
-    "q": "The pavlova is named after a?",
-    "a": "Russian ballerina",
+    "q": "Velcro was invented after a Swiss engineer noticed?",
+    "a": "Burrs stuck in his dog's fur",
     "w": [
-     "Opera singer",
-     "Racehorse",
-     "Princess"
+     "Gecko feet on a wall",
+     "Spider silk on a fence",
+     "Seaweed on a rope"
     ],
-    "e": "Anna Pavlova. Australia and New Zealand are still fighting over who made it first."
+    "e": "Hook-and-loop fastening now helps anyone who finds buttons and laces fiddly."
    }
   ]
  },
@@ -543,107 +543,107 @@
   "date": "2026-10-29",
   "number": 6,
   "difficulty": "Medium",
-  "theme": "Music oddities",
+  "theme": "Your amazing brain",
   "questions": [
    {
-    "q": "A performance of John Cage\u2019s \u2018As Slow As Possible\u2019 in a German church is due to end in which year?",
-    "a": "2640",
+    "q": "Roughly how many nerve cells are in the human brain?",
+    "a": "About 86 billion",
     "w": [
-     "2030",
-     "2100",
-     "3000"
+     "About 86 million",
+     "About 860,000",
+     "About 8.6 trillion"
     ],
-    "e": "It started in 2001. Chord changes are a big event, every few years."
+    "e": ""
    },
    {
-    "q": "John Cage\u2019s famous piece 4\u203233\u2033 consists of?",
-    "a": "Musicians playing nothing",
+    "q": "Your brain is about 2% of your body weight. Roughly how much of your energy does it use?",
+    "a": "About 20%",
     "w": [
-     "One very long note",
-     "Random noise",
-     "A single drum hit"
+     "About 2%",
+     "About 50%",
+     "About 90%"
     ],
-    "e": "The music is the room\u2019s sounds. Coughing is part of the performance."
+    "e": "Thinking is hungry work."
    },
    {
-    "q": "Which was the first musical instrument played in space, in 1965?",
-    "a": "Harmonica",
+    "q": "The proper name for 'brain freeze' from ice-cream is?",
+    "a": "Sphenopalatine ganglioneuralgia",
     "w": [
-     "Guitar",
-     "Flute",
-     "Ukulele"
+     "Cerebral frostbite",
+     "Cryocephaly",
+     "Glacial migraine"
     ],
-    "e": "Smuggled aboard Gemini 6 to play Jingle Bells. Festive astronauts."
+    "e": "Warming the roof of your mouth with your tongue helps."
    },
    {
-    "q": "Until a 2016 settlement, which song were companies paid royalties for?",
-    "a": "Happy Birthday to You",
+    "q": "The fastest nerve signals travel at about?",
+    "a": "120 metres a second",
     "w": [
-     "Jingle Bells",
-     "Auld Lang Syne",
-     "Twinkle Twinkle Little Star"
+     "1 metre a second",
+     "12 km/h",
+     "The speed of light"
     ],
-    "e": "A court found the copyright claim invalid. Now everyone can sing it badly for free."
+    "e": "That's well over 400 km/h."
    },
    {
-    "q": "Beethoven\u2019s \u2018Ode to Joy\u2019 is the official anthem of?",
-    "a": "The European Union",
+    "q": "In the stroke warning sign FAST, what does F stand for?",
+    "a": "Face",
     "w": [
-     "The Olympics",
-     "The United Nations",
-     "Germany"
+     "Fever",
+     "Fall",
+     "Fingers"
     ],
-    "e": "Played without words, so nobody argues about language."
+    "e": "Face drooping, Arms can't lift, Speech slurred, Time to call 000."
    },
    {
-    "q": "According to Guinness, what is the best-selling single of all time?",
-    "a": "White Christmas",
+    "q": "London cabbies who learn 'The Knowledge' were found to have a bigger?",
+    "a": "Hippocampus, a memory area",
     "w": [
-     "Candle in the Wind 1997",
-     "Bohemian Rhapsody",
-     "Shape of You"
+     "Nose",
+     "Left hand",
+     "Tongue"
     ],
-    "e": "Bing Crosby, 1942. Every December renews its lead."
+    "e": "A famous 2000 brain-scan study."
    },
    {
-    "q": "Since 2015, which non-European country competes in Eurovision?",
-    "a": "Australia",
+    "q": "Why is it so hard to tickle yourself?",
+    "a": "Your brain predicts the touch and dulls it",
     "w": [
-     "Canada",
-     "USA",
-     "Japan"
+     "Your skin is numb to your own fingers",
+     "Tickling needs eye contact",
+     "You're not trying hard enough"
     ],
-    "e": "Geography is optional. Glitter is not."
+    "e": ""
    },
    {
-    "q": "Which country\u2019s national anthem has no official lyrics?",
-    "a": "Spain",
+    "q": "How much of your brain do you actually use?",
+    "a": "Nearly all of it, at different times",
     "w": [
-     "Italy",
-     "France",
-     "Portugal"
+     "10%",
+     "3%",
+     "Exactly half"
     ],
-    "e": "Fans just hum along. Very relaxed."
+    "e": "The 10% idea is a myth. Sorry, Hollywood."
    },
    {
-    "q": "The piano\u2019s full original name, \u2018pianoforte\u2019, means?",
-    "a": "Soft-loud",
+    "q": "If you think someone is having a stroke, what should you do?",
+    "a": "Call an ambulance (000) straight away",
     "w": [
-     "Little harp",
-     "Hammer box",
-     "King of instruments"
+     "Let them sleep it off",
+     "Give them a big glass of water",
+     "Book a GP visit for tomorrow"
     ],
-    "e": "It could play both, unlike the harpsichord. Revolutionary."
+    "e": "Time is brain: the sooner the treatment, the more brain is saved."
    },
    {
-    "q": "The theremin is unusual because it\u2019s played?",
-    "a": "Without touching it",
+    "q": "The left side of your brain mostly controls?",
+    "a": "The right side of your body",
     "w": [
-     "Only underwater",
-     "With the feet",
-     "By blowing into strings"
+     "The left side of your body",
+     "Only your eyes",
+     "Only your dreams"
     ],
-    "e": "You wave your hands near two antennas. Sounds like every 1950s alien film."
+    "e": ""
    }
   ]
  },
@@ -1515,107 +1515,107 @@
   "date": "2026-11-07",
   "number": 15,
   "difficulty": "Hard",
-  "theme": "History\u2019s weirdest moments",
+  "theme": "Invisible forces at home",
   "questions": [
    {
-    "q": "In 1932, Australian soldiers with machine guns went to war against?",
-    "a": "Emus",
+    "q": "The microwave oven was invented after a radar engineer noticed?",
+    "a": "A chocolate bar melted in his pocket",
     "w": [
-     "Rabbits",
-     "Kangaroos",
-     "Cane toads"
+     "His coffee boiled by itself",
+     "His watch stopped",
+     "His hair stood on end"
     ],
-    "e": "The Great Emu War. The emus won."
+    "e": "Percy Spencer, 1945. Popcorn was one of the first things he tried."
    },
    {
-    "q": "The shortest war in recorded history lasted about?",
-    "a": "40 minutes",
+    "q": "Which everyday fruit is very slightly radioactive?",
+    "a": "Bananas",
     "w": [
-     "4 hours",
-     "4 days",
-     "40 days"
+     "Apples",
+     "Grapes",
+     "Lemons"
     ],
-    "e": "Britain versus Zanzibar, 1896. Over before morning tea."
+    "e": "Thanks to potassium. You'd need to eat millions at once to worry."
    },
    {
-    "q": "Napoleon was actually?",
-    "a": "About average height",
+    "q": "Many home smoke alarms contain a tiny amount of?",
+    "a": "Radioactive americium",
     "w": [
-     "Very short",
-     "Unusually tall",
-     "Of unknown height"
+     "Mercury",
+     "Uranium",
+     "Liquid nitrogen"
     ],
-    "e": "The \u2018tiny Napoleon\u2019 idea was mostly British cartoons and unit confusion."
+    "e": "It helps the alarm sense smoke particles. The amount is very small and sealed in."
    },
    {
-    "q": "Real Viking helmets had?",
-    "a": "No horns",
+    "q": "The 'Radium Girls' of the 1920s were?",
+    "a": "Factory workers poisoned by glowing watch paint",
     "w": [
-     "Two horns",
-     "Wings",
-     "Antlers"
+     "A jazz band",
+     "Early female pilots",
+     "Nurses in World War I"
     ],
-    "e": "Horns came from 19th-century opera costumes. Very impractical in battle."
+    "e": "They were told to lick their brushes to a point. Their court cases changed workplace safety."
    },
    {
-    "q": "Cleopatra lived closer in time to which event than to the building of the Great Pyramid?",
-    "a": "The Moon landing",
+    "q": "An MRI scanner's magnet is so strong it can?",
+    "a": "Pull metal objects like oxygen cylinders across the room",
     "w": [
-     "The Battle of Hastings",
-     "The fall of Rome",
-     "Columbus reaching America"
+     "Wipe your memories",
+     "Make hair permanently curly",
+     "Turn coins into magnets forever"
     ],
-    "e": "The pyramid was already ancient to her. Time is weird."
+    "e": "That's why everyone gets checked for metal first."
    },
    {
-    "q": "Oxford University is older than?",
-    "a": "The Aztec Empire",
+    "q": "Why do MRI scanners bang and buzz so loudly?",
+    "a": "Coils inside vibrate as the magnetic field switches",
     "w": [
-     "Ancient Rome",
-     "The pyramids",
-     "The Great Wall"
+     "A fan cools the patient",
+     "The bed is moving",
+     "It's a recording to keep you awake"
     ],
-    "e": "Teaching began around 1096. Tenochtitlan was founded in 1325."
+    "e": ""
    },
    {
-    "q": "Ancient Roman laundries used what to clean clothes?",
-    "a": "Urine",
+    "q": "Medical ultrasound uses sound that is?",
+    "a": "Too high-pitched for humans to hear",
     "w": [
-     "Seawater",
-     "Olive oil",
-     "Wine"
+     "Too low for humans to hear",
+     "As loud as a rock concert",
+     "Exactly middle C"
     ],
-    "e": "Collected from public pots. Emperor Vespasian even taxed it."
+    "e": ""
    },
    {
-    "q": "In 1919, a giant wave of what flooded part of Boston?",
-    "a": "Molasses",
+    "q": "Which animal 'sees' with sound, using the same physics as ultrasound?",
+    "a": "Bats",
     "w": [
-     "Beer",
-     "Milk",
-     "Maple syrup"
+     "Owls",
+     "Cats",
+     "Moles"
     ],
-    "e": "A tank burst. The street smelled sweet for decades."
+    "e": "Dolphins do it too."
    },
    {
-    "q": "Workers building the Egyptian pyramids received daily rations including?",
-    "a": "Beer",
+    "q": "Glow-in-the-dark ceiling stars work by?",
+    "a": "Storing light and releasing it slowly",
     "w": [
-     "Wine",
-     "Honey cakes only",
-     "Goat\u2019s milk"
+     "Being slightly radioactive",
+     "Hiding tiny batteries",
+     "Containing glowing bacteria"
     ],
-    "e": "Not slaves, and well fed. Beer was a staple."
+    "e": "Old watch dials really did use radium. Modern stars don't."
    },
    {
-    "q": "Which of the Seven Wonders of the Ancient World is still standing?",
-    "a": "Great Pyramid of Giza",
+    "q": "The unit of magnetic field strength used for MRI scanners is named after?",
+    "a": "Nikola Tesla",
     "w": [
-     "Lighthouse of Alexandria",
-     "Colossus of Rhodes",
-     "Hanging Gardens of Babylon"
+     "Thomas Edison",
+     "Albert Einstein",
+     "Isaac Newton"
     ],
-    "e": "The oldest is the only survivor. Built to last."
+    "e": "Most hospital scanners are 1.5 or 3 tesla."
    }
   ]
  },
@@ -1623,107 +1623,107 @@
   "date": "2026-11-08",
   "number": 16,
   "difficulty": "Genius",
-  "theme": "Weird firsts",
+  "theme": "Seeing through things",
   "questions": [
    {
-    "q": "What were the first animals deliberately sent into space, in 1947?",
-    "a": "Fruit flies",
+    "q": "Wilhelm R\u00f6ntgen called his discovery 'X' rays because?",
+    "a": "X stood for unknown",
     "w": [
-     "Dogs",
-     "Monkeys",
-     "Mice"
+     "They make an X shape",
+     "It was his tenth discovery",
+     "X was his wife's initial"
     ],
-    "e": "Launched on a captured V-2 rocket. They came back alive."
+    "e": ""
    },
    {
-    "q": "The first item sold on eBay was a?",
-    "a": "Broken laser pointer",
+    "q": "The first famous X-ray image, made in 1895, shows?",
+    "a": "His wife's hand and wedding ring",
     "w": [
-     "Signed baseball",
-     "Used toaster",
-     "Beanie Baby"
+     "A cat's skeleton",
+     "R\u00f6ntgen's own skull",
+     "A fish"
     ],
-    "e": "The buyer said he collected broken laser pointers. The internet was born."
+    "e": ""
    },
    {
-    "q": "The first ever YouTube video, \u2018Me at the zoo\u2019, is about?",
-    "a": "Elephants",
+    "q": "On seeing her bones, R\u00f6ntgen's wife Anna Bertha reportedly said?",
+    "a": "'I have seen my death'",
     "w": [
-     "Penguins",
-     "Lions",
-     "Monkeys"
+     "'Do it again'",
+     "'I need a new ring'",
+     "'Is that my hand?'"
     ],
-    "e": "Their trunks are \u2018really, really long\u2019. Riveting stuff."
+    "e": ""
    },
    {
-    "q": "The world\u2019s first webcam watched a?",
-    "a": "Coffee pot",
+    "q": "From the 1920s to the 1950s, many shoe shops used X-ray machines to?",
+    "a": "Check how shoes fitted",
     "w": [
-     "Fish tank",
-     "Front door",
-     "Car park"
+     "Spot shoplifters",
+     "Count the stock",
+     "Dry wet shoes"
     ],
-    "e": "At Cambridge University, so people knew whether there was coffee. Priorities."
+    "e": "Customers watched their toe bones wiggle. Not a great idea, it turned out."
    },
    {
-    "q": "The first ever text message, sent in 1992, said?",
-    "a": "Merry Christmas",
+    "q": "R\u00f6ntgen refused to patent X-rays and gave his Nobel prize money to?",
+    "a": "His university",
     "w": [
-     "Hello",
-     "Testing",
-     "Can you hear me?"
+     "His local church",
+     "A zoo",
+     "Marie Curie"
     ],
-    "e": "Sent from a computer to a phone. Still more festive than most texts."
+    "e": "He wanted everyone to benefit."
    },
    {
-    "q": "The first product scanned with a barcode, in 1974, was?",
-    "a": "A pack of chewing gum",
+    "q": "How soon after R\u00f6ntgen's 1895 announcement were X-rays used on patients?",
+    "a": "Within weeks",
     "w": [
-     "A can of soup",
-     "A box of cereal",
-     "A loaf of bread"
+     "Within 10 years",
+     "After World War I",
+     "In the 1950s"
     ],
-    "e": "Wrigley\u2019s Juicy Fruit. Now in a museum."
+    "e": ""
    },
    {
-    "q": "Who led the first expedition to reach the South Pole?",
-    "a": "Roald Amundsen",
+    "q": "Marie Curie's mobile X-ray vans in World War I were nicknamed?",
+    "a": "Little Curies",
     "w": [
-     "Robert Falcon Scott",
-     "Ernest Shackleton",
-     "Douglas Mawson"
+     "Bone buses",
+     "Ghost wagons",
+     "Glow trucks"
     ],
-    "e": "Amundsen beat Scott by about five weeks in 1911, using sled dogs."
+    "e": "'Petites Curies'. She drove some herself."
    },
    {
-    "q": "Which was the first self-governing country to give women the vote?",
-    "a": "New Zealand",
+    "q": "Marie Curie's daughter Ir\u00e8ne also won a Nobel Prize, in?",
+    "a": "Chemistry",
     "w": [
-     "Australia",
-     "Finland",
-     "United Kingdom"
+     "Literature",
+     "Peace",
+     "Physics"
     ],
-    "e": "1893. Australia followed nationally in 1902."
+    "e": "In 1935, with her husband Fr\u00e9d\u00e9ric Joliot."
    },
    {
-    "q": "In 1975, who became the first woman to reach the summit of Everest?",
-    "a": "Junko Tabei",
+    "q": "Marie Curie's coffin in Paris is lined with lead because?",
+    "a": "Her body was thought to be radioactive",
     "w": [
-     "Wanda Rutkiewicz",
-     "Lydia Bradey",
-     "Alison Hargreaves"
+     "It was the fashion",
+     "To stop grave robbers",
+     "Lead was cheaper than wood"
     ],
-    "e": "In 1992 she also became the first woman to climb all Seven Summits."
+    "e": ""
    },
    {
-    "q": "The oldest known photo of a person, taken in Paris in 1838, shows a man?",
-    "a": "Having his boots shined",
+    "q": "The first CT scanner was built at EMI, the company that also signed?",
+    "a": "The Beatles",
     "w": [
-     "Riding a horse",
-     "Reading a newspaper",
-     "Waving a flag"
+     "ABBA",
+     "The Rolling Stones",
+     "Elvis Presley"
     ],
-    "e": "Daguerre\u2019s long exposure erased all the moving traffic. Only the man standing still for his shoeshine stayed."
+    "e": "Godfrey Hounsfield shared a Nobel Prize for it in 1979."
    }
   ]
  },
@@ -2055,107 +2055,107 @@
   "date": "2026-11-12",
   "number": 20,
   "difficulty": "Medium",
-  "theme": "Bookish oddities",
+  "theme": "Coughs, sneezes and germs",
   "questions": [
    {
-    "q": "In Fahrenheit 451, what does the title refer to?",
-    "a": "The temperature at which book paper burns",
+    "q": "The cloud from a big sneeze can carry droplets up to about?",
+    "a": "7 to 8 metres",
     "w": [
-     "A street address",
-     "A year in the future",
-     "A prison number"
+     "30 centimetres",
+     "1 metre",
+     "50 metres"
     ],
-    "e": "In a world where firemen start fires. Cheery stuff."
+    "e": "Catch it in your elbow."
    },
    {
-    "q": "Agatha Christie also wrote romance novels under which pen name?",
-    "a": "Mary Westmacott",
+    "q": "Is it impossible to sneeze with your eyes open?",
+    "a": "No, it's a strong reflex, but it can be done",
     "w": [
-     "Ellis Bell",
-     "Robert Galbraith",
-     "George Eliot"
+     "Yes, your eyes would pop out",
+     "Yes, it's physically impossible",
+     "Only for left-handers"
     ],
-    "e": "She kept the secret for nearly 20 years."
+    "e": ""
    },
    {
-    "q": "Dr Seuss wrote Green Eggs and Ham to win a bet that he couldn\u2019t use only?",
-    "a": "50 different words",
+    "q": "'Influenza' comes from the Italian for?",
+    "a": "Influence",
     "w": [
-     "10 different words",
-     "One vowel",
-     "Words of one syllable"
+     "Cold weather",
+     "Sneezing",
+     "Fever"
     ],
-    "e": "He won. The publisher reportedly never paid up."
+    "e": "People once blamed it on the influence of the stars."
    },
    {
-    "q": "The made-up language spoken by Roald Dahl\u2019s BFG is called?",
-    "a": "Gobblefunk",
+    "q": "In 1854 John Snow traced a cholera outbreak in London to?",
+    "a": "A single water pump",
     "w": [
-     "Snozzspeak",
-     "Whizzpop",
-     "Dahlish"
+     "A bakery",
+     "Rats in a theatre",
+     "Imported tea"
     ],
-    "e": "Snozzcumbers and whizzpopping are words from it. Delumptious."
+    "e": "Removing the pump handle helped end it."
    },
    {
-    "q": "In the original Sherlock Holmes stories, how often does he say \u2018Elementary, my dear Watson\u2019?",
-    "a": "Never",
+    "q": "The word 'malaria' comes from Italian for?",
+    "a": "Bad air",
     "w": [
-     "Once",
-     "In every story",
-     "Only in the last book"
+     "Mosquito bite",
+     "Swamp fever",
+     "Bad luck"
     ],
-    "e": "The exact phrase came from later adaptations. Myth, my dear reader."
+    "e": "Before germ theory, smells got the blame."
    },
    {
-    "q": "The 1939 novel Gadsby is famous for never using the letter?",
-    "a": "E",
+    "q": "Which nurse used colourful charts to show more soldiers were dying of disease than of wounds?",
+    "a": "Florence Nightingale",
     "w": [
-     "A",
-     "S",
-     "T"
+     "Mary Seacole",
+     "Edith Cavell",
+     "Clara Barton"
     ],
-    "e": "Over 50,000 words without English\u2019s most common letter. Exhausting."
+    "e": ""
    },
    {
-    "q": "Which novel begins \u2018Call me Ishmael\u2019?",
-    "a": "Moby-Dick",
+    "q": "In the 1840s, who showed that doctors washing their hands saved mothers' lives?",
+    "a": "Ignaz Semmelweis",
     "w": [
-     "Treasure Island",
-     "Robinson Crusoe",
-     "The Old Man and the Sea"
+     "Louis Pasteur",
+     "Joseph Lister",
+     "Robert Koch"
     ],
-    "e": "It flopped on release. Then became a classic about a very large grudge."
+    "e": "Many colleagues ignored him at the time."
    },
    {
-    "q": "The first print run of the first Harry Potter hardback was about how many copies?",
-    "a": "500",
+    "q": "Washing your hands properly takes about as long as?",
+    "a": "Singing 'Happy Birthday' twice",
     "w": [
-     "5000",
-     "50,000",
-     "500,000"
+     "Blinking once",
+     "Boiling a kettle",
+     "A full song on the radio"
     ],
-    "e": "Many went to libraries. A first edition now sells for a fortune."
+    "e": "About 20 seconds."
    },
    {
-    "q": "Winnie-the-Pooh was named after a real bear called Winnipeg that lived in?",
-    "a": "London Zoo",
+    "q": "The medical word for a sneeze is?",
+    "a": "Sternutation",
     "w": [
-     "A Canadian circus",
-     "Sydney\u2019s Taronga Zoo",
-     "A Scottish castle"
+     "Eructation",
+     "Singultus",
+     "Borborygmus"
     ],
-    "e": "A Canadian black bear. Christopher Robin Milne adored her."
+    "e": "Eructation is a burp. Singultus is a hiccup."
    },
    {
-    "q": "Jane Austen\u2019s Pride and Prejudice was originally titled?",
-    "a": "First Impressions",
+    "q": "Which vaccine protects against the most common bacterial cause of pneumonia?",
+    "a": "Pneumococcal vaccine",
     "w": [
-     "Elizabeth",
-     "Mr Darcy",
-     "The Bennet Sisters"
+     "Tetanus vaccine",
+     "Rabies vaccine",
+     "Yellow fever vaccine"
     ],
-    "e": "Rejected by a publisher in 1797 without being read. Their loss."
+    "e": "Worth asking about if you're older or have a long-term health condition."
    }
   ]
  },
@@ -2271,107 +2271,107 @@
   "date": "2026-11-14",
   "number": 22,
   "difficulty": "Hard",
-  "theme": "Elements behaving badly",
+  "theme": "Sweet history",
   "questions": [
    {
-    "q": "Which metal melts in your hand?",
-    "a": "Gallium",
+    "q": "Doctors in ancient India noticed that the urine of people with diabetes attracted?",
+    "a": "Ants",
     "w": [
-     "Mercury",
-     "Tin",
-     "Sodium"
+     "Bees",
+     "Birds",
+     "Cats"
     ],
-    "e": "Melts at about 30\u00b0C. Mercury is already liquid, so it\u2019s cheating."
+    "e": "Because it was sweet."
    },
    {
-    "q": "Tungsten\u2019s symbol is W because of its other name?",
-    "a": "Wolfram",
+    "q": "'Mellitus', as in diabetes mellitus, means?",
+    "a": "Honey-sweet",
     "w": [
-     "Wolfite",
-     "Westium",
-     "Wiremetal"
+     "Thirsty",
+     "Wasting away",
+     "Running through"
     ],
-    "e": "Chemistry loves a hidden backstory."
+    "e": "'Diabetes' means 'passing through', for all the urine."
    },
    {
-    "q": "Marie Curie named polonium after?",
-    "a": "Her homeland, Poland",
+    "q": "In January 1922 the first person to be given insulin, Leonard Thompson, was how old?",
+    "a": "14",
     "w": [
-     "A Greek god",
-     "Her husband",
-     "A star"
+     "4",
+     "40",
+     "74"
     ],
-    "e": "A political statement at a time when Poland wasn\u2019t on the map."
+    "e": "He lived another 13 years."
    },
    {
-    "q": "Can a diamond burn?",
-    "a": "Yes, it\u2019s carbon",
+    "q": "Before the 1980s, most insulin came from?",
+    "a": "Cow and pig pancreases",
     "w": [
-     "No, never",
-     "Only underwater",
-     "Only fake ones"
+     "Sugar cane",
+     "Shark livers",
+     "Sheep's wool"
     ],
-    "e": "Hot enough with oxygen and it goes up in smoke. Romantic."
+    "e": ""
    },
    {
-    "q": "Helium was discovered first where?",
-    "a": "In the Sun",
+    "q": "In 1978 human insulin became one of the first medicines made using?",
+    "a": "Genetically engineered bacteria",
     "w": [
-     "In a gas well",
-     "In a balloon",
-     "In seawater"
+     "Moon rocks",
+     "Fermented grapes",
+     "Seaweed farms"
     ],
-    "e": "Spotted in sunlight in 1868, named after the Greek sun god Helios."
+    "e": "It reached patients in 1982."
    },
    {
-    "q": "The Swedish village of Ytterby gave its name to how many elements?",
-    "a": "Four",
+    "q": "A type 2 diabetes medicine was developed from the saliva of which animal?",
+    "a": "Gila monster",
     "w": [
-     "One",
-     "Two",
-     "Seven"
+     "Komodo dragon",
+     "Vampire bat",
+     "Platypus"
     ],
-    "e": "Yttrium, ytterbium, terbium and erbium. One quarry, lots of naming."
+    "e": "The drug is exenatide."
    },
    {
-    "q": "Which everyday fruit is slightly radioactive?",
-    "a": "Banana",
-    "w": [
-     "Apple",
-     "Orange",
-     "Grape"
-    ],
-    "e": "Thanks to potassium-40. Completely harmless, unless you\u2019re a Geiger counter."
-   },
-   {
-    "q": "Most \u2018neon\u2019 signs that aren\u2019t red-orange actually use?",
-    "a": "Other gases or coatings",
-    "w": [
-     "Coloured neon",
-     "LED only",
-     "Liquid neon"
-    ],
-    "e": "True neon glows red-orange. Everything else is a pretender."
-   },
-   {
-    "q": "Gold leaf can be beaten so thin that light shining through it looks?",
-    "a": "Green",
+    "q": "What colour is the circle in the World Diabetes Day logo?",
+    "a": "Blue",
     "w": [
      "Red",
      "Gold",
-     "Black"
+     "Green"
     ],
-    "e": "Thin gold lets greenish light through. Surprising, and very shiny."
+    "e": ""
    },
    {
-    "q": "Phosphorus was first discovered in 1669 by an alchemist boiling down?",
-    "a": "Urine",
+    "q": "Sugar cane was first farmed thousands of years ago in?",
+    "a": "New Guinea",
     "w": [
-     "Seawater",
-     "Bones",
-     "Wine"
+     "Brazil",
+     "Cuba",
+     "Egypt"
     ],
-    "e": "He was hunting for gold. He found a glowing substance instead."
+    "e": ""
+   },
+   {
+    "q": "The sweetener saccharin was discovered in 1879 when a chemist?",
+    "a": "Forgot to wash his hands before dinner",
+    "w": [
+     "Spilt his tea",
+     "Dropped a cake",
+     "Licked a stamp"
+    ],
+    "e": "His bread tasted strangely sweet."
+   },
+   {
+    "q": "Specially trained dogs can alert their owners to?",
+    "a": "Low blood sugar",
+    "w": [
+     "Rain on the way",
+     "Broken bones",
+     "High cholesterol"
+    ],
+    "e": "They're thought to pick up a change in breath scent."
    }
   ]
  },
@@ -2595,107 +2595,107 @@
   "date": "2026-11-17",
   "number": 25,
   "difficulty": "Easy",
-  "theme": "Colours that lie",
+  "theme": "Tiny but mighty",
   "questions": [
    {
-    "q": "What colour is a giraffe\u2019s tongue?",
-    "a": "Dark blue-black",
+    "q": "About how many babies worldwide are born premature?",
+    "a": "About 1 in 10",
     "w": [
-     "Pink",
-     "Red",
-     "Green"
+     "About 1 in 1,000",
+     "About 1 in 100",
+     "About 1 in 2"
     ],
-    "e": "Possibly to stop sunburn while eating all day. Very practical."
+    "e": "Today is World Prematurity Day."
    },
    {
-    "q": "What really makes a bull charge at a matador\u2019s cape?",
-    "a": "The movement",
+    "q": "A baby counts as premature if born before?",
+    "a": "37 weeks",
     "w": [
-     "The red colour",
-     "The noise",
-     "The smell"
+     "40 weeks",
+     "30 weeks",
+     "42 weeks"
     ],
-    "e": "Bulls can\u2019t see red well at all. The waving is what annoys them."
+    "e": ""
    },
    {
-    "q": "Despite the name, what colour are aircraft \u2018black box\u2019 recorders?",
-    "a": "Orange",
+    "q": "Babies are born with roughly how many bones?",
+    "a": "About 300",
     "w": [
-     "Black",
-     "Yellow",
-     "Silver"
+     "About 100",
+     "About 206",
+     "About 500"
     ],
-    "e": "Bright orange, so they\u2019re easier to find. \u2018Black box\u2019 is just branding."
+    "e": "Many fuse as they grow. Adults have 206."
    },
    {
-    "q": "Why are flamingos pink?",
-    "a": "Their diet",
+    "q": "For the first few weeks, newborns usually cry without?",
+    "a": "Tears",
     "w": [
-     "They\u2019re born pink",
-     "Sunburn",
-     "To attract mates"
+     "Sound",
+     "Blinking",
+     "Breathing in"
     ],
-    "e": "Pigments in algae and shrimp. Chicks start out grey."
+    "e": "Tear glands are still getting going."
    },
    {
-    "q": "What are the three primary colours of light?",
-    "a": "Red, green and blue",
+    "q": "Newborns see most clearly at about?",
+    "a": "20 to 30 cm, about the distance to a parent's face",
     "w": [
-     "Red, yellow and blue",
-     "Cyan, magenta and yellow",
-     "Red, orange and blue"
+     "2 metres",
+     "Across the room",
+     "They can't see at all"
     ],
-    "e": "Red, yellow and blue is paint. Your TV uses RGB."
+    "e": ""
    },
    {
-    "q": "What colour is a polar bear\u2019s skin?",
-    "a": "Black",
+    "q": "A newborn's stomach on day one is about the size of?",
+    "a": "A cherry",
     "w": [
-     "White",
-     "Pink",
-     "Grey"
+     "A grapefruit",
+     "A football",
+     "A grain of rice"
     ],
-    "e": "The fur is see-through and the skin is black. The white is an illusion."
+    "e": ""
    },
    {
-    "q": "A sapphire and a ruby are?",
-    "a": "The same mineral",
+    "q": "Babies are born able to?",
+    "a": "Grip a finger tightly",
     "w": [
-     "Both glass",
-     "Made of carbon",
-     "Unrelated stones"
+     "Hold their head up",
+     "Roll over",
+     "Wave"
     ],
-    "e": "Both corundum. Red ones are rubies; the rest are sapphires."
+    "e": "The grasp reflex."
    },
    {
-    "q": "Which colour can\u2019t be found in the rainbow, so your brain invents it?",
-    "a": "Magenta",
+    "q": "The Apgar score that checks every newborn is named after?",
+    "a": "Dr Virginia Apgar",
     "w": [
-     "Indigo",
-     "Violet",
-     "Orange"
+     "A town in Wales",
+     "An acronym from NASA",
+     "A Roman goddess"
     ],
-    "e": "No single wavelength of light is magenta. Your brain mixes it up."
+    "e": "An anaesthetist who designed it in 1952."
    },
    {
-    "q": "Mixing blue and yellow paint makes?",
-    "a": "Green",
+    "q": "In the early 1900s, premature babies in incubators were shown to the public at?",
+    "a": "Fairs and Coney Island sideshows",
     "w": [
-     "Purple",
-     "Orange",
-     "Brown"
+     "Royal palaces",
+     "Football grounds",
+     "Railway stations"
     ],
-    "e": "Purple is red and blue. Brown is everything at once."
+    "e": "Entry fees paid for their care, and many survived."
    },
    {
-    "q": "Cerulean is a shade of?",
-    "a": "Blue",
+    "q": "A newborn's first poo, dark green and sticky, is called?",
+    "a": "Meconium",
     "w": [
-     "Green",
-     "Red",
-     "Yellow"
+     "Colostrum",
+     "Lanugo",
+     "Vernix"
     ],
-    "e": "A sky blue. The Devil Wears Prada gave it a whole speech."
+    "e": "Colostrum is early milk; lanugo is fine body hair; vernix is the waxy coating."
    }
   ]
  },
@@ -2703,107 +2703,107 @@
   "date": "2026-11-18",
   "number": 26,
   "difficulty": "Medium",
-  "theme": "Dinosaurs: the weird bits",
+  "theme": "Breathtaking facts",
   "questions": [
    {
-    "q": "Tyrannosaurus rex lived during which period?",
-    "a": "Cretaceous",
+    "q": "The Guinness record for holding your breath under water (after breathing pure oxygen) is?",
+    "a": "Over 20 minutes",
     "w": [
-     "Jurassic",
-     "Triassic",
-     "Permian"
+     "About 2 minutes",
+     "About 5 minutes",
+     "About an hour"
     ],
-    "e": "Despite the film title, T. rex wasn\u2019t Jurassic. Stegosaurus was."
+    "e": "Please don't try this at home."
    },
    {
-    "q": "Who lived closer in time to T. rex?",
-    "a": "Humans",
+    "q": "Which lung is smaller, to make room for the heart?",
+    "a": "The left",
     "w": [
-     "Stegosaurus",
-     "They lived at the same time",
-     "Neither"
+     "The right",
+     "They're identical",
+     "Neither, the heart sits below"
     ],
-    "e": "Stegosaurus died out about 80 million years before T. rex appeared."
+    "e": ""
    },
    {
-    "q": "Which animals are living dinosaurs?",
-    "a": "Birds",
+    "q": "Roughly how many breaths does an adult take each day?",
+    "a": "About 20,000",
     "w": [
-     "Crocodiles",
-     "Lizards",
-     "Sharks"
+     "About 2,000",
+     "About 200,000",
+     "About 2 million"
     ],
-    "e": "Crocodiles are cousins. Your backyard magpie is the real deal."
+    "e": ""
    },
    {
-    "q": "Which of these was NOT a dinosaur?",
-    "a": "Pterodactyl",
+    "q": "Hiccups are spasms of the?",
+    "a": "Diaphragm",
     "w": [
-     "Velociraptor",
-     "Stegosaurus",
-     "Triceratops"
+     "Throat",
+     "Stomach",
+     "Tongue"
     ],
-    "e": "Pterosaurs were flying reptiles, not dinosaurs. Pedants rejoice."
+    "e": ""
    },
    {
-    "q": "A real Velociraptor was roughly the size of a?",
-    "a": "Turkey",
+    "q": "Bar-headed geese can fly over?",
+    "a": "The Himalayas",
     "w": [
-     "Horse",
-     "Human",
-     "Elephant"
+     "The Moon's orbit",
+     "The Sahara at night only",
+     "Antarctica's South Pole underground"
     ],
-    "e": "Feathered and turkey-sized. Jurassic Park exaggerated a bit."
+    "e": "Where each breath holds about a third of the oxygen at sea level."
    },
    {
-    "q": "What was the largest marsupial that ever lived?",
-    "a": "Diprotodon",
+    "q": "In 1978, who first climbed Everest without bottled oxygen?",
+    "a": "Reinhold Messner and Peter Habeler",
     "w": [
-     "Thylacoleo",
-     "Thylacine",
-     "Megalania"
+     "Edmund Hillary and Tenzing Norgay",
+     "George Mallory",
+     "Junko Tabei"
     ],
-    "e": "A wombat the size of a car. Megalania was a giant lizard."
+    "e": "Hillary and Tenzing used oxygen in 1953."
    },
    {
-    "q": "Which was the first dinosaur ever to be scientifically named, in 1824?",
-    "a": "Megalosaurus",
+    "q": "Which animals manage with no lungs at all?",
+    "a": "Some salamanders",
     "w": [
-     "Tyrannosaurus",
-     "Iguanodon",
-     "Brontosaurus"
+     "Some cats",
+     "Some birds",
+     "Some whales"
     ],
-    "e": "Named by William Buckland from bones found near Oxford. The word \u2018dinosaur\u2019 didn\u2019t exist yet."
+    "e": "They breathe through their skin."
    },
    {
-    "q": "Mary Anning, one of the first great fossil hunters, made her finds on the cliffs at?",
-    "a": "Lyme Regis, England",
+    "q": "The world's first long-term successful single lung transplant was done in 1983 in?",
+    "a": "Toronto, Canada",
     "w": [
-     "Whitby, England",
-     "Drumheller, Canada",
-     "Bernissart, Belgium"
+     "Sydney, Australia",
+     "Cape Town, South Africa",
+     "London, UK"
     ],
-    "e": "As a girl she helped find the first ichthyosaur skeleton to be correctly identified. As a woman, she was barred from the Geological Society."
+    "e": ""
    },
    {
-    "q": "The spikes on a Stegosaurus tail are nicknamed the?",
-    "a": "Thagomizer",
+    "q": "Opened out, the air sacs in your lungs have a surface area roughly the size of?",
+    "a": "A small flat",
     "w": [
-     "Spikerod",
-     "Tailclub",
-     "Quadspine"
+     "A postage stamp",
+     "A dinner plate",
+     "A football field"
     ],
-    "e": "From a Far Side cartoon. Palaeontologists loved it and kept it."
+    "e": "Somewhere around 50 to 75 square metres."
    },
    {
-    "q": "Woolly mammoths survived until about 4000 years ago on which island?",
-    "a": "Wrangel Island",
+    "q": "Penicillin was discovered in 1928 when Alexander Fleming came back from holiday to find?",
+    "a": "Mould killing bacteria on a dish",
     "w": [
-     "Greenland",
-     "Iceland",
-     "Tasmania"
+     "His lab flooded",
+     "A new insect in his desk",
+     "Bacteria glowing in the dark"
     ],
-    "e": "The Great Pyramid was already standing by then."
+    "e": "Today also starts World AMR Awareness Week: use antibiotics only when needed."
    }
   ]
  },
