@@ -16,3 +16,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Correct anatomical words are fine
 - Morphemia (both modes) and other word games may include correct anatomical and physiological words even if some find them crude: anus, anal, vagina, vulva, penis, scrotum, semen, faeces, rectum, labia, clitoris, nipple, areola, orgasm, etc.
 - Still exclude slurs, swearing and slang (e.g. crap, piss, boobs, tits).
+
+## Health days in Normie mode
+- On health-awareness days, Normie gets a light, basic version of the theme: Normie Triviosis on a layperson-friendly, weird-but-true angle (e.g. Stroke Day → your amazing brain; Radiology → X-rays and Marie Curie), plus one other Normie puzzle where it fits naturally. Fun, non-technical, respectful; skip "sensitive" and "au" days.
