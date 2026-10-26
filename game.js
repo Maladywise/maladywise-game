@@ -114,6 +114,26 @@
     var bare = n.replace(/[^a-z]/g, "");
     return bare.length < 2 || !/[aeiouy]/.test(bare) || /^(.)\1+$/.test(bare) || /(asdf|qwer|zxcv|hjkl|sdfg)/.test(bare);
   }
+  function lev(a, b) { var m = a.length, k = b.length, d = [], i, j; for (i = 0; i <= m; i++) d[i] = [i]; for (j = 0; j <= k; j++) d[0][j] = j;
+    for (i = 1; i <= m; i++) for (j = 1; j <= k; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1), (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) ? d[i - 2][j - 2] + 1 : 99);
+    return d[m][k]; }
+  // forgive small spelling slips, word by word: same number of words, numbers must match, each changed word
+  // must be within 1 edit (2 if 10+ letters) AND must not itself be a real word (so arthritis != arteritis, hypo != hyper)
+  var DICT = null;
+  function loadDict(cb) { if (DICT) return cb(DICT); fetch("/dictionary/medical-au.txt").then(function (r) { return r.ok ? r.text() : ""; }).catch(function () { return ""; }).then(function (t) { DICT = {}; t.split(/\s+/).forEach(function (w) { if (w) DICT[w.toLowerCase()] = 1; }); cb(DICT); }); }
+  function typoCands(n) {
+    var gw = n.replace(/'/g, "").split(" "), out = [];
+    (C.accept || []).concat([C.answer]).forEach(function (a) {
+      var aw = norm(a).replace(/'/g, "").split(" "); if (aw.length !== gw.length) return;
+      var changed = [], ok = aw.every(function (w, i) {
+        var x = gw[i]; if (x === w) return true;
+        if (/\d/.test(x + w) || w.length < 5 || x.length < 4) return false;
+        var lim = w.length >= 10 ? 2 : 1; if (lev(x, w) > lim) return false; changed.push(x); return true;
+      });
+      if (ok && changed.length) out.push(changed);
+    });
+    return out;
+  }
   function isClose(n) {
     var g = tokens(n); if (!g.length) return false;
     var pool = {}; (C.accept || []).concat([C.answer]).forEach(function (a) { tokens(a).forEach(function (t) { pool[t] = 1; }); });
@@ -215,11 +235,16 @@
 var sw0 = window.MW_swear && MW_swear(raw); if (sw0) { $("guess").value = ""; say(sw0); return; }
         var n = norm(raw); $("guess").value = "";
     if ((C.accept || []).some(function (a) { return norm(a) === n; }) || norm(C.answer) === n) { finish(true); render(); return; }
+    var tc = typoCands(n);
+    if (tc.length) { loadDict(function (D) { if (tc.some(function (ch) { return ch.every(function (w) { return !D[w]; }); })) { finish(true); render(); say("Spelling forgiven \u2713 " + C.answer + "."); } else wrongPath(raw, n); }); return; }
+    wrongPath(raw, n);
+  };
+  function wrongPath(raw, n) {
     if (st.wrong.some(function (w) { return norm(w) === n; })) { say(pick(SASS.repeat)); return; }
     if (isNonsense(n)) { say(pick(SASS.nonsense)); return; }              // no clue burned
     for (var i = 0; i < SASS.vague.length; i++) if (SASS.vague[i][0].test(n)) { burn(raw, SASS.vague[i][1]); return; }
     burn(raw, isClose(n) ? pick(SASS.close) : pick(SASS.wrong));
-  };
+  }
   $("skip").onclick = function () { burn(null, pick(SASS.skip)); };
 
   // ---------- load today's case ----------

@@ -805,6 +805,12 @@
       var pool = left.filter(function (x) { return skips.indexOf(x.id) < 0; }); if (!pool.length) { pool = left; if (skips.length) set(skipK, []); }
       var ng = pool[0];
       var r0 = todo[0], d0 = r0 ? rowDate(r0) : null;
+      var stk = document.getElementById("mw-stuck");
+      if (!done && ng) {
+        var sh = '<button type="button" class="mwx-stuck">Stuck? Skip to ' + ng.name + ' \u203a</button>';
+        if (!stk) { strip.insertAdjacentHTML("beforebegin", '<p id="mw-stuck" class="mwx-stuckp"></p>'); stk = document.getElementById("mw-stuck"); }
+        if (stk.getAttribute("data-h") !== sh) { stk.innerHTML = sh; stk.setAttribute("data-h", sh); stk.querySelector("button").onclick = function () { var l = get(skipK, []) || []; if (l.indexOf(g.id) < 0) l.push(g.id); set(skipK, l); track("stuck-skip/" + g.id, "stuck " + g.name); location.href = "../" + ng.path + "?play"; }; }
+      } else if (stk) stk.remove();
       if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
       var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Next: ' + ng.name + '<small>' + left.length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
       if (ng && left.length > 1) th += '<button type="button" class="mwx-skip">Skip ' + ng.name + ' \u203a</button>';
