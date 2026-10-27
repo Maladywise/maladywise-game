@@ -1,7 +1,7 @@
-/* Arrhythmix: read the ECG. WEEKLY ("ECG Thursday"): one fictional case + generated ECG every Thursday, 00:00 Sydney.
+/* Arrhythmix: read the ECG. TWICE WEEKLY (medical: Monday and Thursday; Normie charts: Thursday only): one fictional case + generated ECG per release day, 00:00 Sydney.
    Pick the diagnosis from six options in three tries.
-   Puzzles in puzzles/puzzles.json: [{date (a Thursday), number, difficulty, seed, vignette, ecg, highlight, options, answer, hints, explanation, features, pearl}].
-   puzzles/reserve.json holds spare puzzles (no date/number) for future Thursdays. "seed" keeps each trace's noise stable when it's re-dated.
+   Puzzles in puzzles/puzzles.json: [{date (a Monday or Thursday; Normie: Thursday), number, difficulty, seed, vignette, ecg, highlight, options, answer, hints, explanation, features, pearl}].
+   puzzles/reserve.json holds spare puzzles (no date/number) for future release days. "seed" keeps each trace's noise stable when it's re-dated.
    ECGs are drawn by ecg.js (window.ARX_ECG).
    Normie mode ("mystery chart"): puzzles/normie.json (+ normie-reserve.json spares), same keys but a "chart" object instead of
    seed/ecg/highlight: {title, xlabel, ylabel, x:[numbers|strings], y, xticks:[{i,label}], yticks, yrange:[min,max], highlights:[{from,to,label}], step?}.
@@ -9,7 +9,7 @@
    Highlight bands appear after a wrong pick; their labels (which can give the answer away) only once finished. "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Arrhythmix (Normie)" : "Arrhythmix", TRIES = 3, PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "puzzles.json";
   var U = NORMIE ? "chart" : "ECG"; // unit word in messages
   var root = document.getElementById("arx");
@@ -43,7 +43,11 @@
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function iso(n) { return new Date(n * 864e5).toISOString().slice(0, 10); }
-  function thu(d) { var n = dayNum(d), wd = new Date(n * 864e5).getUTCDay(); return iso(n - (wd - 4 + 7) % 7); } // most recent Thursday <= d
+  // Release days: medical = Monday and Thursday (ECG Monday + ECG Thursday); Normie charts = Thursday only.
+  var RD = NORMIE ? [4] : [1, 4], DAYW = NORMIE ? "Thursday" : "Monday and Thursday", NEXTW = NORMIE ? "Thursday" : "release day";
+  function back(n) { var wd = new Date(n * 864e5).getUTCDay(); return Math.min.apply(null, RD.map(function (r) { return (wd - r + 7) % 7; })); }
+  function thu(d) { var n = dayNum(d); return iso(n - back(n)); } // most recent release day <= d
+  function prevRel(d) { var n = dayNum(d) - 1; return iso(n - back(n)); }
   var LAUNCH = "2026-10-29", PRE = sydToday() < LAUNCH;
   var REAL = thu(sydToday()), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? thu(q) : REAL;
@@ -58,7 +62,7 @@
   var SASS = {
     wrong: ["That’s not what the squiggles say.", "Bold read. Wrong, but bold.", "The ECG respectfully disagrees.", "Swing and a miss. Have a hint.", "Not quite. Calipers out.", "Interesting. Incorrect, but interesting.", "The cardiology registrar raised one eyebrow.", "Close the textbook, open your eyes.", "Plausible. Also wrong.", "The machine’s auto-report is smirking.", "Confidently incorrect. A classic.", "Wrong lead, doctor. Have another look.", "That’s a diagnosis. Just not this one.", "Nope. Count the little squares.", "The squiggles have filed a complaint."],
     win: [["First read. Cardiology wants your number.", "One try. Were you holding calipers?", "First go. Textbook. Literally.", "Straight in. Sinus rhythm of genius."], ["Second try. Steady hands.", "Two tries. The hint did some lifting.", "Got there on two. Respectable.", "Second read, right read."], ["Third time. Pulse restored.", "Last try. Living dangerously.", "Three tries. Everyone breathe out.", "Final pick. Phew."]],
-    lose: ["The rhythm wins this week. Rematch Thursday.", "Three strikes. Off to the ECG library with you.", "Not today. Read the pearl and come back.", "The squiggles escaped. Next Thursday’s another strip.", "Flatlined on that one. Revive next Thursday."]
+    lose: ["The rhythm wins this round. Rematch next ECG day.", "Three strikes. Off to the ECG library with you.", "Not today. Read the pearl and come back.", "The squiggles escaped. Another strip is coming.", "Flatlined on that one. Revive next ECG day."]
   };
   var CHEER = ["You’ve got the beat.", "Calipers? Never needed them.", "Every P wave accounted for.", "Read in perfect time.", "My heart skipped a beat. The good kind.", "QRS: Quite Remarkably Smart.", "Tuned in and nailed it.", "That read had rhythm."];
   if (NORMIE) {
@@ -201,7 +205,7 @@
   function finish(win) {
     st.done = true; st.win = win; put(KEY, st);
     if (isLive() && stats.last !== today) {
-      var yest = stats.last && dayNum(today) - dayNum(stats.last) === 7; // weekly streak
+      var yest = stats.last && stats.last === prevRel(today); // streak across release days
       stats.played++; if (win) stats.wins++;
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
       stats.dist[win ? st.picks.length - 1 : 3]++; stats.last = today; put(SKEY, stats);
@@ -230,12 +234,12 @@
     };
   }
   function tick() {
-    var n = dayNum(sydToday()), wd = new Date(n * 864e5).getUTCDay(), days = (4 - wd + 7) % 7 || 7, t;
+    var n = dayNum(sydToday()), wd = new Date(n * 864e5).getUTCDay(), days = Math.min.apply(null, RD.map(function (r) { return (r - wd + 7) % 7 || 7; })), t;
     if (days === 1) {
       t = "New " + U + " tonight at midnight, Sydney time.";
       try { var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
-        var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = "Next " + U + " in " + Math.floor(left / 60) + "h " + (left % 60) + "m. Thursday, midnight Sydney time."; } catch (e) {}
-    } else t = "Next " + U + " in " + days + " days. Every Thursday, midnight Sydney time. " + (NORMIE ? "Mind your own trend line." : "Mind your own rhythm.");
+        var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = "Next " + U + " in " + Math.floor(left / 60) + "h " + (left % 60) + "m. Midnight, Sydney time."; } catch (e) {}
+    } else t = "Next " + U + " in " + days + " days. Every " + DAYW + ", midnight Sydney time. " + (NORMIE ? "Mind your own trend line." : "Mind your own rhythm.");
     $("next").textContent = t;
   }
 
@@ -262,7 +266,7 @@
       $("vig").textContent = P.vignette;
       drawEcg();
       if (!isLive()) say(st.done ? "Archive " + U + ". Already read." : "Archive " + U + ". Doesn’t count towards your streak.");
-      else if (st.done) say(st.win ? (NORMIE ? "Cracked it. New chart next Thursday." : "Read and reported. New ECG next Thursday.") : "You’ve had your go. New " + U + " next Thursday.");
+      else if (st.done) say(st.win ? (NORMIE ? "Cracked it. New chart next Thursday." : "Read and reported. New ECG next " + (new Date(dayNum(REAL) * 864e5).getUTCDay() === 4 ? "Monday." : "Thursday.")) : "You’ve had your go. New " + U + " soon.");
       render(); renderArchive();
     });
   }
@@ -285,7 +289,7 @@
   if (PRE) {
     // Before the first ECG Thursday: friendly holding note, no puzzle.
     $("play").innerHTML = NORMIE ? '<div class="mw-nonorm arx-pre"><img src="/assets/mascots/normie/arrhythmix.svg" alt="" width="72" height="72"><p><b>First mystery chart lands Thursday 29 October.</b></p><p>One mystery chart of real-world data every Thursday, released at midnight Sydney time. Riff is tuning up the axes.</p></div>'
-      : '<div class="mw-nonorm arx-pre"><img src="/assets/mascots/arrhythmix.svg" alt="" width="72" height="72"><p><b>First ECG lands Thursday 29 October.</b></p><p>Arrhythmix is ECG Thursday: one fictional case and one ECG every week, released at midnight Sydney time. Riff is warming up the leads.</p></div>';
+      : '<div class="mw-nonorm arx-pre"><img src="/assets/mascots/arrhythmix.svg" alt="" width="72" height="72"><p><b>First ECG lands Thursday 29 October.</b></p><p>Arrhythmix: one fictional case and one ECG every Monday and Thursday, released at midnight Sydney time. Riff is warming up the leads.</p></div>';
     $("archive").hidden = true;
   } else show(today);
 })();
