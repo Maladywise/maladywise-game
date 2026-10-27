@@ -48,7 +48,7 @@
   function back(n) { var wd = new Date(n * 864e5).getUTCDay(); return Math.min.apply(null, RD.map(function (r) { return (wd - r + 7) % 7; })); }
   function thu(d) { var n = dayNum(d); return iso(n - back(n)); } // most recent release day <= d
   function prevRel(d) { var n = dayNum(d) - 1; return iso(n - back(n)); }
-  var LAUNCH = "2026-10-29", PRE = sydToday() < LAUNCH;
+  var LAUNCH = NORMIE ? "2026-10-29" : "2026-10-19", PRE = sydToday() < LAUNCH;
   var REAL = thu(sydToday()), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? thu(q) : REAL;
   function isLive() { return today === REAL; }
