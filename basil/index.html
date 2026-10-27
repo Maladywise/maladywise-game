@@ -23,7 +23,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/shell.css?v=113">
-<link rel="stylesheet" href="basil.css?v=1">
+<link rel="stylesheet" href="basil.css?v=2">
 <script src="../assets/games.js?v=83"></script>
 <script src="../assets/shell.js?v=127"></script>
 </head>
@@ -33,8 +33,44 @@
     <img class="bk-masc" src="/assets/mascots/basil.svg" alt="Basil, a smug fluffy white cat" width="112" height="112">
     <p class="bk-found">&#128062; Bonus game</p>
     <h1>Basil Kicks</h1>
-    <p class="bk-lede">Basil is a smug, fluffy white cat who kicks everything off the bench. Mugs, pens, phones, socks. Nothing is safe. Kick each thing before he gets bored of it, swipe his sister Clover for bonus points (she will remember), and jump in the sink when you see the tap.</p>
+    <p class="bk-lede">Basil is a smug, fluffy white cat who kicks everything off the bench. Mugs, pens, phones, socks. Nothing is safe. Kick each thing before he gets bored, never kick the spiky ones, swipe his sister Clover for bonus points (she will remember), and jump in the sink when you see the tap.</p>
     <p class="bk-how"><b>Tap</b> a spot on the bench, or press <b>1</b>, <b>2</b> or <b>3</b>.</p>
+    <details class="bk-rules">
+      <summary>How it works</summary>
+      <h2>Kick it</h2>
+      <ul>
+        <li><b>1 point</b> for every thing Basil kicks off the bench.</li>
+        <li>Each thing has a <b>timer ring</b>. If it runs out, Basil gets bored and you lose a life.</li>
+        <li>You have <b>3 lives</b> (the paws).</li>
+      </ul>
+      <h2>Combos</h2>
+      <ul>
+        <li>Kick again within about a second to build a combo.</li>
+        <li>Every 3 quick kicks raises the multiplier: <b>x2, x3, up to x4</b>. A slow kick or a miss resets it.</li>
+      </ul>
+      <h2>Specials</h2>
+      <ul>
+        <li><b>Tap:</b> sink time. Clears the bench (+2 each) and doubles points for 5 seconds.</li>
+        <li><b>Fish:</b> an extra life, up to 3.</li>
+        <li><b>Spiky things</b> (cactus, pincushion, rose), marked with a red no sign: <b>don’t kick</b>. Ouch costs a life. Leave them and they vanish.</li>
+      </ul>
+      <h2>Clover</h2>
+      <ul>
+        <li>His sister wanders by and sits on the bench. Swipe her for <b>+3</b>. She’ll be <b>cross</b> next time.</li>
+        <li>Cross Clover says <b>HISS</b>. Swipe her and she swipes back: you lose a life.</li>
+        <li>Leave cross Clover alone and she kicks one of Basil’s things herself. No points. Petty, but fair.</li>
+      </ul>
+      <h2>Clover’s turn</h2>
+      <ul>
+        <li>At <b>60 points</b>, then every 75 more, Clover takes over for <b>10 seconds</b> while Basil sulks in the sink.</li>
+        <li>Double points, things fall fast, and no lives are lost.</li>
+      </ul>
+      <h2>Verdicts</h2>
+      <ul>
+        <li>Fluffy white rat (0+), Basil Brown Pants (15+), Fat Basil (35+), Fat white seal (60+), Basil Bad Cat (100+), Albino Satan (160+).</li>
+        <li>Pause with the button, P or Esc. Your best score stays in this browser only.</li>
+      </ul>
+    </details>
     <button class="big bk-play" type="button" id="bk-start">Let him kick</button>
     <p class="bk-best" id="bk-best"></p>
     <p class="bk-hush">Based on a real cat. The real one is worse.</p>
@@ -54,7 +90,7 @@
           <img class="bk-omasc" src="/assets/mascots/basil.svg" alt="" width="72" height="72">
           <p class="bk-otitle" id="bk-otitle">Bench cleared.</p>
           <p class="bk-omsg" id="bk-omsg"></p>
-          <div class="bk-ostats"><span><small>Kicked</small><b id="bk-okick">0</b></span><span><small>Clover swipes</small><b id="bk-oswipe">0</b></span></div>
+          <div class="bk-ostats"><span><small>Kicked</small><b id="bk-okick">0</b></span><span><small>Clover swipes</small><b id="bk-oswipe">0</b></span><span><small>Ouches</small><b id="bk-oouch">0</b></span></div>
           <p class="bk-obest" id="bk-obest"></p>
           <div class="bk-obtns">
             <button class="big" type="button" id="bk-again">Kick again</button>
@@ -71,6 +107,6 @@
 </main>
 <div class="bk-toast" id="bk-toast" role="status" aria-live="polite" hidden></div>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="basil.js?v=1"></script>
+<script src="basil.js?v=2"></script>
 </body>
 </html>

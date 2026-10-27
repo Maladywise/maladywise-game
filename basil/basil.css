@@ -53,3 +53,11 @@
 .bk-foot{margin:0;text-align:center;font-size:14px}
 .bk-foot a{color:var(--muted)}
 .bk-toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:70;background:#2E1F57;color:#fff;font:500 14px var(--body);padding:10px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:calc(100vw - 32px)}
+.bk-rules{width:min(100%,520px);text-align:left;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:10px 14px;color:#E4DCF5;font-size:14px;line-height:1.45}
+.bk-rules summary{cursor:pointer;font-weight:600;color:#FFE08A;text-align:center;list-style:none}
+.bk-rules summary::-webkit-details-marker{display:none}
+.bk-rules summary::after{content:" \25BE"}
+.bk-rules[open] summary::after{content:" \25B4"}
+.bk-rules h2{font:600 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#FFE08A;margin:12px 0 4px}
+.bk-rules ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.bk-rules b{color:#fff}
