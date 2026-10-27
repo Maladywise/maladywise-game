@@ -1,0 +1,302 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 5,
+  "difficulty": "Genius",
+  "word": "CHOCOLATE",
+  "ms": 700,
+  "clue": "Cacao, made sweet.",
+  "why": "Chocolate is made from roasted, ground cacao beans.",
+  "pearl": "Cacao beans were once used as money by the Aztecs."
+ },
+ {
+  "date": "2026-11-02",
+  "number": 6,
+  "difficulty": "Easy",
+  "word": "TIGER",
+  "ms": 1400,
+  "clue": "Biggest striped cat.",
+  "why": "Tigers are the largest wild cats.",
+  "pearl": "No two tigers have the same stripe pattern."
+ },
+ {
+  "date": "2026-11-03",
+  "number": 7,
+  "difficulty": "Easy",
+  "word": "HORSE",
+  "ms": 1400,
+  "clue": "Galloping animal. Big race day in Melbourne today.",
+  "why": "Horses have been domesticated for about 5,000 years.",
+  "pearl": "Horses can doze standing up, thanks to a locking system in their legs."
+ },
+ {
+  "date": "2026-11-04",
+  "number": 8,
+  "difficulty": "Medium",
+  "word": "VOLCANO",
+  "ms": 1100,
+  "clue": "Mountain that occasionally loses its temper.",
+  "why": "A volcano is an opening where molten rock, gas and ash escape from the Earth.",
+  "pearl": "The word comes from Vulcan, the Roman god of fire."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 9,
+  "difficulty": "Medium",
+  "word": "ROCKET",
+  "ms": 1100,
+  "clue": "Firework that whooshes up. Or a ride to space.",
+  "why": "Rockets push themselves forward by blasting gas out of the back.",
+  "pearl": "Gunpowder rockets were invented in China around 800 years ago."
+ },
+ {
+  "date": "2026-11-06",
+  "number": 10,
+  "difficulty": "Hard",
+  "word": "ELEPHANT",
+  "ms": 850,
+  "clue": "Largest land animal, with a trunk.",
+  "why": "Elephants are the largest land animals on Earth.",
+  "pearl": "They can sense rumbles through their feet."
+ },
+ {
+  "date": "2026-11-07",
+  "number": 11,
+  "difficulty": "Hard",
+  "word": "KEYBOARD",
+  "ms": 850,
+  "clue": "QWERTY, usually.",
+  "why": "A keyboard is the set of keys you type on.",
+  "pearl": "The QWERTY layout dates from typewriters in the 1870s."
+ },
+ {
+  "date": "2026-11-08",
+  "number": 12,
+  "difficulty": "Genius",
+  "word": "BUTTERFLY",
+  "ms": 700,
+  "clue": "Insect that starts life as a caterpillar.",
+  "why": "Butterflies change from caterpillar to adult inside a chrysalis.",
+  "pearl": "Many butterflies taste with their feet."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 13,
+  "difficulty": "Easy",
+  "word": "PIZZA",
+  "ms": 1400,
+  "clue": "Flatbread with toppings, born in Naples.",
+  "why": "Pizza is a flatbread baked with toppings, from Naples in Italy.",
+  "pearl": "The margherita is said to be named after Queen Margherita of Italy, in 1889."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 14,
+  "difficulty": "Easy",
+  "word": "MOON",
+  "ms": 1400,
+  "clue": "Earth’s only natural satellite.",
+  "why": "The Moon orbits Earth about once every 27 days.",
+  "pearl": "It drifts about 3.8 cm further from Earth every year."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 15,
+  "difficulty": "Medium",
+  "word": "CAMERA",
+  "ms": 1100,
+  "clue": "Says cheese. Well, you do.",
+  "why": "A camera captures light to make a picture.",
+  "pearl": "The first photo with a person in it was an accident, taken in Paris around 1838: a man having his shoes shined."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 16,
+  "difficulty": "Medium",
+  "word": "DOLPHIN",
+  "ms": 1100,
+  "clue": "Clever, clicking sea mammal.",
+  "why": "Dolphins are marine mammals that use clicks to find food.",
+  "pearl": "They sleep with half their brain at a time."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 17,
+  "difficulty": "Hard",
+  "word": "UMBRELLA",
+  "ms": 850,
+  "clue": "Unlucky to open indoors, apparently.",
+  "why": "An umbrella is a folding canopy that keeps off rain or sun.",
+  "pearl": "Opening one indoors is meant to be bad luck. It is definitely bad luck for whoever’s standing nearby."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 18,
+  "difficulty": "Hard",
+  "word": "HEDGEHOG",
+  "ms": 850,
+  "clue": "Small, spiky and rolls into a ball.",
+  "why": "Hedgehogs are small spiny mammals that curl up when threatened.",
+  "pearl": "A hedgehog has around 5,000 to 7,000 spines."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 19,
+  "difficulty": "Genius",
+  "word": "SUBMARINE",
+  "ms": 700,
+  "clue": "Boat that likes to go under.",
+  "why": "A submarine is a vessel that travels underwater.",
+  "pearl": "An early working one was rowed under the River Thames in the 1620s."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 20,
+  "difficulty": "Easy",
+  "word": "CAKE",
+  "ms": 1400,
+  "clue": "Birthday essential, candles optional.",
+  "why": "Cake is a sweet baked food, usually made with flour, sugar and eggs.",
+  "pearl": "The word comes from the Old Norse kaka."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 21,
+  "difficulty": "Easy",
+  "word": "LEMON",
+  "ms": 1400,
+  "clue": "Sour yellow citrus.",
+  "why": "Lemons are a citrus fruit full of citric acid.",
+  "pearl": "Lemons are thought to be a hybrid of bitter orange and citron."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 22,
+  "difficulty": "Medium",
+  "word": "GIRAFFE",
+  "ms": 1100,
+  "clue": "Tallest animal on Earth.",
+  "why": "Giraffes are the world’s tallest animals.",
+  "pearl": "They have the same number of neck bones as you: seven."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 23,
+  "difficulty": "Medium",
+  "word": "PIRATE",
+  "ms": 1100,
+  "clue": "Eyepatch, parrot, questionable ethics.",
+  "why": "Pirates robbed ships at sea.",
+  "pearl": "One theory says eyepatches kept one eye ready for the dark below deck."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 24,
+  "difficulty": "Hard",
+  "word": "SNOWBALL",
+  "ms": 850,
+  "clue": "Winter’s favourite throwable.",
+  "why": "A snowball is packed snow, best thrown at a friend.",
+  "pearl": "Snow is actually clear. It looks white because ice crystals scatter all colours of light."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 25,
+  "difficulty": "Hard",
+  "word": "ASTRONAUT",
+  "ms": 850,
+  "clue": "Works in space.",
+  "why": "Astronauts are trained to travel and work in space.",
+  "pearl": "Astronauts can grow up to about 3% taller in space as their spines stretch."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 26,
+  "difficulty": "Genius",
+  "word": "CROCODILE",
+  "ms": 700,
+  "clue": "Big reptile with a famous smile.",
+  "why": "Crocodiles are large reptiles that live in tropical rivers and coasts.",
+  "pearl": "They can’t stick their tongues out."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 27,
+  "difficulty": "Easy",
+  "word": "FROG",
+  "ms": 1400,
+  "clue": "Hops, croaks, starts as a tadpole.",
+  "why": "Frogs are amphibians that start life as tadpoles.",
+  "pearl": "Many frogs drink through their skin."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 28,
+  "difficulty": "Easy",
+  "word": "SHEEP",
+  "ms": 1400,
+  "clue": "Woolly. Counted at bedtime.",
+  "why": "Sheep are farmed for wool, meat and milk.",
+  "pearl": "Sheep can recognise individual faces, of sheep and humans, for years."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 29,
+  "difficulty": "Medium",
+  "word": "PYJAMAS",
+  "ms": 1100,
+  "clue": "What you wear to bed.",
+  "why": "Pyjamas are loose clothes for sleeping in.",
+  "pearl": "The word comes from Hindi and Urdu, meaning “leg garment”."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 30,
+  "difficulty": "Medium",
+  "word": "ORANGE",
+  "ms": 1100,
+  "clue": "A fruit and a colour.",
+  "why": "Oranges are a citrus fruit.",
+  "pearl": "The fruit was named first. The colour was named after it."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 31,
+  "difficulty": "Hard",
+  "word": "LIGHTNING",
+  "ms": 850,
+  "clue": "Comes before the thunder.",
+  "why": "Lightning is a giant electrical spark in a storm.",
+  "pearl": "A bolt is about five times hotter than the surface of the Sun."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 32,
+  "difficulty": "Hard",
+  "word": "MARATHON",
+  "ms": 850,
+  "clue": "42.195 kilometres of running.",
+  "why": "A marathon is a long-distance running race.",
+  "pearl": "It became 42.195 km because of the route at the 1908 London Olympics."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 33,
+  "difficulty": "Genius",
+  "word": "TELESCOPE",
+  "ms": 700,
+  "clue": "Makes faraway things look close.",
+  "why": "A telescope gathers light to show distant objects.",
+  "pearl": "Galileo pointed one at Jupiter in 1610 and found four moons."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 34,
+  "difficulty": "Easy",
+  "word": "TRAIN",
+  "ms": 1400,
+  "clue": "Choo choo.",
+  "why": "A train is a line of carriages that runs on rails.",
+  "pearl": "The first public steam railway, the Stockton and Darlington, opened in England in 1825."
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "date": "2026-10-28",
+  "number": 1,
+  "difficulty": "Medium",
+  "word": "COCHLEA",
+  "ms": 1100,
+  "clue": "Snail-shaped part of the inner ear.",
+  "why": "The cochlea is the coiled, fluid-filled tube in the inner ear that turns sound vibrations into nerve signals.",
+  "pearl": "Uncoiled, the human cochlea is only about 3.5 cm long."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 2,
+  "difficulty": "Medium",
+  "word": "TENDON",
+  "ms": 1100,
+  "clue": "Tough cord that joins muscle to bone.",
+  "why": "Tendons transmit the pull of a muscle to a bone. Ligaments, by contrast, join bone to bone.",
+  "pearl": "The Achilles is the thickest and strongest tendon in the body."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 3,
+  "difficulty": "Hard",
+  "word": "PLACENTA",
+  "ms": 850,
+  "clue": "Temporary organ that feeds a growing baby.",
+  "why": "The placenta passes oxygen and nutrients from the pregnant person to the fetus and carries waste away.",
+  "pearl": "It is the only organ the body grows from scratch and then discards, and most of it develops from the embryo’s own cells."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 4,
+  "difficulty": "Hard",
+  "word": "SKELETON",
+  "ms": 850,
+  "clue": "206 bones, give or take. Tonight’s star decoration.",
+  "why": "The adult skeleton has about 206 bones. It supports and protects the body, anchors muscles and makes blood cells in the marrow.",
+  "pearl": "Babies are born with around 300 bones or bony parts. Many fuse as they grow."
+ }
+]

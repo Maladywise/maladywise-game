@@ -1,0 +1,42 @@
+[
+ {
+  "date": "2026-10-28",
+  "number": 1,
+  "difficulty": "Medium",
+  "word": "PENGUIN",
+  "ms": 1100,
+  "clue": "Flightless bird in a tuxedo.",
+  "why": "Penguins are flightless seabirds that ‘fly’ underwater instead.",
+  "pearl": "Emperor penguins can dive deeper than 500 metres."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 2,
+  "difficulty": "Medium",
+  "word": "GUITAR",
+  "ms": 1100,
+  "clue": "Six strings, usually.",
+  "why": "The guitar is a fretted string instrument played by strumming or plucking.",
+  "pearl": "Standard tuning, from low to high, is E A D G B E."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 3,
+  "difficulty": "Hard",
+  "word": "PASSPORT",
+  "ms": 850,
+  "clue": "Little booklet you need to leave the country.",
+  "why": "A passport is a travel document that proves who you are and where you’re from.",
+  "pearl": "The booklet style was agreed internationally at a League of Nations conference in 1920."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 4,
+  "difficulty": "Hard",
+  "word": "PUMPKIN",
+  "ms": 850,
+  "clue": "Orange squash, carved into lanterns tonight.",
+  "why": "Pumpkins are a kind of squash, and the star of Halloween.",
+  "pearl": "Carved lanterns started with turnips in Ireland and Scotland. Pumpkins were easier."
+ }
+]
