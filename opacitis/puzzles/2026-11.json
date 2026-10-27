@@ -1,230 +1,7 @@
 [
  {
-  "date": "2026-11-02",
-  "number": 1,
-  "difficulty": "Easy",
-  "title": "Sudden breathlessness",
-  "context": "A tall, thin 24-year-old developed sudden left-sided chest pain and breathlessness at rest.",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3APneumothorax_CXR.jpg",
-   "file": "Pneumothorax CXR.jpg",
-   "author": "Photographed by User Clinical Cases 00:42, 7 November 2006",
-   "licence": "CC BY-SA 2.5",
-   "licence_url": "https://creativecommons.org/licenses/by-sa/2.5",
-   "url": "img/2026-11-02.jpg",
-   "alt": "A large left-sided dark (lucent) area with no lung markings and a visible collapsed lung edge"
-  },
-  "answer": "Pneumothorax",
-  "wrong": [
-   "Pleural effusion",
-   "Bullous emphysema",
-   "Left lower lobe collapse",
-   "Pneumonia",
-   "Pulmonary embolism"
-  ],
-  "hints": [
-   "One side is much darker than the other, with no lung markings at the edge.",
-   "Look for a thin white line where the lung edge has pulled away from the chest wall."
-  ],
-  "why": "A large left-sided dark (lucent) area with no lung markings and a visible collapsed lung edge: air in the pleural space.",
-  "assoc": [
-   "Tall, thin young men (primary spontaneous)",
-   "Smoking",
-   "COPD and other lung disease",
-   "Trauma"
-  ],
-  "pearl": "Tension pneumothorax is a clinical diagnosis (hypotension, distress, deviated trachea): decompress first, X-ray later. Small primary pneumothoraces in well patients can often be watched."
- },
- {
-  "date": "2026-11-03",
-  "number": 2,
-  "difficulty": "Easy",
-  "title": "A fall on the shoulder",
-  "context": "A 35-year-old fell while skiing. His shoulder looks squared off and he holds his arm away from his body.",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3AShoulder_dislocation.jpg",
-   "file": "Shoulder dislocation.jpg",
-   "author": "Drfrancescsoler",
-   "licence": "CC BY-SA 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "url": "img/2026-11-03.jpg",
-   "alt": "The humeral head lies below and in front of the glenoid instead of within it"
-  },
-  "answer": "Anterior shoulder dislocation",
-  "wrong": [
-   "Posterior shoulder dislocation",
-   "Fractured neck of humerus",
-   "Acromioclavicular joint dislocation",
-   "Clavicle fracture",
-   "Normal shoulder"
-  ],
-  "hints": [
-   "The ball of the humerus isn't sitting in its socket.",
-   "It has moved forwards and down, below the coracoid."
-  ],
-  "why": "The humeral head lies below and in front of the glenoid instead of within it: anterior dislocation of the shoulder.",
-  "assoc": [
-   "Fall on an outstretched arm",
-   "Contact sports",
-   "Axillary nerve injury"
-  ],
-  "pearl": "Check the axillary nerve (sensation over the 'regimental badge' area) before and after reduction. Posterior dislocations are easily missed: think seizures and electric shocks."
- },
- {
-  "date": "2026-11-04",
-  "number": 3,
-  "difficulty": "Medium",
-  "title": "Fever that won't settle",
-  "context": "An 82-year-old woman has had fevers, chills and weight loss for two weeks. She is on long-term steroids.",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChest_radiograph_of_miliary_tuberculosis_1.jpg",
-   "file": "Chest radiograph of miliary tuberculosis 1.jpg",
-   "author": "Benjamín Herreros, Isabel Plaza, Rebeca García, Marta Chichón, Carmen Guerrero and Emilio Pintor",
-   "licence": "CC BY 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0",
-   "url": "img/2026-11-04.jpg",
-   "alt": "Countless tiny (1–3 mm) nodules evenly scattered through both lungs"
-  },
-  "answer": "Miliary tuberculosis",
-  "wrong": [
-   "Pulmonary oedema",
-   "Sarcoidosis",
-   "Pneumocystis pneumonia",
-   "Metastases",
-   "Silicosis"
-  ],
-  "hints": [
-   "Zoom in: the lungs are full of tiny, evenly spread dots.",
-   "Each dot is about the size of a millet seed."
-  ],
-  "why": "Countless tiny (1–3 mm) nodules evenly scattered through both lungs: a 'millet seed' pattern from blood-borne spread of TB.",
-  "assoc": [
-   "Immunosuppression (steroids, HIV)",
-   "Older age",
-   "Disseminated TB (liver, bone marrow, meninges)"
-  ],
-  "pearl": "The chest X-ray can be normal early in miliary TB. Look for TB elsewhere, including the meninges, and check HIV status."
- },
- {
-  "date": "2026-11-05",
-  "number": 4,
-  "difficulty": "Medium",
-  "title": "A punch gone wrong",
-  "context": "A 23-year-old has a swollen hand with a sunken knuckle after punching a wall.",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABoxerfraktur.png",
-   "file": "Boxerfraktur.png",
-   "author": "Hellerhoff",
-   "licence": "CC BY-SA 3.0",
-   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "url": "img/2026-11-05.jpg",
-   "alt": "A fracture through the neck of the fifth metacarpal with the head tipped towards the palm"
-  },
-  "answer": "Fifth metacarpal neck fracture (boxer's fracture)",
-  "wrong": [
-   "Scaphoid fracture",
-   "Bennett fracture",
-   "Fourth metacarpal shaft fracture",
-   "Normal hand",
-   "Gamekeeper's thumb"
-  ],
-  "hints": [
-   "Look at the little-finger side of the hand.",
-   "The bone is broken just behind the knuckle."
-  ],
-  "why": "A fracture through the neck of the fifth metacarpal with the head tipped towards the palm: a boxer's fracture.",
-  "assoc": [
-   "Punching a hard object",
-   "Young men",
-   "Fight bites (check for a wound)"
-  ],
-  "pearl": "Any skin break over the knuckle after a punch is a human bite until proven otherwise: it needs washout and antibiotics."
- },
- {
-  "date": "2026-11-06",
-  "number": 5,
-  "difficulty": "Hard",
-  "title": "A hugely swollen belly",
-  "context": "A child with chronic constipation has severe abdominal distension and pain. Abdominal X-ray:",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3ASigmoidvolvulus.jpg",
-   "file": "Sigmoidvolvulus.jpg",
-   "author": "Mont4nha",
-   "licence": "CC0",
-   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "url": "img/2026-11-06.jpg",
-   "alt": "A massively distended, inverted-U loop of large bowel rising out of the pelvis"
-  },
-  "answer": "Sigmoid volvulus",
-  "wrong": [
-   "Toxic megacolon",
-   "Small bowel obstruction",
-   "Caecal volvulus",
-   "Hirschsprung disease",
-   "Constipation (faecal loading)"
-  ],
-  "hints": [
-   "One enormously dilated loop fills much of the abdomen.",
-   "It arises from the pelvis and is shaped like a bean."
-  ],
-  "why": "A massively distended, inverted-U loop of large bowel rising out of the pelvis: the 'coffee bean' sign of a twisted sigmoid colon.",
-  "assoc": [
-   "Chronic constipation",
-   "Older age and neurological conditions",
-   "High-fibre diets (common in Africa and Asia)"
-  ],
-  "pearl": "Sigmoid volvulus can often be untwisted with a flexible sigmoidoscope and rectal tube; recurrence is common, so surgery is usually planned afterwards."
- },
- {
-  "date": "2026-11-07",
-  "number": 6,
-  "difficulty": "Hard",
-  "title": "Sore wrist after a fall",
-  "context": "A 26-year-old has wrist pain after a fall. He is tender in the anatomical snuffbox.",
-  "question": "What's the diagnosis?",
-  "img": {
-   "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File%3AScaphoid_fracture_-_barely_visible_on_initial_X-ray.jpg",
-   "file": "Scaphoid fracture - barely visible on initial X-ray.jpg",
-   "author": "Mohamed Jarraya, Daichi Hayashi, Frank W. Roemer, Michel D. Crema, Luis Diaz, Jane Conlin, Monica D. Marra, Nabil Jomaah, and Ali Guermazi",
-   "licence": "CC BY 3.0",
-   "licence_url": "https://creativecommons.org/licenses/by/3.0",
-   "url": "img/2026-11-07.jpg",
-   "alt": "A faint lucent line across the waist of the scaphoid"
-  },
-  "answer": "Scaphoid fracture",
-  "wrong": [
-   "Colles fracture",
-   "Normal wrist",
-   "Lunate dislocation",
-   "Wrist sprain",
-   "Triquetral fracture"
-  ],
-  "hints": [
-   "The fracture line is subtle. Look at the small bone at the base of the thumb.",
-   "Snuffbox tenderness points to this bone."
-  ],
-  "why": "A faint lucent line across the waist of the scaphoid: a subtle scaphoid fracture.",
-  "assoc": [
-   "Fall on an outstretched hand",
-   "Young adults",
-   "Snuffbox tenderness"
-  ],
-  "pearl": "Scaphoid fractures are often invisible on the first X-ray. If you suspect one, immobilise and arrange repeat imaging or MRI, because missed fractures can lead to avascular necrosis."
- },
- {
-  "date": "2026-11-08",
-  "number": 7,
+  "date": "2026-11-01",
+  "number": 8,
   "difficulty": "Genius",
   "title": "A stiff back",
   "context": "A 38-year-old man has had years of morning back stiffness that eases with exercise. He also had a red, painful eye last year.",
@@ -236,7 +13,7 @@
    "author": "Stevenfruitsmaak",
    "licence": "CC BY-SA 3.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "url": "img/2026-11-08.jpg",
+   "url": "img/2026-11-01.jpg",
    "alt": "Thin, smooth bony bridges (syndesmophytes) join the vertebrae into a continuous column"
   },
   "answer": "Ankylosing spondylitis",
@@ -261,8 +38,8 @@
   "pearl": "Inflammatory back pain improves with exercise and is worse with rest and in the early morning. Treat early: modern biologics can prevent fusion."
  },
  {
-  "date": "2026-11-09",
-  "number": 8,
+  "date": "2026-11-02",
+  "number": 9,
   "difficulty": "Easy",
   "title": "Dull on one side",
   "context": "A 41-year-old with weeks of cough, night sweats and weight loss is now breathless. One lung base is dull to percussion.",
@@ -274,7 +51,7 @@
    "author": "Basem Abbas Al Ubaidi",
    "licence": "CC BY 4.0",
    "licence_url": "https://creativecommons.org/licenses/by/4.0",
-   "url": "img/2026-11-09.jpg",
+   "url": "img/2026-11-02.jpg",
    "alt": "A dense white opacity at the left base with a curved upper edge rising towards the side wall (meniscus sign), obscuring the diaphragm"
   },
   "answer": "Pleural effusion",
@@ -299,8 +76,8 @@
   "pearl": "Tap it if you don't know why it's there. Light's criteria separate exudates from transudates. In many countries, TB is a leading cause of exudative effusion in young adults."
  },
  {
-  "date": "2026-11-10",
-  "number": 9,
+  "date": "2026-11-03",
+  "number": 10,
   "difficulty": "Easy",
   "title": "A fall on the hand",
   "context": "A 72-year-old woman slipped on wet tiles and landed on her outstretched hand. Her wrist looks like a dinner fork.",
@@ -312,7 +89,7 @@
    "author": "Lucien Monfils",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "url": "img/2026-11-10.jpg",
+   "url": "img/2026-11-03.jpg",
    "alt": "A fracture of the distal radius with the broken fragment angled backwards (dorsally)"
   },
   "answer": "Colles fracture",
@@ -336,8 +113,8 @@
   "pearl": "A low-energy wrist fracture in an older person is often the first sign of osteoporosis, so consider bone density testing. A Smith fracture tips the other way (forwards)."
  },
  {
-  "date": "2026-11-11",
-  "number": 10,
+  "date": "2026-11-04",
+  "number": 11,
   "difficulty": "Medium",
   "title": "Recurrent infections",
   "context": "A 58-year-old woman has had repeated urinary infections and loin aches. Plain X-ray of the abdomen:",
@@ -349,7 +126,7 @@
    "author": "Nevit Dilmen",
    "licence": "CC BY-SA 3.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "url": "img/2026-11-11.jpg",
+   "url": "img/2026-11-04.jpg",
    "alt": "A large, branching radio-opaque stone filling the renal pelvis and calyces of one kidney, shaped like a stag's antlers."
   },
   "answer": "Staghorn calculus",
@@ -373,8 +150,8 @@
   "pearl": "Staghorn calculi are usually infection stones and can destroy the kidney if left. They usually need removal (often percutaneous nephrolithotomy) plus treatment of the infection."
  },
  {
-  "date": "2026-11-12",
-  "number": 11,
+  "date": "2026-11-05",
+  "number": 12,
   "difficulty": "Medium",
   "title": "A child's elbow",
   "context": "A 7-year-old fell off the monkey bars onto an outstretched hand and won't move the elbow.",
@@ -386,7 +163,7 @@
    "author": "James Heilman, MD",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "url": "img/2026-11-12.jpg",
+   "url": "img/2026-11-05.jpg",
    "alt": "A fracture across the lower humerus just above the condyles, with some displacement of the lower fragment."
   },
   "answer": "Supracondylar fracture of the humerus",
@@ -410,8 +187,8 @@
   "pearl": "The commonest elbow fracture in children. Always check the radial pulse and nerves (especially the anterior interosseous nerve: ask for an 'OK' sign). A raised posterior fat pad suggests a hidden fracture."
  },
  {
-  "date": "2026-11-13",
-  "number": 12,
+  "date": "2026-11-06",
+  "number": 13,
   "difficulty": "Hard",
   "title": "A bad flare",
   "context": "A 29-year-old woman with known ulcerative colitis has bloody diarrhoea, fever, a racing pulse and a tender, swollen abdomen.",
@@ -423,7 +200,7 @@
    "author": "Hellerhoff",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "url": "img/2026-11-13.jpg",
+   "url": "img/2026-11-06.jpg",
    "alt": "Marked dilatation of the colon (transverse colon over 6 cm) with loss of the normal haustral pattern, in a systemically unwell patient with colitis"
   },
   "answer": "Toxic megacolon",
@@ -447,8 +224,8 @@
   "pearl": "Toxic megacolon is a surgical emergency with a high risk of perforation. Avoid opioids, antidiarrhoeals and anticholinergics, and involve surgeons early."
  },
  {
-  "date": "2026-11-14",
-  "number": 13,
+  "date": "2026-11-07",
+  "number": 14,
   "difficulty": "Hard",
   "title": "Coughing for months",
   "context": "A 45-year-old has had a productive cough, night sweats and weight loss for three months.",
@@ -459,7 +236,7 @@
    "author": "CDC",
    "licence": "Public domain",
    "licence_url": "",
-   "url": "img/2026-11-14.jpg",
+   "url": "img/2026-11-07.jpg",
    "alt": "Patchy shadowing in both upper zones with a thick-walled cavity at the right apex"
   },
   "answer": "Cavitating pulmonary tuberculosis",
@@ -483,8 +260,8 @@
   "pearl": "Upper-lobe cavitation means a high bacterial load: isolate the patient and send three sputum samples. TB remains one of the world's leading infectious killers."
  },
  {
-  "date": "2026-11-15",
-  "number": 14,
+  "date": "2026-11-08",
+  "number": 15,
   "difficulty": "Genius",
   "title": "A puffy face and dark urine",
   "context": "A 12-year-old had a sore throat three weeks ago. Now he has puffy eyes, cola-coloured urine, high blood pressure and is breathless.",
@@ -495,7 +272,7 @@
    "author": "CDC/Dr Thomas Hooten",
    "licence": "Public domain",
    "licence_url": "",
-   "url": "img/2026-11-15.jpg",
+   "url": "img/2026-11-08.jpg",
    "alt": "An enlarged heart shadow with congested lungs (fluid overload) in a child with haematuria, oedema and hypertension weeks after a strep throat"
   },
   "answer": "Post-streptococcal glomerulonephritis with fluid overload",
@@ -519,8 +296,8 @@
   "pearl": "An AP film exaggerates heart size, so be careful calling cardiomegaly on it. Post-strep GN is still common in remote Aboriginal and Torres Strait Islander communities, often after skin sores."
  },
  {
-  "date": "2026-11-16",
-  "number": 15,
+  "date": "2026-11-09",
+  "number": 16,
   "difficulty": "Easy",
   "title": "Fell off his bike",
   "context": "A 30-year-old came off his bike onto his shoulder. He has a tender lump over the front of the shoulder.",
@@ -532,7 +309,7 @@
    "author": "Majorkev (cropped)",
    "licence": "CC BY 3.0",
    "licence_url": "https://creativecommons.org/licenses/by/3.0",
-   "url": "img/2026-11-16.jpg",
+   "url": "img/2026-11-09.jpg",
    "alt": "A break through the middle third of the collarbone with the ends slightly displaced."
   },
   "answer": "Clavicle fracture",
@@ -556,8 +333,8 @@
   "pearl": "Most mid-shaft clavicle fractures heal well in a sling. Check the skin over it and the neurovascular status of the arm; shortening, skin tenting or an open wound needs a surgical opinion."
  },
  {
-  "date": "2026-11-17",
-  "number": 16,
+  "date": "2026-11-10",
+  "number": 17,
   "difficulty": "Easy",
   "title": "Vomiting and a swollen belly",
   "context": "A 66-year-old who had bowel surgery years ago has colicky abdominal pain, vomiting and hasn't passed wind for a day.",
@@ -569,7 +346,7 @@
    "author": "Igboeze",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "url": "img/2026-11-17.jpg",
+   "url": "img/2026-11-10.jpg",
    "alt": "Multiple dilated, centrally placed bowel loops with air-fluid levels in a 'step-ladder' pattern"
   },
   "answer": "Small bowel obstruction",

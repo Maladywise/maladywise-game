@@ -38,7 +38,7 @@
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
   var SKEY = "opc-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
-  var KEY, st, P = null, START = "2026-11-02";
+  var KEY, st, P = null, START = "2026-10-25";
   function loadDay() { KEY = "opc-day-" + today; st = load(KEY, { picks: [], done: false, win: false }); }
   loadDay();
 
