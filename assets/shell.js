@@ -179,6 +179,10 @@
       if (!st.win) return null; var n = (st.picks || []).length;
       return { cls: "cb-dx" + (n === 1 ? " gold" : ""), html: (NORMIE ? '<div class="cb-stamp">CASE<br>CRACKED</div><p class="cb-cap">' + (n === 1 ? "First pick. Quiz-show energy." : "Case cracked on try " + n + ".") : '<div class="cb-stamp">RESULTS<br>REVIEWED</div><p class="cb-cap">' + (n === 1 ? "First pick. Pathologist energy." : "Diagnosed on try " + n + ".")) + "</p>" };
     },
+    glimpsis: function (st) {
+      if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
+      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">SIGN<br>SPOTTED</div><p class="cb-cap">' + (gold ? "First glance. Eagle eyes." : "Spotted on try " + n + ".") + "</p>" };
+    },
     arrhythmix: function (st) {
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
       return { cls: "cb-ecg" + (gold ? " gold" : ""), html: '<svg class="cb-line" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="' + (NORMIE ? "M0 104 L50 96 L90 100 L140 78 L190 84 L240 52 L290 60 L340 24 L400 12" : "M0 70 L30 70 Q36.5 56 43 70 L56 70 L58 76 L62 15 L66 84 L69 70 L80 70 C90 54 98 52 108 70 L160 70 Q166.5 56 173 70 L186 70 L188 76 L192 15 L196 84 L199 70 L210 70 C220 54 228 52 238 70 L290 70 Q296.5 56 303 70 L316 70 L318 76 L322 15 L326 84 L329 70 L340 70 C350 54 358 52 368 70 L400 70") + '"/></svg><p class="cb-cap">' + (NORMIE ? (gold ? "Nailed the trend. First try." : "Nailed the trend on try " + n + ".") : gold ? "Read on the first try. Show-off." : "Rhythm read on try " + n + ".") + "</p>" };
