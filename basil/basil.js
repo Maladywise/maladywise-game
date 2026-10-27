@@ -27,9 +27,11 @@
   // ---------- copy ----------
   var KICKQ = ["Gravity check: passed.", "It was in his way. Everything is.", "Smug level: rising.", "He regrets nothing.", "Another one for the floor.", "Physics, but rude.", "He looked you in the eye first.", "That was a gift. To the floor.", "Bench, decluttered.", "Peak cat behaviour.", "He calls it tidying.", "No witnesses. Except you."];
   var BOREDQ = ["He got bored. Unwell?", "He left one. Concerning.", "Missed a kick. He blames you.", "Basil is disappointed in you.", "One survived. Basil will remember."];
-  var CLOVQ = ["Clover: 'Rude.'", "Clover files a complaint.", "Clover has been swiped. Again.", "Sibling rivalry: active.", "Clover glares. Basil smirks."];
-  var CLOVBACK = ["Clover swiped back. Fair.", "Clover had enough. Justice served.", "Tortoiseshell revenge."];
-  var CLOVSTEAL = ["Clover kicked it herself. Revenge.", "Clover stole the kick. Petty. Effective.", "Clover: 'Mine now.'"];
+  var CNICK = ["Cute Clover", "the Whingapotamus", "the Chief Complaints Officer", "Wiggle Butt", "the Spicy Little Muffin"];
+  var CLOVQ = ["Clover: 'Rude.'", "The Chief Complaints Officer has lodged a complaint.", "The Whingapotamus whinges.", "Sibling rivalry: active.", "Wiggle Butt glares. Basil smirks.", "Cute Clover is no longer cute about it."];
+  var CLOVBACK = ["Clover swiped back. Fair.", "The Spicy Little Muffin had enough. Justice served.", "Tortoiseshell revenge.", "Complaint upheld. Basil swiped."];
+  var CSWIPE = ["Swiped.", "Swiped!", "Swish.", "Claws out.", "Swiped. Daintily."];
+  var CLOVSTEAL = ["Clover swiped it herself. Revenge.", "Wiggle Butt stole the swipe. Petty. Effective.", "Clover: 'Mine now.'"];
   var OUCHQ = ["Ouch. That one was spiky.", "Basil has learned nothing.", "Cactus: 1, Basil: 0.", "Paw, meet prickles.", "Some things you don't kick."];
   var SPIKY = ["cactus", "pins", "rose"];
   var NAMES = [[0, "Fluffy white rat"], [15, "Basil Brown Pants"], [35, "Fat Basil"], [60, "Fat white seal"], [100, "Basil Bad Cat"], [160, "Albino Satan"]];
@@ -38,7 +40,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0,
+    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, slash: [],
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   function spawnEvery() { return S.bonus > 0 ? 0.42 : Math.max(0.52, 1.45 - S.t * 0.011); }
@@ -63,7 +65,7 @@
     if (!it || !it.landed) return;
     S.lanes[i] = null;
     var dir = i === 0 ? -1 : i === 2 ? 1 : (Math.random() < .5 ? -1 : 1);
-    S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(110, 210), vy: -rnd(240, 320), r: 0, vr: dir * rnd(6, 11) });
+    S.fly.push(S.bonus > 0 ? { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(300, 380), vy: -rnd(90, 140), r: 0, vr: dir * rnd(3, 6) } : { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(110, 210), vy: -rnd(240, 320), r: 0, vr: dir * rnd(6, 11) });
     if (isSpiky(it.kind)) {
       S.combo = 0; S.ouchT = 0.7; S.ouches++; float(LANES[i], BENCH - 60, "Ouch!", "#C2553A"); toast(pick(OUCHQ)); shake();
       if (S.bonus <= 0) { S.lives--; if (S.lives <= 0) end(); }
@@ -71,15 +73,16 @@
     }
     if (it.kind === "tap") { sinkTime(); return; }
     if (it.kind === "fish") { if (S.lives < 3) S.lives++; float(LANES[i], BENCH - 60, "+1 life", "#E05A8A"); toast("Fish acquired. Basil is briefly nice."); return; }
+    if (S.bonus > 0) { S.slash.push({ x: LANES[i], y: BENCH - 22, l: 0.35 }); }
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1);
-    S.score += mult; float(LANES[i], BENCH - 60, "+" + mult, mult > 1 ? "#B5308A" : "#2B5E80");
+    S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
     if (S.bonus <= 0 && S.score >= S.nextBonus) startBonus();
   }
   function startBonus() {
     S.bonus = 10; S.bonuses++; S.nextBonus = S.score + 75; S.clover = null; S.cloverT = rnd(12, 16);
-    toast("Clover's turn! Double points. No lives lost."); track("basil/bonus");
+    toast("Clover’s turn! " + pick(CNICK).replace(/^the /, "The ").replace(/^./, function (c) { return c.toUpperCase(); }) + " swipes. Double points."); track("basil/bonus");
   }
   function swipeClover() {
     var c = S.clover; c.state = "flee"; c.hit = 1; S.swiped++;
@@ -154,6 +157,7 @@
       else { c.x += (c.hit ? (c.x < 180 ? -1 : 1) * 520 : c.dir * 260) * dt; if (c.x < -80 || c.x > W + 80) S.clover = null; }
     }
     S.fly = S.fly.filter(function (f) { f.vy += 900 * dt; f.x += f.vx * dt; f.y += f.vy * dt; f.r += f.vr * dt; return f.y < H + 60; });
+    S.slash = S.slash.filter(function (k) { k.l -= dt; return k.l > 0; });
     S.fx = S.fx.filter(function (f) { f.l -= dt * 0.9; f.y -= 40 * dt; return f.l > 0; });
     S.drops = S.drops.filter(function (d) { d.vy += 700 * dt; d.x += d.vx * dt; d.y += d.vy * dt; d.l -= dt; return d.l > 0; });
     hud();
@@ -299,9 +303,10 @@
     }
     clover();
     S.fly.forEach(function (f) { item(f.kind, f.x, f.y, f.r); });
+    S.slash.forEach(function (k) { ctx.globalAlpha = Math.min(1, k.l * 4); ctx.strokeStyle = "#B07A0C"; ctx.lineWidth = 3; ctx.lineCap = "round"; for (var j = -1; j <= 1; j++) { ctx.beginPath(); ctx.moveTo(k.x - 26, k.y - 22 + j * 9); ctx.quadraticCurveTo(k.x, k.y - 34 + j * 9, k.x + 26, k.y - 22 + j * 9 - 6); ctx.stroke(); } ctx.globalAlpha = 1; });
     S.drops.forEach(function (d) { ctx.globalAlpha = Math.max(0, d.l); circ(d.x, d.y, 3, "#5AA9DC"); ctx.globalAlpha = 1; });
     S.fx.forEach(function (f) { ctx.globalAlpha = Math.max(0, f.l); ctx.fillStyle = f.col; ctx.font = "700 15px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(f.txt, f.x, f.y); ctx.globalAlpha = 1; });
-    if (S.bonus > 0) { rr(96, 12, 168, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("CLOVER'S TURN x2 · " + Math.ceil(S.bonus) + "s", 180, 30); }
+    if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("CLOVER SWIPES x2 · " + Math.ceil(S.bonus) + "s", 180, 30); }
     else if (S.sinkT > 0) { ctx.fillStyle = "#2B5E80"; ctx.font = "700 14px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("SINK TIME x2", 180, 28); }
     if (paused) { ctx.fillStyle = "rgba(43,35,64,.55)"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.font = "700 26px Lora, serif"; ctx.textAlign = "center"; ctx.fillText("Paused. Basil is napping.", 180, H / 2); }
     ctx.restore();
