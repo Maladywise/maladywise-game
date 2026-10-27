@@ -1419,5 +1419,3106 @@
   ],
   "pearl": "Read every ECG the same way: rate, rhythm, axis, intervals, morphology. A system beats a hunch.",
   "seed": "2026-11-30"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 74-year-old woman fainted at the shops. She is pale but alert. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "mobitz2",
+    "rate": 88,
+    "pr": 200,
+    "conduct": [
+     1,
+     0
+    ]
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "pr",
+    "dropped"
+   ]
+  },
+  "answer": "Second-degree AV block, 2:1",
+  "options": [
+   "Second-degree AV block, 2:1",
+   "Second-degree AV block, Mobitz I (Wenckebach)",
+   "Complete heart block",
+   "Sinus bradycardia",
+   "Atrial bigeminy (blocked)",
+   "First-degree AV block"
+  ],
+  "hints": [
+   "Count the P waves against the QRS complexes.",
+   "Every second P wave is not followed by a QRS, and the PR of the conducted beats never changes."
+  ],
+  "explanation": "Regular P waves at about 88/min, but only every second one is conducted, giving a ventricular rate of about 44/min. The conducted beats all have the same PR. With 2:1 block you can't see whether the PR would lengthen first, so you can't tell Mobitz I from Mobitz II on this strip alone.",
+  "features": [
+   "Atrial rate about 88/min, ventricular about 44/min",
+   "Exactly two P waves per QRS",
+   "Constant PR in conducted beats"
+  ],
+  "pearl": "2:1 block can't be labelled Mobitz I or II from one strip. A wide QRS or syncope makes an infranodal (Mobitz II-like) block more likely, so treat it as dangerous.",
+  "seed": "x-21av"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "An 81-year-old man on the cardiology ward feels dizzy whenever he stands. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "mobitz2",
+    "rate": 96,
+    "pr": 190,
+    "conduct": [
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "dropped"
+   ]
+  },
+  "answer": "High-grade AV block",
+  "options": [
+   "High-grade AV block",
+   "Complete heart block",
+   "Second-degree AV block, 2:1",
+   "Sinus bradycardia",
+   "Junctional escape rhythm",
+   "Second-degree AV block, Mobitz I (Wenckebach)"
+  ],
+  "hints": [
+   "Some P waves do conduct, at a fixed PR.",
+   "Two P waves in a row are blocked before each conducted beat."
+  ],
+  "explanation": "Regular P waves at about 96/min with a 3:1 pattern: two consecutive P waves blocked, then one conducted with a constant PR. Because some P waves still conduct with a fixed relationship, this is high-grade (advanced) AV block rather than complete heart block.",
+  "features": [
+   "Atrial rate about 96/min, ventricular about 32/min",
+   "Two consecutive non-conducted P waves",
+   "Fixed PR on conducted beats"
+  ],
+  "pearl": "High-grade AV block (3:1 or worse) usually needs pacing. In complete heart block, P waves and QRS complexes are completely unrelated; here the conducted beats keep a fixed PR.",
+  "seed": "x-hgavb"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 58-year-old man two hours after successful stenting for an anterior STEMI. The nurse notices this on the monitor. He feels fine; BP 124/76.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "vt",
+    "rate": 82,
+    "arate": 74
+   }
+  },
+  "highlight": {
+   "marks": [
+    "qrs",
+    "dissoc"
+   ]
+  },
+  "answer": "Accelerated idioventricular rhythm",
+  "options": [
+   "Accelerated idioventricular rhythm",
+   "Ventricular tachycardia",
+   "Complete heart block",
+   "Junctional escape rhythm",
+   "Left bundle branch block",
+   "Ventricular paced rhythm"
+  ],
+  "hints": [
+   "Wide complexes, but count the rate.",
+   "Classically appears after the blocked artery has been reopened."
+  ],
+  "explanation": "A regular wide-complex rhythm at about 80/min, with P waves marching through unrelated to the QRS. Too fast for an escape rhythm and too slow for VT: accelerated idioventricular rhythm (AIVR), a classic reperfusion rhythm.",
+  "features": [
+   "Wide QRS at about 80/min",
+   "Regular",
+   "Dissociated P waves"
+  ],
+  "pearl": "AIVR after reperfusion is usually benign and self-limiting. Don't shock it or suppress it with antiarrhythmics; the ventricles may be all that's keeping the rate up.",
+  "seed": "x-aivr"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 79-year-old woman with a pacemaker comes in for a routine check. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "paced",
+    "mode": "vvi",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "marks": [
+    "spike",
+    "qrs"
+   ]
+  },
+  "answer": "Ventricular paced rhythm",
+  "options": [
+   "Ventricular paced rhythm",
+   "Dual-chamber paced rhythm",
+   "Left bundle branch block",
+   "Accelerated idioventricular rhythm",
+   "Ventricular tachycardia",
+   "Complete heart block"
+  ],
+  "hints": [
+   "Look just before each QRS.",
+   "There's one spike per beat, and no P wave in front of it."
+  ],
+  "explanation": "Sharp pacing spikes, each followed by a wide QRS at a fixed 70/min, with no paced atrial activity: single-chamber ventricular pacing (VVI).",
+  "features": [
+   "Pacing spike before every QRS",
+   "Wide QRS (LBBB-like from the right ventricle)",
+   "Fixed rate, no atrial spike"
+  ],
+  "pearl": "A right ventricular lead produces an LBBB-like paced QRS. Two spikes per beat (atrial then ventricular) means dual-chamber pacing.",
+  "seed": "x-vvi"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 46-year-old woman notices her heart 'skipping' when she drinks coffee at work. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 76,
+    "ectopics": [
+     {
+      "n": 2,
+      "type": "pvc"
+     },
+     {
+      "n": 5,
+      "type": "pvc"
+     },
+     {
+      "n": 8,
+      "type": "pvc"
+     },
+     {
+      "n": 11,
+      "type": "pvc"
+     },
+     {
+      "n": 14,
+      "type": "pvc"
+     }
+    ]
+   }
+  },
+  "highlight": {
+   "marks": [
+    "ectopic"
+   ]
+  },
+  "answer": "Ventricular trigeminy",
+  "options": [
+   "Ventricular trigeminy",
+   "Ventricular bigeminy",
+   "Atrial trigeminy",
+   "Sinus arrhythmia",
+   "Ventricular tachycardia",
+   "Second-degree AV block, Mobitz I (Wenckebach)"
+  ],
+  "hints": [
+   "Some beats are wide, early and have no P wave.",
+   "Count how often they come: two normal beats, then one odd one."
+  ],
+  "explanation": "Every third beat is an early, wide, bizarre QRS with no preceding P wave and a compensatory pause: a premature ventricular complex (PVC) in a 2:1 pattern, called ventricular trigeminy.",
+  "features": [
+   "Two sinus beats, then a PVC, repeating",
+   "PVCs are wide with no P wave",
+   "Full compensatory pause after each PVC"
+  ],
+  "pearl": "Occasional PVCs in a healthy heart are common and usually benign. Very frequent PVCs (over about 10% of beats), symptoms or structural heart disease deserve an echo and a Holter.",
+  "seed": "x-trig"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 63-year-old man with heart failure has a routine monitor strip on the ward. Lead II:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 74,
+    "ectopics": [
+     {
+      "n": 3,
+      "type": "pvc"
+     },
+     {
+      "n": 4,
+      "type": "pvc"
+     },
+     {
+      "n": 10,
+      "type": "pvc"
+     },
+     {
+      "n": 11,
+      "type": "pvc"
+     }
+    ]
+   }
+  },
+  "highlight": {
+   "marks": [
+    "ectopic"
+   ]
+  },
+  "answer": "Sinus rhythm with ventricular couplets",
+  "options": [
+   "Sinus rhythm with ventricular couplets",
+   "Ventricular bigeminy",
+   "Non-sustained ventricular tachycardia",
+   "Torsades de pointes",
+   "Sinus rhythm with atrial ectopics",
+   "Ventricular trigeminy"
+  ],
+  "hints": [
+   "The wide beats come in pairs.",
+   "Three or more in a row would be called something else."
+  ],
+  "explanation": "Sinus rhythm interrupted by pairs of consecutive wide, early ventricular complexes: ventricular couplets.",
+  "features": [
+   "Underlying sinus rhythm",
+   "Two PVCs back to back",
+   "No P wave before the wide beats"
+  ],
+  "pearl": "Two PVCs in a row is a couplet; three or more at over 100/min is non-sustained VT. In heart failure, check potassium and magnesium and review the medicines.",
+  "seed": "x-coup"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 29-year-old student feels her heart 'fluttering' after an all-nighter with energy drinks. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70,
+    "bigeminy": "pac"
+   }
+  },
+  "highlight": {
+   "marks": [
+    "ectopic",
+    "p"
+   ]
+  },
+  "answer": "Atrial bigeminy",
+  "options": [
+   "Atrial bigeminy",
+   "Ventricular bigeminy",
+   "Sinus arrhythmia",
+   "Second-degree AV block, Mobitz I (Wenckebach)",
+   "Atrial fibrillation",
+   "Multifocal atrial tachycardia"
+  ],
+  "hints": [
+   "Every second beat comes early.",
+   "The early beats are narrow and have their own abnormal-looking P wave."
+  ],
+  "explanation": "Every second beat is a premature narrow QRS preceded by an abnormal (inverted) P wave: a premature atrial complex after each sinus beat, called atrial bigeminy.",
+  "features": [
+   "Alternating sinus beat and early beat",
+   "Early beats are narrow with an abnormal P wave",
+   "Grouped beating in pairs"
+  ],
+  "pearl": "Atrial ectopics are common and usually benign; caffeine, alcohol, nicotine, stress and sleep deprivation are classic triggers. Narrow early beats point to an atrial origin, wide ones to a ventricular origin.",
+  "seed": "x-abig"
+ },
+ {
+  "difficulty": "Easy",
+  "vignette": "A 71-year-old woman has had palpitations and breathlessness since this morning. BP 118/70. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "af",
+    "rate": 148,
+    "f": 0.07
+   }
+  },
+  "highlight": {
+   "marks": [
+    "f",
+    "rr"
+   ]
+  },
+  "answer": "Atrial fibrillation with rapid ventricular response",
+  "options": [
+   "Atrial fibrillation with rapid ventricular response",
+   "Sinus tachycardia",
+   "Atrial flutter with 2:1 block",
+   "Supraventricular tachycardia (AVNRT)",
+   "Multifocal atrial tachycardia",
+   "Ventricular tachycardia"
+  ],
+  "hints": [
+   "Measure the gaps between beats. Are any two the same?",
+   "No P waves, just a wobbly baseline."
+  ],
+  "explanation": "An irregularly irregular narrow-complex tachycardia at about 150/min with no P waves and a chaotic, fibrillating baseline: atrial fibrillation with a rapid ventricular response.",
+  "features": [
+   "Irregularly irregular",
+   "No P waves, fibrillatory baseline",
+   "Ventricular rate about 150/min"
+  ],
+  "pearl": "Control the rate, look for the trigger (infection, alcohol, thyroid, ischaemia) and assess stroke risk with CHA2DS2-VA. A regular rate fixed at 150 suggests flutter instead.",
+  "seed": "x-afrvr"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "An 84-year-old man on digoxin and a beta blocker for atrial fibrillation feels tired and light-headed. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "af",
+    "rate": 44,
+    "f": 0.05
+   }
+  },
+  "highlight": {
+   "marks": [
+    "f",
+    "rr"
+   ]
+  },
+  "answer": "Atrial fibrillation with slow ventricular response",
+  "options": [
+   "Atrial fibrillation with slow ventricular response",
+   "Sinus bradycardia",
+   "Complete heart block",
+   "Junctional escape rhythm",
+   "Second-degree AV block, Mobitz I (Wenckebach)",
+   "Sinus pause (sinus arrest)"
+  ],
+  "hints": [
+   "Are there any P waves?",
+   "The gaps are irregular and long. Think about his medicines."
+  ],
+  "explanation": "No P waves, an irregular baseline and an irregularly irregular ventricular rate of about 45/min: atrial fibrillation with a slow ventricular response, likely from too much rate-slowing medicine.",
+  "features": [
+   "No P waves",
+   "Irregularly irregular",
+   "Slow ventricular rate (under 60/min)"
+  ],
+  "pearl": "Slow AF in an older person on rate-control drugs: check digoxin levels, kidney function and potassium. Regular slow beats in AF suggest complete heart block with an escape rhythm.",
+  "seed": "x-afslow"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 66-year-old woman on digoxin, recovering from cardiac surgery. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "junctional",
+    "rate": 86
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "qrs"
+   ]
+  },
+  "answer": "Accelerated junctional rhythm",
+  "options": [
+   "Accelerated junctional rhythm",
+   "Junctional escape rhythm",
+   "Sinus rhythm",
+   "Supraventricular tachycardia (AVNRT)",
+   "Ectopic atrial rhythm",
+   "Accelerated idioventricular rhythm"
+  ],
+  "hints": [
+   "The QRS is narrow, but look just after it.",
+   "Too fast to be an escape rhythm, too slow to be a tachycardia."
+  ],
+  "explanation": "A regular narrow-complex rhythm at about 86/min with no P wave before the QRS and an inverted (retrograde) P wave just after it: an accelerated junctional rhythm (60–100/min).",
+  "features": [
+   "Narrow QRS, regular, about 86/min",
+   "No P wave before the QRS",
+   "Retrograde P wave after the QRS"
+  ],
+  "pearl": "Junctional escape is 40–60/min; accelerated junctional rhythm 60–100; junctional tachycardia over 100. Think digoxin toxicity, myocarditis, cardiac surgery and ischaemia.",
+  "seed": "x-ajr"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 52-year-old woman with COPD has had a racing heart for a day. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 158,
+    "pr": 130
+   },
+   "tweaks": {
+    "II": {
+     "p": [
+      [
+       50,
+       -0.14,
+       16
+      ]
+     ]
+    },
+    "I": {
+     "p": [
+      [
+       50,
+       0.05,
+       16
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Focal atrial tachycardia",
+  "options": [
+   "Focal atrial tachycardia",
+   "Sinus tachycardia",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial flutter with 2:1 block",
+   "Multifocal atrial tachycardia",
+   "Atrial fibrillation"
+  ],
+  "hints": [
+   "There is a P wave before each QRS. Look at which way it points.",
+   "An inverted P wave in lead II means the impulse isn't starting in the sinus node."
+  ],
+  "explanation": "A regular narrow-complex tachycardia at about 160/min with a P wave before every QRS, but the P waves are inverted in lead II. The atria are being driven from a single ectopic focus low in the atrium: focal atrial tachycardia.",
+  "features": [
+   "Regular, about 160/min",
+   "One P wave before each QRS",
+   "P wave inverted in lead II"
+  ],
+  "pearl": "Sinus P waves are always upright in lead II. One abnormal P shape means focal atrial tachycardia; three or more different P shapes at over 100/min means multifocal atrial tachycardia.",
+  "seed": "x-fat"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A fit 35-year-old woman has an ECG before surgery. She has no symptoms. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 64,
+    "pr": 128
+   },
+   "tweaks": {
+    "II": {
+     "p": [
+      [
+       50,
+       -0.12,
+       16
+      ]
+     ]
+    },
+    "I": {
+     "p": [
+      [
+       50,
+       0.06,
+       16
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "pr"
+   ]
+  },
+  "answer": "Ectopic atrial rhythm",
+  "options": [
+   "Ectopic atrial rhythm",
+   "Junctional escape rhythm",
+   "Normal sinus rhythm",
+   "Focal atrial tachycardia",
+   "Wandering atrial pacemaker",
+   "Accelerated junctional rhythm"
+  ],
+  "hints": [
+   "The rate is normal and every beat has a P wave.",
+   "But the P waves point the wrong way in lead II, with a shortish PR."
+  ],
+  "explanation": "A regular rhythm at about 64/min with a P wave before every QRS, but the P waves are inverted in lead II and the PR is short. The pacemaker is an ectopic focus low in the atrium: an ectopic (low) atrial rhythm.",
+  "features": [
+   "Normal rate, regular",
+   "Inverted P waves in lead II",
+   "Short PR, every P conducted"
+  ],
+  "pearl": "Ectopic atrial rhythm is usually benign in a healthy person. The same P-wave pattern at over 100/min would be focal atrial tachycardia; without P waves before the QRS, think junctional.",
+  "seed": "x-ear"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "An 88-year-old man collapses on the ward. No pulse. The monitor shows:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "chb",
+    "rate": 70,
+    "vrate": 0.4,
+    "voff": 30
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "P-wave asystole (ventricular standstill)",
+  "options": [
+   "P-wave asystole (ventricular standstill)",
+   "Asystole",
+   "Complete heart block",
+   "Ventricular fibrillation",
+   "Sinus bradycardia",
+   "Pulseless electrical activity"
+  ],
+  "hints": [
+   "The atria are still working.",
+   "Nothing is reaching the ventricles at all."
+  ],
+  "explanation": "Regular P waves at about 70/min but no QRS complexes at all: the atria are depolarising, but nothing conducts and no escape rhythm has appeared. This is P-wave asystole (ventricular standstill), a non-shockable cardiac arrest.",
+  "features": [
+   "Regular P waves",
+   "No QRS complexes",
+   "Pulseless patient"
+  ],
+  "pearl": "Ventricular standstill is treated as asystole (CPR, adrenaline), but the P waves mean pacing may work, so consider it early. It can follow complete heart block when the escape rhythm fails.",
+  "seed": "x-pwasys"
+ },
+ {
+  "difficulty": "Easy",
+  "vignette": "A 67-year-old woman is in cardiac arrest. Leads are checked and the gain is turned up. The monitor shows:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "none"
+   },
+   "noise": 0.015
+  },
+  "highlight": {
+   "marks": []
+  },
+  "answer": "Asystole",
+  "options": [
+   "Asystole",
+   "Fine ventricular fibrillation",
+   "P-wave asystole (ventricular standstill)",
+   "Pulseless electrical activity",
+   "Complete heart block",
+   "Lead disconnected"
+  ],
+  "hints": [
+   "There's nothing organised here at all.",
+   "Always check the leads and the gain before calling it."
+  ],
+  "explanation": "A nearly flat line with only slight baseline wander and noise: no P waves, no QRS complexes, no fibrillatory activity. With leads connected and gain checked, this is asystole.",
+  "features": [
+   "No QRS complexes",
+   "No P waves",
+   "No fibrillatory waves"
+  ],
+  "pearl": "Asystole is non-shockable: start CPR, give adrenaline and look for reversible causes (the 4 Hs and 4 Ts). A perfectly flat line is often a disconnected lead, so check the patient and the leads.",
+  "seed": "x-asys"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 77-year-old man with Parkinson's disease has a routine ECG before a hip operation. He is chatting comfortably. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 72
+   },
+   "tremor": 0.13
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Tremor artefact (sinus rhythm)",
+  "options": [
+   "Tremor artefact (sinus rhythm)",
+   "Atrial flutter with variable block",
+   "Atrial fibrillation",
+   "Ventricular fibrillation",
+   "Multifocal atrial tachycardia",
+   "Torsades de pointes"
+  ],
+  "hints": [
+   "Look past the fuzzy baseline: are the QRS complexes regular?",
+   "The patient is talking to you, and the wobble is about 5–6 per second."
+  ],
+  "explanation": "Regular, normal QRS complexes at about 72/min hidden in a busy, jittery baseline. The underlying rhythm is sinus: the baseline noise is tremor artefact, not an arrhythmia.",
+  "features": [
+   "Regular QRS complexes at a normal rate",
+   "Fast, irregular baseline wobble",
+   "Comfortable, well patient"
+  ],
+  "pearl": "Treat the patient, not the monitor. Parkinsonian tremor, shivering and patient movement can mimic flutter, AF or even VF. Ask the patient to relax and repeat the trace.",
+  "seed": "x-tremor"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 69-year-old man on a beta blocker has a routine ECG at the GP. He feels well. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "flutter",
+    "arate": 300,
+    "ratios": [
+     4
+    ],
+    "famp": 0.26
+   }
+  },
+  "highlight": {
+   "marks": [
+    "flutter"
+   ]
+  },
+  "answer": "Atrial flutter with 4:1 block",
+  "options": [
+   "Atrial flutter with 4:1 block",
+   "Atrial flutter with 2:1 block",
+   "Atrial fibrillation",
+   "Sinus rhythm",
+   "Multifocal atrial tachycardia",
+   "Second-degree AV block, 2:1"
+  ],
+  "hints": [
+   "Look at the baseline between the QRS complexes.",
+   "Count the sawtooth waves for each QRS."
+  ],
+  "explanation": "A regular sawtooth baseline at about 300/min with four flutter waves for every QRS, giving a regular ventricular rate of about 75/min: atrial flutter with 4:1 block.",
+  "features": [
+   "Sawtooth flutter waves at about 300/min",
+   "Four flutter waves per QRS",
+   "Regular ventricular rate about 75/min"
+  ],
+  "pearl": "Atrial flutter carries a stroke risk like AF, so it needs the same anticoagulation assessment. Typical flutter is very treatable with catheter ablation.",
+  "seed": "x-fl41"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 22-year-old athlete has a screening ECG. He has no symptoms. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "mat",
+    "rate": 72
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "pr"
+   ]
+  },
+  "answer": "Wandering atrial pacemaker",
+  "options": [
+   "Wandering atrial pacemaker",
+   "Multifocal atrial tachycardia",
+   "Atrial fibrillation",
+   "Sinus arrhythmia",
+   "Sinus rhythm with atrial ectopics",
+   "Second-degree AV block, Mobitz I (Wenckebach)"
+  ],
+  "hints": [
+   "Every QRS has a P wave, but they don't all look the same.",
+   "The rate is under 100."
+  ],
+  "explanation": "A slightly irregular rhythm at about 70/min. Every QRS has a P wave, but the P waves vary in shape (at least three different shapes) with varying PR intervals: wandering atrial pacemaker.",
+  "features": [
+   "Rate under 100/min",
+   "Three or more different P-wave shapes",
+   "Varying PR intervals"
+  ],
+  "pearl": "Same pattern, different rate: under 100/min it's wandering atrial pacemaker (often benign, e.g. in athletes); over 100/min it's multifocal atrial tachycardia (often severe lung disease).",
+  "seed": "x-waps"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 49-year-old man collapses in a gym. A bystander attaches an AED and the screen shows:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "vt",
+    "rate": 280,
+    "arate": 1
+   }
+  },
+  "highlight": {
+   "marks": []
+  },
+  "answer": "Ventricular flutter",
+  "options": [
+   "Ventricular flutter",
+   "Ventricular fibrillation",
+   "Torsades de pointes",
+   "Atrial flutter with 2:1 block",
+   "Supraventricular tachycardia (AVNRT)",
+   "Sinus tachycardia"
+  ],
+  "hints": [
+   "You can't separate the QRS from the T wave.",
+   "Regular, very fast, sine-wave-like."
+  ],
+  "explanation": "A very rapid (about 280/min), regular, sine-wave-like wide-complex rhythm where QRS and T waves merge: ventricular flutter, which usually degenerates into VF.",
+  "features": [
+   "Regular, about 280/min",
+   "No separate QRS and T",
+   "Sine-wave appearance"
+  ],
+  "pearl": "Ventricular flutter is treated like VF: it's shockable and pulseless. Torsades twists around the baseline; VF is chaotic with no regular pattern.",
+  "seed": "x-vflut"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 34-year-old woman, two weeks after a long-haul flight, has sudden pleuritic chest pain and breathlessness. HR 112, SpO2 91%.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 112
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       0.08,
+       5
+      ],
+      [
+       38,
+       0.55,
+       9
+      ],
+      [
+       66,
+       -0.42,
+       9
+      ]
+     ],
+     "t": 0.2
+    },
+    "II": {
+     "qrs": [
+      [
+       14,
+       -0.1,
+       5
+      ],
+      [
+       40,
+       0.85,
+       9.5
+      ],
+      [
+       68,
+       -0.1,
+       8
+      ]
+     ],
+     "t": 0.1
+    },
+    "V1": {
+     "t": -0.22
+    },
+    "V2": {
+     "t": -0.3
+    },
+    "V3": {
+     "t": -0.2
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "S",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "III"
+     ],
+     "label": "Q, T inv",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "label": "T inv",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Pulmonary embolism (right heart strain)",
+  "options": [
+   "Pulmonary embolism (right heart strain)",
+   "Inferior STEMI",
+   "Wellens syndrome",
+   "Acute pericarditis",
+   "Right bundle branch block",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "Look at lead I and lead III together.",
+   "Sinus tachycardia plus T inversion in V1 to V3 points to right ventricular strain."
+  ],
+  "explanation": "Sinus tachycardia with a deep S wave in lead I, a Q wave and inverted T wave in lead III (S1Q3T3), and T-wave inversion in V1–V3: a pattern of acute right ventricular strain, consistent with pulmonary embolism in this story.",
+  "features": [
+   "Sinus tachycardia",
+   "S1Q3T3",
+   "T-wave inversion V1–V3"
+  ],
+  "pearl": "The commonest ECG finding in PE is just sinus tachycardia; S1Q3T3 is specific but insensitive. A normal ECG doesn't rule PE out. Use Wells/PERC and imaging.",
+  "seed": "x-pe"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "An 82-year-old woman with atrial fibrillation takes digoxin. Her ECG at a routine check:",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "af",
+    "rate": 72,
+    "f": 0.05
+   },
+   "tweaks": {
+    "I": {
+     "st": -0.12,
+     "t": 0.05
+    },
+    "II": {
+     "st": -0.22,
+     "t": 0.06
+    },
+    "V4": {
+     "st": -0.2,
+     "t": 0.08
+    },
+    "V5": {
+     "st": -0.25,
+     "t": 0.05
+    },
+    "V6": {
+     "st": -0.22,
+     "t": 0.04
+    }
+   },
+   "qtc": 0.36
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "V5",
+      "V6"
+     ],
+     "label": "scooped ST",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "f"
+   ]
+  },
+  "answer": "Digoxin effect",
+  "options": [
+   "Digoxin effect",
+   "Digoxin toxicity",
+   "Lateral ischaemia (ST depression)",
+   "Hypokalaemia",
+   "Left ventricular hypertrophy with strain",
+   "Posterior STEMI"
+  ],
+  "hints": [
+   "Look at the shape of the ST depression, not just its depth.",
+   "Think of a reverse tick, and check her medicine list."
+  ],
+  "explanation": "AF at a controlled rate with sagging, 'reverse tick' (scooped) ST depression in the inferior and lateral leads, flattened T waves and a short QT: digoxin effect.",
+  "features": [
+   "Scooped ST depression ('reverse tick')",
+   "Short QT, flattened T waves",
+   "Background AF, rate controlled"
+  ],
+  "pearl": "Digoxin effect is expected at therapeutic levels and isn't toxicity. Toxicity shows as new arrhythmias (bidirectional VT, atrial tachycardia with block, bradycardia) plus nausea and visual changes.",
+  "seed": "x-dig"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 61-year-old woman with breast cancer has bone pain, constipation and confusion. ECG:",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 72
+   },
+   "qtc": 0.31
+  },
+  "highlight": {
+   "marks": [
+    "qt"
+   ],
+   "boxes": []
+  },
+  "answer": "Hypercalcaemia (short QT)",
+  "options": [
+   "Hypercalcaemia (short QT)",
+   "Hypocalcaemia",
+   "Hyperkalaemia",
+   "Digoxin effect",
+   "Long QT syndrome",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "Measure from the start of the QRS to the end of the T wave.",
+   "The ST segment has almost disappeared. Think bones, stones, groans and moans."
+  ],
+  "explanation": "Sinus rhythm with a short QT interval: the T wave starts almost straight after the QRS, with very little ST segment. In this story (cancer, bone pain, constipation, confusion) that means hypercalcaemia.",
+  "features": [
+   "Short QT (QTc about 310 ms)",
+   "T wave starts right after the QRS",
+   "Otherwise normal"
+  ],
+  "pearl": "High calcium shortens the QT and low calcium lengthens it (by stretching the ST segment). Malignancy and primary hyperparathyroidism cause most hypercalcaemia.",
+  "seed": "x-hica"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 47-year-old woman, three days after thyroid surgery, has tingling around her mouth and cramps in her hands. ECG:",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 76
+   },
+   "tweaks": {
+    "I": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "II": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V1": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V2": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V3": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V4": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V5": {
+     "ts": [
+      62,
+      46
+     ]
+    },
+    "V6": {
+     "ts": [
+      62,
+      46
+     ]
+    }
+   },
+   "qtc": 0.54
+  },
+  "highlight": {
+   "marks": [
+    "qt"
+   ],
+   "boxes": []
+  },
+  "answer": "Hypocalcaemia (long QT)",
+  "options": [
+   "Hypocalcaemia (long QT)",
+   "Hypercalcaemia (short QT)",
+   "Hypokalaemia",
+   "Long QT syndrome",
+   "Hypothermia (Osborn J waves)",
+   "Digoxin effect"
+  ],
+  "hints": [
+   "Measure the QT, then look at which part is long.",
+   "The T wave itself is normal: it's the flat segment before it that's stretched."
+  ],
+  "explanation": "Sinus rhythm with a prolonged QT, caused by a long, flat ST segment with a normal-looking T wave at the end. After thyroid surgery with perioral tingling and carpopedal spasm, this is hypocalcaemia (often from parathyroid damage).",
+  "features": [
+   "Long QT (QTc about 540 ms)",
+   "Long isoelectric ST segment",
+   "Normal T-wave shape"
+  ],
+  "pearl": "In hypocalcaemia the ST segment stretches; in congenital long QT and with QT-prolonging drugs the T wave itself is broad or notched. Check Chvostek's and Trousseau's signs.",
+  "seed": "x-loca"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 68-year-old man with high blood pressure has an ECG as part of a health check. He feels well.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       -0.06,
+       5
+      ],
+      [
+       40,
+       0.9,
+       9.5
+      ],
+      [
+       70,
+       -0.05,
+       8
+      ]
+     ]
+    },
+    "II": {
+     "qrs": [
+      [
+       16,
+       0.18,
+       5
+      ],
+      [
+       40,
+       0.33,
+       9
+      ],
+      [
+       66,
+       -0.95,
+       10
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "rS",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "I",
+      "aVL"
+     ],
+     "label": "qR",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Left anterior fascicular block",
+  "options": [
+   "Left anterior fascicular block",
+   "Left posterior fascicular block",
+   "Left bundle branch block",
+   "Inferior STEMI",
+   "Left ventricular hypertrophy with strain",
+   "Right bundle branch block"
+  ],
+  "hints": [
+   "Work out the axis first: look at leads I and II.",
+   "Lead II is mostly negative, but the QRS is narrow."
+  ],
+  "explanation": "Narrow QRS with marked left axis deviation (lead I positive, lead II negative): small r and deep S in II, III and aVF (rS) and qR in I and aVL. That's left anterior fascicular block (left anterior hemiblock).",
+  "features": [
+   "Left axis deviation (about −50°)",
+   "rS in II, III, aVF",
+   "qR in I and aVL, narrow QRS"
+  ],
+  "pearl": "LAFB is the commonest cause of left axis deviation. With RBBB it makes bifascicular block, and adding a long PR is sometimes called 'trifascicular block'.",
+  "seed": "x-lafb"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 79-year-old woman had a brief faint while gardening. Her ECG:",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 72
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       -0.04,
+       5
+      ],
+      [
+       40,
+       0.75,
+       9.5
+      ],
+      [
+       98,
+       -0.3,
+       17
+      ]
+     ],
+     "qd": 140
+    },
+    "II": {
+     "qrs": [
+      [
+       16,
+       0.14,
+       5
+      ],
+      [
+       40,
+       0.28,
+       9
+      ],
+      [
+       70,
+       -0.8,
+       10
+      ],
+      [
+       100,
+       -0.16,
+       15
+      ]
+     ],
+     "qd": 140
+    }
+   },
+   "preset": "rbbb"
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1"
+     ],
+     "label": "RSR'",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "LAD",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "qrs"
+   ]
+  },
+  "answer": "Bifascicular block (RBBB + LAFB)",
+  "options": [
+   "Bifascicular block (RBBB + LAFB)",
+   "Right bundle branch block",
+   "Left bundle branch block",
+   "Left anterior fascicular block",
+   "Complete heart block",
+   "Wolff-Parkinson-White pattern"
+  ],
+  "hints": [
+   "The QRS is wide with an RSR' in V1.",
+   "Now check the axis: it's swung far to the left."
+  ],
+  "explanation": "A wide QRS with an RSR' pattern in V1 and a wide S wave in I and V6 (right bundle branch block), plus left axis deviation with rS in the inferior leads (left anterior fascicular block): bifascicular block.",
+  "features": [
+   "RBBB: RSR' in V1, wide S in I and V6",
+   "Left axis deviation",
+   "QRS 120 ms or more"
+  ],
+  "pearl": "Bifascicular block plus unexplained syncope warrants investigation for intermittent complete heart block (Holter, or a loop recorder if needed). Only one fascicle is left working.",
+  "seed": "x-bifas"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A slim 55-year-old man with no lung or heart disease has an ECG before surgery. Echo was normal.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 68
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       0.1,
+       5
+      ],
+      [
+       40,
+       0.25,
+       8
+      ],
+      [
+       64,
+       -0.58,
+       9
+      ]
+     ],
+     "t": 0.12
+    },
+    "II": {
+     "qrs": [
+      [
+       14,
+       -0.08,
+       5
+      ],
+      [
+       42,
+       1.3,
+       9.5
+      ],
+      [
+       70,
+       -0.1,
+       8
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I",
+      "aVL"
+     ],
+     "label": "rS",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "III",
+      "aVF"
+     ],
+     "label": "qR",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Left posterior fascicular block",
+  "options": [
+   "Left posterior fascicular block",
+   "Left anterior fascicular block",
+   "Right ventricular hypertrophy",
+   "Pulmonary embolism (right heart strain)",
+   "Dextrocardia",
+   "Right bundle branch block"
+  ],
+  "hints": [
+   "Lead I is mostly negative and lead III tall: which way is the axis?",
+   "The QRS is narrow and the echo shows no right ventricular cause."
+  ],
+  "explanation": "Narrow QRS with right axis deviation: rS in I and aVL and qR in II, III and aVF. With no right ventricular hypertrophy, lung disease or other cause, this is left posterior fascicular block.",
+  "features": [
+   "Right axis deviation (about +110°)",
+   "rS in I and aVL",
+   "qR in III and aVF, narrow QRS"
+  ],
+  "pearl": "LPFB is a diagnosis of exclusion: rule out RVH, PE, lateral MI and lead misplacement first. It's much rarer than LAFB because the posterior fascicle is thick and has a double blood supply.",
+  "seed": "x-lpfb"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 41-year-old woman with pulmonary arterial hypertension is increasingly breathless on exertion.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 88
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       0.1,
+       5
+      ],
+      [
+       40,
+       0.28,
+       8
+      ],
+      [
+       66,
+       -0.55,
+       9
+      ]
+     ],
+     "t": 0.08
+    },
+    "II": {
+     "p": [
+      [
+       48,
+       0.27,
+       13
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       -0.06,
+       5
+      ],
+      [
+       42,
+       1.25,
+       9.5
+      ],
+      [
+       70,
+       -0.1,
+       8
+      ]
+     ],
+     "t": 0.15
+    },
+    "V1": {
+     "qrs": [
+      [
+       22,
+       0.95,
+       9
+      ],
+      [
+       56,
+       -0.25,
+       9
+      ]
+     ],
+     "st": -0.07,
+     "t": -0.32
+    },
+    "V2": {
+     "qrs": [
+      [
+       24,
+       0.8,
+       9
+      ],
+      [
+       58,
+       -0.55,
+       10
+      ]
+     ],
+     "st": -0.05,
+     "t": -0.22
+    },
+    "V5": {
+     "qrs": [
+      [
+       14,
+       -0.03,
+       5
+      ],
+      [
+       40,
+       0.6,
+       10
+      ],
+      [
+       70,
+       -0.7,
+       9
+      ]
+     ]
+    },
+    "V6": {
+     "qrs": [
+      [
+       40,
+       0.45,
+       10
+      ],
+      [
+       70,
+       -0.62,
+       9
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1",
+      "V2"
+     ],
+     "label": "tall R, T inv",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "RAD",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Right ventricular hypertrophy",
+  "options": [
+   "Right ventricular hypertrophy",
+   "Posterior STEMI",
+   "Right bundle branch block",
+   "Wolff-Parkinson-White pattern",
+   "Left posterior fascicular block",
+   "Pulmonary embolism (right heart strain)"
+  ],
+  "hints": [
+   "V1 has a dominant R wave. What can do that?",
+   "Right axis, tall R and T inversion in V1–V2, peaked P in II."
+  ],
+  "explanation": "Right axis deviation, a dominant R wave in V1 with ST depression and T inversion in V1–V2 (right ventricular strain), deep S waves in V5–V6 and a tall peaked P wave in lead II: right ventricular hypertrophy with right atrial enlargement.",
+  "features": [
+   "Right axis deviation",
+   "Dominant R in V1 with strain pattern",
+   "Deep S in V5–V6, P pulmonale"
+  ],
+  "pearl": "Causes of a dominant R in V1: RVH, RBBB, posterior MI, WPW (type A), dextrocardia, HCM and normal in young children. The clinical story usually separates them.",
+  "seed": "x-rvh"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 26-year-old man has his first ECG at a sports medical. The nurse checks the leads and they're placed correctly.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70
+   },
+   "tweaks": {
+    "I": {
+     "p": [
+      [
+       50,
+       -0.09,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       0.05,
+       5
+      ],
+      [
+       42,
+       -0.85,
+       9.5
+      ],
+      [
+       70,
+       0.1,
+       8
+      ]
+     ],
+     "t": -0.24
+    },
+    "II": {
+     "p": [
+      [
+       50,
+       0.06,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       -0.02,
+       5
+      ],
+      [
+       42,
+       0.22,
+       9
+      ],
+      [
+       70,
+       -0.08,
+       8
+      ]
+     ],
+     "t": 0.06
+    },
+    "V1": {
+     "qrs": [
+      [
+       20,
+       0.25,
+       6.5
+      ],
+      [
+       50,
+       -0.9,
+       12
+      ]
+     ],
+     "t": 0.06
+    },
+    "V2": {
+     "qrs": [
+      [
+       22,
+       0.24,
+       7
+      ],
+      [
+       54,
+       -0.85,
+       12
+      ]
+     ],
+     "t": 0.1
+    },
+    "V3": {
+     "qrs": [
+      [
+       28,
+       0.2,
+       8
+      ],
+      [
+       60,
+       -0.7,
+       11
+      ]
+     ],
+     "t": 0.08
+    },
+    "V4": {
+     "qrs": [
+      [
+       38,
+       0.15,
+       9
+      ],
+      [
+       66,
+       -0.5,
+       9
+      ]
+     ],
+     "t": 0.06
+    },
+    "V5": {
+     "qrs": [
+      [
+       40,
+       0.1,
+       9
+      ],
+      [
+       70,
+       -0.35,
+       8
+      ]
+     ],
+     "t": 0.05
+    },
+    "V6": {
+     "qrs": [
+      [
+       42,
+       0.08,
+       9
+      ],
+      [
+       72,
+       -0.25,
+       8
+      ]
+     ],
+     "t": 0.04
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "all inverted",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "aVR"
+     ],
+     "label": "upright",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "V4",
+      "V5",
+      "V6"
+     ],
+     "label": "shrinking R",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Dextrocardia",
+  "options": [
+   "Dextrocardia",
+   "Limb lead reversal (LA/RA)",
+   "Left posterior fascicular block",
+   "Right ventricular hypertrophy",
+   "Lateral STEMI",
+   "Low QRS voltage"
+  ],
+  "hints": [
+   "Lead I is completely upside down: P, QRS and T.",
+   "The leads are on correctly. Now look at how the R waves change across V1 to V6."
+  ],
+  "explanation": "Lead I is globally inverted (negative P, QRS and T), aVR is upright, and the R waves get smaller from V1 to V6 instead of bigger. With leads correctly placed, the heart is on the right: dextrocardia.",
+  "features": [
+   "Inverted P, QRS and T in lead I",
+   "Upright aVR",
+   "Reverse R-wave progression (V1 to V6)"
+  ],
+  "pearl": "Swapped arm leads also invert lead I, but the chest leads stay normal. In dextrocardia the chest leads lose R waves across V1–V6; repeat the ECG with right-sided chest leads. Think of Kartagener syndrome.",
+  "seed": "x-dextro"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 58-year-old woman's routine ECG looks odd compared with last year's, which was normal. She feels well.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 68
+   },
+   "tweaks": {
+    "I": {
+     "p": [
+      [
+       50,
+       -0.09,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       0.05,
+       5
+      ],
+      [
+       42,
+       -0.85,
+       9.5
+      ],
+      [
+       70,
+       0.1,
+       8
+      ]
+     ],
+     "t": -0.24
+    },
+    "II": {
+     "p": [
+      [
+       50,
+       0.06,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       -0.02,
+       5
+      ],
+      [
+       42,
+       0.22,
+       9
+      ],
+      [
+       70,
+       -0.08,
+       8
+      ]
+     ],
+     "t": 0.06
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "all inverted",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V4",
+      "V5",
+      "V6"
+     ],
+     "label": "normal R",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Limb lead reversal (LA/RA)",
+  "options": [
+   "Limb lead reversal (LA/RA)",
+   "Dextrocardia",
+   "Lateral STEMI",
+   "Left posterior fascicular block",
+   "Right ventricular hypertrophy",
+   "Ectopic atrial rhythm"
+  ],
+  "hints": [
+   "Lead I is completely upside down: P, QRS and T.",
+   "Now compare the chest leads with that. Do they look normal?"
+  ],
+  "explanation": "Lead I is globally inverted and aVR is upright, but the chest leads show normal R-wave progression from V1 to V6. That combination means the left and right arm electrodes have been swapped, not that the heart has moved.",
+  "features": [
+   "Inverted P, QRS and T in lead I",
+   "Upright aVR",
+   "Normal precordial R-wave progression"
+  ],
+  "pearl": "The commonest ECG 'abnormality' is a misplaced electrode. If lead I is upside down but V1–V6 look normal, re-check the arm leads before diagnosing anything.",
+  "seed": "x-llr"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 44-year-old woman with lung cancer has worsening breathlessness and a raised JVP. BP 92/70, HR 112.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 112,
+    "alternans": 0.45
+   },
+   "volt": 0.45
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "V2",
+      "V3"
+     ],
+     "label": "small, alternating",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Electrical alternans (pericardial effusion)",
+  "options": [
+   "Electrical alternans (pericardial effusion)",
+   "Low QRS voltage only",
+   "Acute pericarditis",
+   "Pulmonary embolism (right heart strain)",
+   "Ventricular bigeminy",
+   "Sinus tachycardia"
+  ],
+  "hints": [
+   "The complexes are small. Now compare each beat with the next.",
+   "The heart is swinging back and forth inside a fluid-filled sac."
+  ],
+  "explanation": "Sinus tachycardia with low QRS voltages and beat-to-beat variation in QRS height (electrical alternans). With hypotension, a raised JVP and cancer, this suggests a large pericardial effusion with tamponade.",
+  "features": [
+   "Sinus tachycardia",
+   "Low QRS voltage",
+   "QRS height alternates beat to beat"
+  ],
+  "pearl": "Electrical alternans is specific for a large effusion, as the heart swings within it. Tamponade is a clinical diagnosis: hypotension, raised JVP and muffled heart sounds (Beck's triad). Get an urgent echo.",
+  "seed": "x-altern"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A fit 24-year-old Black man has an ECG at a cardiology clinic after his brother's routine screen. He feels well.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 56
+   },
+   "tweaks": {
+    "II": {
+     "st": 0.08,
+     "j": 0.07,
+     "t": 0.42
+    },
+    "V2": {
+     "st": 0.12,
+     "t": 0.62
+    },
+    "V3": {
+     "st": 0.17,
+     "j": 0.1,
+     "t": 0.72
+    },
+    "V4": {
+     "st": 0.17,
+     "j": 0.14,
+     "t": 0.66
+    },
+    "V5": {
+     "st": 0.11,
+     "j": 0.11,
+     "t": 0.52
+    },
+    "V6": {
+     "st": 0.06,
+     "j": 0.06,
+     "t": 0.38
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V3",
+      "V4",
+      "V5"
+     ],
+     "label": "J notch, concave ST",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Benign early repolarisation",
+  "options": [
+   "Benign early repolarisation",
+   "Acute pericarditis",
+   "Anterior STEMI",
+   "Brugada pattern (type 1)",
+   "Hyperkalaemia",
+   "Hypothermia (Osborn J waves)"
+  ],
+  "hints": [
+   "The ST segments are raised, but look at their shape and the notch at the J point.",
+   "Young, fit, symptom-free, with no reciprocal changes."
+  ],
+  "explanation": "Mild concave ST elevation in V2–V5 with notched J points ('fish hooks'), tall T waves and a slow sinus rate, in a fit young man without symptoms and without reciprocal ST depression: benign early repolarisation.",
+  "features": [
+   "Concave ST elevation, mostly V2–V5",
+   "J-point notching or slurring",
+   "No reciprocal ST depression, slow sinus rate"
+  ],
+  "pearl": "Early repolarisation is common in young men, athletes and people of African descent. Pericarditis has widespread ST elevation with PR depression; STEMI has convex ST elevation and reciprocal changes. If unsure, compare with old ECGs and repeat.",
+  "seed": "x-er"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 72-year-old man has crushing chest pain and is sweaty. BP 98/60.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 102
+   },
+   "tweaks": {
+    "I": {
+     "st": -0.2,
+     "t": 0.1
+    },
+    "II": {
+     "st": -0.3,
+     "t": 0.1
+    },
+    "V3": {
+     "st": -0.18
+    },
+    "V4": {
+     "st": -0.3,
+     "t": 0.15
+    },
+    "V5": {
+     "st": -0.32,
+     "t": 0.12
+    },
+    "V6": {
+     "st": -0.28,
+     "t": 0.1
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "aVR"
+     ],
+     "label": "ST up",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "I",
+      "II",
+      "V4",
+      "V5",
+      "V6"
+     ],
+     "label": "ST down",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "ST elevation in aVR with widespread ST depression",
+  "options": [
+   "ST elevation in aVR with widespread ST depression",
+   "Inferior STEMI",
+   "Acute pericarditis",
+   "Digoxin effect",
+   "Posterior STEMI",
+   "Wellens syndrome"
+  ],
+  "hints": [
+   "Don't ignore aVR.",
+   "Widespread ST depression plus one lead going the other way."
+  ],
+  "explanation": "Widespread ST depression in I, II and V3–V6 with ST elevation in aVR in a patient with ongoing chest pain: a pattern of diffuse subendocardial ischaemia, raising concern for left main or severe three-vessel coronary disease.",
+  "features": [
+   "ST elevation in aVR",
+   "Widespread ST depression (six or more leads)",
+   "Ongoing ischaemic pain"
+  ],
+  "pearl": "This pattern isn't a STEMI by the usual criteria, but with ongoing pain and instability it needs urgent cardiology input and angiography. Other causes include severe anaemia, tachyarrhythmia and aortic dissection.",
+  "seed": "x-avr"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 63-year-old woman with diabetes has had heavy chest discomfort and nausea for an hour.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 84
+   },
+   "tweaks": {
+    "I": {
+     "st": 0.24,
+     "t": 0.36,
+     "ts": [
+      80,
+      50
+     ]
+    },
+    "II": {
+     "st": -0.05,
+     "t": 0.2
+    },
+    "V5": {
+     "st": 0.16,
+     "t": 0.45
+    },
+    "V6": {
+     "st": 0.16,
+     "t": 0.4
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I",
+      "aVL",
+      "V5",
+      "V6"
+     ],
+     "label": "ST up",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "III",
+      "aVF"
+     ],
+     "label": "reciprocal",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Lateral STEMI",
+  "options": [
+   "Lateral STEMI",
+   "Anterior STEMI",
+   "Inferior STEMI",
+   "Acute pericarditis",
+   "Benign early repolarisation",
+   "Left bundle branch block"
+  ],
+  "hints": [
+   "Which leads have ST elevation, and which have the mirror image?",
+   "I, aVL, V5 and V6 look at the same wall."
+  ],
+  "explanation": "ST elevation in I, aVL, V5 and V6 with reciprocal ST depression in III and aVF: lateral STEMI, often from the circumflex or a diagonal artery.",
+  "features": [
+   "ST elevation I, aVL, V5–V6",
+   "Reciprocal ST depression III and aVF",
+   "Ongoing ischaemic symptoms"
+  ],
+  "pearl": "Women and people with diabetes more often present with atypical symptoms such as nausea, breathlessness or fatigue rather than classic pain. Lateral STEMIs are easy to miss because the ST elevation in aVL can be small.",
+  "seed": "x-latmi"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 55-year-old man arrives 20 minutes after sudden, severe central chest pain began.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 80
+   },
+   "tweaks": {
+    "I": {
+     "t": 0.38
+    },
+    "V2": {
+     "st": 0.08,
+     "t": 1.0,
+     "ts": [
+      75,
+      55
+     ]
+    },
+    "V3": {
+     "st": 0.1,
+     "t": 1.15,
+     "ts": [
+      75,
+      55
+     ]
+    },
+    "V4": {
+     "st": 0.07,
+     "t": 0.95,
+     "ts": [
+      72,
+      52
+     ]
+    },
+    "V5": {
+     "t": 0.6
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "huge broad T",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Hyperacute T waves (early anterior STEMI)",
+  "options": [
+   "Hyperacute T waves (early anterior STEMI)",
+   "Hyperkalaemia",
+   "Benign early repolarisation",
+   "de Winter T waves (STEMI equivalent)",
+   "Wellens syndrome",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "The T waves in V2–V4 are huge. Are they narrow and peaked, or broad-based?",
+   "Twenty minutes into the pain, the ST segments haven't caught up yet."
+  ],
+  "explanation": "Tall, broad-based, symmetrical T waves in V2–V4 out of proportion to the QRS, with only slight ST elevation, 20 minutes into ischaemic pain: hyperacute T waves, the earliest sign of an anterior STEMI.",
+  "features": [
+   "Broad, tall, symmetrical T waves V2–V4",
+   "Disproportionate to the QRS",
+   "Minimal ST elevation so far"
+  ],
+  "pearl": "Hyperacute T waves are broad-based and bulky; hyperkalaemic T waves are narrow and tented. Repeat the ECG every 10–15 minutes. Evolving STEMI changes fast.",
+  "seed": "x-hyperT"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 67-year-old man had a large anterior heart attack six months ago. Now breathless with ankle swelling; no chest pain today. Troponin normal.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 74
+   },
+   "tweaks": {
+    "V1": {
+     "qrs": [
+      [
+       30,
+       -0.9,
+       12
+      ]
+     ],
+     "st": 0.14,
+     "t": 0.1
+    },
+    "V2": {
+     "qrs": [
+      [
+       30,
+       -1.3,
+       12
+      ]
+     ],
+     "st": 0.2,
+     "t": 0.15
+    },
+    "V3": {
+     "qrs": [
+      [
+       32,
+       -1.0,
+       12
+      ]
+     ],
+     "st": 0.22,
+     "t": 0.18
+    },
+    "V4": {
+     "qrs": [
+      [
+       14,
+       -0.3,
+       7
+      ],
+      [
+       44,
+       0.4,
+       10
+      ],
+      [
+       70,
+       -0.2,
+       8
+      ]
+     ],
+     "st": 0.12,
+     "t": 0.15
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1",
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "QS + ST up",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Left ventricular aneurysm",
+  "options": [
+   "Left ventricular aneurysm",
+   "Anterior STEMI",
+   "Benign early repolarisation",
+   "Brugada pattern (type 1)",
+   "Hyperacute T waves (early anterior STEMI)",
+   "Left bundle branch block"
+  ],
+  "hints": [
+   "Q waves have already formed, and the T waves are small.",
+   "The ST elevation hasn't settled months after the infarct."
+  ],
+  "explanation": "Deep QS waves in V1–V3 and a Q in V4 with persistent ST elevation and small T waves, months after an anterior MI, with no new pain and a normal troponin: left ventricular aneurysm.",
+  "features": [
+   "QS complexes V1–V3",
+   "Persistent ST elevation with small T waves",
+   "Months after an MI, troponin normal"
+  ],
+  "pearl": "Persistent ST elevation after an old MI suggests an aneurysm. Small T waves relative to the QRS favour aneurysm; big T waves favour acute STEMI. Echo confirms it. Watch for heart failure, thrombus and VT.",
+  "seed": "x-lvan"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 70-year-old woman sees a new GP and brings her old letters: she had a heart attack in 2019. No symptoms today.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 66
+   },
+   "tweaks": {
+    "II": {
+     "qrs": [
+      [
+       18,
+       -0.36,
+       9
+      ],
+      [
+       48,
+       0.55,
+       9.5
+      ],
+      [
+       72,
+       -0.08,
+       8
+      ]
+     ],
+     "t": 0.22
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "Q waves",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Old inferior myocardial infarction",
+  "options": [
+   "Old inferior myocardial infarction",
+   "Inferior STEMI",
+   "Left anterior fascicular block",
+   "Wolff-Parkinson-White pattern",
+   "Normal sinus rhythm",
+   "Posterior STEMI"
+  ],
+  "hints": [
+   "Look at the start of the QRS in II, III and aVF.",
+   "The ST segments are flat: this isn't happening now."
+  ],
+  "explanation": "Pathological Q waves in II, III and aVF with isoelectric ST segments and upright T waves: an old (established) inferior myocardial infarction.",
+  "features": [
+   "Pathological Q waves in II, III, aVF",
+   "Flat ST segments",
+   "No acute changes"
+  ],
+  "pearl": "Pathological Q waves are over 40 ms wide or over 25% of the R-wave height, in two contiguous leads. A small isolated Q in lead III alone can be normal.",
+  "seed": "x-oldinf"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "An 80-year-old man with known left bundle branch block has had crushing chest pain for 40 minutes.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 86
+   },
+   "tweaks": {
+    "V5": {
+     "st": 0.22,
+     "t": 0.22
+    },
+    "V6": {
+     "st": 0.2,
+     "t": 0.2
+    },
+    "I": {
+     "st": 0.14,
+     "t": 0.12
+    }
+   },
+   "preset": "lbbb"
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I",
+      "V5",
+      "V6"
+     ],
+     "label": "concordant ST up",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "qrs"
+   ]
+  },
+  "answer": "STEMI in LBBB (Sgarbossa positive)",
+  "options": [
+   "STEMI in LBBB (Sgarbossa positive)",
+   "Left bundle branch block",
+   "Lateral STEMI",
+   "Left ventricular hypertrophy with strain",
+   "Ventricular paced rhythm",
+   "Acute pericarditis"
+  ],
+  "hints": [
+   "In LBBB, the ST segment normally goes the opposite way to the QRS.",
+   "Here, in leads with a positive QRS, the ST goes up too."
+  ],
+  "explanation": "Left bundle branch block, but with concordant ST elevation (in the same direction as the QRS) in I, V5 and V6. In LBBB the ST normally goes against the QRS, so concordant elevation meets a Sgarbossa criterion: acute MI.",
+  "features": [
+   "LBBB morphology (broad QRS, deep S in V1)",
+   "Concordant ST elevation in leads with a positive QRS",
+   "Ongoing ischaemic pain"
+  ],
+  "pearl": "Sgarbossa criteria (concordant ST elevation 1 mm or more, concordant ST depression in V1–V3, or excessively discordant ST elevation) help find MI hidden by LBBB. A new LBBB alone is no longer treated as a STEMI equivalent.",
+  "seed": "x-sgarb"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 38-year-old man of Japanese descent has an ECG at an insurance medical. His echo later shows a thick heart apex.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 64
+   },
+   "tweaks": {
+    "V3": {
+     "t": -0.6,
+     "ts": [
+      60,
+      50
+     ]
+    },
+    "V4": {
+     "t": -1.05,
+     "ts": [
+      60,
+      50
+     ],
+     "st": -0.06
+    },
+    "V5": {
+     "t": -0.95,
+     "ts": [
+      60,
+      50
+     ],
+     "st": -0.08
+    },
+    "V6": {
+     "t": -0.5,
+     "st": -0.08
+    }
+   },
+   "preset": "lvh"
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V3",
+      "V4",
+      "V5"
+     ],
+     "label": "giant T inv",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Apical hypertrophic cardiomyopathy",
+  "options": [
+   "Apical hypertrophic cardiomyopathy",
+   "Wellens syndrome",
+   "Left ventricular hypertrophy with strain",
+   "Anterior STEMI",
+   "Pulmonary embolism (right heart strain)",
+   "Hypokalaemia"
+  ],
+  "hints": [
+   "Tall voltages, and look at the depth of those T waves.",
+   "Very deep, symmetrical T inversion in the chest leads, in a well person with a thick apex."
+  ],
+  "explanation": "Very tall QRS voltages with giant, symmetrical T-wave inversion in V3–V5 in a symptom-free person: the classic pattern of apical hypertrophic cardiomyopathy (Yamaguchi syndrome), confirmed by the thickened apex on echo.",
+  "features": [
+   "LVH voltage criteria",
+   "Giant T-wave inversion (over 10 mm) V3–V5",
+   "No acute symptoms"
+  ],
+  "pearl": "Apical HCM is more common in people of East Asian descent. Giant T inversion can also mean Wellens or cerebral T waves, so put it with the story and image the heart (echo or MRI).",
+  "seed": "x-ahcm"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 23-year-old woman, a keen distance runner, fainted during a race. Her uncle died suddenly at 30.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 66
+   },
+   "tweaks": {
+    "V1": {
+     "qrs": [
+      [
+       20,
+       0.2,
+       6.5
+      ],
+      [
+       50,
+       -1.0,
+       12
+      ],
+      [
+       108,
+       0.13,
+       4
+      ]
+     ],
+     "qd": 116,
+     "t": -0.32
+    },
+    "V2": {
+     "qrs": [
+      [
+       22,
+       0.4,
+       7.5
+      ],
+      [
+       54,
+       -1.45,
+       12.5
+      ],
+      [
+       110,
+       0.11,
+       4
+      ]
+     ],
+     "qd": 116,
+     "t": -0.36
+    },
+    "V3": {
+     "t": -0.25
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1",
+      "V2"
+     ],
+     "label": "epsilon wave",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V3"
+     ],
+     "label": "T inv",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Arrhythmogenic right ventricular cardiomyopathy",
+  "options": [
+   "Arrhythmogenic right ventricular cardiomyopathy",
+   "Brugada pattern (type 1)",
+   "Right bundle branch block",
+   "Wellens syndrome",
+   "Benign early repolarisation",
+   "Pulmonary embolism (right heart strain)"
+  ],
+  "hints": [
+   "Look closely just after the QRS in V1 and V2.",
+   "T inversion beyond V1 in an adult, exercise-related syncope, and a family history of sudden death."
+  ],
+  "explanation": "T-wave inversion in V1–V3 and a small notch at the very end of the QRS in V1–V2 (an epsilon wave), in a young athlete with exertional syncope and a family history of sudden death: arrhythmogenic right ventricular cardiomyopathy (ARVC).",
+  "features": [
+   "T inversion V1–V3 (adult)",
+   "Epsilon wave after the QRS in V1–V2",
+   "Exertional syncope, family history"
+  ],
+  "pearl": "ARVC is a leading cause of sudden cardiac death in young athletes, and endurance exercise speeds it up. Refer urgently: cardiac MRI, Holter, genetic testing and family screening.",
+  "seed": "x-arvc"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 27-year-old woman is drowsy after an overdose of her antidepressant tablets, taken an hour ago. HR 126.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 126
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       -0.05,
+       7
+      ],
+      [
+       46,
+       0.7,
+       13
+      ],
+      [
+       96,
+       -0.55,
+       17
+      ]
+     ],
+     "qd": 140
+    },
+    "II": {
+     "qrs": [
+      [
+       14,
+       -0.07,
+       7
+      ],
+      [
+       46,
+       0.9,
+       13
+      ],
+      [
+       96,
+       -0.5,
+       17
+      ]
+     ],
+     "qd": 140
+    },
+    "V1": {
+     "qrs": [
+      [
+       20,
+       0.2,
+       8
+      ],
+      [
+       60,
+       -1.1,
+       16
+      ],
+      [
+       108,
+       0.25,
+       12
+      ]
+     ],
+     "qd": 140
+    },
+    "V5": {
+     "qrs": [
+      [
+       14,
+       -0.06,
+       7
+      ],
+      [
+       46,
+       1.3,
+       13
+      ],
+      [
+       96,
+       -0.45,
+       16
+      ]
+     ],
+     "qd": 140
+    },
+    "V6": {
+     "qrs": [
+      [
+       14,
+       -0.06,
+       7
+      ],
+      [
+       46,
+       1.05,
+       13
+      ],
+      [
+       96,
+       -0.4,
+       16
+      ]
+     ],
+     "qd": 140
+    }
+   },
+   "qtc": 0.48
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "aVR"
+     ],
+     "label": "terminal R",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "qrs"
+   ]
+  },
+  "answer": "Tricyclic antidepressant toxicity",
+  "options": [
+   "Tricyclic antidepressant toxicity",
+   "Brugada pattern (type 1)",
+   "Right bundle branch block",
+   "Sinus tachycardia",
+   "Hyperkalaemia",
+   "Wolff-Parkinson-White pattern"
+  ],
+  "hints": [
+   "The QRS is wide. Check aVR carefully.",
+   "Sodium channel blockade from her tablets."
+  ],
+  "explanation": "Sinus tachycardia with a widened QRS (about 140 ms), a tall terminal R wave in aVR and a deep terminal S in I: sodium channel blockade from tricyclic antidepressant overdose.",
+  "features": [
+   "Sinus tachycardia",
+   "QRS over 100 ms",
+   "Terminal R wave in aVR over 3 mm"
+  ],
+  "pearl": "A QRS over 100 ms predicts seizures and over 160 ms predicts ventricular arrhythmias. The antidote for sodium channel blockade is IV sodium bicarbonate. Call your poisons centre.",
+  "seed": "x-tca"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 19-year-old man with palpitations is pale and clammy. HR about 190, BP 94/58.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "af",
+    "rate": 185,
+    "f": 0.03
+   },
+   "preset": "wpw"
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "wide, varying",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "rr"
+   ]
+  },
+  "answer": "Pre-excited atrial fibrillation (AF with WPW)",
+  "options": [
+   "Pre-excited atrial fibrillation (AF with WPW)",
+   "Ventricular tachycardia",
+   "Atrial fibrillation with rapid ventricular response",
+   "Torsades de pointes",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial flutter with 2:1 block"
+  ],
+  "hints": [
+   "Is it regular? Is it narrow?",
+   "Fast, irregular and broad: the impulses are taking a shortcut that bypasses the AV node."
+  ],
+  "explanation": "A very fast, irregularly irregular, broad-complex tachycardia (about 190/min) with slurred delta-wave upstrokes: atrial fibrillation conducting down an accessory pathway in Wolff-Parkinson-White syndrome.",
+  "features": [
+   "Irregularly irregular",
+   "Broad QRS with delta waves",
+   "Very fast rate (can exceed 250/min)"
+  ],
+  "pearl": "Never give AV-nodal blockers (adenosine, verapamil, diltiazem, beta blockers, digoxin) in pre-excited AF: they can push it into VF. If unstable, synchronised DC cardioversion; if stable, procainamide or flecainide, then ablation.",
+  "seed": "x-preaf"
+ },
+ {
+  "difficulty": "Genius",
+  "vignette": "A 31-year-old man of Thai background had a febrile illness and fainted. His brother died in his sleep at 35.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 78
+   },
+   "tweaks": {
+    "V1": {
+     "qrs": [
+      [
+       20,
+       0.15,
+       6
+      ],
+      [
+       44,
+       -0.6,
+       9
+      ],
+      [
+       80,
+       0.3,
+       10
+      ]
+     ],
+     "qd": 100,
+     "st": 0.12,
+     "t": 0.06
+    },
+    "V2": {
+     "qrs": [
+      [
+       22,
+       0.3,
+       7
+      ],
+      [
+       52,
+       -0.9,
+       10
+      ],
+      [
+       84,
+       0.36,
+       10
+      ]
+     ],
+     "qd": 100,
+     "st": 0.22,
+     "t": 0.26
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1",
+      "V2"
+     ],
+     "label": "saddleback",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Brugada pattern (type 2)",
+  "options": [
+   "Brugada pattern (type 2)",
+   "Brugada pattern (type 1)",
+   "Right bundle branch block",
+   "Benign early repolarisation",
+   "Acute pericarditis",
+   "Arrhythmogenic right ventricular cardiomyopathy"
+  ],
+  "hints": [
+   "Look at the shape of the ST segment in V2.",
+   "It dips between two humps, then the T wave is upright."
+  ],
+  "explanation": "In V1–V2, a terminal r' followed by ST elevation with a 'saddleback' shape (the ST dips then rises into an upright T wave): Brugada type 2 pattern. With syncope and a family history of sudden death, it needs specialist assessment.",
+  "features": [
+   "Saddleback ST elevation V1–V2",
+   "Upright T wave in V2",
+   "Terminal r' in V1"
+  ],
+  "pearl": "Only the coved type 1 pattern is diagnostic. A type 2 pattern can be unmasked into type 1 by fever or a drug challenge (ajmaline/flecainide) under specialist care. Brugada is more common in men of Southeast Asian descent.",
+  "seed": "x-brug2"
+ },
+ {
+  "difficulty": "Hard",
+  "vignette": "A 57-year-old woman who had rheumatic fever as a child in Fiji is breathless on exertion. An echo shows a narrowed mitral valve.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 78
+   },
+   "tweaks": {
+    "II": {
+     "p": [
+      [
+       34,
+       0.14,
+       13
+      ],
+      [
+       92,
+       0.14,
+       13
+      ]
+     ]
+    },
+    "I": {
+     "p": [
+      [
+       34,
+       0.07,
+       13
+      ],
+      [
+       92,
+       0.07,
+       13
+      ]
+     ]
+    },
+    "V1": {
+     "p": [
+      [
+       34,
+       0.06,
+       11
+      ],
+      [
+       88,
+       -0.18,
+       20
+      ]
+     ]
+    }
+   },
+   "pr": 200
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II"
+     ],
+     "label": "notched P",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V1"
+     ],
+     "label": "deep terminal P",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Left atrial enlargement (P mitrale)",
+  "options": [
+   "Left atrial enlargement (P mitrale)",
+   "Right atrial enlargement (P pulmonale)",
+   "Atrial flutter with 4:1 block",
+   "First-degree AV block",
+   "Ectopic atrial rhythm",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "The QRS and T are fine. Zoom in on the P waves.",
+   "Broad and double-humped in II, with a big negative tail in V1."
+  ],
+  "explanation": "Sinus rhythm with broad (over 120 ms), notched, double-humped P waves in lead II and a deep, wide negative terminal P wave in V1: left atrial enlargement (P mitrale), here from rheumatic mitral stenosis.",
+  "features": [
+   "Broad, notched P wave in II (over 120 ms)",
+   "Deep negative terminal P in V1",
+   "Sinus rhythm"
+  ],
+  "pearl": "Rheumatic heart disease is still common in many low- and middle-income countries and in Aboriginal and Torres Strait Islander and Pacific Islander communities. Mitral stenosis enlarges the left atrium, which often leads to AF.",
+  "seed": "x-pmit"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 66-year-old man with long-standing severe COPD has worsening breathlessness.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 92
+   },
+   "tweaks": {
+    "II": {
+     "p": [
+      [
+       48,
+       0.3,
+       13
+      ]
+     ]
+    },
+    "I": {
+     "p": [
+      [
+       48,
+       0.04,
+       13
+      ]
+     ]
+    },
+    "V1": {
+     "p": [
+      [
+       38,
+       0.17,
+       12
+      ],
+      [
+       72,
+       -0.03,
+       13
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "tall peaked P",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Right atrial enlargement (P pulmonale)",
+  "options": [
+   "Right atrial enlargement (P pulmonale)",
+   "Left atrial enlargement (P mitrale)",
+   "Hyperkalaemia",
+   "Sinus tachycardia",
+   "Atrial flutter with 2:1 block",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "The QRS and T are fine. Look at the P waves.",
+   "Tall and pointed in the inferior leads."
+  ],
+  "explanation": "Sinus rhythm with tall, peaked P waves (over 2.5 mm) in II, III and aVF: right atrial enlargement (P pulmonale), from chronic lung disease and pulmonary hypertension.",
+  "features": [
+   "Tall, peaked P waves (over 2.5 mm) in II",
+   "Normal P duration",
+   "Sinus rhythm"
+  ],
+  "pearl": "Tall peaked P = right atrium (P pulmonale); broad notched P = left atrium (P mitrale). Peaked T waves, not P waves, are the hyperkalaemia sign.",
+  "seed": "x-ppul"
  }
 ]

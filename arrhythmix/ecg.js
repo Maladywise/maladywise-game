@@ -178,6 +178,7 @@
       }
     }
     P.sort(function (a, b) { return a.t - b.t; }); Q.sort(function (a, b) { return a.t - b.t; });
+    if (R.alternans) Q.forEach(function (q, i3) { if (i3 % 2) q.amp = R.alternans; }); // electrical alternans
     Q.forEach(function (q, i2) { q.rr = i2 ? q.t - Q[i2 - 1].t : (Q[1] ? Q[1].t - q.t : rr0); });
     return { P: P, Q: Q, base: base, spikes: spikes };
   }
@@ -188,6 +189,8 @@
     var T = clone(BASE);
     (PRESETS[cfg.preset || "normal"] || PRESETS.normal)(T, opt);
     if (cfg.tweaks) Object.keys(cfg.tweaks).forEach(function (L) { Object.keys(cfg.tweaks[L]).forEach(function (k) { T[L][k] = cfg.tweaks[L][k]; }); });
+    // optional low-voltage scaling of every QRS and T (e.g. pericardial effusion)
+    if (cfg.volt) L8.forEach(function (L) { var t = T[L]; t.qrs = t.qrs.map(function (c) { return c.length === 3 ? [c[0], c[1] * cfg.volt, c[2]] : [c[0], c[1], c[2], c[3] * cfg.volt]; }); if (t.t) t.t *= cfg.volt; });
     var dur = cfg.dur || 10, R = cfg.rhythm || { type: "sinus", rate: 75 };
     var rh = rhythm(R, dur, rnd, opt), qtc = (opt.qtc || cfg.qtc || 0.41) * MS;
     var LI = {}; L8.forEach(function (L, i) { LI[L] = i + 1; });
