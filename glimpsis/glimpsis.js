@@ -23,7 +23,7 @@
     ' <div class="result" id="glm-result" hidden></div>' +
     ' <p class="note" id="glm-next"></p>' +
     ' <details class="archive" id="glm-archive"><summary>Past images</summary><div class="alist" id="glm-alist"></div></details>' +
-    ' <p class="note">Real clinical images from Wikimedia Commons under free licences, credited under each image. Scenarios are fictional. General education, not personal medical advice.</p>' +
+    ' <p class="note">Real clinical images from the CDC Public Health Image Library and Wikimedia Commons under free licences, credited under each image. Scenarios are fictional. General education, not personal medical advice.</p>' +
     "</div>";
   var $ = function (id) { return document.getElementById("glm-" + id); };
 
@@ -54,14 +54,16 @@
   // ---------- helpers ----------
   function seeded(a) { a = a >>> 0; return function () { a = (a + 0x6D2B79F5) >>> 0; var t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
   function options() { var o = [P.answer].concat(P.wrong), r = seeded(dayNum(P.date) * 61 + 11); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)), t = o[k]; o[k] = o[j]; o[j] = t; } return o; }
-  function src(w) { return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(P.img.file.replace(/ /g, "_")) + "?width=" + w; }
+  function src(w) { return P.img.url ? P.img.url : "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(P.img.file.replace(/ /g, "_")) + "?width=" + w; }
+  function srcName() { return P.img.source || (P.img.url ? "CDC Public Health Image Library" : "Wikimedia Commons"); }
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
 
   // ---------- render ----------
   function credit() {
     var i = P.img, lic = i.licence_url ? '<a href="' + esc(i.licence_url) + '" target="_blank" rel="noopener">' + esc(i.licence) + "</a>" : esc(i.licence);
-    if (!st.done) return "Image: " + esc(i.author) + " · " + lic + " · Wikimedia Commons. Full source shown after you answer.";
-    return 'Image: <a href="' + esc(i.page) + '" target="_blank" rel="noopener">' + esc(i.file.replace(/\.[a-z]+$/i, "").replace(/_/g, " ")) + "</a> by " + esc(i.author) + " · " + lic + " · via Wikimedia Commons.";
+    if (!st.done) return "Image: " + esc(i.author) + " · " + lic + " · " + esc(srcName()) + ". Full source shown after you answer.";
+    var nm = i.file ? i.file.replace(/\.[a-z]+$/i, "").replace(/_/g, " ") : "Source page";
+    return 'Image: <a href="' + esc(i.page) + '" target="_blank" rel="noopener">' + esc(nm) + "</a> by " + esc(i.author) + " · " + lic + " · via " + esc(srcName()) + ".";
   }
   function renderReport() {
     $("report").innerHTML =

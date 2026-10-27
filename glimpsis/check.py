@@ -18,13 +18,15 @@ for f in sorted(glob.glob("glimpsis/puzzles/20*.json")):
         dd = datetime.date.fromisoformat(d)
         if p.get("difficulty") not in (DIFF[dd.weekday()], "Einstein"): err(f"{w} difficulty {p.get('difficulty')} != {DIFF[dd.weekday()]}")
         i = p.get("img", {})
-        for k in ("file", "author", "licence", "page"):
+        if not (i.get("file") or i.get("url")): err(f"{w} img needs file or url")
+        for k in ("author", "licence", "page"):
             if not i.get(k): err(f"{w} img.{k} missing")
         if i.get("licence") and not OK_LIC.match(i["licence"]): err(f"{w} licence not allowed: {i['licence']}")
         if "NC" in i.get("licence", "") or "ND" in i.get("licence", ""): err(f"{w} NC/ND licence")
         a = p.get("answer", "").lower()
         for t in (p.get("title", ""), p.get("context", ""), " ".join(p.get("hints", []))):
             if a and a in t.lower(): err(f"{w} answer given away in text")
-        if i.get("file") in seen: err(f"{w} image reused from {seen[i['file']]}")
-        seen[i.get("file")] = d
+        key = i.get("file") or i.get("url")
+        if key in seen: err(f"{w} image reused from {seen[key]}")
+        seen[key] = d
 print("OK" if not bad else f"{bad} problem(s)"); sys.exit(1 if bad else 0)
