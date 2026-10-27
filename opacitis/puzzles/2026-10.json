@@ -1,0 +1,262 @@
+[
+ {
+  "date": "2026-10-25",
+  "number": 1,
+  "difficulty": "Genius",
+  "title": "Easy to miss",
+  "context": "A 58-year-old smoker has had a fever, rigors and a cough with rusty sputum for four days. Crackles are hard to hear.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=5802",
+   "author": "CDC / Dr Thomas Hooten",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/2026-10-25.jpg",
+   "alt": "Frontal chest X-ray with subtle hazy opacity in the right upper zone."
+  },
+  "answer": "Right upper lobe pneumonia",
+  "wrong": [
+   "Right middle lobe pneumonia",
+   "Right upper lobe collapse",
+   "Pancoast tumour",
+   "Normal chest X-ray",
+   "Left lower lobe pneumonia"
+  ],
+  "hints": [
+   "Compare the two upper zones, rib space by rib space.",
+   "The haze sits above the level of the horizontal fissure, and the volume looks normal."
+  ],
+  "why": "Subtle hazy airspace opacity in the right upper zone, with preserved lung volume and no mass: right upper lobe consolidation.",
+  "assoc": [
+   "Streptococcus pneumoniae",
+   "Klebsiella (bulging fissure)",
+   "Tuberculosis in the upper lobes",
+   "Repeat film in smokers"
+  ],
+  "pearl": "Collapse loses volume (the fissure and trachea pull up); pneumonia usually doesn't. In smokers and older adults, repeat the chest X-ray about 6 weeks after treatment to make sure an underlying tumour isn't hiding behind the consolidation."
+ },
+ {
+  "date": "2026-10-26",
+  "number": 2,
+  "difficulty": "Easy",
+  "title": "Sudden breathlessness",
+  "context": "A tall, thin 24-year-old developed sudden left-sided chest pain and breathlessness at rest.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3APneumothorax_CXR.jpg",
+   "file": "Pneumothorax CXR.jpg",
+   "author": "Photographed by User Clinical Cases 00:42, 7 November 2006",
+   "licence": "CC BY-SA 2.5",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/2.5",
+   "url": "img/2026-10-26.jpg",
+   "alt": "A large left-sided dark (lucent) area with no lung markings and a visible collapsed lung edge"
+  },
+  "answer": "Pneumothorax",
+  "wrong": [
+   "Pleural effusion",
+   "Bullous emphysema",
+   "Left lower lobe collapse",
+   "Pneumonia",
+   "Pulmonary embolism"
+  ],
+  "hints": [
+   "One side is much darker than the other, with no lung markings at the edge.",
+   "Look for a thin white line where the lung edge has pulled away from the chest wall."
+  ],
+  "why": "A large left-sided dark (lucent) area with no lung markings and a visible collapsed lung edge: air in the pleural space.",
+  "assoc": [
+   "Tall, thin young men (primary spontaneous)",
+   "Smoking",
+   "COPD and other lung disease",
+   "Trauma"
+  ],
+  "pearl": "Tension pneumothorax is a clinical diagnosis (hypotension, distress, deviated trachea): decompress first, X-ray later. Small primary pneumothoraces in well patients can often be watched."
+ },
+ {
+  "date": "2026-10-27",
+  "number": 3,
+  "difficulty": "Easy",
+  "title": "A fall on the shoulder",
+  "context": "A 35-year-old fell while skiing. His shoulder looks squared off and he holds his arm away from his body.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3AShoulder_dislocation.jpg",
+   "file": "Shoulder dislocation.jpg",
+   "author": "Drfrancescsoler",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-10-27.jpg",
+   "alt": "The humeral head lies below and in front of the glenoid instead of within it"
+  },
+  "answer": "Anterior shoulder dislocation",
+  "wrong": [
+   "Posterior shoulder dislocation",
+   "Fractured neck of humerus",
+   "Acromioclavicular joint dislocation",
+   "Clavicle fracture",
+   "Normal shoulder"
+  ],
+  "hints": [
+   "The ball of the humerus isn't sitting in its socket.",
+   "It has moved forwards and down, below the coracoid."
+  ],
+  "why": "The humeral head lies below and in front of the glenoid instead of within it: anterior dislocation of the shoulder.",
+  "assoc": [
+   "Fall on an outstretched arm",
+   "Contact sports",
+   "Axillary nerve injury"
+  ],
+  "pearl": "Check the axillary nerve (sensation over the 'regimental badge' area) before and after reduction. Posterior dislocations are easily missed: think seizures and electric shocks."
+ },
+ {
+  "date": "2026-10-28",
+  "number": 4,
+  "difficulty": "Medium",
+  "title": "Fever that won't settle",
+  "context": "An 82-year-old woman has had fevers, chills and weight loss for two weeks. She is on long-term steroids.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChest_radiograph_of_miliary_tuberculosis_1.jpg",
+   "file": "Chest radiograph of miliary tuberculosis 1.jpg",
+   "author": "Benjamín Herreros, Isabel Plaza, Rebeca García, Marta Chichón, Carmen Guerrero and Emilio Pintor",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/2026-10-28.jpg",
+   "alt": "Countless tiny (1–3 mm) nodules evenly scattered through both lungs"
+  },
+  "answer": "Miliary tuberculosis",
+  "wrong": [
+   "Pulmonary oedema",
+   "Sarcoidosis",
+   "Pneumocystis pneumonia",
+   "Metastases",
+   "Silicosis"
+  ],
+  "hints": [
+   "Zoom in: the lungs are full of tiny, evenly spread dots.",
+   "Each dot is about the size of a millet seed."
+  ],
+  "why": "Countless tiny (1–3 mm) nodules evenly scattered through both lungs: a 'millet seed' pattern from blood-borne spread of TB.",
+  "assoc": [
+   "Immunosuppression (steroids, HIV)",
+   "Older age",
+   "Disseminated TB (liver, bone marrow, meninges)"
+  ],
+  "pearl": "The chest X-ray can be normal early in miliary TB. Look for TB elsewhere, including the meninges, and check HIV status."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 5,
+  "difficulty": "Medium",
+  "title": "A punch gone wrong",
+  "context": "A 23-year-old has a swollen hand with a sunken knuckle after punching a wall.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABoxerfraktur.png",
+   "file": "Boxerfraktur.png",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-10-29.jpg",
+   "alt": "A fracture through the neck of the fifth metacarpal with the head tipped towards the palm"
+  },
+  "answer": "Fifth metacarpal neck fracture (boxer's fracture)",
+  "wrong": [
+   "Scaphoid fracture",
+   "Bennett fracture",
+   "Fourth metacarpal shaft fracture",
+   "Normal hand",
+   "Gamekeeper's thumb"
+  ],
+  "hints": [
+   "Look at the little-finger side of the hand.",
+   "The bone is broken just behind the knuckle."
+  ],
+  "why": "A fracture through the neck of the fifth metacarpal with the head tipped towards the palm: a boxer's fracture.",
+  "assoc": [
+   "Punching a hard object",
+   "Young men",
+   "Fight bites (check for a wound)"
+  ],
+  "pearl": "Any skin break over the knuckle after a punch is a human bite until proven otherwise: it needs washout and antibiotics."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 6,
+  "difficulty": "Hard",
+  "title": "A hugely swollen belly",
+  "context": "A child with chronic constipation has severe abdominal distension and pain. Abdominal X-ray:",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASigmoidvolvulus.jpg",
+   "file": "Sigmoidvolvulus.jpg",
+   "author": "Mont4nha",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-10-30.jpg",
+   "alt": "A massively distended, inverted-U loop of large bowel rising out of the pelvis"
+  },
+  "answer": "Sigmoid volvulus",
+  "wrong": [
+   "Toxic megacolon",
+   "Small bowel obstruction",
+   "Caecal volvulus",
+   "Hirschsprung disease",
+   "Constipation (faecal loading)"
+  ],
+  "hints": [
+   "One enormously dilated loop fills much of the abdomen.",
+   "It arises from the pelvis and is shaped like a bean."
+  ],
+  "why": "A massively distended, inverted-U loop of large bowel rising out of the pelvis: the 'coffee bean' sign of a twisted sigmoid colon.",
+  "assoc": [
+   "Chronic constipation",
+   "Older age and neurological conditions",
+   "High-fibre diets (common in Africa and Asia)"
+  ],
+  "pearl": "Sigmoid volvulus can often be untwisted with a flexible sigmoidoscope and rectal tube; recurrence is common, so surgery is usually planned afterwards."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 7,
+  "difficulty": "Hard",
+  "title": "Sore wrist after a fall",
+  "context": "A 26-year-old has wrist pain after a fall. He is tender in the anatomical snuffbox.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File%3AScaphoid_fracture_-_barely_visible_on_initial_X-ray.jpg",
+   "file": "Scaphoid fracture - barely visible on initial X-ray.jpg",
+   "author": "Mohamed Jarraya, Daichi Hayashi, Frank W. Roemer, Michel D. Crema, Luis Diaz, Jane Conlin, Monica D. Marra, Nabil Jomaah, and Ali Guermazi",
+   "licence": "CC BY 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by/3.0",
+   "url": "img/2026-10-31.jpg",
+   "alt": "A faint lucent line across the waist of the scaphoid"
+  },
+  "answer": "Scaphoid fracture",
+  "wrong": [
+   "Colles fracture",
+   "Normal wrist",
+   "Lunate dislocation",
+   "Wrist sprain",
+   "Triquetral fracture"
+  ],
+  "hints": [
+   "The fracture line is subtle. Look at the small bone at the base of the thumb.",
+   "Snuffbox tenderness points to this bone."
+  ],
+  "why": "A faint lucent line across the waist of the scaphoid: a subtle scaphoid fracture.",
+  "assoc": [
+   "Fall on an outstretched hand",
+   "Young adults",
+   "Snuffbox tenderness"
+  ],
+  "pearl": "Scaphoid fractures are often invisible on the first X-ray. If you suspect one, immobilise and arrange repeat imaging or MRI, because missed fractures can lead to avascular necrosis."
+ }
+]

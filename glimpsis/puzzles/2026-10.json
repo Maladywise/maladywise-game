@@ -1,7 +1,118 @@
 [
  {
+  "date": "2026-10-25",
+  "difficulty": "Genius",
+  "title": "A spotty wrist",
+  "context": "A child in North Carolina is feverish with headache and muscle aches, five days after a family camping trip. The rash started at the wrists and ankles.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-25.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=1962",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Back of a child's hand and wrist covered in small red macules and petechiae."
+  },
+  "answer": "Rocky Mountain spotted fever",
+  "wrong": [
+   "Meningococcal septicaemia",
+   "Measles",
+   "Dengue",
+   "Henoch-Schönlein purpura",
+   "Hand, foot and mouth disease"
+  ],
+  "hints": [
+   "Ask about ticks. Then ask again.",
+   "The rash starts on the wrists and ankles, then spreads towards the trunk, and can involve the palms and soles."
+  ],
+  "why": "Small blanching macules turning petechial over the wrist and back of the hand: a centripetal spotted-fever rash.",
+  "assoc": [
+   "Rickettsia rickettsii",
+   "Dog and wood ticks",
+   "Doxycycline, even in children",
+   "Other spotted fevers worldwide"
+  ],
+  "pearl": "Start doxycycline on suspicion, at any age: delays beyond day 5 sharply raise the death rate, and the classic triad of fever, rash and tick bite is present in only a minority at first. Related rickettsial spotted fevers occur worldwide.",
+  "number": 1
+ },
+ {
+  "date": "2026-10-26",
+  "difficulty": "Easy",
+  "title": "Thick yellow nails",
+  "context": "A 67-year-old who swims at the local pool says his big toenails have slowly turned thick, yellow and crumbly.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-26.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=579",
+   "author": "CDC/ Dr. Edwin P. Ewing, Jr.",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Both great toenails thickened and yellow-brown with streaks and crumbling free edges."
+  },
+  "answer": "Onychomycosis (fungal nail infection)",
+  "wrong": [
+   "Nail psoriasis",
+   "Subungual melanoma",
+   "Pseudomonas nail (green nail)",
+   "Onychogryphosis",
+   "Trauma (subungual haematoma)"
+  ],
+  "hints": [
+   "It started at the free edge and is slowly creeping back.",
+   "The same organism often causes athlete’s foot."
+  ],
+  "why": "Thick, yellow, streaky great toenails with crumbly debris lifting from the free edge.",
+  "assoc": [
+   "Trichophyton rubrum",
+   "Tinea pedis",
+   "Diabetes and older age",
+   "Communal showers and pools"
+  ],
+  "pearl": "Confirm with nail clippings for microscopy and culture before months of treatment: only about half of abnormal-looking nails are fungal. Psoriasis is the great mimic.",
+  "number": 2
+ },
+ {
+  "date": "2026-10-27",
+  "difficulty": "Easy",
+  "title": "The sore that won't heal",
+  "context": "A 34-year-old aid worker back from rural Afghanistan has a painless ulcer on her forearm. It started as a small bump where she was bitten by insects at dusk three months ago.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-27.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=368",
+   "author": "CDC (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A round, crusted ulcer with a raised rolled border on hairy forearm skin."
+  },
+  "answer": "Cutaneous leishmaniasis",
+  "wrong": [
+   "Pyoderma gangrenosum",
+   "Basal cell carcinoma",
+   "Tropical ulcer",
+   "Cutaneous anthrax",
+   "Sporotrichosis"
+  ],
+  "hints": [
+   "Think about who bites at dusk: tiny sandflies.",
+   "A painless ulcer with a raised, volcano-like rim that slowly enlarges over months."
+  ],
+  "why": "A round, crusted ulcer with a raised, rolled border: the classic 'volcano' sore of cutaneous leishmaniasis.",
+  "assoc": [
+   "Sandfly bites",
+   "Middle East, Afghanistan, Latin America, East Africa",
+   "Leishmania parasites",
+   "Slow, painless ulcer"
+  ],
+  "pearl": "Cutaneous leishmaniasis is one of the WHO's neglected tropical diseases, with hundreds of thousands of new cases a year. Many sores heal alone over months but leave scars; some species can later spread to the nose and mouth.",
+  "number": 3
+ },
+ {
   "date": "2026-10-28",
-  "number": 1,
+  "number": 4,
   "difficulty": "Medium",
   "title": "Look inside the cheek",
   "context": "An unvaccinated 22-year-old with three days of high fever, cough, runny nose and red eyes. No rash yet.",
@@ -37,7 +148,7 @@
  },
  {
   "date": "2026-10-29",
-  "number": 2,
+  "number": 5,
   "difficulty": "Medium",
   "title": "Look at the back",
   "context": "An unvaccinated young person, five days into a fever with cough, runny nose and red eyes. The rash began on the face.",
@@ -74,7 +185,7 @@
  },
  {
   "date": "2026-10-30",
-  "number": 3,
+  "number": 6,
   "difficulty": "Hard",
   "title": "Itchy at night",
   "context": "Everyone in the household has had an intense itch for weeks, worst at night.",
@@ -110,7 +221,7 @@
  },
  {
   "date": "2026-10-31",
-  "number": 4,
+  "number": 7,
   "difficulty": "Hard",
   "title": "Purple marks",
   "context": "A 41-year-old with weight loss, not previously tested for HIV, and painless purple patches on the leg.",

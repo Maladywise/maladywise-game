@@ -1,7 +1,7 @@
 [
  {
   "date": "2026-11-01",
-  "number": 5,
+  "number": 8,
   "difficulty": "Genius",
   "title": "Look at the eye",
   "context": "A person in a famine-affected area with night blindness and dry eyes.",
@@ -38,7 +38,7 @@
  },
  {
   "date": "2026-11-02",
-  "number": 6,
+  "number": 9,
   "difficulty": "Easy",
   "title": "Itchy spots, all over",
   "context": "A 24-year-old childcare worker with a mild fever and an itchy rash that started on her trunk two days ago.",
@@ -74,7 +74,7 @@
  },
  {
   "date": "2026-11-03",
-  "number": 7,
+  "number": 10,
   "difficulty": "Easy",
   "title": "A painful stripe",
   "context": "A 68-year-old with three days of burning pain on one side of the trunk, now with a rash in the same spot.",
@@ -110,7 +110,7 @@
  },
  {
   "date": "2026-11-04",
-  "number": 8,
+  "number": 11,
   "difficulty": "Medium",
   "title": "Tender shins",
   "context": "A 27-year-old woman with painful red lumps on both shins, achy joints and a recent sore throat.",
@@ -147,7 +147,7 @@
  },
  {
   "date": "2026-11-05",
-  "number": 9,
+  "number": 12,
   "difficulty": "Medium",
   "title": "Look at the legs",
   "context": "A child with poor growth and little sunlight, who was slow to walk.",
@@ -184,7 +184,7 @@
  },
  {
   "date": "2026-11-06",
-  "number": 10,
+  "number": 13,
   "difficulty": "Hard",
   "title": "A black scab",
   "context": "A farm worker who skinned a sick cow last week. The sore isn't painful, but the arm is swollen.",
@@ -220,7 +220,7 @@
  },
  {
   "date": "2026-11-07",
-  "number": 11,
+  "number": 14,
   "difficulty": "Hard",
   "title": "Look at the palms",
   "context": "A 31-year-old with a sore throat, patchy hair loss and a non-itchy rash, a couple of months after a painless sore that healed.",
@@ -257,7 +257,7 @@
  },
  {
   "date": "2026-11-08",
-  "number": 12,
+  "number": 15,
   "difficulty": "Genius",
   "title": "A historical image",
   "context": "This photo was taken before 1980. The patient had high fever and back pain, then a rash that began on the face and arms.",
@@ -293,7 +293,7 @@
  },
  {
   "date": "2026-11-09",
-  "number": 13,
+  "number": 16,
   "difficulty": "Easy",
   "title": "A spreading ring",
   "context": "A hiker in the northeastern US with fatigue and a slowly expanding, painless red patch on the arm, a week after a weekend camping.",
@@ -329,7 +329,7 @@
  },
  {
   "date": "2026-11-10",
-  "number": 14,
+  "number": 17,
   "difficulty": "Easy",
   "title": "Something white",
   "context": "A 72-year-old using an inhaled steroid for COPD, with a sore mouth and an odd taste.",
@@ -366,7 +366,7 @@
  },
  {
   "date": "2026-11-11",
-  "number": 15,
+  "number": 18,
   "difficulty": "Medium",
   "title": "Press and look",
   "context": "A woman in a community where the staple food is polished white rice, with weakness and swollen legs.",
@@ -403,7 +403,7 @@
  },
  {
   "date": "2026-11-12",
-  "number": 16,
+  "number": 19,
   "difficulty": "Medium",
   "title": "Look at the fingertips",
   "context": "A person with a long-standing lung problem and chronic cough. Check the hand.",
@@ -440,7 +440,7 @@
  },
  {
   "date": "2026-11-13",
-  "number": 17,
+  "number": 20,
   "difficulty": "Hard",
   "title": "Look at the throat",
   "context": "An unvaccinated traveller with a sore throat, low fever and a very swollen neck.",
@@ -476,7 +476,7 @@
  },
  {
   "date": "2026-11-14",
-  "number": 18,
+  "number": 21,
   "difficulty": "Hard",
   "title": "Side of the tongue",
   "context": "A 38-year-old with weight loss and recurrent infections. The white patches don't hurt.",
@@ -512,7 +512,7 @@
  },
  {
   "date": "2026-11-15",
-  "number": 19,
+  "number": 22,
   "difficulty": "Genius",
   "title": "A pale patch",
   "context": "A 35-year-old from a country where it's endemic, with a pale patch on the skin that feels numb to touch.",
@@ -548,7 +548,7 @@
  },
  {
   "date": "2026-11-16",
-  "number": 20,
+  "number": 23,
   "difficulty": "Easy",
   "title": "Look at the nails",
   "context": "A 34-year-old woman with heavy periods, tiredness and breathlessness on stairs.",
@@ -584,7 +584,7 @@
  },
  {
   "date": "2026-11-17",
-  "number": 21,
+  "number": 24,
   "difficulty": "Easy",
   "title": "Look at the eyes",
   "context": "A 29-year-old back from a holiday, with a week of nausea, dark urine and pale stools.",
@@ -621,7 +621,7 @@
  },
  {
   "date": "2026-11-18",
-  "number": 22,
+  "number": 25,
   "difficulty": "Medium",
   "title": "Crusty sores",
   "context": "A 9-year-old with spreading sores on the arm after scratching insect bites. Classmates have it too.",
@@ -657,7 +657,7 @@
  },
  {
   "date": "2026-11-19",
-  "number": 23,
+  "number": 26,
   "difficulty": "Medium",
   "title": "Rings on the chest",
   "context": "A man who works with cattle, with a few slowly spreading itchy rings on his chest.",
@@ -693,7 +693,7 @@
  },
  {
   "date": "2026-11-20",
-  "number": 24,
+  "number": 27,
   "difficulty": "Hard",
   "title": "Tiny dots",
   "context": "A 60-year-old living alone on toast and tea, with bleeding gums, easy bruising and poor wound healing.",
@@ -730,7 +730,7 @@
  },
  {
   "date": "2026-11-21",
-  "number": 25,
+  "number": 28,
   "difficulty": "Hard",
   "title": "Spots everywhere",
   "context": "A patient with fever and swollen lymph nodes, followed by a rash. All the spots look much the same.",
@@ -766,7 +766,7 @@
  },
  {
   "date": "2026-11-22",
-  "number": 26,
+  "number": 29,
   "difficulty": "Genius",
   "title": "A sore on the hand",
   "context": "A farmer bottle-feeding lambs this spring has a firm nodule on the hand. Otherwise well.",
@@ -802,7 +802,7 @@
  },
  {
   "date": "2026-11-23",
-  "number": 27,
+  "number": 30,
   "difficulty": "Easy",
   "title": "Look at the neck",
   "context": "A middle-aged man from a mountainous inland region, far from the sea, with a slowly growing lump.",
@@ -839,7 +839,7 @@
  },
  {
   "date": "2026-11-24",
-  "number": 28,
+  "number": 31,
   "difficulty": "Easy",
   "title": "Patches of white",
   "context": "A 19-year-old with painless, flat pale patches on the trunk that burn easily in the sun. No itch, no scale.",
@@ -876,7 +876,7 @@
  },
  {
   "date": "2026-11-25",
-  "number": 29,
+  "number": 32,
   "difficulty": "Medium",
   "title": "Up close",
   "context": "A school note went home about an itchy scalp outbreak. This is what the microscope showed on a few hairs.",
@@ -912,7 +912,7 @@
  },
  {
   "date": "2026-11-26",
-  "number": 30,
+  "number": 33,
   "difficulty": "Medium",
   "title": "Look at the elbow",
   "context": "A 45-year-old with thick, itchy patches on the elbows and knees for years, worse in winter.",
@@ -949,7 +949,7 @@
  },
  {
   "date": "2026-11-27",
-  "number": 31,
+  "number": 34,
   "difficulty": "Hard",
   "title": "Sun-exposed skin",
   "context": "A heavy drinker with diarrhoea, confusion and a rash only on the backs of the hands.",
