@@ -205,45 +205,6 @@
   "seed": "2026-11-02"
  },
  {
-  "difficulty": "Easy",
-  "vignette": "A 63-year-old man with a heart attack two years ago has palpitations and feels light-headed. BP 92/60.",
-  "ecg": {
-   "layout": "strip",
-   "rhythm": {
-    "type": "vt",
-    "rate": 175,
-    "arate": 76
-   }
-  },
-  "highlight": {
-   "marks": [
-    "qrs",
-    "dissoc"
-   ]
-  },
-  "answer": "Ventricular tachycardia",
-  "options": [
-   "Ventricular tachycardia",
-   "Supraventricular tachycardia (AVNRT)",
-   "Atrial flutter with 2:1 block",
-   "Sinus tachycardia",
-   "Ventricular fibrillation",
-   "Torsades de pointes"
-  ],
-  "hints": [
-   "Is the QRS narrow or broad?",
-   "Regular, broad, fast, and a scarred heart. Put it together."
-  ],
-  "explanation": "A regular broad-complex tachycardia at about 175/min with identical QRS complexes. With a past MI, a broad-complex tachycardia is VT until proven otherwise. Clues to AV dissociation clinch it: P waves marching through at their own slower rate, and capture or fusion beats.",
-  "features": [
-   "Rate about 175/min, regular",
-   "Broad QRS (about 165 ms), all the same shape",
-   "Dissociated P waves visible here and there"
-  ],
-  "pearl": "Assume any broad-complex tachycardia is VT until proven otherwise. After a previous MI, the vast majority are.",
-  "seed": "2026-11-03"
- },
- {
   "difficulty": "Medium",
   "vignette": "A 70-year-old woman with COPD has felt 'fluttery' and short of breath since yesterday.",
   "ecg": {
@@ -477,43 +438,6 @@
  },
  {
   "difficulty": "Easy",
-  "vignette": "A 19-year-old woman felt her heart start pounding suddenly while bending to tie her shoelaces. She is otherwise well.",
-  "ecg": {
-   "layout": "strip",
-   "rhythm": {
-    "type": "svt",
-    "rate": 186
-   }
-  },
-  "highlight": {
-   "marks": [
-    "rr"
-   ]
-  },
-  "answer": "Supraventricular tachycardia (AVNRT)",
-  "options": [
-   "Supraventricular tachycardia (AVNRT)",
-   "Sinus tachycardia",
-   "Atrial fibrillation",
-   "Ventricular tachycardia",
-   "Atrial flutter with 2:1 block",
-   "Ventricular fibrillation"
-  ],
-  "hints": [
-   "Narrow or broad? Regular or irregular?",
-   "Regular, narrow, very fast, no visible P waves, sudden onset."
-  ],
-  "explanation": "A regular narrow-complex tachycardia at about 185/min with no visible P waves (they are buried in or just after the QRS). Sudden onset and offset in a young, well person fits AV nodal re-entrant tachycardia, the commonest regular SVT, and one that is more common in women.",
-  "features": [
-   "Rate about 185/min, perfectly regular",
-   "Narrow QRS",
-   "No P waves visible before the QRS"
-  ],
-  "pearl": "In AVNRT, look for a 'pseudo-r′' in V1 or 'pseudo-S' in the inferior leads: the retrograde P wave hiding at the end of the QRS.",
-  "seed": "2026-11-09"
- },
- {
-  "difficulty": "Easy",
   "vignette": "A 48-year-old woman notices 'skipped beats' after her third coffee of the morning.",
   "ecg": {
    "layout": "strip",
@@ -549,47 +473,6 @@
   ],
   "pearl": "Full compensatory pause: the sinus beat after a PVC lands exactly two cycles after the one before it, because the sinus node never noticed the PVC.",
   "seed": "2026-11-10"
- },
- {
-  "difficulty": "Medium",
-  "vignette": "An 82-year-old woman feels exhausted and dizzy. Pulse 38 and regular.",
-  "ecg": {
-   "layout": "strip",
-   "rhythm": {
-    "type": "chb",
-    "rate": 88,
-    "vrate": 38,
-    "escape": "wide",
-    "voff": 0.7
-   }
-  },
-  "highlight": {
-   "marks": [
-    "p"
-   ]
-  },
-  "answer": "Complete heart block",
-  "options": [
-   "Complete heart block",
-   "Second-degree AV block, Mobitz II",
-   "Sinus bradycardia",
-   "Junctional rhythm",
-   "First-degree AV block",
-   "Second-degree AV block, Mobitz I (Wenckebach)"
-  ],
-  "hints": [
-   "Mark the P waves and march them out. Then do the same for the QRSs.",
-   "P waves and QRS complexes each keep their own regular rate and ignore each other."
-  ],
-  "explanation": "P waves march through regularly at about 88/min, broad QRS complexes march at about 38/min, and the PR interval is random because nothing conducts. That is complete (third-degree) heart block with a ventricular escape rhythm. A narrow escape would suggest a higher, junctional escape, which is faster and more reliable.",
-  "features": [
-   "P waves regular at about 88/min",
-   "Broad escape QRS regular at about 38/min",
-   "No consistent PR: complete AV dissociation",
-   "P waves hide in QRS and T waves"
-  ],
-  "pearl": "In complete heart block the atria beat faster than the ventricles. If the ventricles are faster, think of another cause of AV dissociation, such as VT.",
-  "seed": "2026-11-11"
  },
  {
   "difficulty": "Medium",
