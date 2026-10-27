@@ -17,13 +17,15 @@
   window.MW_mode = function () { return MODE; };
   function mk(k) { return NORMIE ? "n-" + k : k; } // mode-aware site-wide keys (streak, badges, trophies)
   window.MW_key = mk;
+  // Days back from day-number n to the most recent release day (weekStart may be one weekday or an array, e.g. [1, 4]).
+  function relBack(n, ws) { var wd = new Date(n * 864e5).getUTCDay(), a = Array.isArray(ws) ? ws : [ws == null ? 1 : ws]; return Math.min.apply(null, a.map(function (r) { return (wd - r + 7) % 7; })); }
   // In Normie mode, games with a "normie" block swap their text and use "n-" prefixed store keys,
   // so every reader below (readStats, watchDone, extras, celebrate...) is mode-aware for free.
   if (NORMIE) (window.MW_GAMES || []).forEach(function (g) {
     if (!g.normie) return;
     var n = typeof g.normie === "object" ? g.normie : {};
-    ["kind", "tagline", "quip", "helpQuip", "help", "weeklyLine"].forEach(function (f) { if (n[f] !== undefined) g[f] = n[f]; else if (f === "helpQuip") delete g.helpQuip; });
-    if (g.store) { var st0 = {}; Object.keys(g.store).forEach(function (k) { st0[k] = g.store[k]; }); st0.stats = "n-" + g.store.stats; st0.day = "n-" + g.store.day; if (n.labels) st0.labels = n.labels; g.medStore = g.store; g.store = st0; }
+    ["kind", "tagline", "quip", "helpQuip", "help", "weeklyLine", "relday"].forEach(function (f) { if (n[f] !== undefined) g[f] = n[f]; else if (f === "helpQuip") delete g.helpQuip; });
+    if (g.store) { var st0 = {}; Object.keys(g.store).forEach(function (k) { st0[k] = g.store[k]; }); st0.stats = "n-" + g.store.stats; st0.day = "n-" + g.store.day; if (n.labels) st0.labels = n.labels; if (n.weekStart != null) st0.weekStart = n.weekStart; g.medStore = g.store; g.store = st0; }
     g.nmode = true;
   });
   if (NORMIE && window.MW_ABOUT_N && window.MW_ABOUT) Object.keys(MW_ABOUT_N).forEach(function (k) { MW_ABOUT[k] = MW_ABOUT_N[k]; });
@@ -300,7 +302,7 @@
       var played = Math.max(s.played || 0, 0), sw = s.wins || 0, cur = s.streak || 0;
       if (!played && ds.length) { played = ds.length; sw = wins; }
       if (s.last && tn - dayNum(s.last) > (base.weekly ? 7 : 1)) cur = 0;
-      var dk2 = today; if (base.weekly) { var wd = new Date(tn * 864e5).getUTCDay(); dk2 = dstr(tn - (wd - (base.weekStart == null ? 1 : base.weekStart) + 7) % 7); }
+      var dk2 = today; if (base.weekly) { var ws0 = N && g.normie && g.normie.weekStart != null ? g.normie.weekStart : base.weekStart; dk2 = dstr(tn - relBack(tn, ws0)); }
       return { g: g, played: played, wins: sw, pct: played ? Math.round(sw / played * 100) : 0, streak: cur, best: Math.max(s.best || 0, cur), solved: wins, today: !!R[dk2], weekly: !!base.weekly };
     });
     get(P + "mw-days", []).forEach(function (d) { if (!days[d]) days[d] = 1; dayG[d] = dayG[d] || {}; });
@@ -551,7 +553,7 @@
     if (!g || !g.store) return null;
     var L = g.store.labels || ["1", "2", "3", "4", "5", "6", "X"];
     var s = get(g.store.stats, null) || { played: 0, wins: 0, streak: 0, best: 0, dist: L.map(function () { return 0; }) };
-    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key), wd = new Date(n * 864e5).getUTCDay(); key = new Date((n - (wd - (g.store.weekStart == null ? 1 : g.store.weekStart) + 7) % 7) * 864e5).toISOString().slice(0, 10); }
+    var key = sydToday(); if (g.store.weekly) { var n = dayNum(key); key = new Date((n - relBack(n, g.store.weekStart)) * 864e5).toISOString().slice(0, 10); }
     var today = get(g.store.day + key, null);
     return { s: s, done: !!(today && today.done), win: !!(today && today.win), labels: L };
   }
@@ -654,7 +656,7 @@
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (med ? " medonly" : "") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         '<div class="band">' + g.icon + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' +
-        '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow"><span class="pill wk">Weekly</span>' + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
+        '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow"><span class="pill wk">' + (g.relday && g.relday.indexOf("&") > 0 ? "Twice weekly" : "Weekly") + '</span>' + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + "</div></" + tag + ">";
     }
     function homeTop() {
@@ -686,7 +688,7 @@
       var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
       return MW_GAMES.filter(inMode).map(function (g, i) {
         var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
-        if (g.live && g.relday && DAYS[g.relday] === dw) k = 0.5; // release day: right after Dxtective
+        if (g.live && g.relday && (DAYS[g.relday] === dw || g.relday.indexOf(["Sundays", "Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays"][dw]) >= 0)) k = 0.5; // release day: right after Dxtective
         return { g: g, i: k, d: st && st.done ? 1 : 0, m: inMode(g) ? 0 : 1 };
       })
         .sort(function (a, b) { return a.m - b.m || a.d - b.d || a.i - b.i; }).map(function (x) { return x.g; });
@@ -797,7 +799,7 @@
       if (!g.store || !g.store.day) return;
       var rows = Array.prototype.slice.call(arch.querySelectorAll(".arow")), t = sydToday(), cur = (rows.filter(function (r) { return r.classList.contains("on"); })[0]);
       var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || t);
-      if (!cur && g.store.weekly && /^\d{4}-\d\d-\d\d$/.test(curD)) { var cn = dayNum(curD), cw = new Date(cn * 864e5).getUTCDay(); curD = new Date((cn - (cw - (g.store.weekStart == null ? 1 : g.store.weekStart) + 7) % 7) * 864e5).toISOString().slice(0, 10); } // weekly: this week's release day
+      if (!cur && g.store.weekly && /^\d{4}-\d\d-\d\d$/.test(curD)) { var cn = dayNum(curD); curD = new Date((cn - relBack(cn, g.store.weekStart)) * 864e5).toISOString().slice(0, 10); } // weekly: this week's release day
       var curSt = get(g.store.day + curD, null);
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
       nx.hidden = true;

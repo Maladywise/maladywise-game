@@ -41,8 +41,49 @@
   "pearl": "Irregularly irregular with no P waves is AF until proven otherwise. MAT is also irregular, but it has P waves in at least three different shapes."
  },
  {
-  "date": "2026-11-05",
+  "date": "2026-11-02",
   "number": 2,
+  "difficulty": "Medium",
+  "vignette": "A 79-year-old woman with a pacemaker comes in for a routine check. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "paced",
+    "mode": "vvi",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "marks": [
+    "spike",
+    "qrs"
+   ]
+  },
+  "answer": "Ventricular paced rhythm",
+  "options": [
+   "Ventricular paced rhythm",
+   "Dual-chamber paced rhythm",
+   "Left bundle branch block",
+   "Accelerated idioventricular rhythm",
+   "Ventricular tachycardia",
+   "Complete heart block"
+  ],
+  "hints": [
+   "Look just before each QRS.",
+   "There's one spike per beat, and no P wave in front of it."
+  ],
+  "explanation": "Sharp pacing spikes, each followed by a wide QRS at a fixed 70/min, with no paced atrial activity: single-chamber ventricular pacing (VVI).",
+  "features": [
+   "Pacing spike before every QRS",
+   "Wide QRS (LBBB-like from the right ventricle)",
+   "Fixed rate, no atrial spike"
+  ],
+  "pearl": "A right ventricular lead produces an LBBB-like paced QRS. Two spikes per beat (atrial then ventricular) means dual-chamber pacing.",
+  "seed": "x-vvi"
+ },
+ {
+  "date": "2026-11-05",
+  "number": 3,
   "difficulty": "Hard",
   "seed": "2026-10-30",
   "vignette": "A 63-year-old woman has had 40 minutes of heavy central chest pain spreading to her jaw. She is sweaty and nauseated. 12-lead ECG:",
@@ -97,8 +138,69 @@
   "pearl": "Reciprocal depression in aVL is often the first clue to an inferior STEMI, sometimes before the inferior elevation is obvious."
  },
  {
+  "date": "2026-11-09",
+  "number": 4,
+  "difficulty": "Medium",
+  "vignette": "A 46-year-old woman notices her heart 'skipping' when she drinks coffee at work. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 76,
+    "ectopics": [
+     {
+      "n": 2,
+      "type": "pvc"
+     },
+     {
+      "n": 5,
+      "type": "pvc"
+     },
+     {
+      "n": 8,
+      "type": "pvc"
+     },
+     {
+      "n": 11,
+      "type": "pvc"
+     },
+     {
+      "n": 14,
+      "type": "pvc"
+     }
+    ]
+   }
+  },
+  "highlight": {
+   "marks": [
+    "ectopic"
+   ]
+  },
+  "answer": "Ventricular trigeminy",
+  "options": [
+   "Ventricular trigeminy",
+   "Ventricular bigeminy",
+   "Atrial trigeminy",
+   "Sinus arrhythmia",
+   "Ventricular tachycardia",
+   "Second-degree AV block, Mobitz I (Wenckebach)"
+  ],
+  "hints": [
+   "Some beats are wide, early and have no P wave.",
+   "Count how often they come: two normal beats, then one odd one."
+  ],
+  "explanation": "Every third beat is an early, wide, bizarre QRS with no preceding P wave and a compensatory pause: a premature ventricular complex (PVC) in a 2:1 pattern, called ventricular trigeminy.",
+  "features": [
+   "Two sinus beats, then a PVC, repeating",
+   "PVCs are wide with no P wave",
+   "Full compensatory pause after each PVC"
+  ],
+  "pearl": "Occasional PVCs in a healthy heart are common and usually benign. Very frequent PVCs (over about 10% of beats), symptoms or structural heart disease deserve an echo and a Holter.",
+  "seed": "x-trig"
+ },
+ {
   "date": "2026-11-12",
-  "number": 3,
+  "number": 5,
   "difficulty": "Hard",
   "seed": "2026-10-31",
   "vignette": "A 66-year-old woman on haemodialysis has missed two sessions and now feels weak, with palpitations.",
@@ -149,8 +251,121 @@
   "pearl": "Hyperacute T waves of a STEMI are broad-based and bulky. Hyperkalaemic T waves are narrow-based and pointed, like a tent."
  },
  {
+  "date": "2026-11-16",
+  "number": 6,
+  "difficulty": "Hard",
+  "vignette": "A 34-year-old woman, two weeks after a long-haul flight, has sudden pleuritic chest pain and breathlessness. HR 112, SpO2 91%.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 112
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       0.08,
+       5
+      ],
+      [
+       38,
+       0.55,
+       9
+      ],
+      [
+       66,
+       -0.42,
+       9
+      ]
+     ],
+     "t": 0.2
+    },
+    "II": {
+     "qrs": [
+      [
+       14,
+       -0.1,
+       5
+      ],
+      [
+       40,
+       0.85,
+       9.5
+      ],
+      [
+       68,
+       -0.1,
+       8
+      ]
+     ],
+     "t": 0.1
+    },
+    "V1": {
+     "t": -0.22
+    },
+    "V2": {
+     "t": -0.3
+    },
+    "V3": {
+     "t": -0.2
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "S",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "III"
+     ],
+     "label": "Q, T inv",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "label": "T inv",
+     "tone": 2
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Pulmonary embolism (right heart strain)",
+  "options": [
+   "Pulmonary embolism (right heart strain)",
+   "Inferior STEMI",
+   "Wellens syndrome",
+   "Acute pericarditis",
+   "Right bundle branch block",
+   "Normal sinus rhythm"
+  ],
+  "hints": [
+   "Look at lead I and lead III together.",
+   "Sinus tachycardia plus T inversion in V1 to V3 points to right ventricular strain."
+  ],
+  "explanation": "Sinus tachycardia with a deep S wave in lead I, a Q wave and inverted T wave in lead III (S1Q3T3), and T-wave inversion in V1–V3: a pattern of acute right ventricular strain, consistent with pulmonary embolism in this story.",
+  "features": [
+   "Sinus tachycardia",
+   "S1Q3T3",
+   "T-wave inversion V1–V3"
+  ],
+  "pearl": "The commonest ECG finding in PE is just sinus tachycardia; S1Q3T3 is specific but insensitive. A normal ECG doesn't rule PE out. Use Wells/PERC and imaging.",
+  "seed": "x-pe"
+ },
+ {
   "date": "2026-11-19",
-  "number": 4,
+  "number": 7,
   "difficulty": "Hard",
   "seed": "2026-11-19",
   "vignette": "A 34-year-old woman on methadone, recently started on a macrolide antibiotic, suddenly collapses. The ward monitor shows:",
@@ -194,8 +409,104 @@
   "pearl": "A QTc over 500 ms markedly raises torsades risk, especially when QT-prolonging drugs (methadone, macrolides, ondansetron, some antipsychotics) are combined."
  },
  {
+  "date": "2026-11-23",
+  "number": 8,
+  "difficulty": "Medium",
+  "vignette": "A 68-year-old man with high blood pressure has an ECG as part of a health check. He feels well.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       -0.06,
+       5
+      ],
+      [
+       40,
+       0.9,
+       9.5
+      ],
+      [
+       70,
+       -0.05,
+       8
+      ]
+     ]
+    },
+    "II": {
+     "qrs": [
+      [
+       16,
+       0.18,
+       5
+      ],
+      [
+       40,
+       0.33,
+       9
+      ],
+      [
+       66,
+       -0.95,
+       10
+      ]
+     ]
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "rS",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "I",
+      "aVL"
+     ],
+     "label": "qR",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Left anterior fascicular block",
+  "options": [
+   "Left anterior fascicular block",
+   "Left posterior fascicular block",
+   "Left bundle branch block",
+   "Inferior STEMI",
+   "Left ventricular hypertrophy with strain",
+   "Right bundle branch block"
+  ],
+  "hints": [
+   "Work out the axis first: look at leads I and II.",
+   "Lead II is mostly negative, but the QRS is narrow."
+  ],
+  "explanation": "Narrow QRS with marked left axis deviation (lead I positive, lead II negative): small r and deep S in II, III and aVF (rS) and qR in I and aVL. That's left anterior fascicular block (left anterior hemiblock).",
+  "features": [
+   "Left axis deviation (about −50°)",
+   "rS in II, III, aVF",
+   "qR in I and aVL, narrow QRS"
+  ],
+  "pearl": "LAFB is the commonest cause of left axis deviation. With RBBB it makes bifascicular block, and adding a long PR is sometimes called 'trifascicular block'.",
+  "seed": "x-lafb"
+ },
+ {
   "date": "2026-11-26",
-  "number": 5,
+  "number": 9,
   "difficulty": "Genius",
   "seed": "2026-11-08",
   "vignette": "A 54-year-old woman had 20 minutes of chest pain while gardening yesterday. She is pain-free in the emergency department now.",
@@ -241,5 +552,84 @@
    "Recorded in a pain-free period"
   ],
   "pearl": "Wellens is a pain-free ECG. If the pain returns, the T waves can 'pseudo-normalise', so a normal-looking repeat ECG can be falsely reassuring."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 10,
+  "difficulty": "Hard",
+  "vignette": "A 63-year-old woman with diabetes has had heavy chest discomfort and nausea for an hour.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 84
+   },
+   "tweaks": {
+    "I": {
+     "st": 0.24,
+     "t": 0.36,
+     "ts": [
+      80,
+      50
+     ]
+    },
+    "II": {
+     "st": -0.05,
+     "t": 0.2
+    },
+    "V5": {
+     "st": 0.16,
+     "t": 0.45
+    },
+    "V6": {
+     "st": 0.16,
+     "t": 0.4
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I",
+      "aVL",
+      "V5",
+      "V6"
+     ],
+     "label": "ST up",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "III",
+      "aVF"
+     ],
+     "label": "reciprocal",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Lateral STEMI",
+  "options": [
+   "Lateral STEMI",
+   "Anterior STEMI",
+   "Inferior STEMI",
+   "Acute pericarditis",
+   "Benign early repolarisation",
+   "Left bundle branch block"
+  ],
+  "hints": [
+   "Which leads have ST elevation, and which have the mirror image?",
+   "I, aVL, V5 and V6 look at the same wall."
+  ],
+  "explanation": "ST elevation in I, aVL, V5 and V6 with reciprocal ST depression in III and aVF: lateral STEMI, often from the circumflex or a diagonal artery.",
+  "features": [
+   "ST elevation I, aVL, V5–V6",
+   "Reciprocal ST depression III and aVF",
+   "Ongoing ischaemic symptoms"
+  ],
+  "pearl": "Women and people with diabetes more often present with atypical symptoms such as nausea, breathlessness or fatigue rather than classic pain. Lateral STEMIs are easy to miss because the ST elevation in aVL can be small.",
+  "seed": "x-latmi"
  }
 ]
