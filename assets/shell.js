@@ -185,6 +185,10 @@
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
       return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">REPORT<br>SIGNED</div><p class="cb-cap">' + (gold ? "First look. Lightbox legend." : "Read on try " + n + ".") + "</p>" };
     },
+    dactylosis: function (st) {
+      if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
+      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">WORD<br>READ</div><p class="cb-cap">' + (gold ? "First try. Fluent fingers." : "Read on try " + n + ".") + "</p>" };
+    },
     glimpsis: function (st) {
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
       return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">SIGN<br>SPOTTED</div><p class="cb-cap">' + (gold ? "First glance. Eagle eyes." : "Spotted on try " + n + ".") + "</p>" };
