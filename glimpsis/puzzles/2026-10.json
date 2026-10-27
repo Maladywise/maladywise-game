@@ -1,0 +1,148 @@
+[
+ {
+  "date": "2026-10-28",
+  "number": 1,
+  "difficulty": "Medium",
+  "title": "Look inside the cheek",
+  "context": "An unvaccinated 22-year-old with three days of high fever, cough, runny nose and red eyes. No rash yet.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-10-28.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6111",
+   "author": "CDC/Dr Heinz F. Eichenwald",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close intraoral view of the buccal mucosa with tiny bright red spots bearing pale centres."
+  },
+  "answer": "Koplik spots",
+  "wrong": [
+   "Oral candidiasis",
+   "Aphthous ulcers",
+   "Fordyce spots",
+   "Herpangina",
+   "Petechiae"
+  ],
+  "hints": [
+   "They usually appear a day or two before the rash.",
+   "Classically 'grains of salt on a red background'."
+  ],
+  "why": "Tiny white-grey spots on red buccal mucosa, opposite the molars.",
+  "assoc": [
+   "Measles",
+   "Cough, coryza, conjunctivitis",
+   "Rash spreading from the face down"
+  ],
+  "pearl": "Koplik spots are pathognomonic of measles and appear before the rash, fading as it arrives. Measles is highly infectious, so notify public health and isolate."
+ },
+ {
+  "date": "2026-10-29",
+  "number": 2,
+  "difficulty": "Medium",
+  "title": "Look at the back",
+  "context": "An unvaccinated young person, five days into a fever with cough, runny nose and red eyes. The rash began on the face.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-29.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24435",
+   "author": "CDC/Dr Heinz F. Eichenwald",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A patient's back covered in a raised red blotchy rash with merging lesions."
+  },
+  "answer": "Measles",
+  "wrong": [
+   "Rubella",
+   "Scarlet fever",
+   "Roseola",
+   "Drug eruption",
+   "Kawasaki disease"
+  ],
+  "hints": [
+   "The rash spread down from the hairline.",
+   "Look inside the cheek for an earlier clue."
+  ],
+  "why": "A blotchy red maculopapular rash, merging into patches over the back.",
+  "assoc": [
+   "Koplik spots",
+   "Cough, coryza, conjunctivitis",
+   "Pneumonia",
+   "Encephalitis (rare)"
+  ],
+  "pearl": "Measles is one of the most contagious infections known. The rash starts behind the ears and on the face and moves down. Two doses of MMR protect about 97%."
+ },
+ {
+  "date": "2026-10-30",
+  "number": 3,
+  "difficulty": "Hard",
+  "title": "Itchy at night",
+  "context": "Everyone in the household has had an intense itch for weeks, worst at night.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-30.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=15381",
+   "author": "CDC/J. Pledger",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Back of a hand with small papules in the web space between the index and middle fingers."
+  },
+  "answer": "Scabies",
+  "wrong": [
+   "Eczema",
+   "Dermatitis herpetiformis",
+   "Insect bites",
+   "Contact dermatitis",
+   "Tinea manuum"
+  ],
+  "hints": [
+   "Look at the web spaces between the fingers.",
+   "Treat the whole household at the same time."
+  ],
+  "why": "Small itchy papules in the finger web space, a favourite site for the burrowing mite.",
+  "assoc": [
+   "Sarcoptes scabiei",
+   "Impetigo and rheumatic heart disease risk",
+   "Crusted scabies in immunosuppression"
+  ],
+  "pearl": "Treat all close contacts at once and wash bedding. Itch can last a few weeks after successful treatment, so it's not necessarily failure."
+ },
+ {
+  "date": "2026-10-31",
+  "number": 4,
+  "difficulty": "Hard",
+  "title": "Purple marks",
+  "context": "A 41-year-old with weight loss, not previously tested for HIV, and painless purple patches on the leg.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-10-31.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=5515",
+   "author": "CDC/Dr Steve Kraus",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Inner side of an ankle with several purplish skin lesions."
+  },
+  "answer": "Kaposi sarcoma",
+  "wrong": [
+   "Bruising",
+   "Bacillary angiomatosis",
+   "Pyogenic granuloma",
+   "Melanoma",
+   "Lichen planus"
+  ],
+  "hints": [
+   "Caused by human herpesvirus 8.",
+   "The marks don't blanch when pressed."
+  ],
+  "why": "Purple-brown patches and papules around the ankle and foot.",
+  "assoc": [
+   "HIV/AIDS",
+   "Human herpesvirus 8 (HHV-8)",
+   "Older men of Mediterranean descent",
+   "Transplant recipients"
+  ],
+  "pearl": "Kaposi sarcoma is an AIDS-defining illness and often improves with HIV treatment alone. It can also affect the mouth, gut and lungs."
+ }
+]
