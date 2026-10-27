@@ -1,0 +1,987 @@
+[
+ {
+  "date": "2026-11-01",
+  "number": 5,
+  "difficulty": "Genius",
+  "title": "Look at the eye",
+  "context": "A person in a famine-affected area with night blindness and dry eyes.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-01.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=3996",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close view of a left eye with a keratinised, foamy-looking plaque on the conjunctiva."
+  },
+  "answer": "Bitot's spots",
+  "wrong": [
+   "Pinguecula",
+   "Pterygium",
+   "Conjunctivitis",
+   "Subconjunctival haemorrhage",
+   "Corneal ulcer"
+  ],
+  "hints": [
+   "The patch looks foamy, like dried soap.",
+   "The night blindness points to a fat-soluble vitamin."
+  ],
+  "why": "A foamy, keratinised plaque on a dry conjunctiva.",
+  "assoc": [
+   "Vitamin A deficiency",
+   "Night blindness",
+   "Xerophthalmia",
+   "Measles"
+  ],
+  "pearl": "Vitamin A deficiency is a leading cause of preventable blindness in children worldwide. Severe measles can tip a child into it, which is why vitamin A is part of measles treatment."
+ },
+ {
+  "date": "2026-11-02",
+  "number": 6,
+  "difficulty": "Easy",
+  "title": "Itchy spots, all over",
+  "context": "A 24-year-old childcare worker with a mild fever and an itchy rash that started on her trunk two days ago.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-02.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21500",
+   "author": "CDC/K.L. Herrmann",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of skin with clear fluid-filled blisters on red bases and one crusted lesion."
+  },
+  "answer": "Chickenpox (varicella)",
+  "wrong": [
+   "Hand, foot and mouth disease",
+   "Molluscum contagiosum",
+   "Scabies",
+   "Impetigo",
+   "Insect bites"
+  ],
+  "hints": [
+   "Look closely: some spots are fresh blisters, others are already crusting.",
+   "Classically described as 'dewdrops on a rose petal'."
+  ],
+  "why": "Clear vesicles on red bases alongside crusted lesions: crops at different stages at the same time, the hallmark of varicella.",
+  "assoc": [
+   "Varicella-zoster virus",
+   "Worse in adults and pregnancy",
+   "Shingles later in life"
+  ],
+  "pearl": "Lesions at different stages side by side means chickenpox; all at the same stage should make you think of smallpox or mpox. Adults and pregnant women get sicker, so antivirals matter more."
+ },
+ {
+  "date": "2026-11-03",
+  "number": 7,
+  "difficulty": "Easy",
+  "title": "A painful stripe",
+  "context": "A 68-year-old with three days of burning pain on one side of the trunk, now with a rash in the same spot.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-03.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21506",
+   "author": "CDC/K.L. Herrmann",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A band of clustered red papules and vesicles on the trunk following a single dermatome (T10–T11)."
+  },
+  "answer": "Shingles (herpes zoster)",
+  "wrong": [
+   "Contact dermatitis",
+   "Cellulitis",
+   "Dermatitis herpetiformis",
+   "Insect bites",
+   "Pityriasis rosea"
+  ],
+  "hints": [
+   "It stops sharply at the midline.",
+   "The pain came before the rash."
+  ],
+  "why": "Clustered vesicles on red skin in a band following a single dermatome, on one side only.",
+  "assoc": [
+   "Reactivated varicella-zoster virus",
+   "Older age",
+   "Immunosuppression"
+  ],
+  "pearl": "Start antivirals within 72 hours of rash onset. Vesicles on the tip of the nose (Hutchinson's sign) mean the eye may be involved. A vaccine is available for older adults."
+ },
+ {
+  "date": "2026-11-04",
+  "number": 8,
+  "difficulty": "Medium",
+  "title": "Tender shins",
+  "context": "A 27-year-old woman with painful red lumps on both shins, achy joints and a recent sore throat.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-04.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=27616",
+   "author": "Dr. R. Huntington",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Front of both shins with raised, red, tender-looking nodules."
+  },
+  "answer": "Erythema nodosum",
+  "wrong": [
+   "Cellulitis",
+   "Erythema induratum",
+   "Bruising",
+   "Thrombophlebitis",
+   "Pretibial myxoedema"
+  ],
+  "hints": [
+   "The lumps are deep in the fat under the skin.",
+   "They heal like a bruise, without scarring."
+  ],
+  "why": "Tender, raised red nodules over both shins: inflammation of the fat beneath the skin (panniculitis).",
+  "assoc": [
+   "Streptococcal infection",
+   "Sarcoidosis",
+   "Inflammatory bowel disease",
+   "Pregnancy and the oral contraceptive pill"
+  ],
+  "pearl": "Erythema nodosum with hilar lymphadenopathy is Löfgren's syndrome (sarcoidosis), which usually settles by itself. Check for strep, TB, IBD and medicines."
+ },
+ {
+  "date": "2026-11-05",
+  "number": 9,
+  "difficulty": "Medium",
+  "title": "Look at the legs",
+  "context": "A child with poor growth and little sunlight, who was slow to walk.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-05.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=2436",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A malnourished child's legs with bowed knees (genu varum)."
+  },
+  "answer": "Rickets",
+  "wrong": [
+   "Blount's disease",
+   "Normal physiological bowing",
+   "Achondroplasia",
+   "Osteogenesis imperfecta",
+   "Scurvy"
+  ],
+  "hints": [
+   "The problem is with mineralising growing bone.",
+   "Sunshine and diet both matter here."
+  ],
+  "why": "Bowed legs (genu varum) from soft, poorly mineralised growing bones.",
+  "assoc": [
+   "Vitamin D deficiency",
+   "Low calcium or phosphate",
+   "Widened wrists",
+   "Rachitic rosary"
+  ],
+  "pearl": "Some bowing is normal in toddlers, but progressive or one-sided bowing needs a look. Rickets is making a comeback in children with dark skin, covering clothing or little sun."
+ },
+ {
+  "date": "2026-11-06",
+  "number": 10,
+  "difficulty": "Hard",
+  "title": "A black scab",
+  "context": "A farm worker who skinned a sick cow last week. The sore isn't painful, but the arm is swollen.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-06.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19826",
+   "author": "CDC/Archil Navdarashvili, Georgia (Republic) (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A man's forearm with a large lesion covered by a dark brown-to-black scab."
+  },
+  "answer": "Cutaneous anthrax",
+  "wrong": [
+   "Spider bite",
+   "Ecthyma gangrenosum",
+   "Pyoderma gangrenosum",
+   "Orf",
+   "Necrotising fasciitis"
+  ],
+  "hints": [
+   "The black scab is called an eschar, and it's painless.",
+   "The bacterium forms spores that survive in soil for decades."
+  ],
+  "why": "A large black eschar on the forearm with surrounding swelling.",
+  "assoc": [
+   "Bacillus anthracis",
+   "Livestock, hides and wool",
+   "Painless eschar with marked oedema"
+  ],
+  "pearl": "A painless black eschar with a lot of swelling around it should prompt you to ask about animals and hides. Cutaneous anthrax is very treatable with antibiotics, but notify public health."
+ },
+ {
+  "date": "2026-11-07",
+  "number": 11,
+  "difficulty": "Hard",
+  "title": "Look at the palms",
+  "context": "A 31-year-old with a sore throat, patchy hair loss and a non-itchy rash, a couple of months after a painless sore that healed.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-07.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=17043",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of both palms with a scaly, darkened papular rash."
+  },
+  "answer": "Secondary syphilis",
+  "wrong": [
+   "Hand, foot and mouth disease",
+   "Erythema multiforme",
+   "Palmar psoriasis",
+   "Rocky Mountain spotted fever",
+   "Dyshidrotic eczema"
+  ],
+  "hints": [
+   "The rash is on the palms and soles, which narrows the list fast.",
+   "Think of the 'great imitator'."
+  ],
+  "why": "Scaly, coppery-brown papules on both palms.",
+  "assoc": [
+   "Treponema pallidum",
+   "Previous painless chancre",
+   "Condylomata lata",
+   "Rising rates worldwide"
+  ],
+  "pearl": "Rashes on the palms and soles have a short list: secondary syphilis, hand, foot and mouth disease, erythema multiforme and some rickettsial infections. Syphilis rates are rising, including congenital syphilis."
+ },
+ {
+  "date": "2026-11-08",
+  "number": 12,
+  "difficulty": "Genius",
+  "title": "A historical image",
+  "context": "This photo was taken before 1980. The patient had high fever and back pain, then a rash that began on the face and arms.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-08.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=4351",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A knee and thigh covered in raised fluid-filled lesions, all at the same stage."
+  },
+  "answer": "Smallpox",
+  "wrong": [
+   "Chickenpox",
+   "Mpox",
+   "Measles",
+   "Disseminated herpes simplex",
+   "Hand, foot and mouth disease"
+  ],
+  "hints": [
+   "Every lesion is at the same stage.",
+   "Declared eradicated in 1980."
+  ],
+  "why": "Dense, firm, deep-seated lesions over the knee and thigh, all at the same stage.",
+  "assoc": [
+   "Variola virus",
+   "Eradicated worldwide in 1980",
+   "Centrifugal rash (face and limbs more than trunk)"
+  ],
+  "pearl": "Smallpox lesions are all at the same stage and concentrated on the face and limbs; chickenpox is mixed-stage and mostly on the trunk. Smallpox is the only human disease eradicated so far."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 13,
+  "difficulty": "Easy",
+  "title": "A spreading ring",
+  "context": "A hiker in the northeastern US with fatigue and a slowly expanding, painless red patch on the arm, a week after a weekend camping.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-09.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=9875",
+   "author": "CDC/James Gathany",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A bull's-eye shaped red rash at a tick-bite site on the back of an upper arm."
+  },
+  "answer": "Erythema migrans",
+  "wrong": [
+   "Erythema multiforme",
+   "Tinea corporis",
+   "Cellulitis",
+   "Granuloma annulare",
+   "Fixed drug eruption"
+  ],
+  "hints": [
+   "It grew bigger, day by day, from one spot.",
+   "Something small and eight-legged may have bitten here."
+  ],
+  "why": "A large bull's-eye red patch that expanded outward from a tick-bite site.",
+  "assoc": [
+   "Lyme disease",
+   "Borrelia burgdorferi",
+   "Ixodes ticks"
+  ],
+  "pearl": "Erythema migrans is diagnostic of early Lyme disease in an endemic area, so treat without waiting for serology, which is often negative this early. Lyme disease acquired locally in Australia has not been proven."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 14,
+  "difficulty": "Easy",
+  "title": "Something white",
+  "context": "A 72-year-old using an inhaled steroid for COPD, with a sore mouth and an odd taste.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-10.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6066",
+   "author": "CDC/Sol Silverman, Jr., DDS",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close intraoral view with creamy white plaques on the oral mucosa."
+  },
+  "answer": "Oral candidiasis (thrush)",
+  "wrong": [
+   "Oral hairy leukoplakia",
+   "Leukoplakia",
+   "Lichen planus",
+   "Aphthous ulcers",
+   "Koplik spots"
+  ],
+  "hints": [
+   "The white patches wipe off, leaving red, raw spots.",
+   "Rinsing after the puffer helps prevent it."
+  ],
+  "why": "Creamy white plaques on red oral mucosa that can be scraped away.",
+  "assoc": [
+   "Inhaled corticosteroids",
+   "Diabetes",
+   "Immunosuppression (including HIV)",
+   "Dentures and recent antibiotics"
+  ],
+  "pearl": "Thrush wipes off; leukoplakia and oral hairy leukoplakia don't. Unexplained thrush in a young adult deserves an HIV test."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 15,
+  "difficulty": "Medium",
+  "title": "Press and look",
+  "context": "A woman in a community where the staple food is polished white rice, with weakness and swollen legs.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-11.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16350",
+   "author": "CDC (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A health worker pressing a thumb into a woman's shin, leaving a dent of pitting oedema (beriberi)."
+  },
+  "answer": "Pitting oedema",
+  "wrong": [
+   "Lymphoedema",
+   "Lipoedema",
+   "Myxoedema",
+   "Cellulitis",
+   "Deep vein thrombosis"
+  ],
+  "hints": [
+   "The examiner is pressing a thumb into the shin.",
+   "Here the cause is a vitamin B1 deficiency (wet beriberi)."
+  ],
+  "why": "A thumb pressed into the swollen shin leaves a dent: fluid in the tissues that can be pushed aside.",
+  "assoc": [
+   "Heart failure (including wet beriberi)",
+   "Nephrotic syndrome",
+   "Liver cirrhosis",
+   "Calcium channel blockers"
+  ],
+  "pearl": "Pitting oedema means excess tissue fluid. Lymphoedema and myxoedema are usually non-pitting. Diets based on polished rice can cause thiamine deficiency."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 16,
+  "difficulty": "Medium",
+  "title": "Look at the fingertips",
+  "context": "A person with a long-standing lung problem and chronic cough. Check the hand.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-12.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21135",
+   "author": "CDC/ Dr. Behrens",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Back of a child's left hand showing clubbed fingertips."
+  },
+  "answer": "Finger clubbing",
+  "wrong": [
+   "Koilonychia",
+   "Heberden's nodes",
+   "Dactylitis",
+   "Onycholysis",
+   "Paronychia"
+  ],
+  "hints": [
+   "Try Schamroth's window test.",
+   "The nail-bed angle is lost."
+  ],
+  "why": "Bulbous fingertips with loss of the normal angle between the nail and nail fold.",
+  "assoc": [
+   "Lung cancer",
+   "Bronchiectasis and cystic fibrosis",
+   "Cyanotic heart disease",
+   "Inflammatory bowel disease"
+  ],
+  "pearl": "Clubbing is not a feature of uncomplicated COPD, so new clubbing in a smoker needs a chest X-ray to look for lung cancer."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 17,
+  "difficulty": "Hard",
+  "title": "Look at the throat",
+  "context": "An unvaccinated traveller with a sore throat, low fever and a very swollen neck.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-13.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23429",
+   "author": "CDC/Carl Flint",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "View into the throat showing an adherent grey membrane over the right tonsil and nearby pharynx."
+  },
+  "answer": "Diphtheria",
+  "wrong": [
+   "Tonsillitis",
+   "Glandular fever",
+   "Peritonsillar abscess (quinsy)",
+   "Vincent's angina",
+   "Oral candidiasis"
+  ],
+  "hints": [
+   "The grey coating bleeds if you try to scrape it off.",
+   "The neck swelling is sometimes called a 'bull neck'."
+  ],
+  "why": "A thick grey membrane stuck over the tonsil and spreading onto the throat.",
+  "assoc": [
+   "Corynebacterium diphtheriae",
+   "Unvaccinated people",
+   "Myocarditis and nerve damage from the toxin"
+  ],
+  "pearl": "The pseudomembrane bleeds when scraped, unlike tonsillar exudate. Give antitoxin early, as well as antibiotics, and notify public health. Vaccination has made it rare, but outbreaks happen."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 18,
+  "difficulty": "Hard",
+  "title": "Side of the tongue",
+  "context": "A 38-year-old with weight loss and recurrent infections. The white patches don't hurt.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-14.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6060",
+   "author": "CDC/Sol Silverman, Jr., DDS",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close intraoral view of white corrugated patches on the side of the tongue."
+  },
+  "answer": "Oral hairy leukoplakia",
+  "wrong": [
+   "Oral candidiasis",
+   "Lichen planus",
+   "Geographic tongue",
+   "Squamous cell carcinoma",
+   "Frictional keratosis"
+  ],
+  "hints": [
+   "The patches don't scrape off.",
+   "It's caused by Epstein-Barr virus and points to immunosuppression."
+  ],
+  "why": "White, corrugated patches along the side of the tongue that won't wipe away.",
+  "assoc": [
+   "HIV infection",
+   "Epstein-Barr virus",
+   "Organ transplant or other immunosuppression"
+  ],
+  "pearl": "Unlike thrush, oral hairy leukoplakia won't scrape off. In someone not known to be immunosuppressed, it's an indication for an HIV test."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 19,
+  "difficulty": "Genius",
+  "title": "A pale patch",
+  "context": "A 35-year-old from a country where it's endemic, with a pale patch on the skin that feels numb to touch.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-15.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26962",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of skin with a pale, round plaque-like patch and a smaller lesion nearby."
+  },
+  "answer": "Leprosy (Hansen's disease)",
+  "wrong": [
+   "Vitiligo",
+   "Pityriasis versicolor",
+   "Tinea corporis",
+   "Pityriasis alba",
+   "Post-inflammatory hypopigmentation"
+  ],
+  "hints": [
+   "The numbness is the key clue.",
+   "Feel for thickened nerves nearby."
+  ],
+  "why": "A pale, slightly raised patch of skin, which in this story has lost sensation.",
+  "assoc": [
+   "Mycobacterium leprae",
+   "Numb skin patches",
+   "Thickened peripheral nerves"
+  ],
+  "pearl": "A pale patch that has lost sensation is leprosy until proven otherwise. It's curable with multidrug therapy and is not highly contagious. It still exists, including in parts of northern Australia."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 20,
+  "difficulty": "Easy",
+  "title": "Look at the nails",
+  "context": "A 34-year-old woman with heavy periods, tiredness and breathlessness on stairs.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-16.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21240",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Both hands showing flattened, spoon-shaped fingernails, most obvious on the thumbnails."
+  },
+  "answer": "Koilonychia",
+  "wrong": [
+   "Clubbing",
+   "Onycholysis",
+   "Beau's lines",
+   "Leukonychia",
+   "Nail pitting"
+  ],
+  "hints": [
+   "Could they hold a drop of water?",
+   "Think of the commonest nutritional deficiency in the world."
+  ],
+  "why": "Thin, flattened, spoon-shaped nails, most obvious on the thumbs.",
+  "assoc": [
+   "Iron deficiency anaemia",
+   "Haemochromatosis (rarely)",
+   "Normal in infants"
+  ],
+  "pearl": "Koilonychia classically means iron deficiency. Find the cause: in women think heavy periods; in men and post-menopausal women, the gut until proven otherwise."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 21,
+  "difficulty": "Easy",
+  "title": "Look at the eyes",
+  "context": "A 29-year-old back from a holiday, with a week of nausea, dark urine and pale stools.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-17.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=2860",
+   "author": "CDC/ Dr. Thomas F. Sellers/Emory University (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of eyes with yellow sclerae and yellowish facial skin in a patient with hepatitis A."
+  },
+  "answer": "Jaundice (scleral icterus)",
+  "wrong": [
+   "Carotenaemia",
+   "Subconjunctival haemorrhage",
+   "Conjunctivitis",
+   "Blue sclerae",
+   "Pinguecula"
+  ],
+  "hints": [
+   "Check the urine colour in the story again.",
+   "Bilirubin above about 50 µmol/L shows here first."
+  ],
+  "why": "Yellow sclerae: bilirubin deposits in the elastin-rich white of the eye.",
+  "assoc": [
+   "Viral hepatitis (here, hepatitis A)",
+   "Gallstones blocking the bile duct",
+   "Haemolysis",
+   "Gilbert's syndrome"
+  ],
+  "pearl": "Carotenaemia (too many carrots) yellows the skin but spares the sclerae. Dark urine with pale stools points to a conjugated, obstructive or hepatic cause."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 22,
+  "difficulty": "Medium",
+  "title": "Crusty sores",
+  "context": "A 9-year-old with spreading sores on the arm after scratching insect bites. Classmates have it too.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-18.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=14927",
+   "author": "CDC/Dr Herman Miranda, Univ. of Trujillo, Peru; A. Chambers",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Crusted skin lesions on the inner surface of a forearm."
+  },
+  "answer": "Impetigo",
+  "wrong": [
+   "Herpes simplex",
+   "Eczema herpeticum",
+   "Scabies",
+   "Tinea corporis",
+   "Ecthyma"
+  ],
+  "hints": [
+   "The crusts are often described as honey-coloured.",
+   "Highly contagious and common in school-aged children."
+  ],
+  "why": "Superficial erosions with golden-brown crusts on the forearm.",
+  "assoc": [
+   "Staphylococcus aureus",
+   "Streptococcus pyogenes",
+   "Broken skin (bites, eczema, scabies)"
+  ],
+  "pearl": "In remote Aboriginal and Torres Strait Islander communities, school sores (strep impetigo) are linked to rheumatic fever and kidney disease, so they matter more than they look."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 23,
+  "difficulty": "Medium",
+  "title": "Rings on the chest",
+  "context": "A man who works with cattle, with a few slowly spreading itchy rings on his chest.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-19.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24763",
+   "author": "CDC/Dr Lucille K. Georg",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A man's chest with several reddened ring-shaped skin lesions."
+  },
+  "answer": "Tinea corporis (ringworm)",
+  "wrong": [
+   "Erythema migrans",
+   "Granuloma annulare",
+   "Psoriasis",
+   "Pityriasis rosea",
+   "Nummular eczema"
+  ],
+  "hints": [
+   "The edge is scaly and active; the centre clears.",
+   "Scrape the edge and look under the microscope."
+  ],
+  "why": "Ring-shaped red lesions with a raised scaly edge and clearer centres.",
+  "assoc": [
+   "Dermatophyte fungi",
+   "Contact with animals",
+   "Sports with skin contact"
+  ],
+  "pearl": "Topical steroids make ringworm spread and look odd ('tinea incognito'). Treat with a topical antifungal for a week or two after it clears."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 24,
+  "difficulty": "Hard",
+  "title": "Tiny dots",
+  "context": "A 60-year-old living alone on toast and tea, with bleeding gums, easy bruising and poor wound healing.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-20.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19448",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of skin with numerous small haemorrhages centred on hair follicles."
+  },
+  "answer": "Perifollicular haemorrhages (scurvy)",
+  "wrong": [
+   "Folliculitis",
+   "Petechiae from low platelets",
+   "Keratosis pilaris",
+   "Senile purpura",
+   "Meningococcal rash"
+  ],
+  "hints": [
+   "Each dot sits around a hair follicle.",
+   "Look for corkscrew hairs too."
+  ],
+  "why": "Small red-brown haemorrhages centred on hair follicles.",
+  "assoc": [
+   "Vitamin C deficiency",
+   "Bleeding swollen gums",
+   "Corkscrew hairs",
+   "Poor diet, alcohol, eating disorders"
+  ],
+  "pearl": "Scurvy hasn't gone away: think of it in older people living alone, heavy drinkers and people on very restricted diets. It responds quickly to vitamin C."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 25,
+  "difficulty": "Hard",
+  "title": "Spots everywhere",
+  "context": "A patient with fever and swollen lymph nodes, followed by a rash. All the spots look much the same.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-21.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12779",
+   "author": "CDC/Brian W.J. Mahy, BSc, MA, PhD, ScD, DSc",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Right arm and torso of a patient with a widespread pustular rash."
+  },
+  "answer": "Mpox",
+  "wrong": [
+   "Chickenpox",
+   "Smallpox",
+   "Secondary syphilis",
+   "Disseminated herpes simplex",
+   "Molluscum contagiosum"
+  ],
+  "hints": [
+   "The swollen lymph nodes are a key difference from smallpox.",
+   "Previously called monkeypox."
+  ],
+  "why": "Firm, deep-seated pustules and crusts across the arm and trunk, mostly at the same stage.",
+  "assoc": [
+   "Mpox virus (orthopoxvirus)",
+   "Lymphadenopathy",
+   "Close or sexual contact"
+  ],
+  "pearl": "Prominent lymphadenopathy helps tell mpox from smallpox. Since 2022 most cases have spread through close or sexual contact, sometimes with only a few genital or anal lesions. A vaccine is available."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 26,
+  "difficulty": "Genius",
+  "title": "A sore on the hand",
+  "context": "A farmer bottle-feeding lambs this spring has a firm nodule on the hand. Otherwise well.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-22.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=15719",
+   "author": "CDC/Dr James H. Nakano",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of skin with two lesions, one crusted and one raised and fluid-filled."
+  },
+  "answer": "Orf",
+  "wrong": [
+   "Cutaneous anthrax",
+   "Milker's nodule",
+   "Pyogenic granuloma",
+   "Herpetic whitlow",
+   "Fish tank granuloma"
+  ],
+  "hints": [
+   "Sheep and goats carry it, especially around their lambs' mouths.",
+   "It's a parapoxvirus, and it heals on its own in about six weeks."
+  ],
+  "why": "A firm, red, target-like nodule beside a fluid-filled lesion that is crusting.",
+  "assoc": [
+   "Parapoxvirus",
+   "Contact with sheep and goats",
+   "Self-limiting in about 6 weeks"
+  ],
+  "pearl": "Orf usually heals without treatment. Milker's nodule looks almost identical but comes from cattle. Ask everyone with a hand lump what animals they handle."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 27,
+  "difficulty": "Easy",
+  "title": "Look at the neck",
+  "context": "A middle-aged man from a mountainous inland region, far from the sea, with a slowly growing lump.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-11-23.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=20311",
+   "author": "CDC/ Robert S. Craig (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A man with a large anterior neck swelling from an iodine-deficiency goitre."
+  },
+  "answer": "Goitre",
+  "wrong": [
+   "Branchial cyst",
+   "Cervical lymphadenopathy",
+   "Lipoma",
+   "Parotid swelling",
+   "Thyroglossal cyst"
+  ],
+  "hints": [
+   "It would move up when he swallows.",
+   "Iodised salt has made this far rarer."
+  ],
+  "why": "A large, diffuse swelling of the lower front of the neck: an enlarged thyroid gland.",
+  "assoc": [
+   "Iodine deficiency (here)",
+   "Graves' disease",
+   "Hashimoto's thyroiditis",
+   "Multinodular goitre"
+  ],
+  "pearl": "Iodine deficiency is still the commonest cause of goitre worldwide. A thyroid lump moves on swallowing; a thyroglossal cyst also moves when the tongue sticks out."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 28,
+  "difficulty": "Easy",
+  "title": "Patches of white",
+  "context": "A 19-year-old with painless, flat pale patches on the trunk that burn easily in the sun. No itch, no scale.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-24.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=15626",
+   "author": "CDC/ Brian Hill, New Zealand",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Torso of a young man with irregular, depigmented whitish-pink patches."
+  },
+  "answer": "Vitiligo",
+  "wrong": [
+   "Pityriasis versicolor",
+   "Pityriasis alba",
+   "Tinea corporis",
+   "Leprosy",
+   "Post-inflammatory hypopigmentation"
+  ],
+  "hints": [
+   "The patches are completely white, not just paler.",
+   "Under a Wood's lamp they glow bright white."
+  ],
+  "why": "Sharply defined, completely depigmented patches with normal skin texture.",
+  "assoc": [
+   "Autoimmune thyroid disease",
+   "Type 1 diabetes",
+   "Pernicious anaemia",
+   "Alopecia areata"
+  ],
+  "pearl": "Vitiligo is autoimmune loss of melanocytes. Pityriasis versicolor is scaly and partly pale; leprosy patches are numb. Check thyroid function."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 29,
+  "difficulty": "Medium",
+  "title": "Up close",
+  "context": "A school note went home about an itchy scalp outbreak. This is what the microscope showed on a few hairs.",
+  "question": "What are you looking at?",
+  "img": {
+   "url": "img/2026-11-25.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26390",
+   "author": "CDC/Dr Dennis Juranek",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of three louse eggs stuck to hair shafts at different stages of development."
+  },
+  "answer": "Head lice eggs (nits)",
+  "wrong": [
+   "Dandruff",
+   "Hair casts",
+   "Scabies mites",
+   "Trichorrhexis nodosa",
+   "White piedra"
+  ],
+  "hints": [
+   "They are glued to the hair shaft and won't slide off.",
+   "The parent insect has six legs."
+  ],
+  "why": "Oval eggs cemented to hair shafts near the scalp, at different stages of development.",
+  "assoc": [
+   "Pediculus humanus capitis",
+   "School-aged children",
+   "Itchy scalp"
+  ],
+  "pearl": "Nits are glued on; dandruff and hair casts slide off. Nits more than about 1 cm from the scalp are usually empty shells, so they don't prove active infestation."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 30,
+  "difficulty": "Medium",
+  "title": "Look at the elbow",
+  "context": "A 45-year-old with thick, itchy patches on the elbows and knees for years, worse in winter.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-26.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=4055",
+   "author": "CDC/ Susan Lindsley",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Back of the left elbow with red, scaly psoriatic plaques."
+  },
+  "answer": "Psoriasis",
+  "wrong": [
+   "Eczema",
+   "Tinea corporis",
+   "Lichen simplex chronicus",
+   "Seborrhoeic dermatitis",
+   "Discoid lupus"
+  ],
+  "hints": [
+   "Extensor surfaces, not the creases.",
+   "Check the nails for pits."
+  ],
+  "why": "Well-defined red plaques with thick silvery scale over the extensor elbow.",
+  "assoc": [
+   "Psoriatic arthritis",
+   "Nail pitting",
+   "Cardiovascular risk",
+   "Metabolic syndrome"
+  ],
+  "pearl": "Psoriasis likes extensor surfaces; eczema likes flexures. Up to a third of people with psoriasis develop psoriatic arthritis, so ask about joints."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 31,
+  "difficulty": "Hard",
+  "title": "Sun-exposed skin",
+  "context": "A heavy drinker with diarrhoea, confusion and a rash only on the backs of the hands.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-27.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24910",
+   "author": "CDC/ Emory University, Dr. Thomas F. Sellers",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Back of a hand with dark, dry, peeling dermatitis on sun-exposed skin."
+  },
+  "answer": "Pellagra",
+  "wrong": [
+   "Porphyria cutanea tarda",
+   "Contact dermatitis",
+   "Polymorphic light eruption",
+   "Lupus",
+   "Scurvy"
+  ],
+  "hints": [
+   "Remember the 'three Ds' (plus a fourth).",
+   "It's a vitamin B3 deficiency."
+  ],
+  "why": "Dark, dry, peeling dermatitis sharply limited to sun-exposed skin on the back of the hand.",
+  "assoc": [
+   "Niacin (B3) deficiency",
+   "Alcohol use disorder",
+   "Carcinoid syndrome",
+   "Isoniazid"
+  ],
+  "pearl": "The four Ds: dermatitis, diarrhoea, dementia and death. A rash in a band around the neck is called Casal's necklace."
+ }
+]

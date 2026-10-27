@@ -5,7 +5,7 @@
    Medical only: no Normie version yet. Check with glimpsis/check.py. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", TRIES = 3, NAME = "Glimpsis";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", TRIES = 3, NAME = "Glimpsis";
   var root = document.getElementById("glm");
   if (!document.querySelector("link[data-glm]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "glimpsis.css?v=" + BUILD; l.setAttribute("data-glm", ""); document.head.appendChild(l);
@@ -23,7 +23,7 @@
     ' <div class="result" id="glm-result" hidden></div>' +
     ' <p class="note" id="glm-next"></p>' +
     ' <details class="archive" id="glm-archive"><summary>Past images</summary><div class="alist" id="glm-alist"></div></details>' +
-    ' <p class="note">Real clinical images from the CDC Public Health Image Library and Wikimedia Commons under free licences, credited under each image. Scenarios are fictional. General education, not personal medical advice.</p>' +
+    ' <p class="note">Real clinical photos, mostly from the CDC Public Health Image Library (public domain), credited under each image. Scenarios are fictional. General education, not personal medical advice.</p>' +
     "</div>";
   var $ = function (id) { return document.getElementById("glm-" + id); };
 
