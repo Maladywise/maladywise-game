@@ -678,7 +678,8 @@
     function house() {
       var h = MW_SITE.house; if (!h) return "";
       var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
-      return (NORMIE ? "" : '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
+      return '<a class="card house bonus" href="/basil/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><img src="/assets/mascots/basil.svg" alt="" width="44" height="44" style="width:44px;height:44px"></div><div class="cbody"><h2 class="name">Basil Kicks</h2><p class="kind">Bonus arcade game</p><p class="tag">A smug fluffy white cat kicks everything off the bench. Swipe his sister Clover at your own risk.</p><div class="cfoot"><span class="play">Play</span></div></div></a>' +
+        (NORMIE ? "" : '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
         '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12M26 18v12"/></svg></div>' +
         '<div class="cbody"><h2 class="name">Conditions &amp; Medicines</h2><p class="kind">Plain-English health info</p><p class="tag">' + (nf ? nf + " " : "") + 'plain-English fact sheets, evidence-rated and printable. Plus drug guides and doctor tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>') +
         '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
