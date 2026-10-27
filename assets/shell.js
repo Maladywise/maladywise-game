@@ -181,6 +181,10 @@
       if (!st.win) return null; var n = (st.picks || []).length;
       return { cls: "cb-dx" + (n === 1 ? " gold" : ""), html: (NORMIE ? '<div class="cb-stamp">CASE<br>CRACKED</div><p class="cb-cap">' + (n === 1 ? "First pick. Quiz-show energy." : "Case cracked on try " + n + ".") : '<div class="cb-stamp">RESULTS<br>REVIEWED</div><p class="cb-cap">' + (n === 1 ? "First pick. Pathologist energy." : "Diagnosed on try " + n + ".")) + "</p>" };
     },
+    opacitis: function (st) {
+      if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
+      return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">REPORT<br>SIGNED</div><p class="cb-cap">' + (gold ? "First look. Lightbox legend." : "Read on try " + n + ".") + "</p>" };
+    },
     glimpsis: function (st) {
       if (!st.win) return null; var n = (st.picks || []).length, gold = n === 1;
       return { cls: "cb-dx" + (gold ? " gold" : ""), html: '<div class="cb-stamp">SIGN<br>SPOTTED</div><p class="cb-cap">' + (gold ? "First glance. Eagle eyes." : "Spotted on try " + n + ".") + "</p>" };
