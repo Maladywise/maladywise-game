@@ -153,7 +153,7 @@
       base = { type: "flutter", cyc: cy, t0: t0, amp: R.famp || 0.24 };
       for (t = t0; t < end; i++) { Q.push({ t: t + fr, m: "n" }); t += cy * ratios[i % ratios.length]; }
     } else if (type === "svt") {
-      for (t = start; t < end; t += 60 / R.rate) { Q.push({ t: t, m: "n" }); if (R.retro) P.push({ t: t + 0.035, pf: -0.45, pw: 0.7, c: false, retro: 1 }); }
+      for (t = start; t < end; t += 60 / R.rate) { Q.push({ t: t, m: "n" }); if (R.retro) P.push({ t: t + (R.rp || 35) / MS, pf: -0.45, pw: 0.7, c: false, retro: 1 }); }
     } else if (type === "vt") {
       for (t = start + 0.1; t < end; t += 60 / R.rate) Q.push({ t: t, m: "vt" });
       var pa2 = 60 / (R.arate || 78); for (t = start + 0.37; t < end; t += pa2) P.push({ t: t, pf: 0.9, pw: 1, c: false });
@@ -172,9 +172,10 @@
       while (t < end) { var j = Math.floor(rnd() * MP.length); beat(t, PR[j], "n", { pf: MP[j][0], pw: MP[j][1], mat: j }); t += rr0 * (0.72 + rnd() * 0.56); }
     } else if (type === "paced") {
       var av = (R.av || 160) / MS;
-      for (t = start; t < end; t += rr0) {
+      for (var pk = 0; t = start + pk * rr0, t < end; pk++) {
         if (R.mode !== "vvi") { P.push({ t: t + 0.004, pf: 0.8, pw: 1.15, c: true }); spikes.push({ t: t, a: 0.9 }); }
-        spikes.push({ t: t + av, a: 1.6 }); Q.push({ t: t + av + 0.004, m: "paced", pOn: R.mode !== "vvi" ? -(av * MS) : null });
+        spikes.push({ t: t + av, a: 1.6 });
+        if (!(R.fail && R.fail.indexOf(pk) >= 0)) Q.push({ t: t + av + 0.004, m: "paced", pOn: R.mode !== "vvi" ? -(av * MS) : null }); // R.fail: beats that fail to capture
       }
     }
     P.sort(function (a, b) { return a.t - b.t; }); Q.sort(function (a, b) { return a.t - b.t; });
