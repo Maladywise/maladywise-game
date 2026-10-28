@@ -27,13 +27,17 @@
   // ---------- copy ----------
   var KICKQ = ["Gravity check: passed.", "It was in his way. Everything is.", "Smug level: rising.", "He regrets nothing.", "Another one for the floor.", "Physics, but rude.", "He looked you in the eye first.", "That was a gift. To the floor.", "Bench, decluttered.", "Peak cat behaviour.", "He calls it tidying.", "No witnesses. Except you."];
   var BOREDQ = ["He got bored. Unwell?", "He left one. Concerning.", "Missed a kick. He blames you.", "Basil is disappointed in you.", "One survived. Basil will remember."];
-  var CNICK = ["Cute Clover", "the Whingapotamus", "the Chief Complaints Officer", "Wiggle Butt", "the Spicy Little Muffin"];
+  var CNICK = ["Cute Clover", "the Whingapotamus", "the Chief Complaints Officer", "Wiggle Butt", "the Spicy Little Muffin", "Miss Piggy", "Clover Piggington"];
+  var FOOD = ["catfood", "banana", "steak", "drumstick", "sausage", "pizza"], BADFOOD = ["pineapple", "coffee", "grapes", "garlic"];
+  var BADQ = { pineapple: "Pineapple. Too pointy, even for Miss Piggy.", coffee: "Coffee: caffeine is toxic to cats. Spat out.", grapes: "Grapes: not safe for cats. Spat out.", garlic: "Garlic: toxic to cats. Hard no." };
+  var NOMQ = ["Nom.", "Gone.", "Inhaled.", "Hoovered.", "Snarfed.", "Chomp."];
+  function isBad(k) { return BADFOOD.indexOf(k) >= 0; }
   var CLOVQ = ["Clover: 'Rude.'", "The Chief Complaints Officer has lodged a complaint.", "The Whingapotamus whinges.", "Sibling rivalry: active.", "Wiggle Butt glares. Basil smirks.", "Cute Clover is no longer cute about it."];
   var CLOVBACK = ["Clover swiped back. Fair.", "The Spicy Little Muffin had enough. Justice served.", "Tortoiseshell revenge.", "Complaint upheld. Basil swiped."];
   var CSWIPE = ["Swiped.", "Swiped!", "Swish.", "Claws out.", "Swiped. Daintily."];
   var CLOVSTEAL = ["Clover swiped it herself. Revenge.", "Wiggle Butt stole the swipe. Petty. Effective.", "Clover: 'Mine now.'"];
   var OUCHQ = ["Ouch. That one was spiky.", "Basil has learned nothing.", "Cactus: 1, Basil: 0.", "Paw, meet prickles.", "Some things you don't kick."];
-  var SPIKY = ["cactus", "pins", "rose"];
+  var SPIKY = ["cactus", "pins", "rose", "pineapple"];
   var HEAVY = { vase: { hp: [3, 5], pts: 5, life: 5.5 }, tv: { hp: [8, 10], pts: 12, life: 8 }, tank: { hp: [25, 25], pts: 50, life: 16 } };
   var SMASHQ = { vase: ["Vase: shattered. Basil: unbothered.", "That was an heirloom. Was.", "Crash. He doesn’t even flinch."], tv: ["TV smashed. Screen time: over.", "No more nature documentaries.", "The TV has been cancelled."], tank: ["THE FISH TANK. Free sushi. +1 life.", "Aquarium destroyed. Goldfish rescued (eaten). +1 life."] };
   var MOTHQ = ["Moth eaten. FRENZY!", "Snack acquired. FRENZY!", "Crunchy. FRENZY!", "Protein. FRENZY!"];
@@ -43,21 +47,23 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, slash: [], shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
-  function spawnEvery() { return S.bonus > 0 ? 0.42 : Math.max(0.52, 1.45 - S.t * 0.011); }
+  // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
+  function spawnEvery() { return S.bonus > 0 ? 0.42 : 0.3 + 1.15 / (1 + S.t / 60); }
   function isSpiky(k) { return SPIKY.indexOf(k) >= 0; }
-  function patience() { return Math.max(1.45, 3.4 - S.t * 0.018); }
+  function patience() { return 1.0 + 2.4 / (1 + S.t / 70); }
 
   function spawn(kind) {
     var free = [0, 1, 2].filter(function (i) { return !S.lanes[i] && !(S.clover && S.clover.lane === i && S.clover.state === "sit"); });
     if (!free.length) return false;
+    if (!kind && S.bonus > 0) kind = Math.random() < 0.22 ? pick(BADFOOD) : pick(FOOD);
     if (!kind && S.t > 6 && Math.random() < Math.min(0.24, 0.1 + S.t * 0.0015)) kind = pick(SPIKY);
     if (!kind && S.t > 40 && !S.lanes.some(function (l) { return l && l.kind === "tank"; }) && Math.random() < 0.015) kind = "tank";
     if (!kind && S.t > 25 && Math.random() < 0.05) kind = "tv";
     if (!kind && S.t > 10 && Math.random() < 0.09) kind = "vase";
-    var i = pick(free), hv = HEAVY[kind], p = kind === "tap" || kind === "fish" ? 2.6 : isSpiky(kind) ? 2.3 : hv ? hv.life : patience();
+    var i = pick(free), hv = HEAVY[kind], p = kind === "tap" || kind === "fish" ? 2.6 : isSpiky(kind) || isBad(kind) ? 2.3 : hv ? hv.life : S.bonus > 0 ? 2.2 : patience();
     S.lanes[i] = { kind: kind || pick(ITEMS), y: -40, vy: 0, landed: false, life: p, max: p, wob: rnd(0, 6) };
     if (hv) { S.lanes[i].hp = S.lanes[i].hpMax = Math.round(rnd(hv.hp[0], hv.hp[1])); S.lanes[i].hit = 0; }
     return true;
@@ -77,12 +83,13 @@
       S.lanes[i] = null; S.smashed++; shake();
       var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0;
       S.score += pts; float(LANES[i], BENCH - 80, "SMASH +" + pts, "#C2553A"); toast(pick(SMASHQ[it.kind]));
-      if (it.kind === "tank") { if (S.lives < 3) S.lives++; for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
+      if (it.kind === "tank") { if (S.lives < 3) S.lives++; for (var fq = 0; fq < 3; fq++) S.flops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 30, vx: rnd(-90, 90), vy: -rnd(200, 320), r: 0, l: 2.2 }); float(LANES[i], BENCH - 110, "+1 life", "#E05A8A"); for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
       for (var q = 0; q < 26; q++) S.shards.push({ x: LANES[i] + rnd(-14, 14), y: BENCH - rnd(10, 50), vx: rnd(-260, 260), vy: -rnd(120, 420), r: rnd(0, 6), vr: rnd(-12, 12), s: rnd(3, 8), c: it.kind === "tv" ? pick(["#2B2340", "#6FA8C9", "#3B3B44", "#AEB8C0"]) : pick(["#2F5DA8", "#F1ECF8", "#6FA8C9", "#E0703A"]), l: 1.4 });
       if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
       return;
     }
     S.lanes[i] = null;
+    if (S.bonus > 0 && (FOOD.indexOf(it.kind) >= 0 || isBad(it.kind))) return eatFood(it, i);
     var dir = i === 0 ? -1 : i === 2 ? 1 : (Math.random() < .5 ? -1 : 1);
     S.fly.push(S.bonus > 0 ? { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(300, 380), vy: -rnd(90, 140), r: 0, vr: dir * rnd(3, 6) } : { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(110, 210), vy: -rnd(240, 320), r: 0, vr: dir * rnd(6, 11) });
     if (isSpiky(it.kind)) {
@@ -99,10 +106,22 @@
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
     if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
   }
+  function eatFood(it, i) {
+    if (isBad(it.kind)) {
+      S.combo = 0; S.ouchT = 0.7; S.ouches++; S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: (i - 1 || 1) * rnd(160, 240), vy: -rnd(220, 300), r: 0, vr: rnd(-9, 9) });
+      float(LANES[i], BENCH - 60, it.kind === "pineapple" ? "Ouch!" : "Bleurgh!", "#C2553A"); toast(BADQ[it.kind]); shake();
+      S.lives--; if (S.lives <= 0) end(); return;
+    }
+    S.gulp.push({ kind: it.kind, x: LANES[i], y: BENCH, t: 0 });
+    S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
+    var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * 2 * (S.frenzyT > 0 ? 2 : 1);
+    S.score += mult; S.eatenFood++; float(LANES[i], BENCH - 60, "+" + mult + " " + pick(NOMQ), "#B07A0C");
+  }
   function startBonus() {
     S.bonus = 10; S.bonuses++; S.nextBonus = Infinity; S.clover = null; S.cloverT = rnd(12, 16);
+    for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.lanes[j] = null; S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } }
     if (!S.moth) S.mothT = Math.min(S.mothT, rnd(1.5, 3.5));
-    toast("Clover’s turn! " + pick(CNICK).replace(/^the /, "The ").replace(/^./, function (c) { return c.toUpperCase(); }) + " swipes. Double points."); track("basil/bonus");
+    toast("Clover’s turn! " + pick(CNICK).replace(/^the /, "The ").replace(/^./, function (c) { return c.toUpperCase(); }) + " eats everything. Double points."); track("basil/bonus");
   }
   function swipeClover() {
     var c = S.clover; c.state = "flee"; c.hit = 1; S.swiped++;
@@ -164,7 +183,7 @@
     }
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.nextBonus = S.score + 75 + 50 * S.bonuses + Math.round(S.score * 0.25); S.bonusAt = S.t + 30 + 10 * S.bonuses; toast("Basil’s back. He saw everything."); } }
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.nextBonus = S.score + 75 + 50 * S.bonuses + Math.round(S.score * 0.25); S.bonusAt = S.t + 30 + 10 * S.bonuses; toast("Basil’s back. He saw everything."); } }
     if (shakeT > 0) shakeT -= dt;
     if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) { S.paw = null; } }
     S.lean *= 0.85;
@@ -180,7 +199,7 @@
       if (it.life <= 0) {
         S.lanes[i] = null;
         if (it.kind === "tap" || it.kind === "fish") continue;
-        if (isSpiky(it.kind)) { S.fx.push({ x: LANES[i], y: BENCH - 40, txt: "poof", col: "#8A7BB0", l: 0.8 }); continue; }
+        if (isSpiky(it.kind) || isBad(it.kind)) { S.fx.push({ x: LANES[i], y: BENCH - 40, txt: "poof", col: "#8A7BB0", l: 0.8 }); continue; }
         if (S.bonus > 0) continue;
         S.lives--; S.combo = 0; float(LANES[i], BENCH - 70, "Bored.", "#6B5A93"); toast(pick(BOREDQ)); shake();
         if (S.lives <= 0) { end(); return; }
@@ -200,6 +219,8 @@
       else { c.x += (c.hit ? (c.x < 180 ? -1 : 1) * 520 : c.dir * 260) * dt; if (c.x < -80 || c.x > W + 80) S.clover = null; }
     }
     S.fly = S.fly.filter(function (f) { f.vy += 900 * dt; f.x += f.vx * dt; f.y += f.vy * dt; f.r += f.vr * dt; return f.y < H + 60; });
+    S.gulp = S.gulp.filter(function (g) { g.t += dt; return g.t < 0.32; });
+    S.flops = S.flops.filter(function (f) { f.vy += 1100 * dt; f.x += f.vx * dt; f.y += f.vy * dt; if (f.y > BENCH - 6) { f.y = BENCH - 6; f.vy = -rnd(160, 260); f.vx = rnd(-90, 90); } f.r = Math.sin(S.t * 22 + f.x) * 0.6; f.l -= dt; return f.l > 0 && f.x > -30 && f.x < W + 30; });
     S.slash = S.slash.filter(function (k) { k.l -= dt; return k.l > 0; });
     S.fx = S.fx.filter(function (f) { f.l -= dt * 0.9; f.y -= 40 * dt; return f.l > 0; });
     S.drops = S.drops.filter(function (d) { d.vy += 700 * dt; d.x += d.vx * dt; d.y += d.vy * dt; d.l -= dt; return d.l > 0; });
@@ -335,6 +356,16 @@
       case "tank": rr(-48, -70, 96, 70, 6); ctx.fillStyle = "rgba(111,168,201,.55)"; ctx.fill(); ctx.strokeStyle = "#5E7F92"; ctx.lineWidth = 4; ctx.stroke(); ctx.fillStyle = "rgba(90,169,220,.55)"; ctx.fillRect(-46, -56, 92, 54); ctx.fillStyle = "#C9A227"; ctx.fillRect(-46, -10, 92, 8); ell(-26, -10, 4, 14, "#3E8E4A"); ell(30, -12, 4, 18, "#3E8E4A");
         [[-12, -36, 1], [16, -26, -1]].forEach(function (f) { var fx = f[0] + Math.sin((S ? S.t : 0) * 2 + f[1]) * 8; ell(fx, f[1], 8, 5, "#F0A21E"); ctx.fillStyle = "#F0A21E"; ctx.beginPath(); ctx.moveTo(fx - 7 * f[2], f[1]); ctx.lineTo(fx - 13 * f[2], f[1] - 5); ctx.lineTo(fx - 13 * f[2], f[1] + 5); ctx.fill(); });
         circ(4, -46, 2, "rgba(255,255,255,.7)"); circ(8, -52, 1.5, "rgba(255,255,255,.7)"); rr(-50, -74, 100, 6, 3); ctx.fillStyle = "#3B3B44"; ctx.fill(); break;
+      case "catfood": rr(-15, -18, 30, 18, 3); ctx.fillStyle = "#AEB8C0"; ctx.fill(); rr(-15, -14, 30, 10, 2); ctx.fillStyle = "#E05A8A"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 7px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("MEOW", 0, -6.5); ell(0, -19, 15, 3.5, "#C99A63"); break;
+      case "banana": ctx.strokeStyle = "#F2C230"; ctx.lineWidth = 9; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(0, -30, 20, 0.35 * Math.PI, 0.9 * Math.PI); ctx.stroke(); ctx.strokeStyle = "#5E4A20"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-19, -24); ctx.lineTo(-22, -28); ctx.stroke(); break;
+      case "steak": ell(0, -10, 19, 11, "#B3402F"); ell(-2, -11, 15, 8, "#C9563F"); ctx.strokeStyle = "#F1D9C2"; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(0, -10, 18, 10, 0, 0.1, 2.2); ctx.stroke(); circ(6, -10, 3, "#F1D9C2"); break;
+      case "drumstick": ell(-4, -12, 13, 10, "#C27A43"); ell(-6, -14, 9, 6, "#D8925A"); ctx.fillStyle = "#F7F1E6"; ctx.fillRect(6, -14, 12, 5); circ(19, -15, 3.4, "#F7F1E6"); circ(19, -9, 3.4, "#F7F1E6"); break;
+      case "sausage": rr(-20, -12, 40, 11, 5.5); ctx.fillStyle = "#A8502E"; ctx.fill(); ctx.strokeStyle = "#7A3418"; ctx.lineWidth = 1.5; [-8, 0, 8].forEach(function (q) { ctx.beginPath(); ctx.moveTo(q - 2, -10); ctx.lineTo(q + 2, -4); ctx.stroke(); }); break;
+      case "pizza": ctx.fillStyle = "#F2C66D"; ctx.beginPath(); ctx.moveTo(-18, -26); ctx.lineTo(18, -26); ctx.lineTo(0, 0); ctx.fill(); ctx.fillStyle = "#D9A441"; ctx.fillRect(-19, -29, 38, 5); circ(-6, -18, 3.2, "#C2402F"); circ(5, -14, 3.2, "#C2402F"); circ(0, -7, 2.6, "#C2402F"); break;
+      case "pineapple": ell(0, -14, 11, 14, "#E0A21E"); ctx.strokeStyle = "#A8700F"; ctx.lineWidth = 1.2; for (var pq = -2; pq <= 2; pq++) { ctx.beginPath(); ctx.moveTo(-10, -14 + pq * 5 - 5); ctx.lineTo(10, -14 + pq * 5 + 5); ctx.stroke(); ctx.beginPath(); ctx.moveTo(10, -14 + pq * 5 - 5); ctx.lineTo(-10, -14 + pq * 5 + 5); ctx.stroke(); } ctx.fillStyle = "#3E8E4A"; [[-7, -40], [0, -46], [7, -40], [-3, -36], [4, -36]].forEach(function (q) { ctx.beginPath(); ctx.moveTo(q[0] * 0.3, -27); ctx.lineTo(q[0], q[1]); ctx.lineTo(q[0] * 0.3 + 3, -27); ctx.fill(); }); break;
+      case "coffee": rr(-12, -26, 24, 26, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "#D2C6B6"; ctx.lineWidth = 1.5; ctx.stroke(); ell(0, -26, 12, 3, "#6B4226"); ctx.strokeStyle = "#D2C6B6"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(13, -14, 6, -1.4, 1.4); ctx.stroke(); ctx.strokeStyle = "rgba(150,140,130,.6)"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(-3, -32); ctx.quadraticCurveTo(-7, -38, -2, -44); ctx.moveTo(4, -32); ctx.quadraticCurveTo(0, -38, 5, -44); ctx.stroke(); break;
+      case "grapes": [[0, -30], [-6, -24], [6, -24], [-9, -17], [0, -17], [9, -17], [-5, -10], [5, -10], [0, -4]].forEach(function (q) { circ(q[0], q[1], 5, "#6E3B8F"); circ(q[0] - 1.5, q[1] - 1.5, 1.4, "#A57CC2"); }); ctx.strokeStyle = "#5E4A20"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, -35); ctx.lineTo(2, -41); ctx.stroke(); break;
+      case "garlic": ctx.fillStyle = "#F4EFE6"; ctx.beginPath(); ctx.moveTo(0, -34); ctx.quadraticCurveTo(18, -20, 12, -4); ctx.quadraticCurveTo(0, 2, -12, -4); ctx.quadraticCurveTo(-18, -20, 0, -34); ctx.fill(); ctx.strokeStyle = "#D8CDBB"; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(0, -30); ctx.quadraticCurveTo(-6, -16, -4, -2); ctx.moveTo(0, -30); ctx.quadraticCurveTo(6, -16, 4, -2); ctx.stroke(); ctx.fillStyle = "#C9BBA2"; ctx.fillRect(-1.5, -40, 3, 7); break;
       case "fish": ell(0, -12, 16, 9, "#F0A21E"); ctx.fillStyle = "#F0A21E"; ctx.beginPath(); ctx.moveTo(14, -12); ctx.lineTo(26, -22); ctx.lineTo(26, -2); ctx.fill(); circ(-8, -14, 2, "#2B2340"); break;
     }
     ctx.restore();
@@ -354,7 +385,7 @@
         if (it.hpMax > 12) { top = BENCH - 74; rr(cx - 40, top - 16, 80, 8, 4); ctx.fillStyle = "rgba(43,35,64,.18)"; ctx.fill(); rr(cx - 40, top - 16, 80 * it.hp / it.hpMax, 8, 4); ctx.fillStyle = "#C2553A"; ctx.fill(); ctx.fillStyle = "#2B2340"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(it.hp, cx, top - 20); }
         else for (var h2 = 0; h2 < it.hpMax; h2++) circ(cx - (it.hpMax - 1) * 4 + h2 * 8, top - 10, 3, h2 < it.hp ? "#C2553A" : "rgba(43,35,64,.18)");
       }
-      if (it.landed && isSpiky(it.kind)) { ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(LANES[i], BENCH - 64, 8, 0, 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(LANES[i] - 5.5, BENCH - 69.5); ctx.lineTo(LANES[i] + 5.5, BENCH - 58.5); ctx.stroke(); continue; }
+      if (it.landed && (isSpiky(it.kind) || isBad(it.kind))) { ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(LANES[i], BENCH - 64, 8, 0, 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(LANES[i] - 5.5, BENCH - 69.5); ctx.lineTo(LANES[i] + 5.5, BENCH - 58.5); ctx.stroke(); continue; }
       if (it.landed) { var p = Math.max(0, it.life / it.max); ctx.strokeStyle = it.kind === "tap" || it.kind === "fish" ? "#2E7D6B" : p < .35 ? "#C2553A" : "#2B5E80"; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(LANES[i], BENCH - 56, 7, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2); ctx.stroke(); }
     }
     clover();
@@ -370,10 +401,12 @@
       ctx.restore();
       if (!mo.eaten) { ctx.strokeStyle = "rgba(181,48,138,.35)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(mo.x, mo.y, 24 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); }
     }
+    S.gulp.forEach(function (g) { var k = g.t / 0.32, gx = g.x + (180 - g.x) * k, gy = g.y + (BENCH - 98 - g.y) * k; ctx.save(); ctx.translate(gx, gy); ctx.scale(1 - k * 0.85, 1 - k * 0.85); item(g.kind, 0, 0, 0); ctx.restore(); });
+    S.flops.forEach(function (f) { item("fish", f.x, f.y, f.r); });
     S.slash.forEach(function (k) { ctx.globalAlpha = Math.min(1, k.l * 4); ctx.strokeStyle = "#B07A0C"; ctx.lineWidth = 3; ctx.lineCap = "round"; for (var j = -1; j <= 1; j++) { ctx.beginPath(); ctx.moveTo(k.x - 26, k.y - 22 + j * 9); ctx.quadraticCurveTo(k.x, k.y - 34 + j * 9, k.x + 26, k.y - 22 + j * 9 - 6); ctx.stroke(); } ctx.globalAlpha = 1; });
     S.drops.forEach(function (d) { ctx.globalAlpha = Math.max(0, d.l); circ(d.x, d.y, 3, "#5AA9DC"); ctx.globalAlpha = 1; });
     S.fx.forEach(function (f) { ctx.globalAlpha = Math.max(0, f.l); ctx.fillStyle = f.col; ctx.font = "700 15px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(f.txt, f.x, f.y); ctx.globalAlpha = 1; });
-    if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("CLOVER SWIPES x2 · " + Math.ceil(S.bonus) + "s", 180, 30); }
+    if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("CLOVER EATS x2 · " + Math.ceil(S.bonus) + "s", 180, 30); }
     else if (S.frenzyT > 0) { rr(104, 12, 152, 26, 13); ctx.fillStyle = "#B5308A"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("FRENZY x2 · " + Math.ceil(S.frenzyT) + "s", 180, 30); }
     else if (S.sinkT > 0) { ctx.fillStyle = "#2B5E80"; ctx.font = "700 14px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("SINK TIME x2", 180, 28); }
     if (paused) { ctx.fillStyle = "rgba(43,35,64,.55)"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.font = "700 26px Lora, serif"; ctx.textAlign = "center"; ctx.fillText("Paused. Basil is napping.", 180, H / 2); }
