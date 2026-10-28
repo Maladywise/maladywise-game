@@ -599,3 +599,17 @@ main .stats,main .dist{display:none!important}
 .doc details.se-more{margin:8px 0}
 .doc details.se-more>summary{cursor:pointer;font-weight:600;color:var(--accent,#4A3480)}
 @media print{.doc details.se-more>*{display:block}}
+/* condition pages: "Save your money" (weak evidence) and "Helpful resources" */
+.doc ul.skip,.doc ul.res{list-style:none;padding:0;margin:8px 0 16px;display:grid;gap:8px}
+.doc ul.skip li{position:relative;padding:10px 12px 10px 38px;border:1px solid var(--line);border-radius:12px;background:var(--card);line-height:1.45}
+.doc ul.skip li::before{content:"\2715";position:absolute;left:12px;top:10px;width:18px;height:18px;border-radius:50%;background:#F6DCD4;color:#8A2F1C;font:700 11px/18px Poppins,system-ui,sans-serif;text-align:center}
+html[data-theme="dark"] .doc ul.skip li::before{background:#3E231C;color:#F0A898}
+.doc ul.skip li b,.doc ul.res li a{display:block}
+.doc ul.skip li span,.doc ul.res li span{color:var(--muted);font-size:14.5px}
+.doc ul.res li{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);line-height:1.45}
+.doc ul.res li a{font-weight:600;color:var(--brand)}
+.doc ol.ex{padding-left:22px;display:grid;gap:12px}
+.doc ol.ex li b{display:block}
+.doc ol.ex .dose{display:inline-block;margin-top:4px;font-size:13px;font-weight:600;color:var(--brand);background:#F1ECF8;border-radius:999px;padding:2px 10px}
+html[data-theme="dark"] .doc ol.ex .dose{background:#2A2240}
+@media print{.doc ul.skip li,.doc ul.res li{border-color:#999;break-inside:avoid}.doc ol.ex li{break-inside:avoid}}
