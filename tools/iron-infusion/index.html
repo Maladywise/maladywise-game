@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://maladywise.com/assets/og/tools.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/shell.css?v=113">
-<script src="/assets/games.js?v=85"></script>
+<script src="/assets/games.js?v=86"></script>
 <script src="/assets/site.js?v=12"></script>
 <script src="/assets/shell.js?v=129"></script>
 <style>
@@ -48,10 +48,10 @@ html[data-theme="dark"] #ic .warn{color:#F0A898}
 </head>
 <body>
 <main class="wrap doc" id="ic">
-<p class="meta">Clinician tool</p>
+<p class="meta">Clinician tool · for registered health professionals only</p>
 <h1>Iron Infusion Dose Calculator</h1>
 <p class="lede">Ferric carboxymaltose (Ferinject and generics) for adults and adolescents 14 and over. Ganzoni deficit, the product information table and a dose plan.</p>
-<p class="callout"><b>For clinicians.</b> Check the current product information and your local protocol before prescribing. Adult and adolescent (14+) dosing only. This doesn’t replace clinical judgement. Nothing you enter leaves this device.</p>
+<p class="callout"><b>For registered health professionals only.</b> Not for patients or the public. It applies the published formula and product information table, and shows its working so you can check every step. Check the current product information and your local protocol before prescribing. Adult and adolescent (14+) dosing only. This doesn’t replace clinical judgement. Nothing you enter leaves this device.</p>
 
 <form class="form" id="ic-form" onsubmit="return false" autocomplete="off">
 <label>Weight (kg)<input id="ic-wt" type="number" inputmode="decimal" min="10" max="250" step="0.1" placeholder="e.g. 65"><small>Pre-pregnancy weight if pregnant</small></label>
@@ -77,6 +77,7 @@ html[data-theme="dark"] #ic .warn{color:#F0A898}
 <li>Single dose: no more than 20 mg/kg, and no more than 1000 mg (20 mL).</li>
 <li>No more than 1000 mg per week. Give any further dose at least 7 days later.</li>
 <li>Under 35 kg: use Ganzoni only, with target Hb 130 g/L and stores 15 mg/kg (filled in automatically).</li>
+<li>Ganzoni formula: total iron deficit (mg) = body weight (kg) × (target Hb − actual Hb, g/L) × 0.24 + iron stores (mg).</li>
 <li>Ganzoni rounding (PI): round down to the nearest 100 mg if 66 kg or less, round up if over 66 kg.</li>
 </ul>
 
