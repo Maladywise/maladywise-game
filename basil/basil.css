@@ -61,3 +61,7 @@
 .bk-rules h2{font:600 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#FFE08A;margin:12px 0 4px}
 .bk-rules ul{margin:0;padding-left:18px;display:grid;gap:3px}
 .bk-rules b{color:#fff}
+.bk-duo{display:flex;align-items:flex-end;gap:2px}
+.bk-intro .bk-masc{width:112px;height:146px}
+.bk-intro .bk-masc2{width:104px;height:136px;animation-delay:-1.5s}
+.bk-omasc{width:72px;height:94px}
