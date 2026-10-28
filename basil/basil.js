@@ -7,7 +7,7 @@
    Best score is kept in this browser only. */
 (function () {
   "use strict";
-  var BEST = "mw-basil-best";
+  var BEST = "mw-basil-best", SBASE = new URL(".", document.currentScript.src).href;
   function lget(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
   function lset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function track(n) { try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
@@ -48,7 +48,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, dirt: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -81,7 +81,7 @@
       S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
       it.hp -= S.frenzyT > 0 ? 2 : 1; it.hit = 0.18; it.wob = rnd(0, 6);
       if (it.hp > 0) return;
-      S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05));
+      S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05)); if (it.kind === "tank") S.wet = Math.min(1, S.wet + 0.7);
       var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0;
       S.score += pts; float(LANES[i], BENCH - 80, "SMASH +" + pts, "#C2553A"); toast(pick(SMASHQ[it.kind]));
       if (it.kind === "tank") { if (S.lives < 3) S.lives++; for (var fq = 0; fq < 3; fq++) S.flops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 30, vx: rnd(-90, 90), vy: -rnd(200, 320), r: 0, l: 2.2 }); float(LANES[i], BENCH - 110, "+1 life", "#E05A8A"); for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
@@ -103,7 +103,7 @@
     if (S.bonus > 0) { S.slash.push({ x: LANES[i], y: BENCH - 22, l: 0.35 }); }
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1);
-    if (S.bonus <= 0) S.dirt = Math.min(1, S.dirt + 0.008);
+    if (S.bonus <= 0) { S.dirt = Math.min(1, S.dirt + 0.008); if (it.kind === "glass") S.wet = Math.min(1, S.wet + 0.15); }
     S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
     if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
@@ -139,7 +139,7 @@
     float(LANES[j], BENCH - 70, "Stolen!", "#B07A0C"); toast(pick(CLOVSTEAL));
   }
   function sinkTime() {
-    S.sinkT = 5; var wasDirty = S.dirt > 0.3; S.dirt *= 0.2; toast(wasDirty ? "Sink time! Basil had a bath. Sort of. Double points." : "Sink time! Splash everything. Double points.");
+    S.sinkT = 5; var wasDirty = S.dirt > 0.3; S.dirt *= 0.5; S.wet = Math.min(1, S.wet + 0.6); toast(wasDirty ? "Sink time! Basil had a bath. Sort of. Now he’s dirty AND wet. Double points." : "Sink time! Splash everything. Double points.");
     for (var i = 0; i < 3; i++) { var it = S.lanes[i]; if (it && it.kind !== "tap" && it.kind !== "fish") { S.lanes[i] = null; S.score += 2; S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: (i - 1 || 1) * rnd(120, 200), vy: -rnd(260, 340), r: 0, vr: rnd(-10, 10) }); } }
     for (var k = 0; k < 40; k++) S.drops.push({ x: 180 + rnd(-40, 40), y: 210, vx: rnd(-180, 180), vy: -rnd(120, 360), l: rnd(.6, 1.2) });
   }
@@ -175,6 +175,7 @@
     S.t += dt; S.blink -= dt; if (S.blink < -3.2) S.blink = 0.15;
     if (S.sinkT > 0) S.sinkT -= dt;
     if (S.ouchT > 0) S.ouchT -= dt;
+    if (S.wet > 0) S.wet = Math.max(0, S.wet - dt * 0.015);
     if (S.frenzyT > 0) { S.frenzyT -= dt; if (S.frenzyT <= 0) { S.frenzyT = 0; toast("Frenzy over. Back to regular evil."); } }
     S.mothT -= dt;
     if (!S.moth && S.mothT <= 0) { var fromL = Math.random() < .5; S.moth = { kind: Math.random() < .5 ? "moth" : "butterfly", x: fromL ? -20 : W + 20, y: rnd(110, 200), vx: (fromL ? 1 : -1) * rnd(50, 80), ph: rnd(0, 6), life: 9 }; S.mothT = rnd(14, 22); }
@@ -262,86 +263,90 @@
     ctx.fillStyle = "rgba(43,94,128,.10)"; LANES.forEach(function (x, k) { ctx.beginPath(); ctx.ellipse(x, BENCH - 6, 34, 7, 0, 0, 7); ctx.fill(); ctx.fillStyle = "rgba(43,94,128,.35)"; ctx.font = "600 11px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(k + 1, x, H - 14); ctx.fillStyle = "rgba(43,94,128,.10)"; });
   }
   function fluff(cx, cy, a, b, n, col, edge) { for (var i = 0; i < n; i++) { var t = i / n * Math.PI * 2; circ(cx + Math.cos(t) * a, cy + Math.sin(t) * b, edge, col); } }
-  function basil() {
-    var x = 180 + S.lean * 90, y = BENCH - 62, CL = S.bonus > 0, sink = S.sinkT > 0 && !CL;
-    var BASE = CL ? "#6B666D" : "#FFFFFF", EDGE = CL ? "#55505A" : "#E9E4DC", EYE = CL ? "#E3A33A" : "#6CB84A";
-    ctx.save(); ctx.translate(x, y); ctx.rotate(S.lean);
-    // tail
-    ctx.strokeStyle = EDGE; ctx.lineWidth = 22; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-34, 30); ctx.quadraticCurveTo(-80, 26, -70, -10); ctx.stroke();
-    ctx.strokeStyle = BASE; ctx.lineWidth = 16; ctx.stroke();
-    // body
-    if (CL) { var fat = 1 + Math.min(0.6, S.eatenFood * 0.035); ctx.save(); ctx.translate(0, 40); ctx.scale(fat, 1 + (fat - 1) * 0.35); ctx.translate(0, -40);
-      ell(0, 8, 44, 34, EDGE); ell(0, 8, 42, 32, BASE); ell(-18, -4, 16, 12, "#D8925A"); ell(20, 14, 13, 10, "#C27A43"); ell(4, -14, 10, 7, "#2E2A30"); ell(0, 22, 22, 15, "#FFFFFF"); ctx.restore(); }
-    else { fluff(0, 8, 46, 36, 22, EDGE, 11); ell(0, 8, 47, 37, BASE); fluff(0, 8, 42, 32, 18, BASE, 9); ell(0, 22, 26, 18, BASE);
-      if (S.dirt > 0.04) { ctx.globalAlpha = Math.min(0.85, S.dirt); ell(-22, 30, 16, 10, "#9A7350", -0.3); ell(20, 31, 15, 9, "#9A7350", 0.3); ell(0, 38, 24, 7, "#8A6442"); ell(-33, 6, 5, 4, "#A88462"); ell(30, -2, 4, 3, "#A88462"); ell(-8, 14, 3, 2.4, "#A88462");
-        if (S.dirt > 0.45) { ell(12, 2, 6, 4, "#A88462"); ell(-26, -14, 4, 3, "#A88462"); } ctx.globalAlpha = 1; } }
-    // paws
-    var pw = S.paw, reach = pw ? Math.sin(Math.min(1, pw.t / 0.11) * Math.PI / 2) * (pw.t < 0.11 ? 1 : Math.max(0, 1 - (pw.t - 0.11) / 0.11)) : 0;
-    var tx = pw ? (LANES[pw.lane] - x) : 0;
-    ell(-14 + (pw && pw.lane <= 1 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, CL ? "#2E2A30" : "#FFFFFF");
-    ell(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, CL ? "#D8925A" : "#FFFFFF");
-    ctx.strokeStyle = "#E3DBD1"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.ellipse(-14 + (pw && pw.lane <= 1 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, 0, 0, 7); ctx.stroke();
-    ctx.beginPath(); ctx.ellipse(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, 0, 0, 7); ctx.stroke();
-    if (!CL && S.dirt > 0.04) { ctx.globalAlpha = Math.min(0.8, S.dirt * 1.2); ell(-14 + (pw && pw.lane <= 1 ? tx * reach * 0.9 : 0), 45 + (pw ? reach * 10 : 0), 10, 5, "#8A6442"); ell(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 45 + (pw ? reach * 10 : 0), 10, 5, "#8A6442"); ctx.globalAlpha = 1; }
-    // head
-    var hx = 4, hy = -40;
-    ctx.fillStyle = BASE; ctx.beginPath(); ctx.moveTo(hx - 28, hy - 6); ctx.lineTo(hx - 24, hy - 42); ctx.lineTo(hx - 4, hy - 22); ctx.fill();
-    ctx.beginPath(); ctx.moveTo(hx + 28, hy - 6); ctx.lineTo(hx + 24, hy - 42); ctx.lineTo(hx + 4, hy - 22); ctx.fill();
-    ctx.fillStyle = "#F6B9C6"; ctx.beginPath(); ctx.moveTo(hx - 23, hy - 12); ctx.lineTo(hx - 21, hy - 34); ctx.lineTo(hx - 9, hy - 22); ctx.fill();
-    ctx.beginPath(); ctx.moveTo(hx + 23, hy - 12); ctx.lineTo(hx + 21, hy - 34); ctx.lineTo(hx + 9, hy - 22); ctx.fill();
-    if (CL) { ell(hx, hy, 29, 25, EDGE); ell(hx, hy, 27, 23, BASE); ell(hx - 10, hy - 10, 11, 9, "#D8925A"); ell(hx + 12, hy - 12, 8, 6, "#2E2A30"); ell(hx + 4, hy + 10, 14, 8, "#F1D9C2"); }
-    else { fluff(hx, hy, 30, 26, 16, EDGE, 8); ell(hx, hy, 31, 27, BASE); fluff(hx, hy + 6, 30, 20, 14, BASE, 7); }
-    // smug eyes (half-lidded) or closed blink
-    [-12, 12].forEach(function (ex) {
-      if (S.ouchT > 0) { ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(hx + ex - 6, hy - 6); ctx.lineTo(hx + ex + 6, hy + 2); ctx.moveTo(hx + ex + 6, hy - 6); ctx.lineTo(hx + ex - 6, hy + 2); ctx.stroke(); return; }
-      if (S.blink > 0 || sink) { ctx.strokeStyle = "#7A6E62"; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.arc(hx + ex, hy - 2, 6, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke(); return; }
-      if (S.frenzyT > 0) { ell(hx + ex, hy - 1, 9, 8, "#FFFFFF"); ell(hx + ex, hy - 1, 7.5, 7, EYE); ell(hx + ex, hy, 5, 6, "#2B2340"); circ(hx + ex - 2, hy - 3, 1.6, "#fff"); return; }
-      ell(hx + ex, hy - 1, 7.5, 6, EYE); ell(hx + ex + 1, hy, 2.4, 5, "#2B2340");
-      if (!CL) { ctx.fillStyle = BASE; ctx.fillRect(hx + ex - 9, hy - 9, 18, 6.6); }
-      ctx.strokeStyle = "#B9AFA3"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(hx + ex - 8, hy - 2.6); ctx.lineTo(hx + ex + 8, hy - 2.6); ctx.stroke();
+  // ---------- cats (sprites drawn from Adam's photos; eyes, paws, dirt and water drawn live) ----------
+  var SPR = {};
+  ["basil-body", "basil-head", "clover-body", "clover-head"].forEach(function (n) { var im = new Image(); im.src = SBASE + "sprites/" + n + ".svg?v=1"; SPR[n] = im; });
+  function sprOK(n) { var im = SPR[n]; return im && im.complete && im.naturalWidth > 0; }
+  function spr(n) { if (sprOK(n)) ctx.drawImage(SPR[n], 0, 0, 240, 260); }
+  function catEyes(who, mode, cross) {
+    // sprite coordinates (240 x 260 art)
+    var E = who === "b" ? [[104, 88], [136, 88]] : [[103, 92], [137, 92]], iris = who === "b" ? "#A8B98E" : "#C9C653";
+    E.forEach(function (e, k) {
+      var x = e[0], y = e[1];
+      if (mode === "ouch") { ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3.4; ctx.beginPath(); ctx.moveTo(x - 8, y - 6); ctx.lineTo(x + 8, y + 6); ctx.moveTo(x + 8, y - 6); ctx.lineTo(x - 8, y + 6); ctx.stroke(); return; }
+      if (mode === "shut") { ctx.strokeStyle = "#7A6E62"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y - 2, 8, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke(); return; }
+      if (mode === "wide") { ell(x, y, 12, 11, "#FFFFFF"); ell(x, y, 10, 10, iris); ell(x, y + 1, 6.5, 8, "#1B1430"); circ(x - 3, y - 3, 2.2, "#fff"); return; }
+      ell(x, y, who === "b" ? 10 : 9.5, who === "b" ? 8 : 8.5, iris); ell(x + 0.5, y + 1, who === "b" ? 2.6 : 4.2, who === "b" ? 6.2 : 7, "#1B1430"); circ(x + 3, y - 2, 1.6, "#fff");
+      if (who === "b") { ctx.fillStyle = "#FFFFFF"; ctx.fillRect(x - 12, y - 11, 24, 9); ctx.strokeStyle = "#BDB3A6"; ctx.lineWidth = 2.2; ctx.beginPath(); ctx.moveTo(x - 10, y - 2); ctx.lineTo(x + 10, y - 2); ctx.stroke(); }
+      else { ctx.strokeStyle = cross ? "#C2553A" : "#3B3942"; ctx.lineWidth = 2.8; ctx.lineCap = "round"; ctx.beginPath(); if (k === 0) { ctx.moveTo(x - 10, y - 8 - (cross ? 2 : 0)); ctx.quadraticCurveTo(x, y - 10, x + 8, y - 5 + (cross ? 2 : 0)); } else { ctx.moveTo(x + 10, y - 8 - (cross ? 2 : 0)); ctx.quadraticCurveTo(x, y - 10, x - 8, y - 5 + (cross ? 2 : 0)); } ctx.stroke(); }
     });
-    ctx.fillStyle = "#F3A6B6"; ctx.beginPath(); ctx.moveTo(hx - 4, hy + 8); ctx.lineTo(hx + 4, hy + 8); ctx.lineTo(hx, hy + 12); ctx.fill();
-    ctx.strokeStyle = "#B08B8B"; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(hx, hy + 12); ctx.quadraticCurveTo(hx + 6, hy + 17, hx + 11, hy + 13); ctx.stroke();
-    ctx.strokeStyle = "rgba(160,150,140,.6)"; ctx.lineWidth = 1; [-1, 1].forEach(function (s) { for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(hx + s * 9, hy + 10 + k * 2); ctx.lineTo(hx + s * 30, hy + 6 + k * 5); ctx.stroke(); } });
-    if (S.scratchT > 0) { ctx.strokeStyle = "rgba(194,85,58," + Math.min(1, S.scratchT * 2) + ")"; ctx.lineWidth = 3; ctx.lineCap = "round"; for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(hx - 20 + k * 9, hy - 22); ctx.lineTo(hx - 6 + k * 9, hy + 4); ctx.stroke(); } }
+  }
+  function basil() {
+    var x = 180 + S.lean * 90, CL = S.bonus > 0, sink = S.sinkT > 0 && !CL, K = 0.66;
+    var pw = S.paw, reach = pw ? Math.sin(Math.min(1, pw.t / 0.11) * Math.PI / 2) * (pw.t < 0.11 ? 1 : Math.max(0, 1 - (pw.t - 0.11) / 0.11)) : 0;
+    ctx.save(); ctx.translate(x, BENCH + 4); ctx.rotate(S.lean); ctx.scale(K, K); ctx.translate(-120, -246);
+    var fx = 1, fy = 1;
+    if (CL) { var fat = 1 + Math.min(1, S.eatenFood * 0.05); fx = fat; fy = 1 + (fat - 1) * 0.25; }
+    // body (Clover's stretches as she eats, up to twice as wide)
+    ctx.save(); ctx.translate(120, 246); ctx.scale(fx, fy); ctx.translate(-120, -246); spr(CL ? "clover-body" : "basil-body");
+    if (!CL) {
+      if (S.dirt > 0.04) { ctx.globalAlpha = Math.min(0.85, S.dirt); [[96, 214, 22, 12, -0.3], [146, 216, 20, 11, 0.3], [120, 234, 36, 9, 0], [84, 176, 7, 5, 0], [158, 168, 6, 4, 0], [110, 196, 5, 4, 0], [102, 238, 13, 6, 0], [138, 238, 13, 6, 0]].forEach(function (d, k) { if (k < 3 || S.dirt > 0.25) ell(d[0], d[1], d[2], d[3], k < 3 || k > 5 ? "#9A7350" : "#A88462", d[4]); });
+        if (S.dirt > 0.5) { ell(132, 150, 8, 5, "#A88462"); ell(90, 140, 6, 4, "#A88462"); ell(200, 190, 8, 6, "#9A7350"); } ctx.globalAlpha = 1; }
+      if (S.wet > 0.04) { var wa = Math.min(0.75, S.wet); ctx.globalAlpha = wa; ctx.strokeStyle = "#9FB7C9"; ctx.lineWidth = 3; ctx.lineCap = "round";
+        [[90, 150, 196], [104, 170, 230], [120, 160, 222], [136, 172, 232], [150, 150, 200], [112, 120, 150], [130, 118, 152]].forEach(function (l) { ctx.beginPath(); ctx.moveTo(l[0], l[1]); ctx.lineTo(l[0] + 2, l[2]); ctx.stroke(); });
+        ctx.globalAlpha = wa * 0.35; ell(120, 190, 48, 50, "#A9C7DE"); ctx.globalAlpha = 1; }
+    }
     ctx.restore();
+    var hy = -(fy - 1) * 120;
+    ctx.save(); ctx.translate(0, hy); spr(CL ? "clover-head" : "basil-head");
+    if (!CL && S.wet > 0.3) { ctx.globalAlpha = Math.min(0.6, S.wet - 0.2); ctx.strokeStyle = "#9FB7C9"; ctx.lineWidth = 3; [[96, 60, 74], [144, 58, 72], [120, 54, 66]].forEach(function (l) { ctx.beginPath(); ctx.moveTo(l[0], l[1]); ctx.lineTo(l[0], l[2]); ctx.stroke(); }); ctx.globalAlpha = 1; }
+    var mode = S.ouchT > 0 ? "ouch" : S.frenzyT > 0 ? "wide" : (S.blink > 0 || sink) ? "shut" : "open";
+    catEyes(CL ? "c" : "b", mode, false);
+    if (S.scratchT > 0) { ctx.strokeStyle = "rgba(194,85,58," + Math.min(1, S.scratchT * 2) + ")"; ctx.lineWidth = 5; ctx.lineCap = "round"; for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(86 + k * 16, 56); ctx.lineTo(108 + k * 16, 104); ctx.stroke(); } }
+    ctx.restore();
+    // kicking (or grabbing) paw
+    if (pw && reach > 0.02) {
+      var tx = (LANES[pw.lane] - x) / K, px = 120 + tx * reach * 0.95, py = 200 + reach * 40;
+      ctx.lineCap = "round"; ctx.strokeStyle = CL ? "#66646E" : "#E2DCD3"; ctx.lineWidth = 30; ctx.beginPath(); ctx.moveTo(120, 190); ctx.lineTo(px, py); ctx.stroke();
+      ctx.strokeStyle = CL ? "#7E7C86" : "#FFFFFF"; ctx.lineWidth = 25; ctx.stroke();
+      ell(px, py, 17, 12, CL ? "#FFFFFF" : "#FFFFFF"); ctx.strokeStyle = "#E2DCD3"; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(px, py, 17, 12, 0, 0, 7); ctx.stroke();
+      if (!CL && S.dirt > 0.1) { ctx.globalAlpha = Math.min(0.8, S.dirt); ell(px, py + 4, 15, 7, "#8A6442"); ctx.globalAlpha = 1; }
+    }
+    ctx.restore();
+    // drips and puddle when wet
+    if (!CL && S.wet > 0.04) {
+      ctx.globalAlpha = Math.min(0.55, S.wet); ell(180, BENCH + 2, 46 * Math.min(1, S.wet + 0.3), 5, "#8FC3E6"); ctx.globalAlpha = 1;
+      S.dripT = (S.dripT || 0) - 1 / 60; if (S.dripT <= 0 && !paused) { S.drops.push({ x: 180 + rnd(-30, 30), y: BENCH - rnd(30, 70), vx: rnd(-10, 10), vy: rnd(0, 30), l: 0.8 }); S.dripT = 0.5 / (0.2 + S.wet * 2); }
+    }
     if (CL) sulk();
     if (sink) { ctx.fillStyle = "rgba(120,190,230,.35)"; ctx.fillRect(0, BENCH - 30, W, 8); }
   }
   function sulk() {
-    var x = 52, y = BENCH - 46;
-    ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.moveTo(x - 16, y - 2); ctx.lineTo(x - 13, y - 22); ctx.lineTo(x - 3, y - 10); ctx.fill(); ctx.beginPath(); ctx.moveTo(x + 16, y - 2); ctx.lineTo(x + 13, y - 22); ctx.lineTo(x + 3, y - 10); ctx.fill();
-    ell(x, y, 17, 14, "#FFFFFF"); ctx.strokeStyle = "#E3DBD1"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.ellipse(x, y, 17, 14, 0, 0, 7); ctx.stroke();
-    [-6, 6].forEach(function (ex) { ell(x + ex, y, 3.6, 3, "#6CB84A"); ctx.fillStyle = "#FFFFFF"; ctx.fillRect(x + ex - 5, y - 4, 10, 3.4); ctx.strokeStyle = "#B9AFA3"; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(x + ex - 4, y - 0.6); ctx.lineTo(x + ex + 4, y - 0.6); ctx.stroke(); });
+    var K = 0.3;
+    ctx.save(); ctx.translate(52, BENCH - 52); ctx.scale(K, K); ctx.translate(-120, -90); spr("basil-head"); catEyes("b", "open"); ctx.restore();
     rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill();
-    ctx.fillStyle = "#6B5A93"; ctx.font = "600 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("sulking", x, y - 26);
+    ctx.fillStyle = "#6B5A93"; ctx.font = "600 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("sulking", 52, BENCH - 86);
   }
   function clover() {
     var c = S.clover; if (!c) return;
     var x = c.x, y = BENCH - 24, step = Math.sin(S.t * 18) * (c.state === "sit" ? 0 : 3), f = c.dir > 0 || c.state === "sit" ? 1 : -1;
-    ctx.save(); ctx.translate(x, y); ctx.scale(c.state === "sit" ? 1 : f, 1);
     if (c.state === "sit") {
-      ctx.strokeStyle = "#5E5A60"; ctx.lineWidth = 8; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(14, -4); ctx.quadraticCurveTo(34, -6, 30, -24); ctx.stroke();
-      ell(0, -16, 20, 18, "#6B666D"); ell(-6, -22, 9, 7, "#D8925A"); ell(7, -10, 7, 6, "#C27A43"); ell(0, -10, 9, 10, "#FFFFFF");
-      var hy = -42; ctx.fillStyle = "#6B666D"; ctx.beginPath(); ctx.moveTo(-15, hy - 2); ctx.lineTo(-12, hy - 20); ctx.lineTo(-3, hy - 10); ctx.fill(); ctx.beginPath(); ctx.moveTo(15, hy - 2); ctx.lineTo(12, hy - 20); ctx.lineTo(3, hy - 10); ctx.fill();
-      ell(0, hy, 15, 13, "#6B666D"); ell(-4, hy - 4, 6, 7, "#E3A36A"); ell(4, hy + 5, 6, 4, "#F1D9C2");
-      ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 2; [-6, 6].forEach(function (ex) { ctx.beginPath(); ctx.moveTo(hx2(ex) - 3, hy - 1); ctx.lineTo(hx2(ex) + 3, hy + 1); ctx.stroke(); });
-      if (c.cross) { ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.moveTo(-10, hy - 8); ctx.lineTo(-2, hy - 4); ctx.moveTo(10, hy - 8); ctx.lineTo(2, hy - 4); ctx.stroke(); }
-      ell(-6, -1, 5, 3, "#FFFFFF"); ell(6, -1, 5, 3, "#FFFFFF");
+      var K = 0.3; ctx.save(); ctx.translate(x, BENCH + 2); ctx.scale(K, K); ctx.translate(-120, -246); spr("clover-body"); spr("clover-head"); catEyes("c", "open", c.cross); ctx.restore();
     } else {
-      ctx.strokeStyle = "#5E5A60"; ctx.lineWidth = 7; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-22, -16); ctx.quadraticCurveTo(-34, -30, -28, -42); ctx.stroke();
-      ctx.fillStyle = "#5E5A60"; [-14, -6, 8, 16].forEach(function (lx, k) { ctx.fillRect(lx + (k % 2 ? step : -step), -10, 5, 12); });
-      ell(0, -16, 25, 11, "#6B666D"); ell(-6, -20, 9, 5, "#D8925A"); ell(10, -14, 6, 4, "#C27A43");
-      ell(26, -26, 12, 11, "#6B666D"); ell(29, -29, 5, 4, "#E3A36A"); ctx.fillStyle = "#6B666D"; ctx.beginPath(); ctx.moveTo(20, -32); ctx.lineTo(22, -44); ctx.lineTo(28, -35); ctx.fill(); ctx.beginPath(); ctx.moveTo(30, -34); ctx.lineTo(34, -45); ctx.lineTo(37, -32); ctx.fill();
-      circ(32, -27, 1.8, "#2B2340");
+      ctx.save(); ctx.translate(x, y); ctx.scale(f, 1);
+      ctx.strokeStyle = "#66646E"; ctx.lineWidth = 8; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-22, -16); ctx.quadraticCurveTo(-34, -30, -28, -42); ctx.stroke();
+      [-14, -6, 8, 16].forEach(function (lx, k) { ctx.fillStyle = "#7E7C86"; ctx.fillRect(lx + (k % 2 ? step : -step), -10, 5, 12); ctx.fillStyle = k > 1 ? "#FFFFFF" : "#7E7C86"; ctx.fillRect(lx + (k % 2 ? step : -step), -1, 5, 3); });
+      ell(0, -16, 25, 11, "#7E7C86"); ell(-8, -20, 9, 5, "#E6B08A"); ell(8, -13, 7, 4, "#66646E"); ell(16, -12, 6, 5, "#FFFFFF");
+      ell(26, -26, 12, 11, "#7E7C86"); ctx.save(); ctx.beginPath(); ctx.ellipse(26, -26, 12, 11, 0, 0, 7); ctx.clip(); ctx.fillStyle = "#E6B08A"; ctx.fillRect(27, -40, 14, 30); ctx.restore();
+      ctx.fillStyle = "#66646E"; ctx.beginPath(); ctx.moveTo(19, -32); ctx.lineTo(21, -46); ctx.lineTo(28, -35); ctx.fill(); ctx.fillStyle = "#7E7C86"; ctx.beginPath(); ctx.moveTo(29, -35); ctx.lineTo(34, -47); ctx.lineTo(37, -32); ctx.fill();
+      circ(32, -27, 2.2, "#C9C653"); circ(32.5, -27, 1.1, "#1B1430"); circ(37, -21, 1.6, "#3A3036");
+      ctx.restore();
     }
-    ctx.restore();
     if (c.cross && !c.hit) {
       var bx = x + (c.state === "sit" ? 0 : f * 26), by = BENCH - (c.state === "sit" ? 92 : 78);
       rr(bx - 22, by - 14, 44, 20, 9); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 2; ctx.stroke();
       ctx.fillStyle = "#C2553A"; ctx.font = "700 12px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("HISS", bx, by + 1);
     }
-    function hx2(v) { return v; }
   }
   function item(kind, x, y, s) {
     ctx.save(); ctx.translate(x, y); if (s) ctx.rotate(s);
@@ -448,7 +453,7 @@
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = start; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   $("bk-sharebtn").onclick = function () {
-    var t = "Basil Kicks 🐾 " + S.score + " things kicked off the bench" + (S.swiped ? ", Clover swiped " + S.swiped + "x" : "") + ". Verdict: " + nameFor(S.score) + ".\nmaladywise.com/basil", b = this;
+    var t = "Basil + Clover 🐾 " + S.score + " things kicked off the bench" + (S.swiped ? ", Clover swiped " + S.swiped + "x" : "") + ". Verdict: " + nameFor(S.score) + ".\nmaladywise.com/basil", b = this;
     if (navigator.share) { navigator.share({ text: t }).catch(function () {}); return; }
     try { navigator.clipboard.writeText(t).then(function () { b.textContent = "Copied"; }); } catch (e) {}
   };
