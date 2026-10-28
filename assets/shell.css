@@ -590,3 +590,12 @@ main .stats,main .dist{display:none!important}
 .doc ol.ladder dd{margin:0}
 .doc ol.ladder .sass{margin:6px 0 0;font-style:italic;color:var(--accent,#4A3480)}
 @media print{.doc ol.ladder li{break-inside:avoid;padding:6px 8px}.doc ol.ladder dl{margin:4px 0}}
+/* medicine "at a glance" card */
+.doc .glance{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0}
+.doc .glance dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;margin:0}
+.doc .glance dt{font-weight:600;color:var(--muted);font-size:.8em;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.doc .glance dd{margin:0}
+.doc .glance .sass{margin:10px 0 0;font-style:italic;color:var(--accent,#4A3480)}
+.doc details.se-more{margin:8px 0}
+.doc details.se-more>summary{cursor:pointer;font-weight:600;color:var(--accent,#4A3480)}
+@media print{.doc details.se-more>*{display:block}}
