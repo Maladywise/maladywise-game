@@ -49,13 +49,13 @@
     "c": "Physiology",
     "q": "How long does a red blood cell live, on average?",
     "a": "About 120 days",
-    "e": ""
+    "e": "Red cells live about 120 days, then the spleen and liver recycle them. That\u2019s why HbA1c reflects roughly the last three months of blood glucose."
    },
    {
     "c": "Famous patients",
     "q": "Which US president secretly had Addison\u2019s disease?",
     "a": "John F. Kennedy",
-    "e": ""
+    "e": "JFK had Addison\u2019s disease (adrenal failure), kept quiet during his presidency and managed with steroids."
    },
    {
     "c": "Language",
@@ -73,7 +73,7 @@
     "c": "Pathology",
     "q": "What is the most common primary malignant bone tumour in adolescents?",
     "a": "Osteosarcoma",
-    "e": ""
+    "e": "Osteosarcoma is the most common primary bone cancer in teenagers, typically around the knee during growth spurts."
    },
    {
     "c": "By the numbers",
@@ -97,7 +97,7 @@
     "c": "Anatomy",
     "q": "What is the longest nerve in the human body?",
     "a": "The sciatic nerve",
-    "e": ""
+    "e": "The sciatic nerve runs from the lower back down the back of the leg, and is about as thick as a thumb at its widest."
    },
    {
     "c": "Pharmacology",
@@ -115,7 +115,7 @@
     "c": "Eponyms",
     "q": "What are the transverse grooves across the nails after a severe illness called?",
     "a": "Beau\u2019s lines",
-    "e": ""
+    "e": "Beau\u2019s lines are dents across the nails where growth paused during a severe illness. They grow out over months."
    },
    {
     "c": "Brain-melter",
@@ -157,13 +157,13 @@
     "c": "Microbiology",
     "q": "Which bacterium causes cat-scratch disease?",
     "a": "Bartonella henselae",
-    "e": ""
+    "e": "Bartonella henselae, usually from a kitten scratch or bite, causes swollen lymph nodes near the scratch."
    },
    {
     "c": "On screen",
     "q": "Who played paediatrician Doug Ross in \u2018ER\u2019?",
     "a": "George Clooney",
-    "e": ""
+    "e": "George Clooney played Dr Doug Ross, the paediatrician, in ER from 1994."
    },
    {
     "c": "Etymology",
@@ -175,7 +175,7 @@
     "c": "Physiology",
     "q": "Which hormone does the pineal gland secrete?",
     "a": "Melatonin",
-    "e": ""
+    "e": "The pineal gland releases melatonin as light fades, helping set the sleep-wake cycle."
    },
    {
     "c": "Famous patients",
@@ -211,7 +211,7 @@
     "c": "Toxicology",
     "q": "Which plant poison was used to execute Socrates?",
     "a": "Hemlock",
-    "e": ""
+    "e": "Socrates was sentenced to death in Athens in 399 BC and drank poison hemlock."
    },
    {
     "c": "History of medicine",
@@ -235,7 +235,7 @@
     "c": "On screen",
     "q": "In \u2018Scrubs\u2019, who is JD\u2019s reluctant mentor?",
     "a": "Dr Perry Cox",
-    "e": ""
+    "e": "Dr Perry Cox, played by John C. McGinley, mentors JD while insisting he doesn\u2019t."
    },
    {
     "c": "Eponyms",
@@ -265,7 +265,7 @@
     "c": "Anatomy",
     "q": "Which organ contains the islets of Langerhans?",
     "a": "The pancreas",
-    "e": ""
+    "e": "The islets of Langerhans are clusters of hormone-making cells in the pancreas. Their beta cells make insulin."
    },
    {
     "c": "Pharmacology",
@@ -289,7 +289,7 @@
     "c": "On screen",
     "q": "Which city is the emergency department in \u2018The Pitt\u2019 set in?",
     "a": "Pittsburgh",
-    "e": ""
+    "e": "The Pitt is set in the emergency department of a Pittsburgh trauma hospital, with each episode covering one hour of a shift."
    },
    {
     "c": "Etymology",
@@ -301,7 +301,7 @@
     "c": "Physiology",
     "q": "What is the normal pH range of arterial blood?",
     "a": "7.35 to 7.45",
-    "e": ""
+    "e": "Normal arterial pH is 7.35 to 7.45. Below that is acidaemia, above is alkalaemia. Also accept 7.4."
    },
    {
     "c": "Famous patients",
@@ -313,7 +313,7 @@
     "c": "Language",
     "q": "What is the medical term for hiccups?",
     "a": "Singultus",
-    "e": ""
+    "e": "Singultus is the medical term for hiccups, from the Latin for a sob."
    },
    {
     "c": "Nobel Prizes",
@@ -325,7 +325,7 @@
     "c": "Pathology",
     "q": "Deficiency of which vitamin causes beriberi?",
     "a": "Thiamine (vitamin B1)",
-    "e": ""
+    "e": "Beriberi is thiamine (vitamin B1) deficiency, historically from diets of polished white rice. Also accept B1."
    },
    {
     "c": "By the numbers",
@@ -349,7 +349,7 @@
     "c": "Anatomy",
     "q": "Which chamber of the heart has the thickest wall?",
     "a": "The left ventricle",
-    "e": ""
+    "e": "The left ventricle pumps blood around the whole body, so its wall is about three times thicker than the right\u2019s."
    },
    {
     "c": "Pharmacology",
@@ -361,7 +361,7 @@
     "c": "On screen",
     "q": "Which 1966 film shrinks a medical team to travel through a man\u2019s bloodstream?",
     "a": "Fantastic Voyage",
-    "e": ""
+    "e": "In Fantastic Voyage (1966), a shrunken submarine crew travels through a scientist\u2019s bloodstream to remove a brain clot."
    },
    {
     "c": "Eponyms",
@@ -415,7 +415,7 @@
     "c": "On screen",
     "q": "What was Derek Shepherd\u2019s nickname in \u2018Grey\u2019s Anatomy\u2019?",
     "a": "McDreamy",
-    "e": ""
+    "e": "Dr Derek Shepherd, played by Patrick Dempsey, was nicknamed McDreamy."
    },
    {
     "c": "Etymology",
@@ -427,7 +427,7 @@
     "c": "Physiology",
     "q": "Which ion mainly sets the resting membrane potential of cells?",
     "a": "Potassium",
-    "e": ""
+    "e": "Potassium leaking out of cells through potassium channels mainly sets the resting membrane potential, around \u221270 mV."
    },
    {
     "c": "Famous patients",
@@ -457,13 +457,13 @@
     "c": "By the numbers",
     "q": "Roughly what is an average adult\u2019s total lung capacity?",
     "a": "About 6 litres",
-    "e": ""
+    "e": "Total lung capacity in an average adult is about 6 litres, a little less in women and smaller adults. Accept 5 to 6 litres."
    },
    {
     "c": "Toxicology",
     "q": "Which toxin, one of the most lethal known, is injected to smooth wrinkles?",
     "a": "Botulinum toxin",
-    "e": ""
+    "e": "Botulinum toxin is among the most lethal substances known, yet tiny doses relax muscles to smooth wrinkles and treat spasticity."
    },
    {
     "c": "History of medicine",
@@ -475,7 +475,7 @@
     "c": "Anatomy",
     "q": "What is the largest internal organ?",
     "a": "The liver",
-    "e": ""
+    "e": "The liver is the largest internal organ at about 1.5 kg. The skin is the largest organ overall."
    },
    {
     "c": "Pharmacology",
@@ -487,13 +487,13 @@
     "c": "On screen",
     "q": "What is the hospital called in \u2018Scrubs\u2019?",
     "a": "Sacred Heart",
-    "e": ""
+    "e": "Scrubs is set at Sacred Heart Hospital, a fictional teaching hospital."
    },
    {
     "c": "Eponyms",
     "q": "Cushing\u2019s, Addison\u2019s and Conn\u2019s syndromes all involve which gland?",
     "a": "The adrenal gland",
-    "e": ""
+    "e": "All three are adrenal conditions: Cushing\u2019s (too much cortisol), Addison\u2019s (too little) and Conn\u2019s (too much aldosterone)."
    },
    {
     "c": "Brain-melter",
@@ -643,13 +643,13 @@
     "c": "Anatomy",
     "q": "Which flap of cartilage covers the windpipe when you swallow?",
     "a": "The epiglottis",
-    "e": ""
+    "e": "The epiglottis flips down over the larynx when you swallow, so food goes into the oesophagus rather than the airway."
    },
    {
     "c": "Pharmacology",
     "q": "Drugs ending in \u2018-olol\u2019 belong to which class?",
     "a": "Beta blockers",
-    "e": ""
+    "e": "Drugs ending in \u2018-olol\u2019, such as metoprolol and propranolol, are beta blockers. They slow the heart and lower blood pressure."
    },
    {
     "c": "Eponyms",
@@ -691,7 +691,7 @@
     "c": "Language",
     "q": "What is the anatomical name for the Adam\u2019s apple?",
     "a": "The laryngeal prominence",
-    "e": ""
+    "e": "The Adam\u2019s apple is the laryngeal prominence of the thyroid cartilage. It\u2019s larger after male puberty."
    },
    {
     "c": "Nobel Prizes",
@@ -703,7 +703,7 @@
     "c": "Pathology",
     "q": "What is the most common cause of dementia?",
     "a": "Alzheimer\u2019s disease",
-    "e": ""
+    "e": "Alzheimer\u2019s disease causes about 60 to 70% of dementia worldwide, according to WHO."
    },
    {
     "c": "By the numbers",
@@ -727,7 +727,7 @@
     "c": "Anatomy",
     "q": "What is the largest muscle in the body?",
     "a": "Gluteus maximus",
-    "e": ""
+    "e": "The gluteus maximus is the largest muscle by size. It keeps you upright and powers climbing stairs."
    },
    {
     "c": "Pharmacology",
@@ -739,13 +739,13 @@
     "c": "On screen",
     "q": "Who played the teenage title doctor in \u2018Doogie Howser, M.D.\u2019?",
     "a": "Neil Patrick Harris",
-    "e": ""
+    "e": "Neil Patrick Harris played teenage doctor Doogie Howser from 1989 to 1993."
    },
    {
     "c": "Eponyms",
     "q": "Murphy\u2019s sign points to inflammation of which organ?",
     "a": "The gallbladder",
-    "e": ""
+    "e": "Murphy\u2019s sign is pain that stops breathing in when pressing under the right ribs. It points to an inflamed gallbladder (cholecystitis)."
    },
    {
     "c": "Brain-melter",
