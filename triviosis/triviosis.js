@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", PASS = 6;
   var root = document.getElementById("trv");
   // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
@@ -58,8 +58,20 @@
   function score() { return st.ans.filter(function (a, i) { return a === Z.questions[i].a; }).length; }
 
   // ---------- render ----------
+  // view: index of an earlier question being reviewed (null = the current one). AUTO: seconds before moving on after answering.
+  var view = null, autoI = null, AUTO = 10, lastMsg = "";
+  function stopAuto() { if (autoI) { clearInterval(autoI); autoI = null; } }
+  function goNext() { stopAuto(); st.pending = false; if (st.ans.length >= Z.questions.length) finish(); put(KEY, st); render(); window.scrollTo({ top: root.getBoundingClientRect().top + scrollY - 70, behavior: "smooth" }); }
+  function reviewCard(i) {
+    var x = Z.questions[i], opts = options(i), chosen = st.ans[i], cur = st.pending ? st.ans.length - 1 : st.ans.length;
+    return '<p class="qn">Question ' + (i + 1) + ' <span class="rv">Looking back</span></p><h2 class="qt">' + esc(x.q) + '</h2><div class="opts">' +
+      opts.map(function (o) { return '<button type="button" class="opt ' + (o === x.a ? "right" : o === chosen ? "wrong" : "dim") + '" disabled>' + esc(o) + "</button>"; }).join("") + "</div>" +
+      '<div class="explain"><b>' + (chosen === x.a ? "You got this one." : "You picked " + esc(chosen) + ".") + "</b> " + esc(x.e) + "</div>" +
+      '<div class="navrow">' + (i > 0 ? '<button type="button" class="nav" id="trv-prev">← Back</button>' : "<span></span>") + '<button type="button" class="next" id="trv-fwd">' + (i + 1 >= cur ? "Back to question " + (cur + 1) : "Forward →") + "</button></div>";
+  }
   function render(msg) {
     if (!Z) return;
+    stopAuto(); if (msg !== undefined) lastMsg = msg;
     var n = st.ans.length, total = Z.questions.length;
     $("prog").innerHTML = Z.questions.map(function (x, i) {
       var c = i < n ? (st.ans[i] === x.a ? "ok" : "no") : i === n && !st.done && !st.pending ? "cur" : "";
@@ -69,14 +81,26 @@
     if (st.done) { card.hidden = true; renderResult(); return; }
     card.hidden = false; $("result").hidden = true;
     var i = st.pending ? n - 1 : n, x = Z.questions[i], opts = options(i), chosen = st.pending ? st.ans[i] : null;
+    if (view !== null && view < i) {
+      card.innerHTML = reviewCard(view);
+      if ($("prev")) $("prev").onclick = function () { view--; render(); };
+      $("fwd").onclick = function () { view = view + 1 >= i ? null : view + 1; render(); };
+      return;
+    }
+    view = null; msg = msg || (chosen !== null ? lastMsg : "");
     card.innerHTML = '<p class="qn">Question ' + (i + 1) + '</p><h2 class="qt">' + esc(x.q) + '</h2><div class="opts">' +
       opts.map(function (o) {
         var cls = "opt";
         if (chosen !== null) { if (o === x.a) cls += " right"; else if (o === chosen) cls += " wrong"; else cls += " dim"; }
         return '<button type="button" class="' + cls + '" data-o="' + esc(o) + '"' + (chosen !== null ? " disabled" : "") + ">" + esc(o) + "</button>";
       }).join("") + "</div>" +
-      (chosen !== null ? '<div class="explain"><b>' + esc(msg || (chosen === x.a ? "Correct." : "Not quite.")) + "</b> " + esc(x.e) + '</div><button type="button" class="next" id="trv-go">' + (i + 1 < total ? "Next question" : "See your score") + "</button>" : "");
-    if ($("go")) $("go").onclick = function () { st.pending = false; if (st.ans.length >= total) finish(); put(KEY, st); render(); window.scrollTo({ top: root.getBoundingClientRect().top + scrollY - 70, behavior: "smooth" }); };
+      (chosen !== null ? '<div class="explain"><b>' + esc(msg || (chosen === x.a ? "Correct." : "Not quite.")) + "</b> " + esc(x.e) + '</div><div class="navrow">' + (i > 0 ? '<button type="button" class="nav" id="trv-prev">\u2190 Back</button>' : "<span></span>") + '<button type="button" class="next" id="trv-go"><span>' + (i + 1 < total ? "Next question" : "See your score") + '</span><i class="cd" id="trv-cd"></i></button></div>' : (i > 0 ? '<div class="navrow"><button type="button" class="nav" id="trv-prev">\u2190 Back</button><span></span></div>' : ""));
+    if ($("prev")) $("prev").onclick = function () { stopAuto(); view = i - 1; render(); };
+    if ($("go")) {
+      $("go").onclick = goNext;
+      var left = AUTO, cd = $("cd"); cd.textContent = left + "s";
+      autoI = setInterval(function () { left--; if (cd) cd.textContent = left + "s"; if (left <= 0) goNext(); }, 1000);
+    }
   }
   var ICON = "\ud83e\udde0";
   function renderResult() {
