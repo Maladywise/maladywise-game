@@ -79,7 +79,7 @@
       S.score += pts; float(LANES[i], BENCH - 80, "SMASH +" + pts, "#C2553A"); toast(pick(SMASHQ[it.kind]));
       if (it.kind === "tank") { if (S.lives < 3) S.lives++; for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
       for (var q = 0; q < 26; q++) S.shards.push({ x: LANES[i] + rnd(-14, 14), y: BENCH - rnd(10, 50), vx: rnd(-260, 260), vy: -rnd(120, 420), r: rnd(0, 6), vr: rnd(-12, 12), s: rnd(3, 8), c: it.kind === "tv" ? pick(["#2B2340", "#6FA8C9", "#3B3B44", "#AEB8C0"]) : pick(["#2F5DA8", "#F1ECF8", "#6FA8C9", "#E0703A"]), l: 1.4 });
-      if (S.bonus <= 0 && S.score >= S.nextBonus) startBonus();
+      if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
       return;
     }
     S.lanes[i] = null;
@@ -97,7 +97,7 @@
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1);
     S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
-    if (S.bonus <= 0 && S.score >= S.nextBonus) startBonus();
+    if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
   }
   function startBonus() {
     S.bonus = 10; S.bonuses++; S.nextBonus = Infinity; S.clover = null; S.cloverT = rnd(12, 16);
@@ -164,7 +164,7 @@
     }
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.nextBonus = S.score + 75; toast("Basil’s back. He saw everything."); } }
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.nextBonus = S.score + 75 + 50 * S.bonuses + Math.round(S.score * 0.25); S.bonusAt = S.t + 30 + 10 * S.bonuses; toast("Basil’s back. He saw everything."); } }
     if (shakeT > 0) shakeT -= dt;
     if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) { S.paw = null; } }
     S.lean *= 0.85;
