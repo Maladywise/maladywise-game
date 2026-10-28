@@ -804,10 +804,11 @@
     limit();
     var nx = el('<div class="mwx-next" hidden></div>'); strip.insertBefore(nx, strip.querySelector(".mwx-list"));
     function rowDate(r) { return r.getAttribute("data-d") || r.getAttribute("data-w"); }
+    var pageDay = sydToday(); // the day this page opened on, so passing midnight doesn't hide the buttons
     function nextUnsolved() {
       if (!g.store || !g.store.day) return;
       var rows = Array.prototype.slice.call(arch.querySelectorAll(".arow")), t = sydToday(), cur = (rows.filter(function (r) { return r.classList.contains("on"); })[0]);
-      var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || t);
+      var curD = cur ? rowDate(cur) : (new URLSearchParams(location.search).get("date") || pageDay);
       if (!cur && g.store.weekly && /^\d{4}-\d\d-\d\d$/.test(curD)) { var cn = dayNum(curD); curD = new Date((cn - relBack(cn, g.store.weekStart)) * 864e5).toISOString().slice(0, 10); } // weekly: this week's release day
       var curSt = get(g.store.day + curD, null);
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
