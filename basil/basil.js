@@ -166,6 +166,7 @@
   function laneAt(ev) { var r = cv.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width * W; return x < 126 ? 0 : x < 234 ? 1 : 2; }
   function eatMoth() {
     var m = S.moth; if (!m || m.eaten) return false;
+    if (m.kind === "wasp") { m.eaten = 0.4; S.ouchT = 0.7; S.ouches++; float(m.x, m.y - 10, "Stung!", "#C2553A"); toast(pick(["Wasp. Bad idea. Very bad idea.", "Stung on the nose. Dignity: gone.", "That was not a moth.", "Wasps bite back. Well, sting."])); shake(); hurt(S.bonus > 0 ? "c" : "b", 20); return true; }
     m.eaten = 0.4; S.eaten++; S.frenzyT = 6; addPts(2 * U()); float(m.x, m.y - 10, "Nom! +" + fmt(2 * U()), "#B5308A"); toast(pick(MOTHQ)); track("basil/moth");
     return true;
   }
@@ -199,7 +200,7 @@
     if (S.wet > 0) S.wet = Math.max(0, S.wet - dt * 0.015);
     if (S.frenzyT > 0) { S.frenzyT -= dt; if (S.frenzyT <= 0) { S.frenzyT = 0; toast("Frenzy over. Back to regular evil."); } }
     S.mothT -= dt;
-    if (!S.moth && S.mothT <= 0) { var fromL = Math.random() < .5; S.moth = { kind: Math.random() < .5 ? "moth" : "butterfly", x: fromL ? -20 : W + 20, y: rnd(110, 200), vx: (fromL ? 1 : -1) * rnd(50, 80), ph: rnd(0, 6), life: 9 }; S.mothT = rnd(14, 22); }
+    if (!S.moth && S.mothT <= 0) { var fromL = Math.random() < .5; S.moth = { kind: Math.random() < 0.3 ? "wasp" : Math.random() < .5 ? "moth" : "butterfly", x: fromL ? -20 : W + 20, y: rnd(110, 200), vx: (fromL ? 1 : -1) * rnd(50, 80), ph: rnd(0, 6), life: 9 }; S.mothT = rnd(14, 22); }
     var mo = S.moth;
     if (mo) {
       if (mo.eaten) { mo.eaten -= dt; if (mo.eaten <= 0) S.moth = null; }
@@ -472,12 +473,16 @@
     var mo = S.moth;
     if (mo) {
       ctx.save(); ctx.translate(mo.x, mo.y); var fl = Math.abs(Math.sin(S.t * 16)) * 0.8 + 0.2, sc = mo.eaten ? mo.eaten / 0.4 : 1; ctx.scale(sc, sc);
-      var wc = mo.kind === "moth" ? ["#B8A88A", "#9C8B6E"] : ["#F0A21E", "#E0703A"];
-      ctx.save(); ctx.scale(1, fl); ell(-9, -6, 10, 8, wc[0], -0.4); ell(9, -6, 10, 8, wc[0], 0.4); ell(-7, 6, 7, 6, wc[1], 0.3); ell(7, 6, 7, 6, wc[1], -0.3); ctx.restore();
+      var wc = mo.kind === "moth" ? ["#B8A88A", "#9C8B6E"] : mo.kind === "wasp" ? ["rgba(220,235,245,.75)", "rgba(200,220,235,.7)"] : ["#F0A21E", "#E0703A"];
+      if (mo.kind === "wasp") { ctx.save(); ctx.scale(1, fl); ell(-7, -8, 8, 5, wc[0], -0.5); ell(7, -8, 8, 5, wc[0], 0.5); ctx.restore();
+        ell(0, 2, 5, 11, "#F2C230"); ctx.fillStyle = "#2B2340"; [-3, 3, 9].forEach(function (yy) { ctx.fillRect(-5, yy, 10, 2.6); }); circ(0, -10, 4.2, "#2B2340"); ctx.fillStyle = "#2B2340"; ctx.beginPath(); ctx.moveTo(-2, 12); ctx.lineTo(0, 18); ctx.lineTo(2, 12); ctx.fill();
+        ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -13); ctx.lineTo(-4, -18); ctx.moveTo(1, -13); ctx.lineTo(4, -18); ctx.stroke(); }
+      else { ctx.save(); ctx.scale(1, fl); ell(-9, -6, 10, 8, wc[0], -0.4); ell(9, -6, 10, 8, wc[0], 0.4); ell(-7, 6, 7, 6, wc[1], 0.3); ell(7, 6, 7, 6, wc[1], -0.3); ctx.restore();
       if (mo.kind === "butterfly") { circ(-9, -6, 3, "#2B2340"); circ(9, -6, 3, "#2B2340"); }
-      ell(0, 0, 2.6, 10, "#2B2340"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -9); ctx.lineTo(-5, -16); ctx.moveTo(1, -9); ctx.lineTo(5, -16); ctx.stroke();
+      ell(0, 0, 2.6, 10, "#2B2340"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -9); ctx.lineTo(-5, -16); ctx.moveTo(1, -9); ctx.lineTo(5, -16); ctx.stroke(); }
       ctx.restore();
-      if (!mo.eaten) { ctx.strokeStyle = "rgba(181,48,138,.35)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(mo.x, mo.y, 24 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); }
+      if (!mo.eaten && mo.kind === "wasp") { ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(mo.x + 18, mo.y - 18, 6, 0, 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(mo.x + 14, mo.y - 22); ctx.lineTo(mo.x + 22, mo.y - 14); ctx.stroke(); }
+      else if (!mo.eaten) { ctx.strokeStyle = "rgba(181,48,138,.35)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(mo.x, mo.y, 24 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); }
     }
     S.gulp.forEach(function (g) { var k = g.t / 0.32, gx = g.x + (180 - g.x) * k, gy = g.y + (BENCH - 98 - g.y) * k; ctx.save(); ctx.translate(gx, gy); ctx.scale(1 - k * 0.85, 1 - k * 0.85); item(g.kind, 0, 0, 0); ctx.restore(); });
     S.flops.forEach(function (f) { item("fish", f.x, f.y, f.r); });
