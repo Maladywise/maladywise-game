@@ -3,7 +3,7 @@
    quizzes.json: [{week: "YYYY-MM-DD" (a Sunday), number, questions:[{c, q, a, e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", PASS = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", PASS = 10;
   var root = document.getElementById("gdr");
   // Normie mode: "week that was" quiz from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
