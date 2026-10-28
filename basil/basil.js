@@ -19,7 +19,10 @@
   var W = 360, H = 430, BENCH = 318, LANES = [72, 180, 288];
   var cv = $("bk-canvas"), ctx = cv.getContext("2d"), dpr = 1;
   function size() {
-    var w = cv.parentNode.clientWidth || 360; dpr = Math.min(3, window.devicePixelRatio || 1);
+    // fit the whole game (score bar + bench) in the window: width limited by the screen height
+    var g = $("bk-game"); g.style.maxWidth = "";
+    var full = g.clientWidth || 360, avail = window.innerHeight - 150, w = Math.max(260, Math.min(full, avail * W / H));
+    g.style.maxWidth = w + "px"; w = cv.parentNode.clientWidth || w; dpr = Math.min(3, window.devicePixelRatio || 1);
     cv.style.height = (w * H / W) + "px"; cv.width = Math.round(w * dpr); cv.height = Math.round(w * H / W * dpr);
     ctx.setTransform(cv.width / W, 0, 0, cv.height / H, 0, 0);
   }
@@ -528,7 +531,7 @@
   function start() {
     reset(); $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
-    $("bk-stage").scrollIntoView({ behavior: quiet() ? "auto" : "smooth", block: "center" });
+    var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = start; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;

@@ -18,7 +18,7 @@
 .bk-best b{color:#fff}
 .bk-hush{font-size:12px;color:#A99BD1;font-style:italic}
 
-.bk-game{display:grid;gap:10px}
+.bk-game{display:grid;gap:10px;margin:0 auto;width:100%}
 .bk-hud{display:flex;align-items:center;gap:10px;background:#2B5E80;color:#fff;border-radius:16px;padding:8px 10px 8px 14px;font-variant-numeric:tabular-nums}
 .bk-time{display:grid;line-height:1.1;margin-right:auto}
 .bk-time small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C9BFE6}
