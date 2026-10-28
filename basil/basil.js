@@ -189,8 +189,8 @@
     if (!running) return;
     var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowUp: 1, ArrowRight: 2, a: 0, s: 1, d: 2 }[e.key];
     if (k != null) { e.preventDefault(); kick(k); }
-    if (e.key === "4" && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
-    if ((e.key === "b" || e.key === "B") && running && !paused && !S.over) { e.preventDefault(); shoo(); }
+    if (/^[4wW]$/.test(e.key) && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
+    if ((/^[fFbB5]$/.test(e.key) || (e.key === " " && !S.over)) && running && !paused && !S.over) { e.preventDefault(); shoo(); }
     if (e.key === " " && S.over) { e.preventDefault(); start(); }
     if (e.key === "p" || e.key === "Escape") togglePause();
   });
