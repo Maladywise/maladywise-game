@@ -122,7 +122,7 @@
     if (!P) return;
     var n = P.prompts.length;
     $("prog").innerHTML = P.prompts.map(function (x, i) {
-      var p = st.picks[i]; var t = i < st.picks.length ? (p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c") : "";
+      var p = st.picks[i]; var t = i < st.picks.length ? (p >= 0 ? TIER[x.a[p][1]].e : "\u274c") : "";
       return '<span class="pip' + (i === st.i && !st.done ? " cur" : "") + (i < st.picks.length ? " done" : "") + '">' + (t || i + 1) + "</span>";
     }).join("") + '<span class="tot">' + score() + " pts</span>";
     if (st.done) { $("card").hidden = true; renderResult(); return; }
@@ -139,7 +139,7 @@
     } else {
       var p = st.picks[i];
       h += p >= 0 ? '<div class="hit t' + x.a[p][1] + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span></div><i>+" + x.a[p][1] + "</i></div>"
-        : '<div class="hit t0"><span class="em">\u2b1c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
+        : '<div class="hit t0"><span class="em">\u274c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
       if (tries.length) {
         var sent = (st.sug || {})[i] || [];
         h += '<div class="sug"><p>Think one of yours should count?</p>' + tries.map(function (t, k) {
@@ -161,7 +161,7 @@
   }
   function renderResult() {
     var r = $("result"), s = score(), max = P.prompts.length * 20;
-    var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u2b1c"; }).join("");
+    var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u274c"; }).join("");
     var share = (P.prompts.length > 3 ? "Super Zebritis" : "Zebritis") + (NORMIE ? " (Normie)" : "") + " #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : sc3(s) >= 25 ? "A dazzle of zebras. Unbearable." : sc3(s) >= 18 ? "Strong stripes. Consultant material." : sc3(s) >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
@@ -171,7 +171,7 @@
       '<pre id="zbr-share">' + esc(share) + '</pre><button class="btn solid" type="button" id="zbr-copy">Copy result</button>' +
       '<div class="review">' + P.prompts.map(function (x, i) {
         var p = st.picks[i];
-        return '<div class="rv"><b>' + esc(x.q) + "</b><span>" + (p >= 0 ? TIER[x.a[p][1]].e + " " + esc(cap(x.a[p][0])) + " (+" + x.a[p][1] + ")" : "\u2b1c No score") + "</span>" + reveal(x, p).replace(" open", "") + "</div>";
+        return '<div class="rv"><b>' + esc(x.q) + "</b><span>" + (p >= 0 ? TIER[x.a[p][1]].e + " " + esc(cap(x.a[p][0])) + " (+" + x.a[p][1] + ")" : "\u274c No score") + "</span>" + reveal(x, p).replace(" open", "") + "</div>";
       }).join("") + "</div>";
     $("copy").onclick = function () {
       var b = this;
