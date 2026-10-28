@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", PASS = 6;
   var root = document.getElementById("trv");
   // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
