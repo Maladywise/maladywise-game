@@ -580,3 +580,13 @@ main .stats,main .dist{display:none!important}
 @keyframes mwbt{from{opacity:0;transform:translate(-50%,24px) scale(.9)}to{opacity:1;transform:translate(-50%,0)}}
 .mwx-skip{display:block;margin:6px auto 0;border:0;background:none;color:var(--muted);font:500 12.5px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:4px 8px}
 .mwx-stuckp{text-align:center;margin:14px 0 6px}.mwx-stuck{border:0;background:none;color:var(--muted);font:600 13.5px Poppins,system-ui,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:6px 10px}
+/* fact sheet treatment ladder */
+.doc ol.ladder{list-style:none;padding:0;display:grid;gap:10px;margin:8px 0}
+.doc ol.ladder li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;line-height:1.5;position:relative}
+.doc ol.ladder li .ev{display:inline-block;margin:0 0 6px}
+.doc ol.ladder li b{display:block;font-size:1.05em;margin-bottom:4px}
+.doc ol.ladder dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:10px 0 6px;font-size:.95em}
+.doc ol.ladder dt{font-weight:600;color:var(--muted);font-size:.8em;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.doc ol.ladder dd{margin:0}
+.doc ol.ladder .sass{margin:6px 0 0;font-style:italic;color:var(--accent,#4A3480)}
+@media print{.doc ol.ladder li{break-inside:avoid;padding:6px 8px}.doc ol.ladder dl{margin:4px 0}}
