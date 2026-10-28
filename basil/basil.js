@@ -42,13 +42,14 @@
   var HEAVY = { vase: { hp: [3, 5], pts: 5, life: 5.5 }, tv: { hp: [8, 10], pts: 12, life: 8 }, tank: { hp: [25, 25], pts: 50, life: 16 } };
   var SMASHQ = { vase: ["Vase: shattered. Basil: unbothered.", "That was an heirloom. Was.", "Crash. He doesn’t even flinch."], tv: ["TV smashed. Screen time: over.", "No more nature documentaries.", "The TV has been cancelled."], tank: ["THE FISH TANK. Free sushi. +1 life.", "Aquarium destroyed. Goldfish rescued (eaten). +1 life."] };
   var MOTHQ = ["Moth eaten. FRENZY!", "Snack acquired. FRENZY!", "Crunchy. FRENZY!", "Protein. FRENZY!"];
+  var CNAMES = [[0, "Cute Clover"], [4, "Wiggle Butt"], [10, "The Whingapotamus"], [18, "Chief Complaints Officer"], [28, "Spicy Little Muffin"], [40, "Miss Piggy"], [55, "Clover Piggington"], [75, "Queen Piggington"]];
   var NAMES = [[0, "Fluffy white rat"], [15, "Basil Brown Pants"], [35, "Fat Basil"], [60, "Fat white seal"], [100, "Basil Bad Cat"], [160, "Albino Satan"]];
   var ITEMS = ["mug", "pen", "phone", "sock", "pills", "steth", "plant", "remote", "glass", "tube", "keys", "thermo"];
 
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -79,7 +80,7 @@
     if (!it || !it.landed) return;
     if (it.hp) {
       S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
-      it.hp -= S.frenzyT > 0 ? 2 : 1; it.hit = 0.18; it.wob = rnd(0, 6);
+      it.hp -= S.frenzyT > 0 ? 2 : 1; it.hit = 0.18; it.wob = rnd(0, 6); S.kicks++;
       if (it.hp > 0) return;
       S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05)); if (it.kind === "tank") S.wet = Math.min(1, S.wet + 0.7);
       var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0;
@@ -104,7 +105,7 @@
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1);
     if (S.bonus <= 0) { S.dirt = Math.min(1, S.dirt + 0.008); if (it.kind === "glass") S.wet = Math.min(1, S.wet + 0.15); }
-    S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
+    S.kicks++; S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
     if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
   }
@@ -436,12 +437,16 @@
   }
 
   // ---------- flow ----------
-  function nameFor(n) { var nm = NAMES[0][1]; NAMES.forEach(function (x) { if (n >= x[0]) nm = x[1]; }); return nm; }
+  function nameFor(n, L) { L = L || NAMES; var nm = L[0][1]; L.forEach(function (x) { if (n >= x[0]) nm = x[1]; }); return nm; }
   function end() {
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
-    $("bk-otitle").textContent = "Verdict: " + nameFor(S.score);
-    $("bk-omsg").textContent = S.score < 15 ? "Barely a kick. He's saving his energy for 3am." : S.score < 60 ? "A respectable mess. The bench will never be the same." : S.score < 120 ? "Chaos. Several mugs have filed for compensation." : "Pure evil. Fluffy, smug, white evil.";
-    $("bk-okick").textContent = S.score; $("bk-oswipe").textContent = S.swiped; if ($("bk-oouch")) $("bk-oouch").textContent = S.ouches;
+    var cl = S.bonus > 0, bn = nameFor(S.score), cn = nameFor(S.eatenFood, CNAMES);
+    $("bk-omasc").src = "/assets/mascots/" + (cl ? "clover.svg?v=1" : "basil.svg?v=2"); $("bk-omasc").alt = cl ? "Clover" : "Basil";
+    $("bk-otitle").textContent = cl ? cn : bn;
+    $("bk-ofeat").textContent = cl ? "Clover ended it. Mid-snack." : "Basil’s verdict";
+    $("bk-omsg").textContent = cl ? (S.eatenFood < 10 ? "Barely a snack. She’ll be complaining about this for days." : S.eatenFood < 40 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
+      : (S.score < 15 ? "Barely a kick. He's saving his energy for 3am." : S.score < 60 ? "A respectable mess. The bench will never be the same." : S.score < 120 ? "Chaos. Several mugs have filed for compensation." : "Pure evil. Fluffy, smug, white evil.") + (S.eatenFood ? " Clover: " + cn + "." : "");
+    $("bk-opts").textContent = S.score; $("bk-okick").textContent = S.kicks; $("bk-onom").textContent = S.eatenFood;
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + best; ob.className = "bk-obest" + (pb ? " pb" : "");
     $("bk-over").hidden = false; track("basil/end"); setTimeout(function () { $("bk-again").focus(); }, 50);
   }
@@ -453,7 +458,7 @@
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = start; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   $("bk-sharebtn").onclick = function () {
-    var t = "Basil + Clover 🐾 " + S.score + " things kicked off the bench" + (S.swiped ? ", Clover swiped " + S.swiped + "x" : "") + ". Verdict: " + nameFor(S.score) + ".\nmaladywise.com/basil", b = this;
+    var t = "Basil + Clover 🐾 " + S.score + " points (" + S.kicks + " kicks, " + S.eatenFood + " noms). Basil: " + nameFor(S.score) + (S.eatenFood ? ". Clover: " + nameFor(S.eatenFood, CNAMES) : "") + ".\nmaladywise.com/basil", b = this;
     if (navigator.share) { navigator.share({ text: t }).catch(function () {}); return; }
     try { navigator.clipboard.writeText(t).then(function () { b.textContent = "Copied"; }); } catch (e) {}
   };
