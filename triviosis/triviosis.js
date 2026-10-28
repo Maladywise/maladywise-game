@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", PASS = 6;
   var root = document.getElementById("trv");
   // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
@@ -78,6 +78,12 @@
       return '<i class="' + c + '"></i>';
     }).join("") + '<span>' + (st.done ? score() + "/" + total : "Q" + Math.min(st.pending ? n : n + 1, total) + " of " + total) + "</span>";
     var card = $("card");
+    if (!st.done) {
+      var ci = st.pending ? n - 1 : n, at = view !== null && view < ci ? view : ci;
+      $("prog").innerHTML = '<button type="button" class="arw" id="trv-aprev" aria-label="Previous question"' + (at > 0 ? "" : " disabled") + '>\u2039</button>' + $("prog").innerHTML +
+        '<button type="button" class="arw" id="trv-anext" aria-label="Next question"' + (at < ci || st.pending ? "" : " disabled") + '>\u203a</button>';
+      $("aprev").onclick = prevQ; $("anext").onclick = nextQ;
+    }
     if (st.done) { card.hidden = true; renderResult(); return; }
     card.hidden = false; $("result").hidden = true;
     var i = st.pending ? n - 1 : n, x = Z.questions[i], opts = options(i), chosen = st.pending ? st.ans[i] : null;
@@ -102,6 +108,10 @@
       autoI = setInterval(function () { left--; if (cd) cd.textContent = left + "s"; if (left <= 0) goNext(); }, 1000);
     }
   }
+  function curI() { return st.pending ? st.ans.length - 1 : st.ans.length; }
+  function prevQ() { if (!Z || st.done) return; var ci = curI(), at = view !== null && view < ci ? view : ci; if (at > 0) { stopAuto(); view = at - 1; render(); } }
+  function nextQ() { if (!Z || st.done) return; var ci = curI(); if (view !== null && view < ci) { view = view + 1 >= ci ? null : view + 1; render(); } else if (st.pending) goNext(); }
+  document.addEventListener("keydown", function (e) { if (e.target.closest && e.target.closest("input,textarea")) return; if (e.key === "ArrowLeft") prevQ(); else if (e.key === "ArrowRight") nextQ(); });
   var ICON = "\ud83e\udde0";
   function renderResult() {
     var r = $("result"), s = score();
