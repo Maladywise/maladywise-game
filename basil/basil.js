@@ -237,8 +237,8 @@
       }
     }
     // resting: the cat off the bench slowly recovers (Basil in the sink, Clover asleep on her cushion)
-    if (S.bonus > 0) { if (!S.sneak) S.hb = Math.min(100, S.hb + 1.2 * dt); }
-    else if (!S.clover) S.hc = Math.min(100, S.hc + 0.8 * dt);
+    if (S.bonus > 0) { if (!S.sneak) S.hb = Math.min(100, S.hb + 0.24 * dt); }
+    else if (!S.clover) S.hc = Math.min(100, S.hc + 0.16 * dt);
     // Clover's round: Basil sneaks up from the sink. Tap him to shoo him; if he gets there he swipes her (-10 points).
     if (S.bonus > 0) {
       var sb = S.sneak;
