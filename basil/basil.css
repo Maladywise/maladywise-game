@@ -83,3 +83,22 @@
 .bk-hsform div{display:flex;gap:6px}
 .bk-hsform input{flex:1;min-width:0;font:600 16px var(--body);padding:8px 10px;border-radius:10px;border:1.5px solid #D2C6B6;background:#fff;color:#2B2340}
 .bk-hsform button{font:700 14px var(--body);padding:8px 14px;border-radius:999px;border:0;background:#2E1F57;color:#fff;cursor:pointer}
+/* compact game-over card: no sideways scroll, fits short screens */
+.bk-over{padding:10px}
+.bk-card{grid-template-columns:minmax(0,1fr);overflow-x:hidden;overflow-y:auto;padding:14px 14px 12px;gap:6px;box-sizing:border-box;scrollbar-width:thin}
+.bk-card>*{max-width:100%;box-sizing:border-box}
+.bk-omasc{width:56px;height:56px;margin-top:0}
+.bk-otitle{font-size:24px}
+.bk-omsg{font-size:14px;line-height:1.35}
+.bk-ostats{gap:6px}
+.bk-ostats span{min-width:0;padding:6px 4px}
+.bk-ostats small{font-size:9px;letter-spacing:.06em}
+.bk-ostats b{font-size:18px}
+.bk-ostats .bk-big b{font-size:22px}
+.bk-hsform{padding:6px 8px;grid-template-columns:minmax(0,1fr);text-align:center}
+.bk-hsform input{padding:6px 10px}
+.bk-obtns .big,.bk-sbtn{padding-top:10px;padding-bottom:10px}
+@media (max-height:640px){.bk-omasc{display:none}}
+.bk-omasc{width:46px;height:46px}
+.bk-hsform:not([hidden])~.bk-ohint{display:none}
+.bk-card{padding:10px 14px 10px;gap:5px}
