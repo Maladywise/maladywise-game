@@ -187,6 +187,7 @@
   });
   document.addEventListener("keydown", function (e) {
     if (!running) return;
+    if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
     var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowUp: 1, ArrowRight: 2, a: 0, s: 1, d: 2 }[e.key];
     if (k != null) { e.preventDefault(); kick(k); }
     if (/^[4wW]$/.test(e.key) && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
@@ -526,8 +527,30 @@
       : (S.bPts < 1000 ? "Barely a kick. He's saving his energy for 3am." : S.bPts < 15000 ? "A respectable mess. The bench will never be the same." : S.bPts < 100000 ? "Chaos. Several mugs have filed for compensation." : "Pure evil. Fluffy, smug, white evil.") + (S.eatenFood ? " Clover: " + cn + "." : "");
     $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = fmt(S.bPts); $("bk-onom").textContent = fmt(S.cPts);
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + fmt(best); ob.className = "bk-obest" + (pb ? " pb" : "");
-    $("bk-over").hidden = false; track("basil/end"); setTimeout(function () { $("bk-again").focus(); }, 50);
+    $("bk-over").hidden = false; track("basil/end");
+    var hs = hsLoad(), q = S.score > 0 && (hs.length < HSN || S.score > hs[hs.length - 1].s);
+    $("bk-hsform").hidden = !q; renderHS($("bk-hstab"), -1);
+    if (q) { var inp = $("bk-hsname"); inp.value = lget(HSNAME) || ""; setTimeout(function () { inp.focus(); inp.select(); }, 60); }
+    else setTimeout(function () { $("bk-again").focus(); }, 50);
   }
+  // ---------- high score table (top 10, kept in this browser) ----------
+  var HS = "mw-basil-hs", HSNAME = "mw-basil-name", HSN = 10;
+  function hsLoad() { var a = lget(HS); return Array.isArray(a) ? a : []; }
+  function cleanName(n) { n = String(n || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); return n || "Anonymous cat"; }
+  function renderHS(el, hi) {
+    var hs = hsLoad(); if (!el) return;
+    if (!hs.length) { el.innerHTML = '<li class="bk-hsnone">No scores yet. Be the first.</li>'; return; }
+    el.innerHTML = hs.map(function (r, i) { return '<li class="' + (i === hi ? "me" : "") + '"><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + '</span><span class="sc">' + fmt(r.s) + '</span><span class="rd">R' + (r.r || 1) + "</span></li>"; }).join("");
+  }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function saveHS() {
+    var n = cleanName($("bk-hsname").value); lset(HSNAME, n);
+    var hs = hsLoad(), row = { n: n, s: S.score, r: S.round, d: new Date().toISOString().slice(0, 10) };
+    hs.push(row); hs.sort(function (a, b) { return b.s - a.s; }); hs = hs.slice(0, HSN); lset(HS, hs);
+    $("bk-hsform").hidden = true; renderHS($("bk-hstab"), hs.indexOf(row)); renderHS($("bk-hslist0"), -1); track("basil/highscore");
+    setTimeout(function () { $("bk-again").focus(); }, 50);
+  }
+  $("bk-hsform").addEventListener("submit", function (e) { e.preventDefault(); saveHS(); });
   function start() {
     reset(); $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
@@ -542,6 +565,7 @@
   };
   document.addEventListener("visibilitychange", function () { if (document.hidden && running && !S.over && !paused) togglePause(); });
   window.addEventListener("resize", function () { if (running) size(); });
+  renderHS($("bk-hslist0"), -1);
   var b0 = lget(BEST); if (b0) $("bk-best").innerHTML = "Your best: <b>" + fmt(b0) + "</b> points";
   reset(); size(); draw();
 })();
