@@ -48,7 +48,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, score: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, dirt: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -81,7 +81,7 @@
       S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
       it.hp -= S.frenzyT > 0 ? 2 : 1; it.hit = 0.18; it.wob = rnd(0, 6);
       if (it.hp > 0) return;
-      S.lanes[i] = null; S.smashed++; shake();
+      S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05));
       var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0;
       S.score += pts; float(LANES[i], BENCH - 80, "SMASH +" + pts, "#C2553A"); toast(pick(SMASHQ[it.kind]));
       if (it.kind === "tank") { if (S.lives < 3) S.lives++; for (var fq = 0; fq < 3; fq++) S.flops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 30, vx: rnd(-90, 90), vy: -rnd(200, 320), r: 0, l: 2.2 }); float(LANES[i], BENCH - 110, "+1 life", "#E05A8A"); for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
@@ -103,6 +103,7 @@
     if (S.bonus > 0) { S.slash.push({ x: LANES[i], y: BENCH - 22, l: 0.35 }); }
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 || S.bonus > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1);
+    if (S.bonus <= 0) S.dirt = Math.min(1, S.dirt + 0.008);
     S.score += mult; float(LANES[i], BENCH - 60, "+" + mult + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
     if (S.bonus <= 0 && S.score >= S.nextBonus && S.t >= (S.bonusAt || 0)) startBonus();
@@ -138,7 +139,7 @@
     float(LANES[j], BENCH - 70, "Stolen!", "#B07A0C"); toast(pick(CLOVSTEAL));
   }
   function sinkTime() {
-    S.sinkT = 5; toast("Sink time! Splash everything. Double points.");
+    S.sinkT = 5; var wasDirty = S.dirt > 0.3; S.dirt *= 0.2; toast(wasDirty ? "Sink time! Basil had a bath. Sort of. Double points." : "Sink time! Splash everything. Double points.");
     for (var i = 0; i < 3; i++) { var it = S.lanes[i]; if (it && it.kind !== "tap" && it.kind !== "fish") { S.lanes[i] = null; S.score += 2; S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: (i - 1 || 1) * rnd(120, 200), vy: -rnd(260, 340), r: 0, vr: rnd(-10, 10) }); } }
     for (var k = 0; k < 40; k++) S.drops.push({ x: 180 + rnd(-40, 40), y: 210, vx: rnd(-180, 180), vy: -rnd(120, 360), l: rnd(.6, 1.2) });
   }
@@ -269,8 +270,11 @@
     ctx.strokeStyle = EDGE; ctx.lineWidth = 22; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-34, 30); ctx.quadraticCurveTo(-80, 26, -70, -10); ctx.stroke();
     ctx.strokeStyle = BASE; ctx.lineWidth = 16; ctx.stroke();
     // body
-    if (CL) { ell(0, 8, 44, 34, EDGE); ell(0, 8, 42, 32, BASE); ell(-18, -4, 16, 12, "#D8925A"); ell(20, 14, 13, 10, "#C27A43"); ell(4, -14, 10, 7, "#2E2A30"); ell(0, 22, 22, 15, "#FFFFFF"); }
-    else { fluff(0, 8, 46, 36, 22, EDGE, 11); ell(0, 8, 47, 37, BASE); fluff(0, 8, 42, 32, 18, BASE, 9); ell(0, 22, 26, 18, BASE); }
+    if (CL) { var fat = 1 + Math.min(0.6, S.eatenFood * 0.035); ctx.save(); ctx.translate(0, 40); ctx.scale(fat, 1 + (fat - 1) * 0.35); ctx.translate(0, -40);
+      ell(0, 8, 44, 34, EDGE); ell(0, 8, 42, 32, BASE); ell(-18, -4, 16, 12, "#D8925A"); ell(20, 14, 13, 10, "#C27A43"); ell(4, -14, 10, 7, "#2E2A30"); ell(0, 22, 22, 15, "#FFFFFF"); ctx.restore(); }
+    else { fluff(0, 8, 46, 36, 22, EDGE, 11); ell(0, 8, 47, 37, BASE); fluff(0, 8, 42, 32, 18, BASE, 9); ell(0, 22, 26, 18, BASE);
+      if (S.dirt > 0.04) { ctx.globalAlpha = Math.min(0.85, S.dirt); ell(-22, 30, 16, 10, "#9A7350", -0.3); ell(20, 31, 15, 9, "#9A7350", 0.3); ell(0, 38, 24, 7, "#8A6442"); ell(-33, 6, 5, 4, "#A88462"); ell(30, -2, 4, 3, "#A88462"); ell(-8, 14, 3, 2.4, "#A88462");
+        if (S.dirt > 0.45) { ell(12, 2, 6, 4, "#A88462"); ell(-26, -14, 4, 3, "#A88462"); } ctx.globalAlpha = 1; } }
     // paws
     var pw = S.paw, reach = pw ? Math.sin(Math.min(1, pw.t / 0.11) * Math.PI / 2) * (pw.t < 0.11 ? 1 : Math.max(0, 1 - (pw.t - 0.11) / 0.11)) : 0;
     var tx = pw ? (LANES[pw.lane] - x) : 0;
@@ -278,6 +282,7 @@
     ell(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, CL ? "#D8925A" : "#FFFFFF");
     ctx.strokeStyle = "#E3DBD1"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.ellipse(-14 + (pw && pw.lane <= 1 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, 0, 0, 7); ctx.stroke();
     ctx.beginPath(); ctx.ellipse(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 42 + (pw ? reach * 10 : 0), 11, 8, 0, 0, 7); ctx.stroke();
+    if (!CL && S.dirt > 0.04) { ctx.globalAlpha = Math.min(0.8, S.dirt * 1.2); ell(-14 + (pw && pw.lane <= 1 ? tx * reach * 0.9 : 0), 45 + (pw ? reach * 10 : 0), 10, 5, "#8A6442"); ell(14 + (pw && pw.lane === 2 ? tx * reach * 0.9 : 0), 45 + (pw ? reach * 10 : 0), 10, 5, "#8A6442"); ctx.globalAlpha = 1; }
     // head
     var hx = 4, hy = -40;
     ctx.fillStyle = BASE; ctx.beginPath(); ctx.moveTo(hx - 28, hy - 6); ctx.lineTo(hx - 24, hy - 42); ctx.lineTo(hx - 4, hy - 22); ctx.fill();
