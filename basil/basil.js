@@ -30,6 +30,7 @@
   var CNICK = ["Cute Clover", "the Whingapotamus", "the Chief Complaints Officer", "Wiggle Butt", "the Spicy Little Muffin", "Miss Piggy", "Clover Piggington"];
   var FOOD = ["catfood", "banana", "steak", "drumstick", "sausage", "pizza"], BADFOOD = ["pineapple", "coffee", "grapes", "garlic"];
   var BADQ = { pineapple: "Pineapple. Too pointy, even for Miss Piggy.", coffee: "Coffee: caffeine is toxic to cats. Spat out.", grapes: "Grapes: not safe for cats. Spat out.", garlic: "Garlic: toxic to cats. Hard no." };
+  var HUNGRYQ = ["Clover is hungry. Unacceptable.", "Food left uneaten. Miss Piggy is appalled.", "Clover Piggington demands a refund.", "Hungry. The Whingapotamus whinges.", "A snack escaped. Clover will never forgive you."];
   var NOMQ = ["Nom.", "Gone.", "Inhaled.", "Hoovered.", "Snarfed.", "Chomp."];
   function isBad(k) { return BADFOOD.indexOf(k) >= 0; }
   var CLOVQ = ["Clover: 'Rude.'", "The Chief Complaints Officer has lodged a complaint.", "The Whingapotamus whinges.", "Sibling rivalry: active.", "Wiggle Butt glares. Basil smirks.", "Cute Clover is no longer cute about it."];
@@ -63,7 +64,7 @@
     if (!kind && S.t > 40 && !S.lanes.some(function (l) { return l && l.kind === "tank"; }) && Math.random() < 0.015) kind = "tank";
     if (!kind && S.t > 25 && Math.random() < 0.05) kind = "tv";
     if (!kind && S.t > 10 && Math.random() < 0.09) kind = "vase";
-    var i = pick(free), hv = HEAVY[kind], p = kind === "tap" || kind === "fish" ? 2.6 : isSpiky(kind) || isBad(kind) ? 2.3 : hv ? hv.life : S.bonus > 0 ? 2.2 : patience();
+    var i = pick(free), hv = HEAVY[kind], p = kind === "tap" || kind === "fish" ? 2.6 : isSpiky(kind) || isBad(kind) ? 2.3 : hv ? hv.life : S.bonus > 0 ? 2.6 : patience();
     S.lanes[i] = { kind: kind || pick(ITEMS), y: -40, vy: 0, landed: false, life: p, max: p, wob: rnd(0, 6) };
     if (hv) { S.lanes[i].hp = S.lanes[i].hpMax = Math.round(rnd(hv.hp[0], hv.hp[1])); S.lanes[i].hit = 0; }
     return true;
@@ -200,7 +201,12 @@
         S.lanes[i] = null;
         if (it.kind === "tap" || it.kind === "fish") continue;
         if (isSpiky(it.kind) || isBad(it.kind)) { S.fx.push({ x: LANES[i], y: BENCH - 40, txt: "poof", col: "#8A7BB0", l: 0.8 }); continue; }
-        if (S.bonus > 0) continue;
+        if (S.bonus > 0) {
+          if (FOOD.indexOf(it.kind) < 0) continue;
+          S.lives--; S.combo = 0; float(LANES[i], BENCH - 70, "Hungry!", "#B07A0C"); toast(pick(HUNGRYQ)); shake();
+          if (S.lives <= 0) { end(); return; }
+          continue;
+        }
         S.lives--; S.combo = 0; float(LANES[i], BENCH - 70, "Bored.", "#6B5A93"); toast(pick(BOREDQ)); shake();
         if (S.lives <= 0) { end(); return; }
       }
