@@ -69,3 +69,17 @@
 .bk-ostats .bk-big{flex:1.4;background:#2E1F57}
 .bk-ostats .bk-big small{color:#C9BFE6}
 .bk-ostats .bk-big b{color:#FFE08A;font-size:24px}
+.bk-card{max-height:100%;overflow:auto}
+.bk-hs{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:3px;width:100%;font-variant-numeric:tabular-nums}
+.bk-hs li{display:grid;grid-template-columns:22px 1fr auto 30px;gap:8px;align-items:center;padding:4px 8px;border-radius:8px;font-size:13.5px;text-align:left}
+.bk-hs .rk{font-weight:700;opacity:.7}.bk-hs .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bk-hs .sc{font-weight:700}.bk-hs .rd{font-size:11px;opacity:.65;text-align:right}
+.bk-hsbox .bk-hs li{background:rgba(255,255,255,.08)}.bk-hsbox .bk-hs li:first-child{color:#FFE08A}
+.bk-hsnote{margin:6px 0 0;font-size:11.5px;color:#A99BD1;text-align:center}
+.bk-hsnone{display:block!important;text-align:center!important;opacity:.7}
+.bk-hs-o li{background:#EFE9F8;color:#2E1F57}.bk-hs-o li.me{background:#FFE08A;outline:2px solid #B07A0C}
+.bk-hs-o{max-height:150px;overflow:auto}
+.bk-hsform{width:100%;display:grid;gap:4px;background:#FFF3C4;border-radius:12px;padding:8px 10px}
+.bk-hsform label{font:700 12px var(--body);letter-spacing:.06em;text-transform:uppercase;color:#8A5A00}
+.bk-hsform div{display:flex;gap:6px}
+.bk-hsform input{flex:1;min-width:0;font:600 16px var(--body);padding:8px 10px;border-radius:10px;border:1.5px solid #D2C6B6;background:#fff;color:#2B2340}
+.bk-hsform button{font:700 14px var(--body);padding:8px 14px;border-radius:999px;border:0;background:#2E1F57;color:#fff;cursor:pointer}

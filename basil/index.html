@@ -23,7 +23,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/shell.css?v=113">
-<link rel="stylesheet" href="basil.css?v=5">
+<link rel="stylesheet" href="basil.css?v=6">
 <script src="../assets/games.js?v=85"></script>
 <script src="../assets/shell.js?v=129"></script>
 </head>
@@ -83,6 +83,7 @@
         <li>Pause with the button, P or Esc. Your best score stays in this browser only.</li>
       </ul>
     </details>
+    <details class="bk-rules bk-hsbox"><summary>High scores</summary><ol class="bk-hs" id="bk-hslist0"></ol><p class="bk-hsnote">Kept on this device only.</p></details>
     <button class="big bk-play" type="button" id="bk-start">Kick &amp; nom</button>
     <p class="bk-best" id="bk-best"></p>
     <p class="bk-hush">Based on two real cats. The real ones are worse.</p>
@@ -105,6 +106,8 @@
           <p class="bk-omsg" id="bk-omsg"></p>
           <div class="bk-ostats"><span class="bk-big"><small>Points</small><b id="bk-opts">0</b></span><span><small>Basil kicks</small><b id="bk-okick">0</b></span><span><small>Clover noms</small><b id="bk-onom">0</b></span></div>
           <p class="bk-obest" id="bk-obest"></p>
+          <form class="bk-hsform" id="bk-hsform" hidden><label for="bk-hsname">High score! Your name</label><div><input id="bk-hsname" maxlength="14" autocomplete="nickname" enterkeyhint="done" placeholder="Name"><button type="submit">Save</button></div></form>
+          <ol class="bk-hs bk-hs-o" id="bk-hstab"></ol>
           <div class="bk-obtns">
             <button class="big" type="button" id="bk-again">Play again</button>
             <button class="bk-sbtn" type="button" id="bk-sharebtn">Share</button>
@@ -120,6 +123,6 @@
 </main>
 <div class="bk-toast" id="bk-toast" role="status" aria-live="polite" hidden></div>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="basil.js?v=21"></script>
+<script src="basil.js?v=22"></script>
 </body>
 </html>
