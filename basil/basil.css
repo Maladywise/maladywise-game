@@ -65,3 +65,7 @@
 .bk-intro .bk-masc{width:112px;height:146px}
 .bk-intro .bk-masc2{width:104px;height:136px;animation-delay:-1.5s}
 .bk-omasc{width:72px;height:94px}
+.bk-ofeat{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B5A93;margin:-4px 0 -6px!important}
+.bk-ostats .bk-big{flex:1.4;background:#2E1F57}
+.bk-ostats .bk-big small{color:#C9BFE6}
+.bk-ostats .bk-big b{color:#FFE08A;font-size:24px}
