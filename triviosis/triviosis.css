@@ -60,3 +60,8 @@ html[data-theme="dark"] #trv .next{background:#7E68C8}
 #trv .arow{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:500 14px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;text-align:left}
 #trv .arow.on{border-color:var(--accent)}
 #trv .badge.ein{background:#B8860B}
+#trv .navrow{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:stretch;margin-top:2px}
+#trv .navrow .next{display:flex;align-items:center;justify-content:center;gap:10px}
+#trv .nav{height:48px;padding:0 16px;border-radius:10px;border:1.5px solid var(--line,#D9D1E3);background:transparent;color:inherit;font:600 14px var(--body);cursor:pointer}
+#trv .cd{font-style:normal;font-size:12px;opacity:.75;font-weight:500;min-width:2.4em;padding:2px 6px;border-radius:999px;background:rgba(255,255,255,.18)}
+#trv .rv{font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:#FFF3C4;color:#8A5A00;padding:2px 8px;border-radius:999px;margin-left:6px}
