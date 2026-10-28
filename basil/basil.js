@@ -44,15 +44,16 @@
   var MOTHQ = ["Moth eaten. FRENZY!", "Snack acquired. FRENZY!", "Crunchy. FRENZY!", "Protein. FRENZY!"];
   var ROUND = 30; // seconds per round, alternating Basil (odd rounds) and Clover (even rounds)
   function U() { return 10 * S.round; } // base points per item: 10 in round 1, 20 in round 2, and so on
+  function addPts(n) { S.score = Math.max(0, S.score + n); if (S.bonus > 0) S.cPts = Math.max(0, S.cPts + n); else S.bPts = Math.max(0, S.bPts + n); }
   function fmt(n) { return Math.round(n).toLocaleString("en-AU"); }
-  var CNAMES = [[0, "Cute Clover"], [10, "Wiggle Butt"], [25, "The Whingapotamus"], [50, "Chief Complaints Officer"], [80, "Spicy Little Muffin"], [120, "Miss Piggy"], [170, "Clover Piggington"], [250, "Queen Piggington"]];
+  var CNAMES = [[0, "Cute Clover"], [1000, "Wiggle Butt"], [3000, "The Whingapotamus"], [7500, "Chief Complaints Officer"], [15000, "Spicy Little Muffin"], [30000, "Miss Piggy"], [60000, "Clover Piggington"], [100000, "Queen Piggington"]];
   var NAMES = [[0, "Fluffy white rat"], [1000, "Basil Brown Pants"], [5000, "Fat Basil"], [15000, "Fat white seal"], [40000, "Basil Bad Cat"], [100000, "Albino Satan"]];
   var ITEMS = ["mug", "pen", "phone", "sock", "pills", "steth", "plant", "remote", "glass", "tube", "keys", "thermo"];
 
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -87,7 +88,7 @@
       if (it.hp > 0) return;
       S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05)); if (it.kind === "tank") S.wet = Math.min(1, S.wet + 0.7);
       var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0 * U();
-      S.score += pts; float(LANES[i], BENCH - 80, "SMASH +" + fmt(pts), "#C2553A"); toast(pick(SMASHQ[it.kind]));
+      addPts(pts); float(LANES[i], BENCH - 80, "SMASH +" + fmt(pts), "#C2553A"); toast(pick(SMASHQ[it.kind]));
       if (it.kind === "tank") { heal("b", 40); for (var fq = 0; fq < 3; fq++) S.flops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 30, vx: rnd(-90, 90), vy: -rnd(200, 320), r: 0, l: 2.2 }); float(LANES[i], BENCH - 110, "+40% health", "#E05A8A"); for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
       for (var q = 0; q < 26; q++) S.shards.push({ x: LANES[i] + rnd(-14, 14), y: BENCH - rnd(10, 50), vx: rnd(-260, 260), vy: -rnd(120, 420), r: rnd(0, 6), vr: rnd(-12, 12), s: rnd(3, 8), c: it.kind === "tv" ? pick(["#2B2340", "#6FA8C9", "#3B3B44", "#AEB8C0"]) : pick(["#2F5DA8", "#F1ECF8", "#6FA8C9", "#E0703A"]), l: 1.4 });
       return;
@@ -107,7 +108,7 @@
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1) * U();
     if (S.bonus <= 0) { S.dirt = Math.min(1, S.dirt + 0.008); if (it.kind === "glass") S.wet = Math.min(1, S.wet + 0.15); }
-    S.kicks++; S.score += mult; float(LANES[i], BENCH - 60, "+" + fmt(mult) + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
+    S.kicks++; addPts(mult); float(LANES[i], BENCH - 60, "+" + fmt(mult) + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
   }
   function eatFood(it, i) {
@@ -119,7 +120,7 @@
     S.gulp.push({ kind: it.kind, x: LANES[i], y: BENCH, t: 0 });
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t;
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.frenzyT > 0 ? 2 : 1) * U();
-    S.score += mult; S.eatenFood++; float(LANES[i], BENCH - 60, "+" + fmt(mult) + " " + pick(NOMQ), "#B07A0C");
+    addPts(mult); S.eatenFood++; float(LANES[i], BENCH - 60, "+" + fmt(mult) + " " + pick(NOMQ), "#B07A0C");
   }
   // health: Basil and Clover each have a bar (0-100). Only the cat on the bench takes damage; the resting one recovers.
   function hurt(who, amt) {
@@ -131,7 +132,7 @@
   function heal(who, amt) { if (who === "b") S.hb = Math.min(100, S.hb + amt); else S.hc = Math.min(100, S.hc + amt); S.fx.push({ x: who === "b" ? 40 : W - 40, y: 70, txt: "+" + amt + "%", col: "#2E7D6B", l: 1 }); }
   function shoo() {
     var b = S.sneak; if (!b || b.phase !== "creep") return false;
-    b.phase = "flee"; S.score += 2 * U(); S.fx.push({ x: b.x, y: BENCH - 70, txt: "Shoo! +" + fmt(2 * U()), col: "#2B5E80", l: 1 }); toast("Basil shooed back to the sink. He’ll be back.");
+    b.phase = "flee"; addPts(2 * U()); S.fx.push({ x: b.x, y: BENCH - 70, txt: "Shoo! +" + fmt(2 * U()), col: "#2B5E80", l: 1 }); toast("Basil shooed back to the sink. He’ll be back.");
     return true;
   }
   function startBonus() {
@@ -143,7 +144,7 @@
   function swipeClover() {
     var c = S.clover; c.state = "flee"; c.hit = 1; S.swiped++;
     if (c.cross) { S.cross = false; S.scratchT = 0.8; float(LANES[c.lane], BENCH - 90, "Clover swipes back!", "#C2553A"); toast(pick(CLOVBACK)); shake(); hurt("b", 20); }
-    else { S.cross = true; S.score += 3 * U(); float(LANES[c.lane], BENCH - 90, "+" + fmt(3 * U()) + " sister swipe", "#B07A0C"); toast(pick(CLOVQ) + " She’ll be cross next time."); }
+    else { S.cross = true; addPts(3 * U()); float(LANES[c.lane], BENCH - 90, "+" + fmt(3 * U()) + " sister swipe", "#B07A0C"); toast(pick(CLOVQ) + " She’ll be cross next time."); }
   }
   function cloverSteals(c) {
     S.cross = false;
@@ -155,7 +156,7 @@
   }
   function sinkTime() {
     S.sinkT = 5; var wasDirty = S.dirt > 0.3; S.dirt *= 0.5; S.wet = Math.min(1, S.wet + 0.6); toast(wasDirty ? "Sink time! Basil had a bath. Sort of. Now he’s dirty AND wet. Double points." : "Sink time! Splash everything. Double points.");
-    for (var i = 0; i < 3; i++) { var it = S.lanes[i]; if (it && it.kind !== "tap" && it.kind !== "fish") { S.lanes[i] = null; S.score += 2 * U(); S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: (i - 1 || 1) * rnd(120, 200), vy: -rnd(260, 340), r: 0, vr: rnd(-10, 10) }); } }
+    for (var i = 0; i < 3; i++) { var it = S.lanes[i]; if (it && it.kind !== "tap" && it.kind !== "fish") { S.lanes[i] = null; addPts(2 * U()); S.fly.push({ kind: it.kind, x: LANES[i], y: BENCH - 2, vx: (i - 1 || 1) * rnd(120, 200), vy: -rnd(260, 340), r: 0, vr: rnd(-10, 10) }); } }
     for (var k = 0; k < 40; k++) S.drops.push({ x: 180 + rnd(-40, 40), y: 210, vx: rnd(-180, 180), vy: -rnd(120, 360), l: rnd(.6, 1.2) });
   }
   var shakeT = 0; function shake() { if (!quiet()) shakeT = 0.3; }
@@ -165,7 +166,7 @@
   function laneAt(ev) { var r = cv.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width * W; return x < 126 ? 0 : x < 234 ? 1 : 2; }
   function eatMoth() {
     var m = S.moth; if (!m || m.eaten) return false;
-    m.eaten = 0.4; S.eaten++; S.frenzyT = 6; S.score += 2 * U(); float(m.x, m.y - 10, "Nom! +" + fmt(2 * U()), "#B5308A"); toast(pick(MOTHQ)); track("basil/moth");
+    m.eaten = 0.4; S.eaten++; S.frenzyT = 6; addPts(2 * U()); float(m.x, m.y - 10, "Nom! +" + fmt(2 * U()), "#B5308A"); toast(pick(MOTHQ)); track("basil/moth");
     return true;
   }
   cv.addEventListener("pointerdown", function (e) {
@@ -184,7 +185,7 @@
     if (!running) return;
     var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowUp: 1, ArrowRight: 2, a: 0, s: 1, d: 2 }[e.key];
     if (k != null) { e.preventDefault(); kick(k); }
-    if ((e.key === "e" || e.key === "E" || e.key === "0") && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
+    if (e.key === "4" && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
     if ((e.key === "b" || e.key === "B") && running && !paused && !S.over) { e.preventDefault(); shoo(); }
     if (e.key === " " && S.over) { e.preventDefault(); start(); }
     if (e.key === "p" || e.key === "Escape") togglePause();
@@ -242,7 +243,7 @@
     if (S.bonus > 0) {
       var sb = S.sneak;
       if (!sb) { S.sneakT -= dt; if (S.sneakT <= 0) { S.sneak = { x: 60, phase: "creep" }; toast("Basil is sneaking up on Clover. Tap him!"); } }
-      else if (sb.phase === "creep") { sb.x += 26 * dt; var tgt = 180 - 46 * (1 + Math.min(1, S.eatenFood / 120)); if (sb.x >= tgt) { sb.phase = "flee"; S.score = Math.max(0, S.score - 10 * U()); S.slash.push({ x: tgt + 20, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
+      else if (sb.phase === "creep") { sb.x += 26 * dt; var tgt = 180 - 46 * (1 + Math.min(1, S.eatenFood / 120)); if (sb.x >= tgt) { sb.phase = "flee"; addPts(-Math.min(S.cPts, 10 * U())); S.slash.push({ x: tgt + 20, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
       else { sb.x -= 160 * dt; if (sb.x <= 52) { S.sneak = null; S.sneakT = rnd(3, 6); } }
     } else S.sneak = null;
     // Clover
@@ -509,13 +510,13 @@
   function nameFor(n, L) { L = L || NAMES; var nm = L[0][1]; L.forEach(function (x) { if (n >= x[0]) nm = x[1]; }); return nm; }
   function end() {
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
-    var cl = S.bonus > 0, bn = nameFor(S.score), cn = nameFor(S.eatenFood, CNAMES);
+    var cl = S.bonus > 0, bn = nameFor(S.bPts), cn = nameFor(S.cPts, CNAMES);
     $("bk-omasc").src = "/assets/mascots/" + (cl ? "clover.svg?v=1" : "basil.svg?v=2"); $("bk-omasc").alt = cl ? "Clover" : "Basil";
     $("bk-otitle").textContent = cl ? cn : bn;
     $("bk-ofeat").textContent = cl ? "Clover ended it. Mid-snack." : "Basil’s verdict";
-    $("bk-omsg").textContent = cl ? (S.eatenFood < 25 ? "Barely a snack. She’ll be complaining about this for days." : S.eatenFood < 120 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
-      : (S.score < 1000 ? "Barely a kick. He's saving his energy for 3am." : S.score < 15000 ? "A respectable mess. The bench will never be the same." : S.score < 100000 ? "Chaos. Several mugs have filed for compensation." : "Pure evil. Fluffy, smug, white evil.") + (S.eatenFood ? " Clover: " + cn + "." : "");
-    $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = S.kicks; $("bk-onom").textContent = S.eatenFood;
+    $("bk-omsg").textContent = cl ? (S.cPts < 3000 ? "Barely a snack. She’ll be complaining about this for days." : S.cPts < 30000 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
+      : (S.bPts < 1000 ? "Barely a kick. He's saving his energy for 3am." : S.bPts < 15000 ? "A respectable mess. The bench will never be the same." : S.bPts < 100000 ? "Chaos. Several mugs have filed for compensation." : "Pure evil. Fluffy, smug, white evil.") + (S.eatenFood ? " Clover: " + cn + "." : "");
+    $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = fmt(S.bPts); $("bk-onom").textContent = fmt(S.cPts);
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + fmt(best); ob.className = "bk-obest" + (pb ? " pb" : "");
     $("bk-over").hidden = false; track("basil/end"); setTimeout(function () { $("bk-again").focus(); }, 50);
   }
@@ -527,7 +528,7 @@
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = start; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   $("bk-sharebtn").onclick = function () {
-    var t = "Basil + Clover 🐾 " + fmt(S.score) + " points, round " + S.round + " (" + S.kicks + " kicks, " + S.eatenFood + " noms). Basil: " + nameFor(S.score) + (S.eatenFood ? ". Clover: " + nameFor(S.eatenFood, CNAMES) : "") + ".\nmaladywise.com/basil", b = this;
+    var t = "Basil + Clover 🐾 " + fmt(S.score) + " points, round " + S.round + " (" + S.kicks + " kicks, " + S.eatenFood + " noms). Basil: " + nameFor(S.bPts) + " (" + fmt(S.bPts) + ")" + (S.cPts ? ". Clover: " + nameFor(S.cPts, CNAMES) + " (" + fmt(S.cPts) + ")" : "") + ".\nmaladywise.com/basil", b = this;
     if (navigator.share) { navigator.share({ text: t }).catch(function () {}); return; }
     try { navigator.clipboard.writeText(t).then(function () { b.textContent = "Copied"; }); } catch (e) {}
   };

@@ -57,7 +57,7 @@
         <li><b>Fish:</b> +25% health.</li>
         <li><b>Vase:</b> needs 3 to 5 kicks, then shatters for <b>5 kicks’ worth</b>. <b>TV:</b> needs 8 to 10 kicks, then smashes for <b>12 kicks’ worth</b>. Red dots show kicks left; multipliers apply to the smash.</li>
         <li><b>Fish tank (rare):</b> 25 kicks, smashes for <b>50 kicks’ worth</b> and +40% health (the goldfish flop out).</li>
-        <li><b>Moths and butterflies</b> flutter past. Tap one (or press E) and Basil (or Clover) eats it: <b>2 kicks’ worth</b> and <b>6 seconds of FRENZY</b>: double points, timers freeze and every kick hits twice as hard.</li>
+        <li><b>Moths and butterflies</b> flutter past. Tap one (or press 4) and Basil (or Clover) eats it: <b>2 kicks’ worth</b> and <b>6 seconds of FRENZY</b>: double points, timers freeze and every kick hits twice as hard.</li>
         <li><b>Spiky things</b> (cactus, pincushion, rose, pineapple), marked with a red no sign: <b>don’t kick</b>. Ouch: -20% health. Leave them and they vanish.</li>
       </ul>
       <h2>Clover</h2>
@@ -74,10 +74,10 @@
       </ul>
       <h2>Score and titles</h2>
       <ul>
-        <li>Your score is <b>points</b>: everything Basil kicks plus everything Clover noms, with all the multipliers. The end card also counts kicks and noms.</li>
+        <li>Your score is <b>points</b>: everything Basil kicks plus everything Clover noms, with all the multipliers. The end card splits it into Basil’s kick points and Clover’s nom points.</li>
         <li>Whoever was on when the game ended stars on the end card.</li>
-        <li><b>Basil</b> (by points): Fluffy white rat (0+), Basil Brown Pants (1,000+), Fat Basil (5,000+), Fat white seal (15,000+), Basil Bad Cat (40,000+), Albino Satan (100,000+).</li>
-        <li><b>Clover</b> (by noms): Cute Clover (0+), Wiggle Butt (10+), The Whingapotamus (25+), Chief Complaints Officer (50+), Spicy Little Muffin (80+), Miss Piggy (120+), Clover Piggington (170+), Queen Piggington (250+).</li>
+        <li><b>Basil</b> (by his kick points): Fluffy white rat (0+), Basil Brown Pants (1,000+), Fat Basil (5,000+), Fat white seal (15,000+), Basil Bad Cat (40,000+), Albino Satan (100,000+).</li>
+        <li><b>Clover</b> (by her nom points): Cute Clover (0+), Wiggle Butt (1,000+), The Whingapotamus (3,000+), Chief Complaints Officer (7,500+), Spicy Little Muffin (15,000+), Miss Piggy (30,000+), Clover Piggington (60,000+), Queen Piggington (100,000+).</li>
         <li>The cat on the bench has a slow-recharging rest coming: Clover naps during Basil’s rounds, Basil sulks in the sink during Clover’s.</li>
         <li>Pause with the button, P or Esc. Your best score stays in this browser only.</li>
       </ul>
@@ -102,7 +102,7 @@
           <p class="bk-ofeat" id="bk-ofeat"></p>
           <p class="bk-otitle" id="bk-otitle">Bench cleared.</p>
           <p class="bk-omsg" id="bk-omsg"></p>
-          <div class="bk-ostats"><span class="bk-big"><small>Points</small><b id="bk-opts">0</b></span><span><small>Kicks</small><b id="bk-okick">0</b></span><span><small>Noms</small><b id="bk-onom">0</b></span></div>
+          <div class="bk-ostats"><span class="bk-big"><small>Points</small><b id="bk-opts">0</b></span><span><small>Basil kicks</small><b id="bk-okick">0</b></span><span><small>Clover noms</small><b id="bk-onom">0</b></span></div>
           <p class="bk-obest" id="bk-obest"></p>
           <div class="bk-obtns">
             <button class="big" type="button" id="bk-again">Play again</button>
@@ -119,6 +119,6 @@
 </main>
 <div class="bk-toast" id="bk-toast" role="status" aria-live="polite" hidden></div>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="basil.js?v=14"></script>
+<script src="basil.js?v=15"></script>
 </body>
 </html>
