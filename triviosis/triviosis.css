@@ -16,10 +16,13 @@ html[data-theme="dark"] #trv .badge{color:#16121F}
 #trv .theme{background:var(--paper);border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px 12px;display:grid;gap:2px}
 #trv .theme span{font:600 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 #trv .theme b{font:700 22px var(--title)}
-#trv .prog{display:flex;align-items:center;gap:5px;justify-content:center;flex-wrap:wrap}
-#trv .prog i{width:22px;height:8px;border-radius:4px;background:var(--line)}
+#trv .prog{display:flex;align-items:center;gap:5px;justify-content:center;flex-wrap:nowrap}
+#trv .prog i{flex:1 1 0;max-width:22px;min-width:6px;height:8px;border-radius:4px;background:var(--line)}
 #trv .prog i.ok{background:var(--ok)} #trv .prog i.no{background:var(--no)} #trv .prog i.cur{background:var(--accent)}
-#trv .prog span{margin-left:8px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+#trv .prog span{white-space:nowrap;margin-left:8px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+#trv .prog .arw{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card,#fff);color:var(--ink,inherit);font-size:22px;line-height:1;cursor:pointer;padding:0 0 3px}
+#trv .prog .arw:first-child{margin-right:6px} #trv .prog .arw:last-child{margin-left:6px}
+#trv .prog .arw:disabled{opacity:.3;cursor:default}
 #trv .qcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:12px}
 #trv .qn{margin:0;font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 #trv .qt{margin:0;font:700 21px/1.3 var(--title)}
