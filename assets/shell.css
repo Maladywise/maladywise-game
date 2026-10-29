@@ -623,3 +623,4 @@ html[data-theme="dark"] .doc ol.ex .dose{background:#2A2240}
 @media (prefers-reduced-motion:reduce){.mw-dot{animation:none}}
 .splash p.mw-live{font-size:13px;color:var(--muted)}
 .mwx-nexttop{margin:12px auto 18px}
+p,li,h1,h2,h3,.gtitle p{text-wrap:pretty}
