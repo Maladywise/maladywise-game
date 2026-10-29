@@ -528,8 +528,8 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mw-normline .mw-norm{width:40px;height:40px;flex:none}
 .doc .mw-normhero{float:right;width:96px;height:96px;margin:0 0 8px 12px}
 /* room for the mode switch: compact switch under 1040px, burger menu up to 900px */
-@media (max-width:1040px){ .mw-mode .mm-t{display:none} .mw-mode button{padding:6px 9px} }
-@media (min-width:761px) and (max-width:900px){
+@media (min-width:0px){ .mw-mode .mm-t{display:none} .mw-mode button{padding:6px 9px} }
+@media (min-width:761px) and (max-width:1080px){
   .burger{display:grid}
   .navwrap{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px max(16px,env(safe-area-inset-left,0px)) 14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
   .navwrap.open{display:flex}
