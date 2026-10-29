@@ -1623,107 +1623,107 @@
   "date": "2026-11-02",
   "number": 16,
   "difficulty": "Easy",
-  "theme": "Medicine on screen",
+  "theme": "Pathology Week: the lab behind the diagnosis",
   "questions": [
    {
-    "q": "Which TV doctor insisted \u2018It\u2019s never lupus\u2019?",
-    "a": "Dr Gregory House",
+    "q": "In the standard H&E stain, haematoxylin colours cell nuclei?",
+    "a": "Blue-purple",
     "w": [
-     "Dr John Carter",
-     "Dr Meredith Grey",
-     "Dr Perry Cox"
+     "Pink",
+     "Brown",
+     "Green"
     ],
-    "e": "It was lupus once."
+    "e": "Haematoxylin (from the logwood tree) turns nuclei blue-purple; eosin turns cytoplasm pink. It\u2019s been the workhorse of histology for well over a century."
    },
    {
-    "q": "\u2018Grey\u2019s Anatomy\u2019 is a pun on which textbook?",
-    "a": "Gray\u2019s Anatomy",
+    "q": "Which white cells are normally the most numerous in adult blood?",
+    "a": "Neutrophils",
     "w": [
-     "Netter\u2019s Atlas",
-     "Davidson\u2019s Medicine",
-     "The Oxford Handbook"
+     "Lymphocytes",
+     "Monocytes",
+     "Eosinophils"
     ],
-    "e": "First published in 1858."
+    "e": "Neutrophils make up roughly 40\u201375% of white cells and are first on the scene in bacterial infection."
    },
    {
-    "q": "Which city is \u2018ER\u2019 set in?",
-    "a": "Chicago",
+    "q": "Tissue frozen and cut during an operation, so the pathologist can report within minutes, is a?",
+    "a": "Frozen section",
     "w": [
-     "New York",
-     "Boston",
-     "Seattle"
+     "Wet mount",
+     "Core biopsy",
+     "Blood film"
     ],
-    "e": "ER (1994 to 2009) followed the emergency department of County General Hospital in Chicago."
+    "e": "A frozen section lets the surgeon know mid-operation whether a margin is clear or a lump is cancer. The full report on fixed tissue follows days later."
    },
    {
-    "q": "Which city is \u2018The Pitt\u2019 set in?",
-    "a": "Pittsburgh",
+    "q": "Gram-negative bacteria stain which colour on a Gram stain?",
+    "a": "Pink-red",
     "w": [
-     "Philadelphia",
-     "Portland",
-     "Baltimore"
+     "Purple",
+     "Blue",
+     "Green"
     ],
-    "e": "The Pitt follows an emergency department shift in Pittsburgh, one hour per episode."
+    "e": "Gram-positive bacteria hold the crystal violet and look purple; Gram-negatives lose it and pick up the pink counterstain. Danish scientist Hans Christian Gram invented the method in 1884."
    },
    {
-    "q": "Which show follows JD at Sacred Heart?",
-    "a": "Scrubs",
+    "q": "HbA1c reflects average blood glucose over roughly the past?",
+    "a": "2\u20133 months",
     "w": [
-     "ER",
-     "Chicago Med",
-     "House"
+     "24 hours",
+     "1 week",
+     "1 year"
     ],
-    "e": "Scrubs follows JD and friends through training at Sacred Heart Hospital."
+    "e": "Glucose sticks to haemoglobin for the life of the red cell, about 120 days, so HbA1c shows the longer-term picture."
    },
    {
-    "q": "Which war is \u2018M*A*S*H\u2019 set in?",
-    "a": "The Korean War",
+    "q": "Which blood test is the key marker of heart muscle damage?",
+    "a": "Troponin",
     "w": [
-     "The Vietnam War",
-     "World War II",
-     "The Gulf War"
+     "D-dimer",
+     "Lipase",
+     "Amylase"
     ],
-    "e": "M*A*S*H is set in a mobile army surgical hospital during the Korean War, although the show ran far longer than the war."
+    "e": "Troponins are proteins of heart muscle. A rise and fall in troponin is central to diagnosing a heart attack."
    },
    {
-    "q": "What is the hospital in \u2018Grey\u2019s Anatomy\u2019 called now?",
-    "a": "Grey Sloan Memorial",
+    "q": "\u2018Autopsy\u2019 literally means?",
+    "a": "Seeing for yourself",
     "w": [
-     "Sacred Heart",
-     "Princeton-Plainsboro",
-     "County General"
+     "Cutting the dead",
+     "After death",
+     "Study of disease"
     ],
-    "e": "Seattle Grace became Seattle Grace Mercy West, then Grey Sloan Memorial, after Lexie Grey and Mark Sloan."
+    "e": "From the Greek autos (self) and opsis (sight). \u2018Necropsy\u2019 means seeing the dead."
    },
    {
-    "q": "Princeton-Plainsboro is the hospital in?",
-    "a": "House",
+    "q": "Rudolf Virchow, father of modern pathology, popularised the idea that every cell comes from?",
+    "a": "Another cell",
     "w": [
-     "Scrubs",
-     "ER",
-     "The Good Doctor"
+     "Blood",
+     "Spontaneous generation",
+     "The bone marrow"
     ],
-    "e": "Dr Gregory House works at the fictional Princeton-Plainsboro Teaching Hospital in New Jersey."
+    "e": "\u2018Omnis cellula e cellula\u2019 (1855). It buried the idea that life springs from non-living matter and grounded disease in cells."
    },
    {
-    "q": "Which comedy is based on junior doctor Adam Kay\u2019s diaries?",
-    "a": "This Is Going to Hurt",
+    "q": "Target cells, sickle cells and schistocytes are all abnormal shapes of which cells on a blood film?",
+    "a": "Red blood cells",
     "w": [
-     "Green Wing",
-     "Doc Martin",
-     "Peep Show"
+     "Platelets",
+     "Neutrophils",
+     "Lymphocytes"
     ],
-    "e": "This Is Going to Hurt is based on Adam Kay\u2019s bestselling diaries from his years as an obstetrics and gynaecology junior doctor."
+    "e": "Red cell shape tells a story: sickle cells in sickle cell disease, target cells in thalassaemia and liver disease, fragments (schistocytes) when cells are sliced up in small vessels."
    },
    {
-    "q": "Who created \u2018Grey\u2019s Anatomy\u2019?",
-    "a": "Shonda Rhimes",
+    "q": "The Pap smear is named after Georgios Papanicolaou. Who was his main test subject for 21 years?",
+    "a": "His wife, Andromachi (Mary)",
     "w": [
-     "Ryan Murphy",
-     "Dick Wolf",
-     "David Shore"
+     "His mother",
+     "His lab assistant",
+     "Himself"
     ],
-    "e": "Her company, Shondaland, went on to make Scandal and Bridgerton. David Shore made House."
+    "e": "Andromachi Papanikolaou let him take a sample from her cervix almost every day for 21 years, which helped him map normal cell changes. Few medical \u2018thank yous\u2019 have been more overdue."
    }
   ]
  },
@@ -1731,107 +1731,107 @@
   "date": "2026-11-03",
   "number": 17,
   "difficulty": "Easy",
-  "theme": "Vitamins and nutrition",
+  "theme": "Horses, not zebras (Melbourne Cup day)",
   "questions": [
    {
-    "q": "Scurvy is caused by a lack of?",
-    "a": "Vitamin C",
+    "q": "\u2018When you hear hoofbeats, think of horses, not zebras\u2019 was coined by?",
+    "a": "Theodore Woodward",
     "w": [
-     "Vitamin D",
-     "Vitamin B12",
-     "Vitamin A"
+     "William Osler",
+     "Hippocrates",
+     "Gregory House"
     ],
-    "e": "Without vitamin C the body can\u2019t make collagen properly, so gums bleed, wounds don\u2019t heal and old scars can reopen."
+    "e": "Woodward taught it to students at the University of Maryland in the late 1940s: common things are common. Rare diagnoses have been \u2018zebras\u2019 ever since."
    },
    {
-    "q": "Rickets in children is caused by a lack of?",
-    "a": "Vitamin D",
+    "q": "\u2018Cauda equina\u2019, the bundle of nerve roots at the bottom of the spinal canal, literally means?",
+    "a": "Horse\u2019s tail",
     "w": [
-     "Vitamin C",
-     "Vitamin K",
-     "Vitamin E"
+     "Horse\u2019s mane",
+     "Horse\u2019s hoof",
+     "Horse\u2019s back"
     ],
-    "e": "Low vitamin D means poor calcium uptake, so growing bones stay soft and bend. Sunlight on skin makes most of our vitamin D."
+    "e": "Below the end of the spinal cord the nerve roots fan out like a horse\u2019s tail."
    },
    {
-    "q": "Vitamin B12 comes mostly from?",
-    "a": "Animal foods",
+    "q": "Numbness in the \u2018saddle\u2019 area plus new bladder trouble is a red flag for?",
+    "a": "Cauda equina syndrome",
     "w": [
-     "Fruit",
-     "Grains",
-     "Leafy greens"
+     "Haemorrhoids",
+     "Shingles",
+     "Pelvic floor weakness"
     ],
-    "e": "Vegans need a supplement or fortified foods."
+    "e": "Compression of those nerve roots, often by a large disc prolapse, is a surgical emergency."
    },
    {
-    "q": "Folic acid before and in early pregnancy helps prevent?",
-    "a": "Neural tube defects",
+    "q": "A \u2018charley horse\u2019 is?",
+    "a": "A sudden muscle cramp",
     "w": [
-     "Down syndrome",
-     "Club foot",
-     "Newborn jaundice"
+     "A saddle sore",
+     "A heel spur",
+     "A kneecap bruise"
     ],
-    "e": "Such as spina bifida."
+    "e": "Usually a painful calf cramp. The origin of the name is uncertain, but it\u2019s been in American slang since the 1880s."
    },
    {
-    "q": "Night blindness is an early sign of lacking?",
-    "a": "Vitamin A",
+    "q": "The hippocampus, the brain\u2019s memory hub, is named after its resemblance to a?",
+    "a": "Seahorse",
     "w": [
-     "Vitamin B1",
-     "Vitamin C",
-     "Vitamin K"
+     "Racehorse",
+     "Horseshoe",
+     "Hippopotamus"
     ],
-    "e": "Vitamin A is needed to make rhodopsin, the light pigment in the eye\u2019s rods, so night vision fails first."
+    "e": "From the Greek hippos (horse) and kampos (sea monster). Anatomist Julius Caesar Arantius named it in 1587."
    },
    {
-    "q": "Newborns get a vitamin K injection to prevent?",
-    "a": "Bleeding",
+    "q": "A horseshoe kidney is when?",
+    "a": "The two kidneys are joined at their lower poles",
     "w": [
-     "Jaundice",
-     "Infection",
-     "Rickets"
+     "One kidney is missing",
+     "A kidney sits in the pelvis",
+     "A kidney has two ureters"
     ],
-    "e": "Newborns have very little vitamin K, so a single injection at birth prevents a rare but dangerous bleeding disorder."
+    "e": "It\u2019s the commonest kidney fusion, in about 1 in 500 people, and is usually found by chance on a scan."
    },
    {
-    "q": "Wernicke\u2019s encephalopathy is caused by a lack of?",
-    "a": "Thiamine (vitamin B1)",
+    "q": "Many antivenoms, and the first diphtheria antitoxin, were made using which animal?",
+    "a": "Horses",
     "w": [
-     "Niacin",
-     "Vitamin B12",
-     "Folate"
+     "Sheep",
+     "Rabbits",
+     "Goats"
     ],
-    "e": "Confusion, wobbly gait, eye movement problems."
+    "e": "Horses are given small, safe doses of venom or toxin and make antibodies, which are purified from their plasma. Most Australian snake antivenoms are still made this way."
    },
    {
-    "q": "What is the most common nutrient deficiency in the world?",
-    "a": "Iron",
+    "q": "A classic menopause hormone therapy, Premarin, takes its name from?",
+    "a": "Pregnant mares\u2019 urine",
     "w": [
-     "Zinc",
-     "Calcium",
-     "Magnesium"
+     "A French chemist",
+     "Premature menopause",
+     "Prime marine extract"
     ],
-    "e": "Iron deficiency is the world\u2019s most common nutritional deficiency and the leading cause of anaemia, especially in women and children."
+    "e": "PREgnant MARes\u2019 urINe is the source of its conjugated oestrogens. Women\u2019s health owes the horse more than most people realise."
    },
    {
-    "q": "Beta-carotene in carrots is turned into?",
-    "a": "Vitamin A",
+    "q": "Which animal is the symbol of Ehlers-Danlos syndromes and many rare-disease groups?",
+    "a": "Zebra",
     "w": [
-     "Vitamin D",
-     "Vitamin E",
-     "Vitamin K"
+     "Unicorn",
+     "Seahorse",
+     "Pony"
     ],
-    "e": "The body converts beta-carotene into vitamin A as needed. Too much carrot can turn skin orange, but it\u2019s harmless."
+    "e": "Patients adopted it to say: sometimes the hoofbeats really are a zebra. Rare diseases are rare one by one, but together affect millions."
    },
    {
-    "q": "Which vitamins are fat-soluble?",
-    "a": "A, D, E and K",
+    "q": "Phar Lap, winner of the 1930 Melbourne Cup, is famous for having a heart that weighed about?",
+    "a": "6.2 kg",
     "w": [
-     "B and C",
-     "B, C and D",
-     "C, D and K"
+     "1.2 kg",
+     "3.2 kg",
+     "12 kg"
     ],
-    "e": "Vitamins A, D, E and K dissolve in fat and are stored in the body, so they can build up to toxic levels. B and C are water-soluble."
+    "e": "About twice the 3.2 kg of an average horse\u2019s heart. It\u2019s on display at the National Museum of Australia in Canberra."
    }
   ]
  },
@@ -1912,14 +1912,14 @@
     "e": "The kidneys sit behind the abdominal lining, in the retroperitoneum, tucked against the back muscles."
    },
    {
-    "q": "Where is urea made?",
-    "a": "The liver",
+    "q": "Extreme exercise, like an ultramarathon, can flood the kidneys with myoglobin from damaged muscle. This is?",
+    "a": "Rhabdomyolysis",
     "w": [
-     "The kidneys",
-     "The muscles",
-     "The pancreas"
+     "Nephrotic syndrome",
+     "Glomerulonephritis",
+     "Pyelonephritis"
     ],
-    "e": "The kidneys just get rid of it."
+    "e": "Myoglobin is toxic to kidney tubules, the CK soars and urine can turn cola-coloured. A modest CK rise is normal after any marathon, such as the New York City Marathon on 1 November."
    },
    {
     "q": "Which electrolyte is the big danger in kidney failure?",

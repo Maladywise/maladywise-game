@@ -975,107 +975,107 @@
   "date": "2026-11-02",
   "number": 10,
   "difficulty": "Easy",
-  "theme": "Flags are weird",
+  "theme": "Under the microscope",
   "questions": [
    {
-    "q": "Which country has the only non-rectangular national flag?",
-    "a": "Nepal",
+    "q": "Who first saw bacteria, calling them \u2018little animals\u2019, through homemade microscopes in the 1670s?",
+    "a": "Antonie van Leeuwenhoek",
     "w": [
-     "Bhutan",
-     "Qatar",
-     "Oman"
+     "Robert Hooke",
+     "Louis Pasteur",
+     "Galileo Galilei"
     ],
-    "e": "Two stacked triangles. Rectangles are for the unadventurous."
+    "e": "A Dutch cloth merchant who ground his own tiny lenses. He even found bacteria in the gunk from his own teeth."
    },
    {
-    "q": "Which country\u2019s flag is square?",
-    "a": "Switzerland",
+    "q": "Robert Hooke coined the word \u2018cell\u2019 in 1665 after looking at?",
+    "a": "Cork",
     "w": [
-     "Austria",
-     "Denmark",
-     "Sweden"
+     "Onion skin",
+     "Blood",
+     "A flea"
     ],
-    "e": "Vatican City is square too. Everyone else stuck with rectangles."
+    "e": "The tiny boxes reminded him of monks\u2019 cells. His book Micrographia also had a famous giant drawing of a flea."
    },
    {
-    "q": "Which country\u2019s flag features an AK-47 rifle?",
-    "a": "Mozambique",
+    "q": "Compared with your own body cells, roughly how many bacteria live in and on you?",
+    "a": "About the same number",
     "w": [
-     "Angola",
-     "Zimbabwe",
-     "Kenya"
+     "100 times more",
+     "10 times fewer",
+     "1,000 times more"
     ],
-    "e": "Crossed with a hoe and a book. Unique, to say the least."
+    "e": "The old \u201810 bacteria for every human cell\u2019 claim was revised in 2016: it\u2019s about 38 trillion bacteria to 30 trillion human cells."
    },
    {
-    "q": "Which country\u2019s flag features a dragon?",
-    "a": "Bhutan",
+    "q": "Penicillin was discovered in 1928 when mould spoiled a dish in whose lab?",
+    "a": "Alexander Fleming",
     "w": [
-     "China",
-     "Vietnam",
-     "Mongolia"
+     "Marie Curie",
+     "Louis Pasteur",
+     "Joseph Lister"
     ],
-    "e": "The \u2018Land of the Thunder Dragon\u2019. China has loads of dragons, just not on its flag."
+    "e": "Fleming noticed bacteria wouldn\u2019t grow near a Penicillium mould at St Mary\u2019s Hospital in London."
    },
    {
-    "q": "Which country\u2019s flag has a different design on each side?",
-    "a": "Paraguay",
+    "q": "What are tardigrades, microscopic animals that have survived exposure to space, nicknamed?",
+    "a": "Water bears",
     "w": [
-     "Uruguay",
-     "Peru",
-     "Bolivia"
+     "Sea monkeys",
+     "Dust mites",
+     "Glass frogs"
     ],
-    "e": "Different emblems front and back. Double the printing, double the fun."
+    "e": "These eight-legged creatures under a millimetre long survived the vacuum of space on a 2007 satellite mission."
    },
    {
-    "q": "Which country\u2019s flag is widely recognised as the oldest still in use?",
-    "a": "Denmark",
+    "q": "The famous \u2018HeLa\u2019 cells, still grown in labs worldwide, came in 1951 from?",
+    "a": "Henrietta Lacks",
     "w": [
-     "England",
-     "Japan",
-     "Netherlands"
+     "Helen Keller",
+     "Hedy Lamarr",
+     "Hermione Lee"
     ],
-    "e": "The Dannebrog. Legend says it fell from the sky in 1219."
+    "e": "Taken from her cervical cancer without her knowledge, her cells helped develop the polio vaccine and much more. Her story is told in The Immortal Life of Henrietta Lacks."
    },
    {
-    "q": "From 1977 to 2011, which country\u2019s flag was plain green, with nothing else on it?",
-    "a": "Libya",
+    "q": "Roughly how long does a red blood cell last?",
+    "a": "About 4 months",
     "w": [
-     "Saudi Arabia",
-     "Pakistan",
-     "Mauritania"
+     "About 1 day",
+     "About 2 weeks",
+     "About 10 years"
     ],
-    "e": "Easiest flag ever to draw. Now it has stripes and a crescent."
+    "e": "Around 120 days. You make roughly 2 million new ones every second to keep up."
    },
    {
-    "q": "Which country\u2019s flag shows a map of the country itself?",
-    "a": "Cyprus",
+    "q": "Which everyday food is made with the help of bacteria?",
+    "a": "Yoghurt",
     "w": [
-     "Malta",
-     "Greece",
-     "Iceland"
+     "Popcorn",
+     "Toast",
+     "Boiled eggs"
     ],
-    "e": "Copper-coloured island on white. Hard to get lost."
+    "e": "Friendly bacteria turn milk sugar into lactic acid, which thickens the milk and gives yoghurt its tang."
    },
    {
-    "q": "The flags of Indonesia and Monaco are?",
-    "a": "Nearly identical",
+    "q": "The first virus ever discovered, in 1892, infected which plant?",
+    "a": "Tobacco",
     "w": [
-     "Exact opposites",
-     "Both all-red",
-     "Both with stars"
+     "Rice",
+     "Wheat",
+     "Potato"
     ],
-    "e": "Red over white. Only the proportions differ. Awkward."
+    "e": "Dmitri Ivanovsky showed tobacco mosaic disease passed through filters that trapped bacteria. Something far smaller was at work."
    },
    {
-    "q": "On the Aboriginal flag, designed by Luritja artist Harold Thomas in 1971, the yellow circle represents?",
-    "a": "The Sun",
+    "q": "This week is Pathology Week. What does a pathologist mostly study?",
+    "a": "Body tissue and fluids",
     "w": [
-     "The Moon",
-     "Gold",
-     "A campfire"
+     "Paths and trails",
+     "Ancient bones only",
+     "The weather"
     ],
-    "e": "Black for Aboriginal people, red for the earth and the spiritual relationship to the land, yellow for the Sun, the giver of life."
+    "e": "Pathologists study blood, cells and tissue in the lab, quietly behind most medical diagnoses."
    }
   ]
  },
@@ -1166,14 +1166,14 @@
     "e": "It sealed the US Triple Crown. His record time still stands."
    },
    {
-    "q": "What kind of animal was Knut, a celebrity at Berlin Zoo?",
-    "a": "Polar bear",
+    "q": "Phar Lap, the champion racehorse who won the 1930 Melbourne Cup, is famous for his?",
+    "a": "Huge heart",
     "w": [
-     "Panda",
-     "Penguin",
-     "Gorilla"
+     "Golden horseshoes",
+     "Blue eyes",
+     "Missing tail"
     ],
-    "e": "Hand-raised by a keeper after his mother rejected him. Merchandise followed."
+    "e": "His heart weighed about 6.2 kg, roughly twice an average horse\u2019s. It\u2019s on display in Canberra, giving us the Aussie phrase \u2018a heart as big as Phar Lap\u2019."
    },
    {
     "q": "Cher Ami, a hero of the First World War, was a?",
