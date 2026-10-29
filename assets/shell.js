@@ -74,6 +74,24 @@
     })(0);
   }
   window.MW_track = track;
+  // ---------- live counts (players online + games played today) ----------
+  // Anonymous: a random ID that lives only in this tab's memory. No cookies, no storage, no personal data.
+  var LIVE = { url: "https://mw-presence.onrender.com", id: Math.random().toString(36).slice(2, 12), last: null, MIN_ON: 5, MIN_TODAY: 10 };
+  function liveGame() { return (window.MW_curGame && MW_curGame.id) || (location.pathname === "/" ? "home" : location.pathname.split("/")[1] || "home"); }
+  function livePing() { if (document.hidden) return; try { fetch(LIVE.url + "/ping?id=" + LIVE.id + "&g=" + encodeURIComponent(liveGame()), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  function liveShow() {
+    var d = LIVE.last; if (!d) return;
+    var bits = [];
+    if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing now");
+    if (d.today >= LIVE.MIN_TODAY) bits.push("\ud83e\udde9 " + d.today.toLocaleString("en-AU") + " games played today");
+    Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { el.innerHTML = bits.join(" &middot; "); el.hidden = !bits.length; });
+  }
+  function liveStats() { if (document.hidden) return; try { fetch(LIVE.url + "/stats", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d) { LIVE.last = d; liveShow(); } }).catch(function () {}); } catch (e) {} }
+  function liveDone(id) { try { fetch(LIVE.url + "/done?g=" + encodeURIComponent(id), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  window.MW_liveShow = liveShow;
+  setTimeout(function () { livePing(); liveStats(); }, 1200);
+  setInterval(livePing, 30000); setInterval(liveStats, 60000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) { livePing(); liveStats(); } });
   // Fire a "finished" event the first time a game saves today's result as done.
   function watchDone(g) {
     if (!g || !g.store || !g.store.day) return;
@@ -85,6 +103,7 @@
           if (!prev || !/"done":true/.test(prev)) {
             var win = /"win":true/.test(v);
             track("finished/" + g.id, g.name + " finished");
+            if (!g.store.weekly ? k === pre + sydToday() : true) liveDone(g.id);
             if (win) track("won/" + g.id, g.name + " won");
             if (!g.store.weekly && k === pre + sydToday()) markDay();
             logFinish(g, k, v);
@@ -755,12 +774,12 @@
     function draw() {
       main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">' + (NORMIE ? "\ud83d\ude42 No medical degree required." : "Think like a doctor.") + '</p><h1>Today&rsquo;s ' + (NORMIE ? "" : "medical ") + 'puzzles</h1>' +
         '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Just puzzles.</span></p>" : "") + "</div>" +
-        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span></div></div>" +
+        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span><span class=\"mw-live\" hidden></span></div></div>" +
         (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
         progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
-    draw(); window.MW_onTheme = function () { draw(); healthDay(); };
+    draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();
     if (!window.MW_tick) window.MW_tick = setInterval(function () {
       var c = document.getElementById("mw-count"); if (!c) return;
@@ -877,8 +896,8 @@
     sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
-      (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div></div>";
-    document.getElementById("mw-play").onclick = start;
+      (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div><p class=\"mw-live\" hidden></p></div>";
+    document.getElementById("mw-play").onclick = start; liveShow();
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 

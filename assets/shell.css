@@ -613,3 +613,12 @@ html[data-theme="dark"] .doc ul.skip li::before{background:#3E231C;color:#F0A898
 .doc ol.ex .dose{display:inline-block;margin-top:4px;font-size:13px;font-weight:600;color:var(--brand);background:#F1ECF8;border-radius:999px;padding:2px 10px}
 html[data-theme="dark"] .doc ol.ex .dose{background:#2A2240}
 @media print{.doc ul.skip li,.doc ul.res li{border-color:#999;break-inside:avoid}.doc ol.ex li{break-inside:avoid}}
+/* live counts tag */
+.mw-live{font-size:13px;color:var(--muted);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0}
+.mw-live[hidden]{display:none}
+.splash .mw-live{display:flex;justify-content:center;margin-top:8px;white-space:normal}
+.mw-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 0 rgba(46,158,91,.5);animation:mwpulse 2s infinite}
+@keyframes mwpulse{70%{box-shadow:0 0 0 6px rgba(46,158,91,0)}100%{box-shadow:0 0 0 0 rgba(46,158,91,0)}}
+:root[data-motion="reduce"] .mw-dot{animation:none}
+@media (prefers-reduced-motion:reduce){.mw-dot{animation:none}}
+.splash p.mw-live{font-size:13px;color:var(--muted)}
