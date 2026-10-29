@@ -1,0 +1,8 @@
+{
+  "name": "mw-presence",
+  "private": true,
+  "description": "Anonymous players-online and games-played-today counter for maladywise.com. No cookies, no personal data.",
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "dependencies": { "redis": "4.7.0" }
+}
