@@ -139,7 +139,7 @@
     return true;
   }
   function startBonus() {
-    S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.spawnT = 1.6; S.clover = null; S.cloverT = rnd(12, 16);
+    S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.spawnT = 1.6; S.clover = null; S.cloverT = rnd(12, 16); S.sneak = null; S.sneakT = rnd(6, 9);
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.lanes[j] = null; S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } }
     if (!S.moth) S.mothT = Math.min(S.mothT, rnd(1.5, 3.5));
     toast("Clover’s turn! " + pick(CNICK).replace(/^the /, "The ").replace(/^./, function (c) { return c.toUpperCase(); }) + " eats everything."); track("basil/bonus");
@@ -212,7 +212,7 @@
     }
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(3, 5); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); } }
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); } }
     else { S.roundT -= dt; if (S.roundT <= 0) startBonus(); }
     if (S.ann && S.ann.t > 0) { S.ann.t -= dt; if (S.spawnT < 0.2) S.spawnT = 0.2; }
     if (shakeT > 0) shakeT -= dt;
@@ -247,9 +247,9 @@
     // Clover's round: Basil sneaks up from the sink. Tap him to shoo him; if he gets there he swipes her (-10 points).
     if (S.bonus > 0) {
       var sb = S.sneak;
-      if (!sb) { S.sneakT -= dt; if (S.sneakT <= 0) { S.sneak = { x: 60, phase: "creep" }; toast("Basil is sneaking up on Clover. Tap him!"); } }
-      else if (sb.phase === "creep") { sb.x += 26 * dt; var tgt = 180 - 46 * (1 + Math.min(1, S.eatenFood / 120)); if (sb.x >= tgt) { sb.phase = "flee"; addPts(-Math.min(S.cPts, 10 * U())); S.slash.push({ x: tgt + 20, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
-      else { sb.x -= 160 * dt; if (sb.x <= 52) { S.sneak = null; S.sneakT = rnd(3, 6); } }
+      if (!sb) { S.sneakT -= dt; if (S.sneakT <= 0) { var dr = Math.random() < 0.5 ? 1 : -1; S.sneak = { x: dr > 0 ? 60 : W - 60, dir: dr, phase: "creep" }; toast("Basil is sneaking up on Clover from the " + (dr > 0 ? "left" : "right") + ". Tap him!"); } }
+      else if (sb.phase === "creep") { sb.x += 26 * dt * sb.dir; var tgt = 180 - sb.dir * 46 * (1 + Math.min(1, S.eatenFood / 120)); if (sb.dir > 0 ? sb.x >= tgt : sb.x <= tgt) { sb.phase = "flee"; addPts(-Math.min(S.cPts, 10 * U())); S.slash.push({ x: tgt + 20 * sb.dir, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10 * sb.dir, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
+      else { sb.x -= 160 * dt * sb.dir; if (sb.dir > 0 ? sb.x <= 52 : sb.x >= W - 52) { S.sneak = null; S.sneakT = rnd(8, 13); } }
     } else S.sneak = null;
     // Clover
     S.cloverT -= dt;
@@ -361,10 +361,10 @@
   }
   function sneaker() {
     var b = S.sneak, K = 0.3, bob = b.phase === "creep" ? Math.sin(S.t * 6) * 1.5 : 0;
-    ctx.save(); ctx.translate(b.x, BENCH + 2 + bob); if (b.phase === "flee") ctx.scale(-1, 1); ctx.scale(K, K * 0.82); ctx.translate(-120, -246);
+    ctx.save(); ctx.translate(b.x, BENCH + 2 + bob); if ((b.phase === "flee") === ((b.dir || 1) > 0)) ctx.scale(-1, 1); ctx.scale(K, K * 0.82); ctx.translate(-120, -246);
     spr("basil-body"); spr("basil-head"); catEyes("b", b.phase === "flee" ? "shut" : "open"); ctx.restore();
     if (b.phase === "creep") { ctx.strokeStyle = "rgba(43,94,128,.45)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(b.x, BENCH - 32, 34 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("tap to shoo", b.x, BENCH - 74); }
-    rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill();
+    if ((b.dir || 1) > 0) { rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill(); }
   }
   function cushion() {
     if (S.clover) { ell(334, BENCH - 6, 26, 8, "#5B7F9E"); ell(334, BENCH - 9, 22, 5, "#7FA3C2"); return; }
