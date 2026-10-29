@@ -237,6 +237,7 @@
     var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to continue</span></div>');
     var done = false;
     function bye() { if (done) return; done = true; o.classList.add("out"); setTimeout(function () { o.remove(); busy = false; if (Q.length) show(Q.shift()); }, 260); }
+    try { var cap0 = o.querySelector(".cb-cap"), bub0 = o.querySelector(".cb-bub"); if (cap0 && bub0 && cap0.textContent.toLowerCase().indexOf(bub0.textContent.toLowerCase().replace(/[.!]+$/, "")) >= 0) { var M0 = window.MW_MASCOTS || {}, alt = null; Object.keys(M0).forEach(function (k) { var c = M0[k].cheer || []; if (!alt && c.indexOf(bub0.textContent) >= 0) { var opts = c.filter(function (x) { return cap0.textContent.toLowerCase().indexOf(x.toLowerCase().replace(/[.!]+$/, "")) < 0; }); if (opts.length) alt = opts[Math.floor(Math.random() * opts.length)]; } }); if (alt) bub0.textContent = alt; } } catch (e) {}
     o.addEventListener("click", bye); document.body.appendChild(o);
     setTimeout(bye, sc.ms || (quiet() ? 1800 : 2600));
   }

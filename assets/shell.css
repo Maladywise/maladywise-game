@@ -624,3 +624,12 @@ html[data-theme="dark"] .doc ol.ex .dose{background:#2A2240}
 .splash p.mw-live{font-size:13px;color:var(--muted)}
 .mwx-nexttop{margin:12px auto 18px}
 p,li,h1,h2,h3,.gtitle p{text-wrap:pretty}
+/* celebration: stage, caption, mascot and button as one centred stack (balanced on tall phones) */
+@media (min-height:600px){
+  .cb{padding:24px;align-content:center;gap:12px}
+  .cb-masc{position:static;margin:10px 0 0;left:auto;right:auto;bottom:auto}
+  .cb-tap{position:static;transform:none;margin-top:14px;animation:tapPulse2 1.6s ease-in-out .8s infinite}
+}
+@keyframes tapPulse2{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.cb-tap{animation:none}}
+.cb-bub,.cb-cap{text-wrap:balance}
