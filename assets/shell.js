@@ -849,7 +849,7 @@
       if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
       var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Next: ' + ng.name + '<small>' + left.length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
       if (ng && left.length > 1) th += '<button type="button" class="mwx-skip">Skip ' + ng.name + ' \u203a</button>';
-      if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; res.insertAdjacentHTML("afterend", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
+      if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; var anc = box.querySelector(".mw-ticket") || box.querySelector('pre[id$="-share"],pre[id$="-sharetext"]') || res; if (anc.compareDocumentPosition(res) & 2) anc = res; anc.insertAdjacentHTML("beforebegin", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
       if (tb.getAttribute("data-h") === th) return;
       tb.innerHTML = th; tb.setAttribute("data-h", th);
       var mb = tb.querySelector(".mwx-more2"); if (mb) mb.onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); tb.remove(); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
