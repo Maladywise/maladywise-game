@@ -289,39 +289,54 @@
   "date": "2026-11-03",
   "number": 9,
   "difficulty": "Easy",
-  "patient": "Priya, 29, female",
-  "story": "Palpitations, sweaty, tremor, and 6 kg lighter without trying. Her eyes feel gritty and look 'starey'.",
+  "patient": "Grace, 41, female",
+  "story": "Ran her first marathon yesterday. Drank at every water station ‘to be safe’ and kept drinking afterwards. Now headache, nausea and puffy fingers, and she weighs 1.5 kg more than before the race.",
+  "theme": "New York City Marathon",
   "panels": [
    {
-    "name": "Thyroid function",
+    "name": "Urea and electrolytes",
     "rows": [
      [
-      "TSH",
-      "<0.01",
-      "mU/L",
-      "0.40–4.00",
+      "Sodium",
+      "124",
+      "mmol/L",
+      "135–145",
       "L"
      ],
      [
-      "Free T4",
-      "46",
-      "pmol/L",
-      "10.0–20.0",
-      "H"
+      "Potassium",
+      "3.9",
+      "mmol/L",
+      "3.5–5.2",
+      ""
      ],
      [
-      "Free T3",
-      "17.2",
-      "pmol/L",
-      "3.0–6.0",
-      "H"
+      "Chloride",
+      "89",
+      "mmol/L",
+      "95–110",
+      "L"
      ],
      [
-      "TSH receptor antibodies",
-      "11.4",
-      "IU/L",
-      "<1.8",
-      "H"
+      "Bicarbonate",
+      "23",
+      "mmol/L",
+      "22–32",
+      ""
+     ],
+     [
+      "Urea",
+      "3.0",
+      "mmol/L",
+      "2.5–8.0",
+      ""
+     ],
+     [
+      "Creatinine",
+      "72",
+      "µmol/L",
+      "45–90",
+      ""
      ]
     ]
    },
@@ -329,52 +344,59 @@
     "name": "Other",
     "rows": [
      [
-      "ALP",
-      "128",
-      "U/L",
-      "30–110",
-      "H"
+      "Osmolality",
+      "258",
+      "mOsm/kg",
+      "275–295",
+      "L"
      ],
      [
-      "Calcium",
-      "2.55",
+      "Glucose (random)",
+      "5.6",
       "mmol/L",
-      "2.10–2.60",
+      "3.0–7.7",
       ""
+     ],
+     [
+      "Creatine kinase",
+      "620",
+      "U/L",
+      "<150",
+      "H"
      ]
     ]
    }
   ],
-  "answer": "Graves' disease",
+  "answer": "Exercise-associated hyponatraemia",
   "wrong": [
-   "Toxic multinodular goitre",
-   "Subacute (de Quervain's) thyroiditis",
-   "Hashimoto's thyroiditis",
-   "TSH-secreting pituitary tumour",
-   "Anxiety disorder"
+   "Dehydration",
+   "Heat stroke",
+   "Rhabdomyolysis",
+   "Pseudohyponatraemia",
+   "SIADH from lung cancer"
   ],
   "hints": [
    [
-    "TSH is on the floor and T4 is through the roof. Overactive. But why?",
+    "Her sodium is low but she’s gained weight. Is she short of water, or swimming in it?",
     [
-     "TSH",
-     "Free T4"
+     "Sodium",
+     "Osmolality"
     ]
    ],
    [
-    "One antibody is specific for the cause, and her eyes are a clue.",
+    "The CK is up a little, as it is after any marathon. It’s the sodium that explains the headache and nausea.",
     [
-     "TSH receptor antibodies"
+     "Creatine kinase",
+     "Sodium"
     ]
    ]
   ],
   "key": [
-   "TSH",
-   "Free T4",
-   "TSH receptor antibodies"
+   "Sodium",
+   "Osmolality"
   ],
-  "why": "A suppressed TSH with high free T4 and T3 means the thyroid itself is overactive, with the pituitary trying to turn it down. Positive TSH receptor antibodies (which switch the thyroid on) plus eye symptoms make it Graves' disease, the commonest cause in young women. The ALP is up because thyroid hormone speeds up bone turnover.",
-  "pearl": "Thyroid eye disease is specific to Graves' and smoking makes it worse. A TSH-secreting pituitary tumour is the rare exception where TSH is normal or high despite a high T4."
+  "why": "A sodium of 124 with a low measured osmolality is true, dilutional hyponatraemia. Gaining weight over a race means she took in more water than she sweated and passed, and race-day stress hormones (ADH) stop the kidneys clearing the excess. Dehydration would push sodium and urea up, and pseudohyponatraemia has a normal osmolality. A CK of 620 is typical after a marathon, nowhere near rhabdomyolysis territory.",
+  "pearl": "Exercise-associated hyponatraemia is mostly about drinking too much, not losing salt, and slower runners who stop at every water station are most at risk. Sports medicine consensus statements now say to drink to thirst. Confusion or a seizure after a race is an emergency."
  },
  {
   "date": "2026-11-04",

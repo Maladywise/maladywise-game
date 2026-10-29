@@ -435,5 +435,76 @@
    }
   ],
   "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Rates are several times higher in Aboriginal and Torres Strait Islander people, especially in remote communities, where diabetes, kidney disease and soil exposure are all more common. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "The cat is sleepy too",
+  "answer": "Carbon monoxide poisoning",
+  "accept": [
+   "carbon monoxide",
+   "carbon monoxide poisoning",
+   "co poisoning",
+   "co toxicity",
+   "carboxyhaemoglobin",
+   "carbon monoxide toxicity"
+  ],
+  "clues": [
+   {
+    "t": "35-year-old woman with headaches and nausea for 2 weeks."
+   },
+   {
+    "t": "Worse at home in the evenings, better at work."
+   },
+   {
+    "t": "Her wife and their son have similar headaches."
+   },
+   {
+    "t": "The family cat has been unusually lethargic."
+   },
+   {
+    "t": "SpO₂ 99% on room air.",
+    "d": 1
+   },
+   {
+    "t": "They started using an old gas space heater this month."
+   }
+  ],
+  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "The renovator",
+  "answer": "Lead poisoning",
+  "accept": [
+   "lead poisoning",
+   "lead toxicity",
+   "plumbism",
+   "lead",
+   "heavy metal poisoning",
+   "chronic lead poisoning"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man with crampy abdominal pain and constipation for 2 months."
+   },
+   {
+    "t": "Irritable and forgetful. His partner says he's \"not himself\"."
+   },
+   {
+    "t": "Hb 104 g/L, microcytic, but ferritin is normal",
+    "d": 1
+   },
+   {
+    "t": "Blood film: basophilic stippling of red cells",
+    "d": 1
+   },
+   {
+    "t": "He's been restoring a 1920s Newcastle terrace on weekends."
+   },
+   {
+    "t": "He dry-sands the old paint with no mask."
+   }
+  ],
+  "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 µg/dL. Ask about hobbies and renovations, and check the whole household, especially children."
  }
 ]

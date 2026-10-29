@@ -155,76 +155,86 @@
   "date": "2026-11-05",
   "number": 20,
   "difficulty": "Medium",
-  "title": "The cat is sleepy too",
-  "answer": "Carbon monoxide poisoning",
+  "title": "Walking on tiptoes",
+  "answer": "Benign acute childhood myositis",
   "accept": [
-   "carbon monoxide",
-   "carbon monoxide poisoning",
-   "co poisoning",
-   "co toxicity",
-   "carboxyhaemoglobin",
-   "carbon monoxide toxicity"
+   "benign acute childhood myositis",
+   "bacm",
+   "influenza myositis",
+   "influenza associated myositis",
+   "influenza-associated myositis",
+   "flu myositis",
+   "viral myositis",
+   "acute myositis",
+   "myositis",
+   "acute childhood myositis"
   ],
   "clues": [
    {
-    "t": "35-year-old woman with headaches and nausea for 2 weeks."
+    "t": "7-year-old boy who woke up refusing to walk. When he tries, he tiptoes."
    },
    {
-    "t": "Worse at home in the evenings, better at work."
+    "t": "Three days of fever, cough and a runny nose. Half his class is off sick."
    },
    {
-    "t": "Her wife and their son have similar headaches."
+    "t": "Both calves are tender to squeeze. Strength, reflexes and hips are normal."
    },
    {
-    "t": "The family cat has been unusually lethargic."
-   },
-   {
-    "t": "SpO\u2082 99% on room air.",
+    "t": "CK 4,200 U/L (normal <200)",
     "d": 1
    },
    {
-    "t": "They started using an old gas space heater this month."
+    "t": "Urine is a normal colour and kidney function is normal",
+    "d": 1
+   },
+   {
+    "t": "Nose swab: influenza B detected",
+    "d": 1
    }
   ],
-  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO\u2082 is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+  "pearl": "Benign acute childhood myositis follows influenza (usually B, sometimes A), mostly in school-age boys, and settles within about a week. Check urine colour and kidney function, as it rarely tips into rhabdomyolysis. The northern hemisphere flu season started early in 2026, with the UK reporting rising cases from October."
  },
  {
   "date": "2026-11-06",
   "number": 21,
   "difficulty": "Hard",
-  "title": "The renovator",
-  "answer": "Lead poisoning",
+  "title": "Family pattern",
+  "answer": "Lynch syndrome",
   "accept": [
-   "lead poisoning",
-   "lead toxicity",
-   "plumbism",
-   "lead",
-   "heavy metal poisoning",
-   "chronic lead poisoning"
+   "lynch syndrome",
+   "lynch",
+   "hnpcc",
+   "hereditary nonpolyposis colorectal cancer",
+   "hereditary non-polyposis colorectal cancer",
+   "mismatch repair deficiency",
+   "dmmr",
+   "msh2 mutation",
+   "msh2"
   ],
   "clues": [
    {
-    "t": "38-year-old man with crampy abdominal pain and constipation for 2 months."
+    "t": "44-year-old woman with heavy, irregular periods for 6 months."
    },
    {
-    "t": "Irritable and forgetful. His partner says he's \"not himself\"."
+    "t": "Her father had bowel cancer at 47. His sister had \u2018womb cancer\u2019 in her 40s."
    },
    {
-    "t": "Hb 104 g/L, microcytic, but ferritin is normal",
+    "t": "Pelvic ultrasound: thickened endometrium",
     "d": 1
    },
    {
-    "t": "Blood film: basophilic stippling of red cells",
+    "t": "Endometrial biopsy: endometrioid adenocarcinoma",
     "d": 1
    },
    {
-    "t": "He's been restoring a 1920s Newcastle terrace on weekends."
+    "t": "Tumour immunohistochemistry: loss of MSH2 and MSH6 proteins",
+    "d": 1
    },
    {
-    "t": "He dry-sands the old paint with no mask."
+    "t": "Her 20-year-old son asks whether he should have a colonoscopy."
    }
   ],
-  "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 \u00b5g/dL. Ask about hobbies and renovations, and check the whole household, especially children."
+  "pearl": "Lynch syndrome is the commonest inherited cause of bowel and endometrial cancer, and in women the womb cancer often comes first. Many countries now test every new bowel and endometrial cancer for mismatch repair loss, which also guides treatment. Mismatch repair-deficient endometrial cancer was a headline topic at the ESMO congress in Madrid in October 2026."
  },
  {
   "date": "2026-11-07",

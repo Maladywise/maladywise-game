@@ -76,51 +76,6 @@
   "seed": "2026-10-27"
  },
  {
-  "difficulty": "Medium",
-  "vignette": "A 22-year-old non-binary university rower has a pre-season ECG. They feel well; resting pulse is slow and a little irregular.",
-  "ecg": {
-   "layout": "strip",
-   "rhythm": {
-    "type": "wenck",
-    "rate": 78,
-    "prs": [
-     190,
-     290,
-     340
-    ],
-    "phase": 1
-   }
-  },
-  "highlight": {
-   "marks": [
-    "p",
-    "pr",
-    "dropped"
-   ]
-  },
-  "answer": "Second-degree AV block, Mobitz I (Wenckebach)",
-  "options": [
-   "Second-degree AV block, Mobitz I (Wenckebach)",
-   "Second-degree AV block, Mobitz II",
-   "First-degree AV block",
-   "Complete heart block",
-   "Sinus arrhythmia",
-   "Blocked atrial ectopics"
-  ],
-  "hints": [
-   "Look at the PR interval, beat by beat.",
-   "The PR stretches, then one P wave stands alone with no QRS."
-  ],
-  "explanation": "The PR interval lengthens with each beat (about 190, 290, then 340 ms) until a P wave fails to conduct; the cycle then resets with the shortest PR. That gives grouped beating. The block is usually in the AV node, so it is often benign in athletes, during sleep and with high vagal tone, though drugs and inferior MI can cause it too.",
-  "features": [
-   "Progressive PR prolongation",
-   "Then a non-conducted P wave (dropped QRS)",
-   "Shortest PR straight after the pause; grouped beating"
-  ],
-  "pearl": "Compare the PR just before and just after the dropped beat. Different: Wenckebach. Identical: think Mobitz II.",
-  "seed": "2026-10-28"
- },
- {
   "difficulty": "Genius",
   "vignette": "A 41-year-old Filipino man fainted overnight while sleeping off a fever of 39.5 °C. His uncle died suddenly in his sleep at 45.",
   "ecg": {
@@ -5079,5 +5034,44 @@
   ],
   "pearl": "In hypertrophy from high blood pressure, voltages go up; in amyloid they go down. Bilateral carpal tunnel, spinal stenosis and a ruptured biceps tendon can precede cardiac transthyretin amyloid by years. Effective treatments now exist.",
   "seed": "x-amyloid"
+ },
+ {
+  "difficulty": "Medium",
+  "vignette": "A 79-year-old woman with a pacemaker comes in for a routine check. Lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "paced",
+    "mode": "vvi",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "marks": [
+    "spike",
+    "qrs"
+   ]
+  },
+  "answer": "Ventricular paced rhythm",
+  "options": [
+   "Ventricular paced rhythm",
+   "Dual-chamber paced rhythm",
+   "Left bundle branch block",
+   "Accelerated idioventricular rhythm",
+   "Ventricular tachycardia",
+   "Complete heart block"
+  ],
+  "hints": [
+   "Look just before each QRS.",
+   "There's one spike per beat, and no P wave in front of it."
+  ],
+  "explanation": "Sharp pacing spikes, each followed by a wide QRS at a fixed 70/min, with no paced atrial activity: single-chamber ventricular pacing (VVI).",
+  "features": [
+   "Pacing spike before every QRS",
+   "Wide QRS (LBBB-like from the right ventricle)",
+   "Fixed rate, no atrial spike"
+  ],
+  "pearl": "A right ventricular lead produces an LBBB-like paced QRS. Two spikes per beat (atrial then ventricular) means dual-chamber pacing.",
+  "seed": "x-vvi"
  }
 ]
