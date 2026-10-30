@@ -56,7 +56,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: rnd(10, 16), boss: null, bosses: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: rnd(10, 16), boss: null, bosses: 0, nightK: 0, zoom: null, zoomT: rnd(3, 6), rb: null, rbT: rnd(40, 70), rain: [], nipT: 0, nips: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -67,6 +67,7 @@
   function spawn(kind) {
     var free = [0, 1, 2].filter(function (i) { return !S.lanes[i] && !(S.clover && S.clover.lane === i && S.clover.state === "sit"); });
     if (!free.length) return false;
+    if (!kind && S.t > 20 && S.nipT <= 0 && Math.random() < 0.03) kind = "catnip";
     if (!kind && S.bonus > 0) kind = Math.random() < 0.22 ? pick(BADFOOD) : pick(FOOD);
     if (!kind && S.t > 6 && Math.random() < Math.min(0.24, 0.1 + S.t * 0.0015)) kind = pick(SPIKY);
     if (!kind && S.t > 40 && !S.lanes.some(function (l) { return l && l.kind === "tank"; }) && Math.random() < 0.015) kind = "tank";
@@ -98,6 +99,7 @@
       return;
     }
     S.lanes[i] = null;
+    if (it.kind === "catnip") { float(LANES[i], BENCH - 70, "CATNIP!", "#2E7D6B"); return nip(); }
     if (S.bonus > 0 && (FOOD.indexOf(it.kind) >= 0 || isBad(it.kind))) return eatFood(it, i);
     var dir = i === 0 ? -1 : i === 2 ? 1 : (Math.random() < .5 ? -1 : 1);
     S.fly.push(S.bonus > 0 ? { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(300, 380), vy: -rnd(90, 140), r: 0, vr: dir * rnd(3, 6) } : { kind: it.kind, x: LANES[i], y: BENCH - 2, vx: dir * rnd(110, 210), vy: -rnd(240, 320), r: 0, vr: dir * rnd(6, 11) });
@@ -145,6 +147,25 @@
     t.done = "you"; t.fade = 0.35; addPts(5 * U()); float(t.x, BENCH - 60, "Snatched! +" + fmt(5 * U()), "#B07A0C");
     toast(t.side > 0 ? pick(["Stolen from under Clover’s nose.", "Clover’s steak? Not any more.", "Daylight robbery. Delicious."]) : pick(["Nicked before Basil could kick it.", "Basil’s loss. Clover’s gain.", "Fastest paw in the kitchen."]));
     return true;
+  }
+  // ---------- night, zoomies, catnip and the rainbow butterfly ----------
+  function isNight() { return S.round >= 4 && ((S.round - 4) % 5 === 0 || (S.round - 4) % 5 === 1); } // rounds 4-5, 9-10, 14-15…: one Clover and one Basil round each night
+  function topAction() { if (S.zoom && !S.zoom.hit) return swipeZoom(); if (S.rb && !S.rb.caught) return catchRainbow(); return eatMoth(); }
+  function swipeZoom() {
+    var z = S.zoom; if (!z || z.hit) return false; z.hit = 0.5; var pts = 4 * U(); addPts(pts);
+    float(z.x, z.y - 30, "Zoomie swiped! +" + fmt(pts), "#B5308A"); toast(pick(["Caught mid-zoomie. Rude, but effective.", "Zoomies interrupted. Points awarded.", "3am energy, at any hour."])); track("basil/zoomie");
+    return true;
+  }
+  function catchRainbow() {
+    var r = S.rb; if (!r || r.caught) return false; r.caught = 0.5; shake();
+    var good = S.bonus > 0 ? FOOD : ITEMS.filter(function (k) { return !isSpiky(k); });
+    for (var q = 0; q < 20; q++) S.rain.push({ kind: pick(good), x: rnd(18, W - 18), y: -rnd(20, 360), vy: rnd(0, 80), landed: false, t: 0, r: rnd(-0.4, 0.4) });
+    S.ann = { t: 1.6, a: "RAINBOW!", b: "x20" }; toast(pick(["The rare one! It’s raining treats.", "Rainbow butterfly. Jackpot.", "Twenty things just fell from the sky. Don’t ask."])); track("basil/rainbow");
+    return true;
+  }
+  function nip() {
+    S.nipT = 8; S.nips++; shake(); S.ann = { t: 1.4, a: "CATNIP!", b: "WHEEE" };
+    toast(S.bonus > 0 ? pick(["Clover found the catnip. Chaos is the plan now.", "Catnip. She’s seeing colours."]) : pick(["Basil found the catnip. Everything is hilarious.", "Catnip. Auto-kick engaged. Good luck, mugs."])); track("basil/catnip");
   }
   // ---------- boss round: the vacuum (every 5th round) ----------
   var BOSS_ON = false; // vacuum boss parked: needs more work
@@ -268,6 +289,11 @@
       var r1 = cv.getBoundingClientRect(), x1 = (e.clientX - r1.left) / r1.width * W, y1 = (e.clientY - r1.top) / r1.height * H;
       if (Math.abs(x1 - S.treat.x) < 40 && y1 > BENCH - 80 && y1 < BENCH + 20) { grabTreat(); return; }
     }
+    if (running && !paused && !S.over && (S.zoom && !S.zoom.hit || S.rb && !S.rb.caught)) {
+      var r3 = cv.getBoundingClientRect(), x3 = (e.clientX - r3.left) / r3.width * W, y3 = (e.clientY - r3.top) / r3.height * H;
+      if (S.zoom && !S.zoom.hit && Math.abs(x3 - S.zoom.x) < 50 && Math.abs(y3 - S.zoom.y) < 40) { swipeZoom(); return; }
+      if (S.rb && !S.rb.caught && Math.hypot(x3 - S.rb.x, y3 - S.rb.y) < 46) { catchRainbow(); return; }
+    }
     if (running && !paused && !S.over && S.moth && !S.moth.eaten) {
       var r = cv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, y = (e.clientY - r.top) / r.height * H;
       if (Math.hypot(x - S.moth.x, y - S.moth.y) < 42) { eatMoth(); return; }
@@ -287,7 +313,7 @@
     // Basil sneaking up? The key on his side (left: A / 1 / Left, right: D / 3 / Right) shoos him first.
     if (k != null && k !== 1 && running && !paused && !S.over && S.sneak && S.sneak.phase === "creep" && (k === 0) === ((S.sneak.dir || 1) > 0)) { e.preventDefault(); shoo(); return; }
     if (k != null) { e.preventDefault(); kick(k); }
-    if ((/^[4wW]$/.test(e.key) || e.key === "ArrowUp") && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
+    if ((/^[4wW]$/.test(e.key) || e.key === "ArrowUp") && running && !paused && !S.over) { e.preventDefault(); topAction(); }
     if (e.key === " " && S.over) { e.preventDefault(); start(); }
     if (e.key === "p" || e.key === "Escape") togglePause();
   });
@@ -306,6 +332,10 @@
       if (mo.eaten) { mo.eaten -= dt; if (mo.eaten <= 0) S.moth = null; }
       else { mo.life -= dt; mo.x += mo.vx * dt; mo.y += Math.sin(S.t * 4 + mo.ph) * 60 * dt; if ((mo.x < 30 && mo.vx < 0) || (mo.x > W - 30 && mo.vx > 0)) { if (mo.life > 1.5) mo.vx *= -1; } if (mo.life <= 0 || mo.x < -40 || mo.x > W + 40) S.moth = null; }
     }
+    S.rain = S.rain.filter(function (q) {
+      if (!q.landed) { q.vy += 900 * dt; q.y += q.vy * dt; if (q.y >= BENCH - 4) { q.y = BENCH - 4; q.landed = true; addPts(U()); float(q.x, BENCH - 40, "+" + fmt(U()), "#B5308A"); } return true; }
+      q.t += dt; return q.t < 0.7;
+    });
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
     if (S.boss) { bossStep(dt); if (S.ann && S.ann.t > 0) S.ann.t -= dt; if (shakeT > 0) shakeT -= dt; if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) S.paw = null; } }
@@ -342,6 +372,19 @@
     // resting: the cat off the bench slowly recovers (Basil in the sink, Clover asleep on her cushion)
     if (S.bonus > 0) { if (!S.sneak) S.hb = Math.min(100, S.hb + 0.4 * dt); }
     else if (!S.clover) S.hc = Math.min(100, S.hc + 0.27 * dt);
+    // night falls every 4th round; zoomies only happen at night
+    var nt = isNight() ? 1 : 0; S.nightK += (nt - S.nightK) * Math.min(1, dt * 0.8);
+    if (nt && !S.wasNight) toast(pick(["The sun’s down. Zoomies o’clock.", "Night shift. Watch for zoomies.", "Moon’s up. The cats are feral now."])); S.wasNight = nt;
+    var zm = S.zoom;
+    if (!zm) { if (nt) { S.zoomT -= dt; if (S.zoomT <= 0 && !(S.ann && S.ann.t > 0)) { var zl = Math.random() < 0.5; S.zoom = { who: S.bonus > 0 ? "b" : "c", x: zl ? -60 : W + 60, dir: zl ? 1 : -1, y: rnd(150, 225), sp: rnd(440, 560), hit: 0 }; S.zoomT = rnd(3, 6); } } }
+    else if (zm.hit) { zm.hit -= dt; zm.y += 260 * dt; if (zm.hit <= 0) S.zoom = null; }
+    else { zm.x += zm.dir * zm.sp * dt; if (zm.x < -80 || zm.x > W + 80) S.zoom = null; }
+    var rbf = S.rb;
+    if (!rbf) { S.rbT -= dt; if (S.rbT <= 0 && S.t > 25) { var rl = Math.random() < 0.5; S.rb = { x: rl ? -24 : W + 24, y: rnd(84, 118), vx: (rl ? 1 : -1) * rnd(70, 90), ph: rnd(0, 6), caught: 0 }; S.rbT = rnd(55, 95); } }
+    else if (rbf.caught) { rbf.caught -= dt; if (rbf.caught <= 0) S.rb = null; }
+    else { rbf.x += rbf.vx * dt; rbf.y += Math.sin(S.t * 3 + rbf.ph) * 30 * dt; if (rbf.x < -40 || rbf.x > W + 40) S.rb = null; }
+    // catnip: anything safe that lands gets dealt with automatically
+    if (S.nipT > 0) { S.nipT -= dt; for (var ni = 0; ni < 3; ni++) { var nit = S.lanes[ni]; if (nit && nit.landed && !nit.hp && !isSpiky(nit.kind) && !isBad(nit.kind) && nit.kind !== "catnip" && nit.kind !== "tap" && (S.bonus <= 0 || FOOD.indexOf(nit.kind) >= 0)) kick(ni); } if (S.nipT <= 0) toast("Catnip wore off. Mild regret."); }
     // Bonus treat next to the resting cat (Clover on her cushion in Basil's rounds; sulking Basil in Clover's).
     var tr = S.treat;
     if (!tr) {
@@ -395,8 +438,11 @@
     ctx.fillStyle = "#F3E9DA"; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = "#EBDDC8"; for (var y = 0; y < BENCH - 24; y += 26) for (var x = (y / 26) % 2 ? 0 : 13; x < W; x += 26) ctx.fillRect(x, y, 24, 24);
     ctx.fillStyle = "#F3E9DA"; for (y = 0; y < BENCH - 24; y += 26) for (x = (y / 26) % 2 ? 0 : 13; x < W; x += 26) ctx.fillRect(x + 1, y + 1, 22, 22);
-    rr(222, 24, 118, 86, 8); ctx.fillStyle = "#BFE0F2"; ctx.fill(); ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 6; ctx.stroke(); ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(281, 24); ctx.lineTo(281, 110); ctx.moveTo(222, 67); ctx.lineTo(340, 67); ctx.stroke();
-    circ(310, 46, 10, "#FFE08A");
+    rr(222, 24, 118, 86, 8); var nk = S ? S.nightK || 0 : 0; ctx.fillStyle = nk > 0.5 ? "#26305E" : nk > 0.15 ? "#E9A77A" : "#BFE0F2"; ctx.fill(); ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 6; ctx.stroke(); ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(281, 24); ctx.lineTo(281, 110); ctx.moveTo(222, 67); ctx.lineTo(340, 67); ctx.stroke();
+    ctx.save(); rr(222, 24, 118, 86, 8); ctx.clip();
+    if (nk > 0.5) { circ(312, 44, 10, "#F4F1DE"); circ(307, 41, 9, "#26305E"); ctx.fillStyle = "#F4F1DE"; [[236, 36], [258, 52], [246, 84], [300, 92], [326, 80], [270, 34]].forEach(function (p) { ctx.fillRect(p[0], p[1], 2, 2); }); }
+    else circ(310, 46 + nk * 120, 10, nk > 0.15 ? "#F6A04D" : "#FFE08A");
+    ctx.restore();
     // sink at back left
     rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = S && S.sinkT > 0 ? "#9FD3EE" : "#D9E2E8"; ctx.fill();
     ctx.strokeStyle = "#AEB8C0"; ctx.lineWidth = 5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(30, BENCH - 36); ctx.lineTo(30, BENCH - 60); ctx.quadraticCurveTo(30, BENCH - 70, 44, BENCH - 70); ctx.lineTo(50, BENCH - 66); ctx.stroke();
@@ -475,7 +521,7 @@
     if ((b.dir || 1) > 0) { rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill(); }
   }
   function cushion() {
-    if (S.clover) { ell(334, BENCH - 6, 26, 8, "#5B7F9E"); ell(334, BENCH - 9, 22, 5, "#7FA3C2"); return; }
+    if (S.clover || (S.zoom && S.zoom.who === "c")) { ell(334, BENCH - 6, 26, 8, "#5B7F9E"); ell(334, BENCH - 9, 22, 5, "#7FA3C2"); return; }
     var x = 334, y = BENCH - 14;
     ell(x, BENCH - 6, 26, 8, "#5B7F9E"); ell(x, BENCH - 9, 22, 5, "#7FA3C2");
     ctx.strokeStyle = "#66646E"; ctx.lineWidth = 6; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(x + 14, y + 4); ctx.quadraticCurveTo(x + 4, y + 12, x - 12, y + 6); ctx.stroke();
@@ -497,6 +543,7 @@
     });
   }
   function sulk() {
+    if (S.zoom && S.zoom.who === "b") return;
     var K = 0.3;
     ctx.save(); ctx.translate(52, BENCH - 52); ctx.scale(K, K); ctx.translate(-120, -90); spr("basil-head"); catEyes("b", "open"); ctx.restore();
     rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill();
@@ -550,6 +597,7 @@
       case "catfood": rr(-15, -18, 30, 18, 3); ctx.fillStyle = "#AEB8C0"; ctx.fill(); rr(-15, -14, 30, 10, 2); ctx.fillStyle = "#E05A8A"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 7px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("MEOW", 0, -6.5); ell(0, -19, 15, 3.5, "#C99A63"); break;
       case "banana": ctx.strokeStyle = "#F2C230"; ctx.lineWidth = 9; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(0, -30, 20, 0.35 * Math.PI, 0.9 * Math.PI); ctx.stroke(); ctx.strokeStyle = "#5E4A20"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-19, -24); ctx.lineTo(-22, -28); ctx.stroke(); break;
       case "steak": ell(0, -10, 19, 11, "#B3402F"); ell(-2, -11, 15, 8, "#C9563F"); ctx.strokeStyle = "#F1D9C2"; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(0, -10, 18, 10, 0, 0.1, 2.2); ctx.stroke(); circ(6, -10, 3, "#F1D9C2"); break;
+      case "catnip": rr(-13, -24, 26, 24, 7); ctx.fillStyle = "#E7D8B8"; ctx.fill(); ctx.fillStyle = "#2E7D6B"; ctx.font = "800 7px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("NIP", 0, -8); ell(-6, -30, 5, 9, "#3E9E5E", -0.5); ell(4, -32, 5, 10, "#4FB070", 0.4); ell(0, -36, 4, 8, "#2E7D6B", 0); break;
       case "drumstick": ell(-4, -12, 13, 10, "#C27A43"); ell(-6, -14, 9, 6, "#D8925A"); ctx.fillStyle = "#F7F1E6"; ctx.fillRect(6, -14, 12, 5); circ(19, -15, 3.4, "#F7F1E6"); circ(19, -9, 3.4, "#F7F1E6"); break;
       case "sausage": rr(-20, -12, 40, 11, 5.5); ctx.fillStyle = "#A8502E"; ctx.fill(); ctx.strokeStyle = "#7A3418"; ctx.lineWidth = 1.5; [-8, 0, 8].forEach(function (q) { ctx.beginPath(); ctx.moveTo(q - 2, -10); ctx.lineTo(q + 2, -4); ctx.stroke(); }); break;
       case "pizza": ctx.fillStyle = "#F2C66D"; ctx.beginPath(); ctx.moveTo(-18, -26); ctx.lineTo(18, -26); ctx.lineTo(0, 0); ctx.fill(); ctx.fillStyle = "#D9A441"; ctx.fillRect(-19, -29, 38, 5); circ(-6, -18, 3.2, "#C2402F"); circ(5, -14, 3.2, "#C2402F"); circ(0, -7, 2.6, "#C2402F"); break;
@@ -568,6 +616,7 @@
     if (k === 1) { keycap(x - 13, H - 64, "\u2191"); keycap(x + 13, H - 64, "W"); keycap(x - 13, H - 30, "\u2193"); keycap(x + 13, H - 30, "S"); }
     else { keycap(x - 13, H - 46, ["\u2190", "", "\u2192"][k]); keycap(x + 13, H - 46, ["A", "", "D"][k]); }
   }
+  if (location.hash === "#dev") window.__bk = function () { return S; };
   function draw() {
     ctx.save();
     if (shakeT > 0) ctx.translate(rnd(-3, 3), rnd(-2, 2));
@@ -617,6 +666,29 @@
     S.slash.forEach(function (k) { ctx.globalAlpha = Math.min(1, k.l * 4); ctx.strokeStyle = "#B07A0C"; ctx.lineWidth = 3; ctx.lineCap = "round"; for (var j = -1; j <= 1; j++) { ctx.beginPath(); ctx.moveTo(k.x - 26, k.y - 22 + j * 9); ctx.quadraticCurveTo(k.x, k.y - 34 + j * 9, k.x + 26, k.y - 22 + j * 9 - 6); ctx.stroke(); } ctx.globalAlpha = 1; });
     S.drops.forEach(function (d) { ctx.globalAlpha = Math.max(0, d.l); circ(d.x, d.y, 3, "#5AA9DC"); ctx.globalAlpha = 1; });
     S.fx.forEach(function (f) { ctx.globalAlpha = Math.max(0, f.l); ctx.fillStyle = f.col; ctx.font = "700 15px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(f.txt, f.x, f.y); ctx.globalAlpha = 1; });
+    // rainbow butterfly
+    var rbd = S.rb;
+    if (rbd) {
+      ctx.save(); ctx.translate(rbd.x, rbd.y); var sc3 = rbd.caught ? rbd.caught / 0.5 * 1.6 : 1, fl3 = Math.abs(Math.sin(S.t * 14)) * 0.8 + 0.2; ctx.scale(sc3 * (rbd.vx < 0 ? -1 : 1), sc3);
+      var hue = (S.t * 160) % 360; ctx.save(); ctx.scale(1, fl3);
+      ell(-11, -7, 12, 9, "hsl(" + hue + ",85%,62%)", -0.4); ell(11, -7, 12, 9, "hsl(" + ((hue + 90) % 360) + ",85%,62%)", 0.4); ell(-8, 7, 8, 7, "hsl(" + ((hue + 180) % 360) + ",85%,60%)", 0.3); ell(8, 7, 8, 7, "hsl(" + ((hue + 270) % 360) + ",85%,60%)", -0.3); ctx.restore();
+      ell(0, 0, 2.6, 11, "#2B2340"); ctx.restore();
+      if (!rbd.caught) { ctx.globalAlpha = 0.5; for (var sp = 0; sp < 4; sp++) circ(rbd.x - rbd.vx * 0.06 * (sp + 1) + Math.sin(S.t * 9 + sp) * 4, rbd.y + Math.cos(S.t * 7 + sp) * 5, 2, "hsl(" + ((hue + sp * 70) % 360) + ",90%,70%)"); ctx.globalAlpha = 1; }
+    }
+    // treat rain
+    S.rain.forEach(function (q) { ctx.save(); ctx.globalAlpha = q.landed ? Math.max(0, 1 - q.t / 0.7) : 1; ctx.translate(q.x, q.y); ctx.scale(0.62, 0.62); ctx.translate(-q.x, -q.y); item(q.kind, q.x, q.y, q.r); ctx.restore(); });
+    // zoomies
+    var zz = S.zoom;
+    if (zz) {
+      var K2 = 0.26; ctx.save(); ctx.translate(zz.x, zz.y); ctx.scale(zz.dir * K2 * 1.35, K2 * 0.8); if (zz.hit) ctx.rotate(zz.hit * 6); ctx.translate(-120, -180);
+      spr(zz.who === "c" ? "clover-body" : "basil-body"); spr(zz.who === "c" ? "clover-head" : "basil-head"); ctx.restore();
+      if (!zz.hit) { ctx.strokeStyle = "rgba(107,90,147,.5)"; ctx.lineWidth = 2; for (var zl2 = 0; zl2 < 4; zl2++) { var yy = zz.y - 26 + zl2 * 10; ctx.beginPath(); ctx.moveTo(zz.x - zz.dir * 40, yy); ctx.lineTo(zz.x - zz.dir * (70 + zl2 * 8), yy); ctx.stroke(); }
+        ctx.fillStyle = "#B5308A"; ctx.font = "900 15px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ZOOMIES!", zz.x, zz.y - 46); }
+    }
+    // night: darker room, stars and moon in the window
+    if (S.nightK > 0.01) { ctx.fillStyle = "rgba(18,14,48," + (0.24 * S.nightK) + ")"; ctx.fillRect(0, 0, W, H); }
+    // catnip: a wobbly colour wash
+    if (S.nipT > 0) { ctx.fillStyle = "hsla(" + ((S.t * 120) % 360) + ",80%,60%," + (0.12 * Math.min(1, S.nipT)) + ")"; ctx.fillRect(0, 0, W, BENCH + 8); ctx.fillStyle = "#2E7D6B"; ctx.font = "800 11px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("CATNIP " + Math.ceil(S.nipT) + "s", 180, 56); }
     if (S.boss) { rr(74, 12, 212, 26, 13); ctx.fillStyle = "#7A1F2B"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " \u00b7 BOSS \u00b7 " + Math.max(0, Math.ceil(S.boss.t)) + "s", 180, 30); }
     else if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " · CLOVER · " + Math.ceil(S.bonus) + "s", 180, 30); }
     else if (S.frenzyT <= 0 && S.sinkT <= 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#2B5E80"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " · BASIL · " + Math.ceil(S.roundT) + "s", 180, 30); }
