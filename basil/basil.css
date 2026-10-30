@@ -105,3 +105,4 @@
 
 /* toast sits inside the stage, just under the round banner, clear of the cupboard keys */
 .bk-stage .bk-toast{position:absolute;top:13%;bottom:auto;font-size:13px;padding:8px 14px;max-width:84%;text-align:center;pointer-events:none}
+.bk-how{text-wrap:balance}.bk-how .nw{white-space:nowrap}
