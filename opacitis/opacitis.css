@@ -118,3 +118,5 @@ html[data-motion="reduce"] #opc *{animation:none!important;scroll-behavior:auto!
 .opc-lb img{max-width:none;width:auto;max-height:none;min-width:100vw}
 @media (orientation:landscape){.opc-lb img{min-width:0;max-height:100vh;width:auto}}
 .opc-lb button{position:fixed;top:12px;right:12px;font:600 14px Poppins,system-ui,sans-serif;background:#fff;color:#111;border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+/* phones: picture plus answers on one screen */
+@media (max-width:600px){#opc .wrap{gap:8px} #opc .imgbox{min-height:160px} #opc .imgbox img{max-height:32svh} #opc .msg:empty,#opc .hints:empty{display:none} #opc .opts{grid-template-columns:1fr 1fr;gap:6px} #opc .opt{font-size:13.5px;padding:8px 10px;min-height:44px}}

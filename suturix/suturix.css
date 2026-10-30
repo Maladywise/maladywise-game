@@ -67,3 +67,5 @@ html[data-theme="dark"] #stx .found span{color:#fff}
 #stx .arow{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:500 14px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
 #stx .arow.on{border-color:var(--accent)}
 #stx .arow .badge{font-size:10px;padding:2px 8px}
+/* phones: grid and buttons on one screen */
+@media (max-width:600px){#stx .wrap{gap:7px;padding-bottom:12px} #stx .board{width:min(100%,292px)} #stx .theme{padding:5px 12px}}

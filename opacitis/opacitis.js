@@ -5,7 +5,7 @@
    Medical only: no Normie version yet. Check with glimpsis/check.py. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", TRIES = 3, NAME = "Opacitis";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3, NAME = "Opacitis";
   var root = document.getElementById("opc");
   if (!document.querySelector("link[data-opc]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "opacitis.css?v=" + BUILD; l.setAttribute("data-opc", ""); document.head.appendChild(l);
