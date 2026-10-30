@@ -188,10 +188,11 @@
   document.addEventListener("keydown", function (e) {
     if (!running) return;
     if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
-    var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowUp: 1, ArrowRight: 2, a: 0, s: 1, d: 2 }[e.key];
+    var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowRight: 2, a: 0, s: 1, d: 2, A: 0, S: 1, D: 2 }[e.key];
+    // Basil sneaking up? The key on his side (left: A / 1 / Left, right: D / 3 / Right) shoos him first.
+    if (k != null && k !== 1 && running && !paused && !S.over && S.sneak && S.sneak.phase === "creep" && (k === 0) === ((S.sneak.dir || 1) > 0)) { e.preventDefault(); shoo(); return; }
     if (k != null) { e.preventDefault(); kick(k); }
-    if (/^[4wW]$/.test(e.key) && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
-    if ((/^[fFbB5]$/.test(e.key) || (e.key === " " && !S.over)) && running && !paused && !S.over) { e.preventDefault(); shoo(); }
+    if ((/^[4wW]$/.test(e.key) || e.key === "ArrowUp") && running && !paused && !S.over) { e.preventDefault(); eatMoth(); }
     if (e.key === " " && S.over) { e.preventDefault(); start(); }
     if (e.key === "p" || e.key === "Escape") togglePause();
   });
@@ -298,7 +299,7 @@
     ctx.strokeStyle = "#E2D6C3"; ctx.lineWidth = 2; for (var i = 1; i < 3; i++) { ctx.beginPath(); ctx.moveTo(i * 120, BENCH + 14); ctx.lineTo(i * 120, H); ctx.stroke(); }
     for (i = 0; i < 3; i++) { rr(i * 120 + 50, BENCH + 30, 20, 6, 3); ctx.fillStyle = "#CFC3B0"; ctx.fill(); }
     // lane hints
-    ctx.fillStyle = "rgba(43,94,128,.10)"; LANES.forEach(function (x, k) { ctx.beginPath(); ctx.ellipse(x, BENCH - 6, 34, 7, 0, 0, 7); ctx.fill(); ctx.fillStyle = "rgba(43,94,128,.35)"; ctx.font = "600 11px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(k + 1, x, H - 14); ctx.fillStyle = "rgba(43,94,128,.10)"; });
+    ctx.fillStyle = "rgba(43,94,128,.10)"; LANES.forEach(function (x, k) { ctx.beginPath(); ctx.ellipse(x, BENCH - 6, 34, 7, 0, 0, 7); ctx.fill(); ctx.fillStyle = "rgba(43,94,128,.35)"; ctx.font = "600 11px Poppins, sans-serif"; ctx.textAlign = "center"; doorKey(x, k); ctx.fillStyle = "rgba(43,94,128,.10)"; });
   }
   function fluff(cx, cy, a, b, n, col, edge) { for (var i = 0; i < n; i++) { var t = i / n * Math.PI * 2; circ(cx + Math.cos(t) * a, cy + Math.sin(t) * b, edge, col); } }
   // ---------- cats (sprites drawn from Adam's photos; eyes, paws, dirt and water drawn live) ----------
@@ -363,7 +364,7 @@
     var b = S.sneak, K = 0.3, bob = b.phase === "creep" ? Math.sin(S.t * 6) * 1.5 : 0;
     ctx.save(); ctx.translate(b.x, BENCH + 2 + bob); if ((b.phase === "flee") === ((b.dir || 1) > 0)) ctx.scale(-1, 1); ctx.scale(K, K * 0.82); ctx.translate(-120, -246);
     spr("basil-body"); spr("basil-head"); catEyes("b", b.phase === "flee" ? "shut" : "open"); ctx.restore();
-    if (b.phase === "creep") { ctx.strokeStyle = "rgba(43,94,128,.45)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(b.x, BENCH - 32, 34 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("tap to shoo", b.x, BENCH - 74); }
+    if (b.phase === "creep") { ctx.strokeStyle = "rgba(43,94,128,.45)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(b.x, BENCH - 32, 34 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? ((b.dir || 1) > 0 ? "\u2190 or A to shoo" : "\u2192 or D to shoo") : "tap to shoo", b.x, BENCH - 74); }
     if ((b.dir || 1) > 0) { rr(14, BENCH - 36, 78, 14, 6); ctx.fillStyle = "#D9E2E8"; ctx.fill(); }
   }
   function cushion() {
@@ -453,6 +454,14 @@
     }
     ctx.restore();
   }
+  var FINE = !!(window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches);
+  function keycap(x, y, t, w) { w = w || 18; rr(x - w / 2, y - 9, w, 18, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "rgba(43,94,128,.35)"; ctx.lineWidth = 1; ctx.stroke(); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(t, x, y + 3.5); }
+  function doorKey(x, k) {
+    var verb = S.bonus > 0 ? "eat" : "kick";
+    if (FINE) { keycap(x - 12, H - 40, ["\u2190", "\u2193", "\u2192"][k]); keycap(x + 12, H - 40, ["A", "S", "D"][k]); }
+    ctx.fillStyle = "rgba(43,94,128,.55)"; ctx.font = "600 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? verb : "tap to " + verb, x, H - (FINE ? 16 : 24));
+    if (k === 1) { ctx.fillStyle = "rgba(43,94,128,.42)"; ctx.font = "500 9px Poppins, sans-serif"; ctx.fillText(S.bonus > 0 ? "skip the bad food" : "leave spiky ones", x, H - 5); }
+  }
   function draw() {
     ctx.save();
     if (shakeT > 0) ctx.translate(rnd(-3, 3), rnd(-2, 2));
@@ -485,6 +494,7 @@
       if (mo.kind === "butterfly") { circ(-9, -6, 3, "#2B2340"); circ(9, -6, 3, "#2B2340"); }
       ell(0, 0, 2.6, 10, "#2B2340"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -9); ctx.lineTo(-5, -16); ctx.moveTo(1, -9); ctx.lineTo(5, -16); ctx.stroke(); }
       ctx.restore();
+      if (FINE && !mo.eaten && mo.kind !== "wasp") { ctx.fillStyle = "#B5308A"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("\u2191 or W", mo.x, mo.y + 26); }
       if (!mo.eaten && mo.kind === "wasp") { ctx.strokeStyle = "#C2553A"; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(mo.x + 18, mo.y - 18, 6, 0, 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(mo.x + 14, mo.y - 22); ctx.lineTo(mo.x + 22, mo.y - 14); ctx.stroke(); }
       else if (!mo.eaten) { ctx.strokeStyle = "rgba(181,48,138,.35)"; ctx.setLineDash([3, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(mo.x, mo.y, 24 + Math.sin(S.t * 6) * 3, 0, 7); ctx.stroke(); ctx.setLineDash([]); }
     }
