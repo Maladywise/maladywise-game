@@ -56,7 +56,7 @@
   function addPts(n) { S.score = Math.max(0, S.score + n); if (S.bonus > 0) S.cPts = Math.max(0, S.cPts + n); else S.bPts = Math.max(0, S.bPts + n); }
   function fmt(n) { return Math.round(n).toLocaleString("en-AU"); }
   var CNAMES = [[0, "Cute Clover"], [1000, "Wiggle Butt"], [3000, "The Whingapotamus"], [7500, "Chief Complaints Officer"], [15000, "Spicy Little Muffin"], [30000, "Miss Piggy"], [60000, "Clover Piggington"], [100000, "Queen Piggington"]];
-  var NAMES = [[0, "Fluffy white rat"], [1000, "Basil Brown Pants"], [2500, "Furby with Fangs"], [5000, "Fat Basil"], [15000, "Fat white seal"], [40000, "Basil Bad Cat"], [100000, "Albino Satan"]];
+  var NAMES = [[0, "Fluffy white rat"], [1000, "Basil Brown Pants"], [2500, "Furby with Fangs"], [5000, "Fat Basil"], [10000, "Basil Blanket Biter"], [15000, "Fat white seal"], [40000, "Basil Bad Cat"], [100000, "Albino Satan"]];
   var ITEMS = ["mug", "pen", "phone", "sock", "pills", "plant", "remote", "glass", "tube", "keys", "thermo"];
 
   // ---------- state ----------
