@@ -56,7 +56,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: rnd(10, 16), lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -138,8 +138,15 @@
     b.phase = "flee"; addPts(2 * U()); S.fx.push({ x: b.x, y: BENCH - 70, txt: "Shoo! +" + fmt(2 * U()), col: "#2B5E80", l: 1 }); toast("Basil shooed back to the sink. He’ll be back.");
     return true;
   }
+  // Bonus treat: dropped next to the resting cat. Grab it fast (tap, or the key on that side) before they do.
+  function grabTreat() {
+    var t = S.treat; if (!t || !t.landed || t.done) return false;
+    t.done = "you"; t.fade = 0.35; addPts(5 * U()); float(t.x, BENCH - 60, "Snatched! +" + fmt(5 * U()), "#B07A0C");
+    toast(t.side > 0 ? pick(["Stolen from under Clover’s nose.", "Clover’s steak? Not any more.", "Daylight robbery. Delicious."]) : pick(["Nicked before Basil could kick it.", "Basil’s loss. Clover’s gain.", "Fastest paw in the kitchen."]));
+    return true;
+  }
   function startBonus() {
-    S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.spawnT = 1.6; S.clover = null; S.cloverT = rnd(12, 16); S.sneak = null; S.sneakT = rnd(6, 9);
+    S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.spawnT = 1.6; S.clover = null; S.cloverT = rnd(12, 16); S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14);
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.lanes[j] = null; S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } }
     if (!S.moth) S.mothT = Math.min(S.mothT, rnd(1.5, 3.5));
     toast("Clover’s turn! " + pick(CNICK).replace(/^the /, "The ").replace(/^./, function (c) { return c.toUpperCase(); }) + " eats everything."); track("basil/bonus");
@@ -179,6 +186,10 @@
       var r0 = cv.getBoundingClientRect(), x0 = (e.clientX - r0.left) / r0.width * W, y0 = (e.clientY - r0.top) / r0.height * H;
       if (Math.abs(x0 - S.sneak.x) < 40 && y0 > BENCH - 90 && y0 < BENCH + 20) { shoo(); return; }
     }
+    if (running && !paused && !S.over && S.treat && S.treat.landed && !S.treat.done) {
+      var r1 = cv.getBoundingClientRect(), x1 = (e.clientX - r1.left) / r1.width * W, y1 = (e.clientY - r1.top) / r1.height * H;
+      if (Math.abs(x1 - S.treat.x) < 40 && y1 > BENCH - 80 && y1 < BENCH + 20) { grabTreat(); return; }
+    }
     if (running && !paused && !S.over && S.moth && !S.moth.eaten) {
       var r = cv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, y = (e.clientY - r.top) / r.height * H;
       if (Math.hypot(x - S.moth.x, y - S.moth.y) < 42) { eatMoth(); return; }
@@ -189,6 +200,7 @@
     if (!running) return;
     if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
     var k = { "1": 0, "2": 1, "3": 2, ArrowLeft: 0, ArrowDown: 1, ArrowRight: 2, a: 0, s: 1, d: 2, A: 0, S: 1, D: 2 }[e.key];
+    if (k != null && k !== 1 && running && !paused && !S.over && S.treat && S.treat.landed && !S.treat.done && (k === 2) === (S.treat.side > 0)) { e.preventDefault(); grabTreat(); return; }
     // Basil sneaking up? The key on his side (left: A / 1 / Left, right: D / 3 / Right) shoos him first.
     if (k != null && k !== 1 && running && !paused && !S.over && S.sneak && S.sneak.phase === "creep" && (k === 0) === ((S.sneak.dir || 1) > 0)) { e.preventDefault(); shoo(); return; }
     if (k != null) { e.preventDefault(); kick(k); }
@@ -213,7 +225,7 @@
     }
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); } }
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); } }
     else { S.roundT -= dt; if (S.roundT <= 0) startBonus(); }
     if (S.ann && S.ann.t > 0) { S.ann.t -= dt; if (S.spawnT < 0.2) S.spawnT = 0.2; }
     if (shakeT > 0) shakeT -= dt;
@@ -245,6 +257,15 @@
     // resting: the cat off the bench slowly recovers (Basil in the sink, Clover asleep on her cushion)
     if (S.bonus > 0) { if (!S.sneak) S.hb = Math.min(100, S.hb + 0.4 * dt); }
     else if (!S.clover) S.hc = Math.min(100, S.hc + 0.27 * dt);
+    // Bonus treat next to the resting cat (Clover on her cushion in Basil's rounds; sulking Basil in Clover's).
+    var tr = S.treat;
+    if (!tr) {
+      S.treatT -= dt;
+      var resting = S.bonus > 0 ? !S.sneak : !S.clover;
+      if (S.treatT <= 0 && resting && !(S.ann && S.ann.t > 0)) { var sd = S.bonus > 0 ? -1 : 1; S.treat = { side: sd, x: sd > 0 ? 330 : 54, y: -20, vy: 120, kind: Math.random() < 0.5 ? "steak" : "drumstick", landed: false, life: Math.max(0.75, 1.2 - S.round * 0.03), done: null, fade: 0 }; }
+    } else if (tr.done) { tr.fade -= dt; if (tr.done === "cat") { tr.x += (tr.side > 0 ? 0 : -420) * dt; tr.y -= (tr.side > 0 ? 0 : 160) * dt; } if (tr.fade <= 0) { S.treat = null; S.treatT = rnd(12, 20); } }
+    else if (!tr.landed) { tr.vy += 1400 * dt; tr.y += tr.vy * dt; if (tr.y >= BENCH - 2) { tr.y = BENCH - 2; tr.landed = true; } }
+    else { tr.life -= dt; if (tr.life <= 0) { tr.done = "cat"; tr.fade = tr.side > 0 ? 0.3 : 0.6; float(tr.x, BENCH - 60, tr.side > 0 ? "Clover: mine." : "Basil: no.", "#6B5A93"); } }
     // Clover's round: Basil sneaks up from the sink. Tap him to shoo him; if he gets there he swipes her (-10 points).
     if (S.bonus > 0) {
       var sb = S.sneak;
@@ -458,9 +479,10 @@
   function keycap(x, y, t, w) { w = w || 18; rr(x - w / 2, y - 9, w, 18, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "rgba(43,94,128,.35)"; ctx.lineWidth = 1; ctx.stroke(); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(t, x, y + 3.5); }
   function doorKey(x, k) {
     var verb = S.bonus > 0 ? "eat" : "kick";
-    if (FINE) { keycap(x - 12, H - 40, ["\u2190", "\u2193", "\u2192"][k]); keycap(x + 12, H - 40, ["A", "S", "D"][k]); }
-    ctx.fillStyle = "rgba(43,94,128,.55)"; ctx.font = "600 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? verb : "tap to " + verb, x, H - (FINE ? 16 : 24));
-    if (k === 1) { ctx.fillStyle = "rgba(43,94,128,.42)"; ctx.font = "500 9px Poppins, sans-serif"; ctx.fillText(S.bonus > 0 ? "skip the bad food" : "leave spiky ones", x, H - 5); }
+    if (FINE) { keycap(x - 13, H - 44, ["\u2190", "\u2193", "\u2192"][k]); keycap(x + 13, H - 44, ["A", "S", "D"][k]); }
+    ctx.fillStyle = "#2B5E80"; ctx.font = "700 12px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? verb : "tap to " + verb, x, H - (FINE ? 21 : 28));
+    var tip = k === 1 ? (S.bonus > 0 ? "skip the bad food" : "leave spiky ones") : k === 0 ? (FINE ? "\u2191 / W: moths" : "tap moths") : (FINE ? "P: pause" : "");
+    if (tip) { ctx.fillStyle = "#4B3D6E"; ctx.font = "600 10px Poppins, sans-serif"; ctx.fillText(tip, x, H - 7); }
   }
   function draw() {
     ctx.save();
@@ -481,6 +503,14 @@
       if (it.landed) { var p = Math.max(0, it.life / it.max); ctx.strokeStyle = it.kind === "tap" || it.kind === "fish" ? "#2E7D6B" : p < .35 ? "#C2553A" : "#2B5E80"; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(LANES[i], BENCH - 56, 7, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2); ctx.stroke(); }
     }
     clover();
+    var tq = S.treat;
+    if (tq) {
+      ctx.save(); if (tq.done) ctx.globalAlpha = Math.max(0, tq.fade / 0.35); var sc2 = tq.done === "you" ? 1 + (0.35 - tq.fade) * 1.5 : 1; ctx.translate(tq.x, tq.y); ctx.scale(sc2, sc2); ctx.translate(-tq.x, -tq.y); item(tq.kind, tq.x, tq.y, 0); ctx.restore();
+      if (tq.landed && !tq.done) {
+        var lf = Math.max(0, tq.life / 1.2); ctx.strokeStyle = "#B07A0C"; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(tq.x, BENCH - 50, 8, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * lf); ctx.stroke();
+        ctx.fillStyle = "#B07A0C"; ctx.font = "800 11px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? (tq.side > 0 ? "\u2192 grab!" : "\u2190 grab!") : "tap!", tq.x, BENCH - 64);
+      }
+    }
     S.fly.forEach(function (f) { item(f.kind, f.x, f.y, f.r); });
     S.shards.forEach(function (q) { ctx.save(); ctx.globalAlpha = Math.max(0, Math.min(1, q.l)); ctx.translate(q.x, q.y); ctx.rotate(q.r); ctx.fillStyle = q.c; ctx.beginPath(); ctx.moveTo(-q.s, 0); ctx.lineTo(0, -q.s * 0.7); ctx.lineTo(q.s * 0.8, q.s * 0.5); ctx.fill(); ctx.restore(); });
     var mo = S.moth;
