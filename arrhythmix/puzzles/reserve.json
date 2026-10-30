@@ -4863,92 +4863,6 @@
  },
  {
   "difficulty": "Genius",
-  "vignette": "A 67-year-old woman with diabetes has ongoing chest pain. Troponin is rising.",
-  "ecg": {
-   "layout": "12",
-   "rhythm": {
-    "type": "sinus",
-    "rate": 86
-   },
-   "tweaks": {
-    "I": {
-     "st": -0.1,
-     "t": 0.12
-    },
-    "II": {
-     "st": 0.05,
-     "t": 0.22
-    },
-    "V1": {
-     "st": 0.14,
-     "t": 0.12
-    },
-    "V4": {
-     "st": -0.14,
-     "t": 0.3
-    },
-    "V5": {
-     "st": -0.18,
-     "t": 0.28
-    },
-    "V6": {
-     "st": -0.15,
-     "t": 0.22
-    }
-   }
-  },
-  "highlight": {
-   "boxes": [
-    {
-     "leads": [
-      "III"
-     ],
-     "label": "ST up",
-     "tone": 2
-    },
-    {
-     "leads": [
-      "V1"
-     ],
-     "label": "ST up",
-     "tone": 2
-    },
-    {
-     "leads": [
-      "V4",
-      "V5",
-      "V6"
-     ],
-     "label": "ST down, T up",
-     "tone": 1
-    }
-   ],
-   "marks": []
-  },
-  "answer": "Aslanger pattern (inferior MI with multivessel disease)",
-  "options": [
-   "Aslanger pattern (inferior MI with multivessel disease)",
-   "Inferior STEMI",
-   "ST elevation in aVR with widespread ST depression",
-   "Posterior STEMI",
-   "Normal sinus rhythm",
-   "Acute pericarditis"
-  ],
-  "hints": [
-   "ST elevation in only one inferior lead.",
-   "Add the ST elevation in V1 and the lateral ST depression with upright T waves."
-  ],
-  "explanation": "ST elevation in lead III only (not II), ST depression in V4–V6 with positive T waves, and ST elevation in V1 greater than in V2: the Aslanger pattern, an inferior occlusion MI masked by coexisting multivessel disease.",
-  "features": [
-   "ST elevation in III but not II",
-   "ST depression V4–V6 with upright T",
-   "ST elevation in V1 greater than V2"
-  ],
-  "pearl": "Not every occlusion MI meets STEMI criteria. Patterns like Aslanger, de Winter and posterior MI need urgent cath-lab discussion. Treat the patient, not just the millimetres.",
-  "seed": "x-aslanger"
- },
- {
-  "difficulty": "Genius",
   "vignette": "A 71-year-old man has breathlessness, bilateral carpal tunnel syndrome and a thick-walled heart on echo.",
   "ecg": {
    "layout": "12",
@@ -5073,5 +4987,52 @@
   ],
   "pearl": "A right ventricular lead produces an LBBB-like paced QRS. Two spikes per beat (atrial then ventricular) means dual-chamber pacing.",
   "seed": "x-vvi"
+ },
+ {
+  "difficulty": "Genius",
+  "seed": "2026-11-08",
+  "vignette": "A 54-year-old woman had 20 minutes of chest pain while gardening yesterday. She is pain-free in the emergency department now.",
+  "ecg": {
+   "layout": "12",
+   "preset": "wellens",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "deep symmetric T"
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Wellens syndrome",
+  "options": [
+   "Wellens syndrome",
+   "Anterior STEMI",
+   "Posterior MI",
+   "Hypokalaemia",
+   "Left ventricular hypertrophy with strain",
+   "Acute pericarditis"
+  ],
+  "hints": [
+   "She's pain-free. Look at the T waves in V2 and V3.",
+   "Deep, symmetrical T inversion, preserved R waves, almost no ST elevation."
+  ],
+  "explanation": "Deep, symmetrical T-wave inversion in V2–V4 (type B Wellens; type A is biphasic), with preserved R waves, no Q waves and minimal ST change, recorded after chest pain has settled. This pattern points to a critical proximal left anterior descending (LAD) stenosis and a high risk of a large anterior MI in the coming days.",
+  "features": [
+   "Deep symmetrical T inversion in V2–V4",
+   "Preserved R waves, no Q waves",
+   "Isoelectric or minimally raised ST",
+   "Recorded in a pain-free period"
+  ],
+  "pearl": "Wellens is a pain-free ECG. If the pain returns, the T waves can 'pseudo-normalise', so a normal-looking repeat ECG can be falsely reassuring."
  }
 ]

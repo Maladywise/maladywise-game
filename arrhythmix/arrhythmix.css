@@ -123,3 +123,7 @@ html[data-theme="dark"] #arx{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 @media (max-width:420px){#arx .choices{gap:6px} #arx .choice{min-height:44px;padding:8px 10px;font-size:13px} #arx .scale{margin-left:0}}
 /* phones: fit the case, ECG and choices on one screen */
 @media (max-width:600px){#arx .wrap{gap:8px} #arx .msg{min-height:0}}
+
+/* Einstein tier */
+#arx .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B)!important;color:#FFE9A8!important;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
+#arx.einstein{box-shadow:inset 0 3px 0 #E8C66A}

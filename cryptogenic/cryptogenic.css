@@ -80,3 +80,7 @@ html[data-theme="dark"] #cry .cell.cur b{color:#fff}
   #cry .kb{display:none}
   #cry .grid{width:min(100%,560px,calc(100vh - 260px))}
 }
+
+/* Einstein tier */
+#cry .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B)!important;color:#FFE9A8!important;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
+#cry.einstein{box-shadow:inset 0 3px 0 #E8C66A}

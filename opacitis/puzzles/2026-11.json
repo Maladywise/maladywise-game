@@ -226,9 +226,9 @@
  {
   "date": "2026-11-07",
   "number": 14,
-  "difficulty": "Hard",
+  "difficulty": "Einstein",
   "title": "Coughing for months",
-  "context": "A 45-year-old has had a productive cough, night sweats and weight loss for three months.",
+  "context": "A 45-year-old with a cough.",
   "question": "What's the diagnosis?",
   "img": {
    "source": "CDC Public Health Image Library",
@@ -242,14 +242,14 @@
   "answer": "Cavitating pulmonary tuberculosis",
   "wrong": [
    "Lung abscess",
-   "Lung cancer",
-   "Lobar pneumonia",
-   "Aspergilloma",
-   "Sarcoidosis"
+   "Cavitating squamous cell carcinoma",
+   "Granulomatosis with polyangiitis",
+   "Chronic pulmonary aspergillosis",
+   "Non-tuberculous mycobacterial infection"
   ],
   "hints": [
-   "The changes are worst at the top of the lungs.",
-   "There's a hole (cavity) with a thick wall at the right apex."
+   "Where the disease sits matters more than the hole itself: look at both upper zones.",
+   "Bilateral upper-zone shadowing plus a thick-walled apical cavity: think of the oldest infectious killer."
   ],
   "why": "Patchy shadowing in both upper zones with a thick-walled cavity at the right apex: classic post-primary (reactivation) TB.",
   "assoc": [

@@ -2267,9 +2267,9 @@
  {
   "date": "2026-11-20",
   "number": 26,
-  "difficulty": "Hard",
+  "difficulty": "Einstein",
   "patient": "Ben, 29, male",
-  "story": "Noticed a painless, hard lump in his left testicle a month ago, with a mild dragging ache. No fever, no urinary symptoms.",
+  "story": "Six weeks of dull lower back ache and a dry cough. His chest X-ray shows several round shadows in both lungs. He hasn't mentioned anything else.",
   "theme": "Movember",
   "panels": [
    {
@@ -2328,24 +2328,24 @@
   "answer": "Non-seminomatous germ cell tumour",
   "wrong": [
    "Pure seminoma",
-   "Epididymo-orchitis",
-   "Testicular lymphoma",
    "Hepatocellular carcinoma",
-   "Hydrocele"
+   "Pure choriocarcinoma",
+   "Diffuse large B-cell lymphoma",
+   "Sarcoidosis"
   ],
   "hints": [
    [
-    "Normal CRP and white cells with a painless lump: infection is unlikely. Which markers are up?",
+    "Normal liver tests. So where is that AFP coming from?",
     [
-     "CRP",
      "AFP",
-     "β-hCG"
+     "ALT"
     ]
    ],
    [
-    "Seminomas can make a little hCG. Do they make AFP?",
+    "Seminomas can make a little hCG, but never AFP. Pure choriocarcinoma makes huge hCG, not AFP. Now examine the scrotum.",
     [
-     "AFP"
+     "AFP",
+     "β-hCG"
     ]
    ]
   ],
@@ -2354,7 +2354,7 @@
    "β-hCG",
    "CRP"
   ],
-  "why": "A painless, hard testicular lump in a young man is cancer until proven otherwise. AFP, β-hCG and LDH are all raised. Pure seminomas don't make AFP, so a raised AFP means non-seminomatous elements (such as yolk sac tumour), even if the tumour looks like seminoma under the microscope. Normal CRP and white cells argue against infection, and normal liver tests make a liver source of AFP unlikely.",
+  "why": "Back ache (retroperitoneal nodes) and round lung shadows ('cannonball' metastases) in a young man, with raised AFP, β-hCG and LDH: metastatic testicular cancer until proven otherwise. Pure seminomas don't make AFP and pure choriocarcinoma makes very high hCG without AFP, so a raised AFP means non-seminomatous elements such as yolk sac tumour. Normal liver tests make a liver source of AFP unlikely, and the normal CRP argues against infection.",
   "pearl": "Testicular cancer is the commonest cancer in young men, and one of the most curable. The tumour markers help with diagnosis, staging and follow-up. Know what's normal for you, and get any new lump checked."
  },
  {

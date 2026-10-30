@@ -3,7 +3,7 @@
    quizzes.json: [{week: "YYYY-MM-DD" (a Sunday), number, questions:[{c, q, a, e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", PASS = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", PASS = 10;
   var root = document.getElementById("gdr");
   // Normie mode: "week that was" quiz from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
@@ -174,6 +174,7 @@
     week = w; loadWeek(); replay = false; Z = all.filter(function (x) { return x.week === w; })[0] || null;
     if (!Z) { $("eyebrow").textContent = "Grand Rounds"; $("card").hidden = false; if ($("result")) $("result").hidden = true; $("card").innerHTML = NORMIE && window.MW_noNormie ? MW_noNormie("quiz this week") : '<p class="note">This week\u2019s quiz is still being written. Back soon.</p>'; $("prog").innerHTML = ""; renderArchive(); return; }
     $("eyebrow").textContent = (isLive() ? "Grand Rounds" : "Archive") + " \u00b7 #" + Z.number + " \u00b7 " + nice(Z.week);
+    (function () { var bd = root.querySelector(".head .badge"), ein = Z.difficulty === "Einstein"; if (bd) { bd.className = "badge" + (ein ? " Einstein" : ""); bd.innerHTML = ein ? '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>' + "Einstein" : "Sundays"; } root.classList.toggle("einstein", ein); })();
     render(); renderArchive();
   }
   function renderArchive() {
