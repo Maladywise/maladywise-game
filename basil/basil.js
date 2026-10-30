@@ -63,7 +63,7 @@
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
     G = DAILY ? seeded("basil-" + sydDay()) : Math.random;
-    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: grnd(10, 16), boss: null, bosses: 0, nightK: 0, zoom: null, zoomT: grnd(3, 6), rb: null, rbT: grnd(40, 70), rain: [], nipT: 0, nips: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: grnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: grnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: grnd(10, 16), boss: null, bosses: 0, nightK: 0, zoom: null, zoomT: grnd(6, 14), rb: null, rbT: grnd(40, 70), rain: [], nipT: 0, nips: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: grnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: grnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: grnd(14, 20), tom: null, tomT: grnd(70, 110), dog: null, dogT: grnd(45, 75), laser: null, laserT: grnd(30, 55), bestCombo: 0, ctitle: null, hairballs: 0, raids: 0 };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -418,7 +418,7 @@
     var nt = isNight() ? 1 : 0; S.nightK += (nt - S.nightK) * Math.min(1, dt * 0.8);
     if (nt && !S.wasNight) toast(pick(["The sun’s down. Zoomies o’clock.", "Night shift. Watch for zoomies.", "Moon’s up. The cats are feral now."])); S.wasNight = nt;
     var zm = S.zoom;
-    if (!zm) { if (nt) { S.zoomT -= dt; if (S.zoomT <= 0 && !(S.ann && S.ann.t > 0)) { var zl = Math.random() < 0.5; S.zoom = { who: S.bonus > 0 ? "b" : "c", x: zl ? -60 : W + 60, dir: zl ? 1 : -1, y: rnd(150, 225), sp: rnd(440, 560), hit: 0 }; S.zoomT = grnd(3, 6); } } }
+    if (!zm) { if (nt) { S.zoomT -= dt; if (S.zoomT <= 0 && !(S.ann && S.ann.t > 0)) { var zl = Math.random() < 0.5; S.zoom = { who: S.bonus > 0 ? "b" : "c", x: zl ? -60 : W + 60, dir: zl ? 1 : -1, y: rnd(150, 225), sp: rnd(440, 560), hit: 0 }; S.zoomT = G() < 0.2 ? grnd(1.2, 2.5) : grnd(8, 22); } } }
     else if (zm.hit) { zm.hit -= dt; zm.y += 260 * dt; if (zm.hit <= 0) S.zoom = null; }
     else { zm.x += zm.dir * zm.sp * dt; if (zm.x < -80 || zm.x > W + 80) S.zoom = null; }
     var rbf = S.rb;
