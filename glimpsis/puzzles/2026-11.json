@@ -477,9 +477,9 @@
  {
   "date": "2026-11-14",
   "number": 21,
-  "difficulty": "Hard",
+  "difficulty": "Einstein",
   "title": "Side of the tongue",
-  "context": "A 38-year-old with weight loss and recurrent infections. The white patches don't hurt.",
+  "context": "A 38-year-old's dentist noticed these painless patches at a routine check-up.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-11-14.jpg",
@@ -492,15 +492,15 @@
   },
   "answer": "Oral hairy leukoplakia",
   "wrong": [
-   "Oral candidiasis",
-   "Lichen planus",
-   "Geographic tongue",
-   "Squamous cell carcinoma",
-   "Frictional keratosis"
+   "Pseudomembranous candidiasis",
+   "Chronic hyperplastic candidiasis",
+   "Oral lichen planus",
+   "Frictional keratosis",
+   "Proliferative verrucous leukoplakia"
   ],
   "hints": [
-   "The patches don't scrape off.",
-   "It's caused by Epstein-Barr virus and points to immunosuppression."
+   "Look at where it sits and its texture: vertical ridges on the side of the tongue.",
+   "The cause is the same virus behind glandular fever, and it only gets away with this when immunity is down."
   ],
   "why": "White, corrugated patches along the side of the tongue that won't wipe away.",
   "assoc": [

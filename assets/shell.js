@@ -258,7 +258,7 @@
     var sc0 = f(st); if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
-    if (g && st.win && !g.weekly && !g.dailyLine) { var t = sydToday(); if (diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
+    if (g && st.win) { var t = sydToday(); if ((!g.weekly && !g.dailyLine || ((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] && (((g.nmode ? MW_EINSTEIN_N : MW_EINSTEIN)[g.id]) || []).indexOf(t) >= 0) && diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
   }
   var BADGES = { 3: ["Intern", "\ud83e\ude7a"], 7: ["Registrar", "\ud83e\udd47"], 14: ["Fellow", "\ud83c\udf93"], 30: ["Consultant", "\ud83c\udfc6"], 100: ["Professor", "\ud83d\udc51"] };
   if (NORMIE) BADGES = { 3: ["Regular", "\u2b50"], 7: ["Enthusiast", "\ud83e\udd47"], 14: ["Expert", "\ud83c\udf93"], 30: ["Legend", "\ud83c\udfc6"], 100: ["Grandmaster", "\ud83d\udc51"] };
@@ -893,7 +893,7 @@
     }
     if (medOnly || q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
-    var einToday = !g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein";
+    var einToday = (!g.weekly && !g.dailyLine || (((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] || []).indexOf(today) >= 0) && diffFor(g, today, dow) === "Einstein";
     sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +

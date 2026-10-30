@@ -9,7 +9,7 @@
    Highlight bands appear after a wrong pick; their labels (which can give the answer away) only once finished. "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Arrhythmix (Normie)" : "Arrhythmix", TRIES = 3, PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "puzzles.json";
   var U = NORMIE ? "chart" : "ECG"; // unit word in messages
   var root = document.getElementById("arx");
@@ -210,7 +210,7 @@
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
       stats.dist[win ? st.picks.length - 1 : 3]++; stats.last = today; put(SKEY, stats);
     }
-    say(win ? pick(SASS.win[st.picks.length - 1]) : "It was " + P.answer + ". " + pick(SASS.lose));
+    if (P.difficulty === "Einstein") say(win ? "\u269b\ufe0f Einstein solved. A once-in-a-blue-moon ECG, and you read it. Screenshot this." : "It was " + P.answer + ". Even Einstein would have asked for an old ECG to compare. Respect for taking on the rare one."); else say(win ? pick(SASS.win[st.picks.length - 1]) : "It was " + P.answer + ". " + pick(SASS.lose));
   }
   function renderResult() {
     var r = $("result");
@@ -262,7 +262,7 @@
       $("play").classList.remove("empty"); var nn = root.querySelector(".arx-nn"); if (nn) nn.remove();
       OPTS = shuffle(P.options, dayNum(P.date) * 97 + 13);
       $("eyebrow").textContent = (isLive() ? "Arrhythmix" : "Archive") + " · #" + P.number + " · " + nice(date);
-      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.textContent = P.difficulty;
+      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>' : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       $("vig").textContent = P.vignette;
       drawEcg();
       if (!isLive()) say(st.done ? "Archive " + U + ". Already read." : "Archive " + U + ". Doesn’t count towards your streak.");

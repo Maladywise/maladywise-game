@@ -86,3 +86,7 @@ html[data-theme="dark"] #gdr .next{background:#7E68C8}
 #gdr .review .sm{font-size:12px}
 #gdr .prog{gap:3px} #gdr .prog i{width:11px}
 html[data-theme="dark"] #gdr .next{background:#7E8FE0;color:#16121F}
+
+/* Einstein tier */
+#gdr .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B)!important;color:#FFE9A8!important;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
+#gdr.einstein{box-shadow:inset 0 3px 0 #E8C66A}
