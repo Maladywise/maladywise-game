@@ -632,126 +632,127 @@
  {
   "week": "2026-11-22",
   "number": 6,
+  "difficulty": "Einstein",
   "questions": [
    {
-    "c": "History of medicine",
-    "q": "Who was the first woman to qualify as a doctor in Britain, in 1865?",
-    "a": "Elizabeth Garrett Anderson",
-    "e": "Elizabeth Blackwell was registered earlier, with a US degree."
+    "c": "Public health",
+    "q": "Which Welsh GP coined the \u2018inverse care law\u2019 in The Lancet in 1971?",
+    "a": "Julian Tudor Hart",
+    "e": "Good care varies inversely with need. Accept Tudor Hart or Tudor-Hart. Fifty-odd years on, the law remains annoyingly unrepealed."
    },
    {
-    "c": "Anatomy",
-    "q": "Which flap of cartilage covers the windpipe when you swallow?",
-    "a": "The epiglottis",
-    "e": "The epiglottis flips down over the larynx when you swallow, so food goes into the oesophagus rather than the airway."
+    "c": "Landmark trials",
+    "q": "The 4S trial (Lancet, 1994) cut all-cause mortality by about 30% using which statin?",
+    "a": "Simvastatin",
+    "e": "The Scandinavian Simvastatin Survival Study, 4,444 patients. If you said atorvastatin, you\u2019re a few years early."
    },
    {
-    "c": "Pharmacology",
-    "q": "Drugs ending in \u2018-olol\u2019 belong to which class?",
-    "a": "Beta blockers",
-    "e": "Drugs ending in \u2018-olol\u2019, such as metoprolol and propranolol, are beta blockers. They slow the heart and lower blood pressure."
-   },
-   {
-    "c": "Eponyms",
-    "q": "Which neurologist gave his name to the \u2018march\u2019 of a focal seizure?",
-    "a": "John Hughlings Jackson",
-    "e": "The Jacksonian march."
-   },
-   {
-    "c": "Microbiology",
-    "q": "Which disease does Mycobacterium leprae cause?",
-    "a": "Leprosy",
-    "e": "Also called Hansen\u2019s disease."
-   },
-   {
-    "c": "On screen",
-    "q": "Which actor starred in both \u2018ER\u2019 and \u2018The Pitt\u2019?",
-    "a": "Noah Wyle",
-    "e": "Dr John Carter, then Dr Robby."
-   },
-   {
-    "c": "Etymology",
-    "q": "\u2018Glaucoma\u2019 comes from the Greek for which colour?",
-    "a": "Bluish grey",
-    "e": "Glaukos. Accept grey-blue or blue-green."
-   },
-   {
-    "c": "Physiology",
-    "q": "Which organ makes bile?",
-    "a": "The liver",
-    "e": "The gallbladder only stores it."
-   },
-   {
-    "c": "Famous patients",
-    "q": "An iron rod passed through which lobe of Phineas Gage\u2019s brain in 1848?",
-    "a": "The frontal lobe",
-    "e": "He survived. His personality didn\u2019t."
-   },
-   {
-    "c": "Language",
-    "q": "What is the anatomical name for the Adam\u2019s apple?",
-    "a": "The laryngeal prominence",
-    "e": "The Adam\u2019s apple is the laryngeal prominence of the thyroid cartilage. It\u2019s larger after male puberty."
-   },
-   {
-    "c": "Nobel Prizes",
-    "q": "Who won the 2015 Nobel Prize for discovering artemisinin for malaria?",
-    "a": "Tu Youyou",
-    "e": "She found it in ancient Chinese texts."
-   },
-   {
-    "c": "Pathology",
-    "q": "What is the most common cause of dementia?",
-    "a": "Alzheimer\u2019s disease",
-    "e": "Alzheimer\u2019s disease causes about 60 to 70% of dementia worldwide, according to WHO."
-   },
-   {
-    "c": "By the numbers",
-    "q": "What is the usual lower limit of a normal adult platelet count?",
-    "a": "150 \u00d7 10\u2079 per litre",
-    "e": "Accept 150."
-   },
-   {
-    "c": "Toxicology",
-    "q": "Which drug reverses a benzodiazepine overdose?",
-    "a": "Flumazenil",
-    "e": "Use with care. It can trigger seizures."
+    "c": "Nursing",
+    "q": "Which pressure-injury risk scale scores sensory perception, moisture, activity, mobility, nutrition, and friction and shear?",
+    "a": "The Braden scale",
+    "e": "Bergstrom and Braden, 1987. Lower score, higher risk. Norton and Waterlow are lovely, but wrong."
    },
    {
     "c": "History of medicine",
-    "q": "Which pandemic killed perhaps a third of Europe in the 1340s?",
-    "a": "The Black Death",
-    "e": "Yersinia pestis."
+    "q": "Which child psychiatrist, a Palyku woman, is recognised as the first Indigenous Australian to become a doctor?",
+    "a": "Helen Milroy",
+    "e": "UWA, 1983. Later a professor and the AFL\u2019s first Indigenous commissioner. Accept Milroy."
    },
    {
-    "c": "Anatomy",
-    "q": "What is the largest muscle in the body?",
-    "a": "Gluteus maximus",
-    "e": "The gluteus maximus is the largest muscle by size. It keeps you upright and powers climbing stairs."
+    "c": "Landmark trials",
+    "q": "ISIS-2 (1988) showed a mortality benefit in suspected MI from aspirin and which other drug?",
+    "a": "Streptokinase",
+    "e": "Together they cut vascular deaths by about 40%. Accept SK. Alteplase wasn\u2019t invited."
    },
    {
     "c": "Pharmacology",
-    "q": "Which antibiotic, discovered in 1943, was the first effective treatment for tuberculosis?",
-    "a": "Streptomycin",
-    "e": "From soil bacteria. Nobel Prize in 1952."
+    "q": "Levetiracetam works by binding which synaptic vesicle protein?",
+    "a": "SV2A",
+    "e": "Synaptic vesicle glycoprotein 2A. Accept SV2A or synaptic vesicle protein 2A. \u2018Sodium channels\u2019 is the answer to a different drug."
    },
    {
-    "c": "On screen",
-    "q": "Who played the teenage title doctor in \u2018Doogie Howser, M.D.\u2019?",
-    "a": "Neil Patrick Harris",
-    "e": "Neil Patrick Harris played teenage doctor Doogie Howser from 1989 to 1993."
+    "c": "Allied health",
+    "q": "Which roll manoeuvre, nicknamed the \u2018barbecue roll\u2019, treats horizontal-canal BPPV?",
+    "a": "The Lempert manoeuvre",
+    "e": "The patient turns in 90\u00b0 steps, like a sausage. Accept Lempert or roll manoeuvre. Epley is for the posterior canal, sorry."
    },
    {
     "c": "Eponyms",
-    "q": "Murphy\u2019s sign points to inflammation of which organ?",
-    "a": "The gallbladder",
-    "e": "Murphy\u2019s sign is pain that stops breathing in when pressing under the right ribs. It points to an inflamed gallbladder (cholecystitis)."
+    "q": "Which sign says abdominal tenderness that persists or worsens when the patient tenses the abdominal wall points to a wall source?",
+    "a": "Carnett\u2019s sign",
+    "e": "Tensed muscles shield the viscera, so pain that persists comes from the wall itself, e.g. nerve entrapment. Accept Carnett. The surgeon can put the knife down."
+   },
+   {
+    "c": "Lab trivia",
+    "q": "In Light\u2019s criteria, pleural fluid LDH above what fraction of the upper limit of normal serum LDH suggests an exudate?",
+    "a": "Two-thirds",
+    "e": "The other two: protein ratio over 0.5 and LDH ratio over 0.6. Accept 2/3 or 0.67. A half is the protein one."
+   },
+   {
+    "c": "Women\u2019s health",
+    "q": "Which syndrome is congenital absence of the uterus and upper vagina with normal ovaries and karyotype 46,XX?",
+    "a": "MRKH syndrome",
+    "e": "Mayer-Rokitansky-K\u00fcster-Hauser. Accept MRKH or M\u00fcllerian agenesis. Presents as primary amenorrhoea with normal breasts and hair."
+   },
+   {
+    "c": "Pharmacology",
+    "q": "Dantrolene treats malignant hyperthermia by blocking which receptor?",
+    "a": "The ryanodine receptor (RyR1)",
+    "e": "It stops calcium leaking from the sarcoplasmic reticulum. Accept RyR1 or ryanodine. Not the nicotinic receptor, that\u2019s the suxamethonium talking."
+   },
+   {
+    "c": "Indigenous health",
+    "q": "Which retrovirus has the world\u2019s highest recorded prevalence among Aboriginal adults in central Australia?",
+    "a": "HTLV-1",
+    "e": "Human T-lymphotropic virus type 1, a strain called subtype C. Linked to bronchiectasis and adult T-cell leukaemia. Accept HTLV-1 or human T-cell lymphotropic virus."
+   },
+   {
+    "c": "ECG",
+    "q": "Upsloping ST depression with tall, symmetrical precordial T waves suggests proximal LAD occlusion. Whose T waves?",
+    "a": "de Winter",
+    "e": "De Winter T waves, described in 2008. A STEMI equivalent. Wellens\u2019 is the other LAD eponym, but its T waves go the wrong way."
+   },
+   {
+    "c": "Global health",
+    "q": "Konzo, a sudden permanent spastic paraparesis in sub-Saharan Africa, is linked to eating poorly processed what?",
+    "a": "Bitter cassava",
+    "e": "Cyanogens, mainly linamarin. Worst in the DRC during drought, war and famine. Accept cassava or manioc."
+   },
+   {
+    "c": "Disability",
+    "q": "Which autosomal recessive syndrome pairs profound congenital deafness with a long QT interval?",
+    "a": "Jervell and Lange-Nielsen syndrome",
+    "e": "Usually KCNQ1 or KCNE1. Accept JLN. Romano-Ward is the autosomal dominant one with normal hearing."
+   },
+   {
+    "c": "Neurology",
+    "q": "Which syndrome is painful ophthalmoplegia from granulomatous inflammation of the cavernous sinus, melting with steroids?",
+    "a": "Tolosa-Hunt syndrome",
+    "e": "A diagnosis of exclusion. Accept Tolosa-Hunt. If you said Gradenigo, wrong bit of the skull."
+   },
+   {
+    "c": "Rare disease",
+    "q": "Fibrodysplasia ossificans progressiva, which turns muscle to bone, is caused by mutations in which gene?",
+    "a": "ACVR1",
+    "e": "Usually R206H, in the BMP type I receptor also called ALK2. Accept ACVR1 or ALK2. Never biopsy the lumps: injury triggers new bone."
+   },
+   {
+    "c": "Anatomy",
+    "q": "Which muscle is the only abductor of the vocal folds?",
+    "a": "Posterior cricoarytenoid",
+    "e": "\u2018Posterior cricoarytenoid pulls them apart.\u2019 Lose both and the airway shuts. Accept PCA. Lateral cricoarytenoid does the exact opposite."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which French paediatric cardiologist spotted the extra chromosome in Down syndrome, though a colleague got the credit?",
+    "a": "Marthe Gautier",
+    "e": "Her cultures, 1958. J\u00e9r\u00f4me Lejeune was first author in 1959, and Gautier\u2019s name was misspelt. Accept Gautier."
    },
    {
     "c": "Brain-melter",
-    "q": "What is the fear of doctors called?",
-    "a": "Iatrophobia",
-    "e": "Not to be confused with a reasonable fear of waiting rooms."
+    "q": "Which eponymous nerve, a branch of the vagus, makes some patients cough when you clean their ear canal?",
+    "a": "Arnold\u2019s nerve",
+    "e": "The auricular branch of the vagus, hence Arnold\u2019s ear-cough reflex. Accept Arnold or auricular branch of the vagus. The ear syringe is innocent."
    }
   ]
  }
