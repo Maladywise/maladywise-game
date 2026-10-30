@@ -144,6 +144,7 @@
     comboUp();
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.frenzyT > 0 ? 2 : 1) * U();
     addPts(mult); S.eatenFood++; float(LANES[i], BENCH - 60, "+" + fmt(mult) + " " + pick(NOMQ), "#B07A0C");
+    if (Math.random() < (it.kind === "steak" || it.kind === "drumstick" || it.kind === "catfood" ? 0.6 : 0.3)) { S.happyT = 1; float(180 + rnd(-30, 30), BENCH - 170, pick(["\u2665", "\u2665 purr", "\u2665 yum"]), "#E05A8A"); }
   }
   // health: Basil and Clover each have a bar (0-100). Only the cat on the bench takes damage; the resting one recovers.
   function hurt(who, amt) {
@@ -364,6 +365,7 @@
     S.t += dt; S.blink -= dt; if (S.blink < -3.2) S.blink = 0.15;
     if (S.sinkT > 0) S.sinkT -= dt;
     if (S.ouchT > 0) S.ouchT -= dt;
+    if (S.happyT > 0) S.happyT -= dt;
     if (S.wet > 0) S.wet = Math.max(0, S.wet - dt * 0.015);
     if (S.frenzyT > 0) { S.frenzyT -= dt; if (S.frenzyT <= 0) { S.frenzyT = 0; toast("Frenzy over. Back to regular evil."); } }
     S.mothT -= dt;
@@ -531,6 +533,13 @@
         for (var sw = 0; sw < 3; sw++) { ctx.strokeStyle = "hsl(" + ((S.t * 220 + sw * 120 + k * 60) % 360) + ",85%,55%)"; ctx.beginPath(); ctx.arc(x, y, 3 + sw * 3, S.t * 8 + sw, S.t * 8 + sw + 4.2); ctx.stroke(); }
         circ(x, y, 2.4, "#1B1430"); return;
       }
+      if (mode === "happy") {
+        ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3.4; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(x, y + 4, 8, 1.15 * Math.PI, 1.85 * Math.PI); ctx.stroke();
+        ctx.globalAlpha = 0.55; ell(x + (k ? 8 : -8), y + 15, 7, 4, "#F08AA8"); ctx.globalAlpha = 1;
+        if (k === 1) { ctx.beginPath(); ctx.moveTo(110, 115); ctx.quadraticCurveTo(120, 124, 130, 115); ctx.lineTo(130, 120); ctx.quadraticCurveTo(120, 128, 110, 120); ctx.closePath(); ctx.fillStyle = "#F1CDAE"; ctx.fill();
+          ctx.strokeStyle = "#3A3036"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(113, 114); ctx.quadraticCurveTo(116.5, 119, 120, 114); ctx.quadraticCurveTo(123.5, 119, 127, 114); ctx.stroke(); }
+        return;
+      }
       if (mode === "ouch") { ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3.4; ctx.beginPath(); ctx.moveTo(x - 8, y - 6); ctx.lineTo(x + 8, y + 6); ctx.moveTo(x + 8, y - 6); ctx.lineTo(x - 8, y + 6); ctx.stroke(); return; }
       if (mode === "shut") { ctx.strokeStyle = "#7A6E62"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y - 2, 8, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke(); return; }
       if (mode === "wide") { ell(x, y, 12, 11, "#FFFFFF"); ell(x, y, 10, 10, iris); ell(x, y + 1, 6.5, 8, "#1B1430"); circ(x - 3, y - 3, 2.2, "#fff"); return; }
@@ -558,7 +567,7 @@
     var hy = -(fy - 1) * 120;
     ctx.save(); ctx.translate(0, hy); spr(CL ? "clover-head" : "basil-head");
     if (!CL && S.wet > 0.3) { ctx.globalAlpha = Math.min(0.6, S.wet - 0.2); ctx.strokeStyle = "#9FB7C9"; ctx.lineWidth = 3; [[96, 60, 74], [144, 58, 72], [120, 54, 66]].forEach(function (l) { ctx.beginPath(); ctx.moveTo(l[0], l[1]); ctx.lineTo(l[0], l[2]); ctx.stroke(); }); ctx.globalAlpha = 1; }
-    var mode = S.ouchT > 0 ? "ouch" : S.frenzyT > 0 || S.dog ? "wide" : (S.blink > 0 || sink) ? "shut" : "open";
+    var mode = S.ouchT > 0 ? "ouch" : CL && S.happyT > 0 ? "happy" : S.frenzyT > 0 || S.dog ? "wide" : (S.blink > 0 || sink) ? "shut" : "open";
     catEyes(CL ? "c" : "b", mode, false);
     if (S.scratchT > 0) { ctx.strokeStyle = "rgba(194,85,58," + Math.min(1, S.scratchT * 2) + ")"; ctx.lineWidth = 5; ctx.lineCap = "round"; for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(86 + k * 16, 56); ctx.lineTo(108 + k * 16, 104); ctx.stroke(); } }
     ctx.restore();
