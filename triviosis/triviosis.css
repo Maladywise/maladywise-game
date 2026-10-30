@@ -68,3 +68,6 @@ html[data-theme="dark"] #trv .next{background:#7E68C8}
 #trv .nav{height:48px;padding:0 16px;border-radius:10px;border:1.5px solid var(--line,#D9D1E3);background:transparent;color:inherit;font:600 14px var(--body);cursor:pointer}
 #trv .cd{font-style:normal;font-size:12px;opacity:.75;font-weight:500;min-width:2.4em;padding:2px 6px;border-radius:999px;background:rgba(255,255,255,.18)}
 #trv .rv{font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:#FFF3C4;color:#8A5A00;padding:2px 8px;border-radius:999px;margin-left:6px}
+
+#trv .prog .clk{font-weight:700;color:var(--ink,inherit)}
+#trv .result .time{margin:-4px 0 8px;font-size:14px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
