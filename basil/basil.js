@@ -563,11 +563,16 @@
   var FINE = !!(window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches);
   function keycap(x, y, t, w) { w = w || 18; rr(x - w / 2, y - 9, w, 18, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "rgba(43,94,128,.35)"; ctx.lineWidth = 1; ctx.stroke(); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(t, x, y + 3.5); }
   function doorKey(x, k) {
-    var verb = S.boss ? "hit" : S.bonus > 0 ? "eat" : "kick";
-    if (FINE) { keycap(x - 13, H - 44, ["\u2190", "\u2193", "\u2192"][k]); keycap(x + 13, H - 44, ["A", "S", "D"][k]); }
-    ctx.fillStyle = "#2B5E80"; ctx.font = "700 12px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? verb : "tap to " + verb, x, H - (FINE ? 21 : 28));
-    var tip = k === 1 ? (S.boss ? "hit the glowing spot" : S.bonus > 0 ? "skip the bad food" : "leave spiky ones") : k === 0 ? (FINE ? "\u2191 / W: moths" : "tap moths") : (FINE ? "P: pause" : "");
-    if (tip) { ctx.fillStyle = "#4B3D6E"; ctx.font = "600 10px Poppins, sans-serif"; ctx.fillText(tip, x, H - 7); }
+    var verb = S.boss ? "hit" : S.bonus > 0 ? "eat" : "kick", side = ["left", "middle", "right"][k];
+    ctx.textAlign = "center";
+    function lab(t, y) { ctx.fillStyle = "#2B5E80"; ctx.font = "700 12px Poppins, sans-serif"; ctx.fillText(t, x, y); }
+    if (FINE) {
+      if (k === 1) { keycap(x - 13, H - 74, "\u2191"); keycap(x + 13, H - 74, "W"); lab(verb + " top", H - 52); keycap(x - 13, H - 32, "\u2193"); keycap(x + 13, H - 32, "S"); lab(verb + " middle", H - 10); }
+      else { keycap(x - 13, H - 52, ["\u2190", "", "\u2192"][k]); keycap(x + 13, H - 52, ["A", "", "D"][k]); lab(verb + " " + side, H - 30); }
+    } else {
+      if (k === 1) { lab("tap moths", H - 52); }
+      lab("tap to " + verb, H - (k === 1 ? 24 : 34));
+    }
   }
   function draw() {
     ctx.save();
