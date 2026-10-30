@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", PASS = 6;
   var root = document.getElementById("trv");
   // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
@@ -55,6 +55,13 @@
   var SLOTS = null;
   function slots() { var n = Z.questions.length, a = [], r = seeded(dayNum(Z.date) * 97 + 11); for (var k = 0; k < n; k++) a.push(k % 4); for (k = n - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; } return a; }
   function options(i) { var x = Z.questions[i], o = x.w.slice(), r = seeded(dayNum(Z.date) * 31 + i * 7 + 3); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(r() * (k + 1)); var t = o[k]; o[k] = o[j]; o[j] = t; } if (!SLOTS || SLOTS.w !== Z.date) { SLOTS = slots(); SLOTS.w = Z.date; } o.splice(Math.min(SLOTS[i], o.length), 0, x.a); return o; }
+  // ---------- clock: counts thinking time only (from a question appearing until it's answered; paused while the tab is hidden) ----------
+  var qT0 = null;
+  function elapsed() { return (st.ms || 0) + (qT0 ? Date.now() - qT0 : 0); }
+  function clock(ms) { var t = Math.round(ms / 1000); return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
+  function bank() { if (qT0) { st.ms = (st.ms || 0) + (Date.now() - qT0); qT0 = null; put(KEY, st); } }
+  setInterval(function () { if (!qT0 && Z && !st.done && !st.pending && !document.hidden && root.offsetParent && !document.querySelector(".modal:not([hidden]), dialog[open]")) qT0 = Date.now(); var c = document.getElementById("trv-clock"); if (c && Z && !st.done) c.textContent = clock(elapsed()); }, 500);
+  document.addEventListener("visibilitychange", function () { if (!Z || st.done || st.pending) return; if (document.hidden) bank(); });
   function score() { return st.ans.filter(function (a, i) { return a === Z.questions[i].a; }).length; }
 
   // ---------- render ----------
@@ -76,7 +83,7 @@
     $("prog").innerHTML = Z.questions.map(function (x, i) {
       var c = i < n ? (st.ans[i] === x.a ? "ok" : "no") : i === n && !st.done && !st.pending ? "cur" : "";
       return '<i class="' + c + '"></i>';
-    }).join("") + '<span>' + (st.done ? score() + "/" + total : "Q" + Math.min(st.pending ? n : n + 1, total) + " of " + total) + "</span>";
+    }).join("") + '<span>' + (st.done ? score() + "/" + total : "Q" + Math.min(st.pending ? n : n + 1, total) + " of " + total + ' \u00b7 <b class="clk" id="trv-clock">' + clock(elapsed()) + "</b>") + "</span>";
     var card = $("card");
     if (!st.done) {
       var ci = st.pending ? n - 1 : n, at = view !== null && view < ci ? view : ci;
@@ -85,6 +92,7 @@
       $("aprev").onclick = prevQ; $("anext").onclick = nextQ;
     }
     if (st.done) { card.hidden = true; renderResult(); return; }
+    if (!st.pending && !qT0 && !document.hidden && root.offsetParent) qT0 = Date.now();
     card.hidden = false; $("result").hidden = true;
     var i = st.pending ? n - 1 : n, x = Z.questions[i], opts = options(i), chosen = st.pending ? st.ans[i] : null;
     if (view !== null && view < i) {
@@ -116,10 +124,10 @@
   function renderResult() {
     var r = $("result"), s = score();
     var sq = Z.questions.map(function (x, i) { return st.ans[i] === x.a ? "\ud83d\udfe9" : "\ud83d\udfe5"; }).join("");
-    var share = "Triviosis" + (NORMIE ? " (Normie)" : "") + " #" + Z.number + (isLive() ? "" : " (archive)") + " \u00b7 " + Z.theme + "\n" + sq + " " + s + "/10\nmaladywise.com";
+    var share = "Triviosis" + (NORMIE ? " (Normie)" : "") + " #" + Z.number + (isLive() ? "" : " (archive)") + " \u00b7 " + Z.theme + "\n" + sq + " " + s + "/10" + (st.ms ? " \u00b7 \u23f1 " + clock(st.ms) : "") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
-    r.innerHTML = '<p class="score">' + s + '<span>/10</span></p><p class="verdict">' + esc(SASS.end(s)) + "</p>" +
+    r.innerHTML = '<p class="score">' + s + '<span>/10</span></p>' + (st.ms ? '<p class="time">\u23f1 ' + clock(st.ms) + (stats.fast ? ' \u00b7 Your fastest 10/10: ' + clock(stats.fast) : "") + "</p>" : "") + '<p class="verdict">' + esc(SASS.end(s)) + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Pass %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<pre id="trv-share">' + share + '</pre><button class="btn solid" type="button" id="trv-copy">Copy result</button>' +
       '<details class="review"><summary>Review answers</summary><ol>' + Z.questions.map(function (x, i) {
@@ -151,13 +159,14 @@
       var consecutive = stats.last && dayNum(week) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
       stats.streak = consecutive ? stats.streak + 1 : 1; stats.best = Math.max(stats.best, stats.streak);
+      if (s === 10 && st.ms && (!stats.fast || st.ms < stats.fast)) stats.fast = st.ms;
       stats.dist[s === 10 ? 0 : s >= 8 ? 1 : s >= 6 ? 2 : s >= 4 ? 3 : 4]++; stats.last = week; put(SKEY, stats);
     }
   }
   $("card").addEventListener("click", function (e) {
     var b = e.target.closest(".opt"); if (!b || b.disabled || st.done || st.pending) return;
     var i = st.ans.length, x = Z.questions[i], o = b.getAttribute("data-o");
-    st.ans.push(o); st.pending = true; put(KEY, st);
+    bank(); st.ans.push(o); st.pending = true; put(KEY, st);
     render(o === x.a ? pick(SASS.right) : pick(SASS.wrong));
   });
 
