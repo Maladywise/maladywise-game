@@ -23,7 +23,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/shell.css?v=124">
-<link rel="stylesheet" href="basil.css?v=14">
+<link rel="stylesheet" href="basil.css?v=15">
 <script src="../assets/games.js?v=88"></script>
 <script src="../assets/shell.js?v=135"></script>
 </head>
@@ -83,11 +83,25 @@
         <li><b>Night falls</b> every few rounds (rounds 4–5, 9–10…): the room dims and the moon comes out. At night the resting cat gets <b>zoomies</b> and tears across the room. Tap them (or press ↑ / W) for <b>4 kicks’ worth</b>.</li>
         <li><b>Catnip</b> (rare): kick or eat it for 8 seconds of chaos. Anything safe that lands gets dealt with automatically.</li>
         <li><b>Rainbow butterfly</b> (very rare): it drifts across the top. Catch it (tap, ↑ or W) and <b>20 treats rain down</b> across the bench, each worth a kick.</li>
-        <li>Pause with the button, P or Esc. Your best score stays in this browser only.</li>
+      </ul>
+      <h2>Visitors and streaks</h2>
+      <ul>
+        <li><b>Stray tom</b> (turf war): a scruffy neighbour cat glares through the window. Tap him 3 times (or ↑ / W) in time for <b>6 kicks’ worth</b>. Too slow and he raids the bench: everything gone, no points, -15% health.</li>
+        <li><b>Dog at the window:</b> 5 seconds of panic. Things land twice as fast.</li>
+        <li><b>Laser dot:</b> tap it 3 times for <b>5 kicks’ worth</b>. While it’s on, nobody can focus and the timers run faster.</li>
+        <li><b>Hairball</b> (Clover’s rounds): she coughs one up. Tap it to bin it. Leave it and you lose 3 noms’ worth.</li>
+        <li><b>Streak titles:</b> 6 in a row is a Menace, then Agent of Chaos (11), Kitchen Overlord (16), Gravity’s Favourite (26) and Unstoppable Fluff (41).</li>
+      </ul>
+      <h2>Daily challenge and leaderboards</h2>
+      <ul>
+        <li><b>Daily challenge:</b> everyone gets the same items and surprises in the same order. New one at midnight, Sydney time.</li>
+        <li>Make the top 10 and you can post your name to the <b>world</b> or <b>today’s</b> leaderboard. Names are public, so keep it clean.</li>
+        <li>Pause with the button, P or Esc.</li>
       </ul>
     </details>
-    <details class="bk-rules bk-hsbox"><summary>High scores</summary><ol class="bk-hs" id="bk-hslist0"></ol><p class="bk-hsnote">Kept on this device only.</p></details>
+    <details class="bk-rules bk-hsbox"><summary>High scores</summary><div class="bk-tabs" data-for="bk-hslist0"><button type="button" data-b="world">World</button><button type="button" data-b="daily">Today</button><button type="button" data-b="me">This device</button></div><ol class="bk-hs" id="bk-hslist0"></ol><p class="bk-hsnote" id="bk-hslist0-note">Top 10 worldwide. Names are public.</p></details>
     <button class="big bk-play" type="button" id="bk-start">Let’s effing go!</button>
+    <button class="bk-daily" type="button" id="bk-daily">Daily challenge<small>Same surprises for everyone today</small></button>
     <p class="bk-best" id="bk-best"></p>
     <p class="bk-hush">Based on two real cats. The real ones are worse.</p>
   </section>
@@ -110,7 +124,8 @@
           <p class="bk-omsg" id="bk-omsg"></p>
           <div class="bk-ostats"><span class="bk-big"><small>Points</small><b id="bk-opts">0</b></span><span><small>Basil kicks</small><b id="bk-okick">0</b></span><span><small>Clover noms</small><b id="bk-onom">0</b></span></div>
           <p class="bk-obest" id="bk-obest"></p>
-          <form class="bk-hsform" id="bk-hsform" hidden><label for="bk-hsname">High score! Your name</label><div><input id="bk-hsname" maxlength="14" autocomplete="nickname" enterkeyhint="done" placeholder="Name"><button type="submit">Save</button></div></form>
+          <form class="bk-hsform" id="bk-hsform" hidden><label for="bk-hsname" id="bk-hslabel">High score! Your name</label><div><input id="bk-hsname" maxlength="14" autocomplete="nickname" enterkeyhint="done" placeholder="Name"><button type="submit">Save</button></div></form>
+          <div class="bk-tabs bk-tabs-o" data-for="bk-hstab"><button type="button" data-b="world">World</button><button type="button" data-b="daily">Today</button><button type="button" data-b="me">This device</button></div>
           <ol class="bk-hs bk-hs-o" id="bk-hstab"></ol>
           <div class="bk-obtns">
             <button class="big" type="button" id="bk-again">Play again</button>
@@ -126,6 +141,6 @@
   <footer class="site">A bonus game. No cats were harmed. Several mugs were.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="basil.js?v=36"></script>
+<script src="basil.js?v=38"></script>
 </body>
 </html>

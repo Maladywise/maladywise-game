@@ -106,3 +106,15 @@
 /* toast sits inside the stage, just under the round banner, clear of the cupboard keys */
 .bk-stage .bk-toast{position:absolute;top:13%;bottom:auto;font-size:13px;padding:8px 14px;max-width:84%;text-align:center;pointer-events:none}
 .bk-how{text-wrap:balance}.bk-how .nw{white-space:nowrap}
+
+/* daily challenge + leaderboard tabs */
+.bk-daily{display:flex;flex-direction:column;align-items:center;gap:1px;margin:10px auto 0!important;padding:8px 20px;border-radius:999px;border:2px solid #FFE08A;background:transparent;color:#FFE08A;font:700 15px var(--body);cursor:pointer}
+.bk-daily small{font:500 11.5px var(--body);color:#C9BFE6}
+.bk-daily:hover{background:rgba(255,224,138,.12)}
+.bk-tabs{display:flex;gap:4px;justify-content:center;margin:8px 0 2px}
+.bk-tabs button{font:700 12px var(--body);padding:5px 11px;border-radius:999px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:inherit;cursor:pointer}
+.bk-tabs button.on{background:#FFE08A;border-color:#FFE08A;color:#2E1F57}
+.bk-tabs-o{margin:2px 0 0}
+.bk-tabs-o button{border-color:#D8CFEA;color:#2E1F57}
+.bk-tabs-o button.on{background:#2E1F57;border-color:#2E1F57;color:#fff}
+.bk-hsbox .bk-hs li.me{outline:2px solid #FFE08A}
