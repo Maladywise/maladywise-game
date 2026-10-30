@@ -398,7 +398,7 @@
     if (S.bonus > 0) {
       var sb = S.sneak;
       if (!sb) { S.sneakT -= dt; if (S.sneakT <= 0) { var dr = Math.random() < 0.5 ? 1 : -1; S.sneak = { x: dr > 0 ? 60 : W - 60, dir: dr, phase: "creep" }; toast("Basil is sneaking up on Clover from the " + (dr > 0 ? "left" : "right") + ". Tap him!"); } }
-      else if (sb.phase === "creep") { sb.x += 26 * dt * sb.dir; var tgt = 180 - sb.dir * 46 * (1 + Math.min(1, S.eatenFood / 120)); if (sb.dir > 0 ? sb.x >= tgt : sb.x <= tgt) { sb.phase = "flee"; addPts(-Math.min(S.cPts, 10 * U())); S.slash.push({ x: tgt + 20 * sb.dir, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10 * sb.dir, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
+      else if (sb.phase === "creep") { sb.x += 26 * dt * sb.dir; var tgt = 180 - sb.dir * 46 * cloverFat(); if (sb.dir > 0 ? sb.x >= tgt : sb.x <= tgt) { sb.phase = "flee"; addPts(-Math.min(S.cPts, 10 * U())); S.slash.push({ x: tgt + 20 * sb.dir, y: BENCH - 40, l: 0.4 }); S.fx.push({ x: tgt + 10 * sb.dir, y: BENCH - 90, txt: "Swiped! -" + fmt(10 * U()), col: "#C2553A", l: 1.2 }); toast("Basil swiped Clover. Sibling justice. -" + fmt(10 * U()) + " points."); shake(); } }
       else { sb.x -= 160 * dt * sb.dir; if (sb.dir > 0 ? sb.x <= 52 : sb.x >= W - 52) { S.sneak = null; S.sneakT = rnd(8, 13); } }
     } else S.sneak = null;
     // Clover
@@ -460,11 +460,17 @@
   ["basil-body", "basil-head", "clover-body", "clover-head"].forEach(function (n) { var im = new Image(); im.src = SBASE + "sprites/" + n + ".svg?v=1"; SPR[n] = im; });
   function sprOK(n) { var im = SPR[n]; return im && im.complete && im.naturalWidth > 0; }
   function spr(n) { if (sprOK(n)) ctx.drawImage(SPR[n], 0, 0, 240, 260); }
+  function cloverFat() { return 1 + Math.min(1, Math.max(0, (S.bonuses || 1) - 1) * 0.1 + S.eatenFood / 240); }
   function catEyes(who, mode, cross) {
     // sprite coordinates (240 x 260 art)
     var E = who === "b" ? [[104, 88], [136, 88]] : [[103, 92], [137, 92]], iris = who === "b" ? "#A8B98E" : "#C9C653";
     E.forEach(function (e, k) {
       var x = e[0], y = e[1];
+      if (S && S.nipT > 0 && mode !== "shut" && mode !== "ouch") {
+        ell(x, y, 12, 12, "#FFFFFF"); ctx.lineWidth = 2.4; ctx.lineCap = "round";
+        for (var sw = 0; sw < 3; sw++) { ctx.strokeStyle = "hsl(" + ((S.t * 220 + sw * 120 + k * 60) % 360) + ",85%,55%)"; ctx.beginPath(); ctx.arc(x, y, 3 + sw * 3, S.t * 8 + sw, S.t * 8 + sw + 4.2); ctx.stroke(); }
+        circ(x, y, 2.4, "#1B1430"); return;
+      }
       if (mode === "ouch") { ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3.4; ctx.beginPath(); ctx.moveTo(x - 8, y - 6); ctx.lineTo(x + 8, y + 6); ctx.moveTo(x + 8, y - 6); ctx.lineTo(x - 8, y + 6); ctx.stroke(); return; }
       if (mode === "shut") { ctx.strokeStyle = "#7A6E62"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y - 2, 8, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke(); return; }
       if (mode === "wide") { ell(x, y, 12, 11, "#FFFFFF"); ell(x, y, 10, 10, iris); ell(x, y + 1, 6.5, 8, "#1B1430"); circ(x - 3, y - 3, 2.2, "#fff"); return; }
@@ -478,7 +484,7 @@
     var pw = S.paw, reach = pw ? Math.sin(Math.min(1, pw.t / 0.11) * Math.PI / 2) * (pw.t < 0.11 ? 1 : Math.max(0, 1 - (pw.t - 0.11) / 0.11)) : 0;
     ctx.save(); ctx.translate(x, BENCH + 4); ctx.rotate(S.lean); ctx.scale(K, K); ctx.translate(-120, -246);
     var fx = 1, fy = 1;
-    if (CL) { var fat = 1 + Math.min(1, S.eatenFood / 120); fx = fat; fy = 1 + (fat - 1) * 0.25; }
+    if (CL) { var fat = cloverFat(); fx = fat; fy = 1 + (fat - 1) * 0.25; }
     // body (Clover's stretches as she eats, up to twice as wide)
     ctx.save(); ctx.translate(120, 246); ctx.scale(fx, fy); ctx.translate(-120, -246); spr(CL ? "clover-body" : "basil-body");
     if (!CL) {
@@ -619,7 +625,7 @@
   if (location.hash === "#dev") window.__bk = function () { return S; };
   function draw() {
     ctx.save();
-    if (shakeT > 0) ctx.translate(rnd(-3, 3), rnd(-2, 2));
+    if (shakeT > 0 && !S.over) ctx.translate(rnd(-3, 3), rnd(-2, 2));
     scene(); if (S.boss) bossDraw(); else basil(); bars();
     for (var i = 0; i < 3; i++) {
       var it = S.lanes[i]; if (!it) continue;
@@ -715,6 +721,7 @@
   // ---------- flow ----------
   function nameFor(n, L) { L = L || NAMES; var nm = L[0][1]; L.forEach(function (x) { if (n >= x[0]) nm = x[1]; }); return nm; }
   function end() {
+    shakeT = 0;
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
     var cl = S.bonus > 0, bn = nameFor(S.bPts), cn = nameFor(S.cPts, CNAMES);
     $("bk-omasc").src = "/assets/mascots/" + (cl ? "clover.svg?v=1" : "basil.svg?v=2"); $("bk-omasc").alt = cl ? "Clover" : "Basil";
