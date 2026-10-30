@@ -56,7 +56,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: rnd(10, 16), lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
+    S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: rnd(10, 16), boss: null, bosses: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: rnd(7, 11), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: rnd(9, 14), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: rnd(14, 20) };
   }
   // Continuous: keeps speeding up forever, easing towards a limit (about 0.9s at 1 min, 0.6s at 3 min, 0.4s at 10 min).
@@ -81,6 +81,7 @@
   // ---------- input ----------
   function kick(i) {
     if (!running || paused || S.over) return;
+    if (S.boss) return bossHit(i);
     S.paw = { lane: i, t: 0 }; S.lean = (i - 1) * 0.12;
     var it = S.lanes[i];
     if (S.clover && S.clover.lane === i && S.clover.state === "sit" && !it) return swipeClover();
@@ -145,6 +146,82 @@
     toast(t.side > 0 ? pick(["Stolen from under Clover’s nose.", "Clover’s steak? Not any more.", "Daylight robbery. Delicious."]) : pick(["Nicked before Basil could kick it.", "Basil’s loss. Clover’s gain.", "Fastest paw in the kitchen."]));
     return true;
   }
+  // ---------- boss round: the vacuum (every 5th round) ----------
+  var SPOTS = ["CORD", "BUTTON", "DUST BAG"];
+  function startBoss() {
+    S.round++; S.bosses = (S.bosses || 0) + 1; S.bonus = 0; S.sneak = null; S.treat = null; S.clover = null;
+    var hpMax = 16 + 6 * S.bosses;
+    S.boss = { hp: hpMax, hpMax: hpMax, t: ROUND, x: 180, vx: 26, spot: null, spotT: 1.4, hits: 0, lunge: 0, hitT: 0, dent: 0, done: null, doneT: 0 };
+    for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } S.lanes[j] = null; }
+    S.ann = { t: 1.8, a: "ROUND " + S.round, b: "BOSS!" }; shake();
+    toast(pick(["The vacuum is here. Both cats, positions.", "VAC-3000 has entered the kitchen. War.", "It sucks. Literally. Hit the glowing spots."])); track("basil/boss");
+  }
+  function bossSpot() { var b = S.boss; b.spot = { lane: Math.floor(Math.random() * 3), t: Math.max(0.75, 1.5 - (1 - b.hp / b.hpMax) * 0.6), name: pick(SPOTS) }; }
+  function bossHit(i) {
+    var b = S.boss; if (!b || b.done) return;
+    S.paw = { lane: i, t: 0 };
+    if (b.spot && b.spot.lane === i) {
+      var dmg = (i === 2 ? 1 : 2) * (S.frenzyT > 0 ? 2 : 1); // Basil (left, middle) hits hard; Clover (right) is quick: her spots come back faster
+      b.hp = Math.max(0, b.hp - dmg); b.hits++; b.hitT = 0.25; b.dent = Math.min(1, b.dent + 0.08);
+      addPts(2 * U() * dmg); float(LANES[i], BENCH - 120, (dmg > 1 ? "WHACK! +" : "Swipe! +") + fmt(2 * U() * dmg), i === 2 ? "#B5308A" : "#2B5E80");
+      for (var q = 0; q < 6; q++) S.shards.push({ x: b.x + rnd(-40, 40), y: BENCH - 40, vx: rnd(-160, 160), vy: -rnd(120, 260), r: 0, vr: rnd(-8, 8), l: 0.8, s: rnd(3, 6), c: pick(["#4A4F5C", "#6B7180", "#B8A88A"]) });
+      b.spot = null; b.spotT = i === 2 ? rnd(0.15, 0.35) : rnd(0.35, 0.7);
+      if (b.hp <= 0) bossWin();
+    } else if (b.spot) {
+      float(LANES[i], BENCH - 110, "Wrong spot", "#6B5A93"); b.lunge = 0.35;
+      if (hurt(i === 2 ? "c" : "b", 3)) return;
+    }
+  }
+  function bossWin() {
+    var b = S.boss; b.done = "win"; b.doneT = 2.2; var prize = 25 * U(); addPts(prize);
+    for (var q = 0; q < 26; q++) S.shards.push({ x: b.x + rnd(-60, 60), y: BENCH - 40, vx: rnd(-260, 260), vy: -rnd(200, 420), r: 0, vr: rnd(-10, 10), l: 1.4, s: rnd(3, 8), c: pick(["#4A4F5C", "#6B7180", "#B8A88A", "#9C8B6E"]) });
+    S.ann = { t: 1.8, a: "VACUUM DOWN", b: "+" + fmt(prize) }; shake(); heal("b", 20); heal("c", 20);
+    toast(pick(["Vacuum destroyed. The cats will be insufferable now.", "VAC-3000: deceased. Dust everywhere. Worth it.", "Boss down. Somebody call the warranty line."])); track("basil/boss-win");
+  }
+  function bossEnd() {
+    S.boss = null; S.treatT = rnd(8, 14); S.spawnT = 1.6;
+    if (S.round % 2 === 1) { S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.cloverT = rnd(12, 16); S.sneakT = rnd(6, 9); toast("Clover’s turn. She’s been waiting."); }
+    else { S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; toast("Back to the bench. Basil missed you."); }
+  }
+  function bossStep(dt) {
+    var b = S.boss;
+    if (b.done) { b.doneT -= dt; if (b.doneT <= 0) bossEnd(); return; }
+    if (S.ann && S.ann.t > 0) return;
+    b.t -= dt; if (b.hitT > 0) b.hitT -= dt; if (b.lunge > 0) b.lunge -= dt;
+    b.x += b.vx * dt * (1 + (1 - b.hp / b.hpMax)); if (b.x > 230 && b.vx > 0 || b.x < 130 && b.vx < 0) b.vx *= -1;
+    if (!b.spot) { b.spotT -= dt; if (b.spotT <= 0) bossSpot(); }
+    else { b.spot.t -= dt; if (b.spot.t <= 0) { var ln = b.spot.lane; b.spot = null; b.spotT = rnd(0.3, 0.6); b.lunge = 0.4; float(LANES[ln], BENCH - 110, "Slurp!", "#C2553A"); shake(); if (hurt(ln === 2 ? "c" : "b", 6)) return; } }
+    if (b.t <= 0) { b.done = "lose"; b.doneT = 1.6; S.ann = { t: 1.6, a: "TIME!", b: "IT WON" }; toast(pick(["The vacuum wins this round. It ate the bonus.", "VAC-3000 survives. For now.", "Retreat! Regroup! Snacks!"])); }
+  }
+  function vacuum(x, dent, hit, lunge) {
+    var y = BENCH - 30 + (hit > 0 ? Math.sin(S.t * 60) * 2 : 0); ctx.save(); ctx.translate(x + (lunge > 0 ? Math.sin(lunge * 30) * 6 : 0), y);
+    ell(0, 30, 72, 9, "rgba(0,0,0,.15)"); rr(-66, -26, 132, 56, 26); ctx.fillStyle = hit > 0 ? "#6B5560" : "#4A4F5C"; ctx.fill();
+    rr(-60, -22, 120, 18, 9); ctx.fillStyle = "#6B7180"; ctx.fill();
+    ell(-24, 4, 14, 12, "#FFFFFF"); ell(24, 4, 14, 12, "#FFFFFF"); circ(-20, 7, 6, "#C2553A"); circ(20, 7, 6, "#C2553A");
+    ctx.strokeStyle = "#1B1430"; ctx.lineWidth = 5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-40, -10); ctx.lineTo(-10, -4); ctx.moveTo(40, -10); ctx.lineTo(10, -4); ctx.stroke();
+    ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(-16, 22); ctx.quadraticCurveTo(0, 13, 16, 22); ctx.stroke();
+    circ(-44, 30, 8, "#2B2340"); circ(44, 30, 8, "#2B2340"); rr(58, -12, 30, 9, 4); ctx.fillStyle = "#2B2340"; ctx.fill();
+    if (dent > 0.2) { ctx.strokeStyle = "#1B1430"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-54, -16); ctx.lineTo(-46, -10); ctx.lineTo(-50, -4); ctx.lineTo(-42, 0); ctx.stroke(); }
+    if (dent > 0.5) { ctx.beginPath(); ctx.moveTo(36, -18); ctx.lineTo(42, -10); ctx.lineTo(36, -6); ctx.stroke(); ctx.globalAlpha = 0.5; circ(-62, -30, 9, "#A89C8E"); circ(66, -36, 11, "#A89C8E"); ctx.globalAlpha = 1; }
+    ctx.restore();
+  }
+  function bossDraw() {
+    var b = S.boss; if (!b) return;
+    // cats: Basil on the left, Clover on the right, both on the bench
+    var K = 0.33, pw = S.paw;
+    ctx.save(); ctx.translate(46 + (pw && pw.lane < 2 ? 10 : 0), BENCH + 2); ctx.scale(K, K * 0.9); ctx.translate(-120, -246); spr("basil-body"); spr("basil-head"); catEyes("b", "open"); ctx.restore();
+    ctx.save(); ctx.translate(W - 46 - (pw && pw.lane === 2 ? 10 : 0), BENCH + 2); ctx.scale(-K, K * 0.9); ctx.translate(-120, -246); spr("clover-body"); spr("clover-head"); catEyes("c", "open", true); ctx.restore();
+    if (b.done !== "win" || b.doneT > 1.9) vacuum(b.x, b.dent, b.hitT, b.lunge);
+    // weak spot
+    if (b.spot && !b.done) {
+      var sx = b.x + (b.spot.lane - 1) * 50, sy = BENCH - 34, pul = 1 + Math.sin(S.t * 10) * 0.08;
+      ctx.save(); ctx.translate(sx, sy); ctx.scale(pul, pul); ctx.setLineDash([5, 4]); ctx.strokeStyle = "#F2C230"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(0, 0, 20, 0, 7); ctx.stroke(); ctx.setLineDash([]); circ(0, 0, 6, "#F2C230"); ctx.restore();
+      ctx.fillStyle = "#B07A0C"; ctx.font = "800 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(b.spot.name, sx, sy - 30);
+    }
+    // health bar
+    rr(70, 46, 220, 10, 5); ctx.fillStyle = "rgba(43,35,64,.15)"; ctx.fill(); rr(70, 46, 220 * b.hp / b.hpMax, 10, 5); ctx.fillStyle = "#C2553A"; ctx.fill();
+    ctx.fillStyle = "#2B2340"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("VAC-3000 \u00b7 " + b.hp + "/" + b.hpMax, 180, 70);
+  }
   function startBonus() {
     S.round++; S.bonus = ROUND; S.bonuses++; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "NOM!" }; S.spawnT = 1.6; S.clover = null; S.cloverT = rnd(12, 16); S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14);
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.lanes[j] = null; S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } }
@@ -194,6 +271,11 @@
       var r = cv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W, y = (e.clientY - r.top) / r.height * H;
       if (Math.hypot(x - S.moth.x, y - S.moth.y) < 42) { eatMoth(); return; }
     }
+    if (running && !paused && !S.over && S.boss && S.boss.spot) {
+      var r2 = cv.getBoundingClientRect(), x2 = (e.clientX - r2.left) / r2.width * W, y2 = (e.clientY - r2.top) / r2.height * H, b2 = S.boss;
+      if (Math.abs(x2 - (b2.x + (b2.spot.lane - 1) * 50)) < 32 && y2 > BENCH - 80 && y2 < BENCH + 10) { bossHit(b2.spot.lane); return; }
+      if (y2 < BENCH + 10) return; // taps elsewhere on the bench don't count as misses
+    }
     kick(laneAt(e));
   });
   document.addEventListener("keydown", function (e) {
@@ -225,8 +307,10 @@
     }
     S.shards = S.shards.filter(function (q) { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; q.r += q.vr * dt; q.l -= dt; return q.l > 0 && q.y < H + 20; });
     if (S.scratchT > 0) S.scratchT -= dt;
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); } }
-    else { S.roundT -= dt; if (S.roundT <= 0) startBonus(); }
+    if (S.boss) { bossStep(dt); if (S.ann && S.ann.t > 0) S.ann.t -= dt; if (shakeT > 0) shakeT -= dt; if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) S.paw = null; } }
+    else {
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); if (S.round % 5 === 0) { S.round--; startBoss(); } } }
+    else { S.roundT -= dt; if (S.roundT <= 0) { if ((S.round + 1) % 5 === 0) startBoss(); else startBonus(); } }
     if (S.ann && S.ann.t > 0) { S.ann.t -= dt; if (S.spawnT < 0.2) S.spawnT = 0.2; }
     if (shakeT > 0) shakeT -= dt;
     if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) { S.paw = null; } }
@@ -285,6 +369,7 @@
       if (c.state === "walk") { c.x += c.dir * 260 * dt; if ((c.dir > 0 && c.x >= LANES[c.lane]) || (c.dir < 0 && c.x <= LANES[c.lane])) { c.x = LANES[c.lane]; c.state = "sit"; } }
       else if (c.state === "sit") { c.sit -= dt; if (c.sit <= 0) { c.state = "leave"; if (c.cross) cloverSteals(c); } }
       else { c.x += (c.hit ? (c.x < 180 ? -1 : 1) * 520 : c.dir * 260) * dt; if (c.x < -80 || c.x > W + 80) S.clover = null; }
+    }
     }
     S.fly = S.fly.filter(function (f) { f.vy += 900 * dt; f.x += f.vx * dt; f.y += f.vy * dt; f.r += f.vr * dt; return f.y < H + 60; });
     S.gulp = S.gulp.filter(function (g) { g.t += dt; return g.t < 0.32; });
@@ -378,7 +463,7 @@
       ctx.globalAlpha = Math.min(0.55, S.wet); ell(180, BENCH + 2, 46 * Math.min(1, S.wet + 0.3), 5, "#8FC3E6"); ctx.globalAlpha = 1;
       S.dripT = (S.dripT || 0) - 1 / 60; if (S.dripT <= 0 && !paused) { S.drops.push({ x: 180 + rnd(-30, 30), y: BENCH - rnd(30, 70), vx: rnd(-10, 10), vy: rnd(0, 30), l: 0.8 }); S.dripT = 0.5 / (0.2 + S.wet * 2); }
     }
-    if (CL) { if (S.sneak) sneaker(); else sulk(); } else cushion();
+    if (S.boss) {} else if (CL) { if (S.sneak) sneaker(); else sulk(); } else cushion();
     if (sink) { ctx.fillStyle = "rgba(120,190,230,.35)"; ctx.fillRect(0, BENCH - 30, W, 8); }
   }
   function sneaker() {
@@ -478,16 +563,16 @@
   var FINE = !!(window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches);
   function keycap(x, y, t, w) { w = w || 18; rr(x - w / 2, y - 9, w, 18, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "rgba(43,94,128,.35)"; ctx.lineWidth = 1; ctx.stroke(); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(t, x, y + 3.5); }
   function doorKey(x, k) {
-    var verb = S.bonus > 0 ? "eat" : "kick";
+    var verb = S.boss ? "hit" : S.bonus > 0 ? "eat" : "kick";
     if (FINE) { keycap(x - 13, H - 44, ["\u2190", "\u2193", "\u2192"][k]); keycap(x + 13, H - 44, ["A", "S", "D"][k]); }
     ctx.fillStyle = "#2B5E80"; ctx.font = "700 12px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(FINE ? verb : "tap to " + verb, x, H - (FINE ? 21 : 28));
-    var tip = k === 1 ? (S.bonus > 0 ? "skip the bad food" : "leave spiky ones") : k === 0 ? (FINE ? "\u2191 / W: moths" : "tap moths") : (FINE ? "P: pause" : "");
+    var tip = k === 1 ? (S.boss ? "hit the glowing spot" : S.bonus > 0 ? "skip the bad food" : "leave spiky ones") : k === 0 ? (FINE ? "\u2191 / W: moths" : "tap moths") : (FINE ? "P: pause" : "");
     if (tip) { ctx.fillStyle = "#4B3D6E"; ctx.font = "600 10px Poppins, sans-serif"; ctx.fillText(tip, x, H - 7); }
   }
   function draw() {
     ctx.save();
     if (shakeT > 0) ctx.translate(rnd(-3, 3), rnd(-2, 2));
-    scene(); basil(); bars();
+    scene(); if (S.boss) bossDraw(); else basil(); bars();
     for (var i = 0; i < 3; i++) {
       var it = S.lanes[i]; if (!it) continue;
       var wob = it.landed && (it.life < 1 || it.hit > 0) ? Math.sin(S.t * 30 + it.wob) * (it.hit > 0 ? 0.16 : 0.08) : 0;
@@ -533,7 +618,8 @@
     S.slash.forEach(function (k) { ctx.globalAlpha = Math.min(1, k.l * 4); ctx.strokeStyle = "#B07A0C"; ctx.lineWidth = 3; ctx.lineCap = "round"; for (var j = -1; j <= 1; j++) { ctx.beginPath(); ctx.moveTo(k.x - 26, k.y - 22 + j * 9); ctx.quadraticCurveTo(k.x, k.y - 34 + j * 9, k.x + 26, k.y - 22 + j * 9 - 6); ctx.stroke(); } ctx.globalAlpha = 1; });
     S.drops.forEach(function (d) { ctx.globalAlpha = Math.max(0, d.l); circ(d.x, d.y, 3, "#5AA9DC"); ctx.globalAlpha = 1; });
     S.fx.forEach(function (f) { ctx.globalAlpha = Math.max(0, f.l); ctx.fillStyle = f.col; ctx.font = "700 15px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(f.txt, f.x, f.y); ctx.globalAlpha = 1; });
-    if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " · CLOVER · " + Math.ceil(S.bonus) + "s", 180, 30); }
+    if (S.boss) { rr(74, 12, 212, 26, 13); ctx.fillStyle = "#7A1F2B"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " \u00b7 BOSS \u00b7 " + Math.max(0, Math.ceil(S.boss.t)) + "s", 180, 30); }
+    else if (S.bonus > 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#B07A0C"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " · CLOVER · " + Math.ceil(S.bonus) + "s", 180, 30); }
     else if (S.frenzyT <= 0 && S.sinkT <= 0) { rr(84, 12, 192, 26, 13); ctx.fillStyle = "#2B5E80"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("ROUND " + S.round + " · BASIL · " + Math.ceil(S.roundT) + "s", 180, 30); }
     else if (S.frenzyT > 0) { rr(104, 12, 152, 26, 13); ctx.fillStyle = "#B5308A"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "700 13px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("FRENZY x2 · " + Math.ceil(S.frenzyT) + "s", 180, 30); }
     else if (S.sinkT > 0) { ctx.fillStyle = "#2B5E80"; ctx.font = "700 14px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("SINK TIME x2", 180, 28); }
@@ -594,6 +680,7 @@
   function start() {
     reset(); $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
+    if (/[?&]boss\b/.test(location.search)) { S.round = 4; startBoss(); } // practice the boss: /basil/?boss
     var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
