@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", MAXM = 5;
   // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Linkase (Normie)" : "Linkase";
   var root = document.getElementById("lnk");
