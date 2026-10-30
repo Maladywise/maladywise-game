@@ -1,0 +1,99 @@
+{
+ "_about": "Adam's hard Wordemic bank. Tier 1 = Einstein first, then Genius Sundays. Tier 2 = Genius (or Hard). Tier 3 = Hard. Remove a word once it's used as an answer.",
+ "tiers": {
+  "1": [
+   {
+    "word": "XYLOL",
+    "definition": "Xylene. Solvent used to clear tissue in histopathology."
+   },
+   {
+    "word": "PSORA",
+    "definition": "Archaic term for itchy skin disease, applied to scabies and psoriasis."
+   },
+   {
+    "word": "PYXIS",
+    "definition": "Small lidded box used to hold medicines and ointments in ancient Greece."
+   },
+   {
+    "word": "MYRRH",
+    "definition": "Aromatic resin used since antiquity as an antiseptic and wound dressing."
+   },
+   {
+    "word": "COXAE",
+    "definition": "Plural of coxa: the hips (as in coxa vara and coxa valga)."
+   },
+   {
+    "word": "JUGAL",
+    "definition": "Relating to the cheekbone (zygomatic bone)."
+   }
+  ],
+  "2": [
+   {
+    "word": "PSOAS",
+    "definition": "Major hip flexor running from the lumbar spine to the femur. Psoas sign: appendicitis clue."
+   },
+   {
+    "word": "XERIC",
+    "definition": "Abnormally dry, especially skin."
+   },
+   {
+    "word": "NAEVI",
+    "definition": "Plural of naevus: moles and other benign skin marks."
+   },
+   {
+    "word": "OXIME",
+    "definition": "Chemical class that includes pralidoxime, an antidote for organophosphate poisoning."
+   },
+   {
+    "word": "HYPHA",
+    "definition": "Thread-like filament that makes up the body of a mould."
+   },
+   {
+    "word": "CHYLE",
+    "definition": "Milky, fat-rich lymph from the gut. Leaks cause chylothorax."
+   },
+   {
+    "word": "RUGAE",
+    "definition": "Folds in the lining of the stomach, vagina or hard palate."
+   },
+   {
+    "word": "PLICA",
+    "definition": "Fold of tissue, e.g. a knee plica that can cause pain."
+   }
+  ],
+  "3": [
+   {
+    "word": "FOVEA",
+    "definition": "Central pit of the retina, responsible for the sharpest vision."
+   },
+   {
+    "word": "GALEA",
+    "definition": "Tough fibrous sheet over the skull under the scalp (galea aponeurotica)."
+   },
+   {
+    "word": "VILLI",
+    "definition": "Finger-like projections lining the small intestine. Flattened in coeliac disease."
+   },
+   {
+    "word": "ILEUS",
+    "definition": "Loss of normal gut movement without a physical blockage."
+   },
+   {
+    "word": "FILUM",
+    "definition": "Thread-like structure, e.g. the filum terminale at the end of the spinal cord."
+   },
+   {
+    "word": "GUTTA",
+    "definition": "A drop. Guttate psoriasis has drop-shaped spots."
+   },
+   {
+    "word": "MYOMA",
+    "definition": "Benign muscle tumour, e.g. a uterine fibroid (leiomyoma)."
+   },
+   {
+    "word": "TORUS",
+    "definition": "Rounded bony bump, e.g. torus palatinus in the roof of the mouth."
+   }
+  ]
+ }
+}
