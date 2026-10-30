@@ -51,7 +51,7 @@
   function fmt(n) { return Math.round(n).toLocaleString("en-AU"); }
   var CNAMES = [[0, "Cute Clover"], [1000, "Wiggle Butt"], [3000, "The Whingapotamus"], [7500, "Chief Complaints Officer"], [15000, "Spicy Little Muffin"], [30000, "Miss Piggy"], [60000, "Clover Piggington"], [100000, "Queen Piggington"]];
   var NAMES = [[0, "Fluffy white rat"], [1000, "Basil Brown Pants"], [2500, "Furby with Fangs"], [5000, "Fat Basil"], [15000, "Fat white seal"], [40000, "Basil Bad Cat"], [100000, "Albino Satan"]];
-  var ITEMS = ["mug", "pen", "phone", "sock", "pills", "steth", "plant", "remote", "glass", "tube", "keys", "thermo"];
+  var ITEMS = ["mug", "pen", "phone", "sock", "pills", "plant", "remote", "glass", "tube", "keys", "thermo"];
 
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
@@ -147,6 +147,7 @@
     return true;
   }
   // ---------- boss round: the vacuum (every 5th round) ----------
+  var BOSS_ON = false; // vacuum boss parked: needs more work
   var SPOTS = ["CORD", "BUTTON", "DUST BAG"];
   function startBoss() {
     S.round++; S.bosses = (S.bosses || 0) + 1; S.bonus = 0; S.sneak = null; S.treat = null; S.clover = null;
@@ -309,8 +310,8 @@
     if (S.scratchT > 0) S.scratchT -= dt;
     if (S.boss) { bossStep(dt); if (S.ann && S.ann.t > 0) S.ann.t -= dt; if (shakeT > 0) shakeT -= dt; if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) S.paw = null; } }
     else {
-    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); if (S.round % 5 === 0) { S.round--; startBoss(); } } }
-    else { S.roundT -= dt; if (S.roundT <= 0) { if ((S.round + 1) % 5 === 0) startBoss(); else startBonus(); } }
+    if (S.bonus > 0) { S.bonus -= dt; if (S.bonus <= 0) { S.bonus = 0; S.sneak = null; S.sneakT = rnd(6, 9); S.treat = null; S.treatT = rnd(8, 14); for (var j2 = 0; j2 < 3; j2++) { var o2 = S.lanes[j2]; if (o2 && (FOOD.indexOf(o2.kind) >= 0 || isBad(o2.kind))) S.lanes[j2] = null; } S.round++; S.roundT = ROUND; S.ann = { t: 1.8, a: "ROUND " + S.round, b: "KICK!" }; S.spawnT = 1.6; toast("Basil’s back. He saw everything."); if (BOSS_ON && S.round % 5 === 0) { S.round--; startBoss(); } } }
+    else { S.roundT -= dt; if (S.roundT <= 0) { if (BOSS_ON && (S.round + 1) % 5 === 0) startBoss(); else startBonus(); } }
     if (S.ann && S.ann.t > 0) { S.ann.t -= dt; if (S.spawnT < 0.2) S.spawnT = 0.2; }
     if (shakeT > 0) shakeT -= dt;
     if (S.paw) { S.paw.t += dt; if (S.paw.t > 0.22) { S.paw = null; } }
@@ -358,7 +359,7 @@
       else { sb.x -= 160 * dt * sb.dir; if (sb.dir > 0 ? sb.x <= 52 : sb.x >= W - 52) { S.sneak = null; S.sneakT = rnd(8, 13); } }
     } else S.sneak = null;
     // Clover
-    S.cloverT -= dt;
+    S.cloverT -= dt; if (S.bonus > 0) S.clover = null;
     if (!S.clover && S.cloverT <= 0 && S.bonus <= 0) {
       var free = [0, 1, 2].filter(function (j) { return !S.lanes[j]; });
       if (free.length) { var ln = pick(free); S.clover = { lane: ln, x: ln < 1 ? -60 : W + 60, dir: ln < 1 ? 1 : -1, state: "walk", sit: rnd(1.6, 2.4), cross: S.cross }; if (ln === 1) { S.clover.x = -60; S.clover.dir = 1; } }
@@ -563,16 +564,9 @@
   var FINE = !!(window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches);
   function keycap(x, y, t, w) { w = w || 18; rr(x - w / 2, y - 9, w, 18, 4); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.strokeStyle = "rgba(43,94,128,.35)"; ctx.lineWidth = 1; ctx.stroke(); ctx.fillStyle = "#2B5E80"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(t, x, y + 3.5); }
   function doorKey(x, k) {
-    var verb = S.boss ? "hit" : S.bonus > 0 ? "eat" : "kick", side = ["left", "middle", "right"][k];
-    ctx.textAlign = "center";
-    function lab(t, y) { ctx.fillStyle = "#2B5E80"; ctx.font = "700 12px Poppins, sans-serif"; ctx.fillText(t, x, y); }
-    if (FINE) {
-      if (k === 1) { keycap(x - 13, H - 74, "\u2191"); keycap(x + 13, H - 74, "W"); lab(verb + " top", H - 52); keycap(x - 13, H - 32, "\u2193"); keycap(x + 13, H - 32, "S"); lab(verb + " middle", H - 10); }
-      else { keycap(x - 13, H - 52, ["\u2190", "", "\u2192"][k]); keycap(x + 13, H - 52, ["A", "", "D"][k]); lab(verb + " " + side, H - 30); }
-    } else {
-      if (k === 1) { lab("tap moths", H - 52); }
-      lab("tap to " + verb, H - (k === 1 ? 24 : 34));
-    }
+    if (!FINE) return; // phones and tablets: just tap
+    if (k === 1) { keycap(x - 13, H - 64, "\u2191"); keycap(x + 13, H - 64, "W"); keycap(x - 13, H - 30, "\u2193"); keycap(x + 13, H - 30, "S"); }
+    else { keycap(x - 13, H - 46, ["\u2190", "", "\u2192"][k]); keycap(x + 13, H - 46, ["A", "", "D"][k]); }
   }
   function draw() {
     ctx.save();
@@ -685,7 +679,6 @@
   function start() {
     reset(); $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
-    if (/[?&]boss\b/.test(location.search)) { S.round = 4; startBoss(); } // practice the boss: /basil/?boss
     var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
