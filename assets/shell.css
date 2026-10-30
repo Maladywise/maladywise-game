@@ -633,3 +633,5 @@ p,li,h1,h2,h3,.gtitle p{text-wrap:pretty}
 @keyframes tapPulse2{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.cb-tap{animation:none}}
 .cb-bub,.cb-cap{text-wrap:balance}
+/* phones: How to play boxes fit without scrolling */
+@media (max-width:600px){.scrim{padding:10px}.modal{max-height:94svh;padding:18px 18px 20px;gap:10px}.modal h2{font-size:22px;padding-right:40px}.modal ol,.modal ul{gap:5px;line-height:1.42}}

@@ -5,7 +5,7 @@
    Medical only: no Normie version yet. Check with glimpsis/check.py. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", TRIES = 3, NAME = "Glimpsis";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3, NAME = "Glimpsis";
   var root = document.getElementById("glm");
   if (!document.querySelector("link[data-glm]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "glimpsis.css?v=" + BUILD; l.setAttribute("data-glm", ""); document.head.appendChild(l);

@@ -9,7 +9,7 @@
    Highlight bands appear after a wrong pick; their labels (which can give the answer away) only once finished. "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Arrhythmix (Normie)" : "Arrhythmix", TRIES = 3, PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "puzzles.json";
   var U = NORMIE ? "chart" : "ECG"; // unit word in messages
   var root = document.getElementById("arx");

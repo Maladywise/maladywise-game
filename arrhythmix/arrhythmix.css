@@ -120,4 +120,6 @@ html[data-theme="dark"] #arx{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #arx .arow{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:500 14px var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
 #arx .arow.on{border-color:var(--accent)}
 #arx .arow .badge{font-size:10px;padding:2px 8px}
-@media (max-width:420px){#arx .choices{grid-template-columns:1fr} #arx .choice{min-height:46px} #arx .scale{margin-left:0}}
+@media (max-width:420px){#arx .choices{gap:6px} #arx .choice{min-height:44px;padding:8px 10px;font-size:13px} #arx .scale{margin-left:0}}
+/* phones: fit the case, ECG and choices on one screen */
+@media (max-width:600px){#arx .wrap{gap:8px} #arx .msg{min-height:0}}

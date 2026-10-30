@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram) */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", R = 8, C = 6, PER_HINT = 3;
   // Normie mode: everyday themes from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Suturix (Normie)" : "Suturix";
   var root = document.getElementById("stx");

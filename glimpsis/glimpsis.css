@@ -118,3 +118,5 @@ html[data-motion="reduce"] #glm *{animation:none!important;scroll-behavior:auto!
 .glm-lb img{max-width:none;width:auto;max-height:none;min-width:100vw}
 @media (orientation:landscape){.glm-lb img{min-width:0;max-height:100vh;width:auto}}
 .glm-lb button{position:fixed;top:12px;right:12px;font:600 14px Poppins,system-ui,sans-serif;background:#fff;color:#111;border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+/* phones: picture plus answers on one screen */
+@media (max-width:600px){#glm .wrap{gap:8px} #glm .imgbox{min-height:160px} #glm .imgbox img{max-height:32svh} #glm .msg:empty,#glm .hints:empty{display:none} #glm .opts{grid-template-columns:1fr 1fr;gap:6px} #glm .opt{font-size:13.5px;padding:8px 10px;min-height:44px}}
