@@ -1,6 +1,6 @@
 /* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
-  nav: [["Games", "/"], ["Conditions", "/conditions/"], ["Medicines", "/medicines/"], ["Tools", "/tools/"], ["Deep dives", "/deep-dives/"], ["Zebra Mail", "/zebra-mail/"]],
+  nav: [["Games", "/"], ["Conditions", "/conditions/"], ["Medicines", "/medicines/"], ["Tools", "/tools/"], ["Deep dives", "/deep-dives/"], ["Specialists", "/specialists/"], ["Zebra Mail", "/zebra-mail/"]],
   sections: []
 };
 
