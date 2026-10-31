@@ -184,7 +184,7 @@ page = (head(title, desc, "/specialists/") + '<h1>Specialists</h1><p class="lede
 open("specialists/index.html", "w").write(page)
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
 print(len(L), "listed;", len(CATS), "specialties;", len(removed), "public-only removed")
-# Optional: private referral-fit scores for Adam's private doc (never written into the repo).
+# Optional: private referral-fit scores for the owner's private doc (never written into the repo).
 if os.environ.get("SP_SCORES"):
     out = []
     for p in L:
