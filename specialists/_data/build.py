@@ -138,6 +138,28 @@ for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
         import shutil; shutil.rmtree(d)
 PAGE_NOTE = {"Psychiatry (telehealth)": '<p class="callout"><b>Video appointments, Australia-wide.</b> Still needs a GP referral. Most telehealth bulk billing is for rural patients only, and Newcastle counts as metro, so expect private fees with a Medicare rebate. Check fees, wait times and whether the first visit can be by video before booking.</p>'}
+
+REL_SPEC = {"cardiology":["vascular-surgery","endocrinology","respiratory-and-sleep-medicine"],"dermatology":["plastic-and-reconstructive-surgery","immunology-and-allergy","rheumatology"],"endocrinology":["diabetes-educators","dietitians","cardiology"],"gastroenterology":["general-surgery","dietitians","immunology-and-allergy"],"general-surgery":["gastroenterology","vascular-surgery","plastic-and-reconstructive-surgery"],"rheumatology":["immunology-and-allergy","physiotherapy","pain-medicine"],"neurology":["neurosurgery","rehabilitation-medicine","pain-medicine"],"neurosurgery":["orthopaedics-spine","neurology","pain-medicine"],"psychiatry":["psychiatry-telehealth","psychology","mental-health-social-workers"],"psychiatry-telehealth":["psychiatry","psychology","perinatal-psychiatry"],"psychology":["psychiatry","mental-health-social-workers","psychiatry-telehealth"],"paediatrics":["developmental-paediatrics","child-and-adolescent-psychiatry","speech-pathology-children"],"developmental-paediatrics":["occupational-therapy-children","speech-pathology-children","child-and-adolescent-psychiatry"],"obstetrics-and-gynaecology":["perinatal-psychiatry","lactation-consultants","continence-services"],"urology":["continence-services","nephrology","general-surgery"],"nephrology":["urology","endocrinology","cardiology"],"respiratory-and-sleep-medicine":["ent-ear-nose-and-throat","cardiology","immunology-and-allergy"],"ent-ear-nose-and-throat":["audiology","immunology-and-allergy","respiratory-and-sleep-medicine"],"ophthalmology":["neurology","endocrinology","dermatology"],"physiotherapy":["exercise-physiology","podiatry","orthopaedics-general-and-trauma"],"podiatry":["orthopaedics-foot-and-ankle","physiotherapy","diabetes-educators"],"medical-oncology":["radiation-oncology","haematology","palliative-care"],"radiation-oncology":["medical-oncology","haematology","general-surgery"],"haematology":["medical-oncology","immunology-and-allergy","infectious-diseases"],"geriatric-medicine":["rehabilitation-medicine","neurology","occupational-therapy-adults"]}
+REL_FACT = {"cardiology":["blood-pressure","pots"],"dermatology":["acne","eczema","psoriasis","rosacea"],"endocrinology":["osteoporosis","b12"],"gastroenterology":["coeliac","reflux","ibs","gallstones"],"general-surgery":["gallstones","haemorrhoids","diverticulitis"],"rheumatology":["gout","knee-oa"],"neurology":["migraine","restless-legs"],"psychiatry":["adhd","ptsd","sleep"],"psychiatry-telehealth":["adhd","ptsd","sleep"],"psychology":["ptsd","sleep","adhd"],"developmental-paediatrics":["autism","adhd"],"child-and-adolescent-psychiatry":["adhd","autism"],"obstetrics-and-gynaecology":["endometriosis","period-pain","pms"],"urology":["uti"],"respiratory-and-sleep-medicine":["sleep-apnoea","sleep"],"ent-ear-nose-and-throat":["tinnitus","eustachian-tube","hay-fever"],"immunology-and-allergy":["hay-fever","hives","mcas"],"audiology":["tinnitus"],"orthopaedics-hip-and-knee":["knee-oa","hip-pain"],"orthopaedics-foot-and-ankle":["plantar-fasciitis","ankle-sprain"],"orthopaedics-shoulder-and-elbow":["tennis-elbow"],"orthopaedics-spine":["back-pain"],"physiotherapy":["back-pain","ankle-sprain","tennis-elbow"],"podiatry":["plantar-fasciitis","ankle-sprain"],"pain-medicine":["back-pain","migraine"],"dietitians":["coeliac","ibs","iron"],"geriatric-medicine":["dementia-prevention","osteoporosis"],"haematology":["iron","b12"],"sexual-health":["thrush","uti"]}
+GAMES = [("/wordemic/","Wordemic","Guess the medical word"),("/triviosis/","Triviosis","Ten quick questions"),("/dx/","Dxtective","Crack today's diagnosis"),("/glimpsis/","Glimpsis","Spot the sign"),("/linkase/","Linkase","Chain the medical words"),("/basil/","Basil + Clover","Kick things off the bench")]
+def _title(path):
+    try:
+        t = re.search(r"<h1[^>]*>(.*?)</h1>", open(path.strip("/") + "/index.html").read(), re.S).group(1)
+        return re.sub(r"<[^>]+>", "", t).strip()
+    except Exception: return None
+def keep_going(slug):
+    items = []
+    for s2 in REL_SPEC.get(slug, []):
+        if s2 in SLUGS: items.append((f"/specialists/{s2}/", "Specialists", SLUGS[s2]))
+    for f2 in REL_FACT.get(slug, [])[:3]:
+        t = _title(f2)
+        if t: items.append((f"/{f2}/", "Fact sheet", t))
+    h = sum(map(ord, slug))
+    for i in range(2):
+        u, n, d = GAMES[(h + i * 3) % len(GAMES)]; items.append((u, "Daily puzzle", f"{n}: {d}"))
+    items.append(("/specialists/", "Specialists", "All specialties A–Z"))
+    return '<section class="related sp-more"><h2>Keep exploring</h2><ul>' + "".join(f'<li><a href="{u}"><span>{k}</span>{e(t)}</a></li>' for u, k, t in items) + "</ul></section>"
+SLUGS = {slugify(l): l for l in CATS}
 urls = ["/specialists/"]
 for lab, ppl in CATS.items():
     slug = slugify(lab); url = f"/specialists/{slug}/"; urls.append(url)
@@ -147,7 +169,7 @@ for lab, ppl in CATS.items():
     body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
             '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-count" aria-live="polite"></p>'
-            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
+            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
 labs = sorted(CATS, key=lambda x: x.lower())
 def tiles(keys): return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/"><b>{e(k)}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
