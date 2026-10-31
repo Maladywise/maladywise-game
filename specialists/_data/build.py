@@ -6,7 +6,8 @@ DD = sys.argv[1] if len(sys.argv) > 1 else 'specialists/_data'
 CHECKED = "31 October 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|public", re.I)
 PRIV = re.compile(r"Private|GenesisCare|Hunter Eye Surgeons|rooms", re.I)
-NAMES = {"ent": "ENT", "obstetrics-gynaecology": "Obstetrics and gynaecology", "ortho-hand-upper-limb": "Orthopaedics (hand and upper limb)", "ortho-shoulder": "Orthopaedics (shoulder)", "ortho-hip-knee": "Orthopaedics (hip and knee)", "ortho-foot-ankle": "Orthopaedics (foot and ankle)", "ortho-spine": "Orthopaedics (spine)", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine"}
+NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "orthopaedics": "Orthopaedic surgery", "ortho-hand-upper-limb": "Orthopaedic surgery", "ortho-shoulder": "Orthopaedic surgery", "ortho-hip-knee": "Orthopaedic surgery", "ortho-foot-ankle": "Orthopaedic surgery", "ortho-spine": "Orthopaedic surgery", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers"}
+ALLIED = {"physiotherapy", "exercise-physiology", "podiatry", "occupational-therapy-adult", "occupational-therapy-paediatric", "speech-pathology-paediatric", "speech-pathology-adult", "psychology", "dietetics", "audiology", "diabetes-education", "continence", "lactation", "social-work"}
 def is_public(p):
     txt = p.get("name", "") + " | " + p.get("practice", "")
     hosp = " ".join((p.get("practical") or {}).get("hospitals") or [])
@@ -18,10 +19,11 @@ def sortkey(n):
         base = TITLE.sub("", n); base = re.sub(r"\s*\(.*?\)", "", base).strip()
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
     return re.sub(r"^the\s+", "", n.lower())
-people = {}; removed = []
+people = {}; removed = []; ALLIED_LABELS = set()
 for f in sorted(glob.glob(os.path.join(DD, "*.json"))):
     for slug, sec in json.load(open(f)).items():
         label = NAMES.get(slug, sec.get("name", slug))
+        if slug in ALLIED: ALLIED_LABELS.add(label)
         for p in sec["people"]:
             if is_public(p): removed.append(p["name"]); continue
             key = re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower())
@@ -65,36 +67,50 @@ def card(p):
     if p.get("inclusive"): extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in p["inclusive"]) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or [])]).lower()
-    return (f'<li class="sp-card" data-q="{e(q)}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(" · ".join(p["_labels"]))}</p>'
+    return (f'<li class="sp-card" data-q="{e(q)}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p></li>')
-# group by first letter for the A–Z jump bar (letters only, not categories)
-body, letters, cur = [], [], None
+def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+CATS = {}
 for p in L:
-    k = sortkey(p["name"]); ch = k[:1].upper() if k[:1].isalpha() else "#"
-    if ch != cur:
-        if cur is not None: body.append("</ul>")
-        body.append(f'<h2 class="sp-letter" id="l-{ch}">{ch}</h2><ul class="sp-list">'); letters.append(ch); cur = ch
-    body.append(card(p))
-body.append("</ul>")
+    for lab in p["_labels"]: CATS.setdefault(lab, []).append(p)
 src = open("deep-dives/index.html").read()
-head = src[:src.index("</head>")]
+headtpl = src[:src.index("</head>")]
 def sub(h, pat, val): return re.sub(pat, lambda m: m.group(1) + val, h)
-title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
-desc = "A–Z directory of private specialists and allied health practitioners in Newcastle and the Hunter, NSW: practice contacts, stated interests and inclusive-practice notes from public sources."
-head = re.sub(r'<link rel="canonical" href="[^"]*">', '<link rel="canonical" href="https://maladywise.com/specialists/">', head)
-head = re.sub(r"<title>[^<]*</title>", f"<title>{e(title)}</title>", head)
-for prop in ('name="description"', 'property="og:description"'): head = sub(head, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
-head = sub(head, r'(<meta property="og:title" content=")[^"]*', e(title))
-foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=2"></script>')
+def head(title, desc, url):
+    h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="https://maladywise.com{url}">', headtpl)
+    h = re.sub(r"<title>[^<]*</title>", f"<title>{e(title)}</title>", h)
+    for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
+    h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
+    return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
+foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=3"></script>')
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
-az = '<nav class="sp-az" aria-label="Jump to letter">' + "".join(f'<a href="#l-{c}">{c}</a>' for c in letters) + "</nav>"
-page = (head + '</head>\n<body>\n<main class="wrap doc sp-page">\n<h1>Specialists</h1>'
-        f'<p class="lede">Private specialists and allied health in Newcastle and the Hunter, A–Z.</p>'
-        f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings. Last checked {CHECKED}.</p>'
-        '<label class="sp-search"><span>Search</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-filter></label>'
-        '<p class="sp-count" aria-live="polite"></p>' + az + "".join(body) + DISC + f'<p class="meta"><em>Last checked {CHECKED}.</em></p>\n' + foot)
+for d in glob.glob("specialists/*/"):
+    if not d.rstrip("/").endswith("_data"):
+        import shutil; shutil.rmtree(d)
+urls = ["/specialists/"]
+for lab, ppl in CATS.items():
+    slug = slugify(lab); url = f"/specialists/{slug}/"; urls.append(url)
+    os.makedirs("specialists/" + slug, exist_ok=True)
+    title = f"{lab} in Newcastle and the Hunter | Malady Wise"
+    desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
+    body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
+            f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>'
+            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label><p class="sp-count" aria-live="polite"></p>'
+            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
+    open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
+labs = sorted(CATS, key=lambda x: x.lower())
+def tiles(keys): return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/"><b>{e(k)}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
+allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", "")} for p in L]
+title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
+desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
+page = (head(title, desc, "/specialists/") + '<h1>Specialists</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
+        f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
+        '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label><ul class="sp-results" hidden></ul>'
+        '<h2>Specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
+        '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(page)
-print(len(L), "listed;", len(removed), "public-only removed")
+json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
+print(len(L), "listed;", len(CATS), "specialties;", len(removed), "public-only removed")
 # Optional: private referral-fit scores for Adam's private doc (never written into the repo).
 if os.environ.get("SP_SCORES"):
     out = []
