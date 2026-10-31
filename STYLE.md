@@ -33,3 +33,11 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptogenic clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
 - Tone: fascinated and respectful. These are real people's experiences; never mock patients or make a diagnosis the punchline.
 - Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
+
+## Wordemic: Long Friday
+- Every Friday (Sydney date) from 2026-11-06, Wordemic is "Long Friday": an 8-letter answer and 7 guesses, in both Medical and Normie modes. All other days stay 5 letters, 6 guesses. The game reads the length from the answer, so just write an 8-letter word on Fridays.
+- Friday answers are already scheduled to 2027-03-26 in the monthly files (Normie too). When building a month, keep any existing Friday entries, fill the other days around them, sort by date, and keep numbering by date (Medical #1 = 2026-10-17; Normie #9 = 2026-11-01). Displaced words go to reserve.json (puzzles/ or puzzles/normie/).
+- From April 2027, write a new 8-letter answer for every Friday: Medical = a real medical word with Australian/British spelling (no US-only spellings), mixing familiar (MIGRAINE, CATARACT) and harder (DYSPNOEA, ADENOIDS); Normie = an everyday non-medical word. Usual one or two-sentence "definition", plain English, facts checked.
+- Add every new 8-letter answer to wordemic/words8.txt (the 8-letter guess list; lowercase, one per line, sorted). Five-letter answers still go in words.txt.
+- Einstein can land on a Friday: use a genuinely hard 8-letter word (e.g. PSAMMOMA, 2027-01-15) and add the date to MW_EINSTEIN as usual.
+- words8.txt sources: the site's Suturix and medical word lists, Webster's 2nd (public domain, via the MIT english-words package), plus plurals and verb forms of those words found in the wordfreq frequency list.

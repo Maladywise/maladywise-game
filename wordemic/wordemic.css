@@ -15,8 +15,8 @@ html[data-theme="dark"] #wde{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #wde .badge{font:600 11px var(--body);letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#fff}
 #wde .badge.Easy{background:var(--easy)} #wde .badge.Medium{background:var(--medium)} #wde .badge.Hard{background:var(--hard)} #wde .badge.Genius{background:var(--genius)}
 #wde .msg{min-height:24px;font-weight:600;color:var(--accent);text-align:center;font-size:15px}
-#wde .board{display:grid;grid-template-rows:repeat(6,1fr);gap:6px}
-#wde .row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+#wde .board{display:grid;gap:6px}
+#wde .row{display:grid;grid-template-columns:repeat(var(--n,5),auto);gap:6px}
 #wde .row.shake{animation:wdeshake .35s}
 @keyframes wdeshake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
 #wde .tile{width:min(58px,15vw);height:min(58px,15vw);border:2px solid var(--line);display:grid;place-items:center;
@@ -69,3 +69,10 @@ html[data-theme="dark"] #wde .key[data-k="enter"]{background:#7E68C8}
 #wde .pk-form input{width:min(320px,100%);font:700 20px var(--body);letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:9px 12px;border-radius:12px;border:2px solid var(--accent);background:var(--paper);color:var(--ink);outline:none}
 /* phones: board and keyboard on one screen */
 @media (max-width:600px){#wde .wrap{gap:8px;padding-bottom:12px} #wde .board,#wde .row{gap:5px} #wde .tile{width:min(52px,13.5vw);height:min(52px,13.5vw)} #wde .key{height:48px} #wde .key[data-k="enter"]{height:42px} #wde .kb{gap:5px} #wde .pk-tog{padding:4px 12px;font-size:12px}}
+/* Long Friday: 8 letters x 7 rows. Tiles shrink to fit a 360px phone with no sideways scroll. */
+#wde .longtag{margin:-4px 0 0;font:700 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:var(--soft);padding:4px 12px;border-radius:999px;white-space:nowrap}
+#wde .lsub{margin:0;font:600 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+#wde.long .board,#wde.long .row{gap:4px}
+#wde.long .tile{width:min(50px,calc((100vw - 64px) / var(--n,8)));height:min(50px,calc((100vw - 64px) / var(--n,8)));font-size:clamp(17px,5.4vw,26px)}
+#wde.long .pk-form input{letter-spacing:.12em}
+@media (max-width:600px){#wde.long .tile{width:min(44px,calc((100vw - 64px) / var(--n,8)));height:min(44px,calc((100vw - 64px) / var(--n,8)))}}

@@ -754,3 +754,4 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
   .bar .navwrap .subpill{order:3;margin-left:4px}
   .bar .tools > .icon-btn{order:4}
 }
+.card .pill.wk.sup{white-space:nowrap;letter-spacing:.04em;max-width:100%}
