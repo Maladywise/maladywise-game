@@ -746,3 +746,11 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
 .sp-lang{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:600 12px Poppins,system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .sp-lang select{flex:1;font:500 15px Poppins,system-ui,sans-serif;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-transform:none;letter-spacing:0}
 .sp-card .sp-t-lang{background:#E8F1FB;color:#1D4E89}html[data-theme="dark"] .sp-card .sp-t-lang{background:#1A2B40;color:#B6D2F2}
+/* desktop: menu links first, then the Medical/Normie switch, then Subscribe and settings */
+@media (min-width:1081px){
+  .bar .navwrap{display:contents}
+  .bar .navwrap .navlink{order:1}
+  .bar .tools > .mw-mode{order:2;margin:0 2px 0 8px}
+  .bar .navwrap .subpill{order:3;margin-left:4px}
+  .bar .tools > .icon-btn{order:4}
+}
