@@ -2889,11 +2889,13 @@
      "languages": [],
      "after_hours": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-humam-hazim/"
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-humam-hazim/",
+     "https://www.doctify.com/au/practice/hunter-diabetes-centre"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"

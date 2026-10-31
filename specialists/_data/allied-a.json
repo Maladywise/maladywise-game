@@ -341,12 +341,14 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [
      "https://www.continence.org.au/get-support/directories/newcastle-integrated-physiotherapy",
-     "https://www.poyst.com/business/newcastle-integrated-physiotherapy-adamstown-physiotherapist"
+     "https://www.poyst.com/business/newcastle-integrated-physiotherapy-adamstown-physiotherapist",
+     "https://newcastleintegratedphysiotherapy.com.au/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -430,7 +432,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
@@ -789,7 +792,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [
@@ -1000,7 +1004,7 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null,
+     "after_hours": true,
      "ndis": null,
      "medicare_cdm": true,
      "new_patients": null,
@@ -1127,7 +1131,9 @@
      "ndis": true,
      "medicare_cdm": true,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [
@@ -1411,15 +1417,17 @@
      "ages": "Children and adults",
      "hospitals": [],
      "languages": [],
-     "after_hours": null,
+     "after_hours": true,
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [
-     "https://newcastlepodiatry.com.au/about"
+     "https://newcastlepodiatry.com.au/about",
+     "https://newcastlepodiatry.com.au/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1935,7 +1943,8 @@
      "ndis": true,
      "medicare_cdm": true,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [

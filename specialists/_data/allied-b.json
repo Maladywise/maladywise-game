@@ -35,7 +35,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
@@ -634,11 +635,12 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null,
+     "after_hours": true,
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
@@ -674,11 +676,13 @@
      "ndis": true,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-clinical-services/dietetics/bf2f3fbc-2fc0-4e7c-9743-9595abf35381"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-clinical-services/dietetics/bf2f3fbc-2fc0-4e7c-9743-9595abf35381",
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-clinical-services/dietetics/bf2f3fbc-2fc0-4e7c-9743-9595abf35381"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -710,13 +714,15 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [
      "Describes itself as an inclusive service for neurodivergent nutrition support (stated)"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/the-nourish-club/dietetics/89a4dac9-bdb6-4ac4-84a3-d45e938cd49a"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/the-nourish-club/dietetics/89a4dac9-bdb6-4ac4-84a3-d45e938cd49a",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/the-nourish-club/dietetics/89a4dac9-bdb6-4ac4-84a3-d45e938cd49a"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -854,11 +860,12 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null,
+     "after_hours": true,
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "weekend": true
     },
     "inclusive": [],
     "sources": [
@@ -892,7 +899,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
@@ -959,11 +967,13 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/hunter-allied-care/dietetics/7add9465-82ef-6248-5017-027d6ffb6088"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/hunter-allied-care/dietetics/7add9465-82ef-6248-5017-027d6ffb6088",
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/hunter-allied-care/dietetics/7add9465-82ef-6248-5017-027d6ffb6088"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1031,7 +1041,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [],
     "sources": [
@@ -1140,7 +1151,8 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [
      "Hearing induction loop available (stated)"
@@ -1406,7 +1418,8 @@
      "ndis": null,
      "medicare_cdm": true,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "parking": "free"
     },
     "inclusive": [
      "Wheelchair access via lift (stated)"
