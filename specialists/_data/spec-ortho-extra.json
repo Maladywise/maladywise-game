@@ -1,0 +1,1697 @@
+{
+ "orthopaedics": {
+  "name": "Orthopaedic surgery",
+  "people": [
+   {
+    "name": "Dr Jai Kumar",
+    "specialty": "Orthopaedic surgery (knee and shoulder, sports arthroscopy)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "ACL and PCL reconstruction",
+     "Rotator cuff repair",
+     "Knee arthroscopy",
+     "Shoulder stabilisation",
+     "Meniscal repair",
+     "Cartilage restoration",
+     "Sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ben McGrath",
+    "specialty": "Orthopaedic surgery (hip, knee and shoulder)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Total hip and knee replacement",
+     "Shoulder arthroscopy",
+     "Joint preservation",
+     "Revision joint replacement",
+     "Sports surgery",
+     "Minimally invasive surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rosie Hoswell",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Total hip and knee replacement",
+     "Partial knee replacement",
+     "Minimally invasive surgery",
+     "Joint preservation",
+     "Revision surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Drew Tarrant",
+    "specialty": "Orthopaedic surgery (foot and ankle; hip and knee arthroplasty)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Ankle reconstruction",
+     "Foot surgery",
+     "Achilles tendon repair",
+     "Hindfoot fusion",
+     "Bunion surgery",
+     "Ankle arthroscopy",
+     "Total hip and knee replacement",
+     "Sports foot and ankle surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Kemp",
+    "specialty": "Orthopaedic surgery (hand and upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://www.nseh.com.au/",
+    "interests": [
+     "Hand and upper limb surgery",
+     "Arthroscopic procedures",
+     "Shoulder, elbow, wrist and hand joint replacement",
+     "Microsurgery",
+     "Open shoulder surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital (listed)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/about-us",
+     "https://healthwoodsendoscopy.cms.healthecare.com.au/specialists/dr-stephen-kemp"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Benjamin East",
+    "specialty": "Orthopaedic surgery (shoulder, elbow and upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "http://www.newcastleshoulderandelbow.com.au",
+    "interests": [
+     "Shoulder and elbow conditions",
+     "Complex orthopaedic trauma",
+     "Sports team work incl. Newcastle Knights",
+     "Shoulder and elbow research and education"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/about-us",
+     "https://lingardprivate.com.au/specialists/dr-benjamin-east"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Gajan Selvakumaran (Dr Gajan Selva)",
+    "specialty": "Orthopaedic surgery (hand and upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://www.nseh.com.au/",
+    "interests": [
+     "Upper limb conditions",
+     "General orthopaedic trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont Hospital",
+      "Warners Bay Private Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/about-us",
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/orthopaedic-surgery/108660/dr-gajan-selva"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tanya Burgess",
+    "specialty": "Orthopaedic surgery (hand, wrist and microsurgery)",
+    "practice": "Hunter Hand Surgery",
+    "address": "141 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4920 6338",
+    "fax": "",
+    "email": "info@hunterhandsurgery.com.au",
+    "ereferral": "",
+    "website": "https://hunterhandsurgery.com.au/",
+    "interests": [
+     "Hand, wrist and microsurgery (practice-wide)",
+     "Elective and emergency hand and wrist injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterhandsurgery.com.au/",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Brett McClelland",
+    "specialty": "Orthopaedic surgery (hand, wrist and microsurgery)",
+    "practice": "Hunter Hand Surgery",
+    "address": "141 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4920 6338",
+    "fax": "",
+    "email": "info@hunterhandsurgery.com.au",
+    "ereferral": "",
+    "website": "https://hunterhandsurgery.com.au/",
+    "interests": [
+     "Hand, wrist and microsurgery (practice-wide)",
+     "Elective and emergency hand and wrist injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterhandsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Richard Harbury",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Newcastle Orthopaedics",
+    "address": "104 George St, East Maitland NSW 2323; also consults at Northern Integrated Pain Management, Suite 3, 20 Smith St, Charlestown",
+    "suburb": "East Maitland",
+    "phone": "02 4934 6600",
+    "fax": "02 4934 6622",
+    "email": "office@newcastleorthopaedics.com.au",
+    "ereferral": "",
+    "website": "https://newcastleorthopaedics.com.au/",
+    "interests": [
+     "General orthopaedics with special interest in lower limb",
+     "Knee replacement",
+     "Knee arthroscopy and sports medicine",
+     "Hip replacement",
+     "ACL and ligament reconstruction",
+     "Tibial osteotomy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleorthopaedics.com.au/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/maitland-orthopaedic-and-rehab-specialists/orthopaedic-service/32befa89-0205-a3b4-a063-afbde29dfd9c"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mac Nixon",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Hunter Orthopaedic Surgery",
+    "address": "Medical Centre 2, 13/173 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 3776",
+    "fax": "02 4933 3774",
+    "email": "admin@hunterortho.com.au",
+    "ereferral": "",
+    "website": "http://www.hunterortho.com.au",
+    "interests": [
+     "Hip and knee disorders",
+     "General orthopaedic surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital",
+      "Maitland Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-mac-nixon",
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/orthopaedic-surgery/108628/dr-mac-nixon"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Julianne Burnton",
+    "specialty": "Orthopaedic surgery (shoulder, elbow and hand)",
+    "practice": "Maitland Hand and Orthopaedic Surgery",
+    "address": "Suite 12, Medical Centre 2, 144 Lawes St, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 0223 / 02 4915 6610",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Shoulder, elbow and hand surgery",
+     "Shoulder, elbow and hand trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Hospital",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/warners-bay-private-hospital/orthopaedic-surgery---hand/107581/dr-julianne-burnton"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Richard Verheul",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Lake Macquarie Specialist Medical Centre",
+    "address": "Level 2, Lake Macquarie Specialist Medical Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hip and knee",
+     "Revision hip and knee surgery",
+     "Bone cartilage transplantation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-richard-verheul/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sandeep Tewari",
+    "specialty": "Orthopaedic surgery (adult and paediatric)",
+    "practice": "Private rooms, Adamstown",
+    "address": "214 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7400",
+    "fax": "02 4952 7854",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.tewariortho.com.au",
+    "interests": [
+     "Hip and knee surgery incl. joint replacement and ACL reconstruction",
+     "Foot and ankle surgery",
+     "Trauma",
+     "Paediatric orthopaedics incl. cerebral palsy, DDH and deformity correction"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children and adults",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "John Hunter Hospital",
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-sandeep-tewari",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ali Hamze",
+    "specialty": "Orthopaedic surgery (lower limb arthroplasty and trauma)",
+    "practice": "Adamstown Specialists",
+    "address": "281-293 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7400",
+    "fax": "02 4952 7854",
+    "email": "admin@adamstownspecialists.com.au",
+    "ereferral": "",
+    "website": "http://www.adamstownspecialists.com.au",
+    "interests": [
+     "Lower limb robotic arthroplasty and reconstruction (fellowship)",
+     "Orthopaedic trauma (fellowship)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital (listed)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-ali-hamze",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Christopher Dunkley",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Gateshead Orthopaedics",
+    "address": "Level 2, Suite 8, Gateshead NSW 2290 (street not given on profile)",
+    "suburb": "Gateshead",
+    "phone": "02 4923 8383",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hip and knee"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-christopher-dunkley/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John Estens",
+    "specialty": "Orthopaedic surgery (lower limb, foot and ankle; adult and paediatric trauma)",
+    "practice": "Maitland Private Hospital (consulting in East Maitland)",
+    "address": "East Maitland NSW 2323 (street address not listed on profile)",
+    "suburb": "East Maitland",
+    "phone": "02 4934 6600",
+    "fax": "02 4934 6622",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Lower limb surgery",
+     "Foot and ankle surgery (sub-specialty training)",
+     "Adult trauma",
+     "Paediatric trauma and paediatric orthopaedics (additional training)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Maitland Private Hospital",
+      "Maitland Hospital (VMO)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-john-estens"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Don Osborne",
+    "specialty": "Orthopaedic surgery (knee and shoulder)",
+    "practice": "Hunter Orthopaedic Surgery",
+    "address": "Suite 13, 173 Chisholm Road, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 3776",
+    "fax": "02 4933 3774",
+    "email": "admin@hunterortho.com.au",
+    "ereferral": "",
+    "website": "http://www.hunterortho.com.au",
+    "interests": [
+     "Arthroscopic and reconstructive surgery of the knee and shoulder",
+     "Knee and shoulder joint replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://wollongongdaysurgery.cms.healthecare.com.au/specialists/dr-don-osborne"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lynette Reece",
+    "specialty": "Orthopaedic surgery (hip and knee; adult and paediatric)",
+    "practice": "MORS Specialist Centre",
+    "address": "104 George Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4934 6600",
+    "fax": "02 4934 6622",
+    "email": "office@maithsc.com.au",
+    "ereferral": "",
+    "website": "https://drlynettereece.com.au",
+    "interests": [
+     "Hip and knee replacement incl. revision",
+     "Knee arthroscopy",
+     "Carpal tunnel release",
+     "Arthritis, sporting, work-related and soft tissue injuries",
+     "Fractures",
+     "Paediatric: DDH (hip dysplasia) and talipes (club foot)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://dubboprivate.cms.healthecare.com.au/specialists/dr-lynette-reece"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Islam Nassar",
+    "specialty": "Orthopaedic surgery (hip, knee, shoulder and elbow; trauma)",
+    "practice": "Maitland Hand & Orthopaedic Surgery",
+    "address": "144 Lawes Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drnassar.com.au",
+    "interests": [
+     "Shoulder and elbow",
+     "Hip and knee replacement incl. revision",
+     "Knee arthroscopy",
+     "Hip resurfacing",
+     "Complex trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/islam-nassar",
+     "https://www.doctify.com/au/practice/maitland-hand-orthopaedic-surgery"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Peter Berton",
+    "specialty": "Orthopaedic surgery (knee sports surgery)",
+    "practice": "The Newcastle Knee Clinic",
+    "address": "Kotara (street address not listed on profile)",
+    "suburb": "Kotara",
+    "phone": "02 4952 5001",
+    "fax": "02 4952 5646",
+    "email": "",
+    "ereferral": "",
+    "website": "http://newcastlekneeclinic.com.au",
+    "interests": [
+     "Knee arthroscopy",
+     "Meniscal repair",
+     "ACL reconstruction and revision",
+     "Patellar instability surgery",
+     "Computer-navigated knee replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/peter-berton-med0001124409"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Brindley",
+    "specialty": "Orthopaedic surgery (shoulder to hand (upper limb); adult and paediatric)",
+    "practice": "Dr Stephen Brindley",
+    "address": "42 Thomas St, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4954 6900",
+    "fax": "02 4954 6902",
+    "email": "reception@drbrindley.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastleupperlimbsurgeon.com.au/",
+    "interests": [
+     "Shoulder to hand surgery",
+     "Arthroscopy",
+     "Joint replacement",
+     "Trauma",
+     "Hand and peripheral nerve surgery",
+     "Adult and paediatric problems (stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-stephen-brindley",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rishi Narasimhan",
+    "specialty": "Orthopaedic surgery (knee and shoulder)",
+    "practice": "Newcastle Private Hospital",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4951 0388",
+    "fax": "02 4951 0389",
+    "email": "info@rishiortho.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Rotator cuff surgery",
+     "Shoulder instability surgery",
+     "Shoulder replacement",
+     "Quad-sparing total knee replacement",
+     "ACL reconstruction",
+     "Revision knee replacement",
+     "Limb salvage and failed/infected joint replacements"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Maitland Private Hospital",
+      "Forster Private Hospital",
+      "Mayo Private Hospital (Taree)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/rishi-narasimhan-med0001202091",
+     "https://forsterprivate.cms.healthecare.com.au/specialists/dr-rishi-narasimhan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bruce Caldwell",
+    "specialty": "Orthopaedic surgery (knee and hip)",
+    "practice": "Rooms at Lingard (2 Lingard Street)",
+    "address": "2 Lingard Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4963 3773",
+    "fax": "02 4963 3774",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Knee arthroscopy for meniscal and ACL tears and patellofemoral dislocation",
+     "Total knee replacement and realignment",
+     "Hip replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-bruce-caldwell",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Dewar",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Lake Macquarie Private Hospital",
+    "address": "Lake Macquarie Private Hospital, 3 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122 (hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hip and knee"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-david-dewar/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Seth Tarrant",
+    "specialty": "Orthopaedic surgery (general orthopaedics)",
+    "practice": "Dr Seth Tarrant (rooms, Darby Street)",
+    "address": "Suite 10, Level 1, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "02 4067 5221",
+    "fax": "",
+    "email": "admin@tarrantortho.com.au",
+    "ereferral": "",
+    "website": "http://www.tarrantortho.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Maitland Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-seth-tarrant",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Joshua Hunt",
+    "specialty": "Orthopaedic surgery (hand surgery)",
+    "practice": "Consulting rooms, Carrington",
+    "address": "114 Young Street, Carrington NSW 2294",
+    "suburb": "Carrington",
+    "phone": "02 4958 4288 (Warners Bay Private Hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Osteoarthritic conditions",
+     "Nerve compression",
+     "Upper limb contractures",
+     "Hand trauma",
+     "Complex hand and microsurgery trauma (John Hunter on-call)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Royal Newcastle Centre",
+      "Belmont Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-joshua-hunt/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stuart Mackenzie",
+    "specialty": "Orthopaedic surgery (hip and knee; trauma)",
+    "practice": "Hunter Bone & Joint (rooms at 4/2 Lingard Street)",
+    "address": "4/2 Lingard Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4963 3393",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.drstuartmackenzie.com.au/",
+    "interests": [
+     "Hip and knee surgery",
+     "Trauma surgery",
+     "Difficult and revision hip and knee replacement",
+     "Arthroscopic knee surgery incl. ACL reconstruction",
+     "Robot-assisted (MAKO) surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-stuart-mackenzie",
+     "https://www.doctify.com/au/practice/hunter-bone-joint",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andrew Myers",
+    "specialty": "Orthopaedic surgery (hand and microsurgery)",
+    "practice": "Hand Surgery Centre",
+    "address": "Suite 2.3-2.4, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 7900",
+    "fax": "02 4957 9722",
+    "email": "practicemanager@handsurgerycentre.com.au",
+    "ereferral": "",
+    "website": "http://www.handsurgerycentre.com.au",
+    "interests": [
+     "Endoscopic carpal and cubital tunnel surgery",
+     "Arthroscopy",
+     "Fracture management incl. hand and wrist fractures",
+     "Arthritis and joint replacement",
+     "Dupuytren's contracture",
+     "Trigger finger",
+     "Nerve compression",
+     "Microsurgical repair of tendons, nerves and arteries",
+     "Tennis elbow",
+     "Acute hand injuries incl. workers compensation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-andrew-myers"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Nicholson",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "Rooms at 52 Smith Street, Charlestown",
+    "address": "52 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4958 4288 (Warners Bay Private Hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Foot",
+     "Ankle"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-david-nicholson/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Minas Petrelis",
+    "specialty": "Orthopaedic surgery (shoulder and upper limb)",
+    "practice": "Dr Minas Petrelis",
+    "address": "52 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 1688",
+    "fax": "02 4942 1710",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drminaspetrelis.com/",
+    "interests": [
+     "Orthopaedic and upper limb surgery",
+     "Shoulder surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital (listed)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-minas-petrelis",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lachlan Cornford",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Dr Lachlan Cornford",
+    "address": "1/226 Union St, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4047 1197",
+    "fax": "02 4989 6873",
+    "email": "office@drlachlancornford.com.au",
+    "ereferral": "",
+    "website": "http://www.drlachlancornford.com.au",
+    "interests": [
+     "Anterior minimally invasive hip surgery",
+     "Enhanced recovery after joint replacement",
+     "Hip preservation for young adults",
+     "Traumatic and sports injuries",
+     "Kinematically aligned total knee replacement",
+     "Knee ligament reconstruction",
+     "Arthroscopic knee surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital",
+      "Royal Newcastle Centre",
+      "John Hunter Children's Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-lachlan-cornford"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Geoffrey Workman",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Hunter Bone & Joint",
+    "address": "4/2 Lingard Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hip and knee surgery (fellowship-trained)",
+     "Computer-assisted component placement",
+     "Anterior approach total hip replacement",
+     "Knee ligament reconstruction and multi-ligament knee injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/geoffrey-workman",
+     "https://www.doctify.com/au/practice/hunter-bone-joint"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Steven Kent",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "Rooms at 235 Darby St, Cooks Hill",
+    "address": "Level 1, Suite 10, 235 Darby St, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Foot and ankle",
+     "Complex trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-steven-kent/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Pankaj Rao",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "Dr Pankaj Rao",
+    "address": "Cnr Mitchell and Union Streets, Merewether NSW 2291; also Specialist Medical Centre 2, 239 Excelsior Parade, Toronto",
+    "suburb": "Merewether",
+    "phone": "02 4918 0200",
+    "fax": "02 4936 6888",
+    "email": "reception@rao.net.au",
+    "ereferral": "",
+    "website": "http://www.rao.net.au",
+    "interests": [
+     "Foot and ankle surgery",
+     "Sports ankle injuries and ligament reconstruction",
+     "Bunion and forefoot correction",
+     "Arthritis and deformity correction",
+     "Trauma",
+     "Platelet rich plasma injections (foot, ankle, knee, hip)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hobsonhealthcare.cms.healthecare.com.au/specialists/dr-pankaj-rao"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jonathan Young",
+    "specialty": "Orthopaedic surgery (sport and joint replacement (hip and knee))",
+    "practice": "Dr Jonathan Young",
+    "address": "388 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 7777",
+    "fax": "02 4958 7700",
+    "email": "solutions@drjy.com.au",
+    "ereferral": "",
+    "website": "https://www.drjonathanyoung.com.au/",
+    "interests": [
+     "Sport and joint replacement surgery",
+     "Anterior approach hip replacement (AMIS)",
+     "ACL ligament reconstruction",
+     "Computer-assisted knee replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital (listed)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-jonathan-young",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jorgen Hellman",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Dr Jorgen Hellman",
+    "address": "Suite 2/18 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4969 8275",
+    "fax": "02 4962 3775",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.drjorgenhellman.com.au/",
+    "interests": [
+     "Hip and knee joint replacement",
+     "Arthroscopic knee surgery",
+     "Practice states both insured and uninsured patients are seen"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital / Royal Newcastle Centre"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-jorgen-hellman",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tim Karbowiak",
+    "specialty": "Orthopaedic surgery (hand and wrist)",
+    "practice": "Hand Surgery Centre, Newcastle Private Hospital",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 7900",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hand and wrist surgery",
+     "Hand and wrist fractures in adults and children",
+     "Private, workers compensation, DVA and third-party patients (Hand Surgery Centre)",
+     "Public clinics at John Hunter Hospital Hand Unit and Maitland Hospital"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children (fractures)",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital",
+      "Maitland Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-tim-karbowiak"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bryce Meads",
+    "specialty": "Orthopaedic surgery (hand, wrist and upper limb)",
+    "practice": "Hand Surgery Centre",
+    "address": "Newcastle Private Specialist Centre, Newcastle Private Hospital campus, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 7900",
+    "fax": "02 4957 9722",
+    "email": "practicemanager@handsurgerycentre.com.au",
+    "ereferral": "",
+    "website": "http://www.handsurgerycentre.com.au",
+    "interests": [
+     "Arthroscopic wrist surgery incl. scapholunate ligament and TFCC injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont Hospital",
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/bryce-meads-med0001188087",
+     "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-andrew-myers"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Simon Abson",
+    "specialty": "Orthopaedic surgery (spine; adult and paediatric)",
+    "practice": "Trinity Specialist Clinic",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305 (clinic street address not listed)",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4062 0841",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://trinityspecialist.com.au",
+    "interests": [
+     "Spinal surgery",
+     "Adult and paediatric deformity surgery",
+     "Spinal trauma",
+     "Tumour resection",
+     "Discectomy and decompression"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/simon-abson-med0001188874",
+     "https://specialists.healthscope.com.au/newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robert Kuru",
+    "specialty": "Orthopaedic surgery (spine; adult and paediatric)",
+    "practice": "Dr Robert Kuru",
+    "address": "Level 2, Suite 4, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Spinal surgery",
+     "Paediatric and adult deformity correction"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-robert-kuru/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James O'Sullivan",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "Newcastle Orthopaedic Foot and Ankle Clinic",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305 (clinic street address not listed)",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 3401",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://nofac.com.au",
+    "interests": [
+     "Foot and ankle",
+     "Diabetic foot",
+     "Bone and joint deformity",
+     "Trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-james-osullivan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hardeep Salaria",
+    "specialty": "Orthopaedic surgery (spine, hip and knee)",
+    "practice": "Hunter Spine (Maitland Private Hospital rooms)",
+    "address": "Suite 3, Medical Centre 1, Maitland Private Hospital, 173 Chisholm Rd, Ashtonfield NSW 2323; also consults in Charlestown, Maitland and Singleton",
+    "suburb": "Ashtonfield",
+    "phone": "02 4934 2955",
+    "fax": "02 4934 2743",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterspine.com.au",
+    "interests": [
+     "Cervical and lumbar disc replacement",
+     "Revision spine surgery",
+     "Discectomy",
+     "Minimally invasive spine decompression and fusion",
+     "Anterior spine fusion",
+     "Anterior minimally invasive total hip replacement",
+     "Robotic and patient-specific partial and total knee replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-hardeep-salaria",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Gill",
+    "specialty": "Orthopaedic surgery (hip, knee and shoulder; trauma and sport)",
+    "practice": "Dr David Gill",
+    "address": "57 Lindsay Street, Hamilton, Newcastle NSW",
+    "suburb": "Hamilton",
+    "phone": "02 4969 4033",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hip and knee",
+     "Shoulder",
+     "Trauma",
+     "Sport"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Hunter Valley Private Hospital",
+      "John Hunter Hospital (trauma on-call)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/david-gill",
+     "https://specialists.healthscope.com.au/newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James Coulthard",
+    "specialty": "Orthopaedic surgery (knee and hip; adult and paediatric)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Suite 16, Level 1, Eastpoint Building, 50 Glebe Rd, The Junction NSW 2291; also rooms in East Maitland",
+    "suburb": "The Junction",
+    "phone": "02 4058 1999",
+    "fax": "02 4913 5366",
+    "email": "admin@jamescoulthard.com.au",
+    "ereferral": "",
+    "website": "http://www.jamescoulthard.com.au",
+    "interests": [
+     "Knee care incl. robotic partial and total knee replacement",
+     "Ligament and meniscal surgery",
+     "Enhanced Recovery After Surgery (ERAS)",
+     "General paediatric orthopaedics",
+     "Complex knee problems in young patients (patellofemoral instability, ligament, meniscal)",
+     "Hip conditions from birth to adulthood",
+     "Trauma on-call at Maitland Hospital",
+     "States minimal public waiting list and sees public patients in Newcastle or East Maitland rooms"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children and adults",
+     "hospitals": [
+      "Maitland Private Hospital",
+      "Lingard Private Hospital",
+      "Maitland Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-james-coulthard",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Roland Hicks",
+    "specialty": "Orthopaedic surgery (hand surgery)",
+    "practice": "Toronto Specialist Medical Centre",
+    "address": "Suite 1, Toronto NSW 2283 (street not listed)",
+    "suburb": "Toronto",
+    "phone": "02 4959 5777",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hand surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-roland-hicks",
+     "https://lingardprivate.com.au/specialties/orthopaedics"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tom Thorvaldson",
+    "specialty": "Orthopaedic surgery (hand surgery)",
+    "practice": "Maitland Hand & Orthopaedic Surgery",
+    "address": "144 Lawes Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hand surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/maitland-hand-orthopaedic-surgery"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
