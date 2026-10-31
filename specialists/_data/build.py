@@ -1,7 +1,7 @@
 """Build the Specialists page: ONE alphabetical list (no categories), private practice only.
 Run from the repo root:  python3 specialists/_data/build.py specialists/_data
 Reads every *.json in the data folder ({slug:{name, people:[...]}}). Public-only services are filtered out."""
-import json, html, os, re, sys, glob, datetime
+import json, html, os, re, sys, glob, datetime, urllib.parse
 DD = sys.argv[1] if len(sys.argv) > 1 else 'specialists/_data'
 CHECKED = "31 October 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|public", re.I)
@@ -58,6 +58,9 @@ def card(p):
     if p.get("phone"): c.append(f'<a href="tel:{e(re.sub(r"[^0-9+]", "", p["phone"]))}">{e(p["phone"])}</a>')
     if p.get("fax"): c.append(f'Fax {e(p["fax"])}')
     if p.get("website"): c.append(f'<a href="{e(p["website"])}" rel="noopener">Website</a>')
+    mq = p.get("address") or ""
+    if not re.search(r"\d", mq): mq = " ".join(x for x in [p.get("practice", ""), p.get("suburb", "")] if x)
+    if mq: c.append('<a href="https://www.google.com/maps/search/?api=1&amp;query=' + e(urllib.parse.quote_plus(mq + " NSW")) + '" rel="noopener">Map and reviews</a>')
     if c: lines.append("<span>" + " · ".join(c) + "</span>")
     if p.get("ereferral"): lines.append(f'<span>E-referral: {e(p["ereferral"])}</span>')
     for pr2, sub2, ph2 in p.get("_also") or []:
@@ -65,6 +68,9 @@ def card(p):
     extra = []
     if p.get("interests"): extra.append(f'<p class="sp-int"><b>Interests:</b> {e("; ".join(p["interests"]))}</p>')
     facts = []
+    np_ = pr.get("new_patients")
+    np_txt = {"yes": "Taking new patients", "limited": "Limited new patients", "no": "Not taking new patients"}.get(np_)
+    if np_txt: extra.append(f'<p class="sp-np sp-np-{e(np_)}">{np_txt}' + (f' · {e(pr["np_note"])}' if pr.get("np_note") else "") + (f' <span>(as stated {e(pr.get("np_checked") or p.get("checked", ""))})</span>' if True else "") + '</p>')
     if pr.get("telehealth") is True: facts.append("Telehealth")
     bb = pr.get("bulk_billing")
     if bb in ("yes", "some"): facts.append("Bulk billing" + (" (some)" if bb == "some" else ""))
