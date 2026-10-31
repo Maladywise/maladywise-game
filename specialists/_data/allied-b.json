@@ -1,0 +1,2069 @@
+{
+ "psychology": {
+  "name": "Psychology",
+  "people": [
+   {
+    "name": "Wise Mind Psychology Newcastle",
+    "specialty": "Psychology",
+    "practice": "Wise Mind Psychology Newcastle",
+    "address": "202 Lambton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4091 0100",
+    "fax": "02 8201 3485",
+    "email": "admin@wisemindnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://www.wisemindnewcastle.com.au/",
+    "interests": [
+     "Child and adolescent psychology",
+     "Autism assessment",
+     "ADHD assessment",
+     "Cognitive and adaptive functioning assessment",
+     "Anxiety",
+     "Mood disorders",
+     "Eating disorders",
+     "Trauma and PTSD",
+     "OCD"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/wise-mind-psychology-newcastle/psychology/0ef64202-144a-409d-9756-389224a7fd7d"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Children's Psychology",
+    "specialty": "Psychology",
+    "practice": "Hunter Children's Psychology",
+    "address": "Suite A, Level 1, 118 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4955 6179",
+    "fax": "",
+    "email": "admin@hunterchildrenspsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterchildrenspsychology.com.au/",
+    "interests": [
+     "Child psychological assessment",
+     "ADHD assessment",
+     "Autism assessment",
+     "Specific learning disorders",
+     "Intellectual disability assessment",
+     "Behaviour disorders",
+     "Family Court reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children up to 16 years",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterchildrenspsychology.com.au/",
+     "https://www.localsearch.com.au/profile/hunter-childrens-psychology/clf21qut3007208mxc4sf4bdz"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Autism Understanding Psychology Clinic",
+    "specialty": "Psychology",
+    "practice": "Autism Understanding Psychology Clinic",
+    "address": "The Junction, Newcastle NSW (street address not published)",
+    "suburb": "The Junction",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://autismunderstanding.simplero.com/clinic",
+    "interests": [
+     "Autism assessment",
+     "Attention assessment",
+     "Cognitive, developmental, executive functioning, adaptive and reading assessments",
+     "Counselling",
+     "Autism strategies"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Neurodiversity-affirming assessments (stated)"
+    ],
+    "sources": [
+     "https://autismunderstanding.simplero.com/clinic"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Med-Psych",
+    "specialty": "Psychology",
+    "practice": "Med-Psych",
+    "address": "141 Gordon Avenue, Hamilton South NSW 2303",
+    "suburb": "Hamilton South",
+    "phone": "02 4989 6896",
+    "fax": "02 4926 1445",
+    "email": "info@med-psych.com.au",
+    "ereferral": "",
+    "website": "https://www.med-psych.com.au/",
+    "interests": [
+     "ADHD and autism diagnostic assessment",
+     "Learning difficulties",
+     "Positive behaviour support",
+     "Psychological therapy",
+     "Gut-brain disorders clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/med-psych/psychology/f2c1c862-39a4-8d54-0c5a-fb241f0c41cc"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Grant Lyall Psychology Services",
+    "specialty": "Psychology",
+    "practice": "Grant Lyall Psychology Services",
+    "address": "74 Brisbane Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "0448 781 393",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.glpsychology.com.au",
+    "interests": [
+     "Autism assessment",
+     "ADHD assessment",
+     "Learning profiles",
+     "Developmental assessment",
+     "Parent, carer and educator training",
+     "Behaviour and emotional regulation",
+     "WorkCover/SIRA"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Wheelchair access (disability-compliant doors, ramps and toilets stated)"
+    ],
+    "sources": [
+     "https://www.infoqore.com.au/directory/health-and-wellbeing/grant-lyall-psychology-services"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kelly Penniment-Saich",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Minds of Colour Psychology",
+    "address": "Telehealth only (Newcastle NSW 2287 based)",
+    "suburb": "Newcastle (telehealth)",
+    "phone": "",
+    "fax": "",
+    "email": "hello@mindsofcolour.com.au",
+    "ereferral": "",
+    "website": "https://www.mindsofcolour.com.au",
+    "interests": [
+     "Autism and ADHD assessment (12+ and adults)",
+     "Neurodivergence",
+     "Adolescents",
+     "Anxiety",
+     "Trauma",
+     "LGBTIQ issues",
+     "Grief and loss"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults (assessments 12+)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Neuro-affirming (stated)",
+     "Gender-affirming (stated)",
+     "LGBTIQ people listed as patient focus",
+     "Aboriginal and Torres Strait Islander people listed as patient focus"
+    ],
+    "sources": [
+     "https://www.halaxy.com/profile/kelly-penniment-saich/psychologist/1759531"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Perinatal Place",
+    "specialty": "Psychology (Clinical and general)",
+    "practice": "Newcastle Perinatal Place",
+    "address": "1A Chapman Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4959 7701",
+    "fax": "02 8313 5749",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.newcastleperinatalplace.com.au",
+    "interests": [
+     "Perinatal depression and anxiety",
+     "Fertility and preconception",
+     "High-risk pregnancy",
+     "Perinatal loss, stillbirth and neonatal death",
+     "Birth trauma",
+     "Parent-infant attachment",
+     "Circle of Security Parenting",
+     "EMDR"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (perinatal), parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/newcastle-perinatal-place/location/1004471"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Forest for the Trees Perinatal Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Forest for the Trees Perinatal Psychology",
+    "address": "Suite 16, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "0474 251 669",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://forestpsychology.com.au/",
+    "interests": [
+     "Perinatal psychology",
+     "Pregnancy planning",
+     "Perinatal loss, stillbirth and miscarriage",
+     "Postnatal depression and anxiety",
+     "Birth trauma",
+     "Fathers' and paternal mental health"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (perinatal)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.cope.org.au/getting-help/find-help/directory/forest-for-the-trees-perinatal-psychology",
+     "https://www.newcastleherald.com.au/local-business/medical/cooks hill-nsw/forest-for-the-trees-perinatal-psychology-61474251669"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Wildflower Psychology Newcastle",
+    "specialty": "Psychology",
+    "practice": "Wildflower Psychology Newcastle",
+    "address": "25 Denison Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "0498 560 653",
+    "fax": "",
+    "email": "admin@wildflower-psychology.com.au",
+    "ereferral": "",
+    "website": "https://www.wildflower-psychology.com.au",
+    "interests": [
+     "Perinatal (conception to first year after birth)",
+     "Depression",
+     "Anxiety",
+     "Trauma",
+     "Life transitions",
+     "Assessment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-west-2302-nsw/wildflower-psychology-newcastle/psychology/8c3385e1-2aa4-47cf-9266-a6d3a84e5709"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Greygum Psychology",
+    "specialty": "Psychology",
+    "practice": "Greygum Psychology",
+    "address": "Room 3, Zion Medical Center, 1/802 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "0481 317 971",
+    "fax": "",
+    "email": "info@greygumpsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.greygumpsychology.com.au/",
+    "interests": [
+     "Assessment and therapy",
+     "Anxiety",
+     "Depression",
+     "Trauma",
+     "Attention difficulties"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-west-2302-nsw/greygum-psychology/psychology/272e20c1-4999-4442-9b74-6c38a8402f73"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Beyond Now Psychology",
+    "specialty": "Psychology",
+    "practice": "Beyond Now Psychology",
+    "address": "671-677 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "0450 484 434",
+    "fax": "02 4910 9087",
+    "email": "beyondnowpsychology@outlook.com",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Eating disorders",
+     "Trauma",
+     "Depression",
+     "Anxiety",
+     "Grief and loss",
+     "Substance use"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, teenagers and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Low sensory space available (stated)"
+    ],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-west-2302-nsw/beyond-now-psychology/psychology/04a5e53c-6573-410d-9998-36f81b49f433"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Marnie Britton",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Tundra Psychology",
+    "address": "Evolve Mental Health & Wellbeing Hub, 54 Ridley Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4075 7690",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Autism and ADHD assessment",
+     "Gender-affirming care assessments",
+     "LGBTQ+",
+     "Trauma-informed therapy",
+     "EMDR, DBT, schema therapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "16 and over",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Neuroaffirming (stated)",
+     "Gender-affirming (stated)",
+     "Welcomes people from all backgrounds, identities and neurotypes (stated)"
+    ],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/marnie-britton-tundra-psychology-charlestown-nsw/1824358"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Myrtle Oak Clinic",
+    "specialty": "Psychology (Clinical) - eating disorders",
+    "practice": "Myrtle Oak Clinic",
+    "address": "Level 2, 163 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4362 3443",
+    "fax": "02 4362 2998",
+    "email": "admin@myrtleoakclinic.com.au",
+    "ereferral": "",
+    "website": "https://myrtleoakclinic.com.au/",
+    "interests": [
+     "Eating disorders (anorexia, bulimia, binge eating, ARFID, OSFED)",
+     "Body image and body dysmorphic disorder",
+     "Muscle dysmorphia",
+     "Family-based treatment",
+     "Multidisciplinary with dietitians and mental health social workers"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents, youth and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://insideoutinstitute.org.au/treatment-services/myrtle-oak-clinic-wallsend",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/myrtle-oak-clinic-optimum-intake-dietitians/dietetics/5f54108c-8ba5-4fb7-8965-75a305b456fa"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "dietetics": {
+  "name": "Dietetics (Accredited Practising Dietitians)",
+  "people": [
+   {
+    "name": "Myrtle Oak Clinic & Optimum Intake Dietitians",
+    "specialty": "Dietetics",
+    "practice": "Myrtle Oak Clinic",
+    "address": "Level 2, 163 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4362 3443",
+    "fax": "02 4362 2998",
+    "email": "admin@myrtleoakclinic.com.au",
+    "ereferral": "",
+    "website": "https://myrtleoakclinic.com.au/",
+    "interests": [
+     "Eating disorders (anorexia, bulimia, binge eating, ARFID, OSFED)",
+     "Disordered eating",
+     "Body image",
+     "Multidisciplinary team (dietitians, clinical psychologists, mental health social workers)",
+     "CBT-E and family-based treatment"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents, youth and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/myrtle-oak-clinic-optimum-intake-dietitians/dietetics/5f54108c-8ba5-4fb7-8965-75a305b456fa",
+     "https://insideoutinstitute.org.au/treatment-services/myrtle-oak-clinic-wallsend"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Optimum Intake Dietitians (Merewether)",
+    "specialty": "Dietetics",
+    "practice": "Optimum Intake Dietitians",
+    "address": "Hunter Children's Clinic, 25 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4011 5938",
+    "fax": "",
+    "email": "admin@optimumintake.com.au",
+    "ereferral": "",
+    "website": "https://www.optimumintake.com.au/",
+    "interests": [
+     "Clinic sessions at Hunter Children's Clinic (Thursdays)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/optimum-intake-dietitians-merewether/dietetics/22253d6c-d6a2-4362-8fbd-e4b8d422f9d4"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Tidal Health Clinic",
+    "specialty": "Dietetics",
+    "practice": "Tidal Health Clinic",
+    "address": "Suite 3, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "0409 720 429",
+    "fax": "",
+    "email": "hello@tidalhealthclinic.com.au",
+    "ereferral": "",
+    "website": "https://www.tidalhealthclinic.com.au",
+    "interests": [
+     "Eating disorders (credentialled eating disorder clinician)",
+     "CBT-E",
+     "Maudsley family-based treatment",
+     "Dietetic and mental health support for individuals and families"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cooks-hill-2300-nsw/tidal-health-clinic/dietetics/11a5dec8-9702-4b44-aa1e-5f488eb29b91"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Clinical Services",
+    "specialty": "Dietetics",
+    "practice": "Hunter Clinical Services",
+    "address": "49A Railway Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4072 1449",
+    "fax": "",
+    "email": "hello@huntercs.au",
+    "ereferral": "",
+    "website": "https://hunterclinicalservices.com.au",
+    "interests": [
+     "Eating disorders",
+     "Paediatrics",
+     "NDIS"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-clinical-services/dietetics/bf2f3fbc-2fc0-4e7c-9743-9595abf35381"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Nourish Club",
+    "specialty": "Dietetics",
+    "practice": "The Nourish Club",
+    "address": "Level 2, Unit 4, 363 Hillsborough Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "0493 065 417",
+    "fax": "",
+    "email": "hello@thenourishclub.com.au",
+    "ereferral": "",
+    "website": "https://www.thenourishclub.com.au",
+    "interests": [
+     "Eating disorders",
+     "Mental health nutrition",
+     "Neurodivergent nutrition support"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Describes itself as an inclusive service for neurodivergent nutrition support (stated)"
+    ],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/the-nourish-club/dietetics/89a4dac9-bdb6-4ac4-84a3-d45e938cd49a"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Peak Dietetics",
+    "specialty": "Dietetics",
+    "practice": "Peak Dietetics",
+    "address": "58 Hanbury Street, Mayfield NSW 2304 (also Warners Bay, Medowie and Tenambit)",
+    "suburb": "Mayfield",
+    "phone": "1300 859 771",
+    "fax": "02 8313 5736",
+    "email": "info@peakdietetics.com.au",
+    "ereferral": "",
+    "website": "https://peakdietetics.com.au",
+    "interests": [
+     "Chronic condition management",
+     "Meal plans",
+     "Body composition analysis",
+     "Sports/fitness nutrition"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/mayfield-2304-nsw/peak-dietetics-mayfield/dietetics/1d1ab4cc-8946-49f0-94b6-c413a069fdf1",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/peak-dietetics-warners-bay/dietetics/91137d09-418c-4440-aa77-602bbd57ac7f",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/medowie-2318-nsw/peak-dietetics-medowie/dietetics/6df0e7a2-e14e-4d78-a0bc-14a1198decfe",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/tenambit-2323-nsw/peak-dietetics-tenambit/dietetics/3592bf4a-6037-4e27-8f9e-1c5fb33d9339"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Dietetics (Belmont)",
+    "specialty": "Dietetics",
+    "practice": "Hunter Dietetics",
+    "address": "39 Herbert Street, Belmont NSW 2280",
+    "suburb": "Belmont",
+    "phone": "02 4946 1115",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterdietetics.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/belmont-2280-nsw/hunter-dietetics-belmont/dietetics/fea6c3a1-30a2-9b14-1871-cd993cdd29af"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "AusClin Dietitians",
+    "specialty": "Dietetics",
+    "practice": "AusClin Dietitians",
+    "address": "18 Wilsons Road, Mount Hutton NSW 2290",
+    "suburb": "Mount Hutton",
+    "phone": "",
+    "fax": "",
+    "email": "Contact@ausclin.com.au",
+    "ereferral": "",
+    "website": "https://ausclin.com.au/",
+    "interests": [
+     "DVA Veteran Card accepted"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/mount-hutton-2290-nsw/ausclin-dietitians/dietetics/83f9f7f5-8aa3-46c5-8f7e-640586ccfe8a"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Guided Nutrition & Dietetics",
+    "specialty": "Dietetics",
+    "practice": "Guided Nutrition & Dietetics",
+    "address": "River View Ridge, Dawson Road, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "0412 058 320",
+    "fax": "02 4987 2946",
+    "email": "guidednutrition@outlook.com",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Diabetes",
+     "Weight management",
+     "High cholesterol",
+     "IBS",
+     "Food allergies and intolerances",
+     "Coeliac disease",
+     "Supermarket tours"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/raymond-terrace-2324-nsw/guided-nutrition-dietetics/dietetics/38e98335-7953-a95f-4a62-414ac5f5277a"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Glow Wellness and Nutrition",
+    "specialty": "Dietetics",
+    "practice": "Glow Wellness and Nutrition",
+    "address": "Vital Signs Medical Centre, 213 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "0429 940 436",
+    "fax": "",
+    "email": "admin@glowwellnessnutrition.com",
+    "ereferral": "",
+    "website": "https://www.glowwellness.au/",
+    "interests": [
+     "DVA Veteran Card accepted"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/glow-wellness-and-nutrition/dietetics/060cbbb1-465a-4853-842d-5a6d777adcd2"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "New Ability Health",
+    "specialty": "Dietetics",
+    "practice": "New Ability Health",
+    "address": "Unit 2, 46 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4926 9813",
+    "fax": "02 4006 3043",
+    "email": "reception@newabilityhealth.com.au",
+    "ereferral": "",
+    "website": "https://newabilityhealth.com.au/",
+    "interests": [
+     "NDIS",
+     "DVA"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/new-ability-health/dietetics/22509123-6e31-414e-800e-8a71d9bb133a"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Allied Care",
+    "specialty": "Dietetics",
+    "practice": "Hunter Allied Care",
+    "address": "44 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4940 0730",
+    "fax": "02 4969 8966",
+    "email": "admin@hunteralliedcare.com.au",
+    "ereferral": "",
+    "website": "http://www.hunteralliedcare.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/hunter-allied-care/dietetics/7add9465-82ef-6248-5017-027d6ffb6088"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Designer Dietitian",
+    "specialty": "Dietetics",
+    "practice": "Designer Dietitian",
+    "address": "221 Dungog Road, Martins Creek NSW 2420",
+    "suburb": "Martins Creek",
+    "phone": "0401 551 335",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.designerdietitian.com",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/martins-creek-2420-nsw/designer-dietitian/dietetics/dc61b015-6050-f139-b7df-b666aeca1e44"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "audiology": {
+  "name": "Audiology",
+  "people": [
+   {
+    "name": "Newcastle Hearing Centre for Children and Adults",
+    "specialty": "Audiology",
+    "practice": "Newcastle Hearing Centre for Children and Adults",
+    "address": "Suite 1, 67 William Street, Jesmond NSW 2299",
+    "suburb": "Jesmond",
+    "phone": "02 4047 2111",
+    "fax": "02 4955 8044",
+    "email": "admin@newcastlehearingcentre.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlehearingcentre.com.au",
+    "interests": [
+     "Paediatric audiology (from 8 months)",
+     "Adult audiology assessment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "8 months and older",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/jesmond-2299-nsw/newcastle-hearing-centre-for-children-and-adults/hearing-clinic/8ce1f13f-83e3-6590-c17e-bfffb81f4aec"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Earport Audiology",
+    "specialty": "Audiology",
+    "practice": "Earport Audiology",
+    "address": "Glendale NSW (main clinic) and Charlestown NSW; street addresses not given in source",
+    "suburb": "Glendale",
+    "phone": "0402 391 129",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://earport.com.au/contact-us/",
+    "interests": [
+     "Paediatric hearing tests (VRA, BOA, play audiometry)",
+     "Adult diagnostic hearing tests",
+     "Tinnitus assessment and rehabilitation",
+     "Auditory training (LACE Pro)",
+     "Hearing aids (independent, multiple manufacturers)",
+     "Microsuction wax removal",
+     "Hearing Services Program"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleherald.com.au/story/9336479/gurdeep-singh-opens-earport-audiology-for-all-ages-in-glendale/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Local Hearing Aid Specialists",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Local Hearing Aid Specialists",
+    "address": "Shop 4, 29 Dan Rees Street, Wallsend NSW 2287",
+    "suburb": "Wallsend",
+    "phone": "02 4023 2055",
+    "fax": "02 4023 2088",
+    "email": "info@localhearing.com.au",
+    "ereferral": "",
+    "website": "https://localhearingaidspecialists.com/contact-us",
+    "interests": [
+     "Hearing clinic and hearing aids"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wallsend-2287-nsw/local-hearing-aid-specialists/hearing-clinic/baea9a98-5e70-0212-df0c-41c28a038d7b"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Family Hearing Centre",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Family Hearing Centre",
+    "address": "Level 1, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "1300 767 561",
+    "fax": "",
+    "email": "contact@familyhearing.com.au",
+    "ereferral": "",
+    "website": "https://familyhearing.com.au",
+    "interests": [
+     "Hearing clinic and hearing aids",
+     "DVA Veteran Card accepted"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Hearing induction loop available (stated)"
+    ],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/family-hearing-centre/hearing-clinic/5f424c20-0f6c-424f-9f0c-33fdb87d7b86"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Advanced Hearing Care",
+    "specialty": "Audiology / hearing aids",
+    "practice": "Advanced Hearing Care",
+    "address": "24 Veronica Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4954 4248",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hearing aids"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cardiff-2285-nsw/advanced-hearing-care/hearing-aids/d21eb5a9-3157-873b-a3fd-96a9b17e6feb"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "bloom hearing specialists (Wallsend)",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "bloom hearing specialists",
+    "address": "Laverty Pathology, 155 Nelson Street, Wallsend NSW 2287 (also Kotara, Charlestown and Cessnock)",
+    "suburb": "Wallsend",
+    "phone": "02 4965 5566",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.bloomhearing.com.au/",
+    "interests": [
+     "Hearing clinic (national chain)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wallsend-2287-nsw/bloom-hearing-specialists-wallsend/hearing-clinic/427ddef4-bb3e-4a8b-150e-9225bef0946c"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Select Hearing (Raymond Terrace)",
+    "specialty": "Audiology / hearing aids",
+    "practice": "Select Hearing",
+    "address": "Shop 2, 2 The Close, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "02 4959 1222",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.myselecthearing.com.au",
+    "interests": [
+     "Visiting site every second Wednesday"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/raymond-terrace-2324-nsw/select-hearing-raymond-terrace/hearing-aids/0d51049e-1347-b7b6-4c60-23217b08eaca"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Audika Hearing Clinic Newcastle",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Audika",
+    "address": "Shop 6, 209 Hunter Street, Newcastle NSW 2300 (also Kotara, Warners Bay)",
+    "suburb": "Newcastle",
+    "phone": "1800 320 186",
+    "fax": "",
+    "email": "newcastle@audika.com.au",
+    "ereferral": "",
+    "website": "https://www.audika.com.au/hearing-aids-clinic/nsw/newcastle",
+    "interests": [
+     "Free hearing checks for adults over 26",
+     "Hearing aids (national chain)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "Free checks for over-26s",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/hearing-life-newcastle/hearing-clinic/f71c196c-8b9e-cc1d-363a-a3edb730eba6"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Specsavers Audiology Charlestown",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Specsavers Audiology",
+    "address": "Tenancy L01, 30 Pearson Street, Charlestown NSW 2290 (also Kotara, Mount Hutton)",
+    "suburb": "Charlestown",
+    "phone": "02 4920 9866",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.specsavers.com.au/hearing",
+    "interests": [
+     "Hearing clinic (national chain)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/specsavers-audiology-charlestown/hearing-clinic/25a4ffd2-c90c-448a-be8d-c119618942f5"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "diabetes-education": {
+  "name": "Credentialled Diabetes Educators",
+  "people": [
+   {
+    "name": "Action Diabetes",
+    "specialty": "Credentialled Diabetes Education",
+    "practice": "Action Diabetes",
+    "address": "Newcastle Healthcare Building, Suite 2B, 282 Brunker Road, Adamstown NSW 2289 (also Nelson Bay and Cessnock)",
+    "suburb": "Adamstown",
+    "phone": "02 4981 5825",
+    "fax": "02 4981 5822",
+    "email": "reception@actiondiabetes.com",
+    "ereferral": "",
+    "website": "http://www.actiondiabetes.com",
+    "interests": [
+     "Diabetes self-management education",
+     "Insulin initiation",
+     "Insulin pumps",
+     "CGM",
+     "Gestational diabetes",
+     "Pregnancy in diabetes",
+     "Type 1 and type 2",
+     "Home and nursing-home visits",
+     "Dietitian service"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Wheelchair access (ADEA listing)"
+    ],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/adamstown-2289-nsw/action-diabetes-adamstown/diabetes-education/1d89a66b-5068-c12f-6b23-5972672d4066",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/nelson-bay-2315-nsw/action-diabetes-nelson-bay/diabetes-education/2aabe1a3-5bfd-ef69-bcbb-d7dda2b059f0",
+     "https://archive.adea.com.au/?p=5725",
+     "https://archive.adea.com.au/?p=12543665"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Diabetes Centre",
+    "specialty": "Credentialled Diabetes Education",
+    "practice": "Hunter Diabetes Centre",
+    "address": "Level 1, 41 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4963 2323",
+    "fax": "02 4963 2303",
+    "email": "reception@hunterdiabetes.com.au",
+    "ereferral": "",
+    "website": "https://hunterdiabetescentre.com.au",
+    "interests": [
+     "Diabetes self-management education",
+     "Insulin initiation",
+     "Insulin pumps and CGM",
+     "Type 1 and type 2",
+     "Pregnancy in diabetes",
+     "Pre-diabetes",
+     "Monthly type 1 support group",
+     "Endocrinology and dietetics on site"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Wheelchair access via lift (stated)"
+    ],
+    "sources": [
+     "https://archive.adea.com.au/?p=12460427",
+     "https://www.doctify.com/au/practice/hunter-diabetes-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Diabetes and Endocrinology Clinic (Kotara)",
+    "specialty": "Credentialled Diabetes Education",
+    "practice": "Diabetes and Endocrinology Clinic",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Diabetes self-management education",
+     "Insulin initiation",
+     "Insulin pumps and CGM technology",
+     "Gestational diabetes",
+     "Pregnancy in diabetes",
+     "Type 1 and type 2",
+     "Medicine review"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Wheelchair access (ADEA listing)"
+    ],
+    "sources": [
+     "https://archive.adea.com.au/?p=12461077",
+     "https://archive.adea.com.au/?p=12596264"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "On Point Diabetes",
+    "specialty": "Diabetes Education",
+    "practice": "On Point Diabetes",
+    "address": "1 Taylor Avenue, Thornton NSW 2322",
+    "suburb": "Thornton",
+    "phone": "0419 109 121",
+    "fax": "",
+    "email": "andrew@onpointdiabetes.com.au",
+    "ereferral": "",
+    "website": "http://www.onpointdiabetes.com.au/",
+    "interests": [
+     "Type 1, type 2 and prediabetes",
+     "FreeStyle Libre, insulin pumps and CGM education",
+     "Works with GPs and allied health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/thornton-2322-nsw/on-point-diabetes/diabetes-education/801ce54b-ee41-409b-97f7-e30d7da4624e"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "LENA Medical Specialist (diabetes education)",
+    "specialty": "Credentialled Diabetes Education",
+    "practice": "LENA Medical Specialist",
+    "address": "10 Dianne Street, Elermore Vale NSW 2287",
+    "suburb": "Elermore Vale",
+    "phone": "0461 562 706",
+    "fax": "",
+    "email": "info@lenamedical.com.au",
+    "ereferral": "",
+    "website": "https://lenamedical.com.au",
+    "interests": [
+     "Diabetes self-management",
+     "Gestational diabetes",
+     "Insulin initiation and pumps",
+     "Pre-diabetes",
+     "Group sessions",
+     "Online consultations",
+     "Mobile and school visits"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/mrs-preethy-thomas/diabetes-educator/1726973",
+     "https://www.halaxy.com/profile/mrs-soji-george/diabetes-educator/1734983"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "continence": {
+  "name": "Continence Nurses/Advisers",
+  "people": [
+   {
+    "name": "Caremmunity Newcastle",
+    "specialty": "Continence (Nurse Continence Specialist)",
+    "practice": "Caremmunity",
+    "address": "Newcastle NSW 2300 (home visits and telehealth)",
+    "suburb": "Newcastle",
+    "phone": "1300 182 273",
+    "fax": "",
+    "email": "referral@caremmunity.com.au",
+    "ereferral": "",
+    "website": "https://www.caremmunity.com.au",
+    "interests": [
+     "Bladder and bowel",
+     "In-home and telehealth continence assessments",
+     "NDIS, Home Care Package, WorkCover and road trauma clients"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "5 years and older",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.continence.org.au/help-and-support/find-a-service-provider/caremmunity-newcastle-nsw/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Sanctuary Continence Nursing and Health Support",
+    "specialty": "Continence (Registered Nurse)",
+    "practice": "Sanctuary Continence Nursing and Health Support",
+    "address": "Tighes Hill NSW 2297 (home visits; covers Newcastle, Hunter and Central Coast)",
+    "suburb": "Tighes Hill",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Bladder and bowel",
+     "Catheter care (indwelling, suprapubic, intermittent self-catheterisation)",
+     "Home visits",
+     "NDIS (not registered), WorkCover, road trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "5-64 years",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.continence.org.au/node/11328"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Pelvic Clinic",
+    "specialty": "Continence (physiotherapist and dietitian-led private continence service)",
+    "practice": "Hunter Pelvic Clinic",
+    "address": "314 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Bladder and bowel",
+     "Bedwetting",
+     "Pelvic floor",
+     "Toilet training",
+     "Pessaries",
+     "Real-time ultrasound"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "5 years and older",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.continence.org.au/node/10938"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "lactation": {
+  "name": "Lactation Consultants (IBCLC)",
+  "people": [
+   {
+    "name": "Julianne McKie",
+    "specialty": "Lactation Consultant (IBCLC)",
+    "practice": "Lactation Haven",
+    "address": "Cardiff South NSW 2285 (home visits Newcastle and Lake Macquarie)",
+    "suburb": "Cardiff South",
+    "phone": "0412 204 005",
+    "fax": "",
+    "email": "support@lactationhaven.com",
+    "ereferral": "",
+    "website": "https://www.lactationhaven.com/",
+    "interests": [
+     "Painful breastfeeding and latch",
+     "Low supply",
+     "Expressing",
+     "Bottle and mixed feeding",
+     "Tongue-tie feeding support",
+     "Mastitis",
+     "Antenatal preparation",
+     "Home visits"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lactationhaven.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Faye Lynch",
+    "specialty": "Lactation Consultant (IBCLC), Registered Midwife",
+    "practice": "Faye Lynch Lactation",
+    "address": "Home and online consultations; service area Charlestown, Newcastle, Lake Macquarie and Maitland",
+    "suburb": "Charlestown (mobile)",
+    "phone": "0401 359 152",
+    "fax": "",
+    "email": "fayelactation@gmail.com",
+    "ereferral": "",
+    "website": "https://www.fayelactation.com/",
+    "interests": [
+     "Antenatal breastfeeding education",
+     "Postnatal breastfeeding support",
+     "Latching",
+     "Sore nipples",
+     "Mastitis",
+     "Tongue tie",
+     "Home visits"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.fayelactation.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lorn Surgery lactation service (Sally Richards and Rebecca King)",
+    "specialty": "Lactation Consultants (IBCLC)",
+    "practice": "Lorn Surgery",
+    "address": "15 Belmore Road, Lorn NSW 2320 (also 67 Bulwer Street, Maitland)",
+    "suburb": "Lorn",
+    "phone": "02 4933 2622",
+    "fax": "02 4933 1800",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lornsurgery.com.au/services/lactation/",
+    "interests": [
+     "Painful nipples, sore breasts and mastitis",
+     "Supply concerns",
+     "Unsettled baby",
+     "Antenatal breastfeeding education",
+     "Clinic and home visits (Newcastle, East Lake Macquarie, Maitland, Lower Hunter)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lornsurgery.com.au/services/lactation/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Mums and Bubs",
+    "specialty": "Lactation (GP IBCLCs)",
+    "practice": "Newcastle Mums and Bubs",
+    "address": "Suite 2, 710 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4089 3462",
+    "fax": "",
+    "email": "info@newcastlemumsandbubs.com.au",
+    "ereferral": "",
+    "website": "https://newcastlemumsandbubs.com.au/",
+    "interests": [
+     "Breastfeeding support",
+     "Bottle-feeding support",
+     "Induced lactation",
+     "Infant sleep",
+     "Unsettled babies (NDC/Possums)",
+     "Fourth-trimester group sessions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlemumsandbubs.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Emma Maher",
+    "specialty": "Lactation Consultant (IBCLC), Midwife",
+    "practice": "Empowered Lactation with Emma",
+    "address": "Mount Hutton NSW (no street address published)",
+    "suburb": "Mount Hutton",
+    "phone": "",
+    "fax": "",
+    "email": "hello@empoweredlactationwithemma.com.au",
+    "ereferral": "",
+    "website": "https://www.empoweredlactationwithemma.com.au/",
+    "interests": [
+     "Breastfeeding education and support",
+     "Antenatal breastfeeding preparation (online)",
+     "Tongue-tie information"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Parents and infants",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.empoweredlactationwithemma.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "social-work": {
+  "name": "Social Work and Counselling (Accredited Mental Health Social Workers)",
+  "people": [
+   {
+    "name": "Kristen Fraser",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Kristen Fraser Counselling Newcastle",
+    "address": "8 Hudson Street (Offices on Hudson), Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "0493 865 054",
+    "fax": "",
+    "email": "kristenfrasercounselling@gmail.com",
+    "ereferral": "",
+    "website": "https://www.counsellingnewcastle.com.au/",
+    "interests": [
+     "Trauma and PTSD",
+     "EMDR",
+     "Anxiety and depression",
+     "Burnout and stress",
+     "Grief and loss",
+     "Clinical supervision"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.counsellingnewcastle.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Anne Walker",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Orchard Counselling",
+    "address": "7/71 Regent Street, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "0421 576 100",
+    "fax": "",
+    "email": "anne@orchardcounselling.com.au",
+    "ereferral": "",
+    "website": "http://www.orchardcounselling.com.au",
+    "interests": [
+     "Trauma and PTSD",
+     "Anxiety and depression",
+     "Grief and loss",
+     "Life transitions",
+     "Women's issues",
+     "Victims of crime counselling",
+     "Open Arms (veterans) counsellor"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Lists LGBTIQ people, non-binary people, Aboriginal and Torres Strait Islander people and CALD communities as patient focus"
+    ],
+    "sources": [
+     "https://www.halaxy.com/profile/ms-anne-walker/social-worker/995531"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Replenish Counselling",
+    "specialty": "Social Work (Accredited Mental Health Social Workers)",
+    "practice": "Replenish Counselling",
+    "address": "Lambton, Newcastle NSW (street address not published)",
+    "suburb": "Lambton",
+    "phone": "0406 027 197",
+    "fax": "",
+    "email": "info@replenishcounselling.com.au",
+    "ereferral": "",
+    "website": "https://www.replenishcounselling.com.au/",
+    "interests": [
+     "Interpersonal trauma",
+     "Grief and loss",
+     "Young people and parenting",
+     "Relationships and life transitions",
+     "First responders and front-line staff",
+     "Narrative, ACT, CFT and DBT",
+     "Victims Services counselling"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.replenishcounselling.com.au/meet-our-therapists"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Eliza Rooney",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "A Healing Hand Counselling",
+    "address": "Hamilton / Newcastle NSW (street address not published)",
+    "suburb": "Hamilton",
+    "phone": "0459 725 875",
+    "fax": "",
+    "email": "a-healing-hand@outlook.com",
+    "ereferral": "",
+    "website": "https://www.a-healing-hand.com",
+    "interests": [
+     "Young people aged 12-25 and their families",
+     "Counselling"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "12-65 (focus 12-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Welcomes people from the LGBTIQA+ community (stated)",
+     "Welcomes people of all cultures (stated)"
+    ],
+    "sources": [
+     "https://www.halaxy.com/profile/eliza-rooney/social-worker/1032531",
+     "https://www.psychologytoday.com/au/counselling/eliza-rooney-hamilton-nsw/1032518"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Karen Barrett",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Karen Barrett Social Work",
+    "address": "Level 1, Suite 2, 58 Orchardtown Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://karenbarrett.com.au",
+    "interests": [
+     "Grief and loss",
+     "Trauma",
+     "Mental health",
+     "Parenting support"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adults, women and infants (patient focus)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/ms-karen-barrett/social-worker/350625"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Barbara Tobin",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Olaga Therapeutic Support: Counselling",
+    "address": "Unit 3, 424 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4082 6626",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Trauma and PTSD",
+     "EMDR and somatic approaches",
+     "Child and parenting issues",
+     "Family conflict",
+     "Domestic violence and abuse",
+     "Self-harm",
+     "Women's issues"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children 6+, teens, adults and older adults",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Samoan (basic)"
+     ],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Welcomes multicultural, marginalised and minority communities (stated)",
+     "Lists LGBTQ+ and Deaf community support (stated)",
+     "Lists Aboriginal and Torres Strait Islander and Pacific Islander client support (stated)",
+     "Basic Samoan language (stated)"
+    ],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/olaga-therapeutic-support-counselling-maitland-nsw/1420539"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Shannon Spence and Associates",
+    "specialty": "Social Work (AMHSW-led NDIS practice)",
+    "practice": "Shannon Spence and Associates",
+    "address": "Charlestown NSW (office; street address not published)",
+    "suburb": "Charlestown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://shannonspenceandassociates.com/",
+    "interests": [
+     "NDIS support coordination",
+     "Positive behaviour support",
+     "Functional capacity assessments",
+     "Emotional regulation (Zones of Regulation, Westmead Feelings Program)",
+     "Disability and mental health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://shannonspenceandassociates.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Myrtle Oak Clinic (mental health social workers)",
+    "specialty": "Social Work (Mental Health) - eating disorders",
+    "practice": "Myrtle Oak Clinic",
+    "address": "Level 2, 163 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4362 3443",
+    "fax": "",
+    "email": "admin@myrtleoakclinic.com.au",
+    "ereferral": "",
+    "website": "https://myrtleoakclinic.com.au/",
+    "interests": [
+     "Eating disorders",
+     "Body image",
+     "Family-based treatment"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents, youth and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://insideoutinstitute.org.au/treatment-services/myrtle-oak-clinic-wallsend"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
