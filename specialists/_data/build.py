@@ -19,6 +19,7 @@ BADGES = [
 ]
 def badges(p):
     out = []
+    if re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower()) in APPROVED: out.append(("mw", "Malady Wise approved", MW_SVG, [APPROVED_TXT]))
     for code, label, rx, svg in BADGES:
         hits = [x for x in (p.get("inclusive") or []) if re.search(rx, x, re.I) and not re.search(r"flag displayed|acknowledgement of country|article", x, re.I)]
         if hits: out.append((code, label, svg, hits))
@@ -38,6 +39,10 @@ def is_public(p):
     hosp = " ".join((p.get("practical") or {}).get("hospitals") or [])
     return bool(PUB.search(txt)) and not PRIV.search(txt + " " + hosp)
 TITLE = re.compile(r"^(Dr|Prof|Professor|A/Prof|Assoc Prof|Associate Professor|Conjoint Associate Professor|Clinical Associate Professor)\.?\s+", re.I)
+APPROVED_TXT = "Adam's pick for the referral experience: easy to book, clear letters back to the GP, friendly rooms. Not a rating of clinical skill. No payment, perks or referral fees."
+_ap = os.path.join(DD, "approved.txt")
+APPROVED = {re.sub(r"\W+", "", TITLE.sub("", l.strip()).lower()) for l in (open(_ap).read().splitlines() if os.path.exists(_ap) else []) if l.strip() and not l.startswith("#")}
+MW_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1F5FBF"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 def sortkey(n):
     BIZ = re.compile(r"(Therapy|Health|Clinic|Physio|Speech|Pathology|Centre|Center|Group|Services|Medical|Hearing|Psychology|Podiatry|Rehab|Studio|Care|Diabetes|Alliance|Hub|Project|Club|Kids|Ethos|Audiology|Dietitian|Nutrition|Wellness|Practice|Specialists|Paediatrics|Dermatology|Orthopaedic|Surgery|Hospital|Unit|Service|Inq|Lactation|Haven|Minds|Wise|Oak|Rainbow|Avina|Beam|Aspire|Uplift|Tundra|Earport|Audika|Caremmunity|Sanctuary|Replenish|Peak|Prime|Sport)", re.I)
     if TITLE.match(n) or (re.match(r"^[A-Z][a-z]+(-[A-Z][a-z]+)? [A-Z][a-zA-Z'\-]+$", n) and not BIZ.search(n)):
@@ -106,14 +111,14 @@ def card(p):
     if pr.get("hospitals"): facts.append("Hospitals: " + ", ".join(pr["hospitals"]))
     if facts: extra.append('<p class="sp-facts">' + e(" · ".join(facts)) + "</p>")
     bd = badges(p); used = {h for b in bd for h in b[3]}
-    if bd: extra.append('<div class="sp-badges">' + "".join(f'<details class="sp-b sp-b-{c}"><summary>{svg}{e(lab)}</summary><p>' + "<br>".join(f"“{e(h)}”" for h in hits) + '</p></details>' for c, lab, svg, hits in bd) + "</div>")
+    if bd: extra.append('<div class="sp-badges">' + "".join(f'<details class="sp-b sp-b-{c}"><summary>{svg}{e(lab)}</summary><p>' + "<br>".join((e(h) if c == "mw" else f"“{e(h)}”") for h in hits) + '</p></details>' for c, lab, svg, hits in bd) + "</div>")
     rest = [x for x in (p.get("inclusive") or []) if x not in used]
     if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or [])]).lower()
     return (f'<li class="sp-card" data-q="{e(q)}" data-b="{" ".join(b[0] for b in badges(p))}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p></li>')
-CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, rx, svg in BADGES) + '</div><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording. Many practices offer this care without advertising it.</p>'
+CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording. Many practices offer this care without advertising it.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 CATS = {}
 for p in L:
