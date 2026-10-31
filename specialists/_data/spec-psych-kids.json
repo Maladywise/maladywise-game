@@ -1,0 +1,1016 @@
+{
+ "psychology-children": {
+  "name": "Psychology (children)",
+  "people": [
+   {
+    "name": "Alex Kildey-Simpson",
+    "specialty": "Psychology (children, teens and adults)",
+    "practice": "Open Mind Psychologists",
+    "address": "362 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4071 6719",
+    "fax": "",
+    "email": "admin@openmindpsychologists.com.au",
+    "ereferral": "",
+    "website": "https://openmindpsychologists.com.au",
+    "interests": [
+     "Anxiety, depression and stress",
+     "ADHD and autism (assessment listed)",
+     "School issues",
+     "Peer relationships",
+     "Family conflict",
+     "Eating disorders",
+     "Self-harm",
+     "Sleep and insomnia (CBT-I)",
+     "OCD (ERP)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (6–10), preteens, teens, adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": "limited",
+     "np_note": "Waitlist for new clients (Psychology Today profile)"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/alex-kildey-simpson-newcastle-nsw/1528866",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/open-mind-psychologists/psychology/1774682a-1a3f-413f-9945-a3c55bf26799"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Arise Health & Wellness",
+    "specialty": "Clinical psychology (adults, children, adolescents and families)",
+    "practice": "Arise Health & Wellness",
+    "address": "32 Ernest Street, Belmont NSW 2280",
+    "suburb": "Belmont",
+    "phone": "0402 909 311",
+    "fax": "",
+    "email": "admin@arisehealthwellness.com.au",
+    "ereferral": "",
+    "website": "https://www.arisehealthwellness.com.au/",
+    "interests": [
+     "Clinical psychology for children, adolescents and families",
+     "In person in Belmont or online"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.arisehealthwellness.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Clinical Psychology Services Australia (Medowie)",
+    "specialty": "Clinical psychology (children, adolescents, adults and families)",
+    "practice": "Clinical Psychology Services Australia",
+    "address": "Shop 12, 37 Ferodale Road, Medowie NSW 2318",
+    "suburb": "Medowie",
+    "phone": "(02) 4981 8409",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cps-aus.com/",
+    "interests": [
+     "Anxiety",
+     "Mood",
+     "Trauma",
+     "Emotional regulation",
+     "Parenting",
+     "Autism and ADHD assessment",
+     "Cognitive and learning assessment",
+     "Also at Wyee (Shop 2, 131 Wyee Road)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults, couples and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"Clear, neurodiversity-affirming assessment pathways for autism, ADHD, cognitive, and learning questions.\"",
+     "\"Compassionate, neurodiversity-affirming psychology and assessment services\""
+    ],
+    "sources": [
+     "https://cps-aus.com/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Hirneth",
+    "specialty": "Clinical psychology (children, adolescents and adults)",
+    "practice": "New Ability Health",
+    "address": "Unit 2, 46 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4926 9813",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Diagnostic assessment for autism, ADHD, learning and developmental difficulties",
+     "Trauma and PTSD",
+     "ADHD",
+     "Autism",
+     "Behavioural issues",
+     "Anxiety",
+     "School issues",
+     "Peer relationships",
+     "Parenting",
+     "Testing and evaluation"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Toddlers, children, preteens, teens, adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/new-ability-health-hamilton-nsw/1516873",
+     "https://www.psychologytoday.com/au/counselling/nsw/newcastle?category=children-6-to-10"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Educational Case Management (ECM)",
+    "specialty": "Psychology (children and young people) within multidisciplinary clinic",
+    "practice": "Educational Case Management",
+    "address": "Unit 3, 56 Hudson St, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4969 8060",
+    "fax": "",
+    "email": "info@ecmonhudson.com",
+    "ereferral": "",
+    "website": "https://www.ecmonhudson.com/",
+    "interests": [
+     "Child psychology",
+     "Autism assessment (information from parents, carers and educators)",
+     "Behaviour support",
+     "Counselling and social work",
+     "Also at Unit 2 & 3, 9 Northmall, Rutherford"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and young people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"neurodiversity-affirming and supportive environment\"",
+     "\"we view autism as a difference and not a deficit\""
+    ],
+    "sources": [
+     "https://www.ecmonhudson.com/what-is-in-an-autism-assessment-in-newcastle-a-maitland/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Generational Psychology",
+    "specialty": "Psychology (perinatal, children, adolescents and adults)",
+    "practice": "Generational Psychology",
+    "address": "Suite 1, 8 Chaucer St, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4074 6184",
+    "fax": "",
+    "email": "reception@genpsych.com.au",
+    "ereferral": "",
+    "website": "https://www.genpsych.com.au/",
+    "interests": [
+     "ADHD, autism and specific learning disorder assessment",
+     "Anxiety, stress and mood",
+     "Behaviour and emotion regulation",
+     "Trauma",
+     "Learning difficulties",
+     "Neurodivergence",
+     "Attachment-based parenting support"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Perinatal onwards: toddlers, preschool, primary school, adolescents, adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"We celebrate, value and include people of all backgrounds, genders, sexualities, cultures, bodies and abilities.\""
+    ],
+    "sources": [
+     "https://www.genpsych.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Children's Clinics",
+    "specialty": "Psychology (children and young people)",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "(02) 4072 1877",
+    "fax": "(02) 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Neuroaffirming, strengths-based therapy for emotional and behavioural difficulties",
+     "Autism assessment (MIGDAS-2; ADOS-2 and ADI-R where indicated)",
+     "Cognitive/IQ and adaptive functioning assessment",
+     "Specific learning disorder assessment (dyslexia, dyscalculia, dysgraphia)",
+     "Giftedness assessment",
+     "ADHD-related psychometrics",
+     "Behavioural assessment",
+     "Parent-only intake for younger children",
+     "Also at 93A Young Street, Carrington"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and young people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"committed to creating an inclusive and equitable environment for every child, young person, and family\"",
+     "\"a safe and welcoming space for Indigenous Australians, people who identify as LGBTQIA+\"",
+     "Describes therapy as \"neuroaffirming\""
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/services/psychology/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Waring & Associates",
+    "specialty": "Clinical and registered psychology (children, adolescents and families)",
+    "practice": "John Waring & Associates",
+    "address": "4/149 Ambleside Circuit, Lakelands Commercial Centre, Lakelands NSW 2282",
+    "suburb": "Lakelands",
+    "phone": "(02) 4953 7111",
+    "fax": "(02) 4953 7809",
+    "email": "admin@psychologist.com.au",
+    "ereferral": "",
+    "website": "https://www.childpsych.com.au/",
+    "interests": [
+     "Child mental health and family relationships",
+     "Difficult behaviour",
+     "Separation, custody and contact matters",
+     "Anxiety and depression",
+     "Self-esteem, peer and social issues",
+     "Autism and ADHD diagnostic assessment",
+     "IQ, cognitive and educational assessment (giftedness, learning difficulties)",
+     "OCD and emotional regulation",
+     "Play-based therapy (AutPlay) and art therapy",
+     "High school transitions",
+     "Parenting education",
+     "Also at Thornton (Unit 3, 11 Glenwood Dr, (02) 4934 7000), East Maitland (Unit 4D, 11 Molly Morgan Dr) and Singleton"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teenagers and young adults, and their families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "Team bio: \"creating a warm, engaging, and neuroaffirming space\""
+    ],
+    "sources": [
+     "https://www.childpsych.com.au/",
+     "https://www.childpsych.com.au/our-psychologists"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Life Matters Psychologists",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "Life Matters Psychologists",
+    "address": "29 Donald St, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4965 3530",
+    "fax": "",
+    "email": "info@lifematters.com.au",
+    "ereferral": "",
+    "website": "https://www.lifematters.com.au/",
+    "interests": [
+     "Persistent anxiety",
+     "School refusal",
+     "Intense emotional outbursts",
+     "Social difficulties",
+     "Parenting support",
+     "ADHD and ASD assessment (separate pages on site)",
+     "Works with parents, paediatricians and educators"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "\"Toddlers, teens and everyone in between\"; adults also seen",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lifematters.com.au/therapy-child-adolescent"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "LifeWise",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "The LifeWise Centre",
+    "address": "16 John St, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "(02) 4948 1226",
+    "fax": "",
+    "email": "admin@lifewise.com.au",
+    "ereferral": "",
+    "website": "https://www.lifewise.com.au/",
+    "interests": [
+     "Cognitive assessments including autism (for school, NDIS and other purposes)",
+     "Anxiety",
+     "Trauma",
+     "Parenting",
+     "Paediatric service",
+     "Also at 41 Maize St, Tenambit (Maitland) (02) 4932 0432"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults (age range not stated)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lifewise.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Maddie Dalby",
+    "specialty": "Psychology (children, teenagers and adults)",
+    "practice": "Psychology NSW",
+    "address": "3/42 William St, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "1300 210 363",
+    "fax": "(02) 4003 3691",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.psychologynsw.com.au",
+    "interests": [
+     "Anxiety and phobias",
+     "Depression",
+     "Trauma and PTSD",
+     "EMDR (particular interest)",
+     "Parenting",
+     "ADHD",
+     "Autism",
+     "Grief and loss",
+     "Families"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teenagers, adults, older adults and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "Patient groups listed: \"Aboriginal & Torres Strait Islander\", \"Non-Binary People\", \"LGBTIQ\", people with disabilities",
+     "\"Wheelchair access\""
+    ],
+    "sources": [
+     "https://www.halaxy.com/profile/mrs-maddie-dalby/psychologist/779621"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Michelle Kent",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "EMPOWR",
+    "address": "22 Donald Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "(03) 4051 3525",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://empowr.com.au/",
+    "interests": [
+     "ADHD",
+     "Autism",
+     "Anxiety",
+     "Trauma and PTSD",
+     "School issues",
+     "Peer relationships",
+     "Parenting",
+     "Family conflict",
+     "Education and learning disabilities",
+     "Self-harm",
+     "Psychological testing and evaluation",
+     "Play-based and family work"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (6–10), preteens, teens, adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": "limited",
+     "np_note": "Waitlist for new clients (Psychology Today profile)"
+    },
+    "inclusive": [
+     "\"I take a neuroaffirming, trauma-informed, and holistic approach\"",
+     "Profile lists Gay Allied, Intersex Allied, Queer Allied and Transgender Allied"
+    ],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/michelle-kent-nelson-bay-nsw/1472618"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "New Lambton Psychology",
+    "specialty": "Psychology (children and adolescents)",
+    "practice": "New Lambton Psychology",
+    "address": "37 Freyberg Street, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "(02) 4950 9820",
+    "fax": "(02) 4950 9791",
+    "email": "reception@newlambtonpsychology.com.au",
+    "ereferral": "",
+    "website": "https://newlambtonpsychology.com.au/",
+    "interests": [
+     "Comprehensive, diagnostic, cognitive and developmental assessments for children up to 16 (reports for schools, health practitioners and funding; not family law)",
+     "Individual therapy for children and adolescents",
+     "Anxiety",
+     "Parenting difficulties",
+     "Family issues",
+     "Trauma recovery",
+     "Self-esteem and body image",
+     "Group programs (Medicare-eligible when offered)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Therapy: children, adolescents and adults; assessments: children up to 16",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "Assessment availability depends on clinician capacity"
+    },
+    "inclusive": [
+     "\"New Lambton Psychology is committed to diversity, fairness, overcoming injustice and social inclusion\"",
+     "A clinician is \"a proudly registered clinician under the ACON Welcome Here Project\""
+    ],
+    "sources": [
+     "https://newlambtonpsychology.com.au/",
+     "https://www.localsearch.com.au:443/profile/new-lambton-psychology/clf66n1kd000808l91dsd7ll3"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Oracle Psychology",
+    "specialty": "Psychology (children and adolescents)",
+    "practice": "Oracle Psychology",
+    "address": "Unit 6/19 Bolton St, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4929 2223",
+    "fax": "",
+    "email": "admin@oraclepsych.com.au",
+    "ereferral": "Online intake form on website",
+    "website": "https://www.oraclepsychology.com.au/",
+    "interests": [
+     "Anxiety",
+     "Depression",
+     "Trauma",
+     "OCD",
+     "Oppositional defiant disorder",
+     "Parenting challenges",
+     "Eating disorders",
+     "ADHD and autism diagnosis and management",
+     "Learning assessments including dyslexia",
+     "Behaviour difficulties and behaviour support plans",
+     "Telehealth child psychology"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teenagers and young adults (adult services also listed)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.oraclepsychology.com.au/",
+     "https://www.localbusinessguide.com.au/nsw/oraclepsychology",
+     "https://disabilitysupportguide.com.au/profile/oracle-psychology"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "ORS Maitland",
+    "specialty": "Psychology (children, teens and adults) within allied health/NDIS provider",
+    "practice": "ORS Group",
+    "address": "2/12 Ken Tubman Drive, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "1800 000 677",
+    "fax": "",
+    "email": "ors@orsgroup.com.au",
+    "ereferral": "",
+    "website": "https://orsgroup.com.au/contact-us/maitland/",
+    "interests": [
+     "Child and teen therapy and counselling",
+     "Psychological assessments including ADHD and autism",
+     "Managing emotions and understanding behaviour",
+     "Early childhood development"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"Front door disability access and accessible parking available via Church Street.\"",
+     "\"There is wheelchair accessible entry, and an accessible bay in the community car park 20 m away.\""
+    ],
+    "sources": [
+     "https://orsgroup.com.au/contact-us/maitland/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Psychology Centre Newcastle",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "Psychology Centre Newcastle",
+    "address": "1st Floor, Suite 1, 118 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "1300 294 619",
+    "fax": "",
+    "email": "admin@psychologycentrenewcastle.com.au",
+    "ereferral": "",
+    "website": "https://www.psychologycentrenewcastle.com.au/",
+    "interests": [
+     "Trauma",
+     "Anxiety and depression",
+     "Grief",
+     "Dr Danielle Perks (Psychology Today profile): trauma and PTSD, ADHD, autism, behavioural issues, oppositional defiance, learning disabilities, parenting, parent-child interaction therapy, EMDR"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages: children, adolescents and adults (profile lists toddlers upward)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"committed to providing a safe and welcoming environment for all people\"",
+     "\"providing psychological support that is culturally safe and inclusive\""
+    ],
+    "sources": [
+     "https://www.psychologycentrenewcastle.com.au/",
+     "https://psychologytoday.com/au/counselling/psychology-centre-newcastle-broadmeadow-nsw/1273413"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Redstone Psychology",
+    "specialty": "Psychology (adults, children and adolescents)",
+    "practice": "Redstone Psychology",
+    "address": "83 Cowper St, Wallsend NSW 2287",
+    "suburb": "Wallsend",
+    "phone": "(02) 4072 2027",
+    "fax": "",
+    "email": "admin@redstonepsychology.com.au",
+    "ereferral": "",
+    "website": "https://redstonepsychology.com.au/",
+    "interests": [
+     "Individuals and families"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults, children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://redstonepsychology.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Sarah Zimmerman",
+    "specialty": "Psychology (children and parents)",
+    "practice": "Tailor Allied Health",
+    "address": "Shop 2/251 Soldiers Point Rd, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "(02) 4981 0416",
+    "fax": "",
+    "email": "reception@tailoralliedhealth.com.au",
+    "ereferral": "",
+    "website": "https://tailoralliedhealth.com.au/",
+    "interests": [
+     "Supports parents concerned about a child's learning, behaviour or social-emotional development"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and parents (Psychology Today listing); practice sees all life stages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.psychologytoday.com/au/counselling/nsw/newcastle?category=toddlers-preschoolers-0-to-6",
+     "https://tailoralliedhealth.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "See Hear Speak Psychology",
+    "specialty": "Psychology (children, teens and young adults)",
+    "practice": "See Hear Speak Psychology",
+    "address": "171 Main Road, Speers Point NSW 2284",
+    "suburb": "Speers Point",
+    "phone": "(02) 4905 0236",
+    "fax": "",
+    "email": "admin@seehearspeak.com.au",
+    "ereferral": "",
+    "website": "https://www.seehearspeak.com.au/",
+    "interests": [
+     "Anxiety and emotional regulation",
+     "Autism and ADHD assessment",
+     "School refusal",
+     "Trauma and major life changes",
+     "Parenting, family dynamics and co-parenting",
+     "Early intervention before starting school",
+     "NDIS-funded assessments and reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Infancy through adolescence and young adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.seehearspeak.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Strive Hive",
+    "specialty": "Psychology (children and adolescents)",
+    "practice": "Strive Hive",
+    "address": "4/55 Donald Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "(02) 4033 2717",
+    "fax": "",
+    "email": "admin@strivehive.com.au",
+    "ereferral": "",
+    "website": "https://strivehive.com.au/",
+    "interests": [
+     "Anxiety and worries",
+     "Low mood",
+     "Attention or concentration difficulties",
+     "Emotional outbursts",
+     "Sleep problems",
+     "Friendship issues",
+     "Family changes (separation, loss)",
+     "School adjustment",
+     "Circle of Security Parenting",
+     "AutPlay Therapy",
+     "Clinical and general psychologists and mental health social worker"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adolescents (parents/carers attend first appointment for under-14s); adults also seen",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://strivehive.com.au/child",
+     "https://strivehive.com.au/fees"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Hummingbird Centre",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "The Hummingbird Centre",
+    "address": "22 Brunker Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4946 0919",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hummingbirdcentre.com.au/",
+    "interests": [
+     "Psychology for children, adolescents and adults",
+     "Families welcome",
+     "Also Warners Bay (3/2-4 King St) and East Maitland (Suite 1, 28 Mitchell Drive) rooms",
+     "Online therapy across Australia"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"We recognise that our clients come from diverse backgrounds, cultures and walks of life\"",
+     "\"Our Maitland rooms are 100% accessible with a free private car park\"",
+     "\"step-free, pram-friendly access throughout\""
+    ],
+    "sources": [
+     "https://www.hummingbirdcentre.com.au/"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Nest Health Hub",
+    "specialty": "Psychology (children, adolescents and adults)",
+    "practice": "The Nest Health Hub",
+    "address": "Level 1, Suite 22, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4058 4151",
+    "fax": "",
+    "email": "admin@nesthealthhub.com.au",
+    "ereferral": "",
+    "website": "https://www.nesthealthhub.com.au/",
+    "interests": [
+     "Anxiety",
+     "Childhood and developmental trauma",
+     "ADHD",
+     "Autism",
+     "Oppositional defiant disorder",
+     "Parenting support"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nesthealthhub.com.au/psychology"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Psychology Place",
+    "specialty": "Clinical and registered psychology (children, adolescents and adults)",
+    "practice": "The Psychology Place",
+    "address": "Level 2, Suite 15, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4956 3353",
+    "fax": "",
+    "email": "info@thepsychologyplace.com.au",
+    "ereferral": "",
+    "website": "https://www.thepsychologyplace.com.au/",
+    "interests": [
+     "EMDR for children",
+     "Tuning into Kids",
+     "ADHD and autism diagnosis and assessment",
+     "Learning assessments",
+     "Educational and psychological assessments for young people",
+     "Challenging behaviours and emotional regulation",
+     "Parents and families"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents, adults and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.thepsychologyplace.com.au/team",
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/kotara-2289-nsw/the-psychology-place/psychology/f81bc601-4a75-c15f-4d6e-35b9702c8733"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Willow Tree Clinic",
+    "specialty": "Psychology (children, adolescents and adults); also OT and speech",
+    "practice": "The Willow Tree Clinic",
+    "address": "Level 2, Suite 2, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4989 7878",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://thewillowtreeclinic.com.au/",
+    "interests": [
+     "Anxiety",
+     "Autism assessment",
+     "ADHD assessment",
+     "Trauma therapy",
+     "Parenting support",
+     "Theraplay (babies and toddlers upward)",
+     "Evidence-based behaviour support",
+     "Support to out-of-home care and disability agencies",
+     "Clinic, community or telehealth sessions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (including babies and toddlers for Theraplay), adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "\"We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past and present.\"",
+     "\"respects and supports everyone’s right to freely identify and affirm their sexual or romantic orientation\"",
+     "\"providing a safe and welcoming environment for all people\""
+    ],
+    "sources": [
+     "https://thewillowtreeclinic.com.au/psychology/",
+     "https://localsearch.com.au/profile/the-willow-tree-clinic/clf23yk2r007g08mi27madp5s"
+    ],
+    "checked": "2026-11-01",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
