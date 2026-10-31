@@ -116,8 +116,8 @@ def card(p):
     if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or [])]).lower()
-    return (f'<li class="sp-card" data-q="{e(q)}" data-b="{" ".join(b[0] for b in badges(p))}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
-            f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p></li>')
+    return (f'<li class="sp-card" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join(b[0] for b in badges(p))}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
+            f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p><p class="sp-act"><button type="button" class="sp-sug">Suggest a tag</button> · <button type="button" class="sp-pr1">Print</button> · <a href="/contact/">Something wrong?</a></p></li>')
 CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording. Many practices offer this care without advertising it.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 CATS = {}
@@ -132,7 +132,7 @@ def head(title, desc, url):
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
-foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=4"></script>')
+foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=5"></script>')
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
@@ -168,7 +168,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
-            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-count" aria-live="polite"></p>'
+            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
 labs = sorted(CATS, key=lambda x: x.lower())

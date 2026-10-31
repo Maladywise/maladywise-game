@@ -692,3 +692,27 @@ html[data-theme="dark"] .sp-card .sp-t{background:#2E263E;color:#D9CFF2}
 /* desktop: keep logo and menu on one line now the menu has 7 links */
 @media (min-width:1081px){ .bar-in{max-width:1280px;flex-wrap:nowrap} }
 @media (min-width:1081px) and (max-width:1279px){ .navlink{font-size:14px;padding:8px 4px} .bar .tools{gap:4px} }
+.sp-card .sp-act{margin:6px 0 0;font-size:12.5px;color:var(--muted)}
+.sp-card .sp-act a{color:var(--muted)}
+.sp-sug{border:0;background:none;padding:0;font:inherit;color:var(--brand,#4A3480);text-decoration:underline;cursor:pointer}
+.sp-sugbox{margin-top:8px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px;font-size:13px}
+.sp-sugbox p{margin:0 0 8px}.sp-sugt{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.sp-sugt .sp-chip{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.sp-sugt .sp-chip:disabled{opacity:.5}
+.sp-sugbtns{display:flex;gap:8px}.sp-sugbtns button{border:0;border-radius:999px;padding:7px 16px;font:600 13px Poppins,system-ui,sans-serif;cursor:pointer}
+.sp-sugsend{background:var(--brand,#4A3480);color:#fff}.sp-sugx{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.sp-card .sp-t-v{background:#EEF3EA;color:#2F5A2A}.sp-card .sp-t-v small{opacity:.7;font-size:10.5px}
+html[data-theme="dark"] .sp-card .sp-t-v{background:#1E2E1C;color:#B9DDB2}
+.sp-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 6px}.sp-tools .sp-count{margin:0}
+.sp-prall,.sp-pr1{border:0;background:none;padding:0;font:inherit;color:var(--brand,#4A3480);cursor:pointer}
+.sp-prall{font:600 13px Poppins,system-ui,sans-serif;margin-left:auto}.sp-pr1{text-decoration:underline}
+.sp-phead{display:none}
+@media print{
+  .sp-phead{display:block;font-size:10pt;color:#444;margin:0 0 8pt;border-bottom:1px solid #ccc;padding-bottom:4pt}
+  .sp-search,.sp-chips,.sp-bnote,.sp-tools,.sp-act,.sp-sugbox,.sp-more,.sp-results{display:none!important}
+  .sp-card{break-inside:avoid;box-shadow:none!important;border:1px solid #bbb!important;margin-bottom:6pt}
+  .sp-card[hidden]{display:none!important}
+  body.sp-print1 .sp-card:not(.sp-one),body.sp-print1 .lede{display:none!important}
+  .sp-card a{color:#000;text-decoration:none}
+  details.sp-b>p{display:none}
+}

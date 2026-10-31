@@ -3,6 +3,7 @@
 //   We count IDs seen in the last 75s. Nothing is written to disk; IPs are only used briefly for rate limiting.
 // - Basil + Clover leaderboards: all-time and today's daily challenge. Stores a chosen name, score, round and a random
 //   per-browser game ID (so a player's best replaces their old score). Top 200 kept per board.
+// - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
 const http = require("http");
 const { createClient } = require("redis");
@@ -89,6 +90,65 @@ async function lbAdd(b, id, n, s, r) {
   if (!m[id] || s > m[id].s) m[id] = { n, s, r }; else m[id].n = n;
 }
 
+// ---------- Specialists: visitor-suggested practical tags (fixed list, no free text, moderated) ----------
+// A tag needs 3 different visitors (by hashed IP) and owner approval before it shows. IPs are never stored, only a salted hash.
+const crypto = require("crypto");
+const TAGS = ["wc", "park", "pram", "interp", "fees", "ah"];
+const ADMIN = process.env.TAG_ADMIN_KEY || "";
+const SALT = process.env.TAG_SALT || "mw-tags";
+let tagCache = null, tagCacheT = 0;
+const memTag = { v: {}, pend: new Set(), ok: {}, no: new Set(), names: {} };
+function ipHash(ip) { return crypto.createHash("sha256").update(SALT + ip).digest("hex").slice(0, 16); }
+function pidOk(p) { return /^[a-z0-9]{3,60}$/.test(p); }
+function isAdmin(k) { const a = Buffer.from(String(k || "")), b = Buffer.from(ADMIN); return ADMIN.length >= 16 && a.length === b.length && crypto.timingSafeEqual(a, b); }
+function tagName(s) { return String(s || "").replace(/[^A-Za-z0-9 '&(),.\-–]/g, "").replace(/\s+/g, " ").trim().slice(0, 80); }
+async function tagAdd(p, t, h, n) {
+  const k = p + "|" + t;
+  if (kv && kv.isReady) {
+    if (await kv.sIsMember("tg:no", k)) return;
+    const ok = (await kv.hGet("tg:ok", p) || "").split(",");
+    if (ok.indexOf(t) >= 0) return;
+    await kv.sAdd("tg:v:" + k, h); await kv.expire("tg:v:" + k, 180 * 86400);
+    if (n) await kv.hSet("tg:names", p, n);
+    if (await kv.sCard("tg:v:" + k) >= 3) await kv.sAdd("tg:pend", k);
+    return;
+  }
+  if (memTag.no.has(k)) return;
+  (memTag.v[k] = memTag.v[k] || new Set()).add(h); if (n) memTag.names[p] = n;
+  if (memTag.v[k].size >= 3 && !(memTag.ok[p] || []).includes(t)) memTag.pend.add(k);
+}
+async function tagOk() {
+  if (tagCache && Date.now() - tagCacheT < 60000) return tagCache;
+  const out = {};
+  if (kv && kv.isReady) { const h = await kv.hGetAll("tg:ok"); for (const p in h) { const l = h[p].split(",").filter(Boolean); if (l.length) out[p] = l; } }
+  else for (const p in memTag.ok) if (memTag.ok[p].length) out[p] = memTag.ok[p];
+  tagCache = out; tagCacheT = Date.now(); return out;
+}
+async function tagQueue() {
+  const rows = [];
+  if (kv && kv.isReady) {
+    for (const k of await kv.sMembers("tg:pend")) { const [p, t] = k.split("|"); rows.push({ p, t, n: await kv.hGet("tg:names", p) || p, c: await kv.sCard("tg:v:" + k) }); }
+  } else for (const k of memTag.pend) { const [p, t] = k.split("|"); rows.push({ p, t, n: memTag.names[p] || p, c: memTag.v[k].size }); }
+  const approved = await tagOk(), names = {};
+  for (const p in approved) names[p] = (kv && kv.isReady ? await kv.hGet("tg:names", p) : memTag.names[p]) || p;
+  return { pending: rows, approved, names };
+}
+async function tagSet(p, t, v) {
+  const k = p + "|" + t; tagCache = null;
+  if (kv && kv.isReady) {
+    await kv.sRem("tg:pend", k);
+    const cur = (await kv.hGet("tg:ok", p) || "").split(",").filter(Boolean).filter((x) => x !== t);
+    if (v === "1") cur.push(t);
+    if (v === "0") await kv.sAdd("tg:no", k);
+    if (v === "2") await kv.del("tg:v:" + k);
+    if (cur.length) await kv.hSet("tg:ok", p, cur.join(",")); else await kv.hDel("tg:ok", p);
+    return;
+  }
+  memTag.pend.delete(k); const cur = (memTag.ok[p] || []).filter((x) => x !== t);
+  if (v === "1") cur.push(t); if (v === "0") memTag.no.add(k); if (v === "2") delete memTag.v[k];
+  memTag.ok[p] = cur;
+}
+
 const server = http.createServer(async (req, res) => {
   const origin = req.headers.origin || "";
   if (ALLOWED.test(origin)) { res.setHeader("Access-Control-Allow-Origin", origin); res.setHeader("Vary", "Origin"); }
@@ -124,6 +184,27 @@ const server = http.createServer(async (req, res) => {
       if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n")), s, r);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay() }));
+    }
+    if (url.pathname === "/tags") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end(JSON.stringify(await tagOk()));
+    }
+    if (url.pathname === "/tag" && req.method === "POST") {
+      const q = url.searchParams, p = clean(q.get("p"), 60).replace(/-/g, ""), t = q.get("t");
+      const ok = pidOk(p) && TAGS.includes(t);
+      const xf = (req.headers["x-forwarded-for"] || "").split(",").map((x) => x.trim()).filter(Boolean);
+      const rip = req.headers["cf-connecting-ip"] || req.headers["true-client-ip"] || xf[xf.length - 1] || req.socket.remoteAddress || "";
+      if (ok && !limited("tg" + rip, 30)) await tagAdd(p, t, ipHash(rip), tagName(q.get("n")));
+      res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ ok }));
+    }
+    if (url.pathname === "/tagq" || url.pathname === "/tagset") {
+      const q = url.searchParams;
+      if (limited("ta" + ip, 300) || !isAdmin(q.get("k"))) { res.writeHead(403); return res.end(); }
+      if (url.pathname === "/tagset" && req.method === "POST") {
+        const p = clean(q.get("p"), 60).replace(/-/g, ""), t = q.get("t"), v = q.get("v");
+        if (pidOk(p) && TAGS.includes(t) && ["0", "1", "2"].includes(v)) await tagSet(p, t, v);
+      }
+      res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify(await tagQueue()));
     }
     if (url.pathname === "/" || url.pathname === "/health") { res.writeHead(200, { "Content-Type": "text/plain" }); return res.end("ok"); }
     res.writeHead(404); res.end();
