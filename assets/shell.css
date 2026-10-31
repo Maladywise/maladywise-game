@@ -672,6 +672,9 @@ p,li,h1,h2,h3,.gtitle p{text-wrap:pretty}
 .sp-b-ga{background:#F3EEFF;border-color:#C9B8F0;color:#4A3480}
 .sp-b-ti{background:#E8F4F1;border-color:#A9D3C8;color:#1F6457}
 .sp-b-ab{background:#FBEDE6;border-color:#E3B9A3;color:#8A3A1C}
+.sp-b-mw{background:#E6EFFC;border-color:#A8C3EE;color:#17468F;font-weight:600}.sp-b-mw > p{font-weight:400}
+details.sp-b-mw summary{background:#E6EFFC;border-color:#A8C3EE}
+html[data-theme="dark"] .sp-b-mw,html[data-theme="dark"] details.sp-b-mw summary{background:#16294A;color:#A9C8F5}
 .sp-chip{opacity:.75}.sp-chip[aria-pressed="true"]{opacity:1;box-shadow:0 0 0 2px currentColor inset}
 .sp-bnote{margin:0 0 8px;font-size:12px;color:var(--muted)}
 .sp-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
