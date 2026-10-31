@@ -172,6 +172,7 @@ for lab, ppl in CATS.items():
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
 labs = sorted(CATS, key=lambda x: x.lower())
+SURG = re.compile(r"surg|ENT \(|Obstetrics|Ophthalm|Orthopaed|^Urology", re.I)
 def tiles(keys): return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/"><b>{e(k)}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
 allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", ""), "b": [b[0] for b in badges(p)]} for p in L]
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
@@ -179,7 +180,7 @@ desc = "Directory of private specialists and allied health in Newcastle and the 
 page = (head(title, desc, "/specialists/") + '<h1>Specialists</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
         f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
         '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label>' + CHIPS + '<ul class="sp-results" hidden></ul>'
-        '<h2>Specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
+        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(page)
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
