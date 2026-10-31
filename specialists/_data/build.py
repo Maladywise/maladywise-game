@@ -13,7 +13,8 @@ def is_public(p):
     return bool(PUB.search(txt)) and not PRIV.search(txt + " " + hosp)
 TITLE = re.compile(r"^(Dr|Prof|Professor|A/Prof|Assoc Prof|Associate Professor|Conjoint Associate Professor|Clinical Associate Professor)\.?\s+", re.I)
 def sortkey(n):
-    if TITLE.match(n) or re.match(r"^[A-Z][a-z]+ [A-Z][a-zA-Z'\-]+$", n):
+    BIZ = re.compile(r"(Therapy|Health|Clinic|Physio|Speech|Pathology|Centre|Center|Group|Services|Medical|Hearing|Psychology|Podiatry|Rehab|Studio|Care|Diabetes|Alliance|Hub|Project|Club|Kids|Ethos|Audiology|Dietitian|Nutrition|Wellness|Practice|Specialists|Paediatrics|Dermatology|Orthopaedic|Surgery|Hospital|Unit|Service|Inq|Lactation|Haven|Minds|Wise|Oak|Rainbow|Avina|Beam|Aspire|Uplift|Tundra|Earport|Audika|Caremmunity|Sanctuary|Replenish|Peak|Prime|Sport)", re.I)
+    if TITLE.match(n) or (re.match(r"^[A-Z][a-z]+(-[A-Z][a-z]+)? [A-Z][a-zA-Z'\-]+$", n) and not BIZ.search(n)):
         base = TITLE.sub("", n); base = re.sub(r"\s*\(.*?\)", "", base).strip()
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
     return re.sub(r"^the\s+", "", n.lower())
