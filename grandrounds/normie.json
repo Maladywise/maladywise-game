@@ -128,127 +128,126 @@
  {
   "week": "2026-11-01",
   "number": 2,
-  "fallback": true,
   "questions": [
    {
-    "c": "Weird but true",
-    "q": "Wombats produce poo in what shape?",
-    "a": "Cubes",
-    "e": "Accept cube or cube-shaped. Stackable. Very tidy animals."
+    "c": "Baseball",
+    "q": "Which Major League Baseball team won the first World Series title in its history this week, beating the Tampa Bay Rays in five games?",
+    "a": "Milwaukee Brewers",
+    "e": "Accept the Brewers or Milwaukee. Game 5 finished 4–1 on 28 October (US time); catcher William Contreras was named series MVP. If you said the Rays, they managed exactly one win, so close-ish."
    },
    {
-    "c": "Weird but true",
-    "q": "How many hearts does an octopus have?",
-    "a": "Three",
-    "e": "Two for the gills, one for everything else."
+    "c": "Football",
+    "q": "Which England captain won the men’s Ballon d’Or at a ceremony in London on Monday?",
+    "a": "Harry Kane",
+    "e": "Accept Kane. 26 October at the London Palladium, after 73 goals for Bayern Munich and England. Took him a while to collect silverware; now he needs a bigger shelf."
    },
    {
-    "c": "Weird but true",
-    "q": "What is Scotland’s national animal?",
-    "a": "The unicorn",
-    "e": "Not the Highland cow. Sorry, Highland cow."
+    "c": "Football",
+    "q": "Who won the women’s Ballon d’Or on the same night, playing for Barcelona and London City Lionesses?",
+    "a": "Alexia Putellas",
+    "e": "Accept Putellas. 26 October in London; Ewa Pajor was second and Khadija Shaw third. Her third Ballon d’Or, for those keeping score at home."
    },
    {
-    "c": "Weird but true",
-    "q": "What colour is a polar bear’s skin, under the fur?",
-    "a": "Black",
-    "e": "The fur isn’t even white. It’s clear."
+    "c": "NFL",
+    "q": "The NFL played its first ever regular-season game in France this week. In which city?",
+    "a": "Paris",
+    "e": "Accept Saint-Denis or the Stade de France. 25 October: Steelers 16, Saints 10, in front of 78,488 fans. Aaron Rodgers called La Marseillaise ‘gorgeous’. Ooh la la."
    },
    {
-    "c": "Weird but true",
-    "q": "Which bird is the only one that can fly backwards?",
-    "a": "The hummingbird",
-    "e": "Accept hummingbird. Not the emu. Emus don’t do forwards either."
+    "c": "Halloween",
+    "q": "The world’s heaviest jack-o’-lantern, carved from a 3,156 lb (1,431 kg) pumpkin, went on show this week in which Massachusetts town famous for its witches?",
+    "a": "Salem",
+    "e": "Unveiled on Salem Common on 26 October, with the mayor proclaiming 27 October ‘Great Pumpkin Day’. Grown by Ron Wallace in Rhode Island. Roughly the weight of two dairy cows, minus the mooing."
    },
    {
-    "c": "Weird but true",
-    "q": "In seahorses, which parent carries the eggs and gives birth?",
-    "a": "The male",
-    "e": "Accept the father or dad. Equality, seahorse-style."
+    "c": "Tech",
+    "q": "Apple unveiled its first Mac with an OLED screen this week. What else can that MacBook Pro screen do for the first time on a Mac?",
+    "a": "Respond to touch",
+    "e": "Accept touchscreen or touch. Announced 28 October, on sale 6 November from US$2,899. The glowing Apple logo is back too. Fingerprints on your MacBook, coming soon."
    },
    {
-    "c": "Weird but true",
-    "q": "What is the collective noun for a group of flamingos?",
-    "a": "A flamboyance",
-    "e": "Accept flamboyance. Also a stand. Flamboyance is better."
+    "c": "Words",
+    "q": "Dictionary.com named its 2026 Word of the Year on Monday. Which internet word means pushing something to the max, as in ‘sleep___’?",
+    "a": "Maxxing",
+    "e": "Accept maxing. Announced 26 October; runners-up included ‘affordability’ and ‘unc’. We are quizmaxxing right now."
    },
    {
-    "c": "Weird but true",
-    "q": "Archaeologists have found what food, thousands of years old and still edible, in ancient Egyptian tombs?",
-    "a": "Honey",
-    "e": "It basically never spoils. Your sourdough starter could never."
+    "c": "Music",
+    "q": "Which Canadian pop star’s single ‘Housewife’ debuted at No. 1 on the Billboard Global 200 this week?",
+    "a": "Tate McRae",
+    "e": "Accept McRae. Chart dated 31 October (revealed 27 October). It stalled at No. 2 on the US Hot 100, behind Ella Langley’s ‘Choosin’ Texas’, which notched a record-extending 25th week at the top."
    },
    {
-    "c": "Weird but true",
-    "q": "Which planet has a day that’s longer than its year?",
-    "a": "Venus",
-    "e": "243 Earth days to spin, 225 to orbit. Slow mornings."
+    "c": "Tennis",
+    "q": "Which Kazakh world No. 1 defended her Ningbo Open title on Sunday, thrashing Leylah Fernandez 6–2 6–2?",
+    "a": "Elena Rybakina",
+    "e": "Accept Rybakina. 25 October, her first trophy as world No. 1 and a tour-leading fourth of 2026. Fernandez blinked and it was over."
    },
    {
-    "c": "Weird but true",
-    "q": "Bananas are slightly radioactive because they contain which element?",
-    "a": "Potassium",
-    "e": "Potassium-40, to be exact. You’d need millions at once."
+    "c": "Nature",
+    "q": "Scientists in Yunnan, China, named a giant new fungus that grows up to 50 cm tall ‘Dianjunus ___’. Fill in the blank, inspired by a famous dinosaur.",
+    "a": "Rex",
+    "e": "Reported 27 October. Pale yellow, finger-shaped and grows on oak roots; it needed a whole new fungal family. A mushroom with king-sized ambition."
    },
    {
-    "c": "Weird but true",
-    "q": "Botanically, strawberries aren’t berries. Which long yellow fruit is?",
-    "a": "The banana",
-    "e": "Accept banana. Botany doesn’t care about your feelings."
+    "c": "Space",
+    "q": "Which space telescope found dusty water ice on the interstellar comet 3I/ATLAS, in a study reported this week?",
+    "a": "James Webb Space Telescope",
+    "e": "Accept Webb or JWST. Reported 26 October, led by Dr Silvia Protopapa. The visitor from another star turns out to look rather like our own icy worlds beyond Neptune. Even aliens do frost."
    },
    {
-    "c": "Weird but true",
-    "q": "Sharks have been around longer than which tall living things you’d find in any forest?",
-    "a": "Trees",
-    "e": "Sharks: about 450 million years. Trees: about 385 million."
+    "c": "Cricket",
+    "q": "India women swept a three-match ODI series 3–0 on Wednesday against a team they had never played in international cricket before. Which African nation?",
+    "a": "Zimbabwe",
+    "e": "28 October in Vadodara, an eight-wicket win, with spinner Vaishnavi Sharma taking five wickets. First date, three-nil. Harsh."
    },
    {
-    "c": "Weird but true",
-    "q": "Which country has more ancient pyramids than Egypt?",
-    "a": "Sudan",
-    "e": "Around 200 to 255 of them, mostly Nubian."
+    "c": "Golf",
+    "q": "Yuri Yoshida came from four shots back to win her first LPGA title at the BMW Ladies Championship in South Korea on Sunday. Which country is she from?",
+    "a": "Japan",
+    "e": "25 October at Pine Beach Golf Links, Haenam, 17 under, one shot clear. If you guessed Korea, the home crowd agrees with you; the scorecard does not."
    },
    {
-    "c": "Weird but true",
-    "q": "What is the dot over a lowercase i or j called?",
-    "a": "A tittle",
-    "e": "Yes, really. Go on, giggle."
+    "c": "Astronomy",
+    "q": "Astronomers led by MIT’s Dr Lynn Matthews say the atmosphere of which red supergiant in Orion has recovered from its ‘Great Dimming’ of 2019–20?",
+    "a": "Betelgeuse",
+    "e": "Reported 28 October. Its little companion star, Siwarha, tears through the giant’s atmosphere ‘like a jet boat through a lake’. Beetlejuice, Beetlejuice, Beet… no, don’t."
    },
    {
-    "c": "Weird but true",
-    "q": "Which is the only mammal capable of true powered flight?",
-    "a": "The bat",
-    "e": "Accept bat. Flying squirrels just glide. Show-offs."
+    "c": "Archaeology",
+    "q": "Scientists revealed hidden glazes on the 37,000-year-old Chauvet Cave paintings without touching the walls. What kind of light did they shine on them?",
+    "a": "Ultraviolet",
+    "e": "Accept UV. Reported 28 October from the Ardèche in France. An orange glow suggests some lines were drawn with burning-hot charcoal. Prehistoric artists: always lit."
    },
    {
-    "c": "Weird but true",
-    "q": "Cleopatra lived closer in time to the Moon landing than to the building of which structure?",
-    "a": "The Great Pyramid of Giza",
-    "e": "Accept the Great Pyramid or the pyramids at Giza."
+    "c": "Tennis",
+    "q": "Kateřina Siniaková won the Japan Women’s Open in Osaka on Sunday while ranked 86th in singles. In which form of tennis is she ranked world No. 1?",
+    "a": "Doubles",
+    "e": "25 October, a 6–1 6–0 demolition of Ashlyn Krueger in 68 minutes, ten years after losing the Osaka final. Turns out she’s handy without a partner too."
    },
    {
-    "c": "Weird but true",
-    "q": "Teaching at Oxford University began before which Mesoamerican people founded their capital, Tenochtitlan?",
-    "a": "The Aztecs",
-    "e": "Accept Aztec or Mexica. Oxford: by 1096. Tenochtitlan: 1325."
+    "c": "Archaeology",
+    "q": "A cupboard in a house on Pompeii’s Via dell’Abbondanza held 24 childhood charms and 38 bronze coins. The skeletons of two baby what were found in a nearby amphora?",
+    "a": "Mice",
+    "e": "Accept wood mice. Reported 29–30 October. The charms (crepundia) were designed to rattle. The mice were probably after a snack and picked the worst possible week."
    },
    {
-    "c": "Weird but true",
-    "q": "Whose fingerprints are so like a human’s they’re hard to tell apart, even under a microscope?",
-    "a": "The koala",
-    "e": "Accept koala. Cute and forensically awkward."
+    "c": "Gardens",
+    "q": "A garden whose gates warn ‘These plants can kill’ was recognised by Guinness on 27 October for most species in a poison garden. In which Northumberland town is it?",
+    "a": "Alnwick",
+    "e": "Accept Alnwick Garden. Created by Jane Percy, Duchess of Northumberland, inspired by a Medici poison garden in Italy. Look, don’t lick."
    },
    {
-    "c": "Weird but true",
-    "q": "Male platypuses have what on their hind legs, unusually for a mammal?",
-    "a": "Venomous spurs",
-    "e": "Accept venom spurs, spurs or venom. Egg-laying, duck-billed and venomous. Showing off, frankly."
+    "c": "Space",
+    "q": "NASA asked companies this week how they would boost the Hubble Space Telescope’s orbit. To at least what altitude, in kilometres?",
+    "a": "600 km",
+    "e": "Accept 600. Request issued 29 October; replies due 30 November, mission by 2032. Hubble has been sinking for years, which is relatable."
    },
    {
     "c": "Brain-melter",
-    "q": "Which is the only letter of the alphabet that doesn’t appear in the name of any US state?",
-    "a": "Q",
-    "e": "Fifty states and not one Q. Count them if you must. We’ll wait."
+    "q": "A rhino-sized dinosaur from a Surrey brickworks, named this week, is called Paludohadros proudlovii. The ‘Paludo’ part comes from a Latin word meaning what?",
+    "a": "Swamp",
+    "e": "Accept marsh, bog or wetland. Published 27 October; senior author Prof Susannah Maidment of the Natural History Museum, London. It was found about 100 m from the famous Baryonyx. Swamp duck, basically. Melted yet?"
    }
   ]
  },
