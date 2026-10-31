@@ -50,7 +50,7 @@ def sortkey(n):
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
     return re.sub(r"^the\s+", "", n.lower())
 people = {}; removed = []; ALLIED_LABELS = set()
-for f in sorted(glob.glob(os.path.join(DD, "*.json"))):
+for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswith("sp-urls.json")):
     for slug, sec in json.load(open(f)).items():
         label = NAMES.get(slug, sec.get("name", slug))
         if slug in ALLIED: ALLIED_LABELS.add(label)
