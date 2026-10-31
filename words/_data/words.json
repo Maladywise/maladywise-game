@@ -44,7 +44,51 @@
   }
  },
  {
-  "date": "2026-11-16",
+  "slug": "prosopagnosia",
+  "word": "Prosopagnosia",
+  "lang": "Greek",
+  "say": "pros-oh-pag-NOH-zhuh",
+  "literal": "not knowing faces",
+  "meaning": "Face blindness: trouble recognising faces, even of family. People learn to recognise others by voice, walk, hair or clothes.",
+  "origin": "From Greek prosopon (face) and agnosia (not knowing). Named in 1947 by German neurologist Joachim Bodamer. The neurologist and writer Oliver Sacks had it himself.",
+  "sentence": "It’s not rudeness, it’s prosopagnosia. Say your name and I’ll love you immediately.",
+  "q": {
+   "text": "In 1994, orthopaedic surgeon Tony Cicoria was struck by lightning. What new obsession followed?",
+   "opts": [
+    "Playing and composing piano music",
+    "Painting portraits",
+    "Speaking Italian",
+    "Juggling"
+   ],
+   "a": 0,
+   "why": "Within weeks he craved piano music and began composing. Oliver Sacks told his story in Musicophilia (2007). How lightning does this is still a mystery."
+  },
+  "date": "2026-11-16"
+ },
+ {
+  "slug": "synaesthesia",
+  "word": "Synaesthesia",
+  "lang": "Greek",
+  "say": "sin-us-THEE-zee-uh",
+  "literal": "sensing together",
+  "meaning": "When one sense triggers another: letters have colours, music has shapes, words have tastes.",
+  "origin": "From Greek syn (together) and aisthesis (sensation). The most common type gives letters and numbers their own colours. It often runs in families.",
+  "sentence": "Tuesday is obviously yellow. My synaesthesia and I will not be taking questions.",
+  "q": {
+   "text": "Capgras syndrome is the belief that…",
+   "opts": [
+    "A loved one has been replaced by an identical impostor",
+    "You are already dead",
+    "Insects are crawling under your skin",
+    "A celebrity is secretly in love with you"
+   ],
+   "a": 0,
+   "why": "Described by French psychiatrist Joseph Capgras in 1923. It’s thought to happen when face recognition works but the emotional ‘glow’ of familiarity doesn’t, so the person looks right but feels wrong. The other options are Cotard’s, Ekbom’s and De Clérambault’s syndromes."
+  },
+  "date": "2026-11-23"
+ },
+ {
+  "date": "2026-11-30",
   "slug": "hexenschuss",
   "word": "Hexenschuss",
   "lang": "German",
@@ -66,7 +110,7 @@
   }
  },
  {
-  "date": "2026-11-23",
+  "date": "2026-12-07",
   "slug": "obdormition",
   "word": "Obdormition",
   "lang": "Latin",
@@ -88,7 +132,7 @@
   }
  },
  {
-  "date": "2026-11-30",
+  "date": "2026-12-14",
   "slug": "placebo",
   "word": "Placebo",
   "lang": "Latin",
@@ -110,7 +154,7 @@
   }
  },
  {
-  "date": "2026-12-07",
+  "date": "2026-12-21",
   "slug": "nostalgia",
   "word": "Nostalgia",
   "lang": "Greek (1688)",
@@ -132,7 +176,7 @@
   }
  },
  {
-  "date": "2026-12-14",
+  "date": "2026-12-28",
   "slug": "kummerspeck",
   "word": "Kummerspeck",
   "lang": "German",
@@ -154,7 +198,7 @@
   }
  },
  {
-  "date": "2026-12-21",
+  "date": "2027-01-04",
   "slug": "muscle",
   "word": "Muscle",
   "lang": "Latin",
@@ -176,7 +220,7 @@
   }
  },
  {
-  "date": "2026-12-28",
+  "date": "2027-01-11",
   "slug": "sternutation",
   "word": "Sternutation",
   "lang": "Latin",
@@ -198,7 +242,7 @@
   }
  },
  {
-  "date": "2027-01-04",
+  "date": "2027-01-18",
   "slug": "quarantine",
   "word": "Quarantine",
   "lang": "Italian (Venetian)",
@@ -220,7 +264,7 @@
   }
  },
  {
-  "date": "2027-01-11",
+  "date": "2027-01-25",
   "slug": "horripilation",
   "word": "Horripilation",
   "lang": "Latin",
@@ -242,7 +286,7 @@
   }
  },
  {
-  "date": "2027-01-18",
+  "date": "2027-02-01",
   "slug": "botulism",
   "word": "Botulism",
   "lang": "Latin",
@@ -264,7 +308,7 @@
   }
  },
  {
-  "date": "2027-01-25",
+  "date": "2027-02-08",
   "slug": "delirium",
   "word": "Delirium",
   "lang": "Latin",
@@ -286,7 +330,7 @@
   }
  },
  {
-  "date": "2027-02-01",
+  "date": "2027-02-15",
   "slug": "influenza",
   "word": "Influenza",
   "lang": "Italian",
@@ -308,7 +352,7 @@
   }
  },
  {
-  "date": "2027-02-08",
+  "date": "2027-02-22",
   "slug": "pupil",
   "word": "Pupil",
   "lang": "Latin",
@@ -330,7 +374,7 @@
   }
  },
  {
-  "date": "2027-02-15",
+  "date": "2027-03-01",
   "slug": "singultus",
   "word": "Singultus",
   "lang": "Latin",
@@ -352,7 +396,7 @@
   }
  },
  {
-  "date": "2027-02-22",
+  "date": "2027-03-08",
   "slug": "malaria",
   "word": "Malaria",
   "lang": "Italian",
@@ -374,7 +418,7 @@
   }
  },
  {
-  "date": "2027-03-01",
+  "date": "2027-03-15",
   "slug": "uvula",
   "word": "Uvula",
   "lang": "Latin",
