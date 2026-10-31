@@ -118,3 +118,9 @@
 .bk-tabs-o button{border-color:#D8CFEA;color:#2E1F57}
 .bk-tabs-o button.on{background:#2E1F57;border-color:#2E1F57;color:#fff}
 .bk-hsbox .bk-hs li.me{outline:2px solid #FFE08A}
+.bk-endless{border-color:#C9BFE6;color:#F1ECF8}
+.bk-endless.locked{opacity:.7;cursor:default;border-style:dashed;font-size:13px}
+.bk-endless.locked:hover{background:transparent}
+.bk-otrophy{font-size:46px;line-height:1;margin:-4px 0 -4px!important}
+.bk-over.win .bk-otitle{color:#B07A0C}
+.bk-crown{font-size:.9em}
