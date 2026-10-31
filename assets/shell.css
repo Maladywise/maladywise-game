@@ -682,3 +682,7 @@ html[data-theme="dark"] .sp-b-nd,html[data-theme="dark"] details.sp-b-nd summary
 html[data-theme="dark"] .sp-b-ga,html[data-theme="dark"] details.sp-b-ga summary{background:#2C2346;color:#CDBDF5}
 html[data-theme="dark"] .sp-b-ti,html[data-theme="dark"] details.sp-b-ti summary{background:#173530;color:#9FD6C8}
 html[data-theme="dark"] .sp-b-ab,html[data-theme="dark"] details.sp-b-ab summary{background:#3A2219;color:#F0B79C}
+.sp-card .sp-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.sp-card .sp-t{padding:2px 9px;border-radius:999px;font-size:12px;background:var(--light,#F1ECF8);color:#4A3480}
+.sp-card .sp-t-pet{background:#FDEFD9;color:#8A5A00}.sp-card .sp-t-bb{background:#E5F4E4;color:#1F6B3A}
+html[data-theme="dark"] .sp-card .sp-t{background:#2E263E;color:#D9CFF2}
