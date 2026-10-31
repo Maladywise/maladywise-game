@@ -28,3 +28,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Owner's name
 - Never put the site owner's name (or "Adam") anywhere on the site, in public files, code comments or data notes. Use "Malady Wise" or "a Malady Wise GP".
+
+## Neurology and psychiatry curiosities
+- data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptogenic clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
+- Tone: fascinated and respectful. These are real people's experiences; never mock patients or make a diagnosis the punchline.
+- Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
