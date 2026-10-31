@@ -1,0 +1,773 @@
+{
+ "dermatology": {
+  "name": "Dermatology",
+  "people": [
+   {
+    "name": "Dr Alvand Amiri",
+    "specialty": "Dermatology",
+    "practice": "Advanced Dermatology and Laser",
+    "address": "125 Mount Pleasant St, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4040 3180",
+    "fax": "",
+    "email": "info@advanceddermatologylaser.com.au",
+    "ereferral": "",
+    "website": "https://advanceddermatologylaser.com.au",
+    "interests": [
+     "Skin cancer and skin cancer surgery",
+     "Inflammatory and autoimmune skin conditions incl. acne, eczema, psoriasis"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://advanceddermatologylaser.com.au/our-team",
+     "https://advanceddermatologylaser.com.au/contact"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John Relic",
+    "specialty": "Dermatology",
+    "practice": "Advanced Dermatology and Laser",
+    "address": "125 Mount Pleasant St, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4040 3180",
+    "fax": "",
+    "email": "info@advanceddermatologylaser.com.au",
+    "ereferral": "",
+    "website": "https://advanceddermatologylaser.com.au",
+    "interests": [
+     "Skin surgery",
+     "Laser technology",
+     "Complex conditions of skin, hair and nails",
+     "Runs paediatric dermatology outpatient clinic at John Hunter Hospital (VMO)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://advanceddermatologylaser.com.au/our-team",
+     "https://advanceddermatologylaser.com.au/contact"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephanie Blake",
+    "specialty": "Dermatology",
+    "practice": "Advanced Dermatology and Laser",
+    "address": "125 Mount Pleasant St, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4040 3180",
+    "fax": "",
+    "email": "info@advanceddermatologylaser.com.au",
+    "ereferral": "",
+    "website": "https://advanceddermatologylaser.com.au",
+    "interests": [
+     "Early skin cancer detection",
+     "Eczema",
+     "Psoriasis",
+     "Paediatric dermatology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://advanceddermatologylaser.com.au/our-team",
+     "https://advanceddermatologylaser.com.au/contact"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jessica Bale",
+    "specialty": "Dermatology",
+    "practice": "Hunter Coast Dermatology & Laser",
+    "address": "Level 3, 95 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4003 7693",
+    "fax": "(02) 4989 9764",
+    "email": "admin@huntercoastderm.com.au",
+    "ereferral": "",
+    "website": "https://huntercoastderm.com.au",
+    "interests": [
+     "Acne",
+     "Rosacea",
+     "Hyperhidrosis",
+     "Early skin cancer detection; surgical and non-surgical skin cancer management",
+     "Cosmetic and laser dermatology",
+     "Vascular and pigment conditions",
+     "Sun-damaged skin"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults (practice accepts referrals for new adult patients)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntercoastderm.com.au/our-dermatology-team/",
+     "https://huntercoastderm.com.au/refer/",
+     "https://huntercoastderm.com.au/dr-jessica-bale-dermatologist/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rashi Malesu",
+    "specialty": "Dermatology",
+    "practice": "Hunter Coast Dermatology & Laser",
+    "address": "Level 3, 95 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4003 7693",
+    "fax": "(02) 4989 9764",
+    "email": "admin@huntercoastderm.com.au",
+    "ereferral": "",
+    "website": "https://huntercoastderm.com.au",
+    "interests": [
+     "Acne and acne scarring",
+     "Rosacea",
+     "Melasma and pigmentary disorders",
+     "Precancerous skin lesions",
+     "Hyperhidrosis",
+     "Cosmetic dermatology (injectables, laser rejuvenation)",
+     "Skin cancer and melanoma management"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults (practice accepts referrals for new adult patients)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntercoastderm.com.au/our-dermatology-team/",
+     "https://huntercoastderm.com.au/refer/",
+     "https://huntercoastderm.com.au/dr-rashi-malesu-dermatologist/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Edwina Lamrock",
+    "specialty": "Dermatology",
+    "practice": "Frontier Dermatology",
+    "address": "294 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4022 8739",
+    "fax": "(02) 4088 8086",
+    "email": "reception@frontierdermatology.com.au",
+    "ereferral": "Medical Objects / HealthLink accepted (IDs not published)",
+    "website": "https://www.frontierdermatology.com.au",
+    "interests": [
+     "Acne",
+     "Psoriasis",
+     "Skin cancer",
+     "Rosacea",
+     "Eczema",
+     "Vulval dermatology",
+     "Hyperhidrosis",
+     "Autoimmune connective tissue diseases",
+     "Oncodermatology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Closed to new general dermatology patients (March 2026); acne referrals accepted, routine acne wait over 6 months",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
+    ],
+    "sources": [
+     "https://www.frontierdermatology.com.au/team",
+     "https://www.frontierdermatology.com.au/referrers",
+     "https://www.frontierdermatology.com.au/dr-edwina-lamrock"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alicia Thornton",
+    "specialty": "Dermatology",
+    "practice": "Frontier Dermatology",
+    "address": "294 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4022 8739",
+    "fax": "(02) 4088 8086",
+    "email": "reception@frontierdermatology.com.au",
+    "ereferral": "Medical Objects / HealthLink accepted (IDs not published)",
+    "website": "https://www.frontierdermatology.com.au",
+    "interests": [
+     "Paediatric dermatology",
+     "Acne",
+     "Rosacea",
+     "Eczema",
+     "Psoriasis",
+     "Skin cancer",
+     "Biologic therapy for inflammatory skin conditions",
+     "Hyperhidrosis",
+     "Vulval dermatology",
+     "Vascular anomalies"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Closed to new general and paediatric patients (August 2025); acne referrals paused",
+     "ages": "newborns to adults",
+     "hospitals": [
+      "John Hunter Hospital",
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
+    ],
+    "sources": [
+     "https://www.frontierdermatology.com.au/team",
+     "https://www.frontierdermatology.com.au/referrers",
+     "https://www.frontierdermatology.com.au/dr-alicia-thornton"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Thomas Barrett",
+    "specialty": "Dermatology",
+    "practice": "Frontier Dermatology",
+    "address": "294 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4022 8739",
+    "fax": "(02) 4088 8086",
+    "email": "reception@frontierdermatology.com.au",
+    "ereferral": "Medical Objects / HealthLink accepted (IDs not published)",
+    "website": "https://www.frontierdermatology.com.au",
+    "interests": [
+     "Mohs micrographic surgery",
+     "Skin cancer management",
+     "Autoimmune bullous disease",
+     "Cutaneous lymphomas"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Closed to new general dermatology patients; limited urgent spaces; Mohs referrals accepted",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Ramsay Surgical Centre Charlestown"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
+    ],
+    "sources": [
+     "https://www.frontierdermatology.com.au/team",
+     "https://www.frontierdermatology.com.au/referrers",
+     "https://www.frontierdermatology.com.au/dr-thomas-barrett",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-tom-barrett/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Vivian Tng",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "Mohs micrographic surgery and post-surgical scars",
+     "Lasers",
+     "Medical aesthetics",
+     "Melanoma diagnosis and care",
+     "General dermatology incl. eczema, psoriasis, acne, hidradenitis suppurativa"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Open for Mohs surgery referrals; closed for non-surgical dermatology",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Ramsay Surgical Centre Charlestown"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-vivian-tng/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ben Thompson",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "General dermatology",
+     "Paediatrics"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Books paused",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Paul Chee",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "General dermatology",
+     "Skin cancer management"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Referrals triaged within 1-2 weeks; non-urgent visits can take up to 12 months (practice FAQ)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ann-Maree Kurzydlo",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "General dermatology",
+     "Cosmetic dermatology"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Books closed",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Thomas Stewart",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "General dermatology",
+     "Plastic surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Referrals triaged within 1-2 weeks; non-urgent visits can take up to 12 months (practice FAQ)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephanie Blake",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [
+     "Skin cancer",
+     "Paediatric dermatology",
+     "Inflammatory disorders"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Books paused",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Samra Saikal",
+    "specialty": "Dermatology",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4033 1510",
+    "fax": "02 4033 1520",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "Registered with Medical Objects and HealthLink (IDs not published)",
+    "website": "https://www.novadermatology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Books paused",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states access suits all levels of mobility; one disabled parking spot"
+    ],
+    "sources": [
+     "https://www.novadermatology.com.au/team",
+     "https://www.novadermatology.com.au/",
+     "https://www.novadermatology.com.au/refer-a-patient",
+     "https://www.novadermatology.com.au/faqs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ann-Maree Kurzydlo",
+    "specialty": "Dermatology",
+    "practice": "Valentine Dermatology",
+    "address": "Suite 9, 70 Dilkera Avenue, Valentine NSW 2280",
+    "suburb": "Valentine",
+    "phone": "02 4942 8002",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-ann-maree-kurzydlo/dermatologist/140276",
+     "https://www.doctify.com/au/practice/valentine-dermatology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Paul Chee",
+    "specialty": "Dermatology",
+    "practice": "Valentine Dermatology",
+    "address": "Suite 9, 70 Dilkera Avenue, Valentine NSW 2280",
+    "suburb": "Valentine",
+    "phone": "02 4942 8002",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-paul-chee/dermatologist/140486"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sally de Zwaan",
+    "specialty": "Dermatology",
+    "practice": "Cygnet Dermatology",
+    "address": "287 Turton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "(02) 4913 5938",
+    "fax": "02 4005 4115",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cygnetdermatology.com.au",
+    "interests": [
+     "Medical, surgical and paediatric dermatology",
+     "Genetics of skin cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Books closed to new patients; urgent referrals may be considered (practice site)",
+     "ages": "adults and children (practice)",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://cygnetdermatology.com.au/",
+     "https://cygnetdermatology.com.au/?page_id=274",
+     "https://cygnetdermatology.com.au/?page_id=589",
+     "https://cygnetdermatology.com.au/?page_id=943"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Juliana Junger",
+    "specialty": "Dermatology",
+    "practice": "Cygnet Dermatology",
+    "address": "287 Turton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "(02) 4913 5938",
+    "fax": "02 4005 4115",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cygnetdermatology.com.au",
+    "interests": [
+     "Medical and surgical dermatology",
+     "Clinical trials"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Books closed to new patients; urgent referrals may be considered (practice site)",
+     "ages": "adults and children (practice)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://cygnetdermatology.com.au/",
+     "https://cygnetdermatology.com.au/?page_id=274",
+     "https://cygnetdermatology.com.au/?page_id=589",
+     "https://cygnetdermatology.com.au/?page_id=943"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kirsty Wark",
+    "specialty": "Dermatology",
+    "practice": "Cygnet Dermatology",
+    "address": "287 Turton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "(02) 4913 5938",
+    "fax": "02 4005 4115",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cygnetdermatology.com.au",
+    "interests": [
+     "Medical and surgical dermatology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Books closed to new patients; urgent referrals may be considered (practice site)",
+     "ages": "adults and children (practice)",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://cygnetdermatology.com.au/",
+     "https://cygnetdermatology.com.au/?page_id=274",
+     "https://cygnetdermatology.com.au/?page_id=589",
+     "https://cygnetdermatology.com.au/?page_id=943"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lior Sagi",
+    "specialty": "Dermatology",
+    "practice": "Hunter Dermatology",
+    "address": "4 Bunbury Street, Thornton NSW 2322",
+    "suburb": "Thornton",
+    "phone": "02 4017 8506",
+    "fax": "02 8003 9111",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Screening and treatment of melanoma and non-melanoma skin cancers",
+     "Common skin diseases",
+     "Eczema",
+     "Blistering disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Hebrew"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/thornton-2322-nsw/hunter-dermatology/dermatology/739e04ea-15c2-6b0b-92ed-930d4c5cd283",
+     "https://www.doctify.com/au/specialist/lior-sagi",
+     "https://healthpages.wiki/wiki/Dr_Lior_Sagi_(Dermatologist)"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
