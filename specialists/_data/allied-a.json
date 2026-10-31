@@ -1,0 +1,2764 @@
+{
+ "physiotherapy": {
+  "name": "Physiotherapy",
+  "people": [
+   {
+    "name": "Complete Pelvic Floor Physiotherapy",
+    "specialty": "Physiotherapy (pelvic health)",
+    "practice": "Complete Pelvic Floor Physiotherapy",
+    "address": "Suite 18, Level 2, OTP House, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4975 1311",
+    "fax": "02 4046 6922",
+    "email": "reception@cpfp.com.au",
+    "ereferral": "Electronic referrals page on website",
+    "website": "https://completepelvicfloorphysiotherapy.com.au/",
+    "interests": [
+     "Bladder control (women and men)",
+     "Bowel problems",
+     "Pelvic organ prolapse and pessary fitting",
+     "Antenatal and postpartum physiotherapy",
+     "Breastfeeding and mastitis",
+     "Pelvic pain (women and men)",
+     "Menopause and pelvic floor",
+     "Prostate cancer recovery",
+     "Erectile dysfunction",
+     "Children's bedwetting, daytime wetting and bowel",
+     "Real-time ultrasound",
+     "Continence Aids Payment Scheme (CAPS)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teenagers and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States it treats women, men, children and gender-diverse individuals",
+     "Dedicated LGBTQIA+ page",
+     "Trauma-informed care article featured"
+    ],
+    "sources": [
+     "https://completepelvicfloorphysiotherapy.com.au/",
+     "https://completepelvicfloorphysiotherapy.com.au/men-4/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Brightwell Health – Women's Physiotherapy",
+    "specialty": "Physiotherapy (pelvic health)",
+    "practice": "Brightwell Health",
+    "address": "Suite 1, 710 Hunter Street, Newcastle West NSW 2300",
+    "suburb": "Newcastle West",
+    "phone": "02 4092 8000",
+    "fax": "02 4092 8001",
+    "email": "",
+    "ereferral": "",
+    "website": "https://brightwellhealth.com.au/womens-physiotherapy-newcastle/",
+    "interests": [
+     "Pelvic floor physiotherapy",
+     "Pregnancy and postnatal physiotherapy",
+     "Prolapse and pessary",
+     "Bladder and bowel",
+     "Incontinence",
+     "Pelvic pain",
+     "Return to exercise after pregnancy",
+     "Post-operative care",
+     "Pilates"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Acknowledgement of Country (Awabakal and Worimi)",
+     "Aboriginal flag and progress pride flag displayed on site",
+     "Female physiotherapists (Laura Coventry, Rebecca Martin) listed"
+    ],
+    "sources": [
+     "https://brightwellhealth.com.au/womens-physiotherapy-newcastle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Edgeworth Physiotherapy",
+    "specialty": "Physiotherapy (pelvic health)",
+    "practice": "Edgeworth Physiotherapy",
+    "address": "8/14 Superior Ave, Edgeworth NSW",
+    "suburb": "Edgeworth",
+    "phone": "02 4950 6200",
+    "fax": "02 4958 3125",
+    "email": "info@edgeworthphysiotherapy.com.au",
+    "ereferral": "",
+    "website": "https://edgeworthphysiotherapy.com.au/womens-health-physiotherapy/",
+    "interests": [
+     "Prolapse",
+     "Urinary incontinence",
+     "Overactive bladder and bowel dysfunction",
+     "Pelvic pain",
+     "Pessary fittings",
+     "Men's pelvic health",
+     "Children's bedwetting and constipation",
+     "Antenatal and postnatal care",
+     "Abdominal separation",
+     "Pregnancy-related pelvic girdle pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Practitioner profile states experience with women, men and gender-diverse individuals and trauma-informed care"
+    ],
+    "sources": [
+     "https://edgeworthphysiotherapy.com.au/womens-health-physiotherapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Sport & Spine Physiotherapy",
+    "specialty": "Physiotherapy (women's health, sports)",
+    "practice": "Sport & Spine Physiotherapy",
+    "address": "563 Glebe Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4957 3747",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://sportandspinephysio.com.au/womens-health-in-newcastle",
+    "interests": [
+     "Urinary incontinence",
+     "Bladder and bowel dysfunction",
+     "Antenatal pelvic floor screening",
+     "Postnatal check-ups and return to running/exercise",
+     "Pelvic girdle pain",
+     "Osteoporosis exercise programs",
+     "Clinical Pilates",
+     "GLA:D program",
+     "Dance"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Female women's health physiotherapist stated"
+    ],
+    "sources": [
+     "https://sportandspinephysio.com.au/womens-health-in-newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Pelvic Clinic",
+    "specialty": "Physiotherapy (pelvic health)",
+    "practice": "Hunter Pelvic Clinic",
+    "address": "314 High St, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 2733",
+    "fax": "",
+    "email": "admin@hunterpelvicclinic.com.au",
+    "ereferral": "",
+    "website": "https://hunterpelvicclinic.com.au/",
+    "interests": [
+     "Women's health",
+     "Men's health incl. prostatectomy prehab/rehab and erectile dysfunction",
+     "Paediatric incontinence, bowel management and bedwetting",
+     "Pessaries",
+     "Toilet training",
+     "NDIS continence assessment",
+     "Group classes (reformer, mum and bub Pilates)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Urgent pregnancy-related pelvic pain appointments within 72 hours (as stated)",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterpelvicclinic.com.au/",
+     "https://www.continence.org.au/get-support/directories/hunter-pelvic-clinic"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Toronto Health – Pelvic Floor Physiotherapy",
+    "specialty": "Physiotherapy (pelvic health)",
+    "practice": "Toronto Health",
+    "address": "Suite 102, 43 The Boulevard, Toronto NSW 2283",
+    "suburb": "Toronto",
+    "phone": "02 4959 2203",
+    "fax": "02 4950 5398",
+    "email": "",
+    "ereferral": "",
+    "website": "https://torontohealth.com.au/service/pelvic-floor-physiotherapy/",
+    "interests": [
+     "Urinary incontinence",
+     "Overactive bladder",
+     "Pelvic pain",
+     "Prolapse",
+     "Pregnancy and postpartum incl. diastasis recti",
+     "Bowel dysfunction",
+     "Sexual pain",
+     "Post-surgical pelvic rehab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://torontohealth.com.au/service/pelvic-floor-physiotherapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Back In Motion Cessnock",
+    "specialty": "Physiotherapy (continence and pelvic floor)",
+    "practice": "Back In Motion Cessnock",
+    "address": "298 Maitland Road, Cessnock NSW",
+    "suburb": "Cessnock",
+    "phone": "(02) 4990 4540",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://backinmotion.com.au/cessnock/continence-physiotherapy",
+    "interests": [
+     "Bladder/bowel control",
+     "Stress, urge and mixed incontinence",
+     "Prolapse",
+     "Vulvar pain/sexual pain",
+     "Men's post-prostatectomy incontinence",
+     "Erectile dysfunction",
+     "Chronic pelvic pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States female continence and pelvic floor physiotherapists"
+    ],
+    "sources": [
+     "https://backinmotion.com.au/cessnock/continence-physiotherapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Integrated Physiotherapy",
+    "specialty": "Physiotherapy (pelvic health, vestibular)",
+    "practice": "Newcastle Integrated Physiotherapy",
+    "address": "2c/282 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4957 2961",
+    "fax": "",
+    "email": "info@newcastleintegratedphysiotherapy.com.au",
+    "ereferral": "",
+    "website": "https://newcastleintegratedphysiotherapy.com.au/",
+    "interests": [
+     "Bladder, bowel and pelvic floor",
+     "Women's health in pregnancy, post-natal and menopause",
+     "Vertigo and vestibular rehabilitation",
+     "Sports injury",
+     "Post-surgical rehab",
+     "Chronic pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.continence.org.au/get-support/directories/newcastle-integrated-physiotherapy",
+     "https://www.poyst.com/business/newcastle-integrated-physiotherapy-adamstown-physiotherapist"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Peak Physio (Newcastle West)",
+    "specialty": "Physiotherapy (multi-interest)",
+    "practice": "Peak Physio",
+    "address": "2/826 Hunter St, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "(02) 4940 0401",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.peak-physio.com.au/locations/newcastle-west/",
+    "interests": [
+     "Vestibular physiotherapy",
+     "Neurological physiotherapy (stroke, MS, Parkinson's, ABI, SCI, neuropathy)",
+     "Paediatric physiotherapy",
+     "Women's health (pregnancy, postnatal, incontinence, prolapse, sexual pain, mastitis, menopause)",
+     "Running and gait analysis",
+     "Concussion management",
+     "Falls clinic",
+     "Mobile and online physiotherapy",
+     "Pre-pointe assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Mobile in-home physio stated for people with mobility or access challenges"
+    ],
+    "sources": [
+     "https://www.peak-physio.com.au/locations/newcastle-west/",
+     "https://www.peak-physio.com.au/services/vestibular-physiotherapy/",
+     "https://www.peak-physio.com.au/services/neurological-physiotherapy/",
+     "https://www.peak-physio.com.au/physiotherapy-services-in-newcastle/womens-health/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dizzy Clinics Australia – Newcastle",
+    "specialty": "Physiotherapy (vestibular)",
+    "practice": "Dizzy Clinics Australia",
+    "address": "Family Circle Medical Centre, 35 Gordon Ave, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "1300 349 997",
+    "fax": "",
+    "email": "admin@dizzyclinics.com.au",
+    "ereferral": "",
+    "website": "https://dizzyclinics.com.au/newcastle",
+    "interests": [
+     "BPPV",
+     "Vestibular neuritis/labyrinthitis",
+     "Peripheral vestibular hypofunction",
+     "Vestibular migraine",
+     "PPPD",
+     "Meniere's disease",
+     "Post-concussion",
+     "Imbalance and dizziness"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://dizzyclinics.com.au/newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Performance Physio",
+    "specialty": "Physiotherapy (vestibular, sports)",
+    "practice": "Newcastle Performance Physio",
+    "address": "1/184 Parry St, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4009 1580",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleperformancephysio.com.au/vestibular-physio/",
+    "interests": [
+     "BPPV",
+     "Vestibular neuritis/labyrinthitis",
+     "Vestibular migraine",
+     "Post-concussion",
+     "PPPD",
+     "Meniere's disease",
+     "ACL and sports rehab",
+     "Running programming",
+     "Female strength training"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleperformancephysio.com.au/vestibular-physio/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Neuro Project",
+    "specialty": "Physiotherapy (neurological)",
+    "practice": "The Neuro Project",
+    "address": "11-13 Clyde Street, Tighes Hill NSW 2297",
+    "suburb": "Tighes Hill",
+    "phone": "0494 761 172",
+    "fax": "",
+    "email": "hello@theneuroproject.com.au",
+    "ereferral": "",
+    "website": "https://www.theneuroproject.com.au/",
+    "interests": [
+     "Parkinson's disease",
+     "Stroke",
+     "Multiple sclerosis",
+     "Cerebral palsy",
+     "Spinal cord injury",
+     "Traumatic brain injury",
+     "Motor neurone disease",
+     "Hereditary spastic paraplegia",
+     "Functional neurological disorder",
+     "Aquatic physiotherapy",
+     "Mobile physiotherapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Enquiry response within 2 business days (as stated); iCare clients also seen",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Accessible clinic stated"
+    ],
+    "sources": [
+     "https://www.theneuroproject.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Flow Neuro Allied Therapy",
+    "specialty": "Physiotherapy (neurological, vestibular)",
+    "practice": "Flow Neuro Allied Therapy",
+    "address": "6/23 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.flowneurotherapy.com.au/",
+    "interests": [
+     "Neurological conditions and physical disability (clinic and community)",
+     "Vertigo and dizziness clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.flowneurotherapy.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kids Physio Newcastle",
+    "specialty": "Physiotherapy (paediatric)",
+    "practice": "Kids Physio Newcastle",
+    "address": "Mobile and in-clinic (no street address published)",
+    "suburb": "Greater Newcastle",
+    "phone": "0400 382 468",
+    "fax": "",
+    "email": "support@kidsphysionewcastle.com.au",
+    "ereferral": "",
+    "website": "https://www.kidsphysionewcastle.com.au/",
+    "interests": [
+     "Babies and toddlers",
+     "Developmental coordination disorder",
+     "Hypermobility",
+     "Cerebral palsy",
+     "Autism",
+     "Developmental delay",
+     "Aquatic physiotherapy/hydrotherapy",
+     "Orthotics and equipment prescription"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0–18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.kidsphysionewcastle.com.au/",
+     "https://infoqore.com.au/directory/info-by-disability-type/kids-physio-newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Sarah Jay Paediatric Physiotherapy",
+    "specialty": "Physiotherapy (paediatric)",
+    "practice": "Sarah Jay Paediatric Physiotherapy",
+    "address": "1A Young Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4957 5468",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.sarahjayphysiotherapy.com.au",
+    "interests": [
+     "Paediatric physiotherapy",
+     "School, daycare and hydrotherapy visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (NDIS registered for 7+; under-7s self/plan-managed only)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://infoqore.com.au/directory/info-by-ndis-registration-groups/sarah-jay-paediatric-physiotherapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Amber-Jayne Stirling",
+    "specialty": "Physiotherapy (paediatric)",
+    "practice": "AJ Stirling Physiotherapy",
+    "address": "Mobile (home/school-based)",
+    "suburb": "New Lambton",
+    "phone": "0400 350 492",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ajstirlingphysiotherapy.com",
+    "interests": [
+     "Neurodevelopmental therapy",
+     "General paediatric and orthopaedic conditions",
+     "Disability services",
+     "Hydrotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0–17",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.infoqore.com.au/directory/health-and-wellbeing/amber-jayne-stirling"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rise Kids Physio",
+    "specialty": "Physiotherapy (paediatric)",
+    "practice": "Rise Kids Physio",
+    "address": "Mobile; clinic at BCP Hub, Warners Bay",
+    "suburb": "Warners Bay",
+    "phone": "0493 593 867",
+    "fax": "",
+    "email": "admin@risekidsphysio.com.au",
+    "ereferral": "",
+    "website": "https://www.risekidsphysio.com.au/",
+    "interests": [
+     "Developmental checks and delays",
+     "Motor milestones",
+     "Coordination and balance",
+     "Torticollis/head turning, flat head, tummy time",
+     "Toeing-in, knock knees, bow legs, flat feet",
+     "Neurological and neuromuscular conditions",
+     "Specialised casting",
+     "Post-surgical rehab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0–16",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.risekidsphysio.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Physio Inq – Newcastle Paediatric Physiotherapy",
+    "specialty": "Physiotherapy (paediatric, neuro – mobile)",
+    "practice": "Physio Inq",
+    "address": "Mobile (home, school, daycare, community)",
+    "suburb": "Newcastle",
+    "phone": "1300 731 733",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.physioinq.com.au/kids-physio-newcastle",
+    "interests": [
+     "Gross motor delay",
+     "Coordination and balance",
+     "Toe walking",
+     "Cerebral palsy",
+     "Neuro physiotherapy (mobile)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Aims to confirm appointments within 48 hours (as stated)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.physioinq.com.au/kids-physio-newcastle",
+     "https://www.physioinq.com.au/mobile/nsw/newcastle/neuro-physiotherapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Physio",
+    "specialty": "Physiotherapy (sports)",
+    "practice": "Hunter Physio",
+    "address": "55 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 3511",
+    "fax": "",
+    "email": "office@hunterphysio.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterphysio.com.au/",
+    "interests": [
+     "Sports physiotherapy",
+     "Running assessments",
+     "Sports orthotics",
+     "Post-op rehab",
+     "Kids physiotherapy",
+     "Pregnancy physiotherapy",
+     "Pilates",
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterphysio.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Neuro Alliance",
+    "specialty": "Physiotherapy (neurological, paediatric and adult)",
+    "practice": "Neuro Alliance",
+    "address": "1 Poynton Place, Thornton NSW 2322 (adult rehab and aquatic); B1/7 Poynton Place (paediatric)",
+    "suburb": "Thornton",
+    "phone": "02 4081 1899",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://neuroalliance.com.au/services/upper-limb-service/",
+    "interests": [
+     "Stroke",
+     "Acquired brain injury",
+     "Spinal cord injury",
+     "Multiple sclerosis",
+     "Parkinson's disease",
+     "Cerebral palsy",
+     "Amputation and limb difference",
+     "Functional neurological disorder",
+     "Brachial plexus injury",
+     "Spasticity, dystonia, tremor",
+     "Upper limb service (with OT)",
+     "Aquatic therapy",
+     "Gait lab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Paediatric and adult",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Acknowledgement of Country (Wonnarua); Aboriginal flag displayed"
+    ],
+    "sources": [
+     "https://neuroalliance.com.au/services/upper-limb-service/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "exercise-physiology": {
+  "name": "Exercise Physiology",
+  "people": [
+   {
+    "name": "Hunter Rehabilitation and Health",
+    "specialty": "Exercise Physiology",
+    "practice": "Hunter Rehabilitation and Health",
+    "address": "Unit 5/57 Crescent Road, Waratah NSW 2298 (also 4 Jacaranda Ave, Raymond Terrace)",
+    "suburb": "Waratah",
+    "phone": "(02) 4016 4446",
+    "fax": "",
+    "email": "admin@hunterrehab.com.au",
+    "ereferral": "",
+    "website": "https://hunterrehab.com.au/",
+    "interests": [
+     "WorkCover, CTP and life insurance rehab",
+     "Pre-employment assessments",
+     "Musculoskeletal, psychological, cardiopulmonary, neurological and metabolic conditions",
+     "Mobile visits",
+     "Support at Home"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterrehab.com.au/",
+     "https://hunterrehab.com.au/service/medicare-epc/",
+     "https://hunterrehab.com.au/service/ndis/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Ethos Health",
+    "specialty": "Exercise Physiology",
+    "practice": "Ethos Health",
+    "address": "Wickham (street address not on EP page)",
+    "suburb": "Wickham",
+    "phone": "02 4962 8700",
+    "fax": "",
+    "email": "enquiries@ethoshealth.com.au",
+    "ereferral": "",
+    "website": "https://clinic.ethoshealth.com.au/exercise-physiology/",
+    "interests": [
+     "Chronic disease (cardiovascular, diabetes, lung disease, osteoporosis, cancer)",
+     "Injury recovery and neurological disorders",
+     "Weight management",
+     "Falls prevention",
+     "Pregnancy",
+     "C-Fit cancer exercise class",
+     "Joint-Fit osteoarthritis class"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://clinic.ethoshealth.com.au/exercise-physiology/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Body Concepts Exercise Physiology (ATUNE Health Centres)",
+    "specialty": "Exercise Physiology",
+    "practice": "ATUNE Health Centres",
+    "address": "Cardiff (street address not on page)",
+    "suburb": "Cardiff",
+    "phone": "02 4954 4511",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://atune.com.au/body-concepts-exercise-physiology/",
+    "interests": [
+     "Injury and chronic disease",
+     "Osteoporosis program",
+     "Diabetes program",
+     "Group exercise",
+     "Home visits (Lake Macquarie and Newcastle)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://atune.com.au/body-concepts-exercise-physiology/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kinetic Rehabilitation",
+    "specialty": "Exercise Physiology",
+    "practice": "Kinetic Rehabilitation",
+    "address": "4/710 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "(02) 4962 4000",
+    "fax": "(02) 4913 5344",
+    "email": "info@kineticrehab.com.au",
+    "ereferral": "",
+    "website": "https://kineticrehab.com.au/",
+    "interests": [
+     "Chronic and acute pain",
+     "Cardiac rehabilitation",
+     "Diabetes",
+     "Osteoporosis",
+     "Cancer rehabilitation",
+     "Mental health",
+     "Post-surgical",
+     "Neurological conditions",
+     "Running injuries",
+     "Dance and cheerleading",
+     "Snow sports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://kineticrehab.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "ProActive Rehabilitation and Health",
+    "specialty": "Exercise Physiology",
+    "practice": "ProActive Rehabilitation and Health",
+    "address": "Lot H/132 Garden Grove Pde, Adamstown NSW 2289 (also 4B/11 Molly Morgan Dr, East Maitland)",
+    "suburb": "Adamstown",
+    "phone": "(02) 4957 2757",
+    "fax": "",
+    "email": "admin@proactiverehab.com.au",
+    "ereferral": "",
+    "website": "https://www.proactiverehab.com.au/",
+    "interests": [
+     "Workers compensation and CTP",
+     "DVA",
+     "Cardiac rehab group",
+     "Falls prevention",
+     "Type 2 diabetes",
+     "Parkinson's disease",
+     "Stroke rehab",
+     "Long COVID",
+     "Golf and sports-specific programs"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Two wheelchair-accessible facilities stated"
+    ],
+    "sources": [
+     "https://www.proactiverehab.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Uplift Exercise Physiology",
+    "specialty": "Exercise Physiology",
+    "practice": "Uplift Exercise Physiology",
+    "address": "Unit 5/56 Industrial Drive, Mayfield NSW 2304",
+    "suburb": "Mayfield",
+    "phone": "02 4017 2489",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://upliftexercise.com.au/ndis-participants/",
+    "interests": [
+     "NDIS physical, intellectual and psychosocial disability",
+     "WorkCover",
+     "Home, gym, community and hydrotherapy sessions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Longest wait list reported as two weeks (as stated)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Accessible clinic stated",
+     "Practitioner gender preference can be requested"
+    ],
+    "sources": [
+     "https://upliftexercise.com.au/ndis-participants/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "WellFit Exercise Physiology",
+    "specialty": "Exercise Physiology",
+    "practice": "WellFit Personal Training",
+    "address": "58 Broadmeadow Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4969 8478",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://wellfitpersonaltraining.com.au/exercise-physiologists/",
+    "interests": [
+     "Cardiovascular and pulmonary disease",
+     "Neurological disease",
+     "Arthritis and osteoporosis",
+     "Mental health",
+     "Cancer",
+     "Functional capacity assessments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://wellfitpersonaltraining.com.au/exercise-physiologists/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Community Therapy – Exercise Physiology",
+    "specialty": "Exercise Physiology",
+    "practice": "Community Therapy",
+    "address": "Mobile (Lake Macquarie, Newcastle, Maitland/Hunter, Port Stephens)",
+    "suburb": "Mobile",
+    "phone": "1300 031 935",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.communitytherapy.com.au/exercise-physiology/",
+    "interests": [
+     "Mobile EP for older adults and people with disability",
+     "Gym, pool and community sessions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (18+)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States programs suit people with psychosocial, learning and intellectual disabilities"
+    ],
+    "sources": [
+     "https://www.communitytherapy.com.au/exercise-physiology/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "podiatry": {
+  "name": "Podiatry",
+  "people": [
+   {
+    "name": "Lake Macquarie Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Lake Macquarie Podiatry",
+    "address": "30 Ernest Street, Belmont NSW 2280 (also Rathmines and Swansea)",
+    "suburb": "Belmont",
+    "phone": "(02) 4945 2223",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.lakemacquariepodiatry.com.au/",
+    "interests": [
+     "General foot care (corns, calluses, nails)",
+     "Diabetes foot care",
+     "Children (flat feet, toe walking)",
+     "Sports shoes",
+     "Heel pain",
+     "Foot injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacquariepodiatry.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Cardiff Podiatry Clinic",
+    "specialty": "Podiatry",
+    "practice": "Cardiff Podiatry Clinic",
+    "address": "44 Thomas St, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4954 8479",
+    "fax": "",
+    "email": "admin@cardiffpodiatryclinic.com.au",
+    "ereferral": "",
+    "website": "https://www.cardiffpodiatry.com.au/",
+    "interests": [
+     "General podiatry",
+     "Diabetic foot management",
+     "Foot and ankle conditions",
+     "Orthotics",
+     "Nail surgery",
+     "Warts",
+     "Paediatric podiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.cardiffpodiatry.com.au/",
+     "https://www.cardiffpodiatry.com.au/who-we-are"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prime Health Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Prime Health Podiatry",
+    "address": "Office 8, Building 2, 48 Oakdale Road, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "(02) 4989 6496",
+    "fax": "(02) 4989 6498",
+    "email": "office@primehealthpodiatry.com.au",
+    "ereferral": "",
+    "website": "https://www.primehealthpodiatry.com.au/",
+    "interests": [
+     "Biomechanical assessments",
+     "Custom orthoses",
+     "Diabetes foot assessment",
+     "Children's podiatry",
+     "Ingrown toenail surgery",
+     "Nail restoration",
+     "Home visits (Tue and Fri)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Diversity & Inclusion page; Acknowledgement of Traditional Custodians"
+    ],
+    "sources": [
+     "https://www.primehealthpodiatry.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Foot and Ankle Clinic",
+    "specialty": "Podiatry",
+    "practice": "Newcastle Foot and Ankle Clinic",
+    "address": "14 Maude Street, Belmont NSW 2280 (also 2/20 Smith St Charlestown; 9/121 Lawes St East Maitland)",
+    "suburb": "Belmont",
+    "phone": "1800 232 300",
+    "fax": "",
+    "email": "admin@foot.net.au",
+    "ereferral": "",
+    "website": "https://www.foot.net.au",
+    "interests": [
+     "Diabetes foot care",
+     "Nail treatments",
+     "Children's assessments",
+     "Orthotics"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Ground-level entry (directory listing)"
+    ],
+    "sources": [
+     "https://www.infoqore.com.au/directory/info-by-ndis-registration-groups/newcastle-foot-and-ankle-clinic"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Hunter Podiatry Services",
+    "address": "Maitland, Green Hills, Rutherford, Raymond Terrace, Salamander Bay, Singleton (street addresses not on team page)",
+    "suburb": "Maitland",
+    "phone": "1800 693 338",
+    "fax": "",
+    "email": "admin@hunterpodiatry.com.au",
+    "ereferral": "",
+    "website": "https://hunterpodiatry.com.au/",
+    "interests": [
+     "Podiatric surgery",
+     "Sporting injuries",
+     "Gait and running analysis",
+     "Ankle-foot orthoses and bracing",
+     "Heel pain and shockwave",
+     "Custom and cycling orthotics",
+     "Children's podiatry",
+     "Diabetes management",
+     "Ingrown toenail surgery",
+     "Fungal nail laser"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterpodiatry.com.au/about-us/our-team"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Podiatry (Newcastle Family Sports Podiatry)",
+    "specialty": "Podiatry",
+    "practice": "Newcastle Podiatry",
+    "address": "",
+    "suburb": "Newcastle",
+    "phone": "02 4961 4411",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlepodiatry.com.au/",
+    "interests": [
+     "Children's and adult biomechanics",
+     "Sports injuries (certified sports podiatrist on staff)",
+     "Gait analysis",
+     "Orthotics",
+     "Shockwave therapy",
+     "Diabetes management",
+     "Nail surgery",
+     "Wart therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlepodiatry.com.au/about"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Achieve Podiatry Newcastle",
+    "specialty": "Podiatry",
+    "practice": "Achieve Podiatry",
+    "address": "Level 1/294 Turton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4067 5055",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://achievepodiatry.com.au/about/",
+    "interests": [
+     "Sports medicine and performance rehabilitation",
+     "Running injuries",
+     "Biomechanical and movement assessment",
+     "Complex and persistent lower-limb conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://achievepodiatry.com.au/about/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "occupational-therapy-adult": {
+  "name": "Occupational Therapy (adult)",
+  "people": [
+   {
+    "name": "Newcastle Occupational Therapy",
+    "specialty": "Occupational Therapy (adult)",
+    "practice": "Newcastle OT",
+    "address": "Mobile (Newcastle and Hunter Valley)",
+    "suburb": "Newcastle",
+    "phone": "0412 273 526",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleot.com.au/",
+    "interests": [
+     "Home modifications",
+     "Equipment prescription incl. complex wheelchairs",
+     "Home safety and falls prevention",
+     "Pressure care",
+     "Activities of daily living",
+     "Functional assessments",
+     "Manual handling"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleot.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Care Alliance Allied Health & Supports",
+    "specialty": "Occupational Therapy",
+    "practice": "Care Alliance",
+    "address": "Cnr Frederick & Pearson St, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "1300 206 309",
+    "fax": "",
+    "email": "info@carealliance.com.au",
+    "ereferral": "",
+    "website": "https://www.carealliance.com.au/services/occupational-therapy",
+    "interests": [
+     "Functional capacity assessments",
+     "Daily living skills",
+     "Assistive technology and home modification advice",
+     "Sensory, regulation and motor skills"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Intake callback usually within one business day (as stated)",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Practitioner profile states neuro-affirming approach"
+    ],
+    "sources": [
+     "https://www.carealliance.com.au/services/occupational-therapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Avina Therapy – Newcastle & Hunter",
+    "specialty": "Occupational Therapy (with speech pathology, dietetics, PBS)",
+    "practice": "Avina Therapy",
+    "address": "Suite 4, Level 1/14 Garnett Rd, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "1800 447 000",
+    "fax": "",
+    "email": "hello@avinatherapy.com.au",
+    "ereferral": "",
+    "website": "https://www.avinatherapy.com.au/location/maitland/",
+    "interests": [
+     "Occupational therapy",
+     "Speech pathology",
+     "ABI, ADHD, autism, cognitive and learning assessments",
+     "Positive behaviour support"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Acknowledgement of Traditional Owners"
+    ],
+    "sources": [
+     "https://www.avinatherapy.com.au/location/maitland/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Community Therapy – Occupational Therapy",
+    "specialty": "Occupational Therapy (adult, mobile)",
+    "practice": "Community Therapy",
+    "address": "Mobile (Newcastle, Lake Macquarie, Hunter, Port Stephens)",
+    "suburb": "Mobile",
+    "phone": "1300 031 935",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.communitytherapy.com.au/occupational-therapy/",
+    "interests": [
+     "Home modifications (scope of works, plans, quotes)",
+     "Assistive technology prescription and trial",
+     "Aged care (home care packages, CHSP, short-term restorative care)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.communitytherapy.com.au/occupational-therapy/",
+     "https://www.communitytherapy.com.au/home-modifications/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "HB Rehab",
+    "specialty": "Occupational Therapy and Physiotherapy",
+    "practice": "HB Rehab",
+    "address": "147 Nelson Street, Wallsend NSW 2287",
+    "suburb": "Wallsend",
+    "phone": "(02) 4946 4946",
+    "fax": "",
+    "email": "info@hbrehab.com.au",
+    "ereferral": "",
+    "website": "https://www.hbrehab.com.au/",
+    "interests": [
+     "Adult and paediatric OT",
+     "Physiotherapy at home, community or workplace"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adults and older people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hbrehab.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Skill Hub Studio",
+    "specialty": "Occupational Therapy (mobile)",
+    "practice": "Skill Hub Studio",
+    "address": "Mobile (Newcastle, Lake Macquarie, Hunter)",
+    "suburb": "Mobile",
+    "phone": "0431 586 283",
+    "fax": "",
+    "email": "info@skillhubstudio.com.au",
+    "ereferral": "",
+    "website": "https://skillhubstudio.com.au/",
+    "interests": [
+     "NDIS OT",
+     "Functional assessments",
+     "Equipment prescription",
+     "Capacity building",
+     "Home Care Package OT for older adults"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://skillhubstudio.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The OT Wellness Group",
+    "specialty": "Occupational Therapy (assessments)",
+    "practice": "The OT Wellness Group",
+    "address": "Suite 211, 99 Pacific Hwy, Charlestown NSW (by appointment)",
+    "suburb": "Charlestown",
+    "phone": "1800 402 124",
+    "fax": "",
+    "email": "admin@otwellnessgroup.com.au",
+    "ereferral": "",
+    "website": "https://www.otwellnessgroup.com.au/",
+    "interests": [
+     "NDIS functional capacity assessments",
+     "OT driving assessments",
+     "Wheelchair/scooter/assistive technology assessments",
+     "SIL, SDA and ILO assessments",
+     "Home modifications (Category A, B, C)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States anti-oppressive and neuro-affirming principles",
+     "Acknowledgement of Traditional Custodians"
+    ],
+    "sources": [
+     "https://www.otwellnessgroup.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Cooper Allied Health",
+    "specialty": "Occupational Therapy (adult, driving)",
+    "practice": "Cooper Allied Health",
+    "address": "Mobile (Newcastle)",
+    "suburb": "Newcastle",
+    "phone": "0429 822 809",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cooperalliedhealth.com.au/",
+    "interests": [
+     "Functional capacity assessments",
+     "Assistive technology prescription",
+     "Minor home modifications",
+     "Aged care home safety",
+     "Driving assessments (off-road and on-road)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://cooperalliedhealth.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "CentreSteps Allied Health",
+    "specialty": "Occupational Therapy",
+    "practice": "CentreSteps Allied Health",
+    "address": "Unit 19, 48 Oakdale Road, Gateshead NSW 2290 (also 54 Ridley St, Charlestown)",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.centresteps.com.au/",
+    "interests": [
+     "Occupational therapy",
+     "Functional capacity assessments",
+     "Allied health assistance",
+     "Group workshops",
+     "DVA"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Acknowledgement of Country (Awabakal)"
+    ],
+    "sources": [
+     "https://www.centresteps.com.au/",
+     "https://www.centresteps.com.au/functional-capacity-assessments"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Neuro Alliance – Upper Limb Service",
+    "specialty": "Occupational Therapy (neurological)",
+    "practice": "Neuro Alliance",
+    "address": "1 Poynton Place, Thornton NSW 2322",
+    "suburb": "Thornton",
+    "phone": "02 4081 1899",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://neuroalliance.com.au/services/upper-limb-service/",
+    "interests": [
+     "Neurological upper limb rehab (stroke, ABI, SCI, MS, Parkinson's, CP, brachial plexus)",
+     "Spasticity, dystonia, tremor",
+     "AAC lab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Paediatric and adult",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "Acknowledgement of Country (Wonnarua); Aboriginal flag displayed"
+    ],
+    "sources": [
+     "https://neuroalliance.com.au/services/upper-limb-service/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "occupational-therapy-paediatric": {
+  "name": "Occupational Therapy (paediatric)",
+  "people": [
+   {
+    "name": "Being and Becoming Occupational Therapy",
+    "specialty": "Occupational Therapy (paediatric and adult)",
+    "practice": "Being and Becoming OT",
+    "address": "BCP Hub, Warners Bay NSW 2284 (also Newcastle and Kotara clinics)",
+    "suburb": "Warners Bay",
+    "phone": "0493 990 203",
+    "fax": "",
+    "email": "beingbecoming.ot@outlook.com",
+    "ereferral": "",
+    "website": "https://www.beingbecomingot.com.au/",
+    "interests": [
+     "Children and young people",
+     "Emotional awareness and wellbeing",
+     "Self-identity and confidence",
+     "Participation in meaningful activities",
+     "Early intervention",
+     "Mental health"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, young people and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "States neuroaffirming, strengths-based framework",
+     "States 'We embrace all neurotypes and identities'",
+     "Acknowledgement of Country (Awabakal, Worimi, Wonnarua)"
+    ],
+    "sources": [
+     "https://www.beingbecomingot.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Paediatric Occupational Therapy",
+    "specialty": "Occupational Therapy (paediatric)",
+    "practice": "Newcastle Paediatric OT",
+    "address": "Belmont North NSW 2280",
+    "suburb": "Belmont North",
+    "phone": "(02) 4940 6507",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.npot.com.au/",
+    "interests": [
+     "Muscle tone, joint stability and core strength",
+     "Motor coordination",
+     "Handwriting and grapho-motor skills",
+     "Neurodevelopmental areas",
+     "Sensory processing",
+     "Visual perception",
+     "Self-care skills"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0–18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.npot.com.au/",
+     "https://www.npot.com.au/paediatric-occupational-therapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Maree OT",
+    "specialty": "Occupational Therapy (paediatric, mobile)",
+    "practice": "Maree OT Services",
+    "address": "Mobile (home, school, preschool)",
+    "suburb": "Newcastle/Lake Macquarie",
+    "phone": "",
+    "fax": "",
+    "email": "MareeOT@mail.com",
+    "ereferral": "",
+    "website": "https://www.mareeot.com.au/",
+    "interests": [
+     "Mobile paediatric OT for daily activities",
+     "Once-off assessments",
+     "10-week therapy blocks"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.mareeot.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Community Therapy – Paediatric OT",
+    "specialty": "Occupational Therapy (paediatric, mobile)",
+    "practice": "Community Therapy",
+    "address": "Mobile (Newcastle, Lake Macquarie, Maitland, Port Stephens)",
+    "suburb": "Mobile",
+    "phone": "1300 031 935",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.communitytherapy.com.au/paediatrics/paediatric-occupational-therapy/",
+    "interests": [
+     "Play skills",
+     "Motor skills",
+     "Self-care",
+     "Sensory regulation",
+     "Social skills",
+     "Functional capacity assessments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0–18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.communitytherapy.com.au/paediatrics/paediatric-occupational-therapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Coast Therapy",
+    "specialty": "Occupational Therapy, Speech Pathology, Physiotherapy (paediatric)",
+    "practice": "Hunter Coast Therapy",
+    "address": "6/10 William St, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4072 1403",
+    "fax": "",
+    "email": "help@hctherapy.com.au",
+    "ereferral": "",
+    "website": "https://www.hctherapy.com.au/",
+    "interests": [
+     "Paediatric OT",
+     "Speech pathology",
+     "Physiotherapy",
+     "Clinic, school, home or telehealth"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hctherapy.com.au/speech-pathology",
+     "https://www.hctherapy.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hello Rainbow",
+    "specialty": "Occupational Therapy and Speech Pathology (paediatric)",
+    "practice": "Hello Rainbow",
+    "address": "278 Main Rd, Fennell Bay NSW",
+    "suburb": "Fennell Bay",
+    "phone": "(02) 4067 2373",
+    "fax": "",
+    "email": "hello@hellorainbow.com.au",
+    "ereferral": "",
+    "website": "https://www.hellorainbow.com.au/",
+    "interests": [
+     "Early intervention",
+     "Play-based, child-led therapy",
+     "Speech, OT and physiotherapy",
+     "Home and educational settings"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States neurodiversity-affirming speech pathology, OT and physiotherapy"
+    ],
+    "sources": [
+     "https://www.hellorainbow.com.au/",
+     "https://www.hellorainbow.com.au/services1"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Therapy Road",
+    "specialty": "Occupational Therapy and Speech Pathology",
+    "practice": "Therapy Road",
+    "address": "Suite 14, Level 2, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4092 8400",
+    "fax": "",
+    "email": "info@therapyroad.com.au",
+    "ereferral": "",
+    "website": "https://www.therapyroad.com.au/",
+    "interests": [
+     "Speech pathology",
+     "Occupational therapy",
+     "Mobile or clinic appointments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages (OT referrals stated as 0–9)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.therapyroad.com.au/",
+     "https://www.therapyroad.com.au/our-team"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Beam Health Cessnock",
+    "specialty": "Occupational Therapy, Speech Pathology, Psychology",
+    "practice": "Beam Health (Beam Services)",
+    "address": "Unit 4, 36 Vincent Street, Cessnock NSW 2325",
+    "suburb": "Cessnock",
+    "phone": "02 4954 9333",
+    "fax": "",
+    "email": "cessnock@beamservices.com.au",
+    "ereferral": "",
+    "website": "https://beamservices.com.au/locations/cessnock/",
+    "interests": [
+     "Paediatric OT (independence in daily activities)",
+     "Speech pathology for children, teens and young adults",
+     "Behaviour support",
+     "Assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States neuroaffirming support",
+     "States welcome to all backgrounds, cultures, abilities, genders and sexualities",
+     "Acknowledgement of Country"
+    ],
+    "sources": [
+     "https://beamservices.com.au/locations/cessnock/",
+     "https://beamservices.com.au/speech-pathology-cessnock/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Growing Kids Occupational Therapy",
+    "specialty": "Occupational Therapy (paediatric mental health, mobile)",
+    "practice": "Growing Kids OT",
+    "address": "Mobile, based Caves Beach NSW",
+    "suburb": "Caves Beach",
+    "phone": "0466 770 627",
+    "fax": "",
+    "email": "growingkidsot@gmail.com",
+    "ereferral": "",
+    "website": "https://www.growingkidsot.com.au/",
+    "interests": [
+     "Sensory processing",
+     "Emotional regulation",
+     "Challenging behaviours",
+     "Neurodivergence (autism, ADHD)",
+     "Trauma",
+     "Parent coaching",
+     "School visits"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Waiting list for new referrals (as stated)",
+     "ages": "2–12",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [
+     "Site metadata describes neuro-affirming approach"
+    ],
+    "sources": [
+     "https://www.growingkidsot.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-paediatric": {
+  "name": "Speech Pathology (paediatric)",
+  "people": [
+   {
+    "name": "A Growing Understanding",
+    "specialty": "Speech Pathology (paediatric)",
+    "practice": "A Growing Understanding",
+    "address": "Lake Macquarie and Newcastle (street addresses not on services page)",
+    "suburb": "Newcastle/Lake Macquarie",
+    "phone": "(02) 4044 1122",
+    "fax": "",
+    "email": "hello@agrowingunderstanding.com.au",
+    "ereferral": "",
+    "website": "https://www.agrowingunderstanding.com.au/our-services/",
+    "interests": [
+     "Speech sounds",
+     "Expressive and receptive language",
+     "Stuttering",
+     "Feeding",
+     "Literacy",
+     "AAC",
+     "Intensive programs",
+     "Group programs"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.agrowingunderstanding.com.au/our-services/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Children's Clinics – Speech Pathology",
+    "specialty": "Speech Pathology (paediatric)",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291 (also 93A Young St, Carrington)",
+    "suburb": "Merewether",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/services/speechtherapy/",
+    "interests": [
+     "Receptive and expressive language",
+     "Speech sounds",
+     "Stuttering",
+     "Late talkers",
+     "Developmental language disorder",
+     "Literacy foundations"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and young people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States safe and welcoming space for Indigenous Australians and people who identify as LGBTQIA+",
+     "Acknowledgement of Awabakal people"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/services/speechtherapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Aspire Speech Pathology",
+    "specialty": "Speech Pathology (paediatric, mobile)",
+    "practice": "Aspire Speech Pathology",
+    "address": "Mobile (home, school, preschool)",
+    "suburb": "Newcastle/Hunter Valley",
+    "phone": "0413 686 194",
+    "fax": "",
+    "email": "info@aspirespeechpathology.com.au",
+    "ereferral": "",
+    "website": "https://aspirespeechpathology.com.au/",
+    "interests": [
+     "Speech and language development",
+     "Articulation",
+     "Literacy (spelling, reading, written expression)",
+     "Phonological awareness",
+     "Social skills",
+     "Stuttering and voice"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (adults also referenced)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://aspirespeechpathology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Coast Therapy – Speech Pathology",
+    "specialty": "Speech Pathology (paediatric)",
+    "practice": "Hunter Coast Therapy",
+    "address": "6/10 William St, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4072 1403",
+    "fax": "",
+    "email": "help@hctherapy.com.au",
+    "ereferral": "",
+    "website": "https://www.hctherapy.com.au/speech-pathology",
+    "interests": [
+     "Late talkers",
+     "Speech sound disorders",
+     "Stuttering",
+     "Autism communication support",
+     "Literacy",
+     "School readiness",
+     "Voice",
+     "Parent training"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hctherapy.com.au/speech-pathology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hello Rainbow – Speech Therapy",
+    "specialty": "Speech Pathology (paediatric)",
+    "practice": "Hello Rainbow",
+    "address": "278 Main Rd, Fennell Bay NSW",
+    "suburb": "Fennell Bay",
+    "phone": "(02) 4067 2373",
+    "fax": "",
+    "email": "hello@hellorainbow.com.au",
+    "ereferral": "",
+    "website": "https://www.hellorainbow.com.au/",
+    "interests": [
+     "Early intervention",
+     "Play-based, child-led therapy",
+     "Home and educational settings"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States neurodiversity-affirming practice"
+    ],
+    "sources": [
+     "https://www.hellorainbow.com.au/services1"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Therapy Road – Speech Pathology",
+    "specialty": "Speech Pathology",
+    "practice": "Therapy Road",
+    "address": "Suite 14, Level 2, 10 Bradford Close, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "(02) 4092 8400",
+    "fax": "",
+    "email": "info@therapyroad.com.au",
+    "ereferral": "",
+    "website": "https://www.therapyroad.com.au/",
+    "interests": [
+     "Mobile speech pathology",
+     "Clinic appointments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.therapyroad.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Beam Health Cessnock – Speech Pathology",
+    "specialty": "Speech Pathology (paediatric)",
+    "practice": "Beam Health",
+    "address": "Unit 4, 36 Vincent Street, Cessnock NSW 2325",
+    "suburb": "Cessnock",
+    "phone": "02 4954 9333",
+    "fax": "",
+    "email": "cessnock@beamservices.com.au",
+    "ereferral": "",
+    "website": "https://beamservices.com.au/speech-pathology-cessnock/",
+    "interests": [
+     "Assessment and therapy for children, teens and young adults"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children to young adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States neuroaffirming support",
+     "States welcome to all genders and sexualities"
+    ],
+    "sources": [
+     "https://beamservices.com.au/locations/cessnock/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Community Therapy – Paediatric Speech Pathology",
+    "specialty": "Speech Pathology (paediatric, mobile)",
+    "practice": "Community Therapy",
+    "address": "Mobile (Newcastle, Lake Macquarie, Maitland, Port Stephens)",
+    "suburb": "Mobile",
+    "phone": "1300 031 935",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.communitytherapy.com.au/paediatrics/speech-pathology/",
+    "interests": [
+     "Mobile paediatric speech pathology at home, school, preschool"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.communitytherapy.com.au/paediatrics/speech-pathology/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Speech Pathology – Children",
+    "specialty": "Speech Pathology (paediatric and adult)",
+    "practice": "Newcastle Speech Pathology",
+    "address": "1/95 Union Street, Cooks Hill NSW (also 19 Victoria St, Kurri Kurri)",
+    "suburb": "Cooks Hill",
+    "phone": "(02) 4948 9800",
+    "fax": "",
+    "email": "info@nsp.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlespeechpathology.com.au/",
+    "interests": [
+     "Late talkers and language delay",
+     "Speech sounds",
+     "Reading and literacy",
+     "Autism communication support"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlespeechpathology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Harrison Speech Pathology",
+    "specialty": "Speech Pathology (paediatric and adult)",
+    "practice": "Harrison Speech Pathology",
+    "address": "Newcastle (street address not on page)",
+    "suburb": "Newcastle",
+    "phone": "(02) 4953 6128",
+    "fax": "",
+    "email": "info@harrisonspeechpathology.com.au",
+    "ereferral": "",
+    "website": "https://harrisonspeechpathology.com.au/",
+    "interests": [
+     "Hanen program",
+     "PROMPT",
+     "Dyslexia",
+     "Autism",
+     "Dyspraxia",
+     "Swallowing therapy",
+     "Post-stroke aphasia and dysphagia"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://harrisonspeechpathology.com.au/services/post-stroke-therapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Avina Therapy – Speech Pathology",
+    "specialty": "Speech Pathology",
+    "practice": "Avina Therapy",
+    "address": "Suite 4, Level 1/14 Garnett Rd, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "1800 447 000",
+    "fax": "",
+    "email": "hello@avinatherapy.com.au",
+    "ereferral": "",
+    "website": "https://www.avinatherapy.com.au/location/maitland/",
+    "interests": [
+     "Speech pathology",
+     "Autism and developmental assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.avinatherapy.com.au/location/maitland/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-adult": {
+  "name": "Speech Pathology (adult)",
+  "people": [
+   {
+    "name": "Newcastle Speech Pathology – Adults",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Newcastle Speech Pathology",
+    "address": "1/95 Union Street, Cooks Hill NSW (also 19 Victoria St, Kurri Kurri)",
+    "suburb": "Cooks Hill",
+    "phone": "(02) 4948 9800",
+    "fax": "",
+    "email": "info@nsp.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlespeechpathology.com.au/what-we-do/adult-speech-therapy",
+    "interests": [
+     "Stroke and brain injury (speech, language, swallowing)",
+     "Dysphagia incl. aged care and post-surgery",
+     "Adult speech clarity"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults incl. aged care",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlespeechpathology.com.au/",
+     "https://www.newcastlespeechpathology.com.au/what-we-do/adult-speech-therapy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Vagus Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Vagus Speech Pathology",
+    "address": "Suite 1, Level 3, Konara, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "",
+    "email": "admin@vagusspeechpathology.com.au",
+    "ereferral": "",
+    "website": "https://www.vagusspeechpathology.com.au/",
+    "interests": [
+     "Swallowing incl. videofluoroscopic swallow study (VFSS)",
+     "Voice disorders",
+     "Voice restoration after laryngectomy",
+     "Chronic cough and upper airway disorders",
+     "Lee Silverman Voice Treatment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.vagusspeechpathology.com.au/about"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Harrison Speech Pathology – Adults",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Harrison Speech Pathology",
+    "address": "Newcastle (street address not on page)",
+    "suburb": "Newcastle",
+    "phone": "(02) 4953 6128",
+    "fax": "",
+    "email": "info@harrisonspeechpathology.com.au",
+    "ereferral": "",
+    "website": "https://harrisonspeechpathology.com.au/services/post-stroke-therapy/",
+    "interests": [
+     "Post-stroke speech therapy",
+     "Aphasia",
+     "Dysphagia"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://harrisonspeechpathology.com.au/services/post-stroke-therapy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Neuro Speech Pathology",
+    "specialty": "Speech Pathology (adult, community-based)",
+    "practice": "Newcastle Neuro",
+    "address": "Community-based (no clinic address)",
+    "suburb": "Newcastle",
+    "phone": "0467 093 613",
+    "fax": "",
+    "email": "speechpathology@newcastleneuro.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastleneuro.com.au/services",
+    "interests": [
+     "Dysphagia",
+     "Mealtime management plans",
+     "Speech",
+     "Language",
+     "AAC",
+     "Voice"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [
+     "States it stands alongside LGBTIQA+ communities; 'Everyone is welcome'",
+     "Acknowledgement of Awabakal people"
+    ],
+    "sources": [
+     "https://www.newcastleneuro.com.au/services"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lake Mac Speech Pathology",
+    "specialty": "Speech Pathology (adult, mobile)",
+    "practice": "Lake Mac Speech Pathology",
+    "address": "Mobile (home visits)",
+    "suburb": "Lake Macquarie",
+    "phone": "0422 115 984",
+    "fax": "",
+    "email": "karli@lakemacspeechpathology.com.au",
+    "ereferral": "",
+    "website": "https://www.lakemacspeechpathology.com.au",
+    "interests": [
+     "Acquired neurological communication difficulties",
+     "Swallowing difficulties",
+     "Home and residential aged care visits"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacspeechpathology.com.au"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "KAV Speech Pathology",
+    "specialty": "Speech Pathology (adult and paediatric)",
+    "practice": "KAV Speech Pathology",
+    "address": "Adamstown Heights NSW (no street address)",
+    "suburb": "Adamstown Heights",
+    "phone": "0424 117 230",
+    "fax": "",
+    "email": "kavsp@outlook.com",
+    "ereferral": "",
+    "website": "https://www.kavsp.com.au/",
+    "interests": [
+     "Speech, language, voice and swallowing",
+     "Complex communication and swallowing needs"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.kavsp.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Physio Inq – Adult Speech Pathology",
+    "specialty": "Speech Pathology (adult, mobile)",
+    "practice": "Physio Inq",
+    "address": "Mobile (home, work, community)",
+    "suburb": "Newcastle",
+    "phone": "1300 731 733",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.physioinq.com.au/mobile/nsw/newcastle/speech-therapy-for-adult",
+    "interests": [
+     "Communication after stroke or brain injury",
+     "Speech and voice changes with Parkinson's disease or MND",
+     "Swallowing and mealtime safety",
+     "Word-finding and conversation",
+     "Occupational voice strain"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.physioinq.com.au/mobile/nsw/newcastle/speech-therapy-for-adult"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
