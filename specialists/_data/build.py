@@ -94,3 +94,18 @@ page = (head + '</head>\n<body>\n<main class="wrap doc sp-page">\n<h1>Specialist
         '<p class="sp-count" aria-live="polite"></p>' + az + "".join(body) + DISC + f'<p class="meta"><em>Last checked {CHECKED}.</em></p>\n' + foot)
 open("specialists/index.html", "w").write(page)
 print(len(L), "listed;", len(removed), "public-only removed")
+# Optional: private referral-fit scores for Adam's private doc (never written into the repo).
+if os.environ.get("SP_SCORES"):
+    out = []
+    for p in L:
+        pr = p.get("practical") or {}; sc = 0; why = []
+        if pr.get("telehealth") is True: sc += 2; why.append("telehealth +2")
+        bb = pr.get("bulk_billing")
+        if bb == "yes": sc += 2; why.append("bulk bills +2")
+        elif bb == "some": sc += 1; why.append("some bulk billing +1")
+        if p.get("ereferral"): sc += 2; why.append("e-referral +2")
+        if p.get("inclusive"): sc += 2; why.append("inclusive statement +2")
+        if pr.get("wait"): sc += 1; why.append("wait time published +1")
+        if p.get("phone") and p.get("website"): sc += 1; why.append("phone and website +1")
+        out.append({"n": p["name"], "s": " · ".join(p["_labels"]), "sub": p.get("suburb", ""), "sc": sc, "why": why})
+    json.dump(out, open(os.environ["SP_SCORES"], "w"), ensure_ascii=False)
