@@ -1,0 +1,5459 @@
+{
+ "ophthalmology": {
+  "name": "Ophthalmology",
+  "people": [
+   {
+    "name": "Dr Anthony Dunlop",
+    "specialty": "Ophthalmology",
+    "practice": "Dr Anthony Dunlop (rooms)",
+    "address": "2/46 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4962 4962",
+    "fax": "02 4962 4966",
+    "email": "reception@drsdunlop.com.au",
+    "ereferral": "",
+    "website": "https://dranthonydunlop.com.au/",
+    "interests": [
+     "Cataract",
+     "Glaucoma",
+     "Minor lid disorders",
+     "Medical retina and uveitis (fellowship)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-anthony-dunlop/",
+     "https://doccy.com.au/specialist/newcastle/ophthalmologist"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Catherine Dunlop",
+    "specialty": "Ophthalmology",
+    "practice": "Dr Catherine Dunlop (rooms)",
+    "address": "Hamilton (street address not published on hospital profile)",
+    "suburb": "Hamilton",
+    "phone": "02 4962 4962",
+    "fax": "02 4962 4966",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drcdunlop.com.au",
+    "interests": [
+     "Strabismus (Jampolsky Fellowship)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/catherine-dunlop"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alastair Gittos",
+    "specialty": "Ophthalmology (oculoplastics, ocular oncology)",
+    "practice": "Newcastle Eye Centre",
+    "address": "47 Bolton St, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4929 5969",
+    "fax": "",
+    "email": "reception@neweye.com.au",
+    "ereferral": "",
+    "website": "https://www.drgittos.com/",
+    "interests": [
+     "Oculoplastic surgery",
+     "Ocular oncology",
+     "Cataract surgery",
+     "Glaucoma",
+     "Pterygium",
+     "Ocular surface tumours",
+     "Eyelid reconstruction",
+     "Tear drainage problems"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "East Maitland/Maitland Private Hospital",
+      "John Hunter Hospital (public consulting)",
+      "Kurri Kurri Hospital (public operating)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://neweye.com.au/ophthalmologists-eye-specialists-newcastle/",
+     "https://neweye.com.au/contact-us/",
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-alastair-gittos"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Eugene Hollenbach",
+    "specialty": "Ophthalmology",
+    "practice": "Newcastle Eye Centre",
+    "address": "47 Bolton St, Newcastle NSW 2300 (also Maitland, Nelson Bay, Raymond Terrace)",
+    "suburb": "Newcastle",
+    "phone": "02 4929 5969",
+    "fax": "",
+    "email": "reception@neweye.com.au",
+    "ereferral": "",
+    "website": "https://neweye.com.au/",
+    "interests": [
+     "Refractive cataract surgery and multifocal lens implants",
+     "Oculoplastic, lacrimal and orbital surgery",
+     "Medical retina, diabetic eye disease, macular degeneration",
+     "Neuro-ophthalmology clinic",
+     "Dry eye clinic",
+     "Vitreoretinal surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://neweye.com.au/ophthalmologists-eye-specialists-newcastle/",
+     "https://neweye.com.au/contact-us/",
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-eugene-hollenbach"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kuo Luong (KL) Lee",
+    "specialty": "Ophthalmology (medical and surgical retina)",
+    "practice": "Ophthalmic Associates",
+    "address": "106 Victoria St, East Maitland NSW 2323; also Shop 6, Bayway Centre, 34 John St, Warners Bay NSW 2282",
+    "suburb": "East Maitland / Warners Bay",
+    "phone": "02 4003 4881",
+    "fax": "02 8287 4778",
+    "email": "info@ophthalmicassociates.com.au",
+    "ereferral": "",
+    "website": "https://drkllee.com.au/",
+    "interests": [
+     "Medical and surgical retinal disease",
+     "Cataract surgery",
+     "Retinal detachment",
+     "Macular holes and epiretinal membranes",
+     "Macular degeneration",
+     "Diabetic eye disease",
+     "Intravitreal injections",
+     "Pterygium"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Practice states cataract/vitreoretinal procedures can be done within 1-2 weeks; urgent intravitreal injections usually same day as referral",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (VMO)",
+      "Kurri Kurri District Hospital (VMO)",
+      "Maitland Private Hospital",
+      "Charlestown Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drkllee.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robert Griffits",
+    "specialty": "Ophthalmology",
+    "practice": "Ophthalmic Associates",
+    "address": "Shop 6, Bayway Centre, 34 John St, Warners Bay NSW 2282 (mainly); also East Maitland",
+    "suburb": "Warners Bay",
+    "phone": "02 4003 4881",
+    "fax": "02 8287 4778",
+    "email": "info@ophthalmicassociates.com.au",
+    "ereferral": "",
+    "website": "https://drkllee.com.au/",
+    "interests": [
+     "In-rooms oculoplastic procedures"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (VMO)",
+      "Kurri Kurri District Hospital",
+      "Charlestown Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drkllee.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Anthony Hall",
+    "specialty": "Ophthalmology",
+    "practice": "Hunter Eye Surgeons",
+    "address": "182 Christo Rd, Waratah NSW 2298 (also Belmont and East Maitland)",
+    "suburb": "Waratah",
+    "phone": "02 4967 6677",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.huntereyesurgeons.com/",
+    "interests": [
+     "Retinal detachment",
+     "OCT imaging",
+     "Laser eye surgery (LASIK/PRK/LASEK)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "English"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/anthony-hall-1",
+     "https://www.asoeye.org/index.cfm?module=businessdirectory&pagemode=indiv&action=details&page_id=2033192",
+     "https://doccy.com.au/specialist/newcastle/ophthalmologist"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Peter Davies",
+    "specialty": "Ophthalmology",
+    "practice": "Newcastle Eye Hospital / Hunter Eye Surgeons",
+    "address": "182 Christo Rd, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4967 6677",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.huntereyesurgeons.com/dr-peter-davies",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/ophthalmologist",
+     "https://www.healthshare.com.au/profile/professional/145421-dr-peter-davies/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Eye Hospital",
+    "specialty": "Ophthalmology (private eye hospital)",
+    "practice": "Newcastle Eye Hospital",
+    "address": "182 Christo Road, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4967 4929",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/newcastle-eye-hospital/ophthalmology/187bc62b-1da0-0963-ab91-0d6338be4629",
+     "https://doccy.com.au/specialist/newcastle/ophthalmologist"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Eye Clinic",
+    "specialty": "Ophthalmology (public outpatients)",
+    "practice": "Hunter New England Health",
+    "address": "John Hunter Hospital, Lookout Rd/156 Kookaburra Circuit, New Lambton NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-eye-clinic/ophthalmology/8c29a852-5f14-456c-b735-8d735b577946"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Valley Eye Centre",
+    "specialty": "Ophthalmology (clinic)",
+    "practice": "Hunter Valley Eye Centre",
+    "address": "213 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-valley-eye-centre/ophthalmology/113535b1-0024-cda7-8c03-c834fbae2456"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ent": {
+  "name": "ENT (otolaryngology)",
+  "people": [
+   {
+    "name": "Professor Kelvin Kong",
+    "specialty": "ENT surgery (adult and paediatric), head and neck",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/professor-kelvin-kong/",
+    "interests": [
+     "Paediatric airway",
+     "Adult and paediatric cochlear implantation",
+     "Voice and swallow disorders",
+     "Head and neck cancer",
+     "Otology, rhinology, laryngology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/",
+     "https://lingardprivate.cms.healthecare.com.au/specialists/professor-kelvin-kong",
+     "https://specialists.healthscope.com.au/specialist/kelvin-kong-med0000979658"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Toby Corlette",
+    "specialty": "ENT surgery (adult and paediatric)",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/dr-corlette/",
+    "interests": [
+     "Rhinology (nose and sinuses)",
+     "Ear surgery incl. cochlear implants",
+     "Skin cancers of face, head and neck"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital (VMO)",
+      "Kurri Kurri Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/dr-corlette/",
+     "https://www.nextsense.org.au/about/dr-toby-corlette"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Daron Cope",
+    "specialty": "ENT surgery",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/",
+    "interests": [
+     "Functional nasal surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Afrikaans"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.doctify.com/au/specialist/daron-cope"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Associate Professor Robert Eisenberg",
+    "specialty": "ENT surgery",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.doctify.com/au/practice/hunter-ent-1"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Johnson Huang",
+    "specialty": "ENT surgery",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.doctify.com/au/practice/hunter-ent-1"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Julia Crawford",
+    "specialty": "ENT surgery (visiting)",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hossein Ghazavi",
+    "specialty": "ENT surgery (visiting)",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/your-team/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Niall Jefferson",
+    "specialty": "ENT surgery (paediatric focus)",
+    "practice": "Ear Nose Throat Newcastle",
+    "address": "218 Pacific Hwy, Charlestown NSW 2290 (entry via Pearson St Mall)",
+    "suburb": "Charlestown",
+    "phone": "02 4955 8044",
+    "fax": "02 4955 8055",
+    "email": "admin@entnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://entnewcastle.com.au/",
+    "interests": [
+     "Paediatric ENT",
+     "Paediatric tracheal reconstruction and complex airway surgery",
+     "Snoring and sleep-disordered breathing",
+     "Recurrent ear infections",
+     "Congenital neck masses",
+     "Complex Aerodigestive Clinic, John Hunter Children's Hospital"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://entnewcastle.com.au/",
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-niall-jefferson"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Associate Professor Ryan Winters",
+    "specialty": "ENT, head and neck, facial plastic and reconstructive surgery",
+    "practice": "Ear Nose Throat Newcastle",
+    "address": "218 Pacific Hwy, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4955 8044",
+    "fax": "02 4955 8055",
+    "email": "admin@entnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://entnewcastle.com.au/",
+    "interests": [
+     "Skin cancer and reconstruction",
+     "Head and neck cancer",
+     "Thyroid and parathyroid",
+     "Cleft lip and palate reconstruction",
+     "Rhinoplasty and facial cosmetic surgery",
+     "Facial fractures",
+     "Nasal and sinus surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "all ages",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://entnewcastle.com.au/",
+     "https://specialists.healthscope.com.au/specialist/ryan-winters"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Monique Parkin",
+    "specialty": "ENT surgery",
+    "practice": "Dr Monique Parkin (consults at The Junction)",
+    "address": "The Junction (street address not published on hospital profiles)",
+    "suburb": "The Junction",
+    "phone": "02 4962 1220",
+    "fax": "",
+    "email": "reception@drmoniqueparkin.com.au",
+    "ereferral": "",
+    "website": "https://drmoniqueparkin.com.au",
+    "interests": [
+     "Paediatric ENT",
+     "Adult nasal and sinus conditions",
+     "Snoring and obstructive sleep apnoea",
+     "Rhinoplasty"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital",
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/monique-parkin-med0001191229",
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-monique-parkin"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "obstetrics-gynaecology": {
+  "name": "Obstetrics and gynaecology (incl. menopause, endometriosis, fertility)",
+  "people": [
+   {
+    "name": "Dr Gracia Chong",
+    "specialty": "Gynaecology (endoscopic surgery)",
+    "practice": "Hunter Gynaecology",
+    "address": "Charlestown (street address not published on site)",
+    "suburb": "Charlestown",
+    "phone": "02 4920 9544",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.huntergynaecology.com.au/dr-gracia-chong/",
+    "interests": [
+     "Advanced endometriosis excision",
+     "Pelvic pain",
+     "Ovarian cysts",
+     "Gynaecological ultrasound incl. deep endometriosis imaging",
+     "Colposcopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital (robotic surgery)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.huntergynaecology.com.au/dr-gracia-chong/",
+     "https://www.huntergynaecology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Brett Locker",
+    "specialty": "Gynaecology (urogynaecology)",
+    "practice": "Hunter Gynaecology",
+    "address": "Charlestown (street address not published on site)",
+    "suburb": "Charlestown",
+    "phone": "02 4920 9544",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.huntergynaecology.com.au/",
+    "interests": [
+     "Urogynaecology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.huntergynaecology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sneha Joshi",
+    "specialty": "Gynaecology (no obstetrics)",
+    "practice": "Advanced Gynaecology and Endometriosis Care",
+    "address": "251 Newcastle Street, East Maitland NSW 2323; also Shop 114, Junction Village, 10-16 Kenrick St, The Junction NSW 2291",
+    "suburb": "East Maitland / The Junction",
+    "phone": "02 4936 6789 (East Maitland); 02 4965 4393 (The Junction)",
+    "fax": "02 4933 1161",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.advancedgynaecology.com.au/",
+    "interests": [
+     "Endometriosis (holistic and surgical)",
+     "Minimally invasive (keyhole) surgery",
+     "Heavy bleeding",
+     "Pelvic pain",
+     "Fibroids",
+     "Prolapse",
+     "Urinary incontinence",
+     "Vulval conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.advancedgynaecology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Steve Raymond",
+    "specialty": "Gynaecology, fertility, advanced laparoscopic surgery",
+    "practice": "Dr Steve Raymond / Newcastle Ultrasound",
+    "address": "Suite 1 & 2, 25 Morehead Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4957 3899",
+    "fax": "",
+    "email": "reception@steveraymond.com.au",
+    "ereferral": "",
+    "website": "https://drsteveraymond.com.au/",
+    "interests": [
+     "Endometriosis",
+     "PCOS",
+     "Prolapse",
+     "Recurrent miscarriage",
+     "Infertility and IVF",
+     "Keyhole surgery",
+     "Prenatal ultrasound",
+     "Donor sperm and eggs"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "women of all ages (as stated)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drsteveraymond.com.au/",
+     "https://www.ivf.com.au/clinics/hunter-ivf"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Angela Boulton",
+    "specialty": "Gynaecology",
+    "practice": "Dr Angela Boulton (rooms shared with Dr Steve Raymond)",
+    "address": "Suite 1/25 Morehead St, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4957 3899",
+    "fax": "",
+    "email": "reception@steveraymond.com.au",
+    "ereferral": "",
+    "website": "https://drangelaboulton.com.au/",
+    "interests": [
+     "Endometriosis (particular focus)",
+     "Advanced laparoscopic surgery for complex benign gynaecology",
+     "Fibroids and myomectomy",
+     "Ovarian cysts",
+     "Colposcopy",
+     "Prolapse",
+     "Gynaecological ultrasound"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drangelaboulton.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Malcolm Godfrey",
+    "specialty": "Obstetrics, gynaecology, fertility",
+    "practice": "Dr Malcolm Godfrey",
+    "address": "Ground Floor, Suite 4, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 1733",
+    "fax": "02 4957 3907",
+    "email": "contact@drmalcolmgodfrey.com.au",
+    "ereferral": "",
+    "website": "https://drmalcolmgodfrey.com.au/",
+    "interests": [
+     "Obstetrics",
+     "Fertility (with Hunter IVF)",
+     "Gynaecology from fertility to menopause",
+     "Menstrual problems",
+     "Pelvic pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drmalcolmgodfrey.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Glenn Lowe",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr Glenn Lowe Obstetrics & Gynaecology",
+    "address": "Suite G1, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 1733",
+    "fax": "02 4957 3907",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/dr-glenn-lowe-obstetrics-gynaecology/obstetrics-and-gynaecology/f3be082f-fa11-657b-e7d6-dd4ab8ba04b3"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Matthew Holland",
+    "specialty": "Fertility, gynaecology and obstetrics",
+    "practice": "Dr Matthew Holland",
+    "address": "Suites G5-G6, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 7409",
+    "fax": "02 4965 5270",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drmatthewholland.com.au/",
+    "interests": [
+     "Obstetric care",
+     "Fertility testing, IVF, egg and sperm freezing",
+     "Contraception",
+     "Cervical screening",
+     "Gynaecological surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Practice states obstetric bookings are capped per month; book early",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital (births)",
+      "Genea Newcastle / Lingard Private Hospital (fertility procedures)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drmatthewholland.com.au/",
+     "https://drmatthewholland.com.au/our-team/about-matthew-holland/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Oliver Brown",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr Oliver Brown",
+    "address": "Suite 1.1, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4965 5491",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.droliverbrown.com.au/",
+    "interests": [
+     "Obstetrics incl. high-risk",
+     "General gynaecology",
+     "Vaginal and abdominal surgery",
+     "Continence surgery (retropubic TVT)",
+     "Mesh removal"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.droliverbrown.com.au/",
+     "https://www.droliverbrown.com.au/dr-oliver-j-brown.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tanya McKenny",
+    "specialty": "Obstetrics (maternal fetal medicine)",
+    "practice": "Obstetrics Newcastle",
+    "address": "Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "",
+    "email": "admin@obstetricsnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://obstetricsnewcastle.com.au",
+    "interests": [
+     "Pre-pregnancy counselling",
+     "Early pregnancy complications (hyperemesis, bleeding, miscarriage)",
+     "Diagnostic ultrasound and fetal therapy",
+     "Complex medical disorders in pregnancy",
+     "Multiples, growth and genetic conditions",
+     "High-risk pregnancy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital (staff specialist, maternal fetal medicine)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/tanya-mckenny"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Penelope Thomas",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr Penelope Thomas",
+    "address": "",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drpenelopethomas.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/penelope-thomas-med0000953749"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ashmita Desai",
+    "specialty": "Obstetrics and gynaecology (minimally invasive and pelvic floor surgery)",
+    "practice": "Arogya for Women",
+    "address": "Brightwell Health, Suite 1, 710 Hunter Street, Newcastle West NSW 2302; also Health HQ @ Oaks Resort, 265 Sandy Point Rd, Salamander Bay NSW 2317",
+    "suburb": "Newcastle West / Salamander Bay",
+    "phone": "02 4092 8000",
+    "fax": "02 4092 8001",
+    "email": "",
+    "ereferral": "",
+    "website": "https://arogyaforwomen.com.au/",
+    "interests": [
+     "Endometriosis excision",
+     "Fibroids and ovarian cysts",
+     "Heavy or abnormal bleeding",
+     "Pelvic pain",
+     "Menopause and postmenopausal bleeding",
+     "Prolapse and incontinence",
+     "Colposcopy",
+     "Contraception"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://arogyaforwomen.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Erin Fuller",
+    "specialty": "Fertility specialist and gynaecologist",
+    "practice": "Newcastle Fertility Specialists (Genea Newcastle)",
+    "address": "193 Corlette St, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4908 6555",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drerinfuller.com.au/",
+    "interests": [
+     "Male and female infertility",
+     "PCOS",
+     "IVF",
+     "Fertility preservation and egg freezing",
+     "Endometriosis incl. laparoscopic surgery",
+     "Donor sperm",
+     "Recurrent implantation failure",
+     "Preconception care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
+    ],
+    "sources": [
+     "https://drerinfuller.com.au/about-dr-erin-fuller/",
+     "https://newcastlefertilityspecialists.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Myvanwy McIlveen",
+    "specialty": "Fertility specialist",
+    "practice": "Newcastle Fertility Specialists (Genea Newcastle)",
+    "address": "193 Corlette St, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4908 6555",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlefertilityspecialists.com/dr-myvanwy-mcllveen/",
+    "interests": [
+     "IVF and infertility",
+     "Preimplantation genetic diagnosis",
+     "PCOS",
+     "Male factor infertility",
+     "Recurrent implantation failure",
+     "Donor sperm",
+     "Egg freezing",
+     "Endometriosis",
+     "Ovarian insufficiency"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
+    ],
+    "sources": [
+     "https://newcastlefertilityspecialists.com/dr-myvanwy-mcllveen/",
+     "https://www.geneanewcastle.com.au/doctor/dr-myvanwy-mcilveen/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Angela Dunford",
+    "specialty": "Fertility specialist",
+    "practice": "Newcastle Fertility Specialists (Genea Newcastle)",
+    "address": "193 Corlette St, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4908 6555",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlefertilityspecialists.com/dr-angela-dunford/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
+    ],
+    "sources": [
+     "https://newcastlefertilityspecialists.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kate Burston",
+    "specialty": "Fertility specialist",
+    "practice": "Newcastle Fertility Specialists (Genea Newcastle)",
+    "address": "193 Corlette St, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4908 6555",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlefertilityspecialists.com/dr-kate-burston/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
+    ],
+    "sources": [
+     "https://newcastlefertilityspecialists.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andrew Hedges",
+    "specialty": "Fertility specialist (O&G)",
+    "practice": "IVFAustralia Hunter (Hunter IVF)",
+    "address": "Suite G1, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 3800",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ivf.com.au/specialists/ivf-doctors-australia/dr-andrew-hedges",
+    "interests": [
+     "PCOS and hormonal disorders",
+     "Endometriosis incl. advanced laparoscopic surgery",
+     "Implantation failure and pregnancy loss",
+     "Pelvic floor and reconstructive surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ivf.com.au/specialists/ivf-doctors-australia/dr-andrew-hedges",
+     "https://www.ivf.com.au/clinics/hunter-ivf"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Denise Nesbitt",
+    "specialty": "Fertility specialist (O&G)",
+    "practice": "IVFAustralia Hunter (Hunter IVF)",
+    "address": "The Heights Private Medical Centre, Suite 4/2 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "1800 111 483 (new); 02 4957 8515",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ivf.com.au/clinics/hunter-ivf",
+    "interests": [
+     "Fertility care continuing from conception to birth"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ivf.com.au/clinics/hunter-ivf",
+     "https://www.healthdirect.gov.au/australian-health-services/20150695/hunter-ivf-dr-denise-nesbitt/services/new-lambton-heights-2305-lookout"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Susan Winspear",
+    "specialty": "Fertility specialist (O&G), women's ultrasound",
+    "practice": "IVFAustralia Hunter (Hunter IVF)",
+    "address": "The Heights Private Medical Centre, Suite 4/2 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "1800 111 483 (new); 02 4957 8515",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ivf.com.au/clinics/hunter-ivf",
+    "interests": [
+     "Women's ultrasound and prenatal diagnosis"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ivf.com.au/clinics/hunter-ivf"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-hand-upper-limb": {
+  "name": "Orthopaedic surgery: hand and upper limb",
+  "people": [
+   {
+    "name": "Dr Tim Karbowiak",
+    "specialty": "Orthopaedic surgery (hand and wrist)",
+    "practice": "Hand Surgery Centre, Newcastle Private Hospital",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 7900",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Hand, wrist and thumb arthritis",
+     "Hand and wrist fractures (adults and children)",
+     "Carpal tunnel and nerve problems",
+     "Dupuytren's disease",
+     "Wrist arthroscopy",
+     "Nerve and tendon injuries",
+     "Replantation and microsurgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital Hand Unit (public)",
+      "Maitland Hospital (public)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-tim-karbowiak"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bryce Meads",
+    "specialty": "Orthopaedic surgery (hand and wrist)",
+    "practice": "Hand Surgery Centre",
+    "address": "Suite 2.3-2.4, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 7900",
+    "fax": "",
+    "email": "practicemanager@handsurgerycentre.com.au",
+    "ereferral": "",
+    "website": "http://www.handsurgerycentre.com.au/",
+    "interests": [
+     "Hand, wrist and thumb arthritis incl. joint replacement",
+     "Wrist arthroscopy and TFCC repair",
+     "Carpal, cubital and radial tunnel syndromes",
+     "Traumatic hand injuries incl. microvascular repair"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-bryce-meads"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tanya Burgess",
+    "specialty": "Orthopaedic surgery (hand, wrist and microsurgery)",
+    "practice": "Hunter Hand Surgery",
+    "address": "141 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4920 6338",
+    "fax": "",
+    "email": "info@hunterhandsurgery.com.au",
+    "ereferral": "",
+    "website": "https://hunterhandsurgery.com.au/dr-tanya-burgess/",
+    "interests": [
+     "Hand and wrist surgery",
+     "Microsurgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterhandsurgery.com.au/",
+     "https://hunterhandsurgery.com.au/dr-tanya-burgess/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Brett McClelland",
+    "specialty": "Orthopaedic surgery (hand, wrist and microsurgery)",
+    "practice": "Hunter Hand Surgery",
+    "address": "141 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4920 6338",
+    "fax": "",
+    "email": "info@hunterhandsurgery.com.au",
+    "ereferral": "",
+    "website": "https://hunterhandsurgery.com.au/",
+    "interests": [
+     "Hand and wrist surgery",
+     "Microsurgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterhandsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr William Lumsdaine",
+    "specialty": "Orthopaedic surgery (hand, wrist and microsurgery)",
+    "practice": "Hunter Hand Surgery",
+    "address": "141 Brunker Rd, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4920 6338",
+    "fax": "",
+    "email": "info@hunterhandsurgery.com.au",
+    "ereferral": "",
+    "website": "https://hunterhandsurgery.com.au/",
+    "interests": [
+     "Hand and wrist surgery",
+     "Microsurgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterhandsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Kemp",
+    "specialty": "Orthopaedic surgery (hand and upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://www.nseh.com.au/dr-stephen-kemp",
+    "interests": [
+     "Hand surgery",
+     "Microsurgery",
+     "Arthroscopic upper limb surgery",
+     "Open shoulder surgery",
+     "Shoulder, elbow, wrist and hand joint replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/dr-stephen-kemp",
+     "https://www.nseh.com.au/about-us"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Benjamin East",
+    "specialty": "Orthopaedic surgery (shoulder, elbow, upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://newcastleshoulderandelbow.com.au/",
+    "interests": [
+     "Shoulder and elbow",
+     "Nerve surgery",
+     "Elbow arthroscopy",
+     "Upper limb trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/about-us",
+     "https://newcastleshoulderandelbow.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-shoulder": {
+  "name": "Orthopaedic surgery: shoulder",
+  "people": [
+   {
+    "name": "Dr Benjamin East",
+    "specialty": "Orthopaedic surgery (shoulder and elbow)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://newcastleshoulderandelbow.com.au/",
+    "interests": [
+     "Shoulder replacement",
+     "Rotator cuff repair",
+     "Latarjet procedure",
+     "Elbow arthroscopy",
+     "Nerve surgery",
+     "Complex trauma",
+     "Sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleshoulderandelbow.com.au/",
+     "https://www.nseh.com.au/about-us",
+     "https://lingardprivate.com.au/specialists/dr-benjamin-east"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Damian Mansour",
+    "specialty": "Orthopaedic surgery (shoulder, elbow, sports)",
+    "practice": "Dr Damian Mansour / The Orthopaedic Clinic",
+    "address": "Suite 16, Level 1, Eastpoint Building, 50 Glebe Rd, The Junction NSW 2291; also 33 Stockton St, Nelson Bay NSW 2315",
+    "suburb": "The Junction",
+    "phone": "02 4047 2347",
+    "fax": "02 4047 2340",
+    "email": "reception@drdamianmansour.com.au",
+    "ereferral": "",
+    "website": "https://www.drdamianmansour.com.au/",
+    "interests": [
+     "Shoulder surgery",
+     "Elbow surgery",
+     "Knee surgery",
+     "Orthopaedic trauma",
+     "Arthroscopic sports surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drdamianmansour.com.au/",
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Minas Petrelis",
+    "specialty": "Orthopaedic surgery (upper limb, shoulder)",
+    "practice": "Newcastle Orthopaedics (Charlestown)",
+    "address": "52 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 1688",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drminaspetrelis.com/",
+    "interests": [
+     "Shoulder surgery",
+     "Elbow",
+     "Upper limb trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont District Hospital (public clinic)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drminaspetrelis.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Kemp",
+    "specialty": "Orthopaedic surgery (hand and upper limb)",
+    "practice": "Newcastle Shoulder Elbow & Hand Surgery",
+    "address": "Suite 1, 18 Lambton Rd, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4927 6888",
+    "fax": "02 4927 6889",
+    "email": "reception@nseh.com.au",
+    "ereferral": "",
+    "website": "https://www.nseh.com.au/dr-stephen-kemp",
+    "interests": [
+     "Arthroscopic and open shoulder surgery",
+     "Shoulder and elbow joint replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nseh.com.au/dr-stephen-kemp"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ben McGrath",
+    "specialty": "Orthopaedic surgery (hip, knee and shoulder)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4047 2347",
+    "fax": "",
+    "email": "office@theorthoclinic.com.au",
+    "ereferral": "",
+    "website": "https://huntersportsandjointreplacement.com.au/dr-ben-mcgrath/",
+    "interests": [
+     "Shoulder and elbow reconstruction",
+     "Arthroscopic sports surgery",
+     "Joint preservation and realignment",
+     "Hip and knee replacement incl. revision",
+     "Trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "King Street Private Hospital",
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "Maitland Hospital",
+      "Cessnock Hospital",
+      "Singleton Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntersportsandjointreplacement.com.au/dr-ben-mcgrath/",
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jai Kumar",
+    "specialty": "Orthopaedic surgery (knee and shoulder, sports arthroscopy)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Knee",
+     "Shoulder",
+     "Sports arthroscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-hip-knee": {
+  "name": "Orthopaedic surgery: hip and knee",
+  "people": [
+   {
+    "name": "Dr Rosie Hoswell",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4047 2347",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drrosiehoswell.com.au/",
+    "interests": [
+     "Hip and knee replacement",
+     "General orthopaedic trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "King Street Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drrosiehoswell.com.au/",
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ben McGrath",
+    "specialty": "Orthopaedic surgery (hip, knee and shoulder)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4047 2347",
+    "fax": "",
+    "email": "office@theorthoclinic.com.au",
+    "ereferral": "",
+    "website": "https://huntersportsandjointreplacement.com.au/dr-ben-mcgrath/",
+    "interests": [
+     "Total hip and knee replacement",
+     "Revision joint replacement",
+     "Joint preservation and realignment",
+     "Sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "King Street Private Hospital",
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "Maitland Hospital",
+      "Cessnock Hospital",
+      "Singleton Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntersportsandjointreplacement.com.au/dr-ben-mcgrath/",
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jai Kumar",
+    "specialty": "Orthopaedic surgery (knee and shoulder, sports arthroscopy)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Knee",
+     "Sports arthroscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Drew Tarrant",
+    "specialty": "Orthopaedic surgery (foot and ankle; hip and knee arthroplasty)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Hip and knee arthroplasty",
+     "Foot and ankle"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Gill",
+    "specialty": "Orthopaedic surgery (hip, knee, shoulder)",
+    "practice": "Dr David Gill",
+    "address": "57 Lindsay Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4969 4033",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drdavidgill.com.au/",
+    "interests": [
+     "Hip, knee and shoulder arthroscopy and joint replacement",
+     "Sports injuries",
+     "Major trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (Head of Orthopaedics, VMO)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drdavidgill.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lachlan Cornford",
+    "specialty": "Orthopaedic surgery (hip, knee, trauma)",
+    "practice": "Dr Lachlan Cornford",
+    "address": "Suite 3/2 Lingard St, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4047 1197",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.drlachlancornford.com.au/",
+    "interests": [
+     "Anterior minimally invasive hip replacement",
+     "Partial and total knee replacement",
+     "Knee ligament reconstruction",
+     "Knee arthroscopy",
+     "Trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drlachlancornford.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jonathan Young",
+    "specialty": "Orthopaedic surgery (hip and knee, sports)",
+    "practice": "Dr Jonathan Young (formerly Northern Orthopaedics)",
+    "address": "388 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 7777",
+    "fax": "02 4958 7700",
+    "email": "solutions@drjy.com.au",
+    "ereferral": "",
+    "website": "https://www.drjonathanyoung.com.au/",
+    "interests": [
+     "ACL and meniscal tears",
+     "Total and unicondylar knee replacement",
+     "Anterior approach hip replacement",
+     "Ankle injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drjonathanyoung.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jorgen Hellman",
+    "specialty": "Orthopaedic surgery (hip and knee)",
+    "practice": "Dr Jorgen Hellman",
+    "address": "Broadmeadow; also Williamtown and Nelson Bay (street addresses not published on home page)",
+    "suburb": "Broadmeadow",
+    "phone": "02 4969 8275",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drjorgenhellman.com.au/",
+    "interests": [
+     "Knee replacement",
+     "Hip replacement",
+     "ACL reconstruction"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drjorgenhellman.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Richard Harbury",
+    "specialty": "Orthopaedic surgery (lower limb)",
+    "practice": "Newcastle Orthopaedics (Maitland)",
+    "address": "104 George St, East Maitland NSW 2323; also Suite 3, 20 Smith St, Charlestown",
+    "suburb": "East Maitland",
+    "phone": "02 4934 6600",
+    "fax": "",
+    "email": "office@newcastleorthopaedics.com.au",
+    "ereferral": "",
+    "website": "https://newcastleorthopaedics.com.au/dr-richard-harbury/",
+    "interests": [
+     "Knee replacement",
+     "Knee arthroscopy and sports medicine",
+     "Hip replacement",
+     "Ligament reconstruction",
+     "Tibial osteotomy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleorthopaedics.com.au/",
+     "https://newcastleorthopaedics.com.au/dr-richard-harbury/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hardeep Salaria",
+    "specialty": "Orthopaedic surgery (hip, knee, spine)",
+    "practice": "Hunter Spine & Joint Replacement Centre",
+    "address": "Suite 4, Medical Centre 1, Maitland Private Hospital, 173 Chisholm Rd, Ashtonfield NSW 2323",
+    "suburb": "Ashtonfield",
+    "phone": "02 4934 2955",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterspine.com.au/",
+    "interests": [
+     "Robotic hip and knee replacement",
+     "Revision joint surgery",
+     "Complex trauma",
+     "Degenerative spinal conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterspine.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-foot-ankle": {
+  "name": "Orthopaedic surgery: foot and ankle",
+  "people": [
+   {
+    "name": "Dr Steven Kent",
+    "specialty": "Orthopaedic surgery (foot and ankle, trauma)",
+    "practice": "Hunter Foot and Ankle",
+    "address": "Level 1, Suite 10, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "02 4911 2303",
+    "fax": "02 4006 3081",
+    "email": "admin@hunterfootandankle.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterfootandankle.com.au/",
+    "interests": [
+     "Foot and ankle surgery",
+     "Fracture management",
+     "Foot and ankle sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital (VMO)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterfootandankle.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Pankaj Rao",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "Dr Rao",
+    "address": "12 Mitchell Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4918 0200",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.rao.net.au/",
+    "interests": [
+     "Foot and ankle surgery",
+     "Sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.rao.net.au/about-dr-rao/",
+     "https://lingardprivate.com.au/specialists/dr-pankaj-rao"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robbie Glanfield",
+    "specialty": "Orthopaedic surgery (foot and ankle, trauma)",
+    "practice": "Newcastle Orthopaedics (Charlestown)",
+    "address": "52 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 1688",
+    "fax": "",
+    "email": "robbie@newcastleortho.com.au",
+    "ereferral": "",
+    "website": "https://www.drrobbieglanfield.com/",
+    "interests": [
+     "Foot and ankle",
+     "General orthopaedic trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drrobbieglanfield.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James O'Sullivan",
+    "specialty": "Orthopaedic surgery (foot and ankle)",
+    "practice": "",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Diabetic foot",
+     "Bone and joint deformity",
+     "Trauma",
+     "Minimally invasive foot and ankle surgery",
+     "Arthroscopic ankle fusion",
+     "Total ankle replacement"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-james-osullivan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Drew Tarrant",
+    "specialty": "Orthopaedic surgery (foot and ankle; hip and knee arthroplasty)",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Level 7, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://theorthoclinic.com.au/surgeons.html",
+    "interests": [
+     "Foot and ankle"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theorthoclinic.com.au/surgeons.html"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-spine": {
+  "name": "Orthopaedic surgery: spine",
+  "people": [
+   {
+    "name": "Dr Robert Kuru",
+    "specialty": "Orthopaedic spinal surgery",
+    "practice": "Mac Spine (Lake Macquarie Specialist Medical Centre)",
+    "address": "Lake Macquarie Specialist Medical Centre (street address not on hospital profile)",
+    "suburb": "",
+    "phone": "02 4040 1139",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://macspine.com.au",
+    "interests": [
+     "Spinal surgery",
+     "Discectomy and decompression",
+     "Spinal trauma",
+     "Tumour resection",
+     "Adult and paediatric deformity"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/robert-kuru-med0001144724"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Simon Abson",
+    "specialty": "Orthopaedic spinal surgery",
+    "practice": "",
+    "address": "",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.trinityspecialist.com.au/team/dr-simon-abson/",
+    "interests": [
+     "Adult and paediatric spinal deformity",
+     "Degenerative spinal conditions",
+     "Spinal trauma",
+     "Tumour resection",
+     "Discectomy and decompression"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/simon-abson-med0001188874",
+     "https://lingardprivate.com.au/specialists/dr-simon-abson"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hardeep Salaria",
+    "specialty": "Orthopaedic surgery (hip, knee, spine)",
+    "practice": "Hunter Spine & Joint Replacement Centre",
+    "address": "Suite 4, Medical Centre 1, Maitland Private Hospital, 173 Chisholm Rd, Ashtonfield NSW 2323",
+    "suburb": "Ashtonfield",
+    "phone": "02 4934 2955",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterspine.com.au/",
+    "interests": [
+     "Degenerative spinal conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterspine.com.au/",
+     "https://www.hunterspine.com.au/treatments-services/spine-surgeon/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "plastic-surgery": {
+  "name": "Plastic and reconstructive surgery",
+  "people": [
+   {
+    "name": "Dr Kirstin Miteff",
+    "specialty": "Plastic surgery (reconstructive and cosmetic)",
+    "practice": "Aspire Plastic Surgery",
+    "address": "73 Glebe Road, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4963 1581",
+    "fax": "",
+    "email": "info@aspireplasticsurgery.com.au",
+    "ereferral": "",
+    "website": "https://www.aspireplasticsurgery.com.au",
+    "interests": [
+     "General plastic surgery",
+     "Breast reconstruction",
+     "Hand surgery",
+     "Cosmetic breast, body and facial surgery",
+     "Cleft and craniomaxillofacial surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-kirstin-miteff"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andrew Raymond",
+    "specialty": "Plastic surgery (reconstructive and cosmetic)",
+    "practice": "Dr Andrew Raymond",
+    "address": "Level 3, 199 Corlette Street, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4081 8787",
+    "fax": "",
+    "email": "info@andrewraymond.com.au",
+    "ereferral": "",
+    "website": "https://www.andrewraymond.com.au/",
+    "interests": [
+     "Skin cancer",
+     "Breast reconstruction after cancer",
+     "Facial cosmetic surgery",
+     "Cosmetic breast surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.andrewraymond.com.au/",
+     "https://plasticsurgery.org.au/doctor/dr-andrew-raymond/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Yezdi Mistry",
+    "specialty": "Plastic surgery (reconstructive and cosmetic)",
+    "practice": "Dr Yezdi Mistry",
+    "address": "Suite 312, Level 3, Charlestown Healthcare Hub, 99 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4062 7888",
+    "fax": "",
+    "email": "admin@drmistry.com.au",
+    "ereferral": "",
+    "website": "https://www.drmistry.com.au/",
+    "interests": [
+     "Skin cancer surgery (BCC, SCC, melanoma)",
+     "Hand surgery incl. Dupuytren's",
+     "Post-weight-loss body contouring",
+     "Cosmetic breast and body surgery",
+     "Eyelid and ear surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drmistry.com.au/",
+     "https://specialists.healthscope.com.au/specialist/yezdi-mistry-med0001861566"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nicholas Moncrieff",
+    "specialty": "Plastic surgery",
+    "practice": "Hunter Plastic Surgery",
+    "address": "Charlestown (street address not on profile page)",
+    "suburb": "Charlestown",
+    "phone": "02 4920 7700",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterplasticsurgery.com.au/",
+    "interests": [
+     "Breast reduction and lift",
+     "Breast augmentation",
+     "Abdominoplasty and body lift"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterplasticsurgery.com.au/about-dr-nicholas-moncrieff"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bernard Beldholm",
+    "specialty": "Surgeon (FRACS), cosmetic and reconstructive",
+    "practice": "Dr Bernard Beldholm",
+    "address": "30 Belmore Road, Lorn NSW 2320",
+    "suburb": "Lorn (Maitland)",
+    "phone": "02 4934 5700",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://beldholm.com.au/",
+    "interests": [
+     "Body contouring after weight loss and pregnancy",
+     "Breast surgery",
+     "Face and neck surgery",
+     "Gynaecomastia",
+     "Liposuction and fat grafting"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://beldholm.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Associate Professor Ryan Winters",
+    "specialty": "ENT / facial plastic and reconstructive surgery",
+    "practice": "Ear Nose Throat Newcastle",
+    "address": "218 Pacific Hwy, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4955 8044",
+    "fax": "02 4955 8055",
+    "email": "admin@entnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://entnewcastle.com.au/",
+    "interests": [
+     "Facial skin cancer reconstruction",
+     "Cleft lip and palate reconstruction",
+     "Rhinoplasty, blepharoplasty, facelift, otoplasty"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://entnewcastle.com.au/",
+     "https://specialists.healthscope.com.au/specialist/ryan-winters"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Scott Turner",
+    "specialty": "Plastic surgery (facial aesthetic) - visiting",
+    "practice": "Dr Scott Turner (Newcastle consulting)",
+    "address": "5A/281-293 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "1300 437 758",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drturner.com.au/locations/newcastle/",
+    "interests": [
+     "Facial surgery (facelift, neck lift, brow lift, eyelid, rhinoplasty)",
+     "Breast surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Consults in Newcastle one Friday per month; operates in Sydney",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drturner.com.au/locations/newcastle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "urology": {
+  "name": "Urology",
+  "people": [
+   {
+    "name": "Associate Professor Alison Blatt",
+    "specialty": "Urology",
+    "practice": "Urology Care Newcastle",
+    "address": "Glebe Road Clinic, 585 Glebe Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4062 8860",
+    "fax": "02 4062 8878",
+    "email": "admin@urocarenew.com.au",
+    "ereferral": "",
+    "website": "https://www.urologycarenewcastle.com.au/",
+    "interests": [
+     "Urological cancer",
+     "Kidney stones",
+     "Incontinence"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states patients are welcome to bring a support person to appointments"
+    ],
+    "sources": [
+     "https://www.urologycarenewcastle.com.au/",
+     "https://specialists.healthscope.com.au/specialist/alison-blatt-med0001180592"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Terrence Doyle",
+    "specialty": "Urology",
+    "practice": "Newcastle Urology",
+    "address": "26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 8866",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleurology.com.au",
+    "interests": [
+     "Prostate cancer (incl. prostate brachytherapy)",
+     "Kidney stones",
+     "Voiding dysfunction"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleurology.com.au/terrence-doyle-newcastle-urology.html",
+     "https://www.continence.org.au/help-and-support/find-a-service-provider/newcastle-urology-dr-terrence-doyle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Peter Chong",
+    "specialty": "Urology",
+    "practice": "Lake Macquarie Urology",
+    "address": "Level 3, Suite 2, Sky Central East, 20 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 1217",
+    "fax": "02 4920 8866",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lmu.com.au/dr-peter-g-chong/",
+    "interests": [
+     "Kidney stones and endourology",
+     "Upper tract laparoscopy",
+     "Minimally invasive prostate cancer treatment",
+     "Kidney cancer",
+     "Lower urinary tract symptoms"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital",
+      "Warners Bay Private Hospital",
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lmu.com.au/dr-peter-g-chong/",
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/urology/100729/dr-peter-chong"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Marcus McKenzie Handmer",
+    "specialty": "Urology (robotic uro-oncology)",
+    "practice": "Urology Surgery",
+    "address": "42 Smith St, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4001 0147",
+    "fax": "02 4913 5363",
+    "email": "info@urologysurgery.com.au",
+    "ereferral": "",
+    "website": "https://www.urologysurgery.com.au/",
+    "interests": [
+     "Robotic radical prostatectomy and cystectomy",
+     "Partial nephrectomy",
+     "Kidney stones",
+     "Male voiding dysfunction",
+     "General urology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.urologysurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nicholas McLeod",
+    "specialty": "Urology",
+    "practice": "Dr Nicholas McLeod",
+    "address": "Suite 11, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "02 4957 3327",
+    "fax": "02 4957 7391",
+    "email": "",
+    "ereferral": "",
+    "website": "https://nicholasmcleod.com.au/newcastle-urologist/",
+    "interests": [
+     "Robotic (da Vinci) prostate cancer surgery",
+     "Laparoscopic and laser surgery",
+     "Minimally invasive urological cancer treatment",
+     "Kidney, bladder, adrenal and male reproductive surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital",
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://nicholasmcleod.com.au/newcastle-urologist/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Avi Raman",
+    "specialty": "Urology and kidney transplant surgery",
+    "practice": "Raman Urology",
+    "address": "",
+    "suburb": "",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ramanurology.com.au/",
+    "interests": [
+     "Urological surgery (robotic, laparoscopic, open)",
+     "Kidney transplant surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Public and private hospitals in Newcastle, Lake Macquarie and Hunter Valley (not named on home page)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ramanurology.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "general-surgery": {
+  "name": "General surgery (incl. breast, endocrine, colorectal, upper GI)",
+  "people": [
+   {
+    "name": "Dr Owen Morris",
+    "specialty": "General surgery (oncoplastic breast and reconstruction)",
+    "practice": "Newcastle Surgical",
+    "address": "",
+    "suburb": "",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlesurgical.com.au/",
+    "interests": [
+     "Oncoplastic breast surgery (cancer and benign)",
+     "Immediate and delayed breast reconstruction",
+     "Risk-reducing surgery for gene carriers",
+     "Gastroscopy and colonoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlesurgical.com.au/surgeons"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Melanie Webb",
+    "specialty": "General surgery (oncoplastic breast, melanoma, endocrine)",
+    "practice": "Newcastle Surgical",
+    "address": "",
+    "suburb": "",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlesurgical.com.au/",
+    "interests": [
+     "Oncoplastic breast surgery and reconstruction",
+     "Melanoma and skin cancer",
+     "Thyroid and parathyroid",
+     "Lymph node surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle (staff specialist)",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlesurgical.com.au/surgeons"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Shannon Cooper",
+    "specialty": "General surgery (oncoplastic breast, melanoma)",
+    "practice": "Newcastle Surgical",
+    "address": "",
+    "suburb": "",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlesurgical.com.au/",
+    "interests": [
+     "Oncoplastic breast surgery",
+     "Melanoma and skin lesions",
+     "Gallbladder and hernia",
+     "Gastroscopy and colonoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "Calvary Mater Newcastle",
+      "Belmont District Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlesurgical.com.au/surgeons"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rahul Mehrotra",
+    "specialty": "General and colorectal surgery (laparoscopic)",
+    "practice": "Newcastle Surgical",
+    "address": "",
+    "suburb": "",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlesurgical.com.au/",
+    "interests": [
+     "Colorectal surgery",
+     "Laparoscopic hernia repair",
+     "Gallbladder surgery",
+     "Skin cancer excision",
+     "Rapid-access colonoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlesurgical.com.au/surgeons"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Conjoint Associate Professor Christine O'Neill",
+    "specialty": "General surgery (endocrine and breast)",
+    "practice": "Surgery Central",
+    "address": "Top Floor, Lake Macquarie Specialist Centre, 8 Sydney St, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 8177",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drchrisoneill.com/",
+    "interests": [
+     "Thyroid, parathyroid and adrenal surgery",
+     "Breast cancer and benign breast disease",
+     "Hernia and gallbladder"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital",
+      "Newcastle Private Hospital",
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drchrisoneill.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Anil Koshy",
+    "specialty": "Colorectal and general surgery",
+    "practice": "Colorectal Surgeons Newcastle",
+    "address": "Lambton NSW 2299 (street address not on page)",
+    "suburb": "Lambton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.colorectalsurgeonsnewcastle.com.au/",
+    "interests": [
+     "Keyhole and complex pelvic surgery incl. pelvic exenteration",
+     "Robotic surgery",
+     "Inflammatory bowel disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.colorectalsurgeonsnewcastle.com.au/colorectal-surgeons-newcastle-lambton-nsw.html",
+     "https://specialists.healthscope.com.au/specialist/anil-koshy-med0000944705"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Brian Draganic",
+    "specialty": "Colorectal surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/",
+     "https://specialists.healthscope.com.au/specialist/brian-draganic"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Professor Stephen Smith",
+    "specialty": "Colorectal surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/",
+     "https://specialists.healthscope.com.au/specialist/stephen-smith-med0001167002"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hasitha Balasuriya",
+    "specialty": "Colorectal surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michelle Chen",
+    "specialty": "Colorectal and general surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/",
+     "https://www.lakemacquarieprivate.com/Our-Doctors/Specialists/lake-macquarie-private-hospital/colorectal-surgery/108653/dr-michelle-chen"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Merran Holmes",
+    "specialty": "Colorectal surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Geoffrey Collins",
+    "specialty": "Colorectal surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Colorectal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Marisol Perez Cerdeira",
+    "specialty": "Upper GI and general surgery",
+    "practice": "Newcastle Colorectal Surgery",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4956 3244",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlecolorectalsurgery.com.au/",
+    "interests": [
+     "Upper GI surgery",
+     "General surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecolorectalsurgery.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Peter Pockney",
+    "specialty": "General and colorectal surgery",
+    "practice": "Coastal Colorectal",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 5999",
+    "fax": "",
+    "email": "admin@coastalcolorectal.com.au",
+    "ereferral": "",
+    "website": "https://coastalcolorectal.com.au",
+    "interests": [
+     "Colorectal surgery",
+     "Colorectal cancer screening",
+     "Proctology (haemorrhoids, fistula, fissure)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/peter-pockney-med0001614280"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Simon Whitcher",
+    "specialty": "General, bariatric and benign upper GI surgery",
+    "practice": "Hunter Weight Loss & Upper GI",
+    "address": "Ground Floor, 37 Llewellyn Street, Merewether NSW 2291; also Suite 10, Medical Centre 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Merewether",
+    "phone": "02 4062 8444",
+    "fax": "02 4062 8443",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterweightloss.com.au/dr-simon-whitcher",
+    "interests": [
+     "Bariatric surgery incl. revision",
+     "Hiatus hernia and anti-reflux surgery",
+     "Gallbladder and hernia",
+     "Gastroscopy and colonoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (VMO)",
+      "Belmont Hospital (VMO)",
+      "Newcastle Private / Hunter Valley Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterweightloss.com.au/dr-simon-whitcher",
+     "https://specialists.healthscope.com.au/specialist/simon-whitcher-med0001801304"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Patrick McQuillan",
+    "specialty": "Bariatric, upper GI and general surgery",
+    "practice": "Hunter Weight Loss & Upper GI",
+    "address": "Ground Floor, 37 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4062 8444",
+    "fax": "",
+    "email": "admin@hunterwl.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterweightloss.com.au/dr-patrick-mcquillan",
+    "interests": [
+     "Sleeve gastrectomy, gastric bypass, revisional bariatric surgery",
+     "Hiatus hernia and anti-reflux surgery",
+     "Achalasia",
+     "Oesophageal and gastric cancer",
+     "Interventional endoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-patrick-mcquillan",
+     "https://www.hunterweightloss.com.au/dr-patrick-mcquillan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Dhan Thiruchelvam",
+    "specialty": "Upper GI and obesity surgery",
+    "practice": "Reflux Clinic",
+    "address": "Suite 1, Ground Floor, Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.refluxclinic.com.au/",
+    "interests": [
+     "Upper GI surgery",
+     "Surgical endoscopy",
+     "Robotic weight-loss surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.refluxclinic.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "vascular-surgery": {
+  "name": "Vascular surgery",
+  "people": [
+   {
+    "name": "Dr Zo Williams",
+    "specialty": "Vascular and endovascular surgery",
+    "practice": "Hunter Vascular",
+    "address": "3 Smart Street, Charlestown NSW 2290; also Shop 3, Oaks Resort, 265 Sandy Point Rd, Salamander Bay NSW 2317",
+    "suburb": "Charlestown",
+    "phone": "02 4086 8790",
+    "fax": "",
+    "email": "admin@huntervasc.com.au",
+    "ereferral": "",
+    "website": "https://huntervasc.com.au/",
+    "interests": [
+     "Aneurysms",
+     "Carotid disease",
+     "Peripheral arterial disease",
+     "Varicose veins",
+     "Pelvic congestion syndrome",
+     "Complex endovascular procedures"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (Director of Vascular Surgery)",
+      "Newcastle Private Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervasc.com.au/",
+     "https://specialists.healthscope.com.au/specialist/dr-zo-williams"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andrew Ying",
+    "specialty": "Vascular and endovascular surgery",
+    "practice": "Hunter Vascular",
+    "address": "3 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4086 8790",
+    "fax": "",
+    "email": "admin@huntervasc.com.au",
+    "ereferral": "",
+    "website": "https://huntervasc.com.au/",
+    "interests": [
+     "Dialysis access",
+     "Aortic and arterial aneurysms",
+     "Carotid disease",
+     "Peripheral arterial disease",
+     "Varicose veins and deep venous disease",
+     "Spinal access surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Newcastle Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervasc.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Arvind Deshpande",
+    "specialty": "Vascular surgery",
+    "practice": "",
+    "address": "",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Varicose veins",
+     "Carotid surgery and stenting",
+     "Lower limb bypass",
+     "Aortic and peripheral aneurysms"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/arvind-deshpande-med0001189969"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nicole Organ",
+    "specialty": "Vascular surgery",
+    "practice": "Vascular One",
+    "address": "Gateshead and Merewether clinics (street addresses not on profile)",
+    "suburb": "Gateshead / Merewether",
+    "phone": "02 4946 2310",
+    "fax": "02 4920 6476",
+    "email": "drnicoleorgan@vascularone.com.au",
+    "ereferral": "",
+    "website": "https://vascularone.com.au/about-us/our-doctors/dr-nicole-organ/",
+    "interests": [
+     "Open and endovascular management of vascular disease",
+     "Carotid endarterectomy (research)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://vascularone.com.au/about-us/our-doctors/dr-nicole-organ/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mathew Sebastian",
+    "specialty": "Vascular and endovascular surgery",
+    "practice": "Vascular One",
+    "address": "Gateshead, Merewether and East Maitland clinics",
+    "suburb": "Gateshead",
+    "phone": "02 4942 1035",
+    "fax": "02 4920 6476",
+    "email": "msebastian@vascularone.com.au",
+    "ereferral": "",
+    "website": "https://mathewsebastian.com.au",
+    "interests": [
+     "Endovascular aortic aneurysm repair",
+     "Limb salvage incl. diabetic foot disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (staff specialist; Director, Vascular Ultrasound Lab)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://vascularone.com.au/about-us/our-doctors/dr-mathew-sebastian/",
+     "https://mathewsebastian.com.au/meet-dr-mathew-sebastian"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Senthil Kumar",
+    "specialty": "Vascular surgery",
+    "practice": "Vascular One",
+    "address": "Newcastle and Lake Macquarie (clinic not specified)",
+    "suburb": "",
+    "phone": "02 4039 8544",
+    "fax": "02 4920 6476",
+    "email": "",
+    "ereferral": "",
+    "website": "https://vascularone.com.au/about-us/our-doctors/dr-senthil-kumar/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (consultant)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://vascularone.com.au/about-us/our-doctors/dr-senthil-kumar/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Naomi Hunter",
+    "specialty": "Vascular / phlebology",
+    "practice": "Hunter Vein Clinic (at Vascular One rooms)",
+    "address": "East Maitland",
+    "suburb": "East Maitland",
+    "phone": "02 4933 0431",
+    "fax": "02 4920 6476",
+    "email": "info@hunterveinclinic.com.au",
+    "ereferral": "",
+    "website": "https://vascularone.com.au/dr-naomi-hunter/",
+    "interests": [
+     "Phlebology (vein treatment)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://vascularone.com.au/dr-naomi-hunter/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "neurosurgery": {
+  "name": "Neurosurgery",
+  "people": [
+   {
+    "name": "Associate Professor Mitchell Hansen",
+    "specialty": "Neurosurgery and spinal surgery",
+    "practice": "Newcastle Brain and Spine",
+    "address": "Suite 2, Cambridge Building, Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4956 3440",
+    "fax": "",
+    "email": "appointment@neurosurgeon.asia",
+    "ereferral": "",
+    "website": "https://neurosurgeon.asia",
+    "interests": [
+     "Brain tumours, hydrocephalus and shunts",
+     "Disc protrusion and spinal stenosis",
+     "Peripheral nerve surgery",
+     "Paediatric neurosurgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital (Director of Neurosurgery)",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/mitchell-hansen-med0001192626",
+     "https://threebestrated.com.au/neurosurgeons-in-newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Samuel Hall",
+    "specialty": "Neurosurgery",
+    "practice": "Samuel Hall Neurosurgery",
+    "address": "Suite 2, Cambridge Building, Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4086 8996",
+    "fax": "02 4086 8997",
+    "email": "reception@shneurosurgery.com",
+    "ereferral": "",
+    "website": "https://www.shneurosurgery.com/",
+    "interests": [
+     "Complex and minimally invasive spine surgery",
+     "Brain and skull base tumours",
+     "Aneurysms, AVMs, cavernomas, Moyamoya",
+     "Hydrocephalus",
+     "Trigeminal neuralgia",
+     "Neuroendoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "John Hunter Hospital",
+      "John Hunter Children's Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.shneurosurgery.com/",
+     "https://specialists.healthscope.com.au/specialist/sam-hall"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Finn Ghent",
+    "specialty": "Neurosurgery (cerebrovascular and skull base)",
+    "practice": "Dr Finn Ghent",
+    "address": "Suite 6, Ground Floor, Newcastle Private Hospital, 14 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4088 8300",
+    "fax": "",
+    "email": "admin@drghent.com.au",
+    "ereferral": "",
+    "website": "https://www.drghent.com.au/",
+    "interests": [
+     "Cerebrovascular surgery",
+     "Skull base surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drghent.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Associate Professor Richard Ferch",
+    "specialty": "Neurosurgery (adult and paediatric)",
+    "practice": "Dr Richard Ferch",
+    "address": "Suite 14, 20 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4920 8114",
+    "fax": "",
+    "email": "admin@drferch.com.au",
+    "ereferral": "",
+    "website": "https://www.drferch.com.au/",
+    "interests": [
+     "Cranial surgery",
+     "Spinal surgery",
+     "Peripheral nerve surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [
+      "John Hunter Hospital (public outpatients)",
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drferch.com.au/",
+     "https://threebestrated.com.au/neurosurgeons-in-newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sophia Roser",
+    "specialty": "Neurosurgery",
+    "practice": "Dr Sophia Roser",
+    "address": "Newcastle Private Hospital rooms (also Port Stephens and Coffs Harbour)",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4044 5033",
+    "fax": "02 4027 5666",
+    "email": "reception@drsroser.com.au",
+    "ereferral": "",
+    "website": "https://www.drsroser.com.au/",
+    "interests": [
+     "Neuro-oncology (brain and spinal tumours)",
+     "Degenerative spine",
+     "Pituitary surgery",
+     "Peripheral nerve surgery and shunts"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (VMO)",
+      "Newcastle Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drsroser.com.au/",
+     "https://specialists.healthscope.com.au/specialist/sophia-roser-med0001669319"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Neurosurgery (public referrals)",
+    "specialty": "Neurosurgery (public)",
+    "practice": "Hunter New England Health",
+    "address": "Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4922 3912 (Referral Management Centre)",
+    "fax": "02 4922 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.shneurosurgery.com/",
+     "https://www.drferch.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychiatry-adult": {
+  "name": "Psychiatry (adult)",
+  "people": [
+   {
+    "name": "Dr Pek Ang",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Mind-Care",
+    "address": "Level 3, 28-38 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4943 4111",
+    "fax": "",
+    "email": "hello@mind-care.net.au",
+    "ereferral": "",
+    "website": "https://www.mind-care.net.au/welcome-dr-pek-ang-psychiatrist-newcastle/",
+    "interests": [
+     "Adult ADHD diagnosis and management",
+     "Impulse control incl. eating-related behaviours",
+     "Emotional dysregulation and burnout",
+     "Mood and anxiety disorders",
+     "Complex presentations"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.mind-care.net.au/welcome-dr-pek-ang-psychiatrist-newcastle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sarah Vanniasingham",
+    "specialty": "Psychiatry (adult, addiction)",
+    "practice": "Kinetic Minds / Ramsay Clinic Lakeside",
+    "address": "Warners Bay Private Hospital Consulting Rooms, 42 Fairfax Rd, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "consultingrooms.wbp@ramsayhealth.com.au",
+    "ereferral": "",
+    "website": "https://kineticminds.com.au/",
+    "interests": [
+     "Anxiety and mood disorders",
+     "OCD",
+     "PTSD",
+     "Psychosis and early psychosis",
+     "Addiction psychiatry and dual diagnosis",
+     "Perinatal care",
+     "Cultural psychiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "18-60",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists care for Aboriginal and Torres Strait Islander people as an interest"
+    ],
+    "sources": [
+     "https://kineticminds.com.au/",
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Dinesh Sinnaduray",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Kinetic Minds / Ramsay Clinic Lakeside",
+    "address": "Warners Bay Private Hospital Consulting Rooms, 42 Fairfax Rd, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "consultingrooms.wbp@ramsayhealth.com.au",
+    "ereferral": "",
+    "website": "https://kineticminds.com.au/",
+    "interests": [
+     "Schizophrenia and psychoses",
+     "Bipolar disorder, depression, anxiety",
+     "OCD",
+     "PTSD and complex trauma",
+     "Personality disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "17-65",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://kineticminds.com.au/",
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bahador Asadi-Khansari",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4958 4288",
+    "fax": "02 4941 3474",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [
+     "Anxiety, depressive and bipolar disorders",
+     "Psychotic disorders",
+     "ADHD",
+     "PTSD and trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Judith Greenland",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [
+     "Acute and rehabilitation psychiatry",
+     "Mood, anxiety and psychotic disorders",
+     "Perinatal psychiatry",
+     "Functional neurological symptoms",
+     "Older persons' mental health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sujatha Venkatesh",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 3701",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [
+     "First-episode psychosis",
+     "Bipolar disorder and depression",
+     "Psychotic disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michael Bull",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ian Fowler",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Meera Ranganathan",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4958 4288",
+    "fax": "02 4941 3476",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alan Weiss",
+    "specialty": "Psychiatry (adult)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "Ramsay Clinic Lakeside"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "EDUCARE (psychiatry service)",
+    "specialty": "Psychiatry (adult and child/adolescent) - clinic",
+    "practice": "EDUCARE",
+    "address": "Level 3, Sky Central West, 28-38 Smart St, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4943 4444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.educare.net.au/services/psychiatry/",
+    "interests": [
+     "ADHD diagnosis and treatment (all psychiatrists prescribe stimulants, per practice)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "GP referral required; triaged against intake criteria",
+     "ages": "all ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states it is committed to embracing diversity, social inclusion and eliminating discrimination, welcoming Indigenous Australians, LGBTQIA+ people, people with disability and culturally and linguistically diverse people"
+    ],
+    "sources": [
+     "https://www.educare.net.au/services/psychiatry/",
+     "https://www.educare.net.au/services/adhd-psychiatrist-newcastle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mater Mental Health Centre",
+    "specialty": "Public mental health (inpatient and community)",
+    "practice": "Hunter New England Health",
+    "address": "Edith Street, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4033 5000; NSW Mental Health Line 1800 011 511 (24/7)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Directory listing states interpreter services available",
+     "Directory listing states disability access (ramps, lifts, accessible toilets)"
+    ],
+    "sources": [
+     "https://directory.wayahead.org.au/service/1533/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychiatry-child-adolescent": {
+  "name": "Psychiatry (child and adolescent)",
+  "people": [
+   {
+    "name": "Dr James Ulrick",
+    "specialty": "Psychiatry (child and adolescent)",
+    "practice": "Rest in Essence Mental Health Practice",
+    "address": "48 Brown Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4902 8900",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://restinessence.com.au/team/dr-james-ulrick/",
+    "interests": [
+     "Anxiety, mood and psychotic disorders",
+     "Trauma",
+     "Ongoing ADHD treatment (does not do autism assessments; practice psychologists do)",
+     "Careful medication use incl. deprescribing"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children, adolescents and young adults up to 30",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states it acknowledges and supports the LGBTQIA+ community",
+     "Practice acknowledges Traditional Custodians"
+    ],
+    "sources": [
+     "https://restinessence.com.au/team/dr-james-ulrick/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "EDUCARE (child and adolescent psychiatry)",
+    "specialty": "Psychiatry (child and adolescent) - clinic",
+    "practice": "EDUCARE",
+    "address": "Level 3, Sky Central West, 28-38 Smart St, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4943 4444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.educare.net.au/services/psychiatry/",
+    "interests": [
+     "ADHD diagnosis and treatment",
+     "Separate autism/ADHD/learning assessment service listed"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "GP referral required; triaged against intake criteria",
+     "ages": "children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Practice states it is committed to embracing diversity, social inclusion and eliminating discrimination, welcoming Indigenous Australians, LGBTQIA+ people, people with disability and culturally and linguistically diverse people"
+    ],
+    "sources": [
+     "https://www.educare.net.au/services/psychiatry/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter New England Child and Adolescent Mental Health Service (CAMHS)",
+    "specialty": "Public child and adolescent mental health",
+    "practice": "Hunter New England Health",
+    "address": "Community and inpatient sites across HNE (call for nearest)",
+    "suburb": "",
+    "phone": "1800 011 511 (Mental Health Line, takes referrals); 02 4904 9100",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/mental-health/child-young-people-services",
+    "interests": [
+     "Assessment and treatment of complex or severe mental health issues"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "up to 17 (or still at school)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Includes Wiyiliin Ta, a CAMHS community team for Aboriginal young people and families"
+    ],
+    "sources": [
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/mental-health/child-young-people-services",
+     "https://huntercommunityhub.org.au/community/directory/children-adolescent-mental-health-services-camhs/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Nexus Child & Adolescent Mental Health Unit, John Hunter Hospital",
+    "specialty": "Public inpatient child and adolescent mental health",
+    "practice": "Hunter New England Health",
+    "address": "Level 1, John Hunter Hospital, Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4985 5800",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "12-bed acute inpatient unit (no outpatient assessments)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "5-17",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Directory listing states interpreter services available and wheelchair accessible"
+    ],
+    "sources": [
+     "https://directory.wayahead.org.au/service/1369/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "headspace Newcastle",
+    "specialty": "Youth mental health centre (not psychiatrist-led)",
+    "practice": "headspace / Hunter Primary Care",
+    "address": "582 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4929 4201",
+    "fax": "",
+    "email": "headspacenewcastle@hunterprimarycare.com.au",
+    "ereferral": "",
+    "website": "https://headspace.org.au/headspace-centres/newcastle/",
+    "interests": [
+     "Mental health counselling",
+     "Alcohol and other drugs (12-19)",
+     "GP and sexual health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "12-25",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Centre states it welcomes people regardless of ethnicity, faith, sexual orientation and gender identity",
+     "Centre states it has disability access ramps"
+    ],
+    "sources": [
+     "https://headspace.org.au/headspace-centres/newcastle/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychiatry-perinatal": {
+  "name": "Psychiatry (perinatal)",
+  "people": [
+   {
+    "name": "Dr Judith Greenland",
+    "specialty": "Psychiatry (adult, perinatal)",
+    "practice": "Ramsay Clinic Lakeside / Warners Bay Private Hospital",
+    "address": "",
+    "suburb": "Warners Bay",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+    "interests": [
+     "Perinatal psychiatry",
+     "Mood and anxiety disorders",
+     "Consultation-liaison psychiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sarah Vanniasingham",
+    "specialty": "Psychiatry (adult, perinatal care listed)",
+    "practice": "Kinetic Minds / Ramsay Clinic Lakeside",
+    "address": "Warners Bay Private Hospital Consulting Rooms, 42 Fairfax Rd, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4941 3779",
+    "fax": "02 4941 3714",
+    "email": "consultingrooms.wbp@ramsayhealth.com.au",
+    "ereferral": "",
+    "website": "https://kineticminds.com.au/",
+    "interests": [
+     "Perinatal care",
+     "Dual diagnosis"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "18-60",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsaymentalhealth.com.au/en/our-locations/Mental-health-clinics/nsw-locations/lakeside/find-a-psychiatrist-link-to-search/",
+     "https://kineticminds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mater Mental Health Centre (perinatal psychology service listed)",
+    "specialty": "Public mental health",
+    "practice": "Hunter New England Health",
+    "address": "Edith Street, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4033 5000; NSW Mental Health Line 1800 011 511 (24/7)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Perinatal psychology (listed service)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://directory.wayahead.org.au/service/1533/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "paediatrics-general": {
+  "name": "Paediatrics (general)",
+  "people": [
+   {
+    "name": "Dr Kate Tenney",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Eric Mills",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Zoe Stephenson",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Practice states books closed, re-opening late 2026",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jennifer Tayler",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Elodie Moreau",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alissa Tenney",
+    "specialty": "Paediatrics (general)",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/",
+    "interests": [
+     "Children of all ages with medical and developmental concerns",
+     "Neonatology on-call"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "all children",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/alissa-tenney",
+     "https://www.newcastlepaediatric.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Knipe",
+    "specialty": "Paediatrics (general)",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/",
+    "interests": [
+     "Neonatal and early childhood paediatrics",
+     "Runs a local Indigenous clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/stephen-knipe-med0001191564",
+     "https://www.newcastlepaediatric.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michael Lonergan",
+    "specialty": "Paediatrics (general)",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/",
+    "interests": [
+     "Haematology and oncology training",
+     "Neonatal paediatrics"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/michael-lonergan-med0001180866",
+     "https://www.newcastlepaediatric.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Harvey Kok",
+    "specialty": "Paediatrics",
+    "practice": "The Newcastle Paediatric Clinic (also consults at Hunter ENT, Konara)",
+    "address": "Suite 2, Level 1, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/",
+     "https://www.hunterent.com.au/your-team/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Newcastle Paediatric Clinic",
+    "specialty": "Paediatrics (group practice)",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Private Specialist Centre, 26 Lookout Rd, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/",
+    "interests": [
+     "General paediatricians plus paediatric respiratory, endocrinology and surgery (per site)",
+     "Team listed: Drs Fergus Elder, Stephen Knipe, Harvey Kok, Rajendra Kumar, Michael Lonergan, Kate Meredith, Alison Rowland, Andrew Walkom, Francois Abel, Alison Freeth, Alissa Tenney, Coen Butters, Brodie Hyde, Komal Vora"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robert Parry",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Neil Anderson",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kristin Mansour",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sally Quill",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics; Hunter Valley Paediatrics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "ADHD assessment (HCC paediatrician pathway)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://huntervalleypaeds.com.au/about-us"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sabah Brown",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nidhi Panicker",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rakel Hansen",
+    "specialty": "Paediatrics",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "Clinic-wide interests: ADHD, autism, FASD, tics and Tourette's, epilepsy (not assigned per doctor)",
+     "ADHD assessment (paediatrician-led pathway)",
+     "Oversight of psychology-led autism assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "children and adolescents (autism assessment approx 2.5-25)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lake Macquarie Paediatrics",
+    "specialty": "Paediatrics (clinic)",
+    "practice": "Lake Macquarie Paediatrics",
+    "address": "Level 1, Suite 11, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4910 0805",
+    "fax": "02 4910 0848",
+    "email": "admin@lakemacpaediatrics.com.au",
+    "ereferral": "",
+    "website": "https://www.lakemacpaediatrics.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/lake-macquarie-paediatrics/children-s-medical-service/163a1084-d00a-ae9b-e4c4-4f04cd39bf64"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "paediatrics-developmental": {
+  "name": "Paediatrics (developmental; ADHD/autism assessment where stated)",
+  "people": [
+   {
+    "name": "Hunter Children's Clinics (ADHD and autism assessment)",
+    "specialty": "Paediatrics and psychology - developmental",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291; also 93A Young Street, Carrington NSW 2294",
+    "suburb": "Merewether / Carrington",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/",
+    "interests": [
+     "ADHD assessment: paediatrician-led, nurse practitioner-led or psychology-based pathways",
+     "Autism assessment (psychology-led, MIGDAS-2, paediatrician oversight)",
+     "FASD, tics and Tourette's, epilepsy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Autism report aimed within 10 business days of final session; Fees published: initial $650-750, review $320-400 (Medicare rebate applies); 50% deposit for new bookings",
+     "ages": "autism assessment approx 2.5-25",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
+     "Clinic states a commitment to a safe, welcoming space for LGBTQIA+ people and Aboriginal and Torres Strait Islander people",
+     "Autism assessment page states sessions are paced to the child with sensory needs considered"
+    ],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/services/adhd/",
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
+     "https://hunterchildrensclinics.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Deepika Jadhav",
+    "specialty": "Paediatrics (neurodevelopmental focus)",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/dr-deepika-jadhav-paediatrician/",
+    "interests": [
+     "Complex neurodevelopmental and behavioural problems: ADHD, autism, developmental delay (assessment service not explicitly stated)",
+     "Asthma, allergies, epilepsy, failure to thrive"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/dr-deepika-jadhav-paediatrician/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "HNE Child Development Team",
+    "specialty": "Public developmental assessment (multidisciplinary)",
+    "practice": "Hunter New England Health",
+    "address": "Harker Building, Longworth Avenue, Wallsend NSW 2287; outreach clinics Charlestown, Muswellbrook, Toronto",
+    "suburb": "Wallsend",
+    "phone": "02 4924 6190 / 02 4924 6400",
+    "fax": "02 4924 6401",
+    "email": "HNELHD-ChildDevelopmentTeam@health.nsw.gov.au",
+    "ereferral": "SeNT eReferral (fax if unavailable)",
+    "website": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/child-and-family-health/child-development",
+    "interests": [
+     "Assessment-only for difficulties in 2+ developmental areas: autism, global developmental delay, FASD, learning disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "Waiting list after weekly intake (no published time); referral by professionals via SeNT eReferral",
+     "ages": "18 months-12 years at referral",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/child-and-family-health/child-development"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Valley Paediatrics (practice)",
+    "specialty": "Paediatrics (general)",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304; also Ground Level, Suite 2, 175 Chisholm Rd, East Maitland NSW 2323",
+    "suburb": "Mayfield / East Maitland",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/",
+    "interests": [
+     "General paediatrics",
+     "Practice lists autism and ADHD behavioural assessments (not assigned per doctor)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
