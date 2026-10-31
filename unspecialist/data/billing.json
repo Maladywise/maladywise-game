@@ -1,0 +1,1738 @@
+{
+ "checked": "2026-11-01",
+ "note": "Billing rules change. Check MBS Online before you bill.",
+ "premise": "Fictional patients. Item numbers checked against MBS Online, Services Australia, Health, AskMBS, RACGP and legislation sources. No dollar figures: fees are indexed (most rose 2.6% on 1 July 2026), so check the current fee on MBS Online.",
+ "rules": [
+  {
+   "topic": "Time tiers",
+   "text": "Level A (3): short, obvious, straightforward problem. Level B (23): at least 6 and under 20 minutes. Level C (36): 20 to under 40. Level D (44): 40 to under 60. Level E (123): 60 minutes or more.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "Legislation: Level B 'at least 6 minutes' (from 1 Nov 2023)",
+     "url": "https://www.legislation.gov.au/F2023L01386/asmade/2023-10-16/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ]
+  },
+  {
+   "topic": "Time tiers",
+   "text": "Count active attention on the patient, including extra time to communicate (interpreter, hearing or speech difficulty, dementia) and My Health Record work while the patient is present.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Time tiers",
+   "text": "Don't count notes, forms, referrals or uploads after the patient leaves, or talking with relatives while the patient is absent.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Time tiers",
+   "text": "A continuation of the same attendance is billed as one item. Time can't be banked toward two services.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "After-hours",
+   "text": "Non-urgent attendances spanning in-hours and after-hours: the period with the greater portion decides the item type.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "After-hours",
+   "text": "Urgent after-hours items need a genuinely urgent assessment. PSR has reviewed these items.",
+   "sources": [
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ]
+  },
+  {
+   "topic": "Bulk billing incentives",
+   "text": "From 1 Nov 2025, bulk billing incentives (Group M1) apply to all Medicare-eligible patients, not just under-16s and concession card holders.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI changes from 1 Nov 2025",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20Factsheet%20BBI%20changes%201%20Nov%2025.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ]
+  },
+  {
+   "topic": "Bulk billing incentives",
+   "text": "Triple incentive: items 23, 36, 44, 123 face to face, 91800 video and 91891 phone; plus 91801, 91802, 91920, 91900 and 91910 for MyMedicare-enrolled patients. Other unreferred services (incl. Level A and antenatal) get the single incentive.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Bulk billing incentives",
+   "text": "MBS Online's MMM1 examples: 23 + 75870; 91900 + 75880 (MyMedicare); 91801 + 10990 (not MyMedicare). Incentive item numbers vary with the Modified Monash category.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Bulk billing incentives",
+   "text": "Split billing is allowed (e.g. bulk-billed 23 for a second issue, privately billed 30071), but two Group T8 surgical items must be billed the same way.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Telehealth",
+   "text": "MBS telehealth needs MyMedicare registration with your practice, or a face-to-face service at your practice in the last 12 months. Prior phone or video consults don't count.",
+   "sources": [
+    {
+     "t": "AskMBS advisory: eligible telehealth practitioner (Nov 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-11/askmbs-advisory-mbs-telehealth-eligible-telehealth-practitioner-previously-known-as-established-clinical-relationship-requirements-clarification.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ]
+  },
+  {
+   "topic": "Telehealth",
+   "text": "Exemptions include under-12-month-olds, homelessness, BBV/sexual and reproductive health, AMS/ACCHS services and urgent after-hours. Mental health plan items lost their exemption on 1 Nov 2025 (FPS kept it).",
+   "sources": [
+    {
+     "t": "AskMBS advisory: eligible telehealth practitioner (Nov 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-11/askmbs-advisory-mbs-telehealth-eligible-telehealth-practitioner-previously-known-as-established-clinical-relationship-requirements-clarification.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ]
+  },
+  {
+   "topic": "Telehealth",
+   "text": "Level C and D phone items (91900, 91910) are for MyMedicare-registered patients only.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    }
+   ]
+  },
+  {
+   "topic": "Chronic care",
+   "text": "GPCCMP from 1 July 2025: prepare 965 (video 92029), review 967 (video 92030). GPMP/TCA items (721, 723, 732 and others) ceased.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Chronic care",
+   "text": "Prepare once every 12 months; review every 3 months, if clinically relevant. Not co-claimable with general attendance items on the same day.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Chronic care",
+   "text": "Allied health needs a plan prepared or reviewed in the last 18 months: up to 5 services per calendar year (10 for Aboriginal and Torres Strait Islander patients). Pre-July-2025 GPMP/TCAs stay valid for this until 30 June 2027.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ]
+  },
+  {
+   "topic": "Chronic care",
+   "text": "MyMedicare-registered patients get GPCCMPs through their registered practice; others through their usual GP. 10997: up to 5 nurse services a year between reviews, not for plan preparation.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Mental health",
+   "text": "MHTP preparation: 2700 (20 to under 40 min) and 2701 (40+) without mental health training; 2715 and 2717 with training.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ]
+  },
+  {
+   "topic": "Mental health",
+   "text": "2712 (review) and 2713 (consult) were removed on 1 Nov 2025: use the time-tiered items and document the review.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "MBS Online: Better Access changes for GPs",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/a6bbccd4e1519234ca258d0f00120c7e/$FILE/PDF%20Version%20-%20Arrangements%20for%20General%20Practitioners%20and%20Prescribed%20Medical%20Practitioners.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Mental health",
+   "text": "MHTPs, referrals and reviews must come from the patient's MyMedicare practice or usual medical practitioner (most care in the past or next 12 months).",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "MBS Online: Better Access changes for GPs",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/a6bbccd4e1519234ca258d0f00120c7e/$FILE/PDF%20Version%20-%20Arrangements%20for%20General%20Practitioners%20and%20Prescribed%20Medical%20Practitioners.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Health assessments",
+   "text": "701: 30 min or less; 703: over 30 to under 45; 705: 45 to under 60; 707: 60+. A practice nurse can assist.",
+   "sources": [
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    },
+    {
+     "t": "RACGP/APNA: quality health assessments",
+     "url": "https://www.RACGP.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/APNA-RACGP-quality-health-assessment-info-sheet.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Health assessments",
+   "text": "45–49 at risk: once only. 75+: annually. A second assessment in 12 months needs a different target group, stated on the claim.",
+   "sources": [
+    {
+     "t": "RACGP/APNA: quality health assessments",
+     "url": "https://www.RACGP.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/APNA-RACGP-quality-health-assessment-info-sheet.pdf"
+    },
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    }
+   ]
+  },
+  {
+   "topic": "Health assessments",
+   "text": "Heart health check (699): once in 12 months; not after another health assessment in the last 12 months (Aboriginal and Torres Strait Islander assessments excepted).",
+   "sources": [
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Health assessments",
+   "text": "715: not within 9 months of a 715, 228, 92004 or 92011. Follow-up allied health (81300–81360): up to 10 a calendar year.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ]
+  },
+  {
+   "topic": "Antenatal",
+   "text": "16500 + 23 on the same day only for two distinct services (e.g. an unrelated intercurrent problem), with separate times recorded. All pregnancy care: 16500 only.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "CESPHN: antenatal MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Antenatal",
+   "text": "Antenatal attendances get the single bulk billing incentive, not the triple.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Procedures",
+   "text": "Procedure items are complete services: consent, routine pre/post-op care and advice are included. Add an attendance only for work beyond that or a separate, distinct issue.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Procedures",
+   "text": "Routine post-operative care by the proceduralist is included in skin procedure items.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "topic": "Procedures",
+   "text": "30071: diagnostic skin biopsy, independent procedure, specimen to pathology. 30026: superficial wound repair, not face or neck, up to 7 cm.",
+   "sources": [
+    {
+     "t": "MBS item 30071 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30071"
+    },
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    }
+   ]
+  },
+  {
+   "topic": "Procedures",
+   "text": "30192: ablative treatment of 10 or more premalignant lesions. Fewer than 10 solar keratoses are covered by the attendance item.",
+   "sources": [
+    {
+     "t": "MBS item 30192 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "topic": "Procedures",
+   "text": "35501: 40% loading on 35503, 35506, 14206 or 30062 when the LARC service is bulk billed (from 1 Nov 2025).",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "Vitamin D (66833) only for listed indications (e.g. osteoporosis/osteomalacia signs, raised ALP with normal LFTs, malabsorption, deeply pigmented skin or severe lack of sun, anticonvulsants, CKD).",
+   "sources": [
+    {
+     "t": "MBS Online: item 66833",
+     "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?q=66833"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "B12 (66838): once in 12 months; holoTC/MMA (66839) if B12 low or equivocal. Folate (66840): at-risk patients only.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "NPS RADAR: B12, folate and vitamin D items",
+     "url": "https://www.nps.org.au/radar/articles/mbs-item-number-changes-for-vitamin-b12-folate-and-vitamin-d-tests"
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "HbA1c: monitoring established diabetes (66551) up to 4 in 12 months; diagnosis in asymptomatic high-risk patients (66841) once in 12 months.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "PSA (66655): once in 23 months. First-degree family history (66654): once in 11 months.",
+   "sources": [
+    {
+     "t": "MBS Online: PSA item changes (Nov 2023)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/0FAE1338D92EA3A3CA258A6F0001701A/$File/FS%20-%20New%20and%20amended%20items%20for%20prostate%20specific%20antigen%20testing.pdf"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "TSH (66716) first; free T4/T3 (66719) only if TSH is abnormal or a listed indication applies.",
+   "sources": [
+    {
+     "t": "MBS Online: items 66716 and 66719",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=66716&="
+    }
+   ]
+  },
+  {
+   "topic": "Pathology",
+   "text": "Standard lipid items have no frequency cap in the descriptor; lipoprotein electrophoresis (66539) is twice in 12 months. Iron studies (66596) and coeliac serology (71163 one antibody, 71164 two or more) have no descriptor cap.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ]
+  },
+  {
+   "topic": "Audit risk",
+   "text": "80/20 rule: 80+ relevant services on each of 20+ days in 12 months is deemed inappropriate practice (30/20 for phone). Leads to PSR referral.",
+   "sources": [
+    {
+     "t": "Health: prescribed pattern of services (80/20)",
+     "url": "https://www.health.gov.au/sites/default/files/2026-07/prescribed-pattern-of-services-what-you-need-to-know.pdf"
+    }
+   ]
+  },
+  {
+   "topic": "Audit risk",
+   "text": "PSR findings include unmet time requirements, same-day co-claiming workarounds, thin care plans and services without clinical indication.",
+   "sources": [
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "tier-b",
+   "room": "desk",
+   "topic": "Time tiers",
+   "consult": "Kim, 45. Sore ear for three days. History, otoscopy, a plan and safety-netting. 12 minutes face to face, in your rooms.",
+   "q": "Which item fits?",
+   "type": "single",
+   "options": [
+    "Level A (item 3)",
+    "Level B (item 23)",
+    "Level C (item 36)",
+    "Level D (item 44)"
+   ],
+   "answer": 1,
+   "why": "Level B is at least 6 and less than 20 minutes. Twelve minutes sits squarely in it. Level A is for the short, obvious, straightforward problem.",
+   "risk": "Level A under-claims a genuine Level B. Level C claims eight minutes that never happened, and PSR has found time requirements not met for items 23, 36 and 44.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "Legislation: Level B 'at least 6 minutes' (from 1 Nov 2023)",
+     "url": "https://www.legislation.gov.au/F2023L01386/asmade/2023-10-16/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tier-counts",
+   "room": "desk",
+   "topic": "Time tiers",
+   "consult": "Mrs Ali, 81. A long consult with lots going on. Afterwards you also did some admin and spoke to her daughter.",
+   "q": "Which of these count toward the time tier? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "Examining her and talking through the plan",
+    "Updating her My Health Record while she's still in the room",
+    "Writing your notes and a referral after she's left",
+    "Ten minutes with her daughter in the corridor while Mrs Ali is in the bathroom",
+    "Extra time needed to work through a phone interpreter"
+   ],
+   "answer": [
+    0,
+    1,
+    4
+   ],
+   "why": "Only active attention on the patient counts, including the extra time it genuinely takes to communicate (interpreter, hearing loss, dementia). My Health Record work counts while the patient is present. Notes, forms and referrals after they've left don't, and neither does talking to a relative while the patient is absent.",
+   "risk": "Padding the clock with paperwork is how a Level B becomes an over-claimed Level C. Leaving out interpreter time is the opposite mistake: legitimate minutes left on the table.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tier-interp",
+   "room": "desk",
+   "topic": "Time tiers",
+   "consult": "Mrs Tran, 62. New diabetes diagnosis, via a TIS phone interpreter. 24 minutes face to face; the same consult in English would have taken about 15.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "Level B (item 23): bill what it 'would' have taken",
+    "Level C (item 36)",
+    "Level D (item 44)",
+    "Level B plus a separate interpreter item"
+   ],
+   "answer": 1,
+   "why": "Extra time needed to communicate effectively counts, interpreters included. Twenty-four minutes of active attention is Level C. Note the reason for the extra time, and the TIS job number, in your notes.",
+   "risk": "Billing Level B quietly penalises you for doing the right thing. There's no separate interpreter item to add.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tier-e",
+   "room": "desk",
+   "topic": "Time tiers",
+   "consult": "Mr Okafor, 68. Five chronic problems, a medication review and a frank talk about prognosis. 62 minutes of continuous face-to-face time.",
+   "q": "How do you bill it?",
+   "type": "single",
+   "options": [
+    "Level D (item 44)",
+    "Level E (item 123)",
+    "Level D (44) plus a Level B (23) for the overflow",
+    "Two Level C items (36 + 36)"
+   ],
+   "answer": 1,
+   "why": "Level E (item 123) is for 60 minutes or more. One continuous attendance is one item: you can't split it into two to make the maths work.",
+   "risk": "Splitting one attendance into two items is billing the same time twice. Under-calling it as Level D leaves the Level E difference behind.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tier-cont",
+   "room": "desk",
+   "topic": "Time tiers",
+   "consult": "Lou, 55. You see him for 14 minutes, he leaves, then pops back five minutes later because you both forgot to recheck his blood pressure. Same problem, same plan.",
+   "q": "How many time-tiered attendance items?",
+   "type": "single",
+   "options": [
+    "Two: a Level B (23) and a Level A (3)",
+    "One attendance item",
+    "Two Level B items",
+    "None for the second bit, but add a bulk billing incentive twice"
+   ],
+   "answer": 1,
+   "why": "When the second contact is a continuation of the first attendance, you bill one time-based attendance item. Time used for one service can't be banked toward another.",
+   "risk": "Two items for one continuous episode is exactly the duplication auditors look for.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "bbi-all",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Jordan, 34. No concession card. 15-minute consult for a viral illness, bulk billed. Your practice is in a Modified Monash 1 area. It's November 2026.",
+   "q": "What do you claim?",
+   "type": "single",
+   "options": [
+    "Item 23 only: incentives are for kids and concession card holders",
+    "Item 23 + 75870 (triple incentive)",
+    "Item 23 + 10990 (single incentive)",
+    "Item 23 + 75880"
+   ],
+   "answer": 1,
+   "why": "From 1 November 2025, bulk billing incentives apply to every Medicare-eligible patient. MBS Online's own example: an MMM1 patient, item 23 bulk billed, plus 75870. The exact incentive item depends on your practice's Modified Monash category.",
+   "risk": "Skipping the incentive on an eligible bulk-billed consult leaves money on the table every single time.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI changes from 1 Nov 2025",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20Factsheet%20BBI%20changes%201%20Nov%2025.pdf"
+    },
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "bbi-levela",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Vinnie, 16. Simple script renewal, bulk billed as a Level A (item 3). MMM1 practice.",
+   "q": "Which incentive goes with it?",
+   "type": "single",
+   "options": [
+    "The triple incentive (75870)",
+    "The single incentive (10990)",
+    "No incentive: Level A doesn't qualify",
+    "75880"
+   ],
+   "answer": 1,
+   "why": "The tripled incentive is for the common consults: items 23, 36, 44 and 123 face to face (plus some telehealth items). Level A gets the single incentive; MBS Online's example pairs item 3 with a single incentive. In MMM1 that's 10990.",
+   "risk": "Claiming the triple on a Level A is an over-claim. Claiming nothing is a free incentive walking out the door.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "bbi-video",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Jenny, 40. 35-minute video consult, bulk billed. Not registered in MyMedicare. You saw her face to face seven months ago. MMM1 practice.",
+   "q": "What do you claim?",
+   "type": "single",
+   "options": [
+    "91801 + 75880 (triple)",
+    "91801 + 10990 (single)",
+    "36 + 75870",
+    "Nothing: she's not in MyMedicare, so no telehealth"
+   ],
+   "answer": 1,
+   "why": "She's eligible for telehealth because she had a face-to-face service with you in the last 12 months. But the triple incentive on Level C video (91801) needs MyMedicare enrolment, so it's the single incentive, 10990. This is MBS Online's own worked example.",
+   "risk": "Item 36 is a face-to-face item; billing it for video is simply wrong. The triple incentive here would be an over-claim.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "AskMBS advisory: eligible telehealth practitioner (Nov 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-11/askmbs-advisory-mbs-telehealth-eligible-telehealth-practitioner-previously-known-as-established-clinical-relationship-requirements-clarification.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "bbi-phone",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Paul, 52. 25-minute phone consult, bulk billed. Registered in MyMedicare with your practice. MMM1.",
+   "q": "What do you claim?",
+   "type": "single",
+   "options": [
+    "91900 + 75880",
+    "91891 + 10990",
+    "36 + 75870",
+    "91801 + 75880"
+   ],
+   "answer": 0,
+   "why": "Level C by phone is 91900, and it's only available to MyMedicare-registered patients. Bulk billed and enrolled, it attracts the triple incentive, 75880. Straight out of MBS Online's scenarios.",
+   "risk": "91891 is the Level B phone item: under-claiming 25 minutes. 91801 is video, and 36 is face to face.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "bbi-split",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Ravi, 60. You bulk bill a Level B (item 23) for his blood pressure, and he'd like a skin biopsy (30071) of a separate lesion done today. Your practice charges privately for procedures.",
+   "q": "Can you bulk bill the 23 and privately bill the 30071?",
+   "type": "single",
+   "options": [
+    "No: one patient, one day, one billing method",
+    "Yes: split billing like this is allowed",
+    "Only if you drop the biopsy item",
+    "Yes, and you can also privately bill the 23"
+   ],
+   "answer": 1,
+   "why": "Split billing is permitted, unless billing one item affects the fee for another. A bulk-billed time-tiered attendance for a second issue plus a privately billed biopsy is fine. Two Group T8 surgical items on the same occasion, though, must both be bulk billed or both privately billed.",
+   "risk": "Getting this wrong usually means needlessly bulk billing the procedure, or splitting two surgical items, which isn't allowed.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ah-greater",
+   "room": "desk",
+   "topic": "After-hours",
+   "consult": "Non-urgent consult in your rooms. It starts shortly before the after-hours period begins and runs well into it: most of the time falls after hours.",
+   "q": "Which item type?",
+   "type": "single",
+   "options": [
+    "The in-hours item: it started in hours",
+    "The after-hours item for that level",
+    "Split it: an in-hours item plus an after-hours item",
+    "An urgent after-hours item"
+   ],
+   "answer": 1,
+   "why": "For non-urgent attendances, the period containing the greater portion of the attendance decides the item type. One attendance, one item.",
+   "risk": "Splitting it is double billing; jumping to an urgent item is a PSR favourite (see the next one).",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ah-urgent",
+   "room": "desk",
+   "topic": "After-hours",
+   "consult": "Late in the evening, a patient asks for a repeat of a stable long-term medicine. No new symptoms. Nothing that couldn't wait until morning.",
+   "q": "Is an urgent after-hours attendance item appropriate?",
+   "type": "single",
+   "options": [
+    "Yes: it's after hours",
+    "Yes, if it's bulk billed",
+    "No: urgent items need a genuinely urgent assessment",
+    "Yes, if you see them by video"
+   ],
+   "answer": 2,
+   "why": "Urgent after-hours items are for patients who genuinely need urgent assessment. PSR has reviewed after-hours and urgent items where an urgent assessment wasn't required.",
+   "risk": "PSR outcomes have included repayments and disqualification from items. A non-urgent after-hours item (or a morning appointment) fits.",
+   "sources": [
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tele-ecr",
+   "room": "desk",
+   "topic": "Telehealth",
+   "consult": "Sasha, 29. Not registered in MyMedicare. Last face-to-face visit at your practice was 14 months ago; since then, three phone consults. Today she wants a video consult about a new rash. No exemption applies.",
+   "q": "Can you bill an MBS video item?",
+   "type": "single",
+   "options": [
+    "Yes: the phone consults keep the relationship current",
+    "No: no face-to-face service in the last 12 months and not MyMedicare-registered",
+    "Yes, if you bulk bill it",
+    "Yes, as long as it's under 20 minutes"
+   ],
+   "answer": 1,
+   "why": "MBS telehealth needs either MyMedicare registration with your practice, or a face-to-face service at your practice in the last 12 months. Prior video or phone consults don't count as face to face.",
+   "risk": "A non-claimable service billed to Medicare can be recovered. Book her in face to face (or register her in MyMedicare if she's eligible).",
+   "sources": [
+    {
+     "t": "AskMBS advisory: eligible telehealth practitioner (Nov 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-11/askmbs-advisory-mbs-telehealth-eligible-telehealth-practitioner-previously-known-as-established-clinical-relationship-requirements-clarification.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "tele-exempt",
+   "room": "desk",
+   "topic": "Telehealth",
+   "consult": "None of these patients is MyMedicare-registered, and none has had a face-to-face visit with your practice in the last 12 months.",
+   "q": "Who can still get an MBS video consult from you? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "A 6-month-old baby",
+    "A patient experiencing homelessness",
+    "A patient wanting a sexual and reproductive health consult",
+    "An immunocompromised patient with a chronic condition",
+    "A patient wanting a new mental health treatment plan"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "Exemptions include patients under 12 months, people experiencing homelessness, and blood-borne virus, sexual or reproductive health consults (among others; record the exemption in your notes). Being immunocompromised isn't an exemption. And since 1 November 2025, mental health plan telehealth items are no longer exempt.",
+   "risk": "Assuming an exemption that doesn't exist is how telehealth claims end up being recovered.",
+   "sources": [
+    {
+     "t": "AskMBS advisory: eligible telehealth practitioner (Nov 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-11/askmbs-advisory-mbs-telehealth-eligible-telehealth-practitioner-previously-known-as-established-clinical-relationship-requirements-clarification.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-sameday",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Barry, 66, is booked for his GP chronic condition management plan. While he's there, you also sort out a sinus infection. The plan is fully prepared today.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "965 + 23 today",
+    "965 only",
+    "965 today, then bill the 23 tomorrow",
+    "36 for everything"
+   ],
+   "answer": 1,
+   "why": "GPCCMP preparation and review items can't be co-claimed with general attendance items on the same day. Item 965 is a complete service and the only item to claim. If a consult reveals the need for a plan, you can bill the consult and do the plan another day.",
+   "risk": "Billing the 23 on a different day to dodge the rule is exactly what a PSR committee found was inappropriate practice.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-freq",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Helen, 58, has type 2 diabetes and a GPCCMP. It's clinically relevant to review it regularly.",
+   "q": "How often can the review item (967) be claimed?",
+   "type": "single",
+   "options": [
+    "Every 3 months",
+    "Every 6 months",
+    "Once a year",
+    "Monthly"
+   ],
+   "answer": 0,
+   "why": "From 1 July 2025: prepare a GPCCMP (965) once every 12 months, and review (967) every 3 months, if clinically relevant (unless exceptional circumstances apply).",
+   "risk": "Reviewing less often than you could, when it's clinically useful, is legitimate income (and care) left behind. More often than allowed gets rejected.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-18m",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Doug, 71. GPCCMP prepared 20 months ago and never reviewed. He wants a podiatry referral.",
+   "q": "What does he need first?",
+   "type": "single",
+   "options": [
+    "Nothing: plans never expire",
+    "A review (or new plan): it must have been prepared or reviewed in the last 18 months",
+    "A new referral letter only",
+    "A Mental Health Treatment Plan"
+   ],
+   "answer": 1,
+   "why": "GPCCMPs don't expire, but to keep accessing allied health under the plan, it must have been prepared or reviewed in the previous 18 months. Then it's up to 5 individual allied health services per calendar year (10 for Aboriginal and Torres Strait Islander patients).",
+   "risk": "A referral built on a stale plan means the podiatry claims can fail, and that lands on the patient.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-mymed",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Priscilla, 63, is registered in MyMedicare with another practice. She's visiting you and asks for a GPCCMP.",
+   "q": "Can you bill 965?",
+   "type": "single",
+   "options": [
+    "Yes, any GP can",
+    "No: MyMedicare-registered patients access GPCCMP items through their registered practice",
+    "Yes, but only by video",
+    "Yes, if she pays privately"
+   ],
+   "answer": 1,
+   "why": "Registered patients access GPCCMP items through their MyMedicare practice; non-registered patients through their usual GP. That applies face to face and by telehealth.",
+   "risk": "The claim won't stand, and it fragments her care.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-transition",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Frank, 74, has a GP Management Plan and Team Care Arrangements from May 2025. They're due for review.",
+   "q": "What do you claim now?",
+   "type": "single",
+   "options": [
+    "732 (GPMP/TCA review)",
+    "Prepare a GPCCMP (965)",
+    "721 + 723",
+    "967 (GPCCMP review)"
+   ],
+   "answer": 1,
+   "why": "GPMP and TCA items (including the 732 review) ceased on 1 July 2025. A patient with an old plan who needs a review moves to the new framework by having a GPCCMP prepared.",
+   "risk": "Ceased items won't pay. Billing 967 reviews a plan that doesn't exist yet.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ccm-10997",
+   "room": "desk",
+   "topic": "Chronic care",
+   "consult": "Your practice nurse spends 30 minutes gathering history and measurements to help you draft Rosa's brand-new GPCCMP.",
+   "q": "Can the nurse's time be billed as 10997?",
+   "type": "single",
+   "options": [
+    "Yes: 10997 covers any nurse time for a plan",
+    "No: 10997 can't be used to help prepare a plan",
+    "Yes, up to 10 times a year",
+    "Only if you co-claim a 23"
+   ],
+   "answer": 1,
+   "why": "Item 10997 is for ongoing monitoring and support between reviews for patients with a GPCCMP (up to 5 per calendar year), not for preparing the plan. The plan item (965) is a complete service.",
+   "risk": "Using 10997 for plan prep double-bills the same work.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "mh-review",
+   "room": "desk",
+   "topic": "Mental health",
+   "consult": "Ella, 31, back after six psychology sessions. 22-minute review of her mental health treatment plan, face to face. It's November 2026, and you're her usual GP.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "2712 (MHTP review)",
+    "2713 (mental health consult)",
+    "36 (Level C), noting it's an MHTP review",
+    "2700"
+   ],
+   "answer": 2,
+   "why": "Items 2712 and 2713 were removed on 1 November 2025. Reviews and ongoing mental health consults now use the time-tiered items: 22 minutes is Level C. Document that it's a plan review. Bulk billed, item 36 attracts the triple incentive.",
+   "risk": "Removed items get rejected. Use the time tier, and longer consults pay accordingly.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "MBS Online: Better Access changes for GPs",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/a6bbccd4e1519234ca258d0f00120c7e/$FILE/PDF%20Version%20-%20Arrangements%20for%20General%20Practitioners%20and%20Prescribed%20Medical%20Practitioners.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "mh-prep",
+   "room": "desk",
+   "topic": "Mental health",
+   "consult": "Tom, 27. You prepare his mental health treatment plan face to face in 35 minutes. You haven't done mental health skills training.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "2700",
+    "2701",
+    "2715",
+    "2717"
+   ],
+   "answer": 0,
+   "why": "Without mental health skills training: 2700 (20 to under 40 minutes) or 2701 (40+). With training: 2715 and 2717 for the same tiers.",
+   "risk": "Claiming the training items without the training is an over-claim. Calling it 2701 claims time you didn't spend.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "mh-usual",
+   "room": "desk",
+   "topic": "Mental health",
+   "consult": "Noor, 22. New to your practice, not registered in MyMedicare anywhere. She's moved to town and plans to see you for her care from now on. She needs a mental health treatment plan.",
+   "q": "Can you prepare and bill the MHTP?",
+   "type": "single",
+   "options": [
+    "No: she must be MyMedicare-registered first",
+    "Yes: you can be her usual medical practitioner; document that",
+    "Only if you've seen her for 12 months",
+    "Only by telehealth"
+   ],
+   "answer": 1,
+   "why": "From 1 November 2025, MHTPs come from the patient's MyMedicare practice or their usual medical practitioner. That includes a GP likely to provide most of their care over the next 12 months. If you haven't seen them before, record that the patient told you you're their usual practitioner.",
+   "risk": "Turning her away loses a legitimate service. Billing it for a one-off walk-in who has a usual GP elsewhere doesn't meet the rule.",
+   "sources": [
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    },
+    {
+     "t": "MBS Online: Better Access changes for GPs",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/a6bbccd4e1519234ca258d0f00120c7e/$FILE/PDF%20Version%20-%20Arrangements%20for%20General%20Practitioners%20and%20Prescribed%20Medical%20Practitioners.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ha-75",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Gwen, 79. Her annual 75+ health assessment. Your practice nurse and you together spend 50 minutes on it.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "701 (brief)",
+    "703 (standard)",
+    "705 (long)",
+    "707 (prolonged)"
+   ],
+   "answer": 2,
+   "why": "Health assessment tiers: 701 is 30 minutes or less, 703 more than 30 and under 45, 705 at least 45 and under 60, 707 is 60 or more. A practice nurse can assist, and the GP chooses the item considering total time and complexity.",
+   "risk": "Calling a 50-minute assessment 'standard' under-claims; 'prolonged' over-claims.",
+   "sources": [
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    },
+    {
+     "t": "RACGP/APNA: quality health assessments",
+     "url": "https://www.RACGP.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/APNA-RACGP-quality-health-assessment-info-sheet.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ha-4549",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Lena, 48. Had the 45–49 'at risk of chronic disease' health assessment at 46. She asks for it again.",
+   "q": "Can you claim it again?",
+   "type": "single",
+   "options": [
+    "Yes, every 12 months",
+    "No: it's once only",
+    "Yes, every 3 years",
+    "Yes, if you add a 23"
+   ],
+   "answer": 1,
+   "why": "The 45–49 health assessment is once only. The 75+ assessment is annual. A second health assessment in the same 12 months is only possible under a different target group, and the claim must say which.",
+   "risk": "Repeating a once-only item gets rejected. Check if she's eligible under another target group instead.",
+   "sources": [
+    {
+     "t": "RACGP/APNA: quality health assessments",
+     "url": "https://www.RACGP.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/APNA-RACGP-quality-health-assessment-info-sheet.pdf"
+    },
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ha-heart",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Jim, 47. Had his 45–49 health assessment five months ago. Today he asks for a heart health check (699) as well.",
+   "q": "Can you claim 699 today?",
+   "type": "single",
+   "options": [
+    "Yes, anytime",
+    "No: 699 can't follow another health assessment within 12 months (Aboriginal and Torres Strait Islander assessments aside)",
+    "Yes, if it's 20 minutes",
+    "Only with a 23"
+   ],
+   "answer": 1,
+   "why": "The heart health check is once in 12 months and can't be claimed if the patient has had a health assessment in the previous 12 months, except Aboriginal and Torres Strait Islander health assessments. On the same day, it's only OK if the other assessment is done after the heart health check.",
+   "risk": "The claim gets knocked back, or worse, gets paid and later recovered.",
+   "sources": [
+    {
+     "t": "Services Australia: billing health assessments",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ha-715",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Darren, 38, is Aboriginal. His 715 health assessment was eight months ago, and it identified a need for physio and dietetics follow-up.",
+   "q": "Which is correct? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "You can claim another 715 today",
+    "715 isn't claimable within 9 months of a 715, 228, 92004 or 92011",
+    "Follow-up allied health items (81300–81360) are capped at 10 services per calendar year, combined",
+    "Follow-up allied health is capped at 5 per year"
+   ],
+   "answer": [
+    1,
+    2
+   ],
+   "why": "Item 715 needs 9 months since the last Aboriginal and Torres Strait Islander health assessment (715, 228, 92004 or 92011). When it identifies a need, follow-up allied health items are available, up to 10 services per calendar year combined.",
+   "risk": "A 715 claimed a month early gets rejected. Missing the follow-up items leaves the patient (and the plan) under-served. PSR has also reviewed 715s for clinical indication and records, so do the whole thing.",
+   "sources": [
+    {
+     "t": "RACGP MBS guide for GPs",
+     "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+    },
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ante-coclaim",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "Ana, 29, at 24 weeks. Routine antenatal visit: BP, fundal height, results. She also rolled her ankle at netball, and you assess and manage it. You record separate times for each.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "16500 only",
+    "23 only",
+    "16500 + 23",
+    "36 for the lot"
+   ],
+   "answer": 2,
+   "why": "Co-claiming 16500 and 23 is permissible when you provide two distinct, clinically relevant services: the antenatal visit and an unrelated intercurrent problem. Document the separate problem and times. You can't use 23 to cover pregnancy-related work.",
+   "risk": "Billing 16500 alone leaves the ankle unbilled. Billing 36 for both misdescribes the antenatal care.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "CESPHN: antenatal MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ante-only",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "Bea, 31, at 30 weeks. 18 minutes: BP, fundal height, fetal movements, and a chat about pregnancy reflux and sleep. Nothing unrelated to the pregnancy.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "16500 only",
+    "16500 + 23 (the reflux was 'extra')",
+    "23 only",
+    "16500 + 3"
+   ],
+   "answer": 0,
+   "why": "If the whole encounter is pregnancy care, it's 16500 only. Pregnancy-related issues within the antenatal visit aren't a separate 23.",
+   "risk": "Adding a 23 for pregnancy-related work is the co-claiming error PSR has flagged in obstetric cases.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "PSR Director's update, March 2025",
+     "url": "https://www.psr.gov.au/node/304"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "ante-bbi",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "Cate, 26. Routine antenatal visit (16500), bulk billed, MMM1 practice.",
+   "q": "Which incentive?",
+   "type": "single",
+   "options": [
+    "Triple incentive (75870)",
+    "Single incentive (10990)",
+    "No incentive for antenatal visits",
+    "75880"
+   ],
+   "answer": 1,
+   "why": "Tripled incentives weren't extended to antenatal visits. For incentive purposes they're 'other unreferred services', so the single incentive applies (10990 in MMM1).",
+   "risk": "Triple is an over-claim; nothing leaves the single incentive on the table.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-cryo10",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Merv, 74. You treat 14 solar keratoses on his forearms and scalp with cryotherapy.",
+   "q": "What do you bill for the cryotherapy?",
+   "type": "single",
+   "options": [
+    "Nothing extra: it's part of the consult",
+    "30192 (premalignant lesions, ablative, 10 or more)",
+    "30071 for each lesion",
+    "30026"
+   ],
+   "answer": 1,
+   "why": "Item 30192 covers ablative treatment of premalignant skin lesions, 10 or more. Fewer than 10 solar keratoses are covered by the attendance item instead.",
+   "risk": "Fourteen lesions billed as just a consult is a procedure left unbilled. Biopsy and wound items don't apply to cryotherapy.",
+   "sources": [
+    {
+     "t": "MBS item 30192 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-cryo6",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Same as Merv, but this time six solar keratoses, frozen during a consult.",
+   "q": "What covers the cryotherapy?",
+   "type": "single",
+   "options": [
+    "30192",
+    "The attendance item",
+    "30071",
+    "30192 at half fee"
+   ],
+   "answer": 1,
+   "why": "Fewer than 10 solar keratoses treated ablatively are covered by attendance items. 30192 starts at 10.",
+   "risk": "Billing 30192 for six lesions is an over-claim that's easy to detect.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    },
+    {
+     "t": "MBS item 30192 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-biopsy",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Mary, 66. 30-minute check-up and script review. While taking her BP, you spot a suspicious lesion on her arm and do a punch biopsy, sent to pathology.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "36 only",
+    "30071 only",
+    "36 + 30071",
+    "36 + 30192"
+   ],
+   "answer": 2,
+   "why": "A genuine 30-minute consult plus a separate diagnostic biopsy sent for histology: both items. This is MBS Online's own worked example. 30071 needs the specimen sent for pathological examination.",
+   "risk": "Dropping the biopsy item leaves a procedure unbilled. The attendance time should be the consult, not the biopsy minutes.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "MBS item 30071 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30071"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-wound",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Theo, 30. Walk-in with a 5 cm superficial cut on his forearm from a broken glass. You assess it, get consent, close it and give wound-care advice. Nothing else is discussed.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "30026 only",
+    "30026 + 23 for the assessment and advice",
+    "23 only",
+    "36"
+   ],
+   "answer": 0,
+   "why": "Procedure items are complete services: consent, routine pre- and post-procedure care and advice are included. 30026 covers a superficial wound repair, not on the face or neck, up to 7 cm. Add an attendance only if you go beyond the routine, or deal with a separate, distinct problem.",
+   "risk": "Adding a 23 for work already included in the procedure is the classic co-claim trap.",
+   "sources": [
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-sutures",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "A week after you excised a lesion from Pat's back, he's in for suture removal and a wound check. All healing nicely.",
+   "q": "What do you bill today?",
+   "type": "single",
+   "options": [
+    "Level B (23)",
+    "Nothing: routine aftercare is part of the procedure item",
+    "30026",
+    "Level A (3)"
+   ],
+   "answer": 1,
+   "why": "Skin procedure items include professional attendances for routine post-operative care by the practitioner who did the procedure, through to the final check.",
+   "risk": "A 23 for routine aftercare you've already been paid for is an over-claim.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "proc-larc",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Everything here is bulk billed, from 1 November 2025.",
+   "q": "Which pairs are valid? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "35503 (IUD insertion) + 35501 (LARC loading)",
+    "14206 (implant insertion) + 35501",
+    "35501 with a privately billed 35503",
+    "35501 with a skin biopsy (30071)"
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "why": "Item 35501 is a loading of 40% of the LARC item fee (35503, 35506, 14206 or 30062) when the LARC service, and the other items for it, are bulk billed. It doesn't attach to private billing or non-LARC procedures.",
+   "risk": "Forgetting 35501 on a bulk-billed IUD or implant leaves 40% of the procedure fee behind.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "RACGP: 1 November 2025 MBS updates",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/1-november-2025-mbs-updates"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-vitd",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "You're ordering 25-hydroxyvitamin D for several patients.",
+   "q": "Which requests meet the Medicare criteria for item 66833? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "Office worker, tired, wants 'a vitamin D check'",
+    "On a long-term anticonvulsant",
+    "Deeply pigmented skin",
+    "Raised ALP with otherwise normal liver tests",
+    "Healthy 40-year-old, annual check"
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "why": "66833 is only for listed indications: e.g. signs of osteoporosis or osteomalacia; raised ALP with otherwise normal LFTs; hyperparathyroidism or calcium/phosphate problems; malabsorption; deeply pigmented skin or chronic severe lack of sun; medicines that lower vitamin D (like anticonvulsants); chronic kidney failure; and some children and infants. Tiredness and 'just checking' aren't on the list.",
+   "risk": "Outside the criteria there's no rebate, so the patient may get a bill. Write the indication on the request.",
+   "sources": [
+    {
+     "t": "MBS Online: item 66833",
+     "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?q=66833"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "NPS RADAR: B12, folate and vitamin D items",
+     "url": "https://www.nps.org.au/radar/articles/mbs-item-number-changes-for-vitamin-b12-folate-and-vitamin-d-tests"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-hba1c-mon",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "Wayne, 60, has type 2 diabetes. He's already had four HbA1c tests in the last 12 months and asks for another 'just to see'.",
+   "q": "Is a fifth HbA1c rebated?",
+   "type": "single",
+   "options": [
+    "Yes, monitoring is unlimited",
+    "No: monitoring HbA1c (66551) is capped at 4 in 12 months",
+    "Yes, if you write 'diagnosis'",
+    "Only by a specialist"
+   ],
+   "answer": 1,
+   "why": "HbA1c for managing established diabetes (66551) can't be claimed more than 4 times in 12 months. Pregnancy with pre-existing diabetes has its own item (66554, up to 6 in 12 months).",
+   "risk": "Relabelling it as 'diagnosis' to get it paid is misrepresenting the request.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-hba1c-dx",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "Kerry, 47, asymptomatic, high risk for diabetes. Her diagnostic HbA1c seven months ago was normal. She'd like another.",
+   "q": "Is a repeat diagnostic HbA1c rebated today?",
+   "type": "single",
+   "options": [
+    "Yes: no limit on diagnosis",
+    "No: diagnostic HbA1c (66841) is once in 12 months",
+    "Yes, under the monitoring item",
+    "Only if fasting"
+   ],
+   "answer": 1,
+   "why": "66841 is HbA1c for diagnosis in asymptomatic patients at high risk: once in 12 months. The monitoring item (66551) is only for established diabetes.",
+   "risk": "Ordering it under the 'established diabetes' item when she doesn't have diabetes is a misdescribed request.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-psa",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "Two asymptomatic men want a PSA. Geoff, 58, no family history, had one 14 months ago. Phil, 55, whose brother has prostate cancer, had one 12 months ago.",
+   "q": "Which is right? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "Geoff's repeat isn't rebated yet: 66655 is once in 23 months",
+    "Geoff's repeat is fine: PSA is yearly",
+    "Phil's repeat is rebated: the first-degree family history item (66654) is once in 11 months",
+    "Phil has to wait 23 months too"
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "why": "Since 1 November 2023, the general PSA item 66655 is once in 23 months. Men with a first-degree relative with prostate cancer have 66654, once in 11 months.",
+   "risk": "Too early on 66655 and the patient may get a bill. Using 66655 for Phil makes him wait unnecessarily.",
+   "sources": [
+    {
+     "t": "MBS Online: PSA item changes (Nov 2023)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/0FAE1338D92EA3A3CA258A6F0001701A/$File/FS%20-%20New%20and%20amended%20items%20for%20prostate%20specific%20antigen%20testing.pdf"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-tsh",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "Lily, 30, tired, no thyroid history, not on thyroid-affecting medicines. You'd like to check her thyroid.",
+   "q": "What gets rebated?",
+   "type": "single",
+   "options": [
+    "TSH, free T4 and free T3, all upfront",
+    "TSH first; free T4/T3 rebated (66719) only if the TSH is abnormal or a listed indication applies",
+    "Free T4 only",
+    "Nothing: thyroid tests need a specialist"
+   ],
+   "answer": 1,
+   "why": "TSH alone is 66716. Free T4 and/or T3 are added under 66719 if the TSH is out of range, or for listed indications such as monitoring thyroid disease, dementia or psychiatric illness, amenorrhoea or infertility, suspected pituitary problems, or drugs that affect thyroid function.",
+   "risk": "The full panel 'just because' isn't how the item works. Let the lab cascade.",
+   "sources": [
+    {
+     "t": "MBS Online: items 66716 and 66719",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=66716&="
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-b12",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "A few B12 and folate requests land on your desk.",
+   "q": "Which are rebated? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "Repeat serum B12, six months after a normal one",
+    "Serum folate in a patient with coeliac disease",
+    "Folate for 'tiredness', no risk factors",
+    "HoloTC (66839) after an equivocal serum B12"
+   ],
+   "answer": [
+    1,
+    3
+   ],
+   "why": "Serum B12 (66838) is once in 12 months. B12 markers like holoTC (66839) are for a low or equivocal serum B12. Folate (66840) is for patients at risk of deficiency, e.g. malabsorption, macrocytic anaemia or coeliac disease.",
+   "risk": "Unrebated tests can mean a surprise bill for the patient.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "NPS RADAR: B12, folate and vitamin D items",
+     "url": "https://www.nps.org.au/radar/articles/mbs-item-number-changes-for-vitamin-b12-folate-and-vitamin-d-tests"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "path-lipids",
+   "room": "desk",
+   "topic": "Pathology",
+   "consult": "Gordon, 67, started a statin three months ago. You want repeat lipids to check his response.",
+   "q": "Does the MBS cap how often standard lipid tests are rebated?",
+   "type": "single",
+   "options": [
+    "Yes: once in 12 months",
+    "No frequency cap in the standard lipid item descriptors; lipoprotein electrophoresis (66539) is the capped one (twice in 12 months)",
+    "Yes: twice in 12 months for everything",
+    "Lipids aren't rebated for GPs"
+   ],
+   "answer": 1,
+   "why": "The standard chemistry items that cover cholesterol, triglycerides and HDL don't carry a frequency limit in the descriptor. The capped lipid item is lipoprotein electrophoresis (66539, twice in 12 months). The limit that matters is clinical: test when it changes management.",
+   "risk": "No rebate cap isn't a licence to over-test: repeated unnecessary tests are a classic over-servicing pattern.",
+   "sources": [
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024)",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "audit-8020",
+   "room": "desk",
+   "topic": "Audit risk",
+   "consult": "A locum is proud of his 'efficiency': 85 or more attendances on most days over the past year.",
+   "q": "What's the 80/20 rule?",
+   "type": "single",
+   "options": [
+    "80% of patients must be bulk billed on 20 days",
+    "80 or more relevant attendance services on each of 20 or more days in 12 months is deemed inappropriate practice (barring exceptional circumstances)",
+    "No more than 80 patients a week",
+    "It's a guideline only"
+   ],
+   "answer": 1,
+   "why": "Rendering or initiating 80 or more relevant services on each of 20 or more days in 12 months is a prescribed pattern of services. The count runs across all provider numbers and locations. There's a 30/20 rule for phone services too.",
+   "risk": "A breach leads to referral to the Director of Professional Services Review.",
+   "sources": [
+    {
+     "t": "Health: prescribed pattern of services (80/20)",
+     "url": "https://www.health.gov.au/sites/default/files/2026-07/prescribed-pattern-of-services-what-you-need-to-know.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  }
+ ]
+}
