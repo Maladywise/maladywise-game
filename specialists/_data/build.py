@@ -6,7 +6,16 @@ DD = sys.argv[1] if len(sys.argv) > 1 else 'specialists/_data'
 CHECKED = "31 October 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|public", re.I)
 PRIV = re.compile(r"Private|GenesisCare|Hunter Eye Surgeons|rooms", re.I)
-NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "orthopaedics": "Orthopaedic surgery", "ortho-hand-upper-limb": "Orthopaedic surgery", "ortho-shoulder": "Orthopaedic surgery", "ortho-hip-knee": "Orthopaedic surgery", "ortho-foot-ankle": "Orthopaedic surgery", "ortho-spine": "Orthopaedic surgery", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers"}
+NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "ortho-hand-upper-limb": "Orthopaedics: hand and wrist", "ortho-shoulder": "Orthopaedics: shoulder and elbow", "ortho-hip-knee": "Orthopaedics: hip and knee", "ortho-foot-ankle": "Orthopaedics: foot and ankle", "ortho-spine": "Orthopaedics: spine", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers"}
+def ortho_labels(p):
+    t = (p.get("specialty", "") + " " + " ".join(p.get("interests") or [])).lower(); out = []
+    if re.search(r"hand|wrist|microsurg", t): out.append("Orthopaedics: hand and wrist")
+    if re.search(r"shoulder|elbow|upper limb", t): out.append("Orthopaedics: shoulder and elbow")
+    if re.search(r"hip|knee|lower limb arthroplasty|joint replacement", t): out.append("Orthopaedics: hip and knee")
+    if re.search(r"foot|ankle", t): out.append("Orthopaedics: foot and ankle")
+    if re.search(r"spine|spinal", t): out.append("Orthopaedics: spine")
+    if not out or re.search(r"trauma|general orthopaedic", t): out.append("Orthopaedics: general and trauma")
+    return out
 ALLIED = {"physiotherapy", "exercise-physiology", "podiatry", "occupational-therapy-adult", "occupational-therapy-paediatric", "speech-pathology-paediatric", "speech-pathology-adult", "psychology", "dietetics", "audiology", "diabetes-education", "continence", "lactation", "social-work"}
 def is_public(p):
     txt = p.get("name", "") + " | " + p.get("practice", "")
@@ -26,17 +35,19 @@ for f in sorted(glob.glob(os.path.join(DD, "*.json"))):
         if slug in ALLIED: ALLIED_LABELS.add(label)
         for p in sec["people"]:
             if is_public(p): removed.append(p["name"]); continue
+            labs = ortho_labels(p) if slug == "orthopaedics" else [label]
             key = re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower())
             if key in people:
                 q = people[key]
-                if label not in q["_labels"]: q["_labels"].append(label)
+                for label2 in labs:
+                    if label2 not in q["_labels"]: q["_labels"].append(label2)
                 if p.get("practice") and p["practice"] != q.get("practice") and all(p["practice"] != x[0] for x in q.setdefault("_also", [])):
                     q["_also"].append((p["practice"], p.get("suburb") or p.get("address", ""), p.get("phone", "")))
                 for k in ("interests", "inclusive", "sources"):
                     for x in p.get(k) or []:
                         if x not in q.setdefault(k, []): q[k].append(x)
             else:
-                p = dict(p); p["_labels"] = [label]; people[key] = p
+                p = dict(p); p["_labels"] = list(labs); people[key] = p
 L = sorted(people.values(), key=lambda p: sortkey(p["name"]))
 e = lambda s: html.escape(str(s or ""), quote=True)
 def card(p):
