@@ -716,3 +716,22 @@ html[data-theme="dark"] .sp-card .sp-t-v{background:#1E2E1C;color:#B9DDB2}
   .sp-card a{color:#000;text-decoration:none}
   details.sp-b>p{display:none}
 }
+/* Word of the week */
+.doc .ww{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 0 14px}
+.doc .ww h2{margin:2px 0 2px;font-size:22px}.doc .ww-big h2{font-size:34px}
+.doc .ww-d{margin:0;font:600 11px Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.doc .ww-say{margin:0 0 8px;color:var(--muted)}
+.doc .ww-s{font-style:italic}.doc .ww-sh{margin:8px 0 0;font-size:13px}
+.doc .ww-arch{margin-top:24px}
+.doc .wq{margin:12px 0 4px;padding:12px;border-radius:12px;background:var(--light,#F1ECF8)}
+.doc .wq-k{margin:0;font:700 11px Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--brand,#4A3480)}
+.doc .wq-q{margin:4px 0 8px;font-weight:600}
+.doc .wq-o{display:grid;gap:6px}
+.doc .wq-o button{text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:9px 12px;font:500 15px Poppins,system-ui,sans-serif;cursor:pointer}
+.doc .wq-o button.ok{background:#E3F3E1;border-color:#7DBB74;color:#1F5A1A}.doc .wq-o button.no{background:#FBE6E1;border-color:#E09A8A;color:#8A2C1C}
+.doc .wq-a{margin:8px 0 0}
+html[data-theme="dark"] .doc .wq{background:#2A2238}
+html[data-theme="dark"] .doc .wq-o button.ok{background:#1E3A1B;color:#BDE6B5}html[data-theme="dark"] .doc .wq-o button.no{background:#3E1F19;color:#F2B9AA}
+.wotw{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:14px 0 4px;padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.wotw span{font:700 11px Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--brand,#4A3480);flex-basis:100%}
+.wotw b{font:700 22px var(--title,Georgia,serif)}.wotw i{font-style:normal;color:var(--muted)}
