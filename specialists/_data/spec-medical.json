@@ -1,0 +1,5424 @@
+{
+ "cardiology": {
+  "name": "Cardiology",
+  "people": [
+   {
+    "name": "Dr Nicholas Whitehead",
+    "specialty": "General and interventional cardiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au",
+    "interests": [
+     "General cardiology",
+     "Heart failure",
+     "Arrhythmias",
+     "Coronary artery disease and interventional cardiology",
+     "Intracoronary imaging",
+     "Low-contrast coronary intervention"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Calvary Mater Newcastle",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardiology/106581/dr-nicholas-whitehead"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Paul Bamford",
+    "specialty": "Interventional and structural cardiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au",
+    "interests": [
+     "Percutaneous coronary intervention",
+     "CT coronary angiography reporting",
+     "Medical education"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardiology/108875/dr-paul-bamford"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rachael Hatton",
+    "specialty": "Interventional cardiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au",
+    "interests": [
+     "Coronary angiography and PCI",
+     "Complex structural interventions",
+     "Congenital heart disease",
+     "Exercise stress testing"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rachael-hatton/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Heather Cooke",
+    "specialty": "Cardiologist",
+    "practice": "Rooms, Level C6, 291 King Street",
+    "address": "Level C6, Suite 1, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Cardiac imaging",
+     "Medical cardiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-heather-cooke/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Patrick Diu",
+    "specialty": "Cardiologist (interventional)",
+    "practice": "Dr Patrick Diu Cardiologist",
+    "address": "34 Chapman Street, Charlestown NSW 2290 (also East Maitland rooms per Healthdirect)",
+    "suburb": "Charlestown",
+    "phone": "02 4943 9964",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Acute myocardial infarction",
+     "Heart failure",
+     "Congenital heart disease",
+     "Hypertension",
+     "Arrhythmias/heart block"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/patrick-diu-med0001184115",
+     "https://healthdirect.gov.au/australian-health-services/23029472/dr-patrick-diu-cardiologist-east-maitland/services/east-maitland-2323-george"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rohan Bhagwandeen",
+    "specialty": "Interventional cardiologist",
+    "practice": "Newcastle Heart",
+    "address": "64 Denison Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4929 2444",
+    "fax": "02 4929 2449",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleheart.com.au",
+    "interests": [
+     "Reperfusion for acute myocardial infarction",
+     "Structural intervention incl. TAVI",
+     "Imaging/physiology-guided radial coronary intervention"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://selfpaysurgery.cms.healthecare.com.au/specialists/dr-rohan-baghwandeen",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mohammed Al-Omary",
+    "specialty": "General and interventional cardiologist",
+    "practice": "Newcastle Heart",
+    "address": "64 Denison Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4929 2444",
+    "fax": "02 4929 2449",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleheart.com.au",
+    "interests": [
+     "Heart failure",
+     "Ischaemic heart disease",
+     "Complex PCI",
+     "Intravascular imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-mohammed-al-omary",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rajinder Harjit Singh",
+    "specialty": "Cardiologist",
+    "practice": "Hunter Cardiac Investigations",
+    "address": "324 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7477",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hci.net.au",
+    "interests": [
+     "Heart failure",
+     "Pulmonary hypertension",
+     "Medical cardiology",
+     "Cardiac imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Maitland Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rajinder-harjit-singh"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stuart Murch",
+    "specialty": "Cardiologist",
+    "practice": "Hunter Cardiac Investigations",
+    "address": "324 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7477",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hci.net.au",
+    "interests": [
+     "Echocardiography",
+     "Cardiac MRI",
+     "Transoesophageal echocardiography"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/stuart-murch"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Max Ray",
+    "specialty": "Cardiologist (sports cardiology)",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://maxray.au",
+    "interests": [
+     "Sports cardiology",
+     "Cardiac imaging (echo, CTCA)",
+     "Arrhythmia and cardiomyopathy in athletes",
+     "Cardiac genetics",
+     "Heart failure"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maxray.carrd.co",
+     "https://localsearch.com.au/find/cardiologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Gwilym Morris",
+    "specialty": "Cardiac electrophysiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre / Cardiac Rhythm Clinic",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://cardiacrhythmclinic.com.au",
+    "interests": [
+     "Atrial fibrillation",
+     "Sports cardiology",
+     "Pacemaker and defibrillator implantation",
+     "Pulsed field and cryoballoon ablation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-gwilym-morris"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Akash Dhawan",
+    "specialty": "Cardiologist",
+    "practice": "Rooms, 6-8 Lingard Street",
+    "address": "Ground Floor, 6-8 Lingard Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4047 2759",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Chronic heart failure",
+     "Ischaemic heart disease",
+     "Valvular heart disease",
+     "Preventive cardiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-akash-dhawan/",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Andrew Boyle",
+    "specialty": "Cardiologist",
+    "practice": "Lingard Private Hospital",
+    "address": "23 Merewether Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4047 2759",
+    "fax": "02 4963 4781",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Left ventricular remodelling",
+     "Cardiac fibrosis and regeneration research"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital (research)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://forsterprivate.cms.healthecare.com.au/specialists/professor-andrew-boyle",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Arshad Khan",
+    "specialty": "General and interventional cardiologist",
+    "practice": "Khan Cardiology",
+    "address": "First Floor, 43 Dickinson Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4056 1120",
+    "fax": "02 4989 6460",
+    "email": "",
+    "ereferral": "",
+    "website": "https://khancardiology.com.au",
+    "interests": [
+     "Heart failure",
+     "Hypertension",
+     "Coronary disease prevention",
+     "Arrhythmias",
+     "Perioperative cardiovascular assessment",
+     "Cancer treatment-related cardiomyopathy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital",
+      "Mayo Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-arshad-khan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kosta Nikoletatos",
+    "specialty": "Interventional cardiologist",
+    "practice": "Kotara Heart Clinic",
+    "address": "6/70 Northcott Drive, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4956 1164",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Interventional cardiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-kosta-nikoletatos/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Brienesse",
+    "specialty": "Cardiologist and general physician (electrophysiology and pacing)",
+    "practice": "Barlow Cardiology",
+    "address": "Suite 9, 20 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Atrial fibrillation",
+     "Cardiac physiologic pacing",
+     "Medical education"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Maitland Hospital",
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-stephen-brienesse/",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Paolo D'Ambrosio",
+    "specialty": "Cardiac electrophysiologist",
+    "practice": "Hunter Heart",
+    "address": "Suite 7, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Ablation incl. pulsed field ablation for AF",
+     "Device implantation incl. conduction system pacing",
+     "Endurance exercise-related arrhythmias"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-paolo-dambrosio/",
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James (Jim) Leitch",
+    "specialty": "Cardiologist (arrhythmia)",
+    "practice": "Rooms, 7 Lookout Road",
+    "address": "7 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 3900",
+    "fax": "02 4952 3053",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Catheter ablation",
+     "Pacemaker and defibrillator implantation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mulgraveprivate.cms.healthecare.com.au/specialists/dr-james-jim-leitch",
+     "https://localsearch.com.au/find/cardiologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Greg Bellamy",
+    "specialty": "Interventional cardiologist",
+    "practice": "Rooms, Lingard",
+    "address": "Unit 1, 226 Union Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4963 6887",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Coronary and structural interventional procedures"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Forster Private Hospital",
+      "Mayo Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.cms.healthecare.com.au/specialists/dr-greg-bellamy"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bradley Wilsmore",
+    "specialty": "Cardiologist",
+    "practice": "Dr Bradley Wilsmore",
+    "address": "Unit 1, 226 Union Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4918 0100",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drbradleywilsmore.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre",
+     "https://localsearch.com.au/find/cardiologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nicholas Jackson",
+    "specialty": "Cardiac electrophysiologist",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Complex arrhythmia management",
+     "Pacemaker/defibrillator implantation",
+     "Ablation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/nicholas-jackson-med0001196672"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nicholas Collins",
+    "specialty": "Cardiologist",
+    "practice": "Lingard Private Hospital",
+    "address": "23 Merewether Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4969 6799",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Allan Davies",
+    "specialty": "Cardiologist",
+    "practice": "Lingard Private Hospital",
+    "address": "23 Merewether Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4969 6799",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "HNE Health Heart Health Service (John Hunter Hospital)",
+    "specialty": "Public cardiology service",
+    "practice": "Hunter New England Local Health District",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/heart-health",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/heart-health"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "dermatology": {
+  "name": "Dermatology",
+  "people": [
+   {
+    "name": "Dr Tom Barrett",
+    "specialty": "Dermatologist",
+    "practice": "Lotus Dermatology",
+    "address": "Level 5, 175 Scott Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Ramsay Surgical Centre Charlestown"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-tom-barrett",
+     "https://www.doctify.com/au/practice/lotus-dermatology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John Relic",
+    "specialty": "Dermatologist",
+    "practice": "Lotus Dermatology",
+    "address": "Level 5, 175 Scott Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Skin cancer",
+     "Skin surgery",
+     "Paediatric dermatology",
+     "Laser treatment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/john-relic",
+     "https://www.doctify.com/au/practice/lotus-dermatology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Juliana Miglio Bensabat Junger",
+    "specialty": "Dermatologist",
+    "practice": "Lotus Dermatology",
+    "address": "Level 5, 175 Scott Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/lotus-dermatology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sally De Zwaan",
+    "specialty": "Dermatologist",
+    "practice": "Lotus Dermatology",
+    "address": "Level 5, 175 Scott Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/lotus-dermatology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alvand Amiri",
+    "specialty": "Dermatologist",
+    "practice": "Newcastle Dermatology",
+    "address": "16-18 Christo Road, Georgetown NSW 2298",
+    "suburb": "Georgetown",
+    "phone": "02 4960 8255",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleskinmedical.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/newcastle-dermatology",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/georgetown-2298-nsw/newcastle-dermatology/dermatology/29c9a20e-94cf-41e8-89e1-449b230d50ee"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Phillip Dwyer",
+    "specialty": "Dermatologist",
+    "practice": "Newcastle Dermatology",
+    "address": "16-18 Christo Road, Georgetown NSW 2298",
+    "suburb": "Georgetown",
+    "phone": "02 4960 8255",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleskinmedical.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/newcastle-dermatology",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/georgetown-2298-nsw/newcastle-dermatology/dermatology/29c9a20e-94cf-41e8-89e1-449b230d50ee"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Judith Cole",
+    "specialty": "Dermatologist",
+    "practice": "Newcastle Dermatology",
+    "address": "16-18 Christo Road, Georgetown NSW 2298",
+    "suburb": "Georgetown",
+    "phone": "02 4960 8255",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleskinmedical.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/newcastle-dermatology",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/georgetown-2298-nsw/newcastle-dermatology/dermatology/29c9a20e-94cf-41e8-89e1-449b230d50ee"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jessica Bale",
+    "specialty": "Dermatologist",
+    "practice": "Hunter Coast Dermatology & Laser",
+    "address": "Level 3, 95 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.huntercoastderm.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/dermatologist/jessica-bale-hunter-coast-dermatology-and-laser"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Dermatology Clinic",
+    "specialty": "Public dermatology outpatient clinic (incl. UV phototherapy)",
+    "practice": "Hunter New England Health",
+    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4922 3912",
+    "fax": "02 4922 3904",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-dermatology-clinic/dermatology/30e0ea6b-9345-4ebd-9b0e-e873edf93881"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Paediatric Dermatology Clinic",
+    "specialty": "Public paediatric dermatology clinic",
+    "practice": "Hunter New England Health",
+    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0-18",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-paediatric-dermatology-clinic/dermatology/f483909a-94cf-43a3-b792-5a915ad548f9"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Edwina Lamrock",
+    "specialty": "Dermatologist",
+    "practice": "Frontier Dermatology",
+    "address": "294 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4022 8739",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.frontierdermatology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/frontier-dermatology",
+     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alicia Thornton",
+    "specialty": "Dermatologist",
+    "practice": "Frontier Dermatology",
+    "address": "294 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4022 8739",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.frontierdermatology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/frontier-dermatology",
+     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "endocrinology": {
+  "name": "Endocrinology",
+  "people": [
+   {
+    "name": "Dr Kirsten Murray",
+    "specialty": "Endocrinologist",
+    "practice": "Hunter Endocrinology",
+    "address": "Newcastle Healthcare Building, Suite 2B, 282 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4935 9000",
+    "fax": "02 4957 6964",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterendo.com.au/",
+    "interests": [
+     "Member of HNE Thyroid Cancer MDT and John Hunter Endocrine Surgery MDT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/kirsten-murray",
+     "https://www.localsearch.com.au/find/endocrinologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Shaun McGrath",
+    "specialty": "Endocrinologist",
+    "practice": "Newcastle Endocrinology",
+    "address": "40 Griffiths Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4920 6745",
+    "fax": "02 4920 8039",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.newcastleendocrinology.com.au",
+    "interests": [
+     "Member of HNE Thyroid Cancer MDT and John Hunter Endocrine Surgery MDT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/shaun-mcgrath",
+     "https://www.localsearch.com.au/find/endocrinologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Christopher Rowe",
+    "specialty": "Endocrinologist",
+    "practice": "Newcastle Endocrinology",
+    "address": "40 Griffiths Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4920 6745",
+    "fax": "02 4920 8039",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.newcastleendocrinology.com.au/dr-christopher-rowe",
+    "interests": [
+     "Member of HNE Thyroid Cancer MDT and John Hunter Endocrine Surgery MDT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/christopher-rowe",
+     "https://www.localsearch.com.au/find/endocrinologists/newcastle-nsw"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Shamasunder Acharya",
+    "specialty": "Endocrinologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Diabetes",
+     "General endocrinology",
+     "Pituitary, adrenal, thyroid and bone disorders"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Forster Private Hospital (Dolphin Suites, monthly)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-shamasunder-acharya",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr William Yu",
+    "specialty": "Endocrinologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Metabolic health",
+     "Obesity management",
+     "Technology in healthcare"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-william-yu",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Chris Sankoorikal",
+    "specialty": "Endocrinologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Diabetes (type 1, type 2, gestational)",
+     "Osteoporosis",
+     "Metabolic bone disease"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-chris-sankoorikal",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Katie Wynne",
+    "specialty": "Endocrinologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Transgender health",
+     "Antenatal medicine",
+     "Obesity"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists transgender health as an interest"
+    ],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-katie-wynne",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Judy Luu",
+    "specialty": "Endocrinologist and general physician",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Diabetes",
+     "Metabolic bone disorders",
+     "Transgender health",
+     "General endocrinology"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists transgender health as an interest"
+    ],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-judy-luu",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Aiden Cheung",
+    "specialty": "Endocrinologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Diabetes technology",
+     "Endocrinology in pregnancy",
+     "Sex hormones and transgender health",
+     "Obesity management"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists sex hormones and transgender health as an interest"
+    ],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-aiden-cheung",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Damien Jackel",
+    "specialty": "General physician and diabetologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Complex multimorbidity",
+     "Medication review",
+     "Perioperative medicine",
+     "Diabetes and metabolic health",
+     "Weight management"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-damien-jackel",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Emma Croker",
+    "specialty": "Endocrinologist",
+    "practice": "John Hunter Hospital (listed on Canrefer)",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Evelyn Tan",
+    "specialty": "Endocrinologist",
+    "practice": "John Hunter Hospital (listed on Canrefer)",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Roger Smith",
+    "specialty": "Endocrinologist",
+    "practice": "John Hunter Hospital (listed on Canrefer)",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tuan Quach",
+    "specialty": "Endocrinologist",
+    "practice": "John Hunter Hospital (listed on Canrefer)",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Department of Endocrinology",
+    "specialty": "Public endocrinology service",
+    "practice": "Hunter New England Health",
+    "address": "10 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 4380",
+    "fax": "02 4921 4379",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/christopher-rowe"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "neurology": {
+  "name": "Neurology",
+  "people": [
+   {
+    "name": "Dr Gopinath Subramanian",
+    "specialty": "Neurologist",
+    "practice": "Pacific Neurology",
+    "address": "481 Pacific Highway, Belmont NSW 2280",
+    "suburb": "Belmont",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pacificneurology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/practice/pacific-neurology-advanced-care-for-neurological-conditions"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mohammad Amin",
+    "specialty": "Neurologist",
+    "practice": "Pacific Neurology",
+    "address": "481 Pacific Highway, Belmont NSW 2280",
+    "suburb": "Belmont",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pacificneurology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/practice/pacific-neurology-advanced-care-for-neurological-conditions"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Patricia Caruana",
+    "specialty": "Neurologist",
+    "practice": "Mind-Care",
+    "address": "Sky Central West, Level 3, 28-38 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.mind-care.net.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/practice/mind-care-adult-psychology-psychiatry-neurology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alvin Chew (Beng Lim Alvin Chew)",
+    "specialty": "Neurologist (vascular neurology)",
+    "practice": "Newcastle Brain Centre",
+    "address": "Level 1, Suite 2, Lake Macquarie Private Specialist Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4099 2520",
+    "fax": "02 4099 2524",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Stroke and TIA",
+     "General neurology",
+     "Stroke clinical trials"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-beng-lim-alvin-chew/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Christopher Levi",
+    "specialty": "Stroke neurologist",
+    "practice": "Newcastle Brain Centre",
+    "address": "Level 1, Suite 2, Lake Macquarie Private Specialist Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4099 2520",
+    "fax": "02 4099 2524",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Stroke clinical trials",
+     "Tele-stroke care",
+     "Sports concussion"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/neurology/108887/professor-chris-levi"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Mark Parsons",
+    "specialty": "Neurologist",
+    "practice": "Newcastle Brain Centre",
+    "address": "Level 1, Suite 2, Lake Macquarie Private Specialist Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4099 2520",
+    "fax": "02 4099 2524",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Stroke medicine",
+     "General neurology (all neurological conditions)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Liverpool Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-mark-parsons/",
+     "https://www.doctify.com/au/practice/newcastle-brain-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Keith Burton",
+    "specialty": "Neurologist",
+    "practice": "Hunter Neurology",
+    "address": "6/23 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterneurology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/neurologist/keith-burton-hunter-neurology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andrew Bleasel",
+    "specialty": "Neurologist",
+    "practice": "Hunter Neurology",
+    "address": "6/23 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterneurology.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://doccy.com.au/specialist/newcastle/neurologist/keith-burton-hunter-neurology"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Elizabeth Pepper",
+    "specialty": "Neurologist",
+    "practice": "John Hunter Hospital",
+    "address": "Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Multiple sclerosis",
+     "Motor neurone disease (ALS)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/elizabeth-pepper"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Neurology",
+    "specialty": "Public neurology service (also Neurology Botulinum Toxin Therapy Clinic)",
+    "practice": "Hunter New England Health",
+    "address": "2 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/john-hunter-hospital/neurology/13441009-1513-481a-c542-6c30642813a3"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "pain-medicine": {
+  "name": "Pain medicine",
+  "people": [
+   {
+    "name": "Hunter Pain Specialists",
+    "specialty": "Private multidisciplinary/interventional pain practice (doctors not named in source)",
+    "practice": "Hunter Pain Specialists",
+    "address": "91-93 Chatham Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterpainspecialists.com.au",
+    "interests": [
+     "Interventional pain procedures and nerve blocks",
+     "Spinal cord stimulation",
+     "Neuropathic pain",
+     "Fibromyalgia",
+     "Workplace injury pain",
+     "Cancer-related pain",
+     "Migraine and headache"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://localsearch.com.au/profile/hunter-pain-specialists/broadmeadow-nsw/91qa"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Integrated Pain Service (HIPS)",
+    "specialty": "Public multidisciplinary chronic non-cancer pain service",
+    "practice": "Hunter New England Health",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4922 3435",
+    "fax": "02 4922 3893 (referrals)",
+    "email": "HNELHD-HIPS@health.nsw.gov.au",
+    "ereferral": "",
+    "website": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/chronic-disease-management/hunter-integrated-pain-service",
+    "interests": [
+     "Group pain programs",
+     "Medication weaning support",
+     "Heal Your Pain (EAET) program",
+     "Individual multidisciplinary pathway"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/chronic-disease-management/hunter-integrated-pain-service",
+     "https://www.painaustralia.org.au/pain-directory-locations/nsw/new-lambton-john-hunter-hospital-pb"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Marc Russo",
+    "specialty": "Pain medicine specialist",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4985 1800",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Neuromodulation",
+     "Chronic back pain",
+     "Fibromyalgia",
+     "CRPS",
+     "Neuropathic pain",
+     "Post-herpetic neuralgia",
+     "Botulinum toxin and bursa injections",
+     "Coeliac plexus block"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/marc-russo-med0001151129"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "gastroenterology": {
+  "name": "Gastroenterology",
+  "people": [
+   {
+    "name": "A/Prof Magnus Halland",
+    "specialty": "Gastroenterologist (oesophageal and motility disorders)",
+    "practice": "Newcastle Gastroenterology",
+    "address": "Suite 6, 3 Hopetoun Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4940 6714",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Endoscopic and physiological assessment of luminal gut disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Ramsay Surgical Centre Charlestown",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/gastroenterology/109268/aprof-magnus-halland"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kate Napthali",
+    "specialty": "Gastroenterologist and general physician",
+    "practice": "Beechnut Medical Rooms",
+    "address": "55 Lindsay Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4910 0591",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "IBD",
+     "Coeliac disease",
+     "IBS",
+     "GORD",
+     "Bowel cancer screening",
+     "Capsule endoscopy",
+     "Open access endoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [
+      "Malay",
+      "Indonesian"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/gastroenterology/104392/dr-kate-napthali"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Georgia Edwards",
+    "specialty": "Gastroenterologist and general physician",
+    "practice": "Beechnut Medical Rooms",
+    "address": "55 Lindsay Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 4910 0591",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Inflammatory bowel disease incl. women's health in IBD",
+     "Luminal gastroenterology",
+     "IBS and functional dyspepsia"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists women's health in inflammatory bowel disease as an interest"
+    ],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/gastroenterology/106720/dr-georgia-edwards"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robert Foster",
+    "specialty": "Gastroenterologist",
+    "practice": "Beechnut Medical Rooms",
+    "address": "55 Lindsay Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Inflammatory bowel disease",
+     "Advanced endoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-robert-foster/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Daniel Oliver",
+    "specialty": "Gastroenterologist and hepatologist",
+    "practice": "Advanced Care Specialist Centre",
+    "address": "27 Veronica Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "IBD",
+     "Colorectal cancer screening",
+     "Barrett's oesophagus surveillance",
+     "Liver disease (hepatitis, cirrhosis, fatty liver)",
+     "IBS and gut-brain disorders",
+     "GI bleeding"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital",
+      "Ramsay Surgical Centre Charlestown"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-daniel-oliver/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alkesh Zala",
+    "specialty": "Gastroenterologist and hepatologist",
+    "practice": "Rooms, 27 Veronica Street",
+    "address": "27 Veronica Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4953 7500",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General gastroenterology",
+     "Reflux",
+     "GI motility disorders",
+     "IBD",
+     "GI bleeding",
+     "Colorectal cancer surveillance"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/gastroenterology/105088/dr-alkesh-zala"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Vimalan Ambikaipaker",
+    "specialty": "Gastroenterologist, hepatologist and general physician",
+    "practice": "Gastroenterology rooms, East Maitland",
+    "address": "Suite 5, 173 Chisholm Road, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Coeliac disease",
+     "IBD",
+     "General gastroenterology",
+     "Hepatology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-vimalan-ambikaipaker/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Josh McCarthy",
+    "specialty": "Gastroenterologist and hepatologist",
+    "practice": "Hunter Gastroenterology",
+    "address": "81 Chatham Street, Broadmeadow NSW 2291",
+    "suburb": "Broadmeadow",
+    "phone": "02 4942 2111",
+    "fax": "",
+    "email": "contact@hgut.net.au",
+    "ereferral": "",
+    "website": "https://huntergastroenterology.com.au",
+    "interests": [
+     "Colorectal cancer screening",
+     "Advanced polyp resection",
+     "Endoscopy quality",
+     "IBD",
+     "Upper GI endoscopy and colonoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Ramsay Surgical Centre Charlestown",
+      "Port Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-josh-mccarthy/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Philcox",
+    "specialty": "Gastroenterologist",
+    "practice": "Hunter Gastroenterology",
+    "address": "81 Chatham Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4942 2111",
+    "fax": "02 4943 5903",
+    "email": "",
+    "ereferral": "",
+    "website": "https://huntergastroenterology.com.au",
+    "interests": [
+     "Member, HNE Gastrointestinal Cancer MDT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/stephen-philcox",
+     "https://www.canrefer.org.au/services/hunter-valley-private-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital IBD Clinic",
+    "specialty": "Public IBD clinic incl. paediatric-to-adult transition",
+    "practice": "Hunter New England Health",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3473",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "adolescents and adults (joint transition clinic)",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "ACI listing states the venue is wheelchair accessible"
+    ],
+    "sources": [
+     "https://aci.health.nsw.gov.au/networks/transition-care/resources/ibd-services/john-hunter-hospital-ibd-clinic"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Gastroenterology Department",
+    "specialty": "Public gastroenterology service",
+    "practice": "Hunter New England Health",
+    "address": "Lookout Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4922 3900",
+    "fax": "02 4922 3912",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/stephen-philcox"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "respiratory-sleep": {
+  "name": "Respiratory and sleep medicine",
+  "people": [
+   {
+    "name": "Dr Alyssa Arnold",
+    "specialty": "Respiratory and sleep physician",
+    "practice": "Newcastle Lung Group",
+    "address": "26 John Street, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4940 8000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "All areas of respiratory and sleep medicine",
+     "Bronchoscopy and EBUS-guided biopsy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Belmont Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-alyssa-arnold/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Antonio Ambrogetti",
+    "specialty": "Respiratory and sleep physician",
+    "practice": "Warners Bay Private Hospital",
+    "address": "Fairfax Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 4288",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Sleep disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-antonio-ambrogetti/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Usama Mohamed",
+    "specialty": "Respiratory and sleep physician",
+    "practice": "LENA Medical Specialist",
+    "address": "10 Dianne Street, Elermore Vale NSW 2287",
+    "suburb": "Elermore Vale",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Asthma",
+     "COPD",
+     "Interstitial lung disease",
+     "Long COVID"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "Arabic"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-usama-mohamed/respiratory-and-sleep-medicine-physician/1740371"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ray Mariasoosai",
+    "specialty": "Respiratory and sleep physician",
+    "practice": "Newcastle Lung Group",
+    "address": "26 John Street, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4940 8000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Lung oncology",
+     "Sleep disorders",
+     "Complex ventilation in neuromuscular disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Calvary Mater Newcastle (lung oncology clinic)",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-ray-mariasoosai/",
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Arnold",
+    "specialty": "Respiratory and sleep physician",
+    "practice": "Lake Macquarie Private Hospital",
+    "address": "3 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "John Hunter Hospital",
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-david-arnold",
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Paul Meatcher",
+    "specialty": "Respiratory physician",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer, lung cancer care)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/paul-meatcher"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Scott Twaddell",
+    "specialty": "Respiratory physician",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer, lung cancer care)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/scott-twaddell",
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "nephrology": {
+  "name": "Nephrology",
+  "people": [
+   {
+    "name": "Dr Peter Choi",
+    "specialty": "Nephrologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Genetic renal diseases",
+     "Nutrition in kidney disease",
+     "Home dialysis"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital (Director of Nephrology)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-peter-choi",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Eswari Vilayur",
+    "specialty": "Nephrologist and transplant physician",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Chronic kidney disease incl. diabetic kidney disease and glomerulonephritis",
+     "Renal transplant care",
+     "Refractory hypertension",
+     "Hypertension and kidney disease in pregnancy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-eswari-vilayur",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Scott Jones",
+    "specialty": "Nephrologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Chronic kidney disease",
+     "Hypertension",
+     "Dialysis incl. home dialysis",
+     "Renal transplantation",
+     "Renal supportive care",
+     "Indigenous nephrology and health care access"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Profile lists Indigenous nephrology and health care access as an interest"
+    ],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-scott-jones",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Bruce MacKinnon",
+    "specialty": "Nephrologist",
+    "practice": "The Clark Suites",
+    "address": "Ground Floor, The Clark Suites, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Chronic kidney disease",
+     "Hypertension",
+     "Glomerulonephritis",
+     "Vasculitis",
+     "Cystic kidney disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/associate-professor-bruce-mackinnon/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Humam Hazim",
+    "specialty": "Nephrologist (incl. transplant medicine)",
+    "practice": "Rooms at Hunter Diabetes Centre",
+    "address": "Level 1, 41 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Chronic kidney disease",
+     "Acute kidney injury",
+     "Glomerulonephritis",
+     "Diabetic kidney disease",
+     "Kidney transplant medicine",
+     "Hypertension",
+     "Kidney stone prevention"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-humam-hazim/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Bobby Chacko",
+    "specialty": "Nephrologist (Director, Renal Services)",
+    "practice": "John Hunter Hospital Renal Services",
+    "address": "Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastle.edu.au/profile/bobby-chacko"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Renal Services",
+    "specialty": "Public nephrology and transplant service",
+    "practice": "Hunter New England Health",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastle.edu.au/profile/bobby-chacko"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "rheumatology": {
+  "name": "Rheumatology",
+  "people": [
+   {
+    "name": "Dr Aishwarya Sukhdeo",
+    "specialty": "Rheumatologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "General rheumatology",
+     "Musculoskeletal ultrasound",
+     "Osteoporosis",
+     "Adolescent transition medicine"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-aishwarya-sukhdeo",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Katherine Dutton",
+    "specialty": "Rheumatologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "General rheumatology",
+     "Early arthritis",
+     "Rheumatoid arthritis",
+     "Lupus and connective tissue disease",
+     "Joint and soft-tissue injections",
+     "Joint aspiration"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-katherine-dutton",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Dani Chandrasoma",
+    "specialty": "Rheumatologist",
+    "practice": "Kotara Specialist Suites",
+    "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4965 3800",
+    "fax": "02 4965 3900",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kotarasuites.com.au",
+    "interests": [
+     "Inflammatory arthritis",
+     "Autoimmune rheumatological diseases"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://maracas-roadrunner-zr9y.squarespace.com/dr-dani-chandrasoma",
+     "https://maracas-roadrunner-zr9y.squarespace.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Gabor Major",
+    "specialty": "Rheumatologist",
+    "practice": "Rooms, New Lambton (street address not published in source)",
+    "address": "New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthshare.com.au/profile/professional/133732-dr-gabor-major"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "immunology-allergy": {
+  "name": "Clinical immunology and allergy",
+  "people": [
+   {
+    "name": "Dr Odette McNeill",
+    "specialty": "Clinical immunologist and allergist",
+    "practice": "Newcastle Allergy Immunology Service",
+    "address": "Unit 3, 7 Arnott Street, Edgeworth NSW 2285",
+    "suburb": "Edgeworth",
+    "phone": "02 4950 6842",
+    "fax": "02 4950 6816",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.allergynewcastle.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "all (paediatric and adult)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://allergy.org.au/patients/locate-a-specialist/nsw/4",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/edgeworth-2285-nsw/newcastle-allergy-immunology-service/clinical-immunology-and-allergy/c9508dee-f943-6c5a-6623-b1d43eae0226"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Theo de Malmanche",
+    "specialty": "Clinical immunologist",
+    "practice": "John Hunter Hospital Department of Immunology and Infectious Diseases (Royal Newcastle Centre)",
+    "address": "Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4922 3444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-theo-de-malmanche"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Muhammad Usman",
+    "specialty": "Clinical immunologist, allergist and general physician",
+    "practice": "Health HQ Salamander Bay (also Coastal Immunology and Allergy Clinic, Erina)",
+    "address": "Salamander Bay NSW 2317 (street address not published on profile)",
+    "suburb": "Salamander Bay",
+    "phone": "02 4937 9558",
+    "fax": "02 4937 9560",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Autoimmune and autoinflammatory conditions",
+     "Drug, food and environmental allergy",
+     "Immunodeficiency",
+     "Perioperative and general medicine"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-muhammad-usman"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "infectious-diseases": {
+  "name": "Infectious diseases",
+  "people": [
+   {
+    "name": "John Hunter Hospital Infectious Disease Clinic",
+    "specialty": "Public infectious diseases outpatient clinic (also Maitland Hospital outreach clinic)",
+    "practice": "Hunter New England Health",
+    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4922 3444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Maitland Hospital (outreach)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/infectious-diseases-service/788001008",
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-theo-de-malmanche"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Children's Hospital Paediatric Infectious Diseases Clinic",
+    "specialty": "Public paediatric infectious diseases clinic",
+    "practice": "Hunter New England Health",
+    "address": "156 Kookaburra Circuit, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "0-18",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/infectious-diseases-service/788001008"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robert Pickles",
+    "specialty": "Infectious diseases physician",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/robert-pickles-med0001141264"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Matthew Watts",
+    "specialty": "Infectious diseases physician / microbiologist",
+    "practice": "NSW Health Pathology",
+    "address": "Level 5, 45 Watt Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/matthew-watts"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "sexual-health": {
+  "name": "Sexual health",
+  "people": [
+   {
+    "name": "Pacific Clinic (HNE Sexual Health Service)",
+    "specialty": "Public sexual health clinic",
+    "practice": "Hunter New England Sexual Health",
+    "address": "Newcastle Community Health Centre, Level 2, 670 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4016 4536",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hnesexualhealth.org.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Healthdirect states: 'A free service where no payment or Medicare card is required'"
+    ],
+    "sources": [
+     "https://playsafe.health.nsw.gov.au/healthcareservice/pacific-clinic/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-west-2302-nsw/pacific-clinic/sexual-health-clinic/24f089ea-9169-0a03-62af-107730ffaedf"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Family Planning Australia – Hunter Clinic",
+    "specialty": "Sexual and reproductive health clinic",
+    "practice": "Family Planning Australia",
+    "address": "384 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "1300 372 372",
+    "fax": "02 4926 2029",
+    "email": "hunterappts@fpnsw.org.au",
+    "ereferral": "",
+    "website": "http://www.fpnsw.org.au",
+    "interests": [
+     "Contraception incl. IUD and implant insertion",
+     "Pregnancy options incl. medical and surgical abortion",
+     "STI testing and management",
+     "Menopause"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/family-planning-australia-hunter-clinic/sexual-health-clinic/2c15ed20-ad08-e0b0-c927-bf36eefabdf9?search_method=Details%20-%20search%20results%20list"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Hunter Hospital Immunology & Infectious Diseases Unit",
+    "specialty": "Public HIV/immunology and infectious diseases unit (listed as sexual health service)",
+    "practice": "Hunter New England Health",
+    "address": "John Hunter Hospital, 38 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4922 3444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/sexual-health-clinic/788122004"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "rehabilitation": {
+  "name": "Rehabilitation medicine",
+  "people": [
+   {
+    "name": "Rankin Park Hospital (inpatient rehabilitation)",
+    "specialty": "Public rehabilitation hospital",
+    "practice": "Hunter New England Health",
+    "address": "2 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-2305-nsw/rehabilitation-medicine/722424008"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lauren Tarrant",
+    "specialty": "Rehabilitation physician",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4941 8450",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Spasticity management incl. ultrasound-guided botulinum toxin",
+     "Geriatric rehabilitation",
+     "Amputee rehabilitation",
+     "Multidisciplinary chronic pain",
+     "Orthopaedic rehabilitation",
+     "Neurorehabilitation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/lauren-tarrant-med0001605728"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kirsten Bailey",
+    "specialty": "Rehabilitation physician",
+    "practice": "Hunter Valley Private Hospital",
+    "address": "20 Mawson Street, Shortland NSW 2307",
+    "suburb": "Shortland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/kirsten-bailey"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lee Laycock",
+    "specialty": "Rehabilitation physician",
+    "practice": "Rehab Med (consulting at Wallsend)",
+    "address": "Hunter Valley Private Hospital, 20 Mawson Street, Shortland NSW 2307",
+    "suburb": "Shortland",
+    "phone": "02 4950 0600",
+    "fax": "",
+    "email": "office@rehabmed.net.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/lee-laycock"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "geriatric-medicine": {
+  "name": "Geriatric medicine",
+  "people": [
+   {
+    "name": "Dr Roshan Gunathilake",
+    "specialty": "Geriatrician and general physician",
+    "practice": "Rooms, Lake Macquarie Private Specialist Centre",
+    "address": "Level 1, Suite 12, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Acute care of older people",
+     "Cognitive disorders",
+     "Falls",
+     "Perioperative medicine"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "older adults",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-roshan-gunathilake/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rajeswari Radha Krishnan",
+    "specialty": "Geriatrician",
+    "practice": "Lake Macquarie Private Hospital Specialist Medical Centre",
+    "address": "Suite 7, Level 2, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 5397",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Complex illness",
+     "Rehabilitation",
+     "Dementia"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "older adults",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Hunter New England Health"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rajeswari-radha-krishnan/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Shahzad Gul",
+    "specialty": "Geriatrician and general physician",
+    "practice": "Maitland Private Hospital",
+    "address": "Maitland Private Hospital, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4937 9558",
+    "fax": "02 4937 9560",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Healthy ageing",
+     "Dementia and delirium",
+     "Falls and frailty",
+     "Polypharmacy",
+     "Parkinson disease",
+     "Osteoporosis",
+     "Perioperative care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "older adults",
+     "hospitals": [
+      "Maitland Hospital",
+      "John Hunter Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://selfpaysurgery.cms.healthecare.com.au/specialists/dr-shahzad-gul"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "palliative-care": {
+  "name": "Palliative care",
+  "people": [
+   {
+    "name": "Calvary Mater Newcastle Palliative Care Service (incl. Mercy Hospice)",
+    "specialty": "Public specialist palliative care service",
+    "practice": "Calvary Mater Newcastle",
+    "address": "Cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4985 0330",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.calvarymater.org.au/palliative-care/",
+    "interests": [
+     "24/7 nursing and medical service for pain and symptom management and terminal care (approx. 20km around Mercy Hospice)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [
+     "Listing states interpreter access is available through the HNE Health Interpreter Service"
+    ],
+    "sources": [
+     "https://infoqore.com.au/directory/health-and-wellbeing/community-health-services/mental-health-services/calvary-mater-newcastle-palliative-care-service",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/calvary-mater-newcastle-hospital/palliative-medicine/1e16dc8b-3b8e-4846-8e75-d1bdd998e155"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "medical-oncology": {
+  "name": "Medical oncology",
+  "people": [
+   {
+    "name": "Calvary Mater Newcastle Medical Oncology",
+    "specialty": "Public medical oncology service",
+    "practice": "Calvary Mater Newcastle Cancer Centre",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "02 4968 0384 (Day Treatment Centre)",
+    "email": "",
+    "ereferral": "",
+    "website": "https://calvarycare.org.au/hospitals/calvary-mater-newcastle/services-and-clinics-3/cancer-services-3/medical-oncology",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://calvarycare.org.au/hospitals/calvary-mater-newcastle/services-and-clinics-3/cancer-services-3/medical-oncology",
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle-cancer-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Hiren Mandaliya",
+    "specialty": "Medical oncologist",
+    "practice": "Lake Macquarie Oncology (Ramsay Cancer Care Centre)",
+    "address": "Level 1, Suite 12, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 5762",
+    "fax": "02 4947 5765",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Gastrointestinal, gynaecological, genitourinary, lung, breast, melanoma, head and neck cancers",
+     "Research: lung cancer, mesothelioma, gynaecological and breast cancers"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Lake Macquarie Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [
+      "Gujarati",
+      "Hindi"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/hiren-mandaliya",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-hiren-mandaliya/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Andre Van der Westhuizen",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/andre-van-der-westhuizen"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Fiona Day",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/fiona-day"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Gaik Tin Quah",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/gaik-tin-quah"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Girish Mallesara",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/girish-mallesara",
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Howard Chan",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/howard-chan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ina Nordman",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/ina-nordman"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James Lynam",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/james-lynam",
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Janine Lombard",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/janine-lombard"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Mathew George",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/mathew-george"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Prajwol Shrestha",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/prajwol-shrestha"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sarah Zardawi",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/sarah-zardawi"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Prof Stephen Ackland",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/stephen-ackland"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Fiona Abell",
+    "specialty": "Medical oncologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3190",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/fiona-abell"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Private Hospital Oncology Day Treatment",
+    "specialty": "Private oncology/haematology day treatment unit",
+    "practice": "Newcastle Private Hospital",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4941 8424",
+    "fax": "02 4952 7160",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lucy Corke",
+    "specialty": "Medical oncologist",
+    "practice": "Newcastle Private Hospital Oncology Day Treatment (listed on Canrefer)",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4941 8424",
+    "fax": "02 4952 7160",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment",
+     "https://www.canrefer.org.au/specialists/lucy-corke"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Robin Paterson",
+    "specialty": "Medical oncologist",
+    "practice": "Newcastle Private Hospital Oncology Day Treatment (listed on Canrefer)",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4941 8424",
+    "fax": "02 4952 7160",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment",
+     "https://www.canrefer.org.au/specialists/robin-paterson"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "radiation-oncology": {
+  "name": "Radiation oncology",
+  "people": [
+   {
+    "name": "Calvary Mater Newcastle Radiation Oncology Unit",
+    "specialty": "Public radiation oncology service",
+    "practice": "Calvary Mater Newcastle Cancer Centre",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle-cancer-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Anne Capp",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "GenesisCare Newcastle (Lake Macquarie Private Hospital)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/anne-capp",
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Christopher Wratten",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/christopher-wratten"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Geetha Govindarajulu",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/geetha-govindarajulu"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jane Ludbrook",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/jane-ludbrook"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Jarad Martin",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "GenesisCare Newcastle (Lake Macquarie Private Hospital)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/jarad-martin",
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mahesh Kumar",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/mahesh-kumar"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michael Fay",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "GenesisCare Newcastle (Lake Macquarie Private Hospital)"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/michael-fay",
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mimi Tieu",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/mimi-tieu"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Samuel Dickson",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/samuel-dickson"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sanjiv Gupta",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/sanjiv-gupta"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Swetha Sridharan",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/swetha-sridharan"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Yuvnik Trada",
+    "specialty": "Radiation oncologist",
+    "practice": "Calvary Mater Newcastle Radiation Oncology (listed on Canrefer)",
+    "address": "Level 2, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3125",
+    "fax": "02 4014 3660",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/yuvnik-trada"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "GenesisCare Newcastle (Lake Macquarie)",
+    "specialty": "Private radiation oncology centre",
+    "practice": "GenesisCare",
+    "address": "Lake Macquarie Private Hospital, 36 Pacific Highway, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4918 4500",
+    "fax": "02 4918 4510",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Matthew Mason",
+    "specialty": "Radiation oncologist",
+    "practice": "GenesisCare Newcastle (listed on Canrefer)",
+    "address": "Lake Macquarie Private Hospital, 36 Pacific Highway, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4918 4500",
+    "fax": "02 4918 4510",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle",
+     "https://www.canrefer.org.au/specialists/matthew-mason"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Peter O'Brien",
+    "specialty": "Radiation oncologist",
+    "practice": "GenesisCare Newcastle (listed on Canrefer)",
+    "address": "Lake Macquarie Private Hospital, 36 Pacific Highway, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4918 4500",
+    "fax": "02 4918 4510",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/Services/GenesisCare-Newcastle",
+     "https://www.canrefer.org.au/specialists/peter-o-brien"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ekaterine Moseshvili",
+    "specialty": "Radiation oncologist",
+    "practice": "Listed under John Hunter Hospital on Canrefer",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Katherine Neville",
+    "specialty": "Radiation oncologist",
+    "practice": "Listed under John Hunter Hospital on Canrefer",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "haematology": {
+  "name": "Haematology",
+  "people": [
+   {
+    "name": "Calvary Mater Newcastle Haematology (Hunter Haematology Unit)",
+    "specialty": "Public haematology service",
+    "practice": "Calvary Mater Newcastle",
+    "address": "Level 5, Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "02 4014 3088 (Haematology Day Unit)",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle-cancer-centre"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Anoop Enjeti",
+    "specialty": "Haematologist",
+    "practice": "Hunter Haematology Unit, Calvary Mater Newcastle",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4014 3027",
+    "fax": "02 4985 0245",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Member, HNE Lymphoma MDT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [
+      "Hindi",
+      "Kannada",
+      "Tamil",
+      "Telugu"
+     ],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/anoop-enjeti",
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Alex Holmes",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/alex-holmes",
+     "https://www.canrefer.org.au/services/newcastle-private-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ben Reardon",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/ben-reardon"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bryony Ross",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/bryony-ross"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Israfil Baluwala",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/israfil-baluwala"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jane Gordon",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/jane-gordon"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jillian de Malmanche",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/jillian-demalmanche"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jonathan Sillar",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/jonathan-sillar"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Karan Makhija",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/karan-makhija"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Kathleen Melville",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/kathleen-melville",
+     "https://www.canrefer.org.au/services/newcastle-private-hospital-oncology-day-treatment"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Louis Do",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/louis-do"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ritam Prasad",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/ritam-prasad"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sam Yuen",
+    "specialty": "Haematologist",
+    "practice": "Calvary Mater Newcastle (listed on Canrefer)",
+    "address": "Calvary Mater Newcastle, cnr Edith and Platt Streets, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4921 1211",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/calvary-mater-newcastle",
+     "https://www.canrefer.org.au/specialists/sam-yuen"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Wojt Janowski",
+    "specialty": "Haematologist",
+    "practice": "Newcastle Private Hospital (listed on Canrefer)",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/newcastle-private-hospital",
+     "https://www.canrefer.org.au/specialists/wojt-janowski"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Katherine Rankin",
+    "specialty": "Haematologist",
+    "practice": "John Hunter Hospital (listed on Canrefer)",
+    "address": "John Hunter Hospital, Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4921 3000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/services/john-hunter-hospital"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
