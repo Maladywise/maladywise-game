@@ -67,7 +67,7 @@
  {
   "difficulty": "Einstein",
   "word": "COCCI",
-  "definition": "Round bacteria, plural. Staph and strep are the famous ones. Yes, three Cs. No, that’s not a typo."
+  "definition": "Round bacteria, plural. Staph and strep are the famous ones. Yes, three Cs. No, that\u2019s not a typo."
  },
  {
   "difficulty": "Genius",
@@ -78,5 +78,20 @@
   "difficulty": "Genius",
   "word": "APGAR",
   "definition": "Newborn score out of 10, checked at 1 and 5 minutes after birth."
+ },
+ {
+  "difficulty": "Hard",
+  "word": "BOLUS",
+  "definition": "A rounded mass of chewed food, or a single large dose of a drug."
+ },
+ {
+  "difficulty": "Hard",
+  "word": "CILIA",
+  "definition": "Tiny hair-like projections that sweep mucus out of the airways."
+ },
+ {
+  "difficulty": "Hard",
+  "word": "TALUS",
+  "definition": "Ankle bone that links the leg to the foot."
  }
 ]

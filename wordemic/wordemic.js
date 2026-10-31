@@ -1,9 +1,11 @@
 /* Wordemic: guess the five-letter medical word in six tries.
-   Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). Guess list in words.txt. */
+   Long Friday: Fridays use an eight-letter word and seven tries. The engine reads the length from the answer
+   (rows = 6 for five letters, 7 for longer words) and loads words.txt (5) or wordsN.txt (other lengths).
+   Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12";
-  var ROWS = 6, LEN = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
+  var ROWS = 6, LEN = 5, NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
   var root = document.getElementById("wde");
@@ -13,10 +15,11 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="wde-eyebrow">Wordemic</span><span class="badge" id="wde-badge" hidden></span></div>' +
+    ' <p class="longtag" id="wde-long" hidden></p>' +
     ' <div class="msg" id="wde-msg" aria-live="polite"></div>' +
     ' <div class="board" id="wde-board"></div>' +
     ' <div class="pk" id="wde-pk" hidden><button class="pk-tog" type="button" id="wde-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button>' +
-    '  <form class="pk-form" id="wde-pkform" hidden><input id="wde-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="5" aria-label="Type your five-letter guess with your phone keyboard, Enter to submit"></form></div>' +
+    '  <form class="pk-form" id="wde-pkform" hidden><input id="wde-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="5" aria-label="Type your guess with your phone keyboard, Enter to submit"></form></div>' +
     ' <div class="kb" id="wde-kb"></div>' +
     ' <div class="result" id="wde-result" hidden></div>' +
     ' <p class="note" id="wde-next"></p>' +
@@ -34,6 +37,10 @@
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
   var SKEY = PFX + "wde-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
+  // Long Friday extras live in their own key; the main streak still counts every day. best = fewest guesses.
+  var LKEY = PFX + "wde-long-stats", lstats = load(LKEY, { played: 0, wins: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0, 0] });
+  function isLong() { return LEN !== 5; }
+  function longLabel(d) { return (new Date(dayNum(d || today) * 864e5).getUTCDay() === 5 ? "Long Friday" : "Long word") + " \u00b7 " + LEN + " letters"; }
   var KEY, st, P = null, WORDS = null;
   function loadDay() { KEY = PFX + "wde-day-" + today; st = load(KEY, { guesses: [], done: false, win: false }); }
   loadDay();
@@ -41,16 +48,18 @@
   // ---------- sass ----------
   function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   var SASS = {
-    short: ["Five letters. Count them.", "Not enough letters, doctor.", "Short and wrong. Try again.", "Five. The number is five.", "Missing a letter or two.", "Short-staffed on letters there."],
+    short: ["# letters. Count them.", "Not enough letters, doctor.", "Short and wrong. Try again.", "#. The number is #.", "Missing a letter or two.", "Short-staffed on letters there."],
     invalid: ["Not in the word list. Not even in Latin.", "That's not a word. Dr Google is also confused.", "Made that one up, did we?", "Respectfully: not a word.", "Not a word. Not even an eponym.", "The dictionary has never heard of it.", "That looks like a typo with ambition.", "Nice try. Not a word.", "Even the pharmacist can\u2019t read that.", "That\u2019s doctor handwriting, not a word."],
-    win: [["First go? Suspicious. Very suspicious.", "One guess. Witchcraft.", "First try. Buy a lottery ticket.", "One guess. Are you inside our database?"], ["Two guesses. Show-off.", "Two. Outrageously good.", "Second guess. Sharp.", "Two guesses. Smug is allowed."], ["Three. Registrar energy.", "Three guesses. Very tidy.", "Three. Textbook.", "Third guess. Nicely reasoned."], ["Four. Steady hands.", "Four guesses. Safe and solid.", "Four. A good honest day\u2019s work.", "Fourth guess. Calm under pressure."], ["Five. Bit of a sweat, that.", "Five guesses. Cutting it fine.", "Five. Heart rate slightly raised.", "Fifth guess. Got there in the end."], ["Six. Code blue averted.", "Last guess. Living dangerously.", "Six. Pulse restored.", "Final guess. Everyone breathe out."]],
-    lose: ["Back to anatomy class.", "The word wins today. Rematch tomorrow.", "Off to the textbook with you.", "Six guesses, no diagnosis. Happens.", "The word escaped. Tomorrow\u2019s another shift.", "Not today. Revise and return.", "Out of guesses. Out of luck.", "The word has been discharged. Without you.", "Stumped. Even the spellchecker is embarrassed."]
+    win: [["First go? Suspicious. Very suspicious.", "One guess. Witchcraft.", "First try. Buy a lottery ticket.", "One guess. Are you inside our database?"], ["Two guesses. Show-off.", "Two. Outrageously good.", "Second guess. Sharp.", "Two guesses. Smug is allowed."], ["Three. Registrar energy.", "Three guesses. Very tidy.", "Three. Textbook.", "Third guess. Nicely reasoned."], ["Four. Steady hands.", "Four guesses. Safe and solid.", "Four. A good honest day\u2019s work.", "Fourth guess. Calm under pressure."], ["Five. Bit of a sweat, that.", "Five guesses. Cutting it fine.", "Five. Heart rate slightly raised.", "Fifth guess. Got there in the end."], ["Six. Code blue averted.", "Six guesses. One spare. Phew.", "Six. Pulse restored.", "Sixth guess. The long ones fight back."]],
+    last: ["Last guess. Living dangerously.", "Final guess. Everyone breathe out.", "Last try. Code blue averted.", "Final guess. Pulse restored."],
+    lose: ["Back to anatomy class.", "The word wins today. Rematch tomorrow.", "Off to the textbook with you.", "Every guess used, no diagnosis. Happens.", "The word escaped. Tomorrow\u2019s another shift.", "Not today. Revise and return.", "Out of guesses. Out of luck.", "The word has been discharged. Without you.", "Stumped. Even the spellchecker is embarrassed."]
   };
   function say(t) { $("msg").textContent = t; }
 
   // ---------- scoring ----------
   function score(guess, word) {
-    var res = ["miss", "miss", "miss", "miss", "miss"], left = {}, i;
+    var res = [], left = {}, i;
+    for (i = 0; i < LEN; i++) res.push("miss");
     for (i = 0; i < LEN; i++) { if (guess[i] === word[i]) res[i] = "hit"; else left[word[i]] = (left[word[i]] || 0) + 1; }
     for (i = 0; i < LEN; i++) { if (res[i] !== "hit" && left[guess[i]]) { res[i] = "near"; left[guess[i]]--; } }
     return res;
@@ -99,12 +108,14 @@
     if (!st.done) { r.hidden = true; return; }
     var word = P.word.toLowerCase();
     var grid = st.guesses.map(function (g) { return score(g, word).map(function (s) { return s === "hit" ? "\ud83d\udfe9" : s === "near" ? "\ud83d\udfe8" : "\u2b1c"; }).join(""); }).join("\n");
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/6\n" + grid + "\nmaladywise.com";
-    var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = st.win ? st.guesses.length - 1 : 6;
+    var long = isLong(), title = long ? NAME.replace("Wordemic", "Wordemic Long") : NAME;
+    var share = title + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/" + ROWS + "\n" + grid + "\nmaladywise.com";
+    var S = long ? lstats : stats, dist = S.dist, pct = S.played ? Math.round(S.wins / S.played * 100) : 0, max = Math.max.apply(null, dist.concat([1])), mine = st.win ? st.guesses.length - 1 : ROWS;
     r.hidden = false;
     r.innerHTML = "<h2>" + P.word + '</h2><p class="def">' + P.definition + "</p>" +
-      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
-      '<div class="dist">' + stats.dist.map(function (n, i) { return "<div><span>" + (i < 6 ? i + 1 : "X") + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(n / max * 100)) + '%">' + n + "</i></div>"; }).join("") + "</div>" +
+      (long ? '<p class="lsub">Long Friday stats</p>' : "") +
+      '<div class="stats"><div><b>' + S.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + (long ? (S.best ? S.best + "/" + ROWS : "\u2013") : S.best) + "</b><span>" + (long ? "Best go" : "Best") + "</span></div></div>" +
+      '<div class="dist">' + dist.map(function (n, i) { return "<div><span>" + (i < dist.length - 1 ? i + 1 : "X") + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(n / max * 100)) + '%">' + n + "</i></div>"; }).join("") + "</div>" +
       '<pre id="wde-share">' + share + '</pre><button class="btn" type="button" id="wde-copy">Copy result</button>';
     $("copy").onclick = function () {
       var b = this;
@@ -127,18 +138,26 @@
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (win) stats.wins++;
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
-      stats.dist[win ? st.guesses.length - 1 : 6]++; stats.last = today; put(SKEY, stats);
+      if (!isLong()) stats.dist[win ? st.guesses.length - 1 : 6]++;
+      stats.last = today; put(SKEY, stats);
+      if (isLong() && lstats.last !== today) {
+        var ld = lstats.dist; while (ld.length < ROWS + 1) ld.splice(ld.length - 1, 0, 0);
+        lstats.played++; if (win) { lstats.wins++; lstats.best = lstats.best ? Math.min(lstats.best, st.guesses.length) : st.guesses.length; }
+        ld[win ? st.guesses.length - 1 : ld.length - 1]++; lstats.last = today; put(LKEY, lstats);
+      }
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put(PFX + "mw-einstein", tro); } }
-    } else say(win ? pick(SASS.win[st.guesses.length - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
+    } else say(win ? pick(st.guesses.length === ROWS ? SASS.last : SASS.win[st.guesses.length - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
-    if (!P || st.done || !WORDS) return;
+    if (!P || st.done) return;
+    var WORDS = DICT[LEN];
     if (k === "back") { cur = cur.slice(0, -1); say(""); paint(); return; }
     if (k === "enter") {
-      if (cur.length < LEN) { say(pick(SASS.short)); shake(); return; }
+      if (cur.length < LEN) { var nw = NUMW[LEN] || String(LEN); say(pick(SASS.short).replace(/#/g, nw).replace(/^./, function (c) { return c.toUpperCase(); })); shake(); return; }
+      if (!WORDS) { say("Fetching the dictionary. Try again in a sec."); getWords(LEN); return; }
       var sw = window.MW_swear && MW_swear(cur); if (sw) { say(sw); shake(); return; }
       if (!WORDS.__any && !WORDS[cur] && cur !== P.word.toLowerCase()) { say(pick(SASS.invalid)); shake(); return; }
       st.guesses.push(cur); cur = ""; say("");
@@ -200,7 +219,10 @@
         else say("Today\u2019s word is still in triage. Back tomorrow.");
         renderArchive(); return;
       }
-      if (!$("board").querySelector(".row")) buildBoard();
+      LEN = P.word.length; ROWS = LEN > 5 ? 7 : 6; getWords(LEN);
+      root.classList.toggle("long", isLong()); root.style.setProperty("--n", LEN);
+      pkIn.maxLength = LEN; buildBoard();
+      $("long").hidden = !isLong(); $("long").textContent = isLong() ? longLabel(date) : "";
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
@@ -214,7 +236,7 @@
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
         var s = load(PFX + "wde-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " \u2713" : " \u2715";
-        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
+        return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " \u00b7 " + nice(x.date) + (x.word && x.word.length !== 5 ? " \u00b7 Long" : "") + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="wde-back">Back to today</button>';
       $("alist").innerHTML = back + (rows || '<p class="note">No past puzzles yet. Today is #1. You\u2019re early.</p>');
@@ -225,8 +247,14 @@
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
 
   buildBoard(); buildKb(); tick(); setInterval(tick, 60000);
-  fetch(BASE + "words.txt?v=" + BUILD).then(function (r) { return r.text(); }).then(function (t) {
-    WORDS = {}; t.split(/\s+/).forEach(function (w) { if (w) WORDS[w] = 1; });
-  }).catch(function () { WORDS = { __any: 1 }; });
+  // Guess lists by length: words.txt (5 letters), wordsN.txt otherwise. Fetched once, on demand.
+  var DICT = {}, DREQ = {};
+  function getWords(n) {
+    if (DREQ[n]) return; DREQ[n] = 1;
+    fetch(BASE + (n === 5 ? "words.txt" : "words" + n + ".txt") + "?v=" + BUILD).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      var W = {}; t.split(/\s+/).forEach(function (w) { if (w) W[w] = 1; }); DICT[n] = W;
+    }).catch(function () { DICT[n] = { __any: 1 }; });
+  }
+  getWords(5);
   show(today);
 })();

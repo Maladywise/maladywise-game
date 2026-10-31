@@ -38,8 +38,8 @@
   "date": "2026-11-06",
   "number": 21,
   "difficulty": "Hard",
-  "word": "BOLUS",
-  "definition": "A rounded mass of chewed food, or a single large dose of a drug."
+  "word": "SCIATICA",
+  "definition": "Pain shooting from the buttock down the back of the leg, from an irritated sciatic nerve (often a bulging lumbar disc). Most cases settle on their own within weeks to a few months."
  },
  {
   "date": "2026-11-07",
@@ -87,8 +87,8 @@
   "date": "2026-11-13",
   "number": 28,
   "difficulty": "Hard",
-  "word": "CILIA",
-  "definition": "Tiny hair-like projections that sweep mucus out of the airways."
+  "word": "ANEURYSM",
+  "definition": "Bulge in a weakened artery wall. The abdominal aorta and the brain\u2019s \u2018berry\u2019 aneurysms are the famous ones. Usually silent until they aren\u2019t."
  },
  {
   "date": "2026-11-14",
@@ -136,7 +136,14 @@
   "date": "2026-11-20",
   "number": 35,
   "difficulty": "Hard",
-  "word": "TALUS",
-  "definition": "Ankle bone that links the leg to the foot."
+  "word": "PLACENTA",
+  "definition": "Organ grown during pregnancy that swaps oxygen, nutrients and waste between parent and baby through the umbilical cord. Delivered after the baby: the afterbirth."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 42,
+  "difficulty": "Hard",
+  "word": "DELIRIUM",
+  "definition": "Sudden confusion with wandering attention that comes and goes, often triggered by infection, medicines or surgery in older people. A medical emergency, not \u2018just old age\u2019."
  }
 ]
