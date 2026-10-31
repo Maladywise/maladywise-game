@@ -27,6 +27,8 @@ for f in sorted(glob.glob(os.path.join(DD, "*.json"))):
             if key in people:
                 q = people[key]
                 if label not in q["_labels"]: q["_labels"].append(label)
+                if p.get("practice") and p["practice"] != q.get("practice") and all(p["practice"] != x[0] for x in q.setdefault("_also", [])):
+                    q["_also"].append((p["practice"], p.get("suburb") or p.get("address", ""), p.get("phone", "")))
                 for k in ("interests", "inclusive", "sources"):
                     for x in p.get(k) or []:
                         if x not in q.setdefault(k, []): q[k].append(x)
@@ -44,6 +46,8 @@ def card(p):
     if p.get("website"): c.append(f'<a href="{e(p["website"])}" rel="noopener">Website</a>')
     if c: lines.append("<span>" + " · ".join(c) + "</span>")
     if p.get("ereferral"): lines.append(f'<span>E-referral: {e(p["ereferral"])}</span>')
+    for pr2, sub2, ph2 in p.get("_also") or []:
+        lines.append(f'<span>Also: {e(pr2)}' + (f', {e(sub2)}' if sub2 else '') + (f' · <a href="tel:{e(re.sub(r"[^0-9+]", "", ph2))}">{e(ph2)}</a>' if ph2 else '') + '</span>')
     extra = []
     if p.get("interests"): extra.append(f'<p class="sp-int"><b>Interests:</b> {e("; ".join(p["interests"]))}</p>')
     facts = []

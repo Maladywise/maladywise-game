@@ -1,0 +1,154 @@
+{
+  "nephrology": {
+    "name": "Nephrology",
+    "people": [
+      {
+        "name": "Hunter Kidney Clinic",
+        "specialty": "Nephrology (private practice)",
+        "practice": "Hunter Kidney Clinic",
+        "address": "6-8 Sydney Street, Gateshead NSW 2290",
+        "suburb": "Gateshead",
+        "phone": "02 4942 2558",
+        "fax": "02 4942 2899",
+        "email": "",
+        "ereferral": "",
+        "website": "",
+        "interests": [],
+        "practical": {
+          "telehealth": null,
+          "bulk_billing": "unknown",
+          "wait": "",
+          "ages": "",
+          "hospitals": [],
+          "languages": [],
+          "after_hours": null
+        },
+        "inclusive": [],
+        "notes": "Healthdirect: 'Fees apply', appointment and referral required; hours Mon, Wed, Thu 7am-5:30pm, Tue 7am-6:30pm (Fri not shown). Ramsay profiles give 'Ground Floor, The Clark Suites, 6-8 Sydney St, Gateshead' as rooms for Prof Bobby Chacko and A/Prof Bruce MacKinnon.",
+        "sources": [
+          "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/hunter-kidney-clinic/nephrology/8c275daa-9b5a-27a9-9c62-9dad8a691aaf",
+          "https://www.healthdirect.gov.au/australian-health-services/23027794/hunter-kidney-clinic/services/gateshead-2290-sydney"
+        ],
+        "checked": "2026-10-31",
+        "ahpra": "not checked"
+      },
+      {
+        "name": "Prof Bobby Chacko",
+        "specialty": "Nephrology (renal medicine)",
+        "practice": "The Clark Suites (same address as Hunter Kidney Clinic)",
+        "address": "Ground Floor, The Clark Suites, 6-8 Sydney Street, Gateshead NSW 2290",
+        "suburb": "Gateshead",
+        "phone": "02 4943 3122 (Lake Macquarie Private Hospital number listed on profile)",
+        "fax": "",
+        "email": "",
+        "ereferral": "",
+        "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/professor-bobby-chacko/",
+        "interests": [],
+        "practical": {
+          "telehealth": null,
+          "bulk_billing": "unknown",
+          "wait": "",
+          "ages": "",
+          "hospitals": ["Lake Macquarie Private Hospital"],
+          "languages": [],
+          "after_hours": null
+        },
+        "inclusive": [],
+        "notes": "UoN profile lists him as 'Director Renal Services John Hunter Hospital'. Rooms phone not published separately; Hunter Kidney Clinic (same address) is 02 4942 2558 per Healthdirect.",
+        "sources": [
+          "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/professor-bobby-chacko/",
+          "https://www.newcastle.edu.au/profile/bobby-chacko"
+        ],
+        "checked": "2026-10-31",
+        "ahpra": "not checked"
+      },
+      {
+        "name": "A/Prof Bruce MacKinnon",
+        "specialty": "Nephrology (renal medicine)",
+        "practice": "The Clark Suites (same address as Hunter Kidney Clinic)",
+        "address": "Ground Floor, The Clark Suites, 6-8 Sydney Street, Gateshead NSW 2290",
+        "suburb": "Gateshead",
+        "phone": "02 4943 3122 (Lake Macquarie Private Hospital number listed on profile)",
+        "fax": "",
+        "email": "",
+        "ereferral": "",
+        "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/associate-professor-bruce-mackinnon/",
+        "interests": ["chronic kidney disease", "hypertension", "glomerulonephritis", "vasculitis", "cystic kidney disease"],
+        "practical": {
+          "telehealth": null,
+          "bulk_billing": "unknown",
+          "wait": "",
+          "ages": "",
+          "hospitals": ["Lake Macquarie Private Hospital", "John Hunter Hospital"],
+          "languages": [],
+          "after_hours": null
+        },
+        "inclusive": [],
+        "notes": "Profile: Senior Staff Specialist, Nephrology & Transplantation, John Hunter Hospital; Conjoint Associate Professor, University of Newcastle.",
+        "sources": [
+          "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/associate-professor-bruce-mackinnon/"
+        ],
+        "checked": "2026-10-31",
+        "ahpra": "not checked"
+      },
+      {
+        "name": "Dr Humam Hazim",
+        "specialty": "Nephrology (renal medicine)",
+        "practice": "Hunter Diabetes Centre",
+        "address": "Level 1 (Top Floor), Hunter Diabetes Centre, 41 Llewellyn Street, Merewether NSW 2291",
+        "suburb": "Merewether",
+        "phone": "02 4943 3122 (Lake Macquarie Private Hospital number listed on profile; no rooms number published)",
+        "fax": "",
+        "email": "",
+        "ereferral": "",
+        "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-humam-hazim/",
+        "interests": ["Chronic Kidney Disease", "Acute Kidney Injury", "Glomerulonephritis", "Diabetic Kidney Disease", "Kidney transplant medicine", "Hypertension", "Kidney Stones Prevention"],
+        "practical": {
+          "telehealth": null,
+          "bulk_billing": "unknown",
+          "wait": "",
+          "ages": "",
+          "hospitals": ["Lake Macquarie Private Hospital"],
+          "languages": [],
+          "after_hours": null
+        },
+        "inclusive": [],
+        "notes": "No public source found for Lower Hunter/Maitland rooms; only Merewether rooms confirmed.",
+        "sources": [
+          "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-humam-hazim/"
+        ],
+        "checked": "2026-10-31",
+        "ahpra": "not checked"
+      },
+      {
+        "name": "Dr Eswari Vilayur",
+        "specialty": "Nephrology",
+        "practice": "Kotara Specialist Suites",
+        "address": "Suite 2, 76 Park Avenue, Kotara NSW 2289",
+        "suburb": "Kotara",
+        "phone": "02 4965 3800",
+        "fax": "02 4965 3900",
+        "email": "",
+        "ereferral": "",
+        "website": "https://www.kotarasuites.com.au/dr-eswari-vilayur",
+        "interests": ["chronic renal diseases including diabetic kidney disease and glomerulonephritis", "renal transplant care", "refractory hypertension", "high-risk pregnancy clinic for women with hypertension and kidney disease", "clinical research", "medical student education"],
+        "practical": {
+          "telehealth": null,
+          "bulk_billing": "unknown",
+          "wait": "",
+          "ages": "",
+          "hospitals": [],
+          "languages": [],
+          "after_hours": null
+        },
+        "inclusive": [],
+        "notes": "Details read from a Squarespace-hosted copy of the Kotara Specialist Suites page (canonical kotarasuites.com.au could not be opened). Doctify's Kotara Specialist Suites page does not list her. Confirm by phone.",
+        "sources": [
+          "https://maracas-roadrunner-zr9y.squarespace.com/dr-eswari-vilayur"
+        ],
+        "checked": "2026-10-31",
+        "ahpra": "not checked"
+      }
+    ]
+  }
+}
