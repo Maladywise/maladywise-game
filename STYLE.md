@@ -1,6 +1,6 @@
-# Malady Wise standing style rules (from Adam)
+# Malady Wise standing style rules
 
-Every scheduled task and puzzle writer must read and follow this file. It overrides older, conflicting rules in task prompts. Adam updates it by asking Claude in chat.
+Every scheduled task and puzzle writer must read and follow this file. It overrides older, conflicting rules in task prompts. The site owner updates it by asking Claude in chat.
 
 ## Healthy, regular representation (no quotas)
 - NO fixed quotas. Ignore any "at least half" figure mentioned in a task prompt. The goal is healthy, regular, natural coverage, not 1 in 20 like before, and not forced into every puzzle.
@@ -25,3 +25,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Wordemic: take Einstein answers from tier 1 of wordemic/hard-bank.json first, Genius Sunday answers from tier 1 then tier 2, and Hard days may use tier 3. Remove each word from the bank once it's used. When the bank runs low, add similar words (obscure anatomy, archaic terms, histology, rare signs) and add every new answer to wordemic/words.txt.
 - Every game has an Einstein tier, including Glimpsis, Opacitis, Panelysis, Arrhythmix, Cryptogenic and Grand Rounds. Daily games: about 1 day in 50. Weekly or twice-weekly games (Arrhythmix, Cryptogenic, Grand Rounds): about once every 6–8 weeks. When building puzzles, pick the next Einstein date for each game you build, set that entry's "difficulty" to "Einstein", and add the date to MW_EINSTEIN in assets/games.js (keep earlier dates).
 - Image games (Glimpsis, Opacitis): Einstein = a subtle or rare finding, a sparse one-line context, five close lookalike options and hints that make you think rather than give it away.
+
+## Owner's name
+- Never put the site owner's name (or "Adam") anywhere on the site, in public files, code comments or data notes. Use "Malady Wise" or "a Malady Wise GP".
