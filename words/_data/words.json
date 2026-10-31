@@ -1,0 +1,398 @@
+[
+ {
+  "date": "2026-11-02",
+  "slug": "muskelkater",
+  "word": "Muskelkater",
+  "lang": "German",
+  "say": "MOOS-kel-kah-ter",
+  "literal": "muscle tomcat",
+  "meaning": "The stiff, sore muscles that turn up a day or two after exercise. Doctors call it delayed-onset muscle soreness (DOMS).",
+  "origin": "One popular theory: 1800s doctors called it a kind of muscle ‘catarrh’ (Katarrh), which slid into Kater, ‘tomcat’. Kater on its own also means a hangover in German. So the cat is either in your legs or in your head.",
+  "sentence": "Leg day was Monday. The Muskelkater arrived Wednesday, uninvited, and is now living in my stairs.",
+  "q": {
+   "text": "Which 1840s London surgeon, timed by onlookers with pocket watches, supposedly did an amputation with a 300% death rate?",
+   "opts": [
+    "Robert Liston",
+    "Joseph Lister",
+    "John Hunter",
+    "Astley Cooper"
+   ],
+   "a": 0,
+   "why": "Robert Liston could take a leg off in under three minutes. Legend says he also took his assistant’s fingers and a spectator died of fright: three deaths, one operation. The story comes from a 1980s book and is probably exaggerated. The speed was real, and in 1846 he did one of Europe’s first operations under ether."
+  }
+ },
+ {
+  "date": "2026-11-09",
+  "slug": "borborygmi",
+  "word": "Borborygmi",
+  "lang": "Greek",
+  "say": "bor-buh-RIG-my",
+  "literal": "rumbling",
+  "meaning": "The rumbles and gurgles of gas and fluid moving through your gut. Singular: borborygmus.",
+  "origin": "From the Greek borborygmos. It is onomatopoeia: say it slowly and it sounds like the noise. Ancient doctors were clearly in quiet rooms with hungry patients.",
+  "sentence": "The meeting went silent just in time for my borborygmi to take the floor.",
+  "q": {
+   "text": "In 1847, what did Ignaz Semmelweis make doctors in his Vienna maternity ward do, cutting deaths dramatically?",
+   "opts": [
+    "Wash hands in chlorinated lime",
+    "Wear masks",
+    "Open the windows",
+    "Stop using leeches"
+   ],
+   "a": 0,
+   "why": "Deaths from childbed fever plunged once doctors coming from autopsies washed in chlorinated lime. Colleagues were offended at being called dirty. He died in an asylum in 1865, decades before germ theory proved him right."
+  }
+ },
+ {
+  "date": "2026-11-16",
+  "slug": "hexenschuss",
+  "word": "Hexenschuss",
+  "lang": "German",
+  "say": "HEX-en-shoos",
+  "literal": "witch’s shot",
+  "meaning": "Sudden, sharp low back pain that freezes you mid-bend. The old English name is lumbago.",
+  "origin": "Folk belief blamed invisible arrows shot by witches. Old English had the same idea with ‘elf-shot’. Today we blame lifting the washing basket with a twist.",
+  "sentence": "I bent down for one sock and got a Hexenschuss. The sock won.",
+  "q": {
+   "text": "How did Australian Barry Marshall prove a bacterium causes stomach ulcers?",
+   "opts": [
+    "He drank a culture of it",
+    "He operated on himself",
+    "He tested it on his dog",
+    "He infected a volunteer"
+   ],
+   "a": 0,
+   "why": "In 1984 he drank Helicobacter pylori, got gastritis within days, and proved the point. He and Robin Warren shared the 2005 Nobel Prize. Not recommended as a career strategy."
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "slug": "obdormition",
+  "word": "Obdormition",
+  "lang": "Latin",
+  "say": "ob-dor-MISH-un",
+  "literal": "falling asleep",
+  "meaning": "A limb ‘going to sleep’: numbness and pins and needles from pressing on a nerve.",
+  "origin": "From Latin obdormire, to fall asleep. In the 1600s it meant a person falling asleep; by the 1800s it had moved down to the leg.",
+  "sentence": "Forty minutes on the toilet scrolling and my left leg achieved full obdormition.",
+  "q": {
+   "text": "In 1929, Werner Forssmann pushed a tube into his own heart. How did he check where it was?",
+   "opts": [
+    "He walked to the X-ray room",
+    "He listened with a stethoscope",
+    "He waited for chest pain",
+    "A nurse felt his pulse"
+   ],
+   "a": 0,
+   "why": "He threaded a catheter up an arm vein, then walked to radiology to X-ray it in his heart. He got into trouble for it, then shared the 1956 Nobel Prize."
+  }
+ },
+ {
+  "date": "2026-11-30",
+  "slug": "placebo",
+  "word": "Placebo",
+  "lang": "Latin",
+  "say": "pluh-SEE-boh",
+  "literal": "I shall please",
+  "meaning": "A dummy treatment with no active ingredient that can still make people feel better.",
+  "origin": "The first word of a psalm line sung in the medieval Vespers for the Dead. Hired mourners who sang it for pay were ‘singing placebo’, so it came to mean flattery, then a pleasing fake medicine by the 1700s.",
+  "sentence": "The sugar pill worked brilliantly. Nobody tell my knee.",
+  "q": {
+   "text": "What did 18th-century London rescue kits beside the Thames use to revive people pulled from the water?",
+   "opts": [
+    "Tobacco smoke blown into the rectum",
+    "Brandy poured into the ear",
+    "Electric eels",
+    "Mustard on the feet"
+   ],
+   "a": 0,
+   "why": "The Royal Humane Society kept bellows for tobacco smoke enemas by the river. It may be one source of ‘blowing smoke up your…’, though that link is debated."
+  }
+ },
+ {
+  "date": "2026-12-07",
+  "slug": "nostalgia",
+  "word": "Nostalgia",
+  "lang": "Greek (1688)",
+  "say": "nos-TAL-juh",
+  "literal": "homecoming pain",
+  "meaning": "A wistful longing for the past. It started life as a medical diagnosis.",
+  "origin": "Coined in 1688 by Swiss medical student Johannes Hofer, from Greek nostos (homecoming) and algos (pain), to describe homesick Swiss soldiers serving abroad who were thought to sicken from longing.",
+  "sentence": "Dial-up internet noises give me nostalgia. Also a mild headache.",
+  "q": {
+   "text": "What was René Laennec’s first stethoscope, in 1816, made from?",
+   "opts": [
+    "A rolled-up sheet of paper",
+    "A hollow reed",
+    "A cow horn",
+    "A brass tube"
+   ],
+   "a": 0,
+   "why": "Too embarrassed to press his ear on a young woman’s chest, he rolled paper into a tube and found the heart sounded louder. Wooden versions followed."
+  }
+ },
+ {
+  "date": "2026-12-14",
+  "slug": "kummerspeck",
+  "word": "Kummerspeck",
+  "lang": "German",
+  "say": "KOO-mer-shpeck",
+  "literal": "grief bacon",
+  "meaning": "Weight gained from comfort eating during a sad or stressful time.",
+  "origin": "Kummer (grief, worry) plus Speck (bacon, or body fat). German doesn’t judge. It just labels the bacon.",
+  "sentence": "Exam season left me with a solid layer of Kummerspeck and a deep love of crackers.",
+  "q": {
+   "text": "In 1854, John Snow stopped a London cholera outbreak by removing what?",
+   "opts": [
+    "A water pump handle",
+    "A sewer cover",
+    "A market stall",
+    "A ship’s cargo"
+   ],
+   "a": 0,
+   "why": "He mapped the deaths around the Broad Street pump and had its handle removed. It’s often called the birth of epidemiology."
+  }
+ },
+ {
+  "date": "2026-12-21",
+  "slug": "muscle",
+  "word": "Muscle",
+  "lang": "Latin",
+  "say": "MUSS-ul",
+  "literal": "little mouse",
+  "meaning": "The tissue that moves you. The word hides a rodent.",
+  "origin": "From Latin musculus, ‘little mouse’. Romans thought a rippling muscle under the skin looked like a mouse scurrying about. Mussel shares the same root.",
+  "sentence": "Flex your bicep: congratulations, you have a mouse.",
+  "q": {
+   "text": "Medicinal leeches are still used in hospitals today. For what?",
+   "opts": [
+    "Saving reattached fingers and flaps",
+    "Treating high blood pressure",
+    "Curing fevers",
+    "Clearing acne"
+   ],
+   "a": 0,
+   "why": "After microsurgery, veins can clog. Leeches drain the pooled blood and their saliva stops it clotting, buying time for new veins to grow."
+  }
+ },
+ {
+  "date": "2026-12-28",
+  "slug": "sternutation",
+  "word": "Sternutation",
+  "lang": "Latin",
+  "say": "ster-nyoo-TAY-shun",
+  "literal": "sneezing",
+  "meaning": "The medical word for a sneeze.",
+  "origin": "From Latin sternutare, to sneeze repeatedly. Some people sneeze in bright sunlight: the ‘photic sneeze reflex’, or ACHOO syndrome, which researchers named on purpose.",
+  "sentence": "I stepped into the sun and achieved immediate sternutation. Twice.",
+  "q": {
+   "text": "What’s the oldest surgery we have evidence for, with skulls showing healed bone?",
+   "opts": [
+    "Trepanning (drilling holes in the skull)",
+    "Amputation",
+    "Caesarean section",
+    "Tooth extraction"
+   ],
+   "a": 0,
+   "why": "Skulls thousands of years old have neat holes with healed edges, so people survived it. Why they did it is still debated."
+  }
+ },
+ {
+  "date": "2027-01-04",
+  "slug": "quarantine",
+  "word": "Quarantine",
+  "lang": "Italian (Venetian)",
+  "say": "KWOR-un-teen",
+  "literal": "forty days",
+  "meaning": "Keeping people or goods apart to stop an infection spreading.",
+  "origin": "From Venetian quaranta giorni, 40 days. During plague outbreaks, ships waited offshore before landing. Dubrovnik (Ragusa) tried 30 days in 1377; 40 became the standard.",
+  "sentence": "Forty days? I can’t quarantine my group chat for forty minutes.",
+  "q": {
+   "text": "In 1848, Phineas Gage survived what?",
+   "opts": [
+    "An iron rod through his skull",
+    "Being struck by lightning twice",
+    "Three days buried alive",
+    "Drinking mercury"
+   ],
+   "a": 0,
+   "why": "A tamping iron shot through his left frontal lobe. He lived, but reportedly changed in personality, which taught doctors a lot about the frontal lobes."
+  }
+ },
+ {
+  "date": "2027-01-11",
+  "slug": "horripilation",
+  "word": "Horripilation",
+  "lang": "Latin",
+  "say": "hor-rip-ih-LAY-shun",
+  "literal": "bristling hair",
+  "meaning": "Goosebumps: tiny muscles pulling body hairs upright from cold, fear or a great song.",
+  "origin": "From Latin horrere (to bristle, to shudder, the root of horror) and pilus (hair). Furry ancestors used it to look bigger. We use it during key changes.",
+  "sentence": "The final chorus gave the whole room horripilation.",
+  "q": {
+   "text": "‘Typhoid Mary’ Mallon spent about how long in forced isolation in total?",
+   "opts": [
+    "About 26 years",
+    "6 months",
+    "2 years",
+    "She was never isolated"
+   ],
+   "a": 0,
+   "why": "A healthy carrier who worked as a cook, she was linked to dozens of cases. She kept cooking under a false name after her first release, and spent her last 23 years on an island."
+  }
+ },
+ {
+  "date": "2027-01-18",
+  "slug": "botulism",
+  "word": "Botulism",
+  "lang": "Latin",
+  "say": "BOT-yoo-liz-um",
+  "literal": "sausage disease",
+  "meaning": "A rare, serious paralysis caused by a bacterial toxin.",
+  "origin": "From Latin botulus, sausage. In the early 1800s German doctor Justinus Kerner studied deadly ‘sausage poisoning’ in Württemberg and even predicted the toxin might one day be a medicine. Hello, Botox.",
+  "sentence": "Botulism: the only time ‘sausage’ is the scariest word in a sentence.",
+  "q": {
+   "text": "At the first public ether operation in Boston in 1846, what did the surgeon famously say?",
+   "opts": [
+    "‘Gentlemen, this is no humbug.’",
+    "‘Let there be sleep.’",
+    "‘Scalpel, and hurry.’",
+    "‘He feels nothing!’"
+   ],
+   "a": 0,
+   "why": "John Collins Warren removed a lump from Gilbert Abbott’s neck in what’s now called the Ether Dome. The patient slept through it. Surgery changed forever."
+  }
+ },
+ {
+  "date": "2027-01-25",
+  "slug": "delirium",
+  "word": "Delirium",
+  "lang": "Latin",
+  "say": "dih-LEER-ee-um",
+  "literal": "off the furrow",
+  "meaning": "Sudden confusion, often in older people who are unwell, for example with an infection or after surgery.",
+  "origin": "From Latin de lira, ‘out of the furrow’: a plough that has wandered off its straight line in the field.",
+  "sentence": "If an older relative is suddenly confused, think delirium and get them checked. It’s often a sign of an infection or another illness.",
+  "q": {
+   "text": "Eben Byers drank about 1,400 bottles of Radithor, a ‘health tonic’. What was in it?",
+   "opts": [
+    "Radium",
+    "Arsenic",
+    "Cocaine",
+    "Mercury"
+   ],
+   "a": 0,
+   "why": "His jaw disintegrated and he died in 1932. The Wall Street Journal headline: ‘The Radium Water Worked Fine Until His Jaw Came Off.’ It helped tighten US drug laws."
+  }
+ },
+ {
+  "date": "2027-02-01",
+  "slug": "influenza",
+  "word": "Influenza",
+  "lang": "Italian",
+  "say": "in-floo-EN-zuh",
+  "literal": "influence",
+  "meaning": "The flu: a viral infection that flattens you for a week.",
+  "origin": "Italian for ‘influence’, as in the influence of the stars, which were once blamed for outbreaks. English borrowed it during a big European epidemic in the 1740s.",
+  "sentence": "Blame the stars if you like. The flu shot works better.",
+  "q": {
+   "text": "In 1898 Bayer launched heroin as a brand-name medicine. What for?",
+   "opts": [
+    "Cough",
+    "Toothache",
+    "Teething babies",
+    "Hangovers"
+   ],
+   "a": 0,
+   "why": "It was sold as a non-addictive cough suppressant, including for children. Rather quickly, everyone realised it was not non-addictive."
+  }
+ },
+ {
+  "date": "2027-02-08",
+  "slug": "pupil",
+  "word": "Pupil",
+  "lang": "Latin",
+  "say": "PYOO-pul",
+  "literal": "little doll",
+  "meaning": "The black hole in the middle of your eye that lets light in.",
+  "origin": "From Latin pupilla, ‘little doll’: look closely into someone’s eye and you see a tiny version of yourself. The school ‘pupil’ comes from the same word for a child.",
+  "sentence": "Gaze deeply into my pupils. You’ll see a small doll, and it’s you.",
+  "q": {
+   "text": "Edward Jenner’s first vaccine in 1796 used material from what?",
+   "opts": [
+    "A milkmaid’s cowpox sore",
+    "A sick cow’s blood",
+    "A smallpox survivor’s tears",
+    "Mouldy bread"
+   ],
+   "a": 0,
+   "why": "He took cowpox from milkmaid Sarah Nelmes and gave it to 8-year-old James Phipps. ‘Vaccine’ comes from vacca, Latin for cow."
+  }
+ },
+ {
+  "date": "2027-02-15",
+  "slug": "singultus",
+  "word": "Singultus",
+  "lang": "Latin",
+  "say": "sing-GUL-tus",
+  "literal": "sob, gasp",
+  "meaning": "The medical name for hiccups: a sudden diaphragm spasm, then a snap shut of the vocal cords.",
+  "origin": "From Latin singultus, a sob or a catch in the breath. Babies hiccup in the womb too, and you can sometimes see it on an ultrasound.",
+  "sentence": "Twenty minutes of singultus. I tried water, fright and holding my breath. The hiccups won.",
+  "q": {
+   "text": "Charles Osborne holds the record for the longest bout of hiccups. How long?",
+   "opts": [
+    "68 years",
+    "68 days",
+    "6 months",
+    "8 years"
+   ],
+   "a": 0,
+   "why": "They started in 1922, reportedly while he was lifting a pig, and stopped in 1990, about a year before he died."
+  }
+ },
+ {
+  "date": "2027-02-22",
+  "slug": "malaria",
+  "word": "Malaria",
+  "lang": "Italian",
+  "say": "muh-LAIR-ee-uh",
+  "literal": "bad air",
+  "meaning": "A serious parasite infection spread by mosquitoes.",
+  "origin": "From mal’aria, ‘bad air’. People blamed the foul air of swamps. Right place, wrong culprit: it was the mosquitoes breeding there.",
+  "sentence": "Bad air, they said. It was the mozzies all along.",
+  "q": {
+   "text": "The inventor of the lobotomy won which prize in 1949?",
+   "opts": [
+    "The Nobel Prize in Medicine",
+    "A Fields Medal",
+    "A knighthood",
+    "Nothing; he was struck off"
+   ],
+   "a": 0,
+   "why": "Portuguese neurologist Egas Moniz won the Nobel. In the US, Walter Freeman did thousands of ‘ice pick’ lobotomies. It’s one of medicine’s most regretted prizes."
+  }
+ },
+ {
+  "date": "2027-03-01",
+  "slug": "uvula",
+  "word": "Uvula",
+  "lang": "Latin",
+  "say": "YOO-vyoo-luh",
+  "literal": "little grape",
+  "meaning": "The dangly bit at the back of your throat.",
+  "origin": "From Latin uva, grape, plus a ‘little’ ending. Anatomists named a lot of the body after snacks.",
+  "sentence": "Say ‘ahh’ so I can see your little grape.",
+  "q": {
+   "text": "How did Alexander Fleming discover penicillin in 1928?",
+   "opts": [
+    "A plate went mouldy while he was on holiday",
+    "He tested hundreds of soil samples",
+    "A patient brought him mouldy bread",
+    "He was studying cheese"
+   ],
+   "a": 0,
+   "why": "He came back to a messy bench and noticed bacteria wouldn’t grow near a stray mould. Turning it into a medicine took Florey, Chain and others another decade."
+  }
+ }
+]

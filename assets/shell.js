@@ -672,7 +672,9 @@
   }
 
   // ---------- hub ----------
-  function hub() { setTimeout(social, 0);
+  function wotw() { var a = document.getElementById("mw-wotw"); if (!a || !window.fetch) return;
+    fetch("/words/current.json").then(function (r) { return r.json(); }).then(function (w) { a.href = "/words/#" + w.slug; a.innerHTML = '<span>\ud83d\udcd6 Word of the week</span><b></b><i></i>'; a.querySelector("b").textContent = w.word; a.querySelector("i").textContent = "literally \u2018" + w.literal + "\u2019 \u2192"; a.hidden = false; }).catch(function () {}); }
+  function hub() { setTimeout(social, 0); setTimeout(wotw, 200);
     topBar(null);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
     var main = document.getElementById("hub");
@@ -777,7 +779,7 @@
         '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Just puzzles.</span></p>" : "") + "</div>" +
         '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span><span class=\"mw-live\" hidden></span></div></div>" +
         (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
-        progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
+        progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + '<a class="wotw" id="mw-wotw" href="/words/" hidden></a>' + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
