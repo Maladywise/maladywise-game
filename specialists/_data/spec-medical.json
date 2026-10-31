@@ -1006,7 +1006,7 @@
      "languages": [],
      "after_hours": null,
      "new_patients": "limited",
-     "np_note": "General books closed (Mar 2026); acne clinic referrals accepted",
+     "np_note": "Books closed to routine general dermatology referrals (practice website, Nov 2026).",
      "np_checked": "2026-11-01"
     },
     "inclusive": [],
@@ -1038,8 +1038,8 @@
      "hospitals": [],
      "languages": [],
      "after_hours": null,
-     "new_patients": "no",
-     "np_note": "Books closed to new patients; acne referrals paused",
+     "new_patients": "limited",
+     "np_note": "Books closed to routine general dermatology referrals (practice website, Nov 2026).",
      "np_checked": "2026-11-01"
     },
     "inclusive": [],

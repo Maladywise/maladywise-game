@@ -735,3 +735,11 @@ html[data-theme="dark"] .doc .wq-o button.ok{background:#1E3A1B;color:#BDE6B5}ht
 .wotw{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:14px 0 4px;padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .wotw span{font:700 11px Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--brand,#4A3480);flex-basis:100%}
 .wotw b{font:700 22px var(--title,Georgia,serif)}.wotw i{font-style:normal;color:var(--muted)}
+.sp-pb{background:#EEF1F5;border-color:#C9D2DE;color:#2F3D52}
+details.sp-pb summary{background:#EEF1F5;border-color:#C9D2DE}
+html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{background:#222A36;color:#C6D3E6}
+.sp-pchips{margin-top:-2px}
+.sp-pf{margin:2px 0 8px}.sp-pf>summary{cursor:pointer;font:600 13px Poppins,system-ui,sans-serif;color:var(--brand,#4A3480);list-style:none}
+.sp-pf>summary::-webkit-details-marker{display:none}.sp-pf>summary::before{content:"＋ "}.sp-pf[open]>summary::before{content:"－ "}
+.sp-pf .sp-pchips{margin-top:6px}
+@media print{.sp-pf{display:none!important}}
