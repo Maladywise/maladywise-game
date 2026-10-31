@@ -5,13 +5,13 @@
   function sel() { return chips.filter(function (c) { return c.getAttribute("aria-pressed") === "true"; }).map(function (c) { return c.getAttribute("data-badge"); }); }
   var f = document.querySelector("[data-sp-filter]"), cnt = document.querySelector(".sp-count");
   function runPage() {
-    var q = norm(f.value).trim(), bs = sel(), n = 0;
+    var q = norm(f.value).trim(), bs = sel(), n = 0, ls = document.querySelector("[data-sp-lang]"), lg = ls ? ls.value : "";
     document.querySelectorAll(".sp-card").forEach(function (c) {
       var have = (c.getAttribute("data-b") || "").split(" ");
-      var show = (!q || norm(c.getAttribute("data-q")).indexOf(q) >= 0) && bs.every(function (b) { return have.indexOf(b) >= 0; });
+      var show = (!q || norm(c.getAttribute("data-q")).indexOf(q) >= 0) && bs.every(function (b) { return have.indexOf(b) >= 0; }) && (!lg || (c.getAttribute("data-l") || "").split("|").indexOf(lg) >= 0);
       c.hidden = !show; if (show) n++;
     });
-    if (cnt) cnt.textContent = q || bs.length ? n + (n === 1 ? " match" : " matches") : "";
+    if (cnt) cnt.textContent = q || bs.length || lg ? n + (n === 1 ? " match" : " matches") : "";
   }
   var s = document.querySelector("[data-sp-search]"), out = document.querySelector(".sp-results");
   function runIndex() {
@@ -24,6 +24,7 @@
   var run = f ? runPage : (s && out && window.SP_ALL ? runIndex : null);
   if (!run) return;
   (f || s).addEventListener("input", run);
+  var lsel = document.querySelector("[data-sp-lang]"); if (lsel && f) lsel.addEventListener("change", run);
   chips.forEach(function (c) { c.addEventListener("click", function () { c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") === "true" ? "false" : "true"); run(); }); });
 })();
 /* Visitor-suggested tags: fixed list, no free text. Shown only after several visitors agree and Malady Wise approves. */

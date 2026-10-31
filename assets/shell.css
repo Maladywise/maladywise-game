@@ -743,3 +743,6 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
 .sp-pf>summary::-webkit-details-marker{display:none}.sp-pf>summary::before{content:"＋ "}.sp-pf[open]>summary::before{content:"－ "}
 .sp-pf .sp-pchips{margin-top:6px}
 @media print{.sp-pf{display:none!important}}
+.sp-lang{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:600 12px Poppins,system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sp-lang select{flex:1;font:500 15px Poppins,system-ui,sans-serif;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-transform:none;letter-spacing:0}
+.sp-card .sp-t-lang{background:#E8F1FB;color:#1D4E89}html[data-theme="dark"] .sp-card .sp-t-lang{background:#1A2B40;color:#B6D2F2}

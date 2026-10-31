@@ -38,6 +38,15 @@ def pbadges(p):
 def pwait(p):
     d = PRACT.get(p.get("practice") or "") or PRACT.get(p["name"]) or {}
     w = d.get("wait"); return w.get("text") if w and w.get("text") else None
+_lf = os.path.join(DD, "extra", "languages.json")
+LANGX = json.load(open(_lf)) if os.path.exists(_lf) else {}
+def langs(p):
+    l = list((p.get("practical") or {}).get("languages") or []) + list((LANGX.get(p["name"]) or {}).get("languages") or [])
+    out = []
+    for x in l:
+        x = re.sub(r"\s*\((basic|partial)\)", "", x).strip()
+        if x and x.lower() != "english" and x not in out: out.append(x)
+    return out
 def badges(p):
     out = []
     if re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower()) in APPROVED: out.append(("mw", "Malady Wise approved", MW_SVG, [APPROVED_TXT]))
@@ -55,8 +64,10 @@ def ortho_labels(p):
     if not out or re.search(r"trauma|general orthopaedic", t): out.append("Orthopaedics: general and trauma")
     return out
 ALLIED = {"physiotherapy", "exercise-physiology", "podiatry", "occupational-therapy-adult", "occupational-therapy-paediatric", "speech-pathology-paediatric", "speech-pathology-adult", "psychology", "dietetics", "audiology", "diabetes-education", "continence", "lactation", "social-work"}
+KEEP = re.compile(r"Pacific Clinic", re.I)  # free public services kept on purpose (no referral or Medicare card needed)
 def is_public(p):
     txt = p.get("name", "") + " | " + p.get("practice", "")
+    if KEEP.search(txt): return False
     hosp = " ".join((p.get("practical") or {}).get("hospitals") or [])
     return bool(PUB.search(txt)) and not PRIV.search(txt + " " + hosp)
 TITLE = re.compile(r"^(Dr|Prof|Professor|A/Prof|Assoc Prof|Associate Professor|Conjoint Associate Professor|Clinical Associate Professor)\.?\s+", re.I)
@@ -114,6 +125,7 @@ def card(p):
     np_txt = {"yes": "Taking new patients", "limited": "Limited new patients", "no": "Not taking new patients"}.get(np_)
     if np_txt: extra.append(f'<p class="sp-np sp-np-{e(np_)}">{np_txt}' + (f' · {e(pr["np_note"])}' if pr.get("np_note") else "") + (f' <span>(as stated {e(pr.get("np_checked") or p.get("checked", ""))})</span>' if True else "") + '</p>')
     tags = []
+    if langs(p): tags.append(("lang", "🗣️ Speaks " + ", ".join(langs(p))))
     if pr.get("pets") == "therapy_dog": tags.append(("pet", "🐶 Therapy dog on staff"))
     elif pr.get("pets") == "pets_welcome": tags.append(("pet", "🐾 Pet friendly"))
     if pr.get("telehealth") is True: tags.append(("", "Telehealth (pants optional)"))
@@ -128,7 +140,6 @@ def card(p):
     if tags: extra.append('<p class="sp-tags">' + "".join(f'<span class="sp-t {("sp-t-" + c) if c else ""}">{e(t)}</span>' for c, t in tags) + "</p>")
     if pr.get("ages"): facts.append("Ages: " + pr["ages"])
     if pr.get("wait"): facts.append("Wait: " + pr["wait"])
-    if pr.get("languages"): facts.append("Languages: " + ", ".join(pr["languages"]))
     if pr.get("hospitals"): facts.append("Hospitals: " + ", ".join(pr["hospitals"]))
     if facts: extra.append('<p class="sp-facts">' + e(" · ".join(facts)) + "</p>")
     bd = badges(p); used = {h for b in bd for h in b[3]}
@@ -140,8 +151,8 @@ def card(p):
     rest = [x for x in (p.get("inclusive") or []) if x not in used]
     if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
-    q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or [])]).lower()
-    return (f'<li class="sp-card" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
+    q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p))]).lower()
+    return (f'<li class="sp-card" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p><p class="sp-act"><button type="button" class="sp-sug">Suggest a tag</button> · <button type="button" class="sp-pr1">Print</button> · <a href="/contact/">Something wrong?</a></p></li>')
 CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><details class="sp-pf"><summary>More filters: fees, e-referrals, wait, access</summary><div class="sp-chips sp-pchips" role="group" aria-label="Practical">' + "".join(f'<button type="button" class="sp-chip sp-pb sp-pb-{c}" data-badge="{c}" aria-pressed="false">{e(lab)}</button>' for c, lab in PB) + '</div></details><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording and source. Many practices offer this care without advertising it.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
@@ -157,7 +168,7 @@ def head(title, desc, url):
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
-foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=5"></script>')
+foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=6"></script>')
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
@@ -172,6 +183,10 @@ def _title(path):
         t = re.search(r"<h1[^>]*>(.*?)</h1>", open(path.strip("/") + "/index.html").read(), re.S).group(1)
         return re.sub(r"<[^>]+>", "", t).strip()
     except Exception: return None
+def langsel(ppl):
+    L = sorted({x for p in ppl for x in langs(p)})
+    if not L: return ""
+    return '<label class="sp-lang"><span>Speaks</span><select data-sp-lang><option value="">Any language</option>' + "".join(f'<option>{e(x)}</option>' for x in L) + "</select></label>"
 def keep_going(slug):
     items = []
     for s2 in REL_SPEC.get(slug, []):
@@ -193,7 +208,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
-            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
+            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + langsel(ppl) + CHIPS + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
 labs = sorted(CATS, key=lambda x: x.lower())
