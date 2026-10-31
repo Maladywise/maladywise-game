@@ -36,7 +36,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States it treats women, men, children and gender-diverse individuals",
@@ -81,7 +83,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Acknowledgement of Country (Awabakal and Worimi)",
@@ -126,7 +130,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practitioner profile states experience with women, men and gender-diverse individuals and trauma-informed care"
@@ -168,7 +174,9 @@
      "languages": [],
      "after_hours": true,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Female women's health physiotherapist stated"
@@ -208,7 +216,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -248,7 +258,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -286,7 +298,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States female continence and pelvic floor physiotherapists"
@@ -325,7 +339,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -366,7 +382,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Mobile in-home physio stated for people with mobility or access challenges"
@@ -410,7 +428,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -450,7 +470,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -492,7 +514,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Accessible clinic stated"
@@ -527,7 +551,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -566,7 +592,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -600,7 +628,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -635,7 +665,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -674,7 +706,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -710,7 +744,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Website states \"Taking bookings and referrals now\"",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -750,7 +787,9 @@
      "languages": [],
      "after_hours": true,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -794,7 +833,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Acknowledgement of Country (Wonnarua); Aboriginal flag displayed"
@@ -837,7 +878,9 @@
      "languages": [],
      "after_hours": true,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -877,7 +920,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -913,7 +958,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -955,7 +1002,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -995,7 +1044,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Two wheelchair-accessible facilities stated"
@@ -1025,13 +1076,16 @@
     "practical": {
      "telehealth": true,
      "bulk_billing": "unknown",
-     "wait": "Longest wait list reported as two weeks (as stated)",
+     "wait": "No wait lists; longest ever was two weeks (as stated)",
      "ages": "",
      "hospitals": [],
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "States it has capacity and no wait lists",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Accessible clinic stated",
@@ -1071,7 +1125,9 @@
      "languages": [],
      "after_hours": true,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1104,7 +1160,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States programs suit people with psychosocial, learning and intellectual disabilities"
@@ -1148,7 +1206,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1186,7 +1246,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1225,7 +1287,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Diversity & Inclusion page; Acknowledgement of Traditional Custodians"
@@ -1262,7 +1326,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Ground-level entry (directory listing)"
@@ -1299,17 +1365,20 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Same-day appointments available in most instances (as stated)",
      "ages": "",
      "hospitals": [],
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
-     "https://hunterpodiatry.com.au/about-us/our-team"
+     "https://hunterpodiatry.com.au/about-us/our-team",
+     "https://hunterpodiatry.com.au/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1344,7 +1413,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1379,7 +1450,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1422,7 +1495,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "\"Appointments available\" – call to arrange assessment",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -1457,13 +1533,17 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "OT \"Accepting referrals\" (capacity page reviewed 26 Oct 2026)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Practitioner profile states neuro-affirming approach"
     ],
     "sources": [
-     "https://www.carealliance.com.au/services/occupational-therapy"
+     "https://www.carealliance.com.au/services/occupational-therapy",
+     "https://www.carealliance.com.au/capacity"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1494,7 +1574,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "States minimal wait time to start sessions",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Acknowledgement of Traditional Owners"
@@ -1530,7 +1613,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1564,7 +1649,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1600,7 +1687,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1636,7 +1725,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States anti-oppressive and neuro-affirming principles",
@@ -1675,7 +1766,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1711,7 +1804,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Acknowledgement of Country (Awabakal)"
@@ -1748,7 +1843,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Acknowledgement of Country (Wonnarua); Aboriginal flag displayed"
@@ -1792,7 +1889,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States neuroaffirming, strengths-based framework",
@@ -1834,7 +1933,9 @@
      "languages": [],
      "after_hours": true,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1869,7 +1970,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1906,7 +2009,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1941,7 +2046,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1971,20 +2078,24 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Waiting list; contact for current timeframes (as stated)",
      "ages": "Children",
      "hospitals": [],
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "limited",
+     "np_note": "Waiting list; call for current wait times",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "States neurodiversity-affirming speech pathology, OT and physiotherapy"
     ],
     "sources": [
      "https://www.hellorainbow.com.au/",
-     "https://www.hellorainbow.com.au/services1"
+     "https://www.hellorainbow.com.au/services1",
+     "https://www.hellorainbow.com.au/faq"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2014,7 +2125,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Accepting OT referrals, ages 0–9 (homepage post)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -2050,7 +2164,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States neuroaffirming support",
@@ -2093,7 +2209,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": "limited",
+     "np_note": "New referrals go on a waiting list",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Site metadata describes neuro-affirming approach"
@@ -2139,11 +2258,15 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Appointment time usually offered at first contact",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://www.agrowingunderstanding.com.au/our-services/"
+     "https://www.agrowingunderstanding.com.au/our-services/",
+     "https://www.agrowingunderstanding.com.au/frequently-asked-questions/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2176,7 +2299,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States safe and welcoming space for Indigenous Australians and people who identify as LGBTQIA+",
@@ -2216,7 +2341,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2255,7 +2382,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2283,19 +2412,23 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Waiting list; contact for current timeframes (as stated)",
      "ages": "Children",
      "hospitals": [],
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "limited",
+     "np_note": "Waiting list; call for current wait times",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "States neurodiversity-affirming practice"
     ],
     "sources": [
-     "https://www.hellorainbow.com.au/services1"
+     "https://www.hellorainbow.com.au/services1",
+     "https://www.hellorainbow.com.au/faq"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2324,7 +2457,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2356,7 +2491,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States neuroaffirming support",
@@ -2391,7 +2528,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2426,7 +2565,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2464,7 +2605,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2497,7 +2640,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "States minimal wait time to start sessions",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -2536,7 +2682,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2573,7 +2721,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2607,7 +2757,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2644,7 +2796,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "States it stands alongside LGBTIQA+ communities; 'Everyone is welcome'",
@@ -2681,7 +2835,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": true
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2714,7 +2870,9 @@
      "languages": [],
      "after_hours": null,
      "ndis": null,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2750,7 +2908,10 @@
      "languages": [],
      "after_hours": null,
      "ndis": true,
-     "medicare_cdm": null
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Website states \"Taking bookings and referrals now\"",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [

@@ -29,7 +29,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -64,7 +66,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -98,7 +102,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -135,7 +141,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -171,7 +179,9 @@
       "Lingard Private Hospital (listed)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -208,7 +218,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -245,7 +257,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -277,7 +291,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -309,7 +325,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -344,7 +362,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -380,7 +400,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -416,7 +438,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -450,7 +474,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -488,7 +514,9 @@
       "John Hunter Children's Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -522,7 +550,9 @@
       "Lingard Private Hospital (listed)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -556,7 +586,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -592,7 +624,9 @@
       "Maitland Hospital (VMO)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -626,7 +660,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -663,7 +699,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -697,7 +735,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -734,7 +774,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -771,7 +813,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -813,7 +857,9 @@
       "Mayo Private Hospital (Taree)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -848,7 +894,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -882,7 +930,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -915,7 +965,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -955,7 +1007,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -991,7 +1045,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1035,7 +1091,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1068,7 +1126,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1101,7 +1161,9 @@
       "Lingard Private Hospital (listed)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1144,7 +1206,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1177,7 +1241,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1212,7 +1278,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1249,7 +1317,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1284,7 +1354,9 @@
       "Lingard Private Hospital (listed)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1320,7 +1392,9 @@
       "John Hunter Hospital / Royal Newcastle Centre"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1358,7 +1432,9 @@
       "Maitland Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1393,7 +1469,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1430,7 +1508,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1464,7 +1544,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1499,7 +1581,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1538,7 +1622,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1576,12 +1662,16 @@
       "John Hunter Hospital (trauma on-call)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "New patients always welcome (GP referral needed)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://specialists.healthscope.com.au/specialist/david-gill",
-     "https://specialists.healthscope.com.au/newcastle"
+     "https://specialists.healthscope.com.au/newcastle",
+     "https://drdavidgill.com.au/information-for-new-patients/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1619,7 +1709,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1652,7 +1744,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1683,7 +1777,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [

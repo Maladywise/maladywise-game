@@ -7,6 +7,22 @@ CHECKED = "31 October 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|public", re.I)
 PRIV = re.compile(r"Private|GenesisCare|Hunter Eye Surgeons|rooms", re.I)
 NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "ortho-hand-upper-limb": "Orthopaedics: hand and wrist", "ortho-shoulder": "Orthopaedics: shoulder and elbow", "ortho-hip-knee": "Orthopaedics: hip and knee", "ortho-foot-ankle": "Orthopaedics: foot and ankle", "ortho-spine": "Orthopaedics: spine", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers"}
+BADGES = [
+ ("nd", "Neuro-affirming", r"neuro\s*-?\s*(diversity|divergen\w*)?\s*-?\s*affirm|neuroaffirm|neurodiversity|neurodivergen|autism[- ]affirm|adhd[- ]affirm",
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5C3.5 8.5 2 10.3 2 12s1.5 3.5 4.5 3.5c3.5 0 7.5-7 11-7 3 0 4.5 1.8 4.5 3.5s-1.5 3.5-4.5 3.5c-3.5 0-7.5-7-11-7z" fill="none" stroke="#D4A017" stroke-width="2.4" stroke-linecap="round"/></svg>'),
+ ("ga", "LGBTQIA+ affirming", r"gender[- ]affirm|gender[- ]diverse|transgender|\btrans\b|lgbt|rainbow|queer|non-binary|nonbinary",
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="2.3" fill="#E40303"/><rect x="2" y="7.3" width="20" height="2.3" fill="#FF8C00"/><rect x="2" y="9.6" width="20" height="2.3" fill="#FFED00"/><rect x="2" y="11.9" width="20" height="2.3" fill="#008026"/><rect x="2" y="14.2" width="20" height="2.3" fill="#004DFF"/><rect x="2" y="16.5" width="20" height="2.3" fill="#750787"/><path d="M2 5 L9 11.9 L2 18.8z" fill="#fff"/><path d="M2 6.6 L7.4 11.9 L2 17.2z" fill="#F5A9B8"/><path d="M2 8.2 L5.8 11.9 L2 15.6z" fill="#5BCEFA"/><path d="M2 9.8 L4.2 11.9 L2 14z" fill="#613915"/></svg>'),
+ ("ti", "Trauma-informed", r"trauma[- ]informed|trauma[- ]aware|trauma[- ]sensitive",
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 8.2a4.3 4.3 0 0 1 7.5 2.6C19.5 16.4 12 21 12 21z" fill="none" stroke="#2E7D6B" stroke-width="2"/><path d="M8.5 13.5h7" stroke="#2E7D6B" stroke-width="2" stroke-linecap="round"/></svg>'),
+ ("ab", "Aboriginal and Torres Strait Islander", r"aboriginal|torres strait|first nations|indigenous",
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="7" fill="#000"/><rect x="2" y="12" width="20" height="7" fill="#CC0000"/><circle cx="12" cy="12" r="3.4" fill="#FFD700"/></svg>'),
+]
+def badges(p):
+    out = []
+    for code, label, rx, svg in BADGES:
+        hits = [x for x in (p.get("inclusive") or []) if re.search(rx, x, re.I) and not re.search(r"flag displayed|acknowledgement of country|article", x, re.I)]
+        if hits: out.append((code, label, svg, hits))
+    return out
 def ortho_labels(p):
     t = (p.get("specialty", "") + " " + " ".join(p.get("interests") or [])).lower(); out = []
     if re.search(r"hand|wrist|microsurg", t): out.append("Orthopaedics: hand and wrist")
@@ -81,11 +97,15 @@ def card(p):
     if pr.get("languages"): facts.append("Languages: " + ", ".join(pr["languages"]))
     if pr.get("hospitals"): facts.append("Hospitals: " + ", ".join(pr["hospitals"]))
     if facts: extra.append('<p class="sp-facts">' + e(" · ".join(facts)) + "</p>")
-    if p.get("inclusive"): extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in p["inclusive"]) + "</p>")
+    bd = badges(p); used = {h for b in bd for h in b[3]}
+    if bd: extra.append('<div class="sp-badges">' + "".join(f'<details class="sp-b sp-b-{c}"><summary>{svg}{e(lab)}</summary><p>' + "<br>".join(f"“{e(h)}”" for h in hits) + '</p></details>' for c, lab, svg, hits in bd) + "</div>")
+    rest = [x for x in (p.get("inclusive") or []) if x not in used]
+    if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or [])]).lower()
-    return (f'<li class="sp-card" data-q="{e(q)}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
+    return (f'<li class="sp-card" data-q="{e(q)}" data-b="{" ".join(b[0] for b in badges(p))}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p></li>')
+CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, rx, svg in BADGES) + '</div><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording. Many practices offer this care without advertising it.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 CATS = {}
 for p in L:
@@ -99,7 +119,7 @@ def head(title, desc, url):
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
-foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=3"></script>')
+foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=4"></script>')
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
@@ -112,17 +132,17 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>'
-            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label><p class="sp-count" aria-live="polite"></p>'
+            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-count" aria-live="polite"></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
 labs = sorted(CATS, key=lambda x: x.lower())
 def tiles(keys): return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/"><b>{e(k)}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
-allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", "")} for p in L]
+allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", ""), "b": [b[0] for b in badges(p)]} for p in L]
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
 desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
 page = (head(title, desc, "/specialists/") + '<h1>Specialists</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
         f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
-        '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label><ul class="sp-results" hidden></ul>'
+        '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label>' + CHIPS + '<ul class="sp-results" hidden></ul>'
         '<h2>Specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(page)

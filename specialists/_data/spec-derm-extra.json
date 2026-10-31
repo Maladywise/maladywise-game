@@ -24,7 +24,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -60,7 +62,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -96,7 +100,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -133,7 +139,10 @@
      "ages": "adults (practice accepts referrals for new adult patients)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "New adult referrals for listed areas only (acne, skin cancer, laser etc)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -171,7 +180,10 @@
      "ages": "adults (practice accepts referrals for new adult patients)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "New adult referrals for listed areas only (acne, skin cancer, laser etc)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -207,11 +219,14 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "Closed to new general dermatology patients (March 2026); acne referrals accepted, routine acne wait over 6 months",
+     "wait": "Routine appointments over 6 months (practice site)",
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "General books closed (Mar 2026); acne clinic referrals accepted",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
@@ -219,7 +234,8 @@
     "sources": [
      "https://www.frontierdermatology.com.au/team",
      "https://www.frontierdermatology.com.au/referrers",
-     "https://www.frontierdermatology.com.au/dr-edwina-lamrock"
+     "https://www.frontierdermatology.com.au/dr-edwina-lamrock",
+     "https://www.frontierdermatology.com.au/patients"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -257,7 +273,10 @@
       "John Hunter Children's Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "no",
+     "np_note": "Books closed to new patients; acne referrals paused",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
@@ -265,7 +284,8 @@
     "sources": [
      "https://www.frontierdermatology.com.au/team",
      "https://www.frontierdermatology.com.au/referrers",
-     "https://www.frontierdermatology.com.au/dr-alicia-thornton"
+     "https://www.frontierdermatology.com.au/dr-alicia-thornton",
+     "https://www.frontierdermatology.com.au/patients"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -297,7 +317,10 @@
       "Ramsay Surgical Centre Charlestown"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "No routine new referrals; Mohs referrals open; limited urgent spots",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [
      "Practice states onsite parking at the rear includes accessible spaces, with a drop-off bay at the front entrance"
@@ -306,7 +329,8 @@
      "https://www.frontierdermatology.com.au/team",
      "https://www.frontierdermatology.com.au/referrers",
      "https://www.frontierdermatology.com.au/dr-thomas-barrett",
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-tom-barrett/"
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-tom-barrett/",
+     "https://www.frontierdermatology.com.au/patients"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -339,7 +363,9 @@
       "Ramsay Surgical Centre Charlestown"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -376,7 +402,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -412,7 +440,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -448,7 +478,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -484,7 +516,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -521,7 +555,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -554,7 +590,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states access suits all levels of mobility; one disabled parking spot"
@@ -587,7 +625,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -616,7 +656,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -649,14 +691,18 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Books closed to new patients; urgent referrals may be considered",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://cygnetdermatology.com.au/",
      "https://cygnetdermatology.com.au/?page_id=274",
      "https://cygnetdermatology.com.au/?page_id=589",
-     "https://cygnetdermatology.com.au/?page_id=943"
+     "https://cygnetdermatology.com.au/?page_id=943",
+     "https://cygnetdermatology.com.au/gp-referees/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -683,14 +729,18 @@
      "ages": "adults and children (practice)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Books closed to new patients; urgent referrals may be considered",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://cygnetdermatology.com.au/",
      "https://cygnetdermatology.com.au/?page_id=274",
      "https://cygnetdermatology.com.au/?page_id=589",
-     "https://cygnetdermatology.com.au/?page_id=943"
+     "https://cygnetdermatology.com.au/?page_id=943",
+     "https://cygnetdermatology.com.au/gp-referees/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -718,14 +768,18 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Books closed to new patients; urgent referrals may be considered",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://cygnetdermatology.com.au/",
      "https://cygnetdermatology.com.au/?page_id=274",
      "https://cygnetdermatology.com.au/?page_id=589",
-     "https://cygnetdermatology.com.au/?page_id=943"
+     "https://cygnetdermatology.com.au/?page_id=943",
+     "https://cygnetdermatology.com.au/gp-referees/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -757,7 +811,9 @@
       "English",
       "Hebrew"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [

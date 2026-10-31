@@ -32,7 +32,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -67,7 +69,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -102,7 +106,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -135,7 +141,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -171,7 +179,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -208,7 +218,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -246,7 +258,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -284,7 +298,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -316,7 +332,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -352,7 +370,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -388,7 +408,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -425,7 +447,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -460,7 +484,9 @@
       "John Hunter Hospital (research)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -500,11 +526,15 @@
       "Mayo Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Referrals accepted online or via Medical Objects; urgent seen promptly",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://lingardprivate.com.au/specialists/dr-arshad-khan"
+     "https://lingardprivate.com.au/specialists/dr-arshad-khan",
+     "https://www.khancardiology.com.au/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -532,7 +562,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -569,7 +601,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -605,7 +639,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -640,7 +676,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -675,7 +713,9 @@
       "Mayo Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -705,7 +745,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -741,7 +783,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -771,7 +815,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -801,7 +847,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -864,11 +912,15 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "New adult referrals for listed areas only (acne, skin cancer, laser etc)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://doccy.com.au/specialist/newcastle/dermatologist/jessica-bale-hunter-coast-dermatology-and-laser"
+     "https://doccy.com.au/specialist/newcastle/dermatologist/jessica-bale-hunter-coast-dermatology-and-laser",
+     "https://huntercoastderm.com.au/refer/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -948,16 +1000,20 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Routine appointments over 6 months (practice site)",
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "General books closed (Mar 2026); acne clinic referrals accepted",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/practice/frontier-dermatology",
-     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw"
+     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw",
+     "https://www.frontierdermatology.com.au/patients"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -981,12 +1037,16 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "no",
+     "np_note": "Books closed to new patients; acne referrals paused",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/practice/frontier-dermatology",
-     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw"
+     "https://www.localsearch.com.au/find/dermatologists/gateshead-nsw",
+     "https://www.frontierdermatology.com.au/patients"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1020,7 +1080,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1053,7 +1115,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1086,7 +1150,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1122,7 +1188,9 @@
       "Forster Private Hospital (Dolphin Suites, monthly)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1157,7 +1225,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1192,7 +1262,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1225,7 +1297,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists transgender health as an interest"
@@ -1263,7 +1337,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists transgender health as an interest"
@@ -1299,7 +1375,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists sex hormones and transgender health as an interest"
@@ -1339,7 +1417,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1523,7 +1603,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1551,7 +1633,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1579,7 +1663,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1614,7 +1700,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1649,7 +1737,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1684,7 +1774,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1713,7 +1805,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1741,7 +1835,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1845,7 +1941,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1918,7 +2016,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1957,7 +2057,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2000,7 +2102,9 @@
       "Malay",
       "Indonesian"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2034,7 +2138,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists women's health in inflammatory bowel disease as an interest"
@@ -2070,7 +2176,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2110,7 +2218,9 @@
       "Ramsay Surgical Centre Charlestown"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2149,7 +2259,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2184,7 +2296,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2222,7 +2336,9 @@
       "Port Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2255,7 +2371,9 @@
       "Hunter Valley Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2358,7 +2476,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2390,7 +2510,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2425,7 +2547,9 @@
      "languages": [
       "Arabic"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2462,7 +2586,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2495,7 +2621,9 @@
       "Calvary Mater Newcastle"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2599,7 +2727,9 @@
       "John Hunter Hospital (Director of Nephrology)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2635,7 +2765,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2673,7 +2805,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists Indigenous nephrology and health care access as an interest"
@@ -2713,7 +2847,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2751,7 +2887,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2851,7 +2989,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2887,7 +3027,9 @@
      "ages": "adults",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2919,7 +3061,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2948,7 +3092,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2981,12 +3127,16 @@
      "ages": "all (paediatric and adult)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Referrals accepted; clinic calls within 2 weeks to book",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://allergy.org.au/patients/locate-a-specialist/nsw/4",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/edgeworth-2285-nsw/newcastle-allergy-immunology-service/clinical-immunology-and-allergy/c9508dee-f943-6c5a-6623-b1d43eae0226"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/edgeworth-2285-nsw/newcastle-allergy-immunology-service/clinical-immunology-and-allergy/c9508dee-f943-6c5a-6623-b1d43eae0226",
+     "https://www.allergynewcastle.com.au/faqs"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3048,7 +3198,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3145,7 +3297,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3242,11 +3396,15 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Online booking open for cervical screening and STI checks",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/family-planning-australia-hunter-clinic/sexual-health-clinic/2c15ed20-ad08-e0b0-c927-bf36eefabdf9?search_method=Details%20-%20search%20results%20list"
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/family-planning-australia-hunter-clinic/sexual-health-clinic/2c15ed20-ad08-e0b0-c927-bf36eefabdf9?search_method=Details%20-%20search%20results%20list",
+     "https://www.fpnsw.org.au/clinics/newcastle-clinic"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3342,7 +3500,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3373,7 +3533,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3403,7 +3565,9 @@
       "Hunter Valley Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3444,7 +3608,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3479,7 +3645,9 @@
       "Hunter New England Health"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3519,7 +3687,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3631,7 +3801,9 @@
       "Gujarati",
       "Hindi"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4069,7 +4241,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4099,7 +4273,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4130,7 +4306,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4574,7 +4752,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4604,7 +4784,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4635,7 +4817,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -5171,7 +5355,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
