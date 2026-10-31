@@ -1,0 +1,907 @@
+{
+ "Nova Dermatology": {
+  "transit": {
+   "quote": "a short walk from the Broadmeadow train station",
+   "url": "https://www.novadermatology.com.au"
+  },
+  "ereferral": {
+   "systems": [
+    "Medical Objects",
+    "HealthLink"
+   ],
+   "quote": "registered for secure messaging via Medical Objects and Health Link",
+   "url": "https://www.novadermatology.com.au/refer-a-patient"
+  },
+  "wheelchair": {
+   "quote": "access is suitable for all levels of mobility ... There is one disabled parking spot.",
+   "url": "https://www.novadermatology.com.au/faqs"
+  },
+  "wait": {
+   "text": "Our books are always open, however our wait times can vary based on the seriousness of the concern: tomorrow (extremely urgent) to up to 12 months (non-urgent eg. general skin check)",
+   "url": "https://www.novadermatology.com.au/faqs"
+  },
+  "urgent_gp": {
+   "quote": "Urgent referrals will only be considered if previously discussed",
+   "url": "https://www.novadermatology.com.au/refer-a-patient"
+  }
+ },
+ "The Newcastle Paediatric Clinic": {
+  "fees_online": {
+   "url": "https://www.newcastlepaediatric.com.au/fees/"
+  }
+ },
+ "Hunter Coast Dermatology & Laser": {
+  "fees_online": {
+   "url": "https://huntercoastderm.com.au/fees-packages/"
+  }
+ },
+ "Hunter Vascular": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Please send these to the clinic (medical objects preferred).",
+   "url": "https://huntervasc.com.au/"
+  },
+  "urgent_gp": {
+   "quote": "For urgent matters or phone advice, please call the clinic on 02 4086 8790.",
+   "url": "https://huntervasc.com.au/"
+  }
+ },
+ "Khan Cardiology": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Send a secure referral online or via Medical Objects.",
+   "url": "https://khancardiology.com.au"
+  },
+  "urgent_gp": {
+   "quote": "Urgent referrals are seen promptly.",
+   "url": "https://khancardiology.com.au"
+  }
+ },
+ "Hunter Hand Surgery": {
+  "urgent_gp": {
+   "quote": "please ask your GP to contact our staff directly on 02 4920 6338",
+   "url": "https://hunterhandsurgery.com.au/appointments/"
+  }
+ },
+ "Hunter ENT": {
+  "wait": {
+   "text": "it may take approximately 4–6 weeks for Hunter ENT to contact you regarding an appointment",
+   "url": "https://www.hunterent.com.au/new-referrals/"
+  },
+  "urgent_gp": {
+   "quote": "Urgent referrals are prioritised and reviewed as quickly as possible.",
+   "url": "https://www.hunterent.com.au/new-referrals/"
+  }
+ },
+ "Samuel Hall Neurosurgery": {
+  "ereferral": {
+   "systems": [
+    "HealthLink",
+    "Medical Objects",
+    "Argus"
+   ],
+   "quote": "HealthLink, Medical Objects, or ARGUS",
+   "url": "https://www.shneurosurgery.com/"
+  }
+ },
+ "Dr Richard Ferch": {
+  "urgent_gp": {
+   "quote": "As we are a busy practice Dr Ferch will triage referrals so that urgent conditions can be given priority appointments.",
+   "url": "https://www.drferch.com.au/"
+  }
+ },
+ "Urology Care Newcastle": {
+  "urgent_gp": {
+   "quote": "If your condition is very urgent, your GP will often call or email our rooms",
+   "url": "https://www.urologycarenewcastle.com.au/copy-of-faqs"
+  }
+ },
+ "Dr Jonathan Young": {
+  "urgent_gp": {
+   "quote": "Dr Young can see uninsured patients for urgent problems in his rooms.",
+   "url": "https://www.drjonathanyoung.com.au/dr-jonathan-young-orthopaedic-surgeon-newcastle-and-lake-macquarie-faq/"
+  }
+ },
+ "Raman Urology": {
+  "urgent_gp": {
+   "quote": "please contact us as soon as possible ... within 1 – 2 weeks and often sooner",
+   "url": "https://ramanurology.com.au/for-gps/"
+  }
+ },
+ "Dr Steve Raymond / Newcastle Ultrasound": {
+  "urgent_gp": {
+   "quote": "Same day appointments are not available however all urgent appointments will be considered.",
+   "url": "https://drsteveraymond.com.au/your-visit/"
+  }
+ },
+ "Hunter Children's Clinics; Hunter Valley Paediatrics": {
+  "fees_online": {
+   "url": "https://hunterchildrensclinics.com.au/"
+  },
+  "sensory": {
+   "quote": "We strive to be a calm, neuroaffirming space.",
+   "url": "https://hunterchildrensclinics.com.au/"
+  }
+ },
+ "Newcastle Orthopaedics": {
+  "fees_online": {
+   "url": "https://newcastleorthopaedics.com.au/patient-information/financial-information/"
+  }
+ },
+ "Achieve Podiatry": {
+  "fees_online": {
+   "url": "https://achievepodiatry.com.au/services-pricing/#prices"
+  },
+  "wheelchair": {
+   "quote": "An electric chair for less mobile people to use for the stairs.",
+   "url": "https://achievepodiatry.com.au/faq/"
+  }
+ },
+ "Complete Pelvic Floor Physiotherapy": {
+  "fees_online": {
+   "url": "https://completepelvicfloorphysiotherapy.com.au/home/fees/"
+  }
+ },
+ "Hunter Diabetes Centre": {
+  "wheelchair": {
+   "quote": "Wheelchair accessible ... wheelchair accessibility via a lift.",
+   "url": "https://www.doctify.com/au/practice/hunter-diabetes-centre"
+  }
+ },
+ "Newcastle Eye Hospital / Hunter Eye Surgeons": {
+  "urgent_gp": {
+   "quote": "we are regularly asked to see urgent patients.",
+   "url": "https://www.huntereyesurgeons.com/what-happens-at-your-appointment"
+  }
+ },
+ "headspace / Hunter Primary Care": {
+  "fees_online": {
+   "url": "https://headspace.org.au/headspace-centres/newcastle/"
+  },
+  "wheelchair": {
+   "quote": "we've got a great set of new ramps that take a few seconds to put out.",
+   "url": "https://headspace.org.au/headspace-centres/newcastle/"
+  }
+ },
+ "Family Planning Australia": {
+  "transit": {
+   "quote": "Newcastle Interchange is approximately a 10-minute walk away. ... The closest stop is \"Civic\"",
+   "url": "https://www.fpnsw.org.au/clinics/newcastle-clinic"
+  },
+  "interpreters": {
+   "quote": "If you require an interpreter to be present during your consultation please advise the receptionist.",
+   "url": "https://www.fpnsw.org.au/clinics/newcastle-clinic"
+  }
+ },
+ "Hunter Pelvic Clinic": {
+  "urgent_gp": {
+   "quote": "We can see urgent issues such as pregnancy related pelvic pain within 72 hours.",
+   "url": "https://hunterpelvicclinic.com.au/"
+  }
+ },
+ "Hunter Podiatry Services": {
+  "wait": {
+   "text": "same day appointments available in most instances",
+   "weeks": 0,
+   "url": "https://hunterpodiatry.com.au/"
+  }
+ },
+ "Newcastle Neuro": {
+  "fees_online": {
+   "url": "https://www.newcastleneuro.com.au/pricing"
+  }
+ },
+ "Newcastle Performance Physio": {
+  "fees_online": {
+   "url": "https://www.newcastleperformancephysio.com.au/faqs/"
+  }
+ },
+ "Edgeworth Physiotherapy": {
+  "fees_online": {
+   "url": "https://edgeworthphysiotherapy.com.au/faqs/"
+  }
+ },
+ "Empowered Lactation with Emma": {
+  "fees_online": {
+   "url": "https://www.empoweredlactationwithemma.com.au/services-and-fees"
+  }
+ },
+ "Lorn Surgery": {
+  "fees_online": {
+   "url": "https://lornsurgery.com.au/services/lactation/"
+  }
+ },
+ "Replenish Counselling": {
+  "fees_online": {
+   "url": "https://www.replenishcounselling.com.au/fees-and-referrals"
+  }
+ },
+ "Kristen Fraser Counselling Newcastle": {
+  "fees_online": {
+   "url": "https://www.counsellingnewcastle.com.au/fees-referrals"
+  }
+ },
+ "HelloDoc": {
+  "fees_online": {
+   "url": "https://hellodoc.com.au/fees/"
+  }
+ },
+ "Mind Oasis Clinic Telehealth": {
+  "fees_online": {
+   "url": "https://mindoasis.com.au/for-patients/fee/"
+  }
+ },
+ "Fluence Clinic": {
+  "wait": {
+   "text": "We guarantee an assessment with one of our experienced Fluence Clinic psychiatrists within 4-8 weeks",
+   "weeks": 8,
+   "url": "https://fluenceclinic.com/"
+  }
+ },
+ "Parent in Mind": {
+  "ereferral": {
+   "systems": [
+    "HealthLink"
+   ],
+   "quote": "Healthlink (EDI: parentin)",
+   "url": "https://parentinmind.com.au/"
+  },
+  "transit": {
+   "quote": "conveniently located near trams and with plenty of on street parking",
+   "url": "https://parentinmind.com.au/faq/"
+  }
+ },
+ "Care Alliance": {
+  "interpreters": {
+   "quote": "Auslan / signing support worker",
+   "url": "https://www.carealliance.com.au/services/occupational-therapy"
+  }
+ },
+ "All Psychiatry": {
+  "wait": {
+   "text": "currently accepting new patients and has a short waitlist",
+   "url": "https://www.allpsychiatry.com.au/"
+  }
+ },
+ "Cygnet Dermatology": {
+  "fees_online": {
+   "url": "https://cygnetdermatology.com.au/?page_id=119"
+  },
+  "wheelchair": {
+   "quote": "accessible entry and an accessible parking space",
+   "url": "https://cygnetdermatology.com.au/?page_id=119"
+  },
+  "transit": {
+   "quote": "The nearest bus stop is on Turton Road, approximately 200 metres from the clinic.",
+   "url": "https://cygnetdermatology.com.au/?page_id=589"
+  }
+ },
+ "Colorectal Surgeons Newcastle": {
+  "urgent_gp": {
+   "quote": "We do keep slots for urgent appointments eg. Newly diagnosed colon and rectal cancer etc.",
+   "url": "https://www.colorectalsurgeonsnewcastle.com.au/urgent-appointments-lambton-nsw.html"
+  }
+ },
+ "Dr Lachlan Cornford": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Secure messaging via Medical Objects",
+   "url": "https://www.drlachlancornford.com.au/referrers"
+  },
+  "urgent_gp": {
+   "quote": "Dr Cornford is happy to be contacted on his mobile at any time. GPs, Emergency Physicians, Physiotherapists or other health professionals seeking to refer a patient or simply get some orthopaedic advice are welcome to call.",
+   "url": "https://www.drlachlancornford.com.au/referrers"
+  }
+ },
+ "Dr Damian Mansour / The Orthopaedic Clinic": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "sent via secure messaging via Medical Objects",
+   "url": "https://www.drdamianmansour.com.au/referrals"
+  },
+  "urgent_gp": {
+   "quote": "Dr Mansour is happy to take a call directly via the practice: (02) 4047 2347.",
+   "url": "https://www.drdamianmansour.com.au/referrals"
+  }
+ },
+ "Dr Scott Turner (Newcastle consulting)": {
+  "fees_online": {
+   "url": "https://drturner.com.au/locations/newcastle/"
+  },
+  "transit": {
+   "quote": "Newcastle Transport buses stop on Brunker Road a short walk from the rooms. ... Adamstown station, on the Central Coast and Newcastle Line, is about a ten-minute walk away",
+   "url": "https://drturner.com.au/locations/newcastle/"
+  }
+ },
+ "Mind-Care": {
+  "fees_online": {
+   "url": "https://www.mind-care.net.au/fees-and-funding/"
+  }
+ },
+ "Newcastle Allergy Immunology Service": {
+  "wait": {
+   "text": "We provide patients with the convenience of short wait times for allergy and immunology appointments. ... someone will call you within 2 weeks to arrange an appointment",
+   "url": "https://www.allergynewcastle.com.au/faqs"
+  },
+  "wheelchair": {
+   "quote": "Yes, there is a ramp to the left of our entry.",
+   "url": "https://www.allergynewcastle.com.au/faqs"
+  }
+ },
+ "Newcastle Colorectal Surgery": {
+  "urgent_gp": {
+   "quote": "We ensure all colorectal cancer referrals are seen within 1 week by one of our surgeons.",
+   "url": "https://newcastlecolorectalsurgery.com.au/gp-information"
+  }
+ },
+ "Lake Macquarie Urology": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "We use Medical Objects for electronic correspondence.",
+   "url": "https://lmu.com.au/patient-care/"
+  },
+  "urgent_gp": {
+   "quote": "We can accommodate urgent appointments and will go into action quickly for your patients, when necessary.",
+   "url": "https://lmu.com.au/patient-care/"
+  },
+  "wheelchair": {
+   "quote": "The practice is accessible by wheelchair. ... Take the lift up to level 3.",
+   "url": "https://lmu.com.au/appointment-information/"
+  },
+  "transit": {
+   "quote": "Multiple bus services stop at Pearson St adjacent to Charlestown square.",
+   "url": "https://lmu.com.au/appointment-information/"
+  }
+ },
+ "The Newcastle Paediatric Clinic (also consults at Hunter ENT, Konara)": {
+  "fees_online": {
+   "url": "https://www.newcastlepaediatric.com.au/fees/"
+  },
+  "wait": {
+   "text": "new referrals for behavioural problems are unlikely to be offered an appointment within 12 months",
+   "weeks": 52,
+   "url": "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
+  }
+ },
+ "Urology Surgery": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Or via medical objects",
+   "url": "https://www.urologysurgery.com.au/informationforgps"
+  },
+  "urgent_gp": {
+   "quote": "For urgent matters Dr Handmer welcomes contact from colleagues directly to his mobile phone at any time",
+   "url": "https://www.urologysurgery.com.au/informationforgps"
+  }
+ },
+ "Vascular One": {
+  "urgent_gp": {
+   "quote": "This number is for doctors and referrers only. (02) 4934 1111",
+   "url": "https://vascularone.com.au/for-referrers/"
+  }
+ },
+ "Hunter Vein Clinic (at Vascular One rooms)": {
+  "urgent_gp": {
+   "quote": "This number is for doctors and referrers only. (02) 4934 1111 [connects to Drs Mathew Sebastian, Nicole Organ, or Naomi Hunter]",
+   "url": "https://vascularone.com.au/for-referrers/"
+  }
+ },
+ "personalEyes Morisset": {
+  "fees_online": {
+   "url": "https://www.personaleyes.com.au/costs"
+  },
+  "interpreters": {
+   "quote": "Languages: Mandarin and Hokkien/Taiwanese dialect.",
+   "url": "https://www.personaleyes.com.au/our-doctors-and-ophthalmologists/dr-michael-wei"
+  }
+ },
+ "Rest in Essence Mental Health Practice": {
+  "fees_online": {
+   "url": "https://restinessence.com.au/fees/"
+  }
+ },
+ "Mindscape Psychiatry": {
+  "interpreters": {
+   "quote": "sessions available in English, Hindi, and Urdu",
+   "url": "https://mindscapepsychiatry.com.au/"
+  }
+ },
+ "PsycheTel Australia": {
+  "interpreters": {
+   "quote": "Speak to a psychiatrist in your preferred language ... Want a psychiatrist in a particular language? Let our team know when you get in touch.",
+   "url": "https://psychetelaustralia.com.au/"
+  }
+ },
+ "Updoc Psychiatry": {
+  "wait": {
+   "text": "Waiting up to 10 weeks for an appointment? Get connected to a Psychiatrists in a week.",
+   "weeks": 1,
+   "url": "https://updoc.com.au/psychiatry"
+  }
+ },
+ "Wellvue": {
+  "fees_online": {
+   "url": "https://wellvue.com.au/"
+  },
+  "wait": {
+   "text": "often within 24–48 hours, depending on availability",
+   "url": "https://wellvue.com.au/"
+  }
+ },
+ "A Growing Understanding": {
+  "fees_online": {
+   "url": "https://www.agrowingunderstanding.com.au/speech-pathology-fees/"
+  }
+ },
+ "Hunter Coast Therapy": {
+  "fees_online": {
+   "url": "https://www.hctherapy.com.au/"
+  }
+ },
+ "The Neuro Project": {
+  "wheelchair": {
+   "quote": "There are three accessible parking spaces within 30 metres of the clinic. ... If you have specific accessibility needs, access is available via the driveway and our friendly team can assist with transfers and getting comfortably inside.",
+   "url": "https://www.theneuroproject.com.au/contact-us/our-locations/"
+  }
+ },
+ "Forest for the Trees Perinatal Psychology": {
+  "fees_online": {
+   "url": "https://forestpsychology.com.au/psychologist-fees-medicare-rebate/"
+  }
+ },
+ "Lactation Haven": {
+  "fees_online": {
+   "url": "https://www.lactationhaven.com/bookanappointment"
+  }
+ },
+ "Faye Lynch Lactation": {
+  "fees_online": {
+   "url": "https://www.fayelactation.com/services"
+  }
+ },
+ "Frontier Dermatology": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects",
+    "HealthLink"
+   ],
+   "quote": "Medical Objects / HealthLink – Preferred method for GP software integration",
+   "url": "https://www.frontierdermatology.com.au/referrers"
+  },
+  "wait": {
+   "text": "Dr Lamrock (acne referrals): current wait time for routine appointments exceed 6 months; general dermatology books closed for all three dermatologists",
+   "weeks": 26,
+   "url": "https://www.frontierdermatology.com.au/patients"
+  },
+  "urgent_gp": {
+   "quote": "Dr Barrett - urgent only + ongoing Mohs surgery",
+   "url": "https://www.frontierdermatology.com.au"
+  },
+  "wheelchair": {
+   "quote": "Onsite parking is available at the rear of the building. This includes accessible parking and building access.",
+   "url": "https://www.frontierdermatology.com.au/patients"
+  }
+ },
+ "Hunter Endocrinology": {
+  "transit": {
+   "quote": "Public transport options include the 28 Bus which travels along Brunker Rd. Adamstown train station is a 10 to 15 minute walk away.",
+   "url": "https://www.hunterendo.com.au/can-i-catch-public-transport/"
+  },
+  "wheelchair": {
+   "quote": "We have fully wheelchair accessible consulting rooms and bathroom facilities. There are 2 disability carparks underneath the building and lift access to the consulting rooms.",
+   "url": "https://www.hunterendo.com.au/your-appointment/"
+  }
+ },
+ "Dr David Gill": {
+  "fees_online": {
+   "url": "https://drdavidgill.com.au/fees/"
+  },
+  "transit": {
+   "quote": "The area is well serviced by public transport, with bus stops and a Taxi rank within metres of our office.",
+   "url": "https://drdavidgill.com.au/about-us/"
+  }
+ },
+ "Dr Pankaj Rao": {
+  "urgent_gp": {
+   "quote": "Dr Rao is happy to see you if your condition is urgent … make sure your referral from your GP is forwarded to Dr Rao [it is reviewed within 24 hours and he will] organise to see you ASAP",
+   "url": "https://www.rao.net.au/urgent-appointments/"
+  }
+ },
+ "Dr Rao": {
+  "urgent_gp": {
+   "quote": "Dr Rao is happy to see you if your condition is urgent … make sure your referral from your GP is forwarded to Dr Rao [it is reviewed within 24 hours and he will] organise to see you ASAP",
+   "url": "https://www.rao.net.au/urgent-appointments/"
+  }
+ },
+ "Dr Minas Petrelis": {
+  "wheelchair": {
+   "quote": "Wheelchair friendly access is also available at the front door.",
+   "url": "https://drminaspetrelis.com/new-page"
+  }
+ },
+ "Hunter Foot and Ankle": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Secure messaging via Medical Objects.",
+   "url": "https://www.hunterfootandankle.com.au/referrer"
+  },
+  "wheelchair": {
+   "quote": "The premises have full disabled access.",
+   "url": "https://www.hunterfootandankle.com.au/how-to-find-us"
+  }
+ },
+ "Hunter Weight Loss & Upper GI": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects",
+    "HealthLink"
+   ],
+   "quote": "Referrals via phone, email, website, medical objects, fax",
+   "url": "https://www.hunterweightloss.com.au/dr-simon-whitcher"
+  },
+  "urgent_gp": {
+   "quote": "We also seek to address Urgent Referrals on the same day.",
+   "url": "https://www.hunterweightloss.com.au/for-referrers"
+  }
+ },
+ "Hunter Plastic Surgery": {
+  "fees_online": {
+   "url": "https://hunterplasticsurgery.com.au/resources/costs"
+  }
+ },
+ "Hunter Valley Paediatrics": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "or via Medical Objects",
+   "url": "https://huntervalleypaeds.com.au/refer"
+  },
+  "wheelchair": {
+   "quote": "Yes, our practice is fully accessible for wheelchair users.",
+   "url": "https://huntervalleypaeds.com.au/faqs"
+  },
+  "transit": {
+   "quote": "there is a bus stop directly opposite our practice",
+   "url": "https://huntervalleypaeds.com.au/faqs"
+  }
+ },
+ "Hunter Pain Specialists": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Your doctor will send this to us via Medical Objects or you can email it to us.",
+   "url": "https://hunterpainspecialists.com.au/for-patients/referral-pathways"
+  }
+ },
+ "Mind-Care – Adult Psychology, Psychiatry, Neurology": {
+  "fees_online": {
+   "url": "https://www.mind-care.net.au/fees-and-funding/"
+  }
+ },
+ "Newcastle Adult & Paediatric Heart Centre": {
+  "fees_online": {
+   "url": "https://naphc.com.au/our-fees/"
+  }
+ },
+ "Kotara Specialist Suites": {},
+ "Newcastle Orthopaedics (Maitland)": {
+  "fees_online": {
+   "url": "https://newcastleorthopaedics.com.au/patient-information/financial-information/"
+  }
+ },
+ "Newcastle Shoulder Elbow & Hand Surgery": {
+  "transit": {
+   "quote": "There are 22 on-site car parks, on-street parking and we are very close to train and bus transport.",
+   "url": "https://www.nseh.com.au/location"
+  }
+ },
+ "Hunter Children's Clinics": {
+  "fees_online": {
+   "url": "https://hunterchildrensclinics.com.au/services/speechtherapy/"
+  }
+ },
+ "Akkadian Health": {
+  "fees_online": {
+   "url": "https://www.akkadianhealth.com.au/services/adhd-testing/"
+  },
+  "wait": {
+   "text": "Current wait times – less than 14 days!",
+   "weeks": 2,
+   "url": "https://www.akkadianhealth.com.au/services/adhd-testing/"
+  }
+ },
+ "Beam Health": {
+  "fees_online": {
+   "url": "https://beamservices.com.au/fees/"
+  }
+ },
+ "Dokotela": {
+  "fees_online": {
+   "url": "https://www.dokotela.com.au/fees"
+  },
+  "ereferral": {
+   "systems": [
+    "HealthLink"
+   ],
+   "quote": "Healthlink EDI: Dokotela",
+   "url": "https://www.dokotela.com.au/"
+  }
+ },
+ "Geelong Psychiatry": {
+  "fees_online": {
+   "url": "https://www.halaxy.com/profile/dr-tayler-watson/psychiatrist/1747483"
+  }
+ },
+ "ExpertMinds": {
+  "fees_online": {
+   "url": "https://expertminds.com.au/fees/"
+  },
+  "ereferral": {
+   "systems": [
+    "HealthLink"
+   ],
+   "quote": "Healthlink ID: expminds",
+   "url": "https://expertminds.com.au/referrals/"
+  }
+ },
+ "Lionheart Clinic": {
+  "fees_online": {
+   "url": "https://www.lionheartclinic.com.au/fees"
+  },
+  "wait": {
+   "text": "Initial psychiatric appointments are typically scheduled within 5 to 6 weeks following intake.",
+   "weeks": 6,
+   "url": "https://www.lionheartclinic.com.au/for-gps"
+  }
+ },
+ "Mind Oasis Clinic": {
+  "fees_online": {
+   "url": "https://mindoasis.com.au/for-patients/fee/"
+  },
+  "wait": {
+   "text": "Appointments are usually available within two weeks.",
+   "weeks": 2,
+   "url": "https://mindoasis.com.au/for-patients/new-patients-faqs-frequently-asked-questions/"
+  },
+  "interpreters": {
+   "quote": "Please let us know when you book if you need an interpreter … [we will] arrange one through TIS National at no cost to you.",
+   "url": "https://mindoasis.com.au/for-patients/new-patients-faqs-frequently-asked-questions/"
+  }
+ },
+ "Pandion Health": {
+  "wait": {
+   "text": "Appointments are typically available within 2 to 4 weeks.",
+   "weeks": 4,
+   "url": "https://www.pandionhealth.com.au/service/psychiatrists/"
+  },
+  "fees_online": {
+   "url": "https://www.pandionhealth.com.au/pricing/"
+  },
+  "ereferral": {
+   "systems": [
+    "HealthLink",
+    "Healthshare"
+   ],
+   "quote": "Send referrals directly through HealthLink secure messaging. Our EDI is pandionh.",
+   "url": "https://www.pandionhealth.com.au/refer-a-patient-pandion-health/"
+  }
+ },
+ "Peak Physio": {
+  "transit": {
+   "quote": "We're directly across the road from Newcastle Interchange, so trains, buses, and the Newcastle Light Rail all stop within a minute's walk of the clinic.",
+   "url": "https://www.peak-physio.com.au/locations/newcastle-west/"
+  }
+ },
+ "ProActive Rehabilitation and Health": {
+  "wheelchair": {
+   "quote": "our two wheelchair accessible facilities",
+   "url": "https://www.proactiverehab.com.au/"
+  }
+ },
+ "Psych United": {
+  "fees_online": {
+   "url": "https://psychunited.com.au/our-fees/"
+  }
+ },
+ "Sage Clinic": {
+  "fees_online": {
+   "url": "https://sageclinic.com.au/pathways/"
+  },
+  "ereferral": {
+   "systems": [
+    "HealthLink"
+   ],
+   "quote": "HealthLink EDI: SAGECLIN",
+   "url": "https://sageclinic.com.au/referrers/"
+  }
+ },
+ "Telecare Australia": {
+  "wait": {
+   "text": "First appointment offered within 4 weeks of receiving your referral",
+   "weeks": 4,
+   "url": "https://www.telecare.com.au/digital-mental-health-services"
+  },
+  "interpreters": {
+   "quote": "Medicare-eligible patients can access free interpretation services [through TIS] (psychiatry); sign language support available through the National Sign Language Program for eligible patients",
+   "url": "https://www.telecare.com.au/digital-mental-health-services"
+  }
+ },
+ "Uplift Exercise Physiology": {
+  "fees_online": {
+   "url": "https://upliftexercise.com.au/ndis-participants/"
+  },
+  "wait": {
+   "text": "No Wait Lists – the longest wait list we have ever had is two weeks",
+   "weeks": 2,
+   "url": "https://upliftexercise.com.au/ndis-participants/"
+  },
+  "wheelchair": {
+   "quote": "The clinic is accessible, with lots of on-street parking nearby; we also have accessible shared amenities on-site.",
+   "url": "https://upliftexercise.com.au/ndis-participants/"
+  }
+ },
+ "Vagus Speech Pathology": {
+  "fees_online": {
+   "url": "https://www.vagusspeechpathology.com.au/prices"
+  }
+ },
+ "Wildflower Psychology Newcastle": {
+  "fees_online": {
+   "url": "https://www.wildflower-psychology.com.au/newcastle-psychologist-referrals-fees"
+  }
+ },
+ "Flow Neuro Allied Therapy": {
+  "fees_online": {
+   "url": "https://www.flowneurotherapy.com.au/funding"
+  }
+ },
+ "Coastal Colorectal": {
+  "wait": {
+   "text": "non-urgent cases may experience up to six weeks wait before your appointment",
+   "weeks": 6,
+   "url": "https://coastalcolorectal.com.au/resources/faqs/"
+  },
+  "urgent_gp": {
+   "quote": "All urgent referrals and patient with cancer will be aimed to be contacted within a few days and seen within a week.",
+   "url": "https://coastalcolorectal.com.au/resources/faqs/"
+  }
+ },
+ "Hand Surgery Centre": {
+  "interpreters": {
+   "quote": "If a professional translator or interpreter is needed, please inform our staff when booking your appointment.",
+   "url": "https://www.handsurgerycentre.com.au/site/making-appointments"
+  }
+ },
+ "Newcastle Pain Management": {
+  "wait": {
+   "text": "you should expect wait times of 3-4 months as a standard",
+   "weeks": 17,
+   "url": "https://www.newcastlepainmanagement.com.au/for-patients/"
+  },
+  "urgent_gp": {
+   "quote": "We reserve urgent appointments with all of our providers.",
+   "url": "https://www.newcastlepainmanagement.com.au/for-referrers/"
+  }
+ },
+ "Newcastle Foot and Ankle Clinic": {
+  "fees_online": {
+   "url": "https://www.foot.net.au/patient-information-n-fees"
+  }
+ },
+ "Adamstown Specialists": {
+  "wheelchair": {
+   "quote": "on street level with easy access",
+   "url": "https://www.adamstownspecialists.com.au/contact"
+  },
+  "transit": {
+   "quote": "Local buses with disability access are within walking distance. Stop ID: 228997 – Brunker Road – St Columba's Primary School; Stop ID: 228986 – Glebe Road – Adamstown Community Early Learning",
+   "url": "https://www.adamstownspecialists.com.au/contact"
+  }
+ },
+ "Maitland Hand & Orthopaedic Surgery": {
+  "ereferral": {
+   "systems": [
+    "HealthLink",
+    "Medical Objects"
+   ],
+   "quote": "Healthlink: acrransw Medical Objects: ACRRA Arthritis Care and Rapid Recovery Arthroplasty",
+   "url": "https://drnassar.com.au/gp-referral-form/"
+  }
+ },
+ "Calvary Mater Newcastle": {
+  "transit": {
+   "quote": "Newcastle Transport frequently service Calvary Mater Newcastle on Edith, Lorna and Maud Streets, Waratah. The closest train station to Calvary Mater Newcastle is Waratah Train Station located on Station Street, Waratah.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/maps-and-transport-3"
+  },
+  "wheelchair": {
+   "quote": "All levels of our hospital are accessible by lifts. Wheelchairs are available for use while at the hospital.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/facilities-3"
+  }
+ },
+ "Calvary Mater Newcastle Cancer Centre": {
+  "transit": {
+   "quote": "Newcastle Transport frequently service Calvary Mater Newcastle on Edith, Lorna and Maud Streets, Waratah. The closest train station to Calvary Mater Newcastle is Waratah Train Station located on Station Street, Waratah.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/maps-and-transport-3"
+  },
+  "wheelchair": {
+   "quote": "All levels of our hospital are accessible by lifts. Wheelchairs are available for use while at the hospital.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/facilities-3"
+  }
+ },
+ "Hunter Haematology Unit, Calvary Mater Newcastle": {
+  "transit": {
+   "quote": "Newcastle Transport frequently service Calvary Mater Newcastle on Edith, Lorna and Maud Streets, Waratah. The closest train station to Calvary Mater Newcastle is Waratah Train Station located on Station Street, Waratah.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/maps-and-transport-3"
+  },
+  "wheelchair": {
+   "quote": "All levels of our hospital are accessible by lifts. Wheelchairs are available for use while at the hospital.",
+   "url": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/facilities-3"
+  }
+ },
+ "Newcastle Brain and Spine": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "by email, fax or Medical Objects",
+   "url": "https://neurosurgeon.asia/forpatients/private-patients/"
+  }
+ },
+ "Surgery Central": {
+  "ereferral": {
+   "systems": [
+    "Medical Objects"
+   ],
+   "quote": "Please note that we prefer to receive all referrals and correspondence via Medical Objects or email admin@surgerycentral.com.au",
+   "url": "https://surgerycentral.co/for-doctors/"
+  },
+  "urgent_gp": {
+   "quote": "All referrals are triaged prior to an appointment being made and urgent appointments are available.",
+   "url": "https://surgerycentral.co/for-doctors/"
+  },
+  "fees_online": {
+   "url": "https://surgerycentral.co/about-your-consultations/what-to-bring/"
+  }
+ },
+ "The Newcastle Knee Clinic": {
+  "urgent_gp": {
+   "quote": "If you need to discuss a patient directly please access my mobile by clicking the \"Urgent Referrers Contact\" button.",
+   "url": "https://www.newcastlekneeclinic.com.au/referrers.html"
+  }
+ },
+ "Greygum Psychology": {
+  "wait": {
+   "text": "Now Accepting New Clients · No Waitlist",
+   "weeks": 0,
+   "url": "https://www.greygumpsychology.com.au/contact-us"
+  }
+ },
+ "Mindsight Clinic": {
+  "interpreters": {
+   "quote": "Dr Ip is also fluent in Cantonese.",
+   "url": "https://mindsightclinic.com.au/psychiatrists"
+  }
+ },
+ "Hunter Clinical Services": {
+  "wheelchair": {
+   "quote": "Yes. Our Merewether clinic has ramp access, wide doors and a disability accessible toilet.",
+   "url": "https://hunterclinicalservices.com.au/helpful-information/"
+  }
+ }
+}
