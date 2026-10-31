@@ -517,7 +517,7 @@
     ctx.fillStyle = "rgba(43,94,128,.10)"; LANES.forEach(function (x, k) { ctx.beginPath(); ctx.ellipse(x, BENCH - 6, 34, 7, 0, 0, 7); ctx.fill(); ctx.fillStyle = "rgba(43,94,128,.35)"; ctx.font = "600 11px Poppins, sans-serif"; ctx.textAlign = "center"; doorKey(x, k); ctx.fillStyle = "rgba(43,94,128,.10)"; });
   }
   function fluff(cx, cy, a, b, n, col, edge) { for (var i = 0; i < n; i++) { var t = i / n * Math.PI * 2; circ(cx + Math.cos(t) * a, cy + Math.sin(t) * b, edge, col); } }
-  // ---------- cats (sprites drawn from Adam's photos; eyes, paws, dirt and water drawn live) ----------
+  // ---------- cats (sprites drawn from reference photos; eyes, paws, dirt and water drawn live) ----------
   var SPR = {};
   ["basil-body", "basil-head", "clover-body", "clover-head"].forEach(function (n) { var im = new Image(); im.src = SBASE + "sprites/" + n + ".svg?v=1"; SPR[n] = im; });
   function sprOK(n) { var im = SPR[n]; return im && im.complete && im.naturalWidth > 0; }

@@ -39,7 +39,7 @@ def is_public(p):
     hosp = " ".join((p.get("practical") or {}).get("hospitals") or [])
     return bool(PUB.search(txt)) and not PRIV.search(txt + " " + hosp)
 TITLE = re.compile(r"^(Dr|Prof|Professor|A/Prof|Assoc Prof|Associate Professor|Conjoint Associate Professor|Clinical Associate Professor)\.?\s+", re.I)
-APPROVED_TXT = "Adam's pick for the referral experience: easy to book, clear letters back to the GP, friendly rooms. Not a rating of clinical skill. No payment, perks or referral fees."
+APPROVED_TXT = "A Malady Wise GP pick for the referral experience: easy to book, clear letters back to the GP, friendly rooms. Not a rating of clinical skill. No payment, perks or referral fees."
 _ap = os.path.join(DD, "approved.txt")
 APPROVED = {re.sub(r"\W+", "", TITLE.sub("", l.strip()).lower()) for l in (open(_ap).read().splitlines() if os.path.exists(_ap) else []) if l.strip() and not l.startswith("#")}
 MW_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1F5FBF"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
