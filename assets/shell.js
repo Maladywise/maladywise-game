@@ -641,7 +641,7 @@
     var bar = el('<header class="bar"><div class="bar-in">' +
       (g ? '<a class="back" href="../" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
-      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.filter(function (n) { return !NORMIE || !/^\/(conditions|medicines|tools|deep-dives)\//.test(n[1]); }).map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
+      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.filter(function (n) { if (n[1] === "/specialists/") { var au = false; try { au = /^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "") || /-AU$/i.test(navigator.language || ""); } catch (e) {} if (!au || NORMIE) return false; } return !NORMIE || !/^\/(conditions|medicines|tools|deep-dives)\//.test(n[1]); }).map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
            '<button class="icon-btn" data-a="stats" aria-label="Stats">' + I.stats + "</button>" +
