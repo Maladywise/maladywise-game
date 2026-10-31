@@ -28,7 +28,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -61,7 +63,9 @@
       "Hunter Valley Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -103,7 +107,9 @@
       "Kurri Kurri Hospital (public operating)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -143,7 +149,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -187,7 +195,9 @@
       "Charlestown Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -221,7 +231,9 @@
       "Charlestown Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -255,7 +267,9 @@
      "languages": [
       "English"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -285,7 +299,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -371,7 +387,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -413,13 +431,17 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.hunterent.com.au/your-team/",
      "https://lingardprivate.cms.healthecare.com.au/specialists/professor-kelvin-kong",
-     "https://specialists.healthscope.com.au/specialist/kelvin-kong-med0000979658"
+     "https://specialists.healthscope.com.au/specialist/kelvin-kong-med0000979658",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -451,12 +473,16 @@
       "Kurri Kurri Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.hunterent.com.au/your-team/dr-corlette/",
-     "https://www.nextsense.org.au/about/dr-toby-corlette"
+     "https://www.nextsense.org.au/about/dr-toby-corlette",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -485,12 +511,16 @@
       "English",
       "Afrikaans"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.hunterent.com.au/your-team/",
-     "https://www.doctify.com/au/specialist/daron-cope"
+     "https://www.doctify.com/au/specialist/daron-cope",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -514,12 +544,16 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.hunterent.com.au/your-team/",
-     "https://www.doctify.com/au/practice/hunter-ent-1"
+     "https://www.doctify.com/au/practice/hunter-ent-1",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -543,12 +577,16 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.hunterent.com.au/your-team/",
-     "https://www.doctify.com/au/practice/hunter-ent-1"
+     "https://www.doctify.com/au/practice/hunter-ent-1",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -572,11 +610,15 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://www.hunterent.com.au/your-team/"
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -600,11 +642,15 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Practice FAQ: accepting new patients; some doctors may be fully booked",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://www.hunterent.com.au/your-team/"
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.hunterent.com.au/faq/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -638,7 +684,9 @@
       "John Hunter Children's Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -678,7 +726,9 @@
       "Hunter Valley Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -716,7 +766,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -760,7 +812,9 @@
       "Lingard Private Hospital (robotic surgery)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -791,7 +845,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -828,7 +884,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -865,7 +923,9 @@
      "ages": "women of all ages (as stated)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -902,7 +962,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -936,7 +998,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -964,7 +1028,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1001,7 +1067,9 @@
       "Genea Newcastle / Lingard Private Hospital (fertility procedures)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1036,7 +1104,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1075,7 +1145,9 @@
       "John Hunter Hospital (staff specialist, maternal fetal medicine)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1105,7 +1177,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1142,7 +1216,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1179,7 +1255,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
@@ -1220,7 +1298,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
@@ -1251,7 +1331,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
@@ -1281,13 +1363,16 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice website has dedicated 'LGBTQI+ Families' and 'Single Parents' pages"
     ],
     "sources": [
-     "https://newcastlefertilityspecialists.com/"
+     "https://newcastlefertilityspecialists.com/",
+     "https://newcastlefertilityspecialists.com/dr-kate-burston/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1316,7 +1401,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1347,7 +1434,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1378,7 +1467,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1423,7 +1514,9 @@
       "Maitland Hospital (public)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1458,7 +1551,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1489,7 +1584,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1521,7 +1618,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1552,7 +1651,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1586,7 +1687,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1625,7 +1728,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1672,7 +1777,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1708,7 +1815,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1744,7 +1853,9 @@
       "Belmont District Hospital (public clinic)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1775,7 +1886,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1816,7 +1929,9 @@
       "Singleton Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1849,7 +1964,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1887,7 +2004,9 @@
       "King Street Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1928,7 +2047,9 @@
       "Singleton Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1960,7 +2081,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -1991,7 +2114,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2025,11 +2150,15 @@
       "John Hunter Hospital (Head of Orthopaedics, VMO)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "New patients always welcome (GP referral needed)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://drdavidgill.com.au/"
+     "https://drdavidgill.com.au/",
+     "https://drdavidgill.com.au/information-for-new-patients/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2059,7 +2188,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2092,7 +2223,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2127,7 +2260,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2161,7 +2296,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2197,7 +2334,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2236,7 +2375,9 @@
       "Lake Macquarie Private Hospital (VMO)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2269,7 +2410,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2301,7 +2444,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2338,7 +2483,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2368,7 +2515,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2409,7 +2558,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2446,7 +2597,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2479,7 +2632,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2521,7 +2676,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2554,7 +2711,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2589,7 +2748,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2622,7 +2783,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2658,7 +2821,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2693,7 +2858,9 @@
       "Hunter Valley Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2725,7 +2892,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2762,7 +2931,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states patients are welcome to bring a support person to appointments"
@@ -2797,7 +2968,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2838,7 +3011,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2873,7 +3048,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2911,7 +3088,9 @@
       "Belmont Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2944,7 +3123,9 @@
       "Public and private hospitals in Newcastle, Lake Macquarie and Hunter Valley (not named on home page)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -2985,7 +3166,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3021,7 +3204,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3060,7 +3245,9 @@
       "Belmont District Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3097,7 +3284,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3136,7 +3325,9 @@
       "Calvary Mater Newcastle"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3168,7 +3359,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3199,7 +3392,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3230,7 +3426,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3261,7 +3460,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3293,7 +3495,10 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3324,7 +3529,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3354,7 +3562,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "yes",
+     "np_note": "Taking new referrals (private and public patients)",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3385,7 +3596,10 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Taking new referrals for private patients only",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
@@ -3419,7 +3633,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3458,7 +3674,9 @@
       "Maitland Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3495,7 +3713,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3531,7 +3751,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3575,7 +3797,9 @@
       "Lake Macquarie Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3616,7 +3840,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3652,7 +3878,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3687,7 +3915,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3720,7 +3950,9 @@
       "John Hunter Hospital (staff specialist; Director, Vascular Ultrasound Lab)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3751,7 +3983,9 @@
       "John Hunter Hospital (consultant)"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3781,7 +4015,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3822,7 +4058,9 @@
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3862,7 +4100,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3897,7 +4137,9 @@
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3933,7 +4175,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -3971,7 +4215,9 @@
       "Lingard Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4040,7 +4286,9 @@
      "ages": "adults",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4078,7 +4326,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Profile lists care for Aboriginal and Torres Strait Islander people as an interest"
@@ -4117,7 +4367,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4154,7 +4406,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4191,7 +4445,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4226,7 +4482,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4257,7 +4515,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4288,7 +4548,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4319,7 +4581,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4350,7 +4614,9 @@
       "Ramsay Clinic Lakeside"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4380,7 +4646,9 @@
      "ages": "all ages",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states it is committed to embracing diversity, social inclusion and eliminating discrimination, welcoming Indigenous Australians, LGBTQIA+ people, people with disability and culturally and linguistically diverse people"
@@ -4452,7 +4720,9 @@
      "ages": "children, adolescents and young adults up to 30",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states it acknowledges and supports the LGBTQIA+ community",
@@ -4486,7 +4756,9 @@
      "ages": "children and adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Practice states it is committed to embracing diversity, social inclusion and eliminating discrimination, welcoming Indigenous Australians, LGBTQIA+ people, people with disability and culturally and linguistically diverse people"
@@ -4585,7 +4857,9 @@
      "ages": "12-25",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Centre states it welcomes people regardless of ethnicity, faith, sexual orientation and gender identity",
@@ -4627,7 +4901,9 @@
       "Warners Bay Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4658,7 +4934,9 @@
      "ages": "18-60",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4725,7 +5003,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4757,7 +5037,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4789,7 +5071,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4821,7 +5105,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4853,7 +5139,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -4881,18 +5169,22 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Practice states new behavioural-problem referrals unlikely to be offered an appointment within 12 months",
      "ages": "all children",
      "hospitals": [
       "Newcastle Private Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Some doctors may be fully booked; behavioural waitlist over 12 months",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://specialists.healthscope.com.au/specialist/alissa-tenney",
-     "https://www.newcastlepaediatric.com.au/"
+     "https://www.newcastlepaediatric.com.au/",
+     "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -4915,19 +5207,23 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Practice states new behavioural-problem referrals unlikely to be offered an appointment within 12 months",
      "ages": "",
      "hospitals": [
       "Newcastle Private Hospital",
       "John Hunter Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Some doctors may be fully booked; behavioural waitlist over 12 months",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://specialists.healthscope.com.au/specialist/stephen-knipe-med0001191564",
-     "https://www.newcastlepaediatric.com.au/"
+     "https://www.newcastlepaediatric.com.au/",
+     "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -4950,19 +5246,23 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Practice states new behavioural-problem referrals unlikely to be offered an appointment within 12 months",
      "ages": "",
      "hospitals": [
       "Newcastle Private Hospital",
       "John Hunter Children's Hospital"
      ],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Some doctors may be fully booked; behavioural waitlist over 12 months",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://specialists.healthscope.com.au/specialist/michael-lonergan-med0001180866",
-     "https://www.newcastlepaediatric.com.au/"
+     "https://www.newcastlepaediatric.com.au/",
+     "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -4982,16 +5282,20 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Practice states new behavioural-problem referrals unlikely to be offered an appointment within 12 months",
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Some doctors may be fully booked; behavioural waitlist over 12 months",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
      "https://www.newcastlepaediatric.com.au/",
-     "https://www.hunterent.com.au/your-team/"
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -5014,15 +5318,19 @@
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "Practice states new behavioural-problem referrals unlikely to be offered an appointment within 12 months",
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": "limited",
+     "np_note": "Some doctors may be fully booked; behavioural waitlist over 12 months",
+     "np_checked": "2026-11-01"
     },
     "inclusive": [],
     "sources": [
-     "https://www.newcastlepaediatric.com.au/"
+     "https://www.newcastlepaediatric.com.au/",
+     "https://www.newcastlepaediatric.com.au/information-for-new-referrals/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -5050,7 +5358,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5088,7 +5398,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5126,7 +5438,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5162,7 +5476,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5199,7 +5515,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5237,7 +5555,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5275,7 +5595,9 @@
      "ages": "children and adolescents (autism assessment approx 2.5-25)",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5309,7 +5631,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -5346,7 +5670,9 @@
      "ages": "autism assessment approx 2.5-25",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [
      "Clinic describes itself as having a 'peaceful and neuroaffirming atmosphere'",
@@ -5383,7 +5709,9 @@
      "ages": "",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
@@ -5444,7 +5772,9 @@
      "ages": "newborns to adolescents",
      "hospitals": [],
      "languages": [],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
     },
     "inclusive": [],
     "sources": [
