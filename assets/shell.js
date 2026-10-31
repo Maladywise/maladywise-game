@@ -910,6 +910,19 @@
     d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
     f.insertBefore(d, f.firstChild);
   }
+  // Auto search box for list pages (medicines, deep dives, …) that don't have one yet.
+  function listSearch() {
+    var main = document.querySelector("main.doc"); if (!main || document.getElementById("fs-q") || main.querySelector(".lsrch")) return;
+    var ul = main.querySelector("ul.tx, ul.fslist"); if (!ul) return;
+    var li = [].slice.call(ul.children).filter(function (x) { return x.tagName === "LI"; }); if (li.length < 2) return;
+    var nm = { "/medicines/": "Search medicines", "/deep-dives/": "Search deep dives" }[location.pathname] || "Search this list";
+    var norm = function (t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[‘’']/g, ""); };
+    var box = document.createElement("input"); box.type = "search"; box.className = "lsrch"; box.placeholder = nm; box.setAttribute("aria-label", nm); box.autocomplete = "off";
+    var no = document.createElement("p"); no.className = "meta"; no.hidden = true; no.textContent = "No match. Try another word.";
+    ul.parentNode.insertBefore(box, ul); ul.parentNode.insertBefore(no, ul.nextSibling);
+    var idx = li.map(function (x) { return norm(x.textContent + " " + (x.getAttribute("data-q") || "")); });
+    box.addEventListener("input", function () { var w = norm(box.value).split(/\s+/).filter(Boolean), n = 0; li.forEach(function (x, i) { var ok = w.every(function (t) { return idx[i].indexOf(t) >= 0; }); x.hidden = !ok; if (ok) n++; }); no.hidden = n > 0; });
+  }
   function infoExtras() {
     var F = window.MW_FACTS, p = location.pathname.replace(/index\.html$/, ""), me = F && F[p]; if (!me) return;
     var main = document.querySelector("main"), h1 = main && main.querySelector("h1"); if (!h1) return;
@@ -936,7 +949,7 @@
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
     }
   }
-  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); }
+  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); }
   // ---------- secret: Night Shift (5 taps on the logo in 3s, or type "locum" on the home page) ----------
   (function () {
     if (!/^\/(index\.html)?$/.test(location.pathname)) return;
