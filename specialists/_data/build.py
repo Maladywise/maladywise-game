@@ -44,7 +44,7 @@ _ap = os.path.join(DD, "approved.txt")
 APPROVED = {re.sub(r"\W+", "", TITLE.sub("", l.strip()).lower()) for l in (open(_ap).read().splitlines() if os.path.exists(_ap) else []) if l.strip() and not l.startswith("#")}
 MW_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1F5FBF"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 def sortkey(n):
-    BIZ = re.compile(r"(Therapy|Health|Clinic|Physio|Speech|Pathology|Centre|Center|Group|Services|Medical|Hearing|Psychology|Podiatry|Rehab|Studio|Care|Diabetes|Alliance|Hub|Project|Club|Kids|Ethos|Audiology|Dietitian|Nutrition|Wellness|Practice|Specialists|Paediatrics|Dermatology|Orthopaedic|Surgery|Hospital|Unit|Service|Inq|Lactation|Haven|Minds|Wise|Oak|Rainbow|Avina|Beam|Aspire|Uplift|Tundra|Earport|Audika|Caremmunity|Sanctuary|Replenish|Peak|Prime|Sport)", re.I)
+    BIZ = re.compile(r"(Therapy|Health|Clinic|Physio|Speech|Pathology|Centre|Center|Group|Services|Medical|Hearing|Psychology|Podiatry|Rehab|Studio|Care|Diabetes|Alliance|Hub|Project|Club|Kids|Ethos|Audiology|Dietitian|Nutrition|Wellness|Practice|Specialists|Paediatrics|Dermatology|Orthopaedic|Surgery|Hospital|Unit|Service|Inq|Lactation|Haven|Minds|Wise|Oak|Rainbow|Avina|Beam|Aspire|Uplift|Tundra|Earport|Audika|Caremmunity|Sanctuary|Replenish|Peak|Prime|Sport|Tribe|Psych|Tele|Oasis|United)", re.I)
     if TITLE.match(n) or (re.match(r"^[A-Z][a-z]+(-[A-Z][a-z]+)? [A-Z][a-zA-Z'\-]+$", n) and not BIZ.search(n)):
         base = TITLE.sub("", n); base = re.sub(r"\s*\(.*?\)", "", base).strip()
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
@@ -137,6 +137,7 @@ DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private pra
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
         import shutil; shutil.rmtree(d)
+PAGE_NOTE = {"Psychiatry (telehealth)": '<p class="callout"><b>Video appointments, Australia-wide.</b> Still needs a GP referral. Most telehealth bulk billing is for rural patients only, and Newcastle counts as metro, so expect private fees with a Medicare rebate. Check fees, wait times and whether the first visit can be by video before booking.</p>'}
 urls = ["/specialists/"]
 for lab, ppl in CATS.items():
     slug = slugify(lab); url = f"/specialists/{slug}/"; urls.append(url)
@@ -144,7 +145,7 @@ for lab, ppl in CATS.items():
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
-            f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>'
+            f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
             '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + CHIPS + '<p class="sp-count" aria-live="polite"></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)

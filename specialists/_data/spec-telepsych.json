@@ -1,0 +1,1476 @@
+{
+ "psychiatry-telehealth": {
+  "name": "Psychiatry (telehealth)",
+  "people": [
+   {
+    "name": "Call to Mind",
+    "specialty": "Telepsychiatry service",
+    "practice": "Call to Mind",
+    "address": "PO Box 170, Abbotsford VIC 3067",
+    "suburb": "Online (Melbourne-based)",
+    "phone": "03 9099 0453",
+    "fax": "",
+    "email": "info@calltomind.com.au",
+    "ereferral": "",
+    "website": "https://calltomind.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "all ages (per WayAhead listing)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "GP referral required. Bulk billing only for one-off assessments (item 291) for patients in rural areas MM2-7 with a GP referral requesting it; Newcastle metro (MM1) patients pay private fees."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://directory.wayahead.org.au/service/8724/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/virtual/call-to-mind/adult-mental-health-service/09a8f2a9-0d3e-624a-93b2-d0d18c86264c",
+     "https://bilang.nh.org.au/service/call-to-mind/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Video or phone only. Fees (WayAhead, updated Mar 2026): one-off 291 assessment in MM1 areas $400-450 out of pocket; ongoing care initial $300-400 and review $150-250 out of pocket. Healthdirect lists after-hours appointments available (call in hours). Can also be done from GP surgery if no device."
+   },
+   {
+    "name": "PSYCH2U",
+    "specialty": "Telepsychiatry service",
+    "practice": "PSYCH2U",
+    "address": "11 Chesterman St, Moonah TAS 7009",
+    "suburb": "Online (Hobart-based)",
+    "phone": "1300 472 866",
+    "fax": "",
+    "email": "support@psych2u.com.au",
+    "ereferral": "Medical Objects, ReferralNet or Argus (IDs not published on homepage)",
+    "website": "https://psych2u.com.au/online-psychiatry/",
+    "interests": [
+     "General adult psychiatry",
+     "Child and adolescent psychiatry",
+     "ADHD",
+     "Anxiety and depression",
+     "PTSD",
+     "Bipolar and other mood disorders",
+     "Autism spectrum disorder",
+     "DVA assessments and treatment",
+     "Medico-legal reports"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "GP referral required. Bulk-billed one-off 291 assessments only for rural patients (MM2-7) with referral specifically requesting a 291; not for ADHD initial appointments, assessments or ongoing management."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://psych2u.com.au/",
+     "https://directory.wayahead.org.au/service/9606"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Part of GP2U Telehealth. Homepage fees: psychiatry ADHD consult $800, non-ADHD consult $750; deposit at booking, balance 7 days before. WayAhead listing (Mar 2026) gives typical out-of-pocket $400-650 initial, $150-250 reviews. Current wait advised after referral received. Also supports NDIS, Workers Compensation."
+   },
+   {
+    "name": "Updoc Psychiatry",
+    "specialty": "Online psychiatry service",
+    "practice": "Updoc Psychiatry",
+    "address": "",
+    "suburb": "Online (Australia)",
+    "phone": "",
+    "fax": "",
+    "email": "contact@updoc.com.au",
+    "ereferral": "",
+    "website": "https://updoc.com.au/psychiatry",
+    "interests": [
+     "ADHD assessment",
+     "General adult mental health"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Valid GP referral needed for Medicare rebate."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://updoc.com.au/psychiatry/pricing"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees: initial ADHD consult (~50 min) $895; ADHD follow-up (~30 min) $495; other consult fees shown before booking. Medicare rebate claimable with GP referral."
+   },
+   {
+    "name": "Dr Vincent Ip",
+    "specialty": "Adult psychiatrist",
+    "practice": "Mindsight Clinic",
+    "address": "Suite 5, 924 Pacific Highway, Gordon NSW 2072",
+    "suburb": "Gordon (Sydney) NSW",
+    "phone": "02 9157 9022",
+    "fax": "",
+    "email": "info@mindsightclinic.com.au",
+    "ereferral": "",
+    "website": "https://www.mindsightclinic.com.au",
+    "interests": [
+     "Addiction",
+     "ADHD",
+     "Anxiety disorders",
+     "Bipolar disorder",
+     "Depression",
+     "OCD",
+     "Psychosis",
+     "Schizophrenia",
+     "Complex trauma",
+     "Doctors and medical students"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "18+",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Cantonese"
+     ],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "RANZCP profile (Mar 2025 update): accepting new patients at Mindsight Clinic (not at Ryde Psych Services); valid referral required. Telehealth listed as yes."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/7826/dr-vincent-ip"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Clinic states it cannot offer bulk billing; profile lists bulk-billing for medical students."
+   },
+   {
+    "name": "Dr Nathan Jacobs",
+    "specialty": "Adult psychiatrist",
+    "practice": "Bondi Junction Psychiatrists",
+    "address": "Suite 403/3 Waverley Street, Bondi Junction NSW 2022",
+    "suburb": "Bondi Junction (Sydney) NSW",
+    "phone": "",
+    "fax": "",
+    "email": "admin@drnathanjacobs.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Anxiety disorders",
+     "Bipolar disorder",
+     "Depression",
+     "Mindfulness",
+     "Psychosis",
+     "Psychodynamic psychotherapy",
+     "Schizophrenia",
+     "Supportive psychotherapy",
+     "Prolonged grief",
+     "Weekly psychotherapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Less than 1 month (RANZCP profile)",
+     "ages": "16+",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "French"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "RANZCP Find a Psychiatrist profile lists telehealth: yes; GP referral required. Profile does not specify whether telehealth is offered for first appointments - confirm with rooms."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/10055/dr-nathan-jacobs"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Profile phone is a mobile number so omitted; contact by email."
+   },
+   {
+    "name": "Dr Gordon Hyde",
+    "specialty": "Adult psychiatrist",
+    "practice": "Sydney South East Psychiatry",
+    "address": "Shop 4, 155 Avoca Street, Randwick NSW 2031",
+    "suburb": "Randwick (Sydney) NSW",
+    "phone": "1800 779 243",
+    "fax": "",
+    "email": "info@sydneysoutheastpsychiatry.com.au",
+    "ereferral": "",
+    "website": "https://www.sydneysoutheastpsychiatry.com.au",
+    "interests": [
+     "Anxiety disorders",
+     "Bipolar disorder",
+     "CBT",
+     "Depression",
+     "Interpersonal therapy",
+     "OCD",
+     "PTSD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Approx. 3-6 months (RANZCP profile)",
+     "ages": "18-60",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Bosnian",
+      "Croatian",
+      "Serbian"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "RANZCP Find a Psychiatrist profile lists telehealth: yes; GP referral required. Profile does not specify whether telehealth is offered for first appointments - confirm with rooms."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/6528/dr-gordon-hyde"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Also 02 8823 1843. WorkCover provider; offers item 291 opinion and report."
+   },
+   {
+    "name": "Dr David Hughes",
+    "specialty": "Adult psychiatrist",
+    "practice": "Re-Centre at Waratah Private Hospital",
+    "address": "31 Dora St, Hurstville NSW 2220",
+    "suburb": "Hurstville (Sydney) NSW",
+    "phone": "1800 732 368",
+    "fax": "",
+    "email": "Recentreconsulting@waratahprivate.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Addiction",
+     "ADHD",
+     "Anxiety disorders",
+     "Bipolar disorder",
+     "CBT",
+     "Depression",
+     "ECT",
+     "OCD",
+     "Personality disorders",
+     "Psychosis",
+     "PTSD",
+     "Schizophrenia",
+     "Complex trauma"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Approx. 3-6 months (RANZCP profile)",
+     "ages": "16+",
+     "hospitals": [
+      "Waratah Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "RANZCP Find a Psychiatrist profile lists telehealth: yes; GP referral required. Profile does not specify whether telehealth is offered for first appointments - confirm with rooms."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/3820/dr-david-hughes"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": ""
+   },
+   {
+    "name": "Dr Trent Sawyer",
+    "specialty": "Adult psychiatrist",
+    "practice": "New Horizons Psychiatry",
+    "address": "100 Russell Street, Bathurst NSW 2795",
+    "suburb": "Bathurst NSW",
+    "phone": "02 6332 4225",
+    "fax": "",
+    "email": "newhorizonspsychiatry@outlook.com",
+    "ereferral": "",
+    "website": "https://www.newhorizonspsychiatry.com.au",
+    "interests": [
+     "ADHD",
+     "Anxiety disorders",
+     "Bipolar disorder",
+     "CBT",
+     "Depression",
+     "Motivational interviewing",
+     "Personality disorders",
+     "Psychosis",
+     "PTSD",
+     "Schizophrenia",
+     "Psychotherapy",
+     "Emergency services personnel",
+     "Asylum seekers and refugees"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "1-3 months (RANZCP profile, updated May 2024)",
+     "ages": "18-60",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "RANZCP Find a Psychiatrist profile lists telehealth: yes; GP referral required. Profile does not specify whether telehealth is offered for first appointments - confirm with rooms."
+    },
+    "inclusive": [
+     "RANZCP profile lists experience with Aboriginal and Torres Strait Islander people"
+    ],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/14088/dr-trent-sawyer"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Profile lists bulk-billing for medical students; item 291 and shared care offered."
+   },
+   {
+    "name": "Mind Oasis Clinic",
+    "specialty": "Psychiatry clinic (telehealth Australia-wide)",
+    "practice": "Mind Oasis Clinic",
+    "address": "",
+    "suburb": "Online (Sydney-based, Strathfield)",
+    "phone": "1300 680 000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindoasis.com.au/",
+    "interests": [
+     "Addiction and substance use",
+     "ADHD",
+     "Autism",
+     "Anxiety",
+     "Bipolar disorder",
+     "Depression",
+     "Eating disorders",
+     "Memory and cognitive disorders",
+     "OCD",
+     "PTSD",
+     "Sleep disorders",
+     "Child psychiatry",
+     "Old age psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Site states short wait times (no figure)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "Site states it is open to new referrals with online booking. GP or specialist referral required for Medicare rebate; can book first and send referral before appointment."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mindoasis.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees not on homepage (separate fee page). Hours Mon-Fri 9am-5pm. Also offers developmental paediatrics."
+   },
+   {
+    "name": "Sage Clinic",
+    "specialty": "Telehealth psychiatry clinic",
+    "practice": "Sage Clinic",
+    "address": "29A Shields St, Cairns QLD 4870 (admin only, no patient visits)",
+    "suburb": "Online (Cairns-based)",
+    "phone": "07 3106 0369",
+    "fax": "",
+    "email": "contact@sageclinic.com.au",
+    "ereferral": "HealthLink/EDI (ID not published on homepage)",
+    "website": "https://sageclinic.com.au/",
+    "interests": [
+     "ADHD",
+     "Autism (including combined presentations)",
+     "Anxiety and depression",
+     "Eating disorders",
+     "Substance use disorders",
+     "Child and adolescent psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children, adolescents and adults up to 75",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "GP referral via HealthLink/EDI, fax or online upload. After assessment, ongoing care is GP-led under a co-prescribing arrangement with optional reviews. Closed 19 Dec 2026 - 3 Jan 2027."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://sageclinic.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees quoted after pathway planning (not published on homepage). Not an emergency service."
+   },
+   {
+    "name": "PsycheTel Australia",
+    "specialty": "Telehealth psychiatry service",
+    "practice": "PsycheTel Australia",
+    "address": "",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 652 935",
+    "fax": "",
+    "email": "reception@psychetelaustralia.com.au",
+    "ereferral": "",
+    "website": "https://psychetelaustralia.com.au/",
+    "interests": [
+     "ADHD",
+     "Anxiety",
+     "Depression",
+     "Autism",
+     "Bipolar disorder",
+     "PTSD",
+     "Healthcare workers",
+     "Old age psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "German",
+      "Urdu",
+      "Hindi",
+      "Tamil",
+      "Romanian"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "GP and specialist referrals accepted; valid referral needed for Medicare rebate; direct enquiries also accepted."
+    },
+    "inclusive": [
+     "Site states: 'We welcome people of all sexual orientations, gender identities and intersex variations'"
+    ],
+    "sources": [
+     "https://psychetelaustralia.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees on separate page (not checked). Also 07 3319 6925."
+   },
+   {
+    "name": "Psychiatrists Australia (Dr Andrew Westergaard Nielsen)",
+    "specialty": "Adult psychiatrist (telehealth only)",
+    "practice": "Psychiatrists Australia",
+    "address": "",
+    "suburb": "Online (Queensland-based)",
+    "phone": "07 3371 5558",
+    "fax": "",
+    "email": "reception@psychiatristsaustralia.au",
+    "ereferral": "",
+    "website": "https://psychiatristsaustralia.au/online-psychiatry",
+    "interests": [],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Available in every state and territory. GP referral needed for Medicare rebate (can book without, full fee applies). Team contacts within one business day of booking/referral."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://psychiatristsaustralia.au/online-psychiatry"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees depend on appointment type/length; gap explained before appointment. Hours Mon-Fri 9am-5pm AEST."
+   },
+   {
+    "name": "All Psychiatry",
+    "specialty": "Telepsychiatry service",
+    "practice": "All Psychiatry",
+    "address": "PO Box 4160, Knox City Centre VIC 3152",
+    "suburb": "Online (Melbourne-based)",
+    "phone": "03 9099 0500",
+    "fax": "03 8080 6484",
+    "email": "admin@allpsychiatry.com.au",
+    "ereferral": "",
+    "website": "https://www.allpsychiatry.com.au/",
+    "interests": [
+     "Adult mental health",
+     "Child and adolescent mental health",
+     "Developmental and behavioural paediatrics"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "Site states one psychiatrist (Dr Reetika Dhir, child/family focus) is accepting new patients with a short waitlist. GP referral addressed to 'All Psychiatry' via website upload, fax or email; triage team then contacts patient."
+    },
+    "inclusive": [
+     "Practice describes its services as 'culturally safe, inclusive, and respectful'; states commitment to services for Indigenous peoples and culturally and linguistically diverse communities"
+    ],
+    "sources": [
+     "https://www.allpsychiatry.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "States it is a private billing practice; fees not published on homepage."
+   },
+   {
+    "name": "Fluence Clinic",
+    "specialty": "Online psychiatry service",
+    "practice": "Fluence Clinic",
+    "address": "Boat Harbour Beach TAS 7321",
+    "suburb": "Online (Tasmania-based)",
+    "phone": "03 6121 4298",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://fluenceclinic.com/",
+    "interests": [
+     "ADHD",
+     "PTSD",
+     "OCD",
+     "Anxiety disorders",
+     "Addiction",
+     "Mood disorders",
+     "Eating disorders",
+     "Borderline personality disorder"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Site states assessment within 4-8 weeks; contact within 72 hours of referral",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "GP referral for item 291 mental health assessment, addressed to Fluence Clinic, by email. Report to GP within 7-14 days. New-patient availability varies by psychiatrist (some closed, some on request)."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://fluenceclinic.com/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees not published on homepage. Hours Mon-Fri 9am-5pm. Not an emergency service."
+   },
+   {
+    "name": "Dokotela",
+    "specialty": "Telehealth psychiatry platform",
+    "practice": "Dokotela",
+    "address": "",
+    "suburb": "Online (Australia-wide)",
+    "phone": "",
+    "fax": "02 8569 1844",
+    "email": "referrals@dokotela.com.au",
+    "ereferral": "HealthLink EDI (ID not published on homepage)",
+    "website": "https://www.dokotela.com.au/",
+    "interests": [
+     "ADHD assessment (adults and children)",
+     "Child and adolescent psychiatry",
+     "Older persons mental health"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "New patients can request appointments online. Referrals by fax, HealthLink or email/upload form. Fees set independently by each practitioner (fee indicator at dokotela.com.au/fees)."
+    },
+    "inclusive": [
+     "Site states specialists 'welcome all people irrespective of ethnicity, faith, sexual orientation and gender identity'"
+    ],
+    "sources": [
+     "https://www.dokotela.com.au/",
+     "https://www.dokotela.com.au/fees"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fee page: general psychiatry first (45-60 min) $670-770 upfront, about $302-401 after rebate; review $410-570; ADHD/ASD first $770-995; ADHD repeat script $285 (existing patients). $50 weekend/public holiday surcharge for ADHD/ASD. Bulk billing only for first general psychiatry one-off assessment (item 291/92435) for patients outside major cities (MM2-7) with GP referral requesting it - not Newcastle metro."
+   },
+   {
+    "name": "Pandion Health",
+    "specialty": "Telehealth psychiatry service (all ages)",
+    "practice": "Pandion Health",
+    "address": "",
+    "suburb": "Online (Australia-wide)",
+    "phone": "02 9052 1888",
+    "fax": "",
+    "email": "reception@pandionhealth.com.au",
+    "ereferral": "",
+    "website": "https://www.pandionhealth.com.au/service/psychiatrists/",
+    "interests": [
+     "ADHD",
+     "Mood disorders",
+     "Anxiety and OCD",
+     "Trauma and PTSD",
+     "Autism",
+     "Eating disorders",
+     "Psychosis",
+     "Child and adolescent psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Typically 2-4 weeks (site)",
+     "ages": "children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Accepts self-referrals, GP referrals and health professional enquiries; GP referral needed for Medicare rebate. One-off consults and ongoing care."
+    },
+    "inclusive": [
+     "Site states: 'We are inclusive and welcome all cultures, nationalities and religions'"
+    ],
+    "sources": [
+     "https://www.pandionhealth.com.au/service/psychiatrists/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees on separate pricing page (not checked)."
+   },
+   {
+    "name": "ExpertMinds",
+    "specialty": "Telehealth psychiatry and psychology service",
+    "practice": "ExpertMinds",
+    "address": "",
+    "suburb": "Online (Adelaide/Broome-based)",
+    "phone": "02 7227 4777",
+    "fax": "08 6384 2501",
+    "email": "referrals@expertminds.com.au",
+    "ereferral": "",
+    "website": "https://expertminds.com.au/affordable-online-psychiatry-for-adhd-australia/",
+    "interests": [
+     "ADHD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "GP referral generally required for Medicare rebate. Bulk billing depends on individual circumstances (e.g. concession status)."
+    },
+    "inclusive": [
+     "Site states it 'welcomes people of all sexual orientations, gender identities and intersex variations'"
+    ],
+    "sources": [
+     "https://expertminds.com.au/affordable-online-psychiatry-for-adhd-australia/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "NSW/ACT phone listed; national 1300 410 777. Page quotes only typical industry fee ranges, not confirmed ExpertMinds prices."
+   },
+   {
+    "name": "Akkadian Health (adult ADHD assessment)",
+    "specialty": "Telehealth psychiatry service (adult ADHD)",
+    "practice": "Akkadian Health",
+    "address": "",
+    "suburb": "Online (Adelaide-based)",
+    "phone": "1800 290 880",
+    "fax": "08 5117 3206",
+    "email": "reception@akkadianhealth.com",
+    "ereferral": "",
+    "website": "https://www.akkadianhealth.com.au/services/adhd-testing/",
+    "interests": [
+     "Adult ADHD assessment",
+     "ADHD with anxiety or autism"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Site banner: less than 14 days",
+     "ages": "adults (child/adolescent ADHD is a separate service)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Standard GP psychiatry referral needed (and for Medicare rebate). Ongoing care mostly by GP. Site notes NSW pathways differ due to state requirements - check before referring."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.akkadianhealth.com.au/services/adhd-testing/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Adult ADHD assessment $1,280 upfront (two appointments) or instalments; one-off Medicare rebate approx. $467.45 with GP referral. Not a crisis service."
+   },
+   {
+    "name": "OzADHD",
+    "specialty": "Online adult ADHD psychiatry service",
+    "practice": "OzADHD",
+    "address": "",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 520 356",
+    "fax": "",
+    "email": "admin@ozadhd.com.au",
+    "ereferral": "",
+    "website": "https://www.ozadhd.com.au/",
+    "interests": [
+     "Adult ADHD",
+     "Anxiety",
+     "Depression",
+     "Bipolar disorder"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults only",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Online video only. Named psychiatrists: Dr Vincent Leow, Dr Ivan Lakicevic. GP referral pathway (details on separate GP page). Medicare rebate eligible."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ozadhd.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees not published on homepage."
+   },
+   {
+    "name": "Lionheart Clinic",
+    "specialty": "Child and adolescent telepsychiatry clinic",
+    "practice": "Lionheart Clinic",
+    "address": "",
+    "suburb": "Online (Sydney-based)",
+    "phone": "02 8552 7393",
+    "fax": "",
+    "email": "hello@lionheartclinic.com.au",
+    "ereferral": "",
+    "website": "https://www.lionheartclinic.com.au/",
+    "interests": [
+     "Child and adolescent psychiatry",
+     "Perinatal psychiatry (Dr Joanna Blades)",
+     "ADHD",
+     "Autism",
+     "Anxiety",
+     "Depression",
+     "Bipolar disorder",
+     "OCD",
+     "PTSD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "5-18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Australia-wide telehealth (all states and territories). GP referral needed for Medicare rebate (valid 12 months); private bookings and NDIS participants also accepted. Psychiatrists listed: Dr Mimi Xu, Dr Joanna Blades."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lionheartclinic.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees and wait times on separate pages (not checked)."
+   },
+   {
+    "name": "Blue Fig Clinic (perinatal psychiatry)",
+    "specialty": "Perinatal and adult psychiatry",
+    "practice": "Blue Fig Clinic",
+    "address": "Suite 03, Level 8, 139 Macquarie St, Sydney NSW 2000 (temporary relocation)",
+    "suburb": "Sydney NSW",
+    "phone": "02 7202 7061",
+    "fax": "02 9119 6079",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.bluefig.clinic/perinatal-psychiatry-sydney",
+    "interests": [
+     "Perinatal psychiatry (preconception to 2 years postpartum)",
+     "Postnatal depression and anxiety",
+     "Postpartum psychosis",
+     "Infant mental health (0-3)",
+     "Psychotherapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Clinic responds within up to a week of referral",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "In-person and telehealth video both offered (page does not say whether first appointments can be telehealth). Referral from GP, obstetrician or gynaecologist required; referrals from online-only/telehealth-only practices NOT accepted. Deposit required to book. Psychiatrist named: Dr Sangeetha Makielan."
+    },
+    "inclusive": [
+     "Women's health focus: perinatal service supporting women from preconception to two years postpartum"
+    ],
+    "sources": [
+     "https://www.bluefig.clinic/perinatal-psychiatry-sydney"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Private practice; gap fee applies; fees provided by admin before booking. Not an emergency service."
+   },
+   {
+    "name": "Parent in Mind (Dr Cathrin Kusuma)",
+    "specialty": "Perinatal and reproductive psychiatrist",
+    "practice": "Parent in Mind",
+    "address": "",
+    "suburb": "Melbourne VIC",
+    "phone": "1300 861 925",
+    "fax": "",
+    "email": "info@parentinmind.com.au",
+    "ereferral": "HealthLink EDI: parentin",
+    "website": "https://parentinmind.com.au/",
+    "interests": [
+     "Perinatal and reproductive psychiatry",
+     "Postnatal depression and anxiety",
+     "Postpartum psychosis",
+     "PMDD",
+     "OCD",
+     "Bipolar disorder"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Telehealth offered, but the homepage does not state whether interstate (NSW) or new patients are accepted - confirm before referring."
+    },
+    "inclusive": [
+     "Practice states it 'is committed to providing safe and inclusive services for people of LGBTQIA+ communities and their families'"
+    ],
+    "sources": [
+     "https://parentinmind.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": ""
+   },
+   {
+    "name": "HelloDoc Psychiatry",
+    "specialty": "Telehealth psychiatry service",
+    "practice": "HelloDoc",
+    "address": "",
+    "suburb": "Online (NSW-wide)",
+    "phone": "02 4086 5655",
+    "fax": "",
+    "email": "admin@hellodoc.com.au",
+    "ereferral": "",
+    "website": "https://hellodoc.com.au/new-south-wales-nsw/",
+    "interests": [
+     "ADHD",
+     "Autism",
+     "Anxiety",
+     "Depression",
+     "Bipolar disorder",
+     "PTSD",
+     "OCD",
+     "Eating disorders",
+     "Addiction",
+     "Schizophrenia",
+     "Dementia",
+     "Borderline personality disorder",
+     "Child and adolescent psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "adults, children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Valid GP referral required. Bulk billing of initial assessments may be available only for rural/remote NSW patients."
+    },
+    "inclusive": [
+     "Site states: 'HelloDoc welcomes people of all sexual orientations, gender identities and intersex variations'"
+    ],
+    "sources": [
+     "https://hellodoc.com.au/new-south-wales-nsw/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees on separate page (not checked). Nationwide 1300 959 942. Not an emergency service."
+   },
+   {
+    "name": "Wellvue",
+    "specialty": "Telehealth psychiatry service",
+    "practice": "Wellvue",
+    "address": "Hibernia Lodge, 69 Collett Street, Queanbeyan NSW 2620 (head office)",
+    "suburb": "Online (Queanbeyan NSW-based)",
+    "phone": "1300 935 883",
+    "fax": "02 8000 1865",
+    "email": "referrals@wellvue.com.au",
+    "ereferral": "",
+    "website": "https://wellvue.com.au/",
+    "interests": [
+     "ADHD",
+     "ASD assessment",
+     "Depression",
+     "Anxiety",
+     "Bipolar disorder",
+     "Child and adolescent psychiatry",
+     "OCD",
+     "PTSD",
+     "Sleep disorders"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "Site: often within 24-48 hours",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Upload GP referral for review; Medicare rebate needs valid GP/specialist referral."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://wellvue.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Private fees (site): psychiatry initial $750-1,015 (rebate $268.90); follow-up $350-490 (rebate $89.30-137.45); ADHD initial $800-1,015; ASD package $2,500-3,500."
+   },
+   {
+    "name": "Dolphin Tribe",
+    "specialty": "Child and adolescent psychiatry",
+    "practice": "Dolphin Tribe",
+    "address": "Unit 4, 1 Railway Street, Baulkham Hills NSW 2153",
+    "suburb": "Baulkham Hills (Sydney) NSW",
+    "phone": "02 7202 7747",
+    "fax": "02 9167 7119",
+    "email": "reception@dolphintribe.com.au",
+    "ereferral": "",
+    "website": "https://dolphintribe.com.au/child-psychiatrist-sydney/",
+    "interests": [
+     "Child and adolescent psychiatry",
+     "Psychotherapy",
+     "ADHD and autism assessment (in clinic only)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "5-18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Telehealth offered for child psychiatry consultations where the psychiatrist considers it clinically appropriate; ADHD and autism assessments are in-clinic only. GP or specialist referral for Medicare rebate. Founder: Dr Sangeetha Makielan (also at Blue Fig Clinic)."
+    },
+    "inclusive": [
+     "Practice describes its care as 'Neurodiversity-informed and trauma-informed'"
+    ],
+    "sources": [
+     "https://dolphintribe.com.au/child-psychiatrist-sydney/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees on request. Not an emergency service."
+   },
+   {
+    "name": "Dr Maxine Cheung",
+    "specialty": "Adult psychiatrist (telehealth)",
+    "practice": "Mind Oasis Clinic Telehealth",
+    "address": "",
+    "suburb": "Online (NSW and VIC)",
+    "phone": "1300 680 000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindoasis.com.au/",
+    "interests": [
+     "Women's mental health (perimenstrual, perinatal, perimenopausal)",
+     "Neurodivergent adults",
+     "Life transitions",
+     "Mood and anxiety disorders",
+     "PTSD",
+     "OCD",
+     "ADHD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "16-69",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Cantonese",
+      "Mandarin"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy profile offers initial video appointments; service areas NSW and VIC; works Tue-Wed. GP referral needed for Medicare rebate."
+    },
+    "inclusive": [
+     "Profile lists women's mental health as a focus"
+    ],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-maxine-cheung/psychiatrist/1736147"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Halaxy fees: initial video $990; 60-min follow-up $880; short follow-up $440."
+   },
+   {
+    "name": "Dr Pek Ang",
+    "specialty": "Adult and perinatal psychiatrist",
+    "practice": "Newcastle Mood Clinic / Mind Oasis Clinic",
+    "address": "91 Chatham Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow (Newcastle) NSW",
+    "phone": "02 4985 1809",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Mood disorders",
+     "Anxiety disorders",
+     "ADHD",
+     "OCD",
+     "Trauma",
+     "Sports psychiatry",
+     "Perinatal (mother and baby)",
+     "Doctors and medical students",
+     "Military and veterans"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "mother and baby, 18+",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "RANZCP profile (updated Jan 2024) states offers telepsychiatry; GP referral required; new-patient status and whether first visit can be telehealth not stated. Also consults via Mind Oasis Clinic, Strathfield."
+    },
+    "inclusive": [
+     "RANZCP profile lists experience with Aboriginal and Torres Strait Islander, gender diverse, gay and lesbian, intersex, non-English speaking and people with intellectual or physical disability"
+    ],
+    "sources": [
+     "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/2922/dr-pek-ang"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Also in Psychiatry list."
+   },
+   {
+    "name": "Dr Annie Abraham",
+    "specialty": "Adult psychiatrist",
+    "practice": "LENA Medical Specialist",
+    "address": "10 Dianne St, Elermore Vale NSW 2287",
+    "suburb": "Elermore Vale (Newcastle) NSW",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.halaxy.com/profile/dr-annie-abraham/psychiatrist/1741601",
+    "interests": [
+     "Addictions",
+     "Anxiety",
+     "ADHD",
+     "Autism",
+     "Forensic psychiatry",
+     "Grief and loss",
+     "Personality disorders",
+     "PTSD",
+     "Psychodynamic psychotherapy",
+     "Schizophrenia",
+     "Trauma",
+     "Older adults"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Malayalam",
+      "Hindi",
+      "Tamil"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy lists online consultations, but the video fee shown is for ongoing (third and later) follow-ups; whether the initial consult can be by telehealth is not stated - confirm. Book via Halaxy."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-annie-abraham/psychiatrist/1741601"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Newcastle-based; not currently in Psychiatry list. Halaxy fees: initial $850; follow-ups $490, $400; video ongoing $300; ADHD package $1,300. Listed phone is a mobile, so omitted. Languages: fluent English and Malayalam; understands Hindi and Tamil."
+   },
+   {
+    "name": "Dr Tianqi Hang",
+    "specialty": "Adult psychiatrist (telehealth)",
+    "practice": "Mind Oasis Clinic Telehealth",
+    "address": "",
+    "suburb": "Online (Strathfield NSW-based)",
+    "phone": "1300 680 000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindoasis.com.au/",
+    "interests": [
+     "Adult ADHD and co-occurring conditions",
+     "Anxiety",
+     "Eating disorders",
+     "OCD",
+     "Personality disorders",
+     "PTSD",
+     "Schizophrenia",
+     "Autism (management only)",
+     "Consultation-liaison psychiatry"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "17-64",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy profile offers an initial video appointment (online booking). GP referral needed for Medicare rebate. Service areas: NSW, VIC, QLD, SA, WA, ACT."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-tianqi-hang/psychiatrist/1763951"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Halaxy fees: initial video $990; follow-up video $440 (existing patients seen within 2 years)."
+   },
+   {
+    "name": "Dr Jonathan Brailey",
+    "specialty": "Adult psychiatrist (telehealth)",
+    "practice": "Mind Oasis Clinic Telehealth",
+    "address": "",
+    "suburb": "Online (Strathfield NSW-based)",
+    "phone": "1300 680 000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindoasis.com.au/",
+    "interests": [
+     "Anxiety",
+     "ADHD",
+     "Eating disorders",
+     "Mood disorders",
+     "OCD",
+     "Psychotherapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "18-65",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy profile offers an initial video appointment (online booking). GP referral needed for Medicare rebate. Service areas: NSW and SA."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-jonathan-brailey/psychiatrist/1729009"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Halaxy fees: initial video $990; follow-up video $440 (existing patients seen within 2 years)."
+   },
+   {
+    "name": "Dr Rhema Haven",
+    "specialty": "Adult psychiatrist (telehealth)",
+    "practice": "Mind Oasis Clinic Telehealth",
+    "address": "",
+    "suburb": "Online (NSW and VIC)",
+    "phone": "1300 680 000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindoasis.com.au/",
+    "interests": [
+     "ADHD",
+     "Bipolar disorder",
+     "Generalised anxiety disorder",
+     "OCD",
+     "Psychosis",
+     "Depression"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "19-64",
+     "hospitals": [],
+     "languages": [
+      "English",
+      "Yoruba"
+     ],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy profile offers an initial video appointment (online booking). GP referral needed for Medicare rebate. Service areas: NSW and VIC."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-rhema-haven/psychiatrist/1747653"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Halaxy fees: initial video $990; follow-up video $440 (existing patients seen within 2 years)."
+   },
+   {
+    "name": "Dr Tayler Watson",
+    "specialty": "Adult psychiatrist (telehealth)",
+    "practice": "Geelong Psychiatry",
+    "address": "",
+    "suburb": "Online (Geelong VIC-based)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.halaxy.com/profile/dr-tayler-watson/psychiatrist/1747483",
+    "interests": [
+     "Organic psychiatry",
+     "Neuropsychiatry",
+     "Neurodevelopmental disorders",
+     "OCD",
+     "Anxiety",
+     "Eating disorders",
+     "Mood disorders",
+     "PTSD",
+     "Schizophrenia",
+     "ADHD",
+     "Intellectual disability"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "18-80",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Halaxy profile offers an initial video appointment; service areas NSW and VIC; available Tue and Thu mornings. Book via Halaxy (no phone listed)."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/dr-tayler-watson/psychiatrist/1747483"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Halaxy fees: initial video $990; follow-up video $440."
+   },
+   {
+    "name": "Mindscape Psychiatry",
+    "specialty": "Psychiatry practice (telehealth Australia-wide)",
+    "practice": "Mindscape Psychiatry",
+    "address": "Shop 28/57-77 Chambers Flat Rd, Marsden QLD 4132",
+    "suburb": "Online (Brisbane-based, Marsden QLD)",
+    "phone": "07 5588 5108",
+    "fax": "07 5588 5109",
+    "email": "referrals@mindscapepsychiatry.com.au",
+    "ereferral": "",
+    "website": "https://mindscapepsychiatry.com.au/",
+    "interests": [
+     "ADHD",
+     "Depression including treatment-resistant",
+     "Anxiety",
+     "PTSD",
+     "Bipolar disorder",
+     "Schizophrenia",
+     "Addiction",
+     "Borderline personality disorder",
+     "OCD",
+     "Eating disorders",
+     "Child and adolescent psychiatry (Dr Rajesh Harjai, ages 5-20, telehealth only)",
+     "Child/teen ADHD and autism assessment"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "States secure telehealth Australia-wide. Referrals via website or email. Booking times shown in Queensland time (no daylight saving)."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mindscapepsychiatry.com.au/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Fees on separate page (not checked). Hours Mon-Fri 9am-4pm AEST."
+   },
+   {
+    "name": "Psych United",
+    "specialty": "Telehealth psychiatry service",
+    "practice": "Psych United",
+    "address": "Southport Central Tower 2, 5 Lawson Street, Southport QLD 4215",
+    "suburb": "Online (Gold Coast-based)",
+    "phone": "07 3726 5165",
+    "fax": "",
+    "email": "admin@psychunited.com.au",
+    "ereferral": "",
+    "website": "https://psychunited.com.au/our-fees/",
+    "interests": [
+     "Adult ADHD assessment",
+     "Adult general psychiatry",
+     "Child ADHD and psychiatry (under 18)",
+     "One-off item 291 assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "Express ADHD/child assessments within 2 weeks of booking (subject to availability)",
+     "ages": "children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Bulk billing only for rural patients (MM2-7), ongoing and one-off; Newcastle metro (MM1) patients pay private fees. One-off 291 referral must request item 291; ongoing care stays with GP. Not an acute care service."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://psychunited.com.au/our-fees/"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "MM1 fees (site): adult general initial $608.70 (rebate $262.10); adult/child ADHD initial $862.33 (rebate $262.10); express ADHD $1,318.85; 30-min review $304.35 (rebate $134.00); one-off 291 $862.33 (rebate $455.60). Refundable deposit for one-off assessments."
+   },
+   {
+    "name": "TeleThoughts",
+    "specialty": "Telepsychiatry service",
+    "practice": "TeleThoughts",
+    "address": "",
+    "suburb": "Online (Australia-wide)",
+    "phone": "08 7095 9490",
+    "fax": "08 7094 3330",
+    "email": "support@telethoughts.com.au",
+    "ereferral": "",
+    "website": "https://telethoughts.com.au/bulk-billed-psychiatrist-affordable-mental-health-care-in-australia.php",
+    "interests": [
+     "ADHD",
+     "Autism",
+     "Depression",
+     "PTSD",
+     "Anxiety",
+     "Bipolar disorder",
+     "Schizophrenia",
+     "Addiction",
+     "Borderline personality disorder",
+     "OCD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "GP referral required. Page says telehealth bulk billing applies only if Medicare eligibility requirements are met (not detailed). Fees changed 1 Feb 2026 - confirm with admin."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://telethoughts.com.au/bulk-billed-psychiatrist-affordable-mental-health-care-in-australia.php"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Office hours Mon-Fri 12pm-8pm Sydney time. Base city not stated."
+   },
+   {
+    "name": "Telecare Digital Mental Health Services",
+    "specialty": "Telehealth psychiatry and psychology service",
+    "practice": "Telecare Australia",
+    "address": "173 Whitehorse Rd, Blackburn VIC 3130",
+    "suburb": "Online (Melbourne-based)",
+    "phone": "03 9052 4872",
+    "fax": "",
+    "email": "admin@telecare.com.au",
+    "ereferral": "",
+    "website": "https://www.telecare.com.au/digital-mental-health-services",
+    "interests": [
+     "One-off diagnostic assessment with GP-managed ongoing care",
+     "ADHD and autism",
+     "Depression and anxiety",
+     "Trauma",
+     "Grief",
+     "Family violence",
+     "Aged care residents",
+     "Veterans"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "Referral processed within 3 business days; first appointment offered within 4 weeks",
+     "ages": "5+",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Psychiatry referral from GP or nurse practitioner. Psychiatrist gives one-off assessment and recommendations to GP; medication reviews need a new referral and incur a fee. Bulk billing may be available for pensioners, aged-care residents and regional patients. Not for emergencies."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.telecare.com.au/digital-mental-health-services"
+    ],
+    "checked": "2026-10-31",
+    "ahpra": "not checked",
+    "notes": "Gap fee may apply; first consult 50-60 min. Assisted consults possible at participating GP clinics."
+   }
+  ]
+ }
+}
