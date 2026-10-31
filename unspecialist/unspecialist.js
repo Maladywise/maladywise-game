@@ -1,11 +1,11 @@
 /* Unspecialist: a free, game-style GP school. Plain JS, no build step.
-   Screens: home, huddle, clinic (waiting room), consult, result, inbox. State lives in localStorage ("us-v1"). */
+   Screens: home, huddle, clinic (waiting room), consult, result, inbox, desk (Front desk billing), cheat (MBS cheat sheet). State lives in localStorage ("us-v1"). */
 (function () {
   "use strict";
 
   var KEY = "us-v1";
   var app = document.getElementById("us-app");
-  var D = { huddle: [], cases: [], results: [] };
+  var D = { huddle: [], cases: [], results: [], billing: { scenarios: [], rules: [], note: "", checked: "" } };
 
   var ROOMS = [
     { id: "consult", name: "Consult room", sub: "Communication" },
@@ -41,6 +41,11 @@
       [35, "Hmm. The patient will be fine. Mostly. No thanks to some of those choices."],
       [0, "That was technically a consult. Let's call it a learning opportunity."]
     ],
+    desk: {
+      right: ["Billed right. Your accountant and Medicare both nod.", "Clean claim. Nothing for an auditor to circle.", "Correct. Legitimate money, legitimately claimed.", "Yes. The practice manager wants to clone you."],
+      wrong: ["Not quite. That's money on the table or a letter from Medicare.", "Nope. Reception is quietly fixing your claim.", "Not this one. The MBS is a fussy document.", "Close, but billing doesn't do partial credit."],
+      end: [[5, "Flawless billing. Suspiciously flawless. Keep the notes that prove it."], [3, "Decent. A few claims would make the practice manager twitch."], [0, "The MBS won this round. It comes back around."]]
+    },
     inbox: [[8, "Clean inbox, clean conscience. Flawless."], [6, "Mostly sorted. A couple of results are side-eyeing you."], [4, "Half right. The inbox always wins eventually."], [0, "The inbox ate you alive. It happens to all of us."]]
   };
 
@@ -99,6 +104,7 @@
     D.huddle.forEach(function (q) { if (q.room === rid) ids.push("h:" + q.id); });
     D.cases.forEach(function (c) { if (c.room === rid) ids.push("c:" + c.id); });
     D.results.forEach(function (x) { if (x.room === rid) ids.push("r:" + x.id); });
+    D.billing.scenarios.forEach(function (s) { if (s.room === rid) ids.push("b:" + s.id); });
     return ids;
   }
   function roomProgress(rid) {
@@ -160,6 +166,23 @@
     }
     return d.clinic;
   }
+  function deskDay() {
+    var d = day(), B = D.billing.scenarios;
+    if (!d.desk && B.length) {
+      var ck = function (s) { return S.cards["b:" + s.id]; };
+      var due = B.filter(function (s) { return ck(s) && ck(s).due <= TNUM; }).sort(function (a, b) { return ck(a).due - ck(b).due; });
+      var fresh = shuffle(B, rng("us-desk-order")).filter(function (s) { return !ck(s); });
+      var list = due.slice(0, 5);
+      while (list.length < 5 && fresh.length) list.push(fresh.shift());
+      if (list.length < 5) {
+        var rest = B.filter(function (s) { return list.indexOf(s) < 0; }).sort(function (a, b) { return (ck(a) ? ck(a).due : 0) - (ck(b) ? ck(b).due : 0); });
+        while (list.length < 5 && rest.length) list.push(rest.shift());
+      }
+      d.desk = { ids: list.map(function (s) { return s.id; }), due: list.map(function (s) { return !!ck(s); }), ans: [], cur: null, sel: [], done: false };
+      save();
+    }
+    return d.desk || { ids: [], due: [], ans: [], cur: null, sel: [], done: false };
+  }
   function inboxDay() {
     var d = day();
     if (!d.inbox) {
@@ -175,7 +198,7 @@
   function render(keep) {
     stopTimer();
     var h = (location.hash || "").replace("#", "");
-    var fn = { huddle: huddle, clinic: clinic, consult: consult, result: result, inbox: inbox }[h] || home;
+    var fn = { huddle: huddle, clinic: clinic, consult: consult, result: result, inbox: inbox, desk: desk, cheat: cheat }[h] || home;
     app.innerHTML = fn();
     app.setAttribute("data-screen", h || "home");
     if (h === "inbox") startInboxTimer();
@@ -190,7 +213,8 @@
 
   function home() {
     var rk = rankInfo(), st = streak();
-    var hd = huddleDay(), cl = clinicDay(), ib = inboxDay();
+    var hd = huddleDay(), cl = clinicDay(), ib = inboxDay(), dk = deskDay();
+    var dOk = dk.ans.filter(function (a) { return a.ok; }).length;
     var hOk = hd.ans.filter(function (a) { return a.ok; }).length;
     var clSeen = cl.seen.length, clAvg = clSeen ? Math.round(cl.seen.reduce(function (s, id) { return s + (cl.res[id] ? cl.res[id].total : 0); }, 0) / clSeen) : 0;
     function todo(href, name, sub, done) {
@@ -206,10 +230,12 @@
       '<div class="us-rank"><span class="us-kick">Your rank · ' + (S.points || 0).toLocaleString("en-AU") + " points</span><span class=\"us-rname\">" + esc(rk.name) + "</span>" +
       '<div class="us-rbar"><i style="width:' + Math.round(rk.pct * 100) + '%"></i></div>' +
       "<span>" + (rk.next ? (rk.next[0] - S.points).toLocaleString("en-AU") + " points to " + esc(rk.next[1].replace("Registrar · ", "")) + "." + (rk.after.length ? " Then " + esc(rk.after.join(", ")) + "." : "") : "Top of the tree. The practice is yours.") + "</span></div>" +
-      '<div class="us-sec"><span class="us-kick">Today · about 12 minutes</span>' +
+      '<div class="us-sec"><span class="us-kick">Today · about 15 minutes</span>' +
       todo("#huddle", "Morning huddle", hd.done ? hOk + "/5 right. Back tomorrow for more." : (hd.ans.length ? "Question " + (hd.ans.length + 1) + " of 5" : "5 questions your brain is due to forget"), hd.done) +
       todo("#clinic", "Clinic Day", clSeen >= cl.ids.length ? "All " + cl.ids.length + " seen · average " + clAvg + "/100" : (clSeen ? clSeen + " of " + cl.ids.length + " seen" : cl.ids.length + " patients waiting. One is a curveball."), clSeen >= cl.ids.length) +
       todo("#inbox", "Results inbox", ib.done ? ib.score + "/8 sorted correctly" : "8 results from yesterday's patients. 60 seconds.", ib.done) +
+      (dk.ids.length ? todo("#desk", "Front desk: Bill it right", dk.done ? dOk + "/" + dk.ids.length + " billed right. The accountant is pleased." : (dk.ans.length ? "Claim " + (dk.ans.length + 1) + " of " + dk.ids.length : dk.ids.length + " claims to check. Money on the table, or a letter from Medicare?"), dk.done) : "") +
+      '<a class="us-link" href="#cheat">MBS cheat sheet</a>' +
       "</div>" +
       '<div class="us-sec"><span class="us-kick">Your practice · 10 rooms</span><div class="us-rooms">' + rooms + "</div>" +
       '<p class="us-note">Every huddle question, patient and result belongs to a room. Get them right to fill the room.</p></div>' +
@@ -296,10 +322,13 @@
   function startConsult(id) {
     var cl = clinicDay();
     if (cl.seen.indexOf(id) >= 0) return;
-    if (!cl.cur || cl.cur.id !== id) cl.cur = { id: id, used: [], dx: null, plan: [], safety: null, bill: null, tab: "dx" };
+    if (!cl.cur || cl.cur.id !== id) cl.cur = { id: id, used: [], dx: null, plan: [], safety: null, bill: null, extra: [], tab: "dx" };
     save(); go("#consult");
   }
   function timeUsed(c, used) { var m = BASE_MIN; used.forEach(function (aid) { var a = byId(c.actions, aid); if (a) m += a.min; }); return m; }
+  // Procedure minutes run the clock but don't count toward the time tier (no time-banking across services).
+  function procMins(c, used) { var m = 0; used.forEach(function (aid) { var a = byId(c.actions, aid); if (a && a.proc) m += a.min; }); return m; }
+  function extrasOf(c) { return (c.billing && c.billing.extras) || []; }
   function chipGroup(c, cur, g, label) {
     var has = function (id) { return cur.used.indexOf(id) >= 0; };
     var chips = c.actions.filter(function (a) { return a.g === g && (!a.needs || has(a.needs)); }).map(function (a) {
@@ -324,7 +353,13 @@
     if (cur.tab === "dx") panel = '<p class="us-plabel">Most likely diagnosis (pick one)</p>' + c.dx.options.map(function (o, k) { return opt("dx", k, o, cur.dx === k); }).join("");
     if (cur.tab === "plan") panel = '<p class="us-plabel">Plan (pick all that apply)</p>' + c.plan.options.map(function (o, k) { return opt("plan", k, o, cur.plan.indexOf(k) >= 0, true); }).join("");
     if (cur.tab === "safety") panel = '<p class="us-plabel">Safety-net advice (pick one)</p>' + c.safety.options.map(function (o, k) { return opt("safety", k, o, cur.safety === k); }).join("");
-    if (cur.tab === "bill") panel = '<p class="us-plabel">Time used so far: <b>' + mins + " min</b>. Bill the time-tier that fits.</p>" + LEVELS.map(function (l, k) { return opt("bill", k, l.n + " (" + l.item + ") · " + l.d, cur.bill === k); }).join("");
+    if (cur.tab === "bill") {
+      var pm = procMins(c, cur.used), ex = extrasOf(c), sel = cur.extra || [];
+      panel = '<p class="us-plabel">Time with the patient so far: <b>' + (mins - pm) + " min</b>" + (pm ? " (plus " + pm + " min of procedure, which doesn't count toward the tier)" : "") + ". Bill the time tier that fits.</p>" +
+        LEVELS.map(function (l, k) { return opt("bill", k, l.n + " (" + l.item + ") · " + l.d, cur.bill === k); }).join("");
+      if (ex.length) panel += '<p class="us-plabel us-also">Also claim? Tick any that are legitimate today; leave the rest.</p>' + ex.map(function (x, k) { return opt("extra", k, x.label, sel.indexOf(k) >= 0, true); }).join("");
+      panel += '<p class="us-billnote">' + billNote() + ' <a href="#cheat">MBS cheat sheet</a></p>';
+    }
     var ready = cur.dx !== null && cur.plan.length && cur.safety !== null && cur.bill !== null;
     var fu = c.followup ? esc(c.name) + " may come back. Whatever you decide today follows them." : "Every choice counts, including the ones you skip.";
     return topRow("#clinic", "Waiting room", clock) +
@@ -368,10 +403,22 @@
     if (cur.plan.indexOf(c.plan.explain) < 0) missed.push({ t: "Explain the plan and check understanding", w: "Teach-back: ask them to say it back in their own words." });
     c.actions.forEach(function (a) { if (a.flag === "pc" && !has(a.id)) missed.push({ t: a.label, w: "Patient-centred care starts with making communication possible." }); });
     if (!has("else") && !(byId(c.actions, "else") || {}).key) missed.push({ t: "\"Anything else?\"", w: "Two minutes well spent, usually." });
-    var lvl = levelFor(mins), bill = cur.bill === lvl ? 100 : (cur.bill === lvl - 1 ? 50 : 0);
-    if (cur.bill !== lvl) missed.push({ t: "Billing: " + LEVELS[lvl].n + " (" + LEVELS[lvl].item + ")", w: "You used " + mins + " minutes and chose " + LEVELS[cur.bill].n + (cur.bill > lvl ? ". That's over-claiming, which is the kind of thing that gets audited." : ". Under-claiming is safe but leaves money on the table.") });
+    var att = mins - procMins(c, cur.used), lvl = levelFor(att), bill = cur.bill === lvl ? 100 : (cur.bill === lvl - 1 ? 50 : 0);
+    if (cur.bill !== lvl) missed.push({ t: "Billing: " + LEVELS[lvl].n + " (" + LEVELS[lvl].item + ")", w: "You spent " + att + " minutes with the patient" + (att !== mins ? " (procedure time excluded)" : "") + " and chose " + LEVELS[cur.bill].n + (cur.bill > lvl ? ". That's over-claiming, which is the kind of thing that gets audited." : ". Under-claiming is safe but leaves money on the table.") });
+    var ex = extrasOf(c), claim = [LEVELS[lvl].n + " (" + LEVELS[lvl].item + ")"];
+    if (ex.length) {
+      var good = 0, sel = cur.extra || [];
+      ex.forEach(function (x, k) {
+        var on = sel.indexOf(k) >= 0;
+        if (x.ok) claim.push(x.label);
+        if (on === !!x.ok) good++;
+        else missed.push({ t: (x.ok ? "Billing, missed co-claim: " : "Billing, invalid co-claim: ") + x.label, w: x.why || "", red: false });
+      });
+      bill = 0.6 * bill + 40 * good / ex.length;
+    }
     var sc = { safety: clamp(safety), acc: clamp(acc), time: clamp(time), pc: clamp(100 * pg / pw), bill: clamp(bill) };
     sc.total = clamp((sc.safety + sc.acc + sc.time + sc.pc + sc.bill) / 5);
+    sc.claim = claim; sc.billSrc = ex.map(function (x) { return x.src; }).filter(Boolean);
     sc.mins = mins; sc.over = over; sc.missed = missed; sc.danger = danger; sc.lastCrit = lastCrit;
     sc.critEarly = !!c.critical && slot <= 1;
     return sc;
@@ -416,8 +463,96 @@
       '<div class="us-sbars">' + bars + "</div>" + extra +
       '<div class="us-sec"><span class="us-kick">What you missed</span>' + miss + "</div>" +
       '<div class="us-pearl"><span class="us-kick">Teaching pearl</span><p>' + esc(c.pearl) + "</p></div>" +
-      '<div class="us-sec"><span class="us-kick">Sources</span><ul class="us-src">' + c.sources.map(function (s) { return "<li>" + srcLink(s.url, s.t) + "</li>"; }).join("") + "</ul></div>" +
+      (sc.claim ? '<div class="us-card"><span class="us-kick">The right claim</span><b>' + sc.claim.map(esc).join(" + ") + "</b><span>" + billNote() + "</span></div>" : "") +
+      '<div class="us-sec"><span class="us-kick">Sources</span><ul class="us-src">' + c.sources.concat(sc.billSrc || []).map(function (s) { return "<li>" + srcLink(s.url, s.t) + "</li>"; }).join("") + "</ul></div>" +
       '<a class="us-btn" href="#clinic">' + (allDone ? "Close the clinic" : "Next patient") + "</a>";
+  }
+
+  // --- front desk (billing) ---
+  function fmtDate(s) { try { return new Date(dayNum(s) * 864e5).toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }); } catch (e) { return s; } }
+  function billNote() { return esc(D.billing.note || "Billing rules change. Check MBS Online before you bill.") + (D.billing.checked ? " Last checked " + esc(fmtDate(D.billing.checked)) + "." : ""); }
+  function scen(id) { return byId(D.billing.scenarios, id); }
+  function sameSet(a, b) { if (a.length !== b.length) return false; var x = a.slice().sort(), y = b.slice().sort(); for (var i = 0; i < x.length; i++) if (x[i] !== y[i]) return false; return true; }
+  function srcList(list) { return '<ul class="us-src sm">' + (list || []).map(function (s) { return "<li>" + srcLink(s.url, s.t) + "</li>"; }).join("") + "</ul>"; }
+  function desk() {
+    var dk = deskDay(), n = dk.ids.length, i = dk.ans.length;
+    if (!n) return topRow("#", "Home", "") + head("Front desk", "Closed for now", "We couldn't load today's billing scenarios. Refresh to try again.");
+    var bars = dk.ids.map(function (id, k) { var a = dk.ans[k]; return '<i class="' + (a ? (a.ok ? "ok" : "no") : (k === i ? "now" : "")) + '"></i>'; }).join("");
+    if (dk.done || i >= n) {
+      var ok = dk.ans.filter(function (a) { return a.ok; }).length, v = "";
+      for (var e = 0; e < SASS.desk.end.length; e++) if (ok >= SASS.desk.end[e][0]) { v = SASS.desk.end[e][1]; break; }
+      var list = dk.ans.map(function (a) { var s = scen(a.id); return s ? '<li class="' + (a.ok ? "ok" : "no") + '"><span class="us-rhead"><b>' + esc(s.topic) + '</b><span class="us-verd">' + (a.ok ? "&#10003; Right" : "&#10007; Missed") + "</span></span><span>" + esc(s.q) + "</span><small>" + esc(answerText(s)) + "</small></li>" : ""; }).join("");
+      return topRow("#", "Home", '<span class="us-count">Claims lodged</span>') + '<div class="us-steps">' + bars + "</div>" +
+        head("Front desk · done", ok + " out of " + n, esc(v)) +
+        '<div class="us-card"><b>+' + ok * 10 + " points</b><span>Claims you miss come back sooner. Ones you nail drift further away.</span></div>" +
+        '<ul class="us-fbl">' + list + "</ul>" +
+        '<div class="us-card soft"><span>' + billNote() + "</span></div>" +
+        '<a class="us-btn" href="#cheat">Open the MBS cheat sheet</a><a class="us-btn ghost" href="#">Home</a>';
+    }
+    var s = scen(dk.ids[i]); if (!s) { dk.ids.splice(i, 1); save(); return desk(); }
+    var cur = dk.cur && dk.cur.id === s.id ? dk.cur : null, multi = s.type === "multi";
+    var ans = multi ? s.answer : [s.answer], picked = cur ? cur.pick : (multi ? dk.sel : []);
+    var opts = s.options.map(function (o, k) {
+      var cls = "", on = picked.indexOf(k) >= 0, right = ans.indexOf(k) >= 0;
+      if (cur) cls = (right ? (on || !multi ? "ok" : "ok miss") : (on ? "no" : "dim")) + (multi && on ? " on" : "");
+      else if (multi && on) cls = "sel";
+      return '<button type="button" class="us-opt ' + (multi ? "multi " : "") + cls + '" aria-pressed="' + on + '" data-act="' + (multi ? "btog" : "bpick") + '" data-k="' + k + '"' + (cur ? " disabled" : "") + ">" + esc(o) + (cur && multi && right && !on ? ' <em class="us-missl">(missed)</em>' : "") + "</button>";
+    }).join("");
+    var fb = "";
+    if (cur) {
+      fb = '<div class="us-fb ' + (cur.ok ? "ok" : "no") + '"><b>' + esc(cur.v) + "</b><span>" + esc(s.why) + "</span>" +
+        '<span class="us-stake"><b>What\'s at stake:</b> ' + esc(s.risk) + "</span>" +
+        "<small>Sources (checked " + esc(fmtDate(s.checked)) + "):</small>" + srcList(s.sources) + "</div>" +
+        '<button type="button" class="us-btn" data-act="bnext">' + (i === n - 1 ? "Finish" : "Next claim") + "</button>";
+    } else if (multi) {
+      fb = '<button type="button" class="us-btn" data-act="bsubmit"' + (dk.sel.length ? "" : " disabled") + ">" + (dk.sel.length ? "Lodge the claim" : "Pick at least one") + "</button>";
+    }
+    return topRow("#", "Back", '<span class="us-count">Claim ' + (i + 1) + " of " + n + "</span>") +
+      '<div class="us-steps">' + bars + "</div>" +
+      '<span class="us-kick">Front desk · ' + esc(s.topic) + " · " + (dk.due[i] ? "due again" : "new") + "</span>" +
+      '<div class="us-cnote"><span>Consult notes</span>' + esc(s.consult) + "</div>" +
+      '<h1 class="us-q">' + esc(s.q) + "</h1>" + 
+      '<div class="us-opts">' + opts + "</div>" + fb +
+      '<p class="us-billnote">' + billNote() + ' <a href="#cheat">MBS cheat sheet</a></p>';
+  }
+  function answerText(s) { var a = s.type === "multi" ? s.answer : [s.answer]; return "Answer: " + a.map(function (k) { return s.options[k]; }).join("; "); }
+  function deskToggle(k) {
+    var dk = deskDay(); if (dk.cur || dk.done) return;
+    var s = scen(dk.ids[dk.ans.length]); if (!s || s.type !== "multi") return;
+    var j = dk.sel.indexOf(k); if (j >= 0) dk.sel.splice(j, 1); else dk.sel.push(k);
+    save(); render(true);
+  }
+  function deskAnswer(choice) {
+    var dk = deskDay(), i = dk.ans.length, s = scen(dk.ids[i]);
+    if (!s || dk.done || (dk.cur && dk.cur.id === s.id) || !choice.length) return;
+    var ok = sameSet(choice, s.type === "multi" ? s.answer : [s.answer]), key = "b:" + s.id, c = S.cards[key] || { box: -1, due: 0 };
+    c.box = ok ? Math.min(c.box + 1, INTERVALS.length - 1) : 0; if (c.box < 0) c.box = 0;
+    c.due = TNUM + INTERVALS[c.box]; S.cards[key] = c;
+    S.items[key] = ok ? 1 : 0;
+    if (ok) addPoints(10);
+    dk.cur = { id: s.id, pick: choice, ok: ok, v: pick(ok ? SASS.desk.right : SASS.desk.wrong) };
+    save(); render(true);
+    var fb = app.querySelector(".us-fb"); if (fb && fb.scrollIntoView) fb.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+  function deskNext() {
+    var dk = deskDay(); if (!dk.cur) return;
+    dk.ans.push({ id: dk.cur.id, pick: dk.cur.pick, ok: dk.cur.ok });
+    dk.cur = null; dk.sel = [];
+    if (dk.ans.length >= dk.ids.length) { dk.done = true; markActive(); }
+    save(); render();
+  }
+  function cheat() {
+    var R = D.billing.rules || [], topics = [];
+    R.forEach(function (r) { if (topics.indexOf(r.topic) < 0) topics.push(r.topic); });
+    var secs = topics.map(function (tp) {
+      return '<div class="us-sec"><span class="us-kick">' + esc(tp) + '</span><ul class="us-cheat">' + R.filter(function (r) { return r.topic === tp; }).map(function (r) {
+        return "<li><span>" + esc(r.text) + '</span><small>' + r.sources.map(function (s) { return srcLink(s.url, s.t); }).join(" · ") + "</small></li>";
+      }).join("") + "</ul></div>";
+    }).join("");
+    return topRow("#", "Home", "") + head("Front desk · reference", "MBS cheat sheet", "Only rules we've checked against a source. Bill it right: claim what you did, all of what you did, and nothing you didn't.") +
+      '<div class="us-card warn"><b>' + billNote() + '</b><span>' + esc(D.billing.premise || "") + ' ' + srcLink("https://www.mbsonline.gov.au/", "MBS Online") + "</span></div>" +
+      (R.length ? secs : '<p class="us-sub">The cheat sheet didn\'t load. Refresh to try again.</p>') +
+      '<a class="us-btn" href="#desk">Front desk: Bill it right</a><a class="us-btn ghost" href="#">Home</a>';
   }
 
   // --- inbox ---
@@ -473,11 +608,12 @@
 
   // ---------- help ----------
   function help() {
-    var html = "<p><b>Three short sessions a day</b>, about 12 minutes in all. New set at midnight, Sydney time.</p><ul>" +
+    var html = "<p><b>Four short sessions a day</b>, about 15 minutes in all. New set at midnight, Sydney time.</p><ul>" +
       "<li><b>Morning huddle:</b> 5 quick questions. Ones you miss come back sooner; ones you nail drift away (spaced repetition).</li>" +
       "<li><b>Clinic Day:</b> 5 patients, seen in any order. One is time-critical, so triage matters. Each consult has a 15-minute clock: asking, examining and testing all cost minutes. Then pick a diagnosis, plan, safety-net and billing level.</li>" +
       "<li><b>Scoring:</b> Safety, Accuracy, Time, Patient-centred and Billing, each out of 100. Miss a key safety step and that patient may come back on a later day. Unhappier.</li>" +
       "<li><b>Results inbox:</b> 8 results, 60 seconds. File, Recall or Urgent.</li>" +
+      "<li><b>Front desk:</b> 5 billing scenarios. Bill it right: the right item, legitimate co-claims, no audit bait. Fills the Front desk room.</li>" +
       "<li><b>Points</b> build your rank, from Med student to Unspecialist. <b>Rooms</b> fill as you get their topics right.</li></ul>" +
       '<p class="us-small">Beta: content is under GP review. Every item links to its source. Education for health professionals, not patient advice. All patients are fictional. Progress is saved on this device only.</p>';
     if (window.MW && MW.modal) MW.modal("How it works", html);
@@ -490,6 +626,10 @@
     if (act === "help") return help();
     if (act === "hpick") return huddlePick(+b.getAttribute("data-k"));
     if (act === "hnext") return huddleNext();
+    if (act === "bpick") return deskAnswer([+b.getAttribute("data-k")]);
+    if (act === "btog") return deskToggle(+b.getAttribute("data-k"));
+    if (act === "bsubmit") return deskAnswer(deskDay().sel.slice());
+    if (act === "bnext") return deskNext();
     if (act === "see") return startConsult(b.getAttribute("data-id"));
     var cl = S.days[TODAY] && S.days[TODAY].clinic, cur = cl && cl.cur;
     if (act === "ask" && cur) {
@@ -502,6 +642,7 @@
     if (act === "choose" && cur) {
       var kind = b.getAttribute("data-kind"), k = +b.getAttribute("data-k");
       if (kind === "plan") { var i = cur.plan.indexOf(k); if (i >= 0) cur.plan.splice(i, 1); else cur.plan.push(k); }
+      else if (kind === "extra") { if (!cur.extra) cur.extra = []; var j = cur.extra.indexOf(k); if (j >= 0) cur.extra.splice(j, 1); else cur.extra.push(k); }
       else { cur[kind] = k; var order = ["dx", "plan", "safety", "bill"], nx = order[order.indexOf(kind) + 1]; if (nx && (nx === "plan" ? !cur.plan.length : cur[nx] === null)) cur.tab = nx; }
       save(); render(true); return;
     }
@@ -514,8 +655,9 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON("data/huddle.json?v=1"), getJSON("data/cases.json?v=1"), getJSON("data/results.json?v=1")]).then(function (r) {
+  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=2"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=1").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
+    if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
     if (!S.seenHelp) { S.seenHelp = 1; save(); setTimeout(help, 300); }
   }).catch(function () {

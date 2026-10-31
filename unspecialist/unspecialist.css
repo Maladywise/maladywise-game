@@ -178,6 +178,25 @@
 .us-fbl li.no .us-verd{color:var(--us-no)}
 .us-fbl small{font-size:12px;color:var(--us-mute)}
 
+/* front desk (billing) */
+.us-cnote{background:var(--card);border:1px solid var(--us-line);border-left:3px solid var(--brand);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.5;display:flex;flex-direction:column;gap:2px;color:var(--ink)}
+.us-cnote span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.us-opt.ok.miss{background:var(--card);border-style:dashed}
+.us-opt.multi.on::before{border-color:currentColor;background:currentColor;box-shadow:inset 0 0 0 3px var(--card)}
+.us-missl{font-style:normal;font-weight:500;font-size:12px}
+.us-stake{color:var(--ink)}
+.us-stake b{color:var(--ink)!important}
+.us-src.sm{font-size:13px}
+.us-billnote{margin:0;font-size:12px;color:var(--us-mute);line-height:1.45}
+.us-billnote a,.us-cheat a,.us-card a{color:var(--brand);overflow-wrap:anywhere}
+.us-also{margin-top:10px}
+.us-panel .us-billnote{margin-top:6px}
+.us-cheat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.us-cheat li{background:var(--card);border:1px solid var(--us-line);border-radius:10px;padding:9px 12px;font-size:14px;line-height:1.45;display:flex;flex-direction:column;gap:4px}
+.us-cheat small{font-size:12px;color:var(--us-mute)}
+.us-card.warn span{color:var(--ink)}
+.us-fbl li>span{overflow-wrap:anywhere}
+
 .us-beta{margin:0;font-size:12px;color:var(--muted);background:var(--us-soft);border-radius:10px;padding:8px 12px}
 .modal .us-small{margin:10px 0 0}
 @media (min-width:700px){
