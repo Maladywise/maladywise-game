@@ -1733,6 +1733,2173 @@
     }
    ],
    "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-bbi-proc",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Lina, 58, MMM1 practice. A 15-minute consult for her reflux (23), then a punch biopsy of a separate lesion (30071). Everything bulk billed.",
+   "q": "Which incentives?",
+   "type": "single",
+   "options": [
+    "75870 with the 23, and 10990 with the 30071",
+    "One incentive per patient per day: 75870 only",
+    "Triple on both",
+    "No incentive on a procedure"
+   ],
+   "answer": 0,
+   "why": "Each bulk-billed unreferred service attracts its incentive. Level B gets the triple (75870 in MMM1). A procedure gets the single (10990 in MMM1). MBS Online's own scenario does exactly this, same day.",
+   "risk": "Missing the procedure's incentive leaves money behind. Tripling the procedure is an over-claim.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "MBS Online: Supporting bulk billing in general practice factsheet",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/D204B38ED29B5FC8CA258A3E000EE282/$File/PDF%20vers%20-%20Supporting%20Bulk%20Billing%20in%20General%20Practice%20Factsheet.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-bbi-ah",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Saturday 4 pm, non-urgent. Ollie, 8, earache. 14 minutes, after-hours Level B (5020), bulk billed, MMM1.",
+   "q": "Which incentive?",
+   "type": "single",
+   "options": [
+    "Single (10990): after-hours doesn't count",
+    "Triple (75870): after-hours equivalents of Levels B to E get the triple",
+    "None on after-hours items",
+    "Both single and triple"
+   ],
+   "answer": 1,
+   "why": "The triple incentive covers Levels B to E including out-of-rooms, aged care and after-hours equivalents.",
+   "risk": "Single is under-claiming. Both is double-dipping.",
+   "sources": [
+    {
+     "t": "MBS Online: Supporting bulk billing in general practice factsheet",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/D204B38ED29B5FC8CA258A3E000EE282/$File/PDF%20vers%20-%20Supporting%20Bulk%20Billing%20in%20General%20Practice%20Factsheet.pdf"
+    },
+    {
+     "t": "MBS Online: BBI changes factsheet (1 Nov 2025)",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20Factsheet%20BBI%20changes%201%20Nov%2025.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-flagfall",
+   "room": "desk",
+   "topic": "Aged care",
+   "consult": "You visit an aged care home in business hours and see three residents, all bulk billed.",
+   "q": "Which are right? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "90001 with the first resident's attendance only",
+    "An incentive on each resident's attendance",
+    "90001 for each resident",
+    "An incentive on the 90001 itself",
+    "90001 with an urgent after-hours attendance"
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "why": "The flag-fall is once per facility visit, billed with the first patient's attendance, and billed the same way as that attendance. Incentives apply to attendance items, not the flag-fall. No flag-fall with after-hours, urgent after-hours or telehealth.",
+   "risk": "Three flag-falls for one trip is the kind of pattern that gets a letter.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-extra-fee",
+   "room": "desk",
+   "topic": "Bulk billing incentives",
+   "consult": "Freya, 24, has a hormonal IUD inserted. You bulk bill 35503 + 35501. The practice wants to add a 'consumables fee' on top.",
+   "q": "Allowed?",
+   "type": "single",
+   "options": [
+    "Yes, consumables aren't Medicare's problem",
+    "No: a bulk-billed service is paid in full by the benefit",
+    "Yes, if it's on a separate invoice",
+    "Only if she agrees in writing"
+   ],
+   "answer": 1,
+   "why": "When you bulk bill, you accept the Medicare benefit as full payment. No extra charge can be raised for any reason. If you want to charge, privately bill (and then 35501 doesn't apply).",
+   "risk": "A gap on a bulk-billed claim is a compliance problem, not an admin quirk.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-proc-beyond",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "You're about to do a skin biopsy (30071).",
+   "q": "Which would justify billing an attendance as well? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "Discussing results and management options for a lesion",
+    "Managing a separate, distinct problem",
+    "Taking informed consent",
+    "Routine pre-procedure examination",
+    "Routine post-procedure wound advice"
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "why": "Procedure items include the interactions reasonably needed to do them: consent, routine pre- and post-procedure care, routine aftercare. Work that goes beyond that, like discussing results and management options, or a separate issue, can earn an attendance.",
+   "risk": "Billing a 23 for consent and wound advice is unbundling. Skipping the 23 when you genuinely did more is a donation.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-earwax",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Hal, 70. Blocked ears. History, otoscopy, syringing both ears, re-check. 24 minutes with him.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "36",
+    "23 + 41500",
+    "41500 only",
+    "3"
+   ],
+   "answer": 0,
+   "why": "Uncomplicated wax removal, by syringing or microsuction, is part of the general attendance, and the time counts. 24 minutes is Level C. 41500 is for a foreign body, not wax.",
+   "risk": "41500 for wax is an invalid item. Level A undersells 24 minutes of work.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "MBS item 41500 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/EarNoseThroat/41500"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-fb-match",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Foreign body day at the clinic.",
+   "q": "Which item-to-job matches are right? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "41500: bead in the ear, removed with a hook (not syringing)",
+    "41659: bean up the nose, not removable by simple probing",
+    "42644: embedded corneal metal fragment, completely removed",
+    "41500 for routine ear wax syringing",
+    "30064 for a splinter flicked out with a needle, no incision"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "41500: ear foreign body, other than by simple syringing. 41659: nose foreign body, other than by simple probing. 42644: complete removal of an embedded corneal or scleral foreign body. 30064 needs incision and exploration.",
+   "risk": "Using a procedure item for wax or a needle flick claims a procedure you didn't do.",
+   "sources": [
+    {
+     "t": "MBS item 41500 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/EarNoseThroat/41500"
+    },
+    {
+     "t": "MBS item 41659 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/EarNoseThroat/41659"
+    },
+    {
+     "t": "MBS item 42644 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Eye/42644"
+    },
+    {
+     "t": "MBS item 30064 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30064"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-cornea",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Dan, 41, angle grinder. You completely remove an embedded corneal fragment, then find and remove a second one in the same eye, same visit.",
+   "q": "How many 42644s?",
+   "type": "single",
+   "options": [
+    "Two, one per fragment",
+    "One: not more than once on the same day by the same practitioner",
+    "Two, if you note 'separate sites'",
+    "None: it's an attendance"
+   ],
+   "answer": 1,
+   "why": "42644 is limited to once on the same day by the same practitioner.",
+   "risk": "A second 42644 gets rejected, or paid and later recovered.",
+   "sources": [
+    {
+     "t": "MBS item 42644 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Eye/42644"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-subcut",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Mia, 19. Glass in the sole of her foot. Local anaesthetic, incision, exploration, fragment out, two sutures.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "30064",
+    "30064 + 30026 for the closure",
+    "23 + 30026",
+    "30219"
+   ],
+   "answer": 0,
+   "why": "30064 covers removal of a subcutaneous foreign body needing incision and exploration, including closure of the wound if performed.",
+   "risk": "Adding a wound repair item for the closure double-bills the same wound.",
+   "sources": [
+    {
+     "t": "MBS item 30064 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30064"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-wound-face",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Kit, 6, fell off the monkey bars. 2 cm superficial laceration on the chin, closed with sutures. Nothing else.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "30026",
+    "30032",
+    "30035",
+    "30029"
+   ],
+   "answer": 1,
+   "why": "Face or neck, up to 7 cm, superficial: 30032. Deeper tissue on the face or neck would be 30035. 30026 and 30029 are for wounds not on the face or neck.",
+   "risk": "The wrong site group is an item mismatch any claims audit spots.",
+   "sources": [
+    {
+     "t": "MBS item 30032 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30032"
+    },
+    {
+     "t": "MBS item 30035 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30035"
+    },
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-wound-deep",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Joel, 35. 6 cm forearm laceration from a box cutter, through to subcutaneous fat and fascia, layered closure.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "30026",
+    "30029",
+    "30035",
+    "30064"
+   ],
+   "answer": 1,
+   "why": "Not face or neck, up to 7 cm, involving deeper tissue: 30029. Superficial would be 30026.",
+   "risk": "Calling a layered repair 30026 under-claims. Calling it a face repair is just wrong.",
+   "sources": [
+    {
+     "t": "MBS item 30029 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30029"
+    },
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-wound-plus",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Theo, 30, has a 5 cm superficial forearm cut repaired (30026). He also asks you to review his blood pressure readings and medication: 10 minutes, separately recorded.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "30026 only",
+    "30026 + 23",
+    "23 only",
+    "36 for everything"
+   ],
+   "answer": 1,
+   "why": "The repair is its own complete service. The blood pressure review is a separate, distinct problem, so an attendance is legitimate. Count only the BP minutes toward the tier.",
+   "risk": "Leaving off the 23 under-claims genuine work. Folding the procedure into a 36 banks procedure minutes into a time tier.",
+   "sources": [
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-abscess-review",
+   "room": "desk",
+   "topic": "Aftercare",
+   "consult": "Two days after you drained Dean's back abscess (30219), he's back for packing removal and a dressing.",
+   "q": "What do you bill today?",
+   "type": "single",
+   "options": [
+    "Nothing: aftercare is in the procedure fee",
+    "An attendance item: 30219 excludes aftercare",
+    "30219 again",
+    "30026"
+   ],
+   "answer": 1,
+   "why": "30219 is described as 'excluding aftercare'. For items like that, you bill attendance items for the aftercare.",
+   "risk": "Treating it like other skin items leaves the follow-up unbilled. Billing 30219 twice is a procedure that didn't happen.",
+   "sources": [
+    {
+     "t": "MBS item 30219 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30219"
+    },
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-aftercare-comp",
+   "room": "desk",
+   "topic": "Aftercare",
+   "consult": "Pat, five days after you excised a lesion from his back, comes in with a red, hot, discharging wound. You assess and start antibiotics.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "Nothing: it's aftercare",
+    "An attendance, flagged 'not normal aftercare' (NNAC)",
+    "A second excision item",
+    "An attendance with no flag; the system will sort it"
+   ],
+   "answer": 1,
+   "why": "Complications of the operation aren't normal aftercare. Bill the attendance and set the aftercare override, or note 'Not Normal Aftercare' (NNAC or NNA) in the service text.",
+   "risk": "Without the flag, the claim can be rejected as aftercare.",
+   "sources": [
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-aftercare-other",
+   "room": "desk",
+   "topic": "Aftercare",
+   "consult": "Ivy had a lesion excised by a GP in another town while on holiday. She can't get back there, so you remove her sutures.",
+   "q": "Can you bill?",
+   "type": "single",
+   "options": [
+    "No: aftercare belongs to the operator",
+    "Yes: a different practitioner can bill attendance items for the aftercare they provide",
+    "Only the original GP can bill it",
+    "Yes, the original procedure item at half fee"
+   ],
+   "answer": 1,
+   "why": "If the patient can't return to the operating practitioner, a different practitioner can bill attendance items for the aftercare. (Specialists can't in the same situation.)",
+   "risk": "Doing it for free is generous. It's also unnecessary.",
+   "sources": [
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-toenail",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Ash, 22. Recurrent ingrown toenail. Under digital block you remove a segment of nail, remove the ungual fold, excise part of the germinal matrix, then apply phenol.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "47915",
+    "47915 + 47916 for the phenol",
+    "47916",
+    "30026"
+   ],
+   "answer": 0,
+   "why": "47915 is the wedge resection: nail segment, ungual fold, germinal matrix and nail bed, including phenolisation if performed. 47916 is a partial resection with phenolisation.",
+   "risk": "Adding 47916 bills the phenol twice.",
+   "sources": [
+    {
+     "t": "MBS item 47915 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47915"
+    },
+    {
+     "t": "MBS item 47916 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47916"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-toenail-partial",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Bec, 30. Partial nail avulsion of the ingrown edge with phenol to the matrix. No fold or matrix excision.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "47915",
+    "47916",
+    "Attendance only",
+    "47915 + 23"
+   ],
+   "answer": 1,
+   "why": "Partial resection for ingrowing toenail, including phenolisation: 47916. 47915 needs the ungual fold and germinal matrix work.",
+   "risk": "47915 for a partial resection is an over-claim.",
+   "sources": [
+    {
+     "t": "MBS item 47916 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47916"
+    },
+    {
+     "t": "MBS item 47915 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47915"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-sebk",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Gwen, 66, during a 15-minute consult: three seborrhoeic keratoses and two warts frozen.",
+   "q": "What covers the cryotherapy?",
+   "type": "single",
+   "options": [
+    "30192",
+    "The attendance item",
+    "30071 for each",
+    "30202"
+   ],
+   "answer": 1,
+   "why": "Seborrhoeic keratoses (by any means), warts and molluscum, and fewer than 10 solar keratoses, are covered by attendance items.",
+   "risk": "30192 is for 10 or more premalignant lesions. 30202 is for proven skin cancer.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-excision-wait",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "You excise a 9 mm lesion (12 mm with margin) from Ross's back, clinically a BCC. Histology is pending.",
+   "q": "When and how do you bill the excision?",
+   "type": "single",
+   "options": [
+    "Now, as malignant (31365)",
+    "After histology: 31365 if malignant is confirmed, 31366 if not",
+    "Now, as non-malignant, and change it later",
+    "30071"
+   ],
+   "answer": 1,
+   "why": "Malignant skin lesion items need histological confirmation of malignancy before you bill. Any other site under 15 mm: 31365 malignant, 31366 non-malignant. Suspected-melanoma items are the exception: bill without waiting.",
+   "risk": "Billing malignant before the result is a claim you may have to repay.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-excision-mel",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "You excise a lesion on Nina's back for suspected melanoma: 8 mm with margins. Specimen sent.",
+   "q": "When can you bill 31381?",
+   "type": "single",
+   "options": [
+    "Only after histology confirms melanoma",
+    "Now: suspected-melanoma items need histology sent, not the result",
+    "Never: use 30071",
+    "After the specialist review"
+   ],
+   "answer": 1,
+   "why": "Clinically suspected melanoma items (31377 to 31383) need histology sent, but you don't need to wait for the result. Any other body part under 15 mm: 31381.",
+   "risk": "Waiting isn't wrong, just slow. Billing it without sending the specimen is.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-mor",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Hugo, 70. Two excisions on one occasion: a BCC on the nose and a lesion on the back.",
+   "q": "Which are true? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "The multiple operation rule applies: 100% of the higher fee, 50% of the next",
+    "Both items must be bulk billed, or both privately billed",
+    "Note each site on the claim",
+    "Bulk bill one and privately bill the other",
+    "Bill only the larger excision"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "Two or more Group T8 items on one occasion: 100%, 50%, then 25% for further items. Because the rule changes the fees, you can't split billing between them. Note each site.",
+   "risk": "Splitting T8 items under the multiple operation rule isn't allowed.",
+   "sources": [
+    {
+     "t": "Services Australia: billing multiple MBS items",
+     "url": "https://servicesaustralia.gov.au/bill-multiple-mbs-items?context=20"
+    },
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-30196",
+   "room": "desk",
+   "topic": "Procedures",
+   "consult": "Kev, 75, has a clinically obvious superficial BCC. You curette it. No specimen sent, no histology, no specialist opinion.",
+   "q": "Can you bill 30196?",
+   "type": "single",
+   "options": [
+    "Yes, it was clearly a BCC",
+    "No: 30196 needs histopathology, or a specialist dermatologist or plastic surgeon's confirmation with a specimen submitted",
+    "Yes, as 30202",
+    "Yes, with a 23"
+   ],
+   "answer": 1,
+   "why": "30196 and 30202 need malignancy proven by histopathology or confirmed by a specialist in dermatology or plastic surgery (30196: with a specimen submitted).",
+   "risk": "Curette first, prove later doesn't work for these items.",
+   "sources": [
+    {
+     "t": "MBS item 30196 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30196"
+    },
+    {
+     "t": "MBS item 30202 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30202"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-larc-swap",
+   "room": "desk",
+   "topic": "Contraception",
+   "consult": "Lily, 27. Her implant is due. You remove it and insert a new one in the same appointment. All bulk billed.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "30062 + 35501 + 14206 + 35501",
+    "14206 only",
+    "30062 + 14206",
+    "23 + 14206"
+   ],
+   "answer": 0,
+   "why": "Each LARC item gets its own 35501 loading when the service is bulk billed. Removal is 30062, insertion is 14206.",
+   "risk": "Forgetting the loadings leaves 40% of two procedure fees behind.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+    },
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "MBS item 30062 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Gynaecology/30062"
+    },
+    {
+     "t": "MBS item 14206 (privatehealth.gov.au)",
+     "url": "https://www.privatehealth.gov.au/dynamic/MBSItems/AssistedReproductive/14206"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-iud-cst",
+   "room": "desk",
+   "topic": "Contraception",
+   "consult": "Noor, 32, MMM1, all bulk billed. Hormonal IUD inserted. You also take her cervical screening test (it's due) and do a urine pregnancy test in the room.",
+   "q": "Which items? (Pick all that apply.)",
+   "type": "multi",
+   "options": [
+    "23 for the separate cervical screening work",
+    "35503",
+    "35501",
+    "73806",
+    "14206",
+    "35506"
+   ],
+   "answer": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "why": "Specialist sexual health guidance gives this exact pairing: 23 + 35503 + 73806 when a cervical screening or STI test is done with the insertion, plus 35501 because the LARC service is bulk billed. 14206 is for implants. 35506 is removal under general anaesthetic.",
+   "risk": "Missing the loading or the test is money left behind. 35506 isn't yours today.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+    },
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "MBS item 35503 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Gynaecology/35503"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-iud-remove",
+   "room": "desk",
+   "topic": "Contraception",
+   "consult": "Claire, 45. Routine IUD removal in the rooms. Strings visible, out in seconds. You talk through her contraception options.",
+   "q": "How do you bill the removal?",
+   "type": "single",
+   "options": [
+    "35506",
+    "An attendance item",
+    "35503",
+    "30062"
+   ],
+   "answer": 1,
+   "why": "There's no MBS item for routine IUD removal: bill the attendance. 35506 is removal under general anaesthetic of a retained or embedded device. 30062 is implant removal.",
+   "risk": "35506 for a routine removal is an over-claim with a very clear descriptor.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ecg-gp",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Graham, 67, exertional chest tightness. 15-minute consult. You do a 12-lead ECG in the room and write the indication and your interpretation in the notes.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "23 only",
+    "23 + 11714",
+    "23 + 11707",
+    "23 + 11707 + 11714"
+   ],
+   "answer": 1,
+   "why": "Since 1 March 2026 GPs can bill 11714: a trace that informs clinical decisions during or after an attendance, with a clinical note giving the indication and interpretation. 11707 is a trace sent to a specialist or consultant physician for a formal report.",
+   "risk": "Leaving the ECG unbilled is common. So is billing 11707 for a trace you read yourself.",
+   "sources": [
+    {
+     "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ecg-send",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Mabel, 80, for pre-op work-up. You do the trace and send it to the cardiologist for a formal report.",
+   "q": "Which ECG item?",
+   "type": "single",
+   "options": [
+    "11714",
+    "11707",
+    "11704",
+    "No item"
+   ],
+   "answer": 1,
+   "why": "11707 is the trace only, provided to a specialist or consultant physician for a formal report. 11704 is the specialist's trace and formal report.",
+   "risk": "11714 needs your own clinical note and interpretation.",
+   "sources": [
+    {
+     "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+    },
+    {
+     "t": "MBS Online: diagnostic items incl. 11716 (specialist or consultant physician)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=12203"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-holter",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Your practice owns a Holter monitor. You fit it, analyse the 24-hour recording and write the report.",
+   "q": "Can you bill 11716?",
+   "type": "single",
+   "options": [
+    "Yes",
+    "No: 11716 is billed by a specialist or consultant physician",
+    "Yes, with 11714",
+    "Yes, once a month"
+   ],
+   "answer": 1,
+   "why": "Continuous ambulatory ECG (11716) is a specialist or consultant physician item.",
+   "risk": "A GP claim for 11716 doesn't meet the descriptor.",
+   "sources": [
+    {
+     "t": "MBS Online: diagnostic items incl. 11716 (specialist or consultant physician)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=12203"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-abpm",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Ben, 52, not on treatment. Clinic BP 154/96. You arrange 24-hour ambulatory BP, interpret it, write the report and a treatment plan.",
+   "q": "Can you bill 11607?",
+   "type": "single",
+   "options": [
+    "No, it's a cardiologist item",
+    "Yes: untreated, clinic BP in range, you interpret and report, plus a treatment plan (once in 12 months)",
+    "Yes, every 3 months",
+    "Only if he's had a heart health check today"
+   ],
+   "answer": 1,
+   "why": "11607 is 24-hour ambulatory BP for an untreated patient with clinic systolic 140 to 180 or diastolic 90 to 110 mmHg, interpreted and reported by the same practitioner, with a treatment plan. Once in 12 months.",
+   "risk": "It's not with a health assessment or care plan item, so don't bundle it into one.",
+   "sources": [
+    {
+     "t": "MBS Online: item 11607 (ambulatory BP)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=11607"
+    },
+    {
+     "t": "Murray PHN: MBS card, July 2026",
+     "url": "https://murrayphn.org.au/wp-content/uploads/2026/07/MBS-card_JUL26.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-abpm-ha",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Sue, 47, has her 45 to 49 health assessment (703). As part of it you organise and report a 24-hour ambulatory BP.",
+   "q": "Can you add 11607 to the 703?",
+   "type": "single",
+   "options": [
+    "Yes, they're different items",
+    "No: 11607 can't be associated with health assessment items (or 965/967)",
+    "Yes, if you bulk bill both",
+    "Yes, the next day"
+   ],
+   "answer": 1,
+   "why": "The 11607 descriptor excludes services associated with health assessments (699, 701 to 707, 715) and care plan items including 965 and 967.",
+   "risk": "Moving it to tomorrow to dodge the rule is still associated with the assessment.",
+   "sources": [
+    {
+     "t": "MBS Online: item 11607 (ambulatory BP)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=11607"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-spiro-dx",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Aria, 23, suspected asthma. 12-minute consult, then pre- and post-bronchodilator spirometry with three recordings. No spirometry billed in the past year.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "23 + 11505",
+    "23 + 11506",
+    "36 (include the spirometry minutes)",
+    "11505 only"
+   ],
+   "answer": 0,
+   "why": "11505 is diagnostic spirometry, pre and post bronchodilator, once in 12 months. Spirometry minutes don't count toward the consult tier.",
+   "risk": "Counting spirometry minutes into a 36 banks time across two services.",
+   "sources": [
+    {
+     "t": "RACGP: respiratory function items (11505, 11506)",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/respiratory-function-and-sleep-studies"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-spiro-mon",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Six months later, Aria is back for asthma review with repeat pre- and post-bronchodilator spirometry.",
+   "q": "Which spirometry item?",
+   "type": "single",
+   "options": [
+    "11505 again",
+    "11506",
+    "None: it's in the consult",
+    "11503"
+   ],
+   "answer": 1,
+   "why": "11505 is once in any 12 months. 11506 is the monitoring item, billable each occasion recordings are made.",
+   "risk": "A second 11505 within 12 months gets rejected.",
+   "sources": [
+    {
+     "t": "RACGP: respiratory function items (11505, 11506)",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/respiratory-function-and-sleep-studies"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-hba1c-poc",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Your practice is accredited for point-of-care testing. Rex has established type 2 diabetes. This year: two lab HbA1cs and one point-of-care HbA1c (73812). Today you'd like another point-of-care HbA1c.",
+   "q": "Can you bill 73812 today?",
+   "type": "single",
+   "options": [
+    "Yes: this is his 4th HbA1c in 12 months and only his 2nd 73812",
+    "No: point-of-care HbA1c is once a year",
+    "No: lab and point-of-care can't be mixed",
+    "Yes, and a 5th next month too"
+   ],
+   "answer": 0,
+   "why": "73812 is max 3 in 12 months, and items 66551, 73812 and 73826 combined can't exceed 4 in 12 months. Two lab plus one point-of-care makes today the 4th: OK. A 5th wouldn't be.",
+   "risk": "Count the lab tests too. The cap is combined.",
+   "sources": [
+    {
+     "t": "MBS Online: item 73812 (point-of-care HbA1c)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/BDED411038BF3217CA2589C7001C7621/$File/Administrative%20amendment%20to%20item%2073812.pdf"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024), clause 1.2.13",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "RACGP: MBS point-of-care testing, what GPs need to know",
+     "url": "https://www.racgp.org.au/corporate-news/mbs-point-of-care-testing-what-gps-need-to-know"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-hba1c-dx",
+   "room": "desk",
+   "topic": "Diagnostics",
+   "consult": "Accredited practice. Lou, 50, high diabetes risk, never diagnosed. You'd like a point-of-care HbA1c to diagnose diabetes.",
+   "q": "Is 73812 right?",
+   "type": "single",
+   "options": [
+    "Yes",
+    "No: 73812 is for managing established diabetes",
+    "Yes, once a year",
+    "Yes, if the result is over 48"
+   ],
+   "answer": 1,
+   "why": "73812 is HbA1c in the management of established diabetes, as a point-of-care test in an accredited practice. For diagnosis, request a lab test.",
+   "risk": "A diagnostic 73812 doesn't meet the descriptor.",
+   "sources": [
+    {
+     "t": "MBS Online: item 73812 (point-of-care HbA1c)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/BDED411038BF3217CA2589C7001C7621/$File/Administrative%20amendment%20to%20item%2073812.pdf"
+    },
+    {
+     "t": "RACGP: MBS point-of-care testing, what GPs need to know",
+     "url": "https://www.racgp.org.au/corporate-news/mbs-point-of-care-testing-what-gps-need-to-know"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-mhtp-23",
+   "room": "desk",
+   "topic": "Mental health",
+   "consult": "Ellie, 29. You prepare her mental health treatment plan (32 minutes, no MH skills training). Separately, she has an asthma flare you assess and treat (8 minutes). Times recorded separately.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "2700 only",
+    "2700 + 23",
+    "44 for the lot",
+    "2701"
+   ],
+   "answer": 1,
+   "why": "Multiple services on the same day are fine when they're distinct, clinically relevant and each item's requirements are met independently, with separate time. The plan is 2700 (20 to under 40 minutes, no training); the asthma is a 23.",
+   "risk": "Unlike GP chronic condition plans, there's no blanket same-day ban here. Banking time across both is still a no.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ccm-nurse",
+   "room": "desk",
+   "topic": "Nurse items",
+   "consult": "Rita has a GPCCMP. Today you do her 967 review. Separately, the practice nurse dresses her leg ulcer, consistent with the plan.",
+   "q": "Can the nurse's service be billed as 10997?",
+   "type": "single",
+   "options": [
+    "No: never with 967",
+    "Possibly: co-claiming may be appropriate where the nurse's service is separate from, but consistent with, the plan review",
+    "Yes, and add a 23 too",
+    "Only if the GP is in the room"
+   ],
+   "answer": 1,
+   "why": "10997 is for ongoing care consistent with the plan, between reviews. Co-claiming it with a planning or review item may be appropriate where the nurse's work is separate from the plan development or review.",
+   "risk": "The 23 on top of 967 is the trap here, not the nurse.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-10997-prep",
+   "room": "desk",
+   "topic": "Nurse items",
+   "consult": "The practice nurse spends 20 minutes collecting information and measurements to help you prepare Neil's GPCCMP (965).",
+   "q": "Can the nurse's time be billed as 10997?",
+   "type": "single",
+   "options": [
+    "Yes",
+    "No: 10997 can't be used for help preparing a GPCCMP",
+    "Yes, if the 965 is bulk billed",
+    "Yes, by phone (93203)"
+   ],
+   "answer": 1,
+   "why": "10997 can't be used for a nurse's assistance with preparing a GPCCMP. 965 is a complete service and the only item for preparing the plan.",
+   "risk": "Splitting plan preparation into 965 + 10997 is double-dipping on one service.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-10997-noplan",
+   "room": "desk",
+   "topic": "Nurse items",
+   "consult": "Walk-in: the nurse dresses a graze for Ken, who has no GPCCMP or multidisciplinary care plan. You don't see him.",
+   "q": "Can it be billed as 10997?",
+   "type": "single",
+   "options": [
+    "Yes",
+    "No: 10997 is for patients with a GPCCMP or multidisciplinary care plan",
+    "Yes, as a 23 under your provider number",
+    "Yes, once a year"
+   ],
+   "answer": 1,
+   "why": "10997 (and video 93201, phone 93203) covers up to 5 services a calendar year for patients with a GPCCMP or multidisciplinary care plan.",
+   "risk": "A 23 for a service you didn't personally provide is a much bigger problem.",
+   "sources": [
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ha-plus",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Elsie, 78. 75+ health assessment (50 minutes). She also has a new productive cough and fever that needs managing today (10 minutes, recorded separately).",
+   "q": "Can you bill an attendance as well as the health assessment?",
+   "type": "single",
+   "options": [
+    "Never on the same day",
+    "Yes: a separate problem that needs managing, with each item's time met separately",
+    "Yes, and count the 50 minutes toward both",
+    "Only if she comes back tomorrow"
+   ],
+   "answer": 1,
+   "why": "Don't add a consult to a health assessment unless it's clinically necessary, i.e. a problem needing separate management. Each item's time must be separately met, and time can't be counted twice.",
+   "risk": "Routine add-on consults with health assessments are what PSR looks for.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ha-nurse",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "For Fred's 45 to 49 health assessment, the nurse spends 25 minutes collecting history and measurements; you spend 20 minutes on examination, plan and advice.",
+   "q": "Can you bill a nurse item for the nurse's part?",
+   "type": "single",
+   "options": [
+    "Yes, 10997",
+    "No: nurse time assisting a health assessment goes only to the assessment item",
+    "Yes, 10987",
+    "Yes, if the nurse writes separate notes"
+   ],
+   "answer": 1,
+   "why": "Practice nurses can assist with health assessments, but that time goes only to the health assessment item. Delegation shouldn't inflate the item either.",
+   "risk": "PSR has flagged assessments that were mostly nurse data collection with little GP input.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ha-ccm",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Your practice manager suggests booking every health assessment with a GPCCMP straight after, same day, 'for efficiency'.",
+   "q": "Your view?",
+   "type": "single",
+   "options": [
+    "Great idea",
+    "Only when both are clinically relevant, separate and distinct; it shouldn't be routine",
+    "Never allowed",
+    "Fine if they're bulk billed"
+   ],
+   "answer": 1,
+   "why": "A health assessment and care plan can be claimed the same day only if both are clinically relevant, separate and distinct, and each item's requirements are met. A plan would usually follow an assessment that finds a chronic condition.",
+   "risk": "A routine pairing is exactly the kind of pattern that gets reviewed.",
+   "sources": [
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-699-order",
+   "room": "desk",
+   "topic": "Health assessments",
+   "consult": "Jill, 47, eligible for a heart health check (699) and a 45 to 49 health assessment, both today.",
+   "q": "Which order makes both claimable?",
+   "type": "single",
+   "options": [
+    "Either order",
+    "Heart health check first, then the 45 to 49 assessment",
+    "45 to 49 assessment first, then 699",
+    "They can't be on the same day"
+   ],
+   "answer": 1,
+   "why": "699 can't be claimed after another health assessment in the previous 12 months, but a standard assessment can follow a 699. On the same day it's only permissible if the standard assessment comes after the heart health check.",
+   "risk": "Get the order wrong and the 699 gets knocked back.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-ante-first",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "Ruby, 30, period late, home test positive. History and exam (8 minutes), urine pregnancy test in the room, confirmed. Then 12 minutes of antenatal care: dates, folic acid, bloods.",
+   "q": "What do you bill?",
+   "type": "single",
+   "options": [
+    "23 + 73806 + 16500",
+    "16500 only",
+    "36",
+    "23 + 16500"
+   ],
+   "answer": 0,
+   "why": "The PHN worked example: 23 for the initial history and exam, 73806 for the in-room urine pregnancy test, then 16500 for antenatal care of the confirmed pregnancy. Record times.",
+   "risk": "Dropping 73806 leaves the test you did unbilled.",
+   "sources": [
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-postnatal",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "Tash, 6 weeks after giving birth. 25 minutes: recovery, feeding, contraception, mood screening.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "16500",
+    "16407",
+    "23",
+    "16408"
+   ],
+   "answer": 1,
+   "why": "16407 is the postnatal attendance 4 to 8 weeks after birth, at least 20 minutes, including a mental health assessment. 16408 is 1 to 4 weeks after a private admission. 16500 is antenatal.",
+   "risk": "Using 23 here undersells a specific, better-fitting item.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    },
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-sharedcare",
+   "room": "desk",
+   "topic": "Antenatal",
+   "consult": "You've already claimed 16590 for Grace's pregnancy. At 34 weeks you do her shared-care management visit.",
+   "q": "Can you also claim 16591?",
+   "type": "single",
+   "options": [
+    "Yes",
+    "No: only one of 16590 or 16591 per pregnancy",
+    "Yes, if it's a different GP",
+    "Yes, after 36 weeks"
+   ],
+   "answer": 1,
+   "why": "16591 isn't claimable if 16590 has been provided for the same pregnancy, and vice versa.",
+   "risk": "The second one gets rejected.",
+   "sources": [
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-imm",
+   "room": "desk",
+   "topic": "Immunisation",
+   "consult": "Cal, 40, wants a privately bought flu vaccine. You also review his reflux. 10 minutes.",
+   "q": "What's billable?",
+   "type": "single",
+   "options": [
+    "A vaccine item plus a 23",
+    "An attendance item (23); the vaccine itself isn't billable to Medicare",
+    "Nothing: vaccines are never Medicare services",
+    "The vaccine's cost to Medicare"
+   ],
+   "answer": 1,
+   "why": "There's no MBS item for the vaccine. When you immunise, you can usually bill an attendance item, unless other funding covers giving it.",
+   "risk": "Medicare can't pay for the vaccine product itself.",
+   "sources": [
+    {
+     "t": "Services Australia: MBS billing for immunisations",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-immunisations"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-covid",
+   "room": "desk",
+   "topic": "Immunisation",
+   "consult": "You give a COVID-19 vaccine to an eligible patient after assessing suitability.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "93644",
+    "The relevant time-tiered attendance item",
+    "10660",
+    "No item at all"
+   ],
+   "answer": 1,
+   "why": "The COVID-19 vaccine suitability items (including 93644 to 93656, 10660 and 10661) ceased on 1 July 2025. Use the relevant attendance item. Incentives apply if bulk billed.",
+   "risk": "Billing a ceased item gets rejected.",
+   "sources": [
+    {
+     "t": "CESPHN: COVID-19 vaccine support items ceased 1 July 2025",
+     "url": "https://cesphn.org.au/news/cessation-of-covid-19-vaccine-support-items-from-1-july-2025"
+    },
+    {
+     "t": "Services Australia: MBS billing for immunisations",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-immunisations"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-tele-ante",
+   "room": "desk",
+   "topic": "Telehealth",
+   "consult": "Ivy, 26, eligible for MBS telehealth, has a routine antenatal review by video.",
+   "q": "Which item?",
+   "type": "single",
+   "options": [
+    "16500",
+    "91853",
+    "91858",
+    "23"
+   ],
+   "answer": 1,
+   "why": "16500's telehealth equivalents: video 91853, phone 91858.",
+   "risk": "Billing a face-to-face item for a video consult is a mismatch.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  },
+  {
+   "id": "cc-tele-proc",
+   "room": "desk",
+   "topic": "Telehealth",
+   "consult": "On a video call, Zoe asks you to bill her IUD check and a 'remote' implant removal next week as telehealth items.",
+   "q": "Can LARC procedures be telehealth?",
+   "type": "single",
+   "options": [
+    "Yes, if she's MyMedicare-registered",
+    "No: procedures are in-clinic only",
+    "Yes, the check and the removal",
+    "Only the removal"
+   ],
+   "answer": 1,
+   "why": "LARC procedure items have no telehealth equivalents. The video consult itself can be a telehealth attendance.",
+   "risk": "You'd need very long arms.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ],
+   "checked": "2026-11-01"
+  }
+ ],
+ "coclaims": [
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Level B to E attendance (23, 36, 44, 123) + triple incentive",
+   "v": "yes",
+   "cond": "Bulk billed, any Medicare-eligible patient since 1 Nov 2025. MMM1: 75870. The incentive number changes with the Modified Monash category.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "MBS Online: BBI changes factsheet (1 Nov 2025)",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20Factsheet%20BBI%20changes%201%20Nov%2025.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Level A (3) + single incentive",
+   "v": "yes",
+   "cond": "Level A gets the single incentive (10990 in MMM1), not the triple.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "MBS Online: Supporting bulk billing in general practice factsheet",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/D204B38ED29B5FC8CA258A3E000EE282/$File/PDF%20vers%20-%20Supporting%20Bulk%20Billing%20in%20General%20Practice%20Factsheet.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "After-hours Level B to E + triple incentive",
+   "v": "yes",
+   "cond": "The triple incentive covers the after-hours, out-of-rooms and aged care equivalents of Levels B to E.",
+   "sources": [
+    {
+     "t": "MBS Online: Supporting bulk billing in general practice factsheet",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/D204B38ED29B5FC8CA258A3E000EE282/$File/PDF%20vers%20-%20Supporting%20Bulk%20Billing%20in%20General%20Practice%20Factsheet.pdf"
+    },
+    {
+     "t": "MBS Online: BBI changes factsheet (1 Nov 2025)",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20Factsheet%20BBI%20changes%201%20Nov%2025.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Bulk-billed procedure (e.g. 30071) + its own single incentive, same day as a consult with a triple",
+   "v": "yes",
+   "cond": "MBS Online's worked example: 36 + triple incentive, then 30071 + single incentive, same day.",
+   "sources": [
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "MBS Online: Supporting bulk billing in general practice factsheet",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/D204B38ED29B5FC8CA258A3E000EE282/$File/PDF%20vers%20-%20Supporting%20Bulk%20Billing%20in%20General%20Practice%20Factsheet.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Bulk-billed attendance + private procedure (split billing)",
+   "v": "yes",
+   "cond": "Fine for an attendance with a single procedure. Two Group T8 items on one occasion (multiple operation rule) must both be bulk billed or both privately billed.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Bulk-billed service + an extra charge (consumables, 'procedure fee')",
+   "v": "no",
+   "cond": "Bulk billing means the benefit is full payment. No extra charge for any reason.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Attendances and bulk billing incentives",
+   "pair": "Aged care flag-fall (90001) + bulk billing incentive",
+   "v": "no",
+   "cond": "Incentives attach to the attendance item, not the flag-fall.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Attendance + procedure for the same problem, routine work only",
+   "v": "no",
+   "cond": "A procedure item includes consent, routine pre-procedure examination, post-procedure discussion and routine aftercare.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Attendance + procedure, with work beyond the routine or a separate problem",
+   "v": "yes",
+   "cond": "E.g. discussing results and management options for a lesion, or a separate, distinct issue. Meet the attendance requirements in full; procedure minutes don't count toward the tier.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Attendance + 30071 skin biopsy",
+   "v": "yes",
+   "cond": "Diagnostic biopsy, specimen sent for pathology, plus a genuine consult.",
+   "sources": [
+    {
+     "t": "MBS item 30071 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30071"
+    },
+    {
+     "t": "MBS Online: BBI scenarios",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/ed5d4e612e52e052ca258cf8007a8f94/$FILE/PDF%20Version%20-%20%20Bulk%20billing%20incentive%20-%20scenarios.pdf"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Attendance + 30192 (10 or more premalignant lesions, ablative)",
+   "v": "yes",
+   "cond": "Fewer than 10 solar keratoses: no extra item, the attendance covers it.",
+   "sources": [
+    {
+     "t": "MBS item 30192 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Attendance + seborrhoeic keratoses, warts or molluscum treatment",
+   "v": "no",
+   "cond": "Treated within the attendance item (warts and molluscum: exceptions in 30187 and 30189).",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "30196 (curettage or laser) or 30202 (repeat freeze-thaw cryotherapy) for a skin cancer",
+   "v": "cond",
+   "cond": "Malignancy must be proven by histopathology or confirmed by a dermatologist or plastic surgeon (30196: with a specimen submitted).",
+   "sources": [
+    {
+     "t": "MBS item 30196 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30196"
+    },
+    {
+     "t": "MBS item 30202 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30202"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Malignant excision items (31356 to 31376)",
+   "v": "cond",
+   "cond": "Bill once histology confirms malignancy; otherwise the non-malignant item (31357 to 31370). Suspected-melanoma items (31377 to 31383) can be billed before the result.",
+   "sources": [
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Two or more Group T8 procedures on one occasion",
+   "v": "yes",
+   "cond": "Multiple operation rule: 100% of the highest fee, 50% of the next, 25% of the rest. Note each site.",
+   "sources": [
+    {
+     "t": "Services Australia: billing multiple MBS items",
+     "url": "https://servicesaustralia.gov.au/bill-multiple-mbs-items?context=20"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Wound repair (30026, 30029, 30032, 30035)",
+   "v": "cond",
+   "cond": "Up to 7 cm: 30026 superficial and 30029 deeper tissue (not face or neck); 30032 superficial and 30035 deeper (face or neck). Attendance only for a separate problem or work beyond the routine.",
+   "sources": [
+    {
+     "t": "MBS item 30026 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30026"
+    },
+    {
+     "t": "MBS item 30029 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30029"
+    },
+    {
+     "t": "MBS item 30032 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30032"
+    },
+    {
+     "t": "MBS item 30035 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30035"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "30219 abscess drainage + later dressing visits",
+   "v": "yes",
+   "cond": "30219 is 'excluding aftercare', so aftercare visits are billed as attendances.",
+   "sources": [
+    {
+     "t": "MBS item 30219 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30219"
+    },
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Skin procedure + routine post-op visit by the same GP",
+   "v": "no",
+   "cond": "Routine aftercare is in the procedure fee. Complications or an unrelated problem: bill the attendance and flag it 'not normal aftercare' (NNAC).",
+   "sources": [
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    },
+    {
+     "t": "Services Australia: skin lesion and biopsy billing",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Aftercare by a different GP when the patient can't get back to the operator",
+   "v": "yes",
+   "cond": "The other GP can bill attendance items for that aftercare.",
+   "sources": [
+    {
+     "t": "Services Australia: aftercare or post-operative treatment",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Foreign body items: 41500 ear, 41659 nose, 42644 embedded corneal, 30064 subcutaneous",
+   "v": "cond",
+   "cond": "41500: not by simple syringing. 41659: not by simple probing. 42644: complete removal, once a day per practitioner. 30064: needs incision and exploration (closure included).",
+   "sources": [
+    {
+     "t": "MBS item 41500 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/EarNoseThroat/41500"
+    },
+    {
+     "t": "MBS item 41659 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/EarNoseThroat/41659"
+    },
+    {
+     "t": "MBS item 42644 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Eye/42644"
+    },
+    {
+     "t": "MBS item 30064 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30064"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Ear wax removal (syringing or microsuction) as its own item",
+   "v": "no",
+   "cond": "Part of the general attendance; the time counts toward the tier.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Procedures with an attendance",
+   "pair": "Ingrown toenail: 47915 or 47916",
+   "v": "cond",
+   "cond": "47915: wedge resection (nail segment, ungual fold, germinal matrix), phenol included. 47916: partial resection with phenolisation.",
+   "sources": [
+    {
+     "t": "MBS item 47915 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47915"
+    },
+    {
+     "t": "MBS item 47916 (privatehealth.gov.au)",
+     "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/47916"
+    }
+   ]
+  },
+  {
+   "family": "Contraception (LARC)",
+   "pair": "35503 IUD insertion + 35501 loading",
+   "v": "yes",
+   "cond": "Only when the LARC item and the other items for that service are bulk billed, in the same claim. Loading is 40% of the LARC fee.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Contraception (LARC)",
+   "pair": "14206 implant insertion + 35501; removal and reinsertion 30062 + 35501 + 14206 + 35501",
+   "v": "yes",
+   "cond": "All bulk billed.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Contraception (LARC)",
+   "pair": "Attendance + 35503 (+ 73806)",
+   "v": "yes",
+   "cond": "When you also do something separate, e.g. a cervical screening or STI test. Urine pregnancy test in the room: 73806.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Contraception (LARC)",
+   "pair": "Routine IUD removal in the rooms",
+   "v": "cond",
+   "cond": "No removal item: use an attendance item. 35506 is removal under general anaesthetic of a retained or embedded device.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Contraception (LARC)",
+   "pair": "35501 with a privately billed LARC item, or a non-LARC procedure",
+   "v": "no",
+   "cond": "35501 attaches to bulk-billed 35503, 35506, 14206 or 30062 only.",
+   "sources": [
+    {
+     "t": "MBS Online: LARC item changes (Nov 2025)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Attendance + 11714 ECG (trace and your clinical note)",
+   "v": "yes",
+   "cond": "From 1 March 2026 GPs can bill 11714: the trace informs decisions during or after an attendance, and your note records the indication and interpretation. Max twice a day.",
+   "sources": [
+    {
+     "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "11707 ECG (trace only)",
+   "v": "cond",
+   "cond": "Only when the trace goes to a specialist or consultant physician for a formal report.",
+   "sources": [
+    {
+     "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Holter monitoring (11716) billed by a GP",
+   "v": "no",
+   "cond": "11716 is for a specialist or consultant physician.",
+   "sources": [
+    {
+     "t": "MBS Online: diagnostic items incl. 11716 (specialist or consultant physician)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=12203"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Attendance + 11607 ambulatory BP (24 hours)",
+   "v": "cond",
+   "cond": "Untreated patient with clinic BP in the descriptor range; you interpret, report and give a treatment plan. Once in 12 months. Not with a health assessment (699, 701 to 707, 715) or 965/967.",
+   "sources": [
+    {
+     "t": "MBS Online: item 11607 (ambulatory BP)",
+     "url": "https://www9.health.gov.au/mbs/search.cfm?q=11607"
+    },
+    {
+     "t": "Murray PHN: MBS card, July 2026",
+     "url": "https://murrayphn.org.au/wp-content/uploads/2026/07/MBS-card_JUL26.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Attendance + spirometry (11505 diagnostic, 11506 monitoring)",
+   "v": "yes",
+   "cond": "Pre and post bronchodilator, permanently recorded. 11505 once in 12 months. Spirometry minutes don't count toward the attendance tier.",
+   "sources": [
+    {
+     "t": "RACGP: respiratory function items (11505, 11506)",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-benefits-schedule/respiratory-function-and-sleep-studies"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Attendance + 73806 urine pregnancy test in the room",
+   "v": "yes",
+   "cond": "You did the test, you bill it.",
+   "sources": [
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    },
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Diagnostics and in-room tests",
+   "pair": "Attendance + 73812 point-of-care HbA1c",
+   "v": "cond",
+   "cond": "Established diabetes, practice accredited for point-of-care testing, max 3 in 12 months, and no more than 4 HbA1c tests (66551, 73812, 73826) in 12 months combined. Not for diagnosis.",
+   "sources": [
+    {
+     "t": "MBS Online: item 73812 (point-of-care HbA1c)",
+     "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/BDED411038BF3217CA2589C7001C7621/$File/Administrative%20amendment%20to%20item%2073812.pdf"
+    },
+    {
+     "t": "Pathology Services Table (compilation 1 Nov 2024), clause 1.2.13",
+     "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+    },
+    {
+     "t": "RACGP: MBS point-of-care testing, what GPs need to know",
+     "url": "https://www.racgp.org.au/corporate-news/mbs-point-of-care-testing-what-gps-need-to-know"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "GPCCMP (965 or 967) + attendance, same day",
+   "v": "no",
+   "cond": "Long-standing restriction. Bill the consult and do the plan another day, without engineering it.",
+   "sources": [
+    {
+     "t": "MBS Online: GP chronic condition management plans",
+     "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "GPCCMP (965 or 967) + nurse 10997, same day",
+   "v": "cond",
+   "cond": "May be appropriate when the nurse's service is separate from, but consistent with, the plan. Never for helping prepare the plan.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Mental health treatment plan (2700 to 2717) + 23, same day",
+   "v": "cond",
+   "cond": "Two distinct, clinically relevant services, each item's requirements met independently, with separate time.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "RACGP: MBS mental health item changes for GPs",
+     "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Health assessment + attendance, same day",
+   "v": "cond",
+   "cond": "Only if a separate problem genuinely needs managing. Time can't be counted twice: total time must at least equal the sum of each item's minimum.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Health assessment + a separate item for something in its descriptor",
+   "v": "no",
+   "cond": "E.g. no separate audiometry if the assessment descriptor includes it.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Health assessment + a nurse item for the nurse's part",
+   "v": "no",
+   "cond": "Nurse time assisting a health assessment goes only to the assessment item.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Health assessment + GPCCMP, same day",
+   "v": "cond",
+   "cond": "Only if both are clinically relevant, separate and distinct. Not expected to be routine.",
+   "sources": [
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "Heart health check (699) + another health assessment, same day",
+   "v": "cond",
+   "cond": "Only if the other assessment follows the heart health check.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Plans and assessments",
+   "pair": "GPCCMP + mental health treatment plan for the same patient",
+   "v": "yes",
+   "cond": "Nothing stops a patient having both, if each plan's eligibility requirements are met.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Antenatal and postnatal",
+   "pair": "16500 + 23, same day",
+   "v": "cond",
+   "cond": "Only for an intercurrent problem unrelated to the pregnancy, with separate times. All pregnancy care: 16500 only.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    },
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Antenatal and postnatal",
+   "pair": "First pregnancy visit: 23 + 73806 + 16500",
+   "v": "yes",
+   "cond": "PHN worked example: history and exam (23), in-room test (73806), then antenatal care once confirmed (16500).",
+   "sources": [
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Antenatal and postnatal",
+   "pair": "16500 + triple incentive",
+   "v": "no",
+   "cond": "Antenatal attendances get the single incentive.",
+   "sources": [
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Antenatal and postnatal",
+   "pair": "Postnatal 16407 (4 to 8 weeks after birth)",
+   "v": "cond",
+   "cond": "At least 20 minutes, including a mental health assessment. Video 91851, phone 91856. 16408 is the 1 to 4 week visit after a private birth admission.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    },
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Antenatal and postnatal",
+   "pair": "16590 + 16591 in the same pregnancy",
+   "v": "no",
+   "cond": "Only one per pregnancy.",
+   "sources": [
+    {
+     "t": "CESPHN: antenatal and pregnancy MBS items (Aug 2026)",
+     "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Nurse 10997 (video 93201, phone 93203)",
+   "v": "cond",
+   "cond": "Patients with a GPCCMP or multidisciplinary plan: up to 5 a calendar year, e.g. immunisations or wound dressing consistent with the plan.",
+   "sources": [
+    {
+     "t": "RACGP: Medicare frequently asked questions",
+     "url": "https://www.racgp.org.au/running-a-practice/practice-resources/medicare/medicare-frequently-asked-questions"
+    },
+    {
+     "t": "RACGP Medicare compliance Q&A (DoHDA answers)",
+     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Running%20a%20practice/Practice%20resources/Q-A-Medicare-compliance-webinar.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Nurse or Aboriginal health practitioner 10987",
+   "v": "cond",
+   "cond": "Aboriginal and Torres Strait Islander patients after a health assessment: up to 10 a calendar year, on behalf of a GP.",
+   "sources": [
+    {
+     "t": "Health: follow-up services by practice nurse or Aboriginal health practitioner (10987)",
+     "url": "https://www.health.gov.au/sites/default/files/documents/2022/05/annual-health-check-for-aboriginal-and-torres-strait-islander-people-follow-up-health-services-by-practice-nurse-or-indigenous-health-practitioner.pdf"
+    },
+    {
+     "t": "Murray PHN: MBS card, July 2026",
+     "url": "https://murrayphn.org.au/wp-content/uploads/2026/07/MBS-card_JUL26.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Aged care flag-fall 90001 + attendance",
+   "v": "yes",
+   "cond": "Once per facility visit, with the first patient only; both billed the same way. Not with after-hours, urgent after-hours or telehealth items.",
+   "sources": [
+    {
+     "t": "AskMBS Advisory: general practice services (July 2025)",
+     "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Procedures (LARC, biopsy, repair) by telehealth",
+   "v": "no",
+   "cond": "Procedures are in-clinic services.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Antenatal by telehealth",
+   "v": "yes",
+   "cond": "16500 equivalents: video 91853, phone 91858.",
+   "sources": [
+    {
+     "t": "CERSH (Uni Melbourne): sexual and reproductive health MBS guide, July 2026",
+     "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0007/5593084/MBS-Guide-July-2026.pdf"
+    }
+   ]
+  },
+  {
+   "family": "Nurses, aged care, telehealth, immunisation",
+   "pair": "Immunisation: a separate item for the vaccine or giving it",
+   "v": "no",
+   "cond": "Medicare doesn't pay for the vaccine. You can usually bill an attendance item when you immunise, unless other funding covers giving it. COVID-19 vaccine support items ceased on 1 July 2025.",
+   "sources": [
+    {
+     "t": "Services Australia: MBS billing for immunisations",
+     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-immunisations"
+    },
+    {
+     "t": "CESPHN: COVID-19 vaccine support items ceased 1 July 2025",
+     "url": "https://cesphn.org.au/news/cessation-of-covid-19-vaccine-support-items-from-1-july-2025"
+    }
+   ]
   }
  ]
 }

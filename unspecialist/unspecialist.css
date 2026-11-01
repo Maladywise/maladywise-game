@@ -205,3 +205,14 @@
 @media (prefers-reduced-motion:no-preference){
   .us-opt,.us-chip,.us-pt,.us-todo{transition:border-color .15s,background-color .15s}
 }
+/* Co-claim library (cheat sheet) */
+.us-cc{border:1px solid var(--us-line);border-radius:12px;background:var(--card);margin-top:8px;min-width:0}
+.us-cc summary{cursor:pointer;padding:11px 12px;font-weight:600;font-size:15px;list-style-position:inside}
+.us-cc summary small{font-weight:400;color:var(--us-mute)}
+.us-cc[open] summary{border-bottom:1px solid var(--us-line)}
+.us-cc .us-cheat{padding:8px}
+.us-ccp{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;min-width:0}
+.us-ccp b{overflow-wrap:anywhere}
+.us-ccv{flex:none;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--us-soft);color:var(--us-soft-ink)}
+.us-ccv.yes{background:var(--us-ok-bg);color:var(--us-ok-ink)}
+.us-ccv.no{background:var(--us-no-bg);color:var(--us-no-ink)}

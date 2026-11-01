@@ -329,6 +329,8 @@
   // Procedure minutes run the clock but don't count toward the time tier (no time-banking across services).
   function procMins(c, used) { var m = 0; used.forEach(function (aid) { var a = byId(c.actions, aid); if (a && a.proc) m += a.min; }); return m; }
   function extrasOf(c) { return (c.billing && c.billing.extras) || []; }
+  // An extra with okIf is only a legitimate claim if that action was actually done in the consult.
+  function extraOk(x, has) { return x.okIf ? has(x.okIf) : !!x.ok; }
   function chipGroup(c, cur, g, label) {
     var has = function (id) { return cur.used.indexOf(id) >= 0; };
     var chips = c.actions.filter(function (a) { return a.g === g && (!a.needs || has(a.needs)); }).map(function (a) {
@@ -411,12 +413,12 @@
     if (ex.length) {
       var good = 0, nb = 0, og = 0, no = 0, sel = cur.extra || [], orders = [];
       ex.forEach(function (x, k) {
-        var on = sel.indexOf(k) >= 0, ord = x.kind === "order";
-        if (x.ok) (ord ? orders : claim).push(x.label);
-        if (ord) { no++; if (on === !!x.ok) og++; else missed.push({ t: (x.ok ? "Pathology request, missed: " : "Pathology request, not rebated: ") + x.label, w: x.why || "", red: false }); return; }
+        var on = sel.indexOf(k) >= 0, ord = x.kind === "order", xok = extraOk(x, has), xw = (!xok && x.okIf && x.whyNo) ? x.whyNo : (x.why || "");
+        if (xok) (ord ? orders : claim).push(x.label);
+        if (ord) { no++; if (on === xok) og++; else missed.push({ t: (xok ? "Pathology request, missed: " : "Pathology request, not rebated: ") + x.label, w: xw, red: false }); return; }
         nb++;
-        if (on === !!x.ok) good++;
-        else missed.push({ t: (x.ok ? "Billing, missed co-claim: " : "Billing, invalid co-claim: ") + x.label, w: x.why || "", red: false });
+        if (on === xok) good++;
+        else missed.push({ t: (xok ? "Billing, missed co-claim: " : "Billing, invalid co-claim: ") + x.label, w: xw, red: false });
       });
       if (nb) bill = 0.6 * bill + 40 * good / nb;
       if (no) acc = 0.8 * acc + 20 * og / no;
@@ -555,9 +557,19 @@
         return "<li><span>" + esc(r.text) + '</span><small>' + r.sources.map(function (s) { return srcLink(s.url, s.t); }).join(" · ") + "</small></li>";
       }).join("") + "</ul></div>";
     }).join("");
+    var CC = D.billing.coclaims || [], fams = [], VL = { yes: "Yes", no: "No", cond: "Only if" };
+    CC.forEach(function (x) { if (fams.indexOf(x.family) < 0) fams.push(x.family); });
+    var lib = CC.length ? '<div class="us-sec"><span class="us-kick">Co-claim library · ' + CC.length + ' patterns</span>' +
+      '<p class="us-note">What you can bill together on the same occasion, and the traps. Tap a group to open it.</p>' +
+      fams.map(function (f) {
+        var list = CC.filter(function (x) { return x.family === f; });
+        return '<details class="us-cc"><summary>' + esc(f) + " <small>(" + list.length + ")</small></summary><ul class=\"us-cheat\">" + list.map(function (x) {
+          return '<li><span class="us-ccp"><b>' + esc(x.pair) + '</b><em class="us-ccv ' + esc(x.v) + '">' + (VL[x.v] || esc(x.v)) + "</em></span><span>" + esc(x.cond) + "</span><small>" + (x.sources || []).map(function (s) { return srcLink(s.url, s.t); }).join(" · ") + "</small></li>";
+        }).join("") + "</ul></details>";
+      }).join("") + "</div>" : "";
     return topRow("#", "Home", "") + head("Front desk · reference", "MBS cheat sheet", "Only rules we've checked against a source. Bill it right: claim what you did, all of what you did, and nothing you didn't.") +
       '<div class="us-card warn"><b>' + billNote() + '</b><span>' + esc(D.billing.premise || "") + ' ' + srcLink("https://www.mbsonline.gov.au/", "MBS Online") + "</span></div>" +
-      (R.length ? secs : '<p class="us-sub">The cheat sheet didn\'t load. Refresh to try again.</p>') +
+      (R.length ? secs : '<p class="us-sub">The cheat sheet didn\'t load. Refresh to try again.</p>') + lib +
       '<a class="us-btn" href="#desk">Front desk: Bill it right</a><a class="us-btn ghost" href="#">Home</a>';
   }
 
@@ -661,7 +673,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=4"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=2").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=5"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=3").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
