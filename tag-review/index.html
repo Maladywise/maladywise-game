@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Tag review | Malady Wise</title>
+<title>Review | Malady Wise</title>
 <style>
 :root{--bg:#FAF7F2;--ink:#2A2140;--muted:#6E6585;--brand:#4A3480;--line:#E4DDF0;--card:#fff}
 @media (prefers-color-scheme:dark){:root{--bg:#17131F;--ink:#EEE9F7;--muted:#A79FBC;--line:#352D47;--card:#211B2C}}
@@ -20,9 +20,9 @@ input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--
 </style>
 </head>
 <body><main>
-<h1>Visitor tag review</h1>
+<h1>Review: reports and tags</h1>
 <form id="login" hidden><p class="m">Paste your review key (saved on this device only).</p><input id="k" type="password" autocomplete="off"><p><button class="yes" type="submit">Open</button></p><p id="msg" class="m" role="alert"></p></form>
-<div id="app" hidden><h2>Waiting for you</h2><div id="pend"></div><h2>Live</h2><div id="live"></div><p><button class="no" id="out">Forget key on this device</button></p></div>
+<div id="app" hidden><h2>Problem reports</h2><div id="fb"></div><h2>Tags waiting for you</h2><div id="pend"></div><h2>Live</h2><div id="live"></div><p><button class="no" id="out">Forget key on this device</button></p></div>
 </main>
 <script>
 (function(){
@@ -37,7 +37,8 @@ function show(d){$("login").hidden=true;$("app").hidden=false;var P=$("pend"),L=
  d.pending.forEach(function(x){P.appendChild(row(x.n,(T[x.t]||x.t)+" · "+x.c+" visitors",[btn("yes","Approve",function(){set(x.p,x.t,1)}),btn("no","Reject",function(){set(x.p,x.t,0)})]))});
  var ks=Object.keys(d.approved);if(!ks.length)L.innerHTML='<p class="m">No visitor tags live yet.</p>';
  ks.forEach(function(p){d.approved[p].forEach(function(t){L.appendChild(row((d.names||{})[p]||p,T[t]||t,[btn("no","Remove",function(){set(p,t,2)})]))})})}
-function load(){$("msg").textContent="Checking…";call("/tagq").then(show).catch(function(e){$("app").hidden=true;$("login").hidden=false;$("msg").textContent=e===403?"That key didn't work. Check for spaces and try again.":e===404?"The tag server hasn't been updated yet. On Render, open mw-presence and click Manual Deploy, then Deploy latest commit. Then come back.":"Couldn't reach the server (it may be waking up). Try again in 30 seconds."})}
+function fbShow(L){var F=$("fb");F.innerHTML="";if(!L.length){F.innerHTML='<p class="m">No reports. Suspiciously quiet.</p>';return}L.forEach(function(x){var d=document.createElement("div");d.className="row";d.style.alignItems="flex-start";var t=document.createElement("div");t.innerHTML="<b></b><small></small><p style=\"margin:6px 0 0;white-space:pre-wrap\"></p>";t.children[0].textContent=x.cat+" \u00b7 "+x.page;t.children[1].textContent=new Date(x.at).toLocaleString("en-AU")+(x.mode?" \u00b7 "+x.mode:"")+(x.email?" \u00b7 "+x.email:"");t.children[2].textContent=x.msg;d.appendChild(t);var b=document.createElement("div");b.className="btns";b.appendChild(btn("yes","Done",function(){call("/fbdone?id="+x.id,"POST").then(fbShow)}));d.appendChild(b);F.appendChild(d)})}
+function load(){call("/fbq").then(fbShow).catch(function(){});$("msg").textContent="Checking…";call("/tagq").then(show).catch(function(e){$("app").hidden=true;$("login").hidden=false;$("msg").textContent=e===403?"That key didn't work. Check for spaces and try again.":e===404?"The tag server hasn't been updated yet. On Render, open mw-presence and click Manual Deploy, then Deploy latest commit. Then come back.":"Couldn't reach the server (it may be waking up). Try again in 30 seconds."})}
 function set(p,t,v){call("/tagset?p="+encodeURIComponent(p)+"&t="+t+"&v="+v,"POST").then(show)}
 $("login").onsubmit=function(ev){ev.preventDefault();key=$("k").value.trim();if(!key)return;try{localStorage.setItem("mw-tag-key",key)}catch(e){}load()};
 $("out").onclick=function(){try{localStorage.removeItem("mw-tag-key")}catch(e){}key="";location.reload()};

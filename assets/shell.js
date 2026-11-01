@@ -611,7 +611,9 @@
     var s = modal("Settings. Fiddle away.",
       '<div class="opt"><span>Theme</span>' + seg("mw-theme", [["system", "Auto"], ["light", "Light"], ["dark", "Dark"]], t) + "</div>" +
       '<div class="opt"><span>Animations</span>' + seg("mw-motion", [["full", "On"], ["reduce", "Off"]], m) + "</div>" +
-      '<a class="mw-melink" href="/me/">\ud83c\udfc5 My stats, streaks and badges \u203a</a>');
+      '<a class="mw-melink" href="/me/">\ud83c\udfc5 My stats, streaks and badges \u203a</a>' +
+      '<button type="button" class="mw-melink mw-fbbtn">\u26a0\ufe0f Report a problem with this page \u203a</button>');
+    s.querySelector(".mw-fbbtn").onclick = function () { s.remove(); feedback("puzzle"); };
     Array.prototype.forEach.call(s.querySelectorAll(".seg"), function (g) {
       g.onclick = function (e) {
         var b = e.target.closest("button"); if (!b) return;
@@ -950,6 +952,34 @@
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 
+
+  // ---------- feedback: report puzzle errors, image licence problems, bugs ----------
+  function feedback(pre) {
+    var cats = [["puzzle", "Puzzle is wrong"], ["fact", "Fact or health info is wrong"], ["image", "Image licence or credit problem"], ["bug", "Something's broken"], ["idea", "Idea"], ["other", "Other"]];
+    var page = location.pathname + location.search, d = "";
+    try { d = new URLSearchParams(location.search).get("date") || ""; } catch (e) {}
+    if (!d) page += " (" + sydToday() + ")";
+    var s = modal("Report a problem", '<form class="mw-fb" novalidate><p class="mw-fbp">Spotted a wrong answer, a dodgy fact or an image that shouldn\u2019t be here? Tell us. We read every one.</p>' +
+      '<label><span>What kind?</span><select name="cat">' + cats.map(function (c) { return '<option value="' + c[0] + '"' + (pre === c[0] ? " selected" : "") + ">" + c[1] + "</option>"; }).join("") + "</select></label>" +
+      '<label><span>Where</span><input name="page" value="' + esc2(page) + (d ? "" : "") + '"></label>' +
+      '<label><span>What\u2019s wrong?</span><textarea name="msg" rows="4" maxlength="2000" required placeholder="e.g. Today\u2019s answer should be X because\u2026"></textarea></label>' +
+      '<label><span>Your email (optional, only if you want a reply)</span><input name="email" type="email" maxlength="120" autocomplete="email"></label>' +
+      '<p class="mw-fbnote">Please don\u2019t include personal health details.</p>' +
+      '<button type="submit" class="mw-fbsend">Send</button><p class="mw-fbmsg" aria-live="polite"></p></form>');
+    var f = s.querySelector("form"), m = s.querySelector(".mw-fbmsg");
+    f.onsubmit = function (e) {
+      e.preventDefault();
+      var o = { cat: f.cat.value, page: f.page.value, msg: f.msg.value.trim(), email: f.email.value.trim(), mode: MODE };
+      if (!o.msg) { m.textContent = "Tell us what\u2019s wrong first."; f.msg.focus(); return; }
+      var btn = f.querySelector(".mw-fbsend"); btn.disabled = true; m.textContent = "Sending\u2026";
+      var mail = "mailto:maladywise@gmail.com?subject=" + encodeURIComponent("Malady Wise report: " + o.cat) + "&body=" + encodeURIComponent(o.page + "\n\n" + o.msg);
+      fetch("https://mw-presence.onrender.com/fb", { method: "POST", body: JSON.stringify(o) }).then(function (r) {
+        if (!r.ok) throw 0;
+        f.innerHTML = '<p class="mw-fbp"><b>Thanks. Report received.</b> We fix errors fast, usually before tomorrow\u2019s puzzles.</p>'; track("feedback/" + o.cat, "Feedback " + o.cat);
+      }).catch(function () { btn.disabled = false; m.innerHTML = 'Couldn\u2019t send just now. <a href="' + mail + '">Email it instead</a>.'; });
+    };
+  }
+
   // ---------- social links in every footer (edit MW_SITE.social to add more) ----------
   function social() {
     var f = document.querySelector("footer.site"), L = (window.MW_SITE && MW_SITE.social) || [];
@@ -957,6 +987,7 @@
     var d = document.createElement("div"); d.className = "soc";
     d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
     f.insertBefore(d, f.firstChild);
+    if (!f.querySelector(".mw-fbl")) { var a = document.createElement("p"); a.className = "mw-fbl"; a.innerHTML = '<button type="button">\u26a0\ufe0f Report a problem</button>'; a.firstChild.onclick = function () { feedback(); }; f.appendChild(a); }
   }
   // Auto search box for list pages (medicines, deep dives, …) that don't have one yet.
   function listSearch() {
@@ -1026,5 +1057,5 @@
       if (typed === "locum") unlock();
     });
   })();
-  window.MW = { hub: hub, game: game, modal: modal, page: page };
+  window.MW = { hub: hub, game: game, modal: modal, page: page, feedback: feedback };
 })();
