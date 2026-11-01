@@ -1878,5 +1878,163 @@
     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
    }
   ]
+ },
+ {
+  "id": "zara",
+  "room": "womens",
+  "name": "Zara",
+  "age": 29,
+  "who": "Barista. First pregnancy, she thinks.",
+  "blurb": "Period's late, home test positive",
+  "opening": "\"My period's two weeks late and the test from the chemist was positive. What happens now?\"",
+  "actions": [
+   {
+    "id": "lmp",
+    "g": "h",
+    "label": "Last period and cycle",
+    "min": 1,
+    "key": true,
+    "text": "First day of last period about 6 weeks ago. Regular 28-day cycles.",
+    "why": "Dates the pregnancy and tells you what to expect on any scan."
+   },
+   {
+    "id": "painbleed",
+    "g": "h",
+    "label": "Pain or bleeding",
+    "min": 1,
+    "key": true,
+    "text": "No pain, no bleeding.",
+    "why": "Pain or bleeding in early pregnancy means ectopic pregnancy must be thought about."
+   },
+   {
+    "id": "feel",
+    "g": "h",
+    "label": "How she feels about the pregnancy",
+    "min": 2,
+    "flag": "ice",
+    "text": "\"Surprised. Happy, I think. My partner's thrilled.\"",
+    "why": "Asking, without assuming, lets her say if she's unsure and need options."
+   },
+   {
+    "id": "meds",
+    "g": "h",
+    "label": "Medicines, alcohol, smoking",
+    "min": 1,
+    "key": true,
+    "text": "No regular medicines. Had a few drinks before she knew. Doesn't smoke.",
+    "why": "Reassure, then advise stopping alcohol now."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"Is it bad I haven't been taking any vitamins?\""
+   },
+   {
+    "id": "hcg",
+    "g": "t",
+    "label": "Urine pregnancy test in the room",
+    "min": 1,
+    "key": true,
+    "text": "Positive.",
+    "why": "Confirms the pregnancy today, and you can bill it (73806)."
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Blood pressure",
+    "min": 1,
+    "text": "112/70."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Early pregnancy, about 6 weeks, no warning signs",
+    "Ectopic pregnancy",
+    "Miscarriage",
+    "False positive home test"
+   ],
+   "answer": 0,
+   "danger": []
+  },
+  "plan": {
+   "options": [
+    "Start folic acid and iodine supplements",
+    "Arrange first antenatal blood tests and a dating plan",
+    "Talk through her options and choices, without assuming",
+    "Explain warning signs and when to get help (teach-back)",
+    "Tell her it's too late, the vitamins won't help now",
+    "Book an urgent emergency department visit today"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 3,
+   "critical": []
+  },
+  "safety": {
+   "options": [
+    "Go to the emergency department straight away for strong one-sided tummy pain, shoulder-tip pain, heavy bleeding or fainting",
+    "Come back if you're worried at the 20-week scan",
+    "Bleeding in early pregnancy is always normal",
+    "No need to come back until the baby's due"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Item 73806: urine pregnancy test done in the room",
+     "ok": true,
+     "why": "A GP-performed urine pregnancy test is its own item, co-claimed with the consult. (This one you do bill: you did the test.)",
+     "src": {
+      "t": "CESPHN: Antenatal and pregnancy MBS items (Aug 2026), worked example",
+      "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+     }
+    },
+    {
+     "label": "Item 16500: antenatal attendance, once the pregnancy is confirmed and antenatal care starts",
+     "ok": true,
+     "why": "The PHN worked example bills the initial suspected-pregnancy consult as 23, the in-room test as 73806, then 16500 for the antenatal care. Record the times for each part. Check MBS Online's antenatal notes before you rely on it.",
+     "src": {
+      "t": "CESPHN: Antenatal and pregnancy MBS items (Aug 2026), worked example",
+      "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+     }
+    },
+    {
+     "label": "Triple bulk billing incentive on the antenatal item",
+     "ok": false,
+     "why": "Antenatal attendances get the single bulk billing incentive, not the triple.",
+     "src": {
+      "t": "CESPHN: Antenatal and pregnancy MBS items (Aug 2026), worked example",
+      "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+     }
+    }
+   ]
+  },
+  "pearl": "Early pregnancy visit: confirm, date it, start folic acid and iodine, ask how she feels about it without assuming, and give clear ectopic warning signs. In the room, the urine test is yours to bill.",
+  "sources": [
+   {
+    "t": "CESPHN: Antenatal and pregnancy MBS items (Aug 2026), worked example",
+    "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
+   },
+   {
+    "t": "Australian Government: Pregnancy Care Guidelines",
+    "url": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
+   }
+  ]
  }
 ]
