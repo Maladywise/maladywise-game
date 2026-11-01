@@ -44,6 +44,13 @@ async function today() {
   }
   return memDay === d ? memCount : 0;
 }
+async function solvedToday() {
+  const d = sydDay();
+  if (kv && kv.isReady) {
+    try { const h = await kv.hGetAll("games:" + d); const o = {}; for (const k in h) o[k] = Number(h[k] || 0); return o; } catch (e) {}
+  }
+  return memDay === d ? Object.assign({}, memGames) : {};
+}
 async function addDone(g) {
   const d = sydDay();
   if (memDay !== d) { memDay = d; memCount = 0; memGames = {}; }
@@ -188,7 +195,7 @@ const server = http.createServer(async (req, res) => {
       const cut = Date.now() - WINDOW, by = {}; let n = 0;
       for (const v of seen.values()) if (v.t >= cut) { n++; if (v.g) by[v.g] = (by[v.g] || 0) + 1; }
       res.writeHead(200, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ online: n, games: by, today: await today(), day: sydDay() }));
+      return res.end(JSON.stringify({ online: n, games: by, today: await today(), solved: await solvedToday(), day: sydDay() }));
     }
     if (url.pathname === "/top") {
       const b = url.searchParams.get("b") === "daily" ? "daily" : "all";
