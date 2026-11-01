@@ -46,9 +46,9 @@
         return '<a class="me-g' + (r.played ? "" : " none") + '" href="/' + g.path + '" style="--ga:' + acc + '"><span class="me-ic">' + g.icon + '</span><span class="me-gm"><span class="me-gn">' + esc(g.name) + (r.today ? ' <em class="me-tick" title="Done today">✓ today</em>' : "") + (r.weekly ? ' <small>Weekly</small>' : "") + "</span>" +
           (r.played ? '<span class="me-gs"><span><b>' + r.played + "</b> played</span><span><b>" + r.pct + "%</b> wins</span><span><b>" + r.streak + "</b> streak</span><span><b>" + r.best + "</b> best</span></span>" : '<span class="me-gs none">Not played yet. Go on.</span>') + "</span></a>";
       }).join("") + "</div></section>";
-    h += '<section class="me-card"><div class="me-h"><h2>Badges</h2><span>' + got + " of " + st.badges.length + ' earned</span></div><ul class="me-badges">' +
-      st.badges.map(function (b) {
-        return '<li class="me-b' + (b.got ? " got" : "") + '"><span class="me-bi" aria-hidden="true">' + b.icon + '</span><b>' + esc(b.name) + '</b><span class="me-bh">' + (b.got ? "✔ Earned. " : '<span class="sr">Locked. </span>🔒 ') + esc(b.how) + (b.global ? " <em>(both modes)</em>" : "") + "</span></li>";
+    h += '<section class="me-card"><div class="me-h"><h2>Badges</h2><span>' + got + " of " + st.badges.length + ' earned · next tiers unlock as you go</span></div><ul class="me-badges">' +
+      st.badges.filter(function (b) { return !b.later; }).map(function (b) {
+        return '<li class="me-b' + (b.got ? " got" : "") + '"><span class="me-bi" aria-hidden="true">' + b.icon + '</span><b>' + esc(b.name) + '</b><span class="me-bh">' + (b.got ? "✔ Earned. " : '<span class="sr">Locked. </span>🔒 ') + esc(b.how) + (b.global ? " <em>(both modes)</em>" : "") + (b.prog ? ' <em class="me-prog">' + esc(b.prog) + "</em>" : "") + "</span></li>";
       }).join("") + "</ul></section>";
     h += '<section class="me-card me-save"><p><b>Saved in this browser only.</b> Clear your browser, lose your glory. Moving phones? Export here, import there.</p>' +
       '<div class="me-btns"><button type="button" class="me-btn" id="me-exp">⬇ Export my stats</button><label class="me-btn ghost" for="me-imp">⬆ Import<input type="file" id="me-imp" accept="application/json,.json" class="sr"></label></div><p class="me-msg" id="me-msg" aria-live="polite"></p></section>';
