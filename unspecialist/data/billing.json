@@ -1514,7 +1514,7 @@
   {
    "id": "path-vitd",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "You're ordering 25-hydroxyvitamin D for several patients.",
    "q": "Which requests meet the Medicare criteria for item 66833? (Pick all that apply.)",
    "type": "multi",
@@ -1530,7 +1530,7 @@
     2,
     3
    ],
-   "why": "66833 is only for listed indications: e.g. signs of osteoporosis or osteomalacia; raised ALP with otherwise normal LFTs; hyperparathyroidism or calcium/phosphate problems; malabsorption; deeply pigmented skin or chronic severe lack of sun; medicines that lower vitamin D (like anticonvulsants); chronic kidney failure; and some children and infants. Tiredness and 'just checking' aren't on the list.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. 66833 is only for listed indications: e.g. signs of osteoporosis or osteomalacia; raised ALP with otherwise normal LFTs; hyperparathyroidism or calcium/phosphate problems; malabsorption; deeply pigmented skin or chronic severe lack of sun; medicines that lower vitamin D (like anticonvulsants); chronic kidney failure; and some children and infants. Tiredness and 'just checking' aren't on the list.",
    "risk": "Outside the criteria there's no rebate, so the patient may get a bill. Write the indication on the request.",
    "sources": [
     {
@@ -1551,7 +1551,7 @@
   {
    "id": "path-hba1c-mon",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "Wayne, 60, has type 2 diabetes. He's already had four HbA1c tests in the last 12 months and asks for another 'just to see'.",
    "q": "Is a fifth HbA1c rebated?",
    "type": "single",
@@ -1562,7 +1562,7 @@
     "Only by a specialist"
    ],
    "answer": 1,
-   "why": "HbA1c for managing established diabetes (66551) can't be claimed more than 4 times in 12 months. Pregnancy with pre-existing diabetes has its own item (66554, up to 6 in 12 months).",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. HbA1c for managing established diabetes (66551) can't be claimed more than 4 times in 12 months. Pregnancy with pre-existing diabetes has its own item (66554, up to 6 in 12 months).",
    "risk": "Relabelling it as 'diagnosis' to get it paid is misrepresenting the request.",
    "sources": [
     {
@@ -1575,7 +1575,7 @@
   {
    "id": "path-hba1c-dx",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "Kerry, 47, asymptomatic, high risk for diabetes. Her diagnostic HbA1c seven months ago was normal. She'd like another.",
    "q": "Is a repeat diagnostic HbA1c rebated today?",
    "type": "single",
@@ -1586,7 +1586,7 @@
     "Only if fasting"
    ],
    "answer": 1,
-   "why": "66841 is HbA1c for diagnosis in asymptomatic patients at high risk: once in 12 months. The monitoring item (66551) is only for established diabetes.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. 66841 is HbA1c for diagnosis in asymptomatic patients at high risk: once in 12 months. The monitoring item (66551) is only for established diabetes.",
    "risk": "Ordering it under the 'established diabetes' item when she doesn't have diabetes is a misdescribed request.",
    "sources": [
     {
@@ -1599,7 +1599,7 @@
   {
    "id": "path-psa",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "Two asymptomatic men want a PSA. Geoff, 58, no family history, had one 14 months ago. Phil, 55, whose brother has prostate cancer, had one 12 months ago.",
    "q": "Which is right? (Pick all that apply.)",
    "type": "multi",
@@ -1613,7 +1613,7 @@
     0,
     2
    ],
-   "why": "Since 1 November 2023, the general PSA item 66655 is once in 23 months. Men with a first-degree relative with prostate cancer have 66654, once in 11 months.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. Since 1 November 2023, the general PSA item 66655 is once in 23 months. Men with a first-degree relative with prostate cancer have 66654, once in 11 months.",
    "risk": "Too early on 66655 and the patient may get a bill. Using 66655 for Phil makes him wait unnecessarily.",
    "sources": [
     {
@@ -1630,7 +1630,7 @@
   {
    "id": "path-tsh",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "Lily, 30, tired, no thyroid history, not on thyroid-affecting medicines. You'd like to check her thyroid.",
    "q": "What gets rebated?",
    "type": "single",
@@ -1641,7 +1641,7 @@
     "Nothing: thyroid tests need a specialist"
    ],
    "answer": 1,
-   "why": "TSH alone is 66716. Free T4 and/or T3 are added under 66719 if the TSH is out of range, or for listed indications such as monitoring thyroid disease, dementia or psychiatric illness, amenorrhoea or infertility, suspected pituitary problems, or drugs that affect thyroid function.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. TSH alone is 66716. Free T4 and/or T3 are added under 66719 if the TSH is out of range, or for listed indications such as monitoring thyroid disease, dementia or psychiatric illness, amenorrhoea or infertility, suspected pituitary problems, or drugs that affect thyroid function.",
    "risk": "The full panel 'just because' isn't how the item works. Let the lab cascade.",
    "sources": [
     {
@@ -1658,7 +1658,7 @@
   {
    "id": "path-b12",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "A few B12 and folate requests land on your desk.",
    "q": "Which are rebated? (Pick all that apply.)",
    "type": "multi",
@@ -1672,7 +1672,7 @@
     1,
     3
    ],
-   "why": "Serum B12 (66838) is once in 12 months. B12 markers like holoTC (66839) are for a low or equivocal serum B12. Folate (66840) is for patients at risk of deficiency, e.g. malabsorption, macrocytic anaemia or coeliac disease.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. Serum B12 (66838) is once in 12 months. B12 markers like holoTC (66839) are for a low or equivocal serum B12. Folate (66840) is for patients at risk of deficiency, e.g. malabsorption, macrocytic anaemia or coeliac disease.",
    "risk": "Unrebated tests can mean a surprise bill for the patient.",
    "sources": [
     {
@@ -1689,7 +1689,7 @@
   {
    "id": "path-lipids",
    "room": "desk",
-   "topic": "Pathology",
+   "topic": "Pathology requests",
    "consult": "Gordon, 67, started a statin three months ago. You want repeat lipids to check his response.",
    "q": "Does the MBS cap how often standard lipid tests are rebated?",
    "type": "single",
@@ -1700,7 +1700,7 @@
     "Lipids aren't rebated for GPs"
    ],
    "answer": 1,
-   "why": "The standard chemistry items that cover cholesterol, triglycerides and HDL don't carry a frequency limit in the descriptor. The capped lipid item is lipoprotein electrophoresis (66539, twice in 12 months). The limit that matters is clinical: test when it changes management.",
+   "why": "The lab bills these, not you; your request decides whether Medicare pays. The standard chemistry items that cover cholesterol, triglycerides and HDL don't carry a frequency limit in the descriptor. The capped lipid item is lipoprotein electrophoresis (66539, twice in 12 months). The limit that matters is clinical: test when it changes management.",
    "risk": "No rebate cap isn't a licence to over-test: repeated unnecessary tests are a classic over-servicing pattern.",
    "sources": [
     {

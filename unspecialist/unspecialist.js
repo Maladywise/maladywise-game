@@ -357,7 +357,9 @@
       var pm = procMins(c, cur.used), ex = extrasOf(c), sel = cur.extra || [];
       panel = '<p class="us-plabel">Time with the patient so far: <b>' + (mins - pm) + " min</b>" + (pm ? " (plus " + pm + " min of procedure, which doesn't count toward the tier)" : "") + ". Bill the time tier that fits.</p>" +
         LEVELS.map(function (l, k) { return opt("bill", k, l.n + " (" + l.item + ") · " + l.d, cur.bill === k); }).join("");
-      if (ex.length) panel += '<p class="us-plabel us-also">Also claim? Tick any that are legitimate today; leave the rest.</p>' + ex.map(function (x, k) { return opt("extra", k, x.label, sel.indexOf(k) >= 0, true); }).join("");
+      var exC = ex.map(function (x, k) { return [x, k]; }).filter(function (p) { return p[0].kind !== "order"; }), exO = ex.map(function (x, k) { return [x, k]; }).filter(function (p) { return p[0].kind === "order"; });
+      if (exC.length) panel += '<p class="us-plabel us-also">Also claim? Tick any that are legitimate today; leave the rest.</p>' + exC.map(function (p) { return opt("extra", p[1], p[0].label, sel.indexOf(p[1]) >= 0, true); }).join("");
+      if (exO.length) panel += '<p class="us-plabel us-also">Pathology request: the lab bills these, not you, but what you write decides whether Medicare pays. Tick what\'s right.</p>' + exO.map(function (p) { return opt("extra", p[1], p[0].label, sel.indexOf(p[1]) >= 0, true); }).join("");
       panel += '<p class="us-billnote">' + billNote() + ' <a href="#cheat">MBS cheat sheet</a></p>';
     }
     var ready = cur.dx !== null && cur.plan.length && cur.safety !== null && cur.bill !== null;
@@ -407,18 +409,21 @@
     if (cur.bill !== lvl) missed.push({ t: "Billing: " + LEVELS[lvl].n + " (" + LEVELS[lvl].item + ")", w: "You spent " + att + " minutes with the patient" + (att !== mins ? " (procedure time excluded)" : "") + " and chose " + LEVELS[cur.bill].n + (cur.bill > lvl ? ". That's over-claiming, which is the kind of thing that gets audited." : ". Under-claiming is safe but leaves money on the table.") });
     var ex = extrasOf(c), claim = [LEVELS[lvl].n + " (" + LEVELS[lvl].item + ")"];
     if (ex.length) {
-      var good = 0, sel = cur.extra || [];
+      var good = 0, nb = 0, og = 0, no = 0, sel = cur.extra || [], orders = [];
       ex.forEach(function (x, k) {
-        var on = sel.indexOf(k) >= 0;
-        if (x.ok) claim.push(x.label);
+        var on = sel.indexOf(k) >= 0, ord = x.kind === "order";
+        if (x.ok) (ord ? orders : claim).push(x.label);
+        if (ord) { no++; if (on === !!x.ok) og++; else missed.push({ t: (x.ok ? "Pathology request, missed: " : "Pathology request, not rebated: ") + x.label, w: x.why || "", red: false }); return; }
+        nb++;
         if (on === !!x.ok) good++;
         else missed.push({ t: (x.ok ? "Billing, missed co-claim: " : "Billing, invalid co-claim: ") + x.label, w: x.why || "", red: false });
       });
-      bill = 0.6 * bill + 40 * good / ex.length;
+      if (nb) bill = 0.6 * bill + 40 * good / nb;
+      if (no) acc = 0.8 * acc + 20 * og / no;
     }
     var sc = { safety: clamp(safety), acc: clamp(acc), time: clamp(time), pc: clamp(100 * pg / pw), bill: clamp(bill) };
     sc.total = clamp((sc.safety + sc.acc + sc.time + sc.pc + sc.bill) / 5);
-    sc.claim = claim; sc.billSrc = ex.map(function (x) { return x.src; }).filter(Boolean);
+    sc.claim = claim; sc.orders = (typeof orders !== 'undefined') ? orders : []; sc.billSrc = ex.map(function (x) { return x.src; }).filter(Boolean);
     sc.mins = mins; sc.over = over; sc.missed = missed; sc.danger = danger; sc.lastCrit = lastCrit;
     sc.critEarly = !!c.critical && slot <= 1;
     return sc;
@@ -464,6 +469,7 @@
       '<div class="us-sec"><span class="us-kick">What you missed</span>' + miss + "</div>" +
       '<div class="us-pearl"><span class="us-kick">Teaching pearl</span><p>' + esc(c.pearl) + "</p></div>" +
       (sc.claim ? '<div class="us-card"><span class="us-kick">The right claim</span><b>' + sc.claim.map(esc).join(" + ") + "</b><span>" + billNote() + "</span></div>" : "") +
+      (sc.orders && sc.orders.length ? '<div class="us-card"><span class="us-kick">The right pathology request</span><b>' + sc.orders.map(esc).join("; ") + "</b><span>Billed by the lab, not you. Your request wording decides whether Medicare pays.</span></div>" : "") +
       '<div class="us-sec"><span class="us-kick">Sources</span><ul class="us-src">' + c.sources.concat(sc.billSrc || []).map(function (s) { return "<li>" + srcLink(s.url, s.t) + "</li>"; }).join("") + "</ul></div>" +
       '<a class="us-btn" href="#clinic">' + (allDone ? "Close the clinic" : "Next patient") + "</a>";
   }
@@ -655,7 +661,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=2"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=1").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=3"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=2").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
