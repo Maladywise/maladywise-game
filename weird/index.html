@@ -19,19 +19,17 @@
 <link rel="stylesheet" href="/assets/shell.css?v=141">
 <script src="/assets/games.js?v=90"></script>
 <script src="/assets/site.js?v=25"></script>
-<script src="/assets/shell.js?v=141"></script>
+<script src="/assets/shell.js?v=142"></script>
 </head>
 <body>
 <main class="wrap doc">
 <h1>Weird &amp; wonderful</h1>
-<p class="lede">Odd words, strange history and trivia nobody asked for. You're welcome.</p>
-<a class="wotw" id="mw-wotw" href="/words/" hidden></a>
+<p class="lede">Strange history and trivia nobody asked for. You're welcome.</p>
 <ul class="tx">
-<li><span class="ev m">Every Monday</span><b><a href="/words/">Word of the week</a></b>A weird word and its backstory, plus a question from history's strangest moments.</li>
 <li><span class="ev m">Daily</span><b><a href="/triviosis/?mode=normie">Triviosis</a></b>Ten quick questions with a weird slant. Mildly educational. Mostly smug.</li>
 <li><span class="ev m">Sundays</span><b><a href="/grandrounds/?mode=normie">Grand Rounds</a></b>Twenty questions on the week that was. The last one melts brains.</li>
 </ul>
-<script>(function(){var a=document.getElementById("mw-wotw");if(!a||!window.fetch)return;fetch("/words/current.json").then(function(r){return r.json()}).then(function(w){a.href="/words/#"+w.slug;a.innerHTML="<span>Word of the week</span><b></b><i></i>";a.querySelector("b").textContent=w.word;a.querySelector("i").textContent="literally \u2018"+w.literal+"\u2019 \u2192";a.hidden=false}).catch(function(){})})();</script>
+
 <footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>MW.page();</script>
