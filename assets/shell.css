@@ -755,3 +755,17 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
   .bar .tools > .icon-btn{order:4}
 }
 .card .pill.wk.sup{white-space:nowrap;letter-spacing:.04em;max-width:100%}
+/* How to play: fit short phone screens without scrolling */
+@media (max-height:760px){
+  .scrim{padding:8px}
+  .modal{max-height:97svh;padding:14px 16px 16px;gap:8px}
+  .modal h2{font-size:20px}
+  .modal ol,.modal ul{gap:3px;line-height:1.32;font-size:14.5px}
+  .modal p{font-size:14px;line-height:1.35;margin:0}
+  .modal img,.modal svg.mascot{max-width:52px;max-height:52px}
+}
+@media (max-height:640px){
+  .modal ol,.modal ul{font-size:13.5px;line-height:1.28}
+  .modal p{font-size:13px}
+  .modal h2{font-size:18px}
+}
