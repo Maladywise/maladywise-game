@@ -131,3 +131,8 @@ html[data-theme="dark"] #sns .btn.big{color:#16121F}
 #sns .arow.on{border-color:var(--accent)}
 #sns .arow .badge{font-size:10px;padding:2px 8px}
 html[data-motion="reduce"] #sns *{animation:none!important;scroll-behavior:auto!important}
+
+/* round type chip (Signs rounds vs lab tests) */
+#sns .kick{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+#sns .kind{font:600 10px var(--body);letter-spacing:.08em;padding:2px 8px;border-radius:999px;border:1.5px solid var(--line);color:var(--muted);background:var(--paper)}
+#sns .kind.sign,#sns .kind.rule{border-color:var(--ok);color:var(--ok);background:var(--okbg)}

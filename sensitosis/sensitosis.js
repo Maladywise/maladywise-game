@@ -1,10 +1,11 @@
 /* Sensitosis: guess how good real medical tests are. Five tests a day; two sliders each (sensitivity, specificity).
-   Test bank: tests.json {tests: {id: {test, condition, scenario, sens:{v,lo,hi}, spec:{v,lo,hi}|null, range?, says, note, src:[[title,url]], checked}}}.
+   Test bank: tests.json {tests: {id: {test, condition, scenario, sens:{v,lo,hi}, spec:{v,lo,hi}|null, range?, kind?, label?, says, note, src:[[title,url]], checked}}}.
+   kind: sign | rule | scan | (none = lab test). Sign and rule rounds are "Signs rounds": same mechanics, different chip and wording.
    Days: puzzles/YYYY-MM.json [{date, number, difficulty, rounds:[{test, twist?:{prev, where, sourced}}]}].
    Scoring: up to 50 a slider (100 for one-slider rounds); full marks anywhere in lo-hi (+/-2), zero at 35+ away. Medical only. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", N = 5, OPEN = "2026-11-02";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", N = 5, OPEN = "2026-11-02";
   var root = document.getElementById("sns");
   if (!document.querySelector("link[data-sns]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "sensitosis.css?v=" + BUILD; l.setAttribute("data-sns", ""); document.head.appendChild(l);
@@ -16,7 +17,8 @@
     ' <details class="explain" id="sns-explain"><summary>Sensitivity and specificity, in plain English</summary>' +
     '  <p><b>Sensitivity</b> is how good a test is at <b>catching</b> people who have the condition. Out of 100 people who have it, how many test positive? The rest are <b>misses</b>.</p>' +
     '  <p><b>Specificity</b> is how good it is at <b>clearing</b> people who don’t. Out of 100 people without it, how many test negative? The rest are <b>false alarms</b>.</p>' +
-    '  <p>A test can be brilliant at one and rubbish at the other. Today you guess both.</p></details>' +
+    '  <p>A test can be brilliant at one and rubbish at the other. Today you guess both.</p>' +
+    '  <p><b>Signs rounds</b> are things a doctor checks with hands, eyes and a few questions, like a knee wobble or a checklist. Same rules: guess how often they catch it and clear it.</p></details>' +
     ' <div class="dots" id="sns-dots" aria-label="Progress"></div>' +
     ' <section class="card" id="sns-card" aria-live="polite"></section>' +
     ' <div class="result" id="sns-result" hidden></div>' +
@@ -68,6 +70,7 @@
     if (p >= 1) return "about 1 in " + Math.round(100 / p);
     var k = Math.round(p * 10); return k < 1 ? "fewer than 1 in 1,000" : "about " + k + " in 1,000";
   }
+  function ofPpl(p) { var w = oneIn(p); return /^(about half|almost all|almost none)$/.test(w) ? w + " of the people" : w + " people"; }
   function ppv(T, prev) {
     var s = T.sens.v / 100, c = T.spec.v / 100, base = prev < 1 ? 10000 : 1000, have = Math.round(base * prev / 100), caught = Math.round(have * s), fa = Math.round((base - have) * (1 - c));
     return { base: base, have: have, caught: caught, fa: fa, p: caught / Math.max(1, caught + fa) * 100 };
@@ -103,14 +106,22 @@
       b.onclick = function () { var inp = $(b.getAttribute("data-for")); inp.value = Math.max(0, Math.min(100, +inp.value + +b.getAttribute("data-d"))); paintRange(inp); };
     });
   }
+  var KINDS = { sign: "Physical sign", rule: "Clinical rule", scan: "Scan", lab: "Lab test" };
+  function kindOf(T) { return KINDS[T.kind] ? T.kind : "lab"; }
+  function isSign(T) { var k = kindOf(T); return k === "sign" || k === "rule"; }
+  function chip(T) { var k = kindOf(T); return '<span class="kind ' + k + '">' + esc(T.label || KINDS[k]) + "</span>"; }
   function head(i, T) {
-    return '<p class="kick">Test ' + (i + 1) + " of " + N + "</p><h2>" + esc(T.test) + '</h2><p class="for">Looking for <b>' + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>";
+    return '<p class="kick"><span>' + (isSign(T) ? "Signs round · " : "Test ") + (i + 1) + " of " + N + "</span>" + chip(T) + "</p><h2>" + esc(T.test) + '</h2><p class="for">Looking for <b>' + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>";
+  }
+  function words(T) {
+    var k = kindOf(T);
+    return k === "sign" ? ["show the sign", "don’t show it", "sign"] : k === "rule" ? ["does it flag", "does it clear", "rule"] : ["test positive", "test negative", "test"];
   }
   function renderGuess(i) {
-    var T = tOf(i);
+    var T = tOf(i), W = words(T);
     var h = head(i, T) +
-      slider("s", "Out of 100 people <b>with</b> " + esc(T.condition) + ", how many test positive?", "This is the test’s <b>sensitivity</b>.", 50) +
-      (T.spec ? slider("c", "Out of 100 people <b>without</b> it, how many test negative?", "This is its <b>specificity</b>.", 50) : '<p class="one">One slider today: there’s no good figure for false alarms.</p>') +
+      slider("s", "Out of 100 people <b>with</b> " + esc(T.condition) + ", how many " + W[0] + "?", "This is the " + W[2] + "’s <b>sensitivity</b>.", 50) +
+      (T.spec ? slider("c", "Out of 100 people <b>without</b> it, how many " + W[1] + "?", "This is its <b>specificity</b>.", 50) : '<p class="one">One slider today: there’s no good figure for false alarms.</p>') +
       '<button type="button" class="btn big" id="sns-lock">Lock it in</button><p class="msg" aria-live="polite"></p>';
     $("card").innerHTML = h; bindSliders($("card"));
     $("lock").onclick = function () { lock(i); };
@@ -126,7 +137,7 @@
       (T.spec ? '<figure><figcaption>100 people <b>without</b> it</figcaption>' + grid(cv, "ok", "fa", cv + " of 100 cleared, " + (100 - cv) + " false alarms") +
       '<p class="leg"><i class="k ok"></i>cleared ' + cv + ' <i class="k fa"></i>false alarm ' + (100 - cv) + "</p></figure>" : "") + "</div>";
     var words = T.range ? "Catches anywhere from " + T.sens.lo + " to " + T.sens.hi + " in 100, depending on the study. Helpful." :
-      "Misses " + oneIn(100 - T.sens.v) + " people who have it." + (T.spec ? (T.spec.v >= 99.95 ? " Almost never a false alarm." : " False alarms in " + oneIn(100 - T.spec.v) + " people who don’t.") : "");
+      "Misses " + ofPpl(100 - T.sens.v) + " who have it." + (T.spec ? (T.spec.v >= 99.95 ? " Almost never a false alarm." : " False alarms in " + ofPpl(100 - T.spec.v) + " who don’t.") : "");
     h += '<p class="words">' + words + "</p>" + '<p class="says">' + esc(T.says) + "</p>";
     if (R.twist && T.spec) h += twistHtml(i, T, R.twist);
     h += '<div class="evid"><p><b>The evidence.</b> ' + esc(T.note) + "</p><p class=\"srcs\">" + T.src.map(function (s) { return '<a href="' + esc(s[1]) + '" target="_blank" rel="noopener">Source: ' + esc(s[0]) + " ↗</a>"; }).join("") + "</p><p class=\"chk\">Checked " + esc(T.checked) + "</p></div>";
@@ -174,7 +185,7 @@
     r.innerHTML = '<p class="verdict">' + esc(pick(SASS.end[mine])) + "</p><h2>" + st.score + "<small> / " + N * 100 + "</small></h2>" +
       '<ul class="sum">' + P.rounds.map(function (R, i) {
         var T = TESTS[R.test], g = st.g[i];
-        return '<li><span class="e">' + emo(g[2]) + '</span><span class="n"><b>' + esc(T.test) + "</b><small>Catches " + fmt(T.sens.v) + (T.spec ? " · clears " + fmt(T.spec.v) : "") + " · you " + g[0] + (T.spec ? "/" + g[1] : "") + '</small><a href="' + esc(T.src[0][1]) + '" target="_blank" rel="noopener">Source ↗</a></span><span class="p">' + g[2] + "</span></li>";
+        return '<li><span class="e">' + emo(g[2]) + '</span><span class="n"><b>' + esc(T.test) + "</b><small>" + esc(T.label || KINDS[kindOf(T)]) + " · catches " + fmt(T.sens.v) + (T.spec ? " · clears " + fmt(T.spec.v) : "") + " · you " + g[0] + (T.spec ? "/" + g[1] : "") + '</small><a href="' + esc(T.src[0][1]) + '" target="_blank" rel="noopener">Source ↗</a></span><span class="p">' + g[2] + "</span></li>";
       }).join("") + "</ul>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>250+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<div class="dist">' + stats.dist.map(function (c, i) { return "<div><span>" + L[i] + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(c / max * 100)) + '%">' + c + "</i></div>"; }).join("") + "</div>" +
