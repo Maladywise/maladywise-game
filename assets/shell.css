@@ -769,3 +769,4 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
   .modal p{font-size:13px}
   .modal h2{font-size:18px}
 }
+.me-prog{display:block;margin-top:2px;font-style:normal;font-weight:600;color:var(--brand,#4A3480)}

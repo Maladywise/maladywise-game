@@ -310,7 +310,37 @@
     ["archive", "🗄️", "Archive Diver", "Finish five past puzzles in one day."],
     ["owl", "🦉", "Night Owl", "Finish a puzzle between midnight and 4am."],
     ["tourist", "😎", "Normie Tourist", "Finish a puzzle in Normie mode.", "global"],
-    ["both", "☯️", "Both Sides", "Finish puzzles in both modes on the same day.", "global"]
+    ["both", "☯️", "Both Sides", "Finish puzzles in both modes on the same day.", "global"],
+    // progressive tiers: [id, icon, name, how, scope, metric, target]
+    ["s3", "🔥", "Three in a Row", "Play three days in a row.", "", "streak", 3],
+    ["s14", "🗓️", "Fortnight Fanatic", "Play 14 days in a row.", "", "streak", 14],
+    ["s60", "🧳", "Two-Month Locum", "Play 60 days in a row.", "", "streak", 60],
+    ["s100", "🏅", "Hundred-Day Habit", "Play 100 days in a row.", "", "streak", 100],
+    ["s200", "🪪", "Lifer", "Play 200 days in a row.", "", "streak", 200],
+    ["s365", "🎖️", "Year on the Wards", "Play every day for a year.", "", "streak", 365],
+    ["n10", "✅", "Ten Down", "Solve 10 puzzles.", "", "solved", 10],
+    ["n25", "🧩", "Quarter Century", "Solve 25 puzzles.", "", "solved", 25],
+    ["n50", "🎯", "Half-Century", "Solve 50 puzzles.", "", "solved", 50],
+    ["n250", "🏆", "Two-Fifty Club", "Solve 250 puzzles.", "", "solved", 250],
+    ["n500", "🌟", "Five Hundred Club", "Solve 500 puzzles.", "", "solved", 500],
+    ["n1000", "👑", "Thousand Cases", "Solve 1,000 puzzles. Seek sunlight.", "", "solved", 1000],
+    ["d10", "🪑", "Regular", "Play on 10 different days.", "", "days", 10],
+    ["d50", "✈️", "Frequent Flyer", "Play on 50 different days.", "", "days", 50],
+    ["d100", "🛋️", "Part of the Furniture", "Play on 100 different days.", "", "days", 100],
+    ["d365", "🏛️", "Senior Partner", "Play on 365 different days.", "", "days", 365],
+    ["e3", "🧠", "Triple Einstein", "Solve three Einstein-day puzzles.", "", "einstein", 3],
+    ["e10", "🥇", "Nobel Shortlist", "Solve ten Einstein-day puzzles.", "", "einstein", 10],
+    ["w5", "🏥", "Ward Regular", "Finish every daily game in a day, five times.", "", "fullward", 5],
+    ["w25", "🦸", "Ward Boss", "Finish every daily game in a day, 25 times.", "", "fullward", 25],
+    ["t5", "👖", "Smarty Pants", "Score a perfect 10 in Triviosis five times.", "", "perfect", 5],
+    ["t20", "📚", "Walking Textbook", "Score a perfect 10 in Triviosis 20 times.", "", "perfect", 20],
+    ["gr20", "🎓", "Grand Master", "Score 20 out of 20 in Grand Rounds.", "", "gr20", 1],
+    ["allg", "🧭", "True Generalist", "Play every daily game at least once.", "", "allgames", 1],
+    ["bull", "🎯", "Bullseye", "Solve Wordemic in one guess. Suspicious, but impressive.", "", "bull", 1],
+    ["long", "📏", "Long Haul", "Solve a Long Friday (8-letter) Wordemic.", "", "long", 1],
+    ["long10", "🦒", "Long Legs", "Solve ten Long Friday Wordemics.", "", "long", 10],
+    ["cat1", "🐈", "Blanket Biter", "Score 10,000 in Basil + Clover.", "global", "basil", 10000],
+    ["cat2", "🛋️", "Bench Legend", "Beat all ten rounds of Basil + Clover.", "global", "basilwon", 1]
   ];
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
@@ -376,7 +406,23 @@
       tourist: nAny,
       both: Object.keys(mdays).some(function (d) { return ndays[d]; })
     };
-    var badges = BADGE_DEFS.filter(function (b) { return !(b[4] === "medical" && N); }).map(function (b) { return { id: b[0], icon: b[1], name: b[2], how: b[3], global: b[4] === "global", got: !!T[b[0]] }; });
+    function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
+    var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
+    var wardN = daily.length ? Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).length : 0;
+    var M = {
+      streak: Math.max(best, cur), solved: solved, days: dl.length, einstein: einN, fullward: Math.max(wardN, get(P + "mw-wrc", "") ? 1 : 0),
+      perfect: cnt("triviosis", function (v) { return v.score === 10; }),
+      gr20: cnt("grandrounds", function (v) { return (v.sa || 0) >= 20; }),
+      allgames: daily.length && daily.every(function (id) { return rows.some(function (r) { return r.g.id === id && r.played; }); }) ? 1 : 0,
+      bull: cnt("wordemic", function (v) { return v.win && (v.guesses || []).length === 1; }),
+      long: cnt("wordemic", function (v) { return v.win && ((v.guesses || [])[0] || "").length === 8; }),
+      basil: get("mw-basil-best2", 0) || 0, basilwon: get("mw-basil-won", 0) ? 1 : 0
+    };
+    var badges = BADGE_DEFS.filter(function (b) { return !(b[4] === "medical" && N); }).map(function (b) {
+      var got = b[5] ? (M[b[5]] || 0) >= b[6] : !!T[b[0]], prog = b[5] && !got && b[6] > 1 ? Math.min(M[b[5]] || 0, b[6]).toLocaleString("en-AU") + " of " + b[6].toLocaleString("en-AU") : "";
+      return { id: b[0], icon: b[1], name: b[2], how: b[3], global: b[4] === "global", got: got, prog: prog, metric: b[5] || "" };
+    });
+    var nextShown = {}; badges.forEach(function (b) { if (!b.metric || b.got) return; if (nextShown[b.metric]) b.later = true; else nextShown[b.metric] = 1; }); // only the next tier of each ladder shows
     return { mode: N ? "normie" : "medical", rows: rows, days: days, solved: solved, cur: cur, best: Math.max(best, cur), today: playedToday, badges: badges };
   }
   window.MW_myStats = myStats;
