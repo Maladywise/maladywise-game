@@ -3,6 +3,7 @@
 //   We count IDs seen in the last 75s. Nothing is written to disk; IPs are only used briefly for rate limiting.
 // - Basil + Clover leaderboards: all-time and today's daily challenge. Stores a chosen name, score, round and a random
 //   per-browser game ID (so a player's best replaces their old score). Top 200 kept per board.
+// - Feedback: visitors report puzzle errors, image licence problems and bugs (POST /fb); owner reads them with the admin key.
 // - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
 const http = require("http");
@@ -149,13 +150,30 @@ async function tagSet(p, t, v) {
   memTag.ok[p] = cur;
 }
 
+// ---------- Feedback / error reports (puzzle errors, image licence issues, bugs) ----------
+// Stored in Redis list fb:list (newest first, max 500). No IPs stored. Owner reads them on /tag-review/.
+const FB_CATS = ["puzzle", "fact", "image", "bug", "idea", "other"];
+const memFb = [];
+function fbClean(s, n) { return String(s || "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "").slice(0, n); }
+function readBody(req, max) { return new Promise((res) => { let b = "", over = false; req.on("data", (c) => { if (over) return; b += c; if (b.length > max) { over = true; b = ""; } }); req.on("end", () => res(over ? null : b)); req.on("error", () => res(null)); }); }
+async function fbAdd(o) {
+  const row = JSON.stringify(o);
+  if (kv && kv.isReady) { await kv.lPush("fb:list", row); await kv.lTrim("fb:list", 0, 499); return; }
+  memFb.unshift(row); memFb.length = Math.min(memFb.length, 500);
+}
+async function fbList() { const L = kv && kv.isReady ? await kv.lRange("fb:list", 0, 499) : memFb.slice(); return L.map((x) => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(Boolean); }
+async function fbDone(id) {
+  if (kv && kv.isReady) { const L = await kv.lRange("fb:list", 0, 499); for (const x of L) { if (x.indexOf('"id":"' + id + '"') >= 0) { await kv.lRem("fb:list", 1, x); break; } } return; }
+  const i = memFb.findIndex((x) => x.indexOf('"id":"' + id + '"') >= 0); if (i >= 0) memFb.splice(i, 1);
+}
+
 const server = http.createServer(async (req, res) => {
   const origin = req.headers.origin || "";
   if (ALLOWED.test(origin)) { res.setHeader("Access-Control-Allow-Origin", origin); res.setHeader("Vary", "Origin"); }
   res.setHeader("Cache-Control", "no-store");
   const url = new URL(req.url, "http://x");
   const ip = (req.headers["x-forwarded-for"] || req.socket.remoteAddress || "").split(",")[0].trim();
-  if (req.method === "OPTIONS") { res.setHeader("Access-Control-Allow-Methods", "GET, POST"); res.writeHead(204); return res.end(); }
+  if (req.method === "OPTIONS") { res.setHeader("Access-Control-Allow-Methods", "GET, POST"); res.setHeader("Access-Control-Allow-Headers", "Content-Type"); res.writeHead(204); return res.end(); }
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
@@ -205,6 +223,21 @@ const server = http.createServer(async (req, res) => {
         if (pidOk(p) && TAGS.includes(t) && ["0", "1", "2"].includes(v)) await tagSet(p, t, v);
       }
       res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify(await tagQueue()));
+    }
+    if (url.pathname === "/fb" && req.method === "POST") {
+      const xf = (req.headers["x-forwarded-for"] || "").split(",").map((x) => x.trim()).filter(Boolean);
+      const rip = req.headers["cf-connecting-ip"] || req.headers["true-client-ip"] || xf[xf.length - 1] || req.socket.remoteAddress || "";
+      if (limited("fb" + rip, 12)) { res.writeHead(429); return res.end(); }
+      const body = await readBody(req, 6000); let o = null; try { o = JSON.parse(body || ""); } catch (e) {}
+      if (!o || !fbClean(o.msg, 2000).trim()) { res.writeHead(400); return res.end(); }
+      await fbAdd({ id: crypto.randomBytes(6).toString("hex"), at: new Date().toISOString(), cat: FB_CATS.includes(o.cat) ? o.cat : "other", page: fbClean(o.page, 300), msg: fbClean(o.msg, 2000), email: fbClean(o.email, 120), mode: fbClean(o.mode, 10) });
+      res.writeHead(200, { "Content-Type": "application/json" }); return res.end('{"ok":true}');
+    }
+    if (url.pathname === "/fbq" || url.pathname === "/fbdone") {
+      const q = url.searchParams;
+      if (limited("ta" + ip, 300) || !isAdmin(q.get("k"))) { res.writeHead(403); return res.end(); }
+      if (url.pathname === "/fbdone" && req.method === "POST") await fbDone(clean(q.get("id"), 20));
+      res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify(await fbList()));
     }
     if (url.pathname === "/" || url.pathname === "/health") { res.writeHead(200, { "Content-Type": "text/plain" }); return res.end("ok"); }
     res.writeHead(404); res.end();
