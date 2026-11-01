@@ -1030,7 +1030,19 @@
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
     }
   }
-  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); }
+  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); }
+  // Zebra Mail issues: card layout, headline + detail, "Why it's interesting" picked out (CSS in shell.css .wd)
+  function weeklyDose() {
+    if (!/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(location.pathname)) return;
+    var m = document.querySelector("main"); if (!m) return; m.classList.add("wd");
+    Array.prototype.forEach.call(m.querySelectorAll("li, h2 + p"), function (el) {
+      el.innerHTML = el.innerHTML.replace(/Why it(?:'|\u2019)s interesting:/, '<span class="why">Why it\u2019s interesting</span>');
+      Array.prototype.forEach.call(el.querySelectorAll("a"), function (a) { if (/^write-up$/i.test(a.textContent.trim())) a.className = "wu"; });
+      var st = el.firstElementChild;
+      if (st && st.tagName === "STRONG" && st.querySelector("a")) st.classList.add("hl");
+      else if (st && st.tagName === "STRONG") { st.classList.add("when"); st.textContent = st.textContent.replace(/:\s*$/, ""); }
+    });
+  }
   // ---------- secret: Night Shift (5 taps on the logo in 3s, or type "locum" on the home page) ----------
   (function () {
     if (!/^\/(index\.html)?$/.test(location.pathname)) return;
