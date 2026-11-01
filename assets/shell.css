@@ -787,3 +787,19 @@ button.mw-melink{border:0;background:none;width:100%;text-align:left;font:inheri
 .band{position:relative}
 .cfoot .solvedn{font:600 11px Poppins,system-ui,sans-serif;color:#6B5A93;white-space:nowrap}
 .card.done .cfoot .solvedn{display:none}
+/* Zebra Mail issue pages (class added by weeklyDose() in shell.js) */
+.wd h2{font:600 12px Poppins,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:30px 0 10px}
+.wd ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.wd li,.wd h2+p{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;line-height:1.55;margin:0}
+.wd strong.hl{font-weight:400}
+.wd strong.hl a,.wd h2+p>a:first-child{display:block;font:600 16px/1.4 Lora,Georgia,serif;color:var(--ink);text-decoration:none;margin-bottom:6px}
+.wd strong.hl a:hover,.wd h2+p>a:first-child:hover{color:var(--brand);text-decoration:underline}
+.wd li{color:var(--ink);font-size:15px}
+.wd li a{font-weight:500;color:var(--brand);text-underline-offset:2px}
+.wd li a.wu{font-size:13px;font-weight:600}
+.wd strong.when{display:inline-block;font:600 12px Poppins,system-ui,sans-serif;color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 6px}
+.wd strong.when{display:table}
+.wd .why{display:block;margin-top:8px;font:600 11px Poppins,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.wd h3{font:600 12px Poppins,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:28px}
+.wd h3+p{font-size:13px;line-height:1.8;color:var(--muted)}
+.wd .lede{margin-bottom:4px}
