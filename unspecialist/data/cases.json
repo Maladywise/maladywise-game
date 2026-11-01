@@ -78,7 +78,8 @@
     "min": 3,
     "key": true,
     "text": "Sinus rhythm, no acute changes. A normal resting ECG doesn't rule out angina.",
-    "why": "New exertional chest pain earns an ECG today."
+    "why": "New exertional chest pain earns an ECG today.",
+    "proc": true
    },
    {
     "id": "bloods",
@@ -158,6 +159,25 @@
       "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
      },
      "kind": "order"
+    },
+    {
+     "label": "Item 11714: 12-lead ECG, trace plus your clinical note (indication and interpretation)",
+     "okIf": "ecg",
+     "why": "You did the ECG and read it to decide what happens next. Since 1 March 2026 that's 11714 for a GP, on top of the consult. Keep the ECG minutes out of the consult tier.",
+     "whyNo": "No ECG was done, so there's no ECG to bill.",
+     "src": {
+      "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+      "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+     }
+    },
+    {
+     "label": "Item 11707 for the same ECG",
+     "ok": false,
+     "why": "11707 is a trace sent to a specialist or consultant physician for a formal report. You interpreted this one yourself: that's 11714.",
+     "src": {
+      "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+      "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+     }
     }
    ]
   },
@@ -235,7 +255,8 @@
     "min": 3,
     "key": true,
     "text": "ST depression in the lateral leads.",
-    "why": "The ECG is quick and changes the urgency, but it shouldn't delay calling the ambulance."
+    "why": "The ECG is quick and changes the urgency, but it shouldn't delay calling the ambulance.",
+    "proc": true
    },
    {
     "id": "trop",
@@ -311,7 +332,30 @@
     "t": "Heart Foundation: angina",
     "url": "https://www.heartfoundation.org.au/conditions/angina"
    }
-  ]
+  ],
+  "billing": {
+   "extras": [
+    {
+     "label": "Item 11714: 12-lead ECG, trace plus your clinical note (indication and interpretation)",
+     "okIf": "ecg",
+     "why": "You did the ECG and read it to decide what happens next. Since 1 March 2026 that's 11714 for a GP, on top of the consult. Keep the ECG minutes out of the consult tier.",
+     "whyNo": "No ECG was done, so there's no ECG to bill.",
+     "src": {
+      "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+      "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+     }
+    },
+    {
+     "label": "Item 11707 for the same ECG",
+     "ok": false,
+     "why": "11707 is a trace sent to a specialist or consultant physician for a formal report. You interpreted this one yourself: that's 11714.",
+     "src": {
+      "t": "MBS Online: ECG items 11707 and 11714 amended (1 March 2026)",
+      "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/1576fd15a78b61a3ca258da7007f3d0f/$FILE/PDF%20Version%20-%20Amendments%20to%20electrocardiogram%20items%2011707%20and%2011714.pdf"
+     }
+    }
+   ]
+  }
  },
  {
   "id": "maya",
@@ -609,6 +653,15 @@
       "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?q=66833"
      },
      "kind": "order"
+    },
+    {
+     "label": "Item 35503 today, for the IUD discussion",
+     "ok": false,
+     "why": "35503 is the insertion itself. Talking through a hormonal IUD is part of today's consult; bill 35503 on the day it goes in.",
+     "src": {
+      "t": "MBS item 35503 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Gynaecology/35503"
+     }
     }
    ]
   },
@@ -1310,7 +1363,20 @@
     "t": "RANZCP mood disorders guideline (2020)",
     "url": "https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"
    }
-  ]
+  ],
+  "billing": {
+   "extras": [
+    {
+     "label": "Also bill a mental health treatment plan (2700) because you arranged therapy",
+     "ok": false,
+     "why": "A plan (2700) needs at least 20 minutes on the plan itself and its required components, with its own time if you also bill a 23. Arranging therapy in a standard consult isn't a plan. Book a long appointment for it, soon.",
+     "src": {
+      "t": "RACGP: MBS mental health item changes for GPs",
+      "url": "https://www.racgp.org.au/advocacy/advocacy-resources/changes-to-mbs-mental-health-items-gps"
+     }
+    }
+   ]
+  }
  },
  {
   "id": "sam2",
@@ -1907,7 +1973,7 @@
     "why": "Pain or bleeding in early pregnancy means ectopic pregnancy must be thought about."
    },
    {
-    "id": "feel",
+    "id": "ice",
     "g": "h",
     "label": "How she feels about the pregnancy",
     "min": 2,
@@ -1998,12 +2064,13 @@
    "extras": [
     {
      "label": "Item 73806: urine pregnancy test done in the room",
-     "ok": true,
      "why": "A GP-performed urine pregnancy test is its own item, co-claimed with the consult. (This one you do bill: you did the test.)",
      "src": {
       "t": "CESPHN: Antenatal and pregnancy MBS items (Aug 2026), worked example",
       "url": "https://cesphn.org.au/wp-content/uploads/2026/08/20260805-Antenatal-and-Pregnancy-MBS-Items-1.pdf"
-     }
+     },
+     "okIf": "hcg",
+     "whyNo": "You didn't do the test in the room, so there's no 73806 to bill."
     },
     {
      "label": "Item 16500: antenatal attendance, once the pregnancy is confirmed and antenatal care starts",
@@ -2034,6 +2101,406 @@
    {
     "t": "Australian Government: Pregnancy Care Guidelines",
     "url": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
+   }
+  ]
+ },
+ {
+  "id": "noor",
+  "room": "womens",
+  "name": "Noor",
+  "age": 32,
+  "who": "Pharmacist. Two kids, done for now. Your practice bulk bills everyone.",
+  "blurb": "Booked for a hormonal IUD",
+  "opening": "\"I'm here for the Mirena. The pharmacist in me has read the product information twice.\"",
+  "actions": [
+   {
+    "id": "lmp",
+    "g": "h",
+    "label": "Last period and sex since",
+    "min": 1,
+    "key": true,
+    "text": "Period started 4 days ago. No sex since. Using condoms until today.",
+    "why": "Insertion needs pregnancy reasonably excluded."
+   },
+   {
+    "id": "sti",
+    "g": "h",
+    "label": "STI risk and pelvic infection",
+    "min": 1,
+    "key": true,
+    "text": "Long-term partner. No symptoms, no past pelvic infection.",
+    "why": "Current or recent pelvic infection must be treated and cleared before insertion."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Worried about the pain of insertion. Expects lighter periods. Wants it done today."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"Oh, am I due for my cervical screening? I think it's been over five years.\"",
+    "why": "\"Anything else?\" found an overdue screening test you can do in the same speculum exam."
+   },
+   {
+    "id": "pelvic",
+    "g": "e",
+    "label": "Speculum and bimanual exam (with consent)",
+    "min": 2,
+    "key": true,
+    "text": "Healthy-looking cervix. Uterus anteverted, normal size, non-tender. No adnexal tenderness.",
+    "why": "Uterine position and size guide a safe insertion."
+   },
+   {
+    "id": "upt",
+    "g": "t",
+    "label": "Urine pregnancy test in the room",
+    "min": 1,
+    "text": "Negative.",
+    "why": "Belt and braces before insertion."
+   },
+   {
+    "id": "cst",
+    "g": "t",
+    "label": "Take her cervical screening test",
+    "min": 1,
+    "needs": "else",
+    "key": true,
+    "text": "Sample taken before insertion. Lab to bill the test.",
+    "why": "Overdue screening, speculum already in: do it now."
+   },
+   {
+    "id": "iud",
+    "g": "t",
+    "label": "Insert the hormonal IUD",
+    "min": 3,
+    "key": true,
+    "proc": true,
+    "text": "Inserted without difficulty. Strings trimmed. Batch and expiry recorded.",
+    "why": "The reason she came."
+   },
+   {
+    "id": "us",
+    "g": "t",
+    "label": "Pelvic ultrasound before insertion",
+    "min": 1,
+    "flag": "low",
+    "text": "Booked. She'll need another appointment.",
+    "why": "Not routinely needed before a straightforward insertion."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Suitable for hormonal IUD insertion today, and due for cervical screening",
+    "Not suitable: needs an ultrasound first",
+    "Possible pelvic infection: treat first",
+    "Possible early pregnancy: defer insertion"
+   ],
+   "answer": 0,
+   "danger": [
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Insert the hormonal IUD with consent, and record batch and expiry",
+    "Take her cervical screening test today",
+    "Explain what to expect (cramping, irregular bleeding in the first months) and check understanding (teach-back)",
+    "Book a device check in a few weeks",
+    "Use backup contraception for 7 days, or skip it: insertion was in the first 5 days of her cycle",
+    "Routine antibiotics after insertion",
+    "Insert it without discussing side effects to save time"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "danger": [
+    6
+   ],
+   "explain": 2,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back straight away for worsening pelvic pain, fever, unusual discharge, if you can't feel the strings, or think you might be pregnant",
+    "Some pain for a few months is normal, so ignore it",
+    "No need for follow-up unless it falls out",
+    "Take antibiotics if you get cramps"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Item 35503: IUD insertion",
+     "okIf": "iud",
+     "why": "The insertion is its own procedure item on top of the separate screening work.",
+     "whyNo": "You didn't insert the IUD, so there's no 35503.",
+     "src": {
+      "t": "MBS item 35503 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Gynaecology/35503"
+     }
+    },
+    {
+     "label": "Item 35501: LARC loading (everything is bulk billed today)",
+     "okIf": "iud",
+     "why": "35501 adds 40% of the LARC fee when the LARC service and its other items are bulk billed, in the same claim.",
+     "whyNo": "No IUD today, so no LARC item to load.",
+     "src": {
+      "t": "MBS Online: LARC item changes (Nov 2025)",
+      "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+     }
+    },
+    {
+     "label": "Item 73806: urine pregnancy test done in the room",
+     "okIf": "upt",
+     "why": "You did the test: 73806, as in the sexual health guide's worked example (23 + 35503 + 73806).",
+     "whyNo": "No test was done in the room.",
+     "src": {
+      "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+      "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+     }
+    },
+    {
+     "label": "Item 14206 for the device",
+     "ok": false,
+     "why": "14206 is hormone implantation by cannula (the implant), not an IUD.",
+     "src": {
+      "t": "MBS item 14206 (privatehealth.gov.au)",
+      "url": "https://www.privatehealth.gov.au/dynamic/MBSItems/AssistedReproductive/14206"
+     }
+    },
+    {
+     "label": "A consumables fee charged on top of the bulk-billed claim",
+     "ok": false,
+     "why": "When you bulk bill, the benefit is full payment. No extra charges for any reason.",
+     "src": {
+      "t": "AskMBS Advisory: general practice services (July 2025)",
+      "url": "https://www.health.gov.au/sites/default/files/2025-06/askmbs-advisory-1-general-practice-services_0.pdf"
+     }
+    }
+   ]
+  },
+  "pearl": "IUD day: exclude pregnancy, check for infection, consent properly, and ask \"anything else?\" while the speculum is handy. Billing: a separate screening test earns the 23, the insertion is 35503, the room test is 73806, and bulk billing earns the 35501 loading. No gap fees on a bulk-billed claim.",
+  "sources": [
+   {
+    "t": "CERSH (Uni Melbourne): SRH MBS guide, Nov 2025 update",
+    "url": "https://medicine.unimelb.edu.au/__data/assets/pdf_file/0004/5470753/CERSH-RSDP-SRH-MBS-Guide-Nov-2025-update.pdf"
+   },
+   {
+    "t": "MBS Online: LARC item changes (Nov 2025)",
+    "url": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/58b2ac5927d50931ca258d1d0018e341/$FILE/PDF%20Version%20-%20Long%20Acting%20Reversible%20Contraceptive%20MBS%20item%20changes.pdf"
+   },
+   {
+    "t": "RACGP: IUD and IUS checklist for GPs",
+    "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Clinical%20Resources/Resources/IUD-IUS-GP-checklist.pdf"
+   }
+  ]
+ },
+ {
+  "id": "dean",
+  "room": "treatment",
+  "name": "Dean",
+  "age": 45,
+  "who": "Truck driver. Long shifts, servo dinners. Hasn't seen a GP in years.",
+  "blurb": "Painful lump under his arm",
+  "opening": "\"Got a boil in my armpit that's killing me. Can you just lance it?\"",
+  "actions": [
+   {
+    "id": "story",
+    "g": "h",
+    "label": "Story of the lump",
+    "min": 1,
+    "key": true,
+    "text": "Started 4 days ago, getting bigger and more painful. Second one this year.",
+    "why": "Duration and recurrence shape the plan."
+   },
+   {
+    "id": "fever",
+    "g": "h",
+    "label": "Fever or feeling unwell",
+    "min": 1,
+    "key": true,
+    "text": "No fevers or chills. Eating and drinking fine.",
+    "why": "Systemic illness or spreading infection changes whether antibiotics are needed."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Thinks it's \"just a boil\". Worried about missing shifts. Expects it lanced and antibiotics."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"While I'm here, the chemist said my blood pressure was 165 over 100. Is that bad?\"",
+    "why": "\"Anything else?\" turned up a separate problem that needs its own plan."
+   },
+   {
+    "id": "bpmore",
+    "g": "h",
+    "label": "Blood pressure: tell me more",
+    "min": 1,
+    "needs": "else",
+    "key": true,
+    "text": "Never treated. Smokes 10 a day. Dad had a stroke at 60.",
+    "why": "Untreated high readings and risk factors: this needs confirming, not ignoring."
+   },
+   {
+    "id": "lump",
+    "g": "e",
+    "label": "Examine the lump",
+    "min": 2,
+    "key": true,
+    "text": "3 cm fluctuant, tender swelling in the left armpit. Small rim of redness, no spreading cellulitis.",
+    "why": "Fluctuance means pus to drain; little surrounding redness means drainage alone may do."
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Blood pressure",
+    "min": 1,
+    "needs": "else",
+    "text": "158/98, and 156/96 on repeat."
+   },
+   {
+    "id": "id",
+    "g": "t",
+    "label": "Incise and drain (local anaesthetic)",
+    "min": 3,
+    "key": true,
+    "proc": true,
+    "text": "Pus drained, cavity irrigated and packed, dressing on.",
+    "why": "Drainage is the main treatment for an abscess."
+   },
+   {
+    "id": "swab",
+    "g": "t",
+    "label": "Swab the pus",
+    "min": 1,
+    "text": "Sent for culture, as this is his second abscess."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Skin abscess, plus raised blood pressure that needs confirming",
+    "Cellulitis needing IV antibiotics",
+    "Enlarged lymph node: urgent biopsy",
+    "Hidradenitis suppurativa only"
+   ],
+   "answer": 0,
+   "danger": [
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Incision and drainage",
+    "Dressing review in 1 to 2 days (packing out)",
+    "Confirm his blood pressure with home or 24-hour ambulatory monitoring, then review",
+    "Explain the plan and check he's understood (teach-back)",
+    "Antibiotics alone, no drainage",
+    "Ignore the BP: it's just the pain"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    5
+   ],
+   "explain": 3,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back the same day if the redness spreads, red streaks appear, you get fevers or it gets more painful. Chest pain, severe headache or weakness with high BP: call 000",
+    "Squeeze it again if it fills up",
+    "Finish the leftover antibiotics in your cupboard",
+    "Back in a month for the blood pressure"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Item 30219: incision and drainage of abscess",
+     "okIf": "id",
+     "why": "Drainage of an abscess not needing hospital admission is 30219. The BP problem is separate, so the consult is legitimate too.",
+     "whyNo": "You didn't drain it, so there's no 30219.",
+     "src": {
+      "t": "MBS item 30219 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30219"
+     }
+    },
+    {
+     "label": "Item 30064 (subcutaneous foreign body removal)",
+     "ok": false,
+     "why": "30064 is for a foreign body needing incision and exploration. Pus isn't a foreign body.",
+     "src": {
+      "t": "MBS item 30064 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30064"
+     }
+    },
+    {
+     "label": "Item 30219 again at his dressing review",
+     "ok": false,
+     "why": "30219 excludes aftercare, so the dressing review is an attendance item, not another drainage.",
+     "src": {
+      "t": "Services Australia: aftercare or post-operative treatment",
+      "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+     }
+    }
+   ]
+  },
+  "pearl": "Drain the pus; antibiotics are for spreading infection or systemic illness. And always ask \"anything else?\": an untreated BP of 165/100 is a bigger long-term risk than the boil. Billing: 30219 excludes aftercare, so dressing reviews are attendances.",
+  "sources": [
+   {
+    "t": "MBS item 30219 (privatehealth.gov.au)",
+    "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30219"
+   },
+   {
+    "t": "Services Australia: aftercare or post-operative treatment",
+    "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-aftercare-or-post-operative-treatment?context=20"
+   },
+   {
+    "t": "MBS Online: item 11607 (ambulatory BP)",
+    "url": "https://www9.health.gov.au/mbs/search.cfm?q=11607"
+   },
+   {
+    "t": "Frontiers in Microbiology 2016: GP management of staphylococcal skin abscesses in Australia",
+    "url": "https://frontiersin.org/articles/10.3389/fmicb.2016.00802/full"
    }
   ]
  }
