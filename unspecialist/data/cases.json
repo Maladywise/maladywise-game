@@ -1,242 +1,1882 @@
 [
-  {
-    "id":"graham","room":"chronic","name":"Graham","age":67,"who":"Retired electrician. Lives with his wife. Brother had a heart attack at 70.",
-    "blurb":"\"Just a repeat script\"","opening":"\"Just my blood pressure script, doc.\"",
-    "followup":{"trigger":["else","chest"],"case":"graham2"},
-    "actions":[
-      {"id":"se","g":"h","label":"Side effects?","min":1,"text":"No problems with the tablets. Takes them every morning."},
-      {"id":"smoke","g":"h","label":"Smoking","min":1,"text":"Ex-smoker. Quit 10 years ago after 30 years."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Thinks his blood pressure is \"sorted\". Quietly worried about his brother's heart attack. Expects a script and the car park."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","key":true,"doorknob":"\"Oh, and by the way, I get a bit tight in the chest walking up the hill to the shops. Goes away when I stop.\"","why":"\"Anything else?\" was where the angina was hiding."},
-      {"id":"chest","g":"h","label":"Chest tightness: tell me more","min":2,"needs":"else","key":true,"text":"Central tightness on exertion for about 6 weeks. Eases within a few minutes of resting. Never at rest. None today.","why":"Characterising exertional chest pain is the whole consult once it's mentioned."},
-      {"id":"bp","g":"e","label":"Blood pressure","min":1,"text":"142/86. Pulse 78, regular."},
-      {"id":"cvs","g":"e","label":"Heart, lungs, ankles","min":2,"text":"Normal heart sounds, clear chest, no ankle swelling."},
-      {"id":"ecg","g":"t","label":"ECG","min":3,"key":true,"text":"Sinus rhythm, no acute changes. A normal resting ECG doesn't rule out angina.","why":"New exertional chest pain earns an ECG today."},
-      {"id":"bloods","g":"t","label":"Order lipids, HbA1c, kidney check","min":1,"text":"Ordered: lipids, HbA1c, eGFR and urine albumin-creatinine ratio."}
-    ],
-    "dx":{"options":["Stable blood pressure. Script only.","Probable stable angina","Chest wall (musculoskeletal) pain","Acute coronary syndrome: call 000 now"],"answer":1,"danger":[0]},
-    "plan":{"options":["Renew his blood pressure medicine","Short-acting GTN spray, with clear instructions","Prompt cardiology assessment for further testing","Lipids, HbA1c and kidney check, and a CVD risk review","Explain the plan and check he's understood (teach-back)","Reassure: probably just unfit. See you in 12 months","Start antibiotics"],"correct":[0,1,2,3,4],"danger":[5],"explain":4,"critical":[2]},
-    "safety":{"options":["Call 000 if chest pain comes on at rest, is severe, is getting worse, or isn't fully gone within 10 minutes","Mention it at your next review if it's still there","Take two paracetamol and lie down","Drive yourself to ED if it gets bad"],"answer":0,"danger":[2,3]},
-    "billing":{"extras":[{"label":"Also bill a GP chronic condition management plan (965) today","ok":false,"why":"GPCCMP items can't be co-claimed with a general attendance on the same day. Book the plan as its own visit.","src":{"t":"MBS Online: GP chronic condition management plans","url":"https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"}},{"label":"Mark the HbA1c request 'established diabetes' so it's rebated","ok":false,"why":"He doesn't have diabetes. 66551 is for monitoring established diabetes; a diagnostic HbA1c in an asymptomatic high-risk patient is 66841, once in 12 months.","src":{"t":"Pathology Services Table (compilation 1 Nov 2024)","url":"https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"}}]},
-    "pearl":"The \"just a script\" consult is where angina likes to hide. Leave room for \"anything else?\", and if the answer is chest pain on exertion, the plan isn't \"see you next year\".",
-    "sources":[{"t":"Heart Foundation: angina","url":"https://www.heartfoundation.org.au/conditions/angina"},{"t":"2023 Australian CVD risk guideline (MJA)","url":"https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk"}]
+ {
+  "id": "graham",
+  "room": "chronic",
+  "name": "Graham",
+  "age": 67,
+  "who": "Retired electrician. Lives with his wife. Brother had a heart attack at 70.",
+  "blurb": "\"Just a repeat script\"",
+  "opening": "\"Just my blood pressure script, doc.\"",
+  "followup": {
+   "trigger": [
+    "else",
+    "chest"
+   ],
+   "case": "graham2"
   },
-  {
-    "id":"graham2","room":"resus","name":"Graham","age":67,"followupOf":"graham","critical":true,"criticalWhy":"Chest pain at rest in the waiting room. Every minute in the queue is heart muscle.",
-    "who":"Back again. You saw him for a repeat script.",
-    "blurb":"Back again: \"chest's worse\"","opening":"\"It's happening walking to the letterbox now. Had a bad one this morning just sitting down.\"",
-    "actions":[
-      {"id":"pattern","g":"h","label":"How has the pain changed?","min":1,"key":true,"text":"Now with minimal effort, and twice at rest. This morning's lasted about 15 minutes.","why":"Pain at rest or on minimal effort is the change that makes this unstable."},
-      {"id":"now","g":"h","label":"Any pain right now?","min":1,"key":true,"text":"Mild tightness now. Started about 20 minutes ago in the waiting room.","why":"Ongoing pain right now changes everything about the next ten minutes."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Scared it's a heart attack, like his brother. Hoping for \"a stronger pill\"."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"\"Isn't that enough?\" Fair."},
-      {"id":"obs","g":"e","label":"Obs: BP, pulse, sats","min":1,"key":true,"text":"BP 150/90, HR 92, sats 96% on air. Pale and clammy.","why":"Obs tell you how sick he is right now and whether GTN is safe."},
-      {"id":"ecg","g":"t","label":"12-lead ECG","min":3,"key":true,"text":"ST depression in the lateral leads.","why":"The ECG is quick and changes the urgency, but it shouldn't delay calling the ambulance."},
-      {"id":"trop","g":"t","label":"Send a troponin to the lab","min":2,"flag":"low","text":"Result in hours. He needs a hospital, not a courier.","why":"A community troponin delays transfer and doesn't change what he needs."}
-    ],
-    "dx":{"options":["Unstable angina / acute coronary syndrome","Stable angina","Reflux","Anxiety"],"answer":0,"danger":[1,2,3]},
-    "plan":{"options":["Call 000 for urgent ambulance transfer","Aspirin 300 mg, chewed or dissolved (unless contraindicated)","GTN spray while waiting, watching his blood pressure","Routine oxygen even though his sats are 96%","Explain what's happening and why","Send him home with a stronger tablet","Book an outpatient stress test next month"],"correct":[0,1,2,4],"danger":[5,6],"explain":4,"critical":[0,1]},
-    "safety":{"options":["Stay with him, keep him monitored and send a summary with the ambulance","Let him wait in the car park for the ambulance","He can drive himself to hospital","Come back if it happens again"],"answer":0,"danger":[1,2,3]},
-    "pearl":"Angina that's new, worse or happening at rest is an acute coronary syndrome until proven otherwise. Aspirin, ECG, ambulance, in whichever order gets them all done fastest.",
-    "sources":[{"t":"bpacnz B-QuiCK: acute coronary syndrome","url":"https://bpac.org.nz/b-quick/acs.aspx"},{"t":"Heart Foundation: angina","url":"https://www.heartfoundation.org.au/conditions/angina"}]
+  "actions": [
+   {
+    "id": "se",
+    "g": "h",
+    "label": "Side effects?",
+    "min": 1,
+    "text": "No problems with the tablets. Takes them every morning."
+   },
+   {
+    "id": "smoke",
+    "g": "h",
+    "label": "Smoking",
+    "min": 1,
+    "text": "Ex-smoker. Quit 10 years ago after 30 years."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Thinks his blood pressure is \"sorted\". Quietly worried about his brother's heart attack. Expects a script and the car park."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"Oh, and by the way, I get a bit tight in the chest walking up the hill to the shops. Goes away when I stop.\"",
+    "why": "\"Anything else?\" was where the angina was hiding."
+   },
+   {
+    "id": "chest",
+    "g": "h",
+    "label": "Chest tightness: tell me more",
+    "min": 2,
+    "needs": "else",
+    "key": true,
+    "text": "Central tightness on exertion for about 6 weeks. Eases within a few minutes of resting. Never at rest. None today.",
+    "why": "Characterising exertional chest pain is the whole consult once it's mentioned."
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Blood pressure",
+    "min": 1,
+    "text": "142/86. Pulse 78, regular."
+   },
+   {
+    "id": "cvs",
+    "g": "e",
+    "label": "Heart, lungs, ankles",
+    "min": 2,
+    "text": "Normal heart sounds, clear chest, no ankle swelling."
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "ECG",
+    "min": 3,
+    "key": true,
+    "text": "Sinus rhythm, no acute changes. A normal resting ECG doesn't rule out angina.",
+    "why": "New exertional chest pain earns an ECG today."
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "Order lipids, HbA1c, kidney check",
+    "min": 1,
+    "text": "Ordered: lipids, HbA1c, eGFR and urine albumin-creatinine ratio."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Stable blood pressure. Script only.",
+    "Probable stable angina",
+    "Chest wall (musculoskeletal) pain",
+    "Acute coronary syndrome: call 000 now"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
   },
-  {
-    "id":"maya","room":"kids","name":"Maya","age":3,"critical":true,"criticalWhy":"A floppy, feverish toddler is time-critical. Seeing her last means she waited longest.",
-    "who":"Here with her dad, Emeka. Usually a chatterbox.",
-    "blurb":"Fever, won't drink, \"a bit floppy\"","opening":"\"She's been hot since last night. Now she just wants to lie on me.\"",
-    "actions":[
-      {"id":"hx","g":"h","label":"Fever story","min":1,"text":"Fever since last night. Vomited twice. Refusing drinks; only one wet nappy today."},
-      {"id":"imms","g":"h","label":"Immunisations","min":1,"text":"Up to date for her age."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"\"She's never been like this.\" He wants her checked properly, and he's right to."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","key":true,"doorknob":"\"She screamed when I touched her legs this morning. She never does that.\"","why":"Leg pain is an early warning sign of meningococcal sepsis in children."},
-      {"id":"obs","g":"e","label":"Obs: temp, heart rate, cap refill","min":1,"key":true,"text":"Temp 39.4°C, HR 170, capillary refill 4 seconds. Cold hands and feet.","why":"Cold peripheries and slow cap refill in a febrile child are early sepsis signs."},
-      {"id":"skin","g":"e","label":"Check her skin all over","min":1,"key":true,"text":"Several purple spots on her legs that don't fade when you press a glass on them.","why":"A non-blanching rash with fever is meningococcal disease until proven otherwise."},
-      {"id":"neuro","g":"e","label":"Neck and alertness","min":1,"text":"Drowsy and irritable when handled. Neck hard to assess."},
-      {"id":"urine","g":"t","label":"Urine dipstick","min":3,"flag":"low","text":"Three minutes of coaxing, no sample. The clock didn't wait.","why":"A urine sample was never going to change the plan for this child."}
-    ],
-    "dx":{"options":["Viral illness","Suspected meningococcal sepsis","Urinary tract infection","Gastroenteritis"],"answer":1,"danger":[0,3]},
-    "plan":{"options":["Call 000 for urgent transfer","Parenteral antibiotics (benzylpenicillin or ceftriaxone) now, as long as it doesn't delay transfer","Phone the receiving hospital and hand over","Explain to her dad what's happening and why","Paracetamol, fluids and review tomorrow","Oral antibiotics and home"],"correct":[0,1,2,3],"danger":[4,5],"explain":3,"critical":[0,1]},
-    "safety":{"options":["Stay with them until the ambulance arrives","Back to the waiting room until the ambulance comes","Dad can drive her to ED if traffic's OK","Come back tomorrow if she's no better"],"answer":0,"danger":[1,2,3]},
-    "pearl":"In a febrile child: leg pain, cold hands and feet and pale or mottled skin can come before the rash. Once there's a non-blanching rash, antibiotics and an ambulance shouldn't wait for anything.",
-    "sources":[{"t":"NICE NG143: fever in under 5s","url":"https://nice.org.uk/guidance/ng143/resources/fever-in-under-5s-assessment-and-initial-management-pdf-66141778137541"},{"t":"CDNA: invasive meningococcal disease","url":"https://www.health.gov.au/sites/default/files/2024-07/invasive-meningococcal-disease-cdna-national-guidelines-for-public-health-units.pdf"},{"t":"Sepsis Clinical Care Standard","url":"https://www.safetyandquality.gov.au/sites/default/files/2022-06/sepsis_clinical_care_standard_2022.pdf"}]
+  "plan": {
+   "options": [
+    "Renew his blood pressure medicine",
+    "Short-acting GTN spray, with clear instructions",
+    "Prompt cardiology assessment for further testing",
+    "Lipids, HbA1c and kidney check, and a CVD risk review",
+    "Explain the plan and check he's understood (teach-back)",
+    "Reassure: probably just unfit. See you in 12 months",
+    "Start antibiotics"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "danger": [
+    5
+   ],
+   "explain": 4,
+   "critical": [
+    2
+   ]
   },
-  {
-    "id":"priya","room":"womens","name":"Priya","age":34,"who":"Accountant. Two kids under five. Vegetarian.",
-    "blurb":"Tired all the time","opening":"\"I'm just exhausted. I figured it's work.\"",
-    "actions":[
-      {"id":"mood","g":"h","label":"Mood and sleep","min":2,"text":"Mood fine, still enjoys things. Sleeps 7 hours. No snoring."},
-      {"id":"diet","g":"h","label":"Diet","min":1,"text":"Vegetarian, eats a varied diet."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Wonders about her thyroid (her mum has hypothyroidism). Expects blood tests."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","key":true,"doorknob":"\"Also... my periods have got really heavy. I'm flooding through pads overnight.\"","why":"Heavy periods were the cause, and she only mentioned them because you asked."},
-      {"id":"hmb","g":"h","label":"Periods: tell me more","min":2,"needs":"else","key":true,"text":"Heavy for 7 days with clots, changing pads every 1 to 2 hours on heavy days. Regular cycle. No bleeding between periods or after sex.","why":"A bleeding history shapes both the diagnosis and whether she needs imaging."},
-      {"id":"obs","g":"e","label":"Obs and colour","min":1,"text":"Pale. HR 96, BP 112/70."},
-      {"id":"pelvic","g":"e","label":"Pelvic examination (with consent)","min":3,"text":"With consent: no masses, uterus feels normal size."},
-      {"id":"fbc","g":"t","label":"Full blood count and ferritin","min":1,"key":true,"text":"Hb 98 g/L (low). Ferritin 6 µg/L (typical range for women roughly 30 to 300).","why":"The standard says to check FBC and ferritin routinely in heavy menstrual bleeding."},
-      {"id":"tft","g":"t","label":"Thyroid function","min":1,"text":"TSH normal."},
-      {"id":"hcg","g":"t","label":"Pregnancy test","min":1,"text":"Negative."}
-    ],
-    "dx":{"options":["Burnout","Iron deficiency anaemia from heavy menstrual bleeding","Hypothyroidism","Depression"],"answer":1,"danger":[]},
-    "plan":{"options":["Start iron replacement","Discuss treatment for the heavy bleeding (e.g. hormonal IUD, tranexamic acid, NSAIDs)","Explain the plan and check she's understood (teach-back)","Pelvic ultrasound for everyone with heavy periods, regardless","Refer for gastroscopy and colonoscopy","More red meat and an early night"],"correct":[0,1,2],"danger":[],"explain":2,"critical":[1]},
-    "safety":{"options":["Come back sooner if you're breathless, faint, have chest pain, or the bleeding gets heavier","Nothing to worry about","See you in a year","Stop the iron if your stools go dark"],"answer":0,"danger":[]},
-    "billing":{"extras":[{"label":"Thyroid: request TSH (free T4 is added only if TSH is abnormal)","ok":true,"why":"That's how the items work: TSH alone is 66716; free T4/T3 under 66719 if TSH is out of range or a listed indication applies.","src":{"t":"MBS Online: items 66716 and 66719","url":"https://www9.health.gov.au/mbs/search.cfm?q=66716&="}},{"label":"Add vitamin D because she's tired","ok":false,"why":"Tiredness isn't a 66833 indication, so there's no rebate and Priya may get a bill.","src":{"t":"MBS Online: item 66833","url":"https://www9.health.gov.au/mbs/fullDisplay.cfm?q=66833"}}]},
-    "pearl":"\"Tired all the time\" in a menstruating woman: ask about periods, then check FBC and ferritin. The hormonal IUD is the most effective medical treatment for heavy bleeding when there's no significant pathology.",
-    "sources":[{"t":"Heavy Menstrual Bleeding Clinical Care Standard","url":"https://safetyandquality.gov.au/standards/clinical-care-standards/heavy-menstrual-bleeding-clinical-care-standard/information-clinicians-heavy-menstrual-bleeding-clinical-care-standard"},{"t":"Lifeblood: causes of iron deficiency anaemia","url":"https://www.lifeblood.com.au/health-professionals/clinical-practice/clinical-indications/iron-deficiency-anaemia/determining-the-underlying-causes"}]
+  "safety": {
+   "options": [
+    "Call 000 if chest pain comes on at rest, is severe, is getting worse, or isn't fully gone within 10 minutes",
+    "Mention it at your next review if it's still there",
+    "Take two paracetamol and lie down",
+    "Drive yourself to ED if it gets bad"
+   ],
+   "answer": 0,
+   "danger": [
+    2,
+    3
+   ]
   },
-  {
-    "id":"tom","room":"drugs","name":"Tom","age":19,"who":"Apprentice carpenter. Started deadlifting last month.",
-    "blurb":"Back pain after the gym","opening":"\"Did deadlifts Saturday and my back's killing me. Can I get a scan and something strong?\"",
-    "actions":[
-      {"id":"story","g":"h","label":"Pain story","min":1,"text":"Low back ache, worse bending. No pain down the legs."},
-      {"id":"ce","g":"h","label":"Bladder, bowel, saddle numbness","min":2,"key":true,"text":"No trouble passing urine, no bowel change, no numbness \"down below\".","why":"Cauda equina symptoms are the one thing you can't afford to skip in back pain."},
-      {"id":"flags","g":"h","label":"Fever, weight loss, cancer, injecting","min":1,"key":true,"text":"None.","why":"Screening for infection, malignancy and fracture is part of every back pain assessment."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Thinks he's \"slipped a disc\". Worried he'll lose his apprenticeship. Expects an MRI and oxycodone."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"\"Nah, that's it.\""},
-      {"id":"neuro","g":"e","label":"Leg neuro exam","min":2,"key":true,"text":"Normal power, reflexes and sensation.","why":"A focused neuro exam is how you show yourself there's no nerve compromise."},
-      {"id":"back","g":"e","label":"Back exam","min":1,"text":"Tender muscles either side of the spine. Bending forward limited by pain."},
-      {"id":"xray","g":"t","label":"Lumbar X-ray","min":2,"flag":"low","text":"Normal. Which you could have predicted.","why":"Imaging wasn't indicated: no red flags."},
-      {"id":"mri","g":"t","label":"MRI request","min":2,"flag":"low","text":"Without alerting features, imaging isn't recommended, and incidental disc findings can frighten people.","why":"An MRI without red flags tends to find things that aren't the problem."}
-    ],
-    "dx":{"options":["Non-specific low back pain","Cauda equina syndrome","Disc prolapse needing surgery","Spinal fracture"],"answer":0,"danger":[]},
-    "plan":{"options":["Stay active and keep doing usual activities, modified as needed","Simple pain relief to help him keep moving","Explain the plan and why no scan is needed (teach-back)","Review in 1 to 2 weeks if not improving","Oxycodone for two weeks","A week of bed rest","Order an MRI"],"correct":[0,1,2,3],"danger":[5],"explain":2,"critical":[]},
-    "safety":{"options":["Come back the same day if you get bladder or bowel problems, numbness around the genitals or bottom, or leg weakness","Come back if it's not gone in 6 months","No need to come back","Take more tablets if it hurts more"],"answer":0,"danger":[1,2]},
-    "pearl":"Most acute back pain settles. Screen for red flags, examine, then sell activity. Bed rest is harmful and opioids are for carefully selected patients, lowest dose, shortest time.",
-    "sources":[{"t":"Low Back Pain Clinical Care Standard","url":"https://www.safetyandquality.gov.au/sites/default/files/2022-08/low_back_pain_clinical_care_standard.pdf"}]
+  "billing": {
+   "extras": [
+    {
+     "label": "Also bill a GP chronic condition management plan (965) today",
+     "ok": false,
+     "why": "GPCCMP items can't be co-claimed with a general attendance on the same day. Book the plan as its own visit.",
+     "src": {
+      "t": "MBS Online: GP chronic condition management plans",
+      "url": "https://mbsonline.gov.au/internet/mbsonline/publishing.nsf/650f3eec0dfb990fca25692100069854/35bc9280594efa33ca258c9200126149/$FILE/PDF%20Version%20-%20Upcoming%20Changes%20to%20Chronic%20Disease%20Management%20Framework%20-%20GPCCMPs.pdf"
+     }
+    },
+    {
+     "label": "Mark the HbA1c request 'established diabetes' so it's rebated",
+     "ok": false,
+     "why": "He doesn't have diabetes. 66551 is for monitoring established diabetes; a diagnostic HbA1c in an asymptomatic high-risk patient is 66841, once in 12 months.",
+     "src": {
+      "t": "Pathology Services Table (compilation 1 Nov 2024)",
+      "url": "https://www.legislation.gov.au/F2020L00460/2024-11-01/2024-11-01/text/original/epub/OEBPS/document_1/document_1.html"
+     },
+     "kind": "order"
+    }
+   ]
   },
-  {
-    "id":"june","room":"resus","name":"June","age":82,"critical":true,"criticalWhy":"A head injury on an anticoagulant can bleed quietly. Seeing her last cost her hours.",
-    "who":"Lives alone, gardens daily. Her daughter Eleni brought her in.",
-    "blurb":"Fell last night. Daughter \"a bit worried\".","opening":"\"I'm fine, love. Eleni made me come.\"",
-    "actions":[
-      {"id":"fall","g":"h","label":"What happened?","min":1,"key":true,"text":"Tripped on a rug getting up to the toilet. Hit her head on the bedside table.","why":"A head strike changes this from a fall to a head injury."},
-      {"id":"meds","g":"h","label":"Medicines","min":1,"key":true,"text":"Apixaban for atrial fibrillation. Blood pressure tablet.","why":"Anticoagulation is the detail that makes this head injury urgent."},
-      {"id":"sx","g":"h","label":"Headache, vomiting, drowsiness","min":1,"key":true,"text":"Headache since. Vomited once this morning.","why":"Headache and vomiting after a head injury need asking about every time."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Worried she'll be \"put in a home\". Wants a quick check and to get back to her tomatoes."},
-      {"id":"else","g":"h","label":"\"Anything else?\" (to Eleni too)","min":2,"flag":"else","key":true,"doorknob":"Eleni: \"She's been asking me the same question over and over this morning.\"","why":"New repetitive questioning after a head injury is a worrying change."},
-      {"id":"obs","g":"e","label":"Obs","min":1,"text":"BP 150/80, HR 88 irregular. Alert, but asks you the same thing twice."},
-      {"id":"head","g":"e","label":"Head and neuro exam","min":2,"text":"Bruise over the right temple. No focal weakness."},
-      {"id":"bsl","g":"t","label":"Finger-prick glucose","min":1,"text":"6.1 mmol/L."},
-      {"id":"fbc","g":"t","label":"Routine bloods","min":1,"flag":"low","text":"Results tomorrow. Not much use today.","why":"Routine bloods don't answer the question that matters today: is she bleeding inside her head?"}
-    ],
-    "dx":{"options":["Simple mechanical fall, no injury","Head injury while on an anticoagulant: needs urgent CT","Stroke","Urinary tract infection causing confusion"],"answer":1,"danger":[0]},
-    "plan":{"options":["Same-day transfer to ED for a CT head scan","Explain the plan to June and Eleni, and check they've understood","Restart and carry on with apixaban as usual","Ice pack and home with Eleni"],"correct":[0,1],"danger":[3],"explain":1,"critical":[0]},
-    "safety":{"options":["If she gets drowsier, more confused, vomits again or the headache worsens before she's seen, call 000","Watch her overnight at home","Come back next week","Let her sleep it off"],"answer":0,"danger":[1,3]},
-    "billing":{"extras":[{"label":"Also bill a 75+ health assessment (701 to 707) today","ok":false,"why":"Today was an acute head injury, not a health assessment. You can only bill a health assessment you actually did; book one when she's well.","src":{"t":"Services Australia: billing health assessments","url":"https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"}}]},
-    "pearl":"NICE suggests considering a CT head within 8 hours of injury for anyone on an anticoagulant, even with no other indication. Add vomiting and new repetitive questioning, and the decision makes itself.",
-    "sources":[{"t":"NICE NG232 head injury (RCEM summary)","url":"https://rcem.ac.uk/wp-content/uploads/2024/03/Nice_Head_Injury_Position_Statement_October_2023.pdf"}]
+  "pearl": "The \"just a script\" consult is where angina likes to hide. Leave room for \"anything else?\", and if the answer is chest pain on exertion, the plan isn't \"see you next year\".",
+  "sources": [
+   {
+    "t": "Heart Foundation: angina",
+    "url": "https://www.heartfoundation.org.au/conditions/angina"
+   },
+   {
+    "t": "2023 Australian CVD risk guideline (MJA)",
+    "url": "https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk"
+   }
+  ]
+ },
+ {
+  "id": "graham2",
+  "room": "resus",
+  "name": "Graham",
+  "age": 67,
+  "followupOf": "graham",
+  "critical": true,
+  "criticalWhy": "Chest pain at rest in the waiting room. Every minute in the queue is heart muscle.",
+  "who": "Back again. You saw him for a repeat script.",
+  "blurb": "Back again: \"chest's worse\"",
+  "opening": "\"It's happening walking to the letterbox now. Had a bad one this morning just sitting down.\"",
+  "actions": [
+   {
+    "id": "pattern",
+    "g": "h",
+    "label": "How has the pain changed?",
+    "min": 1,
+    "key": true,
+    "text": "Now with minimal effort, and twice at rest. This morning's lasted about 15 minutes.",
+    "why": "Pain at rest or on minimal effort is the change that makes this unstable."
+   },
+   {
+    "id": "now",
+    "g": "h",
+    "label": "Any pain right now?",
+    "min": 1,
+    "key": true,
+    "text": "Mild tightness now. Started about 20 minutes ago in the waiting room.",
+    "why": "Ongoing pain right now changes everything about the next ten minutes."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Scared it's a heart attack, like his brother. Hoping for \"a stronger pill\"."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"Isn't that enough?\" Fair."
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Obs: BP, pulse, sats",
+    "min": 1,
+    "key": true,
+    "text": "BP 150/90, HR 92, sats 96% on air. Pale and clammy.",
+    "why": "Obs tell you how sick he is right now and whether GTN is safe."
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "12-lead ECG",
+    "min": 3,
+    "key": true,
+    "text": "ST depression in the lateral leads.",
+    "why": "The ECG is quick and changes the urgency, but it shouldn't delay calling the ambulance."
+   },
+   {
+    "id": "trop",
+    "g": "t",
+    "label": "Send a troponin to the lab",
+    "min": 2,
+    "flag": "low",
+    "text": "Result in hours. He needs a hospital, not a courier.",
+    "why": "A community troponin delays transfer and doesn't change what he needs."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Unstable angina / acute coronary syndrome",
+    "Stable angina",
+    "Reflux",
+    "Anxiety"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
   },
-  {
-    "id":"jayden","room":"outreach","name":"Jayden","age":9,"who":"Aboriginal boy from a remote community. Here with his nan, Aunty Rose.",
-    "blurb":"Sore throat","opening":"Aunty Rose: \"He's had a sore throat for two days and he's off his food.\"",
-    "actions":[
-      {"id":"sx","g":"h","label":"Symptoms","min":1,"text":"Sore throat and fever. No cough."},
-      {"id":"arf","g":"h","label":"Rheumatic fever history","min":1,"key":true,"text":"His cousin has rheumatic heart disease. Jayden hasn't had rheumatic fever.","why":"Living in a high-risk setting, with family history, is what decides treatment."},
-      {"id":"skin","g":"h","label":"Skin sores","min":1,"text":"A few healing school sores on his legs."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Aunty Rose asks if he'll need \"the needle every month\" like his cousin. Hopes he's back at school soon."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"\"No, that's it.\""},
-      {"id":"throat","g":"e","label":"Throat and neck","min":1,"text":"Red tonsils, tender neck glands."},
-      {"id":"heart","g":"e","label":"Heart and joints","min":1,"text":"No murmur. No joint swelling."},
-      {"id":"swab","g":"t","label":"Throat swab","min":1,"text":"Sent. In a high-risk setting, treatment shouldn't wait for it."}
-    ],
-    "dx":{"options":["Viral sore throat: no treatment needed","Sore throat in a child at high risk of acute rheumatic fever","Acute rheumatic fever","Peritonsillar abscess (quinsy)"],"answer":1,"danger":[0]},
-    "plan":{"options":["Penicillin treatment now (first-line for sore throat in high-risk groups)","Treat the skin sores as well","Explain to Jayden and Aunty Rose, and answer the needle question honestly","Symptom relief only","Wait for the swab before deciding"],"correct":[0,1,2],"danger":[3],"explain":2,"critical":[0]},
-    "safety":{"options":["Come back if he gets sore or swollen joints, breathlessness or chest pain, or isn't improving in a few days","Only come back if the throat's still sore in a month","No need to come back","Come back if he gets a cough"],"answer":0,"danger":[1,2]},
-    "billing":{"extras":[{"label":"Also bill a 715 health assessment today","ok":false,"why":"A 715 is a full health assessment with set components and a 9-month gap rule. A sore-throat consult isn't one, however good. Offer to book one.","src":{"t":"RACGP MBS guide for GPs","url":"https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"}}]},
-    "pearl":"Where rheumatic fever is common, a sore throat or skin sore is a prevention opportunity. Treat with penicillin, treat the skin, and make sure follow-up is easy.",
-    "sources":[{"t":"2020 Australian ARF and RHD guideline (MJA)","url":"https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic"}]
+  "plan": {
+   "options": [
+    "Call 000 for urgent ambulance transfer",
+    "Aspirin 300 mg, chewed or dissolved (unless contraindicated)",
+    "GTN spray while waiting, watching his blood pressure",
+    "Routine oxygen even though his sats are 96%",
+    "Explain what's happening and why",
+    "Send him home with a stronger tablet",
+    "Book an outpatient stress test next month"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "danger": [
+    5,
+    6
+   ],
+   "explain": 4,
+   "critical": [
+    0,
+    1
+   ]
   },
-  {
-    "id":"mei","room":"womens","name":"Mei","age":56,"who":"Primary school teacher. Last period 2 years ago.",
-    "blurb":"Hot flushes. Wants \"the hormones\".","opening":"\"The night sweats are wrecking my sleep. My friend says HRT changed her life.\"",
-    "actions":[
-      {"id":"sx","g":"h","label":"Symptoms","min":1,"text":"About 10 flushes a day. Wakes drenched most nights."},
-      {"id":"pmh","g":"h","label":"Past history","min":2,"text":"No personal history of breast cancer or blood clots. Non-smoker."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Worried hormones cause cancer. Hoping to leave with a script today."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","key":true,"doorknob":"\"Oh, I've had a bit of spotting the last couple of months. Probably nothing?\"","why":"Bleeding after menopause needs investigating before MHT starts."},
-      {"id":"bleed","g":"h","label":"Spotting: tell me more","min":1,"needs":"else","key":true,"text":"Light spotting three times in two months. No pain.","why":"Postmenopausal bleeding is a red flag in its own right."},
-      {"id":"bp","g":"e","label":"Blood pressure, weight","min":1,"text":"128/78. BMI 24."},
-      {"id":"spec","g":"e","label":"Speculum exam (with consent)","min":3,"text":"Cervix looks normal. No obvious source of bleeding."}
-    ],
-    "dx":{"options":["Menopause symptoms: straightforward MHT","Menopause symptoms plus postmenopausal bleeding that needs investigating","Thyroid disease","Periods coming back: normal"],"answer":1,"danger":[0,3]},
-    "plan":{"options":["Investigate the bleeding first (transvaginal ultrasound, then gynaecology as needed)","When MHT is appropriate: combined oestrogen and progestogen, as she has a uterus","Explain the plan and check she's understood (teach-back)","Start oestrogen-only MHT today","Tell her spotting is normal after menopause"],"correct":[0,1,2],"danger":[3,4],"explain":2,"critical":[0]},
-    "safety":{"options":["Let us know about any further bleeding, and come back for the ultrasound results","Ignore the spotting","Come back in a year","Stop worrying about it"],"answer":0,"danger":[1,3]},
-    "pearl":"MHT is the most effective treatment for hot flushes, but any unexplained vaginal bleeding gets investigated before it's prescribed. With a uterus, oestrogen always comes with a progestogen.",
-    "sources":[{"t":"Australasian Menopause Society: combined MHT","url":"https://menopause.org.au/hp/information-sheets/combined-menopausal-hormone-therapy-mht"}]
+  "safety": {
+   "options": [
+    "Stay with him, keep him monitored and send a summary with the ambulance",
+    "Let him wait in the car park for the ambulance",
+    "He can drive himself to hospital",
+    "Come back if it happens again"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
   },
-  {
-    "id":"sam","room":"mind","name":"Sam","age":24,"who":"Works in hospitality. Uses they/them. Plays club rugby.",
-    "blurb":"Can't sleep","opening":"\"I just need something to help me sleep.\"",
-    "followup":{"trigger":["suicide"],"case":"sam2"},
-    "actions":[
-      {"id":"sleep","g":"h","label":"Sleep","min":1,"text":"Awake until 3am most nights for two months."},
-      {"id":"mood","g":"h","label":"Mood and interest","min":2,"text":"Low most days. Stopped going to training. Eating less."},
-      {"id":"suicide","g":"h","label":"Ask directly about suicide","min":2,"key":true,"text":"\"Sometimes I think everyone'd be better off without me.\" No plan. No previous attempts.","why":"Asking directly is safe, and people often won't volunteer it unless asked."},
-      {"id":"aod","g":"h","label":"Alcohol and drugs","min":1,"text":"Drinking more on weekends."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Thinks it's \"just stress\". Worried about being judged. Hoped for sleeping tablets."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","doorknob":"\"My housemate moved out last month. It's pretty quiet at home now.\""},
-      {"id":"mse","g":"e","label":"Mental state","min":1,"text":"Flat, quiet, good eye contact. No signs of injury."},
-      {"id":"q","g":"t","label":"Depression questionnaire","min":2,"text":"Scores in the severe range."}
-    ],
-    "dx":{"options":["Insomnia only","Depression with suicidal thoughts","Bipolar disorder","Alcohol use disorder"],"answer":1,"danger":[0]},
-    "plan":{"options":["Make a safety plan together (warning signs, people and services to contact)","Arrange psychological therapy","Book a review within days, not months","Crisis contacts: Lifeline 13 11 14, or 000 in an emergency","Explain the plan and check they've understood","Sleeping tablets and a review in 3 months"],"correct":[0,1,2,3,4],"danger":[5],"explain":4,"critical":[0,2]},
-    "safety":{"options":["If the thoughts get stronger or you start making plans: call 000 or Lifeline (13 11 14), or go to ED","Come back if you're still not sleeping in 3 months","Try not to think about it","Have a drink to help you sleep"],"answer":0,"danger":[1,2,3]},
-    "pearl":"\"Can't sleep\" is a common ticket of entry for depression. Ask about suicide directly and kindly; it doesn't plant the idea, and it may be the only way you find out.",
-    "sources":[{"t":"Life in Mind: suicide myths","url":"https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths"},{"t":"RANZCP mood disorders guideline (2020)","url":"https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"}]
+  "pearl": "Angina that's new, worse or happening at rest is an acute coronary syndrome until proven otherwise. Aspirin, ECG, ambulance, in whichever order gets them all done fastest.",
+  "sources": [
+   {
+    "t": "bpacnz B-QuiCK: acute coronary syndrome",
+    "url": "https://bpac.org.nz/b-quick/acs.aspx"
+   },
+   {
+    "t": "Heart Foundation: angina",
+    "url": "https://www.heartfoundation.org.au/conditions/angina"
+   }
+  ]
+ },
+ {
+  "id": "maya",
+  "room": "kids",
+  "name": "Maya",
+  "age": 3,
+  "critical": true,
+  "criticalWhy": "A floppy, feverish toddler is time-critical. Seeing her last means she waited longest.",
+  "who": "Here with her dad, Emeka. Usually a chatterbox.",
+  "blurb": "Fever, won't drink, \"a bit floppy\"",
+  "opening": "\"She's been hot since last night. Now she just wants to lie on me.\"",
+  "actions": [
+   {
+    "id": "hx",
+    "g": "h",
+    "label": "Fever story",
+    "min": 1,
+    "text": "Fever since last night. Vomited twice. Refusing drinks; only one wet nappy today."
+   },
+   {
+    "id": "imms",
+    "g": "h",
+    "label": "Immunisations",
+    "min": 1,
+    "text": "Up to date for her age."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "\"She's never been like this.\" He wants her checked properly, and he's right to."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"She screamed when I touched her legs this morning. She never does that.\"",
+    "why": "Leg pain is an early warning sign of meningococcal sepsis in children."
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Obs: temp, heart rate, cap refill",
+    "min": 1,
+    "key": true,
+    "text": "Temp 39.4°C, HR 170, capillary refill 4 seconds. Cold hands and feet.",
+    "why": "Cold peripheries and slow cap refill in a febrile child are early sepsis signs."
+   },
+   {
+    "id": "skin",
+    "g": "e",
+    "label": "Check her skin all over",
+    "min": 1,
+    "key": true,
+    "text": "Several purple spots on her legs that don't fade when you press a glass on them.",
+    "why": "A non-blanching rash with fever is meningococcal disease until proven otherwise."
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Neck and alertness",
+    "min": 1,
+    "text": "Drowsy and irritable when handled. Neck hard to assess."
+   },
+   {
+    "id": "urine",
+    "g": "t",
+    "label": "Urine dipstick",
+    "min": 3,
+    "flag": "low",
+    "text": "Three minutes of coaxing, no sample. The clock didn't wait.",
+    "why": "A urine sample was never going to change the plan for this child."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Viral illness",
+    "Suspected meningococcal sepsis",
+    "Urinary tract infection",
+    "Gastroenteritis"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
   },
-  {
-    "id":"sam2","room":"mind","name":"Sam","age":24,"followupOf":"sam","critical":true,"criticalWhy":"Someone at immediate risk sat in the waiting room the longest.",
-    "who":"Back again, with their friend Jess. You saw Sam about sleep.",
-    "blurb":"Back again: \"worse\"","opening":"Jess: \"Sam sent me a message last night that really scared me.\"",
-    "actions":[
-      {"id":"ask","g":"h","label":"Ask directly about suicide","min":1,"key":true,"text":"\"I've been thinking about it a lot. I looked up ways last night.\"","why":"You can't judge risk without asking directly."},
-      {"id":"means","g":"h","label":"Access to means","min":1,"key":true,"text":"Has been saving up tablets at home.","why":"Access to means is one of the most modifiable risks."},
-      {"id":"support","g":"h","label":"Who's around?","min":1,"text":"Jess can stay with Sam today."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Sam is ashamed and frightened. Jess wants to know Sam will be safe tonight."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"\"I didn't tell you everything last time.\""},
-      {"id":"mse","g":"e","label":"Mental state","min":2,"key":true,"text":"Tearful, hopeless. Says they can't keep themselves safe right now.","why":"Whether they can stay safe right now decides where they go next."},
-      {"id":"bloods","g":"t","label":"Routine bloods","min":1,"flag":"low","text":"Not the priority right now.","why":"Bloods can wait. Safety can't."}
-    ],
-    "dx":{"options":["Depression with high, immediate suicide risk","Adjustment reaction, low risk","Insomnia"],"answer":0,"danger":[1,2]},
-    "plan":{"options":["Urgent same-day crisis assessment (acute mental health team or ED)","Sam isn't left alone: Jess stays until handover","Reduce access to means (the saved tablets)","Explain what happens next, to Sam and Jess","Home with a review in a fortnight"],"correct":[0,1,2,3],"danger":[4],"explain":3,"critical":[0,1]},
-    "safety":{"options":["If at any point Sam can't stay safe before the assessment: call 000","See how tonight goes","Book a fortnightly review","Leave it to Sam to decide"],"answer":0,"danger":[1,2,3]},
-    "pearl":"When someone can't keep themselves safe, the plan is same-day crisis care, someone with them, and less access to means. Ask, act, and hand over warmly.",
-    "sources":[{"t":"Life in Mind: suicide myths","url":"https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths"},{"t":"RANZCP mood disorders guideline (2020)","url":"https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"}]
+  "plan": {
+   "options": [
+    "Call 000 for urgent transfer",
+    "Parenteral antibiotics (benzylpenicillin or ceftriaxone) now, as long as it doesn't delay transfer",
+    "Phone the receiving hospital and hand over",
+    "Explain to her dad what's happening and why",
+    "Paracetamol, fluids and review tomorrow",
+    "Oral antibiotics and home"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    4,
+    5
+   ],
+   "explain": 3,
+   "critical": [
+    0,
+    1
+   ]
   },
-  {
-    "id":"abdi","room":"outreach","name":"Abdi","age":41,"who":"Arrived in Australia 4 months ago as a refugee. Somali speaker. Just started work as a delivery driver.",
-    "blurb":"Cough. Needs a work form.","opening":"(In Somali, gesturing to a form) \"Cough... and the form, for my job.\"",
-    "actions":[
-      {"id":"interp","g":"h","label":"Book a phone interpreter (TIS)","min":1,"flag":"pc","text":"A Somali interpreter joins. Now you can actually take a history."},
-      {"id":"cough","g":"h","label":"Cough details","min":1,"key":true,"text":"Cough for 6 weeks. Some blood-streaked sputum.","why":"A cough over three weeks, especially with blood, is a TB flag."},
-      {"id":"sys","g":"h","label":"Fevers, sweats, weight","min":1,"key":true,"text":"Night sweats. Lost about 6 kg.","why":"Night sweats and weight loss complete the TB picture."},
-      {"id":"home","g":"h","label":"Who lives with you?","min":1,"text":"His wife and three children."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Worried he'll lose his new job. Expects cough medicine and a signed form."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","key":true,"doorknob":"\"My cousin had TB in the camp.\"","why":"A known TB contact raises the stakes considerably."},
-      {"id":"chest","g":"e","label":"Chest and temperature","min":1,"text":"Crackles at the right upper chest. Temp 37.8°C."},
-      {"id":"cxr","g":"t","label":"Chest X-ray and sputum for TB","min":2,"key":true,"text":"Requested: chest X-ray and sputum samples for TB testing.","why":"Chest X-ray and sputum are the first tests for suspected lung TB."}
-    ],
-    "dx":{"options":["Viral bronchitis","Suspected pulmonary tuberculosis","Asthma","Reflux cough"],"answer":1,"danger":[0,2]},
-    "plan":{"options":["Chest X-ray and sputum tests for TB","Contact the local TB (chest) clinic urgently: assessment and treatment are free","Explain the plan through the interpreter and check understanding","Cough syrup and sign the fit-for-work form"],"correct":[0,1,2],"danger":[3],"explain":2,"critical":[1]},
-    "safety":{"options":["Come back urgently if you cough more blood or get breathless","Come back if the cough lasts another 6 weeks","No need to come back","Just keep working"],"answer":0,"danger":[1,2]},
-    "pearl":"A cough of 3 weeks or more with sweats and weight loss in someone from a high-TB setting needs a chest X-ray and sputum. And a professional interpreter, not a mime.",
-    "sources":[{"t":"NSW Health: tuberculosis fact sheet","url":"https://www.health.nsw.gov.au/Infectious/factsheets/Factsheets/tb.PDF"},{"t":"ASID/RCH refugee screening: adults","url":"https://www.rch.org.au/uploadedFiles/Main/Content/immigranthealth/Quick%20guide%20to%20screening%20tests%20in%20adults.pdf"},{"t":"TIS National Free Interpreting Service","url":"https://www.tisnational.gov.au/-/media/FIS/Free-Interpreting-Service---private-medical-practitioners-information-sheet.pdf"}]
+  "safety": {
+   "options": [
+    "Stay with them until the ambulance arrives",
+    "Back to the waiting room until the ambulance comes",
+    "Dad can drive her to ED if traffic's OK",
+    "Come back tomorrow if she's no better"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
   },
-  {
-    "id":"lachlan","room":"chronic","name":"Lachlan","age":31,"who":"Has Down syndrome. Lives in supported accommodation, works at a café. Here with his support worker, Kelly.",
-    "blurb":"Support worker says he's \"slowing down\"","opening":"Lachlan: \"I'm tired. I want to go to work.\"",
-    "actions":[
-      {"id":"direct","g":"h","label":"Ask Lachlan himself","min":1,"flag":"pc","text":"Lachlan tells you he's \"cold all the time\" and his \"tummy is stuck\" (constipated)."},
-      {"id":"kelly","g":"h","label":"History from Kelly (with his OK)","min":1,"text":"Slower at work over 6 months, gained 5 kg, dry skin. No change in routine or living situation."},
-      {"id":"last","g":"h","label":"When was his thyroid last checked?","min":1,"key":true,"text":"No record of a TSH test in 3 years.","why":"People with Down syndrome have a much higher risk of hypothyroidism, rising with age."},
-      {"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Lachlan wants to keep his café job. Kelly is worried it's \"early dementia\"."},
-      {"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"Kelly: \"He's been falling asleep on the bus home.\""},
-      {"id":"obs","g":"e","label":"Obs and examination","min":1,"text":"HR 56. Weight up 5 kg. Dry skin. Slow-relaxing reflexes."},
-      {"id":"tft","g":"t","label":"TSH and free T4","min":1,"key":true,"text":"TSH 38 mIU/L (typical range about 0.4 to 4), free T4 low.","why":"A thyroid test is the cheapest test that rules a treatable cause in or out."}
-    ],
-    "dx":{"options":["Early dementia","Hypothyroidism","Depression","\"Just part of Down syndrome\""],"answer":1,"danger":[0,3]},
-    "plan":{"options":["Start thyroid hormone replacement with a follow-up TSH","Explain to Lachlan in plain language, check he's understood, and include Kelly with his OK","Regular thyroid checks from now on","Refer to a memory clinic for dementia"],"correct":[0,1,2],"danger":[3],"explain":1,"critical":[0]},
-    "safety":{"options":["Repeat the blood test in about 6 weeks, and come back sooner if he's getting worse","Nothing to follow up","Come back next year","Only come back if he stops working"],"answer":0,"danger":[1]},
-    "pearl":"Don't let a disability explain away new symptoms (diagnostic overshadowing). Talk to the patient first, then the support worker, and check the thyroid.",
-    "sources":[{"t":"NICE indicator IND79: TSH testing in Down syndrome","url":"https://www.nice.org.uk/indicators/ind79-learning-disabilities-annual-tsh-test/chapter/indicator"},{"t":"Pathology Tests Explained: free T4 and TSH","url":"https://pathologytestsexplained.org.au/learning/test-index/ft4"}]
+  "pearl": "In a febrile child: leg pain, cold hands and feet and pale or mottled skin can come before the rash. Once there's a non-blanching rash, antibiotics and an ambulance shouldn't wait for anything.",
+  "sources": [
+   {
+    "t": "NICE NG143: fever in under 5s",
+    "url": "https://nice.org.uk/guidance/ng143/resources/fever-in-under-5s-assessment-and-initial-management-pdf-66141778137541"
+   },
+   {
+    "t": "CDNA: invasive meningococcal disease",
+    "url": "https://www.health.gov.au/sites/default/files/2024-07/invasive-meningococcal-disease-cdna-national-guidelines-for-public-health-units.pdf"
+   },
+   {
+    "t": "Sepsis Clinical Care Standard",
+    "url": "https://www.safetyandquality.gov.au/sites/default/files/2022-06/sepsis_clinical_care_standard_2022.pdf"
+   }
+  ]
+ },
+ {
+  "id": "priya",
+  "room": "womens",
+  "name": "Priya",
+  "age": 34,
+  "who": "Accountant. Two kids under five. Vegetarian.",
+  "blurb": "Tired all the time",
+  "opening": "\"I'm just exhausted. I figured it's work.\"",
+  "actions": [
+   {
+    "id": "mood",
+    "g": "h",
+    "label": "Mood and sleep",
+    "min": 2,
+    "text": "Mood fine, still enjoys things. Sleeps 7 hours. No snoring."
+   },
+   {
+    "id": "diet",
+    "g": "h",
+    "label": "Diet",
+    "min": 1,
+    "text": "Vegetarian, eats a varied diet."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Wonders about her thyroid (her mum has hypothyroidism). Expects blood tests."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"Also... my periods have got really heavy. I'm flooding through pads overnight.\"",
+    "why": "Heavy periods were the cause, and she only mentioned them because you asked."
+   },
+   {
+    "id": "hmb",
+    "g": "h",
+    "label": "Periods: tell me more",
+    "min": 2,
+    "needs": "else",
+    "key": true,
+    "text": "Heavy for 7 days with clots, changing pads every 1 to 2 hours on heavy days. Regular cycle. No bleeding between periods or after sex.",
+    "why": "A bleeding history shapes both the diagnosis and whether she needs imaging."
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Obs and colour",
+    "min": 1,
+    "text": "Pale. HR 96, BP 112/70."
+   },
+   {
+    "id": "pelvic",
+    "g": "e",
+    "label": "Pelvic examination (with consent)",
+    "min": 3,
+    "text": "With consent: no masses, uterus feels normal size."
+   },
+   {
+    "id": "fbc",
+    "g": "t",
+    "label": "Full blood count and ferritin",
+    "min": 1,
+    "key": true,
+    "text": "Hb 98 g/L (low). Ferritin 6 µg/L (typical range for women roughly 30 to 300).",
+    "why": "The standard says to check FBC and ferritin routinely in heavy menstrual bleeding."
+   },
+   {
+    "id": "tft",
+    "g": "t",
+    "label": "Thyroid function",
+    "min": 1,
+    "text": "TSH normal."
+   },
+   {
+    "id": "hcg",
+    "g": "t",
+    "label": "Pregnancy test",
+    "min": 1,
+    "text": "Negative."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Burnout",
+    "Iron deficiency anaemia from heavy menstrual bleeding",
+    "Hypothyroidism",
+    "Depression"
+   ],
+   "answer": 1,
+   "danger": []
   },
-  {"id":"ron","room":"treatment","name":"Ron","age":71,"who":"Retired farmer. Fair skin, decades outdoors, hats optional until recently.","blurb":"\"Scabby bits\" on his arms","opening":"\"The wife says these scabby bits on my arms need looking at. Just freeze the lot, doc.\"","actions":[{"id":"story","g":"h","label":"Story of the spots","min":1,"text":"Rough patches on both forearms for a year or two. They sting a bit in the sun."},{"id":"change","g":"h","label":"Any spot changing?","min":1,"key":true,"text":"One on the back of his left hand has grown over two months. It's sore to touch and bled once.","why":"Tender, fast-growing, bleeding: the features that suggest a keratosis has turned into a squamous cell carcinoma."},{"id":"ice","g":"h","label":"Ideas, concerns, expectations","min":2,"flag":"ice","text":"Thinks they're \"just sunspots\". Quietly worried after his brother's skin cancer operation. Expects you to freeze everything today."},{"id":"else","g":"h","label":"\"Anything else?\"","min":2,"flag":"else","text":"\"Nah, just the skin.\""},{"id":"skin","g":"e","label":"Arms and hands, with dermoscopy","min":3,"key":true,"text":"Six rough, scaly pink patches on the forearms. On the back of the left hand: a 9 mm tender, raised, crusted nodule.","why":"You can't tell keratoses from cancers without looking properly."},{"id":"nodes","g":"e","label":"Lymph nodes (elbow and armpit)","min":1,"key":true,"text":"No enlarged nodes.","why":"With a suspected SCC, check the draining nodes."},{"id":"biopsy","g":"t","label":"Biopsy the hand nodule (to pathology)","min":3,"key":true,"proc":true,"text":"With consent, under local anaesthetic, deep enough to assess invasion. Specimen sent for histology.","why":"When SCC can't be excluded, histology decides the plan."},{"id":"cryo","g":"t","label":"Cryotherapy to the 6 forearm keratoses","min":2,"text":"One freeze-thaw cycle each. Warned about redness, blistering and pale marks."},{"id":"cryohand","g":"t","label":"Freeze the hand nodule too","min":1,"flag":"low","text":"Frozen. Along with the evidence.","why":"Avoid cryotherapy when the diagnosis is uncertain."}],"dx":{"options":["Solar keratoses only: freeze the lot","Solar keratoses, plus a hand lesion suspicious for squamous cell carcinoma","Melanoma","Seborrhoeic keratoses"],"answer":1,"danger":[0]},"plan":{"options":["Biopsy the hand lesion and send it for histology","Treat the forearm keratoses (for example, cryotherapy)","Review with the histology result to plan definitive treatment","Explain the plan and check he's understood (teach-back)","Sun-safe habits from here on","Freeze the hand lesion and skip the biopsy","Reassure: they're all just sunspots"],"correct":[0,1,2,3,4],"danger":[5,6],"explain":3,"critical":[0,2]},"safety":{"options":["Come back sooner if the hand spot grows or bleeds, or you notice a lump in your elbow or armpit. We'll book you in for the result.","No news is good news","Pop some cream on it and see how it goes","See you in a year"],"answer":0,"danger":[1,3]},"billing":{"extras":[{"label":"Item 30071: diagnostic skin biopsy, specimen sent for pathology","ok":true,"why":"A separate diagnostic biopsy sent for histology is its own item on top of a genuine consult. Don't count the biopsy minutes toward the time tier.","src":{"t":"MBS item 30071 (privatehealth.gov.au)","url":"https://privatehealth.gov.au/dynamic/MBSItems/Skin/30071"}},{"label":"Item 30192 for the cryotherapy to the 6 keratoses","ok":false,"why":"30192 needs 10 or more premalignant lesions. Fewer than 10 solar keratoses treated ablatively are covered by the attendance item.","src":{"t":"MBS item 30192 (privatehealth.gov.au)","url":"https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"}}]},"pearl":"Freeze what you're sure of; biopsy what you're not. Billing-wise: fewer than 10 keratoses frozen sit inside the consult item, 30192 starts at 10, and a biopsy sent to pathology is its own item (30071).","sources":[{"t":"Medicine Today 2026: sun damage to keratinocyte cancer","url":"https://medicinetoday.com.au/mt/supplements/feature-article/sun-damage-keratinocyte-skin-cancer-practical-guidance-gps"},{"t":"Services Australia: skin lesion and biopsy billing","url":"https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"}]}
+  "plan": {
+   "options": [
+    "Start iron replacement",
+    "Discuss treatment for the heavy bleeding (e.g. hormonal IUD, tranexamic acid, NSAIDs)",
+    "Explain the plan and check she's understood (teach-back)",
+    "Pelvic ultrasound for everyone with heavy periods, regardless",
+    "Refer for gastroscopy and colonoscopy",
+    "More red meat and an early night"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [],
+   "explain": 2,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back sooner if you're breathless, faint, have chest pain, or the bleeding gets heavier",
+    "Nothing to worry about",
+    "See you in a year",
+    "Stop the iron if your stools go dark"
+   ],
+   "answer": 0,
+   "danger": []
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Order TSH first (the lab adds free T4 only if TSH is abnormal)",
+     "ok": true,
+     "why": "You don't bill this; the lab does. TSH is rebated as item 66716. Free T4/T3 (66719) is only rebated if the TSH is abnormal or a listed reason applies, so for a tired patient you request TSH and the lab does the rest.",
+     "src": {
+      "t": "MBS Online: items 66716 and 66719",
+      "url": "https://www9.health.gov.au/mbs/search.cfm?q=66716&="
+     },
+     "kind": "order"
+    },
+    {
+     "label": "Also order vitamin D because she's tired",
+     "ok": false,
+     "why": "Tiredness isn't a 66833 indication, so there's no rebate and Priya may get a bill.",
+     "src": {
+      "t": "MBS Online: item 66833",
+      "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?q=66833"
+     },
+     "kind": "order"
+    }
+   ]
+  },
+  "pearl": "\"Tired all the time\" in a menstruating woman: ask about periods, then check FBC and ferritin. The hormonal IUD is the most effective medical treatment for heavy bleeding when there's no significant pathology.",
+  "sources": [
+   {
+    "t": "Heavy Menstrual Bleeding Clinical Care Standard",
+    "url": "https://safetyandquality.gov.au/standards/clinical-care-standards/heavy-menstrual-bleeding-clinical-care-standard/information-clinicians-heavy-menstrual-bleeding-clinical-care-standard"
+   },
+   {
+    "t": "Lifeblood: causes of iron deficiency anaemia",
+    "url": "https://www.lifeblood.com.au/health-professionals/clinical-practice/clinical-indications/iron-deficiency-anaemia/determining-the-underlying-causes"
+   }
+  ]
+ },
+ {
+  "id": "tom",
+  "room": "drugs",
+  "name": "Tom",
+  "age": 19,
+  "who": "Apprentice carpenter. Started deadlifting last month.",
+  "blurb": "Back pain after the gym",
+  "opening": "\"Did deadlifts Saturday and my back's killing me. Can I get a scan and something strong?\"",
+  "actions": [
+   {
+    "id": "story",
+    "g": "h",
+    "label": "Pain story",
+    "min": 1,
+    "text": "Low back ache, worse bending. No pain down the legs."
+   },
+   {
+    "id": "ce",
+    "g": "h",
+    "label": "Bladder, bowel, saddle numbness",
+    "min": 2,
+    "key": true,
+    "text": "No trouble passing urine, no bowel change, no numbness \"down below\".",
+    "why": "Cauda equina symptoms are the one thing you can't afford to skip in back pain."
+   },
+   {
+    "id": "flags",
+    "g": "h",
+    "label": "Fever, weight loss, cancer, injecting",
+    "min": 1,
+    "key": true,
+    "text": "None.",
+    "why": "Screening for infection, malignancy and fracture is part of every back pain assessment."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Thinks he's \"slipped a disc\". Worried he'll lose his apprenticeship. Expects an MRI and oxycodone."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"Nah, that's it.\""
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Leg neuro exam",
+    "min": 2,
+    "key": true,
+    "text": "Normal power, reflexes and sensation.",
+    "why": "A focused neuro exam is how you show yourself there's no nerve compromise."
+   },
+   {
+    "id": "back",
+    "g": "e",
+    "label": "Back exam",
+    "min": 1,
+    "text": "Tender muscles either side of the spine. Bending forward limited by pain."
+   },
+   {
+    "id": "xray",
+    "g": "t",
+    "label": "Lumbar X-ray",
+    "min": 2,
+    "flag": "low",
+    "text": "Normal. Which you could have predicted.",
+    "why": "Imaging wasn't indicated: no red flags."
+   },
+   {
+    "id": "mri",
+    "g": "t",
+    "label": "MRI request",
+    "min": 2,
+    "flag": "low",
+    "text": "Without alerting features, imaging isn't recommended, and incidental disc findings can frighten people.",
+    "why": "An MRI without red flags tends to find things that aren't the problem."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Non-specific low back pain",
+    "Cauda equina syndrome",
+    "Disc prolapse needing surgery",
+    "Spinal fracture"
+   ],
+   "answer": 0,
+   "danger": []
+  },
+  "plan": {
+   "options": [
+    "Stay active and keep doing usual activities, modified as needed",
+    "Simple pain relief to help him keep moving",
+    "Explain the plan and why no scan is needed (teach-back)",
+    "Review in 1 to 2 weeks if not improving",
+    "Oxycodone for two weeks",
+    "A week of bed rest",
+    "Order an MRI"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    5
+   ],
+   "explain": 2,
+   "critical": []
+  },
+  "safety": {
+   "options": [
+    "Come back the same day if you get bladder or bowel problems, numbness around the genitals or bottom, or leg weakness",
+    "Come back if it's not gone in 6 months",
+    "No need to come back",
+    "Take more tablets if it hurts more"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "pearl": "Most acute back pain settles. Screen for red flags, examine, then sell activity. Bed rest is harmful and opioids are for carefully selected patients, lowest dose, shortest time.",
+  "sources": [
+   {
+    "t": "Low Back Pain Clinical Care Standard",
+    "url": "https://www.safetyandquality.gov.au/sites/default/files/2022-08/low_back_pain_clinical_care_standard.pdf"
+   }
+  ]
+ },
+ {
+  "id": "june",
+  "room": "resus",
+  "name": "June",
+  "age": 82,
+  "critical": true,
+  "criticalWhy": "A head injury on an anticoagulant can bleed quietly. Seeing her last cost her hours.",
+  "who": "Lives alone, gardens daily. Her daughter Eleni brought her in.",
+  "blurb": "Fell last night. Daughter \"a bit worried\".",
+  "opening": "\"I'm fine, love. Eleni made me come.\"",
+  "actions": [
+   {
+    "id": "fall",
+    "g": "h",
+    "label": "What happened?",
+    "min": 1,
+    "key": true,
+    "text": "Tripped on a rug getting up to the toilet. Hit her head on the bedside table.",
+    "why": "A head strike changes this from a fall to a head injury."
+   },
+   {
+    "id": "meds",
+    "g": "h",
+    "label": "Medicines",
+    "min": 1,
+    "key": true,
+    "text": "Apixaban for atrial fibrillation. Blood pressure tablet.",
+    "why": "Anticoagulation is the detail that makes this head injury urgent."
+   },
+   {
+    "id": "sx",
+    "g": "h",
+    "label": "Headache, vomiting, drowsiness",
+    "min": 1,
+    "key": true,
+    "text": "Headache since. Vomited once this morning.",
+    "why": "Headache and vomiting after a head injury need asking about every time."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Worried she'll be \"put in a home\". Wants a quick check and to get back to her tomatoes."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\" (to Eleni too)",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "Eleni: \"She's been asking me the same question over and over this morning.\"",
+    "why": "New repetitive questioning after a head injury is a worrying change."
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Obs",
+    "min": 1,
+    "text": "BP 150/80, HR 88 irregular. Alert, but asks you the same thing twice."
+   },
+   {
+    "id": "head",
+    "g": "e",
+    "label": "Head and neuro exam",
+    "min": 2,
+    "text": "Bruise over the right temple. No focal weakness."
+   },
+   {
+    "id": "bsl",
+    "g": "t",
+    "label": "Finger-prick glucose",
+    "min": 1,
+    "text": "6.1 mmol/L."
+   },
+   {
+    "id": "fbc",
+    "g": "t",
+    "label": "Routine bloods",
+    "min": 1,
+    "flag": "low",
+    "text": "Results tomorrow. Not much use today.",
+    "why": "Routine bloods don't answer the question that matters today: is she bleeding inside her head?"
+   }
+  ],
+  "dx": {
+   "options": [
+    "Simple mechanical fall, no injury",
+    "Head injury while on an anticoagulant: needs urgent CT",
+    "Stroke",
+    "Urinary tract infection causing confusion"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Same-day transfer to ED for a CT head scan",
+    "Explain the plan to June and Eleni, and check they've understood",
+    "Restart and carry on with apixaban as usual",
+    "Ice pack and home with Eleni"
+   ],
+   "correct": [
+    0,
+    1
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 1,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "If she gets drowsier, more confused, vomits again or the headache worsens before she's seen, call 000",
+    "Watch her overnight at home",
+    "Come back next week",
+    "Let her sleep it off"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Also bill a 75+ health assessment (701 to 707) today",
+     "ok": false,
+     "why": "Today was an acute head injury, not a health assessment. You can only bill a health assessment you actually did; book one when she's well.",
+     "src": {
+      "t": "Services Australia: billing health assessments",
+      "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-health-assessments?context=20"
+     }
+    }
+   ]
+  },
+  "pearl": "NICE suggests considering a CT head within 8 hours of injury for anyone on an anticoagulant, even with no other indication. Add vomiting and new repetitive questioning, and the decision makes itself.",
+  "sources": [
+   {
+    "t": "NICE NG232 head injury (RCEM summary)",
+    "url": "https://rcem.ac.uk/wp-content/uploads/2024/03/Nice_Head_Injury_Position_Statement_October_2023.pdf"
+   }
+  ]
+ },
+ {
+  "id": "jayden",
+  "room": "outreach",
+  "name": "Jayden",
+  "age": 9,
+  "who": "Aboriginal boy from a remote community. Here with his nan, Aunty Rose.",
+  "blurb": "Sore throat",
+  "opening": "Aunty Rose: \"He's had a sore throat for two days and he's off his food.\"",
+  "actions": [
+   {
+    "id": "sx",
+    "g": "h",
+    "label": "Symptoms",
+    "min": 1,
+    "text": "Sore throat and fever. No cough."
+   },
+   {
+    "id": "arf",
+    "g": "h",
+    "label": "Rheumatic fever history",
+    "min": 1,
+    "key": true,
+    "text": "His cousin has rheumatic heart disease. Jayden hasn't had rheumatic fever.",
+    "why": "Living in a high-risk setting, with family history, is what decides treatment."
+   },
+   {
+    "id": "skin",
+    "g": "h",
+    "label": "Skin sores",
+    "min": 1,
+    "text": "A few healing school sores on his legs."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Aunty Rose asks if he'll need \"the needle every month\" like his cousin. Hopes he's back at school soon."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"No, that's it.\""
+   },
+   {
+    "id": "throat",
+    "g": "e",
+    "label": "Throat and neck",
+    "min": 1,
+    "text": "Red tonsils, tender neck glands."
+   },
+   {
+    "id": "heart",
+    "g": "e",
+    "label": "Heart and joints",
+    "min": 1,
+    "text": "No murmur. No joint swelling."
+   },
+   {
+    "id": "swab",
+    "g": "t",
+    "label": "Throat swab",
+    "min": 1,
+    "text": "Sent. In a high-risk setting, treatment shouldn't wait for it."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Viral sore throat: no treatment needed",
+    "Sore throat in a child at high risk of acute rheumatic fever",
+    "Acute rheumatic fever",
+    "Peritonsillar abscess (quinsy)"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Penicillin treatment now (first-line for sore throat in high-risk groups)",
+    "Treat the skin sores as well",
+    "Explain to Jayden and Aunty Rose, and answer the needle question honestly",
+    "Symptom relief only",
+    "Wait for the swab before deciding"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 2,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if he gets sore or swollen joints, breathlessness or chest pain, or isn't improving in a few days",
+    "Only come back if the throat's still sore in a month",
+    "No need to come back",
+    "Come back if he gets a cough"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Also bill a 715 health assessment today",
+     "ok": false,
+     "why": "A 715 is a full health assessment with set components and a 9-month gap rule. A sore-throat consult isn't one, however good. Offer to book one.",
+     "src": {
+      "t": "RACGP MBS guide for GPs",
+      "url": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"
+     }
+    }
+   ]
+  },
+  "pearl": "Where rheumatic fever is common, a sore throat or skin sore is a prevention opportunity. Treat with penicillin, treat the skin, and make sure follow-up is easy.",
+  "sources": [
+   {
+    "t": "2020 Australian ARF and RHD guideline (MJA)",
+    "url": "https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic"
+   }
+  ]
+ },
+ {
+  "id": "mei",
+  "room": "womens",
+  "name": "Mei",
+  "age": 56,
+  "who": "Primary school teacher. Last period 2 years ago.",
+  "blurb": "Hot flushes. Wants \"the hormones\".",
+  "opening": "\"The night sweats are wrecking my sleep. My friend says HRT changed her life.\"",
+  "actions": [
+   {
+    "id": "sx",
+    "g": "h",
+    "label": "Symptoms",
+    "min": 1,
+    "text": "About 10 flushes a day. Wakes drenched most nights."
+   },
+   {
+    "id": "pmh",
+    "g": "h",
+    "label": "Past history",
+    "min": 2,
+    "text": "No personal history of breast cancer or blood clots. Non-smoker."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Worried hormones cause cancer. Hoping to leave with a script today."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"Oh, I've had a bit of spotting the last couple of months. Probably nothing?\"",
+    "why": "Bleeding after menopause needs investigating before MHT starts."
+   },
+   {
+    "id": "bleed",
+    "g": "h",
+    "label": "Spotting: tell me more",
+    "min": 1,
+    "needs": "else",
+    "key": true,
+    "text": "Light spotting three times in two months. No pain.",
+    "why": "Postmenopausal bleeding is a red flag in its own right."
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Blood pressure, weight",
+    "min": 1,
+    "text": "128/78. BMI 24."
+   },
+   {
+    "id": "spec",
+    "g": "e",
+    "label": "Speculum exam (with consent)",
+    "min": 3,
+    "text": "Cervix looks normal. No obvious source of bleeding."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Menopause symptoms: straightforward MHT",
+    "Menopause symptoms plus postmenopausal bleeding that needs investigating",
+    "Thyroid disease",
+    "Periods coming back: normal"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Investigate the bleeding first (transvaginal ultrasound, then gynaecology as needed)",
+    "When MHT is appropriate: combined oestrogen and progestogen, as she has a uterus",
+    "Explain the plan and check she's understood (teach-back)",
+    "Start oestrogen-only MHT today",
+    "Tell her spotting is normal after menopause"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3,
+    4
+   ],
+   "explain": 2,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Let us know about any further bleeding, and come back for the ultrasound results",
+    "Ignore the spotting",
+    "Come back in a year",
+    "Stop worrying about it"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "pearl": "MHT is the most effective treatment for hot flushes, but any unexplained vaginal bleeding gets investigated before it's prescribed. With a uterus, oestrogen always comes with a progestogen.",
+  "sources": [
+   {
+    "t": "Australasian Menopause Society: combined MHT",
+    "url": "https://menopause.org.au/hp/information-sheets/combined-menopausal-hormone-therapy-mht"
+   }
+  ]
+ },
+ {
+  "id": "sam",
+  "room": "mind",
+  "name": "Sam",
+  "age": 24,
+  "who": "Works in hospitality. Uses they/them. Plays club rugby.",
+  "blurb": "Can't sleep",
+  "opening": "\"I just need something to help me sleep.\"",
+  "followup": {
+   "trigger": [
+    "suicide"
+   ],
+   "case": "sam2"
+  },
+  "actions": [
+   {
+    "id": "sleep",
+    "g": "h",
+    "label": "Sleep",
+    "min": 1,
+    "text": "Awake until 3am most nights for two months."
+   },
+   {
+    "id": "mood",
+    "g": "h",
+    "label": "Mood and interest",
+    "min": 2,
+    "text": "Low most days. Stopped going to training. Eating less."
+   },
+   {
+    "id": "suicide",
+    "g": "h",
+    "label": "Ask directly about suicide",
+    "min": 2,
+    "key": true,
+    "text": "\"Sometimes I think everyone'd be better off without me.\" No plan. No previous attempts.",
+    "why": "Asking directly is safe, and people often won't volunteer it unless asked."
+   },
+   {
+    "id": "aod",
+    "g": "h",
+    "label": "Alcohol and drugs",
+    "min": 1,
+    "text": "Drinking more on weekends."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Thinks it's \"just stress\". Worried about being judged. Hoped for sleeping tablets."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "doorknob": "\"My housemate moved out last month. It's pretty quiet at home now.\""
+   },
+   {
+    "id": "mse",
+    "g": "e",
+    "label": "Mental state",
+    "min": 1,
+    "text": "Flat, quiet, good eye contact. No signs of injury."
+   },
+   {
+    "id": "q",
+    "g": "t",
+    "label": "Depression questionnaire",
+    "min": 2,
+    "text": "Scores in the severe range."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Insomnia only",
+    "Depression with suicidal thoughts",
+    "Bipolar disorder",
+    "Alcohol use disorder"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Make a safety plan together (warning signs, people and services to contact)",
+    "Arrange psychological therapy",
+    "Book a review within days, not months",
+    "Crisis contacts: Lifeline 13 11 14, or 000 in an emergency",
+    "Explain the plan and check they've understood",
+    "Sleeping tablets and a review in 3 months"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "danger": [
+    5
+   ],
+   "explain": 4,
+   "critical": [
+    0,
+    2
+   ]
+  },
+  "safety": {
+   "options": [
+    "If the thoughts get stronger or you start making plans: call 000 or Lifeline (13 11 14), or go to ED",
+    "Come back if you're still not sleeping in 3 months",
+    "Try not to think about it",
+    "Have a drink to help you sleep"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "pearl": "\"Can't sleep\" is a common ticket of entry for depression. Ask about suicide directly and kindly; it doesn't plant the idea, and it may be the only way you find out.",
+  "sources": [
+   {
+    "t": "Life in Mind: suicide myths",
+    "url": "https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths"
+   },
+   {
+    "t": "RANZCP mood disorders guideline (2020)",
+    "url": "https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"
+   }
+  ]
+ },
+ {
+  "id": "sam2",
+  "room": "mind",
+  "name": "Sam",
+  "age": 24,
+  "followupOf": "sam",
+  "critical": true,
+  "criticalWhy": "Someone at immediate risk sat in the waiting room the longest.",
+  "who": "Back again, with their friend Jess. You saw Sam about sleep.",
+  "blurb": "Back again: \"worse\"",
+  "opening": "Jess: \"Sam sent me a message last night that really scared me.\"",
+  "actions": [
+   {
+    "id": "ask",
+    "g": "h",
+    "label": "Ask directly about suicide",
+    "min": 1,
+    "key": true,
+    "text": "\"I've been thinking about it a lot. I looked up ways last night.\"",
+    "why": "You can't judge risk without asking directly."
+   },
+   {
+    "id": "means",
+    "g": "h",
+    "label": "Access to means",
+    "min": 1,
+    "key": true,
+    "text": "Has been saving up tablets at home.",
+    "why": "Access to means is one of the most modifiable risks."
+   },
+   {
+    "id": "support",
+    "g": "h",
+    "label": "Who's around?",
+    "min": 1,
+    "text": "Jess can stay with Sam today."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Sam is ashamed and frightened. Jess wants to know Sam will be safe tonight."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"I didn't tell you everything last time.\""
+   },
+   {
+    "id": "mse",
+    "g": "e",
+    "label": "Mental state",
+    "min": 2,
+    "key": true,
+    "text": "Tearful, hopeless. Says they can't keep themselves safe right now.",
+    "why": "Whether they can stay safe right now decides where they go next."
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "Routine bloods",
+    "min": 1,
+    "flag": "low",
+    "text": "Not the priority right now.",
+    "why": "Bloods can wait. Safety can't."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Depression with high, immediate suicide risk",
+    "Adjustment reaction, low risk",
+    "Insomnia"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Urgent same-day crisis assessment (acute mental health team or ED)",
+    "Sam isn't left alone: Jess stays until handover",
+    "Reduce access to means (the saved tablets)",
+    "Explain what happens next, to Sam and Jess",
+    "Home with a review in a fortnight"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 3,
+   "critical": [
+    0,
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "If at any point Sam can't stay safe before the assessment: call 000",
+    "See how tonight goes",
+    "Book a fortnightly review",
+    "Leave it to Sam to decide"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "pearl": "When someone can't keep themselves safe, the plan is same-day crisis care, someone with them, and less access to means. Ask, act, and hand over warmly.",
+  "sources": [
+   {
+    "t": "Life in Mind: suicide myths",
+    "url": "https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths"
+   },
+   {
+    "t": "RANZCP mood disorders guideline (2020)",
+    "url": "https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"
+   }
+  ]
+ },
+ {
+  "id": "abdi",
+  "room": "outreach",
+  "name": "Abdi",
+  "age": 41,
+  "who": "Arrived in Australia 4 months ago as a refugee. Somali speaker. Just started work as a delivery driver.",
+  "blurb": "Cough. Needs a work form.",
+  "opening": "(In Somali, gesturing to a form) \"Cough... and the form, for my job.\"",
+  "actions": [
+   {
+    "id": "interp",
+    "g": "h",
+    "label": "Book a phone interpreter (TIS)",
+    "min": 1,
+    "flag": "pc",
+    "text": "A Somali interpreter joins. Now you can actually take a history."
+   },
+   {
+    "id": "cough",
+    "g": "h",
+    "label": "Cough details",
+    "min": 1,
+    "key": true,
+    "text": "Cough for 6 weeks. Some blood-streaked sputum.",
+    "why": "A cough over three weeks, especially with blood, is a TB flag."
+   },
+   {
+    "id": "sys",
+    "g": "h",
+    "label": "Fevers, sweats, weight",
+    "min": 1,
+    "key": true,
+    "text": "Night sweats. Lost about 6 kg.",
+    "why": "Night sweats and weight loss complete the TB picture."
+   },
+   {
+    "id": "home",
+    "g": "h",
+    "label": "Who lives with you?",
+    "min": 1,
+    "text": "His wife and three children."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Worried he'll lose his new job. Expects cough medicine and a signed form."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "key": true,
+    "doorknob": "\"My cousin had TB in the camp.\"",
+    "why": "A known TB contact raises the stakes considerably."
+   },
+   {
+    "id": "chest",
+    "g": "e",
+    "label": "Chest and temperature",
+    "min": 1,
+    "text": "Crackles at the right upper chest. Temp 37.8°C."
+   },
+   {
+    "id": "cxr",
+    "g": "t",
+    "label": "Chest X-ray and sputum for TB",
+    "min": 2,
+    "key": true,
+    "text": "Requested: chest X-ray and sputum samples for TB testing.",
+    "why": "Chest X-ray and sputum are the first tests for suspected lung TB."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Viral bronchitis",
+    "Suspected pulmonary tuberculosis",
+    "Asthma",
+    "Reflux cough"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Chest X-ray and sputum tests for TB",
+    "Contact the local TB (chest) clinic urgently: assessment and treatment are free",
+    "Explain the plan through the interpreter and check understanding",
+    "Cough syrup and sign the fit-for-work form"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 2,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back urgently if you cough more blood or get breathless",
+    "Come back if the cough lasts another 6 weeks",
+    "No need to come back",
+    "Just keep working"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "pearl": "A cough of 3 weeks or more with sweats and weight loss in someone from a high-TB setting needs a chest X-ray and sputum. And a professional interpreter, not a mime.",
+  "sources": [
+   {
+    "t": "NSW Health: tuberculosis fact sheet",
+    "url": "https://www.health.nsw.gov.au/Infectious/factsheets/Factsheets/tb.PDF"
+   },
+   {
+    "t": "ASID/RCH refugee screening: adults",
+    "url": "https://www.rch.org.au/uploadedFiles/Main/Content/immigranthealth/Quick%20guide%20to%20screening%20tests%20in%20adults.pdf"
+   },
+   {
+    "t": "TIS National Free Interpreting Service",
+    "url": "https://www.tisnational.gov.au/-/media/FIS/Free-Interpreting-Service---private-medical-practitioners-information-sheet.pdf"
+   }
+  ]
+ },
+ {
+  "id": "lachlan",
+  "room": "chronic",
+  "name": "Lachlan",
+  "age": 31,
+  "who": "Has Down syndrome. Lives in supported accommodation, works at a café. Here with his support worker, Kelly.",
+  "blurb": "Support worker says he's \"slowing down\"",
+  "opening": "Lachlan: \"I'm tired. I want to go to work.\"",
+  "actions": [
+   {
+    "id": "direct",
+    "g": "h",
+    "label": "Ask Lachlan himself",
+    "min": 1,
+    "flag": "pc",
+    "text": "Lachlan tells you he's \"cold all the time\" and his \"tummy is stuck\" (constipated)."
+   },
+   {
+    "id": "kelly",
+    "g": "h",
+    "label": "History from Kelly (with his OK)",
+    "min": 1,
+    "text": "Slower at work over 6 months, gained 5 kg, dry skin. No change in routine or living situation."
+   },
+   {
+    "id": "last",
+    "g": "h",
+    "label": "When was his thyroid last checked?",
+    "min": 1,
+    "key": true,
+    "text": "No record of a TSH test in 3 years.",
+    "why": "People with Down syndrome have a much higher risk of hypothyroidism, rising with age."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Lachlan wants to keep his café job. Kelly is worried it's \"early dementia\"."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "Kelly: \"He's been falling asleep on the bus home.\""
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Obs and examination",
+    "min": 1,
+    "text": "HR 56. Weight up 5 kg. Dry skin. Slow-relaxing reflexes."
+   },
+   {
+    "id": "tft",
+    "g": "t",
+    "label": "TSH and free T4",
+    "min": 1,
+    "key": true,
+    "text": "TSH 38 mIU/L (typical range about 0.4 to 4), free T4 low.",
+    "why": "A thyroid test is the cheapest test that rules a treatable cause in or out."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Early dementia",
+    "Hypothyroidism",
+    "Depression",
+    "\"Just part of Down syndrome\""
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Start thyroid hormone replacement with a follow-up TSH",
+    "Explain to Lachlan in plain language, check he's understood, and include Kelly with his OK",
+    "Regular thyroid checks from now on",
+    "Refer to a memory clinic for dementia"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 1,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Repeat the blood test in about 6 weeks, and come back sooner if he's getting worse",
+    "Nothing to follow up",
+    "Come back next year",
+    "Only come back if he stops working"
+   ],
+   "answer": 0,
+   "danger": [
+    1
+   ]
+  },
+  "pearl": "Don't let a disability explain away new symptoms (diagnostic overshadowing). Talk to the patient first, then the support worker, and check the thyroid.",
+  "sources": [
+   {
+    "t": "NICE indicator IND79: TSH testing in Down syndrome",
+    "url": "https://www.nice.org.uk/indicators/ind79-learning-disabilities-annual-tsh-test/chapter/indicator"
+   },
+   {
+    "t": "Pathology Tests Explained: free T4 and TSH",
+    "url": "https://pathologytestsexplained.org.au/learning/test-index/ft4"
+   }
+  ]
+ },
+ {
+  "id": "ron",
+  "room": "treatment",
+  "name": "Ron",
+  "age": 71,
+  "who": "Retired farmer. Fair skin, decades outdoors, hats optional until recently.",
+  "blurb": "\"Scabby bits\" on his arms",
+  "opening": "\"The wife says these scabby bits on my arms need looking at. Just freeze the lot, doc.\"",
+  "actions": [
+   {
+    "id": "story",
+    "g": "h",
+    "label": "Story of the spots",
+    "min": 1,
+    "text": "Rough patches on both forearms for a year or two. They sting a bit in the sun."
+   },
+   {
+    "id": "change",
+    "g": "h",
+    "label": "Any spot changing?",
+    "min": 1,
+    "key": true,
+    "text": "One on the back of his left hand has grown over two months. It's sore to touch and bled once.",
+    "why": "Tender, fast-growing, bleeding: the features that suggest a keratosis has turned into a squamous cell carcinoma."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "flag": "ice",
+    "text": "Thinks they're \"just sunspots\". Quietly worried after his brother's skin cancer operation. Expects you to freeze everything today."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "flag": "else",
+    "text": "\"Nah, just the skin.\""
+   },
+   {
+    "id": "skin",
+    "g": "e",
+    "label": "Arms and hands, with dermoscopy",
+    "min": 3,
+    "key": true,
+    "text": "Six rough, scaly pink patches on the forearms. On the back of the left hand: a 9 mm tender, raised, crusted nodule.",
+    "why": "You can't tell keratoses from cancers without looking properly."
+   },
+   {
+    "id": "nodes",
+    "g": "e",
+    "label": "Lymph nodes (elbow and armpit)",
+    "min": 1,
+    "key": true,
+    "text": "No enlarged nodes.",
+    "why": "With a suspected SCC, check the draining nodes."
+   },
+   {
+    "id": "biopsy",
+    "g": "t",
+    "label": "Biopsy the hand nodule (to pathology)",
+    "min": 3,
+    "key": true,
+    "proc": true,
+    "text": "With consent, under local anaesthetic, deep enough to assess invasion. Specimen sent for histology.",
+    "why": "When SCC can't be excluded, histology decides the plan."
+   },
+   {
+    "id": "cryo",
+    "g": "t",
+    "label": "Cryotherapy to the 6 forearm keratoses",
+    "min": 2,
+    "text": "One freeze-thaw cycle each. Warned about redness, blistering and pale marks."
+   },
+   {
+    "id": "cryohand",
+    "g": "t",
+    "label": "Freeze the hand nodule too",
+    "min": 1,
+    "flag": "low",
+    "text": "Frozen. Along with the evidence.",
+    "why": "Avoid cryotherapy when the diagnosis is uncertain."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Solar keratoses only: freeze the lot",
+    "Solar keratoses, plus a hand lesion suspicious for squamous cell carcinoma",
+    "Melanoma",
+    "Seborrhoeic keratoses"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Biopsy the hand lesion and send it for histology",
+    "Treat the forearm keratoses (for example, cryotherapy)",
+    "Review with the histology result to plan definitive treatment",
+    "Explain the plan and check he's understood (teach-back)",
+    "Sun-safe habits from here on",
+    "Freeze the hand lesion and skip the biopsy",
+    "Reassure: they're all just sunspots"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "danger": [
+    5,
+    6
+   ],
+   "explain": 3,
+   "critical": [
+    0,
+    2
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back sooner if the hand spot grows or bleeds, or you notice a lump in your elbow or armpit. We'll book you in for the result.",
+    "No news is good news",
+    "Pop some cream on it and see how it goes",
+    "See you in a year"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Item 30071: diagnostic skin biopsy, specimen sent for pathology",
+     "ok": true,
+     "why": "A separate diagnostic biopsy sent for histology is its own item on top of a genuine consult. Don't count the biopsy minutes toward the time tier.",
+     "src": {
+      "t": "MBS item 30071 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30071"
+     }
+    },
+    {
+     "label": "Item 30192 for the cryotherapy to the 6 keratoses",
+     "ok": false,
+     "why": "30192 needs 10 or more premalignant lesions. Fewer than 10 solar keratoses treated ablatively are covered by the attendance item.",
+     "src": {
+      "t": "MBS item 30192 (privatehealth.gov.au)",
+      "url": "https://privatehealth.gov.au/dynamic/MBSItems/Skin/30192"
+     }
+    }
+   ]
+  },
+  "pearl": "Freeze what you're sure of; biopsy what you're not. Billing-wise: fewer than 10 keratoses frozen sit inside the consult item, 30192 starts at 10, and a biopsy sent to pathology is its own item (30071).",
+  "sources": [
+   {
+    "t": "Medicine Today 2026: sun damage to keratinocyte cancer",
+    "url": "https://medicinetoday.com.au/mt/supplements/feature-article/sun-damage-keratinocyte-skin-cancer-practical-guidance-gps"
+   },
+   {
+    "t": "Services Australia: skin lesion and biopsy billing",
+    "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
+   }
+  ]
+ }
 ]
