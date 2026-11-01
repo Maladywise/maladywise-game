@@ -784,3 +784,6 @@ button.mw-melink{border:0;background:none;width:100%;text-align:left;font:inheri
 .card.done:hover,.card.done:focus-visible{opacity:.9;filter:none}
 .band .band-masc{width:64px;height:64px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))}
 @media (max-width:600px){.band .band-masc{width:46px;height:46px}}
+.band{position:relative}
+.cfoot .solvedn{font:600 11px Poppins,system-ui,sans-serif;color:#6B5A93;white-space:nowrap}
+.card.done .cfoot .solvedn{display:none}
