@@ -2,7 +2,7 @@
    Quizzes in quizzes.json: [{date: "YYYY-MM-DD", number, difficulty, theme, questions:[{q, a, w:[3 wrong], e}]}] */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", PASS = 6;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12", PASS = 6;
   var root = document.getElementById("trv");
   // Normie mode: everyday quizzes from normie.json, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "quizzes.json";
@@ -68,7 +68,7 @@
   // view: index of an earlier question being reviewed (null = the current one). AUTO: seconds before moving on after answering.
   var view = null, autoI = null, AUTO = 10, lastMsg = "";
   function stopAuto() { if (autoI) { clearInterval(autoI); autoI = null; } }
-  function goNext() { stopAuto(); st.pending = false; if (st.ans.length >= Z.questions.length) finish(); put(KEY, st); render(); window.scrollTo({ top: root.getBoundingClientRect().top + scrollY - 70, behavior: "smooth" }); }
+  function goNext() { stopAuto(); st.pending = false; if (st.ans.length >= Z.questions.length) finish(); put(KEY, st); render(); var qc = root.querySelector(".qcard") || root, qt = qc.getBoundingClientRect().top; if (qt < 70 || qt > innerHeight * 0.5) window.scrollTo({ top: qt + scrollY - 76, behavior: "smooth" }); }
   function reviewCard(i) {
     var x = Z.questions[i], opts = options(i), chosen = st.ans[i], cur = st.pending ? st.ans.length - 1 : st.ans.length;
     return '<p class="qn">Question ' + (i + 1) + ' <span class="rv">Looking back</span></p><h2 class="qt">' + esc(x.q) + '</h2><div class="opts">' +
@@ -112,6 +112,7 @@
     if ($("prev")) $("prev").onclick = function () { stopAuto(); view = i - 1; render(); };
     if ($("go")) {
       $("go").onclick = goNext;
+      try { var gb = $("go").getBoundingClientRect(); if (gb.bottom > innerHeight - 8) window.scrollBy({ top: gb.bottom - innerHeight + 24, behavior: "smooth" }); } catch (e) {}
       var left = AUTO, cd = $("cd"); cd.textContent = left + "s";
       autoI = setInterval(function () { left--; if (cd) cd.textContent = left + "s"; if (left <= 0) goNext(); }, 1000);
     }
@@ -119,7 +120,7 @@
   function curI() { return st.pending ? st.ans.length - 1 : st.ans.length; }
   function prevQ() { if (!Z || st.done) return; var ci = curI(), at = view !== null && view < ci ? view : ci; if (at > 0) { stopAuto(); view = at - 1; render(); } }
   function nextQ() { if (!Z || st.done) return; var ci = curI(); if (view !== null && view < ci) { view = view + 1 >= ci ? null : view + 1; render(); } else if (st.pending) goNext(); }
-  document.addEventListener("keydown", function (e) { if (e.target.closest && e.target.closest("input,textarea")) return; if (e.key === "ArrowLeft") prevQ(); else if (e.key === "ArrowRight") nextQ(); });
+  document.addEventListener("keydown", function (e) { if (e.target.closest && e.target.closest("input,textarea")) return; if (e.key === "ArrowLeft") prevQ(); else if (e.key === "ArrowRight") nextQ(); else if (e.key === "Enter" && $("go")) { e.preventDefault(); goNext(); } else if (/^[1-4]$/.test(e.key)) { var ob = root.querySelectorAll(".qcard .opt:not([disabled])"); if (ob[+e.key - 1]) ob[+e.key - 1].click(); } });
   var ICON = "\ud83e\udde0";
   function renderResult() {
     var r = $("result"), s = score();
