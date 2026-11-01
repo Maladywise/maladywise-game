@@ -1,0 +1,365 @@
+[
+ {
+  "date": "2026-11-02",
+  "number": 1,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "rat-sym"
+   },
+   {
+    "test": "strep",
+    "twist": {
+     "prev": 30,
+     "where": "In the Cochrane studies, about 3 in 10 kids with a sore throat had strep.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "preg"
+   },
+   {
+    "test": "ottawa"
+   },
+   {
+    "test": "mammo",
+    "twist": {
+     "prev": 0.45,
+     "where": "In the US screening data, about 1 in 220 screens found a cancer within a year.",
+     "sourced": true
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 2,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "fit"
+   },
+   {
+    "test": "rat-asym",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "hpv"
+   },
+   {
+    "test": "mono"
+   },
+   {
+    "test": "dipany"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 3,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "psa4"
+   },
+   {
+    "test": "ddimer",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a low-risk group where about 1 in 10 people actually have a clot.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "calpro",
+    "twist": {
+     "prev": 32,
+     "where": "In the BMJ review’s example, about 1 in 3 adults sent for this test had bowel disease.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "fluA"
+   },
+   {
+    "test": "ferr30"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 4,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "ubt"
+   },
+   {
+    "test": "nitrite"
+   },
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "usapp"
+   },
+   {
+    "test": "dermo"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 5,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "kernig"
+   },
+   {
+    "test": "ferr15"
+   },
+   {
+    "test": "psa3"
+   },
+   {
+    "test": "ctapp"
+   },
+   {
+    "test": "fluK"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 6,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "trop99"
+   },
+   {
+    "test": "calproK"
+   },
+   {
+    "test": "pap"
+   },
+   {
+    "test": "hpstool"
+   },
+   {
+    "test": "neck"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 7,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "crp"
+   },
+   {
+    "test": "eye"
+   },
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "nitrite"
+   },
+   {
+    "test": "ubt"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 8,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "strep",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a group where only 1 in 10 sore throats is strep.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "fit"
+   },
+   {
+    "test": "hpv"
+   },
+   {
+    "test": "rat-asym"
+   },
+   {
+    "test": "mammo"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 9,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "rat-sym",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine a quiet patch: only 5 in 100 people with a sniffle have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "ottawa"
+   },
+   {
+    "test": "mono"
+   },
+   {
+    "test": "dipany"
+   },
+   {
+    "test": "preg"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 10,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "ferr30"
+   },
+   {
+    "test": "ubt"
+   },
+   {
+    "test": "nitrite",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine a clinic where half the people with burning wees have a UTI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "psa4"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 11,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "calpro"
+   },
+   {
+    "test": "ddimer"
+   },
+   {
+    "test": "fluA",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine flu season, when 1 in 5 people with fever and aches have the flu.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "dermo"
+   },
+   {
+    "test": "usapp"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "number": 12,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "kernig"
+   },
+   {
+    "test": "neck"
+   },
+   {
+    "test": "ferr15"
+   },
+   {
+    "test": "ctapp"
+   },
+   {
+    "test": "hpstool"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 13,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "trop99"
+   },
+   {
+    "test": "psa3"
+   },
+   {
+    "test": "pap"
+   },
+   {
+    "test": "calproK"
+   },
+   {
+    "test": "fluK"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 14,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "crp"
+   },
+   {
+    "test": "eye"
+   },
+   {
+    "test": "mammo",
+    "twist": {
+     "prev": 0.45,
+     "where": "In the US screening data, about 1 in 220 screens found a cancer within a year.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "strep",
+    "twist": {
+     "prev": 30,
+     "where": "In the Cochrane studies, about 3 in 10 kids with a sore throat had strep.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "ottawa"
+   }
+  ]
+ }
+]

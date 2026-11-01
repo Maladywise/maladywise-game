@@ -1,0 +1,778 @@
+{
+ "_note": "Sensitosis test bank. sens/spec: v = figure used for the reveal, lo/hi = range that scores full marks (CI or spread across studies). spec null = no good source, sensitivity-only round. Every figure was read from the linked source(s); checked 1 Nov 2026.",
+ "tests": {
+  "rat-sym": {
+   "test": "COVID rapid antigen test (RAT)",
+   "condition": "COVID",
+   "scenario": "Sore throat, runny nose, feeling rubbish. You swab yourself at home.",
+   "sens": {
+    "v": 73,
+    "lo": 69,
+    "hi": 76
+   },
+   "spec": {
+    "v": 99,
+    "lo": 99,
+    "hi": 100
+   },
+   "says": "Great at false alarms (it barely makes any). Less great at catching COVID: about 1 in 4 people with symptoms test negative. A negative RAT with symptoms is worth repeating.",
+   "note": "Pooled across many brands and 109 evaluations in people with symptoms.",
+   "src": [
+    [
+     "Cochrane review (Dinnes 2022), summarised in American Family Physician 2023",
+     "https://www.aafp.org/afp/2023/0400/cochrane-poc-rapid-antigen-tests-for-diagnosis-of-covid-19"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "rat-asym": {
+   "test": "COVID RAT with no symptoms",
+   "condition": "COVID",
+   "scenario": "You feel perfectly fine. You swab before visiting your nan, just in case.",
+   "sens": {
+    "v": 55,
+    "lo": 48,
+    "hi": 62
+   },
+   "spec": {
+    "v": 99.7,
+    "lo": 99,
+    "hi": 100
+   },
+   "says": "Without symptoms, a RAT catches only about half of infections. A negative is reassuring-ish, not a free pass. A positive, though? Believe it.",
+   "note": "Same Cochrane review. Fewer studies in people without symptoms (50 evaluations).",
+   "src": [
+    [
+     "Cochrane review (Dinnes 2022), summarised in American Family Physician 2023",
+     "https://www.aafp.org/afp/2023/0400/cochrane-poc-rapid-antigen-tests-for-diagnosis-of-covid-19"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "strep": {
+   "test": "Rapid strep test",
+   "condition": "strep throat",
+   "scenario": "A child with a sore throat gets a quick throat swab at the clinic. Result in minutes.",
+   "sens": {
+    "v": 86,
+    "lo": 83,
+    "hi": 88
+   },
+   "spec": {
+    "v": 95,
+    "lo": 94,
+    "hi": 96
+   },
+   "says": "Pretty good both ways. It misses about 1 in 7 strep throats, so a negative doesn’t fully rule it out.",
+   "note": "Children only. Results varied between brands and studies.",
+   "src": [
+    [
+     "Cochrane review: rapid tests for strep throat in children (2016)",
+     "https://www.cochrane.org/CD010502/ARI_what-performance-rapid-tests-diagnosis-strep-throat-children"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "fit": {
+   "test": "Bowel screening poo test (FIT)",
+   "condition": "bowel cancer",
+   "scenario": "The bowel screening kit arrives in the mail. You do the poo stick thing and post it back.",
+   "sens": {
+    "v": 82,
+    "lo": 73,
+    "hi": 89
+   },
+   "spec": {
+    "v": 94,
+    "lo": 92,
+    "hi": 95
+   },
+   "says": "Catches about 4 in 5 bowel cancers from one simple sample, and most people without cancer get a clear result. One reason the kit comes back every two years.",
+   "note": "Figures are for cancer, from a 2014 meta-analysis. They vary with the brand and the cut-off used.",
+   "src": [
+    [
+     "Lee 2014 meta-analysis (Ann Intern Med), summarised in American Family Physician",
+     "https://www.aafp.org/pubs/afp/issues/2014/0815/od4.html"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ottawa": {
+   "test": "Ottawa ankle rules",
+   "condition": "a broken bone",
+   "scenario": "You rolled your ankle. The doctor presses a few bony spots and asks you to walk four steps. ‘Positive’ means: get an X-ray.",
+   "sens": {
+    "v": 98,
+    "lo": 96,
+    "hi": 99
+   },
+   "spec": {
+    "v": 32,
+    "lo": 24,
+    "hi": 44
+   },
+   "says": "A champion rule-out tool. It almost never misses a fracture, but most people it sends for an X-ray are fine. That’s the deal: it still cuts X-rays by about a third.",
+   "note": "Specificity varied a lot between studies.",
+   "src": [
+    [
+     "Bachmann 2003 systematic review (BMJ), summarised in American Family Physician",
+     "https://www.aafp.org/pubs/afp/issues/2003/0815/p745a.html"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "psa4": {
+   "test": "PSA blood test (above 4 counts as high)",
+   "condition": "prostate cancer",
+   "scenario": "In a big US study, men had a prostate biopsy whatever their PSA was. A PSA above 4 counted as positive.",
+   "sens": {
+    "v": 21,
+    "lo": 19,
+    "hi": 23
+   },
+   "spec": {
+    "v": 94,
+    "lo": 92,
+    "hi": 95
+   },
+   "says": "Ouch. At this cut-off, PSA missed about 4 in 5 of the cancers found on biopsy. No PSA level is both sensitive and specific.",
+   "note": "From the Prostate Cancer Prevention Trial placebo group (Thompson 2005). Lower cut-offs catch more cancers but cause more false alarms.",
+   "src": [
+    [
+     "Thompson 2005 (JAMA), abstract via US National Cancer Institute EDRN",
+     "https://edrn.cancer.gov/data-and-resources/publications/15998892-1845-operating-characteristics-of-prostate-specific-antigen-in-men-with-an-initial-psa-level-of-30-ngml-or-lower"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "psa3": {
+   "test": "PSA blood test (above 3 counts as high)",
+   "condition": "prostate cancer",
+   "scenario": "Same big US study, everyone biopsied. This time a PSA above 3 counts as positive.",
+   "sens": {
+    "v": 32,
+    "lo": 30,
+    "hi": 34
+   },
+   "spec": {
+    "v": 87,
+    "lo": 85,
+    "hi": 89
+   },
+   "says": "Lower the bar and you catch more cancers (about 1 in 3), but false alarms jump too. Every cut-off is a trade.",
+   "note": "Prostate Cancer Prevention Trial placebo group (Thompson 2005).",
+   "src": [
+    [
+     "Thompson 2005 (JAMA), abstract via US National Cancer Institute EDRN",
+     "https://edrn.cancer.gov/data-and-resources/publications/15998892-1845-operating-characteristics-of-prostate-specific-antigen-in-men-with-an-initial-psa-level-of-30-ngml-or-lower"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ddimer": {
+   "test": "D-dimer blood test",
+   "condition": "a clot in the leg (DVT)",
+   "scenario": "Swollen calf after a long flight. Your risk looks low, so the doctor orders a D-dimer to rule out a clot.",
+   "sens": {
+    "v": 97,
+    "lo": 95,
+    "hi": 98
+   },
+   "spec": {
+    "v": 40,
+    "lo": 35,
+    "hi": 54
+   },
+   "says": "The classic rule-out test. Negative? A clot is very unlikely. Positive? Means little on its own: pregnancy, cancer, surgery, injury and inflammation all raise it.",
+   "note": "Older pooled data for lab (ELISA) assays; specificity was about 35 to 54% depending on the assay. Only useful when your risk is low to moderate.",
+   "src": [
+    [
+     "Bounameaux 1997 review (QJM): pooled D-dimer accuracy by assay",
+     "https://doc.rero.ch/record/298441/files/9302426.pdf"
+    ],
+    [
+     "StatPearls: D-dimer test",
+     "https://www.ncbi.nlm.nih.gov/books/NBK431064/"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "mammo": {
+   "test": "Screening mammogram",
+   "condition": "breast cancer",
+   "scenario": "A routine screening mammogram, no lumps, no symptoms. Just your two-yearly squish.",
+   "sens": {
+    "v": 87,
+    "lo": 85,
+    "hi": 89
+   },
+   "spec": {
+    "v": 89,
+    "lo": 87,
+    "hi": 91
+   },
+   "says": "Catches most cancers, but because so few people being screened have cancer, most call-backs turn out fine. A call-back is not a diagnosis.",
+   "note": "US data, 2007 to 2013, 1.6 million screens. Programs and countries differ.",
+   "src": [
+    [
+     "Breast Cancer Surveillance Consortium (US) screening benchmarks",
+     "https://www.bcsc-research.org/statistics/screening-performance-benchmarks-archive/Benchmarks-sens-spec-archive"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ferr30": {
+   "test": "Ferritin (under 30 counts as low)",
+   "condition": "iron deficiency",
+   "scenario": "Tired all the time. Your GP checks ferritin, your iron stores. Under 30 counts as positive.",
+   "sens": {
+    "v": 92,
+    "lo": 82,
+    "hi": 100
+   },
+   "spec": {
+    "v": 85,
+    "lo": 75,
+    "hi": 92
+   },
+   "says": "A cut-off of 30 catches most iron deficiency. The catch: inflammation pushes ferritin up, so it can look normal when it isn’t.",
+   "note": "Small studies that varied a lot. Experts say better studies are urgently needed.",
+   "src": [
+    [
+     "Daru 2017 review: Serum ferritin as an indicator of iron status (Am J Clin Nutr)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC5701723/"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ferr15": {
+   "test": "Ferritin (under 15 counts as low)",
+   "condition": "iron deficiency",
+   "scenario": "Same blood test, stricter cut-off: only a ferritin under 15 counts as low.",
+   "sens": {
+    "v": 65,
+    "lo": 57,
+    "hi": 75
+   },
+   "spec": {
+    "v": 98,
+    "lo": 96,
+    "hi": 100
+   },
+   "says": "Under 15, you can be pretty sure it’s iron deficiency. But this cut-off misses about a third of people who have it.",
+   "note": "Small, older studies with wide variation (one in pregnant women found much lower sensitivity).",
+   "src": [
+    [
+     "Daru 2017 review: Serum ferritin as an indicator of iron status (Am J Clin Nutr)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC5701723/"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "trop99": {
+   "test": "Troponin, one test on arrival",
+   "condition": "a heart attack",
+   "scenario": "Chest pain in the emergency department. One high-sensitivity troponin on arrival, usual cut-off.",
+   "sens": {
+    "v": 90,
+    "lo": 85,
+    "hi": 94
+   },
+   "spec": {
+    "v": 78,
+    "lo": 72,
+    "hi": 83
+   },
+   "says": "One test too early misses about 1 in 10 heart attacks, because troponin takes time to rise. That’s why you get a second test.",
+   "note": "Roche high-sensitivity troponin T at the 99th percentile. Another brand (Abbott troponin I) was the other way round: 75% sensitive, 94% specific.",
+   "src": [
+    [
+     "NICE DG40: high-sensitivity troponin tests, evidence",
+     "https://nice.org.uk/guidance/DG40/chapter/3-evidence"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "trop01": {
+   "test": "Troponin, two tests an hour apart",
+   "condition": "a heart attack",
+   "scenario": "Chest pain in ED. Troponin on arrival and again an hour later. ‘Negative’ means: ruled out.",
+   "sens": {
+    "v": 99,
+    "lo": 98,
+    "hi": 100
+   },
+   "spec": {
+    "v": 68,
+    "lo": 57,
+    "hi": 70
+   },
+   "says": "Two tests an hour apart miss about 1 heart attack in 100. Not ruled out doesn’t mean you’re having one, just that you stay for more tests.",
+   "note": "European 0/1-hour rule-out pathway. Specificity was 68% for one brand and 57% for another.",
+   "src": [
+    [
+     "NICE DG40: high-sensitivity troponin tests, evidence",
+     "https://nice.org.uk/guidance/DG40/chapter/3-evidence"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "kernig": {
+   "test": "Kernig’s sign",
+   "condition": "meningitis",
+   "scenario": "Fever and headache. The doctor bends your hip and knee, then straightens the knee. Pain or resistance is positive.",
+   "sens": {
+    "v": 5,
+    "lo": 3,
+    "hi": 8
+   },
+   "spec": {
+    "v": 95,
+    "lo": 93,
+    "hi": 97
+   },
+   "says": "Famous, and nearly useless for ruling out. It missed 19 in 20 cases. A negative Kernig’s means nothing; worry anyway.",
+   "note": "One study of 297 adults with suspected meningitis (Thomas 2002). Brudzinski’s sign did no better.",
+   "src": [
+    [
+     "Thomas 2002 (Clin Infect Dis), summarised in American Family Physician",
+     "https://www.aafp.org/pubs/afp/issues/2002/1115/p1952.html"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "neck": {
+   "test": "Stiff neck on examination",
+   "condition": "meningitis",
+   "scenario": "Same fever and headache. This time the doctor checks whether your neck is stiff.",
+   "sens": {
+    "v": 30,
+    "lo": 26,
+    "hi": 34
+   },
+   "spec": {
+    "v": 68,
+    "lo": 64,
+    "hi": 72
+   },
+   "says": "The textbook sign caught fewer than 1 in 3 cases, and plenty of people without meningitis had it too. Classic doesn’t mean reliable.",
+   "note": "One study of 297 adults (Thomas 2002).",
+   "src": [
+    [
+     "Thomas 2002 (Clin Infect Dis), summarised in American Family Physician",
+     "https://www.aafp.org/pubs/afp/issues/2002/1115/p1952.html"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "fluA": {
+   "test": "Rapid flu test (adults)",
+   "condition": "the flu",
+   "scenario": "Fever, aches, the works. A quick nose swab for influenza at the clinic.",
+   "sens": {
+    "v": 54,
+    "lo": 48,
+    "hi": 60
+   },
+   "spec": {
+    "v": 98,
+    "lo": 97,
+    "hi": 99
+   },
+   "says": "A coin toss for catching flu in adults, but a positive is very believable. Good for ruling in, bad for ruling out.",
+   "note": "Rapid antigen tests, meta-analysis 2012. Specificity was reported for all ages combined.",
+   "src": [
+    [
+     "Chartrand 2012 meta-analysis (Ann Intern Med), summarised by ACP",
+     "https://immattersacp.org/weekly/archives/2012/02/28/1.htm"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "fluK": {
+   "test": "Rapid flu test (children)",
+   "condition": "the flu",
+   "scenario": "A feverish, miserable kid. Quick nose swab for influenza.",
+   "sens": {
+    "v": 67,
+    "lo": 62,
+    "hi": 72
+   },
+   "spec": {
+    "v": 98,
+    "lo": 97,
+    "hi": 99
+   },
+   "says": "Better in kids than in adults, but it still misses about 1 in 3.",
+   "note": "Meta-analysis 2012. Specificity was reported for all ages combined.",
+   "src": [
+    [
+     "Chartrand 2012 meta-analysis (Ann Intern Med), summarised by ACP",
+     "https://immattersacp.org/weekly/archives/2012/02/28/1.htm"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "preg": {
+   "test": "Home pregnancy test (done at home)",
+   "condition": "pregnancy",
+   "scenario": "Period’s late. You wee on the stick at home. Older studies watched real people do it.",
+   "sens": {
+    "v": 75,
+    "lo": 64,
+    "hi": 85
+   },
+   "spec": null,
+   "says": "Trained volunteers caught about 9 in 10 pregnancies, but real people at home missed about 1 in 4. Testing too early is a big reason: if it’s negative and your period still hasn’t come, test again in a few days.",
+   "note": "Old studies (1972 to 1993); modern tests may do better. No good pooled figure for false positives, so this round has one slider.",
+   "src": [
+    [
+     "Bastian 1998 meta-analysis, summarised by BestBETs",
+     "https://bestbets.org/bets/bet.php?id=1786"
+    ],
+    [
+     "Cole 2004 study, summarised in American Family Physician",
+     "https://www.aafp.org/pubs/afp/issues/2004/1001/p1370.html"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "calpro": {
+   "test": "Faecal calprotectin (adults)",
+   "condition": "inflammatory bowel disease (Crohn’s or colitis)",
+   "scenario": "Months of tummy pain and loose poo. IBS, or inflamed bowel? A poo test for calprotectin.",
+   "sens": {
+    "v": 93,
+    "lo": 85,
+    "hi": 97
+   },
+   "spec": {
+    "v": 96,
+    "lo": 79,
+    "hi": 99
+   },
+   "says": "One of the good ones in adults. Negative? Inflamed bowel is unlikely, and you may skip a colonoscopy.",
+   "note": "Meta-analysis of 6 adult studies (2010). Specificity varied a lot between studies.",
+   "src": [
+    [
+     "van Rheenen 2010 meta-analysis (BMJ)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC2904879"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "calproK": {
+   "test": "Faecal calprotectin (children and teens)",
+   "condition": "inflammatory bowel disease",
+   "scenario": "A teenager with tummy pain, loose poo and weight loss. Same poo test.",
+   "sens": {
+    "v": 92,
+    "lo": 84,
+    "hi": 96
+   },
+   "spec": {
+    "v": 76,
+    "lo": 62,
+    "hi": 86
+   },
+   "says": "Just as good at catching it in kids, but more false alarms: about 1 in 4 without bowel disease test positive.",
+   "note": "Meta-analysis of 7 studies in children and teenagers (2010).",
+   "src": [
+    [
+     "van Rheenen 2010 meta-analysis (BMJ)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC2904879"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ubt": {
+   "test": "Urea breath test",
+   "condition": "H. pylori (the stomach ulcer bug)",
+   "scenario": "Burning tummy. You drink a special drink, then blow into a bag.",
+   "sens": {
+    "v": 94,
+    "lo": 89,
+    "hi": 97
+   },
+   "spec": {
+    "v": 90,
+    "lo": 89,
+    "hi": 91
+   },
+   "says": "The best non-invasive test for H. pylori. Stop acid tablets and antibiotics beforehand or you’ll fool it.",
+   "note": "The Cochrane review compared tests at a fixed specificity of about 90%, so that figure is set, not measured.",
+   "src": [
+    [
+     "Cochrane review: non-invasive tests for H. pylori (2018)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012080.pub2/information/hi"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "hpstool": {
+   "test": "H. pylori stool test",
+   "condition": "H. pylori",
+   "scenario": "Same burning tummy, but this time it’s a poo sample instead of a breath test.",
+   "sens": {
+    "v": 83,
+    "lo": 73,
+    "hi": 90
+   },
+   "spec": {
+    "v": 90,
+    "lo": 89,
+    "hi": 91
+   },
+   "says": "Decent, cheap and easy, but a bit less sensitive than the breath test.",
+   "note": "Cochrane compared tests at a fixed specificity of about 90%.",
+   "src": [
+    [
+     "Cochrane review: non-invasive tests for H. pylori (2018)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012080.pub2/information/hi"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "nitrite": {
+   "test": "Urine dipstick: nitrite",
+   "condition": "a UTI",
+   "scenario": "Burning when you wee. The GP dips a strip in your urine. Positive here means the nitrite pad changes colour.",
+   "sens": {
+    "v": 53,
+    "lo": 44,
+    "hi": 65
+   },
+   "spec": {
+    "v": 88,
+    "lo": 81,
+    "hi": 96
+   },
+   "says": "Nitrite positive is a decent clue. Nitrite negative? Means little: about half of UTIs don’t show it.",
+   "note": "Pooled from 6 general practice studies (2004 meta-analysis).",
+   "src": [
+    [
+     "Devillé 2004 meta-analysis: the urine dipstick test (BMC Urology)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC434513"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "dipany": {
+   "test": "Urine dipstick: nitrite or white cells",
+   "condition": "a UTI",
+   "scenario": "Same strip, but now either pad (nitrite or white cells) changing colour counts as positive.",
+   "sens": {
+    "v": 90,
+    "lo": 89,
+    "hi": 92
+   },
+   "spec": {
+    "v": 65,
+    "lo": 61,
+    "hi": 69
+   },
+   "says": "Count either pad and you catch most UTIs, but you also get lots of false alarms. Symptoms still matter most.",
+   "note": "General practice estimate rests on only 2 studies; treat as rough.",
+   "src": [
+    [
+     "Devillé 2004 meta-analysis: the urine dipstick test (BMC Urology)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC434513"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "hpv": {
+   "test": "HPV test (cervical screening)",
+   "condition": "cervical pre-cancer",
+   "scenario": "Routine cervical screening. The sample is tested for HPV, the virus behind almost all cervical cancer.",
+   "sens": {
+    "v": 90,
+    "lo": 89,
+    "hi": 93
+   },
+   "spec": {
+    "v": 90,
+    "lo": 89,
+    "hi": 91
+   },
+   "says": "Much better at catching pre-cancer than the old Pap smear, which is why Australia switched to it in 2017.",
+   "note": "Cochrane 2017, for moderate pre-cancer (CIN2+) using one HPV test (HC2). Figures differ slightly between tables in the review.",
+   "src": [
+    [
+     "Cochrane review: cytology versus HPV testing (2017)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008587.pub2/information/hr"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "pap": {
+   "test": "Old-style Pap smear",
+   "condition": "cervical pre-cancer",
+   "scenario": "The old way: cells smeared on a slide and checked under a microscope.",
+   "sens": {
+    "v": 66,
+    "lo": 55,
+    "hi": 75
+   },
+   "spec": {
+    "v": 96,
+    "lo": 95,
+    "hi": 97
+   },
+   "says": "Few false alarms, but it missed about 1 in 3 pre-cancers. Regular repeats made up for it, until the HPV test came along.",
+   "note": "Conventional cytology, abnormal cells of any grade counted as positive (Cochrane 2017).",
+   "src": [
+    [
+     "Cochrane review: cytology versus HPV testing (2017)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008587.pub2/information/hr"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "mono": {
+   "test": "Monospot test",
+   "condition": "glandular fever",
+   "scenario": "A teen with a wrecked throat, swollen glands and exhaustion. Quick blood test for glandular fever.",
+   "sens": {
+    "v": 87,
+    "lo": 84,
+    "hi": 90
+   },
+   "spec": {
+    "v": 91,
+    "lo": 88,
+    "hi": 94
+   },
+   "says": "Not bad, but early on it can miss up to 1 in 4 adults, and it’s poor in kids under 5. Too early? Test again later.",
+   "note": "From a systematic review; the authors say these figures probably flatter it in everyday practice.",
+   "src": [
+    [
+     "Infectious mononucleosis: rapid evidence review (American Family Physician 2023)",
+     "https://www.aafp.org/afp/2023/0100/infectious-mononucleosis"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "crp": {
+   "test": "CRP blood test",
+   "condition": "pneumonia",
+   "scenario": "Chesty cough and fever. Could one CRP tell pneumonia from a plain chest infection?",
+   "sens": {
+    "v": 54,
+    "lo": 10,
+    "hi": 98
+   },
+   "spec": {
+    "v": 72,
+    "lo": 44,
+    "hi": 99
+   },
+   "range": true,
+   "says": "Studies were all over the place: sensitivity anywhere from 10 to 98%. So almost any guess scores today. That’s not a compliment to CRP.",
+   "note": "A 2005 systematic review found study quality generally poor and said CRP alone can’t rule pneumonia in or out. The grid shows the middle of the range.",
+   "src": [
+    [
+     "van der Meer 2005 systematic review (BMJ)",
+     "https://www.bmj.com/content/331/7507/26"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "usapp": {
+   "test": "Ultrasound for appendicitis (children)",
+   "condition": "appendicitis",
+   "scenario": "A child with pain low on the right of the tummy. An ultrasound first, no radiation.",
+   "sens": {
+    "v": 88,
+    "lo": 86,
+    "hi": 90
+   },
+   "spec": {
+    "v": 94,
+    "lo": 92,
+    "hi": 96
+   },
+   "says": "Very good in skilled hands, and no radiation. It misses about 1 in 8, so a doubtful scan gets a rethink.",
+   "note": "Doria 2006 meta-analysis, children.",
+   "src": [
+    [
+     "Doria 2006 meta-analysis (Radiology), summarised by ALiEM",
+     "https://www.aliem.com/pediatric-appendicitis-ct-or-ultrasound/"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "ctapp": {
+   "test": "CT scan for appendicitis (children)",
+   "condition": "appendicitis",
+   "scenario": "Same child, same pain, but this time a CT scan.",
+   "sens": {
+    "v": 94,
+    "lo": 92,
+    "hi": 96
+   },
+   "spec": {
+    "v": 95,
+    "lo": 93,
+    "hi": 97
+   },
+   "says": "A bit better than ultrasound, at the cost of radiation. One reason kids usually get ultrasound first.",
+   "note": "Doria 2006 meta-analysis, children.",
+   "src": [
+    [
+     "Doria 2006 meta-analysis (Radiology), summarised by ALiEM",
+     "https://www.aliem.com/pediatric-appendicitis-ct-or-ultrasound/"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "dermo": {
+   "test": "Skin check with a dermatoscope",
+   "condition": "melanoma",
+   "scenario": "A doctor checks a dark mole in person, looking through a dermatoscope (a lit magnifier).",
+   "sens": {
+    "v": 92,
+    "lo": 89,
+    "hi": 95
+   },
+   "spec": {
+    "v": 80,
+    "lo": 80,
+    "hi": 80
+   },
+   "says": "The magnifier helps a lot: at the same false-alarm rate, it catches about 92 in 100 melanomas versus 76 by eye.",
+   "note": "Cochrane 2018 compared methods at a fixed 80% specificity, so that figure is set, not measured. The review calls these figures illustrative.",
+   "src": [
+    [
+     "Cochrane review: dermoscopy for diagnosing melanoma (2018)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD011902.pub2"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  },
+  "eye": {
+   "test": "Skin check by eye alone",
+   "condition": "melanoma",
+   "scenario": "Same mole, same doctor, but no dermatoscope: just a good look.",
+   "sens": {
+    "v": 76,
+    "lo": 72,
+    "hi": 80
+   },
+   "spec": {
+    "v": 80,
+    "lo": 80,
+    "hi": 80
+   },
+   "says": "By eye alone, about 1 in 4 melanomas slip past (at the same false-alarm rate). Get the magnifier out.",
+   "note": "Cochrane 2018 compared methods at a fixed 80% specificity. The review calls these figures illustrative.",
+   "src": [
+    [
+     "Cochrane review: dermoscopy for diagnosing melanoma (2018)",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD011902.pub2"
+    ]
+   ],
+   "checked": "1 Nov 2026"
+  }
+ }
+}
