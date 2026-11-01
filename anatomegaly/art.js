@@ -1,4 +1,4 @@
-/* Labelosis diagrams: original, schematic SVG drawings (no external images, no faces).
+/* Anatomegaly diagrams: original, schematic SVG drawings (no external images, no faces).
    Each part carries data-p="id [id2]". The game adds class "hl" to the parts named in a round's "hl" list.
    Parts with class "ov" are invisible overlays that only show when highlighted.
    Front-on body views follow anatomical convention: the patient's right is on the viewer's left. */

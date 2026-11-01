@@ -1,4 +1,4 @@
-/* Labelosis: a daily five-round anatomy puzzle. Name the highlighted structure, the bone or the nerve; four options per round.
+/* Anatomegaly: a daily five-round anatomy puzzle. Name the highlighted structure, the bone or the nerve; four options per round.
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rounds:[{kind, q, art?, hl?, answer, wrong:[3], why}] x5}.
    art = a diagram name from art.js; hl = the part ids to highlight. Score 3+ out of 5 counts as a win.
    PROTOTYPE: not yet in assets/games.js, so this file registers its own game, mascot and about entries (on this page only). */
@@ -6,7 +6,7 @@
   "use strict";
   // ---------- self-registration (move into assets/games.js on launch) ----------
   var ICON = '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 30l10-10M11 33.5a3.2 3.2 0 1 1-1.5-6 3.2 3.2 0 1 1 6-1.5M27 16.5a3.2 3.2 0 1 1 1.5 6 3.2 3.2 0 1 1-6 1.5"/><path d="M29 30h13v10H29l-5-5z"/><circle cx="28.5" cy="35" r="1.2" fill="#fff"/></svg>';
-  var ENTRY = { id: "labelosis", kind: "Anatomy puzzle", name: "Labelosis", path: "labelosis/", live: true, from: "2026-11-02",
+  var ENTRY = { id: "labelosis", kind: "Anatomy puzzle", name: "Anatomegaly", path: "labelosis/", live: true, from: "2026-11-02",
     store: { stats: "lbl-stats", day: "lbl-day-", labels: ["0", "1", "2", "3", "4", "5"], distTitle: " (score out of 5)" },
     tagline: "Five body parts. Name every one.",
     quip: "Left is right, right is left. Welcome to anatomy.",
@@ -23,7 +23,7 @@
   window.MW_MASCOTS = window.MW_MASCOTS || {};
   if (!MW_MASCOTS.labelosis) MW_MASCOTS.labelosis = { name: "Axel", what: "a label-happy axolotl (regrows limbs, never forgets one)", cheer: ["Labelled to perfection.", "Textbook. Literally.", "Every part, accounted for.", "I’d regrow a limb just to watch that again.", "Anatomy lab legend.", "Origin, insertion, genius.", "That was very well innervated.", "Proximal to brilliant.", "Superior. Anatomically and otherwise.", "Gills out. Impressed."] };
   window.MW_ABOUT = window.MW_ABOUT || {};
-  if (!MW_ABOUT.labelosis) MW_ABOUT.labelosis = ["Labelosis is a daily anatomy puzzle. Each day brings five rounds: name a highlighted structure on a simple diagram, identify a bone, or work out which nerve supplies what. Four options per round, and every answer comes with a short explanation.", [["Who is it for?", "Students, nurses, physios, paramedics, doctors and anyone curious about the body. Easy days are school-level; Genius days will test a surgeon."], ["Are the diagrams accurate?", "They are simplified teaching sketches drawn for this game, not to scale. Real anatomy varies between people."]]];
+  if (!MW_ABOUT.labelosis) MW_ABOUT.labelosis = ["Anatomegaly is a daily anatomy puzzle. Each day brings five rounds: name a highlighted structure on a simple diagram, identify a bone, or work out which nerve supplies what. Four options per round, and every answer comes with a short explanation.", [["Who is it for?", "Students, nurses, physios, paramedics, doctors and anyone curious about the body. Easy days are school-level; Genius days will test a surgeon."], ["Are the diagrams accurate?", "They are simplified teaching sketches drawn for this game, not to scale. Real anatomy varies between people."]]];
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};
   if (!MW_EINSTEIN.labelosis) MW_EINSTEIN.labelosis = ["2026-11-13"];
 
@@ -35,7 +35,7 @@
   }
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="lbl-eyebrow">Labelosis</span><span class="badge" id="lbl-badge" hidden></span></div>' +
+    ' <div class="head"><span class="eyebrow" id="lbl-eyebrow">Anatomegaly</span><span class="badge" id="lbl-badge" hidden></span></div>' +
     ' <div class="pips" id="lbl-pips" aria-hidden="true"></div>' +
     ' <section class="card" id="lbl-card" aria-live="polite"></section>' +
     ' <div class="msg" id="lbl-msg" aria-live="polite"></div>' +
@@ -109,7 +109,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var s = score(), grid = P.rounds.map(function (R, i) { return st.picks[i] === R.answer ? "🟩" : "🟥"; }).join("");
-    var share = "Labelosis #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " 🦴 " + s + "/" + N + "\n" + grid + "\nmaladywise.com";
+    var share = "Anatomegaly #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " 🦴 " + s + "/" + N + "\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1]));
     var M = (window.MW_MASCOTS || {}).labelosis;
     r.hidden = false;
@@ -172,12 +172,12 @@
   function hidePlay(html) { ["pips", "opts", "why", "next", "result"].forEach(function (k) { $(k).hidden = true; }); $("badge").hidden = true; $("card").innerHTML = html; }
   function show(date) {
     today = date; loadDay(); P = null;
-    if (NORMIE) { hidePlay(window.MW_noNormie ? MW_noNormie("anatomy puzzle") : '<p class="empty">Labelosis is Medical mode only.</p>'); return Promise.resolve(); }
+    if (NORMIE) { hidePlay(window.MW_noNormie ? MW_noNormie("anatomy puzzle") : '<p class="empty">Anatomegaly is Medical mode only.</p>'); return Promise.resolve(); }
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (!P) { hidePlay(date < "2026-11-02" ? '<p class="empty">Labelosis opens Monday 2 November. The skeleton is still warming up.</p>' : '<p class="empty">Today’s set is still being labelled. Back tomorrow.</p>'); renderArchive(); return; }
+      if (!P) { hidePlay(date < "2026-11-02" ? '<p class="empty">Anatomegaly opens Monday 2 November. The skeleton is still warming up.</p>' : '<p class="empty">Today’s set is still being labelled. Back tomorrow.</p>'); renderArchive(); return; }
       ["pips", "opts"].forEach(function (k) { $(k).hidden = false; });
-      $("eyebrow").textContent = (isLive() ? "Labelosis" : "Archive") + " · #" + P.number + " · " + nice(date);
+      $("eyebrow").textContent = (isLive() ? "Anatomegaly" : "Archive") + " · #" + P.number + " · " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       view = st.done ? N - 1 : Math.min(st.picks.length, N - 1);
       say("");
