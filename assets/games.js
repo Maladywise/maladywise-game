@@ -265,3 +265,12 @@ window.MW_GAMES = [
   MW_EINSTEIN.labelosis = ["2026-11-13"];
   var i = MW_ORDER.indexOf("opacitis") + 1; ["labelosis", "sensitosis"].forEach(function (id, k) { if (MW_ORDER.indexOf(id) < 0) MW_ORDER.splice(i + k, 0, id); });
 })();
+
+// ---- Sensitosis Normie mode + Einstein days (2 Nov 2026) ----
+(function () {
+  var g = MW_GAMES.filter(function (x) { return x.id === "sensitosis"; })[0];
+  if (g) g.normie = {"kind": "Detector guessing game", "tagline": "Guess how good everyday detectors are.", "quip": "Sniffer dogs, lie detectors, smoke alarms. Every one of them lies sometimes.", "helpQuip": "No detector is perfect. Some are hilariously far from it.", "help": ["Each day brings five real detectors, from smoke alarms and sniffer dogs to lie detectors and AI checkers. Normie mode: no medicine.", "Slide two bars: when the thing is really there, how often does it catch it? When it isn’t, how often does it stay quiet?", "Closer guesses score more, up to 100 a round. Where studies disagree, anywhere in the range scores full marks.", "The reveal shows 100 cases: catches, misses and false alarms, with the source.", "Some rounds have a bonus twist: the alarm goes off, so what’s the chance it’s for real?", "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun. New detectors at midnight, Sydney time."]};
+  window.MW_ABOUT_N = window.MW_ABOUT_N || {}; MW_ABOUT_N.sensitosis = ["Sensitosis in Normie mode is a daily guessing game about how good everyday detectors are. Each day brings five real ones, from smoke alarms and sniffer dogs to lie detectors, facial recognition and AI-writing checkers. Slide two bars to guess how often each one catches the real thing and how often it stays quiet when there’s nothing there. Then see 100 cases on a grid, with the real figure and its source.", [["Do my Medical stats change?", "No. Normie scores and streaks are kept separately."], ["What do ‘catches it’ and ‘stays quiet’ mean?", "Catches it (sensitivity): out of 100 times the thing is really there, how many times the detector goes off. Stays quiet (specificity): out of 100 times it isn’t there, how many times it keeps quiet. The rest are false alarms."], ["Are the numbers real?", "Yes. Every figure comes from a published study or report, linked on every reveal and rounded. Studies vary, so treat them as ballpark."]]];
+  MW_EINSTEIN.sensitosis = ["2026-11-27", "2026-12-17"];
+  window.MW_EINSTEIN_N = window.MW_EINSTEIN_N || {}; MW_EINSTEIN_N.sensitosis = ["2026-11-27", "2026-12-17"];
+})();

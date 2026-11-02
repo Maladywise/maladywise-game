@@ -136,3 +136,13 @@ html[data-motion="reduce"] #sns *{animation:none!important;scroll-behavior:auto!
 #sns .kick{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 #sns .kind{font:600 10px var(--body);letter-spacing:.08em;padding:2px 8px;border-radius:999px;border:1.5px solid var(--line);color:var(--muted);background:var(--paper)}
 #sns .kind.sign,#sns .kind.rule{border-color:var(--ok);color:var(--ok);background:var(--okbg)}
+
+/* Einstein days: rare top tier, tight scoring */
+#sns .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B);color:#FFE9A8;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
+#sns.einstein .card{box-shadow:inset 0 3px 0 #E8C66A}
+#sns .einote{margin:0;font-size:13px;font-weight:600;color:var(--genius);background:var(--soft);border-left:3px solid #E8C66A;border-radius:8px;padding:6px 10px}
+html[data-theme="dark"] #sns .einote{color:#E8C66A}
+
+/* Normie round chips */
+#sns .kind.animal,#sns .kind.human{border-color:var(--ok);color:var(--ok);background:var(--okbg)}
+#sns .kind.software,#sns .kind.check{border-color:var(--accent);color:var(--accent);background:var(--accentbg)}

@@ -1,0 +1,785 @@
+[
+ {
+  "date": "2026-11-02",
+  "number": 1,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "facerec",
+    "twist": {
+     "prev": 0.01,
+     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "number": 2,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "number": 3,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "number": 4,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "polygraph",
+    "twist": {
+     "prev": 0.1,
+     "where": "Imagine screening a big office where 1 in 1,000 staff is a spy.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bedlab"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "number": 5,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "humanlie"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "number": 6,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "number": 7,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "number": 8,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "turnitin",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 essays in the class used AI.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "number": 9,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "polygraph",
+    "twist": {
+     "prev": 0.1,
+     "where": "Imagine screening a big office where 1 in 1,000 staff is a spy.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "tsa"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "number": 10,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "number": 11,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog",
+    "twist": {
+     "prev": 1,
+     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "number": 12,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "aidet"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "number": 13,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "pas",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bombdog"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "number": 14,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "humanlie",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 stories you hear is a lie.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "lineupseq"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 15,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "facerec",
+    "twist": {
+     "prev": 0.01,
+     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "bedlab"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 16,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "pas",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "captcha"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 17,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "lineupseq"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 18,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 19,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "aidet"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 20,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "polygraph",
+    "twist": {
+     "prev": 0.1,
+     "where": "Imagine screening a big office where 1 in 1,000 staff is a spy.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 21,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "humanlie",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 stories you hear is a lie.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 22,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "pas",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 23,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "bombdog",
+    "twist": {
+     "prev": 1,
+     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "smoke"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 24,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "pas"
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "tsa"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 25,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "facerec",
+    "twist": {
+     "prev": 0.01,
+     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "smoke"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 26,
+  "difficulty": "Einstein",
+  "rounds": [
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "humanlie",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 stories you hear is a lie.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "polygraph",
+    "twist": {
+     "prev": 0.1,
+     "where": "Imagine screening a big office where 1 in 1,000 staff is a spy.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 27,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog",
+    "twist": {
+     "prev": 1,
+     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bedlab"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 28,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 29,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "pas"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "tsa"
+   }
+  ]
+ }
+]

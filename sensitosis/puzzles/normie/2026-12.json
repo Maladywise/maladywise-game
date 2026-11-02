@@ -1,0 +1,819 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 30,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "number": 31,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "number": 32,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "number": 33,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "number": 34,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "captcha"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "number": 35,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "humanlie",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 stories you hear is a lie.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "number": 36,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "turnitin"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "number": 37,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "tsa"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "number": 38,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "number": 39,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "captcha",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the visitors to a ticket site are bots.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "number": 40,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "number": 41,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "aidet"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-13",
+  "number": 42,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "facerec",
+    "twist": {
+     "prev": 0.01,
+     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "polygraph",
+    "twist": {
+     "prev": 0.1,
+     "where": "Imagine screening a big office where 1 in 1,000 staff is a spy.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "number": 43,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "smoke"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "number": 44,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "facerec",
+    "twist": {
+     "prev": 0.01,
+     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "number": 45,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "pas"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "number": 46,
+  "difficulty": "Einstein",
+  "rounds": [
+   {
+    "test": "turnitin",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine only 1 in 50 essays in the class used AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bombdog",
+    "twist": {
+     "prev": 1,
+     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "captcha",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the visitors to a ticket site are bots.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "humanlie"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "number": 47,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "number": 48,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "facerec"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-20",
+  "number": 49,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "pas",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-21",
+  "number": 50,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "turnitin"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-22",
+  "number": 51,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "pas"
+   },
+   {
+    "test": "captcha"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-23",
+  "number": 52,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bedfield"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-24",
+  "number": 53,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "fingerprint"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "polygraph"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-25",
+  "number": 54,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "humanlie",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 stories you hear is a lie.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 55,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "turnitin"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "facerec"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 56,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "bedfield",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "lineupseq"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-28",
+  "number": 57,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "tsa"
+   },
+   {
+    "test": "fingerprint",
+    "twist": {
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "pas"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-29",
+  "number": 58,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "captcha"
+   },
+   {
+    "test": "bombdog"
+   },
+   {
+    "test": "turnitin",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine 1 in 10 essays in the class used AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "smoke"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 59,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "aidet",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine half the essays in the pile were written by AI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "lineupseq"
+   },
+   {
+    "test": "humanlie"
+   },
+   {
+    "test": "lineupsim"
+   },
+   {
+    "test": "fingerprint"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-31",
+  "number": 60,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "bedfield"
+   },
+   {
+    "test": "bedlab"
+   },
+   {
+    "test": "bombdog",
+    "twist": {
+     "prev": 1,
+     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "captcha"
+   }
+  ]
+ }
+]

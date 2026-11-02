@@ -1,0 +1,774 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 30,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "rat-asym",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "rat-sym"
+   },
+   {
+    "test": "dermo"
+   },
+   {
+    "test": "dipany"
+   },
+   {
+    "test": "eye"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "number": 31,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "psa4"
+   },
+   {
+    "test": "hawkins"
+   },
+   {
+    "test": "calpro"
+   },
+   {
+    "test": "neck"
+   },
+   {
+    "test": "ctapp"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "number": 32,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "ferr30"
+   },
+   {
+    "test": "ddimer"
+   },
+   {
+    "test": "usapp"
+   },
+   {
+    "test": "wells"
+   },
+   {
+    "test": "centor"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "number": 33,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "pap"
+   },
+   {
+    "test": "emptycan"
+   },
+   {
+    "test": "s3"
+   },
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "ferr15"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "number": 34,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "brudz"
+   },
+   {
+    "test": "crp"
+   },
+   {
+    "test": "psa3"
+   },
+   {
+    "test": "trendel"
+   },
+   {
+    "test": "hpstool"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "number": 35,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "dixhallpike"
+   },
+   {
+    "test": "fluA",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine flu season, when 1 in 5 people with fever and aches have the flu.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "wave"
+   },
+   {
+    "test": "trop99"
+   },
+   {
+    "test": "calproK"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "number": 36,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "preg"
+   },
+   {
+    "test": "murphy"
+   },
+   {
+    "test": "ottawa"
+   },
+   {
+    "test": "mono"
+   },
+   {
+    "test": "mammo"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "number": 37,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "dipany"
+   },
+   {
+    "test": "cspine"
+   },
+   {
+    "test": "hpv"
+   },
+   {
+    "test": "drawer"
+   },
+   {
+    "test": "fit"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "number": 38,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "mcmurray"
+   },
+   {
+    "test": "nitrite",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine a clinic where half the people with burning wees have a UTI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "ubt"
+   },
+   {
+    "test": "fluK"
+   },
+   {
+    "test": "hints"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "number": 39,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "calpro"
+   },
+   {
+    "test": "ddimer",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a low-risk group where about 1 in 10 people actually have a clot.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "psa4"
+   },
+   {
+    "test": "slr"
+   },
+   {
+    "test": "tinel"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "number": 40,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "hpstool"
+   },
+   {
+    "test": "pap"
+   },
+   {
+    "test": "kernig"
+   },
+   {
+    "test": "psoas"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "number": 41,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "turgor"
+   },
+   {
+    "test": "rovsing"
+   },
+   {
+    "test": "psa3"
+   },
+   {
+    "test": "ferr15"
+   },
+   {
+    "test": "crp"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-13",
+  "number": 42,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "usapp"
+   },
+   {
+    "test": "calproK"
+   },
+   {
+    "test": "papill"
+   },
+   {
+    "test": "ctapp"
+   },
+   {
+    "test": "jvp",
+    "twist": {
+     "prev": 40,
+     "where": "Imagine an emergency department where 4 in 10 breathless adults have heart failure.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "number": 43,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "fast"
+   },
+   {
+    "test": "lachman"
+   },
+   {
+    "test": "strep"
+   },
+   {
+    "test": "rat-asym",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "rat-sym"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "number": 44,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "dipany"
+   },
+   {
+    "test": "preg"
+   },
+   {
+    "test": "drift"
+   },
+   {
+    "test": "ottawaknee"
+   },
+   {
+    "test": "mammo",
+    "twist": {
+     "prev": 0.45,
+     "where": "In the US screening data, about 1 in 220 screens found a cancer within a year.",
+     "sourced": true
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "number": 45,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "neer"
+   },
+   {
+    "test": "hawkins"
+   },
+   {
+    "test": "ferr30"
+   },
+   {
+    "test": "fluK"
+   },
+   {
+    "test": "trop99"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "number": 46,
+  "difficulty": "Einstein",
+  "rounds": [
+   {
+    "test": "ddimer",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a low-risk group where about 1 in 10 people actually have a clot.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "psoas"
+   },
+   {
+    "test": "trop01",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine an emergency department where 1 in 10 people with chest pain is having a heart attack.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "neck"
+   },
+   {
+    "test": "fluA",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine flu season, when 1 in 5 people with fever and aches have the flu.",
+     "sourced": false
+    }
+   }
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "number": 47,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "hpstool"
+   },
+   {
+    "test": "shift"
+   },
+   {
+    "test": "jolt"
+   },
+   {
+    "test": "pap"
+   },
+   {
+    "test": "psa3"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "number": 48,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "babinski"
+   },
+   {
+    "test": "ferr15"
+   },
+   {
+    "test": "crp"
+   },
+   {
+    "test": "calproK"
+   },
+   {
+    "test": "homans"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-20",
+  "number": 49,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "nitrite",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine a clinic where half the people with burning wees have a UTI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "crt"
+   },
+   {
+    "test": "ubt"
+   },
+   {
+    "test": "s3"
+   },
+   {
+    "test": "psa4"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-21",
+  "number": 50,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "dermo"
+   },
+   {
+    "test": "thompson"
+   },
+   {
+    "test": "fit"
+   },
+   {
+    "test": "mono"
+   },
+   {
+    "test": "hpv"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-22",
+  "number": 51,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "preg"
+   },
+   {
+    "test": "rat-sym"
+   },
+   {
+    "test": "rat-asym",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "eye"
+   },
+   {
+    "test": "murphy"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-23",
+  "number": 52,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "calpro"
+   },
+   {
+    "test": "wells"
+   },
+   {
+    "test": "phalen"
+   },
+   {
+    "test": "ctapp"
+   },
+   {
+    "test": "usapp"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-24",
+  "number": 53,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "trop99"
+   },
+   {
+    "test": "fluK"
+   },
+   {
+    "test": "fluA",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine flu season, when 1 in 5 people with fever and aches have the flu.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "hints"
+   },
+   {
+    "test": "centor"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-25",
+  "number": 54,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "trop01"
+   },
+   {
+    "test": "hpstool"
+   },
+   {
+    "test": "dixhallpike"
+   },
+   {
+    "test": "droparm"
+   },
+   {
+    "test": "pap"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 55,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "trendel"
+   },
+   {
+    "test": "calproK"
+   },
+   {
+    "test": "psa3"
+   },
+   {
+    "test": "emptycan"
+   },
+   {
+    "test": "crp"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 56,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "brudz"
+   },
+   {
+    "test": "wave"
+   },
+   {
+    "test": "ddimer",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a low-risk group where about 1 in 10 people actually have a clot.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "ferr30"
+   },
+   {
+    "test": "ferr15"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-28",
+  "number": 57,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "cspine"
+   },
+   {
+    "test": "mammo"
+   },
+   {
+    "test": "strep",
+    "twist": {
+     "prev": 30,
+     "where": "In the Cochrane studies, about 3 in 10 kids with a sore throat had strep.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "dipany"
+   },
+   {
+    "test": "drawer"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-29",
+  "number": 58,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "test": "hpv"
+   },
+   {
+    "test": "rat-sym"
+   },
+   {
+    "test": "rat-asym",
+    "twist": {
+     "prev": 2,
+     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "fast"
+   },
+   {
+    "test": "ottawa"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 59,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "nitrite",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine a clinic where half the people with burning wees have a UTI.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "slr"
+   },
+   {
+    "test": "ubt"
+   },
+   {
+    "test": "mcmurray"
+   },
+   {
+    "test": "psa4"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-31",
+  "number": 60,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "tinel"
+   },
+   {
+    "test": "calpro",
+    "twist": {
+     "prev": 32,
+     "where": "In the BMJ review’s example, about 1 in 3 adults sent for this test had bowel disease.",
+     "sourced": true
+    }
+   },
+   {
+    "test": "neer"
+   },
+   {
+    "test": "ctapp"
+   },
+   {
+    "test": "usapp"
+   }
+  ]
+ }
+]
