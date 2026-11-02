@@ -274,3 +274,12 @@ window.MW_GAMES = [
   MW_EINSTEIN.sensitosis = ["2026-11-27", "2026-12-17"];
   window.MW_EINSTEIN_N = window.MW_EINSTEIN_N || {}; MW_EINSTEIN_N.sensitosis = ["2026-11-27", "2026-12-17"];
 })();
+
+// ---- Anatomegaly Normie mode + Einstein days (2 Nov 2026) ----
+(function () {
+  var g = MW_GAMES.filter(function (x) { return x.id === "labelosis"; })[0], a = {"normieMascot": true, "normie": {"kind": "Animal anatomy", "tagline": "Five animal parts. Name every one.", "quip": "Three hearts, blue blood, ears on its legs. Nature is unwell.", "helpQuip": "Nature is weird. That’s the whole point.", "help": ["Each day brings five rounds: name the highlighted part of an animal, or pick the weird-but-true body fact.", "Four options per round. One tap, no take-backs.", "Every answer comes with a quick explanation and usually a strange fact.", "Score 3 or more out of 5 to keep your streak alive.", "Diagrams are simple sketches: octopus, owl, giraffe, cat, elephant, shark, frog, sea star, bee and a horse’s hoof.", "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun. A new set arrives at midnight, Sydney time."]}};
+  if (g) for (var k in a) g[k] = a[k];
+  window.MW_ABOUT_N = window.MW_ABOUT_N || {}; MW_ABOUT_N.labelosis = ["Anatomegaly in Normie mode is a daily animal anatomy puzzle. Each day brings five rounds: name the highlighted part of an octopus, owl, giraffe, cat, shark and friends, or pick the weird-but-true body fact. Four options per round, and every answer comes with a short explanation.", [["Do my Medical stats change?", "No. Normie scores and streaks are kept separately."], ["Are the facts real?", "Yes. Every fact is checked, and the diagrams are original, simplified sketches. Animals vary, and nature loves an exception."]]];
+  MW_EINSTEIN.labelosis = ["2026-11-13", "2026-12-30"];
+  window.MW_EINSTEIN_N = window.MW_EINSTEIN_N || {}; MW_EINSTEIN_N.labelosis = ["2026-11-13", "2026-12-30"];
+})();

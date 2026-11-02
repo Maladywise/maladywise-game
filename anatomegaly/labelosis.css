@@ -90,6 +90,35 @@ html[data-theme="dark"] #lbl .chead{color:#16121F}
 #lbl .art .dia{stroke:#C27884}
 #lbl .art .lig{fill:#D6E8EE;stroke:#6E93A0;stroke-width:1.2}
 #lbl .art .men{fill:#DCEBCF;stroke:#7E9A6A;stroke-width:1.2}
+/* Normie animals */
+#lbl .art .oc{fill:#E8836B;stroke:#A9483A;stroke-width:1.4} #lbl .art .oc2{fill:#EE957F} #lbl .art .oc3{fill:#D96E58;opacity:.85}
+#lbl .art .ocspot{fill:#C7604C} #lbl .art .ocs circle{fill:#F8D2C6;stroke:#A9483A;stroke-width:.8}
+#lbl .art .oce{fill:#FFF3C9;stroke:#A9483A;stroke-width:1.4} #lbl .art .ocp{fill:#2B2340}
+#lbl .art .ow{fill:#A9805A;stroke:#6E4E33;stroke-width:1.4} #lbl .art .ow-d{fill:#8C6646} #lbl .art .ow2{fill:#E8D7BE} #lbl .art .ow3{fill:#F1E4D0;stroke:#B89870;stroke-width:1.4}
+#lbl .art .owm{fill:none;stroke:#8C6646;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#lbl .art .owi{fill:#F2B230;stroke:#6E4E33;stroke-width:1.4} #lbl .art .owp{fill:#2B2340} #lbl .art .owb{fill:#5B4636;stroke:#3A2C22;stroke-width:1}
+#lbl .art .owf{fill:#D9B98A;stroke:#8C6646;stroke-width:1} #lbl .art .owc{stroke:#3A2C22}
+#lbl .art .gf{fill:#F3C46A;stroke:#A47A2C;stroke-width:1.4} #lbl .art .gf-d{fill:#E1AE52} #lbl .art .gfs{fill:#B5652E;opacity:.85}
+#lbl .art .gfm{fill:#9B5A2A} #lbl .art .gfh{fill:#5B3A22;stroke:#3A2414;stroke-width:1} #lbl .art .gfl{stroke:#A47A2C} #lbl .art .gfe{fill:#2B2340} #lbl .art .gft{fill:#4E3B78;stroke:#2F2350;stroke-width:1.2}
+#lbl .art .ct{fill:#C9C2B8;stroke:#7D7468;stroke-width:1.6} #lbl .art .cti{fill:#F2BFC4} #lbl .art .ctst{fill:none;stroke:#8F8678;stroke-width:3;stroke-linecap:round;opacity:.55}
+#lbl .art .ctpk{stroke:#7D7468} #lbl .art .cte{fill:#C3D86A;stroke:#5E6B2C;stroke-width:1.4} #lbl .art .ctp{fill:#2B2340}
+#lbl .art .ctpad{fill:#E4DED5;stroke:#9C9284;stroke-width:1.2} #lbl .art .ctdot{fill:none;stroke:#7D7468;stroke-width:2.6;stroke-linecap:round}
+#lbl .art .ctn{fill:#E79AA4;stroke:#A85A66;stroke-width:1.2} #lbl .art .ctm{stroke:#6A6156} #lbl .art .ctw{stroke:#5A5248}
+#lbl .art .ctpaw{fill:#E3929E;stroke:#A85A66;stroke-width:1.4} #lbl .art .ctcl{fill:#F7F2EA;stroke:#9C9284;stroke-width:1}
+#lbl .art .el{fill:#A9A6A2;stroke:#6B6864;stroke-width:1.5} #lbl .art .el-d{fill:#93908C} #lbl .art .el-ear{fill:#B7B3AE} #lbl .art .elr{fill:none;stroke:#7D7A76;stroke-width:1.2;stroke-linecap:round}
+#lbl .art .ell{stroke:#6B6864} #lbl .art .elh{fill:#4C4946} #lbl .art .eln{fill:#E9E1D2;stroke:#8E8A84;stroke-width:1} #lbl .art .elt{fill:#FAF3E2;stroke:#B5A888;stroke-width:1.4} #lbl .art .ele{fill:#2B2340}
+#lbl .art .sh{fill:#8FA3B5;stroke:#506477;stroke-width:1.5} #lbl .art .sh-d{fill:#7D92A6} #lbl .art .shb{fill:#E8EEF2} #lbl .art .shl{stroke:#506477;stroke-dasharray:3 3}
+#lbl .art .shg{stroke:#3D4E5E} #lbl .art .she{fill:#1E2733} #lbl .art .sht{fill:#FFFFFF;stroke:#8B9AA8;stroke-width:.6} #lbl .art .shdot{fill:none;stroke:#3D4E5E;stroke-width:2;stroke-linecap:round}
+#lbl .art .fg{fill:#7DBA5C;stroke:#3F6E2C;stroke-width:1.5} #lbl .art .fg-d{fill:#6AA74B} #lbl .art .fgb{fill:#E6EDB4} #lbl .art .fgs{fill:#4E8A36;opacity:.7}
+#lbl .art .fge{fill:#E8B23A;stroke:#7A5A16;stroke-width:1} #lbl .art .fgp{fill:#2B2340} #lbl .art .fgt{fill:#9CC77F;stroke:#3F6E2C;stroke-width:2} #lbl .art .fgm{stroke:#3F6E2C}
+#lbl .art .ss{fill:#F08C4A;stroke:#B0541E;stroke-width:1.5} #lbl .art .ss-d{fill:#E9793A} #lbl .art .ssp{fill:none;stroke:#FFE0B8;stroke-width:4;stroke-linecap:round}
+#lbl .art .sse{fill:#C2272D;stroke:#7A1418;stroke-width:.8} #lbl .art .ssm{fill:#F6D36B;stroke:#B0541E;stroke-width:1.2} #lbl .art .ssml{stroke:#B0541E}
+#lbl .art .bw{fill:#E4F1FA;fill-opacity:.85;stroke:#8DA6BA;stroke-width:1.2} #lbl .art .bll{stroke:#3A2C22} #lbl .art .bpb{fill:#F2A81D;stroke:#9A6408;stroke-width:1}
+#lbl .art .bb{fill:#E9B33B;stroke:#7A5A16;stroke-width:1.5} #lbl .art .bst{fill:#3A2C22} #lbl .art .bsg{fill:#3A2C22}
+#lbl .art .bt{fill:#C8913A;stroke:#6E4E1C;stroke-width:1.5} #lbl .art .bfz{fill:none;stroke:#8C6020;stroke-width:1.6;stroke-linecap:round}
+#lbl .art .be{fill:#3A2C22} #lbl .art .bo{fill:#1E1712;stroke:#FFE8A8;stroke-width:.8} #lbl .art .btg{stroke:#7A4A22}
+#lbl .art .hw{fill:#8A7462;stroke:#4E3F33;stroke-width:1.4} #lbl .art .hwl{fill:#E8DCC2;stroke:#B8A68A;stroke-width:1} #lbl .art .hs{fill:#D8C6A6;stroke:#A8946F;stroke-width:1}
+#lbl .art .hb{fill:#9C8470;stroke:#4E3F33;stroke-width:1} #lbl .art .hf{fill:#B9A07E;stroke:#6E5A42;stroke-width:1.4} #lbl .art .hfl{stroke:#6E5A42} #lbl .art .hh{fill:#A88E72;stroke:#4E3F33;stroke-width:1.2}
 #lbl .art .ov{fill:none;stroke:none}
 
 /* the highlight */
