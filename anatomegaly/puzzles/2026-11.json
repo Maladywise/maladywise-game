@@ -883,36 +883,36 @@
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies stapedius?",
-    "answer": "Facial nerve (VII)",
+    "q": "Jacobson’s nerve, crossing the promontory of the middle ear, is a branch of which nerve?",
+    "answer": "Glossopharyngeal nerve (IX)",
     "wrong": [
-     "Mandibular nerve (V3)",
+     "Facial nerve (VII)",
+     "Vagus nerve (X)",
+     "Greater petrosal nerve"
+    ],
+    "why": "The tympanic branch of IX. It forms the tympanic plexus and carries the parotid’s secretomotor fibres onwards as the lesser petrosal nerve."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Taste from the epiglottis travels in which nerve?",
+    "answer": "Internal laryngeal nerve (vagus)",
+    "wrong": [
      "Glossopharyngeal nerve (IX)",
-     "Vestibulocochlear nerve (VIII)"
+     "Chorda tympani",
+     "Lingual nerve"
     ],
-    "why": "Stapedius damps loud sounds. Lose it in Bell’s palsy and everyday noises can sound painfully loud. Its neighbour, tensor tympani, is V3."
+    "why": "Back third of the tongue is IX, front two-thirds is the chorda tympani, and the epiglottis region is the vagus."
    },
    {
     "kind": "Which nerve?",
-    "q": "Cricothyroid tenses the vocal cords for high notes. Which nerve supplies it?",
-    "answer": "External laryngeal nerve",
+    "q": "Which nerve supplies inferior gemellus?",
+    "answer": "Nerve to quadratus femoris",
     "wrong": [
-     "Recurrent laryngeal nerve",
-     "Internal laryngeal nerve",
-     "Hypoglossal nerve"
+     "Nerve to obturator internus",
+     "Superior gluteal nerve",
+     "Inferior gluteal nerve"
     ],
-    "why": "The only intrinsic laryngeal muscle the recurrent laryngeal skips. It runs close to the superior thyroid artery, so thyroid surgery can quietly steal a singer’s top notes."
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Palatoglossus is the one tongue muscle the hypoglossal doesn’t supply. What does?",
-    "answer": "Vagus nerve (via the pharyngeal plexus)",
-    "wrong": [
-     "Glossopharyngeal nerve",
-     "Facial nerve",
-     "Mandibular nerve (V3)"
-    ],
-    "why": "It’s really a palate muscle moonlighting in the tongue, so it follows the palate’s nerve supply: the vagus."
+    "why": "Gemelli split their loyalties: the superior goes with obturator internus, the inferior with quadratus femoris."
    },
    {
     "kind": "Bone trivia",
@@ -1076,6 +1076,1138 @@
      "Anterior interosseous nerve"
     ],
     "why": "‘LOAF’: lateral two lumbricals, opponens, abductor and flexor pollicis brevis are median. Almost every other small hand muscle is ulnar."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "number": 15,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted lobe.",
+    "answer": "Parietal lobe",
+    "wrong": [
+     "Frontal lobe",
+     "Temporal lobe",
+     "Occipital lobe"
+    ],
+    "why": "The parietal lobe handles touch, body position and spatial awareness.",
+    "art": "brain",
+    "hl": [
+     "parietal"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which bone forms your heel?",
+    "answer": "Calcaneus",
+    "wrong": [
+     "Talus",
+     "Navicular",
+     "Cuboid"
+    ],
+    "why": "The largest bone of the foot. The Achilles tendon attaches to it."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve can cause pain shooting down the back of the leg?",
+    "answer": "Sciatic nerve",
+    "wrong": [
+     "Femoral nerve",
+     "Obturator nerve",
+     "Saphenous nerve"
+    ],
+    "why": "The body’s thickest nerve, about as wide as your thumb near its origin."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted chamber.",
+    "answer": "Left atrium",
+    "wrong": [
+     "Right atrium",
+     "Left ventricle",
+     "Right ventricle"
+    ],
+    "why": "It receives oxygenated blood from the lungs. When it quivers in atrial fibrillation, clots can form in it.",
+    "art": "heart",
+    "hl": [
+     "la"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bones.",
+    "answer": "Ribs",
+    "wrong": [
+     "Clavicle",
+     "Sternum",
+     "Scapula"
+    ],
+    "why": "Most people have 12 pairs. Pairs 11 and 12 ‘float’, with no attachment at the front.",
+    "art": "skeleton",
+    "hl": [
+     "ribs"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "number": 16,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone at the knee.",
+    "answer": "Femur",
+    "wrong": [
+     "Tibia",
+     "Patella",
+     "Fibula"
+    ],
+    "why": "The femur’s two rounded condyles rest on the flatter top of the tibia.",
+    "art": "knee",
+    "hl": [
+     "femur"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted part of the skeleton.",
+    "answer": "Skull (cranium)",
+    "wrong": [
+     "Mandible",
+     "Atlas",
+     "Hyoid"
+    ],
+    "why": "The adult cranium is several plates joined at sutures, still partly open as fontanelles in babies.",
+    "art": "skeleton",
+    "hl": [
+     "cranium"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "How many bones does a typical adult skeleton have?",
+    "answer": "206",
+    "wrong": [
+     "106",
+     "256",
+     "306"
+    ],
+    "why": "Babies start with more, around 270 to 300, which fuse as they grow."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted part.",
+    "answer": "Auricle (pinna)",
+    "wrong": [
+     "Ear canal",
+     "Eardrum",
+     "Mastoid"
+    ],
+    "why": "The auricle funnels sound in. Its folds help you tell whether a sound is in front or behind.",
+    "art": "ear",
+    "hl": [
+     "auricle"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted region.",
+    "answer": "Cervical spine",
+    "wrong": [
+     "Thoracic spine",
+     "Lumbar spine",
+     "Sacrum"
+    ],
+    "why": "Seven neck vertebrae, the same number as a giraffe.",
+    "art": "spine",
+    "hl": [
+     "cervical"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "number": 17,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted vessel.",
+    "answer": "Superior vena cava",
+    "wrong": [
+     "Aorta",
+     "Inferior vena cava",
+     "Pulmonary trunk"
+    ],
+    "why": "It drains the head, neck and arms into the right atrium.",
+    "art": "heart",
+    "hl": [
+     "svc"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which cranial nerve supplies the muscles of chewing?",
+    "answer": "Trigeminal nerve (V)",
+    "wrong": [
+     "Facial nerve (VII)",
+     "Glossopharyngeal nerve (IX)",
+     "Hypoglossal nerve (XII)"
+    ],
+    "why": "Via its mandibular branch, V3: masseter, temporalis and both pterygoids."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted part of the bowel.",
+    "answer": "Transverse colon",
+    "wrong": [
+     "Ascending colon",
+     "Descending colon",
+     "Small intestine"
+    ],
+    "why": "It hangs across the abdomen from the hepatic flexure to the splenic flexure.",
+    "art": "gut",
+    "hl": [
+     "transverse"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted airway.",
+    "answer": "Trachea",
+    "wrong": [
+     "Oesophagus",
+     "Larynx",
+     "Bronchus"
+    ],
+    "why": "C-shaped cartilage rings keep it open. The open part of the ‘C’ faces the oesophagus behind it.",
+    "art": "lungs",
+    "hl": [
+     "trachea"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted wrist bone.",
+    "answer": "Capitate",
+    "wrong": [
+     "Hamate",
+     "Lunate",
+     "Trapezoid"
+    ],
+    "why": "The biggest carpal bone, sitting in the middle. It’s also the first to show up on X-ray in infancy.",
+    "art": "hand",
+    "hl": [
+     "capitate"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "number": 18,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted valve.",
+    "answer": "Tricuspid valve",
+    "wrong": [
+     "Mitral valve",
+     "Pulmonary valve",
+     "Aortic valve"
+    ],
+    "why": "Between the right atrium and right ventricle. Three cusps, as the name says.",
+    "art": "heart",
+    "hl": [
+     "tricuspid"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the thigh’s adductor muscles?",
+    "answer": "Obturator nerve",
+    "wrong": [
+     "Femoral nerve",
+     "Sciatic nerve",
+     "Genitofemoral nerve"
+    ],
+    "why": "It leaves the pelvis through the obturator foramen, the largest hole in the skeleton."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted lobe.",
+    "answer": "Right middle lobe",
+    "wrong": [
+     "Right upper lobe",
+     "Lingula",
+     "Right lower lobe"
+    ],
+    "why": "Only the right lung has a middle lobe. The left lung’s lingula is its rough equivalent.",
+    "art": "lungs",
+    "hl": [
+     "rml"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted passage.",
+    "answer": "Ear canal",
+    "wrong": [
+     "Eustachian tube",
+     "Cochlea",
+     "Eardrum"
+    ],
+    "why": "About 2.5 cm long. Wax and skin migrate outwards along it, so it cleans itself.",
+    "art": "ear",
+    "hl": [
+     "canal"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted bone.",
+    "answer": "Sacrum",
+    "wrong": [
+     "Coccyx",
+     "Pelvis",
+     "Lumbar spine"
+    ],
+    "why": "Five vertebrae fused into one wedge, locking the spine into the pelvis.",
+    "art": "spine",
+    "hl": [
+     "sacrum"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "number": 19,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted area of the left hemisphere.",
+    "answer": "Wernicke’s area",
+    "wrong": [
+     "Broca’s area",
+     "Angular gyrus",
+     "Primary auditory cortex"
+    ],
+    "why": "Damage here gives fluent but meaningless speech, with poor understanding.",
+    "art": "brain",
+    "hl": [
+     "wernicke"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the skin over the outer edge of the foot?",
+    "answer": "Sural nerve",
+    "wrong": [
+     "Superficial fibular nerve",
+     "Tibial nerve",
+     "Saphenous nerve"
+    ],
+    "why": "Surgeons often harvest it for nerve grafts. The trade-off is a small numb patch."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Brachioradialis flexes the elbow. Which nerve supplies it?",
+    "answer": "Radial nerve",
+    "wrong": [
+     "Musculocutaneous nerve",
+     "Median nerve",
+     "Ulnar nerve"
+    ],
+    "why": "A classic trap: a flexor supplied by the extensor nerve."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted loops.",
+    "answer": "Semicircular canals",
+    "wrong": [
+     "Cochlea",
+     "Vestibule",
+     "Mastoid air cells"
+    ],
+    "why": "Three canals at right angles sense head rotation. Loose crystals in one cause BPPV.",
+    "art": "ear",
+    "hl": [
+     "scc"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted vertebra.",
+    "answer": "L5",
+    "wrong": [
+     "L4",
+     "S1",
+     "T12"
+    ],
+    "why": "The L5/S1 disc is one of the two commonest to herniate, with L4/5.",
+    "art": "spine",
+    "hl": [
+     "l5"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 20,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted nerve leaving the inner ear.",
+    "answer": "Vestibulocochlear nerve (VIII)",
+    "wrong": [
+     "Facial nerve (VII)",
+     "Glossopharyngeal nerve (IX)",
+     "Trigeminal nerve (V)"
+    ],
+    "why": "Hearing and balance. A benign tumour on it (vestibular schwannoma) causes one-sided hearing loss.",
+    "art": "ear",
+    "hl": [
+     "cn8"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted lobe.",
+    "answer": "Left upper lobe",
+    "wrong": [
+     "Left lower lobe",
+     "Right upper lobe",
+     "Right middle lobe"
+    ],
+    "why": "It includes the lingula, the tongue-shaped piece that hugs the heart.",
+    "art": "lungs",
+    "hl": [
+     "lul"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "The hook of which carpal bone can fracture in golfers and batters?",
+    "answer": "Hamate",
+    "wrong": [
+     "Pisiform",
+     "Scaphoid",
+     "Trapezium"
+    ],
+    "why": "The club or bat handle presses into the palm right over it."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the skin over the medial malleolus?",
+    "answer": "Saphenous nerve",
+    "wrong": [
+     "Sural nerve",
+     "Tibial nerve",
+     "Superficial fibular nerve"
+    ],
+    "why": "The longest branch of the femoral nerve, travelling with the great saphenous vein."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted region.",
+    "answer": "Thoracic spine",
+    "wrong": [
+     "Cervical spine",
+     "Lumbar spine",
+     "Sacrum"
+    ],
+    "why": "Twelve vertebrae, one for each pair of ribs.",
+    "art": "spine",
+    "hl": [
+     "thoracic"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 21,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted part of the bowel.",
+    "answer": "Rectum",
+    "wrong": [
+     "Sigmoid colon",
+     "Descending colon",
+     "Caecum"
+    ],
+    "why": "About 12 cm long, it stores faeces until it’s convenient to empty it.",
+    "art": "gut",
+    "hl": [
+     "rectum"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which cranial nerve has the longest course inside the skull?",
+    "answer": "Trochlear nerve (IV)",
+    "wrong": [
+     "Abducens nerve (VI)",
+     "Oculomotor nerve (III)",
+     "Vagus nerve (X)"
+    ],
+    "why": "It’s also the thinnest, and the only cranial nerve to leave the back of the brainstem."
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Distal phalanx of the thumb",
+    "wrong": [
+     "Middle phalanx of the thumb",
+     "Proximal phalanx of the thumb",
+     "First metacarpal"
+    ],
+    "why": "The thumb has no middle phalanx. That option was a trap.",
+    "art": "hand",
+    "hl": [
+     "dp1"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve carries the secretomotor supply to the lacrimal gland?",
+    "answer": "Facial nerve (VII)",
+    "wrong": [
+     "Lacrimal nerve (V1)",
+     "Glossopharyngeal nerve (IX)",
+     "Oculomotor nerve (III)"
+    ],
+    "why": "Via the greater petrosal nerve and pterygopalatine ganglion. The lacrimal nerve just hitches the fibres the last part of the way."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted lobe.",
+    "answer": "Right lower lobe",
+    "wrong": [
+     "Right middle lobe",
+     "Left lower lobe",
+     "Right upper lobe"
+    ],
+    "why": "When you’re upright, inhaled food and fluid most often end up here.",
+    "art": "lungs",
+    "hl": [
+     "rll"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 22,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted chamber.",
+    "answer": "Right ventricle",
+    "wrong": [
+     "Left ventricle",
+     "Right atrium",
+     "Left atrium"
+    ],
+    "why": "It pumps blood to the lungs. Low pressure, so a much thinner wall than the left ventricle.",
+    "art": "heart",
+    "hl": [
+     "rv"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which is the smallest bone in the body?",
+    "answer": "Stapes",
+    "wrong": [
+     "Incus",
+     "Malleus",
+     "Pisiform"
+    ],
+    "why": "About 3 mm long, in the middle ear. Shaped like a stirrup, which is what its name means."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted organ.",
+    "answer": "Spleen",
+    "wrong": [
+     "Pancreas",
+     "Liver",
+     "Left kidney"
+    ],
+    "why": "The spleen filters old red cells and fights infection. You can live without it, with vaccines and care.",
+    "art": "gut",
+    "hl": [
+     "spleen"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted forearm bone.",
+    "answer": "Ulna",
+    "wrong": [
+     "Radius",
+     "Humerus",
+     "Fibula"
+    ],
+    "why": "The ulna sits on the little-finger side. Its tip is the point of your elbow (the olecranon).",
+    "art": "skeleton",
+    "hl": [
+     "ulna"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted structure.",
+    "answer": "Brainstem",
+    "wrong": [
+     "Cerebellum",
+     "Spinal cord",
+     "Temporal lobe"
+    ],
+    "why": "The brainstem runs breathing, heart rate and consciousness, and is the origin of most cranial nerves.",
+    "art": "brain",
+    "hl": [
+     "brainstem"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 23,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Mandible",
+    "wrong": [
+     "Maxilla",
+     "Zygoma",
+     "Hyoid"
+    ],
+    "why": "The mandible is the only skull bone that moves. It’s also the strongest bone of the face.",
+    "art": "skeleton",
+    "hl": [
+     "mandible"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted structure.",
+    "answer": "Iris",
+    "wrong": [
+     "Cornea",
+     "Lens",
+     "Retina"
+    ],
+    "why": "The iris is a ring of muscle that sets pupil size, and it gives eyes their colour.",
+    "art": "eye",
+    "hl": [
+     "iris"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which cranial nerve is affected in Bell’s palsy?",
+    "answer": "Facial nerve (VII)",
+    "wrong": [
+     "Trigeminal nerve (V)",
+     "Vagus nerve (X)",
+     "Hypoglossal nerve (XII)"
+    ],
+    "why": "Weakness of one whole side of the face, forehead included."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted tube.",
+    "answer": "Oesophagus",
+    "wrong": [
+     "Trachea",
+     "Aorta",
+     "Duodenum"
+    ],
+    "why": "About 25 cm long. Food is pushed down it by waves of muscle, so you can swallow upside down.",
+    "art": "gut",
+    "hl": [
+     "oesophagus"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve is squashed in carpal tunnel syndrome?",
+    "answer": "Median nerve",
+    "wrong": [
+     "Ulnar nerve",
+     "Radial nerve",
+     "Musculocutaneous nerve"
+    ],
+    "why": "Tingling in the thumb, index and middle fingers, often worse at night."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 24,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve gives feeling to the highlighted palm-side area?",
+    "answer": "Ulnar nerve",
+    "wrong": [
+     "Median nerve",
+     "Radial nerve",
+     "Medial cutaneous nerve of the forearm"
+    ],
+    "why": "The little finger and the ulnar half of the ring finger. Pins and needles here after leaning on your elbow? Ulnar.",
+    "art": "palm",
+    "hl": [
+     "little",
+     "ring-u",
+     "palm-u"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which cranial nerve carries vision?",
+    "answer": "Optic nerve (II)",
+    "wrong": [
+     "Oculomotor nerve (III)",
+     "Olfactory nerve (I)",
+     "Trigeminal nerve (V)"
+    ],
+    "why": "Strictly, the optic nerve is part of the brain itself, wrapped in the same layers (meninges)."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted C-shaped tube.",
+    "answer": "Duodenum",
+    "wrong": [
+     "Jejunum",
+     "Pancreas",
+     "Gallbladder"
+    ],
+    "why": "About 25 cm long, curling around the head of the pancreas. Bile and pancreatic juice enter here.",
+    "art": "gut",
+    "hl": [
+     "duodenum"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which bone doesn’t form a joint with any other bone?",
+    "answer": "Hyoid",
+    "wrong": [
+     "Patella",
+     "Pisiform",
+     "Coccyx"
+    ],
+    "why": "It floats in the neck, held up by muscles and ligaments, anchoring the tongue."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted ligament.",
+    "answer": "Lateral collateral ligament",
+    "wrong": [
+     "Medial collateral ligament",
+     "Iliotibial band",
+     "Posterior cruciate ligament"
+    ],
+    "why": "A cord-like band from femur to fibular head, separate from the joint capsule.",
+    "art": "knee",
+    "hl": [
+     "lcl"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 25,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted bone.",
+    "answer": "Coccyx",
+    "wrong": [
+     "Sacrum",
+     "Fifth lumbar vertebra",
+     "Ischium"
+    ],
+    "why": "Three to five tiny fused vertebrae: your vestigial tail.",
+    "art": "spine",
+    "hl": [
+     "coccyx"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Fifth metacarpal",
+    "wrong": [
+     "Fourth metacarpal",
+     "Proximal phalanx of the little finger",
+     "Hamate"
+    ],
+    "why": "Punch a wall and this is the one that breaks: a ‘boxer’s fracture’ of its neck.",
+    "art": "hand",
+    "hl": [
+     "mc5"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which is the longest bone in the body?",
+    "answer": "Femur",
+    "wrong": [
+     "Tibia",
+     "Humerus",
+     "Fibula"
+    ],
+    "why": "Roughly a quarter of your height."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted ossicle.",
+    "answer": "Stapes",
+    "wrong": [
+     "Incus",
+     "Malleus",
+     "Round window"
+    ],
+    "why": "Its footplate sits in the oval window. In otosclerosis it gets stuck.",
+    "art": "ear",
+    "hl": [
+     "stapes"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Wrist drop after a fracture of the humerus shaft. Which nerve?",
+    "answer": "Radial nerve",
+    "wrong": [
+     "Ulnar nerve",
+     "Median nerve",
+     "Axillary nerve"
+    ],
+    "why": "The radial nerve hugs the humerus in the spiral groove. It extends the wrist and fingers."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 26,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted part of the bowel.",
+    "answer": "Descending colon",
+    "wrong": [
+     "Ascending colon",
+     "Sigmoid colon",
+     "Transverse colon"
+    ],
+    "why": "It runs down the left side, fixed to the back wall of the abdomen.",
+    "art": "gut",
+    "hl": [
+     "descending"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the calf muscles (gastrocnemius and soleus)?",
+    "answer": "Tibial nerve",
+    "wrong": [
+     "Common fibular nerve",
+     "Femoral nerve",
+     "Sural nerve"
+    ],
+    "why": "Test it with the ankle jerk (S1)."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies gluteus maximus?",
+    "answer": "Inferior gluteal nerve",
+    "wrong": [
+     "Superior gluteal nerve",
+     "Sciatic nerve",
+     "Nerve to obturator internus"
+    ],
+    "why": "It powers standing from a chair and climbing stairs."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted wall.",
+    "answer": "Interatrial septum",
+    "wrong": [
+     "Interventricular septum",
+     "Crista terminalis",
+     "Moderator band"
+    ],
+    "why": "It contains the fossa ovalis, the remnant of the fetal foramen ovale. About a quarter of adults still have a small flap-like gap.",
+    "art": "heart",
+    "hl": [
+     "ias"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted vertebra.",
+    "answer": "C7 (vertebra prominens)",
+    "wrong": [
+     "T1",
+     "C6",
+     "C5"
+    ],
+    "why": "Its long spinous process is usually the first bump you feel at the base of the neck.",
+    "art": "spine",
+    "hl": [
+     "c7"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 27,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted ligament.",
+    "answer": "Medial collateral ligament",
+    "wrong": [
+     "Lateral collateral ligament",
+     "Patellar tendon",
+     "Anterior cruciate ligament"
+    ],
+    "why": "A broad band attached to the medial meniscus. A blow to the outside of the knee stretches it.",
+    "art": "knee",
+    "hl": [
+     "mcl"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Burning numbness on the outer thigh (meralgia paraesthetica). Which nerve?",
+    "answer": "Lateral cutaneous nerve of the thigh",
+    "wrong": [
+     "Femoral nerve",
+     "Obturator nerve",
+     "Genitofemoral nerve"
+    ],
+    "why": "Often squeezed under the inguinal ligament by tight belts or weight gain."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted chamber of the inner ear.",
+    "answer": "Vestibule",
+    "wrong": [
+     "Cochlea",
+     "Semicircular canals",
+     "Mastoid antrum"
+    ],
+    "why": "It holds the utricle and saccule, which sense gravity and straight-line movement.",
+    "art": "ear",
+    "hl": [
+     "vestibule"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies latissimus dorsi?",
+    "answer": "Thoracodorsal nerve",
+    "wrong": [
+     "Long thoracic nerve",
+     "Dorsal scapular nerve",
+     "Suprascapular nerve"
+    ],
+    "why": "Surgeons can borrow latissimus as a flap for breast reconstruction, keeping this nerve and its artery."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted structure.",
+    "answer": "Vitreous humour",
+    "wrong": [
+     "Aqueous humour",
+     "Lens",
+     "Choroid"
+    ],
+    "why": "A clear gel filling the back of the eye. With age it shrinks and pulls away, giving floaters.",
+    "art": "eye",
+    "hl": [
+     "vitreous"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 28,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted airway.",
+    "answer": "Left main bronchus",
+    "wrong": [
+     "Right main bronchus",
+     "Left pulmonary artery",
+     "Oesophagus"
+    ],
+    "why": "Longer and more horizontal than the right, because it has to pass under the aortic arch.",
+    "art": "lungs",
+    "hl": [
+     "lmb"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the posterior belly of digastric?",
+    "answer": "Facial nerve (VII)",
+    "wrong": [
+     "Nerve to mylohyoid (V3)",
+     "Hypoglossal nerve (XII)",
+     "Glossopharyngeal nerve (IX)"
+    ],
+    "why": "Two bellies, two nerves: the anterior belly gets V3 via the nerve to mylohyoid."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which carpal bone is the first to appear on X-ray in infancy?",
+    "answer": "Capitate",
+    "wrong": [
+     "Hamate",
+     "Scaphoid",
+     "Lunate"
+    ],
+    "why": "Capitate first, closely followed by the hamate. The pisiform comes last."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted valve.",
+    "answer": "Aortic valve",
+    "wrong": [
+     "Pulmonary valve",
+     "Mitral valve",
+     "Tricuspid valve"
+    ],
+    "why": "Usually three cusps. About 1 to 2% of people have two (bicuspid), which can wear out early.",
+    "art": "heart",
+    "hl": [
+     "aorticvalve"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Fourth metacarpal",
+    "wrong": [
+     "Third metacarpal",
+     "Fifth metacarpal",
+     "Hamate"
+    ],
+    "why": "A short fourth metacarpal (a knuckle ‘dip’) can be a clue to conditions such as Turner syndrome.",
+    "art": "hand",
+    "hl": [
+     "mc4"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 29,
+  "difficulty": "Easy",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted lobe.",
+    "answer": "Frontal lobe",
+    "wrong": [
+     "Parietal lobe",
+     "Temporal lobe",
+     "Occipital lobe"
+    ],
+    "why": "Planning, personality and impulse control. In 1848 an iron rod shot through Phineas Gage’s frontal lobe; he survived, but friends said he was ‘no longer Gage’.",
+    "art": "brain",
+    "hl": [
+     "frontal"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bony ring.",
+    "answer": "Pelvis",
+    "wrong": [
+     "Sacrum",
+     "Coccyx",
+     "Lumbar spine"
+    ],
+    "why": "The pelvis carries your upper body’s weight onto the legs, and is wider and rounder in most women to allow for childbirth.",
+    "art": "skeleton",
+    "hl": [
+     "pelvis"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted coils.",
+    "answer": "Small intestine",
+    "wrong": [
+     "Large intestine",
+     "Appendix",
+     "Stomach"
+    ],
+    "why": "Several metres long, folded into a small space. Most nutrient absorption happens here.",
+    "art": "gut",
+    "hl": [
+     "smallbowel"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted chamber.",
+    "answer": "Left ventricle",
+    "wrong": [
+     "Right ventricle",
+     "Left atrium",
+     "Right atrium"
+    ],
+    "why": "The muscly one that pumps blood to the whole body. Diagrams face you, so the patient’s left is on your right. Everyone falls for that once.",
+    "art": "heart",
+    "hl": [
+     "lv"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the diaphragm, your main breathing muscle?",
+    "answer": "Phrenic nerve",
+    "wrong": [
+     "Vagus nerve",
+     "Intercostal nerves",
+     "Accessory nerve"
+    ],
+    "why": "‘C3, 4, 5 keeps the diaphragm alive.’ It starts in the neck because the diaphragm began life up there in the embryo, then migrated down, dragging its nerve along."
    }
   ]
  }

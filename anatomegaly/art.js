@@ -1,4 +1,5 @@
-/* Anatomegaly diagrams: original, schematic SVG drawings (no external images, no faces).
+/* Anatomegaly diagrams: original, schematic SVG drawings (no external images, no human faces).
+   Normie mode uses the animal diagrams further down (octopus, owl, giraffe, cat, elephant, shark, frog, sea star, bee, hoof).
    Each part carries data-p="id [id2]". The game adds class "hl" to the parts named in a round's "hl" list.
    Parts with class "ov" are invisible overlays that only show when highlighted.
    Front-on body views follow anatomical convention: the patient's right is on the viewer's left. */
@@ -235,8 +236,236 @@
     return svg("0 0 200 " + Math.ceil(y + 74), o, "Side view of the spine");
   }
 
-  var ART = { skeleton: skeleton, hand: handBones, palm: function () { return handSkin(false); }, handback: function () { return handSkin(true); }, heart: heart, brain: brain, eye: eye, ear: ear, gut: gut, lungs: lungs, knee: knee, spine: spine };
-  var CAP = { skeleton: "Front view", hand: "Right hand, palm side", palm: "Right hand, palm side", handback: "Right hand, back", heart: "Heart, front view (schematic)", brain: "Brain, left side", eye: "Eye, sliced across", ear: "Right ear, sliced front-on", gut: "Abdomen, front view", lungs: "Lungs, front view", knee: "Right knee, front (kneecap off)", spine: "Spine, side view (front to the left)" };
+  // ================= Normie mode: animal diagrams (original schematic drawings) =================
+  function bz(c, t) { var u = 1 - t; return [u * u * u * c[0] + 3 * u * u * t * c[2] + 3 * u * t * t * c[4] + t * t * t * c[6], u * u * u * c[1] + 3 * u * u * t * c[3] + 3 * u * t * t * c[5] + t * t * t * c[7]]; }
+  // a tapered tube along a cubic Bezier; returns {d, pts}
+  function tube(c, w0, w1) {
+    var L = [], R = [], pts = [], n = 28;
+    for (var i = 0; i <= n; i++) {
+      var t = i / n, a = bz(c, Math.max(0, t - 0.01)), b = bz(c, Math.min(1, t + 0.01)), m = bz(c, t), dx = b[0] - a[0], dy = b[1] - a[1], l = Math.sqrt(dx * dx + dy * dy) || 1, w = (w0 + (w1 - w0) * t) / 2;
+      L.push((m[0] - dy / l * w).toFixed(1) + " " + (m[1] + dx / l * w).toFixed(1)); R.unshift((m[0] + dy / l * w).toFixed(1) + " " + (m[1] - dx / l * w).toFixed(1)); pts.push([m[0], m[1], -dy / l, dx / l, w]);
+    }
+    return { d: "M" + L.join(" L") + " L" + R.join(" L") + " Z", pts: pts };
+  }
+
+  // ---------- octopus (front view; organs shown as overlays when highlighted) ----------
+  function octopus() {
+    var o = "", ends = [[22, 196, -30, 150], [44, 238, 10, 212], [88, 256, 70, 236], [130, 262, 118, 246], [170, 262, 182, 246], [212, 256, 230, 236], [256, 238, 290, 212], [278, 196, 330, 150]], arms = "", web = [], sk = "";
+    ends.forEach(function (e2, k) {
+      var sx = 116 + k * 9.7, c = [sx, 140, sx + (e2[0] - sx) * 0.15, 176, e2[2], e2[3], e2[0], e2[1]], tb = tube(c, 15, 3);
+      web.push(bz(c, 0.3)); arms += '<path data-p="arms arm' + (k + 1) + '" class="oc" d="' + tb.d + '"/>';
+      if (k === 5) tb.pts.forEach(function (q, i) { if (i > 2 && i < 25 && i % 2) sk += '<circle cx="' + (q[0] - q[2] * q[4] * 0.45).toFixed(1) + '" cy="' + (q[1] - q[3] * q[4] * 0.45).toFixed(1) + '" r="' + Math.max(1.1, q[4] * 0.5).toFixed(1) + '"/>'; });
+    });
+    o += '<path data-p="web" class="oc oc3" d="M116 142 L' + web.map(function (q) { return q[0].toFixed(1) + " " + q[1].toFixed(1); }).join(" L") + ' L184 142 Z"/>';
+    o += arms + '<g data-p="suckers" class="grp ocs">' + sk + "</g>";
+    o += p("mantle", "M150 8 C96 8 86 66 98 98 C106 116 122 122 150 122 C178 122 194 116 202 98 C214 66 204 8 150 8 Z", "oc");
+    o += '<path class="ocspot" d="M128 40 a4 3 0 1 0 .1 0 M166 30 a3 2 0 1 0 .1 0 M176 70 a4 3 0 1 0 .1 0 M120 76 a3 2 0 1 0 .1 0 M150 56 a3 2 0 1 0 .1 0"/>';
+    o += e("headband", 150, 130, 50, 20, "oc oc2");
+    o += p("siphon", "M188 128 C202 124 214 128 220 138 L210 146 C204 138 198 136 190 140 Z", "oc oc2");
+    o += '<g data-p="eye" class="grp"><ellipse class="oce" cx="122" cy="124" rx="12" ry="10"/><ellipse class="oce" cx="178" cy="124" rx="12" ry="10"/><rect class="ocp" x="114" y="122" width="16" height="4.5" rx="2"/><rect class="ocp" x="170" y="122" width="16" height="4.5" rx="2"/></g>';
+    o += '<g data-p="hearts" class="grp"><path class="ov" d="M150 92 c-5-8-15-3-10 5 l10 9 l10-9 c5-8-5-13-10-5 z"/><path class="ov" d="M124 80 c-3.5-6-11-2-7 3.5 l7 6.5 l7-6.5 c4-5.5-3.5-9.5-7-3.5 z"/><path class="ov" d="M176 80 c-3.5-6-11-2-7 3.5 l7 6.5 l7-6.5 c4-5.5-3.5-9.5-7-3.5 z"/></g>';
+    o += p("gills", "M112 58 C104 72 108 92 120 100 C122 84 120 68 112 58 Z M188 58 C196 72 192 92 180 100 C178 84 180 68 188 58 Z", "ov");
+    o += e("inksac", 150, 66, 9, 12, "ov");
+    o += p("brain", "M134 128 a16 9 0 1 0 32 0 a16 9 0 1 0 -32 0 Z M144 128 a6 3.5 0 1 1 12 0 a6 3.5 0 1 1 -12 0 Z", "ov", ' fill-rule="evenodd"');
+    o += p("beak", "M142 150 L158 150 L150 166 Z", "ov");
+    return svg("0 0 300 268", o, "Front view of an octopus");
+  }
+
+  // ---------- owl (front view) ----------
+  function owl() {
+    var o = "";
+    o += '<path class="ow" d="M100 236 L140 236 L134 262 L106 262 Z"/>';
+    o += p("wing", "M54 118 C28 164 34 226 80 252 C72 210 70 160 76 118 Z M186 118 C212 164 206 226 160 252 C168 210 170 160 164 118 Z", "ow ow-d");
+    o += '<ellipse class="ow" cx="120" cy="172" rx="62" ry="80"/><ellipse class="ow2" cx="120" cy="190" rx="44" ry="60"/>';
+    o += '<path class="owm" d="M100 160 l6 5 l6-5 M128 160 l6 5 l6-5 M92 184 l6 5 l6-5 M116 186 l6 5 l6-5 M138 184 l6 5 l6-5 M102 210 l6 5 l6-5 M128 210 l6 5 l6-5"/>';
+    o += p("neck", "M66 140 Q120 164 174 140 L176 158 Q120 182 64 158 Z", "ov");
+    o += p("tufts", "M64 56 L52 10 L96 40 Z M176 56 L188 10 L144 40 Z", "ow ow-d");
+    o += '<ellipse class="ow" cx="120" cy="92" rx="72" ry="60"/>';
+    o += '<g data-p="disc" class="grp"><circle class="ow3" cx="91" cy="96" r="35"/><circle class="ow3" cx="149" cy="96" r="35"/></g>';
+    o += '<g data-p="eye" class="grp"><circle class="owi" cx="91" cy="94" r="20"/><circle class="owi" cx="149" cy="94" r="20"/><circle class="owp" cx="91" cy="94" r="11"/><circle class="owp" cx="149" cy="94" r="11"/><circle fill="#fff" cx="86" cy="89" r="3.5"/><circle fill="#fff" cx="144" cy="89" r="3.5"/></g>';
+    o += p("beak", "M120 110 L110 122 L120 146 L130 122 Z", "owb");
+    o += '<g data-p="ears" class="grp"><ellipse class="ov" cx="57" cy="86" rx="6" ry="11"/><ellipse class="ov" cx="183" cy="108" rx="6" ry="11"/></g>';
+    var foot = function (x) { return '<path class="owf" d="M' + (x - 14) + ' 246 h28 v8 h-28 z"/><path class="ln owc" stroke-width="3.4" d="M' + (x - 12) + " 254 q-3 8 2 12 M" + (x - 4) + " 254 q-1 9 3 12 M" + (x + 4) + " 254 q1 9 5 11 M" + (x + 12) + ' 254 q4 7 8 8"/>'; };
+    o += '<g data-p="talons" class="grp">' + foot(98) + foot(142) + "</g>";
+    return svg("0 0 240 272", o, "Front view of an owl");
+  }
+
+  // ---------- giraffe (side view, facing left) ----------
+  function giraffe() {
+    var o = "", leg = function (x, y0, cls) { return '<path class="' + (cls || "gf") + '" d="M' + x + " " + y0 + " L" + (x + 14) + " " + y0 + " L" + (x + 12) + " 280 L" + (x + 3) + ' 280 Z"/>'; };
+    o += leg(232, 186, "gf gf-d") + leg(150, 186, "gf gf-d");
+    o += p("tail", "M262 148 C276 170 280 200 280 222", "ln gfl", ' stroke-width="3"') ;
+    o += '<path data-p="tail" class="gfh" d="M276 218 q4 0 8 2 l-1 22 q-4 2-8 0 z"/>';
+    o += leg(244, 182) + leg(162, 186);
+    o += '<g data-p="hoof" class="grp"><rect class="gfh" x="163" y="278" width="14" height="10" rx="2"/></g><rect class="gfh" x="245" y="278" width="13" height="10" rx="2"/><rect class="gfh" x="151" y="278" width="13" height="10" rx="2" opacity=".85"/><rect class="gfh" x="233" y="278" width="13" height="10" rx="2" opacity=".85"/>';
+    o += p("body", "M146 150 C150 128 200 122 262 140 C276 146 276 176 262 188 C230 196 190 196 156 192 C140 186 140 164 146 150 Z", "gf");
+    o += p("neck", "M146 156 C130 120 106 76 84 44 L104 34 C120 66 150 104 176 140 Z", "gf");
+    o += '<path class="gfs" d="M170 146 l12 -4 l6 10 l-8 10 l-12 -2 z M200 140 l14 2 l2 14 l-12 6 l-8 -10 z M230 146 l12 4 l-2 14 l-12 2 l-4 -12 z M186 168 l12 2 l2 12 l-12 4 l-6 -10 z M218 170 l14 0 l2 12 l-14 4 z M248 170 l10 2 l0 12 l-10 2 z M134 120 l10 -2 l6 10 l-8 8 z M118 92 l8 -2 l4 9 l-7 6 z M104 64 l7 0 l3 8 l-6 5 z"/>';
+    o += p("mane", "M104 34 C120 66 150 104 176 140 L171 144 C146 108 116 70 98 37 Z", "gfm");
+    o += '<path class="gf" d="M84 44 L108 34 C110 26 104 18 96 18 L60 24 C44 26 32 34 30 44 C30 52 40 56 52 54 Z"/>';
+    o += '<g data-p="ossicones" class="grp"><path class="gf" d="M86 22 L84 4 L91 4 L93 20 Z M96 20 L97 2 L104 3 L102 20 Z"/><circle class="gfh" cx="87.5" cy="4" r="4.4"/><circle class="gfh" cx="100.5" cy="3" r="4.4"/></g>';
+    o += p("ear", "M106 24 L128 16 L112 32 Z", "gf gf-d");
+    o += '<circle class="gfe" cx="80" cy="32" r="4"/>';
+    o += p("tongue", "M33 48 C20 56 14 70 22 80 C28 86 36 82 34 74 C32 66 38 60 42 54 Z", "gft");
+    o += p("vertebrae", "M146 156 L176 140 L171 133 L141 148 Z M138 142 L168 126 L162 117 L131 131 Z M127 125 L156 109 L149 99 L119 113 Z M115 107 L143 91 L136 80 L107 96 Z M103 89 L130 72 L123 62 L95 77 Z M92 71 L117 55 L111 46 L85 59 Z M88 54 L108 40 L104 34 L84 44 Z", "ov");
+    o += e("wrist", 170, 226, 9, 9, "ov");
+    o += e("heart", 164, 168, 12, 11, "ov");
+    return svg("0 0 300 292", o, "Side view of a giraffe");
+  }
+
+  // ---------- cat face (front view) ----------
+  function catface() {
+    var o = "";
+    o += p("ear", "M46 104 L44 18 L116 64 Z M214 104 L216 18 L144 64 Z", "ct");
+    o += '<path class="cti" d="M58 88 L56 40 L102 68 Z M202 88 L204 40 L158 68 Z"/>';
+    o += '<path class="ct" d="M30 140 C26 90 70 56 130 56 C190 56 234 90 230 140 C228 196 182 226 130 226 C78 226 32 196 30 140 Z"/>';
+    o += '<path class="ctst" d="M112 64 l4 22 M130 60 v26 M148 64 l-4 22"/>';
+    o += '<g data-p="pocket" class="grp"><path class="ln ctpk" stroke-width="2.2" d="M46 98 q-8 4 -4 10 M214 98 q8 4 4 10"/><ellipse class="ov" cx="44" cy="102" rx="7" ry="9"/><ellipse class="ov" cx="216" cy="102" rx="7" ry="9"/></g>';
+    o += '<g data-p="eye" class="grp"><path class="cte" d="M70 118 Q92 98 112 118 Q92 138 70 118 Z M148 118 Q168 98 190 118 Q168 138 148 118 Z"/><ellipse class="ctp" cx="91" cy="118" rx="3.5" ry="13"/><ellipse class="ctp" cx="169" cy="118" rx="3.5" ry="13"/></g>';
+    o += p("brow", "M84 98 L66 72 M92 96 L84 66 M168 96 L176 66 M176 98 L194 72", "ln ctw", ' stroke-width="1.6"');
+    o += '<g data-p="whiskerpad" class="grp"><ellipse class="ctpad" cx="114" cy="170" rx="20" ry="15"/><ellipse class="ctpad" cx="146" cy="170" rx="20" ry="15"/></g>';
+    o += '<path class="ctdot" d="M104 164 h.1 M112 170 h.1 M104 176 h.1 M156 164 h.1 M148 170 h.1 M156 176 h.1"/>';
+    o += p("nose", "M120 148 L140 148 Q141 156 130 162 Q119 156 120 148 Z", "ctn");
+    o += '<path class="ln ctm" stroke-width="2" d="M130 162 v8 M130 170 q-8 10 -16 4 M130 170 q8 10 16 4"/>';
+    o += p("whiskers", "M100 164 L28 150 M100 170 L24 172 M102 176 L32 196 M160 164 L232 150 M160 170 L236 172 M158 176 L228 196", "ln ctw", ' stroke-width="1.8"');
+    o += e("chin", 130, 198, 14, 9, "ov");
+    return svg("0 0 260 236", o, "Front view of a cat’s face");
+  }
+
+  // ---------- cat paw (underside of the right front paw) ----------
+  function catpaw() {
+    var o = "";
+    o += '<path class="ct" d="M70 0 L170 0 L176 120 C200 150 206 196 184 226 C164 252 76 252 56 226 C34 196 40 150 64 120 Z"/>';
+    o += '<path class="ctst" d="M90 20 v40 M120 14 v44 M150 20 v40"/>';
+    o += e("carpal", 120, 92, 12, 9, "ctpaw");
+    o += '<g data-p="dewclaw" class="grp"><ellipse class="ctpaw" cx="56" cy="134" rx="8" ry="10"/><path class="ctcl" d="M50 126 q-8 -6 -4 -14 q4 6 10 8 z"/></g>';
+    o += p("mainpad", "M84 196 C80 172 98 158 120 162 C142 158 160 172 156 196 C152 214 134 212 120 206 C106 212 88 214 84 196 Z", "ctpaw");
+    o += '<g data-p="toebeans" class="grp"><ellipse class="ctpaw" cx="66" cy="168" rx="13" ry="16" transform="rotate(-22 66 168)"/><ellipse class="ctpaw" cx="98" cy="138" rx="13" ry="16" transform="rotate(-8 98 138)"/><ellipse class="ctpaw" cx="142" cy="138" rx="13" ry="16" transform="rotate(8 142 138)"/><ellipse class="ctpaw" cx="174" cy="168" rx="13" ry="16" transform="rotate(22 174 168)"/></g>';
+    o += '<g data-p="claws" class="grp"><path class="ctcl" d="M60 150 q-4 -10 2 -16 q1 8 6 12 z M94 120 q-2 -11 4 -16 q0 8 4 13 z M138 120 q2 -11 8 -14 q-2 8 0 13 z M178 150 q6 -9 0 -16 q-3 8 -6 12 z"/></g>';
+    return svg("0 0 240 252", o, "Underside of a cat’s front paw");
+  }
+
+  // ---------- elephant (side view, facing left) ----------
+  function elephant() {
+    var o = "", leg = function (x, cls) { return '<path class="' + cls + '" d="M' + x + " 168 L" + (x + 34) + " 168 L" + (x + 36) + " 246 L" + (x - 2) + ' 246 Z"/>'; };
+    o += leg(196, "el el-d") + leg(108, "el el-d");
+    o += p("tail", "M290 110 C300 130 302 156 300 180", "ln ell", ' stroke-width="3.5"');
+    o += '<path class="elh" d="M296 178 l8 0 l-2 14 l-6 0 z"/>';
+    o += leg(228, "el") + leg(132, "el");
+    o += '<g data-p="toenails" class="grp"><path class="eln" d="M132 246 q4 -7 8 0 z M142 246 q4 -7 8 0 z M152 246 q4 -7 8 0 z"/></g><path class="eln" d="M228 246 q4 -7 8 0 z M238 246 q4 -7 8 0 z M248 246 q4 -7 8 0 z"/>';
+    o += p("sole", "M130 246 L170 246 L170 252 L130 252 Z", "ov");
+    o += '<path class="el" d="M100 100 C110 56 180 46 250 56 C292 62 300 100 292 136 C284 168 250 182 200 180 L120 178 C100 170 94 130 100 100 Z"/>';
+    o += p("trunk", "M58 92 C40 120 36 160 40 196 C42 214 34 226 22 224 C14 222 14 212 22 210 C28 208 28 200 26 190 C22 158 26 120 40 94 Z", "el");
+    o += '<path class="elr" d="M42 120 h12 M38 140 h12 M36 160 h12 M36 180 h12 M36 198 h10"/>';
+    o += '<path class="el" d="M40 94 C34 56 60 30 96 32 C122 34 136 54 132 84 C128 110 104 124 76 122 C62 120 52 110 40 94 Z"/>';
+    o += p("molar", "M66 112 L92 112 L92 122 L66 122 Z", "ov");
+    o += p("tusk", "M64 112 C54 132 44 144 28 150 C40 152 58 144 74 118 Z", "elt");
+    o += p("ear", "M92 40 C128 24 168 36 172 80 C176 120 156 150 128 154 C112 156 104 140 108 120 C112 100 98 70 92 40 Z", "el el-ear");
+    o += '<circle class="ele" cx="80" cy="74" r="4"/><path class="ln ell" stroke-width="1.5" d="M72 66 q8 -6 16 0"/>';
+    return svg("0 0 316 258", o, "Side view of an elephant");
+  }
+
+  // ---------- shark (side view, facing left) ----------
+  function shark() {
+    var o = "";
+    o += p("dorsal", "M150 52 C160 30 170 10 190 4 C186 24 188 44 196 58 Z", "sh");
+    o += p("dorsal2", "M262 74 L270 58 L278 76 Z", "sh");
+    o += p("tailfin", "M298 86 C312 60 324 30 336 10 C334 44 326 76 314 98 C322 112 328 128 330 146 C316 128 304 112 298 104 Z", "sh");
+    o += p("pectoral", "M118 112 C120 136 112 160 98 178 C120 168 140 144 150 118 Z", "sh sh-d");
+    o += p("pelvic", "M222 106 L232 128 L246 106 Z", "sh sh-d");
+    o += p("analfin", "M266 100 L272 116 L282 98 Z", "sh sh-d");
+    o += '<path class="sh" d="M12 82 C30 58 90 46 160 50 C220 54 270 68 300 86 L300 102 C270 112 220 120 160 122 C100 124 40 112 22 102 C12 96 8 90 12 82 Z"/>';
+    o += '<path class="shb" d="M22 102 C40 112 100 124 160 122 C220 120 270 112 300 102 L300 96 C260 104 210 110 160 110 C100 110 50 104 26 96 Z"/>';
+    o += p("lateral", "M60 76 C120 72 200 76 298 92", "ln shl", ' stroke-width="1.6"');
+    o += '<g data-p="gills" class="grp"><path class="ln shg" stroke-width="2.2" d="M88 74 q-4 12 0 26 M96 74 q-4 12 0 26 M104 73 q-4 12 0 27 M112 72 q-4 13 0 28 M120 72 q-4 13 0 28"/></g>';
+    o += '<circle data-p="eye" class="she" cx="48" cy="76" r="5"/>';
+    o += p("nostril", "M20 90 q5 -3 10 0", "ln shg", ' stroke-width="2.2"');
+    o += '<g data-p="mouth" class="grp"><path class="ln shg" stroke-width="2" d="M30 98 C44 104 60 104 72 98"/><path class="sht" d="M34 99 l3 4 l3 -3 l3 4 l3 -3 l3 4 l3 -3 l3 4 l3 -3 l3 4 l3 -3 l3 3 z"/></g>';
+    o += '<g data-p="ampullae" class="grp"><circle class="ov" cx="18" cy="82" r="2.2"/><circle class="ov" cx="26" cy="78" r="2.2"/><circle class="ov" cx="34" cy="74" r="2.2"/><circle class="ov" cx="24" cy="86" r="2.2"/><circle class="ov" cx="32" cy="84" r="2.2"/><circle class="ov" cx="40" cy="86" r="2.2"/><circle class="ov" cx="20" cy="94" r="2.2"/></g>';
+    o += '<path class="shdot" d="M18 82 h.1 M26 78 h.1 M34 74 h.1 M24 86 h.1 M32 84 h.1 M40 86 h.1"/>';
+    o += p("liver", "M110 92 C130 78 200 78 236 90 C214 104 140 108 110 92 Z", "ov");
+    return svg("0 0 340 184", o, "Side view of a shark");
+  }
+
+  // ---------- frog (side view, sitting, facing left) ----------
+  function frog() {
+    var o = "";
+    o += p("hindfoot", "M150 196 L210 190 L222 182 L226 192 L236 186 L238 198 L246 196 L242 206 L156 212 Z", "fg fg-d");
+    o += '<path class="fg" d="M150 150 C150 120 200 110 222 140 C236 160 224 196 190 200 C164 202 150 180 150 150 Z"/>';
+    o += '<path class="fg" d="M40 118 C50 84 110 74 160 88 C206 100 226 140 210 170 C196 194 150 198 110 192 C80 188 56 172 46 154 C38 142 36 130 40 118 Z"/>';
+    o += '<path class="fgb" d="M50 150 C64 176 110 190 160 188 C140 196 96 196 70 182 C58 174 50 164 50 150 Z"/>';
+    o += p("drinkpatch", "M120 182 C140 190 168 190 186 182 L184 194 C164 200 140 200 122 194 Z", "ov");
+    o += '<path class="fgs" d="M120 100 a6 4 0 1 0 .1 0 M150 104 a7 5 0 1 0 .1 0 M176 120 a6 4 0 1 0 .1 0 M138 128 a5 3.5 0 1 0 .1 0 M196 146 a5 4 0 1 0 .1 0"/>';
+    o += p("frontleg", "M86 168 L80 204 L64 210 L70 214 L82 212 L78 220 L86 218 L92 210 L96 170 Z", "fg fg-d");
+    o += '<g data-p="eye" class="grp"><circle class="fg" cx="74" cy="92" r="17"/><circle class="fge" cx="74" cy="90" r="12"/><ellipse class="fgp" cx="74" cy="90" rx="7" ry="4"/></g>';
+    o += '<circle data-p="tympanum" class="fgt" cx="108" cy="110" r="11"/>';
+    o += '<circle data-p="nostril" class="fgp" cx="44" cy="104" r="2.4"/>';
+    o += p("mouth", "M38 122 C60 130 84 130 100 126", "ln fgm", ' stroke-width="2.2"');
+    o += p("vocalsac", "M44 128 C40 150 58 164 80 160 C96 156 98 140 92 130 Z", "ov");
+    return svg("0 0 260 224", o, "Side view of a frog");
+  }
+
+  // ---------- sea star (top view) ----------
+  function seastar() {
+    var o = "", cx = 130, cy = 126, pts = [], arm = "", spines = "", tf = "", eyes = "";
+    for (var k = 0; k < 5; k++) {
+      var a = -Math.PI / 2 + k * 2 * Math.PI / 5, a1 = a - Math.PI / 5, a2 = a + Math.PI / 5, tip = [cx + 112 * Math.cos(a), cy + 112 * Math.sin(a)];
+      var l1 = [cx + 36 * Math.cos(a1), cy + 36 * Math.sin(a1)], l2 = [cx + 36 * Math.cos(a2), cy + 36 * Math.sin(a2)], pn = [-Math.sin(a), Math.cos(a)];
+      var d = "M" + l1[0].toFixed(1) + " " + l1[1].toFixed(1) + " Q" + (cx + 80 * Math.cos(a) - 10 * pn[0]).toFixed(1) + " " + (cy + 80 * Math.sin(a) - 10 * pn[1]).toFixed(1) + " " + (tip[0] - 6 * pn[0]).toFixed(1) + " " + (tip[1] - 6 * pn[1]).toFixed(1) + " Q" + (tip[0] + 6 * Math.cos(a)).toFixed(1) + " " + (tip[1] + 6 * Math.sin(a)).toFixed(1) + " " + (tip[0] + 6 * pn[0]).toFixed(1) + " " + (tip[1] + 6 * pn[1]).toFixed(1) + " Q" + (cx + 80 * Math.cos(a) + 10 * pn[0]).toFixed(1) + " " + (cy + 80 * Math.sin(a) + 10 * pn[1]).toFixed(1) + " " + l2[0].toFixed(1) + " " + l2[1].toFixed(1) + " L" + cx + " " + cy + " Z";
+      arm += '<path data-p="arms arm' + (k + 1) + '" class="ss" d="' + d + '"/>';
+      for (var r = 44; r < 104; r += 11) { spines += "M" + (cx + r * Math.cos(a)).toFixed(1) + " " + (cy + r * Math.sin(a)).toFixed(1) + " h.1 "; }
+      eyes += '<circle class="sse" cx="' + (tip[0] - 2 * Math.cos(a)).toFixed(1) + '" cy="' + (tip[1] - 2 * Math.sin(a)).toFixed(1) + '" r="3.4"/>';
+      if (k === 1) for (var r2 = 42; r2 < 100; r2 += 7) [-1, 1].forEach(function (sgn) { tf += '<circle class="ov" cx="' + (cx + r2 * Math.cos(a) + sgn * 5 * pn[0]).toFixed(1) + '" cy="' + (cy + r2 * Math.sin(a) + sgn * 5 * pn[1]).toFixed(1) + '" r="2.6"/>'; });
+    }
+    o += arm + '<path class="ssp" d="' + spines + '"/>';
+    o += '<circle data-p="disc" class="ss ss-d" cx="' + cx + '" cy="' + cy + '" r="34"/>';
+    o += '<g data-p="madreporite" class="grp"><circle class="ssm" cx="146" cy="138" r="7"/><path class="ln ssml" stroke-width="1" d="M141 136 q5 -3 10 0 M141 139 q5 -3 10 0 M142 142 q4 -2 8 0"/></g>';
+    o += '<g data-p="eyespot" class="grp">' + eyes + "</g>";
+    o += '<g data-p="tubefeet" class="grp">' + tf + "</g>";
+    o += e("mouth", cx, cy, 9, 9, "ov");
+    return svg("0 0 260 250", o, "Top view of a sea star");
+  }
+
+  // ---------- honeybee (side view, facing left) ----------
+  function bee() {
+    var o = "";
+    o += p("forewing", "M124 70 C140 22 210 4 240 22 C250 30 236 46 210 54 C180 64 150 70 124 74 Z", "bw");
+    o += p("hindwing", "M132 78 C160 60 206 56 222 70 C226 80 200 88 176 88 C160 88 144 84 132 80 Z", "bw");
+    o += p("hamuli", "M150 74 C166 70 186 64 206 58", "ov", ' stroke-width="4"');
+    o += '<g class="bl"><path class="ln bll" stroke-width="3" d="M108 118 l-10 26 l-8 10 M128 122 l0 28 l-6 12"/></g>';
+    o += '<g data-p="legs" class="grp"><path class="ln bll" stroke-width="3" d="M150 120 l14 22 l-2 22 l6 8"/></g>';
+    o += '<path data-p="pollenbasket" class="bpb" d="M160 140 C170 140 172 156 164 162 C158 162 156 150 160 140 Z"/>';
+    o += p("abdomen", "M150 92 C170 72 236 74 262 100 C276 116 268 140 246 146 C214 152 170 140 152 120 Z", "bb");
+    o += '<path class="bst" d="M178 82 C172 100 172 124 180 140 L196 144 C188 126 188 100 194 80 Z M212 82 C206 100 206 126 214 146 L230 148 C222 128 222 104 228 86 Z M244 96 C240 110 240 128 246 146 L256 144 C252 128 252 112 256 102 Z"/>';
+    o += p("stinger", "M266 122 L290 130 L266 132 Z", "bsg");
+    o += p("wax", "M178 140 L240 148 L238 154 L176 146 Z", "ov");
+    o += e("thorax", 124, 100, 30, 26, "bt");
+    o += '<path class="bfz" d="M104 88 l-4 -4 M114 78 l-2 -5 M128 74 l0 -5 M142 78 l2 -5 M150 90 l5 -3 M100 104 l-5 0"/>';
+    o += e("head", 78, 104, 20, 24, "bt");
+    o += e("eye", 80, 100, 9, 16, "be");
+    o += '<g data-p="ocelli" class="grp"><circle class="bo" cx="72" cy="83" r="2.6"/><circle class="bo" cx="79" cy="81" r="2.6"/><circle class="bo" cx="86" cy="83" r="2.6"/></g>';
+    o += p("antenna", "M66 90 L52 70 L34 64", "ln bll", ' stroke-width="2.6"');
+    o += p("tongue", "M70 126 L60 160 L58 174", "ln btg", ' stroke-width="3.2"');
+    return svg("0 0 296 184", o, "Side view of a honeybee");
+  }
+
+  // ---------- horse hoof (underside of a front hoof; toe at the top) ----------
+  function hoof() {
+    var o = "";
+    o += p("wall", "M120 14 C188 14 222 70 222 140 C222 196 206 230 186 246 L160 246 C176 222 192 186 192 140 C192 82 162 44 120 44 C78 44 48 82 48 140 C48 186 64 222 80 246 L54 246 C34 230 18 196 18 140 C18 70 52 14 120 14 Z", "hw");
+    o += p("whiteline", "M120 44 C162 44 192 82 192 140 C192 186 176 222 160 246 L152 246 C168 222 184 186 184 140 C184 88 156 52 120 52 C84 52 56 88 56 140 C56 186 72 222 88 246 L80 246 C64 222 48 186 48 140 C48 82 78 44 120 44 Z", "hwl");
+    o += p("sole", "M120 52 C156 52 184 88 184 140 C184 186 168 222 152 246 L150 246 C150 220 140 176 130 150 L120 98 L110 150 C100 176 90 220 90 246 L88 246 C72 222 56 186 56 140 C56 88 84 52 120 52 Z", "hs");
+    o += p("bars", "M152 246 C150 222 146 196 140 176 L146 176 C152 196 158 222 160 246 Z M88 246 C90 222 94 196 100 176 L94 176 C88 196 82 222 80 246 Z", "hb");
+    o += p("frog", "M120 98 L130 150 C140 176 150 220 150 246 C140 240 130 236 120 222 C110 236 100 240 90 246 C90 220 100 176 110 150 Z", "hf");
+    o += '<path class="ln hfl" stroke-width="2" d="M120 150 L120 214"/>';
+    o += p("heels", "M80 246 C82 232 106 230 118 244 C112 254 86 256 80 246 Z M160 246 C158 232 134 230 122 244 C128 254 154 256 160 246 Z", "hh");
+    return svg("0 0 240 260", o, "Underside of a horse’s front hoof");
+  }
+
+  var ART = { skeleton: skeleton, hand: handBones, palm: function () { return handSkin(false); }, handback: function () { return handSkin(true); }, heart: heart, brain: brain, eye: eye, ear: ear, gut: gut, lungs: lungs, knee: knee, spine: spine,
+    octopus: octopus, owl: owl, giraffe: giraffe, catface: catface, catpaw: catpaw, elephant: elephant, shark: shark, frog: frog, seastar: seastar, bee: bee, hoof: hoof };
+  var CAP = { skeleton: "Front view", hand: "Right hand, palm side", palm: "Right hand, palm side", handback: "Right hand, back", heart: "Heart, front view (schematic)", brain: "Brain, left side", eye: "Eye, sliced across", ear: "Right ear, sliced front-on", gut: "Abdomen, front view", lungs: "Lungs, front view", knee: "Right knee, front (kneecap off)", spine: "Spine, side view (front to the left)",
+    octopus: "Octopus, front view", owl: "Owl, front view", giraffe: "Giraffe, side view", catface: "Cat, face on", catpaw: "Cat’s front paw, underside", elephant: "African elephant, side view", shark: "Shark, side view", frog: "Frog, side view", seastar: "Sea star, from above", bee: "Honeybee, side view", hoof: "Horse’s front hoof, underside (toe at the top)" };
   window.LBL_ART = function (name, hl) {
     var f = ART[name]; if (!f) return "";
     var wrap = document.createElement("div"); wrap.innerHTML = f();
