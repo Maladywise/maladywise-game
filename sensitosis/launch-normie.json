@@ -1,0 +1,49 @@
+{
+ "_note": "Sensitosis Normie mode + Einstein days, ready to merge (nothing shared was edited). 1) In assets/games.js, add \"normie\" below to the sensitosis entry inside the 'launched 2 Nov 2026' add[] block. 2) Add MW_ABOUT_N.sensitosis (after MW_ABOUT_N is defined, e.g. next to MW_ABOUT.sensitosis in that block). 3) Add MW_EINSTEIN.sensitosis (Medical dates). 4) Normie Einstein: shell.js reads window.MW_EINSTEIN_N, which games.js does not define yet, so create it if missing: window.MW_EINSTEIN_N = window.MW_EINSTEIN_N || {}; then set MW_EINSTEIN_N.sensitosis. 5) Optional: normieMascot:true on the entry only once an off-duty Tally exists at /assets/mascots/normie/sensitosis.svg (shell falls back to the normal one). Note: shell.js has no SCENES.sensitosis, so there is no shell win animation in either mode; the in-game verdict, sass and Einstein line are Normie-aware in sensitosis.js. Bump games.js ?v= in sensitosis/index.html after merging.",
+ "normie": {
+  "kind": "Detector guessing game",
+  "tagline": "Guess how good everyday detectors are.",
+  "quip": "Sniffer dogs, lie detectors, smoke alarms. Every one of them lies sometimes.",
+  "helpQuip": "No detector is perfect. Some are hilariously far from it.",
+  "help": [
+   "Each day brings five real detectors, from smoke alarms and sniffer dogs to lie detectors and AI checkers. Normie mode: no medicine.",
+   "Slide two bars: when the thing is really there, how often does it catch it? When it isn’t, how often does it stay quiet?",
+   "Closer guesses score more, up to 100 a round. Where studies disagree, anywhere in the range scores full marks.",
+   "The reveal shows 100 cases: catches, misses and false alarms, with the source.",
+   "Some rounds have a bonus twist: the alarm goes off, so what’s the chance it’s for real?",
+   "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun. New detectors at midnight, Sydney time."
+  ]
+ },
+ "MW_ABOUT_N": {
+  "sensitosis": [
+   "Sensitosis in Normie mode is a daily guessing game about how good everyday detectors are. Each day brings five real ones, from smoke alarms and sniffer dogs to lie detectors, facial recognition and AI-writing checkers. Slide two bars to guess how often each one catches the real thing and how often it stays quiet when there’s nothing there. Then see 100 cases on a grid, with the real figure and its source.",
+   [
+    [
+     "Do my Medical stats change?",
+     "No. Normie scores and streaks are kept separately."
+    ],
+    [
+     "What do ‘catches it’ and ‘stays quiet’ mean?",
+     "Catches it (sensitivity): out of 100 times the thing is really there, how many times the detector goes off. Stays quiet (specificity): out of 100 times it isn’t there, how many times it keeps quiet. The rest are false alarms."
+    ],
+    [
+     "Are the numbers real?",
+     "Yes. Every figure comes from a published study or report, linked on every reveal and rounded. Studies vary, so treat them as ballpark."
+    ]
+   ]
+  ]
+ },
+ "MW_EINSTEIN": {
+  "sensitosis": [
+   "2026-11-27",
+   "2026-12-17"
+  ]
+ },
+ "MW_EINSTEIN_N": {
+  "sensitosis": [
+   "2026-11-27",
+   "2026-12-17"
+  ]
+ },
+ "merge_js": "/* in the add[] sensitosis entry */ normie: {\"kind\": \"Detector guessing game\", \"tagline\": \"Guess how good everyday detectors are.\", \"quip\": \"Sniffer dogs, lie detectors, smoke alarms. Every one of them lies sometimes.\", \"helpQuip\": \"No detector is perfect. Some are hilariously far from it.\", \"help\": [\"Each day brings five real detectors, from smoke alarms and sniffer dogs to lie detectors and AI checkers. Normie mode: no medicine.\", \"Slide two bars: when the thing is really there, how often does it catch it? When it isn’t, how often does it stay quiet?\", \"Closer guesses score more, up to 100 a round. Where studies disagree, anywhere in the range scores full marks.\", \"The reveal shows 100 cases: catches, misses and false alarms, with the source.\", \"Some rounds have a bonus twist: the alarm goes off, so what’s the chance it’s for real?\", \"Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun. New detectors at midnight, Sydney time.\"]},\n/* after the block's MW_ABOUT.sensitosis line */\nif (window.MW_ABOUT_N) MW_ABOUT_N.sensitosis = [\"Sensitosis in Normie mode is a daily guessing game about how good everyday detectors are. Each day brings five real ones, from smoke alarms and sniffer dogs to lie detectors, facial recognition and AI-writing checkers. Slide two bars to guess how often each one catches the real thing and how often it stays quiet when there’s nothing there. Then see 100 cases on a grid, with the real figure and its source.\", [[\"Do my Medical stats change?\", \"No. Normie scores and streaks are kept separately.\"], [\"What do ‘catches it’ and ‘stays quiet’ mean?\", \"Catches it (sensitivity): out of 100 times the thing is really there, how many times the detector goes off. Stays quiet (specificity): out of 100 times it isn’t there, how many times it keeps quiet. The rest are false alarms.\"], [\"Are the numbers real?\", \"Yes. Every figure comes from a published study or report, linked on every reveal and rounded. Studies vary, so treat them as ballpark.\"]]];\nMW_EINSTEIN.sensitosis = [\"2026-11-27\", \"2026-12-17\"];\nwindow.MW_EINSTEIN_N = window.MW_EINSTEIN_N || {}; MW_EINSTEIN_N.sensitosis = [\"2026-11-27\", \"2026-12-17\"];"
+}

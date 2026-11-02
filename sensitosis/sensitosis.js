@@ -2,31 +2,41 @@
    Test bank: tests.json {tests: {id: {test, condition, scenario, sens:{v,lo,hi}, spec:{v,lo,hi}|null, range?, kind?, label?, says, note, src:[[title,url]], checked}}}.
    kind: sign | rule | scan | (none = lab test). Sign and rule rounds are "Signs rounds": same mechanics, different chip and wording.
    Days: puzzles/YYYY-MM.json [{date, number, difficulty, rounds:[{test, twist?:{prev, where, sourced}}]}].
-   Scoring: up to 50 a slider (100 for one-slider rounds); full marks anywhere in lo-hi (+/-2), zero at 35+ away. Medical only. */
+   Scoring: up to 50 a slider (100 for one-slider rounds); full marks anywhere in lo-hi (+/-2), zero at 35+ away.
+   Einstein days (difficulty "Einstein"): tight scoring, full marks only inside lo-hi, zero at 20+ away.
+   Normie mode (no medicine): tests-normie.json (same format plus yes/no/all/pos/neg nouns and verbs; kind gadget|software|animal|human|check)
+   and puzzles/normie/YYYY-MM.json, "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", N = 5, OPEN = "2026-11-02";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", N = 5, OPEN = "2026-11-02";
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", TFILE = NORMIE ? "tests-normie.json" : "tests.json", NAME = NORMIE ? "Sensitosis (Normie)" : "Sensitosis";
   var root = document.getElementById("sns");
   if (!document.querySelector("link[data-sns]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "sensitosis.css?v=" + BUILD; l.setAttribute("data-sns", ""); document.head.appendChild(l);
   }
   root.innerHTML =
-    '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sns-p" viewBox="0 0 10 12"><circle cx="5" cy="2.6" r="2.3"/><path d="M1 12V8.4C1 6.2 2.8 5.4 5 5.4s4 .8 4 3V12z"/></symbol></svg>' +
+    '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sns-p" viewBox="0 0 10 12">' + (NORMIE ? '<rect x=".8" y="1.8" width="8.4" height="8.4" rx="2.4"/>' : '<circle cx="5" cy="2.6" r="2.3"/><path d="M1 12V8.4C1 6.2 2.8 5.4 5 5.4s4 .8 4 3V12z"/>') + '</symbol></svg>' +
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="sns-eyebrow">Sensitosis</span><span class="badge" id="sns-badge" hidden></span></div>' +
-    ' <details class="explain" id="sns-explain"><summary>Sensitivity and specificity, in plain English</summary>' +
+    ' <details class="explain" id="sns-explain"><summary>' + (NORMIE ? "Catching it and staying quiet, in plain English" : "Sensitivity and specificity, in plain English") + '</summary>' +
+    (NORMIE ?
+    '  <p><b>Catches it when it’s there.</b> Out of 100 times the thing is really there (a fire, a lie, a bot), how many times does the detector go off? The rest are <b>misses</b>. Boffins call this <b>sensitivity</b>.</p>' +
+    '  <p><b>Stays quiet when it isn’t.</b> Out of 100 times it isn’t there, how many times does the detector keep quiet? The rest are <b>false alarms</b>. That’s <b>specificity</b>.</p>' +
+    '  <p>Sniffer dogs, lie detectors, smoke alarms, your own gut: every detector is brilliant at one, rubbish at the other, or somehow both. Today you guess both.</p></details>' :
     '  <p><b>Sensitivity</b> is how good a test is at <b>catching</b> people who have the condition. Out of 100 people who have it, how many test positive? The rest are <b>misses</b>.</p>' +
     '  <p><b>Specificity</b> is how good it is at <b>clearing</b> people who don’t. Out of 100 people without it, how many test negative? The rest are <b>false alarms</b>.</p>' +
     '  <p>A test can be brilliant at one and rubbish at the other. Today you guess both.</p>' +
-    '  <p><b>Signs rounds</b> are things a doctor checks with hands, eyes and a few questions, like a knee wobble or a checklist. Same rules: guess how often they catch it and clear it.</p></details>' +
+    '  <p><b>Signs rounds</b> are things a doctor checks with hands, eyes and a few questions, like a knee wobble or a checklist. Same rules: guess how often they catch it and clear it.</p></details>') +
     ' <div class="dots" id="sns-dots" aria-label="Progress"></div>' +
     ' <section class="card" id="sns-card" aria-live="polite"></section>' +
     ' <div class="result" id="sns-result" hidden></div>' +
     ' <p class="note" id="sns-next"></p>' +
     ' <details class="archive" id="sns-archive"><summary>Past days</summary><div class="alist" id="sns-alist"></div></details>' +
-    ' <p class="note">Figures are rounded from published reviews, linked on every reveal. Studies vary, so treat them as ballpark. Scenarios are fictional. General education, not personal medical advice.</p>' +
+    ' <p class="note">' + (NORMIE ? "Figures are rounded from published studies and reports, linked on every reveal. Studies vary, so treat them as ballpark. Just for fun." : "Figures are rounded from published reviews, linked on every reveal. Studies vary, so treat them as ballpark. Scenarios are fictional. General education, not personal medical advice.") + '</p>' +
     "</div>";
   var $ = function (id) { return document.getElementById("sns-" + id); };
+  function normFoot() { try { Array.prototype.forEach.call(document.querySelectorAll("footer.site"), function (ft) { Array.prototype.forEach.call(ft.childNodes, function (n) { if (n.nodeType === 3 && /Real tests/.test(n.nodeValue)) n.nodeValue = "Real detectors, real published figures, rounded. Just for fun."; }); }); } catch (e) {} }
+  if (NORMIE) { normFoot(); setTimeout(normFoot, 0); }
 
   // ---------- dates & storage ----------
   function sydToday() { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); } catch (e) { return new Date().toISOString().slice(0, 10); } }
@@ -38,12 +48,12 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "sns-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
+  var SKEY = PFX + "sns-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
   var KEY, st, P = null, TESTS = null;
-  function loadDay() { KEY = "sns-day-" + today; st = load(KEY, { r: 0, g: [], tw: {}, done: false, win: false, score: 0 }); }
+  function loadDay() { KEY = PFX + "sns-day-" + today; st = load(KEY, { r: 0, g: [], tw: {}, done: false, win: false, score: 0 }); }
   loadDay();
-  var seenExplain = load("sns-explained", 0);
-  if (!seenExplain) { $("explain").open = true; put("sns-explained", 1); }
+  var seenExplain = load(PFX + "sns-explained", 0);
+  if (!seenExplain) { $("explain").open = true; put(PFX + "sns-explained", 1); }
 
   // ---------- sass (mocks the guess, never the patient) ----------
   function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
@@ -54,11 +64,19 @@
     low: ["Bold. Wrong, but bold.", "The meta-analysis disagrees.", "Somewhere a statistician sighed.", "Confidently incorrect. A classic.", "Respectfully: no."],
     end: [["Diagnostic accuracy: excellent. Yours, not the tests’.", "Sensitive AND specific. Rare.", "You could peer-review this stuff."], ["Solid day. Most of the tests did worse.", "Good gut. Better than a Kernig’s.", "Respectable. Very respectable."], ["Middling. Like a CRP.", "Some hits, some false alarms.", "Not bad. Not a screening program either."], ["Rough day. The tests won.", "Lots of misses. Fitting, really.", "Tomorrow’s tests are already being validated."]]
   };
+  if (NORMIE) SASS = {
+    top: ["Spooky accurate.", "Did you write the study?", "That’s not a guess, that’s a citation.", "Bang on. Suspiciously bang on.", "Calibrated like a lab scale."],
+    good: ["Close. Very close.", "Solid gut.", "Near enough to publish.", "Sharp. The detector’s jealous."],
+    mid: ["In the ballpark. A big ballpark.", "Half right is still half wrong.", "Plausible. The studies disagree.", "Warm. Not hot."],
+    low: ["Bold. Wrong, but bold.", "The data disagrees.", "Somewhere a statistician sighed.", "Confidently incorrect. A classic.", "Respectfully: no."],
+    end: [["Detection skills: excellent. Yours, not the detectors’.", "Catches it AND stays quiet. Rare.", "You could audit sniffer dogs for a living."], ["Solid day. Most of the detectors did worse.", "Good gut. Better than a lie detector.", "Respectable. Very respectable."], ["Middling. Like a wobbly CAPTCHA.", "Some hits, some false alarms.", "Not bad. Not airport security either."], ["Rough day. The detectors won.", "Lots of misses. Fitting, really.", "Tomorrow’s detectors are already being tested."]]
+  };
   function say(t) { var m = root.querySelector(".msg"); if (!m) return; m.textContent = t; m.classList.remove("pop"); void m.offsetWidth; if (t) m.classList.add("pop"); }
 
   // ---------- maths & words ----------
   function rng(f) { return [f.lo != null ? f.lo : f.v, f.hi != null ? f.hi : f.v]; }
-  function pts(g, f) { var r = rng(f), d = Math.max(0, r[0] - g, g - r[1]); d = Math.max(0, d - 2); return Math.round(50 * Math.max(0, 1 - d / 35)); }
+  function ein() { return !!P && P.difficulty === "Einstein"; }
+  function pts(g, f) { var r = rng(f), d = Math.max(0, r[0] - g, g - r[1]), E = ein(); d = Math.max(0, d - (E ? 0 : 2)); return Math.round(50 * Math.max(0, 1 - d / (E ? 20 : 35))); }
   function fmt(v) { return (Math.round(v * 10) / 10).toString(); }
   function figTxt(f) { var r = rng(f); return fmt(f.v) + (r[0] !== r[1] ? ' <small>(' + fmt(r[0]) + "–" + fmt(r[1]) + ")</small>" : ""); }
   // p = percent of a group; plain words like "about 1 in 4"
@@ -70,7 +88,7 @@
     if (p >= 1) return "about 1 in " + Math.round(100 / p);
     var k = Math.round(p * 10); return k < 1 ? "fewer than 1 in 1,000" : "about " + k + " in 1,000";
   }
-  function ofPpl(p) { var w = oneIn(p); return /^(about half|almost all|almost none)$/.test(w) ? w + " of the people" : w + " people"; }
+  function ofPpl(p, noun) { var w = oneIn(p); return /^(about half|almost all|almost none)$/.test(w) ? w + " of the " + (noun || "people") : w + " " + (noun || "people"); }
   function ppv(T, prev) {
     var s = T.sens.v / 100, c = T.spec.v / 100, base = prev < 1 ? 10000 : 1000, have = Math.round(base * prev / 100), caught = Math.round(have * s), fa = Math.round((base - have) * (1 - c));
     return { base: base, have: have, caught: caught, fa: fa, p: caught / Math.max(1, caught + fa) * 100 };
@@ -82,6 +100,7 @@
   }
 
   // ---------- render ----------
+  var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
   function tOf(i) { return TESTS[P.rounds[i].test]; }
   function renderDots() {
     $("dots").innerHTML = P.rounds.map(function (r, i) {
@@ -106,22 +125,25 @@
       b.onclick = function () { var inp = $(b.getAttribute("data-for")); inp.value = Math.max(0, Math.min(100, +inp.value + +b.getAttribute("data-d"))); paintRange(inp); };
     });
   }
-  var KINDS = { sign: "Physical sign", rule: "Clinical rule", scan: "Scan", lab: "Lab test" };
-  function kindOf(T) { return KINDS[T.kind] ? T.kind : "lab"; }
-  function isSign(T) { var k = kindOf(T); return k === "sign" || k === "rule"; }
+  var KINDS = NORMIE ? { gadget: "Gadget", software: "Software", animal: "Sniffer animal", human: "Human judgement", check: "Security check" } : { sign: "Physical sign", rule: "Clinical rule", scan: "Scan", lab: "Lab test" };
+  function kindOf(T) { return KINDS[T.kind] ? T.kind : NORMIE ? "gadget" : "lab"; }
+  function isSign(T) { var k = kindOf(T); return !NORMIE && (k === "sign" || k === "rule"); }
   function chip(T) { var k = kindOf(T); return '<span class="kind ' + k + '">' + esc(T.label || KINDS[k]) + "</span>"; }
   function head(i, T) {
-    return '<p class="kick"><span>' + (isSign(T) ? "Signs round · " : "Test ") + (i + 1) + " of " + N + "</span>" + chip(T) + "</p><h2>" + esc(T.test) + '</h2><p class="for">Looking for <b>' + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>";
+    return '<p class="kick"><span>' + (isSign(T) ? "Signs round · " : NORMIE ? "Round " : "Test ") + (i + 1) + " of " + N + "</span>" + chip(T) + "</p><h2>" + esc(T.test) + '</h2><p class="for">' + (NORMIE ? "Detecting" : "Looking for") + " <b>" + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>" + (ein() && i === st.r && !st.g[i] ? '<p class="einote">Einstein day: tight scoring. Full marks only inside the real range, zero from 20 off.</p>' : "");
   }
   function words(T) {
+    if (NORMIE) return [T.pos || "get flagged", T.neg || "get cleared", "detector"];
     var k = kindOf(T);
     return k === "sign" ? ["show the sign", "don’t show it", "sign"] : k === "rule" ? ["does it flag", "does it clear", "rule"] : ["test positive", "test negative", "test"];
   }
   function renderGuess(i) {
     var T = tOf(i), W = words(T);
     var h = head(i, T) +
+      (NORMIE ? slider("s", "Out of 100 <b>" + esc(T.yes) + "</b>, how many " + esc(W[0]) + "?", "Catches it when it’s there (<b>sensitivity</b>).", 50) +
+      (T.spec ? slider("c", "Out of 100 <b>" + esc(T.no) + "</b>, how many " + esc(W[1]) + "?", "Stays quiet when it isn’t (<b>specificity</b>).", 50) : '<p class="one">One slider today: there’s no good figure for false alarms.</p>') :
       slider("s", "Out of 100 people <b>with</b> " + esc(T.condition) + ", how many " + W[0] + "?", "This is the " + W[2] + "’s <b>sensitivity</b>.", 50) +
-      (T.spec ? slider("c", "Out of 100 people <b>without</b> it, how many " + W[1] + "?", "This is its <b>specificity</b>.", 50) : '<p class="one">One slider today: there’s no good figure for false alarms.</p>') +
+      (T.spec ? slider("c", "Out of 100 people <b>without</b> it, how many " + W[1] + "?", "This is its <b>specificity</b>.", 50) : '<p class="one">One slider today: there’s no good figure for false alarms.</p>')) +
       '<button type="button" class="btn big" id="sns-lock">Lock it in</button><p class="msg" aria-live="polite"></p>';
     $("card").innerHTML = h; bindSliders($("card"));
     $("lock").onclick = function () { lock(i); };
@@ -132,16 +154,17 @@
     h += '<div class="cmp"><div><span>Catches (sensitivity)</span><b>' + figTxt(T.sens) + '</b><small>You said ' + g[0] + "</small></div>" +
       (T.spec ? '<div><span>Clears (specificity)</span><b>' + figTxt(T.spec) + '</b><small>You said ' + g[1] + "</small></div>" : "") + "</div>";
     h += '<div class="grids' + (T.spec ? "" : " solo") + '">' +
-      '<figure><figcaption>100 people <b>with</b> it</figcaption>' + grid(sv, "hit", "miss", sv + " of 100 caught, " + (100 - sv) + " missed") +
+      '<figure><figcaption>' + (NORMIE ? "100 <b>" + esc(T.yes) + "</b>" : "100 people <b>with</b> it") + '</figcaption>' + grid(sv, "hit", "miss", sv + " of 100 caught, " + (100 - sv) + " missed") +
       '<p class="leg"><i class="k hit"></i>caught ' + sv + ' <i class="k miss"></i>missed ' + (100 - sv) + "</p></figure>" +
-      (T.spec ? '<figure><figcaption>100 people <b>without</b> it</figcaption>' + grid(cv, "ok", "fa", cv + " of 100 cleared, " + (100 - cv) + " false alarms") +
+      (T.spec ? '<figure><figcaption>' + (NORMIE ? "100 <b>" + esc(T.no) + "</b>" : "100 people <b>without</b> it") + '</figcaption>' + grid(cv, "ok", "fa", cv + " of 100 cleared, " + (100 - cv) + " false alarms") +
       '<p class="leg"><i class="k ok"></i>cleared ' + cv + ' <i class="k fa"></i>false alarm ' + (100 - cv) + "</p></figure>" : "") + "</div>";
     var words = T.range ? "Catches anywhere from " + T.sens.lo + " to " + T.sens.hi + " in 100, depending on the study. Helpful." :
+      NORMIE ? "Misses " + ofPpl(100 - T.sens.v, esc(T.yes)) + "." + (T.spec ? (T.spec.v >= 99.95 ? " Almost never a false alarm." : " False alarms on " + ofPpl(100 - T.spec.v, esc(T.no)) + ".") : "") :
       "Misses " + ofPpl(100 - T.sens.v) + " who have it." + (T.spec ? (T.spec.v >= 99.95 ? " Almost never a false alarm." : " False alarms in " + ofPpl(100 - T.spec.v) + " who don’t.") : "");
     h += '<p class="words">' + words + "</p>" + '<p class="says">' + esc(T.says) + "</p>";
     if (R.twist && T.spec) h += twistHtml(i, T, R.twist);
     h += '<div class="evid"><p><b>The evidence.</b> ' + esc(T.note) + "</p><p class=\"srcs\">" + T.src.map(function (s) { return '<a href="' + esc(s[1]) + '" target="_blank" rel="noopener">Source: ' + esc(s[0]) + " ↗</a>"; }).join("") + "</p><p class=\"chk\">Checked " + esc(T.checked) + "</p></div>";
-    h += '<button type="button" class="btn big" id="sns-nextbtn">' + (i < N - 1 ? "Next test" : "See your score") + "</button>";
+    h += '<button type="button" class="btn big" id="sns-nextbtn">' + (i < N - 1 ? (NORMIE ? "Next round" : "Next test") : "See your score") + "</button>";
     $("card").innerHTML = h; bindSliders($("card"));
     $("nextbtn").onclick = function () { if (st.r < i + 1) { st.r = i + 1; if (st.r >= N) finish(); put(KEY, st); } paint(); root.scrollIntoView({ behavior: "smooth", block: "start" }); };
     var tb = $("twbtn"); if (tb) tb.onclick = function () { st.tw[i] = +$("t").value; put(KEY, st); reveal(i); var x = $("twbox"); if (x) x.scrollIntoView({ behavior: "smooth", block: "nearest" }); };
@@ -149,11 +172,13 @@
   }
   function twistHtml(i, T, tw) {
     var r = ppv(T, tw.prev), real = Math.round(r.p), mine = st.tw[i];
-    var h = '<div class="twist" id="sns-twbox"><p class="tk">Bonus twist' + (tw.sourced ? "" : " · made-up numbers") + "</p><p>" + esc(tw.where) + " You test <b>positive</b>. What’s the chance you really have it?</p>";
-    if (mine == null) return h + slider("t", "Chance you have it", "Out of 100 people who test positive, how many really have it?", 50) + '<button type="button" class="btn" id="sns-twbtn">Check</button></div>';
-    var off = Math.abs(mine - real), line = off <= 10 ? "Bang on. Plenty of doctors get this wrong." : mine > real ? "Too hopeful. When a condition is rare, false alarms swamp the real positives." : "Too gloomy. When lots of people have it, a positive is more believable.";
+    var h = '<div class="twist" id="sns-twbox"><p class="tk">Bonus twist' + (tw.sourced ? "" : " · made-up numbers") + "</p><p>" + esc(tw.where) + (NORMIE ? " The detector goes <b>off</b>. What’s the chance it’s for real?</p>" : " You test <b>positive</b>. What’s the chance you really have it?</p>");
+    if (mine == null) return h + (NORMIE ? slider("t", "Chance it’s real", "Out of 100 alarms, how many are real?", 50) : slider("t", "Chance you have it", "Out of 100 people who test positive, how many really have it?", 50)) + '<button type="button" class="btn" id="sns-twbtn">Check</button></div>';
+    var L = function (n) { return n.toLocaleString("en-AU"); };
+    var off = Math.abs(mine - real), line = off <= 10 ? (NORMIE ? "Bang on. Plenty of experts get this wrong." : "Bang on. Plenty of doctors get this wrong.") : mine > real ? (NORMIE ? "Too trusting. When the real thing is rare, false alarms swamp the real ones." : "Too hopeful. When a condition is rare, false alarms swamp the real positives.") : (NORMIE ? "Too cynical. When the real thing is common, an alarm is more believable." : "Too gloomy. When lots of people have it, a positive is more believable.");
     return h + '<p class="tans">You said ' + mine + '. Real answer: <b>about ' + (real < 1 ? "1" : real) + " in 100</b>.</p><p>" + line + "</p>" +
-      '<p class="math">Picture ' + r.base.toLocaleString("en-AU") + " people: " + r.have.toLocaleString("en-AU") + " have it and the test catches " + r.caught.toLocaleString("en-AU") + ". Of the " + (r.base - r.have).toLocaleString("en-AU") + " who don’t, " + r.fa.toLocaleString("en-AU") + " get a false alarm. So only " + r.caught.toLocaleString("en-AU") + " of " + (r.caught + r.fa).toLocaleString("en-AU") + " positives are real.</p></div>";
+      (NORMIE ? '<p class="math">Picture ' + L(r.base) + " " + esc(T.all || "cases") + ": " + L(r.have) + " are the real thing and the detector catches " + L(r.caught) + ". Of the other " + L(r.base - r.have) + ", " + L(r.fa) + " set off a false alarm. So only " + L(r.caught) + " of " + L(r.caught + r.fa) + " alarms are real.</p></div>" :
+      '<p class="math">Picture ' + L(r.base) + " people: " + L(r.have) + " have it and the test catches " + L(r.caught) + ". Of the " + L(r.base - r.have) + " who don’t, " + L(r.fa) + " get a false alarm. So only " + L(r.caught) + " of " + L(r.caught + r.fa) + " positives are real.</p></div>");
   }
   function lock(i) {
     var T = tOf(i), s = +$("s").value, c = T.spec ? +$("c").value : null;
@@ -166,7 +191,8 @@
   }
   function bucket(s) { return s >= 450 ? 0 : s >= 350 ? 1 : s >= 250 ? 2 : 3; }
   function finish() {
-    st.score = st.g.reduce(function (a, g) { return a + g[2]; }, 0); st.win = st.score >= 250; st.done = true; put(KEY, st);
+    st.score = st.g.reduce(function (a, g) { return a + g[2]; }, 0); st.win = st.score >= 250; st.done = true; if (ein()) st.d = "Einstein"; put(KEY, st);
+    if (ein() && st.win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "sensitosis" && t.d === today; })) { tro.push({ g: "sensitosis", d: today }); put(PFX + "mw-einstein", tro); } }
     if (isLive() && stats.last !== today) {
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
@@ -179,10 +205,11 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     $("card").hidden = true;
-    var share = "Sensitosis #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + " 🔬 " + st.score + "/" + N * 100 + "\n" + st.g.map(function (g) { return emo(g[2]); }).join("") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🔎 " : " 🔬 ") + st.score + "/" + N * 100 + "\n" + st.g.map(function (g) { return emo(g[2]); }).join("") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = bucket(st.score), L = ["450+", "350+", "250+", "<250"];
     r.hidden = false;
-    r.innerHTML = '<p class="verdict">' + esc(pick(SASS.end[mine])) + "</p><h2>" + st.score + "<small> / " + N * 100 + "</small></h2>" +
+    var verdict = ein() ? (st.win ? (NORMIE ? "⚛️ Einstein day, passed. Roughly a once-in-50-days set, tight scoring and all. Screenshot this." : "⚛️ Einstein day, passed. Roughly a once-in-50-days set, tight scoring and all. Screenshot this.") : (NORMIE ? "Even Einstein would have asked for more data. Respect for taking on the rare one." : "Even Einstein would have ordered more tests. Respect for taking on the rare one.")) : pick(SASS.end[mine]);
+    r.innerHTML = '<p class="verdict">' + esc(verdict) + "</p><h2>" + st.score + "<small> / " + N * 100 + "</small></h2>" +
       '<ul class="sum">' + P.rounds.map(function (R, i) {
         var T = TESTS[R.test], g = st.g[i];
         return '<li><span class="e">' + emo(g[2]) + '</span><span class="n"><b>' + esc(T.test) + "</b><small>" + esc(T.label || KINDS[kindOf(T)]) + " · catches " + fmt(T.sens.v) + (T.spec ? " · clears " + fmt(T.spec.v) : "") + " · you " + g[0] + (T.spec ? "/" + g[1] : "") + '</small><a href="' + esc(T.src[0][1]) + '" target="_blank" rel="noopener">Source ↗</a></span><span class="p">' + g[2] + "</span></li>";
@@ -211,31 +238,33 @@
     if (st.g[st.r]) reveal(st.r); else renderGuess(st.r);
   }
   function tick() {
-    var t = "New tests arrive at midnight, Sydney time.";
+    var t = NORMIE ? "New detectors arrive at midnight, Sydney time." : "New tests arrive at midnight, Sydney time.";
     try { var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date()).split(":").map(Number);
-      var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = "Next tests in " + Math.floor(left / 60) + "h " + (left % 60) + "m. No false alarms, promise."; } catch (e) {}
+      var left = 1440 - ((p[0] % 24) * 60 + p[1]); t = (NORMIE ? "Next detectors in " : "Next tests in ") + Math.floor(left / 60) + "h " + (left % 60) + "m. No false alarms, promise."; } catch (e) {}
     $("next").textContent = t;
   }
 
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
-  var testsP = fetch(BASE + "tests.json?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) { TESTS = j.tests; });
+  var testsP = fetch(BASE + TFILE + "?v=" + BUILD, { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) { TESTS = j.tests; });
   function show(date) {
     today = date; loadDay(); P = null;
     return Promise.all([testsP, month(date.slice(0, 7))]).then(function (a) {
+      if (NORMIE) normFoot();
       P = a[1].filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
         $("dots").innerHTML = ""; $("result").hidden = true; $("badge").hidden = true; $("card").hidden = false;
-        $("card").innerHTML = '<p class="empty">' + (date < OPEN ? "Sensitosis opens Monday 2 November. The tests are still being validated." : "Today’s tests are still in the lab. Back tomorrow.") + "</p>";
+        $("card").innerHTML = date < OPEN ? '<p class="empty">Sensitosis opens Monday 2 November. ' + (NORMIE ? "The detectors are still warming up." : "The tests are still being validated.") + "</p>" :
+          NORMIE && window.MW_noNormie ? MW_noNormie("detectors") : '<p class="empty">' + (NORMIE ? "Today’s detectors are still being calibrated. Back tomorrow." : "Today’s tests are still in the lab. Back tomorrow.") + "</p>";
         renderArchive(); return;
       }
-      $("eyebrow").textContent = (isLive() ? "Sensitosis" : "Archive") + " · #" + P.number + " · " + nice(date);
-      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.textContent = P.difficulty;
+      $("eyebrow").textContent = (isLive() ? NAME : "Archive") + " · #" + P.number + " · " + nice(date);
+      var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (ein() ? EIN : "") + esc(P.difficulty); root.classList.toggle("einstein", ein());
       paint(); renderArchive();
     });
   }
@@ -244,7 +273,7 @@
     Promise.all([prevMonth(m) < "2026-11" ? Promise.resolve([]) : month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("sns-day-" + x.date, null), mark = !s || !s.done ? "" : " · " + s.score;
+        var s = load(PFX + "sns-day-" + x.date, null), mark = !s || !s.done ? "" : " · " + s.score;
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="sns-back">Back to today</button>';

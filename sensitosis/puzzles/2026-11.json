@@ -617,22 +617,32 @@
  {
   "date": "2026-11-27",
   "number": 26,
-  "difficulty": "Hard",
+  "difficulty": "Einstein",
   "rounds": [
    {
-    "test": "pap"
+    "test": "s3"
    },
    {
-    "test": "jolt"
+    "test": "psa4",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine a group of men where 1 in 10 being tested has prostate cancer.",
+     "sourced": false
+    }
    },
    {
-    "test": "ferr15"
+    "test": "brudz"
    },
    {
-    "test": "hpstool"
+    "test": "ferr15",
+    "twist": {
+     "prev": 20,
+     "where": "Imagine a clinic where 1 in 5 people tested is iron deficient.",
+     "sourced": false
+    }
    },
    {
-    "test": "tinel"
+    "test": "papill"
    }
   ]
  },
