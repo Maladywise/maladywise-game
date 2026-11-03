@@ -121,14 +121,14 @@
    },
    {
     "kind": "Weird but true",
-    "q": "Shave a tiger (please don’t). Its skin is…",
-    "answer": "Striped too",
+    "q": "Which animal has three hearts and blue blood?",
+    "answer": "Octopus",
     "wrong": [
-     "Plain orange",
-     "Pink",
-     "Spotted"
+     "Crab",
+     "Jellyfish",
+     "Starfish"
     ],
-    "why": "The stripes are in the skin as well as the fur."
+    "why": "Two hearts pump blood through the gills, one pumps it round the body. Crabs have blue blood but just one heart. The first permanent artificial heart was fitted on this day in 1982."
    },
    {
     "kind": "Name the part",
@@ -766,14 +766,14 @@
    },
    {
     "kind": "Weird but true",
-    "q": "Which animal’s fingerprints look almost identical to ours?",
-    "answer": "Koala",
+    "q": "Bar-headed geese fly on migration over which mountains?",
+    "answer": "The Himalayas",
     "wrong": [
-     "Chimpanzee",
-     "Possum",
-     "Sloth"
+     "The Alps",
+     "The Andes",
+     "The Rockies"
     ],
-    "why": "Koala fingerprints are so similar to human ones that they’re very hard to tell apart, even under a microscope."
+    "why": "Their blood grabs oxygen extra tightly, so they cope with air that would leave us gasping. Today is International Mountain Day."
    },
    {
     "kind": "Name the part",
@@ -1210,14 +1210,14 @@
    },
    {
     "kind": "Weird but true",
-    "q": "How many eyes do most spiders have?",
-    "answer": "Eight",
+    "q": "Many bird bones are hollow inside. What fills them?",
+    "answer": "Air, linked to the lungs",
     "wrong": [
-     "Two",
-     "Four",
-     "Twelve"
+     "Fat",
+     "Water",
+     "Marrow, like ours"
     ],
-    "why": "Most have eight, though some have six, four, two or even none."
+    "why": "Air sacs from the lungs reach into some bones, making them light and part of the breathing system. Humans first flew a plane on this day in 1903."
    },
    {
     "kind": "Body fact",
