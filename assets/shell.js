@@ -922,10 +922,14 @@
       });
       var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead);
       var themed = !NORMIE && !quiet && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb || "");
-      var k = themed ? "Themed today" : lead.kind === "week" ? "This week" : "Today", more = on.length - 1;
-      var inner = (lead.icon && !quiet ? '<img class="hc-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="22" height="22">' : "") + '<span class="hc-k">' + k + '</span><span class="hc-n">' + esc2(regionOf(lead) ? lead.name.replace(/\s*\([^()]+\)\s*$/, "") : lead.name) + "</span>" + (more > 0 ? '<span class="hc-more">+' + more + "</span>" : "") + (lead.link ? '<span class="hc-go">More ›</span>' : "");
-      var tip = esc2(lead.name + (lead.blurb ? ". " + lead.blurb : "") + (more > 0 ? " Also: " + on.filter(function (x) { return x !== lead; }).map(function (x) { return x.name; }).join(", ") + "." : ""));
-      slot.innerHTML = lead.link ? '<a class="hday-chip' + (quiet ? " quiet" : "") + '" href="' + esc2(lead.link) + '" target="_blank" rel="noopener" title="' + tip + '">' + inner + "</a>" : '<p class="hday-chip' + (quiet ? " quiet" : "") + '" title="' + tip + '">' + inner + "</p>";
+      var nm = function (x) { return esc2(regionOf(x) ? x.name.replace(/\s*\([^()]+\)\s*$/, "") : x.name); };
+      var also = normal.filter(function (x) { return x !== lead; });
+      var html = quiet ? '<section class="hday quiet"><p><b>' + nm(lead) + ".</b> " + esc2(lead.blurb || "") + (lead.link ? ' <a href="' + esc2(lead.link) + '" target="_blank" rel="noopener">More</a>' : "") + "</p></section>" :
+        '<section class="hday' + (lead.icon ? " has-ic" : "") + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : "") + '<span class="hday-k">' + (lead.kind === "week" ? "This week" : "Today") + "</span>" +
+        "<h2>" + nm(lead) + "</h2><p>" + esc2(lead.blurb || "") + (themed ? " <b>Look out for themed puzzles today.</b>" : "") + "</p>" +
+        (also.length ? '<p class="hday-also">Also: ' + also.map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + nm(x) + "</a>" : nm(x); }).join(", ") + "</p>" : "") +
+        (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + "</section>";
+      slot.innerHTML = html;
     }
 
     function draw() {
