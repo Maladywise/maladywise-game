@@ -19,9 +19,7 @@ window.MW_HOME = {
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
   taglineN: "Free daily puzzles. No medicine required.",
-  // Home "Start here: today's 3": [game id, rough minutes]. Normie list must use games with a Normie version.
-  start: [["dx", 3], ["wordemic", 3], ["triviosis", 4]],
-  startN: [["dx", 3], ["wordemic", 3], ["triviosis", 4]],
+  // Home "Start here: today's 3" now lives in games.js (MW_START), so game pages can follow the same order.
   // Home game sections. t/d = Medical heading and one-liner, tn/dn = Normie versions (keep one-liners under ~32 characters).
   groups: [
     { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "morphemia", "gridectomy", "suturix"] },
