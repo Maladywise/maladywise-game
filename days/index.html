@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/days/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Upcoming Health Days | Malady Wise</title>
+<meta name="description" content="Every day on Malady Wise has a theme: world health days, awareness weeks and medical-history anniversaries. See today and the next 30 days.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:title" content="Upcoming Health Days | Malady Wise">
+<meta property="og:description" content="Every day on Malady Wise has a theme: world health days, awareness weeks and medical-history anniversaries. See today and the next 30 days.">
+<meta property="og:image" content="https://maladywise.com/assets/share.png?v=3">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/shell.css?v=153">
+<script src="/assets/games.js?v=95"></script>
+<script src="/assets/site.js?v=30"></script>
+<script src="/assets/shell.js?v=157"></script>
+<style>
+.days-list{list-style:none;margin:18px 0 8px;padding:0;display:grid;gap:12px}
+.dd{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px 14px;display:grid;gap:8px;min-width:0}
+.dd-today{background:#F1ECF8;border-left:4px solid var(--brand)}
+:root[data-theme="dark"] .dd-today{background:#2A2240}
+.dd-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.dd-pill{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--brand);color:#fff;font:600 12px var(--body);letter-spacing:.04em}
+:root[data-theme="dark"] .dd-pill{color:#16121F}
+.dd:not(.dd-today) .dd-pill{background:transparent;color:var(--brand);border:1px solid var(--line)}
+.dd-tag{display:inline-block;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:#6A4B00;font:600 11.5px var(--body)}
+:root[data-theme="dark"] .dd-tag{background:#3A3018;color:#F3DA97}
+.dd-body{display:flex;gap:12px;align-items:flex-start;min-width:0}
+.dd-ic{flex:none;width:56px;height:56px}
+.dd-tx{min-width:0;display:grid;gap:4px}
+.doc .dd h2{font:700 17px var(--title);line-height:1.25;margin:0;color:var(--ink);overflow-wrap:anywhere}
+.dd p{margin:0;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.dd-span{color:var(--muted);font-size:12.5px!important}
+.dd-also{color:var(--muted);font-size:13px!important}
+.dd a{color:var(--brand)}
+.dd-go{justify-self:start;margin-top:4px;font-weight:600;font-size:14px}
+.dd-quiet{background:var(--card)}
+.dd-empty{color:var(--muted)}
+@media (max-width:420px){.dd-ic{width:44px;height:44px}}
+</style>
+</head>
+<body>
+<main class="wrap doc">
+<h1>Upcoming health days</h1>
+<p class="lede">Every day has a theme: a world health day, an awareness week or a moment from medical history. Here’s today and the next 30 days.</p>
+<p class="note" id="days-mode"></p>
+<ol class="days-list" id="days-list" aria-live="polite"><li class="dd dd-empty"><p>Loading the calendar…</p></li></ol>
+<p class="note">Dates are Sydney time. Some days only show to visitors in the country that marks them. Links go to the organisers or a reputable source.</p>
+<div id="nl-slot"></div>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script>MW.page();</script>
+<script src="/days/days.js?v=1"></script>
+</body>
+</html>

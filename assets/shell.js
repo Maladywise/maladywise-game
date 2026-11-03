@@ -933,7 +933,7 @@
         '<section class="hday' + (lead.icon ? " has-ic" : "") + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : "") + '<span class="hday-k">' + (lead.kind === "week" ? "This week" : "Today") + "</span>" +
         "<h2>" + nm(lead) + "</h2><p>" + esc2(lead.blurb || "") + (themed ? " <b>Look out for themed puzzles today.</b>" : "") + "</p>" +
         (also.length ? '<p class="hday-also">Also: ' + also.map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + nm(x) + "</a>" : nm(x); }).join(", ") + "</p>" : "") +
-        (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + "</section>";
+        (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + '<a class="hday-up" href="/days/">Coming up \u203a</a>' + "</section>";
       slot.innerHTML = html;
     }
 
