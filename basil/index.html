@@ -23,9 +23,9 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/shell.css?v=150">
-<link rel="stylesheet" href="basil.css?v=18">
+<link rel="stylesheet" href="basil.css?v=19">
 <script src="../assets/games.js?v=94"></script>
-<script src="../assets/shell.js?v=153"></script>
+<script src="../assets/shell.js?v=154"></script>
 </head>
 <body>
 <main class="wrap bk-page">
@@ -35,22 +35,34 @@
     <h1>Basil + Clover</h1>
     <p class="bk-lede">Basil is a smug, fluffy white cat who kicks. Clover, the spicy little muffin, eats everything. Nothing is safe.</p>
     <p class="bk-how"><b>Tap</b> or <b>click</b> the items, or use the keys <b class="nw">← ↓ → ↑</b> or <b class="nw">A S D W</b>.</p>
+    <button class="bk-howbtn" type="button" id="bk-howbtn">How to play</button>
     <details class="bk-rules">
       <summary>How it works</summary>
       <h2>The campaign: 10 rounds</h2>
       <ul>
-        <li>Ten rounds, each adding <b>one new thing</b>. Basil kicks in his rounds; Clover eats in hers. Most rounds last 30 seconds.</li>
-        <li><b>1 Basil:</b> bench basics. Ordinary things only.</li>
-        <li><b>2 Clover:</b> snack time. Basil sneaks up from the sink: tap him.</li>
-        <li><b>3 Basil:</b> spiky things (don’t kick) and catnip.</li>
-        <li><b>4 Clover:</b> night falls. Zoomies and moths.</li>
-        <li><b>5 Boss:</b> the VAC-3000. Hit the glowing spots.</li>
-        <li><b>6 Basil:</b> the dog at the window (everything wobbles and falls faster) and steak treats. Watch for <b>sleeping hedgehogs</b>: leave them be. Kicking one costs a life. From here, tap closer to things.</li>
-        <li><b>7 Clover:</b> laser dot and hairballs. The bench is wet: things slide.</li>
-        <li><b>8 Basil:</b> turf war with the stray tom, and heavy things that need several kicks.</li>
-        <li><b>9 Clover:</b> the rainbow butterfly. Everyone’s yawning: some taps don’t land.</li>
-        <li><b>10 Basil, the 3AM finale:</b> everything at once, at night, top speed, 45 seconds and <b>one life</b>.</li>
+        <li><b>Everything is on from round 1</b>, just rare and slow. Every round is faster, things arrive more often, and every hazard, visitor and surprise turns up more. Round 10 is brutal. Not impossible. Brutal.</li>
+        <li>Basil kicks in rounds 1, 3, 6 and 8; Clover eats in 2, 4, 7 and 9. Most rounds last 30 seconds. Night falls in rounds 4–5 and 9–10.</li>
+        <li><b>Round 5: the VAC-3000</b>, a robot vacuum boss. <b>Round 10: the 3AM finale</b>, 40 seconds at top speed with <b>one life</b>, then the VAC-3000 comes back for revenge. Beat it to win.</li>
         <li>You start with <b>3 lives</b>. Each life is a full health bar: hit 0% and you lose a life, then both bars refill. Lose the last one and it’s game over.</li>
+      </ul>
+      <h2>The VAC-3000</h2>
+      <ul>
+        <li>Hit the <b>glowing weak spots</b> (brush, sensor, dust bin). Basil hits harder; Clover’s spots come back faster.</li>
+        <li><b>Charge:</b> it glows red and revs, then dashes at one cat. Tap that cat (or ← / → on its side) to jump over it, or lose 22%.</li>
+        <li><b>Suction:</b> it hoovers a cat in, tail first. Tap like mad to hold on, or lose 25%.</li>
+        <li>Survive either attack and it’s <b>stunned</b>: smash the exposed <b>core</b> for triple damage. It also eats the food Clover needs: tap the food first.</li>
+        <li>At half health it goes red, gets angry and speeds up. Destroy it for a big bonus, +30% health and (in round 5) an extra life.</li>
+      </ul>
+      <h2>Surprises</h2>
+      <ul>
+        <li><b>Cucumber</b> behind the cat: don’t tap anything for 2 seconds, or the cat leaps off the bench and takes everything with it. Hold your nerve for a bonus.</li>
+        <li><b>Open fridge</b> (Clover’s rounds): a feast of good food. Tap the door to shut it before Basil climbs in, or lose points and 3 seconds.</li>
+        <li><b>Thunderstorm:</b> it goes dark, and each lightning flash freezes the falling things for a second. Remember where they were.</li>
+        <li><b>Christmas tree</b> (more likely in December): tap the baubles off for points. Touch the star and the round fails.</li>
+        <li><b>Bath time:</b> a hand with a towel reaches in. Tap the cat (or ↑ / W) to flee, or get dried for 2 seconds.</li>
+        <li><b>Box drop:</b> both cats want it. Tap fast to fill the meter and settle it.</li>
+        <li><b>Toast trap:</b> Basil, don’t kick it: butter side down makes the bench slippery. Clover can eat it.</li>
+        <li><b>Treat shaker:</b> “shake shake”. Wait for <b>NOW</b>, then tap first for double points. Tap early, or on a fake-out, and you pay.</li>
       </ul>
       <h2>Points</h2>
       <ul>
@@ -62,7 +74,7 @@
       <h2>The win and endless mode</h2>
       <ul>
         <li>Survive the 3AM finale and you win: <b>+10,000 points</b>, a party on the bench and a 👑 next to your name on the leaderboard.</li>
-        <li>Winning unlocks <b>Endless</b>: the original never-ending game, everything on from the start, faster and faster until you drop.</li>
+        <li>Winning unlocks <b>Endless</b>: everything on from the start, faster and faster until you drop. The vacuum drops in every fifth round.</li>
       </ul>
       <h2>Combos</h2>
       <ul>
@@ -88,7 +100,7 @@
       </ul>
       <h2>Clover’s rounds</h2>
       <ul>
-        <li>Rounds 2, 4, 7 and 9 are Clover’s (in endless, every second round). She doesn’t kick. She eats, and gets visibly rounder with every bite (up to twice as wide).</li>
+        <li>Rounds 2, 4, 7 and 9 are Clover’s (in Endless, every second round). She doesn’t kick. She eats, and gets visibly rounder with every bite (up to twice as wide).</li>
         <li>Food: cat food, banana, steak, chicken drumstick, sausage, pizza. Let it sit and she gets <b>hungry</b> (-12% health). <b>Pineapple, coffee, grapes and garlic</b> (red no sign) cost her 20%: pointy, or not safe for cats.</li>
         <li>Every so often Basil sneaks up from either side to swipe her: <b>tap him</b> (or press ← or → on his side) to shoo him, or he steals points.</li>
       </ul>
@@ -99,21 +111,21 @@
         <li><b>Basil</b> (by his kick points): Fluffy white rat (0+), Basil Brown Pants (1,000+), Furby with Fangs (2,500+), Fat Basil (5,000+), Basil Blanket Biter (10,000+), Fat white seal (15,000+), Basil Bad Cat (40,000+), Albino Satan (100,000+).</li>
         <li><b>Clover</b> (by her nom points): Cute Clover (0+), Wiggle Butt (1,000+), The Whingapotamus (3,000+), Chief Complaints Officer (7,500+), Spicy Little Muffin (15,000+), Miss Piggy (30,000+), Clover Piggington (60,000+), Queen Piggington (100,000+).</li>
         <li>The cat on the bench has a slow-recharging rest coming: Clover naps during Basil’s rounds, Basil sulks in the sink during Clover’s.</li>
-        <li><b>Night falls</b> in rounds 4–5 and 9–10: the room dims and the moon comes out. At night the resting cat gets random bursts of <b>zoomies</b> and tears across the room. Tap them (or press ↑ / W) for <b>4 kicks’ worth</b>.</li>
+        <li><b>Zoomies:</b> the resting cat tears across the room. Tap them (or press ↑ / W) for <b>4 kicks’ worth</b>.</li>
         <li><b>Catnip</b> (rare): kick or eat it for 8 seconds of chaos. Anything safe that lands gets dealt with automatically.</li>
         <li><b>Rainbow butterfly</b> (very rare): it drifts across the top. Catch it (tap, ↑ or W) and <b>20 treats rain down</b> across the bench, each worth a kick.</li>
       </ul>
       <h2>Visitors and streaks</h2>
       <ul>
         <li><b>Stray tom</b> (turf war): a scruffy neighbour cat glares through the window. Tap him 3 times (or ↑ / W) in time for <b>6 kicks’ worth</b>. Too slow and he raids the bench: everything gone, no points, -15% health.</li>
-        <li><b>Dog at the window:</b> 5 seconds of panic. Every bark makes things wobble; new things arrive faster and fall faster.</li>
+        <li><b>Dog at the window:</b> WOOF! Everything shakes and falls <b>2× as fast</b> (3× from round 6 and in Endless) until the bar runs out. Tap the dog (or ↑ / W) and Basil hisses it away for points.</li>
         <li><b>Laser dot:</b> tap it 3 times for <b>5 kicks’ worth</b>. While it’s on, nobody can focus and the timers run faster.</li>
         <li><b>Hairball</b> (Clover’s rounds): she coughs one up. Tap it to bin it. Leave it and you lose 3 noms’ worth.</li>
         <li><b>Streak titles:</b> 6 in a row is a Menace, then Agent of Chaos (11), Kitchen Overlord (16), Gravity’s Favourite (26) and Unstoppable Fluff (41).</li>
       </ul>
       <h2>Daily challenge and leaderboards</h2>
       <ul>
-        <li><b>Daily challenge:</b> the 10-round campaign, with everyone getting the same items and surprises in the same order. New one at midnight, Sydney time.</li>
+        <li><b>Daily challenge:</b> the 10-round campaign, with everyone getting the same items in the same order. New one at midnight, Sydney time.</li>
         <li>Make the top 10 and you can post your name to the <b>world</b> or <b>today’s</b> leaderboard. Names are public, so keep it clean.</li>
         <li>Pause with the button, P or Esc.</li>
       </ul>
@@ -131,6 +143,7 @@
       <div class="bk-time"><small>Points</small><b id="bk-score">0</b></div>
       <span class="bk-cof" id="bk-combo"></span>
       <span class="bk-lives" id="bk-lives" aria-label="Lives"></span>
+      <button class="bk-ibtn" type="button" id="bk-helpbtn" aria-label="How to play">?</button>
       <button class="bk-ibtn" type="button" id="bk-pause" aria-label="Pause">&#10074;&#10074;</button>
     </div>
     <div class="bk-stage" id="bk-stage">
@@ -160,9 +173,36 @@
     <p class="bk-foot"><a href="/">&larr; Back to the puzzles</a></p>
   </section>
 
+  <div class="bk-help" id="bk-help" role="dialog" aria-modal="true" aria-labelledby="bk-help-h" hidden>
+    <div class="bk-hcard">
+      <button class="bk-hx" type="button" id="bk-hx" aria-label="Close">&times;</button>
+      <h2 id="bk-help-h">How to play</h2>
+      <div class="bk-htabs" role="tablist"><button type="button" role="tab" data-p="0" aria-selected="true">The basics</button><button type="button" role="tab" data-p="1" aria-selected="false">Surprises</button></div>
+      <ul class="bk-hp" data-p="0">
+        <li><b>Tap</b> a thing (or ← ↓ →). Basil kicks it off. Clover eats it. <b>↑ / W</b> grabs whatever’s flying.</li>
+        <li><b>Red ⦸ = hands off:</b> spiky things, toxic food, wasps, sleeping hedgehogs.</li>
+        <li><b>Everything’s on from round 1</b>, just slow. Every round is faster and busier. Round 10 is 3AM, with one life.</li>
+        <li><b>The dog:</b> WOOF = everything falls 2× faster (3× from round 6) till the bar runs out. Tap the dog and Basil hisses it off.</li>
+        <li><b>VAC-3000</b> (round 5 and the finale): hit the glowing spots. Red glow = charge, so tap that cat to jump. Suction? Tap like mad. Then smash the core. Grab Clover’s food before it does.</li>
+        <li><b>3 lives</b>, each a full health bar. Beat round 10 for a 👑 and Endless.</li>
+      </ul>
+      <ul class="bk-hp" data-p="1" hidden>
+        <li><b>Cucumber:</b> don’t tap a thing for 2 s.</li>
+        <li><b>Fridge:</b> Clover feasts. Shut the door before Basil climbs in.</li>
+        <li><b>Thunderstorm:</b> flashes freeze things. Remember where.</li>
+        <li><b>Christmas tree:</b> baubles, yes. The star? Round over.</li>
+        <li><b>Bath time:</b> tap the cat to flee the towel.</li>
+        <li><b>Box:</b> tap fast to settle who gets it.</li>
+        <li><b>Toast:</b> Basil, don’t kick it (butter = slippery). Clover, eat it.</li>
+        <li><b>Treat shaker:</b> wait for NOW, then tap. Too early costs you.</li>
+      </ul>
+      <button class="bk-hgo" type="button" id="bk-hgo">Got it</button>
+    </div>
+  </div>
+
   <footer class="site">A bonus game. No cats were harmed. Several mugs were.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="basil.js?v=42"></script>
+<script src="basil.js?v=43"></script>
 </body>
 </html>
