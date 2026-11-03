@@ -687,6 +687,8 @@
   }
 
   // ---------- top menu (MW_HOME.nav in site.js): links and dropdown groups ----------
+  // Specialists directory is Newcastle/Hunter only: show the link to NSW/ACT time zone (closest a browser can tell without asking for location)
+  function inLocal() { try { return (Intl.DateTimeFormat().resolvedOptions().timeZone || "") === "Australia/Sydney"; } catch (e) { return false; } }
   function inAU() { try { if (/^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "")) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
   function navHere(href) {
     var p = location.pathname.replace(/index\.html$/, "");
@@ -699,7 +701,7 @@
     var n = 0;
     return MW_HOME.nav.filter(function (it) { return !(NORMIE && it.medical); }).map(function (it) {
       if (!it.items) return '<a class="navlink' + (navHere(it.href) ? " on" : "") + '" href="' + it.href + '"' + (navHere(it.href) ? ' aria-current="page"' : "") + ">" + (NORMIE && it.tn ? it.tn : it.t) + "</a>";
-      var sub = it.items.filter(function (x) { return !(x.au && !inAU()); }), on = sub.some(function (x) { return navHere(x.href); }), id = "mw-dd" + (n++);
+      var sub = it.items.filter(function (x) { return !(x.au && !inLocal()); }), on = sub.some(function (x) { return navHere(x.href); }), id = "mw-dd" + (n++);
       return '<div class="nav-dd' + (on ? " on" : "") + '"><button type="button" class="navlink nav-btn' + (on ? " on" : "") + '" aria-expanded="false" aria-controls="' + id + '">' + it.t +
         '<svg class="nav-car" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
         '<div class="nav-sub" id="' + id + '" role="group" aria-label="' + it.t + '">' + sub.map(function (x) { var h = navHere(x.href); return '<a href="' + x.href + '"' + (h ? ' class="on" aria-current="page"' : "") + "><b>" + x.t + "</b>" + (x.d ? "<span>" + x.d + "</span>" : "") + "</a>"; }).join("") + "</div></div>";

@@ -8,7 +8,7 @@ window.MW_HOME = {
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
-      { t: "Specialists", href: "/specialists/", d: "Find one near you", au: true }
+      { t: "Specialists", href: "/specialists/", d: "Newcastle and Hunter", au: true }
     ] },
     { t: "For doctors", medical: true, items: [
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
@@ -26,9 +26,9 @@ window.MW_HOME = {
   groups: [
     { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "morphemia", "gridectomy", "suturix"] },
     { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["glimpsis", "opacitis", "labelosis", "panelysis", "arrhythmix"] },
-    { id: "think", t: "Think like a doctor", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis", "sudokrine"] },
+    { id: "think", t: "Think like a doctor", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis"] },
     { id: "weekly", t: "Weekly", d: "Bigger puzzles, fewer days.", games: ["grandrounds", "cryptogenic"] },
-    { id: "bonus", t: "Bonus", d: "No medicine. Just cats.", dn: "Just cats. Causing chaos.", basil: true }
+    { id: "bonus", t: "Just for fun", d: "Sudoku and cats. Low stakes.", dn: "Sudoku and cats. Low stakes.", games: ["sudokrine"], basil: true }
   ],
   sections: []
 };
