@@ -1299,107 +1299,107 @@
   "date": "2026-11-05",
   "number": 13,
   "difficulty": "Medium",
-  "theme": "Geography gone weird",
+  "theme": "Ride the warning, not the wave",
   "questions": [
    {
-    "q": "Which country covers the most time zones, counting territories?",
-    "a": "France",
+    "q": "Today is World Tsunami Awareness Day. \u2018Tsunami\u2019 is Japanese for?",
+    "a": "Harbour wave",
     "w": [
-     "Russia",
-     "USA",
-     "China"
+     "Tidal wave",
+     "Sea monster",
+     "Long water"
     ],
-    "e": "Thanks to islands everywhere. China, huge as it is, uses just one."
+    "e": "Fishers would come home to a wrecked harbour after barely noticing a thing at sea. Tsunamis have nothing to do with tides."
    },
    {
-    "q": "Which country has the most natural lakes?",
-    "a": "Canada",
+    "q": "If the sea suddenly pulls back far from the beach, you should?",
+    "a": "Head for high ground straight away",
     "w": [
-     "Finland",
-     "Russia",
-     "USA"
+     "Go and look at the exposed sea floor",
+     "Wait for an official alert",
+     "Climb into your car and watch"
     ],
-    "e": "Finland is \u2018the land of a thousand lakes\u2019. Canada has way more."
+    "e": "The drawback can come minutes before the wave. Natural warnings beat waiting for a siren."
    },
    {
-    "q": "What is the world\u2019s largest desert?",
-    "a": "Antarctica",
+    "q": "Out in the deep ocean, a tsunami can travel about as fast as?",
+    "a": "A jet plane",
     "w": [
-     "Sahara",
-     "Arabian",
-     "Gobi"
+     "A cyclist",
+     "A car on the motorway",
+     "A speedboat"
     ],
-    "e": "Deserts are about dryness, not heat. The Sahara gets bronze-level sulking."
+    "e": "Up to about 800 km/h. It slows and grows taller as it reaches shallow water."
    },
    {
-    "q": "At their closest, Russia and the USA are about how far apart?",
-    "a": "4 km",
+    "q": "Why might a ship far out at sea barely notice a tsunami pass underneath?",
+    "a": "The wave is low but extremely long",
     "w": [
-     "40 km",
-     "400 km",
-     "4000 km"
+     "Tsunamis only form near the coast",
+     "Ships float above the water",
+     "It travels underground"
     ],
-    "e": "Two Diomede islands in the Bering Strait. Also almost a day apart in time."
+    "e": "In deep water it may be under a metre high, but the wave can be hundreds of kilometres long."
    },
    {
-    "q": "Point Nemo, the most remote spot in the ocean, is used as a?",
-    "a": "Spacecraft graveyard",
+    "q": "World Tsunami Awareness Day remembers a Japanese villager who, in 1854, warned everyone by?",
+    "a": "Setting fire to his rice harvest",
     "w": [
-     "Whale nursery",
-     "Submarine base",
-     "Shipping lane"
+     "Ringing the temple bell",
+     "Riding a horse through town",
+     "Firing a cannon"
     ],
-    "e": "Dead satellites get crashed there. The nearest humans are often astronauts."
+    "e": "The story is \u2018Inamura-no-hi\u2019. People ran uphill to fight the fire, and away from the wave."
    },
    {
-    "q": "Which mountain\u2019s summit is the farthest point from Earth\u2019s centre?",
-    "a": "Chimborazo",
+    "q": "In 2004, 10-year-old Tilly Smith saved about 100 people on a beach in Thailand because she remembered?",
+    "a": "A geography lesson about tsunamis",
     "w": [
-     "Everest",
-     "K2",
-     "Kilimanjaro"
+     "A film she\u2019d watched",
+     "Her grandmother\u2019s story",
+     "A sign at the hotel"
     ],
-    "e": "Earth bulges at the equator, giving this Ecuadorian peak the edge. Everest is taller from sea level."
+    "e": "She saw the frothing, retreating sea and told her parents. The beach was cleared just in time."
    },
    {
-    "q": "Which major river crosses the Equator twice?",
-    "a": "Congo",
+    "q": "Roughly what share of the world\u2019s tsunamis happen in the Pacific Ocean?",
+    "a": "About 80%",
     "w": [
-     "Nile",
-     "Amazon",
-     "Niger"
+     "About 20%",
+     "About 50%",
+     "Nearly all"
     ],
-    "e": "It loops north and then back south of the line on its way to the Atlantic."
+    "e": "The Pacific is ringed by subduction zones, the \u2018Ring of Fire\u2019."
    },
    {
-    "q": "Which is wider: Australia or the Moon?",
-    "a": "Australia",
+    "q": "The Pacific Tsunami Warning Center is based in which US state?",
+    "a": "Hawaii",
     "w": [
-     "The Moon",
-     "They\u2019re exactly equal",
-     "Depends on the season"
+     "Alaska",
+     "California",
+     "Washington"
     ],
-    "e": "Australia is about 4000 km wide. The Moon is about 3500 km across."
+    "e": "It was set up after a 1946 tsunami killed over 150 people in Hawaii."
    },
    {
-    "q": "Which country is completely surrounded by South Africa?",
-    "a": "Lesotho",
+    "q": "Besides the sea pulling back, another natural warning sign is?",
+    "a": "A loud roar from the ocean",
     "w": [
-     "Eswatini",
-     "Botswana",
-     "Namibia"
+     "Birds singing louder",
+     "The water turning bright blue",
+     "A sudden heatwave"
     ],
-    "e": "Eswatini also borders Mozambique. Lesotho is fully hugged."
+    "e": "Survivors often describe a sound like a train or a jet."
    },
    {
-    "q": "What is the world\u2019s smallest country?",
-    "a": "Vatican City",
+    "q": "What usually causes a tsunami?",
+    "a": "An undersea earthquake",
     "w": [
-     "Monaco",
-     "San Marino",
-     "Liechtenstein"
+     "A strong wind",
+     "The Moon\u2019s pull",
+     "A big storm"
     ],
-    "e": "Smaller than many golf courses. Monaco is a distant second."
+    "e": "Landslides, volcanoes and even meteorites can do it too, but earthquakes are the usual culprit."
    }
   ]
  },
@@ -1515,107 +1515,107 @@
   "date": "2026-11-07",
   "number": 15,
   "difficulty": "Hard",
-  "theme": "Invisible forces at home",
+  "theme": "Marie Curie\u2019s birthday",
   "questions": [
    {
-    "q": "The microwave oven was invented after a radar engineer noticed?",
-    "a": "A chocolate bar melted in his pocket",
+    "q": "Marie Curie was born on this day in 1867 in which city?",
+    "a": "Warsaw",
     "w": [
-     "His coffee boiled by itself",
-     "His watch stopped",
-     "His hair stood on end"
+     "Paris",
+     "Krak\u00f3w",
+     "Vienna"
     ],
-    "e": "Percy Spencer, 1945. Popcorn was one of the first things he tried."
+    "e": "Poland was then under Russian rule, and women couldn\u2019t go to university there."
    },
    {
-    "q": "Which everyday fruit is very slightly radioactive?",
-    "a": "Bananas",
+    "q": "What was Marie Curie\u2019s name at birth?",
+    "a": "Maria Sk\u0142odowska",
     "w": [
-     "Apples",
-     "Grapes",
-     "Lemons"
+     "Marie Dupont",
+     "Maria Kowalska",
+     "Marie R\u00f6ntgen"
     ],
-    "e": "Thanks to potassium. You'd need to eat millions at once to worry."
+    "e": "She kept Sk\u0142odowska as part of her name all her life."
    },
    {
-    "q": "Many home smoke alarms contain a tiny amount of?",
-    "a": "Radioactive americium",
+    "q": "Marie and Pierre Curie named the element polonium after?",
+    "a": "Poland",
     "w": [
-     "Mercury",
-     "Uranium",
-     "Liquid nitrogen"
+     "A Greek goddess",
+     "Their daughter",
+     "The Pole Star"
     ],
-    "e": "It helps the alarm sense smoke particles. The amount is very small and sealed in."
+    "e": "A political statement: Poland didn\u2019t exist as a country at the time."
    },
    {
-    "q": "The 'Radium Girls' of the 1920s were?",
-    "a": "Factory workers poisoned by glowing watch paint",
+    "q": "In 1903 Marie Curie became the first woman to win?",
+    "a": "A Nobel Prize",
     "w": [
-     "A jazz band",
-     "Early female pilots",
-     "Nurses in World War I"
+     "A seat in parliament",
+     "An Olympic medal",
+     "A French university chair"
     ],
-    "e": "They were told to lick their brushes to a point. Their court cases changed workplace safety."
+    "e": "She won again in 1911, the first person to win two Nobel Prizes."
    },
    {
-    "q": "An MRI scanner's magnet is so strong it can?",
-    "a": "Pull metal objects like oxygen cylinders across the room",
+    "q": "Which of her daughters also won a Nobel Prize?",
+    "a": "Ir\u00e8ne",
     "w": [
-     "Wipe your memories",
-     "Make hair permanently curly",
-     "Turn coins into magnets forever"
+     "\u00c8ve",
+     "H\u00e9l\u00e8ne",
+     "Marguerite"
     ],
-    "e": "That's why everyone gets checked for metal first."
+    "e": "Ir\u00e8ne shared the 1935 Chemistry prize with her husband. \u00c8ve became a writer."
    },
    {
-    "q": "Why do MRI scanners bang and buzz so loudly?",
-    "a": "Coils inside vibrate as the magnetic field switches",
+    "q": "Why are Marie Curie\u2019s lab notebooks kept in lead-lined boxes?",
+    "a": "They are still radioactive",
     "w": [
-     "A fan cools the patient",
-     "The bed is moving",
-     "It's a recording to keep you awake"
+     "They are very fragile",
+     "They are valuable to thieves",
+     "They are written in invisible ink"
     ],
-    "e": "The scanner\u2019s gradient coils switch rapidly. In a strong magnetic field they vibrate, which makes the loud banging and buzzing."
+    "e": "Readers in Paris have to sign a waiver and wear protective gear."
    },
    {
-    "q": "Medical ultrasound uses sound that is?",
-    "a": "Too high-pitched for humans to hear",
+    "q": "In World War I, Marie Curie set up mobile X-ray vans nicknamed?",
+    "a": "Petites Curies",
     "w": [
-     "Too low for humans to hear",
-     "As loud as a rock concert",
-     "Exactly middle C"
+     "Curie Cars",
+     "Radium Wagons",
+     "X-ray Express"
     ],
-    "e": "Medical ultrasound uses frequencies of millions of vibrations per second, far above human hearing, which tops out around 20,000."
+    "e": "She learnt to drive and trained 150 women to run the machines."
    },
    {
-    "q": "Which animal 'sees' with sound, using the same physics as ultrasound?",
-    "a": "Bats",
+    "q": "In 1995, she became the first woman buried on her own merits in which Paris monument?",
+    "a": "The Panth\u00e9on",
     "w": [
-     "Owls",
-     "Cats",
-     "Moles"
+     "Notre-Dame",
+     "The Louvre",
+     "Les Invalides"
     ],
-    "e": "Dolphins do it too."
+    "e": "Her ashes and Pierre\u2019s were moved there together."
    },
    {
-    "q": "Glow-in-the-dark ceiling stars work by?",
-    "a": "Storing light and releasing it slowly",
+    "q": "How did Pierre Curie die in 1906?",
+    "a": "Hit by a horse-drawn wagon",
     "w": [
-     "Being slightly radioactive",
-     "Hiding tiny batteries",
-     "Containing glowing bacteria"
+     "In a lab explosion",
+     "From radiation sickness",
+     "In a train crash"
     ],
-    "e": "Old watch dials really did use radium. Modern stars don't."
+    "e": "He slipped in the rain on a busy Paris street."
    },
    {
-    "q": "The unit of magnetic field strength used for MRI scanners is named after?",
-    "a": "Nikola Tesla",
+    "q": "Marie Curie died in 1934 from a blood condition, probably caused by?",
+    "a": "Years of radiation exposure",
     "w": [
-     "Thomas Edison",
-     "Albert Einstein",
-     "Isaac Newton"
+     "Lead in her water",
+     "A tropical infection",
+     "Too much coffee"
     ],
-    "e": "Most hospital scanners are 1.5 or 3 tesla."
+    "e": "She often carried radium in her coat pockets. Nobody knew the danger then."
    }
   ]
  },
@@ -1731,107 +1731,107 @@
   "date": "2026-11-09",
   "number": 17,
   "difficulty": "Easy",
-  "theme": "Australia is weird",
+  "theme": "Carl Sagan\u2019s birthday",
   "questions": [
    {
-    "q": "Why was Canberra built as the capital?",
-    "a": "Sydney and Melbourne couldn\u2019t agree",
+    "q": "Astronomer Carl Sagan, born on this day in 1934, presented which 1980 TV series?",
+    "a": "Cosmos",
     "w": [
-     "Gold was found there",
-     "It was the geographic centre",
-     "The Queen picked it"
+     "The Sky at Night",
+     "Planet Earth",
+     "Star Trek"
     ],
-    "e": "A compromise city, built between the two bickering siblings."
+    "e": "Hundreds of millions of people have watched it."
    },
    {
-    "q": "The Dingo Fence is roughly how long?",
-    "a": "5600 km",
+    "q": "The famous \u2018Pale Blue Dot\u2019 photo, showing Earth as a speck, was taken by?",
+    "a": "Voyager 1",
     "w": [
-     "560 km",
-     "56 km",
-     "56,000 km"
+     "Hubble",
+     "Apollo 11",
+     "The Mars rover"
     ],
-    "e": "One of the longest fences on Earth. The dingoes are unimpressed."
+    "e": "In 1990, from about 6 billion km away. Sagan asked NASA to turn the camera round."
    },
    {
-    "q": "Australia has the world\u2019s largest wild population of?",
-    "a": "Camels",
+    "q": "Sagan\u2019s team chose what to send into space on the Voyager \u2018Golden Record\u2019?",
+    "a": "Sounds and music from Earth",
     "w": [
-     "Horses",
-     "Water buffalo",
-     "Goats"
+     "Seeds of every plant",
+     "A map of every city",
+     "Samples of human DNA"
     ],
-    "e": "Brought in for outback transport, then released. Now there are a lot."
+    "e": "Bach, Chuck Berry, whale song, a baby\u2019s cry and greetings in 55 languages."
    },
    {
-    "q": "The Great Barrier Reef, the world\u2019s biggest reef system, was built by?",
-    "a": "Tiny coral polyps",
+    "q": "Sagan said \u2018We are made of star-stuff\u2019. He meant?",
+    "a": "The atoms in our bodies were made in stars",
     "w": [
-     "Volcanoes",
-     "Oysters",
-     "Ancient sea walls"
+     "Humans came from another planet",
+     "We glow in the dark",
+     "Stars are alive"
     ],
-    "e": "Billions of tiny animals, building limestone skeletons for thousands of years. Big enough to see from space."
+    "e": "The carbon, oxygen and iron in you were forged in long-dead stars."
    },
    {
-    "q": "Kangaroos find it almost impossible to?",
-    "a": "Walk backwards",
+    "q": "Sagan studied which planet, helping show its scorching heat comes from a runaway greenhouse effect?",
+    "a": "Venus",
     "w": [
-     "Swim",
-     "Jump",
-     "Sleep lying down"
+     "Mars",
+     "Mercury",
+     "Jupiter"
     ],
-    "e": "It\u2019s partly why the kangaroo and emu are on Australia\u2019s coat of arms: both are said to only go forward."
+    "e": "Its surface is hotter than Mercury\u2019s, even though it\u2019s further from the Sun."
    },
    {
-    "q": "Vegemite is made mainly from?",
-    "a": "Leftover brewer\u2019s yeast",
+    "q": "Sagan\u2019s novel Contact became a 1997 film starring?",
+    "a": "Jodie Foster",
     "w": [
-     "Molasses",
-     "Burnt toast",
-     "Soy paste"
+     "Sandra Bullock",
+     "Sigourney Weaver",
+     "Meryl Streep"
     ],
-    "e": "A by-product of beer. Spread thinly, or regret it."
+    "e": "She plays an astronomer who picks up a signal from space."
    },
    {
-    "q": "Male lyrebirds are famous for mimicking?",
-    "a": "Chainsaws and camera shutters",
+    "q": "Who co-wrote Cosmos and later married Sagan?",
+    "a": "Ann Druyan",
     "w": [
-     "Human laughter only",
-     "Thunder",
-     "Car horns only"
+     "Jane Goodall",
+     "Sally Ride",
+     "Carolyn Porco"
     ],
-    "e": "They copy other birds too, sometimes 20 species in a single song."
+    "e": "She was also creative director of the Golden Record project."
    },
    {
-    "q": "Roughly how many tiles cover the Sydney Opera House roof?",
-    "a": "Over a million",
+    "q": "Sagan never actually said \u2018billions and billions\u2019 on Cosmos. The phrase came from?",
+    "a": "Johnny Carson impersonating him",
     "w": [
-     "About 10,000",
-     "About 100,000",
-     "About 50 million"
+     "A cereal advert",
+     "Neil Armstrong",
+     "A Simpsons episode"
     ],
-    "e": "1,056,006 of them, made in Sweden. Self-cleaning, too."
+    "e": "Sagan eventually gave in and used it as a book title."
    },
    {
-    "q": "The Trans-Australian Railway across the Nullarbor has the world\u2019s longest straight stretch, about?",
-    "a": "478 km",
+    "q": "What is the name of our galaxy?",
+    "a": "The Milky Way",
     "w": [
-     "48 km",
-     "150 km",
-     "1000 km"
+     "Andromeda",
+     "The Whirlpool",
+     "The Sombrero"
     ],
-    "e": "Not a single curve. Drivers stay awake somehow."
+    "e": "Sagan loved reminding us it holds hundreds of billions of stars. Andromeda is our big neighbour."
    },
    {
-    "q": "Climbing Uluru was banned in 2019, out of respect for its Traditional Owners, the?",
-    "a": "Anangu",
+    "q": "Which is the nearest star to the Sun?",
+    "a": "Proxima Centauri",
     "w": [
-     "Noongar",
-     "Yol\u014bu",
-     "Wiradjuri"
+     "Sirius",
+     "Polaris",
+     "Betelgeuse"
     ],
-    "e": "Uluru, in the Northern Territory, is sacred to the Anangu. It was handed back to them in 1985."
+    "e": "About 4.2 light years away. Still a very long drive."
    }
   ]
  },
@@ -1839,107 +1839,107 @@
   "date": "2026-11-10",
   "number": 18,
   "difficulty": "Easy",
-  "theme": "TV trivia",
+  "theme": "Experiments that changed everything",
   "questions": [
    {
-    "q": "What is the name of Jon Snow\u2019s direwolf in Game of Thrones?",
-    "a": "Ghost",
+    "q": "Today is World Science Day. Which Greek scientist supposedly shouted \u2018Eureka!\u2019 in his bath?",
+    "a": "Archimedes",
     "w": [
-     "Shadow",
-     "Winter",
-     "Grey Wind"
+     "Pythagoras",
+     "Aristotle",
+     "Euclid"
     ],
-    "e": "The white runt of the litter. Fans felt he deserved more screen time and at least one hug."
+    "e": "He\u2019d worked out how to measure the volume of a crown by how much water it pushed out."
    },
    {
-    "q": "Which Simpsons catchphrase made it into the Oxford English Dictionary?",
-    "a": "D\u2019oh!",
+    "q": "Benjamin Franklin\u2019s famous 1752 experiment used?",
+    "a": "A kite in a thunderstorm",
     "w": [
-     "Ay, caramba!",
-     "Eat my shorts!",
-     "Excellent!"
+     "A frog\u2019s leg",
+     "A glass prism",
+     "An apple tree"
     ],
-    "e": "Added in 2001. Homer, lexicographer."
+    "e": "It showed lightning is electricity. Do not try this at home."
    },
    {
-    "q": "What breed of dog is Bluey?",
-    "a": "Blue Heeler",
+    "q": "Gregor Mendel worked out the basic rules of inheritance by breeding?",
+    "a": "Pea plants",
     "w": [
-     "Kelpie",
-     "Border Collie",
-     "Dingo"
+     "Rabbits",
+     "Fruit flies",
+     "Pigeons"
     ],
-    "e": "An Australian Cattle Dog. Her dad Bandit is one too."
+    "e": "He grew nearly 30,000 pea plants in a monastery garden."
    },
    {
-    "q": "Squid Game comes from which country?",
-    "a": "South Korea",
+    "q": "Dolly the sheep, the first mammal cloned from an adult cell, was named after?",
+    "a": "Dolly Parton",
     "w": [
-     "Japan",
-     "China",
-     "Thailand"
+     "A Scottish queen",
+     "The scientist\u2019s mother",
+     "A children\u2019s book"
     ],
-    "e": "Netflix\u2019s most-watched series ever. The creator spent ten years trying to get it made."
+    "e": "The cell came from a mammary gland. Scientists have a sense of humour."
    },
    {
-    "q": "What is the coffee shop in Friends called?",
-    "a": "Central Perk",
+    "q": "The word \u2018vaccine\u2019 comes from the Latin word for?",
+    "a": "Cow",
     "w": [
-     "MacLaren\u2019s",
-     "Monk\u2019s Caf\u00e9",
-     "The Bronze"
+     "Needle",
+     "Protect",
+     "Poison"
     ],
-    "e": "MacLaren\u2019s is a bar from How I Met Your Mother. Different couch."
+    "e": "Vacca. The first vaccine used cowpox to protect against smallpox."
    },
    {
-    "q": "What is Doctor Who\u2019s time machine called?",
-    "a": "TARDIS",
+    "q": "Ivan Pavlov showed that dogs could be trained to?",
+    "a": "Drool at a signal before food arrived",
     "w": [
-     "DeLorean",
-     "Enterprise",
-     "Millennium Falcon"
+     "Count to ten",
+     "Fetch on command",
+     "Recognise faces"
     ],
-    "e": "Time And Relative Dimension In Space. Bigger on the inside."
+    "e": "He used sounds like a metronome or buzzer to signal food. The dogs learnt fast."
    },
    {
-    "q": "The first official TV advert, in the US in 1941, was for?",
-    "a": "A watch",
+    "q": "New Zealander Ernest Rutherford\u2019s gold foil experiment revealed?",
+    "a": "The nucleus at the centre of the atom",
     "w": [
-     "Cigarettes",
-     "Soap",
-     "A car"
+     "The electron",
+     "Radioactivity",
+     "Gravity waves"
     ],
-    "e": "A Bulova clock face for about ten seconds. Advertising has grown louder since."
+    "e": "He said it was like firing a shell at tissue paper and having it bounce back."
    },
    {
-    "q": "In Breaking Bad, what alias does Walter White use?",
-    "a": "Heisenberg",
+    "q": "Which scientist\u2019s \u2018Photo 51\u2019 revealed DNA\u2019s twisted shape?",
+    "a": "Rosalind Franklin",
     "w": [
-     "Einstein",
-     "Newton",
-     "Oppenheimer"
+     "Marie Curie",
+     "Ada Lovelace",
+     "Dorothy Hodgkin"
     ],
-    "e": "Named after a physicist. Chemistry teachers, take note."
+    "e": "She was left out of the 1962 Nobel Prize. She\u2019d died in 1958, and Nobels aren\u2019t given after death."
    },
    {
-    "q": "Stranger Things is set in which fictional town?",
-    "a": "Hawkins, Indiana",
+    "q": "Alexander Fleming found penicillin in 1928 after he left some dishes out while he?",
+    "a": "Went on holiday",
     "w": [
-     "Twin Peaks, Washington",
-     "Derry, Maine",
-     "Springfield, Ohio"
+     "Was at a football match",
+     "Was in hospital",
+     "Went to lunch"
     ],
-    "e": "Home of the Upside Down, a suspicious lab and an excellent arcade."
+    "e": "He came back to find mould killing his bacteria. Messy desks for the win."
    },
    {
-    "q": "David Brent is the boss in which show?",
-    "a": "The Office (UK)",
+    "q": "Isaac Newton\u2019s famous apple story is linked to his ideas about?",
+    "a": "Gravity",
     "w": [
-     "Extras",
-     "Peep Show",
-     "The IT Crowd"
+     "Light",
+     "Magnetism",
+     "Sound"
     ],
-    "e": "Before America got Michael Scott, Slough had David Brent."
+    "e": "He told it himself in old age, though probably not as a bonk on the head."
    }
   ]
  },
@@ -2163,107 +2163,107 @@
   "date": "2026-11-13",
   "number": 21,
   "difficulty": "Hard",
-  "theme": "Friday the 13th",
+  "theme": "Be kind",
   "questions": [
    {
-    "q": "Fear of the number 13 is called?",
-    "a": "Triskaidekaphobia",
+    "q": "World Kindness Day was first held on 13 November in which year?",
+    "a": "1998",
     "w": [
-     "Hexakosioihexekontahexaphobia",
-     "Tetraphobia",
-     "Arithmophobia"
+     "1978",
+     "1988",
+     "2008"
     ],
-    "e": "Fear of Friday the 13th has its own word too: paraskevidekatriaphobia. Happy Friday."
+    "e": "It was launched by the World Kindness Movement."
    },
    {
-    "q": "Breaking a mirror supposedly brings how many years of bad luck?",
-    "a": "Seven",
+    "q": "The World Kindness Movement grew out of a 1997 conference in which city?",
+    "a": "Tokyo",
     "w": [
-     "Three",
-     "Ten",
-     "Thirteen"
+     "Singapore",
+     "Toronto",
+     "Sydney"
     ],
-    "e": "Seven years, plus the cost of a new mirror."
+    "e": "Japan\u2019s Small Kindness Movement hosted it."
    },
    {
-    "q": "In Japan and China, which number is unlucky because it sounds like \u2018death\u2019?",
-    "a": "Four",
+    "q": "\u2018Practise random kindness and senseless acts of beauty\u2019 was first written in 1982 on a?",
+    "a": "Restaurant placemat",
     "w": [
-     "Thirteen",
-     "Six",
-     "Eight"
+     "Toilet door",
+     "Bus ticket",
+     "Birthday cake"
     ],
-    "e": "Some buildings skip the 4th floor entirely. Eight is the lucky one."
+    "e": "Writer Anne Herbert scribbled it in a caf\u00e9 near San Francisco. It spread for decades."
    },
    {
-    "q": "In Italy, which number is traditionally unlucky?",
-    "a": "17",
+    "q": "\u2018Caff\u00e8 sospeso\u2019, paying for an extra coffee for a stranger, began in which Italian city?",
+    "a": "Naples",
     "w": [
-     "13",
-     "4",
-     "9"
+     "Rome",
+     "Milan",
+     "Venice"
     ],
-    "e": "XVII rearranges to VIXI, Latin for \u2018I have lived\u2019. Ominous."
+    "e": "A \u2018suspended coffee\u2019 waits behind the bar for someone who can\u2019t afford one."
    },
    {
-    "q": "In Spain and much of Latin America, the unlucky day is?",
-    "a": "Tuesday the 13th",
+    "q": "Which hormone, released by hugs and kind acts, is nicknamed the \u2018cuddle hormone\u2019?",
+    "a": "Oxytocin",
     "w": [
-     "Friday the 13th",
-     "Monday the 13th",
-     "Wednesday the 13th"
+     "Adrenaline",
+     "Cortisol",
+     "Melatonin"
     ],
-    "e": "Today would be fine there. Tuesday is when they hide."
+    "e": "It also helps with childbirth and breastfeeding."
    },
    {
-    "q": "Which number is famously lucky in Chinese culture because it sounds like \u2018prosper\u2019?",
-    "a": "Eight",
+    "q": "Which Aesop\u2019s fable ends with \u2018No act of kindness, however small, is ever wasted\u2019?",
+    "a": "The Lion and the Mouse",
     "w": [
-     "Four",
-     "Seven",
-     "Three"
+     "The Tortoise and the Hare",
+     "The Fox and the Grapes",
+     "The Ant and the Grasshopper"
     ],
-    "e": "The Beijing Olympics opened at 8pm on 8/8/08. No coincidence."
+    "e": "The tiny mouse chews through the net that traps the lion."
    },
    {
-    "q": "In Britain and Australia, \u2018knock on wood\u2019 is usually said as?",
-    "a": "Touch wood",
+    "q": "TV host Fred Rogers said his mother told him that in scary news, you should look for the?",
+    "a": "Helpers",
     "w": [
-     "Tap the timber",
-     "Bless the wood",
-     "Wood for luck"
+     "Exits",
+     "Heroes",
+     "Good guys"
     ],
-    "e": "Same idea. Less knocking, more touching."
+    "e": "\u2018You will always find people who are helping.\u2019"
    },
    {
-    "q": "Spilt salt is traditionally thrown over which shoulder?",
-    "a": "Left",
+    "q": "In a 2008 study, people given a small amount of cash ended up happiest if they spent it?",
+    "a": "On someone else",
     "w": [
-     "Right",
-     "Both",
-     "Neither"
+     "On themselves",
+     "On savings",
+     "On lottery tickets"
     ],
-    "e": "Supposedly into the eye of the devil lurking there. Rude, but effective."
+    "e": "Even $5 spent on someone else lifted people\u2019s mood more."
    },
    {
-    "q": "Which Shakespeare play\u2019s name is considered unlucky to say inside a theatre?",
-    "a": "Macbeth",
+    "q": "The good feeling some people get after helping others has been nicknamed the?",
+    "a": "Helper\u2019s high",
     "w": [
-     "Hamlet",
-     "King Lear",
-     "Othello"
+     "Kindness rush",
+     "Giver\u2019s glow",
+     "Do-gooder buzz"
     ],
-    "e": "Actors call it \u2018the Scottish play\u2019. Say it, and you may be sent outside to spin."
+    "e": "Volunteers describe a warm calm afterwards. Better than most energy drinks."
    },
    {
-    "q": "What do actors traditionally say instead of \u2018good luck\u2019?",
-    "a": "Break a leg",
+    "q": "The southern African idea of \u2018I am because we are\u2019 is called?",
+    "a": "Ubuntu",
     "w": [
-     "Knock \u2019em dead",
-     "Fingers crossed",
-     "Bon voyage"
+     "Hygge",
+     "Ikigai",
+     "Aloha"
     ],
-    "e": "Wishing good luck is considered, ironically, bad luck."
+    "e": "Nelson Mandela and Desmond Tutu often spoke about it."
    }
   ]
  },
@@ -2487,107 +2487,107 @@
   "date": "2026-11-16",
   "number": 24,
   "difficulty": "Easy",
-  "theme": "Sport\u2019s strangest bits",
+  "theme": "Mediterranean Diet Day",
   "questions": [
    {
-    "q": "The marathon is 42.195 km because of?",
-    "a": "The 1908 London Olympics route",
+    "q": "Today is Mediterranean Diet Day. Hummus is made mainly from?",
+    "a": "Chickpeas",
     "w": [
-     "A Greek soldier\u2019s exact run",
-     "A metric rounding error",
-     "The length of a Roman road"
+     "Lentils",
+     "Broad beans",
+     "Eggplant"
     ],
-    "e": "The course was set to finish in front of the royal box. The extra bit stuck."
+    "e": "Plus tahini, lemon and garlic. Eggplant makes baba ghanoush."
    },
    {
-    "q": "In 1973, Billie Jean King beat Bobby Riggs in a tennis match nicknamed?",
-    "a": "The Battle of the Sexes",
+    "q": "Greek feta is made mostly from?",
+    "a": "Sheep\u2019s milk",
     "w": [
-     "The Thrilla in Manila",
-     "The Miracle on Ice",
-     "The Rumble in the Jungle"
+     "Cow\u2019s milk",
+     "Buffalo milk",
+     "Camel milk"
     ],
-    "e": "Tens of millions watched on TV. She won in straight sets."
+    "e": "Real feta is at least 70% sheep\u2019s milk, topped up with goat\u2019s milk."
    },
    {
-    "q": "What did astronaut Alan Shepard do on the Moon in 1971?",
-    "a": "Hit golf balls",
+    "q": "Which country produces the most olive oil?",
+    "a": "Spain",
     "w": [
-     "Played cricket",
-     "Kicked a football",
-     "Threw a boomerang"
+     "Italy",
+     "Greece",
+     "T\u00fcrkiye"
     ],
-    "e": "One-handed, in a spacesuit. Still the most out-of-bounds shot ever."
+    "e": "Often about 40% of the world\u2019s supply."
    },
    {
-    "q": "Which of these was once an Olympic sport?",
-    "a": "Tug of war",
+    "q": "Halloumi, the squeaky grilling cheese, comes from?",
+    "a": "Cyprus",
     "w": [
-     "Pillow fighting",
-     "Chess boxing",
-     "Hopscotch"
+     "Sicily",
+     "Crete",
+     "Malta"
     ],
-    "e": "Contested from 1900 to 1920. Britain did quite well."
+    "e": "It squeaks because its protein network stays tight and bouncy."
    },
    {
-    "q": "Olympic gold medals are mostly made of?",
-    "a": "Silver",
+    "q": "Pasta cooked \u2018al dente\u2019 is cooked?",
+    "a": "\u2018To the tooth\u2019, with a little bite",
     "w": [
-     "Gold",
-     "Bronze",
-     "Copper"
+     "Very soft",
+     "In the oven",
+     "With garlic"
     ],
-    "e": "Just a gold coating. The last solid gold ones were in 1912."
+    "e": "Soft enough to eat, firm enough to notice."
    },
    {
-    "q": "Wimbledon uses what to scare off pigeons?",
-    "a": "A hawk",
+    "q": "Paella comes from which Spanish region?",
+    "a": "Valencia",
     "w": [
-     "A robot owl",
-     "Loud music",
-     "A trained dog"
+     "Catalonia",
+     "Andalusia",
+     "Galicia"
     ],
-    "e": "His name is Rufus. He has his own fans."
+    "e": "The original had rabbit, chicken and snails. Seafood came later."
    },
    {
-    "q": "When the World Cup trophy was stolen in 1966, who found it?",
-    "a": "A dog named Pickles",
+    "q": "What\u2019s usually the difference between green and black olives?",
+    "a": "Black olives are riper",
     "w": [
-     "A taxi driver",
-     "A schoolboy",
-     "Scotland Yard"
+     "They grow on different trees",
+     "Black olives are burnt",
+     "Green olives are dyed"
     ],
-    "e": "Wrapped in newspaper under a hedge. Pickles was a national hero."
+    "e": "Olives go from green to purple to black as they ripen."
    },
    {
-    "q": "Basketball was first played with?",
-    "a": "Peach baskets",
+    "q": "Tzatziki is yoghurt, garlic and?",
+    "a": "Cucumber",
     "w": [
-     "Fishing nets",
-     "Buckets",
-     "Hoops of rope"
+     "Spinach",
+     "Chickpeas",
+     "Tomato"
     ],
-    "e": "Someone had to climb up to get the ball out after every basket."
+    "e": "A Greek dip that goes with just about anything."
    },
    {
-    "q": "The longest tennis match ever, at Wimbledon in 2010, lasted about?",
-    "a": "11 hours over 3 days",
+    "q": "Some olive trees are thought to be about how old?",
+    "a": "Over 2,000 years",
     "w": [
-     "5 hours",
-     "8 hours in one day",
-     "2 days straight"
+     "About 50 years",
+     "About 200 years",
+     "About 500 years"
     ],
-    "e": "The final set ended 70\u201368. The scoreboard broke."
+    "e": "Some ancient trees in Crete and Lebanon still bear fruit."
    },
    {
-    "q": "The Paralympic movement grew out of games for injured Second World War veterans held in 1948 at which English hospital?",
-    "a": "Stoke Mandeville",
+    "q": "Which Italian island is famous for having lots of people living past 100?",
+    "a": "Sardinia",
     "w": [
-     "Great Ormond Street",
-     "St Thomas\u2019",
-     "Addenbrooke\u2019s"
+     "Sicily",
+     "Capri",
+     "Elba"
     ],
-    "e": "Organised by neurologist Ludwig Guttmann. The first Paralympic Games followed in Rome in 1960."
+    "e": "One of the world\u2019s \u2018Blue Zones\u2019, along with Ikaria in Greece and Okinawa in Japan."
    }
   ]
  },
@@ -2703,107 +2703,107 @@
   "date": "2026-11-18",
   "number": 26,
   "difficulty": "Medium",
-  "theme": "Breathtaking facts",
+  "theme": "Superbugs and other germs",
   "questions": [
    {
-    "q": "The Guinness record for holding your breath under water (after breathing pure oxygen) is?",
-    "a": "Over 20 minutes",
+    "q": "It\u2019s Superbug Week. Alexander Fleming discovered penicillin in which year?",
+    "a": "1928",
     "w": [
-     "About 2 minutes",
-     "About 5 minutes",
-     "About an hour"
+     "1898",
+     "1945",
+     "1962"
     ],
-    "e": "Please don't try this at home."
+    "e": "Mass production only came in World War II."
    },
    {
-    "q": "Which lung is smaller, to make room for the heart?",
-    "a": "The left",
+    "q": "In his 1945 Nobel speech, Fleming warned that?",
+    "a": "Germs could become resistant if people used too little penicillin",
     "w": [
-     "The right",
-     "They're identical",
-     "Neither, the heart sits below"
+     "Penicillin would cure cancer",
+     "Penicillin would run out",
+     "Mould is dangerous to eat"
     ],
-    "e": "The left lung has two lobes, the right has three. The left is smaller to make room for the heart."
+    "e": "He was right. Bacteria adapt fast."
    },
    {
-    "q": "Roughly how many breaths does an adult take each day?",
-    "a": "About 20,000",
+    "q": "Antibiotics won\u2019t cure a cold because colds are caused by?",
+    "a": "Viruses",
     "w": [
-     "About 2,000",
-     "About 200,000",
-     "About 2 million"
+     "Bacteria",
+     "Cold weather",
+     "Fungi"
     ],
-    "e": "At around 12 to 20 breaths a minute, an adult breathes roughly 20,000 times a day."
+    "e": "Antibiotics only kill bacteria. Using them for colds just helps superbugs."
    },
    {
-    "q": "Hiccups are spasms of the?",
-    "a": "Diaphragm",
+    "q": "In 1943, a high-yield penicillin mould was found growing on what, bought at a market in Peoria, USA?",
+    "a": "A mouldy rockmelon",
     "w": [
-     "Throat",
-     "Stomach",
-     "Tongue"
+     "A stale loaf of bread",
+     "A rotten apple",
+     "A blue cheese"
     ],
-    "e": "Hiccups are sudden spasms of the diaphragm, followed by the vocal cords snapping shut: that\u2019s the \u2018hic\u2019."
+    "e": "Lab assistant Mary Hunt, nicknamed \u2018Mouldy Mary\u2019, hunted for mouldy fruit."
    },
    {
-    "q": "Bar-headed geese can fly over?",
-    "a": "The Himalayas",
+    "q": "Manuka honey, used on some wound dressings, comes from bees visiting a tree native to?",
+    "a": "New Zealand and Australia",
     "w": [
-     "The Moon's orbit",
-     "The Sahara at night only",
-     "Antarctica's South Pole underground"
+     "Brazil",
+     "Madagascar",
+     "Spain"
     ],
-    "e": "Where each breath holds about a third of the oxygen at sea level."
+    "e": "Honey is naturally antibacterial. Ancient Egyptians used it on wounds."
    },
    {
-    "q": "In 1978, who first climbed Everest without bottled oxygen?",
-    "a": "Reinhold Messner and Peter Habeler",
+    "q": "The \u2018superbug\u2019 MRSA is a resistant version of a germ that often lives harmlessly?",
+    "a": "In your nose and on your skin",
     "w": [
-     "Edmund Hillary and Tenzing Norgay",
-     "George Mallory",
-     "Junko Tabei"
+     "Only in hospitals",
+     "In tap water",
+     "In soil only"
     ],
-    "e": "Hillary and Tenzing used oxygen in 1953."
+    "e": "About a third of people carry ordinary staph without knowing."
    },
    {
-    "q": "Which animals manage with no lungs at all?",
-    "a": "Some salamanders",
+    "q": "Roughly how do the bacteria in your body compare in number with your own cells?",
+    "a": "About the same",
     "w": [
-     "Some cats",
-     "Some birds",
-     "Some whales"
+     "About 100 times more",
+     "About a tenth",
+     "There are none"
     ],
-    "e": "They breathe through their skin."
+    "e": "An old claim said 10 to 1. Newer counts say about 38 trillion bacteria to 30 trillion of you."
    },
    {
-    "q": "The world's first long-term successful single lung transplant was done in 1983 in?",
-    "a": "Toronto, Canada",
+    "q": "\u2018Phage therapy\u2019 fights superbugs using?",
+    "a": "Viruses that kill bacteria",
     "w": [
-     "Sydney, Australia",
-     "Cape Town, South Africa",
-     "London, UK"
+     "Tiny robots",
+     "Snake venom",
+     "Silver coins"
     ],
-    "e": "In 1983, Dr Joel Cooper\u2019s team at Toronto General Hospital performed the first long-term successful single lung transplant."
+    "e": "Bacteriophages were discovered over 100 years ago and are getting a second look."
    },
    {
-    "q": "Opened out, the air sacs in your lungs have a surface area roughly the size of?",
-    "a": "A small flat",
+    "q": "How long should you scrub your hands with soap to wash germs away?",
+    "a": "At least 20 seconds",
     "w": [
-     "A postage stamp",
-     "A dinner plate",
-     "A football field"
+     "2 seconds",
+     "2 minutes",
+     "5 minutes"
     ],
-    "e": "Somewhere around 50 to 75 square metres."
+    "e": "About two rounds of Happy Birthday. Don\u2019t forget thumbs and fingertips."
    },
    {
-    "q": "Penicillin was discovered in 1928 when Alexander Fleming came back from holiday to find?",
-    "a": "Mould killing bacteria on a dish",
+    "q": "Which everyday habit helps stop superbugs most?",
+    "a": "Only taking antibiotics when they\u2019re needed",
     "w": [
-     "His lab flooded",
-     "A new insect in his desk",
-     "Bacteria glowing in the dark"
+     "Saving leftover antibiotics",
+     "Sharing antibiotics with family",
+     "Stopping antibiotics as soon as you feel better"
     ],
-    "e": "Today also starts World AMR Awareness Week: use antibiotics only when needed."
+    "e": "Ask your doctor whether you really need them, and take them exactly as prescribed."
    }
   ]
  },
@@ -3567,107 +3567,107 @@
   "date": "2026-11-26",
   "number": 34,
   "difficulty": "Medium",
-  "theme": "Money\u2019s weird side",
+  "theme": "Getting around",
   "questions": [
    {
-    "q": "Australia was the first country to issue banknotes made of?",
-    "a": "Polymer",
+    "q": "It\u2019s Sustainable Transport Day. Karl Drais built an early bicycle with no pedals in which year?",
+    "a": "1817",
     "w": [
-     "Hemp",
-     "Linen",
-     "Aluminium"
+     "1717",
+     "1867",
+     "1903"
     ],
-    "e": "1988. Survives the washing machine, unlike your receipts."
+    "e": "Riders pushed along with their feet. It was called a \u2018running machine\u2019."
    },
    {
-    "q": "In 2010, a man paid 10,000 bitcoin for?",
-    "a": "Two pizzas",
+    "q": "Which country has more bicycles than people?",
+    "a": "The Netherlands",
     "w": [
-     "A used car",
-     "A laptop",
-     "A beer"
+     "China",
+     "Denmark",
+     "Vietnam"
     ],
-    "e": "Worth hundreds of millions of dollars or more today. Expensive dinner."
+    "e": "About 23 million bikes for about 18 million people."
    },
    {
-    "q": "On the island of Yap, traditional money includes?",
-    "a": "Giant stone discs",
+    "q": "The world\u2019s first underground railway opened in 1863 in?",
+    "a": "London",
     "w": [
-     "Shark teeth",
-     "Dried fish",
-     "Feathers"
+     "Paris",
+     "New York",
+     "Budapest"
     ],
-    "e": "Some are taller than a person. Ownership changes without moving them."
+    "e": "The Metropolitan Railway used steam trains. Smoky."
    },
    {
-    "q": "Which country is credited with the world\u2019s first paper money?",
-    "a": "China",
+    "q": "In 1888, who drove about 100 km in the first long car journey, without telling her husband?",
+    "a": "Bertha Benz",
     "w": [
-     "Italy",
-     "Egypt",
-     "Greece"
+     "Henry Ford\u2019s mother",
+     "Queen Victoria",
+     "Amelia Earhart"
     ],
-    "e": "Used during the Tang and Song dynasties, about 1,000 years ago."
+    "e": "She also used a hatpin to clear a fuel line and her garter to insulate a wire."
    },
    {
-    "q": "Why do some coins have ridged edges?",
-    "a": "To stop people shaving off metal",
+    "q": "Japan\u2019s first bullet train started running in 1964 just before which event?",
+    "a": "The Tokyo Olympics",
     "w": [
-     "For grip",
-     "For blind users only",
-     "To make them roll"
+     "A royal wedding",
+     "The World Expo",
+     "The FIFA World Cup"
     ],
-    "e": "When coins held real silver, clippers trimmed the edges. Ridges exposed them."
+    "e": "The T\u014dkaid\u014d Shinkansen linked Tokyo and Osaka."
    },
    {
-    "q": "The word \u2018dollar\u2019 comes from a silver coin minted in?",
-    "a": "Bohemia",
+    "q": "Every Sunday, which city closes over 100 km of roads to cars for walkers and cyclists?",
+    "a": "Bogot\u00e1",
     "w": [
-     "Spain",
-     "England",
-     "The Netherlands"
+     "Amsterdam",
+     "Copenhagen",
+     "Melbourne"
     ],
-    "e": "The \u2018thaler\u2019, from Joachimsthal. Now in the Czech Republic."
+    "e": "The Ciclov\u00eda started in the 1970s and draws over a million people."
    },
    {
-    "q": "Euro notes and coins went into circulation in which year?",
-    "a": "2002",
+    "q": "The famous \u201810,000 steps a day\u2019 goal came from?",
+    "a": "A Japanese pedometer advert",
     "w": [
-     "1992",
-     "1999",
-     "2008"
+     "A NASA study",
+     "The World Health Organization",
+     "Ancient Roman soldiers"
     ],
-    "e": "The euro existed on paper from 1999; the cash came three years later."
+    "e": "The 1965 device was the \u2018manpo-kei\u2019, or \u201810,000-step meter\u2019."
    },
    {
-    "q": "How many pence were in a pre-decimal British shilling?",
-    "a": "12",
+    "q": "Around 1900, about what share of cars in the USA were electric?",
+    "a": "About a third",
     "w": [
-     "10",
-     "20",
-     "240"
+     "None",
+     "About 1 in 100",
+     "Almost all"
     ],
-    "e": "240 was pence in a pound. Old money was a maths test."
+    "e": "Petrol won once roads got longer and petrol got cheap."
    },
    {
-    "q": "Ngarrindjeri inventor and writer David Unaipon appears on which Australian banknote?",
-    "a": "$50",
+    "q": "The first Tour de France was held in?",
+    "a": "1903",
     "w": [
-     "$5",
-     "$20",
-     "$100"
+     "1869",
+     "1924",
+     "1950"
     ],
-    "e": "He patented an improved shearing handpiece in 1909. Edith Cowan, the first woman elected to an Australian parliament, is on the other side."
+    "e": "Riders went through the night on heavy bikes with no gears."
    },
    {
-    "q": "What pseudonym does Bitcoin\u2019s mysterious creator use?",
-    "a": "Satoshi Nakamoto",
+    "q": "Brightly decorated \u2018jeepneys\u2019, built from old army jeeps, are famous public transport in?",
+    "a": "The Philippines",
     "w": [
-     "Hal Finney",
-     "Vitalik Buterin",
-     "Nick Szabo"
+     "Thailand",
+     "Mexico",
+     "India"
     ],
-    "e": "Vitalik made Ethereum. Satoshi\u2019s true identity remains unknown."
+    "e": "Many were made from US jeeps left after World War II."
    }
   ]
  },
@@ -3675,107 +3675,107 @@
   "date": "2026-11-27",
   "number": 35,
   "difficulty": "Hard",
-  "theme": "Sports nobody expected",
+  "theme": "Nobel Prize Day",
   "questions": [
    {
-    "q": "At the Wife Carrying World Championships, the winner traditionally receives?",
-    "a": "The wife\u2019s weight in beer",
+    "q": "On this day in 1895 Alfred Nobel signed his will, creating the Nobel Prizes. Which country was he from?",
+    "a": "Sweden",
     "w": [
-     "A gold ring",
-     "A year\u2019s salary",
-     "A new car"
+     "Norway",
+     "Denmark",
+     "Switzerland"
     ],
-    "e": "The event is held in Sonkaj\u00e4rvi, Finland. The \u2018wife\u2019 doesn\u2019t have to be your wife."
+    "e": "He left most of his fortune to the prizes. His family was not thrilled."
    },
    {
-    "q": "In the Cooper\u2019s Hill race in Gloucestershire, England, competitors chase?",
-    "a": "A wheel of cheese",
+    "q": "In 1888 a newspaper wrongly printed Nobel\u2019s obituary, calling him the \u2018merchant of\u2019?",
+    "a": "Death",
     "w": [
-     "A greased pig",
-     "A runaway barrel",
-     "A hare"
+     "Dreams",
+     "Fire",
+     "Gold"
     ],
-    "e": "The cheese can reach about 110 km/h. Nobody catches it. Somebody always breaks something."
+    "e": "It was actually his brother who had died. Alfred may have rethought his legacy."
    },
    {
-    "q": "Chessboxing alternates rounds of chess with rounds of?",
-    "a": "Boxing",
+    "q": "Where is the Nobel Peace Prize awarded?",
+    "a": "Oslo",
     "w": [
-     "Fencing",
-     "Arm wrestling",
-     "Sprinting"
+     "Stockholm",
+     "Geneva",
+     "The Hague"
     ],
-    "e": "You can win by checkmate or knockout. Both are equally final."
+    "e": "The other prizes are presented in Stockholm."
    },
    {
-    "q": "Sepak takraw, popular in Southeast Asia, is like volleyball but players mostly use their?",
-    "a": "Feet",
+    "q": "Who is the youngest Nobel Prize winner?",
+    "a": "Malala Yousafzai",
     "w": [
-     "Heads only",
-     "Elbows",
-     "Rackets"
+     "Greta Thunberg",
+     "Anne Frank",
+     "Mother Teresa"
     ],
-    "e": "Overhead bicycle-kick spikes are standard. Hands are banned."
+    "e": "She was 17 when she won the 2014 Peace Prize for her fight for girls\u2019 education."
    },
    {
-    "q": "Quidditch, played by real people with brooms between their legs, was renamed in 2022 to?",
-    "a": "Quadball",
+    "q": "Which Nobel Prize was not in Nobel\u2019s will?",
+    "a": "Economics",
     "w": [
-     "Broomball",
-     "Snitchball",
-     "Hoopball"
+     "Literature",
+     "Peace",
+     "Physics"
     ],
-    "e": "Partly to distance the sport from the books\u2019 author, partly for trademark reasons."
+    "e": "Sweden\u2019s central bank added it in 1968."
    },
    {
-    "q": "Underwater hockey is also known as?",
-    "a": "Octopush",
+    "q": "Which writer turned down the Nobel Prize in Literature in 1964?",
+    "a": "Jean-Paul Sartre",
     "w": [
-     "Seaball",
-     "Aquapuck",
-     "Snorkelball"
+     "Ernest Hemingway",
+     "Albert Camus",
+     "Samuel Beckett"
     ],
-    "e": "Players push a puck along the bottom of a pool with short sticks, while holding their breath."
+    "e": "He said a writer shouldn\u2019t become an institution."
    },
    {
-    "q": "Hurling, often called the fastest game on grass, is mainly played in?",
-    "a": "Ireland",
+    "q": "Which musician won the 2016 Nobel Prize in Literature?",
+    "a": "Bob Dylan",
     "w": [
-     "Scotland",
-     "New Zealand",
-     "Canada"
+     "Leonard Cohen",
+     "Paul McCartney",
+     "Joni Mitchell"
     ],
-    "e": "Players use a wooden stick called a hurley to hit a small ball, the sliotar, at well over 100 km/h. It\u2019s over 3,000 years old."
+    "e": "He didn\u2019t turn up to the ceremony. Patti Smith sang for him."
    },
    {
-    "q": "Bossaball, invented in Spain, combines volleyball and football with?",
-    "a": "An inflatable court and trampolines",
+    "q": "Which organisation has won the Nobel Peace Prize three times?",
+    "a": "The Red Cross (ICRC)",
     "w": [
-     "A swimming pool",
-     "Roller skates",
-     "Horses"
+     "UNICEF",
+     "Amnesty International",
+     "Doctors Without Borders"
     ],
-    "e": "Played to a soundtrack of samba music. Possibly the most fun sport ever invented."
+    "e": "In 1917, 1944 and 1963. Its founder Henry Dunant shared the very first Peace Prize."
    },
    {
-    "q": "In extreme ironing, people iron clothes?",
-    "a": "In unlikely places, like mountaintops",
+    "q": "The spoof prizes for research that makes people laugh, then think, are called?",
+    "a": "Ig Nobel Prizes",
     "w": [
-     "As fast as possible in a relay",
-     "Blindfolded",
-     "Only underwater"
+     "Nobel Nots",
+     "Golden Raspberries",
+     "Darwin Awards"
     ],
-    "e": "Started in England in 1997. It\u2019s been done on cliff faces, in canoes and under ice."
+    "e": "Past winners studied why woodpeckers don\u2019t get headaches."
    },
    {
-    "q": "The Palio di Siena in Italy is a famously chaotic race of?",
-    "a": "Bareback horses around a town square",
+    "q": "Andre Geim is the only person to win both an Ig Nobel and a Nobel. His Ig Nobel was for?",
+    "a": "Levitating a frog with magnets",
     "w": [
-     "Wooden carts down a hill",
-     "Gondolas",
-     "Running bulls"
+     "Teaching a pigeon to read",
+     "Counting sheep\u2019s dreams",
+     "Measuring a cat\u2019s purr"
     ],
-    "e": "Held twice each summer in the Piazza del Campo. A horse can win without its rider."
+    "e": "Ten years later, in 2010, he shared the Physics Nobel for graphene."
    }
   ]
  },

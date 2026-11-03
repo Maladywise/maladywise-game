@@ -50,15 +50,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "You knock your ‘funny bone’. Which nerve just zapped you?",
-    "answer": "Ulnar nerve",
+    "kind": "Anatomy trivia",
+    "q": "Where do T cells, the cells HIV targets, finish maturing?",
+    "answer": "Thymus",
     "wrong": [
-     "Radial nerve",
-     "Median nerve",
-     "Musculocutaneous nerve"
+     "Bone marrow",
+     "Spleen",
+     "Tonsils"
     ],
-    "why": "Not funny, not a bone. The ulnar nerve sits just under the skin behind the elbow, so a knock fires off tingles into your ring and little fingers."
+    "why": "T for thymus. HIV infects CD4 helper T cells; treatment now keeps the count up and the virus undetectable. Today is World AIDS Day."
    },
    {
     "kind": "Name the structure",
@@ -180,15 +180,15 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which bone is fractured most often in a fall on the outstretched hand, and can lose its blood supply?",
-    "answer": "Scaphoid",
+    "kind": "Anatomy trivia",
+    "q": "In adults, the spinal cord itself usually ends at about which vertebral level?",
+    "answer": "L1–L2",
     "wrong": [
-     "Lunate",
-     "Distal radius",
-     "Trapezium"
+     "T10",
+     "L4–L5",
+     "S2"
     ],
-    "why": "Its blood enters from the far end, so a waist fracture can starve the near part. Snuffbox tenderness is the clue."
+    "why": "Below that, nerve roots run on as the cauda equina, which is why lumbar punctures go lower. Today is International Day of Persons with Disabilities."
    },
    {
     "kind": "What’s this bone?",
@@ -759,15 +759,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve can cause pain shooting down the back of the leg?",
-    "answer": "Sciatic nerve",
+    "kind": "Anatomy trivia",
+    "q": "Santiago Ramón y Cajal shared the 1906 Nobel Prize for showing the nervous system is built from?",
+    "answer": "Separate nerve cells",
     "wrong": [
-     "Femoral nerve",
-     "Obturator nerve",
-     "Saphenous nerve"
+     "One continuous net of fibres",
+     "Hollow tubes carrying fluid",
+     "Fused muscle fibres"
     ],
-    "why": "The body’s thickest nerve, about as wide as your thumb near its origin."
+    "why": "He shared it with Camillo Golgi, whose silver stain he used and who still backed the ‘continuous net’ idea. Today is Nobel Prize Day."
    }
   ]
  },
@@ -792,15 +792,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Foot drop after a tight plaster cast just below the knee. Which nerve?",
-    "answer": "Common fibular (peroneal) nerve",
+    "kind": "Anatomy trivia",
+    "q": "At altitude, the kidney pumps out more erythropoietin. Which cells make it?",
+    "answer": "Peritubular interstitial cells of the cortex",
     "wrong": [
-     "Tibial nerve",
-     "Femoral nerve",
-     "Sural nerve"
+     "Juxtaglomerular cells",
+     "Macula densa cells",
+     "Podocytes"
     ],
-    "why": "It wraps around the neck of the fibula just under the skin, so casts, crossed legs and long squats can squash it."
+    "why": "They sense low oxygen, and EPO rises within hours of arriving up high. The extra red cells take weeks to build up. Juxtaglomerular cells make renin. Today is International Mountain Day."
    },
    {
     "kind": "What’s this bone?",
@@ -1037,15 +1037,15 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which bone forms your heel?",
-    "answer": "Calcaneus",
+    "kind": "Anatomy trivia",
+    "q": "Which flap covers the entrance to the larynx when you swallow?",
+    "answer": "Epiglottis",
     "wrong": [
-     "Talus",
-     "Navicular",
-     "Cuboid"
+     "Uvula",
+     "Soft palate",
+     "Vocal cords"
     ],
-    "why": "The largest bone of the foot. The Achilles tendon attaches to it."
+    "why": "George Washington probably died of acute epiglottitis on this day in 1799, after his doctors drained a large share of his blood."
    },
    {
     "kind": "Name the structure",
@@ -1178,15 +1178,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the quadriceps?",
-    "answer": "Femoral nerve",
+    "kind": "Anatomy trivia",
+    "q": "Which structure in the cochlea turns sound vibrations into nerve signals?",
+    "answer": "Organ of Corti",
     "wrong": [
-     "Obturator nerve",
-     "Sciatic nerve",
-     "Tibial nerve"
+     "Semicircular canals",
+     "Utricle",
+     "Tympanic membrane"
     ],
-    "why": "Roots L2 to L4. Tap the patellar tendon and you’re testing it: the knee jerk is mostly L3 and L4."
+    "why": "Its hair cells are where most noise and age-related hearing loss starts. Beethoven, born around this day in 1770, wrote his Ninth Symphony while profoundly deaf."
    },
    {
     "kind": "What’s this bone?",
@@ -1271,15 +1271,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve moves the eye outwards, via lateral rectus?",
-    "answer": "Abducens nerve (VI)",
+    "kind": "Anatomy trivia",
+    "q": "Which sinuses most often cause pain from pressure change on a plane’s descent?",
+    "answer": "Frontal sinuses",
     "wrong": [
-     "Trochlear nerve (IV)",
-     "Oculomotor nerve (III)",
-     "Trigeminal nerve (V)"
+     "Maxillary sinuses",
+     "Sphenoid sinuses",
+     "Ethmoid air cells"
     ],
-    "why": "Abducens abducts. Its long path along the base of the skull means raised brain pressure can stretch it and cause double vision."
+    "why": "Their long, narrow drainage duct blocks easily when you have a cold. The Wright brothers first flew on this day in 1903."
    },
    {
     "kind": "Name the structure",
@@ -1449,15 +1449,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Brachioradialis flexes the elbow. Which nerve supplies it?",
-    "answer": "Radial nerve",
+    "kind": "Anatomy trivia",
+    "q": "Rickets classically causes knobbly swellings where the ribs meet their cartilage, called the?",
+    "answer": "Rachitic rosary",
     "wrong": [
-     "Musculocutaneous nerve",
-     "Median nerve",
-     "Ulnar nerve"
+     "Schmorl’s nodes",
+     "Heberden’s nodes",
+     "Bouchard’s nodes"
     ],
-    "why": "A classic trap: a flexor supplied by the extensor nerve."
+    "why": "Too little vitamin D, so bone doesn’t mineralise. One theory for Tiny Tim in A Christmas Carol, published on this day in 1843, is rickets with tuberculosis."
    }
   ]
  },
@@ -1675,15 +1675,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve carries vision?",
-    "answer": "Optic nerve (II)",
+    "kind": "Anatomy trivia",
+    "q": "An amoebic liver abscess most often forms in which part of the liver?",
+    "answer": "Right lobe",
     "wrong": [
-     "Oculomotor nerve (III)",
-     "Olfactory nerve (I)",
-     "Trigeminal nerve (V)"
+     "Left lobe",
+     "Caudate lobe",
+     "Quadrate lobe"
     ],
-    "why": "Strictly, the optic nerve is part of the brain itself, wrapped in the same layers (meninges)."
+    "why": "The right lobe is bigger and gets most of the portal blood from the gut. Mathematician Srinivasa Ramanujan, born today in 1887, probably died of one."
    }
   ]
  },
@@ -1734,15 +1734,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve supplies the muscles of chewing?",
-    "answer": "Trigeminal nerve (V)",
+    "kind": "Anatomy trivia",
+    "q": "Where is a transplanted kidney usually placed?",
+    "answer": "Iliac fossa (lower abdomen)",
     "wrong": [
-     "Facial nerve (VII)",
-     "Glossopharyngeal nerve (IX)",
-     "Hypoglossal nerve (XII)"
+     "Where the old kidney was",
+     "Behind the liver",
+     "Under the spleen"
     ],
-    "why": "Via its mandibular branch, V3: masseter, temporalis and both pterygoids."
+    "why": "The native kidneys usually stay put. Joseph Murray did the first successful kidney transplant, between identical twins, on this day in 1954."
    },
    {
     "kind": "Name the structure",
@@ -1812,15 +1812,15 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which is the longest bone in the body?",
-    "answer": "Femur",
+    "kind": "Anatomy trivia",
+    "q": "Which part of the brain acts as the body’s thermostat?",
+    "answer": "Hypothalamus",
     "wrong": [
-     "Tibia",
-     "Humerus",
-     "Fibula"
+     "Cerebellum",
+     "Pons",
+     "Thalamus"
     ],
-    "why": "Roughly a quarter of your height."
+    "why": "It balances heat made (including from your Christmas lunch) against heat lost through skin and sweat. James Joule was born today in 1818."
    },
    {
     "kind": "Which nerve?",
@@ -1947,15 +1947,15 @@
     "why": "Surgeons can borrow latissimus as a flap for breast reconstruction, keeping this nerve and its artery."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Burning numbness on the outer thigh (meralgia paraesthetica). Which nerve?",
-    "answer": "Lateral cutaneous nerve of the thigh",
+    "kind": "Anatomy trivia",
+    "q": "Radium, announced by the Curies on this day in 1898, builds up in bone because the body treats it like?",
+    "answer": "Calcium",
     "wrong": [
-     "Femoral nerve",
-     "Obturator nerve",
-     "Genitofemoral nerve"
+     "Iron",
+     "Iodine",
+     "Sodium"
     ],
-    "why": "Often squeezed under the inguinal ligament by tight belts or weight gain."
+    "why": "Same column of the periodic table. The ‘Radium Girls’ who licked their brushes to paint watch dials developed jaw necrosis and bone cancers."
    },
    {
     "kind": "Name the structure",
@@ -2021,15 +2021,15 @@
     "why": "Via the lesser petrosal nerve and otic ganglion, then hitching a ride on the auriculotemporal nerve. The facial nerve just runs through the gland."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the short head of biceps femoris?",
-    "answer": "Common fibular nerve",
+    "kind": "Anatomy trivia",
+    "q": "Rabies virus reaches the brain from a bite by?",
+    "answer": "Travelling backwards along nerve axons",
     "wrong": [
-     "Tibial nerve",
-     "Femoral nerve",
-     "Inferior gluteal nerve"
+     "Spreading through the bloodstream",
+     "Moving through lymph nodes",
+     "Crossing the skin to the spine"
     ],
-    "why": "The only hamstring part not supplied by the tibial division."
+    "why": "Retrograde axonal transport, which is why bites near the head have a shorter incubation. Louis Pasteur, born today in 1822, made the first rabies vaccine."
    },
    {
     "kind": "Name the structure",
@@ -2099,15 +2099,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the diaphragm, your main breathing muscle?",
-    "answer": "Phrenic nerve",
+    "kind": "Anatomy trivia",
+    "q": "Gigantism is usually caused by a growth-hormone tumour in which gland?",
+    "answer": "Pituitary",
     "wrong": [
-     "Vagus nerve",
-     "Intercostal nerves",
-     "Accessory nerve"
+     "Thyroid",
+     "Adrenal",
+     "Pineal"
     ],
-    "why": "‘C3, 4, 5 keeps the diaphragm alive.’ It starts in the neck because the diaphragm began life up there in the embryo, then migrated down, dragging its nerve along."
+    "why": "If it starts before the growth plates close you get gigantism; after, acromegaly. Comic writer Stan Lee was born today in 1922."
    },
    {
     "kind": "Name the structure",
@@ -2306,15 +2306,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Wrist drop after a fracture of the humerus shaft. Which nerve?",
-    "answer": "Radial nerve",
+    "kind": "Anatomy trivia",
+    "q": "Boerhaave syndrome, a burst oesophagus after forceful vomiting, usually tears which part?",
+    "answer": "Left side of the lower oesophagus",
     "wrong": [
-     "Ulnar nerve",
-     "Median nerve",
-     "Axillary nerve"
+     "Right side of the upper oesophagus",
+     "Front of the cervical oesophagus",
+     "Just below the cricopharyngeus"
     ],
-    "why": "The radial nerve hugs the humerus in the spiral groove. It extends the wrist and fingers."
+    "why": "The lower left wall is the weakest. Herman Boerhaave, born today in 1668, described it in a Dutch admiral after a feast."
    },
    {
     "kind": "Which nerve?",
