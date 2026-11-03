@@ -123,6 +123,17 @@
   function markDay() { var d = get(mk("mw-days"), []), t = sydToday(); if (d.indexOf(t) < 0) { d.push(t); d = d.slice(-400); set(mk("mw-days"), d); } }
   // Games that count in the current mode (Normie mode: only Normie-capable games).
   function inMode(g) { return !NORMIE || !!g.nmode; }
+  // Today's 3 (MW_START in games.js): live daily games in this mode, topped up from MW_ORDER. Shared by the home list and in-game "Next".
+  function startIds() {
+    var S = window.MW_START || {}, want = (NORMIE ? S.normie : S.medical) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]], out = [], G = window.MW_GAMES || [];
+    function byId(id) { return G.filter(function (x) { return x.id === id; })[0]; }
+    function ok(g) { return g && g.live && !g.weekly && inMode(g) && !out.some(function (o) { return o.g === g; }); }
+    want.forEach(function (w) { var g = byId(w[0]); if (ok(g)) out.push({ g: g, min: w[1] }); });
+    (window.MW_ORDER || []).forEach(function (id) { if (out.length < 3) { var g = byId(id); if (ok(g)) out.push({ g: g, min: 4 }); } });
+    return out.slice(0, 3);
+  }
+  // Play order for Next / Stuck / Keep playing: today's 3 first (in order), then MW_ORDER.
+  function playRank(id) { var i = startIds().map(function (o) { return o.g.id; }).indexOf(id); if (i >= 0) return i; i = (window.MW_ORDER || []).indexOf(id); return 10 + (i < 0 ? 99 : i); }
   function playedDays() {
     var seen = {}; get(mk("mw-days"), []).forEach(function (d) { seen[d] = 1; });
     (window.MW_GAMES || []).forEach(function (g) {
@@ -786,14 +797,8 @@
         '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow">' + (g.relday && g.relday.indexOf("&") > 0 ? "" : '<span class="pill wk">Weekly</span>') + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + "</div></" + tag + ">";
     }
-    // Start here: today's 3 (MW_HOME.start / startN), topped up from MW_ORDER if one is missing in this mode.
-    function startList() {
-      var H = window.MW_HOME || {}, want = (NORMIE ? H.startN : H.start) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]], out = [];
-      function ok(g) { return g && g.live && !g.weekly && inMode(g); }
-      want.forEach(function (w) { var g = MW_GAMES.filter(function (x) { return x.id === w[0]; })[0]; if (ok(g)) out.push({ g: g, min: w[1] }); });
-      (window.MW_ORDER || []).forEach(function (id) { if (out.length >= 3) return; var g = MW_GAMES.filter(function (x) { return x.id === id; })[0]; if (ok(g) && !out.some(function (o) { return o.g === g; })) out.push({ g: g, min: 4 }); });
-      return out.slice(0, 3);
-    }
+    // Start here: today's 3 (MW_START in games.js), topped up from MW_ORDER if one is missing in this mode.
+    function startList() { return startIds(); }
     function homeTop() {
       var H = window.MW_HOME || {}, line = (NORMIE ? H.taglineN : H.tagline) || (NORMIE ? "Free daily puzzles. No medicine required." : "Free daily medical puzzles, made by a GP.");
       return '<section class="mw-top" id="puzzles"><div class="mt-meta"><span class="mt-day">' + nice(today, { weekday: "long", day: "numeric", month: "short" }) + '</span><span class="pill daypill d-' + DIFF[dow] + '">' + DIFF[dow] + '</span><span class="nextin">New in <b id="mw-count">' + countdown() + '</b></span><span class="mw-live" hidden></span></div>' +
@@ -953,9 +958,11 @@
     var arch = box.querySelector("details.archive");
     if (!arch) return;
     var others = MW_GAMES.filter(function (x) { return x.live && x.id !== g.id && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
-    var OK = window.MW_ORDER || []; function oi(x) { var i = OK.indexOf(x.g.id); return i < 0 ? 99 : i; }
+    var sk0 = get("mw-skip-" + sydToday(), []) || []; // games skipped today drop below the other unfinished ones, like Next
+    function oi(x) { return (sk0.indexOf(x.g.id) >= 0 ? 1000 : 0) + playRank(x.g.id); }
     others.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0) || oi(a) - oi(b); });
-    var left = others.filter(function (o) { return !o.m && !o.g.weekly && !(o.st && o.st.done); }).length;
+    var left = others.filter(function (o) { return !o.m && !o.g.weekly && !(o.st && o.st.done); }).length, gs0 = readStats(g);
+    if (!g.weekly && !(gs0 && gs0.done)) left++; // count this game too until it's done, like the home page
     var strip = el('<section class="mwx"><div class="mwx-head"><b>Keep playing</b><span>' + (left ? left + " left today" : "All done today. Show-off.") + '</span></div><div class="mwx-list">' +
       others.map(function (o) {
         var done = o.st && o.st.done;
@@ -992,11 +999,14 @@
       var todo = rows.filter(function (r) { var d = rowDate(r); if (!d || d > t || d === curD) return false; var x = get(g.store.day + d, null); return !(x && x.done); });
       nx.hidden = true;
       var done = curSt && curSt.done, tb = document.getElementById("mw-next-top");
-      // today's next unplayed game in this mode
-      var ORDx = window.MW_ORDER || [], tday = sydToday(), skipK = "mw-skip-" + tday, skips = get(skipK, []) || [];
+      // today's next unplayed game in this mode: today's 3 first, then MW_ORDER (skipped games last resort)
+      var tday = sydToday(), skipK = "mw-skip-" + tday, skips = get(skipK, []) || [];
       var left = MW_GAMES.filter(function (x) { if (!x.live || x.id === g.id || !inMode(x) || (x.from && x.from > tday)) return false; var r = readStats(x); return !(r && r.done); })
-        .sort(function (a, b) { var ia = ORDx.indexOf(a.id), ib = ORDx.indexOf(b.id); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
+        .sort(function (a, b) { return playRank(a.id) - playRank(b.id); });
       var pool = left.filter(function (x) { return skips.indexOf(x.id) < 0; }); if (!pool.length) { pool = left; if (skips.length) set(skipK, []); }
+      // daily games still to finish today, counted like the home page (this game included until today's is done)
+      var gst = readStats(g), nLeft = left.filter(function (x) { return !x.weekly; }).length + (!g.weekly && !(gst && gst.done) ? 1 : 0);
+      var sh0 = strip.querySelector(".mwx-head span"), ht = nLeft ? nLeft + " left today" : "All done today. Show-off."; if (sh0 && sh0.textContent !== ht) sh0.textContent = ht;
       var ng = pool[0];
       var r0 = todo[0], d0 = r0 ? rowDate(r0) : null;
       var stk = document.getElementById("mw-stuck");
@@ -1006,13 +1016,15 @@
         if (stk.getAttribute("data-h") !== sh) { stk.innerHTML = sh; stk.setAttribute("data-h", sh); stk.querySelector("button").onclick = function () { var l = get(skipK, []) || []; if (l.indexOf(g.id) < 0) l.push(g.id); set(skipK, l); track("stuck-skip/" + g.id, "stuck " + g.name); location.href = "../" + ng.path + "?play"; }; }
       } else if (stk) stk.remove();
       if (!done || (!ng && !r0)) { if (tb) tb.remove(); return; }
-      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Next: ' + ng.name + '<small>' + left.filter(function (x) { return !x.weekly; }).length + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") + '</div>';
-      if (ng && left.length > 1) th += '<button type="button" class="mwx-skip">Skip ' + ng.name + ' \u203a</button>';
+      var th = '<div class="mwx-btns">' + (ng ? '<a class="mwx-today" href="../' + ng.path + '?play">Next: ' + ng.name + '<small>' + nLeft + ' left today</small></a>' : "") + (r0 ? '<button type="button" class="mwx-more2">More ' + g.name + '<small>' + todo.length + ' unsolved</small></button>' : "") +
+        (ng && left.length > 1 ? '<button type="button" class="mwx-skip mwx-pill2">Skip next<small>' + ng.name + '</small></button>' : "") +
+        (g.normie || g.nmode ? '<button type="button" class="mwx-mode mwx-pill2">' + (NORMIE ? "\ud83e\ude7a Medical version" : "\ud83d\ude42 Normie version") + '<small>of ' + g.name + '</small></button>' : "") + '</div>';
       if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; var anc = box.querySelector(".mw-ticket") || box.querySelector('pre[id$="-share"],pre[id$="-sharetext"]') || res; if (anc.compareDocumentPosition(res) & 2) anc = res; anc.insertAdjacentHTML("beforebegin", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
       if (tb.getAttribute("data-h") === th) return;
       tb.innerHTML = th; tb.setAttribute("data-h", th);
       var mb = tb.querySelector(".mwx-more2"); if (mb) mb.onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); tb.remove(); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
       var tl = tb.querySelector(".mwx-today"); if (tl) tl.onclick = function () { track("next-today/" + g.id, g.name + " next today"); };
+      var mo = tb.querySelector(".mwx-mode"); if (mo) mo.onclick = function () { setMode(NORMIE ? "medical" : "normie"); };
       var sk = tb.querySelector(".mwx-skip"); if (sk) sk.onclick = function () { var l = get(skipK, []) || []; if (l.indexOf(ng.id) < 0) l.push(ng.id); set(skipK, l); track("next-skip/" + ng.id, "skip " + ng.name); nextUnsolved(); };
     }
     nextUnsolved();
