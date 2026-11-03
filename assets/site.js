@@ -1,6 +1,35 @@
 /* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
-  nav: [["Games", "/"], ["Conditions", "/conditions/"], ["Medicines", "/medicines/"], ["Tools", "/tools/"], ["Deep dives", "/deep-dives/"], ["GP School", "/unspecialist/"], ["Specialists", "/specialists/"], ["Arcade", "/arcade/"], ["Weird & wonderful", "/weird/"], ["Zebra Mail", "/zebra-mail/"]],
+  // Top menu. Items with "items" are dropdowns (grouped lists in the phone menu).
+  // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Normie shows Games + Zebra Mail only.
+  nav: [
+    { t: "Puzzles", tn: "Games", href: "/" },
+    { t: "For patients", medical: true, items: [
+      { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
+      { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
+      { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
+      { t: "Specialists", href: "/specialists/", d: "Find one near you", au: true }
+    ] },
+    { t: "For doctors", medical: true, items: [
+      { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
+      { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
+      { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" }
+    ] },
+    { t: "Zebra Mail", href: "/zebra-mail/" }
+  ],
+  tagline: "Free daily medical puzzles, made by a GP.",
+  taglineN: "Free daily puzzles. No medicine required.",
+  // Home "Start here: today's 3": [game id, rough minutes]. Normie list must use games with a Normie version.
+  start: [["dx", 3], ["wordemic", 3], ["triviosis", 4]],
+  startN: [["dx", 3], ["wordemic", 3], ["triviosis", 4]],
+  // Home game sections. t/d = Medical heading and one-liner, tn/dn = Normie versions (keep one-liners under ~32 characters).
+  groups: [
+    { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "morphemia", "gridectomy", "suturix"] },
+    { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["glimpsis", "opacitis", "labelosis", "panelysis", "arrhythmix"] },
+    { id: "think", t: "Think like a doctor", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis", "sudokrine"] },
+    { id: "weekly", t: "Weekly", d: "Bigger puzzles, fewer days.", games: ["grandrounds", "cryptogenic"] },
+    { id: "bonus", t: "Bonus", d: "No medicine. Just cats.", dn: "Just cats. Causing chaos.", basil: true }
+  ],
   sections: []
 };
 
