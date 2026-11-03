@@ -85,7 +85,7 @@
     if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing now");
     if (d.today >= LIVE.MIN_TODAY) bits.push("\ud83e\udde9 " + d.today.toLocaleString("en-AU") + " games played today");
     var sv = d.solved || {};
-    Array.prototype.forEach.call(document.querySelectorAll(".card[data-g]"), function (c) { var n = sv[c.getAttribute("data-g")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
+    Array.prototype.forEach.call(document.querySelectorAll(".card[data-g],.t3[data-g]"), function (c) { var n = sv[c.getAttribute("data-g")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { el.innerHTML = bits.join(" &middot; "); el.hidden = !bits.length; });
   }
   function liveStats() { if (document.hidden) return; try { fetch(LIVE.url + "/stats", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d) { LIVE.last = d; liveShow(); } }).catch(function () {}); } catch (e) {} }
@@ -559,23 +559,24 @@
   function diffFor(g, d, dow) { if (g.nmode) return (window.MW_EINSTEIN_N && (MW_EINSTEIN_N[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; return (window.MW_EINSTEIN && (MW_EINSTEIN[g.id] || []).indexOf(d) >= 0) ? "Einstein" : DIFF[dow]; }
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
   var DIFFQ = { Einstein: "Roughly one day in 50. Bring everything you have.", Easy: "Warm-up lap. No excuses.", Medium: "Pay attention. This one bites.", Hard: "Coffee first. Then think.", Genius: "Good luck, professor." };
+  // Home subtitle under the site line: keep each under ~38 characters so it fits one line on a 390px phone.
   var DAYQ = [
-    "Genius day. Bring your A-game and a strong coffee.",
-    "Ease in. The waiting room is already full.",
+    "Genius day. Strong coffee advised.",
+    "Easy start. The waiting room is full.",
     "Still easy. Enjoy it while it lasts.",
     "Hump day. The cases get cheekier.",
-    "Nearly there. Concentrate.",
-    "Hard mode. Don't phone it in before the weekend.",
+    "Medium. Pay attention, doctor.",
+    "Hard mode. No phoning it in.",
     "Hard again. No locum to save you."
   ];
   var DAYQ_N = [
-    "Genius day. Bring your A-game and a strong coffee.",
-    "Ease in. Nobody's judging. Yet.",
+    "Genius day. Strong coffee advised.",
+    "Easy start. Nobody\u2019s judging. Yet.",
     "Still easy. Enjoy it while it lasts.",
     "Hump day. The puzzles get cheekier.",
-    "Nearly there. Concentrate.",
-    "Hard mode. Don't phone it in before the weekend.",
-    "Hard again. Your weekend brain is not an excuse."
+    "Medium. Pay attention.",
+    "Hard mode. No phoning it in.",
+    "Hard again. No excuses."
   ];
   function pickDay(a, d) { return a[dayNum(d) % a.length]; }
   var SOON = ["In theatre", "Still in the lab", "Awaiting ethics approval", "On the waitlist", "Pending review"];
@@ -685,13 +686,56 @@
     return hit ? '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '" title="' + hit[3] + '">' : "";
   }
 
+  // ---------- top menu (MW_HOME.nav in site.js): links and dropdown groups ----------
+  function inAU() { try { if (/^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "")) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
+  function navHere(href) {
+    var p = location.pathname.replace(/index\.html$/, "");
+    if (href === "/") return p === "/" || /^\/(arcade|weird|basil|me)\//.test(p);
+    if (p.indexOf(href) === 0) return true;
+    var F = window.MW_FACTS && MW_FACTS[p]; // condition fact sheets live at the root, e.g. /acne/
+    return !!(F && F.k === "fact" && href === "/conditions/");
+  }
+  function navHTML() {
+    var n = 0;
+    return MW_HOME.nav.filter(function (it) { return !(NORMIE && it.medical); }).map(function (it) {
+      if (!it.items) return '<a class="navlink' + (navHere(it.href) ? " on" : "") + '" href="' + it.href + '"' + (navHere(it.href) ? ' aria-current="page"' : "") + ">" + (NORMIE && it.tn ? it.tn : it.t) + "</a>";
+      var sub = it.items.filter(function (x) { return !(x.au && !inAU()); }), on = sub.some(function (x) { return navHere(x.href); }), id = "mw-dd" + (n++);
+      return '<div class="nav-dd' + (on ? " on" : "") + '"><button type="button" class="navlink nav-btn' + (on ? " on" : "") + '" aria-expanded="false" aria-controls="' + id + '">' + it.t +
+        '<svg class="nav-car" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+        '<div class="nav-sub" id="' + id + '" role="group" aria-label="' + it.t + '">' + sub.map(function (x) { var h = navHere(x.href); return '<a href="' + x.href + '"' + (h ? ' class="on" aria-current="page"' : "") + "><b>" + x.t + "</b>" + (x.d ? "<span>" + x.d + "</span>" : "") + "</a>"; }).join("") + "</div></div>";
+    }).join("");
+  }
+  // Dropdowns: hover (desktop pointer), click/tap, keyboard (Enter/Space/ArrowDown open, Escape closes). In the phone menu they show as grouped lists.
+  function navWire(bar) {
+    var nav = bar.querySelector("#mw-nav"); if (!nav) return;
+    var burger = bar.querySelector(".burger");
+    function phone() { return burger && getComputedStyle(burger).display !== "none"; }
+    function setOpen(dd, op) { if (!dd) return; dd.classList.toggle("open", op); dd.querySelector(".nav-btn").setAttribute("aria-expanded", op ? "true" : "false"); }
+    function closeAll(except) { Array.prototype.forEach.call(nav.querySelectorAll(".nav-dd"), function (d) { if (d !== except) setOpen(d, false); }); }
+    Array.prototype.forEach.call(nav.querySelectorAll(".nav-dd"), function (dd) {
+      var btn = dd.querySelector(".nav-btn"), t = null;
+      dd.addEventListener("mouseenter", function () { if (phone() || !(window.matchMedia && matchMedia("(hover: hover)").matches)) return; clearTimeout(t); if (!dd.classList.contains("open")) dd._ht = Date.now(); closeAll(dd); setOpen(dd, true); });
+      dd.addEventListener("mouseleave", function () { if (phone()) return; clearTimeout(t); t = setTimeout(function () { setOpen(dd, false); }, 180); });
+      btn.addEventListener("click", function (e) { e.preventDefault(); if (phone()) return; var op = !dd.classList.contains("open") || Date.now() - (dd._ht || 0) < 400; closeAll(dd); setOpen(dd, op); });
+      dd.addEventListener("keydown", function (e) {
+        var links = Array.prototype.slice.call(dd.querySelectorAll(".nav-sub a")), i = links.indexOf(document.activeElement);
+        if (e.key === "Escape" && dd.classList.contains("open")) { setOpen(dd, false); btn.focus(); e.preventDefault(); }
+        else if (e.key === "ArrowDown" && !phone()) { e.preventDefault(); if (!dd.classList.contains("open")) { closeAll(dd); setOpen(dd, true); } (links[i + 1] || links[0]).focus(); }
+        else if (e.key === "ArrowUp" && i >= 0 && !phone()) { e.preventDefault(); if (i === 0) btn.focus(); else links[i - 1].focus(); }
+      });
+      dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) setOpen(dd, false); });
+    });
+    document.addEventListener("click", function (e) { if (!e.target.closest || !e.target.closest(".nav-dd")) closeAll(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("open")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); burger.focus(); } });
+  }
+
   // ---------- top bar ----------
   function topBar(g, home) {
     var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
     var bar = el('<header class="bar"><div class="bar-in">' +
       (g ? '<a class="back" href="../" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
-      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + MW_HOME.nav.filter(function (n) { if (n[1] === "/specialists/") { var au = false; try { au = /^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "") || /-AU$/i.test(navigator.language || ""); } catch (e) {} if (!au || NORMIE) return false; } if (/^\/(arcade|weird)\//.test(n[1])) return NORMIE; return !NORMIE || !/^\/(conditions|medicines|tools|deep-dives|unspecialist)\//.test(n[1]); }).map(function (n) { return '<a class="navlink' + (location.pathname === n[1] ? " on" : "") + '" href="' + n[1] + '">' + n[0] + "</a>"; }).join("") +
+      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + navHTML() +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
            '<button class="icon-btn" data-a="stats" aria-label="Stats">' + I.stats + "</button>" +
@@ -702,7 +746,7 @@
       if (mb) { var nm = mb.getAttribute("data-mode"); if (nm !== MODE) { Array.prototype.forEach.call(mb.parentNode.children, function (c) { c.setAttribute("aria-pressed", c === mb); }); setMode(nm); } return; }
       var b = e.target.closest("[data-a]"); if (!b) return;
       var a = b.getAttribute("data-a");
-      if (a === "menu") { var nv = document.getElementById("mw-nav"), op = nv.classList.toggle("open"); b.setAttribute("aria-expanded", op ? "true" : "false"); }
+      if (a === "menu") { var nv = document.getElementById("mw-nav"), op = nv.classList.toggle("open"); b.setAttribute("aria-expanded", op ? "true" : "false"); Array.prototype.forEach.call(nv.querySelectorAll(".nav-btn"), function (x) { x.setAttribute("aria-expanded", op ? "true" : "false"); }); }
       if (a === "sub") { var t = document.getElementById("newsletter"); if (t) { e.preventDefault(); var nv2 = document.getElementById("mw-nav"); if (nv2) nv2.classList.remove("open"); t.scrollIntoView({ behavior: "smooth", block: "center" }); var inp = t.querySelector("input[type=email]"); if (inp) setTimeout(function () { inp.focus({ preventScroll: true }); }, 400); } else { e.preventDefault(); location.href = "/#newsletter"; } }
       if (a === "settings") settings();
       if (a === "stats") statsModal(g);
@@ -710,6 +754,7 @@
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }
     });
     document.body.insertBefore(bar, document.body.firstChild);
+    navWire(bar);
   }
 
   function countdown() {
@@ -739,11 +784,34 @@
         '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow">' + (g.relday && g.relday.indexOf("&") > 0 ? "" : '<span class="pill wk">Weekly</span>') + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + "</div></" + tag + ">";
     }
-    function homeTop() {
-      var H = window.MW_HOME; if (!H || !H.tagline) return "";
-      return '<section class="hero"><h1>' + H.tagline + '</h1><p>' + H.intro + '</p><nav class="chips" aria-label="Sections">' +
-        H.nav.map(function (n) { return '<a href="' + (n[1].charAt(0) === "#" ? location.pathname + n[1] : n[1]) + '">' + n[0] + "</a>"; }).join("") + "</nav></section>";
+    // Start here: today's 3 (MW_HOME.start / startN), topped up from MW_ORDER if one is missing in this mode.
+    function startList() {
+      var H = window.MW_HOME || {}, want = (NORMIE ? H.startN : H.start) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]], out = [];
+      function ok(g) { return g && g.live && !g.weekly && inMode(g); }
+      want.forEach(function (w) { var g = MW_GAMES.filter(function (x) { return x.id === w[0]; })[0]; if (ok(g)) out.push({ g: g, min: w[1] }); });
+      (window.MW_ORDER || []).forEach(function (id) { if (out.length >= 3) return; var g = MW_GAMES.filter(function (x) { return x.id === id; })[0]; if (ok(g) && !out.some(function (o) { return o.g === g; })) out.push({ g: g, min: 4 }); });
+      return out.slice(0, 3);
     }
+    function homeTop() {
+      var H = window.MW_HOME || {}, line = (NORMIE ? H.taglineN : H.tagline) || (NORMIE ? "Free daily puzzles. No medicine required." : "Free daily medical puzzles, made by a GP.");
+      return '<section class="mw-top" id="puzzles"><div class="mt-meta"><span class="mt-day">' + nice(today, { weekday: "long", day: "numeric", month: "short" }) + '</span><span class="pill daypill d-' + DIFF[dow] + '">' + DIFF[dow] + '</span><span class="nextin">New in <b id="mw-count">' + countdown() + '</b></span><span class="mw-live" hidden></span></div>' +
+        '<div class="mt-head"><h1>' + line + "</h1>" + (NORMIE ? normImg("mt-norm", 52) : "") + "</div>" +
+        '<p class="mt-sub">' + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" +
+        (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>";
+    }
+    function todays3(list) {
+      if (!list.length) return "";
+      var done = list.filter(function (o) { var st = readStats(o.g); return st && st.done; }).length, mins = list.reduce(function (a, o) { return a + o.min; }, 0);
+      return '<section class="t3s" aria-labelledby="t3h"><div class="t3-head"><h2 id="t3h">Start here: today’s ' + list.length + "</h2><span>" + (done === list.length ? "All " + list.length + " done. Smug." : done ? done + " of " + list.length + " done" : "About " + mins + " minutes") + '</span></div><div class="t3-row">' +
+        list.map(function (o, i) {
+          var g = o.g, st = readStats(g), dn = st && st.done, ein = !g.dailyLine && diffFor(g, today, dow) === "Einstein", sp = g.special && g.special.dow === dow && !(g.special.from && today < g.special.from);
+          return '<a class="t3' + (dn ? " done" : "") + '" data-g="' + g.id + '" href="' + g.path + '" style="--accent:' + accentOf(g) + '">' +
+            '<span class="t3-ic">' + (dn && window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 40, "band-masc") : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : '<span class="t3-n" aria-hidden="true">' + (i + 1) + "</span>") + "</span>" +
+            '<span class="t3-tx"><b>' + g.name + (ein ? ' <i class="t3-ein" title="Einstein day">' + EIN + "</i>" : "") + "</b><small>" + (sp ? g.special.short : g.kind) + "</small></span>" +
+            '<span class="t3-go">' + (dn ? (st.win ? "Solved" : "Done") : "~" + o.min + " min") + "</span></a>";
+        }).join("") + "</div></section>";
+    }
+
     function homeBottom() {
       var H = window.MW_HOME; if (!H) return "";
       return H.sections.map(function (sec) {
@@ -751,20 +819,35 @@
           sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
       }).join("");
     }
-    function house() {
-      var h = MW_SITE.house; if (!h) return "";
-      var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
-      return '<a class="card house bonus" href="/basil/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>' +
-        (NORMIE ? "" : '<a class="card house" href="/conditions/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#6FB7A8" : "#2E7D6B") + '">' +
-        '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12M26 18v12"/></svg></div>' +
-        '<div class="cbody"><h2 class="name">Health guides</h2><p class="kind">Conditions &amp; medicines</p><p class="tag">' + (nf ? nf + " " : "") + 'fact sheets, plus medicines and tools.</p><div class="cfoot"><span class="play">Read</span></div></div></a>') +
-        '<a class="card house" href="' + h.href + '" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? h.accentDark : h.accent) + '">' +
-        '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/></svg></div>' +
-        '<div class="cbody"><h2 class="name">' + h.name + '</h2><p class="tag">' + h.text + '</p><div class="cfoot"><span class="play">' + h.cta + "</span></div></div></a>" +
-        '<a class="card house" href="https://ko-fi.com/maladywise" target="_blank" rel="noopener" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#D9A066" : "#A8642A") + '">' +
-        '<div class="band"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/></svg></div>' +
-        '<div class="cbody"><h2 class="name">Buy me a coffee</h2><p class="tag">Free, no ads. A coffee keeps it going.</p><div class="cfoot"><span class="play">Ko-fi \u2615</span></div></div></a>';
+    function bonusCard() {
+      return '<a class="card house bonus" href="/basil/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
     }
+    // Non-game links: a slim strip under the game sections.
+    function house() {
+      var h = MW_SITE.house, dk = root.getAttribute("data-theme") === "dark";
+      var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
+      function it(href, ext, acc, svg, b, sm) { return '<a href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ' style="--accent:' + acc + '"><span class="ms-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + svg + "</svg></span><span><b>" + b + "</b><small>" + sm + '</small></span><span class="ms-go" aria-hidden="true">›</span></a>'; }
+      return '<nav class="mw-strip" aria-label="More from Malady Wise">' +
+        (NORMIE ? "" : it("/conditions/", 0, dk ? "#6FB7A8" : "#2E7D6B", '<path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12"/>', "Health guides", (nf ? nf + " " : "") + "fact sheets, plus medicines")) +
+        (h ? it(h.href, 1, dk ? h.accentDark : h.accent, '<path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/>', h.name, "@MaladyWise on X") : "") +
+        it("https://ko-fi.com/maladywise", 1, dk ? "#D9A066" : "#A8642A", '<path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/>', "Buy me a coffee", "Free, no ads. Coffee helps.") + "</nav>";
+    }
+    // Game sections (MW_HOME.groups). Games not in any group land in "More puzzles" so nothing goes missing.
+    var GROUPS = (window.MW_HOME && MW_HOME.groups) || [];
+    function sections(skip) {
+      var all = order().filter(function (g) { return skip.indexOf(g.id) < 0; }), used = {};
+      var html = GROUPS.map(function (G) {
+        var cards = all.filter(function (g) { return G.games && G.games.indexOf(g.id) >= 0; });
+        cards.forEach(function (g) { used[g.id] = 1; });
+        var extra = G.basil ? bonusCard() : "";
+        if (!cards.length && !extra) return "";
+        return '<section class="gsec" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
+      }).join("");
+      var left = all.filter(function (g) { return !used[g.id]; });
+      if (left.length) html += '<section class="gsec" id="g-more"><div class="gsec-h"><h2>More puzzles</h2><span>Fresh off the ward.</span></div><div class="grid">' + left.map(card).join("") + "</div></section>";
+      return html;
+    }
+
     function order() {
       var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
       return MW_GAMES.filter(inMode).map(function (g, i) {
@@ -784,9 +867,34 @@
       var q = d === 0 ? (NORMIE ? "None yet. Kettle on, let's go." : "None yet. The waiting room is full.") : d === n ? "All done. Go outside. Touch grass. Hydrate." : d >= n - 2 ? (NORMIE ? "Nearly there. Finish strong." : "Nearly there. Finish the round.") : d >= n / 2 ? "Over halfway. Don\u2019t clock off yet." : "Good start. Plenty left.";
       return '<div class="mwprog">' + installChip() + '<div class="mwbar"><i style="width:' + Math.round(d / n * 100) + '%"></i></div><div class="mwline"><p><b>' + d + " of " + n + "</b> done today. " + q + "</p>" + streakPill() + '<a class="mw-mestat" href="/me/">\ud83c\udfc5 My stats</a>' + "</div></div>";
     }
-    // Health days banner (data/health-days.json). Days and weeks only; months are background themes.
+    // Health days chip (data/health-days.json). Days and weeks only; months are background themes.
+    // Region-specific events show only in that region: tag "au" or a name ending "(Australia)"/"(NSW)" = Australia (time zone or en-AU);
+    // "(UK)", "(US)", "(NZ)", "(Canada)", "(Ireland)" (or tags uk/us/nz/ca/ie) = that country's time zones.
+    // Normie mode: hidden unless the event has a "normie" field (true, or {name, blurb, link} overrides).
     var HD = null;
-    function inAU() { try { var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; if (/^Australia\//.test(tz)) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
+    function regionOf(x) {
+      var t = x.tags || [], R = ["au", "uk", "us", "nz", "ca", "ie"];
+      for (var i = 0; i < R.length; i++) if (t.indexOf(R[i]) >= 0) return R[i];
+      var m = (x.name || "").match(/\(([^()]+)\)\s*$/); if (!m) return "";
+      var k = m[1].trim();
+      if (/^(Australia|NSW|VIC|Victoria|QLD|Queensland|SA|WA|TAS|Tasmania|NT|ACT)$/i.test(k)) return "au";
+      if (/^(UK|United Kingdom|England|Scotland|Wales|Northern Ireland)$/i.test(k)) return "uk";
+      if (/^(US|USA|United States)$/i.test(k)) return "us";
+      if (/^(NZ|New Zealand|Aotearoa)$/i.test(k)) return "nz";
+      if (/^Canada$/i.test(k)) return "ca";
+      if (/^Ireland$/i.test(k)) return "ie";
+      return "";
+    }
+    function inRegion(r) {
+      if (!r) return true;
+      if (r === "au") return inAU();
+      var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+      var TZ = { uk: /^Europe\/(London|Belfast|Guernsey|Isle_of_Man|Jersey)$/, ie: /^Europe\/Dublin$/, nz: /^Pacific\/(Auckland|Chatham)$/,
+        us: /^(America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Juneau|Sitka|Nome|Yakutat|Metlakatla|Adak|Boise|Detroit|Menominee|Indiana\/.+|Kentucky\/.+|North_Dakota\/.+)|Pacific\/Honolulu)$/,
+        ca: /^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Glace_Bay|Goose_Bay|Whitehorse|Dawson|Dawson_Creek|Fort_Nelson|Iqaluit|Rankin_Inlet|Resolute|Cambridge_Bay|Inuvik|Swift_Current|Atikokan|Creston|Blanc-Sablon|Nipigon|Thunder_Bay|Rainy_River|Yellowknife|Pangnirtung)$/ };
+      if (tz) return !!(TZ[r] && TZ[r].test(tz));
+      return new RegExp("-" + { uk: "GB", ie: "IE", nz: "NZ", us: "US", ca: "CA" }[r] + "$", "i").test(navigator.language || "");
+    }
     function healthDay() {
       if (HD === null) {
         HD = false;
@@ -794,43 +902,35 @@
           .then(function (j) { HD = (j && j.days) || []; healthDay(); }).catch(function () {});
         return;
       }
+      var slot = document.getElementById("mw-hday"); if (!slot) return;
+      slot.innerHTML = "";
       if (!HD || !HD.length) return;
       var yr = today.slice(0, 4);
       var on = HD.filter(function (x) {
         var d = x.dates && x.dates[yr]; if (!d || x.kind === "month") return false;
-        if (x.tags && x.tags.indexOf("au") >= 0 && !inAU()) return false;
+        if (!inRegion(regionOf(x))) return false;
+        if (NORMIE && !x.normie) return false;
         return d.end ? d.start <= today && today <= d.end : d.start === today;
-      });
+      }).map(function (x) { var n = NORMIE && typeof x.normie === "object" ? x.normie : {}, y = {}; for (var k in x) y[k] = x[k]; ["name", "blurb", "link", "icon"].forEach(function (f) { if (n[f]) y[f] = n[f]; }); return y; });
       if (!on.length) return;
-      var normal = on.filter(function (x) { return x.tags.indexOf("sensitive") < 0; })
-        .sort(function (a, b) {
-          var fa = a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "day" || b.dates[yr].start === today ? 0 : 1;
-          return fa - fb || a.priority - b.priority;
-        });
-      var sens = on.filter(function (x) { return x.tags.indexOf("sensitive") >= 0; });
-      var html = "";
-      if (normal.length) {
-        var lead = normal[0], first = lead.dates[yr].start === today;
-        var themed = !NORMIE && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb);
-        html += '<section class="hday' + (lead.icon ? ' has-ic' : '') + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : '') + '<span class="hday-k">'  + (lead.kind === "week" ? "This week" : "Today") + '</span>' +
-          "<h2>" + esc2(lead.name) + "</h2><p>" + esc2(lead.blurb) + (themed ? " <b>Look out for themed puzzles today.</b>" : "") + "</p>" +
-          (normal.length > 1 ? '<p class="hday-also">Also: ' + normal.slice(1).map(function (x) { return x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + esc2(x.name) + "</a>" : esc2(x.name); }).join(", ") + "</p>" : "") +
-          (lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "") + "</section>";
-      }
-      sens.forEach(function (x) {
-        html += '<section class="hday quiet"><p><b>' + esc2(x.name) + ".</b> " + esc2(x.blurb) + (x.link ? ' <a href="' + esc2(x.link) + '" target="_blank" rel="noopener">More</a>' : "") + "</p></section>";
+      function sens(x) { return (x.tags || []).indexOf("sensitive") >= 0; }
+      var normal = on.filter(function (x) { return !sens(x); }).sort(function (a, b) {
+        var fa = a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "day" || b.dates[yr].start === today ? 0 : 1;
+        return fa - fb || (a.priority || 9) - (b.priority || 9);
       });
-      var old = main.querySelectorAll(".hday"); Array.prototype.forEach.call(old, function (n) { n.remove(); });
-      var mast = document.getElementById("puzzles");
-      if (mast) mast.insertAdjacentHTML("afterend", html);
+      var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead);
+      var themed = !NORMIE && !quiet && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb || "");
+      var k = themed ? "Themed today" : lead.kind === "week" ? "This week" : "Today", more = on.length - 1;
+      var inner = (lead.icon && !quiet ? '<img class="hc-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="22" height="22">' : "") + '<span class="hc-k">' + k + '</span><span class="hc-n">' + esc2(regionOf(lead) ? lead.name.replace(/\s*\([^()]+\)\s*$/, "") : lead.name) + "</span>" + (more > 0 ? '<span class="hc-more">+' + more + "</span>" : "") + (lead.link ? '<span class="hc-go">More ›</span>' : "");
+      var tip = esc2(lead.name + (lead.blurb ? ". " + lead.blurb : "") + (more > 0 ? " Also: " + on.filter(function (x) { return x !== lead; }).map(function (x) { return x.name; }).join(", ") + "." : ""));
+      slot.innerHTML = lead.link ? '<a class="hday-chip' + (quiet ? " quiet" : "") + '" href="' + esc2(lead.link) + '" target="_blank" rel="noopener" title="' + tip + '">' + inner + "</a>" : '<p class="hday-chip' + (quiet ? " quiet" : "") + '" title="' + tip + '">' + inner + "</p>";
     }
+
     function draw() {
-      main.innerHTML = homeTop() + '<section class="mast" id="puzzles"><div class="mast-top"><div class="mast-l"><p class="tagl">' + (NORMIE ? "\ud83d\ude42 No medical degree required." : "Think like a doctor.") + '</p><h1>Today&rsquo;s ' + (NORMIE ? "" : "medical ") + 'puzzles</h1>' +
-        '<p class="mdate">' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</p><p>" + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" + (NORMIE ? '<p class="mw-normline">' + normImg("mw-norm", 40) + "<span><b>Norm here.</b> No medicine today. Just puzzles.</span></p>" : "") + "</div>" +
-        '<div class="mast-r"><span class="pill daypill d-' + DIFF[dow] + '">' + nice(today, { weekday: "long" }) + " &middot; " + DIFF[dow] + '</span><span class="nextin">New puzzles in <b id="mw-count">' + countdown() + "</b></span><span class=\"mw-live\" hidden></span></div></div>" +
-        (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>" +
-        progress() + '<div class="grid">' + order().map(card).join("") + house() + "</div>" + homeBottom() + NL_HTML +
-        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> \u00b7 <a href="disclaimer/">Disclaimer</a> \u00b7 <a href="privacy/">Privacy</a> \u00b7 <a href="contact/">Contact</a></footer>';
+      var t3 = startList();
+      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + todays3(t3) + progress() +
+        sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
+        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> · <a href="disclaimer/">Disclaimer</a> · <a href="privacy/">Privacy</a> · <a href="contact/">Contact</a></footer>';
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();
