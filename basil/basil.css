@@ -124,3 +124,22 @@
 .bk-otrophy{font-size:46px;line-height:1;margin:-4px 0 -4px!important}
 .bk-over.win .bk-otitle{color:#B07A0C}
 .bk-crown{font-size:.9em}
+
+/* How to play popup: two short pages, fits a 375x667 phone without scrolling */
+.bk-howbtn{font:700 14px var(--body);padding:7px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#FFE08A;cursor:pointer}
+.bk-howbtn:hover{background:rgba(255,255,255,.2)}
+.bk-help{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:rgba(20,13,40,.62);padding:12px}
+.bk-help[hidden]{display:none}
+.bk-hcard{position:relative;width:min(380px,100%);max-height:calc(100dvh - 24px);overflow:auto;box-sizing:border-box;background:#FAF7F2;color:#2B2340;border-radius:18px;padding:14px 16px 14px;box-shadow:0 14px 40px rgba(0,0,0,.35);animation:bkpop .3s cubic-bezier(.2,1.4,.4,1)}
+.bk-hcard h2{margin:0 0 6px;font:700 22px/1.1 var(--title);color:#4A3480;text-align:center}
+.bk-hx{position:absolute;top:6px;right:8px;width:34px;height:34px;border:0;border-radius:50%;background:transparent;color:#6B5A93;font-size:24px;line-height:1;cursor:pointer}
+.bk-htabs{display:flex;gap:4px;justify-content:center;margin:0 0 8px}
+.bk-htabs button{font:700 12.5px var(--body);padding:5px 12px;border-radius:999px;border:1.5px solid #D8CFEA;background:transparent;color:#2E1F57;cursor:pointer}
+.bk-htabs button[aria-selected="true"]{background:#2E1F57;border-color:#2E1F57;color:#fff}
+.bk-hp{margin:0;padding-left:18px;display:grid;gap:5px;font-size:13.5px;line-height:1.38;color:#3B2F5C}
+.bk-hp b{color:#2E1F57}
+.bk-hp[hidden]{display:none}
+.bk-hgo{display:block;margin:10px auto 0;font:700 15px var(--body);padding:9px 26px;border-radius:999px;border:0;background:#2E1F57;color:#fff;cursor:pointer}
+.bk-hx:focus-visible,.bk-htabs button:focus-visible,.bk-hgo:focus-visible,.bk-howbtn:focus-visible{outline:2px solid #B07A0C;outline-offset:2px}
+:root[data-motion="reduce"] .bk-hcard{animation:none}
+@media (prefers-reduced-motion:reduce){.bk-hcard{animation:none}}
