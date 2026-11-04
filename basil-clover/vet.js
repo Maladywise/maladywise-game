@@ -550,7 +550,22 @@
       if (tt > 0.8) { rr(34, 114, 128, 30, 12); ctx.fillStyle = "#FFFFFF"; ctx.fill(); ctx.beginPath(); ctx.moveTo(140, 142); ctx.lineTo(156, 154); ctx.lineTo(128, 143); ctx.fill(); txt("“Fine. Take the jar.", 98, 127, "italic 800 9px " + P, "#2B2340"); txt("Both perfectly healthy.”", 98, 138, "italic 800 9px " + P, "#2B2340"); }
     }
 
+    // small pictures for the "How it works" guide, drawn in a 64 x 64 box
+    function icon(kind) {
+      ctx.save();
+      if (kind === "cockatoo") cockatoo(30, 36, true, 0.55);
+      else if (kind === "ginger") ginger(32, 32, 0.27);
+      else if (kind === "fleas") { ctx.translate(32, 34); ctx.scale(1.3, 1.3); fleas(9); }
+      else if (kind === "blowfly") { ctx.translate(32, 34); ctx.scale(1.6, 1.6); flyer("moth", 1); }
+      else if (kind === "mozzie") { ctx.translate(32, 32); ctx.scale(1.5, 1.5); flyer("wasp", 1); }
+      else if (kind === "pentorch") { circ(32, 32, 16, "rgba(255,214,90,.35)"); circ(32, 32, 7.5, "#FFE69A"); circ(32, 32, 3.8, "#FFFFFF"); ctx.strokeStyle = "#E0A21E"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(32, 32, 8, 0, 7); ctx.stroke(); }
+      else if (kind === "bubble") { ctx.translate(32, 32); ctx.scale(1.3, 1.3); bubble(30); }
+      else if (kind === "vet") { ctx.translate(32, 64); ctx.scale(0.3, 0.3); ctx.translate(-180, -VB); vetBody(180, {}); }
+      else if (kind === "nurse") nurse(32, 64, 0.32, 0);
+      ctx.restore();
+    }
     return {
+      icon: w(icon),
       TEXT: TEXT, has: has, spotXY: spotXY, vetX: vetX,
       back: w(back), table: w(table), heatPad: w(heatPad), sulk: w(sulk), item: w(item), flyer: w(flyer), fleas: w(fleas), bubble: w(bubble),
       bossBack: w(bossBack), bossFront: w(bossFront), bossCatExtras: w(bossCatExtras), coneFly: w(coneFly), parts: w(parts),
