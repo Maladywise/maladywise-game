@@ -14,7 +14,7 @@ window.MW_HOME = {
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
-      { t: "Rare conditions", href: "/rare-conditions/", d: "4,800 rare diseases, ranked by rarity" }
+      { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" }
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
