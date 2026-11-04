@@ -200,3 +200,5 @@
 .bk-gt.bs{background:rgba(122,31,43,.3);border-color:rgba(255,150,150,.3)}
 .bk-gg:has(.bs){grid-template-columns:repeat(auto-fit,minmax(96px,120px));justify-content:center}
 .bk-gt.bs canvas{width:64px;height:64px}
+.bk-oexit{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.bk-oexit .bk-sbtn{text-decoration:none;display:inline-flex;align-items:center}

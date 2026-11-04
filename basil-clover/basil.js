@@ -1673,6 +1673,9 @@
     ctx = keep; STAGE = st;
     drawGuide();
   }
+  // end-of-game: back to the intro and stage select (the "Back to puzzles" link is plain HTML)
+  function exitToStart() { running = false; paused = false; try { cancelAnimationFrame(raf); } catch (e) {} $("bk-over").hidden = true; $("bk-game").hidden = true; $("bk-intro").hidden = false; if (typeof stageUI === "function") stageUI(); window.scrollTo({ top: 0, behavior: "auto" }); }
+  document.addEventListener("click", function (e) { if (e.target && e.target.id === "bk-exit") exitToStart(); });
   function start() {
     if (STAGE === 2 && !kitchenWon()) setStage(1);
     CAMP = DAILY || !ENDLESS;
