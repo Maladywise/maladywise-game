@@ -1404,13 +1404,7 @@
     if (mo) {
       ctx.save(); ctx.translate(mo.x, mo.y); var fl = Math.abs(Math.sin(S.t * 16)) * 0.8 + 0.2, sc = mo.eaten ? mo.eaten / 0.4 : 1; ctx.scale(sc, sc);
       if (STAGE === 2 && V) V.flyer(mo.kind, fl); else {
-      var wc = mo.kind === "moth" ? ["#B8A88A", "#9C8B6E"] : mo.kind === "wasp" ? ["rgba(220,235,245,.75)", "rgba(200,220,235,.7)"] : ["#F0A21E", "#E0703A"];
-      if (mo.kind === "wasp") { ctx.save(); ctx.scale(1, fl); ell(-7, -8, 8, 5, wc[0], -0.5); ell(7, -8, 8, 5, wc[0], 0.5); ctx.restore();
-        ell(0, 2, 5, 11, "#F2C230"); ctx.fillStyle = "#2B2340"; [-3, 3, 9].forEach(function (yy) { ctx.fillRect(-5, yy, 10, 2.6); }); circ(0, -10, 4.2, "#2B2340"); ctx.fillStyle = "#2B2340"; ctx.beginPath(); ctx.moveTo(-2, 12); ctx.lineTo(0, 18); ctx.lineTo(2, 12); ctx.fill();
-        ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -13); ctx.lineTo(-4, -18); ctx.moveTo(1, -13); ctx.lineTo(4, -18); ctx.stroke(); }
-      else { ctx.save(); ctx.scale(1, fl); ell(-9, -6, 10, 8, wc[0], -0.4); ell(9, -6, 10, 8, wc[0], 0.4); ell(-7, 6, 7, 6, wc[1], 0.3); ell(7, 6, 7, 6, wc[1], -0.3); ctx.restore();
-      if (mo.kind === "butterfly") { circ(-9, -6, 3, "#2B2340"); circ(9, -6, 3, "#2B2340"); }
-      ell(0, 0, 2.6, 10, "#2B2340"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -9); ctx.lineTo(-5, -16); ctx.moveTo(1, -9); ctx.lineTo(5, -16); ctx.stroke(); }
+      flyer1(mo.kind, fl);
       }
       ctx.restore();
       if (FINE && !mo.eaten && mo.kind !== "wasp") { ctx.fillStyle = "#B5308A"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText("\u2191 or W", mo.x, mo.y + 26); }
@@ -1612,6 +1606,63 @@
     $("bk-canvas").setAttribute("aria-label", n === 2 ? "Basil the cat on a vet’s exam table, kicking things off" : "Basil the cat on a kitchen bench, kicking things off");
   }
   // stage card pictures, drawn with the game's own art
+  // the kitchen flyers: moth, butterfly, wasp (drawn at the origin; fl = wing flap)
+  function flyer1(kind, fl) {
+      var wc = kind === "moth" ? ["#B8A88A", "#9C8B6E"] : kind === "wasp" ? ["rgba(220,235,245,.75)", "rgba(200,220,235,.7)"] : ["#F0A21E", "#E0703A"];
+      if (kind === "wasp") { ctx.save(); ctx.scale(1, fl); ell(-7, -8, 8, 5, wc[0], -0.5); ell(7, -8, 8, 5, wc[0], 0.5); ctx.restore();
+        ell(0, 2, 5, 11, "#F2C230"); ctx.fillStyle = "#2B2340"; [-3, 3, 9].forEach(function (yy) { ctx.fillRect(-5, yy, 10, 2.6); }); circ(0, -10, 4.2, "#2B2340"); ctx.fillStyle = "#2B2340"; ctx.beginPath(); ctx.moveTo(-2, 12); ctx.lineTo(0, 18); ctx.lineTo(2, 12); ctx.fill();
+        ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -13); ctx.lineTo(-4, -18); ctx.moveTo(1, -13); ctx.lineTo(4, -18); ctx.stroke(); }
+      else { ctx.save(); ctx.scale(1, fl); ell(-9, -6, 10, 8, wc[0], -0.4); ell(9, -6, 10, 8, wc[0], 0.4); ell(-7, 6, 7, 6, wc[1], 0.3); ell(7, 6, 7, 6, wc[1], -0.3); ctx.restore();
+      if (kind === "butterfly") { circ(-9, -6, 3, "#2B2340"); circ(9, -6, 3, "#2B2340"); }
+      ell(0, 0, 2.6, 10, "#2B2340"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-1, -9); ctx.lineTo(-5, -16); ctx.moveTo(1, -9); ctx.lineTo(5, -16); ctx.stroke(); }
+  }
+  // ---------- "How it works": a picture guide drawn with the game's own art ----------
+  var GUIDE = {
+    1: [["Kick these", "", [["mug", "Mug"], ["pen", "Pen"], ["phone", "Phone"], ["sock", "Sock"], ["pills", "Pills"], ["plant", "Plant"], ["remote", "Remote"], ["glass", "Glass"], ["tube", "Tube"], ["keys", "Keys"], ["thermo", "Thermo"]]],
+      ["Smash or grab", "", [["vase", "Vase", "3–5 kicks"], ["tv", "TV", "8–10 kicks"], ["tank", "Fish tank", "+1 life"], ["tap", "Tap", "points ×2"], ["fish", "Fish", "+25%"], ["catnip", "Catnip", "auto-kick"]]],
+      ["Clover eats", "gd", [["catfood", "Cat food"], ["banana", "Banana"], ["steak", "Steak"], ["drumstick", "Drumstick"], ["sausage", "Sausage"], ["pizza", "Pizza"]]],
+      ["Never touch", "no", [["cactus", "Cactus"], ["pins", "Pins"], ["rose", "Rose"], ["pineapple", "Pineapple"], ["coffee", "Coffee"], ["grapes", "Grapes"], ["garlic", "Garlic"], ["hedgehog", "Hedgehog", "−1 life"], ["@wasp", "Wasp"]]],
+      ["Visitors", "", [["@dog", "Dog", "2× speed: tap"], ["@tom", "Stray tom", "tap 3×"], ["@moth", "Moth", "eat: frenzy"], ["@laser", "Laser dot", "tap 3×"]]],
+      ["Boss", "bs", [["@vac", "VAC-3000", "rounds 5 + 10"]]]],
+    2: [["Kick these", "", [["steth", "Steth"], ["pills", "Pill bottle"], ["clipboard", "Clipboard"], ["cone", "Cone"], ["thermo", "Thermo"], ["cotton", "Cotton jar"], ["treatjar", "Treat jar"], ["syringe", "Oral syringe"], ["bandage", "Vet wrap"], ["glove", "Glove"]]],
+      ["Smash or grab", "", [["vase", "Lab flask", "3–5 kicks"], ["tv", "Records", "8–10 kicks"], ["tank", "Dispenser", "+1 life"], ["tap", "Hose", "points ×2"], ["fish", "Heat pack", "+25%"], ["catnip", "Catnip fish", "auto-kick"]]],
+      ["Clover eats", "gd", [["dentalchew", "Dental chew"], ["kibble", "Kibble"], ["tunatube", "Tuna paste"], ["biscuitjar", "Dog biscuits"], ["jerky", "Jerky"], ["sardine", "Sardines"]]],
+      ["Never touch", "no", [["clippers", "Clippers"], ["slicker", "Brush"], ["spikyball", "Spiky ball"], ["cactus", "Cactus"], ["pillcheese", "Pill in cheese"], ["wormer", "Wormer"], ["pipette", "Flea pipette"], ["dietfood", "Diet food"], ["hedgehog", "Echidna", "−1 life"], ["@mozzie", "Mozzie"]]],
+      ["Visitors", "", [["@cockatoo", "Cockatoo", "2× speed: tap"], ["@ginger", "Cat patient", "tap 3×"], ["@fleas", "Fleas", "tap 3×"], ["@blowfly", "Blowfly", "eat: frenzy"], ["@pentorch", "Pen torch", "tap 3×"]]],
+      ["Bosses", "bs", [["@vet", "Dr Pokesworth", "rounds 5 + 10"], ["@nurse", "Nurse Burrito", "round 10"]]]]
+  };
+  var GSCALE = { vase: 0.8, tv: 0.7, tank: 0.55, hedgehog: 0.95 };
+  function buildGuide() {
+    [1, 2].forEach(function (st) {
+      var pane = $("bk-g" + st); if (!pane) return; var h = "";
+      GUIDE[st].forEach(function (g) {
+        h += '<h3>' + g[0] + '</h3><div class="bk-gg">';
+        g[2].forEach(function (it) { h += '<div class="bk-gt ' + g[1] + '"><canvas width="96" height="96" data-k="' + it[0] + '" data-st="' + st + '" aria-hidden="true"></canvas><span>' + it[1] + (it[2] ? '<em>' + it[2] + '</em>' : '') + '</span></div>'; });
+        h += '</div>';
+      });
+      pane.innerHTML = h;
+    });
+    document.querySelectorAll(".bk-gtabs button").forEach(function (b) { b.onclick = function () { var st = b.getAttribute("data-st"); document.querySelectorAll(".bk-gtabs button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); [1, 2].forEach(function (n) { var p = $("bk-g" + n); if (p) p.hidden = String(n) !== st; }); }; });
+  }
+  function drawGuide() {
+    var keep = ctx, st0 = STAGE;
+    document.querySelectorAll(".bk-gt canvas").forEach(function (c) {
+      var k = c.getAttribute("data-k"), st = +c.getAttribute("data-st"); if (st === 2 && !V) return;
+      ctx = c.getContext("2d"); ctx.setTransform(c.width / 64, 0, 0, c.height / 64, 0, 0); ctx.clearRect(0, 0, 64, 64); STAGE = st;
+      try {
+        ctx.save();
+        if (k.charAt(0) !== "@") { var sc = (st === 2 ? { vase: 0.8, tv: 0.7, tank: 0.52, hedgehog: 0.9 } : GSCALE)[k] || 1; ctx.translate(k === "syringe" ? 39 : 32, 52 + (sc < 1 ? 4 : 0)); ctx.scale(sc, sc); item(k, 0, 0, 0); }
+        else if (st === 2) V.icon(k.slice(1));
+        else if (k === "@dog") { ctx.translate(32, 30); ctx.scale(0.55, 0.55); ctx.translate(-281, -80); dogDraw(1); }
+        else if (k === "@tom") { ctx.translate(32, 30); ctx.scale(0.55, 0.55); ctx.translate(-281, -92); tomDraw({ hitT: 0, k: 1 }); }
+        else if (k === "@wasp" || k === "@moth") { ctx.translate(32, 32); ctx.scale(1.5, 1.5); flyer1(k.slice(1), 1); }
+        else if (k === "@laser") { circ(32, 32, 15, "rgba(255,40,40,.22)"); circ(32, 32, 6.5, "#FF2A2A"); circ(30, 30, 2, "#FFD6D6"); }
+        else if (k === "@vac") { ctx.translate(32, 48); ctx.scale(0.4, 0.4); ctx.translate(0, -(BENCH - 1)); vacuum({ x: 0, atk: null, angry: false, hitT: 0, done: null, dent: 0, face: 1 }); }
+        ctx.restore();
+      } catch (e) { ctx.restore(); }
+    });
+    ctx = keep; STAGE = st0;
+  }
   function drawThumbs() {
     var keep = ctx, st = STAGE;
     [["bk-th1", 1], ["bk-th2", 2]].forEach(function (q) {
@@ -1620,6 +1671,7 @@
       else { V.thumb(); [["b", 64, 0.5], ["c", 312, 0.42]].forEach(function (d) { ctx.save(); ctx.translate(d[1], BENCH + 4); ctx.scale(d[0] === "c" ? -d[2] : d[2], d[2]); ctx.translate(-120, -246); spr(d[0] === "b" ? "basil-body" : "clover-body"); spr(d[0] === "b" ? "basil-head" : "clover-head"); catEyes(d[0], d[0] === "b" ? "wide" : "open"); ctx.restore(); }); }
     });
     ctx = keep; STAGE = st;
+    drawGuide();
   }
   function start() {
     if (STAGE === 2 && !kitchenWon()) setStage(1);
@@ -1651,6 +1703,6 @@
   document.addEventListener("visibilitychange", function () { if (document.hidden && running && !S.over && !paused) togglePause(); });
   window.addEventListener("resize", function () { if (running) size(); });
   renderBoard("bk-hslist0", "world");
-  reset(); size(); draw(); if (!sprLeft) drawThumbs();
+  buildGuide(); reset(); size(); draw(); if (!sprLeft) drawThumbs();
   if (DEVSTAGE === 2 && kitchenWon()) setStage(2);
 })();
