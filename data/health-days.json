@@ -13620,6 +13620,1707 @@
     "blurb": "Last day of the year. Countdowns, fireworks and resolutions you will definitely keep.",
     "theme": "Celebrations around the world, fireworks, calendars"
    }
+  },
+  {
+   "id": "moebius",
+   "name": "Moebius Syndrome Awareness Day",
+   "kind": "day",
+   "rule": "01-24",
+   "dates": {
+    "2026": {
+     "start": "2026-01-24"
+    },
+    "2027": {
+     "start": "2027-01-24"
+    },
+    "2028": {
+     "start": "2028-01-24"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://rarediseases.org/event/jan-24-moebius-syndrome-awareness-day/2027-01-24/",
+   "blurb": "People with Moebius syndrome can't smile or move their eyes sideways: cranial nerves VI and VII don't develop fully.",
+   "puzzle_theme": "Cranial nerves: facial and abducens nerves, eye movements, facial expression. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "kawasaki",
+   "name": "Kawasaki Disease Awareness Day",
+   "kind": "day",
+   "rule": "01-26",
+   "dates": {
+    "2026": {
+     "start": "2026-01-26"
+    },
+    "2027": {
+     "start": "2027-01-26"
+    },
+    "2028": {
+     "start": "2028-01-26"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://kdfoundation.org/?p=503232",
+   "blurb": "Described by Dr Tomisaku Kawasaki in Japan in 1967. Fever for five days or more? Think about the coronary arteries.",
+   "puzzle_theme": "Paediatric vasculitis: Kawasaki disease, coronary aneurysms, IVIG, fever in children. Respectful.",
+   "icon": "heart-calm",
+   "_note": "Observed mainly in the US and Canada (KD Foundation, municipal proclamations). Same date as Australia Day."
+  },
+  {
+   "id": "angelman",
+   "name": "International Angelman Day",
+   "kind": "day",
+   "rule": "02-15",
+   "dates": {
+    "2026": {
+     "start": "2026-02-15"
+    },
+    "2027": {
+     "start": "2027-02-15"
+    },
+    "2028": {
+     "start": "2028-02-15"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://cureangelman.org/international-angelman-day",
+   "blurb": "Dr Harry Angelman described the syndrome in 1965, prompted by a Verona painting, Boy with a Puppet.",
+   "puzzle_theme": "Genomic imprinting: UBE3A, chromosome 15, Angelman vs Prader-Willi. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "clusterheadache",
+   "name": "Cluster Headache Awareness Day",
+   "kind": "day",
+   "rule": "03-21",
+   "dates": {
+    "2026": {
+     "start": "2026-03-21"
+    },
+    "2027": {
+     "start": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-21"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://ihs-headache.org/?p=5478",
+   "blurb": "Held on the spring equinox because cluster headaches keep eerily regular daily and seasonal rhythms. High-flow oxygen can abort attacks.",
+   "puzzle_theme": "Headache medicine: cluster headache, trigeminal autonomic cephalalgias, oxygen, circadian rhythms",
+   "icon": "brain",
+   "normie": {
+    "name": "Cluster Headache Awareness Day",
+    "blurb": "Why some headaches strike like clockwork, at the same time each day."
+   }
+  },
+  {
+   "id": "cushings",
+   "name": "Cushing's Awareness Day",
+   "kind": "day",
+   "rule": "04-08",
+   "dates": {
+    "2026": {
+     "start": "2026-04-08"
+    },
+    "2027": {
+     "start": "2027-04-08"
+    },
+    "2028": {
+     "start": "2028-04-08"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.ese-hormones.org/education-and-training/events-key-dates/cushings-awareness-day",
+   "blurb": "Harvey Cushing's birthday. He described the syndrome in 1912; moon face and purple stretch marks are the textbook clues.",
+   "puzzle_theme": "Endocrinology: cortisol, Cushing's syndrome vs disease, dexamethasone suppression, Harvey Cushing",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "Cushing's Awareness Day",
+    "blurb": "Cortisol, the stress hormone, and what happens when there's far too much."
+   }
+  },
+  {
+   "id": "pompe",
+   "name": "International Pompe Day",
+   "kind": "day",
+   "rule": "04-15",
+   "dates": {
+    "2026": {
+     "start": "2026-04-15"
+    },
+    "2027": {
+     "start": "2027-04-15"
+    },
+    "2028": {
+     "start": "2028-04-15"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.worldpompe.org/international-pompe-day",
+   "blurb": "Named after Dutch pathologist J.C. Pompe, it was the first disease recognised as a lysosomal storage disorder.",
+   "puzzle_theme": "Lysosomal and glycogen storage disorders: acid alpha-glucosidase, cardiomyopathy, enzyme replacement. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "fop",
+   "name": "FOP Awareness Day",
+   "kind": "day",
+   "rule": "04-23",
+   "dates": {
+    "2026": {
+     "start": "2026-04-23"
+    },
+    "2027": {
+     "start": "2027-04-23"
+    },
+    "2028": {
+     "start": "2028-04-23"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.ifopa.org/awareness_day",
+   "blurb": "FOP turns muscle and tendon into bone, slowly building a second skeleton. Today marks the 2006 discovery of its gene, ACVR1.",
+   "puzzle_theme": "Bone biology: ossification, ACVR1, rare bone disorders, why biopsies are avoided. Respectful.",
+   "icon": "tess-bone"
+  },
+  {
+   "id": "asday",
+   "name": "World AS Day",
+   "kind": "day",
+   "rule": "nth:1:5:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-02"
+    },
+    "2027": {
+     "start": "2027-05-08"
+    },
+    "2028": {
+     "start": "2028-05-06"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.medicalnewstoday.com/articles/10-facts-for-world-as-day",
+   "blurb": "Ankylosing spondylitis can fuse the spine into a 'bamboo spine'. HLA-B27 is its famous genetic link.",
+   "puzzle_theme": "Rheumatology: axial spondyloarthritis, HLA-B27, sacroiliitis, inflammatory back pain",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "World AS Day",
+    "blurb": "Why some back pain gets better with exercise and worse with rest."
+   },
+   "_note": "First Saturday of May, moving to the second Saturday when the first falls on 1 May (so 8 May in 2027)."
+  },
+  {
+   "id": "wishbone",
+   "name": "Wishbone Day",
+   "kind": "day",
+   "rule": "05-06",
+   "dates": {
+    "2026": {
+     "start": "2026-05-06"
+    },
+    "2027": {
+     "start": "2027-05-06"
+    },
+    "2028": {
+     "start": "2028-05-06"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.shrinerschildrens.org/en/news-and-media/events/2024/05/wishbone-day",
+   "blurb": "Osteogenesis imperfecta awareness day. Blue-tinged whites of the eyes are a classic clue to this type I collagen disorder.",
+   "puzzle_theme": "Bone and collagen: osteogenesis imperfecta, type I collagen, blue sclerae, bisphosphonates. Respectful.",
+   "icon": "tess-bone"
+  },
+  {
+   "id": "cdls",
+   "name": "Cornelia de Lange Syndrome Awareness Day",
+   "kind": "day",
+   "rule": "nth:2:5:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-09"
+    },
+    "2027": {
+     "start": "2027-05-08"
+    },
+    "2028": {
+     "start": "2028-05-13"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.indiatvnews.com/health/when-is-international-cdls-awareness-day-2024-know-date-history-significance-and-more-2024-05-11-930751",
+   "blurb": "Dutch paediatrician Cornelia de Lange described it in 1933. Classic features include joined eyebrows and long eyelashes.",
+   "puzzle_theme": "Genetic syndromes: cohesin genes, dysmorphology, eponymous paediatricians. Respectful.",
+   "icon": "zebra-rare",
+   "_note": "Second Saturday of May."
+  },
+  {
+   "id": "mecfs",
+   "name": "International ME/CFS Awareness Day",
+   "kind": "day",
+   "rule": "05-12",
+   "dates": {
+    "2026": {
+     "start": "2026-05-12"
+    },
+    "2027": {
+     "start": "2027-05-12"
+    },
+    "2028": {
+     "start": "2028-05-12"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.cdc.gov/me-cfs/awareness-day/index.html",
+   "blurb": "Held on Florence Nightingale's birthday; she is believed to have had an ME/CFS-like illness. Hallmark: post-exertional malaise.",
+   "puzzle_theme": "ME/CFS: post-exertional malaise, orthostatic intolerance, energy and fatigue science. Respectful.",
+   "icon": "sloth",
+   "_note": "Shares 12 May with International Nurses Day, which leads on priority."
+  },
+  {
+   "id": "mps",
+   "name": "International MPS Awareness Day",
+   "kind": "day",
+   "rule": "05-15",
+   "dates": {
+    "2026": {
+     "start": "2026-05-15"
+    },
+    "2027": {
+     "start": "2027-05-15"
+    },
+    "2028": {
+     "start": "2028-05-15"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://mpssociety.ca/mps-day",
+   "blurb": "In the mucopolysaccharidoses a missing enzyme lets sugar chains build up in cells. Hurler, Hunter and Sanfilippo are the famous types.",
+   "puzzle_theme": "Lysosomal storage disorders: mucopolysaccharides, Hurler, Hunter, enzyme replacement. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "hae",
+   "name": "hae day",
+   "kind": "day",
+   "rule": "05-16",
+   "dates": {
+    "2026": {
+     "start": "2026-05-16"
+    },
+    "2027": {
+     "start": "2027-05-16"
+    },
+    "2028": {
+     "start": "2028-05-16"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.haea.org/pages/p/hae_day",
+   "blurb": "Swelling without hives, and antihistamines don't help: hereditary angioedema is driven by bradykinin, not histamine.",
+   "puzzle_theme": "Angioedema: C1 inhibitor, bradykinin, ACE inhibitors, airway emergencies",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "HAE Day",
+    "blurb": "Why some people swell up suddenly, and why it isn't an allergy."
+   }
+  },
+  {
+   "id": "nf",
+   "name": "World NF Awareness Day",
+   "kind": "day",
+   "rule": "05-17",
+   "dates": {
+    "2026": {
+     "start": "2026-05-17"
+    },
+    "2027": {
+     "start": "2027-05-17"
+    },
+    "2028": {
+     "start": "2028-05-17"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://evers.wi.gov/Documents/051726_Accessible%20Proclamation_World%20Neurofibromatosis%20Awareness%20Day.pdf",
+   "blurb": "Café-au-lait spots, armpit freckles and Lisch nodules: neurofibromatosis affects about two million people worldwide.",
+   "puzzle_theme": "Neurocutaneous syndromes: NF1, NF2, café-au-lait spots, tumour suppressor genes",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World NF Awareness Day",
+    "blurb": "Birthmarks, freckles and what skin spots can tell a doctor."
+   }
+  },
+  {
+   "id": "behcet",
+   "name": "World Behçet's Day",
+   "kind": "day",
+   "rule": "05-20",
+   "dates": {
+    "2026": {
+     "start": "2026-05-20"
+    },
+    "2027": {
+     "start": "2027-05-20"
+    },
+    "2028": {
+     "start": "2028-05-20"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://rarediseases.org/guest-blog-uniting-for-behcets-disease-awareness/",
+   "blurb": "Named after Turkish dermatologist Hulusi Behçet. Mouth ulcers, genital ulcers, eye inflammation: nicknamed the Silk Road disease.",
+   "puzzle_theme": "Vasculitis: Behçet's disease, pathergy, uveitis, oral ulcers",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World Behçet's Day",
+    "blurb": "The 'Silk Road disease' and why it follows an ancient trade route."
+   }
+  },
+  {
+   "id": "hypopara",
+   "name": "World Hypoparathyroidism Awareness Day",
+   "kind": "day",
+   "rule": "06-01",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01"
+    },
+    "2027": {
+     "start": "2027-06-01"
+    },
+    "2028": {
+     "start": "2028-06-01"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.hypopara.org/about/world-hypopara-awareness-day",
+   "blurb": "Low parathyroid hormone, low calcium. Tap the cheek for Chvostek's sign; inflate a cuff for Trousseau's.",
+   "puzzle_theme": "Calcium and parathyroid: PTH, hypocalcaemia, Chvostek and Trousseau signs, post-thyroidectomy",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World Hypopara Day",
+    "blurb": "Four tiny glands in your neck that run your calcium."
+   }
+  },
+  {
+   "id": "clubfoot",
+   "name": "World Clubfoot Day",
+   "kind": "day",
+   "rule": "06-03",
+   "dates": {
+    "2026": {
+     "start": "2026-06-03"
+    },
+    "2027": {
+     "start": "2027-06-03"
+    },
+    "2028": {
+     "start": "2028-06-03"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://ponseti.medicine.uiowa.edu/what-clubfoot/world-clubfoot-day",
+   "blurb": "Dr Ignacio Ponseti's birthday. His gentle casting method corrects most clubfeet without major surgery.",
+   "puzzle_theme": "Paediatric orthopaedics: clubfoot, Ponseti method, casting, global surgery",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "World Clubfoot Day",
+    "blurb": "How gentle plaster casts straighten babies' feet."
+   }
+  },
+  {
+   "id": "fshd",
+   "name": "World FSHD Day",
+   "kind": "day",
+   "rule": "06-20",
+   "dates": {
+    "2026": {
+     "start": "2026-06-20"
+    },
+    "2027": {
+     "start": "2027-06-20"
+    },
+    "2028": {
+     "start": "2028-06-20"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.fshdsociety.org/2022/06/07/june-20-is-world-fshd-day-2022/",
+   "blurb": "Facioscapulohumeral muscular dystrophy: the name is a map of the muscles it weakens, face, shoulder blades and upper arms.",
+   "puzzle_theme": "Muscular dystrophies: FSHD, DUX4, anatomy of face and shoulder muscles. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "doctorsdayindia",
+   "name": "National Doctors' Day (India)",
+   "kind": "day",
+   "rule": "07-01",
+   "dates": {
+    "2026": {
+     "start": "2026-07-01"
+    },
+    "2027": {
+     "start": "2027-07-01"
+    },
+    "2028": {
+     "start": "2028-07-01"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.theweek.in/news/health/2024/07/01/who-was-dr-bc-roy-heres-why-national-doctors-day-honours-west-bengals-first-chief-minister.html",
+   "blurb": "India honours Dr Bidhan Chandra Roy, physician and West Bengal chief minister, who was born and died on 1 July.",
+   "puzzle_theme": "Doctors: history of medicine, famous physicians, medical training",
+   "icon": "stethoscope",
+   "normie": {
+    "name": "Doctors' Day (India)",
+    "blurb": "A day to thank doctors, and the man born and died on 1 July."
+   },
+   "_note": "Single-country (India), first observed 1991. Shares 1 July with World Bronchiectasis Day."
+  },
+  {
+   "id": "bronchiectasis",
+   "name": "World Bronchiectasis Day",
+   "kind": "day",
+   "rule": "07-01",
+   "dates": {
+    "2026": {
+     "start": "2026-07-01"
+    },
+    "2027": {
+     "start": "2027-07-01"
+    },
+    "2028": {
+     "start": "2028-07-01"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.ersnet.org/news-and-features/news/inaugural-world-bronchiectasis-day/",
+   "blurb": "Permanently widened airways that trap mucus. 'Tram-track' lines and signet-ring signs on CT give it away.",
+   "puzzle_theme": "Respiratory medicine: bronchiectasis, CT signs, airway clearance, cystic fibrosis vs non-CF",
+   "icon": "cipher-inhaler",
+   "normie": {
+    "name": "World Bronchiectasis Day",
+    "blurb": "Why coughing up mucus every day isn't normal."
+   },
+   "_note": "Inaugural 2022. Shares 1 July with National Doctors' Day (India), which leads on priority."
+  },
+  {
+   "id": "pkd",
+   "name": "PKD Awareness Day",
+   "kind": "day",
+   "rule": "09-04",
+   "dates": {
+    "2026": {
+     "start": "2026-09-04"
+    },
+    "2027": {
+     "start": "2027-09-04"
+    },
+    "2028": {
+     "start": "2028-09-04"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://face.meei.harvard.edu/what-is-pkd/pkd-awareness-day-sept-4-polycystic-kidney-disease-pkd-foundation",
+   "blurb": "Polycystic kidney disease is the most common inherited kidney disease; cyst-filled kidneys can grow to football size.",
+   "puzzle_theme": "Nephrology genetics: ADPKD, PKD1 and PKD2, berry aneurysms, kidney cysts",
+   "icon": "camel",
+   "normie": {
+    "name": "PKD Awareness Day",
+    "blurb": "Kidneys full of fluid bubbles, and the family link."
+   },
+   "_note": "Mainly US (PKD Foundation; US Senate resolution)."
+  },
+  {
+   "id": "usher",
+   "name": "Usher Syndrome Awareness Day",
+   "kind": "day",
+   "rule": "nth:3:5:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-19"
+    },
+    "2027": {
+     "start": "2027-09-18"
+    },
+    "2028": {
+     "start": "2028-09-16"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.michigan.gov/whitmer/news/proclamations/2026/09/19/september-19-2026-usher-syndrome-awareness-day",
+   "blurb": "A leading genetic cause of combined deafness and blindness: hearing loss from birth, then retinitis pigmentosa narrows vision.",
+   "puzzle_theme": "Sensory genetics: Usher syndrome, retinitis pigmentosa, cochlea, deafblindness. Respectful.",
+   "icon": "echo-ear",
+   "_note": "Third Saturday of September (around the equinox; 'Own the Equinox')."
+  },
+  {
+   "id": "myositis",
+   "name": "World Myositis Day",
+   "kind": "day",
+   "rule": "09-21",
+   "dates": {
+    "2026": {
+     "start": "2026-09-21"
+    },
+    "2027": {
+     "start": "2027-09-21"
+    },
+    "2028": {
+     "start": "2028-09-21"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.afm-telethon.fr/en/news/world-myositis-day-september-21",
+   "blurb": "Heliotrope rash, Gottron's papules and weak shoulders and hips: myositis is muscle under immune attack.",
+   "puzzle_theme": "Inflammatory myopathies: dermatomyositis, CK, myositis antibodies, proximal weakness",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World Myositis Day",
+    "blurb": "What happens when the immune system attacks muscles."
+   },
+   "_note": "First held 2023."
+  },
+  {
+   "id": "cml",
+   "name": "World CML Day",
+   "kind": "day",
+   "rule": "09-22",
+   "dates": {
+    "2026": {
+     "start": "2026-09-22"
+    },
+    "2027": {
+     "start": "2027-09-22"
+    },
+    "2028": {
+     "start": "2028-09-22"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.cml-foundation.org/news-events/news/world-cml-day-2024-leaving-no-patient-behind",
+   "blurb": "22/9 honours the Philadelphia chromosome, the 9;22 swap behind CML. Imatinib made it the poster child of targeted therapy.",
+   "puzzle_theme": "Haematology: CML, Philadelphia chromosome, BCR-ABL, tyrosine kinase inhibitors",
+   "icon": "blood-drop",
+   "normie": {
+    "name": "World CML Day",
+    "blurb": "How a swapped piece of DNA led to a cancer pill."
+   }
+  },
+  {
+   "id": "ataxia",
+   "name": "International Ataxia Awareness Day",
+   "kind": "day",
+   "rule": "09-25",
+   "dates": {
+    "2026": {
+     "start": "2026-09-25"
+    },
+    "2027": {
+     "start": "2027-09-25"
+    },
+    "2028": {
+     "start": "2028-09-25"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.ern-rnd.eu/?p=4949",
+   "blurb": "Ataxia means 'without order'. Friedreich's ataxia is caused by a GAA triplet repeat in the frataxin gene.",
+   "puzzle_theme": "Cerebellum and coordination: ataxias, triplet repeats, Romberg test. Respectful.",
+   "icon": "brain"
+  },
+  {
+   "id": "gaucher",
+   "name": "International Gaucher Day",
+   "kind": "day",
+   "rule": "10-01",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01"
+    },
+    "2027": {
+     "start": "2027-10-01"
+    },
+    "2028": {
+     "start": "2028-10-01"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://gaucherdiseasenews.com/2019/09/30/iga-uses-tattoos-rare-stars-mark-oct-1-international-gaucher-day",
+   "blurb": "Gaucher disease was the first lysosomal disorder treated with enzyme replacement therapy, approved in 1991.",
+   "puzzle_theme": "Lysosomal storage: glucocerebrosidase, Gaucher cells, splenomegaly, enzyme replacement",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "International Gaucher Day",
+    "blurb": "Cells as recycling centres, and what happens when one machine breaks."
+   }
+  },
+  {
+   "id": "msa",
+   "name": "World MSA Day",
+   "kind": "day",
+   "rule": "10-03",
+   "dates": {
+    "2026": {
+     "start": "2026-10-03"
+    },
+    "2027": {
+     "start": "2027-10-03"
+    },
+    "2028": {
+     "start": "2028-10-03"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.msatrust.org.uk/?p=313386",
+   "blurb": "Multiple system atrophy can look like Parkinson's, but with early autonomic failure and a poor response to levodopa.",
+   "puzzle_theme": "Movement disorders: MSA vs Parkinson's, autonomic failure, alpha-synuclein. Respectful.",
+   "icon": "brain"
+  },
+  {
+   "id": "trigeminal",
+   "name": "International Trigeminal Neuralgia Awareness Day",
+   "kind": "day",
+   "rule": "10-07",
+   "dates": {
+    "2026": {
+     "start": "2026-10-07"
+    },
+    "2027": {
+     "start": "2027-10-07"
+    },
+    "2028": {
+     "start": "2028-10-07"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://tna.org.uk/pages/category/trigeminal-neuralgia-awareness-day",
+   "blurb": "Brushing teeth or a breeze on the cheek can trigger electric-shock face pain. Carbamazepine remains first-line.",
+   "puzzle_theme": "Cranial nerves and pain: trigeminal nerve, neuralgia, carbamazepine, microvascular decompression",
+   "icon": "brain",
+   "normie": {
+    "name": "Trigeminal Neuralgia Day",
+    "blurb": "The face's big sensory nerve and its three branches."
+   }
+  },
+  {
+   "id": "trauma",
+   "name": "World Trauma Day",
+   "kind": "day",
+   "rule": "10-17",
+   "dates": {
+    "2026": {
+     "start": "2026-10-17"
+    },
+    "2027": {
+     "start": "2027-10-17"
+    },
+    "2028": {
+     "start": "2028-10-17"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.gov.za/world-trauma-day",
+   "blurb": "Trauma care in a nutshell: the golden hour, ABCDE and stopping the bleeding.",
+   "puzzle_theme": "Trauma and emergency care: ATLS, haemorrhage control, injury prevention",
+   "icon": "stethoscope",
+   "normie": {
+    "name": "World Trauma Day",
+    "blurb": "Seatbelts, helmets and the golden hour after an injury."
+   }
+  },
+  {
+   "id": "mastocytosis",
+   "name": "Mastocytosis and Mast Cell Diseases Awareness Day",
+   "kind": "day",
+   "rule": "10-20",
+   "dates": {
+    "2026": {
+     "start": "2026-10-20"
+    },
+    "2027": {
+     "start": "2027-10-20"
+    },
+    "2028": {
+     "start": "2028-10-20"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://mastocytosis.ca/en/get-involved/international-mastocytosis-and-mast-cell-diseases-awareness-day",
+   "blurb": "Too many mast cells. Darier's sign: rub a skin spot and it swells and reddens within minutes.",
+   "puzzle_theme": "Mast cells: mastocytosis, MCAS, tryptase, KIT mutation, histamine",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "Mast Cell Awareness Day",
+    "blurb": "Meet mast cells, the immune system's itchy alarm bells."
+   }
+  },
+  {
+   "id": "dwarfism",
+   "name": "International Dwarfism Awareness Day",
+   "kind": "day",
+   "rule": "10-25",
+   "dates": {
+    "2026": {
+     "start": "2026-10-25"
+    },
+    "2027": {
+     "start": "2027-10-25"
+    },
+    "2028": {
+     "start": "2028-10-25"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.moh.gov.sa/en/HealthAwareness/healthDay/2021/Pages/HealthDay-2021-10-25-001.aspx",
+   "blurb": "Achondroplasia is the most common cause of restricted growth; most cases come from a brand-new FGFR3 change, not a parent.",
+   "puzzle_theme": "Growth and bone: achondroplasia, FGFR3, growth plates, skeletal dysplasias. Respectful.",
+   "icon": "zebra-rare",
+   "_note": "Shares 25 October with World Pasta Day and World Spina Bifida and Hydrocephalus Day."
+  },
+  {
+   "id": "amyloidosis",
+   "name": "World Amyloidosis Day",
+   "kind": "day",
+   "rule": "10-26",
+   "dates": {
+    "2026": {
+     "start": "2026-10-26"
+    },
+    "2027": {
+     "start": "2027-10-26"
+    },
+    "2028": {
+     "start": "2028-10-26"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://evers.wi.gov/Documents/102625_Accessible%20Proclamation_World%20Amyloidosis%20Day.pdf",
+   "blurb": "Misfolded proteins stacked into sheets. Stained with Congo red, amyloid glows apple-green under polarised light.",
+   "puzzle_theme": "Protein misfolding: AL and ATTR amyloidosis, Congo red, restrictive cardiomyopathy",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World Amyloidosis Day",
+    "blurb": "When proteins fold the wrong way and pile up."
+   },
+   "_note": "Organised by the Amyloidosis Alliance since 2021. Shares 26 October with Intersex Awareness Day."
+  },
+  {
+   "id": "acromegaly",
+   "name": "World Acromegaly Day",
+   "kind": "day",
+   "rule": "11-01",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01"
+    },
+    "2027": {
+     "start": "2027-11-01"
+    },
+    "2028": {
+     "start": "2028-11-01"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.camurus.com/media/press-releases/2022/camurus-supports-two-global-awareness-days-for-rare-diseases/",
+   "blurb": "Too much growth hormone in adults: hands, feet and jaw keep growing. Rings and shoes stop fitting.",
+   "puzzle_theme": "Pituitary: growth hormone, IGF-1, acromegaly vs gigantism, pituitary tumours",
+   "icon": "giraffe",
+   "normie": {
+    "name": "World Acromegaly Day",
+    "blurb": "Growth hormone, giants and why some adults keep growing."
+   }
+  },
+  {
+   "id": "crps",
+   "name": "Colour the World Orange (CRPS Awareness Day)",
+   "kind": "day",
+   "rule": "nth:1:0:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-02"
+    },
+    "2027": {
+     "start": "2027-11-01"
+    },
+    "2028": {
+     "start": "2028-11-06"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://painrelieffoundation.org.uk/?p=4539",
+   "blurb": "Complex regional pain syndrome: pain far out of proportion to the injury, with colour, temperature and sweating changes.",
+   "puzzle_theme": "Pain medicine: CRPS, Budapest criteria, nervous system and pain",
+   "icon": "ribbon-orange",
+   "normie": {
+    "name": "Colour the World Orange",
+    "blurb": "A day for wearing orange, and how nerves can amplify pain."
+   },
+   "_note": "First Monday in November."
+  },
+  {
+   "id": "microtia",
+   "name": "Microtia Awareness Day",
+   "kind": "day",
+   "rule": "11-09",
+   "dates": {
+    "2026": {
+     "start": "2026-11-09"
+    },
+    "2027": {
+     "start": "2027-11-09"
+    },
+    "2028": {
+     "start": "2028-11-09"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://earcommunity.org/national-microtia-awareness-day-is-on-november-9th/658498/",
+   "blurb": "Microtia means 'small ear'. Some children have a new ear sculpted from their own rib cartilage.",
+   "puzzle_theme": "Ear anatomy and development: microtia, atresia, hearing, reconstructive surgery. Respectful.",
+   "icon": "echo-ear",
+   "_note": "Started in the US in 2016 by Ear Community; marked by families worldwide."
+  },
+  {
+   "id": "keratoconus",
+   "name": "World Keratoconus Day",
+   "kind": "day",
+   "rule": "11-10",
+   "dates": {
+    "2026": {
+     "start": "2026-11-10"
+    },
+    "2027": {
+     "start": "2027-11-10"
+    },
+    "2028": {
+     "start": "2028-11-10"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/World_Keratoconus_Day",
+   "blurb": "The cornea thins and bulges into a cone. Cross-linking uses riboflavin eye drops and UV light to stiffen it.",
+   "puzzle_theme": "Ophthalmology: cornea, keratoconus, astigmatism, corneal cross-linking",
+   "icon": "owl",
+   "normie": {
+    "name": "World Keratoconus Day",
+    "blurb": "The clear window at the front of your eye, and when it bulges."
+   },
+   "_note": "Shares 10 November with World Neuroendocrine Cancer Day and World Science Day."
+  },
+  {
+   "id": "del22q",
+   "name": "22q11.2 Awareness Day",
+   "kind": "day",
+   "rule": "11-22",
+   "dates": {
+    "2026": {
+     "start": "2026-11-22"
+    },
+    "2027": {
+     "start": "2027-11-22"
+    },
+    "2028": {
+     "start": "2028-11-22"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.22qsociety.org/news/content.asp?ni=297",
+   "blurb": "The most common chromosomal microdeletion. Heart defects, low calcium and a small thymus: think DiGeorge syndrome.",
+   "puzzle_theme": "Chromosomal syndromes: 22q11.2 deletion, DiGeorge, thymus, pharyngeal arches. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "piweek",
+   "name": "World Primary Immunodeficiency Week",
+   "kind": "week",
+   "rule": "range:04-22:04-29",
+   "dates": {
+    "2026": {
+     "start": "2026-04-22",
+     "end": "2026-04-29"
+    },
+    "2027": {
+     "start": "2027-04-22",
+     "end": "2027-04-29"
+    },
+    "2028": {
+     "start": "2028-04-22",
+     "end": "2028-04-29"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.bubblefoundation.org.uk/about/world-pi-week",
+   "blurb": "Hundreds of inborn errors of immunity are now known. Infections that are frequent, severe or unusual can be the clue.",
+   "puzzle_theme": "Immunology: primary immunodeficiencies, SCID, antibody deficiency, newborn screening",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "World PI Week",
+    "blurb": "How the immune system is built, and what happens when a part is missing."
+   }
+  },
+  {
+   "id": "haemochromatosis",
+   "name": "World Haemochromatosis Week",
+   "kind": "week",
+   "rule": "range:06-01:06-07",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-07"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-07"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-07"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://haemochromatosis.org.au/?p=3407",
+   "blurb": "Australia's most common genetic disorder, affecting about 1 in 200. The treatment is medicine's oldest trick: regular bloodletting.",
+   "puzzle_theme": "Iron metabolism: haemochromatosis, HFE gene, ferritin, venesection",
+   "icon": "blood-drop",
+   "normie": {
+    "name": "World Haemochromatosis Week",
+    "blurb": "Iron overload, and why some people are told to give blood."
+   },
+   "_note": "First week of June (1-7 June)."
+  },
+  {
+   "id": "hsweek",
+   "name": "Hidradenitis Suppurativa Awareness Week",
+   "kind": "week",
+   "rule": "week:nth:1:0:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-07"
+    },
+    "2027": {
+     "start": "2027-06-07",
+     "end": "2027-06-13"
+    },
+    "2028": {
+     "start": "2028-06-05",
+     "end": "2028-06-11"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.ucb.com/solutions/magazine/detail/article/uniting-with-the-community-in-recognition-of-hidradenitis-suppurativa-awareness-week",
+   "blurb": "Painful lumps and tunnels in the armpits and groin, often mistaken for boils for years before diagnosis.",
+   "puzzle_theme": "Dermatology: hidradenitis suppurativa, hair follicles, Hurley staging, biologics",
+   "icon": "silk-plaster",
+   "normie": {
+    "name": "HS Awareness Week",
+    "blurb": "A common skin condition many people have never heard of."
+   },
+   "_note": "First full week of June, Monday to Sunday."
+  },
+  {
+   "id": "ebweek",
+   "name": "EB Awareness Week",
+   "kind": "week",
+   "rule": "range:10-25:10-31",
+   "dates": {
+    "2026": {
+     "start": "2026-10-25",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-25",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-25",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.debra.org/events/eb-awareness-week-new",
+   "blurb": "Children with epidermolysis bullosa are called 'butterfly children': a missing protein lets skin layers shear apart at a touch.",
+   "puzzle_theme": "Skin structure: epidermolysis bullosa, keratins, collagen VII, basement membrane. Respectful.",
+   "icon": "lupus-butterfly"
+  },
+  {
+   "id": "marfanmonth",
+   "name": "Marfan Syndrome Awareness Month",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://marfan.org/2023/01/31/february-is-marfan-awareness-month/",
+   "blurb": "Tall, long fingers, dislocated lenses and aortic risk. The culprit is fibrillin-1, a connective-tissue protein.",
+   "puzzle_theme": "Connective tissue: Marfan syndrome, fibrillin-1, aortic dissection, thumb and wrist signs",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "Marfan Awareness Month",
+    "blurb": "Long limbs, bendy joints and the body's elastic scaffolding."
+   }
+  },
+  {
+   "id": "turnermonth",
+   "name": "Turner Syndrome Awareness Month",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.turnersyndrome.org/awareness-month",
+   "blurb": "One X chromosome instead of two. Short stature and coarctation of the aorta are classic clues.",
+   "puzzle_theme": "Sex chromosomes: Turner syndrome, karyotype, coarctation, growth hormone",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "Turner Syndrome Awareness Month",
+    "blurb": "X and Y chromosomes, and what happens with just one X."
+   }
+  },
+  {
+   "id": "fabrymonth",
+   "name": "Fabry Disease Awareness Month",
+   "kind": "month",
+   "rule": "month:04",
+   "dates": {
+    "2026": {
+     "start": "2026-04-01",
+     "end": "2026-04-30"
+    },
+    "2027": {
+     "start": "2027-04-01",
+     "end": "2027-04-30"
+    },
+    "2028": {
+     "start": "2028-04-01",
+     "end": "2028-04-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://fabrydiseasenews.com/news/fabry-awareness-month-brings-focus-community-support/",
+   "blurb": "Burning pain in the hands and feet, tiny dark-red skin spots, then kidney and heart trouble: an X-linked lysosomal zebra.",
+   "puzzle_theme": "Lysosomal storage: Fabry disease, alpha-galactosidase A, angiokeratomas, X-linked inheritance",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "sarcoidmonth",
+   "name": "Sarcoidosis Awareness Month",
+   "kind": "month",
+   "rule": "month:04",
+   "dates": {
+    "2026": {
+     "start": "2026-04-01",
+     "end": "2026-04-30"
+    },
+    "2027": {
+     "start": "2027-04-01",
+     "end": "2027-04-30"
+    },
+    "2028": {
+     "start": "2028-04-01",
+     "end": "2028-04-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.santelog.com/actualites-sante-nasdaq/fsr-celebrates-congressional-recognition-april-sarcoidosis-awareness-month",
+   "blurb": "Non-caseating granulomas, swollen hilar lymph nodes and sometimes high calcium. Sarcoidosis loves to mimic other diseases.",
+   "puzzle_theme": "Granulomatous disease: sarcoidosis, hilar lymphadenopathy, ACE, hypercalcaemia",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "pwsmonth",
+   "name": "Prader-Willi Syndrome Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.fpwr.org/pws-awareness-month",
+   "blurb": "Floppy babies who later develop an intense, constant hunger. A classic lesson in chromosome 15 imprinting.",
+   "puzzle_theme": "Genomic imprinting: Prader-Willi, chromosome 15, hypothalamus, appetite. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "williamsmonth",
+   "name": "Williams Syndrome Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://williams-syndrome.org.uk/awareness-month-may/",
+   "blurb": "A small missing piece of chromosome 7, narrowing above the aortic valve, and often a famously sociable personality.",
+   "puzzle_theme": "Microdeletion syndromes: Williams syndrome, elastin gene, supravalvular aortic stenosis. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "hdmonth",
+   "name": "Huntington's Disease Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://hdsa.org/?p=51256",
+   "blurb": "A CAG repeat in the huntingtin gene that can lengthen down the generations, a phenomenon called anticipation.",
+   "puzzle_theme": "Neurogenetics: Huntington's disease, CAG repeats, anticipation, basal ganglia. Respectful.",
+   "icon": "brain"
+  },
+  {
+   "id": "gbsmonth",
+   "name": "GBS and CIDP Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://gaincharity.org.uk/?p=225125",
+   "blurb": "Guillain-Barré often follows an infection such as Campylobacter. Weakness climbs from the legs and reflexes vanish.",
+   "puzzle_theme": "Peripheral nerves: Guillain-Barré, CIDP, demyelination, IVIG, lumbar puncture",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "ichthyosismonth",
+   "name": "Ichthyosis Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.firstskinfoundation.org/Ichthyosis-Awareness-Month",
+   "blurb": "Ichthyosis comes from the Greek for fish: dry, thickened, scaly skin. There are many genetic types.",
+   "puzzle_theme": "Skin barrier: ichthyosis, keratinisation, filaggrin, Greek roots in dermatology",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "mgmonth",
+   "name": "Myasthenia Gravis Awareness Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://myastheniagravisnews.com/news/myasthenia-gravis-awareness-month-features-worldwide-events/",
+   "blurb": "Weakness that worsens with use: droopy eyelids and double vision by evening. Ice on the eyelid can briefly help.",
+   "puzzle_theme": "Neuromuscular junction: myasthenia gravis, acetylcholine receptor antibodies, thymoma, ice pack test",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "lipoedemamonth",
+   "name": "Lipoedema Awareness Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.lipedema.org/lipedema-awareness-month-2026",
+   "blurb": "Painful, symmetrical fat on the legs that spares the feet. Often mistaken for obesity and resistant to diet.",
+   "puzzle_theme": "Fat and lymphatics: lipoedema vs lymphoedema, adipose tissue, compression therapy",
+   "icon": "socks"
+  },
+  {
+   "id": "lammonth",
+   "name": "Worldwide LAM Awareness Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.thelamfoundation.org/take-action/worldwide-lam-awareness-month/",
+   "blurb": "LAM almost only affects women: abnormal smooth-muscle-like cells fill the lungs with cysts. Linked to tuberous sclerosis.",
+   "puzzle_theme": "Rare lung disease: LAM, lung cysts, pneumothorax, mTOR inhibitors. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "smamonth",
+   "name": "SMA Awareness Month",
+   "kind": "month",
+   "rule": "month:08",
+   "dates": {
+    "2026": {
+     "start": "2026-08-01",
+     "end": "2026-08-31"
+    },
+    "2027": {
+     "start": "2027-08-01",
+     "end": "2027-08-31"
+    },
+    "2028": {
+     "start": "2028-08-01",
+     "end": "2028-08-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.curesma.org/sma-awareness-month/",
+   "blurb": "Once a leading genetic cause of infant death, spinal muscular atrophy now has gene therapy and antisense treatments.",
+   "puzzle_theme": "Motor neurons: SMA, SMN1 and SMN2, gene therapy, newborn screening. Respectful.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "alopeciamonth",
+   "name": "Alopecia Areata Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.naaf.org/aaam/",
+   "blurb": "The immune system targets hair follicles. 'Exclamation-mark' hairs at the edge of a patch are a classic clue.",
+   "puzzle_theme": "Hair and autoimmunity: alopecia areata, hair cycle, JAK inhibitors",
+   "icon": "sheep",
+   "normie": {
+    "name": "Alopecia Awareness Month",
+    "blurb": "How hair grows, rests and falls out."
+   }
+  },
+  {
+   "id": "pcosmonth",
+   "name": "PCOS Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.isuog.org/resource/pcos-awareness-month-2025-read-learn-and-share-resources.html",
+   "blurb": "One of the most common hormone conditions in women. Despite the name, you don't need ovarian cysts to have it.",
+   "puzzle_theme": "Reproductive endocrinology: PCOS, Rotterdam criteria, androgens, insulin resistance",
+   "icon": "ribbon-teal",
+   "normie": {
+    "name": "PCOS Awareness Month",
+    "blurb": "A common hormone condition and the clues that point to it."
+   }
+  },
+  {
+   "id": "rettmonth",
+   "name": "Rett Syndrome Awareness Month",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.rettsyndrome.org/octoberawareness/",
+   "blurb": "Rett syndrome mostly affects girls and is usually caused by MECP2 changes. Repetitive hand movements are a classic sign.",
+   "puzzle_theme": "Neurodevelopment: Rett syndrome, MECP2, X-linked conditions. Respectful.",
+   "icon": "ribbon-purple"
+  },
+  {
+   "id": "adhdmonth",
+   "name": "ADHD Awareness Month",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.gamian.eu/adhd-awareness-month-2025-many-faces-of-adhd/",
+   "blurb": "ADHD is less a lack of attention than trouble regulating it. Hyperfocus is real.",
+   "puzzle_theme": "Neurodiversity: ADHD, executive function, dopamine, stimulants. Respectful.",
+   "icon": "hummingbird",
+   "normie": {
+    "name": "ADHD Awareness Month",
+    "blurb": "Focus, distraction and how different brains manage attention."
+   }
+  },
+  {
+   "id": "dyslexiamonth",
+   "name": "Dyslexia Awareness Month",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://eida.org/event/october-is-dyslexia-awareness-month-3/",
+   "blurb": "Dyslexia is a difference in how the brain processes the sounds of words, not a sign of low intelligence.",
+   "puzzle_theme": "Reading and the brain: dyslexia, phonological processing, language areas. Respectful.",
+   "icon": "owl",
+   "normie": {
+    "name": "Dyslexia Awareness Month",
+    "blurb": "How the brain learns to read, and why it's harder for some."
+   }
+  },
+  {
+   "id": "alpha1month",
+   "name": "Alpha-1 Awareness Month",
+   "kind": "month",
+   "rule": "month:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01",
+     "end": "2026-11-30"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-30"
+    },
+    "2028": {
+     "start": "2028-11-01",
+     "end": "2028-11-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://alpha1.org/november-is-alpha-1-awareness-month/",
+   "blurb": "Emphysema in a young non-smoker, plus liver disease? Check alpha-1 antitrypsin.",
+   "puzzle_theme": "Genetic lung and liver disease: alpha-1 antitrypsin deficiency, PiZZ, emphysema, protease inhibitors",
+   "icon": "zebra-rare"
   }
  ]
 }
