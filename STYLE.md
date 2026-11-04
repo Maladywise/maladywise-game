@@ -44,3 +44,17 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Zebritis: ranked statistics prompts
 - Ranked statistics prompts ("top N", "most", "least", "leading", e.g. the 10 leading causes of death): give each answer its rank per the named source as a 5th element, plus a short value as a 6th if the source gives it readily: `["Stroke", 1, ["CVA"], "Stroke", 2, "6.8m deaths"]` (pad missing synonyms/title with `[]`/`null`). Add a short prompt-level `"src"` line, e.g. `"src":"WHO Global Health Estimates 2023"`. Ties share a rank. Never reorder `a` (saved games store answer indices). If the order cannot be confirmed from the source, leave the prompt unranked.
+
+## Daily themes: spread across many games (from Nov 2026)
+- A themed day should be felt across the whole site, not just Triviosis. On every `kind: "day"` entry in data/health-days.json (and the first day of a `week`), theme **at least 4–5 games** (Medical and, where there's a `normie` block, Normie too), using a broad web of associated ideas, not only the day's literal topic.
+- Brainstorm the association web first (10–20 words/ideas), then spread them: e.g. **World Tsunami Awareness Day** → water, waves, islands, boats and ships, sun and heat, earthquakes, drowning (gentle), crush injury, cholera and leptospirosis, salt water, Japan, tides, seasickness, hypothermia, triage, rescue, lifeguards, sea creatures.
+- Where each game fits:
+  - **Triviosis:** all 10 questions on the theme (already standard).
+  - **Wordemic / Morphemia / Suturix / Linkase:** answers, centre letters or word chains drawn from the web (e.g. WAVES, ISLET, VIBRIO, CHOLERA, SALINE; "boat → sickness → nausea").
+  - **Gridectomy:** several clues on the theme, or a themed mini (e.g. TIDE, OAR, SALT).
+  - **Comorbix:** one or two of the four groups on the theme (e.g. "things with tides", "water-borne infections").
+  - **Zebritis:** one prompt on the theme (e.g. "Name a water-borne disease", "Name a country made up entirely of islands").
+  - **Dxtective / Panelysis / Glimpsis / Opacitis / Sensitosis / Anatomegaly:** a fitting case, result, image, test or body part when one exists naturally (e.g. near-drowning, hyponatraemia, cholera rice-water stool, lung on X-ray). Don't force it.
+  - **Cryptogenic / Grand Rounds:** a few themed clues or questions when the theme lands on their day.
+- Keep every themed item factually checked and kind. "gentle" days: respectful, no jokes about the condition. "sensitive" days: no themed puzzles. Fun and country days: playful, never mocking people.
+- When a scheduled task swaps or builds puzzles for a themed day, it should aim for this spread (it may swap more than 1–2 puzzles on that day to do so), keeping answers unique across the past 180 days per game as usual.
