@@ -202,3 +202,8 @@
 .bk-gt.bs canvas{width:64px;height:64px}
 .bk-oexit{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
 .bk-oexit .bk-sbtn{text-decoration:none;display:inline-flex;align-items:center}
+
+/* High scores: Kitchen / Vet switch */
+.bk-hsst{margin-bottom:0}
+.bk-hsst[hidden],.bk-tabs button[hidden]{display:none}
+.bk-hsst button{font-size:11.5px;padding:4px 10px}

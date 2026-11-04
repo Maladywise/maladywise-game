@@ -1509,64 +1509,95 @@
     $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = fmt(S.bPts); $("bk-onom").textContent = fmt(S.cPts);
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + fmt(best); ob.className = "bk-obest" + (pb ? " pb" : "");
     $("bk-over").hidden = false; track("basil/end");
-    var hs = hsLoad(), wb = DAILY ? "daily" : "world", rows = boards[wb];
+    var hs = hsLoad(), wb = bkey(DAILY ? "daily" : "world", STAGE), rows = boards[wb];
     S.qLocal = (!DAILY || STAGE === 2) && S.score > 0 && (hs.length < HSN || S.score > hs[hs.length - 1].s);
-    S.qWorld = STAGE !== 2 && S.score > 0 && (!Array.isArray(rows) || rows.length < 10 || S.score > rows[rows.length - 1].s); // the Vet has no world board: the score server only knows the Kitchen's
-    document.querySelectorAll('.bk-tabs-o').forEach(function (t) { t.hidden = STAGE === 2; });
+    S.qWorld = (STAGE !== 2 || VETLB) && S.score > 0 && (!Array.isArray(rows) || rows.length < 10 || S.score > rows[rows.length - 1].s); // the Vet goes world-wide only once the server knows its boards
+    hsUI();
     var q = S.qLocal || S.qWorld; lastHi = -1;
     $("bk-hsform").hidden = !q; $("bk-hslabel").textContent = S.qWorld ? (DAILY ? "Top 10 today! Your name" : "World top 10! Your name") : "High score! Your name";
-    renderBoard("bk-hstab", STAGE === 2 ? "me" : DAILY ? "daily" : S.qWorld || !S.qLocal ? "world" : "me");
+    renderBoard("bk-hstab", STAGE === 2 && !VETLB ? "me" : DAILY ? "daily" : S.qWorld || !S.qLocal ? "world" : "me");
     if (q) { var inp = $("bk-hsname"); inp.value = lget(HSNAME) || ""; setTimeout(function () { inp.focus(); inp.select(); }, 60); }
     else setTimeout(function () { $("bk-again").focus(); }, 50);
   }
   // ---------- high score table (top 10, kept in this browser) ----------
   var HS = "mw-basil-hs", HSNAME = "mw-basil-name", HSN = 10;
-  function hsLoad() { var a = lget(HS); return Array.isArray(a) ? a : []; }
+  function hsLoad(st) { var a = lget(st ? KEYS[st].hs : HS); return Array.isArray(a) ? a : []; }
   function cleanName(n) { n = String(n || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); return n || "Anonymous cat"; }
-  function renderHS(el, hi) {
-    var hs = hsLoad(); if (!el) return;
+  function renderHS(el, hi, st) {
+    st = st || STAGE; var hs = hsLoad(st); if (!el) return;
     if (!hs.length) { el.innerHTML = '<li class="bk-hsnone">No scores yet. Be the first.</li>'; return; }
-    el.innerHTML = hs.map(function (r, i) { return '<li class="' + (i === hi ? "me" : "") + '"><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + (STAGE === 2 ? vetCrown(r) : crown(r)) + '</span><span class="sc">' + fmt(r.s) + '</span><span class="rd">R' + (r.r || 1) + "</span></li>"; }).join("");
+    el.innerHTML = hs.map(function (r, i) { return '<li class="' + (i === hi ? "me" : "") + '"><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + (st === 2 ? vetCrown(r) : crown(r)) + '</span><span class="sc">' + fmt(r.s) + '</span><span class="rd">R' + (r.r || 1) + "</span></li>"; }).join("");
   }
   // ---------- world and daily leaderboards (via the Malady Wise counter server) ----------
-  var LB = "https://mw-presence.onrender.com", boards = { world: null, daily: null }, tabSel = { "bk-hslist0": "world", "bk-hstab": "world" }, lastHi = -1;
+  // Kitchen: boards "all" and "daily". The Vet: "vall" and "vdaily", used ONLY once the server has echoed board === "vall".
+  // An older server maps unknown boards to "all", so until then the Vet stays this-device only and never posts.
+  var LB = "https://mw-presence.onrender.com", boards = { world: null, daily: null, vworld: null, vdaily: null }, tabSel = { "bk-hslist0": "world", "bk-hstab": "world" }, hsSt = { "bk-hslist0": 1 }, lastHi = -1, VETLB = false;
+  var SRV = { world: "all", daily: "daily", vworld: "vall", vdaily: "vdaily" };
+  function boardSt(id) { return id === "bk-hstab" ? STAGE : hsSt[id] || 1; }
+  function bkey(which, st) { return st === 2 ? (which === "daily" ? "vdaily" : "vworld") : which; }
+  function isVet(k) { return k.charAt(0) === "v"; }
   function pid() { var p = lget("mw-basil-pid"); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); lset("mw-basil-pid", p); } return p; }
   function dayLabel() { var d = sydDay().split("-"); return +d[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+d[1] - 1]; }
-  function lbGot(b, j) { boards[b] = j && Array.isArray(j.rows) ? j.rows : "err"; ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (tabSel[id] === b) renderBoard(id, b); }); }
-  function lbFetch(b) {
-    if (!window.fetch) return lbGot(b, null);
-    fetch(LB + "/top?b=" + (b === "daily" ? "daily" : "all") + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(b, j); }).catch(function () { lbGot(b, null); });
+  function lbGot(k, j) {
+    var ok = j && Array.isArray(j.rows) && (!isVet(k) || j.board === SRV[k]);
+    if (isVet(k) && j && !ok) { VETLB = false; hsUI(); } // the server stopped knowing the Vet's boards
+    boards[k] = ok ? j.rows : "err";
+    ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (tabSel[id] !== "me" && bkey(tabSel[id], boardSt(id)) === k) renderBoard(id, tabSel[id]); });
   }
-  function postScore(b, n, sc, rd) {
-    boards[b] = null; renderBoard("bk-hstab", b);
-    var u = LB + "/score?b=" + (b === "daily" ? "daily" : "all") + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(sc) + "&r=" + rd;
-    fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(b, j); track("basil/world-score"); }).catch(function () { lbGot(b, null); });
+  function lbFetch(k) {
+    if (!window.fetch || (isVet(k) && !VETLB)) return lbGot(k, null);
+    fetch(LB + "/top?b=" + SRV[k] + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); });
+  }
+  function vetProbe() {
+    if (!window.fetch) return;
+    fetch(LB + "/top?b=vall&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.board === "vall" && Array.isArray(j.rows)) { VETLB = true; boards.vworld = j.rows; }
+      hsUI(); ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (boardSt(id) === 2) renderBoard(id, tabSel[id]); });
+    }).catch(function () {});
+  }
+  function postScore(k, n, sc, rd) {
+    if (isVet(k) && !VETLB) return renderBoard("bk-hstab", "me"); // never post a Vet score where it would land on the Kitchen's board
+    var which = isVet(k) ? k.slice(1) : k;
+    boards[k] = null; renderBoard("bk-hstab", which);
+    var u = LB + "/score?b=" + SRV[k] + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(sc) + "&r=" + rd;
+    fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); track("basil/world-score"); }).catch(function () { lbGot(k, null); });
+  }
+  // which tabs show: the Vet's World / Today only once its boards are live; the Kitchen/Vet switch on the intro once there's anything Vet to show
+  function hsUI() {
+    var sw = $("bk-hsst"), vOn = VETLB || kitchenWon(); if (sw) sw.hidden = !vOn;
+    if (!vOn && hsSt["bk-hslist0"] === 2) { hsSt["bk-hslist0"] = 1; renderBoard("bk-hslist0", tabSel["bk-hslist0"]); }
+    if (sw) sw.querySelectorAll("button").forEach(function (b) { var on = +b.getAttribute("data-hst") === hsSt["bk-hslist0"]; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
+    document.querySelectorAll('.bk-tabs[data-for="bk-hslist0"] button[data-b="world"], .bk-tabs[data-for="bk-hslist0"] button[data-b="daily"]').forEach(function (b) { b.hidden = hsSt["bk-hslist0"] === 2 && !VETLB; });
+    document.querySelectorAll(".bk-tabs-o").forEach(function (t) { t.hidden = STAGE === 2 && !VETLB; });
   }
   function renderBoard(id, which) {
-    var el = $(id); if (!el) return; tabSel[id] = which;
+    var el = $(id); if (!el) return; var st = boardSt(id);
+    if (st === 2 && !VETLB) which = "me";
+    tabSel[id] = which;
     document.querySelectorAll('.bk-tabs[data-for="' + id + '"] button').forEach(function (b) { var on = b.getAttribute("data-b") === which; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
     var note = $(id + "-note");
-    if (which === "me") { renderHS(el, id === "bk-hstab" ? lastHi : -1); if (note) note.textContent = "Kept on this device only."; return; }
-    if (note) note.textContent = which === "daily" ? "Today’s daily challenge (Sydney time). Names are public." : "Top 10 worldwide. Names are public.";
-    var rows = boards[which];
-    if (rows == null) { el.innerHTML = '<li class="bk-hsnone">Loading…</li>'; boards[which] = "wait"; lbFetch(which); return; }
+    if (which === "me") { renderHS(el, id === "bk-hstab" ? lastHi : -1, st); if (note) note.textContent = (st === 2 ? "The Vet: kept" : "Kept") + " on this device only."; return; }
+    if (note) note.textContent = (st === 2 ? "The Vet: " : "") + (which === "daily" ? "Today’s daily challenge (Sydney time). Names are public." : "Top 10 worldwide. Names are public.");
+    var k = bkey(which, st), rows = boards[k];
+    if (rows == null) { el.innerHTML = '<li class="bk-hsnone">Loading…</li>'; boards[k] = "wait"; lbFetch(k); return; }
     if (rows === "wait") { el.innerHTML = '<li class="bk-hsnone">Loading…</li>'; return; }
     if (rows === "err") { el.innerHTML = '<li class="bk-hsnone">The leaderboard is napping. Tap the tab to try again.</li>'; return; }
     if (!rows.length) { el.innerHTML = '<li class="bk-hsnone">No scores yet. Be the first.</li>'; return; }
-    el.innerHTML = rows.map(function (r, i) { return '<li class="' + (r.me ? "me" : "") + '"><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + crown(r) + '</span><span class="sc">' + fmt(r.s) + '</span><span class="rd">R' + (r.r || 1) + "</span></li>"; }).join("");
+    el.innerHTML = rows.map(function (r, i) { return '<li class="' + (r.me ? "me" : "") + '"><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + (st === 2 ? vetCrown(r) : crown(r)) + '</span><span class="sc">' + fmt(r.s) + '</span><span class="rd">R' + (r.r || 1) + "</span></li>"; }).join("");
   }
-  document.querySelectorAll(".bk-tabs").forEach(function (t) {
-    t.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; var w = b.getAttribute("data-b"); if (boards[w] === "err") boards[w] = null; renderBoard(t.getAttribute("data-for"), w); });
+  document.querySelectorAll(".bk-tabs[data-for]").forEach(function (t) {
+    t.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; var id = t.getAttribute("data-for"), w = b.getAttribute("data-b"), k = w === "me" ? "" : bkey(w, boardSt(id)); if (k && boards[k] === "err") boards[k] = null; renderBoard(id, w); });
   });
-  function vetCrown(r) { return (r.r || 1) >= 11 ? ' <span class="bk-crown" title="Beat all 10 vet rounds">\ud83e\ude7a</span>' : ""; }
-  function crown(r) { return (r.r || 1) >= 11 ? ' <span class="bk-crown" title="Beat all 10 rounds">\ud83d\udc51</span>' : ""; }
+  if ($("bk-hsst")) $("bk-hsst").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; hsSt["bk-hslist0"] = +b.getAttribute("data-hst"); hsUI(); renderBoard("bk-hslist0", tabSel["bk-hslist0"] === "me" && hsSt["bk-hslist0"] === 1 ? "world" : tabSel["bk-hslist0"]); });
+  function vetCrown(r) { return (r.r || 1) >= 11 ? ' <span class="bk-crown" title="Beat all 10 vet rounds">🩺</span>' : ""; }
+  function crown(r) { return (r.r || 1) >= 11 ? ' <span class="bk-crown" title="Beat all 10 rounds">👑</span>' : ""; }
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function saveHS() {
     var n = cleanName($("bk-hsname").value); lset(HSNAME, n);
     if (S.qLocal) { var hs = hsLoad(), row = { n: n, s: S.score, r: S.round, d: new Date().toISOString().slice(0, 10) };
       hs.push(row); hs.sort(function (a, b) { return b.s - a.s; }); hs = hs.slice(0, HSN); lset(HS, hs); lastHi = hs.indexOf(row); track("basil/highscore"); }
     $("bk-hsform").hidden = true;
-    if (S.qWorld) postScore(DAILY ? "daily" : "world", n, S.score, S.round); else renderBoard("bk-hstab", "me");
+    if (S.qWorld) postScore(bkey(DAILY ? "daily" : "world", STAGE), n, S.score, S.round); else renderBoard("bk-hstab", "me");
     renderBoard("bk-hslist0", tabSel["bk-hslist0"]);
     setTimeout(function () { $("bk-again").focus(); }, 50);
   }
@@ -1681,7 +1712,7 @@
     CAMP = DAILY || !ENDLESS;
     var hadWon = !!lget(WON);
     reset(); S.hadWon = hadWon;
-    if (CAMP) { var r0 = DEVR || 1; S.t = (r0 - 1) * 30; enterRound(r0); } if (STAGE !== 2) { if (boards.world !== "wait") boards.world = null; if (boards.daily !== "wait") boards.daily = null; lbFetch(DAILY ? "daily" : "world"); } $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
+    if (CAMP) { var r0 = DEVR || 1; S.t = (r0 - 1) * 30; enterRound(r0); } if (STAGE !== 2 || VETLB) { var kw = bkey("world", STAGE), kd = bkey("daily", STAGE); if (boards[kw] !== "wait") boards[kw] = null; if (boards[kd] !== "wait") boards[kd] = null; lbFetch(bkey(DAILY ? "daily" : "world", STAGE)); } $("bk-intro").hidden = true; $("bk-game").hidden = false; $("bk-over").hidden = true; paused = false;
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
     var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
@@ -1705,7 +1736,7 @@
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !$("bk-help").hidden) { e.stopImmediatePropagation(); helpClose(); } }, true);
   document.addEventListener("visibilitychange", function () { if (document.hidden && running && !S.over && !paused) togglePause(); });
   window.addEventListener("resize", function () { if (running) size(); });
-  renderBoard("bk-hslist0", "world");
+  renderBoard("bk-hslist0", "world"); hsUI(); vetProbe();
   buildGuide(); reset(); size(); draw(); if (!sprLeft) drawThumbs();
   if (DEVSTAGE === 2 && kitchenWon()) setStage(2);
 })();
