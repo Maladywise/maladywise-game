@@ -15321,6 +15321,376 @@
    "blurb": "Emphysema in a young non-smoker, plus liver disease? Check alpha-1 antitrypsin.",
    "puzzle_theme": "Genetic lung and liver disease: alpha-1 antitrypsin deficiency, PiZZ, emphysema, protease inhibitors",
    "icon": "zebra-rare"
+  },
+  {
+   "id": "porphyriaweek",
+   "name": "Porphyria Awareness Week",
+   "kind": "week",
+   "rule": "week:nth:2:0:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-11",
+     "end": "2026-05-17"
+    },
+    "2027": {
+     "start": "2027-05-10",
+     "end": "2027-05-16"
+    },
+    "2028": {
+     "start": "2028-05-08",
+     "end": "2028-05-14"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://porphyriafoundation.org/get-involved/porphyria-awareness-week-2025/",
+   "blurb": "The porphyrias are rare faults in making haem. Acute attacks cause severe abdominal pain and are easily mistaken for other emergencies.",
+   "puzzle_theme": "Haem synthesis, acute porphyria, porphobilinogen, photosensitivity, drug triggers",
+   "icon": "ribbon-purple",
+   "_note": "best-guess date: set yearly by the American Porphyria Foundation (Apr 13-20 in 2024, May 12-18 in 2025); using the 2025 pattern, Mon-Sun from the 2nd Monday of May"
+  },
+  {
+   "id": "batten",
+   "name": "International Batten Disease Awareness Day",
+   "kind": "day",
+   "rule": "06-09",
+   "dates": {
+    "2026": {
+     "start": "2026-06-09"
+    },
+    "2027": {
+     "start": "2027-06-09"
+    },
+    "2028": {
+     "start": "2028-06-09"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.bdsra.org",
+   "blurb": "Batten disease (the CLN disorders) is a group of rare inherited conditions. One form, CLN2, has an enzyme replacement treatment.",
+   "puzzle_theme": "Lysosomal storage disorders, neuronal ceroid lipofuscinoses, childhood neurology, genetics. No jokes about patients.",
+   "icon": "ribbon-orange",
+   "_note": "best-guess date: community-led day, first marked 9 June 2018 and still observed on 9 June (2024, 2025)"
+  },
+  {
+   "id": "mdsday",
+   "name": "MDS World Awareness Day",
+   "kind": "day",
+   "rule": "10-25",
+   "dates": {
+    "2026": {
+     "start": "2026-10-25"
+    },
+    "2027": {
+     "start": "2027-10-25"
+    },
+    "2028": {
+     "start": "2028-10-25"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.mds-foundation.org",
+   "blurb": "Myelodysplastic syndromes are bone marrow cancers where blood cells fail to mature. Most people diagnosed are over 70.",
+   "puzzle_theme": "Haematology: bone marrow, cytopenias, myelodysplasia, AML, stem cell transplant",
+   "icon": "ribbon-red"
+  },
+  {
+   "id": "xlhday",
+   "name": "World XLH Day",
+   "kind": "day",
+   "rule": "06-23",
+   "dates": {
+    "2026": {
+     "start": "2026-06-23"
+    },
+    "2027": {
+     "start": "2027-06-23"
+    },
+    "2028": {
+     "start": "2028-06-23"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://xlhnetwork.org",
+   "blurb": "X-linked hypophosphataemia is the most common inherited form of rickets. Excess FGF23 makes the kidneys waste phosphate.",
+   "puzzle_theme": "Bone and mineral metabolism: rickets, phosphate, FGF23, vitamin D, genetics",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "Bone Builders Day",
+    "blurb": "Phosphate, vitamin D and how bones get their strength."
+   }
+  },
+  {
+   "id": "mitoweek",
+   "name": "World Mitochondrial Disease Week",
+   "kind": "week",
+   "rule": "monweek-containing:09-20",
+   "dates": {
+    "2026": {
+     "start": "2026-09-14",
+     "end": "2026-09-20"
+    },
+    "2027": {
+     "start": "2027-09-20",
+     "end": "2027-09-26"
+    },
+    "2028": {
+     "start": "2028-09-18",
+     "end": "2028-09-24"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.umdf.org",
+   "blurb": "Mitochondria power almost every cell. Faults in them can affect any organ, especially energy-hungry brain, muscle and heart.",
+   "puzzle_theme": "Mitochondria: energy metabolism, maternal inheritance, MELAS, Leigh syndrome, muscle and brain",
+   "icon": "ribbon-green",
+   "_note": "best-guess date: Mon-Sun week in mid-September containing 20 Sept (16-22 Sept 2024, 15-21 Sept 2025, 14-20 Sept 2026)",
+   "normie": {
+    "name": "Mito Week",
+    "blurb": "The powerhouse of the cell, and why it has its own DNA."
+   }
+  },
+  {
+   "id": "retinoblastomaweek",
+   "name": "World Retinoblastoma Awareness Week",
+   "kind": "week",
+   "rule": "week:nth:2:6:05 (Sun-Sat)",
+   "dates": {
+    "2026": {
+     "start": "2026-05-10",
+     "end": "2026-05-16"
+    },
+    "2027": {
+     "start": "2027-05-09",
+     "end": "2027-05-15"
+    },
+    "2028": {
+     "start": "2028-05-14",
+     "end": "2028-05-20"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://chect.org.uk",
+   "blurb": "Retinoblastoma is an eye cancer of young children. A white pupil in a flash photo can be the first sign.",
+   "puzzle_theme": "Paediatric ophthalmology: red reflex, leukocoria, RB1 gene, two-hit hypothesis. No jokes about patients.",
+   "icon": "owl",
+   "_note": "best-guess date: Sun-Sat from the 2nd Sunday of May (11-17 May 2025, 10-16 May 2026)"
+  },
+  {
+   "id": "amcday",
+   "name": "Arthrogryposis (AMC) Awareness Day",
+   "kind": "day",
+   "rule": "06-30",
+   "dates": {
+    "2026": {
+     "start": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://amcsupport.org/amc-awareness-day/",
+   "blurb": "Arthrogryposis multiplex congenita means joint contractures in several body areas from birth. Reduced movement in the womb is the common cause.",
+   "puzzle_theme": "Congenital conditions: joint contractures, fetal movement, orthopaedics, physiotherapy",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "Move It Day",
+    "blurb": "Why babies kick in the womb, and how movement shapes joints."
+   }
+  },
+  {
+   "id": "lymemonth",
+   "name": "Lyme Disease Awareness Month",
+   "kind": "month",
+   "rule": "month:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-01",
+     "end": "2026-05-31"
+    },
+    "2027": {
+     "start": "2027-05-01",
+     "end": "2027-05-31"
+    },
+    "2028": {
+     "start": "2028-05-01",
+     "end": "2028-05-31"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Lyme_Disease_Awareness_Month",
+   "blurb": "Lyme disease is spread by infected Ixodes ticks in the Northern Hemisphere. Locally acquired Lyme has not been confirmed in Australia.",
+   "puzzle_theme": "Tick-borne infections: Borrelia, erythema migrans, ticks, travel medicine",
+   "icon": "deer",
+   "normie": {
+    "name": "Tick Check Month",
+    "blurb": "Ticks, how they bite, and how to remove one safely."
+   }
+  },
+  {
+   "id": "chiarimonth",
+   "name": "Chiari Malformation Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://asap.org",
+   "blurb": "In Chiari malformation, the lower brain sits down into the spinal canal. Headache worse with coughing or straining is a classic symptom.",
+   "puzzle_theme": "Neurology and neurosurgery: posterior fossa, cerebellar tonsils, syringomyelia, CSF flow",
+   "icon": "brain"
+  },
+  {
+   "id": "pansday",
+   "name": "PANS/PANDAS Awareness Day",
+   "kind": "day",
+   "rule": "10-09",
+   "dates": {
+    "2026": {
+     "start": "2026-10-09"
+    },
+    "2027": {
+     "start": "2027-10-09"
+    },
+    "2028": {
+     "start": "2028-10-09"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.pandasnetwork.org",
+   "blurb": "PANS and PANDAS describe children with a sudden onset of OCD or eating restriction, sometimes after a strep infection.",
+   "puzzle_theme": "Paediatric neuropsychiatry: OCD, tics, streptococcus, basal ganglia, autoimmunity. No jokes about patients.",
+   "icon": "brain"
+  },
+  {
+   "id": "cordblood",
+   "name": "World Cord Blood Day",
+   "kind": "day",
+   "rule": "11-15",
+   "dates": {
+    "2026": {
+     "start": "2026-11-15"
+    },
+    "2027": {
+     "start": "2027-11-15"
+    },
+    "2028": {
+     "start": "2028-11-15"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.savethecordfoundation.org/world-cord-blood-day.html",
+   "blurb": "Umbilical cord blood is rich in blood-forming stem cells and has been used in transplants since 1988.",
+   "puzzle_theme": "Stem cells, cord blood banking, transplantation, haematology, obstetrics",
+   "icon": "blood-drop",
+   "_note": "best-guess date: began on 15 Nov (2017) and held 15 Nov in 2024; 2025 events were around 17 Nov",
+   "normie": {
+    "name": "Cord Blood Day",
+    "blurb": "The stem cells left in the umbilical cord, and what they can do."
+   }
+  },
+  {
+   "id": "raynaudsmonth",
+   "name": "Raynaud's Awareness Month",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.sruk.co.uk",
+   "blurb": "In Raynaud's, fingers turn white, then blue, then red in the cold. It affects up to 1 in 10 people.",
+   "puzzle_theme": "Vascular and rheumatology: Raynaud's phenomenon, vasospasm, scleroderma, circulation",
+   "icon": "polar-bear",
+   "_note": "best-guess date: February is used by Scleroderma & Raynaud's UK; some groups use other months",
+   "normie": {
+    "name": "Cold Hands Month",
+    "blurb": "Why fingers go white in the cold, and how to keep them warm."
+   }
+  },
+  {
+   "id": "birthdefects",
+   "name": "World Birth Defects Day",
+   "kind": "day",
+   "rule": "03-03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-03"
+    },
+    "2027": {
+     "start": "2027-03-03"
+    },
+    "2028": {
+     "start": "2028-03-03"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://nbdpn.org/world-birth-defects-day",
+   "blurb": "About 1 in 33 babies is born with a birth defect. Folic acid before pregnancy helps prevent neural tube defects.",
+   "puzzle_theme": "Congenital anomalies: embryology, folate, neural tube defects, prenatal screening. No jokes about patients.",
+   "icon": "hands-heart"
   }
  ]
 }
