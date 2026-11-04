@@ -983,5 +983,116 @@
    "Isoniazid"
   ],
   "pearl": "The four Ds: dermatitis, diarrhoea, dementia and death. A rash in a band around the neck is called Casal's necklace."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 35,
+  "difficulty": "Hard",
+  "title": "Peeling, swollen leg",
+  "context": "A toddler, recently weaned after a new sibling arrived, with swollen feet and peeling, patchy skin on the legs.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-28.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21259",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A young child's lower leg held by an adult, with dark skin peeling in patches to reveal paler skin underneath."
+  },
+  "answer": "Kwashiorkor",
+  "wrong": [
+   "Marasmus",
+   "Pellagra",
+   "Acrodermatitis enteropathica",
+   "Staphylococcal scalded skin syndrome",
+   "Nephrotic syndrome"
+  ],
+  "hints": [
+   "Look for skin lifting away like old flaking paint over a swollen limb.",
+   "Think of severe protein-poor undernutrition: the feet and belly swell despite starvation."
+  ],
+  "why": "Patches of dark skin peel away from paler skin beneath on a thin, swollen lower leg: the 'flaky paint' dermatosis.",
+  "assoc": [
+   "Severe acute malnutrition",
+   "Oedema",
+   "Flaky paint dermatosis",
+   "Fatty liver"
+  ],
+  "pearl": "Cicely Williams, a Jamaican-born doctor working in the Gold Coast (now Ghana), brought the condition to Western medicine in the 1930s. The name comes from the Ga language and is often translated as 'the sickness of the deposed child'. Oedema is what separates it from marasmus."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 36,
+  "difficulty": "Genius",
+  "title": "Blotchy hands",
+  "context": "A Central American farmer with slowly spreading patches on both hands that have lost their colour over many years.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-29.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28826",
+   "author": "CDC/ Dr. D.S. Martin (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Two hands, palms up, with blotchy pale and dark patches over the fingers and wrists."
+  },
+  "answer": "Pinta",
+  "wrong": [
+   "Vitiligo",
+   "Leprosy (Hansen's disease)",
+   "Yaws",
+   "Pityriasis versicolor",
+   "Chemical leukoderma"
+  ],
+  "hints": [
+   "Not autoimmune: a spirochaete is responsible.",
+   "A cousin of syphilis and yaws that stays in the skin."
+  ],
+  "why": "Symmetrical depigmentation of the hands and wrists, mottled with islands of remaining dark skin.",
+  "assoc": [
+   "Treponema carateum",
+   "Skin-to-skin spread",
+   "Central and South America",
+   "Reactive syphilis serology"
+  ],
+  "pearl": "Caused by Treponema carateum and found only in the Americas. Unlike its relatives it affects only the skin, with no bone, heart or nerve disease. Late patches are permanently depigmented, and blood tests cross-react with syphilis."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 37,
+  "difficulty": "Easy",
+  "title": "Between the toes",
+  "context": "A 22-year-old swimmer with itchy, peeling, cracked skin between the toes.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-11-30.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16659",
+   "author": "CDC/ Dr. Lucille K. Georg",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "The underside of the toes with white, peeling, macerated skin in the web spaces."
+  },
+  "answer": "Tinea pedis (athlete's foot)",
+  "wrong": [
+   "Pitted keratolysis",
+   "Erythrasma",
+   "Contact dermatitis",
+   "Plantar psoriasis",
+   "Juvenile plantar dermatosis"
+  ],
+  "hints": [
+   "The web spaces carry most of the scale and soggy skin.",
+   "A dermatophyte fungus that loves warm, damp shoes and shared showers."
+  ],
+  "why": "White, macerated scale and fissures in the toe webs, with peeling that spreads onto the sole.",
+  "assoc": [
+   "Trichophyton rubrum",
+   "Onychomycosis",
+   "Recurrent cellulitis",
+   "Shared showers"
+  ],
+  "pearl": "Cracked toe webs are a common doorway for bacteria and a frequent cause of recurrent leg cellulitis, so check between the toes of anyone who gets it. The fourth web space is often the first to show."
  }
 ]

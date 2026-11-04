@@ -1,0 +1,1145 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 38,
+  "difficulty": "Easy",
+  "title": "Sores on the palate",
+  "context": "World AIDS Day: a 30-year-old with five days of painful mouth sores, which prompted an HIV test that came back positive.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-12-01.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6055",
+   "author": "Sol Silverman, Jr., DDS",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An open mouth with a retracted cheek, showing several small round ulcers on the palate."
+  },
+  "answer": "Aphthous ulcers",
+  "wrong": [
+   "Herpes simplex stomatitis",
+   "Oral candidiasis",
+   "Herpangina",
+   "Hand, foot and mouth disease",
+   "Oral lichen planus"
+  ],
+  "hints": [
+   "Round, shallow sores with a pale base and a red halo.",
+   "Commonly called canker sores."
+  ],
+  "why": "Several small, round, shallow ulcers with pale bases and red halos on the palate.",
+  "assoc": [
+   "HIV",
+   "Coeliac disease",
+   "Iron, B12 or folate deficiency",
+   "Behçet's disease"
+  ],
+  "pearl": "Mouth ulcers are common and usually harmless, but large, frequent or long-lasting ones can point to HIV, coeliac disease, iron or B12 deficiency or Behçet's disease. In HIV, an oral problem can be the very first clue, and testing is the only way to know."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 39,
+  "difficulty": "Medium",
+  "title": "Corners of the mouth",
+  "context": "A man with a poor diet, sore cracked corners of the mouth and flaky skin around the nose.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-12-02.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21280",
+   "author": "CDC (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "The lower face with fingers holding the cheeks, showing cracks at both corners of the mouth and scaly skin on the chin."
+  },
+  "answer": "Angular cheilitis",
+  "wrong": [
+   "Herpes labialis (cold sore)",
+   "Perioral dermatitis",
+   "Impetigo",
+   "Lip-licker's dermatitis",
+   "Actinic cheilitis"
+  ],
+  "hints": [
+   "Focus on the cracks at both angles of the lips.",
+   "Riboflavin (B2) deficiency is one cause; Candida and staphylococci are others."
+  ],
+  "why": "Red, cracked, scaly fissures at both corners of the mouth, with scaling on the surrounding skin.",
+  "assoc": [
+   "Riboflavin deficiency",
+   "Iron deficiency",
+   "Candida",
+   "Ill-fitting dentures"
+  ],
+  "pearl": "Look beyond the lips. Riboflavin, iron, B12 or folate deficiency, ill-fitting dentures, drooling and Candida or Staphylococcus can all drive it, and it is common in people with HIV or malnutrition."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 40,
+  "difficulty": "Medium",
+  "title": "Massive legs",
+  "context": "A man from a tropical coastal village with years of slowly worsening, massive swelling of both legs and thick, folded skin.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-03.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=373",
+   "author": "J. McDowell",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A seated man in shorts and sandals with hugely swollen lower legs and deep skin folds at the ankles."
+  },
+  "answer": "Lymphatic filariasis",
+  "wrong": [
+   "Lipoedema",
+   "Chronic venous insufficiency",
+   "Podoconiosis",
+   "Milroy disease",
+   "Cellulitis"
+  ],
+  "hints": [
+   "Huge limbs with deep skin folds point to long-term lymph blockage.",
+   "A mosquito-borne worm lives in the lymph vessels."
+  ],
+  "why": "Gross, firm swelling of both lower legs with thick skin and deep folds around the ankles: elephantiasis.",
+  "assoc": [
+   "Wuchereria bancrofti",
+   "Elephantiasis",
+   "Hydrocele",
+   "Mosquitoes"
+  ],
+  "pearl": "WHO counts it among the leading causes of permanent disability worldwide, and stigma and lost work can hurt as much as the swelling. Daily limb care reduces painful acute attacks, a good reminder on International Day of Persons with Disabilities that long-term care matters as much as cure."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 41,
+  "difficulty": "Hard",
+  "title": "Thick, itchy plaques",
+  "context": "A Nigerian farmer living by a fast-flowing river, with years of intense itch and thickened plaques on the leg.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-04.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=20286",
+   "author": "CDC/ Robert S. Craig",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A man's leg against a white background with large rough, thickened plaques above and below the knee."
+  },
+  "answer": "Onchocerciasis",
+  "wrong": [
+   "Lichen simplex chronicus",
+   "Cutaneous leishmaniasis",
+   "Leprosy (Hansen's disease)",
+   "Chronic eczema",
+   "Scabies"
+  ],
+  "hints": [
+   "Years of intense itch have thickened the skin into rough plaques.",
+   "Blackflies that breed in rivers carry this worm."
+  ],
+  "why": "Large, rough, thickened (lichenified) plaques on the leg from chronic itch and inflammation around dying microfilariae.",
+  "assoc": [
+   "Onchocerca volvulus",
+   "Blackflies",
+   "Leopard skin",
+   "River blindness"
+  ],
+  "pearl": "Also known as river blindness. Long-term skin changes include spotty depigmented 'leopard skin' on the shins, and the eye disease once blinded whole communities. Several countries have now eliminated transmission through mass community programmes."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 42,
+  "difficulty": "Hard",
+  "title": "Warty leg",
+  "context": "A barefoot farm worker with years of slowly spreading, cauliflower-like growths on the leg after a splinter injury.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-05.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23996",
+   "author": "CDC/ Sherry A. Brinkman",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A lower leg covered in thick, warty, crusted growths."
+  },
+  "answer": "Chromoblastomycosis",
+  "wrong": [
+   "Mycetoma",
+   "Tuberculosis verrucosa cutis",
+   "Sporotrichosis",
+   "Squamous cell carcinoma",
+   "Lobomycosis"
+  ],
+  "hints": [
+   "A wound from soil or wood, then years of slow warty growth.",
+   "A pigmented fungus: look for copper-coloured 'pennies' under the microscope."
+  ],
+  "why": "Thick, warty, cauliflower-like plaques with dark crusts spreading over the lower leg.",
+  "assoc": [
+   "Fonsecaea",
+   "Medlar bodies",
+   "Soil and wood",
+   "Rural barefoot work"
+  ],
+  "pearl": "A fitting one for World Soil Day: these fungi live in soil and plants and enter through small wounds. WHO added it to its list of neglected tropical diseases in 2017. Microscopy shows thick-walled 'copper penny' bodies, also called Medlar bodies."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 43,
+  "difficulty": "Genius",
+  "title": "Oddly shaped incisors",
+  "context": "A 35-year-old woman seeing a dentist for oddly shaped front teeth; her mother had an untreated infection during pregnancy.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-12-06.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12625",
+   "author": "CDC/ Robert E. Sumpter",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An open mouth held by retractors, showing widely spaced, tapered, notched upper and lower incisors."
+  },
+  "answer": "Hutchinson's teeth",
+  "wrong": [
+   "Dental fluorosis",
+   "Ectodermal dysplasia",
+   "Amelogenesis imperfecta",
+   "Enamel hypoplasia from childhood illness",
+   "Dentinogenesis imperfecta"
+  ],
+  "hints": [
+   "Look at the shape of the central incisors: tapered like a screwdriver, with a notch.",
+   "A clue to a spirochaete infection before birth."
+  ],
+  "why": "Peg-shaped, widely spaced incisors that narrow towards a notched biting edge.",
+  "assoc": [
+   "Late congenital syphilis",
+   "Mulberry molars",
+   "Interstitial keratitis",
+   "Eighth-nerve deafness"
+  ],
+  "pearl": "One of Hutchinson's triad of late congenital syphilis, along with interstitial keratitis and eighth-nerve deafness. Congenital syphilis is rising again in many countries and is entirely preventable with antenatal screening."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 44,
+  "difficulty": "Easy",
+  "title": "Patchy tongue",
+  "context": "A 40-year-old man whose tongue has red patches with pale borders that seem to move from day to day. It stings with spicy food.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-07.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22314",
+   "author": "CDC/ Dr. Sellers (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A tongue with smooth red patches edged by raised white lines."
+  },
+  "answer": "Geographic tongue",
+  "wrong": [
+   "Oral lichen planus",
+   "Oral candidiasis",
+   "Leukoplakia",
+   "Atrophic glossitis",
+   "Secondary syphilis"
+  ],
+  "hints": [
+   "Smooth red islands with raised white borders.",
+   "Also called benign migratory glossitis."
+  ],
+  "why": "Smooth red areas of lost papillae, each edged with a raised white rim, on the top and sides of the tongue.",
+  "assoc": [
+   "Fissured tongue",
+   "Psoriasis",
+   "Benign migratory glossitis"
+  ],
+  "pearl": "Harmless and affects up to a few per cent of people. The pattern shifts over days because papillae are lost in one area and regrow in another. It often appears with a fissured tongue and is linked with psoriasis."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 45,
+  "difficulty": "Easy",
+  "title": "A tingle, then a blister",
+  "context": "A 25-year-old man who felt tingling on his lower lip yesterday and now has a small, tender blister.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-08.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=5434",
+   "author": "CDC/ Dr. Hermann (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of the lips with a small raised blister on the lower lip."
+  },
+  "answer": "Cold sore (herpes labialis)",
+  "wrong": [
+   "Impetigo",
+   "Angular cheilitis",
+   "Aphthous ulcer",
+   "Allergic contact cheilitis",
+   "Primary syphilis"
+  ],
+  "hints": [
+   "Grouped, fluid-filled blisters on the edge of the lip.",
+   "The virus sleeps in a nerve ganglion and wakes in the same spot."
+  ],
+  "why": "A small, raised blister on a red base on the lower lip, on day two after a tingling warning.",
+  "assoc": [
+   "HSV-1",
+   "Trigeminal ganglion",
+   "Sunlight and stress",
+   "Eczema herpeticum"
+  ],
+  "pearl": "WHO estimates about two in three people under 50 carry HSV-1, most without symptoms. Sunlight, illness and stress can wake it. Tingling a day ahead is typical, and the blister fluid is infectious."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 46,
+  "difficulty": "Medium",
+  "title": "A dark, furry tongue",
+  "context": "A man who started penicillin last week and is worried about a painless dark coating on his tongue.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-12-09.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22317",
+   "author": "CDC/ Dr. Sellers, Grady Hospital (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An open mouth showing a dark brown-black, furry coating over the centre of the tongue."
+  },
+  "answer": "Black hairy tongue",
+  "wrong": [
+   "Oral melanoma",
+   "Oral hairy leukoplakia",
+   "Addison's disease pigmentation",
+   "Oral candidiasis",
+   "Oral acanthosis nigricans"
+  ],
+  "hints": [
+   "Painless overgrown papillae are trapping pigment.",
+   "Elongated filiform papillae, with antibiotics and smoking as common triggers."
+  ],
+  "why": "A dark, shaggy coat on the top of the tongue, made by elongated filiform papillae stained by trapped pigment.",
+  "assoc": [
+   "Antibiotics",
+   "Smoking",
+   "Poor oral hygiene",
+   "Filiform papillae"
+  ],
+  "pearl": "It looks alarming but is benign and usually reverses once the trigger stops and the tongue is cleaned regularly. Causes include antibiotics, smoking, strong tea or coffee and a soft diet."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 47,
+  "difficulty": "Medium",
+  "title": "Coin-shaped patches",
+  "context": "A 60-year-old with dry skin and intensely itchy, coin-shaped patches on the arm.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-10.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16526",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An arm with two round, red, scaly plaques with tiny crusted spots."
+  },
+  "answer": "Discoid eczema",
+  "wrong": [
+   "Tinea corporis (ringworm)",
+   "Plaque psoriasis",
+   "Bowen's disease",
+   "Granuloma annulare",
+   "Pityriasis rosea"
+  ],
+  "hints": [
+   "Round plaques with crusts over the whole surface, not just the rim.",
+   "Also called nummular dermatitis."
+  ],
+  "why": "Two well-defined, coin-shaped plaques on the arm with small crusts and scale across the whole surface.",
+  "assoc": [
+   "Dry skin",
+   "Cold, dry weather",
+   "Staphylococcal colonisation"
+  ],
+  "pearl": "Ringworm is the classic mimic. Skin scrapings can settle it, because putting a steroid on tinea makes it harder to recognise. Discoid patches tend to be crusted all over, while tinea usually clears in the centre."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 48,
+  "difficulty": "Hard",
+  "title": "Blackened fingertips",
+  "context": "A woman with years of colour changes in her fingers in the cold, tight skin and trouble swallowing, now with painful black fingertips.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-11.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22313",
+   "author": "CDC/ Dr. Sellers, Grady Hospital (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A hand with shiny, tapered fingers and black, dying tissue at the fingertips."
+  },
+  "answer": "Systemic sclerosis (scleroderma)",
+  "wrong": [
+   "Frostbite",
+   "Buerger's disease",
+   "Cryoglobulinaemia",
+   "Meningococcal sepsis",
+   "Antiphospholipid syndrome"
+  ],
+  "hints": [
+   "Tight, shiny skin and tapered fingers point to a connective tissue disease.",
+   "Raynaud's for years, then tissue loss."
+  ],
+  "why": "Tapered fingers with tight, shiny skin and black, necrotic fingertips, reflecting severe digital ischaemia.",
+  "assoc": [
+   "Raynaud's phenomenon",
+   "Anti-centromere antibodies",
+   "Digital ulcers",
+   "Oesophageal dysmotility"
+  ],
+  "pearl": "Raynaud's phenomenon occurs in nearly everyone with the disease and often comes years before other features. The disease is more common in women, and digital ulcers or gangrene need urgent specialist care."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 49,
+  "difficulty": "Hard",
+  "title": "A foot with many sinuses",
+  "context": "A Kenyan herder with years of painless swelling of the foot after a thorn injury, with small draining openings on the skin.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-12.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24218",
+   "author": "CDC/ Lucille K. Georg (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A swollen foot and lower leg with thickened skin and many small white-capped openings."
+  },
+  "answer": "Mycetoma",
+  "wrong": [
+   "Chromoblastomycosis",
+   "Chronic osteomyelitis",
+   "Bone tuberculosis",
+   "Lymphatic filariasis",
+   "Kaposi sarcoma"
+  ],
+  "hints": [
+   "Swelling, draining tracts and grains in the discharge.",
+   "Classically called Madura foot."
+  ],
+  "why": "A grossly swollen foot with thick skin and numerous nodules and sinus openings over the top and sides.",
+  "assoc": [
+   "Eumycetoma",
+   "Actinomycetoma",
+   "Grains",
+   "Thorn injuries"
+  ],
+  "pearl": "The classic triad is painless swelling, sinus tracts and discharge containing grains. It can be fungal or bacterial, which matters because the management differs. It is most common in the 'mycetoma belt' across Africa, the Middle East and India, and WHO listed it as a neglected tropical disease in 2016."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 50,
+  "difficulty": "Genius",
+  "title": "Honey-crusted scalp",
+  "context": "A child from a rural village with thick yellow crusts on the scalp, patchy hair loss and a musty smell.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-13.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16236",
+   "author": "CDC/ Dr. Libero Ajello (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "The top of a child's head covered in thick yellow-white crusts with thinning hair."
+  },
+  "answer": "Favus",
+  "wrong": [
+   "Kerion",
+   "Scalp psoriasis",
+   "Impetigo",
+   "Seborrhoeic dermatitis",
+   "Head lice with secondary infection"
+  ],
+  "hints": [
+   "Thick, cup-shaped yellow crusts, known as scutula.",
+   "A chronic scalp fungus, Trichophyton schoenleinii, that can leave permanent bald patches."
+  ],
+  "why": "Thick yellow-white crusts (scutula) matted across the scalp with thinning hair around them.",
+  "assoc": [
+   "Trichophyton schoenleinii",
+   "Scutula",
+   "Scarring alopecia",
+   "Mousy odour"
+  ],
+  "pearl": "A severe, long-lasting form of scalp ringworm, now rare in wealthy countries but still seen in parts of Africa and Asia. Unlike most scalp fungus it can scar, so hair may not regrow. The mousy smell is a classic clue."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 51,
+  "difficulty": "Easy",
+  "title": "Hot and prickly",
+  "context": "A tourist in hot, humid weather with an itchy, prickly rash on her back.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-14.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16850",
+   "author": "CDC/ Dr. Lester Cordes",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Skin of the back with many tiny red bumps grouped in blotchy patches."
+  },
+  "answer": "Heat rash (miliaria rubra)",
+  "wrong": [
+   "Folliculitis",
+   "Scabies",
+   "Acne vulgaris",
+   "Viral rash",
+   "Contact dermatitis"
+  ],
+  "hints": [
+   "Tiny red bumps around sweat pores in a sweaty area.",
+   "Blocked sweat ducts leak under the skin."
+  ],
+  "why": "Many tiny red papules in blotchy groups on the back, on skin that has been hot and sweaty.",
+  "assoc": [
+   "Blocked eccrine ducts",
+   "Heat and humidity",
+   "Occlusive clothing"
+  ],
+  "pearl": "Blocked sweat ducts leak sweat into the skin. Miliaria crystallina forms clear superficial beads, while the rubra type gives prickly red papules. It settles with cooling down and loose clothing, and babies are especially prone."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 52,
+  "difficulty": "Easy",
+  "title": "A red, watery eye",
+  "context": "A poultry worker with a gritty, watery, red eye for two days. Vision is normal.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-15.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=27180",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An eye held open by fingers, with an inflamed red lining of the lower lid and a white sclera."
+  },
+  "answer": "Conjunctivitis",
+  "wrong": [
+   "Anterior uveitis",
+   "Acute angle-closure glaucoma",
+   "Subconjunctival haemorrhage",
+   "Scleritis",
+   "Keratitis"
+  ],
+  "hints": [
+   "Redness mainly in the lid lining, with normal vision and a clear cornea.",
+   "Usually viral and easily spread."
+  ],
+  "why": "Inflamed, red conjunctiva in the lower lid and inner corner, with a clear cornea and a normal pupil.",
+  "assoc": [
+   "Adenovirus",
+   "Allergy",
+   "Chlamydia",
+   "Red-flag symptoms"
+  ],
+  "pearl": "Most cases are viral or allergic. Marked pain, light sensitivity, a change in vision or a contact lens wearer's red eye suggest something more serious. This photo shows a rare cause: Newcastle disease virus, caught from infected birds."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 53,
+  "difficulty": "Medium",
+  "title": "A raised red border",
+  "context": "A 65-year-old woman with sudden fever and a hot, painful, sharply outlined red patch on her thigh.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-16.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=17528",
+   "author": "CDC/ Dr. Thomas F. Sellers, Emory University",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A thigh with bright red, raised skin ending in a sharp, irregular edge."
+  },
+  "answer": "Erysipelas",
+  "wrong": [
+   "Cellulitis",
+   "Contact dermatitis",
+   "Necrotising fasciitis",
+   "Erythema migrans",
+   "Deep vein thrombosis"
+  ],
+  "hints": [
+   "The edge is raised and you could trace it with a pen.",
+   "Group A streptococci in the upper dermis, which on the face can even reach the ear."
+  ],
+  "why": "Bright red, raised, shiny skin with a sharply defined edge, because the infection sits high in the dermis and lymphatics.",
+  "assoc": [
+   "Streptococcus pyogenes",
+   "Milian's ear sign",
+   "Lymphoedema",
+   "Toe-web tinea"
+  ],
+  "pearl": "Cellulitis is deeper and has a blurrier edge. Facial lesions that involve the ear suggest this diagnosis, as the ear has no deep dermis for cellulitis (Milian's ear sign). Older adults and people with lymphoedema are at higher risk."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 54,
+  "difficulty": "Medium",
+  "title": "A week into treatment",
+  "context": "A woman in hospital, a week into penicillin, with a new widespread blotchy rash and no fever.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-17.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22324",
+   "author": "CDC/ Dr. Sellers, Grady Hospital",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An upper arm with a dressing and a blotchy, mottled red rash."
+  },
+  "answer": "Morbilliform drug eruption",
+  "wrong": [
+   "Measles",
+   "Viral exanthem",
+   "Urticaria",
+   "Scarlet fever",
+   "DRESS syndrome"
+  ],
+  "hints": [
+   "Look at the timing: about a week after starting a medicine.",
+   "Flat, blotchy red spots, symmetrical on the limbs and trunk."
+  ],
+  "why": "Symmetrical, blotchy pink-red macules and papules that merge on the arm, with no blisters.",
+  "assoc": [
+   "Penicillins",
+   "Amoxicillin and EBV",
+   "Red-flag features"
+  ],
+  "pearl": "The commonest drug rash, usually appearing 4 to 14 days after a new medicine and fading after it stops. Red flags for a severe reaction are mouth sores, blisters, skin pain, fever and facial swelling."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 55,
+  "difficulty": "Hard",
+  "title": "A sting in the shed",
+  "context": "A gardener from Missouri who felt a mild sting while sorting boxes in the shed, now with a spreading, painful dark sore.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-18.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23317",
+   "author": "CDC/ Margaret A. Parsons (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Skin with an irregular patch of dark red, mottled, breaking-down tissue."
+  },
+  "answer": "Recluse spider bite",
+  "wrong": [
+   "Pyoderma gangrenosum",
+   "Cutaneous anthrax",
+   "Necrotising fasciitis",
+   "Ecthyma gangrenosum",
+   "Tick-borne eschar"
+  ],
+  "hints": [
+   "Irregular dark, dying skin in a red, mottled zone after a barely noticed bite.",
+   "Venom from a small brown violin-marked animal found in dark corners."
+  ],
+  "why": "An irregular, mottled, dark red patch of breaking-down skin with a small satellite spot nearby.",
+  "assoc": [
+   "Loxosceles reclusa",
+   "Sphingomyelinase in venom",
+   "Violin marking",
+   "Mimics of spider bites"
+  ],
+  "pearl": "Most bites heal without trouble, and only a small share cause tissue loss. Many suspected 'spider bites' turn out to be something else, especially staphylococcal skin infection, so keep an open mind unless the spider was actually seen."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 56,
+  "difficulty": "Hard",
+  "title": "A lone pustule",
+  "context": "A 24-year-old woman with fever, migrating joint pains and a few tender skin spots on her limbs.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-19.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6384",
+   "author": "CDC/ Dr. Wiesner",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Skin on a limb with a single pustule on a red base and a small paper ruler beside it."
+  },
+  "answer": "Disseminated gonococcal infection",
+  "wrong": [
+   "Infective endocarditis",
+   "Meningococcaemia",
+   "Rocky Mountain spotted fever",
+   "Reactive arthritis",
+   "Ecthyma gangrenosum"
+  ],
+  "hints": [
+   "A sparse grey-centred pustule on a red base, with sore tendons and joints.",
+   "A sexually transmitted organism has spread through the blood."
+  ],
+  "why": "A small pustule with a grey centre and a red halo on a limb, one of only a few scattered lesions.",
+  "assoc": [
+   "Neisseria gonorrhoeae",
+   "Tenosynovitis",
+   "Complement deficiency",
+   "Pregnancy"
+  ],
+  "pearl": "The 'arthritis-dermatitis syndrome' is more common in women, especially around menstruation and pregnancy. Genital infection is often silent, so swabs from the cervix, urethra, throat and rectum matter even with no local symptoms."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 57,
+  "difficulty": "Genius",
+  "title": "A hunter's hand",
+  "context": "A rabbit hunter with fever, an ulcer on the back of the hand and tender swollen nodes above it.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-20.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=2037",
+   "author": "CDC/ Dr. Brachman",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Close-up of the back of a hand with a small ulcer in a dark, inflamed patch of skin."
+  },
+  "answer": "Tularaemia",
+  "wrong": [
+   "Cutaneous anthrax",
+   "Orf",
+   "Sporotrichosis",
+   "Cat-scratch disease",
+   "Plague"
+  ],
+  "hints": [
+   "A punched-out ulcer plus swollen nodes after handling wild game.",
+   "The organism is a Francisella species, which can also spread through tick bites."
+  ],
+  "why": "A punched-out ulcer in a dark red, inflamed area on the back of the hand.",
+  "assoc": [
+   "Francisella tularensis",
+   "Rabbits",
+   "Ticks",
+   "Laboratory hazard"
+  ],
+  "pearl": "The ulceroglandular form is the most common. It is named after Tulare County, California. As few as 10 organisms can cause disease, so warn the lab if you suspect it."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 58,
+  "difficulty": "Easy",
+  "title": "A scaly bald patch",
+  "context": "A school-aged child with an itchy, round patch of scale and broken hairs on the scalp.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-21.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=14623",
+   "author": "CDC/ Dr. Lucille K. Georg",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Dark hair parted around a round, scaly, pale patch on the scalp."
+  },
+  "answer": "Tinea capitis",
+  "wrong": [
+   "Alopecia areata",
+   "Seborrhoeic dermatitis",
+   "Trichotillomania",
+   "Scalp psoriasis",
+   "Impetigo"
+  ],
+  "hints": [
+   "Scale plus hair loss, with broken hairs rather than smooth skin.",
+   "A fungal infection often caught from cats, dogs or other children."
+  ],
+  "why": "A round, scaly patch of hair loss with broken hairs and a well-defined edge.",
+  "assoc": [
+   "Trichophyton tonsurans",
+   "Microsporum canis",
+   "Kerion",
+   "Cervical nodes"
+  ],
+  "pearl": "Common in school-aged children worldwide, with especially high rates across much of Africa. Fungus in the hair shaft is why creams alone rarely clear it. Alopecia areata, the main mimic, gives smooth, non-scaly skin."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 59,
+  "difficulty": "Easy",
+  "title": "Receding gums",
+  "context": "A 45-year-old who smokes, with bleeding gums, loose teeth and bad breath.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-22.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19466",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Retracted lips showing inflamed, swollen gums, brown deposits at the gum line and gaps between teeth."
+  },
+  "answer": "Periodontitis",
+  "wrong": [
+   "Gingival overgrowth",
+   "Scurvy",
+   "Dental caries",
+   "Necrotising ulcerative gingivitis",
+   "Dental fluorosis"
+  ],
+  "hints": [
+   "Hard brown deposits at the gum line and gums pulling back from the teeth.",
+   "This disease destroys the bone and tissue that support the teeth."
+  ],
+  "why": "Red, swollen gums, heavy calculus and staining at the gum line and exposed tooth roots with spacing between the teeth.",
+  "assoc": [
+   "Smoking",
+   "Diabetes",
+   "Plaque and calculus",
+   "Tooth loss"
+  ],
+  "pearl": "Severe gum disease affects about one in five adults worldwide and is a major cause of tooth loss. It has a two-way link with diabetes, and smoking makes it worse."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 60,
+  "difficulty": "Medium",
+  "title": "Streaks on the arm",
+  "context": "A bushwalker with an itchy rash in streaks along the forearm, two days after a hike.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-23.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=4484",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A forearm with raised red bumps and small blisters arranged in lines."
+  },
+  "answer": "Allergic contact dermatitis (plant)",
+  "wrong": [
+   "Phytophotodermatitis",
+   "Shingles",
+   "Scabies",
+   "Insect bites",
+   "Cutaneous larva migrans"
+  ],
+  "hints": [
+   "Straight lines show where a leaf brushed the skin.",
+   "A delayed (type IV) allergy to plant oil."
+  ],
+  "why": "Red papules and small vesicles in linear streaks along the forearm, matching where a plant touched the skin.",
+  "assoc": [
+   "Urushiol",
+   "Poison ivy and poison oak",
+   "Rhus tree",
+   "Grevillea"
+  ],
+  "pearl": "Linear streaks point to an outside cause. Worldwide, poison ivy and poison oak are the textbook triggers; in Australia, Rhus trees and some grevilleas can do the same. The blister fluid does not spread it, but oil left on clothes or tools can."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 61,
+  "difficulty": "Medium",
+  "title": "A small papule on the hand",
+  "context": "A teenager who recently adopted a kitten, with a small papule on the hand and a tender lump in the armpit.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-24.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22328",
+   "author": "CDC/ Dr. Sellers, Grady Hospital",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "The palm side of a hand with a single small red papule at the base of the thumb."
+  },
+  "answer": "Cat-scratch disease",
+  "wrong": [
+   "Sporotrichosis",
+   "Orf",
+   "Tularaemia",
+   "Lymphoma",
+   "Pyogenic granuloma"
+  ],
+  "hints": [
+   "A small papule where a claw broke the skin, plus a swollen node.",
+   "Bartonella henselae; fleas spread it between kittens."
+  ],
+  "why": "A small red papule with a crust on the thenar eminence: the inoculation site.",
+  "assoc": [
+   "Bartonella henselae",
+   "Kittens and fleas",
+   "Lymphadenopathy",
+   "Parinaud oculoglandular syndrome"
+  ],
+  "pearl": "A papule appears days after a scratch, and the regional node swells one to three weeks later. Most cases settle on their own. Rarely, it can affect the eyes, liver, spleen or brain, so think of it in unexplained fever in a child who has a kitten."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 62,
+  "difficulty": "Hard",
+  "title": "Look under the lid",
+  "context": "A man with weeks of fever, weight loss and a new heart murmur has his lower eyelid gently pulled down.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-25.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24916",
+   "author": "CDC/ Emory University, Dr. Thomas F. Sellers (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An eye with the lower lid pulled down by a fingertip, showing a tiny red spot on the inner lid."
+  },
+  "answer": "Infective endocarditis",
+  "wrong": [
+   "Subconjunctival haemorrhage",
+   "Immune thrombocytopenia",
+   "Scurvy",
+   "Leptospirosis",
+   "Conjunctivitis"
+  ],
+  "hints": [
+   "A tiny bright red spot on the lid lining, not a diffuse redness.",
+   "Fever and a murmur: small emboli are showering from a heart valve."
+  ],
+  "why": "A small bright red petechia on the conjunctiva lining the lower lid.",
+  "assoc": [
+   "Streptococci and staphylococci",
+   "Splinter haemorrhages",
+   "Osler nodes and Janeway lesions",
+   "Duke criteria"
+  ],
+  "pearl": "Peripheral signs are less common now that diagnosis is earlier, but conjunctival petechiae, splinter haemorrhages, Osler nodes and Janeway lesions are still worth looking for. Take blood cultures before any antibiotics in suspected cases."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 63,
+  "difficulty": "Hard",
+  "title": "Raspberry-like nodules",
+  "context": "A 19-year-old from rural Ghana with crusted, raspberry-like nodules near the elbow, present for eight months.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-26.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=3842",
+   "author": "CDC/ Dr. Peter Perine (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A dark-skinned arm with several crusted, yellowish, raised nodules near the elbow."
+  },
+  "answer": "Yaws",
+  "wrong": [
+   "Cutaneous leishmaniasis",
+   "Secondary syphilis",
+   "Chromoblastomycosis",
+   "Tropical ulcer",
+   "Cutaneous tuberculosis"
+  ],
+  "hints": [
+   "Moist, crusted papillomas in a young person in the humid tropics.",
+   "A non-sexually spread cousin of syphilis, passed by skin contact."
+  ],
+  "why": "Crusted, moist, raspberry-like papillomas on the skin near the elbow.",
+  "assoc": [
+   "Treponema pertenue",
+   "Skin contact",
+   "Children under 15",
+   "Bone involvement"
+  ],
+  "pearl": "Spread by skin contact and mostly affecting children in warm, humid regions. WHO aims to eradicate it, and India was the first country certified free in 2016. Late disease can destroy bone and cartilage, which is why early treatment matters."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 64,
+  "difficulty": "Genius",
+  "title": "Black toes after a fever",
+  "context": "A Guatemalan villager recovering from a severe fever and rash during a lice outbreak, now with blackened toes.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-27.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=18840",
+   "author": "CDC/ Dr. D.S. Martin (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A foot resting on a sheet with blackened toes and dark patches at the outer edge."
+  },
+  "answer": "Epidemic typhus",
+  "wrong": [
+   "Purpura fulminans (meningococcal)",
+   "Frostbite",
+   "Buerger's disease",
+   "Diabetic foot gangrene",
+   "Ergotism"
+  ],
+  "hints": [
+   "Gangrene of the toes after a severe rickettsial illness.",
+   "Body lice spread it; war, crowding and cold are the classic settings."
+  ],
+  "why": "Black, dry gangrene of the toes and dark patches along the outer edge of the foot, from small-vessel vasculitis.",
+  "assoc": [
+   "Rickettsia prowazekii",
+   "Body lice",
+   "Brill-Zinsser disease",
+   "Crowding and conflict"
+  ],
+  "pearl": "Rickettsia prowazekii passes to people from infected body louse faeces scratched into the skin. Charles Nicolle won a Nobel Prize in 1928 for showing lice were the vector. Infection can return years later as Brill-Zinsser disease, one reason it stays on outbreak watchlists."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 65,
+  "difficulty": "Easy",
+  "title": "Cracked hands",
+  "context": "A cleaner with years of wet work and dry, cracked, thickened skin on the backs of both hands.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-28.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16531",
+   "author": "CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "The backs of both hands, with dry, rough, cracked and scaly skin on the fingers and knuckles."
+  },
+  "answer": "Chronic hand eczema",
+  "wrong": [
+   "Psoriasis",
+   "Scabies",
+   "Tinea manuum",
+   "Porphyria cutanea tarda",
+   "Pellagra"
+  ],
+  "hints": [
+   "Wet work plus dry, cracked, thickened skin on both hands.",
+   "A very common occupational skin problem."
+  ],
+  "why": "Rough, thick, scaly, fissured skin across the backs of both hands and fingers.",
+  "assoc": [
+   "Wet work",
+   "Irritants and allergens",
+   "Health workers and hairdressers",
+   "Patch testing"
+  ],
+  "pearl": "Common in cleaners, hairdressers, healthcare and food workers, and often a reason people leave those jobs. Frequent washing and detergents damage the skin barrier. Persistent cases deserve patch testing to look for an allergy as well."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 66,
+  "difficulty": "Easy",
+  "title": "Patches that won't tan",
+  "context": "A 24-year-old man back from a tropical holiday with patches on his shoulder and chest that don't tan.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-29.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24357",
+   "author": "CDC/ Dr. Hudson (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "A shoulder and armpit with confluent tan-pink patches and small scattered spots."
+  },
+  "answer": "Pityriasis versicolor",
+  "wrong": [
+   "Vitiligo",
+   "Pityriasis alba",
+   "Pityriasis rosea",
+   "Erythrasma",
+   "Leprosy (Hansen's disease)"
+  ],
+  "hints": [
+   "Merging patches with fine scale on the trunk and upper arms.",
+   "A Malassezia yeast, with 'spaghetti and meatballs' under the microscope."
+  ],
+  "why": "Merging tan-pink patches with small round satellite spots on the shoulder and upper arm.",
+  "assoc": [
+   "Malassezia",
+   "Humidity and sweating",
+   "Azelaic acid",
+   "Fine scale"
+  ],
+  "pearl": "Colour can go either way: paler or darker than the surrounding skin, and it is often noticed on dark or tanned skin. The yeast is part of normal skin flora, so recurrence is common. Stroking the patch can bring out the fine scale."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 67,
+  "difficulty": "Medium",
+  "title": "A smooth, shiny tongue",
+  "context": "A tired 58-year-old with tingling feet and a sore tongue.",
+  "question": "What's the sign?",
+  "img": {
+   "url": "img/2026-12-30.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19456",
+   "author": "CDC (cropped)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "An open mouth showing a smooth, pale, shiny tongue with loss of its normal texture."
+  },
+  "answer": "Atrophic glossitis",
+  "wrong": [
+   "Geographic tongue",
+   "Oral candidiasis",
+   "Oral lichen planus",
+   "Scarlet fever",
+   "Leukoplakia"
+  ],
+  "hints": [
+   "The normal papillae have disappeared.",
+   "Think of B12, folate or iron deficiency."
+  ],
+  "why": "A smooth, shiny tongue with patchy loss of papillae.",
+  "assoc": [
+   "Pernicious anaemia",
+   "B12 deficiency",
+   "Iron deficiency",
+   "Coeliac disease"
+  ],
+  "pearl": "A classic sign of B12, folate or iron deficiency. The pernicious anaemia version is called Hunter's glossitis. B12 deficiency can damage nerves even before anaemia appears, so check for it in tingling feet."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 68,
+  "difficulty": "Medium",
+  "title": "Sandpaper skin",
+  "context": "A teenager with a sore throat and fever; the skin of her forearm feels like fine sandpaper.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "url": "img/2026-12-31.jpg",
+   "source": "CDC Public Health Image Library",
+   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=5163",
+   "author": "CDC/ Dr. Andre J. Lebrun",
+   "licence": "Public domain",
+   "licence_url": "",
+   "alt": "Skin of a forearm with a fine, pink, goosebump-like texture."
+  },
+  "answer": "Scarlet fever",
+  "wrong": [
+   "Measles",
+   "Rubella",
+   "Kawasaki disease",
+   "Viral rash",
+   "Toxic shock syndrome"
+  ],
+  "hints": [
+   "Look at the fine goosebump texture rather than the colour.",
+   "Follows a streptococcal throat infection, often with a strawberry tongue."
+  ],
+  "why": "A fine, pink, goosebump-like rash over the forearm that would feel like sandpaper.",
+  "assoc": [
+   "Group A Streptococcus",
+   "Strawberry tongue",
+   "Pastia's lines",
+   "Skin peeling"
+  ],
+  "pearl": "Caused by toxins from group A streptococci. Other clues are a strawberry tongue, red lines in the skin creases (Pastia's lines), a pale ring around the mouth and peeling skin a week or two later. It mostly affects children."
+ }
+]
