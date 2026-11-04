@@ -18,7 +18,7 @@ window.MW_HOME = {
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
-      { t: "Health days", href: "/days/", d: "Today's theme and what's coming up" }
+      { t: "World Health Days", href: "/days/", d: "Today's theme and what's coming up" }
     ] }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
