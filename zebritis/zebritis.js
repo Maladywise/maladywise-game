@@ -1,9 +1,11 @@
 /* Zebritis: name a correct answer; the rarer it is, the more it scores. Three prompts a day (Sydney time).
    Puzzles in puzzles/YYYY-MM.json: [{date, number, difficulty, prompts:[{q, a:[[name, tier, [synonyms]]...]}]}]
-   Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt). */
+   Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt).
+   Ranked statistics prompts (optional): answer = [name, tier, [synonyms], "Wiki_Title" or null, rank, "value"?] and prompt "src" (short source line).
+   Ties share a rank number. Never reorder a: saved picks are indices into it. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14", TRIES = 3, WIN = 10;
   var root = document.getElementById("zbr");
   // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
@@ -38,6 +40,13 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  // ---------- ranks (optional 5th/6th answer elements) ----------
+  function rk(a) { return typeof a[4] === "number" ? a[4] : null; }
+  function isRanked(x) { return x.a.some(function (a) { return rk(a) !== null; }); }
+  function joint(x, a) { var r = rk(a); return r !== null && x.a.filter(function (b) { return rk(b) === r; }).length > 1; }
+  function rlab(x, a) { return (joint(x, a) ? "=" : "#") + rk(a); }
+  function rsrc(x) { var s = x.src || String(x.note || "").split(/[:(]/)[0].trim(); return s.length > 90 ? s.slice(0, 88) + "\u2026" : s; }
+  function rline(x, a) { return "Correct! " + (joint(x, a) ? "Joint #" : "#") + rk(a) + " on the list" + (a[5] ? " (" + a[5] + ")" : "") + " \u00b7 +" + a[1]; }
 
   var REAL = sydToday(), qd = new URLSearchParams(location.search).get("date");
   var day = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd)) ? qd : REAL;
@@ -138,7 +147,7 @@
         (msg ? '<p class="say' + (bad ? " bad" : "") + '">' + esc(msg) + "</p>" : '<p class="hint">Any correct answer scores. Rarer answers score more.</p>');
     } else {
       var p = st.picks[i];
-      h += p >= 0 ? '<div class="hit t' + x.a[p][1] + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span></div><i>+" + x.a[p][1] + "</i></div>"
+      h += p >= 0 ? '<div class="hit t' + x.a[p][1] + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span>" + (rk(x.a[p]) !== null ? '<span class="rkl">' + esc(rline(x, x.a[p])) + "</span>" : "") + "</div><i>+" + x.a[p][1] + "</i></div>"
         : '<div class="hit t0"><span class="em">\u274c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
       if (tries.length) {
         var sent = (st.sug || {})[i] || [];
@@ -152,12 +161,24 @@
     var inp = $("in"); if (inp && (bad || (msg === undefined && window.innerWidth > 700))) inp.focus();
   }
   function reveal(x, p) {
+    if (isRanked(x)) return revealRanked(x, p);
     var tiers = [20, 10, 6, 3, 1];
     return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers</summary>' + tiers.map(function (t) {
       var items = x.a.filter(function (a) { return a[1] === t; });
       if (!items.length) return "";
       return '<div class="tier"><span class="th">' + TIER[t].e + " " + TIER[t].n + " \u00b7 " + t + '</span><span class="ti">' + items.map(function (a) { return (x.a.indexOf(a) === p ? "<mark>" + esc(cap(a[0])) + "</mark>" : esc(cap(a[0]))); }).join(", ") + "</span></div>";
     }).join("") + "</details>";
+  }
+  function revealRanked(x, p) {
+    var idx = x.a.map(function (a, i) { return i; });
+    var on = idx.filter(function (i) { return rk(x.a[i]) !== null; }).sort(function (i, j) { return rk(x.a[i]) - rk(x.a[j]) || i - j; });
+    var rest = idx.filter(function (i) { return rk(x.a[i]) === null; });
+    function nm(i) { return i === p ? "<mark>" + esc(cap(x.a[i][0])) + "</mark>" : esc(cap(x.a[i][0])); }
+    return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers, ranked</summary><ol class="rank">' + on.map(function (i) {
+      var a = x.a[i];
+      return '<li' + (i === p ? ' class="me"' : "") + '><span class="rn">' + rlab(x, a) + '</span><span class="rnm">' + esc(cap(a[0])) + (a[5] ? "<small>" + esc(a[5]) + "</small>" : "") + '</span><span class="pill t' + a[1] + '" title="' + TIER[a[1]].n + '">' + TIER[a[1]].e + " +" + a[1] + "</span></li>";
+    }).join("") + "</ol>" + (rest.length ? '<p class="rest">Also accepted: ' + rest.map(nm).join(", ") + "</p>" : "") +
+      (rsrc(x) ? '<p class="rsrc">Ranked: ' + esc(rsrc(x)) + "</p>" : "") + "</details>";
   }
   function renderResult() {
     var r = $("result"), s = score(), max = P.prompts.length * 20;
@@ -171,7 +192,7 @@
       '<pre id="zbr-share">' + esc(share) + '</pre><button class="btn solid" type="button" id="zbr-copy">Copy result</button>' +
       '<div class="review">' + P.prompts.map(function (x, i) {
         var p = st.picks[i];
-        return '<div class="rv"><b>' + esc(x.q) + "</b><span>" + (p >= 0 ? TIER[x.a[p][1]].e + " " + esc(cap(x.a[p][0])) + " (+" + x.a[p][1] + ")" : "\u274c No score") + "</span>" + reveal(x, p).replace(" open", "") + "</div>";
+        return '<div class="rv"><b>' + esc(x.q) + "</b><span>" + (p >= 0 ? TIER[x.a[p][1]].e + " " + esc(cap(x.a[p][0])) + " (+" + x.a[p][1] + (rk(x.a[p]) !== null ? " \u00b7 " + rlab(x, x.a[p]) : "") + ")" : "\u274c No score") + "</span>" + reveal(x, p).replace(" open", "") + "</div>";
       }).join("") + "</div>";
     $("copy").onclick = function () {
       var b = this;
