@@ -143,3 +143,39 @@
 .bk-hx:focus-visible,.bk-htabs button:focus-visible,.bk-hgo:focus-visible,.bk-howbtn:focus-visible{outline:2px solid #B07A0C;outline-offset:2px}
 :root[data-motion="reduce"] .bk-hcard{animation:none}
 @media (prefers-reduced-motion:reduce){.bk-hcard{animation:none}}
+
+/* Stage select: the Kitchen and the Vet */
+.bk-pick{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#C9E6F5;margin-top:2px!important}
+.bk-sc{width:min(100%,520px);box-sizing:border-box;display:grid;grid-template-columns:104px minmax(0,1fr);gap:10px;text-align:left;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:8px;align-items:center}
+.bk-sc.vet{background:linear-gradient(160deg,rgba(91,208,138,.28),rgba(46,125,107,.35));border-color:#7FE0B4;box-shadow:0 0 0 2px rgba(127,224,180,.3)}
+.bk-sc.vet.locked{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.2);box-shadow:none}
+.bk-sc.locked .bk-th{filter:grayscale(1) opacity(.55)}
+.bk-th{display:block;width:104px;height:124px;border-radius:10px;background:#E6F1EC}
+.bk-sci{min-width:0}
+.bk-sci h2{margin:0;font:700 19px/1.1 var(--title);color:#fff}
+.bk-sk{font:700 10px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#FFE08A}
+.bk-new{display:inline-block;font:800 9px var(--body);letter-spacing:.12em;background:#B5308A;color:#fff;border-radius:999px;padding:2px 7px;margin-left:4px;vertical-align:1px}
+.bk-new[hidden]{display:none}
+.bk-sst{margin:2px 0 0;font-size:12px;color:#fff}
+.bk-sst b{color:#FFE08A}
+.bk-sd{margin:2px 0 0;font-size:11.5px;line-height:1.35;color:#E4DCF5}
+.bk-sbs{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.bk-sbn{font:700 13px var(--body);padding:8px 14px;border-radius:999px;background:#FFE08A;color:#2E1F57;border:0;cursor:pointer}
+.bk-sbn:hover{background:#FFD45C}
+.bk-sbn.gh{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);padding:6.5px 12px}
+.bk-sbn.gh:hover{background:rgba(255,255,255,.12)}
+.bk-sbn:disabled{cursor:default;background:rgba(255,255,255,.12);color:#C9BFE6;border:1.5px dashed rgba(255,255,255,.35)}
+.bk-sbn.bk-endless.locked{font-size:12px;opacity:1}
+.bk-sbn:focus-visible,.bk-dbtn:focus-visible{outline:2px solid #FFE08A;outline-offset:2px}
+.bk-srow{width:min(100%,520px);display:flex;gap:6px}
+.bk-chip,.bk-dbtn{flex:1;min-width:0;box-sizing:border-box;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:6px 4px;font:500 10.5px/1.3 var(--body);color:#E4DCF5;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bk-chip b{color:#fff;font-size:13px}
+.bk-dbtn{font:700 13px var(--body);color:#FFE08A;border:1.5px solid #FFE08A;background:transparent;cursor:pointer}
+.bk-dbtn small{font:500 10.5px var(--body);color:#C9BFE6}
+.bk-dbtn:disabled{opacity:.45;cursor:default;border-style:dashed}
+.bk-dnote{font-size:11.5px;color:#A99BD1;margin-top:-4px!important}
+.bk-game.bk-vet .bk-hud{background:#1F6B60}
+.bk-game.bk-vet .bk-stage{background:#E6F1EC}
+.bk-htabs{flex-wrap:wrap}
+.bk-htabs button[hidden]{display:none}
+.bk-tabs-o[hidden]{display:none}
