@@ -785,7 +785,7 @@
   // ---------- hub ----------
   function wotw() { var a = document.getElementById("mw-wotw"); if (!a || !window.fetch) return;
     fetch("/words/current.json").then(function (r) { return r.json(); }).then(function (w) { a.href = "/words/#" + w.slug; a.innerHTML = '<span>\ud83d\udcd6 Word of the week</span><b></b><i></i>'; a.querySelector("b").textContent = w.word; a.querySelector("i").textContent = "literally \u2018" + w.literal + "\u2019 \u2192"; a.hidden = false; }).catch(function () {}); }
-  var BAND2 = /[?&]bandmasc=1/.test(location.search); // preview: game symbol + mascot side by side
+  var BAND2 = !/[?&]bandmasc=0/.test(location.search); // game symbol + mascot side by side on cards (?bandmasc=0 to compare without)
   function hub() { setTimeout(social, 0); setTimeout(function () { try { liveShow(); } catch (e) {} }, 50); 
     topBar(null);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
