@@ -94,7 +94,7 @@
 "Folic acid"
 ],
 "topic": "Addiction",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -142,12 +142,12 @@
 {
 "q": "Which partial mu-opioid agonist is available in Australia as weekly and monthly depot injections for opioid dependence?",
 "a": "Buprenorphine",
-"used": false
+"used": true
 },
 {
 "q": "Which brain pathway, running from the ventral tegmental area to the nucleus accumbens, is central to reward in addiction?",
 "a": "The mesolimbic dopamine pathway",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -164,7 +164,7 @@
 ]
 },
 "gentle": true,
-"last_used": null
+"last_used": "2026-12-31"
 },
 {
 "id": "anaesthesia",
@@ -190,7 +190,7 @@
 "His uncle died unexpectedly during an operation decades ago."
 ],
 "teaching_point": "Malignant hyperthermia is an inherited reaction (often RYR1) to volatile anaesthetics and suxamethonium; rising CO2 and rigidity are early warnings.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -213,7 +213,7 @@
 ],
 "unicorn": "Cyclopropane",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -271,7 +271,7 @@
 "ISOFLURANE",
 "HALOTHANE"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -307,12 +307,12 @@
 {
 "q": "Which Scottish obstetrician introduced chloroform anaesthesia in 1847?",
 "a": "James Young Simpson",
-"used": false
+"used": true
 },
 {
 "q": "Sugammadex reverses which neuromuscular blocker by encapsulating it?",
 "a": "Rocuronium (also vecuronium)",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -324,11 +324,11 @@
 {
 "answer": "SEDATE",
 "definition": "Calm with drugs",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "dermatology",
@@ -380,7 +380,7 @@
 ],
 "unicorn": "Burrow",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -404,7 +404,7 @@
 "A rash that only appears in sunlight"
 ],
 "topic": "Skin",
-"used": false
+"used": true
 },
 {
 "q": "Under a Wood's lamp, erythrasma glows what colour?",
@@ -426,7 +426,7 @@
 "Edges"
 ],
 "topic": "Skin",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -438,7 +438,7 @@
 "VESICLE",
 "BULLA"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -475,12 +475,12 @@
 {
 "q": "Darier sign, where rubbing a brown lesion makes it swell and redden, is characteristic of which condition?",
 "a": "Mastocytosis (urticaria pigmentosa)",
-"used": false
+"used": true
 },
 {
 "q": "Loss-of-function variants in which skin barrier protein are a major risk factor for atopic eczema and ichthyosis vulgaris?",
 "a": "Filaggrin (FLG gene)",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -496,7 +496,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "emergency-medicine",
@@ -2819,7 +2819,7 @@
 "The eye feels rock hard to gentle touch through the lid."
 ],
 "teaching_point": "A painful red eye with haloes, vomiting and a fixed mid-dilated pupil, often triggered by dim light, is acute angle-closure glaucoma.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -2865,7 +2865,7 @@
 "Scotland"
 ],
 "topic": "Eyes",
-"used": false
+"used": true
 },
 {
 "q": "What is the leading cause of blindness worldwide?",
@@ -2876,7 +2876,7 @@
 "Diabetic retinopathy"
 ],
 "topic": "Eyes",
-"used": false
+"used": true
 },
 {
 "q": "Which part of the eye is the most commonly transplanted tissue?",
@@ -2887,7 +2887,7 @@
 "Iris"
 ],
 "topic": "Eyes",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -2937,12 +2937,12 @@
 {
 "q": "What is the eponymous name for a relative afferent pupillary defect found on the swinging torch test?",
 "a": "Marcus Gunn pupil",
-"used": false
+"used": true
 },
 {
 "q": "In diabetic retinopathy, what are 'cotton wool spots'?",
 "a": "Small infarcts of the retinal nerve fibre layer",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -2954,11 +2954,11 @@
 {
 "answer": "CATARACT",
 "definition": "Waterfall clouding the lens",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "general-paediatrics",
@@ -7382,7 +7382,7 @@
 "INCONTINENCE",
 "INTELLECTUAL IMPAIRMENT"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -7418,12 +7418,12 @@
 {
 "q": "Which Colombian neurosurgeon described normal pressure hydrocephalus in 1965?",
 "a": "Salomon Hakim",
-"used": false
+"used": true
 },
 {
 "q": "What is the 4AT used for?",
 "a": "Rapid screening for delirium",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -7439,7 +7439,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "haematology",
@@ -12149,12 +12149,12 @@
 {
 "q": "Which Queensland bush nurse developed a hot-pack and passive-movement treatment for polio paralysis in the 1930s and 40s?",
 "a": "Sister Elizabeth Kenny",
-"used": false
+"used": true
 },
 {
 "q": "At which military hospital in present-day Istanbul did Florence Nightingale's nurses work during the Crimean War?",
 "a": "Scutari (the Selimiye Barracks hospital in Üsküdar)",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -12170,7 +12170,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "enrolled-nursing",
@@ -14741,7 +14741,7 @@
 "'Helper of wives'"
 ],
 "topic": "Etymology",
-"used": false
+"used": true
 },
 {
 "q": "Which organisation runs the International Day of the Midwife on 5 May?",
@@ -14814,12 +14814,12 @@
 {
 "q": "Which manoeuvre, flexing the mother's hips sharply onto her abdomen, is a first step for shoulder dystocia?",
 "a": "The McRoberts manoeuvre",
-"used": false
+"used": true
 },
 {
 "q": "Which 18th-century American midwife's diary (1785–1812) recorded more than 800 births?",
 "a": "Martha Ballard",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -14831,11 +14831,11 @@
 {
 "answer": "MIDWIFE",
 "definition": "She delivers",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-31"
 },
 {
 "id": "aboriginal-torres-strait-islander-health-practice",
@@ -15892,7 +15892,7 @@
 ],
 "unicorn": "Using the telephone",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -15987,7 +15987,7 @@
 {
 "q": "Which 'mother of occupational therapy' developed habit training?",
 "a": "Eleanor Clarke Slagle",
-"used": false
+"used": true
 },
 {
 "q": "What does the Person–Environment–Occupation (PEO) model propose?",
@@ -16008,7 +16008,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-13"
 },
 {
 "id": "optometry",
@@ -16456,7 +16456,7 @@
 "SIGNS",
 "TREATMENT"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -16499,7 +16499,7 @@
 {
 "q": "What did Frank Pantridge pioneer in Belfast in the 1960s?",
 "a": "The portable defibrillator and mobile coronary care",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -16515,7 +16515,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "pharmacy",
@@ -16597,7 +16597,7 @@
 "A key"
 ],
 "topic": "Symbols",
-"used": false
+"used": true
 },
 {
 "q": "Which Poisons Standard schedule covers Prescription Only Medicines?",
@@ -16659,12 +16659,12 @@
 {
 "q": "The prescription symbol 'Rx' is usually said to come from which Latin word?",
 "a": "Recipe ('take')",
-"used": false
+"used": true
 },
 {
 "q": "Which 1937 US disaster, caused by diethylene glycol in an antibiotic syrup, led to modern drug-safety laws?",
 "a": "The Elixir Sulfanilamide disaster",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -16680,7 +16680,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-23"
 },
 {
 "id": "hospital-pharmacy",
@@ -16864,7 +16864,7 @@
 "Squeezing his calf doesn't make his foot point down."
 ],
 "teaching_point": "Being able to walk doesn't rule out an Achilles rupture. A positive calf-squeeze (Simmonds–Thompson) test is the clue.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -16888,7 +16888,7 @@
 ],
 "unicorn": "Ligament of Wrisberg",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -16912,7 +16912,7 @@
 "When to return to sport"
 ],
 "topic": "Assessment",
-"used": false
+"used": true
 },
 {
 "q": "The Australian Physiotherapy Association began in 1905 under what name?",
@@ -16934,7 +16934,7 @@
 "Ice"
 ],
 "topic": "Injury care",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -16984,19 +16984,19 @@
 {
 "q": "In the 'PEACE & LOVE' injury advice, what does LOVE stand for?",
 "a": "Load, Optimism, Vascularisation, Exercise",
-"used": false
+"used": true
 },
 {
 "q": "What organisation did four British nurses and midwives found in 1894, the forerunner of the Chartered Society of Physiotherapy?",
 "a": "The Society of Trained Masseuses",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
 {
 "answer": "TENDON",
 "definition": "Muscle-to-bone cord",
-"used": false
+"used": true
 },
 {
 "answer": "SPRAIN",
@@ -17005,7 +17005,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-30"
 },
 {
 "id": "podiatry",
@@ -17149,12 +17149,12 @@
 {
 "q": "A 'Jones fracture' involves which bone?",
 "a": "The fifth metatarsal (proximal shaft)",
-"used": false
+"used": true
 },
 {
 "q": "Morton's neuroma is most often found between which metatarsal heads?",
 "a": "The third and fourth",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -17170,7 +17170,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "psychology",
@@ -17419,7 +17419,7 @@
 "Silica"
 ],
 "topic": "Anatomy",
-"used": false
+"used": true
 },
 {
 "q": "Which Tasmanian town was first in Australia to fluoridate its water, in 1953?",
@@ -17481,12 +17481,12 @@
 {
 "q": "Which French surgeon, author of 'Le Chirurgien Dentiste' (1728), is called the father of modern dentistry?",
 "a": "Pierre Fauchard",
-"used": false
+"used": true
 },
 {
 "q": "Which anaesthetic did dentist Horace Wells pioneer in 1844?",
 "a": "Nitrous oxide",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -17502,7 +17502,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-28"
 },
 {
 "id": "oral-health-therapy",
@@ -18516,7 +18516,7 @@
 "Some upper teeth have started to break down."
 ],
 "teaching_point": "Decay of the upper front teeth with the lower ones spared is the classic bottle-at-bedtime pattern of early childhood caries.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -18568,7 +18568,7 @@
 "The second premolar"
 ],
 "topic": "Development",
-"used": false
+"used": true
 },
 {
 "q": "Giving tetracycline before about age 8 can cause what?",
@@ -18579,7 +18579,7 @@
 "Faster tooth eruption"
 ],
 "topic": "Medicines",
-"used": false
+"used": true
 },
 {
 "q": "Should a knocked-out baby tooth be put back in?",
@@ -18590,7 +18590,7 @@
 "Only if it's a front tooth"
 ],
 "topic": "Dental trauma",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -18602,7 +18602,7 @@
 "INTRUSION",
 "EXTRUSION"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -18639,12 +18639,12 @@
 {
 "q": "What is the Hall technique?",
 "a": "Sealing decayed baby molars under preformed metal crowns without drilling or anaesthetic",
-"used": false
+"used": true
 },
 {
 "q": "Which inherited condition gives teeth an opalescent blue-brown look?",
 "a": "Dentinogenesis imperfecta",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -18660,7 +18660,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "oral-maxillofacial-surgery",
@@ -19320,7 +19320,7 @@
 "It got worse during her pregnancy."
 ],
 "teaching_point": "Conductive hearing loss with normal eardrums in a young adult with a family history suggests otosclerosis. The 2 kHz dip is the Carhart notch.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -19396,7 +19396,7 @@
 "60 dB"
 ],
 "topic": "Hearing tests",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -19447,12 +19447,12 @@
 {
 "q": "Who received the first multichannel cochlear implant in Melbourne in 1978?",
 "a": "Rod Saunders",
-"used": false
+"used": true
 },
 {
 "q": "What is the 'speech banana' on an audiogram?",
 "a": "The banana-shaped zone where everyday speech sounds fall",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -19468,7 +19468,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-26"
 },
 {
 "id": "dietetics",
@@ -19612,12 +19612,12 @@
 {
 "q": "Which researcher ran the 1940s Minnesota Starvation Experiment and later championed the Mediterranean diet?",
 "a": "Ancel Keys",
-"used": false
+"used": true
 },
 {
 "q": "What does FODMAP stand for?",
 "a": "Fermentable Oligosaccharides, Disaccharides, Monosaccharides And Polyols",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -19629,11 +19629,11 @@
 {
 "answer": "CALORIE",
 "definition": "Energy unit",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "exercise-physiology",
@@ -19840,7 +19840,7 @@
 ],
 "unicorn": "Crossed aphasia",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -19937,19 +19937,19 @@
 {
 "q": "Which French physician described the left frontal speech area in 1861, using a patient nicknamed 'Tan'?",
 "a": "Paul Broca",
-"used": false
+"used": true
 },
 {
 "q": "What does IDDSI stand for?",
 "a": "International Dysphagia Diet Standardisation Initiative",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
 {
 "answer": "APHASIA",
 "definition": "Loss of language",
-"used": false
+"used": true
 },
 {
 "answer": "LARYNX",
@@ -19958,7 +19958,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "social-work",
@@ -21260,7 +21260,7 @@
 "Tests for antibodies against platelet factor 4 are positive."
 ],
 "teaching_point": "A platelet fall of over 50% 5 to 10 days into heparin, with new clots, is HIT. Heparin must stop.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -21287,7 +21287,7 @@
 ],
 "unicorn": "Haemofilter",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -21300,7 +21300,7 @@
 "Victor Chang"
 ],
 "topic": "History",
-"used": false
+"used": true
 },
 {
 "q": "Which drug stops blood clotting in the bypass circuit, and is later reversed with protamine?",
@@ -21311,7 +21311,7 @@
 "Tranexamic acid"
 ],
 "topic": "Pharmacology",
-"used": false
+"used": true
 },
 {
 "q": "What does ECMO stand for?",
@@ -21322,7 +21322,7 @@
 "Extended cardiopulmonary monitoring"
 ],
 "topic": "Terms",
-"used": false
+"used": true
 },
 {
 "q": "Cardioplegia solution stops the heart mainly using high levels of what?",
@@ -21333,7 +21333,7 @@
 "Glucose"
 ],
 "topic": "Cardioplegia",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -21345,7 +21345,7 @@
 "PUMP",
 "CANNULA"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -21383,12 +21383,12 @@
 {
 "q": "In 1954, what 'oxygenator' did C. Walton Lillehei use for open-heart surgery on children?",
 "a": "A parent, via cross-circulation",
-"used": false
+"used": true
 },
 {
 "q": "During bypass, what does the ACT test measure?",
 "a": "Activated clotting time, to check heparin effect",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -21404,7 +21404,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "cardiac-physiology",
@@ -22021,12 +22021,12 @@
 {
 "q": "What are the eosinophilic, ropey cytoplasmic inclusions seen in hepatocytes in alcohol-related hepatitis?",
 "a": "Mallory-Denk bodies (Mallory hyaline)",
-"used": false
+"used": true
 },
 {
 "q": "Which German pathologist founded cellular pathology and popularised 'omnis cellula e cellula' (every cell from a cell)?",
 "a": "Rudolf Virchow",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -22042,7 +22042,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "chemical-pathology",
@@ -22401,7 +22401,7 @@
 "The lab calls to warn the team the organism needs high-level biosafety handling."
 ],
 "teaching_point": "Melioidosis is endemic in tropical northern Australia, peaks in the wet season, hits people with diabetes hardest and can form abscesses anywhere; the lab must be warned because the organism is a biosafety risk.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -22524,19 +22524,19 @@
 {
 "q": "In 1984 Barry Marshall 'broke' Koch's postulates the hard way. What did he do?",
 "a": "Drank a culture of Helicobacter pylori and developed gastritis",
-"used": false
+"used": true
 },
 {
 "q": "Which acid-fast stain is used to spot Mycobacterium tuberculosis in sputum?",
 "a": "Ziehl-Neelsen (or auramine fluorescence)",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
 {
 "answer": "AGAR",
 "definition": "jelly that bacteria grow on",
-"used": false
+"used": true
 },
 {
 "answer": "SPORE",
@@ -22545,7 +22545,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "immunopathology",
@@ -23126,7 +23126,7 @@
 "BURETTE",
 "PIPETTE"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -23164,12 +23164,12 @@
 {
 "q": "In Westgard quality control rules, what does the 1-3s rule tell you to do?",
 "a": "Reject the run when one control result is more than 3 SD from the mean",
-"used": false
+"used": true
 },
 {
 "q": "What is the chart called that plots daily quality-control results against mean and SD lines?",
 "a": "A Levey-Jennings chart",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -23181,11 +23181,11 @@
 {
 "answer": "PIPETTE",
 "definition": "thin tube for measuring liquid",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-25"
 },
 {
 "id": "epidemiology",
@@ -23238,7 +23238,7 @@
 ],
 "unicorn": "Immortal time bias",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -23284,7 +23284,7 @@
 "50 to 100"
 ],
 "topic": "Epidemiology",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -23296,7 +23296,7 @@
 "CROSS-SECTIONAL",
 "ECOLOGICAL"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -23334,12 +23334,12 @@
 {
 "q": "Which US cohort study, begun in 1948 and still running, gave medicine the phrase 'risk factor'?",
 "a": "The Framingham Heart Study",
-"used": false
+"used": true
 },
 {
 "q": "What are Bradford Hill's 1965 criteria used for?",
 "a": "Judging whether an observed association is likely to be causal",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -23355,7 +23355,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "biostatistics",
@@ -23393,7 +23393,7 @@
 ],
 "unicorn": "Friedman test",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -23406,7 +23406,7 @@
 "The Royal Mail"
 ],
 "topic": "Statistics",
-"used": false
+"used": true
 },
 {
 "q": "The number needed to treat is 1 divided by what?",
@@ -23417,7 +23417,7 @@
 "The p-value"
 ],
 "topic": "Statistics",
-"used": false
+"used": true
 },
 {
 "q": "Florence Nightingale used which chart to show soldiers dying of preventable disease in the Crimean War?",
@@ -23439,7 +23439,7 @@
 "Using the wrong test"
 ],
 "topic": "Statistics",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -23451,7 +23451,7 @@
 "SIGMA",
 "MU"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -23489,12 +23489,12 @@
 {
 "q": "What paradox describes a trend that appears in several groups but reverses when the groups are combined?",
 "a": "Simpson's paradox",
-"used": false
+"used": true
 },
 {
 "q": "In a meta-analysis, what does an asymmetric funnel plot suggest?",
 "a": "Small-study effects, such as publication bias",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -23510,7 +23510,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-22"
 },
 {
 "id": "clinical-trials-ebm",
@@ -23643,12 +23643,12 @@
 {
 "q": "What term describes genuine expert uncertainty about which treatment is better, the ethical basis for randomising patients?",
 "a": "Clinical equipoise",
-"used": false
+"used": true
 },
 {
 "q": "Whose 1972 book 'Effectiveness and Efficiency' inspired the Cochrane Collaboration?",
 "a": "Archie Cochrane",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -23660,11 +23660,11 @@
 {
 "answer": "TRIAL",
 "definition": "test of a treatment",
-"used": false
+"used": true
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "pharmacology-drug-development",
@@ -25628,7 +25628,7 @@
 "YELLOW BILE",
 "BLACK BILE"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -25670,7 +25670,7 @@
 {
 "q": "Who performed the first human-to-human heart transplant, in Cape Town in 1967?",
 "a": "Christiaan Barnard",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -25686,7 +25686,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-28"
 },
 {
 "id": "medical-ethics",
@@ -25724,7 +25724,7 @@
 ],
 "unicorn": "Therapeutic privilege",
 "ranked": false,
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -25782,7 +25782,7 @@
 "NON-MALEFICENCE",
 "JUSTICE"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -25820,12 +25820,12 @@
 {
 "q": "Which US Public Health Service study, exposed in 1972, left Black men with syphilis untreated for 40 years?",
 "a": "The Tuskegee syphilis study",
-"used": false
+"used": true
 },
 {
 "q": "Which doctrine allows a treatment given to relieve suffering even if it may foreseeably shorten life, provided relief is the intention?",
 "a": "The doctrine of double effect",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -25841,7 +25841,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "medical-education",
@@ -26361,7 +26361,7 @@
 "Estonia"
 ],
 "topic": "Global Indigenous health",
-"used": false
+"used": true
 },
 {
 "q": "How many Calls to Action did Canada's Truth and Reconciliation Commission issue in 2015?",
@@ -26395,7 +26395,7 @@
 "WHANAU",
 "WAIRUA"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -26431,12 +26431,12 @@
 {
 "q": "Which Canadian child-first principle, passed by the House of Commons in 2007, is named after a boy from Norway House Cree Nation?",
 "a": "Jordan's Principle (after Jordan River Anderson)",
-"used": false
+"used": true
 },
 {
 "q": "Which Māori health model, described by Sir Mason Durie in 1984, likens wellbeing to a meeting house with four walls?",
 "a": "Te Whare Tapa Whā",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -26452,7 +26452,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "social-determinants-low-ses",
@@ -26703,7 +26703,7 @@
 "AFFLECK",
 "WELCH"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -26746,7 +26746,7 @@
 {
 "q": "Who worked with John Flynn in the 1920s to develop the pedal-powered radio that let remote stations call the Flying Doctor?",
 "a": "Alfred Traeger",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -26762,7 +26762,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-27"
 },
 {
 "id": "lgbtiqa-health",
@@ -26892,7 +26892,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-29"
 },
 {
 "id": "disability-accessibility",
@@ -26952,7 +26952,7 @@
 "Wheelchair tennis"
 ],
 "unicorn": "Boccia",
-"used": false
+"used": true
 }
 ],
 "trivia": [
@@ -26998,7 +26998,7 @@
 "A lack of specialist doctors"
 ],
 "topic": "Disability and accessibility",
-"used": false
+"used": true
 }
 ],
 "comorbix": [
@@ -27010,7 +27010,7 @@
 "RAMPS",
 "HEARING LOOP"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -27048,12 +27048,12 @@
 {
 "q": "Which UK organisation's 1976 'Fundamental Principles of Disability' laid the groundwork for the social model of disability?",
 "a": "UPIAS, the Union of the Physically Impaired Against Segregation",
-"used": false
+"used": true
 },
 {
 "q": "Which academic coined the phrase 'social model of disability' in 1983?",
 "a": "Mike Oliver",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -27069,7 +27069,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "cald-refugee-health",
@@ -27096,7 +27096,7 @@
 "His serology for a soil-transmitted roundworm is positive."
 ],
 "teaching_point": "Eosinophilia and a fast-moving 'larva currens' rash in someone from an endemic area suggests strongyloides; post-arrival screening matters most because steroids can trigger fatal hyperinfection.",
-"used": false
+"used": true
 }
 ],
 "zebritis": [
@@ -27152,7 +27152,7 @@
 "Survivorship bias"
 ],
 "topic": "Multicultural and refugee health",
-"used": false
+"used": true
 },
 {
 "q": "World Refugee Day falls on which date?",
@@ -27232,7 +27232,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-20"
 },
 {
 "id": "womens-health-equity",
@@ -27284,7 +27284,7 @@
 "Heart disease that only occurs in women"
 ],
 "topic": "Women's health equity",
-"used": false
+"used": true
 },
 {
 "q": "In which year did Australia replace the two-yearly Pap smear with the HPV-based Cervical Screening Test?",
@@ -27318,7 +27318,7 @@
 "DYSCHEZIA",
 "SUBFERTILITY"
 ],
-"used": false
+"used": true
 }
 ],
 "wordemic": [
@@ -27356,12 +27356,12 @@
 {
 "q": "Which cardiologist and director of the US National Institutes of Health coined the term 'Yentl syndrome' in a 1991 NEJM editorial?",
 "a": "Dr Bernadine Healy",
-"used": false
+"used": true
 },
 {
 "q": "Name the three 'dys-' symptoms classically associated with endometriosis.",
 "a": "Dysmenorrhoea, dyspareunia and dyschezia",
-"used": false
+"used": true
 }
 ],
 "cryptic": [
@@ -27377,7 +27377,7 @@
 }
 ]
 },
-"last_used": null
+"last_used": "2026-12-30"
 },
 {
 "id": "mens-health",

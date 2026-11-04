@@ -1,0 +1,3870 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 37,
+  "difficulty": "Easy",
+  "patient": "Nadia, 29, female",
+  "story": "Ten days of fever, sore throat, aching muscles and a faint rash across her chest. Well until now. Her GP sends a broad screen because a sexual health check is routine and she asked for one.",
+  "theme": "World AIDS Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "128",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "White cells",
+      "3.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      "L"
+     ],
+     [
+      "Lymphocytes",
+      "0.8",
+      "×10⁹/L",
+      "1.0–4.0",
+      "L"
+     ],
+     [
+      "Platelets",
+      "128",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Infection screen",
+    "rows": [
+     [
+      "ALT",
+      "62",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "CRP",
+      "18",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "Heterophile antibody (Monospot)",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "HIV antigen/antibody screen",
+      "Reactive",
+      "",
+      "Non-reactive",
+      "!"
+     ],
+     [
+      "HIV-1 antibody confirmatory blot",
+      "Indeterminate",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "HIV-1 RNA (viral load)",
+      "1,400,000",
+      "copies/mL",
+      "Not detected",
+      "!"
+     ],
+     [
+      "Syphilis serology",
+      "Non-reactive",
+      "",
+      "Non-reactive",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Primary HIV infection (seroconversion)",
+  "wrong": [
+   "Glandular fever (EBV)",
+   "Cytomegalovirus infection",
+   "Secondary syphilis",
+   "Acute hepatitis A",
+   "Long-established HIV infection"
+  ],
+  "hints": [
+   [
+    "A flu-like illness with a negative Monospot. Now look at the screen below it.",
+    [
+     "Heterophile antibody (Monospot)",
+     "HIV antigen/antibody screen"
+    ]
+   ],
+   [
+    "A very high viral load while the antibody test is still only half-formed means the infection is new.",
+    [
+     "HIV-1 RNA (viral load)",
+     "HIV-1 antibody confirmatory blot"
+    ]
+   ]
+  ],
+  "key": [
+   "HIV antigen/antibody screen",
+   "HIV-1 antibody confirmatory blot",
+   "HIV-1 RNA (viral load)"
+  ],
+  "why": "A glandular-fever-like illness, negative Monospot and clear syphilis test, plus a reactive combined antigen/antibody screen, an indeterminate confirmatory blot and a huge viral load. That pattern means the virus has arrived before the full antibody response has. It's primary HIV infection. Long-established infection would show a fully positive blot.",
+  "pearl": "Modern antiretroviral treatment gives people with HIV a near-normal life expectancy, and someone with a sustained undetectable viral load does not pass HIV on through sex: undetectable equals untransmittable (U=U)."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 38,
+  "difficulty": "Medium",
+  "patient": "Teresa, 63, female",
+  "story": "Living well for two years with a left ventricular assist device (LVAD), a pump keeping her heart failure in check. Now tired, breathless, with cola-coloured urine. The pump's power reading has been creeping up. She takes warfarin as prescribed.",
+  "theme": "First artificial heart",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "92",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "Reticulocytes",
+      "188",
+      "×10⁹/L",
+      "20–100",
+      "H"
+     ],
+     [
+      "Platelets",
+      "210",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ],
+     [
+      "Blood film",
+      "Occasional fragments",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Haemolysis and clotting",
+    "rows": [
+     [
+      "LDH",
+      "1,850",
+      "U/L",
+      "120–250",
+      "H"
+     ],
+     [
+      "Haptoglobin",
+      "<0.1",
+      "g/L",
+      "0.3–2.0",
+      "L"
+     ],
+     [
+      "Bilirubin",
+      "41",
+      "µmol/L",
+      "<20",
+      "H"
+     ],
+     [
+      "Direct antiglobulin test",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "INR",
+      "2.4",
+      "",
+      "2.0–3.0",
+      ""
+     ],
+     [
+      "Creatinine",
+      "118",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Urine dipstick blood",
+      "Positive, no red cells seen",
+      "",
+      "Negative",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "LVAD pump thrombosis",
+  "wrong": [
+   "Autoimmune haemolytic anaemia",
+   "Warfarin over-anticoagulation",
+   "Thrombotic thrombocytopenic purpura (TTP)",
+   "Worsening heart failure with liver congestion",
+   "Bleeding from the gut"
+  ],
+  "hints": [
+   [
+    "Red cells are being destroyed somewhere. The antiglobulin test says the immune system isn't responsible.",
+    [
+     "LDH",
+     "Haptoglobin",
+     "Direct antiglobulin test"
+    ]
+   ],
+   [
+    "The platelets and INR are fine. What's different about her circulation, and why is the pump working harder?",
+    [
+     "Platelets",
+     "INR"
+    ]
+   ]
+  ],
+  "key": [
+   "LDH",
+   "Haptoglobin",
+   "Direct antiglobulin test"
+  ],
+  "why": "Sky-high LDH, absent haptoglobin, raised reticulocytes, a negative antiglobulin test and blood in the urine with no red cells (free haemoglobin) add up to intravascular haemolysis that isn't immune. Add a rising pump power reading and the likely culprit is a clot inside the LVAD, shredding red cells as they pass. TTP would drop the platelets. Bleeding wouldn't send LDH this high.",
+  "pearl": "LDH is one of the most watched blood tests in LVAD clinics, because a sudden rise can be the first sign of pump thrombosis. Barney Clark's 1982 artificial heart was tethered to a large air compressor. Today's LVADs run off batteries worn on the body."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 39,
+  "difficulty": "Medium",
+  "patient": "Liz, 27, female",
+  "story": "Three months into rehab after a spinal cord injury in a road crash, already eyeing wheelchair rugby. Now nauseated, constipated and thirsty. Her occupational therapist noticed she's not herself. No medicines beyond a bowel regimen.",
+  "theme": "International Day of Persons with Disabilities",
+  "panels": [
+   {
+    "name": "Calcium and bone",
+    "rows": [
+     [
+      "Calcium",
+      "3.02",
+      "mmol/L",
+      "2.10–2.60",
+      "H"
+     ],
+     [
+      "Albumin",
+      "38",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "3.06",
+      "mmol/L",
+      "2.10–2.60",
+      "H"
+     ],
+     [
+      "Phosphate",
+      "1.44",
+      "mmol/L",
+      "0.75–1.50",
+      ""
+     ],
+     [
+      "PTH",
+      "0.8",
+      "pmol/L",
+      "1.6–6.9",
+      "L"
+     ],
+     [
+      "25-OH vitamin D",
+      "68",
+      "nmol/L",
+      ">50",
+      ""
+     ],
+     [
+      "ALP",
+      "104",
+      "U/L",
+      "30–110",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Creatinine",
+      "82",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Haemoglobin",
+      "124",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "Total protein",
+      "68",
+      "g/L",
+      "60–80",
+      ""
+     ],
+     [
+      "CRP",
+      "3",
+      "mg/L",
+      "<5",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Immobilisation hypercalcaemia",
+  "wrong": [
+   "Primary hyperparathyroidism",
+   "Hypercalcaemia of malignancy",
+   "Vitamin D toxicity",
+   "Milk-alkali syndrome",
+   "Familial hypocalciuric hypercalcaemia"
+  ],
+  "hints": [
+   [
+    "PTH is switched off, so the parathyroids are not to blame. The calcium is coming from somewhere else.",
+    [
+     "PTH",
+     "Corrected calcium"
+    ]
+   ],
+   [
+    "Vitamin D is ordinary. Think about what bone does when it stops carrying weight.",
+    [
+     "25-OH vitamin D",
+     "Calcium"
+    ]
+   ]
+  ],
+  "key": [
+   "Corrected calcium",
+   "PTH",
+   "25-OH vitamin D"
+  ],
+  "why": "High calcium with an appropriately suppressed PTH rules out the parathyroids, normal vitamin D argues against toxicity, and she has no cancer or calcium supplement story. Bone that suddenly stops bearing weight breaks down faster than it builds, tipping calcium into the blood. This is best known in young people after spinal cord injury, as they have the busiest bone turnover. Immobilisation hypercalcaemia.",
+  "pearl": "Bone loss after spinal cord injury is fast, mostly in the legs, and rehab teams watch for it. Wheelchair rugby began in Winnipeg, Canada, in the 1970s, and is a mixed-gender Paralympic sport."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 40,
+  "difficulty": "Hard",
+  "patient": "Tamsin, 19, female",
+  "story": "Has always cramped up within a minute of sprinting and had to stop, but finds that if she rests briefly and starts again gently, she can go on for ages. Dark urine after a hard netball trial yesterday.",
+  "theme": "International Cheetah Day",
+  "panels": [
+   {
+    "name": "Muscle and kidneys",
+    "rows": [
+     [
+      "Creatine kinase",
+      "6,200",
+      "U/L",
+      "<150",
+      "H"
+     ],
+     [
+      "Potassium",
+      "4.9",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Creatinine",
+      "72",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Urate",
+      "0.41",
+      "mmol/L",
+      "0.15–0.35",
+      "H"
+     ],
+     [
+      "ALT",
+      "88",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "AST",
+      "140",
+      "U/L",
+      "<35",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Forearm exercise test",
+    "rows": [
+     [
+      "Lactate, at rest",
+      "1.1",
+      "mmol/L",
+      "<2.0",
+      ""
+     ],
+     [
+      "Lactate, after exercise",
+      "1.3",
+      "mmol/L",
+      "Should triple",
+      "!"
+     ],
+     [
+      "Ammonia, after exercise",
+      "210",
+      "µmol/L",
+      "<80",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "TSH",
+      "1.8",
+      "mU/L",
+      "0.40–4.00",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "McArdle disease (glycogen storage disease type V)",
+  "wrong": [
+   "Carnitine palmitoyltransferase II deficiency",
+   "Exertional rhabdomyolysis, no underlying disorder",
+   "Polymyositis",
+   "Hypothyroid myopathy",
+   "Myoadenylate deaminase deficiency"
+  ],
+  "hints": [
+   [
+    "Hard exercise should flood muscle with lactate. Look at hers.",
+    [
+     "Lactate, after exercise",
+     "Lactate, at rest"
+    ]
+   ],
+   [
+    "Muscle can't break down its glycogen stores to fuel sprints, yet ammonia still rises. And what's that 'rest, then go again' pattern in her story?",
+    [
+     "Ammonia, after exercise"
+    ]
+   ]
+  ],
+  "key": [
+   "Lactate, after exercise",
+   "Ammonia, after exercise",
+   "Creatine kinase"
+  ],
+  "why": "Pain within a minute of intense exercise, a 'second wind' after a short rest, CK raised even between episodes, and a flat lactate with a brisk ammonia rise on forearm testing. Her muscle lacks myophosphorylase, so it can't use glycogen for fuel: no glycolysis, no lactate. Second wind arrives when blood glucose and fats reach the muscle. CPT II causes trouble later, with prolonged exercise, and has a normal lactate rise.",
+  "pearl": "Cheetahs sprint on fast-twitch muscle fibres, which rely heavily on the glycogen-to-lactate pathway that McArdle disease blocks. Named after Brian McArdle, who described it in 1951. A second wind is the classic clue."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 41,
+  "difficulty": "Hard",
+  "patient": "Priya, 41, female",
+  "story": "A volunteer firefighter, dragged clear after being caught in a house fire. Confused, soot in her mouth, breathing fast. Oxygen on at 15 L/min, oxygen saturation reads 99%. Blood pressure is falling.",
+  "theme": "International Volunteer Day",
+  "panels": [
+   {
+    "name": "Arterial blood gas",
+    "rows": [
+     [
+      "pH",
+      "7.11",
+      "",
+      "7.35–7.45",
+      "L"
+     ],
+     [
+      "pCO2",
+      "26",
+      "mmHg",
+      "35–45",
+      "L"
+     ],
+     [
+      "pO2",
+      "240",
+      "mmHg",
+      "80–100",
+      "H"
+     ],
+     [
+      "Bicarbonate",
+      "8",
+      "mmol/L",
+      "22–26",
+      "L"
+     ],
+     [
+      "Lactate",
+      "15.4",
+      "mmol/L",
+      "<2.0",
+      "H"
+     ],
+     [
+      "Carboxyhaemoglobin",
+      "9",
+      "%",
+      "<3",
+      "H"
+     ],
+     [
+      "Methaemoglobin",
+      "0.8",
+      "%",
+      "<1.5",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "141",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Chloride",
+      "102",
+      "mmol/L",
+      "95–110",
+      ""
+     ],
+     [
+      "Potassium",
+      "4.4",
+      "mmol/L",
+      "3.5–5.2",
+      ""
+     ],
+     [
+      "Glucose",
+      "8.9",
+      "mmol/L",
+      "3.0–7.8",
+      "H"
+     ],
+     [
+      "Creatine kinase",
+      "190",
+      "U/L",
+      "<150",
+      "H"
+     ],
+     [
+      "Oxygen saturation, central venous",
+      "88",
+      "%",
+      "65–80",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Cyanide poisoning from smoke inhalation",
+  "wrong": [
+   "Carbon monoxide poisoning alone",
+   "Methaemoglobinaemia",
+   "Septic shock",
+   "Rhabdomyolysis from burns",
+   "Salicylate poisoning"
+  ],
+  "hints": [
+   [
+    "The carboxyhaemoglobin is up, but is it high enough to explain a lactate of 15?",
+    [
+     "Carboxyhaemoglobin",
+     "Lactate"
+    ]
+   ],
+   [
+    "Blood returning to the heart is still full of oxygen. The tissues aren't using it.",
+    [
+     "Oxygen saturation, central venous",
+     "pO2"
+    ]
+   ]
+  ],
+  "key": [
+   "Lactate",
+   "Carboxyhaemoglobin",
+   "Oxygen saturation, central venous"
+  ],
+  "why": "A severe high anion gap acidosis with a lactate over 10 in a smoke-exposed patient, only modest carboxyhaemoglobin, and unusually high venous oxygen saturation. Burning plastics, wool and furnishings release hydrogen cyanide, which jams cytochrome oxidase. Cells can't use oxygen even with plenty delivered, so they switch to anaerobic metabolism and venous blood stays bright. Methaemoglobin is normal, so that's out.",
+  "pearl": "Roughly speaking, a lactate above 8 to 10 mmol/L after smoke inhalation is a classic trigger to suspect cyanide. A cyanide blood level usually takes too long to come back to help on the night, so the lactate does the talking. Many fire crews worldwide are volunteers."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 42,
+  "difficulty": "Genius",
+  "patient": "Aino, 24, female",
+  "story": "From a small town in Finland. Watery diarrhoea every day for as long as anyone can remember, and born early with a swollen belly. Doesn't vomit, doesn't use laxatives, and drinks a salty solution her family has always mixed for her.",
+  "theme": "Finland's Independence Day",
+  "panels": [
+   {
+    "name": "Electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "134",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Potassium",
+      "3.0",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "86",
+      "mmol/L",
+      "95–110",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "36",
+      "mmol/L",
+      "22–32",
+      "H"
+     ],
+     [
+      "Urea",
+      "8.6",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "94",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Magnesium",
+      "0.78",
+      "mmol/L",
+      "0.70–1.10",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Urine, stool and hormones",
+    "rows": [
+     [
+      "Urine chloride",
+      "3",
+      "mmol/L",
+      "",
+      ""
+     ],
+     [
+      "Stool chloride",
+      "131",
+      "mmol/L",
+      "<50",
+      "H"
+     ],
+     [
+      "Stool sodium",
+      "38",
+      "mmol/L",
+      "",
+      ""
+     ],
+     [
+      "Stool potassium",
+      "44",
+      "mmol/L",
+      "",
+      ""
+     ],
+     [
+      "Renin (direct)",
+      "210",
+      "mU/L",
+      "3–40",
+      "H"
+     ],
+     [
+      "Aldosterone",
+      "1,150",
+      "pmol/L",
+      "100–800",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Congenital chloride diarrhoea",
+  "wrong": [
+   "Bartter syndrome",
+   "Gitelman syndrome",
+   "Laxative misuse",
+   "VIPoma",
+   "Hidden vomiting"
+  ],
+  "hints": [
+   [
+    "Diarrhoea normally makes you acidotic. She's alkalotic. And her urine has almost no chloride, which clears the kidneys.",
+    [
+     "Bicarbonate",
+     "Urine chloride"
+    ]
+   ],
+   [
+    "Do the sum on her stool: is chloride more than sodium and potassium combined? The bowel is failing at one specific job.",
+    [
+     "Stool chloride",
+     "Stool sodium",
+     "Stool potassium"
+    ]
+   ]
+  ],
+  "key": [
+   "Stool chloride",
+   "Bicarbonate",
+   "Urine chloride"
+  ],
+  "why": "Lifelong watery diarrhoea with metabolic alkalosis instead of the usual acidosis, stool chloride well above stool sodium plus potassium, and almost no chloride in the urine. The gut's chloride/bicarbonate exchanger (the SLC26A3 gene) doesn't work, so chloride pours out and bicarbonate stays in. Renal salt-wasters such as Bartter and Gitelman would leak chloride into the urine. Salt loss then drives renin and aldosterone up, worsening the low potassium.",
+  "pearl": "Congenital chloride diarrhoea is part of the 'Finnish disease heritage', a group of rare recessive conditions made more common in Finland by founder effects. It also clusters in Poland and the Arabian Gulf."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 43,
+  "difficulty": "Easy",
+  "patient": "Ingrid, 47, female",
+  "story": "Landed two days ago after 22 hours in economy, most of it in a window seat. Now sharp chest pain on breathing in, breathless on the stairs, and an aching left calf. Takes menopausal hormone therapy.",
+  "theme": "International Civil Aviation Day",
+  "panels": [
+   {
+    "name": "Arterial blood gas",
+    "rows": [
+     [
+      "pH",
+      "7.49",
+      "",
+      "7.35–7.45",
+      "H"
+     ],
+     [
+      "pCO2",
+      "30",
+      "mmHg",
+      "35–45",
+      "L"
+     ],
+     [
+      "pO2",
+      "66",
+      "mmHg",
+      "80–100",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "22",
+      "mmol/L",
+      "22–26",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "D-dimer",
+      "4.1",
+      "mg/L FEU",
+      "<0.5",
+      "H"
+     ],
+     [
+      "hs-Troponin T (0 h)",
+      "26",
+      "ng/L",
+      "<14",
+      "H"
+     ],
+     [
+      "hs-Troponin T (3 h)",
+      "28",
+      "ng/L",
+      "<14",
+      "H"
+     ],
+     [
+      "White cells",
+      "9.1",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "CRP",
+      "9",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "Haemoglobin",
+      "134",
+      "g/L",
+      "115–165",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Pulmonary embolism",
+  "wrong": [
+   "Pneumonia",
+   "Heart attack",
+   "Panic attack",
+   "Pneumothorax",
+   "Asthma"
+  ],
+  "hints": [
+   [
+    "Low oxygen, low carbon dioxide: she's breathing fast and still not getting enough oxygen in.",
+    [
+     "pO2",
+     "pCO2"
+    ]
+   ],
+   [
+    "Long flight, sore calf, and one test very high.",
+    [
+     "D-dimer"
+    ]
+   ]
+  ],
+  "key": [
+   "D-dimer",
+   "pO2",
+   "pCO2"
+  ],
+  "why": "Long-haul flight, calf pain, pleuritic chest pain, low oxygen with low carbon dioxide, and a very high D-dimer. A clot from the leg has travelled to the lungs: pulmonary embolism. The small, flat troponin rise reflects a strained right heart, not a heart attack (which rises steeply), and the white cells don't support pneumonia. A scan confirms it, since D-dimer alone can't.",
+  "pearl": "WHO's WRIGHT project found that travel of more than about 4 hours roughly doubles the risk of a clot, although the absolute risk per flight stays small. It's sometimes called 'economy class syndrome', but sitting still is the problem in any seat."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 44,
+  "difficulty": "Easy",
+  "patient": "Tala, 52, female",
+  "story": "Samoan-born, works two jobs in aged care. Very thirsty for months, up three times a night to pass urine, and thrush twice this year. Otherwise well. Her mother and two sisters all take tablets for high blood sugar.",
+  "panels": [
+   {
+    "name": "Glucose",
+    "rows": [
+     [
+      "Glucose (fasting)",
+      "9.8",
+      "mmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "HbA1c",
+      "8.4",
+      "%",
+      "4.0–6.0",
+      "H"
+     ],
+     [
+      "Ketones (β-hydroxybutyrate)",
+      "0.2",
+      "mmol/L",
+      "<0.6",
+      ""
+     ],
+     [
+      "GAD antibodies",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Lipids and liver",
+    "rows": [
+     [
+      "Triglycerides",
+      "3.2",
+      "mmol/L",
+      "<2.0",
+      "H"
+     ],
+     [
+      "HDL cholesterol",
+      "0.9",
+      "mmol/L",
+      ">1.0",
+      "L"
+     ],
+     [
+      "ALT",
+      "46",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "66",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Type 2 diabetes",
+  "wrong": [
+   "Type 1 diabetes",
+   "Prediabetes",
+   "Latent autoimmune diabetes in adults (LADA)",
+   "Diabetes insipidus",
+   "Recurrent urinary tract infection"
+  ],
+  "hints": [
+   [
+    "An HbA1c of 6.5% or more is the diabetes line. That rules out one option.",
+    [
+     "HbA1c",
+     "Glucose (fasting)"
+    ]
+   ],
+   [
+    "No ketones, no antibodies, and a strong family history.",
+    [
+     "GAD antibodies",
+     "Ketones (β-hydroxybutyrate)"
+    ]
+   ]
+  ],
+  "key": [
+   "HbA1c",
+   "Glucose (fasting)",
+   "GAD antibodies"
+  ],
+  "why": "Fasting glucose above 7.0 mmol/L and HbA1c above 6.5% reach the diabetes line, with no ketones and no GAD antibodies, plus high triglycerides, low HDL and a mildly raised ALT from a fatty liver. That's the usual pattern of insulin resistance. It's type 2 diabetes. Diabetes insipidus also causes thirst and urine, but with a normal glucose.",
+  "pearl": "The International Diabetes Federation estimates 1 in 9 adults worldwide has diabetes, about 589 million people. Some Pacific nations have among the highest rates anywhere, reflecting genes, colonial-era diet shifts and the cost of fresh food, far more than individual choice."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 45,
+  "difficulty": "Medium",
+  "patient": "Catherine, 56, female",
+  "story": "The itch is so bad at night that she and her wife have moved to separate beds. Worn out, no rash, hardly drinks. Takes nothing regularly. An ultrasound shows normal bile ducts and no gallstones.",
+  "panels": [
+   {
+    "name": "Liver tests",
+    "rows": [
+     [
+      "ALP",
+      "428",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "GGT",
+      "296",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "ALT",
+      "44",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "14",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "Albumin",
+      "39",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "Total cholesterol",
+      "6.9",
+      "mmol/L",
+      "<5.5",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Autoimmune screen",
+    "rows": [
+     [
+      "Antimitochondrial antibody",
+      "Positive, 1:320",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "Smooth muscle antibody",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "IgM",
+      "6.1",
+      "g/L",
+      "0.4–2.3",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Primary biliary cholangitis",
+  "wrong": [
+   "Primary sclerosing cholangitis",
+   "Autoimmune hepatitis",
+   "Gallstones blocking the bile duct",
+   "Drug-induced cholestasis",
+   "Alcohol-related liver disease"
+  ],
+  "hints": [
+   [
+    "ALP and GGT are far more raised than ALT. This is a bile flow problem, yet the ducts on ultrasound look fine.",
+    [
+     "ALP",
+     "GGT"
+    ]
+   ],
+   [
+    "One antibody and one immunoglobulin point straight to the answer.",
+    [
+     "Antimitochondrial antibody",
+     "IgM"
+    ]
+   ]
+  ],
+  "key": [
+   "ALP",
+   "Antimitochondrial antibody",
+   "IgM"
+  ],
+  "why": "Itch and tiredness in a woman in midlife, a cholestatic pattern with high ALP and GGT, normal ducts on ultrasound, and a positive antimitochondrial antibody with a high IgM. The immune system is destroying the tiny bile ducts inside the liver. Primary biliary cholangitis. Sclerosing cholangitis scars larger ducts and is typically linked to ulcerative colitis. Autoimmune hepatitis gives a high ALT and smooth muscle antibodies.",
+  "pearl": "About 9 in 10 people with this condition are women. Its link to antimitochondrial antibodies was found in London in 1965 by a team including Deborah Doniach and Sheila Sherlock, one of the great pioneers of liver medicine."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 46,
+  "difficulty": "Medium",
+  "patient": "Abena, 34, female",
+  "story": "Back in Melbourne a week after three weeks visiting family in Ghana. Fevers, shakes, headache and vomiting. Her doctor checks a blood film the same day.",
+  "theme": "Nobel Prize Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "106",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "White cells",
+      "4.6",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Platelets",
+      "58",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ],
+     [
+      "Blood film",
+      "Ring forms; banana-shaped gametocytes",
+      "",
+      "",
+      "!"
+     ],
+     [
+      "Malaria rapid test (HRP-2)",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Biochemistry",
+    "rows": [
+     [
+      "Bilirubin",
+      "38",
+      "µmol/L",
+      "<20",
+      "H"
+     ],
+     [
+      "ALT",
+      "58",
+      "U/L",
+      "<30",
+      "H"
+     ],
+     [
+      "LDH",
+      "490",
+      "U/L",
+      "120–250",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "84",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Glucose (random)",
+      "5.2",
+      "mmol/L",
+      "3.0–7.7",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Plasmodium falciparum malaria",
+  "wrong": [
+   "Plasmodium vivax malaria",
+   "Plasmodium knowlesi malaria",
+   "Dengue fever",
+   "Typhoid fever",
+   "Babesiosis"
+  ],
+  "hints": [
+   [
+    "Fever after travel, low platelets, and signs of red cell breakdown. Then read the film.",
+    [
+     "Platelets",
+     "Blood film"
+    ]
+   ],
+   [
+    "A banana shape and a test built on HRP-2, a protein one species makes.",
+    [
+     "Blood film",
+     "Malaria rapid test (HRP-2)"
+    ]
+   ]
+  ],
+  "key": [
+   "Blood film",
+   "Malaria rapid test (HRP-2)",
+   "Platelets"
+  ],
+  "why": "Fever and shakes after West Africa, low platelets, haemolysis (high LDH and bilirubin), ring forms and banana-shaped gametocytes, and a positive rapid test for HRP-2, a protein made by falciparum. Vivax gametocytes are round. Dengue and typhoid don't put rings in red cells, and babesiosis is a tick-borne infection mostly of temperate regions.",
+  "pearl": "Tu Youyou shared the 2015 Nobel Prize for discovering artemisinin, using a clue in a 1,600-year-old Chinese text about sweet wormwood. She was the first woman from China to win a science Nobel. People visiting family in their home country are among those at the highest risk of travel-related malaria."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 47,
+  "difficulty": "Hard",
+  "patient": "Rosa, 58, female",
+  "story": "Has lived all her life in a mining town about 4,300 m up in the Peruvian Andes. Headaches, dizziness, ringing ears, burning feet and a dusky face. Never smoked. She feels much better whenever she visits her daughter on the coast.",
+  "theme": "International Mountain Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "218",
+      "g/L",
+      "115–165",
+      "H"
+     ],
+     [
+      "Haematocrit",
+      "0.66",
+      "L/L",
+      "0.35–0.47",
+      "H"
+     ],
+     [
+      "Red cell count",
+      "7.2",
+      "×10¹²/L",
+      "3.8–5.8",
+      "H"
+     ],
+     [
+      "White cells",
+      "7.1",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Platelets",
+      "232",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Oxygen saturation",
+      "82",
+      "%",
+      "95–100",
+      "L"
+     ],
+     [
+      "Erythropoietin",
+      "46",
+      "IU/L",
+      "4.0–24.0",
+      "H"
+     ],
+     [
+      "JAK2 V617F mutation",
+      "Not detected",
+      "",
+      "Not detected",
+      ""
+     ],
+     [
+      "Ferritin",
+      "64",
+      "µg/L",
+      "30–200",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Chronic mountain sickness (Monge's disease)",
+  "wrong": [
+   "Polycythaemia vera",
+   "Secondary polycythaemia from COPD",
+   "EPO-secreting kidney tumour",
+   "Acute mountain sickness",
+   "High-affinity haemoglobin variant"
+  ],
+  "hints": [
+   [
+    "Only red cells are up, white cells and platelets are ordinary, and JAK2 is clear. So the bone marrow isn't running itself.",
+    [
+     "JAK2 V617F mutation",
+     "White cells",
+     "Platelets"
+    ]
+   ],
+   [
+    "High EPO with low oxygen is a body chasing oxygen. Why doesn't it catch it, and why does the coast help?",
+    [
+     "Erythropoietin",
+     "Oxygen saturation"
+    ]
+   ]
+  ],
+  "key": [
+   "Haemoglobin",
+   "Erythropoietin",
+   "Oxygen saturation"
+  ],
+  "why": "A lifetime at high altitude, haemoglobin over 190 g/L in a woman, low oxygen saturation, high EPO, no JAK2 mutation, no lung disease, and symptoms that ease near sea level. Years of thin air have pushed red cell production past what helps, so the blood thickens. This is chronic mountain sickness. Polycythaemia vera would have low EPO and usually JAK2. Acute mountain sickness comes on within hours to days of going up.",
+  "pearl": "Carlos Monge described this in Peru in the 1920s. Risk rises after menopause in women. Many Tibetans carry an EPAS1 gene variant that keeps haemoglobin lower at altitude, one of the clearest examples of recent human evolution."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 48,
+  "difficulty": "Hard",
+  "patient": "Aroha, 19, female",
+  "story": "A Māori student living in a crowded rental. Fevers and painful joints that move about: knee last week, ankle now, elbow starting. Her heart is racing. She had a bad sore throat about three weeks ago and couldn't get to a clinic.",
+  "theme": "Universal Health Coverage Day",
+  "panels": [
+   {
+    "name": "Inflammation",
+    "rows": [
+     [
+      "CRP",
+      "98",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "ESR",
+      "86",
+      "mm/h",
+      "<35",
+      "H"
+     ],
+     [
+      "White cells",
+      "12.6",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Haemoglobin",
+      "121",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "PR interval on ECG",
+      "232",
+      "ms",
+      "120–200",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Antibodies and urine",
+    "rows": [
+     [
+      "Anti-streptolysin O titre",
+      "1,180",
+      "IU/mL",
+      "<200",
+      "H"
+     ],
+     [
+      "Anti-DNase B titre",
+      "920",
+      "U/mL",
+      "<200",
+      "H"
+     ],
+     [
+      "Rheumatoid factor",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "ANA",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "Urine dipstick blood",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Acute rheumatic fever",
+  "wrong": [
+   "Systemic lupus erythematosus",
+   "Rheumatoid arthritis",
+   "Post-streptococcal glomerulonephritis",
+   "Gonococcal arthritis",
+   "Adult-onset Still's disease"
+  ],
+  "hints": [
+   [
+    "Two antibody tests prove a recent streptococcal infection. So which illness follows that?",
+    [
+     "Anti-streptolysin O titre",
+     "Anti-DNase B titre"
+    ]
+   ],
+   [
+    "Clean urine rules out one of the options. Now look at the slowed electrical signal in her heart.",
+    [
+     "Urine dipstick blood",
+     "PR interval on ECG"
+    ]
+   ]
+  ],
+  "key": [
+   "Anti-streptolysin O titre",
+   "PR interval on ECG",
+   "ESR"
+  ],
+  "why": "Migrating painful joints, fever, high ESR and CRP, a prolonged PR interval on ECG and high streptococcal antibodies, about three weeks after a sore throat. The immune response to group A strep has turned on joints and heart. It's acute rheumatic fever. Clear urine argues against post-streptococcal kidney disease, and the negative ANA and RF argue against lupus and rheumatoid arthritis.",
+  "pearl": "Rheumatic heart disease has nearly vanished from wealthy, uncrowded communities, yet it affects tens of millions worldwide, and Māori, Pacific, Aboriginal and Torres Strait Islander young people have some of the highest rates recorded. It is a disease of poverty and of access to care."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 49,
+  "difficulty": "Genius",
+  "patient": "Margaret, 67, female",
+  "story": "Collapsed at her dance class. A bystander's CPR and a public defibrillator brought her back from ventricular fibrillation. Coronary arteries are clear. She takes a reflux tablet, has done for twelve years, and no water tablets. Barely drinks alcohol.",
+  "theme": "First human defibrillation",
+  "panels": [
+   {
+    "name": "Electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "138",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "2.9",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Magnesium",
+      "0.22",
+      "mmol/L",
+      "0.70–1.10",
+      "L"
+     ],
+     [
+      "Calcium",
+      "1.78",
+      "mmol/L",
+      "2.10–2.60",
+      "L"
+     ],
+     [
+      "Albumin",
+      "38",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "1.82",
+      "mmol/L",
+      "2.10–2.60",
+      "L"
+     ],
+     [
+      "Phosphate",
+      "1.32",
+      "mmol/L",
+      "0.75–1.50",
+      ""
+     ],
+     [
+      "Creatinine",
+      "74",
+      "µmol/L",
+      "45–90",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "PTH",
+      "1.2",
+      "pmol/L",
+      "1.6–6.9",
+      "L"
+     ],
+     [
+      "Fractional excretion of magnesium",
+      "1.1",
+      "%",
+      "<2",
+      ""
+     ],
+     [
+      "QTc on ECG",
+      "572",
+      "ms",
+      "<470",
+      "H"
+     ],
+     [
+      "hs-Troponin T (0 h)",
+      "88",
+      "ng/L",
+      "<14",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Proton pump inhibitor-related hypomagnesaemia",
+  "wrong": [
+   "Gitelman syndrome",
+   "Primary hypoparathyroidism",
+   "Thiazide diuretic effect",
+   "Alcohol-related hypomagnesaemia",
+   "Congenital long QT syndrome"
+  ],
+  "hints": [
+   [
+    "Her kidneys are holding on to magnesium as hard as they can. So they aren't the leak.",
+    [
+     "Fractional excretion of magnesium",
+     "Magnesium"
+    ]
+   ],
+   [
+    "Low calcium with low PTH would look like a parathyroid problem, except that severe low magnesium switches PTH off. Reread her tablet list.",
+    [
+     "PTH",
+     "Corrected calcium"
+    ]
+   ]
+  ],
+  "key": [
+   "Magnesium",
+   "Fractional excretion of magnesium",
+   "PTH"
+  ],
+  "why": "Profoundly low magnesium, with low potassium and low calcium that follow from it: low magnesium makes the kidneys waste potassium and stops the parathyroids secreting PTH. The kidneys are conserving magnesium, so the loss is in the gut. Long-term proton pump inhibitors can block magnesium absorption. Together these prolonged her QT and set up the arrhythmia. Gitelman syndrome and thiazides would show magnesium pouring into the urine.",
+  "pearl": "The US FDA warned about low magnesium with long-term PPI use in 2011. It's rare among the many people taking them, so it's easy to overlook. Claude Beck first defibrillated a human heart in 1947, with paddles directly on the heart of a 14-year-old boy in surgery."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 50,
+  "difficulty": "Easy",
+  "patient": "Jo, 38, female",
+  "story": "Six months of tiredness, cramping tummy pains and constipation. Her GP spots a thin blue-grey line along her gums. She's been taking 'ancient remedy' pills, ordered from an unregulated website, for her joints.",
+  "theme": "Bad Medicine Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "98",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "MCV",
+      "77",
+      "fL",
+      "80–100",
+      "L"
+     ],
+     [
+      "Reticulocytes",
+      "128",
+      "×10⁹/L",
+      "20–100",
+      "H"
+     ],
+     [
+      "Blood film",
+      "Basophilic stippling",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Ferritin",
+      "124",
+      "µg/L",
+      "30–200",
+      ""
+     ],
+     [
+      "Blood lead",
+      "3.6",
+      "µmol/L",
+      "<0.24",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "76",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Urate",
+      "0.42",
+      "mmol/L",
+      "0.15–0.35",
+      "H"
+     ],
+     [
+      "ALT",
+      "24",
+      "U/L",
+      "<30",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Lead poisoning",
+  "wrong": [
+   "Iron deficiency anaemia",
+   "Beta thalassaemia trait",
+   "Acute intermittent porphyria",
+   "Coeliac disease",
+   "Arsenic poisoning"
+  ],
+  "hints": [
+   [
+    "There's a small-cell anaemia, but her iron stores are fine.",
+    [
+     "MCV",
+     "Ferritin"
+    ]
+   ],
+   [
+    "The blood film and one blood level give it away.",
+    [
+     "Blood film",
+     "Blood lead"
+    ]
+   ]
+  ],
+  "key": [
+   "Blood lead",
+   "Blood film",
+   "Ferritin"
+  ],
+  "why": "Blue-grey gum line, tummy pain, constipation, small-cell anaemia with normal ferritin, basophilic stippling on the film, and a blood lead many times over the limit. It's lead poisoning. Lead blocks the enzymes that make haem, so iron stores can look healthy while the red cells suffer. Lead also impairs urate excretion, hence the raised urate.",
+  "pearl": "Lead salts appeared in medicine for centuries. George Washington, for his part, is said to have lost about 40% of his blood to therapeutic bleeding in the last day of his life in 1799. Not every old remedy deserves a comeback."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 51,
+  "difficulty": "Easy",
+  "patient": "Dorothy, 78, female",
+  "story": "New headache over her right temple, her scalp hurts when she brushes her hair, and her jaw aches after a few minutes of chewing. Yesterday the vision in her right eye went blurred for ten minutes.",
+  "theme": "Zamenhof Day",
+  "panels": [
+   {
+    "name": "Inflammation",
+    "rows": [
+     [
+      "ESR",
+      "96",
+      "mm/h",
+      "<35",
+      "H"
+     ],
+     [
+      "CRP",
+      "84",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "Platelets",
+      "518",
+      "×10⁹/L",
+      "150–400",
+      "H"
+     ],
+     [
+      "Haemoglobin",
+      "108",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "MCV",
+      "86",
+      "fL",
+      "80–100",
+      ""
+     ],
+     [
+      "White cells",
+      "9.8",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "ALP",
+      "146",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "72",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "2.38",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Creatine kinase",
+      "62",
+      "U/L",
+      "<150",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Giant cell arteritis",
+  "wrong": [
+   "Polymyalgia rheumatica alone",
+   "Migraine",
+   "Trigeminal neuralgia",
+   "Multiple myeloma",
+   "Dental abscess"
+  ],
+  "hints": [
+   [
+    "Sky-high ESR, CRP and platelets, in someone over 50.",
+    [
+     "ESR",
+     "CRP",
+     "Platelets"
+    ]
+   ],
+   [
+    "Jaw that tires on chewing, sore scalp, and now a warning from one eye. Think about which blood vessels supply those.",
+    [
+     "ESR"
+    ]
+   ]
+  ],
+  "key": [
+   "ESR",
+   "CRP",
+   "Platelets"
+  ],
+  "why": "New temporal headache, scalp tenderness, jaw claudication and transient vision loss in an older woman, with very high ESR and CRP, high platelets and a mild anaemia of inflammation. It's giant cell arteritis, inflammation of the arteries of the head. Polymyalgia alone causes stiff shoulders and hips, not jaw or eye symptoms. Normal CK reflects that these arteries, not muscles, are inflamed.",
+  "pearl": "Vision loss from giant cell arteritis can be permanent, so this is an eye emergency. Ludwik Zamenhof, born on this day in 1859, was an eye doctor who also invented Esperanto. Women are affected about two to three times as often as men."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 52,
+  "difficulty": "Medium",
+  "patient": "Ken, 72, male",
+  "story": "A retired violin teacher whose hearing has been slowly fading, and an audiologist says it's in both ears. He also has an aching right thigh, and his favourite hat has become tight. Feels otherwise well.",
+  "theme": "Beethoven's birthday",
+  "panels": [
+   {
+    "name": "Bone and liver",
+    "rows": [
+     [
+      "ALP",
+      "642",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "GGT",
+      "28",
+      "U/L",
+      "<50",
+      ""
+     ],
+     [
+      "ALT",
+      "22",
+      "U/L",
+      "<40",
+      ""
+     ],
+     [
+      "Bilirubin",
+      "11",
+      "µmol/L",
+      "<20",
+      ""
+     ],
+     [
+      "Calcium",
+      "2.38",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Albumin",
+      "41",
+      "g/L",
+      "35–50",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "2.36",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Phosphate",
+      "1.12",
+      "mmol/L",
+      "0.75–1.50",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "P1NP (bone formation marker)",
+      "212",
+      "µg/L",
+      "15–80",
+      "H"
+     ],
+     [
+      "25-OH vitamin D",
+      "64",
+      "nmol/L",
+      ">50",
+      ""
+     ],
+     [
+      "PTH",
+      "4.1",
+      "pmol/L",
+      "1.6–6.9",
+      ""
+     ],
+     [
+      "Prostate specific antigen",
+      "1.4",
+      "µg/L",
+      "<4.0",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Paget's disease of bone",
+  "wrong": [
+   "Bone metastases from prostate cancer",
+   "Osteomalacia",
+   "Primary hyperparathyroidism",
+   "Cholestatic liver disease",
+   "Multiple myeloma"
+  ],
+  "hints": [
+   [
+    "ALP is sky high but GGT isn't. So where's the ALP coming from?",
+    [
+     "ALP",
+     "GGT"
+    ]
+   ],
+   [
+    "Calcium, vitamin D, PTH and PSA are all clean. Enlarging skull bone can narrow the routes to the ear, and tighten a hat.",
+    [
+     "Calcium",
+     "PTH",
+     "Prostate specific antigen"
+    ]
+   ]
+  ],
+  "key": [
+   "ALP",
+   "GGT",
+   "P1NP (bone formation marker)"
+  ],
+  "why": "An isolated, very high ALP with a normal GGT means it's coming from bone, and P1NP confirms very busy bone formation. Calcium, phosphate, vitamin D and PTH are normal, and PSA is low. Bone pain, an enlarging skull and hearing loss complete the picture. It's Paget's disease of bone, in which bone is broken down and rebuilt in a chaotic way. Myeloma usually doesn't raise ALP.",
+  "pearl": "Many people with Paget's have no symptoms and are found by chance from a routine ALP. Beethoven's deafness has been blamed on otosclerosis, lead and syphilis as well, and Paget's has been proposed too, though a 2004 review doubted it. Nobody knows for sure."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 53,
+  "difficulty": "Medium",
+  "patient": "Kemi, 24, female",
+  "story": "Flew from Lagos to London and drank little on the way. Within hours of landing, severe pain in her back and thighs, and it feels like the attacks she's had since childhood.",
+  "theme": "First Flight Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "74",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "MCV",
+      "86",
+      "fL",
+      "80–100",
+      ""
+     ],
+     [
+      "Reticulocytes",
+      "312",
+      "×10⁹/L",
+      "20–100",
+      "H"
+     ],
+     [
+      "White cells",
+      "14.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Platelets",
+      "426",
+      "×10⁹/L",
+      "150–400",
+      "H"
+     ],
+     [
+      "Blood film",
+      "Sickled cells; target cells; Howell-Jolly bodies",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "LDH",
+      "640",
+      "U/L",
+      "120–250",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "54",
+      "µmol/L",
+      "<20",
+      "H"
+     ],
+     [
+      "Haemoglobin S",
+      "88",
+      "%",
+      "<1",
+      "H"
+     ],
+     [
+      "Haemoglobin A",
+      "0",
+      "%",
+      "95–98",
+      "L"
+     ],
+     [
+      "Haemoglobin F",
+      "8",
+      "%",
+      "<2",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Sickle cell disease with a vaso-occlusive crisis",
+  "wrong": [
+   "Sickle cell trait",
+   "Beta thalassaemia major",
+   "Hereditary spherocytosis",
+   "G6PD deficiency",
+   "Deep vein thrombosis from the flight"
+  ],
+  "hints": [
+   [
+    "Severe anaemia, high reticulocytes and raised bilirubin: the red cells aren't lasting. Read the film.",
+    [
+     "Reticulocytes",
+     "Blood film"
+    ]
+   ],
+   [
+    "Trait still makes plenty of normal haemoglobin A. How much does she have?",
+    [
+     "Haemoglobin A",
+     "Haemoglobin S"
+    ]
+   ]
+  ],
+  "key": [
+   "Blood film",
+   "Haemoglobin S",
+   "Haemoglobin A"
+  ],
+  "why": "Lifelong pain attacks, haemolytic anaemia, sickled cells and Howell-Jolly bodies (her spleen no longer works properly), and haemoglobin that's nearly all HbS with no HbA at all. Sickle cell disease. Low oxygen and dehydration make HbS stick together, stiffening red cells that then jam small vessels. Sickle trait would show more HbA than HbS.",
+  "pearl": "Aircraft cabins are pressurised to the equivalent of about 2,400 m, enough to lower blood oxygen a little. The sickle gene persists because one copy protects against severe malaria, and in 1948 American paediatrician Janet Watson noticed that newborn babies rarely sickled, the observation that showed how protective fetal haemoglobin is."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 54,
+  "difficulty": "Hard",
+  "patient": "Sophea, 52, female",
+  "story": "Left a refugee camp on the Thai-Cambodian border as a teenager, 38 years ago. Comes to clinic with on-and-off tummy pain, and an itchy, raised streak that races across her waist within hours, then vanishes. Doctors are planning steroids for her asthma.",
+  "theme": "International Migrants Day",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "126",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "MCV",
+      "86",
+      "fL",
+      "80–100",
+      ""
+     ],
+     [
+      "White cells",
+      "10.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Eosinophils",
+      "2.8",
+      "×10⁹/L",
+      "<0.5",
+      "H"
+     ],
+     [
+      "Neutrophils",
+      "4.2",
+      "×10⁹/L",
+      "2.0–7.5",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "IgE",
+      "1,260",
+      "IU/mL",
+      "<120",
+      "H"
+     ],
+     [
+      "Stool microscopy (three samples)",
+      "No ova or parasites seen",
+      "",
+      "No ova or parasites seen",
+      ""
+     ],
+     [
+      "Ferritin",
+      "88",
+      "µg/L",
+      "30–200",
+      ""
+     ],
+     [
+      "Schistosoma serology",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "ALT",
+      "21",
+      "U/L",
+      "<30",
+      ""
+     ],
+     [
+      "HIV antigen/antibody screen",
+      "Non-reactive",
+      "",
+      "Non-reactive",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Strongyloidiasis",
+  "wrong": [
+   "Hookworm infection",
+   "Schistosomiasis",
+   "Lymphatic filariasis",
+   "Hypereosinophilic syndrome",
+   "Eosinophilic granulomatosis with polyangiitis"
+  ],
+  "hints": [
+   [
+    "Lots of eosinophils and high IgE usually mean a parasite. But three stools came up empty, and this one is notoriously shy.",
+    [
+     "Eosinophils",
+     "IgE",
+     "Stool microscopy (three samples)"
+    ]
+   ],
+   [
+    "Which worm can live in one person for decades by reinfecting from inside the gut? That fast-moving streak has its own name: larva currens.",
+    [
+     "Eosinophils"
+    ]
+   ]
+  ],
+  "key": [
+   "Eosinophils",
+   "IgE",
+   "Stool microscopy (three samples)"
+  ],
+  "why": "Eosinophilia and a high IgE, decades after life in an endemic area, plus larva currens, a racing itchy streak made by larvae moving under the skin. Strongyloides can complete its life cycle inside one person, so infection can persist for life. Stool microscopy often misses it, and serology is the usual next test. Hookworm would normally lower iron and show eggs in stools. The steroid plan matters: steroids can trigger a life-threatening hyperinfection.",
+  "pearl": "Strongyloides infects hundreds of millions of people, mostly in the tropics, and is still under-recognised in resettled refugees and migrants, even decades after arrival. That's why it features in many refugee health screening guides."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 55,
+  "difficulty": "Hard",
+  "patient": "Emma, 38, female",
+  "story": "Her second kidney stone this year, plus muscle weakness that's made climbing stairs hard. Also gritty eyes and a mouth so dry that she carries water everywhere. No diarrhoea, no vomiting, no laxatives.",
+  "theme": "A Christmas Carol Day",
+  "panels": [
+   {
+    "name": "Electrolytes",
+    "rows": [
+     [
+      "Sodium",
+      "139",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "2.8",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "115",
+      "mmol/L",
+      "95–110",
+      "H"
+     ],
+     [
+      "Bicarbonate",
+      "15",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "pH (venous)",
+      "7.27",
+      "",
+      "7.32–7.42",
+      "L"
+     ],
+     [
+      "Creatinine",
+      "78",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Phosphate",
+      "0.92",
+      "mmol/L",
+      "0.75–1.50",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Urine and antibodies",
+    "rows": [
+     [
+      "Urine pH",
+      "6.9",
+      "",
+      "<5.5 when acidotic",
+      "!"
+     ],
+     [
+      "Urine citrate",
+      "0.6",
+      "mmol/day",
+      "1.7–5.3",
+      "L"
+     ],
+     [
+      "Urine glucose",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "Anti-Ro (SS-A) antibody",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Distal renal tubular acidosis",
+  "wrong": [
+   "Proximal renal tubular acidosis",
+   "Type 4 renal tubular acidosis",
+   "Bowel losses from hidden diarrhoea",
+   "Primary hyperaldosteronism",
+   "Gitelman syndrome"
+  ],
+  "hints": [
+   [
+    "Work out the anion gap, then look at the urine. An acidotic body should be making very acidic urine.",
+    [
+     "Sodium",
+     "Chloride",
+     "Bicarbonate",
+     "Urine pH"
+    ]
+   ],
+   [
+    "Stones, a low potassium and low citrate fit one tubular defect. Dry eyes and that antibody hint at why.",
+    [
+     "Urine citrate",
+     "Potassium",
+     "Anti-Ro (SS-A) antibody"
+    ]
+   ]
+  ],
+  "key": [
+   "Urine pH",
+   "Bicarbonate",
+   "Potassium"
+  ],
+  "why": "A normal anion gap (9), low potassium and a blood pH that's acidic, yet urine pH stays near 7. The final part of the nephron can't pump out acid. Low urine citrate and alkaline urine then make for kidney stones. Dry eyes, dry mouth and anti-Ro suggest Sjögren's syndrome as the cause, and it's a well-known association. Proximal RTA can still acidify urine once bicarbonate falls, and usually has phosphate or glucose leak. Type 4 has high potassium.",
+  "pearl": "In 1992, US doctor Donald Lewis argued in a paediatric journal that Tiny Tim's weakness and short stature in A Christmas Carol fit distal renal tubular acidosis. He noted that textbooks of Dickens's day recommended alkaline solutions, which could have helped quickly. A neat, unprovable diagnosis of a boy who never existed."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 56,
+  "difficulty": "Genius",
+  "patient": "Sanda, 23, female",
+  "story": "Three months after giving birth, in a camp for displaced people where rations are mostly polished white rice. Breathless, with swollen legs and tingling feet. Her heart is racing but her hands are warm, and her pulse is bounding. No fever. A chest X-ray shows a large heart and wet lungs.",
+  "theme": "International Human Solidarity Day",
+  "panels": [
+   {
+    "name": "Blood gas and lactate",
+    "rows": [
+     [
+      "pH",
+      "7.29",
+      "",
+      "7.35–7.45",
+      "L"
+     ],
+     [
+      "pCO2",
+      "30",
+      "mmHg",
+      "35–45",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "14",
+      "mmol/L",
+      "22–26",
+      "L"
+     ],
+     [
+      "Lactate",
+      "7.8",
+      "mmol/L",
+      "<2.0",
+      "H"
+     ],
+     [
+      "Sodium",
+      "136",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Chloride",
+      "102",
+      "mmol/L",
+      "95–110",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "NT-proBNP",
+      "3,400",
+      "ng/L",
+      "<300",
+      "H"
+     ],
+     [
+      "hs-Troponin T (0 h)",
+      "11",
+      "ng/L",
+      "<14",
+      ""
+     ],
+     [
+      "Haemoglobin",
+      "109",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "TSH",
+      "1.6",
+      "mU/L",
+      "0.40–4.00",
+      ""
+     ],
+     [
+      "White cells",
+      "8.4",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Erythrocyte transketolase activation coefficient",
+      "1.42",
+      "",
+      "<1.15",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Wet beriberi (thiamine deficiency)",
+  "wrong": [
+   "Peripartum cardiomyopathy",
+   "Septic shock",
+   "Severe anaemia with high-output failure",
+   "Thyrotoxic heart failure",
+   "Scurvy"
+  ],
+  "hints": [
+   [
+    "The lactate is high yet she's warm, well perfused and has no fever or white cell rise. Her cells seem unable to burn their fuel.",
+    [
+     "Lactate",
+     "White cells"
+    ]
+   ],
+   [
+    "Last test on the panel: an enzyme that depends on one B vitamin. Then think about what polished rice loses.",
+    [
+     "Erythrocyte transketolase activation coefficient"
+    ]
+   ]
+  ],
+  "key": [
+   "Lactate",
+   "Erythrocyte transketolase activation coefficient",
+   "NT-proBNP"
+  ],
+  "why": "Heart failure with warm hands and bounding pulses (a high-output state), lactic acidosis without sepsis, normal thyroid, only mild anaemia, and a raised transketolase activation coefficient, which shows that a thiamine-dependent enzyme is under-supplied. Polishing rice removes most of its thiamine, and breastfeeding increases demand. Wet beriberi. Peripartum cardiomyopathy typically gives a cold, low-output picture.",
+  "pearl": "Christiaan Eijkman shared the 1929 Nobel Prize after noticing that chickens fed polished rice developed a beriberi-like illness. Studies in camps on the Thai-Myanmar border have found thiamine deficiency common after childbirth. It's a problem of food access that fortified rations can prevent."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 57,
+  "difficulty": "Easy",
+  "patient": "Bronwyn, 44, female",
+  "story": "Started meditating because she feels stressed and can't sleep. But her face has become rounder, she has purple stretch marks on her tummy, bruises easily and struggles to get up from a chair. Takes no steroids of any kind.",
+  "theme": "World Meditation Day",
+  "panels": [
+   {
+    "name": "Cortisol tests",
+    "rows": [
+     [
+      "Cortisol (9 am)",
+      "742",
+      "nmol/L",
+      "140–550",
+      "H"
+     ],
+     [
+      "Late-night salivary cortisol",
+      "24",
+      "nmol/L",
+      "<4",
+      "H"
+     ],
+     [
+      "24-hour urine free cortisol",
+      "910",
+      "nmol/day",
+      "<270",
+      "H"
+     ],
+     [
+      "Cortisol after overnight dexamethasone",
+      "486",
+      "nmol/L",
+      "<50",
+      "H"
+     ],
+     [
+      "ACTH",
+      "68",
+      "ng/L",
+      "<50",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Potassium",
+      "3.3",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Glucose (fasting)",
+      "7.4",
+      "mmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "TSH",
+      "1.9",
+      "mU/L",
+      "0.40–4.00",
+      ""
+     ],
+     [
+      "Haemoglobin",
+      "142",
+      "g/L",
+      "115–165",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Cushing's syndrome",
+  "wrong": [
+   "Chronic stress",
+   "Polycystic ovary syndrome",
+   "Primary hypothyroidism",
+   "Metabolic syndrome",
+   "Addison's disease"
+  ],
+  "hints": [
+   [
+    "Everyone's cortisol should bottom out at night. Hers doesn't.",
+    [
+     "Late-night salivary cortisol",
+     "24-hour urine free cortisol"
+    ]
+   ],
+   [
+    "A dose of dexamethasone should shut cortisol off. It didn't, and the bruises and stretch marks aren't caused by stress.",
+    [
+     "Cortisol after overnight dexamethasone"
+    ]
+   ]
+  ],
+  "key": [
+   "Late-night salivary cortisol",
+   "24-hour urine free cortisol",
+   "Cortisol after overnight dexamethasone"
+  ],
+  "why": "Round face, purple stretch marks, easy bruising and weak thigh muscles, with three separate tests showing too much cortisol: high at night, high in the urine, and not suppressed by dexamethasone. High glucose and low potassium are cortisol effects too. It's Cushing's syndrome, and the raised ACTH points to a driver such as a pituitary tumour rather than an adrenal one. Everyday stress doesn't do this.",
+  "pearl": "Harvey Cushing described it in 1932. The pituitary form is several times more common in women. Stress is real, but it doesn't give you purple stretch marks."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 58,
+  "difficulty": "Easy",
+  "patient": "Arjun, 34, male",
+  "story": "Home from three months in Chennai with family. Ten days of fever, night sweats and pain under his right ribs that gets worse when he breathes in. Had a bout of bloody diarrhoea a month ago. An ultrasound shows a single large liver lesion.",
+  "theme": "Ramanujan's birthday",
+  "panels": [
+   {
+    "name": "Blood tests",
+    "rows": [
+     [
+      "White cells",
+      "16.8",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Eosinophils",
+      "0.2",
+      "×10⁹/L",
+      "<0.5",
+      ""
+     ],
+     [
+      "Haemoglobin",
+      "124",
+      "g/L",
+      "130–180",
+      "L"
+     ],
+     [
+      "CRP",
+      "184",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "ALP",
+      "268",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "ALT",
+      "58",
+      "U/L",
+      "<40",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "16",
+      "µmol/L",
+      "<20",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Serology",
+    "rows": [
+     [
+      "Entamoeba histolytica serology",
+      "Positive",
+      "",
+      "Negative",
+      "!"
+     ],
+     [
+      "Echinococcus (hydatid) serology",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "Blood cultures",
+      "No growth",
+      "",
+      "No growth",
+      ""
+     ],
+     [
+      "AFP",
+      "3",
+      "µg/L",
+      "<10",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Amoebic liver abscess",
+  "wrong": [
+   "Pyogenic liver abscess",
+   "Hydatid cyst",
+   "Liver cancer (hepatocellular carcinoma)",
+   "Acute hepatitis A",
+   "Ascending cholangitis"
+  ],
+  "hints": [
+   [
+    "Fever, right upper belly pain, and one lesion in the liver. Which lab test names the bug?",
+    [
+     "Entamoeba histolytica serology"
+    ]
+   ],
+   [
+    "Sterile blood cultures argue against a bacterial abscess. Hydatid and liver cancer tests are clear.",
+    [
+     "Blood cultures",
+     "Echinococcus (hydatid) serology",
+     "AFP"
+    ]
+   ]
+  ],
+  "key": [
+   "Entamoeba histolytica serology",
+   "Blood cultures",
+   "ALP"
+  ],
+  "why": "Travel to an endemic area, recent dysentery, fever, right upper belly pain, a single liver lesion, a raised white count and ALP, negative blood cultures and positive Entamoeba serology. The amoeba travels from the bowel to the liver. It's an amoebic liver abscess. Bacterial abscesses more often have positive cultures, and hydatid cysts are usually slow and fever-free unless they rupture.",
+  "pearl": "In 1994, doctor D.A.B. Young studied Srinivasa Ramanujan's records and concluded that the great mathematician's fatal illness in 1920 was probably hepatic amoebiasis, not the tuberculosis long assumed. He had dysentery years before going to England."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 59,
+  "difficulty": "Medium",
+  "patient": "Naomi, 46, female",
+  "story": "A kidney transplant from her sister four years ago and her creatinine has been steady at 95. She's taking her tablets (tacrolimus, mycophenolate) as usual. A week ago she started clarithromycin for a chest infection, and now has tremor, headache and tingling hands.",
+  "theme": "Twin Transplant Day",
+  "panels": [
+   {
+    "name": "Kidney and electrolytes",
+    "rows": [
+     [
+      "Creatinine",
+      "168",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Urea",
+      "14.2",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
+      "Potassium",
+      "5.8",
+      "mmol/L",
+      "3.5–5.2",
+      "H"
+     ],
+     [
+      "Magnesium",
+      "0.58",
+      "mmol/L",
+      "0.70–1.10",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "19",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Glucose (random)",
+      "9.1",
+      "mmol/L",
+      "3.0–7.7",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Tacrolimus trough",
+      "26",
+      "µg/L",
+      "5–10",
+      "H"
+     ],
+     [
+      "White cells",
+      "7.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Urine dipstick blood",
+      "Negative",
+      "",
+      "Negative",
+      ""
+     ],
+     [
+      "BK virus DNA (blood)",
+      "Not detected",
+      "",
+      "Not detected",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Tacrolimus toxicity from a drug interaction",
+  "wrong": [
+   "Acute transplant rejection",
+   "BK virus nephropathy",
+   "Kidney infection in the transplant",
+   "Blocked transplant ureter",
+   "Recurrence of her original kidney disease"
+  ],
+  "hints": [
+   [
+    "Before blaming rejection, check the drug level. It's on the panel.",
+    [
+     "Tacrolimus trough"
+    ]
+   ],
+   [
+    "Tremor, high potassium, low magnesium and high glucose are a tell. Clarithromycin slows the enzyme that clears tacrolimus.",
+    [
+     "Potassium",
+     "Magnesium",
+     "Tacrolimus trough"
+    ]
+   ]
+  ],
+  "key": [
+   "Tacrolimus trough",
+   "Potassium",
+   "Magnesium"
+  ],
+  "why": "Rising creatinine a week after starting clarithromycin, a tremor and tingling, and a tacrolimus level far above target. Clarithromycin blocks CYP3A4, the enzyme that clears tacrolimus, so the level climbs. High levels narrow the kidney's own blood vessels and cause high potassium, low magnesium and high glucose. BK virus isn't detected and the urine is clean. Rejection is still worth watching for, but a level like this has to be dealt with first.",
+  "pearl": "On 23 December 1954 in Boston, Joseph Murray's team transplanted a kidney between identical twins Ronald and Richard Herrick, avoiding rejection altogether. Tacrolimus comes from a soil bacterium found in Japan in the 1980s. Grapefruit, clarithromycin and many other things change its level, so transplant pharmacists watch it closely."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 60,
+  "difficulty": "Medium",
+  "patient": "Hannah, 33, female",
+  "story": "Eating more than ever at the Christmas parties and has still lost 7 kg since October. Hot and sweaty in a cool room, racing heart, shaky hands. Her eyes have started to look a little prominent.",
+  "theme": "Christmas Eve calorie count",
+  "panels": [
+   {
+    "name": "Thyroid function",
+    "rows": [
+     [
+      "TSH",
+      "<0.01",
+      "mU/L",
+      "0.40–4.00",
+      "L"
+     ],
+     [
+      "Free T4",
+      "52",
+      "pmol/L",
+      "10.0–20.0",
+      "H"
+     ],
+     [
+      "Free T3",
+      "19.4",
+      "pmol/L",
+      "3.0–6.0",
+      "H"
+     ],
+     [
+      "TSH receptor antibodies",
+      "11.2",
+      "IU/L",
+      "<1.8",
+      "H"
+     ],
+     [
+      "Thyroid peroxidase antibodies",
+      "188",
+      "IU/mL",
+      "<35",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "ALP",
+      "148",
+      "U/L",
+      "30–110",
+      "H"
+     ],
+     [
+      "White cells",
+      "5.1",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "CRP",
+      "2",
+      "mg/L",
+      "<5",
+      ""
+     ],
+     [
+      "β-hCG",
+      "<5",
+      "IU/L",
+      "<5",
+      ""
+     ],
+     [
+      "Glucose (random)",
+      "6.1",
+      "mmol/L",
+      "3.0–7.7",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Graves' disease",
+  "wrong": [
+   "Subacute thyroiditis",
+   "Postpartum thyroiditis",
+   "Toxic multinodular goitre",
+   "Taking thyroid hormone (factitious)",
+   "Biotin interfering with the tests"
+  ],
+  "hints": [
+   [
+    "TSH on the floor, thyroid hormones on the ceiling. She's burning kilojoules at a fierce rate.",
+    [
+     "TSH",
+     "Free T4",
+     "Free T3"
+    ]
+   ],
+   [
+    "An antibody that stimulates the TSH receptor, plus those eyes.",
+    [
+     "TSH receptor antibodies"
+    ]
+   ]
+  ],
+  "key": [
+   "TSH receptor antibodies",
+   "Free T4",
+   "TSH"
+  ],
+  "why": "Weight loss despite eating more, heat intolerance, racing heart, tremor, prominent eyes, suppressed TSH, very high thyroid hormones and positive TSH receptor antibodies. These antibodies switch the thyroid on and leave it on. Graves' disease. Thyroiditis is usually temporary and lacks TSH receptor antibodies. Biotin can fake these numbers, but it can't fake her symptoms.",
+  "pearl": "Thyroid hormones set the body's basal metabolic rate, the kilojoules burned just staying alive, and severe hyperthyroidism can raise it substantially. James Joule, born on this day in 1818, gave his name to the unit. Graves' disease affects women far more often than men."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 61,
+  "difficulty": "Hard",
+  "patient": "Bridget, 28, female",
+  "story": "A nurse with the Red Cross. Lifelong heavy periods, bruising easily and bleeding for days after a wisdom tooth extraction. Her maternal grandfather and an uncle had a bleeding condition and were treated at a specialist centre. Doctors had told her she was just 'a carrier', so nothing to worry about.",
+  "theme": "Christmas Day",
+  "panels": [
+   {
+    "name": "Clotting screen",
+    "rows": [
+     [
+      "Haemoglobin",
+      "112",
+      "g/L",
+      "115–165",
+      "L"
+     ],
+     [
+      "Ferritin",
+      "14",
+      "µg/L",
+      "30–200",
+      "L"
+     ],
+     [
+      "Platelets",
+      "286",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ],
+     [
+      "INR",
+      "1.0",
+      "",
+      "0.9–1.2",
+      ""
+     ],
+     [
+      "APTT",
+      "46",
+      "s",
+      "25–38",
+      "H"
+     ],
+     [
+      "APTT with normal plasma added",
+      "31",
+      "s",
+      "25–38",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Factor levels",
+    "rows": [
+     [
+      "Factor VIII",
+      "98",
+      "%",
+      "50–150",
+      ""
+     ],
+     [
+      "Factor IX",
+      "26",
+      "%",
+      "50–150",
+      "L"
+     ],
+     [
+      "Factor XI",
+      "92",
+      "%",
+      "50–150",
+      ""
+     ],
+     [
+      "Von Willebrand factor antigen",
+      "104",
+      "%",
+      "50–150",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Haemophilia B (Christmas disease)",
+  "wrong": [
+   "Haemophilia A",
+   "Von Willebrand disease",
+   "Factor XI deficiency",
+   "Lupus anticoagulant",
+   "Vitamin K deficiency"
+  ],
+  "hints": [
+   [
+    "Only the APTT is long, and normal plasma corrects it. That means a missing factor, not an inhibitor.",
+    [
+     "APTT",
+     "APTT with normal plasma added"
+    ]
+   ],
+   [
+    "Which factor is missing? It has a festive name.",
+    [
+     "Factor IX"
+    ]
+   ]
+  ],
+  "key": [
+   "Factor IX",
+   "APTT",
+   "APTT with normal plasma added"
+  ],
+  "why": "Lifelong bleeding, a long APTT that corrects with normal plasma, a normal INR, and a factor IX of 26%, with VIII, XI and von Willebrand factor all normal. Haemophilia B, also called Christmas disease. It's X-linked, and women who carry the gene can have low factor levels and real bleeding. A level like this counts as mild haemophilia. Her iron deficiency anaemia comes from those heavy periods.",
+  "pearl": "The disease is named after Stephen Christmas, a five-year-old boy described in the British Medical Journal in December 1952, in its Christmas issue. Women were long told carriers don't bleed. Clara Barton, founder of the American Red Cross, was born on this day in 1821."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 62,
+  "difficulty": "Hard",
+  "patient": "Marta, 39, female",
+  "story": "An industrial radiographer, called in on Boxing Day after a gamma source jammed in the open position while she was handling it. She vomited within two hours, then felt strangely better. Back two days later with a blotchy, red hand. No fever.",
+  "theme": "Discovery of radium",
+  "panels": [
+   {
+    "name": "Blood count over time",
+    "rows": [
+     [
+      "Lymphocytes, day 0",
+      "1.3",
+      "×10⁹/L",
+      "1.0–4.0",
+      ""
+     ],
+     [
+      "Lymphocytes, day 1",
+      "0.7",
+      "×10⁹/L",
+      "1.0–4.0",
+      "L"
+     ],
+     [
+      "Lymphocytes, day 2",
+      "0.3",
+      "×10⁹/L",
+      "1.0–4.0",
+      "L"
+     ],
+     [
+      "Neutrophils, day 2",
+      "10.6",
+      "×10⁹/L",
+      "2.0–7.5",
+      "H"
+     ],
+     [
+      "Platelets, day 2",
+      "172",
+      "×10⁹/L",
+      "150–400",
+      ""
+     ],
+     [
+      "Haemoglobin, day 2",
+      "134",
+      "g/L",
+      "115–165",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Amylase",
+      "480",
+      "U/L",
+      "<110",
+      "H"
+     ],
+     [
+      "CRP",
+      "32",
+      "mg/L",
+      "<5",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "68",
+      "µmol/L",
+      "45–90",
+      ""
+     ],
+     [
+      "Dicentric chromosomes in lymphocytes",
+      "Present",
+      "",
+      "Absent",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Acute radiation syndrome",
+  "wrong": [
+   "Viral gastroenteritis",
+   "Aplastic anaemia",
+   "Acute leukaemia",
+   "Acute HIV infection",
+   "Solvent poisoning"
+  ],
+  "hints": [
+   [
+    "Lymphocytes are falling by half each day while red cells and platelets look untouched. Lymphocytes are very sensitive to something.",
+    [
+     "Lymphocytes, day 0",
+     "Lymphocytes, day 1",
+     "Lymphocytes, day 2"
+    ]
+   ],
+   [
+    "Salivary glands leak amylase after this type of injury, and one chromosome finding is a fingerprint.",
+    [
+     "Amylase",
+     "Dicentric chromosomes in lymphocytes"
+    ]
+   ]
+  ],
+  "key": [
+   "Lymphocytes, day 2",
+   "Dicentric chromosomes in lymphocytes",
+   "Amylase"
+  ],
+  "why": "Vomiting within hours, a brief well period, a red burn-like hand, lymphocytes halving every day, a raised amylase and dicentric chromosomes. Lymphocytes die quickly after radiation, and the speed of the fall estimates the dose. Salivary glands are also radiosensitive, hence the amylase. Dicentric chromosomes, which have two centromeres, are the gold-standard marker of radiation. It's acute radiation syndrome. Platelets and red cells take longer to fall since they live longer.",
+  "pearl": "Marie and Pierre Curie announced radium on 26 December 1898. Marie Curie died in 1934 of aplastic anaemia, widely linked to years of radiation exposure, and her notebooks are still kept in lead-lined boxes."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 63,
+  "difficulty": "Genius",
+  "patient": "Lucía, 44, female",
+  "story": "Runs a sheep farm in rural Patagonia, far from the nearest hospital. Two weeks ago she cleared out a mouse-ridden shed. Four days of fever, aches and vomiting, and today sudden severe breathlessness. No travel, and a neighbour who sat with her is now feverish.",
+  "theme": "International Day of Epidemic Preparedness",
+  "panels": [
+   {
+    "name": "Full blood count",
+    "rows": [
+     [
+      "Haemoglobin",
+      "178",
+      "g/L",
+      "115–165",
+      "H"
+     ],
+     [
+      "Haematocrit",
+      "0.55",
+      "L/L",
+      "0.35–0.47",
+      "H"
+     ],
+     [
+      "White cells",
+      "19.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      "H"
+     ],
+     [
+      "Neutrophils",
+      "13.8",
+      "×10⁹/L",
+      "2.0–7.5",
+      "H"
+     ],
+     [
+      "Platelets",
+      "48",
+      "×10⁹/L",
+      "150–400",
+      "L"
+     ],
+     [
+      "Blood film",
+      "Left shift; immunoblasts 14% of lymphoid cells",
+      "",
+      "",
+      "!"
+     ]
+    ]
+   },
+   {
+    "name": "Biochemistry",
+    "rows": [
+     [
+      "Albumin",
+      "26",
+      "g/L",
+      "35–50",
+      "L"
+     ],
+     [
+      "LDH",
+      "780",
+      "U/L",
+      "120–250",
+      "H"
+     ],
+     [
+      "AST",
+      "142",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "Creatinine",
+      "98",
+      "µmol/L",
+      "45–90",
+      "H"
+     ],
+     [
+      "Lactate",
+      "4.2",
+      "mmol/L",
+      "<2.0",
+      "H"
+     ],
+     [
+      "CRP",
+      "62",
+      "mg/L",
+      "<5",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Hantavirus cardiopulmonary syndrome (Andes virus)",
+  "wrong": [
+   "Leptospirosis",
+   "Severe influenza with bacterial pneumonia",
+   "Thrombotic thrombocytopenic purpura (TTP)",
+   "Dengue shock syndrome",
+   "Haemophagocytic lymphohistiocytosis"
+  ],
+  "hints": [
+   [
+    "Her haemoglobin is high and albumin low. Fluid's leaving her vessels and heading somewhere it shouldn't.",
+    [
+     "Haematocrit",
+     "Albumin"
+    ]
+   ],
+   [
+    "Low platelets, left shift and immunoblasts make a famous triad. Rodents, Patagonia and a sick neighbour narrow it to one virus.",
+    [
+     "Platelets",
+     "Blood film",
+     "Neutrophils"
+    ]
+   ]
+  ],
+  "key": [
+   "Platelets",
+   "Blood film",
+   "Haematocrit"
+  ],
+  "why": "Exposure to rodent droppings, flu-like illness then sudden lung leak, with low platelets, a left shift, immunoblasts over 10% and a high haematocrit from fluid leaking out of the vessels. This pattern is highly suggestive of hantavirus cardiopulmonary syndrome. Patagonia's Andes virus is the one known hantavirus to spread between people. Bacterial sepsis doesn't give this much haemoconcentration, and dengue doesn't fit Patagonia.",
+  "pearl": "In the 2018 to 2019 outbreak at Epuyén, Argentina, Andes virus spread from person to person through social gatherings. Contact tracing and isolation helped bring it to an end, a textbook case for epidemic preparedness in a rural community."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 64,
+  "difficulty": "Easy",
+  "patient": "Joanna, 46, female",
+  "story": "Her wedding ring no longer fits, her shoes have gone up two sizes and her dentist has noticed new gaps between her lower teeth. Sweaty, with sore joints, snoring and headaches. Old photos look like someone else.",
+  "theme": "Stan Lee's birthday",
+  "panels": [
+   {
+    "name": "Growth hormone",
+    "rows": [
+     [
+      "IGF-1",
+      "94",
+      "nmol/L",
+      "11–32",
+      "H"
+     ],
+     [
+      "Growth hormone, lowest during glucose test",
+      "8.2",
+      "µg/L",
+      "<0.4",
+      "H"
+     ],
+     [
+      "Glucose, 2 hours into glucose test",
+      "12.4",
+      "mmol/L",
+      "<7.8",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Prolactin",
+      "320",
+      "mU/L",
+      "<400",
+      ""
+     ],
+     [
+      "TSH",
+      "1.4",
+      "mU/L",
+      "0.40–4.00",
+      ""
+     ],
+     [
+      "Free T4",
+      "14.2",
+      "pmol/L",
+      "10.0–20.0",
+      ""
+     ],
+     [
+      "Corrected calcium",
+      "2.52",
+      "mmol/L",
+      "2.10–2.60",
+      ""
+     ],
+     [
+      "Phosphate",
+      "1.62",
+      "mmol/L",
+      "0.75–1.50",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Acromegaly",
+  "wrong": [
+   "Gigantism",
+   "Primary hypothyroidism",
+   "Cushing's syndrome",
+   "Paget's disease of bone",
+   "Marfan syndrome"
+  ],
+  "hints": [
+   [
+    "IGF-1 is made in response to one pituitary hormone. Check it.",
+    [
+     "IGF-1"
+    ]
+   ],
+   [
+    "Sugar should shut growth hormone down. It hasn't. And her bones finished growing lengthwise years ago.",
+    [
+     "Growth hormone, lowest during glucose test",
+     "Glucose, 2 hours into glucose test"
+    ]
+   ]
+  ],
+  "key": [
+   "IGF-1",
+   "Growth hormone, lowest during glucose test"
+  ],
+  "why": "Growing hands, feet and jaw, sweating, a high IGF-1 and growth hormone that doesn't suppress during a glucose test, usually from a pituitary tumour. It's acromegaly. The glucose test also shows diabetes-range sugar, as growth hormone opposes insulin. Gigantism is the same hormone excess before growth plates close, giving great height. She's an adult, so bones widen rather than lengthen.",
+  "pearl": "Photos are a diagnostic tool here: change is so slow that diagnosis often comes many years after it begins. Pierre Marie named it in 1886. Comic book mutants grow in seconds. In real life it takes a decade, and it's a pituitary issue, not a superpower."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 65,
+  "difficulty": "Easy",
+  "patient": "Sunita, 36, female",
+  "story": "A theatre nurse with years of itchy hands and a runny nose at work, and a recent itchy mouth after eating banana. Five minutes after pulling on a fresh pair of gloves she's wheezy, covered in hives, and her blood pressure is 78/40.",
+  "theme": "Charles Goodyear's birthday",
+  "panels": [
+   {
+    "name": "Allergy tests",
+    "rows": [
+     [
+      "Tryptase, 1 hour after",
+      "64",
+      "µg/L",
+      "<11.4",
+      "H"
+     ],
+     [
+      "Tryptase, next day",
+      "6.8",
+      "µg/L",
+      "<11.4",
+      ""
+     ],
+     [
+      "Latex-specific IgE",
+      "18.6",
+      "kUA/L",
+      "<0.35",
+      "H"
+     ],
+     [
+      "Complement C4",
+      "0.28",
+      "g/L",
+      "0.10–0.40",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "hs-Troponin T (0 h)",
+      "8",
+      "ng/L",
+      "<14",
+      ""
+     ],
+     [
+      "D-dimer",
+      "0.3",
+      "mg/L FEU",
+      "<0.5",
+      ""
+     ],
+     [
+      "White cells",
+      "10.2",
+      "×10⁹/L",
+      "4.0–11.0",
+      ""
+     ],
+     [
+      "Glucose (random)",
+      "6.4",
+      "mmol/L",
+      "3.0–7.7",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Anaphylaxis to latex",
+  "wrong": [
+   "Fainting (vasovagal episode)",
+   "Heart attack",
+   "Pulmonary embolism",
+   "Hereditary angioedema",
+   "Asthma attack"
+  ],
+  "hints": [
+   [
+    "Tryptase pours out of mast cells. It's sky high just after, normal the next day.",
+    [
+     "Tryptase, 1 hour after",
+     "Tryptase, next day"
+    ]
+   ],
+   [
+    "Gloves, hives and banana, and one IgE test names the allergen.",
+    [
+     "Latex-specific IgE"
+    ]
+   ]
+  ],
+  "key": [
+   "Tryptase, 1 hour after",
+   "Tryptase, next day",
+   "Latex-specific IgE"
+  ],
+  "why": "Sudden wheeze, hives and low blood pressure minutes after contact with gloves. Tryptase high then normal the next day shows a burst of mast cell release, and latex-specific IgE names the cause. It's anaphylaxis to latex. Banana itch fits 'latex-fruit syndrome', since these foods have cross-reacting proteins. Normal C4 argues against hereditary angioedema, which also doesn't cause hives.",
+  "pearl": "Surgical rubber gloves date back to 1890, when surgeon William Halsted asked Goodyear Rubber to make them for head nurse Caroline Hampton, whose hands were being damaged by antiseptics. Moving hospitals to powder-free or non-latex gloves has greatly lowered latex allergy in healthcare workers."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 66,
+  "difficulty": "Medium",
+  "patient": "Zanele, 22, female",
+  "story": "A distance runner training over 100 km a week, sent over by her physiotherapist after a second shin stress fracture. Her periods stopped 14 months ago. She's slim, tired and cold a lot of the time. Isn't pregnant and takes no contraceptive.",
+  "theme": "Tiger Woods's birthday",
+  "panels": [
+   {
+    "name": "Hormones",
+    "rows": [
+     [
+      "β-hCG",
+      "<5",
+      "IU/L",
+      "<5",
+      ""
+     ],
+     [
+      "LH",
+      "1.1",
+      "IU/L",
+      "1.5–9.0",
+      "L"
+     ],
+     [
+      "FSH",
+      "2.3",
+      "IU/L",
+      "1.5–12.0",
+      ""
+     ],
+     [
+      "Oestradiol",
+      "58",
+      "pmol/L",
+      "100–600",
+      "L"
+     ],
+     [
+      "Prolactin",
+      "210",
+      "mU/L",
+      "<400",
+      ""
+     ],
+     [
+      "Testosterone",
+      "0.8",
+      "nmol/L",
+      "0.5–2.5",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "TSH",
+      "1.5",
+      "mU/L",
+      "0.40–4.00",
+      ""
+     ],
+     [
+      "Free T4",
+      "11.2",
+      "pmol/L",
+      "10.0–20.0",
+      ""
+     ],
+     [
+      "Free T3",
+      "2.5",
+      "pmol/L",
+      "3.0–6.0",
+      "L"
+     ],
+     [
+      "Ferritin",
+      "26",
+      "µg/L",
+      "30–200",
+      "L"
+     ],
+     [
+      "25-OH vitamin D",
+      "58",
+      "nmol/L",
+      ">50",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Low energy availability (RED-S) with hypothalamic amenorrhoea",
+  "wrong": [
+   "Premature ovarian insufficiency",
+   "Polycystic ovary syndrome",
+   "Prolactinoma",
+   "Primary hypothyroidism",
+   "Sheehan syndrome"
+  ],
+  "hints": [
+   [
+    "Low oestrogen, and FSH and LH aren't climbing to compensate. So the signal from the brain has gone quiet.",
+    [
+     "Oestradiol",
+     "LH",
+     "FSH"
+    ]
+   ],
+   [
+    "Low T3 with normal TSH is how the body turns down its energy use. Now think about 100 km a week.",
+    [
+     "Free T3",
+     "TSH"
+    ]
+   ]
+  ],
+  "key": [
+   "Oestradiol",
+   "LH",
+   "Free T3"
+  ],
+  "why": "No periods, low oestrogen and low-normal pituitary hormones, normal prolactin and testosterone, low T3 with normal TSH, and repeat bone stress injuries in an endurance athlete. When energy intake doesn't match training, the body turns down its reproductive and metabolic hormones, and bones suffer. Premature ovarian insufficiency would send FSH high. PCOS has normal or raised oestrogen and higher androgens.",
+  "pearl": "The IOC named Relative Energy Deficiency in Sport (RED-S) in 2014, expanding the older 'female athlete triad' to include male athletes. Low energy availability is often accidental, and physiotherapists are often the first to spot it. A missed period isn't a badge of fitness."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 67,
+  "difficulty": "Medium",
+  "patient": "Sarah, 36, female",
+  "story": "Started the celebrations early. Two days of heavy drinking, hardly anything eaten, then a night of repeated vomiting. Now breathing deep and fast, with tummy pain. No diabetes, and everything she drank came from a bottle shop.",
+  "theme": "New Year's Eve",
+  "panels": [
+   {
+    "name": "Venous blood gas",
+    "rows": [
+     [
+      "pH (venous)",
+      "7.26",
+      "",
+      "7.32–7.42",
+      "L"
+     ],
+     [
+      "pCO2 (venous)",
+      "28",
+      "mmHg",
+      "41–51",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "12",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Lactate",
+      "3.1",
+      "mmol/L",
+      "<2.0",
+      "H"
+     ],
+     [
+      "Ketones (β-hydroxybutyrate)",
+      "7.4",
+      "mmol/L",
+      "<0.6",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Biochemistry",
+    "rows": [
+     [
+      "Sodium",
+      "138",
+      "mmol/L",
+      "135–145",
+      ""
+     ],
+     [
+      "Potassium",
+      "3.3",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "94",
+      "mmol/L",
+      "95–110",
+      "L"
+     ],
+     [
+      "Glucose",
+      "4.2",
+      "mmol/L",
+      "3.0–7.8",
+      ""
+     ],
+     [
+      "Urea",
+      "4.8",
+      "mmol/L",
+      "2.5–8.0",
+      ""
+     ],
+     [
+      "Osmolality",
+      "294",
+      "mOsm/kg",
+      "275–295",
+      ""
+     ],
+     [
+      "Ethanol",
+      "8",
+      "mmol/L",
+      "<2",
+      "H"
+     ],
+     [
+      "Magnesium",
+      "0.62",
+      "mmol/L",
+      "0.70–1.10",
+      "L"
+     ],
+     [
+      "Phosphate",
+      "0.68",
+      "mmol/L",
+      "0.75–1.50",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Alcoholic ketoacidosis",
+  "wrong": [
+   "Diabetic ketoacidosis",
+   "Methanol poisoning",
+   "Ethylene glycol poisoning",
+   "Salicylate poisoning",
+   "Boerhaave syndrome"
+  ],
+  "hints": [
+   [
+    "There's a large anion gap, but what's in it? The biggest number is on the ketone line, and the glucose is ordinary.",
+    [
+     "Ketones (β-hydroxybutyrate)",
+     "Glucose"
+    ]
+   ],
+   [
+    "Calculate the osmolal gap. Ethanol alone fully explains it, so no toxic alcohol hides here.",
+    [
+     "Osmolality",
+     "Ethanol"
+    ]
+   ]
+  ],
+  "key": [
+   "Ketones (β-hydroxybutyrate)",
+   "Glucose",
+   "Ethanol"
+  ],
+  "why": "A high anion gap acidosis (32) with big ketones and a normal glucose, after days of drinking without food. Starved of carbohydrate and with alcohol shifting her metabolism, her liver makes ketones. Alcoholic ketoacidosis. DKA would have a high glucose. The osmolal gap (about 9) is explained by the ethanol, which argues against methanol or ethylene glycol. Vomiting explains low chloride and potassium. Boerhaave's chest pain would not show these bloods.",
+  "pearl": "Herman Boerhaave, born on this day in 1668, described the oesophageal rupture named after him in 1724, in a Dutch admiral who died after a feast and forced vomiting. Happy New Year. Please eat something."
+ }
+]

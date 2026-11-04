@@ -280,7 +280,7 @@
     "It is only mildly itchy and her doctor expects it to fade without treatment."
    ],
    "teaching_point": "A 'herald patch' followed by a Christmas-tree pattern rash is classic pityriasis rosea, which usually clears by itself within a few months.",
-   "used": false
+   "used": true
   },
   {
    "diagnosis": "Periorificial dermatitis",
@@ -350,7 +350,7 @@
     "An echo shows a widened aortic root."
    ],
    "teaching_point": "Tall stature with lens dislocation and a widened aortic root points to Marfan syndrome, and regular aortic monitoring has transformed life expectancy.",
-   "used": false
+   "used": true
   },
   {
    "diagnosis": "Carcinoid syndrome (neuroendocrine tumour)",
@@ -1069,7 +1069,7 @@
     "Opium",
     "Eserine"
    ],
-   "used": false,
+   "used": true,
    "source": "Kathryn Harkup, 'A is for Arsenic: The Poisons of Agatha Christie' (Bloomsbury Sigma, 2015)",
    "ranked": false,
    "note": "Harkup (2015), 14 chapters, each paired with a Christie novel: arsenic (Murder is Easy), belladonna (The Labours of Hercules), cyanide (Sparkling Cyanide), digitalis (Appointment with Death), eserine (Crooked House), hemlock (Five Little Pigs), monkshood (4.50 from Paddington), nicotine (Three Act Tragedy), opium (Sad Cypress), phosphorus (Dumb Witness), ricin (Partners in Crime), strychnine (The Mysterious Affair at Styles), thallium (The Pale Horse), Veronal (Lord Edgware Dies).",
@@ -1217,7 +1217,7 @@
     "Hexachlorobenzene",
     "Mirex"
    ],
-   "used": false,
+   "used": true,
    "source": "Stockholm Convention Secretariat, 'The 12 initial POPs under the Stockholm Convention' (chm.pops.int; Convention adopted 2001)",
    "ranked": false,
    "note": "The 12 initial POPs: aldrin, chlordane, DDT, dieldrin, endrin, heptachlor, hexachlorobenzene, mirex, toxaphene, PCBs, polychlorinated dibenzo-p-dioxins and dibenzofurans. Mostly organochlorine pesticides plus industrial chemicals and combustion by-products.",
@@ -1330,7 +1330,7 @@
     "Short-chain chlorinated paraffins",
     "Dechlorane Plus"
    ],
-   "used": false,
+   "used": true,
    "source": "Stockholm Convention Secretariat, 'The new POPs under the Stockholm Convention' (chm.pops.int, to COP-12, 2025)",
    "ranked": false,
    "note": "New POPs listed at COP-4 (2009) to COP-12 (2025): alpha- and beta-HCH, chlordecone, hexabromobiphenyl, hexa/heptaBDE, lindane, pentachlorobenzene, PFOS, tetra/pentaBDE (2009); endosulfan (2011); HBCD (2013); hexachlorobutadiene, pentachlorophenol, PCNs (2015); decaBDE, SCCPs (2017); dicofol, PFOA (2019); PFHxS (2022); methoxychlor, Dechlorane Plus, UV-328 (2023); chlorpyrifos, long-chain PFCAs, MCCPs (2025).",
@@ -1561,7 +1561,7 @@
     "Hoplocephalus",
     "Collett's snake"
    ],
-   "used": false,
+   "used": true,
    "source": "Johnston CI et al., 'The Australian Snakebite Project, 2005-2015 (ASP-20)', Med J Aust 2017;207(3):119-125",
    "ranked": true,
    "note": "ASP-20 (Johnston et al., MJA 2017), 718 envenomings with snake identified: brown snake 41%, tiger snake 16%, red-bellied black snake 16%, rough-scaled snake 9%, taipan 4%, mulga snake 4%, Hoplocephalus spp. 4%, death adder 3%, sea snake 1%, Collett's snake 0.4%. Brown snakes caused 17 of the 23 deaths.",
@@ -1680,7 +1680,7 @@
     "Trichloroethylene",
     "Dibenz(a,h)anthracene"
    ],
-   "used": false,
+   "used": true,
    "source": "Agency for Toxic Substances and Disease Registry (ATSDR), Substance Priority List 2025",
    "ranked": true,
    "note": "ATSDR 2025 SPL (ranked on frequency at US Superfund sites, toxicity and exposure potential): 1 lead, 2 arsenic, 3 cadmium, 4 vinyl chloride, 5 trichloroethylene, 6 nickel, 7 benzo(a)pyrene, 8 benzene, 9 beryllium, 10 manganese, 11 2,3,7,8-TCDD (dioxin), 12 tetrachloroethylene, 13 chloroform, 14 dieldrin, 15 1,2-dichloroethane, 16 PAHs, 17 naphthalene, 18 phenanthrene, 19 dibenz(a,h)anthracene, 20 benz(a)anthracene. PCBs are 21st and mercury 23rd.",
@@ -1860,7 +1860,7 @@
     "Plants",
     "Topical preparations"
    ],
-   "used": false,
+   "used": true,
    "source": "America's Poison Centers, 2024 Annual Report of the National Poison Data System (Beuhler et al., Clin Toxicol 2025), via poison.org national statistics",
    "ranked": true,
    "note": "America's Poison Centers NPDS 2024, children 5 and under, % of substances: household cleaning substances 10.1, analgesics 9.1, cosmetics/personal care 9.1, foreign bodies/toys/miscellaneous 8.0, dietary supplements/herbals/homeopathic 6.9, antihistamines 4.7, vitamins 4.7, topical preparations 3.9, pesticides 3.4, plants 3.3. Reflects what children get into, not what is most toxic.",
@@ -2010,7 +2010,7 @@
     "Pesticides",
     "Hormones and hormone antagonists"
    ],
-   "used": false,
+   "used": true,
    "source": "America's Poison Centers, 2024 Annual Report of the National Poison Data System (Beuhler et al., Clin Toxicol 2025), via poison.org national statistics",
    "ranked": true,
    "note": "America's Poison Centers NPDS 2024, adults 20+, % of substances: analgesics 10.4, cardiovascular drugs 7.6, antidepressants 7.3, sedative/hypnotics/antipsychotics 6.9, cleaning substances 5.9, alcohols 4.2, hormones and hormone antagonists 3.9, anticonvulsants 3.8, antihistamines 3.7, pesticides 3.1.",
@@ -2151,7 +2151,7 @@
     "Fomepizole",
     "Sodium calcium edetate"
    ],
-   "used": false,
+   "used": true,
    "source": "WHO Model List of Essential Medicines, 23rd list (2023), section 4",
    "ranked": false,
    "note": "WHO EML 23rd list (2023), section 4 'Antidotes and other substances used in poisonings': non-specific - activated charcoal; specific - acetylcysteine, atropine, calcium gluconate, methylthioninium chloride (methylene blue), naloxone, penicillamine, Prussian blue, sodium nitrite, sodium thiosulfate; complementary - deferoxamine, dimercaprol, fomepizole, sodium calcium edetate, succimer. Antivenoms sit in a separate section.",
@@ -2419,7 +2419,7 @@
     "Black nightshade",
     "Teething gel"
    ],
-   "used": false,
+   "used": true,
    "source": "Safekids Aotearoa / Starship Child Health, 'Poisons' reference card v4.0 (undated)",
    "ranked": true,
    "note": "Safekids Aotearoa / Starship 'Poisons' reference card (v4.0, undated; hospitalisation data 2013-2017), top 10 substances reported to the National Poisons Centre: 1 paracetamol, 2 ibuprofen, 3 silica gel, 4 toilet bowl discs, 5 dishwashing liquid, 6 ant killer, 7 black nightshade, 8 glowsticks, 9 hand sanitiser, 10 teething gel.",
@@ -2541,7 +2541,7 @@
     "Pesticides",
     "Antipsychotics"
    ],
-   "used": false,
+   "used": true,
    "source": "Huynh A et al., 'Patterns of poisoning exposure at different ages: the 2015 annual report of the Australian Poisons Information Centres', Med J Aust 2018;209(2):74-79",
    "ranked": true,
    "note": "Huynh et al., MJA 2018, 2015 annual report of the Australian PICs (164,363 exposures): household cleaning substances 10.2%, paracetamol-containing analgesics 7.3%, antidepressants 4.2%, cosmetics/personal care/toiletries 4.2%, NSAIDs 3.9%, cardiovascular agents 3.4%, bites/stings 3.3%, sedatives 2.9%, pesticides 2.8%, antipsychotics 2.7%.",
@@ -2682,7 +2682,7 @@
     "Toilet bowl cleaner",
     "All-purpose cleaner"
    ],
-   "used": false,
+   "used": true,
    "source": "Victorian Poisons Information Centre (Austin Health), Annual Report 2018",
    "ranked": true,
    "note": "VPIC Annual Report 2018, top 10 exposure substances (calls incl. recalls): paracetamol 2,718; ibuprofen 1,326; quetiapine 847; diazepam 612; topical antiseptics/hand sanitisers 600; bleach (hypochlorite) 552; silica gel desiccant 456; toilet bowl cleaner/deodoriser (cage/disc) 424; hand dish detergent 408; all-purpose/hard-surface cleaner 401. The report notes these are the most accessible substances, not the most toxic.",
@@ -2877,7 +2877,7 @@
     "Hyperemesis gravidarum"
    ],
    "topic": "Gut",
-   "used": false
+   "used": true
   },
   {
    "q": "In FPIES, which food is a common trigger in Australian babies?",
@@ -2954,7 +2954,7 @@
     "None"
    ],
    "topic": "Bites, stings and poisons",
-   "used": false
+   "used": true
   },
   {
    "q": "The blue-ringed octopus paralyses with which toxin?",
@@ -3141,7 +3141,7 @@
     "Leader plaque"
    ],
    "topic": "Skin deep",
-   "used": false
+   "used": true
   },
   {
    "q": "On the back, pityriasis rosea patches line up in what shape?",
@@ -3218,7 +3218,7 @@
     "Shrinking them"
    ],
    "topic": "Skin deep",
-   "used": false
+   "used": true
   },
   {
    "q": "How many scalp hairs a day is it normal to shed?",
@@ -3229,7 +3229,7 @@
     "None"
    ],
    "topic": "Skin deep",
-   "used": false
+   "used": true
   },
   {
    "q": "Green nail syndrome is caused by which bacterium?",
@@ -3240,7 +3240,7 @@
     "E. coli"
    ],
    "topic": "Skin deep",
-   "used": false
+   "used": true
   },
   {
    "q": "A rash appearing after amoxicillin is a classic clue to which infection?",
@@ -3438,7 +3438,7 @@
     "They are identical"
    ],
    "topic": "Infectious diseases",
-   "used": false
+   "used": true
   },
   {
    "q": "Does physical fitness protect against altitude sickness?",
@@ -3449,7 +3449,7 @@
     "Only above 6,000 m"
    ],
    "topic": "Infectious diseases",
-   "used": false
+   "used": true
   },
   {
    "q": "Pityriasis rosea is linked to reactivation of which viruses?",
@@ -3812,7 +3812,7 @@
     "Copper"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "Hydroxocobalamin, a form of vitamin B12, is an antidote for which poison?",
@@ -3823,7 +3823,7 @@
     "Lithium"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "Desferrioxamine is used to treat poisoning with which metal?",
@@ -3900,7 +3900,7 @@
     "Nitric acid"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "Methylene blue is used to treat which blood problem caused by some poisons?",
@@ -3922,7 +3922,7 @@
     "Dogs"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "Who is regarded as the father of modern toxicology, author of 'Traite des poisons' (1813)?",
@@ -3933,7 +3933,7 @@
     "Robert Christison"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "The word 'plumber' comes from the Latin word for which metal?",
@@ -3955,7 +3955,7 @@
     "Thallium"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "The phrase 'mad as a hatter' is linked to hat makers' exposure to which metal?",
@@ -3977,7 +3977,7 @@
     "Theatre sets"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "Former Russian agent Alexander Litvinenko was poisoned in London in 2006 with which substance?",
@@ -4076,7 +4076,7 @@
     "Quoll"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "How many deaths from funnel-web spider bites have been recorded since antivenom arrived in 1981?",
@@ -4142,7 +4142,7 @@
     "Platelets"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "The mnemonic SLUDGE (salivation, lacrimation, urination...) describes which toxidrome?",
@@ -4219,7 +4219,7 @@
     "University chemistry tutor"
    ],
    "topic": "Toxicology",
-   "used": false
+   "used": true
   },
   {
    "q": "What poison kills Emily Inglethorp in Christie's first novel, 'The Mysterious Affair at Styles'?",
@@ -4349,7 +4349,8 @@
      ],
      "e": "The jellyfish was later named Carukia barnesi after him."
     }
-   ]
+   ],
+   "used": true
   }
  ]
 }

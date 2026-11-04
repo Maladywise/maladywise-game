@@ -1082,5 +1082,949 @@
    "Changes by up to about 7 minutes a day near the equinoxes"
   ],
   "pearl": "Never hits 0 or 24? Then you're outside the polar circles. The more extreme the swing, the closer you are."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 6,
+  "difficulty": "Hard",
+  "vignette": "People competing at one famous global sports event, each time it's held, since 1960. Which event?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Competitors",
+   "x": [
+    1960,
+    1964,
+    1968,
+    1972,
+    1976,
+    1980,
+    1984,
+    1988,
+    1992,
+    1996,
+    2000,
+    2004,
+    2008,
+    2012,
+    2016,
+    2020,
+    2024
+   ],
+   "y": [
+    400,
+    375,
+    750,
+    1000,
+    1650,
+    1950,
+    2900,
+    3050,
+    3000,
+    3250,
+    3900,
+    3800,
+    3950,
+    4300,
+    4300,
+    4400,
+    4450
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1960"
+    },
+    {
+     "i": 3,
+     "label": "1972"
+    },
+    {
+     "i": 6,
+     "label": "1984"
+    },
+    {
+     "i": 9,
+     "label": "1996"
+    },
+    {
+     "i": 12,
+     "label": "2008"
+    },
+    {
+     "i": 16,
+     "label": "2024"
+    }
+   ],
+   "yticks": [
+    0,
+    1000,
+    2000,
+    3000,
+    4000,
+    5000
+   ],
+   "yrange": [
+    0,
+    5000
+   ],
+   "highlights": [
+    {
+     "from": 0,
+     "to": 1,
+     "label": "humble start"
+    },
+    {
+     "from": 5,
+     "to": 7,
+     "label": "big jump"
+    }
+   ]
+  },
+  "answer": "Summer Paralympics",
+  "options": [
+   "Summer Paralympics",
+   "Summer Olympics",
+   "Winter Olympics",
+   "Commonwealth Games",
+   "Deaflympics",
+   "FIFA World Cup"
+  ],
+  "hints": [
+   "The dates match the Summer Olympics exactly, but check the y-axis. The Olympics already had over 5,000 athletes in 1960.",
+   "Rome 1960, about 400 athletes. Paris 2024, about 4,500. Same host cities as the Olympics, most of the time."
+  ],
+  "explanation": "About 400 athletes at Rome 1960 and about 4,500 at Paris 2024: the Summer Paralympics. The Summer Olympics had more than 5,000 athletes back in 1960. The Winter Olympics dropped out of this four-year pattern after 1992, the Commonwealth Games land on different years, and the Deaflympics run in odd-numbered years. A World Cup squad list never gets near this many. The 1984 figure adds together New York and Stoke Mandeville, which shared those Games. Tokyo 2020 was held in 2021. Counts vary slightly by source; values are approximate and rounded.",
+  "features": [
+   "About 400 athletes in 1960",
+   "Same four-year rhythm as the Summer Olympics",
+   "Tenfold growth by 2024"
+  ],
+  "pearl": "It grew out of a 1948 archery contest for 16 injured servicemen and women at Stoke Mandeville hospital in England, held on the opening day of the London Olympics."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 7,
+  "difficulty": "Medium",
+  "vignette": "A sum of money, in millions of Swedish kronor, set once a year since 1901. Today's a very good day to guess it.",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Millions of Swedish kronor",
+   "x": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1908,
+    1909,
+    1910,
+    1911,
+    1912,
+    1913,
+    1914,
+    1915,
+    1916,
+    1917,
+    1918,
+    1919,
+    1920,
+    1921,
+    1922,
+    1923,
+    1924,
+    1925,
+    1926,
+    1927,
+    1928,
+    1929,
+    1930,
+    1931,
+    1932,
+    1933,
+    1934,
+    1935,
+    1936,
+    1937,
+    1938,
+    1939,
+    1940,
+    1941,
+    1942,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1959,
+    1960,
+    1961,
+    1962,
+    1963,
+    1964,
+    1965,
+    1966,
+    1967,
+    1968,
+    1969,
+    1970,
+    1971,
+    1972,
+    1973,
+    1974,
+    1975,
+    1976,
+    1977,
+    1978,
+    1979,
+    1980,
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "y": [
+    0.15,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.15,
+    0.15,
+    0.13,
+    0.13,
+    0.14,
+    0.13,
+    0.13,
+    0.12,
+    0.12,
+    0.11,
+    0.12,
+    0.12,
+    0.12,
+    0.13,
+    0.16,
+    0.17,
+    0.17,
+    0.17,
+    0.17,
+    0.17,
+    0.16,
+    0.16,
+    0.16,
+    0.16,
+    0.16,
+    0.15,
+    0.14,
+    0.13,
+    0.13,
+    0.12,
+    0.12,
+    0.12,
+    0.12,
+    0.15,
+    0.16,
+    0.16,
+    0.16,
+    0.17,
+    0.17,
+    0.18,
+    0.18,
+    0.19,
+    0.2,
+    0.21,
+    0.21,
+    0.22,
+    0.23,
+    0.25,
+    0.26,
+    0.27,
+    0.27,
+    0.28,
+    0.3,
+    0.32,
+    0.35,
+    0.38,
+    0.4,
+    0.45,
+    0.48,
+    0.51,
+    0.55,
+    0.63,
+    0.68,
+    0.7,
+    0.72,
+    0.8,
+    0.88,
+    1.0,
+    1.15,
+    1.5,
+    1.65,
+    1.8,
+    2.0,
+    2.17,
+    2.5,
+    3.0,
+    4.0,
+    6.0,
+    6.5,
+    6.7,
+    7.0,
+    7.2,
+    7.4,
+    7.5,
+    7.6,
+    7.9,
+    9.0,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10,
+    10,
+    10,
+    11,
+    11,
+    11
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1901"
+    },
+    {
+     "i": 24,
+     "label": "1925"
+    },
+    {
+     "i": 49,
+     "label": "1950"
+    },
+    {
+     "i": 74,
+     "label": "1975"
+    },
+    {
+     "i": 99,
+     "label": "2000"
+    },
+    {
+     "i": 124,
+     "label": "2025"
+    }
+   ],
+   "yticks": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ],
+   "yrange": [
+    0,
+    12
+   ],
+   "highlights": [
+    {
+     "from": 111,
+     "to": 115,
+     "label": "a pay cut"
+    },
+    {
+     "from": 88,
+     "to": 90,
+     "label": "big rise"
+    }
+   ],
+   "step": true
+  },
+  "answer": "The Nobel Prize money",
+  "options": [
+   "The Nobel Prize money",
+   "A Swedish prime minister's yearly salary",
+   "The average Stockholm flat",
+   "The price of a new Volvo",
+   "The Eurovision winner's prize",
+   "Sweden's lottery jackpot"
+  ],
+  "hints": [
+   "Nearly flat for 60 years, then up. A Volvo didn't exist in 1901, and Eurovision winners get a trophy, not a pay packet.",
+   "It was paid to Marie Curie, twice."
+  ],
+  "explanation": "About 150,000 kronor in 1901, 10 million by 2001, a cut to 8 million in 2012 when the Foundation's investment returns slipped, and 11 million since 2023: the money for one full Nobel Prize, per the Nobel Foundation. It's shared when a prize is split. The line is not adjusted for inflation: in real terms the 1901 prize was worth more than you'd think, and the mid-century ones much less. Volvo started in 1927 and Eurovision pays no prize money at all.",
+  "features": [
+   "About 0.15 million kronor from 1901",
+   "Almost flat until about 1960",
+   "Fast rise through the 1980s and 1990s",
+   "The 2012 cut, then back up to 11 million"
+  ],
+  "pearl": "Alfred Nobel's will left the money to be invested and the interest paid out, so the prize is really a 125-year-old investment account with a very good mailing list."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 8,
+  "difficulty": "Medium",
+  "vignette": "Something counted worldwide every year since 1970, in billions. What's being counted?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Billions per year",
+   "x": [
+    1970,
+    1971,
+    1973,
+    1974,
+    1975,
+    1976,
+    1977,
+    1978,
+    1979,
+    1980,
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "y": [
+    0.31,
+    0.33,
+    0.4,
+    0.42,
+    0.43,
+    0.47,
+    0.51,
+    0.58,
+    0.65,
+    0.64,
+    0.64,
+    0.65,
+    0.69,
+    0.73,
+    0.78,
+    0.84,
+    0.9,
+    0.95,
+    0.98,
+    1.02,
+    1.13,
+    1.15,
+    1.14,
+    1.23,
+    1.3,
+    1.39,
+    1.46,
+    1.47,
+    1.56,
+    1.67,
+    1.66,
+    1.63,
+    1.67,
+    1.89,
+    1.97,
+    2.07,
+    2.21,
+    2.21,
+    2.25,
+    2.63,
+    2.79,
+    2.89,
+    3.05,
+    3.23,
+    3.47,
+    3.71,
+    3.97,
+    4.24,
+    4.56,
+    1.81,
+    2.3,
+    3.2,
+    4.2
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1970"
+    },
+    {
+     "i": 9,
+     "label": "1980"
+    },
+    {
+     "i": 19,
+     "label": "1990"
+    },
+    {
+     "i": 29,
+     "label": "2000"
+    },
+    {
+     "i": 39,
+     "label": "2010"
+    },
+    {
+     "i": 49,
+     "label": "2020"
+    }
+   ],
+   "yticks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "yrange": [
+    0,
+    5
+   ],
+   "highlights": [
+    {
+     "from": 29,
+     "to": 32,
+     "label": "a wobble"
+    },
+    {
+     "from": 48,
+     "to": 50,
+     "label": "the cliff"
+    }
+   ]
+  },
+  "answer": "Airline passengers",
+  "options": [
+   "Airline passengers",
+   "Cinema tickets sold",
+   "International tourist arrivals",
+   "New cars sold",
+   "Smartphones sold",
+   "Postcards sent"
+  ],
+  "hints": [
+   "Everyone knows what happened in 2020. But what else stalled around 2001? Think of late 2001.",
+   "Over 4.5 billion trips in 2019, and about 60% gone a year later. Your ears are popping just thinking about it."
+  ],
+  "explanation": "About 310 million in 1970, 4.5 billion in 2019, then a 60% plunge to 1.8 billion in 2020: airline passengers carried worldwide (ICAO, via the World Bank). The stall in 2001–2002 is the aftermath of 11 September. International tourist arrivals crashed in 2020 too, but they peaked at about 1.5 billion. New cars top out near 100 million a year, and smartphones barely existed before 2007. Each trip counts separately. Later years are rounded.",
+  "features": [
+   "About 0.3 billion in 1970",
+   "Steady growth, with a stall after 2001",
+   "4.5 billion in 2019",
+   "A cliff in 2020, then a fast recovery"
+  ],
+  "pearl": "The Wright brothers' first powered flight in December 1903 lasted 12 seconds. A bit over a century later, billions of us complain about legroom."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 9,
+  "difficulty": "Hard",
+  "vignette": "Monthly sales at one type of American shop, 2016 to 2019. Every December it goes off like a Christmas cracker. What do they sell?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Month (2016 to 2019)",
+   "ylabel": "Sales (US$ billions)",
+   "x": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05",
+    "2016-06",
+    "2016-07",
+    "2016-08",
+    "2016-09",
+    "2016-10",
+    "2016-11",
+    "2016-12",
+    "2017-01",
+    "2017-02",
+    "2017-03",
+    "2017-04",
+    "2017-05",
+    "2017-06",
+    "2017-07",
+    "2017-08",
+    "2017-09",
+    "2017-10",
+    "2017-11",
+    "2017-12",
+    "2018-01",
+    "2018-02",
+    "2018-03",
+    "2018-04",
+    "2018-05",
+    "2018-06",
+    "2018-07",
+    "2018-08",
+    "2018-09",
+    "2018-10",
+    "2018-11",
+    "2018-12",
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11",
+    "2019-12"
+   ],
+   "y": [
+    1.69,
+    2.52,
+    2.03,
+    2.17,
+    2.64,
+    2.09,
+    1.99,
+    2.08,
+    1.95,
+    2.02,
+    2.57,
+    5.76,
+    1.66,
+    2.32,
+    2.0,
+    2.07,
+    2.62,
+    2.13,
+    2.1,
+    2.15,
+    2.1,
+    2.12,
+    2.66,
+    5.53,
+    1.72,
+    2.38,
+    2.12,
+    2.17,
+    2.75,
+    2.28,
+    2.1,
+    2.19,
+    1.96,
+    2.14,
+    2.52,
+    5.41,
+    1.64,
+    2.27,
+    2.01,
+    2.17,
+    2.64,
+    2.08,
+    2.18,
+    2.27,
+    2.1,
+    2.11,
+    2.52,
+    5.57
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "2016"
+    },
+    {
+     "i": 12,
+     "label": "2017"
+    },
+    {
+     "i": 24,
+     "label": "2018"
+    },
+    {
+     "i": 36,
+     "label": "2019"
+    }
+   ],
+   "yticks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "yrange": [
+    0,
+    6.5
+   ],
+   "highlights": [
+    {
+     "from": 10,
+     "to": 11,
+     "label": "December"
+    },
+    {
+     "from": 22,
+     "to": 23,
+     "label": "December"
+    },
+    {
+     "from": 34,
+     "to": 35,
+     "label": "December"
+    },
+    {
+     "from": 46,
+     "to": 47,
+     "label": "December"
+    },
+    {
+     "from": 0,
+     "to": 1,
+     "label": "February bump"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "label": "May bump"
+    }
+   ]
+  },
+  "answer": "Jewellery",
+  "options": [
+   "Jewellery",
+   "Toys",
+   "Books",
+   "Flowers",
+   "Wine and spirits",
+   "Perfume"
+  ],
+  "hints": [
+   "Christmas explains the giant spike. Now look at the two tiny bumps earlier in the year. What happens in February and May?",
+   "Valentine's Day. Mother's Day. Christmas. The three annual panics of the guilty gift-giver."
+  ],
+  "explanation": "A giant December spike, more than double any other month, plus little bumps every February and May: US jewellery store sales (US Census Bureau, via FRED). Valentine's Day, Mother's Day and Christmas all drive sales. Toy shops have a Christmas spike but no Valentine's bump. Florists have the February and May peaks but no December monster. Book shops peak with university textbook season too. Values are rounded, not seasonally adjusted.",
+  "features": [
+   "December spike to about $5.5 billion",
+   "Bump every February",
+   "Bump every May",
+   "About $2 billion in a normal month"
+  ],
+  "pearl": "Add up the bumps and you get a map of when people remember they're in love. It's a remarkably reliable annual chart. Merry Christmas."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 10,
+  "difficulty": "Medium",
+  "vignette": "Something counted in billions, from 1800 to today. What is it?",
+  "chart": {
+   "title": "Mystery line",
+   "xlabel": "Year",
+   "ylabel": "Billions",
+   "x": [
+    1800,
+    1850,
+    1900,
+    1927,
+    1950,
+    1960,
+    1974,
+    1987,
+    1999,
+    2011,
+    2022,
+    2025
+   ],
+   "y": [
+    1.0,
+    1.26,
+    1.65,
+    2.0,
+    2.5,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    8.2
+   ],
+   "xticks": [
+    {
+     "i": 0,
+     "label": "1800"
+    },
+    {
+     "i": 1,
+     "label": "1850"
+    },
+    {
+     "i": 2,
+     "label": "1900"
+    },
+    {
+     "i": 4,
+     "label": "1950"
+    },
+    {
+     "i": 11,
+     "label": "2025"
+    }
+   ],
+   "yticks": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ],
+   "yrange": [
+    0,
+    9
+   ],
+   "highlights": [
+    {
+     "from": 4,
+     "to": 7,
+     "label": "steepest rise"
+    }
+   ]
+  },
+  "answer": "World population",
+  "options": [
+   "World population",
+   "Cattle on Earth",
+   "Chickens on Earth",
+   "Mobile phones in use",
+   "Trees on Earth",
+   "Books printed each year"
+  ],
+  "hints": [
+   "It took all of history to reach the first billion by 1800. Phones and books didn't do that.",
+   "One more billion roughly every 12 years since the 1970s, now just over 8."
+  ],
+  "explanation": "About 1 billion in 1800, 2 billion by 1927, 3 billion in 1960, then a new billion roughly every 12–13 years to 8 billion in 2022: world population (UN estimates). Cattle number about 1.5 billion and chickens over 30 billion; mobile phones didn't exist in 1800, and trees number in the trillions and are falling. Values are rounded.",
+  "features": [
+   "About 1 billion in 1800",
+   "Slow rise to 2.5 billion by 1950",
+   "Steep near-straight rise since 1950",
+   "8 billion reached in 2022"
+  ],
+  "pearl": "The line is still rising, but more slowly: the gap between billions is now stretching, and the UN expects a peak around the 2080s. New Year's Eve fun fact: the world gains roughly 70 million people between one countdown and the next."
  }
 ]

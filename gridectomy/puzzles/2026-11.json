@@ -1718,5 +1718,865 @@
     "clue": "Fluid-filled sac"
    }
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 36,
+  "difficulty": "Hard",
+  "rows": [
+   "LIPS#",
+   "ACUTE",
+   "STRAY",
+   "TASTE",
+   "#LESS"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "Watched closely by anyone lip-reading your hello"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Sudden onset, as noted when taking a history"
+   },
+   {
+    "n": 7,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Wander off topic, as a good history sometimes must"
+   },
+   {
+    "n": 8,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Sense altered in dysgeusia"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
+    "len": 4,
+    "clue": "\"___ is more\": sound advice for a consent form"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 4,
+    "clue": "\"When was your ___ period?\" (history staple)"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Occurring during a seizure"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Do this with the lips to slow a COPD exhale"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Numbers that consent chats should put in plain English"
+   },
+   {
+    "n": 6,
+    "r": 1,
+    "c": 4,
+    "len": 4,
+    "clue": "Make contact with these when you greet a patient"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 37,
+  "difficulty": "Genius",
+  "rows": [
+   "##GUT",
+   "ALIVE",
+   "ROVER",
+   "CREAM",
+   "HER##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Feeling that never makes it onto the obs chart"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "One half of Schrödinger's cat's options"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Mars explorer, or a classic name for a dog"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Emollient that's also the top of the milk"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Spike Jonze film about falling for an AI"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Pharyngeal ___ (embryonic structure affected in 22q11.2 deletion syndrome)"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Old wives' tales, collectively"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Organ donor, in plain Anglo-Saxon"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Layer shared by the iris, ciliary body and choroid"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "37 weeks onward, on the labour ward"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 38,
+  "difficulty": "Easy",
+  "rows": [
+   "##RUM",
+   "CHASE",
+   "LATER",
+   "ASIDE",
+   "WHO##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Pirate's tipple"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Follow up, as with a blood test result"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Not now"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "To one side"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Global health body based in Geneva, for short"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Crab's pincer"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "The # symbol, or a meal of chopped leftovers"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Golden ___ (Fibonacci's party trick)"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Second-hand, or like a needle in the sharps bin"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Nothing more than"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 39,
+  "difficulty": "Easy",
+  "rows": [
+   "##GAG",
+   "LARGE",
+   "OCEAN",
+   "SNARE",
+   "SET##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "___ reflex, tested with a tongue depressor"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Big, like the ___ bowel"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Pacific or Atlantic"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Wire loop for removing a polyp, or a trap"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Put a broken bone back in place"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Hair ___"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Pimple problem, sometimes treated with antibiotics"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Terrific"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Jelly in a Petri dish"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Bit of DNA that bacteria can pass on to resist a drug"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 40,
+  "difficulty": "Medium",
+  "rows": [
+   "##SIT",
+   "PETRI",
+   "AVOID",
+   "RINSE",
+   "ALE##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "___-to-stand (a physio's favourite test)"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Dish named after a German bacteriologist"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Steer clear of, as with an allergen"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Dentist's request before you spit"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Hoppy pint"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Gravida's partner in an obstetric history"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Hear no, see no, speak no ___"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Renal colic culprit"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Eye part that holds a sphincter muscle"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "It comes in with the moon"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 41,
+  "difficulty": "Medium",
+  "rows": [
+   "##BAG",
+   "SAUNA",
+   "MULTI",
+   "ORBIT",
+   "GAS##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "___-valve-mask, from a paramedic's kit"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Hot wooden room for sweating"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "___-modal, like a commute by bike and train"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Bony socket of the eye"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Carbon monoxide, for one"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "City haze linked to asthma flare-ups"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Warning sign before a migraine"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Roots of hairs, or tulip starters"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Against, as a prefix"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Walking pattern, as watched by a physio"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 42,
+  "difficulty": "Hard",
+  "rows": [
+   "#GIFT",
+   "HONEY",
+   "ELDER",
+   "AGILE",
+   "LIES#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Nobel's will made a colossal one"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Too risky for babies under one, because of botulism spores"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Respected First Nations community figure"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Nimble"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Statistics' damned predecessors"
+   }
+  ],
+  "down": [
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Close up, as a wound"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "1906 Nobel laureate with an apparatus"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Small-label, like some bands"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Palpates"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Pneumatic invention popularised by a Scottish vet"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 43,
+  "difficulty": "Hard",
+  "rows": [
+   "##LIP",
+   "SLIDE",
+   "LUMEN",
+   "ARIAS",
+   "MET##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Cleft ___ (repaired by a paediatric team)"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Glass home for a pathologist's section"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Inside of a tube, or a measure of light"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Solo numbers for a diva"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Satisfied, as diagnostic criteria"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Shut with a bang"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "Angler's bait"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Lower ___ of detection, in lab science"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Bright spark, in a brainstorm"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Insulin delivery devices"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 44,
+  "difficulty": "Genius",
+  "rows": [
+   "#CHAP",
+   "TRACE",
+   "WASTE",
+   "INTER",
+   "NEED#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Split lip's problem, or a fellow"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Contact tracer's verb"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Urea, to a nephron"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Prefix meaning between, as in ___costal"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Basic requirement on Maslow's pyramid"
+   }
+  ],
+  "down": [
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "One of two born from the same pregnancy"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Lifting machine, or a wading bird"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Speed that makes waste, proverbially"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Played a role"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "___ review (the journal's gatekeeper)"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 45,
+  "difficulty": "Easy",
+  "rows": [
+   "##DIM",
+   "ABODE",
+   "CELLS",
+   "TALES",
+   "STY##"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 3,
+    "clue": "Low, as lights in a recovery ward"
+   },
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Home"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Building blocks of the body"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Stories, like Burns's Tam o' Shanter"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Pigs' pen"
+   }
+  ],
+  "down": [
+   {
+    "n": 4,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Takes action"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 1,
+    "len": 4,
+    "clue": "What a heart does"
+   },
+   {
+    "n": 1,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Scotland's famous cloned sheep"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 3,
+    "len": 4,
+    "clue": "Not working"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Hospital dining room, or a disaster area"
+   }
+  ]
  }
 ]

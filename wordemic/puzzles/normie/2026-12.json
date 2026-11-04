@@ -1,10 +1,73 @@
 [
  {
+  "date": "2026-12-01",
+  "number": 39,
+  "difficulty": "Easy",
+  "word": "CHAIR",
+  "definition": "Four legs, a seat and a back. Not a dog, despite the legs."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 40,
+  "difficulty": "Medium",
+  "word": "ROBOT",
+  "definition": "Machine that does the work and never asks for a day off. On this day in 1982 a man got a mechanical heart, which is about as close as it gets. Today is Artificial Heart Day."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 41,
+  "difficulty": "Medium",
+  "word": "TOUCH",
+  "definition": "The sense Braille readers use. Louis Braille, blind from childhood, devised his raised-dot system at about 15. Today is International Day of Persons with Disabilities."
+ },
+ {
   "date": "2026-12-04",
   "number": 42,
   "difficulty": "Hard",
   "word": "MARATHON",
   "definition": "Race of 42.195 km. In 1967 Kathrine Switzer became the first woman to run Boston as an official entrant, despite an official trying to drag her off the course."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 43,
+  "difficulty": "Hard",
+  "word": "KAZOO",
+  "definition": "Tiny instrument you hum into, not blow. Nobody has ever played one quietly."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 44,
+  "difficulty": "Genius",
+  "word": "TAIGA",
+  "definition": "Vast cold northern forest of pines and spruces. About three-quarters of Finland is forest, the highest share in Europe. Happy Independence Day, Finland."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 45,
+  "difficulty": "Easy",
+  "word": "PLANE",
+  "definition": "Metal tube that flies you across the world and loses your bag. Today is International Civil Aviation Day."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 46,
+  "difficulty": "Easy",
+  "word": "RIVER",
+  "definition": "Fresh water heading downhill to the sea. Takes the long way round, like your guesses."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 47,
+  "difficulty": "Medium",
+  "word": "BRAVE",
+  "definition": "Willing to face danger or pain. See also: starting with a Q."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 48,
+  "difficulty": "Medium",
+  "word": "PRIZE",
+  "definition": "What you win. The Nobel ones have been handed out on this day since 1901, the anniversary of Alfred Nobel's death. Today is Nobel Prize Day."
  },
  {
   "date": "2026-12-11",
@@ -14,6 +77,48 @@
   "definition": "Landform much higher and steeper than a hill. Today is International Mountain Day."
  },
  {
+  "date": "2026-12-12",
+  "number": 50,
+  "difficulty": "Hard",
+  "word": "QUEUE",
+  "definition": "A line of people waiting. Say just the Q and the other four letters are still waiting their turn."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 51,
+  "difficulty": "Genius",
+  "word": "NYMPH",
+  "definition": "Nature spirit from Greek myth, or a young dragonfly. Either way, not a word you'd expected to need today."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 52,
+  "difficulty": "Easy",
+  "word": "SNAKE",
+  "definition": "Legless reptile, and the oil named after it became a byword for fake cures sold by smooth talkers. Today is Bad Medicine Day."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 53,
+  "difficulty": "Easy",
+  "word": "SPEAK",
+  "definition": "What Esperanto hoped the whole world could do together. L. L. Zamenhof, who invented it, was born on this day in 1859."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 54,
+  "difficulty": "Medium",
+  "word": "FIFTH",
+  "definition": "Beethoven's most famous symphony: da-da-da-DUM. He was born around this day in 1770 and finished it in his thirties, with his hearing already failing."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 55,
+  "difficulty": "Medium",
+  "word": "GLIDE",
+  "definition": "To fly with no engine. The Wright brothers did plenty of it before their first powered flight on this day in 1903. It lasted 12 seconds, shorter than your last guess."
+ },
+ {
   "date": "2026-12-18",
   "number": 56,
   "difficulty": "Hard",
@@ -21,10 +126,94 @@
   "definition": "Official document that lets you cross borders. Today is International Migrants Day."
  },
  {
+  "date": "2026-12-19",
+  "number": 57,
+  "difficulty": "Hard",
+  "word": "GRUEL",
+  "definition": "Thin, sad porridge. Scrooge was eating a pot of it when Marley's ghost turned up, and frankly the ghost was the better part of that evening. A Christmas Carol came out on this day in 1843."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 58,
+  "difficulty": "Genius",
+  "word": "VIXEN",
+  "definition": "Female fox, and one of Santa's reindeer. Five days out, she's starting to stretch."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 59,
+  "difficulty": "Easy",
+  "word": "QUIET",
+  "definition": "What World Meditation Day is after, and what your family will not be this week."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 60,
+  "difficulty": "Easy",
+  "word": "TAXIS",
+  "definition": "Yellow or black, they find you when you don't need one. Ramanujan, born on this day in 1887, spotted that the number on G. H. Hardy's cab, 1729, was the smallest that's a sum of two cubes in two ways."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 61,
+  "difficulty": "Medium",
+  "word": "TWINS",
+  "definition": "Two siblings from one birth. On this day in 1954 one identical twin gave the other a kidney in the first successful transplant."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 62,
+  "difficulty": "Medium",
+  "word": "FEAST",
+  "definition": "Enormous celebratory meal, with a matching number of calories. Merry Christmas Eve. Pace yourself; tomorrow's the main event."
+ },
+ {
   "date": "2026-12-25",
   "number": 63,
   "difficulty": "Hard",
   "word": "STOCKING",
   "definition": "Sock-shaped bag hung up for Christmas morning presents. Merry Christmas."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 64,
+  "difficulty": "Hard",
+  "word": "GLOWS",
+  "definition": "What radium does in the dark, which delighted Marie and Pierre Curie, who announced it on this day in 1898. Also what you do after your third Boxing Day nap."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 65,
+  "difficulty": "Genius",
+  "word": "WHELK",
+  "definition": "Sea snail, usually served with vinegar and low expectations. Well played if you got this today."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 66,
+  "difficulty": "Easy",
+  "word": "COMIC",
+  "definition": "Magazine of illustrated adventures. Stan Lee, born on this day in 1922, filled them with people who should've seen a doctor about those powers."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 67,
+  "difficulty": "Easy",
+  "word": "TYRES",
+  "definition": "Rubber rings that keep your car off the road. Goodyear the company is named after Charles Goodyear, born on this day in 1800, who vulcanised rubber and died decades before the company existed."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 68,
+  "difficulty": "Medium",
+  "word": "CADDY",
+  "definition": "Golfer's bag carrier and part-time therapist. Tiger Woods, born on this day in 1975, has kept a few of them busy."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 69,
+  "difficulty": "Medium",
+  "word": "CHIME",
+  "definition": "Bell sound that tells you it's midnight. Happy New Year's Eve, and may your resolutions last longer than the echo."
  }
 ]

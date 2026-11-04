@@ -799,5 +799,527 @@
   ],
   "pearl": "Women and people with diabetes more often present with atypical symptoms such as nausea, breathlessness or fatigue rather than classic pain. Lateral STEMIs are easy to miss because the ST elevation in aVL can be small.",
   "seed": "x-latmi"
+ },
+ {
+  "date": "2026-12-03",
+  "number": 14,
+  "difficulty": "Hard",
+  "vignette": "A 44-year-old woman with myotonic dystrophy type 1, who runs her local disability advocacy group, had a brief faint last week. Her yearly cardiac review ECG:",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 72
+   },
+   "tweaks": {
+    "I": {
+     "qrs": [
+      [
+       14,
+       -0.04,
+       5
+      ],
+      [
+       40,
+       0.75,
+       9.5
+      ],
+      [
+       98,
+       -0.3,
+       17
+      ]
+     ],
+     "qd": 140
+    },
+    "II": {
+     "qrs": [
+      [
+       16,
+       0.14,
+       5
+      ],
+      [
+       40,
+       0.28,
+       9
+      ],
+      [
+       70,
+       -0.8,
+       10
+      ],
+      [
+       100,
+       -0.16,
+       15
+      ]
+     ],
+     "qd": 140
+    }
+   },
+   "preset": "rbbb"
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V1"
+     ],
+     "label": "RSR'",
+     "tone": 1
+    },
+    {
+     "leads": [
+      "II",
+      "III",
+      "aVF"
+     ],
+     "label": "LAD",
+     "tone": 2
+    }
+   ],
+   "marks": [
+    "qrs"
+   ]
+  },
+  "answer": "Bifascicular block (RBBB + LAFB)",
+  "options": [
+   "Bifascicular block (RBBB + LAFB)",
+   "Right bundle branch block",
+   "Left bundle branch block",
+   "Left anterior fascicular block",
+   "Complete heart block",
+   "Wolff-Parkinson-White pattern"
+  ],
+  "hints": [
+   "The QRS is wide with an RSR' in V1.",
+   "Now check the axis: it's swung far to the left."
+  ],
+  "explanation": "A wide QRS with an RSR' pattern in V1 and a wide S wave in I and V6 (right bundle branch block), plus left axis deviation with rS in the inferior leads (left anterior fascicular block): bifascicular block. Myotonic dystrophy is a muscle condition that also affects the heart's conduction system, so changes like this are watched for over time.",
+  "features": [
+   "RBBB: RSR' in V1, wide S in I and V6",
+   "Left axis deviation",
+   "QRS 120 ms or more"
+  ],
+  "pearl": "Bifascicular block plus unexplained syncope warrants investigation for intermittent complete heart block, as only one fascicle is left working. In myotonic dystrophy, conduction disease can progress without symptoms, which is why regular ECGs are part of routine care.",
+  "seed": "x-bifas"
+ },
+ {
+  "date": "2026-12-07",
+  "number": 15,
+  "difficulty": "Easy",
+  "vignette": "A 34-year-old commercial pilot and keen distance runner has her routine aviation medical. She feels fine and the ECG is part of the paperwork.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 58,
+    "pr": 290
+   }
+  },
+  "highlight": {
+   "marks": [
+    "pr"
+   ]
+  },
+  "answer": "First-degree AV block",
+  "options": [
+   "First-degree AV block",
+   "Second-degree AV block, Mobitz I",
+   "Second-degree AV block, Mobitz II",
+   "Complete heart block",
+   "Sinus bradycardia",
+   "Junctional rhythm"
+  ],
+  "hints": [
+   "Measure from the start of the P wave to the start of the QRS.",
+   "Every P conducts. The PR is long, but it never changes."
+  ],
+  "explanation": "Every P wave is followed by a QRS, the rhythm is regular, and the PR interval is fixed at about 290 ms. A PR over 200 ms (one big square) with no dropped beats is first-degree AV block. High vagal tone in fit young people is a common cause; AV-nodal drugs and age-related conduction disease are others.",
+  "features": [
+   "PR interval about 290 ms (normal 120–200 ms)",
+   "PR constant from beat to beat",
+   "Every P wave conducts: no dropped beats"
+  ],
+  "pearl": "One big square is 200 ms. If the PR is longer than one big square, it is first-degree block. It is really 'AV delay', not block: nothing is actually blocked.",
+  "seed": "2026-10-27"
+ },
+ {
+  "date": "2026-12-10",
+  "number": 16,
+  "difficulty": "Genius",
+  "vignette": "A 58-year-old woman's routine ECG looks odd compared with last year's, which was normal. She feels well.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 68
+   },
+   "tweaks": {
+    "I": {
+     "p": [
+      [
+       50,
+       -0.09,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       0.05,
+       5
+      ],
+      [
+       42,
+       -0.85,
+       9.5
+      ],
+      [
+       70,
+       0.1,
+       8
+      ]
+     ],
+     "t": -0.24
+    },
+    "II": {
+     "p": [
+      [
+       50,
+       0.06,
+       18
+      ]
+     ],
+     "qrs": [
+      [
+       14,
+       -0.02,
+       5
+      ],
+      [
+       42,
+       0.22,
+       9
+      ],
+      [
+       70,
+       -0.08,
+       8
+      ]
+     ],
+     "t": 0.06
+    }
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "I"
+     ],
+     "label": "all inverted",
+     "tone": 2
+    },
+    {
+     "leads": [
+      "V4",
+      "V5",
+      "V6"
+     ],
+     "label": "normal R",
+     "tone": 1
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Limb lead reversal (LA/RA)",
+  "options": [
+   "Limb lead reversal (LA/RA)",
+   "Dextrocardia",
+   "Lateral STEMI",
+   "Left posterior fascicular block",
+   "Right ventricular hypertrophy",
+   "Ectopic atrial rhythm"
+  ],
+  "hints": [
+   "Lead I is completely upside down: P, QRS and T.",
+   "Now compare the chest leads with that. Do they look normal?"
+  ],
+  "explanation": "Lead I is globally inverted and aVR is upright, but the chest leads show normal R-wave progression from V1 to V6. That combination means the left and right arm electrodes have been swapped, not that the heart has moved.",
+  "features": [
+   "Inverted P, QRS and T in lead I",
+   "Upright aVR",
+   "Normal precordial R-wave progression"
+  ],
+  "pearl": "The commonest ECG 'abnormality' is a misplaced electrode. If lead I is upside down but V1–V6 look normal, re-check the arm leads. Willem Einthoven won the 1924 Nobel Prize for inventing the ECG, and his famous triangle is built from these same limb leads.",
+  "seed": "x-llr"
+ },
+ {
+  "date": "2026-12-14",
+  "number": 17,
+  "difficulty": "Easy",
+  "vignette": "A 61-year-old woman is on day three of medicinal leech therapy for a congested skin flap after reconstructive surgery. She feels dizzy and her haemoglobin has dropped.",
+  "ecg": {
+   "layout": "12",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 124,
+    "pr": 140
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p"
+   ]
+  },
+  "answer": "Sinus tachycardia",
+  "options": [
+   "Sinus tachycardia",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial flutter with 2:1 block",
+   "Atrial fibrillation",
+   "Ventricular tachycardia",
+   "Multifocal atrial tachycardia"
+  ],
+  "hints": [
+   "Is there a P wave in front of every QRS?",
+   "Upright P before every beat, regular, about 120/min. Nothing fancy."
+  ],
+  "explanation": "A regular narrow-complex rhythm at about 125/min with an upright P wave before every QRS and a constant PR interval. That is sinus rhythm, just fast. Blood loss is the obvious driver here, as leech wounds keep oozing long after the leech lets go; fever, pain, dehydration, anxiety, PE and thyrotoxicosis are other usual causes. The real job is finding the cause.",
+  "features": [
+   "Rate about 125/min, regular",
+   "Upright P wave before every QRS in lead II",
+   "Constant PR (about 140 ms), narrow QRS"
+  ],
+  "pearl": "Sinus tachycardia is a sign, not a diagnosis. Bloodletting mostly belongs in the history books (George Washington was bled heavily in the hours before his death on 14 December 1799), but leeches still have a real, narrow job in saving congested flaps.",
+  "seed": "2026-10-26"
+ },
+ {
+  "date": "2026-12-17",
+  "number": 18,
+  "difficulty": "Medium",
+  "vignette": "\"Is there a doctor on board?\" Over the ocean, a 61-year-old passenger says his heart has been 'just racing' since take-off. The on-board monitor shows a rate stuck at 150.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "flutter",
+    "ratios": [
+     2
+    ],
+    "famp": 0.24
+   }
+  },
+  "highlight": {
+   "marks": [
+    "flutter"
+   ]
+  },
+  "answer": "Atrial flutter with 2:1 block",
+  "options": [
+   "Atrial flutter with 2:1 block",
+   "Sinus tachycardia",
+   "Supraventricular tachycardia (AVNRT)",
+   "Atrial fibrillation",
+   "Ventricular tachycardia",
+   "Multifocal atrial tachycardia"
+  ],
+  "hints": [
+   "What's the exact rate? Is that a suspicious number?",
+   "Look between the QRS complexes for a second wave hiding in the T."
+  ],
+  "explanation": "A regular narrow-complex tachycardia at almost exactly 150/min, with flutter waves at 300/min: one F wave shows between the QRS complexes and the next hides in the QRS and T wave. Atrial flutter with 2:1 block is easily mistaken for sinus tachycardia or SVT.",
+  "features": [
+   "Ventricular rate about 150/min, regular",
+   "Sawtooth F waves at 300/min",
+   "Every second F wave buried in the QRS or T"
+  ],
+  "pearl": "Any regular narrow-complex tachycardia at 150/min is flutter with 2:1 block until proven otherwise.",
+  "seed": "2026-11-25"
+ },
+ {
+  "date": "2026-12-21",
+  "number": 19,
+  "difficulty": "Easy",
+  "vignette": "A 19-year-old woman is on a meditation retreat. During slow breathing practice her smartwatch flagged an 'irregular rhythm', so she has come in for a check. She feels very calm about it. Her mum does not.",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 66,
+    "sa": 0.24,
+    "saP": 4.2
+   }
+  },
+  "highlight": {
+   "marks": [
+    "p",
+    "rr"
+   ]
+  },
+  "answer": "Sinus arrhythmia",
+  "options": [
+   "Sinus arrhythmia",
+   "Atrial fibrillation",
+   "Sinus rhythm with atrial ectopics",
+   "Second-degree AV block, Mobitz I",
+   "Multifocal atrial tachycardia",
+   "Sinus arrest"
+  ],
+  "hints": [
+   "Is there an identical P wave before every QRS?",
+   "The rate speeds up and slows down smoothly, in a cycle. Like breathing."
+  ],
+  "explanation": "Every QRS has an identical upright P wave and a constant PR, but the rate drifts faster and slower in a smooth, repeating cycle. That is sinus arrhythmia: heart rate rises when breathing in and falls when breathing out. It is normal, especially in young, fit people.",
+  "features": [
+   "Identical P waves before every QRS",
+   "Constant PR interval",
+   "R-R intervals vary smoothly and cyclically"
+  ],
+  "pearl": "Healthy hearts are not metronomes. Slow, deep breathing makes the swing bigger, thanks to the vagus nerve. Loss of sinus arrhythmia with age or diabetes reflects reduced vagal tone.",
+  "seed": "2026-11-17"
+ },
+ {
+  "date": "2026-12-24",
+  "number": 20,
+  "difficulty": "Genius",
+  "vignette": "A 70-year-old woman slips on an icy path while fixing the Christmas lights and lies outside for hours before a neighbour finds her. Core temperature 31 °C; she is still shivering.",
+  "ecg": {
+   "layout": "12",
+   "preset": "hypothermia",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 42
+   },
+   "tremor": 0.03
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "II",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+     ],
+     "label": "J wave"
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Hypothermia (Osborn J waves)",
+  "options": [
+   "Hypothermia (Osborn J waves)",
+   "Brugada pattern (type 1)",
+   "Hyperkalaemia",
+   "Acute pericarditis",
+   "Hypercalcaemia",
+   "Benign early repolarisation"
+  ],
+  "hints": [
+   "Note the fuzzy baseline and slow rate. Then look right after each QRS.",
+   "A dome-shaped hump at the J point, biggest in V3–V6."
+  ],
+  "explanation": "Sinus bradycardia at about 42/min, a long QT, shivering artefact, and a positive hump at the J point (Osborn or J waves), most prominent in the mid and lateral chest leads. J waves grow as core temperature falls, and AF and ventricular arrhythmias become more likely as hypothermia deepens.",
+  "features": [
+   "Osborn (J) waves at the end of the QRS",
+   "Sinus bradycardia about 42/min",
+   "Long QT",
+   "Shivering artefact"
+  ],
+  "pearl": "Osborn waves are not unique to cold: hypercalcaemia, brain injury and subarachnoid haemorrhage can produce them too. James Joule, born on 24 December 1818, showed heat is a form of energy. Shivering is the body trying to pay that bill.",
+  "seed": "2026-11-22"
+ },
+ {
+  "date": "2026-12-28",
+  "number": 21,
+  "difficulty": "Medium",
+  "vignette": "A 79-year-old woman, a lifelong comic-book collector, says the device in her chest is her superpower. Routine device check, lead II rhythm strip:",
+  "ecg": {
+   "layout": "strip",
+   "rhythm": {
+    "type": "paced",
+    "mode": "vvi",
+    "rate": 70
+   }
+  },
+  "highlight": {
+   "marks": [
+    "spike",
+    "qrs"
+   ]
+  },
+  "answer": "Ventricular paced rhythm",
+  "options": [
+   "Ventricular paced rhythm",
+   "Dual-chamber paced rhythm",
+   "Left bundle branch block",
+   "Accelerated idioventricular rhythm",
+   "Ventricular tachycardia",
+   "Complete heart block"
+  ],
+  "hints": [
+   "Look just before each QRS.",
+   "There's one spike per beat, and no P wave in front of it."
+  ],
+  "explanation": "Sharp pacing spikes, each followed by a wide QRS at a fixed 70/min, with no paced atrial activity: single-chamber ventricular pacing (VVI).",
+  "features": [
+   "Pacing spike before every QRS",
+   "Wide QRS (LBBB-like from the right ventricle)",
+   "Fixed rate, no atrial spike"
+  ],
+  "pearl": "A right ventricular lead produces an LBBB-like paced QRS. Two spikes per beat (atrial then ventricular) means dual-chamber pacing. Real-life superhero: Arne Larsson, who got the first fully implanted pacemaker in Sweden in 1958, went through 26 devices and lived to 86.",
+  "seed": "x-vvi"
+ },
+ {
+  "date": "2026-12-31",
+  "number": 22,
+  "difficulty": "Hard",
+  "vignette": "A 29-year-old woman has been vomiting on and off for five days after a stomach bug, right through the end-of-year parties. Now she has muscle cramps and weakness.",
+  "ecg": {
+   "layout": "12",
+   "preset": "hypok",
+   "rhythm": {
+    "type": "sinus",
+    "rate": 72
+   }
+  },
+  "highlight": {
+   "boxes": [
+    {
+     "leads": [
+      "V2",
+      "V3",
+      "V4"
+     ],
+     "label": "U waves"
+    }
+   ],
+   "marks": []
+  },
+  "answer": "Hypokalaemia",
+  "options": [
+   "Hypokalaemia",
+   "Hyperkalaemia",
+   "Long QT syndrome",
+   "Hypercalcaemia",
+   "Digoxin effect",
+   "Wellens syndrome"
+  ],
+  "hints": [
+   "What's that extra hump after each T wave?",
+   "Flat T waves, prominent U waves, mild ST depression."
+  ],
+  "explanation": "Flattened T waves, prominent U waves (biggest in V2–V3, here taller than the T), mild ST depression and a long apparent QT that is really a QU interval: classic hypokalaemia. Vomiting and diarrhoea are common causes; diuretics are another. Low magnesium often comes along too.",
+  "features": [
+   "Prominent U waves in V2–V3, taller than the T",
+   "Flattened T waves",
+   "Mild ST depression",
+   "Long QU interval"
+  ],
+  "pearl": "In hypokalaemia, the T falls and the U rises. Mistaking the U for the T gives a falsely long QT. Forceful vomiting has a nastier cousin too: Boerhaave syndrome, oesophageal rupture, named after the Dutch physician Herman Boerhaave, born on 31 December 1668.",
+  "seed": "2026-11-28"
  }
 ]

@@ -1,0 +1,410 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 39,
+  "difficulty": "Easy",
+  "chain": [
+   "RAIN",
+   "FOREST",
+   "FIRE",
+   "ALARM",
+   "CLOCK",
+   "TOWER"
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "number": 40,
+  "difficulty": "Medium",
+  "chain": [
+   "SWEET",
+   "HEART",
+   "LAND",
+   "LINE",
+   "DANCE",
+   "FLOOR"
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "number": 41,
+  "difficulty": "Medium",
+  "chain": [
+   "ROAD",
+   "SIGN",
+   "LANGUAGE",
+   "CLASS",
+   "ROOM",
+   "MATE"
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "number": 42,
+  "difficulty": "Hard",
+  "chain": [
+   "FAST",
+   "TRACK",
+   "RECORD",
+   "SHOP",
+   "FRONT",
+   "DOOR"
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "number": 43,
+  "difficulty": "Hard",
+  "chain": [
+   "FIRE",
+   "FIGHTER",
+   "PILOT",
+   "LIGHT",
+   "SPEED",
+   "LIMIT"
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "number": 44,
+  "difficulty": "Genius",
+  "chain": [
+   "ICE",
+   "SKATE",
+   "PARK",
+   "BENCH",
+   "PRESS",
+   "RELEASE"
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "number": 45,
+  "difficulty": "Easy",
+  "chain": [
+   "JET",
+   "SKI",
+   "LIFT",
+   "OFF",
+   "ROAD",
+   "BIKE"
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "number": 46,
+  "difficulty": "Easy",
+  "chain": [
+   "COCONUT",
+   "MILK",
+   "CHOCOLATE",
+   "FOUNTAIN",
+   "PEN",
+   "PAL"
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "number": 47,
+  "difficulty": "Medium",
+  "chain": [
+   "BLUE",
+   "SKY",
+   "DIVE",
+   "BOMB",
+   "SHELL",
+   "FISH"
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "number": 48,
+  "difficulty": "Medium",
+  "chain": [
+   "NOBEL",
+   "PRIZE",
+   "MONEY",
+   "BELT",
+   "BUCKLE",
+   "UP"
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "number": 49,
+  "difficulty": "Hard",
+  "chain": [
+   "MOUNTAIN",
+   "BIKE",
+   "TRAIL",
+   "MIX",
+   "TAPE",
+   "MEASURE"
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "number": 50,
+  "difficulty": "Hard",
+  "chain": [
+   "BEE",
+   "HIVE",
+   "MIND",
+   "MAP",
+   "READING",
+   "GLASSES"
+  ]
+ },
+ {
+  "date": "2026-12-13",
+  "number": 51,
+  "difficulty": "Genius",
+  "chain": [
+   "HIGH",
+   "JUMP",
+   "START",
+   "BUTTON",
+   "MUSHROOM",
+   "SOUP"
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "number": 52,
+  "difficulty": "Easy",
+  "chain": [
+   "BAD",
+   "DREAM",
+   "TEAM",
+   "SPIRIT",
+   "LEVEL",
+   "UP"
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "number": 53,
+  "difficulty": "Easy",
+  "chain": [
+   "PEN",
+   "NAME",
+   "BRAND",
+   "NEW",
+   "MOON",
+   "SHINE"
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "number": 54,
+  "difficulty": "Medium",
+  "chain": [
+   "GRAND",
+   "PIANO",
+   "KEY",
+   "RING",
+   "TONE",
+   "DEAF"
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "number": 55,
+  "difficulty": "Medium",
+  "chain": [
+   "FIRST",
+   "FLIGHT",
+   "DECK",
+   "CHAIR",
+   "MAN",
+   "POWER"
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "number": 56,
+  "difficulty": "Hard",
+  "chain": [
+   "WELCOME",
+   "HOME",
+   "COOKING",
+   "OIL",
+   "PAINTING",
+   "CLASS"
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "number": 57,
+  "difficulty": "Hard",
+  "chain": [
+   "GHOST",
+   "TOWN",
+   "CENTRE",
+   "STAGE",
+   "DOOR",
+   "KNOB"
+  ],
+  "alt": {
+   "CENTRE": [
+    "CENTER"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-20",
+  "number": 58,
+  "difficulty": "Genius",
+  "chain": [
+   "PEPPER",
+   "MINT",
+   "TEA",
+   "SPOON",
+   "FEED",
+   "BACK"
+  ]
+ },
+ {
+  "date": "2026-12-21",
+  "number": 59,
+  "difficulty": "Easy",
+  "chain": [
+   "BREATHING",
+   "SPACE",
+   "SHIP",
+   "YARD",
+   "STICK",
+   "INSECT"
+  ]
+ },
+ {
+  "date": "2026-12-22",
+  "number": 60,
+  "difficulty": "Easy",
+  "chain": [
+   "PRIME",
+   "NUMBER",
+   "ONE",
+   "WAY",
+   "BACK",
+   "DOOR"
+  ]
+ },
+ {
+  "date": "2026-12-23",
+  "number": 61,
+  "difficulty": "Medium",
+  "chain": [
+   "TWIN",
+   "BED",
+   "SHEET",
+   "MUSIC",
+   "VIDEO",
+   "GAME"
+  ]
+ },
+ {
+  "date": "2026-12-24",
+  "number": 62,
+  "difficulty": "Medium",
+  "chain": [
+   "CANDY",
+   "CANE",
+   "SUGAR",
+   "CUBE",
+   "ROOT",
+   "VEGETABLE"
+  ]
+ },
+ {
+  "date": "2026-12-25",
+  "number": 63,
+  "difficulty": "Hard",
+  "chain": [
+   "CHRISTMAS",
+   "TREE",
+   "TOP",
+   "SECRET",
+   "SANTA",
+   "CLAUS"
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 64,
+  "difficulty": "Hard",
+  "chain": [
+   "RADIO",
+   "WAVE",
+   "POOL",
+   "TABLE",
+   "SALT",
+   "SHAKER"
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 65,
+  "difficulty": "Genius",
+  "chain": [
+   "HAND",
+   "WASH",
+   "OUT",
+   "BREAK",
+   "DOWN",
+   "FALL"
+  ]
+ },
+ {
+  "date": "2026-12-28",
+  "number": 66,
+  "difficulty": "Easy",
+  "chain": [
+   "COMIC",
+   "BOOK",
+   "SHELF",
+   "LIFE",
+   "GUARD",
+   "DOG"
+  ]
+ },
+ {
+  "date": "2026-12-29",
+  "number": 67,
+  "difficulty": "Easy",
+  "chain": [
+   "RUBBER",
+   "BOOT",
+   "CAMP",
+   "FIRE",
+   "PLACE",
+   "MAT"
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 68,
+  "difficulty": "Medium",
+  "chain": [
+   "PAPER",
+   "TIGER",
+   "LILY",
+   "PAD",
+   "LOCK",
+   "SMITH"
+  ]
+ },
+ {
+  "date": "2026-12-31",
+  "number": 69,
+  "difficulty": "Medium",
+  "chain": [
+   "NEW",
+   "YEAR",
+   "END",
+   "GAME",
+   "NIGHT",
+   "CLUB"
+  ]
+ }
+]

@@ -401,78 +401,6 @@
  },
  {
   "difficulty": "Hard",
-  "title": "Top End wet season",
-  "answer": "Melioidosis",
-  "accept": [
-   "melioidosis",
-   "burkholderia pseudomallei",
-   "b pseudomallei",
-   "burkholderia",
-   "whitmore's disease",
-   "whitmores disease"
-  ],
-  "clues": [
-   {
-    "t": "57-year-old man with fever, cough and rigors for 5 days."
-   },
-   {
-    "t": "He has type 2 diabetes and drinks heavily."
-   },
-   {
-    "t": "Chest X-ray: upper lobe consolidation",
-    "d": 1
-   },
-   {
-    "t": "He lives near Darwin and spent the monsoon week clearing his flooded garden."
-   },
-   {
-    "t": "CT: multiple small abscesses in the spleen and prostate",
-    "d": 1
-   },
-   {
-    "t": "Blood culture: gram-negative bacillus with a \"safety pin\" look",
-    "d": 1
-   }
-  ],
-  "pearl": "Melioidosis lives in soil and water in tropical northern Australia and peaks in the wet season. Diabetes is the biggest risk factor. Rates are several times higher in Aboriginal and Torres Strait Islander people, especially in remote communities, where diabetes, kidney disease and soil exposure are all more common. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
- },
- {
-  "difficulty": "Medium",
-  "title": "The cat is sleepy too",
-  "answer": "Carbon monoxide poisoning",
-  "accept": [
-   "carbon monoxide",
-   "carbon monoxide poisoning",
-   "co poisoning",
-   "co toxicity",
-   "carboxyhaemoglobin",
-   "carbon monoxide toxicity"
-  ],
-  "clues": [
-   {
-    "t": "35-year-old woman with headaches and nausea for 2 weeks."
-   },
-   {
-    "t": "Worse at home in the evenings, better at work."
-   },
-   {
-    "t": "Her wife and their son have similar headaches."
-   },
-   {
-    "t": "The family cat has been unusually lethargic."
-   },
-   {
-    "t": "SpO₂ 99% on room air.",
-    "d": 1
-   },
-   {
-    "t": "They started using an old gas space heater this month."
-   }
-  ],
-  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
- },
- {
-  "difficulty": "Hard",
   "title": "The renovator",
   "answer": "Lead poisoning",
   "accept": [
@@ -506,5 +434,167 @@
    }
   ],
   "pearl": "Australian homes built before 1970 often contain lead paint. NHMRC advises investigating a blood lead level above 5 µg/dL. Ask about hobbies and renovations, and check the whole household, especially children."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "Sprint, then stop",
+  "answer": "McArdle disease (glycogen storage disease type V)",
+  "accept": [
+   "mcardle",
+   "mcardles",
+   "mcardle's",
+   "mcardle disease",
+   "mcardles disease",
+   "mcardle's disease",
+   "mcardle syndrome",
+   "glycogen storage disease type 5",
+   "glycogen storage disease type v",
+   "glycogen storage disease 5",
+   "gsd5",
+   "gsd v",
+   "gsd type 5",
+   "gsd type v",
+   "myophosphorylase deficiency",
+   "muscle phosphorylase deficiency"
+  ],
+  "clues": [
+   {
+    "t": "22-year-old woman who has never once managed to run for a bus."
+   },
+   {
+    "t": "Since childhood, the first minutes of exercise bring cramps and stiffness."
+   },
+   {
+    "t": "If she slows down for a few minutes, she can then keep going for much longer."
+   },
+   {
+    "t": "After her first high-intensity gym class, her urine is the colour of cola."
+   },
+   {
+    "t": "CK 14,000 U/L, and it stays raised between episodes",
+    "d": 1
+   },
+   {
+    "t": "Forearm exercise test: ammonia rises, lactate stays flat",
+    "d": 1
+   }
+  ],
+  "pearl": "Her muscles can't unlock their stored glycogen, so sprints starve them. The 'second wind' arrives when fats and glucose from the blood catch up. Described by Brian McArdle in London in 1951."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "Moving target",
+  "answer": "Strongyloidiasis",
+  "accept": [
+   "strongyloidiasis",
+   "strongyloides",
+   "strongyloides stercoralis",
+   "strongyloidosis",
+   "strongyloides infection",
+   "larva currens"
+  ],
+  "clues": [
+   {
+    "t": "48-year-old woman with vague, on-and-off tummy pain and bloating."
+   },
+   {
+    "t": "She resettled eight months ago, after ten years in a camp on the Thailand-Myanmar border."
+   },
+   {
+    "t": "An itchy rash around her waist and buttocks comes and goes."
+   },
+   {
+    "t": "It seems to creep several centimetres in an hour."
+   },
+   {
+    "t": "Eosinophils 1.9 ×10⁹/L",
+    "d": 1
+   },
+   {
+    "t": "Serology positive for a soil-transmitted roundworm that can reinfect its own host.",
+    "d": 1
+   }
+  ],
+  "pearl": "The worm can reinfect the same person for decades, long after they've left an endemic area. Steroids can trigger a fatal overwhelming infection, which is why post-arrival screening for refugees and migrants matters. The fast-moving rash is larva currens, 'running larva'."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "God bless us, every one",
+  "answer": "Distal renal tubular acidosis",
+  "accept": [
+   "distal renal tubular acidosis",
+   "renal tubular acidosis",
+   "rta",
+   "drta",
+   "distal rta",
+   "type 1 rta",
+   "type i rta",
+   "type 1 renal tubular acidosis",
+   "type i renal tubular acidosis",
+   "classic rta"
+  ],
+  "clues": [
+   {
+    "t": "8-year-old girl, small for her age and often tired."
+   },
+   {
+    "t": "Her legs have started to bow. She broke a forearm in a minor fall."
+   },
+   {
+    "t": "Weak spells, with aching muscles."
+   },
+   {
+    "t": "Na 139 · K 2.8 · Cl 114 · HCO₃ 11 mmol/L · anion gap normal",
+    "d": 1
+   },
+   {
+    "t": "Urine pH 6.8, despite her blood being acidic",
+    "d": 1
+   },
+   {
+    "t": "Ultrasound: calcium deposits through the medullae on both sides",
+    "d": 1
+   }
+  ],
+  "pearl": "In 1992 a paediatric neurologist, Donald Lewis, argued in a journal that this could be what ailed Tiny Tim in Dickens' A Christmas Carol: short stature and weakness fit, it was deadly untreated, and Victorian alkaline remedies could have turned it around once Scrooge paid up."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "'Tis the season",
+  "answer": "Haemophilia B (Christmas disease)",
+  "accept": [
+   "haemophilia b",
+   "hemophilia b",
+   "christmas disease",
+   "factor ix deficiency",
+   "factor 9 deficiency",
+   "factor nine deficiency",
+   "factor ix",
+   "factor 9"
+  ],
+  "clues": [
+   {
+    "t": "5-year-old boy whose knee ballooned after a small tumble off his new bike."
+   },
+   {
+    "t": "He has always bruised easily, and bled for days after losing a tooth."
+   },
+   {
+    "t": "His mother's brother had the same trouble. His sister doesn't."
+   },
+   {
+    "t": "Platelets normal · PT normal · APTT prolonged",
+    "d": 1
+   },
+   {
+    "t": "Factor VIII activity: normal",
+    "d": 1
+   },
+   {
+    "t": "Factor IX activity: 3%",
+    "d": 1
+   }
+  ],
+  "pearl": "Named after Stephen Christmas, the five-year-old in whom it was first told apart from classic haemophilia. Rosemary Biggs and colleagues published it in the 1952 Christmas issue of the BMJ, and she defended the name as 'pleasantly provocative'. Stephen Christmas later became a haemophilia advocate."
  }
 ]

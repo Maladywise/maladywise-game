@@ -755,5 +755,635 @@
     "e": "The auricular branch of the vagus, hence Arnold\u2019s ear-cough reflex. Accept Arnold or auricular branch of the vagus. The ear syringe is innocent."
    }
   ]
+ },
+ {
+  "week": "2026-11-29",
+  "number": 7,
+  "questions": [
+   {
+    "c": "Embryology",
+    "q": "Conjoined twins arise when one embryo divides late. After about which day post-fertilisation does division come too late for twins to separate fully?",
+    "a": "About day 13",
+    "e": "Split by day 3: two placentas. Days 4 to 8: shared placenta. Days 8 to 12: shared amnion. After about day 13: joined. Accept 13 to 15."
+   },
+   {
+    "c": "Language",
+    "q": "The ending \u2018-pagus\u2019, as in thoracopagus and craniopagus, comes from a Greek word meaning what?",
+    "a": "Fastened",
+    "e": "From pagos, something fixed. Accept fixed or joined. Thoracopagus: joined at the chest."
+   },
+   {
+    "c": "Obstetrics",
+    "q": "Which five-stage system is used to grade twin-twin transfusion syndrome?",
+    "a": "The Quintero stages",
+    "e": "Stage I to V, from Rub\u00e9n Quintero\u2019s 1999 paper. It\u2019s a problem of shared placentas, so monochorionic twins only."
+   },
+   {
+    "c": "Ultrasound",
+    "q": "A \u2018lambda\u2019 or \u2018twin peak\u2019 sign on first-trimester ultrasound means the twins have what chorionicity?",
+    "a": "Dichorionic",
+    "e": "Placental tissue wedges between the membranes. The flat \u2018T sign\u2019 means monochorionic. Spot it early, it gets harder later."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Chang and Eng Bunker, conjoined brothers who became American farmers, were born in 1811 in which present-day country?",
+    "a": "Thailand",
+    "e": "Then called Siam, which gave us an old term now retired. \u2018Conjoined\u2019 is the word to use."
+   },
+   {
+    "c": "Neurology",
+    "q": "A patient known as L.M. saw poured tea as frozen in mid-air and traffic as jumping from place to place. Name the condition.",
+    "a": "Akinetopsia",
+    "e": "Motion blindness, after damage around area V5/MT. Josef Zihl\u2019s team described her in 1983. Accept cerebral akinetopsia."
+   },
+   {
+    "c": "Midwifery",
+    "q": "Which Maine midwife\u2019s diary (1785 to 1812) recorded more than 800 births and inspired a Pulitzer-winning history?",
+    "a": "Martha Ballard",
+    "e": "Laurel Thatcher Ulrich\u2019s A Midwife\u2019s Tale, 1990. Accept Ballard."
+   },
+   {
+    "c": "Nursing",
+    "q": "At which military hospital, in present-day Istanbul, did Florence Nightingale\u2019s nurses work during the Crimean War?",
+    "a": "Scutari",
+    "e": "The Selimiye Barracks in \u00dcsk\u00fcdar. Accept Selimiye or \u00dcsk\u00fcdar. Yes, the lamp was real."
+   },
+   {
+    "c": "Anaesthesia",
+    "q": "Which Edinburgh obstetrician tested vapours on himself and his dinner guests, then introduced chloroform anaesthesia in 1847?",
+    "a": "James Young Simpson",
+    "e": "They all ended up under the table. Accept Simpson. House rules for dinner parties have improved."
+   },
+   {
+    "c": "Dermatology",
+    "q": "Loss-of-function variants in which skin barrier protein are a major risk factor for atopic eczema and ichthyosis vulgaris?",
+    "a": "Filaggrin",
+    "e": "The FLG gene. \u2018Filament-aggregating protein\u2019, if you\u2019re asked at a party. You won\u2019t be."
+   },
+   {
+    "c": "Audiology",
+    "q": "Who received the first multichannel cochlear implant, from Graeme Clark\u2019s team in Melbourne in 1978?",
+    "a": "Rod Saunders",
+    "e": "He\u2019d lost his hearing in a car accident. Accept Saunders. Clark gets the credit, Saunders did the bravest bit."
+   },
+   {
+    "c": "Dentistry",
+    "q": "Which French surgeon, author of Le Chirurgien Dentiste (1728), is called the father of modern dentistry?",
+    "a": "Pierre Fauchard",
+    "e": "Accept Fauchard. He pushed sugar\u2019s role in decay, long before anyone wanted to hear it."
+   },
+   {
+    "c": "Lab medicine",
+    "q": "What is the chart called that plots daily quality-control results against mean and standard deviation lines?",
+    "a": "A Levey-Jennings chart",
+    "e": "Levey and Jennings, 1950, borrowing from Shewhart\u2019s factory charts. Accept Levey-Jennings or Shewhart."
+   },
+   {
+    "c": "Research ethics",
+    "q": "What term describes genuine expert uncertainty about which treatment is better, the ethical basis for randomising patients?",
+    "a": "Clinical equipoise",
+    "e": "Benjamin Freedman, NEJM, 1987. Accept equipoise. \u2018We have no idea\u2019 is not accepted, though it\u2019s close."
+   },
+   {
+    "c": "Medical ethics",
+    "q": "Which doctrine allows a treatment given to relieve suffering even if it may foreseeably shorten life, provided relief is the intention?",
+    "a": "The doctrine of double effect",
+    "e": "Usually traced to Thomas Aquinas. Accept double effect."
+   },
+   {
+    "c": "Indigenous health",
+    "q": "Which M\u0101ori health model, described by Sir Mason Durie, likens wellbeing to a meeting house with four walls?",
+    "a": "Te Whare Tapa Wh\u0101",
+    "e": "Physical, spiritual, family and mental health. Take away one wall and the house leans."
+   },
+   {
+    "c": "Ophthalmology",
+    "q": "What is the eponymous name for a relative afferent pupillary defect found on the swinging torch test?",
+    "a": "Marcus Gunn pupil",
+    "e": "Robert Marcus Gunn, Scottish ophthalmologist. Accept RAPD with the name. The torch swings, the pupil seems to dilate."
+   },
+   {
+    "c": "Pharmacy",
+    "q": "In 1937, more than 100 Americans died after taking an antibiotic syrup made with which solvent?",
+    "a": "Diethylene glycol",
+    "e": "The Elixir Sulfanilamide disaster, which led to the 1938 US Food, Drug and Cosmetic Act. Accept DEG. Sweet, soluble and a kidney poison, so no wonder nobody tasted the problem."
+   },
+   {
+    "c": "LGBTIQA+ health",
+    "q": "Which 2010 trial, in men who have sex with men and trans women across six countries, first showed daily oral tablets could prevent HIV?",
+    "a": "iPrEx",
+    "e": "Tenofovir and emtricitabine cut HIV infection by 44%, more with good adherence. Published in NEJM. Accept PrEP only if you can name the trial. You can\u2019t. It\u2019s iPrEx."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "NASA\u2019s Twins Study sent Scott Kelly to space for nearly a year while Mark stayed home. Scott\u2019s telomeres did what surprising thing up there?",
+    "a": "They got longer",
+    "e": "Everyone expected shortening. They lengthened in flight, then shortened quickly back on Earth. Science, 2019. Space remains weird."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-06",
+  "number": 8,
+  "questions": [
+   {
+    "c": "Finland",
+    "q": "In which Finnish region did a 1972 community project, begun after locals petitioned for help with heart disease, become a model for world prevention?",
+    "a": "North Karelia",
+    "e": "Led by Pekka Puska. Less salt, less butter, less smoking, and people took it up. Accept Pohjois-Karjala."
+   },
+   {
+    "c": "Finland",
+    "q": "Which sugar alcohol, mass-produced from birch in Finland, was tested for caries prevention in the 1970s Turku sugar studies?",
+    "a": "Xylitol",
+    "e": "Scheinin and M\u00e4kinen swapped people\u2019s sugar for it. Hence the chewing gum on every chemist\u2019s counter."
+   },
+   {
+    "c": "Finland",
+    "q": "Erik von Willebrand, a Helsinki physician, described his bleeding disorder in 1926 in a family from which Finnish islands?",
+    "a": "The \u00c5land Islands",
+    "e": "Accept \u00c5land. Pseudohaemophilia, he called it, affecting women as well as men."
+   },
+   {
+    "c": "Finland",
+    "q": "Congenital nephrotic syndrome of the Finnish type is caused by variants in the gene for which slit-diaphragm protein?",
+    "a": "Nephrin",
+    "e": "The NPHS1 gene. One of the Finnish disease heritage, about 36 rare conditions more common there. Accept NPHS1."
+   },
+   {
+    "c": "Anaesthesia",
+    "q": "Sugammadex reverses which neuromuscular blocker by encapsulating it?",
+    "a": "Rocuronium",
+    "e": "It\u2019s a modified cyclodextrin, a molecular doughnut. Accept vecuronium too. Not suxamethonium, nice try."
+   },
+   {
+    "c": "Geriatrics",
+    "q": "Which Colombian neurosurgeon described normal pressure hydrocephalus in 1965?",
+    "a": "Salom\u00f3n Hakim",
+    "e": "Accept Hakim. With Raymond Adams. Gait, continence, cognition: the classic triad."
+   },
+   {
+    "c": "Physiotherapy",
+    "q": "Four British nurses and midwives founded which society in 1894, the forerunner of the Chartered Society of Physiotherapy?",
+    "a": "The Society of Trained Masseuses",
+    "e": "Founded to protect the profession\u2019s good name. Accept the gist."
+   },
+   {
+    "c": "Podiatry",
+    "q": "Morton\u2019s neuroma is most often found between which two metatarsal heads?",
+    "a": "The third and fourth",
+    "e": "Accept the third web space. It feels like standing on a pebble in your sock."
+   },
+   {
+    "c": "Nutrition",
+    "q": "Which researcher ran the 1940s Minnesota Starvation Experiment and later championed the Mediterranean diet?",
+    "a": "Ancel Keys",
+    "e": "Accept Keys. He also developed the K-ration, and the K may or may not be for Keys."
+   },
+   {
+    "c": "Speech pathology",
+    "q": "What does IDDSI stand for?",
+    "a": "International Dysphagia Diet Standardisation Initiative",
+    "e": "Eight levels, 0 to 7, from thin drinks to regular food. Accept any version that gets dysphagia in."
+   },
+   {
+    "c": "Microbiology",
+    "q": "In 1984 Barry Marshall tested Koch\u2019s postulates the hard way. What did he do?",
+    "a": "Drank a culture of Helicobacter pylori",
+    "e": "He got gastritis and a Nobel, eventually. Accept any version of drinking it. His wife had views."
+   },
+   {
+    "c": "Pathology",
+    "q": "What are the ropey eosinophilic inclusions seen in hepatocytes in alcohol-related hepatitis?",
+    "a": "Mallory-Denk bodies",
+    "e": "Tangled keratin filaments. Accept Mallory bodies or Mallory hyaline. Hepatologists would like you to know they\u2019re not specific."
+   },
+   {
+    "c": "Perfusion",
+    "q": "In 1954, what \u2018oxygenator\u2019 did C. Walton Lillehei use for open-heart surgery on children?",
+    "a": "A parent",
+    "e": "Cross-circulation. A parent\u2019s heart and lungs supported the child. The only operation with a potential 200% mortality, its critics said."
+   },
+   {
+    "c": "Biostatistics",
+    "q": "What paradox describes a trend that appears in several groups but reverses when the groups are combined?",
+    "a": "Simpson\u2019s paradox",
+    "e": "Edward Simpson, 1951. Accept Yule-Simpson. Not Homer."
+   },
+   {
+    "c": "Women\u2019s health",
+    "q": "Which cardiologist, the first woman to lead the US NIH, coined \u2018Yentl syndrome\u2019 in a 1991 NEJM editorial?",
+    "a": "Bernadine Healy",
+    "e": "Women had to look like men to get the same heart care. Accept Healy."
+   },
+   {
+    "c": "Refugee health",
+    "q": "Which roundworm can persist for decades through autoinfection, so migrants from endemic areas are screened before steroids?",
+    "a": "Strongyloides stercoralis",
+    "e": "Steroids can trigger fatal hyperinfection. Accept Strongyloides. A worm with very long-term plans."
+   },
+   {
+    "c": "Disability",
+    "q": "Which UK organisation\u2019s 1976 \u2018Fundamental Principles of Disability\u2019 laid the groundwork for the social model?",
+    "a": "UPIAS",
+    "e": "The Union of the Physically Impaired Against Segregation. Accept the full name."
+   },
+   {
+    "c": "Psychiatry",
+    "q": "Which syndrome, first described in prisoners in 1898, features approximate answers such as 2 + 2 = 5?",
+    "a": "Ganser syndrome",
+    "e": "Sigbert Ganser. The answer is just wrong enough to show you knew it. Vorbeireden, if you\u2019re showing off."
+   },
+   {
+    "c": "Addiction medicine",
+    "q": "Which brain pathway, running from the ventral tegmental area to the nucleus accumbens, is central to reward in addiction?",
+    "a": "The mesolimbic dopamine pathway",
+    "e": "Accept mesolimbic. Not the nigrostriatal one, that\u2019s movement. Mesocortical is its neighbour."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Finnish medicine loves a long word. \u2018Virtsa\u2019 means urine. What does virtsanpid\u00e4tyskyvytt\u00f6myys mean?",
+    "a": "Urinary incontinence",
+    "e": "Literally \u2018urine-holding-ability-lessness\u2019. Accept incontinence. Happy Independence Day, Finland."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-13",
+  "number": 9,
+  "questions": [
+   {
+    "c": "Defibrillation",
+    "q": "Which Cleveland surgeon performed the first successful defibrillation of a human heart, on a 14-year-old boy in 1947?",
+    "a": "Claude Beck",
+    "e": "Open chest, paddles on the heart, and the boy survived. Beck\u2019s triad is his too. Accept Beck."
+   },
+   {
+    "c": "Defibrillation",
+    "q": "Which American cardiologist first shocked a human heart back through a closed chest, publishing in 1956?",
+    "a": "Paul Zoll",
+    "e": "Accept Zoll. The same man took the pacemaker to the skin in 1952. Busy decade."
+   },
+   {
+    "c": "Defibrillation",
+    "q": "What did Frank Pantridge pioneer in Belfast in the 1960s?",
+    "a": "The portable defibrillator",
+    "e": "With mobile coronary care, taking the shock to the patient. Accept either. The first model ran on car batteries."
+   },
+   {
+    "c": "Resuscitation",
+    "q": "Which 1960 JAMA paper by Kouwenhoven, Jude and Knickerbocker introduced what now-standard technique?",
+    "a": "Closed-chest cardiac massage",
+    "e": "Chest compressions. They spotted it while testing defibrillators on dogs. Accept compressions or CPR."
+   },
+   {
+    "c": "Resuscitation",
+    "q": "The face of the Resusci Anne training manikin was modelled on a death mask known by which name?",
+    "a": "L\u2019Inconnue de la Seine",
+    "e": "An unknown young woman from 1880s Paris. Asmund Laerdal, a Norwegian toymaker, chose it in 1960. Often called the most-kissed face in the world."
+   },
+   {
+    "c": "Electrophysiology",
+    "q": "Commotio cordis, VF from a blow to the chest, needs the hit to land during which part of the ECG?",
+    "a": "The upslope of the T wave",
+    "e": "A window of about 10 to 30 ms before the peak. Accept T wave. Terrible luck, in other words."
+   },
+   {
+    "c": "Electrophysiology",
+    "q": "Which Polish-born physician, after his mentor died of VT, invented the implantable defibrillator, first used in a patient in 1980?",
+    "a": "Michel Mirowski",
+    "e": "At Johns Hopkins, with Morton Mower. Accept Mirowski. Colleagues told him it wouldn\u2019t work."
+   },
+   {
+    "c": "Occupational therapy",
+    "q": "Which \u2018mother of occupational therapy\u2019 developed habit training?",
+    "a": "Eleanor Clarke Slagle",
+    "e": "Accept Slagle. A founder of the US professional society, in 1917."
+   },
+   {
+    "c": "Pharmacy",
+    "q": "The prescription symbol \u2018Rx\u2019 is usually said to come from which Latin word?",
+    "a": "Recipe",
+    "e": "Meaning \u2018take\u2019. Accept recipere too. \u2018Rex\u2019 is not accepted, even if your GP thinks otherwise."
+   },
+   {
+    "c": "Podiatry",
+    "q": "A \u2018Jones fracture\u2019 involves which bone?",
+    "a": "The fifth metatarsal",
+    "e": "Proximal shaft. Sir Robert Jones described it in 1902, partly from his own, reportedly while dancing."
+   },
+   {
+    "c": "Dentistry",
+    "q": "What is the Hall technique for decayed baby molars?",
+    "a": "Sealing them under preformed metal crowns",
+    "e": "No drilling, no anaesthetic. Named after Scottish dentist Norna Hall. Children everywhere approve."
+   },
+   {
+    "c": "Midwifery",
+    "q": "Which manoeuvre, flexing the mother\u2019s hips sharply onto her abdomen, is a first step for shoulder dystocia?",
+    "a": "The McRoberts manoeuvre",
+    "e": "It flattens the lumbosacral angle. Accept McRoberts. Not to be confused with Woods\u2019 screw."
+   },
+   {
+    "c": "Nursing",
+    "q": "Which Australian bush nurse developed hot packs and passive movement for polio paralysis in the 1930s and 40s, against medical opposition?",
+    "a": "Sister Elizabeth Kenny",
+    "e": "Accept Kenny. Her methods helped shape modern physiotherapy, and Hollywood made a film of her."
+   },
+   {
+    "c": "Epidemiology",
+    "q": "What are Austin Bradford Hill\u2019s 1965 criteria used for?",
+    "a": "Judging whether an association is causal",
+    "e": "Nine viewpoints, from strength to analogy. He never called them criteria. Accept causation."
+   },
+   {
+    "c": "Microbiology",
+    "q": "Which acid-fast stain is used to spot Mycobacterium tuberculosis in sputum?",
+    "a": "Ziehl-Neelsen",
+    "e": "Red rods on a blue background. Accept ZN or auramine. Gram\u2019s stain sends its apologies."
+   },
+   {
+    "c": "Neurology",
+    "q": "Cortical blindness with denial of it, where the person confabulates what they \u2018see\u2019, is named after whom?",
+    "a": "Gabriel Anton",
+    "e": "Anton syndrome, 1899. Accept Anton. Sometimes Anton-Babinski."
+   },
+   {
+    "c": "Indigenous health",
+    "q": "Which Canadian child-first principle, passed by the House of Commons in 2007, honours a boy from Norway House Cree Nation?",
+    "a": "Jordan\u2019s Principle",
+    "e": "Jordan River Anderson spent his short life in hospital while governments argued over who should pay for his home care. Care first, argue later."
+   },
+   {
+    "c": "Addiction medicine",
+    "q": "Which partial mu-opioid agonist has a ceiling effect on respiratory depression, making it a mainstay for opioid dependence?",
+    "a": "Buprenorphine",
+    "e": "High affinity, low intrinsic activity. Accept Subutex or Suboxone. Depot versions now run weekly and monthly."
+   },
+   {
+    "c": "Women\u2019s health",
+    "q": "Name the three \u2018dys-\u2019 symptoms classically associated with endometriosis.",
+    "a": "Dysmenorrhoea, dyspareunia and dyschezia",
+    "e": "Need all three. Period pain, painful sex and painful bowel motions. Diagnosis still takes years on average."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which two physiologists in Geneva showed in 1899 that a strong shock could stop ventricular fibrillation in dogs, 48 years before Beck?",
+    "a": "Pr\u00e9vost and Batelli",
+    "e": "Jean-Louis Pr\u00e9vost and Fr\u00e9d\u00e9ric Batelli. Need both. Accept Battelli. Then everyone forgot for decades."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-20",
+  "number": 10,
+  "questions": [
+   {
+    "c": "Global health",
+    "q": "Which 1978 declaration, signed in what is now Kazakhstan, called for \u2018health for all by the year 2000\u2019?",
+    "a": "The Declaration of Alma-Ata",
+    "e": "Primary health care as a human right. Now spelt Almaty. Deadline missed, goal unchanged."
+   },
+   {
+    "c": "Global health",
+    "q": "Which British epidemiologist chaired the WHO Commission on Social Determinants of Health, whose 2008 report was \u2018Closing the Gap in a Generation\u2019?",
+    "a": "Michael Marmot",
+    "e": "Also the Whitehall studies. Accept Marmot."
+   },
+   {
+    "c": "Global health",
+    "q": "In which year did WHO publish its first Model List of Essential Medicines?",
+    "a": "1977",
+    "e": "With 208 medicines. Now updated every two years. No half marks for 1980."
+   },
+   {
+    "c": "Global health",
+    "q": "Which organisation did Paul Farmer, Ophelia Dahl and Jim Yong Kim co-found to bring care to rural Haiti in 1987?",
+    "a": "Partners In Health",
+    "e": "Accept PIH. Farmer\u2019s phrase: \u2018the idea that some lives matter less is the root of all that is wrong with the world\u2019."
+   },
+   {
+    "c": "Global health",
+    "q": "Which Indian doctor used oral rehydration in a 1971 refugee camp during the Bangladesh war, cutting cholera deaths from about 30% to under 4%?",
+    "a": "Dilip Mahalanabis",
+    "e": "Salt, glucose and baking soda from the market, given by families with cups and spoons. Accept Mahalanabis."
+   },
+   {
+    "c": "Rural health",
+    "q": "Who worked with John Flynn in the 1920s to develop the pedal-powered radio that let remote stations call the Flying Doctor?",
+    "a": "Alfred Traeger",
+    "e": "Accept Traeger. Australia\u2019s most useful bicycle-adjacent invention."
+   },
+   {
+    "c": "Eye health",
+    "q": "Which New Zealand-born eye surgeon led trachoma work in Aboriginal communities and set up lens factories in Eritrea and Nepal?",
+    "a": "Fred Hollows",
+    "e": "Accept Hollows. Cheap lenses, plenty of sight restored, no patience for excuses."
+   },
+   {
+    "c": "Ophthalmology",
+    "q": "In diabetic retinopathy, what are \u2018cotton wool spots\u2019?",
+    "a": "Small infarcts of the nerve fibre layer",
+    "e": "Backed-up axoplasm from local ischaemia. Accept infarcts or ischaemic patches. Not exudates, that\u2019s the mistake."
+   },
+   {
+    "c": "Disability",
+    "q": "Which academic coined the phrase \u2018social model of disability\u2019 in 1983?",
+    "a": "Mike Oliver",
+    "e": "The problem is the stairs, not the wheelchair. Accept Oliver, himself a wheelchair user."
+   },
+   {
+    "c": "Medical ethics",
+    "q": "Which US Public Health Service study, exposed in 1972, left Black men with syphilis untreated for 40 years?",
+    "a": "The Tuskegee study",
+    "e": "Penicillin was withheld for decades. It shaped modern research ethics and left lasting mistrust. Accept Tuskegee."
+   },
+   {
+    "c": "Evidence-based medicine",
+    "q": "Whose 1972 book Effectiveness and Efficiency inspired a worldwide collaboration of systematic reviews?",
+    "a": "Archie Cochrane",
+    "e": "Accept Cochrane. Scottish doctor and prisoner-of-war camp medic. Very tired of opinions."
+   },
+   {
+    "c": "Biostatistics",
+    "q": "In a meta-analysis, what does an asymmetric funnel plot suggest?",
+    "a": "Small-study effects such as publication bias",
+    "e": "Accept publication bias. Missing small negative studies leave a hole. Journals like good news."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which man received the world\u2019s first human-to-human heart transplant, in Cape Town in 1967?",
+    "a": "Louis Washkansky",
+    "e": "Christiaan Barnard\u2019s patient, a Lithuanian-born grocer. He lived 18 days and died of pneumonia. Accept Washkansky."
+   },
+   {
+    "c": "Paediatric dentistry",
+    "q": "Which inherited condition gives teeth an opalescent blue-brown look?",
+    "a": "Dentinogenesis imperfecta",
+    "e": "Enamel\u2019s fine, the dentine isn\u2019t. Can travel with osteogenesis imperfecta, but is often its own gene: DSPP."
+   },
+   {
+    "c": "Audiology",
+    "q": "What is the \u2018speech banana\u2019 on an audiogram?",
+    "a": "The zone where everyday speech sounds fall",
+    "e": "A banana-shaped region across pitch and loudness. Accept the gist. Sadly no fruit involved."
+   },
+   {
+    "c": "Lab medicine",
+    "q": "In Westgard quality control rules, what does the 1-3s rule tell you to do?",
+    "a": "Reject the run",
+    "e": "When one control is more than 3 SD from the mean. Accept reject. \u2018Rerun it and hope\u2019 is the unofficial rule."
+   },
+   {
+    "c": "Psychiatry",
+    "q": "Which syndrome, described by Jules Cotard in 1880, involves believing you are dead or missing organs?",
+    "a": "Cotard\u2019s syndrome",
+    "e": "Accept Cotard. A delusion of negation, rare and often linked to severe depression. It can respond to treatment."
+   },
+   {
+    "c": "Pathology",
+    "q": "Which German pathologist popularised \u2018omnis cellula e cellula\u2019, every cell from a cell?",
+    "a": "Rudolf Virchow",
+    "e": "Also a politician who said medicine is a social science. Hence his place here. Accept Virchow."
+   },
+   {
+    "c": "LGBTIQA+ health",
+    "q": "Which Berlin physician founded the Institute for Sexual Science in 1919, later destroyed by the Nazis?",
+    "a": "Magnus Hirschfeld",
+    "e": "A pioneering advocate for gay and trans people. Its library was burnt in 1933. Accept Hirschfeld."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which Somali hospital cook, the last person with naturally occurring smallpox in 1977, spent his later years volunteering to end polio?",
+    "a": "Ali Maow Maalin",
+    "e": "Merca, Somalia. He\u2019d never been vaccinated, and later told families his story. He died in 2013 of malaria, working on polio. Accept Maalin."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-27",
+  "number": 11,
+  "questions": [
+   {
+    "c": "Epidemiology",
+    "q": "Which US cohort study, begun in 1948 and still running, gave medicine the phrase \u2018risk factor\u2019?",
+    "a": "The Framingham Heart Study",
+    "e": "Massachusetts. Now on its third generation. Accept Framingham."
+   },
+   {
+    "c": "Epidemiology",
+    "q": "If R0 is 5, what share of a population must be immune for herd immunity, assuming a perfect vaccine?",
+    "a": "80%",
+    "e": "1 minus 1/R0. Measles is more like 12 to 18, which is why 95% coverage comes up."
+   },
+   {
+    "c": "Epidemics in history",
+    "q": "Which rector persuaded the village of Eyam in Derbyshire to quarantine itself during the 1665 to 1666 plague?",
+    "a": "William Mompesson",
+    "e": "Around a third or more of the village died, and neighbouring towns were spared. His wife Catherine died too. Accept Mompesson."
+   },
+   {
+    "c": "Epidemics in history",
+    "q": "Which sanitary engineer tracked Mary Mallon to the kitchen of a New York family in 1907?",
+    "a": "George Soper",
+    "e": "Accept Soper. He asked for stool and urine samples. By his account, she chased him off with a carving fork."
+   },
+   {
+    "c": "Vaccines",
+    "q": "Louis Pasteur was born on 27 December 1822. Which nine-year-old boy got his rabies vaccine in 1885?",
+    "a": "Joseph Meister",
+    "e": "From Alsace, bitten by a rabid dog. He survived and later worked as a caretaker at the Pasteur Institute."
+   },
+   {
+    "c": "Vaccines",
+    "q": "The mumps vaccine strain used since the 1960s is named after who?",
+    "a": "Jeryl Lynn",
+    "e": "Maurice Hilleman\u2019s daughter. He swabbed her throat when she got mumps in 1963. Best possible use of a sick day."
+   },
+   {
+    "c": "Vaccines",
+    "q": "Pearl Kendrick and Grace Eldering developed the first effective vaccine for which disease in Michigan in the 1930s?",
+    "a": "Whooping cough",
+    "e": "Pertussis. They worked after hours in Grand Rapids. Loney Gordon, a Black chemist, later found a better strain."
+   },
+   {
+    "c": "Outbreaks",
+    "q": "Ebola was first identified in 1976 in an outbreak centred on a mission hospital in which Zairean village?",
+    "a": "Yambuku",
+    "e": "Now in DR Congo. Reused needles spread it. Sudan had an outbreak the same year. Accept Yambuku only."
+   },
+   {
+    "c": "Preparedness",
+    "q": "What does the epidemic preparedness vaccine group CEPI, launched in 2017, stand for?",
+    "a": "Coalition for Epidemic Preparedness Innovations",
+    "e": "Launched at Davos after Ebola in West Africa. Accept any close version."
+   },
+   {
+    "c": "Pandemic flu",
+    "q": "Which Swedish-born pathologist dug up flu victims at Brevig Mission, Alaska, in 1951 and again in 1997, helping reconstruct the 1918 virus?",
+    "a": "Johan Hultin",
+    "e": "Accept Hultin. The village council agreed. In 1997 he was 72, using his wife\u2019s garden shears."
+   },
+   {
+    "c": "Neurology",
+    "q": "Which Vienna neurologist described encephalitis lethargica, the 1917 to 1928 epidemic of \u2018sleeping sickness\u2019?",
+    "a": "Constantin von Economo",
+    "e": "Accept von Economo. Survivors later inspired Oliver Sacks\u2019s Awakenings. Cause still debated."
+   },
+   {
+    "c": "Nutrition",
+    "q": "What does FODMAP stand for?",
+    "a": "Fermentable Oligosaccharides, Disaccharides, Monosaccharides And Polyols",
+    "e": "Accept the gist. A Monash University idea from Melbourne. Your onion knows what it did."
+   },
+   {
+    "c": "Physiotherapy",
+    "q": "In the \u2018PEACE & LOVE\u2019 injury advice, what does LOVE stand for?",
+    "a": "Load, Optimism, Vascularisation, Exercise",
+    "e": "Dubois and Esculier, BJSM, 2020. Need all four. Goodbye, RICE."
+   },
+   {
+    "c": "Perfusion",
+    "q": "During cardiac bypass, what does the ACT test measure?",
+    "a": "Activated clotting time",
+    "e": "It checks the heparin is working. Accept ACT in full. Nothing to do with theatre."
+   },
+   {
+    "c": "History of medicine",
+    "q": "Which naval surgeon ran what is often called the first controlled clinical trial, comparing six scurvy treatments aboard HMS Salisbury in 1747?",
+    "a": "James Lind",
+    "e": "Citrus won. The navy took over 40 more years to adopt it. Accept Lind."
+   },
+   {
+    "c": "Geriatrics",
+    "q": "What is the 4AT used for?",
+    "a": "Rapid screening for delirium",
+    "e": "Four items, under two minutes. Alertness, AMT4, attention, acute change. Accept delirium."
+   },
+   {
+    "c": "Dentistry",
+    "q": "Which anaesthetic did dentist Horace Wells try on himself to have a tooth pulled in 1844?",
+    "a": "Nitrous oxide",
+    "e": "Laughing gas. His public demonstration in Boston went badly, so William Morton\u2019s ether took the headlines."
+   },
+   {
+    "c": "Dermatology",
+    "q": "Darier\u2019s sign, where rubbing a brown lesion makes it swell and redden, is characteristic of which condition?",
+    "a": "Mastocytosis",
+    "e": "Urticaria pigmentosa. Accept either. Rub gently, mast cells hold grudges."
+   },
+   {
+    "c": "Speech pathology",
+    "q": "What was the real name of Broca\u2019s 1861 patient, nicknamed \u2018Tan\u2019 for the only word he could say?",
+    "a": "Louis Victor Leborgne",
+    "e": "Accept Leborgne. His full identity was only worked out this century. His brain is still in Paris."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Quarantine\u2019s word comes from forty days, but the first known law, a 30-day \u2018trentino\u2019 in 1377, was passed in which Adriatic city-state?",
+    "a": "Ragusa",
+    "e": "Now Dubrovnik. Accept either. Travellers from plague areas waited on an islet or at Cavtat. Forty came later."
+   }
+  ]
  }
 ]

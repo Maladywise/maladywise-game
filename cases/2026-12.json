@@ -1,0 +1,1263 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 46,
+  "difficulty": "Easy",
+  "title": "More than a sore throat",
+  "answer": "Acute HIV infection (seroconversion)",
+  "accept": [
+   "hiv",
+   "hiv infection",
+   "acute hiv",
+   "acute hiv infection",
+   "primary hiv",
+   "primary hiv infection",
+   "hiv seroconversion",
+   "seroconversion",
+   "seroconversion illness",
+   "acute retroviral syndrome",
+   "human immunodeficiency virus"
+  ],
+  "clues": [
+   {
+    "t": "34-year-old woman with fever, sore throat and aching muscles for a week."
+   },
+   {
+    "t": "Swollen glands, and she's more tired than she has ever been."
+   },
+   {
+    "t": "A faint pink rash on her chest, and painful mouth ulcers."
+   },
+   {
+    "t": "Glandular fever serology: negative",
+    "d": 1
+   },
+   {
+    "t": "She started a new relationship six weeks ago."
+   },
+   {
+    "t": "p24 antigen positive · viral load very high · CD4 count dipping",
+    "d": 1
+   }
+  ],
+  "pearl": "Early infection often looks like a bad bout of glandular fever, and a window-period test can be negative. Women and girls make up just over half of people living with HIV worldwide. On effective treatment, people can live long lives, and undetectable means untransmissible (U=U)."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 47,
+  "difficulty": "Medium",
+  "title": "The thinner's revenge",
+  "answer": "Heparin-induced thrombocytopenia",
+  "accept": [
+   "hit",
+   "hitt",
+   "heparin induced thrombocytopenia",
+   "heparin induced thrombocytopaenia",
+   "heparin induced thrombosis",
+   "heparin thrombocytopenia",
+   "heparin thrombocytopaenia",
+   "hit syndrome"
+  ],
+  "clues": [
+   {
+    "t": "66-year-old man, six days after heart bypass surgery."
+   },
+   {
+    "t": "He was recovering well until his left leg swelled and began to ache."
+   },
+   {
+    "t": "Ultrasound: deep vein clot in the leg, despite blood-thinning",
+    "d": 1
+   },
+   {
+    "t": "Platelets 88 ×10⁹/L, down from 210 after surgery",
+    "d": 1
+   },
+   {
+    "t": "The perfusionist's bypass circuit and every injection since have shared one drug."
+   },
+   {
+    "t": "Antibodies against platelet factor 4: positive",
+    "d": 1
+   }
+  ],
+  "pearl": "A platelet fall of more than half, 5 to 10 days into treatment, with new clots rather than bleeding. The paradox is the point: the drug meant to prevent clots is now causing them, so it must be stopped and replaced."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 48,
+  "difficulty": "Medium",
+  "title": "Her normal, not yours",
+  "answer": "Autonomic dysreflexia",
+  "accept": [
+   "autonomic dysreflexia",
+   "dysreflexia",
+   "autonomic hyperreflexia"
+  ],
+  "clues": [
+   {
+    "t": "33-year-old woman, a wheelchair racer training for her national team."
+   },
+   {
+    "t": "A pounding headache has come on within minutes."
+   },
+   {
+    "t": "Her face is flushed and sweaty, but her legs are cool and pale."
+   },
+   {
+    "t": "She has a complete T4 spinal cord injury from a crash in her teens."
+   },
+   {
+    "t": "BP 196/104. Her usual is 95/60.",
+    "d": 1
+   },
+   {
+    "t": "Her catheter bag has been empty for hours. There's a kink in the tube."
+   }
+  ],
+  "pearl": "In injuries at T6 or above, anything irritating below the injury can send blood pressure soaring, most often a full bladder. Numbers that look ordinary can be dangerous for someone whose baseline is low. Many people carry a card explaining it, because they often know more about it than the clinician."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 49,
+  "difficulty": "Hard",
+  "title": "Red-lining",
+  "answer": "Exertional heat stroke",
+  "accept": [
+   "exertional heat stroke",
+   "exertional heatstroke",
+   "heat stroke",
+   "heatstroke",
+   "heat-stroke",
+   "exertional hyperthermia"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman, fit and well, collapses 400 m from the end of a charity fun run on a humid morning."
+   },
+   {
+    "t": "She is agitated, doesn't know where she is, then has a brief seizure."
+   },
+   {
+    "t": "Her skin is hot and still wet with sweat."
+   },
+   {
+    "t": "HR 150 · BP 88/50 · glucose 6.1 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "CK 8,400 U/L · creatinine 190 µmol/L · ALT 310 U/L",
+    "d": 1
+   },
+   {
+    "t": "Rectal temperature: 41.3 °C",
+    "d": 1
+   }
+  ],
+  "pearl": "Classic heat stroke tends to hit older people in heatwaves. The exertional kind strikes fit young people mid-effort, and the sweat fools people: dry skin is not required for the diagnosis."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 50,
+  "difficulty": "Hard",
+  "title": "Flood relief",
+  "answer": "Melioidosis",
+  "accept": [
+   "melioidosis",
+   "burkholderia pseudomallei",
+   "b pseudomallei",
+   "burkholderia",
+   "whitmore's disease",
+   "whitmores disease"
+  ],
+  "clues": [
+   {
+    "t": "57-year-old woman with fever, cough and rigors for 5 days."
+   },
+   {
+    "t": "She has type 2 diabetes."
+   },
+   {
+    "t": "Chest X-ray: upper lobe consolidation",
+    "d": 1
+   },
+   {
+    "t": "She lives near Darwin and spent the monsoon week volunteering on a flood clean-up, knee-deep in mud."
+   },
+   {
+    "t": "CT: multiple small abscesses in the liver and spleen",
+    "d": 1
+   },
+   {
+    "t": "Blood culture: gram-negative bacillus with a \"safety pin\" look",
+    "d": 1
+   }
+  ],
+  "pearl": "It lives in soil and water across South-East Asia and tropical northern Australia, and peaks in the wet season. Diabetes is the biggest risk factor. Rates are several times higher in Aboriginal and Torres Strait Islander people, especially in remote communities. Standard pneumonia antibiotics may miss it, so tell the lab when you suspect it."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 51,
+  "difficulty": "Genius",
+  "title": "Lattice work",
+  "answer": "Hereditary gelsolin amyloidosis (Meretoja syndrome)",
+  "accept": [
+   "gelsolin amyloidosis",
+   "hereditary gelsolin amyloidosis",
+   "agel amyloidosis",
+   "meretoja",
+   "meretoja syndrome",
+   "meretojas syndrome",
+   "meretoja's syndrome",
+   "meretoja disease",
+   "finnish amyloidosis",
+   "familial amyloidosis finnish type",
+   "finnish type amyloidosis",
+   "finnish familial amyloidosis",
+   "familial amyloidosis of the finnish type",
+   "amyloidosis finnish type",
+   "amyloidosis v",
+   "gelsolin"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old woman with dry, gritty eyes for twenty years."
+   },
+   {
+    "t": "Her optometrist sees fine branching lines across both corneas."
+   },
+   {
+    "t": "In her forties, her brow and cheeks began to sag on both sides."
+   },
+   {
+    "t": "Her skin now hangs in loose folds and bruises easily. Her feet are going numb."
+   },
+   {
+    "t": "Her father and brother have the same face and the same eyes."
+   },
+   {
+    "t": "Skin biopsy: Congo red-positive deposits. The family comes from south-east Finland.",
+    "d": 1
+   }
+  ],
+  "pearl": "First described by Finnish ophthalmologist Jouko Meretoja in 1969, it's one of the 'Finnish disease heritage' conditions. A faulty form of the protein gelsolin folds into amyloid in the cornea, nerves and skin. It's autosomal dominant, and most known cases are Finnish."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 52,
+  "difficulty": "Easy",
+  "title": "Seats upright",
+  "answer": "Ear barotrauma",
+  "accept": [
+   "ear barotrauma",
+   "barotrauma",
+   "otitic barotrauma",
+   "middle ear barotrauma",
+   "aerotitis",
+   "aerotitis media",
+   "barotitis",
+   "barotitis media",
+   "airplane ear",
+   "aeroplane ear"
+  ],
+  "clues": [
+   {
+    "t": "27-year-old woman with a head cold, flying home for the holidays."
+   },
+   {
+    "t": "Cruising was uneventful, apart from a blocked nose."
+   },
+   {
+    "t": "As the plane began to come down, pain built sharply in her right ear."
+   },
+   {
+    "t": "Swallowing and yawning didn't help at all."
+   },
+   {
+    "t": "The ear still feels full and muffled after landing."
+   },
+   {
+    "t": "Otoscopy: red, pulled-in eardrum with fluid behind it",
+    "d": 1
+   }
+  ],
+  "pearl": "Cabin pressure rises on the way down, and a Eustachian tube blocked by a cold can't let air in to balance it. That's why descent hurts more than take-off, and why babies do better feeding as the plane descends.",
+  "fact": "/eustachian-tube/"
+ },
+ {
+  "date": "2026-12-08",
+  "number": 53,
+  "difficulty": "Easy",
+  "title": "Bottle service",
+  "answer": "Early childhood caries",
+  "accept": [
+   "early childhood caries",
+   "ecc",
+   "baby bottle tooth decay",
+   "bottle tooth decay",
+   "baby bottle caries",
+   "bottle caries",
+   "nursing caries",
+   "bottle rot",
+   "tooth decay",
+   "dental caries",
+   "caries",
+   "rampant caries",
+   "dental decay"
+  ],
+  "clues": [
+   {
+    "t": "2-year-old girl. Her dad has noticed brown marks on her top front teeth."
+   },
+   {
+    "t": "Her bottom front teeth look perfectly fine."
+   },
+   {
+    "t": "She falls asleep with a bottle every night."
+   },
+   {
+    "t": "Usually juice, sometimes milk."
+   },
+   {
+    "t": "The town's water supply isn't fluoridated."
+   },
+   {
+    "t": "Her upper front teeth have started to chip and break down."
+   }
+  ],
+  "pearl": "The tongue and saliva protect the lower front teeth, so the pattern is the giveaway. Tooth decay is one of the most common chronic diseases of childhood worldwide, and a first dental visit by the first birthday is widely advised."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 54,
+  "difficulty": "Medium",
+  "title": "Little visitors",
+  "answer": "Charles Bonnet syndrome",
+  "accept": [
+   "charles bonnet",
+   "charles bonnet syndrome",
+   "bonnet syndrome",
+   "cbs",
+   "visual release hallucinations",
+   "phantom vision"
+  ],
+  "clues": [
+   {
+    "t": "84-year-old woman, sharp as a tack and living independently."
+   },
+   {
+    "t": "She keeps seeing tiny people in old-fashioned costume on her living-room rug."
+   },
+   {
+    "t": "They are silent and vivid, and they ignore her completely."
+   },
+   {
+    "t": "She knows they aren't real, and hasn't told anyone in case they think she's losing her mind."
+   },
+   {
+    "t": "Cognitive screen 29/30. No delirium. No new medicines.",
+    "d": 1
+   },
+   {
+    "t": "She has advanced macular degeneration in both eyes."
+   }
+  ],
+  "pearl": "When vision fades, the brain's visual areas can start filling in the blanks. In 1760 Charles Bonnet described his own grandfather, Charles Lullin, who was nearly blind and saw patterns, people and carriages. Oliver Sacks wrote warmly about it. Asking kindly matters, because people often hide it for fear of being called demented."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 55,
+  "difficulty": "Medium",
+  "title": "Not the stress",
+  "answer": "Helicobacter pylori peptic ulcer",
+  "accept": [
+   "helicobacter pylori",
+   "h pylori",
+   "helicobacter",
+   "h pylori ulcer",
+   "helicobacter pylori ulcer",
+   "helicobacter pylori peptic ulcer",
+   "peptic ulcer",
+   "peptic ulcer disease",
+   "pud",
+   "duodenal ulcer",
+   "gastric ulcer",
+   "stomach ulcer"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old woman with gnawing upper abdominal pain that wakes her at 2 am."
+   },
+   {
+    "t": "Food and a glass of milk ease it for a while."
+   },
+   {
+    "t": "She blames her stressful job. So did her last doctor."
+   },
+   {
+    "t": "Hb 112 g/L · MCV 78 fL",
+    "d": 1
+   },
+   {
+    "t": "Gastroscopy: clean-based crater in the first part of the duodenum",
+    "d": 1
+   },
+   {
+    "t": "Urea breath test positive. Biopsy shows curved Gram-negative rods.",
+    "d": 1
+   }
+  ],
+  "pearl": "Stress got the blame for decades. In Perth, Robin Warren and Barry Marshall showed a bacterium was behind most ulcers, and Marshall drank a culture of it in 1984 to help prove the point. They shared the 2005 Nobel Prize in Physiology or Medicine."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 56,
+  "difficulty": "Hard",
+  "title": "The slow climber",
+  "answer": "High-altitude pulmonary oedema",
+  "accept": [
+   "hape",
+   "high altitude pulmonary oedema",
+   "high altitude pulmonary edema",
+   "altitude pulmonary oedema",
+   "altitude pulmonary edema",
+   "high altitude oedema of the lung",
+   "high altitude lung oedema"
+  ],
+  "clues": [
+   {
+    "t": "36-year-old man, a marathon runner, on day three of a fast Himalayan trek."
+   },
+   {
+    "t": "Today he keeps falling behind. His pack feels twice as heavy."
+   },
+   {
+    "t": "A dry cough kept him up all night."
+   },
+   {
+    "t": "He's breathless just sitting on his bunk. His lips look dusky."
+   },
+   {
+    "t": "SpO₂ 62% at 4,300 m · crackles at both lung bases",
+    "d": 1
+   },
+   {
+    "t": "He has started coughing up pink, frothy sputum."
+   }
+  ],
+  "pearl": "Fitness offers no protection. Low oxygen clamps the lung's blood vessels unevenly, and the high-pressure patches leak. It's the leading cause of death from altitude illness, it can come without the classic headache, and descending promptly is the key treatment."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 57,
+  "difficulty": "Hard",
+  "title": "A childhood sore throat",
+  "answer": "Rheumatic mitral stenosis",
+  "accept": [
+   "rheumatic mitral stenosis",
+   "mitral stenosis",
+   "mitral valve stenosis",
+   "rheumatic heart disease",
+   "rhd",
+   "rheumatic valve disease",
+   "rheumatic mitral valve disease"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman, 28 weeks pregnant, more breathless each week."
+   },
+   {
+    "t": "She now sleeps sitting up on three pillows."
+   },
+   {
+    "t": "She grew up in a crowded house in a remote community, and clinic visits were a day's travel away."
+   },
+   {
+    "t": "At age 9 she had painful swollen joints that moved from knee to ankle to elbow."
+   },
+   {
+    "t": "A loud first heart sound, then a low rumbling mid-diastolic murmur at the apex."
+   },
+   {
+    "t": "Echo: thickened, fused valve leaflets with a 'hockey stick' shape opening",
+    "d": 1
+   }
+  ],
+  "pearl": "A disease of poverty, not bad luck. It follows untreated strep infections, is linked to crowding, and has nearly vanished from wealthy settings but remains common in low-income countries and in Aboriginal, Māori and Pacific communities. Pregnancy's extra blood volume often unmasks it."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 58,
+  "difficulty": "Genius",
+  "title": "Normal at rest",
+  "answer": "Catecholaminergic polymorphic ventricular tachycardia",
+  "accept": [
+   "cpvt",
+   "catecholaminergic polymorphic ventricular tachycardia",
+   "catecholaminergic polymorphic vt",
+   "catecholaminergic vt",
+   "catecholaminergic ventricular tachycardia",
+   "catecholaminergic tachycardia"
+  ],
+  "clues": [
+   {
+    "t": "13-year-old girl who has fainted three times this year."
+   },
+   {
+    "t": "Twice in the pool, once when a friend jumped out at her."
+   },
+   {
+    "t": "She was told she had epilepsy, but the tablets changed nothing."
+   },
+   {
+    "t": "Resting ECG and echo: normal",
+    "d": 1
+   },
+   {
+    "t": "She collapses at training. A coach uses the club's defibrillator: VF, one shock, pulse back."
+   },
+   {
+    "t": "Exercise test: at HR 130 the QRS alternates direction, beat by beat. Her cousin drowned at 11, a strong swimmer.",
+    "d": 1
+   }
+  ],
+  "pearl": "Adrenaline makes heart cells mishandle calcium, usually through an RYR2 variant, so a normal resting ECG is the trap. Fainting during exercise or fright is never 'just a faint' until the heart is cleared. Claude Beck's first human defibrillation, in 1947, saved a 14-year-old."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 59,
+  "difficulty": "Easy",
+  "title": "Leaning in",
+  "answer": "Epiglottitis",
+  "accept": [
+   "epiglottitis",
+   "acute epiglottitis",
+   "supraglottitis",
+   "acute supraglottitis",
+   "supraglottic infection"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old man with the worst sore throat of his life, come on over a few hours."
+   },
+   {
+    "t": "He can't swallow his own saliva and is spitting into a tissue."
+   },
+   {
+    "t": "His voice sounds as though he's talking through a hot potato."
+   },
+   {
+    "t": "He's sitting bolt upright, leaning forward on his hands with his chin pushed out."
+   },
+   {
+    "t": "Temp 39.4°C · a high-pitched noise when he breathes in",
+    "d": 1
+   },
+   {
+    "t": "Lateral neck X-ray: a swollen 'thumb' above the airway",
+    "d": 1
+   }
+  ],
+  "pearl": "The Hib vaccine has made it far rarer in children, so adults are now a larger share of cases. George Washington's fatal throat illness in 1799 is often put down to it. His doctors, doing their best by the standards of the day, drew off a large share of his blood."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 60,
+  "difficulty": "Easy",
+  "title": "Lights out",
+  "answer": "Acute angle-closure glaucoma",
+  "accept": [
+   "acute angle closure glaucoma",
+   "angle closure glaucoma",
+   "acute glaucoma",
+   "glaucoma",
+   "closed angle glaucoma",
+   "acute closed angle glaucoma",
+   "narrow angle glaucoma",
+   "aacg",
+   "acute angle closure",
+   "primary angle closure"
+  ],
+  "clues": [
+   {
+    "t": "68-year-old woman watching a film in a dark cinema."
+   },
+   {
+    "t": "Suddenly, severe pain in her right eye and forehead."
+   },
+   {
+    "t": "She sees rainbow haloes around the exit lights."
+   },
+   {
+    "t": "She starts vomiting, and her family assume it's something she ate."
+   },
+   {
+    "t": "Her right eye is red and the pupil is mid-sized and doesn't react."
+   },
+   {
+    "t": "The eye feels rock-hard through the closed lid."
+   }
+  ],
+  "pearl": "Dim light widens the pupil, and in a narrow eye that can shut the drainage angle. Pressure soars within hours, and sight is at stake, so this is an emergency. On Zamenhof Day, a nod to the Polish eye doctor who also invented Esperanto."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 61,
+  "difficulty": "Medium",
+  "title": "Better at the pub",
+  "answer": "Otosclerosis",
+  "accept": [
+   "otosclerosis",
+   "otospongiosis",
+   "stapes fixation",
+   "stapedial otosclerosis"
+  ],
+  "clues": [
+   {
+    "t": "32-year-old woman whose hearing has been slowly fading in both ears."
+   },
+   {
+    "t": "Oddly, she follows conversation better in a noisy pub than a quiet room."
+   },
+   {
+    "t": "Her mother needed hearing aids young."
+   },
+   {
+    "t": "It got noticeably worse during her pregnancy."
+   },
+   {
+    "t": "Both eardrums look completely normal."
+   },
+   {
+    "t": "Audiogram: conductive loss, with a bone-conduction dip at 2 kHz",
+    "d": 1
+   }
+  ],
+  "pearl": "Abnormal bone growth fixes the stapes in place. Hearing better in noise is called paracusis of Willis, and the 2 kHz dip is the Carhart notch. Otosclerosis is one of many theories for Beethoven's deafness, and the true cause has never been settled."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 62,
+  "difficulty": "Medium",
+  "title": "Cabin pressure",
+  "answer": "Decompression sickness",
+  "accept": [
+   "decompression sickness",
+   "decompression illness",
+   "dcs",
+   "dci",
+   "the bends",
+   "bends",
+   "caisson disease"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man on a flight home from a tropical holiday. A deep ache has started in his right shoulder."
+   },
+   {
+    "t": "By landing, his legs tingle and feel heavy, and his thinking is foggy."
+   },
+   {
+    "t": "A blotchy, marbled rash has appeared across his chest."
+   },
+   {
+    "t": "ECG, troponin and D-dimer: all normal",
+    "d": 1
+   },
+   {
+    "t": "He did his last deep scuba dive the morning before he flew."
+   },
+   {
+    "t": "He improves on 100% oxygen. The hospital calls the hyperbaric unit."
+   }
+  ],
+  "pearl": "Airliner cabins are pressurised only to about 2,400 m, which is enough for leftover nitrogen from a dive to bubble out of the tissues. Dive agencies advise waiting 12 to 24 hours before flying, longer after multiple dives."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 63,
+  "difficulty": "Hard",
+  "title": "A long way from home",
+  "answer": "Chagas disease (chronic cardiomyopathy)",
+  "accept": [
+   "chagas",
+   "chagas disease",
+   "chagas' disease",
+   "chagass disease",
+   "chagas cardiomyopathy",
+   "chronic chagas cardiomyopathy",
+   "american trypanosomiasis",
+   "trypanosoma cruzi",
+   "t cruzi",
+   "t. cruzi"
+  ],
+  "clues": [
+   {
+    "t": "46-year-old cleaner who tires easily and gets breathless on the stairs."
+   },
+   {
+    "t": "She has fainted twice in the past month."
+   },
+   {
+    "t": "She moved to Madrid from rural Bolivia 12 years ago. As a girl she slept in an adobe house with a thatched roof."
+   },
+   {
+    "t": "ECG: right bundle branch block plus left anterior fascicular block",
+    "d": 1
+   },
+   {
+    "t": "Echo: apical left ventricular aneurysm, ejection fraction 35%",
+    "d": 1
+   },
+   {
+    "t": "IgG positive on two different serological tests for a protozoan spread by triatomine bugs",
+    "d": 1
+   }
+  ],
+  "pearl": "Carlos Chagas described the disease in Brazil in 1909: parasite, insect vector and first patient, a two-year-old girl called Berenice. With migration it is now seen well beyond Latin America, including in Europe, and it can pass from mother to baby in pregnancy."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 64,
+  "difficulty": "Hard",
+  "title": "The King's Evil",
+  "answer": "Scrofula (tuberculous cervical lymphadenitis)",
+  "accept": [
+   "scrofula",
+   "tuberculous cervical lymphadenitis",
+   "tuberculous lymphadenitis",
+   "tb lymphadenitis",
+   "cervical tb",
+   "cervical tuberculosis",
+   "lymph node tuberculosis",
+   "lymph node tb",
+   "king's evil",
+   "kings evil",
+   "tuberculosis",
+   "tb"
+  ],
+  "clues": [
+   {
+    "t": "8-year-old girl with a painless lump on the side of her neck, there for two months."
+   },
+   {
+    "t": "A course of antibiotics did nothing."
+   },
+   {
+    "t": "The lump is now firm and matted, and the skin over it has turned purplish."
+   },
+   {
+    "t": "Her grandfather, who stayed with the family last year, had a cough that lasted for months."
+   },
+   {
+    "t": "Fine-needle aspirate: caseating granulomas",
+    "d": 1
+   },
+   {
+    "t": "Ziehl-Neelsen stain: acid-fast bacilli",
+    "d": 1
+   }
+  ],
+  "pearl": "Common in Victorian Britain, often thanks to unpasteurised milk. For centuries English and French monarchs were believed to cure it with a touch: the writer Samuel Johnson was touched by Queen Anne as a small child. It didn't work."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 65,
+  "difficulty": "Genius",
+  "title": "Common ground",
+  "answer": "Podoconiosis",
+  "accept": [
+   "podoconiosis",
+   "podo",
+   "non filarial elephantiasis",
+   "nonfilarial elephantiasis",
+   "endemic non filarial elephantiasis",
+   "endemic nonfilarial elephantiasis",
+   "mossy foot",
+   "mossy foot disease"
+  ],
+  "clues": [
+   {
+    "t": "40-year-old woman, a farmer, with heavy, itchy feet since her teens."
+   },
+   {
+    "t": "Both legs have slowly swollen, always below the knee."
+   },
+   {
+    "t": "The skin of her feet has thickened, with moss-like bumps."
+   },
+   {
+    "t": "Blood tests for filarial worm infection: negative. No mosquito-borne cause found.",
+    "d": 1
+   },
+   {
+    "t": "She has worked barefoot her whole life on red volcanic clay in the Ethiopian highlands."
+   },
+   {
+    "t": "Many of her neighbours have it too. Their children who wear shoes don't."
+   }
+  ],
+  "pearl": "Mineral particles from irritant volcanic soil enter through the skin of bare feet and inflame the lymphatics in people with a genetic susceptibility. WHO estimates about 1 million people are affected in Ethiopia alone. It is entirely preventable with shoes and clean floors, yet it brings heavy stigma."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 66,
+  "difficulty": "Easy",
+  "title": "Deep breaths",
+  "answer": "Vasovagal syncope",
+  "accept": [
+   "vasovagal syncope",
+   "vasovagal",
+   "vasovagal attack",
+   "vasovagal episode",
+   "vasovagal faint",
+   "faint",
+   "fainting",
+   "simple faint",
+   "common faint",
+   "reflex syncope",
+   "neurocardiogenic syncope",
+   "neurally mediated syncope",
+   "syncope"
+  ],
+  "clues": [
+   {
+    "t": "20-year-old woman giving blood for the first time."
+   },
+   {
+    "t": "She feels hot, clammy and sick, and her vision narrows to a tunnel."
+   },
+   {
+    "t": "She slumps in the chair and is out for about 15 seconds."
+   },
+   {
+    "t": "She comes round quickly and clear-headed. No tongue bite."
+   },
+   {
+    "t": "HR 44 · BP 82/48, both recovering within minutes",
+    "d": 1
+   },
+   {
+    "t": "It happened once before, at the sight of her brother's stitches."
+   }
+  ],
+  "pearl": "A surge through the vagus nerve slows the heart and relaxes the blood vessels. The word vagus means 'wandering', since the nerve travels from the brainstem to the gut. Tensing the leg and arm muscles at the first warning can head a faint off."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 67,
+  "difficulty": "Easy",
+  "title": "Hark, the herald",
+  "answer": "Pityriasis rosea",
+  "accept": [
+   "pityriasis rosea",
+   "pityriasis",
+   "christmas tree rash",
+   "herald patch rash",
+   "herald patch"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman with a new rash on her trunk."
+   },
+   {
+    "t": "It began a week ago with one oval pink patch, which she took for ringworm."
+   },
+   {
+    "t": "Now dozens of smaller patches have joined it."
+   },
+   {
+    "t": "Each has a fine collar of scale just inside its edge."
+   },
+   {
+    "t": "Only mildly itchy. She feels completely well."
+   },
+   {
+    "t": "On her back, the patches slope down and out like the branches of a Christmas tree."
+   }
+  ],
+  "pearl": "The first patch is the 'herald' that announces the rest. Reactivated herpesviruses 6 and 7 are suspected but not proven as the cause. It usually fades by itself within a couple of months, and antifungal cream does nothing for it."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 68,
+  "difficulty": "Medium",
+  "title": "Runs in the family",
+  "answer": "Autosomal dominant polycystic kidney disease",
+  "accept": [
+   "adpkd",
+   "pkd",
+   "polycystic kidney disease",
+   "polycystic kidneys",
+   "polycystic kidney",
+   "autosomal dominant polycystic kidney disease",
+   "autosomal dominant polycystic kidneys",
+   "adult polycystic kidney disease",
+   "apkd"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man with high blood pressure since his late twenties."
+   },
+   {
+    "t": "Dull flank pain on and off, and pink urine once after a hard game of football."
+   },
+   {
+    "t": "eGFR 62 mL/min/1.73 m²",
+    "d": 1
+   },
+   {
+    "t": "His mother started dialysis at 54, then had a transplant from her brother."
+   },
+   {
+    "t": "His doctor can feel a large mass in each flank."
+   },
+   {
+    "t": "Ultrasound: both kidneys huge and riddled with fluid-filled sacs, with more in the liver",
+    "d": 1
+   }
+  ],
+  "pearl": "The most common inherited kidney disease, usually from PKD1 or PKD2 variants. Brain aneurysms run in some families, so family history matters. The first successful kidney transplant was between identical twins, Ronald and Richard Herrick, in Boston on 23 December 1954."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 69,
+  "difficulty": "Medium",
+  "title": "Stocking filler",
+  "answer": "Button battery ingestion",
+  "accept": [
+   "button battery ingestion",
+   "button battery",
+   "swallowed button battery",
+   "button cell",
+   "button cell ingestion",
+   "swallowed button cell",
+   "battery ingestion",
+   "swallowed battery",
+   "battery",
+   "coin cell",
+   "coin cell ingestion",
+   "coin battery",
+   "coin battery ingestion",
+   "disc battery ingestion",
+   "disk battery ingestion",
+   "lithium battery ingestion"
+  ],
+  "clues": [
+   {
+    "t": "18-month-old girl, drooling and refusing her Christmas Eve dinner."
+   },
+   {
+    "t": "She was well an hour ago. Now she's gagging and coughing on and off."
+   },
+   {
+    "t": "Her voice has gone hoarse."
+   },
+   {
+    "t": "A musical greeting card on the coffee table has been pulled apart."
+   },
+   {
+    "t": "Chest X-ray: round metallic object in the upper oesophagus",
+    "d": 1
+   },
+   {
+    "t": "Close up: a double ring at its edge on the front view, a step on the side view",
+    "d": 1
+   }
+  ],
+  "pearl": "Happy birthday James Joule: a small cell holds plenty of energy. Against a wet oesophageal wall it sets up a current that makes caustic hydroxide, and serious burns can start within 2 hours. A coin looks similar, which is why the 'halo' is worth looking for. This one is always an emergency."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 70,
+  "difficulty": "Hard",
+  "title": "'Tis the season",
+  "answer": "Holiday heart syndrome",
+  "accept": [
+   "holiday heart",
+   "holiday heart syndrome",
+   "alcohol-induced atrial fibrillation",
+   "alcohol induced atrial fibrillation",
+   "alcohol-related atrial fibrillation",
+   "alcohol related atrial fibrillation",
+   "alcohol-induced af",
+   "alcohol induced af"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old woman arrives at the emergency department on Christmas night saying her heart is flopping like a fish in her chest."
+   },
+   {
+    "t": "No heart history, no regular medicines, two children, one tired partner."
+   },
+   {
+    "t": "It's her third party in three days, after work drinks on Monday."
+   },
+   {
+    "t": "HR 138, irregularly irregular · BP 122/76",
+    "d": 1
+   },
+   {
+    "t": "Echo: normal · TSH: normal · Troponin: not raised",
+    "d": 1
+   },
+   {
+    "t": "Back in normal rhythm by the next morning.",
+    "d": 1
+   }
+  ],
+  "pearl": "Named by Philip Ettinger and colleagues in 1978, after drinkers with no known heart disease turned up with rhythm problems following weekends and holidays. Usually it's atrial fibrillation, and it often settles by itself, but that doesn't make it a Christmas tradition.",
+  "fact": "/atrial-fibrillation/"
+ },
+ {
+  "date": "2026-12-26",
+  "number": 71,
+  "difficulty": "Hard",
+  "title": "Lip, dip, paint",
+  "answer": "Radium jaw (radium poisoning)",
+  "accept": [
+   "radium jaw",
+   "radium poisoning",
+   "radium necrosis",
+   "radium necrosis of the jaw",
+   "radium toxicity",
+   "radium exposure",
+   "radium",
+   "radium girls",
+   "radiation necrosis of the jaw",
+   "radiation jaw necrosis",
+   "osteoradionecrosis",
+   "osteoradionecrosis of the jaw",
+   "radiation poisoning"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman in New Jersey, 1923, with a loose, aching tooth."
+   },
+   {
+    "t": "Her dentist pulled it. The socket hasn't healed, and bits of jawbone are coming away."
+   },
+   {
+    "t": "Hb 78 g/L",
+    "d": 1
+   },
+   {
+    "t": "Her hip has started to ache, and she's lost two workmates to a mystery illness."
+   },
+   {
+    "t": "At the factory, she shapes her fine brush to a point with her lips."
+   },
+   {
+    "t": "She paints watch dials, and her clothes glow faintly in the dark."
+   }
+  ],
+  "pearl": "A fictional case based on the real 'Radium Girls'. The body treats radium like calcium and builds it into bone. Their fight in court, settled in 1928, helped shape worker safety law. Marie and Pierre Curie announced radium on 26 December 1898."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 72,
+  "difficulty": "Genius",
+  "title": "Everyone had flu that year",
+  "answer": "Encephalitis lethargica",
+  "accept": [
+   "encephalitis lethargica",
+   "von economo",
+   "von economo's encephalitis",
+   "von economo encephalitis",
+   "von economos disease",
+   "von economo's disease",
+   "economo's disease",
+   "economos disease",
+   "sleepy sickness",
+   "epidemic encephalitis",
+   "lethargic encephalitis"
+  ],
+  "clues": [
+   {
+    "t": "23-year-old woman in Vienna, 1919, with sore throat, fever and headache."
+   },
+   {
+    "t": "Her doctor assumes it's the same influenza as everyone else."
+   },
+   {
+    "t": "Then she develops double vision, and her eyes stop moving properly."
+   },
+   {
+    "t": "She sleeps up to 20 hours a day, wakes when spoken to, answers sensibly, and drops off again."
+   },
+   {
+    "t": "Hospitals across Europe and beyond are seeing the same strange cases."
+   },
+   {
+    "t": "Years later she freezes in place, as if with severe parkinsonism."
+   }
+  ],
+  "pearl": "Constantin von Economo described it in Vienna in 1917, and it spread worldwide until about 1928, then all but vanished. The cause has never been established. Decades later, Oliver Sacks gave survivors levodopa in New York, the story behind his book Awakenings."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 73,
+  "difficulty": "Easy",
+  "title": "Origin story",
+  "answer": "Marfan syndrome",
+  "accept": [
+   "marfan",
+   "marfans",
+   "marfan's",
+   "marfan syndrome",
+   "marfans syndrome",
+   "marfan's syndrome",
+   "marfan disease",
+   "fbn1"
+  ],
+  "clues": [
+   {
+    "t": "17-year-old woman, her school's star volleyball player, and much taller and slimmer than anyone in her family bar her father."
+   },
+   {
+    "t": "Her arm span is longer than her height."
+   },
+   {
+    "t": "Her breastbone sticks outward."
+   },
+   {
+    "t": "The lens in one of her eyes has shifted out of place."
+   },
+   {
+    "t": "Gripping her own wrist, her thumb and little finger overlap easily."
+   },
+   {
+    "t": "Echo: widened aortic root",
+    "d": 1
+   }
+  ],
+  "pearl": "Named after French paediatrician Antoine Marfan, who described a tall, long-limbed girl in 1896. A variant in FBN1 weakens connective tissue. Real biology offers no superpowers here, but regular aortic monitoring has transformed life expectancy."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 74,
+  "difficulty": "Einstein",
+  "title": "Bounces back",
+  "answer": "Blue rubber bleb naevus syndrome",
+  "accept": [
+   "blue rubber bleb naevus syndrome",
+   "blue rubber bleb nevus syndrome",
+   "blue rubber bleb naevus",
+   "blue rubber bleb nevus",
+   "blue rubber bleb",
+   "brbns",
+   "bean syndrome",
+   "beans syndrome",
+   "bean's syndrome",
+   "blue rubber bleb syndrome"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old woman who has needed iron infusions every six months since her teens."
+   },
+   {
+    "t": "Two sets of scopes found only 'a few small bruise-like spots', nothing worth treating."
+   },
+   {
+    "t": "A tender spot on the sole of her foot has been blamed on her shoes for years."
+   },
+   {
+    "t": "Close up, it's a soft dark dome. It flattens when pressed, then slowly refills."
+   },
+   {
+    "t": "Capsule endoscopy: dozens of violet, nipple-like lesions through the small bowel",
+    "d": 1
+   },
+   {
+    "t": "Biopsy: thin-walled venous channels. Sequencing of the lesion finds a TEK (TIE2) variant.",
+    "d": 1
+   }
+  ],
+  "pearl": "Happy birthday Charles Goodyear. Rare venous malformations in the skin and gut, named by William Bean in 1958 for their rubbery feel. Most cases are sporadic, and the gut lesions cause chronic bleeding. Sirolimus has shown promise in reports of individual patients."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 75,
+  "difficulty": "Medium",
+  "title": "Red flag on the ninth",
+  "answer": "Cauda equina syndrome",
+  "accept": [
+   "cauda equina",
+   "cauda equina syndrome",
+   "ces",
+   "cauda equina compression"
+  ],
+  "clues": [
+   {
+    "t": "46-year-old man, a keen golfer, with low back pain since one big swing."
+   },
+   {
+    "t": "Now the pain is shooting down both legs."
+   },
+   {
+    "t": "He can't feel the toilet paper when he wipes."
+   },
+   {
+    "t": "He can't tell when he's passing urine."
+   },
+   {
+    "t": "Post-void bladder scan: 780 mL",
+    "d": 1
+   },
+   {
+    "t": "MRI: large central L4/5 disc squashing the bundle of nerve roots below the spinal cord",
+    "d": 1
+   }
+  ],
+  "pearl": "Most back pain settles, and this is the rare exception that can't wait. Pain in both legs, saddle numbness, and bladder, bowel or sexual changes need same-day assessment, because delays can mean permanent loss of function.",
+  "fact": "/sciatica/"
+ },
+ {
+  "date": "2026-12-31",
+  "number": 76,
+  "difficulty": "Medium",
+  "title": "After the countdown",
+  "answer": "Boerhaave syndrome",
+  "accept": [
+   "boerhaave",
+   "boerhaaves",
+   "boerhaave's",
+   "boerhaave syndrome",
+   "boerhaaves syndrome",
+   "boerhaave's syndrome",
+   "oesophageal rupture",
+   "esophageal rupture",
+   "ruptured oesophagus",
+   "ruptured esophagus",
+   "oesophageal perforation",
+   "esophageal perforation",
+   "perforated oesophagus",
+   "perforated esophagus",
+   "spontaneous oesophageal rupture",
+   "spontaneous esophageal rupture"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old man at a New Year's Eve party. The champagne went down well, then came back up."
+   },
+   {
+    "t": "Forceful, repeated vomiting, just after midnight."
+   },
+   {
+    "t": "Straight after, sudden tearing central chest pain, worse on swallowing."
+   },
+   {
+    "t": "HR 124 · BP 100/60 · Temp 38.6°C",
+    "d": 1
+   },
+   {
+    "t": "The skin of her neck crackles when pressed."
+   },
+   {
+    "t": "Chest X-ray: left pleural effusion and air around the mediastinum",
+    "d": 1
+   }
+  ],
+  "pearl": "Herman Boerhaave, born on this day in 1668, described it in 1724 in a Dutch grand admiral who had made himself vomit after a feast. Vomiting, chest pain and neck air form Mackler's triad. Unlike a Mallory-Weiss tear, this goes all the way through the wall."
+ }
+]
