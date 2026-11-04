@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis. Tags \"history\" (medical-history anniversary) and \"fun\" (quirky day with a health angle) fill days with no awareness day so every date has a theme; they use priority 4 (history) or 5 (fun), so any real awareness day on the same date leads. \"normie\": {name, blurb} = the light, everyday version shown in Normie mode (events without it are hidden there). THEME SPREAD (Nov 2026): on themed days, theme at least 4-5 games, not just Triviosis, using a brainstormed web of associated ideas (e.g. Tsunami Day -> water, islands, boats, sun, earthquakes, cholera, drowning (gentle), crush injury, triage). See STYLE.md 'Daily themes'. Tag 'country' = national day of a country (priority 4): theme puzzles on that country's medical words (incl. funny long ones), famous doctors and inventions, health stats and eponyms; shown to all visitors.",
+ "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis. Tags \"history\" (medical-history anniversary) and \"fun\" (quirky day with a health angle) fill days with no awareness day so every date has a theme; they use priority 4 (history) or 5 (fun), so any real awareness day on the same date leads. \"normie\": {name, blurb} = the light, everyday version shown in Normie mode (events without it are hidden there). THEME SPREAD (Nov 2026): on themed days, theme at least 4-5 games, not just Triviosis, using a brainstormed web of associated ideas (e.g. Tsunami Day -> water, islands, boats, sun, earthquakes, cholera, drowning (gentle), crush injury, triage). See STYLE.md 'Daily themes'. Tag 'country' = national day of a country (priority 3): theme puzzles on that country's medical words (incl. funny long ones), famous doctors and inventions, health stats and eponyms; shown to all visitors.",
  "updated": "2026-11-03",
  "days": [
   {
@@ -15691,6 +15691,1026 @@
    "blurb": "About 1 in 33 babies is born with a birth defect. Folic acid before pregnancy helps prevent neural tube defects.",
    "puzzle_theme": "Congenital anomalies: embryology, folate, neural tube defects, prenatal screening. No jokes about patients.",
    "icon": "hands-heart"
+  },
+  {
+   "id": "fr-day",
+   "name": "Bastille Day (France)",
+   "kind": "day",
+   "rule": "07-14",
+   "dates": {
+    "2026": {
+     "start": "2026-07-14"
+    },
+    "2027": {
+     "start": "2027-07-14"
+    },
+    "2028": {
+     "start": "2028-07-14"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Bastille_Day",
+   "blurb": "France gave us the stethoscope: Laennec rolled up paper in 1816 rather than press his ear to a patient's chest.",
+   "puzzle_theme": "French medical words: gueule de bois (hangover, lit. 'wooden mouth'), mal de mer (seasickness), crise de foie ('liver crisis', blamed for indigestion), avoir un chat dans la gorge (a frog in the throat, lit. 'a cat in the throat'); Laennec's stethoscope (1816); Louis Pasteur (pasteurisation, rabies vaccine 1885); Ambroise Paré (tying off arteries instead of cautery); eponyms: Tourette syndrome (Gilles de la Tourette), Broca's area (Paul Broca), Guillain-Barré syndrome, Charcot-Marie-Tooth disease (Charcot and Marie French, Tooth English); health system: the green Carte Vitale health card; stat: life expectancy over 82 years (World Bank)",
+   "icon": null,
+   "normie": {
+    "name": "Bastille Day",
+    "blurb": "Fireworks over the Eiffel Tower and a military parade on the Champs-Élysées. Vive la France, and pass the croissants.",
+    "theme": "French words: pamplemousse (grapefruit), bisou (kiss), chaussettes (socks), déjà vu; Eiffel Tower (1889), Louvre, Tour de France; baguette know-how added to UNESCO's heritage list in 2022; croissant, crêpe, camembert; Bastille stormed 14 July 1789"
+   }
+  },
+  {
+   "id": "de-day",
+   "name": "Day of German Unity (Germany)",
+   "kind": "day",
+   "rule": "10-03",
+   "dates": {
+    "2026": {
+     "start": "2026-10-03"
+    },
+    "2027": {
+     "start": "2027-10-03"
+    },
+    "2028": {
+     "start": "2028-10-03"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/German_Unity_Day",
+   "blurb": "Germany gave the world national health insurance: Bismarck's 1883 sickness insurance law was the first of its kind.",
+   "puzzle_theme": "German compound words: Hals-Nasen-Ohren-Arzt (ENT doctor, lit. 'throat-nose-ear doctor'), Kreislaufzusammenbruch (circulatory collapse, i.e. fainting), Krankenhaus (hospital, lit. 'sick house'), Muskelkater (muscle soreness, lit. 'muscle tomcat'), Zahnfleisch (gums, lit. 'tooth meat'), Durchfall (diarrhoea, lit. 'through-fall'); Wilhelm Röntgen (X-rays, 1895); Robert Koch (TB bacterium, 1882); Paul Ehrlich (Salvarsan 'magic bullet', 1910); Felix Hoffmann at Bayer (aspirin, 1897); eponyms: Alzheimer's disease (Alois Alzheimer, 1906), Wernicke's area, Basedow's disease (German name for Graves' disease); Bismarck's 1883 Health Insurance Law",
+   "icon": null,
+   "normie": {
+    "name": "German Unity Day",
+    "blurb": "On 3 October 1990, East and West Germany became one country again. Prost to pretzels, castles and very long words.",
+    "theme": "German words: Handschuh (glove, lit. 'hand shoe'), Stinktier (skunk), Ohrwurm (earworm), Kummerspeck (weight gained from comfort eating, lit. 'grief bacon'), Schadenfreude; Brandenburg Gate; Berlin Wall fell 9 November 1989; Brezel (pretzel), Black Forest cake, bratwurst; Neuschwanstein Castle; Beethoven, Einstein"
+   }
+  },
+  {
+   "id": "en-day",
+   "name": "St George's Day (England)",
+   "kind": "day",
+   "rule": "04-23",
+   "dates": {
+    "2026": {
+     "start": "2026-04-23"
+    },
+    "2027": {
+     "start": "2027-04-23"
+    },
+    "2028": {
+     "start": "2028-04-23"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Saint_George%27s_Day_in_England",
+   "blurb": "England gave the world vaccination: Edward Jenner tested cowpox against smallpox in 1796, and 'vaccine' comes from vacca, Latin for cow.",
+   "puzzle_theme": "English slang for feeling unwell: collywobbles (nervous tummy), lurgy (a vague bug), gammy (a bad leg), knackered (exhausted); Edward Jenner (smallpox vaccination, 1796); John Snow (Broad Street pump, cholera, 1854); William Harvey (circulation of the blood, 1628); Florence Nightingale (nursing, Crimean War); Rosalind Franklin (Photo 51, DNA); eponyms: Parkinson's disease (James Parkinson, 1817), Hodgkin lymphoma (Thomas Hodgkin), Addison's disease (Thomas Addison), Down syndrome (John Langdon Down); NHS founded 5 July 1948",
+   "icon": "teacup",
+   "normie": {
+    "name": "St George's Day",
+    "blurb": "England's day: a knight, a dragon and a nice cup of tea. Shakespeare is also said to have been born and died on 23 April.",
+    "theme": "English words: cuppa, chuffed, gobsmacked, brolly; St George and the dragon legend; Stonehenge, Big Ben (the bell, not the tower), the White Cliffs of Dover; fish and chips, Yorkshire pudding, scones; Shakespeare died 23 April 1616"
+   }
+  },
+  {
+   "id": "sco-day",
+   "name": "St Andrew's Day (Scotland)",
+   "kind": "day",
+   "rule": "11-30",
+   "dates": {
+    "2026": {
+     "start": "2026-11-30"
+    },
+    "2027": {
+     "start": "2027-11-30"
+    },
+    "2028": {
+     "start": "2028-11-30"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day",
+   "blurb": "Scotland's Alexander Fleming discovered penicillin in 1928, and Edinburgh's James Young Simpson introduced chloroform anaesthesia in 1847.",
+   "puzzle_theme": "Scots words: peely-wally (pale and sickly-looking), boak (retch or vomit), wabbit (exhausted), oxter (armpit); Alexander Fleming (penicillin, 1928); James Young Simpson (chloroform, 1847); Joseph Lister (antiseptic surgery, developed in Glasgow); John Macleod (insulin, Nobel 1923); Ian Donald (obstetric ultrasound, Glasgow, 1950s); Dolly the sheep (first cloned mammal from an adult cell, Roslin Institute, born 1996); eponym: Bell's palsy (Sir Charles Bell, born Edinburgh); minimum unit pricing for alcohol (2018)",
+   "icon": "sheep",
+   "normie": {
+    "name": "St Andrew's Day",
+    "blurb": "Scotland's day: haggis, tartan and bagpipes. The national animal is officially the unicorn.",
+    "theme": "Scots words: bairn (child), wee (small), braw (fine), dreich (dull, wet weather); Loch Ness, Edinburgh Castle, Ben Nevis (UK's highest mountain); haggis, shortbread, Irn-Bru; inventions: television (John Logie Baird), telephone (Alexander Graham Bell, born Edinburgh); unicorn national animal"
+   }
+  },
+  {
+   "id": "wal-day",
+   "name": "St David's Day (Wales)",
+   "kind": "day",
+   "rule": "03-01",
+   "dates": {
+    "2026": {
+     "start": "2026-03-01"
+    },
+    "2027": {
+     "start": "2027-03-01"
+    },
+    "2028": {
+     "start": "2028-03-01"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Saint_David%27s_Day",
+   "blurb": "Wales went first: free prescriptions for everyone in 2007, and the UK's first opt-out organ donation system in 2015.",
+   "puzzle_theme": "Welsh words: meddyg (doctor), ysbyty (hospital), calon (heart), pen tost (headache, lit. 'sore head'), iechyd da (good health, i.e. cheers); Aneurin Bevan from Tredegar, founder of the NHS (1948); Robert Recorde (Welsh physician and mathematician who invented the equals sign, 1557); free prescriptions in Wales from 2007; deemed-consent organ donation from 1 December 2015; the 58-letter place name Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
+   "icon": null,
+   "normie": {
+    "name": "St David's Day",
+    "blurb": "Wales celebrates with daffodils, leeks and a red dragon. Try saying its 58-letter village name in one breath.",
+    "theme": "Welsh words: cwtch (cuddle), hiraeth (longing for home), croeso (welcome); Y Ddraig Goch (the red dragon flag); daffodils and leeks; cawl, Welsh cakes, bara brith; Snowdon (Yr Wyddfa); Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch; Welsh rugby"
+   }
+  },
+  {
+   "id": "ie-day",
+   "name": "St Patrick's Day (Ireland)",
+   "kind": "day",
+   "rule": "03-17",
+   "dates": {
+    "2026": {
+     "start": "2026-03-17"
+    },
+    "2027": {
+     "start": "2027-03-17"
+    },
+    "2028": {
+     "start": "2028-03-17"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day",
+   "blurb": "Dublin doctors gave their names to Graves' disease, Colles fracture and Corrigan's pulse, and Francis Rynd pioneered the hollow injection needle in 1844.",
+   "puzzle_theme": "Irish words: dochtúir (doctor), ospidéal (hospital), croí (heart), sláinte (health, i.e. cheers); Francis Rynd (hollow needle injection, 1844); eponyms: Graves' disease (Robert Graves, 1835), Colles fracture (Abraham Colles), Corrigan's pulse (Dominic Corrigan, water-hammer pulse), Stokes-Adams attacks (William Stokes and Robert Adams), Cheyne-Stokes breathing; first country to ban smoking in all workplaces nationwide (29 March 2004)",
+   "icon": null,
+   "normie": {
+    "name": "St Patrick's Day",
+    "blurb": "Ireland goes green: parades, music and a lot of craic. Newgrange, near Dublin, is older than the Egyptian pyramids.",
+    "theme": "Irish words: craic (fun), Dia duit (hello), sláinte (cheers); Newgrange (about 3200 BC), Cliffs of Moher, the Book of Kells; soda bread, colcannon, Irish stew; writers: James Joyce, Bram Stoker (Dracula), Oscar Wilde; the harp is the national symbol"
+   }
+  },
+  {
+   "id": "it-day",
+   "name": "Festa della Repubblica (Italy)",
+   "kind": "day",
+   "rule": "06-02",
+   "dates": {
+    "2026": {
+     "start": "2026-06-02"
+    },
+    "2027": {
+     "start": "2027-06-02"
+    },
+    "2028": {
+     "start": "2028-06-02"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Festa_della_Repubblica",
+   "blurb": "Italy named two diseases: 'malaria' means bad air, and 'influenza' blamed illness on the influence of the stars.",
+   "puzzle_theme": "Italian words: colpo d'aria (a 'blow of air', a draught blamed for illness), abbiocco (drowsiness after a big meal), mal di testa (headache), quarantena (quarantine, from quaranta giorni, 40 days, in Venice); Giovanni Battista Morgagni (father of anatomical pathology, 1761); Luigi Galvani (frog legs and bioelectricity); Camillo Golgi (Golgi apparatus, Nobel 1906); Rita Levi-Montalcini (nerve growth factor, Nobel 1986); Maria Montessori (one of Italy's first women doctors, 1896); anatomy eponyms: Fallopian tubes (Gabriele Falloppio), Eustachian tube (Bartolomeo Eustachi); national health service (SSN) founded 1978",
+   "icon": null,
+   "normie": {
+    "name": "Festa della Repubblica",
+    "blurb": "On 2 June 1946 Italians voted to become a republic. Celebrate with pizza, pasta and the art of doing nothing.",
+    "theme": "Italian words: dolce far niente (the sweetness of doing nothing), abbiocco (food coma), gelato, ciao; pizza Margherita, tiramisù, espresso; Colosseum, Leaning Tower of Pisa, Venice canals; Leonardo da Vinci, Galileo; Frecce Tricolori fly-past"
+   }
+  },
+  {
+   "id": "es-day",
+   "name": "Fiesta Nacional (Spain)",
+   "kind": "day",
+   "rule": "10-12",
+   "dates": {
+    "2026": {
+     "start": "2026-10-12"
+    },
+    "2027": {
+     "start": "2027-10-12"
+    },
+    "2028": {
+     "start": "2028-10-12"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Fiesta_Nacional_de_Espa%C3%B1a",
+   "blurb": "Spain has led the world in organ donation for over 30 years, thanks to its National Transplant Organisation (ONT), founded in 1989.",
+   "puzzle_theme": "Spanish words: resaca (hangover), agujetas (muscle soreness after exercise), estornudo (sneeze), médico de cabecera (GP, lit. 'bedside doctor'); Santiago Ramón y Cajal (neuron doctrine, Nobel 1906); Severo Ochoa (Nobel 1959, RNA synthesis); Manuel García (singing teacher who invented the laryngeal mirror, 1854); Michael Servetus (pulmonary circulation, 1553); the 1918 'Spanish flu' got its name because neutral Spain's press reported it freely; ONT world leader in deceased organ donors per million",
+   "icon": null,
+   "normie": {
+    "name": "Spain's National Day",
+    "blurb": "Spain's big day: tapas, flamenco and a long sobremesa, the chat that carries on after lunch.",
+    "theme": "Spanish words: sobremesa (chatting after a meal), madrugada (the early hours), siesta, tapas; paella (from Valencia), churros, gazpacho, jamón; La Tomatina (tomato fight in Buñol); Alhambra, Park Güell; Picasso, Cervantes (Don Quixote)"
+   }
+  },
+  {
+   "id": "pt-day",
+   "name": "Portugal Day",
+   "kind": "day",
+   "rule": "06-10",
+   "dates": {
+    "2026": {
+     "start": "2026-06-10"
+    },
+    "2027": {
+     "start": "2027-06-10"
+    },
+    "2028": {
+     "start": "2028-06-10"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Portugal_Day",
+   "blurb": "In 2001 Portugal decriminalised personal drug possession and treated addiction as a health issue; new HIV cases among people who inject drugs fell sharply.",
+   "puzzle_theme": "Portuguese words: constipação (a head cold, a false friend), ressaca (hangover), dor de cabeça (headache), médico de família (GP); Egas Moniz (cerebral angiography, 1927; Nobel 1949 for lobotomy, long abandoned); Garcia de Orta (1563 book on Asian medicines and an early European account of cholera); 2001 drug decriminalisation (Law 30/2000); national health service (SNS) founded 1979",
+   "icon": null,
+   "normie": {
+    "name": "Portugal Day",
+    "blurb": "Portugal celebrates its great poet Camões. Expect custard tarts, sardines and a little saudade.",
+    "theme": "Portuguese words: saudade (bittersweet longing), desenrascanço (improvising a way out of a mess), obrigado (thank you); pastel de nata, grilled sardines, port wine; fado music (UNESCO, 2011); world's largest cork producer; Lisbon trams, Belém Tower; explorer Vasco da Gama"
+   }
+  },
+  {
+   "id": "nl-day",
+   "name": "King's Day (Netherlands)",
+   "kind": "day",
+   "rule": "04-27",
+   "dates": {
+    "2026": {
+     "start": "2026-04-27"
+    },
+    "2027": {
+     "start": "2027-04-27"
+    },
+    "2028": {
+     "start": "2028-04-27"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Koningsdag",
+   "blurb": "The Dutch are among the world's tallest people, and Willem Kolff built the first working dialysis machine in the Netherlands in 1943.",
+   "puzzle_theme": "Dutch words: huisarts (GP, lit. 'house doctor'), ziekenhuis (hospital, lit. 'sick house'), kater (hangover, lit. 'tomcat'), spierpijn (muscle pain); Antonie van Leeuwenhoek (first to see bacteria, his 'animalcules', 1670s); Willem Einthoven (electrocardiogram, Nobel 1924); Willem Kolff (artificial kidney, Kampen, 1943); Christiaan Eijkman (beriberi and vitamin B1, Nobel 1929); stat: Dutch men average about 1.83 m (NCD-RisC); lots of cycling",
+   "icon": null,
+   "normie": {
+    "name": "King's Day",
+    "blurb": "The Netherlands turns orange: street markets, boat parties and the King's birthday. There are more bikes than people.",
+    "theme": "Dutch words: gezellig (cosy, convivial), uitwaaien (a walk in the wind to clear your head), lekker (tasty), vrijmarkt (the King's Day street sale); tulips, windmills, canals; stroopwafels, poffertjes, cheese; Van Gogh, Rembrandt; more bicycles than people"
+   }
+  },
+  {
+   "id": "be-day",
+   "name": "Belgian National Day (Belgium)",
+   "kind": "day",
+   "rule": "07-21",
+   "dates": {
+    "2026": {
+     "start": "2026-07-21"
+    },
+    "2027": {
+     "start": "2027-07-21"
+    },
+    "2028": {
+     "start": "2028-07-21"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Belgian_National_Day",
+   "blurb": "Belgium gave us the BMI: astronomer-statistician Adolphe Quetelet devised the weight-over-height-squared index in the 1830s.",
+   "puzzle_theme": "Belgian medicine: Andreas Vesalius of Brussels (De humani corporis fabrica, 1543, founder of modern anatomy); Adolphe Quetelet (Quetelet index, now BMI); Jules Bordet (whooping cough bacterium Bordetella pertussis, Nobel 1919); Corneel Heymans (carotid sinus reflexes, Nobel 1938); Christian de Duve (lysosomes, Nobel 1974); Ebola virus co-identified in 1976 by a team at Antwerp's Institute of Tropical Medicine; three official languages: Dutch (ziekenhuis), French (hôpital), German (Krankenhaus) for 'hospital'",
+   "icon": null,
+   "normie": {
+    "name": "Belgian National Day",
+    "blurb": "Belgium's day: chocolate, waffles, frites with mayonnaise and three official languages. It also gave the world the saxophone.",
+    "theme": "Belgian French numbers: septante (70) and nonante (90); chocolate, waffles, frites, mussels; Tintin (Hergé), the Smurfs, Manneken Pis, the Atomium; saxophone (Adolphe Sax); Grand-Place in Brussels"
+   }
+  },
+  {
+   "id": "ch-day",
+   "name": "Swiss National Day (Switzerland)",
+   "kind": "day",
+   "rule": "08-01",
+   "dates": {
+    "2026": {
+     "start": "2026-08-01"
+    },
+    "2027": {
+     "start": "2027-08-01"
+    },
+    "2028": {
+     "start": "2028-08-01"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Swiss_National_Day",
+   "blurb": "Switzerland gave us the Red Cross: Henri Dunant founded it in Geneva in 1863, and its emblem is the Swiss flag reversed.",
+   "puzzle_theme": "Swiss medicine: Paracelsus ('the dose makes the poison'); Theodor Kocher (thyroid surgery, first surgeon to win a Nobel, 1909); Albert Hofmann (synthesised LSD at Sandoz, Basel, 1938); Hermann Rorschach (inkblot test, 1921); Henri Dunant (Red Cross, 1863; first Nobel Peace Prize, 1901); compulsory basic health insurance since 1996; stat: life expectancy about 84 years, among the world's highest (WHO); four national languages: German, French, Italian, Romansh",
+   "icon": null,
+   "normie": {
+    "name": "Swiss National Day",
+    "blurb": "Bonfires on the mountains for Switzerland's birthday, dating back to 1291. Cheese, chocolate and four languages.",
+    "theme": "Swiss words: Grüezi (hello), Chuchichäschtli (kitchen cupboard, a famous tongue twister), Rösti; Matterhorn, Lake Geneva, the Alps; fondue, raclette, Swiss chocolate; Swiss Army knife; holes in Swiss cheese are called 'eyes'; four national languages"
+   }
+  },
+  {
+   "id": "at-day",
+   "name": "Austrian National Day (Austria)",
+   "kind": "day",
+   "rule": "10-26",
+   "dates": {
+    "2026": {
+     "start": "2026-10-26"
+    },
+    "2027": {
+     "start": "2027-10-26"
+    },
+    "2028": {
+     "start": "2028-10-26"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/National_Day_(Austria)",
+   "blurb": "Vienna gave medicine blood groups: Karl Landsteiner discovered A, B and O in 1901, making safe transfusion possible.",
+   "puzzle_theme": "Austrian German words: Spital (hospital), Ordination (a doctor's surgery), Kreuzweh (low back pain), Primar (head of department); Karl Landsteiner (ABO blood groups, 1901; Nobel 1930); Sigmund Freud (psychoanalysis, Vienna); Leopold Auenbrugger (chest percussion, 1761, inspired by tapping wine barrels); Clemens von Pirquet (coined the word 'allergy', 1906); Ignaz Semmelweis (handwashing on Vienna's maternity wards, 1847)",
+   "icon": null,
+   "normie": {
+    "name": "Austrian National Day",
+    "blurb": "Austria celebrates with open days and free museum entry. Think Mozart, Sachertorte and a slice of strudel.",
+    "theme": "Austrian words: Servus (hello/bye), Paradeiser (tomato), Erdäpfel (potatoes), Gemütlichkeit (cosiness); Wiener Schnitzel, Sachertorte, apple strudel; Mozart (Salzburg), Vienna's coffee houses, Schönbrunn Palace; The Sound of Music; Danube"
+   }
+  },
+  {
+   "id": "se-day",
+   "name": "National Day of Sweden",
+   "kind": "day",
+   "rule": "06-06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-06"
+    },
+    "2027": {
+     "start": "2027-06-06"
+    },
+    "2028": {
+     "start": "2028-06-06"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/National_Day_of_Sweden",
+   "blurb": "Sweden implanted the first fully implantable pacemaker, in Stockholm in 1958, and Karolinska Institutet chooses each year's Nobel Prize in Medicine.",
+   "puzzle_theme": "Swedish words: sjukhus (hospital, lit. 'sick house'), huvudvärk (headache), baksmälla (hangover), träningsvärk (sore muscles after exercise), vårdcentral (health centre); Rune Elmqvist and Åke Senning (implanted pacemaker, 1958); Carl Linnaeus (physician who named species); Anders Celsius (temperature scale); Alfred Nobel; Nobel Assembly at Karolinska Institutet selects the medicine prize",
+   "icon": null,
+   "normie": {
+    "name": "Sweden's National Day",
+    "blurb": "Sweden's day: blue and yellow flags, then fika. Coffee and a cinnamon bun, eaten lagom: not too much, not too little.",
+    "theme": "Swedish words: fika (coffee break with cake), lagom (just right), smörgåsbord, mysig (cosy); meatballs with lingonberry, kanelbullar (cinnamon buns); IKEA, ABBA, Pippi Longstocking (Astrid Lindgren); Midsummer maypoles; Nobel Prizes"
+   }
+  },
+  {
+   "id": "no-day",
+   "name": "Constitution Day (Norway)",
+   "kind": "day",
+   "rule": "05-17",
+   "dates": {
+    "2026": {
+     "start": "2026-05-17"
+    },
+    "2027": {
+     "start": "2027-05-17"
+    },
+    "2028": {
+     "start": "2028-05-17"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Constitution_Day_(Norway)",
+   "blurb": "Norway named two diseases: Armauer Hansen found the leprosy germ in Bergen in 1873, and Asbjørn Følling discovered PKU in 1934.",
+   "puzzle_theme": "Norwegian words: fastlege (regular GP), legevakt (after-hours GP clinic), tømmermenn (hangover, lit. 'timber men' sawing in your head); Gerhard Armauer Hansen (leprosy bacterium, 1873, hence Hansen's disease); Asbjørn Følling (phenylketonuria, 1934, also called Følling's disease); Sigvald Refsum (Refsum disease); cod liver oil (tran); Sir Nils Olav, the Edinburgh Zoo king penguin who holds rank in the Norwegian King's Guard",
+   "icon": "penguin",
+   "normie": {
+    "name": "Norway's National Day",
+    "blurb": "Norway's birthday: children's parades, flags everywhere and ice cream for breakfast. Gratulerer med dagen!",
+    "theme": "Norwegian words: friluftsliv (outdoor living), koselig (cosy), Gratulerer med dagen (happy day); barnetog (children's parade), bunad (folk costume); brunost (brown cheese) and the cheese slicer (invented in Norway, 1925); fjords, northern lights; Roald Amundsen, first to the South Pole (1911)"
+   }
+  },
+  {
+   "id": "dk-day",
+   "name": "Constitution Day (Denmark)",
+   "kind": "day",
+   "rule": "06-05",
+   "dates": {
+    "2026": {
+     "start": "2026-06-05"
+    },
+    "2027": {
+     "start": "2027-06-05"
+    },
+    "2028": {
+     "start": "2028-06-05"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Constitution_Day_(Denmark)",
+   "blurb": "Intensive care began in Copenhagen: in the 1952 polio epidemic, Bjørn Ibsen's team and medical students hand-ventilated patients for weeks.",
+   "puzzle_theme": "Danish words: sygehus (hospital, lit. 'sick house'), praktiserende læge (GP), ondt i maven (stomach ache), tømmermænd (hangover, lit. 'timber men'); Bjørn Ibsen (first intensive care unit, 1953); Christian Gram (Gram stain, 1884); Niels Finsen (light therapy, Nobel 1903); Henrik Dam (vitamin K, named from the German 'Koagulation', Nobel 1943); Niels Stensen (Stensen's duct of the parotid gland)",
+   "icon": null,
+   "normie": {
+    "name": "Denmark's Constitution Day",
+    "blurb": "Denmark celebrates its 1849 constitution with speeches and picnics. Time for hygge and an open sandwich.",
+    "theme": "Danish words: hygge (cosy togetherness), smørrebrød (open sandwich), skål (cheers); LEGO (from 'leg godt', play well); Hans Christian Andersen and the Little Mermaid statue; Tivoli Gardens; Danish pastries, which the Danes call wienerbrød ('Vienna bread')"
+   }
+  },
+  {
+   "id": "fi-day",
+   "name": "Independence Day (Finland)",
+   "kind": "day",
+   "rule": "12-06",
+   "dates": {
+    "2026": {
+     "start": "2026-12-06"
+    },
+    "2027": {
+     "start": "2027-12-06"
+    },
+    "2028": {
+     "start": "2028-12-06"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(Finland)",
+   "blurb": "Finland's North Karelia Project, begun in 1972, cut heart disease deaths by changing a whole region's diet, swapping butter for vegetable oils.",
+   "puzzle_theme": "Finnish words: lääkäri (doctor), sairaala (hospital), terveyskeskus (health centre), krapula (hangover); North Karelia Project (1972, heart disease prevention); xylitol chewing gum research at Turku in the 1970s; the 'Finnish disease heritage': about 36 rare inherited diseases more common in Finland; saunas: about 3 million for 5.5 million people",
+   "icon": null,
+   "normie": {
+    "name": "Finland's Independence Day",
+    "blurb": "Finland marks independence since 1917 with two candles in every window. Then into the sauna, with plenty of sisu.",
+    "theme": "Finnish words: sisu (grit), kalsarikännit (a night in, in your underwear, with a drink), löyly (sauna steam), kiitos (thank you); about 3 million saunas; Moomins (Tove Jansson), Angry Birds, Nokia; wife-carrying world championships (Sonkajärvi); Lapland and the northern lights"
+   }
+  },
+  {
+   "id": "is-day",
+   "name": "National Day of Iceland",
+   "kind": "day",
+   "rule": "06-17",
+   "dates": {
+    "2026": {
+     "start": "2026-06-17"
+    },
+    "2027": {
+     "start": "2027-06-17"
+    },
+    "2028": {
+     "start": "2028-06-17"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Icelandic_National_Day",
+   "blurb": "Iceland cut teen drinking dramatically: the share of 15-16-year-olds drunk in the past month fell from 42% in 1998 to about 5% by 2016.",
+   "puzzle_theme": "Icelandic words: læknir (doctor), sjúkrahús (hospital, lit. 'sick house'), þynnka (hangover); Iceland coins new words instead of borrowing: tölva (computer, from 'number' and 'prophetess'); 'Icelandic model' of youth substance prevention (Planet Youth); Akureyri disease (1948 outbreak, an early description of ME/CFS); deCODE genetics, using Iceland's detailed family records",
+   "icon": null,
+   "normie": {
+    "name": "Iceland's National Day",
+    "blurb": "Iceland became a republic on 17 June 1944. Geysers, glaciers, puffins and not a single mosquito.",
+    "theme": "Icelandic words: geysir (gave us 'geyser'), takk (thanks), tölva (computer), the letters þ and ð; puffins, glaciers, the Blue Lagoon; no mosquitoes; surnames from a parent's first name (-son, -dóttir); skyr; Björk"
+   }
+  },
+  {
+   "id": "gr-day",
+   "name": "Independence Day (Greece)",
+   "kind": "day",
+   "rule": "03-25",
+   "dates": {
+    "2026": {
+     "start": "2026-03-25"
+    },
+    "2027": {
+     "start": "2027-03-25"
+    },
+    "2028": {
+     "start": "2028-03-25"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Greek_Independence_Day",
+   "blurb": "Greece gave medicine its oath and much of its vocabulary, and Greek-born Georgios Papanikolaou invented the Pap smear.",
+   "puzzle_theme": "Greek words: giatros (doctor), nosokomeio (hospital), ygeia (health, from Hygieia), kardia (heart), nephros (kidney); Hippocrates of Kos and the Hippocratic Oath; Galen of Pergamon; Georgios Papanikolaou (Pap smear, born in Kymi); the Rod of Asclepius; Mediterranean diet; Ikaria, a Blue Zone known for long lives; medical words from Greek: diagnosis, symptom, diarrhoea ('flowing through')",
+   "icon": "owl",
+   "normie": {
+    "name": "Greek Independence Day",
+    "blurb": "Greece marks the start of its 1821 War of Independence with parades. Opa! Pass the feta.",
+    "theme": "Greek words: efharistó (thank you), kalimera (good morning), opa; the Greek alphabet, alpha to omega; Parthenon, Olympics, the marathon legend; feta, souvlaki, moussaka, Greek salad; Santorini; myths of Athena and her owl"
+   }
+  },
+  {
+   "id": "pl-day",
+   "name": "Independence Day (Poland)",
+   "kind": "day",
+   "rule": "11-11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-11"
+    },
+    "2027": {
+     "start": "2027-11-11"
+    },
+    "2028": {
+     "start": "2028-11-11"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)",
+   "blurb": "Warsaw-born Marie Curie won two Nobel Prizes and named polonium after Poland; her radium work helped found radiotherapy.",
+   "puzzle_theme": "Polish words: lekarz (doctor), szpital (hospital), przychodnia (clinic), kac (hangover), zakwasy (muscle soreness, lit. 'sourings'); Marie Skłodowska-Curie (polonium and radium; Nobel 1903 and 1911); Rudolf Weigl (typhus vaccine using lice); Hilary Koprowski (first oral polio vaccine trial, 1950); Ignacy Łukasiewicz (kerosene lamp, first used for an emergency operation in Lviv, 1853); eponym: Babinski sign (Józef Babiński, of Polish parents)",
+   "icon": null,
+   "normie": {
+    "name": "Polish Independence Day",
+    "blurb": "Poland regained independence on 11 November 1918. Celebrate with pierogi and a famous tongue twister about a beetle.",
+    "theme": "Polish words: W Szczebrzeszynie chrząszcz brzmi w trzcinie ('in Szczebrzeszyn a beetle buzzes in the reeds'), dzień dobry (good day); pierogi, pączki, bigos; Copernicus, Chopin; Wieliczka Salt Mine; Kraków's Wawel dragon"
+   }
+  },
+  {
+   "id": "ca-day",
+   "name": "Canada Day",
+   "kind": "day",
+   "rule": "07-01",
+   "dates": {
+    "2026": {
+     "start": "2026-07-01"
+    },
+    "2027": {
+     "start": "2027-07-01"
+    },
+    "2028": {
+     "start": "2028-07-01"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Canada_Day",
+   "blurb": "Canada gave the world insulin: Frederick Banting and Charles Best extracted it in Toronto in 1921; Leonard Thompson was first treated in January 1922.",
+   "puzzle_theme": "Canadian medicine: Banting and Best (insulin, 1921; Nobel 1923 to Banting and Macleod); William Osler (bedside teaching and the medical residency); Wilder Penfield (Montreal Neurological Institute, mapping the brain's homunculus); John Hopps (external pacemaker, 1950); Tommy Douglas (Medicare in Saskatchewan, 1962; voted 'Greatest Canadian' in 2004); Québécois French: avoir mal au cœur (to feel sick, lit. 'heart ache')",
+   "icon": "beaver",
+   "normie": {
+    "name": "Canada Day",
+    "blurb": "Canada's birthday: maple leaves, fireworks and poutine. The country makes most of the world's maple syrup.",
+    "theme": "Canadian words: toque (beanie), loonie and toonie (coins), eh; poutine, maple syrup, Nanaimo bars; ice hockey; basketball invented by Canadian James Naismith (1891); Niagara Falls, Rocky Mountains; beaver national animal"
+   }
+  },
+  {
+   "id": "us-day",
+   "name": "Independence Day (USA)",
+   "kind": "day",
+   "rule": "07-04",
+   "dates": {
+    "2026": {
+     "start": "2026-07-04"
+    },
+    "2027": {
+     "start": "2027-07-04"
+    },
+    "2028": {
+     "start": "2028-07-04"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(United_States)",
+   "blurb": "Anaesthesia went public in Boston: on 16 October 1846, William Morton put a patient to sleep with ether for surgery.",
+   "puzzle_theme": "American medicine: Ether Day (Massachusetts General Hospital, 1846); Jonas Salk (inactivated polio vaccine, 1955); Charles Drew (blood banks); Virginia Apgar (Apgar score, 1952); Earle Dickson (Band-Aid, 1920); eponyms: Lou Gehrig's disease (ALS), Cushing's syndrome (Harvey Cushing), Lyme disease (named after Lyme, Connecticut), Rocky Mountain spotted fever; stat: highest health spending per person in the OECD (about 17% of GDP)",
+   "icon": null,
+   "normie": {
+    "name": "Independence Day (USA)",
+    "blurb": "Fireworks, barbecues and hot dogs for America's birthday. The Statue of Liberty was a gift from France.",
+    "theme": "American words: sidewalk, faucet, fall (autumn), bangs (fringe); hot dogs, apple pie, s'mores; Statue of Liberty (from France, 1886), Grand Canyon, Hollywood; Declaration of Independence (1776); baseball"
+   }
+  },
+  {
+   "id": "mx-day",
+   "name": "Independence Day (Mexico)",
+   "kind": "day",
+   "rule": "09-16",
+   "dates": {
+    "2026": {
+     "start": "2026-09-16"
+    },
+    "2027": {
+     "start": "2027-09-16"
+    },
+    "2028": {
+     "start": "2028-09-16"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(Mexico)",
+   "blurb": "A key ingredient of the Pill was made in Mexico City: Luis Miramontes synthesised norethisterone in 1951, aged 26.",
+   "puzzle_theme": "Mexican Spanish words: cruda (hangover), dolor de panza (tummy ache), empacho (folk name for indigestion), chípil (a child clingy with a new sibling on the way); Luis Miramontes (norethisterone, 1951); the axolotl, a Mexican salamander studied for regrowing limbs and organs; 2014 sugary drinks tax (one peso per litre); words from Nahuatl: tomato (tomatl), avocado (āhuacatl), chocolate",
+   "icon": "axolotl",
+   "normie": {
+    "name": "Mexican Independence Day",
+    "blurb": "¡Viva México! The night before, crowds shout the Grito de Dolores. Then tacos, mariachi and fireworks.",
+    "theme": "Mexican words: chido (cool), ¡órale!, antojitos (snacks); words from Nahuatl: tomato, avocado, chilli, chocolate; tacos, mole, guacamole, churros; Chichén Itzá, Teotihuacán; Frida Kahlo; mariachi; the axolotl"
+   }
+  },
+  {
+   "id": "br-day",
+   "name": "Independence Day (Brazil)",
+   "kind": "day",
+   "rule": "09-07",
+   "dates": {
+    "2026": {
+     "start": "2026-09-07"
+    },
+    "2027": {
+     "start": "2027-09-07"
+    },
+    "2028": {
+     "start": "2028-09-07"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(Brazil)",
+   "blurb": "In 1909 Brazil's Carlos Chagas described a whole new disease on his own: its parasite, its insect vector and its symptoms.",
+   "puzzle_theme": "Brazilian Portuguese words: ressaca (hangover), resfriado (a cold), posto de saúde (health post), cafuné (stroking someone's hair); Carlos Chagas (Chagas disease, 1909); Oswaldo Cruz (yellow fever and vaccination campaigns in Rio); Vital Brazil (snake antivenom, Butantan Institute); SUS (Sistema Único de Saúde, free universal health care written into the 1988 constitution)",
+   "icon": "hummingbird",
+   "normie": {
+    "name": "Brazil's Independence Day",
+    "blurb": "Brazil declared independence in 1822. Think samba, football and the Amazon rainforest. Five World Cups and counting.",
+    "theme": "Brazilian words: saudade (longing), cafuné (stroking someone's hair), obrigado/obrigada (thanks); Carnival, samba, bossa nova; the Amazon and Iguaçu Falls; açaí, feijoada, pão de queijo, brigadeiro; football: five men's World Cup titles"
+   }
+  },
+  {
+   "id": "ar-day",
+   "name": "May Revolution Day (Argentina)",
+   "kind": "day",
+   "rule": "05-25",
+   "dates": {
+    "2026": {
+     "start": "2026-05-25"
+    },
+    "2027": {
+     "start": "2027-05-25"
+    },
+    "2028": {
+     "start": "2028-05-25"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/May_Revolution",
+   "blurb": "Argentine surgeon René Favaloro pioneered coronary bypass surgery using a leg vein in 1967.",
+   "puzzle_theme": "Argentine words: resaca (hangover), fiaca (a lazy, can't-be-bothered feeling), achaque (a minor ailment); René Favaloro (saphenous vein coronary bypass, 1967); Bernardo Houssay (Nobel 1947, first Latin American science laureate, pituitary and blood sugar); Luis Leloir (Nobel Chemistry 1970, sugar metabolism); Juan Vucetich (fingerprint identification, 1890s); Domingo Liotta (artificial heart implanted in Houston, 1969); stat: one of the most psychologists per person in the world",
+   "icon": null,
+   "normie": {
+    "name": "May Revolution Day",
+    "blurb": "Argentina remembers the May Revolution of 1810 with locro stew and tango. Che, pass the mate!",
+    "theme": "Argentine words: che (hey, mate), mate (the herbal drink), boludo (mate, informal); tango, asado, empanadas, dulce de leche, locro; Iguazú Falls, Patagonia, Perito Moreno Glacier; ballpoint pen (Ladislao Biro, Hungarian-Argentine); football"
+   }
+  },
+  {
+   "id": "jp-day",
+   "name": "National Foundation Day (Japan)",
+   "kind": "day",
+   "rule": "02-11",
+   "dates": {
+    "2026": {
+     "start": "2026-02-11"
+    },
+    "2027": {
+     "start": "2027-02-11"
+    },
+    "2028": {
+     "start": "2028-02-11"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/National_Foundation_Day",
+   "blurb": "In 1804 Japanese surgeon Hanaoka Seishū operated under general anaesthesia, over 40 years before ether reached Boston.",
+   "puzzle_theme": "Japanese words: byōin (hospital), isha (doctor), futsukayoi (hangover, lit. 'second-day drunk'), kafunshō (hay fever), shinrin-yoku (forest bathing); Hanaoka Seishū (tsūsensan anaesthesia, 1804); Kitasato Shibasaburō (tetanus antitoxin, plague bacillus, 1894); Shiga Kiyoshi (Shigella, 1897); eponyms: Hashimoto's thyroiditis (Hakaru Hashimoto, 1912), Kawasaki disease (Tomisaku Kawasaki, 1967), Takayasu arteritis; stat: life expectancy about 84, among the world's highest (WHO); about 95,000 centenarians (2024, health ministry)",
+   "icon": "deer",
+   "normie": {
+    "name": "National Foundation Day",
+    "blurb": "Japan's foundation day. Sushi, bullet trains and Mount Fuji. The word 'emoji' is Japanese: picture plus character.",
+    "theme": "Japanese words: emoji (picture + character), karaoke ('empty orchestra'), ikigai (reason for being), kawaii (cute); sushi, ramen, matcha; Mount Fuji, Shinkansen (1964); Nara's bowing deer; origami, cherry blossom (sakura)"
+   }
+  },
+  {
+   "id": "kr-day",
+   "name": "Hangul Day (South Korea)",
+   "kind": "day",
+   "rule": "10-09",
+   "dates": {
+    "2026": {
+     "start": "2026-10-09"
+    },
+    "2027": {
+     "start": "2027-10-09"
+    },
+    "2028": {
+     "start": "2028-10-09"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Hangul_Day",
+   "blurb": "Korea's 1613 medical encyclopaedia Dongui Bogam, by royal physician Heo Jun, is listed on UNESCO's Memory of the World register.",
+   "puzzle_theme": "Korean words (Hangul): 병원 byeongwon (hospital), 의사 uisa (doctor), 감기 gamgi (a cold), 화병 hwabyeong ('fire illness', a Korean anger syndrome); Hangul letters shaped like the mouth and tongue that make each sound; Heo Jun and the Dongui Bogam (1613); stat: life expectancy about 83 (WHO); most hospital beds per person in the OECD",
+   "icon": null,
+   "normie": {
+    "name": "Hangul Day",
+    "blurb": "Korea celebrates its alphabet, created by King Sejong in 1446. It was designed to be learnt in a single morning.",
+    "theme": "Korean words: annyeong (hi), kamsahamnida (thank you), daebak (awesome); Hangul's 24 basic letters (14 consonants, 10 vowels), shaped like the mouth that says them; kimchi, bibimbap, Korean fried chicken; K-pop, taekwondo; King Sejong (on the 10,000-won note)"
+   }
+  },
+  {
+   "id": "in-day",
+   "name": "Independence Day (India)",
+   "kind": "day",
+   "rule": "08-15",
+   "dates": {
+    "2026": {
+     "start": "2026-08-15"
+    },
+    "2027": {
+     "start": "2027-08-15"
+    },
+    "2028": {
+     "start": "2028-08-15"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(India)",
+   "blurb": "India was certified polio-free by WHO in 2014, after nationwide drives that vaccinated well over 100 million children at a time.",
+   "puzzle_theme": "Hindi words: aspatal (hospital), dawai (medicine), sir dard (headache), pet dard (stomach ache), vaidya (Ayurvedic physician); Sushruta Samhita, an ancient text describing nose reconstruction (the 'Indian method' of rhinoplasty); Ronald Ross (born in Almora; proved mosquitoes spread malaria, Secunderabad, 1897); Upendranath Brahmachari (urea stibamine for kala-azar, 1922); Yellapragada Subbarow (methotrexate, folic acid); polio-free certification 27 March 2014",
+   "icon": "elephant",
+   "normie": {
+    "name": "India's Independence Day",
+    "blurb": "India celebrates freedom since 1947 with flags and kites. Fun fact: 'shampoo' comes from a Hindi word for massage.",
+    "theme": "Hindi words in English: shampoo (from chāmpo, to massage), pyjamas, bungalow, jungle, thug; chai, biryani, dosa, samosa; Taj Mahal, Bollywood, cricket; kite-flying on Independence Day; Bengal tiger and Indian elephant"
+   }
+  },
+  {
+   "id": "nz-day",
+   "name": "Waitangi Day (New Zealand)",
+   "kind": "day",
+   "rule": "02-06",
+   "dates": {
+    "2026": {
+     "start": "2026-02-06"
+    },
+    "2027": {
+     "start": "2027-02-06"
+    },
+    "2028": {
+     "start": "2028-02-06"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Waitangi_Day",
+   "blurb": "New Zealander Sir Harold Gillies, born in Dunedin, became the father of modern plastic surgery, rebuilding soldiers' faces in World War I.",
+   "puzzle_theme": "Te reo Māori words: hauora (health and wellbeing), rongoā (traditional Māori healing), whānau (extended family), tinana (body); Te Whare Tapa Whā model of health (a house with four walls); Sir Harold Gillies and Sir Archibald McIndoe (plastic surgery); Sir William Liley (first blood transfusion to an unborn baby, Auckland, 1963); Maurice Wilkins (born in Pongaroa, Nobel 1962 for DNA structure); ACC no-fault accident compensation (1974)",
+   "icon": null,
+   "normie": {
+    "name": "Waitangi Day",
+    "blurb": "New Zealand's national day marks the Treaty of Waitangi, signed in 1840. Kia ora, Aotearoa!",
+    "theme": "Māori words: kia ora (hello), Aotearoa (New Zealand), whānau (family), kai (food); the kiwi bird, the haka; Hobbiton, Milford Sound; first country where women won the vote in national elections (1893); commercial bungy jumping (Queenstown, 1988); hāngī"
+   }
+  },
+  {
+   "id": "za-day",
+   "name": "Freedom Day (South Africa)",
+   "kind": "day",
+   "rule": "04-27",
+   "dates": {
+    "2026": {
+     "start": "2026-04-27"
+    },
+    "2027": {
+     "start": "2027-04-27"
+    },
+    "2028": {
+     "start": "2028-04-27"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Freedom_Day_(South_Africa)",
+   "blurb": "The world's first human heart transplant took place at Groote Schuur Hospital, Cape Town, on 3 December 1967, led by Christiaan Barnard.",
+   "puzzle_theme": "South African words: babelas (hangover, from isiZulu), hospitaal (Afrikaans, hospital), umuthi (isiZulu, medicine); Christiaan Barnard (first heart transplant, 1967); Allan Cormack (born Johannesburg; CT scanning, Nobel 1979); Max Theiler (born Pretoria; yellow fever vaccine, Nobel 1951); world's largest HIV treatment programme (UNAIDS); 12 official languages, including South African Sign Language since 2023",
+   "icon": "meerkat",
+   "normie": {
+    "name": "Freedom Day",
+    "blurb": "South Africa celebrates its first democratic election on 27 April 1994. Lekker! Fire up the braai.",
+    "theme": "South African words: lekker (great), braai (barbecue), howzit (hello), sawubona (isiZulu hello); biltong, bobotie, rooibos tea, bunny chow; Table Mountain, Kruger National Park, Boulders Beach penguins; 12 official languages; Springboks"
+   }
+  },
+  {
+   "id": "ng-day",
+   "name": "Independence Day (Nigeria)",
+   "kind": "day",
+   "rule": "10-01",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01"
+    },
+    "2027": {
+     "start": "2027-10-01"
+    },
+    "2028": {
+     "start": "2028-10-01"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(Nigeria)",
+   "blurb": "In 2014 Nigeria stopped an Ebola outbreak in Lagos within three months; Dr Stella Ameyo Adadevoh's swift action is credited with containing it.",
+   "puzzle_theme": "Nigerian words for medicine: oogun (Yoruba), ọgwụ (Igbo), magani (Hausa); Thomas Adeoye Lambo (pioneer of African psychiatry, Aro village care); Dr Stella Ameyo Adadevoh (Ebola, 2014); WHO declared Nigeria Ebola-free on 20 October 2014; wild polio-free certification for the African region in August 2020; sickle cell disease: Nigeria has the world's largest number of affected births",
+   "icon": null,
+   "normie": {
+    "name": "Nigeria's Independence Day",
+    "blurb": "Nigeria celebrates independence since 1960. Turn up the Afrobeats and serve the jollof rice.",
+    "theme": "Nigerian words: wahala (trouble), abeg (please), oya (come on), no wahala (no problem); jollof rice, suya, puff-puff, egusi soup; Nollywood, one of the world's biggest film industries; Afrobeats; Chinua Achebe (Things Fall Apart); Zuma Rock"
+   }
+  },
+  {
+   "id": "ke-day",
+   "name": "Jamhuri Day (Kenya)",
+   "kind": "day",
+   "rule": "12-12",
+   "dates": {
+    "2026": {
+     "start": "2026-12-12"
+    },
+    "2027": {
+     "start": "2027-12-12"
+    },
+    "2028": {
+     "start": "2028-12-12"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Jamhuri_Day",
+   "blurb": "Kenya was one of three countries to pilot the world's first malaria vaccine, RTS,S, for young children from 2019, alongside Ghana and Malawi.",
+   "puzzle_theme": "Swahili words: daktari (doctor), hospitali (hospital), dawa (medicine), afya (health), homa (fever), chanjo (vaccine); AMREF Flying Doctors (founded in Nairobi, 1957); RTS,S malaria vaccine pilot (2019); Kenyan distance runners and the science of altitude training; Wangari Maathai (Nobel Peace Prize 2004, the Green Belt Movement)",
+   "icon": "giraffe",
+   "normie": {
+    "name": "Jamhuri Day",
+    "blurb": "Jamhuri means republic in Swahili. Kenya celebrates independence in 1963 and becoming a republic in 1964.",
+    "theme": "Swahili words: jambo (hello), asante (thank you), hakuna matata (no worries), safari (journey); ugali, nyama choma, chai; the Great Migration in the Maasai Mara; Mount Kenya; marathon runners; giraffes"
+   }
+  },
+  {
+   "id": "ph-day",
+   "name": "Independence Day (Philippines)",
+   "kind": "day",
+   "rule": "06-12",
+   "dates": {
+    "2026": {
+     "start": "2026-06-12"
+    },
+    "2027": {
+     "start": "2027-06-12"
+    },
+    "2028": {
+     "start": "2028-06-12"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/Independence_Day_(Philippines)",
+   "blurb": "The Philippines' national hero José Rizal was an eye surgeon who operated on his own mother's cataracts.",
+   "puzzle_theme": "Filipino words: lagnat (fever), ubo (cough), sipon (runny nose, a cold), hilot (traditional massage healer); José Rizal (ophthalmologist and writer); Fe del Mundo (paediatrician, studied at Harvard in 1936, devised a bamboo incubator); the Philippines as one of the world's biggest sources of nurses (WHO)",
+   "icon": null,
+   "normie": {
+    "name": "Philippine Independence Day",
+    "blurb": "The Philippines declared independence on 12 June 1898. Mabuhay! Celebrate with adobo and halo-halo.",
+    "theme": "Filipino words: kilig (butterflies of romance), mabuhay (long live), salamat (thank you), gigil (urge to squeeze something cute); adobo, halo-halo, lechon; jeepneys, Chocolate Hills; yo-yo popularised by Filipino Pedro Flores; karaoke and videoke"
+   }
+  },
+  {
+   "id": "sg-day",
+   "name": "National Day (Singapore)",
+   "kind": "day",
+   "rule": "08-09",
+   "dates": {
+    "2026": {
+     "start": "2026-08-09"
+    },
+    "2027": {
+     "start": "2027-08-09"
+    },
+    "2028": {
+     "start": "2028-08-09"
+    }
+   },
+   "tags": [
+    "country"
+   ],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/National_Day_(Singapore)",
+   "blurb": "Singapore has banned chewing gum sales since 1992, but pharmacists have been allowed to sell nicotine and dental gum since 2004.",
+   "puzzle_theme": "Singapore health: Singlish 'heaty' (foods believed to heat the body) and 'MC' (medical certificate); Medisave, compulsory health savings accounts (1984); chewing gum ban (1992) with therapeutic gum allowed from 2004; NEWater, recycled drinking water (2003); stat: life expectancy about 83 (WHO)",
+   "icon": null,
+   "normie": {
+    "name": "Singapore National Day",
+    "blurb": "Singapore turns another year older since 1965. Shiok! Fireworks over Marina Bay and chilli crab for dinner.",
+    "theme": "Singlish words: lah, shiok (delicious, great), kiasu (afraid of missing out), chope (reserve a seat with a tissue packet); hawker culture (UNESCO, 2020); chilli crab, Hainanese chicken rice, kaya toast; Merlion, Gardens by the Bay"
+   }
   }
  ]
 }
