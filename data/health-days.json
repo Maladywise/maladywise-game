@@ -11640,6 +11640,1986 @@
     "name": "Epidemic Preparedness Day",
     "blurb": "Germs, outbreaks and how we stop them spreading."
    }
+  },
+  {
+   "id": "publicdomain",
+   "name": "Public Domain Day",
+   "kind": "day",
+   "rule": "01-01",
+   "dates": {
+    "2026": {
+     "start": "2026-01-01"
+    },
+    "2027": {
+     "start": "2027-01-01"
+    },
+    "2028": {
+     "start": "2028-01-01"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/Public_Domain_Day",
+   "blurb": "Every 1 January, old works slip out of copyright. Medicine's classics, like Gray's Anatomy (first published 1858), are free to read.",
+   "puzzle_theme": "Medical history and classic texts: Gray's Anatomy, Hippocrates, eponyms, old textbooks",
+   "icon": null,
+   "normie": {
+    "name": "Public Domain Day",
+    "blurb": "Every 1 January, a fresh batch of old books, films and songs escapes copyright. Free for everyone, forever.",
+    "theme": "Classic books, old films, famous characters, copyright"
+   }
+  },
+  {
+   "id": "introvert",
+   "name": "World Introvert Day",
+   "kind": "day",
+   "rule": "01-02",
+   "dates": {
+    "2026": {
+     "start": "2026-01-02"
+    },
+    "2027": {
+     "start": "2027-01-02"
+    },
+    "2028": {
+     "start": "2028-01-02"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://introvertdear.com/news/world-introvert-day-celebrate-introverts",
+   "blurb": "Quiet types, unite (separately). Introversion is a normal personality trait, not a disorder. Time to recharge after the holiday chaos.",
+   "puzzle_theme": "Personality and the brain: temperament, introversion vs social anxiety, rest and recovery",
+   "icon": "chat-calm",
+   "normie": {
+    "name": "World Introvert Day",
+    "blurb": "The day after New Year's, for people who'd rather stay home. Books, blankets and absolutely no small talk.",
+    "theme": "Solo hobbies, famous introverts, quiet places"
+   }
+  },
+  {
+   "id": "wetlands",
+   "name": "World Wetlands Day",
+   "kind": "day",
+   "rule": "02-02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-02"
+    },
+    "2027": {
+     "start": "2027-02-02"
+    },
+    "2028": {
+     "start": "2028-02-02"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://unfccc.int/news/2nd-february-world-wetlands-day",
+   "blurb": "Wetlands filter water and breed mosquitoes. Today's puzzles wade into waterborne infections and the medicinal leech, still used in surgery today.",
+   "puzzle_theme": "Wetland medicine: medicinal leeches and hirudin, malaria, leptospirosis, waterborne infections",
+   "icon": "frog",
+   "normie": {
+    "name": "World Wetlands Day",
+    "blurb": "Swamps, marshes and bogs get their moment, marking the Ramsar Convention adopted in Iran in 1971.",
+    "theme": "Wetland birds, frogs, swamps, famous marshes"
+   }
+  },
+  {
+   "id": "pulses",
+   "name": "World Pulses Day",
+   "kind": "day",
+   "rule": "02-10",
+   "dates": {
+    "2026": {
+     "start": "2026-02-10"
+    },
+    "2027": {
+     "start": "2027-02-10"
+    },
+    "2028": {
+     "start": "2028-02-10"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Pulses_Day",
+   "blurb": "Lentils, chickpeas and beans: cheap fibre, protein and folate. And yes, the gas. Blame your gut bacteria fermenting their sugars.",
+   "puzzle_theme": "Pulses and the gut: fibre, folate, iron, flatulence, favism and G6PD deficiency",
+   "icon": "apple",
+   "normie": {
+    "name": "World Pulses Day",
+    "blurb": "A UN day for lentils, chickpeas, beans and peas. Eating hummus counts as celebrating.",
+    "theme": "Beans, lentils, dishes from around the world"
+   }
+  },
+  {
+   "id": "radio",
+   "name": "World Radio Day",
+   "kind": "day",
+   "rule": "02-13",
+   "dates": {
+    "2026": {
+     "start": "2026-02-13"
+    },
+    "2027": {
+     "start": "2027-02-13"
+    },
+    "2028": {
+     "start": "2028-02-13"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Radio_Day",
+   "blurb": "Radio waves power MRI: strong magnets line up hydrogen nuclei, then radio pulses tip them over. Tune in for imaging puzzles.",
+   "puzzle_theme": "Radio waves in medicine: MRI, radiofrequency ablation, hearing, the electromagnetic spectrum",
+   "icon": "echo-ear",
+   "normie": {
+    "name": "World Radio Day",
+    "blurb": "Chosen because UN Radio was set up on 13 February 1946. Celebrate the wireless, the DJ and the podcast's grandparent.",
+    "theme": "Radio history, famous broadcasts, DJs, signals and Morse"
+   }
+  },
+  {
+   "id": "pangolin",
+   "name": "World Pangolin Day",
+   "kind": "day",
+   "rule": "nth:3:5:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-21"
+    },
+    "2027": {
+     "start": "2027-02-20"
+    },
+    "2028": {
+     "start": "2028-02-19"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.worldanimalprotection.org/our-campaigns/sentience/animal-awareness-days/World-Pangolin-Day",
+   "blurb": "Pangolin scales are made of keratin, the same stuff as your fingernails. Today's puzzles get under your skin: nails, hair and keratin.",
+   "puzzle_theme": "Keratin and skin: nails, hair, finger clubbing, fungal nails, psoriasis",
+   "icon": null,
+   "normie": {
+    "name": "World Pangolin Day",
+    "blurb": "The scaly mammal that rolls into a ball. Its name comes from a Malay word meaning 'roller'.",
+    "theme": "Pangolins, armoured animals, Asian and African wildlife"
+   }
+  },
+  {
+   "id": "thinkingday",
+   "name": "World Thinking Day",
+   "kind": "day",
+   "rule": "02-22",
+   "dates": {
+    "2026": {
+     "start": "2026-02-22"
+    },
+    "2027": {
+     "start": "2027-02-22"
+    },
+    "2028": {
+     "start": "2028-02-22"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Thinking_Day",
+   "blurb": "Guides and Scouts mark the shared birthday of Robert and Olave Baden-Powell. Badge-worthy first aid today: slings, splints and splinters.",
+   "puzzle_theme": "Scout-style first aid: slings, splints, burns, bites, hypothermia",
+   "icon": "lifebuoy",
+   "normie": {
+    "name": "World Thinking Day",
+    "blurb": "Guides and Scouts worldwide celebrate the shared birthday of Robert and Olave Baden-Powell. Knots, campfires and badges.",
+    "theme": "Scouting, camping, knots, badges, outdoor skills"
+   }
+  },
+  {
+   "id": "polarbear",
+   "name": "International Polar Bear Day",
+   "kind": "day",
+   "rule": "02-27",
+   "dates": {
+    "2026": {
+     "start": "2026-02-27"
+    },
+    "2027": {
+     "start": "2027-02-27"
+    },
+    "2028": {
+     "start": "2028-02-27"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Polar_Bear_Day",
+   "blurb": "Never eat polar bear liver: it holds so much vitamin A that Arctic explorers were poisoned by it. Frosty puzzles ahead.",
+   "puzzle_theme": "Cold and the body: vitamin A toxicity, hypothermia, frostbite, brown fat",
+   "icon": "polar-bear",
+   "normie": {
+    "name": "International Polar Bear Day",
+    "blurb": "Their fur looks white, but each hair is actually clear, and the skin underneath is black. Arctic icons get their day.",
+    "theme": "Polar bears, Arctic animals, ice and snow"
+   }
+  },
+  {
+   "id": "wildlife",
+   "name": "World Wildlife Day",
+   "kind": "day",
+   "rule": "03-03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-03"
+    },
+    "2027": {
+     "start": "2027-03-03"
+    },
+    "2028": {
+     "start": "2028-03-03"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://unfccc.int/news/3rd-of-march-is-un-world-wildlife-day",
+   "blurb": "Nature's pharmacy: aspirin's ancestor came from willow bark and digoxin from foxglove. Wild things heal, and sometimes poison.",
+   "puzzle_theme": "Medicines from nature: foxglove, willow bark, venoms, the Pacific yew and paclitaxel",
+   "icon": "giraffe",
+   "normie": {
+    "name": "World Wildlife Day",
+    "blurb": "Marking the day the CITES treaty protecting wild animals and plants was signed. Big cats, tiny frogs and everything between.",
+    "theme": "Wild animals, endangered species, national parks"
+   }
+  },
+  {
+   "id": "happiness",
+   "name": "International Day of Happiness",
+   "kind": "day",
+   "rule": "03-20",
+   "dates": {
+    "2026": {
+     "start": "2026-03-20"
+    },
+    "2027": {
+     "start": "2027-03-20"
+    },
+    "2028": {
+     "start": "2028-03-20"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/List_of_United_Nations_observances",
+   "blurb": "Happiness on the brain: dopamine, serotonin, endorphins and oxytocin. Sleep, exercise and friends beat anything in the supplement aisle.",
+   "puzzle_theme": "Wellbeing and the brain: neurotransmitters, exercise, sleep, social connection",
+   "icon": "heart-rainbow",
+   "normie": {
+    "name": "International Day of Happiness",
+    "blurb": "The UN's official day to be happy. Smile, call a friend and do one thing that makes you grin.",
+    "theme": "Happy things: laughter, holidays, favourite foods, feel-good songs"
+   }
+  },
+  {
+   "id": "poetry",
+   "name": "World Poetry Day",
+   "kind": "day",
+   "rule": "03-21",
+   "dates": {
+    "2026": {
+     "start": "2026-03-21"
+    },
+    "2027": {
+     "start": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-21"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.gov.za/world-poetry-day",
+   "blurb": "Doctors who wrote verse: John Keats trained at Guy's Hospital, and William Carlos Williams was a family doctor. Rhyme your differentials.",
+   "puzzle_theme": "Medicine and poetry: doctor-poets, medical mnemonics, rhyming anatomy",
+   "icon": "echo-speech",
+   "normie": {
+    "name": "World Poetry Day",
+    "blurb": "UNESCO's day for verse, from haiku to limericks. Roses are red, the puzzles are due.",
+    "theme": "Famous poems, poets, rhymes and poetic forms"
+   }
+  },
+  {
+   "id": "meteo",
+   "name": "World Meteorological Day",
+   "kind": "day",
+   "rule": "03-23",
+   "dates": {
+    "2026": {
+     "start": "2026-03-23"
+    },
+    "2027": {
+     "start": "2027-03-23"
+    },
+    "2028": {
+     "start": "2028-03-23"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://wmo.int/events/world-meteorological-day",
+   "blurb": "Weather and health: heatstroke, hay fever and thunderstorm asthma. Some patients swear their knees forecast rain better than the radar.",
+   "puzzle_theme": "Weather and health: heatstroke, thunderstorm asthma, hypothermia, UV and skin",
+   "icon": "sunrise",
+   "normie": {
+    "name": "World Meteorological Day",
+    "blurb": "Clouds, storms and forecasts. It marks the 1950 start of the World Meteorological Organization's convention.",
+    "theme": "Weather, clouds, storms, forecasting words"
+   }
+  },
+  {
+   "id": "theatre",
+   "name": "World Theatre Day",
+   "kind": "day",
+   "rule": "03-27",
+   "dates": {
+    "2026": {
+     "start": "2026-03-27"
+    },
+    "2027": {
+     "start": "2027-03-27"
+    },
+    "2028": {
+     "start": "2028-03-27"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Theatre_Day",
+   "blurb": "Medicine had theatres too: old operating theatres had tiered seats so students could watch surgery. Curtain up, scalpels out.",
+   "puzzle_theme": "Operating theatres: surgical history, anaesthesia, instruments, scrubbing in",
+   "icon": "echo-speech",
+   "normie": {
+    "name": "World Theatre Day",
+    "blurb": "Break a leg! Started by the International Theatre Institute in the early 1960s. Stages, scripts and dramatic exits.",
+    "theme": "Plays, playwrights, theatre words, famous stages"
+   }
+  },
+  {
+   "id": "backup",
+   "name": "World Backup Day",
+   "kind": "day",
+   "rule": "03-31",
+   "dates": {
+    "2026": {
+     "start": "2026-03-31"
+    },
+    "2027": {
+     "start": "2027-03-31"
+    },
+    "2028": {
+     "start": "2028-03-31"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Backup_Day",
+   "blurb": "Your body runs backups: two kidneys, two lungs and a liver that can regrow. Back up your files before April Fools' Day.",
+   "puzzle_theme": "Redundancy in the body: paired organs, liver regeneration, transplants, collateral circulation",
+   "icon": null,
+   "normie": {
+    "name": "World Backup Day",
+    "blurb": "Back up your photos today, the day before April Fools'. Don't be the joke.",
+    "theme": "Computers, data storage, tech history"
+   }
+  },
+  {
+   "id": "kidsbooks",
+   "name": "International Children's Book Day",
+   "kind": "day",
+   "rule": "04-02",
+   "dates": {
+    "2026": {
+     "start": "2026-04-02"
+    },
+    "2027": {
+     "start": "2027-04-02"
+    },
+    "2028": {
+     "start": "2028-04-02"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Children%27s_Book_Day",
+   "blurb": "Hans Christian Andersen's birthday. Fairy tales meet medicine: Rapunzel syndrome is real, and so is Alice in Wonderland syndrome.",
+   "puzzle_theme": "Fairy-tale medicine: Rapunzel syndrome (hairballs), Alice in Wonderland syndrome, sleep, growth",
+   "icon": "owl",
+   "normie": {
+    "name": "International Children's Book Day",
+    "blurb": "Held on or near Hans Christian Andersen's birthday. Picture books, bedtime stories and the books that made you a reader.",
+    "theme": "Children's books, fairy tales, famous characters"
+   }
+  },
+  {
+   "id": "spaceflight",
+   "name": "International Day of Human Space Flight",
+   "kind": "day",
+   "rule": "04-12",
+   "dates": {
+    "2026": {
+     "start": "2026-04-12"
+    },
+    "2027": {
+     "start": "2027-04-12"
+    },
+    "2028": {
+     "start": "2028-04-12"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Day_of_Human_Space_Flight",
+   "blurb": "Yuri Gagarin orbited Earth in 1961 in about 108 minutes. Space medicine: bone loss, muscle wasting and puffy faces.",
+   "puzzle_theme": "Space medicine: microgravity, bone density, radiation, motion sickness, fluid shifts",
+   "icon": "star",
+   "normie": {
+    "name": "International Day of Human Space Flight",
+    "blurb": "On 12 April 1961, Yuri Gagarin became the first human in space. Rockets, orbits and astronaut snacks.",
+    "theme": "Space travel, astronauts, rockets, planets"
+   }
+  },
+  {
+   "id": "artday",
+   "name": "World Art Day",
+   "kind": "day",
+   "rule": "04-15",
+   "dates": {
+    "2026": {
+     "start": "2026-04-15"
+    },
+    "2027": {
+     "start": "2027-04-15"
+    },
+    "2028": {
+     "start": "2028-04-15"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.astaguru.com/blogs/why-is-world-art-day-celebrated-on-april-15th-811",
+   "blurb": "Leonardo da Vinci's birthday. He dissected bodies and drew the heart, skull and foetus in astonishing detail.",
+   "puzzle_theme": "Anatomy in art: Leonardo's drawings, Vesalius, medical illustration",
+   "icon": "brain",
+   "normie": {
+    "name": "World Art Day",
+    "blurb": "Born 15 April 1452, Leonardo da Vinci gives the art world its big day. Paintings, sculptures and masterpieces.",
+    "theme": "Famous paintings, artists, art movements"
+   }
+  },
+  {
+   "id": "earthday",
+   "name": "Earth Day",
+   "kind": "day",
+   "rule": "04-22",
+   "dates": {
+    "2026": {
+     "start": "2026-04-22"
+    },
+    "2027": {
+     "start": "2027-04-22"
+    },
+    "2028": {
+     "start": "2028-04-22"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.history.com/this-day-in-history/April-22/the-first-earth-day",
+   "blurb": "Planetary health is human health: cleaner air means fewer asthma attacks and heart attacks. The first Earth Day was in 1970.",
+   "puzzle_theme": "Environment and health: air pollution, heat, clean water, climate and disease",
+   "icon": null,
+   "normie": {
+    "name": "Earth Day",
+    "blurb": "Since 1970, a day to love the planet. Plant something, recycle properly and maybe switch off a light.",
+    "theme": "Nature, recycling, planets, climate words"
+   }
+  },
+  {
+   "id": "bookday",
+   "name": "World Book Day",
+   "kind": "day",
+   "rule": "04-23",
+   "dates": {
+    "2026": {
+     "start": "2026-04-23"
+    },
+    "2027": {
+     "start": "2027-04-23"
+    },
+    "2028": {
+     "start": "2028-04-23"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://library-blog.csu.edu.au/2018/04/21/world-book-and-copyright-day/",
+   "blurb": "UNESCO chose 23 April, the date Shakespeare and Cervantes died in 1616. Shakespeare packed his plays with poisons, plagues and madness.",
+   "puzzle_theme": "Medicine in literature: Shakespeare's poisons, plague, famous fictional doctors",
+   "icon": "owl",
+   "normie": {
+    "name": "World Book Day",
+    "blurb": "Books, glorious books. UNESCO picked 23 April, the date Shakespeare and Cervantes died in 1616.",
+    "theme": "Famous books, authors, Shakespeare, literary characters"
+   }
+  },
+  {
+   "id": "penguinday",
+   "name": "World Penguin Day",
+   "kind": "day",
+   "rule": "04-25",
+   "dates": {
+    "2026": {
+     "start": "2026-04-25"
+    },
+    "2027": {
+     "start": "2027-04-25"
+    },
+    "2028": {
+     "start": "2028-04-25"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://blog.rsb.org.uk/world-penguin-day-and-the-march-of-the-adelie-penguins",
+   "blurb": "Penguins drink seawater and get rid of the extra salt through glands above their eyes. Kidneys, sodium and salty puzzles ahead.",
+   "puzzle_theme": "Salt and water balance: sodium, kidneys, dehydration, hyponatraemia",
+   "icon": "penguin",
+   "normie": {
+    "name": "World Penguin Day",
+    "blurb": "Flightless, tuxedoed and brilliant swimmers. A day for every penguin, from emperor to little blue.",
+    "theme": "Penguins, Antarctica, seabirds"
+   }
+  },
+  {
+   "id": "dance",
+   "name": "International Dance Day",
+   "kind": "day",
+   "rule": "04-29",
+   "dates": {
+    "2026": {
+     "start": "2026-04-29"
+    },
+    "2027": {
+     "start": "2027-04-29"
+    },
+    "2028": {
+     "start": "2028-04-29"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.iti-worldwide.org/danceday.html",
+   "blurb": "Dancing is exercise in disguise: good for balance, heart and mood. Also on the card: ankle sprains and the 'dancer's fracture'.",
+   "puzzle_theme": "Dance medicine: balance, ankle sprains, fifth metatarsal fractures, cardiovascular fitness",
+   "icon": null,
+   "normie": {
+    "name": "International Dance Day",
+    "blurb": "Marks the birthday of ballet pioneer Jean-Georges Noverre. Get up and dance, whatever your style.",
+    "theme": "Dance styles, ballet, famous dancers, music"
+   }
+  },
+  {
+   "id": "jazz",
+   "name": "International Jazz Day",
+   "kind": "day",
+   "rule": "04-30",
+   "dates": {
+    "2026": {
+     "start": "2026-04-30"
+    },
+    "2027": {
+     "start": "2027-04-30"
+    },
+    "2028": {
+     "start": "2028-04-30"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Jazz_Day",
+   "blurb": "Brass and wind players need serious breath control and tough lips. Musicians' medicine today: lungs, lips, hearing and strain injuries.",
+   "puzzle_theme": "Musicians' medicine: lung capacity, embouchure, noise-induced hearing loss, repetitive strain",
+   "icon": "echo-ear",
+   "normie": {
+    "name": "International Jazz Day",
+    "blurb": "UNESCO's day for swing, bebop and improvisation, an idea from Herbie Hancock. Scatting optional.",
+    "theme": "Jazz legends, instruments, music terms"
+   }
+  },
+  {
+   "id": "starwars",
+   "name": "Star Wars Day",
+   "kind": "day",
+   "rule": "05-04",
+   "dates": {
+    "2026": {
+     "start": "2026-05-04"
+    },
+    "2027": {
+     "start": "2027-05-04"
+    },
+    "2028": {
+     "start": "2028-05-04"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/Star_Wars_Day",
+   "blurb": "May the Fourth be with you. Sci-fi meets real medicine: prosthetic hands, ventilators, burns and the ethics of cloning.",
+   "puzzle_theme": "Sci-fi medicine: prosthetics, ventilation, burns, cloning, lightsaber-free amputations",
+   "icon": "star",
+   "normie": {
+    "name": "Star Wars Day",
+    "blurb": "May the Fourth be with you. Lightsabers, droids and a galaxy far, far away.",
+    "theme": "Space films, robots, sci-fi words, famous quotes"
+   }
+  },
+  {
+   "id": "nodiet",
+   "name": "International No Diet Day",
+   "kind": "day",
+   "rule": "05-06",
+   "dates": {
+    "2026": {
+     "start": "2026-05-06"
+    },
+    "2027": {
+     "start": "2027-05-06"
+    },
+    "2028": {
+     "start": "2028-05-06"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_No_Diet_Day",
+   "blurb": "Started in the UK in 1992. Crash diets rarely last, so today's puzzles chew on metabolism, hunger hormones and nutrition myths.",
+   "puzzle_theme": "Nutrition and metabolism: ghrelin, leptin, body image, diet myths",
+   "icon": "apple",
+   "normie": {
+    "name": "International No Diet Day",
+    "blurb": "A day off from counting calories, born in the UK in 1992. Have the cake.",
+    "theme": "Favourite foods, desserts, cooking"
+   }
+  },
+  {
+   "id": "museum",
+   "name": "International Museum Day",
+   "kind": "day",
+   "rule": "05-18",
+   "dates": {
+    "2026": {
+     "start": "2026-05-18"
+    },
+    "2027": {
+     "start": "2027-05-18"
+    },
+    "2028": {
+     "start": "2028-05-18"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://imd2012.mini.icom.museum/what-is-imd/international-museum-day/",
+   "blurb": "Medical museums hold wonders: specimen jars, antique stethoscopes and surgical saws. Today's puzzles come straight off the specimen shelf.",
+   "puzzle_theme": "Medical museums: anatomy specimens, antique instruments, history of surgery",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "International Museum Day",
+    "blurb": "ICOM's global day for museums, held since 1977. Dinosaurs, mummies, masterpieces and the gift shop.",
+    "theme": "Famous museums, artefacts, dinosaurs, history"
+   }
+  },
+  {
+   "id": "bee",
+   "name": "World Bee Day",
+   "kind": "day",
+   "rule": "05-20",
+   "dates": {
+    "2026": {
+     "start": "2026-05-20"
+    },
+    "2027": {
+     "start": "2027-05-20"
+    },
+    "2028": {
+     "start": "2028-05-20"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Bee_Day",
+   "blurb": "Bee stings can trigger anaphylaxis, and honey soothes coughs, but never give it to babies under one (botulism risk). Buzzing puzzles ahead.",
+   "puzzle_theme": "Bees and medicine: anaphylaxis, adrenaline, infant botulism, venom immunotherapy",
+   "icon": "bea-honey",
+   "normie": {
+    "name": "World Bee Day",
+    "blurb": "Marks Slovenian beekeeping pioneer Anton Janša, baptised on 20 May 1734. Honey, hives and hard-working pollinators.",
+    "theme": "Bees, honey, flowers, pollination"
+   }
+  },
+  {
+   "id": "turtle",
+   "name": "World Turtle Day",
+   "kind": "day",
+   "rule": "05-23",
+   "dates": {
+    "2026": {
+     "start": "2026-05-23"
+    },
+    "2027": {
+     "start": "2027-05-23"
+    },
+    "2028": {
+     "start": "2028-05-23"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Turtle_Day",
+   "blurb": "Pet turtles are notorious carriers of salmonella, so wash your hands after handling. Slow and steady puzzles on reptiles and infection.",
+   "puzzle_theme": "Reptile-borne infections: salmonella, hand hygiene, zoonoses, longevity",
+   "icon": null,
+   "normie": {
+    "name": "World Turtle Day",
+    "blurb": "Shellebrate! Turtles and tortoises have been around since the age of the dinosaurs. Slow and steady wins today.",
+    "theme": "Turtles, tortoises, reptiles, ocean life"
+   }
+  },
+  {
+   "id": "towel",
+   "name": "Towel Day",
+   "kind": "day",
+   "rule": "05-25",
+   "dates": {
+    "2026": {
+     "start": "2026-05-25"
+    },
+    "2027": {
+     "start": "2027-05-25"
+    },
+    "2028": {
+     "start": "2028-05-25"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/Towel_Day",
+   "blurb": "Douglas Adams fans carry a towel today. Don't panic: puzzles on panic attacks, hyperventilation and first aid for the hitchhiker.",
+   "puzzle_theme": "Don't panic medicine: panic attacks, hyperventilation, first aid, the number 42",
+   "icon": null,
+   "normie": {
+    "name": "Towel Day",
+    "blurb": "Fans of The Hitchhiker's Guide to the Galaxy carry a towel in honour of Douglas Adams. Don't panic.",
+    "theme": "Sci-fi books, the number 42, space comedy"
+   }
+  },
+  {
+   "id": "potato",
+   "name": "International Day of Potato",
+   "kind": "day",
+   "rule": "05-30",
+   "dates": {
+    "2026": {
+     "start": "2026-05-30"
+    },
+    "2027": {
+     "start": "2027-05-30"
+    },
+    "2028": {
+     "start": "2028-05-30"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.fao.org/newsroom/detail/fao-welcomes-decision-to-celebrate-international-day-of-potato-annually-on-may-30/en",
+   "blurb": "Green potatoes contain solanine, a toxin that can cause vomiting and diarrhoea. Peel it, mash it, but skip the green bits.",
+   "puzzle_theme": "Potato medicine: solanine, glycaemic index, carbohydrates, the nightshade family",
+   "icon": null,
+   "normie": {
+    "name": "International Day of Potato",
+    "blurb": "A new UN day for the humble spud, which came from the Andes. Chips, mash and roasties all count.",
+    "theme": "Potato dishes, vegetables, food around the world"
+   }
+  },
+  {
+   "id": "running",
+   "name": "Global Running Day",
+   "kind": "day",
+   "rule": "nth:1:2:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-03"
+    },
+    "2027": {
+     "start": "2027-06-02"
+    },
+    "2028": {
+     "start": "2028-06-07"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/Global_Running_Day",
+   "blurb": "Runners' bodies get the spotlight: shin splints, runner's knee, the runner's high and why resting heart rate drops with training.",
+   "puzzle_theme": "Running medicine: shin splints, patellofemoral pain, endorphins, resting heart rate",
+   "icon": "heart-calm",
+   "normie": {
+    "name": "Global Running Day",
+    "blurb": "First Wednesday of June: lace up and go. It began as a US running day and went global in 2016.",
+    "theme": "Running, marathons, famous athletes, Olympics"
+   }
+  },
+  {
+   "id": "oceans",
+   "name": "World Oceans Day",
+   "kind": "day",
+   "rule": "06-08",
+   "dates": {
+    "2026": {
+     "start": "2026-06-08"
+    },
+    "2027": {
+     "start": "2027-06-08"
+    },
+    "2028": {
+     "start": "2028-06-08"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/List_of_United_Nations_observances",
+   "blurb": "The sea is a pharmacy: a cone snail toxin became the painkiller ziconotide, and sea sponges inspired the leukaemia drug cytarabine.",
+   "puzzle_theme": "Marine medicine: ziconotide, jellyfish and stingray stings, decompression sickness, sea-derived drugs",
+   "icon": "dolphin",
+   "normie": {
+    "name": "World Oceans Day",
+    "blurb": "The UN's day for the big blue that covers most of our planet. Whales, waves and wild sea creatures.",
+    "theme": "Oceans, sea creatures, famous voyages"
+   }
+  },
+  {
+   "id": "picnic",
+   "name": "International Picnic Day",
+   "kind": "day",
+   "rule": "06-18",
+   "dates": {
+    "2026": {
+     "start": "2026-06-18"
+    },
+    "2027": {
+     "start": "2027-06-18"
+    },
+    "2028": {
+     "start": "2028-06-18"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.cooksinfo.com/international-picnic-day",
+   "blurb": "Picnic hazards: warm egg sandwiches, wasps and sunburn. Food poisoning, stings and heat are on today's menu.",
+   "puzzle_theme": "Picnic medicine: food poisoning, insect stings, sunburn, hay fever",
+   "icon": "apple",
+   "normie": {
+    "name": "International Picnic Day",
+    "blurb": "Blanket, basket, sandwiches and ants. A day for eating outdoors, whatever the season where you are.",
+    "theme": "Picnic foods, parks, outdoor games"
+   }
+  },
+  {
+   "id": "musicday",
+   "name": "World Music Day",
+   "kind": "day",
+   "rule": "06-21",
+   "dates": {
+    "2026": {
+     "start": "2026-06-21"
+    },
+    "2027": {
+     "start": "2027-06-21"
+    },
+    "2028": {
+     "start": "2028-06-21"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.wionews.com/entertainment/lifestyle/news-why-is-june-21-celebrated-as-world-music-day-history-significance-and-more-392904",
+   "blurb": "Music lights up the brain's reward pathways and is used in stroke rehab. Also, please wear earplugs at gigs.",
+   "puzzle_theme": "Music and medicine: hearing, tinnitus, music therapy, the brain",
+   "icon": "echo-ear",
+   "normie": {
+    "name": "World Music Day",
+    "blurb": "Born in France in 1982 as the Fête de la Musique: free music in the streets, now worldwide.",
+    "theme": "Instruments, genres, famous musicians"
+   }
+  },
+  {
+   "id": "tropics",
+   "name": "International Day of the Tropics",
+   "kind": "day",
+   "rule": "06-29",
+   "dates": {
+    "2026": {
+     "start": "2026-06-29"
+    },
+    "2027": {
+     "start": "2027-06-29"
+    },
+    "2028": {
+     "start": "2028-06-29"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.un.org/en/node/218686",
+   "blurb": "Tropical medicine time: dengue, malaria and heat illness, plus the travel vaccines you'll want before heading towards the equator.",
+   "puzzle_theme": "Tropical medicine: dengue, malaria, heat illness, travel vaccines",
+   "icon": "hummingbird",
+   "normie": {
+    "name": "International Day of the Tropics",
+    "blurb": "A UN day for the warm belt around the equator. Rainforests, reefs, mangoes and monsoons.",
+    "theme": "Tropical places, rainforests, fruits, weather"
+   }
+  },
+  {
+   "id": "kissing",
+   "name": "International Kissing Day",
+   "kind": "day",
+   "rule": "07-06",
+   "dates": {
+    "2026": {
+     "start": "2026-07-06"
+    },
+    "2027": {
+     "start": "2027-07-06"
+    },
+    "2028": {
+     "start": "2028-07-06"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Kissing_Day",
+   "blurb": "A kiss swaps saliva and microbes. Glandular fever, the 'kissing disease', is caused by Epstein-Barr virus. Pucker up for puzzles.",
+   "puzzle_theme": "Kissing medicine: glandular fever, cold sores, saliva, oxytocin",
+   "icon": "octavia-hearts",
+   "normie": {
+    "name": "International Kissing Day",
+    "blurb": "Started in the UK, this day celebrates the humble smooch. Famous movie kisses, anyone?",
+    "theme": "Romance, famous couples, love songs"
+   }
+  },
+  {
+   "id": "chess",
+   "name": "World Chess Day",
+   "kind": "day",
+   "rule": "07-20",
+   "dates": {
+    "2026": {
+     "start": "2026-07-20"
+    },
+    "2027": {
+     "start": "2027-07-20"
+    },
+    "2028": {
+     "start": "2028-07-20"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.fide.com/un-adopts-july-20-as-world-chess-day/",
+   "blurb": "Chess is a brain workout: planning, memory and pattern recognition. Today's puzzles make your frontal lobes earn their keep.",
+   "puzzle_theme": "Brain and cognition: frontal lobes, memory, ageing brain, chess-themed anatomy",
+   "icon": "brain",
+   "normie": {
+    "name": "World Chess Day",
+    "blurb": "FIDE was founded in Paris on 20 July 1924. Kings, queens, knights and checkmate.",
+    "theme": "Chess pieces, famous players, board games"
+   }
+  },
+  {
+   "id": "mangrove",
+   "name": "Mangrove Day",
+   "kind": "day",
+   "rule": "07-26",
+   "dates": {
+    "2026": {
+     "start": "2026-07-26"
+    },
+    "2027": {
+     "start": "2027-07-26"
+    },
+    "2028": {
+     "start": "2028-07-26"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Day_for_the_Conservation_of_the_Mangrove_Ecosystem",
+   "blurb": "Mangroves survive salt water by blocking or excreting salt, a job your kidneys do for you. Salty puzzles on sodium and fluids.",
+   "puzzle_theme": "Salt handling: kidneys, sodium, dehydration, mosquito-borne disease",
+   "icon": "seahorse",
+   "normie": {
+    "name": "Mangrove Day",
+    "blurb": "UNESCO's day for the salt-tolerant coastal forests that protect shorelines and shelter baby fish.",
+    "theme": "Coastal plants, sea life, shorelines"
+   }
+  },
+  {
+   "id": "ranger",
+   "name": "World Ranger Day",
+   "kind": "day",
+   "rule": "07-31",
+   "dates": {
+    "2026": {
+     "start": "2026-07-31"
+    },
+    "2027": {
+     "start": "2027-07-31"
+    },
+    "2028": {
+     "start": "2028-07-31"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.iucn.org/news/protected-areas/201907/world-ranger-day-2019-31-july",
+   "blurb": "Rangers know bush first aid: pressure bandages for snakebite, tick removal and heat exhaustion. Puzzles straight from the field.",
+   "puzzle_theme": "Wilderness medicine: snakebite first aid, ticks, heat illness, wound care",
+   "icon": "deer",
+   "normie": {
+    "name": "World Ranger Day",
+    "blurb": "Honouring the rangers who protect parks and wildlife around the world. Hats off, binoculars up.",
+    "theme": "National parks, wildlife, outdoor gear"
+   }
+  },
+  {
+   "id": "lion",
+   "name": "World Lion Day",
+   "kind": "day",
+   "rule": "08-10",
+   "dates": {
+    "2026": {
+     "start": "2026-08-10"
+    },
+    "2027": {
+     "start": "2027-08-10"
+    },
+    "2028": {
+     "start": "2028-08-10"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Lion_Day",
+   "blurb": "Lions can sleep up to 20 hours a day. Jealous? Today's puzzles roar through sleep, circadian rhythms and big-cat anatomy.",
+   "puzzle_theme": "Sleep and rest: circadian rhythm, sleep stages, napping, big-cat facts",
+   "icon": null,
+   "normie": {
+    "name": "World Lion Day",
+    "blurb": "Launched in 2013 to celebrate the king of the jungle, who actually lives on grasslands and savannahs.",
+    "theme": "Lions, big cats, African wildlife"
+   }
+  },
+  {
+   "id": "elephant",
+   "name": "World Elephant Day",
+   "kind": "day",
+   "rule": "08-12",
+   "dates": {
+    "2026": {
+     "start": "2026-08-12"
+    },
+    "2027": {
+     "start": "2027-08-12"
+    },
+    "2028": {
+     "start": "2028-08-12"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Elephant_Day",
+   "blurb": "Elephants rarely get cancer, partly thanks to extra copies of the tumour-suppressor gene TP53. Peto's paradox, with a trunk.",
+   "puzzle_theme": "Cancer biology: TP53, Peto's paradox, ageing, big-animal physiology",
+   "icon": "elephant",
+   "normie": {
+    "name": "World Elephant Day",
+    "blurb": "Started in 2012 to celebrate the world's largest land animals. Trunks, tusks and famously good memories.",
+    "theme": "Elephants, African and Asian wildlife"
+   }
+  },
+  {
+   "id": "photography",
+   "name": "World Photography Day",
+   "kind": "day",
+   "rule": "08-19",
+   "dates": {
+    "2026": {
+     "start": "2026-08-19"
+    },
+    "2027": {
+     "start": "2027-08-19"
+    },
+    "2028": {
+     "start": "2028-08-19"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.telefonica.com/en/communication-room/blog/19-august-world-photography-day/",
+   "blurb": "The daguerreotype was presented in Paris on 19 August 1839. Medicine followed with X-rays, retinal photos and endoscopy.",
+   "puzzle_theme": "Medical imaging: X-rays, fundus photography, endoscopy, dermatoscopy",
+   "icon": null,
+   "normie": {
+    "name": "World Photography Day",
+    "blurb": "The daguerreotype was presented in Paris on 19 August 1839, and photography took off. Say cheese.",
+    "theme": "Cameras, famous photos, photographers"
+   }
+  },
+  {
+   "id": "coconut",
+   "name": "World Coconut Day",
+   "kind": "day",
+   "rule": "09-02",
+   "dates": {
+    "2026": {
+     "start": "2026-09-02"
+    },
+    "2027": {
+     "start": "2027-09-02"
+    },
+    "2028": {
+     "start": "2028-09-02"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://coconutcommunity.org/news/world-coconut-day-2023-was-celebrated-globally-by-member-countries-of-international-coconut-community-icc",
+   "blurb": "Coconut water is mostly water with a dose of potassium. Puzzles on electrolytes, hydration and coconut oil myths.",
+   "puzzle_theme": "Electrolytes and fats: potassium, hydration, saturated fat, nutrition myths",
+   "icon": null,
+   "normie": {
+    "name": "World Coconut Day",
+    "blurb": "Marks the founding of the International Coconut Community in 1969. Fun fact: botanically, a coconut is a drupe, not a nut.",
+    "theme": "Tropical fruits, islands, coconut foods"
+   }
+  },
+  {
+   "id": "literacy",
+   "name": "International Literacy Day",
+   "kind": "day",
+   "rule": "09-08",
+   "dates": {
+    "2026": {
+     "start": "2026-09-08"
+    },
+    "2027": {
+     "start": "2027-09-08"
+    },
+    "2028": {
+     "start": "2028-09-08"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Literacy_Day",
+   "blurb": "Health literacy matters: plain words help patients understand their care. Today we decode jargon, abbreviations and medical Latin.",
+   "puzzle_theme": "Health literacy: medical jargon, abbreviations, Latin and Greek roots",
+   "icon": "owl",
+   "normie": {
+    "name": "International Literacy Day",
+    "blurb": "Proclaimed by UNESCO in 1966. Reading is a superpower, so use it.",
+    "theme": "Words, alphabets, reading, famous books"
+   }
+  },
+  {
+   "id": "roalddahl",
+   "name": "Roald Dahl Day",
+   "kind": "day",
+   "rule": "09-13",
+   "dates": {
+    "2026": {
+     "start": "2026-09-13"
+    },
+    "2027": {
+     "start": "2027-09-13"
+    },
+    "2028": {
+     "start": "2028-09-13"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.timeanddate.com/holidays/fun/roald-dahl-day",
+   "blurb": "Roald Dahl helped invent the Wade-Dahl-Till valve to drain fluid from the brain in hydrocephalus. Also: chocolate, sugar and teeth.",
+   "puzzle_theme": "Dahl and medicine: hydrocephalus and shunts, the brain, sugar and teeth, giants and growth",
+   "icon": null,
+   "normie": {
+    "name": "Roald Dahl Day",
+    "blurb": "Celebrating Roald Dahl's birthday with chocolate factories, giant peaches and the BFG. Whizzpopping encouraged.",
+    "theme": "Roald Dahl books and characters, made-up words"
+   }
+  },
+  {
+   "id": "pirate",
+   "name": "Talk Like a Pirate Day",
+   "kind": "day",
+   "rule": "09-19",
+   "dates": {
+    "2026": {
+     "start": "2026-09-19"
+    },
+    "2027": {
+     "start": "2027-09-19"
+    },
+    "2028": {
+     "start": "2028-09-19"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day",
+   "blurb": "Arrr! Sailors got scurvy from a lack of vitamin C. Citrus cured it, which is why British sailors were nicknamed 'limeys'.",
+   "puzzle_theme": "Pirate medicine: scurvy and vitamin C, amputations and peg legs, eye patches, rum",
+   "icon": "lifebuoy",
+   "normie": {
+    "name": "Talk Like a Pirate Day",
+    "blurb": "Started in 1995 by two mates from Oregon. Ahoy, matey: talk like a pirate all day.",
+    "theme": "Pirates, ships, treasure, sea shanties"
+   }
+  },
+  {
+   "id": "peace",
+   "name": "International Day of Peace",
+   "kind": "day",
+   "rule": "09-21",
+   "dates": {
+    "2026": {
+     "start": "2026-09-21"
+    },
+    "2027": {
+     "start": "2027-09-21"
+    },
+    "2028": {
+     "start": "2028-09-21"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.unrcpd.org/spotlight/international-day-peace-21-september",
+   "blurb": "Calm is good medicine: chronic stress raises cortisol and blood pressure. Today's puzzles cover relaxation, sleep and the vagus nerve.",
+   "puzzle_theme": "Stress physiology: cortisol, blood pressure, the vagus nerve, meditation",
+   "icon": "hands-heart",
+   "normie": {
+    "name": "International Day of Peace",
+    "blurb": "The UN's day for peace, with a call for 24 hours of ceasefire. Doves, olive branches and getting along.",
+    "theme": "Peace symbols, famous peacemakers, kindness"
+   }
+  },
+  {
+   "id": "rhino",
+   "name": "World Rhino Day",
+   "kind": "day",
+   "rule": "09-22",
+   "dates": {
+    "2026": {
+     "start": "2026-09-22"
+    },
+    "2027": {
+     "start": "2027-09-22"
+    },
+    "2028": {
+     "start": "2028-09-22"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.gov.za/world-rhino-day",
+   "blurb": "Rhino horn is keratin, the same as your fingernails, with no proven medicinal value. Myth-busting puzzles today.",
+   "puzzle_theme": "Myth-busting medicine: keratin, traditional remedies, evidence, placebo",
+   "icon": "hippo",
+   "normie": {
+    "name": "World Rhino Day",
+    "blurb": "Five species, one big day: black, white, greater one-horned, Sumatran and Javan rhinos.",
+    "theme": "Rhinos, African and Asian wildlife"
+   }
+  },
+  {
+   "id": "gorilla",
+   "name": "World Gorilla Day",
+   "kind": "day",
+   "rule": "09-24",
+   "dates": {
+    "2026": {
+     "start": "2026-09-24"
+    },
+    "2027": {
+     "start": "2027-09-24"
+    },
+    "2028": {
+     "start": "2028-09-24"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://gorillafund.org/?p=23349",
+   "blurb": "Gorillas share about 98% of our DNA. Today's puzzles go ape for primate anatomy, evolution and genetics.",
+   "puzzle_theme": "Primate biology: DNA, evolution, comparative anatomy, zoonoses",
+   "icon": "chimp",
+   "normie": {
+    "name": "World Gorilla Day",
+    "blurb": "Marks the day Dian Fossey founded the Karisoke Research Center in 1967. Silverbacks rule today.",
+    "theme": "Gorillas, apes, rainforests"
+   }
+  },
+  {
+   "id": "coffee",
+   "name": "International Coffee Day",
+   "kind": "day",
+   "rule": "10-01",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01"
+    },
+    "2027": {
+     "start": "2027-10-01"
+    },
+    "2028": {
+     "start": "2028-10-01"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Coffee_Day",
+   "blurb": "Caffeine works by blocking adenosine, the molecule that makes you sleepy. Puzzles on palpitations, withdrawal headaches and that third flat white.",
+   "puzzle_theme": "Caffeine pharmacology: adenosine, heart rate, withdrawal, sleep",
+   "icon": "teacup",
+   "normie": {
+    "name": "International Coffee Day",
+    "blurb": "Made official by the International Coffee Organization in 2015. Espresso, latte or long black: all welcome today.",
+    "theme": "Coffee drinks, café culture, coffee-growing countries"
+   }
+  },
+  {
+   "id": "smile",
+   "name": "World Smile Day",
+   "kind": "day",
+   "rule": "nth:1:4:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-02"
+    },
+    "2027": {
+     "start": "2027-10-01"
+    },
+    "2028": {
+     "start": "2028-10-06"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Smile_Day",
+   "blurb": "Smiling pulls on zygomaticus major and friends, all run by the facial nerve. Puzzles on Bell's palsy, facial muscles and teeth.",
+   "puzzle_theme": "The face: facial nerve, Bell's palsy, facial muscles, dental health",
+   "icon": "heart-rainbow",
+   "normie": {
+    "name": "World Smile Day",
+    "blurb": "Created by Harvey Ball, the artist who drew the yellow smiley face in 1963. Smile at a stranger today.",
+    "theme": "Smiles, emojis, happy things"
+   }
+  },
+  {
+   "id": "teachers",
+   "name": "World Teachers' Day",
+   "kind": "day",
+   "rule": "10-05",
+   "dates": {
+    "2026": {
+     "start": "2026-10-05"
+    },
+    "2027": {
+     "start": "2027-10-05"
+    },
+    "2028": {
+     "start": "2028-10-05"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://iite.unesco.org/announcements/5-october-world-teachers-day",
+   "blurb": "Medicine runs on teaching: 'doctor' comes from the Latin docere, to teach. Puzzles on medical education and great mentors.",
+   "puzzle_theme": "Medical education: Latin roots, famous teachers of medicine, exams",
+   "icon": "owl",
+   "normie": {
+    "name": "World Teachers' Day",
+    "blurb": "Since 1994, a day to thank teachers. Apples optional, gratitude essential.",
+    "theme": "School subjects, famous teachers, classroom words"
+   }
+  },
+  {
+   "id": "octopus",
+   "name": "World Octopus Day",
+   "kind": "day",
+   "rule": "10-08",
+   "dates": {
+    "2026": {
+     "start": "2026-10-08"
+    },
+    "2027": {
+     "start": "2027-10-08"
+    },
+    "2028": {
+     "start": "2028-10-08"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://todayinconservation.com/2019/08/october-8-world-octopus-day/",
+   "blurb": "Octopuses have three hearts and blue, copper-based blood. Yours is red thanks to iron in haemoglobin. Circulation puzzles today.",
+   "puzzle_theme": "Blood and circulation: haemoglobin vs haemocyanin, the heart, oxygen transport",
+   "icon": "octavia-hearts",
+   "normie": {
+    "name": "World Octopus Day",
+    "blurb": "Eight arms, three hearts and blue blood. Celebrating the clever escape artists of the sea.",
+    "theme": "Octopuses, sea creatures, the number eight"
+   }
+  },
+  {
+   "id": "post",
+   "name": "World Post Day",
+   "kind": "day",
+   "rule": "10-09",
+   "dates": {
+    "2026": {
+     "start": "2026-10-09"
+    },
+    "2027": {
+     "start": "2027-10-09"
+    },
+    "2028": {
+     "start": "2028-10-09"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Post_Day",
+   "blurb": "Many hospitals still whoosh blood samples to the lab through pneumatic tubes. Today's puzzles: samples, scripts and referral letters.",
+   "puzzle_theme": "Hospital logistics: pathology samples, prescriptions, referral letters, pneumatic tubes",
+   "icon": null,
+   "normie": {
+    "name": "World Post Day",
+    "blurb": "Marks the founding of the Universal Postal Union in 1874. Stamps, postcards and handwritten letters.",
+    "theme": "Stamps, letters, postal history"
+   }
+  },
+  {
+   "id": "egg",
+   "name": "World Egg Day",
+   "kind": "day",
+   "rule": "nth:2:4:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-09"
+    },
+    "2027": {
+     "start": "2027-10-08"
+    },
+    "2028": {
+     "start": "2028-10-13"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://worldeggorganisation.com/resource/a-dozen-reasons-to-celebrate-world-egg-day",
+   "blurb": "Eggs are packed with protein, and egg allergy is common in young children, though many outgrow it. Crack on.",
+   "puzzle_theme": "Eggs and health: egg allergy, flu vaccines grown in eggs, cholesterol, protein",
+   "icon": "goose",
+   "normie": {
+    "name": "World Egg Day",
+    "blurb": "The second Friday in October belongs to the egg. Boiled, poached, scrambled, or which-came-first debates.",
+    "theme": "Egg dishes, birds, breakfast foods"
+   }
+  },
+  {
+   "id": "food",
+   "name": "World Food Day",
+   "kind": "day",
+   "rule": "10-16",
+   "dates": {
+    "2026": {
+     "start": "2026-10-16"
+    },
+    "2027": {
+     "start": "2027-10-16"
+    },
+    "2028": {
+     "start": "2028-10-16"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.worldatlas.com/articles/what-and-when-is-world-food-day.html",
+   "blurb": "Food is medicine: iron for blood, vitamin D for bones, folate for growing babies. Nutrition puzzles on the anniversary of the FAO.",
+   "puzzle_theme": "Nutrition: vitamins, deficiencies, malnutrition, balanced diet",
+   "icon": "apple",
+   "normie": {
+    "name": "World Food Day",
+    "blurb": "Marks the founding of the UN's Food and Agriculture Organization on 16 October 1945. What's for dinner?",
+    "theme": "World cuisines, ingredients, famous dishes"
+   }
+  },
+  {
+   "id": "sloth",
+   "name": "International Sloth Day",
+   "kind": "day",
+   "rule": "10-20",
+   "dates": {
+    "2026": {
+     "start": "2026-10-20"
+    },
+    "2027": {
+     "start": "2027-10-20"
+    },
+    "2028": {
+     "start": "2028-10-20"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.timeanddate.com/holidays/fun/international-sloth-day",
+   "blurb": "Sloths grow algae in their fur, and some species have extra neck vertebrae. Slow, steady anatomy puzzles today.",
+   "puzzle_theme": "Anatomy oddities: cervical vertebrae, metabolism, muscle, slow-motion physiology",
+   "icon": "sloth",
+   "normie": {
+    "name": "International Sloth Day",
+    "blurb": "Started in 2010 by Colombia's AIUNAU Foundation. Hang around, move slowly and nap often.",
+    "theme": "Sloths, rainforest animals, slowness"
+   }
+  },
+  {
+   "id": "snowleopard",
+   "name": "International Day of the Snow Leopard",
+   "kind": "day",
+   "rule": "10-23",
+   "dates": {
+    "2026": {
+     "start": "2026-10-23"
+    },
+    "2027": {
+     "start": "2027-10-23"
+    },
+    "2028": {
+     "start": "2028-10-23"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/List_of_United_Nations_observances",
+   "blurb": "Snow leopards live high where oxygen is thin. Today's puzzles climb into altitude sickness and how bodies adapt to hypoxia.",
+   "puzzle_theme": "Altitude medicine: hypoxia, altitude sickness, red blood cells, high-altitude adaptation",
+   "icon": "cipher-cat",
+   "normie": {
+    "name": "International Day of the Snow Leopard",
+    "blurb": "A UN day for the elusive big cat of Central Asia's mountains. Huge paws, thick fur and a very long tail.",
+    "theme": "Snow leopards, mountains, big cats"
+   }
+  },
+  {
+   "id": "animation",
+   "name": "International Animation Day",
+   "kind": "day",
+   "rule": "10-28",
+   "dates": {
+    "2026": {
+     "start": "2026-10-28"
+    },
+    "2027": {
+     "start": "2027-10-28"
+    },
+    "2028": {
+     "start": "2028-10-28"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://pasqualecuratola.altervista.org/?p=22165",
+   "blurb": "Animation tricks your brain into seeing motion in still frames. Puzzles on the eye, retina, visual cortex and flicker.",
+   "puzzle_theme": "Vision: retina, visual cortex, flicker, photosensitive epilepsy",
+   "icon": null,
+   "normie": {
+    "name": "International Animation Day",
+    "blurb": "Marks Émile Reynaud's first public show of projected moving pictures, Paris, 28 October 1892. Cartoons forever.",
+    "theme": "Cartoons, animated films, famous characters"
+   }
+  },
+  {
+   "id": "philosophy",
+   "name": "World Philosophy Day",
+   "kind": "day",
+   "rule": "nth:3:3:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-19"
+    },
+    "2027": {
+     "start": "2027-11-18"
+    },
+    "2028": {
+     "start": "2028-11-16"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/List_of_United_Nations_observances",
+   "blurb": "Medical ethics grew from philosophy. Autonomy, beneficence, non-maleficence and justice: the four principles get a workout today.",
+   "puzzle_theme": "Medical ethics: the four principles, consent, the Hippocratic Oath, famous dilemmas",
+   "icon": "brain",
+   "normie": {
+    "name": "World Philosophy Day",
+    "blurb": "UNESCO's day for big questions. Why are we here? Is a hot dog a sandwich?",
+    "theme": "Famous philosophers, big ideas, logic puzzles"
+   }
+  },
+  {
+   "id": "hello",
+   "name": "World Hello Day",
+   "kind": "day",
+   "rule": "11-21",
+   "dates": {
+    "2026": {
+     "start": "2026-11-21"
+    },
+    "2027": {
+     "start": "2027-11-21"
+    },
+    "2028": {
+     "start": "2028-11-21"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/World_Hello_Day",
+   "blurb": "Good care starts with hello: introduce yourself and use plain words. Today's puzzles are about communication and bedside manner.",
+   "puzzle_theme": "Communication in medicine: history taking, consent, interpreters, bedside manner",
+   "icon": "chat-calm",
+   "normie": {
+    "name": "World Hello Day",
+    "blurb": "Started in 1973 by brothers Brian and Michael McCormack to promote talking over fighting. Say hello to someone new.",
+    "theme": "Greetings in different languages, conversation"
+   }
+  },
+  {
+   "id": "fibonacci",
+   "name": "Fibonacci Day",
+   "kind": "day",
+   "rule": "11-23",
+   "dates": {
+    "2026": {
+     "start": "2026-11-23"
+    },
+    "2027": {
+     "start": "2027-11-23"
+    },
+    "2028": {
+     "start": "2028-11-23"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://www.timeanddate.com/holidays/fun/fibonacci-day",
+   "blurb": "Written 11/23, today reads 1, 1, 2, 3. Number puzzles for clinicians: doses, ratios, percentiles and growth charts.",
+   "puzzle_theme": "Maths in medicine: drug doses, ratios, percentiles, growth charts",
+   "icon": "infinity",
+   "normie": {
+    "name": "Fibonacci Day",
+    "blurb": "Written 11/23, today's date spells 1, 1, 2, 3. Celebrating Leonardo of Pisa's famous number sequence.",
+    "theme": "Number puzzles, sequences, maths in nature"
+   }
+  },
+  {
+   "id": "cheetah",
+   "name": "International Cheetah Day",
+   "kind": "day",
+   "rule": "12-04",
+   "dates": {
+    "2026": {
+     "start": "2026-12-04"
+    },
+    "2027": {
+     "start": "2027-12-04"
+    },
+    "2028": {
+     "start": "2028-12-04"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://cheetah.org/press-releases/cheetah-conservation-fund-celebrates-the-15th-annual-international-cheetah-day-4-dec/",
+   "blurb": "The world's fastest land animal needs a rest after a sprint. Puzzles on fast-twitch muscle, lactate and heart rate.",
+   "puzzle_theme": "Sprint physiology: fast-twitch muscle, lactate, heart rate, thermoregulation",
+   "icon": "cheetah",
+   "normie": {
+    "name": "International Cheetah Day",
+    "blurb": "Held on the birthday of Khayam, a cheetah raised by conservationist Dr Laurie Marker. Fastest land animal, fastest puzzles.",
+    "theme": "Cheetahs, big cats, speed records"
+   }
+  },
+  {
+   "id": "soil",
+   "name": "World Soil Day",
+   "kind": "day",
+   "rule": "12-05",
+   "dates": {
+    "2026": {
+     "start": "2026-12-05"
+    },
+    "2027": {
+     "start": "2027-12-05"
+    },
+    "2028": {
+     "start": "2028-12-05"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/List_of_United_Nations_observances",
+   "blurb": "Soil gave us streptomycin, the first antibiotic that worked against tuberculosis. It also harbours tetanus spores. Dirt is complicated.",
+   "puzzle_theme": "Soil microbes: streptomycin, tetanus, hookworm, antibiotics from the ground",
+   "icon": "ant",
+   "normie": {
+    "name": "World Soil Day",
+    "blurb": "A UN day for the dirt beneath our feet. Worms, roots, gardens and everything that grows.",
+    "theme": "Gardening, soil creatures, plants, farming"
+   }
+  },
+  {
+   "id": "aviation",
+   "name": "International Civil Aviation Day",
+   "kind": "day",
+   "rule": "12-07",
+   "dates": {
+    "2026": {
+     "start": "2026-12-07"
+    },
+    "2027": {
+     "start": "2027-12-07"
+    },
+    "2028": {
+     "start": "2028-12-07"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/International_Civil_Aviation_Day",
+   "blurb": "Flying medicine: cabin pressure, ear popping, jet lag and clots on long-haul flights. Fasten your seatbelts.",
+   "puzzle_theme": "Aviation medicine: ear barotrauma, jet lag, DVT, hypoxia",
+   "icon": "hummingbird",
+   "normie": {
+    "name": "International Civil Aviation Day",
+    "blurb": "Marks the 1944 signing of the Chicago Convention on international air travel. Planes, pilots and window seats.",
+    "theme": "Aircraft, airports, famous flights"
+   }
+  },
+  {
+   "id": "basketball",
+   "name": "World Basketball Day",
+   "kind": "day",
+   "rule": "12-21",
+   "dates": {
+    "2026": {
+     "start": "2026-12-21"
+    },
+    "2027": {
+     "start": "2027-12-21"
+    },
+    "2028": {
+     "start": "2028-12-21"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://about.fiba.basketball/en/organization/world-basketball-day",
+   "blurb": "Basketball's classic injuries: rolled ankles and ACL tears. Puzzles on knees, jumping and how tall is tall.",
+   "puzzle_theme": "Sports medicine: ACL tears, ankle sprains, growth hormone, height",
+   "icon": null,
+   "normie": {
+    "name": "World Basketball Day",
+    "blurb": "The first official game was played in 1891 in Springfield, Massachusetts. James Naismith invented it, using peach baskets.",
+    "theme": "Basketball, sports, famous players, Olympics"
+   }
+  },
+  {
+   "id": "nye",
+   "name": "New Year's Eve",
+   "kind": "day",
+   "rule": "12-31",
+   "dates": {
+    "2026": {
+     "start": "2026-12-31"
+    },
+    "2027": {
+     "start": "2027-12-31"
+    },
+    "2028": {
+     "start": "2028-12-31"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/New_Year%27s_Eve",
+   "blurb": "Countdown to midnight: fireworks, hangovers and sleep debt. Puzzles on alcohol, burns and resolutions that actually stick.",
+   "puzzle_theme": "Party medicine: alcohol metabolism, hangovers, burns, eye injuries, habit change",
+   "icon": "star",
+   "normie": {
+    "name": "New Year's Eve",
+    "blurb": "Last day of the year. Countdowns, fireworks and resolutions you will definitely keep.",
+    "theme": "Celebrations around the world, fireworks, calendars"
+   }
   }
  ]
 }
