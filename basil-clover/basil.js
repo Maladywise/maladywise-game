@@ -1369,8 +1369,8 @@
   }
   function draw() {
     ctx.save();
-    if (shakeT > 0 && !S.over) ctx.translate(rnd(-3, 3), rnd(-2, 2));
-    if (S.dog && !S.dog.gone && !quiet() && Math.sin(S.t * 12) > 0.7) ctx.translate(rnd(-1.5, 1.5), rnd(-1, 1)); // the bark shakes the kitchen
+    if (shakeT > 0 && !S.over && !paused) ctx.translate(rnd(-3, 3), rnd(-2, 2));
+    if (!paused && S.dog && !S.dog.gone && !quiet() && Math.sin(S.t * 12) > 0.7) ctx.translate(rnd(-1.5, 1.5), rnd(-1, 1)); // the bark shakes the kitchen
     scene(STAGE === 2 && V && S.boss ? function () { V.bossBack(S.boss); } : null); if (S.boss) bossDraw(); else basil(); bars(); if (!S.boss) evDrawBack();
     if (S.tom && !S.tom.done) { ctx.save(); ctx.globalAlpha = S.tom.k; ctx.textAlign = "center"; ctx.fillStyle = "#C2553A"; ctx.font = "900 13px Poppins, sans-serif"; ctx.fillText(FINE ? "TAP or \u2191 / W" : "TAP HIM!", 281, 128); for (var tp = 0; tp < 3; tp++) circ(269 + tp * 12, 140, 4, tp < S.tom.hits ? "#2E7D6B" : "rgba(43,35,64,.2)"); var tw = Math.max(0, S.tom.t / 4.5); rr(246, 150, 70 * tw, 4, 2); ctx.fillStyle = "#C2553A"; ctx.fill(); ctx.restore(); }
     for (var i = 0; i < 3; i++) {
