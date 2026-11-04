@@ -1172,7 +1172,7 @@
     [/mushroom|weird|odd|rare|zebra|unicorn/i, "zebritis"]
   ];
   var WD_FALL = ["dx", "triviosis", "gridectomy", "suturix", "morphemia", "cryptogenic", "grandrounds"];
-  var WD_SEC = [[/weekly dose/i, "dx"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
+  var WD_SEC = [[/weekly dose/i, "dx"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/weird/i, "morphemia"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
   function wdPick(txt, used) {
     for (var i = 0; i < WD_TOPICS.length; i++) if (WD_TOPICS[i][0].test(txt) && !used[WD_TOPICS[i][1]]) return WD_TOPICS[i][1];
     for (var j = 0; j < WD_TOPICS.length; j++) if (WD_TOPICS[j][0].test(txt)) return WD_TOPICS[j][1];
@@ -1203,8 +1203,11 @@
     var path = location.pathname;
     if (/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(path)) { var m = document.querySelector("main"); if (m) wdDecorate(m); return; }
     if (!/^\/zebra-mail\/(index\.html)?$/.test(path)) return;
-    var slot = document.getElementById("latest"), first = document.querySelector("#issues a");
-    if (!slot || !first || !window.fetch || !window.DOMParser) return;
+    var slot = document.getElementById("latest");
+    if (!slot) return;
+    if (slot.querySelector("ul, h2 ~ p")) { wdDecorate(slot); return; } // issue already inlined by the weekly build
+    var first = slot.querySelector('a[href^="/zebra-mail/20"]') || document.querySelector("#issues a");
+    if (!first || !window.fetch || !window.DOMParser) return;
     fetch(first.getAttribute("href")).then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
       if (!html) return;
       var d = new DOMParser().parseFromString(html, "text/html"), src = d.querySelector("main"); if (!src) return;
