@@ -936,3 +936,20 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .band.band2 .b2i svg{width:34px;height:34px}
 .band.band2 .band-masc{width:62px;height:62px}
 @media (max-width:620px){.band.band2{gap:8px}.band.band2 .b2i{width:38px;height:38px;border-radius:11px}.band.band2 .b2i svg{width:24px;height:24px}.band.band2 .band-masc{width:44px;height:44px}}
+
+/* Zebra Mail: mascots beside stories, quieter detail, latest issue on the hub */
+.wd h2{display:flex;align-items:center;gap:8px}
+.wd h2 .wd-hm{width:26px;height:26px;flex:none}
+.wd .wd-story{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start}
+.wd .wd-m{width:44px;height:44px;margin-top:2px;background:color-mix(in srgb,var(--brand) 8%,var(--card));border-radius:12px;padding:3px;box-sizing:border-box}
+.wd .wd-tx{min-width:0}
+.wd .wd-tx>strong.hl a,.wd .wd-tx>a:first-child{display:block;font:600 16px/1.4 Lora,Georgia,serif;color:var(--ink);text-decoration:none;margin-bottom:4px}
+.wd .wd-d{font-size:14px;line-height:1.55;color:var(--muted)}
+.wd .wd-d a{color:var(--brand)}
+.wd .wd-d .why{color:var(--ink);opacity:.75}
+.wd-latest{margin:8px 0 26px;padding:18px 16px;border:1px solid var(--line);border-radius:20px;background:color-mix(in srgb,var(--brand) 4%,var(--bg,transparent))}
+.wd-latest .wd-kick{margin:0;font:600 12px Poppins,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.wd-latest h2.wd-title{display:block;font:700 24px/1.25 Lora,Georgia,serif;text-transform:none;letter-spacing:0;color:var(--ink);margin:6px 0 4px}
+.wd-latest h2.wd-title a{color:inherit;text-decoration:none}
+@media (max-width:420px){.wd .wd-story{grid-template-columns:36px 1fr;gap:10px}.wd .wd-m{width:36px;height:36px}}
+.wd-latest .lede{background:none;border:0;padding:0;margin:0 0 6px;font-size:17px}
