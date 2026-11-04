@@ -953,3 +953,6 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .wd-latest h2.wd-title a{color:inherit;text-decoration:none}
 @media (max-width:420px){.wd .wd-story{grid-template-columns:36px 1fr;gap:10px}.wd .wd-m{width:36px;height:36px}}
 .wd-latest .lede{background:none;border:0;padding:0;margin:0 0 6px;font-size:17px}
+.wd .wd-story.wd-small{grid-template-columns:34px 1fr;align-items:center}
+.wd .wd-small .wd-m{width:34px;height:34px;border-radius:10px;margin-top:0}
+.wd .wd-small strong.when{margin-bottom:4px}
