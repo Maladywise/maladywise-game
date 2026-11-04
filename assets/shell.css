@@ -918,39 +918,15 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .hday-row .hday-go{margin:0}
 .hday-up{font:600 14px Poppins,system-ui,sans-serif;color:var(--brand);text-decoration:none;white-space:nowrap}
 .hday-up:hover{text-decoration:underline}
-/* desktop: sized game sections; small sections (1-2 games) sit side by side */
+/* desktop: original cards on a fixed 4-column grid; 1-2 game sections take half a row so two sit side by side */
 @media (min-width:900px){
-  .gsecs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 20px}
-  .gsecs>.gsec{grid-column:1/-1}
-  .gsecs>.gsec>.grid{grid-template-columns:repeat(var(--n,4),minmax(0,1fr))}
+  .gsecs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 16px}
+  .gsecs>.gsec{grid-column:1/-1;align-content:start}
+  .gsecs>.gsec>.grid{grid-template-columns:repeat(4,minmax(0,1fr))}
   .gsecs>.gsec.sm{grid-column:span 2}
-  .gsecs>.gsec.sm[data-span="3"]{grid-column:span 3}
-  .gsecs>.gsec.sm[data-span="6"]{grid-column:1/-1}
   .gsecs>.gsec.sm>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .gsecs>.gsec.sm .gsec-h{flex-wrap:nowrap;min-width:0}
   .gsecs>.gsec.sm .gsec-h h2{white-space:nowrap}
-  .gsecs>.gsec.sm .gsec-h span{overflow:hidden;text-overflow:ellipsis;min-width:0}
-  .gsecs>.gsec{align-content:start}
+  .gsecs>.gsec.sm .gsec-h span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 }
 @media (max-width:899px){.gsecs{display:grid;gap:22px}}
-/* desktop grouped sections: horizontal tiles on a 3-column rhythm (small sections stack their 2 tiles) */
-@media (min-width:900px){
-  .gsecs>.gsec>.grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:14px}
-  .gsecs>.gsec[data-c="4"]>.grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .gsecs>.gsec.sm>.grid{grid-template-columns:1fr}
-  .gsecs>.gsec.sm[data-span="3"]>.grid,.gsecs>.gsec.sm[data-span="6"]>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .gsecs .card{flex-direction:row;min-height:112px}
-  .gsecs .card .band{width:92px;min-height:0;flex:none}
-  .gsecs .card .band svg{width:40px;height:40px}
-  .gsecs .card .band .band-masc{width:54px;height:54px}
-  .gsecs .card .cbody{padding:12px 14px;gap:3px;min-width:0}
-  .gsecs .card .name{font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .gsecs .card .kind{display:block;margin:0;font-size:13px;color:var(--muted)}
-  .gsecs .card .tag{display:none}
-  .gsecs .card .pill{font-size:9.5px;padding:2px 8px}
-  .gsecs .card .pillrow{display:flex;gap:4px;flex-wrap:wrap}
-  .gsecs .cfoot{margin-top:auto;padding-top:6px;align-items:center}
-  .gsecs .card .play{padding:6px 14px;font-size:13px}
-  .gsecs .card .status{font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
-  .gsecs .card .tick{top:6px;right:6px}
-}

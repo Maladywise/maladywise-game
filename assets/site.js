@@ -22,11 +22,11 @@ window.MW_HOME = {
   // Home "Start here: today's 3" now lives in games.js (MW_START), so game pages can follow the same order.
   // Home game sections. t/d = Medical heading and one-liner, tn/dn = Normie versions (keep one-liners under ~32 characters).
   groups: [
-    { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "morphemia", "gridectomy", "suturix"] },
-    { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["glimpsis", "opacitis", "labelosis", "panelysis", "arrhythmix"] },
+    { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "gridectomy", "suturix"] },
+    { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["panelysis", "glimpsis", "opacitis", "labelosis"] },
     { id: "think", t: "Think like a doctor", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis"] },
     { id: "weekly", t: "Weekly", d: "Bigger puzzles, fewer days.", games: ["grandrounds", "cryptogenic"] },
-    { id: "bonus", t: "Just for fun", d: "Sudoku and cats. Low stakes.", dn: "Sudoku and cats. Low stakes.", games: ["sudokrine"], basil: true }
+    { id: "bonus", t: "Extra credit", d: "ECGs, sudoku, long words and cats.", dn: "Sudoku, long words and cats.", games: ["arrhythmix", "morphemia", "sudokrine"], basil: true }
   ],
   sections: []
 };
