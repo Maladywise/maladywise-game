@@ -41,3 +41,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Add every new 8-letter answer to wordemic/words8.txt (the 8-letter guess list; lowercase, one per line, sorted). Five-letter answers still go in words.txt.
 - Einstein can land on a Friday: use a genuinely hard 8-letter word (e.g. PSAMMOMA, 2027-01-15) and add the date to MW_EINSTEIN as usual.
 - words8.txt sources: the site's Suturix and medical word lists, Webster's 2nd (public domain, via the MIT english-words package), plus plurals and verb forms of those words found in the wordfreq frequency list.
+
+## Zebritis: ranked statistics prompts
+- Ranked statistics prompts ("top N", "most", "least", "leading", e.g. the 10 leading causes of death): give each answer its rank per the named source as a 5th element, plus a short value as a 6th if the source gives it readily: `["Stroke", 1, ["CVA"], "Stroke", 2, "6.8m deaths"]` (pad missing synonyms/title with `[]`/`null`). Add a short prompt-level `"src"` line, e.g. `"src":"WHO Global Health Estimates 2023"`. Ties share a rank. Never reorder `a` (saved games store answer indices). If the order cannot be confirmed from the source, leave the prompt unranked.
