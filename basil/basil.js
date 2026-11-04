@@ -13,7 +13,9 @@
   var STAGE = 1, V = null, ST1 = null;
   var KEYS = { 1: { best: "mw-basil-best2", won: "mw-basil-won", hs: "mw-basil-hs" }, 2: { best: "mw-basil-vet-best", won: "mw-basil-vet-won", hs: "mw-basil-vet-hs" } };
   function s2(a, b) { return STAGE === 2 ? b : a; }
-  function kitchenWon() { return !!lget(KEYS[1].won); }
+  // hidden playtest pass: /basil/?vetpass opens the Vet on this device without beating the Kitchen (?vetpass=0 removes it)
+  try { var vq = new URLSearchParams(location.search).get("vetpass"); if (vq !== null) localStorage.setItem("mw-basil-vetpass", vq === "0" ? "0" : "1"); } catch (e) {}
+  function kitchenWon() { var p = false; try { p = localStorage.getItem("mw-basil-vetpass") === "1"; } catch (e) {} return p || !!lget(KEYS[1].won); }
   function track(n) { if (STAGE === 2) n = String(n).replace(/^basil\//, "basil/vet-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
   function $(id) { return document.getElementById(id); }
   function rnd(a, b) { return a + Math.random() * (b - a); }
@@ -1584,17 +1586,17 @@
   }
   // the stage select: Kitchen (always open) and the Vet (opens when the Kitchen's round 10 is beaten)
   function stageUI() {
-    var k1 = !!lget(KEYS[1].won), k2 = !!lget(KEYS[2].won), b1 = lget(KEYS[1].best) || 0, bv = lget(KEYS[2].best) || 0, seen = lget("mw-basil-vet-seen");
+    var k1 = !!lget(KEYS[1].won), kv = kitchenWon(), k2 = !!lget(KEYS[2].won), b1 = lget(KEYS[1].best) || 0, bv = lget(KEYS[2].best) || 0, seen = lget("mw-basil-vet-seen");
     var e1 = $("bk-endless"), ev = $("bk-endlessv"), s1 = $("bk-start"), sv = $("bk-start2"), c2 = $("bk-sc2");
     if (e1) { e1.disabled = !k1; e1.classList.toggle("locked", !k1); e1.innerHTML = k1 ? "Endless" : "\ud83d\udd12 Endless"; e1.title = k1 ? "The original never-ending bench" : "Beat round 10 to unlock"; }
     if (ev) { ev.disabled = !k2; ev.classList.toggle("locked", !k2); ev.innerHTML = k2 ? "Endless" : "\ud83d\udd12 Endless"; ev.title = k2 ? "The never-ending waiting room" : "Beat the Vet’s round 10 to unlock"; }
     if (s1) { s1.textContent = k1 ? "Play" : "Let’s effing go!"; s1.classList.toggle("gh", k1); }
-    if (sv) { sv.disabled = !k1; sv.textContent = k1 ? "Let’s effing go!" : "\ud83d\udd12 Beat 3AM in the Kitchen"; }
-    if (c2) c2.classList.toggle("locked", !k1);
-    if ($("bk-new2")) $("bk-new2").hidden = !k1 || !!seen;
+    if (sv) { sv.disabled = !kv; sv.textContent = kv ? "Let’s effing go!" : "\ud83d\udd12 Beat 3AM in the Kitchen"; }
+    if (c2) c2.classList.toggle("locked", !kv);
+    if ($("bk-new2")) $("bk-new2").hidden = !kv || !!seen;
     if ($("bk-st1")) $("bk-st1").innerHTML = k1 ? "\ud83d\udc51 Conquered" + (b1 ? " \u00b7 best <b>" + fmt(b1) + "</b>" : "") : b1 ? "Best <b>" + fmt(b1) + "</b>" : "10 rounds \u00b7 the VAC-3000 is waiting";
-    if ($("bk-st2")) $("bk-st2").innerHTML = !k1 ? "Locked" : k2 ? "\ud83e\ude7a Clean bill of health" + (bv ? " \u00b7 best <b>" + fmt(bv) + "</b>" : "") : bv ? "Annual Check-up \u00b7 best <b>" + fmt(bv) + "</b>" : "Annual Check-up";
-    if ($("bk-sd2")) $("bk-sd2").textContent = k1 ? "10 rounds at the vet. Two Vet vs Cat boss fights. Starts spicier." : "Beat round 10 in the Kitchen to open the clinic.";
+    if ($("bk-st2")) $("bk-st2").innerHTML = !kv ? "Locked" : k2 ? "\ud83e\ude7a Clean bill of health" + (bv ? " \u00b7 best <b>" + fmt(bv) + "</b>" : "") : bv ? "Annual Check-up \u00b7 best <b>" + fmt(bv) + "</b>" : "Annual Check-up";
+    if ($("bk-sd2")) $("bk-sd2").textContent = kv ? "10 rounds at the vet. Two Vet vs Cat boss fights. Starts spicier." : "Beat round 10 in the Kitchen to open the clinic.";
     if ($("bk-crowns")) $("bk-crowns").innerHTML = "<b>" + ((k1 ? 1 : 0) + (k2 ? 1 : 0)) + " of 2</b>stage crowns";
     if ($("bk-daily2")) $("bk-daily2").disabled = !k1;
     document.querySelectorAll(".bk-htabs button[data-p='2'], .bk-htabs button[data-p='3']").forEach(function (b) { b.hidden = !k1; });
