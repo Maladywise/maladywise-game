@@ -785,6 +785,7 @@
   // ---------- hub ----------
   function wotw() { var a = document.getElementById("mw-wotw"); if (!a || !window.fetch) return;
     fetch("/words/current.json").then(function (r) { return r.json(); }).then(function (w) { a.href = "/words/#" + w.slug; a.innerHTML = '<span>\ud83d\udcd6 Word of the week</span><b></b><i></i>'; a.querySelector("b").textContent = w.word; a.querySelector("i").textContent = "literally \u2018" + w.literal + "\u2019 \u2192"; a.hidden = false; }).catch(function () {}); }
+  var BAND2 = /[?&]bandmasc=1/.test(location.search); // preview: game symbol + mascot side by side
   function hub() { setTimeout(social, 0); setTimeout(function () { try { liveShow(); } catch (e) {} }, 50); 
     topBar(null);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
@@ -795,7 +796,7 @@
       var btn = !g.live ? (g.from ? "From " + nice(g.from, { weekday: "short", day: "numeric", month: "short" }) : SOON[(MW_GAMES.indexOf(g) + dayNum(today)) % SOON.length]) : st && st.done ? "Review" : "Play";
       var tag = g.live ? "a" : "div", med = false; // medical-only games are filtered out of Normie mode entirely
       return "<" + tag + ' class="card' + (g.live ? "" : " soon") + (med ? " medonly" : "") + (g.featured ? " feature" : "") + (st && st.done ? " done" : "") + '" data-g="' + g.id + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
-        '<div class="band">' + (st && st.done && window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 64, "band-masc") : g.icon) + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
+        '<div class="band' + (BAND2 && window.MW_MASCOTS && MW_MASCOTS[g.id] ? " band2" : "") + '">' + (BAND2 && window.MW_MASCOTS && MW_MASCOTS[g.id] ? '<span class="b2i">' + g.icon + "</span>" + mascImg(g.id, "", 64, "band-masc") : st && st.done && window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 64, "band-masc") : g.icon) + (st && st.done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</div>" +
         '<div class="cbody">' +
         '<h2 class="name">' + g.name + "</h2>" + (med ? '<span class="mw-medtag">\ud83e\ude7a Medical only</span>' : g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + (!g.weekly && !g.dailyLine && diffFor(g, today, dow) === "Einstein" && g.live ? '<span class="pill ein einc">' + EIN + " Einstein day</span>" : "") + (g.kind ? '<p class="kind">' + g.kind + "</p>" : "") + (g.weekly ? '<span class="pillrow">' + (g.relday && g.relday.indexOf("&") > 0 ? "" : '<span class="pill wk">Weekly</span>') + (g.relday ? '<span class="pill wk day">' + g.relday + "</span>" : "") + "</span>" : "") + (g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill wk sup">' + g.special.short + "</span>" : "") + '<p class="tag">' + g.tagline + "</p>" +
         '<div class="cfoot"><span class="play">' + btn + '</span><span class="status">' + status + "</span></div>" + "</div></" + tag + ">";
