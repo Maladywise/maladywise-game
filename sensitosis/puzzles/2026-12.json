@@ -13,7 +13,7 @@
     }
    },
    {
-    "test": "rat-sym"
+    "test": "hpylori_serology"
    },
    {
     "test": "dermo"
@@ -38,7 +38,7 @@
     "test": "hawkins"
    },
    {
-    "test": "calpro"
+    "test": "hcv_rapid"
    },
    {
     "test": "neck"
@@ -57,7 +57,7 @@
     "test": "ferr30"
    },
    {
-    "test": "ddimer"
+    "test": "bnp_hf"
    },
    {
     "test": "usapp"
@@ -85,7 +85,12 @@
     "test": "s3"
    },
    {
-    "test": "trop01"
+    "test": "ntprobnp_hf",
+    "twist": {
+     "prev": 23,
+     "where": "The lowest-prevalence emergency group in the review, where most breathless patients had something other than heart failure.",
+     "sourced": true
+    }
    },
    {
     "test": "ferr15"
@@ -101,7 +106,7 @@
     "test": "brudz"
    },
    {
-    "test": "crp"
+    "test": "lipase_panc"
    },
    {
     "test": "psa3"
@@ -137,7 +142,7 @@
     "test": "trop99"
    },
    {
-    "test": "calproK"
+    "test": "amylase_panc"
    }
   ]
  },
@@ -159,7 +164,7 @@
     "test": "mono"
    },
    {
-    "test": "mammo"
+    "test": "pct_sepsis"
    }
   ]
  },
@@ -175,7 +180,7 @@
     "test": "cspine"
    },
    {
-    "test": "hpv"
+    "test": "anticcp_ra"
    },
    {
     "test": "drawer"
@@ -202,7 +207,7 @@
     }
    },
    {
-    "test": "ubt"
+    "test": "rf_ra"
    },
    {
     "test": "fluK"
@@ -229,7 +234,7 @@
     }
    },
    {
-    "test": "psa4"
+    "test": "ttg_coeliac"
    },
    {
     "test": "slr"
@@ -248,7 +253,7 @@
     "test": "trop01"
    },
    {
-    "test": "hpstool"
+    "test": "ana_sle"
    },
    {
     "test": "pap"
@@ -273,7 +278,12 @@
     "test": "rovsing"
    },
    {
-    "test": "psa3"
+    "test": "esr_gca",
+    "twist": {
+     "prev": 30.5,
+     "where": "People referred because a doctor suspected giant cell arteritis, across 68 studies.",
+     "sourced": true
+    }
    },
    {
     "test": "ferr15"
@@ -298,7 +308,7 @@
     "test": "papill"
    },
    {
-    "test": "ctapp"
+    "test": "hba1c_dm"
    },
    {
     "test": "jvp",
@@ -325,12 +335,7 @@
     "test": "strep"
    },
    {
-    "test": "rat-asym",
-    "twist": {
-     "prev": 2,
-     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
-     "sourced": false
-    }
+    "test": "ca125_ovarian"
    },
    {
     "test": "rat-sym"
@@ -346,7 +351,7 @@
     "test": "dipany"
    },
    {
-    "test": "preg"
+    "test": "hpylori_serology"
    },
    {
     "test": "drift"
@@ -376,7 +381,7 @@
     "test": "hawkins"
    },
    {
-    "test": "ferr30"
+    "test": "hcv_rapid"
    },
    {
     "test": "fluK"
@@ -403,11 +408,11 @@
     "test": "psoas"
    },
    {
-    "test": "trop01",
+    "test": "bnp_hf",
     "twist": {
-     "prev": 10,
-     "where": "Imagine an emergency department where 1 in 10 people with chest pain is having a heart attack.",
-     "sourced": false
+     "prev": 82,
+     "where": "The highest-prevalence acute care group in the review, where most breathless patients really did have heart failure.",
+     "sourced": true
     }
    },
    {
@@ -438,7 +443,12 @@
     "test": "jolt"
    },
    {
-    "test": "pap"
+    "test": "ntprobnp_hf",
+    "twist": {
+     "prev": 23,
+     "where": "The lowest-prevalence emergency group in the review, where most breathless patients had something other than heart failure.",
+     "sourced": true
+    }
    },
    {
     "test": "psa3"
@@ -454,7 +464,7 @@
     "test": "babinski"
    },
    {
-    "test": "ferr15"
+    "test": "lipase_panc"
    },
    {
     "test": "crp"
@@ -490,7 +500,7 @@
     "test": "s3"
    },
    {
-    "test": "psa4"
+    "test": "amylase_panc"
    }
   ]
  },
@@ -506,7 +516,7 @@
     "test": "thompson"
    },
    {
-    "test": "fit"
+    "test": "pct_sepsis"
    },
    {
     "test": "mono"
@@ -525,7 +535,7 @@
     "test": "preg"
    },
    {
-    "test": "rat-sym"
+    "test": "anticcp_ra"
    },
    {
     "test": "rat-asym",
@@ -561,7 +571,7 @@
     "test": "ctapp"
    },
    {
-    "test": "usapp"
+    "test": "rf_ra"
    }
   ]
  },
@@ -574,7 +584,7 @@
     "test": "trop99"
    },
    {
-    "test": "fluK"
+    "test": "ttg_coeliac"
    },
    {
     "test": "fluA",
@@ -601,7 +611,7 @@
     "test": "trop01"
    },
    {
-    "test": "hpstool"
+    "test": "ana_sle"
    },
    {
     "test": "dixhallpike"
@@ -623,7 +633,12 @@
     "test": "trendel"
    },
    {
-    "test": "calproK"
+    "test": "esr_gca",
+    "twist": {
+     "prev": 30.5,
+     "where": "People referred because a doctor suspected giant cell arteritis, across 68 studies.",
+     "sourced": true
+    }
    },
    {
     "test": "psa3"
@@ -659,7 +674,7 @@
     "test": "ferr30"
    },
    {
-    "test": "ferr15"
+    "test": "hba1c_dm"
    }
   ]
  },
@@ -683,7 +698,7 @@
     }
    },
    {
-    "test": "dipany"
+    "test": "ca125_ovarian"
    },
    {
     "test": "drawer"
@@ -702,12 +717,7 @@
     "test": "rat-sym"
    },
    {
-    "test": "rat-asym",
-    "twist": {
-     "prev": 2,
-     "where": "Imagine a quiet patch: about 2 in 100 people without symptoms have COVID.",
-     "sourced": false
-    }
+    "test": "hpylori_serology"
    },
    {
     "test": "fast"
@@ -731,7 +741,7 @@
     }
    },
    {
-    "test": "slr"
+    "test": "hcv_rapid"
    },
    {
     "test": "ubt"
@@ -764,7 +774,7 @@
     "test": "neer"
    },
    {
-    "test": "ctapp"
+    "test": "bnp_hf"
    },
    {
     "test": "usapp"

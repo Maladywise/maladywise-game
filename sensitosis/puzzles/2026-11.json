@@ -92,7 +92,7 @@
     "test": "fluA"
    },
    {
-    "test": "psa4"
+    "test": "bnp_hf"
    },
    {
     "test": "tinel"
@@ -116,7 +116,12 @@
     "test": "fluK"
    },
    {
-    "test": "calproK"
+    "test": "ntprobnp_hf",
+    "twist": {
+     "prev": 23,
+     "where": "The lowest-prevalence emergency group in the review, where most breathless patients had something other than heart failure.",
+     "sourced": true
+    }
    },
    {
     "test": "brudz"
@@ -149,7 +154,7 @@
     "test": "pap"
    },
    {
-    "test": "psa3"
+    "test": "lipase_panc"
    },
    {
     "test": "s3"
@@ -168,7 +173,7 @@
     "test": "emptycan"
    },
    {
-    "test": "trop01"
+    "test": "amylase_panc"
    },
    {
     "test": "droparm"
@@ -196,7 +201,7 @@
     "test": "hints"
    },
    {
-    "test": "preg"
+    "test": "pct_sepsis"
    }
   ]
  },
@@ -209,12 +214,7 @@
     "test": "mammo"
    },
    {
-    "test": "strep",
-    "twist": {
-     "prev": 30,
-     "where": "In the Cochrane studies, about 3 in 10 kids with a sore throat had strep.",
-     "sourced": true
-    }
+    "test": "anticcp_ra"
    },
    {
     "test": "cspine"
@@ -242,12 +242,7 @@
     "test": "usapp"
    },
    {
-    "test": "nitrite",
-    "twist": {
-     "prev": 50,
-     "where": "Imagine a clinic where half the people with burning wees have a UTI.",
-     "sourced": false
-    }
+    "test": "rf_ra"
    },
    {
     "test": "wave"
@@ -266,7 +261,7 @@
     "test": "neer"
    },
    {
-    "test": "ferr30"
+    "test": "ttg_coeliac"
    },
    {
     "test": "hawkins"
@@ -294,7 +289,7 @@
     "test": "turgor"
    },
    {
-    "test": "fluK"
+    "test": "ana_sle"
    }
   ]
  },
@@ -313,7 +308,12 @@
     "test": "dixhallpike"
    },
    {
-    "test": "psa3"
+    "test": "esr_gca",
+    "twist": {
+     "prev": 30.5,
+     "where": "People referred because a doctor suspected giant cell arteritis, across 68 studies.",
+     "sourced": true
+    }
    },
    {
     "test": "trendel"
@@ -332,7 +332,7 @@
     "test": "homans"
    },
    {
-    "test": "ferr15"
+    "test": "hba1c_dm"
    },
    {
     "test": "trop01"
@@ -354,7 +354,7 @@
     "test": "fast"
    },
    {
-    "test": "dipany"
+    "test": "ca125_ovarian"
    },
    {
     "test": "ottawa"
@@ -378,7 +378,7 @@
     "test": "drawer"
    },
    {
-    "test": "hpv"
+    "test": "hpylori_serology"
    },
    {
     "test": "preg"
@@ -400,7 +400,7 @@
     "test": "ddimer"
    },
    {
-    "test": "fluA"
+    "test": "hcv_rapid"
    },
    {
     "test": "wells"
@@ -425,7 +425,7 @@
     "test": "centor"
    },
    {
-    "test": "psa4"
+    "test": "bnp_hf"
    },
    {
     "test": "ferr30"
@@ -458,7 +458,12 @@
     "test": "psoas"
    },
    {
-    "test": "fluK"
+    "test": "ntprobnp_hf",
+    "twist": {
+     "prev": 23,
+     "where": "The lowest-prevalence emergency group in the review, where most breathless patients had something other than heart failure.",
+     "sourced": true
+    }
    }
   ]
  },
@@ -471,7 +476,7 @@
     "test": "kernig"
    },
    {
-    "test": "trop99"
+    "test": "lipase_panc"
    },
    {
     "test": "calproK"
@@ -493,7 +498,7 @@
     "test": "crp"
    },
    {
-    "test": "ubt"
+    "test": "amylase_panc"
    },
    {
     "test": "jvp",
@@ -523,7 +528,7 @@
     "test": "hints"
    },
    {
-    "test": "mammo"
+    "test": "pct_sepsis"
    },
    {
     "test": "rat-asym",
@@ -556,7 +561,7 @@
     "test": "drift"
    },
    {
-    "test": "preg"
+    "test": "anticcp_ra"
    }
   ]
  },
@@ -569,7 +574,7 @@
     "test": "slr"
    },
    {
-    "test": "calpro"
+    "test": "rf_ra"
    },
    {
     "test": "trop01"
@@ -601,7 +606,7 @@
     }
    },
    {
-    "test": "nitrite"
+    "test": "ttg_coeliac"
    },
    {
     "test": "shift"
@@ -642,7 +647,7 @@
     }
    },
    {
-    "test": "papill"
+    "test": "ana_sle"
    }
   ]
  },
@@ -655,7 +660,12 @@
     "test": "fluK"
    },
    {
-    "test": "droparm"
+    "test": "esr_gca",
+    "twist": {
+     "prev": 30.5,
+     "where": "People referred because a doctor suspected giant cell arteritis, across 68 studies.",
+     "sourced": true
+    }
    },
    {
     "test": "psa3"
@@ -677,7 +687,7 @@
     "test": "homans"
    },
    {
-    "test": "calproK"
+    "test": "hba1c_dm"
    },
    {
     "test": "crp"
@@ -699,7 +709,7 @@
     "test": "hpv"
    },
    {
-    "test": "fit"
+    "test": "ca125_ovarian"
    },
    {
     "test": "thompson"

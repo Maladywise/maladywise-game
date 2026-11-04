@@ -144,7 +144,8 @@
      "https://edrn.cancer.gov/data-and-resources/publications/15998892-1845-operating-characteristics-of-prostate-specific-antigen-in-men-with-an-initial-psa-level-of-30-ngml-or-lower"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "psa3": {
    "test": "PSA blood test (above 3 counts as high)",
@@ -168,7 +169,8 @@
      "https://edrn.cancer.gov/data-and-resources/publications/15998892-1845-operating-characteristics-of-prostate-specific-antigen-in-men-with-an-initial-psa-level-of-30-ngml-or-lower"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "ddimer": {
    "test": "D-dimer blood test",
@@ -196,7 +198,8 @@
      "https://www.ncbi.nlm.nih.gov/books/NBK431064/"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "mammo": {
    "test": "Screening mammogram",
@@ -245,7 +248,8 @@
      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5701723/"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "ferr15": {
    "test": "Ferritin (under 15 counts as low)",
@@ -269,7 +273,8 @@
      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5701723/"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "trop99": {
    "test": "Troponin, one test on arrival",
@@ -293,7 +298,8 @@
      "https://nice.org.uk/guidance/DG40/chapter/3-evidence"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "trop01": {
    "test": "Troponin, two tests an hour apart",
@@ -317,7 +323,8 @@
      "https://nice.org.uk/guidance/DG40/chapter/3-evidence"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "kernig": {
    "test": "Kernig’s sign",
@@ -655,7 +662,8 @@
      "https://www.aafp.org/afp/2023/0100/infectious-mononucleosis"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "crp": {
    "test": "CRP blood test",
@@ -680,7 +688,8 @@
      "https://www.bmj.com/content/331/7507/26"
     ]
    ],
-   "checked": "1 Nov 2026"
+   "checked": "1 Nov 2026",
+   "label": "Blood test"
   },
   "usapp": {
    "test": "Ultrasound for appendicitis (children)",
@@ -1681,6 +1690,352 @@
    ],
    "kind": "sign",
    "checked": "2 Nov 2026"
+  },
+  "bnp_hf": {
+   "test": "BNP blood test (above 100 ng/L counts as high)",
+   "condition": "Heart failure as the cause of sudden breathlessness",
+   "scenario": "Suddenly short of breath and puffy ankles. The emergency doctor orders a blood test.",
+   "sens": {
+    "v": 95,
+    "lo": 92,
+    "hi": 98
+   },
+   "spec": {
+    "v": 63,
+    "lo": 52,
+    "hi": 73
+   },
+   "says": "A normal result makes heart failure quite unlikely. A high one is more of a shrug, because plenty of other things can push BNP up too.",
+   "note": "Pooled from 19 study groups, about 6,950 adults, mainly in emergency departments.",
+   "src": [
+    [
+     "Roberts et al, BMJ 2015: natriuretic peptides in acute heart failure (open-access PDF)",
+     "https://acuresearchbank.acu.edu.au/download/e9cf7ec0c3d9282bba4e1156736cfef5ed32239ac008be67745d225cb2971835/3483128/OA_Roberts_2015_The_diagnostic_accuracy_of_the_natriuretic.pdf"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "ntprobnp_hf": {
+   "test": "NT-proBNP blood test (above 300 ng/L counts as high)",
+   "condition": "Heart failure as the cause of sudden breathlessness",
+   "scenario": "Breathless and can't lie flat tonight. The hospital checks a heart strain blood test.",
+   "sens": {
+    "v": 99,
+    "lo": 96,
+    "hi": 100
+   },
+   "spec": {
+    "v": 43,
+    "lo": 26,
+    "hi": 62
+   },
+   "says": "It almost never misses heart failure, so a normal result is very reassuring. But it flags more than half of people who don't have it, so a high result is mostly an invitation to look further.",
+   "note": "Pooled from 10 study groups, about 3,350 adults in acute care settings.",
+   "src": [
+    [
+     "Roberts et al, BMJ 2015: natriuretic peptides in acute heart failure (open-access PDF)",
+     "https://acuresearchbank.acu.edu.au/download/e9cf7ec0c3d9282bba4e1156736cfef5ed32239ac008be67745d225cb2971835/3483128/OA_Roberts_2015_The_diagnostic_accuracy_of_the_natriuretic.pdf"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "lipase_panc": {
+   "test": "Lipase blood test (more than 3 times the upper normal limit counts as high)",
+   "condition": "Acute pancreatitis",
+   "scenario": "Severe upper tummy pain going through to your back. The emergency team takes bloods.",
+   "sens": {
+    "v": 79,
+    "lo": 54,
+    "hi": 92
+   },
+   "spec": {
+    "v": 89,
+    "lo": 46,
+    "hi": 99
+   },
+   "says": "It catches about four in five cases and is usually right when it's high. The wide ranges show the studies didn't entirely agree with each other.",
+   "note": "Cochrane review summary: 4 studies, 678 people with acute abdominal pain.",
+   "src": [
+    [
+     "Cochrane 2017: serum amylase and lipase for diagnosis of acute pancreatitis",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012010.pub2/information"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "amylase_panc": {
+   "test": "Amylase blood test (more than 3 times the upper normal limit counts as high)",
+   "condition": "Acute pancreatitis",
+   "scenario": "Sudden belly pain and vomiting after a big weekend. The hospital checks an older pancreas blood test.",
+   "sens": {
+    "v": 72,
+    "lo": 59,
+    "hi": 82
+   },
+   "spec": {
+    "v": 93,
+    "lo": 66,
+    "hi": 99
+   },
+   "says": "When it's sky-high it usually means pancreatitis, but it misses more than a quarter of cases. It's the older sibling that lipase tends to outshine.",
+   "note": "Cochrane review summary: 3 studies, 605 people with acute abdominal pain.",
+   "src": [
+    [
+     "Cochrane 2017: serum amylase and lipase for diagnosis of acute pancreatitis",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012010.pub2/information"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "pct_sepsis": {
+   "test": "Procalcitonin blood test",
+   "condition": "Sepsis (infection) rather than non-infectious inflammation in very unwell patients",
+   "scenario": "Feverish and very unwell in intensive care. The team wants to know if infection is to blame.",
+   "sens": {
+    "v": 77,
+    "lo": 72,
+    "hi": 81
+   },
+   "spec": {
+    "v": 79,
+    "lo": 74,
+    "hi": 84
+   },
+   "says": "It gets it right about three-quarters of the time either way. Useful, but not good enough to settle the question on its own.",
+   "note": "Pooled from 30 studies, about 3,240 critically ill patients.",
+   "src": [
+    [
+     "Wacker et al, Lancet Infect Dis 2013: procalcitonin for sepsis (abstract)",
+     "https://read.qxmd.com/read/23375419/procalcitonin-as-a-diagnostic-marker-for-sepsis-a-systematic-review-and-meta-analysis"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "anticcp_ra": {
+   "test": "Anti-CCP antibody blood test",
+   "condition": "Rheumatoid arthritis",
+   "scenario": "Stiff, swollen finger joints every morning for months. Your GP orders an antibody test.",
+   "sens": {
+    "v": 67,
+    "lo": 62,
+    "hi": 72
+   },
+   "spec": {
+    "v": 95,
+    "lo": 92,
+    "hi": 98
+   },
+   "says": "A positive result is a strong pointer to rheumatoid arthritis. A negative one doesn't rule it out, since about a third of people with RA test negative.",
+   "note": "Pooled from 37 studies.",
+   "src": [
+    [
+     "Nishimura et al, Ann Intern Med 2007: anti-CCP and rheumatoid factor meta-analysis",
+     "https://experts.umn.edu/en/publications/meta-analysis-diagnostic-accuracy-of-anti-cyclic-citrullinated-pe/"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "rf_ra": {
+   "test": "Rheumatoid factor (IgM) blood test",
+   "condition": "Rheumatoid arthritis",
+   "scenario": "Achy, puffy knuckles and wrists. Your GP checks the classic arthritis blood test.",
+   "sens": {
+    "v": 69,
+    "lo": 65,
+    "hi": 73
+   },
+   "spec": {
+    "v": 85,
+    "lo": 82,
+    "hi": 88
+   },
+   "says": "It picks up about the same share of cases as anti-CCP, but it turns up positive more often in people without RA. The famous name outlasts its precision.",
+   "note": "Pooled from 50 studies.",
+   "src": [
+    [
+     "Nishimura et al, Ann Intern Med 2007: anti-CCP and rheumatoid factor meta-analysis",
+     "https://experts.umn.edu/en/publications/meta-analysis-diagnostic-accuracy-of-anti-cyclic-citrullinated-pe/"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "ttg_coeliac": {
+   "test": "Coeliac antibody blood test (tTG-IgA)",
+   "condition": "Coeliac disease in adults",
+   "scenario": "Bloating, loose bowels and low iron for a year. Your GP orders a coeliac blood test.",
+   "sens": {
+    "v": 91,
+    "lo": 87,
+    "hi": 94
+   },
+   "spec": {
+    "v": 87,
+    "lo": 84,
+    "hi": 90
+   },
+   "says": "It catches about nine in ten cases and is mostly right when positive. In these hospital-referred patients, about one in eight without coeliac disease still came back positive.",
+   "note": "Pooled from 5 studies of adults referred to specialist (secondary) care, checked against gut biopsy.",
+   "src": [
+    [
+     "Sheppard et al, Aliment Pharmacol Ther 2022: serological tests for coeliac disease (abstract)",
+     "https://www.pubmed.gov/35043426/"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "ana_sle": {
+   "test": "ANA blood test (titre 1:80 or above counts as positive)",
+   "condition": "Lupus (SLE)",
+   "scenario": "Joint pains, a facial rash and tiredness. Your GP orders an antibody screen.",
+   "sens": {
+    "v": 98,
+    "lo": 95,
+    "hi": 100
+   },
+   "spec": {
+    "v": 75,
+    "lo": 67,
+    "hi": 81
+   },
+   "says": "Nearly everyone with lupus is positive, so a negative result makes lupus very unlikely. But a quarter of people without lupus are positive too, so a positive result is just the start of the story.",
+   "note": "Pooled from about 64 studies including over 13,000 people with lupus, compared with control groups.",
+   "src": [
+    [
+     "Leuchten et al, Arthritis Care Res 2018: ANA for classifying SLE",
+     "https://fis.tu-dresden.de/portal/en/publications/performance-of-antinuclear-antibodies-for-classifying-systemic-lupus-erythematosus(98437f82-91ae-493e-af73-78bd37559b6e).html"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "esr_gca": {
+   "test": "ESR blood test (above 50 mm/hr counts as high)",
+   "condition": "Giant cell arteritis",
+   "scenario": "New headache over your temple and jaw ache when chewing, aged 72. Your GP orders an inflammation test.",
+   "sens": {
+    "v": 79,
+    "lo": 72,
+    "hi": 85
+   },
+   "spec": {
+    "v": 44,
+    "lo": 34,
+    "hi": 53
+   },
+   "says": "It picks up most cases, but it's high in more than half of people who turn out not to have arteritis. It's better at raising suspicion than settling it.",
+   "note": "Pooled from 18 studies, about 1,970 people suspected of giant cell arteritis.",
+   "src": [
+    [
+     "van der Geest et al, JAMA Intern Med 2020: diagnostic accuracy of symptoms, signs and labs in GCA (PDF)",
+     "https://eprints.whiterose.ac.uk/161388/17/jamainternal_van_der_geest_2020_oi_200047_1596731789.10753.pdf"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "hba1c_dm": {
+   "test": "HbA1c blood test (6.5% or above counts as high)",
+   "condition": "Type 2 diabetes (as defined by a glucose tolerance test)",
+   "scenario": "Tired and thirsty for months. Your GP orders a blood test.",
+   "sens": {
+    "v": 51,
+    "lo": 43,
+    "hi": 58
+   },
+   "spec": {
+    "v": 96,
+    "lo": 93,
+    "hi": 99
+   },
+   "says": "A high result is very likely to be diabetes, but it misses about half of the people a sugary-drink test would catch. A coin toss on detection, a sure thing on confirmation.",
+   "note": "Pooled from 35 studies within a review of 139,000 people, compared with the 2-hour glucose tolerance test.",
+   "src": [
+    [
+     "Frontiers in Medicine 2023: HbA1c vs fasting glucose vs OGTT network meta-analysis",
+     "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2023.1016381/full"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "ca125_ovarian": {
+   "test": "CA-125 blood test",
+   "condition": "Ovarian cancer in women with an ovarian mass",
+   "scenario": "A scan has found a lump on your ovary. Your doctor orders a tumour marker blood test.",
+   "sens": {
+    "v": 84,
+    "lo": 81,
+    "hi": 87
+   },
+   "spec": {
+    "v": 73,
+    "lo": 70,
+    "hi": 76
+   },
+   "says": "It flags most cancers, but more than a quarter of harmless lumps also push it up. Endometriosis and fibroids are notorious for setting it off.",
+   "note": "Pooled from 26 studies, about 8,190 women with ovarian masses (2,315 cancers).",
+   "src": [
+    [
+     "Suri et al, Scientific Reports 2021: ovarian malignancy risk measures meta-analysis (PDF)",
+     "https://www.nature.com/articles/s41598-021-96552-9.pdf"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "hpylori_serology": {
+   "test": "H. pylori antibody blood test",
+   "condition": "Current H. pylori stomach infection",
+   "scenario": "Months of burning indigestion. Your GP orders a blood test for the stomach bug.",
+   "sens": {
+    "v": 84,
+    "lo": 74,
+    "hi": 91
+   },
+   "spec": null,
+   "says": "It finds about five in six infections. The catch is that antibodies can hang around long after the bug has gone.",
+   "note": "Cochrane review: 34 studies, about 4,240 people, checked against stomach biopsy.",
+   "src": [
+    [
+     "Cochrane 2018: non-invasive tests for Helicobacter pylori infection",
+     "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012080.pub2/information"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
+  },
+  "hcv_rapid": {
+   "test": "Rapid hepatitis C antibody finger-prick blood test",
+   "condition": "Hepatitis C antibodies (past or current infection)",
+   "scenario": "At a community health check, a nurse offers a finger-prick hep C test.",
+   "sens": {
+    "v": 98,
+    "lo": 95,
+    "hi": 100
+   },
+   "spec": {
+    "v": 100,
+    "lo": 97,
+    "hi": 100
+   },
+   "says": "It almost never misses and almost never cries wolf. A positive still means past exposure, not necessarily a current infection.",
+   "note": "Pooled from 5 studies, compared with standard lab antibody tests.",
+   "src": [
+    [
+     "Tang et al, BMC Infect Dis 2017: tests to detect hepatitis C antibody (DOAJ abstract)",
+     "https://doaj.org/article/9dfc5509130a435cbe0d7d8a13d8c567"
+    ]
+   ],
+   "checked": "4 Nov 2026",
+   "label": "Blood test"
   }
  }
 }
