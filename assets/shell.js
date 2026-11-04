@@ -1162,7 +1162,7 @@
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
     [/x-?ray|scan|\bct\b|mri|ultrasound|radiolog|imaging|medical physics/i, "opacitis"],
     [/insulin|diabet|thyroid|hormone|menopaus|testoster|oestrogen|estrogen|endocrin|obesity|glp-1|semaglutide|tirzepatide/i, "sudokrine"],
-    [/vaccin|virus|viral|bacteri|infect|\btb\b|tubercul|strep|dengue|flu\b|influenza|covid|measles|malaria|hiv|antibiotic|jab/i, "wordemic"],
+    [/vaccin|virus|viral|bacteri|infect|pneumon|sepsis|\btb\b|tubercul|strep|dengue|flu\b|influenza|covid|measles|malaria|hiv|antibiotic|jab/i, "wordemic"],
     [/cancer|tumou?r|oncol|chemo|lymphoma|leuk|melanoma|carcinoma/i, "panelysis"],
     [/skin|psoria|eczema|derm|rash|acne/i, "glimpsis"],
     [/brain|neuron|neuro|dementia|alzheimer|parkinson|autis|adhd|migraine|epilep/i, "comorbix"],
@@ -1192,7 +1192,14 @@
       if (st && st.tagName === "STRONG" && st.querySelector("a")) { st.classList.add("hl"); story = true; }
       else if (st && st.tagName === "STRONG") { st.classList.add("when"); st.textContent = st.textContent.replace(/:\s*$/, ""); }
       else if (el.tagName === "P" && st && st.tagName === "A") story = true;
-      if (!story) return;
+      if (!story) { // dates and puzzle lines: the linked game's mascot, else a topic mascot
+        var fa = el.querySelector("a"), gl = fa && /^\//.test(fa.getAttribute("href") || "") && Array.prototype.filter.call([fa], function (a) { return /^\/[a-z]+\//.test(a.getAttribute("href")) && !/^\/zebra-mail\//.test(a.getAttribute("href")); })[0];
+        var gid = gl ? gl.getAttribute("href").split("/")[1] : "", gm = (window.MW_GAMES || []).filter(function (g) { return g.id === gid || String(g.path || "").split("/")[0] === gid; })[0];
+        var mid = gm ? gm.id : wdPick(el.textContent.slice(0, 300), used); if (!gm) used[mid] = 1;
+        el.classList.add("wd-story", "wd-small");
+        el.innerHTML = mascImg(mid, "", 34, "wd-m") + '<div class="wd-tx">' + el.innerHTML + "</div>";
+        return;
+      }
       var hl = (st.textContent || ""), id = wdPick(hl + " " + el.textContent.slice(0, 300), used); used[id] = 1;
       var body = el.innerHTML.replace(st.outerHTML, "");
       el.classList.add("wd-story");
