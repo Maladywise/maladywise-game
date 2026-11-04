@@ -13,7 +13,7 @@
   var STAGE = 1, V = null, ST1 = null;
   var KEYS = { 1: { best: "mw-basil-best2", won: "mw-basil-won", hs: "mw-basil-hs" }, 2: { best: "mw-basil-vet-best", won: "mw-basil-vet-won", hs: "mw-basil-vet-hs" } };
   function s2(a, b) { return STAGE === 2 ? b : a; }
-  // hidden playtest pass: /basil/?vetpass opens the Vet on this device without beating the Kitchen (?vetpass=0 removes it)
+  // hidden playtest pass: /basil-clover/?vetpass opens the Vet on this device without beating the Kitchen (?vetpass=0 removes it)
   try { var vq = new URLSearchParams(location.search).get("vetpass"); if (vq !== null) localStorage.setItem("mw-basil-vetpass", vq === "0" ? "0" : "1"); } catch (e) {}
   function kitchenWon() { var p = false; try { p = localStorage.getItem("mw-basil-vetpass") === "1"; } catch (e) {} return p || !!lget(KEYS[1].won); }
   function track(n) { if (STAGE === 2) n = String(n).replace(/^basil\//, "basil/vet-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
