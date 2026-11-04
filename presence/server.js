@@ -67,7 +67,10 @@ async function addDone(g) {
 const BAD = /(fuck|fuk|shit|cunt|nigg|fag|bitch|whore|slut|rape|nazi|hitler|dick|cock|puss|wank|twat|retard|kike|spic|chink|paki|porn|penis|vagina|anal|cum|tits|boob|sex)/i;
 const memLB = {};
 function lbName(s) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); if (!n || BAD.test(n.replace(/[^a-z]/gi, ""))) n = "Anonymous cat"; return n; }
-function lbKey(b) { return b === "daily" ? "lb:daily:" + sydDay() : "lb:all"; }
+// boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet)
+const BOARDS = ["all", "daily", "vall", "vdaily"];
+function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
+function lbKey(b) { return b === "daily" ? "lb:daily:" + sydDay() : b === "vdaily" ? "lb:vdaily:" + sydDay() : b === "vall" ? "lb:vall" : "lb:all"; }
 async function lbTop(b, me) {
   const key = lbKey(b);
   if (kv && kv.isReady) {
@@ -82,7 +85,7 @@ async function lbTop(b, me) {
   return Object.entries(m).sort((a, b2) => b2[1].s - a[1].s).slice(0, 10).map(([id, v]) => ({ n: v.n, s: v.s, r: v.r, me: id === me }));
 }
 async function lbAdd(b, id, n, s, r) {
-  const key = lbKey(b), ttl = b === "daily" ? 60 * 60 * 24 * 3 : 0;
+  const key = lbKey(b), ttl = (b === "daily" || b === "vdaily") ? 60 * 60 * 24 * 3 : 0;
   if (kv && kv.isReady) {
     try {
       const cur = await kv.zScore(key, id);
@@ -198,17 +201,17 @@ const server = http.createServer(async (req, res) => {
       return res.end(JSON.stringify({ online: n, games: by, today: await today(), solved: await solvedToday(), day: sydDay() }));
     }
     if (url.pathname === "/top") {
-      const b = url.searchParams.get("b") === "daily" ? "daily" : "all";
+      const b = lbBoard(url.searchParams.get("b"));
       res.writeHead(200, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ rows: await lbTop(b, clean(url.searchParams.get("id"), 16)), day: sydDay() }));
+      return res.end(JSON.stringify({ rows: await lbTop(b, clean(url.searchParams.get("id"), 16)), day: sydDay(), board: b }));
     }
     if (url.pathname === "/score" && req.method === "POST") {
-      const q = url.searchParams, b = q.get("b") === "daily" ? "daily" : "all", id = clean(q.get("id"), 16);
+      const q = url.searchParams, b = lbBoard(q.get("b")), id = clean(q.get("id"), 16);
       const s = Math.floor(Number(q.get("s"))), r = Math.floor(Number(q.get("r")));
       const ok = id.length >= 6 && s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
       if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n")), s, r);
       res.writeHead(200, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay() }));
+      return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay(), board: b }));
     }
     if (url.pathname === "/tags") {
       res.writeHead(200, { "Content-Type": "application/json" });
