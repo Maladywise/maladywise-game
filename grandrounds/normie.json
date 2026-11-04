@@ -758,5 +758,513 @@
     "e": "Via French Guiana. 730 km, longer than the border with Spain. Melted yet?"
    }
   ]
+ },
+ {
+  "week": "2026-12-06",
+  "number": 7,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Beastly facts",
+    "q": "How many hearts does an octopus have?",
+    "a": "Three",
+    "e": "Two for the gills, one for everything else. Overachiever."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What is the only mammal capable of true powered flight?",
+    "a": "The bat",
+    "e": "Flying squirrels are just very committed gliders."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What is a group of flamingos called?",
+    "a": "A flamboyance",
+    "e": "Yes, really. Nature has a sense of occasion."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which living bird lays the largest egg?",
+    "a": "The ostrich",
+    "e": "About 1.4 kg. That’s a lot of omelette."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Polar bear fur looks white. What colour is the skin underneath?",
+    "a": "Black",
+    "e": "Good for soaking up sun. Bad for hiding from a photographer."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What unusual shape is wombat poo?",
+    "a": "Cube",
+    "e": "Accept cubes or square. Useful for marking territory, since it doesn’t roll away."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What is the largest animal ever known to have lived?",
+    "a": "The blue whale",
+    "e": "Bigger than any dinosaur we’ve found. Accept blue whale only."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which seahorse parent carries the babies until they hatch?",
+    "a": "The male",
+    "e": "Accept dad. Equal parenting, sort of."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which bird is the fastest in a dive, topping 300 km/h?",
+    "a": "The peregrine falcon",
+    "e": "Accept peregrine. Your hatchback is not impressed."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Koalas eat almost nothing but the leaves of which tree?",
+    "a": "Eucalyptus",
+    "e": "Accept gum tree. It’s not very nutritious, which explains the sleeping."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Male platypuses have what venomous body part on their hind legs?",
+    "a": "Spurs",
+    "e": "A sting a person won’t forget. Duck-bill, beaver tail, and also this."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Honeybees tell each other where food is by doing which dance?",
+    "a": "The waggle dance",
+    "e": "Accept waggle. Karl von Frisch won a Nobel for decoding it."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "How many chambers does a cow’s stomach have?",
+    "a": "Four",
+    "e": "One stomach, four rooms. Accept four only."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "The smiling axolotl is native to lakes near which capital city?",
+    "a": "Mexico City",
+    "e": "Accept Mexico. Never quite grows up, like some of your friends."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What is a group of crows called?",
+    "a": "A murder",
+    "e": "Crows would like a word with their publicist."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which animal has the largest eyes in the world, roughly dinner-plate size?",
+    "a": "The colossal squid",
+    "e": "Accept giant squid if you’re feeling generous. Good for spotting sperm whales."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "What is a baby kangaroo called?",
+    "a": "A joey",
+    "e": "Lives in a pocket. No rent."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which is the only bird family that can fly backwards?",
+    "a": "Hummingbirds",
+    "e": "Accept hummingbird. Wings blur at dozens of beats a second. Show-offs."
+   },
+   {
+    "c": "Beastly facts",
+    "q": "Which tiny, nearly indestructible animal is nicknamed the ‘water bear’?",
+    "a": "The tardigrade",
+    "e": "Accept tardigrade. It has survived the vacuum of space."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which vertebrate is the longest-living known, estimated at around 400 years or more?",
+    "a": "The Greenland shark",
+    "e": "Radiocarbon dating of eye lenses, 2016. One may have been swimming about when Shakespeare was writing."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-13",
+  "number": 8,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Food and drink",
+    "q": "Which fruit is the base of guacamole?",
+    "a": "Avocado",
+    "e": "Yes, a fruit. Don’t let your toast tell you otherwise."
+   },
+   {
+    "c": "Food and drink",
+    "q": "What is the seaweed wrapped around sushi called?",
+    "a": "Nori",
+    "e": "Accept nori only. Not ‘the green paper’."
+   },
+   {
+    "c": "Food and drink",
+    "q": "What is the main ingredient of hummus?",
+    "a": "Chickpeas",
+    "e": "Accept garbanzo beans. Tahini takes second billing."
+   },
+   {
+    "c": "Food and drink",
+    "q": "By weight, which spice is usually the most expensive in the world?",
+    "a": "Saffron",
+    "e": "Picked by hand from crocus flowers. Accept saffron. Pricey, like your last brunch."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Which cheese belongs in a traditional Greek salad?",
+    "a": "Feta",
+    "e": "It’s a protected name, and the Greeks will mention it."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Paella comes from which Spanish region?",
+    "a": "Valencia",
+    "e": "Chorizo in it is a diplomatic incident."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Marzipan is made from which nut?",
+    "a": "Almonds",
+    "e": "Accept almond. Sculpted into fruit, for reasons."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Botanically, peanuts aren’t nuts. What are they?",
+    "a": "Legumes",
+    "e": "Accept pulses or beans. Peas in a pod, underground."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Earl Grey tea gets its flavour from the oil of which citrus fruit?",
+    "a": "Bergamot",
+    "e": "Tastes like a very posh aftershave. In a good way."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Kimchi is usually made from which fermented vegetable?",
+    "a": "Cabbage",
+    "e": "Accept napa or wombok cabbage. Korea’s national mood lifter."
+   },
+   {
+    "c": "Food and drink",
+    "q": "The Italian dessert name tiramisu translates roughly as what?",
+    "a": "Pick me up",
+    "e": "Accept lift me up or cheer me up. All that coffee helps."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Which natural food famously keeps for thousands of years without spoiling?",
+    "a": "Honey",
+    "e": "Found edible in ancient Egyptian tombs, reportedly. Don’t eat tomb food."
+   },
+   {
+    "c": "Food and drink",
+    "q": "What is Spain’s traditional sparkling wine called?",
+    "a": "Cava",
+    "e": "Champagne’s cheerful cousin."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Which country drinks the most coffee per person?",
+    "a": "Finland",
+    "e": "Accept Finland. It’s dark up there. Italy is nowhere near the top."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Which spirit goes in a classic Bloody Mary?",
+    "a": "Vodka",
+    "e": "Technically a breakfast food. Technically."
+   },
+   {
+    "c": "Food and drink",
+    "q": "What does the Scoville scale measure?",
+    "a": "The heat of chillies",
+    "e": "Accept chilli heat. Bell pepper scores zero. Your pride, likewise."
+   },
+   {
+    "c": "Food and drink",
+    "q": "The Caesar salad was invented in a restaurant in which Mexican city?",
+    "a": "Tijuana",
+    "e": "By Caesar Cardini, an Italian-American. Not Rome. Julius had nothing to do with it."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Sachet ‘wasabi’ outside Japan is mostly which other root?",
+    "a": "Horseradish",
+    "e": "Plus green food colouring. You’ve been played."
+   },
+   {
+    "c": "Food and drink",
+    "q": "Fresh apples float in water. What makes them float?",
+    "a": "Air",
+    "e": "About a quarter of an apple’s volume. Hence bobbing."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "The Hawaiian pizza, with ham and pineapple, was invented in 1962 in which country?",
+    "a": "Canada",
+    "e": "By Greek-born Sam Panopoulos in Ontario. Hawaii is entirely innocent."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-20",
+  "number": 9,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "The festive season",
+    "q": "Which red-leafed Christmas plant is named after a US diplomat who brought it back from Mexico?",
+    "a": "Poinsettia",
+    "e": "Joel Poinsett, 1820s. Those red ‘petals’ are actually leaves."
+   },
+   {
+    "c": "The festive season",
+    "q": "Which band sang Last Christmas?",
+    "a": "Wham!",
+    "e": "And you’ve just lost Whamageddon. Sorry."
+   },
+   {
+    "c": "The festive season",
+    "q": "Who wrote A Christmas Carol?",
+    "a": "Charles Dickens",
+    "e": "1843. Bah, humbug to anyone who said Scrooge."
+   },
+   {
+    "c": "The festive season",
+    "q": "Who played Kevin in Home Alone?",
+    "a": "Macaulay Culkin",
+    "e": "Accept Culkin. Burglars hated him."
+   },
+   {
+    "c": "The festive season",
+    "q": "Which reindeer has the shiny red nose?",
+    "a": "Rudolph",
+    "e": "He began in a US department store’s 1939 giveaway booklet."
+   },
+   {
+    "c": "The festive season",
+    "q": "In Japan, which fast-food chain is a hugely popular Christmas meal?",
+    "a": "KFC",
+    "e": "Thanks to a 1970s ad campaign. Accept Kentucky Fried Chicken. Book ahead."
+   },
+   {
+    "c": "The festive season",
+    "q": "Which horned Alpine figure comes for naughty children around Christmas?",
+    "a": "Krampus",
+    "e": "Santa’s bad cop. Coal looks fine by comparison."
+   },
+   {
+    "c": "The festive season",
+    "q": "A French bûche de Noël is a cake shaped like what?",
+    "a": "A log",
+    "e": "Accept Yule log. Edible firewood."
+   },
+   {
+    "c": "The festive season",
+    "q": "In The Twelve Days of Christmas, what are the five?",
+    "a": "Gold rings",
+    "e": "Accept golden rings. The most sensible gift by a distance."
+   },
+   {
+    "c": "The festive season",
+    "q": "Which Christmas spice, often stuck into oranges and hams, is the dried flower bud of a tree?",
+    "a": "Cloves",
+    "e": "Accept clove. Looks like a tiny nail, which is where the name comes from."
+   },
+   {
+    "c": "The festive season",
+    "q": "The Catalan nativity figure called the caganer is doing what?",
+    "a": "Pooing",
+    "e": "Trousers down, tucked away in the scene. Accept the rude word. It’s tradition."
+   },
+   {
+    "c": "The festive season",
+    "q": "What is the name of the skyscraper in Die Hard?",
+    "a": "Nakatomi Plaza",
+    "e": "Accept Nakatomi. And yes, it’s a Christmas film. Next argument please."
+   },
+   {
+    "c": "The festive season",
+    "q": "In what year was All I Want for Christmas Is You released?",
+    "a": "1994",
+    "e": "Mariah Carey. Back every year since, like the tax office."
+   },
+   {
+    "c": "The festive season",
+    "q": "Who composed The Nutcracker?",
+    "a": "Tchaikovsky",
+    "e": "Accept Pyotr Ilyich Tchaikovsky. Sugar plums courtesy of a celesta."
+   },
+   {
+    "c": "The festive season",
+    "q": "Ded Moroz, ‘Grandfather Frost’, brings presents in which country?",
+    "a": "Russia",
+    "e": "Accept Russia. His granddaughter Snegurochka helps."
+   },
+   {
+    "c": "The festive season",
+    "q": "Which Swedish town’s giant Christmas straw goat is famous for being set on fire?",
+    "a": "Gävle",
+    "e": "Accept Gavle. Burnt many times since 1966. It’s illegal, and it keeps happening."
+   },
+   {
+    "c": "The festive season",
+    "q": "Who sang the best-selling version of White Christmas?",
+    "a": "Bing Crosby",
+    "e": "Accept Crosby. Among the best-selling singles ever recorded."
+   },
+   {
+    "c": "The festive season",
+    "q": "Traditional British mince pies originally contained what?",
+    "a": "Meat",
+    "e": "Accept minced meat. Now it’s just fruit, and the name stays."
+   },
+   {
+    "c": "The festive season",
+    "q": "In Italian folklore, which kindly old witch brings children gifts on the night of 5 January?",
+    "a": "La Befana",
+    "e": "A kindly witch on a broomstick. Accept Befana."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which festive song was the first ever played in space, in 1965?",
+    "a": "Jingle Bells",
+    "e": "Gemini 6 astronauts Wally Schirra and Tom Stafford, on a tiny harmonica and bells, after reporting a mystery red-suited object."
+   }
+  ]
+ },
+ {
+  "week": "2026-12-27",
+  "number": 10,
+  "fallback": true,
+  "questions": [
+   {
+    "c": "Everyday science",
+    "q": "Which planet has the shortest day, at about 10 hours?",
+    "a": "Jupiter",
+    "e": "Biggest and fastest. Bit smug about it."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Olympus Mons, the tallest volcano in the solar system, is on which planet?",
+    "a": "Mars",
+    "e": "About two and a half times the height of Everest."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which gas makes up most of the air we breathe?",
+    "a": "Nitrogen",
+    "e": "About 78%. Oxygen only gets the credit."
+   },
+   {
+    "c": "Everyday science",
+    "q": "What is the chemical symbol for gold?",
+    "a": "Au",
+    "e": "From aurum. Not Go, not Gd, not ‘bling’."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Roughly how fast does light travel, in kilometres per second?",
+    "a": "About 300,000",
+    "e": "Accept close enough. Your internet should be so lucky."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Bananas are slightly radioactive because of which element?",
+    "a": "Potassium",
+    "e": "A tiny amount. Please continue with your smoothie."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which metal is liquid at room temperature?",
+    "a": "Mercury",
+    "e": "Accept mercury only. Hold the thermometer jokes."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Seen from space, what colour is the Sun?",
+    "a": "White",
+    "e": "It only looks yellow through our atmosphere. Crayons have misled you."
+   },
+   {
+    "c": "Everyday science",
+    "q": "What are clouds mostly made of?",
+    "a": "Water droplets and ice crystals",
+    "e": "Accept water. Not fluff. Not candyfloss."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which is hotter, a bolt of lightning or the surface of the Sun?",
+    "a": "Lightning",
+    "e": "About five times hotter. Stay off the golf course."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Diamonds are made of which element?",
+    "a": "Carbon",
+    "e": "Same as pencil lead, with far better marketing."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Does sound travel faster in air or in water?",
+    "a": "Water",
+    "e": "More than four times faster. Whales are not surprised."
+   },
+   {
+    "c": "Everyday science",
+    "q": "What is the name for the claim that hot water can sometimes freeze faster than cold?",
+    "a": "The Mpemba effect",
+    "e": "After a Tanzanian schoolboy who noticed it making ice cream in the 1960s. Scientists still argue."
+   },
+   {
+    "c": "Everyday science",
+    "q": "What is absolute zero in degrees Celsius, to the nearest degree?",
+    "a": "-273",
+    "e": "Accept -273.15. Cold enough to make Canada blush."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which scale ranks minerals by scratch hardness, from talc to diamond?",
+    "a": "The Mohs scale",
+    "e": "Accept Mohs. Friedrich Mohs, 1812. Fingernail scores about 2.5."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which planet has a day that’s longer than its year?",
+    "a": "Venus",
+    "e": "Turns so slowly it’s basically a teenager on a Sunday."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Which colour is on the outside edge of a primary rainbow?",
+    "a": "Red",
+    "e": "Inside is violet. Now say Roy G. Biv and feel better."
+   },
+   {
+    "c": "Everyday science",
+    "q": "Polonium is named after which country?",
+    "a": "Poland",
+    "e": "Marie Curie’s homeland, which wasn’t on the map at the time."
+   },
+   {
+    "c": "Everyday science",
+    "q": "What is the study of fungi called?",
+    "a": "Mycology",
+    "e": "Accept mycology only. A very fun guy’s degree."
+   },
+   {
+    "c": "Brain-melter",
+    "q": "Which two letters of the alphabet appear nowhere on the periodic table?",
+    "a": "J and Q",
+    "e": "Need both. Check it yourself. We’ll wait."
+   }
+  ]
  }
 ]

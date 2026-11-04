@@ -1,0 +1,2710 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 37,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Bigger than whatever you're picturing. Now go bigger.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical large mammal",
+    "rows": [
+     [
+      "Length",
+      "30",
+      "m",
+      "2–8",
+      "H"
+     ],
+     [
+      "Weight",
+      "190",
+      "tonnes",
+      "1–6",
+      "H"
+     ],
+     [
+      "Heart",
+      "180",
+      "kg",
+      "<20",
+      "H"
+     ],
+     [
+      "Food per day",
+      "4",
+      "tonnes",
+      "<0.2",
+      "H"
+     ],
+     [
+      "Loudest call",
+      "188",
+      "decibels",
+      "<120",
+      "H"
+     ],
+     [
+      "Milk a calf drinks per day",
+      "220",
+      "kg",
+      "<20",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Blue whale",
+  "wrong": [
+   "Fin whale",
+   "Humpback whale",
+   "Sperm whale",
+   "African elephant",
+   "Whale shark"
+  ],
+  "hints": [
+   [
+    "Check the weight. Those are tonnes, not kilograms.",
+    [
+     "Weight"
+    ]
+   ],
+   [
+    "A heart as heavy as a very large person, fuelled by tonnes of tiny krill.",
+    [
+     "Heart",
+     "Food per day"
+    ]
+   ]
+  ],
+  "key": [
+   "Weight",
+   "Length",
+   "Heart"
+  ],
+  "why": "About 30 m long, up to about 190 tonnes, a heart of about 180 kg, about 4 tonnes of krill a day and calls up to about 188 decibels. It's the blue whale, the heaviest animal known to have lived. Picked the fin whale? Second place, and still enormous.",
+  "pearl": "Scientists can age whales by counting layers in their earwax, and the oldest blue whale aged that way was about 110."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 38,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Snowy, salty and home to a heart-stopping medical first.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big US city",
+    "rows": [
+     [
+      "Elevation",
+      "1,319",
+      "m",
+      "<500",
+      "H"
+     ],
+     [
+      "Snow per year",
+      "152",
+      "cm",
+      "<50",
+      "H"
+     ],
+     [
+      "Population",
+      "200,000",
+      "",
+      "400000–4000000",
+      "L"
+     ],
+     [
+      "Winter Olympics hosted (by 2026)",
+      "1",
+      "",
+      "0–0",
+      "H"
+     ],
+     [
+      "First artificial heart implanted here",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Year founded",
+      "1847",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Salt Lake City",
+  "wrong": [
+   "Denver",
+   "Boise",
+   "Albuquerque",
+   "Reno",
+   "Colorado Springs"
+  ],
+  "hints": [
+   [
+    "An Olympic host, high in the snowy mountains of the western US.",
+    [
+     "Winter Olympics hosted (by 2026)",
+     "Elevation"
+    ]
+   ],
+   [
+    "Its name comes from the big, briny lake next door. A famous artificial heart went in here too.",
+    [
+     "First artificial heart implanted here"
+    ]
+   ]
+  ],
+  "key": [
+   "Winter Olympics hosted (by 2026)",
+   "First artificial heart implanted here",
+   "Elevation"
+  ],
+  "why": "About 1,320 m up, about 150 cm of snow a year, about 200,000 people, the 2002 Winter Olympics and the University of Utah's 1982 artificial heart implant. It's Salt Lake City. Denver is the classic guess, but it has never hosted the Winter Games.",
+  "pearl": "The first patient to receive a permanent artificial heart got it here in December 1982 and lived for 112 days, with the pump's compressor rolling along beside him."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 39,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Long. Longer than that. And the famous space claim is a myth.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical defensive wall",
+    "rows": [
+     [
+      "Total length",
+      "21,196",
+      "km",
+      "2–50",
+      "H"
+     ],
+     [
+      "Height (well-kept stretches)",
+      "8",
+      "m",
+      "4–15",
+      ""
+     ],
+     [
+      "Width on top",
+      "5",
+      "m",
+      "2–6",
+      ""
+     ],
+     [
+      "Years of on-off building",
+      "2,300",
+      "",
+      "<200",
+      "H"
+     ],
+     [
+      "Visible from the Moon with the naked eye",
+      "No",
+      "",
+      "No",
+      ""
+     ],
+     [
+      "Added to the UNESCO list",
+      "1987",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Great Wall of China",
+  "wrong": [
+   "Hadrian's Wall",
+   "Walls of Constantinople",
+   "Berlin Wall",
+   "Walls of Ávila",
+   "Kumbhalgarh Fort wall"
+  ],
+  "hints": [
+   [
+    "Check the total length. That's more than a very long way.",
+    [
+     "Total length"
+    ]
+   ],
+   [
+    "Built, added to and repaired over more than two thousand years.",
+    [
+     "Years of on-off building"
+    ]
+   ]
+  ],
+  "key": [
+   "Total length",
+   "Years of on-off building",
+   "Visible from the Moon with the naked eye"
+  ],
+  "why": "About 21,200 km of walls and trenches, built on and off for about 2,300 years, up to about 8 m high in well-kept stretches. It's the Great Wall of China. Hadrian's Wall is lovely, but it's about 120 km. No, it can't be seen from the Moon.",
+  "pearl": "NASA says it's only barely visible from low Earth orbit, and only under nearly perfect conditions, because it's narrow and made of local materials that blend into the landscape."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 40,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Happy International Cheetah Day. This one isn't a cheetah, but it can keep going for far longer.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical North American grazer",
+    "rows": [
+     [
+      "Top speed",
+      "88",
+      "km/h",
+      "30–65",
+      "H"
+     ],
+     [
+      "Speed held for 6.5 km",
+      "56",
+      "km/h",
+      "<30",
+      "H"
+     ],
+     [
+      "Field of vision",
+      "320",
+      "degrees",
+      "<300",
+      "H"
+     ],
+     [
+      "Living species in its family",
+      "1",
+      "",
+      "5–100",
+      "L"
+     ],
+     [
+      "Horns' outer sheath shed each year",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Weight",
+      "50",
+      "kg",
+      "30–500",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Pronghorn",
+  "wrong": [
+   "Springbok",
+   "Impala",
+   "Blackbuck",
+   "Mule deer",
+   "Saiga antelope"
+  ],
+  "hints": [
+   [
+    "A runner with staying power, and it lives in North America. Africa is out.",
+    [
+     "Speed held for 6.5 km",
+     "Top speed"
+    ]
+   ],
+   [
+    "It looks like an antelope, but it's alone in its family, and it sheds its horn covers every year.",
+    [
+     "Living species in its family",
+     "Horns' outer sheath shed each year"
+    ]
+   ]
+  ],
+  "key": [
+   "Top speed",
+   "Speed held for 6.5 km",
+   "Living species in its family"
+  ],
+  "why": "Up to about 88 km/h, about 56 km/h over 6.5 km, huge eyes with about 320 degrees of vision, and the last living species in its family. It's the pronghorn. It looks like an antelope and is often called one, but its closest living relatives are giraffes and okapis.",
+  "pearl": "Some biologists think it's so fast because its ancestors had to outrun an extinct American cheetah-like cat. Today nothing in North America can catch it, so it's a bit overqualified."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 41,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Small, steep and very, very green.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "0.8",
+      "million",
+      "2–50",
+      "L"
+     ],
+     [
+      "Highest point",
+      "7,570",
+      "m",
+      "1000–5000",
+      "H"
+     ],
+     [
+      "Forest cover",
+      "71",
+      "%",
+      "10–45",
+      "H"
+     ],
+     [
+      "Television arrived",
+      "1999",
+      "",
+      "1940–1975",
+      "H"
+     ],
+     [
+      "Daily visitor fee",
+      "100",
+      "US$",
+      "<1",
+      "H"
+     ],
+     [
+      "Net greenhouse emissions",
+      "Negative",
+      "",
+      "Positive",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Bhutan",
+  "wrong": [
+   "Nepal",
+   "Laos",
+   "Tajikistan",
+   "Kyrgyzstan",
+   "Myanmar"
+  ],
+  "hints": [
+   [
+    "A country that held out on TV until 1999.",
+    [
+     "Television arrived"
+    ]
+   ],
+   [
+    "More forest than almost anywhere, enough to soak up more carbon than it emits.",
+    [
+     "Forest cover",
+     "Net greenhouse emissions"
+    ]
+   ]
+  ],
+  "key": [
+   "Television arrived",
+   "Net greenhouse emissions",
+   "Daily visitor fee"
+  ],
+  "why": "About 0.8 million people, a top peak of about 7,570 m, about 71% forest, no TV until 1999, about US$100 a day for most visitors, and forests that absorb more greenhouse gas than it emits. It's Bhutan, the Himalayan kingdom famous for Gross National Happiness. Nepal is the mix-up, but Nepal has far more people and far less forest.",
+  "pearl": "Its tallest peak, Gangkhar Puensum, is often called the highest unclimbed mountain in the world."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 42,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "The biggest of its kind, with something no other in its class has.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with a typical moon",
+    "rows": [
+     [
+      "Diameter",
+      "5,270",
+      "km",
+      "<1500",
+      "H"
+     ],
+     [
+      "Size next to the planet Mercury",
+      "Bigger",
+      "",
+      "Smaller",
+      "!"
+     ],
+     [
+      "Surface gravity",
+      "0.15",
+      "× Earth",
+      "<0.1",
+      "H"
+     ],
+     [
+      "Own magnetic field",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Mean surface temperature",
+      "−163",
+      "°C",
+      "",
+      ""
+     ],
+     [
+      "Orbits its planet every",
+      "7.2",
+      "Earth days",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Ganymede",
+  "wrong": [
+   "Titan",
+   "Callisto",
+   "Europa",
+   "Triton",
+   "Io"
+  ],
+  "hints": [
+   [
+    "Wider than an actual planet.",
+    [
+     "Size next to the planet Mercury",
+     "Diameter"
+    ]
+   ],
+   [
+    "The only moon known to make its own magnetic field.",
+    [
+     "Own magnetic field"
+    ]
+   ]
+  ],
+  "key": [
+   "Diameter",
+   "Own magnetic field",
+   "Size next to the planet Mercury"
+  ],
+  "why": "About 5,270 km across, bigger than Mercury, gravity about 0.15 of Earth's, and the only moon known to generate its own magnetic field. It's Ganymede, Jupiter's largest moon and the largest in the solar system. Titan comes close at about 5,150 km but has no magnetic field of its own.",
+  "pearl": "ESA's JUICE spacecraft is due to go into orbit around Ganymede in the 2030s, which would make it the first moon other than our own to be orbited by a spacecraft."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 43,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Flat, busy and partly dry on purpose. An airline pioneer too.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "18",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Land below sea level",
+      "26",
+      "%",
+      "<1",
+      "H"
+     ],
+     [
+      "People per km²",
+      "541",
+      "",
+      "20–250",
+      "H"
+     ],
+     [
+      "Flag airline founded",
+      "1919",
+      "",
+      "1930–1990",
+      "L"
+     ],
+     [
+      "World rank in food exports",
+      "2",
+      "",
+      ">10",
+      "L"
+     ],
+     [
+      "Europe's busiest port",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Netherlands",
+  "wrong": [
+   "Belgium",
+   "Denmark",
+   "Germany",
+   "Austria",
+   "Switzerland"
+  ],
+  "hints": [
+   [
+    "About a quarter of the country is lower than the sea.",
+    [
+     "Land below sea level"
+    ]
+   ],
+   [
+    "The world's oldest airline still using its original name, and Rotterdam's the port.",
+    [
+     "Flag airline founded",
+     "Europe's busiest port"
+    ]
+   ]
+  ],
+  "key": [
+   "Land below sea level",
+   "Flag airline founded",
+   "Europe's busiest port"
+  ],
+  "why": "About 18 million people, about 26% of land below sea level, about 540 people per km², an airline from 1919, the world's second-biggest food exporter by value, and the busiest port in Europe in Rotterdam. It's the Netherlands. Belgium is next door but has much less land below the waves.",
+  "pearl": "KLM was founded on 7 October 1919 and is the oldest operating airline still flying under its original name."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 44,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Dresses formally. Parents in the worst weather on Earth.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical bird",
+    "rows": [
+     [
+      "Weight (up to)",
+      "45",
+      "kg",
+      "<5",
+      "H"
+     ],
+     [
+      "Deepest dive",
+      "564",
+      "m",
+      "<100",
+      "H"
+     ],
+     [
+      "Longest dive",
+      "22",
+      "minutes",
+      "<5",
+      "H"
+     ],
+     [
+      "Male goes without food for",
+      "120",
+      "days",
+      "<7",
+      "H"
+     ],
+     [
+      "Winter air temperature at home",
+      "−40",
+      "°C",
+      "−20–40",
+      "L"
+     ],
+     [
+      "Can fly",
+      "No",
+      "",
+      "Yes",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Emperor penguin",
+  "wrong": [
+   "King penguin",
+   "Adélie penguin",
+   "Ostrich",
+   "Wandering albatross",
+   "Gentoo penguin"
+  ],
+  "hints": [
+   [
+    "Flightless, and a seriously deep diver.",
+    [
+     "Can fly",
+     "Deepest dive"
+    ]
+   ],
+   [
+    "Dads go about four months without food, in about −40 °C, while looking after an egg.",
+    [
+     "Male goes without food for",
+     "Winter air temperature at home"
+    ]
+   ]
+  ],
+  "key": [
+   "Male goes without food for",
+   "Winter air temperature at home",
+   "Deepest dive"
+  ],
+  "why": "Up to about 45 kg, dives to about 564 m for about 22 minutes, fathers fasting for about 120 days, and air temperatures down to about −40 °C. It's the emperor penguin. The king penguin looks similar, but it's smaller and doesn't breed through the Antarctic winter.",
+  "pearl": "Males balance the egg on their feet for about 65 to 75 days while the females are off feeding at sea. They can lose about 20 kg over the long fast."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 45,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Big, beautiful and with a foot in two places at once.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big city",
+    "rows": [
+     [
+      "Population",
+      "15.8",
+      "million",
+      "1–10",
+      "H"
+     ],
+     [
+      "Continents it sits on",
+      "2",
+      "",
+      "1–1",
+      "H"
+     ],
+     [
+      "Share of its country's people",
+      "18",
+      "%",
+      "<10",
+      "H"
+     ],
+     [
+      "Rail and road tunnels between continents",
+      "2",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "Capital of its country",
+      "No",
+      "",
+      "Yes",
+      "!"
+     ],
+     [
+      "Conquered by the Ottomans",
+      "1453",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Istanbul",
+  "wrong": [
+   "Ankara",
+   "Athens",
+   "Cairo",
+   "Tehran",
+   "Moscow"
+  ],
+  "hints": [
+   [
+    "How many continents do most cities need? This one has two.",
+    [
+     "Continents it sits on"
+    ]
+   ],
+   [
+    "You can commute under the strait between Europe and Asia. It lost its capital status, and at least one old name.",
+    [
+     "Rail and road tunnels between continents",
+     "Capital of its country"
+    ]
+   ]
+  ],
+  "key": [
+   "Continents it sits on",
+   "Rail and road tunnels between continents",
+   "Conquered by the Ottomans"
+  ],
+  "why": "About 15.8 million people, on both Europe and Asia, about 18% of its country's population, and two tunnels under the Bosphorus. It's Istanbul. Ankara is Turkey's capital, but it's nowhere near as big and sits on only one continent.",
+  "pearl": "Earlier names include Byzantium and Constantinople. Two-thirds of its people live on the European side, with many commuting across the strait, and a catchy 1953 song reminded everyone that it's Istanbul, not Constantinople."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 46,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Old. Heavy. Pointy. And its record lasted a very long time.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical ancient tomb",
+    "rows": [
+     [
+      "Original height",
+      "147",
+      "m",
+      "<40",
+      "H"
+     ],
+     [
+      "Stone blocks",
+      "2.3",
+      "million",
+      "<0.1",
+      "H"
+     ],
+     [
+      "Total mass",
+      "6",
+      "million tonnes",
+      "<0.2",
+      "H"
+     ],
+     [
+      "Years as the world's tallest structure",
+      "3,700",
+      "",
+      "<100",
+      "H"
+     ],
+     [
+      "Age",
+      "4,600",
+      "years",
+      "1000–5000",
+      ""
+     ],
+     [
+      "Still standing from the original Seven Wonders",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Great Pyramid of Giza",
+  "wrong": [
+   "Pyramid of Khafre",
+   "Pyramid of Djoser",
+   "Red Pyramid",
+   "Pyramid of the Sun",
+   "El Castillo at Chichen Itza"
+  ],
+  "hints": [
+   [
+    "Only one Wonder from the ancient list is still standing.",
+    [
+     "Still standing from the original Seven Wonders"
+    ]
+   ],
+   [
+    "It was the tallest thing humans had built for about 3,700 years.",
+    [
+     "Years as the world's tallest structure",
+     "Original height"
+    ]
+   ]
+  ],
+  "key": [
+   "Still standing from the original Seven Wonders",
+   "Years as the world's tallest structure",
+   "Stone blocks"
+  ],
+  "why": "About 147 m tall when finished, about 2.3 million blocks, about 6 million tonnes, the tallest structure for over 3,700 years, and the only ancient Wonder largely intact. It's the Great Pyramid of Giza, built for the pharaoh Khufu. Khafre's pyramid next door looks taller from some angles, but it isn't.",
+  "pearl": "Today it stands about 138.5 m tall, as it lost its outer casing and top over time. It's estimated to have been built in around 26 years, about 4,600 years ago."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 47,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Happy International Mountain Day. It treats the world's highest range as a shortcut.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical goose",
+    "rows": [
+     [
+      "Highest flight tracked",
+      "7,290",
+      "m",
+      "<2000",
+      "H"
+     ],
+     [
+      "Weight",
+      "2.5",
+      "kg",
+      "1.5–6",
+      ""
+     ],
+     [
+      "Length",
+      "74",
+      "cm",
+      "60–110",
+      ""
+     ],
+     [
+      "Crosses the Himalaya",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Oxygen grip of its blood",
+      "Extra strong",
+      "",
+      "Ordinary",
+      "!"
+     ],
+     [
+      "Himalaya crossing, sea level up",
+      "7",
+      "hours",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Bar-headed goose",
+  "wrong": [
+   "Greylag goose",
+   "Snow goose",
+   "Whooper swan",
+   "Rüppell's vulture",
+   "Lammergeier"
+  ],
+  "hints": [
+   [
+    "An ordinary-sized goose with one very unusual commute.",
+    [
+     "Crosses the Himalaya",
+     "Weight"
+    ]
+   ],
+   [
+    "Its blood is specially tuned to thin air, and the name describes the stripes on its head.",
+    [
+     "Oxygen grip of its blood",
+     "Highest flight tracked"
+    ]
+   ]
+  ],
+  "key": [
+   "Highest flight tracked",
+   "Crosses the Himalaya",
+   "Oxygen grip of its blood"
+  ],
+  "why": "Tracked at about 7,290 m, about 2.5 kg, and able to cross the Himalaya in as little as about 7 hours from near sea level, thanks to haemoglobin that grips oxygen harder. It's the bar-headed goose. Rüppell's vulture flies higher still, but it's far bigger, and it's a vulture.",
+  "pearl": "Those stories of geese flying over Everest at 8,000 m or more are probably tall tales. Tracking shows that they usually prefer the high passes, which is smart for a goose."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 48,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Happy Health For All Day. This country swapped its army for other priorities.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "5.2",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Area",
+      "51,000",
+      "km²",
+      "100000–1000000",
+      "L"
+     ],
+     [
+      "Standing army",
+      "None since 1948",
+      "",
+      "Yes",
+      "!"
+     ],
+     [
+      "Electricity from renewables",
+      "95",
+      "%",
+      "<50",
+      "H"
+     ],
+     [
+      "Oceans or seas it has coasts on",
+      "2",
+      "",
+      "0–1",
+      "H"
+     ],
+     [
+      "Social health insurer founded",
+      "1941",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Costa Rica",
+  "wrong": [
+   "Panama",
+   "Nicaragua",
+   "Belize",
+   "Honduras",
+   "Guatemala"
+  ],
+  "hints": [
+   [
+    "A small Central American country with no army.",
+    [
+     "Standing army",
+     "Area"
+    ]
+   ],
+   [
+    "Nearly all its power comes from renewables, and it has coasts on the Caribbean and the Pacific.",
+    [
+     "Electricity from renewables",
+     "Oceans or seas it has coasts on"
+    ]
+   ]
+  ],
+  "key": [
+   "Standing army",
+   "Electricity from renewables",
+   "Social health insurer founded"
+  ],
+  "why": "About 5.2 million people, about 51,000 km², no army since 1948, about 95% renewable electricity, coasts on the Caribbean and Pacific, and a social health insurer that began in 1941. It's Costa Rica. Panama also has no regular army, but only since 1990.",
+  "pearl": "'Pura vida', literally 'pure life', works as hello, goodbye and 'how are you?' all at once."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 49,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Similar to Earth in size. Similar to nothing in comfort.",
+  "theme": "Planet",
+  "panels": [
+   {
+    "name": "Compared with Earth",
+    "rows": [
+     [
+      "Diameter",
+      "12,104",
+      "km",
+      "12000–13500",
+      ""
+     ],
+     [
+      "Surface gravity",
+      "0.9",
+      "× Earth",
+      "0.9–1.1",
+      ""
+     ],
+     [
+      "Mean surface temperature",
+      "464",
+      "°C",
+      "−90–60",
+      "H"
+     ],
+     [
+      "Surface pressure",
+      "93",
+      "× Earth",
+      "0.9–1.1",
+      "H"
+     ],
+     [
+      "One full spin takes",
+      "243",
+      "Earth days",
+      "0.9–1.1",
+      "H"
+     ],
+     [
+      "Moons",
+      "0",
+      "",
+      "1–1",
+      "L"
+     ],
+     [
+      "Spin direction",
+      "Backwards",
+      "",
+      "Forwards",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Venus",
+  "wrong": [
+   "Mars",
+   "Mercury",
+   "Neptune",
+   "Titan",
+   "Uranus"
+  ],
+  "hints": [
+   [
+    "Almost exactly Earth's size, but 464 °C at the surface.",
+    [
+     "Diameter",
+     "Mean surface temperature"
+    ]
+   ],
+   [
+    "The hottest planet of all, and it spins the 'wrong' way, very slowly.",
+    [
+     "Spin direction",
+     "One full spin takes"
+    ]
+   ]
+  ],
+  "key": [
+   "Mean surface temperature",
+   "Surface pressure",
+   "Spin direction"
+  ],
+  "why": "Almost Earth's size and gravity, but about 464 °C, about 93 times Earth's air pressure, a spin that takes about 243 Earth days and runs backwards, and no moons. It's Venus. Mercury is closer to the Sun, but Venus's thick carbon dioxide atmosphere (about 96.5%) makes it hotter.",
+  "pearl": "A Venus year is about 225 Earth days, so one full spin takes longer than a whole trip around the Sun."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 50,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Huge, colourful and the home of far more than one language.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "134",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "Area",
+      "2.0",
+      "million km²",
+      "0.1–1",
+      "H"
+     ],
+     [
+      "Official Indigenous languages",
+      "68",
+      "",
+      "<5",
+      "H"
+     ],
+     [
+      "Share of the world's avocados",
+      "29",
+      "%",
+      "<2",
+      "H"
+     ],
+     [
+      "Most native Spanish speakers on Earth",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "World rank for UNESCO sites",
+      "7",
+      "",
+      ">20",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Mexico",
+  "wrong": [
+   "Spain",
+   "Colombia",
+   "Argentina",
+   "Peru",
+   "Guatemala"
+  ],
+  "hints": [
+   [
+    "Spain started the language, but which country has the most native speakers?",
+    [
+     "Most native Spanish speakers on Earth"
+    ]
+   ],
+   [
+    "Avocado champion of the world.",
+    [
+     "Share of the world's avocados"
+    ]
+   ]
+  ],
+  "key": [
+   "Most native Spanish speakers on Earth",
+   "Share of the world's avocados",
+   "Official Indigenous languages"
+  ],
+  "why": "About 134 million people, about 2 million km², 68 recognised Indigenous languages, about 29% of the world's avocados, and more native Spanish speakers than anywhere else. It's Mexico. Spain gave the language its name, but it has far fewer speakers.",
+  "pearl": "Maize, tomatoes and beans were all domesticated here. Take a moment before your next taco to thank the ancient farmers."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 51,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "White fur, black skin, and a very cold office.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical bear",
+    "rows": [
+     [
+      "Male weight (up to)",
+      "800",
+      "kg",
+      "<300",
+      "H"
+     ],
+     [
+      "Average swim, per journey",
+      "154",
+      "km",
+      "<20",
+      "H"
+     ],
+     [
+      "Pigment in its fur",
+      "None",
+      "",
+      "Brown or black",
+      "!"
+     ],
+     [
+      "Fat under the skin (up to)",
+      "10",
+      "cm",
+      "",
+      ""
+     ],
+     [
+      "Newborn cub",
+      "600",
+      "g",
+      "",
+      ""
+     ],
+     [
+      "Scientific name means",
+      "Sea bear",
+      "",
+      "Regular bear",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Polar bear",
+  "wrong": [
+   "Grizzly bear",
+   "Kodiak bear",
+   "Spirit bear",
+   "Giant panda",
+   "Sun bear"
+  ],
+  "hints": [
+   [
+    "A bear that swims 154 km? It must have a good reason.",
+    [
+     "Average swim, per journey"
+    ]
+   ],
+   [
+    "Its name in Latin is 'sea bear', and its fur has no pigment at all.",
+    [
+     "Scientific name means",
+     "Pigment in its fur"
+    ]
+   ]
+  ],
+  "key": [
+   "Pigment in its fur",
+   "Scientific name means",
+   "Average swim, per journey"
+  ],
+  "why": "Males up to about 800 kg, swims averaging about 154 km in one study, fur with no pigment over black skin, and the Latin name Ursus maritimus, sea bear. It's the polar bear, the biggest living land carnivore. Kodiak bears come close in size, but they stay brown and on land.",
+  "pearl": "Its fur only looks white, as it scatters light, and its hairs are transparent. Its skin, nose and lips are black."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 52,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Happy Beethoven's birthday. A city that takes its music, and its dancing, very seriously.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical European capital",
+    "rows": [
+     [
+      "Population",
+      "2.0",
+      "million",
+      "0.2–3",
+      ""
+     ],
+     [
+      "Balls held each year",
+      "450",
+      "",
+      "<5",
+      "H"
+     ],
+     [
+      "Flats built by the city, 1925 to 1934",
+      "60,000",
+      "",
+      "<5000",
+      "H"
+     ],
+     [
+      "Highest ground in the city",
+      "542",
+      "m",
+      "",
+      ""
+     ],
+     [
+      "Ball season",
+      "November to February",
+      "",
+      "What's a ball season?",
+      "!"
+     ],
+     [
+      "Beethoven moved here",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Vienna",
+  "wrong": [
+   "Salzburg",
+   "Budapest",
+   "Prague",
+   "Munich",
+   "Bratislava"
+  ],
+  "hints": [
+   [
+    "Beethoven came here, and so did all those dancers.",
+    [
+     "Beethoven moved here",
+     "Balls held each year"
+    ]
+   ],
+   [
+    "A capital on the Danube with hundreds of formal balls.",
+    [
+     "Ball season",
+     "Balls held each year"
+    ]
+   ]
+  ],
+  "key": [
+   "Balls held each year",
+   "Beethoven moved here",
+   "Flats built by the city, 1925 to 1934"
+  ],
+  "why": "About 2 million people, about 450 balls a year in a season from 11 November to Shrove Tuesday, over 60,000 city-built flats between 1925 and 1934, and Beethoven among the composers who moved here. It's Vienna. Salzburg was Mozart's birthplace, but Beethoven's address and the balls are in Vienna.",
+  "pearl": "The Vienna Chamber of Commerce estimated over 500,000 people attended balls in the 2018 season, spending about €139 million. Those shoes aren't going to dance themselves."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 53,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "Happy First Flight Day. This building's pointy top was meant for airships.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical 1930s office tower",
+    "rows": [
+     [
+      "Height to the tip",
+      "443",
+      "m",
+      "<200",
+      "H"
+     ],
+     [
+      "Floors",
+      "102",
+      "",
+      "<40",
+      "H"
+     ],
+     [
+      "Build time",
+      "13.5",
+      "months",
+      "24–48",
+      "L"
+     ],
+     [
+      "Years as the world's tallest building",
+      "39",
+      "",
+      "<5",
+      "H"
+     ],
+     [
+      "Lifts",
+      "73",
+      "",
+      "<20",
+      "H"
+     ],
+     [
+      "Planned airship dock",
+      "Yes (never practical)",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Empire State Building",
+  "wrong": [
+   "Chrysler Building",
+   "Woolworth Building",
+   "One World Trade Center",
+   "Flatiron Building",
+   "Willis Tower"
+  ],
+  "hints": [
+   [
+    "An airship dock at the top of a skyscraper. What could go wrong?",
+    [
+     "Planned airship dock"
+    ]
+   ],
+   [
+    "Started in 1930 and open by 1931, it then held the title of world's tallest for decades. A very famous gorilla climbed it too.",
+    [
+     "Build time",
+     "Years as the world's tallest building"
+    ]
+   ]
+  ],
+  "key": [
+   "Planned airship dock",
+   "Build time",
+   "Floors"
+  ],
+  "why": "About 443 m to the tip, 102 floors, built in about 13.5 months, the world's tallest for about 39 years, 73 lifts and a mast designed for docking airships. It's New York's Empire State Building. The Chrysler Building is the near neighbour, but it was only the tallest for about a year.",
+  "pearl": "The airship plan was dropped because high winds would have made docking impossible. Imagine leaving an airship by gangplank, 102 floors up."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 54,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Happy International Migrants Day. The champion traveller weighs about as much as a bar of soap.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical migratory bird",
+    "rows": [
+     [
+      "Migration per year",
+      "70,900",
+      "km",
+      "2000–20000",
+      "H"
+     ],
+     [
+      "Weight",
+      "100",
+      "g",
+      "200–2000",
+      "L"
+     ],
+     [
+      "Summers per year",
+      "2",
+      "",
+      "1–1",
+      "H"
+     ],
+     [
+      "Lifetime distance",
+      "2.4",
+      "million km",
+      "<0.2",
+      "H"
+     ],
+     [
+      "Lifespan (up to)",
+      "31",
+      "years",
+      "<15",
+      "H"
+     ],
+     [
+      "Wingspan",
+      "80",
+      "cm",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Arctic tern",
+  "wrong": [
+   "Bar-tailed godwit",
+   "Sooty shearwater",
+   "Wandering albatross",
+   "Common tern",
+   "Snow goose"
+  ],
+  "hints": [
+   [
+    "Small bird, enormous mileage. Check the migration per year.",
+    [
+     "Migration per year",
+     "Weight"
+    ]
+   ],
+   [
+    "It sees two summers a year by flying from one end of the planet to the other.",
+    [
+     "Summers per year"
+    ]
+   ]
+  ],
+  "key": [
+   "Migration per year",
+   "Summers per year",
+   "Lifetime distance"
+  ],
+  "why": "About 70,900 km a year, about 100 g, two summers a year, about 2.4 million km in a lifetime and up to about 31 years. It's the Arctic tern, flying between the Arctic and Antarctic. The common tern's lovely but goes nowhere near this far. And the godwit holds a different record, for non-stop flights.",
+  "pearl": "It's thought to see more daylight than any other creature, and its lifetime mileage is about three return trips to the Moon."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 55,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "An ark for animals found almost nowhere else.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "32",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "World rank among islands by size",
+      "4",
+      "",
+      ">10",
+      "L"
+     ],
+     [
+      "Wildlife found nowhere else",
+      "90",
+      "%",
+      "<20",
+      "H"
+     ],
+     [
+      "Lemur species and subspecies",
+      "103",
+      "",
+      "<1",
+      "H"
+     ],
+     [
+      "Native monkey species",
+      "0",
+      "",
+      "1–30",
+      "L"
+     ],
+     [
+      "Baobab species",
+      "6",
+      "",
+      "<2",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Madagascar",
+  "wrong": [
+   "Sri Lanka",
+   "Mauritius",
+   "Mozambique",
+   "Comoros",
+   "Seychelles"
+  ],
+  "hints": [
+   [
+    "The lemur number is the giveaway, and there's not a monkey in sight.",
+    [
+     "Lemur species and subspecies",
+     "Native monkey species"
+    ]
+   ],
+   [
+    "A huge island, off the coast of Africa.",
+    [
+     "World rank among islands by size"
+    ]
+   ]
+  ],
+  "key": [
+   "Lemur species and subspecies",
+   "Wildlife found nowhere else",
+   "Native monkey species"
+  ],
+  "why": "About 32 million people, the world's fourth-largest island, over 90% of its wildlife found nowhere else, about 103 kinds of lemur, no native monkeys and six of the world's nine baobab species. It's Madagascar. Mozambique is the nearest mainland neighbour, but it has no lemurs.",
+  "pearl": "Lemurs evolved here without monkeys to compete with. Yes, the animated film got that bit right."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 56,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Small, shiny and constantly spraying.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with a typical moon",
+    "rows": [
+     [
+      "Diameter",
+      "500",
+      "km",
+      "<1500",
+      ""
+     ],
+     [
+      "Brightness (geometric albedo)",
+      "1.38",
+      "",
+      "0.1–0.6",
+      "H"
+     ],
+     [
+      "Mean surface temperature",
+      "−198",
+      "°C",
+      "",
+      ""
+     ],
+     [
+      "Sprays jets into space",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Feeds one of its planet's rings",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Orbits its planet every",
+      "33",
+      "hours",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Enceladus",
+  "wrong": [
+   "Mimas",
+   "Tethys",
+   "Europa",
+   "Dione",
+   "Triton"
+  ],
+  "hints": [
+   [
+    "One of the shiniest objects in the solar system, even though it's tiny.",
+    [
+     "Brightness (geometric albedo)"
+    ]
+   ],
+   [
+    "Its jets of salty water supply most of the material in a ring around Saturn.",
+    [
+     "Feeds one of its planet's rings",
+     "Sprays jets into space"
+    ]
+   ]
+  ],
+  "key": [
+   "Sprays jets into space",
+   "Feeds one of its planet's rings",
+   "Brightness (geometric albedo)"
+  ],
+  "why": "About 500 km across, an albedo of about 1.38, about −198 °C on average, jets of salty water from cracks near its south pole, and most of the material in Saturn's E ring. It's Enceladus. Europa may have its own ocean, but it's many times larger.",
+  "pearl": "Its south-pole cracks are nicknamed tiger stripes, and the jets show a salty ocean under the ice."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 57,
+  "difficulty": "Easy",
+  "patient": "Mystery country",
+  "story": "Happy World Meditation Day. Breathe in. So will about a billion and a half others.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "1,480",
+      "million",
+      "2–50",
+      "H"
+     ],
+     [
+      "World population rank",
+      "1",
+      "",
+      ">10",
+      "L"
+     ],
+     [
+      "Area",
+      "3.3",
+      "million km²",
+      "0.1–1",
+      "H"
+     ],
+     [
+      "Recognised languages",
+      "22",
+      "",
+      "<3",
+      "H"
+     ],
+     [
+      "UNESCO World Heritage Sites",
+      "45",
+      "",
+      "<20",
+      "H"
+     ],
+     [
+      "Yoga began here",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "India",
+  "wrong": [
+   "China",
+   "Pakistan",
+   "Indonesia",
+   "Bangladesh",
+   "Nigeria"
+  ],
+  "hints": [
+   [
+    "The most populous country on Earth. Not who you may have thought.",
+    [
+     "World population rank",
+     "Population"
+    ]
+   ],
+   [
+    "Yoga's home, with 22 recognised languages.",
+    [
+     "Yoga began here",
+     "Recognised languages"
+    ]
+   ]
+  ],
+  "key": [
+   "World population rank",
+   "Recognised languages",
+   "Yoga began here"
+  ],
+  "why": "About 1.48 billion people, the world's biggest population, about 3.3 million km², 22 languages recognised in its constitution, 45 UNESCO sites and the home of yoga. It's India. China was top for a long time, but India now has the most people.",
+  "pearl": "Hindi and English are the official languages of the central government, and the 22 languages on the constitution's list are only some of those spoken."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 58,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Happy Ramanujan's birthday. A mathematician would enjoy counting this one's body parts.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical sea creature",
+    "rows": [
+     [
+      "Hearts",
+      "3",
+      "",
+      "<2",
+      "H"
+     ],
+     [
+      "Arms",
+      "8",
+      "",
+      "<5",
+      "H"
+     ],
+     [
+      "Neurons",
+      "500",
+      "million",
+      "<1",
+      "H"
+     ],
+     [
+      "Share of neurons in the arms",
+      "66",
+      "%",
+      "<10",
+      "H"
+     ],
+     [
+      "Blood colour",
+      "Blue",
+      "",
+      "Red",
+      "!"
+     ],
+     [
+      "Lifespan (up to)",
+      "4",
+      "years",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Octopus",
+  "wrong": [
+   "Squid",
+   "Cuttlefish",
+   "Nautilus",
+   "Starfish",
+   "Jellyfish"
+  ],
+  "hints": [
+   [
+    "Three hearts and eight arms. That's a lot to keep track of.",
+    [
+     "Hearts",
+     "Arms"
+    ]
+   ],
+   [
+    "Most of its brainpower lives in its arms.",
+    [
+     "Share of neurons in the arms",
+     "Neurons"
+    ]
+   ]
+  ],
+  "key": [
+   "Hearts",
+   "Arms",
+   "Blood colour"
+  ],
+  "why": "Three hearts, eight arms, over 500 million neurons (about as many as a dog) with about two-thirds in the arms, blue blood and a short life of up to about four years. It's the octopus. Squid have tentacles too, but they count two more limbs.",
+  "pearl": "Female giant Pacific octopuses guard their eggs for about five months, up to 180,000 of them, and die after they hatch. Adult octopuses, even big ones, can squeeze through a gap of a little over 2.5 cm."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 59,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "Happy Twin Transplant Day. Old, clever and home to a twin-powered medical first.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big US city",
+    "rows": [
+     [
+      "Population",
+      "670,000",
+      "",
+      "400000–4000000",
+      ""
+     ],
+     [
+      "Became a town",
+      "1630",
+      "",
+      "1700–1900",
+      "L"
+     ],
+     [
+      "First subway opened",
+      "1897",
+      "",
+      "1900–1980",
+      "L"
+     ],
+     [
+      "Colleges in the wider area",
+      "50",
+      "",
+      "<15",
+      "H"
+     ],
+     [
+      "First public school opened",
+      "1635",
+      "",
+      "1700–1900",
+      "L"
+     ],
+     [
+      "First successful kidney transplant",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Boston",
+  "wrong": [
+   "Philadelphia",
+   "New York City",
+   "Baltimore",
+   "Providence",
+   "Charleston"
+  ],
+  "hints": [
+   [
+    "Check the dates: it has been around since 1630, and had the first subway in the US.",
+    [
+     "Became a town",
+     "First subway opened"
+    ]
+   ],
+   [
+    "Over 50 colleges nearby, and a kidney transplant that made history.",
+    [
+     "Colleges in the wider area",
+     "First successful kidney transplant"
+    ]
+   ]
+  ],
+  "key": [
+   "First subway opened",
+   "First successful kidney transplant",
+   "Colleges in the wider area"
+  ],
+  "why": "About 670,000 people, a town since 1630, the first US subway in 1897, a public school from 1635, over 50 colleges nearby, and the first successful kidney transplant. It's Boston. Philadelphia is similarly historic, but those two 'firsts' belong here.",
+  "pearl": "On 23 December 1954 at Brigham Hospital, Ronald Herrick gave a kidney to his identical twin, Richard. Identical twins share tissue types, which meant far less risk of rejection."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 60,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "A white marble love letter, on a very large scale.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical tomb",
+    "rows": [
+     [
+      "Height",
+      "73",
+      "m",
+      "<20",
+      "H"
+     ],
+     [
+      "Workers and artisans",
+      "20,000",
+      "",
+      "<1000",
+      "H"
+     ],
+     [
+      "Years to complete",
+      "21",
+      "",
+      "<10",
+      "H"
+     ],
+     [
+      "Kinds of gemstone inlaid",
+      "28",
+      "",
+      "<3",
+      "H"
+     ],
+     [
+      "Visitors per year",
+      "5",
+      "million",
+      "<0.5",
+      "H"
+     ],
+     [
+      "Built for",
+      "An emperor's wife",
+      "",
+      "The owner",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Taj Mahal",
+  "wrong": [
+   "Humayun's Tomb",
+   "Bibi Ka Maqbara",
+   "Gur-e-Amir",
+   "Tomb of Itimad-ud-Daulah",
+   "Mausoleum of Augustus"
+  ],
+  "hints": [
+   [
+    "An emperor built this for his late wife.",
+    [
+     "Built for"
+    ]
+   ],
+   [
+    "White marble with 28 kinds of inlaid gemstone, and about 5 million visitors a year.",
+    [
+     "Kinds of gemstone inlaid",
+     "Visitors per year"
+    ]
+   ]
+  ],
+  "key": [
+   "Built for",
+   "Kinds of gemstone inlaid",
+   "Workers and artisans"
+  ],
+  "why": "About 73 m tall, over 20,000 workers, about 21 years for the full complex, 28 kinds of stone inlaid in marble, about 5 million visitors a year, built by Shah Jahan for his wife Mumtaz Mahal. It's the Taj Mahal in Agra. Humayun's Tomb inspired it, but it's built mainly of red sandstone and has far fewer visitors.",
+  "pearl": "Its four minarets were set slightly outward so that, if they ever fell, they'd fall away from the tomb. Elephants and oxen helped haul materials up a 15 km ramp."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 61,
+  "difficulty": "Hard",
+  "patient": "Mystery animal",
+  "story": "Merry Christmas. Who else would be on today's card?",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical deer",
+    "rows": [
+     [
+      "Yearly migration (up to)",
+      "4,868",
+      "km",
+      "<200",
+      "H"
+     ],
+     [
+      "Females grow antlers",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Still has antlers in late December",
+      "Mostly females",
+      "",
+      "Males",
+      "!"
+     ],
+     [
+      "Blood vessels in its nose",
+      "Extra dense",
+      "",
+      "Ordinary",
+      "!"
+     ],
+     [
+      "Star of a 1939 department store booklet",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Reindeer",
+  "wrong": [
+   "Moose",
+   "Elk",
+   "Musk ox",
+   "Red deer",
+   "White-tailed deer"
+  ],
+  "hints": [
+   [
+    "Antlers on the females. So who's really pulling the sleigh?",
+    [
+     "Females grow antlers",
+     "Still has antlers in late December"
+    ]
+   ],
+   [
+    "An extra-red nose, and a 1939 booklet made one famous.",
+    [
+     "Blood vessels in its nose",
+     "Star of a 1939 department store booklet"
+    ]
+   ]
+  ],
+  "key": [
+   "Females grow antlers",
+   "Blood vessels in its nose",
+   "Star of a 1939 department store booklet"
+  ],
+  "why": "Up to about 4,900 km a year on the move, one of the longest land migrations, antlers on females as well as males, and noses packed with tiny blood vessels. It's the reindeer. Moose would look great in tinsel, but they're not pulling anything tonight.",
+  "pearl": "Males usually drop their antlers in early winter, so Santa's antlered team was probably female. Merry Christmas, and a nod to Isaac Newton, born on Christmas Day 1642. What goes up, must come down, except possibly a sleigh."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 62,
+  "difficulty": "Hard",
+  "patient": "Mystery country",
+  "story": "Mountainous, landlocked and very well connected.",
+  "theme": "Country",
+  "panels": [
+   {
+    "name": "Compared with a typical country",
+    "rows": [
+     [
+      "Population",
+      "9.2",
+      "million",
+      "2–50",
+      ""
+     ],
+     [
+      "Area",
+      "84,000",
+      "km²",
+      "100000–1000000",
+      "L"
+     ],
+     [
+      "Land in the Alps",
+      "62",
+      "%",
+      "<15",
+      "H"
+     ],
+     [
+      "Neighbouring countries",
+      "8",
+      "",
+      "2–6",
+      "H"
+     ],
+     [
+      "Forest cover",
+      "47",
+      "%",
+      "10–45",
+      "H"
+     ],
+     [
+      "Coastline",
+      "0",
+      "km",
+      "200–5000",
+      "L"
+     ]
+    ]
+   }
+  ],
+  "answer": "Austria",
+  "wrong": [
+   "Switzerland",
+   "Czech Republic",
+   "Slovakia",
+   "Hungary",
+   "Liechtenstein"
+  ],
+  "hints": [
+   [
+    "No coast, plenty of Alps. This narrows things down a bit, but not all the way.",
+    [
+     "Coastline",
+     "Land in the Alps"
+    ]
+   ],
+   [
+    "Eight neighbours is a lot. Switzerland has fewer.",
+    [
+     "Neighbouring countries"
+    ]
+   ]
+  ],
+  "key": [
+   "Neighbouring countries",
+   "Land in the Alps",
+   "Coastline"
+  ],
+  "why": "About 9.2 million people, about 84,000 km², about 62% of the land in the Eastern Alps, eight neighbours, about 47% forest and no coast. It's Austria. Switzerland is the mix-up, as it's also alpine and landlocked, but it has fewer neighbours.",
+  "pearl": "About 63% of Austria's electricity supply comes from renewable sources."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 63,
+  "difficulty": "Genius",
+  "patient": "Mystery world",
+  "story": "Old, dark and battered. It stays out of the action.",
+  "theme": "Moon",
+  "panels": [
+   {
+    "name": "Compared with a typical moon",
+    "rows": [
+     [
+      "Diameter",
+      "4,821",
+      "km",
+      "<1500",
+      "H"
+     ],
+     [
+      "Orbits its planet every",
+      "16.7",
+      "Earth days",
+      "<10",
+      "H"
+     ],
+     [
+      "Density",
+      "1.83",
+      "g/cm³",
+      "",
+      ""
+     ],
+     [
+      "Size rank among all moons",
+      "3",
+      "",
+      ">10",
+      "L"
+     ],
+     [
+      "Radiation dose",
+      "0.01",
+      "rem/day",
+      "",
+      ""
+     ],
+     [
+      "Surface",
+      "Among the most cratered of all",
+      "",
+      "Some craters",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Callisto",
+  "wrong": [
+   "Ganymede",
+   "Titan",
+   "Iapetus",
+   "Rhea",
+   "Oberon"
+  ],
+  "hints": [
+   [
+    "It's nearly Mercury-sized, and its surface shows old impacts.",
+    [
+     "Diameter",
+     "Surface"
+    ]
+   ],
+   [
+    "Third biggest of all moons, and far out from the radiation of Jupiter.",
+    [
+     "Size rank among all moons",
+     "Radiation dose"
+    ]
+   ]
+  ],
+  "key": [
+   "Size rank among all moons",
+   "Surface",
+   "Radiation dose"
+  ],
+  "why": "About 4,820 km across, about 16.7 days per orbit, the third-largest moon in the solar system, and a very ancient, heavily cratered surface. It's Callisto, the outermost big moon of Jupiter. Ganymede's bigger still, with a magnetic field, and Titan's the second-biggest of all.",
+  "pearl": "Callisto is barely smaller than Mercury, but it only has about a third of Mercury's mass. Being so far out, it gets a much lower radiation dose than Jupiter's inner moons."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 64,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Happy Stan Lee's birthday. A leap like a superhero, and it rarely needs a drink.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical antelope",
+    "rows": [
+     [
+      "Top speed",
+      "88",
+      "km/h",
+      "40–70",
+      "H"
+     ],
+     [
+      "Leap height when bouncing",
+      "2",
+      "m",
+      "<1",
+      "H"
+     ],
+     [
+      "Weight",
+      "35",
+      "kg",
+      "20–250",
+      ""
+     ],
+     [
+      "Needs to drink",
+      "Rarely; can go years without",
+      "",
+      "Daily",
+      "!"
+     ],
+     [
+      "National animal of South Africa",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Both sexes have horns",
+      "Yes",
+      "",
+      "Varies",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Springbok",
+  "wrong": [
+   "Impala",
+   "Thomson's gazelle",
+   "Pronghorn",
+   "Gemsbok",
+   "Kudu"
+  ],
+  "hints": [
+   [
+    "Which antelope is South Africa's national animal? You might have seen one on rugby jerseys.",
+    [
+     "National animal of South Africa"
+    ]
+   ],
+   [
+    "A 2 m bounce and a very long gap between drinks.",
+    [
+     "Leap height when bouncing",
+     "Needs to drink"
+    ]
+   ]
+  ],
+  "key": [
+   "National animal of South Africa",
+   "Leap height when bouncing",
+   "Needs to drink"
+  ],
+  "why": "Top speed about 88 km/h, bounces up to about 2 m, about 35 kg, can go years without drinking thanks to juicy plants, and South Africa's national animal. It's the springbok. Pronghorns match the speed, but they live in North America.",
+  "pearl": "That stiff-legged bounce is called pronking. Millions of them once migrated in herds hundreds of kilometres long, a phenomenon called trekbokking."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 65,
+  "difficulty": "Easy",
+  "patient": "Mystery animal",
+  "story": "Black, white and permanently snacking.",
+  "theme": "Animal",
+  "panels": [
+   {
+    "name": "Compared with a typical bear",
+    "rows": [
+     [
+      "Bamboo in its diet",
+      "99",
+      "%",
+      "<5",
+      "H"
+     ],
+     [
+      "Bamboo eaten per day",
+      "12",
+      "kg",
+      "<1",
+      "H"
+     ],
+     [
+      "Mother weighs this much more than her newborn",
+      "800",
+      "times",
+      "<500",
+      "H"
+     ],
+     [
+      "Wild population",
+      "1,900",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Weight",
+      "110",
+      "kg",
+      "60–600",
+      ""
+     ],
+     [
+      "Thumb-like wrist bone",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ]
+    ]
+   }
+  ],
+  "answer": "Giant panda",
+  "wrong": [
+   "Red panda",
+   "Sun bear",
+   "Spectacled bear",
+   "Sloth bear",
+   "Asian black bear"
+  ],
+  "hints": [
+   [
+    "A bear on an almost entirely bamboo diet.",
+    [
+     "Bamboo in its diet",
+     "Bamboo eaten per day"
+    ]
+   ],
+   [
+    "A false thumb helps it grip, and tiny babies help it surprise everyone.",
+    [
+     "Thumb-like wrist bone",
+     "Mother weighs this much more than her newborn"
+    ]
+   ]
+  ],
+  "key": [
+   "Bamboo in its diet",
+   "Thumb-like wrist bone",
+   "Mother weighs this much more than her newborn"
+  ],
+  "why": "About 99% bamboo, about 12 kg a day, a newborn about 1/800 of its mother's weight, about 1,900 in the wild and a false thumb. It's the giant panda. The red panda also eats bamboo and has a false thumb, but it's much smaller and isn't a bear.",
+  "pearl": "Pandas have a carnivore's digestive system, so bamboo passes through fast, which is why they eat so much of it. They moved from endangered to vulnerable on the IUCN Red List in 2016."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 66,
+  "difficulty": "Medium",
+  "patient": "Mystery city",
+  "story": "High, huge and slowly going down.",
+  "theme": "City",
+  "panels": [
+   {
+    "name": "Compared with a typical big city",
+    "rows": [
+     [
+      "Elevation",
+      "2,240",
+      "m",
+      "<500",
+      "H"
+     ],
+     [
+      "Sinking per year",
+      "50",
+      "cm",
+      "<1",
+      "H"
+     ],
+     [
+      "Greater urban population",
+      "21.8",
+      "million",
+      "1–10",
+      "H"
+     ],
+     [
+      "Students at its main university",
+      "300,000",
+      "",
+      "<50000",
+      "H"
+     ],
+     [
+      "Built on a former lake",
+      "Yes",
+      "",
+      "No",
+      "!"
+     ],
+     [
+      "Hosted the Summer Olympics",
+      "1968",
+      "",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "answer": "Mexico City",
+  "wrong": [
+   "Bogotá",
+   "Lima",
+   "Quito",
+   "Guatemala City",
+   "São Paulo"
+  ],
+  "hints": [
+   [
+    "A huge city, high up, built on what used to be a lake.",
+    [
+     "Built on a former lake",
+     "Elevation"
+    ]
+   ],
+   [
+    "Sinking about 50 cm a year, and an Olympic host in 1968.",
+    [
+     "Sinking per year",
+     "Hosted the Summer Olympics"
+    ]
+   ]
+  ],
+  "key": [
+   "Sinking per year",
+   "Built on a former lake",
+   "Hosted the Summer Olympics"
+  ],
+  "why": "About 2,240 m up, sinking almost 50 cm a year in places, about 21.8 million in the greater area, over 300,000 students at UNAM, and built on Lake Texcoco. It's Mexico City, founded as Tenochtitlan. Bogotá is also high up, but it hasn't hosted the Olympics.",
+  "pearl": "Some parts of the city have sunk by as much as nine metres since the early 1900s. It's the most populous city in North America."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 67,
+  "difficulty": "Medium",
+  "patient": "Mystery landmark",
+  "story": "End the year on a high.",
+  "theme": "Landmark",
+  "panels": [
+   {
+    "name": "Compared with a typical famous mountain",
+    "rows": [
+     [
+      "Height",
+      "8,849",
+      "m",
+      "3000–8000",
+      "H"
+     ],
+     [
+      "Air pressure at the top",
+      "33",
+      "% of sea level",
+      "60–90",
+      "L"
+     ],
+     [
+      "Typical top winds",
+      "160",
+      "km/h",
+      "<100",
+      "H"
+     ],
+     [
+      "January minimum temperature",
+      "−36",
+      "°C",
+      "−20–15",
+      "L"
+     ],
+     [
+      "People who have stood on top",
+      "7,200",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Countries on its summit",
+      "2",
+      "",
+      "1–1",
+      "H"
+     ]
+    ]
+   }
+  ],
+  "answer": "Mount Everest",
+  "wrong": [
+   "K2",
+   "Kangchenjunga",
+   "Lhotse",
+   "Denali",
+   "Kilimanjaro"
+  ],
+  "hints": [
+   [
+    "Nothing above sea level gets any taller.",
+    [
+     "Height"
+    ]
+   ],
+   [
+    "Nepal and China share the summit, and it's about a third of the air pressure at sea level.",
+    [
+     "Countries on its summit",
+     "Air pressure at the top"
+    ]
+   ]
+  ],
+  "key": [
+   "Height",
+   "Air pressure at the top",
+   "Countries on its summit"
+  ],
+  "why": "About 8,849 m high, about a third of sea-level air pressure, winds of about 160 km/h, about −36 °C on a January night, and the Nepal-China border at the top. It's Mount Everest. K2 is the second highest, a very respectable runner-up.",
+  "pearl": "Edmund Hillary and Tenzing Norgay reached the top on 29 May 1953, and Japan's Junko Tabei became the first woman on the summit in 1975. Happy New Year, from up there."
+ }
+]

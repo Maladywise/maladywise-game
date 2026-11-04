@@ -1,32 +1,7 @@
 {
  "_about": "Hard Wordemic bank. Tier 1 = Einstein first, then Genius Sundays. Tier 2 = Genius (or Hard). Tier 3 = Hard. Remove a word once it's used as an answer.",
  "tiers": {
-  "1": [
-   {
-    "word": "XYLOL",
-    "definition": "Xylene. Solvent used to clear tissue in histopathology."
-   },
-   {
-    "word": "PSORA",
-    "definition": "Archaic term for itchy skin disease, applied to scabies and psoriasis."
-   },
-   {
-    "word": "PYXIS",
-    "definition": "Small lidded box used to hold medicines and ointments in ancient Greece."
-   },
-   {
-    "word": "MYRRH",
-    "definition": "Aromatic resin used since antiquity as an antiseptic and wound dressing."
-   },
-   {
-    "word": "COXAE",
-    "definition": "Plural of coxa: the hips (as in coxa vara and coxa valga)."
-   },
-   {
-    "word": "JUGAL",
-    "definition": "Relating to the cheekbone (zygomatic bone)."
-   }
-  ],
+  "1": [],
   "2": [
    {
     "word": "PSOAS",
@@ -63,10 +38,6 @@
   ],
   "3": [
    {
-    "word": "FOVEA",
-    "definition": "Central pit of the retina, responsible for the sharpest vision."
-   },
-   {
     "word": "GALEA",
     "definition": "Tough fibrous sheet over the skull under the scalp (galea aponeurotica)."
    },
@@ -85,10 +56,6 @@
    {
     "word": "GUTTA",
     "definition": "A drop. Guttate psoriasis has drop-shaped spots."
-   },
-   {
-    "word": "MYOMA",
-    "definition": "Benign muscle tumour, e.g. a uterine fibroid (leiomyoma)."
    },
    {
     "word": "TORUS",

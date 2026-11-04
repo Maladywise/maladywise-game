@@ -938,5 +938,475 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 36,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Speech problems that aren't aphasia",
+    "level": 1,
+    "words": [
+     "DYSARTHRIA",
+     "DYSPHONIA",
+     "STUTTER",
+     "MUTISM"
+    ]
+   },
+   {
+    "label": "Pain history: SOCRATES",
+    "level": 2,
+    "words": [
+     "SITE",
+     "ONSET",
+     "CHARACTER",
+     "SEVERITY"
+    ]
+   },
+   {
+    "label": "Types of aphasia",
+    "level": 3,
+    "words": [
+     "BROCA",
+     "WERNICKE",
+     "GLOBAL",
+     "ANOMIC"
+    ]
+   },
+   {
+    "label": "Hidden greetings",
+    "level": 4,
+    "words": [
+     "OTHELLO",
+     "CHOLANGITIS",
+     "CHEYNE-STOKES",
+     "SHALLOW"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 37,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "22q11.2 deletion: another name and key features",
+    "level": 1,
+    "words": [
+     "DIGEORGE",
+     "HYPOCALCAEMIA",
+     "THYMIC HYPOPLASIA",
+     "TRUNCUS ARTERIOSUS"
+    ]
+   },
+   {
+    "label": "Other deletion syndromes",
+    "level": 2,
+    "words": [
+     "WILLIAMS",
+     "ANGELMAN",
+     "PRADER-WILLI",
+     "CRI DU CHAT"
+    ]
+   },
+   {
+    "label": "Grown from the pharyngeal pouches",
+    "level": 3,
+    "words": [
+     "MIDDLE EAR",
+     "PALATINE TONSIL",
+     "THYMUS",
+     "PARATHYROID"
+    ]
+   },
+   {
+    "label": "___ palate",
+    "level": 4,
+    "words": [
+     "PRIMARY",
+     "SOFT",
+     "HARD",
+     "BONY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 38,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Averages and spread",
+    "level": 1,
+    "words": [
+     "MEAN",
+     "MEDIAN",
+     "MODE",
+     "RANGE"
+    ]
+   },
+   {
+    "label": "Plotted on a child's growth chart",
+    "level": 2,
+    "words": [
+     "HEIGHT",
+     "LENGTH",
+     "HEAD CIRCUMFERENCE",
+     "BMI"
+    ]
+   },
+   {
+    "label": "Written on a prescription",
+    "level": 3,
+    "words": [
+     "DOSE",
+     "ROUTE",
+     "FREQUENCY",
+     "DURATION"
+    ]
+   },
+   {
+    "label": "___ chart",
+    "level": 4,
+    "words": [
+     "EYE",
+     "FLOW",
+     "PIE",
+     "BAR"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 39,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Bits of your foot",
+    "level": 1,
+    "words": [
+     "ARCH",
+     "HEEL",
+     "INSTEP",
+     "BALL"
+    ]
+   },
+   {
+    "label": "Foot complaints",
+    "level": 2,
+    "words": [
+     "BUNION",
+     "VERRUCA",
+     "CHILBLAIN",
+     "CORN"
+    ]
+   },
+   {
+    "label": "Fish on the menu",
+    "level": 3,
+    "words": [
+     "TROUT",
+     "PERCH",
+     "BREAM",
+     "HAKE"
+    ]
+   },
+   {
+    "label": "___ toe",
+    "level": 4,
+    "words": [
+     "TURF",
+     "CLAW",
+     "HAMMER",
+     "BIG"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 40,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Volatile anaesthetics",
+    "level": 1,
+    "words": [
+     "SEVOFLURANE",
+     "DESFLURANE",
+     "ISOFLURANE",
+     "HALOTHANE"
+    ]
+   },
+   {
+    "label": "Bypass circuit parts",
+    "level": 2,
+    "words": [
+     "OXYGENATOR",
+     "RESERVOIR",
+     "PUMP",
+     "CANNULA"
+    ]
+   },
+   {
+    "label": "Medical gases",
+    "level": 3,
+    "words": [
+     "OXYGEN",
+     "NITROUS OXIDE",
+     "HELIUM",
+     "CARBON DIOXIDE"
+    ]
+   },
+   {
+    "label": "___ pump",
+    "level": 4,
+    "words": [
+     "SODIUM",
+     "INSULIN",
+     "PROTON",
+     "BALLOON"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 41,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "MIST trauma handover",
+    "level": 1,
+    "words": [
+     "MECHANISM",
+     "INJURIES",
+     "SIGNS",
+     "TREATMENT"
+    ]
+   },
+   {
+    "label": "Outdoor air pollutants",
+    "level": 2,
+    "words": [
+     "PM2.5",
+     "OZONE",
+     "NITROGEN DIOXIDE",
+     "CARBON MONOXIDE"
+    ]
+   },
+   {
+    "label": "Injuries from a car crash",
+    "level": 3,
+    "words": [
+     "WHIPLASH",
+     "DASHBOARD",
+     "BUMPER",
+     "CHANCE"
+    ]
+   },
+   {
+    "label": "Medicines starting with a ride",
+    "level": 4,
+    "words": [
+     "TRAMADOL",
+     "VANCOMYCIN",
+     "BUSPIRONE",
+     "CARBAMAZEPINE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 42,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Nobel-winning advances",
+    "level": 1,
+    "words": [
+     "LOBOTOMY",
+     "IVF",
+     "PENICILLIN",
+     "CT"
+    ]
+   },
+   {
+    "label": "DNA double helix team",
+    "level": 2,
+    "words": [
+     "WATSON",
+     "CRICK",
+     "WILKINS",
+     "FRANKLIN"
+    ]
+   },
+   {
+    "label": "Women with a Medicine Nobel",
+    "level": 3,
+    "words": [
+     "YOUYOU",
+     "ELION",
+     "KARIKO",
+     "MCCLINTOCK"
+    ]
+   },
+   {
+    "label": "Anagrams of Medicine Nobel winners",
+    "level": 4,
+    "words": [
+     "CHINA",
+     "HOCK",
+     "LEAD",
+     "MORSE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 43,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Lab glassware",
+    "level": 1,
+    "words": [
+     "BEAKER",
+     "FLASK",
+     "BURETTE",
+     "PIPETTE"
+    ]
+   },
+   {
+    "label": "Lab machines",
+    "level": 2,
+    "words": [
+     "CENTRIFUGE",
+     "AUTOCLAVE",
+     "INCUBATOR",
+     "MICROSCOPE"
+    ]
+   },
+   {
+    "label": "Agar plates",
+    "level": 3,
+    "words": [
+     "MACCONKEY",
+     "CHOCOLATE",
+     "SABOURAUD",
+     "THAYER-MARTIN"
+    ]
+   },
+   {
+    "label": "___ culture",
+    "level": 4,
+    "words": [
+     "CELL",
+     "POP",
+     "CANCEL",
+     "SUB"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 44,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Conjoined twin types",
+    "level": 1,
+    "words": [
+     "THORACOPAGUS",
+     "OMPHALOPAGUS",
+     "CRANIOPAGUS",
+     "PYGOPAGUS"
+    ]
+   },
+   {
+    "label": "Kinds of twin pregnancy",
+    "level": 2,
+    "words": [
+     "DIDI",
+     "MODI",
+     "MOMO",
+     "DIZYGOTIC"
+    ]
+   },
+   {
+    "label": "Monochorionic twin complications",
+    "level": 3,
+    "words": [
+     "TTTS",
+     "TAPS",
+     "SIUGR",
+     "ACARDIAC"
+    ]
+   },
+   {
+    "label": "Twins: whole words saying the same bit twice",
+    "level": 4,
+    "words": [
+     "MURMUR",
+     "TARTAR",
+     "BERIBERI",
+     "TSETSE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 45,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "In a traditional haggis",
+    "level": 1,
+    "words": [
+     "LIVER",
+     "HEART",
+     "LUNGS",
+     "OATMEAL"
+    ]
+   },
+   {
+    "label": "Scottish medical pioneers",
+    "level": 2,
+    "words": [
+     "FLEMING",
+     "SIMPSON",
+     "INGLIS",
+     "LIND"
+    ]
+   },
+   {
+    "label": "Scots health words",
+    "level": 3,
+    "words": [
+     "BOAK",
+     "WABBIT",
+     "PEELY-WALLY",
+     "OXTER"
+    ]
+   },
+   {
+    "label": "Hiding a Scottish loch",
+    "level": 4,
+    "words": [
+     "WEAKNESS",
+     "NUMBNESS",
+     "DEAFNESS",
+     "DIZZINESS"
+    ]
+   }
+  ]
  }
 ]

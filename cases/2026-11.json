@@ -216,7 +216,7 @@
     "t": "44-year-old woman with heavy, irregular periods for 6 months."
    },
    {
-    "t": "Her father had bowel cancer at 47. His sister had \u2018womb cancer\u2019 in her 40s."
+    "t": "Her father had bowel cancer at 47. His sister had ‘womb cancer’ in her 40s."
    },
    {
     "t": "Pelvic ultrasound: thickened endometrium",
@@ -357,7 +357,7 @@
     "d": 1
    }
   ],
-  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard. Gout is especially common in M\u0101ori and Pacific men, largely because of inherited differences in how the body clears urate. It's not just the prawns."
+  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard. Gout is especially common in Māori and Pacific men, largely because of inherited differences in how the body clears urate. It's not just the prawns."
  },
  {
   "date": "2026-11-10",
@@ -395,7 +395,7 @@
     "t": "She had chickenpox as a child."
    }
   ],
-  "pearl": "Pain often comes 2\u20133 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
+  "pearl": "Pain often comes 2–3 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
  },
  {
   "date": "2026-11-11",
@@ -542,14 +542,14 @@
     "t": "24-year-old woman, slim and well. A work health check flagged a high fasting glucose."
    },
    {
-    "t": "HbA1c 51 mmol/mol \u00b7 BMI 22 \u00b7 No ketones",
+    "t": "HbA1c 51 mmol/mol · BMI 22 · No ketones",
     "d": 1
    },
    {
     "t": "Her mum was diagnosed at 25 and her grandfather at 30. Both were told 'type 2'. Neither was overweight."
    },
    {
-    "t": "GAD and IA-2 antibodies negative \u00b7 C-peptide normal",
+    "t": "GAD and IA-2 antibodies negative · C-peptide normal",
     "d": 1
    },
    {
@@ -638,7 +638,7 @@
     "t": "Her mother takes \"a little pill for her neck\"."
    },
    {
-    "t": "TSH 28 mIU/L \u00b7 free T4 low",
+    "t": "TSH 28 mIU/L · free T4 low",
     "d": 1
    }
   ],
@@ -768,7 +768,7 @@
   "number": 35,
   "difficulty": "Hard",
   "title": "Cream crackers",
-  "answer": "Sj\u00f6gren's syndrome",
+  "answer": "Sjögren's syndrome",
   "accept": [
    "sjogrens",
    "sjogren's",
@@ -776,8 +776,8 @@
    "sjogrens syndrome",
    "sjogren's syndrome",
    "sjogren syndrome",
-   "sj\u00f6gren's syndrome",
-   "sj\u00f6gren",
+   "sjögren's syndrome",
+   "sjögren",
    "sicca syndrome",
    "primary sjogrens"
   ],
@@ -803,5 +803,434 @@
    }
   ],
   "pearl": "Dry eyes plus dry mouth is the core of it. Schirmer's test measures tear production. Lymphoma risk is raised, so a persistently enlarged parotid gland needs review."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 36,
+  "difficulty": "Hard",
+  "title": "Hello, stranger",
+  "answer": "Foreign accent syndrome",
+  "accept": [
+   "foreign accent syndrome",
+   "foreign accent",
+   "fas",
+   "pseudo foreign accent syndrome",
+   "accent syndrome"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old woman, talking again three weeks after a left-sided stroke."
+   },
+   {
+    "t": "Her word-finding and grammar are nearly back to normal."
+   },
+   {
+    "t": "She understands everything and reads and writes well."
+   },
+   {
+    "t": "Her speech therapist notes stretched vowels and an unfamiliar rise and fall to her sentences."
+   },
+   {
+    "t": "She has never lived outside New Zealand, yet neighbours now ask which country she's from."
+   },
+   {
+    "t": "Her sister hears French. Her boss hears Russian. She speaks neither."
+   }
+  ],
+  "pearl": "The classic early case was Astrid, a Norwegian woman hit by shrapnel in a 1941 Oslo air raid. Listeners heard German, and shopkeepers refused to serve her. The speech change is real rhythm and pitch; the 'foreign' part is in the listener's ear."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 37,
+  "difficulty": "Genius",
+  "title": "Joining the dots",
+  "answer": "22q11.2 deletion syndrome (DiGeorge)",
+  "accept": [
+   "22q",
+   "22q11",
+   "22q11.2",
+   "22q11.2 deletion",
+   "22q11.2 deletion syndrome",
+   "22q deletion",
+   "22q deletion syndrome",
+   "digeorge",
+   "di george",
+   "digeorge syndrome",
+   "di george syndrome",
+   "velocardiofacial syndrome",
+   "velocardiofacial",
+   "velo cardio facial syndrome",
+   "vcfs",
+   "shprintzen syndrome"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman with tingling around her mouth and cramping hands during exam week."
+   },
+   {
+    "t": "Her voice has a nasal quality. She had years of speech therapy as a child."
+   },
+   {
+    "t": "She had many ear and chest infections when small, and learning support at school."
+   },
+   {
+    "t": "Ca 1.82 mmol/L · phosphate high · PTH inappropriately low",
+    "d": 1
+   },
+   {
+    "t": "She had heart surgery as a newborn for tetralogy of Fallot."
+   },
+   {
+    "t": "The surgeon's old note: 'thymus barely visible'."
+   }
+  ],
+  "pearl": "A tiny missing piece of chromosome 22 can touch the heart, palate, parathyroids, thymus, learning and mental health, in very different combinations. Many people aren't diagnosed until adulthood, and low calcium can resurface during stress or puberty."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 38,
+  "difficulty": "Easy",
+  "title": "Add it up",
+  "answer": "Paracetamol (acetaminophen) overdose",
+  "accept": [
+   "paracetamol overdose",
+   "paracetamol toxicity",
+   "paracetamol poisoning",
+   "paracetamol",
+   "paracetamol hepatotoxicity",
+   "paracetamol liver injury",
+   "staggered paracetamol overdose",
+   "acetaminophen overdose",
+   "acetaminophen toxicity",
+   "acetaminophen poisoning",
+   "acetaminophen",
+   "acetaminophen hepatotoxicity",
+   "apap",
+   "apap toxicity",
+   "apap overdose",
+   "tylenol",
+   "tylenol overdose",
+   "panadol",
+   "panadol overdose"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old woman with a terrible toothache for four days."
+   },
+   {
+    "t": "She has been treating it round the clock from three boxes: a pain tablet, a cold-and-flu powder and a night-time capsule."
+   },
+   {
+    "t": "Now nausea, vomiting and pain under her right ribs."
+   },
+   {
+    "t": "She never meant any harm. She didn't realise the boxes overlapped."
+   },
+   {
+    "t": "ALT 3,800 U/L · INR 2.4",
+    "d": 1
+   },
+   {
+    "t": "All three boxes list the same active ingredient, the world's most familiar painkiller."
+   }
+  ],
+  "pearl": "It hides in hundreds of cold, flu and pain products, so accidental doubling up is easy. Repeated or staggered doses can't be plotted on the standard treatment nomogram, so early advice from a poisons service matters."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 39,
+  "difficulty": "Easy",
+  "title": "Who kicked me?",
+  "answer": "Achilles tendon rupture",
+  "accept": [
+   "achilles rupture",
+   "achilles tendon rupture",
+   "ruptured achilles",
+   "ruptured achilles tendon",
+   "achilles tear",
+   "torn achilles",
+   "torn achilles tendon",
+   "achilles tendon tear",
+   "achilles"
+  ],
+  "clues": [
+   {
+    "t": "42-year-old man playing social netball, spun round to see who kicked the back of his ankle."
+   },
+   {
+    "t": "Nobody was within two metres of him."
+   },
+   {
+    "t": "He and his teammates heard a pop."
+   },
+   {
+    "t": "He can still walk, with a flat-footed limp."
+   },
+   {
+    "t": "He can't rise onto tiptoe on that side, and there's a soft gap just above his heel."
+   },
+   {
+    "t": "Lying face down, squeezing his calf doesn't move his foot."
+   }
+  ],
+  "pearl": "Being able to walk doesn't rule it out, which is why these are often missed. The calf-squeeze is the Simmonds-Thompson test. Some antibiotics (fluoroquinolones) and steroids raise the risk."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 40,
+  "difficulty": "Medium",
+  "title": "The cat is sleepy too",
+  "answer": "Carbon monoxide poisoning",
+  "accept": [
+   "carbon monoxide",
+   "carbon monoxide poisoning",
+   "co poisoning",
+   "co toxicity",
+   "carboxyhaemoglobin",
+   "carboxyhemoglobin",
+   "carbon monoxide toxicity"
+  ],
+  "clues": [
+   {
+    "t": "35-year-old woman with headaches and nausea for 2 weeks."
+   },
+   {
+    "t": "Worse at home in the evenings, better at work."
+   },
+   {
+    "t": "Her wife and their son have similar headaches."
+   },
+   {
+    "t": "The family cat has been unusually lethargic."
+   },
+   {
+    "t": "SpO₂ 99% on room air.",
+    "d": 1
+   },
+   {
+    "t": "They started using an old gas space heater this month."
+   }
+  ],
+  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 41,
+  "difficulty": "Medium",
+  "title": "Dooring",
+  "answer": "Splenic rupture",
+  "accept": [
+   "splenic rupture",
+   "ruptured spleen",
+   "spleen rupture",
+   "splenic laceration",
+   "spleen laceration",
+   "splenic injury",
+   "spleen injury",
+   "splenic trauma",
+   "splenic haemorrhage",
+   "splenic hemorrhage",
+   "lacerated spleen",
+   "spleen"
+  ],
+  "clues": [
+   {
+    "t": "31-year-old man who cycles to work. A parked car's door opened in front of him this morning."
+   },
+   {
+    "t": "He went over the bars, took a handlebar in the ribs, got up and walked to the office."
+   },
+   {
+    "t": "By lunchtime he's pale and light-headed."
+   },
+   {
+    "t": "Pain at the tip of his left shoulder, which he never hit."
+   },
+   {
+    "t": "HR 118 · BP 94/60 · Hb 96 g/L",
+    "d": 1
+   },
+   {
+    "t": "Bedside ultrasound: free fluid in the left upper abdomen, around a torn organ.",
+    "d": 1
+   }
+  ],
+  "pearl": "Left shoulder-tip pain from blood irritating the diaphragm is Kehr's sign. Bleeding can be delayed by hours or days, so a good story of handlebar-to-ribs deserves respect even in someone who walked away."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 42,
+  "difficulty": "Hard",
+  "title": "Start of the week",
+  "answer": "Monday disease (occupational nitroglycerin exposure)",
+  "accept": [
+   "monday disease",
+   "monday morning disease",
+   "monday headache",
+   "monday morning headache",
+   "monday angina",
+   "monday morning angina",
+   "nitroglycerin",
+   "nitroglycerine",
+   "nitroglycerin exposure",
+   "nitroglycerine exposure",
+   "occupational nitroglycerin exposure",
+   "occupational nitrate exposure",
+   "nitroglycerin toxicity",
+   "nitroglycerin poisoning",
+   "nitrate exposure",
+   "nitrate toxicity",
+   "nitrate headache",
+   "nitrate withdrawal",
+   "nitrate tolerance",
+   "gtn",
+   "gtn exposure",
+   "glyceryl trinitrate",
+   "glyceryl trinitrate exposure",
+   "dynamite headache"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old woman with a pounding headache on the first day of every working week."
+   },
+   {
+    "t": "By mid-week it has faded and she feels well."
+   },
+   {
+    "t": "That first shift back she's also flushed and light-headed."
+   },
+   {
+    "t": "Lately she's had chest tightness late on her days off."
+   },
+   {
+    "t": "Coronary angiogram: no significant narrowing",
+    "d": 1
+   },
+   {
+    "t": "She packs blasting explosives for the mining industry. Her workmates get the same headache."
+   }
+  ],
+  "pearl": "Women packing explosives in WW1 complained of exactly this. Tolerance to the vapour builds across the working week and fades over the weekend. Alfred Nobel, whose fortune came from dynamite, was himself later treated with nitroglycerine for angina."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 43,
+  "difficulty": "Hard",
+  "title": "Gas, then fire",
+  "answer": "Malignant hyperthermia",
+  "accept": [
+   "malignant hyperthermia",
+   "malignant hyperpyrexia",
+   "mh",
+   "anaesthetic hyperthermia",
+   "anesthetic hyperthermia"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old man, fit and well, having his appendix removed."
+   },
+   {
+    "t": "Soon after the anaesthetic starts, the anaesthetist notices his jaw is very stiff."
+   },
+   {
+    "t": "End-tidal CO₂ keeps rising despite turning up the ventilation",
+    "d": 1
+   },
+   {
+    "t": "HR 140 · temperature climbing fast · K 6.3 mmol/L",
+    "d": 1
+   },
+   {
+    "t": "His muscles are rigid and his urine has turned cola-coloured."
+   },
+   {
+    "t": "His uncle died unexpectedly during an operation decades ago."
+   }
+  ],
+  "pearl": "An inherited reaction, often an RYR1 variant, to volatile anaesthetics and suxamethonium. A rising CO₂ is often the first warning and fever can come later. Dantrolene transformed survival, and relatives need testing."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 44,
+  "difficulty": "Genius",
+  "title": "Uneven shares",
+  "answer": "Twin-to-twin transfusion syndrome",
+  "accept": [
+   "ttts",
+   "twin to twin transfusion syndrome",
+   "twin to twin transfusion",
+   "twin twin transfusion syndrome",
+   "twin twin transfusion",
+   "twin transfusion syndrome",
+   "fetofetal transfusion",
+   "feto fetal transfusion",
+   "fetofetal transfusion syndrome",
+   "foetofoetal transfusion",
+   "foeto foetal transfusion syndrome"
+  ],
+  "clues": [
+   {
+    "t": "28-year-old woman, 20 weeks pregnant, with a tight abdomen and new breathlessness."
+   },
+   {
+    "t": "Her waist has grown ten centimetres in a fortnight."
+   },
+   {
+    "t": "Her midwife measures her bump as well ahead of her dates."
+   },
+   {
+    "t": "12-week scan: two babies, one placenta",
+    "d": 1
+   },
+   {
+    "t": "Today's scan: one sac brimming with fluid, that baby's bladder very full",
+    "d": 1
+   },
+   {
+    "t": "The other sac is almost dry, with no visible bladder and the baby held against the wall of the uterus",
+    "d": 1
+   }
+  ],
+  "pearl": "Identical twins sharing one placenta share blood vessels too, and the flow can become lopsided. It affects roughly 10 to 15% of these pregnancies. Fetoscopic laser surgery can seal the connecting vessels before birth."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 45,
+  "difficulty": "Easy",
+  "title": "Peely-wally",
+  "answer": "Iron deficiency anaemia",
+  "accept": [
+   "iron deficiency",
+   "iron deficiency anaemia",
+   "iron deficiency anemia",
+   "iron deficient",
+   "iron deficient anaemia",
+   "iron deficient anemia",
+   "low iron",
+   "ida"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old woman from Glasgow. Her gran says she looks 'peely-wally' (Scots for pale and sickly)."
+   },
+   {
+    "t": "She tells you she's 'wabbit' (exhausted) by lunchtime."
+   },
+   {
+    "t": "Her periods have been much heavier for two years."
+   },
+   {
+    "t": "She keeps crunching ice cubes and can't say why."
+   },
+   {
+    "t": "Her nails have started curving upwards like tiny spoons."
+   },
+   {
+    "t": "Hb 94 g/L · MCV 71 fL · ferritin 5 µg/L",
+    "d": 1
+   }
+  ],
+  "pearl": "Craving ice has its own name, pagophagia, and is a strange but real clue. Heavy periods are a common cause in younger women. In men and after menopause, the first question is where the blood is being lost from the gut.",
+  "fact": "/iron/"
  }
 ]

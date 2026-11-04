@@ -1,10 +1,73 @@
 [
  {
+  "date": "2026-12-01",
+  "number": 46,
+  "difficulty": "Easy",
+  "word": "VIRUS",
+  "definition": "Tiny infectious particle that can't copy itself without a host cell. HIV targets CD4 immune cells, and with effective treatment people with HIV can live long, healthy lives. Today is World AIDS Day."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 47,
+  "difficulty": "Medium",
+  "word": "VALVE",
+  "definition": "Flap that keeps blood flowing one way. Artificial hearts need them too: the first permanent one, the Jarvik-7, was implanted on this day in 1982."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 48,
+  "difficulty": "Medium",
+  "word": "HOIST",
+  "definition": "Mechanical lift that moves a person safely between bed and chair, saving backs at both ends of the sling. Today is International Day of Persons with Disabilities."
+ },
+ {
   "date": "2026-12-04",
   "number": 49,
   "difficulty": "Hard",
   "word": "GLAUCOMA",
   "definition": "Optic nerve damage, often with raised eye pressure, that quietly steals side vision first. Usually painless, so regular eye checks matter."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 50,
+  "difficulty": "Hard",
+  "word": "BUFFY",
+  "definition": "Spin a blood donation and the buffy coat appears: a thin pale layer of white cells and platelets between plasma and red cells. Slaying optional. Today is International Volunteer Day, so thank a donor."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 51,
+  "difficulty": "Genius",
+  "word": "XYLOL",
+  "definition": "Old name for xylene, the solvent that clears tissue before wax embedding in histopathology. If you guessed this in one, please step away from the lab."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 52,
+  "difficulty": "Easy",
+  "word": "SLEEP",
+  "definition": "What jet lag steals when your body clock is still in the last time zone. Today is International Civil Aviation Day."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 53,
+  "difficulty": "Easy",
+  "word": "BIRTH",
+  "definition": "The grand finale of labour, usually with a midwife close at hand. \"Any minute now\" is rarely accurate."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 54,
+  "difficulty": "Medium",
+  "word": "ETHER",
+  "definition": "Early anaesthetic, famously shown in public in Boston in 1846. The surgeon's verdict: \"Gentlemen, this is no humbug.\" Sadly for theatres, it's also highly flammable."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 55,
+  "difficulty": "Medium",
+  "word": "HELIX",
+  "definition": "DNA's twisted ladder, which won Watson, Crick and Wilkins the 1962 Nobel Prize. Rosalind Franklin's X-ray images were key, but she had died in 1958. Also the curled rim of your ear. Today is Nobel Prize Day."
  },
  {
   "date": "2026-12-11",
@@ -14,6 +77,48 @@
   "definition": "Height above sea level. Climb too fast and altitude sickness brings headache, nausea and bad sleep; fluid on the lungs or brain is the dangerous kind. Today is International Mountain Day."
  },
  {
+  "date": "2026-12-12",
+  "number": 57,
+  "difficulty": "Hard",
+  "word": "MYOMA",
+  "definition": "Benign tumour of muscle. The one in the uterus is better known as a fibroid. Not to be confused with myopia, however blurry that guess was."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 58,
+  "difficulty": "Genius",
+  "word": "JUGAL",
+  "definition": "Relating to the cheekbone, or zygomatic bone. From the Latin for yoke, because anatomists saw farm equipment everywhere."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 59,
+  "difficulty": "Easy",
+  "word": "LEECH",
+  "definition": "Bloodsucking worm, prescribed for centuries for nearly everything. George Washington, who died on this day in 1799, was bled repeatedly by lancet, so they can't take the blame for that one."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 60,
+  "difficulty": "Easy",
+  "word": "PUPIL",
+  "definition": "The black opening in the iris, or a person learning Esperanto. L. L. Zamenhof, eye doctor and inventor of Esperanto, was born on this day in 1859."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 61,
+  "difficulty": "Medium",
+  "word": "INCUS",
+  "definition": "The anvil: middle of the ear's three tiny bones, passing sound from malleus to stapes. Beethoven was born around this day in 1770, and his hearing loss, cause still debated, didn't stop the Ninth."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 62,
+  "difficulty": "Medium",
+  "word": "BENDS",
+  "definition": "Decompression sickness: nitrogen bubbles in blood and tissues after surfacing too fast. Flying soon after a dive can bring them on too. The Wrights first flew on this day in 1903, no dive computer needed."
+ },
+ {
   "date": "2026-12-18",
   "number": 63,
   "difficulty": "Hard",
@@ -21,10 +126,94 @@
   "definition": "Breast inflammation, usually while breastfeeding: a painful, red, hot area, sometimes with fever. Keep feeding gently; antibiotics if it\u2019s infected."
  },
  {
+  "date": "2026-12-19",
+  "number": 64,
+  "difficulty": "Hard",
+  "word": "VARUS",
+  "definition": "Angled in towards the midline. Genu varum means bow legs, the hallmark of rickets in Victorian slums. A Christmas Carol was published on this day in 1843, and doctors still argue over what ailed Tiny Tim."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 65,
+  "difficulty": "Genius",
+  "word": "MYRRH",
+  "definition": "Aromatic resin used since antiquity on wounds and in embalming. Yes, the one from the Christmas story, five days early."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 66,
+  "difficulty": "Easy",
+  "word": "LUNGS",
+  "definition": "Spongy pair that handle about 20,000 breaths a day without being asked. Today is World Meditation Day, so take one on purpose."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 67,
+  "difficulty": "Easy",
+  "word": "COUNT",
+  "definition": "As in full blood count, the test doctors order almost as often as coffee. Ramanujan, who did far harder things with numbers, was born on this day in 1887."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 68,
+  "difficulty": "Medium",
+  "word": "RENAL",
+  "definition": "Relating to the kidneys. On this day in 1954 Joseph Murray's team in Boston did the first successful kidney transplant, between identical twins Ronald and Richard Herrick."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 69,
+  "difficulty": "Medium",
+  "word": "JOULE",
+  "definition": "Unit of energy named after James Joule, born on this day in 1818. One food calorie is about 4.2 kilojoules, and tonight's mince pies have plenty of them."
+ },
+ {
   "date": "2026-12-25",
   "number": 70,
   "difficulty": "Hard",
   "word": "SUNBURNT",
   "definition": "Skin red, hot and sore from too much UV, and a step towards skin cancer. Christmas at the beach? Slip, slop, slap, seek and slide."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 71,
+  "difficulty": "Hard",
+  "word": "RADON",
+  "definition": "Radioactive gas given off as radium decays, and a leading cause of lung cancer after smoking. Half-life 3.8 days, about as long as the Boxing Day leftovers. The Curies announced radium on this day in 1898."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 72,
+  "difficulty": "Genius",
+  "word": "PSORA",
+  "definition": "Archaic term for itchy skin disease, used for scabies and psoriasis alike. From the days when \"it's itchy\" counted as a diagnosis."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 73,
+  "difficulty": "Easy",
+  "word": "GENES",
+  "definition": "Stretches of DNA that code for proteins. Real mutations rarely involve wall-crawling, but Stan Lee, born on this day in 1922, never let that stop him."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 74,
+  "difficulty": "Easy",
+  "word": "GLOVE",
+  "definition": "Surgical rubber ones began in about 1890, when William Halsted had a pair made for his theatre nurse Caroline Hampton, whose hands were raw from antiseptic. They later married. Charles Goodyear, of vulcanised rubber, was born on this day in 1800."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 75,
+  "difficulty": "Medium",
+  "word": "REHAB",
+  "definition": "The long, sweaty work of getting function back after injury or surgery, usually with a physio counting your reps. Golfer Tiger Woods, born on this day in 1975, won the 2019 Masters after spinal fusion."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 76,
+  "difficulty": "Medium",
+  "word": "VOMIT",
+  "definition": "What comes up. Force it hard enough and, rarely, the oesophagus tears: Boerhaave syndrome, named after the Dutch physician born on this day in 1668. Happy New Year's Eve, and consider this your warning."
  }
 ]

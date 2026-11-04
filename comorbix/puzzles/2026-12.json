@@ -1,0 +1,1459 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 46,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "HIV prevention tools",
+    "level": 1,
+    "words": [
+     "PREP",
+     "PEP",
+     "CONDOMS",
+     "NEEDLE EXCHANGE"
+    ]
+   },
+   {
+    "label": "Does NOT spread HIV",
+    "level": 2,
+    "words": [
+     "SALIVA",
+     "MOSQUITOES",
+     "HUGGING",
+     "TOILET SEATS"
+    ]
+   },
+   {
+    "label": "Body fluids that can carry HIV",
+    "level": 3,
+    "words": [
+     "BLOOD",
+     "SEMEN",
+     "BREAST MILK",
+     "VAGINAL FLUID"
+    ]
+   },
+   {
+    "label": "Red ___",
+    "level": 4,
+    "words": [
+     "RIBBON",
+     "CROSS",
+     "HERRING",
+     "WINE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "number": 47,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Heart failure symptoms and signs",
+    "level": 1,
+    "words": [
+     "ORTHOPNOEA",
+     "OEDEMA",
+     "PND",
+     "FATIGUE"
+    ]
+   },
+   {
+    "label": "Machines that back up the heart",
+    "level": 2,
+    "words": [
+     "LVAD",
+     "BALLOON PUMP",
+     "ICD",
+     "PACEMAKER"
+    ]
+   },
+   {
+    "label": "Stand-ins for other body parts",
+    "level": 3,
+    "words": [
+     "DIALYSIS",
+     "COCHLEAR IMPLANT",
+     "JOINT REPLACEMENT",
+     "INTRAOCULAR LENS"
+    ]
+   },
+   {
+    "label": "Hidden ART",
+    "level": 4,
+    "words": [
+     "ARTERY",
+     "CARTILAGE",
+     "PARTOGRAM",
+     "HEARTBURN"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "number": 48,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Accessibility features",
+    "level": 1,
+    "words": [
+     "BRAILLE",
+     "CAPTIONS",
+     "RAMPS",
+     "HEARING LOOP"
+    ]
+   },
+   {
+    "label": "Sign languages",
+    "level": 2,
+    "words": [
+     "AUSLAN",
+     "ASL",
+     "BSL",
+     "NZSL"
+    ]
+   },
+   {
+    "label": "Paralympic champions",
+    "level": 3,
+    "words": [
+     "GREY-THOMPSON",
+     "SAUVAGE",
+     "VERGEER",
+     "ALCOTT"
+    ]
+   },
+   {
+    "label": "___ dog",
+    "level": 4,
+    "words": [
+     "GUIDE",
+     "SERVICE",
+     "HEARING",
+     "HOT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "number": 49,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Muscle proteins",
+    "level": 1,
+    "words": [
+     "ACTIN",
+     "MYOSIN",
+     "TROPONIN",
+     "TITIN"
+    ]
+   },
+   {
+    "label": "Muscle fuel stores",
+    "level": 2,
+    "words": [
+     "ATP",
+     "CREATINE PHOSPHATE",
+     "GLYCOGEN",
+     "FATTY ACIDS"
+    ]
+   },
+   {
+    "label": "Rise during a flat-out sprint",
+    "level": 3,
+    "words": [
+     "LACTATE",
+     "CARDIAC OUTPUT",
+     "CORE TEMPERATURE",
+     "ADRENALINE"
+    ]
+   },
+   {
+    "label": "Start with the Greek for 'fast'",
+    "level": 4,
+    "words": [
+     "TACHYCARDIA",
+     "TACHYPNOEA",
+     "TACHYPHYLAXIS",
+     "TACHYZOITE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "number": 50,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Donated by volunteers",
+    "level": 1,
+    "words": [
+     "PLASMA",
+     "PLATELETS",
+     "BONE MARROW",
+     "BREAST MILK"
+    ]
+   },
+   {
+    "label": "Antibiotics from soil bacteria",
+    "level": 2,
+    "words": [
+     "STREPTOMYCIN",
+     "VANCOMYCIN",
+     "TETRACYCLINE",
+     "ERYTHROMYCIN"
+    ]
+   },
+   {
+    "label": "Medicines from moulds and fungi",
+    "level": 3,
+    "words": [
+     "PENICILLIN",
+     "CICLOSPORIN",
+     "GRISEOFULVIN",
+     "LOVASTATIN"
+    ]
+   },
+   {
+    "label": "___ bank",
+    "level": 4,
+    "words": [
+     "MEMORY",
+     "RIVER",
+     "PIGGY",
+     "FOOD"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "number": 51,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Finnish health words",
+    "level": 1,
+    "words": [
+     "LÄÄKÄRI",
+     "SAIRAALA",
+     "KRAPULA",
+     "TERVEYSKESKUS"
+    ]
+   },
+   {
+    "label": "North Karelia Project targets",
+    "level": 2,
+    "words": [
+     "SMOKING",
+     "SALT",
+     "BLOOD PRESSURE",
+     "CHOLESTEROL"
+    ]
+   },
+   {
+    "label": "Finnish disease heritage",
+    "level": 3,
+    "words": [
+     "CONGENITAL NEPHROSIS",
+     "MULIBREY NANISM",
+     "NORTHERN EPILEPSY",
+     "AGU"
+    ]
+   },
+   {
+    "label": "Hidden FIN",
+    "level": 4,
+    "words": [
+     "FINASTERIDE",
+     "PARAFFIN",
+     "DEFINITIVE",
+     "FINGER"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "number": 52,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Parts of a plane",
+    "level": 1,
+    "words": [
+     "WING",
+     "FUSELAGE",
+     "COCKPIT",
+     "RUDDER"
+    ]
+   },
+   {
+    "label": "Flying health problems",
+    "level": 2,
+    "words": [
+     "JET LAG",
+     "DVT",
+     "BAROTRAUMA",
+     "HYPOXIA"
+    ]
+   },
+   {
+    "label": "Ways to clear your ears on descent",
+    "level": 3,
+    "words": [
+     "SWALLOWING",
+     "YAWNING",
+     "VALSALVA",
+     "CHEWING GUM"
+    ]
+   },
+   {
+    "label": "___ pressure",
+    "level": 4,
+    "words": [
+     "AIR",
+     "BLOOD",
+     "PEER",
+     "WATER"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "number": 53,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Tooth care at home",
+    "level": 1,
+    "words": [
+     "BRUSH",
+     "FLOSS",
+     "MOUTHWASH",
+     "FLUORIDE"
+    ]
+   },
+   {
+    "label": "Dental restorations",
+    "level": 2,
+    "words": [
+     "CROWN",
+     "BRIDGE",
+     "FILLING",
+     "VENEER"
+    ]
+   },
+   {
+    "label": "Types of tooth injury",
+    "level": 3,
+    "words": [
+     "AVULSION",
+     "LUXATION",
+     "INTRUSION",
+     "EXTRUSION"
+    ]
+   },
+   {
+    "label": "Root ___",
+    "level": 4,
+    "words": [
+     "CANAL",
+     "VEGETABLE",
+     "BEER",
+     "CAUSE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "number": 54,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Four principles of biomedical ethics",
+    "level": 1,
+    "words": [
+     "AUTONOMY",
+     "BENEFICENCE",
+     "NON-MALEFICENCE",
+     "JUSTICE"
+    ]
+   },
+   {
+    "label": "Observational study designs",
+    "level": 2,
+    "words": [
+     "COHORT",
+     "CASE-CONTROL",
+     "CROSS-SECTIONAL",
+     "ECOLOGICAL"
+    ]
+   },
+   {
+    "label": "Randomised trial designs",
+    "level": 3,
+    "words": [
+     "PARALLEL",
+     "CROSSOVER",
+     "FACTORIAL",
+     "CLUSTER"
+    ]
+   },
+   {
+    "label": "Start with a Greek letter",
+    "level": 4,
+    "words": [
+     "PSITTACOSIS",
+     "CHICKENPOX",
+     "RHODOPSIN",
+     "TAUOPATHY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "number": 55,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Discoveries with a Medicine Nobel",
+    "level": 1,
+    "words": [
+     "H. PYLORI",
+     "PRIONS",
+     "HIV",
+     "TELOMERASE"
+    ]
+   },
+   {
+    "label": "Peace Prize winners in health",
+    "level": 2,
+    "words": [
+     "MSF",
+     "SCHWEITZER",
+     "MUKWEGE",
+     "RED CROSS"
+    ]
+   },
+   {
+    "label": "Chemistry Nobels with a health link",
+    "level": 3,
+    "words": [
+     "CRISPR",
+     "PCR",
+     "GFP",
+     "PHAGE DISPLAY"
+    ]
+   },
+   {
+    "label": "Homophones of prize words",
+    "level": 4,
+    "words": [
+     "MEDDLE",
+     "PIECE",
+     "PRIES",
+     "GOALED"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "number": 56,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Altitude illnesses",
+    "level": 1,
+    "words": [
+     "AMS",
+     "HAPE",
+     "HACE",
+     "MONGE"
+    ]
+   },
+   {
+    "label": "How the body adapts to altitude",
+    "level": 2,
+    "words": [
+     "HYPERVENTILATION",
+     "POLYCYTHAEMIA",
+     "DIURESIS",
+     "RAISED EPO"
+    ]
+   },
+   {
+    "label": "Everest firsts",
+    "level": 3,
+    "words": [
+     "HILLARY",
+     "NORGAY",
+     "TABEI",
+     "MESSNER"
+    ]
+   },
+   {
+    "label": "Hidden ALP",
+    "level": 4,
+    "words": [
+     "PALPITATION",
+     "SCALPEL",
+     "ALPRAZOLAM",
+     "PALPABLE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "number": 57,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "WHO health system building blocks",
+    "level": 1,
+    "words": [
+     "SERVICE DELIVERY",
+     "WORKFORCE",
+     "FINANCING",
+     "GOVERNANCE"
+    ]
+   },
+   {
+    "label": "Social determinants of health",
+    "level": 2,
+    "words": [
+     "HOUSING",
+     "EDUCATION",
+     "INCOME",
+     "EMPLOYMENT"
+    ]
+   },
+   {
+    "label": "Isaacs' geriatric giants",
+    "level": 3,
+    "words": [
+     "IMMOBILITY",
+     "INSTABILITY",
+     "INCONTINENCE",
+     "INTELLECTUAL IMPAIRMENT"
+    ]
+   },
+   {
+    "label": "Anagrams of organs",
+    "level": 4,
+    "words": [
+     "EARTH",
+     "VILER",
+     "SLUNG",
+     "BAIRN"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-13",
+  "number": 58,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "The Hs of reversible cardiac arrest",
+    "level": 1,
+    "words": [
+     "HYPOXIA",
+     "HYPOVOLAEMIA",
+     "HYPOTHERMIA",
+     "HYPERKALAEMIA"
+    ]
+   },
+   {
+    "label": "The Ts of reversible cardiac arrest",
+    "level": 2,
+    "words": [
+     "TAMPONADE",
+     "TOXINS",
+     "THROMBOSIS",
+     "TENSION PNEUMOTHORAX"
+    ]
+   },
+   {
+    "label": "Defibrillation pioneers",
+    "level": 3,
+    "words": [
+     "BECK",
+     "ZOLL",
+     "LOWN",
+     "PANTRIDGE"
+    ]
+   },
+   {
+    "label": "Hidden AMP, not a reversible cause",
+    "level": 4,
+    "words": [
+     "CRAMP",
+     "AMPOULE",
+     "CLAMP",
+     "HIPPOCAMPUS"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "number": 59,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "The four humours",
+    "level": 1,
+    "words": [
+     "BLOOD",
+     "PHLEGM",
+     "YELLOW BILE",
+     "BLACK BILE"
+    ]
+   },
+   {
+    "label": "Mostly abandoned treatments",
+    "level": 2,
+    "words": [
+     "BLOODLETTING",
+     "PURGING",
+     "BLISTERING",
+     "TREPANNING"
+    ]
+   },
+   {
+    "label": "Causes of a severe sore throat",
+    "level": 3,
+    "words": [
+     "EPIGLOTTITIS",
+     "QUINSY",
+     "GLANDULAR FEVER",
+     "TONSILLITIS"
+    ]
+   },
+   {
+    "label": "Blood ___",
+    "level": 4,
+    "words": [
+     "ORANGE",
+     "HOUND",
+     "MOON",
+     "DIAMOND"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "number": 60,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Eye checks",
+    "level": 1,
+    "words": [
+     "SNELLEN",
+     "TONOMETRY",
+     "SLIT LAMP",
+     "FUNDOSCOPY"
+    ]
+   },
+   {
+    "label": "Medical roots for body parts",
+    "level": 2,
+    "words": [
+     "NEPHRO",
+     "HEPATO",
+     "OSTEO",
+     "LINGUA"
+    ]
+   },
+   {
+    "label": "Invented languages",
+    "level": 3,
+    "words": [
+     "ESPERANTO",
+     "KLINGON",
+     "DOTHRAKI",
+     "ELVISH"
+    ]
+   },
+   {
+    "label": "Hidden real languages",
+    "level": 4,
+    "words": [
+     "GELATIN",
+     "PERSEVERATION",
+     "SCREENING",
+     "TWITCH"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "number": 61,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Hearing tests",
+    "level": 1,
+    "words": [
+     "WEBER",
+     "RINNE",
+     "AUDIOGRAM",
+     "TYMPANOMETRY"
+    ]
+   },
+   {
+    "label": "Causes of hearing loss",
+    "level": 2,
+    "words": [
+     "OTOSCLEROSIS",
+     "PRESBYCUSIS",
+     "MENIERE",
+     "NOISE"
+    ]
+   },
+   {
+    "label": "Composers who lost their hearing",
+    "level": 3,
+    "words": [
+     "BEETHOVEN",
+     "SMETANA",
+     "FAURE",
+     "VAUGHAN WILLIAMS"
+    ]
+   },
+   {
+    "label": "___ drum",
+    "level": 4,
+    "words": [
+     "EAR",
+     "KETTLE",
+     "BASS",
+     "SNARE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "number": 62,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Aviation pioneers",
+    "level": 1,
+    "words": [
+     "EARHART",
+     "WRIGHT",
+     "BLERIOT",
+     "COLEMAN"
+    ]
+   },
+   {
+    "label": "Flying Doctor pioneers",
+    "level": 2,
+    "words": [
+     "FLYNN",
+     "TRAEGER",
+     "AFFLECK",
+     "WELCH"
+    ]
+   },
+   {
+    "label": "Gas laws",
+    "level": 3,
+    "words": [
+     "BOYLE",
+     "DALTON",
+     "HENRY",
+     "CHARLES"
+    ]
+   },
+   {
+    "label": "Hidden AIR",
+    "level": 4,
+    "words": [
+     "HAIRLINE FRACTURE",
+     "DAIRY",
+     "STAIRS",
+     "DESPAIR"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "number": 63,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Vaccines often needing catch-up",
+    "level": 1,
+    "words": [
+     "MMR",
+     "POLIO",
+     "DTPA",
+     "VARICELLA"
+    ]
+   },
+   {
+    "label": "New-arrival refugee health screen",
+    "level": 2,
+    "words": [
+     "TB",
+     "HEPATITIS C",
+     "HIV",
+     "MALARIA"
+    ]
+   },
+   {
+    "label": "Neglected tropical diseases",
+    "level": 3,
+    "words": [
+     "CHAGAS",
+     "LEISHMANIASIS",
+     "TRACHOMA",
+     "BURULI ULCER"
+    ]
+   },
+   {
+    "label": "Hidden countries",
+    "level": 4,
+    "words": [
+     "INCUBATOR",
+     "ABNORMALITY",
+     "MALTASE",
+     "WOMAN"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "number": 64,
+  "difficulty": "Einstein",
+  "groups": [
+   {
+    "label": "Retrospective diagnoses for Tiny Tim",
+    "level": 1,
+    "words": [
+     "RICKETS",
+     "TUBERCULOSIS",
+     "CEREBRAL PALSY",
+     "RENAL TUBULAR ACIDOSIS"
+    ]
+   },
+   {
+    "label": "Victorian occupational diseases",
+    "level": 2,
+    "words": [
+     "PHOSSY JAW",
+     "POTTER'S ROT",
+     "GRINDER'S ASTHMA",
+     "WOOLSORTER'S DISEASE"
+    ]
+   },
+   {
+    "label": "Victorian public-health reformers",
+    "level": 3,
+    "words": [
+     "CHADWICK",
+     "FARR",
+     "SIMON",
+     "DUNCAN"
+    ]
+   },
+   {
+    "label": "Hide Tiny Tim backwards",
+    "level": 4,
+    "words": [
+     "VOMITING",
+     "INTERMITTENT",
+     "HEMITHORAX",
+     "MITRAL"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-20",
+  "number": 65,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Global health organisations",
+    "level": 1,
+    "words": [
+     "WHO",
+     "MSF",
+     "UNICEF",
+     "GAVI"
+    ]
+   },
+   {
+    "label": "Walls of the whare in Te Whare Tapa Whā",
+    "level": 2,
+    "words": [
+     "TINANA",
+     "HINENGARO",
+     "WHANAU",
+     "WAIRUA"
+    ]
+   },
+   {
+    "label": "WHO Directors-General",
+    "level": 3,
+    "words": [
+     "MAHLER",
+     "BRUNDTLAND",
+     "CHAN",
+     "TEDROS"
+    ]
+   },
+   {
+    "label": "Hidden UNITY",
+    "level": 4,
+    "words": [
+     "IMMUNITY",
+     "COMMUNITY",
+     "IMPUNITY",
+     "OPPORTUNITY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-21",
+  "number": 66,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Stress hormones",
+    "level": 1,
+    "words": [
+     "CORTISOL",
+     "ADRENALINE",
+     "NORADRENALINE",
+     "ACTH"
+    ]
+   },
+   {
+    "label": "Sleep science",
+    "level": 2,
+    "words": [
+     "MELATONIN",
+     "REM",
+     "N3",
+     "CIRCADIAN"
+    ]
+   },
+   {
+    "label": "Relaxation practices",
+    "level": 3,
+    "words": [
+     "MINDFULNESS",
+     "YOGA",
+     "TAI CHI",
+     "BOX BREATHING"
+    ]
+   },
+   {
+    "label": "Hidden ZEN",
+    "level": 4,
+    "words": [
+     "FROZEN SHOULDER",
+     "BENZENE",
+     "DOZEN",
+     "CITIZEN"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-22",
+  "number": 67,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Measures of risk",
+    "level": 1,
+    "words": [
+     "ODDS RATIO",
+     "RELATIVE RISK",
+     "NNT",
+     "ARR"
+    ]
+   },
+   {
+    "label": "Measures of test accuracy",
+    "level": 2,
+    "words": [
+     "SENSITIVITY",
+     "SPECIFICITY",
+     "PPV",
+     "NPV"
+    ]
+   },
+   {
+    "label": "Greek letters with jobs in statistics",
+    "level": 3,
+    "words": [
+     "ALPHA",
+     "BETA",
+     "SIGMA",
+     "MU"
+    ]
+   },
+   {
+    "label": "___ number",
+    "level": 4,
+    "words": [
+     "PRIME",
+     "TAXICAB",
+     "ATOMIC",
+     "LUCKY"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-23",
+  "number": 68,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Transplant immunosuppressants",
+    "level": 1,
+    "words": [
+     "TACROLIMUS",
+     "CICLOSPORIN",
+     "MYCOPHENOLATE",
+     "PREDNISOLONE"
+    ]
+   },
+   {
+    "label": "Parts of the nephron",
+    "level": 2,
+    "words": [
+     "GLOMERULUS",
+     "BOWMAN",
+     "HENLE",
+     "MACULA DENSA"
+    ]
+   },
+   {
+    "label": "Organ transplant pioneers",
+    "level": 3,
+    "words": [
+     "MURRAY",
+     "STARZL",
+     "BARNARD",
+     "CALNE"
+    ]
+   },
+   {
+    "label": "Kidney ___",
+    "level": 4,
+    "words": [
+     "BEAN",
+     "STONE",
+     "DISH",
+     "PIE"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-24",
+  "number": 69,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Christmas Eve emergency regulars",
+    "level": 1,
+    "words": [
+     "BUTTON BATTERY",
+     "BAUBLE",
+     "FAIRY LIGHTS",
+     "BRAZIL NUT"
+    ]
+   },
+   {
+    "label": "Units of energy",
+    "level": 2,
+    "words": [
+     "JOULE",
+     "CALORIE",
+     "THERM",
+     "BTU"
+    ]
+   },
+   {
+    "label": "Energy-bearing parts of the diet",
+    "level": 3,
+    "words": [
+     "FAT",
+     "CARBOHYDRATE",
+     "PROTEIN",
+     "ALCOHOL"
+    ]
+   },
+   {
+    "label": "Hidden ERG",
+    "level": 4,
+    "words": [
+     "ALLERGY",
+     "ERGOMETER",
+     "SYNERGY",
+     "ERGOT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-25",
+  "number": 70,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "Mildly toxic festive plants",
+    "level": 1,
+    "words": [
+     "HOLLY",
+     "MISTLETOE",
+     "IVY",
+     "POINSETTIA"
+    ]
+   },
+   {
+    "label": "Nursing pioneers",
+    "level": 2,
+    "words": [
+     "BARTON",
+     "NIGHTINGALE",
+     "SEACOLE",
+     "CAVELL"
+    ]
+   },
+   {
+    "label": "Clotting factor nicknames",
+    "level": 3,
+    "words": [
+     "CHRISTMAS",
+     "HAGEMAN",
+     "STUART-PROWER",
+     "ROSENTHAL"
+    ]
+   },
+   {
+    "label": "Christmas tree ___",
+    "level": 4,
+    "words": [
+     "CATARACT",
+     "BLADDER",
+     "PATTERN",
+     "ADAPTER"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 71,
+  "difficulty": "Hard",
+  "groups": [
+   {
+    "label": "The Curie family",
+    "level": 1,
+    "words": [
+     "MARIE",
+     "PIERRE",
+     "IRENE",
+     "EVE"
+    ]
+   },
+   {
+    "label": "Radioactive elements",
+    "level": 2,
+    "words": [
+     "RADIUM",
+     "POLONIUM",
+     "URANIUM",
+     "CURIUM"
+    ]
+   },
+   {
+    "label": "External-beam radiotherapy",
+    "level": 3,
+    "words": [
+     "LINAC",
+     "COBALT",
+     "GAMMA KNIFE",
+     "PROTON"
+    ]
+   },
+   {
+    "label": "Boxing Day punches",
+    "level": 4,
+    "words": [
+     "JAB",
+     "HOOK",
+     "CROSS",
+     "UPPERCUT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 72,
+  "difficulty": "Genius",
+  "groups": [
+   {
+    "label": "Outbreak maths",
+    "level": 1,
+    "words": [
+     "R0",
+     "DOUBLING TIME",
+     "CASE FATALITY",
+     "SEROPREVALENCE"
+    ]
+   },
+   {
+    "label": "Pandemics in history",
+    "level": 2,
+    "words": [
+     "BLACK DEATH",
+     "SPANISH FLU",
+     "ANTONINE PLAGUE",
+     "COVID-19"
+    ]
+   },
+   {
+    "label": "Bradford Hill criteria",
+    "level": 3,
+    "words": [
+     "STRENGTH",
+     "CONSISTENCY",
+     "SPECIFICITY",
+     "TEMPORALITY"
+    ]
+   },
+   {
+    "label": "Hidden RAT",
+    "level": 4,
+    "words": [
+     "RESPIRATION",
+     "PERFORATION",
+     "SEPARATION",
+     "MIGRATION"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-28",
+  "number": 73,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "X-Men",
+    "level": 1,
+    "words": [
+     "WOLVERINE",
+     "STORM",
+     "CYCLOPS",
+     "ROGUE"
+    ]
+   },
+   {
+    "label": "Types of gene mutation",
+    "level": 2,
+    "words": [
+     "DELETION",
+     "INSERTION",
+     "SUBSTITUTION",
+     "FRAMESHIFT"
+    ]
+   },
+   {
+    "label": "Real biology, superhero vibes",
+    "level": 3,
+    "words": [
+     "HYPERTHYMESIA",
+     "TETRACHROMACY",
+     "SYNAESTHESIA",
+     "MYOSTATIN DEFICIENCY"
+    ]
+   },
+   {
+    "label": "___ man",
+    "level": 4,
+    "words": [
+     "IRON",
+     "ANT",
+     "SPIDER",
+     "BAT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-29",
+  "number": 74,
+  "difficulty": "Easy",
+  "groups": [
+   {
+    "label": "Often made of rubber or latex",
+    "level": 1,
+    "words": [
+     "TOURNIQUET",
+     "CATHETER",
+     "CONDOM",
+     "HOT WATER BOTTLE"
+    ]
+   },
+   {
+    "label": "Latex-fruit allergy foods",
+    "level": 2,
+    "words": [
+     "BANANA",
+     "AVOCADO",
+     "KIWI",
+     "CHESTNUT"
+    ]
+   },
+   {
+    "label": "Primary skin lesions",
+    "level": 3,
+    "words": [
+     "MACULE",
+     "PAPULE",
+     "VESICLE",
+     "BULLA"
+    ]
+   },
+   {
+    "label": "Rubber ___",
+    "level": 4,
+    "words": [
+     "DUCK",
+     "BAND",
+     "STAMP",
+     "PLANT"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 75,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Golf scores",
+    "level": 1,
+    "words": [
+     "BIRDIE",
+     "EAGLE",
+     "BOGEY",
+     "PAR"
+    ]
+   },
+   {
+    "label": "Classic endometriosis symptoms",
+    "level": 2,
+    "words": [
+     "DYSMENORRHOEA",
+     "DYSPAREUNIA",
+     "DYSCHEZIA",
+     "SUBFERTILITY"
+    ]
+   },
+   {
+    "label": "Injuries named after athletes",
+    "level": 3,
+    "words": [
+     "GOLFER'S ELBOW",
+     "JUMPER'S KNEE",
+     "RUNNER'S KNEE",
+     "SKIER'S THUMB"
+    ]
+   },
+   {
+    "label": "Hidden golf kit",
+    "level": 4,
+    "words": [
+     "CLUBFOOT",
+     "ENVIRONMENT",
+     "COMMITTEE",
+     "SPUTTERING"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-12-31",
+  "number": 76,
+  "difficulty": "Medium",
+  "groups": [
+   {
+    "label": "Folk hangover cures",
+    "level": 1,
+    "words": [
+     "HAIR OF THE DOG",
+     "FRY-UP",
+     "PICKLE JUICE",
+     "RAW EGG"
+    ]
+   },
+   {
+    "label": "Oesophageal eponyms and disorders",
+    "level": 2,
+    "words": [
+     "BOERHAAVE",
+     "MALLORY-WEISS",
+     "ACHALASIA",
+     "BARRETT"
+    ]
+   },
+   {
+    "label": "Alcohol withdrawal signs",
+    "level": 3,
+    "words": [
+     "TREMOR",
+     "SWEATING",
+     "HALLUCINATIONS",
+     "SEIZURES"
+    ]
+   },
+   {
+    "label": "Hidden EVE",
+    "level": 4,
+    "words": [
+     "SLEEVE",
+     "BEVERAGE",
+     "SEVERITY",
+     "ELEVEN"
+    ]
+   }
+  ]
+ }
+]

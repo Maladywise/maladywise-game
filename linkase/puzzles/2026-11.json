@@ -258,5 +258,135 @@
    "FEEDING",
    "TIME"
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "number": 36,
+  "difficulty": "Hard",
+  "chain": [
+   "INFORMED",
+   "CONSENT",
+   "FORM",
+   "LETTER",
+   "HEAD",
+   "NURSE"
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "number": 37,
+  "difficulty": "Genius",
+  "chain": [
+   "PHARYNGEAL",
+   "ARCH",
+   "SUPPORT",
+   "GROUP",
+   "THERAPY",
+   "DOG"
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "number": 38,
+  "difficulty": "Easy",
+  "chain": [
+   "SQUARE",
+   "ROOT",
+   "CANAL",
+   "BOAT",
+   "RACE",
+   "TRACK"
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "number": 39,
+  "difficulty": "Easy",
+  "chain": [
+   "EAR",
+   "WAX",
+   "CANDLE",
+   "LIGHT",
+   "WEIGHT",
+   "LOSS"
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "number": 40,
+  "difficulty": "Medium",
+  "chain": [
+   "FIRST",
+   "NATIONS",
+   "LEAGUE",
+   "TABLE",
+   "TOP",
+   "SOIL"
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "number": 41,
+  "difficulty": "Medium",
+  "chain": [
+   "MENSTRUAL",
+   "CYCLE",
+   "LANE",
+   "SWIMMING",
+   "POOL",
+   "TABLE"
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 42,
+  "difficulty": "Hard",
+  "chain": [
+   "NOBEL",
+   "PRIZE",
+   "FIGHT",
+   "CLUB",
+   "FOOT",
+   "DROP"
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "number": 43,
+  "difficulty": "Hard",
+  "chain": [
+   "WISDOM",
+   "TOOTH",
+   "FAIRY",
+   "RING",
+   "WORM",
+   "HOLE"
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "number": 44,
+  "difficulty": "Genius",
+  "chain": [
+   "IDENTICAL",
+   "TWIN",
+   "STUDY",
+   "DRUG",
+   "TRIAL",
+   "RUN"
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "number": 45,
+  "difficulty": "Easy",
+  "chain": [
+   "SCOTCH",
+   "EGG",
+   "WHITE",
+   "WINE",
+   "BAR",
+   "STOOL"
+  ]
  }
 ]

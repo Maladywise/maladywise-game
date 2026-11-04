@@ -1,0 +1,420 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 46,
+  "difficulty": "Easy",
+  "chain": [
+   "RED",
+   "RIBBON",
+   "CUTTING",
+   "BOARD",
+   "GAME",
+   "PLAN"
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "number": 47,
+  "difficulty": "Medium",
+  "chain": [
+   "ARTIFICIAL",
+   "HEART",
+   "TRANSPLANT",
+   "LIST",
+   "PRICE",
+   "TAG"
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "number": 48,
+  "difficulty": "Medium",
+  "chain": [
+   "GUIDE",
+   "DOG",
+   "TAG",
+   "LINE",
+   "DANCE",
+   "FLOOR"
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "number": 49,
+  "difficulty": "Hard",
+  "chain": [
+   "FAST",
+   "TWITCH",
+   "FIBRE",
+   "OPTIC",
+   "NERVE",
+   "ENDING"
+  ],
+  "alt": {
+   "FIBRE": [
+    "FIBER"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-05",
+  "number": 50,
+  "difficulty": "Hard",
+  "chain": [
+   "ORGAN",
+   "DONOR",
+   "CARD",
+   "INDEX",
+   "FINGER",
+   "PRINT"
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "number": 51,
+  "difficulty": "Genius",
+  "chain": [
+   "SLIPPED",
+   "DISC",
+   "BRAKE",
+   "FLUID",
+   "BALANCE",
+   "BEAM"
+  ],
+  "alt": {
+   "DISC": [
+    "DISK"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-07",
+  "number": 52,
+  "difficulty": "Easy",
+  "chain": [
+   "CABIN",
+   "CREW",
+   "NECK",
+   "PILLOW",
+   "TALK",
+   "SHOW"
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "number": 53,
+  "difficulty": "Easy",
+  "chain": [
+   "BIRTH",
+   "PLACE",
+   "KICK",
+   "OFF",
+   "SHORE",
+   "LINE"
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "number": 54,
+  "difficulty": "Medium",
+  "chain": [
+   "LAUGHING",
+   "GAS",
+   "STATION",
+   "MASTER",
+   "KEY",
+   "RING"
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "number": 55,
+  "difficulty": "Medium",
+  "chain": [
+   "INSULIN",
+   "RESISTANCE",
+   "BAND",
+   "WAGON",
+   "WHEEL",
+   "CHAIR"
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "number": 56,
+  "difficulty": "Hard",
+  "chain": [
+   "OXYGEN",
+   "TENT",
+   "PEG",
+   "LEG",
+   "ROOM",
+   "TEMPERATURE"
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "number": 57,
+  "difficulty": "Hard",
+  "chain": [
+   "PUBLIC",
+   "HEALTH",
+   "CENTRE",
+   "STAGE",
+   "FRIGHT",
+   "NIGHT"
+  ],
+  "alt": {
+   "CENTRE": [
+    "CENTER"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-13",
+  "number": 58,
+  "difficulty": "Genius",
+  "chain": [
+   "CARDIAC",
+   "ARREST",
+   "WARRANT",
+   "OFFICER",
+   "TRAINING",
+   "CAMP"
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "number": 59,
+  "difficulty": "Easy",
+  "chain": [
+   "SNAKE",
+   "OIL",
+   "FIELD",
+   "HOCKEY",
+   "STICK",
+   "INSECT"
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "number": 60,
+  "difficulty": "Einstein",
+  "chain": [
+   "SLIT",
+   "LAMP",
+   "BLACK",
+   "LUNG",
+   "FLUKE",
+   "WORM"
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "number": 61,
+  "difficulty": "Medium",
+  "chain": [
+   "GLUE",
+   "EAR",
+   "TRUMPET",
+   "PLAYER",
+   "PIANO",
+   "STOOL"
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "number": 62,
+  "difficulty": "Medium",
+  "chain": [
+   "FLIGHT",
+   "PATH",
+   "LAB",
+   "RAT",
+   "TRAP",
+   "DOOR"
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "number": 63,
+  "difficulty": "Hard",
+  "chain": [
+   "CULTURAL",
+   "SAFETY",
+   "PIN",
+   "CUSHION",
+   "COVER",
+   "STORY"
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "number": 64,
+  "difficulty": "Hard",
+  "chain": [
+   "CHRISTMAS",
+   "CAROL",
+   "SERVICE",
+   "ENTRANCE",
+   "EXAM",
+   "ROOM"
+  ]
+ },
+ {
+  "date": "2026-12-20",
+  "number": 65,
+  "difficulty": "Genius",
+  "chain": [
+   "SOCIAL",
+   "SECURITY",
+   "BLANKET",
+   "BATH",
+   "TOWEL",
+   "RAIL"
+  ]
+ },
+ {
+  "date": "2026-12-21",
+  "number": 66,
+  "difficulty": "Easy",
+  "chain": [
+   "DEEP",
+   "BREATH",
+   "MINT",
+   "TEA",
+   "TREE",
+   "OIL"
+  ]
+ },
+ {
+  "date": "2026-12-22",
+  "number": 67,
+  "difficulty": "Easy",
+  "chain": [
+   "PRIME",
+   "NUMBER",
+   "PLATE",
+   "GLASS",
+   "CEILING",
+   "FAN"
+  ]
+ },
+ {
+  "date": "2026-12-23",
+  "number": 68,
+  "difficulty": "Medium",
+  "chain": [
+   "KIDNEY",
+   "STONE",
+   "FRUIT",
+   "FLY",
+   "FISHING",
+   "ROD"
+  ]
+ },
+ {
+  "date": "2026-12-24",
+  "number": 69,
+  "difficulty": "Medium",
+  "chain": [
+   "MINCE",
+   "PIE",
+   "CHART",
+   "REVIEW",
+   "PAPER",
+   "TRAIL"
+  ]
+ },
+ {
+  "date": "2026-12-25",
+  "number": 70,
+  "difficulty": "Hard",
+  "chain": [
+   "CHRISTMAS",
+   "DAY",
+   "NURSE",
+   "CALL",
+   "BELL",
+   "TOWER"
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 71,
+  "difficulty": "Hard",
+  "chain": [
+   "HOT",
+   "PINK",
+   "EYE",
+   "SHADOW",
+   "BOXING",
+   "DAY"
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 72,
+  "difficulty": "Genius",
+  "chain": [
+   "HERD",
+   "IMMUNITY",
+   "PASSPORT",
+   "CONTROL",
+   "FREAK",
+   "WAVE"
+  ]
+ },
+ {
+  "date": "2026-12-28",
+  "number": 73,
+  "difficulty": "Easy",
+  "chain": [
+   "SUPER",
+   "HUMAN",
+   "GENOME",
+   "PROJECT",
+   "TEAM",
+   "LEADER"
+  ]
+ },
+ {
+  "date": "2026-12-29",
+  "number": 74,
+  "difficulty": "Easy",
+  "chain": [
+   "RUBBER",
+   "GLOVE",
+   "PUPPET",
+   "SHOW",
+   "TIME",
+   "ZONE"
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 75,
+  "difficulty": "Medium",
+  "chain": [
+   "SPINAL",
+   "FUSION",
+   "ENERGY",
+   "DRINK",
+   "DRIVING",
+   "RANGE"
+  ]
+ },
+ {
+  "date": "2026-12-31",
+  "number": 76,
+  "difficulty": "Medium",
+  "chain": [
+   "PROJECTILE",
+   "VOMIT",
+   "COMET",
+   "TAIL",
+   "GATE",
+   "CRASHER"
+  ]
+ }
+]
