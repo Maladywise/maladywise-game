@@ -930,3 +930,9 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
   .gsecs>.gsec.sm .gsec-h span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 }
 @media (max-width:899px){.gsecs{display:grid;gap:22px}}
+/* preview (?bandmasc=1): game symbol and mascot side by side on each card */
+.band.band2{display:flex;align-items:center;justify-content:center;gap:14px}
+.band.band2 .b2i{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.16)}
+.band.band2 .b2i svg{width:34px;height:34px}
+.band.band2 .band-masc{width:62px;height:62px}
+@media (max-width:620px){.band.band2{gap:8px}.band.band2 .b2i{width:38px;height:38px;border-radius:11px}.band.band2 .b2i svg{width:24px;height:24px}.band.band2 .band-masc{width:44px;height:44px}}
