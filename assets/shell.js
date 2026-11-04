@@ -1157,17 +1157,68 @@
     }
   }
   function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); }
-  // Zebra Mail issues: card layout, headline + detail, "Why it's interesting" picked out (CSS in shell.css .wd)
-  function weeklyDose() {
-    if (!/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(location.pathname)) return;
-    var m = document.querySelector("main"); if (!m) return; m.classList.add("wd");
-    Array.prototype.forEach.call(m.querySelectorAll("li, h2 + p"), function (el) {
-      el.innerHTML = el.innerHTML.replace(/Why it(?:'|\u2019)s interesting:/, '<span class="why">Why it\u2019s interesting</span>');
-      Array.prototype.forEach.call(el.querySelectorAll("a"), function (a) { if (/^write-up$/i.test(a.textContent.trim())) a.className = "wu"; });
-      var st = el.firstElementChild;
-      if (st && st.tagName === "STRONG" && st.querySelector("a")) st.classList.add("hl");
-      else if (st && st.tagName === "STRONG") { st.classList.add("when"); st.textContent = st.textContent.replace(/:\s*$/, ""); }
+  // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
+  var WD_TOPICS = [
+    [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
+    [/x-?ray|scan|\bct\b|mri|ultrasound|radiolog|imaging|medical physics/i, "opacitis"],
+    [/insulin|diabet|thyroid|hormone|menopaus|testoster|oestrogen|estrogen|endocrin|obesity|glp-1|semaglutide|tirzepatide/i, "sudokrine"],
+    [/vaccin|virus|viral|bacteri|infect|\btb\b|tubercul|strep|dengue|flu\b|influenza|covid|measles|malaria|hiv|antibiotic|jab/i, "wordemic"],
+    [/cancer|tumou?r|oncol|chemo|lymphoma|leuk|melanoma|carcinoma/i, "panelysis"],
+    [/skin|psoria|eczema|derm|rash|acne/i, "glimpsis"],
+    [/brain|neuron|neuro|dementia|alzheimer|parkinson|autis|adhd|migraine|epilep/i, "comorbix"],
+    [/gene|dna|genom|crispr|cell\b|stem cell/i, "linkase"],
+    [/anatom|bone|muscle|joint|tendon|knee|hip|spine/i, "labelosis"],
+    [/test|screen|sensitiv|accura|diagnos/i, "sensitosis"],
+    [/mushroom|weird|odd|rare|zebra|unicorn/i, "zebritis"]
+  ];
+  var WD_FALL = ["dx", "triviosis", "gridectomy", "suturix", "morphemia", "cryptogenic", "grandrounds"];
+  var WD_SEC = [[/weekly dose/i, "dx"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
+  function wdPick(txt, used) {
+    for (var i = 0; i < WD_TOPICS.length; i++) if (WD_TOPICS[i][0].test(txt) && !used[WD_TOPICS[i][1]]) return WD_TOPICS[i][1];
+    for (var j = 0; j < WD_TOPICS.length; j++) if (WD_TOPICS[j][0].test(txt)) return WD_TOPICS[j][1];
+    for (var k = 0; k < WD_FALL.length; k++) if (!used[WD_FALL[k]]) return WD_FALL[k];
+    return "dx";
+  }
+  function wdDecorate(m) {
+    m.classList.add("wd");
+    Array.prototype.forEach.call(m.querySelectorAll("h2:not(.wd-title)"), function (h) {
+      for (var i = 0; i < WD_SEC.length; i++) if (WD_SEC[i][0].test(h.textContent)) { h.insertAdjacentHTML("afterbegin", mascImg(WD_SEC[i][1], "", 26, "wd-hm"));h.innerHTML = (h.innerHTML.replace(/(<img[^>]*>)\s*[\u{1F300}-\u{1FAFF}☀-➿]️?\s*/u, "$1")); break; }
     });
+    var used = {};
+    Array.prototype.forEach.call(m.querySelectorAll("li, h2:not(.wd-title) + p"), function (el) {
+      el.innerHTML = el.innerHTML.replace(/Why it(?:'|’)s interesting:/, '<span class="why">Why it’s interesting</span>');
+      Array.prototype.forEach.call(el.querySelectorAll("a"), function (a) { if (/^write-up$/i.test(a.textContent.trim())) a.className = "wu"; });
+      var st = el.firstElementChild, story = false;
+      if (st && st.tagName === "STRONG" && st.querySelector("a")) { st.classList.add("hl"); story = true; }
+      else if (st && st.tagName === "STRONG") { st.classList.add("when"); st.textContent = st.textContent.replace(/:\s*$/, ""); }
+      else if (el.tagName === "P" && st && st.tagName === "A") story = true;
+      if (!story) return;
+      var hl = (st.textContent || ""), id = wdPick(hl + " " + el.textContent.slice(0, 300), used); used[id] = 1;
+      var body = el.innerHTML.replace(st.outerHTML, "");
+      el.classList.add("wd-story");
+      el.innerHTML = mascImg(id, "", 44, "wd-m") + '<div class="wd-tx">' + st.outerHTML + '<div class="wd-d">' + body + "</div></div>";
+    });
+  }
+  function weeklyDose() {
+    var path = location.pathname;
+    if (/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(path)) { var m = document.querySelector("main"); if (m) wdDecorate(m); return; }
+    if (!/^\/zebra-mail\/(index\.html)?$/.test(path)) return;
+    var slot = document.getElementById("latest"), first = document.querySelector("#issues a");
+    if (!slot || !first || !window.fetch || !window.DOMParser) return;
+    fetch(first.getAttribute("href")).then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
+      if (!html) return;
+      var d = new DOMParser().parseFromString(html, "text/html"), src = d.querySelector("main"); if (!src) return;
+      var h1 = src.querySelector("h1"), lede = src.querySelector(".lede"), box = document.createElement("div");
+      box.className = "wd-latest";
+      box.innerHTML = '<p class="wd-kick">Latest issue</p><h2 class="wd-title"><a href="' + first.getAttribute("href") + '">' + (h1 ? h1.textContent : "Latest issue") + "</a></h2>" + (lede ? '<p class="lede">' + lede.innerHTML + "</p>" : "");
+      var node = src.querySelector("h2");
+      while (node) {
+        if (node.tagName === "H3" || (node.id === "nl-slot") || (node.querySelector && node.querySelector(".play-cta"))) break;
+        var next = node.nextElementSibling; box.appendChild(document.importNode(node, true)); node = next;
+      }
+      box.insertAdjacentHTML("beforeend", '<p><a class="play-cta" href="' + first.getAttribute("href") + '">Open this issue, with sources ›</a></p>');
+      slot.innerHTML = ""; slot.appendChild(box); wdDecorate(box);
+    }).catch(function () {});
   }
   // ---------- secret: Night Shift (5 taps on the logo in 3s, or type "locum" on the home page) ----------
   (function () {
