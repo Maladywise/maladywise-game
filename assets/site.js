@@ -1,7 +1,7 @@
 /* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
   // Top menu. Items with "items" are dropdowns (grouped lists in the phone menu).
-  // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Normie shows Games + Zebra Mail only.
+  // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Normie shows Games + News only.
   nav: [
     { t: "Puzzles", tn: "Games", href: "/" },
     { t: "For patients", medical: true, items: [
@@ -13,9 +13,13 @@ window.MW_HOME = {
     { t: "For doctors", medical: true, items: [
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
-      { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" }
+      { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
+      { t: "Rare conditions", href: "/rare-conditions/", d: "4,800 rare diseases, ranked by rarity" }
     ] },
-    { t: "Zebra Mail", href: "/zebra-mail/" }
+    { t: "News", items: [
+      { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
+      { t: "Health days", href: "/days/", d: "Today's theme and what's coming up" }
+    ] }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
   taglineN: "Free daily puzzles. No medicine required.",
