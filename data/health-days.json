@@ -10655,6 +10655,991 @@
     "name": "Nobel Prize Day",
     "blurb": "Gold medals, Stockholm and the smartest people in the room."
    }
+  },
+  {
+   "id": "fgm",
+   "name": "International Day of Zero Tolerance for Female Genital Mutilation",
+   "kind": "day",
+   "rule": "02-06",
+   "dates": {
+    "2026": {
+     "start": "2026-02-06"
+    },
+    "2027": {
+     "start": "2027-02-06"
+    },
+    "2028": {
+     "start": "2028-02-06"
+    }
+   },
+   "tags": [
+    "sensitive"
+   ],
+   "priority": 0,
+   "link": "https://pmnch.who.int/news-and-events/events/item/2021/02/06/default-calendar/international-day-of-zero-tolerance-for-female-genital-mutilation",
+   "blurb": "Today is the UN's International Day of Zero Tolerance for Female Genital Mutilation.",
+   "puzzle_theme": null,
+   "icon": "hands-heart"
+  },
+  {
+   "id": "slt",
+   "name": "European Day of Speech and Language Therapy",
+   "kind": "day",
+   "rule": "03-06",
+   "dates": {
+    "2026": {
+     "start": "2026-03-06"
+    },
+    "2027": {
+     "start": "2027-03-06"
+    },
+    "2028": {
+     "start": "2028-03-06"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.rcslt.org/members/your-career/what-is-esla/",
+   "blurb": "Talking, swallowing and everything in between. Today celebrates speech and language therapists.",
+   "puzzle_theme": "Speech pathology: language development, aphasia, dysphagia, voice, stuttering",
+   "icon": "echo-speech",
+   "normie": {
+    "name": "Speech Therapy Day",
+    "blurb": "How we learn to talk, why tongues twist and the science of swallowing."
+   }
+  },
+  {
+   "id": "delirium",
+   "name": "World Delirium Awareness Day",
+   "kind": "day",
+   "rule": "nth:2:2:03",
+   "dates": {
+    "2026": {
+     "start": "2026-03-11"
+    },
+    "2027": {
+     "start": "2027-03-10"
+    },
+    "2028": {
+     "start": "2028-03-08"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://radboudumc.nl/en/news-items/2024/more-awareness-for-delirium-necessary",
+   "blurb": "Acute confusion is a medical emergency, not just old age. Think delirium.",
+   "puzzle_theme": "Delirium: acute confusion, causes (PINCH ME), CAM screening, dementia vs delirium",
+   "icon": "brain",
+   "normie": {
+    "name": "Brain Fog Day",
+    "blurb": "Why sleep, water and a good routine keep your brain on track."
+   }
+  },
+  {
+   "id": "liver",
+   "name": "World Liver Day",
+   "kind": "day",
+   "rule": "04-19",
+   "dates": {
+    "2026": {
+     "start": "2026-04-19"
+    },
+    "2027": {
+     "start": "2027-04-19"
+    },
+    "2028": {
+     "start": "2028-04-19"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.hep.org.au/event/world-liver-day",
+   "blurb": "The liver does around 500 jobs and can regrow itself. Give it a day off. Or at least a day.",
+   "puzzle_theme": "Hepatology: liver function tests, hepatitis, cirrhosis, fatty liver, bilirubin",
+   "icon": "octavia-hearts",
+   "normie": {
+    "name": "World Liver Day",
+    "blurb": "Meet the only organ that can regrow itself."
+   }
+  },
+  {
+   "id": "vetday",
+   "name": "World Veterinary Day",
+   "kind": "day",
+   "rule": "last:5:04",
+   "dates": {
+    "2026": {
+     "start": "2026-04-25"
+    },
+    "2027": {
+     "start": "2027-04-24"
+    },
+    "2028": {
+     "start": "2028-04-29"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.gov.za/news/events/commemorative-events/world-veterinary-day",
+   "blurb": "Same science, more legs. Today celebrates vets, our One Health colleagues.",
+   "puzzle_theme": "Veterinary and One Health: zoonoses, comparative anatomy, rabies, animal-to-human disease",
+   "icon": "dog",
+   "normie": {
+    "name": "World Veterinary Day",
+    "blurb": "Vets, pets and the wonderful weirdness of animal bodies."
+   }
+  },
+  {
+   "id": "worksafety",
+   "name": "World Day for Safety and Health at Work",
+   "kind": "day",
+   "rule": "04-28",
+   "dates": {
+    "2026": {
+     "start": "2026-04-28"
+    },
+    "2027": {
+     "start": "2027-04-28"
+    },
+    "2028": {
+     "start": "2028-04-28"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/World_Day_for_Safety_and_Health_at_Work",
+   "blurb": "The ILO's day for getting everyone home safe. Occupational medicine gets its moment.",
+   "puzzle_theme": "Occupational health: asbestosis, mesothelioma, noise-induced hearing loss, silicosis, ergonomics",
+   "icon": "silk-plaster",
+   "normie": {
+    "name": "Work Safety Day",
+    "blurb": "Hard hats, high-vis and why good posture at your desk matters."
+   }
+  },
+  {
+   "id": "noise",
+   "name": "International Noise Awareness Day",
+   "kind": "day",
+   "rule": "last:2:04",
+   "dates": {
+    "2026": {
+     "start": "2026-04-29"
+    },
+    "2027": {
+     "start": "2027-04-28"
+    },
+    "2028": {
+     "start": "2028-04-26"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.chchearing.org/blog/tags/inad",
+   "blurb": "Pipe down for a minute. Today is about noise and protecting your hearing.",
+   "puzzle_theme": "Noise and hearing: noise-induced hearing loss, decibels, tinnitus, audiograms",
+   "icon": "echo-ear",
+   "normie": {
+    "name": "Noise Awareness Day",
+    "blurb": "Decibels, earplugs and the loudest animals on Earth."
+   }
+  },
+  {
+   "id": "maternalmh",
+   "name": "World Maternal Mental Health Day",
+   "kind": "day",
+   "rule": "nth:1:2:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-06"
+    },
+    "2027": {
+     "start": "2027-05-05"
+    },
+    "2028": {
+     "start": "2028-05-03"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.postpartum.net/maternal-mental-health-month-week-day/",
+   "blurb": "Becoming a parent is huge. Today is about mental health in pregnancy and after birth.",
+   "puzzle_theme": "Perinatal mental health, gently: postnatal depression, screening (EPDS), support and treatment",
+   "icon": "hands-heart"
+  },
+  {
+   "id": "ovariancancer",
+   "name": "World Ovarian Cancer Day",
+   "kind": "day",
+   "rule": "05-08",
+   "dates": {
+    "2026": {
+     "start": "2026-05-08"
+    },
+    "2027": {
+     "start": "2027-05-08"
+    },
+    "2028": {
+     "start": "2028-05-08"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://conferences.medicom-publishers.com/content/medical-news-articles/all-eyes-on-ovarian-cancer-may-8th/",
+   "blurb": "Ovarian cancer symptoms are easy to miss. Today is about knowing them.",
+   "puzzle_theme": "Gynaecological oncology: ovarian cancer symptoms, CA-125, BRCA, risk factors",
+   "icon": "ribbon-teal"
+  },
+  {
+   "id": "tsc",
+   "name": "TSC Global Awareness Day",
+   "kind": "day",
+   "rule": "05-15",
+   "dates": {
+    "2026": {
+     "start": "2026-05-15"
+    },
+    "2027": {
+     "start": "2027-05-15"
+    },
+    "2028": {
+     "start": "2028-05-15"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://prnewswire.com/news-releases/12th-annual-tuberous-sclerosis-complex-global-awareness-day-scheduled-for-may-15-302126223.html",
+   "blurb": "Tuberous sclerosis complex: a genetic condition that can touch the brain, skin, kidneys and heart.",
+   "puzzle_theme": "Tuberous sclerosis: ash-leaf spots, angiofibromas, seizures, mTOR, neurocutaneous syndromes",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "coeliac",
+   "name": "International Coeliac Day",
+   "kind": "day",
+   "rule": "05-16",
+   "dates": {
+    "2026": {
+     "start": "2026-05-16"
+    },
+    "2027": {
+     "start": "2027-05-16"
+    },
+    "2028": {
+     "start": "2028-05-16"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.aoecs.org/advocacy/international-coeliac-day",
+   "blurb": "Not a fad, an autoimmune disease. Today is for coeliac disease (and checking the crumbs).",
+   "puzzle_theme": "Coeliac disease: gluten, tTG antibodies, villous atrophy, dermatitis herpetiformis",
+   "icon": "apple",
+   "normie": {
+    "name": "Gluten-Free Day",
+    "blurb": "Wheat, bread and the science of gluten."
+   }
+  },
+  {
+   "id": "ibd",
+   "name": "World IBD Day",
+   "kind": "day",
+   "rule": "05-19",
+   "dates": {
+    "2026": {
+     "start": "2026-05-19"
+    },
+    "2027": {
+     "start": "2027-05-19"
+    },
+    "2028": {
+     "start": "2028-05-19"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://worldibdday.org",
+   "blurb": "Crohn's and colitis are often invisible. Today makes them visible.",
+   "puzzle_theme": "Inflammatory bowel disease: Crohn's vs ulcerative colitis, calprotectin, extraintestinal features",
+   "icon": "ribbon-purple"
+  },
+  {
+   "id": "preeclampsia",
+   "name": "World Preeclampsia Day",
+   "kind": "day",
+   "rule": "05-22",
+   "dates": {
+    "2026": {
+     "start": "2026-05-22"
+    },
+    "2027": {
+     "start": "2027-05-22"
+    },
+    "2028": {
+     "start": "2028-05-22"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://hsph.harvard.edu/maternal-health-task-force/news/world-preeclampsia-day-reducing-preventable-deaths-from-preeclampsia/",
+   "blurb": "High blood pressure in pregnancy matters. Today is about spotting pre-eclampsia early.",
+   "puzzle_theme": "Obstetric medicine: pre-eclampsia, HELLP, magnesium, blood pressure in pregnancy",
+   "icon": "seahorse"
+  },
+  {
+   "id": "pulmhtn",
+   "name": "World Pulmonary Hypertension Day",
+   "kind": "day",
+   "rule": "05-05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-05"
+    },
+    "2027": {
+     "start": "2027-05-05"
+    },
+    "2028": {
+     "start": "2028-05-05"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.phaeurope.org/news/togetherstronger-to-mark-world-ph-day-may-5/",
+   "blurb": "Breathless for no obvious reason? Sometimes it's pulmonary hypertension.",
+   "puzzle_theme": "Pulmonary hypertension: right heart strain, echo, causes, loud P2",
+   "icon": "heart-calm"
+  },
+  {
+   "id": "tourette",
+   "name": "International Tourette Awareness Day",
+   "kind": "day",
+   "rule": "06-07",
+   "dates": {
+    "2026": {
+     "start": "2026-06-07"
+    },
+    "2027": {
+     "start": "2027-06-07"
+    },
+    "2028": {
+     "start": "2028-06-07"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://health.uct.ac.za/department-psychiatry/articles/2020-06-08-division-child-adolescent-psychiatry-supports-international-tourette-awareness-day",
+   "blurb": "Most tics aren't swearing. Today is about understanding Tourette syndrome.",
+   "puzzle_theme": "Tics and Tourette syndrome: motor vs vocal tics, basal ganglia, history. Respectful.",
+   "icon": "brain"
+  },
+  {
+   "id": "kidneycancer",
+   "name": "World Kidney Cancer Day",
+   "kind": "day",
+   "rule": "nth:3:3:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-18"
+    },
+    "2027": {
+     "start": "2027-06-17"
+    },
+    "2028": {
+     "start": "2028-06-15"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.kidneycancer.org/event/world-kidney-cancer-day-2026/",
+   "blurb": "Kidney cancer is often found by accident on a scan. Today is about knowing more.",
+   "puzzle_theme": "Renal oncology: renal cell carcinoma, haematuria, von Hippel-Lindau, paraneoplastic signs",
+   "icon": "ribbon-green"
+  },
+  {
+   "id": "als",
+   "name": "Global ALS/MND Awareness Day",
+   "kind": "day",
+   "rule": "06-21",
+   "dates": {
+    "2026": {
+     "start": "2026-06-21"
+    },
+    "2027": {
+     "start": "2027-06-21"
+    },
+    "2028": {
+     "start": "2028-06-21"
+    }
+   },
+   "tags": [
+    "gentle",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.als-mnd.org/events-programs/global-day/",
+   "blurb": "The world comes together for people living with ALS/MND.",
+   "puzzle_theme": "Motor neurone disease: upper vs lower motor neurone signs, fasciculations, Lou Gehrig, Hawking",
+   "icon": "ribbon-blue"
+  },
+  {
+   "id": "microbiome",
+   "name": "World Microbiome Day",
+   "kind": "day",
+   "rule": "06-27",
+   "dates": {
+    "2026": {
+     "start": "2026-06-27"
+    },
+    "2027": {
+     "start": "2027-06-27"
+    },
+    "2028": {
+     "start": "2028-06-27"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://communities.springernature.com/posts/world-microbiome-day-27th-june-2025",
+   "blurb": "You're roughly half microbe by cell count. Today celebrates your tiny tenants.",
+   "puzzle_theme": "Microbiome: gut flora, C. difficile, probiotics, faecal transplants, bacteria vs human cells",
+   "icon": "dex-lab",
+   "normie": {
+    "name": "World Microbiome Day",
+    "blurb": "The trillions of friendly bugs living in your gut."
+   }
+  },
+  {
+   "id": "scoliosis",
+   "name": "International Scoliosis Awareness Day",
+   "kind": "day",
+   "rule": "last:5:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-27"
+    },
+    "2027": {
+     "start": "2027-06-26"
+    },
+    "2028": {
+     "start": "2028-06-24"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.srs.org/Patient-Events/International-Scoliosis-Awareness-Day-2026",
+   "blurb": "Bend forward and touch your toes. Today is about scoliosis and curvy spines.",
+   "puzzle_theme": "Spinal deformity: scoliosis, Adams forward bend test, Cobb angle, bracing",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "Scoliosis Awareness Day",
+    "blurb": "Spines, posture and why giraffes have the same number of neck bones as us."
+   }
+  },
+  {
+   "id": "pku",
+   "name": "International PKU Day",
+   "kind": "day",
+   "rule": "06-28",
+   "dates": {
+    "2026": {
+     "start": "2026-06-28"
+    },
+    "2027": {
+     "start": "2027-06-28"
+    },
+    "2028": {
+     "start": "2028-06-28"
+    }
+   },
+   "tags": [
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.espku.org/projects/pku-day/",
+   "blurb": "Born on Guthrie's birthday: the heel-prick test started with PKU.",
+   "puzzle_theme": "Inborn errors of metabolism: PKU, newborn screening, Guthrie card, phenylalanine",
+   "icon": "zebra-rare",
+   "normie": {
+    "name": "PKU Day",
+    "blurb": "The baby heel-prick test and the tiny drop of blood that saves lives."
+   }
+  },
+  {
+   "id": "fragilex",
+   "name": "World Fragile X Day",
+   "kind": "day",
+   "rule": "07-22",
+   "dates": {
+    "2026": {
+     "start": "2026-07-22"
+    },
+    "2027": {
+     "start": "2027-07-22"
+    },
+    "2028": {
+     "start": "2028-07-22"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.fraxa.org/world-fragile-x-day-2024-a-global-celebration-of-awareness-and-research-progress/",
+   "blurb": "Fragile X is the most common inherited cause of intellectual disability. Today it gets the spotlight.",
+   "puzzle_theme": "Genetics: fragile X, trinucleotide repeats, FMR1, X-linked inheritance",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "sarcomamonth",
+   "name": "Sarcoma Awareness Month",
+   "kind": "month",
+   "rule": "month:07",
+   "dates": {
+    "2026": {
+     "start": "2026-07-01",
+     "end": "2026-07-31"
+    },
+    "2027": {
+     "start": "2027-07-01",
+     "end": "2027-07-31"
+    },
+    "2028": {
+     "start": "2028-07-01",
+     "end": "2028-07-31"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://sarcoma.org.uk/news/beyond-borders-how-the-international-sarcoma-community-united-this-july/",
+   "blurb": "July is for sarcoma: rare cancers of bone and soft tissue.",
+   "puzzle_theme": "Sarcoma: osteosarcoma, Ewing sarcoma, soft-tissue lumps, red flags",
+   "icon": "ribbon-yellow"
+  },
+  {
+   "id": "lungcancer",
+   "name": "World Lung Cancer Day",
+   "kind": "day",
+   "rule": "08-01",
+   "dates": {
+    "2026": {
+     "start": "2026-08-01"
+    },
+    "2027": {
+     "start": "2027-08-01"
+    },
+    "2028": {
+     "start": "2028-08-01"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://firsnet.org/event/world-lung-cancer-day/",
+   "blurb": "Lung cancer is the world's biggest cancer killer. Today is about earlier diagnosis.",
+   "puzzle_theme": "Thoracic oncology: lung cancer types, smoking, screening, Pancoast, paraneoplastic syndromes",
+   "icon": "ribbon-pink"
+  },
+  {
+   "id": "duchenne",
+   "name": "World Duchenne Awareness Day",
+   "kind": "day",
+   "rule": "09-07",
+   "dates": {
+    "2026": {
+     "start": "2026-09-07"
+    },
+    "2027": {
+     "start": "2027-09-07"
+    },
+    "2028": {
+     "start": "2028-09-07"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.worldduchenne.org/news/united-nations-officially-designates-september-7-as-world-duchenne-awareness-day/",
+   "blurb": "A UN-recognised day for Duchenne muscular dystrophy.",
+   "puzzle_theme": "Neuromuscular genetics: Duchenne, dystrophin, Gowers' sign, X-linked inheritance, CK",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "cf",
+   "name": "World Cystic Fibrosis Day",
+   "kind": "day",
+   "rule": "09-08",
+   "dates": {
+    "2026": {
+     "start": "2026-09-08"
+    },
+    "2027": {
+     "start": "2027-09-08"
+    },
+    "2028": {
+     "start": "2028-09-08"
+    }
+   },
+   "tags": [
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.iapo.org.uk/node/14835",
+   "blurb": "Salty skin, sticky mucus, one gene. Today is for people living with cystic fibrosis.",
+   "puzzle_theme": "Cystic fibrosis: CFTR, sweat test, newborn screening, Pseudomonas, modulator therapy",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "eczema",
+   "name": "World Atopic Eczema Day",
+   "kind": "day",
+   "rule": "09-14",
+   "dates": {
+    "2026": {
+     "start": "2026-09-14"
+    },
+    "2027": {
+     "start": "2027-09-14"
+    },
+    "2028": {
+     "start": "2028-09-14"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.ilds.org/news-events/events/world-atopic-eczema-day/",
+   "blurb": "Itch, scratch, repeat. Today is about atopic eczema and the skin barrier.",
+   "puzzle_theme": "Dermatology: atopic eczema, atopic march, emollients, eczema herpeticum, filaggrin",
+   "icon": "silk-plaster",
+   "normie": {
+    "name": "World Eczema Day",
+    "blurb": "Skin, itching and the science of moisturiser."
+   }
+  },
+  {
+   "id": "marrow",
+   "name": "World Marrow Donor Day",
+   "kind": "day",
+   "rule": "nth:3:5:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-19"
+    },
+    "2027": {
+     "start": "2027-09-18"
+    },
+    "2028": {
+     "start": "2028-09-16"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.dkms.org/get-involved/campaigns/world-marrow-donor-day-thank-you-donor",
+   "blurb": "A day to thank stem cell donors. A cheek swab can make you a match for a stranger.",
+   "puzzle_theme": "Haematology: stem cell transplant, HLA matching, bone marrow, leukaemia, graft-versus-host",
+   "icon": "blood-drop",
+   "normie": {
+    "name": "World Marrow Donor Day",
+    "blurb": "Bone marrow: the blood factory inside your bones."
+   }
+  },
+  {
+   "id": "narcolepsy",
+   "name": "World Narcolepsy Day",
+   "kind": "day",
+   "rule": "09-22",
+   "dates": {
+    "2026": {
+     "start": "2026-09-22"
+    },
+    "2027": {
+     "start": "2027-09-22"
+    },
+    "2028": {
+     "start": "2028-09-22"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://project-sleep.com/world-narcolepsy-day-2025-rocks-the-world/",
+   "blurb": "Narcolepsy is a brain disorder, not laziness. Today is about understanding it.",
+   "puzzle_theme": "Sleep medicine: narcolepsy, cataplexy, orexin, REM sleep, MSLT",
+   "icon": "locum-sleep",
+   "normie": {
+    "name": "World Narcolepsy Day",
+    "blurb": "Sleep, dreams and why we have REM sleep."
+   }
+  },
+  {
+   "id": "rls",
+   "name": "World Restless Legs Day",
+   "kind": "day",
+   "rule": "09-23",
+   "dates": {
+    "2026": {
+     "start": "2026-09-23"
+    },
+    "2027": {
+     "start": "2027-09-23"
+    },
+    "2028": {
+     "start": "2028-09-23"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.efna.net/world-restless-legs-day-to-highlight-rls-in-pregnancy/",
+   "blurb": "Held on Ekbom's birthday. Today is for restless legs, which really can't sit still.",
+   "puzzle_theme": "Restless legs syndrome: iron, dopamine, pregnancy, periodic limb movements, Willis-Ekbom",
+   "icon": "locum-sleep",
+   "normie": {
+    "name": "Restless Legs Day",
+    "blurb": "Fidgeting, sleep and why legs twitch at night."
+   }
+  },
+  {
+   "id": "alzmonth",
+   "name": "World Alzheimer's Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.alzint.org/get-involved/world-alzheimers-month",
+   "blurb": "September is World Alzheimer's Month, led by Alzheimer's Disease International.",
+   "puzzle_theme": "Dementia: Alzheimer's, memory, amyloid, cognitive testing. Respectful.",
+   "icon": "brain"
+  },
+  {
+   "id": "childcancermonth",
+   "name": "Childhood Cancer Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.childhoodcancerinternational.org/news/goldseptember2025",
+   "blurb": "September goes gold for children and teens with cancer.",
+   "puzzle_theme": "Paediatric oncology, gently: leukaemia, neuroblastoma, Wilms tumour, survivorship",
+   "icon": "ribbon-gold"
+  },
+  {
+   "id": "podiatry",
+   "name": "International Podiatry Day",
+   "kind": "day",
+   "rule": "10-08",
+   "dates": {
+    "2026": {
+     "start": "2026-10-08"
+    },
+    "2027": {
+     "start": "2027-10-08"
+    },
+    "2028": {
+     "start": "2028-10-08"
+    }
+   },
+   "tags": [
+    "specialty"
+   ],
+   "priority": 1,
+   "link": "https://www.thenassauguardian.com/lifestyles/podiatry-can-significantly-improve-peoples-quality-of-life-by-promoting-maintaining-and-improving-mobility/article_8fac472a-b1dc-4323-9d7d-3a5d3cd4e55b.html",
+   "blurb": "26 bones per foot and someone has to know them all. Today celebrates podiatrists.",
+   "puzzle_theme": "Podiatry: foot anatomy, diabetic foot, gout, plantar fasciitis, ingrown toenails",
+   "icon": "socks",
+   "normie": {
+    "name": "International Podiatry Day",
+    "blurb": "Feet, shoes and the 26 bones in each foot."
+   }
+  },
+  {
+   "id": "spine",
+   "name": "World Spine Day",
+   "kind": "day",
+   "rule": "10-16",
+   "dates": {
+    "2026": {
+     "start": "2026-10-16"
+    },
+    "2027": {
+     "start": "2027-10-16"
+    },
+    "2028": {
+     "start": "2028-10-16"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.wfc.org/world-spine-day",
+   "blurb": "Sit up straight. Today is World Spine Day.",
+   "puzzle_theme": "Spinal health: back pain red flags, cauda equina, disc prolapse, vertebral anatomy",
+   "icon": "tess-bone",
+   "normie": {
+    "name": "World Spine Day",
+    "blurb": "Backbones, posture and the 33 bones stacked up your back."
+   }
+  },
+  {
+   "id": "sbh",
+   "name": "World Spina Bifida and Hydrocephalus Day",
+   "kind": "day",
+   "rule": "10-25",
+   "dates": {
+    "2026": {
+     "start": "2026-10-25"
+    },
+    "2027": {
+     "start": "2027-10-25"
+    },
+    "2028": {
+     "start": "2028-10-25"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://ifglobal.org/news/reflecting-on-world-spina-bifida-and-hydrocephalus-awareness-month-2025/",
+   "blurb": "Today is for people with spina bifida and hydrocephalus. Folic acid matters.",
+   "puzzle_theme": "Neural tube defects: spina bifida, folic acid, hydrocephalus, shunts, CSF",
+   "icon": "access"
+  },
+  {
+   "id": "pancreatic",
+   "name": "World Pancreatic Cancer Day",
+   "kind": "day",
+   "rule": "nth:3:3:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-19"
+    },
+    "2027": {
+     "start": "2027-11-18"
+    },
+    "2028": {
+     "start": "2028-11-16"
+    }
+   },
+   "tags": [
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://pancreaticcancer.org.uk/get-involved/make-a-difference/pancreatic-cancer-awareness-month-pcam/world-pancreatic-cancer-day",
+   "blurb": "Pancreatic cancer is often found late. Today the world goes purple to change that.",
+   "puzzle_theme": "Pancreatic cancer: painless jaundice, Courvoisier's law, CA19-9, Whipple procedure",
+   "icon": "ribbon-purple"
+  },
+  {
+   "id": "toilet",
+   "name": "World Toilet Day",
+   "kind": "day",
+   "rule": "11-19",
+   "dates": {
+    "2026": {
+     "start": "2026-11-19"
+    },
+    "2027": {
+     "start": "2027-11-19"
+    },
+    "2028": {
+     "start": "2028-11-19"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://www.un.org/en/node/190954",
+   "blurb": "Sanitation has saved millions of lives. The UN gives the humble toilet its own day.",
+   "puzzle_theme": "Sanitation and infection: cholera, faecal-oral spread, John Snow, typhoid, diarrhoeal disease",
+   "icon": "vira-soap",
+   "normie": {
+    "name": "World Toilet Day",
+    "blurb": "Plumbing, sewers and how toilets changed the world."
+   }
+  },
+  {
+   "id": "epidemicprep",
+   "name": "International Day of Epidemic Preparedness",
+   "kind": "day",
+   "rule": "12-27",
+   "dates": {
+    "2026": {
+     "start": "2026-12-27"
+    },
+    "2027": {
+     "start": "2027-12-27"
+    },
+    "2028": {
+     "start": "2028-12-27"
+    }
+   },
+   "tags": [],
+   "priority": 3,
+   "link": "https://en.wikipedia.org/wiki/International_Day_of_Epidemic_Preparedness",
+   "blurb": "A UN day born from COVID-19. Also Pasteur's birthday, fittingly.",
+   "puzzle_theme": "Epidemiology: outbreaks, R0, quarantine, pandemics in history, vaccines",
+   "icon": "vira-soap",
+   "normie": {
+    "name": "Epidemic Preparedness Day",
+    "blurb": "Germs, outbreaks and how we stop them spreading."
+   }
   }
  ]
 }
