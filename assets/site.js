@@ -1,7 +1,7 @@
 /* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
   // Top menu. Items with "items" are dropdowns (grouped lists in the phone menu).
-  // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Normie shows Games + News only.
+  // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Same menu in Medical and Normie.
   nav: [
     { t: "Puzzles", tn: "Games", href: "/" },
     { t: "For patients", medical: true, items: [
