@@ -22,7 +22,10 @@ window.MW_ABOUT_N = {"sudokrine": ["Sudokrine in Normie mode is a daily fruit su
 window.MW_NORMIE_CHEER = ["Day off and still winning.", "Feet up. Score up.", "Big brain, small effort.", "Weekend energy. Weekday results.", "Nailed it. Have a biscuit.", "Smooth. Very smooth.", "Somebody\u2019s been eating their veggies.", "That was suspiciously easy for you.", "Chef\u2019s kiss.", "Brain: fully caffeinated.", "Pub quiz champion energy.", "Holiday mode: genius."];
 /* "Start here: today's 3" on the home page, also followed by the in-game "Next" button: [game id, rough minutes].
    normie = the Normie list (games with a Normie version only). Topped up from MW_ORDER if one is missing in a mode. */
-window.MW_START = { medical: [["dx", 3], ["wordemic", 3], ["triviosis", 4]], normie: [["dx", 3], ["wordemic", 3], ["triviosis", 4]] };
+window.MW_START = { medical: [["dx", 3], ["wordemic", 3], ["triviosis", 4]], normie: [["dx", 3], ["wordemic", 3], ["triviosis", 4]],
+  // rotating pool for slots 2 and 3 (id, rough minutes)
+  pool: [["wordemic", 3], ["triviosis", 4], ["panelysis", 3], ["glimpsis", 2], ["opacitis", 2], ["comorbix", 4], ["linkase", 3], ["zebritis", 3], ["sensitosis", 4], ["labelosis", 3], ["gridectomy", 5], ["suturix", 4]],
+  poolN: [["wordemic", 3], ["triviosis", 4], ["comorbix", 4], ["linkase", 3], ["zebritis", 3], ["panelysis", 3], ["sensitosis", 4], ["labelosis", 3], ["gridectomy", 5], ["suturix", 4]] };
 window.MW_ORDER = ["dx", "wordemic", "panelysis", "glimpsis", "opacitis", "triviosis", "comorbix", "linkase", "zebritis", "gridectomy", "sudokrine", "suturix", "morphemia", "arrhythmix", "cryptogenic", "grandrounds"];
 window.MW_GAMES = [
   { id: "dx", normieMascot: true, kind: "Guess the diagnosis", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,

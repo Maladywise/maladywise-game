@@ -125,7 +125,10 @@
   function inMode(g) { return !NORMIE || !!g.nmode; }
   // Today's 3 (MW_START in games.js): live daily games in this mode, topped up from MW_ORDER. Shared by the home list and in-game "Next".
   function startIds() {
-    var S = window.MW_START || {}, want = (NORMIE ? S.normie : S.medical) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]], out = [], G = window.MW_GAMES || [];
+    var S = window.MW_START || {}, want = ((NORMIE ? S.normie : S.medical) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]]).slice(), out = [], G = window.MW_GAMES || [];
+    // One fixed game (the first), plus two that rotate daily from the pool (MW_START.pool / poolN), so visitors meet new games.
+    var pool = (NORMIE ? S.poolN : S.pool) || [];
+    if (pool.length >= 2) { var dn = Math.floor(Date.parse(sydToday() + "T00:00:00Z") / 864e5), n = pool.length, a = (dn * 2) % n, b = (a + 1 + (dn % (n - 1))) % n; if (b === a) b = (a + 1) % n; want = [want[0], pool[a], pool[b]]; }
     function byId(id) { return G.filter(function (x) { return x.id === id; })[0]; }
     function ok(g) { return g && g.live && !g.weekly && inMode(g) && !out.some(function (o) { return o.g === g; }); }
     want.forEach(function (w) { var g = byId(w[0]); if (ok(g)) out.push({ g: g, min: w[1] }); });
@@ -848,11 +851,15 @@
         cards.forEach(function (g) { used[g.id] = 1; });
         var extra = G.basil ? bonusCard() : "";
         if (!cards.length && !extra) return "";
-        return '<section class="gsec" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
+        var cnt = cards.length + (extra ? 1 : 0);
+        return '<section class="gsec' + (cnt <= 2 ? " sm" : "") + '" style="--n:' + (cnt <= 6 ? Math.max(3, cnt) : Math.ceil(cnt / 2)) + '" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
       }).join("");
       var left = all.filter(function (g) { return !used[g.id]; });
       if (left.length) html += '<section class="gsec" id="g-more"><div class="gsec-h"><h2>More puzzles</h2><span>Fresh off the ward.</span></div><div class="grid">' + left.map(card).join("") + "</div></section>";
-      return html;
+      // desktop layout: small sections (1-2 games) share a row; spans set so a row is always filled
+      var sm = (html.match(/class="gsec sm"/g) || []).length, k = 0;
+      html = html.replace(/class="gsec sm"/g, function () { var i = k++, full = sm - sm % 3, rest = sm % 3, span = i < full ? 2 : rest === 1 ? (sm === 1 ? 6 : 3) : 3; if (rest === 1 && sm > 1 && i >= full - 3) span = 3; return 'class="gsec sm" data-span="' + span + '"'; });
+      return '<div class="gsecs">' + html + "</div>";
     }
 
     function order() {
