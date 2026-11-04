@@ -918,3 +918,18 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .hday-row .hday-go{margin:0}
 .hday-up{font:600 14px Poppins,system-ui,sans-serif;color:var(--brand);text-decoration:none;white-space:nowrap}
 .hday-up:hover{text-decoration:underline}
+/* desktop: sized game sections; small sections (1-2 games) sit side by side */
+@media (min-width:900px){
+  .gsecs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 20px}
+  .gsecs>.gsec{grid-column:1/-1}
+  .gsecs>.gsec>.grid{grid-template-columns:repeat(var(--n,4),minmax(0,1fr))}
+  .gsecs>.gsec.sm{grid-column:span 2}
+  .gsecs>.gsec.sm[data-span="3"]{grid-column:span 3}
+  .gsecs>.gsec.sm[data-span="6"]{grid-column:1/-1}
+  .gsecs>.gsec.sm>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gsecs>.gsec.sm .gsec-h{flex-wrap:nowrap;min-width:0}
+  .gsecs>.gsec.sm .gsec-h h2{white-space:nowrap}
+  .gsecs>.gsec.sm .gsec-h span{overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .gsecs>.gsec{align-content:start}
+}
+@media (max-width:899px){.gsecs{display:grid;gap:22px}}
