@@ -852,7 +852,7 @@
         var extra = G.basil ? bonusCard() : "";
         if (!cards.length && !extra) return "";
         var cnt = cards.length + (extra ? 1 : 0);
-        return '<section class="gsec' + (cnt <= 2 ? " sm" : "") + '" style="--n:' + (cnt <= 6 ? Math.max(3, cnt) : Math.ceil(cnt / 2)) + '" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
+        return '<section class="gsec' + (cnt <= 2 ? " sm" : "") + '" data-c="' + cnt + '" style="--n:' + (cnt <= 6 ? Math.max(3, cnt) : Math.ceil(cnt / 2)) + '" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
       }).join("");
       var left = all.filter(function (g) { return !used[g.id]; });
       if (left.length) html += '<section class="gsec" id="g-more"><div class="gsec-h"><h2>More puzzles</h2><span>Fresh off the ward.</span></div><div class="grid">' + left.map(card).join("") + "</div></section>";
