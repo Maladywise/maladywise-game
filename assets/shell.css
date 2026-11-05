@@ -963,3 +963,6 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 
 .mw-locked{margin:10px auto;max-width:640px;padding:10px 14px;border-radius:14px;background:var(--soft,#F1ECF8);color:var(--ink);font-size:14px;text-align:center;transition:opacity .6s}
 .mw-locked-go{opacity:0;pointer-events:none}
+
+.mw-arch{text-align:center;margin:28px 0 8px;font-size:14px}
+.mw-arch a{color:var(--muted,#6B5A93)}
