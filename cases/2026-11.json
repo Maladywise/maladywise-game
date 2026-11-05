@@ -325,113 +325,112 @@
   "date": "2026-11-09",
   "number": 24,
   "difficulty": "Easy",
-  "title": "Prawns and regret",
-  "answer": "Gout",
+  "title": "Weightless and green",
+  "answer": "Space motion sickness",
   "accept": [
-   "gout",
-   "gouty arthritis",
-   "acute gout",
-   "podagra",
-   "crystal arthritis",
-   "urate arthritis"
+   "space motion sickness",
+   "space adaptation syndrome",
+   "space sickness",
+   "sas",
+   "motion sickness in space",
+   "motion sickness"
   ],
   "clues": [
    {
-    "t": "58-year-old man woke at 3 am with a screaming pain in his foot."
+    "t": "38-year-old woman, six hours into her first trip to the International Space Station."
    },
    {
-    "t": "The base of his big toe is red, hot and swollen. Even the bedsheet hurts."
+    "t": "Nausea, then vomiting, then a headache. Turning her head quickly sets it all off again."
    },
    {
-    "t": "Boxing Day. He had prawns, ham and \"a few\" beers yesterday."
+    "t": "Her face looks puffy and her legs have gone skinny. Her crewmates call it \"puffy face, bird legs\"."
    },
    {
-    "t": "He started a fluid tablet for his blood pressure last month."
+    "t": "No fever, nobody else on board has gastro and she passed every medical on the ground."
    },
    {
-    "t": "Serum urate 0.38 mmol/L (upper normal)",
+    "t": "Neurological exam normal, apart from feeling awful when she looks around the cabin",
     "d": 1
    },
    {
-    "t": "Joint aspirate: needle-shaped crystals, negatively birefringent",
+    "t": "Her inner ear is reporting zero gravity while her eyes insist the wall is the floor. Better by day 3",
     "d": 1
    }
   ],
-  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard. Gout is especially common in Māori and Pacific men, largely because of inherited differences in how the body clears urate. It's not just the prawns."
+  "pearl": "More than half of astronauts get space motion sickness in their first few days, and it usually settles within 2 to 4 days as the brain learns to ignore its confused inner ear. The puffy face comes from fluid shifting headwards without gravity to pull it down. NASA’s Anil Menon, who spacewalked outside the station in late October 2026, is an emergency physician and a former flight surgeon, so he knows the drill."
  },
  {
   "date": "2026-11-10",
   "number": 25,
   "difficulty": "Easy",
-  "title": "One-sided story",
-  "answer": "Shingles (herpes zoster)",
+  "title": "Third pair of glasses",
+  "answer": "Keratoconus",
   "accept": [
-   "shingles",
-   "herpes zoster",
-   "zoster",
-   "hz",
-   "varicella zoster",
-   "varicella zoster reactivation",
-   "vzv"
+   "keratoconus",
+   "conical cornea",
+   "cone-shaped cornea",
+   "kc"
   ],
   "clues": [
    {
-    "t": "71-year-old woman with burning pain around the right side of her chest for 3 days."
+    "t": "22-year-old woman on her third pair of glasses in three years. None of them last."
    },
    {
-    "t": "ECG and troponin are normal.",
+    "t": "Her vision is getting blurrier, more in one eye, and street lights have halos and ghost images."
+   },
+   {
+    "t": "She rubs her eyes constantly. She also has eczema and hay fever."
+   },
+   {
+    "t": "The optometrist’s prescription keeps adding more astigmatism."
+   },
+   {
+    "t": "Slit lamp: central cornea is thinned, with a ring of iron deposits around the base of a cone",
     "d": 1
    },
    {
-    "t": "The pain stops exactly at the midline, front and back."
-   },
-   {
-    "t": "Her skin there is exquisitely tender to light touch."
-   },
-   {
-    "t": "Today, clusters of small blisters on a red base have appeared in a band."
-   },
-   {
-    "t": "She had chickenpox as a child."
+    "t": "When she looks down, her lower eyelid bows into a V around the bulging cornea (Munson’s sign)",
+    "d": 1
    }
   ],
-  "pearl": "Pain often comes 2–3 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
+  "pearl": "In keratoconus the cornea thins and bulges into a cone, usually starting in the teens or twenties. Eye rubbing and atopy are strong links, and it’s commoner in Down syndrome. Corneal cross-linking uses riboflavin drops and UV light to stiffen the cornea and can halt progression, which is why catching it early matters. Today is World Keratoconus Day."
  },
  {
   "date": "2026-11-11",
   "number": 26,
   "difficulty": "Medium",
-  "title": "Ring doesn't fit",
-  "answer": "Acromegaly",
+  "title": "Four days in wet boots",
+  "answer": "Trench foot",
   "accept": [
-   "acromegaly",
-   "growth hormone excess",
-   "gh excess",
-   "gh secreting pituitary adenoma",
-   "somatotroph adenoma"
+   "trench foot",
+   "immersion foot",
+   "non-freezing cold injury",
+   "nfci",
+   "cold injury"
   ],
   "clues": [
    {
-    "t": "48-year-old man, sweating more than ever."
+    "t": "19-year-old soldier in a flooded front-line dugout in Flanders, winter 1915."
    },
    {
-    "t": "Partner says his snoring is now unbearable."
+    "t": "He hasn’t had his boots off in four days. The water has been over his ankles the whole time."
    },
    {
-    "t": "Had his wedding ring resized twice. Shoe size went up one."
+    "t": "His feet went numb first, then started burning. They’re swollen, blotchy and blue."
    },
    {
-    "t": "Gaps have appeared between his lower teeth."
+    "t": "It’s just above freezing. Nothing has actually frozen."
    },
    {
-    "t": "Carpal tunnel symptoms in both hands, new hypertension."
+    "t": "On rewarming, feet turn red, hot and very painful, with blisters",
+    "d": 1
    },
    {
-    "t": "IGF-1 three times the upper limit of normal",
+    "t": "Severe cases can go on to skin breakdown and gangrene. The army’s fix: dry socks and a mate to rub in whale oil",
     "d": 1
    }
   ],
-  "pearl": "Changes are so slow that family often miss them, so compare old photos. IGF-1 is the screening test; confirm with GH failing to suppress on a glucose tolerance test, then pituitary MRI."
+  "pearl": "Trench foot is a non-freezing cold injury from hours to days of cold, wet feet, and it cost armies huge numbers of soldiers in the First World War. Men were paired up to check and rub each other’s feet with whale oil, and officers were held responsible for foot care. It hasn’t gone away: it still turns up in people sleeping rough and at very wet festivals. Today is Remembrance Day."
  },
  {
   "date": "2026-11-12",
@@ -566,41 +565,37 @@
   "date": "2026-11-15",
   "number": 30,
   "difficulty": "Genius",
-  "title": "Still open",
-  "answer": "Patent ductus arteriosus",
+  "title": "The day after the crash",
+  "answer": "Fat embolism syndrome",
   "accept": [
-   "patent ductus arteriosus",
-   "pda",
-   "patent ductus",
-   "persistent ductus arteriosus",
-   "open ductus arteriosus",
-   "ductus arteriosus",
-   "patent arterial duct",
-   "persistent arterial duct"
+   "fat embolism syndrome",
+   "fat embolism",
+   "fes",
+   "fat emboli"
   ],
   "clues": [
    {
-    "t": "Baby girl born at 27 weeks, now 5 days old in the NICU."
+    "t": "27-year-old woman thrown from her motorbike yesterday. Closed shaft-of-femur fracture, waiting for theatre."
    },
    {
-    "t": "She'd been improving, but now needs more breathing support again."
+    "t": "She was chatty at handover. Now she’s confused and breathless, 30 hours after the crash."
    },
    {
-    "t": "Her pulses feel unusually bounding, even in her palms."
+    "t": "Oxygen saturation 86% on room air. Chest sounds near normal."
    },
    {
-    "t": "BP 48/20",
+    "t": "Tiny non-blanching spots across her armpits, upper chest and inside her lower eyelids."
+   },
+   {
+    "t": "CT pulmonary angiogram: no clot, patchy bilateral ground-glass change. Platelets 88",
     "d": 1
    },
    {
-    "t": "A new murmur at the upper left sternal edge."
-   },
-   {
-    "t": "Echo: blood shunting left to right, from the aorta into the pulmonary artery",
+    "t": "MRI brain: many tiny white-matter lesions in a \"starfield\" pattern",
     "d": 1
    }
   ],
-  "pearl": "The ductus arteriosus usually closes within days of birth. In very premature babies it often stays open, so extra blood floods the lungs and runs off from the body: bounding pulses and a wide pulse pressure are the clues. Many close on their own; the NICU team decides whether it needs help. Happy World Prematurity Day to every early arrival and their families."
+  "pearl": "Fat embolism syndrome classically appears 24 to 72 hours after a long-bone fracture: the triad of hypoxaemia, confusion and a petechial rash (Gurd’s criteria). Early fracture fixation lowers the risk, and care is supportive. Today is the World Day of Remembrance for Road Traffic Victims, which also honours the people who look after the injured."
  },
  {
   "date": "2026-11-16",

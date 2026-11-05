@@ -1095,72 +1095,26 @@
   "date": "2026-11-10",
   "number": 16,
   "difficulty": "Easy",
-  "patient": "Thanh, 26, female",
-  "story": "New bruises and tiny red spots on her shins, and her gums bleed when she brushes. Had a cold two weeks ago. Otherwise well.",
+  "patient": "Priya, 58, female",
+  "story": "Two years of ‘IBS’: watery diarrhoea plus red flushing spells that sometimes come with a wheeze. Antispasmodics have done nothing.",
+  "theme": "World Neuroendocrine Cancer Day",
   "panels": [
    {
-    "name": "Full blood count",
+    "name": "Tumour markers",
     "rows": [
      [
-      "Haemoglobin",
-      "131",
-      "g/L",
-      "115–165",
-      ""
+      "Urine 5-HIAA (24-hour)",
+      "168",
+      "µmol/day",
+      "<50",
+      "H"
      ],
      [
-      "WCC",
-      "6.4",
-      "×10⁹/L",
-      "4.0–11.0",
-      ""
-     ],
-     [
-      "Neutrophils",
-      "3.8",
-      "×10⁹/L",
-      "2.0–7.5",
-      ""
-     ],
-     [
-      "Platelets",
-      "9",
-      "×10⁹/L",
-      "150–400",
-      "L"
-     ],
-     [
-      "Blood film",
-      "Large platelets; red and white cells normal",
-      "",
-      "",
-      ""
-     ]
-    ]
-   },
-   {
-    "name": "Coagulation",
-    "rows": [
-     [
-      "INR",
-      "1.0",
-      "",
-      "0.9–1.2",
-      ""
-     ],
-     [
-      "APTT",
-      "30",
-      "s",
-      "25–38",
-      ""
-     ],
-     [
-      "Fibrinogen",
-      "3.0",
-      "g/L",
-      "2.0–4.0",
-      ""
+      "Chromogranin A",
+      "420",
+      "µg/L",
+      "<100",
+      "H"
      ]
     ]
    },
@@ -1168,55 +1122,111 @@
     "name": "Chemistry",
     "rows": [
      [
-      "LDH",
-      "180",
-      "U/L",
-      "120–250",
+      "Sodium",
+      "139",
+      "mmol/L",
+      "135–145",
       ""
      ],
      [
-      "Bilirubin",
-      "9",
+      "Potassium",
+      "3.3",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Creatinine",
+      "71",
       "µmol/L",
-      "<20",
+      "45–90",
+      ""
+     ],
+     [
+      "ALT",
+      "26",
+      "U/L",
+      "<30",
+      ""
+     ],
+     [
+      "ALP",
+      "98",
+      "U/L",
+      "30–110",
+      ""
+     ],
+     [
+      "Albumin",
+      "38",
+      "g/L",
+      "35–50",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Rule-outs",
+    "rows": [
+     [
+      "Haemoglobin",
+      "128",
+      "g/L",
+      "115–165",
+      ""
+     ],
+     [
+      "TSH",
+      "1.8",
+      "mIU/L",
+      "0.5–4.0",
+      ""
+     ],
+     [
+      "Tissue transglutaminase IgA",
+      "3",
+      "U/mL",
+      "<7",
+      ""
+     ],
+     [
+      "Faecal calprotectin",
+      "24",
+      "µg/g",
+      "<50",
       ""
      ]
     ]
    }
   ],
-  "answer": "Immune thrombocytopenia (ITP)",
+  "answer": "Carcinoid syndrome (neuroendocrine tumour)",
   "wrong": [
-   "Acute leukaemia",
-   "Thrombotic thrombocytopenic purpura (TTP)",
-   "Disseminated intravascular coagulation (DIC)",
-   "Haemophilia A",
-   "Aplastic anaemia"
+   "Irritable bowel syndrome",
+   "Phaeochromocytoma",
+   "Coeliac disease",
+   "Perimenopausal flushing",
+   "Systemic mastocytosis"
   ],
   "hints": [
    [
-    "Only one cell line is in trouble. Which one?",
+    "One urine test is more than three times its limit. It’s a breakdown product of serotonin.",
     [
-     "Platelets",
-     "Haemoglobin",
-     "WCC"
+     "Urine 5-HIAA (24-hour)"
     ]
    ],
    [
-    "Clotting is normal and the film shows big young platelets. Where are they all going?",
+    "The other raised marker is a general flag for neuroendocrine cells.",
     [
-     "Blood film",
-     "INR",
-     "APTT"
+     "Chromogranin A"
     ]
    ]
   ],
   "key": [
-   "Platelets",
-   "Blood film",
-   "APTT"
+   "Urine 5-HIAA (24-hour)",
+   "Chromogranin A"
   ],
-  "why": "A very low platelet count on its own, with normal red and white cells, normal clotting and a film showing only large (young) platelets. The marrow is making platelets, but they're being destroyed. In a well young person after a viral illness, that's immune thrombocytopenia. No red cell fragments or haemolysis (not TTP), normal clotting (not DIC or haemophilia), and the other cell lines are fine (leukaemia and aplastic anaemia unlikely).",
-  "pearl": "Always look at the film. Platelets clumping in the tube can fake a low count (pseudothrombocytopenia), which disappears when the count is repeated in a citrate tube."
+  "why": "Flushing, watery diarrhoea and wheeze plus a sky-high urine 5-HIAA make carcinoid syndrome: a neuroendocrine tumour releasing serotonin and other amines into the circulation. Chromogranin A backs it up. Coeliac serology and calprotectin are normal, and IBS doesn’t flush or wheeze. Diarrhoea explains the low potassium.",
+  "pearl": "Neuroendocrine tumours can hide for years behind ‘just IBS’. Carcinoid syndrome usually means the tumour’s products are escaping liver clearance, often because it has spread there. Bananas, walnuts and some medicines can falsely raise 5-HIAA, so check the collection instructions. Today is World Neuroendocrine Cancer Day."
  },
  {
   "date": "2026-11-11",
@@ -1737,122 +1747,149 @@
   "date": "2026-11-15",
   "number": 21,
   "difficulty": "Genius",
-  "patient": "Deepa, 56, female",
-  "story": "Type 2 diabetes on metformin and empagliflozin. Two days after keyhole gallbladder surgery: barely eating, vomiting and breathing fast.",
+  "patient": "Erin, 34, female",
+  "story": "Six days after a road crash with a serious head injury, now recovering in ICU. Passing a lot of urine, light-headed when sat up, and her sodium keeps falling.",
+  "theme": "World Day of Remembrance for Road Traffic Victims",
   "panels": [
    {
-    "name": "Venous blood gas",
+    "name": "Urea and electrolytes",
     "rows": [
-     [
-      "pH (venous)",
-      "7.18",
-      "",
-      "7.32–7.42",
-      "L"
-     ],
-     [
-      "pCO2 (venous)",
-      "22",
-      "mmHg",
-      "41–51",
-      "L"
-     ],
-     [
-      "Bicarbonate",
-      "8",
-      "mmol/L",
-      "22–32",
-      "L"
-     ],
-     [
-      "Lactate",
-      "1.3",
-      "mmol/L",
-      "<2.0",
-      ""
-     ]
-    ]
-   },
-   {
-    "name": "Chemistry",
-    "rows": [
-     [
-      "Glucose",
-      "9.6",
-      "mmol/L",
-      "3.0–7.7",
-      "H"
-     ],
-     [
-      "Ketones (β-hydroxybutyrate)",
-      "5.8",
-      "mmol/L",
-      "<0.6",
-      "H"
-     ],
      [
       "Sodium",
-      "137",
+      "124",
       "mmol/L",
       "135–145",
-      ""
+      "L"
      ],
      [
       "Potassium",
-      "4.6",
+      "3.6",
       "mmol/L",
       "3.5–5.2",
       ""
      ],
      [
       "Chloride",
-      "103",
+      "90",
       "mmol/L",
       "95–110",
+      "L"
+     ],
+     [
+      "Bicarbonate",
+      "27",
+      "mmol/L",
+      "22–32",
       ""
      ],
      [
+      "Urea",
+      "11.2",
+      "mmol/L",
+      "2.5–8.0",
+      "H"
+     ],
+     [
       "Creatinine",
-      "80",
+      "94",
       "µmol/L",
       "45–90",
+      "H"
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "rows": [
+     [
+      "Osmolality",
+      "264",
+      "mOsm/kg",
+      "275–295",
+      "L"
+     ],
+     [
+      "Glucose (random)",
+      "5.6",
+      "mmol/L",
+      "3.0–7.7",
+      ""
+     ],
+     [
+      "Haematocrit",
+      "0.49",
+      "L/L",
+      "0.35–0.47",
+      "H"
+     ],
+     [
+      "Morning cortisol",
+      "580",
+      "nmol/L",
+      "200–650",
+      ""
+     ],
+     [
+      "TSH",
+      "1.6",
+      "mIU/L",
+      "0.5–4.0",
+      ""
+     ]
+    ]
+   },
+   {
+    "name": "Urine",
+    "rows": [
+     [
+      "Urine sodium",
+      "98",
+      "mmol/L",
+      "",
+      ""
+     ],
+     [
+      "Urine osmolality",
+      "510",
+      "mOsm/kg",
+      "",
       ""
      ]
     ]
    }
   ],
-  "answer": "Euglycaemic DKA (SGLT2 inhibitor)",
+  "answer": "Cerebral salt wasting",
   "wrong": [
-   "Metformin-associated lactic acidosis",
-   "Starvation ketosis",
-   "Hyperosmolar hyperglycaemic state",
-   "Sepsis with lactic acidosis",
-   "Alcoholic ketoacidosis"
+   "SIADH",
+   "Adrenal insufficiency",
+   "Diabetes insipidus (AVP deficiency)",
+   "Hypothyroidism",
+   "Excess IV dextrose"
   ],
   "hints": [
    [
-    "Severe acidosis with a big anion gap. Work out the gap, then find the acid.",
+    "Low sodium, concentrated urine full of sodium. That fits two diagnoses. Now look at her fluid status.",
     [
-     "Bicarbonate",
-     "Ketones (β-hydroxybutyrate)",
-     "Lactate"
+     "Sodium",
+     "Urine sodium"
     ]
    ],
    [
-    "Ketones are high but glucose is barely raised. Which diabetes tablet allows that?",
+    "A high urea and haematocrit plus light-headedness say she’s dry, not overfilled.",
     [
-     "Glucose"
+     "Urea",
+     "Haematocrit"
     ]
    ]
   ],
   "key": [
-   "Bicarbonate",
-   "Ketones (β-hydroxybutyrate)",
-   "Lactate",
-   "Glucose"
+   "Sodium",
+   "Urine sodium",
+   "Urea",
+   "Haematocrit"
   ],
-  "why": "pH 7.18, bicarbonate 8 and an anion gap of 26 (137 − 103 − 8): a severe high anion gap metabolic acidosis. Lactate is normal and ketones are very high, so it's ketoacidosis. The glucose is only 9.6 because SGLT2 inhibitors (the '-gliflozins') keep flushing glucose into the urine. Surgery, fasting and vomiting are classic triggers. Starvation ketosis alone rarely drops the bicarbonate this low.",
-  "pearl": "Euglycaemic DKA is easy to miss because the glucose looks reassuring. Ketones are worth checking in anyone on an SGLT2 inhibitor who becomes unwell, and these medicines are usually paused before surgery and on sick days."
+  "why": "True hypo-osmolar hyponatraemia with a high urine sodium after a brain injury points to SIADH or cerebral salt wasting. The tiebreaker is volume: SIADH patients are euvolaemic, while Erin is dry, with raised urea and haematocrit, heavy urine output and postural symptoms. Normal cortisol and TSH make the endocrine causes unlikely, and diabetes insipidus would push sodium up, not down.",
+  "pearl": "Telling cerebral salt wasting from SIADH matters because the usual SIADH move, fluid restriction, can harm someone who is already volume-depleted. CSW is treated by replacing salt and water, usually with specialist input. Today remembers road traffic victims and the people who care for the injured."
  },
  {
   "date": "2026-11-16",

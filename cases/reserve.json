@@ -596,5 +596,149 @@
    }
   ],
   "pearl": "Named after Stephen Christmas, the five-year-old in whom it was first told apart from classic haemophilia. Rosemary Biggs and colleagues published it in the 1952 Christmas issue of the BMJ, and she defended the name as 'pleasantly provocative'. Stephen Christmas later became a haemophilia advocate."
+ },
+ {
+  "difficulty": "Easy",
+  "title": "Prawns and regret",
+  "answer": "Gout",
+  "accept": [
+   "gout",
+   "gouty arthritis",
+   "acute gout",
+   "podagra",
+   "crystal arthritis",
+   "urate arthritis"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old man woke at 3 am with a screaming pain in his foot."
+   },
+   {
+    "t": "The base of his big toe is red, hot and swollen. Even the bedsheet hurts."
+   },
+   {
+    "t": "Boxing Day. He had prawns, ham and \"a few\" beers yesterday."
+   },
+   {
+    "t": "He started a fluid tablet for his blood pressure last month."
+   },
+   {
+    "t": "Serum urate 0.38 mmol/L (upper normal)",
+    "d": 1
+   },
+   {
+    "t": "Joint aspirate: needle-shaped crystals, negatively birefringent",
+    "d": 1
+   }
+  ],
+  "pearl": "Urate can be normal during a flare, so a normal level doesn't rule gout out. Thiazide diuretics raise urate. Joint aspiration showing crystals is the gold standard. Gout is especially common in Māori and Pacific men, largely because of inherited differences in how the body clears urate. It's not just the prawns."
+ },
+ {
+  "difficulty": "Easy",
+  "title": "One-sided story",
+  "answer": "Shingles (herpes zoster)",
+  "accept": [
+   "shingles",
+   "herpes zoster",
+   "zoster",
+   "hz",
+   "varicella zoster",
+   "varicella zoster reactivation",
+   "vzv"
+  ],
+  "clues": [
+   {
+    "t": "71-year-old woman with burning pain around the right side of her chest for 3 days."
+   },
+   {
+    "t": "ECG and troponin are normal.",
+    "d": 1
+   },
+   {
+    "t": "The pain stops exactly at the midline, front and back."
+   },
+   {
+    "t": "Her skin there is exquisitely tender to light touch."
+   },
+   {
+    "t": "Today, clusters of small blisters on a red base have appeared in a band."
+   },
+   {
+    "t": "She had chickenpox as a child."
+   }
+  ],
+  "pearl": "Pain often comes 2–3 days before the rash. Start antivirals within 72 hours of rash onset. A blister on the tip of the nose (Hutchinson's sign) means the eye may be involved: refer urgently."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "Ring doesn't fit",
+  "answer": "Acromegaly",
+  "accept": [
+   "acromegaly",
+   "growth hormone excess",
+   "gh excess",
+   "gh secreting pituitary adenoma",
+   "somatotroph adenoma"
+  ],
+  "clues": [
+   {
+    "t": "48-year-old man, sweating more than ever."
+   },
+   {
+    "t": "Partner says his snoring is now unbearable."
+   },
+   {
+    "t": "Had his wedding ring resized twice. Shoe size went up one."
+   },
+   {
+    "t": "Gaps have appeared between his lower teeth."
+   },
+   {
+    "t": "Carpal tunnel symptoms in both hands, new hypertension."
+   },
+   {
+    "t": "IGF-1 three times the upper limit of normal",
+    "d": 1
+   }
+  ],
+  "pearl": "Changes are so slow that family often miss them, so compare old photos. IGF-1 is the screening test; confirm with GH failing to suppress on a glucose tolerance test, then pituitary MRI."
+ },
+ {
+  "difficulty": "Genius",
+  "title": "Still open",
+  "answer": "Patent ductus arteriosus",
+  "accept": [
+   "patent ductus arteriosus",
+   "pda",
+   "patent ductus",
+   "persistent ductus arteriosus",
+   "open ductus arteriosus",
+   "ductus arteriosus",
+   "patent arterial duct",
+   "persistent arterial duct"
+  ],
+  "clues": [
+   {
+    "t": "Baby girl born at 27 weeks, now 5 days old in the NICU."
+   },
+   {
+    "t": "She'd been improving, but now needs more breathing support again."
+   },
+   {
+    "t": "Her pulses feel unusually bounding, even in her palms."
+   },
+   {
+    "t": "BP 48/20",
+    "d": 1
+   },
+   {
+    "t": "A new murmur at the upper left sternal edge."
+   },
+   {
+    "t": "Echo: blood shunting left to right, from the aorta into the pulmonary artery",
+    "d": 1
+   }
+  ],
+  "pearl": "The ductus arteriosus usually closes within days of birth. In very premature babies it often stays open, so extra blood floods the lungs and runs off from the body: bounding pulses and a wide pulse pressure are the clues. Many close on their own; the NICU team decides whether it needs help. Happy World Prematurity Day to every early arrival and their families."
  }
 ]
