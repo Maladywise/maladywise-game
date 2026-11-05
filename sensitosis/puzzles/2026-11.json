@@ -130,7 +130,7 @@
     "test": "ctapp"
    },
    {
-    "test": "jolt"
+    "test": "drawer"
    }
   ]
  },
@@ -151,7 +151,7 @@
     }
    },
    {
-    "test": "pap"
+    "test": "mammo"
    },
    {
     "test": "lipase_panc"
@@ -179,7 +179,7 @@
     "test": "droparm"
    },
    {
-    "test": "hpstool"
+    "test": "usapp"
    }
   ]
  },
