@@ -5,6 +5,29 @@
   function get(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
+  // ---------- future puzzles stay locked: ?date= after today (Sydney) falls back to today ----------
+  // Reviewers can open ?preview=1 once per device (remembered) to see future dates.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), d = q.get("date");
+      if (q.get("preview") === "1") set("mw-preview", 1);
+      if (q.get("preview") === "0") set("mw-preview", 0);
+      if (!d || !/^\d{4}-\d{2}-\d{2}$/.test(d) || get("mw-preview", 0) === 1) return;
+      var today = new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+      if (d <= today) return;
+      q.delete("date");
+      history.replaceState(null, "", location.pathname + (q.toString() ? "?" + q.toString() : "") + location.hash);
+      var nice = new Date(d + "T12:00:00").toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short" });
+      document.addEventListener("DOMContentLoaded", function () {
+        var m = document.querySelector("main") || document.body, n = document.createElement("p");
+        n.className = "mw-locked"; n.setAttribute("role", "status");
+        n.textContent = "🔒 That puzzle unlocks on " + nice + ". Here's today's instead.";
+        m.insertBefore(n, m.firstChild);
+        setTimeout(function () { n.classList.add("mw-locked-go"); }, 6000);
+      });
+    } catch (e) {}
+  })();
+
   // ---------- mode: "medical" (default) or "normie" (no-medicine versions of some games) ----------
   // localStorage "mw-mode"; ?mode=normie / ?mode=medical sets and remembers it (deep links, Zebra Mail).
   var MODE = (function () {
