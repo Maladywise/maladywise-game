@@ -960,3 +960,6 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .wd .wd-small .wd-m{width:34px;height:34px;border-radius:10px;margin-top:0}
 .wd .wd-small strong.when{margin-bottom:4px}
 @media (min-width:600px) and (max-width:900px){ .mw-mode .mm-t{display:inline} }
+
+.mw-locked{margin:10px auto;max-width:640px;padding:10px 14px;border-radius:14px;background:var(--soft,#F1ECF8);color:var(--ink);font-size:14px;text-align:center;transition:opacity .6s}
+.mw-locked-go{opacity:0;pointer-events:none}
