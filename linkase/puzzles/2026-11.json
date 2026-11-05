@@ -108,12 +108,12 @@
   "number": 24,
   "difficulty": "Easy",
   "chain": [
-   "COLD",
-   "BLOOD",
-   "BANK",
-   "HOLIDAY",
-   "HOME",
-   "VISIT"
+   "EAR",
+   "DRUM",
+   "STICK",
+   "INSECT",
+   "BITE",
+   "MARK"
   ]
  },
  {
@@ -121,12 +121,12 @@
   "number": 25,
   "difficulty": "Easy",
   "chain": [
-   "RED",
-   "HOT",
-   "WATER",
-   "BOTTLE",
-   "NECK",
-   "BRACE"
+   "EYE",
+   "DROP",
+   "OUT",
+   "PATIENT",
+   "SAFETY",
+   "NET"
   ]
  },
  {
@@ -134,12 +134,12 @@
   "number": 26,
   "difficulty": "Medium",
   "chain": [
+   "BATTLE",
+   "FIELD",
+   "HOSPITAL",
    "BED",
    "REST",
-   "HOME",
-   "RUN",
-   "DOWN",
-   "TIME"
+   "HOME"
   ]
  },
  {
@@ -186,12 +186,12 @@
   "number": 30,
   "difficulty": "Genius",
   "chain": [
-   "KANGAROO",
-   "CARE",
-   "FREE",
-   "HAND",
-   "FULL",
-   "TERM"
+   "UMBILICAL",
+   "CORD",
+   "BLOOD",
+   "TEST",
+   "DRIVE",
+   "WAY"
   ]
  },
  {
