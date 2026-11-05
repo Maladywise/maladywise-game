@@ -369,5 +369,761 @@
    "Crohn's disease"
   ],
   "pearl": "Adhesions cause most small bowel obstructions in people who've had surgery; hernias are the main cause in those who haven't. Always check the hernial orifices."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 18,
+  "difficulty": "Medium",
+  "title": "A veil over one side",
+  "context": "A 67-year-old long-term smoker has had weeks of cough and breathlessness, and has now coughed up a little blood.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Oberlappenatelektase_links_pa.jpg",
+   "file": "Oberlappenatelektase links pa.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-11.jpg",
+   "alt": "Frontal chest X-ray with a veil-like haze over the left upper chest and mediastinal shift to the left"
+  },
+  "answer": "Left upper lobe collapse",
+  "wrong": [
+   "Left lower lobe collapse",
+   "Left pleural effusion",
+   "Left upper lobe pneumonia",
+   "Mesothelioma",
+   "Phrenic nerve palsy"
+  ],
+  "hints": [
+   "Compare the density of the two sides, then see where the trachea and mediastinum sit.",
+   "A hazy veil over the upper left chest that fades downwards, with volume loss rather than a fluid level."
+  ],
+  "why": "A veil-like haze over the left hemithorax that fades towards the base, with volume loss: the mediastinum is pulled to the left and the lobe has collapsed forwards against the front of the chest.",
+  "assoc": [
+   "Central bronchial carcinoma",
+   "Mucus plugging",
+   "Inhaled foreign body",
+   "Luftsichel sign"
+  ],
+  "pearl": "In an adult smoker, lobar collapse is an obstructing central cancer until proven otherwise, so it needs CT and usually bronchoscopy. The left upper lobe collapses forwards, which is why it looks like a veil rather than a wedge."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 19,
+  "difficulty": "Medium",
+  "title": "Two months of cough",
+  "context": "A 64-year-old woman who has never smoked has had a cough for two months and has lost 5 kg without trying.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Lung_cancer_in_xray.jpg",
+   "file": "Lung cancer in xray.jpg",
+   "author": "Δρ. Χαράλαμπος Γκούβας (Harrygouvas)",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-12.jpg",
+   "alt": "Frontal chest X-ray with arrows around a large irregular mass in the left mid and upper zone"
+  },
+  "answer": "Lung cancer",
+  "wrong": [
+   "Lobar pneumonia",
+   "Tuberculoma",
+   "Lung abscess",
+   "Pulmonary infarct",
+   "Organising pneumonia"
+  ],
+  "hints": [
+   "Follow the arrows, then ask what the edge of the shadow looks like.",
+   "An irregular, poorly defined mass in someone losing weight is the worry here, not infection."
+  ],
+  "why": "A large, irregular, ill-defined mass in the left mid and upper zone, outlined by the arrows. There is no air-fluid level or lobar air bronchogram to suggest abscess or pneumonia.",
+  "assoc": [
+   "Adenocarcinoma",
+   "Smoking",
+   "Radon exposure",
+   "Haemoptysis"
+  ],
+  "pearl": "Up to about a quarter of lung cancers worldwide occur in people who have never smoked, and many are women with adenocarcinoma. A cough lasting more than three weeks deserves a chest X-ray, and a normal film does not fully exclude cancer if worry persists."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 20,
+  "difficulty": "Hard",
+  "title": "Off the skateboard",
+  "context": "A 29-year-old fell onto an outstretched hand from a skateboard and now has a swollen, deformed forearm and a painful wrist.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Galeazzi_Fracture_of_Distal_Radius.jpg",
+   "file": "Galeazzi Fracture of Distal Radius.jpg",
+   "author": "Th. Zimmermann",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-13.jpg",
+   "alt": "Two views of the forearm showing a displaced distal radial shaft fracture and disruption at the wrist"
+  },
+  "answer": "Galeazzi fracture-dislocation",
+  "wrong": [
+   "Monteggia fracture-dislocation",
+   "Colles fracture",
+   "Smith fracture",
+   "Essex-Lopresti injury",
+   "Both-bones forearm fracture"
+  ],
+  "hints": [
+   "Find the bone that is broken, then check the joint at the far end of the forearm.",
+   "The radius is broken in its lower third and the joint between radius and ulna at the wrist has come apart."
+  ],
+  "why": "Two views show a displaced fracture of the distal third of the radial shaft, with dislocation of the distal radioulnar joint at the wrist. The ulna itself is intact.",
+  "assoc": [
+   "Distal radioulnar joint",
+   "Fall on outstretched hand",
+   "Open reduction and fixation"
+  ],
+  "pearl": "A memory aid for the two look-alikes is MUGR: Monteggia breaks the Ulna, Galeazzi breaks the Radius. In adults this injury is unstable and usually needs surgical fixation, and every forearm fracture needs the wrist and elbow on the film."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 21,
+  "difficulty": "Hard",
+  "title": "Slow to walk",
+  "context": "A 2-year-old who was exclusively breastfed without vitamin D drops and gets little sun has been slow to walk and has thick wrists.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:RicketsXray.jpg",
+   "file": "RicketsXray.jpg",
+   "author": "Frank Gaillard",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-14.jpg",
+   "alt": "X-ray of both hands and wrists of a young child with cupped, frayed metaphyses at the distal radius and ulna"
+  },
+  "answer": "Rickets",
+  "wrong": [
+   "Scurvy",
+   "Achondroplasia",
+   "Lead poisoning",
+   "Osteogenesis imperfecta",
+   "Juvenile idiopathic arthritis"
+  ],
+  "hints": [
+   "Look at the ends of the radius and ulna, just before the growth plates.",
+   "The metaphyses are widened and cup-shaped, with fuzzy edges instead of a crisp line."
+  ],
+  "why": "Cupping, splaying and fraying of the distal radial and ulnar metaphyses, with a widened gap to the small epiphyses. Unmineralised growth plate is failing to calcify properly.",
+  "assoc": [
+   "Vitamin D deficiency",
+   "Calcium deficiency",
+   "Bowed legs",
+   "Rachitic rosary"
+  ],
+  "pearl": "Nutritional rickets is preventable and still common worldwide. Risks include darker skin, covered clothing, little sun, and breastfeeding without a vitamin D supplement. Treatment is vitamin D with enough calcium, and the X-ray changes usually heal."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 22,
+  "difficulty": "Genius",
+  "title": "After the crash",
+  "context": "A 34-year-old motorcyclist has left-sided rib and shoulder-tip pain after a road crash. Pulse 110, blood pressure holding.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:CT_Spleen_Rupture.jpg",
+   "file": "CT Spleen Rupture.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-15.jpg",
+   "alt": "Axial contrast CT of the upper abdomen with an irregular dark cleft in the spleen"
+  },
+  "answer": "Splenic laceration",
+  "wrong": [
+   "Splenic infarct",
+   "Splenic abscess",
+   "Pancreatic tail injury",
+   "Left renal laceration",
+   "Splenic lymphoma"
+  ],
+  "hints": [
+   "Compare the solid organs: liver, then the organ at the back on the right of the image.",
+   "There's an irregular dark cleft in the lower part of that organ, after a blow to the left side."
+  ],
+  "why": "Contrast CT in the portal venous phase shows an irregular low-density cleft in the spleen, which should enhance evenly, consistent with a traumatic tear.",
+  "assoc": [
+   "Kehr's sign",
+   "Blunt abdominal trauma",
+   "Lower left rib fractures",
+   "Post-splenectomy vaccination"
+  ],
+  "pearl": "Stable patients are often managed without surgery, sometimes with embolisation, and unstable patients go to theatre. After splenectomy, people need vaccines against encapsulated bacteria and a clear plan for fever."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 23,
+  "difficulty": "Easy",
+  "title": "A fall in the bathroom",
+  "context": "A 78-year-old woman slipped in her bathroom and can't stand. Her leg looks short and turned outwards.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Cdm_hip_fracture_343.jpg",
+   "file": "Cdm hip fracture 343.jpg",
+   "author": "Booyabazooka",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/2026-11-16.jpg",
+   "alt": "X-ray of the hip with a blue arrow at a displaced fracture of the femoral neck"
+  },
+  "answer": "Neck of femur fracture",
+  "wrong": [
+   "Intertrochanteric fracture",
+   "Posterior hip dislocation",
+   "Pubic ramus fracture",
+   "Greater trochanter fracture",
+   "Hip osteoarthritis"
+  ],
+  "hints": [
+   "Follow the arrow to the bone just below the ball of the hip.",
+   "The break sits between the head and the trochanters, inside the joint capsule."
+  ],
+  "why": "A displaced fracture through the femoral neck, just below the head, with the shaft shifted upwards. The break is above the trochanters, inside the capsule.",
+  "assoc": [
+   "Osteoporosis",
+   "Shortened, externally rotated leg",
+   "Falls prevention",
+   "Hip replacement"
+  ],
+  "pearl": "Aim for surgery within 48 hours, with good pain relief and early walking. About one in four people die within a year, so a hip fracture also calls for bone health treatment and a falls review."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 24,
+  "difficulty": "Easy",
+  "title": "Green vomit on day one",
+  "context": "A newborn, whose antenatal scan showed too much amniotic fluid, starts bilious vomiting within hours of birth.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Double-Bubble-Zeichen_bei_Duodenalatresie_und_Pancreas_anulare_1tW_-_CR_ap_-_001.jpg",
+   "file": "Double-Bubble-Zeichen bei Duodenalatresie und Pancreas anulare 1tW - CR ap - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-17.jpg",
+   "alt": "Abdominal X-ray of a newborn with two large gas-filled bubbles in the upper abdomen and no distal bowel gas"
+  },
+  "answer": "Duodenal atresia",
+  "wrong": [
+   "Pyloric stenosis",
+   "Midgut volvulus",
+   "Necrotising enterocolitis",
+   "Hirschsprung disease",
+   "Meconium ileus"
+  ],
+  "hints": [
+   "Count the gas-filled shapes in the upper abdomen.",
+   "There are two large bubbles side by side, and no gas beyond them."
+  ],
+  "why": "Two gas-filled structures, the stomach and the dilated first part of the duodenum, with no gas further down: the classic double bubble. In this baby surgery also found an annular pancreas.",
+  "assoc": [
+   "Trisomy 21",
+   "Polyhydramnios",
+   "Annular pancreas"
+  ],
+  "pearl": "About a third of babies with this condition have trisomy 21. Green vomit in a newborn is a surgical emergency until proven otherwise, because malrotation with volvulus can look similar and can cost the baby their bowel."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 25,
+  "difficulty": "Medium",
+  "title": "Puffing on the stairs",
+  "context": "A 71-year-old man with 40 pack-years of smoking is breathless on stairs and breathes out through pursed lips.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Barrowchest.JPG",
+   "file": "Barrowchest.JPG",
+   "author": "James Heilman, MD (cropped)",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-18.jpg",
+   "alt": "Lateral chest X-ray showing a barrel-shaped chest, large retrosternal space and flat diaphragm"
+  },
+  "answer": "Emphysema",
+  "wrong": [
+   "Asthma",
+   "Pulmonary fibrosis",
+   "Bronchiectasis",
+   "Pneumothorax",
+   "Heart failure"
+  ],
+  "hints": [
+   "This is a side-on film. Check the shape of the chest and the line of the diaphragm.",
+   "The chest is barrel-shaped, the air space behind the breastbone is large and the diaphragm is flat."
+  ],
+  "why": "Lateral chest X-ray with a barrel chest, a wide retrosternal air space and a flattened diaphragm: the signs of hyperinflated, damaged lungs.",
+  "assoc": [
+   "COPD",
+   "Smoking",
+   "Alpha-1 antitrypsin deficiency",
+   "Spirometry"
+  ],
+  "pearl": "The diagnosis of COPD comes from spirometry, not the X-ray, which can be normal in mild disease. Stopping smoking helps more than any other step. Smoke from indoor cooking fires is a major cause in women in low-income countries."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 26,
+  "difficulty": "Medium",
+  "title": "New breathlessness",
+  "context": "A 63-year-old man having chemotherapy through a port under his collarbone has become breathless over a few weeks.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Lungenmetastasen_bei_Pankreaskarzinom_im_Roentgenbild_des_Thorax_001.jpg",
+   "file": "Lungenmetastasen bei Pankreaskarzinom im Roentgenbild des Thorax 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-19.jpg",
+   "alt": "Frontal chest X-ray with many round nodules of varying size in both lungs and a chest wall port"
+  },
+  "answer": "Pulmonary metastases",
+  "wrong": [
+   "Miliary tuberculosis",
+   "Sarcoidosis",
+   "Septic emboli",
+   "Silicosis",
+   "Pneumocystis pneumonia"
+  ],
+  "hints": [
+   "Count the lesions, then look at their shape and where they sit.",
+   "Many round, soft-tissue nodules of different sizes, more in the lower lungs where blood flow is greatest."
+  ],
+  "why": "Countless round, well-defined nodules of varying size through both lungs, heavier at the bases, spread by the bloodstream. This man's primary was pancreatic cancer. A chemotherapy port is also visible.",
+  "assoc": [
+   "Pancreatic cancer",
+   "Colorectal cancer",
+   "Renal cell carcinoma",
+   "Choriocarcinoma"
+  ],
+  "pearl": "Blood-borne deposits collect at the lung bases because that's where most blood goes. Large 'cannonball' deposits are classically seen with kidney, colorectal and germ cell cancers. Miliary TB nodules are tiny and all the same size."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 27,
+  "difficulty": "Hard",
+  "title": "Aching and tired",
+  "context": "A 70-year-old has aching in the forearm, tiredness and recently worsening kidney function.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Plasmozytom_multiple_Osteolysen_Unterarm.png",
+   "file": "Plasmozytom multiple Osteolysen Unterarm.png",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-20.jpg",
+   "alt": "X-ray of the forearm and elbow with multiple punched-out holes in the bones"
+  },
+  "answer": "Multiple myeloma",
+  "wrong": [
+   "Bone metastases",
+   "Hyperparathyroidism",
+   "Osteomyelitis",
+   "Paget's disease",
+   "Fibrous dysplasia"
+  ],
+  "hints": [
+   "Run your eye down the shafts of both forearm bones and into the humerus.",
+   "Multiple round holes in the bone, punched out and without a dense rim around them."
+  ],
+  "why": "Multiple sharply defined, punched-out lytic lesions along the radius, ulna and distal humerus, with no surrounding sclerosis.",
+  "assoc": [
+   "CRAB: calcium, renal, anaemia, bone",
+   "Paraprotein",
+   "Bence Jones protein",
+   "Pathological fracture"
+  ],
+  "pearl": "Isotope bone scans can miss these lesions because bone-building activity is suppressed, so low-dose whole-body CT or MRI is preferred. Think of this diagnosis in an older person with unexplained anaemia, kidney impairment or back pain."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 28,
+  "difficulty": "Hard",
+  "title": "Off the horse",
+  "context": "A 23-year-old woman fell from a horse, landing on her outstretched forearm. The elbow and forearm are swollen.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Monteggia-Fraktur_23W_-_CR_ap_-_001.jpg",
+   "file": "Monteggia-Fraktur 23W - CR ap - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-21.jpg",
+   "alt": "Long X-ray of the forearm showing a proximal ulnar fracture and a dislocated radial head"
+  },
+  "answer": "Monteggia fracture-dislocation",
+  "wrong": [
+   "Galeazzi fracture-dislocation",
+   "Nightstick fracture of the ulna",
+   "Both-bones forearm fracture",
+   "Radial head fracture",
+   "Essex-Lopresti injury"
+  ],
+  "hints": [
+   "Find the broken bone, then look at the joint nearest the elbow.",
+   "The ulna is broken in its upper part, and a line along the radius no longer hits the capitellum."
+  ],
+  "why": "An angulated fracture of the proximal ulna with dislocation of the radial head at the elbow.",
+  "assoc": [
+   "Radiocapitellar line",
+   "Posterior interosseous nerve",
+   "Fall on outstretched hand"
+  ],
+  "pearl": "A line drawn down the shaft of the radius should pass through the capitellum in every view. The dislocation is easy to miss when the fracture draws your eye, which is why every forearm film should show the joints at both ends."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 29,
+  "difficulty": "Genius",
+  "title": "Hot knee, sudden onset",
+  "context": "A 76-year-old woman has a suddenly hot, swollen, painful knee, and no fever.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Chondrocalcinosis_-_annotated.jpg",
+   "file": "Chondrocalcinosis - annotated.jpg",
+   "author": "Taokinesis (Pixabay profile) Annotated by Mikael Häggström",
+   "licence": "CC0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-11-22.jpg",
+   "alt": "Frontal X-ray of the knee with arrows marking thin white calcification in the joint space"
+  },
+  "answer": "Chondrocalcinosis (pseudogout)",
+  "wrong": [
+   "Septic arthritis",
+   "Gout",
+   "Osteoarthritis",
+   "Haemochromatosis arthropathy",
+   "Rheumatoid arthritis"
+  ],
+  "hints": [
+   "Look where the arrows point, within the joint space itself.",
+   "There's a thin white line inside the cartilage where there should be nothing visible."
+  ],
+  "why": "Thin calcification within the meniscal cartilage on both sides of the joint, marked by the arrows. Calcium pyrophosphate crystals are deposited in the cartilage and can trigger acute flares.",
+  "assoc": [
+   "Calcium pyrophosphate crystals",
+   "Haemochromatosis",
+   "Hyperparathyroidism",
+   "Hypomagnesaemia"
+  ],
+  "pearl": "Calcium pyrophosphate crystals are rhomboid and weakly positively birefringent, while gout's are needle-shaped and strongly negative. Always aspirate a hot joint to rule out infection. Onset under 60 should prompt a metabolic work-up."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 30,
+  "difficulty": "Easy",
+  "title": "Lucid, then drowsy",
+  "context": "A 24-year-old was hit on the side of the head, seemed fine for an hour, and is now increasingly drowsy.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:EpiduralHematoma.jpg",
+   "file": "EpiduralHematoma.jpg",
+   "author": "James Heilman, MD",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-23.jpg",
+   "alt": "Axial head CT with a bright lens-shaped collection under the skull, marked by a red arrow, and midline shift"
+  },
+  "answer": "Extradural haematoma",
+  "wrong": [
+   "Subdural haematoma",
+   "Subarachnoid haemorrhage",
+   "Intracerebral haemorrhage",
+   "Meningioma",
+   "Brain abscess"
+  ],
+  "hints": [
+   "Look at the shape of the bright collection by the arrow.",
+   "It's lens-shaped, bulging inwards, and limited by the skull sutures."
+  ],
+  "why": "A bright, biconvex (lens-shaped) collection under the skull on the patient's left, pressing on the brain and pushing the midline across. There is also a smaller bruise on the opposite side.",
+  "assoc": [
+   "Middle meningeal artery",
+   "Temporal bone fracture",
+   "Lucid interval",
+   "Burr hole"
+  ],
+  "pearl": "The classic source is the middle meningeal artery, torn by a fracture at the side of the skull. It can be fatal within hours but has a good outcome if evacuated quickly, so a falling GCS after head injury means urgent CT and neurosurgery."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 31,
+  "difficulty": "Easy",
+  "title": "Landed on the heels",
+  "context": "A 38-year-old fell from a ladder and landed on both heels. One heel is badly swollen and bruised, and they can't stand.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Calcaneus_Fracture.jpg",
+   "file": "Calcaneus Fracture.jpg",
+   "author": "Jojo",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/2026-11-24.jpg",
+   "alt": "Lateral X-ray of the foot and ankle with a crushed, irregular heel bone"
+  },
+  "answer": "Calcaneal fracture",
+  "wrong": [
+   "Talar neck fracture",
+   "Achilles tendon rupture",
+   "Navicular fracture",
+   "Lisfranc injury",
+   "Sever's disease"
+  ],
+  "hints": [
+   "Look at the big bone at the back of the foot.",
+   "The heel bone has lost its shape and its internal lines are jumbled, as if it's been crushed."
+  ],
+  "why": "Lateral foot X-ray showing a comminuted, flattened heel bone with a disrupted joint surface under the talus.",
+  "assoc": [
+   "Böhler's angle",
+   "Fall from height",
+   "Lumbar compression fracture"
+  ],
+  "pearl": "These are axial load injuries, so always examine the spine and the other heel: about 1 in 10 people also have a vertebral fracture. A reduced Böhler's angle can be the giveaway on subtler films, and CT guides treatment."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 32,
+  "difficulty": "Medium",
+  "title": "Waves of crying",
+  "context": "A 9-month-old has waves of screaming with knees drawn up, vomiting, and lies pale and floppy between bouts.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Ultrasound_of_target_sign_in_intussusception_of_the_right_bowel.png",
+   "file": "Ultrasound of target sign in intussusception of the right bowel.png",
+   "author": "Cerevisae (cropped)",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-11-25.jpg",
+   "alt": "Abdominal ultrasound image with a round target of concentric rings of bowel"
+  },
+  "answer": "Intussusception",
+  "wrong": [
+   "Pyloric stenosis",
+   "Appendicitis",
+   "Midgut volvulus",
+   "Meckel's diverticulum",
+   "Gastroenteritis"
+  ],
+  "hints": [
+   "This is an abdominal ultrasound. Look for a round structure, and what's inside it.",
+   "Concentric rings: a layer of bowel sliding inside another layer of bowel."
+  ],
+  "why": "A target-shaped mass of concentric rings on bowel ultrasound: bowel telescoped inside bowel, usually near the junction of small and large bowel.",
+  "assoc": [
+   "Red-currant jelly stool",
+   "Air enema",
+   "Peyer's patches",
+   "Sausage-shaped mass"
+  ],
+  "pearl": "The textbook triad of colicky pain, vomiting and red-currant jelly stool appears in a minority, so a lethargic infant with episodic crying should raise suspicion. Most cases can be reduced with an air or contrast enema unless there's shock or perforation."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 33,
+  "difficulty": "Medium",
+  "title": "Sudden headache and weakness",
+  "context": "A 69-year-old woman with poorly controlled high blood pressure has sudden headache, vomiting and arm weakness.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Intracerebral_hemorrage_(CT_scan).jpg",
+   "file": "Intracerebral hemorrage (CT scan).jpg",
+   "author": "Glitzy queen00 at English Wikipedia",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/2026-11-26.jpg",
+   "alt": "Axial head CT with bright blood inside the brain and in the ventricles"
+  },
+  "answer": "Intracerebral haemorrhage",
+  "wrong": [
+   "Subdural haematoma",
+   "Extradural haematoma",
+   "Subarachnoid haemorrhage",
+   "Ischaemic stroke",
+   "Glioblastoma"
+  ],
+  "hints": [
+   "Is the bright area around the brain, or within it?",
+   "White blood sits within the brain tissue and has spilled into the ventricles."
+  ],
+  "why": "Bright, fresh blood within the brain substance, tracking into the ventricular system, with blood layering in the back of the lateral ventricles.",
+  "assoc": [
+   "Hypertension",
+   "Anticoagulants",
+   "Amyloid angiopathy",
+   "Hydrocephalus"
+  ],
+  "pearl": "Bleeding and clot strokes can look alike at the bedside, so CT comes first. Treatment aims to control blood pressure quickly and reverse any anticoagulant. Blood in the ventricles carries a worse outlook and can cause hydrocephalus."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 34,
+  "difficulty": "Hard",
+  "title": "Back pain on arching",
+  "context": "A 16-year-old gymnast has low back pain that gets worse when arching backwards.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:SpondylolisthesisL5S1.jpg",
+   "file": "SpondylolisthesisL5S1.jpg",
+   "author": "Lucien Monfils",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-27.jpg",
+   "alt": "Lateral X-ray of the lower lumbar spine with an arrow where L5 has slipped forward on S1"
+  },
+  "answer": "Spondylolisthesis",
+  "wrong": [
+   "Ankylosing spondylitis",
+   "Vertebral compression fracture",
+   "Lumbar disc prolapse",
+   "Scheuermann's disease",
+   "Spinal stenosis"
+  ],
+  "hints": [
+   "Line up the back edges of the lumbar vertebrae, going down to the sacrum.",
+   "The lowest lumbar vertebra has slipped forwards on the one beneath it."
+  ],
+  "why": "Lateral lumbar X-ray with forward slippage of L5 on S1, marked by the arrow, breaking the smooth line of the back of the vertebrae.",
+  "assoc": [
+   "Pars interarticularis defect",
+   "Scottie dog collar",
+   "Repetitive extension sports",
+   "Hamstring tightness"
+  ],
+  "pearl": "Spondylolysis is a stress defect in the pars. If the vertebra then slips forwards, it becomes this diagnosis. It's common in gymnasts, divers and fast bowlers. Most settle with activity changes and rehab, and the highest-grade slips need specialist care."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 35,
+  "difficulty": "Hard",
+  "title": "Pain low on the left",
+  "context": "A 61-year-old woman has three days of left lower abdominal pain, a fever and raised inflammatory markers.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:02-Sigmadivertikulitis_CT_ax_001_Umgebung.png",
+   "file": "02-Sigmadivertikulitis CT ax 001 Umgebung.png",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-28.jpg",
+   "alt": "Axial CT of the pelvis with a red arrow near inflamed sigmoid colon"
+  },
+  "answer": "Sigmoid diverticulitis",
+  "wrong": [
+   "Appendicitis",
+   "Colorectal cancer",
+   "Ischaemic colitis",
+   "Crohn's disease",
+   "Ovarian torsion"
+  ],
+  "hints": [
+   "Find the colon on the left side of the patient, which is on the right of the image, near the arrow.",
+   "There are small outpouchings of the bowel wall, with hazy inflamed fat around them."
+  ],
+  "why": "Axial CT with contrast shows thickened sigmoid colon with diverticula and stranding of the fat around it. The arrow marks a small contained perforation and abscess.",
+  "assoc": [
+   "Diverticulosis",
+   "Pericolic abscess",
+   "Low-fibre diet",
+   "Colovesical fistula"
+  ],
+  "pearl": "Uncomplicated cases don't always need antibiotics. After a complicated episode, or if the colon hasn't been checked recently, colonoscopy about 6 weeks later helps exclude cancer, which can look similar on CT."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 36,
+  "difficulty": "Genius",
+  "title": "A nurse's groin pain",
+  "context": "A 51-year-old nurse has had months of worsening left groin pain on walking, with no injury.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:X-ray_of_pelvis_with_idiopathic_avascular_necrosis_of_the_femoral_head.jpg",
+   "file": "X-ray of pelvis with idiopathic avascular necrosis of the femoral head.jpg",
+   "author": "Mikael Häggström",
+   "licence": "CC0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-11-29.jpg",
+   "alt": "Frontal X-ray of the pelvis with a dense, slightly flattened left femoral head"
+  },
+  "answer": "Avascular necrosis of the femoral head",
+  "wrong": [
+   "Hip osteoarthritis",
+   "Perthes disease",
+   "Transient osteoporosis of the hip",
+   "Femoral neck stress fracture",
+   "Septic arthritis"
+  ],
+  "hints": [
+   "Compare the two femoral heads: their roundness and density.",
+   "The left head is patchy, dense and starting to lose its smooth round contour."
+  ],
+  "why": "The left femoral head shows patchy sclerosis and loss of its normal rounded contour, while the right looks normal. There's no major fracture.",
+  "assoc": [
+   "Corticosteroids",
+   "Alcohol",
+   "Sickle cell disease",
+   "Crescent sign"
+  ],
+  "pearl": "X-rays can be normal early, so MRI is the test when pain persists. Causes include steroids, alcohol, sickle cell disease and trauma, though some cases are idiopathic. A subchondral crescent means the surface is collapsing."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 37,
+  "difficulty": "Easy",
+  "title": "Heart sounds on the right",
+  "context": "A well 28-year-old has a pre-employment chest X-ray. The doctor hears the heart sounds best on the right.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Situs_inversus_chest_Nevit.jpg",
+   "file": "Situs inversus chest Nevit.jpg",
+   "author": "Nevit",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-11-30.jpg",
+   "alt": "Frontal chest X-ray with the heart and stomach gas on the patient's right side"
+  },
+  "answer": "Situs inversus with dextrocardia",
+  "wrong": [
+   "Reversed film (side marker error)",
+   "Left pneumonectomy",
+   "Right middle lobe collapse",
+   "Tetralogy of Fallot",
+   "Congenital diaphragmatic hernia"
+  ],
+  "hints": [
+   "Check the side marker first, then find the apex of the heart and the stomach bubble.",
+   "The marker is correct, yet the heart's apex and the stomach gas are both on the patient's right."
+  ],
+  "why": "The side marker is correct, yet the heart's apex and the gastric bubble are both on the patient's right. The organs are mirror-imaged, and the liver lies on the left.",
+  "assoc": [
+   "Primary ciliary dyskinesia",
+   "Kartagener syndrome",
+   "Bronchiectasis",
+   "Mirror-image organs"
+  ],
+  "pearl": "About 1 in 4 people with complete mirror-image organs have primary ciliary dyskinesia, so ask about chronic sinus and chest infections. Most hearts are structurally normal. It's worth telling future doctors: appendicitis pain may be on the left."
  }
 ]

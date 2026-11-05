@@ -1,0 +1,1180 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 38,
+  "difficulty": "Easy",
+  "title": "Off the monkey bars",
+  "context": "A 7-year-old fell off the monkey bars and has a sore, slightly bent forearm.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Gruenholzfraktur_-_Unterarmfraktur.jpg",
+   "file": "Gruenholzfraktur - Unterarmfraktur.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-01.jpg",
+   "alt": "Forearm X-ray of a child with red arrows at incomplete fractures of the radius and ulna"
+  },
+  "answer": "Greenstick fracture",
+  "wrong": [
+   "Torus fracture",
+   "Salter-Harris fracture",
+   "Complete both-bones fracture",
+   "Plastic bowing deformity",
+   "Galeazzi fracture-dislocation"
+  ],
+  "hints": [
+   "Look where the arrows point, along both cortices of each bone.",
+   "Only one side of each bone has broken, while the other side has bent, like a young branch."
+  ],
+  "why": "Both radius and ulna are angulated with a break through one cortex, and the opposite cortex is bent but intact: an incomplete fracture of springy young bone.",
+  "assoc": [
+   "Fall on outstretched hand",
+   "Immature bone",
+   "Forearm",
+   "Re-fracture"
+  ],
+  "pearl": "Children's bones bend before they break. Greenstick injuries may need straightening under sedation if they're angulated, and they can re-fracture. By contrast, a torus fracture is a small buckle in the cortex that usually just needs a splint."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 39,
+  "difficulty": "Medium",
+  "title": "A very big shadow",
+  "context": "A 72-year-old with long-standing heart failure has swollen ankles and gets breathless walking to the letterbox.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Cardiomegally.PNG",
+   "file": "Cardiomegally.PNG",
+   "author": "James Heilman, MD",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-02.jpg",
+   "alt": "Frontal chest X-ray with a massively enlarged heart shadow and an implanted device with leads"
+  },
+  "answer": "Cardiomegaly",
+  "wrong": [
+   "Pericardial effusion",
+   "Bilateral pleural effusions",
+   "Mediastinal mass",
+   "Thoracic aortic aneurysm",
+   "Hiatus hernia"
+  ],
+  "hints": [
+   "Compare the width of the heart with the width of the chest.",
+   "The heart takes up well over half of the chest, and there's a heart device in place."
+  ],
+  "why": "The cardiac silhouette is greatly enlarged, far more than half the width of the chest. An implanted cardiac device and leads are also visible.",
+  "assoc": [
+   "Dilated cardiomyopathy",
+   "Ischaemic heart disease",
+   "Hypertension",
+   "Valve disease"
+  ],
+  "pearl": "On a standing PA film, a cardiothoracic ratio above 0.5 is abnormal, but AP films exaggerate heart size. The X-ray can't tell a big heart from fluid around it, so echocardiography is the next test. Rheumatic heart disease remains a major cause in young people in low-income settings and in Aboriginal, Torres Strait Islander, Māori and Pacific communities."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 40,
+  "difficulty": "Medium",
+  "title": "Hands that have worked hard",
+  "context": "A 65-year-old woman has decades of painful hands, with over an hour of morning stiffness. She uses adapted tools at home.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Rheumatoide_Arthritis_der_Hand_65W_-_CR_schraeg_-_001.jpg",
+   "file": "Rheumatoide Arthritis der Hand 65W - CR schraeg - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-03.jpg",
+   "alt": "Oblique X-ray of a hand with severe joint destruction, subluxation at the knuckles and carpal damage"
+  },
+  "answer": "Rheumatoid arthritis",
+  "wrong": [
+   "Osteoarthritis",
+   "Psoriatic arthritis",
+   "Gout",
+   "Erosive osteoarthritis",
+   "Lupus arthropathy"
+  ],
+  "hints": [
+   "Look at the knuckles and wrist rather than the fingertips.",
+   "The knuckles have partly dislocated and the fingers have drifted, with eroded joints and a damaged wrist."
+  ],
+  "why": "Severe joint destruction at the knuckles and wrist with marginal erosions, subluxation and drift of the fingers, plus some old finger fractures.",
+  "assoc": [
+   "Anti-CCP antibodies",
+   "Rheumatoid factor",
+   "Ulnar deviation",
+   "Disease-modifying drugs"
+  ],
+  "pearl": "Starting disease-modifying treatment early, ideally within about three months of symptoms, prevents much of this damage. Occupational therapy, hand surgery and assistive tools help people stay independent and working."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 41,
+  "difficulty": "Hard",
+  "title": "Knee pain at night",
+  "context": "A 15-year-old has a month of knee pain that wakes them at night, and a firm swelling below the knee.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Osteosarcoma_of_the_tibia.png",
+   "file": "Osteosarcoma of the tibia.png",
+   "author": "Yousef Samir",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-04.jpg",
+   "alt": "Lateral X-ray of the knee and upper tibia with a dense destructive lesion breaking through the bone"
+  },
+  "answer": "Osteosarcoma",
+  "wrong": [
+   "Ewing sarcoma",
+   "Osteomyelitis",
+   "Chondrosarcoma",
+   "Giant cell tumour",
+   "Osteochondroma"
+  ],
+  "hints": [
+   "Look at the upper shaft of the tibia, both within the bone and outside it.",
+   "There's dense, cloudy bone-forming tumour pushing out through the cortex near the metaphysis of a teenager."
+  ],
+  "why": "A destructive, partly sclerotic lesion of the proximal tibial metaphysis, with dense new bone extending through the cortex into the soft tissues.",
+  "assoc": [
+   "Sunburst periosteal reaction",
+   "Codman triangle",
+   "Teenage growth spurt",
+   "Lung metastases"
+  ],
+  "pearl": "Knee pain at night in a teenager isn't growing pains until a normal X-ray says so. Biopsy belongs in a specialist bone tumour centre because a poorly placed tract can spoil limb-saving surgery. There's a second, smaller peak in older people with Paget's disease."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 42,
+  "difficulty": "Hard",
+  "title": "Pain through to the back",
+  "context": "A 52-year-old with known gallstones has sudden severe upper abdominal pain radiating to the back, and is vomiting.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Akute_exsudative_Pankreatitis_-_CT_axial.jpg",
+   "file": "Akute exsudative Pankreatitis - CT axial.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-05.jpg",
+   "alt": "Axial contrast CT of the upper abdomen with a swollen pancreas surrounded by fluid"
+  },
+  "answer": "Acute pancreatitis",
+  "wrong": [
+   "Pancreatic cancer",
+   "Perforated peptic ulcer",
+   "Mesenteric ischaemia",
+   "Ruptured aortic aneurysm",
+   "Acute cholecystitis"
+  ],
+  "hints": [
+   "Find the organ lying across the spine, behind the stomach.",
+   "It's swollen, with streaks of fluid around it tracking out into the nearby fat."
+  ],
+  "why": "Axial contrast CT with a swollen pancreas surrounded by extensive fluid tracking through the retroperitoneal fat.",
+  "assoc": [
+   "Gallstones",
+   "Alcohol",
+   "Hypertriglyceridaemia",
+   "Raised lipase"
+  ],
+  "pearl": "Diagnosis needs two of three: typical pain, lipase over three times normal, or imaging. So CT isn't needed early in clear cases, and is best delayed 72 hours if looking for necrosis. Gallstones and alcohol cause most episodes worldwide."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 43,
+  "difficulty": "Genius",
+  "title": "A stonemason's cough",
+  "context": "A 38-year-old stonemason who spent years dry-cutting kitchen benchtops has had a dry cough for a year.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Silicosis_simple.jpg",
+   "file": "Silicosis simple.jpg",
+   "author": "Gumersindorego",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-06.jpg",
+   "alt": "Frontal chest X-ray with small rounded nodules, mostly in the upper zones"
+  },
+  "answer": "Silicosis",
+  "wrong": [
+   "Sarcoidosis",
+   "Miliary tuberculosis",
+   "Asbestosis",
+   "Coal workers' pneumoconiosis",
+   "Hypersensitivity pneumonitis"
+  ],
+  "hints": [
+   "Look closely at the upper zones of both lungs.",
+   "Small, rounded, scattered nodules, in someone exposed to crystalline dust at work."
+  ],
+  "why": "Small rounded nodules through both lungs, more in the upper zones: the picture of simple disease from inhaled crystalline dust.",
+  "assoc": [
+   "Engineered stone",
+   "Tuberculosis",
+   "Progressive massive fibrosis",
+   "Eggshell hilar calcification"
+  ],
+  "pearl": "Engineered stone can be more than 90% crystalline silica, and has caused accelerated disease in young workers. Australia banned its use from July 2024. People with this condition are more prone to tuberculosis, so keep a low threshold for testing."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 44,
+  "difficulty": "Easy",
+  "title": "A fall last week",
+  "context": "An 82-year-old on a blood thinner fell last week and is now more confused and drowsy.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Trauma_subdural_arrow.jpg",
+   "file": "Trauma subdural arrow.jpg",
+   "author": "Glitzy queen00 at English Wikipedia",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/2026-12-07.jpg",
+   "alt": "Axial head CT with a yellow arrow at a crescent-shaped collection and midline shift"
+  },
+  "answer": "Subdural haematoma",
+  "wrong": [
+   "Extradural haematoma",
+   "Subarachnoid haemorrhage",
+   "Intracerebral haemorrhage",
+   "Ischaemic stroke",
+   "Cerebral atrophy"
+  ],
+  "hints": [
+   "Follow the arrow. Look at the shape of the collection over the surface of the brain.",
+   "It's a crescent hugging the curve of the brain, crossing suture lines and pushing the midline across."
+  ],
+  "why": "A crescent-shaped collection over the surface of the brain, marked by the arrow, with mass effect and shift of the midline. A ventricular drain is also present.",
+  "assoc": [
+   "Bridging veins",
+   "Older age",
+   "Anticoagulants",
+   "Alcohol"
+  ],
+  "pearl": "Shrinking brains stretch the bridging veins, which is why older people and those on anticoagulants are prone to this, sometimes after a minor bump. Crescents cross sutures but not the midline; lens-shaped arterial bleeds do the opposite."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 45,
+  "difficulty": "Easy",
+  "title": "A board-like belly",
+  "context": "A 76-year-old man has sudden, severe abdominal pain and a rigid abdomen. Too unwell to sit up, he has this film lying on his left side.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Pneumoperitoneum_bei_Sigmaperforation_76M_-_CR_LSL_-_001.jpg",
+   "file": "Pneumoperitoneum bei Sigmaperforation 76M - CR LSL - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-08.jpg",
+   "alt": "Left lateral decubitus abdominal X-ray with a large dark pocket of gas above the liver"
+  },
+  "answer": "Pneumoperitoneum",
+  "wrong": [
+   "Chilaiditi sign",
+   "Subphrenic abscess",
+   "Pneumothorax",
+   "Large bowel obstruction",
+   "Gastric volvulus"
+  ],
+  "hints": [
+   "He's lying on his left side, so gas rises towards his right flank. Look above the liver.",
+   "A big black space outlines the top of the liver, outside the bowel."
+  ],
+  "why": "Left lateral decubitus film with a large pocket of free gas rising over the liver and gas on both sides of the bowel wall (Rigler sign). Here the cause was a perforated sigmoid colon. A tube is also visible.",
+  "assoc": [
+   "Perforated peptic ulcer",
+   "Perforated diverticulum",
+   "Rigler sign",
+   "Recent abdominal surgery"
+  ],
+  "pearl": "If a person can't sit up, a left lateral decubitus film shows free gas over the liver. If they can, sit them upright for 10 minutes before an erect chest film. A normal film doesn't exclude perforation, so go to CT if you're still worried."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 46,
+  "difficulty": "Medium",
+  "title": "Worst headache ever",
+  "context": "A 47-year-old woman has a sudden thunderclap headache while exercising, followed by vomiting and a stiff neck.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Subarachnoid_haemorrhage.jpg",
+   "file": "Subarachnoid haemorrhage.jpg",
+   "author": "Lipothymia",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/2026-12-09.jpg",
+   "alt": "Axial head CT with bright blood in a star shape around the base of the brain"
+  },
+  "answer": "Subarachnoid haemorrhage",
+  "wrong": [
+   "Extradural haematoma",
+   "Subdural haematoma",
+   "Pituitary apoplexy",
+   "Bacterial meningitis",
+   "Intracerebral haemorrhage"
+  ],
+  "hints": [
+   "Look at the spaces around the base of the brain.",
+   "Bright lines fill the normally dark star-shaped space at the centre of the scan."
+  ],
+  "why": "Non-contrast CT with bright blood filling the basal cisterns in a star shape, spreading into the Sylvian fissures, with no focal clot in the brain.",
+  "assoc": [
+   "Berry aneurysm",
+   "Smoking",
+   "Hypertension",
+   "Adult polycystic kidney disease"
+  ],
+  "pearl": "CT within 6 hours of onset is very sensitive on a modern scanner. After that, a normal CT needs a lumbar puncture for xanthochromia. It's more common in women and those who smoke, and most cases come from a burst berry aneurysm."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 47,
+  "difficulty": "Medium",
+  "title": "A flask-shaped heart",
+  "context": "A 33-year-old man has sharp chest pain, better leaning forward, after a viral illness, and is now short of breath.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:28-01-Perikarderguss_Perimyokarditis_pa.png",
+   "file": "28-01-Perikarderguss Perimyokarditis pa.png",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-10.jpg",
+   "alt": "Frontal chest X-ray with a large, smooth, globular heart shadow"
+  },
+  "answer": "Pericardial effusion",
+  "wrong": [
+   "Dilated cardiomyopathy",
+   "Mitral stenosis",
+   "Bilateral pleural effusions",
+   "Anterior mediastinal mass",
+   "Aortic regurgitation"
+  ],
+  "hints": [
+   "Look at the shape of the heart's outline, not just the width.",
+   "It's a smooth, symmetrical, flask-like outline, and the lungs look clear of oedema."
+  ],
+  "why": "A large, smooth, globular 'water-bottle' heart shadow with fairly clear lungs. In this patient the cause was perimyocarditis.",
+  "assoc": [
+   "Pericarditis",
+   "Tamponade",
+   "Beck's triad",
+   "Tuberculosis"
+  ],
+  "pearl": "Echocardiography confirms the diagnosis and looks for tamponade. A slowly growing collection can be huge before symptoms, while a small, fast one can stop the heart. Tuberculosis is a leading cause in many low-income countries."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 48,
+  "difficulty": "Hard",
+  "title": "High on the trail",
+  "context": "A 31-year-old on a fast ascent to 4,500 m is breathless at rest on day two, with a dry cough and low oxygen levels.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Chest_XR_of_HAPE.png",
+   "file": "Chest XR of HAPE.png",
+   "author": "Maryrosegrant",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-11.jpg",
+   "alt": "Frontal chest X-ray with patchy shadowing through both lungs and a normal-sized heart"
+  },
+  "answer": "High-altitude pulmonary oedema",
+  "wrong": [
+   "Community-acquired pneumonia",
+   "Cardiogenic pulmonary oedema",
+   "Acute respiratory distress syndrome",
+   "Pulmonary embolism",
+   "Aspiration pneumonitis"
+  ],
+  "hints": [
+   "Check the size of the heart, then look across both lungs.",
+   "A normal-sized heart with patchy shadowing in a person who's just gone up very high."
+  ],
+  "why": "Patchy, widespread shadowing through the lungs with a normal-sized heart. Low oxygen causes uneven constriction of the lung arteries, and fluid leaks into the air spaces.",
+  "assoc": [
+   "Hypoxic pulmonary vasoconstriction",
+   "Rapid ascent",
+   "Acute mountain sickness",
+   "Descent"
+  ],
+  "pearl": "Descent is the treatment, with oxygen if available and nifedipine if descent is delayed. It's most often seen above 2,500 m within the first days. Slow ascent prevents most cases, and it can recur in people who have had it before."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 49,
+  "difficulty": "Hard",
+  "title": "Collapse after a long flight",
+  "context": "A 42-year-old woman who is on the combined pill felt sudden breathlessness and collapsed after a long-haul flight. Blood pressure is low.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Pulmonary_Embolism.jpg",
+   "file": "Pulmonary Embolism.jpg",
+   "author": "James Heilman, MD",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-12.jpg",
+   "alt": "Axial contrast CT of the chest with a dark clot straddling the pulmonary artery division"
+  },
+  "answer": "Saddle pulmonary embolism",
+  "wrong": [
+   "Aortic dissection",
+   "Pulmonary hypertension",
+   "Pulmonary artery sarcoma",
+   "Mediastinal lymphadenopathy",
+   "Pneumonia"
+  ],
+  "hints": [
+   "This is a CT with contrast. Follow the bright vessel that divides in the middle of the chest.",
+   "A dark filling defect sits across the split in the main artery leading to the lungs."
+  ],
+  "why": "Contrast CT shows a dark filling defect straddling the division of the main pulmonary artery, extending into both sides.",
+  "assoc": [
+   "Deep vein thrombosis",
+   "Oestrogen",
+   "Pregnancy",
+   "Right heart strain"
+  ],
+  "pearl": "Shock with a big clot is an indication to consider urgent reperfusion such as thrombolysis. Pregnancy and the postpartum period, oestrogen, cancer and immobility all raise risk."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 50,
+  "difficulty": "Genius",
+  "title": "Shoulder pain for months",
+  "context": "A 59-year-old woman who smokes has had months of shoulder pain running down the inner arm. Physio hasn't helped.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Pancoast_TDM_coronal.jpg",
+   "file": "Pancoast TDM coronal.jpg",
+   "author": "Aspérule",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-13.jpg",
+   "alt": "Coronal chest CT in lung window with a white arrow over a mass at the right lung apex"
+  },
+  "answer": "Pancoast tumour",
+  "wrong": [
+   "Apical pleural cap",
+   "Apical tuberculosis scar",
+   "Cervical rib",
+   "Subclavian artery aneurysm",
+   "Thoracic outlet syndrome"
+  ],
+  "hints": [
+   "Look at the very top of the right lung, by the arrow.",
+   "There's soft tissue at the apex that shouldn't be there, close to nerves heading for the arm."
+  ],
+  "why": "Coronal CT in lung window shows a soft-tissue mass at the right lung apex, under the arrow, near the brachial plexus.",
+  "assoc": [
+   "Horner's syndrome",
+   "Brachial plexus (C8–T1)",
+   "Lung cancer",
+   "Superior sulcus"
+  ],
+  "pearl": "These apical lung cancers invade the lower brachial plexus and sympathetic chain, so pain in the shoulder and inner arm or a droopy eyelid may come first. Plain films can look almost normal, so always check the apices in a smoker with stubborn shoulder pain."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 51,
+  "difficulty": "Easy",
+  "title": "Before her operation",
+  "context": "An 84-year-old woman who used to faint from a slow heartbeat has a chest X-ray before a hip operation.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:VVI_Schrittmacher_THWZ.jpg",
+   "file": "VVI Schrittmacher THWZ.jpg",
+   "author": "Th. Zimmermann (THWZ)",
+   "licence": "CC BY-SA 3.0 de",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "url": "img/2026-12-14.jpg",
+   "alt": "Frontal chest X-ray with a device below the right collarbone and one wire reaching the right ventricle"
+  },
+  "answer": "Permanent pacemaker",
+  "wrong": [
+   "Implantable cardioverter-defibrillator",
+   "Implantable loop recorder",
+   "Implanted chemotherapy port",
+   "Spinal cord stimulator",
+   "Retained foreign body"
+  ],
+  "hints": [
+   "Look under the collarbone, then trace the wire.",
+   "A single thin lead runs to the right ventricle, with no thick coils along it."
+  ],
+  "why": "A generator sits in the right upper chest, with a single thin lead passing through the veins to the apex of the right ventricle. There are no thick shock coils.",
+  "assoc": [
+   "Sick sinus syndrome",
+   "Complete heart block",
+   "Lead displacement",
+   "MRI safety check"
+  ],
+  "pearl": "The lead tells you the device: a defibrillator has a thick, bright shock coil. Single-lead ventricular devices are often used in permanent atrial fibrillation. Always check device details before MRI or surgery using electrocautery."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 52,
+  "difficulty": "Easy",
+  "title": "A pulsing mass",
+  "context": "A 74-year-old male smoker has back pain. The doctor feels a pulsating mass above his belly button.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:AneursymCT.png",
+   "file": "AneursymCT.png",
+   "author": "James Heilman, MD",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-15.jpg",
+   "alt": "Axial contrast CT of the abdomen with a greatly widened aorta in front of the spine"
+  },
+  "answer": "Abdominal aortic aneurysm",
+  "wrong": [
+   "Aortic dissection",
+   "Retroperitoneal lymphoma",
+   "Horseshoe kidney",
+   "Psoas abscess",
+   "Inferior vena cava thrombus"
+  ],
+  "hints": [
+   "Look in front of the spine for the largest vessel.",
+   "The bright contrast-filled channel sits inside a much wider vessel, lined with grey clot and flecks of calcium."
+  ],
+  "why": "Axial contrast CT shows the aorta in front of the spine widened well beyond 3 cm, with a bright central channel and clot lining the wall.",
+  "assoc": [
+   "Smoking",
+   "Older men",
+   "Screening ultrasound",
+   "Marfan syndrome"
+  ],
+  "pearl": "An aorta of 3 cm or more counts. Repair is usually considered at 5.5 cm in men, and earlier in women, who rupture at smaller sizes. Back pain, low blood pressure and a pulsing mass mean rupture until proven otherwise, and it's a surgical emergency."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 53,
+  "difficulty": "Medium",
+  "title": "Sudden left-sided weakness",
+  "context": "A 71-year-old woman with atrial fibrillation who isn't on an anticoagulant has a sudden droopy face and a weak left arm.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:CT_Brain_MCA_Infarct.jpg",
+   "file": "CT Brain MCA Infarct.jpg",
+   "author": "Lucien Monfils",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-16.jpg",
+   "alt": "Axial head CT with a large dark wedge of brain on one side, consistent with a territory infarct"
+  },
+  "answer": "Ischaemic stroke",
+  "wrong": [
+   "Subdural haematoma",
+   "Intracerebral haemorrhage",
+   "Glioblastoma",
+   "Herpes simplex encephalitis",
+   "Brain abscess"
+  ],
+  "hints": [
+   "Compare the two sides of the brain. Is one darker than the other?",
+   "A wedge of dark, swollen tissue follows one large artery's territory, with no bright blood."
+  ],
+  "why": "A large wedge of low density in the right middle cerebral artery territory, with loss of the grey-white distinction, mild swelling and no blood.",
+  "assoc": [
+   "Atrial fibrillation",
+   "Hypertension",
+   "Thrombolysis",
+   "Clot retrieval"
+  ],
+  "pearl": "Early CT can look normal and is mainly done to exclude bleeding. Clot-busting treatment may be given within 4.5 hours, and clot retrieval works in selected people later on. Anticoagulation has historically been under-used in women with atrial fibrillation."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 54,
+  "difficulty": "Medium",
+  "title": "That big toe again",
+  "context": "An 88-year-old woman on a water tablet keeps getting hot, swollen attacks at the base of her big toe.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Gichtarthritis_Grosszehengrundgelenk_94W_-_CR_pa_-_001.jpg",
+   "file": "Gichtarthritis Grosszehengrundgelenk 94W - CR pa - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-17.jpg",
+   "alt": "X-ray of the forefoot with erosions around the first metatarsophalangeal joint"
+  },
+  "answer": "Gout",
+  "wrong": [
+   "Septic arthritis",
+   "Hallux rigidus",
+   "Psoriatic arthritis",
+   "Bunion with bursitis",
+   "Charcot foot"
+  ],
+  "hints": [
+   "Look closely around the joint at the base of the big toe.",
+   "There are punched-out erosions with overhanging edges near the joint, and the joint space is partly kept."
+  ],
+  "why": "Sharply defined erosions around the first metatarsophalangeal joint, some with overhanging edges, and swelling of the soft tissues.",
+  "assoc": [
+   "Diuretics",
+   "Kidney disease",
+   "Urate crystals",
+   "Tophi"
+  ],
+  "pearl": "X-rays are normal in early attacks; these changes take years. It's underdiagnosed in older women, in whom diuretics and kidney disease are key causes. Inherited differences in urate handling make it especially common among Māori and Pacific peoples. Long-term urate lowering works."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 55,
+  "difficulty": "Hard",
+  "title": "Blood in the urine, on and off",
+  "context": "A 44-year-old man who grew up near freshwater lakes in sub-Saharan Africa and now lives overseas has had blood in his urine on and off for years.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Schistosomiaisis_Bladder_Calcifications.png",
+   "file": "Schistosomiaisis Bladder Calcifications.png",
+   "author": "Jmarchn (cropped)",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-18.jpg",
+   "alt": "Plain X-ray of the pelvis with arrows marking a thin calcified line around the bladder wall"
+  },
+  "answer": "Urinary schistosomiasis",
+  "wrong": [
+   "Bladder cancer",
+   "Tuberculous cystitis",
+   "Radiation cystitis",
+   "Neurogenic bladder",
+   "Bladder stone"
+  ],
+  "hints": [
+   "The arrows trace a thin white line. Where in the pelvis is it?",
+   "The outline of the bladder wall is calcified, a clue to a parasite's eggs lodged there long ago."
+  ],
+  "why": "A thin rim of calcification outlines the bladder wall on a plain pelvic film, marked by the arrows. It's the result of long-standing inflammation around eggs deposited in the wall.",
+  "assoc": [
+   "Schistosoma haematobium",
+   "Praziquantel",
+   "Squamous cell bladder cancer",
+   "Freshwater exposure"
+  ],
+  "pearl": "Infection comes from freshwater snails' larvae through the skin. Long-term damage can lead to squamous cell bladder cancer, so people with this history and haematuria need cystoscopy. Praziquantel is safe and effective, and screening is worthwhile for people from endemic areas."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 56,
+  "difficulty": "Hard",
+  "title": "An unusual raised enzyme",
+  "context": "An 80-year-old man has aching in the right hip. His routine bloods show a raised alkaline phosphatase and normal calcium.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Paget%27s_disease_of_Right_Hip_Bone.jpg",
+   "file": "Paget's disease of Right Hip Bone.jpg",
+   "author": "Jmarchn",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-19.jpg",
+   "alt": "Frontal X-ray of the pelvis with a thick, enlarged and coarse-looking right side"
+  },
+  "answer": "Paget's disease of bone",
+  "wrong": [
+   "Sclerotic bone metastases",
+   "Fibrous dysplasia",
+   "Hip osteoarthritis",
+   "Osteomalacia",
+   "Myelofibrosis"
+  ],
+  "hints": [
+   "Compare the two sides of the pelvis, especially the bone texture.",
+   "One side is bigger and thicker, with coarse, disorganised lines through the bone."
+  ],
+  "why": "The right hemipelvis is expanded, with thickened cortex and coarse, disorganised trabeculae compared with the left side.",
+  "assoc": [
+   "Raised alkaline phosphatase",
+   "Bisphosphonates",
+   "Hearing loss",
+   "Osteosarcoma (rare)"
+  ],
+  "pearl": "Often found by accident, and most people don't need treatment. Bisphosphonates help when there's pain or a risky site. New severe pain or swelling in an affected bone should prompt a look for a rare sarcoma."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 57,
+  "difficulty": "Genius",
+  "title": "A limp without a fever",
+  "context": "A 6-year-old girl has a limp and an aching right knee for a few weeks. No fever or injury.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Morbus_Perthes_rechts_6W_-_CR_ap_-_001.jpg",
+   "file": "Morbus Perthes rechts 6W - CR ap - 001.jpg",
+   "author": "Hellerhoff",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-20.jpg",
+   "alt": "Frontal X-ray of a child's pelvis with a small, dense, fragmented right femoral head"
+  },
+  "answer": "Perthes disease",
+  "wrong": [
+   "Slipped capital femoral epiphysis",
+   "Transient synovitis",
+   "Septic arthritis",
+   "Juvenile idiopathic arthritis",
+   "Developmental dysplasia of the hip"
+  ],
+  "hints": [
+   "Ignore the knee and compare the growth centres at the top of each femur.",
+   "The right one is small, dense and breaking into pieces."
+  ],
+  "why": "The right femoral head is flattened, dense and fragmented, unlike the normal left side. A gonad shield covers the centre of the pelvis.",
+  "assoc": [
+   "Avascular necrosis",
+   "Boys aged 4–10",
+   "Referred knee pain",
+   "Delayed bone age"
+  ],
+  "pearl": "Hip problems in children often show up as knee pain, so examine the hip. This is idiopathic loss of blood supply to the growing femoral head, followed by slow regrowth. It's more common in boys, and younger children tend to do better."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 58,
+  "difficulty": "Easy",
+  "title": "Unsteady with headaches",
+  "context": "A 48-year-old with a lifelong large head has worsening headaches and is becoming unsteady.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Langjaehrig_bestehender_Hydrocephalus_48M_-_CT_-_001.jpg",
+   "file": "Langjaehrig bestehender Hydrocephalus 48M - CT - 001.jpg",
+   "author": "Hellerhoff (cropped)",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-21.jpg",
+   "alt": "Axial head CT with hugely enlarged dark ventricles and a thin rim of brain"
+  },
+  "answer": "Hydrocephalus",
+  "wrong": [
+   "Cerebral atrophy",
+   "Arachnoid cyst",
+   "Porencephaly",
+   "Hydranencephaly",
+   "Chronic subdural haematoma"
+  ],
+  "hints": [
+   "Look at the dark fluid spaces in the middle of the scan.",
+   "The ventricles are hugely enlarged, and the rim of brain is thinned out."
+  ],
+  "why": "Grossly enlarged lateral ventricles with thinned surrounding brain and a thinned skull vault, suggesting long-standing disease that probably began in early childhood.",
+  "assoc": [
+   "Aqueduct stenosis",
+   "Spina bifida",
+   "Meningitis",
+   "Ventriculoperitoneal shunt"
+  ],
+  "pearl": "A key contrast: in atrophy the sulci widen along with the ventricles, whereas here they're squashed. Treatment is a shunt or third ventriculostomy. Infection in newborns is a leading cause among infants in sub-Saharan Africa."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 59,
+  "difficulty": "Easy",
+  "title": "Sleeping upright",
+  "context": "An 83-year-old man with previous bypass surgery has increasing breathlessness and now sleeps sitting up.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg",
+   "file": "Chest radiograph of a lung with Kerley B lines.jpg",
+   "author": "Mikael Häggström",
+   "licence": "CC0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-12-22.jpg",
+   "alt": "Frontal chest X-ray with an enlarged heart and fine horizontal lines at the lung edges"
+  },
+  "answer": "Cardiogenic pulmonary oedema",
+  "wrong": [
+   "Community-acquired pneumonia",
+   "COPD exacerbation",
+   "Pulmonary fibrosis",
+   "Acute respiratory distress syndrome",
+   "Lymphangitis carcinomatosa"
+  ],
+  "hints": [
+   "Check the heart size, then look at the edges of the lungs near the costophrenic angles.",
+   "A big heart, prominent upper lobe vessels, and fine horizontal lines at the periphery."
+  ],
+  "why": "An enlarged heart with congested upper lobe vessels, Kerley B lines at the lung edges and fluid at the bases. Sternal wires are also present.",
+  "assoc": [
+   "Heart failure",
+   "Ischaemic heart disease",
+   "BNP",
+   "Valve disease"
+  ],
+  "pearl": "An easy memory aid is ABCDE: Alveolar oedema, Kerley B lines, Cardiomegaly, Dilated upper lobe vessels, Effusions. Sit the person up, give oxygen if needed and a diuretic, and look for the trigger."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 60,
+  "difficulty": "Medium",
+  "title": "A weak stream",
+  "context": "A 60-year-old man with a weak urine stream and getting up at night has a rising creatinine.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_hydronephrosis_with_dilated_anechoic_pelvis_and_calyces,_along_with_cortical_atrophy.jpg",
+   "file": "Ultrasonography of hydronephrosis with dilated anechoic pelvis and calyces, along with cortical atrophy.jpg",
+   "author": "Kristoffer Lindskov Hansen, Michael Bachmann Nielsen and Caroline Ewertsen",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/2026-12-23.jpg",
+   "alt": "Kidney ultrasound with dilated dark spaces in the centre and a measured calyx"
+  },
+  "answer": "Hydronephrosis",
+  "wrong": [
+   "Simple renal cyst",
+   "Polycystic kidney disease",
+   "Renal cell carcinoma",
+   "Kidney stone",
+   "Pyelonephritis"
+  ],
+  "hints": [
+   "This is a kidney ultrasound. Look for black spaces in the centre.",
+   "The black spaces join up: they're a dilated pelvis and calyces, and the outer kidney is thinned."
+  ],
+  "why": "Ultrasound shows dark, fluid-filled, connected spaces in the renal pelvis and calyces, with thinning of the cortex. The calipers measure one dilated calyx.",
+  "assoc": [
+   "Enlarged prostate",
+   "Ureteric stone",
+   "Pelvic cancer",
+   "Obstructive uropathy"
+  ],
+  "pearl": "When both sides are affected, think lower down, such as the prostate or bladder. In women, also think of pelvic cancers. An obstructed, infected kidney is an emergency that needs urgent drainage, and early relief helps preserve kidney function."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 61,
+  "difficulty": "Medium",
+  "title": "Tearing pain",
+  "context": "A 63-year-old with high blood pressure has sudden tearing pain from the chest through to the back.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:AoDiss_ChestXRay.jpg",
+   "file": "AoDiss ChestXRay.jpg",
+   "author": "J. Heuser",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/2026-12-24.jpg",
+   "alt": "Frontal chest X-ray with a widened mediastinum and enlarged aortic outline"
+  },
+  "answer": "Aortic dissection",
+  "wrong": [
+   "Myocardial infarction",
+   "Pulmonary embolism",
+   "Mediastinal lymphoma",
+   "Oesophageal rupture",
+   "Pulmonary hilar mass"
+  ],
+  "hints": [
+   "Look at the width of the central column of the chest and the outline of the aorta.",
+   "The mediastinum is wider than it should be and the aortic knuckle bulges."
+  ],
+  "why": "A widened mediastinum with a prominent aortic contour, labelled on the film, in a patient with a type A tear.",
+  "assoc": [
+   "Hypertension",
+   "Marfan syndrome",
+   "Bicuspid aortic valve",
+   "Unequal arm pulses"
+  ],
+  "pearl": "A normal chest X-ray doesn't rule this out, so CT angiography is the test if you suspect it. Tears involving the ascending aorta go to surgery, and most others are managed medically. Thrombolysis can be catastrophic, so think before treating as a heart attack."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 62,
+  "difficulty": "Hard",
+  "title": "A wet step",
+  "context": "A 47-year-old woman slipped on a wet step, twisting her ankle. It's swollen and looks out of line.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Trimalleolar_Ankle_Fracture.jpg",
+   "file": "Trimalleolar Ankle Fracture.jpg",
+   "author": "Chaim Mintz (cropped)",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-25.jpg",
+   "alt": "Oblique ankle X-ray showing several fractures around the joint and a shifted talus"
+  },
+  "answer": "Trimalleolar ankle fracture",
+  "wrong": [
+   "Bimalleolar ankle fracture",
+   "Isolated lateral malleolus fracture",
+   "Pilon fracture",
+   "Talar neck fracture",
+   "Maisonneuve fracture"
+  ],
+  "hints": [
+   "Count the broken pieces around the talus, including at the back of the tibia.",
+   "Three separate parts of the joint's bony ring have broken, and the talus has shifted."
+  ],
+  "why": "Fractures of the distal fibula, the medial malleolus and the posterior lip of the tibia, with the talus shifted out of line.",
+  "assoc": [
+   "Ottawa ankle rules",
+   "Open reduction and fixation",
+   "Syndesmosis injury",
+   "Skin compromise"
+  ],
+  "pearl": "A displaced ankle needs early reduction to protect the skin, even before the film if the foot is at risk. Three-part fractures are unstable and usually need fixing. Always feel the upper fibula, as it may have broken too."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 63,
+  "difficulty": "Hard",
+  "title": "Can't find the threads",
+  "context": "A 34-year-old woman had a coil fitted while breastfeeding and can no longer feel her threads. Her pregnancy test is negative.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:X-ray_of_abdomen_with_perforated_IUD.jpg",
+   "file": "X-ray of abdomen with perforated IUD.jpg",
+   "author": "Mikael Häggström",
+   "licence": "CC0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-12-26.jpg",
+   "alt": "Plain X-ray of the pelvis with a T-shaped device lying off the midline"
+  },
+  "answer": "Perforated intrauterine device",
+  "wrong": [
+   "Normally sited intrauterine device",
+   "Retained surgical clip",
+   "Ring pessary",
+   "Contraceptive implant",
+   "Ureteric stent"
+  ],
+  "hints": [
+   "A T-shaped object is easy to find. The question is whether it's where it should be.",
+   "It sits off to one side of the pelvis, away from the midline, and ultrasound couldn't find it in the uterus."
+  ],
+  "why": "A T-shaped device is seen low in the pelvis but off to one side rather than in a central position, consistent with it having passed through the uterine wall.",
+  "assoc": [
+   "Breastfeeding",
+   "Postpartum insertion",
+   "Pelvic ultrasound",
+   "Laparoscopic removal"
+  ],
+  "pearl": "Missing threads call for a pregnancy test and an ultrasound, then an abdominal X-ray if the device isn't seen. Perforation is rare, around 1 in 1000 insertions, but more likely during breastfeeding or within months of birth. Removal is usually laparoscopic."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 64,
+  "difficulty": "Genius",
+  "title": "A dry cough",
+  "context": "A 45-year-old man has had months of a dry cough and tiredness.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Chest_X-ray_of_sarcoidosis_nodules.png",
+   "file": "Chest X-ray of sarcoidosis nodules.png",
+   "author": "Mikael Häggström",
+   "licence": "CC0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/2026-12-27.jpg",
+   "alt": "Frontal chest X-ray with fine nodular shadowing and mildly full hila"
+  },
+  "answer": "Sarcoidosis",
+  "wrong": [
+   "Miliary tuberculosis",
+   "Lymphangitis carcinomatosa",
+   "Silicosis",
+   "Hypersensitivity pneumonitis",
+   "Lymphoma"
+  ],
+  "hints": [
+   "Look at the hila, then the fine background pattern of the lungs.",
+   "Mildly full hila with fine nodular shadowing, in a mostly well middle-aged person."
+  ],
+  "why": "Fine nodular shadowing with some fullness at the hila, more towards the lung bases on this film. Biopsy showed non-caseating granulomas.",
+  "assoc": [
+   "Non-caseating granulomas",
+   "Löfgren syndrome",
+   "Raised calcium",
+   "Uveitis"
+  ],
+  "pearl": "Many cases settle without treatment, though eyes, heart and calcium levels should be checked. Rates are highest in Scandinavia and among Black Americans, who also tend to have more severe disease. Always exclude tuberculosis when there's overlap."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 65,
+  "difficulty": "Easy",
+  "title": "Loin to groin",
+  "context": "A 41-year-old has sudden, severe pain from loin to groin, can't get comfortable, and has blood on urine dipstick.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:PstoneUVJ.png",
+   "file": "PstoneUVJ.png",
+   "author": "James Heilman, MD",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/2026-12-28.jpg",
+   "alt": "Axial non-contrast CT of the pelvis with an arrow pointing to a bright stone near the bladder"
+  },
+  "answer": "Ureteric stone",
+  "wrong": [
+   "Phlebolith",
+   "Appendicolith",
+   "Bladder stone",
+   "Calcified lymph node",
+   "Prostatic calcification"
+  ],
+  "hints": [
+   "Follow the arrow to the white dot at the back of the bladder.",
+   "It sits exactly where the ureter enters the bladder, one of the narrowest points in its path."
+  ],
+  "why": "Low-dose CT with no contrast shows a bright calcified stone at the junction between the ureter and bladder, marked by the arrow.",
+  "assoc": [
+   "Vesicoureteric junction",
+   "Dehydration",
+   "Hypercalciuria",
+   "Hydronephrosis"
+  ],
+  "pearl": "Stones lodge at three narrow points: where the renal pelvis meets the ureter, the pelvic brim, and where the ureter enters the bladder. Most under 5 mm pass by themselves. Fever with an obstructed kidney needs urgent drainage."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 66,
+  "difficulty": "Easy",
+  "title": "A waddling walk",
+  "context": "A 3-year-old girl has walked with a limp since she first started walking, and her right leg looks shorter.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Dislocated_hip.jpg",
+   "file": "Dislocated hip.jpg",
+   "author": "Heather (Glitzy queen00 at English Wikipedia)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/2026-12-29.jpg",
+   "alt": "Frontal X-ray of a child's pelvis with the right femur displaced from a shallow hip socket"
+  },
+  "answer": "Developmental dysplasia of the hip",
+  "wrong": [
+   "Perthes disease",
+   "Slipped capital femoral epiphysis",
+   "Septic arthritis",
+   "Transient synovitis",
+   "Femoral neck fracture"
+  ],
+  "hints": [
+   "Compare the top of each femur with its socket.",
+   "The right femur sits high and out to the side of a shallow socket."
+  ],
+  "why": "The right femoral head lies high and lateral to a shallow acetabulum, with a disrupted Shenton's line, unlike the normal left side.",
+  "assoc": [
+   "Breech birth",
+   "Family history",
+   "Female sex",
+   "Hip-healthy swaddling"
+  ],
+  "pearl": "Hip checks at birth and in early infancy aim to catch this before walking, and ultrasound is the test under about 6 months. Risks include breech position, family history and swaddling with straight legs, so wrap babies with room for their hips to bend."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 67,
+  "difficulty": "Medium",
+  "title": "A first seizure",
+  "context": "A 62-year-old woman with a year of slowly worsening headaches has a first seizure.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Contrast_enhanced_meningioma.jpg",
+   "file": "Contrast enhanced meningioma.jpg",
+   "author": "Glitzy queen00",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/2026-12-30.jpg",
+   "alt": "Axial contrast CT of the head with a large bright mass arising from the inner surface of the skull"
+  },
+  "answer": "Meningioma",
+  "wrong": [
+   "Glioblastoma",
+   "Brain metastasis",
+   "Extradural haematoma",
+   "Brain abscess",
+   "Pituitary macroadenoma"
+  ],
+  "hints": [
+   "This scan used contrast. Look at where the mass sits relative to the skull.",
+   "It's smooth, very bright, and sits on the lining of the brain, pressing in rather than growing from within."
+  ],
+  "why": "A large, smooth, evenly enhancing mass with a broad base on the dura, pressing inwards on the brain without arising from it.",
+  "assoc": [
+   "Dural tail sign",
+   "Radiation exposure",
+   "Neurofibromatosis type 2",
+   "Progesterone receptors"
+  ],
+  "pearl": "This is the commonest primary brain tumour, usually benign and two to three times more common in women. Small ones found by accident are often just watched. Larger ones causing symptoms are treated with surgery, sometimes with radiotherapy."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 68,
+  "difficulty": "Medium",
+  "title": "Hit by a bumper",
+  "context": "A 52-year-old pedestrian was struck on the outer knee by a car bumper at low speed. The knee is swollen and won't bear weight.",
+  "question": "What's the diagnosis?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Lateral_Tibial_Plateau_fracture_XRay_with_Depression_2.jpg",
+   "file": "Lateral Tibial Plateau fracture XRay with Depression 2.jpg",
+   "author": "LottieLattes",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/2026-12-31.jpg",
+   "alt": "Frontal knee X-ray showing a depressed fracture of the lateral tibial plateau"
+  },
+  "answer": "Tibial plateau fracture",
+  "wrong": [
+   "Segond fracture",
+   "Patella fracture",
+   "Lateral femoral condyle fracture",
+   "Anterior cruciate ligament tear",
+   "Osteochondritis dissecans"
+  ],
+  "hints": [
+   "Look at the top surface of the shin bone, particularly on the outer side.",
+   "The lateral joint surface has been pushed down, with a line running through it."
+  ],
+  "why": "The lateral tibial plateau is broken and depressed compared with the medial side, with a fracture line running through it.",
+  "assoc": [
+   "Bumper injury",
+   "Lipohaemarthrosis",
+   "Compartment syndrome",
+   "Common peroneal nerve"
+  ],
+  "pearl": "This is the classic car-bumper injury to the outer knee. An X-ray can undersell it, so CT is used for planning. Check the foot pulses and the common peroneal nerve, and keep compartment syndrome in mind."
+ }
+]
