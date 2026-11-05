@@ -2055,107 +2055,107 @@
   "date": "2026-11-06",
   "number": 20,
   "difficulty": "Hard",
-  "theme": "Psychiatry",
+  "theme": "Doctor on the court",
   "questions": [
    {
-    "q": "Lithium is mainly used to treat?",
-    "a": "Bipolar disorder",
+    "q": "James Naismith, born on this day in 1861, invented basketball in 1891 in which city?",
+    "a": "Springfield, Massachusetts",
     "w": [
-     "Schizophrenia",
-     "ADHD",
-     "Anorexia nervosa"
+     "Boston",
+     "Montreal",
+     "Chicago"
     ],
-    "e": "Needs regular blood level checks."
+    "e": "At a YMCA training school, with two peach baskets nailed to a balcony rail."
    },
    {
-    "q": "Sertraline and fluoxetine belong to which class?",
-    "a": "SSRIs",
+    "q": "In 1898, Naismith also graduated in medicine from a medical school in?",
+    "a": "Denver",
     "w": [
-     "SNRIs",
-     "Tricyclics",
-     "MAOIs"
+     "Toronto",
+     "Edinburgh",
+     "Kansas City"
     ],
-    "e": "SSRIs (selective serotonin reuptake inhibitors) such as sertraline and fluoxetine are the most widely used antidepressants."
+    "e": "Gross Medical College in Denver, Colorado. He then spent decades at the University of Kansas."
    },
    {
-    "q": "Fever, rigidity and confusion after starting an antipsychotic suggest?",
-    "a": "Neuroleptic malignant syndrome",
+    "q": "In 1892, Senda Berenson adapted Naismith\u2019s new game for women students at?",
+    "a": "Smith College",
     "w": [
-     "Serotonin syndrome",
-     "Malignant hyperthermia",
-     "Delirium tremens"
+     "Vassar College",
+     "Wellesley College",
+     "Radcliffe College"
     ],
-    "e": "Neuroleptic malignant syndrome is a rare, dangerous reaction to antipsychotics: high fever, rigid muscles, confusion and a very high CK."
+    "e": "The first women\u2019s college game followed at Smith in March 1893."
    },
    {
-    "q": "Clonus, agitation and diarrhoea after combining serotonergic drugs suggest?",
-    "a": "Serotonin syndrome",
+    "q": "A ball jamming the fingertip can cause mallet finger, an injury to the?",
+    "a": "Extensor tendon at the end joint",
     "w": [
-     "Neuroleptic malignant syndrome",
-     "Anticholinergic toxicity",
-     "Opioid withdrawal"
+     "Flexor tendon at the base of the finger",
+     "Collateral ligament of the middle joint",
+     "Volar plate of the knuckle"
     ],
-    "e": "Clonus is the clue."
+    "e": "The fingertip droops. Usual treatment is a splint holding the end joint straight, day and night, for about 6\u20138 weeks."
    },
    {
-    "q": "Who publishes the DSM?",
-    "a": "The American Psychiatric Association",
+    "q": "Jumper\u2019s knee, common in basketball and volleyball, is tendinopathy of the?",
+    "a": "Patellar tendon",
     "w": [
-     "The World Health Organization",
-     "The British Medical Association",
-     "The Royal College of Psychiatrists"
+     "Quadriceps tendon",
+     "Hamstring tendons",
+     "Iliotibial band"
     ],
-    "e": "The WHO publishes the ICD."
+    "e": "Pain sits just below the kneecap and builds with jumping and landing."
    },
    {
-    "q": "Capgras delusion is the belief that?",
-    "a": "A loved one has been replaced by an impostor",
+    "q": "In a rolled ankle (inversion sprain), which ligament is injured most often?",
+    "a": "Anterior talofibular ligament",
     "w": [
-     "You are dead",
-     "You are infested with parasites",
-     "A celebrity is in love with you"
+     "Calcaneofibular ligament",
+     "Deltoid ligament",
+     "Posterior talofibular ligament"
     ],
-    "e": "In Capgras delusion, a familiar person looks right but feels wrong, so they\u2019re believed to be an impostor."
+    "e": "The ATFL is the weakest of the lateral ankle ligaments and gives way first."
    },
    {
-    "q": "Cotard delusion is the belief that?",
-    "a": "You are dead",
+    "q": "A patient lies face down and you squeeze their calf. The foot doesn\u2019t move. This suggests a ruptured?",
+    "a": "Achilles tendon",
     "w": [
-     "A loved one is an impostor",
-     "You are infested with parasites",
-     "A celebrity is in love with you"
+     "Plantar fascia",
+     "Tibialis posterior tendon",
+     "Peroneal tendon"
     ],
-    "e": "Also called walking corpse syndrome."
+    "e": "The Simmonds\u2013Thompson test. A normal calf squeeze points the foot."
    },
    {
-    "q": "ECT stands for?",
-    "a": "Electroconvulsive therapy",
+    "q": "Commotio cordis is cardiac arrest caused by?",
+    "a": "A blow to the chest at a vulnerable moment in the heartbeat",
     "w": [
-     "Electro-cortical treatment",
-     "Emotional cognitive therapy",
-     "Extended clinical trial"
+     "A blocked coronary artery during exercise",
+     "An inherited thickening of the heart muscle",
+     "Severe dehydration in hot weather"
     ],
-    "e": "Very effective for severe depression."
+    "e": "Usually a ball or elbow to the chest wall. Fast CPR and an AED save lives."
    },
    {
-    "q": "Methylphenidate is used mainly for?",
-    "a": "ADHD",
+    "q": "Osgood\u2013Schlatter disease, common in jumping teenagers, causes a sore lump at the?",
+    "a": "Tibial tuberosity",
     "w": [
-     "Depression",
-     "Insomnia",
-     "Psychosis"
+     "Back of the heel",
+     "Lower pole of the kneecap",
+     "Head of the fibula"
     ],
-    "e": "Methylphenidate is a stimulant medicine used mainly to treat ADHD."
+    "e": "Where the patellar tendon pulls on a growth plate. It settles once growth finishes."
    },
    {
-    "q": "Korsakoff syndrome mainly affects?",
-    "a": "Memory",
+    "q": "Drinking far more than you sweat out during a long event can cause?",
+    "a": "Exercise-associated hyponatraemia",
     "w": [
-     "Mood",
-     "Movement",
-     "Speech"
+     "Heat stroke",
+     "Hyperkalaemia",
+     "Rhabdomyolysis"
     ],
-    "e": "From thiamine deficiency. Confabulation fills the gaps."
+    "e": "Low blood sodium can cause confusion, seizures and collapse. Advice now is to drink to thirst."
    }
   ]
  },
