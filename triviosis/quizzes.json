@@ -5079,107 +5079,107 @@
   "date": "2026-12-04",
   "number": 48,
   "difficulty": "Hard",
-  "theme": "Built for speed",
+  "theme": "Funny animal medicine",
   "questions": [
    {
-    "q": "Today is International Cheetah Day, marking the birthday of Khayam, raised by Laurie Marker. She founded the Cheetah Conservation Fund in?",
-    "a": "Namibia",
+    "q": "Today is International Cheetah Day. Unrelated cheetahs famously accepted each other\u2019s skin grafts, because they have very little variation in their?",
+    "a": "MHC (tissue-type) genes",
     "w": [
-     "Kenya",
-     "South Africa",
-     "Tanzania"
+     "Blood groups",
+     "Mitochondrial DNA",
+     "Keratin genes"
     ],
-    "e": "She\u2019s worked there since about 1990, easing farmers\u2019 fears with guarding dogs that keep cheetahs away from livestock."
+    "e": "An ancient population crash left them almost genetically identical. Great for grafts, less great for fighting new infections."
    },
    {
-    "q": "Which human muscle fibres are the fastest and most reliant on glycolysis?",
-    "a": "Type IIx",
+    "q": "A survey of captive cheetahs in the early 1990s found chronic gastritis in about 91%. Which bacteria are the prime suspects?",
+    "a": "Helicobacter-like organisms",
     "w": [
-     "Type I",
-     "Type IIa",
-     "Type III"
+     "Clostridioides difficile",
+     "Salmonella",
+     "Listeria"
     ],
-    "e": "Brilliant for a few seconds, exhausted soon after. A familiar feeling at most parties."
+    "e": "Stress and diet are thought to play a part too. The fastest cat on Earth still can\u2019t outrun a sore tummy."
    },
    {
-    "q": "The ACTN3 \u2018speed gene\u2019 makes a protein found in?",
-    "a": "Fast-twitch muscle fibres",
+    "q": "Elephants rarely die of cancer despite their size. They carry about 20 copies of which tumour-suppressor gene?",
+    "a": "TP53",
     "w": [
-     "Slow-twitch muscle fibres",
-     "Heart muscle",
-     "Tendons"
+     "BRCA1",
+     "APC",
+     "RB1"
     ],
-    "e": "Australian researcher Kathryn North led work showing elite sprinters almost always have a working copy. About 1 in 5 people don\u2019t."
+    "e": "Humans have one. Extra p53 helps damaged elephant cells self-destruct: Peto\u2019s paradox, partly solved."
    },
    {
-    "q": "In the first few seconds of an all-out sprint, ATP is rapidly topped up by?",
-    "a": "Phosphocreatine",
+    "q": "Naked mole-rats almost never get cancer. A 2013 study linked this to their tissues being packed with?",
+    "a": "Extra-long hyaluronan",
     "w": [
-     "Fat oxidation",
-     "Ketones",
-     "Aerobic glucose breakdown"
+     "Extra telomerase",
+     "Brown fat",
+     "Haemocyanin"
     ],
-    "e": "The creatine system lasts about 10 seconds, about the length of a world-class 100 m."
+    "e": "The super-sized sugar molecule seems to stop cells crowding together. Wrinkly, bald and nearly tumour-proof."
    },
    {
-    "q": "Lactate made in sprinting muscle is carried to the liver and rebuilt into glucose in the?",
-    "a": "Cori cycle",
+    "q": "A giraffe\u2019s blood pressure is roughly double ours, yet its lower legs don\u2019t swell up. What helps?",
+    "a": "Tight, thick skin acting like a compression stocking",
     "w": [
-     "Krebs cycle",
-     "Urea cycle",
-     "Calvin cycle"
+     "A small pump in each knee",
+     "Very thin, watery blood",
+     "Kidneys that switch off when standing"
     ],
-    "e": "Named after Gerty and Carl Cori. Lactate is a fuel, not a villain, whatever your old coach said."
+    "e": "Researchers compared it to a pilot\u2019s anti-gravity suit. Support stockings, savanna edition."
    },
    {
-    "q": "Delayed muscle soreness a day or two after a hard session is mainly due to?",
-    "a": "Micro-damage to muscle fibres",
+    "q": "Blue blood from horseshoe crabs is used to check injectable drugs and implants for?",
+    "a": "Bacterial endotoxin",
     "w": [
-     "Lactic acid stuck in the muscle",
-     "Leaking potassium",
-     "Bruised tendons"
+     "Heavy metals",
+     "Prions",
+     "Viral DNA"
     ],
-    "e": "Lactate clears within about an hour. The myth has lasted a lot longer."
+    "e": "The LAL test clots with tiny traces of endotoxin. Most crabs go back to the sea after their \u2018donation\u2019, and synthetic versions are catching on."
    },
    {
-    "q": "\u2018220 minus age\u2019 is a very rough guide to maximum heart rate. Tanaka\u2019s 2001 equation is?",
-    "a": "208 \u2212 0.7 \u00d7 age",
+    "q": "Octopus blood is blue because oxygen is carried by?",
+    "a": "Copper-based haemocyanin",
     "w": [
-     "206 \u2212 0.5 \u00d7 age",
-     "210 \u2212 0.9 \u00d7 age",
-     "200 \u2212 0.8 \u00d7 age"
+     "Iron-based myoglobin",
+     "Cobalt-based cobalamin",
+     "Zinc-based haemoglobin"
     ],
-    "e": "It fits older people better. The original 220 formula was barely built on anything."
+    "e": "Two of its three hearts pump blood through the gills, the third round the body. Blue-blooded, literally."
    },
    {
-    "q": "Which sprinter set the women\u2019s 100 m world record of 10.49 seconds in 1988?",
-    "a": "Florence Griffith Joyner",
+    "q": "In 2004 the US FDA cleared which creatures as a \u2018medical device\u2019 for cleaning dead tissue out of wounds?",
+    "a": "Maggots (blowfly larvae)",
     "w": [
-     "Merlene Ottey",
-     "Marion Jones",
-     "Shelly-Ann Fraser-Pryce"
+     "Ants",
+     "Silkworms",
+     "Snails"
     ],
-    "e": "\u2018FloJo\u2019, of the long nails and one-legged running suits. That\u2019s a mark with serious staying power."
+    "e": "Sterile maggots eat dead tissue and leave healthy tissue alone. Leeches were cleared the same year, for a different job."
    },
    {
-    "q": "Breathing hard for minutes after a sprint repays what is now called?",
-    "a": "Excess post-exercise oxygen consumption",
+    "q": "Parrot fever (psittacosis), caught by breathing in dust from dried bird droppings, is caused by?",
+    "a": "Chlamydia psittaci",
     "w": [
-     "Peak lactate clearance",
-     "Reserve aerobic flow",
-     "Residual lung capacity"
+     "Coxiella burnetii",
+     "Bartonella henselae",
+     "Leptospira interrogans"
     ],
-    "e": "A.V. Hill called it \u2018oxygen debt\u2019. Your lungs do collect."
+    "e": "Not just parrots: budgies, pigeons and poultry can spread it too. Polly wants a chest X-ray."
    },
    {
-    "q": "Which hamstring muscle is the most commonly strained in sprinters?",
-    "a": "Biceps femoris long head",
+    "q": "Cat-scratch disease (Bartonella henselae) is most often caught from?",
+    "a": "Kittens, which carry it more than adult cats",
     "w": [
-     "Semimembranosus",
-     "Semitendinosus",
-     "Gracilis"
+     "Elderly cats with dental disease",
+     "Dry cat food",
+     "Dust from the litter tray"
     ],
-    "e": "It\u2019s under huge load late in the swing phase. Gracilis isn\u2019t even a hamstring, but thanks for playing."
+    "e": "Fleas spread it between cats, and young cats usually look perfectly healthy. Cuteness is a known risk factor."
    }
   ]
  },

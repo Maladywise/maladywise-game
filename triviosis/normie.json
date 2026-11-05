@@ -4431,7 +4431,7 @@
   "date": "2026-12-04",
   "number": 42,
   "difficulty": "Hard",
-  "theme": "Cheetahs and speed",
+  "theme": "Cheetahs and funny animal bodies",
   "questions": [
    {
     "q": "International Cheetah Day is the birthday of Khayam, a cheetah raised by which conservationist?",
@@ -4454,6 +4454,16 @@
     "e": "They work like a sprinter\u2019s running spikes. Stylish? No. Effective? Very."
    },
    {
+    "q": "Cheetahs can\u2019t roar. Instead, they?",
+    "a": "Purr and chirp like birds",
+    "w": [
+     "Bark like seals",
+     "Howl like wolves",
+     "Honk like geese"
+    ],
+    "e": "A grown cheetah\u2019s chirp sounds a lot like a budgie. Fastest on land, softest voice."
+   },
+   {
     "q": "Some zoos raise a young cheetah with a companion animal to keep it calm. Which one?",
     "a": "Dog",
     "w": [
@@ -4462,16 +4472,6 @@
      "Pony"
     ],
     "e": "Cheetahs are anxious. A relaxed dog is apparently the best therapy."
-   },
-   {
-    "q": "Mughal emperor Akbar reportedly kept how many cheetahs for hunting?",
-    "a": "About 1000",
-    "w": [
-     "About 10",
-     "About 100",
-     "About 10,000"
-    ],
-    "e": "Chronicles put his collection in the thousands over his reign. Very high cat food bill."
    },
    {
     "q": "Those black \u2018tear lines\u2019 on a cheetah\u2019s face are thought to help by?",
@@ -4484,54 +4484,54 @@
     "e": "Cheetahs hunt in the daytime. Think of them as built-in sunnies."
    },
    {
-    "q": "Cheetahs are so genetically alike that?",
-    "a": "Unrelated cats can accept each other\u2019s skin grafts",
+    "q": "Frogs can pull their eyeballs down into their heads. Why?",
+    "a": "To help push food down their throat",
     "w": [
-     "Every cub has an identical pattern of spots",
-     "Each cheetah\u2019s roar is exactly the same",
-     "All cheetahs share a single birthday"
+     "To clean their eyes",
+     "To hear better",
+     "To look smaller to predators"
     ],
-    "e": "A population crash thousands of years ago left them nearly clones of each other."
+    "e": "A 2004 study found leopard frogs swallow less well without their eyes\u2019 help. Imagine finishing a sandwich that way."
    },
    {
-    "q": "In 2022, cheetahs were brought from Namibia to which country, where they\u2019d died out decades before?",
-    "a": "India",
+    "q": "Some sloths look slightly green because?",
+    "a": "Algae grows in their fur",
     "w": [
-     "Egypt",
-     "Iran",
-     "Australia"
+     "They eat so many leaves",
+     "Their blood is green",
+     "They roll in moss"
     ],
-    "e": "Eight went to Kuno National Park. It was the first intercontinental move of its kind for wild big cats."
+    "e": "Their fur even hosts its own moths. Move slowly enough and you become an ecosystem."
    },
    {
-    "q": "Cheetahs are the fastest on land. What\u2019s the fastest animal overall, diving at over 300 km/h?",
-    "a": "Peregrine falcon",
+    "q": "Hippos ooze a red-orange liquid nicknamed \u2018blood sweat\u2019. It\u2019s really?",
+    "a": "A natural sunscreen",
     "w": [
-     "Golden eagle",
-     "Sailfish",
-     "Common swift"
+     "Actual blood",
+     "Pink mud",
+     "Juice from the fruit they eat"
     ],
-    "e": "That\u2019s high-speed-train territory, and it\u2019s doing it headfirst."
+    "e": "The pigments soak up sunlight and seem to slow bacteria too. It isn\u2019t blood, and it isn\u2019t technically sweat either."
    },
    {
-    "q": "The biggest cats alive are ligers. A liger\u2019s parents are?",
-    "a": "A lion father and tiger mother",
+    "q": "Flamingos are pink because of?",
+    "a": "Pigments in the algae and shrimp they eat",
     "w": [
-     "A tiger father and lion mother",
-     "A lion father and leopard mother",
-     "A leopard father and tiger mother"
+     "Their genes alone",
+     "Blushing in the sun",
+     "Rolling in red clay"
     ],
-    "e": "Ligers exist only in captivity and can grow bigger than either parent."
+    "e": "Chicks hatch grey or white. No snacks, no pink."
    },
    {
-    "q": "A \u2018black panther\u2019 is really?",
-    "a": "A dark leopard or jaguar",
+    "q": "Male platypuses have a venomous?",
+    "a": "Spur on each back leg",
     "w": [
-     "A separate species from Asia",
-     "A black-coated cheetah",
-     "A very old lioness"
+     "Bill",
+     "Tail tip",
+     "Front claw"
     ],
-    "e": "It\u2019s just extra-dark colouring. In the right light, you can even see the spots."
+    "e": "It isn\u2019t deadly to people, but the pain can last for days. Cute, yes. Cuddly, no."
    }
   ]
  },
