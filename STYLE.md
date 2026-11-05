@@ -63,3 +63,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Once a month, Medical Triviosis is an "Animal ER" quiz: 10 funny, surprising, TRUE animal-medicine questions (animal physiology oddities, medicines and tests that come from animals, zoonoses, vet medicine). Normie Triviosis that day: funny animal bodies, no medicine.
 - Put it on that month's animal-themed day in data/health-days.json if there is one (e.g. International Cheetah Day, World Penguin Day, International Cat Day); otherwise the first Saturday of the month. One other game that day gets an animal touch (e.g. a Zebritis prompt or a Comorbix group).
 - Many "animal facts" online are myths: verify each with a reputable source. Funny, never cruel; no gore; don't repeat a fact used in the previous 6 months.
+
+## Puzzle archives
+- tools/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 tools/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.

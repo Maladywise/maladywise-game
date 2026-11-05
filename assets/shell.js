@@ -1064,7 +1064,17 @@
   }
 
   // ---------- game page ----------
-  function game(id) { setTimeout(social, 0);
+  var ARCHIVES = { dx: 1, wordemic: 1, panelysis: 1, glimpsis: 1, opacitis: 1, sensitosis: 1, triviosis: 1, zebritis: 1, arrhythmix: 1 };
+  function archiveLink(id) {
+    if (!ARCHIVES[id] || NORMIE) return;
+    var go = function () {
+      var m = document.querySelector("main"); if (!m || m.querySelector(".mw-arch")) return;
+      var pth = location.pathname.replace(/index\.html$/, "");
+      m.insertAdjacentHTML("beforeend", '<p class="mw-arch"><a href="' + pth + 'archive/">Past puzzles and answers ›</a></p>');
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", go); else go();
+  }
+  function game(id) { setTimeout(social, 0); archiveLink(id);
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0]; window.MW_curGame = g;
     watchDone(g);
     topBar(g);
