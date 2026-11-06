@@ -5,49 +5,37 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted tube.",
-    "answer": "Trachea",
+    "kind": "Anatomy trivia",
+    "q": "Which small bean-shaped structures filter lymph and swell up during infections?",
+    "answer": "Lymph nodes",
     "wrong": [
-     "Oesophagus",
-     "Larynx",
-     "Main bronchus"
+     "Salivary glands",
+     "Adrenal glands",
+     "Taste buds"
     ],
-    "why": "The windpipe, held open by C-shaped rings of cartilage. The open back of each ‘C’ lets the oesophagus bulge forward when you swallow a big mouthful.",
-    "art": "lungs",
-    "hl": [
-     "trachea"
-    ]
+    "why": "You have hundreds of them. Swollen neck nodes usually just mean your immune system is busy, which is exactly its job."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Lens",
+    "kind": "Anatomy trivia",
+    "q": "Red cells, white cells and platelets are mostly made in the?",
+    "answer": "Bone marrow",
     "wrong": [
-     "Cornea",
-     "Iris",
-     "Vitreous"
+     "Spleen",
+     "Liver",
+     "Heart"
     ],
-    "why": "Clear and flexible, it fine-tunes focus. It keeps adding layers all your life, like an onion, and slowly stiffens. Hello, reading glasses at 45.",
-    "art": "eye",
-    "hl": [
-     "lens"
-    ]
+    "why": "Red marrow makes billions of new blood cells every day. In adults it’s mostly in flat bones like the pelvis, sternum and skull."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Femur",
+    "kind": "Anatomy trivia",
+    "q": "Which white blood cells does HIV mainly target?",
+    "answer": "CD4 T cells",
     "wrong": [
-     "Tibia",
-     "Humerus",
-     "Fibula"
+     "Red blood cells",
+     "Platelets",
+     "Neutrophils"
     ],
-    "why": "The thigh bone: your longest and strongest. It’s roughly a quarter of your height, which is how forensic teams estimate stature from a single bone.",
-    "art": "skeleton",
-    "hl": [
-     "femur"
-    ]
+    "why": "CD4 helper T cells coordinate the immune response. With effective treatment today, most people living with HIV can expect a near-normal lifespan."
    },
    {
     "kind": "Anatomy trivia",
@@ -61,18 +49,18 @@
     "why": "T for thymus. HIV infects CD4 helper T cells; treatment now keeps the count up and the virus undetectable. Today is World AIDS Day."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted organ.",
-    "answer": "Liver",
+    "kind": "Anatomy trivia",
+    "q": "What’s one of the highlighted organ’s main jobs?",
+    "answer": "Filtering old red blood cells",
     "wrong": [
-     "Stomach",
-     "Spleen",
-     "Pancreas"
+     "Making bile",
+     "Making insulin",
+     "Storing urine"
     ],
-    "why": "Your biggest internal organ and a full-time chemistry lab. It can regrow from about a quarter of its tissue, which is why living donors can give a slice.",
+    "why": "The spleen recycles worn-out red cells and stores immune cells. You can live without one, but you’ll need some extra vaccines.",
     "art": "gut",
     "hl": [
-     "liver"
+     "spleen"
     ]
    }
   ]
@@ -128,18 +116,18 @@
     ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Clavicle",
+    "kind": "Anatomy trivia",
+    "q": "Roughly how much blood does the highlighted chamber push out with each beat at rest?",
+    "answer": "About 70 mL",
     "wrong": [
-     "Scapula",
-     "Sternum",
-     "First rib"
+     "About 5 mL",
+     "About 500 mL",
+     "About 1 litre"
     ],
-    "why": "The collarbone. It’s the first bone in the body to start hardening, around week five or six of pregnancy, and one of the most commonly broken bones in kids.",
-    "art": "skeleton",
+    "why": "Stroke volume is usually 60–100 mL; at around 70 beats a minute that’s about 5 litres a minute. Barney Clark lived 112 days on the Jarvik-7 artificial heart from 2 December 1982.",
+    "art": "heart",
     "hl": [
-     "clavicle"
+     "lv"
     ]
    },
    {
@@ -191,19 +179,15 @@
     "why": "Below that, nerve roots run on as the cauda equina, which is why lumbar punctures go lower. Today is International Day of Persons with Disabilities."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Patella",
+    "kind": "Which nerve?",
+    "q": "A cochlear implant works by electrically stimulating which nerve?",
+    "answer": "Cochlear nerve",
     "wrong": [
-     "Femur",
-     "Tibia",
-     "Fibula"
+     "Facial nerve",
+     "Optic nerve",
+     "Trigeminal nerve"
     ],
-    "why": "The kneecap: the body’s biggest sesamoid bone, meaning it grows inside a tendon. Babies have a cartilage version that only turns to bone at around three to six.",
-    "art": "skeleton",
-    "hl": [
-     "patella"
-    ]
+    "why": "It bypasses damaged hair cells and talks straight to the cochlear nerve. Graeme Clark’s team in Melbourne fitted their first multichannel implant in 1978."
    },
    {
     "kind": "Name the structure",
@@ -332,15 +316,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Winged shoulder blade when pushing against a wall. Which nerve?",
-    "answer": "Long thoracic nerve",
+    "kind": "Anatomy trivia",
+    "q": "Tetanus causes ‘lockjaw’. Spasm of which muscle clamps the jaw shut?",
+    "answer": "Masseter",
     "wrong": [
-     "Thoracodorsal nerve",
-     "Dorsal scapular nerve",
-     "Suprascapular nerve"
+     "Buccinator",
+     "Orbicularis oris",
+     "Platysma"
     ],
-    "why": "It supplies serratus anterior, which pins the shoulder blade to the ribs. It runs long and exposed down the chest wall, so heavy backpacks and surgery can injure it."
+    "why": "Tetanus spores live in soil. The toxin blocks the nerve signals that tell muscles to relax, and the powerful masseter is often first to clamp. Today is World Soil Day: keep that booster current."
    },
    {
     "kind": "Name the structure",
@@ -417,34 +401,30 @@
     "why": "Popliteus ‘unlocks’ the fully straightened knee, allowing it to bend."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted ossicle.",
-    "answer": "Incus",
+    "kind": "Anatomy trivia",
+    "q": "Which artery runs in the groove over the front of the highlighted wall and causes the ‘widow-maker’ heart attack?",
+    "answer": "Left anterior descending artery",
     "wrong": [
-     "Malleus",
-     "Stapes",
-     "Vestibule"
+     "Right coronary artery",
+     "Circumflex artery",
+     "Posterior descending artery"
     ],
-    "why": "The anvil, middle of the three ear bones. The ossicles are already close to adult size at birth, so they barely grow while the rest of you does.",
-    "art": "ear",
+    "why": "The LAD feeds the front wall and most of the septum. Finland’s North Karelia Project, begun in 1972, cut heart disease deaths dramatically by changing a whole region’s diet and smoking habits.",
+    "art": "heart",
     "hl": [
-     "incus"
+     "ivs"
     ]
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted valve.",
-    "answer": "Mitral valve",
+    "q": "Which vein drains most of the heart’s own blood into the right atrium?",
+    "answer": "Coronary sinus",
     "wrong": [
-     "Tricuspid valve",
-     "Aortic valve",
-     "Pulmonary valve"
+     "Great cardiac vein",
+     "Anterior cardiac veins",
+     "Thebesian veins"
     ],
-    "why": "Two leaflets between the left atrium and ventricle. It’s named because someone thought it looked like a bishop’s mitre. Yes, really.",
-    "art": "heart",
-    "hl": [
-     "mitral"
-    ]
+    "why": "It runs in the back of the atrioventricular groove. Leads for cardiac resynchronisation pacing are threaded through it to reach the left ventricle."
    },
    {
     "kind": "Which nerve?",
@@ -466,74 +446,62 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted organ.",
-    "answer": "Stomach",
+    "q": "Yawning on a plane opens the highlighted tube. What does it connect the middle ear to?",
+    "answer": "Back of the nose (nasopharynx)",
     "wrong": [
-     "Liver",
-     "Spleen",
-     "Pancreas"
+     "Mouth",
+     "Inner ear",
+     "Outer ear canal"
     ],
-    "why": "A J-shaped muscle bag full of acid around pH 1 to 3. Its surface lining renews every few days so it doesn’t digest itself.",
-    "art": "gut",
+    "why": "The Eustachian tube equalises pressure. A blocked one on descent is why flying with a cold makes your ears ache.",
+    "art": "ear",
     "hl": [
-     "stomach"
+     "et"
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve lets you smell?",
-    "answer": "Olfactory nerve (I)",
+    "kind": "Anatomy trivia",
+    "q": "Calf exercises on long flights help pump blood up the leg veins. Which muscle makes most of the calf bulge?",
+    "answer": "Gastrocnemius",
     "wrong": [
-     "Optic nerve (II)",
-     "Trigeminal nerve (V)",
-     "Vagus nerve (X)"
+     "Quadriceps",
+     "Hamstrings",
+     "Tibialis anterior"
     ],
-    "why": "Cranial nerve number one. Smell skips the thalamus relay that other senses use on the way in, one reason a smell can drag up a memory so fast."
+    "why": "Every squeeze pushes blood back towards the heart through one-way valves. Flex your ankles and walk the aisle on long-haul."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Humerus",
+    "kind": "Anatomy trivia",
+    "q": "Which gland releases melatonin, the ‘time for bed’ hormone that jet lag throws out?",
+    "answer": "Pineal gland",
     "wrong": [
-     "Femur",
-     "Radius",
-     "Clavicle"
+     "Thyroid gland",
+     "Pituitary gland",
+     "Adrenal gland"
     ],
-    "why": "The upper arm bone. It sounds like ‘humorous’, which is one theory for the name ‘funny bone’, though the zing is really the ulnar nerve.",
-    "art": "skeleton",
-    "hl": [
-     "humerus"
-    ]
+    "why": "A pea-sized gland deep in the brain that releases melatonin when it gets dark. Descartes thought it was the seat of the soul."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Occipital lobe",
+    "kind": "Anatomy trivia",
+    "q": "Which blood vessels have walls just one cell thick, for swapping oxygen with tissues?",
+    "answer": "Capillaries",
     "wrong": [
-     "Parietal lobe",
-     "Temporal lobe",
-     "Cerebellum"
+     "Arteries",
+     "Veins",
+     "Arterioles"
     ],
-    "why": "Vision lives at the back of your head, about as far from your eyes as it gets. A hard knock there can make you literally ‘see stars’.",
-    "art": "brain",
-    "hl": [
-     "occipital"
-    ]
+    "why": "They’re so narrow that red blood cells squeeze through in single file."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber.",
-    "answer": "Right atrium",
+    "kind": "Anatomy trivia",
+    "q": "Which part of you senses movement and tilt, and makes you queasy when it disagrees with your eyes?",
+    "answer": "Inner ear",
     "wrong": [
-     "Left atrium",
-     "Right ventricle",
-     "Left ventricle"
+     "Stomach",
+     "Middle ear",
+     "Eardrum"
     ],
-    "why": "The receiving bay for blood coming back from the body. It houses the heart’s own pacemaker, the sinoatrial node.",
-    "art": "heart",
-    "hl": [
-     "ra"
-    ]
+    "why": "The vestibular system in the inner ear says ‘we’re moving’, your eyes say ‘still cabin’, and your brain responds with motion sickness."
    }
   ]
  },
@@ -543,79 +511,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted muscle.",
-    "answer": "Diaphragm",
+    "kind": "Anatomy trivia",
+    "q": "What’s the body’s largest organ?",
+    "answer": "Skin",
     "wrong": [
-     "Pleura",
-     "Pericardium",
-     "Intercostal muscle"
+     "Liver",
+     "Lungs",
+     "Brain"
     ],
-    "why": "Your main breathing muscle. Hiccups are it spasming, followed by the vocal cords snapping shut. That snap is the ‘hic’.",
-    "art": "lungs",
-    "hl": [
-     "diaphragm"
-    ]
+    "why": "Around 2 square metres in an adult. The liver is the largest internal organ."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted layer.",
-    "answer": "Retina",
+    "kind": "Bone trivia",
+    "q": "How many bones are in one adult hand, wrist included?",
+    "answer": "27",
     "wrong": [
-     "Choroid",
-     "Sclera",
-     "Cornea"
+     "19",
+     "33",
+     "45"
     ],
-    "why": "The light-sensing film at the back. It’s wired backwards: light passes through layers of nerve cells before it reaches the photoreceptors.",
+    "why": "8 carpals, 5 metacarpals and 14 phalanges. Your two hands hold over a quarter of your 206 bones."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the hardest substance in the human body?",
+    "answer": "Enamel",
+    "wrong": [
+     "Bone",
+     "Dentine",
+     "Cartilage"
+    ],
+    "why": "Tooth enamel is about 96% mineral. It can’t regrow, so be nice to it."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted structure do?",
+    "answer": "Controls how much light gets in",
+    "wrong": [
+     "Focuses light",
+     "Detects colour",
+     "Makes tears"
+    ],
+    "why": "The iris is a ring of muscle that widens or narrows the pupil. Its pattern is so individual that it’s used in ID scanners.",
     "art": "eye",
     "hl": [
-     "retina"
+     "iris"
     ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Tibia",
+    "kind": "Anatomy trivia",
+    "q": "Which tendon joins the calf muscles to the heel?",
+    "answer": "Achilles tendon",
     "wrong": [
-     "Fibula",
-     "Femur",
-     "Radius"
+     "Patellar tendon",
+     "Hamstring tendon",
+     "Plantar fascia"
     ],
-    "why": "The shin bone and main weight-bearer of the lower leg. Its front edge sits right under the skin, which is why coffee tables hurt so much.",
-    "art": "skeleton",
-    "hl": [
-     "tibia"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted organ.",
-    "answer": "Gallbladder",
-    "wrong": [
-     "Pancreas",
-     "Duodenum",
-     "Spleen"
-    ],
-    "why": "Stores and concentrates bile from the liver, then squeezes it out after a fatty meal. You can live perfectly well without one.",
-    "art": "gut",
-    "hl": [
-     "gallbladder"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Cochlea",
-    "wrong": [
-     "Semicircular canals",
-     "Vestibule",
-     "Eustachian tube"
-    ],
-    "why": "Snail-shaped (that’s literally the Greek). Unrolled it’s about 3 cm long. High pitches register at the base, low pitches at the tip.",
-    "art": "ear",
-    "hl": [
-     "cochlea"
-    ]
+    "why": "The body’s thickest, strongest tendon, named after the Greek hero who was held by the heel when dipped in the river Styx."
    }
   ]
  },
@@ -640,15 +592,15 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "After a shoulder dislocation: weak deltoid and a numb patch on the outer shoulder. Which nerve?",
-    "answer": "Axillary nerve",
+    "kind": "Anatomy trivia",
+    "q": "Which muscle is the usual site for an adult’s vaccine?",
+    "answer": "Deltoid",
     "wrong": [
-     "Radial nerve",
-     "Suprascapular nerve",
-     "Musculocutaneous nerve"
+     "Biceps",
+     "Trapezius",
+     "Pectoralis major"
     ],
-    "why": "It wraps around the neck of the humerus, so dislocations stretch it. The numb ‘regimental badge’ patch, where a sleeve badge would sit, gives it away."
+    "why": "Aim for the meaty part a few finger-breadths below the bony tip of the shoulder. Too high risks a painful shoulder injury."
    },
    {
     "kind": "Name the structure",
@@ -678,17 +630,17 @@
    },
    {
     "kind": "What’s this bone?",
-    "q": "Name the highlighted forearm bone.",
-    "answer": "Radius",
+    "q": "Name the highlighted bone.",
+    "answer": "Third metacarpal",
     "wrong": [
-     "Ulna",
-     "Humerus",
-     "Fibula"
+     "Second metacarpal",
+     "Fourth metacarpal",
+     "Capitate"
     ],
-    "why": "The thumb-side forearm bone. It rolls around the ulna when you turn a doorknob, and it’s the usual wrist break after a fall on an outstretched hand.",
-    "art": "skeleton",
+    "why": "The palm bone behind the middle finger. It’s the only metacarpal with a little styloid process at its base.",
+    "art": "hand",
     "hl": [
-     "radius"
+     "mc3"
     ]
    }
   ]
@@ -699,63 +651,55 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted vessel.",
-    "answer": "Aorta",
+    "kind": "Anatomy trivia",
+    "q": "Perth’s Barry Marshall drank a culture of the bug that lives in the highlighted organ to prove it causes gastritis. Which bug?",
+    "answer": "Helicobacter pylori",
     "wrong": [
-     "Pulmonary trunk",
-     "Superior vena cava",
-     "Pulmonary vein"
+     "E. coli",
+     "Salmonella",
+     "Campylobacter"
     ],
-    "why": "The body’s main pipe, about as wide as your thumb. It rises out of the left ventricle, arches over the top and dives down behind the heart.",
-    "art": "heart",
+    "why": "Marshall and Robin Warren won the 2005 Nobel Prize. The stomach was meant to be too acidic for bacteria; H. pylori disagreed.",
+    "art": "gut",
     "hl": [
-     "aorta"
+     "stomach"
     ]
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted layer.",
-    "answer": "Cornea",
+    "q": "‘Place cells’, part of the brain’s GPS (2014 Nobel), were found in which structure?",
+    "answer": "Hippocampus",
     "wrong": [
-     "Lens",
-     "Sclera",
-     "Iris"
+     "Amygdala",
+     "Cerebellum",
+     "Thalamus"
     ],
-    "why": "The clear front window, doing about two-thirds of the eye’s focusing. It has no blood vessels and takes much of its oxygen straight from the air.",
-    "art": "eye",
-    "hl": [
-     "cornea"
-    ]
+    "why": "John O’Keefe found place cells there in 1971; May-Britt and Edvard Moser later found grid cells next door in the entorhinal cortex."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Melbourne-born John Eccles won a 1963 Nobel for how nerve cells signal each other. What’s the gap between two neurons called?",
+    "answer": "Synapse",
+    "wrong": [
+     "Node of Ranvier",
+     "Axon hillock",
+     "Dendrite"
+    ],
+    "why": "Signals usually cross it as chemical messengers. Eccles shared the prize with Alan Hodgkin and Andrew Huxley."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Tympanic membrane",
+    "q": "Hubel and Wiesel won a 1981 Nobel for showing how cells in the highlighted area respond to edges and lines. Which cortex?",
+    "answer": "Primary visual cortex",
     "wrong": [
-     "Malleus",
-     "Oval window",
-     "Cochlea"
+     "Primary motor cortex",
+     "Auditory cortex",
+     "Somatosensory cortex"
     ],
-    "why": "The eardrum: about a tenth of a millimetre thick, thinner than paper. Small holes often heal on their own within a few weeks.",
-    "art": "ear",
+    "why": "They found neurons that fire for lines at particular angles, the building blocks of how we see shapes.",
+    "art": "brain",
     "hl": [
-     "tm"
-    ]
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Which nerve gives feeling to the highlighted patch on the back of the hand?",
-    "answer": "Radial nerve",
-    "wrong": [
-     "Median nerve",
-     "Ulnar nerve",
-     "Axillary nerve"
-    ],
-    "why": "The superficial branch of the radial nerve owns the back of the first web space. It’s the go-to spot for testing radial sensation after an upper arm fracture.",
-    "art": "handback",
-    "hl": [
-     "web"
+     "occipital"
     ]
    },
    {
@@ -777,19 +721,15 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted wrist bone.",
-    "answer": "Hamate",
+    "kind": "Anatomy trivia",
+    "q": "Low oxygen at altitude makes lung arteries constrict. What’s this called?",
+    "answer": "Hypoxic pulmonary vasoconstriction",
     "wrong": [
-     "Capitate",
-     "Triquetrum",
-     "Pisiform"
+     "Bezold–Jarisch reflex",
+     "Cushing reflex",
+     "Hering–Breuer reflex"
     ],
-    "why": "‘Hamate’ means hooked. Its hook can snap in golfers, cricketers and batters when the grip handle jams into the palm on a mistimed swing.",
-    "art": "hand",
-    "hl": [
-     "hamate"
-    ]
+    "why": "Handy for diverting blood from poorly aired patches of lung, but at altitude it squeezes the whole lot, raising pressure and paving the way for HAPE."
    },
    {
     "kind": "Anatomy trivia",
@@ -803,49 +743,41 @@
     "why": "They sense low oxygen, and EPO rises within hours of arriving up high. The extra red cells take weeks to build up. Juxtaglomerular cells make renin. Today is International Mountain Day."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Fibula",
+    "kind": "Anatomy trivia",
+    "q": "Which sensors in the neck detect low oxygen and drive faster breathing at altitude?",
+    "answer": "Carotid bodies",
     "wrong": [
-     "Tibia",
-     "Ulna",
-     "Radius"
+     "Carotid sinus",
+     "Aortic arch baroreceptors",
+     "Central chemoreceptors in the medulla"
     ],
-    "why": "The skinny outer leg bone. It carries little weight, so surgeons can borrow a length of it, with its blood supply, to rebuild a jaw.",
-    "art": "skeleton",
+    "why": "Tiny clusters at the carotid fork with a huge blood flow for their size. The central chemoreceptors mostly track carbon dioxide, not oxygen."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "The highlighted point is where the trachea splits. At about which vertebral level is it?",
+    "answer": "T4–T5",
+    "wrong": [
+     "C6",
+     "T8",
+     "T10–T11"
+    ],
+    "why": "Level with the sternal angle. An endotracheal tube tip should sit a few centimetres above it.",
+    "art": "lungs",
     "hl": [
-     "fibula"
+     "carina"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Appendix",
+    "kind": "Anatomy trivia",
+    "q": "Severe brain swelling, as in high-altitude cerebral oedema, can push the brainstem through which opening?",
+    "answer": "Foramen magnum",
     "wrong": [
-     "Caecum",
-     "Ileum",
-     "Gallbladder"
+     "Jugular foramen",
+     "Foramen ovale",
+     "Superior orbital fissure"
     ],
-    "why": "Maybe not useless after all: it may act as a safe house for good gut bacteria. Its tip can point in lots of directions, which is why appendicitis pain can wander.",
-    "art": "gut",
-    "hl": [
-     "appendix"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted ligament.",
-    "answer": "Anterior cruciate ligament",
-    "wrong": [
-     "Posterior cruciate ligament",
-     "Medial collateral ligament",
-     "Lateral meniscus"
-    ],
-    "why": "Front of the cross, hence ‘anterior’. Pop, swelling within hours, wobbly knee. Women footballers tear theirs two to eight times more often than men.",
-    "art": "knee",
-    "hl": [
-     "acl"
-    ]
+    "why": "Herniation through the foramen magnum squashes the brainstem’s breathing centres. That’s why HACE means going down, fast."
    }
   ]
  },
@@ -855,74 +787,66 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted strip of cortex.",
-    "answer": "Primary motor cortex",
+    "kind": "Anatomy trivia",
+    "q": "After a mosquito bite, malaria parasites first multiply in which cells?",
+    "answer": "Liver cells (hepatocytes)",
     "wrong": [
-     "Primary somatosensory cortex",
-     "Broca’s area",
-     "Premotor cortex"
+     "Red bone marrow cells",
+     "Spleen cells",
+     "Lymph node cells"
     ],
-    "why": "The strip just in front of the central sulcus. It’s mapped upside down: feet near the top, face near the bottom, with huge areas for hands and lips.",
-    "art": "brain",
+    "why": "They hide in the liver for about a week before bursting out into red cells. The RTS,S vaccine, piloted for young children in Kenya, Ghana and Malawi from 2019, targets that early stage."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "In malaria the highlighted organ can swell hugely. Which way does it grow?",
+    "answer": "Down towards the right iliac fossa",
+    "wrong": [
+     "Up under the left armpit",
+     "Back towards the left kidney only",
+     "Straight down into the pelvis"
+    ],
+    "why": "It grows down and across the abdomen, with a notch you can sometimes feel. You can’t get your hand above it, which helps tell it from a big kidney.",
+    "art": "gut",
     "hl": [
-     "motor"
+     "spleen"
     ]
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies biceps?",
-    "answer": "Musculocutaneous nerve",
+    "q": "Which nerve is at risk in thyroid surgery and can leave a hoarse voice?",
+    "answer": "Recurrent laryngeal nerve",
     "wrong": [
-     "Radial nerve",
-     "Median nerve",
-     "Axillary nerve"
+     "Phrenic nerve",
+     "Accessory nerve",
+     "Hypoglossal nerve"
     ],
-    "why": "It punches through coracobrachialis, powers elbow flexion, then ends as a skin nerve on the outer forearm. Hence ‘musculo’ plus ‘cutaneous’."
+    "why": "It runs up beside the thyroid to supply most of the voice box muscles. The left one loops under the aortic arch on the way."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted ligament.",
-    "answer": "Posterior cruciate ligament",
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies supraspinatus and infraspinatus?",
+    "answer": "Suprascapular nerve",
     "wrong": [
-     "Anterior cruciate ligament",
-     "Lateral collateral ligament",
-     "Lateral meniscus"
+     "Axillary nerve",
+     "Subscapular nerve",
+     "Dorsal scapular nerve"
     ],
-    "why": "Thicker and stronger than the ACL. The classic tear is the ‘dashboard injury’: shin driven backwards in a car crash.",
-    "art": "knee",
-    "hl": [
-     "pcl"
-    ]
+    "why": "It can get trapped at the suprascapular or spinoglenoid notch. Volleyball players are known for wasting of infraspinatus from it."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted organ, mostly hidden behind the stomach.",
-    "answer": "Pancreas",
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Distal phalanx of the little finger",
     "wrong": [
-     "Spleen",
-     "Duodenum",
-     "Gallbladder"
+     "Middle phalanx of the little finger",
+     "Distal phalanx of the ring finger",
+     "Fifth metacarpal"
     ],
-    "why": "Its head nestles in the C-curve of the duodenum. It makes insulin plus over a litre of digestive juice a day, which is why pancreatitis is so nasty.",
-    "art": "gut",
+    "why": "Fingertip bones end in a rough tuft that supports the pulp. They’re the most commonly broken bones in the hand, usually from crush injuries.",
+    "art": "hand",
     "hl": [
-     "pancreas"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Ciliary body",
-    "wrong": [
-     "Iris",
-     "Choroid",
-     "Lens"
-    ],
-    "why": "A ring of muscle that changes the lens shape so you can focus up close. It also makes aqueous humour, the fluid that keeps the front of your eye inflated.",
-    "art": "eye",
-    "hl": [
-     "ciliary"
+     "dp5"
     ]
    }
   ]
@@ -934,48 +858,36 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the left lung.",
-    "answer": "Lingula",
+    "q": "The sinoatrial node sits at the top of which groove on the outside of the right atrium?",
+    "answer": "Sulcus terminalis",
     "wrong": [
-     "Middle lobe",
-     "Left lower lobe",
-     "Cardiac notch"
+     "Coronary sulcus",
+     "Anterior interventricular groove",
+     "Crista supraventricularis"
     ],
-    "why": "The left lung has no middle lobe; this tongue-shaped part of the upper lobe does the job. ‘Lingula’ is Latin for little tongue.",
-    "art": "lungs",
-    "hl": [
-     "lingula"
-    ]
+    "why": "The sulcus terminalis outside matches the crista terminalis inside. In 1947 Claude Beck reported shocking a stopped heart back to life during surgery."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted wall.",
-    "answer": "Interventricular septum",
+    "q": "The moderator band in the right ventricle carries which part of the conduction system?",
+    "answer": "Right bundle branch",
     "wrong": [
-     "Interatrial septum",
-     "Left ventricular free wall",
-     "Moderator band"
+     "Left bundle branch",
+     "Bundle of His",
+     "Bachmann’s bundle"
     ],
-    "why": "The wall between the ventricles, and it pumps too. A hole here, a VSD, is one of the most common heart defects babies are born with.",
-    "art": "heart",
-    "hl": [
-     "ivs"
-    ]
+    "why": "The septomarginal trabecula is a shortcut to the anterior papillary muscle, so it tightens in time with the rest of the ventricle."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Cerebellum",
+    "q": "Which pericardial space can a surgeon pass a finger through, behind the aorta and pulmonary trunk?",
+    "answer": "Transverse pericardial sinus",
     "wrong": [
-     "Brainstem",
-     "Occipital lobe",
-     "Temporal lobe"
+     "Oblique pericardial sinus",
+     "Costodiaphragmatic recess",
+     "Retrocaval space"
     ],
-    "why": "Latin for ‘little brain’: about a tenth of brain volume, yet roughly four in five of its neurons. Neuroscientist Suzana Herculano-Houzel counted them by turning brains into soup.",
-    "art": "brain",
-    "hl": [
-     "cerebellum"
-    ]
+    "why": "Cardiac surgeons use it to get a clamp or tape around the great arteries. The oblique sinus, behind the left atrium, is a dead end."
    },
    {
     "kind": "Which nerve?",
@@ -1007,34 +919,26 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Parietal lobe",
+    "kind": "Anatomy trivia",
+    "q": "About how much blood does an average adult have?",
+    "answer": "About 5 litres",
     "wrong": [
-     "Frontal lobe",
-     "Temporal lobe",
-     "Occipital lobe"
+     "About 1 litre",
+     "About 10 litres",
+     "About 15 litres"
     ],
-    "why": "The parietal lobe handles touch, body position and spatial awareness.",
-    "art": "brain",
-    "hl": [
-     "parietal"
-    ]
+    "why": "Roughly 7% of body weight. Over about 12 hours in 1799, George Washington’s doctors removed around 2.4 litres, some 40% of his blood. He died that night."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bones.",
-    "answer": "Ribs",
+    "kind": "Anatomy trivia",
+    "q": "Which vessels carry blood back to the heart?",
+    "answer": "Veins",
     "wrong": [
-     "Clavicle",
-     "Sternum",
-     "Scapula"
+     "Arteries",
+     "Capillaries",
+     "Lymphatics"
     ],
-    "why": "Most people have 12 pairs. Pairs 11 and 12 ‘float’, with no attachment at the front.",
-    "art": "skeleton",
-    "hl": [
-     "ribs"
-    ]
+    "why": "Bloodletting usually opened an arm vein at the inner elbow, the same spot used for blood tests today."
    },
    {
     "kind": "Anatomy trivia",
@@ -1048,30 +952,30 @@
     "why": "George Washington probably died of acute epiglottitis on this day in 1799, after his doctors drained a large share of his blood."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber.",
-    "answer": "Left atrium",
+    "kind": "Anatomy trivia",
+    "q": "Where does the highlighted chamber pump its blood?",
+    "answer": "To the lungs",
     "wrong": [
-     "Right atrium",
-     "Left ventricle",
-     "Right ventricle"
+     "To the body",
+     "To the brain only",
+     "To the liver"
     ],
-    "why": "It receives oxygenated blood from the lungs. When it quivers in atrial fibrillation, clots can form in it.",
+    "why": "The right ventricle sends blood on a short, low-pressure trip to the lungs, so its wall is much thinner than the left’s.",
     "art": "heart",
     "hl": [
-     "la"
+     "rv"
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "How many bones does a typical adult skeleton have?",
-    "answer": "206",
+    "kind": "Anatomy trivia",
+    "q": "Which paired lumps of immune tissue sit either side of the back of the throat?",
+    "answer": "Tonsils",
     "wrong": [
-     "106",
-     "256",
-     "306"
+     "Adenoids",
+     "Uvula",
+     "Salivary glands"
     ],
-    "why": "Babies start with more, around 270 to 300, which fuse as they grow."
+    "why": "Part of a ring of immune tissue guarding the entrance to your airway and gut. Removing them was once almost a childhood rite of passage."
    }
   ]
  },
@@ -1081,79 +985,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted airway.",
-    "answer": "Trachea",
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted structure do?",
+    "answer": "Fine-tunes focus",
     "wrong": [
-     "Oesophagus",
-     "Larynx",
-     "Bronchus"
+     "Detects light",
+     "Controls how much light gets in",
+     "Makes tears"
     ],
-    "why": "C-shaped cartilage rings keep it open. The open part of the ‘C’ faces the oesophagus behind it.",
-    "art": "lungs",
+    "why": "The cornea does most of the bending; the lens adjusts for near or far. L. L. Zamenhof, born today in 1859, was an eye doctor who also invented Esperanto.",
+    "art": "eye",
     "hl": [
-     "trachea"
+     "lens"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted region.",
-    "answer": "Cervical spine",
+    "kind": "Anatomy trivia",
+    "q": "What’s the black opening in the middle of the iris called?",
+    "answer": "Pupil",
     "wrong": [
-     "Thoracic spine",
-     "Lumbar spine",
-     "Sacrum"
+     "Lens",
+     "Fovea",
+     "Cornea"
     ],
-    "why": "Seven neck vertebrae, the same number as a giraffe.",
-    "art": "spine",
-    "hl": [
-     "cervical"
-    ]
+    "why": "It’s not a thing, it’s a hole. It looks black because the light that goes in mostly doesn’t come back out."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted part of the skeleton.",
-    "answer": "Skull (cranium)",
+    "kind": "Anatomy trivia",
+    "q": "Which cells in the retina let you see colour?",
+    "answer": "Cones",
     "wrong": [
-     "Mandible",
-     "Atlas",
-     "Hyoid"
+     "Rods",
+     "Ganglion cells",
+     "Bipolar cells"
     ],
-    "why": "The adult cranium is several plates joined at sutures, still partly open as fontanelles in babies.",
-    "art": "skeleton",
-    "hl": [
-     "cranium"
-    ]
+    "why": "About 6 million cones handle colour and detail; around 120 million rods take the night shift in black and white."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted part.",
-    "answer": "Auricle (pinna)",
+    "kind": "Anatomy trivia",
+    "q": "Which gland makes your tears?",
+    "answer": "Lacrimal gland",
     "wrong": [
-     "Ear canal",
-     "Eardrum",
-     "Mastoid"
+     "Parotid gland",
+     "Thyroid gland",
+     "Pineal gland"
     ],
-    "why": "The auricle funnels sound in. Its folds help you tell whether a sound is in front or behind.",
-    "art": "ear",
-    "hl": [
-     "auricle"
-    ]
+    "why": "It sits above the outer corner of each eye. Tears drain through tiny holes in the inner corner into your nose, which is why crying makes it run."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone at the knee.",
-    "answer": "Femur",
+    "kind": "Anatomy trivia",
+    "q": "Where the optic nerve leaves the eye there are no light sensors. What’s that spot called?",
+    "answer": "Blind spot",
     "wrong": [
-     "Tibia",
-     "Patella",
-     "Fibula"
+     "Fovea",
+     "Pupil",
+     "Iris"
     ],
-    "why": "The femur’s two rounded condyles rest on the flatter top of the tibia.",
-    "art": "knee",
-    "hl": [
-     "femur"
-    ]
+    "why": "Each eye has one, but your brain fills the gap so neatly that you never notice."
    }
   ]
  },
@@ -1163,18 +1051,20 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted region.",
-    "answer": "Lumbar spine",
+    "kind": "Anatomy trivia",
+    "q": "What do the highlighted tiny bones do?",
+    "answer": "Amplify sound vibrations",
     "wrong": [
-     "Thoracic spine",
-     "Sacrum",
-     "Cervical spine"
+     "Sense balance",
+     "Drain the middle ear",
+     "Make earwax"
     ],
-    "why": "Five chunky vertebrae carrying most of your upper body weight. No ribs attach here, which is how you tell them from thoracic ones.",
-    "art": "spine",
+    "why": "The ossicles work as a lever, boosting pressure about 20-fold so sound can move the fluid of the inner ear. Beethoven, born around today in 1770, lost his hearing gradually from his late twenties.",
+    "art": "ear",
     "hl": [
-     "lumbar"
+     "malleus",
+     "incus",
+     "stapes"
     ]
    },
    {
@@ -1189,49 +1079,37 @@
     "why": "Its hair cells are where most noise and age-related hearing loss starts. Beethoven, born around this day in 1770, wrote his Ninth Symphony while profoundly deaf."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted wrist bone.",
-    "answer": "Scaphoid",
+    "kind": "Anatomy trivia",
+    "q": "Which muscle, the body’s smallest, steadies the stapes to dampen loud sounds?",
+    "answer": "Stapedius",
     "wrong": [
-     "Lunate",
-     "Trapezium",
-     "Capitate"
+     "Tensor tympani",
+     "Tensor veli palatini",
+     "Levator veli palatini"
     ],
-    "why": "Fall on an outstretched hand, tender snuffbox: think scaphoid. Its blood supply enters from the far end, so a break across the middle can starve the near piece.",
-    "art": "hand",
-    "hl": [
-     "scaphoid"
-    ]
+    "why": "About a millimetre long and supplied by the facial nerve. Bell’s palsy can knock it out and make everyday sounds painfully loud."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted passage.",
-    "answer": "Ear canal",
+    "kind": "Anatomy trivia",
+    "q": "What’s the medical name for earwax?",
+    "answer": "Cerumen",
     "wrong": [
-     "Eustachian tube",
-     "Cochlea",
-     "Eardrum"
+     "Sebum",
+     "Vernix",
+     "Exudate"
     ],
-    "why": "About 2.5 cm long. Wax and skin migrate outwards along it, so it cleans itself.",
-    "art": "ear",
-    "hl": [
-     "canal"
-    ]
+    "why": "Made by glands in the outer ear canal. The canal skin slowly migrates outwards and cleans itself, so cotton buds mostly just push wax in."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted vessel.",
-    "answer": "Pulmonary trunk",
+    "kind": "Anatomy trivia",
+    "q": "Beethoven reportedly gripped a rod touching his piano in his teeth to hear. What did that use?",
+    "answer": "Bone conduction",
     "wrong": [
-     "Aorta",
-     "Superior vena cava",
-     "Pulmonary vein"
+     "Air conduction",
+     "Lip reading",
+     "Nerve regrowth"
     ],
-    "why": "Carries blood from the right ventricle to the lungs. An artery carrying low-oxygen blood: the classic exam trap.",
-    "art": "heart",
-    "hl": [
-     "pulmonarytrunk"
-    ]
+    "why": "Vibrations travel through the skull straight to the cochlea, skipping the middle ear. It’s the idea behind the Rinne test and bone-anchored hearing aids."
    }
   ]
  },
@@ -1242,33 +1120,25 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Medial meniscus",
+    "q": "Your master body clock, scrambled by jet lag, sits in which tiny part of the hypothalamus?",
+    "answer": "Suprachiasmatic nucleus",
     "wrong": [
-     "Lateral meniscus",
-     "Medial collateral ligament",
-     "Anterior cruciate ligament"
+     "Pineal gland",
+     "Pituitary stalk",
+     "Mammillary bodies"
     ],
-    "why": "A C-shaped cartilage cushion on the inner side. It’s anchored to the joint capsule and MCL, so it moves less and tears more often than the lateral one.",
-    "art": "knee",
-    "hl": [
-     "mm"
-    ]
+    "why": "It sits just above the optic chiasm and resets from light reaching your eyes. Morning sunlight is the best jet lag cure."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted forearm bone.",
-    "answer": "Ulna",
+    "kind": "Name the structure",
+    "q": "Which deep vein behind the knee is a common site for DVT?",
+    "answer": "Popliteal vein",
     "wrong": [
-     "Radius",
-     "Humerus",
-     "Fibula"
+     "Great saphenous vein",
+     "Femoral artery",
+     "Small saphenous vein"
     ],
-    "why": "The ulna sits on the little-finger side. Its tip is the point of your elbow (the olecranon).",
-    "art": "skeleton",
-    "hl": [
-     "ulna"
-    ]
+    "why": "It drains the calf, and clots here can travel to the lungs. On long flights, flex your ankles and walk the aisle. The Wright brothers flew 12 seconds on this day in 1903, so no DVT risk for them."
    },
    {
     "kind": "Anatomy trivia",
@@ -1282,34 +1152,30 @@
     "why": "Their long, narrow drainage duct blocks easily when you have a cold. The Wright brothers first flew on this day in 1903."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Optic nerve",
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted vertebra.",
+    "answer": "Axis (C2)",
     "wrong": [
-     "Retina",
-     "Choroid",
-     "Lateral rectus"
+     "Atlas (C1)",
+     "C3",
+     "C7 (vertebra prominens)"
     ],
-    "why": "Over a million fibres leave the eye here, creating a blind spot with no photoreceptors. Your brain quietly fills in the gap.",
-    "art": "eye",
+    "why": "Its tooth-like dens is the pivot the atlas turns on when you shake your head ‘no’.",
+    "art": "spine",
     "hl": [
-     "opticnerve"
+     "c2"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Temporal lobe",
+    "kind": "Anatomy trivia",
+    "q": "If cabin pressure drops, masks fall. In which tiny air sacs does the oxygen cross into blood?",
+    "answer": "Alveoli",
     "wrong": [
-     "Parietal lobe",
-     "Frontal lobe",
-     "Occipital lobe"
+     "Bronchioles",
+     "Bronchi",
+     "Pleura"
     ],
-    "why": "Hearing, memory and understanding language. ‘Temporal’ may come from tempus, time, because grey hairs often show first at the temples.",
-    "art": "brain",
-    "hl": [
-     "temporal"
-    ]
+    "why": "Hundreds of millions of them, with a combined surface of around 70 square metres."
    }
   ]
  },
@@ -1319,71 +1185,68 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted area of the left hemisphere.",
-    "answer": "Wernicke’s area",
+    "kind": "Anatomy trivia",
+    "q": "Reactivated tuberculosis classically affects which part of the lungs?",
+    "answer": "Upper lobes (apices)",
     "wrong": [
-     "Broca’s area",
-     "Angular gyrus",
-     "Primary auditory cortex"
+     "Lower lobes",
+     "Lingula only",
+     "Right middle lobe"
     ],
-    "why": "Damage here gives fluent but meaningless speech, with poor understanding.",
-    "art": "brain",
+    "why": "The apices are oxygen-rich with poorer lymph drainage, which suits TB. Many countries offer screening for latent TB to new arrivals; it’s very treatable.",
+    "art": "lungs",
     "hl": [
-     "wernicke"
+     "rul",
+     "lul"
     ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Sternum",
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies fibularis (peroneus) longus and brevis, the foot’s evertors?",
+    "answer": "Superficial fibular nerve",
     "wrong": [
-     "Clavicle",
-     "First rib",
-     "Scapula"
+     "Deep fibular nerve",
+     "Tibial nerve",
+     "Sural nerve"
     ],
-    "why": "The breastbone, where you push for CPR: lower half, 100 to 120 times a minute. Its tip, the xiphoid, may not fully turn to bone until middle age.",
-    "art": "skeleton",
-    "hl": [
-     "sternum"
-    ]
+    "why": "It also supplies most of the skin on top of the foot. The deep branch just gets the first web space."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the pelvic floor and the skin of the perineum?",
+    "answer": "Pudendal nerve",
+    "wrong": [
+     "Obturator nerve",
+     "Genitofemoral nerve",
+     "Ilioinguinal nerve"
+    ],
+    "why": "From S2–4 (‘keeps the poo off the floor’). It’s the target of a pudendal block in childbirth."
    },
    {
     "kind": "What’s this bone?",
     "q": "Name the highlighted vertebra.",
-    "answer": "L5",
+    "answer": "T4",
     "wrong": [
-     "L4",
-     "S1",
-     "T12"
+     "T3",
+     "T5",
+     "T6"
     ],
-    "why": "The L5/S1 disc is one of the two commonest to herniate, with L4/5.",
+    "why": "Count down from the top of the thoracic curve. The T4–T5 level lines up with the sternal angle, where the trachea splits.",
     "art": "spine",
     "hl": [
-     "l5"
+     "t4"
     ]
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies gluteus medius? (Lose it and the opposite hip drops when you stand on one leg.)",
-    "answer": "Superior gluteal nerve",
+    "q": "A fixed, dilated pupil with the eye turned ‘down and out’ points to which nerve?",
+    "answer": "Oculomotor nerve (III)",
     "wrong": [
-     "Inferior gluteal nerve",
-     "Sciatic nerve",
-     "Obturator nerve"
+     "Trochlear nerve (IV)",
+     "Abducens nerve (VI)",
+     "Optic nerve (II)"
     ],
-    "why": "That hip drop is the Trendelenburg sign. A badly placed buttock injection is one way to injure this nerve, hence the upper outer quadrant rule."
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the skin over the outer edge of the foot?",
-    "answer": "Sural nerve",
-    "wrong": [
-     "Superficial fibular nerve",
-     "Tibial nerve",
-     "Saphenous nerve"
-    ],
-    "why": "Surgeons often harvest it for nerve grafts. The trade-off is a small numb patch."
+    "why": "It moves most eye muscles and carries pupil-constricting fibres on its outside, so pressure from an aneurysm blows the pupil early."
    }
   ]
  },
@@ -1393,59 +1256,51 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Left upper lobe",
+    "kind": "Bone trivia",
+    "q": "Rickets widens and frays which part of a child’s long bone?",
+    "answer": "Physis (growth plate)",
     "wrong": [
-     "Left lower lobe",
-     "Right upper lobe",
-     "Right middle lobe"
+     "Diaphysis",
+     "Epiphysis",
+     "Periosteum"
     ],
-    "why": "It includes the lingula, the tongue-shaped piece that hugs the heart.",
-    "art": "lungs",
-    "hl": [
-     "lul"
-    ]
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the skin over the medial malleolus?",
-    "answer": "Saphenous nerve",
-    "wrong": [
-     "Sural nerve",
-     "Tibial nerve",
-     "Superficial fibular nerve"
-    ],
-    "why": "The longest branch of the femoral nerve, travelling with the great saphenous vein."
+    "why": "The growth plate sits between epiphysis and metaphysis. Low vitamin D lets it widen, a key X-ray sign. Rickets is one of the many guesses at Tiny Tim’s illness."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Transverse colon",
+    "q": "Which tiny glands behind the thyroid control blood calcium?",
+    "answer": "Parathyroid glands",
     "wrong": [
-     "Ascending colon",
-     "Descending colon",
-     "Small intestine"
+     "Adrenal glands",
+     "Thymus",
+     "Pituitary gland"
     ],
-    "why": "It hangs across the abdomen from the hepatic flexure to the splenic flexure.",
-    "art": "gut",
-    "hl": [
-     "transverse"
-    ]
+    "why": "Usually four, each about the size of a grain of rice. They’re easy to remove by accident in thyroid surgery."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted nerve leaving the inner ear.",
-    "answer": "Vestibulocochlear nerve (VIII)",
+    "q": "Which is the body’s strongest ligament, across the front of the hip?",
+    "answer": "Iliofemoral ligament",
     "wrong": [
-     "Facial nerve (VII)",
-     "Glossopharyngeal nerve (IX)",
-     "Trigeminal nerve (V)"
+     "Pubofemoral ligament",
+     "Ischiofemoral ligament",
+     "Ligamentum teres"
     ],
-    "why": "Hearing and balance. A benign tumour on it (vestibular schwannoma) causes one-sided hearing loss.",
-    "art": "ear",
+    "why": "The Y ligament of Bigelow stops the hip bending backwards, so you can stand upright with little muscle effort."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "A blow to the outside of the knee tears the highlighted ligament. What’s the classic ‘unhappy triad’?",
+    "answer": "ACL, MCL and medial meniscus",
+    "wrong": [
+     "PCL, LCL and lateral meniscus",
+     "ACL, LCL and medial meniscus",
+     "PCL, MCL and patellar tendon"
+    ],
+    "why": "Described by O’Donoghue in 1950. The MCL is attached to the medial meniscus, though lateral meniscus tears turn out to be common in these injuries too.",
+    "art": "knee",
     "hl": [
-     "cn8"
+     "mcl"
     ]
    },
    {
@@ -1467,34 +1322,26 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted area of the left hemisphere.",
-    "answer": "Broca’s area",
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies cricothyroid, the one voice box muscle the recurrent laryngeal nerve doesn’t?",
+    "answer": "External laryngeal nerve",
     "wrong": [
-     "Wernicke’s area",
-     "Primary motor cortex",
-     "Angular gyrus"
+     "Internal laryngeal nerve",
+     "Recurrent laryngeal nerve",
+     "Ansa cervicalis"
     ],
-    "why": "In the left frontal lobe, for producing speech. Paul Broca’s famous patient was nicknamed ‘Tan’ because it was almost the only word he could say.",
-    "art": "brain",
-    "hl": [
-     "broca"
-    ]
+    "why": "Cricothyroid tightens the vocal cords for high notes. Damage it in thyroid surgery and your voice can lose its top end."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Rectum",
+    "q": "Besides the aorta, what else passes through the aortic hiatus of the diaphragm?",
+    "answer": "Thoracic duct",
     "wrong": [
-     "Sigmoid colon",
-     "Descending colon",
-     "Caecum"
+     "Oesophagus",
+     "Vagal trunks",
+     "Right phrenic nerve"
     ],
-    "why": "About 12 cm long, it stores faeces until it’s convenient to empty it.",
-    "art": "gut",
-    "hl": [
-     "rectum"
-    ]
+    "why": "‘I ate 10 eggs at 12’: IVC at T8, oesophagus at T10, aorta at T12, with the thoracic duct (and often the azygos vein) tagging along."
    },
    {
     "kind": "Anatomy trivia",
@@ -1509,18 +1356,14 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Right lower lobe",
+    "q": "Which tendon forms the ulnar (inner) border of the anatomical snuffbox?",
+    "answer": "Extensor pollicis longus",
     "wrong": [
-     "Right middle lobe",
-     "Left lower lobe",
-     "Right upper lobe"
+     "Extensor pollicis brevis",
+     "Abductor pollicis longus",
+     "Extensor carpi radialis longus"
     ],
-    "why": "When you’re upright, inhaled food and fluid most often end up here.",
-    "art": "lungs",
-    "hl": [
-     "rll"
-    ]
+    "why": "EPB and APL form the other side. EPL hooks around Lister’s tubercle and can snap weeks after a wrist fracture."
    },
    {
     "kind": "Which nerve?",
@@ -1541,75 +1384,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Brainstem",
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted ligament mainly stop?",
+    "answer": "The shin sliding forward",
     "wrong": [
-     "Cerebellum",
-     "Spinal cord",
-     "Temporal lobe"
+     "The kneecap slipping sideways",
+     "The knee bending",
+     "The ankle rolling"
     ],
-    "why": "The brainstem runs breathing, heart rate and consciousness, and is the origin of most cranial nerves.",
-    "art": "brain",
+    "why": "The ACL stops the tibia shooting forward under the femur. Awkward landings from a jump tear it, which is why basketballers dread it. Today is World Basketball Day.",
+    "art": "knee",
     "hl": [
-     "brainstem"
+     "acl"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted organ.",
-    "answer": "Spleen",
+    "kind": "Anatomy trivia",
+    "q": "A typical rolled ankle injures ligaments on which side?",
+    "answer": "Outer side",
     "wrong": [
-     "Pancreas",
-     "Liver",
-     "Left kidney"
+     "Inner side",
+     "Front",
+     "Back"
     ],
-    "why": "The spleen filters old red cells and fights infection. You can live without it, with vaccines and care.",
-    "art": "gut",
-    "hl": [
-     "spleen"
-    ]
+    "why": "Rolling the foot inwards stretches the outer ligaments, most often the anterior talofibular. It’s one of basketball’s commonest injuries."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Stress hormones like adrenaline come from glands sitting on top of which organs?",
+    "answer": "Kidneys",
+    "wrong": [
+     "Lungs",
+     "Liver",
+     "Heart"
+    ],
+    "why": "The adrenal glands sit on the kidneys like little hats. Slow breathing and meditation can help dial the stress response down. Today is World Meditation Day."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle bends the elbow and also turns a screwdriver or doorknob palm-up?",
+    "answer": "Biceps",
+    "wrong": [
+     "Triceps",
+     "Deltoid",
+     "Pectoralis major"
+    ],
+    "why": "Biceps is a powerful twister (supinator) as well as a flexor. The real workhorse for bending the elbow, brachialis, hides underneath."
    },
    {
     "kind": "Bone trivia",
-    "q": "Which is the smallest bone in the body?",
-    "answer": "Stapes",
+    "q": "How many vertebrae are in the human neck?",
+    "answer": "Seven",
     "wrong": [
-     "Incus",
-     "Malleus",
-     "Pisiform"
+     "Five",
+     "Nine",
+     "Twelve"
     ],
-    "why": "About 3 mm long, in the middle ear. Shaped like a stirrup, which is what its name means."
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber.",
-    "answer": "Right ventricle",
-    "wrong": [
-     "Left ventricle",
-     "Right atrium",
-     "Left atrium"
-    ],
-    "why": "It pumps blood to the lungs. Low pressure, so a much thinner wall than the left ventricle.",
-    "art": "heart",
-    "hl": [
-     "rv"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Iris",
-    "wrong": [
-     "Cornea",
-     "Lens",
-     "Retina"
-    ],
-    "why": "The iris is a ring of muscle that sets pupil size, and it gives eyes their colour.",
-    "art": "eye",
-    "hl": [
-     "iris"
-    ]
+    "why": "Seven, the same as a giraffe. Theirs are just much longer."
    }
   ]
  },
@@ -1619,60 +1450,52 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Mandible",
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted organ do?",
+    "answer": "Stores and concentrates bile",
     "wrong": [
-     "Maxilla",
-     "Zygoma",
-     "Hyoid"
+     "Makes bile",
+     "Makes insulin",
+     "Filters blood"
     ],
-    "why": "The mandible is the only skull bone that moves. It’s also the strongest bone of the face.",
-    "art": "skeleton",
-    "hl": [
-     "mandible"
-    ]
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve is affected in Bell’s palsy?",
-    "answer": "Facial nerve (VII)",
-    "wrong": [
-     "Trigeminal nerve (V)",
-     "Vagus nerve (X)",
-     "Hypoglossal nerve (XII)"
-    ],
-    "why": "Weakness of one whole side of the face, forehead included."
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted tube.",
-    "answer": "Oesophagus",
-    "wrong": [
-     "Trachea",
-     "Aorta",
-     "Duodenum"
-    ],
-    "why": "About 25 cm long. Food is pushed down it by waves of muscle, so you can swallow upside down.",
+    "why": "The liver makes bile and the gallbladder stores it, squeezing it out after a fatty meal. You can live fine without one.",
     "art": "gut",
     "hl": [
-     "oesophagus"
+     "gallbladder"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted vessel.",
-    "answer": "Superior vena cava",
+    "kind": "Anatomy trivia",
+    "q": "The liver sits mostly in which part of the abdomen?",
+    "answer": "Upper right",
     "wrong": [
-     "Aorta",
-     "Inferior vena cava",
-     "Pulmonary trunk"
+     "Upper left",
+     "Lower right",
+     "Lower left"
     ],
-    "why": "It drains the head, neck and arms into the right atrium.",
-    "art": "heart",
-    "hl": [
-     "svc"
-    ]
+    "why": "Tucked under the right ribs. Srinivasa Ramanujan, born today in 1887, probably died of a parasitic liver infection at just 32."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What are the tiny finger-like projections lining the small intestine called?",
+    "answer": "Villi",
+    "wrong": [
+     "Cilia",
+     "Alveoli",
+     "Papillae"
+    ],
+    "why": "They hugely increase the surface for absorbing food. Coeliac disease flattens them."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "How many teeth are in a full adult set?",
+    "answer": "32",
+    "wrong": [
+     "28",
+     "30",
+     "36"
+    ],
+    "why": "32 including the four wisdom teeth, which many people never fully get. Children have 20."
    },
    {
     "kind": "Anatomy trivia",
@@ -1694,44 +1517,36 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Right middle lobe",
+    "q": "Which gland sits on top of each kidney?",
+    "answer": "Adrenal gland",
     "wrong": [
-     "Right upper lobe",
-     "Lingula",
-     "Right lower lobe"
+     "Pancreas",
+     "Thymus",
+     "Parathyroid gland"
     ],
-    "why": "Only the right lung has a middle lobe. The left lung’s lingula is its rough equivalent.",
-    "art": "lungs",
-    "hl": [
-     "rml"
-    ]
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the thigh’s adductor muscles?",
-    "answer": "Obturator nerve",
-    "wrong": [
-     "Femoral nerve",
-     "Sciatic nerve",
-     "Genitofemoral nerve"
-    ],
-    "why": "It leaves the pelvis through the obturator foramen, the largest hole in the skeleton."
+    "why": "‘Ad-renal’ just means next to the kidney. It makes adrenaline and cortisol."
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted valve.",
-    "answer": "Tricuspid valve",
+    "q": "What’s the kidney’s basic filtering unit called?",
+    "answer": "Nephron",
     "wrong": [
-     "Mitral valve",
-     "Pulmonary valve",
-     "Aortic valve"
+     "Alveolus",
+     "Lobule",
+     "Acinus"
     ],
-    "why": "Between the right atrium and right ventricle. Three cusps, as the name says.",
-    "art": "heart",
-    "hl": [
-     "tricuspid"
-    ]
+    "why": "Each kidney has around a million. Joseph Murray’s 1954 transplant in Boston worked because donor and recipient were identical twins, so no rejection."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which kidney usually sits lower, and why?",
+    "answer": "Right, pushed down by the liver",
+    "wrong": [
+     "Left, pushed down by the spleen",
+     "Right, pushed down by the heart",
+     "Neither, they sit level"
+    ],
+    "why": "The bulky liver nudges the right kidney a little lower than the left."
    },
    {
     "kind": "Anatomy trivia",
@@ -1745,19 +1560,15 @@
     "why": "The native kidneys usually stay put. Joseph Murray did the first successful kidney transplant, between identical twins, on this day in 1954."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted bone.",
-    "answer": "Sacrum",
+    "kind": "Anatomy trivia",
+    "q": "Blood reaches each kidney for filtering through which vessel?",
+    "answer": "Renal artery",
     "wrong": [
-     "Coccyx",
-     "Pelvis",
-     "Lumbar spine"
+     "Renal vein",
+     "Portal vein",
+     "Ureter"
     ],
-    "why": "Five vertebrae fused into one wedge, locking the spine into the pelvis.",
-    "art": "spine",
-    "hl": [
-     "sacrum"
-    ]
+    "why": "The kidneys get around a fifth of the heart’s output, a huge share for organs the size of a fist."
    }
   ]
  },
@@ -1768,48 +1579,40 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted region.",
-    "answer": "Thoracic spine",
+    "q": "Name the highlighted part of the bowel.",
+    "answer": "Ascending colon",
     "wrong": [
-     "Cervical spine",
-     "Lumbar spine",
-     "Sacrum"
+     "Descending colon",
+     "Transverse colon",
+     "Caecum"
     ],
-    "why": "Twelve vertebrae, one for each pair of ribs.",
-    "art": "spine",
-    "hl": [
-     "thoracic"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted loops.",
-    "answer": "Semicircular canals",
-    "wrong": [
-     "Cochlea",
-     "Vestibule",
-     "Mastoid air cells"
-    ],
-    "why": "Three canals at right angles sense head rotation. Loose crystals in one cause BPPV.",
-    "art": "ear",
-    "hl": [
-     "scc"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted C-shaped tube.",
-    "answer": "Duodenum",
-    "wrong": [
-     "Jejunum",
-     "Pancreas",
-     "Gallbladder"
-    ],
-    "why": "About 25 cm long, curling around the head of the pancreas. Bile and pancreatic juice enter here.",
+    "why": "You’re facing the patient, so their right is on your left. It carries the post-feast leftovers up from the caecum.",
     "art": "gut",
     "hl": [
-     "duodenum"
+     "ascending"
     ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which enzyme, from the salivary glands and pancreas, starts digesting the Christmas potatoes?",
+    "answer": "Amylase",
+    "wrong": [
+     "Lipase",
+     "Pepsin",
+     "Trypsin"
+    ],
+    "why": "Chew bread long enough and it starts to taste sweet: that’s amylase turning starch into sugar."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Fat from a feast is absorbed into lymph vessels in the gut lining called?",
+    "answer": "Lacteals",
+    "wrong": [
+     "Haustra",
+     "Crypts",
+     "Peyer’s patches"
+    ],
+    "why": "They turn milky white after a fatty meal, hence the name. The fat skips the liver at first and enters the blood via the thoracic duct."
    },
    {
     "kind": "Anatomy trivia",
@@ -1823,21 +1626,15 @@
     "why": "It balances heat made (including from your Christmas lunch) against heat lost through skin and sweat. James Joule was born today in 1818."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve gives feeling to the highlighted palm-side area?",
-    "answer": "Ulnar nerve",
+    "kind": "Name the structure",
+    "q": "Which ring of muscle stops stomach contents coming back up (when it behaves)?",
+    "answer": "Lower oesophageal sphincter",
     "wrong": [
-     "Median nerve",
-     "Radial nerve",
-     "Medial cutaneous nerve of the forearm"
+     "Pyloric sphincter",
+     "Ileocaecal valve",
+     "Upper oesophageal sphincter"
     ],
-    "why": "The little finger and the ulnar half of the ring finger. Pins and needles here after leaning on your elbow? Ulnar.",
-    "art": "palm",
-    "hl": [
-     "little",
-     "ring-u",
-     "palm-u"
-    ]
+    "why": "Helped by the diaphragm. Big meals and lying down straight after Christmas lunch make heartburn more likely."
    }
   ]
  },
@@ -1847,71 +1644,63 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Descending colon",
+    "kind": "Anatomy trivia",
+    "q": "A tourniquet high on the thigh is there to compress which artery?",
+    "answer": "Femoral artery",
     "wrong": [
-     "Ascending colon",
-     "Sigmoid colon",
-     "Transverse colon"
+     "Popliteal artery",
+     "Great saphenous vein",
+     "Internal iliac artery"
     ],
-    "why": "It runs down the left side, fixed to the back wall of the abdomen.",
-    "art": "gut",
-    "hl": [
-     "descending"
-    ]
+    "why": "High and tight stops femoral bleeding. Clara Barton, born on Christmas Day 1821, nursed wounded soldiers before founding the American Red Cross."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which artery is most often torn in an extradural haematoma?",
+    "answer": "Middle meningeal artery",
+    "wrong": [
+     "Superior sagittal sinus",
+     "Bridging veins",
+     "Anterior cerebral artery"
+    ],
+    "why": "It runs under the pterion, the thin spot at the side of the skull. Classic story: a knock, a lucid spell, then rapid decline."
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies gluteus maximus?",
-    "answer": "Inferior gluteal nerve",
+    "q": "Which nerve supplies the skin of the inner (medial) forearm?",
+    "answer": "Medial antebrachial cutaneous nerve",
     "wrong": [
-     "Superior gluteal nerve",
-     "Sciatic nerve",
-     "Nerve to obturator internus"
+     "Ulnar nerve",
+     "Musculocutaneous nerve",
+     "Intercostobrachial nerve"
     ],
-    "why": "It powers standing from a chair and climbing stairs."
-   },
-   {
-    "kind": "Bone trivia",
-    "q": "Which bone doesn’t form a joint with any other bone?",
-    "answer": "Hyoid",
-    "wrong": [
-     "Patella",
-     "Pisiform",
-     "Coccyx"
-    ],
-    "why": "It floats in the neck, held up by muscles and ligaments, anchoring the tongue."
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted wall.",
-    "answer": "Interatrial septum",
-    "wrong": [
-     "Interventricular septum",
-     "Crista terminalis",
-     "Moderator band"
-    ],
-    "why": "It contains the fossa ovalis, the remnant of the fetal foramen ovale. About a quarter of adults still have a small flap-like gap.",
-    "art": "heart",
-    "hl": [
-     "ias"
-    ]
+    "why": "It comes straight off the medial cord. The outer side belongs to the musculocutaneous nerve, via its lateral antebrachial cutaneous branch."
    },
    {
     "kind": "What’s this bone?",
     "q": "Name the highlighted vertebra.",
-    "answer": "C7 (vertebra prominens)",
+    "answer": "L4",
     "wrong": [
-     "T1",
-     "C6",
-     "C5"
+     "L3",
+     "L5",
+     "L2"
     ],
-    "why": "Its long spinous process is usually the first bump you feel at the base of the neck.",
+    "why": "A line across the tops of the iliac crests (Tuffier’s line) crosses about L4, the landmark for a lumbar puncture.",
     "art": "spine",
     "hl": [
-     "c7"
+     "l4"
     ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "In most people, which artery supplies the sinoatrial node?",
+    "answer": "Right coronary artery",
+    "wrong": [
+     "Left anterior descending artery",
+     "Left main coronary artery",
+     "Posterior descending artery"
+    ],
+    "why": "The RCA does it in a bit over half of people; the circumflex covers most of the rest."
    }
   ]
  },
@@ -1921,30 +1710,26 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted ligament.",
-    "answer": "Lateral collateral ligament",
+    "kind": "Anatomy trivia",
+    "q": "Which cells build new bone, the place radium gets locked into?",
+    "answer": "Osteoblasts",
     "wrong": [
-     "Medial collateral ligament",
-     "Iliotibial band",
-     "Posterior cruciate ligament"
+     "Osteoclasts",
+     "Chondrocytes",
+     "Fibroblasts"
     ],
-    "why": "A cord-like band from femur to fibular head, separate from the joint capsule.",
-    "art": "knee",
-    "hl": [
-     "lcl"
-    ]
+    "why": "Osteoblasts build, osteoclasts break down. Radium behaves like calcium, so it’s built into bone and irradiates it from inside. The Curies announced radium on this day in 1898."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies latissimus dorsi?",
-    "answer": "Thoracodorsal nerve",
+    "kind": "Anatomy trivia",
+    "q": "Potassium iodide tablets are stockpiled for nuclear accidents to protect which gland?",
+    "answer": "Thyroid gland",
     "wrong": [
-     "Long thoracic nerve",
-     "Dorsal scapular nerve",
-     "Suprascapular nerve"
+     "Thymus",
+     "Parathyroid glands",
+     "Pituitary gland"
     ],
-    "why": "Surgeons can borrow latissimus as a flap for breast reconstruction, keeping this nerve and its artery."
+    "why": "The thyroid hoards iodine to make hormones. Flooding it with ordinary iodide stops it soaking up the radioactive kind."
    },
    {
     "kind": "Anatomy trivia",
@@ -1958,34 +1743,30 @@
     "why": "Same column of the periodic table. The ‘Radium Girls’ who licked their brushes to paint watch dials developed jaw necrosis and bone cancers."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber of the inner ear.",
-    "answer": "Vestibule",
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Middle phalanx of the index finger",
     "wrong": [
-     "Cochlea",
-     "Semicircular canals",
-     "Mastoid antrum"
+     "Proximal phalanx of the index finger",
+     "Middle phalanx of the middle finger",
+     "Distal phalanx of the index finger"
     ],
-    "why": "It holds the utricle and saccule, which sense gravity and straight-line movement.",
-    "art": "ear",
+    "why": "Every finger has three phalanges, the thumb just two. Marie Curie’s fingertips were left scarred and cracked from years of handling radium.",
+    "art": "hand",
     "hl": [
-     "vestibule"
+     "mp2"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Vitreous humour",
+    "kind": "Which nerve?",
+    "q": "Which nerves carry ‘shoulder tip pain’ when the diaphragm is irritated?",
+    "answer": "Supraclavicular nerves",
     "wrong": [
-     "Aqueous humour",
-     "Lens",
-     "Choroid"
+     "Axillary nerve",
+     "Suprascapular nerve",
+     "Long thoracic nerve"
     ],
-    "why": "A clear gel filling the back of the eye. With age it shrinks and pulls away, giving floaters.",
-    "art": "eye",
-    "hl": [
-     "vitreous"
-    ]
+    "why": "They share the C3–4 roots with the phrenic nerve, so the brain blames the shoulder for the diaphragm’s problem."
    }
   ]
  },
@@ -1996,18 +1777,14 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted spot on the retina.",
-    "answer": "Fovea",
+    "q": "Which muscle mainly opens the Eustachian tube when you swallow?",
+    "answer": "Tensor veli palatini",
     "wrong": [
-     "Optic disc",
-     "Ora serrata",
-     "Ciliary body"
+     "Levator veli palatini",
+     "Salpingopharyngeus",
+     "Tensor tympani"
     ],
-    "why": "A tiny pit packed with cones and no rods, for your sharpest vision. Faint stars look brighter if you look slightly to one side, onto the rods.",
-    "art": "eye",
-    "hl": [
-     "fovea"
-    ]
+    "why": "Unlike most palate muscles it’s supplied by V3, not the vagus. Young children’s shorter, flatter tubes help explain all those ear infections."
    },
    {
     "kind": "Which nerve?",
@@ -2032,34 +1809,30 @@
     "why": "Retrograde axonal transport, which is why bites near the head have a shorter incubation. Louis Pasteur, born today in 1822, made the first rabies vaccine."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted valve.",
-    "answer": "Aortic valve",
+    "kind": "Anatomy trivia",
+    "q": "Ablation for atrial fibrillation often isolates the highlighted vessels. How many usually enter the left atrium?",
+    "answer": "Four",
     "wrong": [
-     "Pulmonary valve",
-     "Mitral valve",
-     "Tricuspid valve"
+     "Two",
+     "Three",
+     "Six"
     ],
-    "why": "Usually three cusps. About 1 to 2% of people have two (bicuspid), which can wear out early.",
+    "why": "Two from each lung, though three or five is a common variant. Muscle sleeves around their openings spark most AF.",
     "art": "heart",
     "hl": [
-     "aorticvalve"
+     "pulmonaryveins"
     ]
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted airway.",
-    "answer": "Left main bronchus",
+    "q": "Which of these does NOT pass through the carpal tunnel?",
+    "answer": "Palmaris longus tendon",
     "wrong": [
-     "Right main bronchus",
-     "Left pulmonary artery",
-     "Oesophagus"
+     "Flexor pollicis longus tendon",
+     "Median nerve",
+     "Flexor digitorum profundus tendons"
     ],
-    "why": "Longer and more horizontal than the right, because it has to pass under the aortic arch.",
-    "art": "lungs",
-    "hl": [
-     "lmb"
-    ]
+    "why": "Nine tendons and the median nerve go through. Palmaris longus runs over the top, and about 1 in 7 people don’t have one at all."
    }
   ]
  },
@@ -2069,34 +1842,26 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber.",
-    "answer": "Left ventricle",
+    "kind": "Anatomy trivia",
+    "q": "What’s the biggest muscle in the body?",
+    "answer": "Gluteus maximus",
     "wrong": [
-     "Right ventricle",
-     "Left atrium",
-     "Right atrium"
+     "Quadriceps",
+     "Latissimus dorsi",
+     "Pectoralis major"
     ],
-    "why": "The muscly one that pumps blood to the whole body. Diagrams face you, so the patient’s left is on your right. Everyone falls for that once.",
-    "art": "heart",
-    "hl": [
-     "lv"
-    ]
+    "why": "Your buttock muscle, the powerhouse for climbing stairs and standing up. A superhero muscle, just less photogenic."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bony ring.",
-    "answer": "Pelvis",
+    "kind": "Anatomy trivia",
+    "q": "What’s the outer layer of the skin called?",
+    "answer": "Epidermis",
     "wrong": [
-     "Sacrum",
-     "Coccyx",
-     "Lumbar spine"
+     "Dermis",
+     "Hypodermis",
+     "Fascia"
     ],
-    "why": "The pelvis carries your upper body’s weight onto the legs, and is wider and rounder in most women to allow for childbirth.",
-    "art": "skeleton",
-    "hl": [
-     "pelvis"
-    ]
+    "why": "You shed millions of skin cells a day and renew the whole outer layer every month or two. Real-life regeneration."
    },
    {
     "kind": "Anatomy trivia",
@@ -2110,34 +1875,30 @@
     "why": "If it starts before the growth plates close you get gigantism; after, acromegaly. Comic writer Stan Lee was born today in 1922."
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Frontal lobe",
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted structure mainly help with?",
+    "answer": "Balance and coordination",
     "wrong": [
-     "Parietal lobe",
-     "Temporal lobe",
-     "Occipital lobe"
+     "Vision",
+     "Smell",
+     "Memory"
     ],
-    "why": "Planning, personality and impulse control. In 1848 an iron rod shot through Phineas Gage’s frontal lobe; he survived, but friends said he was ‘no longer Gage’.",
+    "why": "The cerebellum fine-tunes movement. Alcohol upsets it early, which is why police ask people to walk a straight line.",
     "art": "brain",
     "hl": [
-     "frontal"
+     "cerebellum"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted coils.",
-    "answer": "Small intestine",
+    "kind": "Bone trivia",
+    "q": "Radioactive spiders won’t help, but bones do repair themselves. A healing fracture forms a?",
+    "answer": "Callus",
     "wrong": [
-     "Large intestine",
-     "Appendix",
-     "Stomach"
+     "Scab",
+     "Cyst",
+     "Blister"
     ],
-    "why": "Several metres long, folded into a small space. Most nutrient absorption happens here.",
-    "art": "gut",
-    "hl": [
-     "smallbowel"
-    ]
+    "why": "A soft callus of cartilage hardens into bone over weeks. Bone is one of the few tissues that can heal without a scar."
    }
   ]
  },
@@ -2147,75 +1908,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted organ.",
-    "answer": "Liver",
+    "kind": "Anatomy trivia",
+    "q": "A urinary catheter passes up which tube to drain the bladder?",
+    "answer": "Urethra",
     "wrong": [
-     "Stomach",
-     "Spleen",
-     "Pancreas"
-    ],
-    "why": "Your biggest internal organ and a full-time chemistry lab. It can regrow from about a quarter of its tissue, which is why living donors can give a slice.",
-    "art": "gut",
-    "hl": [
-     "liver"
-    ]
-   },
-   {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Femur",
-    "wrong": [
-     "Tibia",
-     "Humerus",
-     "Fibula"
-    ],
-    "why": "The thigh bone: your longest and strongest. It’s roughly a quarter of your height, which is how forensic teams estimate stature from a single bone.",
-    "art": "skeleton",
-    "hl": [
-     "femur"
-    ]
-   },
-   {
-    "kind": "Which nerve?",
-    "q": "You knock your ‘funny bone’. Which nerve just zapped you?",
-    "answer": "Ulnar nerve",
-    "wrong": [
-     "Radial nerve",
-     "Median nerve",
-     "Musculocutaneous nerve"
-    ],
-    "why": "Not funny, not a bone. The ulnar nerve sits just under the skin behind the elbow, so a knock fires off tingles into your ring and little fingers."
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Lens",
-    "wrong": [
-     "Cornea",
-     "Iris",
-     "Vitreous"
-    ],
-    "why": "Clear and flexible, it fine-tunes focus. It keeps adding layers all your life, like an onion, and slowly stiffens. Hello, reading glasses at 45.",
-    "art": "eye",
-    "hl": [
-     "lens"
-    ]
-   },
-   {
-    "kind": "Name the structure",
-    "q": "Name the highlighted tube.",
-    "answer": "Trachea",
-    "wrong": [
+     "Ureter",
      "Oesophagus",
-     "Larynx",
-     "Main bronchus"
+     "Vas deferens"
     ],
-    "why": "The windpipe, held open by C-shaped rings of cartilage. The open back of each ‘C’ lets the oesophagus bulge forward when you swallow a big mouthful.",
-    "art": "lungs",
+    "why": "The urethra carries urine out. Rubber made catheters flexible, thanks to vulcanisation by Charles Goodyear, born today in 1800."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which tubes carry urine from the kidneys to the bladder?",
+    "answer": "Ureters",
+    "wrong": [
+     "Urethra",
+     "Renal arteries",
+     "Fallopian tubes"
+    ],
+    "why": "About 25–30 cm long. Urine is pushed along by squeezing waves, not just gravity, so you could wee upside down."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What connects muscle to bone?",
+    "answer": "Tendon",
+    "wrong": [
+     "Ligament",
+     "Cartilage",
+     "Fascia"
+    ],
+    "why": "Tendons pull, ligaments hold bone to bone. Both are springy, but nowhere near as stretchy as rubber."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What kind of blood fills the highlighted chamber?",
+    "answer": "Oxygen-rich blood from the lungs",
+    "wrong": [
+     "Oxygen-poor blood from the body",
+     "Blood from the liver",
+     "Lymph from the gut"
+    ],
+    "why": "The left atrium collects freshly oxygenated blood from the pulmonary veins and passes it to the left ventricle.",
+    "art": "heart",
     "hl": [
-     "trachea"
+     "la"
     ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the bendy tissue that shapes your nose and outer ear?",
+    "answer": "Cartilage",
+    "wrong": [
+     "Bone",
+     "Muscle",
+     "Fat"
+    ],
+    "why": "Flexible, a bit like rubber, but with no blood vessels of its own, which is why it heals so slowly."
    }
   ]
  },
@@ -2291,19 +2040,15 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Clavicle",
+    "kind": "Anatomy trivia",
+    "q": "Alcohol makes you wee more by blocking which hormone?",
+    "answer": "Antidiuretic hormone (vasopressin)",
     "wrong": [
-     "Scapula",
-     "Sternum",
-     "First rib"
+     "Aldosterone",
+     "Insulin",
+     "Cortisol"
     ],
-    "why": "The collarbone. It’s the first bone in the body to start hardening, around week five or six of pregnancy, and one of the most commonly broken bones in kids.",
-    "art": "skeleton",
-    "hl": [
-     "clavicle"
-    ]
+    "why": "ADH from the posterior pituitary tells the kidneys to hold onto water. Block it and you lose more than you drink. Hello, New Year’s Day headache."
    },
    {
     "kind": "Anatomy trivia",
@@ -2317,53 +2062,41 @@
     "why": "The lower left wall is the weakest. Herman Boerhaave, born today in 1668, described it in a Dutch admiral after a feast."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve gives feeling to the highlighted palm-side area?",
-    "answer": "Median nerve",
+    "kind": "Name the structure",
+    "q": "Which skin layer holds the nerve endings, sweat glands and hair roots that deep burns destroy?",
+    "answer": "Dermis",
     "wrong": [
-     "Ulnar nerve",
-     "Radial nerve",
-     "Musculocutaneous nerve"
+     "Epidermis",
+     "Hypodermis",
+     "Stratum corneum"
     ],
-    "why": "Thumb, index, middle and half the ring finger on the palm side. Squash it in the carpal tunnel and this zone tingles, often at night.",
-    "art": "palm",
-    "hl": [
-     "thumb",
-     "index",
-     "middle",
-     "ring-r",
-     "palm-r"
-    ]
+    "why": "Burns deep enough to destroy the dermis’s nerve endings can hurt less than shallow ones. Enjoy the fireworks from a safe distance tonight."
    },
    {
     "kind": "What’s this bone?",
     "q": "Name the highlighted bone.",
-    "answer": "First metacarpal",
+    "answer": "Proximal phalanx of the thumb",
     "wrong": [
-     "Trapezium",
-     "Proximal phalanx of the thumb",
-     "Scaphoid"
+     "First metacarpal",
+     "Distal phalanx of the thumb",
+     "Trapezium"
     ],
-    "why": "The thumb’s metacarpal is short, chunky and very mobile on the trapezium. That saddle joint gives you an opposable thumb.",
+    "why": "The thumb has only two phalanges; the fingers have three. Hands are the body part most often hurt by fireworks, so keep yours away from the fuse.",
     "art": "hand",
     "hl": [
-     "mc1"
+     "pp1"
     ]
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted bone.",
-    "answer": "Coccyx",
+    "q": "Which brain region’s ‘brakes’ does alcohol loosen early, so you dance like nobody’s watching?",
+    "answer": "Prefrontal cortex",
     "wrong": [
-     "Sacrum",
-     "Fifth lumbar vertebra",
-     "Ischium"
+     "Cerebellum",
+     "Brainstem",
+     "Occipital lobe"
     ],
-    "why": "Three to five tiny fused vertebrae: your vestigial tail.",
-    "art": "spine",
-    "hl": [
-     "coccyx"
-    ]
+    "why": "The prefrontal cortex handles judgement and restraint. Coordination goes next, and at very high doses the brainstem’s breathing centres. Pace yourself tonight."
    }
   ]
  }
