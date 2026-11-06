@@ -1279,17 +1279,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted airway.",
-    "answer": "Trachea",
+    "q": "Name the highlighted lobe.",
+    "answer": "Right upper lobe",
     "wrong": [
-     "Oesophagus",
-     "Larynx",
-     "Bronchus"
+     "Right middle lobe",
+     "Left upper lobe",
+     "Right lower lobe"
     ],
-    "why": "C-shaped cartilage rings keep it open. The open part of the ‘C’ faces the oesophagus behind it.",
+    "why": "Smoking-related emphysema favours the upper lobes; alpha-1 antitrypsin deficiency tends to hit the lower lobes first. Today is World COPD Day.",
     "art": "lungs",
     "hl": [
-     "trachea"
+     "rul"
     ]
    },
    {
@@ -2139,19 +2139,15 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted lobe.",
-    "answer": "Frontal lobe",
+    "kind": "Anatomy trivia",
+    "q": "Inhaled anaesthetics, like the chloroform James Young Simpson pioneered in Edinburgh, get into the blood through which organ?",
+    "answer": "Lungs",
     "wrong": [
-     "Parietal lobe",
-     "Temporal lobe",
-     "Occipital lobe"
+     "Skin",
+     "Stomach",
+     "Liver"
     ],
-    "why": "Planning, personality and impulse control. In 1848 an iron rod shot through Phineas Gage’s frontal lobe; he survived, but friends said he was ‘no longer Gage’.",
-    "art": "brain",
-    "hl": [
-     "frontal"
-    ]
+    "why": "Gas crosses the paper-thin walls of the air sacs in seconds. In 1847 Simpson tested chloroform on himself and friends at his dining table, and they all ended up under it."
    },
    {
     "kind": "What’s this bone?",
@@ -2184,30 +2180,30 @@
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted chamber.",
-    "answer": "Left ventricle",
+    "kind": "Anatomy trivia",
+    "q": "What does the highlighted lobe mainly handle?",
+    "answer": "Vision",
     "wrong": [
-     "Right ventricle",
-     "Left atrium",
-     "Right atrium"
+     "Hearing",
+     "Smell",
+     "Balance"
     ],
-    "why": "The muscly one that pumps blood to the whole body. Diagrams face you, so the patient’s left is on your right. Everyone falls for that once.",
-    "art": "heart",
+    "why": "The occipital lobe at the back is your visual cortex. A hard knock to the back of the head really can make you ‘see stars’.",
+    "art": "brain",
     "hl": [
-     "lv"
+     "occipital"
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the diaphragm, your main breathing muscle?",
-    "answer": "Phrenic nerve",
+    "kind": "Bone trivia",
+    "q": "What’s the proper name for the shoulder blade?",
+    "answer": "Scapula",
     "wrong": [
-     "Vagus nerve",
-     "Intercostal nerves",
-     "Accessory nerve"
+     "Clavicle",
+     "Sternum",
+     "Acromion"
     ],
-    "why": "‘C3, 4, 5 keeps the diaphragm alive.’ It starts in the neck because the diaphragm began life up there in the embryo, then migrated down, dragging its nerve along."
+    "why": "A flat triangle of bone held on almost entirely by muscle. Its only bony link to the rest of the skeleton is through the collarbone."
    }
   ]
  }
