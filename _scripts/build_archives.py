@@ -2,7 +2,7 @@
 """Build the Google-readable puzzle archive pages for Malady Wise.
 
 HOW TO RUN
-    python3 tools/build_archives.py          (from the repo root, or any folder)
+    python3 _scripts/build_archives.py          (from the repo root, or any folder)
 
 What it does
     * Works out today's date in Sydney (Australia/Sydney).
