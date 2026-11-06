@@ -1,12 +1,17 @@
 /* Organ Drop (working title): a falling-block bonus game for Malady Wise.
    Seven pieces, seven organs. 10 x 20 board, SRS rotation with wall kicks, 7-bag randomiser, hold, next preview,
    ghost piece, lock delay, levels every 10 lines with faster gravity and an organ fact on each level-up.
-   High scores: top 5 in this browser only. ?debug=1 exposes window.OD_DEBUG for testing. */
+   High scores: top 5 in this browser only. ?debug=1 exposes window.OD_DEBUG for testing (and ?day=YYYY-MM-DD to fake the date).
+   Daily challenge: the piece order is seeded from the Sydney date, so everyone gets the same organs; one scored go a day, replays are practice.
+   World boards (oall, odaily) on the Malady Wise counter server: used ONLY once the server echoes board === "oall".
+   An older server maps unknown boards to Basil + Clover's "all", so until then nothing is shown or posted. */
 (function () {
   "use strict";
   var TITLE = "Organ Drop"; // the game's name: change it here only
   var HSKEY = "mw-organdrop-hs";
   var DEBUG = /[?&]debug=1\b/.test(location.search);
+  var STATKEY = "mw-organdrop-stats", DKEY = "mw-organdrop-daily", NAMEKEY = "mw-organdrop-name", PIDKEY = "mw-organdrop-pid";
+  var MODE = "endless"; // "endless" | "daily" (today's scored go) | "practice" (a daily replay)
 
   function $(id) { return document.getElementById(id); }
   function lget(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
@@ -14,7 +19,17 @@
   function track(n) { try { if (window.MW_track) MW_track("organ-drop/" + n); } catch (e) {} }
   function quiet() { var r = document.documentElement.getAttribute("data-motion") === "reduce"; try { r = r || matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {} return r; }
   function normie() { return document.documentElement.getAttribute("data-mode") === "normie"; }
-  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function shuffle(a, rnd) { rnd = rnd || Math.random; a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function sydDay() {
+    if (DEBUG) { var m = /[?&]day=(\d{4}-\d\d-\d\d)\b/.exec(location.search); if (m) return m[1]; }
+    try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney" }).format(new Date()); } catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+  // same seeded generator as Basil + Clover's daily: string hash into a mulberry32-style PRNG
+  function seeded(str) { var a = 0; for (var i = 0; i < str.length; i++) a = Math.imul(a ^ str.charCodeAt(i), 2654435761); return function () { a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function fmt(n) { return Number(n || 0).toLocaleString("en-AU"); }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function dailyRec() { var r = lget(DKEY); return r && r.d === sydDay() ? r : null; }
+  function bumpStats(f) { var st = lget(STATKEY); if (!st || typeof st !== "object") st = {}; f(st); lset(STATKEY, st); try { if (window.MW_checkBadges) MW_checkBadges(); } catch (e) {} }
 
   var TOUCH = false; try { TOUCH = navigator.maxTouchPoints > 0 || "ontouchstart" in window || matchMedia("(pointer:coarse)").matches; } catch (e) {}
   if (TOUCH) document.documentElement.classList.add("od-touch");
@@ -77,9 +92,10 @@
   var DAS = 0.16, ARR = 0.045, SOFT = 0.035, LOCK = 0.5;
 
   function emptyBoard() { var b = []; for (var r = 0; r < ROWS; r++) b.push(new Array(COLS).fill(0)); return b; }
-  function bagNext() { if (!S.bag.length) S.bag = shuffle(TYPES); return S.bag.pop(); }
+  function bagNext() { if (!S.bag.length) S.bag = shuffle(TYPES, S.rng); var t = S.bag.pop(); S.seq.push(t); return t; }
   function newState() {
-    return { board: emptyBoard(), bag: [], queue: [], cur: null, hold: null, canHold: true, score: 0, lines: 0, level: 1,
+    var day = sydDay();
+    return { mode: MODE, day: day, rng: MODE === "endless" ? Math.random : seeded("organdrop-" + day), seq: [], quads: 0, board: emptyBoard(), bag: [], queue: [], cur: null, hold: null, canHold: true, score: 0, lines: 0, level: 1,
       gT: 0, lockT: 0, lockN: 0, lowY: 0, over: false, t: 0, clearing: null, toastT: 0, factT: 0, facts: shuffle(FACTS), factI: 0, seen: [], l1: 0, overT: 0 };
   }
   function fillQueue() { while (S.queue.length < 3) S.queue.push(bagNext()); }
@@ -160,6 +176,7 @@
   function scoreLines(n) {
     var before = S.level;
     S.score += [0, 100, 300, 500, 800][n] * S.level;
+    if (n === 4) { S.quads++; bumpStats(function (st) { st.quad = (st.quad || 0) + 1; }); }
     S.lines += n; S.level = 1 + Math.floor(S.lines / 10);
     var txt = normie() ? NOR[n] : n === 1 ? MED1[S.l1++ % MED1.length] : MEDN[n];
     toast(txt, n === 4);
@@ -319,17 +336,26 @@
   window.addEventListener("resize", size);
 
   // ---------- flow ----------
-  function start() {
-    S = newState(); fillQueue(); nextPiece();
+  function start(mode) {
+    if (mode === "daily" || mode === "practice") MODE = dailyRec() ? "practice" : "daily";
+    else if (mode === "endless") MODE = "endless";
+    else if (MODE !== "endless") MODE = dailyRec() ? "practice" : "daily"; // Play again / Space: same mode
+    S = newState();
+    if (MODE === "daily") lset(DKEY, { d: S.day, s: 0, l: 0, v: 1, live: 1 }); // the scored go is used up as soon as it starts
+    fillQueue(); nextPiece();
+    $("od-scl").textContent = MODE === "daily" ? "Daily · " + fmtDate(S.day) : MODE === "practice" ? "Practice · " + fmtDate(S.day) : "Score";
+    bumpStats(function (st) { st.games = (st.games || 0) + 1; });
+    lbFetch(lbFor());
     paused = false; running = true; held.left = held.right = held.down = 0;
     $("od-intro").hidden = true; $("od-game").hidden = false; $("od-over").hidden = true; $("od-paused").hidden = true;
     $("od-toast").hidden = true; $("od-fact").classList.remove("new"); $("od-factlv").textContent = "Organ facts"; $("od-facttx").textContent = "Clear 10 rows to unlock your first one."; $("od-stage").classList.remove("paused");
     $("od-pause").innerHTML = "&#10074;&#10074;";
     window.scrollTo(0, 0); size(); hud();
     cancelAnimationFrame(raf); last = performance.now(); raf = requestAnimationFrame(frame);
-    track("start");
+    track(MODE === "endless" ? "start" : MODE === "daily" ? "daily-start" : "practice-start");
   }
   function exitToStart() {
+    if (S && !S.over && S.mode === "daily") { lset(DKEY, { d: S.day, s: S.score, l: S.lines, v: S.level, quit: 1 }); } // leaving mid-go keeps the score so far
     running = false; paused = false; cancelAnimationFrame(raf);
     $("od-game").hidden = true; $("od-intro").hidden = false; $("od-paused").hidden = true; $("od-over").hidden = true;
     renderBest(); window.scrollTo(0, 0);
@@ -348,20 +374,32 @@
     S.over = true; S.cur = null; S.overT = performance.now();
     $("od-toast").hidden = true;
     var list = lget(HSKEY); if (!Array.isArray(list)) list = [];
-    var prevBest = list.length ? list[0].s : 0;
-    var me = { s: S.score, l: S.lines, v: S.level, d: new Date().toISOString().slice(0, 10), id: Date.now() };
-    list.push(me); list.sort(function (a, b) { return b.s - a.s; }); list = list.slice(0, 5); lset(HSKEY, list);
+    var prevBest = list.length ? list[0].s : 0, me = { id: -1 };
+    if (S.mode === "endless") { me = { s: S.score, l: S.lines, v: S.level, d: new Date().toISOString().slice(0, 10), id: Date.now() };
+      list.push(me); list.sort(function (a, b) { return b.s - a.s; }); list = list.slice(0, 5); lset(HSKEY, list); }
+    if (S.mode === "daily") lset(DKEY, { d: S.day, s: S.score, l: S.lines, v: S.level });
+    bumpStats(function (st) { st.lines = Math.max(st.lines || 0, S.lines); st.best = Math.max(st.best || 0, S.score); if (S.mode === "daily") st.daily = (st.daily || 0) + 1; });
     var N = normie();
     $("od-otitle").textContent = N ? "Game over" : "Code blue";
     $("od-over").classList.toggle("blue", !N);
     var msgs = N ? OVERN : OVERMSG; $("od-omsg").textContent = msgs[Math.floor(Math.random() * msgs.length)];
     $("od-opts").textContent = S.score.toLocaleString("en-AU"); $("od-olines").textContent = S.lines; $("od-olv").textContent = S.level;
-    var ob = $("od-obest");
-    if (S.score > 0 && S.score > prevBest) { ob.textContent = "New personal best!"; ob.classList.add("pb"); }
-    else { ob.textContent = prevBest ? "Your best: " + prevBest.toLocaleString("en-AU") : ""; ob.classList.remove("pb"); }
-    renderHS($("od-hs1"), list, me.id);
+    var ob = $("od-obest"), dr = dailyRec();
+    ob.classList.remove("pb");
+    if (S.mode === "daily") ob.textContent = "Daily challenge · " + fmtDate(S.day) + " · scored";
+    else if (S.mode === "practice") ob.textContent = "Practice run. Today’s scored go: " + (dr ? fmt(dr.s) : "0") + ".";
+    else if (S.score > 0 && S.score > prevBest) { ob.textContent = "New personal best!"; ob.classList.add("pb"); }
+    else ob.textContent = prevBest ? "Your best: " + fmt(prevBest) : "";
+    $("od-hs1").hidden = S.mode !== "endless" || ODLB;
+    if (S.mode === "endless") renderHS($("od-hs1"), list, me.id);
+    // shareable result: the scored daily (also from a practice run), or this endless game
+    var sh = S.mode === "endless" ? TITLE + " · " + fmt(S.score) + " pts · " + S.lines + " lines · level " + S.level + " 🫀🫁 maladywise.com/organ-drop/"
+      : TITLE + " daily " + fmtDate(S.day) + " · " + fmt(dr ? dr.s : S.score) + " pts · " + (dr ? dr.l : S.lines) + " lines 🫀🫁 maladywise.com/organ-drop/";
+    $("od-sharetx").textContent = sh; $("od-share").textContent = "Share";
+    $("od-again").textContent = S.mode === "endless" ? "Play again" : "Practise this daily";
+    lbOver();
     $("od-over").hidden = false; $("od-again").focus({ preventScroll: true });
-    track("over");
+    track(S.mode === "endless" ? "over" : S.mode === "daily" ? "daily-over" : "practice-over");
   }
   function fmtDate(d) { try { var p = d.split("-"); return +p[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+p[1] - 1]; } catch (e) { return ""; } }
   function renderHS(ol, list, meId) {
@@ -375,7 +413,72 @@
     var list = lget(HSKEY); if (!Array.isArray(list)) list = [];
     $("od-best").innerHTML = list.length ? "Your best: <b>" + Number(list[0].s).toLocaleString("en-AU") + "</b>" : "";
     renderHS($("od-hs0"), list);
+    var dr = dailyRec();
+    $("od-daily").textContent = dr ? "Daily (practice)" : "Daily challenge";
+    $("od-dnote").innerHTML = dr ? "Today’s daily: <b>" + fmt(dr.s) + "</b> pts, " + dr.l + " lines. Replays are practice. New organs at midnight (Sydney)."
+      : "Today’s daily: the same organs, in the same order, for everyone. One scored go.";
   }
+
+  // ---------- world and daily leaderboards (via the Malady Wise counter server) ----------
+  var LB = "https://mw-presence.onrender.com", ODLB = false, boards = { oall: null, odaily: null }, posted = false;
+  function pid() { var p = lget(PIDKEY); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); lset(PIDKEY, p); } return p; }
+  function lbFor() { return S && S.mode !== "endless" ? "odaily" : "oall"; }
+  function lbGot(k, j) {
+    var ok = !!(j && Array.isArray(j.rows) && j.board === k);
+    if (j && !ok) { ODLB = false; $("od-lb").hidden = true; } // the server doesn't know Organ Drop's boards (yet, or any more)
+    boards[k] = ok ? j.rows : "err";
+    if (S && S.over && lbFor() === k) lbRender();
+  }
+  function lbFetch(k) {
+    if (!ODLB || !window.fetch) return;
+    if (boards[k] !== "wait") boards[k] = "wait";
+    fetch(LB + "/top?b=" + k + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); });
+  }
+  function lbProbe() {
+    if (!window.fetch) return;
+    fetch(LB + "/top?b=oall&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.board === "oall" && Array.isArray(j.rows)) { ODLB = true; boards.oall = j.rows; }
+    }).catch(function () {});
+  }
+  function lbPost(n) {
+    var k = lbFor(); if (!ODLB || S.mode === "practice" || S.score <= 0 || posted) return;
+    posted = true; lset(NAMEKEY, n); boards[k] = "wait"; lbRender();
+    var u = LB + "/score?b=" + k + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(S.score) + "&r=" + Math.max(1, S.level);
+    fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); track("world-score"); }).catch(function () { lbGot(k, null); });
+  }
+  function lbOver() {
+    posted = false; var box = $("od-lb");
+    if (!ODLB) { box.hidden = true; return; }
+    box.hidden = false;
+    var k = lbFor(), rows = boards[k];
+    var q = S.mode !== "practice" && S.score > 0 && (!Array.isArray(rows) || rows.length < 10 || S.score > rows[rows.length - 1].s);
+    $("od-lbform").hidden = !q;
+    $("od-lblabel").textContent = S.mode === "daily" ? "Top 10 today! Your name" : "World top 10! Your name";
+    $("od-lbname").value = lget(NAMEKEY) || lget("mw-basil-name") || "";
+    if (rows == null || rows === "err") lbFetch(k);
+    lbRender();
+  }
+  function lbRender() {
+    var k = lbFor(), rows = boards[k], el = $("od-lbl"), note = $("od-lbnote");
+    $("od-lbh").textContent = k === "odaily" ? "Today’s daily · top 10" : "World top 10";
+    note.textContent = "";
+    if (rows == null || rows === "wait") { el.innerHTML = '<li class="none">Loading…</li>'; return; }
+    if (rows === "err") { el.innerHTML = '<li class="none">The leaderboard is on a break. Try again later.</li>'; return; }
+    if (!rows.length) { el.innerHTML = '<li class="none">No scores yet. Be the first.</li>'; return; }
+    var mine = -1;
+    el.innerHTML = rows.map(function (r, i) { if (r.me && mine < 0) mine = i; return '<li' + (r.me ? ' class="me"' : "") + '><span class="rk">' + (i + 1) + '</span><span class="sc">' + esc(r.n) + '</span><span class="dt">' + fmt(r.s) + " · Lv " + (r.r || 1) + "</span></li>"; }).join("");
+    note.textContent = mine >= 0 ? "You’re #" + (mine + 1) + (k === "odaily" ? " today." : " in the world.") : k === "odaily" ? "Sydney time. Names are public." : "Names are public.";
+  }
+  $("od-lbform").addEventListener("submit", function (e) {
+    e.preventDefault(); var n = String($("od-lbname").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || "Anonymous surgeon";
+    $("od-lbform").hidden = true; lbPost(n); $("od-again").focus({ preventScroll: true });
+  });
+  $("od-share").onclick = function () {
+    var t = $("od-sharetx").textContent, b = this;
+    try { if (navigator.share) { navigator.share({ text: t }).catch(function () {}); track("share"); return; } } catch (e) {}
+    try { navigator.clipboard.writeText(t).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Copy the text above"; }); } catch (e) { b.textContent = "Copy the text above"; }
+    track("share");
+  };
 
   // ---------- input: keyboard ----------
   function act(k) {
@@ -389,7 +492,7 @@
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (!$("od-help").hidden) { if (e.key === "Escape") { e.preventDefault(); helpClose(); } return; }
     if (!running) return;
-    if (S && S.over) { if ((e.key === " " || e.key === "Enter") && performance.now() - S.overT > 700 && !/^(INPUT|A)$/.test((document.activeElement || {}).tagName || "")) { e.preventDefault(); start(); } return; }
+    if (S && S.over) { if ((e.key === " " || e.key === "Enter") && performance.now() - S.overT > 700 && !/^(INPUT|A)$/.test((document.activeElement || {}).tagName || "") && !((document.activeElement || {}).tagName === "BUTTON" && document.activeElement.id !== "od-again")) { e.preventDefault(); start(); } return; }
     if (e.key === "p" || e.key === "P" || e.key === "Escape") { e.preventDefault(); togglePause(); return; }
     var k = KEYMAP[e.key]; if (!k) return;
     e.preventDefault();
@@ -435,7 +538,7 @@
   cv.addEventListener("pointercancel", function () { sw = null; });
 
   // ---------- buttons, help, pause ----------
-  $("od-start").onclick = start; $("od-again").onclick = start;
+  $("od-start").onclick = function () { start("endless"); }; $("od-daily").onclick = function () { start("daily"); }; $("od-again").onclick = function () { start(); };
   $("od-exit").onclick = exitToStart; $("od-pexit").onclick = exitToStart;
   $("od-pause").onclick = function () { togglePause(); };
   $("od-resume").onclick = function () { togglePause(false); };
@@ -456,12 +559,18 @@
     });
   }
   guide("od-guide"); guide("od-guide2");
-  renderBest();
+  renderBest(); lbProbe();
 
   if (DEBUG) {
     window.OD_DEBUG = {
       state: function () { return S; },
       start: start,
+      seq: function () { return S ? S.seq.slice() : []; }, // every piece dealt so far, in order (queue included)
+      peek: function (n) { while (S.seq.length < n) S.queue.push(bagNext()); return S.seq.slice(0, n); }, // deal ahead into the queue
+      mode: function () { return MODE; },
+      day: sydDay,
+      lb: function () { return { on: ODLB, boards: boards }; },
+      end: function () { if (S && !S.over) gameOver(); },
       // rows: array of strings for the bottom of the board, "#" = filled, "." = empty (e.g. "######....")
       setBottom: function (rows) { rows.forEach(function (s, i) { var r = ROWS - rows.length + i; for (var x = 0; x < COLS; x++) S.board[r][x] = s[x] === "#" ? 5 : 0; }); },
       setNext: function (types) { S.queue = types.concat(S.queue).slice(0, Math.max(3, types.length)); },

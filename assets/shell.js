@@ -379,7 +379,12 @@
     ["long", "📏", "Long Haul", "Solve a Long Friday (8-letter) Wordemic.", "", "long", 1],
     ["long10", "🦒", "Long Legs", "Solve ten Long Friday Wordemics.", "", "long", 10],
     ["cat1", "🐈", "Blanket Biter", "Score 10,000 in Basil + Clover.", "global", "basil", 10000],
-    ["cat2", "🛋️", "Bench Legend", "Beat all ten rounds of Basil + Clover.", "global", "basilwon", 1]
+    ["cat2", "🛋️", "Bench Legend", "Beat all ten rounds of Basil + Clover.", "global", "basilwon", 1],
+    ["od1", "🧤", "Scrubbed In", "Play a game of Organ Drop.", "global", "odgames", 1],
+    ["od2", "🥼", "Chief Surgeon", "Clear 50 lines in one game of Organ Drop.", "global", "odlines", 50],
+    ["od3", "🫀", "Transplant Team", "Clear four lines at once in Organ Drop.", "global", "odquad", 1],
+    ["od4", "🎭", "Theatre Legend", "Score 20,000 in Organ Drop.", "global", "odbest", 20000],
+    ["od5", "📋", "Daily Rounds", "Finish an Organ Drop daily challenge.", "global", "oddaily", 1]
   ];
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
@@ -448,6 +453,7 @@
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
     var wardN = daily.length ? Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).length : 0;
+    var od = get("mw-organdrop-stats", {}) || {}; // Organ Drop: { games, lines (most in one game), quad (four-line clears), best, daily (scored dailies finished) }
     var M = {
       streak: Math.max(best, cur), solved: solved, days: dl.length, einstein: einN, fullward: Math.max(wardN, get(P + "mw-wrc", "") ? 1 : 0),
       perfect: cnt("triviosis", function (v) { return v.score === 10; }),
@@ -455,7 +461,8 @@
       allgames: daily.length && daily.every(function (id) { return rows.some(function (r) { return r.g.id === id && r.played; }); }) ? 1 : 0,
       bull: cnt("wordemic", function (v) { return v.win && (v.guesses || []).length === 1; }),
       long: cnt("wordemic", function (v) { return v.win && ((v.guesses || [])[0] || "").length === 8; }),
-      basil: get("mw-basil-best2", 0) || 0, basilwon: get("mw-basil-won", 0) ? 1 : 0
+      basil: get("mw-basil-best2", 0) || 0, basilwon: get("mw-basil-won", 0) ? 1 : 0,
+      odgames: od.games || 0, odlines: od.lines || 0, odquad: od.quad || 0, odbest: od.best || 0, oddaily: od.daily || 0
     };
     var badges = BADGE_DEFS.filter(function (b) { return !(b[4] === "medical" && N); }).map(function (b) {
       var got = b[5] ? (M[b[5]] || 0) >= b[6] : !!T[b[0]], prog = b[5] && !got && b[6] > 1 ? Math.min(M[b[5]] || 0, b[6]).toLocaleString("en-AU") + " of " + b[6].toLocaleString("en-AU") : "";

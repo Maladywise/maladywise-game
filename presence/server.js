@@ -1,7 +1,7 @@
 // Malady Wise presence counter.
 // - Players online: pages send an anonymous ping every ~30s with a random per-tab ID held in memory (no cookies, no storage).
 //   We count IDs seen in the last 75s. Nothing is written to disk; IPs are only used briefly for rate limiting.
-// - Basil + Clover leaderboards: all-time and today's daily challenge. Stores a chosen name, score, round and a random
+// - Basil + Clover and Organ Drop leaderboards: all-time and today's daily challenge. Stores a chosen name, score, round and a random
 //   per-browser game ID (so a player's best replaces their old score). Top 200 kept per board.
 // - Feedback: visitors report puzzle errors, image licence problems and bugs (POST /fb); owner reads them with the admin key.
 // - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
@@ -66,11 +66,18 @@ async function addDone(g) {
 // ---------- Basil + Clover leaderboards ----------
 const BAD = /(fuck|fuk|shit|cunt|nigg|fag|bitch|whore|slut|rape|nazi|hitler|dick|cock|puss|wank|twat|retard|kike|spic|chink|paki|porn|penis|vagina|anal|cum|tits|boob|sex)/i;
 const memLB = {};
-function lbName(s) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); if (!n || BAD.test(n.replace(/[^a-z]/gi, ""))) n = "Anonymous cat"; return n; }
-// boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet)
-const BOARDS = ["all", "daily", "vall", "vdaily"];
+function lbAnon(b) { return b && b.charAt(0) === "o" ? "Anonymous surgeon" : "Anonymous cat"; }
+function lbName(s, b) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); if (!n || BAD.test(n.replace(/[^a-z]/gi, ""))) n = lbAnon(b); return n; }
+// boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge)
+const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily"];
+const DAILY_BOARDS = ["daily", "vdaily", "odaily"];
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
-function lbKey(b) { return b === "daily" ? "lb:daily:" + sydDay() : b === "vdaily" ? "lb:vdaily:" + sydDay() : b === "vall" ? "lb:vall" : "lb:all"; }
+function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : "lb:all"; }
+// score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
+function lbValid(b, s, r) {
+  if (b.charAt(0) === "o") return s > 0 && r >= 1 && r <= 999 && s <= 4000 * r * r && s <= 50000000;
+  return s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
+}
 async function lbTop(b, me) {
   const key = lbKey(b);
   if (kv && kv.isReady) {
@@ -78,14 +85,14 @@ async function lbTop(b, me) {
       const rows = await kv.zRangeWithScores(key, 0, 9, { REV: true });
       if (!rows.length) return [];
       const meta = await kv.hmGet(key + ":m", rows.map((r) => r.value));
-      return rows.map((r, i) => { let m = {}; try { m = JSON.parse(meta[i] || "{}"); } catch (e) {} return { n: m.n || "Anonymous cat", s: r.score, r: m.r || 1, me: !!me && r.value === me }; });
+      return rows.map((r, i) => { let m = {}; try { m = JSON.parse(meta[i] || "{}"); } catch (e) {} return { n: m.n || lbAnon(b), s: r.score, r: m.r || 1, me: !!me && r.value === me }; });
     } catch (e) { console.error("lbTop", e.message); }
   }
   const m = memLB[key] || {};
   return Object.entries(m).sort((a, b2) => b2[1].s - a[1].s).slice(0, 10).map(([id, v]) => ({ n: v.n, s: v.s, r: v.r, me: id === me }));
 }
 async function lbAdd(b, id, n, s, r) {
-  const key = lbKey(b), ttl = (b === "daily" || b === "vdaily") ? 60 * 60 * 24 * 3 : 0;
+  const key = lbKey(b), ttl = DAILY_BOARDS.indexOf(b) >= 0 ? 60 * 60 * 24 * 3 : 0;
   if (kv && kv.isReady) {
     try {
       const cur = await kv.zScore(key, id);
@@ -208,8 +215,8 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === "/score" && req.method === "POST") {
       const q = url.searchParams, b = lbBoard(q.get("b")), id = clean(q.get("id"), 16);
       const s = Math.floor(Number(q.get("s"))), r = Math.floor(Number(q.get("r")));
-      const ok = id.length >= 6 && s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
-      if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n")), s, r);
+      const ok = id.length >= 6 && lbValid(b, s, r);
+      if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n"), b), s, r);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay(), board: b }));
     }
