@@ -52,8 +52,8 @@
 #od-canvas{display:block;touch-action:none}
 .od-toast{position:absolute;left:34.7%;top:38%;transform:translate(-50%,-50%);background:#FFE08A;color:#2E1F57;font:700 15px var(--body);padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:nowrap;pointer-events:none;animation:odpop .3s cubic-bezier(.2,1.4,.4,1)}
 .od-toast.big{background:#FF6F8E;color:#fff;font-size:20px;padding:10px 20px}
-.od-fact{width:100%;box-sizing:border-box;height:44px;overflow:hidden;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:4px 10px;font-size:12px;line-height:1.3;display:flex;flex-direction:column;justify-content:center;gap:0}
-.od-fact span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.od-fact{width:100%;box-sizing:border-box;min-height:44px;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:4px 10px;font-size:12px;line-height:1.3;display:flex;flex-direction:column;justify-content:center;gap:0}
+.od-fact span{display:block}
 .od-fact.new{animation:odfade .45s ease-out;border-color:#B5308A;box-shadow:0 0 0 2px rgba(181,48,138,.25)}
 .od-fact b{font:700 9.5px var(--body);letter-spacing:.1em;text-transform:uppercase;color:#B5308A}
 @keyframes odpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}
