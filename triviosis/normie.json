@@ -347,7 +347,7 @@
      "A plumber fixing a pipe",
      "A trumpet player"
     ],
-    "e": "Hospitals soon used them so patients could drink lying down."
+    "e": "They soon caught on with anyone who needed a drink while lying down."
    },
    {
     "q": "An early typewriter, built in Italy around 1808, was made so that?",
@@ -1075,7 +1075,7 @@
      "Ancient bones only",
      "The weather"
     ],
-    "e": "Pathologists study blood, cells and tissue in the lab, quietly behind most medical diagnoses."
+    "e": "Pathologists study blood, cells and tissue in the lab, quietly working out what's going on behind the scenes."
    }
   ]
  },
@@ -1410,7 +1410,7 @@
   "theme": "Hoops and heights",
   "questions": [
    {
-    "q": "Basketball’s inventor, James Naismith, was born on this day in 1861 in which country?",
+    "q": "Basketball\u2019s inventor, James Naismith, was born on this day in 1861 in which country?",
     "a": "Canada",
     "w": [
      "Scotland",
@@ -1420,7 +1420,7 @@
     "e": "He grew up near Almonte, Ontario, and invented the game in Massachusetts in 1891."
    },
    {
-    "q": "The very first basketball ‘hoops’ were?",
+    "q": "The very first basketball \u2018hoops\u2019 were?",
     "a": "Peach baskets",
     "w": [
      "Fishing nets",
@@ -1467,7 +1467,7 @@
      "Rounders",
      "Volleyball"
     ],
-    "e": "For decades it was even called women’s basketball in some countries."
+    "e": "For decades it was even called women\u2019s basketball in some countries."
    },
    {
     "q": "Which Australian won three WNBA Most Valuable Player awards?",
@@ -1480,7 +1480,7 @@
     "e": "In 2003, 2007 and 2010, with the Seattle Storm."
    },
    {
-    "q": "Volleyball, invented in 1895 not far from basketball’s birthplace, was first called?",
+    "q": "Volleyball, invented in 1895 not far from basketball\u2019s birthplace, was first called?",
     "a": "Mintonette",
     "w": [
      "Netball",
@@ -1608,11 +1608,11 @@
     "e": "He slipped in the rain on a busy Paris street."
    },
    {
-    "q": "Marie Curie died in 1934 from a blood condition, probably caused by?",
+    "q": "Marie Curie\u2019s death in 1934 was probably caused by?",
     "a": "Years of radiation exposure",
     "w": [
      "Lead in her water",
-     "A tropical infection",
+     "Spoiled food",
      "Too much coffee"
     ],
     "e": "She often carried radium in her coat pockets. Nobody knew the danger then."
@@ -1676,14 +1676,14 @@
     "e": "He wanted everyone to benefit."
    },
    {
-    "q": "How soon after R\u00f6ntgen's 1895 announcement were X-rays used on patients?",
+    "q": "How soon after R\u00f6ntgen's 1895 announcement were X-rays being used to look inside people?",
     "a": "Within weeks",
     "w": [
      "Within 10 years",
      "After World War I",
      "In the 1950s"
     ],
-    "e": "Within weeks of the 1896 news, doctors were using X-rays to find bullets and broken bones. Safety rules came much later."
+    "e": "Within weeks of the 1896 news, X-rays were finding bullets and broken bones. Safety rules came much later."
    },
    {
     "q": "Marie Curie's mobile X-ray vans in World War I were nicknamed?",
@@ -1882,14 +1882,14 @@
     "e": "The cell came from a mammary gland. Scientists have a sense of humour."
    },
    {
-    "q": "The word \u2018vaccine\u2019 comes from the Latin word for?",
-    "a": "Cow",
+    "q": "Erwin Schr\u00f6dinger\u2019s famous 1935 thought experiment imagines what shut inside a box?",
+    "a": "A cat",
     "w": [
-     "Needle",
-     "Protect",
-     "Poison"
+     "A parrot",
+     "A goldfish",
+     "A mouse"
     ],
-    "e": "Vacca. The first vaccine used cowpox to protect against smallpox."
+    "e": "Until you open the box, the cat is said to be both alive and dead. Luckily, it was only ever imaginary."
    },
    {
     "q": "Ivan Pavlov showed that dogs could be trained to?",
@@ -1922,14 +1922,14 @@
     "e": "She was left out of the 1962 Nobel Prize. She\u2019d died in 1958, and Nobels aren\u2019t given after death."
    },
    {
-    "q": "Alexander Fleming found penicillin in 1928 after he left some dishes out while he?",
-    "a": "Went on holiday",
+    "q": "Apollo 11 astronauts left what on the Moon so scientists could measure its distance with lasers?",
+    "a": "A panel of mirrors",
     "w": [
-     "Was at a football match",
-     "Was in hospital",
-     "Went to lunch"
+     "A giant ruler",
+     "A radio mast",
+     "A flashing beacon"
     ],
-    "e": "He came back to find mould killing his bacteria. Messy desks for the win."
+    "e": "Observatories still bounce laser beams off it. The Moon is drifting away from us by about 3.8 cm a year."
    },
    {
     "q": "Isaac Newton\u2019s famous apple story is linked to his ideas about?",
@@ -2030,14 +2030,14 @@
     "e": "Once a camp signal marking the end of the day, it now farewells the fallen."
    },
    {
-    "q": "Edith Cavell, executed in 1915 for helping Allied soldiers escape occupied Belgium, was a British?",
-    "a": "Nurse",
+    "q": "Edith Cavell, executed in 1915 for helping Allied soldiers escape, was working in which occupied country?",
+    "a": "Belgium",
     "w": [
-     "Journalist",
-     "Pilot",
-     "Telegraphist"
+     "France",
+     "The Netherlands",
+     "Luxembourg"
     ],
-    "e": "She treated wounded soldiers from both sides. \u2018Patriotism is not enough\u2019 are among her last recorded words."
+    "e": "She ran a training school in Brussels and helped around 200 soldiers get away. \u2018Patriotism is not enough\u2019 are among her last recorded words."
    },
    {
     "q": "On Christmas Day 1914, many British and German soldiers famously?",
@@ -2108,24 +2108,24 @@
     "e": "Before germ theory, smells got the blame."
    },
    {
-    "q": "Which nurse used colourful charts to show more soldiers were dying of disease than of wounds?",
+    "q": "Who used colourful \u2018rose diagrams\u2019 to show that more Crimean War soldiers were dying from dirty conditions than from battle wounds?",
     "a": "Florence Nightingale",
     "w": [
      "Mary Seacole",
      "Edith Cavell",
      "Clara Barton"
     ],
-    "e": "Florence Nightingale\u2019s \u2018rose diagrams\u2019 showed that far more soldiers in the Crimean War died of preventable disease than of wounds."
+    "e": "Florence Nightingale was also a gifted statistician, and in 1858 became the first woman elected to the Royal Statistical Society."
    },
    {
-    "q": "In the 1840s, who showed that doctors washing their hands saved mothers' lives?",
+    "q": "In the 1840s, who showed that simple handwashing could save new mothers' lives?",
     "a": "Ignaz Semmelweis",
     "w": [
      "Louis Pasteur",
      "Joseph Lister",
      "Robert Koch"
     ],
-    "e": "Many colleagues ignored him at the time."
+    "e": "Many of his colleagues in Vienna ignored him at the time."
    },
    {
     "q": "Washing your hands properly takes about as long as?",
@@ -2138,24 +2138,24 @@
     "e": "About 20 seconds."
    },
    {
-    "q": "The medical word for a sneeze is?",
-    "a": "Sternutation",
+    "q": "One of the oldest surviving copyrighted films, made by Thomas Edison\u2019s company in 1894, shows?",
+    "a": "A man sneezing",
     "w": [
-     "Eructation",
-     "Singultus",
-     "Borborygmus"
+     "A couple kissing",
+     "A train arriving",
+     "Workers leaving a factory"
     ],
-    "e": "Eructation is a burp. Singultus is a hiccup."
+    "e": "\u2018Fred Ott\u2019s Sneeze\u2019 stars an Edison employee famous for his comic sneezes. It lasts about five seconds."
    },
    {
-    "q": "Which vaccine protects against the most common bacterial cause of pneumonia?",
-    "a": "Pneumococcal vaccine",
+    "q": "People in Germany say \u2018Gesundheit!\u2019 after a sneeze. What does it mean?",
+    "a": "Health",
     "w": [
-     "Tetanus vaccine",
-     "Rabies vaccine",
-     "Yellow fever vaccine"
+     "Bless you",
+     "Goodbye",
+     "Cover your nose"
     ],
-    "e": "Worth asking about if you're older or have a long-term health condition."
+    "e": "English speakers borrowed it too. The Spanish say \u2018\u00a1Salud!\u2019, which also means health."
    }
   ]
  },
@@ -2213,7 +2213,7 @@
      "Cortisol",
      "Melatonin"
     ],
-    "e": "It also helps with childbirth and breastfeeding."
+    "e": "Levels can rise in both you and your dog when you give them a pat."
    },
    {
     "q": "Which Aesop\u2019s fable ends with \u2018No act of kindness, however small, is ever wasted\u2019?",
@@ -2274,7 +2274,7 @@
   "theme": "Sweet history",
   "questions": [
    {
-    "q": "Doctors in ancient India noticed that the urine of people with diabetes attracted?",
+    "q": "In ancient India, people noticed that the wee of people with diabetes attracted?",
     "a": "Ants",
     "w": [
      "Bees",
@@ -2284,14 +2284,14 @@
     "e": "Because it was sweet."
    },
    {
-    "q": "'Mellitus', as in diabetes mellitus, means?",
-    "a": "Honey-sweet",
+    "q": "Which country grows the most sugar cane in the world?",
+    "a": "Brazil",
     "w": [
-     "Thirsty",
-     "Wasting away",
-     "Running through"
+     "India",
+     "Cuba",
+     "Australia"
     ],
-    "e": "'Diabetes' means 'passing through', for all the urine."
+    "e": "Brazil grows close to 40% of the world\u2019s crop, and turns much of it into fuel for cars as well as sugar."
    },
    {
     "q": "In January 1922 the first person to be given insulin, Leonard Thompson, was how old?",
@@ -2314,24 +2314,24 @@
     "e": "For about 60 years, insulin was extracted from cow and pig pancreases from abattoirs. Lab-made human insulin arrived in 1982."
    },
    {
-    "q": "In 1978 human insulin became one of the first medicines made using?",
+    "q": "In 1978, human insulin became one of the first products made using?",
     "a": "Genetically engineered bacteria",
     "w": [
      "Moon rocks",
      "Fermented grapes",
      "Seaweed farms"
     ],
-    "e": "It reached patients in 1982."
+    "e": "It went on sale in 1982, and lab-made insulin soon replaced the animal kind."
    },
    {
-    "q": "A type 2 diabetes medicine was developed from the saliva of which animal?",
+    "q": "A diabetes treatment was developed from the saliva of which animal?",
     "a": "Gila monster",
     "w": [
      "Komodo dragon",
      "Vampire bat",
      "Platypus"
     ],
-    "e": "The drug is exenatide."
+    "e": "Gila monsters can go months between meals, and a substance in their spit gave scientists the idea."
    },
    {
     "q": "What colour is the circle in the World Diabetes Day logo?",
@@ -2382,14 +2382,14 @@
   "theme": "Cords, stem cells and new beginnings",
   "questions": [
    {
-    "q": "A newborn’s umbilical cord usually contains how many blood vessels?",
+    "q": "A newborn\u2019s umbilical cord usually contains how many blood vessels?",
     "a": "Three",
     "w": [
      "One",
      "Two",
      "Six"
     ],
-    "e": "Two arteries and one vein. Today is World Cord Blood Day, a nod to what’s left in the cord after birth."
+    "e": "Two arteries and one vein. Today is World Cord Blood Day, a nod to what\u2019s left in the cord after birth."
    },
    {
     "q": "The first cord blood transplant took place in which city in 1988?",
@@ -2399,7 +2399,7 @@
      "London",
      "Tokyo"
     ],
-    "e": "French doctor Eliane Gluckman treated a boy using frozen cord blood from his newborn sister."
+    "e": "Eliane Gluckman\u2019s team used frozen cord blood from the boy\u2019s newborn sister."
    },
    {
     "q": "In adults, most new blood cells are made in the?",
@@ -2419,7 +2419,7 @@
      "China",
      "Sweden"
     ],
-    "e": "He shared it with Britain’s John Gurdon, whose frog experiments came about 50 years earlier."
+    "e": "He shared it with Britain\u2019s John Gurdon, whose frog experiments came about 50 years earlier."
    },
    {
     "q": "Dolly the cloned sheep, born in 1996, was named after which singer?",
@@ -2429,17 +2429,17 @@
      "Dolly Levi",
      "Dolly Wells"
     ],
-    "e": "Dolly was cloned from a mammary gland cell, and yes, that’s where the joke came from."
+    "e": "Dolly was cloned from a mammary gland cell, and yes, that\u2019s where the joke came from."
    },
    {
-    "q": "Louise Brown, born in England in 1978, was the world’s first?",
+    "q": "Louise Brown, born in England in 1978, was the world\u2019s first?",
     "a": "IVF baby",
     "w": [
-     "Heart-transplant baby",
+     "Baby born on a plane",
      "Baby born in space",
      "Identical quadruplet"
     ],
-    "e": "Patrick Steptoe, Robert Edwards and nurse-embryologist Jean Purdy made it happen."
+    "e": "Patrick Steptoe, Robert Edwards and embryologist Jean Purdy made it happen. Millions more have followed."
    },
    {
     "q": "Which group of mammals lays eggs instead of giving birth to live young?",
@@ -2455,21 +2455,21 @@
     "q": "A navel orange gets its name because its end looks like a?",
     "a": "Belly button",
     "w": [
-     "Ship’s wheel",
+     "Ship\u2019s wheel",
      "Bullseye",
      "Naval medal"
     ],
-    "e": "The ‘navel’ is actually a tiny second fruit growing at the blossom end."
+    "e": "The \u2018navel\u2019 is actually a tiny second fruit growing at the blossom end."
    },
    {
-    "q": "At Delphi in ancient Greece, the omphalos stone was said to mark the world’s?",
+    "q": "At Delphi in ancient Greece, the omphalos stone was said to mark the world\u2019s?",
     "a": "Navel (its centre)",
     "w": [
      "Edge",
      "Highest point",
      "Oldest tree"
     ],
-    "e": "‘Omphalos’ is Greek for navel. Zeus reportedly released two eagles to find the spot."
+    "e": "\u2018Omphalos\u2019 is Greek for navel. Zeus reportedly released two eagles to find the spot."
    },
    {
     "q": "Austrian scientist Karl Landsteiner won a Nobel Prize for discovering what in 1901?",
@@ -2598,24 +2598,24 @@
   "theme": "Tiny but mighty",
   "questions": [
    {
-    "q": "About how many babies worldwide are born premature?",
+    "q": "About how many babies worldwide arrive earlier than expected?",
     "a": "About 1 in 10",
     "w": [
      "About 1 in 1,000",
      "About 1 in 100",
      "About 1 in 2"
     ],
-    "e": "Today is World Prematurity Day."
+    "e": "That\u2019s roughly 13 million early arrivals a year. Small, and determined."
    },
    {
-    "q": "A baby counts as premature if born before?",
-    "a": "37 weeks",
+    "q": "A baby kangaroo is called a?",
+    "a": "Joey",
     "w": [
-     "40 weeks",
-     "30 weeks",
-     "42 weeks"
+     "Kit",
+     "Cub",
+     "Pup"
     ],
-    "e": "A baby born before 37 weeks counts as premature. About 1 in 10 babies worldwide arrive early."
+    "e": "A newborn joey is about the size of a jellybean and crawls into the pouch by itself."
    },
    {
     "q": "Babies are born with roughly how many bones?",
@@ -2668,14 +2668,14 @@
     "e": "The grasp reflex."
    },
    {
-    "q": "The Apgar score that checks every newborn is named after?",
-    "a": "Dr Virginia Apgar",
+    "q": "A newborn giant panda weighs about?",
+    "a": "100 to 200 grams",
     "w": [
-     "A town in Wales",
-     "An acronym from NASA",
-     "A Roman goddess"
+     "2 kilograms",
+     "10 kilograms",
+     "20 grams"
     ],
-    "e": "An anaesthetist who designed it in 1952."
+    "e": "About the weight of an apple, and roughly 1/900th of its mum. It\u2019s pink, blind and very loud."
    },
    {
     "q": "In the early 1900s, premature babies in incubators were shown to the public at?",
@@ -2688,14 +2688,14 @@
     "e": "Entry fees paid for their care, and many survived."
    },
    {
-    "q": "A newborn's first poo, dark green and sticky, is called?",
-    "a": "Meconium",
+    "q": "What is a baby swan called?",
+    "a": "A cygnet",
     "w": [
-     "Colostrum",
-     "Lanugo",
-     "Vernix"
+     "A gosling",
+     "A duckling",
+     "A swanlet"
     ],
-    "e": "Colostrum is early milk; lanugo is fine body hair; vernix is the waxy coating."
+    "e": "Cygnets are grey and fluffy at first. A gosling is a baby goose."
    }
   ]
  },
@@ -2719,7 +2719,7 @@
     "q": "In his 1945 Nobel speech, Fleming warned that?",
     "a": "Germs could become resistant if people used too little penicillin",
     "w": [
-     "Penicillin would cure cancer",
+     "Penicillin would cure baldness",
      "Penicillin would run out",
      "Mould is dangerous to eat"
     ],
@@ -2756,34 +2756,34 @@
     "e": "Honey is naturally antibacterial. Ancient Egyptians used it on wounds."
    },
    {
-    "q": "The \u2018superbug\u2019 MRSA is a resistant version of a germ that often lives harmlessly?",
-    "a": "In your nose and on your skin",
+    "q": "Which everyday kitchen item can hold billions of germs in a space the size of a sugar cube?",
+    "a": "A kitchen sponge",
     "w": [
-     "Only in hospitals",
-     "In tap water",
-     "In soil only"
+     "The toilet seat",
+     "The fridge door",
+     "The bread bin"
     ],
-    "e": "About a third of people carry ordinary staph without knowing."
+    "e": "A 2017 German study found up to 54 billion bacteria per cubic centimetre. Swap it out often."
    },
    {
-    "q": "Roughly how do the bacteria in your body compare in number with your own cells?",
-    "a": "About the same",
+    "q": "Which metal, used for door handles and rails in some places, naturally kills many germs on its surface?",
+    "a": "Copper",
     "w": [
-     "About 100 times more",
-     "About a tenth",
-     "There are none"
+     "Stainless steel",
+     "Aluminium",
+     "Chrome"
     ],
-    "e": "An old claim said 10 to 1. Newer counts say about 38 trillion bacteria to 30 trillion of you."
+    "e": "Germs that land on copper and brass tend to die within hours. Ancient Egyptians stored drinking water in copper pots."
    },
    {
-    "q": "\u2018Phage therapy\u2019 fights superbugs using?",
-    "a": "Viruses that kill bacteria",
+    "q": "Some scientists hope to fight superbugs using \u2018phages\u2019, which are?",
+    "a": "Viruses that attack bacteria",
     "w": [
      "Tiny robots",
      "Snake venom",
      "Silver coins"
     ],
-    "e": "Bacteriophages were discovered over 100 years ago and are getting a second look."
+    "e": "They were discovered over 100 years ago and are getting a second look."
    },
    {
     "q": "How long should you scrub your hands with soap to wash germs away?",
@@ -2796,14 +2796,14 @@
     "e": "About two rounds of Happy Birthday. Don\u2019t forget thumbs and fingertips."
    },
    {
-    "q": "Which everyday habit helps stop superbugs most?",
-    "a": "Only taking antibiotics when they\u2019re needed",
+    "q": "Which habit helps stop superbugs most?",
+    "a": "Only using antibiotics when they\u2019re really needed",
     "w": [
      "Saving leftover antibiotics",
      "Sharing antibiotics with family",
      "Stopping antibiotics as soon as you feel better"
     ],
-    "e": "Ask your doctor whether you really need them, and take them exactly as prescribed."
+    "e": "They don\u2019t work on colds or flu, and leftovers shouldn\u2019t be saved or shared."
    }
   ]
  },
@@ -3215,7 +3215,7 @@
      "Eleanor of Aquitaine",
      "Joan of Arc"
     ],
-    "e": "She also wrote about medicine and plants, and corresponded with popes and emperors."
+    "e": "She also wrote about plants and nature, invented her own alphabet, and wrote letters to popes and emperors."
    },
    {
     "q": "Queen Victoria told Felix Mendelssohn her favourite of his songs was \u2018Italien\u2019. Who had actually written it?",
@@ -3753,7 +3753,7 @@
     "w": [
      "UNICEF",
      "Amnesty International",
-     "Doctors Without Borders"
+     "Greenpeace"
     ],
     "e": "In 1917, 1944 and 1963. Its founder Henry Dunant shared the very first Peace Prize."
    },
@@ -4171,13 +4171,13 @@
    },
    {
     "q": "Tomato ketchup was sold in 1830s America as?",
-    "a": "A medicine",
+    "a": "A cure-all",
     "w": [
      "A hair dye",
      "A wood polish",
      "An insect spray"
     ],
-    "e": "Tomato pills and ketchup were promoted as cures for all sorts of ailments. It\u2019s still mostly a cure for dry chips."
+    "e": "Tomato pills and ketchup were promoted as fixing just about everything. Today it mostly fixes dry chips."
    },
    {
     "q": "Which animal has fingerprints almost impossible to tell from a human\u2019s?",
@@ -4288,14 +4288,14 @@
     "e": "About the size of a golf cart. The claim that a child could crawl through its arteries is a stretch, but it\u2019s still huge."
    },
    {
-    "q": "Helen Taussig helped save \u2018blue babies\u2019 while going deaf. How did she examine hearts?",
-    "a": "By feeling the beats with her fingers",
+    "q": "Which composer\u2019s heart is kept apart from his body, in a pillar of a Warsaw church?",
+    "a": "Fr\u00e9d\u00e9ric Chopin",
     "w": [
-     "By watching a heart monitor",
-     "By asking her students to listen",
-     "By using a louder stethoscope"
+     "Wolfgang Amadeus Mozart",
+     "Franz Liszt",
+     "Johann Sebastian Bach"
     ],
-    "e": "She founded paediatric cardiology, and her fingertips could pick up what others heard."
+    "e": "He asked for it to go home to Poland. His sister smuggled it from Paris in a jar thought to hold cognac."
    },
    {
     "q": "A 2013 Swedish study found that when a choir sings together, the singers\u2019 hearts?",
@@ -4327,13 +4327,13 @@
   "questions": [
    {
     "q": "The Paralympics grew from a 1948 wheelchair archery contest at?",
-    "a": "A hospital in England",
+    "a": "A village in England",
     "w": [
      "A school in Sweden",
      "A park in Rome",
      "An army base in Canada"
     ],
-    "e": "Dr Ludwig Guttmann held it at Stoke Mandeville Hospital, on the opening day of the London Olympics."
+    "e": "Ludwig Guttmann held it for injured ex-servicemen at Stoke Mandeville, on the opening day of the 1948 London Olympics."
    },
    {
     "q": "American swimmer Trischa Zorn, born blind, is the most decorated Paralympian ever. How many medals did she win?",
@@ -4371,7 +4371,7 @@
     "w": [
      "Astronauts in training",
      "Soldiers at the front",
-     "Hospital cleaning staff"
+     "Royal household staff"
     ],
     "e": "Dr Philippe-Guy Woog\u2019s Swiss Broxo-Dent was aimed at people with limited motor skills and those wearing braces. Everybody else caught up."
    },
@@ -4471,7 +4471,7 @@
      "Monkey",
      "Pony"
     ],
-    "e": "Cheetahs are anxious. A relaxed dog is apparently the best therapy."
+    "e": "Cheetahs are nervous. A relaxed dog is apparently the best company."
    },
    {
     "q": "Those black \u2018tear lines\u2019 on a cheetah\u2019s face are thought to help by?",
@@ -4552,14 +4552,14 @@
     "e": "She and her father rowed to the Forfarshire wreck. Fan mail, marriage proposals and a request for a lock of her hair followed."
    },
    {
-    "q": "One of the Oxford English Dictionary\u2019s most prolific volunteer contributors, W. C. Minor, sent his entries from?",
-    "a": "A hospital for the criminally insane",
+    "q": "Since Christmas Day 1900, volunteers across the Americas have taken part in which yearly tradition?",
+    "a": "The Christmas Bird Count",
     "w": [
-     "A remote lighthouse in Scotland",
-     "A Royal Navy warship",
-     "A monastery in the Alps"
+     "The Great Snowman Census",
+     "The Winter Star Tally",
+     "The Holiday Tree Survey"
     ],
-    "e": "The American surgeon sent thousands of quotations from Broadmoor. The editor only found out years later."
+    "e": "It began as a gentler alternative to the \u2018side hunt\u2019, where people competed to shoot the most birds. Now they just count them."
    },
    {
     "q": "Polish social worker Irena Sendler helped smuggle Jewish children out of the Warsaw Ghetto. She hid records of their real names in?",
@@ -4567,7 +4567,7 @@
     "w": [
      "A hollowed-out church Bible",
      "The lining of her winter coat",
-     "A locked hospital filing cabinet"
+     "A locked office filing cabinet"
     ],
     "e": "The Nazis arrested and tortured her, but she never gave them up. She wanted the children to be able to find their families."
    },
@@ -4606,7 +4606,7 @@
     "a": "World War II",
     "w": [
      "The Great Depression",
-     "The 1918 flu pandemic",
+     "World War I",
      "The Moon landing"
     ],
     "e": "In Britain, the Women\u2019s Voluntary Service delivered hot food to people who had lost their homes in the bombing."
@@ -4629,7 +4629,7 @@
      "A tunnel for a river",
      "A statue of his wife"
     ],
-    "e": "After his wife could not get to a doctor in time, he cut a path shortening the trip to town from over 50 km to about 15."
+    "e": "After his wife was badly hurt crossing the hill and couldn\u2019t reach help in time, he cut a path shortening the trip to town from over 50 km to about 15."
    },
    {
     "q": "In India, Jadav Payeng, the \u2018Forest Man\u2019, has spent decades doing what on a river island in Assam?",
@@ -4740,7 +4740,7 @@
     "e": "At 19 letters it reads the same in both directions. Try it, slowly."
    },
    {
-    "q": "In 1907, Finland’s voters made world history by electing?",
+    "q": "In 1907, Finland\u2019s voters made world history by electing?",
     "a": "The first women MPs anywhere",
     "w": [
      "The first teenage MPs anywhere",
@@ -4937,13 +4937,13 @@
    },
    {
     "q": "Coca-Cola was first sold in 1886 as?",
-    "a": "A medicinal tonic",
+    "a": "A \u2018brain tonic\u2019",
     "w": [
      "A cleaning fluid",
      "A hair restorer",
      "A cooking syrup"
     ],
-    "e": "A pharmacist, John Pemberton, sold it by the glass from a soda fountain in Atlanta."
+    "e": "Chemist John Pemberton sold it by the glass from a soda fountain in Atlanta."
    },
    {
     "q": "Myth says chocolate chip cookies were an accident. Ruth Wakefield\u2019s own account says she?",
@@ -5112,14 +5112,14 @@
     "e": "Her Green Belt Movement in Kenya has planted tens of millions of trees."
    },
    {
-    "q": "Tu Youyou won a 2015 Nobel for finding a malaria drug after reading?",
-    "a": "Ancient Chinese medicine texts",
+    "q": "Winston Churchill won a Nobel Prize in 1953. In which category?",
+    "a": "Literature",
     "w": [
-     "Old British army records",
-     "A rainforest explorer\u2019s diary",
-     "Egyptian tomb inscriptions"
+     "Peace",
+     "Economics",
+     "Physics"
     ],
-    "e": "A 1600-year-old recipe gave her the clue, and she even tested her extract on herself."
+    "e": "For his histories and speeches. He was busy, so his wife Clementine collected it in Stockholm."
    },
    {
     "q": "Who is the only person to have won two unshared Nobel Prizes?",
@@ -5172,14 +5172,14 @@
     "e": "About 1300 guests sit down without knowing what\u2019s coming. Fancy way to do a mystery meal."
    },
    {
-    "q": "Australian Barry Marshall proved a germ can cause stomach ulcers by?",
-    "a": "Drinking a dish of it",
+    "q": "At the 2010 Peace Prize ceremony, the winner was represented by?",
+    "a": "An empty chair",
     "w": [
-     "Testing it on his brother",
-     "Fasting for a whole month",
-     "Feeding it to his dog"
+     "A cardboard cut-out",
+     "A recorded video",
+     "His pet dog"
     ],
-    "e": "He got gastritis, then his evidence, then in 2005 a Nobel Prize, shared with Robin Warren. Do not try this at home."
+    "e": "Chinese writer Liu Xiaobo was in prison, and no family member was allowed to go. The empty chair became a famous image."
    }
   ]
  },
@@ -5298,7 +5298,7 @@
   "theme": "Health for all, around the world",
   "questions": [
    {
-    "q": "The UK\u2019s National Health Service opened in 1948. Its first patient was?",
+    "q": "The UK\u2019s National Health Service opened in 1948. The first person it treated was?",
     "a": "A 13-year-old girl",
     "w": [
      "A retired general",
@@ -5352,30 +5352,30 @@
     "a": "Royal Flying Doctor Service",
     "w": [
      "Bush Nursing Boat Service",
-     "Camel Ambulance Corps",
-     "Outback Rail Hospital"
+     "Camel Express Corps",
+     "Outback Rail Service"
     ],
     "e": "The first flight left from Cloncurry in Queensland. It covers an area bigger than most countries."
    },
    {
-    "q": "Jamaican-Scottish nurse Mary Seacole paid her own way to the Crimean War, where she opened?",
+    "q": "Jamaican-Scottish businesswoman Mary Seacole paid her own way to the Crimean War, where she opened?",
     "a": "The British Hotel",
     "w": [
-     "A floating hospital",
-     "A nursing college",
-     "The Sick Soldiers\u2019 Bank"
+     "A floating restaurant",
+     "A sewing school",
+     "The Soldiers\u2019 Savings Bank"
     ],
-    "e": "Officially she\u2019d been turned down. So she went anyway, and fed and treated the soldiers near the front."
+    "e": "Officially she\u2019d been turned down. So she went anyway, and fed and cared for the soldiers near the front."
    },
    {
     "q": "China\u2019s \u2018barefoot doctors\u2019 of the 1960s and 70s were?",
-    "a": "Farmers given basic medical training",
+    "a": "Farmers trained in basic health care",
     "w": [
-     "Runners who delivered medicines",
-     "Surgeons who operated without shoes",
+     "Runners who delivered letters",
+     "Builders who worked without shoes",
      "Monks from the mountain temples"
     ],
-    "e": "Many worked in rice fields as well as treating villagers, hence the nickname."
+    "e": "Many worked in the rice fields as well as caring for villagers, hence the nickname."
    },
    {
     "q": "The famous 1978 \u2018Health for All\u2019 declaration was made in Alma-Ata, in what is now?",
@@ -5388,7 +5388,7 @@
     "e": "Today the city is called Almaty. Astana\u2019s the capital, in case you forgot October\u2019s quiz."
    },
    {
-    "q": "Since 2016, Rwanda has been famous for delivering blood to hospitals by?",
+    "q": "Since 2016, Rwanda has been famous for delivering urgent blood supplies by?",
     "a": "Drone",
     "w": [
      "Motorcycle",
@@ -5406,14 +5406,14 @@
   "theme": "Sparks and restarts",
   "questions": [
    {
-    "q": "In 1947, surgeon Claude Beck restarted a heart with an electric shock during surgery. The patient was?",
-    "a": "A 14-year-old boy",
+    "q": "In 1947, Claude Beck restarted a human heart with an electric shock for the first time. Whose heart was it?",
+    "a": "A 14-year-old boy\u2019s",
     "w": [
-     "A 70-year-old sailor",
-     "A prize racehorse",
-     "A Nobel-winning doctor"
+     "A 70-year-old sailor\u2019s",
+     "A prize racehorse\u2019s",
+     "A famous scientist\u2019s"
     ],
-    "e": "The boy survived and went home. The world\u2019s first successful human defibrillation happened in Cleveland, Ohio."
+    "e": "The boy recovered and went home. It happened in Cleveland, Ohio."
    },
    {
     "q": "The Resusci Anne CPR doll has a face based on?",
@@ -5456,14 +5456,14 @@
     "e": "The jaw and an eye moved. The show may well have helped inspire Frankenstein."
    },
    {
-    "q": "In about 46 CE, Roman doctor Scribonius Largus advised headache patients to?",
+    "q": "In about 46 CE, Roman writer Scribonius Largus suggested people with headaches should?",
     "a": "Touch a live electric ray",
     "w": [
      "Sit in a lightning storm",
      "Rub amber on their temples",
      "Hold an iron bar in the sea"
     ],
-    "e": "It\u2019s one of the first known uses of electricity as a treatment. Results not guaranteed."
+    "e": "It\u2019s one of the first known uses of electricity to make someone feel better. Results not guaranteed."
    },
    {
     "q": "Electric eels, which can deliver over 800 volts, are actually?",
@@ -5483,7 +5483,7 @@
      "A coffee cup",
      "A cigarette case"
     ],
-    "e": "Else-Marie Larsson persuaded doctors to try it on her husband, Arne. He went on to outlive his surgeon and his engineer."
+    "e": "Else-Marie Larsson talked the team into trying it on her husband, Arne. He went on to outlive both of the men who built it."
    },
    {
     "q": "Wilson Greatbatch stumbled on the idea for his 1950s pacemaker when he?",
@@ -5514,7 +5514,7 @@
   "theme": "Bad medicine",
   "questions": [
    {
-    "q": "Which creature did doctors once use to drain blood from patients?",
+    "q": "Which creature was once widely used to drain people\u2019s blood?",
     "a": "Leech",
     "w": [
      "Earthworm",
@@ -5524,24 +5524,24 @@
     "e": "At the height of the craze, France imported millions of leeches a year."
    },
    {
-    "q": "Which US president died on this day in 1799, after heavy bloodletting for a throat infection?",
+    "q": "Which US president died on this day in 1799, after heavy bloodletting for a very sore throat?",
     "a": "George Washington",
     "w": [
      "Thomas Jefferson",
      "James Madison",
      "Abraham Lincoln"
     ],
-    "e": "Doctors may have taken about 40% of his blood in a day. It\u2019s hard to imagine it helped."
+    "e": "Up to 40% of his blood may have been taken in a day. It\u2019s hard to imagine it helped."
    },
    {
-    "q": "In the 1890s, Bayer sold which drug as a cough medicine?",
-    "a": "Heroin",
+    "q": "The original Chinese \u2018snake oil\u2019, brought to the USA by railway workers, was made from which snake?",
+    "a": "Chinese water snake",
     "w": [
-     "Caffeine",
-     "Nicotine",
-     "Absinthe"
+     "Rattlesnake",
+     "King cobra",
+     "Python"
     ],
-    "e": "It was marketed as a safe, non-addictive remedy. Marketing has rarely been more wrong."
+    "e": "The real stuff was rich in omega-3 oils. American copies used rattlesnakes, or no snake at all, which is how \u2018snake oil\u2019 came to mean a con."
    },
    {
     "q": "Expensive \u2018unicorn horn\u2019, thought to cure poisons, was really the tusk of a?",
@@ -5581,7 +5581,7 @@
      "Sea air",
      "Pepper dust"
     ],
-    "e": "Resuscitation kits with bellows were kept beside the River Thames. Doctors really did believe in it for decades."
+    "e": "Kits with bellows were kept beside the River Thames. People really did believe in it for decades."
    },
    {
     "q": "How have archaeologists traced the campsites of American explorers Lewis and Clark?",
@@ -5594,14 +5594,14 @@
     "e": "They took laxative pills laced with mercury, nicknamed \u2018thunderclappers\u2019. Their journey left a toxic trail."
    },
    {
-    "q": "\u2018Trepanning\u2019, one of humanity\u2019s oldest operations, means?",
+    "q": "\u2018Trepanning\u2019, one of humanity\u2019s oldest procedures, means?",
     "a": "Drilling a hole in the skull",
     "w": [
      "Removing a sore tooth",
      "Setting a broken leg",
      "Cutting out the tonsils"
     ],
-    "e": "Skulls show people often survived it, thousands of years before anaesthetics."
+    "e": "Healed skulls show people often survived it, thousands of years ago."
    },
    {
     "q": "Victorian \u2018complexion wafers\u2019 sold to women promised lovely skin, but contained?",
@@ -6270,7 +6270,7 @@
   "theme": "Breathe in, sit still",
   "questions": [
    {
-    "q": "The UN’s World Meditation Day falls today, right around the December?",
+    "q": "The UN\u2019s World Meditation Day falls today, right around the December?",
     "a": "Solstice",
     "w": [
      "Equinox",
@@ -6395,7 +6395,7 @@
      "2024",
      "1111"
     ],
-    "e": "It\u2019s the smallest number you can make by adding two cubes in two ways. As one does, in hospital."
+    "e": "It\u2019s the smallest number you can make by adding two cubes in two different ways. As one does, while recovering in bed."
    },
    {
     "q": "Ramanujan said many of his formulas came to him in?",
@@ -6539,7 +6539,7 @@
     "q": "Which twins, according to legend, founded Rome after being raised by a she-wolf?",
     "a": "Romulus and Remus",
     "w": [
-     "Castor and Pollux",
+     "Cain and Abel",
      "Apollo and Artemis",
      "Jacob and Esau"
     ],
@@ -6566,24 +6566,24 @@
     "e": "Child labour laws limit a baby\u2019s work hours, so twins are a TV producer\u2019s favourite trick."
    },
    {
-    "q": "Surgeon Christiaan Barnard did the world\u2019s first human heart transplant in 1967 in?",
+    "q": "Christiaan Barnard led the world\u2019s first human heart transplant in 1967 in?",
     "a": "Cape Town",
     "w": [
      "Boston",
      "London",
      "Sydney"
     ],
-    "e": "The patient lived 18 days. The next one lived for over a year and a half. The city still has a museum about it."
+    "e": "Louis Washkansky lived 18 days. The next recipient lived for over a year and a half. The city still has a museum about it."
    },
    {
-    "q": "In 2005, surgeons in France performed the world\u2019s first partial transplant of?",
-    "a": "A face",
+    "q": "The star sign and constellation Gemini is named after which twins?",
+    "a": "Castor and Pollux",
     "w": [
-     "An ear",
-     "An eye",
-     "A tongue"
+     "Romulus and Remus",
+     "Fred and George",
+     "Apollo and Artemis"
     ],
-    "e": "Isabelle Dinoire received it in Amiens. She lived with it for over a decade."
+    "e": "Its two brightest stars carry their names. In Greek myth, they shared immortality so they could stay together."
    }
   ]
  },
@@ -6932,7 +6932,7 @@
     "a": "Carried typhoid without feeling sick",
     "w": [
      "Invented a cure for typhoid",
-     "Ran a hospital for typhoid patients",
+     "Ran a famous New York restaurant",
      "Caught typhoid more than ten times"
     ],
     "e": "She felt well and didn\u2019t believe she carried it. She spent decades in forced isolation, a sad story of its time."
@@ -6982,7 +6982,7 @@
     "a": "No, that\u2019s a myth",
     "w": [
      "Yes, written in 1665",
-     "Yes, written by doctors",
+     "Yes, written by a London vicar",
      "Only the French version"
     ],
     "e": "The rhyme first appeared in print centuries later, and folklorists don\u2019t buy the story."
@@ -7009,13 +7009,13 @@
    },
    {
     "q": "In 2014, Dr Stella Ameyo Adadevoh is credited with limiting Ebola in Nigeria by?",
-    "a": "Stopping a patient from leaving",
+    "a": "Refusing to let an infected traveller leave",
     "w": [
      "Inventing a rapid new test",
      "Closing all the country\u2019s airports",
-     "Discovering a new vaccine"
+     "Designing a new face mask"
     ],
-    "e": "She held firm under pressure, and her hospital\u2019s decision protected many people. She lost her own life to the disease."
+    "e": "She held firm under pressure, and it protected many people. She lost her own life to the disease."
    }
   ]
  },
@@ -7214,14 +7214,14 @@
     "e": "The first batch of bubble gum, in 1928, took the colour from whatever was on the shelf. It stuck, so to speak."
    },
    {
-    "q": "The first rubber surgical gloves, made in the 1890s, were commissioned for?",
-    "a": "Nurse Caroline Hampton\u2019s sore hands",
+    "q": "Around 1890, some of the first thin rubber work gloves were ordered from Goodyear to protect?",
+    "a": "Caroline Hampton\u2019s sore hands",
     "w": [
-     "A boxer\u2019s wrist injury",
-     "A queen\u2019s personal surgeon",
-     "The US Army\u2019s field hospitals"
+     "A boxer\u2019s wrist",
+     "A queen\u2019s tender fingers",
+     "The US Army\u2019s cooks"
     ],
-    "e": "Her surgeon, William Halsted, had them made by the Goodyear company, then married her. A very practical love letter."
+    "e": "Harsh cleaning chemicals were hurting the nurse\u2019s hands. Her boss, William Halsted, ordered the gloves, then married her. A very practical romance."
    },
    {
     "q": "Air-filled tyres were popularised in 1888 by Belfast vet John Dunlop, who made them for?",
@@ -7229,7 +7229,7 @@
     "w": [
      "His horse\u2019s cart",
      "A racing car",
-     "A hospital trolley"
+     "A delivery cart"
     ],
     "e": "He wanted a smoother ride for his son on bumpy roads. Then everyone else wanted one too."
    }
@@ -7337,7 +7337,7 @@
     "w": [
      "The first man to climb Mont Blanc",
      "A Civil War general",
-     "The King of Hawaii\u2019s doctor"
+     "The King of Hawaii\u2019s chef"
     ],
     "e": "Before tees, golfers built a small heap of sand each time. He also made a major contribution to treating cleft palate."
    }
