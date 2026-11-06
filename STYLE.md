@@ -66,3 +66,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Puzzle archives
 - _scripts/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 _scripts/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.
+
+## Weekly Dose (Zebra Mail): Organ Drop daily
+- In "🧩 This week's puzzles", always include one line for the Organ Drop daily challenge, e.g. "🫀 Organ Drop daily: same organs for everyone, one scored go a day. Beat the world board: https://maladywise.com/organ-drop/" (vary the wording each week; plain link, no date).
+- In the week's X posts, at most one Organ Drop daily nudge (e.g. Saturday), linking https://maladywise.com/organ-drop/.
