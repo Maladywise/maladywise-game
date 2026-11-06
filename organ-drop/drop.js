@@ -83,6 +83,23 @@
     "Hiccups are sudden, involuntary spasms of your diaphragm.",
     "Your skin is your body's largest organ."
   ];
+  // Normie mode: animal organ facts, no medicine
+  var NFACTS = [
+    "An octopus has three hearts: one for the body and two for the gills.",
+    "A giraffe's heart weighs about 11 kg and has to push blood two metres up to its head.",
+    "A hummingbird's heart can beat more than 1,200 times a minute.",
+    "A cow has one stomach, split into four compartments.",
+    "Many sea stars push their stomach out through their mouth to digest dinner outside their body.",
+    "Bird lungs don't puff up like balloons. Air flows one way through them, helped by a set of air sacs.",
+    "Most snakes have only one working lung, long and thin to fit their shape.",
+    "A sperm whale has the biggest brain of any animal, around 8 kg.",
+    "A platypus has no stomach. Its food pipe joins straight onto its intestine.",
+    "Wood frogs freeze almost solid in winter. Their heart stops, then starts again when they thaw.",
+    "An earthworm has five pairs of heart-like pumps.",
+    "A shark's huge, oily liver helps stop it sinking.",
+    "Elephants have the biggest brain of any land animal, about 5 kg.",
+    "Some frogs can breathe through their skin, even underwater."
+  ];
 
   // ---------- state ----------
   var COLS = 10, ROWS = 22, HID = 2; // rows 0-1 are hidden spawn rows
@@ -96,7 +113,7 @@
   function newState() {
     var day = sydDay();
     return { mode: MODE, day: day, rng: MODE === "endless" ? Math.random : seeded("organdrop-" + day), seq: [], quads: 0, board: emptyBoard(), bag: [], queue: [], cur: null, hold: null, canHold: true, score: 0, lines: 0, level: 1,
-      gT: 0, lockT: 0, lockN: 0, lowY: 0, over: false, t: 0, clearing: null, toastT: 0, factT: 0, facts: shuffle(FACTS), factI: 0, seen: [], l1: 0, overT: 0 };
+      gT: 0, lockT: 0, lockN: 0, lowY: 0, over: false, t: 0, clearing: null, toastT: 0, factT: 0, facts: shuffle(normie() ? NFACTS : FACTS), factI: 0, seen: [], l1: 0, overT: 0 };
   }
   function fillQueue() { while (S.queue.length < 3) S.queue.push(bagNext()); }
   function gravity() { var l = Math.min(S.level, 20); return Math.pow(0.8 - (l - 1) * 0.007, l - 1); }
@@ -470,7 +487,7 @@
     note.textContent = mine >= 0 ? "You’re #" + (mine + 1) + (k === "odaily" ? " today." : " in the world.") : k === "odaily" ? "Sydney time. Names are public." : "Names are public.";
   }
   $("od-lbform").addEventListener("submit", function (e) {
-    e.preventDefault(); var n = String($("od-lbname").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || "Anonymous surgeon";
+    e.preventDefault(); var n = String($("od-lbname").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || (normie() ? "Anonymous stacker" : "Anonymous surgeon");
     $("od-lbform").hidden = true; lbPost(n); $("od-again").focus({ preventScroll: true });
   });
   $("od-share").onclick = function () {
@@ -559,6 +576,17 @@
     });
   }
   guide("od-guide"); guide("od-guide2");
+  // Normie mode: swap the page's medical wording for everyday wording
+  if (normie()) {
+    var nq = function (sel, t) { var el = document.querySelector(sel); if (el) el.textContent = t; };
+    nq(".od-lede", "Organs are falling. Stack them neatly and fill whole rows to clear them. It gets faster every level, and every level brings a new animal organ fact.");
+    nq("#od-start", "Play");
+    nq(".od-hush", "No organs were harmed. They’re only shapes.");
+    nq("#od-paused .od-omsg", "Paused. The organs will wait.");
+    Array.prototype.forEach.call(document.querySelectorAll(".od-rules li, .od-hp li"), function (li) {
+      li.innerHTML = li.innerHTML.replace("is a <b>transplant</b>, worth the most", "is the <b>big one</b>, worth the most").replace("= <b>transplant</b>", "= <b>the big one</b>");
+    });
+  }
   renderBest(); lbProbe();
 
   if (DEBUG) {

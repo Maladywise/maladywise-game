@@ -107,7 +107,7 @@
     $("card").innerHTML = '<div class="chead"><span>Round ' + (i + 1) + " of " + N + "</span><span>" + esc(R.kind) + "</span></div>" +
       '<p class="q">' + esc(R.q) + "</p>" +
       (R.art && window.LBL_ART ? '<div class="art">' + LBL_ART(R.art, R.hl) + '</div><p class="cap">' + esc((window.LBL_CAP || {})[R.art] || "") + "</p>"
-        : '<div class="noart">' + (NORMIE ? PAW : /nerve/i.test(R.kind) ? NERVE : BONE) + "<span>No diagram for this one. Just you and your anatomy lectures.</span></div><div style=\"height:12px\"></div>");
+        : '<div class="noart">' + (NORMIE ? PAW : /nerve/i.test(R.kind) ? NERVE : BONE) + "<span>" + T.noart + "</span></div><div style=\"height:12px\"></div>");
     $("opts").innerHTML = options(i).map(function (o) {
       var cls = answered ? (o === R.answer ? " right" : o === mine ? " wrong" : " dim") : "";
       return '<button type="button" class="opt' + cls + '" data-o="' + esc(o) + '"' + (answered ? " disabled" : "") + ">" + esc(o) + "</button>";

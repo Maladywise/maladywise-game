@@ -5,71 +5,67 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "Cat fans call these ‘toe beans’. What are they?",
-    "answer": "Toe pads",
+    "kind": "Body fact",
+    "q": "Most sea stars have how many arms?",
+    "answer": "Five, usually",
     "wrong": [
-     "Claws",
-     "Whisker pads",
-     "Knuckles"
+     "Three",
+     "Eight",
+     "Twelve"
     ],
-    "why": "Toe pads cushion each step, and cats sweat through their paw pads. Damp paw prints on the vet’s table are a thing.",
-    "art": "catpaw",
+    "why": "Five is the classic, but some species have 20 or more. Australia’s crown-of-thorns starfish can have over 20.",
+    "art": "seastar",
     "hl": [
-     "toebeans"
+     "arm2"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Kangaroos often use their ___ like a fifth leg.",
-    "answer": "Tail",
+    "q": "Owls swallow small prey whole, then cough up the bones and fur as…",
+    "answer": "Pellets",
     "wrong": [
-     "Ears",
-     "Pouch",
-     "Nose"
+     "Hairballs",
+     "Eggs",
+     "Nests"
     ],
-    "why": "When grazing, a kangaroo leans on its tail as an extra leg. It pushes with real force."
+    "why": "Scientists pull owl pellets apart to see exactly what the owl had for dinner."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Dogs see the world mostly in…",
+    "answer": "Blues and yellows",
+    "wrong": [
+     "Black and white only",
+     "Reds and greens",
+     "Every colour we see"
+    ],
+    "why": "Dogs have two kinds of colour cone, not three. Red and green look much the same to them."
    },
    {
     "kind": "Body fact",
-    "q": "Bees mostly smell with these. What are they?",
-    "answer": "Antennae",
+    "q": "Many frogs have webbed back feet. What are they best for?",
+    "answer": "Swimming",
     "wrong": [
-     "Legs",
-     "Wings",
-     "Stinger"
+     "Digging",
+     "Keeping warm",
+     "Catching flies"
     ],
-    "why": "A bee’s antennae are covered in smell and touch sensors. They’re basically its nose.",
-    "art": "bee",
-    "hl": [
-     "antenna"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Dolphins breathe through…",
-    "answer": "A blowhole on top of the head",
-    "wrong": [
-     "Gills",
-     "Their mouth",
-     "Their skin"
-    ],
-    "why": "Dolphins are mammals, so they surface to breathe air through a blowhole."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Back foot",
-    "wrong": [
-     "Tail",
-     "Front foot",
-     "Fin"
-    ],
-    "why": "Long, webbed back feet make frogs strong swimmers and champion jumpers.",
+    "why": "Webbing turns each kick into a paddle stroke.",
     "art": "frog",
     "hl": [
      "hindfoot"
     ]
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Rabbits’ and rodents’ front teeth never stop…",
+    "answer": "Growing",
+    "wrong": [
+     "Wobbling",
+     "Changing colour",
+     "Falling out"
+    ],
+    "why": "They grow all their lives and are worn down by gnawing. That’s why rats and mice chew everything."
    }
   ]
  },
@@ -79,18 +75,18 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "This bumpy pink patch is as unique as a fingerprint. What is it?",
-    "answer": "Nose",
+    "kind": "Body fact",
+    "q": "A giraffe’s heart weighs about…",
+    "answer": "11 kg",
     "wrong": [
-     "Chin",
-     "Tongue",
-     "Lip"
+     "1 kg",
+     "300 g",
+     "60 kg"
     ],
-    "why": "Each cat’s nose leather has its own pattern of ridges and bumps, a bit like a fingerprint.",
-    "art": "catface",
+    "why": "About 11 kg, with very thick walls. It has to push blood about two metres up the neck to the brain.",
+    "art": "giraffe",
     "hl": [
-     "nose"
+     "heart"
     ]
    },
    {
@@ -105,19 +101,15 @@
     "why": "The shell is part of the skeleton. A turtle can no more leave its shell than you can leave your ribcage."
    },
    {
-    "kind": "Body fact",
-    "q": "An elephant’s trunk is a nose joined with its…",
-    "answer": "Upper lip",
+    "kind": "Weird but true",
+    "q": "An earthworm has five pairs of…",
+    "answer": "Heart-like pumps",
     "wrong": [
-     "Tongue",
-     "Chin",
-     "Lower lip"
+     "Lungs",
+     "Eyes",
+     "Stomachs"
     ],
-    "why": "It’s nose and upper lip in one, with no bones and a huge number of muscle bundles.",
-    "art": "elephant",
-    "hl": [
-     "trunk"
-    ]
+    "why": "Five pairs of muscly loops near the front squeeze blood along. Often called its ten ‘hearts’."
    },
    {
     "kind": "Weird but true",
@@ -154,17 +146,17 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "A giraffe’s hoof is about the size of a…",
-    "answer": "Dinner plate",
+    "q": "How many toes does an owl have on each foot?",
+    "answer": "Four, and one can swivel backwards",
     "wrong": [
-     "Coaster",
-     "Bicycle wheel",
-     "Teaspoon"
+     "Two",
+     "Three, all facing forwards",
+     "Five"
     ],
-    "why": "Giraffe hooves can be about 30 cm across. A kick from one can be dangerous to a lion.",
-    "art": "giraffe",
+    "why": "Owls can grip with two toes forward and two back, or three forward and one back.",
+    "art": "owl",
     "hl": [
-     "hoof"
+     "talons"
     ]
    },
    {
@@ -190,34 +182,26 @@
     "why": "Rumen, reticulum, omasum and abomasum. Grass takes a long journey."
    },
    {
-    "kind": "Body fact",
-    "q": "The hard outer rim is made of the same stuff as your nails. What is it?",
-    "answer": "Keratin",
+    "kind": "Weird but true",
+    "q": "Geckos climb glass using…",
+    "answer": "Millions of tiny hairs on their toes",
     "wrong": [
-     "Bone",
-     "Enamel",
-     "Chalk"
+     "Glue",
+     "Suction cups",
+     "Sticky spit"
     ],
-    "why": "Hoof wall is keratin, like fingernails, so trimming it doesn’t hurt.",
-    "art": "hoof",
-    "hl": [
-     "wall"
-    ]
+    "why": "Each toe pad carries millions of microscopic hairs that cling to surfaces with weak molecular forces. No glue involved."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted claw higher up the leg.",
-    "answer": "Dewclaw",
+    "kind": "Weird but true",
+    "q": "A giant panda grips bamboo with a ‘thumb’ that is really…",
+    "answer": "An enlarged wrist bone",
     "wrong": [
-     "Spur",
-     "Thumbnail",
-     "Hangnail"
+     "A sixth finger with a nail",
+     "A claw",
+     "A tooth"
     ],
-    "why": "The dewclaw is the cat’s first digit, the equivalent of your thumb. Handy for gripping prey.",
-    "art": "catpaw",
-    "hl": [
-     "dewclaw"
-    ]
+    "why": "Pandas’ real thumbs are busy being normal paw digits. Evolution improvised with a wrist bone."
    }
   ]
  },
@@ -279,19 +263,15 @@
     "why": "Always half out, they work like running spikes for grip at top speed."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Sole",
+    "kind": "Weird but true",
+    "q": "Why does a cheetah have such a long tail?",
+    "answer": "To steer and balance in sharp turns",
     "wrong": [
-     "Frog",
-     "Wall",
-     "Heel bulb"
+     "To swat flies",
+     "To store fat",
+     "To signal danger to cubs"
     ],
-    "why": "The sole is slightly cupped, so it doesn’t take the full weight. The wall does that.",
-    "art": "hoof",
-    "hl": [
-     "sole"
-    ]
+    "why": "At full speed the tail works like a rudder, so the cheetah can swerve after a zig-zagging gazelle."
    }
   ]
  },
@@ -338,34 +318,26 @@
     "why": "It’s a long spiral tooth, usually the left one, growing through the upper lip."
    },
    {
-    "kind": "Body fact",
-    "q": "How many sets of molars does an elephant go through in a lifetime?",
-    "answer": "Six",
+    "kind": "Weird but true",
+    "q": "Dung beetles roll their balls in a straight line at night by…",
+    "answer": "Following the Milky Way",
     "wrong": [
-     "One",
-     "Two",
-     "Twenty"
+     "Smelling the soil",
+     "Feeling the wind",
+     "Following the scent of other beetles"
     ],
-    "why": "New molars move forward from the back like a slow conveyor belt. When the last set wears out, eating gets hard.",
-    "art": "elephant",
-    "hl": [
-     "molar"
-    ]
+    "why": "South African experiments found they use the glow of the Milky Way to keep their bearings. In a planetarium, too."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the balloon that puffs up under the chin.",
-    "answer": "Vocal sac",
+    "kind": "Weird but true",
+    "q": "Earthworms breathe through their…",
+    "answer": "Moist skin",
     "wrong": [
-     "Food pouch",
-     "Gill sac",
-     "Swim bladder"
+     "Mouth",
+     "Tail end",
+     "Tiny gills"
     ],
-    "why": "Male frogs inflate a vocal sac to make their calls louder. Some can be heard a kilometre away.",
-    "art": "frog",
-    "hl": [
-     "vocalsac"
-    ]
+    "why": "Oxygen soaks in through damp skin. That’s why worms come up when soil floods: they need air."
    }
   ]
  },
@@ -375,19 +347,15 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "When an octopus swims, its main heart (the middle one)…",
-    "answer": "Stops beating",
+    "kind": "Weird but true",
+    "q": "In the dark Arctic winter, reindeer eyes change colour from gold to…",
+    "answer": "Deep blue",
     "wrong": [
-     "Speeds up threefold",
-     "Moves into an arm",
-     "Pumps ink"
+     "Red",
+     "Green",
+     "Black"
     ],
-    "why": "The body heart pauses while it jet-swims, which may be why octopuses prefer crawling.",
-    "art": "octopus",
-    "hl": [
-     "hearts"
-    ]
+    "why": "A reflective layer at the back of the eye shifts colour, which helps scatter light in the long winter dark."
    },
    {
     "kind": "Weird but true",
@@ -427,19 +395,15 @@
     ]
    },
    {
-    "kind": "Body fact",
-    "q": "A honeybee’s wings beat about how many times a second?",
-    "answer": "About 230",
+    "kind": "Weird but true",
+    "q": "Reindeer make a clicking sound as they walk. What makes it?",
+    "answer": "A tendon slipping over a bone in the foot",
     "wrong": [
-     "About 20",
-     "About 2,000",
-     "About 5"
+     "Hooves knocking together",
+     "Teeth chattering",
+     "Antlers rattling"
     ],
-    "why": "Around 230 beats a second, which is where the buzz comes from.",
-    "art": "bee",
-    "hl": [
-     "forewing"
-    ]
+    "why": "The clicks help a herd stay together in snowstorms and the dark. Finns and Sámi herders know the sound well."
    }
   ]
  },
@@ -450,74 +414,62 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "Elephants flap these mainly to…",
-    "answer": "Cool down",
+    "q": "Octopuses zoom away by squirting water out of this. It works like a…",
+    "answer": "Jet engine",
     "wrong": [
-     "Hear thunder",
-     "Swat lions",
-     "Steer when running"
+     "Paddle",
+     "Sail",
+     "Parachute"
     ],
-    "why": "Elephant ears are full of blood vessels. Flapping them cools the blood, like a giant fan.",
-    "art": "elephant",
+    "why": "Jet propulsion: suck water into the mantle, squeeze it out of the siphon, shoot off backwards.",
+    "art": "octopus",
     "hl": [
-     "ear"
+     "siphon"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Which animal can regrow lost legs, and even parts of its heart?",
-    "answer": "Axolotl",
+    "q": "Common swifts can stay in the air without landing for about…",
+    "answer": "10 months",
     "wrong": [
-     "Goldfish",
-     "Gecko",
-     "Tortoise"
+     "10 hours",
+     "10 days",
+     "10 years"
     ],
-    "why": "Axolotls regrow limbs, tail, spinal cord and more, with barely a scar. Our mascot is very proud."
+    "why": "Tracking showed some swifts flew for about 10 months straight, eating and even napping on the wing."
    },
    {
-    "kind": "Body fact",
-    "q": "How many bones are in a giraffe’s neck?",
-    "answer": "Seven",
+    "kind": "Weird but true",
+    "q": "Which bird can dive at more than 300 km/h?",
+    "answer": "Peregrine falcon",
     "wrong": [
-     "Two",
-     "Twenty-two",
-     "Seventy"
+     "Pelican",
+     "Kookaburra",
+     "Pigeon"
     ],
-    "why": "Seven, the same as you. Theirs are just enormously long.",
-    "art": "giraffe",
-    "hl": [
-     "neck"
-    ]
+    "why": "In a hunting dive a peregrine is the fastest animal on Earth."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Stinger",
+    "kind": "Weird but true",
+    "q": "Which of these birds can’t fly?",
+    "answer": "Emu",
     "wrong": [
-     "Tail",
-     "Tongue",
-     "Antenna"
+     "Magpie",
+     "Galah",
+     "Kookaburra"
     ],
-    "why": "Only female bees have a stinger. It’s a modified egg-laying tube.",
-    "art": "bee",
-    "hl": [
-     "stinger"
-    ]
+    "why": "Emus have tiny wings and run instead, up to about 50 km/h."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted slits.",
-    "answer": "Gill slits",
+    "kind": "Weird but true",
+    "q": "How does a hummingbird save energy overnight?",
+    "answer": "It drops into a deep, cold sleep",
     "wrong": [
-     "Nostrils",
-     "Ears",
-     "Scars"
+     "It hangs upside down",
+     "It eats all night",
+     "It sleeps in a group hug"
     ],
-    "why": "Water flows in through the mouth and out through the gill slits, which pull oxygen out on the way.",
-    "art": "shark",
-    "hl": [
-     "gills"
-    ]
+    "why": "In torpor its heart rate and body temperature plunge, then it warms back up by morning."
    }
   ]
  },
@@ -528,71 +480,62 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "How many wings does a honeybee have?",
-    "answer": "Four",
+    "q": "In bright light, a cat’s pupils shrink to…",
+    "answer": "Narrow vertical slits",
     "wrong": [
-     "Two",
-     "Six",
-     "Eight"
+     "Tiny round dots",
+     "Horizontal bars",
+     "Stars"
     ],
-    "why": "Two on each side. In flight, each pair hooks together to work as one.",
-    "art": "bee",
-    "hl": [
-     "forewing",
-     "hindwing"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Snakes ‘smell’ by flicking their…",
-    "answer": "Tongue",
-    "wrong": [
-     "Tail",
-     "Eyelids",
-     "Scales"
-    ],
-    "why": "The forked tongue collects scent particles and delivers them to a sensing organ in the roof of the mouth."
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Why are flamingos pink?",
-    "answer": "Pigments in their food",
-    "wrong": [
-     "Sunburn",
-     "They’re born pink",
-     "Pink blood"
-    ],
-    "why": "Chicks hatch grey. Pink pigments from algae and shrimp gradually colour the feathers."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Frogs use these to help them swallow. What are they?",
-    "answer": "Eyes",
-    "wrong": [
-     "Nostrils",
-     "Eardrums",
-     "Vocal sacs"
-    ],
-    "why": "When a frog swallows, its eyes sink down into its head and help push food down its throat. Yes, really.",
-    "art": "frog",
+    "why": "Slits can close down much further than round pupils, handy for an animal that hunts at dawn, dusk and night.",
+    "art": "catface",
     "hl": [
      "eye"
     ]
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Talons",
+    "kind": "Weird but true",
+    "q": "Koalas have something surprisingly like ours. What?",
+    "answer": "Fingerprints",
     "wrong": [
-     "Hooves",
-     "Flippers",
-     "Paws"
+     "Eyebrows",
+     "Webbed toes",
+     "A chin dimple"
     ],
-    "why": "Talons are curved claws for gripping prey. Owls can even swing one outer toe backwards for a better grip.",
-    "art": "owl",
-    "hl": [
-     "talons"
-    ]
+    "why": "Koala fingerprints are so like human ones that even under a microscope they’re hard to tell apart."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Clownfish are all born…",
+    "answer": "Male, and some turn female",
+    "wrong": [
+     "Female, and some turn male",
+     "Blind",
+     "Without fins"
+    ],
+    "why": "The biggest fish in a group is the female. If she disappears, the top male changes to take her place."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "In seahorses, who carries the eggs until they hatch?",
+    "answer": "The dad",
+    "wrong": [
+     "The mum",
+     "Both, taking turns",
+     "Nobody: they float free"
+    ],
+    "why": "Mum puts the eggs in dad’s pouch, and he carries them until the babies pop out."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "How do camels keep out blowing sand?",
+    "answer": "They can close their nostrils",
+    "wrong": [
+     "They sneeze constantly",
+     "They hide their head in their hump",
+     "They sleep through storms"
+    ],
+    "why": "Slit-like nostrils seal shut, and two rows of long eyelashes guard the eyes."
    }
   ]
  },
@@ -602,71 +545,63 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "These knobbly things on top: what are they called?",
-    "answer": "Ossicones",
+    "kind": "Body fact",
+    "q": "An elephant’s trunk has no bones but about how many muscle bundles?",
+    "answer": "Tens of thousands",
     "wrong": [
-     "Antlers",
-     "Horns",
-     "Antennae"
+     "About 4",
+     "About 40",
+     "About 400"
     ],
-    "why": "Ossicones are bony knobs covered in skin and fur. Both males and females have them.",
-    "art": "giraffe",
+    "why": "Usually put at around 40,000 muscle units, which is why a trunk can pick up a peanut or rip down a branch.",
+    "art": "elephant",
     "hl": [
-     "ossicones"
+     "trunk"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Deer antlers are made of…",
-    "answer": "Bone",
+    "q": "Bird lungs work differently from ours. Air flows…",
+    "answer": "One way, in a loop",
     "wrong": [
-     "Keratin",
-     "Cartilage",
-     "Hardened hair"
+     "In and out of two balloons",
+     "Only through the beak",
+     "Through the feathers"
     ],
-    "why": "Antlers are bone, shed and regrown every year. Horns, like a cow’s, are permanent."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted dish-shaped face.",
-    "answer": "Facial disc",
-    "wrong": [
-     "Beard",
-     "Mane",
-     "Crest"
-    ],
-    "why": "The facial disc works like a satellite dish, funnelling sound towards the ears.",
-    "art": "owl",
-    "hl": [
-     "disc"
-    ]
+    "why": "Air sacs push air one way through stiff lungs, so birds get fresh air on the way in and out."
    },
    {
     "kind": "Weird but true",
-    "q": "Which bird can fly backwards?",
-    "answer": "Hummingbird",
+    "q": "Why are a beaver’s front teeth orange?",
+    "answer": "Iron in the enamel",
     "wrong": [
-     "Kookaburra",
-     "Eagle",
-     "Penguin"
+     "Tree sap stains",
+     "Carrot juice",
+     "Rust from river water"
     ],
-    "why": "Hummingbirds twist their wings in a figure eight, so they can hover and even reverse."
+    "why": "Iron makes the enamel tougher, perfect for felling trees."
    },
    {
-    "kind": "Name the part",
-    "q": "Lose one, grow a new one. What is it?",
-    "answer": "Arm",
+    "kind": "Weird but true",
+    "q": "How many eyes does a box jellyfish have?",
+    "answer": "24",
     "wrong": [
-     "Leg",
-     "Tentacle",
-     "Fin"
+     "None",
+     "2",
+     "8"
     ],
-    "why": "Sea stars can regrow lost arms. It takes months, but it’s still a better repair plan than ours.",
-    "art": "seastar",
-    "hl": [
-     "arm2"
-    ]
+    "why": "Four clusters of six eyes, some of them with lenses. Not bad for an animal without a brain."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "A brown pelican’s throat pouch can hold about…",
+    "answer": "11 litres of water",
+    "wrong": [
+     "1 litre",
+     "50 litres",
+     "A cupful"
+    ],
+    "why": "Roughly three US gallons. It scoops, drains the water out, then swallows the fish."
    }
   ]
  },
@@ -677,70 +612,62 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "This line along the side helps the shark sense…",
-    "answer": "Water movement",
+    "q": "How many eyes does a honeybee have in total?",
+    "answer": "Five: two big, three tiny",
     "wrong": [
-     "Light",
-     "Temperature",
-     "Salt"
+     "Two",
+     "Four",
+     "Eight"
     ],
-    "why": "The lateral line feels tiny ripples and vibrations, like a struggling fish nearby.",
-    "art": "shark",
-    "hl": [
-     "lateral"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "A dolphin’s blowhole is really its…",
-    "answer": "Nostril",
-    "wrong": [
-     "Ear",
-     "Mouth",
-     "Gill"
-    ],
-    "why": "The nostril migrated to the top of the head over millions of years. Very convenient for breathing at the surface."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Tongue",
-    "wrong": [
-     "Stinger",
-     "Antenna",
-     "Front leg"
-    ],
-    "why": "A honeybee’s long tongue (proboscis) works like a straw for slurping nectar.",
+    "why": "Two compound eyes for seeing and three simple eyes on top for sensing light.",
     "art": "bee",
     "hl": [
-     "tongue"
+     "ocelli"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Chameleons can move their eyes…",
-    "answer": "Independently, in different directions",
+    "q": "Nobel Prize winner Karl von Frisch showed how honeybees tell each other where food is. They…",
+    "answer": "Dance",
     "wrong": [
-     "Only up and down",
-     "Not at all",
-     "Only together"
+     "Hum a tune",
+     "Leave arrows of wax",
+     "Flash their wings"
     ],
-    "why": "Each eye can look somewhere different, then both lock on when it’s time to strike."
+    "why": "The ‘waggle dance’ points the way and shows how far. He shared the 1973 Nobel Prize."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Whiskers",
+    "kind": "Weird but true",
+    "q": "Each alligator tooth can be replaced up to about…",
+    "answer": "50 times",
     "wrong": [
-     "Eyebrows",
-     "Antennae",
-     "Fur"
+     "Twice",
+     "5 times",
+     "500 times"
     ],
-    "why": "Whiskers are deep-rooted touch sensors packed with nerves. Never trim them.",
-    "art": "catface",
-    "hl": [
-     "whiskers"
-    ]
+    "why": "A spare tooth waits under each one, ready to move in."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Dragonflies catch roughly what share of the prey they chase?",
+    "answer": "About 95%",
+    "wrong": [
+     "About 10%",
+     "About 30%",
+     "About 50%"
+    ],
+    "why": "They predict where the prey is heading and fly to intercept. Among the best hunters on Earth."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Polar bear hairs are actually…",
+    "answer": "See-through and hollow",
+    "wrong": [
+     "White all the way through",
+     "Black",
+     "Made of feathers"
+    ],
+    "why": "The clear hairs scatter light, so the coat looks white. The skin underneath is black."
    }
   ]
  },
@@ -750,19 +677,15 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "The highlighted ring is the octopus’s brain. What’s odd about it?",
-    "answer": "It wraps around the food pipe",
+    "kind": "Weird but true",
+    "q": "A snow leopard’s long, thick tail is used as…",
+    "answer": "A balance pole and a scarf",
     "wrong": [
-     "It’s in the tail",
-     "It’s split in eight",
-     "It’s outside the body"
+     "A fly swatter",
+     "A snorkel",
+     "A fat store"
     ],
-    "why": "The doughnut-shaped brain surrounds the oesophagus. Swallow something sharp and it goes through the middle of the brain.",
-    "art": "octopus",
-    "hl": [
-     "brain"
-    ]
+    "why": "It helps it balance on steep rock and wraps around its face when it sleeps in the cold."
    },
    {
     "kind": "Weird but true",
@@ -776,34 +699,26 @@
     "why": "Their blood grabs oxygen extra tightly, so they cope with air that would leave us gasping. Today is International Mountain Day."
    },
    {
-    "kind": "Name the part",
-    "q": "This has a tuft on the end, perfect for swatting flies. What is it?",
-    "answer": "Tail",
+    "kind": "Weird but true",
+    "q": "Mountain goats grip cliffs with hooves that have…",
+    "answer": "Rubbery pads inside a hard rim",
     "wrong": [
-     "Trunk",
-     "Mane",
-     "Leg"
+     "Metal-hard spikes",
+     "Suction cups",
+     "Sticky hair"
     ],
-    "why": "Giraffe tails are around a metre long, and that hairy tuft makes a handy fly swat.",
-    "art": "giraffe",
-    "hl": [
-     "tail"
-    ]
+    "why": "The hard rim digs in and the soft pad grips, like a climbing shoe."
    },
    {
-    "kind": "Body fact",
-    "q": "Over a lifetime, a shark can get through about how many teeth?",
-    "answer": "Thousands",
+    "kind": "Weird but true",
+    "q": "Alpacas and llamas, from the Andes, have no top front teeth. Instead they have a…",
+    "answer": "Hard dental pad",
     "wrong": [
-     "32",
-     "About 100",
-     "None. It keeps one set"
+     "Beak",
+     "Second tongue",
+     "Row of bristles"
     ],
-    "why": "Rows of spare teeth move forward to replace lost ones, conveyor-belt style.",
-    "art": "shark",
-    "hl": [
-     "mouth"
-    ]
+    "why": "Bottom teeth press grass against the tough pad, a bit like a cow."
    },
    {
     "kind": "Weird but true",
@@ -825,17 +740,17 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "Why do cats’ eyes glow in torchlight?",
-    "answer": "A mirror-like layer behind the retina",
+    "q": "Elephant tusks keep growing…",
+    "answer": "All their life",
     "wrong": [
-     "They make their own light",
-     "Wet corneas",
-     "Red blood vessels"
+     "Until age 5",
+     "Only in winter",
+     "Only after a fight"
     ],
-    "why": "The tapetum lucidum bounces light back through the eye for a second go. Great for night vision.",
-    "art": "catface",
+    "why": "Tusks are giant incisor teeth that keep growing, which is why old elephants can have very long ones.",
+    "art": "elephant",
     "hl": [
-     "eye"
+     "tusk"
     ]
    },
    {
@@ -850,34 +765,26 @@
     "why": "The tongue bones loop round the back of the skull and may help cushion all that hammering."
    },
    {
-    "kind": "Body fact",
-    "q": "The giraffe’s front ‘knee’ (highlighted) is really its…",
-    "answer": "Wrist",
+    "kind": "Weird but true",
+    "q": "How many toes does an ostrich have on each foot?",
+    "answer": "Two",
     "wrong": [
-     "Elbow",
-     "Ankle",
-     "Knee, obviously"
+     "One",
+     "Three",
+     "Five"
     ],
-    "why": "Same in horses. The front ‘knee’ is the wrist. The real knee is higher up, near the body.",
-    "art": "giraffe",
-    "hl": [
-     "wrist"
-    ]
+    "why": "The only bird with just two toes. The big one has a thick claw and does most of the work."
    },
    {
-    "kind": "Body fact",
-    "q": "Why does a worker honeybee usually die after stinging you?",
-    "answer": "Its barbed stinger tears out",
+    "kind": "Weird but true",
+    "q": "Zebra stripes seem to mainly…",
+    "answer": "Put off biting flies",
     "wrong": [
-     "It runs out of venom",
-     "It gets too tired",
-     "Your skin poisons it"
+     "Confuse lions",
+     "Keep them cool at night",
+     "Attract mates"
     ],
-    "why": "The barbs lodge in skin, and the stinger rips away from the bee. Queens have smooth stingers.",
-    "art": "bee",
-    "hl": [
-     "stinger"
-    ]
+    "why": "In tests in Kenya and elsewhere, flies struggled to land on stripes. Horses in striped coats got fewer landings too."
    },
    {
     "kind": "Weird but true",
@@ -950,19 +857,15 @@
     ]
    },
    {
-    "kind": "Body fact",
-    "q": "How do many sea stars eat a mussel?",
-    "answer": "Push their stomach out into the shell",
+    "kind": "Weird but true",
+    "q": "Flies balance in flight using tiny knobs where a second pair of wings would be. What are they called?",
+    "answer": "Halteres",
     "wrong": [
-     "Crush it with teeth",
-     "Swallow it whole",
-     "Dissolve it with ink"
+     "Elytra",
+     "Pedipalps",
+     "Spiracles"
     ],
-    "why": "They prise the shell open a crack, slide their stomach in and digest dinner on the spot.",
-    "art": "seastar",
-    "hl": [
-     "arm4"
-    ]
+    "why": "Halteres beat like tiny gyroscopes and help a fly sense turns. It’s why flies are so hard to swat."
    }
   ]
  },
@@ -973,70 +876,62 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "What are elephant tusks, really?",
-    "answer": "Teeth",
+    "q": "An octopus squirts ink mainly to…",
+    "answer": "Confuse predators and escape",
     "wrong": [
-     "Horns",
-     "Hardened hair",
-     "Jaw bones"
+     "Write messages",
+     "Catch fish",
+     "Clean its gills"
     ],
-    "why": "Tusks are giant front teeth (incisors) that keep growing. Elephants use them for digging, lifting and showing off.",
-    "art": "elephant",
+    "why": "A dark cloud, sometimes shaped roughly like an octopus, while the real one jets away.",
+    "art": "octopus",
     "hl": [
-     "tusk"
+     "inksac"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "What colour is a polar bear’s skin?",
-    "answer": "Black",
+    "q": "A European leech bites with how many jaws?",
+    "answer": "Three, leaving a Y-shaped mark",
     "wrong": [
-     "White",
-     "Pink",
-     "Blue"
+     "One",
+     "Two",
+     "Ten"
     ],
-    "why": "Under the pale fur, polar bear skin is black."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted V-shaped part of a horse’s hoof. Yes, really.",
-    "answer": "Frog",
-    "wrong": [
-     "Toad",
-     "Heel",
-     "Tongue"
-    ],
-    "why": "It really is called the frog. It’s a rubbery pad that grips and absorbs shock.",
-    "art": "hoof",
-    "hl": [
-     "frog"
-    ]
+    "why": "Three tiny saw-like jaws, each with rows of teeth."
    },
    {
     "kind": "Weird but true",
-    "q": "Butterflies taste with their…",
-    "answer": "Feet",
+    "q": "Snakes swallow huge meals because their lower jaw…",
+    "answer": "Has two halves that stretch apart",
     "wrong": [
-     "Wings",
-     "Antennae",
-     "Eyes"
+     "Unhooks from the skull completely",
+     "Is made of rubber",
+     "Folds in three"
     ],
-    "why": "Taste sensors on their feet tell them if a leaf is right for laying eggs."
+    "why": "The two halves aren’t fused at the chin, and stretchy tissue lets them spread wide. They don’t ‘unhinge’."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the long, dark purple part.",
-    "answer": "Tongue",
+    "kind": "Weird but true",
+    "q": "Which animal has the largest eyes of any land mammal?",
+    "answer": "Horse",
     "wrong": [
-     "Lip",
-     "Beard",
-     "Trunk"
+     "Cat",
+     "Rabbit",
+     "Mouse"
     ],
-    "why": "A giraffe’s tongue is about 45 to 50 cm long and tough enough to wrap around thorny acacia branches.",
-    "art": "giraffe",
-    "hl": [
-     "tongue"
-    ]
+    "why": "Big eyes on the sides of the head give horses an almost all-round view."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Which mosquitoes bite?",
+    "answer": "Only females",
+    "wrong": [
+     "Only males",
+     "Both",
+     "Only babies"
+    ],
+    "why": "Females need a meal of blood to make eggs. Males just drink nectar."
    }
   ]
  },
@@ -1046,71 +941,61 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted part of the octopus.",
-    "answer": "Arm",
+    "kind": "Weird but true",
+    "q": "The word ‘octopus’ comes from Greek for…",
+    "answer": "Eight feet",
     "wrong": [
-     "Tentacle",
-     "Fin",
-     "Tail"
+     "Sea spider",
+     "Ink fish",
+     "Eight brains"
     ],
-    "why": "Octopuses have eight arms, not tentacles. Squid and cuttlefish have eight arms plus two longer tentacles for snatching prey.",
-    "art": "octopus",
-    "hl": [
-     "arm3"
-    ]
+    "why": "Okto (eight) plus pous (foot). Linguists argue about the plural, too: octopuses is fine."
    },
    {
     "kind": "Weird but true",
-    "q": "Which animal has the biggest heart?",
-    "answer": "Blue whale",
+    "q": "‘Rhinoceros’ comes from Greek words meaning…",
+    "answer": "Nose horn",
     "wrong": [
-     "Elephant",
-     "Giraffe",
-     "Hippo"
+     "Big beast",
+     "Armoured one",
+     "Mud lover"
     ],
-    "why": "A blue whale’s heart has been weighed at about 180 kg."
+    "why": "Rhino (nose) plus keras (horn)."
    },
    {
     "kind": "Weird but true",
-    "q": "How many legs does an insect have?",
-    "answer": "Six",
+    "q": "‘Hippopotamus’ comes from Greek for…",
+    "answer": "River horse",
     "wrong": [
-     "Four",
-     "Eight",
-     "Ten"
+     "Fat pig",
+     "Water cow",
+     "Big mouth"
     ],
-    "why": "Six legs, three body parts. Spiders, with eight legs, aren’t insects."
+    "why": "Hippos (horse) plus potamos (river). Their closest living relatives are actually whales."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted pointy bits.",
-    "answer": "Claws",
+    "kind": "Weird but true",
+    "q": "‘Porcupine’ comes from old words meaning…",
+    "answer": "Spiny pig",
     "wrong": [
-     "Teeth",
-     "Spikes",
-     "Scales"
+     "Prickly cat",
+     "Pointy mouse",
+     "Arrow tree"
     ],
-    "why": "Cats keep their claws tucked away until needed, which keeps them sharp and makes walking silent.",
-    "art": "catpaw",
-    "hl": [
-     "claws"
-    ]
+    "why": "From Old French porc espin, from Latin for pig and spine."
    },
    {
     "kind": "Body fact",
-    "q": "Frogs don’t drink with their mouths. How does most water get in?",
-    "answer": "Through the skin",
+    "q": "The giraffe’s scientific name, camelopardalis, says people once thought it was a cross between…",
+    "answer": "A camel and a leopard",
     "wrong": [
-     "Through the eyes",
-     "Through the nostrils",
-     "They don’t need water"
+     "A horse and a tiger",
+     "A deer and a zebra",
+     "A cow and a cheetah"
     ],
-    "why": "Many frogs soak up water through a thin ‘drinking patch’ on the belly and thighs.",
-    "art": "frog",
-    "hl": [
-     "drinkpatch"
-    ]
+    "why": "Long neck like a camel, spots like a leopard. The name stuck.",
+    "art": "giraffe",
+    "hl": []
    }
   ]
  },
@@ -1121,70 +1006,62 @@
   "rounds": [
    {
     "kind": "Body fact",
-    "q": "These three tiny dots on top of the head are…",
-    "answer": "Extra eyes",
+    "q": "How many muscles move each cat ear?",
+    "answer": "More than 20",
     "wrong": [
-     "Nostrils",
-     "Ears",
-     "Taste buds"
+     "Two",
+     "Six",
+     "None: ears can’t move"
     ],
-    "why": "Bees have five eyes: two big compound eyes and three simple eyes on top.",
-    "art": "bee",
-    "hl": [
-     "ocelli"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Horses can’t do which of these?",
-    "answer": "Vomit",
-    "wrong": [
-     "Sleep standing up",
-     "See in colour",
-     "Breathe through their nose"
-    ],
-    "why": "A tight valve where the food pipe meets the stomach means horses almost never vomit. Bad news for colic."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted whiskers.",
-    "answer": "Eyebrow whiskers",
-    "wrong": [
-     "Eyelashes",
-     "Ear tufts",
-     "Chin whiskers"
-    ],
-    "why": "Touch these and the cat blinks: an early warning system for twigs and nosy fingers.",
+    "why": "That’s why cats can swivel each ear separately towards a sound.",
     "art": "catface",
     "hl": [
-     "brow"
+     "ear"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "What colour is octopus blood?",
-    "answer": "Blue",
+    "q": "Which animal can hear the highest-pitched sounds known?",
+    "answer": "Greater wax moth",
     "wrong": [
-     "Green",
-     "Clear",
-     "Black"
+     "Bat",
+     "Dolphin",
+     "Dog"
     ],
-    "why": "It uses a copper-based protein called haemocyanin to carry oxygen, which turns it blue."
+    "why": "It can pick up sounds up to about 300 kHz, far higher than bats can squeak. Likely an arms race with bats."
    },
    {
-    "kind": "Name the part",
-    "q": "Name the two rounded parts at the back.",
-    "answer": "Heel bulbs",
+    "kind": "Weird but true",
+    "q": "Where are a grasshopper’s ears?",
+    "answer": "On its belly",
     "wrong": [
-     "Toes",
-     "Knees",
-     "Ankles"
+     "On its antennae",
+     "Behind its eyes",
+     "On its wings"
     ],
-    "why": "The heel bulbs are soft and springy, helping cushion every landing.",
-    "art": "hoof",
-    "hl": [
-     "heels"
-    ]
+    "why": "Many grasshoppers have an eardrum on each side of the first belly segment."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Most bats find food in the dark using…",
+    "answer": "Echoes of their own calls",
+    "wrong": [
+     "Glowing eyes",
+     "Smell alone",
+     "Magnetic fields"
+    ],
+    "why": "Echolocation: they shout, mostly too high for us to hear, then listen for what bounces back."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Snakes have no outer ears. How do they pick up sound?",
+    "answer": "Vibrations through their jaw bones",
+    "wrong": [
+     "Through their tongue",
+     "Through their eyes",
+     "They can’t at all"
+    ],
+    "why": "Their jaw bones pass ground vibrations, and some low airborne sounds, to the inner ear."
    }
   ]
  },
@@ -1194,19 +1071,15 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "These pointy tufts on top of the head are…",
-    "answer": "Feathers",
+    "kind": "Weird but true",
+    "q": "Flying fish don’t flap. They ‘fly’ by…",
+    "answer": "Gliding on big wing-like fins",
     "wrong": [
-     "Ears",
-     "Horns",
-     "Antennae"
+     "Flapping their tails in the air",
+     "Riding on birds",
+     "Puffing up with air"
     ],
-    "why": "‘Ear tufts’ are just feathers, probably for camouflage and showing mood. The real ears are hidden at the sides of the face.",
-    "art": "owl",
-    "hl": [
-     "tufts"
-    ]
+    "why": "They burst out of the water and glide, sometimes for dozens of metres, to escape predators."
    },
    {
     "kind": "Weird but true",
@@ -1220,45 +1093,37 @@
     "why": "Air sacs from the lungs reach into some bones, making them light and part of the breathing system. Humans first flew a plane on this day in 1903."
    },
    {
-    "kind": "Body fact",
-    "q": "Where is a sea star’s mouth?",
-    "answer": "Underneath, in the middle",
+    "kind": "Weird but true",
+    "q": "Albatrosses can glide for hours partly thanks to…",
+    "answer": "A shoulder lock that holds the wings out",
     "wrong": [
-     "At the tip of an arm",
-     "On top",
-     "It has no mouth"
+     "Hollow feathers full of helium",
+     "Wings made of skin",
+     "Webbed feet used as sails"
     ],
-    "why": "The mouth is on the underside, right in the centre. The highlighted spot is directly above it.",
-    "art": "seastar",
-    "hl": [
-     "mouth"
-    ]
+    "why": "With wings locked out, they barely spend energy, so they can travel huge distances over the ocean."
    },
    {
     "kind": "Weird but true",
-    "q": "Dolphins sleep by…",
-    "answer": "Resting half their brain at a time",
+    "q": "In 2022, a young bar-tailed godwit flew nonstop from Alaska to Tasmania. About how far?",
+    "answer": "13,500 km",
     "wrong": [
-     "Floating upside down",
-     "Holding their breath for 8 hours",
-     "Never sleeping"
+     "1,350 km",
+     "4,000 km",
+     "40,000 km"
     ],
-    "why": "One half of the brain sleeps while the other keeps watch and remembers to breathe."
+    "why": "About 13,560 km in 11 days without landing, a world record for nonstop bird flight."
    },
    {
-    "kind": "Name the part",
-    "q": "This can swivel to point almost backwards. What is it?",
-    "answer": "Ear",
+    "kind": "Weird but true",
+    "q": "Ducks stand on ice without freezing their feet thanks to…",
+    "answer": "Warm and cold blood vessels swapping heat",
     "wrong": [
-     "Horn",
-     "Crest",
-     "Fin"
+     "Antifreeze in their feathers",
+     "Wearing a layer of fat on their toes",
+     "Standing on one foot only"
     ],
-    "why": "Cats have around 32 muscles in each ear, so they can aim them like radar dishes.",
-    "art": "catface",
-    "hl": [
-     "ear"
-    ]
+    "why": "Warm blood heading down warms the cold blood coming up, so little heat is lost through the feet."
    }
   ]
  },
@@ -1268,71 +1133,59 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted tube.",
-    "answer": "Siphon",
+    "kind": "Weird but true",
+    "q": "Before a huge migration, bar-tailed godwits shrink their…",
+    "answer": "Gut",
     "wrong": [
-     "Snorkel",
-     "Gill",
-     "Ink gland"
+     "Wings",
+     "Eyes",
+     "Feathers"
     ],
-    "why": "Water squirts out of the siphon for breathing and jet propulsion. It’s also how the ink gets aimed.",
-    "art": "octopus",
-    "hl": [
-     "siphon"
-    ]
+    "why": "They shrink digestive organs they won’t need in flight and bulk up on fuel and flight muscle."
    },
    {
     "kind": "Weird but true",
-    "q": "Hippos ooze a reddish liquid. It’s…",
-    "answer": "A natural sunscreen",
+    "q": "Arctic terns travel about how far each year?",
+    "answer": "Around 70,000 km",
     "wrong": [
-     "Blood",
-     "Sweat",
-     "Ink"
+     "Around 700 km",
+     "Around 7,000 km",
+     "Around 700,000 km"
     ],
-    "why": "Nicknamed ‘blood sweat’, it’s neither. It helps block sun and may fight germs."
+    "why": "Pole to pole and back. Over a lifetime that’s like flying to the Moon and back about three times."
    },
    {
     "kind": "Weird but true",
-    "q": "A male platypus has a venomous spur on its…",
-    "answer": "Back ankles",
+    "q": "Salmon find their way back to the river where they hatched mainly by…",
+    "answer": "Smell",
     "wrong": [
-     "Bill",
-     "Tail",
-     "Front claws"
+     "Sight",
+     "Taste of the salt",
+     "Following other fish"
     ],
-    "why": "Painful for people, though not deadly. Rare among mammals."
+    "why": "Each river has its own scent mix, and young salmon memorise it."
    },
    {
-    "kind": "Body fact",
-    "q": "How do many frogs help push food down?",
-    "answer": "They pull their eyes down into the mouth",
+    "kind": "Weird but true",
+    "q": "Monarch butterflies keep their migration on course using the sun and…",
+    "answer": "A body clock in their antennae",
     "wrong": [
-     "They chew with their tongue",
-     "They swallow air",
-     "They shake their head"
+     "Moonlight",
+     "The smell of flowers",
+     "Earthquakes"
     ],
-    "why": "The eyeballs press down on the roof of the mouth, nudging food towards the throat.",
-    "art": "frog",
-    "hl": [
-     "eye"
-    ]
+    "why": "The antennae help keep time, so they can correct for the sun moving across the sky."
    },
    {
-    "kind": "Body fact",
-    "q": "An owl’s eyes aren’t balls. What shape are they?",
-    "answer": "Tubes",
+    "kind": "Weird but true",
+    "q": "Sea turtles cross oceans and find their home beach partly by sensing…",
+    "answer": "Earth’s magnetic field",
     "wrong": [
-     "Cubes",
-     "Discs",
-     "Pyramids"
+     "Lighthouses",
+     "Ship noise",
+     "The smell of sunscreen"
     ],
-    "why": "Long tube-shaped eyes gather lots of light, but can’t move. So the head does the moving.",
-    "art": "owl",
-    "hl": [
-     "eye"
-    ]
+    "why": "Each stretch of coast has its own magnetic ‘signature’ that turtles seem to remember."
    }
   ]
  },
@@ -1342,71 +1195,59 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "Why are owls almost silent in flight?",
-    "answer": "Soft, fringed feathers",
+    "kind": "Weird but true",
+    "q": "The floppy red skin hanging over a turkey’s beak is called the…",
+    "answer": "Snood",
     "wrong": [
-     "They only glide",
-     "Hollow wings",
-     "They fly very slowly"
+     "Wattle",
+     "Comb",
+     "Crop"
     ],
-    "why": "Comb-like edges and velvety feathers break up the turbulence that makes wing noise.",
-    "art": "owl",
-    "hl": [
-     "wing"
-    ]
+    "why": "Male turkeys can stretch the snood longer when showing off. The wattle is the dangly bit under the chin."
    },
    {
     "kind": "Weird but true",
-    "q": "A platypus has no…",
-    "answer": "Stomach",
+    "q": "Geese don’t have teeth, but the edges of their bill have tooth-like ridges called…",
+    "answer": "Tomia",
     "wrong": [
-     "Heart",
-     "Lungs",
-     "Liver"
+     "Molars",
+     "Barbels",
+     "Scutes"
     ],
-    "why": "Its food pipe connects straight to the intestine. No acid stomach needed."
-   },
-   {
-    "kind": "Body fact",
-    "q": "In male bullfrogs, this highlighted eardrum is…",
-    "answer": "Bigger than the eye",
-    "wrong": [
-     "Hidden",
-     "Smaller than a pea",
-     "Bright red"
-    ],
-    "why": "A male bullfrog’s eardrum is larger than its eye; a female’s is about eye-sized.",
-    "art": "frog",
-    "hl": [
-     "tympanum"
-    ]
+    "why": "Serrated bill edges help grip and tear grass. They can give a nasty pinch."
    },
    {
     "kind": "Weird but true",
-    "q": "Shark skin is covered in tiny…",
-    "answer": "Tooth-like scales",
+    "q": "Which frog has see-through belly skin, so you can see its insides?",
+    "answer": "Glass frog",
     "wrong": [
-     "Feathers",
-     "Hairs",
-     "Suckers"
+     "Cane toad",
+     "Green tree frog",
+     "Poison dart frog"
     ],
-    "why": "They’re called dermal denticles: skin teeth. They cut drag and feel like sandpaper backwards."
+    "why": "Some glass frogs even hide their blood in their liver while sleeping, turning almost fully see-through."
    },
    {
-    "kind": "Body fact",
-    "q": "Each of these neck bones can be about how long?",
-    "answer": "Over 25 cm",
+    "kind": "Weird but true",
+    "q": "In many birds, the crop is a pouch for…",
+    "answer": "Storing food before digesting it",
     "wrong": [
-     "2 cm",
-     "10 cm",
-     "1 metre"
+     "Singing louder",
+     "Keeping eggs warm",
+     "Holding spare feathers"
     ],
-    "why": "Each giraffe neck vertebra can top 25 cm. Seven of those adds up.",
-    "art": "giraffe",
-    "hl": [
-     "vertebrae"
-    ]
+    "why": "A stretchy bulge in the throat lets birds grab lots of food fast, then digest later."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "A male turkey’s bare head can change colour between…",
+    "answer": "Red, white and blue",
+    "wrong": [
+     "Green and gold",
+     "Black and orange",
+     "Pink and purple"
+    ],
+    "why": "Blood flow changes the colour with mood. Bright red usually means he’s fired up."
    }
   ]
  },
@@ -1457,30 +1298,26 @@
     ]
    },
    {
-    "kind": "Body fact",
-    "q": "Why is a giraffe’s tongue so dark?",
-    "answer": "Probably sun protection",
+    "kind": "Weird but true",
+    "q": "Octopuses and jellyfish keep track of up and down using little balance organs called…",
+    "answer": "Statocysts",
     "wrong": [
-     "Leaf dye",
-     "Bruising from thorns",
-     "It’s dead skin"
+     "Otoliths",
+     "Ocelli",
+     "Chromatophores"
     ],
-    "why": "The leading theory: dark pigment stops sunburn during hours of browsing in the sun.",
-    "art": "giraffe",
-    "hl": [
-     "tongue"
-    ]
+    "why": "A tiny stone rolls inside a fluid-filled sac lined with sensors, telling the animal which way is down."
    },
    {
     "kind": "Weird but true",
-    "q": "Why can cats squeeze through tight gaps?",
-    "answer": "Their collarbones float free",
+    "q": "The furry gliding skin of a sugar glider is called the…",
+    "answer": "Patagium",
     "wrong": [
-     "They have no ribs",
-     "Their skull is soft",
-     "They pop their hips out"
+     "Pinna",
+     "Plastron",
+     "Pinnule"
     ],
-    "why": "A cat’s tiny collarbones aren’t attached to other bones, so the shoulders can narrow. If the head fits, the cat usually fits."
+    "why": "It stretches from wrist to ankle, so the glider can sail up to about 50 metres between trees."
    }
   ]
  },
@@ -1490,71 +1327,59 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "Compared with yours, a giraffe’s blood pressure is about…",
-    "answer": "Twice as high",
+    "kind": "Weird but true",
+    "q": "The colossal squid’s eye is about the size of a…",
+    "answer": "Basketball",
     "wrong": [
-     "The same",
-     "Half",
-     "Ten times higher"
+     "Golf ball",
+     "Marble",
+     "Car tyre"
     ],
-    "why": "Pumping blood two metres up to the brain takes serious pressure. Thick-walled arteries and tight leg skin stop swelling.",
-    "art": "giraffe",
-    "hl": [
-     "heart"
-    ]
+    "why": "About 27 cm across, the largest eye known in the animal kingdom."
    },
    {
     "kind": "Weird but true",
-    "q": "Which part of a jellyfish does the stinging?",
-    "answer": "Tentacles",
+    "q": "Sloths can slow their heart and hold their breath for up to about…",
+    "answer": "40 minutes",
     "wrong": [
-     "Bell",
-     "Mouth",
-     "Eyes"
+     "40 seconds",
+     "4 minutes",
+     "4 hours"
     ],
-    "why": "Tentacles are lined with tiny harpoon cells that fire on contact, even after the jellyfish has died."
+    "why": "Longer than dolphins can. Handy for a surprisingly good swimmer."
    },
    {
     "kind": "Weird but true",
-    "q": "What is a rhino’s horn made of?",
-    "answer": "Keratin, like your nails",
+    "q": "Which animal can sleep up to about 20 hours a day?",
+    "answer": "Koala",
     "wrong": [
-     "Bone",
-     "Ivory",
-     "Antler"
+     "Kangaroo",
+     "Emu",
+     "Wombat"
     ],
-    "why": "Rhino horn is packed keratin, the same stuff as hair and nails. No bone at all."
+    "why": "Gum leaves are low in energy, so koalas save energy by resting most of the day."
    },
    {
-    "kind": "Name the part",
-    "q": "The fin that terrifies swimmers. Name it.",
-    "answer": "Dorsal fin",
+    "kind": "Weird but true",
+    "q": "A cat’s purr is made by…",
+    "answer": "Its voice box",
     "wrong": [
-     "Tail fin",
-     "Side fin",
-     "Belly fin"
+     "Its belly",
+     "Its nose",
+     "Its tail"
     ],
-    "why": "The dorsal fin on the back keeps the shark steady so it doesn’t roll over.",
-    "art": "shark",
-    "hl": [
-     "dorsal"
-    ]
+    "why": "Muscles and tissues in the voice box vibrate as the cat breathes in and out."
    },
    {
-    "kind": "Name the part",
-    "q": "Owls can’t roll these in their sockets. What are they?",
-    "answer": "Eyes",
+    "kind": "Weird but true",
+    "q": "The tallest animal alive is the…",
+    "answer": "Giraffe",
     "wrong": [
-     "Ears",
-     "Nostrils",
-     "Cheeks"
+     "African elephant",
+     "Ostrich",
+     "Moose"
     ],
-    "why": "An owl’s eyes are fixed in place, so it swivels its whole head instead. Very dramatic.",
-    "art": "owl",
-    "hl": [
-     "eye"
-    ]
+    "why": "Males can reach about 5.5 metres. Their legs alone are taller than many people."
    }
   ]
  },
@@ -1564,71 +1389,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "Hidden where the arms meet is a hard…",
-    "answer": "Beak",
+    "kind": "Weird but true",
+    "q": "Centipedes always have an odd number of…",
+    "answer": "Pairs of legs",
     "wrong": [
-     "Stinger",
-     "Shell",
-     "Fang"
+     "Eyes",
+     "Antennae",
+     "Body colours"
     ],
-    "why": "A parrot-like beak is the only hard part of an octopus, so it can squeeze through any gap its beak fits through.",
+    "why": "Anywhere from 15 to 191 pairs, but always odd. So no centipede has exactly 100 legs."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Honeybees build honeycomb cells in what shape?",
+    "answer": "Hexagons",
+    "wrong": [
+     "Circles",
+     "Squares",
+     "Triangles"
+    ],
+    "why": "Hexagons fit together with no gaps and use the least wax for the space."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Most snail shells coil which way?",
+    "answer": "To the right (clockwise)",
+    "wrong": [
+     "To the left",
+     "Straight up",
+     "It’s random"
+    ],
+    "why": "About 9 in 10 snail species coil to the right. Left-coiling snails struggle to find mates."
+   },
+   {
+    "kind": "Body fact",
+    "q": "An octopus has roughly how many suckers across all eight arms?",
+    "answer": "About 2,000",
+    "wrong": [
+     "About 20",
+     "About 200",
+     "About 20,000"
+    ],
+    "why": "A common octopus has a couple of hundred on each arm. Each one can grip, feel and taste.",
     "art": "octopus",
     "hl": [
-     "beak"
+     "suckers"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Which Australian animal leaves cube-shaped droppings?",
-    "answer": "Wombat",
+    "q": "Crabs and lobsters belong to a group named for having ten…",
+    "answer": "Legs",
     "wrong": [
-     "Koala",
-     "Echidna",
-     "Platypus"
-    ],
-    "why": "Wombat intestines squeeze droppings into neat cubes. Handy for marking territory on rocks without them rolling off."
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Which animal has sideways, rectangular pupils?",
-    "answer": "Goat",
-    "wrong": [
-     "Cat",
-     "Owl",
-     "Dog"
-    ],
-    "why": "Wide, horizontal pupils give grazing animals a panoramic view for spotting predators."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted bits at the front of the foot.",
-    "answer": "Toenails",
-    "wrong": [
-     "Hooves",
+     "Eyes",
      "Claws",
-     "Knuckles"
+     "Hearts"
     ],
-    "why": "Elephants walk on tiptoe. A thick fatty cushion inside the foot takes the weight.",
-    "art": "elephant",
-    "hl": [
-     "toenails"
-    ]
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted fin.",
-    "answer": "Pectoral fin",
-    "wrong": [
-     "Pelvic fin",
-     "Dorsal fin",
-     "Anal fin"
-    ],
-    "why": "Pectoral fins work like aeroplane wings, giving lift and steering.",
-    "art": "shark",
-    "hl": [
-     "pectoral"
-    ]
+    "why": "Decapods: ‘deca’ means ten. The front pair is often the big claws."
    }
   ]
  },
@@ -1638,71 +1455,59 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "These tiny things run under each arm. What are they?",
-    "answer": "Tube feet",
+    "kind": "Weird but true",
+    "q": "Nine-banded armadillos almost always give birth to…",
+    "answer": "Identical quadruplets",
     "wrong": [
-     "Spines",
-     "Eggs",
-     "Gills"
+     "One baby",
+     "Twins",
+     "A clutch of eggs"
     ],
-    "why": "Hundreds of water-filled tube feet let a sea star creep along and grip rocks.",
-    "art": "seastar",
-    "hl": [
-     "tubefeet"
-    ]
+    "why": "One fertilised egg splits into four, so all four pups are identical."
    },
    {
     "kind": "Weird but true",
-    "q": "Jellyfish have no…",
-    "answer": "Brain",
+    "q": "What can a sea cucumber push out of its body and regrow?",
+    "answer": "Its guts",
     "wrong": [
-     "Mouth",
-     "Tentacles",
-     "Stinging cells"
+     "Its eyes",
+     "Its shell",
+     "Its legs"
     ],
-    "why": "Just a loose net of nerves. No brain, no heart, no bones. Still extremely effective."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the puffy highlighted part.",
-    "answer": "Whisker pads",
-    "wrong": [
-     "Cheek pouches",
-     "Jowls",
-     "Nose pads"
-    ],
-    "why": "Most cats have 24 muzzle whiskers, 12 a side in four rows, rooted in these pads.",
-    "art": "catface",
-    "hl": [
-     "whiskerpad"
-    ]
-   },
-   {
-    "kind": "Body fact",
-    "q": "Sharks use these only for smelling, not breathing. What are they?",
-    "answer": "Nostrils",
-    "wrong": [
-     "Ears",
-     "Gill slits",
-     "Spiracles"
-    ],
-    "why": "Shark nostrils are dead-end pockets for smelling. Breathing happens through the mouth and gills.",
-    "art": "shark",
-    "hl": [
-     "nostril"
-    ]
+    "why": "Threatened, some throw out their insides to distract predators, then regrow them in weeks."
    },
    {
     "kind": "Weird but true",
-    "q": "What’s unusual about a koala’s front paws?",
-    "answer": "Two thumbs on each",
+    "q": "Cut certain flatworms into pieces and each piece can…",
+    "answer": "Grow into a whole new worm",
     "wrong": [
-     "Six claws each",
-     "No pads",
-     "Webbed fingers"
+     "Swim off as half a worm",
+     "Join back together",
+     "Turn into a snail"
     ],
-    "why": "Koalas have two digits that work like thumbs on each front paw. Ideal for gripping branches."
+    "why": "Planarian flatworms are regeneration champions. Even a tiny fragment can rebuild a head."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Marmoset monkeys usually give birth to…",
+    "answer": "Twins",
+    "wrong": [
+     "Triplets",
+     "Single babies",
+     "Litters of eight"
+    ],
+    "why": "Twins are the norm, and dads and older siblings do much of the carrying."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "A newborn giraffe’s first moment is a drop of about…",
+    "answer": "2 metres",
+    "wrong": [
+     "20 cm",
+     "5 metres",
+     "50 cm"
+    ],
+    "why": "Mums give birth standing up. The calf is usually standing within an hour."
    }
   ]
  },
@@ -1712,71 +1517,59 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted fin.",
-    "answer": "Tail fin",
+    "kind": "Weird but true",
+    "q": "Reindeer noses keep the cold out thanks to…",
+    "answer": "A dense network of tiny blood vessels",
     "wrong": [
-     "Dorsal fin",
-     "Side fin",
-     "Belly fin"
+     "A built-in light bulb",
+     "Thick fur inside the nostrils only",
+     "A layer of fat"
     ],
-    "why": "The tail fin sweeps side to side to push the shark forwards.",
-    "art": "shark",
-    "hl": [
-     "tailfin"
-    ]
+    "why": "Lots of blood flow warms the air they breathe in. A red nose isn’t just for Rudolph."
    },
    {
     "kind": "Weird but true",
-    "q": "Do penguins have knees?",
-    "answer": "Yes, hidden inside the body",
+    "q": "Reindeer are the only deer where…",
+    "answer": "Females grow antlers too",
     "wrong": [
-     "No, their legs are straight bones",
-     "Only chicks do",
-     "Only emperor penguins"
+     "Males have no antlers",
+     "Antlers never fall off",
+     "Babies are born with antlers"
     ],
-    "why": "Penguin knees sit up inside the body under the feathers. Hence the waddle."
-   },
-   {
-    "kind": "Name the part",
-    "q": "The round patch behind the eye is the frog’s…",
-    "answer": "Eardrum",
-    "wrong": [
-     "Nostril",
-     "Third eye",
-     "Gill"
-    ],
-    "why": "Frogs wear their eardrums on the outside. It’s called the tympanum.",
-    "art": "frog",
-    "hl": [
-     "tympanum"
-    ]
+    "why": "Females keep theirs through winter, so Santa’s team, still antlered in December, may be mostly girls."
    },
    {
     "kind": "Weird but true",
-    "q": "Where are a garden snail’s eyes?",
-    "answer": "On the tips of its long tentacles",
+    "q": "During winter hibernation, black bears can go months without…",
+    "answer": "Eating, drinking or going to the toilet",
     "wrong": [
-     "Under its shell",
-     "On its foot",
-     "It has no eyes"
+     "Breathing",
+     "A heartbeat",
+     "Moving at all"
     ],
-    "why": "The eyes sit on top of the longer pair of tentacles. Tap one and it rolls back in."
+    "why": "They live off stored fat and recycle waste. No midnight snacks."
    },
    {
-    "kind": "Body fact",
-    "q": "Owls can turn their head about how far?",
-    "answer": "270 degrees",
+    "kind": "Weird but true",
+    "q": "One gulp from a feeding blue whale can take in water and krill roughly equal to…",
+    "answer": "Its own body, or more",
     "wrong": [
-     "90 degrees",
-     "180 degrees",
-     "360 degrees"
+     "A bathtub",
+     "A bucket",
+     "A swimming pool, times ten"
     ],
-    "why": "About three-quarters of a full turn either way. Not quite a full horror-film spin.",
-    "art": "owl",
-    "hl": [
-     "neck"
-    ]
+    "why": "Its pleated throat balloons out, then it pushes the water out through its baleen and keeps the krill."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Penguins drink seawater and get rid of the extra salt through…",
+    "answer": "A gland above their eyes",
+    "wrong": [
+     "Their feet",
+     "Their feathers",
+     "Sweating"
+    ],
+    "why": "The salt gland drips salty liquid out through the beak. Penguins often look like they have a runny nose."
    }
   ]
  },
@@ -1786,71 +1579,59 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "How many neck vertebrae does an owl have?",
-    "answer": "14",
+    "kind": "Weird but true",
+    "q": "Chameleons change colour mainly by…",
+    "answer": "Rearranging tiny crystals in their skin",
     "wrong": [
-     "7",
-     "10",
-     "28"
+     "Changing their blood colour",
+     "Swallowing coloured food",
+     "Holding their breath"
     ],
-    "why": "Owls have 14 neck bones, twice our seven. Hence the swivel.",
-    "art": "owl",
-    "hl": [
-     "neck"
-    ]
+    "why": "Layers of nanocrystals shift spacing, changing which colours of light bounce back."
    },
    {
     "kind": "Weird but true",
-    "q": "What’s unusual about a kiwi’s nostrils?",
-    "answer": "They’re at the tip of the beak",
+    "q": "Bats can hang upside down while asleep without effort because…",
+    "answer": "Their weight pulls tendons that lock the toes shut",
     "wrong": [
-     "It has none",
-     "They’re on its forehead",
-     "There are four"
+     "They glue themselves on",
+     "They hold on with their teeth",
+     "They float slightly"
     ],
-    "why": "Kiwis sniff out worms underground with nostrils right at the end of their long beak."
+    "why": "Gravity does the work. They actually have to use muscle to let go."
    },
    {
     "kind": "Weird but true",
-    "q": "Which Australian turtle can breathe through its bottom?",
-    "answer": "Fitzroy River turtle",
+    "q": "Peacock feather colours come from…",
+    "answer": "Tiny structures that bend light",
     "wrong": [
-     "Green sea turtle",
-     "Pig-nosed turtle",
-     "Flatback turtle"
+     "Blue and green pigments",
+     "Oil from flowers",
+     "Reflected sky"
     ],
-    "why": "This Queensland turtle absorbs oxygen through its rear end (the cloaca), so it can stay underwater for ages."
+    "why": "Structural colour, like a soap bubble: change the angle and the colour shifts."
    },
    {
-    "kind": "Body fact",
-    "q": "Giraffe ossicones are…",
-    "answer": "Bone covered in skin and fur",
+    "kind": "Weird but true",
+    "q": "Which of these animals can see ultraviolet light, invisible to us?",
+    "answer": "Reindeer",
     "wrong": [
-     "Keratin, like rhino horn",
-     "Antlers they shed yearly",
-     "Hardened hair"
+     "Dogs",
+     "Cows",
+     "Horses"
     ],
-    "why": "They start as cartilage and turn to bone, then fuse to the skull. Never shed.",
-    "art": "giraffe",
-    "hl": [
-     "ossicones"
-    ]
+    "why": "In snowy Arctic light, UV vision makes urine, lichen and wolves stand out against the snow."
    },
    {
-    "kind": "Name the part",
-    "q": "What are these little cups along the arm?",
-    "answer": "Suckers",
+    "kind": "Weird but true",
+    "q": "Cuttlefish are colour-change masters, but they are probably…",
+    "answer": "Colour-blind",
     "wrong": [
-     "Barnacles",
-     "Gills",
-     "Eggs"
+     "Blind",
+     "Short-sighted only",
+     "Unable to see blue"
     ],
-    "why": "Each sucker grips on its own, and it’s packed with chemical sensors, so an octopus tastes whatever it touches.",
-    "art": "octopus",
-    "hl": [
-     "suckers"
-    ]
+    "why": "They have just one type of light sensor in their eyes. How they match colours is still a puzzle."
    }
   ]
  },
@@ -1860,71 +1641,59 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "Name the thin pale band between the wall and the sole.",
-    "answer": "White line",
+    "kind": "Weird but true",
+    "q": "In 2020, scientists shone ultraviolet light on museum platypus specimens. What did the fur do?",
+    "answer": "Glowed blue-green",
     "wrong": [
-     "Frog",
-     "Bars",
-     "Heel bulb"
+     "Turned black",
+     "Nothing at all",
+     "Glowed bright red"
     ],
-    "why": "Farriers use the white line as a guide: nails go in outside it.",
-    "art": "hoof",
-    "hl": [
-     "whiteline"
-    ]
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the yellow lump on the back leg.",
-    "answer": "Pollen basket",
-    "wrong": [
-     "Honey sac",
-     "Wax plate",
-     "Stinger sheath"
-    ],
-    "why": "Bees pack pollen into a hair-fringed hollow on each back leg to carry it home.",
-    "art": "bee",
-    "hl": [
-     "pollenbasket"
-    ]
+    "why": "Found in 2020 with museum specimens. Nobody is sure if it does anything useful."
    },
    {
     "kind": "Weird but true",
-    "q": "A chameleon’s tongue can reach up to about…",
-    "answer": "Twice its body length",
+    "q": "Fireflies make light that gives off almost no…",
+    "answer": "Heat",
     "wrong": [
-     "A tenth of its body length",
-     "Its own body length exactly",
-     "Ten times its body length"
+     "Smell",
+     "Sound",
+     "Colour"
     ],
-    "why": "It fires out in a fraction of a second, with a sticky tip that grips prey."
+    "why": "A chemical reaction makes ‘cold light’. Nearly all the energy goes into glow."
    },
    {
     "kind": "Weird but true",
-    "q": "An ostrich’s eye is bigger than its…",
-    "answer": "Brain",
+    "q": "The glow-worms in Australian and New Zealand caves are actually…",
+    "answer": "Fly larvae",
     "wrong": [
-     "Heart",
-     "Stomach",
-     "Egg"
+     "Worms",
+     "Beetles",
+     "Fungi"
     ],
-    "why": "Around 5 cm across: the biggest eye of any land animal."
+    "why": "They’re young fungus gnats. They dangle sticky threads to catch insects drawn to the glow."
    },
    {
-    "kind": "Body fact",
-    "q": "About how long is a giraffe’s tongue?",
-    "answer": "About 45 to 50 cm",
+    "kind": "Weird but true",
+    "q": "An anglerfish’s glowing lure gets its light from…",
+    "answer": "Glowing bacteria",
     "wrong": [
-     "About 10 cm",
-     "About 1 metre",
-     "About 5 cm"
+     "Swallowed plankton",
+     "A battery-like organ",
+     "Moonlight"
     ],
-    "why": "Long enough to wrap round thorny branches, and to clean its own nostrils. Charming.",
-    "art": "giraffe",
-    "hl": [
-     "tongue"
-    ]
+    "why": "Bacteria living in the lure make the light. The fish just provides a home."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "The blue sparkle in waves at night usually comes from…",
+    "answer": "Tiny plankton that glow when disturbed",
+    "wrong": [
+     "Jellyfish stings",
+     "Moon reflections",
+     "Salt crystals"
+    ],
+    "why": "Single-celled algae flash when the water moves, so breaking waves light up."
    }
   ]
  },
@@ -1934,19 +1703,15 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "The highlighted organ helps keep a shark from sinking. What is it?",
-    "answer": "Liver",
+    "kind": "Weird but true",
+    "q": "Pigeons feed their chicks a ‘milk’ made in their…",
+    "answer": "Crop",
     "wrong": [
-     "Swim bladder",
-     "Stomach",
-     "Lung"
+     "Beak",
+     "Feathers",
+     "Gizzard"
     ],
-    "why": "Sharks have no swim bladder. A huge oily liver adds lift. In basking sharks it can be a quarter of body weight.",
-    "art": "shark",
-    "hl": [
-     "liver"
-    ]
+    "why": "Both parents make crop milk, a rich, cheesy paste. Flamingos and male emperor penguins make something similar."
    },
    {
     "kind": "Weird but true",
@@ -1986,19 +1751,15 @@
     "why": "Manatees are rare mammals with fewer than seven. They can’t turn their heads much."
    },
    {
-    "kind": "Body fact",
-    "q": "Worker bees make wax from glands on their…",
-    "answer": "Belly",
+    "kind": "Weird but true",
+    "q": "A snake flicks its tongue, then touches the tips to a scent organ in the roof of its mouth called…",
+    "answer": "Jacobson’s organ",
     "wrong": [
-     "Legs",
-     "Head",
-     "Wings"
+     "Lorenzini’s organ",
+     "Henry’s pocket",
+     "The syrinx"
     ],
-    "why": "Four pairs of wax glands on the underside of the abdomen produce thin wax flakes.",
-    "art": "bee",
-    "hl": [
-     "wax"
-    ]
+    "why": "Also called the vomeronasal organ. The forked tongue helps tell which side a smell is coming from."
    }
   ]
  },
@@ -2008,71 +1769,63 @@
   "difficulty": "Easy",
   "rounds": [
    {
+    "kind": "Weird but true",
+    "q": "Weight for weight, spider silk can be stronger than…",
+    "answer": "Steel",
+    "wrong": [
+     "Wood",
+     "Glass",
+     "Paper"
+    ],
+    "why": "Spider-Man’s writers didn’t make that up. Some silks are also stretchier than nylon."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Which tiny animal survived 10 days exposed to outer space?",
+    "answer": "Tardigrade",
+    "wrong": [
+     "Ant",
+     "Flea",
+     "Earthworm"
+    ],
+    "why": "In 2007, ‘water bears’ rode on a satellite outside, and some survived. Superhero material."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "A mantis shrimp’s punch is so fast it makes the water…",
+    "answer": "Form bubbles that collapse with a flash",
+    "wrong": [
+     "Freeze",
+     "Turn red",
+     "Glow green forever"
+    ],
+    "why": "The strike is so quick that collapsing bubbles hit prey a second time and give off a tiny flash of light."
+   },
+   {
     "kind": "Body fact",
-    "q": "Bees mostly smell with these. What are they?",
-    "answer": "Antennae",
+    "q": "Besides colour, an octopus can instantly change its…",
+    "answer": "Skin texture",
     "wrong": [
-     "Legs",
-     "Wings",
-     "Stinger"
+     "Number of arms",
+     "Size of its eyes",
+     "Blood colour"
     ],
-    "why": "A bee’s antennae are covered in smell and touch sensors. They’re basically its nose.",
-    "art": "bee",
+    "why": "Little bumps rise up to mimic rocks, coral or seaweed. Camouflage superpower.",
+    "art": "octopus",
     "hl": [
-     "antenna"
+     "mantle"
     ]
    },
    {
     "kind": "Weird but true",
-    "q": "Which of these mammals lays eggs?",
-    "answer": "Platypus",
+    "q": "Which animal has the strongest bite ever measured?",
+    "answer": "Saltwater crocodile",
     "wrong": [
-     "Koala",
-     "Kangaroo",
-     "Wombat"
+     "Great white shark",
+     "Lion",
+     "Hippo"
     ],
-    "why": "Platypuses and echidnas are monotremes: mammals that lay eggs."
-   },
-   {
-    "kind": "Name the part",
-    "q": "Cat fans call these ‘toe beans’. What are they?",
-    "answer": "Toe pads",
-    "wrong": [
-     "Claws",
-     "Whisker pads",
-     "Knuckles"
-    ],
-    "why": "Toe pads cushion each step, and cats sweat through their paw pads. Damp paw prints on the vet’s table are a thing.",
-    "art": "catpaw",
-    "hl": [
-     "toebeans"
-    ]
-   },
-   {
-    "kind": "Name the part",
-    "q": "Name the highlighted part.",
-    "answer": "Back foot",
-    "wrong": [
-     "Tail",
-     "Front foot",
-     "Fin"
-    ],
-    "why": "Long, webbed back feet make frogs strong swimmers and champion jumpers.",
-    "art": "frog",
-    "hl": [
-     "hindfoot"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "A camel’s hump is mostly…",
-    "answer": "Fat",
-    "wrong": [
-     "Water",
-     "Muscle",
-     "Bone"
-    ],
-    "why": "The hump stores fat for energy. Camels cope with thirst in other clever ways."
+    "why": "A big saltie clamped down with over 16,000 newtons in tests, the most measured for a living animal."
    }
   ]
  },
@@ -2082,71 +1835,59 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "An elephant’s trunk is a nose joined with its…",
-    "answer": "Upper lip",
+    "kind": "Weird but true",
+    "q": "Pufferfish puff up by gulping…",
+    "answer": "Water",
     "wrong": [
-     "Tongue",
-     "Chin",
-     "Lower lip"
+     "Air from the surface only",
+     "Sand",
+     "Plankton"
     ],
-    "why": "It’s nose and upper lip in one, with no bones and a huge number of muscle bundles.",
-    "art": "elephant",
-    "hl": [
-     "trunk"
-    ]
+    "why": "They swallow water fast, ballooning to several times their size. Many are also very poisonous."
    },
    {
     "kind": "Weird but true",
-    "q": "Kangaroos often use their ___ like a fifth leg.",
-    "answer": "Tail",
+    "q": "When snakes shed their skin, it usually comes off…",
+    "answer": "In one piece, often inside out",
     "wrong": [
-     "Ears",
-     "Pouch",
-     "Nose"
+     "In small flakes",
+     "Only in winter",
+     "Every day"
     ],
-    "why": "When grazing, a kangaroo leans on its tail as an extra leg. It pushes with real force."
+    "why": "It peels back from the lips like a sock. Even the clear eye scales come off."
    },
    {
     "kind": "Weird but true",
-    "q": "Dolphins breathe through…",
-    "answer": "A blowhole on top of the head",
+    "q": "Sea cucumbers can switch their body from firm to…",
+    "answer": "Floppy and soft",
     "wrong": [
-     "Gills",
-     "Their mouth",
-     "Their skin"
+     "Hard as glass",
+     "Spiky",
+     "Liquid"
     ],
-    "why": "Dolphins are mammals, so they surface to breathe air through a blowhole."
+    "why": "Special stretchy tissue lets them stiffen up or go limp in seconds, handy for squeezing into cracks."
    },
    {
-    "kind": "Body fact",
-    "q": "The hard outer rim is made of the same stuff as your nails. What is it?",
-    "answer": "Keratin",
+    "kind": "Weird but true",
+    "q": "Kangaroo leg tendons work like rubber bands: they…",
+    "answer": "Store energy with each hop",
     "wrong": [
-     "Bone",
-     "Enamel",
-     "Chalk"
+     "Get tired quickly",
+     "Only work uphill",
+     "Make a squeaking sound"
     ],
-    "why": "Hoof wall is keratin, like fingernails, so trimming it doesn’t hurt.",
-    "art": "hoof",
-    "hl": [
-     "wall"
-    ]
+    "why": "Stretchy tendons spring back, so a fast hop costs a kangaroo very little extra energy."
    },
    {
-    "kind": "Name the part",
-    "q": "This bumpy pink patch is as unique as a fingerprint. What is it?",
-    "answer": "Nose",
+    "kind": "Weird but true",
+    "q": "Hamsters carry food home in…",
+    "answer": "Stretchy cheek pouches",
     "wrong": [
-     "Chin",
-     "Tongue",
-     "Lip"
+     "Their front paws only",
+     "Their belly fur",
+     "A pouch like a kangaroo"
     ],
-    "why": "Each cat’s nose leather has its own pattern of ridges and bumps, a bit like a fingerprint.",
-    "art": "catface",
-    "hl": [
-     "nose"
-    ]
+    "why": "The pouches stretch back to their shoulders. ‘Hamstern’ in German means to hoard."
    }
   ]
  },
@@ -2230,71 +1971,59 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Body fact",
-    "q": "Elephants flap these mainly to…",
-    "answer": "Cool down",
+    "kind": "Weird but true",
+    "q": "Greenland sharks may live for about…",
+    "answer": "400 years",
     "wrong": [
-     "Hear thunder",
-     "Swat lions",
-     "Steer when running"
+     "40 years",
+     "4 years",
+     "4,000 years"
     ],
-    "why": "Elephant ears are full of blood vessels. Flapping them cools the blood, like a giant fan.",
-    "art": "elephant",
-    "hl": [
-     "ear"
-    ]
+    "why": "Eye-lens dating in 2016 suggested the oldest was about 400. Some alive today may have been born before Isaac Newton."
    },
    {
     "kind": "Weird but true",
-    "q": "Do snakes have eyelids?",
-    "answer": "No. A clear scale covers each eye",
+    "q": "Which animal can turn itself back into a baby stage?",
+    "answer": "‘Immortal’ jellyfish",
     "wrong": [
-     "Yes, two on each eye",
-     "Yes, but only one",
-     "Only when asleep"
+     "Lobster",
+     "Tortoise",
+     "Axolotl"
     ],
-    "why": "That clear scale (the brille) is shed with the skin. It’s why snakes seem to stare."
+    "why": "Turritopsis dohrnii can turn back into a young polyp and start life again. New year, new jellyfish."
    },
    {
     "kind": "Weird but true",
-    "q": "Where are a cricket’s ears?",
-    "answer": "On its front legs",
+    "q": "Dogs often panic at fireworks partly because they can hear…",
+    "answer": "Higher-pitched sounds than we can",
     "wrong": [
-     "On its head",
-     "On its wings",
-     "It has none"
+     "Nothing at all",
+     "Only low sounds",
+     "Colours"
     ],
-    "why": "Crickets hear through eardrums on their front legs. Imagine listening with your shins."
+    "why": "Dogs hear higher pitches than we do, and loud bangs come with no warning."
    },
    {
-    "kind": "Name the part",
-    "q": "This big, baggy part looks like a head. What is it really?",
-    "answer": "Mantle",
+    "kind": "Weird but true",
+    "q": "To grow bigger, lobsters…",
+    "answer": "Shed their whole shell",
     "wrong": [
-     "Brain case",
-     "Swim bladder",
-     "Shell"
+     "Stretch their shell",
+     "Swap shells with others",
+     "Stop eating"
     ],
-    "why": "The mantle is a muscular bag holding the hearts, gills and gut. The actual head, with eyes and brain, sits just below it.",
-    "art": "octopus",
-    "hl": [
-     "mantle"
-    ]
+    "why": "They wriggle out, puff up with water and wait for a new, larger shell to harden."
    },
    {
-    "kind": "Body fact",
-    "q": "A giraffe’s hoof is about the size of a…",
-    "answer": "Dinner plate",
+    "kind": "Weird but true",
+    "q": "In summer, a worker honeybee lives about…",
+    "answer": "Six weeks",
     "wrong": [
-     "Coaster",
-     "Bicycle wheel",
-     "Teaspoon"
+     "One day",
+     "Six years",
+     "Sixty years"
     ],
-    "why": "Giraffe hooves can be about 30 cm across. A kick from one can be dangerous to a lion.",
-    "art": "giraffe",
-    "hl": [
-     "hoof"
-    ]
+    "why": "They wear themselves out foraging. Winter workers and queens live much longer."
    }
   ]
  }

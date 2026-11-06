@@ -1835,19 +1835,15 @@
     ]
    },
    {
-    "kind": "Name the part",
-    "q": "Owls can’t roll these in their sockets. What are they?",
-    "answer": "Eyes",
+    "kind": "Weird but true",
+    "q": "How does a basilisk lizard run across water?",
+    "answer": "Slapping the surface with big back feet",
     "wrong": [
-     "Ears",
-     "Nostrils",
-     "Cheeks"
+     "Puffing up like a balloon",
+     "Gliding on its tail",
+     "Walking on floating weed"
     ],
-    "why": "An owl’s eyes are fixed in place, so it swivels its whole head instead. Very dramatic.",
-    "art": "owl",
-    "hl": [
-     "eye"
-    ]
+    "why": "Fast slaps and strokes push air pockets into the water, keeping it up for a few metres."
    },
    {
     "kind": "Weird but true",
@@ -1968,19 +1964,15 @@
     "why": "Low rumbles travel through the ground, and sensitive feet help elephants feel them."
    },
    {
-    "kind": "Body fact",
-    "q": "Owls can turn their head about how far?",
-    "answer": "270 degrees",
+    "kind": "Weird but true",
+    "q": "Which animal has a nose ringed with 22 fleshy, finger-like feelers?",
+    "answer": "Star-nosed mole",
     "wrong": [
-     "90 degrees",
-     "180 degrees",
-     "360 degrees"
+     "Platypus",
+     "Echidna",
+     "Aardvark"
     ],
-    "why": "About three-quarters of a full turn either way. Not quite a full horror-film spin.",
-    "art": "owl",
-    "hl": [
-     "neck"
-    ]
+    "why": "The pink ‘star’ is packed with touch sensors. It can find and gulp down a tiny meal in a fraction of a second."
    },
    {
     "kind": "Weird but true",
@@ -2094,71 +2086,67 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Name the part",
-    "q": "The round patch behind the eye is the frog’s…",
-    "answer": "Eardrum",
+    "kind": "Body fact",
+    "q": "How many arms does an octopus have?",
+    "answer": "Eight arms",
     "wrong": [
-     "Nostril",
-     "Third eye",
-     "Gill"
+     "Six",
+     "Ten",
+     "Twelve"
     ],
-    "why": "Frogs wear their eardrums on the outside. It’s called the tympanum.",
-    "art": "frog",
-    "hl": [
-     "tympanum"
-    ]
-   },
-   {
-    "kind": "Weird but true",
-    "q": "Which of these mammals lays eggs?",
-    "answer": "Platypus",
-    "wrong": [
-     "Koala",
-     "Kangaroo",
-     "Wombat"
-    ],
-    "why": "Platypuses and echidnas are monotremes: mammals that lay eggs."
-   },
-   {
-    "kind": "Weird but true",
-    "q": "A camel’s hump is mostly…",
-    "answer": "Fat",
-    "wrong": [
-     "Water",
-     "Muscle",
-     "Bone"
-    ],
-    "why": "The hump stores fat for energy. Camels cope with thirst in other clever ways."
-   },
-   {
-    "kind": "Name the part",
-    "q": "What are these little cups along the arm?",
-    "answer": "Suckers",
-    "wrong": [
-     "Barnacles",
-     "Gills",
-     "Eggs"
-    ],
-    "why": "Each sucker grips on its own, and it’s packed with chemical sensors, so an octopus tastes whatever it touches.",
+    "why": "Eight arms, and they’re arms, not tentacles. Squid and cuttlefish have two extra tentacles for grabbing.",
     "art": "octopus",
     "hl": [
-     "suckers"
+     "arm3"
     ]
    },
    {
-    "kind": "Name the part",
-    "q": "Name the highlighted fin.",
-    "answer": "Tail fin",
+    "kind": "Weird but true",
+    "q": "Red deer stags, a Scottish icon, grow a new set of antlers…",
+    "answer": "Every year",
     "wrong": [
-     "Dorsal fin",
-     "Side fin",
-     "Belly fin"
+     "Once in their life",
+     "Every ten years",
+     "Only after a fight"
     ],
-    "why": "The tail fin sweeps side to side to push the shark forwards.",
-    "art": "shark",
+    "why": "Antlers drop off in late winter and regrow, bigger, in a few months. They’re among the fastest-growing tissues of any mammal."
+   },
+   {
+    "kind": "Weird but true",
+    "q": "Which is the only mammal that can truly fly?",
+    "answer": "Bat",
+    "wrong": [
+     "Sugar glider",
+     "Flying squirrel",
+     "Colugo"
+    ],
+    "why": "Gliders just glide. Bats flap and power their own flight. (A flying fox is a bat, too.)"
+   },
+   {
+    "kind": "Body fact",
+    "q": "Cats walk on their…",
+    "answer": "Toes",
+    "wrong": [
+     "Whole flat feet",
+     "Heels",
+     "Knuckles"
+    ],
+    "why": "Cats are ‘toe-walkers’. The big pad is under the ball of the foot; the heel sits way up the leg.",
+    "art": "catpaw",
     "hl": [
-     "tailfin"
+     "toebeans"
     ]
+   },
+   {
+    "kind": "Weird but true",
+    "q": "A newborn kangaroo is about the size of a…",
+    "answer": "Jelly bean",
+    "wrong": [
+     "Tennis ball",
+     "Loaf of bread",
+     "House cat"
+    ],
+    "why": "About 2 cm long at birth. It crawls up into the pouch on its own and stays there for months."
    }
   ]
  }

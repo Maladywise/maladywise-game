@@ -152,7 +152,7 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "humanlie"
+    "test": "gmail"
    },
    {
     "test": "bedfield",
@@ -187,7 +187,7 @@
     "test": "smoke"
    },
    {
-    "test": "fingerprint"
+    "test": "koaladog"
    },
    {
     "test": "pas"
@@ -211,7 +211,7 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "facerec"
+    "test": "sharkplane"
    },
    {
     "test": "captcha"
@@ -249,10 +249,10 @@
     }
    },
    {
-    "test": "lineupseq"
+    "test": "weather"
    },
    {
-    "test": "lineupsim"
+    "test": "tornado"
    },
    {
     "test": "bedfield"
@@ -265,7 +265,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "captcha"
+    "test": "gmail"
    },
    {
     "test": "bombdog",
@@ -301,7 +301,7 @@
     "test": "lineupsim"
    },
    {
-    "test": "bedfield"
+    "test": "koaladog"
    },
    {
     "test": "aidet"
@@ -328,7 +328,7 @@
     "test": "smoke"
    },
    {
-    "test": "polygraph"
+    "test": "sharkplane"
    },
    {
     "test": "bombdog"
@@ -357,7 +357,7 @@
     }
    },
    {
-    "test": "lineupsim"
+    "test": "weather"
    },
    {
     "test": "bedfield"
@@ -373,7 +373,7 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "turnitin"
+    "test": "tornado"
    },
    {
     "test": "tsa"
@@ -403,7 +403,7 @@
     "test": "polygraph"
    },
    {
-    "test": "smoke"
+    "test": "koaladog"
    },
    {
     "test": "pas",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "test": "bombdog"
+    "test": "gmail"
    },
    {
     "test": "captcha"
@@ -438,7 +438,7 @@
     }
    },
    {
-    "test": "humanlie"
+    "test": "sharkplane"
    },
    {
     "test": "bedfield"
@@ -454,7 +454,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "bombdog"
+    "test": "weather"
    },
    {
     "test": "lineupsim"
@@ -493,7 +493,7 @@
     "test": "bedfield"
    },
    {
-    "test": "aidet"
+    "test": "tornado"
    }
   ]
  },
@@ -517,7 +517,7 @@
     "test": "lineupsim"
    },
    {
-    "test": "captcha"
+    "test": "gmail"
    },
    {
     "test": "bombdog"
@@ -530,7 +530,7 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "lineupseq"
+    "test": "koaladog"
    },
    {
     "test": "smoke"
@@ -565,10 +565,10 @@
     "test": "fingerprint"
    },
    {
-    "test": "bedlab"
+    "test": "sharkplane"
    },
    {
-    "test": "tsa"
+    "test": "weather"
    },
    {
     "test": "turnitin"
@@ -603,7 +603,7 @@
     "test": "captcha"
    },
    {
-    "test": "lineupseq"
+    "test": "tornado"
    },
    {
     "test": "smoke"
@@ -616,7 +616,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "pas"
+    "test": "gmail"
    },
    {
     "test": "turnitin"
@@ -638,7 +638,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "bombdog"
+    "test": "koaladog"
    },
    {
     "test": "facerec",
@@ -655,7 +655,7 @@
     "test": "captcha"
    },
    {
-    "test": "smoke"
+    "test": "sharkplane"
    }
   ]
  },
@@ -665,7 +665,7 @@
   "difficulty": "Einstein",
   "rounds": [
    {
-    "test": "aidet"
+    "test": "weather"
    },
    {
     "test": "lineupsim"
@@ -702,7 +702,7 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "captcha"
+    "test": "tornado"
    },
    {
     "test": "bombdog",
@@ -737,7 +737,7 @@
     }
    },
    {
-    "test": "humanlie"
+    "test": "gmail"
    },
    {
     "test": "polygraph"
@@ -775,7 +775,7 @@
     "test": "facerec"
    },
    {
-    "test": "bedlab"
+    "test": "koaladog"
    },
    {
     "test": "tsa"

@@ -180,6 +180,66 @@
    "note": "DeGreeff, Prada-Tiedemann et al. 2025, Frontiers in Veterinary Science. The standard asks for 90% found and under 10% false alerts.",
    "src": [["Frontiers news: explosive detection dogs assessment (2025)", "https://www.frontiersin.org/news/2025/10/16/frontiers-veterinary-science-explosive-detection-dogs-assessment"]],
    "kind": "animal", "checked": "2 Nov 2026"
+  },
+  "koaladog": {
+   "test": "Koala-poo sniffer dog",
+   "condition": "koala droppings",
+   "scenario": "Queensland: a trained detection dog searches the bush for koala droppings, so researchers can tell where koalas live without seeing one.",
+   "yes": "hidden droppings", "no": "dropping-free spots", "all": "spots", "pos": "get a sit", "neg": "get sniffed past",
+   "sens": {"v": 97, "lo": 97, "hi": 100},
+   "spec": null,
+   "says": "Found the droppings in 146 of 150 trials, and every time once off the lead. In the field, the dog team was 19 times faster than people searching on foot. Good dog. Very good dog.",
+   "note": "Cristescu et al. 2015, Scientific Reports: one detection dog, Maya, tested on hidden koala scats. No false-alert figure was reported, so one slider today.",
+   "src": [["Cristescu et al. 2015: Accuracy and efficiency of detection dogs for koala conservation (Scientific Reports)", "https://link.springer.com/article/10.1038/srep08349"]],
+   "kind": "animal", "checked": "7 Nov 2026"
+  },
+  "sharkplane": {
+   "test": "Beach shark patrol, from a plane",
+   "condition": "a shark",
+   "scenario": "NSW: a light plane flies the coast looking down for sharks near the beach. Researchers put shark-shaped dummies in a clear bay to see how many the spotters find.",
+   "yes": "sharks in the water", "no": "shark-free stretches", "all": "stretches of water", "pos": "get spotted", "neg": "get missed",
+   "sens": {"v": 12.5, "lo": 12, "hi": 13},
+   "spec": null,
+   "says": "The plane crew spotted about 1 in 8 dummy sharks. A helicopter did a little better, about 1 in 6. The ocean is big, glare is real and sharks don’t wave.",
+   "note": "Robbins, Peddemors, Kennelly et al. (PLOS ONE, 2014), first prepared for the NSW Government: fixed-wing 12.5%, helicopter 17.1%. One slider today.",
+   "src": [["InDaily: Aerial patrols miss most sharks, new research (2013)", "https://www.indaily.com.au/news/2013/12/10/aerial-patrols-miss-sharks-new-research"]],
+   "kind": "human", "checked": "7 Nov 2026"
+  },
+  "tornado": {
+   "test": "US tornado warning",
+   "condition": "a tornado",
+   "scenario": "Somewhere in Oklahoma, the US National Weather Service watches the radar. Does a tornado that actually touches down get a warning first?",
+   "yes": "tornadoes", "no": "tornado-free days", "all": "storms", "pos": "get a warning", "neg": "arrive unwarned",
+   "sens": {"v": 70, "lo": 65, "hi": 75},
+   "spec": null,
+   "says": "About 7 in 10 tornadoes got a warning, up from 3 in 10 in the 1980s. The catch: nearly 3 in 4 warnings were false alarms, which is how people learn to ignore the siren.",
+   "note": "NWS verification data for the decade to 2014, as reported by FiveThirtyEight. One slider today; the false-alarm figure is a share of warnings, not of quiet days.",
+   "src": [["FiveThirtyEight: Three out of every four tornado warnings are false alarms", "https://fivethirtyeight.com/features/three-out-of-every-four-tornado-warnings-are-false-alarms"]],
+   "kind": "software", "checked": "7 Nov 2026"
+  },
+  "gmail": {
+   "test": "Gmail’s spam filter",
+   "condition": "spam or a phishing email",
+   "scenario": "Your inbox. Machine learning decides which emails are junk or scams before you ever see them.",
+   "yes": "spam and scam emails", "no": "real emails", "all": "emails", "pos": "get binned", "neg": "reach your inbox",
+   "sens": {"v": 99.9, "lo": 99.5, "hi": 100},
+   "spec": null,
+   "says": "Google says it blocks 99.9% of spam and phishing. Sounds perfect, until you remember billions arrive a day, so 0.1% is still a lot of ‘you’ve won a prize’. Google doesn’t publish how much real mail it wrongly bins.",
+   "note": "Google’s own figure (2018), not an independent test. One slider today.",
+   "src": [["BleepingComputer: Google says Gmail now blocks 99.9 percent of spam and phishing emails", "https://www.bleepingcomputer.com/news/security/google-says-gmail-now-blocks-99-9-percent-of-spam-and-phishing-emails/"]],
+   "kind": "software", "checked": "7 Nov 2026"
+  },
+  "weather": {
+   "test": "Tomorrow’s top-temperature forecast",
+   "condition": "a forecast within 2 °C",
+   "scenario": "The Bureau of Meteorology tells you tomorrow’s top will be 27 °C. How often does the real top land within 2 degrees?",
+   "yes": "days", "no": "days", "all": "days", "pos": "land within 2 °C", "neg": "miss by more",
+   "sens": {"v": 90, "lo": 90, "hi": 90},
+   "spec": null,
+   "says": "Within 2 °C about 9 days in 10. Overnight lows are trickier, 84%. And today’s 2-day forecast is about as good as a 1-day forecast was ten years ago.",
+   "note": "Bureau of Meteorology forecast verification, next-day maximum temperature. One slider today.",
+   "src": [["Bureau of Meteorology: Understanding forecast accuracy and verification", "https://www.bom.gov.au/news-and-media/understanding-forecast-accuracy-and-verification"]],
+   "kind": "software", "checked": "7 Nov 2026"
   }
  }
 }
