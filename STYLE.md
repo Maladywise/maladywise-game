@@ -65,4 +65,4 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Many "animal facts" online are myths: verify each with a reputable source. Funny, never cruel; no gore; don't repeat a fact used in the previous 6 months.
 
 ## Puzzle archives
-- tools/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 tools/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.
+- _scripts/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 _scripts/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.

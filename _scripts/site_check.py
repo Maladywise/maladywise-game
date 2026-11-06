@@ -2,7 +2,7 @@
 """Malady Wise site checker (stdlib only).
 
 HOW TO RUN
-    python3 tools/site_check.py            (from the repo root, or any folder)
+    python3 _scripts/site_check.py            (from the repo root, or any folder)
 
 Crawls every *.html file in the repo (skips .git, node_modules, _data and
 __pycache__ folders; the public /tools/ pages are content, so their HTML is
