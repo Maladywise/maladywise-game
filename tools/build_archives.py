@@ -266,6 +266,82 @@ def r_arrhythmix(x, ctx):
     return "".join(h)
 
 
+def r_comorbix(x, ctx):
+    items = []
+    for gr in sorted(x.get("groups", []), key=lambda g: g.get("level") or 0):
+        items.append('<li><p><b>%s:</b> %s</p></li>' % (esc(gr.get("label")), esc(", ".join(gr.get("words") or []))))
+    return '<p class="ar-m">The four groups, easiest first:</p><ul class="ar-clues">%s</ul>' % "".join(items)
+
+
+def r_linkase(x, ctx):
+    ch = [str(w) for w in (x.get("chain") or [])]
+    h = ['<p class="ar-ans"><b>Chain:</b> %s</p>' % esc(" → ".join(ch))]
+    links = ["%s %s" % (ch[i], ch[i + 1]) for i in range(len(ch) - 1)]
+    if links:
+        h.append('<p class="ar-m">The links:</p><ul class="ar-clues">%s</ul>' % "".join("<li>%s</li>" % esc(l.lower()) for l in links))
+    alt = x.get("alt") or {}
+    if alt:
+        h.append('<p class="ar-m">Also accepted: %s</p>' % esc("; ".join("%s for %s" % (", ".join(v), k) for k, v in alt.items())))
+    return "".join(h)
+
+
+REGIONS = {"skeleton": "Skeleton", "hand": "Hand bones", "palm": "Hand, palm side", "handback": "Hand, back",
+           "heart": "Heart", "brain": "Brain", "eye": "Eye", "ear": "Ear", "gut": "Abdomen", "lungs": "Lungs",
+           "knee": "Knee", "spine": "Spine"}
+
+
+def r_anatomegaly(x, ctx):
+    items = []
+    for rnd in x.get("rounds", []):
+        region = REGIONS.get(rnd.get("art"), "")
+        head = esc(rnd.get("kind")) + ((" · " + esc(region)) if region else "")
+        items.append('<li><p class="ar-m">%s</p><p class="ar-q">%s</p><p><b>Answer:</b> %s</p>%s</li>'
+                     % (head, esc(rnd.get("q")), esc(rnd.get("answer")), p(rnd.get("why"), "ar-m")))
+    return '<ol class="ar-sub">%s</ol>' % "".join(items)
+
+
+def load_grandrounds():
+    out = []
+    for x in load_json(os.path.join(ROOT, "grandrounds", "quizzes.json")):
+        if isinstance(x, dict) and (x.get("week") or x.get("date")):
+            y = dict(x)
+            y["date"] = y.get("date") or y["week"]  # keyed by week (the Sunday it is released)
+            out.append(y)
+    return out
+
+
+def r_grandrounds(x, ctx):
+    items = []
+    for q in x.get("questions", []):
+        items.append('<li><p class="ar-m">%s</p><p class="ar-q">%s</p><p><b>Answer:</b> %s</p>%s</li>'
+                     % (esc(q.get("c")), esc(q.get("q")), esc(q.get("a")), p(q.get("e"), "ar-m")))
+    return '<ol class="ar-sub">%s</ol>' % "".join(items)
+
+
+def cryptic_answer(rows, cl, down):
+    try:
+        r, c, n = int(cl["r"]), int(cl["c"]), int(cl["len"])
+        s = "".join(rows[r + i][c] for i in range(n)) if down else rows[r][c:c + n]
+        return "" if "#" in s or len(s) != n else s
+    except (KeyError, IndexError, ValueError, TypeError):
+        return ""
+
+
+def r_cryptogenic(x, ctx):
+    rows = x.get("rows") or []
+    h = []
+    for key, title in (("across", "Across"), ("down", "Down")):
+        items = []
+        for cl in x.get(key, []):
+            ans = cryptic_answer(rows, cl, key == "down")
+            items.append('<li><p class="ar-q">%s. %s %s</p>%s%s</li>'
+                         % (esc(cl.get("n")), esc(cl.get("clue")), esc(cl.get("enum")),
+                            ('<p><b>Answer:</b> %s</p>' % esc(ans)) if ans else "", p(cl.get("expl"), "ar-m")))
+        if items:
+            h.append('<p class="ar-title">%s</p><ul class="ar-sub" style="list-style:none;padding-left:4px">%s</ul>' % (title, "".join(items)))
+    return "".join(h)
+
+
 # ---------- game list (ids match MW_GAMES in assets/games.js) ----------
 
 GAMES = [
@@ -306,6 +382,26 @@ GAMES = [
      "load": lambda: load_list("arrhythmix/puzzles/puzzles.json"), "render": r_arrhythmix,
      "desc": "Every past Arrhythmix puzzle: the clinical vignette, the heart rhythm and how to read it.",
      "lede": "Every past rhythm strip puzzle, with the vignette, the rhythm and how to read it. Newest first."},
+    {"id": "comorbix", "folder": "comorbix", "name": "Comorbix",
+     "load": lambda: load_months("comorbix/puzzles"), "render": r_comorbix,
+     "desc": "Every past Comorbix puzzle: the four hidden medical word groups and the four words in each.",
+     "lede": "Every past word-groups puzzle, with each group and its four words. Newest first."},
+    {"id": "linkase", "folder": "linkase", "name": "Linkase",
+     "load": lambda: load_months("linkase/puzzles"), "render": r_linkase,
+     "desc": "Every past Linkase puzzle: the full medical word chain and each link in it.",
+     "lede": "Every past word chain, with each link spelled out. Newest first."},
+    {"id": "labelosis", "folder": "anatomegaly", "name": "Anatomegaly",
+     "load": lambda: load_months("anatomegaly/puzzles"), "render": r_anatomegaly,
+     "desc": "Every past Anatomegaly puzzle: each day's five anatomy rounds, the body region, the answer and why.",
+     "lede": "Every past anatomy set, with each round's body region, answer and explanation. Newest first."},
+    {"id": "cryptogenic", "folder": "cryptogenic", "name": "Cryptogenic",
+     "load": lambda: load_list("cryptogenic/puzzles.json"), "render": r_cryptogenic,
+     "desc": "Every past Cryptogenic crossword: each medical cryptic clue with its answer and how the wordplay works.",
+     "lede": "Every past Saturday cryptic, with each clue, its answer and the parsing. Newest first."},
+    {"id": "grandrounds", "folder": "grandrounds", "name": "Grand Rounds",
+     "load": load_grandrounds, "render": r_grandrounds,
+     "desc": "Every past Grand Rounds quiz: twenty hard medical trivia questions a week, with answers and explanations.",
+     "lede": "Every past Sunday quiz, with each question's category, answer and explanation. Newest first."},
 ]
 
 STYLE = """<style>
@@ -340,8 +436,11 @@ def render_page(g, past, today, versions):
     name, folder = g["name"], g["folder"]
     title = "%s archive: every past puzzle | Malady Wise" % name
     canon = "%s/%s/archive/" % (SITE, folder)
-    og = "%s/assets/og/%s.png" % (SITE, g["id"]) if os.path.exists(os.path.join(ROOT, "assets", "og", g["id"] + ".png")) \
-        else SITE + "/assets/share.png?v=4"
+    og = SITE + "/assets/share.png?v=4"
+    for k in (g["id"], folder):
+        if os.path.exists(os.path.join(ROOT, "assets", "og", k + ".png")):
+            og = "%s/assets/og/%s.png" % (SITE, k)
+            break
     body = []
     cur = None
     for x in past:

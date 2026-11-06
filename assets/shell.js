@@ -1064,7 +1064,7 @@
   }
 
   // ---------- game page ----------
-  var ARCHIVES = { dx: 1, wordemic: 1, panelysis: 1, glimpsis: 1, opacitis: 1, sensitosis: 1, triviosis: 1, zebritis: 1, arrhythmix: 1 };
+  var ARCHIVES = { dx: 1, wordemic: 1, panelysis: 1, glimpsis: 1, opacitis: 1, sensitosis: 1, triviosis: 1, zebritis: 1, arrhythmix: 1, comorbix: 1, linkase: 1, labelosis: 1, grandrounds: 1, cryptogenic: 1 };
   function archiveLink(id) {
     if (!ARCHIVES[id] || NORMIE) return;
     var go = function () {
