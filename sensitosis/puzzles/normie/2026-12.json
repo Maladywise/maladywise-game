@@ -5,7 +5,7 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "aidet"
+    "test": "sharkplane"
    },
    {
     "test": "smoke"
@@ -27,7 +27,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "lineupseq"
+    "test": "weather"
    },
    {
     "test": "lineupsim"
@@ -36,7 +36,7 @@
     "test": "humanlie"
    },
    {
-    "test": "polygraph"
+    "test": "tornado"
    },
    {
     "test": "bedfield",
@@ -54,7 +54,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "aidet"
+    "test": "gmail"
    },
    {
     "test": "tsa"
@@ -93,7 +93,7 @@
     "test": "polygraph"
    },
    {
-    "test": "bedfield"
+    "test": "koaladog"
    }
   ]
  },
@@ -117,7 +117,7 @@
     }
    },
    {
-    "test": "bombdog"
+    "test": "sharkplane"
    },
    {
     "test": "captcha"
@@ -130,7 +130,7 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "lineupsim"
+    "test": "weather"
    },
    {
     "test": "polygraph"
@@ -168,7 +168,7 @@
     "test": "facerec"
    },
    {
-    "test": "bedlab"
+    "test": "tornado"
    },
    {
     "test": "fingerprint",
@@ -195,13 +195,13 @@
     "test": "pas"
    },
    {
-    "test": "captcha"
+    "test": "gmail"
    },
    {
     "test": "aidet"
    },
    {
-    "test": "tsa"
+    "test": "koaladog"
    }
   ]
  },
@@ -228,7 +228,7 @@
     }
    },
    {
-    "test": "bedfield"
+    "test": "sharkplane"
    }
   ]
  },
@@ -238,7 +238,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "humanlie"
+    "test": "weather"
    },
    {
     "test": "bombdog"
@@ -282,7 +282,7 @@
     "test": "turnitin"
    },
    {
-    "test": "polygraph"
+    "test": "tornado"
    }
   ]
  },
@@ -292,7 +292,7 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "lineupseq"
+    "test": "gmail"
    },
    {
     "test": "bombdog"
@@ -336,7 +336,7 @@
     "test": "lineupsim"
    },
    {
-    "test": "bedfield"
+    "test": "koaladog"
    }
   ]
  },
@@ -346,7 +346,7 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "fingerprint"
+    "test": "sharkplane"
    },
    {
     "test": "bedlab"
@@ -363,7 +363,7 @@
     "test": "pas"
    },
    {
-    "test": "smoke"
+    "test": "weather"
    }
   ]
  },
@@ -384,7 +384,7 @@
     "test": "tsa"
    },
    {
-    "test": "lineupsim"
+    "test": "tornado"
    },
    {
     "test": "bedfield"
@@ -406,7 +406,7 @@
     "test": "bedlab"
    },
    {
-    "test": "aidet"
+    "test": "gmail"
    },
    {
     "test": "fingerprint",
@@ -435,7 +435,7 @@
     }
    },
    {
-    "test": "lineupseq"
+    "test": "koaladog"
    },
    {
     "test": "bombdog",
@@ -467,7 +467,7 @@
     "test": "tsa"
    },
    {
-    "test": "polygraph"
+    "test": "sharkplane"
    },
    {
     "test": "aidet",
@@ -494,7 +494,7 @@
     "test": "humanlie"
    },
    {
-    "test": "bombdog"
+    "test": "weather"
    },
    {
     "test": "captcha"
@@ -524,7 +524,7 @@
     "test": "lineupsim"
    },
    {
-    "test": "aidet"
+    "test": "tornado"
    },
    {
     "test": "bedfield",
@@ -548,7 +548,7 @@
     "test": "smoke"
    },
    {
-    "test": "bedlab"
+    "test": "gmail"
    },
    {
     "test": "facerec"
@@ -570,7 +570,7 @@
     "test": "tsa"
    },
    {
-    "test": "polygraph"
+    "test": "koaladog"
    },
    {
     "test": "bombdog"
@@ -589,7 +589,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "lineupsim"
+    "test": "weather"
    },
    {
     "test": "humanlie"
@@ -601,7 +601,7 @@
     "test": "lineupseq"
    },
    {
-    "test": "bedfield"
+    "test": "sharkplane"
    }
   ]
  },
@@ -611,7 +611,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "captcha"
+    "test": "tornado"
    },
    {
     "test": "fingerprint"
@@ -633,7 +633,7 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "aidet"
+    "test": "gmail"
    },
    {
     "test": "lineupseq"
@@ -663,7 +663,7 @@
     "test": "turnitin"
    },
    {
-    "test": "polygraph"
+    "test": "koaladog"
    },
    {
     "test": "bombdog"
@@ -698,7 +698,7 @@
     }
    },
    {
-    "test": "lineupsim"
+    "test": "sharkplane"
    },
    {
     "test": "humanlie"
@@ -717,7 +717,7 @@
     "test": "bedlab"
    },
    {
-    "test": "facerec"
+    "test": "weather"
    },
    {
     "test": "tsa"
@@ -741,7 +741,7 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "captcha"
+    "test": "tornado"
    },
    {
     "test": "bombdog"
@@ -758,7 +758,7 @@
     "test": "polygraph"
    },
    {
-    "test": "smoke"
+    "test": "gmail"
    }
   ]
  },
@@ -779,7 +779,7 @@
     "test": "lineupseq"
    },
    {
-    "test": "humanlie"
+    "test": "koaladog"
    },
    {
     "test": "lineupsim"
@@ -798,7 +798,7 @@
     "test": "polygraph"
    },
    {
-    "test": "bedfield"
+    "test": "sharkplane"
    },
    {
     "test": "bedlab"
