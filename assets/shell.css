@@ -966,3 +966,7 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 
 .mw-arch{text-align:center;margin:28px 0 8px;font-size:14px}
 .mw-arch a{color:var(--muted,#6B5A93)}
+
+.card.arcade2{cursor:default}
+.card.arcade2 .arcade-btns{display:flex;flex-wrap:wrap;gap:8px}
+.card.arcade2 .arcade-btns .play{text-decoration:none}

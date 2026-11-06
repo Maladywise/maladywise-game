@@ -729,7 +729,7 @@
   function inAU() { try { if (/^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "")) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
   function navHere(href) {
     var p = location.pathname.replace(/index\.html$/, "");
-    if (href === "/") return p === "/" || /^\/(arcade|weird|basil|basil-clover|me)\//.test(p);
+    if (href === "/") return p === "/" || /^\/(arcade|weird|basil|basil-clover|organ-drop|me)\//.test(p);
     if (p.indexOf(href) === 0) return true;
     var F = window.MW_FACTS && MW_FACTS[p]; // condition fact sheets live at the root, e.g. /acne/
     return !!(F && F.k === "fact" && href === "/conditions/");
@@ -853,6 +853,10 @@
           sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
       }).join("");
     }
+function arcadeCard() { // one card, two arcade games, so the grid stays 4 across
+      var acc = root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80";
+      return '<div class="card house bonus arcade2" style="--accent:' + acc + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:6px"><img src="/assets/mascots/basil.svg?v=2" alt="" width="34" height="45" style="width:34px;height:45px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="32" height="42" style="width:32px;height:42px;object-fit:contain;margin-left:-8px"><img src="/assets/mascots/labelosis.svg" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain"></span></div><div class="cbody"><h2 class="name">Arcade</h2><p class="kind">Two bonus games</p><p class="tag">Cats wrecking a bench, or organs falling from the sky.</p><div class="cfoot arcade-btns"><a class="play" href="/basil-clover/">Basil + Clover</a><a class="play" href="/organ-drop/">Organ Drop</a></div></div></div>';
+    }
     function bonusCard() {
       return '<a class="card house bonus" href="/basil-clover/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
     }
@@ -873,7 +877,7 @@
       var html = GROUPS.map(function (G) {
         var cards = all.filter(function (g) { return G.games && G.games.indexOf(g.id) >= 0; });
         cards.forEach(function (g) { used[g.id] = 1; });
-        var extra = G.basil ? bonusCard() : "";
+        var extra = G.basil ? arcadeCard() : "";
         if (!cards.length && !extra) return "";
         var cnt = cards.length + (extra ? 1 : 0);
         return '<section class="gsec' + (cnt <= 2 ? " sm" : "") + '" data-c="' + cnt + '" style="--n:' + (cnt <= 6 ? Math.max(3, cnt) : Math.ceil(cnt / 2)) + '" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
