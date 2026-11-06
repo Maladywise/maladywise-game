@@ -11,6 +11,11 @@
 .od-lede{max-width:34em;font-size:16px;line-height:1.5;color:#F0E4F2}
 .od-play{font:700 17px var(--body);padding:13px 34px;border-radius:999px;border:0;background:#FFE08A;color:#2E1F57;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.2)}
 .od-play:hover{background:#FFD45C}
+.od-pbtns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.od-dbtn{background:transparent;color:#FFE08A;box-shadow:none;border:2px solid #FFE08A;padding:11px 24px}
+.od-dbtn:hover{background:rgba(255,224,138,.15)}
+.od-dnote{font-size:13px;color:#E9D7EE;max-width:30em;line-height:1.4}
+.od-dnote b{color:#fff}
 .od-best{font-size:14px;color:#E9D7EE;min-height:1.4em}
 .od-best b{color:#fff}
 .od-how{font-size:13.5px;color:#E2CFE8;max-width:36em;text-wrap:balance;line-height:1.6}
@@ -100,6 +105,19 @@
 .od-oexit{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
 .od-sbtn{font:600 13.5px var(--body);padding:8px 14px;border-radius:999px;border:2px solid #4A3480;background:transparent;color:#4A3480;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 .od-ohint{font-size:12px;color:#8A7BB0}
+.od-lb{width:100%;display:grid;gap:4px}
+.od-lb[hidden],.od-hs[hidden]{display:none}
+.od-lbh{font:700 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:#6B5A93}
+.od-lb .od-hs{margin:0}
+.od-lb .od-hs .sc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.od-lbnote{font-size:11.5px;color:#6B5A93}
+.od-lbform{display:grid;gap:4px;font-size:13px;color:#2E1F57;font-weight:600}
+.od-lbform[hidden]{display:none}
+.od-lbform div{display:flex;gap:6px}
+.od-lbform input{flex:1;min-width:0;font:500 16px var(--body);padding:7px 10px;border-radius:10px;border:2px solid #C9BFE6;background:#fff;color:#2E1F57}
+.od-lbform button{font:700 14px var(--body);padding:7px 14px;border-radius:10px;border:0;background:#B5308A;color:#fff;cursor:pointer}
+.od-share{width:100%;display:grid;gap:5px;justify-items:center;background:#EFE9F8;border-radius:12px;padding:7px 8px}
+.od-sharetx{font-size:12.5px;line-height:1.35;color:#2E1F57;overflow-wrap:anywhere;-webkit-user-select:text;user-select:text}
 @media (hover:none){.od-ohint{display:none}}
 @media (max-height:640px){.od-omasc{display:none}}
 

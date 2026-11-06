@@ -26,9 +26,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <link rel="stylesheet" href="../assets/shell.css?v=171">
-<link rel="stylesheet" href="drop.css?v=2">
+<link rel="stylesheet" href="drop.css?v=3">
 <script src="../assets/games.js?v=98"></script>
-<script src="../assets/shell.js?v=176"></script>
+<script src="../assets/shell.js?v=177"></script>
 </head>
 <body>
 <main class="wrap od-page">
@@ -37,8 +37,9 @@
     <p class="od-found">&#129728; Bonus game</p>
     <h1 class="od-name">Bonus game</h1>
     <p class="od-lede">Organs are falling. Stack them neatly, fill whole rows and send each patient home. It gets faster every level, and every level brings a new organ fact.</p>
-    <button class="od-play" type="button" id="od-start">Scrub in</button>
+    <div class="od-pbtns"><button class="od-play" type="button" id="od-start">Scrub in</button><button class="od-play od-dbtn" type="button" id="od-daily">Daily challenge</button></div>
     <p class="od-best" id="od-best"></p>
+    <p class="od-dnote" id="od-dnote"></p>
     <p class="od-how"><b class="nw">← →</b> move · <b class="nw">↑ / X</b> rotate · <b class="nw">Z</b> rotate back · <b class="nw">↓</b> soft drop · <b class="nw">Space</b> hard drop · <b class="nw">C</b> hold · <b class="nw">P</b> pause</p>
     <details class="od-rules">
       <summary>How it works</summary>
@@ -47,6 +48,7 @@
         <li>Fill a whole row and it clears. Four rows at once is a <b>transplant</b>, worth the most.</li>
         <li><b>Hold</b> tucks an organ away for later (once per drop). The faint outline shows where it will land.</li>
         <li>Every 10 rows: <b>level up</b>, faster drops and a new organ fact.</li>
+        <li><b>Daily challenge:</b> everyone gets the same organs in the same order (new each midnight, Sydney time). Your first go each day is scored; replays are practice.</li>
         <li>On a phone, use the buttons under the board, or swipe the board: drag to move, tap to rotate, flick down to drop.</li>
       </ul>
       <h2>The organs</h2>
@@ -58,7 +60,7 @@
 
   <section class="od-game" id="od-game" hidden>
     <div class="od-hud" id="od-hud">
-      <div class="od-st od-sc"><small>Score</small><b id="od-score">0</b></div>
+      <div class="od-st od-sc"><small id="od-scl">Score</small><b id="od-score">0</b></div>
       <div class="od-st"><small>Level</small><b id="od-level">1</b></div>
       <div class="od-st"><small>Lines</small><b id="od-lines">0</b></div>
       <button class="od-ibtn" type="button" id="od-helpbtn" aria-label="How to play">?</button>
@@ -84,6 +86,13 @@
           <p class="od-obest" id="od-obest"></p>
           <ol class="od-hs od-hs-o" id="od-hs1"></ol>
           <div class="od-obtns"><button class="od-big" type="button" id="od-again">Play again</button></div>
+          <div class="od-lb" id="od-lb" hidden>
+            <p class="od-lbh" id="od-lbh">World top 10</p>
+            <form class="od-lbform" id="od-lbform" hidden><label for="od-lbname" id="od-lblabel">World top 10! Your name</label><div><input id="od-lbname" maxlength="14" autocomplete="nickname" enterkeyhint="done" placeholder="Name"><button type="submit">Post</button></div></form>
+            <ol class="od-hs od-hs-o" id="od-lbl"></ol>
+            <p class="od-lbnote" id="od-lbnote"></p>
+          </div>
+          <div class="od-share"><p class="od-sharetx" id="od-sharetx"></p><button class="od-sbtn" type="button" id="od-share">Share</button></div>
           <div class="od-oexit"><button class="od-sbtn" type="button" id="od-exit">Exit to start</button><a class="od-sbtn" href="/">&#8249; Back to puzzles</a></div>
           <p class="od-ohint">Space to restart</p>
         </div>
@@ -120,6 +129,6 @@
   <footer class="site">A bonus game. Organ shapes are simplified. Please don’t stack real ones.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="drop.js?v=1"></script>
+<script src="drop.js?v=2"></script>
 </body>
 </html>
