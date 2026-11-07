@@ -487,6 +487,47 @@
     function drop(x, y) { return '<path d="M' + x + " " + y + "q3 5 0 7q-3 -2 0 -7z" + '" fill="' + AC + '" fill-opacity=".55"/>'; }
     return s + drop(90, 76) + drop(94, 86) + arrow([84, 80, 86, 70, 80, 63]) + tx(126, 40, "after weeing:", { fs: 7 }) + tx(126, 49, "squeeze hard", { fs: 7 }) + tx(126, 58, "then zip up", { fs: 7 });
   });
+  // rotator cuff (top-down views face the bottom of the picture; the sore arm is on screen left)
+  function above(cx, cy, fa, o) { // fa = forearm angle: 0 = straight forward (down the picture), + = out to the side, - = across the tummy
+    o = o || {};
+    var el = [cx - 21, cy + 3], hand = mv(el, -fa, 24), s = "";
+    s += '<ellipse cx="' + cx + '" cy="' + (cy + 1) + '" rx="24" ry="9" fill="' + B + '"/>' + C([cx + 21, cy + 3], 3.4, FAR);
+    if (o.ghost != null) s += '<g opacity=".26">' + L([el, mv(el, -o.ghost, 24)], B, 5.4) + C(mv(el, -o.ghost, 25), 3.2, B) + "</g>";
+    s += L([el, hand], OL, 9) + L([el, hand], B, 5.4) + C(mv(el, -fa, 25), 3.2, B);
+    s += C([cx, cy], 8.5, B, ' stroke="' + OL + '" stroke-width="1.5"') + L([[cx, cy + 7], [cx, cy + 10.5]], OL, 2.4);
+    if (o.towel) s += R(el[0] + 1.5, el[1] - 3, 4, 8, 1.5, "#F4E8EF");
+    if (o.out) o.out.hand = hand;
+    return s;
+  }
+  function topNote(s) { return s + tx(80, 108, "seen from above · forearm points forward", { c: WT, fs: 6.3 }); }
+  add("iso-er", "Standing side-on to a wall with the elbow bent to 90° and tucked at the side, pressing the back of the hand outwards into the wall without moving (seen from above)", function () {
+    var o = {}; above(0, 0, 0, { out: o }); var h = o.hand;
+    var inner = R(h[0] - 10, -24, 5, 76, 1, PF) + above(0, 0, 0, { towel: 1 }) + arrow([h[0] + 4, h[1] + 12, h[0] - 14, h[1] + 12]) + tx(h[0] + 6, h[1] + 16, "push out", { fs: 6.5, a: "start" });
+    return topNote(sc(78, 34, 1.35, inner) + hold(108, 86, "hold still"));
+  });
+  add("iso-ir", "Standing in a doorway with the elbow bent to 90° and tucked at the side, pressing the palm inwards against the door frame without moving (seen from above)", function () {
+    var o = {}; above(0, 0, 0, { out: o }); var h = o.hand;
+    var inner = R(h[0] + 4, h[1] - 16, 6, 30, 1.2, PF) + above(0, 0, 0, { towel: 1 }) + arrow([h[0] - 20, h[1] + 4, h[0] - 4, h[1] + 4]) + tx(h[0] - 14, h[1] + 16, "push in", { fs: 6.5 }) + tx(h[0] + 13, h[1] + 4, "door frame", { c: WT, fs: 6, a: "start" });
+    return topNote(sc(78, 34, 1.35, inner) + hold(108, 86, "hold still"));
+  });
+  add("band-er", "Elbow bent to 90° and tucked at the side with a band held in the hand and tied to the side, turning the forearm outwards against the band, then back slowly (seen from above)", function () {
+    var o = {}; above(0, 0, 50, { out: o });
+    var inner = above(0, 0, 50, { towel: 1, ghost: -25 }) + arrow([-14, 30, -30, 30, -38, 20]);
+    var hand = [78 + o.hand[0] * 1.3, 30 + o.hand[1] * 1.3];
+    return topNote(R(146, 10, 8, 82, 1, PF) + C([148, 50], 2, PS) + band([[148, 50], hand]) + sc(78, 30, 1.3, inner) + tx(32, 84, "turn out,", { fs: 7 }) + tx(32, 93, "slowly back", { fs: 7 }));
+  });
+  add("scap-set", "Standing tall, gently drawing the shoulder blades back and down, as if tucking them into your back pockets, and holding (seen from behind)", function () {
+    var s = floor() + pose(frontStand(80, { a1: [-6, -3], a2: [6, 3] }));
+    function blade(x, m) { return '<path d="M' + x + " 33 L" + (x + 9 * m) + " 33 L" + (x + 2 * m) + ' 47Z" fill="' + OL + '" opacity=".9"/>'; }
+    s += blade(75, -1) + blade(85, 1);
+    return s + arrow([58, 30, 66, 42]) + arrow([102, 30, 94, 42]) + tx(32, 22, "back and", { fs: 7 }) + tx(32, 31, "down", { fs: 7 }) + hold(116, 72) + tx(80, 109, "seen from behind", { c: WT, fs: 6.5 });
+  });
+  add("wall-slide", "Facing a wall with the forearm resting on it, sliding the arm up the wall as far as is comfortable, then back down slowly", function () {
+    var s = floor(6, 128) + wall(128);
+    s += G(stand(112, { a1: [60, 180], a2: [-3, 2] }));
+    s += pose(stand(112, { a1: [118, 180], a2: [-3, 2], ol: 1 }));
+    return s + arrow([142, 50, 142, 14]) + tx(70, 18, "slide up", { fs: 7.5 }) + tx(70, 27, "forearm on wall", { c: WT, fs: 6.5 });
+  });
   // ---- page wiring ----
   function svgFor(k) {
     var f = F[k]; if (!f) return "";
