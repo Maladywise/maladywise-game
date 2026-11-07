@@ -1,4 +1,4 @@
-/* Dropsy (was Organ Drop): bonus falling-block arcade game. Self-contained; relies only on shell.css variables. */
+/* Stackulus (was Organ Drop): bonus falling-block arcade game. Self-contained; relies only on shell.css variables. */
 .od-page{max-width:820px}
 .od-intro{position:relative;overflow:hidden;border-radius:24px;padding:26px 20px 24px;text-align:center;color:#F6EEF7;
   background:radial-gradient(circle at 84% 12%,rgba(255,190,210,.22) 0 48px,transparent 49px),linear-gradient(170deg,#B3628F 0%,#7A4A92 55%,#4A3480 100%);

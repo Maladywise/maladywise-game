@@ -1,4 +1,4 @@
-/* Dropsy (was Organ Drop): a falling-block bonus game for Malady Wise.
+/* Stackulus (was Organ Drop): a falling-block bonus game for Malady Wise.
    Seven pieces, seven organs (seven sea creatures in Normie mode: same shapes and daily order, only the art and words change). 10 x 20 board, SRS rotation with wall kicks, 7-bag randomiser, hold, next preview,
    ghost piece, lock delay, levels every 10 lines with faster gravity and an organ fact on each level-up.
    High scores: top 5 in this browser only. ?debug=1 exposes window.OD_DEBUG for testing (and ?day=YYYY-MM-DD to fake the date).
@@ -10,7 +10,7 @@
    Nothing here touches the seeded daily RNG except the piece bag, so the daily stays the same for everyone. */
 (function () {
   "use strict";
-  var TITLE = "Dropsy"; // the game's name: change it here only
+  var TITLE = "Stackulus"; // the game's name: change it here only
   var HSKEY = "mw-organdrop-hs";
   var DEBUG = /[?&]debug=1\b/.test(location.search);
   var STATKEY = "mw-organdrop-stats", DKEY = "mw-organdrop-daily", NAMEKEY = "mw-organdrop-name", PIDKEY = "mw-organdrop-pid";
@@ -478,7 +478,7 @@
     track(S.mode === "endless" ? "over" : S.mode === "daily" ? "daily-over" : "practice-over");
   }
   // Wordle-style picture of the final stack: its top 6 non-empty rows, one emoji per cell, trimmed to fit a post
-  var LINK = "maladywise.com/dropsy/";
+  var LINK = "maladywise.com/stackulus/";
   function stackRows() {
     var out = [];
     for (var r = 0; r < ROWS && out.length < 6; r++) {
