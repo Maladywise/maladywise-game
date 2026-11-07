@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -124,7 +124,7 @@
 
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
+    ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-help" aria-label="How to play">?</button><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
     ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool" id="mrg-shake">Shake</button></span></div>' +
@@ -135,6 +135,32 @@
     ' <details class="archive" id="mrg-archive"><summary>Past puzzles</summary><div class="alist" id="mrg-alist"></div></details>' +
     "</div>";
   var $ = function (id) { return document.getElementById("mrg-" + id); };
+  // ---------- how to play: shown on first visit, and any time from the ? button ----------
+  function helpHTML() {
+    var thing = NORMIE ? "sea creature" : "organ", things = NORMIE ? "sea creatures" : "organs";
+    var chain = O.map(function (o, i) { return i < 11 ? pic(i, 24) : ""; }).join("");
+    return '<div class="mrg-help-card" role="dialog" aria-modal="true" aria-labelledby="mrg-help-h"><h2 id="mrg-help-h">How to play Mergeon</h2>' +
+      '<p class="mrg-help-chain">' + chain + '</p><ul>' +
+      '<li><b>Aim and drop.</b> Move left or right (drag, mouse or arrow keys), then tap or press Space to drop the ' + thing + '.</li>' +
+      '<li><b>Two the same merge</b> into the next one up the chain, from ' + O[0].n.toLowerCase() + ' to ' + O[O.length - 1].n.toLowerCase() + '. Bigger merges score more.</li>' +
+      '<li><b>Don’t cross the dashed line.</b> If the pile stays above it for a couple of seconds, it’s game over.</li>' +
+      '<li><b>Chain reactions:</b> quick merges in a row multiply your points.</li>' +
+      '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
+      '<li><b>' + (NORMIE ? "🦪 Pearl" : "🧬 Stem cell") + ':</b> a rare wild card that levels up whatever it touches.</li>' +
+      '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐.</li>' +
+      '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>' +
+      '</ul><button type="button" class="mrg-help-go" id="mrg-help-go">Got it</button></div>';
+  }
+  function showHelp() {
+    var o = document.getElementById("mrg-help-ov"); if (o) o.remove();
+    o = document.createElement("div"); o.id = "mrg-help-ov"; o.className = "mrg-help-ov"; o.innerHTML = helpHTML(); document.body.appendChild(o);
+    var close = function () { o.remove(); try { localStorage.setItem("mrg-help-seen", "1"); } catch (e) {} };
+    o.addEventListener("click", function (e) { if (e.target === o || e.target.id === "mrg-help-go") close(); });
+    document.addEventListener("keydown", function k(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", k); } });
+    var b = document.getElementById("mrg-help-go"); if (b) b.focus();
+  }
+  document.getElementById("mrg-help").addEventListener("click", showHelp);
+  try { if (!localStorage.getItem("mrg-help-seen")) setTimeout(showHelp, 400); } catch (e) {}
   if ($("lede")) $("lede").textContent = K.lede;
   function normFoot() { var ft = document.querySelector("footer.site"); if (ft) Array.prototype.forEach.call(ft.childNodes, function (t) { if (t.nodeType === 3 && /medical/i.test(t.nodeValue)) t.nodeValue = "A bonus game. Just for fun."; }); }
   if (NORMIE) { normFoot(); document.addEventListener("DOMContentLoaded", normFoot); }
