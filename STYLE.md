@@ -67,6 +67,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Puzzle archives
 - _scripts/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 _scripts/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.
+- Any task that changes data/health-days.json must run `python3 _scripts/build_days.py` (rebuilds the crawlable /days/ calendar list) and commit days/index.html and sitemap.xml. Also re-run it each January.
 
 ## Weekly Dose (Zebra Mail): Stackulus daily
 - In "🧩 This week's puzzles", always include one line for the Stackulus daily challenge, e.g. "🫀 Stackulus daily: same organs for everyone, one scored go a day. Beat the world board: https://maladywise.com/stackulus/" (vary the wording each week; plain link, no date).
