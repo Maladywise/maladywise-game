@@ -31,7 +31,7 @@
       BADQ: { pillcheese: "Pill in cheese. She ate the cheese. The pill is on your shoe.", wormer: "Worming tablet. Chalky betrayal. Spat out.", pipette: "Flea treatment goes on the neck, not in the mouth. Bleurgh.", dietfood: "Diet food. Clover has lodged a formal complaint." },
       SMASHQ: { vase: ["Lab flask: shattered. Science: over.", "That was a sample. Was.", "Crash. Nobody label that."], tv: ["Records screen smashed. His file: gone.", "No more notes saying ‘bitey’.", "The computer says no. Then nothing."], tank: ["THE TREAT DISPENSER. Jackpot. +1 life.", "Dispenser destroyed. Treats everywhere. +1 life."] },
       CAMP_NAME: [null, "CHECK-IN", "TREAT BRIBE", "WAITING ROOM", "AFTER HOURS", "DR POKESWORTH", "SQUAWK HOUR", "DIET FOOD DAY", "CONE ZONE", "VACCINE DAY", "THE FINAL CONSULT"],
-      CAMP_TIP: [null, "The vet. It starts spicier than the kitchen. Kick everything off the table.", "Clover’s turn: eat the treats. Not the pill in the cheese.", "Faster. More spiky things. The mozzies are out.", "After hours. Faster again. The fleas are hopping.", "BOSS: Dr Pokesworth. Hit the glowing spots. Jump the thermometer. Wriggle out of towels.", "Faster. The cockatoo is restless.", "Faster. Diet food everywhere. Spot it.", "Faster. Heavier things. The ginger patient is cockier.", "Faster. Vaccine day: everyone’s yawning.", "After hours. Top speed. One life. Then the vet and her nurse."],
+      CAMP_TIP: [null, "The vet. It starts spicier than the kitchen. Kick everything off the table.", "Clover’s turn: eat the treats. Not the pill in the cheese.", "Faster. More spiky things. The mozzies are out.", "After hours. Faster again. The fleas are hopping.", "BOSS: Dr Pokesworth. Hit the glowing spots. Jump the thermometer. Wriggle out of towels.", "Faster. The cockatoo is restless.", "Faster. Diet food everywhere. Spot it.", "Faster. Heavier things. The ginger patient is cockier.", "Faster. Vaccine day: everyone’s yawning.", "After hours. Top speed. One life. Then the vet and the nurse."],
       CTITLES: [[5, "Uncooperative"], [10, "Fractious"], [15, "Needs Two Nurses"], [25, "Banned from Reception"], [40, "Waiting Room Legend"]],
       SPOTS: ["CLIPBOARD", "GLASSES", "COFFEE"]
     };
@@ -411,7 +411,7 @@
       }
       [["l", left, -1], ["r", right, 1]].forEach(function (q) {
         var s = q[2], what = q[1], sx = sh[q[0]][0], sy = sh[q[0]][1], hx, hy;
-        if (what === "hidden") return; // that hand is behind her back. Whatever is in it stays there.
+        if (what === "hidden") return; // that hand is hidden. Whatever is in it stays there.
         if (what === "thermo") {
           var tip = a.ph === "go" ? b.x + s * 6 : vx + s * 70, gl = a.ph === "warn" ? 0.25 + 0.4 * (1 - a.t / a.max) * (0.7 + 0.3 * Math.sin(t() * 40)) : 0.15;
           hx = tip - s * 72; hy = BENCH - 80; hx = s < 0 ? Math.max(hx, vx - 150) : Math.min(hx, vx + 150);
