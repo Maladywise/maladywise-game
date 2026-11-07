@@ -31,7 +31,7 @@
       BADQ: { pillcheese: "Pill in cheese. She ate the cheese. The pill is on your shoe.", wormer: "Worming tablet. Chalky betrayal. Spat out.", pipette: "Flea treatment goes on the neck, not in the mouth. Bleurgh.", dietfood: "Diet food. Clover has lodged a formal complaint." },
       SMASHQ: { vase: ["Lab flask: shattered. Science: over.", "That was a sample. Was.", "Crash. Nobody label that."], tv: ["Records screen smashed. His file: gone.", "No more notes saying ‘bitey’.", "The computer says no. Then nothing."], tank: ["THE TREAT DISPENSER. Jackpot. +1 life.", "Dispenser destroyed. Treats everywhere. +1 life."] },
       CAMP_NAME: [null, "CHECK-IN", "TREAT BRIBE", "WAITING ROOM", "AFTER HOURS", "DR POKESWORTH", "SQUAWK HOUR", "DIET FOOD DAY", "CONE ZONE", "VACCINE DAY", "THE FINAL CONSULT"],
-      CAMP_TIP: [null, "The vet. It starts spicier than the kitchen. Kick everything off the table.", "Clover’s turn: eat the treats. Not the pill in the cheese.", "Faster. More spiky things. The mozzies are out.", "After hours. Faster again. The fleas are hopping.", "BOSS: Dr Pokesworth. Hit the glowing spots. Jump the thermometer. Wriggle out of towels.", "Faster. The cockatoo is restless.", "Faster. Diet food everywhere. Spot it.", "Faster. Heavier things. The ginger patient is cockier.", "Faster. Vaccine day: everyone’s yawning.", "After hours. Top speed. One life. Then the vet and his nurse."],
+      CAMP_TIP: [null, "The vet. It starts spicier than the kitchen. Kick everything off the table.", "Clover’s turn: eat the treats. Not the pill in the cheese.", "Faster. More spiky things. The mozzies are out.", "After hours. Faster again. The fleas are hopping.", "BOSS: Dr Pokesworth. Hit the glowing spots. Jump the thermometer. Wriggle out of towels.", "Faster. The cockatoo is restless.", "Faster. Diet food everywhere. Spot it.", "Faster. Heavier things. The ginger patient is cockier.", "Faster. Vaccine day: everyone’s yawning.", "After hours. Top speed. One life. Then the vet and her nurse."],
       CTITLES: [[5, "Uncooperative"], [10, "Fractious"], [15, "Needs Two Nurses"], [25, "Banned from Reception"], [40, "Waiting Room Legend"]],
       SPOTS: ["CLIPBOARD", "GLASSES", "COFFEE"]
     };
@@ -328,8 +328,11 @@
       var hx = fz ? 3 : 0, hy = -186;
       if (o.coned) coneRing(hx, hy, 70, 64);
       ell(hx - 36, hy + 4, 7, 10, "#F1C9A5"); ell(hx + 36, hy + 4, 7, 10, "#F1C9A5"); ell(hx, hy, 36, 40, "#F1C9A5");
-      ctx.fillStyle = "#8E867B"; [-1, 1].forEach(function (s) { ctx.beginPath(); ctx.moveTo(hx + s * 30, hy - 22); ctx.quadraticCurveTo(hx + s * (fz ? 52 : 42), hy - 18, hx + s * 38, hy + 2); ctx.quadraticCurveTo(hx + s * 30, hy - 6, hx + s * 30, hy - 22); ctx.fill(); if (fz) { line([[hx + s * 40, hy - 16], [hx + s * 50, hy - 26]], "#8E867B", 3); line([[hx + s * 41, hy - 8], [hx + s * 53, hy - 10]], "#8E867B", 3); } });
-      ctx.strokeStyle = "#8E867B"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(hx - 4, hy - 39); if (fz) ctx.quadraticCurveTo(hx + 4, hy - 64, hx + 18, hy - 60); else ctx.quadraticCurveTo(hx + 10, hy - 54, hx + 20, hy - 44); ctx.stroke();
+      // Dr Pokesworth: auburn hair in a bun (falls loose when frazzled), small gold earrings
+      ctx.fillStyle = "#7A4A2E"; [-1, 1].forEach(function (s) { ctx.beginPath(); ctx.moveTo(hx + s * 26, hy - 30); ctx.quadraticCurveTo(hx + s * (fz ? 54 : 46), hy - 14, hx + s * 42, hy + 18); ctx.quadraticCurveTo(hx + s * 36, hy + 6, hx + s * 33, hy - 14); ctx.closePath(); ctx.fill(); if (fz) { line([[hx + s * 44, hy - 6], [hx + s * 56, hy - 14]], "#7A4A2E", 3); line([[hx + s * 45, hy + 6], [hx + s * 57, hy + 8]], "#7A4A2E", 3); } });
+      circ(hx - 37, hy + 15, 2.6, "#E8B53A"); circ(hx + 37, hy + 15, 2.6, "#E8B53A");
+      ctx.fillStyle = "#7A4A2E"; ctx.beginPath(); ctx.moveTo(hx - 37, hy - 4); ctx.quadraticCurveTo(hx - 40, hy - 44, hx, hy - 44); ctx.quadraticCurveTo(hx + 40, hy - 44, hx + 37, hy - 4); ctx.quadraticCurveTo(hx + 30, hy - 22, hx + 12, hy - 26); ctx.quadraticCurveTo(hx - 2, hy - 18, hx - 8, hy - 28); ctx.quadraticCurveTo(hx - 24, hy - 22, hx - 37, hy - 4); ctx.fill();
+      if (fz) { circ(hx + 16, hy - 50, 12, "#7A4A2E"); line([[hx + 22, hy - 60], [hx + 34, hy - 70]], "#7A4A2E", 3); line([[hx + 8, hy - 58], [hx + 2, hy - 72]], "#7A4A2E", 3); } else { circ(hx, hy - 52, 13, "#7A4A2E"); line([[hx - 10, hy - 54], [hx + 10, hy - 50]], "#E8B53A", 2.4); }
       ell(hx - 12, hy - 26, 10, 5, "rgba(255,255,255,.35)", -0.4);
       ctx.save(); ctx.translate(hx, hy - 4 + (fz ? 3 : 0)); ctx.rotate(fz ? 0.16 : 0);
       [-14, 14].forEach(function (gx) { circ(gx, 0, 12, "rgba(220,240,250,.55)"); ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(gx, 0, 12, 0, 7); ctx.stroke(); });
@@ -339,7 +342,7 @@
       else { [-14, 14].forEach(function (gx) { circ(gx + 2, 1, 3.2, "#1B1430"); circ(gx + 3, 0, 1, "#FFFFFF"); }); line([[-22, -16], [-6, -12]], "#6B5A4A", 3); line([[22, -16], [6, -12]], "#6B5A4A", 3); }
       ctx.restore();
       ell(hx + 2, hy + 12, 6, 5, "#E39E86");
-      ctx.fillStyle = "#8E867B"; ctx.beginPath(); ctx.moveTo(hx, hy + 18); ctx.quadraticCurveTo(hx - 14, hy + 14, hx - 24, hy + 26); ctx.quadraticCurveTo(hx - 10, hy + 22, hx, hy + 24); ctx.quadraticCurveTo(hx + 10, hy + 22, hx + 24, hy + 26); ctx.quadraticCurveTo(hx + 14, hy + 14, hx, hy + 18); ctx.fill();
+      // (no moustache)
       if (fz || o.hit) ell(hx + 2, hy + 31, 7, 4.5, "#5A1F2B"); else { ctx.strokeStyle = "#5A3A30"; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.moveTo(hx - 8, hy + 30); ctx.quadraticCurveTo(hx + 2, hy + 35, hx + 12, hy + 28); ctx.stroke(); }
       if (fz) [[hx - 40, hy - 26], [hx + 42, hy - 18]].forEach(function (d) { ctx.fillStyle = "#8FC3E6"; ctx.beginPath(); ctx.moveTo(d[0], d[1] - 6); ctx.quadraticCurveTo(d[0] + 5, d[1] + 2, d[0], d[1] + 4); ctx.quadraticCurveTo(d[0] - 5, d[1] + 2, d[0], d[1] - 6); ctx.fill(); });
       if (!fz) { ctx.strokeStyle = "#2B2340"; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(hx, hy - 20, 37, 10, 0, Math.PI, 2 * Math.PI); ctx.stroke(); circ(hx + 26, hy - 34, 8, "#C9D2D8"); circ(hx + 26, hy - 34, 5, "#EEF3F6"); }
@@ -408,7 +411,7 @@
       }
       [["l", left, -1], ["r", right, 1]].forEach(function (q) {
         var s = q[2], what = q[1], sx = sh[q[0]][0], sy = sh[q[0]][1], hx, hy;
-        if (what === "hidden") return; // that hand is behind his back. Whatever is in it stays there.
+        if (what === "hidden") return; // that hand is behind her back. Whatever is in it stays there.
         if (what === "thermo") {
           var tip = a.ph === "go" ? b.x + s * 6 : vx + s * 70, gl = a.ph === "warn" ? 0.25 + 0.4 * (1 - a.t / a.max) * (0.7 + 0.3 * Math.sin(t() * 40)) : 0.15;
           hx = tip - s * 72; hy = BENCH - 80; hx = s < 0 ? Math.max(hx, vx - 150) : Math.min(hx, vx + 150);
