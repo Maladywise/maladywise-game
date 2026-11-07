@@ -64,6 +64,21 @@ html[data-theme="dark"] #skr{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #skr .cell.wl{background-image:linear-gradient(color-mix(in srgb,var(--accent) 11%,transparent),color-mix(in srgb,var(--accent) 11%,transparent))}
 #skr .cell.wl::before{content:"";position:absolute;left:18%;right:18%;bottom:3px;height:2px;border-radius:2px;background:var(--accent);opacity:.45}
 #skr .cell.hinted.wl::before{left:2px;right:auto;top:2px;bottom:auto;height:0;width:0;border-radius:0;background:none;opacity:1;border-left:7px solid var(--accent);border-bottom:7px solid transparent}
+/* medical-number cages (killer sudoku) */
+#skr .cell.cg{padding-top:5px}
+#skr .cgb{position:absolute;inset:3px;pointer-events:none;border:0 dashed var(--muted);opacity:.85}
+#skr .cgb.t{border-top-width:1.5px} #skr .cgb.r{border-right-width:1.5px} #skr .cgb.b{border-bottom-width:1.5px} #skr .cgb.l{border-left-width:1.5px}
+#skr .cgb.jt{top:0} #skr .cgb.jl{left:0} #skr .cgb.jr{right:-1px} #skr .cgb.jb{bottom:-1px}
+#skr .cell.br .cgb.jr{right:-3px} #skr .cell.bb .cgb.jb{bottom:-3px}
+#skr .cgl{position:absolute;top:0;left:2px;z-index:2;max-width:calc(var(--run,2) * 100% + (var(--run,2) - 1) * 1px - 7px);padding:1px 2px 3px 1px;background-color:inherit;border-radius:0 0 3px 0;
+  font:600 clamp(7px,2vw,9.5px)/1.1 var(--body);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;letter-spacing:-.01em}
+#skr .cgl b{color:var(--accent);font-weight:700}
+#skr .cell.cg .nts{inset:10px 2px 2px}
+#skr .cgnote{margin:-4px 0 0;font-size:12px;color:var(--muted);text-align:center}
+#skr .lkey{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:0;font-size:13px}
+#skr .lkey span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-variant-numeric:tabular-nums}
+#skr .lkey b{margin-left:3px;color:var(--accent)}
+#skr .lkey .lkt{border:0;background:none;padding:0 2px 0 0;font:600 10px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 #skr .board.won .cell{animation:skrwin .5s ease-out both}
 @keyframes skrwin{from{filter:brightness(1.12)}to{filter:none}}
 #skr .board.done .cell{cursor:default}
