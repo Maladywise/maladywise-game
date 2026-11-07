@@ -86,3 +86,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Never edit or delete entries that already have a `typefully_id` (already sent). Never put API keys in the repo or tasks; the GitHub Action uses the TYPEFULLY_API_KEY secret.
 - Weekly mix: Mon world days of the week + ECG teaser; Tue deep dive (thread from that week's deep dive); Wed zebra case / Super Zebritis; Thu a research nugget from the Weekly Dose; Fri Zebra Mail is out + subscribe; Sat arcade (Stackulus, Mergeon, Basil + Clover) or Cryptoplexy; Sun Grand Rounds + Normie week that was. A themed day overrides with that day's puzzle (dated link). Dated links for puzzle teasers, plain links for general posts. No mascot-quiz posts. Sass at hype, never patients. Ahpra/TGA-safe.
 - The Friday email to the owner still lists the week's posts so they can be edited in Typefully before they go out.
+
+## Trending themes (from Nov 2026)
+- A daily evening task (7:43pm Sydney) re-themes TOMORROW's puzzles from Google Trends. Main theme = tomorrow's world/health day if there's a clear one (priority 1–3 or who/specialty/zebra tag); otherwise the top medical trend. Then weave in as many other trending terms as fit (Medical: 3–6; Normie: 2–4 general trends).
+- All the usual rules apply: no giveaways, 180-day uniqueness, weekday difficulty, sensitive topics handled kindly (no jokes about deaths/outbreaks), Normie non-medical, verified facts. Monthly/weekly tasks should not undo a trend swap already logged in data/trends.json "used" for that date.
