@@ -134,6 +134,9 @@ def page(path, title, desc, og, body, lds, ecg=False):
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{SITE}/assets/og/{og}.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/assets/shell.css?v={vcss}">
 <link rel="stylesheet" href="/assets/quizkit.css?v={qkv}">
 <script src="/assets/games.js?v={vg}"></script>

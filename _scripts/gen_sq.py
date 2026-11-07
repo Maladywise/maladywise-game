@@ -347,6 +347,9 @@ def head():
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="https://maladywise.com/assets/og/gpschool.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/assets/shell.css?v={V['shell.css']}">
 <script src="/assets/games.js?v={V['games.js']}"></script>
 <script src="/assets/site.js?v={V['site.js']}"></script>
