@@ -3,6 +3,7 @@
 //   We count IDs seen in the last 75s. Nothing is written to disk; IPs are only used briefly for rate limiting.
 // - Basil + Clover and Organ Drop leaderboards: all-time and today's daily challenge. Stores a chosen name, score, round and a random
 //   per-browser game ID (so a player's best replaces their old score). Top 200 kept per board.
+// - Sudokrine daily (sdaily): today's fastest solve times in whole seconds. Lower is better (an ascending board).
 // - Feedback: visitors report puzzle errors, image licence problems and bugs (POST /fb); owner reads them with the admin key.
 // - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
@@ -66,15 +67,19 @@ async function addDone(g) {
 // ---------- Basil + Clover leaderboards ----------
 const BAD = /(fuck|fuk|shit|cunt|nigg|fag|bitch|whore|slut|rape|nazi|hitler|dick|cock|puss|wank|twat|retard|kike|spic|chink|paki|porn|penis|vagina|anal|cum|tits|boob|sex)/i;
 const memLB = {};
-function lbAnon(b) { return b && b.charAt(0) === "o" ? "Anonymous surgeon" : "Anonymous cat"; }
+function lbAnon(b) { return b && b.charAt(0) === "o" ? "Anonymous surgeon" : b && b.charAt(0) === "s" ? "Anonymous owl" : "Anonymous cat"; }
 function lbName(s, b) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); if (!n || BAD.test(n.replace(/[^a-z]/gi, ""))) n = lbAnon(b); return n; }
-// boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge)
-const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily"];
-const DAILY_BOARDS = ["daily", "vdaily", "odaily"];
+// boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge),
+// sdaily (Sudokrine: today's fastest times; s = seconds, r = 1 Medical or 2 Normie)
+const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily", "sdaily"];
+const DAILY_BOARDS = ["daily", "vdaily", "odaily", "sdaily"];
+const ASC_BOARDS = ["sdaily"]; // lower score is better
+function lbAsc(b) { return ASC_BOARDS.indexOf(b) >= 0; }
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
 function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : "lb:all"; }
 // score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
-function lbValid(b, s, r) {
+function lbValid(b, s, r, raw) {
+  if (b === "sdaily") return /^\d{1,5}$/.test(String(raw || "")) && s >= 20 && s <= 7200 && (r === 1 || r === 2); // 20 s to 2 h, whole seconds
   if (b.charAt(0) === "o") return s > 0 && r >= 1 && r <= 999 && s <= 4000 * r * r && s <= 50000000;
   return s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
 }
@@ -82,30 +87,33 @@ async function lbTop(b, me) {
   const key = lbKey(b);
   if (kv && kv.isReady) {
     try {
-      const rows = await kv.zRangeWithScores(key, 0, 9, { REV: true });
+      const rows = lbAsc(b) ? await kv.zRangeWithScores(key, 0, 9) : await kv.zRangeWithScores(key, 0, 9, { REV: true });
       if (!rows.length) return [];
       const meta = await kv.hmGet(key + ":m", rows.map((r) => r.value));
       return rows.map((r, i) => { let m = {}; try { m = JSON.parse(meta[i] || "{}"); } catch (e) {} return { n: m.n || lbAnon(b), s: r.score, r: m.r || 1, me: !!me && r.value === me }; });
     } catch (e) { console.error("lbTop", e.message); }
   }
   const m = memLB[key] || {};
-  return Object.entries(m).sort((a, b2) => b2[1].s - a[1].s).slice(0, 10).map(([id, v]) => ({ n: v.n, s: v.s, r: v.r, me: id === me }));
+  return Object.entries(m).sort((a, b2) => lbAsc(b) ? a[1].s - b2[1].s : b2[1].s - a[1].s).slice(0, 10).map(([id, v]) => ({ n: v.n, s: v.s, r: v.r, me: id === me }));
 }
 async function lbAdd(b, id, n, s, r) {
-  const key = lbKey(b), ttl = DAILY_BOARDS.indexOf(b) >= 0 ? 60 * 60 * 24 * 3 : 0;
+  const key = lbKey(b), ttl = DAILY_BOARDS.indexOf(b) >= 0 ? 60 * 60 * 24 * 3 : 0, asc = lbAsc(b);
+  const better = (cur) => cur == null || (asc ? s < cur : s > cur);
   if (kv && kv.isReady) {
     try {
       const cur = await kv.zScore(key, id);
-      if (cur == null || s > cur) { await kv.zAdd(key, { score: s, value: id }); await kv.hSet(key + ":m", id, JSON.stringify({ n, r })); }
+      if (better(cur)) { await kv.zAdd(key, { score: s, value: id }); await kv.hSet(key + ":m", id, JSON.stringify({ n, r })); }
       else { const old = await kv.hGet(key + ":m", id); let m = {}; try { m = JSON.parse(old || "{}"); } catch (e) {} m.n = n; await kv.hSet(key + ":m", id, JSON.stringify(m)); }
-      const extra = await kv.zRange(key, 0, -201);
+      const extra = asc ? await kv.zRange(key, 200, -1) : await kv.zRange(key, 0, -201); // drop the worst beyond the top 200
       if (extra.length) { await kv.zRem(key, extra); await kv.hDel(key + ":m", extra); }
       if (ttl) { await kv.expire(key, ttl); await kv.expire(key + ":m", ttl); }
       return;
     } catch (e) { console.error("lbAdd", e.message); }
   }
   const m = memLB[key] = memLB[key] || {};
-  if (!m[id] || s > m[id].s) m[id] = { n, s, r }; else m[id].n = n;
+  if (better(m[id] ? m[id].s : null)) m[id] = { n, s, r }; else m[id].n = n;
+  const ids = Object.keys(m);
+  if (asc && ids.length > 200) ids.sort((a, b2) => asc ? m[a].s - m[b2].s : m[b2].s - m[a].s).slice(200).forEach((x) => { delete m[x]; });
 }
 
 // ---------- Specialists: visitor-suggested practical tags (fixed list, no free text, moderated) ----------
@@ -215,7 +223,7 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === "/score" && req.method === "POST") {
       const q = url.searchParams, b = lbBoard(q.get("b")), id = clean(q.get("id"), 16);
       const s = Math.floor(Number(q.get("s"))), r = Math.floor(Number(q.get("r")));
-      const ok = id.length >= 6 && lbValid(b, s, r);
+      const ok = id.length >= 6 && lbValid(b, s, r, q.get("s"));
       if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n"), b), s, r);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay(), board: b }));

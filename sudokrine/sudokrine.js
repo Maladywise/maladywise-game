@@ -1,10 +1,14 @@
-/* Sudokrine: daily medical sudoku with symbols. 6x6 mini (2x3 boxes) Mon-Thu, 9x9 Fri-Sun.
+/* Sudokrine: daily medical sudoku. 6x6 mini (2x3 boxes) Mon-Thu, 9x9 Fri-Sun.
    Puzzles in puzzles/YYYY-MM.json, made and verified by gen.py (unique solution, logical grade):
-   {date, number, difficulty, size, box:[r,c], puzzle, solution, clues, techniques, fact, nfact}. Digit k = symbol k.
-   Normie mode: same puzzles, fruit symbols, fun facts, "n-" storage keys. */
+   {date, number, difficulty, size, box:[r,c], puzzle, solution, clues, techniques, fact, nfact, word?}. Digit k = symbol k.
+   Hidden word (from 2026-11-08): word = {line, cells, m:{w,d,l}, n:{w,d,l}}. Digit k shows as letter l[k-1]; the cells
+   spell w once solved. Guessing w before finishing (3 wrong guesses allowed) earns a Word bonus.
+   Race Iris: a target time per difficulty. World board "sdaily" (today's fastest clean solves) on the Malady Wise counter
+   server, used ONLY once the server echoes board === "sdaily" (an older server maps unknown boards to Basil + Clover's "all").
+   Normie mode: same puzzles, fruit symbols or everyday words, fun facts, "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1", HINTS = 3, LAUNCH = "2026-10-26";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", HINTS = 3, GUESSES = 3, LAUNCH = "2026-10-26";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", NAME = NORMIE ? "Sudokrine (Normie)" : "Sudokrine";
   var root = document.getElementById("skr");
   if (!document.querySelector("link[data-skr]")) {
@@ -36,14 +40,17 @@
   ];
   var SYM = NORMIE ? FRUIT : MED;
   function svg(k) { return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + SYM[k - 1][1] + "</svg>"; }
+  var W = null, LET = null, LINE = [], PADORD = []; // hidden-word day: word {w, d, l}, letters by digit, word-line cells, pad order (A-Z)
+  var IRIS = { Easy: 180, Medium: 300, Hard: 720, Genius: 1080, Einstein: 1800 }; // Iris's target times, seconds
 
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="skr-eyebrow">Sudokrine</span><span class="badge" id="skr-badge" hidden></span></div>' +
-    ' <div class="sbar" id="skr-bar"><span class="timer" id="skr-timer" aria-label="Time">0:00</span><span class="hintsleft" id="skr-hl"></span></div>' +
+    ' <div class="sbar" id="skr-bar"><span class="timer" id="skr-timer" aria-label="Time">0:00</span><span class="iris" id="skr-iris"></span><span class="hintsleft" id="skr-hl"></span></div>' +
     ' <div class="board" id="skr-board" role="grid" aria-label="Sudokrine grid"></div>' +
     ' <div class="msg" id="skr-msg" aria-live="polite"></div>' +
     ' <div class="ctl" id="skr-play">' +
+    '  <form class="wg" id="skr-wg" hidden autocomplete="off"><label for="skr-wgi" id="skr-wgl">Guess the word</label><div class="wgrow"><input id="skr-wgi" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go"><button type="submit" class="wgb">Guess</button></div><p class="wgn" id="skr-wgn" aria-live="polite"></p></form>' +
     '  <div class="pad" id="skr-pad"></div>' +
     '  <div class="tbox">' +
     '   <button type="button" class="tool" id="skr-notes" aria-pressed="false"><span class="ti" aria-hidden="true">✏️</span><span>Notes <b id="skr-noteson">off</b></span></button>' +
@@ -111,11 +118,12 @@
   // ---------- render ----------
   var ICON = { Easy: "🟢", Medium: "🟡", Hard: "🔴", Genius: "🧠", Einstein: "⚛️" };
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
-  function glyph(k) { return nums ? '<span class="num">' + k + "</span>" : svg(k); }
-  function label(k) { return nums ? String(k) : SYM[k - 1][0]; }
+  function glyph(k) { return nums ? '<span class="num">' + k + "</span>" : LET ? '<span class="ltr">' + LET[k - 1] + "</span>" : svg(k); }
+  function label(k) { return nums ? String(k) : LET ? LET[k - 1] : SYM[k - 1][0]; }
+  function padOrder() { var o = []; for (var k = 1; k <= n; k++) o.push(k); if (LET && !nums) o.sort(function (a, b) { return LET[a - 1] < LET[b - 1] ? -1 : 1; }); return o; }
   function paintBoard() {
     var b = $("board"), bad = showMis && !st.done ? clashes() : {}, sv = sel >= 0 ? st.g[sel] : 0, h = "";
-    b.className = "board n" + n + (nums ? " nums" : "") + (st.done ? " done" : "") + (st.done && st.win ? " won" : "");
+    b.className = "board n" + n + (nums ? " nums" : LET ? " ltrs" : "") + (st.done ? " done" : "") + (st.done && st.win ? " won" : "");
     b.style.setProperty("--n", n);
     for (var i = 0; i < n * n; i++) {
       var p = rc(i), v = st.g[i], cls = "cell";
@@ -124,18 +132,19 @@
       if ((p[0] + 1) % BR === 0 && p[0] < n - 1) cls += " bb";
       if (!st.done && sel >= 0) { if (i === sel) cls += " sel"; else if (sv && v === sv) cls += " same"; else if (peers(i, sel)) cls += " zone"; }
       if (bad[i] && !giv[i]) cls += " bad"; else if (bad[i]) cls += " badg";
+      var onLine = LINE.indexOf(i) >= 0; if (onLine) cls += " wl";
       var inner = "";
       if (v) inner = glyph(v);
       else if (st.n[i]) { inner = '<span class="nts">'; for (var k = 1; k <= n; k++) inner += "<i" + (sv === k && !st.done ? ' class="on"' : "") + ">" + (st.n[i] & (1 << (k - 1)) ? glyph(k) : "") + "</i>"; inner += "</span>"; }
-      var al = "Row " + (p[0] + 1) + ", column " + (p[1] + 1) + ": " + (v ? label(v) + (giv[i] ? " (given)" : "") : "empty");
+      var al = "Row " + (p[0] + 1) + ", column " + (p[1] + 1) + (onLine ? ", word line" : "") + ": " + (v ? label(v) + (giv[i] ? " (given)" : "") : "empty");
       h += '<button type="button" class="' + cls + '" data-i="' + i + '" role="gridcell" aria-label="' + al + '"' + (i === sel ? ' aria-selected="true"' : "") + ">" + inner + "</button>";
     }
     b.innerHTML = h;
   }
   function paintPad() {
     var cnt = {}; st.g.forEach(function (v) { if (v) cnt[v] = (cnt[v] || 0) + 1; });
-    var h = "";
-    for (var k = 1; k <= n; k++) h += '<button type="button" class="key' + ((cnt[k] || 0) >= n ? " used" : "") + '" data-k="' + k + '" aria-label="' + (notesOn ? "Note " : "Place ") + label(k) + '">' + glyph(k) + (nums ? "" : '<small aria-hidden="true">' + k + "</small>") + "</button>";
+    var h = ""; PADORD = padOrder();
+    PADORD.forEach(function (k, x) { h += '<button type="button" class="key' + ((cnt[k] || 0) >= n ? " used" : "") + '" data-k="' + k + '" aria-label="' + (notesOn ? "Note " : "Place ") + label(k) + '">' + glyph(k) + (nums ? "" : '<small aria-hidden="true">' + (x + 1) + "</small>") + "</button>"; });
     $("pad").innerHTML = h;
     $("pad").className = "pad n" + n + (notesOn ? " notes" : "");
     $("notes").setAttribute("aria-pressed", notesOn ? "true" : "false"); $("notes").classList.toggle("on", notesOn); $("noteson").textContent = notesOn ? "on" : "off";
@@ -143,10 +152,37 @@
     $("undo").disabled = !(st.undo && st.undo.length);
     $("hl").textContent = st.hints ? st.hints + " hint" + (st.hints > 1 ? "s" : "") + " used" : "";
     $("giveup").textContent = armGive ? "Sure? Tap again to reveal" : "Give up";
+    paintGuess();
+  }
+  function paintGuess() {
+    var f = $("wg"); f.hidden = !W || st.done; if (f.hidden) return;
+    var wrong = st.wg || [], left = GUESSES - wrong.length, row = f.querySelector(".wgrow"), nt = $("wgn");
+    $("wgi").maxLength = n; $("wgi").setAttribute("aria-describedby", "skr-wgn");
+    $("wgl").textContent = st.wb ? "Word bonus banked" : "Guess the " + n + "-letter word";
+    row.hidden = !!st.wb || left <= 0;
+    var tried = wrong.length ? ' <span class="wgx">' + wrong.map(function (w) { return "<s>" + esc(w) + "</s>"; }).join(" ") + "</span>" : "";
+    nt.innerHTML = st.wb ? "🔤 <b>" + esc(W.w) + "</b>. Now finish the grid." : left <= 0 ? "No guesses left. Finish the grid to see the word." + tried
+      : "The shaded line spells it. Guess before you finish for a Word bonus. " + left + (left === 1 ? " guess" : " guesses") + " left, free." + tried;
+  }
+  function guess(raw) {
+    if (!W || !P || st.done || st.wb) return;
+    var g = String(raw || "").toUpperCase().replace(/[^A-Z]/g, ""), wrong = st.wg = st.wg || [];
+    if (wrong.length >= GUESSES) return;
+    if (g.length !== n) { say("The word has " + n + " letters."); return; }
+    if (wrong.indexOf(g) >= 0) { say("Already tried that one."); return; }
+    $("wgi").value = "";
+    if (g === W.w) { st.wb = 1; say(pick(NORMIE ? ["Word bonus! Nicely spotted.", "Word bonus! Now finish the grid.", "Got it. Word bonus banked."] : ["Word bonus! Diagnosis before the bloods came back.", "Word bonus! Now finish the grid.", "Spot on. Word bonus banked."])); }
+    else { wrong.push(g); var left = GUESSES - wrong.length; say(left ? "Not the word. " + left + (left === 1 ? " guess" : " guesses") + " left." : "Out of guesses. The grid will tell you."); }
+    save(); paintGuess();
+  }
+  function paintIris() {
+    var t = IRIS[P.difficulty] || 600, el = $("iris");
+    el.textContent = "🦉 Iris " + fmt(t); el.className = "iris" + (!st.done && st.t >= t ? " past" : "");
+    el.setAttribute("aria-label", "Iris’s target time " + fmt(t));
   }
   function paint() {
     if (!P) return;
-    $("timer").textContent = fmt(st.t);
+    $("timer").textContent = fmt(st.t); paintIris();
     $("play").hidden = st.done;
     paintBoard(); if (!st.done) paintPad(); renderResult();
   }
@@ -154,10 +190,16 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🍎 " : " 💊 ") + (st.win ? fmt(st.t) + " · " + hintWord(st.hints) : "gave up") + "\nmaladywise.com";
+    var beat = st.win && st.t < (IRIS[P.difficulty] || 600);
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🍎 " : " 💊 ") + (st.win ? fmt(st.t) + " · " + hintWord(st.hints) : "gave up") +
+      (W && st.wb ? " · 🔤 Word bonus" : "") + (beat ? " · 🦉 Beat Iris" : "") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = st.win ? Math.min(st.hints || 0, 3) : 4, L = ["0", "1", "2", "3", "X"];
     r.hidden = false;
     r.innerHTML = '<p class="verdict ' + (st.win ? "ok" : "no") + '">' + (st.win ? "Solved in " + fmt(st.t) + " · " + hintWord(st.hints) : "Solution revealed") + "</p>" +
+      (W && st.wb ? '<p class="wbonus">🔤 Word bonus</p>' : "") +
+      (st.win ? '<p class="irisv' + (beat ? " beat" : "") + '"><b>' + (beat ? "🦉 You beat Iris!" : "🦉 Iris was quicker") + "</b> " + esc(irisLine(beat)) + ' <span>Iris’s ' + P.difficulty + " target: " + fmt(IRIS[P.difficulty] || 600) + "</span></p>" : "") +
+      (W ? '<div class="fact word"><b>The hidden word</b><p><span class="wd">' + esc(W.w) + "</span> " + esc(W.d) + "</p></div>" : "") +
+      lbHtml() +
       '<div class="fact"><b>' + (NORMIE ? "Fun fact" : "A dose of fact") + "</b><p>" + esc(NORMIE ? P.nfact : P.fact) + "</p></div>" +
       (P.techniques && P.techniques.length ? '<div class="tech"><b>Logic needed</b><div class="chips">' + P.techniques.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("") + "</div></div>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -167,6 +209,58 @@
       var b = this;
       function selTxt() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); b.textContent = "Selected. Copy it"; }
       try { navigator.clipboard.writeText(share).then(function () { b.textContent = "Copied"; }, selTxt); } catch (e) { selTxt(); }
+    };
+    lbWire();
+  }
+  var IRISL = NORMIE ? {
+    win: ["She says a moth distracted her.", "She’s pretending not to mind.", "Hoo saw that coming?", "She’s been out-flown. Well played."],
+    lose: ["She’s been up all night practising.", "Rematch tomorrow?", "Owls are smug like that. Go again tomorrow."]
+  } : {
+    win: ["She’s blaming the night shift.", "She’s checking your cortisol levels.", "Her feathers are ruffled. Her glands are fine.", "She’ll need a strong coffee and a lie-down."],
+    lose: ["She’s had a lot of practice at 3 am.", "Rematch tomorrow?", "Owls see well in the dark. Go again tomorrow."]
+  };
+  function irisLine(beat) { if (!st.il) { st.il = pick(beat ? IRISL.win : IRISL.lose); put(KEY, st); } return st.il; }
+
+  // ---------- world board: today's fastest clean solves (sdaily) ----------
+  var LB = "https://mw-presence.onrender.com", SLB = false, lbRows = null, NAMEKEY = "mw-sudokrine-name", PIDKEY = "mw-sudokrine-pid", FIRSTKEY = "mw-sudokrine-lbday";
+  function lget(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lset(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function pid() { var p = lget(PIDKEY); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); lset(PIDKEY, p); } return p; }
+  function lbGot(j) {
+    if (j && Array.isArray(j.rows) && j.board === "sdaily") { SLB = true; lbRows = j.rows; } else if (j) { SLB = false; lbRows = null; } else lbRows = "err";
+    if (P && st && st.done) renderResult();
+  }
+  function lbProbe() {
+    if (!window.fetch) return;
+    fetch(LB + "/top?b=sdaily&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(lbGot).catch(function () {});
+  }
+  function savedName() {
+    var v = lget(NAMEKEY); if (v) return v;
+    var keys = ["mw-organdrop-name", "mw-basil-name"];
+    for (var i = 0; i < keys.length; i++) { var x = lget(keys[i]); if (x) { try { x = JSON.parse(x); } catch (e) {} if (typeof x === "string" && x) return x; } }
+    return "";
+  }
+  function lbHtml() {
+    if (!SLB || !isLive() || !st.win) return "";
+    var rows = lbRows, h = '<div class="lb"><b class="lbh">Today’s fastest · world</b>';
+    if (st.lbq && !st.lbp) h += '<form class="lbf" id="skr-lbf" autocomplete="off"><label for="skr-lbn">Post your time (' + fmt(st.t) + ') · your name</label><div class="wgrow"><input id="skr-lbn" maxlength="14" value="' + esc(savedName()) + '"><button type="submit" class="wgb">Post</button></div></form>';
+    else if (st.hints) h += '<p class="lbn">Hints used, so this one stays off the board. Clean solves only.</p>';
+    else if (!st.lbq && !st.lbp) h += '<p class="lbn">Only your first solve of the day can go on the board.</p>';
+    if (rows === "err") h += '<p class="lbn">The leaderboard is on a break. Try again later.</p>';
+    else if (rows == null || rows === "wait") h += '<p class="lbn">Loading…</p>';
+    else if (!rows.length) h += '<p class="lbn">No times yet today. Be the first.</p>';
+    else h += '<ol class="lbl">' + rows.map(function (x, i) { return "<li" + (x.me ? ' class="me"' : "") + '><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(x.n) + '</span><span class="tm">' + fmt(x.s) + "</span></li>"; }).join("") + "</ol>";
+    return h + '<p class="lbn">Sydney day. Names are public.</p></div>';
+  }
+  function lbWire() {
+    var f = $("lbf"); if (!f) return;
+    f.onsubmit = function (e) {
+      e.preventDefault(); if (!st.lbq || st.lbp || !SLB) return;
+      var nm = String($("lbn").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || "Anonymous owl";
+      st.lbp = 1; put(KEY, st); lset(NAMEKEY, nm); lbRows = "wait"; renderResult();
+      var u = LB + "/score?b=sdaily&id=" + pid() + "&n=" + encodeURIComponent(nm) + "&s=" + Math.round(st.t) + "&r=" + (NORMIE ? 2 : 1);
+      fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(lbGot).catch(function () { lbGot(null); });
+      try { if (window.MW_track) MW_track("world-score"); } catch (x) {}
     };
   }
   function tick() {
@@ -183,7 +277,7 @@
     if (ticking) clearInterval(ticking);
     ticking = setInterval(function () {
       if (!P || !st || st.done || !visible()) return;
-      st.t += 1; $("timer").textContent = fmt(st.t); if (st.t % 5 === 0) put(KEY, st);
+      st.t += 1; $("timer").textContent = fmt(st.t); if (st.t % 5 === 0) put(KEY, st); paintIris();
     }, 1000);
   }
 
@@ -239,7 +333,12 @@
     save(); paint();
   }
   function finish(win) {
-    st.done = true; st.win = win; st.d = P.difficulty; st.undo = []; put(KEY, st);
+    st.done = true; st.win = win; st.d = P.difficulty; st.undo = [];
+    if (W) st.w = W.w;
+    if (win && isLive()) { // world board: only the day's first completed solve (either mode), clean, 20 s to 2 h
+      if (lget(FIRSTKEY) !== today) { lset(FIRSTKEY, today); if (!st.hints && st.t >= 20 && st.t <= 7200) st.lbq = 1; }
+    }
+    put(KEY, st);
     if (isLive() && stats.last !== today) {
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (win) stats.wins++;
@@ -259,6 +358,7 @@
   });
   $("pad").addEventListener("click", function (e) { var b = e.target.closest(".key"); if (b) input(+b.getAttribute("data-k")); });
   $("notes").onclick = function () { notesOn = !notesOn; paintPad(); paintBoard(); };
+  $("wg").addEventListener("submit", function (e) { e.preventDefault(); guess($("wgi").value); });
   $("erase").onclick = erase; $("undo").onclick = undo; $("hint").onclick = hint; $("giveup").onclick = giveUp;
   $("nums").checked = nums; $("mis").checked = showMis;
   $("nums").onchange = function () { nums = this.checked; setPref("skr-nums", nums); paint(); };
@@ -275,7 +375,8 @@
       if (sel < 0) sel = 0; else { var p = rc(sel); if (k === "ArrowLeft" && p[1] === 0) sel += n - 1; else if (k === "ArrowRight" && p[1] === n - 1) sel -= n - 1; else sel = (sel + mv + n * n) % (n * n); }
       paint(); e.preventDefault(); return;
     }
-    if (/^[1-9]$/.test(k) && +k <= n) { input(+k); e.preventDefault(); return; }
+    if (/^[1-9]$/.test(k) && +k <= n) { input(LET && !nums ? padOrder()[+k - 1] : +k); e.preventDefault(); return; }
+    if (LET && /^[a-z]$/i.test(k) && LET.indexOf(k.toUpperCase()) >= 0) { input(LET.indexOf(k.toUpperCase()) + 1); e.preventDefault(); return; }
     if (k === "Backspace" || k === "Delete" || k === "0") { erase(); e.preventDefault(); return; }
     if (k === "n" || k === "N") { notesOn = !notesOn; paintPad(); paintBoard(); return; }
     if (k === "u" || k === "U") { undo(); return; }
@@ -290,7 +391,7 @@
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
   function show(date) {
-    today = date; loadDay(); P = null; sel = -1; notesOn = false; armGive = false; say("");
+    today = date; loadDay(); P = null; W = null; LET = null; LINE = []; sel = -1; notesOn = false; armGive = false; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
@@ -301,6 +402,7 @@
       }
       $("bar").hidden = false;
       n = P.size; BR = P.box[0]; BC = P.box[1]; buildPeers();
+      W = P.word ? P.word[NORMIE ? "n" : "m"] : null; LET = W ? W.l.split("") : null; LINE = W ? P.word.cells : [];
       sol = P.solution.split("").map(Number); giv = P.puzzle.split("").map(function (c) { return c !== "0"; });
       if (!st || !st.g || st.g.length !== n * n) st = { g: P.puzzle.split("").map(Number), n: P.puzzle.split("").map(function () { return 0; }), t: 0, hints: 0, hl: [], undo: [], done: false, win: false };
       if (!st.undo) st.undo = [];
@@ -328,6 +430,6 @@
   }
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
 
-  tick(); setInterval(tick, 60000); startClock();
+  tick(); setInterval(tick, 60000); startClock(); lbProbe();
   show(today);
 })();
