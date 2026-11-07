@@ -67,19 +67,21 @@ async function addDone(g) {
 // ---------- Basil + Clover leaderboards ----------
 const BAD = /(fuck|fuk|shit|cunt|nigg|fag|bitch|whore|slut|rape|nazi|hitler|dick|cock|puss|wank|twat|retard|kike|spic|chink|paki|porn|penis|vagina|anal|cum|tits|boob|sex)/i;
 const memLB = {};
-function lbAnon(b) { return b && b.charAt(0) === "o" ? "Anonymous surgeon" : b && b.charAt(0) === "s" ? "Anonymous owl" : "Anonymous cat"; }
+function lbAnon(b) { return b && b.charAt(0) === "o" ? "Anonymous surgeon" : b && b.charAt(0) === "s" ? "Anonymous owl" : b && b.charAt(0) === "m" ? "Anonymous medic" : "Anonymous cat"; }
 function lbName(s, b) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14); if (!n || BAD.test(n.replace(/[^a-z]/gi, ""))) n = lbAnon(b); return n; }
 // boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge),
-// sdaily (Sudokrine: today's fastest times; s = seconds, r = 1 Medical or 2 Normie)
-const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily", "sdaily"];
-const DAILY_BOARDS = ["daily", "vdaily", "odaily", "sdaily"];
+// sdaily (Sudokrine: today's fastest times; s = seconds, r = 1 Medical or 2 Normie),
+// mdaily, mall (Mergeon: today's daily run and best daily run of all time; r = top piece level 0-10)
+const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily", "sdaily", "mdaily", "mall"];
+const DAILY_BOARDS = ["daily", "vdaily", "odaily", "sdaily", "mdaily"];
 const ASC_BOARDS = ["sdaily"]; // lower score is better
 function lbAsc(b) { return ASC_BOARDS.indexOf(b) >= 0; }
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
-function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : "lb:all"; }
+function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : "lb:all"; }
 // score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
 function lbValid(b, s, r, raw) {
   if (b === "sdaily") return /^\d{1,5}$/.test(String(raw || "")) && s >= 20 && s <= 7200 && (r === 1 || r === 2); // 20 s to 2 h, whole seconds
+  if (b === "mdaily" || b === "mall") return /^\d{1,5}$/.test(String(raw || "")) && s > 0 && s <= 20000 && r >= 0 && r <= 10; // Mergeon: r = top piece level
   if (b.charAt(0) === "o") return s > 0 && r >= 1 && r <= 999 && s <= 4000 * r * r && s <= 50000000;
   return s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
 }
@@ -90,7 +92,7 @@ async function lbTop(b, me) {
       const rows = lbAsc(b) ? await kv.zRangeWithScores(key, 0, 9) : await kv.zRangeWithScores(key, 0, 9, { REV: true });
       if (!rows.length) return [];
       const meta = await kv.hmGet(key + ":m", rows.map((r) => r.value));
-      return rows.map((r, i) => { let m = {}; try { m = JSON.parse(meta[i] || "{}"); } catch (e) {} return { n: m.n || lbAnon(b), s: r.score, r: m.r || 1, me: !!me && r.value === me }; });
+      return rows.map((r, i) => { let m = {}; try { m = JSON.parse(meta[i] || "{}"); } catch (e) {} return { n: m.n || lbAnon(b), s: r.score, r: m.r != null ? m.r : 1, me: !!me && r.value === me }; });
     } catch (e) { console.error("lbTop", e.message); }
   }
   const m = memLB[key] || {};
