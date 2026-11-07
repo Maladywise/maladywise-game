@@ -347,59 +347,73 @@ def r_cryptogenic(x, ctx):
 GAMES = [
     {"id": "dx", "folder": "dx", "name": "Dxtective",
      "load": lambda: load_months("cases"), "render": r_dx,
-     "desc": "Every past Dxtective case: the clues, the diagnosis and a clinical pearl for each daily medical mystery.",
+     "title": "Diagnosis Game Archive: Past Dxtective Cases and Answers", "h1": "Dxtective archive: past diagnosis game cases",
+     "desc": "Every past Dxtective daily diagnosis game case: the clues, the diagnosis and a clinical pearl. Free medical mystery cases from an Australian GP.",
      "lede": "Every past daily case, with its clues, diagnosis and pearl. Newest first."},
     {"id": "wordemic", "folder": "wordemic", "name": "Wordemic",
      "load": lambda: load_months("wordemic/puzzles"), "render": r_wordemic,
-     "desc": "Every past Wordemic puzzle: the daily medical word and what it means.",
+     "title": "Medical Wordle Archive: Past Wordemic Answers", "h1": "Wordemic archive: past medical Wordle answers",
+     "desc": "Every past Wordemic answer: the daily medical Wordle word and what it means. Catch up on missed days or revise medical words.",
      "lede": "Every past daily medical word, with its definition. Newest first."},
     {"id": "panelysis", "folder": "panelysis", "name": "Panelysis",
      "load": lambda: load_months("panelysis/puzzles"), "render": r_panelysis,
-     "desc": "Every past Panelysis puzzle: the patient, the key blood results, the diagnosis and the teaching point.",
+     "title": "Blood Test Quiz Archive: Past Panelysis Answers", "h1": "Panelysis archive: past blood test quiz answers",
+     "desc": "Every past Panelysis blood test quiz: the patient, the key blood results, the diagnosis and the teaching point. Free practice reading blood tests.",
      "lede": "Every past blood-results puzzle, with the patient story, diagnosis and teaching point. Newest first."},
     {"id": "glimpsis", "folder": "glimpsis", "name": "Glimpsis",
      "load": lambda: load_months("glimpsis/puzzles"), "render": r_image_game("glimpsis"),
-     "desc": "Every past Glimpsis puzzle: real clinical images, the sign or diagnosis, why it fits and a clinical pearl.",
+     "title": "Spot the Diagnosis Archive: Past Glimpsis Answers", "h1": "Glimpsis archive: past spot-the-diagnosis photos",
+     "desc": "Every past Glimpsis spot the diagnosis photo quiz: real clinical images, the sign or diagnosis, why it fits and a clinical pearl.",
      "lede": "Every past spot-the-sign image, with the answer, why it fits and a pearl. Newest first."},
     {"id": "opacitis", "folder": "opacitis", "name": "Opacitis",
      "load": lambda: load_months("opacitis/puzzles"), "render": r_image_game("opacitis"),
-     "desc": "Every past Opacitis puzzle: real X-rays and scans, the diagnosis, the findings and a clinical pearl.",
+     "title": "X-ray Quiz Archive: Past Opacitis Scans and Answers", "h1": "Opacitis archive: past X-ray quiz answers",
+     "desc": "Every past Opacitis X-ray quiz: real X-rays and scans, the diagnosis, the findings and a clinical pearl. Free radiology practice.",
      "lede": "Every past scan, with the diagnosis, the findings and a pearl. Newest first."},
     {"id": "sensitosis", "folder": "sensitosis", "name": "Sensitosis",
      "load": lambda: load_months("sensitosis/puzzles"), "render": r_sensitosis,
      "ctx": lambda: {"tests": load_json(os.path.join(ROOT, "sensitosis", "tests.json")).get("tests", {})},
-     "desc": "Every past Sensitosis puzzle: real medical tests, their sensitivity and specificity, and the studies behind them.",
+     "title": "Sensitivity and Specificity Quiz: Past Sensitosis Tests", "h1": "Sensitosis archive: past sensitivity and specificity rounds",
+     "desc": "Every past Sensitosis round: real medical tests, their sensitivity and specificity, and the studies behind them.",
      "lede": "Every past round of real medical tests, with their sensitivity, specificity and sources. Newest first."},
     {"id": "triviosis", "folder": "triviosis", "name": "Triviosis",
      "load": lambda: load_list("triviosis/quizzes.json"), "render": r_triviosis,
-     "desc": "Every past Triviosis quiz: ten medical trivia questions a day, with answers and explanations.",
+     "title": "Medical Trivia Archive: Past Triviosis Quizzes and Answers", "h1": "Triviosis archive: past medical trivia quizzes",
+     "desc": "Every past Triviosis medical trivia quiz: ten questions a day with answers and explanations. Free medical quiz questions to revise or play.",
      "lede": "Every past daily medical quiz, with each answer explained. Newest first."},
     {"id": "zebritis", "folder": "zebritis", "name": "Zebritis",
      "load": lambda: load_months("zebritis/puzzles"), "render": r_zebritis,
-     "desc": "Every past Zebritis puzzle: each medical prompt and its full list of accepted answers, ranked where the data allows.",
+     "title": "Rare Disease Quiz Archive: Past Zebritis Answers", "h1": "Zebritis archive: past rare disease quiz answers",
+     "desc": "Every past Zebritis rare disease quiz prompt and its full list of accepted answers, ranked where the data allows.",
      "lede": "Every past prompt and its full list of accepted answers. Newest first."},
     {"id": "arrhythmix", "folder": "arrhythmix", "name": "Arrhythmix",
      "load": lambda: load_list("arrhythmix/puzzles/puzzles.json"), "render": r_arrhythmix,
-     "desc": "Every past Arrhythmix puzzle: the clinical vignette, the heart rhythm and how to read it.",
+     "title": "ECG Quiz Archive: Past Arrhythmix ECGs and Answers", "h1": "Arrhythmix archive: past ECG quiz answers",
+     "desc": "Every past Arrhythmix ECG quiz: the clinical case, the rhythm and how to read it. Free ECG interpretation practice.",
      "lede": "Every past rhythm strip puzzle, with the vignette, the rhythm and how to read it. Newest first."},
     {"id": "comorbix", "folder": "comorbix", "name": "Comorbix",
      "load": lambda: load_months("comorbix/puzzles"), "render": r_comorbix,
-     "desc": "Every past Comorbix puzzle: the four hidden medical word groups and the four words in each.",
+     "title": "Medical Connections Archive: Past Comorbix Answers", "h1": "Comorbix archive: past medical connections answers",
+     "desc": "Every past Comorbix medical connections game: the four hidden medical word groups and the four words in each.",
      "lede": "Every past word-groups puzzle, with each group and its four words. Newest first."},
     {"id": "linkase", "folder": "linkase", "name": "Linkase",
      "load": lambda: load_months("linkase/puzzles"), "render": r_linkase,
-     "desc": "Every past Linkase puzzle: the full medical word chain and each link in it.",
+     "title": "Medical Word Chain Archive: Past Linkase Answers", "h1": "Linkase archive: past medical word chain answers",
+     "desc": "Every past Linkase medical word chain: the full chain and each link in it.",
      "lede": "Every past word chain, with each link spelled out. Newest first."},
     {"id": "labelosis", "folder": "anatomegaly", "name": "Anatomegaly",
      "load": lambda: load_months("anatomegaly/puzzles"), "render": r_anatomegaly,
-     "desc": "Every past Anatomegaly puzzle: each day's five anatomy rounds, the body region, the answer and why.",
+     "title": "Anatomy Quiz Archive: Past Anatomegaly Questions", "h1": "Anatomegaly archive: past anatomy quiz questions",
+     "desc": "Every past Anatomegaly anatomy quiz: each day's five rounds, the body region, the answer and why. Free anatomy questions to revise.",
      "lede": "Every past anatomy set, with each round's body region, answer and explanation. Newest first."},
     {"id": "cryptogenic", "folder": "cryptoplexy", "name": "Cryptoplexy",
      "load": lambda: load_list("cryptoplexy/puzzles.json"), "render": r_cryptogenic,
-     "desc": "Every past Cryptoplexy crossword: each medical cryptic clue with its answer and how the wordplay works.",
+     "title": "Medical Cryptic Crossword Archive: Past Cryptoplexy Answers", "h1": "Cryptoplexy archive: past medical cryptic crosswords",
+     "desc": "Every past Cryptoplexy medical cryptic crossword: each clue with its answer and how the wordplay works.",
      "lede": "Every past Saturday cryptic, with each clue, its answer and the parsing. Newest first."},
     {"id": "grandrounds", "folder": "grandrounds", "name": "Grand Rounds",
      "load": load_grandrounds, "render": r_grandrounds,
+     "title": "Medical Trivia Quiz Archive: Past Grand Rounds Answers", "h1": "Grand Rounds archive: past hard medical trivia",
      "desc": "Every past Grand Rounds quiz: twenty hard medical trivia questions a week, with answers and explanations.",
      "lede": "Every past Sunday quiz, with each question's category, answer and explanation. Newest first."},
 ]
@@ -425,7 +439,7 @@ STYLE = """<style>
 .ar-fig img{width:160px;height:auto;max-height:200px;object-fit:cover;border-radius:10px;display:block;background:var(--line)}
 .ar-fig figcaption{margin-top:4px;line-height:1.35}
 .ar-play{display:inline-block;margin-top:6px;font-weight:600;font-size:14px}
-.ar-top{margin:10px 0 4px}
+.ar-top{margin:10px 0 4px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}.ar-hub{font-weight:600;font-size:14px}
 .doc .ar-top a.btn{text-decoration:none;display:inline-block;background:var(--brand);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px}
 :root[data-theme="dark"] .doc .ar-top a.btn{color:#16121F}
 @media (max-width:520px){.ar-img{flex-direction:column}.ar-fig,.ar-fig img{width:100%;max-width:320px}}
@@ -434,7 +448,7 @@ STYLE = """<style>
 
 def render_page(g, past, today, versions):
     name, folder = g["name"], g["folder"]
-    title = "%s archive: every past puzzle | Malady Wise" % name
+    title = "%s | Malady Wise" % g.get("title", "%s archive: every past puzzle" % name)
     canon = "%s/%s/archive/" % (SITE, folder)
     og = SITE + "/assets/share.png?v=4"
     for k in (g["id"], folder):
@@ -490,9 +504,9 @@ def render_page(g, past, today, versions):
 </head>
 <body>
 <main class="wrap doc">
-<h1>{name} archive</h1>
+<h1>{h1}</h1>
 <p class="lede">{lede}</p>
-<p class="ar-top"><a class="btn" href="/{folder}/">Play today&#8217;s puzzle</a></p>
+<p class="ar-top"><a class="btn" href="/{folder}/">Play today&#8217;s puzzle</a> <a class="ar-hub" href="/medical-games/">All medical games</a></p>
 <p class="note">{count} past puzzle{plural}, up to {last}. Today&#8217;s and future puzzles are never shown here.</p>
 {body}
 <div id="nl-slot"></div>
@@ -503,7 +517,7 @@ def render_page(g, past, today, versions):
 </html>
 """.format(canon=esc(canon), title=esc(title), desc=esc(g["desc"]), og=esc(og),
            v_css=versions["shell.css"], v_games=versions["games.js"], v_site=versions["site.js"],
-           v_shell=versions["shell.js"], style=STYLE, name=esc(name), lede=esc(lede), folder=folder,
+           v_shell=versions["shell.js"], style=STYLE, name=esc(name), h1=esc(g.get("h1", name + " archive")), lede=esc(lede), folder=folder,
            count=count, plural="" if count == 1 else "s",
            last=esc(nice_date(past[0]["date"])) if past else "today",
            body="\n".join(body))

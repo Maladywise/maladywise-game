@@ -469,6 +469,12 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 @media print{.doc .related{display:none}.print-qr{display:block;float:right;width:62px;height:62px;margin:-6px 0 0 8px}.doc .trust{font-size:9px;margin:0 0 3px}}
 .mw-about{margin:22px 0 8px;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
 .mw-about h2{font:700 17px Lora,Georgia,serif;margin:0 0 6px}.mw-about p{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:var(--ink)}
+.mw-about h3{font:600 14.5px var(--body);margin:12px 0 4px}.mw-about ul{margin:0 0 8px;padding-left:20px}.mw-about li{font-size:14.5px;line-height:1.5;margin:2px 0}
+.mw-about .mw-ab-more,.mw-about .mw-ab-rel{font-size:14px;margin:10px 0 0}.mw-about-s{overflow-wrap:anywhere}
+.mw-allg{margin:26px 0 8px;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--line);overflow-wrap:anywhere}
+.mw-allg h2{font:700 18px var(--title);margin:0 0 6px}.mw-allg h3{font:600 15px var(--body);margin:14px 0 2px}.mw-allg p{margin:0 0 6px;font-size:14.5px;line-height:1.55}
+.mw-allg .mw-allg-d{color:var(--muted);font-size:13.5px}.mw-allg-l{margin:0 0 6px;padding-left:18px}.mw-allg-l li{font-size:14.5px;line-height:1.5;margin:3px 0}.mw-allg-l a{font-weight:600;color:var(--brand)}
+.mw-allg-hub{background:none;border:0;padding:0}.doc .mw-allg-hub h2{margin-top:22px}
 .mw-about details{border-top:1px solid var(--line);padding:8px 0}.mw-about summary{font-weight:600;font-size:14px;cursor:pointer}.mw-about details p{margin:6px 0 0;color:var(--muted)}
 @media print{main.doc{position:relative}.print-qr{position:absolute;top:0;right:0;float:none;margin:0;width:58px;height:58px}.doc .trust{display:none}}
 

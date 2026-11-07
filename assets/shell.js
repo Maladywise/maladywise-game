@@ -982,11 +982,14 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
       slot.innerHTML = html;
     }
 
+    var allg = document.getElementById("mw-allgames"); // static, crawlable list of every game (Medical only)
+    if (allg) allg.parentNode.removeChild(allg);
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + todays3(t3) + progress() +
         sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
-        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="about/">About</a> · <a href="disclaimer/">Disclaimer</a> · <a href="privacy/">Privacy</a> · <a href="contact/">Contact</a></footer>';
+        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="medical-games/">All games</a> · <a href="about/">About</a> · <a href="disclaimer/">Disclaimer</a> · <a href="privacy/">Privacy</a> · <a href="contact/">Contact</a></footer>';
+      if (allg && !NORMIE) main.insertBefore(allg, main.querySelector("footer.site"));
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();
@@ -1110,7 +1113,16 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     // Medical-only games (no "normie" block) show their own "switch to Medical" note in Normie mode: no splash, no help pop-up.
     var medOnly = NORMIE && !g.nmode, medNote = "";
     extras(g, box, today);
-    var ab = window.MW_ABOUT && MW_ABOUT[g.id];
+    var ab = window.MW_ABOUT && MW_ABOUT[g.id], sab = document.getElementById("mw-about-static");
+    // Static, crawlable About block in the page HTML (Medical text). Normie mode swaps in the Normie About, or hides it.
+    if (sab) {
+      if (NORMIE && sab.getAttribute("data-normie") !== "neutral") {
+        var nab = g.nmode && window.MW_ABOUT_N && MW_ABOUT_N[g.id];
+        if (nab) sab.innerHTML = "<h2>About " + g.name + "</h2><p>" + nab[0] + "</p>" + nab[1].map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("");
+        else sab.hidden = true;
+      }
+      ab = null;
+    }
     if (ab) {
       (box.querySelector(".wrap") || box).appendChild(el('<section class="mw-about"><h2>About ' + g.name + '</h2><p>' + ab[0] + '</p>' + ab[1].map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("") + "</section>"));
       var ld = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: ab[1].map(function (q) { return { "@type": "Question", name: q[0], acceptedAnswer: { "@type": "Answer", text: q[1] } }; }) };
@@ -1217,7 +1229,8 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
       pick.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203a") + "</span></a>"; }).join("") +
       '</div><a class="mwx-all" href="/">All puzzles</a></section>');
   }
-  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); try { arcadeBox(); } catch (e) {} }
+  function page() { var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],

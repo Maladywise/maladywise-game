@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <link rel="canonical" href="https://maladywise.com/wordemic/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Wordemic: Daily Medical Word Guessing Game | Malady Wise</title>
-<meta name="description" content="Wordemic is a daily medical word game: guess the five-letter medical word in six tries. A free daily medical word game, no sign-up.">
+<title>Wordemic: Daily Medical Wordle | Malady Wise</title>
+<meta name="description" content="Wordemic is a free daily medical Wordle: guess the five-letter medical word in six tries (eight letters on Long Fridays). Australian spelling, no sign-up.">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
@@ -15,20 +15,21 @@
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Malady Wise Games">
-<meta property="og:title" content="Wordemic: Daily Medical Word Guessing Game | Malady Wise">
-<meta property="og:description" content="Wordemic is a daily medical word game: guess the five-letter medical word in six tries. A free daily medical word game, no sign-up.">
+<meta property="og:title" content="Wordemic: Daily Medical Wordle | Malady Wise">
+<meta property="og:description" content="Wordemic is a free daily medical Wordle: guess the five-letter medical word in six tries (eight letters on Long Fridays). Australian spelling, no sign-up.">
 <meta property="og:url" content="https://maladywise.com/wordemic/">
 <meta property="og:image" content="https://maladywise.com/assets/og/wordemic.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wordemic: Daily Medical Word Guessing Game | Malady Wise">
-<meta name="twitter:description" content="Wordemic is a daily medical word game: guess the five-letter medical word in six tries. A free daily medical word game, no sign-up.">
+<meta name="twitter:title" content="Wordemic: Daily Medical Wordle | Malady Wise">
+<meta name="twitter:description" content="Wordemic is a free daily medical Wordle: guess the five-letter medical word in six tries (eight letters on Long Fridays). Australian spelling, no sign-up.">
 <meta name="twitter:image" content="https://maladywise.com/assets/og/wordemic.png?v=2">
-<link rel="stylesheet" href="../assets/shell.css?v=172">
+<link rel="stylesheet" href="../assets/shell.css?v=173">
 <script src="../assets/games.js?v=103"></script>
-<script src="../assets/shell.js?v=189"></script>
-<script type="application/ld+json" id="mw-game-ld">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wordemic", "alternateName": "Wordemic: Daily Medical Word Guessing Game", "description": "Wordemic is a daily medical word game: guess the five-letter medical word in six tries. A free daily medical word game, no sign-up.", "url": "https://maladywise.com/wordemic/", "applicationCategory": "GameApplication", "genre": "Puzzle", "operatingSystem": "Any (web browser)", "inLanguage": "en-AU", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}}</script>
+<script src="../assets/shell.js?v=190"></script>
+<script type="application/ld+json" id="mw-game-ld">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wordemic", "alternateName": "Wordemic: Daily Medical Wordle", "description": "Wordemic is a free daily medical Wordle: guess the five-letter medical word in six tries (eight letters on Long Fridays). Australian spelling, no sign-up.", "url": "https://maladywise.com/wordemic/", "applicationCategory": "GameApplication", "genre": "Puzzle", "operatingSystem": "Any (web browser)", "inLanguage": "en-AU", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "audience": {"@type": "Audience", "audienceType": "Medical and nursing students, health professionals and curious people"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}}</script>
+<script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there a medical version of Wordle?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Wordemic is a free daily medical Wordle-style game: same idea, but every answer is a medical or health word."}}, {"@type": "Question", "name": "Is Wordemic free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It's free to play in your browser, with no sign-up, no download and no ads."}}, {"@type": "Question", "name": "When does the new word come out?", "acceptedAnswer": {"@type": "Answer", "text": "Every day at midnight, Sydney time. Past answers and definitions are in the archive."}}, {"@type": "Question", "name": "Can nurses and students play?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Easy days are common words most people know; difficulty rises through the week to a Genius Sunday."}}, {"@type": "Question", "name": "Does it use Australian spelling?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: haemoglobin, oedema, oesophagus and friends. American-only spellings aren't answers."}}]}</script>
 </head>
 <body>
 <main class="wrap">
@@ -37,7 +38,25 @@
     <div id="wde"></div>
     <script src="wordemic.js?v=13"></script>
   </section>
-  <footer class="site">All puzzles are fictional/educational. General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+    <!-- mw-about-static -->
+<section class="mw-about mw-about-s" id="mw-about-static" data-normie="nmode" aria-labelledby="mw-about-h">
+<h2 id="mw-about-h">About Wordemic</h2>
+<p>Wordemic is a free daily medical Wordle-style word game. Guess the hidden five-letter medical word in six tries; coloured tiles show which letters are in the word and in the right spot. Every Friday is Long Friday: an eight-letter word with seven tries. Every answer is a medical or health word with Australian spelling, and you get a short plain-English definition when you finish.</p>
+<h3>How to play</h3>
+<ul><li>Type any real five-letter word and press Enter.</li><li>Green means right letter, right spot. Yellow means it's in the word but somewhere else. Grey means it's not in the word.</li><li>Use the clues to narrow it down. You have six tries.</li><li>On Long Fridays the word has eight letters and you get seven tries.</li></ul>
+<h3>Who it&#8217;s for</h3>
+<p>Anyone who likes word puzzles, from nursing and medical students to doctors, pharmacists and people who just enjoy a good long word. You don't need medical training: plenty of answers are everyday health words.</p>
+<h3>Common questions</h3>
+<details><summary>Is there a medical version of Wordle?</summary><p>Yes. Wordemic is a free daily medical Wordle-style game: same idea, but every answer is a medical or health word.</p></details>
+<details><summary>Is Wordemic free?</summary><p>Yes. It's free to play in your browser, with no sign-up, no download and no ads.</p></details>
+<details><summary>When does the new word come out?</summary><p>Every day at midnight, Sydney time. Past answers and definitions are in the archive.</p></details>
+<details><summary>Can nurses and students play?</summary><p>Absolutely. Easy days are common words most people know; difficulty rises through the week to a Genius Sunday.</p></details>
+<details><summary>Does it use Australian spelling?</summary><p>Yes: haemoglobin, oedema, oesophagus and friends. American-only spellings aren't answers.</p></details>
+<p class="mw-ab-more"><a href="/wordemic/archive/">Past puzzles and answers</a> · <a href="/medical-games/">All medical games and quizzes</a></p>
+<p class="mw-ab-rel"><b>Try next:</b> <a href="/morphemia/">Morphemia</a> (medical spelling bee) · <a href="/gridectomy/">Gridectomy</a> (medical mini crossword) · <a href="/comorbix/">Comorbix</a> (daily medical connections game)</p>
+</section>
+<!-- /mw-about-static -->
+  <footer class="site">All puzzles are fictional/educational. General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/medical-games/">All games</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>MW.game("wordemic");</script>
 </body>

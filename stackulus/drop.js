@@ -37,7 +37,7 @@
 
   var TOUCH = false; try { TOUCH = navigator.maxTouchPoints > 0 || "ontouchstart" in window || matchMedia("(pointer:coarse)").matches; } catch (e) {}
   if (TOUCH) document.documentElement.classList.add("od-touch");
-  document.title = TITLE + (normie() ? ": a bonus sea-creature stacking game | Malady Wise" : ": a bonus organ-stacking game | Malady Wise");
+  if (normie()) document.title = TITLE + ": a bonus sea-creature stacking game | Malady Wise"; // Medical keeps the page <title> (search-led)
   Array.prototype.forEach.call(document.querySelectorAll(".od-name"), function (e) { e.textContent = TITLE; });
 
   // ---------- pieces: shape, organ, colour. Matrix values are cell ids so rotation keeps track of the face cell ----------
