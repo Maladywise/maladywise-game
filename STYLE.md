@@ -68,6 +68,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Puzzle archives
 - _scripts/build_archives.py writes /<game>/archive/ pages (past puzzles only, for Google). Any scheduled task that changes puzzle files or runs on a new week should run `python3 _scripts/build_archives.py` before committing, and commit the updated archive pages and sitemap.xml.
 
-## Weekly Dose (Zebra Mail): Dropsy daily
-- In "🧩 This week's puzzles", always include one line for the Dropsy daily challenge, e.g. "🫀 Dropsy daily: same organs for everyone, one scored go a day. Beat the world board: https://maladywise.com/dropsy/" (vary the wording each week; plain link, no date).
-- In the week's X posts, at most one Dropsy daily nudge (e.g. Saturday), linking https://maladywise.com/dropsy/.
+## Weekly Dose (Zebra Mail): Stackulus daily
+- In "🧩 This week's puzzles", always include one line for the Stackulus daily challenge, e.g. "🫀 Stackulus daily: same organs for everyone, one scored go a day. Beat the world board: https://maladywise.com/stackulus/" (vary the wording each week; plain link, no date).
+- In the week's X posts, at most one Stackulus daily nudge (e.g. Saturday), linking https://maladywise.com/stackulus/.
