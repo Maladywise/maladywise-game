@@ -3,7 +3,8 @@
 
 Usage:
   python3 sudokrine/gen.py [START END]   # default 2026-10-26 2026-12-31; writes sudokrine/puzzles/YYYY-MM.json
-  python3 sudokrine/gen.py --check        # re-verify every puzzle file (unique solution + logical grade)
+  python3 sudokrine/gen.py --check        # re-verify every puzzle file (unique solution + logical grade + hidden word)
+  python3 sudokrine/gen.py --words START END   # add or refresh the hidden-word layer on existing entries (grids untouched)
 
 Every puzzle is deterministic from its date (seeded PRNG), has exactly one solution (checked by a
 brute-force counter) and is graded by a human-style logical solver. Difficulty by weekday:
@@ -14,6 +15,8 @@ brute-force counter) and is graded by a human-style logical solver. Difficulty b
   Einstein        9x9              needs X-wing/swordfish, XY-wing or colouring chains (dates in EINSTEIN)
 Entry: {date, number, difficulty, size, box:[rows, cols], puzzle, solution, clues, techniques, fact, nfact}
 puzzle/solution are strings of digits (0 = empty); digit k shows as symbol k (Medical icon or Normie fruit).
+From WORD_START entries also carry "word": {line, cells, m: {w, d, l}, n: {w, d, l}}: digit k shows as letter l[k-1]
+(Medical m, Normie n), and the cells of the named line (rK, cK, d = main diagonal, a = anti-diagonal) spell w in order.
 """
 import datetime as dt
 import json
@@ -186,6 +189,170 @@ NFACTS = [
     "A golf ball typically has between 300 and 500 dimples.",
     "Kiribati’s Line Islands are among the first places on Earth to see in each new year.",
 ]
+
+# ---------- hidden words (from WORD_START) ----------
+# Each day from WORD_START uses the letters of a word with no repeated letters instead of symbols.
+# One line of the solution (a row, column or main diagonal) spells the word in order; the other lines are
+# checked for accidental rude words. Medical words lean endocrine, Normie words are everyday words.
+# The day's theme (data/health-days.json) is applied sideways: never the day's namesake (No giveaways rule).
+WORD_START = "2026-11-08"
+WORDS = {  # date: (medical word, one-line meaning, normie word, one-line meaning)
+    "2026-11-08": ("THYROXINE", "T4, the main hormone made by the thyroid gland. It helps set how fast the body uses energy.", "BLUEPRINT", "A detailed plan. Originally a white-on-blue copy of a technical drawing."),
+    "2026-11-09": ("LUNATE", "A moon-shaped wrist bone. The name comes from luna, Latin for moon.", "COMETS", "Icy bodies that grow glowing tails as they near the Sun."),
+    "2026-11-10": ("RETINA", "The light-sensing layer at the back of the eye.", "MAGNET", "An object that attracts iron and steel."),
+    "2026-11-11": ("TRIAGE", "Sorting patients by urgency. From the French trier, to sort.", "POETRY", "Writing shaped for its sound and rhythm as well as its meaning."),
+    "2026-11-12": ("PLEURA", "The thin double membrane wrapped around each lung.", "BRIDGE", "A structure that carries a road or path over an obstacle."),
+    "2026-11-13": ("PROLACTIN", "A pituitary hormone best known for switching on breast milk production.", "WONDERFUL", "Extremely good; full of delight."),
+    "2026-11-14": ("GLYCATION", "Sugar sticking to proteins. HbA1c measures it on haemoglobin to show average glucose over about three months.", "SUNFLOWER", "A tall plant whose seeds are packed in neat spirals."),
+    "2026-11-15": ("LYMPHATIC", "Relating to lymph: the clear fluid and vessel network that drains tissues and carries immune cells.", "BIRTHDAYS", "The yearly anniversary of the day you were born."),
+    "2026-11-16": ("FIBRES", "The parts of plant foods we can’t digest. They feed gut bacteria and help bowels and cholesterol.", "GARLIC", "A pungent bulb used in kitchens around the world."),
+    "2026-11-17": ("LABOUR", "The process of giving birth, from the first contractions to delivery.", "FOREST", "A large area covered with trees."),
+    "2026-11-18": ("MOULDS", "Fungi that grow in fine threads. One, Penicillium, gave us penicillin.", "INSECT", "A six-legged animal with a body in three parts."),
+    "2026-11-19": ("ETHICS", "Moral principles. Medical ethics leans on autonomy, beneficence, non-maleficence and justice.", "PONDER", "To think something over carefully."),
+    "2026-11-20": ("METABOLIC", "Relating to metabolism, the chemistry that turns food into energy and building blocks.", "PATCHWORK", "Needlework that joins small pieces of fabric into one larger design."),
+    "2026-11-21": ("EUTHYROID", "Having normal thyroid function: neither overactive nor underactive.", "SOBRIQUET", "A nickname, often an affectionate or humorous one."),
+    "2026-11-22": ("CHROMATIN", "DNA wound around proteins: the material chromosomes are made of.", "LABYRINTH", "A maze of winding paths. In Greek myth, it held the Minotaur."),
+    "2026-11-23": ("GROWTH", "Getting bigger. In children it’s tracked on percentile charts and driven partly by growth hormone.", "SPIRAL", "A curve that winds around a centre, getting wider as it goes."),
+    "2026-11-24": ("GOITRE", "A swollen thyroid gland, seen as a lump at the front of the neck.", "JIGSAW", "A picture cut into interlocking pieces to put back together."),
+    "2026-11-25": ("LEPTIN", "A hormone made by fat cells that tells the brain how much energy is in storage.", "ORCHID", "A flower family with more than 25,000 species."),
+    "2026-11-26": ("INHALE", "To breathe in. Adults do it roughly 20,000 times a day.", "PEDALS", "Levers you push with your feet, as on a bike."),
+    "2026-11-27": ("BACTERIUM", "A single-celled microbe. One, Helicobacter pylori, won Marshall and Warren the 2005 Nobel Prize.", "DISCOVERY", "Finding or learning something for the first time."),
+    "2026-11-28": ("STEROIDAL", "Relating to steroids, a hormone family that includes cortisol, oestrogen and testosterone.", "CHAMPIONS", "Winners of a competition, or people who stand up for a cause."),
+    "2026-11-29": ("EMBRYONIC", "Relating to the embryo: roughly the first eight weeks of development after fertilisation.", "LIFEGUARD", "A trained swimmer who keeps watch at a beach or pool."),
+    "2026-11-30": ("GLANDS", "Organs that make and release substances such as hormones, sweat or saliva.", "PLAIDS", "Woollen cloths with a criss-cross pattern, worn over the shoulder in Scotland."),
+    "2026-12-01": ("THYMUS", "A gland behind the breastbone where T cells learn their job.", "CASTLE", "A fortified building, often from the Middle Ages."),
+    "2026-12-02": ("AORTIC", "Relating to the aorta, the body’s largest artery, which leaves the heart.", "PISTON", "A part that slides up and down inside a cylinder, as in an engine or pump."),
+    "2026-12-03": ("SPLINT", "A rigid support that holds an injured body part still while it heals.", "TANDEM", "A bicycle built for two riders."),
+    "2026-12-04": ("HAMSTRING", "The three muscles at the back of the thigh, and a classic sprinting injury.", "QUICKSTEP", "A fast, lively ballroom dance."),
+    "2026-12-05": ("PATHOGENS", "Germs that cause disease: bacteria, viruses, fungi and parasites.", "FARMHOUSE", "The main house on a farm."),
+    "2026-12-06": ("LONGEVITY", "Long life. Diet, exercise, not smoking and social connection all play a part.", "SNOWFLAKE", "A single ice crystal. Most have six arms."),
+    "2026-12-07": ("OXYGEN", "The gas cells need to make energy. Air is about 21% oxygen.", "RUNWAY", "The strip where planes take off and land."),
+    "2026-12-08": ("PINEAL", "A pea-sized gland in the brain that makes melatonin, mostly at night.", "WALNUT", "A wrinkly nut in a hard shell."),
+    "2026-12-09": ("CORTEX", "An outer layer, as in the adrenal cortex, which makes cortisol and aldosterone.", "FROSTY", "Covered in frost, or very cool in manner."),
+    "2026-12-10": ("ULCERS", "Open sores. Most stomach ulcers turned out to be caused by H. pylori, a Nobel-winning find from Perth.", "MEDALS", "Metal discs awarded for an achievement."),
+    "2026-12-11": ("BREATHING", "Moving air in and out of the lungs, about 12 to 20 times a minute for an adult at rest.", "LANDFORMS", "Natural features of the land: mountains, valleys, plateaus and plains."),
+    "2026-12-12": ("IBUPROFEN", "A common anti-inflammatory painkiller, on the World Health Organization’s list of essential medicines.", "UNIVERSAL", "For everyone, everywhere."),
+    "2026-12-13": ("PERFUSION", "Blood flow through a tissue or organ, bringing oxygen and taking waste away.", "SPARKLING", "Shining with flashes of light, or fizzy."),
+    "2026-12-14": ("LANCET", "A small, sharp surgical blade, once used for bloodletting. Also the name of a famous journal.", "TONICS", "Drinks sold as pick-me-ups. Many old ones did nothing at all."),
+    "2026-12-15": ("CORNEA", "The clear dome at the front of the eye. It does most of the eye’s focusing.", "PHRASE", "A small group of words that belong together."),
+    "2026-12-16": ("TRAGUS", "The small flap of cartilage in front of the ear canal.", "MELODY", "A tune: a run of notes that makes a musical line."),
+    "2026-12-17": ("VENOUS", "Relating to veins, which carry blood back to the heart.", "GLIDER", "An aircraft that flies without an engine."),
+    "2026-12-18": ("INOCULATE", "To give a vaccine, or introduce something to build immunity.", "NEIGHBOUR", "Someone who lives next door or nearby."),
+    "2026-12-19": ("RHEUMATIC", "Relating to rheumatism. Rheumatic fever can follow strep throat and scar heart valves.", "NIGHTCAPS", "Soft caps worn to bed, or a drink before sleep."),
+    "2026-12-20": ("MENSTRUAL", "Relating to the monthly period, driven by the rise and fall of oestrogen and progesterone.", "HARMONIES", "Notes played or sung together that sound pleasing."),
+    "2026-12-21": ("SPRAIN", "A stretched or torn ligament, often at the ankle.", "CANDLE", "A wax stick with a wick, burnt for light."),
+    "2026-12-22": ("MEDIAN", "The middle value when results are put in order. Less swayed by outliers than the mean.", "SQUARE", "A shape with four equal sides, or a number multiplied by itself."),
+    "2026-12-23": ("GRAFTS", "Tissue or organs moved from one place or person to another.", "DOUBLE", "Twice as much, or someone who looks just like another person."),
+    "2026-12-24": ("AMYLIN", "A hormone released with insulin. It slows stomach emptying and helps you feel full.", "TINSEL", "Glittery strands for decorating Christmas trees."),
+    "2026-12-25": ("POULTICES", "Soft, warm, moist dressings once put on wounds and sore spots, a staple of old-time nursing.", "FRUITCAKE", "A rich cake packed with dried fruit, a Christmas classic."),
+    "2026-12-26": ("DOSIMETRY", "Measuring radiation dose, for radiotherapy planning and to keep staff safe.", "AFTERGLOW", "Light left in the sky after sunset, or a warm feeling after something good."),
+    "2026-12-27": ("ANTISERUM", "Blood serum full of antibodies, given to protect against a disease or toxin.", "DUMPLINGS", "Small parcels of dough, often filled, that are steamed, boiled or fried."),
+    "2026-12-28": ("STRAND", "One chain of DNA. The double helix has two, running in opposite directions.", "MASKED", "Wearing a mask, like many superheroes."),
+    "2026-12-29": ("GLOVES", "Hand coverings. Surgical rubber gloves date from about 1890.", "BLIMPS", "Airships without a rigid frame."),
+    "2026-12-30": ("SPINAL", "Relating to the spine or the spinal cord.", "BOGEYS", "Golf scores of one over par on a hole."),
+    "2026-12-31": ("VOMITS", "Brings up the stomach’s contents. Violent retching can, rarely, tear the oesophagus.", "CHIMES", "Ringing bell sounds, like the ones at midnight on New Year’s Eve."),
+}
+# rude or offensive strings that must not appear (forwards or backwards) in any other row, column or diagonal
+RUDE = ["fuk", "fuck", "fck", "shit", "cunt", "nigg", "nigr", "fag", "bitch", "whore", "slut", "rape", "nazi", "dick", "cock", "puss",
+        "wank", "twat", "retard", "kike", "spic", "chink", "paki", "porn", "tit", "boob", "sex", "cum", "jizz", "dildo", "anus", "anal",
+        "arse", "piss", "crap", "turd", "shag", "slag", "homo", "dyke", "tranny", "spaz", "poof", "coon", "gook", "wog", "negro", "jap",
+        "wop", "hore", "fart", "poo", "butt", "bum", "knob", "prick", "pube", "milf", "thot", "hitler", "kkk", "pedo", "paedo", "pimp", "cok"]
+# US spellings that must not be used (Australian/British spelling only)
+US_ONLY = ["COLOR", "FIBER", "ESTROGEN", "CENTER", "ANEMI", "EDEMA", "LABOR", "TUMOR", "HUMOR", "LITER", "FETUS", "FECAL", "DIARRHEA",
+           "ESOPHAG", "HEMO", "HEMA", "LEUKEMIA", "GYNECOL", "PEDIATR", "ORTHOPED", "MOLD", "BEHAVIOR", "FAVOR", "HONOR", "NEIGHBOR",
+           "PLOW", "TIRE", "GRAY", "CHECKER", "PAJAMA", "ANESTHE", "CESAREAN", "SULFA", "SULFUR", "IZE", "YZE"]
+
+
+def word_lines(g, sol):
+    """Candidate lines: every row and column, plus a main diagonal when its digits are all different."""
+    n = g.n
+    out = [("r%d" % r, g.rows[r]) for r in range(n)] + [("c%d" % c, g.cols[c]) for c in range(n)]
+    for name, cells in (("d", [i * n + i for i in range(n)]), ("a", [i * n + (n - 1 - i) for i in range(n)])):
+        if len({sol[i] for i in cells}) == n:
+            out.append((name, cells))
+    return out
+
+
+def letters_for(word, cells, sol, n):
+    lt = [""] * n
+    for k, i in enumerate(cells):
+        lt[sol[i] - 1] = word[k]
+    return "".join(lt)
+
+
+def all_strings(g, sol, lt, skip):
+    n = g.n
+    lines = [g.rows[r] for r in range(n)] + [g.cols[c] for c in range(n)] + [[i * n + i for i in range(n)], [i * n + (n - 1 - i) for i in range(n)]]
+    for cells in lines:
+        if cells == skip:
+            continue
+        s = "".join(lt[sol[i] - 1] for i in cells).lower()
+        yield s
+        yield s[::-1]
+
+
+def rude_hit(g, sol, lt, skip):
+    for s in all_strings(g, sol, lt, skip):
+        for w in RUDE:
+            if w in s:
+                return w
+    return None
+
+
+def word_ok(w, n):
+    assert w.isalpha() and w.isupper() and len(w) == n, "%s: wrong length or not A-Z" % w
+    assert len(set(w)) == n, "%s: repeated letter" % w
+    for u in US_ONLY:
+        assert u not in w, "%s: US spelling (%s)" % (w, u)
+
+
+def add_word(e):
+    """Add the hidden-word layer to an entry (dates from WORD_START). Same grid, same line, two alphabets."""
+    if e["date"] < WORD_START:
+        return e
+    if e["date"] not in WORDS:
+        raise SystemExit("no hidden word for %s: add one to WORDS" % e["date"])
+    mw, md, nw, nd = WORDS[e["date"]]
+    n = e["size"]
+    g = GEOS[n]
+    sol = [int(x) for x in e["solution"]]
+    puz = [int(x) for x in e["puzzle"]]
+    word_ok(mw, n)
+    word_ok(nw, n)
+    rng = random.Random("sudokrine-word|" + e["date"])
+    lo, hi = (2, 4) if n == 9 else (1, 2)  # given letters already showing on the word line: a start, not a giveaway
+    cands = word_lines(g, sol)
+    rng.shuffle(cands)
+    cands.sort(key=lambda c: 0 if lo <= sum(1 for i in c[1] if puz[i]) <= hi else 1 + abs(sum(1 for i in c[1] if puz[i]) - lo))
+    for name, cells in cands:
+        ml, nl = letters_for(mw, cells, sol, n), letters_for(nw, cells, sol, n)
+        if rude_hit(g, sol, ml, cells) or rude_hit(g, sol, nl, cells):
+            continue
+        e["word"] = {"line": name, "cells": cells, "m": {"w": mw, "d": md, "l": ml}, "n": {"w": nw, "d": nd, "l": nl}}
+        return e
+    raise SystemExit("no clean word line for %s" % e["date"])
+
+
+def verify_word(e):
+    if e["date"] < WORD_START:
+        assert "word" not in e, "word layer before WORD_START"
+        return
+    w = e.get("word")
+    assert w, "missing hidden word"
+    n = e["size"]
+    g = GEOS[n]
+    sol = [int(x) for x in e["solution"]]
+    cells = w["cells"]
+    assert dict(word_lines(g, sol)).get(w["line"]) == cells, "word line is not a row, column or clean diagonal"
+    for k in ("m", "n"):
+        word_ok(w[k]["w"], n)
+        assert w[k]["d"].strip(), "missing meaning"
+        lt = w[k]["l"]
+        assert len(lt) == n and len(set(lt)) == n and sorted(lt) == sorted(w[k]["w"]), "letters do not match the word"
+        assert "".join(lt[sol[i] - 1] for i in cells) == w[k]["w"], "word line does not spell %s" % w[k]["w"]
+        hit = rude_hit(g, sol, lt, cells)
+        assert not hit, "rude string %r with %s" % (hit, w[k]["w"])
+
 
 # ---------- geometry ----------
 class Geo:
@@ -619,6 +786,7 @@ def verify(e):
     assert sorted(used) == sorted(e["techniques"]), "technique list mismatch"
     want = {"Easy": (6, {1}), "Medium": (6, {1, 2, 3}), "Hard": (9, {2}), "Genius": (9, {3, 4}), "Einstein": (9, {5})}[e["difficulty"]]
     assert n == want[0] and tier in want[1], "grade %d does not fit %s" % (tier, e["difficulty"])
+    verify_word(e)
     return tier, used
 
 
@@ -634,12 +802,33 @@ def main():
                 try:
                     tier, used = verify(e)
                     assert e["number"] == number(e["date"]) and e["difficulty"] == difficulty(e["date"])
-                    print("%s #%-3d %-8s %dx%d clues %2d  tier %d  %s" % (e["date"], e["number"], e["difficulty"], e["size"], e["size"], e["clues"], tier, ", ".join(sorted(used, key=lambda k: TIER[k]))))
+                    wd = e.get("word")
+                    print("%s #%-3d %-8s %dx%d clues %2d  tier %d  %s%s" % (e["date"], e["number"], e["difficulty"], e["size"], e["size"], e["clues"], tier, ", ".join(sorted(used, key=lambda k: TIER[k])),
+                                                                         "  [%s %s / %s]" % (wd["line"], wd["m"]["w"], wd["n"]["w"]) if wd else ""))
                 except AssertionError as x:
                     bad += 1
                     print("FAIL", e["date"], x)
         print("OK" if not bad else "%d FAILED" % bad)
         sys.exit(1 if bad else 0)
+    if args and args[0] == "--words":
+        start, end = (args[1:] + [WORD_START, "2026-12-31"])[:2]
+        for f in sorted(os.listdir(out_dir)):
+            if not f.endswith(".json"):
+                continue
+            path = os.path.join(out_dir, f)
+            lst = json.load(open(path))
+            hit = False
+            for e in lst:
+                if start <= e["date"] <= end and e["date"] >= WORD_START:
+                    add_word(e)
+                    verify(e)
+                    hit = True
+                    print(e["date"], e["size"], e["word"]["line"], e["word"]["m"]["w"], e["word"]["n"]["w"], flush=True)
+            if hit:
+                with open(path, "w") as fh:
+                    fh.write("[\n" + ",\n".join(json.dumps(x, ensure_ascii=False) for x in lst) + "\n]\n")
+                print("wrote", path, len(lst))
+        return
     start, end = (args + [LAUNCH, "2026-12-31"])[:2] if args else (LAUNCH, "2026-12-31")
     d, last = dt.date.fromisoformat(start), dt.date.fromisoformat(end)
     months = {}
@@ -653,6 +842,7 @@ def main():
              "puzzle": "".join(map(str, puz)), "solution": "".join(map(str, sol)),
              "clues": sum(1 for x in puz if x), "techniques": sorted(used, key=lambda k: (TIER[k], k)),
              "fact": pick_fact(FACTS, num, "m"), "nfact": pick_fact(NFACTS, num, "n")}
+        add_word(e)
         verify(e)
         print(ds, diff, e["clues"], e["techniques"], flush=True)
         months.setdefault(ds[:7], []).append(e)
@@ -662,7 +852,13 @@ def main():
         path = os.path.join(out_dir, m + ".json")
         old = []
         if os.path.exists(path):
-            old = [x for x in json.load(open(path)) if x["date"] not in {e["date"] for e in lst}]
+            prev = json.load(open(path))
+            byd = {x["date"]: x for x in prev}
+            for e in lst:  # keep hand-written (themed) facts when the grid is unchanged
+                o = byd.get(e["date"])
+                if o and o["puzzle"] == e["puzzle"]:
+                    e["fact"], e["nfact"] = o["fact"], o["nfact"]
+            old = [x for x in prev if x["date"] not in {e["date"] for e in lst}]
         lst = sorted(old + lst, key=lambda x: x["date"])
         with open(path, "w") as f:
             f.write("[\n" + ",\n".join(json.dumps(x, ensure_ascii=False) for x in lst) + "\n]\n")

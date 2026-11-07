@@ -258,7 +258,8 @@
     sudokrine: function (st) {
       if (!st.win) return null; var gold = !st.hints, m = Math.floor((st.t || 0) / 60), sec = ("0" + ((st.t || 0) % 60)).slice(-2), h = "";
       for (var k = 0; k < 9; k++) h += '<i style="animation-delay:' + (k * 0.07).toFixed(2) + 's"></i>';
-      return { cls: "cb-skr" + (gold ? " gold" : ""), html: '<div class="cb-sgrid">' + h + '</div><p class="cb-cap">' + (NORMIE ? (gold ? "Grid complete in " + m + ":" + sec + ". No hints." : "Grid complete in " + m + ":" + sec + ".") : (gold ? "Perfect balance. " + m + ":" + sec + ", no hints." : "Homeostasis restored in " + m + ":" + sec + ".")) + "</p>" };
+      var wb = st.wb ? " Word bonus" + (st.w ? ": " + String(st.w).replace(/[^A-Z]/g, "") : "") + "." : "";
+      return { cls: "cb-skr" + (gold ? " gold" : ""), html: '<div class="cb-sgrid">' + h + '</div><p class="cb-cap">' + (NORMIE ? (gold ? "Grid complete in " + m + ":" + sec + ". No hints." : "Grid complete in " + m + ":" + sec + ".") : (gold ? "Perfect balance. " + m + ":" + sec + ", no hints." : "Homeostasis restored in " + m + ":" + sec + ".")) + wb + "</p>" };
     },
     zebritis: function (st) {
       if (st.uni) return { cls: "cb-run uni", html: '<div class="cb-trail"></div><div class="cb-runner">\ud83e\udd84</div><p class="cb-cap">A unicorn sighting. Mythical.</p>' };
