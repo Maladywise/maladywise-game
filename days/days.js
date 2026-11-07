@@ -2,6 +2,7 @@
 // all from /data/health-days.json (dates are pre-computed per year in each entry's "dates"; no rule resolver needed).
 // Same rules as the home-page box (healthDay in assets/shell.js): Sydney date, region-only events only in that region
 // ("au" = Australian visitors only), Normie mode shows only events with a "normie" field (and uses its overrides).
+// Also reads data/world-days.json (famous non-health days, calendar-only).
 // The static full-year list in index.html is written by _scripts/build_days.py (Medical, no regional days); this file re-renders it.
 (function () {
   var AHEAD = 30, SHOW = 6, PUZZLES_FROM = "2026-10-17";
@@ -48,8 +49,8 @@
   }
   function sens(x) { return (x.tags || []).indexOf("sensitive") >= 0; }
   function nm(x) { return esc(regionOf(x) ? x.name.replace(/\s*\([^()]+\)\s*$/, "") : x.name); }
-  function typeOf(x) { var t = x.tags || [], K = ["who", "zebra", "specialty", "country", "fun", "history"]; for (var i = 0; i < K.length; i++) if (t.indexOf(K[i]) >= 0) return K[i]; return "aware"; }
-  var TYPE_LABEL = { who: "WHO", zebra: "Rare disease", specialty: "Specialty", country: "Country", fun: "Fun", history: "History", aware: "Awareness" };
+  function typeOf(x) { var t = x.tags || [], K = ["who", "zebra", "specialty", "country", "fun", "history", "culture"]; for (var i = 0; i < K.length; i++) if (t.indexOf(K[i]) >= 0) return K[i]; return "aware"; }
+  var TYPE_LABEL = { who: "WHO", zebra: "Rare disease", specialty: "Specialty", country: "Country", fun: "Fun", history: "History", culture: "Culture", aware: "Awareness" };
 
   // Mode + region filter with Normie overrides; every event visible to this visitor.
   function visible(all) {
@@ -226,7 +227,7 @@
     listEl.innerHTML = h;
     IDX = [].map.call(listEl.querySelectorAll(".dl-i"), function (li) {
       var x = evs.filter(function (e) { return "day-" + e.id === li.id; })[0] || {};
-      return { li: li, t: norm(li.textContent + " " + (x.tags || []).join(" ") + " " + (TYPE_LABEL[typeOf(x)] || "") + (typeOf(x) === "zebra" ? " rare" : "") + " " + (x.puzzle_theme || "")), k: " " + li.getAttribute("data-k") + " " };
+      return { li: li, t: norm(li.textContent + " " + (x.tags || []).join(" ") + " " + (TYPE_LABEL[typeOf(x)] || "") + (typeOf(x) === "zebra" ? " rare" : "") + ((x.tags || []).indexOf("culture") >= 0 ? " festival culture" : "") + " " + (x.puzzle_theme || "")), k: " " + li.getAttribute("data-k") + " " };
     });
     document.getElementById("dl-jump").hidden = yr !== TODAY.slice(0, 4);
     filter();
@@ -261,10 +262,12 @@
     renderList(TODAY.slice(0, 4));
   }
 
-  fetch("/data/health-days.json", { cache: "no-cache" })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (j) {
-      var all = (j && j.days) || [];
+  // data/world-days.json = famous non-health days (festivals, religious and UN days): calendar-only, never puzzle themes.
+  function get(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  Promise.all([get("/data/health-days.json"), get("/data/world-days.json")])
+    .then(function (js) {
+      if (!js[0]) throw new Error("health-days.json failed");
+      var all = (js[0].days || []).concat((js[1] && js[1].days) || []);
       VIS = visible(all);
       var cy = Number(TODAY.slice(0, 4));
       YEARS = [String(cy), String(cy + 1)].filter(function (y) { return all.some(function (x) { return x.dates && x.dates[y]; }); });

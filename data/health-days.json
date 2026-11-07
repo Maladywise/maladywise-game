@@ -1,5 +1,5 @@
 {
- "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis. Tags \"history\" (medical-history anniversary) and \"fun\" (quirky day with a health angle) fill days with no awareness day so every date has a theme; they use priority 4 (history) or 5 (fun), so any real awareness day on the same date leads. \"normie\": {name, blurb} = the light, everyday version shown in Normie mode (events without it are hidden there). THEME SPREAD (Nov 2026): on themed days, theme at least 4-5 games, not just Triviosis, using a brainstormed web of associated ideas (e.g. Tsunami Day -> water, islands, boats, sun, earthquakes, cholera, drowning (gentle), crush injury, triage). See STYLE.md 'Daily themes'. Tag 'country' = national day of a country (priority 3): theme puzzles on that country's medical words (incl. funny long ones), famous doctors and inventions, health stats and eponyms; shown to all visitors.",
+ "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis. Tags \"history\" (medical-history anniversary) and \"fun\" (quirky day with a health angle) fill days with no awareness day so every date has a theme; they use priority 4 (history) or 5 (fun), so any real awareness day on the same date leads. \"normie\": {name, blurb} = the light, everyday version shown in Normie mode (events without it are hidden there). THEME SPREAD (Nov 2026): on themed days, theme at least 4-5 games, not just Triviosis, using a brainstormed web of associated ideas (e.g. Tsunami Day -> water, islands, boats, sun, earthquakes, cholera, drowning (gentle), crush injury, triage). See STYLE.md 'Daily themes'. Tag 'country' = national day of a country (priority 3): theme puzzles on that country's medical words (incl. funny long ones), famous doctors and inventions, health stats and eponyms; shown to all visitors. Tag \"culture\" = also a famous cultural day (shown under 'Culture & festivals' on /days/); it does not change theming. More famous non-health days (festivals, religious and UN days) live in data/world-days.json, which is calendar-only and never themed.",
  "updated": "2026-11-03",
  "days": [
   {
@@ -2926,7 +2926,8 @@
     }
    },
    "tags": [
-    "gentle"
+    "gentle",
+    "culture"
    ],
    "priority": 3,
    "link": "https://www.un.org/en/observances/womens-day",
@@ -5861,7 +5862,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/Burns_supper",
@@ -6681,7 +6683,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/Pi_Day",
@@ -6876,7 +6879,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/April_Fools%27_Day",
@@ -10277,7 +10281,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/Halloween",
@@ -12168,7 +12173,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://www.history.com/this-day-in-history/April-22/the-first-earth-day",
@@ -12318,7 +12324,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/Star_Wars_Day",
@@ -12978,7 +12985,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day",
@@ -13008,7 +13016,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://www.unrcpd.org/spotlight/international-day-peace-21-september",
@@ -13608,7 +13617,8 @@
     }
    },
    "tags": [
-    "fun"
+    "fun",
+    "culture"
    ],
    "priority": 5,
    "link": "https://en.wikipedia.org/wiki/New_Year%27s_Eve",
@@ -15709,7 +15719,8 @@
     }
    },
    "tags": [
-    "country"
+    "country",
+    "culture"
    ],
    "priority": 3,
    "link": "https://en.wikipedia.org/wiki/Bastille_Day",
@@ -15859,7 +15870,8 @@
     }
    },
    "tags": [
-    "country"
+    "country",
+    "culture"
    ],
    "priority": 3,
    "link": "https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day",
@@ -16309,7 +16321,8 @@
     }
    },
    "tags": [
-    "country"
+    "country",
+    "culture"
    ],
    "priority": 3,
    "link": "https://en.wikipedia.org/wiki/Canada_Day",
@@ -16339,7 +16352,8 @@
     }
    },
    "tags": [
-    "country"
+    "country",
+    "culture"
    ],
    "priority": 3,
    "link": "https://en.wikipedia.org/wiki/Independence_Day_(United_States)",

@@ -1,10 +1,10 @@
 /* World Health Days page (/days/). Built by _scripts/build_days.py; behaviour in days/days.js. */
 :root{
-  --t-who:#2D6CDF; --t-zebra:#2B2B2B; --t-specialty:#0E8F7E; --t-country:#D9611F; --t-fun:#D69A00; --t-history:#8C6B48; --t-aware:#C2417A;
+  --t-who:#2D6CDF; --t-zebra:#2B2B2B; --t-specialty:#0E8F7E; --t-country:#D9611F; --t-fun:#D69A00; --t-history:#8C6B48; --t-culture:#7A3EC8; --t-aware:#C2417A;
   --wk:#CDBFEA; --today:#F1ECF8; --sel:var(--brand);
 }
 :root[data-theme="dark"]{
-  --t-who:#7FA8F5; --t-zebra:#E6E6E6; --t-specialty:#4CC9B4; --t-country:#F4935C; --t-fun:#F2C94C; --t-history:#C9A57E; --t-aware:#F07FAE;
+  --t-who:#7FA8F5; --t-zebra:#E6E6E6; --t-specialty:#4CC9B4; --t-country:#F4935C; --t-fun:#F2C94C; --t-history:#C9A57E; --t-culture:#C39BF5; --t-aware:#F07FAE;
   --wk:#4A3D6B; --today:#2A2240;
 }
 .doc.days-doc{max-width:1040px}
@@ -69,7 +69,7 @@
 .doc .cal-key li{font-size:12px;line-height:1.4;display:flex;align-items:center;gap:5px}
 .cal-key i{width:8px;height:8px;border-radius:50%;background:var(--c)}
 .cal-key i.k-week{width:16px;height:4px;border-radius:2px;background:var(--wk)}
-.k-who,.t-who{--c:var(--t-who)}.k-zebra,.t-zebra{--c:var(--t-zebra)}.k-specialty,.t-specialty{--c:var(--t-specialty)}.k-country,.t-country{--c:var(--t-country)}.k-fun,.t-fun{--c:var(--t-fun)}.k-history,.t-history{--c:var(--t-history)}.k-aware,.t-aware{--c:var(--t-aware)}
+.k-who,.t-who{--c:var(--t-who)}.k-zebra,.t-zebra{--c:var(--t-zebra)}.k-specialty,.t-specialty{--c:var(--t-specialty)}.k-country,.t-country{--c:var(--t-country)}.k-fun,.t-fun{--c:var(--t-fun)}.k-history,.t-history{--c:var(--t-history)}.k-culture,.t-culture{--c:var(--t-culture)}.k-aware,.t-aware{--c:var(--t-aware)}
 .cal-day{margin-top:14px;max-width:640px}
 .cal-day:empty{display:none}
 .doc .cal-day h3{font:700 18px var(--title);margin:0 0 8px;color:var(--ink)}

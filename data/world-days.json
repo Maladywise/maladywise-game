@@ -1,0 +1,881 @@
+{
+ "_about": "Malady Wise famous non-health days (culture, festivals, religious and UN international days), shown ONLY on the /days/ calendar and list (days/days.js and _scripts/build_days.py). NOT read by the home page or puzzle builders, and NEVER used as puzzle themes. Same fields as data/health-days.json. tags: culture (all), religious (faith festivals: respectful, no jokes), au (Australian visitors only). rule 'dates' = moveable (lunar, lunisolar or church calendar): the dates map is authoritative, verified per year, and must be added by hand for new years (see _note for sources). After editing, run python3 _scripts/build_days.py.",
+ "updated": "2026-11-08",
+ "days": [
+  {
+   "id": "new-years-day",
+   "name": "New Year's Day",
+   "kind": "day",
+   "rule": "01-01",
+   "dates": {
+    "2026": {
+     "start": "2026-01-01"
+    },
+    "2027": {
+     "start": "2027-01-01"
+    },
+    "2028": {
+     "start": "2028-01-01"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/New_Year%27s_Day",
+   "blurb": "The first day of the Gregorian calendar year, and a public holiday in most countries.",
+   "normie": true
+  },
+  {
+   "id": "orthodox-christmas",
+   "name": "Orthodox Christmas",
+   "kind": "day",
+   "rule": "01-07",
+   "dates": {
+    "2026": {
+     "start": "2026-01-07"
+    },
+    "2027": {
+     "start": "2027-01-07"
+    },
+    "2028": {
+     "start": "2028-01-07"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Christmas_in_the_Eastern_Orthodox_Church",
+   "blurb": "Christmas for Orthodox churches that keep the Julian calendar, now 13 days behind the Gregorian one.",
+   "normie": true
+  },
+  {
+   "id": "holocaust-remembrance",
+   "name": "International Holocaust Remembrance Day",
+   "kind": "day",
+   "rule": "01-27",
+   "dates": {
+    "2026": {
+     "start": "2026-01-27"
+    },
+    "2027": {
+     "start": "2027-01-27"
+    },
+    "2028": {
+     "start": "2028-01-27"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 6,
+   "link": "https://www.un.org/en/holocaustremembrance",
+   "blurb": "The UN day remembering the six million Jews and millions of others murdered in the Holocaust, on the anniversary of the liberation of Auschwitz-Birkenau in 1945."
+  },
+  {
+   "id": "lunar-new-year",
+   "name": "Lunar New Year",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-02-17"
+    },
+    "2027": {
+     "start": "2027-02-06"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Lunar_New_Year",
+   "blurb": "New Year on the Chinese lunisolar calendar, celebrated across East and South-East Asia and worldwide. 2026 is the Year of the Horse; 2027 the Year of the Goat.",
+   "_note": "Moveable (Chinese lunisolar calendar). Checked: Farmers' Almanac, publicholidays sites.",
+   "normie": true
+  },
+  {
+   "id": "black-history-month-us",
+   "name": "Black History Month: US and Canada",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Black_History_Month",
+   "blurb": "February celebrates the history, achievements and culture of Black Americans and Black Canadians.",
+   "normie": true
+  },
+  {
+   "id": "valentines-day",
+   "name": "Valentine's Day",
+   "kind": "day",
+   "rule": "02-14",
+   "dates": {
+    "2026": {
+     "start": "2026-02-14"
+    },
+    "2027": {
+     "start": "2027-02-14"
+    },
+    "2028": {
+     "start": "2028-02-14"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Valentine%27s_Day",
+   "blurb": "Cards, flowers and chocolates for loved ones, named after St Valentine.",
+   "normie": true
+  },
+  {
+   "id": "shrove-tuesday",
+   "name": "Shrove Tuesday (Mardi Gras, Pancake Day)",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-02-17"
+    },
+    "2027": {
+     "start": "2027-02-09"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Shrove_Tuesday",
+   "blurb": "The day before Lent begins: pancakes in the UK and Australia, carnival in New Orleans and Rio. It falls 47 days before Easter Sunday.",
+   "_note": "Moveable: 47 days before Western Easter.",
+   "normie": true
+  },
+  {
+   "id": "ramadan",
+   "name": "Ramadan",
+   "kind": "month",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-02-18",
+     "end": "2026-03-19"
+    },
+    "2027": {
+     "start": "2027-02-08",
+     "end": "2027-03-09"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Ramadan",
+   "blurb": "The Islamic month of fasting from dawn to sunset, prayer and charity. Dates follow the Islamic lunar calendar and moon sighting, so they can differ by a day between countries.",
+   "_note": "Moveable (Islamic calendar). 2026 actual; 2027 expected (Gulf News, astronomical calculation).",
+   "normie": true
+  },
+  {
+   "id": "holi",
+   "name": "Holi",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-03-04"
+    },
+    "2027": {
+     "start": "2027-03-22"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Holi",
+   "blurb": "The Hindu festival of colours, welcoming spring with bonfires the night before and coloured powder on the day. Some regions mark it a day earlier.",
+   "_note": "Moveable (Hindu lunisolar calendar). Checked: officeholidays.com (2026: 4 Mar in most states, 3 Mar in some; 2027: 22 Mar).",
+   "normie": true
+  },
+  {
+   "id": "eid-al-fitr",
+   "name": "Eid al-Fitr",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-03-20"
+    },
+    "2027": {
+     "start": "2027-03-10"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
+   "blurb": "The festival that ends Ramadan, with prayers, family feasts and gifts. Dates follow the Islamic lunar calendar and moon sighting, so they can differ by a day between countries.",
+   "_note": "Moveable. 2026 actual; 2027 expected 9 or 10 March (Gulf News).",
+   "normie": true
+  },
+  {
+   "id": "nowruz",
+   "name": "Nowruz (Persian New Year)",
+   "kind": "day",
+   "rule": "03-21",
+   "dates": {
+    "2026": {
+     "start": "2026-03-21"
+    },
+    "2027": {
+     "start": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-21"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Nowruz",
+   "blurb": "New Year at the spring equinox, celebrated in Iran, Central Asia, the Caucasus and beyond. The UN marks it on 21 March.",
+   "normie": true
+  },
+  {
+   "id": "passover",
+   "name": "Passover (Pesach)",
+   "kind": "week",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-04-02",
+     "end": "2026-04-09"
+    },
+    "2027": {
+     "start": "2027-04-22",
+     "end": "2027-04-29"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Passover",
+   "blurb": "The Jewish festival remembering the Exodus from Egypt, starting with the Seder meal at sundown the evening before.",
+   "_note": "Moveable (Hebrew calendar). Checked: Hebcal (Pesach I 22/4/2027).",
+   "normie": true
+  },
+  {
+   "id": "easter",
+   "name": "Easter Sunday",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-04-05"
+    },
+    "2027": {
+     "start": "2027-03-28"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Easter",
+   "blurb": "The main Christian festival, celebrating the resurrection of Jesus. Its date moves with the spring full moon.",
+   "_note": "Moveable (Western computus).",
+   "normie": true
+  },
+  {
+   "id": "orthodox-easter",
+   "name": "Orthodox Easter",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-04-12"
+    },
+    "2027": {
+     "start": "2027-05-02"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Easter",
+   "blurb": "Easter for Orthodox churches, calculated on the Julian calendar, so it often falls later than Western Easter.",
+   "_note": "Moveable (Julian computus).",
+   "normie": true
+  },
+  {
+   "id": "songkran",
+   "name": "Songkran (Thai New Year)",
+   "kind": "day",
+   "rule": "range:04-13:04-15",
+   "dates": {
+    "2026": {
+     "start": "2026-04-13",
+     "end": "2026-04-15"
+    },
+    "2027": {
+     "start": "2027-04-13",
+     "end": "2027-04-15"
+    },
+    "2028": {
+     "start": "2028-04-13",
+     "end": "2028-04-15"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Songkran_(Thailand)",
+   "blurb": "Thailand's New Year, famous for the nationwide water fight. Similar water festivals happen in Laos, Myanmar and Cambodia.",
+   "normie": true
+  },
+  {
+   "id": "world-press-freedom",
+   "name": "World Press Freedom Day",
+   "kind": "day",
+   "rule": "05-03",
+   "dates": {
+    "2026": {
+     "start": "2026-05-03"
+    },
+    "2027": {
+     "start": "2027-05-03"
+    },
+    "2028": {
+     "start": "2028-05-03"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://www.un.org/en/observances/press-freedom-day",
+   "blurb": "The UN day for a free and independent press.",
+   "normie": true
+  },
+  {
+   "id": "mothers-day",
+   "name": "Mother's Day",
+   "kind": "day",
+   "rule": "nth:2:6:05",
+   "dates": {
+    "2026": {
+     "start": "2026-05-10"
+    },
+    "2027": {
+     "start": "2027-05-09"
+    },
+    "2028": {
+     "start": "2028-05-14"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Mother%27s_Day",
+   "blurb": "Second Sunday of May in Australia, the US, Canada and many other countries. The UK and Ireland mark Mothering Sunday in Lent.",
+   "normie": true
+  },
+  {
+   "id": "eid-al-adha",
+   "name": "Eid al-Adha",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-05-27"
+    },
+    "2027": {
+     "start": "2027-05-16"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Eid_al-Adha",
+   "blurb": "The Festival of Sacrifice, at the time of the Hajj pilgrimage to Mecca. Dates follow the Islamic lunar calendar and moon sighting, so they can differ by a day between countries.",
+   "_note": "Moveable. 2026 actual; 2027 expected (Gulf News: Arafat Day 15 May).",
+   "normie": true
+  },
+  {
+   "id": "pride-month",
+   "name": "Pride Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Pride_Month",
+   "blurb": "June celebrates LGBTIQA+ communities, marking the 1969 Stonewall uprising in New York. Sydney's Mardi Gras is in February.",
+   "normie": true
+  },
+  {
+   "id": "juneteenth",
+   "name": "Juneteenth",
+   "kind": "day",
+   "rule": "06-19",
+   "dates": {
+    "2026": {
+     "start": "2026-06-19"
+    },
+    "2027": {
+     "start": "2027-06-19"
+    },
+    "2028": {
+     "start": "2028-06-19"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Juneteenth",
+   "blurb": "A US federal holiday marking the end of slavery, when news of emancipation reached Galveston, Texas, on 19 June 1865.",
+   "normie": true
+  },
+  {
+   "id": "fathers-day",
+   "name": "Father's Day",
+   "kind": "day",
+   "rule": "nth:3:6:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-21"
+    },
+    "2027": {
+     "start": "2027-06-20"
+    },
+    "2028": {
+     "start": "2028-06-18"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Father%27s_Day",
+   "blurb": "Third Sunday of June in the US, UK, Canada and many other countries. Australia and New Zealand mark it in September.",
+   "normie": true
+  },
+  {
+   "id": "fathers-day-au",
+   "name": "Father's Day (Australia)",
+   "kind": "day",
+   "rule": "nth:1:6:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-06"
+    },
+    "2027": {
+     "start": "2027-09-05"
+    },
+    "2028": {
+     "start": "2028-09-03"
+    }
+   },
+   "tags": [
+    "culture",
+    "au"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Father%27s_Day",
+   "blurb": "First Sunday of September in Australia and New Zealand.",
+   "normie": true
+  },
+  {
+   "id": "rosh-hashanah",
+   "name": "Rosh Hashanah",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-09-12",
+     "end": "2026-09-13"
+    },
+    "2027": {
+     "start": "2027-10-02",
+     "end": "2027-10-03"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Rosh_Hashanah",
+   "blurb": "The Jewish New Year, with the shofar (ram's horn) and apples dipped in honey. It begins at sundown the evening before.",
+   "_note": "Moveable (Hebrew calendar). Checked: Hebcal.",
+   "normie": true
+  },
+  {
+   "id": "yom-kippur",
+   "name": "Yom Kippur",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-09-21"
+    },
+    "2027": {
+     "start": "2027-10-11"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Yom_Kippur",
+   "blurb": "The Day of Atonement, the holiest day of the Jewish year, marked by a 25-hour fast. It begins at sundown the evening before.",
+   "_note": "Moveable (Hebrew calendar). Checked: Hebcal.",
+   "normie": true
+  },
+  {
+   "id": "mid-autumn",
+   "name": "Mid-Autumn Festival",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-09-25"
+    },
+    "2027": {
+     "start": "2027-09-15"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Mid-Autumn_Festival",
+   "blurb": "The harvest moon festival of mooncakes and lanterns, on the 15th day of the eighth lunar month.",
+   "_note": "Moveable (Chinese lunisolar calendar). Checked: publicholidays.com.au.",
+   "normie": true
+  },
+  {
+   "id": "black-history-month-uk",
+   "name": "Black History Month: UK and Ireland",
+   "kind": "month",
+   "rule": "month:10",
+   "dates": {
+    "2026": {
+     "start": "2026-10-01",
+     "end": "2026-10-31"
+    },
+    "2027": {
+     "start": "2027-10-01",
+     "end": "2027-10-31"
+    },
+    "2028": {
+     "start": "2028-10-01",
+     "end": "2028-10-31"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Black_History_Month",
+   "blurb": "October celebrates the history, achievements and contributions of Black people in Britain and Ireland.",
+   "normie": true
+  },
+  {
+   "id": "un-day",
+   "name": "United Nations Day",
+   "kind": "day",
+   "rule": "10-24",
+   "dates": {
+    "2026": {
+     "start": "2026-10-24"
+    },
+    "2027": {
+     "start": "2027-10-24"
+    },
+    "2028": {
+     "start": "2028-10-24"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/United_Nations_Day",
+   "blurb": "The anniversary of the UN Charter coming into force in 1945.",
+   "normie": true
+  },
+  {
+   "id": "dia-de-los-muertos",
+   "name": "Día de los Muertos (Day of the Dead)",
+   "kind": "day",
+   "rule": "range:11-01:11-02",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01",
+     "end": "2026-11-02"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-02"
+    },
+    "2028": {
+     "start": "2028-11-01",
+     "end": "2028-11-02"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+   "blurb": "Mexico's joyful remembrance of loved ones who have died, with ofrendas (altars), marigolds and sugar skulls.",
+   "normie": true
+  },
+  {
+   "id": "guy-fawkes",
+   "name": "Guy Fawkes Night (Bonfire Night)",
+   "kind": "day",
+   "rule": "11-05",
+   "dates": {
+    "2026": {
+     "start": "2026-11-05"
+    },
+    "2027": {
+     "start": "2027-11-05"
+    },
+    "2028": {
+     "start": "2028-11-05"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Guy_Fawkes_Night",
+   "blurb": "Bonfires and fireworks across Britain, marking the failed Gunpowder Plot of 1605.",
+   "normie": true
+  },
+  {
+   "id": "diwali",
+   "name": "Diwali",
+   "kind": "day",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-11-08"
+    },
+    "2027": {
+     "start": "2027-10-29"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Diwali",
+   "blurb": "The festival of lights, celebrated by Hindus, Sikhs and Jains with lamps, fireworks and sweets. The festival runs over about five days.",
+   "_note": "Moveable (Hindu lunisolar calendar). Checked: publicholidays.co.uk (Sun 8 Nov 2026, Fri 29 Oct 2027).",
+   "normie": true
+  },
+  {
+   "id": "tolerance-day",
+   "name": "International Day for Tolerance",
+   "kind": "day",
+   "rule": "11-16",
+   "dates": {
+    "2026": {
+     "start": "2026-11-16"
+    },
+    "2027": {
+     "start": "2027-11-16"
+    },
+    "2028": {
+     "start": "2028-11-16"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://www.un.org/en/observances/tolerance-day",
+   "blurb": "The UN day for respect and understanding between cultures, faiths and peoples.",
+   "normie": true
+  },
+  {
+   "id": "world-childrens-day",
+   "name": "World Children's Day",
+   "kind": "day",
+   "rule": "11-20",
+   "dates": {
+    "2026": {
+     "start": "2026-11-20"
+    },
+    "2027": {
+     "start": "2027-11-20"
+    },
+    "2028": {
+     "start": "2028-11-20"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://www.unicef.org/world-childrens-day",
+   "blurb": "UNICEF's day for children's rights, on the anniversary of the UN Convention on the Rights of the Child (1989).",
+   "normie": true
+  },
+  {
+   "id": "thanksgiving-us",
+   "name": "US Thanksgiving",
+   "kind": "day",
+   "rule": "nth:4:3:11",
+   "dates": {
+    "2026": {
+     "start": "2026-11-26"
+    },
+    "2027": {
+     "start": "2027-11-25"
+    },
+    "2028": {
+     "start": "2028-11-23"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Thanksgiving_(United_States)",
+   "blurb": "Turkey, family and football in the United States on the fourth Thursday of November. Canada's Thanksgiving is in October.",
+   "normie": true
+  },
+  {
+   "id": "hanukkah",
+   "name": "Hanukkah",
+   "kind": "week",
+   "rule": "dates",
+   "dates": {
+    "2026": {
+     "start": "2026-12-04",
+     "end": "2026-12-12"
+    },
+    "2027": {
+     "start": "2027-12-24",
+     "end": "2028-01-01"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Hanukkah",
+   "blurb": "The Jewish festival of lights: eight nights of candles on the menorah, starting at sundown on the first date.",
+   "_note": "Moveable (Hebrew calendar). Checked: Hebcal (first candle 4/12/2026 and 24/12/2027).",
+   "normie": true
+  },
+  {
+   "id": "human-rights-day",
+   "name": "Human Rights Day",
+   "kind": "day",
+   "rule": "12-10",
+   "dates": {
+    "2026": {
+     "start": "2026-12-10"
+    },
+    "2027": {
+     "start": "2027-12-10"
+    },
+    "2028": {
+     "start": "2028-12-10"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 6,
+   "link": "https://www.un.org/en/observances/human-rights-day",
+   "blurb": "The anniversary of the Universal Declaration of Human Rights, adopted by the UN in 1948.",
+   "normie": true
+  },
+  {
+   "id": "christmas",
+   "name": "Christmas Day",
+   "kind": "day",
+   "rule": "12-25",
+   "dates": {
+    "2026": {
+     "start": "2026-12-25"
+    },
+    "2027": {
+     "start": "2027-12-25"
+    },
+    "2028": {
+     "start": "2028-12-25"
+    }
+   },
+   "tags": [
+    "culture",
+    "religious"
+   ],
+   "priority": 6,
+   "link": "https://en.wikipedia.org/wiki/Christmas",
+   "blurb": "The Christian festival celebrating the birth of Jesus, and a public holiday in many countries.",
+   "normie": true
+  }
+ ]
+}
