@@ -578,6 +578,9 @@ def main():
         urls.append("%s/%s/archive/" % (SITE, g["folder"]))
         report.append("%s: %d past puzzles -> /%s/archive/" % (g["id"], len(past), g["folder"]))
     update_sitemap(urls, today)
+    # re-add breadcrumb JSON-LD that a rebuild would otherwise drop
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(ROOT, "_scripts", "add_breadcrumbs.py")], check=False)
     print("Sydney today: " + today)
     print("\n".join(report))
 
