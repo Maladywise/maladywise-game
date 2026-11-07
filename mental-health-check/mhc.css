@@ -1,0 +1,55 @@
+/* Mental health self-checks. Scoped to .mhc pages. Calm, high contrast, no animation. */
+.mhc .help-now{background:var(--card);border:2px solid var(--brand);border-radius:10px;padding:10px 14px;margin:12px 0 18px;font-size:15px;line-height:1.45;color:var(--ink)}
+.mhc .help-now a{color:var(--ink);font-weight:700}
+.mhc .intro-note{font-size:15px;color:var(--ink)}
+.mhc form.mhc-form{margin:18px 0}
+.mhc .stem{font-weight:700;font-size:17px;margin:12px 0 6px;color:var(--ink)}
+.mhc fieldset.q{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:12px 14px 10px;margin:0 0 12px;min-width:0}
+.mhc fieldset.q legend{font-weight:600;font-size:16px;line-height:1.4;padding:0 4px;color:var(--ink);max-width:100%;white-space:normal}
+.mhc fieldset.q legend .qn{display:inline-block;min-width:1.6em;color:var(--muted);font-weight:700}
+.mhc fieldset.q.missing{border:2px solid #A3261B}
+html[data-theme="dark"] .mhc fieldset.q.missing{border-color:#F0A898}
+.mhc .opts{display:grid;gap:6px;margin-top:6px}
+@media (min-width:640px){.mhc .opts{grid-template-columns:repeat(var(--n,4),1fr)}}
+.mhc .opts label{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-height:44px;cursor:pointer;font-size:15px;color:var(--ink);background:var(--bg)}
+.mhc .opts label:has(input:checked){border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand);font-weight:600}
+.mhc .opts input{width:20px;height:20px;flex:0 0 auto;accent-color:var(--brand);margin:0}
+.mhc .opts input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.mhc .opts .pts{margin-left:auto;color:var(--muted);font-size:13px;font-weight:500}
+.mhc .actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px}
+.mhc .actions button{font:600 16px var(--body);min-height:48px;padding:10px 20px;border-radius:12px;cursor:pointer;border:2px solid var(--brand)}
+.mhc .actions .go{background:var(--brand);color:var(--bg)}
+.mhc .actions .clear{background:transparent;color:var(--ink)}
+.mhc .actions button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.mhc .form-msg{font-weight:600;color:#A3261B;min-height:1.2em}
+html[data-theme="dark"] .mhc .form-msg{color:#F0A898}
+.mhc .support{background:var(--card);border:3px solid var(--brand);border-radius:12px;padding:14px 16px;margin:12px 0 16px;color:var(--ink);font-size:15.5px;line-height:1.5}
+.mhc .support h2,.mhc .support h3{margin:0 0 6px;font-size:18px}
+.mhc .support ul{margin:6px 0 8px;padding-left:20px}
+.mhc .support li{margin:4px 0}
+.mhc .support a{color:var(--ink);font-weight:700}
+.mhc #result{margin:18px 0;scroll-margin-top:84px}
+.mhc #q9-support,.mhc #next-steps,.mhc #crisis{scroll-margin-top:84px}
+.mhc #result:focus{outline:none}
+.mhc .score-card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:12px;padding:14px 16px;margin:0 0 14px}
+.mhc .score-card h2{margin:0 0 4px;font-size:20px}
+.mhc .score-big{font:700 30px var(--title);color:var(--brand);margin:4px 0}
+.mhc .bands{list-style:none;padding:0;margin:10px 0;display:grid;gap:4px}
+.mhc .bands li{display:flex;gap:10px;align-items:baseline;padding:5px 10px;border-radius:8px;font-size:14.5px;border:1px solid transparent}
+.mhc .bands li b{min-width:4.2em}
+.mhc .bands li.on{border-color:var(--brand);background:var(--bg);font-weight:600}
+.mhc .bands li.on::after{content:"\2190 your score";margin-left:auto;font-size:13px;color:var(--muted)}
+.mhc .next{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:0 0 14px}
+.mhc .next h3{margin:4px 0 6px;font-size:17px}
+.mhc .next ul{padding-left:20px;margin:4px 0 8px}
+.mhc .next li{margin:4px 0}
+.mhc .privacy{font-size:14px;color:var(--muted)}
+.mhc .checks{list-style:none;padding:0;display:grid;gap:10px;margin:14px 0}
+.mhc .checks a{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.mhc .checks a b{display:block;font-size:17px;margin-bottom:2px}
+.mhc .checks a span{font-size:14.5px;color:var(--muted)}
+.mhc .checks a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.mhc .lic{font-size:13.5px;color:var(--muted)}
+@media print{.mhc .actions,.mhc .help-now{display:none}}
+.mhc fieldset.q legend{float:left;width:100%;padding:0;margin:0 0 4px}
+.mhc fieldset.q .opts{clear:both}
