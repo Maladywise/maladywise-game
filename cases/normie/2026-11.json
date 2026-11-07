@@ -464,38 +464,40 @@
     "date": "2026-11-14",
     "number": 22,
     "difficulty": "Hard",
-    "title": "Sweet discovery",
-    "answer": "Frederick Banting",
+    "title": "Not the capital",
+    "answer": "Toronto",
     "accept": [
-      "frederick banting",
-      "banting",
-      "sir frederick banting",
-      "fred banting",
-      "frederick grant banting",
-      "sir frederick grant banting",
-      "dr banting"
+      "toronto",
+      "tkaronto",
+      "the 6ix",
+      "the six",
+      "t.o.",
+      "t dot",
+      "hogtown",
+      "muddy york",
+      "york"
     ],
     "clues": [
       {
-        "t": "I was wounded in the arm in World War I and won the Military Cross."
+        "t": "My name may come from a Mohawk word meaning ‘where there are trees standing in the water’."
       },
       {
-        "t": "I was also a keen painter and went sketching with Canada's Group of Seven."
+        "t": "Until 1834 I was called York, and some locals called me ‘Muddy York’."
       },
       {
-        "t": "My big idea came in the middle of the night in 1920, after reading a journal article."
+        "t": "My famous tower was the world’s tallest free-standing structure for more than 30 years."
       },
       {
-        "t": "Our team sold a life-saving patent to the University of Toronto for one dollar each."
+        "t": "My basketball team, the Raptors, won the NBA title in 2019."
       },
       {
-        "t": "At 32 I became the youngest-ever winner of the Nobel Prize in medicine."
+        "t": "In 1921 and 1922, insulin was discovered at my university."
       },
       {
-        "t": "With Charles Best I discovered insulin. World Diabetes Day falls on my birthday."
+        "t": "I’m Canada’s biggest city, but not its capital."
       }
     ],
-    "pearl": "He shared his Nobel prize money with Charles Best, who'd been left off the award. Insulin turned type 1 diabetes from a death sentence into a condition people live long lives with."
+    "pearl": "Banting, Best and Collip sold the insulin patent to the University of Toronto for one dollar each, so that as many people as possible could afford it."
   },
   {
     "date": "2026-11-15",

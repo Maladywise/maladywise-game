@@ -1217,16 +1217,16 @@
    {
     "kind": "Name the structure",
     "q": "Name the highlighted region.",
-    "answer": "Cervical spine",
+    "answer": "Thoracic spine",
     "wrong": [
-     "Thoracic spine",
      "Lumbar spine",
-     "Sacrum"
+     "Sacrum",
+     "Coccyx"
     ],
-    "why": "Seven neck vertebrae, the same number as a giraffe.",
+    "why": "Twelve vertebrae, one for each pair of ribs. The curve here gives the chest its rounded back.",
     "art": "spine",
     "hl": [
-     "cervical"
+     "thoracic"
     ]
    }
   ]

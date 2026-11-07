@@ -4002,14 +4002,14 @@
   "theme": "Scotland is weird",
   "questions": [
    {
-    "q": "Today is St Andrew\u2019s Day. Andrew is patron saint of?",
-    "a": "Scotland",
+    "q": "The Saltire, St Andrew\u2019s flag, is a white diagonal cross on what colour?",
+    "a": "Blue",
     "w": [
-     "Ireland",
-     "Wales",
-     "England"
+     "Red",
+     "Green",
+     "Black"
     ],
-    "e": "Ireland has Patrick, Wales David, England George. Andrew gets the haggis."
+    "e": "Legend says Andrew was crucified on an X-shaped cross, and a white X once appeared in a blue sky before a battle."
    },
    {
     "q": "Edinburgh Castle sits on top of?",
@@ -5986,12 +5986,12 @@
     "e": "Spice-loving Asia learned chilli from Portuguese ships. Black pepper had to do the job before then."
    },
    {
-    "q": "Levi Strauss and Jacob Davis, who patented riveted jeans in 1873, were both?",
-    "a": "Immigrants to the USA",
+    "q": "Levi Strauss, who co-patented riveted jeans in 1873, was born in what is now which country?",
+    "a": "Germany",
     "w": [
-     "Gold miners",
-     "Sons of farmers",
-     "Civil War veterans"
+     "Ireland",
+     "Italy",
+     "Poland"
     ],
     "e": "Strauss came from Bavaria and Davis from Riga. American as apple pie, which isn\u2019t that American either."
    },
@@ -6486,12 +6486,12 @@
   "theme": "Twins and amazing firsts",
   "questions": [
    {
-    "q": "On this day in 1954 in Boston, the first successful kidney transplant was done between?",
-    "a": "Identical twins",
+    "q": "Joseph Murray, the surgeon behind the first successful kidney transplant in 1954, later won?",
+    "a": "A Nobel Prize",
     "w": [
-     "A mother and son",
-     "Two brothers-in-law",
-     "Two cousins"
+     "An Olympic medal",
+     "An Oscar",
+     "A Pulitzer Prize"
     ],
     "e": "With an identical twin, the body doesn\u2019t reject the organ. Dr Joseph Murray later got a Nobel Prize."
    },
@@ -6509,9 +6509,9 @@
     "q": "Igbo-Ora in Nigeria proudly calls itself the?",
     "a": "Twins capital of the world",
     "w": [
-     "Triplet town of Africa",
-     "City of a thousand mothers",
-     "Home of the identical"
+     "Twin city of Lagos",
+     "Home of the twin rivers",
+     "Twin peaks of Africa"
     ],
     "e": "It even holds a twins festival. Locals credit their diet, but no one is sure why."
    },
@@ -6843,9 +6843,9 @@
     "q": "Radithor, sold in the USA in the 1920s, was?",
     "a": "Water with radium in it",
     "w": [
-     "A radio with glowing valves",
-     "Powder that polished silver",
-     "A lamp for healthy skin"
+     "Radium-glow face cream",
+     "A radium-lit alarm clock",
+     "Radium-laced chocolate"
     ],
     "e": "It was marketed as a health tonic until a famous customer\u2019s death helped bring it down."
    },
@@ -6893,9 +6893,9 @@
     "q": "In 1921, American women, led by journalist Missy Meloney, raised $100,000 to buy Marie Curie?",
     "a": "One gram of radium",
     "w": [
-     "A new laboratory in Paris",
-     "A statue in Washington",
-     "A trip around the world"
+     "A gram of polonium",
+     "A kilogram of uranium",
+     "A radium mine in Colorado"
     ],
     "e": "President Harding handed it over in a special box. Her own lab had too little radium for its research."
    },

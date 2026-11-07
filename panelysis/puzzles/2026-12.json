@@ -3,90 +3,83 @@
   "date": "2026-12-01",
   "number": 37,
   "difficulty": "Easy",
-  "patient": "Nadia, 29, female",
-  "story": "Ten days of fever, sore throat, aching muscles and a faint rash across her chest. Well until now. Her GP sends a broad screen because a sexual health check is routine and she asked for one.",
+  "patient": "Daniel, 44, male",
+  "story": "Tired for a year. A routine check before starting a new job. He briefly shared needles in his twenties and has felt fine since.",
   "theme": "World AIDS Day",
   "panels": [
    {
-    "name": "Full blood count",
+    "name": "Liver",
     "rows": [
      [
-      "Haemoglobin",
-      "128",
-      "g/L",
-      "115–165",
+      "ALT",
+      "74",
+      "U/L",
+      "<40",
+      "H"
+     ],
+     [
+      "AST",
+      "58",
+      "U/L",
+      "<35",
+      "H"
+     ],
+     [
+      "Bilirubin",
+      "12",
+      "µmol/L",
+      "<20",
       ""
      ],
      [
-      "White cells",
-      "3.2",
-      "×10⁹/L",
-      "4.0–11.0",
-      "L"
-     ],
-     [
-      "Lymphocytes",
-      "0.8",
-      "×10⁹/L",
-      "1.0–4.0",
-      "L"
+      "Albumin",
+      "41",
+      "g/L",
+      "35–50",
+      ""
      ],
      [
       "Platelets",
-      "128",
+      "168",
       "×10⁹/L",
       "150–400",
-      "L"
+      ""
      ]
     ]
    },
    {
-    "name": "Infection screen",
+    "name": "Blood-borne virus screen",
     "rows": [
      [
-      "ALT",
-      "62",
-      "U/L",
-      "<30",
-      "H"
-     ],
-     [
-      "CRP",
-      "18",
-      "mg/L",
-      "<5",
-      "H"
-     ],
-     [
-      "Heterophile antibody (Monospot)",
-      "Negative",
-      "",
-      "Negative",
-      ""
-     ],
-     [
-      "HIV antigen/antibody screen",
+      "Hepatitis C antibody",
       "Reactive",
       "",
       "Non-reactive",
       "!"
      ],
      [
-      "HIV-1 antibody confirmatory blot",
-      "Indeterminate",
+      "Hepatitis C RNA (PCR)",
+      "Detected",
       "",
-      "Negative",
-      "!"
-     ],
-     [
-      "HIV-1 RNA (viral load)",
-      "1,400,000",
-      "copies/mL",
       "Not detected",
       "!"
      ],
      [
-      "Syphilis serology",
+      "Hepatitis B surface antigen",
+      "Non-reactive",
+      "",
+      "Non-reactive",
+      ""
+     ],
+     [
+      "Hepatitis B core antibody",
+      "Non-reactive",
+      "",
+      "Non-reactive",
+      ""
+     ],
+     [
+      "HIV antigen/antibody screen",
       "Non-reactive",
       "",
       "Non-reactive",
@@ -95,37 +88,38 @@
     ]
    }
   ],
-  "answer": "Primary HIV infection (seroconversion)",
+  "answer": "Chronic hepatitis C",
   "wrong": [
-   "Glandular fever (EBV)",
-   "Cytomegalovirus infection",
-   "Secondary syphilis",
-   "Acute hepatitis A",
-   "Long-established HIV infection"
+   "Cleared (past) hepatitis C",
+   "Chronic hepatitis B",
+   "Fatty liver disease",
+   "Alcohol-related liver disease",
+   "Primary HIV infection"
   ],
   "hints": [
    [
-    "A flu-like illness with a negative Monospot. Now look at the screen below it.",
+    "One antibody test is positive. Is the virus still there, or just the memory of it?",
     [
-     "Heterophile antibody (Monospot)",
-     "HIV antigen/antibody screen"
+     "Hepatitis C antibody",
+     "Hepatitis C RNA (PCR)"
     ]
    ],
    [
-    "A very high viral load while the antibody test is still only half-formed means the infection is new.",
+    "Hepatitis B and HIV are both clear, and the liver is only grumbling.",
     [
-     "HIV-1 RNA (viral load)",
-     "HIV-1 antibody confirmatory blot"
+     "Hepatitis B surface antigen",
+     "HIV antigen/antibody screen",
+     "ALT"
     ]
    ]
   ],
   "key": [
-   "HIV antigen/antibody screen",
-   "HIV-1 antibody confirmatory blot",
-   "HIV-1 RNA (viral load)"
+   "Hepatitis C antibody",
+   "Hepatitis C RNA (PCR)",
+   "ALT"
   ],
-  "why": "A glandular-fever-like illness, negative Monospot and clear syphilis test, plus a reactive combined antigen/antibody screen, an indeterminate confirmatory blot and a huge viral load. That pattern means the virus has arrived before the full antibody response has. It's primary HIV infection. Long-established infection would show a fully positive blot.",
-  "pearl": "Modern antiretroviral treatment gives people with HIV a near-normal life expectancy, and someone with a sustained undetectable viral load does not pass HIV on through sex: undetectable equals untransmittable (U=U)."
+  "why": "A reactive hepatitis C antibody with virus still detectable by PCR means current infection, and decades after the exposure it’s chronic. ALT is mildly up. A positive antibody with no RNA would mean the virus had been cleared. Hepatitis B and HIV tests are negative.",
+  "pearl": "Hepatitis C is now curable with 8 to 12 weeks of tablets, with cure rates above 95%, and Australian GPs can prescribe them. Blood-borne viruses share routes, so HIV, hepatitis B and C are tested together. On World AIDS Day, test for all three."
  },
  {
   "date": "2026-12-02",
@@ -1258,116 +1252,130 @@
   "date": "2026-12-11",
   "number": 47,
   "difficulty": "Hard",
-  "patient": "Rosa, 58, female",
-  "story": "Has lived all her life in a mining town about 4,300 m up in the Peruvian Andes. Headaches, dizziness, ringing ears, burning feet and a dusky face. Never smoked. She feels much better whenever she visits her daughter on the coast.",
+  "patient": "Liam, 26, male",
+  "story": "Trekking in Nepal’s Khumbu region, now at a clinic at about 3,400 m. Taking acetazolamide 250 mg twice daily for five days to prevent altitude sickness. Tingling fingers and lips, tired, and says fizzy drinks taste flat.",
   "theme": "International Mountain Day",
   "panels": [
    {
-    "name": "Full blood count",
+    "name": "Chemistry",
     "rows": [
      [
-      "Haemoglobin",
-      "218",
-      "g/L",
-      "115–165",
-      "H"
-     ],
-     [
-      "Haematocrit",
-      "0.66",
-      "L/L",
-      "0.35–0.47",
-      "H"
-     ],
-     [
-      "Red cell count",
-      "7.2",
-      "×10¹²/L",
-      "3.8–5.8",
-      "H"
-     ],
-     [
-      "White cells",
-      "7.1",
-      "×10⁹/L",
-      "4.0–11.0",
+      "Sodium",
+      "138",
+      "mmol/L",
+      "135–145",
       ""
      ],
      [
-      "Platelets",
-      "232",
-      "×10⁹/L",
-      "150–400",
+      "Potassium",
+      "3.3",
+      "mmol/L",
+      "3.5–5.2",
+      "L"
+     ],
+     [
+      "Chloride",
+      "112",
+      "mmol/L",
+      "95–110",
+      "H"
+     ],
+     [
+      "Bicarbonate",
+      "16",
+      "mmol/L",
+      "22–32",
+      "L"
+     ],
+     [
+      "Urea",
+      "5.2",
+      "mmol/L",
+      "2.5–8.0",
+      ""
+     ],
+     [
+      "Creatinine",
+      "84",
+      "µmol/L",
+      "60–110",
+      ""
+     ],
+     [
+      "Glucose",
+      "5.4",
+      "mmol/L",
+      "3.0–7.8",
+      ""
+     ],
+     [
+      "Lactate",
+      "1.1",
+      "mmol/L",
+      "<2.0",
       ""
      ]
     ]
    },
    {
-    "name": "Other",
+    "name": "Venous gas",
     "rows": [
      [
-      "Oxygen saturation",
-      "82",
-      "%",
-      "95–100",
+      "pH",
+      "7.33",
+      "",
+      "7.35–7.45",
       "L"
      ],
      [
-      "Erythropoietin",
-      "46",
-      "IU/L",
-      "4.0–24.0",
-      "H"
+      "pCO2",
+      "31",
+      "mmHg",
+      "35–45",
+      "L"
      ],
      [
-      "JAK2 V617F mutation",
-      "Not detected",
-      "",
-      "Not detected",
-      ""
-     ],
-     [
-      "Ferritin",
-      "64",
-      "µg/L",
-      "30–200",
+      "Ketones (blood)",
+      "0.2",
+      "mmol/L",
+      "<0.6",
       ""
      ]
     ]
    }
   ],
-  "answer": "Chronic mountain sickness (Monge's disease)",
+  "answer": "Acetazolamide-induced metabolic acidosis",
   "wrong": [
-   "Polycythaemia vera",
-   "Secondary polycythaemia from COPD",
-   "EPO-secreting kidney tumour",
-   "Acute mountain sickness",
-   "High-affinity haemoglobin variant"
+   "Diabetic ketoacidosis",
+   "Lactic acidosis from hypoxia",
+   "Acute kidney injury",
+   "Diarrhoea-related acidosis",
+   "Primary respiratory alkalosis"
   ],
   "hints": [
    [
-    "Only red cells are up, white cells and platelets are ordinary, and JAK2 is clear. So the bone marrow isn't running itself.",
+    "Bicarbonate is low and the anion gap is normal. Chloride has taken its place.",
     [
-     "JAK2 V617F mutation",
-     "White cells",
-     "Platelets"
+     "Bicarbonate",
+     "Chloride"
     ]
    ],
    [
-    "High EPO with low oxygen is a body chasing oxygen. Why doesn't it catch it, and why does the coast help?",
+    "Ketones and lactate are fine, and the kidneys work. Look at his medicine list.",
     [
-     "Erythropoietin",
-     "Oxygen saturation"
+     "Ketones (blood)",
+     "Lactate",
+     "Creatinine"
     ]
    ]
   ],
   "key": [
-   "Haemoglobin",
-   "Erythropoietin",
-   "Oxygen saturation"
+   "Bicarbonate",
+   "Chloride",
+   "pH"
   ],
-  "why": "A lifetime at high altitude, haemoglobin over 190 g/L in a woman, low oxygen saturation, high EPO, no JAK2 mutation, no lung disease, and symptoms that ease near sea level. Years of thin air have pushed red cell production past what helps, so the blood thickens. This is chronic mountain sickness. Polycythaemia vera would have low EPO and usually JAK2. Acute mountain sickness comes on within hours to days of going up.",
-  "pearl": "Carlos Monge described this in Peru in the 1920s. Risk rises after menopause in women. Many Tibetans carry an EPAS1 gene variant that keeps haemoglobin lower at altitude, one of the clearest examples of recent human evolution."
+  "why": "A normal anion gap (about 10) metabolic acidosis with high chloride and low potassium, no ketones, normal lactate and working kidneys. Acetazolamide blocks carbonic anhydrase, so the kidneys pour out bicarbonate. The low pCO2 is breathing compensation, helped by the altitude. Tingling and flat-tasting fizzy drinks are classic side effects.",
+  "pearl": "That mild acidosis is the point: it drives breathing and speeds acclimatisation. Usually no treatment is needed beyond a lower dose if side effects bother you. Climb high, sleep low, and ascend no more than about 500 m a night above 3,000 m. Happy International Mountain Day."
  },
  {
   "date": "2026-12-12",
@@ -3124,53 +3132,39 @@
   "date": "2026-12-26",
   "number": 62,
   "difficulty": "Hard",
-  "patient": "Marta, 39, female",
-  "story": "An industrial radiographer, called in on Boxing Day after a gamma source jammed in the open position while she was handling it. She vomited within two hours, then felt strangely better. Back two days later with a blotchy, red hand. No fever.",
+  "patient": "Joan, 52, female",
+  "story": "Treated four months ago for Graves’ disease. Now cold, slow, constipated, putting on weight and her face looks puffy. She stopped her carbimazole before treatment and takes no medicines now.",
   "theme": "Discovery of radium",
   "panels": [
    {
-    "name": "Blood count over time",
+    "name": "Thyroid",
     "rows": [
      [
-      "Lymphocytes, day 0",
-      "1.3",
-      "×10⁹/L",
-      "1.0–4.0",
-      ""
-     ],
-     [
-      "Lymphocytes, day 1",
-      "0.7",
-      "×10⁹/L",
-      "1.0–4.0",
-      "L"
-     ],
-     [
-      "Lymphocytes, day 2",
-      "0.3",
-      "×10⁹/L",
-      "1.0–4.0",
-      "L"
-     ],
-     [
-      "Neutrophils, day 2",
-      "10.6",
-      "×10⁹/L",
-      "2.0–7.5",
+      "TSH",
+      "48",
+      "mIU/L",
+      "0.5–4.0",
       "H"
      ],
      [
-      "Platelets, day 2",
-      "172",
-      "×10⁹/L",
-      "150–400",
-      ""
+      "Free T4",
+      "6.1",
+      "pmol/L",
+      "10–20",
+      "L"
      ],
      [
-      "Haemoglobin, day 2",
-      "134",
-      "g/L",
-      "115–165",
+      "Free T3",
+      "2.4",
+      "pmol/L",
+      "3.5–6.5",
+      "L"
+     ],
+     [
+      "TSH receptor antibody",
+      "1.2",
+      "IU/L",
+      "<1.8",
       ""
      ]
     ]
@@ -3179,68 +3173,66 @@
     "name": "Other",
     "rows": [
      [
-      "Amylase",
-      "480",
+      "Sodium",
+      "134",
+      "mmol/L",
+      "135–145",
+      "L"
+     ],
+     [
+      "Total cholesterol",
+      "7.2",
+      "mmol/L",
+      "<5.5",
+      "H"
+     ],
+     [
+      "Creatine kinase",
+      "260",
       "U/L",
-      "<110",
+      "<150",
       "H"
      ],
      [
-      "CRP",
-      "32",
-      "mg/L",
-      "<5",
-      "H"
-     ],
-     [
-      "Creatinine",
-      "68",
-      "µmol/L",
-      "45–90",
-      ""
-     ],
-     [
-      "Dicentric chromosomes in lymphocytes",
-      "Present",
-      "",
-      "Absent",
-      "!"
+      "Haemoglobin",
+      "112",
+      "g/L",
+      "115–165",
+      "L"
      ]
     ]
    }
   ],
-  "answer": "Acute radiation syndrome",
+  "answer": "Hypothyroidism after radioactive iodine",
   "wrong": [
-   "Viral gastroenteritis",
-   "Aplastic anaemia",
-   "Acute leukaemia",
-   "Acute HIV infection",
-   "Solvent poisoning"
+   "Hashimoto’s thyroiditis",
+   "Secondary (pituitary) hypothyroidism",
+   "Recurrent Graves’ disease",
+   "Sick euthyroid syndrome",
+   "Carbimazole over-treatment"
   ],
   "hints": [
    [
-    "Lymphocytes are falling by half each day while red cells and platelets look untouched. Lymphocytes are very sensitive to something.",
+    "TSH is shouting and T4 isn’t answering. Where is the problem: the pituitary or the gland?",
     [
-     "Lymphocytes, day 0",
-     "Lymphocytes, day 1",
-     "Lymphocytes, day 2"
+     "TSH",
+     "Free T4"
     ]
    ],
    [
-    "Salivary glands leak amylase after this type of injury, and one chromosome finding is a fingerprint.",
+    "How do you treat Graves’ so the gland stops for good, without surgery?",
     [
-     "Amylase",
-     "Dicentric chromosomes in lymphocytes"
+     "TSH receptor antibody"
     ]
    ]
   ],
   "key": [
-   "Lymphocytes, day 2",
-   "Dicentric chromosomes in lymphocytes",
-   "Amylase"
+   "TSH",
+   "Free T4",
+   "Free T3"
   ],
-  "why": "Vomiting within hours, a brief well period, a red burn-like hand, lymphocytes halving every day, a raised amylase and dicentric chromosomes. Lymphocytes die quickly after radiation, and the speed of the fall estimates the dose. Salivary glands are also radiosensitive, hence the amylase. Dicentric chromosomes, which have two centromeres, are the gold-standard marker of radiation. It's acute radiation syndrome. Platelets and red cells take longer to fall since they live longer.",
-  "pearl": "Marie and Pierre Curie announced radium on 26 December 1898. Marie Curie died in 1934 of aplastic anaemia, widely linked to years of radiation exposure, and her notebooks are still kept in lead-lined boxes."
+  "why": "High TSH with low free T4 and T3 means primary hypothyroidism, with the knock-on high cholesterol, CK and low sodium. She isn’t on carbimazole, and her TSH receptor antibodies have settled. Four months after treatment for Graves’, this is the expected effect of radioactive iodine. Pituitary failure would bring a low or normal TSH.",
+  "pearl": "The thyroid soaks up iodine, so radioactive iodine-131 goes straight to it. Saul Hertz first used it to treat a patient in 1941. Most people treated for Graves’ become hypothyroid and take levothyroxine for life. Marie and Pierre Curie announced radium on 26 December 1898."
  },
  {
   "date": "2026-12-27",

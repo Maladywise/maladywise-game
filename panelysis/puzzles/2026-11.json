@@ -1095,138 +1095,121 @@
   "date": "2026-11-10",
   "number": 16,
   "difficulty": "Easy",
-  "patient": "Priya, 58, female",
-  "story": "Two years of ‘IBS’: watery diarrhoea plus red flushing spells that sometimes come with a wheeze. Antispasmodics have done nothing.",
+  "patient": "Sam, 34, male",
+  "story": "His second kidney stone in a year. He’s thirsty, up at night to pee and ‘flat’. His dad had an operation for a tumour in his pancreas.",
   "theme": "World Neuroendocrine Cancer Day",
   "panels": [
    {
-    "name": "Tumour markers",
+    "name": "Calcium and bone",
     "rows": [
      [
-      "Urine 5-HIAA (24-hour)",
-      "168",
-      "µmol/day",
-      "<50",
+      "Calcium",
+      "2.84",
+      "mmol/L",
+      "2.10–2.60",
       "H"
      ],
      [
-      "Chromogranin A",
-      "420",
-      "µg/L",
-      "<100",
-      "H"
-     ]
-    ]
-   },
-   {
-    "name": "Chemistry",
-    "rows": [
-     [
-      "Sodium",
-      "139",
-      "mmol/L",
-      "135–145",
+      "Albumin",
+      "39",
+      "g/L",
+      "35–50",
       ""
      ],
      [
-      "Potassium",
-      "3.3",
+      "Corrected calcium",
+      "2.86",
       "mmol/L",
-      "3.5–5.2",
+      "2.10–2.60",
+      "H"
+     ],
+     [
+      "Phosphate",
+      "0.62",
+      "mmol/L",
+      "0.75–1.50",
       "L"
      ],
      [
-      "Creatinine",
-      "71",
-      "µmol/L",
-      "45–90",
-      ""
+      "PTH",
+      "14.2",
+      "pmol/L",
+      "1.6–6.9",
+      "H"
      ],
      [
-      "ALT",
-      "26",
-      "U/L",
-      "<30",
+      "25-OH vitamin D",
+      "68",
+      "nmol/L",
+      ">50",
       ""
      ],
      [
       "ALP",
-      "98",
+      "104",
       "U/L",
       "30–110",
-      ""
-     ],
-     [
-      "Albumin",
-      "38",
-      "g/L",
-      "35–50",
       ""
      ]
     ]
    },
    {
-    "name": "Rule-outs",
+    "name": "Kidneys and urine",
     "rows": [
      [
-      "Haemoglobin",
-      "128",
-      "g/L",
-      "115–165",
+      "Creatinine",
+      "88",
+      "µmol/L",
+      "60–110",
       ""
      ],
      [
-      "TSH",
-      "1.8",
-      "mIU/L",
-      "0.5–4.0",
+      "eGFR",
+      ">90",
+      "mL/min/1.73m²",
+      ">60",
       ""
      ],
      [
-      "Tissue transglutaminase IgA",
-      "3",
-      "U/mL",
-      "<7",
-      ""
-     ],
-     [
-      "Faecal calprotectin",
-      "24",
-      "µg/g",
-      "<50",
-      ""
+      "24-hour urine calcium",
+      "9.8",
+      "mmol/day",
+      "2.5–7.5",
+      "H"
      ]
     ]
    }
   ],
-  "answer": "Carcinoid syndrome (neuroendocrine tumour)",
+  "answer": "Primary hyperparathyroidism",
   "wrong": [
-   "Irritable bowel syndrome",
-   "Phaeochromocytoma",
-   "Coeliac disease",
-   "Perimenopausal flushing",
-   "Systemic mastocytosis"
+   "Familial hypocalciuric hypercalcaemia",
+   "Hypercalcaemia of malignancy",
+   "Vitamin D toxicity",
+   "Sarcoidosis",
+   "Milk-alkali syndrome"
   ],
   "hints": [
    [
-    "One urine test is more than three times its limit. It’s a breakdown product of serotonin.",
+    "Calcium is high. Is the hormone that should switch off actually switched off?",
     [
-     "Urine 5-HIAA (24-hour)"
+     "Corrected calcium",
+     "PTH"
     ]
    ],
    [
-    "The other raised marker is a general flag for neuroendocrine cells.",
+    "Lots of calcium in the urine rules out the benign family condition that mimics this.",
     [
-     "Chromogranin A"
+     "24-hour urine calcium"
     ]
    ]
   ],
   "key": [
-   "Urine 5-HIAA (24-hour)",
-   "Chromogranin A"
+   "Corrected calcium",
+   "PTH",
+   "Phosphate"
   ],
-  "why": "Flushing, watery diarrhoea and wheeze plus a sky-high urine 5-HIAA make carcinoid syndrome: a neuroendocrine tumour releasing serotonin and other amines into the circulation. Chromogranin A backs it up. Coeliac serology and calprotectin are normal, and IBS doesn’t flush or wheeze. Diarrhoea explains the low potassium.",
-  "pearl": "Neuroendocrine tumours can hide for years behind ‘just IBS’. Carcinoid syndrome usually means the tumour’s products are escaping liver clearance, often because it has spread there. Bananas, walnuts and some medicines can falsely raise 5-HIAA, so check the collection instructions. Today is World Neuroendocrine Cancer Day."
+  "why": "High calcium with a PTH that is high instead of suppressed, a low phosphate and plenty of calcium in the urine: the parathyroids are overactive. That’s primary hyperparathyroidism. Malignancy, vitamin D and sarcoidosis all push PTH down. Familial hypocalciuric hypercalcaemia keeps urine calcium low.",
+  "pearl": "At 34, with a father who had a pancreatic tumour, think MEN1: parathyroids, pituitary and pancreas, the ‘3 Ps’. Overactive parathyroids are often the first sign, and the pancreatic tumours are neuroendocrine tumours. Genetic testing helps the whole family. Today is World Neuroendocrine Cancer Day."
  },
  {
   "date": "2026-11-11",
@@ -1344,134 +1327,136 @@
   "date": "2026-11-12",
   "number": 18,
   "difficulty": "Medium",
-  "patient": "Ana, 58, female",
-  "story": "Home from a cruise five days ago. High fevers, dry cough and diarrhoea, and her husband says she's muddled. Smokes.",
+  "patient": "Ken, 74, male",
+  "story": "Recovering from a chest infection, now nauseated and muddled. He doesn’t look dry: moist tongue, no drop in blood pressure on standing, no swelling. No regular medicines.",
   "theme": "World Pneumonia Day",
   "panels": [
-   {
-    "name": "Full blood count",
-    "rows": [
-     [
-      "WCC",
-      "14.6",
-      "×10⁹/L",
-      "4.0–11.0",
-      "H"
-     ],
-     [
-      "Neutrophils",
-      "12.9",
-      "×10⁹/L",
-      "2.0–7.5",
-      "H"
-     ],
-     [
-      "Lymphocytes",
-      "0.6",
-      "×10⁹/L",
-      "1.0–4.0",
-      "L"
-     ]
-    ]
-   },
    {
     "name": "Chemistry",
     "rows": [
      [
       "Sodium",
-      "126",
+      "121",
       "mmol/L",
       "135–145",
       "L"
      ],
      [
       "Potassium",
-      "3.6",
+      "4.1",
       "mmol/L",
       "3.5–5.2",
       ""
      ],
      [
-      "Urea",
-      "8.9",
+      "Chloride",
+      "88",
       "mmol/L",
-      "2.5–8.0",
-      "H"
-     ],
-     [
-      "Creatinine",
-      "96",
-      "µmol/L",
-      "45–90",
-      "H"
-     ],
-     [
-      "Phosphate",
-      "0.58",
-      "mmol/L",
-      "0.75–1.50",
+      "95–110",
       "L"
      ],
      [
-      "ALT",
-      "92",
-      "U/L",
-      "<30",
-      "H"
+      "Bicarbonate",
+      "25",
+      "mmol/L",
+      "22–32",
+      ""
      ],
      [
-      "AST",
-      "85",
-      "U/L",
-      "<35",
-      "H"
+      "Urea",
+      "3.1",
+      "mmol/L",
+      "2.5–8.0",
+      ""
      ],
      [
-      "Creatine kinase",
-      "1240",
-      "U/L",
-      "<150",
-      "H"
+      "Creatinine",
+      "72",
+      "µmol/L",
+      "60–110",
+      ""
      ],
      [
-      "CRP",
-      "320",
-      "mg/L",
-      "<5",
-      "H"
+      "Glucose",
+      "6.1",
+      "mmol/L",
+      "3.0–7.8",
+      ""
+     ],
+     [
+      "Osmolality",
+      "254",
+      "mOsm/kg",
+      "275–295",
+      "L"
+     ]
+    ]
+   },
+   {
+    "name": "Urine and hormones",
+    "rows": [
+     [
+      "Urine osmolality",
+      "520",
+      "mOsm/kg",
+      "",
+      ""
+     ],
+     [
+      "Urine sodium",
+      "58",
+      "mmol/L",
+      "",
+      ""
+     ],
+     [
+      "TSH",
+      "2.1",
+      "mIU/L",
+      "0.5–4.0",
+      ""
+     ],
+     [
+      "Cortisol (9 am)",
+      "430",
+      "nmol/L",
+      "140–690",
+      ""
      ]
     ]
    }
   ],
-  "answer": "Legionella pneumonia",
+  "answer": "SIADH",
   "wrong": [
-   "Pneumococcal pneumonia",
-   "Influenza",
-   "Viral gastroenteritis",
-   "Mycoplasma pneumonia",
-   "Hepatitis A"
+   "Hypovolaemic hyponatraemia (dehydration)",
+   "Hypothyroidism",
+   "Adrenal insufficiency",
+   "Beer potomania",
+   "Thiazide-induced hyponatraemia"
   ],
   "hints": [
    [
-    "Pneumonia plus a low sodium, an angry liver and sore muscles. Which bug hits all of those?",
+    "The blood is dilute, but the urine is concentrated. Why would the kidneys hold on to water?",
     [
-     "Sodium",
-     "ALT",
-     "Creatine kinase"
+     "Osmolality",
+     "Urine osmolality"
     ]
    ],
    [
-    "Think about where she's been: big water systems, spa pools, air-conditioning.",
-    []
+    "He isn’t dry, on no tablets, and thyroid and cortisol are fine. What did he just have?",
+    [
+     "TSH",
+     "Cortisol (9 am)"
+    ]
    ]
   ],
   "key": [
    "Sodium",
-   "Creatine kinase",
-   "CRP"
+   "Osmolality",
+   "Urine osmolality"
   ],
-  "why": "Severe pneumonia with diarrhoea, confusion, a low sodium, deranged liver tests, raised CK, low phosphate and a CRP over 300 is the classic Legionella pattern. A cruise (big water systems, spa pools) and smoking add to the suspicion. Pneumococcus can do some of these things, but rarely all at once.",
-  "pearl": "Legionnaires' disease is usually confirmed with a urine antigen test and PCR on sputum. It's notifiable in Australia, because one case can point to a contaminated water source affecting others."
+  "why": "Low sodium with low blood osmolality, inappropriately concentrated urine, plenty of urine sodium, normal volume, and normal thyroid and adrenal tests. Antidiuretic hormone is switched on when it shouldn’t be: SIADH, here set off by his chest infection. Dehydration would bring a low urine sodium; beer potomania a dilute urine.",
+  "pearl": "Chest infections are a classic cause of SIADH, alongside drugs, pain, nausea and some lung cancers. Fluid restriction is the usual first step. Correct chronic hyponatraemia slowly, no more than about 8–10 mmol/L in 24 hours, to avoid osmotic demyelination. Happy World Pneumonia Day."
  },
  {
   "date": "2026-11-13",

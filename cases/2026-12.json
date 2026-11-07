@@ -3,44 +3,40 @@
   "date": "2026-12-01",
   "number": 46,
   "difficulty": "Easy",
-  "title": "More than a sore throat",
-  "answer": "Acute HIV infection (seroconversion)",
+  "title": "Spots on the palms",
+  "answer": "Secondary syphilis",
   "accept": [
-   "hiv",
-   "hiv infection",
-   "acute hiv",
-   "acute hiv infection",
-   "primary hiv",
-   "primary hiv infection",
-   "hiv seroconversion",
-   "seroconversion",
-   "seroconversion illness",
-   "acute retroviral syndrome",
-   "human immunodeficiency virus"
+   "secondary syphilis",
+   "syphilis",
+   "treponema pallidum",
+   "treponema",
+   "lues",
+   "secondary lues",
+   "secondary stage syphilis",
+   "syphilis secondary"
   ],
   "clues": [
    {
-    "t": "34-year-old woman with fever, sore throat and aching muscles for a week."
+    "t": "29-year-old man with a rash on his chest and back for two weeks. It doesn’t itch."
    },
    {
-    "t": "Swollen glands, and she's more tired than she has ever been."
+    "t": "He’s also had fevers, aches and swollen glands."
    },
    {
-    "t": "A faint pink rash on her chest, and painful mouth ulcers."
+    "t": "The rash has spread to his palms and the soles of his feet."
    },
    {
-    "t": "Glandular fever serology: negative",
-    "d": 1
+    "t": "About two months ago he had a painless sore on his penis that healed by itself."
    },
    {
-    "t": "She started a new relationship six weeks ago."
+    "t": "His hair is coming out in small patches, leaving a moth-eaten look."
    },
    {
-    "t": "p24 antigen positive · viral load very high · CD4 count dipping",
+    "t": "RPR positive · TPPA positive",
     "d": 1
    }
   ],
-  "pearl": "Early infection often looks like a bad bout of glandular fever, and a window-period test can be negative. Women and girls make up just over half of people living with HIV worldwide. On effective treatment, people can live long lives, and undetectable means untransmissible (U=U)."
+  "pearl": "Syphilis has risen sharply in Australia over the past decade, along with cases in babies born to mothers who weren’t diagnosed in time. It’s treated with benzathine penicillin, and anyone tested for syphilis should be offered an HIV test too, and vice versa. On World AIDS Day, the message is the same: test, treat, and talk about it."
  },
  {
   "date": "2026-12-02",
@@ -1013,45 +1009,41 @@
   "date": "2026-12-26",
   "number": 71,
   "difficulty": "Hard",
-  "title": "Lip, dip, paint",
-  "answer": "Radium jaw (radium poisoning)",
+  "title": "Strike a light",
+  "answer": "Phossy jaw (phosphorus necrosis of the jaw)",
   "accept": [
-   "radium jaw",
-   "radium poisoning",
-   "radium necrosis",
-   "radium necrosis of the jaw",
-   "radium toxicity",
-   "radium exposure",
-   "radium",
-   "radium girls",
-   "radiation necrosis of the jaw",
-   "radiation jaw necrosis",
-   "osteoradionecrosis",
-   "osteoradionecrosis of the jaw",
-   "radiation poisoning"
+   "phossy jaw",
+   "phossy",
+   "phosphorus necrosis",
+   "phosphorus necrosis of the jaw",
+   "phosphorus jaw",
+   "white phosphorus poisoning",
+   "phosphorus poisoning",
+   "phosphorism",
+   "phosphorus osteonecrosis",
+   "phosphorus osteonecrosis of the jaw"
   ],
   "clues": [
    {
-    "t": "24-year-old woman in New Jersey, 1923, with a loose, aching tooth."
+    "t": "19-year-old woman in East London, 1888, with toothache and a swollen face."
    },
    {
-    "t": "Her dentist pulled it. The socket hasn't healed, and bits of jawbone are coming away."
+    "t": "An abscess in her jaw keeps discharging, and it smells foul."
    },
    {
-    "t": "Hb 78 g/L",
-    "d": 1
+    "t": "Her dentist pulled a tooth. Now bare bone is showing through her gum."
    },
    {
-    "t": "Her hip has started to ache, and she's lost two workmates to a mystery illness."
+    "t": "Some say the diseased bone glows faintly in the dark."
    },
    {
-    "t": "At the factory, she shapes her fine brush to a point with her lips."
+    "t": "At work she dips sticks into a paste all day, breathing its fumes."
    },
    {
-    "t": "She paints watch dials, and her clothes glow faintly in the dark."
+    "t": "This summer, she and her workmates walked out on strike over pay, fines and conditions."
    }
   ],
-  "pearl": "A fictional case based on the real 'Radium Girls'. The body treats radium like calcium and builds it into bone. Their fight in court, settled in 1928, helped shape worker safety law. Marie and Pierre Curie announced radium on 26 December 1898."
+  "pearl": "Caused by white phosphorus fumes in match factories. The 1888 Bryant & May matchgirls’ strike helped expose it, and the 1906 Berne Convention banned white phosphorus in matches. Its modern cousin is medication-related osteonecrosis of the jaw, seen with bisphosphonates. A century ago, the Radium Girls faced a strikingly similar jaw disease."
  },
  {
   "date": "2026-12-27",
@@ -1217,47 +1209,45 @@
   "number": 76,
   "difficulty": "Medium",
   "title": "After the countdown",
-  "answer": "Boerhaave syndrome",
+  "answer": "Mallory-Weiss tear",
   "accept": [
-   "boerhaave",
-   "boerhaaves",
-   "boerhaave's",
-   "boerhaave syndrome",
-   "boerhaaves syndrome",
-   "boerhaave's syndrome",
-   "oesophageal rupture",
-   "esophageal rupture",
-   "ruptured oesophagus",
-   "ruptured esophagus",
-   "oesophageal perforation",
-   "esophageal perforation",
-   "perforated oesophagus",
-   "perforated esophagus",
-   "spontaneous oesophageal rupture",
-   "spontaneous esophageal rupture"
+   "mallory-weiss tear",
+   "mallory weiss tear",
+   "mallory-weiss",
+   "mallory weiss",
+   "mallory-weiss syndrome",
+   "mallory weiss syndrome",
+   "mallory weiss tears",
+   "mw tear",
+   "oesophageal tear",
+   "esophageal tear",
+   "gastro-oesophageal junction tear",
+   "gastroesophageal junction tear",
+   "mucosal tear",
+   "oesophageal mucosal tear"
   ],
   "clues": [
    {
-    "t": "44-year-old man at a New Year's Eve party. The champagne went down well, then came back up."
+    "t": "27-year-old woman at a New Year’s Eve party. The champagne went down well, then came back up."
    },
    {
-    "t": "Forceful, repeated vomiting, just after midnight."
+    "t": "Repeated retching and vomiting, just after midnight."
    },
    {
-    "t": "Straight after, sudden tearing central chest pain, worse on swallowing."
+    "t": "On the fifth go, streaks of bright red blood in the vomit."
    },
    {
-    "t": "HR 124 · BP 100/60 · Temp 38.6°C",
+    "t": "No chest pain. No trouble swallowing. Nothing crackles under the skin of her neck."
+   },
+   {
+    "t": "HR 92 · BP 124/78 · Hb 138 g/L",
     "d": 1
    },
    {
-    "t": "The skin of her neck crackles when pressed."
-   },
-   {
-    "t": "Chest X-ray: left pleural effusion and air around the mediastinum",
+    "t": "Endoscopy: a short linear split in the lining at the gastro-oesophageal junction, no longer bleeding",
     "d": 1
    }
   ],
-  "pearl": "Herman Boerhaave, born on this day in 1668, described it in 1724 in a Dutch grand admiral who had made himself vomit after a feast. Vomiting, chest pain and neck air form Mackler's triad. Unlike a Mallory-Weiss tear, this goes all the way through the wall."
+  "pearl": "A tear through the lining only, usually from forceful retching. Most stop bleeding on their own. Mallory and Weiss described it in 1929 after alcohol binges. Its dangerous cousin, Boerhaave syndrome, goes right through the wall; Herman Boerhaave was born on this day in 1668."
  }
 ]

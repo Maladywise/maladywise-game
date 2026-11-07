@@ -374,39 +374,39 @@
   "date": "2026-11-11",
   "number": 18,
   "difficulty": "Medium",
-  "title": "A veil over one side",
-  "context": "A 67-year-old long-term smoker has had weeks of cough and breathlessness, and has now coughed up a little blood.",
+  "title": "Puffing on the stairs",
+  "context": "A 71-year-old man with 40 pack-years of smoking is breathless on stairs and breathes out through pursed lips.",
   "question": "What's the diagnosis?",
   "img": {
    "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File:Oberlappenatelektase_links_pa.jpg",
-   "file": "Oberlappenatelektase links pa.jpg",
-   "author": "Hellerhoff",
+   "page": "https://commons.wikimedia.org/wiki/File:Barrowchest.JPG",
+   "file": "Barrowchest.JPG",
+   "author": "James Heilman, MD (cropped)",
    "licence": "CC BY-SA 3.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
    "url": "img/2026-11-11.jpg",
-   "alt": "Frontal chest X-ray with a veil-like haze over the left upper chest and mediastinal shift to the left"
+   "alt": "Lateral chest X-ray showing a barrel-shaped chest, large retrosternal space and flat diaphragm"
   },
-  "answer": "Left upper lobe collapse",
+  "answer": "Emphysema",
   "wrong": [
-   "Left lower lobe collapse",
-   "Left pleural effusion",
-   "Left upper lobe pneumonia",
-   "Mesothelioma",
-   "Phrenic nerve palsy"
+   "Asthma",
+   "Pulmonary fibrosis",
+   "Bronchiectasis",
+   "Pneumothorax",
+   "Heart failure"
   ],
   "hints": [
-   "Compare the density of the two sides, then see where the trachea and mediastinum sit.",
-   "A hazy veil over the upper left chest that fades downwards, with volume loss rather than a fluid level."
+   "This is a side-on film. Check the shape of the chest and the line of the diaphragm.",
+   "The chest is barrel-shaped, the air space behind the breastbone is large and the diaphragm is flat."
   ],
-  "why": "A veil-like haze over the left hemithorax that fades towards the base, with volume loss: the mediastinum is pulled to the left and the lobe has collapsed forwards against the front of the chest.",
+  "why": "Lateral chest X-ray with a barrel chest, a wide retrosternal air space and a flattened diaphragm: the signs of hyperinflated, damaged lungs.",
   "assoc": [
-   "Central bronchial carcinoma",
-   "Mucus plugging",
-   "Inhaled foreign body",
-   "Luftsichel sign"
+   "COPD",
+   "Smoking",
+   "Alpha-1 antitrypsin deficiency",
+   "Spirometry"
   ],
-  "pearl": "In an adult smoker, lobar collapse is an obstructing central cancer until proven otherwise, so it needs CT and usually bronchoscopy. The left upper lobe collapses forwards, which is why it looks like a veil rather than a wedge."
+  "pearl": "The diagnosis of COPD comes from spirometry, not the X-ray, which can be normal in mild disease. Stopping smoking helps more than any other step. Smoke from indoor cooking fires is a major cause in women in low-income countries."
  },
  {
   "date": "2026-11-12",
@@ -638,39 +638,39 @@
   "date": "2026-11-18",
   "number": 25,
   "difficulty": "Medium",
-  "title": "Puffing on the stairs",
-  "context": "A 71-year-old man with 40 pack-years of smoking is breathless on stairs and breathes out through pursed lips.",
+  "title": "A veil over one side",
+  "context": "A 67-year-old long-term smoker has had weeks of cough and breathlessness, and has now coughed up a little blood.",
   "question": "What's the diagnosis?",
   "img": {
    "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File:Barrowchest.JPG",
-   "file": "Barrowchest.JPG",
-   "author": "James Heilman, MD (cropped)",
+   "page": "https://commons.wikimedia.org/wiki/File:Oberlappenatelektase_links_pa.jpg",
+   "file": "Oberlappenatelektase links pa.jpg",
+   "author": "Hellerhoff",
    "licence": "CC BY-SA 3.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
    "url": "img/2026-11-18.jpg",
-   "alt": "Lateral chest X-ray showing a barrel-shaped chest, large retrosternal space and flat diaphragm"
+   "alt": "Frontal chest X-ray with a veil-like haze over the left upper chest and mediastinal shift to the left"
   },
-  "answer": "Emphysema",
+  "answer": "Left upper lobe collapse",
   "wrong": [
-   "Asthma",
-   "Pulmonary fibrosis",
-   "Bronchiectasis",
-   "Pneumothorax",
-   "Heart failure"
+   "Left lower lobe collapse",
+   "Left pleural effusion",
+   "Left upper lobe pneumonia",
+   "Mesothelioma",
+   "Phrenic nerve palsy"
   ],
   "hints": [
-   "This is a side-on film. Check the shape of the chest and the line of the diaphragm.",
-   "The chest is barrel-shaped, the air space behind the breastbone is large and the diaphragm is flat."
+   "Compare the density of the two sides, then see where the trachea and mediastinum sit.",
+   "A hazy veil over the upper left chest that fades downwards, with volume loss rather than a fluid level."
   ],
-  "why": "Lateral chest X-ray with a barrel chest, a wide retrosternal air space and a flattened diaphragm: the signs of hyperinflated, damaged lungs.",
+  "why": "A veil-like haze over the left hemithorax that fades towards the base, with volume loss: the mediastinum is pulled to the left and the lobe has collapsed forwards against the front of the chest.",
   "assoc": [
-   "COPD",
-   "Smoking",
-   "Alpha-1 antitrypsin deficiency",
-   "Spirometry"
+   "Central bronchial carcinoma",
+   "Mucus plugging",
+   "Inhaled foreign body",
+   "Luftsichel sign"
   ],
-  "pearl": "The diagnosis of COPD comes from spirometry, not the X-ray, which can be normal in mild disease. Stopping smoking helps more than any other step. Smoke from indoor cooking fires is a major cause in women in low-income countries."
+  "pearl": "In an adult smoker, lobar collapse is an obstructing central cancer until proven otherwise, so it needs CT and usually bronchoscopy. The left upper lobe collapses forwards, which is why it looks like a veil rather than a wedge."
  },
  {
   "date": "2026-11-19",
