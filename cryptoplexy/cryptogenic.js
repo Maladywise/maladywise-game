@@ -1,17 +1,17 @@
-/* Cryptogenic: weekly medical cryptic crossword, new every Saturday (Sydney time). 13x13, all answers medical.
+/* Cryptoplexy (was Cryptoplexy): weekly medical cryptic crossword, new every Saturday (Sydney time). 13x13, all answers medical.
    Normie mode: everyday-English cryptic from normie.json (same format), stats under "n-" keys.
    puzzles.json / normie.json: [{date (a Saturday), number, rows[13] ('#' = block), across/down:[{n,r,c,len,clue,enum,expl}]}] */
 (function () {
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
-  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "puzzles.json", NAME = NORMIE ? "Cryptogenic (Normie)" : "Cryptogenic";
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", FILE = NORMIE ? "normie.json" : "puzzles.json", NAME = NORMIE ? "Cryptoplexy (Normie)" : "Cryptoplexy";
   var root = document.getElementById("cry");
   if (!document.querySelector("link[data-cry]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "cryptogenic.css?v=" + BUILD; l.setAttribute("data-cry", ""); document.head.appendChild(l);
   }
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="cry-eyebrow">Cryptogenic</span><span class="badge">Saturdays</span></div>' +
+    ' <div class="head"><span class="eyebrow" id="cry-eyebrow">Cryptoplexy</span><span class="badge">Saturdays</span></div>' +
     ' <div class="bar"><span class="timer" id="cry-timer">0:00</span><span class="tools"><button class="btn sm" type="button" data-a="checkw">Check word</button><button class="btn sm" type="button" data-a="revl">Reveal letter</button><button class="btn sm" type="button" data-a="more">More ⋯</button></span></div>' +
     ' <div class="main"><div class="gcol"><div class="grid" id="cry-grid" role="grid" aria-label="Cryptic crossword grid"></div>' +
     '  <div class="dock" id="cry-dock"><div class="cluebar"><button type="button" class="arr" data-a="prev" aria-label="Previous clue">‹</button><div class="ctext" id="cry-ctext"></div><button type="button" class="arr" data-a="next" aria-label="Next clue">›</button></div>' +
@@ -169,7 +169,7 @@
     P.across.forEach(function (x) { x.d = "a"; E.push(x); }); P.down.forEach(function (x) { x.d = "d"; E.push(x); });
     st = load(KEY, null); if (!st || !st.g || st.g.length !== N) st = fresh();
     sel = { r: E[0].r, c: E[0].c, d: "a" }; $("result").hidden = true; say("");
-    $("eyebrow").textContent = (week === REAL ? "Cryptogenic" : "Archive") + " · #" + P.number + " · " + nice(week);
+    $("eyebrow").textContent = (week === REAL ? "Cryptoplexy" : "Archive") + " · #" + P.number + " · " + nice(week);
     (function () { var bd = root.querySelector(".head .badge"), ein = P.difficulty === "Einstein"; if (bd) { bd.className = "badge" + (ein ? " Einstein" : ""); bd.innerHTML = ein ? '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>' + "Einstein" : "Saturdays"; } root.classList.toggle("einstein", ein); })();
     render(); startTimer(); if (st.done) { st.done = false; check(); }
     renderArchive();
