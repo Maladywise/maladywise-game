@@ -254,127 +254,126 @@
  {
   "week": "2026-11-08",
   "number": 3,
-  "fallback": true,
   "questions": [
    {
-    "c": "Pub trivia: hard mode",
-    "q": "What is the capital of Canada?",
-    "a": "Ottawa",
-    "e": "Not Toronto. Not Vancouver. Never Montreal."
+    "c": "Animals",
+    "q": "Zoo Atlanta showed off its new arrivals Ping Ping and Fu Shuang on Friday. What kind of animal are they?",
+    "a": "Giant pandas",
+    "e": "Accept pandas. Public debut 6 November, after flying in from Chengdu in September on a 10-year loan. If you said koalas, wrong bear-shaped thing, wrong continent."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "What is the smallest country in the world by area?",
-    "a": "Vatican City",
-    "e": "Accept the Vatican or Holy See. About 0.44 square kilometres."
+    "c": "Formula 1",
+    "q": "Who became Formula 1’s youngest ever world champion in Mexico City on Sunday?",
+    "a": "Kimi Antonelli",
+    "e": "Accept Andrea Kimi Antonelli or Antonelli. 1 November: third place was enough for the Mercedes driver at 20 years and 68 days, beating Sebastian Vettel’s 2010 mark of 23. Some of us were still working out how to parallel park at 20."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "How many keys does a standard modern piano have?",
-    "a": "88",
-    "e": "52 white, 36 black."
+    "c": "Words",
+    "q": "Collins Dictionary named its 2026 Word of the Year on Tuesday: a slang term for outshining someone. What is it?",
+    "a": "Mogging",
+    "e": "Accept mog. Announced 3 November; it grew out of ‘AMOG’, alpha male of the group. Last week Dictionary.com picked ‘maxxing’. The dictionaries are mogging each other now."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which country gave the Statue of Liberty to the United States?",
-    "a": "France",
-    "e": "Unveiled in 1886. Gustave Eiffel designed the frame."
+    "c": "NFL",
+    "q": "The Tampa Bay Buccaneers beat Atlanta 16–0 on Sunday. How many passes did they complete?",
+    "a": "None",
+    "e": "Accept zero or 0. 1 November: Baker Mayfield went 0 for 3, and the Bucs ran for a franchise-record 324 yards instead. First team to win without a completion since the 1974 Buffalo Bills. Who needs hands?"
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Who wrote the 1969 memoir ‘I Know Why the Caged Bird Sings’?",
-    "a": "Maya Angelou",
-    "e": "Poet, memoirist and civil rights activist. She read a poem at Bill Clinton’s 1993 inauguration."
+    "c": "Records",
+    "q": "Detroit’s Claude P. Moore spent 11 years building a 5,251 kg record breaker, confirmed by Guinness this week. A record what?",
+    "a": "Rubber band ball",
+    "e": "Accept rubber-band ball. Announced 3 November: 11,578 lb, crushing the old 9,032 lb record. Roughly elephant-sized, and considerably bouncier."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which composer wrote ‘The Four Seasons’?",
-    "a": "Antonio Vivaldi",
-    "e": "Accept Vivaldi."
+    "c": "Space",
+    "q": "NASA’s twin ESCAPADE spacecraft were due to slingshot past Earth on Saturday and Monday, firing their engines over southern Australia. Where are they heading?",
+    "a": "Mars",
+    "e": "First flyby 7 November, second on 9 November; arrival in September 2027. If you said the Moon, aim higher. About 380 times higher."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "In which year did the first Harry Potter book come out in the UK?",
-    "a": "1997",
-    "e": "Philosopher’s Stone. Not Sorcerer’s. Not here."
+    "c": "Basketball",
+    "q": "Which team won the WNBA title in only their second season, beating the Atlanta Dream 68–63 in Game 7 last Saturday?",
+    "a": "Golden State Valkyries",
+    "e": "Accept the Valkyries or Golden State. 31 October, the franchise’s first championship. Year one: learn the playbook. Year two: lift the trophy. Show-offs."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which language has the most native speakers in the world?",
-    "a": "Mandarin Chinese",
-    "e": "Accept Mandarin or Chinese. English wins on total speakers, not native ones."
+    "c": "Racing",
+    "q": "Melbourne Cup winner Point of Law was bought from the royal stable of which monarch?",
+    "a": "King Charles III",
+    "e": "Accept King Charles or Charles. 3 November at Flemington, ridden by Ethan Brown; trainer Ciaron Maher became the first in the race’s 166 years to train the first three home. The King may want a word with his bloodstock agent."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which planet has the most known moons?",
-    "a": "Saturn",
-    "e": "Accept Saturn. Jupiter keeps trying. Saturn keeps winning."
+    "c": "Music",
+    "q": "Which band scored its first ever No. 1 album on the Billboard 200 this week, 20 years after the album came out?",
+    "a": "My Chemical Romance",
+    "e": "Accept MCR. The Black Parade leapt from No. 139 to No. 1 on the chart dated 7 November, after a 20th-anniversary reissue; it peaked at No. 2 in 2006. The longest wait for a No. 1 album ever. Not a phase, Mum."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "What is the chemical symbol W short for?",
-    "a": "Tungsten",
-    "e": "From its old name, wolfram. Accept wolfram, smarty."
+    "c": "Animals",
+    "q": "Edinburgh Zoo confirmed capybara triplets this week. Their big brother Bru was named after which famous Scottish fizzy drink?",
+    "a": "Irn-Bru",
+    "e": "Confirmed 4 November: two boys and a girl, born 28 October to Luna and Rodney, names wanted from the public. Bru was the first capybara born in Scotland in 18 years. Not whisky. They’re babies."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Counting cold deserts, what is the largest desert in the world?",
-    "a": "Antarctica",
-    "e": "Not the Sahara. The Sahara is the largest hot one."
+    "c": "Tennis",
+    "q": "Which Australian qualifier knocked Novak Djokovic out of the Paris Masters on Wednesday?",
+    "a": "Rinky Hijikata",
+    "e": "Accept Hijikata. 4 November, 2–6 6–3 6–3. A qualifier beating a 24-time Grand Slam champion: the scoreboard had to check itself twice."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which Shakespeare play features the moneylender Shylock?",
-    "a": "The Merchant of Venice",
-    "e": "Accept Merchant of Venice."
+    "c": "Tennis",
+    "q": "Britain’s Harriet Dart won her first WTA singles title on Sunday, coming through qualifying. In which Chinese city?",
+    "a": "Guangzhou",
+    "e": "1 November, beating Austria’s Lilli Tagger 4–6 6–3 6–4. Seven matches, 20 sets, and a few saved match points along the way. If you said Beijing or Shanghai, close, but no trophy."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Who was the first woman to win a Nobel Prize?",
-    "a": "Marie Curie",
-    "e": "Accept Curie. Physics in 1903, chemistry in 1911. Overachiever."
+    "c": "Space",
+    "q": "Which NASA observatory, named after a fast-flying bird, burned up in the atmosphere on Wednesday after about 22 years hunting gamma-ray bursts?",
+    "a": "Swift",
+    "e": "Accept the Neil Gehrels Swift Observatory. Re-entered 4 November, launched in 2004. Solar activity puffed up the upper atmosphere and dragged it down. Not Falcon. Not Sparrow. Swift, swiftly."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "What is the currency of Vietnam?",
-    "a": "The dong",
-    "e": "Accept dong. Yes, sniggering is allowed."
+    "c": "Running",
+    "q": "Kenya’s Sheila Chepkirui won the women’s New York City Marathon on Sunday. Men’s winner Andreas Almgren, in his first ever marathon, is from which country?",
+    "a": "Sweden",
+    "e": "1 November, in 2:06:01. Chepkirui won her second New York title in 2:24:36, with America’s Jess McClain six seconds behind. First marathon, first place. The rest of us would settle for finding the start line."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Who wrote ‘One Hundred Years of Solitude’?",
-    "a": "Gabriel García Márquez",
-    "e": "Accept García Márquez or Márquez. Gabo to his fans."
+    "c": "Football",
+    "q": "Which Champions League club, managed by Cesc Fàbregas, won 9–1 away at Lens on Wednesday?",
+    "a": "Como",
+    "e": "Accept Como 1907. 4 November: an eight-goal margin equals the modern Champions League record, and only Bayern had scored nine in a game before. Lake Como: lovely views, brutal hosts."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which sea has no coastline at all?",
-    "a": "The Sargasso Sea",
-    "e": "Accept Sargasso. Bounded by ocean currents, not land."
+    "c": "Books",
+    "q": "Catalan writer Cristina Fernández Cubas won the top prize in Spanish-language literature on Tuesday. It’s named after the author of Don Quixote. What is it?",
+    "a": "The Cervantes Prize",
+    "e": "Accept Premio Cervantes or Miguel de Cervantes Prize. Announced 3 November; worth €125,000, and she is only the seventh woman to win it. If you said the Quixote Prize, you tilted at the wrong windmill."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "In which city is the Atomium, a giant model of an iron crystal built for the 1958 World’s Fair?",
-    "a": "Brussels",
-    "e": "Not Paris. Paris got the tower. Brussels got the molecule."
+    "c": "Football",
+    "q": "Tottenham captain Drew Spence set a new record for Women’s Super League appearances on Sunday, passing Millie Bright. How many WSL games has she now played?",
+    "a": "217",
+    "e": "Accept 217. 1 November, in a 4–1 win at Birmingham. She spent 14 years at Chelsea before Spurs. That’s a lot of shin pads."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which two countries share the world’s longest international border?",
-    "a": "Canada and the United States",
-    "e": "Accept Canada and the US. Need both. About 8,890 km."
+    "c": "Fossils",
+    "q": "A newly named prehistoric rodent that weighed about 30 kg, Yakamys sirindhornae, was named after a princess of which country?",
+    "a": "Thailand",
+    "e": "Reported 6 November: 33–35 million years old and known from just two teeth found in a Krabi coal mine in 2004 by geologist Pannipa Tian. About half a capybara. Sleep well."
    },
    {
-    "c": "Pub trivia: hard mode",
-    "q": "Which landlocked European country is so small it’s also doubly landlocked, bordered by Switzerland and Austria?",
-    "a": "Liechtenstein",
-    "e": "Only it and Uzbekistan are doubly landlocked."
+    "c": "Culture",
+    "q": "Mexico City’s Day of the Dead parade marked its 10th edition last Saturday. Which 2015 James Bond film inspired it?",
+    "a": "Spectre",
+    "e": "31 October. The film opened with Bond strolling through a skeleton-filled Mexico City parade that didn’t exist; the city liked it so much it started a real one in 2016. Life imitates art, then adds marigolds."
    },
    {
     "c": "Brain-melter",
-    "q": "What is the only number whose letters, spelled out in English, are in alphabetical order?",
-    "a": "Forty",
-    "e": "F, O, R, T, Y. Go on, check. We’ll wait."
+    "q": "France’s most famous literary prize, the Prix Goncourt, went to Philippe Jaenada on Tuesday. How much prize money does the winner get, in euros?",
+    "a": "10",
+    "e": "Accept €10. Announced 3 November at the Drouant restaurant in Paris. The glory, and the sales, are worth rather more. Spend it wisely. Melted yet?"
    }
   ]
  },
