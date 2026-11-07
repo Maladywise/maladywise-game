@@ -152,3 +152,14 @@ svg.ecg .hl-tag.t2{fill:var(--hl2)}
 .qk-art .ov.hl{fill:#FFC21A!important;fill-opacity:.85;stroke:#2B2340!important;stroke-width:2;stroke-dasharray:4 3}
 .qk-art .hl{animation:qkpulse 1.6s ease-in-out infinite}
 @keyframes qkpulse{0%,100%{opacity:1}50%{opacity:.7}}
+/* X-ray images (/x-ray-quiz/) */
+.qk-xr{margin:0 0 10px;padding:0;border-radius:12px;background:#0B0B0E;border:1px solid var(--line);overflow:hidden;text-align:center}
+.qk-xr img{display:block;margin:0 auto;max-width:100%;width:auto;height:auto;max-height:min(420px,52vh);object-fit:contain}
+.qk-xr figcaption{padding:6px 10px;font-size:12px;line-height:1.45;color:#C9C3D4;background:#17151C;text-align:left;overflow-wrap:anywhere}
+.qk-xr figcaption a{color:#D9CCF5}
+.qk-fb .qk-tip,.qk-ans .qk-tip{display:block;margin-top:6px}
+.qk-fb .qk-src,.qk-ans .qk-src{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.qk-about ul{padding-left:20px}
+.qk-credits{margin:18px 0;font-size:13px;color:var(--muted)}
+.qk-credits summary{cursor:pointer;font-weight:600}
+.qk-credits ol{padding-left:22px;overflow-wrap:anywhere}

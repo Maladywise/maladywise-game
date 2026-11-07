@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Builds /anatomy-quiz/, /ecg-quiz/ and /medical-terminology-quiz/ pages from anat.py and other.py."""
+"""Builds /anatomy-quiz/, /ecg-quiz/ and /medical-terminology-quiz/ pages from anat.py and other.py (/x-ray-quiz/ is built by xray.py).
+After running, re-run _scripts/add_breadcrumbs.py (this script drops the breadcrumb JSON-LD on the hub, ECG and terminology pages)."""
 import collections, glob, hashlib, html, json, os, random, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from anat import QUIZZES
@@ -168,7 +169,7 @@ def reviewed(extra=""):
     return '<p class="meta"><em>Reviewed %s by a Malady Wise GP.%s General education, not personal medical advice.</em></p>' % (REVIEWED, extra)
 
 
-OTHER_LINKS = [("/ecg-quiz/", "ECG quiz", "Rhythm strips and a 12-lead to read."), ("/medical-terminology-quiz/", "Medical terminology quiz", "Prefixes, suffixes and word roots.")]
+OTHER_LINKS = [("/ecg-quiz/", "ECG quiz", "Rhythm strips and a 12-lead to read."), ("/x-ray-quiz/", "X-ray quiz", "Real chest, abdominal and bone X-rays."), ("/medical-terminology-quiz/", "Medical terminology quiz", "Prefixes, suffixes and word roots.")]
 
 
 def more_nav(cur=None, heading="More anatomy quizzes", others=True):
@@ -240,7 +241,7 @@ ecg_body = "\n".join([
     quiz_section(ECG["qs"], "ecg", "ECG quiz", "💓"),
     '<p class="qk-cta"><b>Want a new ECG every week?</b> <a href="/arrhythmix/">Play Arrhythmix</a>: one case, one ECG, six diagnoses, three tries. Every past ECG and its answer is in the <a href="/arrhythmix/archive/">Arrhythmix archive</a>.</p>',
     faq_html(ECG["faqs"]),
-    '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/anatomy-quiz/heart/">Heart anatomy quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/arrhythmix/archive/">Arrhythmix ECG archive</a></li></ul></nav>',
+    '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/anatomy-quiz/heart/">Heart anatomy quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/x-ray-quiz/">X-ray quiz</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/arrhythmix/archive/">Arrhythmix ECG archive</a></li></ul></nav>',
     reviewed(" ECG traces are computer-generated to show textbook features; cases are fictional."),
 ])
 write("/ecg-quiz/", page("/ecg-quiz/", ECG["title"], ECG["desc"], "arrhythmix", ecg_body,
@@ -268,7 +269,7 @@ terms_body = "\n".join([
     "\n".join(ref),
     '<p class="qk-cta"><b>Like word games?</b> Try <a href="/morphemia/">Morphemia</a>, our daily medical word puzzle, or <a href="/wordemic/">Wordemic</a>, the medical Wordle.</p>',
     faq_html(TERMS["faqs"]),
-    '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/anatomy-quiz/brain/">Brain anatomy quiz</a></li></ul></nav>',
+    '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/x-ray-quiz/">X-ray quiz</a></li><li><a href="/anatomy-quiz/brain/">Brain anatomy quiz</a></li></ul></nav>',
     reviewed(),
 ])
 write("/medical-terminology-quiz/", page("/medical-terminology-quiz/", TERMS["title"], TERMS["desc"], "morphemia", terms_body,

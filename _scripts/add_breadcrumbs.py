@@ -53,7 +53,7 @@ SECTIONS = {
 }
 # Top-level pages that live under a hub even though their URL is /<name>/.
 ARCADE = {"basil-clover", "stackulus", "mergeon"}
-QUIZZES = {"ecg-quiz", "medical-terminology-quiz", "medical-specialty-quiz", "anatomy-quiz"}
+QUIZZES = {"ecg-quiz", "x-ray-quiz", "medical-terminology-quiz", "medical-specialty-quiz", "anatomy-quiz"}
 # Folders this script never edits (owned elsewhere).
 EXCLUDE = {"days"}
 
