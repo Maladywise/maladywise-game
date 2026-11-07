@@ -1203,7 +1203,21 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
     }
   }
-  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); }
+  // arcade pages (Stackulus, Mergeon, Basil + Clover): a "more games" box above the footer
+  var ARCADE = [["stackulus", "Stackulus", "\ud83e\udec0", "Falling organs. Clear the rows."], ["mergeon", "Mergeon", "\ud83e\udde0", "Merge your way up to a brain."], ["basil-clover", "Basil + Clover", "\ud83d\udc08", "Two cats versus everything."]];
+  function arcadeBox() {
+    var p = location.pathname.split("/")[1] || "", foot = document.querySelector("footer.site");
+    if (!foot || document.querySelector(".mwx-arcade") || !ARCADE.some(function (a) { return a[0] === p; })) return;
+    var others = ARCADE.filter(function (a) { return a[0] !== p; });
+    var gl = (window.MW_GAMES || []).filter(function (x) { return x.live && inMode(x) && !x.weekly; }).map(function (x) { return { g: x, st: readStats(x) }; });
+    var left = gl.filter(function (o) { return !(o.st && o.st.done); });
+    var pick = (left.length ? left : gl).slice(0, 4);
+    foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info mwx-arcade"><div class="mwx-head"><b>More games</b><span>' + (left.length ? left.length + " puzzles left today" : "All today\u2019s puzzles done") + '</span></div><div class="mwx-list">' +
+      others.map(function (a) { return '<a class="mwx-row" href="/' + a[0] + '/" title="' + a[3] + '"><span class="mwx-ic" style="font-size:24px;width:34px;text-align:center">' + a[2] + '</span><span class="mwx-nm" style="white-space:normal;line-height:1.15">' + a[1] + '</span><span class="mwx-st">\u203a</span></a>'; }).join("") +
+      pick.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203a") + "</span></a>"; }).join("") +
+      '</div><a class="mwx-all" href="/">All puzzles</a></section>');
+  }
+  function page() { social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
