@@ -41,7 +41,7 @@ html[data-theme="dark"] #mrg{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #mrg .mbar .nx b{font-size:22px;line-height:24px}
 #mrg .board{position:relative;width:100%;max-width:440px;margin:0 auto;border:2px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
 #mrg canvas{display:block;touch-action:none;user-select:none;-webkit-user-select:none;cursor:pointer}
-#mrg .toast{position:absolute;left:50%;top:112px;transform:translateX(-50%);background:var(--ink);color:var(--bg);font:600 13px var(--body);padding:7px 14px;border-radius:999px;white-space:nowrap;pointer-events:none;max-width:92%;overflow:hidden;text-overflow:ellipsis}
+#mrg .toast{position:absolute;left:50%;top:112px;transform:translateX(-50%);background:var(--ink);color:var(--bg);font:600 13px var(--body);padding:7px 14px;border-radius:18px;pointer-events:none;width:max-content;max-width:88%;text-align:center;line-height:1.3}
 #mrg .toast.on{animation:mrgpop .25s ease-out}
 @keyframes mrgpop{from{transform:translate(-50%,6px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
 #mrg .over{position:absolute;inset:0;display:grid;place-content:center;gap:4px;text-align:center;background:rgba(250,247,242,.72);font-family:var(--body)}
@@ -58,3 +58,52 @@ html[data-theme="dark"] #mrg .over{background:rgba(22,18,31,.72)}
 
 #mrg .mrg-pic{vertical-align:middle;display:inline-block}
 #mrg .chain span{background:none!important}
+
+/* juice, power-ups, unlocks, leaderboard */
+#mrg .head .hr{display:flex;align-items:center;gap:8px}
+#mrg .mute{font:16px/1 system-ui,sans-serif;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;padding:0;display:grid;place-items:center}
+#mrg .tbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:-6px;min-height:30px}
+#mrg .tgt{font:500 13px/1.3 var(--body);color:var(--muted);min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+#mrg .tgt .hit{color:var(--gold);font-weight:700}
+#mrg .tgt .ob{font-weight:700;color:var(--no);white-space:nowrap}
+#mrg .tools{display:flex;gap:6px;flex:none}
+#mrg .tool{font:600 13px var(--body);padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;white-space:nowrap}
+#mrg .tool.on{background:var(--no);color:#fff;border-color:var(--no)}
+#mrg .tool:disabled{opacity:.4;cursor:default}
+#mrg canvas.arm{cursor:crosshair}
+#mrg .combo{position:absolute;left:50%;top:150px;transform:translateX(-50%);font:700 20px var(--title);color:#D9415E;text-shadow:0 2px 0 var(--paper),0 0 10px var(--paper);pointer-events:none;white-space:nowrap}
+#mrg .combo.big{font-size:32px;color:var(--gold);top:200px}
+#mrg .combo.on{animation:mrgcombo 1s ease-out forwards}
+@keyframes mrgcombo{0%{transform:translate(-50%,8px) scale(.6);opacity:0}20%{transform:translate(-50%,0) scale(1.15);opacity:1}35%{transform:translate(-50%,0) scale(1)}80%{opacity:1}100%{transform:translate(-50%,-14px) scale(1);opacity:0}}
+#mrg .fact{position:absolute;left:8px;right:8px;bottom:8px;display:flex;gap:10px;align-items:center;background:var(--paper);border:2px solid var(--gold);border-radius:14px;padding:6px 9px;box-shadow:0 6px 18px rgba(0,0,0,.15);font:12px/1.3 var(--body);color:var(--ink);cursor:pointer;text-align:left}
+#mrg .fact img{flex:none}
+#mrg .fact b{display:block;font-size:12px;color:var(--gold)}
+#mrg .fact.on{animation:mrgup .3s ease-out}
+@keyframes mrgup{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+#mrg .chain span.dim img{filter:grayscale(1);opacity:.28}
+#mrg .chain span.lit{animation:mrglit .7s ease-out}
+@keyframes mrglit{0%{transform:scale(1)}40%{transform:scale(1.6)}100%{transform:scale(1)}}
+#mrg .board.shk1{animation:mrgshk .25s linear}
+#mrg .board.shk2{animation:mrgshk2 .4s linear}
+@keyframes mrgshk{20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,0)}80%{transform:translate(2px,1px)}}
+@keyframes mrgshk2{15%{transform:translate(-6px,2px)}30%{transform:translate(6px,-2px)}45%{transform:translate(-5px,1px)}60%{transform:translate(4px,-1px)}75%{transform:translate(-2px,0)}90%{transform:translate(2px,0)}}
+#mrg .over .best{margin:0 auto 4px;background:var(--gold);color:#fff;border-radius:999px;padding:4px 14px;font:700 14px var(--body)}
+#mrg .over .react{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px}
+#mrg .over .react img{animation:mrgbob 1.4s ease-in-out infinite}
+#mrg .over .react .bub{background:var(--paper);border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:6px 10px;font-size:13px;max-width:190px;text-align:left;color:var(--ink)}
+@keyframes mrgbob{50%{transform:translateY(-5px) rotate(-4deg)}}
+#mrg .lb{border-top:1px dashed var(--line);padding-top:10px;display:grid;gap:8px;text-align:left}
+#mrg .lbtabs{display:flex;gap:6px;justify-content:center}
+#mrg .lbtabs button{font:600 13px var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+#mrg .lbtabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#mrg .lbform{display:flex;gap:6px}
+#mrg .lbform input{flex:1;min-width:0;font:14px var(--body);padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+#mrg .lb ol{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+#mrg .lb li{display:flex;align-items:center;gap:8px;font-size:14px;padding:4px 8px;border-radius:8px;background:var(--soft)}
+#mrg .lb li.me{outline:2px solid var(--accent)}
+#mrg .lb li.none{background:none;justify-content:center;color:var(--muted)}
+#mrg .lb .rk{width:20px;font-weight:700;color:var(--muted)}
+#mrg .lb .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#mrg .lb .sc{font-weight:700;font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){#mrg .combo.on,#mrg .fact.on,#mrg .chain span.lit,#mrg .board.shk1,#mrg .board.shk2,#mrg .over .react img{animation:none}}
+html[data-motion="reduce"] #mrg .combo.on,html[data-motion="reduce"] #mrg .fact.on,html[data-motion="reduce"] #mrg .chain span.lit,html[data-motion="reduce"] #mrg .board.shk1,html[data-motion="reduce"] #mrg .board.shk2,html[data-motion="reduce"] #mrg .over .react img,html[data-motion="reduce"] #mrg .toast.on{animation:none}
