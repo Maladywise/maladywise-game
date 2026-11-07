@@ -131,3 +131,15 @@
 .od-hp b{color:#2E1F57}
 .od-gg-h .od-gt{background:#2B2340;border-color:#2B2340}
 .od-hgo{display:block;margin:12px auto 0;font:700 15px var(--body);padding:9px 26px;border-radius:999px;border:0;background:#2E1F57;color:#fff;cursor:pointer}
+
+/* game-over card: never let content widen the card (Android emoji/form min-content) */
+.od-card{grid-template-columns:minmax(0,1fr);justify-items:stretch;overflow-x:hidden}
+.od-card>*{width:100%;min-width:0;justify-self:center}
+.od-card .od-omasc{width:56px;justify-self:center}
+.od-ostats span{overflow:hidden}
+.od-ostats b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.od-sharetx{max-width:100%;font-size:12px}
+.od-lbform label{overflow-wrap:anywhere}
+.od-lb .od-hs{min-width:0;max-width:100%}
+.od-lb,.od-lbform{grid-template-columns:minmax(0,1fr)}
+.od-lbform input{width:0}
