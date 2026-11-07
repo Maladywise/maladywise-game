@@ -26,7 +26,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <link rel="stylesheet" href="../assets/shell.css?v=171">
-<link rel="stylesheet" href="drop.css?v=3">
+<link rel="stylesheet" href="drop.css?v=4">
 <script src="../assets/games.js?v=98"></script>
 <script src="../assets/shell.js?v=178"></script>
 </head>
@@ -47,7 +47,9 @@
         <li>Organs fall into the 10 × 20 board. <b>Move</b> and <b>rotate</b> them as they fall.</li>
         <li>Fill a whole row and it clears. Four rows at once is a <b>transplant</b>, worth the most.</li>
         <li><b>Hold</b> tucks an organ away for later (once per drop). The faint outline shows where it will land.</li>
+        <li class="od-rcombo"><b>Combos:</b> clear rows on back-to-back drops for a <b>code blue</b> combo bonus. A cleared row made of one organ type is a <b>perfect match</b>, like a matched donor: triple points.</li>
         <li>Every 10 rows: <b>level up</b>, faster drops and a new organ fact.</li>
+        <li class="od-rsound"><b>Sound:</b> soft monitor beeps (and a buzz on phones). Tap 🔊 in the game bar to mute.</li>
         <li><b>Daily challenge:</b> everyone gets the same organs in the same order (new each midnight, Sydney time). Your first go each day is scored; replays are practice.</li>
         <li>On a phone, use the buttons under the board, or swipe the board: drag to move, tap to rotate, flick down to drop.</li>
       </ul>
@@ -63,6 +65,7 @@
       <div class="od-st od-sc"><small id="od-scl">Score</small><b id="od-score">0</b></div>
       <div class="od-st"><small>Level</small><b id="od-level">1</b></div>
       <div class="od-st"><small>Lines</small><b id="od-lines">0</b></div>
+      <button class="od-ibtn" type="button" id="od-mute" aria-label="Sound on. Mute" aria-pressed="false">&#128266;</button>
       <button class="od-ibtn" type="button" id="od-helpbtn" aria-label="How to play">?</button>
       <button class="od-ibtn" type="button" id="od-pause" aria-label="Pause">&#10074;&#10074;</button>
     </div>
@@ -116,6 +119,7 @@
       <h2 id="od-help-h">How to play</h2>
       <ul class="od-hp">
         <li><b>Fill a whole row</b> to clear it. Four at once = <b>transplant</b>.</li>
+        <li class="od-rcombo"><b>Combos:</b> clear rows on back-to-back drops for a <b>code blue</b> bonus. A cleared row all of one organ is a <b>perfect match</b>: triple points.</li>
         <li><b>Buttons:</b> ◀ ▶ move, ↻ rotate, ▼ soft drop, ⤓ hard drop, ⇄ hold.</li>
         <li><b>Swipe the board:</b> drag to move, tap to rotate, flick down to drop.</li>
         <li><b>Keys:</b> ← → move, ↑ or X rotate, Z rotate back, ↓ soft drop, Space hard drop, C hold, P pause.</li>
@@ -129,6 +133,6 @@
   <footer class="site">A bonus game. Organ shapes are simplified. Please don’t stack real ones.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>if (window.MW && MW.page) MW.page();</script>
-<script src="drop.js?v=3"></script>
+<script src="drop.js?v=4"></script>
 </body>
 </html>
