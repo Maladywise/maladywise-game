@@ -76,3 +76,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Cryptogenic is now **Cryptoplexy**: puzzle files live in `cryptoplexy/` (puzzles.json, normie.json). The `cryptogenic/` folder only holds redirect pages; never write puzzles there. The game id in code stays `cryptogenic`, but player-facing text and links use Cryptoplexy and https://maladywise.com/cryptoplexy/.
 - Organ Drop is now **Stackulus** at `stackulus/` (https://maladywise.com/stackulus/). `organ-drop/` and `dropsy/` are redirects only.
 - Mergeon is the organ merge arcade game at https://maladywise.com/mergeon/.
+
+## Characters: default female
+- When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is a woman (she/her). Keep a natural mix in fictional patient cases.
