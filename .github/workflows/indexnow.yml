@@ -1,0 +1,39 @@
+name: IndexNow (Bing and friends)
+# Tells IndexNow engines (Bing, Yandex, Seznam, Naver; Bing feeds DuckDuckGo, Copilot and
+# ChatGPT search) which pages changed. Push to main: changed pages only.
+# "Run workflow" by hand: every URL in sitemap.xml.
+on:
+  push:
+    branches: [main]
+    paths: ["**.html", "sitemap.xml"]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "List URLs only, don't submit"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Wait for GitHub Pages to publish the push
+        if: github.event_name == 'push'
+        run: sleep 150
+      - name: Submit changed pages
+        if: github.event_name == 'push'
+        run: python3 _scripts/indexnow.py --before "${{ github.event.before }}" --after "${{ github.sha }}"
+      - name: Submit the whole sitemap
+        if: github.event_name == 'workflow_dispatch'
+        run: python3 _scripts/indexnow.py --all ${{ inputs.dry_run && '--dry-run' || '' }}
