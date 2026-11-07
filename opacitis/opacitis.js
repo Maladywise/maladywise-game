@@ -2,10 +2,13 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, title, context, question, img:{file, author, licence, licence_url, page, alt},
    answer, wrong:[5], hints:[2 strings], why, assoc:[...], pearl}. Images are hotlinked from Wikimedia Commons (free licences only:
    PD, CC0, CC BY, CC BY-SA) with attribution. The file name is only linked after answering (it often names the sign).
-   Medical only: no Normie version yet. Check with glimpsis/check.py. */
+   Normie mode ("What’s inside?"): puzzles/normie/YYYY-MM.json, same entry format (why = what it is, pearl = fun fact, assoc optional),
+   images self-hosted in img/normie/, "n-" storage keys, no medicine. Missing Normie file -> MW_noNormie. Check with opacitis/check.py. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3, NAME = "Opacitis";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3;
+  var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Opacitis (Normie)" : "Opacitis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
+  var NT = { q: "What’s inside?", foot: "Real X-rays and CT scans of everyday objects, animals and plants (never people), from Wikimedia Commons and museum open-access collections under free licences, credited under each image. Just for fun.", alt: "Mystery X-ray for today’s puzzle", unit: "X-ray" };
   var root = document.getElementById("opc");
   if (!document.querySelector("link[data-opc]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "opacitis.css?v=" + BUILD; l.setAttribute("data-opc", ""); document.head.appendChild(l);
@@ -15,7 +18,7 @@
     ' <div class="head"><span class="eyebrow" id="opc-eyebrow">Opacitis</span><span class="badge" id="opc-badge" hidden></span></div>' +
     ' <section class="report" id="opc-report" aria-label="Today’s image"></section>' +
     ' <div class="pzl" id="opc-play" hidden>' +
-    '  <div class="tries"><span class="tl" id="opc-q">What’s the diagnosis?</span><span class="vials" id="opc-vials" aria-label="Tries left"></span></div>' +
+    '  <div class="tries"><span class="tl" id="opc-q">' + (NORMIE ? NT.q : "What’s the diagnosis?") + '</span><span class="vials" id="opc-vials" aria-label="Tries left"></span></div>' +
     '  <div class="msg" id="opc-msg" aria-live="polite"></div>' +
     '  <div class="hints" id="opc-hints"></div>' +
     '  <div class="opts" id="opc-opts"></div>' +
@@ -23,9 +26,10 @@
     ' <div class="result" id="opc-result" hidden></div>' +
     ' <p class="note" id="opc-next"></p>' +
     ' <details class="archive" id="opc-archive"><summary>Past images</summary><div class="alist" id="opc-alist"></div></details>' +
-    ' <p class="note">Real X-rays and scans from Wikimedia Commons and the CDC Public Health Image Library under free licences, credited under each image. Scenarios are fictional. General education, not personal medical advice.</p>' +
+    ' <p class="note">' + (NORMIE ? NT.foot : "Real X-rays and scans from Wikimedia Commons and the CDC Public Health Image Library under free licences, credited under each image. Scenarios are fictional. General education, not personal medical advice.") + '</p>' +
     "</div>";
   var $ = function (id) { return document.getElementById("opc-" + id); };
+  if (NORMIE) { var fixFoot = function () { var ft = document.querySelector("footer.site"); if (ft) [].slice.call(ft.childNodes).forEach(function (n) { if (n.nodeType === 3 && /^\s*Images:/.test(n.textContent)) n.textContent = "Images: Wikimedia Commons and museum open access, free licences, credited on each puzzle. Just for fun."; }); }; if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fixFoot); else fixFoot(); }
 
   // ---------- dates & storage ----------
   function sydToday() { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); } catch (e) { return new Date().toISOString().slice(0, 10); } }
@@ -37,9 +41,9 @@
   var REAL = sydToday(), q = new URLSearchParams(location.search).get("date");
   var today = (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) ? q : REAL;
   function isLive() { return today === REAL; }
-  var SKEY = "opc-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
-  var KEY, st, P = null, START = "2026-10-25";
-  function loadDay() { KEY = "opc-day-" + today; st = load(KEY, { picks: [], done: false, win: false }); }
+  var SKEY = PFX + "opc-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0] });
+  var KEY, st, P = null, START = NORMIE ? "2026-11-08" : "2026-10-25";
+  function loadDay() { KEY = PFX + "opc-day-" + today; st = load(KEY, { picks: [], done: false, win: false }); }
   loadDay();
 
   // ---------- sass (mocks the guess, never the patient) ----------
@@ -49,6 +53,7 @@
     win: [["First look. Reporting-room energy.", "One look and done. Eagle eyes.", "First try. Pin it to the lightbox.", "Straight to it. Suspiciously good."], ["Second pick. Nicely spotted.", "Two tries. The hint helped. We saw.", "Got there on two. Solid.", "Second look. Registrar-level."], ["Last try. Phew. For everyone.", "Third time. A buzzer-beater.", "Scraped in. Report signed.", "Final pick. Squinting paid off."]],
     lose: ["The scan wins today. Rematch tomorrow.", "Out of tries. Read the explanation and nod wisely.", "Missed it. It was right there.", "Not today. Tomorrow’s scan is already in the queue.", "Stumped. Even the textbook took a while.", "Hidden in plain sight. Classic."]
   };
+  if (NORMIE) SASS = { wrong: ["Look again. Properly this time.", "The X-ray disagrees.", "Bold. Wrong, but bold.", "That’s a thing. Just not this thing.", "Check the outline. Then check it again.", "Plausible. Also wrong.", "Zoom in. We’ll wait.", "Confidently incorrect. A classic.", "See-through, but you didn’t see through it.", "Interesting. Incorrect, but interesting.", "The image would like a second opinion."], win: [["First look. X-ray vision confirmed.", "One look and done. Eagle eyes.", "First try. Pin it to the lightbox.", "Straight to it. Suspiciously good."], ["Second pick. Nicely spotted.", "Two tries. The hint helped. We saw.", "Got there on two. Solid.", "Second look. Sharp."], ["Last try. Phew. For everyone.", "Third time. A buzzer-beater.", "Scraped in. Still counts.", "Final pick. Squinting paid off."]], lose: ["The X-ray wins today. Rematch tomorrow.", "Out of tries. Read the fun fact and nod wisely.", "Missed it. It was right there, inside.", "Not today. Tomorrow’s X-ray is already developing.", "Stumped. Things look odd from the inside."] };
   function say(t) { var m = $("msg"); m.textContent = t; m.classList.remove("pop"); void m.offsetWidth; if (t) m.classList.add("pop"); }
 
   // ---------- helpers ----------
@@ -68,7 +73,7 @@
   function renderReport() {
     $("report").innerHTML =
       '<p class="ctx"><b>' + esc(P.title || "Take a look") + "</b>" + esc(P.context || "") + "</p>" +
-      '<div class="imgbox" id="opc-box" role="button" tabindex="0" aria-label="Enlarge image"><img id="opc-img" src="' + src(1000) + '" alt="' + esc(st.done ? P.img.alt || P.answer : "Clinical image for today’s puzzle") + '" referrerpolicy="no-referrer"><span class="zm">Tap to zoom</span></div>' +
+      '<div class="imgbox" id="opc-box" role="button" tabindex="0" aria-label="Enlarge image"><img id="opc-img" src="' + src(1000) + '" alt="' + esc(st.done ? P.img.alt || P.answer : (NORMIE ? NT.alt : "Clinical image for today’s puzzle")) + '" referrerpolicy="no-referrer"><span class="zm">Tap to zoom</span></div>' +
       '<p class="credit">' + credit() + "</p>";
     var img = $("img");
     img.onerror = function () { $("box").innerHTML = '<p class="err">The image didn’t load. Wikimedia may be having a moment. Try refreshing.</p>'; };
@@ -84,7 +89,7 @@
   }
   function renderPlay() {
     var wrong = st.picks.filter(function (x) { return x !== P.answer; });
-    $("play").hidden = st.done; $("q").textContent = P.question || "What’s the diagnosis?";
+    $("play").hidden = st.done; $("q").textContent = P.question || (NORMIE ? NT.q : "What’s the diagnosis?");
     var left = TRIES - st.picks.length;
     $("vials").innerHTML = [0, 1, 2].map(function (i) { return '<i class="' + (i < left ? "full" : "used") + '"></i>'; }).join("") + "<b>" + left + " left</b>";
     $("hints").innerHTML = wrong.map(function (x, i) { return P.hints[i] ? '<p class="hint"><b>Hint ' + (i + 1) + ".</b> " + esc(P.hints[i]) + "</p>" : ""; }).join("");
@@ -104,9 +109,9 @@
     r.innerHTML = '<p class="verdict ' + (st.win ? "ok" : "no") + '">' + (st.win ? "Read on try " + n + " of " + TRIES : "Not this time") + "</p>" +
       "<h2>" + esc(P.answer) + "</h2>" +
       (st.picks.length && !st.win ? '<p class="yours">Your picks: ' + st.picks.map(esc).join(" · ") + "</p>" : "") +
-      '<div class="why"><b>What you’re looking at</b><p>' + esc(P.why) + "</p></div>" +
-      (P.assoc && P.assoc.length ? '<div class="clinch"><b>Think of</b><div class="assoc">' + P.assoc.map(function (a) { return "<span>" + esc(a) + "</span>"; }).join("") + "</div></div>" : "") +
-      '<div class="pearl"><b>Teaching pearl</b><p>' + esc(P.pearl) + "</p></div>" +
+      '<div class="why"><b>' + (NORMIE ? "What it is" : "What you’re looking at") + '</b><p>' + esc(P.why) + "</p></div>" +
+      (P.assoc && P.assoc.length ? '<div class="clinch"><b>' + (NORMIE ? "Also" : "Think of") + '</b><div class="assoc">' + P.assoc.map(function (a) { return "<span>" + esc(a) + "</span>"; }).join("") + "</div></div>" : "") +
+      '<div class="pearl"><b>' + (NORMIE ? "Fun fact" : "Teaching pearl") + '</b><p>' + esc(P.pearl) + "</p></div>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<div class="dist">' + stats.dist.map(function (c, i) { return "<div><span>" + (i < 3 ? i + 1 : "X") + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(c / max * 100)) + '%">' + c + "</i></div>"; }).join("") + "</div>" +
       '<pre id="opc-share">' + esc(share) + '</pre><button class="btn" type="button" id="opc-copy">Copy result</button>';
@@ -134,8 +139,8 @@
       stats.dist[win ? st.picks.length - 1 : 3]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
-      say(win ? "⚛️ Einstein solved. Roughly a once-in-50-days image, and you spotted it. Screenshot this." : "Even Einstein would have asked for a CT. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load("mw-einstein", []); if (!tro.some(function (t) { return t.g === "opacitis" && t.d === today; })) { tro.push({ g: "opacitis", d: today }); put("mw-einstein", tro); } }
+      say(win ? "⚛️ Einstein solved. Roughly a once-in-50-days image, and you spotted it. Screenshot this." : (NORMIE ? "Even Einstein would have asked to open it up. Respect for taking on the rare one." : "Even Einstein would have asked for a CT. Respect for taking on the rare one."));
+      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "opacitis" && t.d === today; })) { tro.push({ g: "opacitis", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[st.picks.length - 1]) : pick(SASS.lose));
   }
   $("opts").addEventListener("click", function (e) {
@@ -151,7 +156,7 @@
   // ---------- load ----------
   var cache = {};
   function month(m) {
-    if (!cache[m]) cache[m] = fetch(BASE + "puzzles/" + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
+    if (!cache[m]) cache[m] = fetch(BASE + PDIR + m + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; });
     return cache[m];
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
@@ -161,7 +166,8 @@
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
         $("play").hidden = true; $("result").hidden = true; $("badge").hidden = true;
-        $("report").innerHTML = '<p class="empty">' + (date < START ? "Opacitis opens " + nice(START) + ". Warming up the lightbox." : "Today’s scan is still in the queue. Back tomorrow.") + "</p>";
+        $("report").innerHTML = date < START ? '<p class="empty">' + (NORMIE ? "Normie Opacitis opens " + nice(START) + ". Warming up the lightbox." : "Opacitis opens " + nice(START) + ". Warming up the lightbox.") + "</p>"
+          : NORMIE && window.MW_noNormie ? MW_noNormie(NT.unit) : '<p class="empty">Today’s scan is still in the queue. Back tomorrow.</p>';
         renderArchive(); return;
       }
       $("eyebrow").textContent = (isLive() ? "Opacitis" : "Archive") + " · #" + P.number + " · " + nice(date);
@@ -174,10 +180,10 @@
   }
   function renderArchive() {
     var m = REAL.slice(0, 7);
-    Promise.all([prevMonth(m) < "2026-10" ? Promise.resolve([]) : month(prevMonth(m)), month(m)]).then(function (ls) {
+    Promise.all([prevMonth(m) < (NORMIE ? "2026-11" : "2026-10") ? Promise.resolve([]) : month(prevMonth(m)), month(m)]).then(function (ls) {
       var past = [].concat(ls[0], ls[1]).filter(function (x) { return x.date < REAL; }).reverse();
       var rows = past.map(function (x) {
-        var s = load("opc-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
+        var s = load(PFX + "opc-day-" + x.date, null), mark = !s || !s.done ? "" : s.win ? " ✓" : " ✕";
         return '<button type="button" class="arow' + (x.date === today ? " on" : "") + '" data-d="' + x.date + '"><span>#' + x.number + " · " + nice(x.date) + mark + '</span><span class="badge ' + x.difficulty + '">' + x.difficulty + "</span></button>";
       }).join("");
       var back = isLive() ? "" : '<button type="button" class="btn" id="opc-back">Back to today</button>';

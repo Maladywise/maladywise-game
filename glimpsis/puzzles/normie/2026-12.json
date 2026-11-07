@@ -1,0 +1,994 @@
+[
+ {
+  "date": "2026-12-01",
+  "number": 24,
+  "difficulty": "Easy",
+  "title": "Morning fuel",
+  "context": "A pile of shiny brown ovals, each with a wiggly line down the middle.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Coffee_Beans_macro_1.jpg",
+   "file": "Coffee Beans macro 1.jpg",
+   "author": "Daniel Schwen",
+   "licence": "CC BY 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by/3.0",
+   "url": "img/normie/2026-12-01.jpg",
+   "alt": "A heap of shiny roasted brown beans, each with a crease down the middle."
+  },
+  "answer": "Coffee beans",
+  "wrong": [
+   "Peanuts",
+   "Almonds",
+   "Cocoa beans",
+   "Pinto beans",
+   "Pecans"
+  ],
+  "hints": [
+   "They've been roasted.",
+   "Grind them and add hot water."
+  ],
+  "why": "Roasted coffee beans.",
+  "pearl": "Coffee 'beans' are really the seeds of a red, cherry-like fruit. Each fruit usually holds two beans facing each other."
+ },
+ {
+  "date": "2026-12-02",
+  "number": 25,
+  "difficulty": "Medium",
+  "title": "Tiny forest",
+  "context": "Little drooping lanterns on thin red stalks above a soft green carpet.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Macro_Photography_of_Moss_Sporophytes.jpg",
+   "file": "Macro Photography of Moss Sporophytes.jpg",
+   "author": "Pietro Lusso",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-02.jpg",
+   "alt": "Small drooping capsules on thin red stalks above a green carpet."
+  },
+  "answer": "Moss",
+  "wrong": [
+   "Grass seedlings",
+   "Mushrooms",
+   "Bean sprouts",
+   "Lichen",
+   "Fern"
+  ],
+  "hints": [
+   "It grows on damp rocks, logs and shady roofs.",
+   "It has no flowers and no roots."
+  ],
+  "why": "Moss, with its spore capsules held up on thin stalks.",
+  "pearl": "Moss has no flowers or seeds. The little capsules on stalks are full of spores that blow away in the wind."
+ },
+ {
+  "date": "2026-12-03",
+  "number": 26,
+  "difficulty": "Medium",
+  "title": "Light as a...",
+  "context": "Glossy strands lined up side by side, like a comb that zips together.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Pheasant_Feather,_Magnified_1.jpg",
+   "file": "Pheasant Feather, Magnified 1.jpg",
+   "author": "Prairie Astronomer",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/normie/2026-12-03.jpg",
+   "alt": "Glossy brown and cream strands lined up in parallel."
+  },
+  "answer": "Feather",
+  "wrong": [
+   "Human hair",
+   "Pine needles",
+   "Paintbrush",
+   "Fishing line",
+   "Broom bristles"
+  ],
+  "hints": [
+   "It belongs to a bird.",
+   "This one came from a pheasant."
+  ],
+  "why": "A pheasant feather under a microscope, showing the barbs lined up side by side.",
+  "pearl": "A feather's barbs are held together by tiny hooks, a bit like Velcro. When birds preen, they're zipping them back together."
+ },
+ {
+  "date": "2026-12-04",
+  "number": 27,
+  "difficulty": "Hard",
+  "title": "Rough lick",
+  "context": "A pink pad covered in tiny backward-pointing hooks, mid-wash.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Cat_tongue_macro.jpg",
+   "file": "Cat tongue macro.jpg",
+   "author": "Jennifer Leigh",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-12-04.jpg",
+   "alt": "A pink tongue covered in tiny spines, against grey and white fur."
+  },
+  "answer": "Cat's tongue",
+  "wrong": [
+   "Dog's tongue",
+   "Cow's tongue",
+   "Strawberry",
+   "Sandpaper",
+   "Velcro"
+  ],
+  "hints": [
+   "Its owner spends hours grooming.",
+   "It purrs."
+  ],
+  "why": "A cat's tongue mid-wash, covered in tiny hooked spines called papillae.",
+  "pearl": "A cat's tongue spines are hollow scoops. A 2018 Georgia Tech study found they wick saliva deep into the fur as the cat grooms."
+ },
+ {
+  "date": "2026-12-05",
+  "number": 28,
+  "difficulty": "Hard",
+  "title": "Look underneath",
+  "context": "Hundreds of thin pale sheets fanning out from a central stalk.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Mushroom_underside_(Gills)_(29097123352).jpg",
+   "file": "Mushroom underside (Gills) (29097123352).jpg",
+   "author": "Jonathan Cutrer",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-12-05.jpg",
+   "alt": "Thin pale ridges fanning out around a brown stalk."
+  },
+  "answer": "Mushroom gills",
+  "wrong": [
+   "Fish gills",
+   "Paper fan",
+   "Open book pages",
+   "Onion layers",
+   "Lettuce"
+  ],
+  "hints": [
+   "It grows from soil or rotting wood.",
+   "It's a fungus, not a plant."
+  ],
+  "why": "The underside of a mushroom cap, showing the gills fanning out from the stem.",
+  "pearl": "Mushroom gills release spores, not seeds. One mushroom can shed billions of them."
+ },
+ {
+  "date": "2026-12-06",
+  "number": 29,
+  "difficulty": "Genius",
+  "title": "Crusty",
+  "context": "Pale green and grey patches spread across a stone like spilt paint.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Lichen_Macro_(23589867743).jpg",
+   "file": "Lichen Macro (23589867743).jpg",
+   "author": "VillageHero from Ulm, Germany",
+   "licence": "CC BY-SA 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "url": "img/normie/2026-12-06.jpg",
+   "alt": "Pale green and blue-grey crusty patches on a stone surface."
+  },
+  "answer": "Lichen",
+  "wrong": [
+   "Mould",
+   "Moss",
+   "Algae",
+   "Rust",
+   "Paint"
+  ],
+  "hints": [
+   "It's two living things in partnership.",
+   "Reindeer eat it in winter."
+  ],
+  "why": "Lichen growing on a rock.",
+  "pearl": "A lichen is a partnership: a fungus living together with algae or bacteria that make food from sunlight. Reindeer dig it out from under the snow in winter."
+ },
+ {
+  "date": "2026-12-07",
+  "number": 30,
+  "difficulty": "Easy",
+  "title": "Colour tiles",
+  "context": "Sixteen squares of overlapping tiles in every colour, from things that flutter.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Compilation_Butterfly_Wing_Scales_(22508269948).jpg",
+   "file": "Compilation Butterfly Wing Scales (22508269948).jpg",
+   "author": "The Next Gen Scientist",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-12-07.jpg",
+   "alt": "A grid of sixteen colourful close-ups of tiny overlapping scales."
+  },
+  "answer": "Butterfly wings",
+  "wrong": [
+   "Fish scales",
+   "Bird feathers",
+   "Snake skin",
+   "Mosaic tiles",
+   "Glitter"
+  ],
+  "hints": [
+   "Touch them and they leave coloured dust on your fingers.",
+   "They fly."
+  ],
+  "why": "Magnified close-ups of butterfly and moth wings, showing the tiny overlapping scales.",
+  "pearl": "Butterfly wings are covered in thousands of tiny scales. The insect group's name, Lepidoptera, means 'scale wing' in Greek."
+ },
+ {
+  "date": "2026-12-08",
+  "number": 31,
+  "difficulty": "Easy",
+  "title": "Blue Monday",
+  "context": "Diagonal blue and white threads woven tight. You might be wearing it.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Jeansfabric_(cropped).jpg",
+   "file": "Jeansfabric (cropped).jpg",
+   "author": "Thegreenj",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/normie/2026-12-08.jpg",
+   "alt": "Diagonal ribs of blue and white woven threads."
+  },
+  "answer": "Denim",
+  "wrong": [
+   "Corduroy",
+   "Tweed",
+   "Linen",
+   "Canvas",
+   "Velvet"
+  ],
+  "hints": [
+   "Jeans are made of it.",
+   "The blue comes from indigo dye."
+  ],
+  "why": "A close-up of denim, the twill fabric used for jeans.",
+  "pearl": "Denim is woven with blue threads one way and white threads the other, which is why the inside of your jeans is paler. The name comes from 'serge de Nîmes', a fabric from Nîmes in France."
+ },
+ {
+  "date": "2026-12-09",
+  "number": 32,
+  "difficulty": "Einstein",
+  "title": "Not what it seems",
+  "context": "A fuzzy head, big jaws and a famous sting.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Velvet_ant_head_anterior_--_SEM_photo.jpg",
+   "file": "Velvet ant head anterior -- SEM photo.jpg",
+   "author": "Janice Haney Carr, CDC",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-09.jpg",
+   "alt": "A hairy insect head with large jaws, in grey electron-microscope detail."
+  },
+  "answer": "Velvet ant",
+  "wrong": [
+   "Bullet ant",
+   "Bumblebee",
+   "Paper wasp",
+   "Fire ant",
+   "Hornet"
+  ],
+  "hints": [
+   "Despite its name, it's actually a wasp.",
+   "The females have no wings."
+  ],
+  "why": "An electron-microscope image of the head of a velvet ant. Velvet ants are wingless female wasps.",
+  "pearl": "Velvet ants aren't ants at all. They're wasps, and their painful sting has earned one species the nickname 'cow killer'."
+ },
+ {
+  "date": "2026-12-10",
+  "number": 33,
+  "difficulty": "Medium",
+  "title": "Prize winner",
+  "context": "Rows of round lenses with bristles poking up between them.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Drosophilidae_compound_eye_edit1.jpg",
+   "file": "Drosophilidae compound eye edit1.jpg",
+   "author": "Louisa Howard, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-10.jpg",
+   "alt": "Rows of round domed lenses with thin bristles sticking up between them."
+  },
+  "answer": "Fruit fly's eye",
+  "wrong": [
+   "Golf ball",
+   "Honeycomb",
+   "Raspberry",
+   "Bubble wrap",
+   "Lotus seed pod"
+  ],
+  "hints": [
+   "It belongs to a tiny insect that loves overripe bananas.",
+   "Each round bump is a separate lens."
+  ],
+  "why": "An electron-microscope image of a fruit fly's compound eye, with bristles between the lenses.",
+  "pearl": "Each fruit fly eye has around 800 lenses. Fruit flies are science superstars: research on them has helped win several Nobel Prizes."
+ },
+ {
+  "date": "2026-12-11",
+  "number": 34,
+  "difficulty": "Hard",
+  "title": "Cold case",
+  "context": "A tiny six-sided column capped at both ends, frozen in time.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Snowflake_300um_LTSEM,_13368.jpg",
+   "file": "Snowflake 300um LTSEM, 13368.jpg",
+   "author": "USDA Beltsville Agricultural Research Center",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-11.jpg",
+   "alt": "A six-sided crystal column with plates at each end, in grey."
+  },
+  "answer": "Snowflake",
+  "wrong": [
+   "Salt crystal",
+   "Sugar crystal",
+   "Quartz",
+   "Pollen grain",
+   "Diamond"
+  ],
+  "hints": [
+   "It fell from the sky.",
+   "It would melt on your tongue."
+  ],
+  "why": "A low-temperature electron-microscope image of a snow crystal shaped like a capped column, with frost on both ends.",
+  "pearl": "In 1885, Wilson Bentley, a farmer in Vermont, USA, took the first known photo of a single snowflake. He went on to photograph more than 5,000."
+ },
+ {
+  "date": "2026-12-12",
+  "number": 35,
+  "difficulty": "Hard",
+  "title": "Barcode",
+  "context": "Bold black and white stripes curving across short hair.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:100_Plains_zebra_hair_patterns_close-up_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+   "file": "100 Plains zebra hair patterns close-up in Etosha National Park Photo by Giles Laurent.jpg",
+   "author": "Giles Laurent",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-12.jpg",
+   "alt": "Curving black and white stripes on short hair."
+  },
+  "answer": "Zebra",
+  "wrong": [
+   "Tiger",
+   "Okapi",
+   "Tabby cat",
+   "Zebra finch",
+   "Lemur"
+  ],
+  "hints": [
+   "It lives on the African savanna.",
+   "It's a relative of the horse."
+  ],
+  "why": "A close-up of a plains zebra's coat in Etosha National Park, Namibia.",
+  "pearl": "Every zebra has its own stripe pattern, like a fingerprint. Under the fur, its skin is dark."
+ },
+ {
+  "date": "2026-12-13",
+  "number": 36,
+  "difficulty": "Genius",
+  "title": "Powder room",
+  "context": "Long grey pods packed together, with a few tiny balls resting on top.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Penta_anther.jpg",
+   "file": "Penta anther.jpg",
+   "author": "Louisa Howard and Charles Daghlian, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-13.jpg",
+   "alt": "Long, pod-like grey structures packed together with small round grains on them."
+  },
+  "answer": "Flower anther",
+  "wrong": [
+   "Leaf bud",
+   "Pine needles",
+   "Seed pod",
+   "Moth cocoon",
+   "Bean sprout"
+  ],
+  "hints": [
+   "It's part of a flower.",
+   "Those tiny balls are what makes hay fever sufferers sneeze."
+  ],
+  "why": "An electron-microscope image of the anthers of a pentas flower, with a few pollen grains on them.",
+  "pearl": "Anthers are the parts of a flower that make pollen. This one is from pentas, a star-shaped flower that butterflies love."
+ },
+ {
+  "date": "2026-12-14",
+  "number": 37,
+  "difficulty": "Easy",
+  "title": "Show-off",
+  "context": "A shimmering blue-green eye with a golden ring. Built to impress.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Peacock_feather_close-up.jpg",
+   "file": "Peacock feather close-up.jpg",
+   "author": "Mister rf",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-14.jpg",
+   "alt": "An iridescent blue and green eye shape ringed with gold and green."
+  },
+  "answer": "Peacock feather",
+  "wrong": [
+   "Butterfly wing",
+   "Fish scale",
+   "Soap bubble",
+   "Opal",
+   "Beetle shell"
+  ],
+  "hints": [
+   "It comes from a bird.",
+   "The male fans hundreds of them out to impress."
+  ],
+  "why": "The 'eye' of a peacock's tail feather.",
+  "pearl": "A peacock feather's blues and greens aren't from pigment. Tiny structures in the feather bend light, which is why the colours shimmer as you move."
+ },
+ {
+  "date": "2026-12-15",
+  "number": 38,
+  "difficulty": "Easy",
+  "title": "Reach for the stars",
+  "context": "Hundreds of tiny suction feet lined up along the underside of an arm.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Starfish_(1).jpg",
+   "file": "Starfish (1).jpg",
+   "author": "Mokele",
+   "licence": "CC BY 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by/3.0",
+   "url": "img/normie/2026-12-15.jpg",
+   "alt": "An orange spiky arm with rows of small cream suction feet underneath."
+  },
+  "answer": "Starfish",
+  "wrong": [
+   "Octopus",
+   "Squid",
+   "Caterpillar",
+   "Sea cucumber",
+   "Centipede"
+  ],
+  "hints": [
+   "It lives in the sea.",
+   "It usually has five arms."
+  ],
+  "why": "The underside of a starfish arm, showing its rows of tube feet.",
+  "pearl": "Starfish have no blood. They pump sea water through their bodies to move their hundreds of little tube feet."
+ },
+ {
+  "date": "2026-12-16",
+  "number": 39,
+  "difficulty": "Medium",
+  "title": "Jumping to conclusions",
+  "context": "A big boxy head, giant eye and strong chewing jaws.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Head_of_Orthoptera_SEM.jpg",
+   "file": "Head of Orthoptera SEM.jpg",
+   "author": "Louisa Howard, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-16.jpg",
+   "alt": "A smooth boxy insect head with a large eye and antennae, in grey."
+  },
+  "answer": "Grasshopper",
+  "wrong": [
+   "Cockroach",
+   "Beetle",
+   "Ant",
+   "Praying mantis",
+   "Termite"
+  ],
+  "hints": [
+   "It chirps by rubbing its legs on its wings.",
+   "It's a champion jumper in the garden."
+  ],
+  "why": "An electron-microscope image of a grasshopper's head and mouthparts.",
+  "pearl": "A grasshopper's 'ears' aren't on its head. They're on the sides of its body, near the base of its back legs."
+ },
+ {
+  "date": "2026-12-17",
+  "number": 40,
+  "difficulty": "Medium",
+  "title": "Roommate",
+  "context": "A tiny eight-legged lodger. It lives in your bed and you've never seen it.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_11085_A_scanning_electron_micrograph_of_a_female_dust_mite.jpg",
+   "file": "CSIRO ScienceImage 11085 A scanning electron micrograph of a female dust mite.jpg",
+   "author": "Matt Colloff, CSIRO",
+   "licence": "CC BY 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by/3.0",
+   "url": "img/normie/2026-12-17.jpg",
+   "alt": "A pale, rounded eight-legged creature with long bristles."
+  },
+  "answer": "Dust mite",
+  "wrong": [
+   "Tick",
+   "Flea",
+   "Spider",
+   "Aphid",
+   "Head louse"
+  ],
+  "hints": [
+   "It eats the tiny flakes of skin we shed.",
+   "It's smaller than a full stop."
+  ],
+  "why": "An electron-microscope image of a house dust mite.",
+  "pearl": "House dust mites are only about a quarter of a millimetre long. They're relatives of spiders, not insects."
+ },
+ {
+  "date": "2026-12-18",
+  "number": 41,
+  "difficulty": "Hard",
+  "title": "Snappy dresser",
+  "context": "Thick, bumpy armour plates in rows. Its owner lurks in rivers.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Croc_(50932906).jpeg",
+   "file": "Croc (50932906).jpeg",
+   "author": "Anoop Mukundan",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-12-18.jpg",
+   "alt": "Rows of thick, rough, mottled scales."
+  },
+  "answer": "Crocodile skin",
+  "wrong": [
+   "Pineapple skin",
+   "Snake skin",
+   "Tree bark",
+   "Tortoise shell",
+   "Pine cone"
+  ],
+  "hints": [
+   "Its owner is a reptile.",
+   "It has a very toothy grin."
+  ],
+  "why": "A close-up of a crocodile's scaly back.",
+  "pearl": "Many of a crocodile's scales have bony plates inside them. The little bumps on its jaws are super-sensitive and can feel tiny ripples in the water."
+ },
+ {
+  "date": "2026-12-19",
+  "number": 42,
+  "difficulty": "Hard",
+  "title": "Big eyes",
+  "context": "Two huge shiny black eyes and a fuzzy face. It's sizing you up.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Jumping_spider_7,_face,_upper_marlboro,_md_2013-10-18-11.52.59_ZS_PMax_(10401866044).jpg",
+   "file": "Jumping spider 7, face, upper marlboro, md 2013-10-18-11.52.59 ZS PMax (10401866044).jpg",
+   "author": "USGS Bee Inventory and Monitoring Lab",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-12-19.jpg",
+   "alt": "A fuzzy spider face with two large shiny black eyes."
+  },
+  "answer": "Jumping spider",
+  "wrong": [
+   "Tarantula",
+   "Bee",
+   "Fly",
+   "Owl chick",
+   "Moth"
+  ],
+  "hints": [
+   "It has eight legs.",
+   "It pounces instead of building a web to catch food."
+  ],
+  "why": "The face of a jumping spider, photographed by the US Geological Survey.",
+  "pearl": "Jumping spiders have eight eyes. The big front pair give them some of the sharpest eyesight of any spider, which they use to judge their leaps."
+ },
+ {
+  "date": "2026-12-20",
+  "number": 43,
+  "difficulty": "Genius",
+  "title": "Indestructible",
+  "context": "A chubby little body with stubby legs. It lives in moss and soil and could survive almost anything.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Tardigrade_(unknown_species).jpg",
+   "file": "Tardigrade (unknown species).jpg",
+   "author": "Vader1941",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/normie/2026-12-20.jpg",
+   "alt": "A faint, plump, segmented creature with stubby legs."
+  },
+  "answer": "Tardigrade (water bear)",
+  "wrong": [
+   "Dust mite",
+   "Caterpillar",
+   "Woodlouse",
+   "Earthworm",
+   "Aphid"
+  ],
+  "hints": [
+   "It's smaller than a millimetre.",
+   "Its nickname is a large furry animal."
+  ],
+  "why": "An electron-microscope image of a tardigrade, also called a water bear or moss piglet.",
+  "pearl": "In 2007, tardigrades were carried into orbit on a space capsule and exposed to open space. Some survived and later had babies."
+ },
+ {
+  "date": "2026-12-21",
+  "number": 44,
+  "difficulty": "Easy",
+  "title": "Six of the best",
+  "context": "Rows of neat six-sided rooms built from wax.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Perfect_honeycomb_-_Taiwan.jpg",
+   "file": "Perfect honeycomb - Taiwan.jpg",
+   "author": "Jidanni",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-12-21.jpg",
+   "alt": "Rows of six-sided wax cells, some golden, some dark."
+  },
+  "answer": "Honeycomb",
+  "wrong": [
+   "Bubble wrap",
+   "Wasp nest",
+   "Chicken wire",
+   "Lotus seed pod",
+   "Egg carton"
+  ],
+  "hints": [
+   "Busy insects built it.",
+   "Something sweet is stored inside."
+  ],
+  "why": "Honeycomb made by bees, with its six-sided wax cells.",
+  "pearl": "Hexagons fit together with no gaps and use the least wall for the space inside. In 1999, mathematician Thomas Hales proved the honeycomb shape is the most efficient way to divide a flat surface into equal areas."
+ },
+ {
+  "date": "2026-12-22",
+  "number": 45,
+  "difficulty": "Easy",
+  "title": "Fractal snack",
+  "context": "Green spirals made of smaller spirals, made of even smaller spirals.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_texture.jpg",
+   "file": "Romanesco broccoli texture.jpg",
+   "author": "Ivar Leidus",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-22.jpg",
+   "alt": "Lime-green pointed florets arranged in repeating spirals."
+  },
+  "answer": "Romanesco",
+  "wrong": [
+   "Cauliflower",
+   "Broccoli",
+   "Brussels sprouts",
+   "Artichoke",
+   "Cabbage"
+  ],
+  "hints": [
+   "It's a vegetable.",
+   "It's a relative of broccoli and cauliflower."
+  ],
+  "why": "A close-up of romanesco, with its spiral of pointed florets.",
+  "pearl": "Each bud on a romanesco is a mini version of the whole head, and the spirals usually come in Fibonacci numbers."
+ },
+ {
+  "date": "2026-12-23",
+  "number": 46,
+  "difficulty": "Medium",
+  "title": "Cut in half",
+  "context": "Green rays and tiny black seeds around a pale centre.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Macro_image_of_cross-section_of_a_kiwifruit.png",
+   "file": "Macro image of cross-section of a kiwifruit.png",
+   "author": "Keledjian Alexandre",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "url": "img/normie/2026-12-23.jpg",
+   "alt": "A green slice with a pale centre ringed by tiny black seeds."
+  },
+  "answer": "Kiwifruit",
+  "wrong": [
+   "Lime",
+   "Cucumber",
+   "Passionfruit",
+   "Green tomato",
+   "Dragon fruit"
+  ],
+  "hints": [
+   "It's a fruit with fuzzy brown skin.",
+   "It shares its name with a flightless bird."
+  ],
+  "why": "A cross-section of a kiwifruit, with its ring of tiny black seeds.",
+  "pearl": "Kiwifruit used to be called Chinese gooseberry. New Zealand growers renamed it after their national bird in 1959."
+ },
+ {
+  "date": "2026-12-24",
+  "number": 47,
+  "difficulty": "Medium",
+  "title": "Christmas decoration",
+  "context": "Woody scales overlapping in neat spirals. Found under a tree.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Close_up_of_pine_cone_from_california_beach_2.JPG",
+   "file": "Close up of pine cone from california beach 2.JPG",
+   "author": "Mbz1",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-24.jpg",
+   "alt": "Weathered grey-brown woody scales overlapping in spirals."
+  },
+  "answer": "Pine cone",
+  "wrong": [
+   "Pineapple",
+   "Artichoke",
+   "Crocodile skin",
+   "Lizard skin",
+   "Hop flower"
+  ],
+  "hints": [
+   "It grows on an evergreen tree.",
+   "It holds seeds between its scales."
+  ],
+  "why": "A close-up of a weathered pine cone from a Californian beach.",
+  "pearl": "Pine cones open their scales in dry weather to let seeds fall, and close up again when it's wet."
+ },
+ {
+  "date": "2026-12-25",
+  "number": 48,
+  "difficulty": "Hard",
+  "title": "Sweet as",
+  "context": "Clear little boxes with slanted ends, seen through a microscope.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Sugar_crystals_under_a_microscope_1.jpg",
+   "file": "Sugar crystals under a microscope 1.jpg",
+   "author": "Gustamons",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-12-25.jpg",
+   "alt": "Clear boxy crystals inside a round microscope view."
+  },
+  "answer": "Sugar crystals",
+  "wrong": [
+   "Salt crystals",
+   "Ice cubes",
+   "Glass beads",
+   "Diamonds",
+   "Quartz"
+  ],
+  "hints": [
+   "You might stir it into tea.",
+   "It tastes sweet."
+  ],
+  "why": "Table sugar crystals under a microscope.",
+  "pearl": "Sugar crystals are long, boxy shapes with slanted ends, unlike salt's neat cubes. Rock candy is the same stuff grown slowly into big crystals."
+ },
+ {
+  "date": "2026-12-26",
+  "number": 49,
+  "difficulty": "Hard",
+  "title": "Pass the...",
+  "context": "A sprinkle of tiny white cubes on a dark surface.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Salt_Crystals_macro.jpg",
+   "file": "Salt Crystals macro.jpg",
+   "author": "Prosthetic Head",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-12-26.jpg",
+   "alt": "Small white cube-shaped grains scattered on a dark surface."
+  },
+  "answer": "Salt crystals",
+  "wrong": [
+   "Sugar crystals",
+   "Sand",
+   "Snow",
+   "Rice",
+   "Sesame seeds"
+  ],
+  "hints": [
+   "It's on most dinner tables.",
+   "The sea is full of it."
+  ],
+  "why": "Grains of table salt magnified.",
+  "pearl": "Salt crystals are tiny cubes because sodium and chloride stack together in a cube-shaped pattern."
+ },
+ {
+  "date": "2026-12-27",
+  "number": 50,
+  "difficulty": "Genius",
+  "title": "Upside down",
+  "context": "A feathery pad covered in tiny hairs, with specks of dust stuck all over it.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Musca_pulvilli_micrograph.jpg",
+   "file": "Musca pulvilli micrograph.jpg",
+   "author": "Arlo James Barnes",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-12-27.jpg",
+   "alt": "A grey pad covered in fine hairs with specks of dust on it."
+  },
+  "answer": "Fly's foot",
+  "wrong": [
+   "Bird feather",
+   "Moth antenna",
+   "Fern leaf",
+   "Gecko toe",
+   "Paintbrush"
+  ],
+  "hints": [
+   "It belongs to a common insect.",
+   "It lets its owner walk across the ceiling."
+  ],
+  "why": "An electron-microscope image of the sticky foot pad of a house fly, covered in fine hairs.",
+  "pearl": "Flies have hairy, sticky pads on their feet that let them walk upside down. They also taste with their feet."
+ },
+ {
+  "date": "2026-12-28",
+  "number": 51,
+  "difficulty": "Easy",
+  "title": "Wall-crawler",
+  "context": "Five ridged toe pads stuck flat against a window. Real-life superpower.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Gecko_foot_on_glass.JPG",
+   "file": "Gecko foot on glass.JPG",
+   "author": "Bjørn Christian Tørrissen",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-12-28.jpg",
+   "alt": "A lizard's foot with five wide, ridged toe pads pressed on glass."
+  },
+  "answer": "Gecko's foot",
+  "wrong": [
+   "Frog's foot",
+   "Duck's foot",
+   "Chameleon's foot",
+   "Tree frog's foot",
+   "Mouse's paw"
+  ],
+  "hints": [
+   "Its owner is a small lizard.",
+   "It can walk up glass and across ceilings."
+  ],
+  "why": "The underside of a gecko's foot pressed against glass.",
+  "pearl": "Gecko toes are covered in millions of microscopic hairs that grip using weak forces between molecules. A gecko can hang from a ceiling by one toe."
+ },
+ {
+  "date": "2026-12-29",
+  "number": 52,
+  "difficulty": "Easy",
+  "title": "Spot the difference",
+  "context": "A shiny red dome with black dots, climbing through green stems.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Ladybird_at_Wisley_Gardens.jpg",
+   "file": "Ladybird at Wisley Gardens.jpg",
+   "author": "Richard Fisher",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-12-29.jpg",
+   "alt": "A shiny red beetle with black spots among green stems."
+  },
+  "answer": "Ladybird",
+  "wrong": [
+   "Strawberry",
+   "Cherry",
+   "Rose hip",
+   "Red berry",
+   "Red ant"
+  ],
+  "hints": [
+   "It's a beetle.",
+   "Gardeners love it because it eats aphids."
+  ],
+  "why": "A seven-spot ladybird climbing a plant stem.",
+  "pearl": "When threatened, ladybirds ooze a bitter yellow liquid from their knees. It's called reflex bleeding."
+ },
+ {
+  "date": "2026-12-30",
+  "number": 53,
+  "difficulty": "Medium",
+  "title": "Hole in one",
+  "context": "A white sphere covered in shallow round dents.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Golf-ball_up_close.jpg",
+   "file": "Golf-ball up close.jpg",
+   "author": "TBIT",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-12-30.jpg",
+   "alt": "A white sphere covered in shallow round dimples."
+  },
+  "answer": "Golf ball",
+  "wrong": [
+   "Ping-pong ball",
+   "Thimble",
+   "Lotus seed pod",
+   "Honeycomb",
+   "Moon surface"
+  ],
+  "hints": [
+   "It's hit with a club.",
+   "Those dents help it fly further."
+  ],
+  "why": "A close-up of a golf ball's dimples.",
+  "pearl": "A golf ball's dimples help it fly roughly twice as far as a smooth ball. Most golf balls have between 300 and 500 dimples."
+ },
+ {
+  "date": "2026-12-31",
+  "number": 54,
+  "difficulty": "Medium",
+  "title": "Busy worker",
+  "context": "A fuzzy striped insect at work on its waxy six-sided home.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Apis_mellifera_(by)_(1).jpg",
+   "file": "ComputerHotline - Apis mellifera (by) (1).jpg",
+   "author": "Thomas Bresson",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-12-31.jpg",
+   "alt": "A striped, fuzzy bee standing on wax honeycomb."
+  },
+  "answer": "Honey bee",
+  "wrong": [
+   "Wasp",
+   "Hoverfly",
+   "Hornet",
+   "Bumblebee",
+   "Horsefly"
+  ],
+  "hints": [
+   "It lives in a hive with a queen.",
+   "It makes something you spread on toast."
+  ],
+  "why": "A honey bee working on honeycomb.",
+  "pearl": "A single honey bee makes only about a twelfth of a teaspoon of honey in its whole life."
+ }
+]

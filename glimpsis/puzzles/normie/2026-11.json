@@ -1,0 +1,738 @@
+[
+ {
+  "date": "2026-11-08",
+  "number": 1,
+  "difficulty": "Genius",
+  "title": "Glass house",
+  "context": "Something tiny built a see-through home with hundreds of neat little windows.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Coscinodiscus_oculus-iridis_(Ehrenberg)_Ehrenberg_1840_diatom_shell._Colored_SEM_image.jpg",
+   "file": "Coscinodiscus oculus-iridis (Ehrenberg) Ehrenberg 1840 diatom shell. Colored SEM image.jpg",
+   "author": "Pavel.Somov",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-11-08.jpg",
+   "alt": "A round green disc covered in rows of tiny holes, like a perforated plate."
+  },
+  "answer": "Diatom",
+  "wrong": [
+   "Lotus seed pod",
+   "Sea urchin shell",
+   "Pollen grain",
+   "Golf ball",
+   "Shower head"
+  ],
+  "hints": [
+   "It lives in water and makes its food from sunlight.",
+   "Its shell is made of glass (silica)."
+  ],
+  "why": "A coloured electron-microscope image of the shell of a diatom, a single-celled alga far smaller than a grain of sand.",
+  "pearl": "Diatoms build their shells out of glass. These tiny algae make roughly a fifth of the oxygen produced on Earth."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 2,
+  "difficulty": "Easy",
+  "title": "Red alert",
+  "context": "A shiny red surface dotted with little yellow specks. Found in a punnet near you.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Strawberry_surface_close_up_macro.jpg",
+   "file": "Strawberry surface close up macro.jpg",
+   "author": "rich caulton",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/normie/2026-11-09.jpg",
+   "alt": "Glossy red skin dotted with small yellow seed-like specks."
+  },
+  "answer": "Strawberry",
+  "wrong": [
+   "Chilli pepper",
+   "Ladybird",
+   "Raspberry",
+   "Tomato",
+   "Red capsicum"
+  ],
+  "hints": [
+   "It's a fruit that wears its seeds on the outside.",
+   "Often dipped in chocolate or served with cream."
+  ],
+  "why": "A close-up of a strawberry's skin, with the little yellow 'seeds' sitting in dimples.",
+  "pearl": "The 'seeds' on a strawberry are actually tiny fruits called achenes, each holding a seed. An average strawberry has about 200 of them."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 3,
+  "difficulty": "Easy",
+  "title": "I see you",
+  "context": "A huge dome made of thousands of tiny tiles. It's watching you right now.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Compound_eye_of_a_Dragonfly..jpg",
+   "file": "Compound eye of a Dragonfly..jpg",
+   "author": "Solomon Christopher",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-10.jpg",
+   "alt": "A curved brown dome covered in a fine grid of tiny facets."
+  },
+  "answer": "Dragonfly's eye",
+  "wrong": [
+   "Golf ball",
+   "Honeycomb",
+   "Disco ball",
+   "Blackberry",
+   "Mesh speaker cover"
+  ],
+  "hints": [
+   "It belongs to an insect that hunts on the wing.",
+   "Each tiny tile is a separate lens."
+  ],
+  "why": "A close-up of a dragonfly's compound eye. Each tiny facet is a separate lens.",
+  "pearl": "A dragonfly's compound eyes have up to about 30,000 lenses each, giving it almost all-round vision for catching prey in mid-air."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 4,
+  "difficulty": "Medium",
+  "title": "Chilly spikes",
+  "context": "Feathery white blades grew here overnight without a single drop of rain.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Hoar_frost_ice_crystals_in_Tuntorp_13.jpg",
+   "file": "Hoar frost ice crystals in Tuntorp 13.jpg",
+   "author": "W.carter",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-11-11.jpg",
+   "alt": "Spiky, feathery white ice crystals against a dark background."
+  },
+  "answer": "Frost",
+  "wrong": [
+   "Salt crystals",
+   "Sugar",
+   "Shattered glass",
+   "Quartz crystals",
+   "Dandelion fluff"
+  ],
+  "hints": [
+   "You'd find it on a cold, clear morning.",
+   "It melts in your hand."
+  ],
+  "why": "Hoar frost: ice crystals that grew on a cold surface overnight.",
+  "pearl": "Hoar frost forms when water vapour in the air turns straight into ice, skipping the liquid stage. 'Hoar' is an old word for grey-white."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 5,
+  "difficulty": "Medium",
+  "title": "Heavy lifter",
+  "context": "Elbowed feelers, a shiny armoured head and a very busy schedule.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Ant_SEM.jpg",
+   "file": "Ant SEM.jpg",
+   "author": "United States Geological Survey",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-12.jpg",
+   "alt": "A grey, finely grooved insect head with a bent antenna and a compound eye."
+  },
+  "answer": "Ant",
+  "wrong": [
+   "Termite",
+   "Wasp",
+   "Beetle",
+   "Bee",
+   "Earwig"
+  ],
+  "hints": [
+   "It lives in a colony with a queen.",
+   "It might march in a line across your kitchen bench."
+  ],
+  "why": "An electron-microscope image of an ant's head, showing its bent antennae and grooved armour.",
+  "pearl": "Ants have no lungs. Air seeps into their bodies through tiny holes along their sides called spiracles."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 6,
+  "difficulty": "Hard",
+  "title": "Nosy parker",
+  "context": "A tiny armoured critter with a very long snout. It may have moved into your flour.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Remf_dartmouth_edu_curculionidae.jpg",
+   "file": "Remf dartmouth edu curculionidae.jpg",
+   "author": "Louisa Howard, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-13.jpg",
+   "alt": "A small oval beetle with a long downward-curving snout, in grey electron-microscope detail."
+  },
+  "answer": "Weevil",
+  "wrong": [
+   "Ladybird",
+   "Tick",
+   "Flea",
+   "Shield bug",
+   "Woodlouse"
+  ],
+  "hints": [
+   "It's a beetle.",
+   "Its long snout has jaws at the tip."
+  ],
+  "why": "An electron-microscope image of a snout beetle, better known as a weevil.",
+  "pearl": "True weevils are one of the biggest animal families on Earth, with more than 80,000 known species."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 7,
+  "difficulty": "Hard",
+  "title": "Sticky situation",
+  "context": "A tangle of feathery hairs with little balls caught all through it.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Polen_en_pelos_de_abeja_SEM.jpg",
+   "file": "Polen en pelos de abeja SEM.jpg",
+   "author": "Brandon Antonio Segura Torres & Priscilla Vieto Bonilla",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-11-14.jpg",
+   "alt": "Feathery branched hairs with small round grains stuck among them."
+  },
+  "answer": "Bee's hairs covered in pollen",
+  "wrong": [
+   "Cat fur with dandruff",
+   "Cotton wool",
+   "Dandelion seeds",
+   "Wool with burrs",
+   "Spider web with dew"
+  ],
+  "hints": [
+   "Those little balls came from flowers.",
+   "This hairy insect makes something sweet."
+  ],
+  "why": "An electron-microscope image of a bee's branched hairs, dotted with pollen grains.",
+  "pearl": "Flying bees build up a small electric charge, so pollen can jump onto their hairs before they even touch the flower."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 8,
+  "difficulty": "Genius",
+  "title": "Tiny umbrellas",
+  "context": "A grey landscape packed with flat, overlapping discs. It's from a plant you might eat.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Olive_leaf_lower_surface_469x_-_SEM_MUSE.tif",
+   "file": "Olive leaf lower surface 469x - SEM MUSE.tif",
+   "author": "Nicola Angeli, MUSE (Museo delle Scienze, Trento)",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-15.jpg",
+   "alt": "A grey surface covered with flat, round, overlapping scales."
+  },
+  "answer": "Olive leaf",
+  "wrong": [
+   "Fish skin",
+   "Pine needle",
+   "Lettuce leaf",
+   "Moth wing",
+   "Snake skin"
+  ],
+  "hints": [
+   "Turn the leaf over: this is its silvery underside.",
+   "The tree it grows on gives us a famous oil."
+  ],
+  "why": "An electron-microscope image of the underside of an olive leaf, covered in flat, umbrella-like scales.",
+  "pearl": "The underside of an olive leaf is covered in tiny umbrella-shaped scales. They give it a silvery shine and help the tree save water in hot, dry summers."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 9,
+  "difficulty": "Easy",
+  "title": "Don't step on it",
+  "context": "Striped spikes radiating out from a dark centre on the sea floor.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:PMNM_-_Banded_Urchin_-_NOAA_(26967823060).jpg",
+   "file": "PMNM - Banded Urchin - NOAA (26967823060).jpg",
+   "author": "NOAA/National Marine Sanctuaries",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-16.jpg",
+   "alt": "Long striped spines fanning out from a dark centre."
+  },
+  "answer": "Sea urchin",
+  "wrong": [
+   "Porcupine",
+   "Hedgehog",
+   "Pincushion",
+   "Cactus",
+   "Echidna"
+  ],
+  "hints": [
+   "It lives in the sea.",
+   "Its roe is a delicacy in Japan and around the Mediterranean."
+  ],
+  "why": "A banded sea urchin photographed in Hawaii's Papahānaumokuākea Marine National Monument.",
+  "pearl": "A sea urchin's mouth is on its underside and has five teeth. It's nicknamed Aristotle's lantern because the Greek philosopher compared it to a lantern."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 10,
+  "difficulty": "Easy",
+  "title": "Tough skin",
+  "context": "A diamond pattern of spiky little bumps, tropical and sweet underneath.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Pineapple_close-up_(81928).jpg",
+   "file": "Pineapple close-up (81928).jpg",
+   "author": "Rhododendrites",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-11-17.jpg",
+   "alt": "Green and yellow diamond-shaped segments, each with a small spike."
+  },
+  "answer": "Pineapple",
+  "wrong": [
+   "Pine cone",
+   "Crocodile skin",
+   "Artichoke",
+   "Jackfruit",
+   "Durian"
+  ],
+  "hints": [
+   "It's a fruit with a spiky crown on top.",
+   "Some people put it on pizza. Others are horrified."
+  ],
+  "why": "A close-up of a pineapple's skin.",
+  "pearl": "A pineapple isn't one fruit. It's lots of small fruits, one from each flower, fused together. Each diamond on the skin was once a flower."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 11,
+  "difficulty": "Medium",
+  "title": "Past its best",
+  "context": "White and grey fuzz spreading across a dimpled orange surface.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Penicillium_mould_on_Orange_(51821975804).jpg",
+   "file": "Penicillium mould on Orange (51821975804).jpg",
+   "author": "gailhampshire",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "url": "img/normie/2026-11-18.jpg",
+   "alt": "Orange dimpled skin with white and grey fuzzy patches."
+  },
+  "answer": "Mouldy orange",
+  "wrong": [
+   "Mouldy bread",
+   "Lichen on a rock",
+   "Mouldy cheese",
+   "Snow on a leaf",
+   "Rotting apple"
+  ],
+  "hints": [
+   "The dimpled surface is the skin of a citrus fruit.",
+   "The fuzz is a fungus."
+  ],
+  "why": "Penicillium mould growing on the skin of an orange.",
+  "pearl": "This mould is a Penicillium. A cousin, Penicillium roqueforti, gives blue cheese its blue-green veins."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 12,
+  "difficulty": "Medium",
+  "title": "Hitchhiker",
+  "context": "A spiky green ball with tiny hooked tips. It wants to come home with you.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Bur_Macro_BlackBg.jpg",
+   "file": "Bur Macro BlackBg.jpg",
+   "author": "Zephyris",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-19.jpg",
+   "alt": "A round green seed head bristling with long red-tipped hooked spikes."
+  },
+  "answer": "Burr",
+  "wrong": [
+   "Sea urchin",
+   "Thistle",
+   "Cactus flower",
+   "Chestnut case",
+   "Dandelion clock"
+  ],
+  "hints": [
+   "It's a seed head.",
+   "It clings to socks and dog fur."
+  ],
+  "why": "A burr: a seed head covered in tiny hooks.",
+  "pearl": "Burrs hook onto passing animals so their seeds get carried far away. A plant can't walk, so it hitches a ride."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 13,
+  "difficulty": "Hard",
+  "title": "Jumping jack",
+  "context": "A flat little body built for slipping through fur, with seriously strong back legs.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Flea_Scanning_Electron_Micrograph_False_Color.jpg",
+   "file": "Flea Scanning Electron Micrograph False Color.jpg",
+   "author": "CDC/Janice Haney Carr",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-20.jpg",
+   "alt": "A pink, flattened insect with long spiny back legs."
+  },
+  "answer": "Flea",
+  "wrong": [
+   "Tick",
+   "Ant",
+   "Grasshopper",
+   "Dust mite",
+   "Cricket"
+  ],
+  "hints": [
+   "Your cat or dog may have met one.",
+   "It's a world-class high jumper."
+  ],
+  "why": "A coloured electron-microscope image of a flea.",
+  "pearl": "A flea can leap around 100 times its own body length, powered by a springy pad of protein called resilin."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 14,
+  "difficulty": "Hard",
+  "title": "Big buzz",
+  "context": "An orange face with huge jaws and two long feelers. It's not here for the honey.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Murder_hornet_2,_face_2020-10-01-18.55.04_ZS_PMax_UDR_(50409447306).jpg",
+   "file": "Murder hornet 2, face 2020-10-01-18.55.04 ZS PMax UDR (50409447306).jpg",
+   "author": "USGS Bee Inventory and Monitoring Lab",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-21.jpg",
+   "alt": "An orange insect face with dark eyes, long antennae and big jaws."
+  },
+  "answer": "Hornet",
+  "wrong": [
+   "Honey bee",
+   "Bumblebee",
+   "Hoverfly",
+   "Horsefly",
+   "Paper wasp"
+  ],
+  "hints": [
+   "It's the world's biggest of its kind.",
+   "It's a type of wasp."
+  ],
+  "why": "The face of a northern giant hornet, photographed by the US Geological Survey.",
+  "pearl": "The northern giant hornet is the world's largest hornet. Queens can grow to about 5 centimetres long."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 15,
+  "difficulty": "Genius",
+  "title": "Hairy landscape",
+  "context": "Bumpy ground covered with odd little knobbly stalks.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Leaf_epidermis.jpg",
+   "file": "Leaf epidermis.jpg",
+   "author": "Louisa Howard, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-22.jpg",
+   "alt": "A bumpy grey surface with scattered knobbly hair-like stalks."
+  },
+  "answer": "Leaf surface",
+  "wrong": [
+   "Cat's tongue",
+   "Moss",
+   "Sandpaper",
+   "Velcro",
+   "Coral"
+  ],
+  "hints": [
+   "It came from a plant.",
+   "It's green in real life and catches sunlight."
+  ],
+  "why": "An electron-microscope image of the top of a flowering tobacco leaf, covered in tiny hairs.",
+  "pearl": "Many leaves are covered in tiny hairs called trichomes. Some are sticky and trap insects; others release a smell when brushed."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 16,
+  "difficulty": "Easy",
+  "title": "Sunny spirals",
+  "context": "Golden petals around a centre packed with tiny florets in swirling spirals.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Close-up_sunflower_head,_New_Mexico,_U.S.jpg",
+   "file": "Close-up sunflower head, New Mexico, U.S.jpg",
+   "author": "NathanScientific",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-11-23.jpg",
+   "alt": "A yellow flower head with a centre of tiny florets in spiral rows."
+  },
+  "answer": "Sunflower",
+  "wrong": [
+   "Daisy",
+   "Marigold",
+   "Dandelion",
+   "Daffodil",
+   "Chrysanthemum"
+  ],
+  "hints": [
+   "It's a big flower.",
+   "Its seeds are a popular snack."
+  ],
+  "why": "The head of a sunflower, with hundreds of tiny florets in the middle.",
+  "pearl": "A sunflower's seeds sit in two sets of spirals, and the numbers of spirals are usually Fibonacci numbers, such as 34 and 55."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 17,
+  "difficulty": "Easy",
+  "title": "Hook, line and... ",
+  "context": "Rows of tiny plastic hooks waiting for something to grab.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Velcro_hooks.jpg",
+   "file": "Velcro hooks.jpg",
+   "author": "Olivepixel (Flickr)",
+   "licence": "CC BY-SA 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "url": "img/normie/2026-11-24.jpg",
+   "alt": "Rows of small curved plastic hooks."
+  },
+  "answer": "Velcro",
+  "wrong": [
+   "Hairbrush",
+   "Toothbrush",
+   "Artificial grass",
+   "Doormat",
+   "Carpet"
+  ],
+  "hints": [
+   "Its other half is covered in little loops.",
+   "It makes a ripping noise when you pull it apart."
+  ],
+  "why": "A close-up of the hook side of a Velcro (hook-and-loop) fastener.",
+  "pearl": "Swiss engineer George de Mestral invented Velcro after burrs stuck to his dog on a walk. The name blends the French words velours (velvet) and crochet (hook)."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 18,
+  "difficulty": "Medium",
+  "title": "Achoo",
+  "context": "A pile of colourful spiky balls and beans. Spring is in the air. Literally.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Misc_pollen_colorized.jpg",
+   "file": "Misc pollen colorized.jpg",
+   "author": "Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-25.jpg",
+   "alt": "Many colourful grains: spiky yellow balls, green spheres and beans."
+  },
+  "answer": "Pollen",
+  "wrong": [
+   "Sprinkles",
+   "Fish eggs",
+   "Coral",
+   "Sand grains",
+   "Seeds"
+  ],
+  "hints": [
+   "It comes from flowers.",
+   "Bees carry it from plant to plant."
+  ],
+  "why": "A coloured electron-microscope image of pollen from sunflower, morning glory, hollyhock, lily, primrose and castor bean.",
+  "pearl": "Pollen has a super-tough outer coat, so it can survive in mud and rock for millions of years. Scientists use fossil pollen to work out what ancient landscapes looked like."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 19,
+  "difficulty": "Medium",
+  "title": "All eyes",
+  "context": "Two giant red domes nearly meet in the middle of this face.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Big_eyed_fly_2020-08-28-10.45.55_ZS_PMax_UDR_(50287567652).jpg",
+   "file": "Big eyed fly 2020-08-28-10.45.55 ZS PMax UDR (50287567652).jpg",
+   "author": "USGS Bee Inventory and Monitoring Lab",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-26.jpg",
+   "alt": "An insect face with two huge dark red eyes and a yellow middle."
+  },
+  "answer": "Fly",
+  "wrong": [
+   "Bee",
+   "Wasp",
+   "Ant",
+   "Dragonfly",
+   "Moth"
+  ],
+  "hints": [
+   "It has just two wings.",
+   "It's notoriously hard to swat."
+  ],
+  "why": "A close-up of a fly's face, photographed by the US Geological Survey. Most of its head is eye.",
+  "pearl": "A fly's compound eyes are made of thousands of tiny lenses. They're brilliant at spotting movement, which is why flies dodge swatters so easily."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 20,
+  "difficulty": "Hard",
+  "title": "Garden pest",
+  "context": "A plump little sap-sucker parked on a leaf, with long thin legs.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Aphid_micrograph.tiff",
+   "file": "Aphid micrograph.tiff",
+   "author": "Arlo James Barnes",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-11-27.jpg",
+   "alt": "A grey, pear-shaped insect with thin legs on a leaf surface."
+  },
+  "answer": "Aphid",
+  "wrong": [
+   "Tick",
+   "Spider",
+   "Ladybird larva",
+   "Dust mite",
+   "Flea"
+  ],
+  "hints": [
+   "Ladybirds love to eat it.",
+   "Gardeners find it clustered on rose stems."
+  ],
+  "why": "An electron-microscope image of an aphid sitting on a plant.",
+  "pearl": "Some aphids are born already pregnant: a baby aphid can carry its own developing babies inside it."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 21,
+  "difficulty": "Hard",
+  "title": "Beach day",
+  "context": "Shiny black chips, like tiny broken bottles. You might find it between your toes.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Sand_from_Punaluu,_Hawaii,_US.jpg",
+   "file": "Sand from Punaluu, Hawaii, US.jpg",
+   "author": "Renée Janssen",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-28.jpg",
+   "alt": "Glossy black angular grains under a microscope."
+  },
+  "answer": "Black sand",
+  "wrong": [
+   "Coffee grounds",
+   "Coal dust",
+   "Peppercorns",
+   "Chia seeds",
+   "Soil"
+  ],
+  "hints": [
+   "It comes from a beach.",
+   "It's made from cooled lava."
+  ],
+  "why": "Grains of black sand from Punaluʻu beach in Hawaii, seen under a microscope.",
+  "pearl": "Black sand beaches like Punaluʻu form when hot lava hits the sea and shatters into small glassy grains."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 22,
+  "difficulty": "Genius",
+  "title": "Don't squash it",
+  "context": "A shield-shaped head with a long drinking straw tucked underneath.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Head_of_Pentatomidae_SEM.jpg",
+   "file": "Head of Pentatomidae SEM.jpg",
+   "author": "Louisa Howard, Dartmouth Electron Microscope Facility",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-29.jpg",
+   "alt": "A grey insect head with a long thin beak running down the middle."
+  },
+  "answer": "Stink bug",
+  "wrong": [
+   "Ladybird",
+   "Weevil",
+   "Cockroach",
+   "Cicada",
+   "Beetle"
+  ],
+  "hints": [
+   "It's also called a shield bug.",
+   "Squash it and you'll know why it has its name."
+  ],
+  "why": "An electron-microscope image of the head and mouthparts of a stink bug (shield bug).",
+  "pearl": "Stink bugs release a smelly liquid from glands on their bodies when they feel threatened."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 23,
+  "difficulty": "Easy",
+  "title": "Prickly purple",
+  "context": "A purple tuft on top of a spiky green ball. Handle with care.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Thistle_macro.jpg",
+   "file": "Thistle macro.jpg",
+   "author": "Tyw7",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-30.jpg",
+   "alt": "A purple brush-like flower on top of a spiky green bulb."
+  },
+  "answer": "Thistle",
+  "wrong": [
+   "Lavender",
+   "Heather",
+   "Cornflower",
+   "Clover",
+   "Bluebell"
+  ],
+  "hints": [
+   "It's a spiky wildflower.",
+   "It's a national emblem in one part of the United Kingdom."
+  ],
+  "why": "A thistle flower: a purple tuft above a spiny green base.",
+  "pearl": "The thistle is Scotland's national emblem. Legend says a barefoot Norse raider stepped on one and yelled, warning the sleeping Scots."
+ }
+]

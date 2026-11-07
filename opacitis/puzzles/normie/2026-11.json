@@ -1,0 +1,738 @@
+[
+ {
+  "date": "2026-11-08",
+  "number": 1,
+  "difficulty": "Genius",
+  "title": "Ancient package",
+  "context": "An 1896 X-ray of something wrapped up tight for a very, very long time.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Mummy_bird_from_an_Egyptian_tomb_(1896).png",
+   "file": "Mummy bird from an Egyptian tomb (1896).png",
+   "author": "Charles Thurstan Holland (1896)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-08.jpg",
+   "alt": "A grey, wrapped bundle showing a bird's skull, wings and legs inside."
+  },
+  "answer": "Mummified bird",
+  "wrong": [
+   "Mummified cat",
+   "Stuffed toy bird",
+   "Fossil fish",
+   "Bird's nest",
+   "Dried lizard"
+  ],
+  "hints": [
+   "It came out of an ancient Egyptian tomb.",
+   "Look for the skull, wings and legs under the wrapping."
+  ],
+  "why": "One of the earliest X-rays of an ancient object: a mummified bird from an Egyptian tomb, X-rayed in Liverpool in October 1896.",
+  "pearl": "Ancient Egyptians mummified millions of birds, especially ibises, as offerings to their gods. This X-ray was taken less than a year after X-rays were discovered."
+ },
+ {
+  "date": "2026-11-09",
+  "number": 2,
+  "difficulty": "Easy",
+  "title": "Twinkle twinkle",
+  "context": "Five arms, a lacy skeleton and not a single bone you'd recognise.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Starfish_Roentgen_X-Ray_01_Nevit.jpg",
+   "file": "Starfish Roentgen X-Ray 01 Nevit.jpg",
+   "author": "Nevit Dilmen",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-09.jpg",
+   "alt": "A five-armed star shape with a fine net-like skeleton, glowing on black."
+  },
+  "answer": "Starfish",
+  "wrong": [
+   "Octopus",
+   "Brittle star",
+   "Sea urchin",
+   "Maple leaf",
+   "Snowflake"
+  ],
+  "hints": [
+   "It lives in rock pools and on the sea floor.",
+   "It can regrow a lost arm."
+  ],
+  "why": "An X-ray of a starfish, showing the mesh of tiny chalky plates that makes up its skeleton.",
+  "pearl": "Starfish have no brain. Most have a simple eye at the tip of each arm."
+ },
+ {
+  "date": "2026-11-10",
+  "number": 3,
+  "difficulty": "Easy",
+  "title": "Look closer",
+  "context": "Two ovals joined by a thin bridge, X-rayed in Frankfurt in 1896.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:1896_x-rays_of_Physikalischer_Verein,_glasses.tif",
+   "file": "1896 x-rays of Physikalischer Verein, glasses.tif",
+   "author": "Walter König (1896)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-10.jpg",
+   "alt": "An old sepia X-ray of a pair of oval spectacles with thin frames."
+  },
+  "answer": "Glasses",
+  "wrong": [
+   "Scissors",
+   "Handcuffs",
+   "Bicycle",
+   "Earrings",
+   "Binoculars"
+  ],
+  "hints": [
+   "You'd wear them on your face.",
+   "They help you see."
+  ],
+  "why": "An X-ray of a pair of glasses taken in Frankfurt, Germany, in 1896. The metal frame stops X-rays better than the glass lenses.",
+  "pearl": "This X-ray was made months after X-rays were discovered, and it took three minutes. Today an airport scanner takes a fraction of a second."
+ },
+ {
+  "date": "2026-11-11",
+  "number": 4,
+  "difficulty": "Medium",
+  "title": "Pond life",
+  "context": "A chunky fish with a big air bladder showing as a dark pocket.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Common_carp_x-ray.jpg",
+   "file": "Common carp x-ray.jpg",
+   "author": "Florian Elias Rieser",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "url": "img/normie/2026-11-11.jpg",
+   "alt": "A fish skeleton with a large dark air pocket in its body."
+  },
+  "answer": "Carp",
+  "wrong": [
+   "Shark",
+   "Eel",
+   "Flounder",
+   "Tuna",
+   "Catfish"
+  ],
+  "hints": [
+   "It loves muddy rivers and lakes.",
+   "Koi are a fancy, colourful version."
+  ],
+  "why": "An X-ray of a common carp. The dark pocket is its swim bladder, which helps it float.",
+  "pearl": "Goldfish and koi are both close relatives of the common carp, and carp can live for decades."
+ },
+ {
+  "date": "2026-11-12",
+  "number": 5,
+  "difficulty": "Medium",
+  "title": "Armour plated",
+  "context": "Two big claws, a segmented tail and no bones at all. X-rayed in 1896.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:1896_x-rays_of_Physikalischer_Verein,_lobster.tif",
+   "file": "1896 x-rays of Physikalischer Verein, lobster.tif",
+   "author": "Walter König (1896)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-12.jpg",
+   "alt": "A sepia X-ray of a clawed crustacean with a segmented tail."
+  },
+  "answer": "Lobster",
+  "wrong": [
+   "Scorpion",
+   "Cockroach",
+   "Beetle",
+   "Spider",
+   "Centipede"
+  ],
+  "hints": [
+   "It lives in the sea.",
+   "It turns red when it's cooked."
+  ],
+  "why": "An 1896 X-ray of a lobster-like crustacean from Frankfurt's Senckenberg Museum.",
+  "pearl": "Lobsters have blue blood. It uses copper, not iron, to carry oxygen."
+ },
+ {
+  "date": "2026-11-13",
+  "number": 6,
+  "difficulty": "Hard",
+  "title": "Say cheese",
+  "context": "A small deep-sea fish with a huge head and a terrifying grin.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Anoplogaster_cornuta_X-ray.jpg",
+   "file": "Anoplogaster cornuta X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-13.jpg",
+   "alt": "A small fish skeleton with a big head and long teeth."
+  },
+  "answer": "Fangtooth",
+  "wrong": [
+   "Piranha",
+   "Anglerfish",
+   "Barracuda",
+   "Viperfish",
+   "Goldfish"
+  ],
+  "hints": [
+   "It lives in the dark, deep ocean.",
+   "Its name says it all."
+  ],
+  "why": "An X-ray of a fangtooth from the Bear Seamount in the Atlantic Ocean.",
+  "pearl": "Compared with its body size, the fangtooth has some of the largest teeth of any fish."
+ },
+ {
+  "date": "2026-11-14",
+  "number": 7,
+  "difficulty": "Hard",
+  "title": "Gone fishing",
+  "context": "A lumpy fish with a huge mouth and something like a tiny rod on its head.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Antennarius_coccineus_X-ray.jpg",
+   "file": "Antennarius coccineus X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-14.jpg",
+   "alt": "A lumpy fish skeleton with a large mouth and a thin spine on its head."
+  },
+  "answer": "Frogfish",
+  "wrong": [
+   "Pufferfish",
+   "Toad",
+   "Stonefish",
+   "Goldfish",
+   "Grouper"
+  ],
+  "hints": [
+   "It uses a lure to catch its dinner.",
+   "It's named after a hopping amphibian."
+  ],
+  "why": "An X-ray of a scarlet frogfish from the Smithsonian collection.",
+  "pearl": "Frogfish dangle a fleshy lure on a 'fishing rod' fin, then gulp prey in a split second with their enormous mouths."
+ },
+ {
+  "date": "2026-11-15",
+  "number": 8,
+  "difficulty": "Genius",
+  "title": "Big mouth",
+  "context": "A long whip of a tail and a mouth that's mostly... mouth.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Eurypharynx_pelecanoides_X-ray.jpg",
+   "file": "Eurypharynx pelecanoides X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-15.jpg",
+   "alt": "A long thin fish with a huge hinged jaw and a whip-like tail."
+  },
+  "answer": "Gulper eel",
+  "wrong": [
+   "Sea snake",
+   "Pelican",
+   "Anglerfish",
+   "Jellyfish",
+   "Squid"
+  ],
+  "hints": [
+   "It lives in the deep sea.",
+   "Its other name is the pelican eel."
+  ],
+  "why": "An X-ray of a gulper eel, also called a pelican eel, from the Smithsonian collection.",
+  "pearl": "A gulper eel's huge, loose jaw works like a pelican's pouch, scooping up prey along with a mouthful of water."
+ },
+ {
+  "date": "2026-11-16",
+  "number": 9,
+  "difficulty": "Easy",
+  "title": "Flat out",
+  "context": "A fish shaped like a flat oval, with fins frilling all the way round.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Solfisch_(Pleuronectes_solea)_MET_DP262482.jpg",
+   "file": "Solfisch (Pleuronectes solea) MET DP262482.jpg",
+   "author": "Josef Maria Eder and Eduard Valenta (1896), The Metropolitan Museum of Art",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-11-16.jpg",
+   "alt": "A flat oval fish skeleton with fins along both edges."
+  },
+  "answer": "Flatfish (sole)",
+  "wrong": [
+   "Stingray",
+   "Eel",
+   "Seahorse",
+   "Goldfish",
+   "Pufferfish"
+  ],
+  "hints": [
+   "It lies on its side on the sea floor.",
+   "Both its eyes end up on the same side of its head."
+  ],
+  "why": "An 1896 X-ray of a sole, a flatfish, from one of the first X-ray photo books.",
+  "pearl": "Baby flatfish look like normal fish. As they grow, one eye slowly moves across to the other side of the head."
+ },
+ {
+  "date": "2026-11-17",
+  "number": 10,
+  "difficulty": "Easy",
+  "title": "Jump scare",
+  "context": "Two little skeletons with very long back legs and no tail.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Fr%C3%B6sche_in_Bauch_und_R%C3%BCckenlage_MET_DP262483.jpg",
+   "file": "Frösche in Bauch und Rückenlage MET DP262483.jpg",
+   "author": "Josef Maria Eder and Eduard Valenta (1896), The Metropolitan Museum of Art",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-11-17.jpg",
+   "alt": "Two frog skeletons with long hind legs, one belly up and one belly down."
+  },
+  "answer": "Frogs",
+  "wrong": [
+   "Lizards",
+   "Mice",
+   "Newts",
+   "Bats",
+   "Toads' tadpoles"
+  ],
+  "hints": [
+   "They are amphibians.",
+   "They say 'ribbit' in cartoons."
+  ],
+  "why": "An 1896 X-ray of two frogs, one lying on its back and one on its front.",
+  "pearl": "Frogs use their eyes to help them swallow: they pull their eyeballs down into their heads to push food down their throats."
+ },
+ {
+  "date": "2026-11-18",
+  "number": 11,
+  "difficulty": "Medium",
+  "title": "Puffed up",
+  "context": "A round body bristling with spines, like a balloon covered in pins.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Diodon_holocanthus_X-ray.jpg",
+   "file": "Diodon holocanthus X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-18.jpg",
+   "alt": "A round fish body covered in long spines."
+  },
+  "answer": "Porcupinefish",
+  "wrong": [
+   "Sea urchin",
+   "Hedgehog",
+   "Pineapple",
+   "Cactus",
+   "Chestnut"
+  ],
+  "hints": [
+   "It's a fish.",
+   "It blows itself up to scare off predators."
+  ],
+  "why": "An X-ray of a porcupinefish from the Smithsonian collection, puffed up with its spines sticking out.",
+  "pearl": "Porcupinefish puff up by gulping water. When inflated, their spines stand on end."
+ },
+ {
+  "date": "2026-11-19",
+  "number": 12,
+  "difficulty": "Medium",
+  "title": "Brand new",
+  "context": "A tiny curled-up mammal, X-rayed in 1896 when it was only just born.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Neugeborenes_Kaninchen_MET_DP262485.jpg",
+   "file": "Neugeborenes Kaninchen MET DP262485.jpg",
+   "author": "Josef Maria Eder and Eduard Valenta (1896), The Metropolitan Museum of Art",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "url": "img/normie/2026-11-19.jpg",
+   "alt": "A small curled mammal skeleton, side on."
+  },
+  "answer": "Baby rabbit",
+  "wrong": [
+   "Baby rat",
+   "Puppy",
+   "Kitten",
+   "Guinea pig",
+   "Joey"
+  ],
+  "hints": [
+   "Its parents have long ears.",
+   "Babies of this animal are called kittens."
+  ],
+  "why": "An 1896 X-ray of a newborn rabbit from the Eder and Valenta portfolio.",
+  "pearl": "Baby rabbits, called kittens or kits, are born blind and without fur. Their eyes open after about ten days."
+ },
+ {
+  "date": "2026-11-20",
+  "number": 13,
+  "difficulty": "Hard",
+  "title": "Upside down",
+  "context": "A school of thin, pointy fish lined up like pencils.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Centriscus_scutatus_X-ray.jpg",
+   "file": "Centriscus scutatus X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-20.jpg",
+   "alt": "Many thin, pointed fish lined up diagonally."
+  },
+  "answer": "Shrimpfish (razorfish)",
+  "wrong": [
+   "Seahorses",
+   "Needles",
+   "Garfish",
+   "Pipefish",
+   "Anchovies"
+  ],
+  "hints": [
+   "They swim head-down.",
+   "Their bodies are encased in thin see-through plates."
+  ],
+  "why": "An X-ray of a group of grooved razorfish (shrimpfish) from the Smithsonian collection.",
+  "pearl": "Shrimpfish swim head-down in tight groups, hiding among sea urchin spines and seagrass."
+ },
+ {
+  "date": "2026-11-21",
+  "number": 14,
+  "difficulty": "Hard",
+  "title": "Long nose",
+  "context": "A deep-bodied reef fish with a snout like a pair of tweezers.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Forcipiger_longirostris_X-ray.jpg",
+   "file": "Forcipiger longirostris X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-21.jpg",
+   "alt": "A fish skeleton with a long thin snout and tall fins."
+  },
+  "answer": "Longnose butterflyfish",
+  "wrong": [
+   "Swordfish",
+   "Sawfish",
+   "Garfish",
+   "Seahorse",
+   "Angelfish"
+  ],
+  "hints": [
+   "It lives on coral reefs.",
+   "It's named after a winged insect."
+  ],
+  "why": "An X-ray of a longnose butterflyfish from the Smithsonian collection.",
+  "pearl": "The longnose butterflyfish uses its tweezer-like snout to pick tiny animals out of cracks in coral."
+ },
+ {
+  "date": "2026-11-22",
+  "number": 15,
+  "difficulty": "Genius",
+  "title": "Walking dinner plate",
+  "context": "A flat, round fish with a short tail and arm-like fins.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Halieutichthys_aculeatus_X-ray.jpg",
+   "file": "Halieutichthys aculeatus X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-22.jpg",
+   "alt": "A flat round fish with a short tail and arm-like fins."
+  },
+  "answer": "Pancake batfish",
+  "wrong": [
+   "Stingray",
+   "Flounder",
+   "Sand dollar",
+   "Turtle",
+   "Crab"
+  ],
+  "hints": [
+   "It walks along the sea floor on its fins.",
+   "It shares its name with a breakfast food."
+  ],
+  "why": "An X-ray of a pancake batfish from the Smithsonian collection.",
+  "pearl": "Batfish are poor swimmers. They 'walk' across the sea floor on their stiff, leg-like fins."
+ },
+ {
+  "date": "2026-11-23",
+  "number": 16,
+  "difficulty": "Easy",
+  "title": "Spiral staircase",
+  "context": "A perfect curl divided into chamber after chamber.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Nautile_scanner_3.jpg",
+   "file": "Nautile scanner 3.jpg",
+   "author": "Michel Royon",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-23.jpg",
+   "alt": "A spiral shell sliced open, showing curved walls dividing it into chambers."
+  },
+  "answer": "Nautilus shell",
+  "wrong": [
+   "Snail shell",
+   "Ammonite fossil",
+   "Ram's horn",
+   "Cinnamon scroll",
+   "Fern frond"
+  ],
+  "hints": [
+   "Its owner has tentacles.",
+   "It's related to octopus and squid."
+  ],
+  "why": "A CT scan slice through a nautilus shell, showing its spiral of gas-filled chambers.",
+  "pearl": "A nautilus lives only in the newest, biggest chamber. It adjusts gas and liquid in the older chambers to float up or sink, like a submarine."
+ },
+ {
+  "date": "2026-11-24",
+  "number": 17,
+  "difficulty": "Easy",
+  "title": "Pocket-sized",
+  "context": "A rectangle packed with circuits, a big dark block and lots of tiny parts.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Nokia_N97_X-ray_image_Dage_XD7500.jpg",
+   "file": "Nokia N97 X-ray image Dage XD7500.jpg",
+   "author": "Ossewa",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/normie/2026-11-24.jpg",
+   "alt": "A rectangular device with a dark battery block and a grid of circuitry."
+  },
+  "answer": "Mobile phone",
+  "wrong": [
+   "TV remote",
+   "Calculator",
+   "Game controller",
+   "Torch",
+   "Digital watch"
+  ],
+  "hints": [
+   "It's probably within reach right now.",
+   "The big dark block is its battery."
+  ],
+  "why": "An X-ray of a mobile phone: the battery, circuit board, camera and buttons all show up.",
+  "pearl": "Factories X-ray electronics like this to check for hidden faults in solder joints without opening them up."
+ },
+ {
+  "date": "2026-11-25",
+  "number": 18,
+  "difficulty": "Einstein",
+  "title": "No legs",
+  "context": "A long, legless body curving through the picture. It's not what you think.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Schwimmwuehle_R%C3%B6ntgen.jpg",
+   "file": "Schwimmwuehle Röntgen.jpg",
+   "author": "Kalumet",
+   "licence": "CC BY-SA 2.0 de",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+   "url": "img/normie/2026-11-25.jpg",
+   "alt": "A long, legless, curving skeleton on a dark background."
+  },
+  "answer": "Caecilian",
+  "wrong": [
+   "Snake",
+   "Eel",
+   "Earthworm",
+   "Slow worm",
+   "Worm lizard"
+  ],
+  "hints": [
+   "It's an amphibian.",
+   "Its closest relatives have legs and croak."
+  ],
+  "why": "An X-ray of a caecilian, a legless amphibian.",
+  "pearl": "Caecilians are legless amphibians, more closely related to frogs than to snakes or worms. Most live hidden underground."
+ },
+ {
+  "date": "2026-11-26",
+  "number": 19,
+  "difficulty": "Medium",
+  "title": "Rainbow",
+  "context": "A sleek fish built for fast, cold rivers.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Oncorhynchus_mykiss_X-ray.jpg",
+   "file": "Oncorhynchus mykiss X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-26.jpg",
+   "alt": "A long streamlined fish skeleton."
+  },
+  "answer": "Trout",
+  "wrong": [
+   "Shark",
+   "Eel",
+   "Tuna",
+   "Pike",
+   "Catfish"
+  ],
+  "hints": [
+   "It's a favourite of fly fishers.",
+   "This species is named after the colours along its side."
+  ],
+  "why": "An X-ray of a rainbow trout from the Smithsonian collection.",
+  "pearl": "Rainbow trout and steelhead are the same species. Steelhead are the ones that swim out to sea and come back to rivers to breed."
+ },
+ {
+  "date": "2026-11-27",
+  "number": 20,
+  "difficulty": "Hard",
+  "title": "Lunchtime",
+  "context": "A coiled reptile with a bigger bulge than usual near its head. X-rayed in 1896.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:A_snake_in_the_process_of_swallowing_a_small_mammal,_probabl_Wellcome_V0029552.jpg",
+   "file": "A snake in the process of swallowing a small mammal, probabl Wellcome V0029552.jpg",
+   "author": "Arthur Schuster (1896), Wellcome Collection",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "url": "img/normie/2026-11-27.jpg",
+   "alt": "A coiled snake skeleton with a small mammal skeleton inside near its head."
+  },
+  "answer": "Snake swallowing a mouse",
+  "wrong": [
+   "Snake laying eggs",
+   "Eel eating a fish",
+   "Lizard shedding skin",
+   "Worm in an apple",
+   "Two snakes tangled"
+  ],
+  "hints": [
+   "Look at the bulge near the head.",
+   "Someone small is on the menu."
+  ],
+  "why": "An 1896 X-ray by physicist Arthur Schuster of a snake partway through swallowing a small mammal, probably a mouse.",
+  "pearl": "Snakes don't really unhinge their jaws. The two halves of the lower jaw are joined by a stretchy ligament, so they can spread apart."
+ },
+ {
+  "date": "2026-11-28",
+  "number": 21,
+  "difficulty": "Hard",
+  "title": "Sound the horn",
+  "context": "A big spiral shell, glowing blue in an X-ray.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Charonia_shell.jpg",
+   "file": "Charonia shell.jpg",
+   "author": "Michel Royon",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "url": "img/normie/2026-11-28.jpg",
+   "alt": "A large spiral shell shown in blue tones."
+  },
+  "answer": "Triton shell",
+  "wrong": [
+   "Conch shell",
+   "Nautilus shell",
+   "Snail shell",
+   "Cowrie shell",
+   "Horn"
+  ],
+  "hints": [
+   "People have blown it like a trumpet for centuries.",
+   "The animal inside eats a coral-wrecking starfish."
+  ],
+  "why": "An X-ray of the shell of a triton, a large sea snail.",
+  "pearl": "Giant triton snails are one of the few animals that eat crown-of-thorns starfish, which damage coral reefs."
+ },
+ {
+  "date": "2026-11-29",
+  "number": 22,
+  "difficulty": "Genius",
+  "title": "Back from the dead",
+  "context": "A chunky fish with fleshy, limb-like fins. It was once known only from fossils.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Latimeria_chalumnae_X-ray.jpg",
+   "file": "Latimeria chalumnae X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-29.jpg",
+   "alt": "A long, heavy fish skeleton with lobed fins."
+  },
+  "answer": "Coelacanth",
+  "wrong": [
+   "Lungfish",
+   "Sturgeon",
+   "Grouper",
+   "Shark",
+   "Carp"
+  ],
+  "hints": [
+   "It was thought extinct for millions of years.",
+   "A museum curator in South Africa recognised one in 1938."
+  ],
+  "why": "An X-ray of a coelacanth from the Smithsonian collection.",
+  "pearl": "Coelacanths were thought to have died out with the dinosaurs until museum curator Marjorie Courtenay-Latimer spotted one in a fishing catch in 1938."
+ },
+ {
+  "date": "2026-11-30",
+  "number": 23,
+  "difficulty": "Easy",
+  "title": "Curly tail",
+  "context": "A horse-shaped head on top of a coiled tail, ringed with bony plates.",
+  "question": "What is it?",
+  "img": {
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Hippocampus_sindonis_X-ray.jpg",
+   "file": "Hippocampus sindonis X-ray.jpg",
+   "author": "Sandra J. Raredon, Smithsonian Institution (NMNH Division of Fishes)",
+   "licence": "Public domain",
+   "licence_url": "",
+   "url": "img/normie/2026-11-30.jpg",
+   "alt": "A seahorse skeleton with a horse-like head and a curled tail."
+  },
+  "answer": "Seahorse",
+  "wrong": [
+   "Chess knight",
+   "Snake",
+   "Shrimp",
+   "Lizard",
+   "Fern"
+  ],
+  "hints": [
+   "It's a fish, believe it or not.",
+   "Dads carry the babies."
+  ],
+  "why": "An X-ray of a seahorse from the Smithsonian's fish collection, showing its bony armour rings.",
+  "pearl": "In seahorses the male gets pregnant. He carries the eggs in a pouch on his belly until they hatch."
+ }
+]
