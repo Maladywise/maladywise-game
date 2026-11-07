@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/tools/ovulation-calculator/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ovulation Calculator: Fertile Window and Ovulation Date | Malady Wise</title>
+<meta name="description" content="Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maladywise.com/tools/ovulation-calculator/">
+<meta property="og:title" content="Ovulation Calculator: Fertile Window and Ovulation Date | Malady Wise">
+<meta property="og:description" content="Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.">
+<meta property="og:image" content="https://maladywise.com/assets/og/tools.png?v=2">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/assets/shell.css?v=174">
+<script src="/assets/games.js?v=103"></script>
+<script src="/assets/site.js?v=39"></script>
+<script src="/assets/shell.js?v=194"></script>
+<link rel="stylesheet" href="/tools/calckit/calc.css?v=1">
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Ovulation Calculator: Fertile Window and Ovulation Date", "description": "Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.", "url": "https://maladywise.com/tools/ovulation-calculator/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "reviewedBy": {"@type": "Person", "jobTitle": "General Practitioner", "description": "Australian GP"}, "lastReviewed": "2026-11-08", "isAccessibleForFree": true, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://maladywise.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Ovulation calculator", "item": "https://maladywise.com/tools/ovulation-calculator/"}]}, "about": {"@type": "MedicalCondition", "name": "Infertility"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Ovulation calculator", "url": "https://maladywise.com/tools/ovulation-calculator/", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "en-AU", "isAccessibleForFree": true, "description": "Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many days after my period do I ovulate?", "acceptedAnswer": {"@type": "Answer", "text": "In a 28-day cycle, ovulation is usually around day 14, counting the first day of your period as day 1. In longer cycles it’s later and in shorter cycles earlier, because the time from ovulation to the next period stays fairly constant at about 14 days."}}, {"@type": "Question", "name": "How long is the fertile window?", "acceptedAnswer": {"@type": "Answer", "text": "About 6 days: the 5 days before ovulation and ovulation day itself. The 2 days before ovulation and the day of ovulation give the best chance of pregnancy."}}, {"@type": "Question", "name": "Can I get pregnant outside my fertile window?", "acceptedAnswer": {"@type": "Answer", "text": "It’s unlikely on any given day, but ovulation often comes earlier or later than calculators predict, even with regular periods. So a calculator can’t tell you which days are safe."}}, {"@type": "Question", "name": "Can I use an ovulation calculator as contraception?", "acceptedAnswer": {"@type": "Answer", "text": "No. Calendar estimates alone aren’t reliable enough to prevent pregnancy. Talk to your GP or a sexual health clinic about effective contraception."}}, {"@type": "Question", "name": "How long should we try before seeing a doctor?", "acceptedAnswer": {"@type": "Answer", "text": "See your GP if you’re under 35 and have been trying for 12 months, or 35 or over and trying for 6 months. Go sooner if you have irregular periods or know of a possible fertility problem."}}]}</script>
+</head>
+<body>
+<main class="wrap doc cx">
+<p class="meta"><a href="/tools/">Tools</a> · Calculator</p>
+<h1>Ovulation calculator</h1>
+<p class="lede">Estimate your most fertile days for the next three cycles from the first day of your last period and your usual cycle length.</p>
+<p class="callout"><b>A rough guide only.</b> Ovulation often moves from cycle to cycle, even when periods are regular. Don’t use this calculator as contraception. Nothing you enter leaves this device.</p>
+<form class="form" id="cx-form" onsubmit="return false" autocomplete="off">
+<label>First day of last period<input id="cx-d" type="date" min="2020-01-01" max="2035-12-31"></label>
+<label>Usual cycle length (days)<input id="cx-c" type="number" inputmode="numeric" min="21" max="45" step="1" value="28"><small>Day 1 of one period to day 1 of the next</small></label>
+<label class="full">Luteal phase (days, optional)<input id="cx-l" type="number" inputmode="numeric" min="10" max="16" step="1" value="14"><small>Time from ovulation to your next period. Leave at 14 if you don’t know it.</small></label>
+</form>
+<div class="out" id="cx-out" aria-live="polite"><p class="meta">Choose the first day of your last period.</p></div>
+<h2>How it works</h2>
+<ul>
+<li><b>Ovulation</b> usually happens about 14 days before the next period (this second half of the cycle, the luteal phase, is fairly steady at 10 to 16 days). So in a 28-day cycle it’s around day 14, and in a 32-day cycle around day 18.</li>
+<li><b>The fertile window</b> is 6 days: the 5 days before ovulation plus ovulation day. Sperm can survive several days, but an egg lasts only about a day.</li>
+<li>In a landmark study of 221 women trying to conceive, almost every pregnancy came from sex in that 6-day window. The chance of pregnancy was highest from sex in the 2 days before and on the day of ovulation (about 1 in 3 on the day itself).</li>
+</ul>
+<h2>Why calculators get it wrong (and what helps)</h2>
+<ul>
+<li>The same study team found the fertile window was entirely within days 10 to 17 for only about 30% of women. Many ovulate earlier or later, and it varies even when periods are regular.</li>
+<li><b>Ovulation (LH) urine tests</b> detect the hormone surge that comes 1 to 2 days before ovulation.</li>
+<li><b>Cervical mucus</b> that becomes clear, stretchy and slippery (like raw egg white) is a sign that ovulation is near.</li>
+<li><b>Basal body temperature</b> rises slightly after ovulation, so it confirms ovulation has happened rather than predicting it.</li>
+<li>If you’re trying for a baby, having sex every 2 to 3 days through the cycle avoids the guesswork.</li>
+</ul>
+<h2>When to see a doctor</h2>
+<ul>
+<li>You’re under 35 and have been trying for 12 months, or 35 or over and trying for 6 months.</li>
+<li>Your periods are irregular, very far apart (more than about 35 days), very painful, or have stopped.</li>
+<li>You or your partner know of a possible fertility problem (for example endometriosis, PCOS, past pelvic infection, or cancer treatment). See your GP straight away rather than waiting.</li>
+<li>Before trying: your GP can talk about folic acid, iodine, vaccinations, medicines and a health check.</li>
+</ul>
+<section class="faq"><h2>Common questions</h2><details><summary>How many days after my period do I ovulate?</summary><p>In a 28-day cycle, ovulation is usually around day 14, counting the first day of your period as day 1. In longer cycles it’s later and in shorter cycles earlier, because the time from ovulation to the next period stays fairly constant at about 14 days.</p></details><details><summary>How long is the fertile window?</summary><p>About 6 days: the 5 days before ovulation and ovulation day itself. The 2 days before ovulation and the day of ovulation give the best chance of pregnancy.</p></details><details><summary>Can I get pregnant outside my fertile window?</summary><p>It’s unlikely on any given day, but ovulation often comes earlier or later than calculators predict, even with regular periods. So a calculator can’t tell you which days are safe.</p></details><details><summary>Can I use an ovulation calculator as contraception?</summary><p>No. Calendar estimates alone aren’t reliable enough to prevent pregnancy. Talk to your GP or a sexual health clinic about effective contraception.</p></details><details><summary>How long should we try before seeing a doctor?</summary><p>See your GP if you’re under 35 and have been trying for 12 months, or 35 or over and trying for 6 months. Go sooner if you have irregular periods or know of a possible fertility problem.</p></details></section>
+<h2>Sources</h2>
+<ul class="src"><li><a href="https://doi.org/10.1056/NEJM199512073332301" rel="noopener">Wilcox AJ et al. Timing of sexual intercourse in relation to ovulation. N Engl J Med 1995</a>. 6-day fertile window ending on ovulation day; conception chance about 0.10 five days before to 0.33 on the day</li><li><a href="https://doi.org/10.1136/bmj.321.7271.1259" rel="noopener">Wilcox AJ et al. The timing of the “fertile window” in the menstrual cycle. BMJ 2000</a>. only about 30% of women have the fertile window entirely within days 10 to 17</li><li><a href="https://www.healthdirect.gov.au/about-infertility" rel="noopener">healthdirect: About infertility</a>. when to see a doctor (12 months under 35, 6 months over 35)</li></ul>
+<p class="meta"><em>Reviewed 8 November 2026. General education, not personal medical advice. Talk to your GP or doctor about your own results.</em></p>
+<div id="nl-slot"></div>
+<section class="related"><h2>Related</h2><ul><li><a href="/tools/due-date-calculator/"><span>Calculator</span>Due date calculator</a></li><li><a href="/pcos/"><span>Fact sheet</span>PCOS</a></li><li><a href="/endometriosis/"><span>Fact sheet</span>Endometriosis</a></li><li><a href="/heavy-periods/"><span>Fact sheet</span>Heavy periods</a></li></ul></section>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<script src="/tools/calckit/calc.js?v=1"></script>
+<script>
+function fmt(s){return new Date(s+"T00:00:00Z").toLocaleDateString("en-AU",{weekday:"short",day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});}
+(function () {
+  var C = MWCalc, $ = function (i) { return document.getElementById(i); };
+  var d = $("cx-d"), c = $("cx-c"), l = $("cx-l"), out = $("cx-out");
+  function run() {
+    if (!d.value) { out.innerHTML = '<p class="meta">Choose the first day of your last period.</p>'; return; }
+    var r = C.ovulation({ lmp: d.value, cycle: c.value, luteal: l.value });
+    if (r.error) { out.innerHTML = '<p class="warn">' + r.error + '</p>'; return; }
+    var f = r.cycles[0];
+    var h = '<div class="res"><h2>Most fertile days this cycle</h2><p class="cxbig">' + fmt(f.fertileFrom) + ' to ' + fmt(f.fertileTo) + '</p>' +
+      '<p>Estimated ovulation: <b>' + fmt(f.ovulation) + '</b> (cycle day ' + r.ovDay + '). The two days before ovulation and the day itself are the most fertile. Next period due about ' + fmt(f.nextPeriod) + '.</p></div>';
+    h += '<div class="res"><h2>Next cycles</h2><ul class="ms">' + r.cycles.slice(1).map(function (x) {
+      return '<li><b>Fertile ' + fmt(x.fertileFrom) + ' to ' + fmt(x.fertileTo) + '</b><span>Ovulation about ' + fmt(x.ovulation) + ' · period due about ' + fmt(x.nextPeriod) + '</span></li>';
+    }).join("") + '</ul><p class="meta">Later cycles are less certain: small changes add up.</p></div>';
+    out.innerHTML = h;
+  }
+  [d, c, l].forEach(function (el) { el.addEventListener("input", run); el.addEventListener("change", run); });
+  run();
+})();
+</script>
+<script>MW.page();</script>
+</body>
+</html>
