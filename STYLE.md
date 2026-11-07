@@ -23,14 +23,14 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Einstein and Genius must be genuinely hard
 - Einstein puzzles in every game must be clearly harder than Genius: obscure but real and fair (specialist, archaic or rare terms; rare letters; no gimmes). If a doctor would get it in one look, it's not Einstein.
 - Wordemic: take Einstein answers from tier 1 of wordemic/hard-bank.json first, Genius Sunday answers from tier 1 then tier 2, and Hard days may use tier 3. Remove each word from the bank once it's used. When the bank runs low, add similar words (obscure anatomy, archaic terms, histology, rare signs) and add every new answer to wordemic/words.txt.
-- Every game has an Einstein tier, including Glimpsis, Opacitis, Panelysis, Arrhythmix, Cryptogenic and Grand Rounds. Daily games: about 1 day in 50. Weekly or twice-weekly games (Arrhythmix, Cryptogenic, Grand Rounds): about once every 6–8 weeks. When building puzzles, pick the next Einstein date for each game you build, set that entry's "difficulty" to "Einstein", and add the date to MW_EINSTEIN in assets/games.js (keep earlier dates).
+- Every game has an Einstein tier, including Glimpsis, Opacitis, Panelysis, Arrhythmix, Cryptoplexy and Grand Rounds. Daily games: about 1 day in 50. Weekly or twice-weekly games (Arrhythmix, Cryptoplexy, Grand Rounds): about once every 6–8 weeks. When building puzzles, pick the next Einstein date for each game you build, set that entry's "difficulty" to "Einstein", and add the date to MW_EINSTEIN in assets/games.js (keep earlier dates).
 - Image games (Glimpsis, Opacitis): Einstein = a subtle or rare finding, a sparse one-line context, five close lookalike options and hints that make you think rather than give it away.
 
 ## Owner's name
 - Never put the site owner's name anywhere on the site, in public files, code comments or data notes. Use "Malady Wise" or "a Malady Wise GP".
 
 ## Neurology and psychiatry curiosities
-- data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptogenic clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
+- data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptoplexy clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
 - Tone: fascinated and respectful. These are real people's experiences; never mock patients or make a diagnosis the punchline.
 - Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
 
@@ -55,9 +55,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
   - **Comorbix:** one or two of the four groups on the theme (e.g. "things with tides", "water-borne infections").
   - **Zebritis:** one prompt on the theme (e.g. "Name a water-borne disease", "Name a country made up entirely of islands").
   - **Dxtective / Panelysis / Glimpsis / Opacitis / Sensitosis / Anatomegaly:** a fitting case, result, image, test or body part when one exists naturally (e.g. near-drowning, hyponatraemia, cholera rice-water stool, lung on X-ray). Don't force it.
-  - **Cryptogenic / Grand Rounds:** a few themed clues or questions when the theme lands on their day.
+  - **Cryptoplexy / Grand Rounds:** a few themed clues or questions when the theme lands on their day.
 - Keep every themed item factually checked and kind. "gentle" days: respectful, no jokes about the condition. "sensitive" days: no themed puzzles. Fun and country days: playful, never mocking people.
-- **No giveaways (from 8 Nov 2026).** The day's name must not hand players an answer. On a themed day, no guess-the-answer game (Dxtective, Wordemic, Panelysis, Glimpsis, Opacitis, Arrhythmix, Anatomegaly, Linkase, Zebritis unicorns, Gridectomy/Cryptogenic answers, Comorbix group names) may have as its answer the day's namesake person, condition or object, or an obvious synonym. E.g. on Marie Curie's birthday Dxtective must not be Curie or radiation sickness; use something one step away (an X-ray finding, a Polish-born scientist's rival, glow-in-the-dark watch dials, a radiotherapy side effect). Triviosis may be openly themed because it's a quiz, but its questions shouldn't be guessable from the day title alone. Theme by association, sideways, never by the headline.
+- **No giveaways (from 8 Nov 2026).** The day's name must not hand players an answer. On a themed day, no guess-the-answer game (Dxtective, Wordemic, Panelysis, Glimpsis, Opacitis, Arrhythmix, Anatomegaly, Linkase, Zebritis unicorns, Gridectomy/Cryptoplexy answers, Comorbix group names) may have as its answer the day's namesake person, condition or object, or an obvious synonym. E.g. on Marie Curie's birthday Dxtective must not be Curie or radiation sickness; use something one step away (an X-ray finding, a Polish-born scientist's rival, glow-in-the-dark watch dials, a radiotherapy side effect). Triviosis may be openly themed because it's a quiz, but its questions shouldn't be guessable from the day title alone. Theme by association, sideways, never by the headline.
 - When a scheduled task swaps or builds puzzles for a themed day, it should aim for this spread (it may swap more than 1–2 puzzles on that day to do so), keeping answers unique across the past 180 days per game as usual.
 
 ## Animal ER (monthly, from Dec 2026)
