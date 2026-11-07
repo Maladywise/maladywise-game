@@ -412,6 +412,81 @@
     [[78, 12], [92, 22], [106, 32], [120, 42]].forEach(function (b, i) { s += R(b[0], 88 - b[1], 10, b[1], 2, i === 3 ? "#E7C3DA" : "#EEE7F6"); });
     return s + arrow([80, 54, 128, 38]) + tx(102, 100, "longer · more · less rest", { fs: 6.5 });
   });
+  // lower back stretches
+  add("knee-chest-2", "Lying on your back hugging both knees gently towards the chest", function () {
+    var o = {}, base = { hip: [92, 95.5], t: 90, hc: [128, 94.5], l1: [150, -78], l2: [146, -74], f1: 175, f2: 175, out: o };
+    pose(base);
+    var k = o.P.K1;
+    return floor() + big(1.25, mat(40, 140) + pose(Object.assign(base, { a1: { to: [k[0] - 3, k[1] + 3], b: 1 }, a2: { to: [k[0] - 1, k[1] + 4], b: 1 } })) + arrow([72, 70, 82, 56, 98, 62]), 92) + hold(14, 30, "hold");
+  });
+  add("child-pose", "Kneeling, sitting back towards the heels and sliding the hands forward along the floor so the back gently rounds and stretches", function () {
+    var s = mat(20, 130) + pose({ hip: [42, 83], t: 72, hd: 78, l1: [50, -94], l2: [48, -93], f1: -95, f2: -95, a1: [78, 89], a2: [76, 88] });
+    return floor() + big(1.3, s, 60) + arrow([46, 66, 30, 70]) + tx(36, 58, "sit back", { fs: 7.5 }) + arrow([112, 78, 136, 78]) + tx(124, 70, "reach", { fs: 7.5 }) + hold(110, 26);
+  });
+  add("sphinx", "Lying on your stomach, propping up on the forearms with the hips staying on the floor, letting the lower back relax", function () {
+    var base = { hip: [82, 94], t: 90, l1: [-90, -90], l2: [-91, -90], f1: -40, f2: -40 };
+    var s = mat(40, 136) + G(Object.assign({}, base, { sh: [108, 96], hc: [117, 94], a1: [-80, -90], a2: [-82, -92] }));
+    s += pose(Object.assign({}, base, { sh: [104, 83], hc: [112, 76], a1: [2, 90], a2: [0, 88] }));
+    return floor() + big(1.3, s + arrow([96, 92, 96, 80]), 86) + tx(28, 70, "hips down", { c: WT, fs: 6.5 }) + hold(14, 30);
+  });
+  add("fig4", "Lying on your back with one ankle crossed over the other knee, gently drawing the lower leg towards the chest to stretch the buttock", function () {
+    var o = {}, base = { hip: [92, 95.5], t: 90, hc: [128, 94.5], l2: [148, -78], f2: 175, l1: [200, 96], f1: 100, out: o };
+    pose(base);
+    var k2 = o.P.K2;
+    base.a1 = { to: [k2[0] + 2, k2[1] + 7], b: 1 }; base.a2 = { to: [k2[0] + 4, k2[1] + 8], b: 1 };
+    return floor() + big(1.25, mat(40, 140) + pose(base) + arrow([62, 70, 70, 56, 86, 58]), 92) + tx(140, 50, "ankle on", { fs: 6.5 }) + tx(140, 58, "other knee", { fs: 6.5 }) + hold(14, 30);
+  });
+  add("hip-flexor", "Half-kneeling with a cushion under the back knee, tucking the tailbone under and easing the hips forward to stretch the front of the back hip", function () {
+    var s = floor() + R(52, 96, 18, 5, 2.5, "#F4E8EF");
+    var b = { hip: [66, 78], t: 182, l2: [90, 0], l1: [-22, -90], f2: 90, f1: -95, a1: { to: [84, 76], b: -1 }, a2: { to: [83, 77], b: -1 } };
+    s += pose(b);
+    return s + C([66, 84], 6, AC, ' fill-opacity=".15" stroke="' + AC + '" stroke-width="1.2" stroke-dasharray="2.5 2"') + arrow([44, 62, 60, 62]) + tx(28, 56, "hips forward", { fs: 7 }) + tx(124, 70, "stretch at", { fs: 6.5 }) + tx(124, 78, "front of hip", { fs: 6.5 }) + hold(112, 30);
+  });
+  // frozen shoulder (the sore arm is the dark, near arm in side views)
+  add("pendulum", "Leaning forward with the good hand on a table and the sore arm hanging loose, letting it swing in small circles and back and forth", function () {
+    var s = floor() + bench(92, 150, 62);
+    s += pose({ hip: [52, 60], t: 128, hd: 124, l1: { to: [62, 98], b: 1 }, l2: { to: [44, 98], b: 1 }, a1: [2, -2], a2: { to: [100, 61], b: -1 } });
+    return s + '<ellipse cx="76" cy="73" rx="9" ry="4" fill="none" stroke="' + AC + '" stroke-width="1.8" stroke-dasharray="3 2"/>' + arrow([84, 76, 80, 79, 74, 78.5]) + tx(30, 20, "small circles", { fs: 7.5 }) + tx(30, 29, "arm hangs loose", { c: WT, fs: 6.5 });
+  });
+  add("table-slide", "Sitting at a table with the sore hand on a towel, sliding the hand forward as you lean the body forward, then back", function () {
+    var s = floor() + chair(20) + bench(58, 150, 64) + towel(62, 60.5, 22);
+    s += G(seat(30, { a1: { to: [62, 61], b: 1 } }));
+    s += pose(seat(30, { t: 140, hd: 135, a1: { to: [78, 61], b: 1 }, a2: [10, 60] }));
+    return s + R(70, 60.5, 22, 3.5, 1.5, "#F4E8EF") + arrow([84, 52, 112, 52]) + tx(118, 44, "slide forward", { fs: 7 }) + tx(118, 76, "hand on a towel", { c: WT, fs: 6 });
+  });
+  add("wall-walk", "Facing a wall, walking the fingers of the sore arm up the wall as far as is comfortable, then walking them back down", function () {
+    var s = floor(6, 128) + wall(128);
+    [52, 44, 36, 28, 20].forEach(function (y) { s += C([126, y], 1.3, AC); });
+    s += G(stand(96, { a1: { to: [127, 48], b: -1 } }));
+    s += pose(stand(96, { a1: { to: [127, 20], b: -1 }, a2: [-3, 2] }));
+    return s + arrow([140, 56, 140, 18]) + tx(60, 18, "walk up", { fs: 7.5 }) + tx(60, 27, "slowly", { fs: 7.5 });
+  });
+  add("er-stick", "Standing with both elbows tucked in at the sides holding a stick, the good arm gently pushing the sore hand out to the side, elbows staying at the sides (seen from the front)", function () {
+    var o = {}; pose(frontStand(84, { a1: [2, -90], out: o }));
+    var h = o.P.W1;
+    var s = floor() + G(frontStand(84, { a1: [2, 70] }));
+    s += pose(frontStand(84, { a1: [2, -90], a2: [-2, -88], out: o }));
+    s += L([[h[0] - 4, h[1]], [o.P.W2[0] + 6, o.P.W2[1]]], WT, 2.6);
+    return s + arrow([112, 52, 94, 52]) + tx(132, 64, "good arm", { fs: 7 }) + tx(132, 72, "pushes", { fs: 7 }) + arrow([66, 36, 56, 32, 48, 38]) + tx(80, 109, "elbows stay at your sides", { c: WT, fs: 6.5 }) + hold(14, 18);
+  });
+  add("towel-behind", "A towel over the good shoulder held behind the back by the sore hand, the good hand pulling the towel up so the sore hand slides up the back", function () {
+    var top = [91, 12], lo = [77, 52];
+    var s = floor() + G(frontStand(80, { a1: { to: [76, 60], b: -1 }, noA2: 1 }));
+    s += pose(frontStand(80, { a1: { to: lo, b: -1 }, ol: 1, a2: { to: top, b: -1 }, ol2: 1 }));
+    s += L([top, [86, 30], lo], "#F4E8EF", 3.6) + L([top, [86, 30], lo], "#C77DAA", 1, ' stroke-dasharray="2 2"') + tx(56, 22, "towel", { c: WT, fs: 6.5 });
+    return s + arrow([104, 24, 104, 8]) + tx(110, 30, "good hand", { fs: 6.5, a: "start" }) + tx(110, 38, "pulls up", { fs: 6.5, a: "start" }) + tx(110, 64, "sore hand", { fs: 6.5, a: "start" }) + tx(110, 72, "slides up", { fs: 6.5, a: "start" }) + arrow([56, 64, 56, 50]) + tx(80, 109, "seen from behind", { c: WT, fs: 6.5 });
+  });
+  // pelvic floor for men (same gender-neutral figure)
+  add("pf-quick", "Sitting relaxed, doing quick, strong pelvic floor squeezes (highlighted), letting go fully between each", function () {
+    var s = floor() + chair(16) + pose(seat(26, { hl: 1, hlp: [30, 80] }));
+    [0, 1, 2, 3, 4].forEach(function (i) { var x = 78 + i * 14; s += R(x, 50, 6, 18, 1.5, "#E7C3DA"); });
+    return s + L([[74, 68.5], [150, 68.5]], PS, 1.4) + tx(112, 42, "squeeze · let go", { fs: 7 }) + tx(112, 82, "quick, strong", { fs: 7 });
+  });
+  add("pf-dribble", "Standing after weeing, squeezing the pelvic floor (highlighted) hard to clear the last drops before zipping up", function () {
+    var s = floor() + pose(stand(70, { hl: 1, hlp: [72, 60] }));
+    function drop(x, y) { return '<path d="M' + x + " " + y + "q3 5 0 7q-3 -2 0 -7z" + '" fill="' + AC + '" fill-opacity=".55"/>'; }
+    return s + drop(90, 76) + drop(94, 86) + arrow([84, 80, 86, 70, 80, 63]) + tx(126, 40, "after weeing:", { fs: 7 }) + tx(126, 49, "squeeze hard", { fs: 7 }) + tx(126, 58, "then zip up", { fs: 7 });
+  });
   // ---- page wiring ----
   function svgFor(k) {
     var f = F[k]; if (!f) return "";
