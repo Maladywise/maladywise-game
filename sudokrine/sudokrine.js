@@ -5,10 +5,13 @@
    spell w once solved. Guessing w before finishing (3 wrong guesses allowed) earns a Word bonus.
    Race Iris: a target time per difficulty. World board "sdaily" (today's fastest clean solves) on the Malady Wise counter
    server, used ONLY once the server echoes board === "sdaily" (an older server maps unknown boards to Basil + Clover's "all").
+   Cages (Fri-Sun, 13 Nov to 31 Dec 2026): cages = [{c:[cells], s, m:[label, full], n:[label, full]}]. Killer-sudoku cages:
+   the cells add up to s, no repeats. The label is a famous medical (m) or everyday (n) number; tap it to see s (free, no
+   penalty); all show once done. Cage days show digits by default, with a letter key in the word box so the word still works.
    Normie mode: same puzzles, fruit symbols or everyday words, fun facts, "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", HINTS = 3, GUESSES = 3, LAUNCH = "2026-10-26";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", HINTS = 3, GUESSES = 3, LAUNCH = "2026-10-26";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", NAME = NORMIE ? "Sudokrine (Normie)" : "Sudokrine";
   var root = document.getElementById("skr");
   if (!document.querySelector("link[data-skr]")) {
@@ -40,6 +43,7 @@
   ];
   var SYM = NORMIE ? FRUIT : MED;
   function svg(k) { return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + SYM[k - 1][1] + "</svg>"; }
+  var CG = [], CAGEOF = [], CAGED = false; // cage day: cages, cage index per cell (-1 = none)
   var W = null, LET = null, LINE = [], PADORD = []; // hidden-word day: word {w, d, l}, letters by digit, word-line cells, pad order (A-Z)
   var IRIS = { Easy: 180, Medium: 300, Hard: 720, Genius: 1080, Einstein: 1800 }; // Iris's target times, seconds
 
@@ -48,9 +52,10 @@
     ' <div class="head"><span class="eyebrow" id="skr-eyebrow">Sudokrine</span><span class="badge" id="skr-badge" hidden></span></div>' +
     ' <div class="sbar" id="skr-bar"><span class="timer" id="skr-timer" aria-label="Time">0:00</span><span class="iris" id="skr-iris"></span><span class="hintsleft" id="skr-hl"></span></div>' +
     ' <div class="board" id="skr-board" role="grid" aria-label="Sudokrine grid"></div>' +
+    ' <p class="cgnote" id="skr-cgnote" hidden></p>' +
     ' <div class="msg" id="skr-msg" aria-live="polite"></div>' +
     ' <div class="ctl" id="skr-play">' +
-    '  <form class="wg" id="skr-wg" hidden autocomplete="off"><label for="skr-wgi" id="skr-wgl">Guess the word</label><div class="wgrow"><input id="skr-wgi" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go"><button type="submit" class="wgb">Guess</button></div><p class="wgn" id="skr-wgn" aria-live="polite"></p></form>' +
+    '  <form class="wg" id="skr-wg" hidden autocomplete="off"><label for="skr-wgi" id="skr-wgl">Guess the word</label><div class="wgrow"><input id="skr-wgi" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go"><button type="submit" class="wgb">Guess</button></div><p class="wgn" id="skr-wgn" aria-live="polite"></p><p class="lkey" id="skr-lkey" hidden></p></form>' +
     '  <div class="pad" id="skr-pad"></div>' +
     '  <div class="tbox">' +
     '   <button type="button" class="tool" id="skr-notes" aria-pressed="false"><span class="ti" aria-hidden="true">✏️</span><span>Notes <b id="skr-noteson">off</b></span></button>' +
@@ -58,7 +63,7 @@
     '   <button type="button" class="tool" id="skr-undo"><span class="ti" aria-hidden="true">↶</span><span>Undo</span></button>' +
     '   <button type="button" class="tool" id="skr-hint"><span class="ti" aria-hidden="true">💡</span><span>Hint <b id="skr-hintn">3</b></span></button>' +
     '  </div>' +
-    '  <div class="opts"><label><input type="checkbox" id="skr-nums"> Show numbers instead</label><label><input type="checkbox" id="skr-mis"> Show mistakes</label><button type="button" class="giveup" id="skr-giveup">Give up</button></div>' +
+    '  <div class="opts"><label><input type="checkbox" id="skr-nums"> <span id="skr-numsl">Show numbers instead</span></label><label><input type="checkbox" id="skr-mis"> Show mistakes</label><button type="button" class="giveup" id="skr-giveup">Give up</button></div>' +
     ' </div>' +
     ' <div class="result" id="skr-result" hidden></div>' +
     ' <p class="note" id="skr-next"></p>' +
@@ -81,7 +86,7 @@
   function isLive() { return today === REAL; }
   var SKEY = PFX + "skr-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0] });
   var KEY, st, P = null, n = 9, BR = 3, BC = 3, sol = [], giv = [], sel = -1, notesOn = false, armGive = false;
-  var nums = pref("skr-nums", false), showMis = pref("skr-mistakes", true);
+  var numsPref = pref("skr-nums", false), cageLtr = pref("skr-cage-letters", false), nums = numsPref, showMis = pref("skr-mistakes", true);
   function loadDay() { KEY = PFX + "skr-day-" + today; st = load(KEY, null); }
   loadDay();
 
@@ -110,9 +115,27 @@
   function clashes() {
     var bad = {};
     for (var i = 0; i < n * n; i++) if (st.g[i]) PEERS[i].forEach(function (j) { if (st.g[j] === st.g[i]) { bad[i] = 1; bad[j] = 1; } });
+    CG.forEach(function (c, k) { // killer rule: no repeats in a cage; a full, revealed cage must add up
+      var seen = {}, sum = 0, fullc = true;
+      c.c.forEach(function (i) { var v = st.g[i]; if (!v) { fullc = false; return; } sum += v; if (seen[v] != null) { bad[i] = 1; bad[seen[v]] = 1; } else seen[v] = i; });
+      if (fullc && sum !== c.s && cageShown(k)) c.c.forEach(function (i) { bad[i] = 1; });
+    });
     return bad;
   }
   function solved() { for (var i = 0; i < n * n; i++) if (st.g[i] !== sol[i]) return false; return true; }
+  function cageShown(k) { return st.done || (st.cr || []).indexOf(k) >= 0; }
+  function cageLab(c) { return c[NORMIE ? "n" : "m"]; }
+  function cageEdges(i) { // dotted outline: draw a side where the neighbour is outside the cage, reach across where it's inside
+    var k = CAGEOF[i], p = rc(i), h = "";
+    [["t", p[0] > 0 ? i - n : -1], ["r", p[1] < n - 1 ? i + 1 : -1], ["b", p[0] < n - 1 ? i + n : -1], ["l", p[1] > 0 ? i - 1 : -1]].forEach(function (s) { h += " " + (s[1] >= 0 && CAGEOF[s[1]] === k ? "j" : "") + s[0]; });
+    return '<span class="cgb' + h + '" aria-hidden="true"></span>';
+  }
+  function revealCage(k) {
+    if (k < 0 || !CG[k]) return;
+    var c = CG[k], L = cageLab(c);
+    if (!cageShown(k)) { st.cr = (st.cr || []).concat([k]); save(); }
+    say(L[1] + ": " + c.s + ".");
+  }
   function full() { for (var i = 0; i < n * n; i++) if (!st.g[i]) return false; return true; }
 
   // ---------- render ----------
@@ -133,10 +156,15 @@
       if (!st.done && sel >= 0) { if (i === sel) cls += " sel"; else if (sv && v === sv) cls += " same"; else if (peers(i, sel)) cls += " zone"; }
       if (bad[i] && !giv[i]) cls += " bad"; else if (bad[i]) cls += " badg";
       var onLine = LINE.indexOf(i) >= 0; if (onLine) cls += " wl";
-      var inner = "";
-      if (v) inner = glyph(v);
-      else if (st.n[i]) { inner = '<span class="nts">'; for (var k = 1; k <= n; k++) inner += "<i" + (sv === k && !st.done ? ' class="on"' : "") + ">" + (st.n[i] & (1 << (k - 1)) ? glyph(k) : "") + "</i>"; inner += "</span>"; }
-      var al = "Row " + (p[0] + 1) + ", column " + (p[1] + 1) + (onLine ? ", word line" : "") + ": " + (v ? label(v) + (giv[i] ? " (given)" : "") : "empty");
+      var inner = "", ck = CAGEOF[i];
+      if (ck >= 0) {
+        cls += " cg";
+        inner += cageEdges(i);
+        if (CG[ck].c[0] === i) { var L = cageLab(CG[ck]); var run = 1; while (CAGEOF[i + run] === ck && (i + run) % n) run++; inner += '<span class="cgl' + (cageShown(ck) ? " on" : "") + '" style="--run:' + run + '" data-c="' + ck + '" title="' + esc(L[1]) + '">' + (cageShown(ck) ? "<b>" + CG[ck].s + "</b> " : "") + esc(L[0]) + "</span>"; }
+      }
+      if (v) inner += glyph(v);
+      else if (st.n[i]) { inner += '<span class="nts">'; for (var k = 1; k <= n; k++) inner += "<i" + (sv === k && !st.done ? ' class="on"' : "") + ">" + (st.n[i] & (1 << (k - 1)) ? glyph(k) : "") + "</i>"; inner += "</span>"; }
+      var al = "Row " + (p[0] + 1) + ", column " + (p[1] + 1) + (onLine ? ", word line" : "") + (ck >= 0 ? ", cage " + cageLab(CG[ck])[0] + (cageShown(ck) ? " " + CG[ck].s : "") : "") + ": " + (v ? label(v) + (giv[i] ? " (given)" : "") : "empty");
       h += '<button type="button" class="' + cls + '" data-i="' + i + '" role="gridcell" aria-label="' + al + '"' + (i === sel ? ' aria-selected="true"' : "") + ">" + inner + "</button>";
     }
     b.innerHTML = h;
@@ -162,7 +190,9 @@
     row.hidden = !!st.wb || left <= 0;
     var tried = wrong.length ? ' <span class="wgx">' + wrong.map(function (w) { return "<s>" + esc(w) + "</s>"; }).join(" ") + "</span>" : "";
     nt.innerHTML = st.wb ? "🔤 <b>" + esc(W.w) + "</b>. Now finish the grid." : left <= 0 ? "No guesses left. Finish the grid to see the word." + tried
-      : "The shaded line spells it. Guess before you finish for a Word bonus. " + left + (left === 1 ? " guess" : " guesses") + " left, free." + tried;
+      : "The shaded line spells it" + (nums ? ", using the letter key" : "") + ". Guess before you finish for a Word bonus. " + left + (left === 1 ? " guess" : " guesses") + " left, free." + tried;
+    var lk = $("lkey"), show = nums && !st.wb && left > 0; lk.hidden = !show;
+    if (show) { var h = '<span class="lkt">Letter key</span>'; for (var k = 1; k <= n; k++) h += "<span>" + k + "<b>" + LET[k - 1] + "</b></span>"; lk.innerHTML = h; }
   }
   function guess(raw) {
     if (!W || !P || st.done || st.wb) return;
@@ -185,6 +215,8 @@
     $("timer").textContent = fmt(st.t); paintIris();
     $("play").hidden = st.done;
     paintBoard(); if (!st.done) paintPad(); renderResult();
+    var cn = $("cgnote"); cn.hidden = !CAGED || st.done;
+    if (CAGED) cn.textContent = "Dotted cages add up to the famous " + (NORMIE ? "number" : "medical number") + " on their label, with no repeats. Tap a label to see its number (free).";
   }
   function hintWord(h) { return !h ? "no hints" : h === 1 ? "1 hint" : h + " hints"; }
   function renderResult() {
@@ -354,14 +386,22 @@
   // ---------- input wiring ----------
   $("board").addEventListener("click", function (e) {
     var c = e.target.closest(".cell"); if (!c || !P || st.done) return;
-    sel = +c.getAttribute("data-i"); armGive = false; paint();
+    sel = +c.getAttribute("data-i"); armGive = false;
+    var lab = e.target.closest(".cgl"), ck = CAGEOF[sel];
+    if (lab) revealCage(+lab.getAttribute("data-c"));
+    else if (ck >= 0) { var L = cageLab(CG[ck]); say(cageShown(ck) ? L[1] + ": " + CG[ck].s + "." : "Cage: " + L[1] + ". Tap its label to see the number."); }
+    paint();
   });
   $("pad").addEventListener("click", function (e) { var b = e.target.closest(".key"); if (b) input(+b.getAttribute("data-k")); });
   $("notes").onclick = function () { notesOn = !notesOn; paintPad(); paintBoard(); };
   $("wg").addEventListener("submit", function (e) { e.preventDefault(); guess($("wgi").value); });
   $("erase").onclick = erase; $("undo").onclick = undo; $("hint").onclick = hint; $("giveup").onclick = giveUp;
-  $("nums").checked = nums; $("mis").checked = showMis;
-  $("nums").onchange = function () { nums = this.checked; setPref("skr-nums", nums); paint(); };
+  $("mis").checked = showMis;
+  function setNums() { // cage days default to digits (cages are sums); the box then offers letters instead
+    var alt = CAGED && LET; nums = alt ? !cageLtr : numsPref;
+    $("nums").checked = alt ? cageLtr : numsPref; $("numsl").textContent = alt ? "Show letters instead" : "Show numbers instead";
+  }
+  $("nums").onchange = function () { if (CAGED && LET) { cageLtr = this.checked; setPref("skr-cage-letters", cageLtr); } else { numsPref = this.checked; setPref("skr-nums", numsPref); } setNums(); paint(); };
   $("mis").onchange = function () { showMis = this.checked; setPref("skr-mistakes", showMis); paint(); };
   document.addEventListener("keydown", function (e) {
     var t = e.target && e.target.tagName; if (t === "INPUT" || t === "TEXTAREA") return;
@@ -380,6 +420,7 @@
     if (k === "Backspace" || k === "Delete" || k === "0") { erase(); e.preventDefault(); return; }
     if (k === "n" || k === "N") { notesOn = !notesOn; paintPad(); paintBoard(); return; }
     if (k === "u" || k === "U") { undo(); return; }
+    if ((k === "c" || k === "C") && CAGED && !(LET && !nums && LET.indexOf("C") >= 0) && sel >= 0 && CAGEOF[sel] >= 0) { revealCage(CAGEOF[sel]); paint(); return; }
   });
   document.addEventListener("visibilitychange", function () { if (document.hidden && P && st && !st.done) put(KEY, st); });
 
@@ -391,11 +432,11 @@
   }
   function prevMonth(m) { var p = m.split("-").map(Number); p[1]--; if (!p[1]) { p[1] = 12; p[0]--; } return p[0] + "-" + ("0" + p[1]).slice(-2); }
   function show(date) {
-    today = date; loadDay(); P = null; W = null; LET = null; LINE = []; sel = -1; notesOn = false; armGive = false; say("");
+    today = date; loadDay(); P = null; W = null; LET = null; LINE = []; CG = []; CAGEOF = []; CAGED = false; sel = -1; notesOn = false; armGive = false; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) {
-        $("play").hidden = true; $("result").hidden = true; $("badge").hidden = true; $("bar").hidden = true;
+        $("play").hidden = true; $("result").hidden = true; $("badge").hidden = true; $("bar").hidden = true; $("cgnote").hidden = true;
         $("board").className = "board empty";
         $("board").innerHTML = '<p class="empty">' + (date < LAUNCH ? "Sudokrine opens Monday 26 October. " + (NORMIE ? "The fruit bowl is filling up." : "The glands are warming up.") : "Today’s grid is still being titrated. Back tomorrow.") + "</p>";
         renderArchive(); return;
@@ -403,6 +444,9 @@
       $("bar").hidden = false;
       n = P.size; BR = P.box[0]; BC = P.box[1]; buildPeers();
       W = P.word ? P.word[NORMIE ? "n" : "m"] : null; LET = W ? W.l.split("") : null; LINE = W ? P.word.cells : [];
+      CG = P.cages || []; CAGED = CG.length > 0; for (var ci = 0; ci < n * n; ci++) CAGEOF.push(-1);
+      CG.forEach(function (c, k) { c.c.forEach(function (i) { CAGEOF[i] = k; }); });
+      setNums();
       sol = P.solution.split("").map(Number); giv = P.puzzle.split("").map(function (c) { return c !== "0"; });
       if (!st || !st.g || st.g.length !== n * n) st = { g: P.puzzle.split("").map(Number), n: P.puzzle.split("").map(function () { return 0; }), t: 0, hints: 0, hl: [], undo: [], done: false, win: false };
       if (!st.undo) st.undo = [];

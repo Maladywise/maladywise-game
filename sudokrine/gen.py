@@ -5,6 +5,7 @@ Usage:
   python3 sudokrine/gen.py [START END]   # default 2026-10-26 2026-12-31; writes sudokrine/puzzles/YYYY-MM.json
   python3 sudokrine/gen.py --check        # re-verify every puzzle file (unique solution + logical grade + hidden word)
   python3 sudokrine/gen.py --words START END   # add or refresh the hidden-word layer on existing entries (grids untouched)
+  python3 sudokrine/gen.py --cages START END   # add or refresh medical-number cages on existing entries (grids untouched)
 
 Every puzzle is deterministic from its date (seeded PRNG), has exactly one solution (checked by a
 brute-force counter) and is graded by a human-style logical solver. Difficulty by weekday:
@@ -17,11 +18,15 @@ Entry: {date, number, difficulty, size, box:[rows, cols], puzzle, solution, clue
 puzzle/solution are strings of digits (0 = empty); digit k shows as symbol k (Medical icon or Normie fruit).
 From WORD_START entries also carry "word": {line, cells, m: {w, d, l}, n: {w, d, l}}: digit k shows as letter l[k-1]
 (Medical m, Normie n), and the cells of the named line (rK, cK, d = main diagonal, a = anti-diagonal) spell w in order.
+Fri-Sun from CAGE_START to CAGE_END entries also carry "cages": [{c: [cells], s: sum, m: [label, full], n: [label, full]}]:
+killer-sudoku cages whose solution digits add up to s (no repeats), labelled with a well-known medical (m) or
+everyday (n) number. Givens are unchanged, so the cages are a bonus head start and uniqueness/grade still hold.
 """
 import datetime as dt
 import json
 import os
 import random
+import re
 import sys
 from itertools import combinations
 
@@ -352,6 +357,183 @@ def verify_word(e):
         assert "".join(lt[sol[i] - 1] for i in cells) == w[k]["w"], "word line does not spell %s" % w[k]["w"]
         hit = rude_hit(g, sol, lt, cells)
         assert not hit, "rude string %r with %s" % (hit, w[k]["w"])
+
+
+# ---------- medical-number cages (Fri-Sun, CAGE_START to CAGE_END) ----------
+CAGE_START, CAGE_END = "2026-11-13", "2026-12-31"
+CAGE_MAX = {2: 17, 3: 24, 4: 30}
+CAGE_MIN = {2: 3, 3: 6, 4: 10}
+LABEL_MAX = {2: 12, 3: 16}  # label length by how many cells it can run across (2, or 3+): it sits along the cage's top row
+# sum: [(short label, full name)]. Well-known, textbook numbers only; no ranges, nothing shaky.
+CAGE_MED = {
+    3: [("Min GCS", "Lowest Glasgow Coma Scale score"), ("Ossicles", "Bones in the middle ear"), ("R lung lobes", "Lobes of the right lung"),
+        ("Hamstrings", "Hamstring muscles"), ("Salivary pairs", "Pairs of major salivary glands")],
+    4: [("Heart chambers", "Chambers of the heart"), ("Heart valves", "Valves in the heart"), ("Rotator cuff", "Rotator cuff muscles"),
+        ("Quadriceps", "Muscles in the quadriceps"), ("ABO groups", "ABO blood groups")],
+    5: [("Lumbar verts", "Lumbar vertebrae"), ("Sacral verts", "Vertebrae fused into the sacrum"), ("Metacarpals", "Metacarpal bones in one hand"),
+        ("Apgar signs", "Signs scored in the Apgar test"), ("CURB-65 max", "Highest CURB-65 score")],
+    6: [("Limb leads", "Limb leads on a 12-lead ECG"), ("Chest leads", "Chest (precordial) leads on an ECG")],
+    7: [("Cervical verts", "Cervical vertebrae"), ("Tarsal bones", "Tarsal bones in one foot")],
+    8: [("Carpal bones", "Carpal bones in one wrist"), ("Liver segments", "Couinaud segments of the liver"), ("Cranial bones", "Bones of the cranium")],
+    10: [("Apgar max", "Highest Apgar score")],
+    12: [("Cranial nerves", "Pairs of cranial nerves"), ("Rib pairs", "Pairs of ribs"), ("Thoracic verts", "Thoracic vertebrae"), ("ECG leads", "Leads on a standard ECG")],
+    14: [("Facial bones", "Bones of the face"), ("Finger bones", "Phalanges in one hand"), ("Toe bones", "Phalanges in one foot")],
+    15: [("Max GCS", "Highest Glasgow Coma Scale score")],
+    16: [("Teeth per jaw", "Adult teeth in each jaw")],
+    20: [("Baby teeth", "Primary (baby) teeth"), ("Amino acids", "Standard amino acids in the genetic code")],
+    24: [("Ribs", "Ribs in the human body")],
+    26: [("Foot bones", "Bones in one foot")],
+    28: [("Cycle days", "Days in a textbook menstrual cycle")],
+}
+CAGE_NORM = {
+    3: [("Musketeers", "The Musketeers in Dumas’s novel"), ("Primary colours", "Primary colours of paint"), ("Little pigs", "Little pigs in the fairy tale")],
+    4: [("Seasons", "Seasons in a year"), ("Violin strings", "Strings on a violin"), ("Card suits", "Suits in a deck of cards")],
+    5: [("Oceans", "Oceans of the world"), ("Olympic rings", "Rings on the Olympic flag")],
+    6: [("Guitar strings", "Strings on a guitar"), ("Insect legs", "Legs on an insect"), ("Faces on a die", "Faces on a standard die"), ("Hexagon sides", "Sides of a hexagon")],
+    7: [("Days in a week", "Days in a week"), ("Continents", "Continents"), ("Netball team", "Players on a netball team"), ("Rainbow colours", "Colours of the rainbow")],
+    8: [("Spider legs", "Legs on a spider"), ("Planets", "Planets in our solar system"), ("Octopus arms", "Arms on an octopus")],
+    10: [("Bowling pins", "Pins in tenpin bowling"), ("Years in decade", "Years in a decade")],
+    12: [("Months", "Months in a year"), ("Zodiac signs", "Signs of the zodiac"), ("Dozen", "How many in a dozen")],
+    14: [("Fortnight (days)", "Days in a fortnight")],
+    15: [("Rugby union team", "Players on a rugby union team")],
+    16: [("Chess pieces", "Chess pieces each player starts with")],
+    20: [("A score", "How many in ‘a score’")],
+    24: [("Hours in a day", "Hours in a day")],
+    26: [("Alphabet", "Letters in the English alphabet")],
+    28: [("Days in Feb", "Days in February in most years")],
+}
+for _pool in (CAGE_MED, CAGE_NORM):
+    for _s, _ls in _pool.items():
+        for _a, _b in _ls:
+            assert len(_a) <= LABEL_MAX[3] and not re.search(r"(?<![\d-])%d(?!\d)" % _s, _a), _a  # the label never shows its number
+
+
+def cage_day(date):
+    return CAGE_START <= date <= CAGE_END and dt.date.fromisoformat(date).weekday() >= 4
+
+
+def cage_ok(g, cells):
+    """2-4 cells, orthogonally connected, label cell (lowest index) has its right-hand neighbour in the cage."""
+    n = g.n
+    if not 2 <= len(cells) <= 4 or len(set(cells)) != len(cells):
+        return False
+    a = min(cells)
+    if a % n == n - 1 or a + 1 not in cells:
+        return False
+    s, seen, stack = set(cells), {a}, [a]
+    while stack:
+        x = stack.pop()
+        for y in (x - n, x + n, x - 1 if x % n else -1, x + 1 if x % n < n - 1 else -1):
+            if y in s and y not in seen:
+                seen.add(y)
+                stack.append(y)
+    return seen == s
+
+
+def label_run(g, cells):
+    """Cells in a row from the label cell rightwards: the label may span them all."""
+    a, run = min(cells), 1
+    while (a + run) in cells and (a + run) % g.n:
+        run += 1
+    return run
+
+
+def label_fits(lab, run):
+    return len(lab[0]) <= LABEL_MAX[min(run, 3)]
+
+
+def nbrs(g, x):
+    n = g.n
+    return [y for y in (x - n, x + n, x - 1 if x % n else -1, x + 1 if x % n < n - 1 else -1) if 0 <= y < g.N]
+
+
+def add_cages(e):
+    """Add 3-6 medical-number cages to a Fri-Sun entry (more on Einstein day). Deterministic from the date."""
+    e.pop("cages", None)
+    if not cage_day(e["date"]):
+        return e
+    g = GEOS[e["size"]]
+    sol = [int(x) for x in e["solution"]]
+    puz = [int(x) for x in e["puzzle"]]
+    line = set(e["word"]["cells"]) if e.get("word") else set()
+    rng = random.Random("sudokrine-cages|" + e["date"])
+    want = 8 if e["difficulty"] == "Einstein" else rng.randint(3, 6)
+    for attempt in range(400):
+        used, cages, mlab, nlab = set(), [], set(), set()
+        block = set(line) | {i for i in range(g.N) if puz[i]}
+        tries = 0
+        while len(cages) < want and tries < 600:
+            tries += 1
+            a = rng.randrange(g.N)
+            if a % g.n == g.n - 1 or a in block or a + 1 in block:
+                continue
+            size = rng.choice([2, 2, 3, 3, 3, 4, 4])
+            cells = [a, a + 1]
+            while len(cells) < size:
+                opts = [y for x in cells for y in nbrs(g, x) if y > a and y not in cells and y not in block]
+                if not opts:
+                    break
+                cells.append(rng.choice(opts))
+            if len(cells) != size or not cage_ok(g, cells):
+                continue
+            vals = [sol[i] for i in cells]
+            if len(set(vals)) != len(vals):
+                continue
+            s = sum(vals)
+            run = label_run(g, cells)
+            mo = [x for x in CAGE_MED.get(s, []) if x[0] not in mlab and label_fits(x, run)]
+            no = [x for x in CAGE_NORM.get(s, []) if x[0] not in nlab and label_fits(x, run)]
+            if not mo or not no or rng.random() > min(1, len(CAGE_MED[s]) / 3):  # spread the labels: single-label sums are rarer
+                continue
+            m, nn = rng.choice(mo), rng.choice(no)
+            cells = sorted(cells)
+            cages.append({"c": cells, "s": s, "m": list(m), "n": list(nn)})
+            mlab.add(m[0])
+            nlab.add(nn[0])
+            block |= set(cells)
+            for x in cells:  # keep cages apart so the dotted outlines never touch
+                block |= set(nbrs(g, x))
+        if len(cages) == want:
+            e["cages"] = sorted(cages, key=lambda c: c["c"][0])
+            return e
+    raise SystemExit("no cage layout for %s" % e["date"])
+
+
+def verify_cages(e):
+    cg = e.get("cages")
+    if not cage_day(e["date"]):
+        assert cg is None, "cages outside the Fri-Sun cage window"
+        return
+    assert cg, "missing cages"
+    want = (7, 10) if e["difficulty"] == "Einstein" else (3, 6)
+    assert want[0] <= len(cg) <= want[1], "wrong number of cages: %d" % len(cg)
+    g = GEOS[e["size"]]
+    sol = [int(x) for x in e["solution"]]
+    puz = [int(x) for x in e["puzzle"]]
+    line = set(e["word"]["cells"]) if e.get("word") else set()
+    seen, ml, nl = set(), set(), set()
+    for c in cg:
+        cells = c["c"]
+        assert cage_ok(g, cells), "cage %s not 2-4 connected cells with the label on a horizontal pair" % cells
+        assert not seen & set(cells), "cages overlap"
+        seen |= set(cells)
+        assert not line & set(cells), "cage on the word line"
+        assert not any(puz[i] for i in cells), "cage over a given"
+        vals = [sol[i] for i in cells]
+        assert len(set(vals)) == len(vals), "repeated digit in cage %s" % cells
+        assert sum(vals) == c["s"], "cage %s sums to %d, label says %d" % (cells, sum(vals), c["s"])
+        assert CAGE_MIN[len(cells)] <= c["s"] <= CAGE_MAX[len(cells)], "impossible cage sum"
+        assert tuple(c["m"]) in CAGE_MED.get(c["s"], []), "medical label %r is not %d" % (c["m"], c["s"])
+        assert tuple(c["n"]) in CAGE_NORM.get(c["s"], []), "everyday label %r is not %d" % (c["n"], c["s"])
+        assert c["m"][0] not in ml and c["n"][0] not in nl, "label used twice"
+        assert label_fits(c["m"], label_run(g, cells)) and label_fits(c["n"], label_run(g, cells)), "label too long for its cage"
+        ml.add(c["m"][0])
+        nl.add(c["n"][0])
+    for a in cg:
+        for b in cg:
+            if a is not b:
+                assert not any(y in b["c"] for x in a["c"] for y in nbrs(g, x)), "cages touch"
+    # cages never change the answer: the givens alone are still unique (checked in verify)
 
 
 # ---------- geometry ----------
@@ -787,6 +969,7 @@ def verify(e):
     want = {"Easy": (6, {1}), "Medium": (6, {1, 2, 3}), "Hard": (9, {2}), "Genius": (9, {3, 4}), "Einstein": (9, {5})}[e["difficulty"]]
     assert n == want[0] and tier in want[1], "grade %d does not fit %s" % (tier, e["difficulty"])
     verify_word(e)
+    verify_cages(e)
     return tier, used
 
 
@@ -803,15 +986,17 @@ def main():
                     tier, used = verify(e)
                     assert e["number"] == number(e["date"]) and e["difficulty"] == difficulty(e["date"])
                     wd = e.get("word")
-                    print("%s #%-3d %-8s %dx%d clues %2d  tier %d  %s%s" % (e["date"], e["number"], e["difficulty"], e["size"], e["size"], e["clues"], tier, ", ".join(sorted(used, key=lambda k: TIER[k])),
-                                                                         "  [%s %s / %s]" % (wd["line"], wd["m"]["w"], wd["n"]["w"]) if wd else ""))
+                    print("%s #%-3d %-8s %dx%d clues %2d  tier %d  %s%s%s" % (e["date"], e["number"], e["difficulty"], e["size"], e["size"], e["clues"], tier, ", ".join(sorted(used, key=lambda k: TIER[k])),
+                                                                           "  [%s %s / %s]" % (wd["line"], wd["m"]["w"], wd["n"]["w"]) if wd else "",
+                                                                           "  cages " + " ".join("%s=%d" % (c["m"][0], c["s"]) for c in e["cages"]) if e.get("cages") else ""))
                 except AssertionError as x:
                     bad += 1
                     print("FAIL", e["date"], x)
         print("OK" if not bad else "%d FAILED" % bad)
         sys.exit(1 if bad else 0)
-    if args and args[0] == "--words":
-        start, end = (args[1:] + [WORD_START, "2026-12-31"])[:2]
+    if args and args[0] in ("--words", "--cages"):
+        cg = args[0] == "--cages"
+        start, end = (args[1:] + [CAGE_START if cg else WORD_START, "2026-12-31"])[:2]
         for f in sorted(os.listdir(out_dir)):
             if not f.endswith(".json"):
                 continue
@@ -820,10 +1005,15 @@ def main():
             hit = False
             for e in lst:
                 if start <= e["date"] <= end and e["date"] >= WORD_START:
-                    add_word(e)
+                    if cg:
+                        add_cages(e)
+                    else:
+                        add_word(e)
+                        add_cages(e)  # the word line moves, so re-place the cages around it
                     verify(e)
                     hit = True
-                    print(e["date"], e["size"], e["word"]["line"], e["word"]["m"]["w"], e["word"]["n"]["w"], flush=True)
+                    print(e["date"], e["size"], e["word"]["line"], e["word"]["m"]["w"], e["word"]["n"]["w"],
+                          " ".join("%s=%d" % (c["m"][0], c["s"]) for c in e.get("cages", [])), flush=True)
             if hit:
                 with open(path, "w") as fh:
                     fh.write("[\n" + ",\n".join(json.dumps(x, ensure_ascii=False) for x in lst) + "\n]\n")
@@ -843,6 +1033,7 @@ def main():
              "clues": sum(1 for x in puz if x), "techniques": sorted(used, key=lambda k: (TIER[k], k)),
              "fact": pick_fact(FACTS, num, "m"), "nfact": pick_fact(NFACTS, num, "n")}
         add_word(e)
+        add_cages(e)
         verify(e)
         print(ds, diff, e["clues"], e["techniques"], flush=True)
         months.setdefault(ds[:7], []).append(e)
