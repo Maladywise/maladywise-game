@@ -5,7 +5,7 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "HIV prevention tools",
+    "label": "Prevention tools",
     "level": 1,
     "words": [
      "PREP",
@@ -15,7 +15,7 @@
     ]
    },
    {
-    "label": "Does NOT spread HIV",
+    "label": "Myths: not how it spreads",
     "level": 2,
     "words": [
      "SALIVA",
@@ -25,7 +25,7 @@
     ]
    },
    {
-    "label": "Body fluids that can carry HIV",
+    "label": "Fluids that can carry a blood-borne virus",
     "level": 3,
     "words": [
      "BLOOD",
@@ -240,7 +240,7 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Finnish health words",
+    "label": "Health words in another language",
     "level": 1,
     "words": [
      "LÄÄKÄRI",
@@ -260,7 +260,7 @@
     ]
    },
    {
-    "label": "Finnish disease heritage",
+    "label": "Rare inherited diseases from one small nation",
     "level": 3,
     "words": [
      "CONGENITAL NEPHROSIS",
@@ -270,7 +270,7 @@
     ]
    },
    {
-    "label": "Hidden FIN",
+    "label": "Hidden fish part (FIN)",
     "level": 4,
     "words": [
      "FINASTERIDE",
@@ -428,7 +428,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Discoveries with a Medicine Nobel",
+    "label": "Discoveries that won in Stockholm",
     "level": 1,
     "words": [
      "H. PYLORI",
@@ -448,7 +448,7 @@
     ]
    },
    {
-    "label": "Chemistry Nobels with a health link",
+    "label": "Chemistry breakthroughs with a health link",
     "level": 3,
     "words": [
      "CRISPR",
@@ -458,7 +458,7 @@
     ]
    },
    {
-    "label": "Homophones of prize words",
+    "label": "Homophones of award words",
     "level": 4,
     "words": [
      "MEDDLE",
@@ -589,7 +589,7 @@
     ]
    },
    {
-    "label": "Defibrillation pioneers",
+    "label": "Resuscitation pioneers",
     "level": 3,
     "words": [
      "BECK",
@@ -1039,7 +1039,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Transplant immunosuppressants",
+    "label": "Anti-rejection drugs",
     "level": 1,
     "words": [
      "TACROLIMUS",
@@ -1059,7 +1059,7 @@
     ]
    },
    {
-    "label": "Organ transplant pioneers",
+    "label": "Surgical pioneers",
     "level": 3,
     "words": [
      "MURRAY",
@@ -1180,7 +1180,7 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "The Curie family",
+    "label": "A famous scientific family",
     "level": 1,
     "words": [
      "MARIE",
@@ -1190,7 +1190,7 @@
     ]
    },
    {
-    "label": "Radioactive elements",
+    "label": "Unstable elements",
     "level": 2,
     "words": [
      "RADIUM",

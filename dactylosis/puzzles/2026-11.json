@@ -133,11 +133,11 @@
   "date": "2026-11-14",
   "number": 18,
   "difficulty": "Hard",
-  "word": "DIABETES",
+  "word": "GLUCAGON",
   "ms": 850,
-  "clue": "Condition where blood glucose runs too high.",
-  "why": "Diabetes means the body can’t make enough insulin or can’t use it well, so blood glucose rises.",
-  "pearl": "World Diabetes Day is 14 November, the birthday of Frederick Banting, who co-discovered insulin."
+  "clue": "Pancreatic hormone that raises blood glucose, the opposite of insulin.",
+  "why": "Glucagon comes from the alpha cells of the pancreatic islets. It tells the liver to release stored glucose.",
+  "pearl": "A glucagon injection or nasal spray can rescue someone with a severe hypo who can’t swallow."
  },
  {
   "date": "2026-11-15",

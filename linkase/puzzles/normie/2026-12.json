@@ -18,11 +18,11 @@
   "difficulty": "Medium",
   "chain": [
    "SWEET",
-   "HEART",
-   "LAND",
-   "LINE",
-   "DANCE",
-   "FLOOR"
+   "TOOTH",
+   "BRUSH",
+   "FIRE",
+   "ESCAPE",
+   "ROOM"
   ]
  },
  {
@@ -121,12 +121,12 @@
   "number": 48,
   "difficulty": "Medium",
   "chain": [
-   "NOBEL",
-   "PRIZE",
-   "MONEY",
-   "BELT",
-   "BUCKLE",
-   "UP"
+   "GOLD",
+   "FISH",
+   "BOWL",
+   "CUT",
+   "GLASS",
+   "HOUSE"
   ]
  },
  {
@@ -161,11 +161,11 @@
   "difficulty": "Genius",
   "chain": [
    "HIGH",
-   "JUMP",
-   "START",
-   "BUTTON",
-   "MUSHROOM",
-   "SOUP"
+   "TIDE",
+   "POOL",
+   "CUE",
+   "BALL",
+   "GOWN"
   ]
  },
  {
@@ -213,11 +213,11 @@
   "difficulty": "Medium",
   "chain": [
    "FIRST",
-   "FLIGHT",
-   "DECK",
-   "CHAIR",
-   "MAN",
-   "POWER"
+   "CLASS",
+   "MATE",
+   "SHIP",
+   "SHAPE",
+   "SHIFTER"
   ]
  },
  {
@@ -387,11 +387,11 @@
   "difficulty": "Medium",
   "chain": [
    "PAPER",
-   "TIGER",
-   "LILY",
-   "PAD",
-   "LOCK",
-   "SMITH"
+   "ROUND",
+   "ABOUT",
+   "FACE",
+   "PAINT",
+   "BRUSH"
   ]
  },
  {
@@ -399,12 +399,12 @@
   "number": 69,
   "difficulty": "Medium",
   "chain": [
-   "NEW",
-   "YEAR",
-   "END",
-   "GAME",
-   "NIGHT",
-   "CLUB"
+   "COUNT",
+   "DOWN",
+   "STAIRS",
+   "WELL",
+   "SPRING",
+   "ROLL"
   ]
  }
 ]

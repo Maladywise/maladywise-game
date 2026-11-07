@@ -82,13 +82,13 @@
     ]
    },
    {
-    "label": "___ heart",
+    "label": "___beat",
     "level": 4,
     "words": [
-     "LION",
-     "SWEET",
-     "BRAVE",
-     "PURPLE"
+     "DRUM",
+     "OFF",
+     "UP",
+     "DEAD"
     ]
    }
   ]
@@ -203,13 +203,13 @@
     ]
    },
    {
-    "label": "Types of soil",
+    "label": "Animals that dig burrows",
     "level": 2,
     "words": [
-     "SILT",
-     "LOAM",
-     "PEAT",
-     "CHALK"
+     "MOLE",
+     "WOMBAT",
+     "BADGER",
+     "AARDVARK"
     ]
    },
    {
@@ -260,7 +260,7 @@
     ]
    },
    {
-    "label": "From Finland",
+    "label": "Nordic, but not Scandinavian",
     "level": 3,
     "words": [
      "NOKIA",
@@ -428,7 +428,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "Nobel Prize categories",
+    "label": "Fields of study",
     "level": 1,
     "words": [
      "PHYSICS",
@@ -438,7 +438,7 @@
     ]
    },
    {
-    "label": "Literature Nobel winners",
+    "label": "Literary greats",
     "level": 2,
     "words": [
      "DYLAN",
@@ -604,7 +604,7 @@
     "words": [
      "ROPE",
      "SUIT",
-     "START",
+     "SHIP",
      "JET"
     ]
    }
@@ -720,7 +720,7 @@
     ]
    },
    {
-    "label": "Beethoven hits",
+    "label": "Classical hits by one composer",
     "level": 2,
     "words": [
      "FIDELIO",
@@ -851,7 +851,7 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "A Christmas Carol's living characters",
+    "label": "Characters who aren\u2019t ghosts",
     "level": 1,
     "words": [
      "SCROOGE",
@@ -1069,13 +1069,13 @@
     ]
    },
    {
-    "label": "Twin ___",
+    "label": "Copy___",
     "level": 4,
     "words": [
-     "PEAKS",
-     "TOWN",
-     "CITIES",
-     "SISTERS"
+     "CAT",
+     "WRITER",
+     "RIGHT",
+     "BOOK"
     ]
    }
   ]
@@ -1153,7 +1153,7 @@
     ]
    },
    {
-    "label": "Isaac Newton (born Christmas Day)",
+    "label": "One scientist\u2019s big ideas",
     "level": 3,
     "words": [
      "APPLE",
@@ -1398,13 +1398,13 @@
     ]
    },
    {
-    "label": "Tiger ___",
+    "label": "Iron ___",
     "level": 4,
     "words": [
-     "LILY",
-     "SHARK",
-     "MOTH",
-     "BALM"
+     "MAN",
+     "MAIDEN",
+     "CURTAIN",
+     "AGE"
     ]
    }
   ]
@@ -1415,7 +1415,7 @@
   "difficulty": "Medium",
   "groups": [
    {
-    "label": "New Year's Eve traditions, no drinks",
+    "label": "Midnight rituals, no drinks",
     "level": 1,
     "words": [
      "FIREWORKS",

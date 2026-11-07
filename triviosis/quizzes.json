@@ -4818,12 +4818,12 @@
     "e": "Medicine taken ahead of time that greatly lowers the risk of getting HIV."
    },
    {
-    "q": "In 1991, the red ribbon was created by?",
-    "a": "Artists in the New York group Visual AIDS",
+    "q": "The red ribbon, first worn in 1991, was created by an artists\u2019 group in which city?",
+    "a": "New York",
     "w": [
-     "The World Health Organization",
-     "A London hospital",
-     "The US government"
+     "London",
+     "San Francisco",
+     "Paris"
     ],
     "e": "They chose red for passion and blood, and left it free of copyright so anyone could wear it."
    },
@@ -5024,12 +5024,12 @@
     "e": "Campaigners in Berkeley fought for ramps, and then along came prams, trolleys and bikes."
    },
    {
-    "q": "In 1977, disability campaigner Judy Heumann helped lead an occupation of a San Francisco federal building for almost a month over?",
-    "a": "Enforcing disability rights law",
+    "q": "In 1977, Judy Heumann helped lead a sit-in of almost a month at a San Francisco federal building to force the signing of rules for which law?",
+    "a": "Section 504 of the Rehabilitation Act",
     "w": [
-     "Funding for a new hospital",
-     "Free wheelchair repair",
-     "Parking at the airport"
+     "Title IX of the Education Amendments",
+     "The Social Security Act",
+     "The Civil Rights Act of 1964"
     ],
     "e": "The Section 504 sit-in. They stayed until the regulations were signed, helped by meals from the Black Panthers."
    },
@@ -6077,8 +6077,8 @@
     "q": "Belfast cardiologist Frank Pantridge changed emergency care in the 1960s by?",
     "a": "Putting a portable defibrillator in an ambulance",
     "w": [
-     "Inventing coronary angioplasty",
-     "Designing the first pacemaker",
+     "Inventing the first AED for airports",
+     "Building the first defibrillator for open-heart surgery",
      "Developing the first ECG"
     ],
     "e": "His first version ran on car batteries. A statue of him stands in Lisburn."
@@ -6607,9 +6607,9 @@
     "q": "New migrants often arrive healthier than people born in their new country. This is known as?",
     "a": "The healthy migrant effect",
     "w": [
-     "The inverse care law",
-     "The Hawthorne effect",
-     "Survivorship bias"
+     "The salmon bias",
+     "The migrant penalty",
+     "The inverse care law"
     ],
     "e": "The advantage tends to fade with time, as diets, stress and access to care catch up."
    },

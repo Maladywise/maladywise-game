@@ -532,7 +532,7 @@
     ]
    },
    {
-    "label": "Pneumonia bugs",
+    "label": "Bacteria grown from sputum",
     "level": 2,
     "words": [
      "KLEBSIELLA",
@@ -616,7 +616,7 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Diabetic ___opathies",
+    "label": "Small- and large-vessel ___opathies",
     "level": 1,
     "words": [
      "RETINOPATHY",
@@ -626,7 +626,7 @@
     ]
    },
    {
-    "label": "Insulin's discovery team",
+    "label": "Toronto lab team, 1921\u201322",
     "level": 2,
     "words": [
      "BANTING",
@@ -693,7 +693,7 @@
     ]
    },
    {
-    "label": "Signs after a crash",
+    "label": "Signs of hidden injury",
     "level": 4,
     "words": [
      "BATTLE",
@@ -767,7 +767,7 @@
     ]
    },
    {
-    "label": "Conditions of prematurity",
+    "label": "NICU acronyms",
     "level": 2,
     "words": [
      "RDS",
@@ -787,13 +787,13 @@
     ]
    },
    {
-    "label": "Cervical ___",
+    "label": "Baby ___",
     "level": 4,
     "words": [
-     "COLLAR",
-     "SPINE",
-     "SCREENING",
-     "RIB"
+     "BOOMER",
+     "SHOWER",
+     "TEETH",
+     "BUMP"
     ]
    }
   ]
@@ -814,7 +814,7 @@
     ]
    },
    {
-    "label": "Superbugs",
+    "label": "Resistant bacteria, by initials",
     "level": 2,
     "words": [
      "MRSA",
@@ -837,7 +837,7 @@
     "label": "___ bug",
     "level": 4,
     "words": [
-     "SUPER",
+     "LITTER",
      "BED",
      "STOMACH",
      "FLU"
@@ -975,13 +975,13 @@
     ]
    },
    {
-    "label": "Hidden greetings",
+    "label": "Hidden LIP",
     "level": 4,
     "words": [
-     "OTHELLO",
-     "CHOLANGITIS",
-     "CHEYNE-STOKES",
-     "SHALLOW"
+     "LIPOMA",
+     "ECLIPSE",
+     "TULIP",
+     "SLIPPED DISC"
     ]
    }
   ]
@@ -992,7 +992,7 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "22q11.2 deletion: another name and key features",
+    "label": "One syndrome: another name and three key features",
     "level": 1,
     "words": [
      "DIGEORGE",
@@ -1227,7 +1227,7 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Nobel-winning advances",
+    "label": "Prize-winning advances (one now regretted)",
     "level": 1,
     "words": [
      "LOBOTOMY",
@@ -1247,7 +1247,7 @@
     ]
    },
    {
-    "label": "Women with a Medicine Nobel",
+    "label": "Women who changed medicine",
     "level": 3,
     "words": [
      "YOUYOU",
@@ -1257,7 +1257,7 @@
     ]
    },
    {
-    "label": "Anagrams of Medicine Nobel winners",
+    "label": "Anagrams of medical greats",
     "level": 4,
     "words": [
      "CHINA",
@@ -1378,7 +1378,7 @@
     ]
    },
    {
-    "label": "Scottish medical pioneers",
+    "label": "Medical pioneers",
     "level": 2,
     "words": [
      "FLEMING",
@@ -1388,7 +1388,7 @@
     ]
    },
    {
-    "label": "Scots health words",
+    "label": "Dialect words for feeling rough",
     "level": 3,
     "words": [
      "BOAK",
@@ -1398,7 +1398,7 @@
     ]
    },
    {
-    "label": "Hiding a Scottish loch",
+    "label": "Hiding a loch",
     "level": 4,
     "words": [
      "WEAKNESS",

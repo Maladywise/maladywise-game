@@ -1329,7 +1329,7 @@
    {
     "kind": "Weird but true",
     "q": "The colossal squid’s eye is about the size of a…",
-    "answer": "Basketball",
+    "answer": "Dinner plate",
     "wrong": [
      "Golf ball",
      "Marble",
@@ -1489,14 +1489,14 @@
    },
    {
     "kind": "Weird but true",
-    "q": "Marmoset monkeys usually give birth to…",
-    "answer": "Twins",
+    "q": "A hummingbird’s heart can beat about how many times a minute?",
+    "answer": "More than 1,000",
     "wrong": [
-     "Triplets",
-     "Single babies",
-     "Litters of eight"
+     "About 60",
+     "About 200",
+     "About 10,000"
     ],
-    "why": "Twins are the norm, and dads and older siblings do much of the carrying."
+    "why": "Tiny bodies burn energy fast. At night, some hummingbirds drop into a torpor and slow it right down to save fuel."
    },
    {
     "kind": "Weird but true",

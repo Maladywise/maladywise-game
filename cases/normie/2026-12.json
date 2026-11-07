@@ -639,35 +639,38 @@
     "date": "2026-12-19",
     "number": 57,
     "difficulty": "Hard",
-    "title": "Bah, humbug",
-    "answer": "Charles Dickens",
+    "title": "Honk if you love Christmas",
+    "answer": "Goose",
     "accept": [
-      "charles dickens",
-      "dickens",
-      "boz",
-      "charles john huffam dickens"
+      "goose",
+      "geese",
+      "gander",
+      "christmas goose",
+      "domestic goose",
+      "grey goose",
+      "greylag goose"
     ],
     "clues": [
       {
-        "t": "At 12 I was sent to label pots in a boot-polish factory while my father sat in a debtors' prison."
+        "t": "Domestic ones of my kind can live for more than 20 years."
       },
       {
-        "t": "I survived the Staplehurst train crash in 1865 and went back for my manuscript."
+        "t": "Roman legend says my ancestors saved the city by honking when invaders crept up at night."
       },
       {
-        "t": "My pet raven, Grip, helped inspire Edgar Allan Poe."
+        "t": "On the ground, a group of us is a gaggle. In the air, it’s a skein."
       },
       {
-        "t": "My stories came out in instalments, and readers queued for each one."
+        "t": "We fly in a V shape, which saves energy for the birds behind."
       },
       {
-        "t": "I wrote Oliver Twist, David Copperfield and Great Expectations."
+        "t": "In a famous fairy tale, one of us lays golden eggs."
       },
       {
-        "t": "In 1843 I gave the world Scrooge, Tiny Tim and A Christmas Carol."
+        "t": "Bob Cratchit’s family ate one of me for Christmas, before Scrooge sent round the prize turkey."
       }
     ],
-    "pearl": "He paid to publish A Christmas Carol himself, and wrote it in about six weeks. The first print run sold out by Christmas Eve."
+    "pearl": "Before turkeys took over, goose was the classic English Christmas dinner. Victorian families often saved up through a ‘goose club’ to afford one."
   },
   {
     "date": "2026-12-20",
@@ -885,35 +888,39 @@
     "date": "2026-12-26",
     "number": 64,
     "difficulty": "Hard",
-    "title": "Family business",
-    "answer": "Irène Joliot-Curie",
+    "title": "Time on your hands",
+    "answer": "Wristwatch",
     "accept": [
-      "irene joliot curie",
-      "irene curie",
-      "joliot curie",
-      "irene joliot"
+      "wristwatch",
+      "wrist watch",
+      "watch",
+      "watches",
+      "luminous watch",
+      "trench watch",
+      "smartwatch",
+      "smart watch"
     ],
     "clues": [
       {
-        "t": "At 17 I worked alongside my mother in World War I, running X-ray stations for wounded soldiers."
+        "t": "Before about 1900, many men thought I was a ladies’ accessory."
       },
       {
-        "t": "My husband and I married in 1926 and both took a double-barrelled name."
+        "t": "Soldiers in World War I made me popular, because fumbling for a pocket version mid-battle was no good."
       },
       {
-        "t": "In 1934 we made ordinary elements radioactive for the first time."
+        "t": "Some versions of me count your steps and check your heart rate."
       },
       {
-        "t": "We shared the 1935 Nobel Prize in Chemistry."
+        "t": "Switzerland and Japan are famous for making me."
       },
       {
-        "t": "My parents had both won a Nobel too, a family record."
+        "t": "In the 1920s my face was painted with glowing paint so you could read me in the dark."
       },
       {
-        "t": "My mother was Marie, the woman who discovered radium."
+        "t": "The women who painted me got very sick. They became known as the Radium Girls."
       }
     ],
-    "pearl": "Her family has won five Nobel Prizes between them, more than any other."
+    "pearl": "Radium paint on watch dials was replaced by safer glowing materials, and today most use non-radioactive paints that soak up light and release it slowly."
   },
   {
     "date": "2026-12-27",

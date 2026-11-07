@@ -363,37 +363,42 @@
   "date": "2026-11-10",
   "number": 25,
   "difficulty": "Easy",
-  "title": "Third pair of glasses",
-  "answer": "Keratoconus",
+  "title": "Something in my eye",
+  "answer": "Corneal abrasion",
   "accept": [
-   "keratoconus",
-   "conical cornea",
-   "cone-shaped cornea",
-   "kc"
+   "corneal abrasion",
+   "abrasion",
+   "scratched cornea",
+   "corneal scratch",
+   "scratch on the cornea",
+   "corneal epithelial defect",
+   "epithelial defect",
+   "abraded cornea"
   ],
   "clues": [
    {
-    "t": "22-year-old woman on her third pair of glasses in three years. None of them last."
+    "t": "31-year-old woman. While pruning the roses yesterday, a branch flicked her right eye."
    },
    {
-    "t": "Her vision is getting blurrier, more in one eye, and street lights have halos and ghost images."
+    "t": "Now it’s watering nonstop and feels like there’s grit she can’t blink out."
    },
    {
-    "t": "She rubs her eyes constantly. She also has eczema and hay fever."
+    "t": "Bright light hurts. She keeps the eye squeezed shut."
    },
    {
-    "t": "The optometrist’s prescription keeps adding more astigmatism."
-   },
-   {
-    "t": "Slit lamp: central cornea is thinned, with a ring of iron deposits around the base of a cone",
+    "t": "Visual acuity: 6/9 right, 6/6 left",
     "d": 1
    },
    {
-    "t": "When she looks down, her lower eyelid bows into a V around the bulging cornea (Munson’s sign)",
+    "t": "Eversion of the upper lid: no foreign body hiding underneath",
+    "d": 1
+   },
+   {
+    "t": "Fluorescein under blue light: a bright green linear streak across the cornea",
     "d": 1
    }
   ],
-  "pearl": "In keratoconus the cornea thins and bulges into a cone, usually starting in the teens or twenties. Eye rubbing and atopy are strong links, and it’s commoner in Down syndrome. Corneal cross-linking uses riboflavin drops and UV light to stiffen the cornea and can halt progression, which is why catching it early matters. Today is World Keratoconus Day."
+  "pearl": "The corneal surface heals fast, usually within a day or two. Lubricant or antibiotic drops help, but never send anaesthetic drops home: they slow healing and hide new damage. Contact lens wearers need cover against Pseudomonas and a low threshold for review. Today is World Keratoconus Day, another condition of the cornea."
  },
  {
   "date": "2026-11-11",
@@ -436,51 +441,43 @@
   "date": "2026-11-12",
   "number": 27,
   "difficulty": "Einstein",
-  "title": "New habits",
-  "answer": "Acute eosinophilic pneumonia",
+  "title": "The pneumonia that never cleared",
+  "answer": "Pulmonary alveolar proteinosis",
   "accept": [
-   "acute eosinophilic pneumonia",
-   "eosinophilic pneumonia",
-   "aep",
-   "acute eosinophilic pneumonitis",
-   "eosinophilic pneumonitis",
-   "idiopathic acute eosinophilic pneumonia",
-   "smoking induced eosinophilic pneumonia",
-   "smoking-induced acute eosinophilic pneumonia",
-   "smoking related eosinophilic pneumonia",
-   "cigarette induced eosinophilic pneumonia",
-   "eosinophilic lung disease",
-   "acute eosinophilic lung disease",
-   "pulmonary eosinophilia",
-   "acute pulmonary eosinophilia",
-   "eosinophilic pneumonia acute",
-   "acute eosinophilic pneumonia aep",
-   "acute eosinophilic pneumonia smoking"
+   "pulmonary alveolar proteinosis",
+   "alveolar proteinosis",
+   "pap",
+   "autoimmune pulmonary alveolar proteinosis",
+   "autoimmune pap",
+   "autoimmune alveolar proteinosis",
+   "pulmonary alveolar phospholipoproteinosis",
+   "alveolar lipoproteinosis",
+   "pulmonary alveolar lipoproteinosis"
   ],
   "clues": [
    {
-    "t": "21-year-old man, fit and well, with 4 days of fever, dry cough and pain on deep breaths."
+    "t": "41-year-old man, a smoker, with eight months of creeping breathlessness and a dry cough."
    },
    {
-    "t": "He's now breathless walking to the bathroom. SpO2 87% on room air."
+    "t": "He’s been treated for ‘pneumonia’ twice. Neither course changed a thing, and he has never had much fever."
    },
    {
-    "t": "Chest X-ray: bilateral hazy shadows and small effusions. Two days of IV ceftriaxone and azithromycin haven't touched it.",
+    "t": "He feels far better than his scans look. Crackles are surprisingly few."
+   },
+   {
+    "t": "CT chest: ground-glass shadows with thickened septa in a ‘crazy-paving’ pattern, sharply cut off from normal lung",
     "d": 1
    },
    {
-    "t": "Full blood count: neutrophils up, eosinophils normal. Influenza, COVID-19 and Legionella tests negative.",
+    "t": "Bronchoalveolar lavage: thick, milky fluid. Cytology: PAS-positive material filling the alveoli",
     "d": 1
    },
    {
-    "t": "Three weeks ago, on a gap-year trip, he started smoking for the first time."
-   },
-   {
-    "t": "Bronchoalveolar lavage: 42% eosinophils. Cultures sterile.",
+    "t": "Serum anti-GM-CSF antibodies: strongly positive",
     "d": 1
    }
   ],
-  "pearl": "Acute eosinophilic pneumonia can follow taking up smoking (or a big change in smoking or vaping habits) within weeks. It looks like severe atypical pneumonia or ARDS, and blood eosinophils are often normal at first, so the answer hides in the lavage. It responds fast to steroids and rarely comes back if the trigger stops. Happy World Pneumonia Day."
+  "pearl": "The air sacs fill with surfactant because alveolar macrophages can’t clear it, most often because autoantibodies block GM-CSF. It’s the classic ‘pneumonia that won’t clear’. Whole-lung lavage, washing out one lung at a time under anaesthetic, is the long-standing treatment, and inhaled GM-CSF is now an option. Happy World Pneumonia Day to every chest X-ray that turned out to be something else."
  },
  {
   "date": "2026-11-13",
@@ -521,45 +518,37 @@
   "date": "2026-11-14",
   "number": 29,
   "difficulty": "Hard",
-  "title": "Runs in the family",
-  "answer": "MODY (maturity-onset diabetes of the young)",
+  "title": "Shiny shins",
+  "answer": "Necrobiosis lipoidica",
   "accept": [
-   "mody",
-   "maturity onset diabetes of the young",
-   "maturity-onset diabetes of the young",
-   "monogenic diabetes",
-   "hnf1a mody",
-   "hnf1a",
-   "hnf1a diabetes",
-   "mody3",
-   "mody 3",
-   "hnf1-alpha mody",
-   "hnf1 alpha mody"
+   "necrobiosis lipoidica",
+   "necrobiosis lipoidica diabeticorum",
+   "nld",
+   "nl",
+   "necrobiosis"
   ],
   "clues": [
    {
-    "t": "24-year-old woman, slim and well. A work health check flagged a high fasting glucose."
+    "t": "33-year-old woman with patches on both shins that have slowly spread for two years."
    },
    {
-    "t": "HbA1c 51 mmol/mol · BMI 22 · No ketones",
-    "d": 1
+    "t": "They’re oval, yellow-brown in the middle with a pinkish-purple edge, and painless."
    },
    {
-    "t": "Her mum was diagnosed at 25 and her grandfather at 30. Both were told 'type 2'. Neither was overweight."
+    "t": "The centres look shiny and thin, with fine blood vessels showing through."
    },
    {
-    "t": "GAD and IA-2 antibodies negative · C-peptide normal",
-    "d": 1
+    "t": "One patch broke down into a slow-healing ulcer after she knocked it on a coffee table."
    },
    {
-    "t": "Her urine dipstick shows glucose even when her blood glucose is only mildly raised."
+    "t": "She’s had type 1 diabetes since she was nine."
    },
    {
-    "t": "Genetic testing: HNF1A variant",
+    "t": "Skin biopsy: layers of palisading granulomas around degenerating collagen",
     "d": 1
    }
   ],
-  "pearl": "Monogenic diabetes, passed down in an autosomal dominant pattern. Think of it when diabetes appears before about 35 in generation after generation, without antibodies and with C-peptide preserved. It's often mislabelled as type 1 or type 2, and getting the label right changes management and family testing. Happy World Diabetes Day, and happy birthday, Frederick Banting."
+  "pearl": "A granulomatous skin condition that is strongly linked with diabetes and is about three times more common in women. It can appear before the diabetes is diagnosed, and it doesn’t closely follow glucose control. Potent topical steroids and protecting the shins from knocks are the mainstays. Happy World Diabetes Day."
  },
  {
   "date": "2026-11-15",
@@ -643,80 +632,89 @@
   "date": "2026-11-17",
   "number": 32,
   "difficulty": "Easy",
-  "title": "Overdue",
-  "answer": "Cervical cancer",
+  "title": "New bumps",
+  "answer": "Anogenital warts",
   "accept": [
-   "cervical cancer",
-   "cancer of the cervix",
-   "cervical carcinoma",
-   "carcinoma of the cervix",
-   "cervix cancer",
-   "squamous cell carcinoma of the cervix",
-   "cervical squamous cell carcinoma",
-   "cervical scc",
-   "cervical adenocarcinoma"
+   "anogenital warts",
+   "genital warts",
+   "warts",
+   "condylomata acuminata",
+   "condyloma acuminatum",
+   "condyloma",
+   "condylomata",
+   "hpv warts",
+   "venereal warts",
+   "hpv",
+   "human papillomavirus"
   ],
   "clues": [
    {
-    "t": "46-year-old woman with bleeding after sex for 3 months."
+    "t": "23-year-old man who has noticed small bumps around the base of his penis."
    },
    {
-    "t": "Also spotting between periods. Her cycles used to be like clockwork."
+    "t": "They’re painless and don’t itch. His new partner spotted them first."
    },
    {
-    "t": "Her last screening test was 'probably 15 years ago'. Life got busy."
+    "t": "He moved to Australia at 19 and never had the school vaccines."
    },
    {
-    "t": "She left school before the HPV vaccine program began."
+    "t": "A few are flat, others look like tiny cauliflowers."
    },
    {
-    "t": "Speculum exam: an irregular lesion on the cervix that bleeds on touch."
+    "t": "Skin-coloured, soft, and they’ve slowly multiplied over two months."
    },
    {
-    "t": "HPV 16 detected",
+    "t": "Under a magnifier: soft, lobulated papules on the shaft and pubic skin, no ulcers, no blisters",
     "d": 1
    }
   ],
-  "pearl": "Almost all cervical cancers are caused by HPV, and most are found in people who are under-screened or never screened. Bleeding after sex always deserves a look. In Australia the Cervical Screening Test, which can be self-collected, is for women and people with a cervix aged 25 to 74, every 5 years. Self-collection is helping reach people who screen less, including many Aboriginal and Torres Strait Islander women and LGBTIQA+ people. Australia aims to eliminate cervical cancer as a public health problem by 2035."
+  "pearl": "Caused by low-risk HPV types, mostly 6 and 11, not the high-risk types 16 and 18 behind most cervical cancers. The 9-valent HPV vaccine covers all of these, and since Australia’s school program began, genital warts have become rare in young Australians. Treatments include imiquimod, podophyllotoxin and freezing. Today is World Cervical Cancer Elimination Day."
  },
  {
   "date": "2026-11-18",
   "number": 33,
   "difficulty": "Medium",
-  "title": "Out of puff",
-  "answer": "COPD (chronic obstructive pulmonary disease)",
+  "title": "Too young for this",
+  "answer": "Alpha-1 antitrypsin deficiency",
   "accept": [
-   "copd",
-   "chronic obstructive pulmonary disease",
-   "chronic obstructive lung disease",
-   "chronic obstructive airways disease",
-   "coad",
-   "emphysema",
-   "chronic bronchitis",
-   "chronic obstructive airway disease"
+   "alpha-1 antitrypsin deficiency",
+   "alpha 1 antitrypsin deficiency",
+   "alpha1 antitrypsin deficiency",
+   "a1at deficiency",
+   "a1atd",
+   "aatd",
+   "alpha-1",
+   "alpha 1",
+   "alpha one",
+   "alpha-1 deficiency",
+   "pizz",
+   "alpha-1 antitrypsin",
+   "alpha 1 antitrypsin"
   ],
   "clues": [
    {
-    "t": "63-year-old man, breathless walking up the hill to the shops."
+    "t": "38-year-old woman, breathless climbing stairs for a year. She has never smoked."
    },
    {
-    "t": "A phlegmy cough most mornings for years. 'Just a smoker's cough,' he says."
+    "t": "Her inhalers for ‘asthma’ have barely helped."
    },
    {
-    "t": "Three chest infections in the last two winters."
+    "t": "Her brother had cirrhosis at 41. He hardly drank."
    },
    {
-    "t": "Smoked 30 a day from 16 until 58."
+    "t": "Spirometry after a bronchodilator: FEV1/FVC 0.58",
+    "d": 1
    },
    {
-    "t": "Barrel chest. Quiet breath sounds. Long, wheezy breaths out."
+    "t": "CT chest: emphysema, worst at the bases of both lungs",
+    "d": 1
    },
    {
-    "t": "Spirometry after a puffer: FEV1/FVC 0.55",
+    "t": "Serum level of a liver-made protease inhibitor: very low. Genotype PiZZ",
     "d": 1
    }
   ],
-  "pearl": "Airflow limitation that doesn't fully reverse: FEV1/FVC stays below 0.7 after a bronchodilator. Smoking is the main cause in Australia; worldwide, smoke from cooking and heating fuels matters too. Spirometry makes the diagnosis, a stethoscope can't. Happy World COPD Day, and welcome to World AMR Awareness Week."
+  "pearl": "An inherited lack of the protein that protects the lungs from neutrophil elastase. Think of it in early emphysema, emphysema in a non-smoker, basal emphysema, or lung and liver disease in one family. Smoking speeds it up dramatically, and family members should be tested. November is Alpha-1 Awareness Month, and today is World COPD Day."
  },
  {
   "date": "2026-11-19",
@@ -838,48 +836,51 @@
   "date": "2026-11-22",
   "number": 37,
   "difficulty": "Genius",
-  "title": "Joining the dots",
-  "answer": "22q11.2 deletion syndrome (DiGeorge)",
+  "title": "Thrush, cramps and tiredness",
+  "answer": "Autoimmune polyendocrine syndrome type 1 (APECED)",
   "accept": [
-   "22q",
-   "22q11",
-   "22q11.2",
-   "22q11.2 deletion",
-   "22q11.2 deletion syndrome",
-   "22q deletion",
-   "22q deletion syndrome",
-   "digeorge",
-   "di george",
-   "digeorge syndrome",
-   "di george syndrome",
-   "velocardiofacial syndrome",
-   "velocardiofacial",
-   "velo cardio facial syndrome",
-   "vcfs",
-   "shprintzen syndrome"
+   "apeced",
+   "aps1",
+   "aps 1",
+   "aps-1",
+   "aps type 1",
+   "apecd",
+   "autoimmune polyendocrine syndrome type 1",
+   "autoimmune polyglandular syndrome type 1",
+   "autoimmune polyendocrinopathy candidiasis ectodermal dystrophy",
+   "autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy",
+   "whitaker syndrome",
+   "aire deficiency",
+   "aire mutation",
+   "apeced syndrome",
+   "polyglandular autoimmune syndrome type 1",
+   "pgas1",
+   "pga 1"
   ],
   "clues": [
    {
-    "t": "19-year-old woman with tingling around her mouth and cramping hands during exam week."
+    "t": "15-year-old girl who has had oral thrush on and off since she was a toddler. Her nails are thick and crumbly too."
    },
    {
-    "t": "Her voice has a nasal quality. She had years of speech therapy as a child."
+    "t": "Last year she had tingling fingers and her hands cramped into claws."
    },
    {
-    "t": "She had many ear and chest infections when small, and learning support at school."
-   },
-   {
-    "t": "Ca 1.82 mmol/L · phosphate high · PTH inappropriately low",
+    "t": "Ca 1.79 mmol/L · phosphate high · PTH low",
     "d": 1
    },
    {
-    "t": "She had heart surgery as a newborn for tetralogy of Fallot."
+    "t": "Now she’s tired, dizzy on standing, craving salt, and her skin and gums look darker."
    },
    {
-    "t": "The surgeon's old note: 'thymus barely visible'."
+    "t": "Morning cortisol low · ACTH high",
+    "d": 1
+   },
+   {
+    "t": "Genetic testing: two faulty copies of the AIRE gene",
+    "d": 1
    }
   ],
-  "pearl": "A tiny missing piece of chromosome 22 can touch the heart, palate, parathyroids, thymus, learning and mental health, in very different combinations. Many people aren't diagnosed until adulthood, and low calcium can resurface during stress or puberty."
+  "pearl": "The AIRE gene works in the thymus, showing young T cells samples of the body’s own proteins so the self-reactive ones are weeded out. Without it, the classic trio is chronic candidiasis, hypoparathyroidism and Addison’s disease. It’s recessive and more common in Finland, Sardinia and among Iranian Jews. Like 22q11.2 deletion, it can bring together low calcium and a thymus that isn’t doing its job."
  },
  {
   "date": "2026-11-23",
