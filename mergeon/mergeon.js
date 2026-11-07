@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -110,7 +110,14 @@
   var cv = $("cv"), ctx = cv.getContext("2d"), dpr = 1, scale = 1;
 
   var NOREP = true; // never the same piece twice in a row (from 8 Nov 2026; today's daily kept as dealt)
-  function roll1() { var x = rnd(); return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; }
+  // from 8 Nov 2026: the five smallest drop evenly (18.8% each, like Suika), plus rare bladder 3%, stomach 2%, heart 1%
+  var ODDS = [0.188, 0.188, 0.188, 0.188, 0.188, 0.03, 0.02, 0.01];
+  function roll1() {
+    var x = rnd();
+    if (!NOREP) return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; // older dailies keep their original odds
+    for (var i = 0, c = 0; i < ODDS.length; i++) { c += ODDS[i]; if (x < c) return i; }
+    return 0;
+  }
   function roll(prev) { var v = roll1(), n = 0; if (NOREP && prev !== undefined) while (v === prev && n++ < 20) v = roll1(); return v; }
   function newRun(isPractice) {
     practice = !!isPractice; over = false; score = 0; top = -1; merges = []; canDrop = true;
