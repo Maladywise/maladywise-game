@@ -104,3 +104,10 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Mostly Normie (Triviosis questions, Comorbix groups, Zebritis closed-list prompts, Gridectomy clues, Suturix themes, Wordemic words). Medical mode gets the clinical side: specific phobia facts and treatment, symptom "-phobias" (photophobia, phonophobia, hydrophobia in rabies), haemophilia, -philias in blood counts and pathology (eosinophilia, thrombophilia) and microbe names (Haemophilus, pneumophila).
 - Use the checked bank in data/word-banks/animals-phobias.json. Its flags matter: many collective nouns are fanciful medieval "terms of venery" or modern coinages (parliament of owls, dazzle of zebras, crash of rhinos), and joke phobias are coinages, not diagnoses. Say so in explanations rather than presenting them as standard usage. Trypophobia is not in DSM-5.
 - Family-friendly only: no sexual paraphilias, ever.
+
+## Task-prompt overrides (8 Nov 2026)
+- Repeat rule: no answer repeated within **180 days** per game (medical and Normie). Any "90 days" in an older task prompt is out of date.
+- Cryptoplexy files are `cryptoplexy/puzzles.json` and `cryptoplexy/normie.json`; never write to `cryptogenic/`. Puzzle links use `/cryptoplexy/?date=`.
+- Mergeon, Stackulus and Basil + Clover are arcade games with no dated puzzle files; monthly builds skip them (they're live, not parked).
+- X posts are automated through `_social/queue.json` (see "X posts" above). Any older prompt line saying the owner pastes posts by hand is out of date; the Friday email still lists the week's posts for review.
+- Normie Glimpsis ("What is it?": close-ups, zoomed-in nature and objects, electron micrographs) and Normie Opacitis ("What's inside?": X-rays/CT of objects, animals and plants, never people) must be filled to the end of next month by the monthly Glimpsis and Opacitis tasks, alongside the medical files. Same image licence rules; images go in img/normie/YYYY-MM-DD.jpg.
