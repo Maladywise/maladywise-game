@@ -71,3 +71,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Weekly Dose (Zebra Mail): Stackulus daily
 - In "🧩 This week's puzzles", always include one line for the Stackulus daily challenge, e.g. "🫀 Stackulus daily: same organs for everyone, one scored go a day. Beat the world board: https://maladywise.com/stackulus/" (vary the wording each week; plain link, no date).
 - In the week's X posts, at most one Stackulus daily nudge (e.g. Saturday), linking https://maladywise.com/stackulus/.
+
+## Renamed games and folders (Nov 2026)
+- Cryptogenic is now **Cryptoplexy**: puzzle files live in `cryptoplexy/` (puzzles.json, normie.json). The `cryptogenic/` folder only holds redirect pages; never write puzzles there. The game id in code stays `cryptogenic`, but player-facing text and links use Cryptoplexy and https://maladywise.com/cryptoplexy/.
+- Organ Drop is now **Stackulus** at `stackulus/` (https://maladywise.com/stackulus/). `organ-drop/` and `dropsy/` are redirects only.
+- Mergeon is the organ merge arcade game at https://maladywise.com/mergeon/.
