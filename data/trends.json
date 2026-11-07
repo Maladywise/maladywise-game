@@ -1,0 +1,33 @@
+{
+ "_about": "Medical search trends gathered by the daily briefing; used by the weekly topical puzzle refresh and Weekly Dose.",
+ "items": [
+  {
+   "term": "diphtheria outbreak",
+   "region": "AU",
+   "volume": "n/a (RSS unavailable)",
+   "date": "2026-11-08",
+   "source": "cdc.gov.au diphtheria outbreak update (230 cases in 2026)"
+  },
+  {
+   "term": "measles",
+   "region": "US",
+   "volume": "n/a (RSS unavailable)",
+   "date": "2026-11-08",
+   "source": "news search: US cases >2,000 for 2nd year running"
+  },
+  {
+   "term": "lenacapavir generic (HIV PrEP)",
+   "region": "US",
+   "volume": "n/a (RSS unavailable)",
+   "date": "2026-11-08",
+   "source": "goodgoodgood.co good news 7 Nov 2026"
+  },
+  {
+   "term": "bird flu",
+   "region": "GB/EU",
+   "volume": "n/a (RSS unavailable)",
+   "date": "2026-11-08",
+   "source": "Reuters health summary 7 Nov 2026 (wild goose, Germany)"
+  }
+ ]
+}
