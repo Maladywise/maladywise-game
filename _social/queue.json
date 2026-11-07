@@ -1,0 +1,26 @@
+{
+ "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts (one item = single post), each <= 280 characters. Never store API keys here.",
+ "posts": [
+  {
+   "date": "2026-11-17",
+   "note": "Tue deep dive",
+   "thread": [
+    "POTS: heart races when you stand, settles when you lie down. In an Australian registry of 500 people, diagnosis took 6.7 years on average, and anxiety got the blame first for 64.6%. A watch and a bed would have been quicker. New deep dive for clinicians 🧵",
+    "The criteria: heart rate up ≥30 bpm within 10 min of standing (≥40 at ages 12–19), no drop in blood pressure, symptoms for 3+ months, nothing else explains it. You can run the test in a GP room. No tilt table needed for most.",
+    "The active stand test: 5–10 min lying down, then heart rate and BP at 1, 3, 5, 8 and 10 min standing. Morning testing picks up more. Ten minutes, zero dollars, and it cuts years off the \"maybe it's stress\" phase.",
+    "Boring basics carry the evidence: 2–3 L of fluid, salt if safe, waist-high compression (knee-highs don't cut it), exercise that starts lying down. One registry: 71% who finished a 3-month programme no longer met criteria. Uncontrolled, but still.",
+    "Medicines: none is approved for POTS in Australia; all off-label. Low-dose propranolol has the best data (low beat high in one trial). In the largest RCT, ivabradine lowered heart rate but not symptoms. A heart rate isn't a quality of life.",
+    "Hype check: \"POTS autoantibody\" panels? Patients and healthy controls test positive alike. IVIG? No better than albumin in its RCT. The POTS + hEDS + MCAS \"triad\"? Overlap in clinics, not established. Your wallet deserves better evidence.",
+    "Red flags that need more than a POTS label: fainting during exercise, chest pain, family history of sudden death, an abnormal ECG. Refer those promptly. Everyone else: start the basics while they wait for a specialist.",
+    "The full deep dive covers criteria, a step-by-step stand test, what to exclude, evidence-graded treatment, long COVID, pregnancy, teens and myths. General education, not personal advice.\nhttps://maladywise.com/deep-dives/pots/"
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "note": "Sat arcade",
+   "thread": [
+    "New bonus game: Stackulus 🫀\n\nOrgans fall, you stack them. Clear rows, chain combos, and beat today's daily challenge on the world leaderboard.\n\nPlay it in Normie mode and the organs become sea creatures. 🐙\n\nhttps://maladywise.com/stackulus/"
+   ]
+  }
+ ]
+}
