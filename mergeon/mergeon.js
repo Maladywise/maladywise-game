@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -109,7 +109,9 @@
   var engine, rnd, queue, cur, nxt, aimX = W / 2, canDrop, score, top, practice, over, toastT, merges, lastT, acc, raf;
   var cv = $("cv"), ctx = cv.getContext("2d"), dpr = 1, scale = 1;
 
-  function roll() { var x = rnd(); return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; }
+  var NOREP = true; // never the same piece twice in a row (from 8 Nov 2026; today's daily kept as dealt)
+  function roll1() { var x = rnd(); return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; }
+  function roll(prev) { var v = roll1(), n = 0; if (NOREP && prev !== undefined) while (v === prev && n++ < 20) v = roll1(); return v; }
   function newRun(isPractice) {
     practice = !!isPractice; over = false; score = 0; top = -1; merges = []; canDrop = true;
     rnd = mulberry32(isPractice ? (Math.random() * 4294967296) >>> 0 : dayNum(day) * 2654435761 >>> 0);
@@ -117,7 +119,8 @@
     var opt = { isStatic: true, friction: 0.2, restitution: 0.1, label: "wall" };
     C.add(engine.world, [B.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, opt), B.rectangle(-WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W + WALL / 2, H / 2, WALL, H * 2, opt)]);
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
-    cur = roll(); nxt = roll();
+    NOREP = practice || String(day) >= "2026-11-08";
+    cur = roll(); nxt = roll(cur);
     $("over").hidden = true; $("result").hidden = !(!practice && st.done); hud();
     $("mode").textContent = practice ? "Practice run. Doesn’t count. Nobody’s watching." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
     $("badge").textContent = practice ? "Practice" : ""; lastT = 0; acc = 0;
@@ -159,8 +162,8 @@
     var r = O[cur].r, x = Math.max(r + 1, Math.min(W - r - 1, aimX));
     var o = add(cur, x, DROP_Y); o.fresh = performance.now();
     if (cur > top) top = cur;
-    cur = nxt; nxt = roll(); canDrop = false; hud();
-    setTimeout(function () { canDrop = true; }, 550);
+    cur = nxt; nxt = roll(cur); canDrop = false; hud();
+    setTimeout(function () { canDrop = true; }, 260);
   }
   function checkOver(now) {
     var bodies = C.allBodies(engine.world), danger = false;
