@@ -90,6 +90,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## X posts: World Day cards (from Nov 2026)
 - `_scripts/day_card.py` draws a 1200×675 picture card for a date's main day (same pick as the home-page box: priority 1–3 only, never sensitive days), using the day's existing blurb. No new facts go on cards.
+- Priority 4–5 days (fun history nods like Carl Sagan's birthday) are never the main day: the home box shows them as a small quiet line, they never get themed puzzles, X cards or the evening trend refresh's main theme. They can still appear on /days/ and as an "Also" nod.
 - Add `"card": true` to a queue entry to attach that date's card to its first post. The Friday task should do this on themed-day posts about that day.
 - The Typefully Action also auto-fills any empty date (from 16 Nov 2026) that has a strong day with a short World Day post plus card, and writes it back to the queue. It only does so after that week's Friday batch is written, and never if Typefully already has a post scheduled that day, so the weekly mix always wins. Gentle days get a plain, respectful post (no sass, no hashtag).
 - Preview: `python3 _scripts/typefully_push.py --dry-run --days 14` (saves the PNGs to a temp folder).

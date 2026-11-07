@@ -971,7 +971,7 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
         var fa = a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "day" || b.dates[yr].start === today ? 0 : 1;
         return fa - fb || (a.priority || 9) - (b.priority || 9);
       });
-      var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead);
+      var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead) || (lead.priority || 9) >= 4; // priority 4+ = a small nod, never the main day
       var themed = !NORMIE && !quiet && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb || "");
       var nm = function (x) { return esc2(regionOf(x) ? x.name.replace(/\s*\([^()]+\)\s*$/, "") : x.name); };
       var also = normal.filter(function (x) { return x !== lead && (x.priority || 9) <= 3; }).slice(0, 2);
