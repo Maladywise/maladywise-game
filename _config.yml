@@ -1,0 +1,13 @@
+# GitHub Pages build settings: keep internal notes, scripts and server code off the public website.
+# (Files and folders starting with _ are already skipped.)
+exclude:
+  - README.md
+  - STYLE.md
+  - "**/*.md"
+  - "**/*.py"
+  - "**/*.bak"
+  - presence
+  - data/idea-bank.json
+  - package.json
+  - package-lock.json
+  - node_modules
