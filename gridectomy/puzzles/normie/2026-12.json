@@ -741,7 +741,7 @@
     "r": 1,
     "c": 0,
     "len": 4,
-    "clue": "Rock group"
+    "clue": "Group of gorillas, or of musicians"
    },
    {
     "n": 1,
@@ -1466,84 +1466,84 @@
   "number": 56,
   "difficulty": "Hard",
   "rows": [
-   "HIS##",
-   "EDITS",
-   "ALGAE",
-   "PENCE",
-   "##SON"
+   "#GASP",
+   "CRIES",
+   "RIDES",
+   "INEPT",
+   "ADDS#"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 3,
-    "clue": "That man's"
+    "c": 1,
+    "len": 4,
+    "clue": "Shocked breath"
    },
    {
-    "n": 4,
+    "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Changes to a text"
+    "clue": "Sobs"
    },
    {
-    "n": 7,
+    "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Pond scum"
+    "clue": "Fairground attractions"
    },
    {
-    "n": 8,
+    "n": 7,
     "r": 3,
     "c": 0,
     "len": 5,
-    "clue": "British small change"
+    "clue": "All thumbs"
    },
    {
-    "n": 9,
+    "n": 8,
     "r": 4,
-    "c": 2,
-    "len": 3,
-    "clue": "Male child"
+    "c": 0,
+    "len": 4,
+    "clue": "Tots up"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 0,
-    "len": 4,
-    "clue": "Big pile"
+    "c": 1,
+    "len": 5,
+    "clue": "Daily ___ (the nine-to-five)"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Not busy"
+    "c": 2,
+    "len": 5,
+    "clue": "Gave a hand"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 2,
+    "c": 3,
     "len": 5,
-    "clue": "Road notices"
+    "clue": "Oozes slowly"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Hey, over here! (whispered)"
    },
    {
     "n": 5,
     "r": 1,
-    "c": 3,
+    "c": 0,
     "len": 4,
-    "clue": "Mexican food now eaten worldwide"
-   },
-   {
-    "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Spotted"
+    "clue": "Baby alpaca"
    }
   ]
  },

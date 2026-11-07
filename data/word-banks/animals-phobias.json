@@ -1,0 +1,2049 @@
+{
+ "_about": "Malady Wise word bank: baby animal names, collective nouns, phobias and non-sexual -philias. Each entry: term, meaning, type, flag (real = genuinely used; clinical = clinical or scientific term; coined = fanciful, joke or modern coinage), notes, source. Collective nouns also carry venery=true for Book of St Albans-style 'terms of venery'. Sexual paraphilias are excluded on purpose. Re-check a fact before using it in a puzzle and write wording fresh.",
+ "updated": "2026-11-08",
+ "baby_animals": [
+  {
+   "term": "joey",
+   "meaning": "young kangaroo, wallaby, koala, wombat, possum and other marsupials",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Dictionary.com: used for newborn marsupials generally, including koalas, wombats and Tasmanian devils.",
+   "source": "https://www.dictionary.com/browse/joey"
+  },
+  {
+   "term": "puggle",
+   "meaning": "young echidna",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Used by Taronga Zoo for baby echidnas. Also used informally for baby platypus, but researchers avoid it there (not a scientific term; first recorded 1979 as a made-up bush creature).",
+   "source": "https://taronga.org.au/news/2018-07-11/taronga-cares-tiny-echidna-puggle"
+  },
+  {
+   "term": "cygnet",
+   "meaning": "young swan",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "leveret",
+   "meaning": "young hare",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Usually a hare under a year old; from Norman French for hare plus a diminutive.",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "eyas",
+   "meaning": "young hawk or falcon",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "A nestling, especially one taken for falconry. Also spelt eyass.",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "elver",
+   "meaning": "young eel",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Young eel; leptocephalus is the earlier larval stage.",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "kit",
+   "meaning": "young fox, ferret, beaver, rabbit, badger, skunk, squirrel, weasel and others",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "One of the most widely shared young-animal names.",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "cria",
+   "meaning": "young llama, alpaca, vicuña or guanaco",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "From Spanish cría; first known English use 1984 (Merriam-Webster).",
+   "source": "https://merriam-webster.com/dictionary/cria"
+  },
+  {
+   "term": "chulengo",
+   "meaning": "young guanaco",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Rare; Spanish-derived word.",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "poult",
+   "meaning": "young turkey (and other fowl)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "squab",
+   "meaning": "young pigeon",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Also the culinary term for young pigeon. 'Squeaker' is also listed.",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "calf",
+   "meaning": "young cow, whale, dolphin, elephant, giraffe, hippo, rhino, camel, moose, elk, bison and others",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Merriam-Webster: young of the domestic cow, related mammals such as bison, and various large animals such as the elephant and whale.",
+   "source": "https://merriam-webster.com/dictionary/calf"
+  },
+  {
+   "term": "cub",
+   "meaning": "young bear, lion, tiger, fox, leopard, hyena, shark and others",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "pup",
+   "meaning": "young dog, seal, bat, rat, mouse, shark, otter and others",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "whelp",
+   "meaning": "young dog, wolf, tiger, lion or bear",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "kitten",
+   "meaning": "young cat (also rabbit, rat, beaver, squirrel)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "puppy",
+   "meaning": "young dog",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "foal",
+   "meaning": "young horse, donkey or zebra",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "colt",
+   "meaning": "young horse (young male); also zebra",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Filly is a young female.",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "filly",
+   "meaning": "young horse (young female); also zebra",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "kid",
+   "meaning": "young goat (also antelope)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "lamb",
+   "meaning": "young sheep",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "piglet",
+   "meaning": "young pig",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "shoat",
+   "meaning": "young pig (just weaned)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Also spelt shote.",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "farrow",
+   "meaning": "young pig (a litter of piglets)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Strictly a litter; also a verb, to give birth to piglets.",
+   "source": "https://www.mentalfloss.com/animals/11-lesser-known-names-baby-animals"
+  },
+  {
+   "term": "fawn",
+   "meaning": "young deer",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "hoglet",
+   "meaning": "young hedgehog",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Merriam-Webster: chiefly British.",
+   "source": "https://www.merriam-webster.com/dictionary/hoglet"
+  },
+  {
+   "term": "porcupette",
+   "meaning": "young porcupine",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "gosling",
+   "meaning": "young goose",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "duckling",
+   "meaning": "young duck",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "eaglet",
+   "meaning": "young eagle",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "owlet",
+   "meaning": "young owl",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "chick",
+   "meaning": "young bird (especially chicken; also penguin, emu, ostrich)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "fledgling",
+   "meaning": "young bird with its first flight feathers",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "hatchling",
+   "meaning": "young any animal just out of the egg (birds, reptiles, fish)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "keet",
+   "meaning": "young guinea fowl",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "cheeper",
+   "meaning": "young game bird, e.g. partridge or grouse",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "guga",
+   "meaning": "young gannet",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Scottish (Hebridean) word for a young gannet.",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "peachick",
+   "meaning": "young peafowl",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "tadpole",
+   "meaning": "young frog or toad",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "Polliwog is the folksy alternative.",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "polliwog",
+   "meaning": "young frog or toad (tadpole)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "froglet",
+   "meaning": "young frog (just lost its tail)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "toadlet",
+   "meaning": "young toad",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "eft",
+   "meaning": "young newt (land-living juvenile)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "spat",
+   "meaning": "young oyster or similar shellfish",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "fry",
+   "meaning": "young fish (just hatched)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "fingerling",
+   "meaning": "young fish, especially salmon or trout under a year",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "alevin",
+   "meaning": "young salmon (just hatched, still with yolk sac)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "parr",
+   "meaning": "young salmon (river stage)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "smolt",
+   "meaning": "young salmon (heading to sea for the first time)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "grilse",
+   "meaning": "young salmon (returned after one winter at sea)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://absp.org.uk/words/namesyounganimals.shtml"
+  },
+  {
+   "term": "nymph",
+   "meaning": "young insect with incomplete metamorphosis (grasshopper, cockroach, dragonfly) and ticks",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.thesaurus.com/articles/12-strange-names-for-baby-animals"
+  },
+  {
+   "term": "larva",
+   "meaning": "young insect (grub, caterpillar or maggot stage)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/vocabulary/young-baby-animals-vocabulary-list"
+  },
+  {
+   "term": "ephyra",
+   "meaning": "young jellyfish (larval)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.mentalfloss.com/animals/11-lesser-known-names-baby-animals"
+  },
+  {
+   "term": "spiderling",
+   "meaning": "young spider",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "cosset",
+   "meaning": "young sheep (a lamb raised by hand)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "weanling",
+   "meaning": "young horse (just weaned); also used for other livestock",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "yearling",
+   "meaning": "young horse (one to two years old)",
+   "type": "baby animal",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "meerkitten",
+   "meaning": "young meerkat",
+   "type": "baby animal",
+   "flag": "coined",
+   "notes": "Cute informal coinage; not in major dictionaries.",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "platypup",
+   "meaning": "young platypus",
+   "type": "baby animal",
+   "flag": "coined",
+   "notes": "Proposed informal alternative to puggle; not a scientific term.",
+   "source": "https://www.mentalfloss.com/animals/11-lesser-known-names-baby-animals"
+  }
+ ],
+ "collective_nouns": [
+  {
+   "term": "pride",
+   "meaning": "a group of lions",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Everyday usage (World Wide Words).",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "pack",
+   "meaning": "a group of wolves or dogs",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "pod",
+   "meaning": "a group of whales, dolphins or seals",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "herd",
+   "meaning": "a group of cattle, elephants, zebras and many grazers",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "flock",
+   "meaning": "a group of sheep, goats or birds",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "school",
+   "meaning": "a group of fish (also whales, dolphins)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "shoal",
+   "meaning": "a group of fish",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "swarm",
+   "meaning": "a group of bees, locusts or other insects",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "colony",
+   "meaning": "a group of ants, bees, bats, penguins, gulls or rabbits",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "gaggle",
+   "meaning": "a group of geese (on the ground)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "skein",
+   "meaning": "a group of geese (in flight)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "raft",
+   "meaning": "a group of ducks on water; also sea otters and penguins in water",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "mob",
+   "meaning": "a group of kangaroos (also wallabies, emus, sheep, cattle)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Genuinely used in Australian English.",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "troop",
+   "meaning": "a group of monkeys, baboons or kangaroos",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "band",
+   "meaning": "a group of gorillas",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "litter",
+   "meaning": "a group of puppies, kittens or piglets (one birth)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "brood",
+   "meaning": "a group of chicks",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "clutch",
+   "meaning": "a group of eggs or chicks",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "covey",
+   "meaning": "a group of partridges, quail or grouse",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Still used by game shooters.",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "bevy",
+   "meaning": "a group of quail (also larks, roe deer, swans)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "murder",
+   "meaning": "a group of crows",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "15th-century term, fell out of use, revived in the 20th century; well enough attested for dictionaries (Merriam-Webster).",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "parliament",
+   "meaning": "a group of owls (also rooks)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "For owls, Merriam-Webster calls it a modern coinage; 'parliament of rooks' is the older term. In practice owls are a 'flock' (Macquarie).",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "murmuration",
+   "meaning": "a group of starlings",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "Book of St Albans era 'poetic invention' (World Wide Words), now widely used for the swirling evening flocks.",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "unkindness",
+   "meaning": "a group of ravens",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "exaltation",
+   "meaning": "a group of larks",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "In the Book of St Albans (1486).",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "charm",
+   "meaning": "a group of goldfinches or finches",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "tiding",
+   "meaning": "a group of magpies",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "business",
+   "meaning": "a group of ferrets",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "Apparently never used in real life (World Wide Words).",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "shrewdness",
+   "meaning": "a group of apes",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "cete",
+   "meaning": "a group of badgers",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "Now obscure.",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "fall",
+   "meaning": "a group of woodcocks",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "spring",
+   "meaning": "a group of teal",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "Said to describe teal bursting up from the water.",
+   "source": "https://worldwidewords.org/collectives.html"
+  },
+  {
+   "term": "skulk",
+   "meaning": "a group of foxes",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "leash",
+   "meaning": "a group of three foxes, hounds or hares",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "sloth",
+   "meaning": "a group of bears (also sleuth)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "clowder",
+   "meaning": "a group of cats",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "Called arcane by Macquarie.",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "kindle",
+   "meaning": "a group of kittens",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "labour",
+   "meaning": "a group of moles",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "watch",
+   "meaning": "a group of nightingales",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "siege",
+   "meaning": "a group of herons (also sedge)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "ostentation",
+   "meaning": "a group of peacocks (also muster)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "rafter",
+   "meaning": "a group of turkeys",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "host",
+   "meaning": "a group of sparrows",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "drey",
+   "meaning": "a group of squirrels (strictly their nest; also dray)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Drey is the real word for a squirrel's nest.",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "sounder",
+   "meaning": "a group of wild pigs or boar",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "crash",
+   "meaning": "a group of rhinoceroses",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "A newer coinage made in imitation of the medieval terms (Macquarie).",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "tower",
+   "meaning": "a group of giraffes",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "bloat",
+   "meaning": "a group of hippopotamuses",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "dazzle",
+   "meaning": "a group of zebras",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "Grammar Monster calls it fanciful; 'herd' is standard.",
+   "source": "https://www.grammar-monster.com/collective_nouns/collective-noun-for-zebras.html"
+  },
+  {
+   "term": "cackle",
+   "meaning": "a group of hyenas",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "streak",
+   "meaning": "a group of tigers",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "leap",
+   "meaning": "a group of leopards",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "prickle",
+   "meaning": "a group of porcupines",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "romp",
+   "meaning": "a group of otters",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "bask",
+   "meaning": "a group of crocodiles",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "knot",
+   "meaning": "a group of toads",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": true,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "army",
+   "meaning": "a group of frogs (also caterpillars, ants, herring)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "smack",
+   "meaning": "a group of jellyfish",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "'Bloom' is the term scientists actually use for big jellyfish swarms.",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "shiver",
+   "meaning": "a group of sharks",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "intrusion",
+   "meaning": "a group of cockroaches",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "plague",
+   "meaning": "a group of locusts",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "kettle",
+   "meaning": "a group of hawks riding a thermal",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Genuinely used by birdwatchers for migrating raptors circling on thermals.",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "convocation",
+   "meaning": "a group of eagles",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "gulp",
+   "meaning": "a group of cormorants",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "stand",
+   "meaning": "a group of flamingos",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "'Flamboyance' is a popular modern alternative.",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  },
+  {
+   "term": "flamboyance",
+   "meaning": "a group of flamingos",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "wisdom",
+   "meaning": "a group of wombats",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "Modern coinage (Merriam-Webster).",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "tuxedo",
+   "meaning": "a group of penguins",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "Modern joke coinage (Merriam-Webster); penguins are really a colony, rookery or raft.",
+   "source": "https://merriam-webster.com/wordplay/a-drudge-of-lexicographers-presents-collective-nouns"
+  },
+  {
+   "term": "waddle",
+   "meaning": "a group of penguins (on land)",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "parade",
+   "meaning": "a group of elephants",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "coalition",
+   "meaning": "a group of cheetahs (a group of males)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Used by researchers for bonded male cheetahs.",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "mischief",
+   "meaning": "a group of rats",
+   "type": "collective noun",
+   "flag": "coined",
+   "venery": false,
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_animal_names"
+  },
+  {
+   "term": "drift",
+   "meaning": "a group of pigs (also bees)",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": true,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "gam",
+   "meaning": "a group of whales",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "Old whaling word, also a social visit between whaling ships.",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "yoke",
+   "meaning": "a group of two oxen",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "string",
+   "meaning": "a group of racehorses or ponies",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://www.macquariedictionary.com.au/collective-nouns-for-animals/"
+  },
+  {
+   "term": "warren",
+   "meaning": "a group of rabbits",
+   "type": "collective noun",
+   "flag": "real",
+   "venery": false,
+   "notes": "",
+   "source": "https://webarchive.library.unt.edu/web/20090506153006/http://www.npwrc.usgs.gov/about/faqs/animals/names.htm"
+  }
+ ],
+ "phobias": [
+  {
+   "term": "arachnophobia",
+   "meaning": "fear of spiders",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Animal type specific phobia (DSM-5-TR).",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "cynophobia",
+   "meaning": "fear of dogs",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "entomophobia",
+   "meaning": "fear of insects",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "ophidiophobia",
+   "meaning": "fear of snakes",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "zoophobia",
+   "meaning": "fear of animals",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://www.merckmanuals.com/professional/psychiatric-disorders/anxiety-and-trauma-and-stressor-related-disorders/specific-phobias"
+  },
+  {
+   "term": "acrophobia",
+   "meaning": "fear of heights",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Natural environment type.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "agoraphobia",
+   "meaning": "fear of places or situations where escape or help might be hard (crowds, public transport, open spaces)",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "A separate anxiety disorder in DSM-5, not a specific phobia. Literally 'fear of the marketplace' (Greek agora).",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "aquaphobia",
+   "meaning": "fear of water",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "astraphobia",
+   "meaning": "fear of thunder and lightning",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Also brontophobia.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "brontophobia",
+   "meaning": "fear of thunderstorms",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://www.merckmanuals.com/professional/psychiatric-disorders/anxiety-and-trauma-and-stressor-related-disorders/specific-phobias"
+  },
+  {
+   "term": "algophobia",
+   "meaning": "fear of pain",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "dentophobia",
+   "meaning": "fear of dentists",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Also odontophobia, dental fear.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "haemophobia",
+   "meaning": "fear of blood",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Blood-injection-injury type; unusual in that a vasovagal response can drop the heart rate and blood pressure (Merck).",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "trypanophobia",
+   "meaning": "fear of needles and injections",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Blood-injection-injury type; can lead people to refuse needed care (Merck).",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "aerophobia",
+   "meaning": "fear of flying",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Situational type.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "amaxophobia",
+   "meaning": "fear of driving or being in a vehicle",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "claustrophobia",
+   "meaning": "fear of enclosed spaces",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "nyctophobia",
+   "meaning": "fear of the dark",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Also achluophobia.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "coulrophobia",
+   "meaning": "fear of clowns",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Popular term; not a DSM diagnosis on its own (it would be an 'other' type specific phobia).",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "emetophobia",
+   "meaning": "fear of vomiting",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "'Other' type specific phobia.",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "pyrophobia",
+   "meaning": "fear of fire",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://my.clevelandclinic.org/health/diseases/24757-phobias"
+  },
+  {
+   "term": "trypophobia",
+   "meaning": "aversion to clusters of small holes or bumps (lotus pods, honeycomb)",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Not recognised in DSM-5; reactions are mostly disgust rather than fear (PsychCentral). Term popularised online in the 2000s.",
+   "source": "https://psychcentral.com/anxiety/trypophobia"
+  },
+  {
+   "term": "glossophobia",
+   "meaning": "fear of public speaking",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "ailurophobia",
+   "meaning": "fear of cats",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "apiphobia",
+   "meaning": "fear of bees",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Also melissophobia.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "ornithophobia",
+   "meaning": "fear of birds",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "galeophobia",
+   "meaning": "fear of sharks",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "musophobia",
+   "meaning": "fear of mice or rats",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "mysophobia",
+   "meaning": "fear of germs or dirt",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Also germophobia.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "gephyrophobia",
+   "meaning": "fear of bridges",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "thalassophobia",
+   "meaning": "fear of the deep sea",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "chionophobia",
+   "meaning": "fear of snow",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "lilapsophobia",
+   "meaning": "fear of tornadoes or hurricanes",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "globophobia",
+   "meaning": "fear of balloons",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "koumpounophobia",
+   "meaning": "fear of buttons",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "pogonophobia",
+   "meaning": "fear of beards",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "triskaidekaphobia",
+   "meaning": "fear of the number 13",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "tetraphobia",
+   "meaning": "fear of the number 4",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Common in East Asia because 'four' sounds like 'death' in several languages; many buildings skip the 4th floor.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "nomophobia",
+   "meaning": "fear of being without your mobile phone",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "'No-mobile-phobia', a modern coinage; not a diagnosis.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "phobophobia",
+   "meaning": "fear of fear (or of having a phobia)",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "somniphobia",
+   "meaning": "fear of sleep",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "Also hypnophobia.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "tokophobia",
+   "meaning": "fear of childbirth",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Recognised in obstetric care; can affect birth planning.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "thanatophobia",
+   "meaning": "fear of dying",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "nosocomephobia",
+   "meaning": "fear of hospitals",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "megalophobia",
+   "meaning": "fear of very large objects",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "submechanophobia",
+   "meaning": "fear of submerged man-made objects (wrecks, propellers)",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "Internet-era coinage.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "xenophobia",
+   "meaning": "fear or dislike of foreigners or strangers",
+   "type": "phobia",
+   "flag": "real",
+   "notes": "A prejudice rather than an anxiety disorder.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "kinesiophobia",
+   "meaning": "fear of movement (because of pain or re-injury)",
+   "type": "phobia",
+   "flag": "clinical",
+   "notes": "Real pain-science term (Tampa Scale for Kinesiophobia); a barrier to rehab.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "photophobia",
+   "meaning": "discomfort or pain from light",
+   "type": "phobia (symptom)",
+   "flag": "clinical",
+   "notes": "A symptom, not a fear: migraine, meningitis, iritis. Great trick question.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "phonophobia",
+   "meaning": "sensitivity to sound",
+   "type": "phobia (symptom)",
+   "flag": "clinical",
+   "notes": "Symptom in migraine; not a fear of sound in that sense.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "osmophobia",
+   "meaning": "aversion to smells",
+   "type": "phobia (symptom)",
+   "flag": "clinical",
+   "notes": "Symptom in migraine.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "hydrophobia",
+   "meaning": "old name for rabies; also (chemistry) water-repelling",
+   "type": "phobia (symptom)",
+   "flag": "clinical",
+   "notes": "People with rabies dread drinking because swallowing triggers painful spasms; early doctors used the word as a synonym for rabies (Discover).",
+   "source": "https://www.discovermagazine.com/what-is-hydrophobia-and-what-causes-it-45426"
+  },
+  {
+   "term": "hydrophobic",
+   "meaning": "water-repelling (chemistry and biology)",
+   "type": "phobia (science)",
+   "flag": "clinical",
+   "notes": "Not a fear: oil, wax and lotus leaves are hydrophobic.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "lipophobic",
+   "meaning": "fat-repelling (chemistry)",
+   "type": "phobia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "hippopotomonstrosesquippedaliophobia",
+   "meaning": "fear of long words",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "Joke word, not a recognised condition; apparently coined around 2000 (Science Focus). Spelling varies (…sesquipedaliophobia). The serious-sounding form is sesquipedalophobia, after Horace's 'words a foot and a half long'.",
+   "source": "https://www.sciencefocus.com/science/what-is-hippopotomonstrosesquippedaliophobia"
+  },
+  {
+   "term": "arachibutyrophobia",
+   "meaning": "fear of peanut butter sticking to the roof of your mouth",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "Humorous coinage from a comic strip.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "aibohphobia",
+   "meaning": "fear of palindromes",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "Joke word that is itself a palindrome.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "anatidaephobia",
+   "meaning": "fear that a duck is watching you",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "From Gary Larson's The Far Side.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "luposlipaphobia",
+   "meaning": "fear of being chased by wolves around a table on a polished floor in socks",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "The Far Side.",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  },
+  {
+   "term": "hexakosioihexekontahexaphobia",
+   "meaning": "fear of the number 666",
+   "type": "phobia",
+   "flag": "coined",
+   "notes": "",
+   "source": "https://en.wikipedia.org/wiki/List_of_phobias"
+  }
+ ],
+ "philias": [
+  {
+   "term": "bibliophile",
+   "meaning": "a lover or collector of books",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "audiophile",
+   "meaning": "a lover of high-fidelity sound",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "cinephile",
+   "meaning": "a lover of film",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "logophile",
+   "meaning": "a lover of words",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "oenophile",
+   "meaning": "a lover of wine",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/words-for-hobbies-hobbyists-collectors"
+  },
+  {
+   "term": "turophile",
+   "meaning": "a lover of cheese",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "From Greek tyros, cheese.",
+   "source": "https://www.merriam-webster.com/dictionary/turophile"
+  },
+  {
+   "term": "arctophile",
+   "meaning": "a lover or collector of teddy bears",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "From Greek arktos, bear.",
+   "source": "https://merriam-webster.com/wordplay/words-for-hobbies-hobbyists-collectors"
+  },
+  {
+   "term": "mycophile",
+   "meaning": "a lover of mushrooms, especially a mushroom hunter",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/words-for-hobbies-hobbyists-collectors"
+  },
+  {
+   "term": "scripophilist",
+   "meaning": "a collector of old share and bond certificates",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://merriam-webster.com/wordplay/words-for-hobbies-hobbyists-collectors"
+  },
+  {
+   "term": "technophile",
+   "meaning": "a lover of new technology",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "neophile",
+   "meaning": "a lover of novelty",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "ailurophile",
+   "meaning": "a lover of cats",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://www.merriam-webster.com/dictionary/ailurophile"
+  },
+  {
+   "term": "ornithophile",
+   "meaning": "a lover of birds",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "ichthyophile",
+   "meaning": "a lover of fish",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "cartophile",
+   "meaning": "a lover of maps",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "Cartophily is also used for collecting cigarette cards.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "metrophile",
+   "meaning": "a lover of metro and subway systems",
+   "type": "-philia (love)",
+   "flag": "coined",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "taphophile",
+   "meaning": "a lover of cemeteries and graves (history, headstones)",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "glossophile",
+   "meaning": "a lover of languages",
+   "type": "-philia (love)",
+   "flag": "coined",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "videophile",
+   "meaning": "an enthusiast for high-quality video",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "xenophile",
+   "meaning": "someone drawn to foreign people, cultures or things",
+   "type": "-philia (love)",
+   "flag": "real",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "pluviophile",
+   "meaning": "a lover of rain",
+   "type": "-philia (love)",
+   "flag": "coined",
+   "notes": "Popular online; the biology term pluviophilia (affinity for rain) is older.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "nemophilist",
+   "meaning": "a lover of woods and forests",
+   "type": "-philia (love)",
+   "flag": "coined",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "haemophilia",
+   "meaning": "an inherited bleeding disorder (missing or faulty clotting factor VIII or IX)",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Not a love of blood! The name was coined in 1828 in Schönlein's circle; literally 'blood-loving', meaning a tendency to bleed. Haemophilia B is also called Christmas disease, after patient Stephen Christmas, described in the BMJ's 1952 Christmas issue.",
+   "source": "https://www.etymonline.com/word/haemophilia"
+  },
+  {
+   "term": "eosinophilia",
+   "meaning": "a raised eosinophil count in the blood",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Eosinophils 'love' the acidic red dye eosin. Causes: allergy, asthma, parasites, drug reactions.",
+   "source": "https://dictionary.com/browse/eosinophilia"
+  },
+  {
+   "term": "neutrophilia",
+   "meaning": "a raised neutrophil count",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Bacterial infection, steroids, stress, smoking.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "basophilia",
+   "meaning": "a raised basophil count; also blue-staining with basic dyes",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Over 200 basophils per microlitre; seen in myeloproliferative disease (e.g. CML) and allergy.",
+   "source": "https://en.wikipedia.org/wiki/Basophilia"
+  },
+  {
+   "term": "thrombophilia",
+   "meaning": "an increased tendency to form blood clots",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "E.g. factor V Leiden, antiphospholipid syndrome.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "hydrophilic",
+   "meaning": "water-loving: dissolves in or attracts water",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Hydrophilic drugs tend to stay in the bloodstream (lower volume of distribution).",
+   "source": "https://louis.pressbooks.pub/sandbox1/chapter/3-3-distribution/"
+  },
+  {
+   "term": "lipophilic",
+   "meaning": "fat-loving: dissolves in fats and lipids",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Lipophilic drugs cross membranes more easily and tend to have a higher volume of distribution.",
+   "source": "https://louis.pressbooks.pub/sandbox1/chapter/3-3-distribution/"
+  },
+  {
+   "term": "nucleophile",
+   "meaning": "a chemical species that donates an electron pair",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "electrophile",
+   "meaning": "a chemical species that accepts an electron pair",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "acidophile",
+   "meaning": "an organism that thrives in acidic conditions",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Lactobacillus acidophilus is named for acid-loving.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "alkaliphile",
+   "meaning": "an organism that thrives in alkaline conditions",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "thermophile",
+   "meaning": "an organism that thrives at high temperatures",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Thermus aquaticus, source of Taq polymerase for PCR, is one.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "hyperthermophile",
+   "meaning": "an organism that thrives in extreme heat (around hydrothermal vents)",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "psychrophile",
+   "meaning": "an organism that thrives in cold",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Listeria can grow at fridge temperature (it is psychrotrophic).",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "mesophile",
+   "meaning": "an organism that prefers moderate temperatures",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Most human pathogens are mesophiles.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "halophile",
+   "meaning": "an organism that thrives in salty conditions",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "extremophile",
+   "meaning": "an organism that thrives in extreme conditions",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "capnophile",
+   "meaning": "a microbe that thrives in high carbon dioxide",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "E.g. Neisseria and Haemophilus grow better in CO2-enriched incubators.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "microaerophile",
+   "meaning": "a microbe that needs low oxygen levels",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "Campylobacter and Helicobacter pylori are microaerophiles.",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "xerophile",
+   "meaning": "an organism that thrives in very dry conditions",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "myrmecophile",
+   "meaning": "an organism that lives with ants",
+   "type": "-philia (science)",
+   "flag": "clinical",
+   "notes": "",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "Legionella pneumophila",
+   "meaning": "bacterium whose species name means 'lung-loving'",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Greek pneumon (lung) + -phila (LPSN). Causes Legionnaires' disease.",
+   "source": "https://lpsn.dsmz.de/species/legionella-pneumophila"
+  },
+  {
+   "term": "Haemophilus",
+   "meaning": "bacterial genus, 'blood-loving'",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "LPSN: 'blood-lover'. Needs blood factors (X and V) to grow, hence chocolate agar.",
+   "source": "https://lpsn.dsmz.de/archive/haemophilus.html"
+  },
+  {
+   "term": "anthropophilic",
+   "meaning": "preferring humans as hosts (of fungi, mosquitoes, parasites)",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Anthropophilic dermatophytes (e.g. Trichophyton rubrum) spread person to person; zoophilic ones come from animals (e.g. Microsporum canis from cats).",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  },
+  {
+   "term": "Aeromonas hydrophila",
+   "meaning": "water-loving bacterium",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "LPSN: 'water-loving'. Causes wound infections after freshwater injuries.",
+   "source": "https://lpsn.dsmz.de/species/aeromonas-hydrophila"
+  },
+  {
+   "term": "argyrophilic",
+   "meaning": "staining readily with silver",
+   "type": "-philia (medical)",
+   "flag": "clinical",
+   "notes": "Used in histology (argyrophilic fibres, grains).",
+   "source": "https://wikiwand.com/en/articles/-phil-"
+  }
+ ]
+}

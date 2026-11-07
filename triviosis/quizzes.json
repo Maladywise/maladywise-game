@@ -2746,14 +2746,14 @@
     "e": "Air spaces filled with fluid and pus. Air bronchograms are a clue."
    },
    {
-    "q": "Legionnaires\u2019 disease is named after a 1976 convention outbreak in?",
-    "a": "Philadelphia",
+    "q": "The species name in Legionella pneumophila means?",
+    "a": "Lung-loving",
     "w": [
-     "Chicago",
-     "Boston",
-     "New York"
+     "Air-borne",
+     "Water-dwelling",
+     "Breath-stealing"
     ],
-    "e": "At an American Legion convention."
+    "e": "Greek pneumon, \u2018lung\u2019, plus -phila, \u2018loving\u2019. Fitting for a bug that thrives in warm water systems and cooling towers, then heads for the lungs."
    },
    {
     "q": "Legionella longbeachae is famously linked to?",
@@ -3542,14 +3542,14 @@
     "e": "Obs (observations) are the vital signs: pulse, blood pressure, temperature, breathing rate and oxygen level."
    },
    {
-    "q": "A \u2018frequent flyer\u2019 is?",
-    "a": "A patient who often re-presents",
+    "q": "On a full blood count report, \u2018eosinophilia\u2019 means?",
+    "a": "A raised eosinophil count",
     "w": [
-     "A transferred patient",
-     "A travelling doctor",
-     "A patient who needs a flight"
+     "A low eosinophil count",
+     "Eosinophils with abnormal shapes",
+     "Eosinophils found in urine"
     ],
-    "e": "A \u2018frequent flyer\u2019 is hospital slang for a patient who comes back again and again. Best kept off the notes."
+    "e": "Here \u2018-philia\u2019 means too many, not love. Eosinophils are named for soaking up the acidic red dye eosin. Think allergy, asthma, parasites and drug reactions."
    },
    {
     "q": "\u2018TTO\u2019 or \u2018TTA\u2019 medications are?",
@@ -5682,14 +5682,14 @@
     "e": "Saigon, working for Pasteur. He also gave his name to the C in BCG."
    },
    {
-    "q": "In 2017, WHO added which problem to its list of highest-priority neglected tropical diseases?",
-    "a": "Snakebite envenoming",
+    "q": "Rabies was long called \u2018hydrophobia\u2019 because?",
+    "a": "Swallowing triggers painful throat spasms, so patients dread drinking",
     "w": [
-     "Scorpion stings",
-     "Dog bites",
-     "Bee allergy"
+     "Patients sweat out all their water",
+     "The virus only survives in water",
+     "Infected animals avoid rivers"
     ],
-    "e": "It kills up to about 138,000 people a year, mostly poor rural workers in Asia and Africa."
+    "e": "It isn\u2019t a fear of water itself but of the agony of swallowing, even when desperately thirsty. Early doctors used the word as a synonym for rabies."
    },
    {
     "q": "Captopril, the first ACE inhibitor, was developed from the venom of which Brazilian snake?",
@@ -6968,14 +6968,14 @@
     "e": "Usually a count of four each. Popular in the military, and in dreadful meetings."
    },
    {
-    "q": "Which sleep stage, identified by Eugene Aserinsky in 1953, is the one most linked to vivid dreams?",
-    "a": "REM sleep",
+    "q": "The best-studied, most effective treatment for a specific phobia, such as of spiders or needles, is?",
+    "a": "Exposure therapy",
     "w": [
-     "Stage 1 sleep",
-     "Stage 2 sleep",
-     "Deep slow-wave sleep"
+     "Long-term benzodiazepines",
+     "Avoiding the trigger",
+     "Hypnotherapy"
     ],
-    "e": "He discovered it studying his own 8-year-old son. Kleitman, his supervisor, got much of the fame."
+    "e": "Gradual, guided exposure retrains the fear response, and even a single long session can help. Avoidance keeps the fear alive."
    },
    {
     "q": "A 2004 study by Elissa Epel and Elizabeth Blackburn found that women under long-term stress caring for sick children had shorter?",

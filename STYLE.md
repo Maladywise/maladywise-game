@@ -91,3 +91,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Trending themes (from Nov 2026)
 - A daily evening task (7:43pm Sydney) re-themes TOMORROW's puzzles from Google Trends. Main theme = tomorrow's world/health day if there's a clear one (priority 1–3 or who/specialty/zebra tag); otherwise the top medical trend. Then weave in as many other trending terms as fit (Medical: 3–6; Normie: 2–4 general trends).
 - All the usual rules apply: no giveaways, 180-day uniqueness, weekday difficulty, sensitive topics handled kindly (no jokes about deaths/outbreaks), Normie non-medical, verified facts. Monthly/weekly tasks should not undo a trend swap already logged in data/trends.json "used" for that date.
+
+## Animal names, phobias and -philias (from Nov 2026)
+- A welcome recurring strand: baby animal names (joey, cygnet, cria, leveret), collective nouns (a pride, a mob, a murmuration) and the -phobia / -philia family. Aim for about 2–4 items a week across games, not every day.
+- Mostly Normie (Triviosis questions, Comorbix groups, Zebritis closed-list prompts, Gridectomy clues, Suturix themes, Wordemic words). Medical mode gets the clinical side: specific phobia facts and treatment, symptom "-phobias" (photophobia, phonophobia, hydrophobia in rabies), haemophilia, -philias in blood counts and pathology (eosinophilia, thrombophilia) and microbe names (Haemophilus, pneumophila).
+- Use the checked bank in data/word-banks/animals-phobias.json. Its flags matter: many collective nouns are fanciful medieval "terms of venery" or modern coinages (parliament of owls, dazzle of zebras, crash of rhinos), and joke phobias are coinages, not diagnoses. Say so in explanations rather than presenting them as standard usage. Trypophobia is not in DSM-5.
+- Family-friendly only: no sexual paraphilias, ever.

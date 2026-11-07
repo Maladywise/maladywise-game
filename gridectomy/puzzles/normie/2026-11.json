@@ -1466,84 +1466,84 @@
   "number": 26,
   "difficulty": "Medium",
   "rows": [
-   "#SACK",
-   "VENUE",
-   "ANGRY",
-   "ISLES",
-   "NEED#"
+   "FEAT#",
+   "AUDIT",
+   "WROTE",
+   "NOBLE",
+   "#SEES"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
+    "c": 0,
     "len": 4,
-    "clue": "Give the boot"
+    "clue": "Heroic deed"
    },
    {
     "n": 5,
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Concert location"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Seeing red"
+    "clue": "Tax office check-up"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "British ___"
+    "clue": "Put pen to paper"
    },
    {
     "n": 8,
-    "r": 4,
+    "r": 3,
     "c": 0,
+    "len": 5,
+    "clue": "Duke or earl, say"
+   },
+   {
+    "n": 9,
+    "r": 4,
+    "c": 1,
     "len": 4,
-    "clue": "Must-have"
+    "clue": "Spots"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Common ___"
+    "c": 0,
+    "len": 4,
+    "clue": "Bambi, for one"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 2,
+    "c": 1,
     "len": 5,
-    "clue": "Right one is 90 degrees"
+    "clue": "Cash in Rome"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 3,
+    "c": 2,
     "len": 5,
-    "clue": "Like bacon or salami"
+    "clue": "Sun-dried brick"
    },
    {
     "n": 4,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Piano's black and whites"
+    "c": 3,
+    "len": 5,
+    "clue": "Book's name"
    },
    {
-    "n": 5,
+    "n": 6,
     "r": 1,
-    "c": 0,
+    "c": 4,
     "len": 4,
-    "clue": "Mirror-gazing"
+    "clue": "Golf pegs"
    }
   ]
  },
@@ -1936,7 +1936,7 @@
     "r": 4,
     "c": 0,
     "len": 3,
-    "clue": "Flower ___"
+    "clue": "Oyster ___ (a whole group of them)"
    }
   ],
   "down": [

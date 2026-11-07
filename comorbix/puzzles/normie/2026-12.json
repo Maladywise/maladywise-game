@@ -213,14 +213,14 @@
     ]
    },
    {
-    "label": "Tennis court surfaces",
-    "level": 3,
+    "label": "Animal group names",
     "words": [
-     "CONCRETE",
-     "GRASS",
-     "HARD",
-     "CARPET"
-    ]
+     "PRIDE",
+     "MOB",
+     "POD",
+     "COLONY"
+    ],
+    "level": 3
    },
    {
     "label": "___work",
@@ -458,14 +458,14 @@
     ]
    },
    {
-    "label": "___ pipe",
-    "level": 4,
+    "label": "___phobia",
     "words": [
-     "TAIL",
-     "BAG",
-     "DRAIN",
-     "HALF"
-    ]
+     "ARACHNO",
+     "CLAUSTRO",
+     "AGORA",
+     "XENO"
+    ],
+    "level": 4
    }
   ]
  },
@@ -918,14 +918,14 @@
     ]
    },
    {
-    "label": "___ show",
-    "level": 3,
+    "label": "Groups of birds, poetically",
     "words": [
-     "GAME",
-     "TALK",
-     "CHAT",
-     "REALITY"
-    ]
+     "MURDER",
+     "PARLIAMENT",
+     "MURMURATION",
+     "UNKINDNESS"
+    ],
+    "level": 3
    },
    {
     "label": "Anagrams of countries",
