@@ -970,3 +970,56 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .card.arcade2{cursor:default}
 .card.arcade2 .arcade-btns{display:flex;flex-wrap:wrap;gap:8px}
 .card.arcade2 .arcade-btns .play{text-decoration:none}
+/* ---------- exercise handouts (body.exh is set by assets/exfig.js) ---------- */
+.exh .doc ol.ex{list-style:none;padding:0;margin:8px 0 10px;counter-reset:ex;display:grid;gap:12px}
+.exh .doc ol.ex>li{counter-increment:ex;display:grid;grid-template-columns:176px minmax(0,1fr);gap:14px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.exh .doc ol.ex .ex-txt{min-width:0}
+.exh .doc ol.ex .dose{display:table;margin-top:6px}
+.exh .doc ol.ex .ex-txt>b{display:flex;align-items:baseline;gap:8px;margin-bottom:2px;font-size:16px}
+.exh .doc ol.ex .ex-txt>b::before{content:counter(ex);flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#4A3480;color:#fff;font:600 12px Poppins,system-ui,sans-serif;transform:translateY(-1px)}
+.exfig{background:#F1ECF8;border-radius:10px;line-height:0;overflow:hidden}
+.exfig svg{display:block;width:100%;height:auto}
+.ex-track,.exh-head{display:none}
+.exh-qr{display:none}
+@media (max-width:560px){.exh .doc ol.ex>li{grid-template-columns:minmax(0,1fr);gap:10px}.exh .doc ol.ex .exfig{max-width:300px;width:100%;justify-self:center}}
+@media print{
+  @page{size:A4;margin:10mm 11mm}
+  .exh,.exh *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html:has(body.exh),body.exh{background:#fff!important}
+  .exh .wrap{display:block;max-width:none;padding:0;margin:0}
+  .exh .fs-top,.exh .trust,.exh .related,.exh .mwx,.exh .mw-about,.exh .nl,.exh footer.site,.exh .print-qr,.exh .lsrch{display:none!important}
+  .exh .doc,.exh .doc p,.exh .doc li{color:#2B2340!important;font-family:Poppins,"Segoe UI",system-ui,sans-serif}
+  .exh .exh-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #4A3480;padding:0 0 3px;margin:0 0 5px}
+  .exh .exh-head b{font:700 17px Lora,Georgia,serif;color:#4A3480}
+  .exh .exh-head span{font:600 8px Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B5A93}
+  .exh .doc h1{font:700 20px Lora,Georgia,serif;color:#2B2340;margin:2px 0 1px}
+  .exh .doc .lede{font-size:9.5px;line-height:1.35;color:#5C4E7E!important;margin:0 0 5px}
+  .exh .doc h2{font:700 11px Poppins,system-ui,sans-serif;color:#4A3480;margin:6px 0 2px;break-after:avoid}
+  .exh .doc p,.exh .doc li{font-size:8.3px;line-height:1.3}
+  .exh .doc .callout{background:#F1ECF8!important;border-left:3px solid #4A3480;border-radius:0 6px 6px 0;padding:4px 8px 4px;margin:4px 0 2px}
+  .exh .doc .callout>b{font-size:9px;color:#4A3480}
+  .exh .doc .callout ul{columns:2;column-gap:14px;margin:1px 0 0;padding-left:12px}
+  .exh .doc .callout li{font-size:7.8px;line-height:1.24;break-inside:avoid;margin-bottom:1px}
+  .exh .doc ol.ex{grid-template-columns:1fr 1fr;gap:4px;margin:2px 0 3px}
+  .exh .doc ol.ex>li{grid-template-columns:35mm minmax(0,1fr);gap:6px;padding:5px 6px 5px 5px;border:1px solid #DCD3EA;border-top:2.5px solid #4A3480;border-radius:6px;background:#fff!important;break-inside:avoid;page-break-inside:avoid;font-size:8.2px;line-height:1.28}
+  .exh .doc ol.ex .exfig{border-radius:5px;align-self:start}
+  .exh .doc ol.ex>li:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:35mm minmax(0,1fr)}
+  .exh .doc ol.ex .ex-txt>b{font-size:9.6px;gap:5px;margin-bottom:1px;color:#2B2340}
+  .exh .doc ol.ex .ex-txt>b::before{width:14px;height:14px;font-size:8px}
+  .exh .doc ol.ex .dose{display:block;font-size:7.8px;line-height:1.25;margin-top:3px;padding:2px 6px;border-radius:5px;background:#F1ECF8!important;color:#4A3480}
+  .exh .ex-track{display:flex;align-items:center;gap:2px;margin-top:3px;max-width:62mm;font:500 6px Poppins,system-ui,sans-serif;color:#6B5A93}
+  .exh .ex-track span{margin-right:2px;font-weight:600}
+  .exh .ex-track i{flex:1;font-style:normal;text-align:center;border:1px solid #B3ABC2;border-radius:2px;height:13px;line-height:20px;font-size:5.4px;color:#9C93AE}
+  .exh .doc h2.exh-stop-h{background:#FBEFF5!important;border-left:3px solid #B5308A;color:#8E2369;margin:7px 0 0;padding:4px 8px 1px;border-radius:0 6px 0 0}
+  .exh .doc ul.exh-stop{background:#FBEFF5!important;border-left:3px solid #B5308A;margin:0 0 2px;padding:1px 8px 4px 20px;border-radius:0 0 6px 0;columns:2;column-gap:16px}
+  .exh .doc ul.exh-stop li{break-inside:avoid}
+  .exh .doc .exh-sup-p{margin:0 0 2px}
+  .exh .doc .src{columns:2;column-gap:14px;margin:0;padding-left:12px}
+  .exh .doc .src li{font-size:7px;line-height:1.25;color:#5C4E7E!important;break-inside:avoid}
+  .exh .doc a{color:inherit!important;text-decoration:none}
+  .exh .exh-foot{display:flex;align-items:center;gap:10px;margin-top:4px;padding-top:4px;border-top:1px solid #DCD3EA;break-inside:avoid}
+  .exh .exh-foot-t{flex:1}
+  .exh .exh-foot .meta{font-size:7.6px!important;line-height:1.3;margin:0;color:#5C4E7E!important}
+  .exh .exh-foot .print-url{display:block;font:600 9px Poppins,system-ui,sans-serif;color:#4A3480;margin:2px 0 0}
+  .exh .exh-qr{display:block;width:15mm;height:15mm}
+}
