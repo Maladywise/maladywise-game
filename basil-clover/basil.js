@@ -1144,10 +1144,10 @@
   var SPR = {};
   // Stage 2 (the Vet) lives in vet.js; without it the game is simply the Kitchen
   try { V = window.MW_VET ? window.MW_VET({ ctx: function () { return ctx; }, S: function () { return S; }, rr: rr, circ: circ, ell: ell, spr: spr, catEyes: catEyes, sprImg: function (n) { return sprOK(n) ? SPR[n] : null; }, W: W, H: H, BENCH: BENCH }) : null; } catch (e) { V = null; }
-  var sprLeft = 4;
-  ["basil-body", "basil-head", "clover-body", "clover-head"].forEach(function (n) { var im = new Image(); im.onload = im.onerror = function () { if (--sprLeft === 0 && typeof drawThumbs === "function") drawThumbs(); }; im.src = SBASE + "sprites/" + n + ".svg?v=1"; SPR[n] = im; });
+  var sprLeft = 6;
+  ["basil-body", "basil-head", "clover-body", "clover-head", "basil-body-lion", "basil-head-lion"].forEach(function (n) { var im = new Image(); im.onload = im.onerror = function () { if (--sprLeft === 0 && typeof drawThumbs === "function") drawThumbs(); }; im.src = SBASE + "sprites/" + n + ".svg?v=1"; SPR[n] = im; });
   function sprOK(n) { var im = SPR[n]; return im && im.complete && im.naturalWidth > 0; }
-  function spr(n) { if (sprOK(n)) ctx.drawImage(SPR[n], 0, 0, 240, 260); }
+  function spr(n) { if (STAGE === 2 && (n === "basil-body" || n === "basil-head") && sprOK(n + "-lion")) n += "-lion"; /* the Vet: Basil has had a lion cut */ if (sprOK(n)) ctx.drawImage(SPR[n], 0, 0, 240, 260); }
   function cloverFat() { return 1 + Math.min(1, Math.max(0, (S.bonuses || 1) - 1) * 0.1 + S.eatenFood / 240); }
   function catEyes(who, mode, cross) {
     // sprite coordinates (240 x 260 art)
@@ -1334,7 +1334,7 @@
     if (k === 1) { keycap(x - 13, H - 64, "\u2191"); keycap(x + 13, H - 64, "W"); keycap(x - 13, H - 30, "\u2193"); keycap(x + 13, H - 30, "S"); }
     else { keycap(x - 13, H - 46, ["\u2190", "", "\u2192"][k]); keycap(x + 13, H - 46, ["A", "", "D"][k]); }
   }
-  if (location.hash === "#dev") { window.__bk = function () { return S; }; window.__bkx = { ev: function (k) { S.ev = null; startEvent(k); }, dog: function () { startDog(); }, boss: function (f) { startBoss(f); }, stage: function () { return STAGE; }, set: function (n) { setStage(n); }, tom: function () { S.tomT = 0; S.dog = null; S.ev = null; }, flea: function () { S.fleaT = 0; }, atk: function (k, side) { var b = S.boss; b.n = 9; b.last = ""; bossAttack(); b.atk.kind = k; if (side) b.atk.side = side; }, hp: function (n) { S.boss.hp = n; }, laser: function () { S.laserT = 0; }, rb: function () { S.rbT = 0; }, moth: function () { S.mothT = 0; } }; }
+  if (location.hash === "#dev") { window.__bk = function () { return S; }; window.__bkx = { ev: function (k) { S.ev = null; startEvent(k); }, dog: function () { startDog(); }, boss: function (f) { startBoss(f); }, stage: function () { return STAGE; }, set: function (n) { setStage(n); }, tom: function () { S.tomT = 0; S.dog = null; S.ev = null; }, flea: function () { S.fleaT = 0; }, atk: function (k, side) { var b = S.boss; b.n = 9; b.last = ""; bossAttack(); b.atk.kind = k; if (side) b.atk.side = side; }, hp: function (n) { S.boss.hp = n; }, laser: function () { S.laserT = 0; }, rb: function () { S.rbT = 0; }, moth: function () { S.mothT = 0; }, win: function () { S.boss = null; S.ev = null; win(); }, lose: function () { S.lives = 1; S.hb = 0; hurt("b", 1); } }; }
   var TOM = null;
   function tomSprite() {
     if (TOM) return TOM; if (!sprOK("clover-head")) return null;
@@ -1494,7 +1494,7 @@
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
     var cl = S.bonus > 0, bn = nameFor(S.bPts), cn = nameFor(S.cPts, CNAMES);
     $("bk-otrophy").hidden = !S.won; $("bk-omasc").hidden = S.won; $("bk-over").classList.toggle("win", S.won); endlessUI();
-    $("bk-omasc").src = "/assets/mascots/" + (cl ? "clover.svg?v=1" : "basil.svg?v=2"); $("bk-omasc").alt = cl ? "Clover" : "Basil";
+    $("bk-omasc").src = cl ? "/assets/mascots/clover.svg?v=1" : STAGE === 2 ? SBASE + "sprites/basil-lion.svg?v=1" : "/assets/mascots/basil.svg?v=2"; $("bk-omasc").alt = cl ? "Clover" : "Basil";
     $("bk-otitle").textContent = cl ? cn : bn;
     $("bk-ofeat").textContent = DAILY ? "Daily challenge \u00b7 " + dayLabel() : cl ? "Clover ended it. Mid-snack." : "Basil’s verdict";
     $("bk-omsg").textContent = cl ? (S.cPts < 3000 ? "Barely a snack. She’ll be complaining about this for days." : S.cPts < 30000 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
