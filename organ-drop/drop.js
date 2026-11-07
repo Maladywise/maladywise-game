@@ -1,5 +1,5 @@
 /* Organ Drop (working title): a falling-block bonus game for Malady Wise.
-   Seven pieces, seven organs. 10 x 20 board, SRS rotation with wall kicks, 7-bag randomiser, hold, next preview,
+   Seven pieces, seven organs (seven sea creatures in Normie mode: same shapes and daily order, only the art and words change). 10 x 20 board, SRS rotation with wall kicks, 7-bag randomiser, hold, next preview,
    ghost piece, lock delay, levels every 10 lines with faster gravity and an organ fact on each level-up.
    High scores: top 5 in this browser only. ?debug=1 exposes window.OD_DEBUG for testing (and ?day=YYYY-MM-DD to fake the date).
    Daily challenge: the piece order is seeded from the Sydney date, so everyone gets the same organs; one scored go a day, replays are practice.
@@ -37,7 +37,7 @@
 
   var TOUCH = false; try { TOUCH = navigator.maxTouchPoints > 0 || "ontouchstart" in window || matchMedia("(pointer:coarse)").matches; } catch (e) {}
   if (TOUCH) document.documentElement.classList.add("od-touch");
-  document.title = TITLE + ": a bonus organ-stacking game | Malady Wise";
+  document.title = TITLE + (normie() ? ": a bonus sea-creature stacking game | Malady Wise" : ": a bonus organ-stacking game | Malady Wise");
   Array.prototype.forEach.call(document.querySelectorAll(".od-name"), function (e) { e.textContent = TITLE; });
 
   // ---------- pieces: shape, organ, colour. Matrix values are cell ids so rotation keeps track of the face cell ----------
@@ -51,6 +51,19 @@
     Z: { emo: "🧠", organ: "Brain", col: "#F4AFC6", dark: "#C46A8C", face: 3, m: [[1, 2, 0], [0, 3, 4], [0, 0, 0]] }
   };
   var TYPES = ["I", "J", "L", "O", "S", "T", "Z"];
+  // Normie mode: the same seven shapes become sea creatures (art, names and share emoji only; shapes, order and scoring are unchanged).
+  // Okabe-Ito colours (colour-blind friendly), and each creature has its own body pattern too.
+  var SEA = {
+    I: { emo: "🐟", organ: "Eel", col: "#2A86C8", ghost: "#7DBDF0", dark: "#17588A" },
+    J: { emo: "🐙", organ: "Octopus", col: "#CC79A7", dark: "#8E4673" },
+    L: { emo: "🐠", organ: "Seahorse", col: "#E69F00", dark: "#9C6A00" },
+    O: { emo: "🐡", organ: "Pufferfish", col: "#F0E442", dark: "#A89D1A" },
+    S: { emo: "🦀", organ: "Crab", col: "#D55E00", ghost: "#F08A45", dark: "#8A3B00" },
+    T: { emo: "🐢", organ: "Turtle", col: "#009E73", ghost: "#3FC79E", dark: "#00694C" },
+    Z: { emo: "🪼", organ: "Jellyfish", col: "#56B4E9", dark: "#2B7DB0" }
+  };
+  var SEAMODE = normie();
+  if (SEAMODE) TYPES.forEach(function (t) { var p = P[t], n = SEA[t]; p.emo = n.emo; p.organ = n.organ; p.col = n.col; p.dark = n.dark; p.ghost = n.ghost; });
   function rotCW(m) { var n = m.length, r = []; for (var y = 0; y < n; y++) { r.push([]); for (var x = 0; x < n; x++) r[y].push(m[n - 1 - x][y]); } return r; }
   TYPES.forEach(function (t) { var p = P[t], r = [p.m]; for (var i = 1; i < 4; i++) r.push(rotCW(r[i - 1])); p.rots = r; p.idx = TYPES.indexOf(t) + 1; });
   // SRS kicks as [dx, dy] with y pointing UP (converted when used). Key: from*10+to
@@ -62,7 +75,7 @@
   // ---------- copy ----------
   var MED1 = ["Surgery successful", "Clean margins", "Discharged home", "Stable on the ward", "Sutures in", "Obs all normal", "Back to the ward", "Theatre list cleared"];
   var MEDN = { 2: "Double bypass!", 3: "Triple bypass!", 4: "Transplant!" };
-  var NOR = { 1: "Line cleared!", 2: "Double!", 3: "Triple!", 4: "Four lines!" };
+  var NOR = { 1: "Line cleared!", 2: "Double!", 3: "Triple!", 4: "Tidal wave!" };
   function comboTxt(n) { return (normie() ? "Combo ×" : "Code blue! ×") + n; }
   var PERFECT = "Perfect match!";
   var OVERMSG = ["The ward is full. Time for a fresh shift.", "Too many patients, not enough beds.", "The team did brilliantly. Rest, then go again.", "Even the best theatre lists run over."];
@@ -89,23 +102,33 @@
     "Hiccups are sudden, involuntary spasms of your diaphragm.",
     "Your skin is your body's largest organ."
   ];
-  // Normie mode: animal organ facts, no medicine
+  // Normie mode: sea-creature facts (each checked against a reputable source), no medicine
   var NFACTS = [
-    "An octopus has three hearts: one for the body and two for the gills.",
-    "A giraffe's heart weighs about 11 kg and has to push blood two metres up to its head.",
-    "A hummingbird's heart can beat more than 1,200 times a minute.",
-    "A cow has one stomach, split into four compartments.",
-    "Many sea stars push their stomach out through their mouth to digest dinner outside their body.",
-    "Bird lungs don't puff up like balloons. Air flows one way through them, helped by a set of air sacs.",
-    "Most snakes have only one working lung, long and thin to fit their shape.",
-    "A sperm whale has the biggest brain of any animal, around 8 kg.",
-    "A platypus has no stomach. Its food pipe joins straight onto its intestine.",
-    "Wood frogs freeze almost solid in winter. Their heart stops, then starts again when they thaw.",
-    "An earthworm has five pairs of heart-like pumps.",
-    "A shark's huge, oily liver helps stop it sinking.",
-    "Elephants have the biggest brain of any land animal, about 5 kg.",
-    "Some frogs can breathe through their skin, even underwater."
+    "An octopus has three hearts and blue blood.",
+    "About two-thirds of an octopus's nerve cells are in its arms, not its head.",
+    "An octopus can taste things with the suckers on its arms.",
+    "In seahorses, the dad carries the eggs in a pouch and gives birth to the babies.",
+    "A seahorse can move each eye on its own, looking forwards and backwards at once.",
+    "A seahorse has no teeth. It slurps up tiny shrimp through its snout like a straw.",
+    "Leafy and weedy seadragons, cousins of the seahorse, live only in the seas off southern Australia.",
+    "A pufferfish puffs up by gulping water, turning itself into a spiky ball too big to swallow.",
+    "Male white-spotted pufferfish sculpt circles about 2 metres wide in the sand to win a mate.",
+    "A pufferfish's teeth are fused into a beak that keeps growing for its whole life.",
+    "Most crabs walk sideways, because their leg joints bend best that way.",
+    "The Japanese spider crab can measure about 3.7 metres from claw tip to claw tip.",
+    "Every year, tens of millions of red crabs march from the forest to the sea on Christmas Island to breed.",
+    "For many sea turtles, the warmth of the sand decides the hatchlings: warmer nests make more girls.",
+    "Leatherback turtles can dive more than 1,000 metres deep.",
+    "Green sea turtles are named for the green colour of their fat, not their shell.",
+    "Sea turtles can look like they're crying. Glands near their eyes get rid of extra salt.",
+    "Jellyfish have no brain, no heart and no bones, and they're about 95% water.",
+    "A box jellyfish has 24 eyes, in four clusters.",
+    "One tiny jellyfish, Turritopsis dohrnii, can turn itself back into a baby polyp and start life again.",
+    "Moray eels have a second set of jaws in their throat that shoot forward to grab food.",
+    "Electric eels aren't true eels. One kind can zap up to about 860 volts.",
+    "European eels swim thousands of kilometres across the Atlantic to breed in the Sargasso Sea."
   ];
+
 
   // ---------- state ----------
   var COLS = 10, ROWS = 22, HID = 2; // rows 0-1 are hidden spawn rows
@@ -221,7 +244,7 @@
   }
   function levelUp() {
     var f = S.facts[S.factI % S.facts.length]; S.factI++; if (S.seen.indexOf(f) < 0) S.seen.push(f);
-    $("od-factlv").textContent = "Level " + S.level + " · organ fact";
+    $("od-factlv").textContent = "Level " + S.level + (SEAMODE ? " · sea fact" : " · organ fact");
     $("od-facttx").textContent = f;
     var el = $("od-fact"); el.classList.remove("new"); void el.offsetWidth; el.classList.add("new"); S.factT = 6.5;
     track("level-" + S.level);
@@ -263,7 +286,21 @@
   // ---------- drawing ----------
   var sprites = {};
   function rr(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+  function seaMotif(c, t, s, col) {
+    c.save(); c.strokeStyle = col; c.fillStyle = col; c.lineWidth = Math.max(1, s * 0.075); c.lineCap = "round"; c.lineJoin = "round"; c.globalAlpha = 0.55;
+    var u = function (v) { return v * s; };
+    c.beginPath();
+    if (t === "I") { c.moveTo(u(.14), u(.5)); c.quadraticCurveTo(u(.32), u(.3), u(.5), u(.5)); c.quadraticCurveTo(u(.68), u(.7), u(.86), u(.5)); c.stroke(); } // eel: a wavy fin line
+    else if (t === "J") { [[.34, .38, .11], [.64, .6, .11]].forEach(function (d) { c.moveTo(u(d[0] + d[2]), u(d[1])); c.arc(u(d[0]), u(d[1]), u(d[2]), 0, 7); }); c.stroke(); } // octopus: suckers
+    else if (t === "L") { [.32, .5, .68].forEach(function (y) { c.moveTo(u(.3), u(y)); c.quadraticCurveTo(u(.5), u(y + .1), u(.7), u(y)); }); c.stroke(); } // seahorse: ridges
+    else if (t === "O") { [[.5, .26], [.26, .5], [.74, .5], [.5, .74]].forEach(function (d) { c.moveTo(u(d[0]), u(d[1] - .08)); c.lineTo(u(d[0] + .07), u(d[1] + .05)); c.lineTo(u(d[0] - .07), u(d[1] + .05)); c.closePath(); }); c.fill(); } // pufferfish: spikes
+    else if (t === "S") { c.arc(u(.5), u(.52), u(.21), Math.PI * 1.85, Math.PI * 1.15, false); c.stroke(); c.beginPath(); c.moveTo(u(.5), u(.52)); c.lineTo(u(.66), u(.38)); c.stroke(); } // crab: a claw
+    else if (t === "T") { for (var k = 0; k < 6; k++) { var a = Math.PI / 6 + k * Math.PI / 3, px = u(.5) + Math.cos(a) * u(.24), py = u(.52) + Math.sin(a) * u(.24); if (k) c.lineTo(px, py); else c.moveTo(px, py); } c.closePath(); c.stroke(); } // turtle: a shell plate
+    else if (t === "Z") { [.3, .5, .7].forEach(function (x) { c.moveTo(u(x), u(.2)); c.quadraticCurveTo(u(x - .1), u(.37), u(x), u(.5)); c.quadraticCurveTo(u(x + .1), u(.63), u(x), u(.8)); }); c.stroke(); } // jellyfish: tentacles
+    c.restore();
+  }
   function motif(c, t, s, col) {
+    if (SEAMODE) { seaMotif(c, t, s, col); return; }
     c.save(); c.strokeStyle = col; c.fillStyle = col; c.lineWidth = Math.max(1, s * 0.075); c.lineCap = "round"; c.lineJoin = "round"; c.globalAlpha = 0.55;
     var u = function (v) { return v * s; };
     c.beginPath();
@@ -303,7 +340,8 @@
   }
   function bbox(t) { var m = cells(t, 0), x0 = 9, x1 = -1, y0 = 9, y1 = -1; for (var j = 0; j < m.length; j++) for (var i = 0; i < m.length; i++) if (m[j][i]) { x0 = Math.min(x0, i); x1 = Math.max(x1, i); y0 = Math.min(y0, j); y1 = Math.max(y1, j); } return { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 }; }
   function drawMini(c, t, cx, cy, s, alpha) { var b = bbox(t); drawPiece(c, t, 0, cx - (b.x + b.w / 2) * s, cy - (b.y + b.h / 2) * s, s, alpha); }
-  var masc = new Image(); masc.src = "/assets/mascots/labelosis.svg?v=1";
+  var MASC = SEAMODE ? "/assets/mascots/normie/labelosis.svg" : "/assets/mascots/labelosis.svg?v=1";
+  var masc = new Image(); masc.src = MASC;
 
   function draw() {
     if (!S) return;
@@ -385,7 +423,7 @@
     lbFetch(lbFor());
     paused = false; running = true; held.left = held.right = held.down = 0;
     $("od-intro").hidden = true; $("od-game").hidden = false; $("od-over").hidden = true; $("od-paused").hidden = true;
-    $("od-toast").hidden = true; $("od-fact").classList.remove("new"); $("od-factlv").textContent = "Organ facts"; $("od-facttx").textContent = "Clear 10 rows to unlock your first one."; $("od-stage").classList.remove("paused");
+    $("od-toast").hidden = true; $("od-fact").classList.remove("new"); $("od-factlv").textContent = SEAMODE ? "Sea facts" : "Organ facts"; $("od-facttx").textContent = "Clear 10 rows to unlock your first one."; $("od-stage").classList.remove("paused");
     $("od-pause").innerHTML = "&#10074;&#10074;";
     window.scrollTo(0, 0); size(); hud();
     cancelAnimationFrame(raf); last = performance.now(); raf = requestAnimationFrame(frame);
@@ -456,7 +494,7 @@
   }
   function shareText(head) {
     var rows = stackRows(), t;
-    do { t = rows.length ? head + "\n" + rows.join("\n") + "\n" + LINK : head + " 🫀🫁 " + LINK; } while (postLen(t) > 280 && rows.pop());
+    do { t = rows.length ? head + "\n" + rows.join("\n") + "\n" + LINK : head + (SEAMODE ? " 🐙🐢 " : " 🫀🫁 ") + LINK; } while (postLen(t) > 280 && rows.pop());
     return t;
   }
   function fmtDate(d) { try { var p = d.split("-"); return +p[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+p[1] - 1]; } catch (e) { return ""; } }
@@ -473,8 +511,9 @@
     renderHS($("od-hs0"), list);
     var dr = dailyRec();
     $("od-daily").textContent = dr ? "Daily (practice)" : "Daily challenge";
-    $("od-dnote").innerHTML = dr ? "Today’s daily: <b>" + fmt(dr.s) + "</b> pts, " + dr.l + " lines. Replays are practice. New organs at midnight (Sydney)."
-      : "Today’s daily: the same organs, in the same order, for everyone. One scored go.";
+    var stuff = SEAMODE ? "sea creatures" : "organs";
+    $("od-dnote").innerHTML = dr ? "Today’s daily: <b>" + fmt(dr.s) + "</b> pts, " + dr.l + " lines. Replays are practice. New " + stuff + " at midnight (Sydney)."
+      : "Today’s daily: the same " + stuff + ", in the same order, for everyone. One scored go.";
   }
 
   // ---------- world and daily leaderboards (via the Malady Wise counter server) ----------
@@ -528,7 +567,7 @@
     note.textContent = mine >= 0 ? "You’re #" + (mine + 1) + (k === "odaily" ? " today." : " in the world.") : k === "odaily" ? "Sydney time. Names are public." : "Names are public.";
   }
   $("od-lbform").addEventListener("submit", function (e) {
-    e.preventDefault(); var n = String($("od-lbname").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || (normie() ? "Anonymous stacker" : "Anonymous surgeon");
+    e.preventDefault(); var n = String($("od-lbname").value || "").replace(/[^A-Za-z0-9 '\-\.]/g, "").replace(/\s+/g, " ").trim().slice(0, 14) || (normie() ? "Anonymous sailor" : "Anonymous surgeon");
     $("od-lbform").hidden = true; lbPost(n); $("od-again").focus({ preventScroll: true });
   });
   $("od-share").onclick = function () {
@@ -671,18 +710,34 @@
   // Normie mode: swap the page's medical wording for everyday wording
   if (normie()) {
     var nq = function (sel, t) { var el = document.querySelector(sel); if (el) el.textContent = t; };
-    nq(".od-lede", "Organs are falling. Stack them neatly and fill whole rows to clear them. It gets faster every level, and every level brings a new animal organ fact.");
+    var nh = function (sel, h) { var el = document.querySelector(sel); if (el) el.innerHTML = h; };
+    nq(".od-lede", "Sea creatures are sinking. Stack them neatly and fill whole rows to clear them. It gets faster every level, and every level brings a new sea-creature fact.");
     nq("#od-start", "Play");
+    nq(".od-found", "🌊 Bonus game");
     nq("#od-otitle", "Game over");
-    nq(".od-hush", "No organs were harmed. They’re only shapes.");
-    nq("#od-paused .od-omsg", "Paused. The organs will wait.");
-    Array.prototype.forEach.call(document.querySelectorAll(".od-rules li, .od-hp li"), function (li) {
-      li.innerHTML = li.innerHTML.replace("is a <b>transplant</b>, worth the most", "is the <b>big one</b>, worth the most").replace("= <b>transplant</b>", "= <b>the big one</b>");
-    });
-    Array.prototype.forEach.call(document.querySelectorAll(".od-rsound"), function (li) { li.innerHTML = "<b>Sound:</b> soft blips and chimes (and a buzz on phones). Tap 🔊 in the game bar to mute."; });
-    Array.prototype.forEach.call(document.querySelectorAll(".od-rcombo"), function (li) {
-      li.innerHTML = "<b>Combos:</b> clear rows on back-to-back drops for a <b>combo</b> bonus. A cleared row that’s all one organ is a <b>perfect match</b>: triple points.";
-    });
+    nq(".od-hush", "No sea creatures were harmed. They’re only shapes.");
+    nq("#od-paused .od-omsg", "Paused. The sea creatures will wait.");
+    nq(".od-rules:not(.od-hsbox) h2", "The sea creatures");
+    nh(".od-rules:not(.od-hsbox) ul",
+      "<li>Sea creatures sink into the 10 × 20 board. <b>Move</b> and <b>rotate</b> them as they fall.</li>" +
+      "<li>Fill a whole row and it clears. Four rows at once is a <b>tidal wave</b>, worth the most.</li>" +
+      "<li><b>Hold</b> tucks a creature away for later (once per drop). The faint outline shows where it will land.</li>" +
+      "<li><b>Combos:</b> clear rows on back-to-back drops for a <b>combo</b> bonus. A cleared row that’s all one creature is a <b>perfect match</b>: triple points.</li>" +
+      "<li>Every 10 rows: <b>level up</b>, faster drops and a new sea-creature fact.</li>" +
+      "<li><b>Sound:</b> soft blips and chimes (and a buzz on phones). Tap 🔊 in the game bar to mute.</li>" +
+      "<li><b>Daily challenge:</b> everyone gets the same sea creatures in the same order (new each midnight, Sydney time). Your first go each day is scored; replays are practice.</li>" +
+      "<li>On a phone, use the buttons under the board, or swipe the board: drag to move, tap to rotate, flick down to drop.</li>");
+    nh(".od-hp",
+      "<li><b>Fill a whole row</b> to clear it. Four at once = <b>tidal wave</b>.</li>" +
+      "<li><b>Combos:</b> clear rows on back-to-back drops for a <b>combo</b> bonus. A cleared row all of one creature is a <b>perfect match</b>: triple points.</li>" +
+      "<li><b>Buttons:</b> ◀ ▶ move, ↻ rotate, ▼ soft drop, ⤓ hard drop, ⇄ hold.</li>" +
+      "<li><b>Swipe the board:</b> drag to move, tap to rotate, flick down to drop.</li>" +
+      "<li><b>Keys:</b> ← → move, ↑ or X rotate, Z rotate back, ↓ soft drop, Space hard drop, C hold, P pause.</li>" +
+      "<li>Every 10 rows: level up, faster drops, new sea-creature fact.</li>");
+    Array.prototype.forEach.call(document.querySelectorAll(".od-masc, .od-omasc"), function (im) { im.src = MASC; });
+    var mi = document.querySelector(".od-masc"); if (mi) mi.alt = "Labelosis, the Malady Wise mascot, on a day off";
+    cv.setAttribute("aria-label", "Game board with sinking sea-creature pieces");
+    var ft = document.querySelector("footer.site"); if (ft && ft.firstChild && ft.firstChild.nodeType === 3) ft.firstChild.nodeValue = "A bonus game. Sea creatures are simplified. Please leave real ones in the sea.";
   }
   renderBest(); lbProbe();
 
