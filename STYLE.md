@@ -79,3 +79,10 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Characters: default female
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
+
+## X posts: automated daily queue (from Nov 2026)
+- One X post (or thread) per day, published at **7:30am Sydney** via Typefully. Don't plan any other daily slot.
+- The Friday Weekly Dose task writes the next 7 days' posts (Sat–Fri) into `_social/queue.json` as entries `{"date": "YYYY-MM-DD", "note": "...", "thread": ["post", ...]}` — one entry per date, skipping dates that already have an entry. Each post ≤ 280 characters (a link counts as 23). This overrides any older "only add/change" limits in that task: it may edit `_social/queue.json`.
+- Never edit or delete entries that already have a `typefully_id` (already sent). Never put API keys in the repo or tasks; the GitHub Action uses the TYPEFULLY_API_KEY secret.
+- Weekly mix: Mon world days of the week + ECG teaser; Tue deep dive (thread from that week's deep dive); Wed zebra case / Super Zebritis; Thu a research nugget from the Weekly Dose; Fri Zebra Mail is out + subscribe; Sat arcade (Stackulus, Mergeon, Basil + Clover) or Cryptoplexy; Sun Grand Rounds + Normie week that was. A themed day overrides with that day's puzzle (dated link). Dated links for puzzle teasers, plain links for general posts. No mascot-quiz posts. Sass at hype, never patients. Ahpra/TGA-safe.
+- The Friday email to the owner still lists the week's posts so they can be edited in Typefully before they go out.

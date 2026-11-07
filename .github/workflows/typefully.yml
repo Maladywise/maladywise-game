@@ -1,0 +1,36 @@
+name: Queue X posts in Typefully
+# Sends _social/queue.json posts to Typefully as scheduled drafts (7:30am Sydney each day).
+on:
+  schedule:
+    - cron: "23 18 * * *"   # about 5:23am Sydney (summer), daily
+  push:
+    branches: [main]
+    paths: ["_social/queue.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: typefully-queue
+  cancel-in-progress: false
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send due posts to Typefully
+        env:
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+        run: python3 _scripts/typefully_push.py
+      - name: Save what was queued
+        run: |
+          if ! git diff --quiet -- _social/queue.json; then
+            git config user.name "Maladywise"
+            git config user.email "maladywise@gmail.com"
+            git add _social/queue.json
+            git commit -m "Typefully: mark queued posts"
+            git pull --rebase --autostash || true
+            git push
+          fi
