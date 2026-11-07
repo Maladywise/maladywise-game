@@ -88,6 +88,12 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Weekly mix: Mon world days of the week + ECG teaser; Tue deep dive (thread from that week's deep dive); Wed zebra case / Super Zebritis; Thu a research nugget from the Weekly Dose; Fri Zebra Mail is out + subscribe; Sat arcade (Stackulus, Mergeon, Basil + Clover) or Cryptoplexy; Sun Grand Rounds + Normie week that was. A themed day overrides with that day's puzzle (dated link). Dated links for puzzle teasers, plain links for general posts. No mascot-quiz posts. Sass at hype, never patients. Ahpra/TGA-safe.
 - The Friday email to the owner still lists the week's posts so they can be edited in Typefully before they go out.
 
+## X posts: World Day cards (from Nov 2026)
+- `_scripts/day_card.py` draws a 1200×675 picture card for a date's main day (same pick as the home-page box: priority 1–3 only, never sensitive days), using the day's existing blurb. No new facts go on cards.
+- Add `"card": true` to a queue entry to attach that date's card to its first post. The Friday task should do this on themed-day posts about that day.
+- The Typefully Action also auto-fills any empty date (from 16 Nov 2026) that has a strong day with a short World Day post plus card, and writes it back to the queue. It only does so after that week's Friday batch is written, and never if Typefully already has a post scheduled that day, so the weekly mix always wins. Gentle days get a plain, respectful post (no sass, no hashtag).
+- Preview: `python3 _scripts/typefully_push.py --dry-run --days 14` (saves the PNGs to a temp folder).
+
 ## Trending themes (from Nov 2026)
 - A daily evening task (7:43pm Sydney) re-themes TOMORROW's puzzles from Google Trends. Main theme = tomorrow's world/health day if there's a clear one (priority 1–3 or who/specialty/zebra tag); otherwise the top medical trend. Then weave in as many other trending terms as fit (Medical: 3–6; Normie: 2–4 general trends).
 - All the usual rules apply: no giveaways, 180-day uniqueness, weekday difficulty, sensitive topics handled kindly (no jokes about deaths/outbreaks), Normie non-medical, verified facts. Monthly/weekly tasks should not undo a trend swap already logged in data/trends.json "used" for that date.

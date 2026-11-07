@@ -1,5 +1,6 @@
 name: Queue X posts in Typefully
-# Sends _social/queue.json posts to Typefully as scheduled drafts (7:30am Sydney each day).
+# Sends _social/queue.json posts to Typefully as scheduled drafts (7:30am Sydney each day),
+# with World Day picture cards (_scripts/day_card.py) and auto World Day posts on empty dates.
 on:
   schedule:
     - cron: "23 18 * * *"   # about 5:23am Sydney (summer), daily
@@ -20,6 +21,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install Playwright + Chromium (World Day cards)
+        continue-on-error: true   # if this fails, posts still go out, just without cards
+        run: pip install playwright && python -m playwright install --with-deps chromium
       - name: Send due posts to Typefully
         env:
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
