@@ -293,7 +293,7 @@
     S.boss = { final: !!final, hp: hpMax, hpMax: hpMax, t: final ? 0 : 45, x: 180, vx: 38, face: 1, spot: null, spotT: 1.0, hits: 0, hitT: 0, dent: 0, done: null, doneT: 0, angry: false,
       atk: null, atkT: final ? 2.4 : 3.4, n: 0, flash: 0, food: null, foodT: grnd(3, 5), tips: {}, cats: { b: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 }, c: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 } }, coneT: 0, nurse: STAGE === 2 && final ? { towels: 3, gone: 0, leave: 0 } : null };
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } S.lanes[j] = null; }
-    if (STAGE === 2) { S.ann = final ? { t: 1.8, a: "SHE’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 1.8, a: "ROUND " + S.round, b: "VET!" }; shake();
+    if (STAGE === 2) { S.ann = final ? { t: 1.8, a: "THE VET’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 1.8, a: "ROUND " + S.round, b: "VET!" }; shake();
       toast(final ? "Dr Pokesworth is back, and Nurse Burrito brought towels. Beat them to win." : pick(["Dr Pokesworth will see you now. Hit the glowing spots.", "The vet is in. Both cats, positions.", "Annual check-up. Fight it. Hit the glowing spots."]), 2600); track("basil/boss"); return; }
     S.ann = final ? { t: 1.8, a: "IT’S BACK. FINAL BOSS", b: "VAC-3000" } : { t: 1.8, a: "ROUND " + S.round, b: "BOSS!" }; shake();
     toast(final ? "The VAC-3000 is back for revenge. Beat it to win." : pick(["VAC-3000 has entered the kitchen. Hit the glowing spots.", "The vacuum is here. Both cats, positions.", "It sucks. Literally. Hit the glowing spots."]), 2600); track("basil/boss");
@@ -318,7 +318,7 @@
   }
   function bossAngry() {
     var b = S.boss; b.angry = true; b.flash = 0.3; b.atkT = Math.min(b.atkT, 1.6); shake();
-    S.ann = { t: 1.4, a: s2("VAC-3000 IS", "DR POKESWORTH IS"), b: s2("ANGRY!", "FRAZZLED!") }; toast(s2("Half health. It’s gone red and it’s faster. Rude.", "Half health. Glasses askew, coffee spilt, and she’s faster. Rude."), 2200);
+    S.ann = { t: 1.4, a: s2("VAC-3000 IS", "DR POKESWORTH IS"), b: s2("ANGRY!", "FRAZZLED!") }; toast(s2("Half health. It’s gone red and it’s faster. Rude.", "Half health. Glasses askew, coffee spilt, and faster now. Rude."), 2200);
   }
   function bossJump(w) { var b = S.boss, c = b.cats[w]; if (c.jt > 0 || c.gone > 0) return false; c.jt = 1.25; float(BHOME[w], BENCH - 120, "JUMP!", "#2E7D6B"); return true; }
   function bossResist() { var b = S.boss, a = b.atk, c = b.cats[a.side < 0 ? "b" : "c"]; c.pull = Math.max(0, c.pull - 0.085); a.taps = (a.taps || 0) + 1; S.paw = { lane: a.side < 0 ? 0 : 2, t: 0 }; return true; }
@@ -429,7 +429,7 @@
       if (Math.abs(f.x - b.x) < 48 && !(ab && ab.ph === "stun")) { b.food = null; b.foodT = grnd(3.5, 6); b.hp = Math.min(b.hpMax, b.hp + 2); float(f.x, BENCH - 70, s2("It ate Clover’s snack!", "Confiscated! ‘Not on her diet.’"), "#C2553A"); if (hurt("c", 8)) return; }
       else if (f.life <= 0) { b.food = null; b.foodT = grnd(3, 5); }
     }
-    if (!b.final && b.t <= 0) { S.rPen = true; b.done = "lose"; b.doneT = 1.6; b.atk = null; b.spot = null; S.ann = { t: 1.6, a: "TIME!", b: s2("IT WON", "SHE WON") }; toast(pick(s2(["The vacuum wins this round. It ate the bonus.", "VAC-3000 survives. For now.", "Retreat! Regroup! Snacks!"], ["The vet wins this round. Next appointment in 12 months.", "Dr Pokesworth survives. For now.", "Retreat! Regroup! Snacks!"]))); }
+    if (!b.final && b.t <= 0) { S.rPen = true; b.done = "lose"; b.doneT = 1.6; b.atk = null; b.spot = null; S.ann = { t: 1.6, a: "TIME!", b: s2("IT WON", "THE VET WON") }; toast(pick(s2(["The vacuum wins this round. It ate the bonus.", "VAC-3000 survives. For now.", "Retreat! Regroup! Snacks!"], ["The vet wins this round. Next appointment in 12 months.", "Dr Pokesworth survives. For now.", "Retreat! Regroup! Snacks!"]))); }
   }
   function bossWin() {
     var b = S.boss; b.done = "win"; b.doneT = 2.8; b.atk = null; b.spot = null; b.flash = 0.35; var prize = (b.final ? 40 : 25) * U(); addPts(prize);
@@ -439,8 +439,8 @@
     (STAGE === 2 ? ["wheel", "wheel", "wheel", "brush", "brush", "brush", "cap", "lid", "bump", "led", "led", "wheel", "brush", "brush"] : ["wheel", "wheel", "brush", "brush", "cap", "lid", "led", "bump", "screw", "screw", "screw", "screw", "screw", "screw"]).forEach(function (k) { S.parts.push({ kind: k, x: b.x + rnd(-40, 40), y: BENCH - 30, vx: rnd(-280, 280), vy: -rnd(260, 520), r: 0, vr: rnd(-14, 14), l: 2.6 }); });
     bossBurst(b.x, BENCH - 30, 30, 300); S.ring = { x: b.x, y: BENCH - 26, t: 0 };
     var c2 = null; if (CAMP && !b.final && S.lives < 3) { S.lives++; c2 = "+1 LIFE · +30% HEALTH"; }
-    S.ann = { t: 1.8, a: s2("VACUUM DOWN", "SHE GIVES UP"), b: "+" + fmt(prize), c: c2 || "+30% HEALTH BOTH CATS" }; shake(); heal("b", 30); heal("c", 30);
-    toast(pick(s2(["Vacuum destroyed. The cats will be insufferable now.", "VAC-3000: deceased. Dust everywhere. Worth it.", "Boss down. Somebody call the warranty line."], ["Dr Pokesworth gives up. ‘Same time next year?’ No.", "The vet has left the consult. Paperwork everywhere.", "Boss down. She’s gone for a long lie-down."])), 2400); track("basil/boss-win");
+    S.ann = { t: 1.8, a: s2("VACUUM DOWN", "VET GIVES UP"), b: "+" + fmt(prize), c: c2 || "+30% HEALTH BOTH CATS" }; shake(); heal("b", 30); heal("c", 30);
+    toast(pick(s2(["Vacuum destroyed. The cats will be insufferable now.", "VAC-3000: deceased. Dust everywhere. Worth it.", "Boss down. Somebody call the warranty line."], ["Dr Pokesworth gives up. ‘Same time next year?’ No.", "The vet has left the consult. Paperwork everywhere.", "Boss down. Off for a long lie-down."])), 2400); track("basil/boss-win");
   }
   function bossEnd() {
     var fin = S.boss.final; S.boss = null; S.treatT = grnd(8, 14); S.spawnT = 1.6;
@@ -658,7 +658,7 @@
   function shakerTap() {
     var e = S.ev;
     if (e.t < e.rattle || e.fake) { evEnd(); var pen = Math.min(S.score, 4 * U()); addPts(-pen); S.rPen = true; S.combo = 0; float(180, 190, STAGE === 2 ? "Flinched!" + (pen ? " -" + fmt(pen) : "") : "Too eager! -" + fmt(pen), "#C2553A"); toast(s2("Fake-out. Nobody said NOW.", "Flinched early. Vaccinated. Annoyingly healthy."), 1800); return; }
-    evEnd(0.9); var pts = 2 * 5 * U(); addPts(pts); S.happyT = 1; float(180, 190, s2("First! ×2 +", "Bolted! ×2 +") + fmt(pts), "#B5308A"); toast(pick(s2(["Fastest paw in the kitchen. Double treats.", "Treats: secured. Twice."], ["Under the table before she got to 1. Double points.", "Bolted. Whatever it was, it stayed behind her back."])));
+    evEnd(0.9); var pts = 2 * 5 * U(); addPts(pts); S.happyT = 1; float(180, 190, s2("First! ×2 +", "Bolted! ×2 +") + fmt(pts), "#B5308A"); toast(pick(s2(["Fastest paw in the kitchen. Double treats.", "Treats: secured. Twice."], ["Under the table before the count of 1. Double points.", "Bolted. Whatever it was, it stayed hidden."])));
   }
   function fridgeShut() { var e = S.ev; evEnd(); var pts = 2 * U() + Math.round(4 * U() * e.t / e.dur); addPts(pts); float(318, 150, s2("Door shut +", "Hand shooed +") + fmt(pts), "#2E7D6B"); toast(STAGE === 2 ? (e.t > 2.5 ? "Hand shooed just in time. Treats eaten, towel avoided." : "Hand shooed. A bit early. Clover is unimpressed.") : e.t > 2.5 ? "Shut just in time. Clover feasted, Basil sulks." : "Door shut. A bit early. Clover is unimpressed."); }
   function bathFlee() { var e = S.ev; evEnd(); S.lean = 0.5; var pts = 2 * U(); addPts(pts); float(180, BENCH - 180, s2("Escaped the bath! +", "Sat on that tail! +") + fmt(pts), "#2E7D6B"); }
@@ -687,7 +687,7 @@
     }
     else if (e.m === "bath" && e.t >= e.dur) { evEnd(); S.towelT = 2; shake(); float(180, BENCH - 170, s2("TOWELLED. -10%", "TEMPERATURE TAKEN. -10%"), "#C2553A"); toast(STAGE === 2 ? "Temperature taken. 38.6°. Dignity: 0%. " + catName() + " needs a moment." : catName() + " got towelled. Two seconds of being dried. Humiliating.", 2200); hurt(e.cat, 10); }
     else if (e.m === "box" && e.t >= e.dur) { evEnd(); S.combo = 0; float(180, BENCH - 120, "Stalemate. Both sulk.", "#6B5A93"); }
-    else if (e.m === "shaker" && e.t >= e.dur) { evEnd(); float(180, 190, e.fake ? s2("…nope. Fake-out.", "…‘1 and three quarters’. Fake-out.") : s2("Too slow.", "Too slow. She’s distracted now."), "#6B5A93"); }
+    else if (e.m === "shaker" && e.t >= e.dur) { evEnd(); float(180, 190, e.fake ? s2("…nope. Fake-out.", "…‘1 and three quarters’. Fake-out.") : s2("Too slow.", "Too slow. The vet’s distracted now."), "#6B5A93"); }
     else if (e.m === "xray") {
       if (e.ft < 0) { e.next -= dt; if (e.next <= 0 && e.t < e.dur) { e.ft = 0; for (var xj = 0; xj < 3; xj++) { var xi = S.lanes[xj]; if (xi && !xi.landed) xi.hold = 1.2; } } }
       else { e.ft += dt; if (e.ft >= 1.2) { e.ft = -1; e.next = grnd(0.9, 1.4); } }

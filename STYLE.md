@@ -78,4 +78,4 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Mergeon is the organ merge arcade game at https://maladywise.com/mergeon/.
 
 ## Characters: default female
-- When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is a woman (she/her). Keep a natural mix in fictional patient cases.
+- When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
