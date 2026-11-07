@@ -1333,5 +1333,45 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
       if (typed === "locum") unlock();
     });
   })();
+  // ---------- visible breadcrumb line on content pages (Home › Conditions › Gout) ----------
+  // Drawn from the page's BreadcrumbList JSON-LD (added by _scripts/add_breadcrumbs.py), so the
+  // two always agree. Content pages only (main.doc); game play screens keep JSON-LD only.
+  (function () {
+    function findList(o) {
+      if (!o || typeof o !== "object") return null;
+      if (o["@type"] === "BreadcrumbList") return o;
+      var ks = Object.keys(o);
+      for (var i = 0; i < ks.length; i++) { var r = findList(o[ks[i]]); if (r) return r; }
+      return null;
+    }
+    function draw() {
+      var main = document.querySelector("main.doc");
+      if (!main || main.querySelector(".mw-crumbs")) return;
+      var list = null, isGame = false;
+      [].forEach.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) {
+        try {
+          var j = JSON.parse(s.textContent);
+          if (j && j["@type"] === "WebApplication") isGame = true;
+          if (!list) list = findList(j);
+        } catch (e) {}
+      });
+      if (isGame || !list || !list.itemListElement || list.itemListElement.length < 2) return;
+      var el = list.itemListElement, nav = document.createElement("nav"), ol = document.createElement("ol");
+      nav.className = "mw-crumbs"; nav.setAttribute("aria-label", "Breadcrumb");
+      el.forEach(function (it, i) {
+        var li = document.createElement("li"), last = i === el.length - 1, name = i === 0 ? "Home" : it.name;
+        var path = String(it.item || "").replace(/^https?:\/\/[^/]+/, "") || "/";
+        if (last) { var sp = document.createElement("span"); sp.setAttribute("aria-current", "page"); sp.textContent = name; li.appendChild(sp); }
+        else { var a = document.createElement("a"); a.href = path; a.textContent = name; li.appendChild(a); }
+        ol.appendChild(li);
+      });
+      nav.appendChild(ol);
+      // a hand-written "Parent › Page" line duplicates the crumbs: hide it
+      var meta = main.querySelector(":scope > .meta");
+      if (meta && meta.textContent.indexOf("›") >= 0) meta.hidden = true;
+      main.insertBefore(nav, main.firstChild);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", draw); else draw();
+  })();
   window.MW = { hub: hub, game: game, modal: modal, page: page, feedback: feedback };
 })();

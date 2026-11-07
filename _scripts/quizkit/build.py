@@ -192,7 +192,7 @@ for qz in QUIZZES:
         reviewed(" Diagrams are simplified, original sketches, not to scale."),
     ])
     lds = [quiz_ld(qz["h1"], SITE + path, qz["qs"], qz["h1"].replace(" Quiz", "").split(":")[0]), faq_ld(qz["faqs"]),
-           crumbs_ld([("Anatomy quizzes", "/anatomy-quiz/"), (qz["h1"], path)])]
+           crumbs_ld([("Malady Wise", "/"), ("Medical games", "/medical-games/"), ("Anatomy quizzes", "/anatomy-quiz/"), (qz["h1"], path)])]
     write(path, page(path, qz["title"], qz["desc"], "anatomegaly", body, lds))
 
 # ---------- anatomy hub (with a mixed sampler) ----------

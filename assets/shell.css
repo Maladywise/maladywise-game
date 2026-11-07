@@ -115,6 +115,14 @@ footer.site a{color:var(--muted)}
 .doc ul{padding-left:20px}
 .doc .meta{color:var(--muted);font-size:13px}
 .doc a{color:var(--brand)}
+.mw-crumbs{margin:2px 0 6px;font-size:12.5px;line-height:1.4;color:var(--muted)}
+.mw-crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:baseline;min-width:0}
+.mw-crumbs li{display:inline;min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mw-crumbs li+li::before{content:"\203A";margin:0 6px;color:var(--muted);opacity:.8}
+.doc .mw-crumbs a{color:var(--muted);text-decoration:none}
+.doc .mw-crumbs a:hover,.doc .mw-crumbs a:focus-visible{color:var(--brand);text-decoration:underline}
+.mw-crumbs [aria-current]{color:var(--ink)}
+@media print{.mw-crumbs{display:none}}
 .backlink{display:inline-block;margin:6px 0 0;font-weight:600;color:var(--muted);text-decoration:none;font-size:14px}
 
 /* keep-playing strip inside game pages */
