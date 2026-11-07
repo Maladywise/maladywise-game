@@ -55,3 +55,6 @@ html[data-theme="dark"] #mrg .over{background:rgba(22,18,31,.72)}
 #mrg .prac{margin:0;font-size:14px;color:var(--muted)}
 #mrg .em-row{font-size:44px}
 @media (prefers-reduced-motion:reduce){#mrg .toast.on{animation:none}}
+
+#mrg .mrg-pic{vertical-align:middle;display:inline-block}
+#mrg .chain span{background:none!important}

@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "1";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -12,20 +12,23 @@
   var O = [
     { e: "🦠", n: "Microbe", r: 16, c: "#E4DCF3" },
     { e: "🩸", n: "Blood drop", r: 22, c: "#F7CDD3" },
-    { e: "🦷", n: "Tooth", r: 29, c: "#EFE8D6" },
-    { e: "👁️", n: "Eye", r: 36, c: "#CFE5F1" },
-    { e: "👂", n: "Ear", r: 44, c: "#F7DCC8" },
-    { e: "👅", n: "Tongue", r: 53, c: "#F5BFC6" },
-    { e: "👃", n: "Nose", r: 62, c: "#F2D6BD" },
-    { e: "🦴", n: "Bone", r: 72, c: "#ECE5D3" },
-    { e: "🫀", n: "Heart", r: 84, c: "#EBA0A8" },
-    { e: "🫁", n: "Lungs", r: 97, c: "#F3BBC0" },
+    { e: "👁️", n: "Eye", r: 29, c: "#CFE5F1" },
+    { e: "🫒", n: "Gallbladder", r: 36, c: "#DCEFD0" },
+    { e: "🫘", n: "Kidney", r: 44, c: "#EBC6D0" },
+    { e: "🎈", n: "Bladder", r: 53, c: "#F7DCE3" },
+    { e: "🥟", n: "Stomach", r: 62, c: "#F5CBD2" },
+    { e: "🫀", n: "Heart", r: 72, c: "#EBA0A8" },
+    { e: "🫁", n: "Lungs", r: 84, c: "#F3BBC0" },
+    { e: "🟫", n: "Liver", r: 97, c: "#E2B3AC" },
     { e: "🧠", n: "Brain", r: 112, c: "#CDBBEA" }
   ];
-  var SASS = {"5": ["Tongue. Say aah.", "Tongue. Quite the mouthful.", "Tongue. Bit cheeky."], "6": ["Nose. Getting nosy now.", "Nose. You\u2019ve sniffed out a combo.", "Nose. Right under your nose."], "7": ["Bone. Structurally sound.", "Bone. Humerus, isn\u2019t it?", "Bone. Holding it all together."], "8": ["Heart! Pumped for you.", "Heart! You\u2019ve got the beat.", "Heart! Cardio-logical."], "9": ["Lungs! Genuinely breathtaking.", "Lungs! Take a deep breath.", "Lungs! Inspired."], "10": ["Brain! Finally, someone using one.", "Brain! Big thoughts.", "Brain! Think like a doctor, indeed."]};
+  var ART = ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><line x1=\"50\" y1=\"50\" x2=\"96\" y2=\"50\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"96\" cy=\"50\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"82.5269119345812\" y2=\"82.5269119345812\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"82.5269119345812\" cy=\"82.5269119345812\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"96\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"50\" cy=\"96\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"17.473088065418814\" y2=\"82.5269119345812\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"17.473088065418814\" cy=\"82.5269119345812\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"4\" y2=\"50.00000000000001\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"4\" cy=\"50.00000000000001\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"17.473088065418807\" y2=\"17.473088065418814\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"17.473088065418807\" cy=\"17.473088065418814\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"49.99999999999999\" y2=\"4\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"49.99999999999999\" cy=\"4\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"82.52691193458118\" y2=\"17.473088065418807\" stroke=\"#3A2A55\" stroke-width=\"5\"/><circle cx=\"82.52691193458118\" cy=\"17.473088065418807\" r=\"4\" fill=\"#7DCB6E\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><circle cx=\"50\" cy=\"50\" r=\"34\" fill=\"#9BDB86\" stroke=\"#3A2A55\" stroke-width=\"3\"/><circle cx=\"36\" cy=\"34\" r=\"5\" fill=\"#C6EDB8\"/><circle cx=\"66\" cy=\"66\" r=\"4\" fill=\"#7DCB6E\"/></g><g transform=\"translate(50 54) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M50 4 C50 4 14 46 14 64 A36 34 0 0 0 86 64 C86 46 50 4 50 4Z\" fill=\"#E5384F\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M30 60 Q30 46 40 36\" stroke=\"#FF9AA8\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(50 68) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"#FFFFFF\" stroke=\"#3A2A55\" stroke-width=\"3\"/><path d=\"M14 40 Q22 44 26 38 M80 62 Q86 66 90 60\" stroke=\"#F08A9A\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"50\" cy=\"50\" r=\"22\" fill=\"#4A9FD8\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"#1E1630\"/><circle cx=\"56\" cy=\"43\" r=\"5\" fill=\"#fff\"/></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M60 6 Q72 8 70 20 L64 30 Q86 50 82 74 Q76 96 52 96 Q26 94 22 72 Q20 50 46 30 L50 18 Q52 6 60 6Z\" fill=\"#8CC66A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M34 62 Q34 50 42 44\" stroke=\"#C3E6A8\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(52 68) scale(0.9)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M44 8 Q76 2 88 30 Q98 56 84 80 Q70 100 44 94 Q14 86 12 58 Q12 44 26 40 Q40 40 42 50 Q46 58 54 52 Q58 44 46 36 Q32 26 30 18 Q34 10 44 8Z\" fill=\"#B5506A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40 54 Q28 74 32 100\" stroke=\"#E7B95A\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M68 20 Q80 28 84 42\" stroke=\"#E3899E\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(64 66) scale(0.9)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M22 4 Q24 20 34 30 M78 4 Q76 20 66 30\" stroke=\"#E7B95A\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M50 26 Q86 22 90 54 Q92 80 64 88 L58 98 L42 98 L36 88 Q8 80 10 54 Q14 22 50 26Z\" fill=\"#F5C2CF\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M24 50 Q26 40 36 36\" stroke=\"#FFE3EA\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(50 58) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M40 4 L40 18 Q42 26 34 32 Q14 46 12 70 Q12 94 40 96 Q66 98 82 80 Q98 60 88 40 Q80 22 62 24 Q52 26 50 18 L50 4Z\" fill=\"#F29BA8\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M36 58 Q50 54 62 60 M30 72 Q46 68 64 74\" stroke=\"#D96A7E\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M82 80 Q92 88 96 98\" stroke=\"#F29BA8\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(60 46) scale(0.85)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M40 14 L40 4 M54 12 L56 2 M64 16 L72 8\" stroke=\"#6E8FD6\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M50 30 C42 10 8 12 8 42 C8 66 34 82 50 96 C66 82 92 66 92 42 C92 12 58 10 50 30Z\" fill=\"#E4475B\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M22 36 Q24 26 32 24\" stroke=\"#FF9AA8\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(50 52) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M50 4 L50 34 M50 34 Q42 40 38 46 M50 34 Q58 40 62 46\" stroke=\"#E8A0AE\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M42 30 Q22 20 12 44 Q4 70 10 88 Q16 98 30 94 Q44 90 44 76 L44 40Z\" fill=\"#F4A3B2\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M58 30 Q78 20 88 44 Q96 70 90 88 Q84 98 70 94 Q56 90 56 76 L56 40Z\" fill=\"#F4A3B2\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><g transform=\"translate(27 64) scale(0.55)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g><g transform=\"translate(73 64) scale(0.55)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M8 34 Q10 16 40 14 Q70 12 92 22 Q100 28 94 40 Q80 70 54 88 Q44 94 40 84 Q36 72 24 66 Q6 56 8 34Z\" fill=\"#A8433A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M58 18 Q56 40 48 58\" stroke=\"#7E2A24\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M20 30 Q28 22 40 22\" stroke=\"#D27466\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 84 Q42 92 52 96 Q62 94 58 84\" fill=\"#8CC66A\" stroke=\"#3A2A55\" stroke-width=\"2.5\"/><g transform=\"translate(36 46) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M30 16 Q40 4 54 10 Q68 4 78 16 Q94 20 92 38 Q100 52 90 64 Q92 82 74 84 Q66 96 50 90 Q34 96 26 84 Q8 82 10 64 Q0 52 8 38 Q6 20 30 16Z\" fill=\"#F5B8CC\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M50 14 Q46 30 52 44 Q56 58 50 72 M26 34 Q34 30 36 40 M70 30 Q64 36 72 42 M22 58 Q30 54 30 64 M78 56 Q70 58 74 68\" stroke=\"#D97C9C\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"translate(50 58) scale(1)\"><circle cx=\"-9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"9\" cy=\"0\" r=\"3.6\" fill=\"#2A1E3D\"/><circle cx=\"-7.8\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><circle cx=\"10.2\" cy=\"-1.2\" r=\"1.2\" fill=\"#fff\"/><path d=\"M-5 6 Q0 10.5 5 6\" stroke=\"#2A1E3D\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"-15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/><ellipse cx=\"15\" cy=\"6\" rx=\"4\" ry=\"2.4\" fill=\"#FF7A9A\" opacity=\".45\"/></g></svg>"];
+  var IMG = ART.map(function (svg) { var im = new Image(); im.src = "data:image/svg+xml," + encodeURIComponent(svg); return im; });
+  function pic(i, px) { return '<img class="mrg-pic" src="' + IMG[i].src + '" alt="' + O[i].n + '" width="' + px + '" height="' + px + '">'; }
+  var SASS = {"5": ["Bladder. Hold it together.", "Bladder. Under pressure.", "Bladder. Full of potential."], "6": ["Stomach. Got the guts for this.", "Stomach. Hungry for more.", "Stomach. Churning along nicely."], "7": ["Heart! Pumped for you.", "Heart! You’ve got the beat.", "Heart! Cardio-logical."], "8": ["Lungs! Genuinely breathtaking.", "Lungs! Take a deep breath.", "Lungs! Inspired."], "9": ["Liver! It’ll grow back. Partly.", "Liver! The body’s hardest worker.", "Liver! Filtering out the competition."], "10": ["Brain! Finally, someone using one.", "Brain! Big thoughts.", "Brain! Think like a doctor, indeed."]};
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
   var POPS = ["Two brains, one big thought. Gone. +100", "Brain merger. Mind blown. +100", "Two brains cancelled out. Typical committee. +100"];
-  var DIST = ["🧠", "🫁", "🫀", "🦴", "Less"];
+  var DIST = ["🧠", "🟫", "🫁", "🫀", "Less"];
 
   root.innerHTML =
     '<div class="wrap">' +
@@ -39,7 +42,7 @@
     ' <details class="archive" id="mrg-archive"><summary>Past puzzles</summary><div class="alist" id="mrg-alist"></div></details>' +
     "</div>";
   var $ = function (id) { return document.getElementById("mrg-" + id); };
-  $("chain").innerHTML = O.map(function (o, i) { return '<span title="' + o.n + '" style="--c:' + o.c + '">' + o.e + "</span>" + (i < O.length - 1 ? "<i>›</i>" : ""); }).join("");
+  $("chain").innerHTML = O.map(function (o, i) { return '<span title="' + o.n + '">' + pic(i, 27) + "</span>" + (i < O.length - 1 ? "<i>›</i>" : ""); }).join("");
 
   function sydToday() { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); } catch (e) { return new Date().toISOString().slice(0, 10); } }
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
@@ -135,7 +138,13 @@
 
   // ---------- drawing ----------
   function size() {
-    var w = $("board").clientWidth || 360; scale = w / W; dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+    var b = $("board"); b.style.maxWidth = "";
+    var w = b.clientWidth || 360;
+    // fit the whole game on screen: board height limited by the viewport (leave room for the organ chain)
+    var vh = window.innerHeight || 700, top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0);
+    var room = vh - top0 - 58;
+    if (room > 200 && w * H / W > room) { w = Math.floor(room * W / H); b.style.maxWidth = (w + 4) + "px"; }
+    scale = w / W; dpr = Math.min(window.devicePixelRatio || 1, 2.5);
     cv.style.width = w + "px"; cv.style.height = Math.round(H * scale) + "px";
     cv.width = Math.round(w * dpr); cv.height = Math.round(H * scale * dpr);
   }
@@ -143,10 +152,9 @@
   function organ(lv, x, y, ang, alpha) {
     var o = O[lv];
     ctx.save(); ctx.globalAlpha = alpha || 1; ctx.translate(x, y); ctx.rotate(ang || 0);
-    ctx.beginPath(); ctx.arc(0, 0, o.r, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill();
-    ctx.lineWidth = 2; ctx.strokeStyle = "rgba(74,52,128,.35)"; ctx.stroke();
-    ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-    ctx.fillText(o.e, 0, o.r * 0.06);
+    var im = IMG[lv];
+    if (im.complete && im.naturalWidth) { var d = o.r * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); }
+    else { ctx.beginPath(); ctx.arc(0, 0, o.r, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill(); ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.e, 0, o.r * 0.06); }
     ctx.restore();
   }
   function draw(danger) {
@@ -171,8 +179,8 @@
   }
   function hud() {
     $("score").textContent = fmt(score);
-    $("top").textContent = top >= 0 ? O[top].e + " " + O[top].n : "–";
-    $("next").textContent = O[nxt].e;
+    $("top").innerHTML = top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
+    $("next").innerHTML = pic(nxt, 26);
   }
   function toast(m) {
     var t = $("toast"); t.textContent = m; t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
@@ -181,15 +189,15 @@
 
   // ---------- end of run ----------
   function verdict(tp) {
-    return tp >= 10 ? "A whole brain. Think like a doctor? You are one." : tp >= 9 ? "Lungs. Breathtaking work. One more step to a brain." :
-      tp >= 8 ? "Heart. Solid, reliable, slightly overworked. Like most GPs." : tp >= 7 ? "Bone. Good structure, no heart yet." :
-      tp >= 5 ? "Mostly face parts. A cosmetic result." : "Microbes everywhere. Wash your hands and try again.";
+    return tp >= 10 ? "A whole brain. Think like a doctor? You are one." : tp >= 9 ? "Liver. Hardest-working organ, one step from a brain." :
+      tp >= 8 ? "Lungs. Breathtaking. Two steps from a brain." : tp >= 7 ? "Heart. Solid, reliable, slightly overworked. Like most GPs." :
+      tp >= 5 ? "Some decent plumbing. Keep going." : "Microbes everywhere. Wash your hands and try again.";
   }
   function band(tp) { return tp >= 10 ? 0 : tp >= 9 ? 1 : tp >= 8 ? 2 : tp >= 7 ? 3 : 4; }
   function end() {
     over = true;
     var ov = $("over");
-    ov.innerHTML = "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? O[top].e + " " + O[top].n : "") + "</span>";
+    ov.innerHTML = "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>";
     ov.hidden = false;
     if (!practice && !st.done) {
       st = { done: true, win: top >= WIN_LV - 1, score: score, top: top }; put(KEY, st);
@@ -215,7 +223,7 @@
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = (practiceScore !== undefined ? '<p class="prac">Practice: <b>' + fmt(practiceScore) + "</b> · " + (practiceScore > s ? "Better than your real run. Typical." : "Your daily run still stands.") + "</p>" : "") +
-      '<p class="em-row">' + (tp >= 0 ? O[tp].e : "🦠") + '</p><p class="score">' + fmt(s) + '<span> pts</span></p><p class="verdict">' + esc(verdict(tp)) + "</p>" +
+      '<p class="em-row">' + pic(tp >= 0 ? tp : 0, 64) + '</p><p class="score">' + fmt(s) + '<span> pts</span></p><p class="verdict">' + esc(verdict(tp)) + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Heart %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
       '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn" type="button" id="mrg-again">Practice run</button></div>';
     $("copy").onclick = function () {
@@ -249,7 +257,7 @@
     else if (e.key === "ArrowRight") { aimX = Math.min(W, aimX + 14); e.preventDefault(); }
     else if (e.key === " " || e.key === "ArrowDown" || e.key === "Enter") { if (e.target === document.body || e.target === cv) { drop(); e.preventDefault(); } }
   });
-  window.addEventListener("resize", size);
+  window.addEventListener("resize", size); window.addEventListener("load", size); setTimeout(size, 400); setTimeout(size, 1500);
 
   // ---------- days ----------
   function show(d) {
