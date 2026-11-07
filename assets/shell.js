@@ -926,7 +926,7 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     // Normie mode: hidden unless the event has a "normie" field (true, or {name, blurb, link} overrides).
     var HD = null;
     function regionOf(x) {
-      var t = x.tags || [], R = ["au", "uk", "us", "nz", "ca", "ie"];
+      var t = x.tags || [], R = ["au", "uk", "us", "nz", "ca", "ie"]; if (t.indexOf("country") >= 0 && t.indexOf("au") < 0 && !/\((Australia|NSW|VIC|Victoria|QLD|Queensland|SA|WA|TAS|Tasmania|NT|ACT)\)\s*$/i.test(x.name || "")) return ""; // national days (St Patrick's, Waitangi, US Independence…) are for everyone
       for (var i = 0; i < R.length; i++) if (t.indexOf(R[i]) >= 0) return R[i];
       var m = (x.name || "").match(/\(([^()]+)\)\s*$/); if (!m) return "";
       var k = m[1].trim();

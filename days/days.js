@@ -25,7 +25,7 @@
 
   function inAU() { try { if (/^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "")) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
   function regionOf(x) {
-    var t = x.tags || [], R = ["au", "uk", "us", "nz", "ca", "ie"];
+    var t = x.tags || [], R = ["au", "uk", "us", "nz", "ca", "ie"]; if (t.indexOf("country") >= 0 && t.indexOf("au") < 0 && !/\((Australia|NSW|VIC|Victoria|QLD|Queensland|SA|WA|TAS|Tasmania|NT|ACT)\)\s*$/i.test(x.name || "")) return ""; // national days (St Patrick's, Waitangi, US Independence…) are for everyone
     for (var i = 0; i < R.length; i++) if (t.indexOf(R[i]) >= 0) return R[i];
     var m = (x.name || "").match(/\(([^()]+)\)\s*$/); if (!m) return "";
     var k = m[1].trim();

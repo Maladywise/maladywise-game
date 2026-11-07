@@ -28,7 +28,7 @@ OUT = os.path.join(ROOT, "days", "index.html")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 BASE = "https://maladywise.com/days/"
 PUZZLES_FROM = "2026-10-17"  # first day of Malady Wise puzzles; keep in step with days.js
-JS_V = 3
+JS_V = "4"
 CSS_V = 3
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
@@ -45,6 +45,8 @@ def esc(s):
 def region_of(x):
     """Same as regionOf in days.js / assets/shell.js."""
     tags = x.get("tags") or []
+    if "country" in tags and "au" not in tags and not re.search(r"\((Australia|NSW|VIC|Victoria|QLD|Queensland|SA|WA|TAS|Tasmania|NT|ACT)\)\s*$", x.get("name") or "", re.I):
+        return ""  # national days are for everyone
     for r in ("au", "uk", "us", "nz", "ca", "ie"):
         if r in tags:
             return r
