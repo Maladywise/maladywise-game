@@ -27,7 +27,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Image games (Glimpsis, Opacitis): Einstein = a subtle or rare finding, a sparse one-line context, five close lookalike options and hints that make you think rather than give it away.
 
 ## Owner's name
-- Never put the site owner's name anywhere on the site, in public files, code comments or data notes. Use "Malady Wise" or "a Malady Wise GP".
+- Never put the site owner's name anywhere on the site, in public files, commit messages, code comments or data notes. Use "Malady Wise" or "a Malady Wise GP".
 
 ## Neurology and psychiatry curiosities
 - data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptoplexy clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
