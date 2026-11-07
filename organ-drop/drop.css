@@ -55,7 +55,7 @@
 .od-ibtn:focus-visible,.od-sbtn:focus-visible,.od-ctrl button:focus-visible{outline:2px solid #FFE08A;outline-offset:2px}
 .od-stage{position:relative;border-radius:16px;overflow:hidden;background:#221A33;box-shadow:0 10px 30px rgba(30,22,45,.3);touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 #od-canvas{display:block;touch-action:none}
-.od-toast{position:absolute;left:34.7%;top:38%;transform:translate(-50%,-50%);background:#FFE08A;color:#2E1F57;font:700 15px var(--body);padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:nowrap;pointer-events:none;animation:odpop .3s cubic-bezier(.2,1.4,.4,1)}
+.od-toast{position:absolute;left:34.7%;top:38%;transform:translate(-50%,-50%);background:#FFE08A;color:#2E1F57;font:700 15px var(--body);padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:pre;text-align:center;line-height:1.25;pointer-events:none;animation:odpop .3s cubic-bezier(.2,1.4,.4,1)}
 .od-toast.big{background:#FF6F8E;color:#fff;font-size:20px;padding:10px 20px}
 .od-fact{width:100%;box-sizing:border-box;min-height:44px;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:4px 10px;font-size:12px;line-height:1.3;display:flex;flex-direction:column;justify-content:center;gap:0}
 .od-fact span{display:block}
@@ -117,7 +117,7 @@
 .od-lbform input{flex:1;min-width:0;font:500 16px var(--body);padding:7px 10px;border-radius:10px;border:2px solid #C9BFE6;background:#fff;color:#2E1F57}
 .od-lbform button{font:700 14px var(--body);padding:7px 14px;border-radius:10px;border:0;background:#B5308A;color:#fff;cursor:pointer}
 .od-share{width:100%;display:grid;gap:5px;justify-items:center;background:#EFE9F8;border-radius:12px;padding:7px 8px}
-.od-sharetx{font-size:12.5px;line-height:1.35;color:#2E1F57;overflow-wrap:anywhere;-webkit-user-select:text;user-select:text}
+.od-sharetx{font-size:12.5px;line-height:1.35;white-space:pre-line;color:#2E1F57;overflow-wrap:anywhere;-webkit-user-select:text;user-select:text}
 @media (hover:none){.od-ohint{display:none}}
 @media (max-height:640px){.od-omasc{display:none}}
 

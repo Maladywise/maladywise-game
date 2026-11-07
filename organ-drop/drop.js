@@ -4,7 +4,10 @@
    High scores: top 5 in this browser only. ?debug=1 exposes window.OD_DEBUG for testing (and ?day=YYYY-MM-DD to fake the date).
    Daily challenge: the piece order is seeded from the Sydney date, so everyone gets the same organs; one scored go a day, replays are practice.
    World boards (oall, odaily) on the Malady Wise counter server: used ONLY once the server echoes board === "oall".
-   An older server maps unknown boards to Basil + Clover's "all", so until then nothing is shown or posted. */
+   An older server maps unknown boards to Basil + Clover's "all", so until then nothing is shown or posted.
+   Sound: tiny WebAudio blips synthesised on the fly (no files), started only after the first tap or key; mute saved per browser.
+   Combos (back-to-back clearing drops) and perfect matches (a cleared row all one organ: triple) add bonus points.
+   Nothing here touches the seeded daily RNG except the piece bag, so the daily stays the same for everyone. */
 (function () {
   "use strict";
   var TITLE = "Organ Drop"; // the game's name: change it here only
@@ -12,6 +15,7 @@
   var DEBUG = /[?&]debug=1\b/.test(location.search);
   var STATKEY = "mw-organdrop-stats", DKEY = "mw-organdrop-daily", NAMEKEY = "mw-organdrop-name", PIDKEY = "mw-organdrop-pid";
   var MODE = "endless"; // "endless" | "daily" (today's scored go) | "practice" (a daily replay)
+  var MUTEKEY = "mw-organdrop-mute";
 
   function $(id) { return document.getElementById(id); }
   function lget(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
@@ -38,13 +42,13 @@
 
   // ---------- pieces: shape, organ, colour. Matrix values are cell ids so rotation keeps track of the face cell ----------
   var P = {
-    I: { organ: "Bowel", col: "#EE8F78", dark: "#B85A45", face: 2, m: [[0, 0, 0, 0], [1, 2, 3, 4], [0, 0, 0, 0], [0, 0, 0, 0]] },
-    J: { organ: "Stomach", col: "#F2B35E", dark: "#B97A22", face: 3, m: [[1, 0, 0], [2, 3, 4], [0, 0, 0]] },
-    L: { organ: "Liver", col: "#9A4433", ghost: "#D9826C", dark: "#5E2216", face: 3, m: [[0, 0, 1], [2, 3, 4], [0, 0, 0]] },
-    O: { organ: "Heart", col: "#E03A4E", dark: "#8F1B2B", face: 3, m: [[1, 2], [3, 4]] },
-    S: { organ: "Kidney", col: "#A0547A", ghost: "#D88CB4", dark: "#62284A", face: 3, m: [[0, 1, 2], [3, 4, 0], [0, 0, 0]] },
-    T: { organ: "Lungs", col: "#9C84D8", dark: "#5B449A", face: 3, m: [[0, 1, 0], [2, 3, 4], [0, 0, 0]] },
-    Z: { organ: "Brain", col: "#F4AFC6", dark: "#C46A8C", face: 3, m: [[1, 2, 0], [0, 3, 4], [0, 0, 0]] }
+    I: { emo: "🌭", organ: "Bowel", col: "#EE8F78", dark: "#B85A45", face: 2, m: [[0, 0, 0, 0], [1, 2, 3, 4], [0, 0, 0, 0], [0, 0, 0, 0]] },
+    J: { emo: "🟧", organ: "Stomach", col: "#F2B35E", dark: "#B97A22", face: 3, m: [[1, 0, 0], [2, 3, 4], [0, 0, 0]] },
+    L: { emo: "🟫", organ: "Liver", col: "#9A4433", ghost: "#D9826C", dark: "#5E2216", face: 3, m: [[0, 0, 1], [2, 3, 4], [0, 0, 0]] },
+    O: { emo: "🫀", organ: "Heart", col: "#E03A4E", dark: "#8F1B2B", face: 3, m: [[1, 2], [3, 4]] },
+    S: { emo: "🫘", organ: "Kidney", col: "#A0547A", ghost: "#D88CB4", dark: "#62284A", face: 3, m: [[0, 1, 2], [3, 4, 0], [0, 0, 0]] },
+    T: { emo: "🫁", organ: "Lungs", col: "#9C84D8", dark: "#5B449A", face: 3, m: [[0, 1, 0], [2, 3, 4], [0, 0, 0]] },
+    Z: { emo: "🧠", organ: "Brain", col: "#F4AFC6", dark: "#C46A8C", face: 3, m: [[1, 2, 0], [0, 3, 4], [0, 0, 0]] }
   };
   var TYPES = ["I", "J", "L", "O", "S", "T", "Z"];
   function rotCW(m) { var n = m.length, r = []; for (var y = 0; y < n; y++) { r.push([]); for (var x = 0; x < n; x++) r[y].push(m[n - 1 - x][y]); } return r; }
@@ -59,6 +63,8 @@
   var MED1 = ["Surgery successful", "Clean margins", "Discharged home", "Stable on the ward", "Sutures in", "Obs all normal", "Back to the ward", "Theatre list cleared"];
   var MEDN = { 2: "Double bypass!", 3: "Triple bypass!", 4: "Transplant!" };
   var NOR = { 1: "Line cleared!", 2: "Double!", 3: "Triple!", 4: "Four lines!" };
+  function comboTxt(n) { return (normie() ? "Combo ×" : "Code blue! ×") + n; }
+  var PERFECT = "Perfect match!";
   var OVERMSG = ["The ward is full. Time for a fresh shift.", "Too many patients, not enough beds.", "The team did brilliantly. Rest, then go again.", "Even the best theatre lists run over."];
   var OVERN = ["The board is full. One more go?", "Stacked to the top. Nice try.", "So close to a new best. Again?"];
   var FACTS = [
@@ -113,7 +119,7 @@
   function newState() {
     var day = sydDay();
     return { mode: MODE, day: day, rng: MODE === "endless" ? Math.random : seeded("organdrop-" + day), seq: [], quads: 0, board: emptyBoard(), bag: [], queue: [], cur: null, hold: null, canHold: true, score: 0, lines: 0, level: 1,
-      gT: 0, lockT: 0, lockN: 0, lowY: 0, over: false, t: 0, clearing: null, toastT: 0, factT: 0, facts: shuffle(normie() ? NFACTS : FACTS), factI: 0, seen: [], l1: 0, overT: 0 };
+      gT: 0, lockT: 0, lockN: 0, lowY: 0, over: false, t: 0, clearing: null, toastT: 0, factT: 0, facts: shuffle(normie() ? NFACTS : FACTS), factI: 0, seen: [], l1: 0, overT: 0, combo: 0, perfects: 0, bestCombo: 0 };
   }
   function fillQueue() { while (S.queue.length < 3) S.queue.push(bagNext()); }
   function gravity() { var l = Math.min(S.level, 20); return Math.pow(0.8 - (l - 1) * 0.007, l - 1); }
@@ -178,10 +184,14 @@
     }
     S.cur = null;
     if (above) { gameOver(); return; }
-    var full = [];
-    for (var r = 0; r < ROWS; r++) if (S.board[r].every(function (v) { return v; })) full.push(r);
-    if (full.length) { S.clearing = { rows: full, t: 0 }; scoreLines(full.length); }
-    else nextPiece();
+    sfx("lock");
+    var full = [], perfect = 0;
+    for (var r = 0; r < ROWS; r++) if (S.board[r].every(function (v) { return v; })) {
+      full.push(r);
+      var t0 = S.board[r][0] & 7; if (S.board[r].every(function (v) { return (v & 7) === t0; })) perfect++; // a matched donor: every cell the same organ
+    }
+    if (full.length) { S.clearing = { rows: full, t: 0 }; scoreLines(full.length, perfect); }
+    else { S.combo = 0; nextPiece(); }
     hud();
   }
   function finishClear() {
@@ -190,13 +200,23 @@
     while (S.board.length < ROWS) S.board.unshift(new Array(COLS).fill(0));
     nextPiece();
   }
-  function scoreLines(n) {
-    var before = S.level;
-    S.score += [0, 100, 300, 500, 800][n] * S.level;
+  // line points x level; each perfect-match row scores triple (its share of the line points, x3);
+  // combo: the 2nd, 3rd... clearing drop in a row adds 50 x combo x level. All at the level before these lines count.
+  function scoreLines(n, perfect) {
+    var before = S.level, base = [0, 100, 300, 500, 800][n] * S.level;
+    perfect = perfect || 0;
+    S.combo++; S.bestCombo = Math.max(S.bestCombo, S.combo);
+    var bonus = Math.round(base * 2 * perfect / n), cb = S.combo > 1 ? 50 * S.combo * S.level : 0;
+    S.score += base + bonus + cb; S.perfects += perfect;
+    S.last = { n: n, base: base, perfect: perfect, perfectBonus: bonus, combo: S.combo, comboBonus: cb };
     if (n === 4) { S.quads++; bumpStats(function (st) { st.quad = (st.quad || 0) + 1; }); }
     S.lines += n; S.level = 1 + Math.floor(S.lines / 10);
     var txt = normie() ? NOR[n] : n === 1 ? MED1[S.l1++ % MED1.length] : MEDN[n];
-    toast(txt, n === 4);
+    if (perfect) txt += "\n" + PERFECT;
+    if (cb) txt += "\n" + comboTxt(S.combo);
+    toast(txt, n === 4 || perfect > 0 || S.combo > 2);
+    sfx("clear", n, perfect > 0, S.combo);
+    buzz(n === 4 ? [70, 40, 110] : perfect ? [40, 30, 40] : 30);
     if (S.level > before) levelUp();
   }
   function levelUp() {
@@ -389,6 +409,7 @@
   }
   function gameOver() {
     S.over = true; S.cur = null; S.overT = performance.now();
+    sfx("over");
     $("od-toast").hidden = true;
     var list = lget(HSKEY); if (!Array.isArray(list)) list = [];
     var prevBest = list.length ? list[0].s : 0, me = { id: -1 };
@@ -410,13 +431,33 @@
     $("od-hs1").hidden = S.mode !== "endless" || ODLB;
     if (S.mode === "endless") renderHS($("od-hs1"), list, me.id);
     // shareable result: the scored daily (also from a practice run), or this endless game
-    var sh = S.mode === "endless" ? TITLE + " · " + fmt(S.score) + " pts · " + S.lines + " lines · level " + S.level + " 🫀🫁 maladywise.com/organ-drop/"
-      : TITLE + " daily " + fmtDate(S.day) + " · " + fmt(dr ? dr.s : S.score) + " pts · " + (dr ? dr.l : S.lines) + " lines 🫀🫁 maladywise.com/organ-drop/";
-    $("od-sharetx").textContent = sh; $("od-share").textContent = "Share";
+    var head = S.mode === "endless" ? TITLE + " · " + fmt(S.score) + " pts · " + S.lines + " lines · level " + S.level
+      : TITLE + " daily " + fmtDate(S.day) + " · " + fmt(dr ? dr.s : S.score) + " pts · " + (dr ? dr.l : S.lines) + " lines";
+    $("od-sharetx").textContent = shareText(head); $("od-share").textContent = "Share";
     $("od-again").textContent = S.mode === "endless" ? "Play again" : "Practise this daily";
     lbOver();
     $("od-over").hidden = false; $("od-again").focus({ preventScroll: true });
     track(S.mode === "endless" ? "over" : S.mode === "daily" ? "daily-over" : "practice-over");
+  }
+  // Wordle-style picture of the final stack: its top 6 non-empty rows, one emoji per cell, trimmed to fit a post
+  var LINK = "maladywise.com/organ-drop/";
+  function stackRows() {
+    var out = [];
+    for (var r = 0; r < ROWS && out.length < 6; r++) {
+      if (!S.board[r].some(function (v) { return v; })) continue;
+      out.push(S.board[r].map(function (v) { return v ? P[TYPES[(v & 7) - 1]].emo : "⬛"; }).join(""));
+    }
+    return out;
+  }
+  function postLen(t) { // X-style weight: emoji and other astral or symbol characters count 2, a link counts 23
+    var n = 0; t = t.replace(LINK, ""); n += 23;
+    Array.from(t).forEach(function (ch) { n += ch.codePointAt(0) > 0x2000 && ch !== "·" ? 2 : 1; });
+    return n;
+  }
+  function shareText(head) {
+    var rows = stackRows(), t;
+    do { t = rows.length ? head + "\n" + rows.join("\n") + "\n" + LINK : head + " 🫀🫁 " + LINK; } while (postLen(t) > 280 && rows.pop());
+    return t;
   }
   function fmtDate(d) { try { var p = d.split("-"); return +p[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+p[1] - 1]; } catch (e) { return ""; } }
   function renderHS(ol, list, meId) {
@@ -496,6 +537,57 @@
     try { navigator.clipboard.writeText(t).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Copy the text above"; }); } catch (e) { b.textContent = "Copy the text above"; }
     track("share");
   };
+
+  // ---------- sound + vibration (never touches the game's RNG) ----------
+  var muted = lget(MUTEKEY) === 1, AC = null, gestured = false, sfxLog = [];
+  function audio() {
+    if (muted || !gestured) return null;
+    if (!AC) { try { var A = window.AudioContext || window.webkitAudioContext; if (!A) return null; AC = new A(); } catch (e) { return null; } }
+    try { if (AC.state === "suspended") AC.resume(); } catch (e) {}
+    return AC;
+  }
+  function unlock() { if (gestured) return; gestured = true; audio(); }
+  document.addEventListener("pointerdown", unlock, true); document.addEventListener("keydown", unlock, true);
+  function tone(a, f, t0, dur, o) {
+    o = o || {};
+    var osc = a.createOscillator(), g = a.createGain(), v = o.vol || 0.12, hold = o.hold || 0;
+    osc.type = o.type || "sine"; osc.frequency.setValueAtTime(f, t0);
+    if (o.to) osc.frequency.exponentialRampToValueAtTime(o.to, t0 + dur);
+    g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(v, t0 + 0.008);
+    if (hold) g.gain.setValueAtTime(v, t0 + hold);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    osc.connect(g); g.connect(a.destination); osc.start(t0); osc.stop(t0 + dur + 0.02);
+  }
+  function sfx(kind, n, perfect, combo) {
+    if (muted) return;
+    var a = audio(); if (!a) return;
+    if (DEBUG) sfxLog.push(kind + (n ? n : ""));
+    try {
+      var t = a.currentTime + 0.01, N = normie();
+      if (kind === "lock") {
+        if (N) tone(a, 330, t, 0.07, { type: "triangle", vol: 0.05 });
+        else { tone(a, 95, t, 0.11, { to: 50, vol: 0.32 }); tone(a, 80, t + 0.15, 0.1, { to: 45, vol: 0.22 }); } // lub-dub
+      } else if (kind === "clear") {
+        var f = [0, 880, 988, 1175, 1319][n] || 880;
+        if (N) { tone(a, f * 0.6, t, 0.16, { type: "triangle", vol: 0.1 }); tone(a, f * 0.75, t + 0.09, 0.2, { type: "triangle", vol: 0.09 }); }
+        else { tone(a, f, t, 0.13, { vol: 0.1 }); if (n === 4) tone(a, f, t + 0.17, 0.13, { vol: 0.1 }); } // monitor beep, higher for more lines
+        if (perfect) tone(a, f * 1.5, t + 0.2, 0.22, { type: "triangle", vol: 0.08 });
+        if (combo > 1) tone(a, Math.min(1760, 660 + combo * 90), t + 0.12, 0.1, { type: "triangle", vol: 0.06 });
+      } else if (kind === "over") {
+        if (N) [523, 440, 349].forEach(function (fr, i) { tone(a, fr, t + i * 0.16, 0.22, { type: "triangle", vol: 0.09 }); });
+        else tone(a, 880, t, 1.4, { vol: 0.08, hold: 1.0 }); // flatline
+      }
+    } catch (e) {}
+  }
+  function buzz(p) { if (muted) return; try { if (navigator.vibrate) navigator.vibrate(p); } catch (e) {} }
+  function muteUI() {
+    var b = $("od-mute"); if (!b) return;
+    b.textContent = muted ? "🔇" : "🔊";
+    b.setAttribute("aria-label", muted ? "Sound off. Turn sound on" : "Sound on. Mute");
+    b.setAttribute("aria-pressed", muted ? "true" : "false");
+  }
+  $("od-mute").onclick = function () { muted = !muted; lset(MUTEKEY, muted ? 1 : 0); gestured = true; muteUI(); if (!muted) audio(); this.blur(); };
+  muteUI();
 
   // ---------- input: keyboard ----------
   function act(k) {
@@ -581,10 +673,15 @@
     var nq = function (sel, t) { var el = document.querySelector(sel); if (el) el.textContent = t; };
     nq(".od-lede", "Organs are falling. Stack them neatly and fill whole rows to clear them. It gets faster every level, and every level brings a new animal organ fact.");
     nq("#od-start", "Play");
+    nq("#od-otitle", "Game over");
     nq(".od-hush", "No organs were harmed. They’re only shapes.");
     nq("#od-paused .od-omsg", "Paused. The organs will wait.");
     Array.prototype.forEach.call(document.querySelectorAll(".od-rules li, .od-hp li"), function (li) {
       li.innerHTML = li.innerHTML.replace("is a <b>transplant</b>, worth the most", "is the <b>big one</b>, worth the most").replace("= <b>transplant</b>", "= <b>the big one</b>");
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".od-rsound"), function (li) { li.innerHTML = "<b>Sound:</b> soft blips and chimes (and a buzz on phones). Tap 🔊 in the game bar to mute."; });
+    Array.prototype.forEach.call(document.querySelectorAll(".od-rcombo"), function (li) {
+      li.innerHTML = "<b>Combos:</b> clear rows on back-to-back drops for a <b>combo</b> bonus. A cleared row that’s all one organ is a <b>perfect match</b>: triple points.";
     });
   }
   renderBest(); lbProbe();
@@ -600,7 +697,11 @@
       lb: function () { return { on: ODLB, boards: boards }; },
       end: function () { if (S && !S.over) gameOver(); },
       // rows: array of strings for the bottom of the board, "#" = filled, "." = empty (e.g. "######....")
-      setBottom: function (rows) { rows.forEach(function (s, i) { var r = ROWS - rows.length + i; for (var x = 0; x < COLS; x++) S.board[r][x] = s[x] === "#" ? 5 : 0; }); },
+      // a piece letter (I J L O S T Z) fills that cell with that organ instead
+      setBottom: function (rows) { rows.forEach(function (s, i) { var r = ROWS - rows.length + i; for (var x = 0; x < COLS; x++) S.board[r][x] = s[x] === "#" ? 5 : P[s[x]] ? P[s[x]].idx : 0; }); },
+      sfx: function () { return sfxLog.slice(); },
+      muted: function () { return muted; },
+      share: function () { return $("od-sharetx").textContent; },
       setNext: function (types) { S.queue = types.concat(S.queue).slice(0, Math.max(3, types.length)); },
       respawn: function (t) { spawn(t); },
       setLines: function (n) { S.lines = n; S.level = 1 + Math.floor(n / 10); hud(); }
