@@ -381,11 +381,11 @@
     ["long10", "🦒", "Long Legs", "Solve ten Long Friday Wordemics.", "", "long", 10],
     ["cat1", "🐈", "Blanket Biter", "Score 10,000 in Basil + Clover.", "global", "basil", 10000],
     ["cat2", "🛋️", "Bench Legend", "Beat all ten rounds of Basil + Clover.", "global", "basilwon", 1],
-    ["od1", "🧤", "Scrubbed In", "Play a game of Organ Drop.", "global", "odgames", 1],
-    ["od2", "🥼", "Chief Surgeon", "Clear 50 lines in one game of Organ Drop.", "global", "odlines", 50],
-    ["od3", "🫀", "Transplant Team", "Clear four lines at once in Organ Drop.", "global", "odquad", 1],
-    ["od4", "🎭", "Theatre Legend", "Score 20,000 in Organ Drop.", "global", "odbest", 20000],
-    ["od5", "📋", "Daily Rounds", "Finish an Organ Drop daily challenge.", "global", "oddaily", 1]
+    ["od1", "🧤", "Scrubbed In", "Play a game of Dropsy.", "global", "odgames", 1],
+    ["od2", "🥼", "Chief Surgeon", "Clear 50 lines in one game of Dropsy.", "global", "odlines", 50],
+    ["od3", "🫀", "Transplant Team", "Clear four lines at once in Dropsy.", "global", "odquad", 1],
+    ["od4", "🎭", "Theatre Legend", "Score 20,000 in Dropsy.", "global", "odbest", 20000],
+    ["od5", "📋", "Daily Rounds", "Finish a Dropsy daily challenge.", "global", "oddaily", 1]
   ];
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
@@ -739,7 +739,7 @@
   function inAU() { try { if (/^Australia\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "")) return true; } catch (e) {} return /-AU$/i.test(navigator.language || ""); }
   function navHere(href) {
     var p = location.pathname.replace(/index\.html$/, "");
-    if (href === "/") return p === "/" || /^\/(arcade|weird|basil|basil-clover|organ-drop|mergeon|me)\//.test(p);
+    if (href === "/") return p === "/" || /^\/(arcade|weird|basil|basil-clover|organ-drop|dropsy|mergeon|me)\//.test(p);
     if (p.indexOf(href) === 0) return true;
     var F = window.MW_FACTS && MW_FACTS[p]; // condition fact sheets live at the root, e.g. /acne/
     return !!(F && F.k === "fact" && href === "/conditions/");
@@ -865,7 +865,7 @@
     }
 function arcadeCard() { // one card, two arcade games, so the grid stays 4 across
       var acc = root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80";
-      return '<div class="card house bonus arcade2" style="--accent:' + acc + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:6px"><img src="/assets/mascots/basil.svg?v=2" alt="" width="34" height="45" style="width:34px;height:45px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="32" height="42" style="width:32px;height:42px;object-fit:contain;margin-left:-8px"><img src="/assets/mascots/labelosis.svg" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain"></span></div><div class="cbody"><h2 class="name">Arcade</h2><p class="kind">Three bonus games</p><p class="tag">Cats wrecking a bench, falling organs, or merging microbes into a brain.</p><div class="cfoot arcade-btns"><a class="play" href="/basil-clover/">Basil + Clover</a><a class="play" href="/organ-drop/">Organ Drop</a><a class="play" href="/mergeon/">Mergeon</a></div></div></div>';
+      return '<div class="card house bonus arcade2" style="--accent:' + acc + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:6px"><img src="/assets/mascots/basil.svg?v=2" alt="" width="34" height="45" style="width:34px;height:45px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="32" height="42" style="width:32px;height:42px;object-fit:contain;margin-left:-8px"><img src="/assets/mascots/labelosis.svg" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain"></span></div><div class="cbody"><h2 class="name">Arcade</h2><p class="kind">Three bonus games</p><p class="tag">Cats wrecking a bench, falling organs, or merging microbes into a brain.</p><div class="cfoot arcade-btns"><a class="play" href="/basil-clover/">Basil + Clover</a><a class="play" href="/dropsy/">Dropsy</a><a class="play" href="/mergeon/">Mergeon</a></div></div></div>';
     }
     function bonusCard() {
       return '<a class="card house bonus" href="/basil-clover/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
