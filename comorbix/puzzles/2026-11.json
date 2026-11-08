@@ -381,18 +381,8 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Parts of the airway",
-    "level": 1,
-    "words": [
-     "TRACHEA",
-     "LARYNX",
-     "BRONCHUS",
-     "ALVEOLI"
-    ]
-   },
-   {
     "label": "Fat-soluble vitamins",
-    "level": 2,
+    "level": 1,
     "words": [
      "A",
      "D",
@@ -402,12 +392,22 @@
    },
    {
     "label": "Water-soluble vitamins",
-    "level": 3,
+    "level": 2,
     "words": [
      "C",
      "B12",
      "FOLATE",
      "THIAMINE"
+    ]
+   },
+   {
+    "label": "Illnesses caused by a bacterial toxin",
+    "level": 3,
+    "words": [
+     "DIPHTHERIA",
+     "TETANUS",
+     "BOTULISM",
+     "CHOLERA"
     ]
    },
    {

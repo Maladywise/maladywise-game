@@ -29,5 +29,37 @@
    "date": "2026-11-08",
    "source": "Reuters health summary 7 Nov 2026 (wild goose, Germany)"
   }
+ ],
+ "used": [
+  {
+   "date": "2026-11-09",
+   "main_theme": "Microtia Awareness Day (ear anatomy and development)",
+   "source": "world day",
+   "terms_used": [
+    "microtia",
+    "measles (US >2,000 cases, 2nd year)",
+    "diphtheria (AU outbreak)",
+    "generic twice-yearly lenacapavir PrEP (FDA tentative approval)",
+    "Shamonda virus / Culicoides midges (WHO DON623)",
+    "S\u00e3o Paulo Grand Prix (Normie)",
+    "Ireland v Argentina, Los Pumas (Normie)"
+   ],
+   "niche_terms": [
+    "Shamonda virus",
+    "biting midges",
+    "lenacapavir generic",
+    "botulism/cholera toxins"
+   ],
+   "games": [
+    "triviosis",
+    "wordemic",
+    "comorbix",
+    "gridectomy",
+    "zebritis",
+    "zebritis normie",
+    "comorbix normie"
+   ],
+   "note": "Google Trends pages could not be fetched this run; trends taken from data/trends.json and news searches."
+  }
  ]
 }

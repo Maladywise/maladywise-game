@@ -2379,107 +2379,107 @@
   "date": "2026-11-09",
   "number": 23,
   "difficulty": "Easy",
-  "theme": "Extraordinary claims",
+  "theme": "All ears",
   "questions": [
    {
-    "q": "Carl Sagan, born today in 1934, popularised the line \u2018Extraordinary claims require\u2019?",
-    "a": "Extraordinary evidence",
+    "q": "Microtia means an under-developed outer ear at birth. Most children have it in one ear only. Which side is affected more often?",
+    "a": "The right",
     "w": [
-     "Peer review",
-     "A second opinion",
-     "Extraordinary funding"
+     "The left",
+     "Always both",
+     "It depends on handedness"
     ],
-    "e": "He said it in Cosmos in 1980. Handy in clinic when someone brings in a miracle supplement."
+    "e": "One ear only in about 8 or 9 out of 10 children, and the right in about 60%. It happens in roughly 1 in 5,000 births."
    },
    {
-    "q": "The first modern randomised controlled trial in medicine, published in 1948, tested streptomycin for?",
-    "a": "Tuberculosis",
+    "q": "Microtia is more common in?",
+    "a": "Boys",
     "w": [
-     "Syphilis",
-     "Pneumonia",
-     "Plague"
+     "Girls",
+     "Neither, it\u2019s exactly equal",
+     "Only identical twins"
     ],
-    "e": "The Medical Research Council trial in the UK. Randomisation stopped doctors choosing who got the scarce drug."
+    "e": "Boys are affected about two and a half times as often as girls."
    },
    {
-    "q": "In 1747, naval surgeon James Lind found that which treatment helped sailors with scurvy?",
-    "a": "Oranges and lemons",
+    "q": "The most severe form, with no outer ear at all, is called?",
+    "a": "Anotia",
     "w": [
-     "Cider",
-     "Vinegar",
-     "Seawater"
+     "Atresia",
+     "Cryptotia",
+     "Otalgia"
     ],
-    "e": "One of the first controlled experiments in medicine: 12 sailors, six treatments. Vitamin C was isolated nearly 200 years later."
+    "e": "Grade IV on the Marx scale. A grade III ear, a small curl of tissue, is sometimes called a \u2018peanut ear\u2019."
    },
    {
-    "q": "Emergency doctor and NASA astronaut Anil Menon spacewalked in late October 2026. Why do spacewalkers pre-breathe pure oxygen?",
-    "a": "To flush out nitrogen and prevent the bends",
+    "q": "Many children with microtia also have aural atresia. What is missing or closed?",
+    "a": "The ear canal",
     "w": [
-     "To get used to thin air",
-     "To keep their blood sugar up",
-     "To stop space motion sickness"
+     "The cochlea",
+     "The earlobe",
+     "The balance canals"
     ],
-    "e": "Suits run at low pressure, so dissolved nitrogen could bubble out of the blood, just as it does in divers who come up too fast."
+    "e": "Atresia means \u2018no opening\u2019. It is more common with the more severe grades of microtia."
    },
    {
-    "q": "Side effects caused by expecting to feel bad, even on a sugar pill, are called the?",
-    "a": "Nocebo effect",
+    "q": "A closed ear canal with a healthy inner ear causes which type of hearing loss?",
+    "a": "Conductive",
     "w": [
-     "Hawthorne effect",
-     "Halo effect",
-     "Rebound effect"
+     "Sensorineural",
+     "Noise-induced",
+     "Central"
     ],
-    "e": "In statin trials, people on placebo report muscle aches too."
+    "e": "Sound can\u2019t get through, but the inner ear works. That\u2019s why bone-conduction devices, which send vibrations through the skull, help many children."
    },
    {
-    "q": "A 1998 Lancet paper, later retracted, falsely linked autism to which vaccine?",
-    "a": "MMR",
+    "q": "Surgeons can sculpt a new outer ear from cartilage taken from the child\u2019s own?",
+    "a": "Ribs",
     "w": [
-     "Polio",
-     "Hepatitis B",
-     "Whooping cough"
-    ],
-    "e": "The Lancet retracted it in 2010 and the lead author was struck off. Big studies since have found no link."
-   },
-   {
-    "q": "\u2018Lunatic\u2019 comes from the old belief that madness was caused by?",
-    "a": "The Moon",
-    "w": [
-     "Bad air",
-     "Black bile",
-     "The tides"
-    ],
-    "e": "Latin luna. Studies of emergency departments keep finding no full-moon rush. Night staff remain unconvinced."
-   },
-   {
-    "q": "\u2018Influenza\u2019 is Italian for \u2018influence\u2019. Whose influence did people blame?",
-    "a": "The stars",
-    "w": [
-     "Witches",
-     "The cold",
-     "Bad food"
-    ],
-    "e": "Astrologers blamed outbreaks on the stars. Malaria, meanwhile, means \u2018bad air\u2019."
-   },
-   {
-    "q": "In 1998, at age 11, Emily Rosa became the youngest author in JAMA. Her experiment debunked?",
-    "a": "Therapeutic touch",
-    "w": [
-     "Homeopathy",
-     "Magnetic bracelets",
-     "Iridology"
-    ],
-    "e": "Practitioners couldn\u2019t sense which of their hands was near hers any better than chance."
-   },
-   {
-    "q": "Today is Microtia Awareness Day. A baby with microtia is born with an under-developed?",
-    "a": "Outer ear",
-    "w": [
-     "Lower jaw",
      "Nose",
-     "Eyelid"
+     "Knees",
+     "Other ear"
     ],
-    "e": "It\u2019s Greek for \u2018small ear\u2019. Some children later have a new ear sculpted from their own rib cartilage, others use a prosthesis, and hearing devices help many."
+    "e": "The carved framework sits under the skin, which drapes over it. Some children choose an implant framework or a prosthetic ear instead, or nothing at all."
+   },
+   {
+    "q": "Rib cartilage ear surgery is often done around age 8 to 10. A main reason for waiting is?",
+    "a": "There\u2019s enough rib cartilage by then",
+    "w": [
+     "Baby teeth must fall out first",
+     "The ear canal may open by itself",
+     "Hearing can\u2019t be tested earlier"
+    ],
+    "e": "Waiting also means the child can help decide. The other ear is about 85% of adult size by age 5, so it makes a good template."
+   },
+   {
+    "q": "The outer ear grows from six small bumps in the embryo, the \u2018hillocks of His\u2019. When do they appear?",
+    "a": "About 6 weeks into pregnancy",
+    "w": [
+     "About 20 weeks",
+     "About 36 weeks",
+     "In the first month after birth"
+    ],
+    "e": "Three come from the first pharyngeal arch and three from the second. They fuse into the familiar ear shape over the following months."
+   },
+   {
+    "q": "Microtia can come with an under-developed jaw and cheek on the same side. This is called?",
+    "a": "Hemifacial microsomia",
+    "w": [
+     "Bell\u2019s palsy",
+     "Torticollis",
+     "Cleft palate"
+    ],
+    "e": "Also called craniofacial microsomia, it\u2019s one of the conditions most often found alongside microtia."
+   },
+   {
+    "q": "The small flap of cartilage just in front of the ear canal, which you press to block out noise, is the?",
+    "a": "Tragus",
+    "w": [
+     "Helix",
+     "Concha",
+     "Lobule"
+    ],
+    "e": "It forms from the first-arch bumps. The helix is the curled outer rim and the lobule is the earlobe."
    }
   ]
  },
