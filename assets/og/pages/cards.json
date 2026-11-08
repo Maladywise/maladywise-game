@@ -13,6 +13,13 @@
 "label": "Condition",
 "title": "Acne"
 },
+"addisons-disease": {
+"url": "/addisons-disease/",
+"key": "90445dd7b383",
+"v": "14957f5f",
+"label": "Condition",
+"title": "Addison’s Disease"
+},
 "adhd": {
 "url": "/adhd/",
 "key": "c210f483e079",
@@ -489,6 +496,13 @@
 "label": "Condition",
 "title": "Eczema"
 },
+"ehlers-danlos-syndrome": {
+"url": "/ehlers-danlos-syndrome/",
+"key": "0f068e91a83a",
+"v": "0754acbd",
+"label": "Condition",
+"title": "Ehlers-Danlos Syndromes and Hypermobility"
+},
 "endometriosis": {
 "url": "/endometriosis/",
 "key": "5becf84acae5",
@@ -502,6 +516,13 @@
 "v": "d9c6220f",
 "label": "Condition",
 "title": "Enlarged Prostate"
+},
+"eosinophilic-oesophagitis": {
+"url": "/eosinophilic-oesophagitis/",
+"key": "e4c118cf9cc7",
+"v": "39e3f900",
+"label": "Condition",
+"title": "Eosinophilic Oesophagitis (EoE)"
 },
 "erectile-dysfunction": {
 "url": "/erectile-dysfunction/",
@@ -664,6 +685,13 @@
 "label": "Condition",
 "title": "Gout"
 },
+"haemochromatosis": {
+"url": "/haemochromatosis/",
+"key": "a58b6f799672",
+"v": "10d555a6",
+"label": "Condition",
+"title": "Haemochromatosis"
+},
 "haemorrhoids": {
 "url": "/haemorrhoids/",
 "key": "ff18c66b4f10",
@@ -776,6 +804,13 @@
 "label": "Condition",
 "title": "Impetigo (School Sores)"
 },
+"inflammatory-bowel-disease": {
+"url": "/inflammatory-bowel-disease/",
+"key": "57dd4c5dd436",
+"v": "24571236",
+"label": "Condition",
+"title": "Inflammatory Bowel Disease (Crohn’s and Colitis)"
+},
 "ingrown-toenail": {
 "url": "/ingrown-toenail/",
 "key": "409d44b52439",
@@ -831,6 +866,13 @@
 "v": "1fdb462b",
 "label": "Condition",
 "title": "Low Libido in Women"
+},
+"lupus": {
+"url": "/lupus/",
+"key": "21205f7011cc",
+"v": "d90e226d",
+"label": "Condition",
+"title": "Lupus (SLE)"
 },
 "marine-stings": {
 "url": "/marine-stings/",
@@ -1070,6 +1112,13 @@
 "label": "Condition",
 "title": "Mouth Ulcers"
 },
+"myasthenia-gravis": {
+"url": "/myasthenia-gravis/",
+"key": "973c2224c3cf",
+"v": "69895e15",
+"label": "Condition",
+"title": "Myasthenia Gravis"
+},
 "nappy-rash": {
 "url": "/nappy-rash/",
 "key": "52cf4b35dde6",
@@ -1189,6 +1238,13 @@
 "label": "Condition",
 "title": "Polymyalgia Rheumatica"
 },
+"porphyria": {
+"url": "/porphyria/",
+"key": "d1bfbf27776d",
+"v": "3ec219ef",
+"label": "Condition",
+"title": "Porphyria"
+},
 "pots": {
 "url": "/pots/",
 "key": "49d13bbad01c",
@@ -1273,6 +1329,13 @@
 "label": "Condition",
 "title": "Runner’s Knee (Kneecap Pain)"
 },
+"sarcoidosis": {
+"url": "/sarcoidosis/",
+"key": "3cfce2f4b589",
+"v": "234b4ef1",
+"label": "Condition",
+"title": "Sarcoidosis"
+},
 "scabies": {
 "url": "/scabies/",
 "key": "cc9f08197611",
@@ -1286,6 +1349,13 @@
 "v": "8d2ad217",
 "label": "Condition",
 "title": "Sciatica"
+},
+"scleroderma": {
+"url": "/scleroderma/",
+"key": "05bf958a49d8",
+"v": "59e21a2e",
+"label": "Condition",
+"title": "Scleroderma (Systemic Sclerosis)"
 },
 "seb-derm": {
 "url": "/seb-derm/",
