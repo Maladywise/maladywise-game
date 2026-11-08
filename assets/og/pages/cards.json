@@ -48,6 +48,13 @@
 "label": "Condition",
 "title": "Anal Fissure"
 },
+"anaphylaxis": {
+"url": "/anaphylaxis/",
+"key": "0dbbd83a50bb",
+"v": "667decdd",
+"label": "Condition",
+"title": "Anaphylaxis"
+},
 "ankle-sprain": {
 "url": "/ankle-sprain/",
 "key": "3df29d21f11c",
@@ -258,6 +265,13 @@
 "label": "Condition",
 "title": "Bronchiolitis"
 },
+"cancer-screening": {
+"url": "/cancer-screening/",
+"key": "0ba4a2397183",
+"v": "77c0d4bd",
+"label": "Condition",
+"title": "Cancer Screening"
+},
 "carpal-tunnel": {
 "url": "/carpal-tunnel/",
 "key": "d2894906925e",
@@ -278,6 +292,13 @@
 "v": "53b3c7a4",
 "label": "Condition",
 "title": "High Cholesterol"
+},
+"chronic-kidney-disease": {
+"url": "/chronic-kidney-disease/",
+"key": "d96bfe46d202",
+"v": "b587f390",
+"label": "Condition",
+"title": "Chronic Kidney Disease (CKD)"
 },
 "coeliac": {
 "url": "/coeliac/",
@@ -362,6 +383,13 @@
 "v": "ec854e51",
 "label": "Condition",
 "title": "Contact Dermatitis"
+},
+"contraception": {
+"url": "/contraception/",
+"key": "d5f123ec72df",
+"v": "d632c676",
+"label": "Condition",
+"title": "Contraception"
 },
 "copd": {
 "url": "/copd/",
@@ -622,6 +650,13 @@
 "label": "Condition",
 "title": "Fibromyalgia"
 },
+"flu-and-covid": {
+"url": "/flu-and-covid/",
+"key": "d9154be70fd9",
+"v": "d497a081",
+"label": "Condition",
+"title": "Flu, COVID-19 and Colds"
+},
 "foot-oa": {
 "url": "/foot-oa/",
 "key": "591547a1afd2",
@@ -733,6 +768,13 @@
 "v": "90aaad89",
 "label": "Condition",
 "title": "Head Lice"
+},
+"heart-failure": {
+"url": "/heart-failure/",
+"key": "1b819e739493",
+"v": "6e20b79a",
+"label": "Condition",
+"title": "Heart Failure"
 },
 "heavy-periods": {
 "url": "/heavy-periods/",
@@ -887,6 +929,13 @@
 "v": "2f1a1727",
 "label": "Condition",
 "title": "Mast Cell Activation Syndrome (MCAS)"
+},
+"measles": {
+"url": "/measles/",
+"key": "747857a1feff",
+"v": "8a9cb2c6",
+"label": "Condition",
+"title": "Measles"
 },
 "medicines-ace-inhibitors": {
 "url": "/medicines/ace-inhibitors/",
@@ -1370,6 +1419,13 @@
 "v": "6bb5aeb0",
 "label": "Condition",
 "title": "Seborrhoeic Keratoses"
+},
+"sexually-transmitted-infections": {
+"url": "/sexually-transmitted-infections/",
+"key": "3383631ba030",
+"v": "0d4e494c",
+"label": "Condition",
+"title": "Sexually Transmitted Infections (STIs)"
 },
 "shin-splints": {
 "url": "/shin-splints/",
