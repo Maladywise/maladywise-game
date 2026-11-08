@@ -8,6 +8,7 @@
 // - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
 const http = require("http");
+const crypto = require("crypto");
 const { createClient } = require("redis");
 
 const PORT = process.env.PORT || 10000;
@@ -79,7 +80,28 @@ function lbAsc(b) { return ASC_BOARDS.indexOf(b) >= 0; }
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
 function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : "lb:all"; }
 // score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
+// Hard per-board ceilings on top of the shape checks below (score s, round/level r). The live boards couldn't be read
+// when these were set, so they come from each game's scoring rules with generous headroom; rejected posts are logged
+// ("score rejected") so they can be tuned from real play. Override without a code change: SCORE_MAX='{"oall":[3000000,200]}'.
+const SCORE_MAX = Object.assign({
+  all: [10000000, 500], daily: [5000000, 500], vall: [10000000, 500], vdaily: [5000000, 500], // Basil + Clover
+  oall: [10000000, 300], odaily: [5000000, 300],                                              // Stackulus
+  mdaily: [20000, 10], mall: [20000, 10],                                                       // Mergeon
+  sdaily: [7200, 2],                                                                            // Sudokrine (seconds)
+}, (() => { try { return JSON.parse(process.env.SCORE_MAX || "{}"); } catch (e) { console.error("SCORE_MAX is not valid JSON; ignoring it"); return {}; } })());
+const scoreHits = new Map();     // per-IP-hash timestamps of recent /score posts (memory only)
+const SCORE_PER_MIN = 10;
+const RATE_SALT = crypto.randomBytes(16).toString("hex"); // per-process; rate limiting works even without TAG_SALT
+function scoreRateOk(ip) {
+  const h = crypto.createHash("sha256").update(RATE_SALT + ip).digest("hex").slice(0, 16), now = Date.now();
+  const L = (scoreHits.get(h) || []).filter((t) => now - t < 60000);
+  if (L.length >= SCORE_PER_MIN) { scoreHits.set(h, L); return false; }
+  L.push(now); scoreHits.set(h, L); return true;
+}
+setInterval(() => { const now = Date.now(); for (const [k, L] of scoreHits) if (!L.some((t) => now - t < 60000)) scoreHits.delete(k); }, 60000).unref();
+function lbPlausible(b, s, r) { const m = SCORE_MAX[b]; return !m || (s <= m[0] && r <= m[1]); }
 function lbValid(b, s, r, raw) {
+  if (!Number.isFinite(s) || !Number.isFinite(r) || !lbPlausible(b, s, r)) return false;
   if (b === "sdaily") return /^\d{1,5}$/.test(String(raw || "")) && s >= 20 && s <= 7200 && (r === 1 || r === 2); // 20 s to 2 h, whole seconds
   if (b === "mdaily" || b === "mall") return /^\d{1,5}$/.test(String(raw || "")) && s > 0 && s <= 20000 && r >= 0 && r <= 10; // Mergeon: r = top piece level
   if (b.charAt(0) === "o") return s > 0 && r >= 1 && r <= 999 && s <= 4000 * r * r && s <= 50000000;
@@ -120,13 +142,17 @@ async function lbAdd(b, id, n, s, r) {
 
 // ---------- Specialists: visitor-suggested practical tags (fixed list, no free text, moderated) ----------
 // A tag needs 3 different visitors (by hashed IP) and owner approval before it shows. IPs are never stored, only a salted hash.
-const crypto = require("crypto");
 const TAGS = ["wc", "park", "pram", "interp", "fees", "ah"];
 const ADMIN = process.env.TAG_ADMIN_KEY || "";
-const SALT = process.env.TAG_SALT || "mw-tags";
+const SALT = process.env.TAG_SALT || "";
+if (SALT.length < 8) console.error("ERROR: TAG_SALT is not set (or under 8 characters). Specialists tag votes are switched off until it is set in Render.");
 let tagCache = null, tagCacheT = 0;
 const memTag = { v: {}, pend: new Set(), ok: {}, no: new Set(), names: {} };
-function ipHash(ip) { return crypto.createHash("sha256").update(SALT + ip).digest("hex").slice(0, 16); }
+function ipHash(ip) { // null when there's no salt: never hash IPs with a salt that lives in the code
+  if (SALT.length < 8) { console.error("ERROR: refusing to hash a visitor IP: TAG_SALT is not set"); return null; }
+  return crypto.createHash("sha256").update(SALT + ip).digest("hex").slice(0, 16);
+}
+function adminKey(req, q) { return req.headers["x-admin-key"] || q.get("k"); } // header preferred; ?k= still works for old tools
 function pidOk(p) { return /^[a-z0-9]{3,60}$/.test(p); }
 function isAdmin(k) { const a = Buffer.from(String(k || "")), b = Buffer.from(ADMIN); return ADMIN.length >= 16 && a.length === b.length && crypto.timingSafeEqual(a, b); }
 function tagName(s) { return String(s || "").replace(/[^A-Za-z0-9 '&(),.\-–]/g, "").replace(/\s+/g, " ").trim().slice(0, 80); }
@@ -200,7 +226,7 @@ const server = http.createServer(async (req, res) => {
   res.setHeader("Cache-Control", "no-store");
   const url = new URL(req.url, "http://x");
   const ip = (req.headers["x-forwarded-for"] || req.socket.remoteAddress || "").split(",")[0].trim();
-  if (req.method === "OPTIONS") { res.setHeader("Access-Control-Allow-Methods", "GET, POST"); res.setHeader("Access-Control-Allow-Headers", "Content-Type"); res.writeHead(204); return res.end(); }
+  if (req.method === "OPTIONS") { res.setHeader("Access-Control-Allow-Methods", "GET, POST"); res.setHeader("Access-Control-Allow-Headers", "Content-Type, X-Admin-Key"); res.writeHead(204); return res.end(); }
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
@@ -226,7 +252,8 @@ const server = http.createServer(async (req, res) => {
       const q = url.searchParams, b = lbBoard(q.get("b")), id = clean(q.get("id"), 16);
       const s = Math.floor(Number(q.get("s"))), r = Math.floor(Number(q.get("r")));
       const ok = id.length >= 6 && lbValid(b, s, r, q.get("s"));
-      if (ok && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n"), b), s, r);
+      if (!ok && id.length >= 6) console.warn("score rejected", JSON.stringify({ b, s: q.get("s"), r: q.get("r") }));
+      if (ok && scoreRateOk(ip) && !limited("lb" + ip, 40)) await lbAdd(b, id, lbName(q.get("n"), b), s, r);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ ok, rows: await lbTop(b, id), day: sydDay(), board: b }));
     }
@@ -239,12 +266,13 @@ const server = http.createServer(async (req, res) => {
       const ok = pidOk(p) && TAGS.includes(t);
       const xf = (req.headers["x-forwarded-for"] || "").split(",").map((x) => x.trim()).filter(Boolean);
       const rip = req.headers["cf-connecting-ip"] || req.headers["true-client-ip"] || xf[xf.length - 1] || req.socket.remoteAddress || "";
-      if (ok && !limited("tg" + rip, 30)) await tagAdd(p, t, ipHash(rip), tagName(q.get("n")));
-      res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ ok }));
+      const h = ok ? ipHash(rip) : null;
+      if (h && !limited("tg" + rip, 30)) await tagAdd(p, t, h, tagName(q.get("n")));
+      res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ ok: ok && !!h }));
     }
     if (url.pathname === "/tagq" || url.pathname === "/tagset") {
       const q = url.searchParams;
-      if (limited("ta" + ip, 300) || !isAdmin(q.get("k"))) { res.writeHead(403); return res.end(); }
+      if (limited("ta" + ip, 300) || !isAdmin(adminKey(req, q))) { res.writeHead(403); return res.end(); }
       if (url.pathname === "/tagset" && req.method === "POST") {
         const p = clean(q.get("p"), 60).replace(/-/g, ""), t = q.get("t"), v = q.get("v");
         if (pidOk(p) && TAGS.includes(t) && ["0", "1", "2"].includes(v)) await tagSet(p, t, v);
@@ -262,7 +290,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (url.pathname === "/fbq" || url.pathname === "/fbdone") {
       const q = url.searchParams;
-      if (limited("ta" + ip, 300) || !isAdmin(q.get("k"))) { res.writeHead(403); return res.end(); }
+      if (limited("ta" + ip, 300) || !isAdmin(adminKey(req, q))) { res.writeHead(403); return res.end(); }
       if (url.pathname === "/fbdone" && req.method === "POST") await fbDone(clean(q.get("id"), 20));
       res.writeHead(200, { "Content-Type": "application/json" }); return res.end(JSON.stringify(await fbList()));
     }

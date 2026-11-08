@@ -31,7 +31,7 @@ var key="";try{key=localStorage.getItem("mw-tag-key")||""}catch(e){}
 var $=function(id){return document.getElementById(id)};
 function row(n,sub,btns){var d=document.createElement("div");d.className="row";var t=document.createElement("div");t.innerHTML="<b></b><small></small>";t.firstChild.textContent=n;t.lastChild.textContent=sub;d.appendChild(t);var b=document.createElement("div");b.className="btns";btns.forEach(function(x){b.appendChild(x)});d.appendChild(b);return d}
 function btn(cls,txt,fn){var b=document.createElement("button");b.className=cls;b.textContent=txt;b.onclick=fn;return b}
-function call(path,method){return fetch(API+path+(path.indexOf("?")<0?"?":"&")+"k="+encodeURIComponent(key),{method:method||"GET"}).then(function(r){if(!r.ok)throw r.status;return r.json()})}
+function call(path,method,old){return fetch(API+path+(old?(path.indexOf("?")<0?"?":"&")+"k="+encodeURIComponent(key):""),{method:method||"GET",headers:old?{}:{"X-Admin-Key":key}}).then(function(r){if(r.status===403&&!old)return call(path,method,1);if(!r.ok)throw r.status;return r.json()},function(e){if(old)throw e;return call(path,method,1)})}
 function show(d){$("login").hidden=true;$("app").hidden=false;var P=$("pend"),L=$("live");P.innerHTML="";L.innerHTML="";
  if(!d.pending.length)P.innerHTML='<p class="m">Nothing to check.</p>';
  d.pending.forEach(function(x){P.appendChild(row(x.n,(T[x.t]||x.t)+" · "+x.c+" visitors",[btn("yes","Approve",function(){set(x.p,x.t,1)}),btn("no","Reject",function(){set(x.p,x.t,0)})]))});
