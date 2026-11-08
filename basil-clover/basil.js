@@ -1514,7 +1514,7 @@
     S.qWorld = (STAGE !== 2 || VETLB) && S.score > 0 && (!Array.isArray(rows) || rows.length < 10 || S.score > rows[rows.length - 1].s); // the Vet goes world-wide only once the server knows its boards
     hsUI();
     var q = S.qLocal || S.qWorld; lastHi = -1;
-    $("bk-hsform").hidden = !q; $("bk-hslabel").textContent = S.qWorld ? (DAILY ? "Top 10 today! Your name" : "World top 10! Your name") : "High score! Your name";
+    $("bk-hsform").hidden = !q; $("bk-hslabel").textContent = S.qWorld ? (DAILY ? "Top 10 today! Your nickname" : "World top 10! Your nickname") : "High score! Your nickname";
     renderBoard("bk-hstab", STAGE === 2 && !VETLB ? "me" : DAILY ? "daily" : S.qWorld || !S.qLocal ? "world" : "me");
     if (q) { var inp = $("bk-hsname"); inp.value = lget(HSNAME) || ""; setTimeout(function () { inp.focus(); inp.select(); }, 60); }
     else setTimeout(function () { $("bk-again").focus(); }, 50);

@@ -550,7 +550,7 @@
     var k = lbFor(), rows = boards[k];
     var q = S.mode !== "practice" && S.score > 0 && (!Array.isArray(rows) || rows.length < 10 || S.score > rows[rows.length - 1].s);
     $("od-lbform").hidden = !q;
-    $("od-lblabel").textContent = S.mode === "daily" ? "Top 10 today! Your name" : "World top 10! Your name";
+    $("od-lblabel").textContent = S.mode === "daily" ? "Top 10 today! Your nickname" : "World top 10! Your nickname";
     $("od-lbname").value = lget(NAMEKEY) || lget("mw-basil-name") || "";
     if (rows == null || rows === "err") lbFetch(k);
     lbRender();

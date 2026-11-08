@@ -111,3 +111,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Mergeon, Stackulus and Basil + Clover are arcade games with no dated puzzle files; monthly builds skip them (they're live, not parked).
 - X posts are automated through `_social/queue.json` (see "X posts" above). Any older prompt line saying the owner pastes posts by hand is out of date; the Friday email still lists the week's posts for review.
 - Normie Glimpsis ("What is it?": close-ups, zoomed-in nature and objects, electron micrographs) and Normie Opacitis ("What's inside?": X-rays/CT of objects, animals and plants, never people) must be filled to the end of next month by the monthly Glimpsis and Opacitis tasks, alongside the medical files. Same image licence rules; images go in img/normie/YYYY-MM-DD.jpg.
+
+## Authorship badge and GP review (from Nov 2026)
+- Health pages (fact sheets, medicines, handouts, deep dives, tools, compare) show "Made with AI tools and overseen by an Australian GP · Updated <date>", linking to /about/#how-we-make-pages. Never write "written by" or "reviewed by a GP" on a page that hasn't been personally reviewed.
+- When a Malady Wise GP has personally read and checked a page, mark it on the page's `<body>` (or `<main>`): `<body data-gp-reviewed="2026-11-08">` (the review date, YYYY-MM-DD). The badge then reads "✔ Reviewed by an Australian GP on 8 November 2026", and only then may the page's JSON-LD carry `reviewedBy` / `lastReviewed`. Re-date it after each re-review.
+- To mark a page, ask Claude in chat: "mark /conditions/gout/ as GP reviewed today". Then run `python3 _scripts/headkit.py` before committing (it strips review claims from pages without the attribute).
+- Page generators run `_scripts/headkit.py`'s fix_html() on their output (self-hosted fonts, deferred scripts, honest JSON-LD). New page templates should do the same.

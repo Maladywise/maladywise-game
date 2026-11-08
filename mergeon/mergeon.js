@@ -596,7 +596,7 @@
   var LB = "https://mw-presence.onrender.com", MLB = false, lbs = { mdaily: null, mall: null }, lbTab = "mdaily";
   var lbBox = document.createElement("div"); lbBox.className = "lb"; lbBox.hidden = true;
   lbBox.innerHTML = '<div class="lbtabs" role="tablist"><button type="button" data-b="mdaily">Today’s top 10</button><button type="button" data-b="mall">All-time</button></div>' +
-    '<form class="lbform" hidden><input maxlength="14" autocomplete="nickname" placeholder="Your name" aria-label="Your name for the world board"><button class="btn solid" type="submit">Post score</button></form><ol></ol><p class="note"></p>';
+    '<form class="lbform" hidden><input maxlength="14" autocomplete="nickname" placeholder="Nickname (not your real name)" aria-label="Nickname for the world board (not your real name)"><button class="btn solid" type="submit">Post score</button></form><ol></ol><p class="note"></p>';
   var lbQ = function (s) { return lbBox.querySelector(s); };
   function pid() { var p = load("mrg-pid", null); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); put("mrg-pid", p); } return p; }
   function lbCan() { return MLB && st && st.done && isLive() && !st.posted && st.score > 0; }
