@@ -316,11 +316,36 @@ def alt_text(series, p):
 
 
 # ---------- queue ----------
-def plan_day(today, posts, target=None):
-    """(post_date, reason) for this week's Short: the coming Thursday, else Fri, Wed, Tue, Mon of that week."""
+def typefully_dates():
+    """Sydney dates that already have a scheduled X post in Typefully (incl. drafts made by hand)."""
+    key = os.environ.get("TYPEFULLY_API_KEY")
+    if not key:
+        return set()
+    import urllib.request
+    out, offset = set(), 0
+    try:
+        while True:
+            url = "https://api.typefully.com/v2/social-sets/354708/drafts?status=scheduled&limit=50&offset=%d" % offset
+            req = urllib.request.Request(url, headers={"Authorization": "Bearer " + key})
+            data = json.load(urllib.request.urlopen(req, timeout=30))
+            for d in data.get("results", []):
+                sd = d.get("scheduled_date")
+                if sd:
+                    out.add(datetime.datetime.fromisoformat(sd.replace("Z", "+00:00")).astimezone(SYD).date().isoformat())
+            if not data.get("next"):
+                break
+            offset += 50
+    except Exception as e:  # never block queuing on this; the push script still refuses double-booking
+        print("Warning: could not read Typefully schedule:", e)
+    return out
+
+
+def plan_day(today, posts, target=None, extra_taken=()):
+    """(post_date, reason) for this week's Short: the coming Thursday, else Fri, Wed, Tue, Mon of that week.
+    A day counts as taken if the queue has an entry OR Typefully already has a scheduled post that day."""
     thu = target or today + datetime.timedelta(days=(3 - today.weekday()) % 7 or 7)
     mon = thu - datetime.timedelta(days=thu.weekday())
-    taken = {e["date"] for e in posts}
+    taken = {e["date"] for e in posts} | set(extra_taken)
     week = {(mon + datetime.timedelta(days=i)).isoformat() for i in range(7)}
     if any(e.get("short") and e["date"] in week for e in posts):
         return None, "this week (from %s) already has a Short" % mon
@@ -335,7 +360,7 @@ def cmd_queue(a):
     today = datetime.date.fromisoformat(a.today) if a.today else datetime.datetime.now(SYD).date()
     q = _load(QUEUE)
     posts = q.setdefault("posts", [])
-    day, why = plan_day(today, posts, datetime.date.fromisoformat(a.date) if a.date else None)
+    day, why = plan_day(today, posts, datetime.date.fromisoformat(a.date) if a.date else None, typefully_dates())
     if not day:
         print("No Short queued: %s." % why)
         return 0

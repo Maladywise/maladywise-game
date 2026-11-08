@@ -41,6 +41,7 @@ jobs:
         env:
           TARGET_DATE: ${{ inputs.date }}
           DRY: ${{ inputs.dry_run }}
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
         run: |
           set -euo pipefail
           args=(queue --out "$RUNNER_TEMP/short" --github-output)
