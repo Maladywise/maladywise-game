@@ -18,6 +18,16 @@ Cards are saved to assets/og/pages/<slug>.png (quantised with Pillow, under ~120
 assets/og/pages/cards.json, so only new or renamed pages are redrawn. The page's og:image, og:image:width,
 og:image:height, og:image:alt and twitter:image tags are then pointed at the card (?v= is the card's hash).
 If the cards ever pass 40 MB in total, set FORMAT = "jpg".
+
+DEEP DIVE CARDS
+    A deep dive gets the richer "deep dive" card (number pill, one fact with its source, a flat drawing) when
+    its <head> holds a JSON block:
+        <script type="application/json" id="og-card">{"number": 6, "fact": "...", "source": "WHO",
+        "art": "<svg viewBox=\"0 0 420 400\">...</svg>"}</script>
+    The fact must already be stated and cited on the page (about 70 characters); the drawing is an original
+    flat SVG in the site palette (viewBox 0 0 420 400, at most 1-2 tiny <text> labels). Optional "title" overrides
+    the card title. No block: the generic card. The /deep-dives/ hub card is a collage of the newest drawings.
+    Deep dive cards are kept under DD_MAX_BYTES.
 """
 import base64
 import hashlib
@@ -39,6 +49,8 @@ W, H = 1200, 630
 FORMAT = "png"          # "jpg" if the folder ever grows past 40 MB
 MAX_BYTES = 120 * 1024
 TEMPLATE_V = "2"        # bump to redraw every card after changing the template
+DD_MAX_BYTES = 60 * 1024
+OG_CARD_RE = re.compile(r'<script type="application/json" id="og-card">(.*?)</script>', re.S)
 
 # section -> (label on the card, mascot/icon under assets/)
 SECTIONS = {
@@ -71,13 +83,54 @@ def slug(u):
     return u.strip("/").replace("/", "-") or "home"
 
 
-def spec_for(u, p):
-    """(label, title, subtitle, icon) for page u, or None if it doesn't get a card."""
+def og_card_data(p):
+    """The page's deep dive card data (dict) from its <head>, or None."""
+    src = p.get("src") or ""
+    m = OG_CARD_RE.search(src[:max(src.find("</head>"), 0)])
+    if not m:
+        return None
+    try:
+        d = json.loads(m.group(1))
+    except ValueError:
+        print("Warning: og-card JSON on %s doesn't parse; using the generic card" % p.get("fp"), file=sys.stderr)
+        return None
+    if not (isinstance(d, dict) and d.get("fact") and d.get("art") and d.get("number")):
+        return None
+    return d
+
+
+def dd_hub_spec(pages):
+    """Collage card for /deep-dives/: the newest (up to 6) deep dive drawings, or None if there are none."""
+    dds = []
+    for u, p in pages.items():
+        if p.get("sec") == "deep-dives" and u.count("/") == 3 and u not in static_nav.HUBS:
+            d = og_card_data(p)
+            if d:
+                dds.append((d["number"], d.get("title") or p["label"], d["art"]))
+    if not dds:
+        return None
+    dds.sort(key=lambda x: -x[0])
+    names = "\u00a0· ".join(t.replace(" ", "\u00a0") for _, t, _ in dds[:6])
+    return ("Deep dives for clinicians", "Evidence-dense topic reviews", names, "days/zebra-rare.svg",
+            {"collage": [a for _, _, a in dds[:6]], "count": len(dds)})
+
+
+def spec_for(u, p, pages=None):
+    """(label, title, subtitle, icon[, deep dive data]) for page u, or None if it doesn't get a card."""
+    if u == "/deep-dives/" and pages is not None:
+        hub = dd_hub_spec(pages)
+        if hub:
+            return hub
     if u in SPECIAL:
         return SPECIAL[u]
     if p["sec"] not in SECTIONS or u in static_nav.HUBS:
         return None
     label, icon = SECTIONS[p["sec"]]
+    if p["sec"] == "deep-dives":
+        d = og_card_data(p)
+        if d:
+            return ("%s · #%s" % (label, d["number"]), d.get("title") or p["label"], "%s (%s)" % (d["fact"], d["source"]) if d.get("source") else d["fact"],
+                    icon, {"art": d["art"]})
     title, sub = p["label"], SUBTITLE.get(p["sec"], "")
     if ": " in title and p["sec"] != "specialists":
         title, sub = title.split(": ", 1)
@@ -144,27 +197,83 @@ FIT_JS = """() => {
 }"""
 
 
+DD_TEMPLATE = """<!doctype html><html><head><meta charset="utf-8"><style>
+%(fonts)s
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden;background:#F8F5EF;font-family:Poppins,system-ui,sans-serif;color:#2A2140;position:relative}
+.circle{position:absolute;right:-120px;top:-60px;width:720px;height:720px;border-radius:50%%;background:#E8E2F0}
+.art{position:absolute;right:70px;top:115px;width:420px;height:400px}
+.art svg{width:420px;height:400px;display:block;overflow:visible}
+.l{position:absolute;left:80px;top:58px;bottom:58px;width:%(lw)dpx;display:flex;flex-direction:column}
+.brand{font:600 20px Poppins;letter-spacing:4px;color:#5B4C99;text-transform:uppercase}
+.mid{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:14px 0}
+.pill{align-self:flex-start;border:2px solid #D8CFE8;border-radius:30px;padding:8px 22px;color:#4A3A8A;font:600 20px Poppins;letter-spacing:2px;background:#fff;text-transform:uppercase;white-space:nowrap}
+h1{font:700 96px/1.05 Lora,Georgia,serif;color:#2A2140;text-wrap:balance;overflow-wrap:normal}
+.stat{font:600 28px/1.35 Poppins;color:#4A3A8A;text-wrap:pretty}
+.url{align-self:flex-start;background:#2A2140;color:#fff;border-radius:40px;padding:14px 30px;font:600 26px Poppins}
+.grid{position:absolute;right:56px;top:50%%;transform:translateY(-50%%);display:grid;grid-template-columns:repeat(3,158px);gap:16px}
+.tile{width:158px;height:158px;border-radius:28px;background:#fff;border:2px solid #D8CFE8;display:grid;place-items:center}
+.tile svg{width:136px;height:130px;display:block}
+.tile svg text{display:none}
+.tile img{width:110px;height:110px}
+</style></head><body>
+<div class="circle"></div>%(right)s
+<div class="l"><div class="brand">Malady Wise</div>
+<div class="mid" id="mid"><div class="pill">%(label)s</div><h1 id="t">%(title)s</h1>%(sub)s</div>
+<div class="url">maladywise.com</div></div>
+</body></html>"""
+
+DD_FIT_JS = """() => {
+  const m = document.getElementById('mid'), t = document.getElementById('t'), s = document.querySelector('.stat');
+  const fits = () => m.scrollHeight <= m.clientHeight + 1 && t.scrollWidth <= t.clientWidth + 1 && (!s || s.scrollWidth <= s.clientWidth + 1);
+  let ts = parseFloat(getComputedStyle(t).fontSize), ss = 28;
+  while (!fits() && (ts > 48 || ss > 20)) {
+    if (ts > 56 || ss <= 20) ts -= 2; else ss -= 1;
+    t.style.fontSize = ts + 'px'; if (s) s.style.fontSize = ss + 'px';
+  }
+  return fits();
+}"""
+
+
+def dd_card_html(spec):
+    label, title, sub, icon, dd = spec[:5]
+    e = html.escape
+    if "collage" in dd:
+        tiles = ['<div class="tile">%s</div>' % a for a in dd["collage"]]
+        if len(tiles) % 3:
+            tiles.append('<div class="tile"><img src="%s" alt=""></div>' % data_uri(icon))
+        right, lw, tsize = '<div class="grid">%s</div>' % "".join(tiles[:6]), 520, 68
+    else:
+        right, lw, tsize = '<div class="art">%s</div>' % dd["art"], 620, 96
+    out = DD_TEMPLATE % {"fonts": fonts(), "right": right, "lw": lw, "label": e(label),
+                         "title": re.sub(r"(\S+-\S+)", r'<span style="white-space:nowrap">\1</span>', e(title)),
+                         "sub": '<div class="stat">%s</div>' % re.sub(r"(\S+-\S+)", r'<span style="white-space:nowrap">\1</span>', e(sub)) if sub else ""}
+    return out.replace("font:700 96px/1.05", "font:700 %dpx/1.05" % tsize)
+
+
 def card_html(spec):
+    if len(spec) > 4:
+        return dd_card_html(spec)
     label, title, sub, icon = spec
     e = html.escape
     return TEMPLATE % {"fonts": fonts(), "icon": data_uri(icon), "logo": data_uri("icon-192.png"), "label": e(label),
                        "title": re.sub(r"(\S+-\S+)", r'<span style="white-space:nowrap">\1</span>', e(title)), "sub": '<div class="sub">%s</div>' % e(sub) if sub else ""}
 
 
-def squeeze(png_bytes):
-    """Quantise to a small palette PNG (or JPEG) under MAX_BYTES."""
+def squeeze(png_bytes, max_bytes=MAX_BYTES):
+    """Quantise to a small palette PNG (or JPEG) under max_bytes."""
     from PIL import Image
     im = Image.open(io.BytesIO(png_bytes)).convert("RGB")
     if FORMAT == "jpg":
         for q in (86, 80, 72, 64):
             b = io.BytesIO(); im.save(b, "JPEG", quality=q, optimize=True, progressive=True)
-            if b.tell() <= MAX_BYTES:
+            if b.tell() <= max_bytes:
                 break
         return b.getvalue()
-    for colours in (128, 96, 64, 48):
+    for colours in (128, 96, 64, 48, 32):
         b = io.BytesIO()
         im.quantize(colors=colours, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(b, "PNG", optimize=True)
-        if b.tell() <= MAX_BYTES:
+        if b.tell() <= max_bytes:
             break
     return b.getvalue()
 
@@ -174,7 +283,8 @@ def card_path(u):
 
 
 def card_key(spec):
-    return hashlib.sha1(json.dumps([TEMPLATE_V, FORMAT, TEMPLATE, FIT_JS] + list(spec), ensure_ascii=False).encode()).hexdigest()[:12]
+    tpl = [DD_TEMPLATE, DD_FIT_JS] if len(spec) > 4 else [TEMPLATE, FIT_JS]
+    return hashlib.sha1(json.dumps([TEMPLATE_V, FORMAT] + tpl + list(spec), ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
 
 
 def load_manifest():
@@ -194,9 +304,11 @@ def render(todo, manifest):
         for u, spec in todo:
             page.set_content(card_html(spec), wait_until="load")
             page.evaluate("() => document.fonts.ready.then(() => true)")
-            if not page.evaluate(FIT_JS):
+            dd = len(spec) > 4
+            if not page.evaluate(DD_FIT_JS if dd else FIT_JS):
                 bad.append(u)
-            data = squeeze(page.screenshot(type="png", clip={"x": 0, "y": 0, "width": W, "height": H}))
+            data = squeeze(page.screenshot(type="png", clip={"x": 0, "y": 0, "width": W, "height": H}),
+                           DD_MAX_BYTES if dd else MAX_BYTES)
             open(card_path(u), "wb").write(data)
             manifest[slug(u)] = {"url": u, "key": card_key(spec), "v": hashlib.md5(data).hexdigest()[:8],
                                  "label": spec[0], "title": spec[1]}
@@ -212,6 +324,8 @@ META_RE = re.compile(r'[ \t]*<meta (?:property="og:image(?::width|:height|:alt|:
 def set_meta(src, u, entry, spec):
     img = "%s/assets/og/pages/%s.%s?v=%s" % (BASE, slug(u), FORMAT, entry["v"])
     alt = "%s: %s. Malady Wise" % (spec[0], spec[1])
+    if len(spec) > 4 and "art" in spec[4]:
+        alt = "%s: %s. %s. Malady Wise" % (spec[0], spec[1], spec[2])
     tags = ('<meta property="og:image" content="%s">\n<meta property="og:image:width" content="%d">\n'
             '<meta property="og:image:height" content="%d">\n<meta property="og:image:alt" content="%s">\n'
             '<meta name="twitter:image" content="%s">\n') % (img, W, H, html.escape(alt, quote=True), img)
@@ -231,8 +345,11 @@ def set_meta(src, u, entry, spec):
         tags += '<meta name="twitter:card" content="summary_large_image">\n'
     out = before + tags + after + src[head_end:]
     # JSON-LD "image" that still points at a generic section card
-    return re.sub(r'("image":\s*")https://maladywise\.com/assets/(?:og/(?:facts|drugs|tools)\.png|share\.jpg)(?:\?v=\d+)?(")',
-                  lambda m: m.group(1) + img + m.group(2), out)
+    out = re.sub(r'("image":\s*")https://maladywise\.com/assets/(?:og/(?:facts|drugs|tools)\.png|share\.jpg)(?:\?v=\d+)?(")',
+                 lambda m: m.group(1) + img + m.group(2), out)
+    # JSON-LD "image" that points at this page's own card with an old ?v=
+    own = re.escape("%s/assets/og/pages/%s.%s" % (BASE, slug(u), FORMAT))
+    return re.sub(r'("image":\s*")' + own + r'(?:\?v=[0-9a-f]+)?(")', lambda m: m.group(1) + img + m.group(2), out)
 
 
 def apply_meta(pages, idx, manifest, only=None):
@@ -240,7 +357,7 @@ def apply_meta(pages, idx, manifest, only=None):
     for u in sorted(idx):
         if only and u not in only:
             continue
-        spec = spec_for(u, pages[u])
+        spec = spec_for(u, pages[u], pages)
         e = manifest.get(slug(u))
         if not spec or not e or not os.path.isfile(card_path(u)):
             continue
@@ -271,7 +388,7 @@ def main(argv):
         for u in sorted(idx):
             if only and u not in only:
                 continue
-            spec = spec_for(u, pages[u])
+            spec = spec_for(u, pages[u], pages)
             if not spec:
                 continue
             e = manifest.get(slug(u))
@@ -280,7 +397,7 @@ def main(argv):
         if todo:
             render(todo, manifest)
         # forget cards for pages that have gone
-        for k in [k for k, e in manifest.items() if e["url"] not in idx or not spec_for(e["url"], pages[e["url"]])]:
+        for k in [k for k, e in manifest.items() if e["url"] not in idx or not spec_for(e["url"], pages[e["url"]], pages)]:
             fp = os.path.join(OUT_DIR, "%s.%s" % (k, FORMAT))
             if os.path.isfile(fp):
                 os.remove(fp)

@@ -125,3 +125,11 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - The top menu is drawn by JavaScript, so crawlers that don't run it (Bing, AI crawlers) rely on the plain footer links. After adding or rebuilding pages, run `python3 _scripts/static_nav.py` and commit the changed pages. It adds a small "Site sections" + "See also" link list between `<!-- static-nav -->` markers on every indexable page (safe to run any time). `python3 _scripts/static_nav.py --report` checks every page has at least 2 plain inbound links.
 - Share cards: run `python3 _scripts/og_cards.py` too (needs Playwright + Pillow). It draws a 1200×630 card for each new fact sheet, medicine, blood test, exercise handout, deep dive, compare page, tool or specialist page into `assets/og/pages/<slug>.png` and points the page's og:image/twitter:image at it. Never point new health pages at the generic `assets/og/facts.png`.
 - The page generators (calckit, gen_bloodtests, gen_mh, gen_sq, quizkit, build_archives, build_days) already run both steps' tag updates at the end; a brand-new page still needs `og_cards.py` to draw its card.
+
+## Deep dive cards and diagrams (from Nov 2026)
+- Every new deep dive puts an og-card JSON block in its `<head>`: `<script type="application/json" id="og-card">{"number": N, "fact": "…", "source": "…", "art": "<svg viewBox=\"0 0 420 400\">…</svg>"}</script>`.
+  - number: the deep dive's number (as in "Deep dive #N").
+  - fact: ONE striking fact already stated and cited on that page (no new claims), about 70 characters; source: its short citation, shown in brackets.
+  - art: an original, simple flat SVG drawing of the topic in the site palette, with at most 1–2 tiny labels. No copied figures. Escape `</` as `<\/` inside the JSON.
+- Every deep dive also has ONE inline SVG diagram (`<figure class="ddfig">`) in its Pathophysiology or Diagnosis section: accurate to the page's own cited content, site colours (CSS variables, so it works in dark mode), an aria-label describing it in words, and a one-line caption. Check at 390px that no text overflows its box.
+- After publishing, run `python3 _scripts/og_cards.py` (draws the deep dive card and refreshes the /deep-dives/ collage card), then `python3 _scripts/static_nav.py`, and commit the cards and pages.
