@@ -260,7 +260,7 @@
    "yes": "orange targets", "no": "empty stretches of sea", "all": "passes", "pos": "get spotted", "neg": "get missed",
    "sens": {"v": 90, "lo": 90, "hi": 90},
    "spec": null,
-   "says": "The pigeons spotted the target on the first pass about 9 times in 10. The trained human crew managed 38%.",
+   "says": "The pigeons spotted the target on the first pass about 9 times in 10, and usually before the humans on board did.",
    "note": "US Coast Guard Project Sea Hunt results, as reported by We Are The Mighty. One slider today.",
    "src": [["We Are The Mighty: That time the Coast Guard tried using pigeons for sea rescues", "https://www.wearethemighty.com/popular/pigeons-for-sea-rescues/"]],
    "kind": "animal", "checked": "8 Nov 2026"
@@ -268,11 +268,11 @@
   "crewsea": {
    "test": "Helicopter crew searching the sea",
    "condition": "something orange in the sea",
-   "scenario": "Same Coast Guard trials as the pigeons: trained human crew look out of the helicopter for an orange life jacket bobbing on the water.",
+   "scenario": "1970s–80s: in US Coast Guard search trials, trained helicopter crew look out for an orange life jacket bobbing on the water.",
    "yes": "orange targets", "no": "empty stretches of sea", "all": "passes", "pos": "get spotted", "neg": "get missed",
    "sens": {"v": 38, "lo": 38, "hi": 50},
    "spec": null,
-   "says": "The crew found it on the first pass only 38% of the time. Told they were racing the pigeons, they lifted to about 50%. When both found it, the pigeons usually got there first.",
+   "says": "The crew found it on the first pass only 38% of the time. Told they were racing trained pigeons (which managed about 90%), they lifted to about 50%.",
    "note": "US Coast Guard Project Sea Hunt, as reported by We Are The Mighty. Anything from 38 to 50 scores full marks.",
    "src": [["We Are The Mighty: That time the Coast Guard tried using pigeons for sea rescues", "https://www.wearethemighty.com/popular/pigeons-for-sea-rescues/"]],
    "kind": "human", "checked": "8 Nov 2026"
@@ -328,7 +328,7 @@
   "fakereviewbot": {
    "test": "Fake-review spotting software",
    "condition": "a fake review",
-   "scenario": "Same fake and real Chicago hotel reviews, but this time a computer program trained on writing style does the sorting.",
+   "scenario": "Researchers mixed paid-for fake five-star reviews of Chicago hotels with real ones, then let a computer program trained on writing style sort them.",
    "yes": "fake reviews", "no": "real reviews", "all": "reviews", "pos": "get called fake", "neg": "get believed",
    "sens": {"v": 90, "lo": 90, "hi": 90},
    "spec": {"v": 90, "lo": 90, "hi": 90},
