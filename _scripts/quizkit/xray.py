@@ -9,6 +9,8 @@ under the image; the source page link (whose file name may give the answer away)
 Run: python3 _scripts/quizkit/xray.py   (needs Pillow; Commons originals in --commons DIR on first build)
 """
 import hashlib, html, json, os, random, re, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 ROOT = "/home/claude/maladywise-game"
 SITE = "https://maladywise.com"
@@ -328,9 +330,7 @@ def build():
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{SITE}/assets/og/opacitis.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/shell.css?v={vcss}">
 <link rel="stylesheet" href="/assets/quizkit.css?v={qkv}">
 <script src="/assets/games.js?v={vg}"></script>
@@ -348,7 +348,7 @@ def build():
 </body>
 </html>
 """.format(url=url, full=esc(full), desc=esc(desc), SITE=SITE, vcss=V["shell.css"], vj=V["shell.js"], vs=V["site.js"], vg=V["games.js"], qkv=QKV, ld=ld, body=body)
-    open(ROOT + PATH + "index.html", "w", encoding="utf-8").write(s)
+    open(ROOT + PATH + "index.html", "w", encoding="utf-8").write(fix_html(s))
     print("wrote", PATH, len(s), "questions", n, regions)
 
 

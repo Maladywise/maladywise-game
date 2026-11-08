@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate /medical-specialty-quiz/. Run: python3 gen_sq.py <repo>"""
 import json, re, sys, os, html
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 R = sys.argv[1]
 idx = open(os.path.join(R, "index.html")).read()
 V = {k: re.search(k + r"\?v=(\d+)", idx).group(1) for k in ("shell.css", "games.js", "site.js", "shell.js")}
@@ -347,9 +349,7 @@ def head():
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="https://maladywise.com/assets/og/gpschool.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/shell.css?v={V['shell.css']}">
 <script src="/assets/games.js?v={V['games.js']}"></script>
 <script src="/assets/site.js?v={V['site.js']}"></script>
@@ -387,7 +387,7 @@ page = head() + f'''<p class="meta">Quiz · Just for fun</p>
 '''
 p = os.path.join(R, "medical-specialty-quiz", "index.html")
 os.makedirs(os.path.dirname(p), exist_ok=True)
-open(p, "w").write(page)
+open(p, "w").write(fix_html(page))
 print("wrote", p, len(page), "title", len(title), "desc", len(desc))
 # reachability check: each specialty max points
 mx = {k: 0 for k in ORDER}

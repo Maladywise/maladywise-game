@@ -148,8 +148,8 @@ def icon_uri(x):
 
 
 TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600&display=block">
 <style>
+%(fonts)s
 :root{--bg:#FAF7F2;--ink:#2B2340;--muted:#6B5A93;--line:#E6DEEE;--brand:#4A3480;--tint:#F1ECF8;
  --title:Lora,Georgia,serif;--body:Poppins,"Segoe UI",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0}
@@ -202,10 +202,27 @@ def card_html(x, day):
     sp = span_line(x, day)
     ic = icon_uri(x)
     return TEMPLATE % {
-        "w": W, "h": H, "date": e(nice_date(day)), "kicker": e(kicker), "name": e(display_name(x)),
+        "fonts": font_css(), "w": W, "h": H, "date": e(nice_date(day)), "kicker": e(kicker), "name": e(display_name(x)),
         "span": '<div class="span">%s</div>' % e(sp) if sp else "", "hook": e(hook(x)),
         "icon": '<div class="ic"><img src="%s" alt=""></div>' % ic if ic else "",
     }
+
+
+_FONTS = None
+
+
+def font_css():
+    """The site's self-hosted fonts (assets/fonts/) inlined as data URIs, so cards render offline with the same look."""
+    global _FONTS
+    if _FONTS is None:
+        rules = []
+        for fam, w in (("Lora", 600), ("Lora", 700), ("Poppins", 400), ("Poppins", 500), ("Poppins", 600)):
+            f = os.path.join(ROOT, "assets", "fonts", "%s-latin-%d-normal.woff2" % (fam.lower(), w))
+            if os.path.isfile(f):
+                b = base64.b64encode(open(f, "rb").read()).decode()
+                rules.append("@font-face{font-family:%s;font-weight:%d;font-display:block;src:url(data:font/woff2;base64,%s) format('woff2')}" % (fam, w, b))
+        _FONTS = "".join(rules)
+    return _FONTS
 
 
 def render(day, out_path, browser=None):

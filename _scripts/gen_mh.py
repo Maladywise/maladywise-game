@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate /mental-health-check/ pages. Run: python3 gen_mh.py <repo>"""
 import json, re, sys, os, html
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 R = sys.argv[1]
 idx = open(os.path.join(R, "index.html")).read()
 V = {k: re.search(k + r"\?v=(\d+)", idx).group(1) for k in ("shell.css", "games.js", "site.js", "shell.js")}
@@ -32,9 +34,7 @@ def head(path, title, desc, lds):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="https://maladywise.com/assets/og/facts.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/shell.css?v={V['shell.css']}">
 <link rel="stylesheet" href="/mental-health-check/mhc.css?v=1">
 <script src="/assets/games.js?v={V['games.js']}"></script>
@@ -127,7 +127,7 @@ FOOT = '''<p class="meta"><em>{rev}. General education, not personal medical adv
 def write(path, s):
     p = os.path.join(R, path.strip("/"), "index.html")
     os.makedirs(os.path.dirname(p), exist_ok=True)
-    open(p, "w").write(s)
+    open(p, "w").write(fix_html(s))
     print("wrote", p, len(s))
 
 # ---------- scales ----------

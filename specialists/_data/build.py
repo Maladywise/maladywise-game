@@ -2,6 +2,8 @@
 Run from the repo root:  python3 specialists/_data/build.py specialists/_data
 Reads every *.json in the data folder ({slug:{name, people:[...]}}). Public-only services are filtered out."""
 import json, html, os, re, sys, glob, datetime, urllib.parse
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "_scripts"))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 DD = sys.argv[1] if len(sys.argv) > 1 else 'specialists/_data'
 CHECKED = "31 October 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|District Health|outreach|public", re.I)
@@ -169,7 +171,10 @@ def head(title, desc, url):
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
-foot = src[src.index("<footer"):].replace("<script>MW.page();</script>", '<script>MW.page();</script>\n<script src="/specialists/sp.js?v=6"></script>')
+foot = src[src.index("<footer"):]
+SPJS = '<script src="/specialists/sp.js?v=6"></script>'
+if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
+else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
@@ -191,14 +196,14 @@ def langsel(ppl):
 def keep_going(slug):
     items = []
     for s2 in REL_SPEC.get(slug, []):
-        if s2 in SLUGS: items.append((f"/specialists/{s2}/", "Specialists", SLUGS[s2]))
+        if s2 in SLUGS: items.append((f"/specialists/{s2}/", "Specialists and allied health", SLUGS[s2]))
     for f2 in REL_FACT.get(slug, [])[:3]:
         t = _title(f2)
         if t: items.append((f"/{f2}/", "Fact sheet", t))
     h = sum(map(ord, slug))
     for i in range(2):
         u, n, d = GAMES[(h + i * 3) % len(GAMES)]; items.append((u, "Daily puzzle", f"{n}: {d}"))
-    items.append(("/specialists/", "Specialists", "All specialties A–Z"))
+    items.append(("/specialists/", "Specialists and allied health", "All specialties A–Z"))
     return '<section class="related sp-more"><h2>Keep exploring</h2><ul>' + "".join(f'<li><a href="{u}"><span>{k}</span>{e(t)}</a></li>' for u, k, t in items) + "</ul></section>"
 SLUGS = {slugify(l): l for l in CATS}
 urls = ["/specialists/"]
@@ -207,11 +212,11 @@ for lab, ppl in CATS.items():
     os.makedirs("specialists/" + slug, exist_ok=True)
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
-    body = (f'<p class="meta"><a href="/specialists/">Specialists</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
+    body = (f'<p class="meta"><a href="/specialists/">Specialists and allied health</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
             '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + langsel(ppl) + CHIPS + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
-    open(f"specialists/{slug}/index.html", "w").write(head(title, desc, url) + body + foot)
+    open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
 SURG = re.compile(r"surg|ENT \(|Obstetrics|Ophthalm|Orthopaed|^Urology", re.I)
 # Short tile names so each fits on one line on a phone (pages and URLs keep the full name).
@@ -222,12 +227,12 @@ def tiles(keys):
 allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", ""), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
 desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
-page = (head(title, desc, "/specialists/") + '<h1>Specialists</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
+page = (head(title, desc, "/specialists/") + '<h1>Specialists and allied health</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
         f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
         '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label>' + CHIPS + '<ul class="sp-results" hidden></ul>'
         '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
-open("specialists/index.html", "w").write(page)
+open("specialists/index.html", "w").write(fix_html(page))
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
 print(len(L), "listed;", len(CATS), "specialties;", len(removed), "public-only removed")
 # Optional: private referral-fit scores for the owner's private doc (never written into the repo).

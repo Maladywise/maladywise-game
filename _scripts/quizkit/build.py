@@ -5,6 +5,8 @@ import collections, glob, hashlib, html, json, os, random, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from anat import QUIZZES
 from other import ECG, TERMS
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 ROOT = "/home/claude/maladywise-game"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -135,9 +137,7 @@ def page(path, title, desc, og, body, lds, ecg=False):
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{SITE}/assets/og/{og}.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/shell.css?v={vcss}">
 <link rel="stylesheet" href="/assets/quizkit.css?v={qkv}">
 <script src="/assets/games.js?v={vg}"></script>
@@ -161,7 +161,7 @@ def page(path, title, desc, og, body, lds, ecg=False):
 def write(path, s):
     d = ROOT + path
     os.makedirs(d, exist_ok=True)
-    open(d + "index.html", "w", encoding="utf-8").write(s)
+    open(d + "index.html", "w", encoding="utf-8").write(fix_html(s))
     print("wrote", path, len(s))
 
 

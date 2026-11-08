@@ -6,7 +6,7 @@
   var script = document.currentScript;
   var BASE = new URL(".", script ? script.src : location.href).href;
   var MAX = 6;
-  var BUILD = "2026-10-18b";                 // bump on every release so phones pick up new styles
+  var BUILD = "2026-11-08a";                 // bump on every release so phones pick up new styles
   // Normie mode ("What am I?"): cases from cases/normie/, stats under "n-" keys, no medical wording.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", CDIR = NORMIE ? "cases/normie/" : "cases/", NAME = NORMIE ? "Dxtective (Normie)" : "Dxtective";
 

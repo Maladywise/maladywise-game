@@ -27,13 +27,12 @@
 <meta name="twitter:title" content="Malady Wise: Free Daily Medical Puzzles and Games">
 <meta name="twitter:description" content="Free daily medical puzzles from an Australian GP: diagnose, read scans and ECGs, link, spell and solve. Free, no ads.">
 <meta name="twitter:image" content="https://maladywise.com/assets/share.png?v=4">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
 <link rel="stylesheet" href="assets/shell.css?v=175">
-<script src="assets/games.js?v=103"></script>
-<script src="assets/site.js?v=40"></script>
-<script src="assets/shell.js?v=195"></script>
+<script defer src="assets/games.js?v=103"></script>
+<script defer src="assets/site.js?v=40"></script>
+<script defer src="assets/shell.js?v=195"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Malady Wise", "url": "https://maladywise.com/", "description": "Daily medical puzzles from an Australian GP."}, {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/", "logo": "https://maladywise.com/assets/favicon.png", "email": "maladywise@gmail.com", "sameAs": ["https://x.com/MaladyWise"]}]}</script>
 </head>
 <body>
@@ -54,6 +53,6 @@
 <p class="mw-allg-d">Quick bonus games for a break.</p>
 <ul class="mw-allg-l"><li><a href="/stackulus/">Stackulus</a>: <span>a falling-block arcade game with organs and a daily challenge.</span></li><li><a href="/mergeon/">Mergeon</a>: <span>an organ merge game. Drop, match and merge from microbe to brain.</span></li><li><a href="/basil-clover/">Basil + Clover</a>: <span>a cat arcade game. Kick things off the bench, then survive the vet.</span></li></ul>
 <p class="mw-ab-more"><a href="/medical-games/">See every game, with past puzzles and answers</a></p></section><!-- /mw-allgames --></main>
-<script>MW.hub();</script>
+<script defer src="/assets/boot.js?v=1" data-mw="hub"></script>
 </body>
 </html>

@@ -18,6 +18,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 try:
     from zoneinfo import ZoneInfo
@@ -255,6 +257,7 @@ def main():
         ld=ld(list_ld, "mw-days-ld") + "\n" + ld(faq_ld, "mw-faq-ld"),
         cssv=CSS_V, jsv=JS_V, v=asset_versions(), months_opts="".join('<option value="%d">%s</option>' % (i, m) for i, m in enumerate(MONTHS)))
 
+    page = fix_html(page)
     old = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""
     if old != page:
         open(OUT, "w", encoding="utf-8").write(page)
@@ -286,9 +289,7 @@ TEMPLATE = """<!doctype html>
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="https://maladywise.com/assets/share.png?v=4">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/shell.css?v={v[shell.css]}">
 <link rel="stylesheet" href="/days/days.css?v={cssv}">
 <script src="/assets/games.js?v={v[games.js]}"></script>

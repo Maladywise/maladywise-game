@@ -10,6 +10,8 @@ styles in tools/calckit/calc.css. Page text lives in calc_pages.py and compare_p
 Asset <script>/<link> tags are copied from tools/iron-infusion/index.html so versions stay in step.
 """
 import html, json, os, re, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
@@ -88,7 +90,7 @@ def write(path, s):
     p = os.path.join(ROOT, path.strip("/"), "index.html")
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, "w", encoding="utf-8") as f:
-        f.write(s)
+        f.write(fix_html(s))
     print("wrote", os.path.relpath(p, ROOT), len(s))
 
 def calc_page(c):
