@@ -239,7 +239,7 @@
     "test": "shift"
    },
    {
-    "test": "usapp"
+    "test": "jolt"
    },
    {
     "test": "rf_ra"
@@ -397,7 +397,7 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "ddimer"
+    "test": "kernig"
    },
    {
     "test": "hcv_rapid"
@@ -446,7 +446,7 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "usapp"
+    "test": "neck"
    },
    {
     "test": "rovsing"
@@ -495,7 +495,7 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "crp"
+    "test": "dermo"
    },
    {
     "test": "amylase_panc"

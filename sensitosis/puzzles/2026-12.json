@@ -289,7 +289,7 @@
     "test": "ferr15"
    },
    {
-    "test": "crp"
+    "test": "droparm"
    }
   ]
  },
@@ -299,7 +299,7 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "usapp"
+    "test": "jolt"
    },
    {
     "test": "calproK"
@@ -397,10 +397,10 @@
   "difficulty": "Einstein",
   "rounds": [
    {
-    "test": "ddimer",
+    "test": "babinski",
     "twist": {
      "prev": 10,
-     "where": "Imagine a low-risk group where about 1 in 10 people actually have a clot.",
+     "where": "Imagine a clinic where 1 in 10 people being checked have this kind of damage.",
      "sourced": false
     }
    },
@@ -647,7 +647,7 @@
     "test": "emptycan"
    },
    {
-    "test": "crp"
+    "test": "rovsing"
    }
   ]
  },
