@@ -166,7 +166,7 @@ def write(path, s):
 
 
 def reviewed(extra=""):
-    return '<p class="meta"><em>Reviewed %s by a Malady Wise GP.%s General education, not personal medical advice.</em></p>' % (REVIEWED, extra)
+    return '<p class="meta"><em>Updated %s.%s General education, not personal medical advice.</em></p>' % (REVIEWED, extra)
 
 
 OTHER_LINKS = [("/ecg-quiz/", "ECG quiz", "Rhythm strips and a 12-lead to read."), ("/x-ray-quiz/", "X-ray quiz", "Real chest, abdominal and bone X-rays."), ("/medical-terminology-quiz/", "Medical terminology quiz", "Prefixes, suffixes and word roots.")]

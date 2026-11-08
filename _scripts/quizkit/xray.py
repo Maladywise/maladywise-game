@@ -287,7 +287,7 @@ def build():
         faq,
         '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/anatomy-quiz/bones/">Bones quiz</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/opacitis/">Opacitis: a daily X-ray</a></li><li><a href="/medical-games/">All medical games</a></li></ul></nav>',
         credits,
-        '<p class="meta"><em>Reviewed %s by a Malady Wise GP. Real X-rays, fictional cases. General education, not personal medical advice.</em></p>' % REVIEWED,
+        '<p class="meta"><em>Updated %s. Real X-rays, fictional cases. General education, not personal medical advice.</em></p>' % REVIEWED,
     ])
     url = SITE + PATH
     lds = [

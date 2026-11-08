@@ -7,7 +7,7 @@ R = sys.argv[1]
 idx = open(os.path.join(R, "index.html")).read()
 V = {k: re.search(k + r"\?v=(\d+)", idx).group(1) for k in ("shell.css", "games.js", "site.js", "shell.js")}
 BASE = "https://maladywise.com"
-REV = "Reviewed 8 November 2026"
+REV = "Updated 8 November 2026"
 
 def esc(s): return html.escape(s, quote=True)
 

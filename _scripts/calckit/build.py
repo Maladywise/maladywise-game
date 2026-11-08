@@ -17,7 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 BASE = "https://maladywise.com"
 REV_DATE = "2026-11-08"
-REV = "Reviewed 8 November 2026"
+REV = "Updated 8 November 2026"
 CALC_V = "1"
 
 ref = open(os.path.join(ROOT, "tools", "iron-infusion", "index.html"), encoding="utf-8").read()
