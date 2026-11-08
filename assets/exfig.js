@@ -538,11 +538,15 @@
     var main = document.querySelector("main.doc"), ol = main && main.querySelector("ol.ex"); if (!ol) return;
     document.body.classList.add("exh");
     [].forEach.call(ol.children, function (li) {
-      if (li.tagName !== "LI" || li.querySelector(".exfig")) return;
+      if (li.tagName !== "LI" || li.querySelector(".ex-txt")) return;
+      // a static <figure class="exfig"><img></figure> (exported by _scripts/export_diagrams.py) is kept as is
+      var fig = li.firstElementChild && li.firstElementChild.classList.contains("exfig") ? li.firstElementChild : null;
+      if (fig) li.removeChild(fig);
       var body = document.createElement("div"); body.className = "ex-txt";
       while (li.firstChild) body.appendChild(li.firstChild);
-      var svg = svgFor(li.getAttribute("data-ex"));
-      if (svg) { var fig = document.createElement("div"); fig.className = "exfig"; fig.innerHTML = svg; li.appendChild(fig); }
+      var svg = fig ? "" : svgFor(li.getAttribute("data-ex"));
+      if (svg) { fig = document.createElement("div"); fig.className = "exfig"; fig.innerHTML = svg; }
+      if (fig) li.appendChild(fig);
       li.appendChild(body);
       var tr = document.createElement("div"); tr.className = "ex-track"; tr.setAttribute("aria-hidden", "true");
       tr.innerHTML = "<span>Done:</span>" + DAYS.map(function (d) { return "<i>" + d + "</i>"; }).join("");
@@ -568,6 +572,22 @@
       if (meta) foot.firstChild.appendChild(meta);
       foot.firstChild.appendChild(pu);
     }
+    // lazy figure images: load them all before printing
+    window.addEventListener("beforeprint", eager);
+    var btn = document.querySelector(".printbtn");
+    if (btn && /window\.print/.test(btn.getAttribute("onclick") || "")) {
+      btn.removeAttribute("onclick");
+      btn.addEventListener("click", function () {
+        var imgs = eager(), t = setTimeout(go, 3000), done = false;
+        function go() { if (!done) { done = true; clearTimeout(t); window.print(); } }
+        Promise.all(imgs.map(function (i) { return i.complete ? 0 : new Promise(function (r) { i.addEventListener("load", r); i.addEventListener("error", r); }); })).then(go);
+      });
+    }
+  }
+  function eager() {
+    var imgs = [].slice.call(document.querySelectorAll(".exfig img"));
+    imgs.forEach(function (i) { if (i.loading === "lazy") i.loading = "eager"; });
+    return imgs;
   }
   window.MW_EXFIG = { figs: F, svg: svgFor, init: init };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
