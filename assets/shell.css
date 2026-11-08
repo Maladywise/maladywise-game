@@ -1008,9 +1008,24 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .mw-arch{text-align:center;margin:28px 0 8px;font-size:14px}
 .mw-arch a{color:var(--muted,#6B5A93)}
 
-.card.arcade2{cursor:default}
-.card.arcade2 .arcade-btns{display:flex;flex-wrap:wrap;gap:8px}
-.card.arcade2 .arcade-btns .play{text-decoration:none}
+/* home grid: a 3-card section (Extra credit, Arcade) fills its own row of 3; an odd last card spans the row on 2-column layouts */
+/* arcade game mascots in hub lists (/arcade/, /medical-games/) */
+.arc-ic{display:inline-block;width:48px;height:48px;object-fit:contain;box-sizing:border-box;padding:3px;border-radius:12px;background:color-mix(in srgb,var(--brand,#4A3480) 9%,transparent)}
+.arc-ic2{display:inline-flex;align-items:flex-end;justify-content:center;width:48px;height:48px}.arc-ic2 img{width:26px;height:36px;object-fit:contain}.arc-ic2 img+img{width:25px;height:34px;margin-left:-4px}
+.doc ul.tx.arcl li{padding-left:72px;min-height:72px}
+.doc ul.tx.arcl li>.arc-ic{position:absolute;left:12px;top:12px}
+.doc ul.tx.arcl li .ev{position:static;margin:2px 0 4px}.doc ul.tx.arcl li b{padding-right:0;margin-bottom:4px}
+.mwx-arcade .arc-ic{width:34px;height:34px;flex:none;padding:2px;border-radius:9px}.mwx-arcade .arc-ic2 img{width:17px;height:24px}.mwx-arcade .arc-ic2 img+img{width:16px;height:23px;margin-left:-3px}
+.mw-allg-l.mw-arcl{list-style:none;padding-left:0}.mw-allg-l.mw-arcl li{display:flex;align-items:center;gap:10px;margin:6px 0}.mw-allg-l.mw-arcl .arc-tx{min-width:0}.mw-allg-l.mw-arcl .arc-ic{width:36px;height:36px;flex:none}.mw-allg-l.mw-arcl .arc-ic2 img{width:19px;height:27px}.mw-allg-l.mw-arcl .arc-ic2 img+img{width:18px;height:25px}
+.card.arc .band{display:flex;align-items:center;justify-content:center}
+.card.arc .band .band-masc{width:70px;height:70px}
+.card.arc .arc-m2{display:inline-flex;align-items:flex-end}
+.card.arc .arc-m2 img{width:46px;height:60px;object-fit:contain}
+.card.arc .arc-m2 img+img{width:44px;height:58px;margin-left:-6px}
+@media (max-width:620px){.card.arc .band .band-masc{width:44px;height:44px}.card.arc .arc-m2 img{width:34px;height:44px}.card.arc .arc-m2 img+img{width:32px;height:42px}}
+@media (min-width:900px){.gsecs>.gsec[data-c="3"]>.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:621px) and (max-width:899px){.gsec>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gsec[data-c="3"]>.grid,.gsec[data-c="6"]>.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.gsec:not([data-c="3"]):not([data-c="6"])>.grid>.card:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:620px){.gsec>.grid>.card:last-child:nth-child(odd){grid-column:1/-1}}
 /* ---------- exercise handouts (body.exh is set by assets/exfig.js) ---------- */
 .exh .doc ol.ex{list-style:none;padding:0;margin:8px 0 10px;counter-reset:ex;display:grid;gap:12px}
 .exh .doc ol.ex>li{counter-increment:ex;display:grid;grid-template-columns:176px minmax(0,1fr);gap:14px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}

@@ -71,6 +71,8 @@
     setTimeout(function () { location.replace(u.pathname + (u.search || "") + u.hash); }, 60);
   }
   window.MW_setMode = setMode;
+  // arcade games (no daily puzzles): [path, name, mascot, tag line, accent, dark accent]. Home cards + "More games" box.
+  var ARCADE = [["basil-clover", "Basil + Clover", "basil", "Basil kicks. Clover eats. Nothing is safe.", "#2B5E80", "#8EB8E8"], ["stackulus", "Stackulus", "stackulus", "Falling organs. Clear the rows.", "#7A4A92", "#C9A3DD"], ["mergeon", "Mergeon", "mergeon", "Merge microbes all the way up to a brain.", "#5E7A2E", "#A8C77A"]];
   // Mascot image: in Normie mode, games with normieMascot use the "day off" outfit (falls back to the normal one if missing).
   function mascImg(id, alt, w, cls) {
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0], std = "/assets/mascots/" + id + ".svg";
@@ -920,9 +922,12 @@
           sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
       }).join("");
     }
-function arcadeCard() { // one card, two arcade games, so the grid stays 4 across
-      var acc = root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80";
-      return '<div class="card house bonus arcade2" style="--accent:' + acc + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:6px"><img src="/assets/mascots/basil.svg?v=2" alt="" width="34" height="45" style="width:34px;height:45px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="32" height="42" style="width:32px;height:42px;object-fit:contain;margin-left:-8px"><img src="/assets/mascots/labelosis.svg" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain"></span></div><div class="cbody"><h2 class="name">Arcade</h2><p class="kind">Three bonus games</p><p class="tag">Cats wrecking a bench, falling organs, or merging microbes into a brain.</p><div class="cfoot arcade-btns"><a class="play" href="/basil-clover/">Basil + Clover</a><a class="play" href="/stackulus/">Stackulus</a><a class="play" href="/mergeon/">Mergeon</a></div></div></div>';
+function arcadeCards() { // the three arcade games, one card each (own "Arcade" row on the home grid)
+      var dk = root.getAttribute("data-theme") === "dark";
+      return ARCADE.map(function (a) {
+        var m = a[0] === "basil-clover" ? '<span class="arc-m2"><img src="/assets/mascots/basil.svg?v=2" alt="" width="46" height="60"><img src="/assets/mascots/clover.svg?v=1" alt="" width="44" height="58"></span>' : '<img class="band-masc" src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="64" height="64" decoding="async">';
+        return '<a class="card house bonus arc" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><div class="band">' + m + '</div><div class="cbody"><h2 class="name">' + a[1] + '</h2><p class="kind">Bonus arcade game</p><p class="tag">' + a[3] + '</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
+      }).join("");
     }
     function bonusCard() {
       return '<a class="card house bonus" href="/basil-clover/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
@@ -944,9 +949,9 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
       var html = GROUPS.map(function (G) {
         var cards = all.filter(function (g) { return G.games && G.games.indexOf(g.id) >= 0; });
         cards.forEach(function (g) { used[g.id] = 1; });
-        var extra = G.basil ? arcadeCard() : "";
+        var extra = G.arcade ? arcadeCards() : "";
         if (!cards.length && !extra) return "";
-        var cnt = cards.length + (extra ? 1 : 0);
+        var cnt = cards.length + (extra ? ARCADE.length : 0);
         return '<section class="gsec' + (cnt <= 2 ? " sm" : "") + '" data-c="' + cnt + '" style="--n:' + (cnt <= 6 ? Math.max(3, cnt) : Math.ceil(cnt / 2)) + '" id="g-' + G.id + '"><div class="gsec-h"><h2>' + (NORMIE && G.tn ? G.tn : G.t) + "</h2><span>" + (NORMIE && G.dn ? G.dn : G.d || "") + '</span></div><div class="grid">' + cards.map(card).join("") + extra + "</div></section>";
       }).join("");
       var left = all.filter(function (g) { return !used[g.id]; });
@@ -1319,7 +1324,6 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     }
   }
   // arcade pages (Stackulus, Mergeon, Basil + Clover): a "more games" box above the footer
-  var ARCADE = [["stackulus", "Stackulus", "\ud83e\udec0", "Falling organs. Clear the rows."], ["mergeon", "Mergeon", "\ud83e\udde0", "Merge your way up to a brain."], ["basil-clover", "Basil + Clover", "\ud83d\udc08", "Two cats versus everything."]];
   function arcadeBox() {
     var p = location.pathname.split("/")[1] || "", foot = document.querySelector("footer.site");
     if (!foot || document.querySelector(".mwx-arcade") || !ARCADE.some(function (a) { return a[0] === p; })) return;
@@ -1328,7 +1332,7 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     var left = gl.filter(function (o) { return !(o.st && o.st.done); });
     var pick = (left.length ? left : gl).slice(0, 4);
     foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info mwx-arcade"><div class="mwx-head"><b>More games</b><span>' + (left.length ? left.length + " puzzles left today" : "All today\u2019s puzzles done") + '</span></div><div class="mwx-list">' +
-      others.map(function (a) { return '<a class="mwx-row" href="/' + a[0] + '/" title="' + a[3] + '"><span class="mwx-ic" style="font-size:24px;width:34px;text-align:center">' + a[2] + '</span><span class="mwx-nm" style="white-space:normal;line-height:1.15">' + a[1] + '</span><span class="mwx-st">\u203a</span></a>'; }).join("") +
+      others.map(function (a) { return '<a class="mwx-row" href="/' + a[0] + '/" title="' + a[3] + '">' + (a[2] === "basil" ? '<span class="arc-ic arc-ic2" aria-hidden="true"><img src="/assets/mascots/basil.svg?v=2" alt="" width="17" height="24" loading="lazy"><img src="/assets/mascots/clover.svg?v=1" alt="" width="16" height="23" loading="lazy"></span>' : '<img class="arc-ic" src="/assets/mascots/' + a[2] + '.svg?v=1" alt="" width="34" height="34" loading="lazy">') + '<span class="mwx-nm" style="white-space:normal;line-height:1.15">' + a[1] + '</span><span class="mwx-st">\u203a</span></a>'; }).join("") +
       pick.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203a") + "</span></a>"; }).join("") +
       '</div><a class="mwx-all" href="/">All puzzles</a></section>');
   }
