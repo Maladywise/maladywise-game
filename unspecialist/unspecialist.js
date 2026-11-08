@@ -1,4 +1,4 @@
-/* Unspecialist: a free, game-style GP school. Plain JS, no build step.
+/* Unspecialist: free, game-style GP training. Plain JS, no build step.
    Screens: home, huddle, clinic (waiting room), consult, result, inbox, desk (Front desk billing), cheat (MBS cheat sheet). State lives in localStorage ("us-v1"). */
 (function () {
   "use strict";
@@ -225,7 +225,7 @@
       return '<div class="us-room"><b>' + esc(r.name) + "</b><span>" + esc(r.sub) + '</span><div class="us-bar"><i style="width:' + p.pct + '%"></i></div><small>' + p.pct + "% · " + p.ok + "/" + p.n + " right</small></div>";
     }).join("");
     return '<div class="us-home">' +
-      '<div class="us-brand"><div><span class="us-kick">The free GP school</span><span class="us-title">Unspecialist</span></div>' +
+      '<div class="us-brand"><div><span class="us-kick">Free GP training</span><span class="us-title">Unspecialist</span></div>' +
       '<span class="us-pill">' + (st ? st + "-day streak" : "Day 1 starts now") + "</span></div>" +
       '<div class="us-rank"><span class="us-kick">Your rank · ' + (S.points || 0).toLocaleString("en-AU") + " points</span><span class=\"us-rname\">" + esc(rk.name) + "</span>" +
       '<div class="us-rbar"><i style="width:' + Math.round(rk.pct * 100) + '%"></i></div>' +

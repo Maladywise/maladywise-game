@@ -18,7 +18,7 @@ SP = {
    "UK: 3 years after the 2-year Foundation Programme. US (family medicine): a 3-year residency.",
    "Around 20 to 35 consults a day: chronic disease, mental health, kids, skin checks, women’s and men’s health, and a lot of “while I’m here…”.",
    "Practice nurse, nurse practitioner, pharmacist, Aboriginal health practitioner.",
-   [("Unspecialist: the free GP School", "/unspecialist/"), ("Dxtective", "/dx/")]),
+   [("Unspecialist: free GP training", "/unspecialist/"), ("Dxtective", "/dx/")]),
  "ed": ("Emergency medicine", "\U0001f6a8",
    "You run towards the noise. Emergency doctors see anyone with anything at any hour, and make sense of the first hour of someone’s worst day, then do it again with the next patient.",
    "At least 5 years of ACEM training for fellowship (FACEM), after early hospital years.",
@@ -109,7 +109,7 @@ SP = {
    "Few countries train it as its own path. Canada has rural family medicine with optional enhanced skills, and New Zealand has rural hospital medicine.",
    "Clinic, ward round, emergency call-outs, maybe a birth, and being a familiar face around town.",
    "Remote area nurse, rural and isolated practice nurse, flight nurse, Aboriginal health worker.",
-   [("Unspecialist: the free GP School", "/unspecialist/"), ("Grand Rounds", "/grandrounds/")]),
+   [("Unspecialist: free GP training", "/unspecialist/"), ("Grand Rounds", "/grandrounds/")]),
 }
 ORDER = list(SP)
 
