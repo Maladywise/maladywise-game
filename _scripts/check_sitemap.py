@@ -12,8 +12,9 @@ Reports
   - <lastmod> values that don't match the page's last real content change
 
 lastmod = Sydney date of the last commit that changed the page's HTML for real
-(commits that only bump shared-asset ?v= numbers or add breadcrumb JSON-LD
-are ignored). For daily games
+(commits that only bump shared-asset ?v= numbers, add breadcrumb JSON-LD or
+change asset-loading <link>/<script src> tags are ignored, matching how the
+sitemap is maintained by hand and by build_archives.py / build_days.py). For daily games
 (and their archives) the latest commit to that game's puzzles/ folder also counts.
 Pages with uncommitted edits count as changed today.
 
@@ -33,8 +34,12 @@ SITE = "https://maladywise.com"
 SKIP_DIRS = {".git", "node_modules", "_data", "__pycache__"}
 SYD = ZoneInfo("Australia/Sydney")
 VBUMP = re.compile(r"\?v=\d+")
-# lines that never count as a content change: breadcrumb JSON-LD added by add_breadcrumbs.py
-NOISE = re.compile(r'^\s*<script type="application/ld\+json" id="mw-breadcrumb-ld">.*</script>\s*$')
+# lines that never count as a content change: breadcrumb JSON-LD added by add_breadcrumbs.py, and
+# lines that only load assets (preconnect/preload/stylesheet <link>s, <script src> tags), e.g. the
+# Nov 2026 move of Google Fonts into <head>. Readers and search engines don't see those as new content.
+NOISE = re.compile(r'^\s*(?:<script type="application/ld\+json" id="mw-breadcrumb-ld">.*</script>'
+                   r'|<link\b[^>]*\brel=["\']?(?:preconnect|dns-prefetch|preload|stylesheet)["\']?[^>]*>'
+                   r'|<script\b[^>]*\bsrc=["\'][^"\']+["\'][^>]*>\s*</script>)\s*$')
 TODAY = dt.datetime.now(SYD).date().isoformat()
 
 
@@ -93,17 +98,19 @@ def content_date(path, dirty):
         if not c.strip():
             continue
         date = c.split("\n", 1)[0].strip()
-        rem, add = Counter(), Counter()
+        rem, add, raw = Counter(), Counter(), 0
         for line in c.split("\n"):
             if line.startswith("---") or line.startswith("+++"):
                 continue
+            if line[:1] in "+-" and line:
+                raw += 1
             if NOISE.match(line[1:]):
                 continue
             if line.startswith("-"):
                 rem[VBUMP.sub("", line[1:])] += 1
             elif line.startswith("+"):
                 add[VBUMP.sub("", line[1:])] += 1
-        if rem != add or (not rem and not add):
+        if rem != add or not raw:  # no +/- lines at all (e.g. file created empty, mode change): count it
             return syd_date(date)
     return TODAY
 
