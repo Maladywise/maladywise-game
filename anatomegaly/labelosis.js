@@ -29,7 +29,7 @@
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};
   if (!MW_EINSTEIN.labelosis) MW_EINSTEIN.labelosis = ["2026-11-13"];
 
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", N = 5, PASS = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", N = 5, PASS = 3;
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Anatomegaly (Normie)" : "Anatomegaly";
   // Normie wording swaps
   var T = NORMIE ? { foot: "Diagrams are simplified, original sketches, not to scale. Animal facts checked, but nature loves an exception.", noart: "No diagram for this one. Just you and your nature documentaries.", next: "Go and look at a cat’s ears. Respectfully.", emoji: " 🐙 ", masc: "/assets/mascots/normie/labelosis.svg" }
@@ -106,7 +106,7 @@
     var i = Math.min(view, N - 1), R = P.rounds[i], answered = i < st.picks.length, mine = st.picks[i];
     $("card").innerHTML = '<div class="chead"><span>Round ' + (i + 1) + " of " + N + "</span><span>" + esc(R.kind) + "</span></div>" +
       '<p class="q">' + esc(R.q) + "</p>" +
-      (R.art && window.LBL_ART ? '<div class="art">' + LBL_ART(R.art, R.hl) + '</div><p class="cap">' + esc((window.LBL_CAP || {})[R.art] || "") + "</p>"
+      (R.art && window.LBL_ART ? '<div class="art' + (answered ? " done" : "") + '">' + LBL_ART(R.art, R.hl) + '</div><p class="cap">' + esc((window.LBL_CAP || {})[R.art] || "") + "</p>"
         : '<div class="noart">' + (NORMIE ? PAW : /nerve/i.test(R.kind) ? NERVE : BONE) + "<span>" + T.noart + "</span></div><div style=\"height:12px\"></div>");
     $("opts").innerHTML = options(i).map(function (o) {
       var cls = answered ? (o === R.answer ? " right" : o === mine ? " wrong" : " dim") : "";

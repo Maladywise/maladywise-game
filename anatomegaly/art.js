@@ -443,80 +443,253 @@
     return svg("0 0 280 270", o, "Coronary arteries on the front of the heart");
   }
 
-  // ---------- right shoulder: from behind (left) and from the front (right) ----------
-  function rotatorCuff() {
-    var o = '<path class="ln panel" d="M160 14 L160 246"/>';
-    // from behind: the patient's right is on the viewer's right
-    var b = "";
-    b += '<path class="bn" d="M38 36 L98 50 L108 62 L110 82 L58 204 L44 196 L36 120 Z"/>';
-    b += '<path class="ln bone-ln" stroke-width="18" d="M128 92 L124 238"/>';
-    b += p("teresmajor", "M54 194 L84 160 L126 128 L126 144 L90 184 L62 204 Z", "mu mu2");
-    b += p("supraspinatus cuff", "M40 42 L98 52 C112 54 124 56 140 58 L142 70 C124 72 108 72 96 72 L44 84 Z", "mu");
-    b += p("infraspinatus cuff", "M42 96 L110 68 L142 74 L142 90 L110 102 C90 114 70 132 52 152 Z", "mu mu3");
-    b += p("teresminor cuff", "M60 160 L96 126 L142 94 L140 106 L104 140 L72 172 Z", "mu");
-    b += '<g data-p="humeralhead humerus" class="grp"><circle class="bn" cx="130" cy="76" r="17"/></g>';
-    b += p("scapulaspine", "M40 92 C70 80 96 66 116 52", "ln bone-ln", ' stroke-width="9"');
-    b += e("acromion", 126, 46, 17, 8, "bn", -12);
-    b += p("deltoid", "M128 34 C152 38 158 66 154 100 L140 172 L130 168 L140 100 C144 78 142 60 130 54 Z", "mu mu2");
-    // from the front: the patient's right is on the viewer's left
-    var f = "";
-    f += '<path class="bn" d="M210 62 L282 44 L290 60 L274 200 L262 204 L214 90 Z"/>';
-    f += '<path class="ln bone-ln" stroke-width="18" d="M198 92 L202 238"/>';
-    f += p("subscapularis cuff", "M280 52 L272 194 L246 168 L214 94 L204 88 L206 72 L218 68 Z", "mu mu3");
-    f += '<g data-p="humeralhead humerus" class="grp"><circle class="bn" cx="196" cy="76" r="17"/></g>';
-    f += p("coracoid", "M232 52 C228 62 222 66 214 66", "ln bone-ln", ' stroke-width="7"');
-    f += p("clavicle", "M196 40 C226 30 254 40 300 28", "ln bone-ln", ' stroke-width="9"');
-    f += e("acromion", 196, 44, 15, 7, "bn", 8);
-    f += p("bicepslh", "M212 64 C202 60 198 72 200 92 L204 150", "ln tdn", ' stroke-width="5"');
-    f += e("biceps", 206, 190, 10, 34, "mu");
-    f += p("deltoid", "M198 34 C174 38 168 66 172 100 L186 172 L196 170 L184 100 C180 78 182 60 196 54 Z", "mu mu2");
-    return svg("0 0 320 250", o + b + f, "Right shoulder from behind and from the front, showing the rotator cuff");
+  // ---------- shared helpers for the rotator cuff and dermatome maps (redrawn Nov 2026) ----------
+  function f1(n) { return (Math.round(n * 10) / 10).toString(); }
+  function pt(q) { return f1(q[0]) + " " + f1(q[1]); }
+  // smooth closed (or open) curve through points (Catmull-Rom as cubic Beziers)
+  function cr(P, open) {
+    var n = P.length, d = "M" + pt(P[0]), last = open ? n - 1 : n;
+    for (var i = 0; i < last; i++) {
+      var p0 = P[open ? Math.max(i - 1, 0) : (i - 1 + n) % n], p1 = P[i], p2 = P[(i + 1) % n], p3 = P[open ? Math.min(i + 2, n - 1) : (i + 2) % n];
+      d += " C" + pt([p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6]) + " " + pt([p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6]) + " " + pt(p2);
+    }
+    return d + (open ? "" : " Z");
+  }
+  function poly(P) { return "M" + P.map(pt).join(" L") + " Z"; }
+  function tx(x, y, s, cls, anc, extra) { return '<text class="' + (cls || "lbx") + '" x="' + f1(x) + '" y="' + f1(y) + '"' + (anc ? ' text-anchor="' + anc + '"' : "") + (extra || "") + ">" + s + "</text>"; }
+  function lead(P) { return '<path class="ln lld" d="M' + P.map(pt).join(" L") + '"/>'; }
+
+  // a limb along a polyline of centres C with widths W; u = 0 lateral edge (viewer's left), 1 medial edge; v = 0..1 along the limb
+  function limb(C, W) {
+    var n = C.length;
+    function at(v) {
+      var f = v * (n - 1), i = Math.max(0, Math.min(n - 2, Math.floor(f))), t = f - i, a = C[i], b = C[i + 1];
+      var dx = b[0] - a[0], dy = b[1] - a[1], l = Math.sqrt(dx * dx + dy * dy);
+      return { c: [a[0] + dx * t, a[1] + dy * t], w: W[i] + (W[i + 1] - W[i]) * Math.max(0, Math.min(1, t)), n: [-dy / l, dx / l], d: [dx / l, dy / l] };
+    }
+    function q(u, v) { var s = at(v), k = s.w / 2 * (1 - 2 * u); return [s.c[0] + s.n[0] * k, s.c[1] + s.n[1] * k]; }
+    function outline() {
+      var L = [], R = [], s0 = at(0), s1 = at(1);
+      for (var i = 0; i < n; i++) { var v = i / (n - 1); L.push(q(0, v)); R.unshift(q(1, v)); }
+      return cr([[s0.c[0] - s0.d[0] * s0.w * 0.42, s0.c[1] - s0.d[1] * s0.w * 0.42]].concat(L, [[s1.c[0] + s1.d[0] * s1.w * 0.25, s1.c[1] + s1.d[1] * s1.w * 0.25]], R));
+    }
+    // band: u0..u1 across, top and bottom edges are straight lines in (u, v): v = a + (b - a) * u
+    function zone(u0, u1, ta, tb, ba, bb) {
+      var P = [], top = function (u) { return ta + (tb - ta) * u; }, bot = function (u) { return ba + (bb - ba) * u; }, k;
+      for (k = 0; k <= 4; k++) { var u = u0 + (u1 - u0) * k / 4; P.push(q(u, top(u))); }
+      for (k = 1; k < 12; k++) P.push(q(u1, top(u1) + (bot(u1) - top(u1)) * k / 12));
+      for (k = 4; k >= 0; k--) { var u2 = u0 + (u1 - u0) * k / 4; P.push(q(u2, bot(u2))); }
+      for (k = 11; k > 0; k--) P.push(q(u0, top(u0) + (bot(u0) - top(u0)) * k / 12));
+      return poly(P);
+    }
+    return { q: q, at: at, outline: outline, zone: zone };
+  }
+  function capsule(a, b, r) {
+    var dx = b[0] - a[0], dy = b[1] - a[1], l = Math.sqrt(dx * dx + dy * dy), nx = -dy / l * r, ny = dx / l * r;
+    return "M" + pt([a[0] + nx, a[1] + ny]) + " L" + pt([b[0] + nx, b[1] + ny]) + " A" + r + " " + r + " 0 0 0 " + pt([b[0] - nx, b[1] - ny]) + " L" + pt([a[0] - nx, a[1] - ny]) + " A" + r + " " + r + " 0 0 0 " + pt([a[0] + nx, a[1] + ny]) + " Z";
   }
 
-  // ---------- dermatomes, front view ----------
-  function lerp(a, b2, t) { return [a[0] + (b2[0] - a[0]) * t, a[1] + (b2[1] - a[1]) * t]; }
-  function strip(A0, A1, B0, B1, u0, u1, v0, v1) { // limb with outer edge A0->A1 and inner edge B0->B1; u across (0 = outer), v along
-    var q = function (u, v) { return lerp(lerp(A0, A1, v), lerp(B0, B1, v), u); };
-    return "M" + [q(u0, v0), q(u0, v1), q(u1, v1), q(u1, v0)].map(function (pt) { return pt[0].toFixed(1) + " " + pt[1].toFixed(1); }).join(" L") + " Z";
+  // ---------- right shoulder: from behind (left) and from the front (right) ----------
+  // Cuff tendons insert on the greater tuberosity (supraspinatus on the top facet, infraspinatus the middle, teres minor the lowest)
+  // and subscapularis on the lesser tuberosity. The deltoid is shown only as a faint outline (cut away).
+  function rotatorCuff() {
+    var o = '<path class="ln panel" d="M215 34 L215 256"/>';
+    o += tx(105, 14, "FROM BEHIND", "dvh", "middle") + tx(325, 14, "FROM THE FRONT", "dvh", "middle");
+    // ===== from behind: the patient's right is on the viewer's right =====
+    var b = "", L = "";
+    b += p("deltoid", "M128 44 C150 28 186 30 198 58 C206 84 198 124 184 156 L170 152 C178 124 182 96 176 76 C170 60 152 52 132 54 Z", "mu ghost");
+    b += p("scapula", "M44 40 C66 46 92 52 114 58 L134 70 C140 80 140 96 134 108 C118 148 98 190 80 226 C72 228 66 224 64 216 C54 172 44 128 40 88 C38 68 40 52 44 40 Z");
+    b += p("teresmajor", "M66 206 C74 190 86 180 100 174 C118 166 136 156 152 146 L154 162 C138 170 120 180 106 190 C94 200 84 212 78 224 C70 224 65 216 66 206 Z", "mu mu2");
+    b += '<g data-p="humerus" class="grp"><path class="bn" d="M150 108 L174 108 C172 150 172 196 174 252 L152 252 C154 196 154 150 150 108 Z"/></g>';
+    b += e("greatertub humerus", 171, 98, 9, 18);
+    b += e("humeralhead humerus", 152, 94, 21, 22);
+    b += '<g data-p="infraspinatus cuff" class="grp"><path class="rci" d="M42 100 C70 98 100 90 124 82 C140 80 158 84 176 88 L177 100 C160 102 146 104 136 106 C130 112 124 118 120 124 C108 142 96 160 86 178 C70 182 56 174 50 164 C45 142 42 122 42 100 Z"/>' +
+      '<path class="rciT" d="M146 82 C156 83 166 85 176 88 L177 100 C166 101 156 102 146 104 C148 96 148 90 146 82 Z"/></g>';
+    b += '<g data-p="teresminor cuff" class="grp"><path class="rct" d="M96 178 C106 158 116 136 124 118 C140 110 158 108 176 106 L175 118 C160 120 150 122 142 128 C132 146 122 166 114 186 Z"/>' +
+      '<path class="rctT" d="M150 110 C158 108 166 107 176 106 L175 118 C167 119 159 120 151 122 C152 118 152 114 150 110 Z"/></g>';
+    b += '<g data-p="supraspinatus cuff" class="grp"><path class="rcs" d="M46 44 C68 48 94 54 116 60 C126 62 134 64 140 66 L138 78 C120 78 100 80 80 82 C66 84 54 86 42 88 C40 72 42 56 46 44 Z"/></g>';
+    b += '<path class="ln fib" d="M54 58 L126 68 M50 74 L124 74 M52 112 L126 90 M54 134 L124 98 M60 154 L122 106 M108 168 L136 122 M84 204 L148 156"/>';
+    b += p("scapulaspine", "M40 84 C50 80 60 80 70 78 C94 72 116 62 134 52 L146 50 L146 62 C136 66 128 72 120 80 C98 92 72 100 44 102 C39 98 38 90 40 84 Z");
+    b += p("acromion", "M130 50 C140 38 162 32 180 36 C194 40 196 52 186 58 C170 64 152 64 140 64 C132 62 128 56 130 50 Z");
+    L += tx(84, 72, "Supraspinatus", "lbx in", "middle") + tx(78, 130, "Infraspinatus", "lbx in", "middle");
+    L += tx(124, 152, "Teres minor", "lbx in", "middle", ' transform="rotate(-62 124 152)"');
+    L += tx(110, 190, "Teres major", "lbx in", "middle", ' transform="rotate(-30 110 190)"');
+    L += lead([[164, 40], [164, 30]]) + tx(164, 27, "Acromion", "lbx", "middle");
+    L += lead([[178, 112], [196, 176]]) + tx(204, 190, "Greater", "lbx", "end") + tx(204, 203, "tuberosity", "lbx", "end");
+    // ===== from the front: the patient's right is on the viewer's left =====
+    var f = "";
+    f += p("deltoid", "M82 44 C60 28 24 30 12 58 C4 84 12 124 26 156 L40 152 C32 124 28 96 34 76 C40 60 58 52 78 54 Z", "mu ghost");
+    f += p("scapula", "M76 72 L96 64 C120 58 150 50 180 44 C186 88 176 166 136 228 C128 230 124 226 120 218 C108 182 92 142 80 116 C72 106 72 82 76 72 Z");
+    f += p("teresmajor", "M126 214 C116 194 100 176 84 164 C76 158 68 152 60 148 L58 162 C68 166 76 172 84 178 C98 190 110 206 118 222 C122 224 126 220 126 214 Z", "mu mu2");
+    f += '<g data-p="humerus" class="grp"><path class="bn" d="M36 108 L60 108 C56 150 56 196 58 252 L36 252 C38 196 38 150 36 108 Z"/></g>';
+    f += e("greatertub humerus", 37, 96, 9, 18);
+    f += e("humeralhead humerus", 56, 92, 21, 22);
+    f += e("lessertub humerus", 70, 108, 6, 9);
+    f += '<g data-p="subscapularis cuff" class="grp"><path class="rcb" d="M178 50 C150 56 120 62 96 70 C90 76 86 84 84 92 L74 100 L74 116 C84 118 92 120 98 124 C114 156 128 190 134 220 C160 170 176 110 178 50 Z"/>' +
+      '<path class="rcbT" d="M90 88 C84 92 78 96 72 100 L72 116 C80 116 88 118 96 120 C92 110 90 98 90 88 Z"/></g>';
+    f += '<path class="ln fib" d="M170 62 L104 80 M168 92 L100 96 M164 126 L104 108 M154 162 L110 118"/>';
+    f += '<g data-p="supraspinatus cuff" class="grp"><path class="rcs" d="M184 42 C156 46 124 52 98 60 L82 66 L82 74 C100 72 124 70 150 66 C164 64 176 62 186 60 Z"/>' +
+      '<path class="rcsT" d="M84 64 C66 64 46 66 30 74 L30 86 C46 80 64 76 84 74 Z"/></g>';
+    f += p("bicepslh", "M74 82 C64 74 56 80 56 96 L56 150", "ln tdn", ' stroke-width="3.6"');
+    f += e("biceps", 52, 196, 10, 34, "mu mu2");
+    f += p("coracoid", "M104 70 C108 58 102 46 90 44 C80 42 74 48 78 54 C86 54 92 58 94 72 Z");
+    f += '<path data-p="subacromial" class="bur" d="M26 62 C42 56 62 54 80 56 L82 62 C64 61 44 63 28 70 Z"/>';
+    f += p("acromion", "M14 54 C20 42 44 36 64 38 L84 44 C72 54 50 58 30 60 C18 61 12 59 14 54 Z");
+    f += p("clavicle", "M80 44 C108 34 140 46 168 40 C184 37 198 34 210 32", "ln bone-ln", ' stroke-width="10"');
+    var F = "";
+    F += tx(142, 126, "Subscapularis", "lbx in", "middle");
+    F += lead([[96, 48], [114, 26]]) + tx(116, 26, "Coracoid", "lbx", "start");
+    F += lead([[30, 46], [20, 28]]) + tx(4, 25, "Acromion", "lbx", "start");
+    F += lead([[78, 112], [104, 150]]) + tx(110, 160, "Lesser", "lbx", "middle") + tx(110, 173, "tuberosity", "lbx", "middle");
+    F += lead([[44, 64], [10, 86]]) + tx(4, 98, "Subacromial", "lbx", "start") + tx(4, 110, "space", "lbs", "start");
+    F += lead([[150, 64], [168, 80]]) + tx(170, 90, "Supra-", "lbx", "middle") + tx(170, 102, "spinatus", "lbx", "middle");
+    F += tx(48, 240, "Biceps", "lbx", "middle");
+    return svg("0 0 430 262", o + b + '<g transform="translate(220 0)">' + f + '<g class="lbt">' + F + "</g></g>" + '<g class="lbt">' + L + "</g>", "Right shoulder from behind and from the front, showing the rotator cuff");
   }
-  function dHalf(s) {
-    var o = "";
-    // limbs (patient's right side, drawn on the viewer's left); A = outer (lateral) edge, B = inner (medial) edge
-    var UA = [[86, 66], [56, 140], [104, 76], [74, 148]], FA = [[56, 140], [36, 206], [74, 148], [54, 212]];
-    var TH = [[98, 172], [96, 262], [130, 180], [120, 262]], LG = [[96, 262], [98, 322], [120, 262], [116, 322]];
-    o += '<path class="sk" d="M' + [UA[0], UA[1], FA[1], FA[3], FA[2], UA[3], UA[2]].map(function (pt) { return pt.join(" "); }).join(" L") + ' Z"/>';
-    o += '<path class="sk" d="M' + [TH[0], TH[1], LG[1], LG[3], LG[2], TH[3], TH[2]].map(function (pt) { return pt.join(" "); }).join(" L") + ' Z"/>';
-    // hand (palm forward, thumb lateral) and fingers
-    o += '<path class="sk" d="M36 206 L54 212 L52 236 L32 232 Z"/>';
-    var fing = [["th", "M34 214 L26 232"], ["f2", "M35 232 L30 252"], ["f3", "M40 234 L37 256"], ["f4", "M45 235 L44 255"], ["f5", "M50 235 L50 250"]];
-    // foot (seen from the front, toes towards the viewer)
-    o += '<path class="sk" d="M98 322 L116 322 L122 340 L90 340 Z"/>';
-    // dermatome bands
-    o += p(sid("c5", s), strip(UA[0], UA[1], UA[2], UA[3], 0, 0.5, 0.08, 1), "dm");
-    o += p(sid("c6", s), strip(FA[0], FA[1], FA[2], FA[3], 0, 0.45, 0, 1) + " M36 206 L42 208 L40 222 L33 222 Z", "dm dm2");
-    o += p(sid("c8", s), strip(FA[0], FA[1], FA[2], FA[3], 0.6, 1, 0.45, 1) + " M48 210 L54 212 L52 236 L47 235 Z", "dm dm3");
-    o += p(sid("t1", s), strip(UA[0], UA[1], UA[2], UA[3], 0.55, 1, 0.1, 1) + " " + strip(FA[0], FA[1], FA[2], FA[3], 0.6, 1, 0, 0.42), "dm dm2");
-    o += p(sid("l4", s), strip(LG[0], LG[1], LG[2], LG[3], 0.55, 1, 0.05, 1) + " M108 322 L116 322 L122 340 L113 340 Z", "dm dm2");
-    o += p(sid("l5", s), strip(LG[0], LG[1], LG[2], LG[3], 0.16, 0.55, 0.05, 1) + " M100 324 L108 322 L113 340 L96 340 Z", "dm");
-    o += p(sid("s1", s), strip(LG[0], LG[1], LG[2], LG[3], 0, 0.16, 0.55, 1) + " M98 322 L100 324 L96 340 L90 340 Z", "dm dm3");
-    o += p(sid("l1", s), "M98 168 L130 176 L130 186 L98 180 Z", "dm dm3");
-    o += p(sid("l3", s), strip(TH[0], TH[1], TH[2], TH[3], 0.2, 1, 0.72, 1) + " " + strip(LG[0], LG[1], LG[2], LG[3], 0.45, 1, 0, 0.05), "dm dm3");
-    fing.forEach(function (f) {
-      var id = f[0] === "th" ? sid("c6", s) : f[0] === "f3" ? sid("c7", s) : f[0] === "f5" || f[0] === "f4" ? sid("c8", s) : null;
-      var w = f[0] === "th" ? 8 : 6.5;
-      o += id ? p(id, f[1], "ln dm-ln", ' stroke-width="' + w + '"') : '<path class="ln sk-ln" stroke-width="' + w + '" d="' + f[1] + '"/>';
-    });
-    o += p(sid("c7", s), "M40 222 L46 223 L46 235 L40 234 Z", "dm");
+
+  // ---------- dermatomes: front and back (simplified, Keegan and Garrett style as commonly taught) ----------
+  // Front: patient's right on the viewer's left. Back: patient's right on the viewer's right.
+  // Bands carry a shared id plus a side id where they are paired ("c6 c6-r"); trunk bands carry one id.
+  var DZ = { c: ["zc1", "zc2", "zc3"], t: ["zt1", "zt2", "zt3"], l: ["zl1", "zl2", "zl3"], s: ["zs1", "zs2", "zs3"] };
+  function dz(id) { var k = id.charAt(0), n = parseInt(id.slice(1), 10); return "dz " + DZ[k][n % 3]; } // three shades per region, so neighbouring bands always differ
+  function band(id, s, d) { return p(s === null ? id : sid(id, s), d, dz(id)); }
+  // body geometry in figure space (0..150 wide, midline x = 75); the half drawn is on the viewer's left
+  var D_ARM = limb([[37, 74], [32.5, 101], [28, 128], [24, 148], [20, 168]], [17, 15, 12.5, 12.5, 9.5]);
+  var D_LEG = limb([[60, 162], [60, 204], [61, 246], [61.5, 272], [62, 309]], [31, 25, 17.5, 19, 10.5]);
+  var HAND = (function () {
+    var w = [20, 168], d = [-0.196, 0.981], nl = [-0.981, -0.196];
+    function h(a, b2) { return [w[0] + d[0] * a + nl[0] * b2, w[1] + d[1] * a + nl[1] * b2]; }
+    var palm = cr([[-1, -5], [-1, 5], [6, 6.8], [15, 6.8], [18.5, 4], [18.5, -5.6], [14, -7], [5, -6.2]].map(function (q) { return h(q[0], q[1]); }));
+    var fingers = [capsule(h(6, 6), h(15, 10.6), 2.3), capsule(h(17, 4.4), h(30.5, 6.6), 1.8), capsule(h(17, 1.1), h(33, 1.3), 1.85), capsule(h(17, -2.3), h(31, -4), 1.75), capsule(h(16, -5.4), h(27, -8.4), 1.55)];
+    function zb(b0, b1) { return poly([h(-3, b0), h(40, b0), h(40, b1), h(-3, b1)]); }
+    var sep = [[h(17, 2.75), h(20, 2.95)], [h(17, -0.6), h(20, -0.75)], [h(16.5, -3.9), h(19.5, -4.4)]];
+    return { palm: palm, fingers: fingers, zb: zb, sep: sep, h: h };
+  })();
+  var TRUNK = "M66 56 C58 60 46 61 38 65 C30 69 28 79 30 88 L44 96 C47 108 50 116 50 124 C50 134 44 142 44 152 C44 162 52 170 64 172 L75 175 L86 172 C98 170 106 162 106 152 C106 142 100 134 100 124 C100 116 103 108 106 96 L120 88 C122 79 120 69 112 65 C104 61 92 60 84 56 Z";
+  var HEADNECK = '<ellipse cx="75" cy="27" rx="14.5" ry="18.5"/><path d="M67 38 L83 38 L84 60 L66 60 Z"/>';
+  function footD(back) {
+    if (back) return cr([[56.5, 304], [67.5, 304], [70.5, 318], [68.5, 329], [62, 333], [55.5, 329], [53.5, 318]]);
+    return cr([[56.5, 302], [67.5, 302], [69.5, 312], [74, 320], [76.5, 327], [74.5, 332.5], [62, 333.5], [51, 332], [49.5, 326], [52, 318], [54.5, 311]]);
+  }
+  function armShapes() { return '<path d="' + D_ARM.outline() + '"/><path d="' + HAND.palm + '"/>' + HAND.fingers.map(function (d) { return '<path d="' + d + '"/>'; }).join(""); }
+  function legShapes(back) { return '<path d="' + D_LEG.outline() + '"/><path d="' + footD(back) + '"/>'; }
+  // a boundary line across the trunk, symmetric about the midline: y = y0 + k * |x - 75|
+  function tline(y0, k) { return [[-10, y0 + 85 * k], [75, y0], [160, y0 + 85 * k]]; }
+  function tband(a, b2) { return poly(a.concat(b2.slice().reverse())); }
+  function dArm(s, back) {
+    var A = D_ARM, o = "";
+    // upper arm v 0..0.5, forearm v 0.5..1; u 0 = lateral (thumb side)
+    o += band("c5", s, A.zone(-0.5, back ? 0.55 : 0.5, -0.2, -0.2, 0.5, 0.5));
+    o += band("t2", s, A.zone(back ? 0.55 : 0.5, 1.5, -0.2, -0.2, 0.28, 0.28));
+    o += band("t1", s, A.zone(back ? 0.55 : 0.5, 1.5, 0.28, 0.28, back ? 0.75 : 0.775, back ? 0.75 : 0.775));
+    if (back) {
+      o += band("c6", s, A.zone(-0.5, 0.33, 0.5, 0.5, 1.08, 1.08));
+      o += band("c7", s, A.zone(0.33, 0.66, 0.5, 0.5, 1.08, 1.08));
+      o += band("c8", s, A.zone(0.66, 1.5, 0.75, 0.75, 1.08, 1.08));
+      o += band("t1", s, A.zone(0.55, 0.66, 0.5, 0.5, 0.75, 0.75));
+    } else {
+      o += band("c6", s, A.zone(-0.5, 0.45, 0.5, 0.5, 1.08, 1.08));
+      o += band("c8", s, A.zone(0.45, 1.5, 0.775, 0.775, 1.08, 1.08));
+    }
+    // hand: thumb and index C6, middle finger C7, ring and little fingers C8
+    o += band("c6", s, HAND.zb(2.65, 14)) + band("c7", s, HAND.zb(-0.7, 2.65)) + band("c8", s, HAND.zb(-12, -0.7));
+    return o;
+  }
+  function dLeg(s, back) {
+    var G = D_LEG, o = "";
+    if (back) {
+      o += band("s1", s, G.zone(0.2, 0.8, 0.02, 0.05, 1.2, 1.2));
+      o += band("s2", s, G.zone(0.48, 0.8, 0.02, 0.05, 0.7, 0.7));
+      o += band("l5", s, G.zone(-0.5, 0.2, -0.3, 0.02, 1.2, 1.2));
+      o += band("l3", s, G.zone(0.8, 1.5, 0.05, 0.06, 0.52, 0.52));
+      o += band("l4", s, G.zone(0.8, 1.5, 0.52, 0.52, 1.2, 1.2));
+      o += band("s1", s, poly([[40, 312], [80, 312], [80, 340], [40, 340]]));
+    } else {
+      o += band("l1", s, G.zone(0.25, 1.5, -0.4, -0.4, 0.0, 0.1));
+      o += band("l2", s, G.zone(-0.5, 1.5, -0.4, 0.1, 0.12, 0.3));
+      o += band("l3", s, G.zone(-0.5, 1.5, 0.12, 0.3, 0.38, 0.52));
+      o += band("l4", s, G.zone(-0.5, 1.5, 0.38, 0.52, 0.56, 1.15));
+      o += band("l5", s, G.zone(-0.5, 1.5, 0.56, 1.15, 1.25, 1.25));
+      // foot from the front: medial edge L4, top of the foot and toes L5, outer edge and little toe S1
+      o += band("l4", s, poly([[72, 300], [80, 300], [80, 340], [72, 340]]));
+      o += band("l5", s, poly([[56.8, 307], [72, 307], [72, 340], [56.8, 340]]));
+      o += band("s1", s, poly([[40, 307], [56.8, 307], [56.8, 340], [40, 340]]));
+    }
+    return o;
+  }
+  function dFigure(back) {
+    var k = back ? "B" : "F", o = "", sR = back ? "-l" : "-r", sL = back ? "-r" : "-l"; // the half drawn on the viewer's left is the patient's right from the front, left from behind
+    var clips = '<defs><clipPath id="dmT' + k + '"><path d="' + TRUNK + '"/>' + HEADNECK + '</clipPath><clipPath id="dmA' + k + '">' + armShapes() + '</clipPath><clipPath id="dmL' + k + '">' + legShapes(back) + "</clipPath></defs>";
+    // silhouette underlay (its stroke gives one clean outline around the whole body)
+    var shape = '<path d="' + TRUNK + '"/>' + HEADNECK + armShapes() + legShapes(back);
+    o += clips + '<g class="dsl">' + shape + mirror(150, armShapes() + legShapes(back)) + "</g>";
+    // trunk bands
+    var t = "";
+    if (back) {
+      t += band("c2", null, poly([[50, 4], [100, 4], [100, 46], [50, 46]]));
+      t += band("c3", null, tband([[40, 46], [110, 46]], [[40, 55], [110, 55]]));
+      t += band("c4", null, tband(tline(55, 0.05), tline(66, 0.22)));
+      var lv = [66], i;
+      for (i = 1; i <= 12; i++) lv.push(66 + i * 6.6);
+      for (i = 0; i < 12; i++) t += band("t" + (i + 1), null, tband(tline(lv[i], 0.22), tline(lv[i + 1], 0.22)));
+      var lb = [145.2, 151, 157, 163];
+      for (i = 0; i < 3; i++) t += band("l" + (i + 1), null, tband(tline(lb[i], 0.22 + i * 0.1), tline(lb[i + 1], 0.32 + i * 0.1)));
+      t += band("s2", null, tband(tline(163, 0.42), tline(200, 0.42)));
+    } else {
+      t += '<ellipse class="dsk" cx="75" cy="27" rx="16" ry="20"/>'; // face: trigeminal nerve, not a dermatome
+      t += band("c2", null, "M56 34 L64 40 C68 44 72 46 75 46 C78 46 82 44 86 40 L94 34 L94 50 L56 50 Z");
+      t += band("c3", null, poly([[56, 50], [94, 50], [94, 57], [56, 57]]));
+      var c4b = [[-10, 82], [30, 77], [50, 72], [75, 73], [100, 72], [120, 77], [160, 82]];
+      t += band("c4", null, tband([[-10, 57], [160, 57]], c4b));
+      var y = [73];
+      for (i = 1; i <= 11; i++) y.push(74.75 + i * 6.5);
+      var prev = c4b;
+      for (i = 0; i < 11; i++) { var nx = tline(y[i + 1], -0.12); t += band("t" + (i + 2), null, tband(prev, nx)); prev = nx; }
+      t += band("l1", null, tband(prev, [[-10, 150], [40, 150], [75, 180], [110, 150], [160, 150]]));
+    }
+    o += '<g clip-path="url(#dmT' + k + ')">' + t + "</g>";
+    // limbs: the half on the viewer's left, then its mirror image
+    var half = function (s) { return '<g clip-path="url(#dmA' + k + ')">' + dArm(s, back) + '</g><g clip-path="url(#dmL' + k + ')">' + dLeg(s, back) + "</g>"; };
+    o += half(sR) + mirror(150, half(sL));
+    // finger gaps
+    var sep = HAND.sep.map(function (q) { return "M" + pt(q[0]) + " L" + pt(q[1]); }).join(" ");
+    if (!back) sep += " M70.5 329.5 L70.5 333 M66.5 330.5 L66.5 333.5 M62.5 330.5 L62.5 333.5 M58.5 330.2 L58.5 333.2";
+    o += '<path class="ln dsep" d="' + sep + '"/>' + mirror(150, '<path class="ln dsep" d="' + sep + '"/>');
+    if (back) {
+      o += band("s3", null, "M75 152 C82 158 85 166 84 176 L66 176 C65 166 68 158 75 152 Z");
+      o += p("s4", "M75 170 m-3.4 0 a3.4 3.1 0 1 0 6.8 0 a3.4 3.1 0 1 0 -6.8 0 Z M75 170 m-1.6 0 a1.6 1.5 0 1 1 3.2 0 a1.6 1.5 0 1 1 -3.2 0 Z", dz("s4"), ' fill-rule="evenodd"');
+      o += p("s5", "M75 170 m-1.6 0 a1.6 1.5 0 1 0 3.2 0 a1.6 1.5 0 1 0 -3.2 0 Z", dz("s5"));
+      o += '<path class="ln dsep2" d="M75 62 L75 148 M75 154 L75 166 M50 176 C58 180 66 179 72 176 M100 176 C92 180 84 179 78 176"/>';
+    } else {
+      o += '<circle class="lm" cx="59" cy="90" r="2"/><circle class="lm" cx="91" cy="90" r="2"/><circle class="lm" cx="75" cy="130" r="2"/>';
+      o += '<path class="ln dsep2" d="M46 150 L72 174 M104 150 L78 174"/>';
+    }
     return o;
   }
   function dermatomes() {
-    var o = '<ellipse class="sk" cx="130" cy="30" rx="18" ry="22"/><path class="sk" d="M122 48 L138 48 L140 62 L120 62 Z"/>';
-    o += '<path class="sk" d="M86 66 C100 60 112 58 130 60 C148 58 160 60 174 66 L162 120 L166 172 L130 184 L94 172 L98 120 Z"/>';
-    o += dHalf("-r") + mirror(260, dHalf("-l"));
-    o += p("t4", "M90 86 L170 86 L168 98 L92 98 Z", "dm");
-    o += p("t10", "M98 128 L162 128 L162 140 L98 140 Z", "dm dm2");
-    o += '<circle class="lm" cx="110" cy="92" r="2.4"/><circle class="lm" cx="150" cy="92" r="2.4"/><circle class="lm" cx="130" cy="134" r="2.4"/>';
-    return svg("0 0 260 344", o, "Front view of a body outline showing dermatome bands");
+    var o = '<g transform="translate(46 4)">' + dFigure(false) + '</g><g transform="translate(246 4)">' + dFigure(true) + "</g>";
+    o += tx(4, 14, "FRONT", "dvh") + tx(396, 14, "BACK", "dvh", "end");
+    // labels (shown after answering); front figure starts at x 46, back at x 246
+    var L = "", q;
+    function fl(x, y, lx, ly, s, anc) { return lead([[x, y], [lx + (anc === "end" ? 2 : -2), ly - 4]]) + tx(lx, ly, s, "lbx", anc); }
+    function at(fx, P, s) { return tx(fx + P[0], 4 + P[1] + 4, s, "lbx in", "middle"); }
+    L += fl(46 + 30, 4 + 92, 24, 84, "C5", "end");
+    L += fl(46 + 7, 4 + 182, 24, 186, "C6", "end");
+    L += fl(46 + 12, 4 + 203, 30, 222, "C7", "end");
+    L += lead([[46 + 21, 4 + 199], [46 + 26, 4 + 222]]) + tx(46 + 27, 4 + 234, "C8", "lbx", "middle");
+    L += fl(46 + 52, 4 + 326, 24, 322, "S1", "end");
+    L += at(46, D_LEG.q(0.42, 0.06), "L2") + at(46, D_LEG.q(0.42, 0.33), "L3") + at(46, D_LEG.q(0.8, 0.66), "L4") + at(46, D_LEG.q(0.18, 0.9), "L5");
+    // trunk landmarks (front, patient's left side)
+    L += lead([[46 + 91, 4 + 90], [214, 92]]) + tx(216, 92, "T4", "lbx", "start") + tx(216, 102, "nipple", "lbs", "start");
+    L += lead([[46 + 75, 4 + 130], [214, 130]]) + tx(216, 130, "T10", "lbx", "start") + tx(216, 140, "navel", "lbs", "start");
+    L += lead([[46 + 96, 4 + 160], [214, 164]]) + tx(216, 164, "L1", "lbx", "start") + tx(216, 174, "groin", "lbs", "start");
+    // back figure (patient's left on the viewer's left)
+    L += lead([[246 + 64, 4 + 26], [232, 26]]) + tx(230, 30, "C2", "lbx", "end");
+    L += lead([[246 + 68, 4 + 52], [232, 50]]) + tx(230, 54, "C3", "lbx", "end");
+    L += lead([[246 + 48, 4 + 68], [232, 70]]) + tx(230, 74, "C4", "lbx", "end");
+    L += at(246, D_LEG.q(0.64, 0.3), "S2") + at(246, D_LEG.q(0.4, 0.7), "S1");
+    L += lead([[246 + 72, 4 + 172], [236, 246]]) + tx(234, 256, "S3–5", "lbx", "end");
+    return svg("0 0 400 352", o + '<g class="lbt">' + L + "</g>", "Dermatome map of the body from the front and from behind");
   }
 
   // ================= Normie mode: animal diagrams (original schematic drawings) =================
@@ -753,7 +926,7 @@
     abdoaxial: "Abdomen, cross-section at L1–L2 (viewed from below, like CT)", armaxial: "Right arm, cross-section at mid-humerus (viewed from below, like CT)",
     thighaxial: "Right thigh, cross-section at mid-femur (viewed from below, like CT)", legaxial: "Right calf, cross-section at mid-shaft (viewed from below, like CT)",
     willis: "Arteries at the base of the brain, seen from below (front at the top)", coronary: "Heart, front view (dashed = on the back of the heart)",
-    rotatorcuff: "Right shoulder: from behind (left) and from the front (right)", dermatomes: "Skin nerve-root map, front view (patient’s right on your left)",
+    rotatorcuff: "Right shoulder: from behind (left) and from the front (right)", dermatomes: "Skin nerve-root map: front (patient’s right on your left) and back",
     octopus: "Octopus, front view", owl: "Owl, front view", giraffe: "Giraffe, side view", catface: "Cat, face on", catpaw: "Cat’s front paw, underside", elephant: "African elephant, side view", shark: "Shark, side view", frog: "Frog, side view", seastar: "Sea star, from above", bee: "Honeybee, side view", hoof: "Horse’s front hoof, underside (toe at the top)" };
   window.LBL_ART = function (name, hl) {
     var f = ART[name]; if (!f) return "";

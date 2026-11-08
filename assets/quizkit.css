@@ -173,6 +173,21 @@ svg.ecg .hl-tag.t2{fill:var(--hl2)}
 .qk-art .dm{fill:#E9B79A;stroke:#B9805F;stroke-width:.8} .qk-art .dm2{fill:#DFA585} .qk-art .dm3{fill:#EFC6AA}
 .qk-art .dm-ln{stroke:#DFA585} .qk-art .sk-ln{stroke:#F2CDB4}
 .qk-art .lm{fill:#B97A5C}
+/* rotator cuff and dermatome maps (redrawn Nov 2026) */
+.qk-art .ghost{fill:#E39C8E;fill-opacity:.08;stroke:#A2584B;stroke-opacity:.55;stroke-width:1;stroke-dasharray:4 3} .qk-art .ghost.hl{fill-opacity:.6}
+.qk-art .rcs{fill:#E07A5F;stroke:#9E4A33;stroke-width:1.2} .qk-art .rci{fill:#3F9C9A;stroke:#24605F;stroke-width:1.2} .qk-art .rct{fill:#8E7CC9;stroke:#5A4A92;stroke-width:1.2} .qk-art .rcb{fill:#5A8FD6;stroke:#2F5C99;stroke-width:1.2}
+.qk-art .rcsT{fill:#F4C3B4} .qk-art .rciT{fill:#A9D6D3} .qk-art .rctT{fill:#CFC6EC} .qk-art .rcbT{fill:#B7CFF0}
+.qk-art .bur{fill:#CFE6F5;stroke:#7FA8C9;stroke-width:.8}
+.qk-art .fib{stroke:#1E1830;stroke-width:.7;opacity:.18}
+.qk-art .dsl{fill:#F6E6DA;stroke:#7C5E50;stroke-width:2.6;stroke-linejoin:round} .qk-art .dsk{fill:#F6E6DA}
+.qk-art .dz{stroke:#FFFDF8;stroke-width:.7} .qk-art .zc1{fill:#5F9AD4} .qk-art .zc2{fill:#93BEE8} .qk-art .zc3{fill:#C4DCF3} .qk-art .zt1{fill:#9C86D2} .qk-art .zt2{fill:#BBAAE3} .qk-art .zt3{fill:#DAD0F2} .qk-art .zl1{fill:#5FB487} .qk-art .zl2{fill:#93CFAA} .qk-art .zl3{fill:#C5E7D0} .qk-art .zs1{fill:#DE7F99} .qk-art .zs2{fill:#EBA5B8} .qk-art .zs3{fill:#F6CDD8}
+.qk-art .dsep{stroke:#7C5E50;stroke-width:.7} .qk-art .dsep2{stroke:#7C5E50;stroke-width:.8;stroke-dasharray:2 2;opacity:.6}
+.qk-art .dvh{font:700 10px Poppins,"Segoe UI",system-ui,sans-serif;letter-spacing:.12em;fill:#6B5A93}
+.qk-art .lbx{font:600 15px Poppins,"Segoe UI",system-ui,sans-serif;fill:#1E1830;paint-order:stroke;stroke:#FFFDF8;stroke-width:3;stroke-linejoin:round}
+.qk-art .lbs{font:500 11px Poppins,"Segoe UI",system-ui,sans-serif;fill:#4A3E60;paint-order:stroke;stroke:#FFFDF8;stroke-width:3}
+.qk-art .lbx.in{font-size:12.5px;stroke:#FFFDF8;stroke-width:2.6;stroke-opacity:.85}
+.qk-art .lld{stroke:#4A3E60;stroke-width:.8}
+.qk-art .lbt{display:none} [data-done] .qk-art .lbt, .rev .qk-art .lbt{display:inline}
 .qk-art .ov{fill:none;stroke:none}
 .qk-art .hl,.qk-art .hl *{fill:#FFC21A!important;stroke:#2B2340!important}
 .qk-art .ln.hl,.qk-art .hl .ln{fill:none!important;stroke:#FFB000!important;filter:drop-shadow(0 0 1.5px #2B2340) drop-shadow(0 0 1px #2B2340)}

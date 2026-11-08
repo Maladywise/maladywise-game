@@ -117,6 +117,21 @@ html[data-theme="dark"] #lbl .chead{color:#16121F}
 #lbl .art .dm{fill:#E9B79A;stroke:#B9805F;stroke-width:.8} #lbl .art .dm2{fill:#DFA585} #lbl .art .dm3{fill:#EFC6AA}
 #lbl .art .dm-ln{stroke:#DFA585} #lbl .art .sk-ln{stroke:#F2CDB4}
 #lbl .art .lm{fill:#B97A5C}
+/* rotator cuff and dermatome maps (redrawn Nov 2026) */
+#lbl .art .ghost{fill:#E39C8E;fill-opacity:.08;stroke:#A2584B;stroke-opacity:.55;stroke-width:1;stroke-dasharray:4 3} #lbl .art .ghost.hl{fill-opacity:.6}
+#lbl .art .rcs{fill:#E07A5F;stroke:#9E4A33;stroke-width:1.2} #lbl .art .rci{fill:#3F9C9A;stroke:#24605F;stroke-width:1.2} #lbl .art .rct{fill:#8E7CC9;stroke:#5A4A92;stroke-width:1.2} #lbl .art .rcb{fill:#5A8FD6;stroke:#2F5C99;stroke-width:1.2}
+#lbl .art .rcsT{fill:#F4C3B4} #lbl .art .rciT{fill:#A9D6D3} #lbl .art .rctT{fill:#CFC6EC} #lbl .art .rcbT{fill:#B7CFF0}
+#lbl .art .bur{fill:#CFE6F5;stroke:#7FA8C9;stroke-width:.8}
+#lbl .art .fib{stroke:#1E1830;stroke-width:.7;opacity:.18}
+#lbl .art .dsl{fill:#F6E6DA;stroke:#7C5E50;stroke-width:2.6;stroke-linejoin:round} #lbl .art .dsk{fill:#F6E6DA}
+#lbl .art .dz{stroke:#FFFDF8;stroke-width:.7} #lbl .art .zc1{fill:#5F9AD4} #lbl .art .zc2{fill:#93BEE8} #lbl .art .zc3{fill:#C4DCF3} #lbl .art .zt1{fill:#9C86D2} #lbl .art .zt2{fill:#BBAAE3} #lbl .art .zt3{fill:#DAD0F2} #lbl .art .zl1{fill:#5FB487} #lbl .art .zl2{fill:#93CFAA} #lbl .art .zl3{fill:#C5E7D0} #lbl .art .zs1{fill:#DE7F99} #lbl .art .zs2{fill:#EBA5B8} #lbl .art .zs3{fill:#F6CDD8}
+#lbl .art .dsep{stroke:#7C5E50;stroke-width:.7} #lbl .art .dsep2{stroke:#7C5E50;stroke-width:.8;stroke-dasharray:2 2;opacity:.6}
+#lbl .art .dvh{font:700 10px Poppins,"Segoe UI",system-ui,sans-serif;letter-spacing:.12em;fill:#6B5A93}
+#lbl .art .lbx{font:600 15px Poppins,"Segoe UI",system-ui,sans-serif;fill:#1E1830;paint-order:stroke;stroke:#FFFDF8;stroke-width:3;stroke-linejoin:round}
+#lbl .art .lbs{font:500 11px Poppins,"Segoe UI",system-ui,sans-serif;fill:#4A3E60;paint-order:stroke;stroke:#FFFDF8;stroke-width:3}
+#lbl .art .lbx.in{font-size:12.5px;stroke:#FFFDF8;stroke-width:2.6;stroke-opacity:.85}
+#lbl .art .lld{stroke:#4A3E60;stroke-width:.8}
+#lbl .art .lbt{display:none} #lbl .art.done .lbt{display:inline}
 /* Normie animals */
 #lbl .art .oc{fill:#E8836B;stroke:#A9483A;stroke-width:1.4} #lbl .art .oc2{fill:#EE957F} #lbl .art .oc3{fill:#D96E58;opacity:.85}
 #lbl .art .ocspot{fill:#C7604C} #lbl .art .ocs circle{fill:#F8D2C6;stroke:#A9483A;stroke-width:.8}
