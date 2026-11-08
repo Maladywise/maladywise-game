@@ -1,8 +1,40 @@
 {
  "_about": "Puzzles already used for the weekly X Short (vertical video). _scripts/shorts/shorts.py never reuses a (series, puzzle_date) listed here or in a queue entry's \"short\". The .github/workflows/shorts.yml run appends to it. Past puzzles only: at least 7 days old on the post date.",
  "used": [
-  {"post_date": null, "series": "ecg", "game": "arrhythmix", "puzzle_date": "2026-10-26", "number": 3, "queued_at": "2026-11-08", "note": "hand-made test Short"},
-  {"post_date": null, "series": "sign", "game": "glimpsis", "puzzle_date": "2026-11-03", "number": 10, "queued_at": "2026-11-08", "note": "hand-made test Short"},
-  {"post_date": null, "series": "rarest", "game": "zebritis", "puzzle_date": "2026-11-02", "number": 16, "queued_at": "2026-11-08", "note": "hand-made test Short"}
+  {
+   "post_date": null,
+   "series": "ecg",
+   "game": "arrhythmix",
+   "puzzle_date": "2026-10-26",
+   "number": 3,
+   "queued_at": "2026-11-08",
+   "note": "hand-made test Short"
+  },
+  {
+   "post_date": null,
+   "series": "sign",
+   "game": "glimpsis",
+   "puzzle_date": "2026-11-03",
+   "number": 10,
+   "queued_at": "2026-11-08",
+   "note": "hand-made test Short"
+  },
+  {
+   "post_date": null,
+   "series": "rarest",
+   "game": "zebritis",
+   "puzzle_date": "2026-11-02",
+   "number": 16,
+   "queued_at": "2026-11-08",
+   "note": "hand-made test Short"
+  },
+  {
+   "post_date": "2026-11-12",
+   "series": "rarest",
+   "game": "zebritis",
+   "puzzle_date": "2026-10-18",
+   "number": 1,
+   "queued_at": "2026-11-08T21:02+11:00"
+  }
  ]
 }

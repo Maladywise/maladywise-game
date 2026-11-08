@@ -2,6 +2,18 @@
  "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
  "posts": [
   {
+   "date": "2026-11-12",
+   "note": "Weekly Short (video): Zebritis #1, 18 Oct 2026",
+   "thread": [
+    "Name a blood thinner or antiplatelet. Easy, right? The common answer scores 1 point. The rarest scores 20. Did you know the unicorn before the end of the video? #MedTwitter",
+    "Can you find the unicorn? → https://maladywise.com/zebritis/"
+   ],
+   "short": {
+    "series": "rarest",
+    "puzzle_date": "2026-10-18"
+   }
+  },
+  {
    "date": "2026-11-17",
    "note": "Tue deep dive",
    "thread": [
