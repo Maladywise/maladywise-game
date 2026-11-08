@@ -116,3 +116,22 @@ html[data-motion="reduce"] #mrg .combo.on,html[data-motion="reduce"] #mrg .fact.
 .mrg-help-card li{margin:0 0 6px}
 .mrg-help-go{display:block;width:100%;border:0;border-radius:999px;background:var(--accent,#4A3480);color:#fff;font:700 16px var(--body,Poppins,sans-serif);padding:11px;cursor:pointer}
 #mrg .btns .again-note{flex-basis:100%;text-align:center;font-size:12.5px;color:var(--muted);margin-top:-2px}
+/* Outbreak Sunday from 15 Nov: earned doses (pill / sponge button with a progress ring) */
+#mrg .tool.rx{display:inline-flex;align-items:center;gap:4px;padding-left:7px}
+#mrg .tool.rx .ring{flex:none;display:block}
+#mrg .tool.rx.on{background:var(--ok);border-color:var(--ok);color:#fff}
+#mrg .tool.rx[hidden]{display:none!important}
+@media (max-width:400px){#mrg .tools{gap:4px}#mrg .tool{padding:5px 8px}}
+/* desktop (class set by size(): fine pointer + wide window): board on the left at full height, score/tools/chain in a side column */
+#mrg.desk .wrap{max-width:none;grid-template-columns:auto 270px;grid-template-rows:auto auto auto auto auto 1fr;justify-content:center;column-gap:24px}
+#mrg.desk .head{grid-column:1/-1;grid-row:1}
+#mrg.desk .board{grid-column:1;grid-row:2/span 5;margin:0;max-width:none}
+#mrg.desk .mbar{grid-column:2;grid-row:2;grid-template-columns:minmax(0,1fr) auto}
+#mrg.desk .mbar>div:nth-child(2){grid-column:1/-1;grid-row:2}
+#mrg.desk .tbar{grid-column:2;grid-row:3;flex-direction:column;align-items:stretch;margin-top:0}
+#mrg.desk .tgt{-webkit-line-clamp:3}
+#mrg.desk .tools{justify-content:flex-start;flex-wrap:wrap}
+#mrg.desk .chain{grid-column:2;grid-row:4;justify-content:flex-start}
+#mrg.desk #mrg-mode{grid-column:2;grid-row:5;text-align:left}
+#mrg.desk .result,#mrg.desk #mrg-nextday,#mrg.desk .archive{grid-column:1/-1}
+#mrg.desk .result{max-width:560px;width:100%;justify-self:center}

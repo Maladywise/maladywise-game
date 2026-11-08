@@ -1,9 +1,14 @@
 /* Mergeon: drop organs (sea creatures in Normie mode), match two of a kind, they merge into the next organ up.
    Daily run: everyone gets the same drop order each day (Sydney time). Practice runs after.
-   Physics by Matter.js (MIT), vendored as matter.min.js. */
+   Physics by Matter.js (MIT), vendored as matter.min.js.
+   Outbreak Sunday (Normie: Slick Sunday) from 15 Nov 2026, "Treat it properly" (RX): no random cure drops; every 6 merges earns a
+   dose (antibiotic / sponge, hold 2), armed from the pill button then tapped on an infected piece (cures it and infected neighbours).
+   Untreated for 20 s, an infection turns resistant (needs 2 doses, spreads twice as fast, immune merge-cure no longer works).
+   Infected pieces swell up to +15%. Wasted dose −10. +50 per cure (+20 if resistant). Earlier Sundays play exactly as before.
+   Determinism: only the drop PRNG (rnd) sets the drop order; infections use irnd, shake srnd; nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -106,10 +111,16 @@
     REACT: [["Small fry today. Dive back in.", "Shell of a try. Go again."], ["Swimmingly done.", "Not bad for a day at the beach."], ["Fin-tastic run!", "Making waves, you are."]]
   };
   // Outbreak Sunday extras (Normie: an oil slick, cleaned with a sponge). Non-medical wording in Normie.
-  MED.OUT = { badge: "🦠 Outbreak Sunday", share: "🦠", hit: "Germ landed! It can’t merge.", spread: "The infection is spreading!", cure: "Immune response!", clear: "Infection cleared! +50", cleared: "Infections cleared", wasted: "Antibiotic wasted. No germs there.", tint: "rgba(96,190,60,.38)", P: { e: "💊", n: "Antibiotic", r: 17, c: "#FDE2E2" },
+  MED.OUT = { RX: { dose: "Antibiotic", doses: "doses", hit: "Germ landed! Merge to earn 💊, then treat it early.", earned: "Dose earned! 💊", res: "Resistant! Needs a full course: 2 doses", resWord: "resistant", half: "Half a course. One more dose to finish it.", cure: "Treated! Keep an eye on the rest.", clear: "All clear! Infection gone.", wasted: "Antibiotics don’t work on nothing.", ready: "Antibiotic ready. Tap an infected piece.",
+      tip: ["Earn a 💊 dose every 6 merges (hold 2).", "Treat early: after 20 s a germ turns resistant and needs 2 doses.", "Don’t waste them: no germ, −10 points."],
+      first: "First cure", fact: "Antibiotics only work on bacteria, and every unnecessary course helps resistance grow. Finish the course your doctor prescribes." },
+    badge: "🦠 Outbreak Sunday", share: "🦠", hit: "Germ landed! It can’t merge.", spread: "The infection is spreading!", cure: "Immune response!", clear: "Infection cleared! +50", cleared: "Infections cleared", wasted: "Antibiotic wasted. No germs there.", tint: "rgba(96,190,60,.38)", P: { e: "💊", n: "Antibiotic", r: 17, c: "#FDE2E2" },
     ART: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><g transform=\"rotate(-35 50 50)\"><path d=\"M50 14 L30 14 Q8 14 8 50 Q8 86 30 86 L50 86Z\" fill=\"#EF4B4B\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M50 14 L70 14 Q92 14 92 50 Q92 86 70 86 L50 86Z\" fill=\"#FFFFFF\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M22 34 Q24 24 34 22\" stroke=\"#FFA3A3\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/></g>" + FACE(50, 54, 0.9) + "</svg>",
     fact: "Antibiotic! It cures every infected piece it bumps into. Penicillin was discovered by Alexander Fleming in 1928." };
-  SEA.OUT = { badge: "🛢️ Slick Sunday", share: "🛢️", hit: "Oil slick! It can’t merge.", spread: "The slick is spreading!", cure: "Clean-up crew!", clear: "Spill cleaned up! +50", cleared: "Slicks cleaned", wasted: "Sponge wasted. Nothing to clean there.", tint: "rgba(40,30,60,.42)", P: { e: "🧽", n: "Sponge", r: 17, c: "#FFF3BF" },
+  SEA.OUT = { RX: { dose: "Sponge", doses: "sponges", hit: "Oil slick! Merge to earn 🧽, then clean it early.", earned: "Sponge earned! 🧽", res: "Stubborn slick! Needs 2 sponges.", resWord: "stubborn", half: "Half clean. One more sponge to finish it.", cure: "Cleaned! Keep an eye on the rest.", clear: "All clean! Spill gone.", wasted: "Sponge wasted. Nothing to clean.", ready: "Sponge ready. Tap a slicked creature.",
+      tip: ["Earn a 🧽 sponge every 6 merges (hold 2).", "Clean early: after 20 s a slick turns stubborn and needs 2 sponges.", "Don’t waste them: no oil, −10 points."],
+      first: "First clean-up", fact: "Oil spill crews fence oil in with floating booms, then skim and soak it up. Some ocean microbes even eat oil, helping clean up spills naturally." },
+    badge: "🛢️ Slick Sunday", share: "🛢️", hit: "Oil slick! It can’t merge.", spread: "The slick is spreading!", cure: "Clean-up crew!", clear: "Spill cleaned up! +50", cleared: "Slicks cleaned", wasted: "Sponge wasted. Nothing to clean there.", tint: "rgba(40,30,60,.42)", P: { e: "🧽", n: "Sponge", r: 17, c: "#FFF3BF" },
     ART: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M14 22 Q14 12 26 12 L74 12 Q86 12 86 22 L88 80 Q88 90 76 90 L24 90 Q12 90 12 80Z\" fill=\"#F7D24A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M12 74 L88 74\" stroke=\"#3A2A55\" stroke-width=\"3\"/><path d=\"M12 74 L88 74 L88 80 Q88 90 76 90 L24 90 Q12 90 12 80Z\" fill=\"#7CC36A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"26\" cy=\"26\" r=\"4\" fill=\"#E0B22E\"/><circle cx=\"76\" cy=\"30\" r=\"5\" fill=\"#E0B22E\"/><circle cx=\"30\" cy=\"62\" r=\"3.5\" fill=\"#E0B22E\"/><circle cx=\"74\" cy=\"60\" r=\"3\" fill=\"#E0B22E\"/></svg>".replace("</svg>", FACE(50, 44, 1) + "</svg>"),
     fact: "Sponge! It cleans every slicked creature it bumps into. Real sea sponges are animals, and some have lived for thousands of years." };
 
@@ -127,7 +138,7 @@
     ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-help" aria-label="How to play">?</button><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
-    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool" id="mrg-shake">Shake</button></span></div>' +
+    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button></span></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
@@ -148,7 +159,8 @@
       '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
       '<li><b>' + (NORMIE ? "🦪 Pearl" : "🧬 Stem cell") + ':</b> a rare wild card that levels up whatever it touches.</li>' +
       '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐.</li>' +
-      '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>' +
+      (String(day) >= RXDAY ? '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil slicks land and spread, and slicked creatures can’t merge." : "germs land and spread, and infected organs can’t merge.") + "<br>" + OUTK.RX.tip.join("<br>") + "</li>" :
+      '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>') +
       '</ul><button type="button" class="mrg-help-go" id="mrg-help-go">Got it</button></div>';
   }
   function showHelp() {
@@ -175,7 +187,7 @@
   function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
   var REAL = sydToday(), qd = new URLSearchParams(location.search).get("date");
-  if (DEBUG) { var dq = /[?&]day=(\d{4}-\d\d-\d\d)\b/.exec(location.search); if (dq) REAL = dq[1]; } // test hook: pretend today is another Sydney date
+  if (DEBUG) { var dq = /[?&]day=(\d{4}-\d\d-\d\d)\b/.exec(location.search); if (dq) REAL = dq[1]; else if (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && qd > REAL) REAL = qd; } // test hook: pretend today is another Sydney date
   var day = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && dayNum(qd) <= dayNum(REAL)) ? qd : REAL;
   function isLive() { return day === REAL; }
   function num(d) { return dayNum(d) - dayNum(FIRST) + 1; }
@@ -194,7 +206,7 @@
   // ---------- physics ----------
   var M = window.Matter, E = M.Engine, B = M.Bodies, C = M.Composite, Ev = M.Events, Bd = M.Body;
   var engine, rnd, queue, cur, nxt, aimX = W / 2, canDrop, score, top, practice, over, toastT, merges, lastT, acc, raf;
-  var NEW, OUT, srnd, irnd, chain, lastMT, bestChain, tgt, tgtHit, wildUsed, shakeLeft, cuts, arm, parts = [], nextBeat = 0, drops, steps, infN, infCleared, comboT;
+  var NEW, OUT, RX, doses, rxProg, resCleared, srnd, irnd, chain, lastMT, bestChain, tgt, tgtHit, wildUsed, shakeLeft, cuts, arm, parts = [], nextBeat = 0, drops, steps, infN, infCleared, comboT;
   var cv = $("cv"), ctx = cv.getContext("2d"), dpr = 1, scale = 1;
 
   var NOREP = true; // never the same piece twice in a row (from 8 Nov 2026; today's daily kept as dealt)
@@ -204,10 +216,13 @@
   // from 9 Nov 2026: only the five smallest drop (19.8% each); bladder, stomach and heart are made by merging only. Wild 1%; Outbreak Sunday cure 3%.
   var FIVEDAY = "2026-11-09", FIVE = true;
   var ODDS5 = [0.198, 0.198, 0.198, 0.198, 0.198, 0, 0, 0, 0.01], ODDS5_OUT = [0.192, 0.192, 0.192, 0.192, 0.192, 0, 0, 0, 0.01, 0.03];
+  // from 15 Nov 2026 ("Treat it properly"): Outbreak Sundays drop no cures (0%); its 3% goes back to the five smallest evenly,
+  // which is exactly the plain odds (ODDS5, or ODDS before 9 Nov). Doses are earned by merging instead.
+  var RXDAY = "2026-11-15", RX_EVERY = 6, RX_MAX = 2, RX_RES = 1200, RX_WASTE = 10; // RX_RES: 20 s in 60 Hz physics steps
   function roll1() {
     var x = rnd();
     if (!NOREP) return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; // older dailies keep their original odds
-    var od = FIVE ? (OUT ? ODDS5_OUT : ODDS5) : (OUT ? ODDS_OUT : ODDS);
+    var od = FIVE ? (OUT && !RX ? ODDS5_OUT : ODDS5) : (OUT && !RX ? ODDS_OUT : ODDS);
     for (var i = 0, c = 0; i < od.length; i++) { c += od[i]; if (x < c) return i === 8 ? WILD : i === 9 ? CURE : i; }
     return 0;
   }
@@ -216,6 +231,7 @@
     practice = !!isPractice; over = false; score = 0; top = -1; merges = []; canDrop = true;
     rnd = mulberry32(isPractice ? (Math.random() * 4294967296) >>> 0 : dayNum(day) * 2654435761 >>> 0);
     NOREP = practice || String(day) >= NEWDAY; NEW = NOREP; OUT = NEW && weekday(day) === 0; FIVE = practice || String(day) >= FIVEDAY;
+    RX = OUT && String(day) >= RXDAY; doses = 0; rxProg = 0; resCleared = 0; // practice runs on those Sundays too
     // separate PRNGs for the shake and infections, so the drop order never changes
     var seed2 = isPractice ? (Math.random() * 4294967296) >>> 0 : (dayNum(day) * 2246822519) >>> 0;
     srnd = mulberry32((seed2 ^ 0x5BD1E995) >>> 0); irnd = mulberry32((seed2 ^ 0x27D4EB2F) >>> 0);
@@ -233,7 +249,8 @@
     if (!raf) raf = requestAnimationFrame(loop);
   }
   function pieces() { return C.allBodies(engine.world).filter(function (o) { return o.lv !== undefined && !o.gone; }); }
-  function touching(a, b, pad) { var dx = a.position.x - b.position.x, dy = a.position.y - b.position.y, r = info(a.lv).r + info(b.lv).r + (pad || 3); return dx * dx + dy * dy < r * r; }
+  function rad(o) { return info(o.lv).r * (o.sw || 1); } // o.sw: swelling of an infected piece (RX Sundays only; 1 otherwise)
+  function touching(a, b, pad) { var dx = a.position.x - b.position.x, dy = a.position.y - b.position.y, r = rad(a) + rad(b) + (pad || 3); return dx * dx + dy * dy < r * r; }
   function onHit(ev) {
     ev.pairs.forEach(function (p) {
       var a = p.bodyA, b = p.bodyB;
@@ -251,8 +268,9 @@
       var a = m[0], b = m[1], kind = m[2];
       if (kind === "cure") { useCure(a); return; }
       var lv = a.lv, wild = kind === "wild";
-      // a merge next to an infected piece cures it
-      if (infN) pieces().forEach(function (q) { if (q.inf && (touching(q, a, 6) || touching(q, b, 6))) cureOne(q, OUTK.cure); });
+      // a merge next to an infected piece cures it (from 15 Nov: not a resistant one)
+      if (infN) pieces().forEach(function (q) { if (q.inf && !(RX && q.res) && (touching(q, a, 6) || touching(q, b, 6))) cureOne(q, OUTK.cure); });
+      if (RX) earn();
       C.remove(engine.world, a); C.remove(engine.world, b);
       if (wild) wildUsed = true;
       var x = wild ? a.position.x : (a.position.x + b.position.x) / 2, y = wild ? a.position.y : (a.position.y + b.position.y) / 2;
@@ -303,21 +321,80 @@
     var c = pieces().filter(function (q) { return q !== skip && !q.inf && q.lv < O.length; });
     if (!c.length) return;
     c.sort(function (p, q) { return q.lv - p.lv || p.id - q.id; }); // highest level, ties by lowest index
-    setInf(c[0], true); toast(OUTK.hit); sfx("germ");
+    setInf(c[0], true); toast(RX ? RXK.hit : OUTK.hit); sfx("germ");
   }
-  function spread() {
+  function spread(resOnly) {
     if (infN >= 3 || !infN) return;
     var all = pieces(), cand = [];
-    all.forEach(function (q) { if (!q.inf || q.lv >= O.length) return; all.forEach(function (t) { if (!t.inf && t.lv < O.length && t !== q && touching(q, t, 4) && cand.indexOf(t) < 0) cand.push(t); }); });
+    all.forEach(function (q) { if (!q.inf || q.lv >= O.length || (resOnly && !q.res)) return; all.forEach(function (t) { if (!t.inf && t.lv < O.length && t !== q && touching(q, t, 4) && cand.indexOf(t) < 0) cand.push(t); }); });
     if (!cand.length) return;
     cand.sort(function (p, q) { return p.id - q.id; });
     setInf(cand[Math.floor(irnd() * cand.length)], true); toast(OUTK.spread); sfx("germ");
   }
-  function setInf(q, on) { if (!!q.inf === on) return; q.inf = on; infN += on ? 1 : -1; }
+  function setInf(q, on) { if (!!q.inf === on) return; q.inf = on; infN += on ? 1 : -1; q.res = false; if (on) { q.infS = steps; q.wasRes = false; } }
   function cureOne(q, msg) {
     if (!q.inf) return;
+    if (RX) { rxCure(q); if (msg && infN) toast(msg); return; }
     setInf(q, false); infCleared++; burst(q.position.x, q.position.y, 3); if (msg) toast(msg); sfx("chime");
     if (!infN) { score += 50; toast(OUTK.clear); floatTxt(q.position.x, q.position.y - 14, "+50"); hud(); }
+  }
+  // ---------- "Treat it properly" (RX Sundays from 15 Nov 2026) ----------
+  var RXK = OUTK.RX;
+  function rxCure(q) { // cure one piece: +50 if caught before it turned resistant, +20 if it had been resistant
+    var was = !!q.wasRes, pts = was ? 20 : 50;
+    setInf(q, false); infCleared++; if (was) resCleared++; q.wasRes = false;
+    score += pts; burst(q.position.x, q.position.y, 3); floatTxt(q.position.x, q.position.y - 14, "+" + pts); sfx("chime");
+    if (!infN) toast(RXK.clear);
+    factOnce("rx"); hud();
+  }
+  function earn() { // every RX_EVERY merges earns a dose, holding at most RX_MAX
+    if (doses >= RX_MAX) { rxProg = 0; return; }
+    if (++rxProg >= RX_EVERY) { rxProg = 0; doses++; toast(RXK.earned + " ×" + doses); sfx("target"); buzz(15); }
+    tbarUI();
+  }
+  function waste(x, y) {
+    doses--; arm = false; score = Math.max(0, score - RX_WASTE);
+    toast(RXK.wasted); floatTxt(x, y, "−" + RX_WASTE); sfx("snip"); buzz(30); tbarUI(); hud();
+  }
+  function treat(q) { // a dose on infected piece q: also treats every infected piece touching it
+    var hit = [q];
+    pieces().forEach(function (t) { if (t !== q && t.inf && touching(q, t, 10)) hit.push(t); });
+    doses--; arm = false; var half = 0;
+    hit.forEach(function (t) {
+      if (t.res) { t.res = false; t.infS = steps; half++; burst(t.position.x, t.position.y, 2); } // a full course needs 2: first dose downgrades it
+      else rxCure(t);
+    });
+    if (half && infN) toast(RXK.half); else if (infN) toast(RXK.cure);
+    buzz(12); tbarUI(); hud();
+  }
+  function doseAt(px, py) {
+    if (!doses || over) return false;
+    var hit = null, best = 1e9;
+    pieces().forEach(function (o) { var dx = o.position.x - px, dy = o.position.y - py, d = Math.sqrt(dx * dx + dy * dy) - rad(o); if (d < 12 && d < best) { best = d; hit = o; } });
+    if (!infN) { waste(px, py); return true; } // no infection anywhere: wasted, wherever you tap
+    if (!hit) return false; // tapped empty space: stay armed
+    if (!hit.inf) { waste(hit.position.x, hit.position.y); return true; }
+    treat(hit); return true;
+  }
+  function doseNearest() { // keyboard: Enter while armed treats the infected piece nearest the aim line
+    var best = null, bd = 1e9;
+    pieces().forEach(function (o) { if (!o.inf) return; var d = Math.abs(o.position.x - aimX) + (o.res ? -40 : 0); if (d < bd) { bd = d; best = o; } });
+    if (best) treat(best); else if (doses) waste(aimX, H / 2);
+  }
+  function swell(o, to) { // scale body and drawing together; Matter.Body.scale keeps density, so mass and inertia follow
+    var f = to / (o.sw || 1); if (Math.abs(f - 1) < 1e-6) return;
+    Bd.scale(o, f, f); o.sw = to; if (o.off) { o.off.x *= f; o.off.y *= f; }
+  }
+  function rxTick() { // once per physics step
+    var all = pieces();
+    for (var i = 0; i < all.length; i++) {
+      var o = all[i];
+      if (o.inf) {
+        if (!o.res && steps - o.infS >= RX_RES) { o.res = true; o.wasRes = true; toast(RXK.res); sfx("germ"); buzz([20, 30, 20]); }
+        if (steps % 120 === 0 && (o.sw || 1) < 1.15) swell(o, Math.min(1.15, (o.sw || 1) + 0.01)); // ~1% radius every 2 s, max +15%
+      } else if (o.sw && o.sw > 1) swell(o, Math.max(1, o.sw - 0.0025)); // cured: shrinks back over about 1 s
+    }
+    if (infN && steps % 300 === 0) { if (steps % 600 === 0) spread(false); else if (all.some(function (o) { return o.res; })) spread(true); } // resistant pieces spread twice as fast
   }
   function useCure(c) {
     var n = 0, wasInf = infN;
@@ -333,7 +410,7 @@
       // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
       var SLACK = FIVE ? 14 : 0, GRACE = FIVE ? 3200 : 1800, FRESH = FIVE ? 2000 : 1500;
       if (o.fresh && now - o.fresh < FRESH) continue;
-      if (o.position.y - info(o.lv).r < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
+      if (o.position.y - rad(o) < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
       else o.overT = 0;
     }
     return danger;
@@ -346,7 +423,7 @@
     var danger = 0, now = performance.now();
     if (!over) {
       acc += dt;
-      while (acc >= 1000 / 60) { E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (OUT && infN && steps % 600 === 0) spread(); }
+      while (acc >= 1000 / 60) { E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread(); }
       danger = checkOver(now);
       // danger tension: a heartbeat (Normie: a sonar ping) that speeds up the longer a piece sits over the line
       if (danger && !over) { if (now >= nextBeat) { sfx(NORMIE ? "sonar" : "beat"); nextBeat = now + (NORMIE ? 1100 - 650 * Math.min(1, danger) : 900 - 560 * Math.min(1, danger)); } }
@@ -356,8 +433,22 @@
   }
 
   // ---------- drawing ----------
+  // desktop (mouse/trackpad, wide window; touchscreen laptops with a mouse count): score, tools and chain move to a side column
+  // so the board can use the full height. Phones and tablets keep the stacked layout.
+  var FINE = null; try { FINE = matchMedia("(hover:hover) and (pointer:fine)"); FINE.addEventListener("change", function () { size(); }); } catch (e) {}
+  function desk() { return !!(FINE && FINE.matches) && (window.innerWidth || 0) >= 900; }
   function size() {
-    var b = $("board"); b.style.maxWidth = "";
+    var b = $("board"), dk = desk(); b.style.maxWidth = ""; b.style.width = "";
+    root.classList.toggle("desk", dk);
+    if (dk) {
+      var vh0 = window.innerHeight || 800, bt = b.getBoundingClientRect().top + (window.pageYOffset || 0);
+      var avail = root.clientWidth - 300, wd = Math.floor((vh0 - bt - 14) * W / H);
+      wd = Math.max(320, Math.min(avail, 760, wd)); b.style.width = b.style.maxWidth = (wd + 4) + "px";
+      scale = wd / W; dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+      cv.style.width = wd + "px"; cv.style.height = Math.round(H * scale) + "px";
+      cv.width = Math.round(wd * dpr); cv.height = Math.round(H * scale * dpr);
+      return;
+    }
     var w = b.clientWidth || 360;
     // fit the whole game on screen: board height limited by the viewport (leave room for the rows under the board)
     var vh = window.innerHeight || 700, top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0), below = 96;
@@ -369,12 +460,12 @@
     cv.width = Math.round(w * dpr); cv.height = Math.round(H * scale * dpr);
   }
   var EMF = '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
-  function organ(lv, x, y, ang, alpha, off) {
-    var o = info(lv);
+  function organ(lv, x, y, ang, alpha, off, sc) {
+    var o = info(lv); sc = sc || 1;
     ctx.save(); ctx.globalAlpha = alpha || 1; ctx.translate(x, y); ctx.rotate(ang || 0); if (off) ctx.translate(off.x, off.y);
     var im = IMG[lv];
-    if (im.complete && im.naturalWidth) { var d = o.r * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); }
-    else { ctx.beginPath(); ctx.arc(0, 0, o.r, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill(); ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.e, 0, o.r * 0.06); }
+    if (im.complete && im.naturalWidth) { var d = o.r * sc * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); }
+    else { ctx.beginPath(); ctx.arc(0, 0, o.r * sc, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill(); ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.e, 0, o.r * 0.06); }
     ctx.restore();
   }
   function aura(lv, x, y, now) { // a glowing ring marks the special pieces
@@ -383,13 +474,26 @@
     ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
   }
   function germ(o) { // infected look: tint + a small badge (Medical: a spiky germ; Normie: an oil drop)
-    var r = info(o.lv).r, x = o.position.x, y = o.position.y;
+    var r = rad(o), x = o.position.x, y = o.position.y;
+    if (RX) { // countdown arc to resistance; resistant = dark, thick ring and a shield ("R" in Medical)
+      ctx.save();
+      if (o.res) { ctx.lineWidth = 5; ctx.strokeStyle = NORMIE ? "#120E1C" : "#4A1030"; ctx.beginPath(); ctx.arc(x, y, r + 3, 0, Math.PI * 2); ctx.stroke(); }
+      else { var k = Math.min(1, (steps - (o.infS || 0)) / RX_RES); ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.strokeStyle = k > 0.7 ? "#D0573E" : "#E0A030"; ctx.beginPath(); ctx.arc(x, y, r + 2.5, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - k)); ctx.stroke(); }
+      ctx.restore();
+    }
     ctx.save(); ctx.fillStyle = OUTK.tint; ctx.beginPath(); ctx.arc(x, y, r * 0.92, 0, Math.PI * 2); ctx.fill();
     var bx = x + r * 0.55, by = y - r * 0.55, s = Math.max(8, Math.min(14, r * 0.3));
     ctx.translate(bx, by); ctx.lineWidth = 2; ctx.strokeStyle = "#3A2A55";
     if (NORMIE) { ctx.fillStyle = "#1E1A2B"; ctx.beginPath(); ctx.moveTo(0, -s * 1.2); ctx.quadraticCurveTo(s, 0, s * 0.8, s * 0.4); ctx.arc(0, s * 0.4, s * 0.8, 0, Math.PI); ctx.quadraticCurveTo(-s, 0, 0, -s * 1.2); ctx.fill(); ctx.stroke(); ctx.fillStyle = "#8C86A8"; ctx.beginPath(); ctx.arc(-s * 0.3, s * 0.2, s * 0.22, 0, Math.PI * 2); ctx.fill(); }
     else { ctx.fillStyle = "#6CC04A"; ctx.beginPath(); for (var i = 0; i < 16; i++) { var a = i * Math.PI / 8, rr = i % 2 ? s * 0.75 : s * 1.15; ctx.lineTo(Math.cos(a) * rr, Math.sin(a) * rr); } ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.fillStyle = "#2A1E3D"; ctx.beginPath(); ctx.arc(-s * 0.28, -s * 0.1, s * 0.14, 0, Math.PI * 2); ctx.arc(s * 0.28, -s * 0.1, s * 0.14, 0, Math.PI * 2); ctx.fill(); }
     ctx.restore();
+    if (RX && o.res) { // shield on the other shoulder
+      var sx = x - r * 0.55, sy = y - r * 0.55, h = Math.max(9, Math.min(14, r * 0.32));
+      ctx.save(); ctx.translate(sx, sy); ctx.fillStyle = NORMIE ? "#120E1C" : "#4A1030"; ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(0, -h); ctx.lineTo(h * 0.85, -h * 0.6); ctx.quadraticCurveTo(h * 0.8, h * 0.5, 0, h); ctx.quadraticCurveTo(-h * 0.8, h * 0.5, -h * 0.85, -h * 0.6); ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#FFFFFF"; ctx.font = "700 " + Math.round(h * 1.1) + "px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(NORMIE ? "2" : "R", 0, h * 0.02);
+      ctx.restore();
+    }
   }
   function draw(danger, dt, now) {
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
@@ -415,15 +519,15 @@
           var sx, sy;
           if (quiet()) { sx = sy = 0.75 + 0.25 * Math.min(1, k * 2); }
           else { var g = 0.6 + 0.4 * Math.min(1, k * 2.2), w = 0.2 * Math.sin(k * Math.PI * 3) * (1 - k); sx = g * (1 + w); sy = g * (1 - w); } // squash-and-bounce
-          ctx.save(); ctx.translate(o.position.x, o.position.y); ctx.scale(sx, sy); organ(o.lv, 0, 0, o.angle, 1, o.off); ctx.restore();
+          ctx.save(); ctx.translate(o.position.x, o.position.y); ctx.scale(sx, sy); organ(o.lv, 0, 0, o.angle, 1, o.off, o.sw); ctx.restore();
           if (o.inf) germ(o);
           return;
         }
       }
-      organ(o.lv, o.position.x, o.position.y, o.angle, 1, o.off);
+      organ(o.lv, o.position.x, o.position.y, o.angle, 1, o.off, o.sw);
       if (o.lv >= O.length) aura(o.lv, o.position.x, o.position.y, now);
       if (o.inf) germ(o);
-      if (arm) { ctx.save(); ctx.strokeStyle = "rgba(208,87,62,.55)"; ctx.lineWidth = 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, info(o.lv).r * 0.95, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
+      if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
     drawParts(dt || 16);
   }
@@ -475,13 +579,24 @@
   }
   function tbarUI() {
     var t = $("tgt"), on = tgt >= 0, html = "";
-    if (OUT) html += '<span class="ob">' + OUTK.badge + "</span> ";
+    if (OUT) html += '<span class="ob"' + (RX ? ' title="' + esc(RXK.tip.join("\n")) + '"' : "") + ">" + OUTK.badge + "</span> ";
     if (on) html += tgtHit ? '<span class="hit">⭐ Target hit: ' + esc(O[tgt].n) + (practice ? " (practice)" : "") + "</span>"
       : "🎯 " + (practice ? "Practice target" : OUT ? "Target" : "Today’s target") + ": make " + esc(aName(tgt));
-    t.innerHTML = html; t.title = on ? "Today’s target: make " + aName(tgt) : "";
+    t.innerHTML = html; t.title = on ? "Today’s target: make " + aName(tgt) + (RX ? "\n" + RXK.tip.join("\n") : "") : "";
     $("tools").hidden = !NEW;
-    var c = $("cut"); c.textContent = K.TOOL.e + " " + cuts; c.disabled = !cuts || over; c.classList.toggle("on", arm);
-    c.setAttribute("aria-label", arm ? K.TOOL.n + " ready. Tap a piece, or tap here to cancel" : K.TOOL.n + ": " + cuts + " left"); c.title = K.TOOL.n + " (" + cuts + " left)";
+    var c = $("cut"); c.textContent = K.TOOL.e + " " + cuts; c.disabled = !cuts || over;
+    c.classList.toggle("on", arm === "cut");
+    c.setAttribute("aria-label", arm === "cut" ? K.TOOL.n + " ready. Tap a piece, or tap here to cancel" : K.TOOL.n + ": " + cuts + " left"); c.title = K.TOOL.n + " (" + cuts + " left)";
+    var p = $("rx"); p.hidden = !RX;
+    if (RX) {
+      var fr = doses >= RX_MAX ? 1 : rxProg / RX_EVERY, C2 = 2 * Math.PI * 6;
+      p.innerHTML = '<svg class="ring" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2.4"/>' +
+        '<circle cx="8" cy="8" r="6" fill="none" stroke="var(--ok)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="' + (C2 * fr).toFixed(2) + " " + C2.toFixed(2) + '" transform="rotate(-90 8 8)"/></svg>' + PO.e + " " + doses;
+      p.disabled = (!doses && arm !== "rx") || over; p.classList.toggle("on", arm === "rx");
+      var more = RX_EVERY - rxProg, lab = RXK.dose + ": " + doses + " of " + RX_MAX + (doses >= RX_MAX ? ", full" : ". " + more + " more merge" + (more === 1 ? "" : "s") + " to the next");
+      p.setAttribute("aria-label", arm === "rx" ? RXK.dose + " ready. Tap an infected piece or press Enter to treat the nearest. Tap here or press Escape to cancel" : lab);
+      p.title = lab;
+    }
     var s = $("shake"); s.textContent = shakeLeft ? "Shake" : "Shaken"; s.disabled = !shakeLeft || over;
     $("tbar").hidden = !NEW && !on && !OUT;
     cv.classList.toggle("arm", !!arm);
@@ -500,20 +615,23 @@
   function nextFact() {
     var f = $("fact"); clearTimeout(factT);
     if (!factQ.length) { factOn = false; f.hidden = true; return; }
-    var lv = factQ.shift(), tx = lv === WILD ? K.WFACT : lv === CURE ? OUTK.fact : K.FACTS[lv];
-    factOn = true; f.innerHTML = pic(lv, 32) + "<div><b>New: " + esc(info(lv).n) + "</b><span>" + esc(tx) + "</span></div>";
+    var lv = factQ.shift();
+    if (lv === "rx") { factOn = true; f.innerHTML = pic(CURE, 32) + "<div><b>" + esc(RXK.first) + "</b><span>" + esc(RXK.fact) + "</span></div>"; }
+    else { var tx = lv === WILD ? K.WFACT : lv === CURE ? OUTK.fact : K.FACTS[lv]; factOn = true; f.innerHTML = pic(lv, 32) + "<div><b>New: " + esc(info(lv).n) + "</b><span>" + esc(tx) + "</span></div>"; }
     f.hidden = false; f.classList.remove("on"); void f.offsetWidth; f.classList.add("on"); sfx("chime");
     factT = setTimeout(nextFact, 3000);
   }
+  function factOnce(k) { if (coll[k]) return; coll[k] = 1; put(CKEY, coll); factQ.push(k); if (!factOn) nextFact(); } // once per device
   $("fact").addEventListener("pointerdown", function (e) { e.stopPropagation(); e.preventDefault(); nextFact(); });
   // ---------- power-ups: scalpel (Normie: net) and shake ----------
-  $("cut").onclick = function () { if (!cuts || over) return; arm = !arm; if (arm) { toast(K.TOOL.hint); factQ = []; nextFact(); } tbarUI(); this.blur(); };
+  $("cut").onclick = function () { if (!cuts || over) return; arm = arm === "cut" ? false : "cut"; if (arm) { toast(K.TOOL.hint); factQ = []; nextFact(); } tbarUI(); this.blur(); };
+  $("rx").onclick = function () { if (!RX || over || (!doses && arm !== "rx")) return; arm = arm === "rx" ? false : "rx"; if (arm) { toast(RXK.ready); factQ = []; nextFact(); } tbarUI(); this.blur(); };
   $("shake").onclick = function () { doShake(); this.blur(); };
   function cutAt(px, py) {
     var bs = pieces(), hit = null, best = 1e9;
-    bs.forEach(function (o) { var dx = o.position.x - px, dy = o.position.y - py, d = Math.sqrt(dx * dx + dy * dy) - info(o.lv).r; if (d < 12 && d < best) { best = d; hit = o; } });
+    bs.forEach(function (o) { var dx = o.position.x - px, dy = o.position.y - py, d = Math.sqrt(dx * dx + dy * dy) - rad(o); if (d < 12 && d < best) { best = d; hit = o; } });
     if (!hit) return false;
-    hit.gone = true; if (hit.inf) { setInf(hit, false); infCleared++; if (!infN) { score += 50; toast(OUTK.clear); } }
+    hit.gone = true; if (hit.inf) { var wr = hit.wasRes; setInf(hit, false); infCleared++; if (RX) { if (wr) resCleared++; if (!infN) toast(RXK.clear); } else if (!infN) { score += 50; toast(OUTK.clear); } }
     C.remove(engine.world, hit); cuts--; arm = false; poof(hit.position.x, hit.position.y, info(hit.lv).r);
     sfx("snip"); buzz(12); tbarUI(); hud(); return true;
   }
@@ -541,11 +659,11 @@
     ov.innerHTML = (best ? '<p class="best">🏆 Best ever!</p>' : "") +
       '<div class="react">' + pic(top >= 0 ? top : 0, 56) + '<span class="bub">' + esc(pick(rq)) + "</span></div>" +
       "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
-      (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + "</span>" : "");
+      (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "");
     ov.hidden = false;
     if (best) { burst(W / 2, H / 3, 8); sfx("target"); }
     if (!practice && !st.done) {
-      st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared }; put(KEY, st);
+      st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared, rx: RX, res: resCleared }; put(KEY, st);
       if (isLive() && stats.last !== day) {
         var consecutive = stats.last && dayNum(day) - dayNum(stats.last) === 1;
         stats.played++; if (st.win) stats.wins++;
@@ -564,7 +682,7 @@
   }
   function shareText() {
     var s = st.score, tp = st.top;
-    var grid = gridOf(tp) + (st.wild ? " " + WO.e : "") + (st.out ? " " + OUTK.share : "") + (st.star ? " ⭐" : "");
+    var grid = gridOf(tp) + (st.wild ? " " + WO.e : "") + (st.out ? " " + OUTK.share + (st.rx ? " cleared " + (st.cleared || 0) : "") : "") + (st.star ? " ⭐" : "");
     return "Mergeon #" + num(day) + (isLive() ? "" : " (archive)") + " " + (tp >= 0 ? O[tp].e : "") + "\n" + grid + "\nScore " + fmt(s) + " · " + K.top + ": " + (tp >= 0 ? O[tp].n : "none") + (st.chain > 1 ? " · Chain ×" + st.chain : "") + "\nmaladywise.com";
   }
   function renderResult(practiceScore) {
@@ -574,7 +692,7 @@
     r.hidden = false;
     r.innerHTML = (practiceScore !== undefined ? '<p class="prac">Practice: <b>' + fmt(practiceScore) + "</b> · " + (practiceScore > s ? "Better than your real run. Typical." : "Your daily run still stands.") + "</p>" : "") +
       '<p class="em-row">' + pic(tp >= 0 ? tp : 0, 64) + '</p><p class="score">' + fmt(s) + '<span> pts</span></p><p class="verdict">' + esc(verdict(tp)) + "</p>" +
-      (st.tgt >= 0 ? '<p class="note">' + (st.star ? "⭐ Today’s target hit: " : "🎯 Today’s target missed: ") + esc(O[st.tgt].n) + (st.out ? " · " + OUTK.cleared + ": " + (st.cleared || 0) : "") + "</p>" : "") +
+      (st.tgt >= 0 ? '<p class="note">' + (st.star ? "⭐ Today’s target hit: " : "🎯 Today’s target missed: ") + esc(O[st.tgt].n) + (st.out ? " · " + OUTK.cleared + ": " + (st.cleared || 0) + (st.rx ? " (" + RXK.resWord + ": " + (st.res || 0) + ")" : "") : "") + "</p>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + K.win + '</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
       '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><span class="again-note">Practice game, doesn’t count</span></div>';
     r.appendChild(lbBox); lbRender();
@@ -702,7 +820,7 @@
   cv.addEventListener("pointerdown", function (e) { down = true; aim(e); try { cv.setPointerCapture(e.pointerId); } catch (x) {} });
   cv.addEventListener("pointermove", function (e) { if (!arm) aim(e); });
   cv.addEventListener("pointerup", function (e) {
-    if (arm) { var b = cv.getBoundingClientRect(); if (down && !over) cutAt((e.clientX - b.left) / scale, (e.clientY - b.top) / scale); down = false; return; }
+    if (arm) { var b = cv.getBoundingClientRect(), ux = (e.clientX - b.left) / scale, uy = (e.clientY - b.top) / scale; if (down && !over) { if (arm === "rx") doseAt(ux, uy); else cutAt(ux, uy); } down = false; return; }
     aim(e); if (down) drop(); down = false;
   });
   cv.addEventListener("pointercancel", function () { down = false; });
@@ -711,7 +829,7 @@
     if (e.key === "Escape" && arm) { arm = false; tbarUI(); return; }
     if (e.key === "ArrowLeft") { aimX = Math.max(0, aimX - 14); e.preventDefault(); }
     else if (e.key === "ArrowRight") { aimX = Math.min(W, aimX + 14); e.preventDefault(); }
-    else if (e.key === " " || e.key === "ArrowDown" || e.key === "Enter") { if (e.target === document.body || e.target === cv) { drop(); e.preventDefault(); } }
+    else if (e.key === " " || e.key === "ArrowDown" || e.key === "Enter") { if (e.target === document.body || e.target === cv) { if (arm === "rx") doseNearest(); else drop(); e.preventDefault(); } }
   });
   window.addEventListener("resize", size); window.addEventListener("load", size); setTimeout(size, 400); setTimeout(size, 1500);
 
@@ -738,7 +856,7 @@
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
   window.MW_mrg = { drop: drop, aim: function (x) { aimX = x; }, state: function () {
     return { score: score, top: top, over: over, n: engine ? C.allBodies(engine.world).length : 0, cur: cur, nxt: nxt, chain: chain, bestChain: bestChain, tgt: tgt, tgtHit: tgtHit,
-      cuts: cuts, arm: arm, shake: shakeLeft, wild: wildUsed, NEW: NEW, OUT: OUT, inf: infN, cleared: infCleared, drops: drops, practice: practice, lb: MLB, coll: coll, parts: parts.length }; } };
+      cuts: cuts, arm: arm, shake: shakeLeft, wild: wildUsed, NEW: NEW, OUT: OUT, inf: infN, cleared: infCleared, RX: RX, doses: doses, rxProg: rxProg, resCleared: resCleared, drops: drops, steps: steps, practice: practice, lb: MLB, coll: coll, parts: parts.length }; } };
   if (DEBUG) { // test hooks (?debug=1)
     var X = window.MW_mrg;
     X.spawn = function (lv, x, y) { return add(lv, x, y).id; };
@@ -746,7 +864,15 @@
     X.cut = function (x, y) { return cutAt(x, y); };
     X.shake = doShake; X.end = end; X.sfx = sfxLog; X.WILD = WILD; X.CURE = CURE; X.target = target;
     X.infect = function () { infect(null); }; X.spread = spread;
-    X.bodies = function () { return pieces().map(function (o) { return { id: o.id, lv: o.lv, x: Math.round(o.position.x), y: Math.round(o.position.y), inf: !!o.inf }; }); };
+    X.bodies = function () { return pieces().map(function (o) { return { id: o.id, lv: o.lv, x: Math.round(o.position.x), y: Math.round(o.position.y), inf: !!o.inf, res: !!o.res }; }); };
+    // RX ("Treat it properly") hooks
+    X.give = function (n) { doses = Math.max(0, Math.min(RX_MAX, doses + (n === undefined ? 1 : n))); tbarUI(); return doses; };
+    X.resist = function (id) { pieces().forEach(function (o) { if (o.inf && (id === undefined || o.id === id)) o.infS = steps - RX_RES; }); }; // turns resistant on the next step
+    X.infState = function () { return pieces().filter(function (o) { return o.inf || (o.sw && o.sw > 1); }).map(function (o) { return { id: o.id, lv: o.lv, x: Math.round(o.position.x), y: Math.round(o.position.y), inf: !!o.inf, res: !!o.res, wasRes: !!o.wasRes, sw: +(o.sw || 1).toFixed(4), age: o.inf ? +((steps - o.infS) / 60).toFixed(1) : 0, bodyR: +Math.sqrt(o.area / Math.PI).toFixed(2) }; }); };
+    X.infectId = function (id) { pieces().forEach(function (o) { if (o.id === id) setInf(o, true); }); };
+    X.armRx = function () { $("rx").onclick.call($("rx")); return arm; };
+    X.dose = function (x, y) { return doseAt(x, y); };
+    X.swellTo = function (id, v) { pieces().forEach(function (o) { if (o.id === id) swell(o, v); }); };
     X.share = function () { return st.done ? shareText() : ""; };
   }
 
