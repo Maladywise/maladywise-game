@@ -27,7 +27,7 @@ from urllib.parse import urlsplit, unquote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "maladywise.com"
-SKIP_DIRS = {".git", "node_modules", "_data", "__pycache__"}
+SKIP_DIRS = {".claude", ".git", "node_modules", "_data", "__pycache__"}
 VERSIONED = ("shell.js", "shell.css", "site.js", "games.js")
 IMG_LIMIT = 400 * 1024
 IMG_EXT = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif")
