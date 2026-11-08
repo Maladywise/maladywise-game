@@ -1,6 +1,6 @@
 {
  "_about": "Malady Wise health-days calendar. Used by the monthly puzzle build and the home page. kind=day: theme every puzzle that day around puzzle_theme. kind=week: theme the first day only. kind=month: no full themed day; slip 2-4 related puzzles in across the month. tags: specialty = profession day; who = official WHO campaign; zebra = rare-disease angle; gentle = respectful tone, no jokes about patients or the condition; sensitive = home-page blurb only, puzzles NOT themed. If two days share a date, the lowest priority number leads (1 specialty, 2 WHO, 3 other); the other gets a mention in the blurb. Dates for variable days are pre-computed for 2026-2028; recompute from 'rule' for later years. Verify links before publishing; blurbs use Australian spelling. Edit this file directly (data/build-health-days.py is retired and must not be re-run). Tag \"au\" = Australian-only day: the home-page banner shows only to visitors in Australia (detected from the browser time zone), and puzzles are NOT themed for it (the audience is global); at most one light nod in Triviosis. Tags \"history\" (medical-history anniversary) and \"fun\" (quirky day with a health angle) fill days with no awareness day so every date has a theme; they use priority 4 (history) or 5 (fun), so any real awareness day on the same date leads. \"normie\": {name, blurb} = the light, everyday version shown in Normie mode (events without it are hidden there). THEME SPREAD (Nov 2026): on themed days, theme at least 4-5 games, not just Triviosis, using a brainstormed web of associated ideas (e.g. Tsunami Day -> water, islands, boats, sun, earthquakes, cholera, drowning (gentle), crush injury, triage). See STYLE.md 'Daily themes'. Tag 'country' = national day of a country (priority 3): theme puzzles on that country's medical words (incl. funny long ones), famous doctors and inventions, health stats and eponyms; shown to all visitors. Tag \"culture\" = also a famous cultural day (shown under 'Culture & festivals' on /days/); it does not change theming. More famous non-health days (festivals, religious and UN days) live in data/world-days.json, which is calendar-only and never themed.",
- "updated": "2026-11-03",
+ "updated": "2026-11-08",
  "days": [
   {
    "id": "ntd",
@@ -16725,6 +16725,557 @@
     "blurb": "Singapore turns another year older since 1965. Shiok! Fireworks over Marina Bay and chilli crab for dinner.",
     "theme": "Singlish words: lah, shiok (delicious, great), kiasu (afraid of missing out), chope (reserve a seat with a tissue packet); hawker culture (UNESCO, 2020); chilli crab, Hainanese chicken rice, kaya toast; Merlion, Gardens by the Bay"
    }
+  },
+  {
+   "id": "vasculitisday",
+   "name": "World Vasculitis Day",
+   "kind": "day",
+   "rule": "05-15",
+   "dates": {
+    "2026": {
+     "start": "2026-05-15"
+    },
+    "2027": {
+     "start": "2027-05-15"
+    },
+    "2028": {
+     "start": "2028-05-15"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.vasculitis.org.uk/previous-news/world-vasculitis-day",
+   "blurb": "Inflamed blood vessels can affect almost any organ, so vasculitis wears many disguises. Today is for spotting it sooner.",
+   "puzzle_theme": "Vasculitis: giant cell arteritis, ANCA, granulomatosis with polyangiitis, Kawasaki, Takayasu, palpable purpura",
+   "icon": "blood-drop"
+  },
+  {
+   "id": "dravet",
+   "name": "International Dravet Syndrome Awareness Day",
+   "kind": "day",
+   "rule": "06-23",
+   "dates": {
+    "2026": {
+     "start": "2026-06-23"
+    },
+    "2027": {
+     "start": "2027-06-23"
+    },
+    "2028": {
+     "start": "2028-06-23"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://dravetfoundation.org/today-is-dravet-syndrome-awareness-day/",
+   "blurb": "Dravet syndrome is a severe genetic epilepsy that begins in infancy, often with seizures set off by fever. Today is for the families living with it.",
+   "puzzle_theme": "Paediatric epilepsy: sodium channelopathies, SCN1A, febrile seizures, seizure rescue plans, ketogenic diet. No jokes about patients.",
+   "icon": "brain"
+  },
+  {
+   "id": "cdkl5",
+   "name": "International CDKL5 Day",
+   "kind": "day",
+   "rule": "06-17",
+   "dates": {
+    "2026": {
+     "start": "2026-06-17"
+    },
+    "2027": {
+     "start": "2027-06-17"
+    },
+    "2028": {
+     "start": "2028-06-17"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.ucb.com/about-ucb/magazine/detail/article/supporting-international-cdkl5-day",
+   "blurb": "CDKL5 deficiency disorder is a rare genetic condition causing early seizures and developmental delay. Today is for the children and families affected.",
+   "puzzle_theme": "Genetics and epilepsy: X-linked genes, infantile spasms, neurodevelopment, rare epileptic encephalopathies. No jokes about patients.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "cystinosis",
+   "name": "Cystinosis Awareness Day",
+   "kind": "day",
+   "rule": "05-07",
+   "dates": {
+    "2026": {
+     "start": "2026-05-07"
+    },
+    "2027": {
+     "start": "2027-05-07"
+    },
+    "2028": {
+     "start": "2028-05-07"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://cystinosis.org/event/cystinosis-awareness-day/",
+   "blurb": "In cystinosis, cystine builds up as crystals inside cells, harming kidneys and eyes. The date nods to the common 57kb deletion: 5/7.",
+   "puzzle_theme": "Lysosomal storage: cystine crystals, Fanconi syndrome, renal tubules, corneal crystals, cysteamine",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "actionmeso",
+   "name": "Action Mesothelioma Day",
+   "kind": "day",
+   "rule": "nth:1:4:07",
+   "dates": {
+    "2026": {
+     "start": "2026-07-03"
+    },
+    "2027": {
+     "start": "2027-07-02"
+    },
+    "2028": {
+     "start": "2028-07-07"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://asbestosforum.org.uk/amd/",
+   "blurb": "A day to remember people lost to mesothelioma and to push for safe removal of asbestos. Held on the first Friday in July.",
+   "puzzle_theme": "Occupational lung disease: asbestos, pleural plaques, mesothelioma, latency, workplace safety. No jokes about patients.",
+   "icon": "hands-heart"
+  },
+  {
+   "id": "mesoday",
+   "name": "Mesothelioma Awareness Day",
+   "kind": "day",
+   "rule": "09-26",
+   "dates": {
+    "2026": {
+     "start": "2026-09-26"
+    },
+    "2027": {
+     "start": "2027-09-26"
+    },
+    "2028": {
+     "start": "2028-09-26"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.curemeso.org/2019/09/26/16th-annual-mesothelioma-awareness-day",
+   "blurb": "Mesothelioma often appears decades after asbestos exposure. Today backs research and the people living with it.",
+   "puzzle_theme": "Pleura and peritoneum: asbestos fibres, latency, pleural effusion, thoracoscopy, occupational history. No jokes about patients.",
+   "icon": "stethoscope"
+  },
+  {
+   "id": "undiagnosed",
+   "name": "Undiagnosed Children's Day",
+   "kind": "day",
+   "rule": "last:4:04",
+   "dates": {
+    "2026": {
+     "start": "2026-04-24"
+    },
+    "2027": {
+     "start": "2027-04-30"
+    },
+    "2028": {
+     "start": "2028-04-28"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://geneticalliance.org.uk/support-and-information/swan-uk-syndromes-without-a-name/undiagnosed-childrens-day/",
+   "blurb": "Some children have a genetic condition so rare it has no name yet. Today, on the last Friday in April, is for them and their families.",
+   "puzzle_theme": "Clinical genetics: genome sequencing, dysmorphology, de novo variants, the diagnostic odyssey. No jokes about patients.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "cholangiomonth",
+   "name": "Cholangiocarcinoma Awareness Month",
+   "kind": "month",
+   "rule": "month:02",
+   "dates": {
+    "2026": {
+     "start": "2026-02-01",
+     "end": "2026-02-28"
+    },
+    "2027": {
+     "start": "2027-02-01",
+     "end": "2027-02-28"
+    },
+    "2028": {
+     "start": "2028-02-01",
+     "end": "2028-02-29"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://www.cholangiocarcinoma.org/awareness-month/",
+   "blurb": "February is for bile duct cancer: rare, often found late, and the focus of fast-moving research.",
+   "puzzle_theme": "Hepatobiliary: bile ducts, painless jaundice, Courvoisier's sign, ERCP, liver flukes",
+   "icon": "ribbon-green"
+  },
+  {
+   "id": "cmtmonth",
+   "name": "CMT Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://cmtausa.org/press-release/cmta-cmt-awareness-month-2022/",
+   "blurb": "Charcot-Marie-Tooth disease is the most common inherited nerve condition, yet few people have heard of it. September puts it in the spotlight.",
+   "puzzle_theme": "Peripheral nerves: Charcot-Marie-Tooth, myelin, pes cavus, foot drop, nerve conduction studies",
+   "icon": "ribbon-blue"
+  },
+  {
+   "id": "myotonic",
+   "name": "International Myotonic Dystrophy Awareness Day",
+   "kind": "day",
+   "rule": "09-15",
+   "dates": {
+    "2026": {
+     "start": "2026-09-15"
+    },
+    "2027": {
+     "start": "2027-09-15"
+    },
+    "2028": {
+     "start": "2028-09-15"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.myotonic.org/sites/default/files/2025-09/Press-Release_2025-International-Myotonic-Dystrophy-Awareness-Day.pdf",
+   "blurb": "Myotonic dystrophy is the most common adult-onset muscular dystrophy, and it can touch the heart, eyes and hormones too.",
+   "puzzle_theme": "Neuromuscular: myotonia, trinucleotide repeats, anticipation, cataracts, cardiac conduction",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "nmosd",
+   "name": "World NMOSD Day",
+   "kind": "day",
+   "rule": "03-27",
+   "dates": {
+    "2026": {
+     "start": "2026-03-27"
+    },
+    "2027": {
+     "start": "2027-03-27"
+    },
+    "2028": {
+     "start": "2028-03-27"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://emsp.org/wp-content/uploads/2026/03/WORLD-NMOSD-DAY-1.pdf",
+   "blurb": "Neuromyelitis optica spectrum disorder attacks the optic nerves and spinal cord. Once mistaken for MS, it is now known to be its own disease.",
+   "puzzle_theme": "Neuro-ophthalmology: optic neuritis, aquaporin-4, transverse myelitis, MS mimics",
+   "icon": "owl",
+   "icon_fact": "An owl's eyes are tube-shaped and fixed in their sockets, so it turns its head instead, up to about 270 degrees."
+  },
+  {
+   "id": "pscday",
+   "name": "Global PSC Awareness Day",
+   "kind": "day",
+   "rule": "10-29",
+   "dates": {
+    "2026": {
+     "start": "2026-10-29"
+    },
+    "2027": {
+     "start": "2027-10-29"
+    },
+    "2028": {
+     "start": "2028-10-29"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://pscsupport.org.uk/global-psc-awareness-day-2025/",
+   "blurb": "Primary sclerosing cholangitis slowly scars the bile ducts and often travels with inflammatory bowel disease. Today is for the PSC community.",
+   "puzzle_theme": "Hepatology: primary sclerosing cholangitis, bile ducts, MRCP, beading, ulcerative colitis, liver transplant",
+   "icon": "ribbon-green"
+  },
+  {
+   "id": "pbcmonth",
+   "name": "PBC Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://liverfoundation.org/wp-content/uploads/2025/12/Septembers-PBC-Awareness-Month-raises-support-for-a-rare-liver-disease.pdf",
+   "blurb": "Primary biliary cholangitis is an autoimmune liver disease that mostly affects women. Itch and tiredness are often the first clues.",
+   "puzzle_theme": "Hepatology: primary biliary cholangitis, antimitochondrial antibodies, ALP, pruritus, ursodeoxycholic acid",
+   "icon": "dex-lab"
+  },
+  {
+   "id": "leukomonth",
+   "name": "Leukodystrophy Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://alextlc.org/campaign/leukodystrophy-awareness-month/",
+   "blurb": "Leukodystrophies are rare genetic conditions that damage the brain's white matter. September is for the families affected.",
+   "puzzle_theme": "White matter: myelin, oligodendrocytes, adrenoleukodystrophy, MRI, newborn screening. No jokes about patients.",
+   "icon": "brain"
+  },
+  {
+   "id": "hhtmonth",
+   "name": "HHT Awareness Month",
+   "kind": "month",
+   "rule": "month:06",
+   "dates": {
+    "2026": {
+     "start": "2026-06-01",
+     "end": "2026-06-30"
+    },
+    "2027": {
+     "start": "2027-06-01",
+     "end": "2027-06-30"
+    },
+    "2028": {
+     "start": "2028-06-01",
+     "end": "2028-06-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://curehht.org/hht-awareness-month/",
+   "blurb": "Hereditary haemorrhagic telangiectasia causes fragile blood vessels. Frequent nosebleeds are the classic sign. Global HHT Awareness Day is 23 June.",
+   "puzzle_theme": "Vascular genetics: telangiectasia, epistaxis, arteriovenous malformations, Osler-Weber-Rendu",
+   "icon": "blood-drop"
+  },
+  {
+   "id": "rarecancer",
+   "name": "Rare Cancer Day",
+   "kind": "day",
+   "rule": "09-30",
+   "dates": {
+    "2026": {
+     "start": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://rarediseases.org/rare-cancer-day-new/",
+   "blurb": "Rare cancers, taken together, make up a large share of all cancers. Today pushes for research and expert care for every one of them.",
+   "puzzle_theme": "Oncology zebras: sarcomas, rare tumours, tumour boards, clinical trials, cancers named after people. No jokes about patients.",
+   "icon": "zebra-rare"
+  },
+  {
+   "id": "addisons",
+   "name": "Addison's Disease Day",
+   "kind": "day",
+   "rule": "05-29",
+   "dates": {
+    "2026": {
+     "start": "2026-05-29"
+    },
+    "2027": {
+     "start": "2027-05-29"
+    },
+    "2028": {
+     "start": "2028-05-29"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.ese-hormones.org/media/52mnfz3p/whd-2026-awareness-days-calendar.pdf",
+   "blurb": "Addison's disease means the adrenal glands make too little cortisol. Steroid sick-day rules and an emergency card save lives.",
+   "puzzle_theme": "Endocrinology: adrenal glands, cortisol, hyperpigmentation, Synacthen test, adrenal crisis, JFK",
+   "icon": "lifebuoy"
+  },
+  {
+   "id": "achalasiamonth",
+   "name": "Achalasia Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://gutscharity.org.uk/awareness/achalasia-awareness-month/",
+   "blurb": "In achalasia the oesophagus forgets how to squeeze and its bottom valve will not relax, so food struggles to get through.",
+   "puzzle_theme": "Swallowing: oesophagus, lower oesophageal sphincter, bird's beak on barium swallow, manometry, POEM",
+   "icon": "teacup"
+  },
+  {
+   "id": "pfmonth",
+   "name": "Pulmonary Fibrosis Awareness Month",
+   "kind": "month",
+   "rule": "month:09",
+   "dates": {
+    "2026": {
+     "start": "2026-09-01",
+     "end": "2026-09-30"
+    },
+    "2027": {
+     "start": "2027-09-01",
+     "end": "2027-09-30"
+    },
+    "2028": {
+     "start": "2028-09-01",
+     "end": "2028-09-30"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra",
+    "gentle"
+   ],
+   "priority": 3,
+   "link": "https://pulmonaryfibrosis.org/get-involved/pf-awareness",
+   "blurb": "Pulmonary fibrosis stiffens and scars the lungs. Breathlessness and a dry cough, with crackles like Velcro, can be early signs.",
+   "puzzle_theme": "Interstitial lung disease: idiopathic pulmonary fibrosis, Velcro crackles, clubbing, HRCT, antifibrotics",
+   "icon": "ribbon-blue"
+  },
+  {
+   "id": "mct8day",
+   "name": "World MCT8-AHDS Day",
+   "kind": "day",
+   "rule": "10-08",
+   "dates": {
+    "2026": {
+     "start": "2026-10-08"
+    },
+    "2027": {
+     "start": "2027-10-08"
+    },
+    "2028": {
+     "start": "2028-10-08"
+    }
+   },
+   "tags": [
+    "rare",
+    "zebra"
+   ],
+   "priority": 3,
+   "link": "https://www.ese-hormones.org/media/52mnfz3p/whd-2026-awareness-days-calendar.pdf",
+   "blurb": "Allan-Herndon-Dudley syndrome is a rare X-linked condition in which thyroid hormone cannot get into brain cells.",
+   "puzzle_theme": "Thyroid and brain: thyroid hormone transport, T3 and T4, X-linked inheritance, neurodevelopment",
+   "icon": "zebra-rare"
   }
  ]
 }
