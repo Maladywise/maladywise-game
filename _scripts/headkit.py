@@ -17,6 +17,9 @@ What fix_html() does
   3. Honesty: JSON-LD only claims GP review ("reviewedBy", "lastReviewed") on pages that carry
      data-gp-reviewed="YYYY-MM-DD" on <body> or <main> (see STYLE.md). Elsewhere lastReviewed becomes
      dateModified and reviewedBy is removed.
+  4. Image search: every indexable page gets <meta name="robots" content="max-image-preview:large"> (big image
+     previews in Google Images and Discover). Pages with their own robots meta (noindex) and redirect stubs
+     are left alone.
 """
 import json
 import os
@@ -162,8 +165,20 @@ def seen_ext_after_head(scripts, cur, hi):
     return False
 
 
+ROBOTS = '<meta name="robots" content="max-image-preview:large">'
+def fix_robots(src):
+    hi = src.find("</head>")
+    if hi < 0:
+        return src
+    head = src[:hi]
+    if re.search(r'<meta\s+name=["\']robots["\']', head, re.I) or re.search(r'http-equiv=["\']?refresh', head, re.I):
+        return src
+    m = re.search(r'[^\n]*<meta name="viewport"[^>]*>[^\n]*\n', head)
+    if m and m.group(0).strip().startswith("<meta") and m.group(0).strip().endswith(">"):
+        return src[:m.end()] + ROBOTS + "\n" + src[m.end():]
+    return src[:hi] + ROBOTS + "\n" + src[hi:]
 def fix_html(src):
-    return fix_defer(fix_ld(fix_fonts(src)))
+    return fix_robots(fix_defer(fix_ld(fix_fonts(src))))
 
 
 def pages():

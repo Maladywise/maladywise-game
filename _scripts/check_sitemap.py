@@ -35,9 +35,10 @@ SKIP_DIRS = {".git", "node_modules", "_data", "__pycache__"}
 SYD = ZoneInfo("Australia/Sydney")
 VBUMP = re.compile(r"\?v=\d+")
 # lines that never count as a content change: breadcrumb JSON-LD added by add_breadcrumbs.py, and
-# lines that only load assets (preconnect/preload/stylesheet <link>s, <script src> tags), e.g. the
-# Nov 2026 move of Google Fonts into <head>. Readers and search engines don't see those as new content.
+# the site-wide max-image-preview robots meta (Nov 2026), and lines that only load assets
+# (preconnect/preload/stylesheet <link>s, <script src> tags), e.g. the Nov 2026 move of Google Fonts into <head>. Readers and search engines don't see those as new content.
 NOISE = re.compile(r'^\s*(?:<script type="application/ld\+json" id="mw-breadcrumb-ld">.*</script>'
+                   r'|<meta name="robots" content="max-image-preview:large">'
                    r'|<link\b[^>]*\brel=["\']?(?:preconnect|dns-prefetch|preload|stylesheet)["\']?[^>]*>'
                    r'|<script\b[^>]*\bsrc=["\'][^"\']+["\'][^>]*>\s*</script>)\s*$')
 TODAY = dt.datetime.now(SYD).date().isoformat()

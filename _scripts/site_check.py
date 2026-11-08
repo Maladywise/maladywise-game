@@ -12,7 +12,8 @@ checked) and reports:
   3. Pages missing <title>, meta description or canonical
      (redirect stubs and noindex pages are excluded)
   4. Images over 400 KB, and <img> tags without alt
-  5. Sitemap URLs whose file is missing, and indexable pages not in the sitemap
+  5. Sitemap URLs whose file is missing, indexable pages not in the sitemap, and sitemap-images.xml
+     entries whose page or image is missing
   6. JSON files under */puzzles/ and data/ that fail to parse
 
 Exit code is 0 when clean, 1 when anything is reported.
@@ -182,6 +183,17 @@ def main():
             if os.path.basename(p) == "404.html":
                 continue
             issues["sitemap"].append(f"not in sitemap: {rel(p)} (canonical {pg.canonical})")
+
+    # image sitemap (written by export_diagrams.py): each page must be in sitemap.xml, each image must exist
+    ism = os.path.join(ROOT, "sitemap-images.xml")
+    if os.path.exists(ism):
+        for block in re.findall(r"<url>(.*?)</url>", open(ism, encoding="utf-8").read(), re.S):
+            page = re.search(r"<loc>\s*([^<]+?)\s*</loc>", block)
+            if page and url_to_file(page.group(1)) not in in_map:
+                issues["sitemap"].append(f"sitemap-images.xml page not in sitemap.xml: {page.group(1)}")
+            for img in re.findall(r"<image:loc>\s*([^<]+?)\s*</image:loc>", block):
+                if not os.path.isfile(url_to_file(img)):
+                    issues["sitemap"].append(f"sitemap-images.xml, image missing: {img}")
 
     for f in walk((".json",)):
         r = rel(f).replace(os.sep, "/")
