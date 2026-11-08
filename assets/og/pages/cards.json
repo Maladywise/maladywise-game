@@ -307,6 +307,13 @@
 "label": "Condition",
 "title": "Bronchiolitis"
 },
+"bunions": {
+"url": "/bunions/",
+"key": "e4e435b26fcd",
+"v": "9d1fecd2",
+"label": "Condition",
+"title": "Bunions (Hallux Valgus)"
+},
 "cancer-screening": {
 "url": "/cancer-screening/",
 "key": "0ba4a2397183",
@@ -671,6 +678,13 @@
 "label": "Condition",
 "title": "Fever in Children"
 },
+"fibroids": {
+"url": "/fibroids/",
+"key": "8b19c0f16181",
+"v": "f2a2845a",
+"label": "Condition",
+"title": "Fibroids (Uterine Fibroids)"
+},
 "fibromyalgia": {
 "url": "/fibromyalgia/",
 "key": "38a130ffd9bc",
@@ -747,6 +761,13 @@
 "v": "27a71f2c",
 "label": "Condition",
 "title": "Gout"
+},
+"h-pylori": {
+"url": "/h-pylori/",
+"key": "f4e17e2fcb6b",
+"v": "6336f41e",
+"label": "Condition",
+"title": "H. pylori and Stomach Ulcers"
 },
 "haemochromatosis": {
 "url": "/haemochromatosis/",
@@ -909,6 +930,13 @@
 "label": "Condition",
 "title": "Jet Lag"
 },
+"keratosis-pilaris": {
+"url": "/keratosis-pilaris/",
+"key": "25df65fe384e",
+"v": "6410ea77",
+"label": "Condition",
+"title": "Keratosis Pilaris (Chicken Skin)"
+},
 "kidney-stones": {
 "url": "/kidney-stones/",
 "key": "d8b7a5d270fb",
@@ -929,6 +957,20 @@
 "v": "aef0fab9",
 "label": "Exercise handout",
 "title": "Exercises for Knee Arthritis"
+},
+"lactose-intolerance": {
+"url": "/lactose-intolerance/",
+"key": "89b19b05d749",
+"v": "af85d649",
+"label": "Condition",
+"title": "Lactose Intolerance"
+},
+"long-covid": {
+"url": "/long-covid/",
+"key": "a276bb42cf13",
+"v": "7fc2fc41",
+"label": "Condition",
+"title": "Long COVID"
 },
 "low-libido-women": {
 "url": "/low-libido-women/",
@@ -1230,6 +1272,13 @@
 "v": "04004641",
 "label": "Exercise handout",
 "title": "Osteoporosis Exercises"
+},
+"ovarian-cysts": {
+"url": "/ovarian-cysts/",
+"key": "373e0c1d9e89",
+"v": "350e2521",
+"label": "Condition",
+"title": "Ovarian Cysts"
 },
 "palpitations": {
 "url": "/palpitations/",
@@ -2056,6 +2105,13 @@
 "v": "35b0ae28",
 "label": "Condition",
 "title": "Urinary Tract Infection"
+},
+"varicose-veins": {
+"url": "/varicose-veins/",
+"key": "9ee82d0875b2",
+"v": "b3d55af3",
+"label": "Condition",
+"title": "Varicose Veins"
 },
 "vitamin-d": {
 "url": "/vitamin-d/",
