@@ -5,19 +5,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "rareitem"
+    "test": "smoke"
    },
    {
-    "test": "bedlab"
+    "test": "bombdog"
    },
    {
-    "test": "humanlie"
+    "test": "facerec"
    },
    {
-    "test": "captcha"
+    "test": "polygraph"
    },
    {
-    "test": "pas"
+    "test": "bedfield"
    }
   ]
  },
@@ -27,24 +27,24 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "snakedog"
+    "test": "lineupseq",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine the real culprit is in the line-up only half the time.",
+     "sourced": false
+    }
    },
    {
-    "test": "lineupsim"
+    "test": "turing"
+   },
+   {
+    "test": "pas"
    },
    {
     "test": "aidet"
    },
    {
-    "test": "facerec"
-   },
-   {
-    "test": "bedfield",
-    "twist": {
-     "prev": 20,
-     "where": "Imagine 1 in 5 spots the dog checks really has bed bugs.",
-     "sourced": false
-    }
+    "test": "lineupsim"
    }
   ]
  },
@@ -54,24 +54,24 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "gmail"
+    "test": "mintemp"
    },
    {
-    "test": "lineupseq"
+    "test": "bodyscanner"
    },
    {
-    "test": "koaladog"
-   },
-   {
-    "test": "bombdog"
-   },
-   {
-    "test": "passport",
+    "test": "teachers",
     "twist": {
-     "prev": 1,
-     "where": "Imagine 1 in 100 IDs handed over is a fake.",
+     "prev": 10,
+     "where": "Imagine 1 in 10 essays in the pile was written by AI.",
      "sourced": false
     }
+   },
+   {
+    "test": "phishing"
+   },
+   {
+    "test": "birdnet"
    }
   ]
  },
@@ -81,19 +81,19 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "sharkplane"
+    "test": "vsa"
    },
    {
-    "test": "tornado"
+    "test": "gmail"
    },
    {
-    "test": "tsa"
+    "test": "fakereviewhuman"
    },
    {
-    "test": "weather"
+    "test": "winddog"
    },
    {
-    "test": "pigeonsea"
+    "test": "fireant"
    }
   ]
  },
@@ -103,24 +103,24 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "termitedog"
+    "test": "prevar"
    },
    {
-    "test": "crewsea"
+    "test": "wildliferat"
    },
    {
-    "test": "fakereviewhuman",
+    "test": "poems"
+   },
+   {
+    "test": "termitedog",
     "twist": {
-     "prev": 20,
-     "where": "Imagine 1 in 5 reviews you read is fake.",
+     "prev": 10,
+     "where": "Imagine 1 in 10 houses the dog checks really has termites.",
      "sourced": false
     }
    },
    {
-    "test": "faceid"
-   },
-   {
-    "test": "fakereviewbot"
+    "test": "autobrake"
    }
   ]
  },
@@ -130,29 +130,19 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "firearms"
+    "test": "shotspotter"
    },
    {
-    "test": "wine"
+    "test": "tsunami"
    },
    {
-    "test": "teachers",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 essays in the pile was written by AI.",
-     "sourced": false
-    }
+    "test": "oliveoil"
    },
    {
-    "test": "aiface"
+    "test": "pigeonsea"
    },
    {
-    "test": "turnitin",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 essays in the class used AI.",
-     "sourced": false
-    }
+    "test": "subwayscan"
    }
   ]
  },
@@ -162,24 +152,24 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "offside"
+    "test": "firearms",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine only 1 in 10 pairs sent to the lab really came from the same gun.",
+     "sourced": false
+    }
+   },
+   {
+    "test": "floodpeak"
+   },
+   {
+    "test": "nbaref"
    },
    {
     "test": "quakealert"
    },
    {
-    "test": "lightning"
-   },
-   {
-    "test": "fingerprint",
-    "twist": {
-     "prev": 5,
-     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
-     "sourced": false
-    }
-   },
-   {
-    "test": "voicefake"
+    "test": "beefaces"
    }
   ]
  },
@@ -189,19 +179,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "umpire"
+    "test": "koaladrone"
    },
    {
-    "test": "polygraph"
+    "test": "aidetedit"
    },
    {
-    "test": "smoke"
+    "test": "sharkspotter"
    },
    {
-    "test": "gorilla"
+    "test": "weather"
    },
    {
-    "test": "doorswap"
+    "test": "groundhog"
    }
   ]
  },
@@ -211,24 +201,24 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "ownname"
+    "test": "umpire"
    },
    {
-    "test": "bedlab"
-   },
-   {
-    "test": "humanlie"
-   },
-   {
-    "test": "captcha",
+    "test": "aidet14",
     "twist": {
-     "prev": 50,
-     "where": "Imagine half the visitors to a ticket site are bots.",
+     "prev": 10,
+     "where": "Imagine 1 in 10 essays in the pile came straight from ChatGPT.",
      "sourced": false
     }
    },
    {
-    "test": "pas"
+    "test": "archerfish"
+   },
+   {
+    "test": "toefl"
+   },
+   {
+    "test": "sobriety"
    }
   ]
  },
@@ -238,24 +228,24 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "rareitem"
+    "test": "anpr"
    },
    {
-    "test": "bedfield"
+    "test": "sharkplane"
    },
    {
-    "test": "aidet"
-   },
-   {
-    "test": "lineupsim"
-   },
-   {
-    "test": "facerec",
+    "test": "fakereviewbot",
     "twist": {
-     "prev": 0.01,
-     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
+     "prev": 5,
+     "where": "Imagine 1 in 20 reviews on the site is fake.",
      "sourced": false
     }
+   },
+   {
+    "test": "shakealert"
+   },
+   {
+    "test": "cola"
    }
   ]
  },
@@ -265,24 +255,24 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "bombdog",
+    "test": "abs"
+   },
+   {
+    "test": "voicefake"
+   },
+   {
+    "test": "offside"
+   },
+   {
+    "test": "aiface"
+   },
+   {
+    "test": "passport",
     "twist": {
      "prev": 1,
-     "where": "Imagine 1 in 100 bags the dog checks really has explosives.",
+     "where": "Imagine 1 in 100 IDs handed over is a fake.",
      "sourced": false
     }
-   },
-   {
-    "test": "snakedog"
-   },
-   {
-    "test": "lineupseq"
-   },
-   {
-    "test": "koaladog"
-   },
-   {
-    "test": "gmail"
    }
   ]
  },
@@ -292,19 +282,19 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "passport"
-   },
-   {
-    "test": "tsa"
-   },
-   {
-    "test": "sharkplane"
+    "test": "octopus"
    },
    {
     "test": "tornado"
    },
    {
-    "test": "weather"
+    "test": "snakedog"
+   },
+   {
+    "test": "var"
+   },
+   {
+    "test": "speech"
    }
   ]
  },
@@ -314,29 +304,19 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "termitedog",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 houses the dog checks really has termites.",
-     "sourced": false
-    }
+    "test": "mushroomapp"
    },
    {
-    "test": "fakereviewhuman",
-    "twist": {
-     "prev": 20,
-     "where": "Imagine 1 in 5 reviews you read is fake.",
-     "sourced": false
-    }
+    "test": "merlin"
    },
    {
-    "test": "pigeonsea"
+    "test": "googleassistant"
    },
    {
-    "test": "crewsea"
+    "test": "nhloffside"
    },
    {
-    "test": "faceid"
+    "test": "rekognition"
    }
   ]
  },
@@ -346,24 +326,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "fakereviewbot"
+    "test": "firecam"
    },
    {
-    "test": "turnitin"
+    "test": "citrusdog"
    },
    {
-    "test": "firearms",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine only 1 in 10 pairs sent to the lab really came from the same gun.",
-     "sourced": false
-    }
+    "test": "windhuman"
    },
    {
-    "test": "wine"
+    "test": "oregano"
    },
    {
-    "test": "aiface"
+    "test": "alexa"
    }
   ]
  },
@@ -373,24 +348,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "teachers",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 essays in the pile was written by AI.",
-     "sourced": false
-    }
+    "test": "lanternfield"
    },
    {
-    "test": "fingerprint"
+    "test": "sharkheli"
    },
    {
-    "test": "offside"
+    "test": "koalaspotter"
    },
    {
-    "test": "quakealert"
+    "test": "dogvoice"
    },
    {
-    "test": "lightning"
+    "test": "crewsea"
    }
   ]
  },
@@ -400,24 +370,19 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "smoke"
+    "test": "wine"
    },
    {
-    "test": "voicefake"
+    "test": "birder"
    },
    {
-    "test": "polygraph"
+    "test": "snapper"
    },
    {
-    "test": "humanlie",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 stories you hear is a lie.",
-     "sourced": false
-    }
+    "test": "quolldog"
    },
    {
-    "test": "umpire"
+    "test": "aiimage"
    }
   ]
  },
@@ -427,34 +392,19 @@
   "difficulty": "Einstein",
   "rounds": [
    {
-    "test": "pas",
-    "twist": {
-     "prev": 2,
-     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
-     "sourced": false
-    }
+    "test": "eyedetect"
    },
    {
-    "test": "gorilla"
+    "test": "touchid"
    },
    {
-    "test": "aidet",
-    "twist": {
-     "prev": 50,
-     "where": "Imagine half the essays in the pile were written by AI.",
-     "sourced": false
-    }
+    "test": "mlbreplay"
    },
    {
-    "test": "captcha",
-    "twist": {
-     "prev": 50,
-     "where": "Imagine half the visitors to a ticket site are bots.",
-     "sourced": false
-    }
+    "test": "rareitem"
    },
    {
-    "test": "doorswap"
+    "test": "tortoise"
    }
   ]
  },
@@ -464,24 +414,19 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "bedlab"
+    "test": "lightning"
    },
    {
-    "test": "ownname"
+    "test": "violin"
    },
    {
-    "test": "facerec",
-    "twist": {
-     "prev": 0.01,
-     "where": "Imagine 1 in 10,000 people walking past is on the watchlist.",
-     "sourced": false
-    }
+    "test": "winejudge"
    },
    {
-    "test": "lineupsim"
+    "test": "gorilla"
    },
    {
-    "test": "bedfield"
+    "test": "knapweed"
    }
   ]
  },
@@ -491,19 +436,19 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "test": "rareitem"
+    "test": "inatmushroom"
    },
    {
-    "test": "bombdog"
+    "test": "fakenews"
    },
    {
-    "test": "koaladog"
+    "test": "recaptcha"
    },
    {
-    "test": "lineupseq"
+    "test": "nswdogs"
    },
    {
-    "test": "gmail"
+    "test": "nflchallenge"
    }
   ]
  },
@@ -513,29 +458,24 @@
   "difficulty": "Genius",
   "rounds": [
    {
-    "test": "passport",
+    "test": "fingerprint",
     "twist": {
-     "prev": 1,
-     "where": "Imagine 1 in 100 IDs handed over is a fake.",
+     "prev": 5,
+     "where": "Imagine 1 in 20 print pairs sent to the examiner is a true match.",
      "sourced": false
     }
    },
    {
-    "test": "snakedog"
+    "test": "lanternlab"
    },
    {
-    "test": "tornado"
+    "test": "beagle"
    },
    {
-    "test": "termitedog",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 houses the dog checks really has termites.",
-     "sourced": false
-    }
+    "test": "tennischallenge"
    },
    {
-    "test": "tsa"
+    "test": "drs"
    }
   ]
  },
@@ -545,19 +485,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "sharkplane"
+    "test": "doorswap"
    },
    {
-    "test": "weather"
+    "test": "newt"
    },
    {
-    "test": "pigeonsea"
+    "test": "deepfakeai"
    },
    {
-    "test": "crewsea"
+    "test": "coalarm"
    },
    {
-    "test": "faceid"
+    "test": "honey"
    }
   ]
  },
@@ -567,19 +507,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "fakereviewhuman"
+    "test": "bedlab"
    },
    {
-    "test": "turnitin"
+    "test": "burglar"
    },
    {
-    "test": "wine"
+    "test": "ownname"
    },
    {
-    "test": "fakereviewbot"
+    "test": "astrology"
    },
    {
-    "test": "aiface"
+    "test": "faceid"
    }
   ]
  },
@@ -589,19 +529,19 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "firearms"
+    "test": "turnitin"
    },
    {
-    "test": "fingerprint"
+    "test": "humanlie"
    },
    {
-    "test": "offside"
+    "test": "japaneew"
    },
    {
-    "test": "quakealert"
+    "test": "megadetector"
    },
    {
-    "test": "lightning"
+    "test": "laugh"
    }
   ]
  },
@@ -611,19 +551,19 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "teachers"
+    "test": "sheep"
    },
    {
-    "test": "humanlie"
+    "test": "captcha"
    },
    {
-    "test": "voicefake"
+    "test": "windfc"
    },
    {
-    "test": "smoke"
+    "test": "bedfield"
    },
    {
-    "test": "polygraph"
+    "test": "tsa"
    }
   ]
  },
@@ -631,55 +571,6 @@
   "date": "2026-12-25",
   "number": 54,
   "difficulty": "Hard",
-  "rounds": [
-   {
-    "test": "umpire"
-   },
-   {
-    "test": "aidet"
-   },
-   {
-    "test": "captcha"
-   },
-   {
-    "test": "pas",
-    "twist": {
-     "prev": 2,
-     "where": "Imagine 1 in 50 drivers stopped at night is over the limit.",
-     "sourced": false
-    }
-   },
-   {
-    "test": "gorilla"
-   }
-  ]
- },
- {
-  "date": "2026-12-26",
-  "number": 55,
-  "difficulty": "Hard",
-  "rounds": [
-   {
-    "test": "doorswap"
-   },
-   {
-    "test": "bedfield"
-   },
-   {
-    "test": "bedlab"
-   },
-   {
-    "test": "lineupsim"
-   },
-   {
-    "test": "facerec"
-   }
-  ]
- },
- {
-  "date": "2026-12-27",
-  "number": 56,
-  "difficulty": "Genius",
   "rounds": [
    {
     "test": "bombdog",
@@ -690,21 +581,70 @@
     }
    },
    {
-    "test": "passport",
+    "test": "pas"
+   },
+   {
+    "test": "polygraph"
+   },
+   {
+    "test": "smoke"
+   },
+   {
+    "test": "koaladog"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-26",
+  "number": 55,
+  "difficulty": "Hard",
+  "rounds": [
+   {
+    "test": "teachers"
+   },
+   {
+    "test": "facerec"
+   },
+   {
+    "test": "turing"
+   },
+   {
+    "test": "aidet"
+   },
+   {
+    "test": "lineupseq"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-27",
+  "number": 56,
+  "difficulty": "Genius",
+  "rounds": [
+   {
+    "test": "phishing",
     "twist": {
-     "prev": 1,
-     "where": "Imagine 1 in 100 IDs handed over is a fake.",
+     "prev": 5,
+     "where": "Imagine 1 in 20 emails in your inbox is a scam.",
      "sourced": false
     }
    },
    {
-    "test": "ownname"
+    "test": "lineupsim",
+    "twist": {
+     "prev": 50,
+     "where": "Imagine the real culprit is in the line-up only half the time.",
+     "sourced": false
+    }
    },
    {
-    "test": "koaladog"
+    "test": "mintemp"
    },
    {
-    "test": "lineupseq"
+    "test": "birdnet"
+   },
+   {
+    "test": "bodyscanner"
    }
   ]
  },
@@ -714,24 +654,24 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "gmail"
+    "test": "winddog"
    },
    {
-    "test": "rareitem"
+    "test": "fireant"
    },
    {
-    "test": "tsa"
+    "test": "prevar"
    },
    {
-    "test": "termitedog",
+    "test": "vsa",
     "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 houses the dog checks really has termites.",
+     "prev": 20,
+     "where": "Imagine 1 in 5 arrestees lies about their drug use.",
      "sourced": false
     }
    },
    {
-    "test": "tornado"
+    "test": "gmail"
    }
   ]
  },
@@ -739,33 +679,6 @@
   "date": "2026-12-29",
   "number": 58,
   "difficulty": "Easy",
-  "rounds": [
-   {
-    "test": "snakedog"
-   },
-   {
-    "test": "sharkplane"
-   },
-   {
-    "test": "turnitin",
-    "twist": {
-     "prev": 10,
-     "where": "Imagine 1 in 10 essays in the class used AI.",
-     "sourced": false
-    }
-   },
-   {
-    "test": "weather"
-   },
-   {
-    "test": "pigeonsea"
-   }
-  ]
- },
- {
-  "date": "2026-12-30",
-  "number": 59,
-  "difficulty": "Medium",
   "rounds": [
    {
     "test": "fakereviewhuman",
@@ -776,16 +689,43 @@
     }
    },
    {
-    "test": "crewsea"
+    "test": "termitedog"
    },
    {
-    "test": "faceid"
+    "test": "wildliferat"
    },
    {
-    "test": "wine"
+    "test": "subwayscan"
    },
    {
-    "test": "fakereviewbot"
+    "test": "poems"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-30",
+  "number": 59,
+  "difficulty": "Medium",
+  "rounds": [
+   {
+    "test": "oliveoil"
+   },
+   {
+    "test": "quakealert"
+   },
+   {
+    "test": "floodpeak"
+   },
+   {
+    "test": "pigeonsea"
+   },
+   {
+    "test": "firearms",
+    "twist": {
+     "prev": 10,
+     "where": "Imagine only 1 in 10 pairs sent to the lab really came from the same gun.",
+     "sourced": false
+    }
    }
   ]
  },
@@ -795,24 +735,24 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "test": "aiface"
+    "test": "beefaces"
    },
    {
-    "test": "fingerprint"
-   },
-   {
-    "test": "offside"
-   },
-   {
-    "test": "firearms",
+    "test": "aidetedit",
     "twist": {
-     "prev": 10,
-     "where": "Imagine only 1 in 10 pairs sent to the lab really came from the same gun.",
+     "prev": 25,
+     "where": "Imagine 1 in 4 essays was AI-written, then lightly edited.",
      "sourced": false
     }
    },
    {
-    "test": "quakealert"
+    "test": "tsunami"
+   },
+   {
+    "test": "autobrake"
+   },
+   {
+    "test": "weather"
    }
   ]
  }
