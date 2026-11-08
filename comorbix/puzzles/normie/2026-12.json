@@ -5,13 +5,13 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Breakfast staples",
+    "label": "On toast",
     "level": 1,
     "words": [
-     "PANCAKE",
-     "CEREAL",
-     "WAFFLE",
-     "PORRIDGE"
+     "VEGEMITE",
+     "BAKED BEANS",
+     "MARMALADE",
+     "PEANUT BUTTER"
     ]
    },
    {
@@ -151,8 +151,8 @@
     "words": [
      "DALMATIAN",
      "LADYBIRD",
-     "CHEETAH",
-     "LEOPARD"
+     "WHALE SHARK",
+     "OCELOT"
     ]
    },
    {
@@ -546,7 +546,7 @@
     "level": 3,
     "words": [
      "A BEAT",
-     "ROPE",
+     "STONES",
      "BREAKFAST",
      "CLASS"
     ]
@@ -602,7 +602,7 @@
     "label": "Jump ___",
     "level": 4,
     "words": [
-     "ROPE",
+     "START",
      "SUIT",
      "SHIP",
      "JET"
@@ -713,10 +713,10 @@
     "label": "Orchestra instruments",
     "level": 1,
     "words": [
-     "VIOLIN",
-     "CELLO",
+     "TUBA",
      "TIMPANI",
-     "TROMBONE"
+     "TROMBONE",
+     "CYMBALS"
     ]
    },
    {
@@ -1111,7 +1111,7 @@
     "words": [
      "COMET",
      "METEOR",
-     "ASTEROID",
+     "NEBULA",
      "MILKY WAY"
     ]
    },

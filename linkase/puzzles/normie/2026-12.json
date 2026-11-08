@@ -6,10 +6,10 @@
   "chain": [
    "RAIN",
    "FOREST",
-   "FIRE",
-   "ALARM",
-   "CLOCK",
-   "TOWER"
+   "FLOOR",
+   "LAMP",
+   "SHADE",
+   "CLOTH"
   ]
  },
  {
@@ -20,9 +20,9 @@
    "SWEET",
    "TOOTH",
    "BRUSH",
-   "FIRE",
-   "ESCAPE",
-   "ROOM"
+   "STROKE",
+   "PLAY",
+   "GROUND"
   ]
  },
  {
@@ -30,7 +30,7 @@
   "number": 41,
   "difficulty": "Medium",
   "chain": [
-   "ROAD",
+   "CALL",
    "SIGN",
    "LANGUAGE",
    "CLASS",
@@ -87,7 +87,7 @@
    "LIFT",
    "OFF",
    "ROAD",
-   "BIKE"
+   "RAGE"
   ]
  },
  {
@@ -113,7 +113,7 @@
    "DIVE",
    "BOMB",
    "SHELL",
-   "FISH"
+   "SHOCK"
   ]
  },
  {
@@ -186,7 +186,7 @@
   "number": 53,
   "difficulty": "Easy",
   "chain": [
-   "PEN",
+   "PET",
    "NAME",
    "BRAND",
    "NEW",
@@ -213,11 +213,11 @@
   "difficulty": "Medium",
   "chain": [
    "FIRST",
-   "CLASS",
-   "MATE",
-   "SHIP",
-   "SHAPE",
-   "SHIFTER"
+   "LADY",
+   "BIRD",
+   "BATH",
+   "TOWEL",
+   "RAIL"
   ]
  },
  {
@@ -242,8 +242,8 @@
    "TOWN",
    "CENTRE",
    "STAGE",
-   "DOOR",
-   "KNOB"
+   "COACH",
+   "BUILDER"
   ],
   "alt": {
    "CENTRE": [
@@ -286,8 +286,8 @@
    "NUMBER",
    "ONE",
    "WAY",
-   "BACK",
-   "DOOR"
+   "POINT",
+   "BLANK"
   ]
  },
  {

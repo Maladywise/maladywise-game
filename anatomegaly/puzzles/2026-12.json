@@ -243,14 +243,14 @@
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies pronator teres?",
-    "answer": "Median nerve",
+    "q": "Which nerve can be injured when a lower wisdom tooth is taken out, leaving half the tongue numb?",
+    "answer": "Lingual nerve",
     "wrong": [
-     "Radial nerve",
-     "Ulnar nerve",
-     "Musculocutaneous nerve"
+     "Hypoglossal nerve (XII)",
+     "Inferior alveolar nerve",
+     "Glossopharyngeal nerve (IX)"
     ],
-    "why": "The median nerve usually passes between its two heads, a spot where it can be compressed."
+    "why": "It runs right beside the inner side of the lower third molar, carrying feeling (and, via the chorda tympani, taste) from the front two-thirds of the tongue. Most injuries recover."
    },
    {
     "kind": "Which nerve?",

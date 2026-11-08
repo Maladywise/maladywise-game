@@ -1068,14 +1068,14 @@
    },
    {
     "kind": "Which nerve?",
-    "q": "Which nerve supplies the two lateral lumbricals of the hand?",
-    "answer": "Median nerve",
+    "q": "Which nerve supplies the rhomboid muscles between your shoulder blades?",
+    "answer": "Dorsal scapular nerve",
     "wrong": [
-     "Ulnar nerve (deep branch)",
-     "Radial nerve",
-     "Anterior interosseous nerve"
+     "Long thoracic nerve",
+     "Spinal accessory nerve (XI)",
+     "Thoracodorsal nerve"
     ],
-    "why": "‘LOAF’: lateral two lumbricals, opponens, abductor and flexor pollicis brevis are median. Almost every other small hand muscle is ulnar."
+    "why": "It comes straight off the C5 root and also supplies part of levator scapulae. Injury is rare, but it's one cause of aching along the inner edge of the shoulder blade."
    }
   ]
  },
