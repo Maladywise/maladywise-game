@@ -12,8 +12,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <meta property="og:image" content="https://maladywise.com/assets/share.png?v=4">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/assets/shell.css?v=175">
 <script src="/assets/games.js?v=103"></script>
@@ -21,12 +19,22 @@
 <script src="/assets/shell.js?v=195"></script>
 </head>
 <body>
-<main class="wrap doc">
+<main class="wrap doc nf-doc">
 <h1>This page has been discharged</h1>
-<p class="lede">The page you wanted has moved on, and so has the old site. The puzzles are all here now.</p>
-<p><a class="play-cta" href="/">Go to today’s puzzles ›</a></p>
-<p class="meta" id="redir">Taking you there in <b id="n">4</b> seconds…</p>
-<script>(function(){var n=4,el=document.getElementById("n");var t=setInterval(function(){n--;if(el)el.textContent=n;if(n<=0){clearInterval(t);location.replace("/");}},1000);})();</script>
+<p class="lede">We looked everywhere, including under the bed. This page isn’t here, but plenty else is. Try a search, or pick a door below.</p>
+<form class="nf-search" id="mw-404" role="search" onsubmit="return false">
+<label class="sr" for="nf-q">Search Malady Wise</label>
+<input type="search" id="nf-q" class="lsrch" placeholder="Search conditions, medicines and games" autocomplete="off">
+</form>
+<ul class="nf-res" id="nf-res" aria-live="polite"></ul>
+<p class="meta" id="nf-none" hidden>No match. Try another word, or browse the links below.</p>
+<h2>Popular places</h2>
+<ul class="nf-links">
+<li><a href="/conditions/"><b>Conditions</b><span>Plain-English fact sheets</span></a></li>
+<li><a href="/medical-games/"><b>Medical games</b><span>Every puzzle and quiz</span></a></li>
+<li><a href="/#puzzles"><b>Today’s puzzles</b><span>Fresh at midnight, Sydney time</span></a></li>
+<li><a href="/exercises/"><b>Exercise handouts</b><span>Printable rehab plans</span></a></li>
+</ul>
 <footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
 </main>
 <script>MW.page();</script>

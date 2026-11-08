@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap");
+/* Fonts are self-hosted: see the @font-face rules at the top of assets/shell.css. */
 
 /* Diagnosis Wordle — everything scoped under #dxw so it can't restyle the host site */
 #dxw{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;

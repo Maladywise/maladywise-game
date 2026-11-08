@@ -41,7 +41,7 @@ SECTIONS = {
     "exercises": "Exercise handouts",
     "deep-dives": "Deep dives",
     "tools": "Tools",
-    "specialists": "Specialists",
+    "specialists": "Specialists and allied health",
     "medical-games": "Medical games",
     "arcade": "Arcade",
     "zebra-mail": "Zebra Mail",

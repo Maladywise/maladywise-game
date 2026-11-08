@@ -30,10 +30,21 @@
 
   // ---------- mode: "medical" (default) or "normie" (no-medicine versions of some games) ----------
   // localStorage "mw-mode"; ?mode=normie / ?mode=medical sets and remembers it (deep links, Zebra Mail).
+  // A remembered Normie choice only applies on the home page and game pages (NORMIE_PAGE). Fact sheets,
+  // medicines, handouts and other health pages stay Medical unless the link itself says ?mode=normie.
+  var NORMIE_PAGE = (function () {
+    var p = location.pathname.replace(/index\.html$/, ""), seg = p.split("/")[1] || "";
+    if (p === "/") return true;
+    if (p !== "/" + seg + "/") return false; // only a section's own page, e.g. /wordemic/ (not /wordemic/archive/)
+    if (/^(normie|arcade|weird|me|nightshift|days|basil-clover|stackulus|mergeon)$/.test(seg)) return true;
+    return (window.MW_GAMES || []).some(function (g) { return String(g.path || "").replace(/\/$/, "") === seg; });
+  })();
+  var MODE_URL = null;
   var MODE = (function () {
     var m = null; try { m = new URLSearchParams(location.search).get("mode"); } catch (e) {}
-    if (m === "normie" || m === "medical") set("mw-mode", m);
-    var v = get("mw-mode", "medical"); return v === "normie" ? "normie" : "medical";
+    if (m === "normie" || m === "medical") { set("mw-mode", m); MODE_URL = m; }
+    if (MODE_URL) return MODE_URL;
+    var v = get("mw-mode", "medical"); return v === "normie" && NORMIE_PAGE ? "normie" : "medical";
   })();
   var NORMIE = MODE === "normie";
   root.setAttribute("data-mode", MODE);
@@ -56,6 +67,7 @@
     set("mw-mode", m);
     track("mode/" + m, "Switched to " + m + " mode");
     var u = new URL(location.href); u.searchParams.delete("mode"); u.searchParams.delete("date");
+    if (!NORMIE_PAGE && m === "normie") u.searchParams.set("mode", "normie"); // health pages are Medical unless the link asks for Normie
     setTimeout(function () { location.replace(u.pathname + (u.search || "") + u.hash); }, 60);
   }
   window.MW_setMode = setMode;
@@ -97,6 +109,37 @@
     })(0);
   }
   window.MW_track = track;
+  function pageSlug() { var p = location.pathname.replace(/index\.html$/, "").replace(/^\/|\/$/g, ""); return p ? p.replace(/\//g, "-") : "home"; }
+  // ---------- sharing: results end with the game's own link (?s=share), and every share is counted ----------
+  function shareGame() { var g = window.MW_curGame; return (g && g.id) || location.pathname.split("/")[1] || "home"; }
+  function shareURL(path) {
+    var seg = location.pathname.split("/")[1] || "", g = window.MW_curGame;
+    var p = path && path !== "/" ? path : (g && g.path ? "/" + String(g.path).replace(/^\/|\/$/g, "") + "/" : seg ? "/" + seg + "/" : "/");
+    return "https://maladywise.com" + p + "?s=share";
+  }
+  // Swap a bare "maladywise.com" (or maladywise.com/<path>/) last line for the full share link.
+  function fixShare(t) {
+    if (typeof t !== "string") return t;
+    return t.replace(/(^|\n)[ \t]*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/[A-Za-z0-9\/_-]*)?(?:\?s=share)?\s*$/, function (m, nl, path) { return nl + shareURL(path); });
+  }
+  window.MW_shareText = fixShare;
+  function shareCount() { track("share/" + shareGame(), "Share " + shareGame()); }
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      var cbw = navigator.clipboard.writeText.bind(navigator.clipboard);
+      navigator.clipboard.writeText = function (t) { var f = fixShare(t); if (f !== t || /maladywise\.com/.test(String(t))) shareCount(); return cbw(f); };
+    }
+    if (navigator.share) {
+      var nsh = navigator.share.bind(navigator);
+      navigator.share = function (o) {
+        o = o || {}; var c = {}; for (var k in o) c[k] = o[k];
+        if (c.text) c.text = fixShare(c.text);
+        if (c.url && /^https:\/\/maladywise\.com\//.test(c.url) && c.url.indexOf("?") < 0) c.url += "?s=share";
+        if (c.text && c.url && c.text.indexOf(c.url) >= 0) delete c.url; // link already in the text: don't paste it twice
+        shareCount(); return nsh(c);
+      };
+    }
+  } catch (e) {}
   // ---------- live counts (players online + games played today) ----------
   // Anonymous: a random ID that lives only in this tab's memory. No cookies, no storage, no personal data.
   var LIVE = { url: "https://mw-presence.onrender.com", id: Math.random().toString(36).slice(2, 12), last: null, MIN_ON: 5, MIN_TODAY: 10, MIN_SOLVED: 10 };
@@ -530,7 +573,7 @@
       var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
       if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
-      sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*maladywise\.com\s*$/, ""), url: "https://maladywise.com/" + (location.pathname.split("/")[1] ? location.pathname.split("/")[1] + "/" : "") }).catch(function () {}); };
+      sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, ""), url: shareURL() }).catch(function () {}); };
       b.parentNode.insertBefore(sb, b.nextSibling);
     });
   }
@@ -538,8 +581,9 @@
   function ticketify() {
     Array.prototype.forEach.call(document.querySelectorAll('pre[id$="-share"]:not([data-tk]),pre[id$="-sharetext"]:not([data-tk])'), function (pre) {
       pre.setAttribute("data-tk", "1");
+      var fx = fixShare(pre.textContent); if (fx !== pre.textContent) pre.textContent = fx;
       var lines = pre.textContent.replace(/\s+$/, "").split("\n"), url = "";
-      if (/maladywise\.com\s*$/i.test(lines[lines.length - 1])) { url = lines.pop(); }
+      if (/maladywise\.com(\/\S*)?\s*$/i.test(lines[lines.length - 1])) { url = lines.pop(); }
       var head = lines.shift() || "", parts = head.split(" \u00b7 "), title = parts.shift(), pill = parts.join(" \u00b7 ");
       var tm = title.match(/^(.*?#\d+(?: \(archive\))?)\s*(.*)$/); var big0 = ""; if (tm) { title = tm[1]; big0 = tm[2]; }
       var sc0 = ""; var pm = pill.match(/^(.*?)\s{2,}(\S.*)$/); if (pm) { pill = pm[1]; sc0 = pm[2]; }
@@ -704,6 +748,7 @@
   document.addEventListener("submit", function (e) {
     var f = e.target; if (!f.classList || !f.classList.contains("mw-nl") || !window.fetch) return;
     e.preventDefault();
+    track("subscribe/" + pageSlug(), "Zebra Mail subscribe: " + pageSlug());
     var msg = f.parentNode.querySelector(".nl-msg"), btn = f.querySelector("button");
     btn.disabled = true; btn.textContent = "Sending\u2026";
     fetch(f.action, { method: "POST", mode: "no-cors", body: new FormData(f) }).then(function () {
@@ -804,6 +849,7 @@
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }
     });
     document.body.insertBefore(bar, document.body.firstChild);
+    root.removeAttribute("data-pre"); // headkit's inline theme script reserves the bar's space until now
     navWire(bar);
   }
 
@@ -951,8 +997,10 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     function healthDay() {
       if (HD === null) {
         HD = false;
-        fetch("/data/health-days.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; })
-          .then(function (j) { HD = (j && j.days) || []; healthDay(); }).catch(function () {});
+        // Small file (today-1 to today+35, written by _scripts/build_days.py); the full 466 KB list only if it's stale or missing.
+        var full = function () { fetch("/data/health-days.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { HD = (j && j.days) || []; healthDay(); }).catch(function () {}); };
+        fetch("/data/days-soon.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (j) { if (j && j.days && j.from <= today && today <= j.to) { HD = j.days; healthDay(); } else full(); }).catch(full);
         return;
       }
       var slot = document.getElementById("mw-hday"); if (!slot) return;
@@ -1190,29 +1238,70 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
     var idx = li.map(function (x) { return norm(x.textContent + " " + (x.getAttribute("data-q") || "")); });
     box.addEventListener("input", function () { var w = norm(box.value).split(/\s+/).filter(Boolean), n = 0; li.forEach(function (x, i) { var ok = w.every(function (t) { return idx[i].indexOf(t) >= 0; }); x.hidden = !ok; if (ok) n++; }); no.hidden = n > 0; });
   }
+  // ---------- health pages: honest authorship badge, newsletter box, today's puzzle card ----------
+  // Fact sheets, medicines, handouts, deep dives, tools and compare pages. Pages are drafted with AI tools and
+  // overseen by a GP; a page the GP has personally reviewed carries data-gp-reviewed="YYYY-MM-DD" on <body> (or <main>).
+  var INFO_RX = /^\/(medicines|exercises|deep-dives|tools|compare)\/[^\/]+\/$/;
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function longDate(iso) { // "2026-11-08" -> "8 November 2026", "2026-11" -> "November 2026"
+    var m = /^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(iso || ""); if (!m || +m[2] < 1 || +m[2] > 12) return "";
+    return (m[3] ? +m[3] + " " : "") + MONTHS[+m[2] - 1] + " " + m[1];
+  }
+  function gpReviewed() {
+    var n = document.querySelector("main[data-gp-reviewed]") || (document.body && document.body.hasAttribute("data-gp-reviewed") ? document.body : null);
+    var v = n ? n.getAttribute("data-gp-reviewed") : ""; return /^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : "";
+  }
+  window.MW_gpReviewed = gpReviewed;
+  function todayCard() { // the day's featured game (first of today's 3 still to play), plus the games hub
+    var L = startIds(); if (!L.length) return "";
+    var pick = L.filter(function (o) { var r = readStats(o.g); return !(r && r.done); })[0] || L[0], g = pick.g;
+    return '<section class="mw-today" style="--ga:' + accentOf(g) + '"><a class="mwt-go" href="/' + g.path + '?play">' + mascImg(g.id, "", 48, "mwt-masc") +
+      '<span class="mwt-tx"><small>Today’s puzzle</small><b>' + g.name + "</b><span>" + (g.kind || g.tagline || "") + " · about " + pick.min + ' min</span></span><span class="mwt-play">Play ›</span></a>' +
+      '<a class="mwt-all" href="/medical-games/">All medical games ›</a></section>';
+  }
   function infoExtras() {
-    var F = window.MW_FACTS, p = location.pathname.replace(/index\.html$/, ""), me = F && F[p]; if (!me) return;
+    var F = window.MW_FACTS || {}, p = location.pathname.replace(/index\.html$/, ""), me = F[p] || null;
+    if (!me && !INFO_RX.test(p)) return;
     var main = document.querySelector("main"), h1 = main && main.querySelector("h1"); if (!h1) return;
-    var rev = (document.body.textContent.match(/Reviewed ([A-Z][a-z]+ \d{4})/) || [])[1] || "";
-    h1.insertAdjacentHTML("afterend", '<p class="trust">\u2714 Written and reviewed by an Australian GP' + (rev ? " \u00b7 " + rev : "") + "</p>");
-    var rel = (me.r || []).filter(function (q) { return F[q]; });
+    var ldEl = document.getElementById("mw-page-ld"), ld0 = null; try { ld0 = ldEl ? JSON.parse(ldEl.textContent) : null; } catch (e) {}
+    var gp = gpReviewed(), upd = "";
+    if (ld0) upd = ld0.dateModified || ld0.lastReviewed || "";
+    if (!upd) { var mt = document.body.textContent.match(/(?:Reviewed|Updated)\s+(\d{1,2} )?([A-Z][a-z]+) (\d{4})/); if (mt && MONTHS.indexOf(mt[2]) >= 0) upd = mt[3] + "-" + ("0" + (MONTHS.indexOf(mt[2]) + 1)).slice(-2) + (mt[1] ? "-" + ("0" + mt[1].trim()).slice(-2) : ""); }
+    if (!main.querySelector(".trust")) h1.insertAdjacentHTML("afterend", gp ? '<p class="trust gp">✔ Reviewed by an Australian GP on ' + longDate(gp) + "</p>"
+      : '<p class="trust"><a href="/about/#how-we-make-pages">Made with AI tools and overseen by an Australian GP</a>' + (longDate(upd) ? " · Updated " + longDate(upd) : "") + "</p>");
     var foot = main.querySelector("footer.site"), anchor = main.querySelector(".print-url") || foot;
-    if (rel.length && anchor && !main.querySelector(".related")) anchor.insertAdjacentHTML("beforebegin", '<section class="related"><h2>Related</h2><ul>' + rel.map(function (q) { return '<li><a href="' + q + '"><span>' + { fact: "Fact sheet", drug: "Drug", tool: "Tool" }[F[q].k] + "</span>" + F[q].t + "</a></li>"; }).join("") + "</ul></section>");
-    var pu = main.querySelector(".print-url"), qr = "/assets/qr/" + p.replace(/^\/|\/$/g, "").replace(/\//g, "-") + ".svg";
-    if (pu) pu.insertAdjacentHTML("beforebegin", '<img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
-    else if (foot) foot.insertAdjacentHTML("beforebegin", '<p class="print-url">maladywise.com' + p + '</p><img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
-    var desc = (document.querySelector('meta[name="description"]') || {}).content || "";
-    var ld = { "@context": "https://schema.org", "@type": "MedicalWebPage", name: (document.title || me.t).replace(/ \| Malady Wise$/, ""), url: "https://maladywise.com" + p, description: desc, inLanguage: "en-AU",
-      audience: { "@type": "PeopleAudience", audienceType: me.k === "tool" ? "Clinicians" : "Patients" }, author: { "@type": "Organization", name: "Malady Wise", url: "https://maladywise.com/" },
-      reviewedBy: { "@type": "Person", jobTitle: "General Practitioner", description: "Australian GP" } };
-    if (rev) { var d = new Date(rev + " 1"); if (!isNaN(d)) ld.lastReviewed = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); }
-    if (!document.getElementById("mw-page-ld")) { var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc); }
+    if (me) {
+      var rel = (me.r || []).filter(function (q) { return F[q]; });
+      if (rel.length && anchor && !main.querySelector(".related")) anchor.insertAdjacentHTML("beforebegin", '<section class="related"><h2>Related</h2><ul>' + rel.map(function (q) { return '<li><a href="' + q + '"><span>' + { fact: "Fact sheet", drug: "Drug", tool: "Tool" }[F[q].k] + "</span>" + F[q].t + "</a></li>"; }).join("") + "</ul></section>");
+      var pu = main.querySelector(".print-url"), qr = "/assets/qr/" + p.replace(/^\/|\/$/g, "").replace(/\//g, "-") + ".svg";
+      if (pu) pu.insertAdjacentHTML("beforebegin", '<img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
+      else if (foot) foot.insertAdjacentHTML("beforebegin", '<p class="print-url">maladywise.com' + p + '</p><img class="print-qr" src="' + qr + '" alt="QR code for this page" width="72" height="72">');
+    }
+    // JSON-LD: claim GP review only when the page carries data-gp-reviewed.
+    var GP = { "@type": "Person", jobTitle: "General Practitioner", description: "Australian GP" };
+    if (ldEl && ld0) {
+      var ch = false;
+      if (!gp && ld0.reviewedBy) { delete ld0.reviewedBy; ch = true; }
+      if (!gp && ld0.lastReviewed) { if (!ld0.dateModified) ld0.dateModified = ld0.lastReviewed; delete ld0.lastReviewed; ch = true; }
+      if (gp) { ld0.reviewedBy = GP; ld0.lastReviewed = gp; ch = true; }
+      if (ch) ldEl.textContent = JSON.stringify(ld0);
+    } else if (me && !ldEl) {
+      var desc = (document.querySelector('meta[name="description"]') || {}).content || "";
+      var ld = { "@context": "https://schema.org", "@type": "MedicalWebPage", name: (document.title || me.t).replace(/ \| Malady Wise$/, ""), url: "https://maladywise.com" + p, description: desc, inLanguage: "en-AU",
+        audience: { "@type": "PeopleAudience", audienceType: me.k === "tool" ? "Clinicians" : "Patients" }, author: { "@type": "Organization", name: "Malady Wise", url: "https://maladywise.com/" } };
+      if (gp) { ld.reviewedBy = GP; ld.lastReviewed = gp; } else if (upd) ld.dateModified = upd;
+      var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.id = "mw-page-ld"; sc.textContent = JSON.stringify(ld); document.head.appendChild(sc);
+    }
+    if (foot) {
+      if (!document.querySelector(".mw-today")) { try { var tc = todayCard(); if (tc) foot.insertAdjacentHTML("beforebegin", tc); } catch (e) {} }
+      if (!document.getElementById("newsletter")) { var nl = el(NL_HTML); nl.classList.add("nl-info"); foot.parentNode.insertBefore(nl, foot); }
+    }
     if (window.MW_GAMES && foot) {
       var gl = MW_GAMES.filter(function (x) { return x.live && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
       gl.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
       var left2 = gl.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
-      foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today\u2019s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
-        gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + (o.m ? " medonly" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + (o.m ? '<small class="mw-medtag">Medical only</small>' : "") + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203A") + "</span></a>"; }).join("") +
+      foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today’s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
+        gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + (o.m ? " medonly" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + (o.m ? '<small class="mw-medtag">Medical only</small>' : "") + '</span><span class="mwx-st">' + (dn ? "✓" : "›") + "</span></a>"; }).join("") +
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
     }
   }
@@ -1230,7 +1319,28 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
       pick.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + '</span><span class="mwx-st">' + (dn ? "\u2713" : "\u203a") + "</span></a>"; }).join("") +
       '</div><a class="mwx-all" href="/">All puzzles</a></section>');
   }
-  function page() { var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
+  // 404 page: search the fact sheets, medicines, tools, games and main sections (all from data already loaded).
+  function notFound() {
+    var q = document.getElementById("nf-q"), out = document.getElementById("nf-res"), none = document.getElementById("nf-none"); if (!q || !out) return;
+    var norm = function (t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’']/g, ""); };
+    var L = [], F = window.MW_FACTS || {}, K = { fact: "Fact sheet", drug: "Medicine", tool: "Tool" };
+    Object.keys(F).forEach(function (u) { L.push([u, F[u].t, K[F[u].k] || "Page", (F[u].g || []).join(" ")]); });
+    (window.MW_GAMES || []).forEach(function (g) { if (g.live && g.path) L.push(["/" + g.path, g.name, "Puzzle", (g.kind || "") + " " + (g.tagline || "")]); });
+    [["/conditions/", "Conditions A–Z", "Section"], ["/medicines/", "Medicines", "Section"], ["/exercises/", "Exercise handouts", "Section"], ["/deep-dives/", "Deep dives", "Section"], ["/tools/", "Tools and calculators", "Section"], ["/compare/", "Compare", "Section"], ["/specialists/", "Specialists and allied health", "Section", "Newcastle Hunter"], ["/days/", "World health days", "Section"], ["/zebra-mail/", "Zebra Mail newsletter", "Section", "weekly dose"], ["/medical-games/", "Medical games", "Section", "quiz"], ["/arcade/", "Arcade games", "Section"], ["/about/", "About Malady Wise", "Section"], ["/contact/", "Contact", "Section"]].forEach(function (x) { L.push([x[0], x[1], x[2], x[3] || ""]); });
+    var idx = L.map(function (x) { return norm(x[1] + " " + x[3] + " " + x[0].replace(/[\/-]+/g, " ")); });
+    function run() {
+      var w = norm(q.value).split(/\s+/).filter(Boolean), hits = [];
+      if (w.length) L.forEach(function (x, i) { if (w.every(function (t) { return idx[i].indexOf(t) >= 0; })) hits.push(x); });
+      out.innerHTML = hits.slice(0, 12).map(function (x) { return '<li><a href="' + esc2(x[0]) + '"><span>' + esc2(x[2]) + "</span>" + esc2(x[1]) + "</a></li>"; }).join("");
+      none.hidden = !(w.length && !hits.length);
+    }
+    q.addEventListener("input", run);
+    // Start with the words from the missing address, if they find anything (e.g. /gout-diet/ -> "gout").
+    var guess = norm(decodeURIComponent(location.pathname)).replace(/index\.html$/, "").split(/[\/_.-]+/).filter(function (t) { return t.length > 2 && !/^(html|www|page)$/.test(t); });
+    for (var i = 0; i < guess.length; i++) { q.value = guess[i]; run(); if (out.children.length) return; }
+    q.value = ""; run();
+  }
+  function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
     social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
