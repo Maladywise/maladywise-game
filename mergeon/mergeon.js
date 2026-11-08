@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -227,7 +227,7 @@
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
     cur = roll(); nxt = roll(cur);
     $("over").hidden = true; $("result").hidden = !(!practice && st.done); hud();
-    $("mode").textContent = practice ? "Practice run. Doesn’t count. Nobody’s watching." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
+    $("mode").textContent = practice ? "Practice mode: today’s run is done, so these games don’t count. Play as often as you like." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
     $("badge").textContent = practice ? "Practice" : ""; lastT = 0; acc = 0;
     tbarUI(); size();
     if (!raf) raf = requestAnimationFrame(loop);
@@ -330,8 +330,10 @@
     var bodies = C.allBodies(engine.world), danger = 0;
     for (var i = 0; i < bodies.length; i++) {
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
-      if (o.fresh && now - o.fresh < 1500) continue;
-      if (o.position.y - info(o.lv).r < LINE) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / 1800); if (now - o.overT > 1800) { end(); return 1; } }
+      // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
+      var SLACK = FIVE ? 14 : 0, GRACE = FIVE ? 3200 : 1800, FRESH = FIVE ? 2000 : 1500;
+      if (o.fresh && now - o.fresh < FRESH) continue;
+      if (o.position.y - info(o.lv).r < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
       else o.overT = 0;
     }
     return danger;
@@ -574,7 +576,7 @@
       '<p class="em-row">' + pic(tp >= 0 ? tp : 0, 64) + '</p><p class="score">' + fmt(s) + '<span> pts</span></p><p class="verdict">' + esc(verdict(tp)) + "</p>" +
       (st.tgt >= 0 ? '<p class="note">' + (st.star ? "⭐ Today’s target hit: " : "🎯 Today’s target missed: ") + esc(O[st.tgt].n) + (st.out ? " · " + OUTK.cleared + ": " + (st.cleared || 0) : "") + "</p>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + K.win + '</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
-      '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn" type="button" id="mrg-again">Practice run</button></div>';
+      '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><span class="again-note">Practice game, doesn’t count</span></div>';
     r.appendChild(lbBox); lbRender();
     $("copy").onclick = function () {
       var b = this;
