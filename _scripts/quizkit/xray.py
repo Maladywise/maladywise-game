@@ -261,7 +261,7 @@ def build():
     regions = {}
     for q in QS:
         regions[q["region"]] = regions.get(q["region"], 0) + 1
-    title = "X-Ray Quiz: Chest, Abdominal and Bone X-Ray Practice"
+    title = "X-Ray Quiz: Chest, Abdominal and Bone X-Rays"
     desc = "Free X-ray quiz: %d real chest, abdominal, bone and paediatric X-rays, easy to hard, with key findings and a tip for each. Practise X-ray interpretation." % n
     h1 = "X-Ray Quiz: Practise Reading Real X-Rays"
     lede = ("%s real X-rays to read: chest films, abdominal films, broken bones and children’s X-rays, starting easy and getting harder. "

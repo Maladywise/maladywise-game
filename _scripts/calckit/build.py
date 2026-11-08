@@ -153,7 +153,7 @@ def compare_page(c):
 def compare_hub(pages):
     path = "/compare/"
     title = "Medicine and Symptom Comparisons: X vs Y"
-    desc = "Plain-English comparisons from a GP: Ozempic vs Mounjaro, ibuprofen vs paracetamol, cold vs flu, sertraline vs escitalopram and vitamin D3 vs D2."
+    desc = "Plain-English comparisons: semaglutide vs tirzepatide, ibuprofen vs paracetamol, cold vs flu, sertraline vs escitalopram and vitamin D3 vs D2."
     page = {"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": desc, "url": BASE + path,
             "inLanguage": "en-AU", "publisher": ORG, "breadcrumb": crumbs([("Malady Wise", "/"), ("Comparisons", path)]),
             "mainEntity": {"@type": "ItemList", "itemListElement": [

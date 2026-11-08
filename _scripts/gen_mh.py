@@ -286,7 +286,7 @@ test_page("k10", "k10",
 
 # ---------- hub ----------
 path = "/mental-health-check/"
-title = "Free Mental Health Check: Depression and Anxiety Self-Tests"
+title = "Mental Health Check: Depression and Anxiety Tests"
 desc = "Free, private mental health self-checks: PHQ-9 for depression, GAD-7 for anxiety and K10 for distress, with plain-English results and where to get help."
 faqs = [
   ("Is this an official depression test?",

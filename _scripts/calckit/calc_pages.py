@@ -79,7 +79,7 @@ PREG_KEYDATES = '''<h2>Key dates in pregnancy (Australia)</h2>
 
 DUE = dict(
     path="/tools/due-date-calculator/", crumb="Due date calculator", kind="Calculator",
-    title="Due Date Calculator: Due Date from Your Period or IVF",
+    title="Due Date Calculator: From Your Period or IVF",
     h1="Due date calculator",
     desc="Free pregnancy due date calculator: works from your last period (with cycle length), conception date or IVF transfer, plus Australian scan and test dates.",
     about={"@type": "MedicalCondition", "name": "Pregnancy"},
@@ -113,7 +113,7 @@ DUE = dict(
 WEEK = dict(DUE)
 WEEK.update(
     path="/tools/pregnancy-week-calculator/", crumb="Pregnancy week calculator",
-    title="Pregnancy Week Calculator: How Many Weeks Pregnant Am I?",
+    title="Pregnancy Week Calculator: How Many Weeks?",
     h1="How many weeks pregnant am I?",
     desc="Free pregnancy week calculator: see how many weeks and days pregnant you are today, your trimester, due date and upcoming Australian scans and tests.",
     lede="Find out how many weeks and days pregnant you are today, which trimester you’re in and what’s coming up next. Start from your last period, your due date, conception or an IVF transfer.",
@@ -149,7 +149,7 @@ WEEK["body"] = WEEK["body"].replace("Many people feel the first movements betwee
 # ---------------- ovulation ----------------
 OVU = dict(
     path="/tools/ovulation-calculator/", crumb="Ovulation calculator", kind="Calculator",
-    title="Ovulation Calculator: Fertile Window and Ovulation Date",
+    title="Ovulation Calculator: Your Fertile Window",
     h1="Ovulation calculator",
     desc="Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.",
     about={"@type": "MedicalCondition", "name": "Infertility"},
@@ -337,7 +337,7 @@ BMI = dict(
         ("WHO growth reference for 5 to 19 years", "https://www.who.int/tools/growth-reference-data-for-5to19-years", "BMI for age in children and teens"),
     ],
     related=[("Fact sheet", "Weight and obesity", "/weight/"), ("Fact sheet", "Prediabetes", "/prediabetes/"),
-             ("Drug", "Weight-loss medicines", "/medicines/weight-loss-medicines/"), ("Compare", "Ozempic vs Mounjaro", "/compare/ozempic-vs-mounjaro/")],
+             ("Drug", "Weight-loss medicines", "/medicines/weight-loss-medicines/"), ("Compare", "Semaglutide vs tirzepatide", "/compare/ozempic-vs-mounjaro/")],
 )
 
 # ---------------- eGFR ----------------
@@ -426,7 +426,7 @@ ITEMS = [("chf", "Heart failure, or reduced left ventricular function", 1), ("ht
          ("vasc", "Vascular disease: past heart attack, peripheral arterial disease or aortic plaque", 1)]
 CHA = dict(
     path="/tools/cha2ds2-vasc/", crumb="CHA₂DS₂-VASc calculator", kind="Clinician calculator", pro=True,
-    title="CHA2DS2-VASc and CHA2DS2-VA Calculator for AF Stroke Risk",
+    title="CHA2DS2-VASc and CHA2DS2-VA Calculator (AF)",
     h1="CHA₂DS₂-VASc and CHA₂DS₂-VA calculator",
     desc="CHA2DS2-VASc and sex-free CHA2DS2-VA stroke risk scores for atrial fibrillation, with the Australian 2018 AF guideline thresholds for anticoagulation.",
     about={"@type": "MedicalCondition", "name": "Atrial fibrillation"},

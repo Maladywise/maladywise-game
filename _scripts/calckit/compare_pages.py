@@ -1,9 +1,9 @@
 """Comparison page text. Built by build.py. Generic names first; brands only where they match how people search."""
 
 OZ = dict(
-    path="/compare/ozempic-vs-mounjaro/", crumb="Ozempic vs Mounjaro", kind="Medicines",
-    title="Ozempic vs Mounjaro: Semaglutide vs Tirzepatide Compared",
-    h1="Ozempic vs Mounjaro (Semaglutide vs Tirzepatide)",
+    path="/compare/ozempic-vs-mounjaro/", crumb="Semaglutide vs tirzepatide", kind="Medicines",
+    title="Semaglutide vs Tirzepatide (Ozempic vs Mounjaro)",
+    h1="Semaglutide vs Tirzepatide (Ozempic vs Mounjaro)",
     blurb="Weight loss in the head-to-head trial, diabetes, heart benefits, side effects and PBS status in Australia.",
     desc="Semaglutide (Ozempic, Wegovy) vs tirzepatide (Mounjaro): head-to-head weight loss in SURMOUNT-5, diabetes results, side effects and PBS status in Australia.",
     about={"@type": "Drug", "name": "Semaglutide and tirzepatide"},
@@ -261,7 +261,7 @@ FLU = dict(
 
 SSRI = dict(
     path="/compare/sertraline-vs-escitalopram/", crumb="Sertraline vs escitalopram", kind="Medicines",
-    title="Sertraline vs Escitalopram (Zoloft vs Lexapro) Compared",
+    title="Sertraline vs Escitalopram (Zoloft vs Lexapro)",
     h1="Sertraline vs Escitalopram (Zoloft vs Lexapro)",
     blurb="Two common SSRIs: effectiveness, side effects, the heart rhythm caution, pregnancy and breastfeeding.",
     desc="Sertraline (Zoloft) vs escitalopram (Lexapro): how well they work, side effects, heart rhythm (QT), interactions, pregnancy and breastfeeding, and PBS cost.",
@@ -322,7 +322,19 @@ SSRI = dict(
 <li>You have thoughts of suicide or self-harm: call Lifeline on <a href="tel:131114">13 11 14</a> or <a href="tel:000">000</a> (Australia), or your local crisis line.</li>
 <li>Fever, sweating, shaking, muscle jerks, confusion or a racing heart (possible serotonin syndrome).</li>
 <li>Fainting or a racing, irregular heartbeat.</li>
-</ul>''',
+</ul>
+<section id="crisis" class="callout" aria-labelledby="crisis-h">
+<h2 id="crisis-h">Support lines</h2>
+<p>If you or someone else is in danger right now, call your emergency number. To talk to someone, any time:</p>
+<ul>
+<li><b>Australia:</b> Lifeline <a href="tel:131114">13 11 14</a> (24/7, or text <a href="sms:0477131114">0477 13 11 14</a>), Suicide Call Back Service <a href="tel:1300659467">1300 659 467</a>, Beyond Blue <a href="tel:1300224636">1300 22 4636</a>, 13YARN <a href="tel:139276">13 92 76</a> for Aboriginal and Torres Strait Islander people. Emergency: <a href="tel:000">000</a>.</li>
+<li><b>Young people in Australia:</b> Kids Helpline <a href="tel:1800551800">1800 55 1800</a> (24/7, ages 5 to 25) or <a href="https://headspace.org.au/" rel="noopener">headspace</a> (ages 12 to 25).</li>
+<li><b>New Zealand:</b> call or text <a href="tel:1737">1737</a>. Emergency: <a href="tel:111">111</a>.</li>
+<li><b>UK and Ireland:</b> Samaritans <a href="tel:116123">116 123</a>. Emergency: <a href="tel:999">999</a> (or 112).</li>
+<li><b>US and Canada:</b> call or text <a href="tel:988">988</a>. Emergency: <a href="tel:911">911</a>.</li>
+<li><b>Anywhere else:</b> <a href="https://findahelpline.com/" rel="noopener">findahelpline.com</a> lists free helplines in more than 100 countries.</li>
+</ul>
+</section>''',
     faqs=[
         ("Is sertraline or escitalopram better for anxiety?", "Both are first-line choices for anxiety disorders, and there’s no clear winner overall. Escitalopram is approved for generalised anxiety disorder; sertraline for panic disorder, social anxiety and OCD, and both are used widely. The best one is the one that works for you with tolerable side effects."),
         ("Which has fewer side effects, sertraline or escitalopram?", "Both are among the better-tolerated antidepressants. Sertraline causes diarrhoea a bit more often; escitalopram needs care with heart rhythm (QT) problems. Sexual side effects can happen with both."),
@@ -342,7 +354,7 @@ SSRI = dict(
 
 VITD = dict(
     path="/compare/vitamin-d3-vs-d2/", crumb="Vitamin D3 vs D2", kind="Supplements",
-    title="Vitamin D3 vs D2: Which Vitamin D Supplement Is Better?",
+    title="Vitamin D3 vs D2: Which Supplement Is Better?",
     h1="Vitamin D3 vs D2 (Colecalciferol vs Ergocalciferol)",
     blurb="Which raises vitamin D levels better, daily versus big doses, vegan options, and who needs a supplement.",
     desc="Vitamin D3 (colecalciferol) vs D2 (ergocalciferol): which raises blood levels better, daily vs big doses, vegan sources, who needs a supplement and how much is too much.",
@@ -402,7 +414,7 @@ VITD = dict(
         ("Is vitamin D3 better than D2?", "For raising blood vitamin D levels, yes. Trials comparing them show D3 raises and maintains levels better, particularly with large occasional doses. With daily doses the difference is smaller."),
         ("Is there a vegan vitamin D3?", "Yes. Most D3 is made from lanolin in sheep’s wool, but vegan D3 made from lichen is available. Vitamin D2, from fungi or yeast, is also vegan."),
         ("What is colecalciferol?", "Colecalciferol (also spelt cholecalciferol) is vitamin D3, the same form your skin makes in sunlight. It’s the form in most Australian vitamin D supplements."),
-        ("How much vitamin D should I take a day?", "It depends on your sun exposure, risk factors and blood level. Many adults at higher risk take a low daily dose. Don’t go above 4,000 IU (100 micrograms) a day unless a doctor advises it. Ask your GP or pharmacist."),
+        ("How much vitamin D should I take a day?", "It depends on your sun exposure, risk factors and blood level. Many adults at higher risk take a low daily dose. Don’t go above the adult upper limit (3,200 IU or 80 micrograms a day in Australia; 4,000 IU or 100 micrograms in the US and Europe) unless a doctor advises it. Ask your GP or pharmacist."),
         ("Can you take too much vitamin D?", "Yes. Very high doses over time can raise calcium in the blood, causing nausea, vomiting, thirst, confusion and kidney damage. Sunlight alone doesn’t cause vitamin D overdose."),
     ],
     sources=[

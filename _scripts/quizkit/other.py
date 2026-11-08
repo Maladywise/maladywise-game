@@ -154,7 +154,7 @@ ROUNDS = [
 
 TERMS = dict(
     slug="medical-terminology-quiz", emoji="📚", h1="Medical Terminology Quiz",
-    title="Medical Terminology Quiz: Prefixes, Suffixes and Roots",
+    title="Medical Terminology Quiz: Prefixes and Suffixes",
     desc="Free medical terminology quiz: three 10-question rounds on prefixes, suffixes and word roots, plus a quick list of common medical prefixes and suffixes.",
     lede="Three rounds of ten: prefixes, suffixes and word roots. Learn the parts and you can decode almost any medical word. Tap an answer to see if you’re right. A cheat sheet is at the bottom.",
     rounds=ROUNDS,

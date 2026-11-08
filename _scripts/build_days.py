@@ -209,7 +209,7 @@ def main():
     static_list = "\n".join(groups)
 
     yshort = "%s–%s" % (yr, nxt[2:])
-    title = "World Health Days %s: Health Awareness Days Calendar" % yshort
+    title = "Health Awareness Days %s: World Days Calendar" % yshort
     assert len(title) <= 60, (len(title), title)
     full_title = title + " | Malady Wise"
     desc = ("World health days, awareness weeks and months for %s and %s, plus festivals and famous "
