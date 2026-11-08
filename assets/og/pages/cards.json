@@ -1,0 +1,1934 @@
+{
+"achilles": {
+"url": "/achilles/",
+"key": "42befd9dc7bd",
+"v": "c2a23b7c",
+"label": "Condition",
+"title": "Achilles Tendinopathy"
+},
+"acne": {
+"url": "/acne/",
+"key": "ab1b1fca57d9",
+"v": "e64e79a2",
+"label": "Condition",
+"title": "Acne"
+},
+"adhd": {
+"url": "/adhd/",
+"key": "c210f483e079",
+"v": "357533cc",
+"label": "Condition",
+"title": "ADHD"
+},
+"adhd-adults": {
+"url": "/adhd-adults/",
+"key": "f5ee6b9d539d",
+"v": "a7e5dc7c",
+"label": "Condition",
+"title": "ADHD in Adults"
+},
+"adhd-kids": {
+"url": "/adhd-kids/",
+"key": "f450cf44b431",
+"v": "da49c3f3",
+"label": "Condition",
+"title": "ADHD in Children"
+},
+"anal-fissure": {
+"url": "/anal-fissure/",
+"key": "939d51410122",
+"v": "fe67f1d3",
+"label": "Condition",
+"title": "Anal Fissure"
+},
+"ankle-sprain": {
+"url": "/ankle-sprain/",
+"key": "3df29d21f11c",
+"v": "0dd6d1de",
+"label": "Condition",
+"title": "Ankle Sprain"
+},
+"ankle-sprain-exercises": {
+"url": "/ankle-sprain/exercises/",
+"key": "b7db5e84f75f",
+"v": "2e19abfc",
+"label": "Exercise handout",
+"title": "Ankle Sprain Exercises"
+},
+"anxiety": {
+"url": "/anxiety/",
+"key": "f15cd2cc89ba",
+"v": "7b1f0d5e",
+"label": "Condition",
+"title": "Anxiety"
+},
+"asthma": {
+"url": "/asthma/",
+"key": "d3acc82b061f",
+"v": "b9498c20",
+"label": "Condition",
+"title": "Asthma"
+},
+"atrial-fibrillation": {
+"url": "/atrial-fibrillation/",
+"key": "7c6cb2ca9969",
+"v": "0fcf29c1",
+"label": "Condition",
+"title": "Atrial Fibrillation"
+},
+"autism": {
+"url": "/autism/",
+"key": "7b641367d613",
+"v": "52081f2d",
+"label": "Condition",
+"title": "Autism"
+},
+"autism-adults": {
+"url": "/autism-adults/",
+"key": "a7886f986ff0",
+"v": "54581797",
+"label": "Condition",
+"title": "Autism in Adults"
+},
+"autism-kids": {
+"url": "/autism-kids/",
+"key": "6dd6b8463478",
+"v": "1613b07c",
+"label": "Condition",
+"title": "Autism in Children"
+},
+"b12": {
+"url": "/b12/",
+"key": "e962e8bb3c56",
+"v": "f5d0fd0b",
+"label": "Condition",
+"title": "Vitamin B12 Deficiency"
+},
+"back-pain": {
+"url": "/back-pain/",
+"key": "b95e0881f493",
+"v": "de16cb62",
+"label": "Condition",
+"title": "Lower Back Pain"
+},
+"back-pain-exercises": {
+"url": "/back-pain/exercises/",
+"key": "dfb0ad527c57",
+"v": "6a952d16",
+"label": "Exercise handout",
+"title": "Lower Back Pain Exercises"
+},
+"back-pain-stretches": {
+"url": "/back-pain/stretches/",
+"key": "5184d42fcf15",
+"v": "d0f6e2c6",
+"label": "Exercise handout",
+"title": "Lower Back Stretches"
+},
+"bells-palsy": {
+"url": "/bells-palsy/",
+"key": "3686ee3cf3fe",
+"v": "ed21c1fe",
+"label": "Condition",
+"title": "Bell’s Palsy"
+},
+"bites-and-stings": {
+"url": "/bites-and-stings/",
+"key": "6c00c39d5d74",
+"v": "d46e6058",
+"label": "Condition",
+"title": "Insect Bites and Stings"
+},
+"bladder-leaks": {
+"url": "/bladder-leaks/",
+"key": "a2c841dbfc72",
+"v": "72b2e8b7",
+"label": "Condition",
+"title": "Bladder Leaks (Incontinence)"
+},
+"blood-pressure": {
+"url": "/blood-pressure/",
+"key": "d5f4da2189fa",
+"v": "83077fbd",
+"label": "Condition",
+"title": "High Blood Pressure"
+},
+"blood-tests": {
+"url": "/blood-tests/",
+"key": "1e10d1477871",
+"v": "c80819a0",
+"label": "Blood tests",
+"title": "Blood test results explained"
+},
+"blood-tests-high-alt": {
+"url": "/blood-tests/high-alt/",
+"key": "172c514c0097",
+"v": "be5d41e7",
+"label": "Blood test",
+"title": "High ALT (SGPT)"
+},
+"blood-tests-high-calcium": {
+"url": "/blood-tests/high-calcium/",
+"key": "c46a40348e5f",
+"v": "e8ade084",
+"label": "Blood test",
+"title": "High Calcium (Hypercalcaemia)"
+},
+"blood-tests-high-crp": {
+"url": "/blood-tests/high-crp/",
+"key": "1b5d849598d9",
+"v": "27743ed2",
+"label": "Blood test",
+"title": "High CRP (C-Reactive Protein)"
+},
+"blood-tests-high-esr": {
+"url": "/blood-tests/high-esr/",
+"key": "1c055864ea58",
+"v": "65514d42",
+"label": "Blood test",
+"title": "High ESR (Sed Rate)"
+},
+"blood-tests-high-ferritin": {
+"url": "/blood-tests/high-ferritin/",
+"key": "4894d98b4d59",
+"v": "094b80f9",
+"label": "Blood test",
+"title": "High Ferritin"
+},
+"blood-tests-high-tsh": {
+"url": "/blood-tests/high-tsh/",
+"key": "a7fd6d876f1b",
+"v": "237beaf0",
+"label": "Blood test",
+"title": "High TSH"
+},
+"blood-tests-low-b12": {
+"url": "/blood-tests/low-b12/",
+"key": "e322985c34ff",
+"v": "3f331df5",
+"label": "Blood test",
+"title": "Low B12 Result"
+},
+"blood-tests-low-egfr": {
+"url": "/blood-tests/low-egfr/",
+"key": "ef5e2fe48f9b",
+"v": "89e24e7c",
+"label": "Blood test",
+"title": "Low eGFR"
+},
+"blood-tests-low-neutrophils": {
+"url": "/blood-tests/low-neutrophils/",
+"key": "39aa9c0633c8",
+"v": "b638e8c1",
+"label": "Blood test",
+"title": "Low Neutrophils (Neutropenia)"
+},
+"blood-tests-low-platelets": {
+"url": "/blood-tests/low-platelets/",
+"key": "f682081c741f",
+"v": "9e8215ba",
+"label": "Blood test",
+"title": "Low Platelets (Thrombocytopenia)"
+},
+"boils": {
+"url": "/boils/",
+"key": "69760b983c51",
+"v": "9ebffc0e",
+"label": "Condition",
+"title": "Boils and Staph Skin Infections"
+},
+"bppv": {
+"url": "/bppv/",
+"key": "e05d9287f678",
+"v": "0fc50577",
+"label": "Condition",
+"title": "Vertigo (BPPV)"
+},
+"bronchiolitis": {
+"url": "/bronchiolitis/",
+"key": "a2305ed8330e",
+"v": "9571d4a9",
+"label": "Condition",
+"title": "Bronchiolitis"
+},
+"carpal-tunnel": {
+"url": "/carpal-tunnel/",
+"key": "d2894906925e",
+"v": "f65ae629",
+"label": "Condition",
+"title": "Carpal Tunnel Syndrome"
+},
+"chickenpox": {
+"url": "/chickenpox/",
+"key": "1bd81afe8a69",
+"v": "9898865b",
+"label": "Condition",
+"title": "Chickenpox"
+},
+"cholesterol": {
+"url": "/cholesterol/",
+"key": "8b13218ba0a1",
+"v": "53b3c7a4",
+"label": "Condition",
+"title": "High Cholesterol"
+},
+"coeliac": {
+"url": "/coeliac/",
+"key": "bfb4fdbc29a5",
+"v": "9d0fa4e0",
+"label": "Condition",
+"title": "Coeliac Disease"
+},
+"cold-sores": {
+"url": "/cold-sores/",
+"key": "82fe1bb62854",
+"v": "a29ede0a",
+"label": "Condition",
+"title": "Cold Sores"
+},
+"common-cold": {
+"url": "/common-cold/",
+"key": "56d630525e54",
+"v": "73e44e2e",
+"label": "Condition",
+"title": "Common Cold"
+},
+"compare": {
+"url": "/compare/",
+"key": "bd6e162810f2",
+"v": "197d4225",
+"label": "Compare",
+"title": "Medicines and symptoms, side by side"
+},
+"compare-cold-vs-flu": {
+"url": "/compare/cold-vs-flu/",
+"key": "7194641e418e",
+"v": "c174f2ee",
+"label": "Compare",
+"title": "Cold vs Flu"
+},
+"compare-ibuprofen-vs-paracetamol": {
+"url": "/compare/ibuprofen-vs-paracetamol/",
+"key": "be2ef466ff48",
+"v": "235c75da",
+"label": "Compare",
+"title": "Ibuprofen vs Paracetamol"
+},
+"compare-ozempic-vs-mounjaro": {
+"url": "/compare/ozempic-vs-mounjaro/",
+"key": "dd2ad60692b1",
+"v": "c156d531",
+"label": "Compare",
+"title": "Semaglutide vs Tirzepatide"
+},
+"compare-sertraline-vs-escitalopram": {
+"url": "/compare/sertraline-vs-escitalopram/",
+"key": "2c2fc81ad8d8",
+"v": "a3e9c968",
+"label": "Compare",
+"title": "Sertraline vs Escitalopram"
+},
+"compare-vitamin-d3-vs-d2": {
+"url": "/compare/vitamin-d3-vs-d2/",
+"key": "d14d1b1e0274",
+"v": "bc6d91e0",
+"label": "Compare",
+"title": "Vitamin D3 vs D2"
+},
+"conjunctivitis": {
+"url": "/conjunctivitis/",
+"key": "862ad99a2586",
+"v": "742fdc27",
+"label": "Condition",
+"title": "Conjunctivitis (Pink Eye)"
+},
+"constipation": {
+"url": "/constipation/",
+"key": "e51169251cfc",
+"v": "30b4878f",
+"label": "Condition",
+"title": "Constipation"
+},
+"contact-dermatitis": {
+"url": "/contact-dermatitis/",
+"key": "3a6a149e4ef3",
+"v": "ec854e51",
+"label": "Condition",
+"title": "Contact Dermatitis"
+},
+"copd": {
+"url": "/copd/",
+"key": "bb97b7b30d41",
+"v": "abc0d55a",
+"label": "Condition",
+"title": "COPD"
+},
+"costochondritis": {
+"url": "/costochondritis/",
+"key": "ba5dbc63fb15",
+"v": "f59ac3f6",
+"label": "Condition",
+"title": "Costochondritis"
+},
+"cough": {
+"url": "/cough/",
+"key": "966c4d66b825",
+"v": "3e5b3155",
+"label": "Condition",
+"title": "Cough and Acute Bronchitis"
+},
+"cramps": {
+"url": "/cramps/",
+"key": "1e55e5850923",
+"v": "37c589b5",
+"label": "Condition",
+"title": "Muscle Cramps"
+},
+"croup": {
+"url": "/croup/",
+"key": "b80bfb54b87f",
+"v": "1c42ee87",
+"label": "Condition",
+"title": "Croup"
+},
+"de-quervains": {
+"url": "/de-quervains/",
+"key": "c58f47be8b98",
+"v": "ca58c3d6",
+"label": "Condition",
+"title": "De Quervain’s Tenosynovitis"
+},
+"deep-dives": {
+"url": "/deep-dives/",
+"key": "91835dbf288d",
+"v": "5af2a71c",
+"label": "Deep dives for clinicians",
+"title": "Evidence-dense topic reviews"
+},
+"deep-dives-behcets": {
+"url": "/deep-dives/behcets/",
+"key": "0fccb0631b4f",
+"v": "88f98631",
+"label": "Deep dive for clinicians",
+"title": "Behçet's disease"
+},
+"deep-dives-coeliac": {
+"url": "/deep-dives/coeliac/",
+"key": "9001975fc8ea",
+"v": "ad3fcbe1",
+"label": "Deep dive for clinicians",
+"title": "Coeliac disease"
+},
+"deep-dives-pots": {
+"url": "/deep-dives/pots/",
+"key": "9f803661e7e0",
+"v": "e99271d0",
+"label": "Deep dive for clinicians",
+"title": "POTS"
+},
+"deep-dives-prostate-cancer": {
+"url": "/deep-dives/prostate-cancer/",
+"key": "e2f644bd4bae",
+"v": "e290de08",
+"label": "Deep dive for clinicians",
+"title": "Prostate cancer"
+},
+"deep-dives-stroke": {
+"url": "/deep-dives/stroke/",
+"key": "41ef4357aac4",
+"v": "f1f4db72",
+"label": "Deep dive for clinicians",
+"title": "Stroke"
+},
+"dementia-prevention": {
+"url": "/dementia-prevention/",
+"key": "12239d67936d",
+"v": "48b05dd5",
+"label": "Condition",
+"title": "Lowering Your Dementia Risk"
+},
+"depression": {
+"url": "/depression/",
+"key": "03c9a3231fa2",
+"v": "1d20a3a4",
+"label": "Condition",
+"title": "Depression"
+},
+"diverticulitis": {
+"url": "/diverticulitis/",
+"key": "156e600066cb",
+"v": "f58d7799",
+"label": "Condition",
+"title": "Diverticulitis"
+},
+"dry-eye": {
+"url": "/dry-eye/",
+"key": "40e493a92ac7",
+"v": "e306669c",
+"label": "Condition",
+"title": "Dry Eye"
+},
+"ear-infection": {
+"url": "/ear-infection/",
+"key": "fb2eb730de0b",
+"v": "7d612fc7",
+"label": "Condition",
+"title": "Middle Ear Infection in Children"
+},
+"earwax": {
+"url": "/earwax/",
+"key": "dbbcbe57d2c3",
+"v": "368a527e",
+"label": "Condition",
+"title": "Earwax"
+},
+"eczema": {
+"url": "/eczema/",
+"key": "bd9c913bd7fa",
+"v": "4d6ff472",
+"label": "Condition",
+"title": "Eczema"
+},
+"endometriosis": {
+"url": "/endometriosis/",
+"key": "5becf84acae5",
+"v": "be91998a",
+"label": "Condition",
+"title": "Endometriosis"
+},
+"enlarged-prostate": {
+"url": "/enlarged-prostate/",
+"key": "ef05477050dc",
+"v": "d9c6220f",
+"label": "Condition",
+"title": "Enlarged Prostate"
+},
+"erectile-dysfunction": {
+"url": "/erectile-dysfunction/",
+"key": "d90081eb2e27",
+"v": "2d9132e5",
+"label": "Condition",
+"title": "Erectile Dysfunction"
+},
+"erythema-nodosum": {
+"url": "/erythema-nodosum/",
+"key": "ca0f7a70b5aa",
+"v": "0a203be5",
+"label": "Condition",
+"title": "Erythema Nodosum"
+},
+"eustachian-tube": {
+"url": "/eustachian-tube/",
+"key": "111f565f83f6",
+"v": "e7c0d138",
+"label": "Condition",
+"title": "Blocked Ears"
+},
+"exercises": {
+"url": "/exercises/",
+"key": "f2dc148cb3ba",
+"v": "8c11aed3",
+"label": "Exercise handouts",
+"title": "Printable rehab plans"
+},
+"exercises-achilles": {
+"url": "/exercises/achilles/",
+"key": "dc30bb1c5804",
+"v": "a4e548c1",
+"label": "Exercise handout",
+"title": "Achilles Tendinopathy Exercises"
+},
+"exercises-falls-prevention": {
+"url": "/exercises/falls-prevention/",
+"key": "93fdfd48157e",
+"v": "2ba69540",
+"label": "Exercise handout",
+"title": "Falls Prevention Exercises for Older Adults"
+},
+"exercises-kneecap-pain": {
+"url": "/exercises/kneecap-pain/",
+"key": "9b4f47070a43",
+"v": "761c9fa3",
+"label": "Exercise handout",
+"title": "Kneecap Pain Exercises"
+},
+"exercises-neck-pain": {
+"url": "/exercises/neck-pain/",
+"key": "fd264586be4d",
+"v": "958a5e67",
+"label": "Exercise handout",
+"title": "Neck Stretches and Exercises for Neck Pain"
+},
+"exercises-pelvic-floor": {
+"url": "/exercises/pelvic-floor/",
+"key": "73fb27f220ec",
+"v": "a559b9fa",
+"label": "Exercise handout",
+"title": "Pelvic Floor Exercises"
+},
+"exercises-pelvic-floor-men": {
+"url": "/exercises/pelvic-floor-men/",
+"key": "999e1110e4eb",
+"v": "235fecae",
+"label": "Exercise handout",
+"title": "Pelvic Floor Exercises for Men"
+},
+"exercises-shoulder": {
+"url": "/exercises/shoulder/",
+"key": "9dbede09bcbf",
+"v": "b6be5b58",
+"label": "Exercise handout",
+"title": "Shoulder Impingement Exercises"
+},
+"fatty-liver": {
+"url": "/fatty-liver/",
+"key": "aa77614e250f",
+"v": "9d5a2c53",
+"label": "Condition",
+"title": "Fatty Liver (MASLD)"
+},
+"fever-in-children": {
+"url": "/fever-in-children/",
+"key": "334abefdfbd1",
+"v": "d31dcd5d",
+"label": "Condition",
+"title": "Fever in Children"
+},
+"fibromyalgia": {
+"url": "/fibromyalgia/",
+"key": "38a130ffd9bc",
+"v": "d5b49ec3",
+"label": "Condition",
+"title": "Fibromyalgia"
+},
+"foot-oa": {
+"url": "/foot-oa/",
+"key": "591547a1afd2",
+"v": "3624fd67",
+"label": "Condition",
+"title": "Foot and Big Toe Osteoarthritis"
+},
+"frozen-shoulder": {
+"url": "/frozen-shoulder/",
+"key": "e19858d8da25",
+"v": "aefbfea9",
+"label": "Condition",
+"title": "Frozen Shoulder"
+},
+"frozen-shoulder-exercises": {
+"url": "/frozen-shoulder/exercises/",
+"key": "87ee148c7a7b",
+"v": "e5fc7f27",
+"label": "Exercise handout",
+"title": "Frozen Shoulder Exercises"
+},
+"gallstones": {
+"url": "/gallstones/",
+"key": "334fb75ceab6",
+"v": "f7e62662",
+"label": "Condition",
+"title": "Gallstones"
+},
+"ganglion": {
+"url": "/ganglion/",
+"key": "a8cb10423d47",
+"v": "dd551911",
+"label": "Condition",
+"title": "Ganglion Cyst"
+},
+"gastro": {
+"url": "/gastro/",
+"key": "dab02a1c121e",
+"v": "fbae8999",
+"label": "Condition",
+"title": "Gastro (Gastroenteritis)"
+},
+"gilbert-syndrome": {
+"url": "/gilbert-syndrome/",
+"key": "b81ed6fb7cd0",
+"v": "f744171b",
+"label": "Condition",
+"title": "Gilbert’s Syndrome"
+},
+"glandular-fever": {
+"url": "/glandular-fever/",
+"key": "0c09df708f93",
+"v": "f185ec62",
+"label": "Condition",
+"title": "Glandular Fever"
+},
+"gout": {
+"url": "/gout/",
+"key": "77f422514385",
+"v": "27a71f2c",
+"label": "Condition",
+"title": "Gout"
+},
+"haemorrhoids": {
+"url": "/haemorrhoids/",
+"key": "ff18c66b4f10",
+"v": "4bc1b08a",
+"label": "Condition",
+"title": "Haemorrhoids"
+},
+"hair-loss": {
+"url": "/hair-loss/",
+"key": "d564c27aa3ea",
+"v": "6f54607b",
+"label": "Condition",
+"title": "Pattern Hair Loss"
+},
+"hand-foot-mouth": {
+"url": "/hand-foot-mouth/",
+"key": "656c30d6ddcd",
+"v": "d45eb585",
+"label": "Condition",
+"title": "Hand, Foot and Mouth Disease"
+},
+"hand-oa": {
+"url": "/hand-oa/",
+"key": "022015eee6af",
+"v": "226be613",
+"label": "Condition",
+"title": "Hand and Thumb Osteoarthritis"
+},
+"hay-fever": {
+"url": "/hay-fever/",
+"key": "c754d96654b7",
+"v": "d4af3bda",
+"label": "Condition",
+"title": "Hay Fever"
+},
+"head-lice": {
+"url": "/head-lice/",
+"key": "849fb8a31263",
+"v": "90aaad89",
+"label": "Condition",
+"title": "Head Lice"
+},
+"heavy-periods": {
+"url": "/heavy-periods/",
+"key": "c054fec4acc2",
+"v": "25a59446",
+"label": "Condition",
+"title": "Heavy Periods"
+},
+"hiccups": {
+"url": "/hiccups/",
+"key": "4828b0000f4f",
+"v": "4d11f3c6",
+"label": "Condition",
+"title": "Hiccups"
+},
+"hidradenitis-suppurativa": {
+"url": "/hidradenitis-suppurativa/",
+"key": "0b7d99d917b4",
+"v": "7ee56b4e",
+"label": "Condition",
+"title": "Hidradenitis Suppurativa (HS)"
+},
+"hip-oa": {
+"url": "/hip-oa/",
+"key": "370edd26c471",
+"v": "4ddf2324",
+"label": "Condition",
+"title": "Hip Osteoarthritis"
+},
+"hip-oa-exercises": {
+"url": "/hip-oa/exercises/",
+"key": "1e25170aa979",
+"v": "05164b3f",
+"label": "Exercise handout",
+"title": "Hip Osteoarthritis Exercises"
+},
+"hip-pain": {
+"url": "/hip-pain/",
+"key": "608c72523956",
+"v": "8ac843b9",
+"label": "Condition",
+"title": "Outer Hip Pain"
+},
+"hip-pain-exercises": {
+"url": "/hip-pain/exercises/",
+"key": "1c107d955a57",
+"v": "4059fdf2",
+"label": "Exercise handout",
+"title": "Hip Pain Exercises"
+},
+"hives": {
+"url": "/hives/",
+"key": "eec0da4f00ae",
+"v": "739d1442",
+"label": "Condition",
+"title": "Hives and Swelling"
+},
+"ibs": {
+"url": "/ibs/",
+"key": "0e4c21233aee",
+"v": "b7b03bc3",
+"label": "Condition",
+"title": "Irritable Bowel Syndrome"
+},
+"impetigo": {
+"url": "/impetigo/",
+"key": "c4a40bcdd3cb",
+"v": "e9044d5d",
+"label": "Condition",
+"title": "Impetigo (School Sores)"
+},
+"ingrown-toenail": {
+"url": "/ingrown-toenail/",
+"key": "409d44b52439",
+"v": "7466a336",
+"label": "Condition",
+"title": "Ingrown Toenail"
+},
+"iron": {
+"url": "/iron/",
+"key": "7d9330f38dcd",
+"v": "540f4ceb",
+"label": "Condition",
+"title": "Iron Deficiency"
+},
+"iron-infusion": {
+"url": "/iron-infusion/",
+"key": "3bfcd7daa29f",
+"v": "5e5bbf05",
+"label": "Condition",
+"title": "Having an Iron Infusion"
+},
+"jet-lag": {
+"url": "/jet-lag/",
+"key": "140f22c2aec8",
+"v": "57b40426",
+"label": "Condition",
+"title": "Jet Lag"
+},
+"kidney-stones": {
+"url": "/kidney-stones/",
+"key": "d8b7a5d270fb",
+"v": "561e2d06",
+"label": "Condition",
+"title": "Kidney Stones"
+},
+"knee-oa": {
+"url": "/knee-oa/",
+"key": "33e7afa63467",
+"v": "280606ea",
+"label": "Condition",
+"title": "Knee Osteoarthritis"
+},
+"knee-oa-exercises": {
+"url": "/knee-oa/exercises/",
+"key": "9a6c4086ba5b",
+"v": "aef0fab9",
+"label": "Exercise handout",
+"title": "Exercises for Knee Arthritis"
+},
+"low-libido-women": {
+"url": "/low-libido-women/",
+"key": "c9f737c70f2f",
+"v": "1fdb462b",
+"label": "Condition",
+"title": "Low Libido in Women"
+},
+"marine-stings": {
+"url": "/marine-stings/",
+"key": "0f813c956316",
+"v": "7cd09e06",
+"label": "Condition",
+"title": "Marine Stings"
+},
+"mcas": {
+"url": "/mcas/",
+"key": "daba884934fb",
+"v": "2f1a1727",
+"label": "Condition",
+"title": "Mast Cell Activation Syndrome (MCAS)"
+},
+"medicines-ace-inhibitors": {
+"url": "/medicines/ace-inhibitors/",
+"key": "aa9d91a44232",
+"v": "00fd1240",
+"label": "Medicine",
+"title": "ACE inhibitors"
+},
+"medicines-alpha-2-agonists": {
+"url": "/medicines/alpha-2-agonists/",
+"key": "a76ad8e14c04",
+"v": "44ade77b",
+"label": "Medicine",
+"title": "Alpha-2 agonists"
+},
+"medicines-amitriptyline": {
+"url": "/medicines/amitriptyline/",
+"key": "8fb77caf41d0",
+"v": "0a9c9415",
+"label": "Medicine",
+"title": "Amitriptyline"
+},
+"medicines-beta-blockers": {
+"url": "/medicines/beta-blockers/",
+"key": "84d6aed44712",
+"v": "4d6ed880",
+"label": "Medicine",
+"title": "Beta blockers"
+},
+"medicines-clonidine": {
+"url": "/medicines/clonidine/",
+"key": "94d756240337",
+"v": "20710eb3",
+"label": "Medicine",
+"title": "Clonidine"
+},
+"medicines-dexamfetamine": {
+"url": "/medicines/dexamfetamine/",
+"key": "6c5c44962522",
+"v": "e72a3524",
+"label": "Medicine",
+"title": "Dexamfetamine"
+},
+"medicines-escitalopram": {
+"url": "/medicines/escitalopram/",
+"key": "11c2430af541",
+"v": "6ef3205e",
+"label": "Medicine",
+"title": "Escitalopram"
+},
+"medicines-fluoxetine": {
+"url": "/medicines/fluoxetine/",
+"key": "a0a21653f162",
+"v": "57099b94",
+"label": "Medicine",
+"title": "Fluoxetine"
+},
+"medicines-glp1-medicines": {
+"url": "/medicines/glp1-medicines/",
+"key": "114643ca9ac8",
+"v": "f19f00b6",
+"label": "Medicine",
+"title": "GLP-1 medicines"
+},
+"medicines-guanfacine": {
+"url": "/medicines/guanfacine/",
+"key": "d219a987925e",
+"v": "11afbce1",
+"label": "Medicine",
+"title": "Guanfacine"
+},
+"medicines-metformin": {
+"url": "/medicines/metformin/",
+"key": "9e195975a265",
+"v": "f4d2a99d",
+"label": "Medicine",
+"title": "Metformin"
+},
+"medicines-methylphenidate": {
+"url": "/medicines/methylphenidate/",
+"key": "371de424a8bb",
+"v": "075ed742",
+"label": "Medicine",
+"title": "Methylphenidate"
+},
+"medicines-mirtazapine": {
+"url": "/medicines/mirtazapine/",
+"key": "08d7dca97af4",
+"v": "bc983652",
+"label": "Medicine",
+"title": "Mirtazapine"
+},
+"medicines-modafinil": {
+"url": "/medicines/modafinil/",
+"key": "7024f7e8a96d",
+"v": "601929a3",
+"label": "Medicine",
+"title": "Modafinil"
+},
+"medicines-ppis": {
+"url": "/medicines/ppis/",
+"key": "6d8cf873f587",
+"v": "ec8bd0c1",
+"label": "Medicine",
+"title": "Proton pump inhibitors (PPIs)"
+},
+"medicines-quetiapine": {
+"url": "/medicines/quetiapine/",
+"key": "221b82dd6fc2",
+"v": "d11d10f0",
+"label": "Medicine",
+"title": "Quetiapine"
+},
+"medicines-semaglutide": {
+"url": "/medicines/semaglutide/",
+"key": "115280c32001",
+"v": "0df80915",
+"label": "Medicine",
+"title": "Semaglutide"
+},
+"medicines-sertraline": {
+"url": "/medicines/sertraline/",
+"key": "34a33ffd6b16",
+"v": "fb82878a",
+"label": "Medicine",
+"title": "Sertraline"
+},
+"medicines-sglt2-inhibitors": {
+"url": "/medicines/sglt2-inhibitors/",
+"key": "5abbe623a172",
+"v": "1b0f5f27",
+"label": "Medicine",
+"title": "SGLT2 inhibitors"
+},
+"medicines-statins": {
+"url": "/medicines/statins/",
+"key": "2ec13d189c7b",
+"v": "40e13f7d",
+"label": "Medicine",
+"title": "Statins"
+},
+"medicines-tirzepatide": {
+"url": "/medicines/tirzepatide/",
+"key": "f2b42dc3cc10",
+"v": "3525967c",
+"label": "Medicine",
+"title": "Tirzepatide"
+},
+"medicines-weight-loss-medicines": {
+"url": "/medicines/weight-loss-medicines/",
+"key": "72d32efc9ecf",
+"v": "bdbed305",
+"label": "Medicine",
+"title": "Weight-loss medicines"
+},
+"menopause": {
+"url": "/menopause/",
+"key": "c6df78877bf1",
+"v": "0671601b",
+"label": "Condition",
+"title": "Menopause and Perimenopause"
+},
+"mental-health-check": {
+"url": "/mental-health-check/",
+"key": "962b15489e57",
+"v": "38d61e5f",
+"label": "Tool",
+"title": "Mental health check"
+},
+"mental-health-check-anxiety-test": {
+"url": "/mental-health-check/anxiety-test/",
+"key": "1093885d8db8",
+"v": "fafceef0",
+"label": "Tool",
+"title": "Anxiety self-check (GAD-7)"
+},
+"mental-health-check-depression-test": {
+"url": "/mental-health-check/depression-test/",
+"key": "7ddbdc92eb97",
+"v": "56beded2",
+"label": "Tool",
+"title": "Depression self-check (PHQ-9)"
+},
+"mental-health-check-k10": {
+"url": "/mental-health-check/k10/",
+"key": "964206eb947c",
+"v": "23865e7c",
+"label": "Tool",
+"title": "Psychological distress self-check (K10)"
+},
+"mergeon": {
+"url": "/mergeon/",
+"key": "59c1439bbc49",
+"v": "76c43e02",
+"label": "Arcade game",
+"title": "Mergeon"
+},
+"migraine": {
+"url": "/migraine/",
+"key": "893aefefbedf",
+"v": "df2905ed",
+"label": "Condition",
+"title": "Migraine"
+},
+"moles": {
+"url": "/moles/",
+"key": "08a0f9554a66",
+"v": "d34528bf",
+"label": "Condition",
+"title": "Moles and Melanoma Checks"
+},
+"molluscum": {
+"url": "/molluscum/",
+"key": "ce328e6665a6",
+"v": "b65076bc",
+"label": "Condition",
+"title": "Molluscum Contagiosum"
+},
+"mouth-ulcers": {
+"url": "/mouth-ulcers/",
+"key": "97b70f709f53",
+"v": "1f776c95",
+"label": "Condition",
+"title": "Mouth Ulcers"
+},
+"nappy-rash": {
+"url": "/nappy-rash/",
+"key": "52cf4b35dde6",
+"v": "4de61295",
+"label": "Condition",
+"title": "Nappy Rash"
+},
+"neck-oa": {
+"url": "/neck-oa/",
+"key": "a3a026881deb",
+"v": "d0c49280",
+"label": "Condition",
+"title": "Neck Osteoarthritis (Cervical Spondylosis)"
+},
+"neck-pain": {
+"url": "/neck-pain/",
+"key": "7c30d0f56ad9",
+"v": "1c4cda43",
+"label": "Condition",
+"title": "Neck Pain"
+},
+"osteoarthritis": {
+"url": "/osteoarthritis/",
+"key": "3cf67e53a079",
+"v": "9013f7a6",
+"label": "Condition",
+"title": "Osteoarthritis"
+},
+"osteoporosis": {
+"url": "/osteoporosis/",
+"key": "f8efc3ec6941",
+"v": "4804f9e0",
+"label": "Condition",
+"title": "Osteoporosis"
+},
+"osteoporosis-exercises": {
+"url": "/osteoporosis/exercises/",
+"key": "3994784ef286",
+"v": "04004641",
+"label": "Exercise handout",
+"title": "Osteoporosis Exercises"
+},
+"palpitations": {
+"url": "/palpitations/",
+"key": "082d9bcc8e54",
+"v": "e2564c1a",
+"label": "Condition",
+"title": "Heart Palpitations"
+},
+"paronychia": {
+"url": "/paronychia/",
+"key": "64f97602ddbf",
+"v": "d93514f9",
+"label": "Condition",
+"title": "Paronychia"
+},
+"pcos": {
+"url": "/pcos/",
+"key": "ff7c30498dbe",
+"v": "5767a058",
+"label": "Condition",
+"title": "PCOS (now called PMOS)"
+},
+"period-pain": {
+"url": "/period-pain/",
+"key": "ffa43793edb2",
+"v": "ba7258fe",
+"label": "Condition",
+"title": "Period Pain"
+},
+"perioral-dermatitis": {
+"url": "/perioral-dermatitis/",
+"key": "53ede72ed6f6",
+"v": "54ef4cb7",
+"label": "Condition",
+"title": "Perioral Dermatitis"
+},
+"pilonidal-sinus": {
+"url": "/pilonidal-sinus/",
+"key": "dc5f2889a805",
+"v": "82a6b720",
+"label": "Condition",
+"title": "Pilonidal Sinus (Pilonidal Cyst)"
+},
+"pityriasis-rosea": {
+"url": "/pityriasis-rosea/",
+"key": "da1069e71d5f",
+"v": "17116f08",
+"label": "Condition",
+"title": "Pityriasis Rosea"
+},
+"plantar-fasciitis": {
+"url": "/plantar-fasciitis/",
+"key": "64d58114805c",
+"v": "12512444",
+"label": "Condition",
+"title": "Plantar Fasciitis (Heel Pain)"
+},
+"plantar-fasciitis-exercises": {
+"url": "/plantar-fasciitis/exercises/",
+"key": "58af96059b67",
+"v": "55964b0e",
+"label": "Exercise handout",
+"title": "Plantar Fasciitis Stretches and Exercises"
+},
+"pms": {
+"url": "/pms/",
+"key": "a1458ebdca2c",
+"v": "55ed7835",
+"label": "Condition",
+"title": "PMS and PMDD"
+},
+"polymyalgia": {
+"url": "/polymyalgia/",
+"key": "240a4b00c7bb",
+"v": "60066116",
+"label": "Condition",
+"title": "Polymyalgia Rheumatica"
+},
+"pots": {
+"url": "/pots/",
+"key": "49d13bbad01c",
+"v": "a6802689",
+"label": "Condition",
+"title": "POTS"
+},
+"prediabetes": {
+"url": "/prediabetes/",
+"key": "3a62ae04d6ae",
+"v": "a64990fb",
+"label": "Condition",
+"title": "Prediabetes"
+},
+"psoriasis": {
+"url": "/psoriasis/",
+"key": "c566760f9bc4",
+"v": "37871c53",
+"label": "Condition",
+"title": "Psoriasis"
+},
+"ptsd": {
+"url": "/ptsd/",
+"key": "228879b9ffe7",
+"v": "6d0c5a2d",
+"label": "Condition",
+"title": "PTSD"
+},
+"quit-smoking": {
+"url": "/quit-smoking/",
+"key": "e356e398b488",
+"v": "6bab39e3",
+"label": "Condition",
+"title": "Quitting Smoking"
+},
+"raynauds": {
+"url": "/raynauds/",
+"key": "50fc9baa324d",
+"v": "211d9d2a",
+"label": "Condition",
+"title": "Raynaud’s Phenomenon"
+},
+"reflux": {
+"url": "/reflux/",
+"key": "d019ae2fb3f9",
+"v": "3f5764a5",
+"label": "Condition",
+"title": "Reflux and Heartburn"
+},
+"restless-legs": {
+"url": "/restless-legs/",
+"key": "46525cddc7f6",
+"v": "2c8deebc",
+"label": "Condition",
+"title": "Restless Legs"
+},
+"rosacea": {
+"url": "/rosacea/",
+"key": "4d2092c7712e",
+"v": "08505280",
+"label": "Condition",
+"title": "Rosacea"
+},
+"rotator-cuff": {
+"url": "/rotator-cuff/",
+"key": "fe028f30008c",
+"v": "93af5d91",
+"label": "Condition",
+"title": "Rotator Cuff Injuries"
+},
+"rotator-cuff-exercises": {
+"url": "/rotator-cuff/exercises/",
+"key": "8ef16dad7fa5",
+"v": "2227b9e8",
+"label": "Exercise handout",
+"title": "Rotator Cuff Exercises"
+},
+"runners-knee": {
+"url": "/runners-knee/",
+"key": "929d3446ca3d",
+"v": "a81dcfbd",
+"label": "Condition",
+"title": "Runner’s Knee (Kneecap Pain)"
+},
+"scabies": {
+"url": "/scabies/",
+"key": "cc9f08197611",
+"v": "48cadd85",
+"label": "Condition",
+"title": "Scabies"
+},
+"sciatica": {
+"url": "/sciatica/",
+"key": "3f468bcfa6d8",
+"v": "8d2ad217",
+"label": "Condition",
+"title": "Sciatica"
+},
+"seb-derm": {
+"url": "/seb-derm/",
+"key": "79f83096022b",
+"v": "269a638d",
+"label": "Condition",
+"title": "Seborrhoeic Dermatitis and Dandruff"
+},
+"seborrhoeic-keratosis": {
+"url": "/seborrhoeic-keratosis/",
+"key": "683a60766639",
+"v": "6bb5aeb0",
+"label": "Condition",
+"title": "Seborrhoeic Keratoses"
+},
+"shin-splints": {
+"url": "/shin-splints/",
+"key": "4bed975d72bd",
+"v": "aa1a152f",
+"label": "Condition",
+"title": "Shin Splints"
+},
+"shingles": {
+"url": "/shingles/",
+"key": "e7b54bb67652",
+"v": "77bdeca4",
+"label": "Condition",
+"title": "Shingles"
+},
+"shoulder-oa": {
+"url": "/shoulder-oa/",
+"key": "db1a073a66ae",
+"v": "f03bffb7",
+"label": "Condition",
+"title": "Shoulder Osteoarthritis"
+},
+"shoulder-pain": {
+"url": "/shoulder-pain/",
+"key": "c87b1e013704",
+"v": "5ba6ce4e",
+"label": "Condition",
+"title": "Shoulder Pain"
+},
+"sinusitis": {
+"url": "/sinusitis/",
+"key": "6c14d5226990",
+"v": "994a83db",
+"label": "Condition",
+"title": "Sinusitis"
+},
+"skin-cancer": {
+"url": "/skin-cancer/",
+"key": "975280a7124a",
+"v": "b21afb53",
+"label": "Condition",
+"title": "Skin Cancer"
+},
+"skin-cysts": {
+"url": "/skin-cysts/",
+"key": "a510b2182447",
+"v": "b5991e86",
+"label": "Condition",
+"title": "Skin Cysts"
+},
+"skin-tags": {
+"url": "/skin-tags/",
+"key": "d0f14b365567",
+"v": "0bac3ef3",
+"label": "Condition",
+"title": "Skin Tags"
+},
+"sleep": {
+"url": "/sleep/",
+"key": "86f59ff692ff",
+"v": "4686e2fe",
+"label": "Condition",
+"title": "Trouble Sleeping"
+},
+"sleep-apnoea": {
+"url": "/sleep-apnoea/",
+"key": "017211e75949",
+"v": "dd91cfc7",
+"label": "Condition",
+"title": "Obstructive Sleep Apnoea"
+},
+"sore-throat": {
+"url": "/sore-throat/",
+"key": "d5d93072b2fc",
+"v": "d026ae78",
+"label": "Condition",
+"title": "Sore Throat and Tonsillitis"
+},
+"specialists": {
+"url": "/specialists/",
+"key": "1fd66b40b73e",
+"v": "a1849213",
+"label": "Specialists",
+"title": "Specialists and allied health"
+},
+"specialists-audiology": {
+"url": "/specialists/audiology/",
+"key": "673e24aab9ad",
+"v": "84613c53",
+"label": "Specialists",
+"title": "Audiology"
+},
+"specialists-cardiology": {
+"url": "/specialists/cardiology/",
+"key": "b83f1071ba05",
+"v": "04160f4a",
+"label": "Specialists",
+"title": "Cardiology"
+},
+"specialists-child-and-adolescent-psychiatry": {
+"url": "/specialists/child-and-adolescent-psychiatry/",
+"key": "b90d16a3e3e2",
+"v": "3fef101a",
+"label": "Specialists",
+"title": "Child and adolescent psychiatry"
+},
+"specialists-continence-services": {
+"url": "/specialists/continence-services/",
+"key": "a1dea8d11b66",
+"v": "6b04b783",
+"label": "Specialists",
+"title": "Continence services"
+},
+"specialists-dermatology": {
+"url": "/specialists/dermatology/",
+"key": "1002f1daceb3",
+"v": "88163a5f",
+"label": "Specialists",
+"title": "Dermatology"
+},
+"specialists-developmental-paediatrics": {
+"url": "/specialists/developmental-paediatrics/",
+"key": "3ad25e66e98e",
+"v": "395c2ef2",
+"label": "Specialists",
+"title": "Developmental paediatrics"
+},
+"specialists-diabetes-educators": {
+"url": "/specialists/diabetes-educators/",
+"key": "f34f026c8668",
+"v": "a3714185",
+"label": "Specialists",
+"title": "Diabetes educators"
+},
+"specialists-dietitians": {
+"url": "/specialists/dietitians/",
+"key": "d69382e0af63",
+"v": "5d9ddb22",
+"label": "Specialists",
+"title": "Dietitians"
+},
+"specialists-endocrinology": {
+"url": "/specialists/endocrinology/",
+"key": "1e2c209f4cbf",
+"v": "38ee8c46",
+"label": "Specialists",
+"title": "Endocrinology"
+},
+"specialists-ent-ear-nose-and-throat": {
+"url": "/specialists/ent-ear-nose-and-throat/",
+"key": "3df1826aaeff",
+"v": "2d363aff",
+"label": "Specialists",
+"title": "ENT (ear, nose and throat)"
+},
+"specialists-exercise-physiology": {
+"url": "/specialists/exercise-physiology/",
+"key": "2439fb3b9532",
+"v": "6998fd58",
+"label": "Specialists",
+"title": "Exercise physiology"
+},
+"specialists-gastroenterology": {
+"url": "/specialists/gastroenterology/",
+"key": "fb6e4e4c6b50",
+"v": "79c6cf5c",
+"label": "Specialists",
+"title": "Gastroenterology"
+},
+"specialists-general-surgery": {
+"url": "/specialists/general-surgery/",
+"key": "cff9feeb62ec",
+"v": "c99f2a03",
+"label": "Specialists",
+"title": "General surgery"
+},
+"specialists-geriatric-medicine": {
+"url": "/specialists/geriatric-medicine/",
+"key": "740d9e786a53",
+"v": "4490b767",
+"label": "Specialists",
+"title": "Geriatric medicine"
+},
+"specialists-haematology": {
+"url": "/specialists/haematology/",
+"key": "31b87feb19cd",
+"v": "5dc0087f",
+"label": "Specialists",
+"title": "Haematology"
+},
+"specialists-immunology-and-allergy": {
+"url": "/specialists/immunology-and-allergy/",
+"key": "9ada674d863c",
+"v": "775c12a1",
+"label": "Specialists",
+"title": "Immunology and allergy"
+},
+"specialists-infectious-diseases": {
+"url": "/specialists/infectious-diseases/",
+"key": "fc778b6cee73",
+"v": "7289e067",
+"label": "Specialists",
+"title": "Infectious diseases"
+},
+"specialists-lactation-consultants": {
+"url": "/specialists/lactation-consultants/",
+"key": "3f33006c8df6",
+"v": "a12be73f",
+"label": "Specialists",
+"title": "Lactation consultants"
+},
+"specialists-medical-oncology": {
+"url": "/specialists/medical-oncology/",
+"key": "235280418864",
+"v": "3f798b51",
+"label": "Specialists",
+"title": "Medical oncology"
+},
+"specialists-mental-health-social-workers": {
+"url": "/specialists/mental-health-social-workers/",
+"key": "68ce8fdc5ddd",
+"v": "7db217a0",
+"label": "Specialists",
+"title": "Mental health social workers"
+},
+"specialists-nephrology": {
+"url": "/specialists/nephrology/",
+"key": "25a6063a0d21",
+"v": "8b945edf",
+"label": "Specialists",
+"title": "Nephrology"
+},
+"specialists-neurology": {
+"url": "/specialists/neurology/",
+"key": "1bd5e0818b58",
+"v": "04a3de28",
+"label": "Specialists",
+"title": "Neurology"
+},
+"specialists-neurosurgery": {
+"url": "/specialists/neurosurgery/",
+"key": "0669822a45dc",
+"v": "e436eb06",
+"label": "Specialists",
+"title": "Neurosurgery"
+},
+"specialists-obstetrics-and-gynaecology": {
+"url": "/specialists/obstetrics-and-gynaecology/",
+"key": "329b54aa4ff3",
+"v": "7a124fed",
+"label": "Specialists",
+"title": "Obstetrics and gynaecology"
+},
+"specialists-occupational-therapy-adults": {
+"url": "/specialists/occupational-therapy-adults/",
+"key": "5a4abd229853",
+"v": "480a8ef5",
+"label": "Specialists",
+"title": "Occupational therapy (adults)"
+},
+"specialists-occupational-therapy-children": {
+"url": "/specialists/occupational-therapy-children/",
+"key": "5f45412f92bb",
+"v": "168a9fad",
+"label": "Specialists",
+"title": "Occupational therapy (children)"
+},
+"specialists-ophthalmology": {
+"url": "/specialists/ophthalmology/",
+"key": "e1b60aa7b1f6",
+"v": "ea6e1437",
+"label": "Specialists",
+"title": "Ophthalmology"
+},
+"specialists-orthopaedics-foot-and-ankle": {
+"url": "/specialists/orthopaedics-foot-and-ankle/",
+"key": "48d7923d73a0",
+"v": "c85a8f5d",
+"label": "Specialists",
+"title": "Orthopaedics: foot and ankle"
+},
+"specialists-orthopaedics-general-and-trauma": {
+"url": "/specialists/orthopaedics-general-and-trauma/",
+"key": "db19a4c09898",
+"v": "b114d41a",
+"label": "Specialists",
+"title": "Orthopaedics: general and trauma"
+},
+"specialists-orthopaedics-hand-and-wrist": {
+"url": "/specialists/orthopaedics-hand-and-wrist/",
+"key": "55dac14fef6e",
+"v": "544b9e9f",
+"label": "Specialists",
+"title": "Orthopaedics: hand and wrist"
+},
+"specialists-orthopaedics-hip-and-knee": {
+"url": "/specialists/orthopaedics-hip-and-knee/",
+"key": "df99a76f25f3",
+"v": "e29095a8",
+"label": "Specialists",
+"title": "Orthopaedics: hip and knee"
+},
+"specialists-orthopaedics-shoulder-and-elbow": {
+"url": "/specialists/orthopaedics-shoulder-and-elbow/",
+"key": "9a9826373c04",
+"v": "e2628d77",
+"label": "Specialists",
+"title": "Orthopaedics: shoulder and elbow"
+},
+"specialists-orthopaedics-spine": {
+"url": "/specialists/orthopaedics-spine/",
+"key": "7f5eab8ef657",
+"v": "f44c68e5",
+"label": "Specialists",
+"title": "Orthopaedics: spine"
+},
+"specialists-paediatrics": {
+"url": "/specialists/paediatrics/",
+"key": "816b08a06404",
+"v": "b8616e54",
+"label": "Specialists",
+"title": "Paediatrics"
+},
+"specialists-pain-medicine": {
+"url": "/specialists/pain-medicine/",
+"key": "ff9f29e8f6a5",
+"v": "ff18959f",
+"label": "Specialists",
+"title": "Pain medicine"
+},
+"specialists-perinatal-psychiatry": {
+"url": "/specialists/perinatal-psychiatry/",
+"key": "85dac8334e3e",
+"v": "3276338e",
+"label": "Specialists",
+"title": "Perinatal psychiatry"
+},
+"specialists-physiotherapy": {
+"url": "/specialists/physiotherapy/",
+"key": "41058c1fe154",
+"v": "e82a0f1c",
+"label": "Specialists",
+"title": "Physiotherapy"
+},
+"specialists-plastic-and-reconstructive-surgery": {
+"url": "/specialists/plastic-and-reconstructive-surgery/",
+"key": "ba008a117918",
+"v": "e1753eee",
+"label": "Specialists",
+"title": "Plastic and reconstructive surgery"
+},
+"specialists-podiatry": {
+"url": "/specialists/podiatry/",
+"key": "33adad9b6e99",
+"v": "9c247f8c",
+"label": "Specialists",
+"title": "Podiatry"
+},
+"specialists-psychiatry": {
+"url": "/specialists/psychiatry/",
+"key": "7e94c70c6923",
+"v": "fe3f4ae7",
+"label": "Specialists",
+"title": "Psychiatry"
+},
+"specialists-psychiatry-telehealth": {
+"url": "/specialists/psychiatry-telehealth/",
+"key": "dce7a9097fd4",
+"v": "454be8af",
+"label": "Specialists",
+"title": "Psychiatry (telehealth)"
+},
+"specialists-psychology": {
+"url": "/specialists/psychology/",
+"key": "46d32cf784f6",
+"v": "d384f859",
+"label": "Specialists",
+"title": "Psychology"
+},
+"specialists-psychology-children": {
+"url": "/specialists/psychology-children/",
+"key": "104e4c17423b",
+"v": "fbe7bfc1",
+"label": "Specialists",
+"title": "Psychology (children)"
+},
+"specialists-radiation-oncology": {
+"url": "/specialists/radiation-oncology/",
+"key": "04bcf7c23504",
+"v": "602aed48",
+"label": "Specialists",
+"title": "Radiation oncology"
+},
+"specialists-rehabilitation-medicine": {
+"url": "/specialists/rehabilitation-medicine/",
+"key": "4e26779a67d3",
+"v": "de7288fe",
+"label": "Specialists",
+"title": "Rehabilitation medicine"
+},
+"specialists-respiratory-and-sleep-medicine": {
+"url": "/specialists/respiratory-and-sleep-medicine/",
+"key": "8269279767a1",
+"v": "7cb9a83e",
+"label": "Specialists",
+"title": "Respiratory and sleep medicine"
+},
+"specialists-rheumatology": {
+"url": "/specialists/rheumatology/",
+"key": "23ec4b2bc395",
+"v": "545e481e",
+"label": "Specialists",
+"title": "Rheumatology"
+},
+"specialists-sexual-health": {
+"url": "/specialists/sexual-health/",
+"key": "6d3f452cfb12",
+"v": "66a3b4df",
+"label": "Specialists",
+"title": "Sexual health"
+},
+"specialists-speech-pathology-adults": {
+"url": "/specialists/speech-pathology-adults/",
+"key": "35c7abfe8ef0",
+"v": "a02aa555",
+"label": "Specialists",
+"title": "Speech pathology (adults)"
+},
+"specialists-speech-pathology-children": {
+"url": "/specialists/speech-pathology-children/",
+"key": "a78ea353b508",
+"v": "9601630a",
+"label": "Specialists",
+"title": "Speech pathology (children)"
+},
+"specialists-urology": {
+"url": "/specialists/urology/",
+"key": "f9a65ec1a5ae",
+"v": "6b9f7c91",
+"label": "Specialists",
+"title": "Urology"
+},
+"specialists-vascular-surgery": {
+"url": "/specialists/vascular-surgery/",
+"key": "7ed53a77a4e6",
+"v": "4a4c4d8f",
+"label": "Specialists",
+"title": "Vascular surgery"
+},
+"styes": {
+"url": "/styes/",
+"key": "a0a635a3127f",
+"v": "6b20bceb",
+"label": "Condition",
+"title": "Styes"
+},
+"sunspots": {
+"url": "/sunspots/",
+"key": "c4a29a9966a2",
+"v": "782156d7",
+"label": "Condition",
+"title": "Sunspots and Skin Checks"
+},
+"tennis-elbow": {
+"url": "/tennis-elbow/",
+"key": "e56e44a28db5",
+"v": "19cfeff9",
+"label": "Condition",
+"title": "Tennis Elbow"
+},
+"tennis-elbow-exercises": {
+"url": "/tennis-elbow/exercises/",
+"key": "8fbb7b9014c3",
+"v": "28a2b123",
+"label": "Exercise handout",
+"title": "Tennis Elbow Exercises"
+},
+"tension-headache": {
+"url": "/tension-headache/",
+"key": "7c3b242c7263",
+"v": "7f9e2acb",
+"label": "Condition",
+"title": "Tension-Type Headache"
+},
+"threadworms": {
+"url": "/threadworms/",
+"key": "610a9a7d14d5",
+"v": "5b84d481",
+"label": "Condition",
+"title": "Threadworms"
+},
+"thrush": {
+"url": "/thrush/",
+"key": "bace6f5f43d3",
+"v": "fffefbb2",
+"label": "Condition",
+"title": "Vaginal Thrush"
+},
+"tinea": {
+"url": "/tinea/",
+"key": "75b772dead6d",
+"v": "dca51b12",
+"label": "Condition",
+"title": "Tinea and Fungal Nails"
+},
+"tinnitus": {
+"url": "/tinnitus/",
+"key": "68e4e082039b",
+"v": "4fd16be6",
+"label": "Condition",
+"title": "Tinnitus"
+},
+"tired-all-the-time": {
+"url": "/tired-all-the-time/",
+"key": "da7e367faeb7",
+"v": "fd309f9c",
+"label": "Condition",
+"title": "Tired All the Time"
+},
+"tools-bmi-calculator": {
+"url": "/tools/bmi-calculator/",
+"key": "81afa93df2d5",
+"v": "2dd2add8",
+"label": "Tool",
+"title": "BMI calculator for adults"
+},
+"tools-cha2ds2-vasc": {
+"url": "/tools/cha2ds2-vasc/",
+"key": "3a8ead0bf348",
+"v": "7fe56616",
+"label": "Tool",
+"title": "CHA₂DS₂-VASc and CHA₂DS₂-VA calculator"
+},
+"tools-due-date-calculator": {
+"url": "/tools/due-date-calculator/",
+"key": "2db60a7b12e1",
+"v": "8b616b43",
+"label": "Tool",
+"title": "Due date calculator"
+},
+"tools-egfr-calculator": {
+"url": "/tools/egfr-calculator/",
+"key": "652e5a9c8e51",
+"v": "dae6123a",
+"label": "Tool",
+"title": "eGFR calculator (CKD-EPI 2021)"
+},
+"tools-iron-infusion": {
+"url": "/tools/iron-infusion/",
+"key": "92e824d90586",
+"v": "d4b61f7e",
+"label": "Tool",
+"title": "Iron Infusion Dose Calculator"
+},
+"tools-ovulation-calculator": {
+"url": "/tools/ovulation-calculator/",
+"key": "c84bc84379ec",
+"v": "930d61a7",
+"label": "Tool",
+"title": "Ovulation calculator"
+},
+"tools-pregnancy-week-calculator": {
+"url": "/tools/pregnancy-week-calculator/",
+"key": "39419b6718aa",
+"v": "5c495869",
+"label": "Tool",
+"title": "How many weeks pregnant am I?"
+},
+"tools-vertigo": {
+"url": "/tools/vertigo/",
+"key": "10fc35b8cd5d",
+"v": "c6e33db8",
+"label": "Tool",
+"title": "Vertigo Sorter"
+},
+"trigger-finger": {
+"url": "/trigger-finger/",
+"key": "f7634607c10a",
+"v": "46b350cd",
+"label": "Condition",
+"title": "Trigger Finger"
+},
+"type-2-diabetes": {
+"url": "/type-2-diabetes/",
+"key": "91b5b250b2b9",
+"v": "ccf3a85a",
+"label": "Condition",
+"title": "Type 2 Diabetes"
+},
+"underactive-thyroid": {
+"url": "/underactive-thyroid/",
+"key": "5fc62a20972d",
+"v": "25d0f2d1",
+"label": "Condition",
+"title": "Underactive Thyroid"
+},
+"uti": {
+"url": "/uti/",
+"key": "71bfad6f1bcf",
+"v": "35b0ae28",
+"label": "Condition",
+"title": "Urinary Tract Infection"
+},
+"vitamin-d": {
+"url": "/vitamin-d/",
+"key": "74b63dc23aeb",
+"v": "affae624",
+"label": "Condition",
+"title": "Vitamin D Deficiency"
+},
+"warts": {
+"url": "/warts/",
+"key": "9f7e8ce8e2e0",
+"v": "7489543c",
+"label": "Condition",
+"title": "Warts"
+},
+"weight": {
+"url": "/weight/",
+"key": "1157fceb898a",
+"v": "99e59aa5",
+"label": "Condition",
+"title": "Weight and Obesity"
+},
+"zinc": {
+"url": "/zinc/",
+"key": "28507400e387",
+"v": "6a9cadf1",
+"label": "Condition",
+"title": "Zinc Deficiency"
+}
+}
