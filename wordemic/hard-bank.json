@@ -1,7 +1,88 @@
 {
  "_about": "Hard Wordemic bank. Tier 1 = Einstein first, then Genius Sundays. Tier 2 = Genius (or Hard). Tier 3 = Hard. Remove a word once it's used as an answer.",
  "tiers": {
-  "1": [],
+  "1": [
+   {
+    "word": "TABES",
+    "definition": "Wasting away. Tabes dorsalis is late syphilis damaging the back columns of the spinal cord: an unsteady, stamping walk and stabbing pains."
+   },
+   {
+    "word": "ICHOR",
+    "definition": "Old word for a thin, watery, foul-smelling discharge from a wound or ulcer. In Greek myth, the blood of the gods."
+   },
+   {
+    "word": "GUMMA",
+    "definition": "Soft, rubbery lump of late (tertiary) syphilis that can form in skin, bone, liver or brain."
+   },
+   {
+    "word": "NIDUS",
+    "definition": "A nest or focus where something starts, e.g. the small central core of an osteoid osteoma, or the starting point of a stone."
+   },
+   {
+    "word": "CALOR",
+    "definition": "Heat: one of the four classic signs of inflammation described by Celsus, with rubor, tumor and dolor."
+   },
+   {
+    "word": "RUBOR",
+    "definition": "Redness: one of the four classic signs of inflammation (rubor, calor, tumor, dolor)."
+   },
+   {
+    "word": "UNCUS",
+    "definition": "Hook-shaped front tip of the parahippocampal gyrus. Uncal herniation squeezes the third cranial nerve: a blown pupil."
+   },
+   {
+    "word": "AGGER",
+    "definition": "A ridge or mound. The agger nasi is the bump in the side wall of the nose just in front of the middle turbinate, over the frontmost ethmoid air cells."
+   },
+   {
+    "word": "THECA",
+    "definition": "A sheath or case, e.g. the theca cells around an ovarian follicle, which make androgens that become oestrogen."
+   },
+   {
+    "word": "ACRAL",
+    "definition": "Relating to the hands and feet, e.g. acral lentiginous melanoma on the palms, soles and nail beds."
+   },
+   {
+    "word": "VOLAR",
+    "definition": "Relating to the palm (or sole). The volar side of the wrist is the palm side, as in a volar plate injury of a finger."
+   },
+   {
+    "word": "PHYMA",
+    "definition": "A swelling or knobbly growth of the skin, e.g. rhinophyma, the bulbous nose of advanced rosacea."
+   },
+   {
+    "word": "SPRUE",
+    "definition": "Old name for malabsorption with diarrhoea and weight loss: tropical sprue, or non-tropical sprue (coeliac disease)."
+   },
+   {
+    "word": "ICTUS",
+    "definition": "A sudden attack, such as a seizure or stroke. 'Ictal' means during a seizure; 'postictal' is the drowsy aftermath."
+   },
+   {
+    "word": "MANUS",
+    "definition": "The hand, in anatomical Latin: wrist, palm and fingers together."
+   },
+   {
+    "word": "CRURA",
+    "definition": "Plural of crus, a leg-like part. The crura of the diaphragm wrap around the oesophagus at the hiatus."
+   },
+   {
+    "word": "ACINI",
+    "definition": "Plural of acinus: tiny berry-shaped clusters of secreting cells, e.g. in the pancreas and salivary glands."
+   },
+   {
+    "word": "SCALA",
+    "definition": "One of the fluid-filled spiral channels of the cochlea: scala vestibuli, scala media and scala tympani."
+   },
+   {
+    "word": "RALES",
+    "definition": "Old word for crackles: the bubbling or crackling sounds heard through a stethoscope over fluid-filled lung."
+   },
+   {
+    "word": "RAPHE",
+    "definition": "A seam-like ridge where two halves join in the midline, e.g. the scrotal raphe or the palatine raphe."
+   }
+  ],
   "2": [
    {
     "word": "PSOAS",
