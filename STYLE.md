@@ -134,3 +134,15 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Every deep dive also has ONE inline SVG diagram (`<figure class="ddfig">`) in its Pathophysiology or Diagnosis section: accurate to the page's own cited content, site colours (CSS variables, so it works in dark mode), an aria-label describing it in words, and a one-line caption. Check at 390px that no text overflows its box.
 - After publishing, run `python3 _scripts/og_cards.py` (draws the deep dive card and refreshes the /deep-dives/ collage card), then `python3 _scripts/static_nav.py`, and commit the cards and pages.
 - /llms.txt is a plain-text map of the site for AI assistants (llmstxt.org). It is rebuilt daily by the days-soon GitHub Action; run python3 _scripts/build_llms.py after adding pages.
+## Images for search (from Nov 2026)
+- Goal: the site's original diagrams rank in Google Images and Discover.
+- **Descriptive filenames** for content images: keyword-led, lowercase, hyphenated, in a sensible folder, e.g. `/img/exercises/side-lying-shoulder-external-rotation.webp`, `/img/deep-dives/stroke-types-ischaemic-haemorrhagic-flowchart.webp`.
+- **Never descriptive names for puzzle images.** Glimpsis, Opacitis, Dxtective, the X-ray, ECG and anatomy quizzes and any other guess-the-answer image keep date-based or neutral names, and stay out of the image sitemap, so filenames never reveal answers. Don't rename third-party (CC/PD) files that games depend on; keep their credits and licences.
+- **Alt text** on every content image: specific, under 125 characters, no "image of". Add a figcaption where it helps.
+- **An exported WebP for every original diagram.** Exercise figures (assets/exfig.js) and deep dive diagrams (`<figure class="ddfig">`) are exported by `python3 _scripts/export_diagrams.py` (Playwright + Pillow, 2x, about 1200px on the long side, under 80 KB; safe to re-run). It also:
+  - puts a static `<figure class="exfig"><img loading="lazy" width height></figure>` in each handout exercise (exfig.js keeps it; print stays 1 A4 page);
+  - keeps the deep dive inline SVG (dark mode) and adds a "Download this diagram" link in its figcaption;
+  - adds an ImageObject JSON-LD block (`id="mw-image-ld"`: contentUrl, caption, licence https://maladywise.com/about/, creditText "Malady Wise") to each page;
+  - writes **sitemap-images.xml** (the image sitemap entry for each page; listed in robots.txt).
+- When adding a new exercise figure or deep dive, add its file name and alt text to EXERCISES or DEEP_DIVES in `_scripts/export_diagrams.py`, run it, then `python3 _scripts/site_check.py` (it checks the image sitemap's pages and files), and commit the images, pages and sitemap-images.xml.
+- `_scripts/headkit.py` adds `<meta name="robots" content="max-image-preview:large">` to every indexable page (not noindex pages); run it on new pages as usual.
