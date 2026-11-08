@@ -28,6 +28,70 @@
    "volume": "n/a (RSS unavailable)",
    "date": "2026-11-08",
    "source": "Reuters health summary 7 Nov 2026 (wild goose, Germany)"
+  },
+  {
+   "term": "Mpox (WA case spike)",
+   "region": "AU",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "news: WA Health 7 notifications in a week, 22 in 2026 (The West Australian via Ground News)",
+   "niche": false
+  },
+  {
+   "term": "Ebola Bundibugyo (DRC/Uganda)",
+   "region": "Global",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "WHO AFRO situation report 24, data to 1 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "Niemann-Pick disease type C (infantile-onset) FDA decision",
+   "region": "US",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview (17-27 Nov)",
+   "niche": true
+  },
+  {
+   "term": "FKRP limb-girdle muscular dystrophy R9 (LGMD2I) FDA decision",
+   "region": "US",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+   "niche": true
+  },
+  {
+   "term": "Gaucher disease type 3 neurological FDA decision",
+   "region": "US",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+   "niche": true
+  },
+  {
+   "term": "deramiocel Duchenne muscular dystrophy",
+   "region": "US",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+   "niche": true
+  },
+  {
+   "term": "CTEPH (chronic thromboembolic pulmonary hypertension)",
+   "region": "US",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "PHA PH Awareness Month calendar (CTEPH Awareness Day 11 Nov)",
+   "niche": true
+  },
+  {
+   "term": "Smith-Magenis syndrome",
+   "region": "Global",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-09",
+   "source": "Global Genes: SMS Awareness Day 17 Nov",
+   "niche": true
   }
  ],
  "used": [
@@ -41,7 +105,7 @@
     "diphtheria (AU outbreak)",
     "generic twice-yearly lenacapavir PrEP (FDA tentative approval)",
     "Shamonda virus / Culicoides midges (WHO DON623)",
-    "S\u00e3o Paulo Grand Prix (Normie)",
+    "São Paulo Grand Prix (Normie)",
     "Ireland v Argentina, Los Pumas (Normie)"
    ],
    "niche_terms": [
@@ -60,6 +124,23 @@
     "comorbix normie"
    ],
    "note": "Google Trends pages could not be fetched this run; trends taken from data/trends.json and news searches."
+  }
+ ],
+ "suggested_days": [
+  {
+   "name": "CTEPH Awareness Day",
+   "date": "2026-11-11",
+   "url": "https://phassociation.org/awarenessmonth"
+  },
+  {
+   "name": "Pulmonary Hypertension Awareness Month (US, PHA)",
+   "date": "2026-11 (month)",
+   "url": "https://phassociation.org/awarenessmonth"
+  },
+  {
+   "name": "Smith-Magenis Syndrome Awareness Day",
+   "date": "2026-11-17",
+   "url": "https://globalgenes.org/?p=412940"
   }
  ]
 }
