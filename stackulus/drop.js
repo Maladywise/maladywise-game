@@ -35,7 +35,8 @@
   function dailyRec() { var r = lget(DKEY); return r && r.d === sydDay() ? r : null; }
   function bumpStats(f) { var st = lget(STATKEY); if (!st || typeof st !== "object") st = {}; f(st); lset(STATKEY, st); try { if (window.MW_checkBadges) MW_checkBadges(); } catch (e) {} }
 
-  var TOUCH = false; try { TOUCH = navigator.maxTouchPoints > 0 || "ontouchstart" in window || matchMedia("(pointer:coarse)").matches; } catch (e) {}
+  // touchscreen laptops with a mouse count as desktop (keys, not buttons)
+  var TOUCH = false; try { TOUCH = matchMedia("(pointer:coarse)").matches || ((navigator.maxTouchPoints > 0 || "ontouchstart" in window) && !matchMedia("(hover:hover) and (pointer:fine)").matches); } catch (e) {}
   if (TOUCH) document.documentElement.classList.add("od-touch");
   if (normie()) document.title = TITLE + ": a bonus sea-creature stacking game | Malady Wise"; // Medical keeps the page <title> (search-led)
   Array.prototype.forEach.call(document.querySelectorAll(".od-name"), function (e) { e.textContent = TITLE; });
@@ -405,7 +406,7 @@
     dpr = Math.min(3, window.devicePixelRatio || 1); sprites = {};
     var W = C * 14.4, H = C * 20;
     cv.style.width = W + "px"; cv.style.height = H + "px"; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
-    $("od-hud").style.maxWidth = W + "px"; $("od-fact").style.maxWidth = W + "px"; ctrl.style.maxWidth = Math.max(W, 300) + "px";
+    $("od-hud").style.maxWidth = Math.max(W, 300) + "px"; $("od-fact").style.maxWidth = W + "px"; ctrl.style.maxWidth = Math.max(W, 300) + "px";
     draw();
   }
   window.addEventListener("resize", size);

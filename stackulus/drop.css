@@ -1,10 +1,11 @@
 /* Stackulus (was Organ Drop): bonus falling-block arcade game. Self-contained; relies only on shell.css variables. */
 .od-page{max-width:820px}
+.od-intro{max-width:650px;width:100%;box-sizing:border-box;margin:0 auto}
 .od-intro{position:relative;overflow:hidden;border-radius:24px;padding:26px 20px 24px;text-align:center;color:#F6EEF7;
   background:radial-gradient(circle at 84% 12%,rgba(255,190,210,.22) 0 48px,transparent 49px),linear-gradient(170deg,#B3628F 0%,#7A4A92 55%,#4A3480 100%);
   display:grid;justify-items:center;gap:10px;box-shadow:0 14px 40px rgba(30,22,45,.28)}
 .od-intro>*{position:relative;margin:0}
-.od-masc{width:120px;height:120px;animation:odbob 3s ease-in-out infinite}
+.od-masc{width:96px;height:96px;animation:odbob 3s ease-in-out infinite}
 @keyframes odbob{50%{transform:translateY(-6px) rotate(-3deg)}}
 .od-found{font:600 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:#FFE08A;background:rgba(255,255,255,.12);border-radius:999px;padding:5px 12px}
 .od-intro h1{font:700 clamp(36px,8vw,52px)/1.05 var(--title)}
