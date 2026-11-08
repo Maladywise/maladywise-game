@@ -9,8 +9,8 @@ HOW TO RUN (from the repo root; needs Playwright + Chromium and Pillow)
 
 Which pages get a card
     Fact sheets, medicines, blood tests, exercise handouts, deep dives, compare pages, tools, specialists,
-    mental health self-checks (and some of their hub pages), plus Mergeon. Games and the home page keep
-    their own hand-made cards. A page is picked up automatically when its section is one of those.
+    mental health self-checks (and some of their hub pages). The home page, hubs, practice quizzes and games
+    get hand-designed cards from _scripts/key_cards.py instead (any page listed there is skipped here). A page is picked up automatically when its section is one of those.
 
 Each card shows the page's short title (the same name the footer links use, from _scripts/static_nav.py),
 a section label and maladywise.com, in the site's fonts (assets/fonts/) and colours, with a small mascot.
@@ -121,6 +121,9 @@ def spec_for(u, p, pages=None):
         hub = dd_hub_spec(pages)
         if hub:
             return hub
+    import key_cards   # home, hubs, quizzes and games have hand-designed cards (key_cards.py)
+    if u in key_cards.URLS:
+        return None
     if u in SPECIAL:
         return SPECIAL[u]
     if p["sec"] not in SECTIONS or u in static_nav.HUBS:
@@ -326,6 +329,17 @@ def set_meta(src, u, entry, spec):
     alt = "%s: %s. Malady Wise" % (spec[0], spec[1])
     if len(spec) > 4 and "art" in spec[4]:
         alt = "%s: %s. %s. Malady Wise" % (spec[0], spec[1], spec[2])
+    out = write_tags(src, img, alt)
+    # JSON-LD "image" that still points at a generic section card
+    out = re.sub(r'("image":\s*")https://maladywise\.com/assets/(?:og/(?:facts|drugs|tools)\.png|share\.jpg)(?:\?v=\d+)?(")',
+                 lambda m: m.group(1) + img + m.group(2), out)
+    # JSON-LD "image" that points at this page's own card with an old ?v=
+    own = re.escape("%s/assets/og/pages/%s.%s" % (BASE, slug(u), FORMAT))
+    return re.sub(r'("image":\s*")' + own + r'(?:\?v=[0-9a-f]+)?(")', lambda m: m.group(1) + img + m.group(2), out)
+
+
+def write_tags(src, img, alt):
+    """Point a page's og:image (+ width, height, alt) and twitter:image at img (also used by key_cards.py)."""
     tags = ('<meta property="og:image" content="%s">\n<meta property="og:image:width" content="%d">\n'
             '<meta property="og:image:height" content="%d">\n<meta property="og:image:alt" content="%s">\n'
             '<meta name="twitter:image" content="%s">\n') % (img, W, H, html.escape(alt, quote=True), img)
@@ -343,13 +357,7 @@ def set_meta(src, u, entry, spec):
     after = META_RE.sub("", after)
     if 'name="twitter:card"' not in head:
         tags += '<meta name="twitter:card" content="summary_large_image">\n'
-    out = before + tags + after + src[head_end:]
-    # JSON-LD "image" that still points at a generic section card
-    out = re.sub(r'("image":\s*")https://maladywise\.com/assets/(?:og/(?:facts|drugs|tools)\.png|share\.jpg)(?:\?v=\d+)?(")',
-                 lambda m: m.group(1) + img + m.group(2), out)
-    # JSON-LD "image" that points at this page's own card with an old ?v=
-    own = re.escape("%s/assets/og/pages/%s.%s" % (BASE, slug(u), FORMAT))
-    return re.sub(r'("image":\s*")' + own + r'(?:\?v=[0-9a-f]+)?(")', lambda m: m.group(1) + img + m.group(2), out)
+    return before + tags + after + src[head_end:]
 
 
 def apply_meta(pages, idx, manifest, only=None):

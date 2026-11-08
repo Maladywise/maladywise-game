@@ -167,13 +167,6 @@
 "label": "Condition",
 "title": "High Blood Pressure"
 },
-"blood-tests": {
-"url": "/blood-tests/",
-"key": "1e10d1477871",
-"v": "c80819a0",
-"label": "Blood tests",
-"title": "Blood test results explained"
-},
 "blood-tests-hba1c": {
 "url": "/blood-tests/hba1c/",
 "key": "0edd7b10c078",
@@ -369,13 +362,6 @@
 "v": "73e44e2e",
 "label": "Condition",
 "title": "Common Cold"
-},
-"compare": {
-"url": "/compare/",
-"key": "bd6e162810f2",
-"v": "197d4225",
-"label": "Compare",
-"title": "Medicines and symptoms, side by side"
 },
 "compare-cold-vs-flu": {
 "url": "/compare/cold-vs-flu/",
@@ -621,13 +607,6 @@
 "v": "e7c0d138",
 "label": "Condition",
 "title": "Blocked Ears"
-},
-"exercises": {
-"url": "/exercises/",
-"key": "f2dc148cb3ba",
-"v": "8c11aed3",
-"label": "Exercise handouts",
-"title": "Printable rehab plans"
 },
 "exercises-achilles": {
 "url": "/exercises/achilles/",
@@ -1174,13 +1153,6 @@
 "v": "23865e7c",
 "label": "Tool",
 "title": "Psychological distress self-check (K10)"
-},
-"mergeon": {
-"url": "/mergeon/",
-"key": "59c1439bbc49",
-"v": "76c43e02",
-"label": "Arcade game",
-"title": "Mergeon"
 },
 "migraine": {
 "url": "/migraine/",
