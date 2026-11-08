@@ -170,6 +170,9 @@ def invalid_posts(todo):
         if not isinstance(th, list) or not th or not all(isinstance(t, str) and t.strip() for t in th):
             out.append((p, "empty or malformed thread"))
             continue
+        if any("/specialists" in t.lower() for t in th):
+            out.append((p, "links to the specialists directory (owner rule: never post specialist pages to X)"))
+            continue
         th, _ = to_x_thread(th)
         if len(re.findall(r"(?<!\w)#\w+", th[0])) > 1:
             print("Warning: %s post 1 has more than one hashtag (style: at most 1)." % p["date"], file=sys.stderr)
