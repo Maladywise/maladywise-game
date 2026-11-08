@@ -259,7 +259,7 @@ CSS = '''<style>
 .sq .sq-bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
 .sq .sq-bar i{display:block;height:100%;width:0;background:var(--brand);transition:width .25s}
 .sq fieldset.sq-q{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:14px 14px 12px;margin:0 0 12px;min-width:0}
-.sq fieldset.sq-q legend{font:700 18px var(--title);color:var(--ink);padding:0 4px;max-width:100%;white-space:normal;float:left;width:100%;padding:0}
+.sq fieldset.sq-q legend{font:700 18px/1.35 var(--title);color:var(--ink);max-width:100%;white-space:normal;float:left;width:100%;padding:0;margin:0 0 16px}
 .sq .sq-opts{clear:both}
 .sq .sq-n{display:block;font:600 12.5px var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
 .sq .sq-opts{display:grid;gap:8px;margin-top:8px}
