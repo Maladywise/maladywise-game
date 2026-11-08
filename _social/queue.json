@@ -1,5 +1,5 @@
 {
- "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts (one item = single post), each <= 280 characters. Never store API keys here.",
+ "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
  "posts": [
   {
    "date": "2026-11-17",

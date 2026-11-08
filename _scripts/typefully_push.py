@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-"""Send queued X posts to Typefully (API v2), one per day at 7:30am Sydney, with optional World Day cards.
+"""Send queued X posts to Typefully (API v2), one per day at 7:30am Sydney, always as an image post + link reply.
 
 Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["post 1", ...], "note": "...", "card": true}]}
 - Entries without "typefully_id" whose date is today..today+10 (Sydney) are created as scheduled drafts.
-- "card": true attaches that date's World Day picture card (_scripts/day_card.py) to the first post.
+- X shows posts with links to far fewer people, so every draft is sent as a thread: post 1 has an image
+  and NO link; the link goes in post 2 (the first reply), e.g. "Play today's puzzle → https://...".
+  Queue text is converted at send time: links are moved out of post 1 (into post 2, or a new post 2 if
+  it won't fit), and a single post gets a reply with its link (or the home page if it had none).
+- Image on post 1: "card": true -> that date's World Day card (_scripts/day_card.py); otherwise the
+  linked page's og:image read from its HTML at push time (games: assets/og/<game>.png; deep dives:
+  their own page card); a game whose og:image is the generic share card gets a generated card with its
+  name and teaser; fallback assets/og/<first path segment>.png, then the site share card.
 - Empty dates with a strong day (priority 1-3) get an automatic single World Day post with its card,
   but only from AUTO_FROM, only once that week's Friday batch has been written (so the weekly mix
   always wins), and only if Typefully has nothing already scheduled that day (hand-made posts).
@@ -16,7 +23,7 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["pos
     python3 _scripts/typefully_push.py --dry-run [--days 14] [--today YYYY-MM-DD] [--out DIR]
 --dry-run (or DRY_RUN=1) prints what would be sent and saves the cards as PNGs in a temp folder.
 """
-import argparse, datetime, http.client, json, os, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
+import argparse, datetime, html, http.client, json, os, re, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -62,8 +69,9 @@ def put_file(url, data):
 
 
 def upload_card(sid, png_path, day):
-    """Create an upload, PUT the PNG, wait until Typefully has processed it. Returns the media_id."""
-    res = call("POST", "/social-sets/%s/media/upload" % sid, {"file_name": "maladywise-day-%s.png" % day})
+    """Create an upload, PUT the image, wait until Typefully has processed it. Returns the media_id."""
+    ext = os.path.splitext(png_path)[1].lower() or ".png"
+    res = call("POST", "/social-sets/%s/media/upload" % sid, {"file_name": "maladywise-%s%s" % (day, ext)})
     mid, url = res.get("media_id"), res.get("upload_url")
     if not mid or not url:
         raise RuntimeError("no media_id/upload_url in %r" % res)
@@ -155,13 +163,16 @@ def x_len(text):
 
 
 def invalid_posts(todo):
-    """[(entry, reason)] for queue entries that must not be sent: empty or over 280 X characters."""
+    """[(entry, reason)] for queue entries that must not be sent: empty or over 280 X characters (after the link move)."""
     out = []
     for p in todo:
         th = p.get("thread")
         if not isinstance(th, list) or not th or not all(isinstance(t, str) and t.strip() for t in th):
             out.append((p, "empty or malformed thread"))
             continue
+        th, _ = to_x_thread(th)
+        if len(re.findall(r"(?<!\w)#\w+", th[0])) > 1:
+            print("Warning: %s post 1 has more than one hashtag (style: at most 1)." % p["date"], file=sys.stderr)
         for i, t in enumerate(th, 1):
             n = x_len(t)
             if n > 280:
@@ -184,21 +195,179 @@ def auto_post(day):
     n = datetime.date.fromisoformat(day).toordinal()
     gentle = "gentle" in (x.get("tags") or []) or sens_too
     if gentle:  # respectful: no sass, no hashtag
-        texts = ["Today is %s. %s\n\n%s" % (name, hook, link), "Today is %s.\n\n%s" % (name, link)]
+        texts = ["Today is %s. %s" % (name, hook), "Today is %s." % name]
+        reply = "Find out more → %s" % link
     else:
         tail = (TAILS if day_card.themed(x, day) else TAILS_PLAIN)
         tail = tail[n % len(tail)]
         tag = "#" + "".join(w[:1].upper() + w[1:] for w in re.findall(r"[A-Za-z0-9]+", name))
         tag = tag if len(tag) <= 30 else ""
         lead = "It's %s." % name
-        texts = ["%s %s\n\n%s\n%s%s" % (lead, hook, tail, link, "\n\n" + tag if tag else ""),
-                 "%s %s\n\n%s\n%s" % (lead, hook, tail, link),
-                 "%s %s\n\n%s" % (lead, hook, link),
-                 "%s\n\n%s\n%s" % (lead, tail, link)]
+        texts = ["%s %s\n\n%s%s" % (lead, hook, tail, "\n\n" + tag if tag else ""),
+                 "%s %s\n\n%s" % (lead, hook, tail),
+                 "%s %s" % (lead, hook),
+                 "%s\n\n%s" % (lead, tail)]
+        reply = "Play today's puzzles → %s" % SITE
+        if link != SITE:
+            reply += "\nRead more → %s" % link
     for t in texts:
         if x_len(t) <= 280:
-            return {"date": day, "note": "Auto World Day: %s" % name, "thread": [t], "card": True, "auto": True}
+            return {"date": day, "note": "Auto World Day: %s" % name, "thread": [t, reply], "card": True, "auto": True}
     return None
+
+
+# ---------- image post + link reply ----------
+URL_RE = re.compile(r"https?://[^\s<>\"]+")
+
+
+def urls_in(text):
+    return [u.rstrip(".,;:!?)]'’”") for u in URL_RE.findall(text)]
+
+
+def cta_for(url):
+    """Short call to action for the reply, from the link's shape."""
+    path = urllib.parse.urlsplit(url).path.strip("/")
+    seg = path.split("/")[0] if path else ""
+    if "maladywise.com" not in url:
+        return "Read more"
+    if not seg:
+        return "Play today's puzzles"
+    if seg == "deep-dives":
+        return "Read the full deep dive"
+    if seg in ("zebra-mail", "subscribe", "newsletter"):
+        return "Subscribe free"
+    if seg in ("stackulus", "mergeon", "basil-clover", "arcade"):
+        return "Play it free"
+    if seg in games():
+        return "Play today's puzzle" if "date=" in url else "Play it free"
+    return "Read more"
+
+
+def tidy(text):
+    """Post text with its links removed, reading cleanly: no dangling colons/arrows or blank-line pile-ups."""
+    lines = []
+    for ln in text.split("\n"):
+        had = bool(URL_RE.search(ln))
+        ln = re.sub(r"[ \t]*[:→➡👉👇]?[ \t]*" + URL_RE.pattern, "", ln).rstrip()
+        if had:
+            ln = re.sub(r"[\s:→➡👉👇\-–—|]+$", "", ln)
+            if re.search(r"(here|at|via|link|on)$", ln, re.I) and len(ln.split()) <= 3:
+                ln = ""  # "Play here", "Link" etc. mean nothing without the link
+        lines.append(re.sub(r"[ \t]{2,}", " ", ln))
+    out = re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
+    return out
+
+
+def to_x_thread(thread):
+    """(posts, url): post 1 without links, the link in post 2. Keeps longer threads' structure."""
+    th = [t.strip() for t in thread]
+    all_urls = [u for t in th for u in urls_in(t)]
+    first = urls_in(th[0])
+    url = (first or all_urls or [SITE])[0]
+    reply = "%s → %s" % (cta_for(url), url)
+    if first:
+        th[0] = tidy(th[0])
+        extra = [u for u in first[1:] if u != url]
+        if extra:
+            reply += "".join("\n" + u for u in extra)
+        if not th[0]:
+            th[0] = cta_for(url) + " 👇"
+        if len(th) == 1:
+            th.append(reply)
+        elif url in th[1]:
+            pass
+        elif x_len(th[1] + "\n\n" + reply) <= 280:
+            th[1] = th[1] + "\n\n" + reply
+        else:
+            th.insert(1, reply)
+    elif len(th) == 1:
+        th.append(reply)
+    return th, url
+
+
+GAMES = None
+
+
+def games():
+    global GAMES
+    if GAMES is None:
+        GAMES = load_games()
+    return GAMES
+
+
+def load_games():
+    """Folder names that are games: every top-level folder whose og:image lives in assets/og/ (not facts/tools)."""
+    out = set()
+    for d in os.listdir(ROOT):
+        og = page_og(d)
+        if og and "/assets/og/" in og and not re.search(r"/(facts|tools|drugs)\.png", og):
+            out.add(d)
+    return out
+
+
+def page_file(url):
+    """Local HTML file for a maladywise.com URL, or None."""
+    u = urllib.parse.urlsplit(url)
+    if not u.netloc.endswith("maladywise.com"):
+        return None
+    path = u.path.strip("/")
+    f = os.path.join(ROOT, path, "index.html") if not path.endswith(".html") else os.path.join(ROOT, path)
+    return f if os.path.isfile(f) else None
+
+
+def meta(doc, prop):
+    m = re.search(r'<meta[^>]+(?:property|name)="%s"[^>]+content="([^"]*)"' % re.escape(prop), doc) or \
+        re.search(r'<meta[^>]+content="([^"]*)"[^>]+(?:property|name)="%s"' % re.escape(prop), doc)
+    return html.unescape(m.group(1)) if m else None
+
+
+def page_og(seg_or_url):
+    f = page_file(seg_or_url) if "://" in seg_or_url else os.path.join(ROOT, seg_or_url, "index.html")
+    if not f or not os.path.isfile(f):
+        return None
+    try:
+        return meta(open(f, encoding="utf-8").read(), "og:image")
+    except (OSError, UnicodeDecodeError):
+        return None
+
+
+def local_asset(og):
+    """https://maladywise.com/assets/og/x.png?v=2 -> local path, if that file exists in the repo."""
+    if not og:
+        return None
+    u = urllib.parse.urlsplit(og)
+    if u.netloc and not u.netloc.endswith("maladywise.com"):
+        return None
+    f = os.path.join(ROOT, u.path.lstrip("/"))
+    return f if os.path.isfile(f) else None
+
+
+SHARE = os.path.join(ROOT, "assets", "share.png")
+
+
+def page_image(url):
+    """("file", path) or ("game", name, teaser) for the page the post links to."""
+    seg = urllib.parse.urlsplit(url).path.strip("/").split("/")[0] if "maladywise.com" in url else ""
+    og = page_og(url)
+    f = local_asset(og)
+    generic = f and os.path.basename(f).startswith("share.")
+    if f and not (generic and seg):
+        return ("file", f)
+    if seg:
+        pf = page_file(url)
+        if generic and pf:  # a game with no picture of its own: draw one from its title and description
+            doc = open(pf, encoding="utf-8").read()
+            t = re.search(r"<title>([^<]+)</title>", doc)
+            name = re.split(r"\s*[|:–—]\s*", html.unescape(t.group(1)))[0].strip() if t else seg.title()
+            desc = meta(doc, "og:description") or meta(doc, "description") or ""
+            teaser = re.split(r"(?<=[.!?])\s+", desc)[0] if desc else ""
+            teaser = re.sub(r"^%s (is|are) " % re.escape(name), "", teaser, flags=re.I)
+            teaser = teaser[:1].upper() + teaser[1:]
+            return ("game", name, teaser)
+        g = os.path.join(ROOT, "assets", "og", seg + ".png")
+        if os.path.isfile(g):
+            return ("file", g)
+    return ("file", SHARE)
 
 
 def main():
@@ -268,6 +437,31 @@ def main():
         path = os.path.join(out_dir, "day-card-%s.png" % day)
         return path if day_card.render(day, path, browser) else None
 
+    def image_for(p, url):
+        """Local image path for post 1: day card, page og image, generated game card, or the share card."""
+        if p.get("card"):
+            try:
+                png = card_for(p["date"])
+                if png:
+                    return png
+                print("No strong day on %s, so no day card." % p["date"])
+            except Exception as e:  # never lose the post over the picture
+                print("Card render failed for %s: %s" % (p["date"], e))
+        pick = page_image(url)
+        if pick[0] == "game":
+            try:
+                nonlocal browser, pw
+                if browser is None:
+                    from playwright.sync_api import sync_playwright
+                    pw = sync_playwright().start()
+                    browser = pw.chromium.launch()
+                path = os.path.join(out_dir, "game-card-%s.png" % p["date"])
+                return day_card.render_game(pick[1], pick[2], p["date"], path, browser)
+            except Exception as e:
+                print("Game card render failed for %s: %s" % (p["date"], e))
+                return SHARE
+        return pick[1]
+
     def save():
         posts.sort(key=lambda p: p["date"])
         tmp = QUEUE + ".tmp"
@@ -284,34 +478,29 @@ def main():
                 print("Skip (slot already passed):", p["date"]); continue
             if p.get("auto") and (busy is None or p["date"] in busy):
                 print("Skip auto post (Typefully already has a post that day):", p["date"]); continue
-            post0 = {"text": p["thread"][0]}
-            body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in p["thread"][1:]]}},
+            xs, url = to_x_thread(p["thread"])
+            post0 = {"text": xs[0]}
+            body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in xs[1:]]}},
                     "publish_at": when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
-            png = None
-            if p.get("card"):
-                try:
-                    png = card_for(p["date"])
-                    if not png:
-                        print("No strong day on %s, so no card." % p["date"])
-                except Exception as e:  # never lose the post over the picture
-                    print("Card render failed for %s: %s" % (p["date"], e))
+            png = image_for(p, url)
             if dry:
                 print("DRY", p["date"], body["publish_at"], "AUTO" if p.get("auto") else "queue",
-                      len(p["thread"]), "post(s)", "+ card " + png if png else "")
-                print("   " + p["thread"][0].replace("\n", "\n   "))
+                      len(xs), "post(s) + image", os.path.relpath(png, ROOT) if png.startswith(ROOT) else png)
+                for i, t in enumerate(xs, 1):
+                    print("   [%d] " % i + t.replace("\n", "\n       "))
                 continue
             if png:
                 try:
                     post0["media_ids"] = [upload_card(sid, png, p["date"])]
                 except (Exception, SystemExit) as e:
-                    print("Card upload failed for %s (%s); posting without it." % (p["date"], e))
+                    print("Image upload failed for %s (%s); posting without it." % (p["date"], e))
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             p["typefully_id"] = str(res.get("id", "ok"))
             p["queued_at"] = datetime.datetime.now(SYD).isoformat(timespec="minutes")
             if p.pop("auto", None):
                 posts.append(p)
             save()  # write back now, so a crash on a later post can't cause a duplicate
-            print("Queued", p["date"], "->", p["typefully_id"], "with card" if "media_ids" in post0 else "")
+            print("Queued", p["date"], "->", p["typefully_id"], "with image" if "media_ids" in post0 else "WITHOUT image")
         if dry:  # preview every card in the window, attached or not
             d = today
             while d <= last:

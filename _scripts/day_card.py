@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """World Day picture card for X (1200x675 PNG), in the style of the home-page "today" box.
+Also render_game(): the same look with a game's name and teaser, for pages without their own og image.
 
     python3 _scripts/day_card.py 2026-11-18 [out.png]
 
@@ -172,10 +173,10 @@ p.hook{font:400 28px/1.45 var(--body);color:var(--ink);text-wrap:pretty}
 .play{padding:13px 30px;border-radius:999px;background:var(--brand);color:#fff;font:600 23px var(--body);white-space:nowrap}
 .url{font:700 32px var(--title);color:var(--brand);white-space:nowrap}
 </style></head><body><div class="wrap">
-<div class="top"><div class="logo">Malady Wise<span>World Day</span></div><div class="date">%(date)s</div></div>
+<div class="top"><div class="logo">Malady Wise<span>%(tag)s</span></div><div class="date">%(date)s</div></div>
 <div class="card" id="card"><div class="k">%(kicker)s</div><h1 id="t">%(name)s</h1>%(span)s<p class="hook" id="p">%(hook)s</p>
 %(icon)s</div>
-<div class="foot"><div class="play">Play today&#8217;s puzzles &#8250;</div><div class="url">maladywise.com</div></div>
+<div class="foot"><div class="play">%(play)s &#8250;</div><div class="url">maladywise.com</div></div>
 </div></body></html>"""
 
 # Shrink the title, then the hook, until the card's content fits. Returns true if it fits.
@@ -202,7 +203,7 @@ def card_html(x, day):
     sp = span_line(x, day)
     ic = icon_uri(x)
     return TEMPLATE % {
-        "fonts": font_css(), "w": W, "h": H, "date": e(nice_date(day)), "kicker": e(kicker), "name": e(display_name(x)),
+        "fonts": font_css(), "w": W, "h": H, "tag": "World Day", "play": "Play today&#8217;s puzzles", "date": e(nice_date(day)), "kicker": e(kicker), "name": e(display_name(x)),
         "span": '<div class="span">%s</div>' % e(sp) if sp else "", "hook": e(hook(x)),
         "icon": '<div class="ic"><img src="%s" alt=""></div>' % ic if ic else "",
     }
@@ -233,7 +234,29 @@ def render(day, out_path, browser=None):
     doc = card_html(x, day)
     if 'class="ic"' not in doc:  # no icon at all: let the text use the full width
         doc = doc.replace("padding:40px 330px 40px 52px", "padding:40px 52px")
+    shoot(doc, out_path, browser, day)
+    return x
 
+
+def game_card_html(name, teaser, day, kicker="Free daily game"):
+    """Same look as the World Day card, for a game or page that has no picture of its own."""
+    e = html.escape
+    ic = "data:image/svg+xml;base64," + base64.b64encode(open(os.path.join(ICONS, "stethoscope.svg"), "rb").read()).decode() \
+        if os.path.isfile(os.path.join(ICONS, "stethoscope.svg")) else ""
+    return TEMPLATE % {
+        "fonts": font_css(), "w": W, "h": H, "tag": "Puzzles", "play": "Play free", "date": e(nice_date(day)),
+        "kicker": e(kicker), "name": e(name), "span": "", "hook": e(teaser),
+        "icon": '<div class="ic"><img src="%s" alt=""></div>' % ic if ic else "",
+    }
+
+
+def render_game(name, teaser, day, out_path, browser=None):
+    """Picture card with a game's name and teaser line (no new facts: use the page's own description)."""
+    shoot(game_card_html(name, teaser, day), out_path, browser, name)
+    return out_path
+
+
+def shoot(doc, out_path, browser, label):
     def go(b):
         page = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
         try:
@@ -247,7 +270,7 @@ def render(day, out_path, browser=None):
                 pass
             ok = page.evaluate(FIT_JS)
             if not ok:
-                print("Warning: card text for %s still overflows after shrinking" % day, file=sys.stderr)
+                print("Warning: card text for %s still overflows after shrinking" % label, file=sys.stderr)
             page.screenshot(path=out_path, clip={"x": 0, "y": 0, "width": W, "height": H})
         finally:
             page.close()
@@ -262,7 +285,6 @@ def render(day, out_path, browser=None):
                 go(b)
             finally:
                 b.close()
-    return x
 
 
 def main(argv):
