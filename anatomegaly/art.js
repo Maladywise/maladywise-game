@@ -236,6 +236,289 @@
     return svg("0 0 200 " + Math.ceil(y + 74), o, "Side view of the spine");
   }
 
+  // ================= Sections, vessels and maps (added Nov 2026) =================
+  // Cross-sections follow the radiology convention: seen from the feet, front at the top, so the patient's right is on the viewer's left.
+  // Paired structures carry a shared id plus a side id ("-r" = patient's right, "-l" = patient's left).
+  function c(id, cx, cy, r, cls, extra) { return '<circle data-p="' + id + '" class="' + (cls || "bn") + '" cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + (extra || "") + "/>"; }
+  function sid(n, s) { return n + " " + n + s; }
+  function mirror(w, body) { return '<g transform="translate(' + w + ' 0) scale(-1 1)">' + body + "</g>"; }
+
+  // ---------- brain, axial slice at the basal ganglia ----------
+  function baxHalf(s) {
+    var o = "";
+    o += '<path class="ln gm-ln" stroke-width="5" d="M30 64 L46 76 M22 190 L40 180 M58 30 L66 46 M56 250 L66 234 M18 104 L30 108"/>';
+    o += p(sid("insula", s), "M44 94 C34 110 34 148 44 164", "ln gm-ln", ' stroke-width="9"');
+    o += '<path class="ln gm-ln" stroke-width="11" d="M16 129 L32 129"/>';
+    o += p(sid("sylvian", s), "M16 129 L31 129 M34 92 C27 108 27 152 34 166", "ln csf-ln", ' stroke-width="4.5"');
+    o += p(sid("putamen", s) + " lentiform lentiform" + s, "M84 126 L70 84 C56 88 47 106 47 128 C47 152 56 172 71 178 Z", "gm");
+    o += p(sid("pallidus", s) + " lentiform lentiform" + s, "M84 126 L72 100 C64 112 63 142 72 154 Z", "gm gp");
+    o += e(sid("caudate", s), 95, 98, 10, 17, "gm", -12);
+    o += p(sid("alic", s) + " ic ic" + s, "M70 84 L81 79 L93 115 L82 118 Z", "wm icap");
+    o += p(sid("genu-ic", s) + " ic ic" + s, "M82 118 L93 115 L101 126 L93 137 L82 134 Z", "wm icap");
+    o += p(sid("plic", s) + " ic ic" + s, "M82 134 L93 137 L84 184 L72 178 Z", "wm icap");
+    o += e(sid("thalamus", s), 104, 158, 13, 26, "gm");
+    o += p(sid("frontalhorn", s) + " lateralventricle lateralventricle" + s, "M117 74 L117 124 C111 122 106 116 104 110 C108 102 108 92 104 84 C106 78 111 74 117 74 Z", "csf");
+    o += p(sid("occipitalhorn", s) + " lateralventricle lateralventricle" + s, "M94 186 C86 194 80 208 79 226 C88 218 95 204 100 192 Z", "csf");
+    return o;
+  }
+  function brainAxial() {
+    var o = '<ellipse class="gm" cx="120" cy="140" rx="104" ry="128"/><ellipse class="wm" cx="120" cy="140" rx="94" ry="117"/>';
+    o += '<path class="ln csf-ln" stroke-width="3" d="M120 12 L120 56 M120 224 L120 268"/>';
+    o += baxHalf("-r") + mirror(240, baxHalf("-l"));
+    o += '<path class="ln cc-o" stroke-width="12" d="M98 79 C102 58 138 58 142 79 M96 197 C102 220 138 220 144 197"/>';
+    o += p("ccgenu cc", "M98 79 C102 58 138 58 142 79", "ln cc", ' stroke-width="9"');
+    o += p("splenium cc", "M96 197 C102 220 138 220 144 197", "ln cc", ' stroke-width="9"');
+    o += p("thirdventricle", "M116 136 Q120 132 124 136 L124 180 Q120 184 116 180 Z", "csf");
+    return svg("0 0 240 280", o, "Axial slice of the brain at the level of the basal ganglia");
+  }
+
+  // ---------- brain, coronal slice through the thalamus and hippocampus ----------
+  function bcorHalf(s) {
+    var o = "";
+    o += '<path class="gm" d="M130 12 C76 10 22 40 12 96 C8 122 12 150 18 168 C26 190 44 204 68 202 C90 200 104 190 106 176 C107 164 110 154 118 150 L130 150 Z"/>';
+    o += '<path class="wm" d="M130 22 C82 20 34 46 22 98 C18 120 22 146 28 162 C34 182 50 192 68 190 C84 188 94 180 96 170 C98 158 104 148 112 142 L130 140 Z"/>';
+    o += '<path class="ln gm-ln" stroke-width="5" d="M40 40 L52 56 M18 80 L32 86 M80 16 L84 34 M20 160 L34 156 M56 198 L60 184"/>';
+    o += p(sid("insula", s), "M53 94 C47 108 47 132 53 146", "ln gm-ln", ' stroke-width="9"');
+    o += '<path class="ln gm-ln" stroke-width="11" d="M10 123 L40 121"/>';
+    o += p(sid("sylvian", s), "M10 123 L40 121 M43 92 C38 106 38 134 43 148", "ln csf-ln", ' stroke-width="4.5"');
+    o += p(sid("lentiform", s), "M84 92 C70 90 60 104 59 120 C59 134 66 142 78 142 L96 140 Z", "gm");
+    o += '<path class="ln lam" d="M83 97 C76 110 76 128 88 139"/>';
+    o += p(sid("ic", s), "M80 76 L90 74 L108 144 L98 148 Z", "wm icap");
+    o += e(sid("caudate", s), 101, 85, 8, 6.5, "gm", -30);
+    o += p(sid("lvbody", s) + " lateralventricle lateralventricle" + s, "M127 71 C118 69 110 71 105 76 C108 83 114 89 122 93 L127 95 Z", "csf");
+    o += e(sid("thalamus", s), 112, 115, 13, 17, "gm");
+    o += p(sid("temporalhorn", s) + " lateralventricle lateralventricle" + s, "M64 160 C74 150 92 150 99 158 L97 163 C89 158 77 158 67 165 Z", "csf");
+    o += '<g data-p="' + sid("hippocampus", s) + '" class="grp"><path class="gm hip" d="M74 170 C76 160 96 160 104 168 C108 176 100 184 88 183 C78 182 72 178 74 170 Z"/><path class="ln lam" d="M84 174 C86 168 94 168 96 173 C97 177 92 178 90 175"/></g>';
+    o += p(sid("temporal", s), "M10 124 L42 122 C50 138 58 148 72 152 C92 154 104 160 106 172 C106 192 90 203 66 203 C40 203 24 188 17 168 C11 152 9 138 10 124 Z", "ov");
+    return o;
+  }
+  function brainCoronal() {
+    var o = bcorHalf("-r") + mirror(260, bcorHalf("-l"));
+    o += p("brainstem", "M116 146 C122 140 138 140 144 146 C146 170 144 196 140 236 L120 236 C116 196 114 170 116 146 Z", "br bs");
+    o += '<path class="ln csf-ln" stroke-width="3" d="M130 12 L130 60"/>';
+    o += '<path class="ln cc-o" stroke-width="11" d="M86 76 C104 58 156 58 174 76"/>';
+    o += p("cc", "M86 76 C104 58 156 58 174 76", "ln cc", ' stroke-width="8"');
+    o += p("thirdventricle", "M126 100 Q130 96 134 100 L134 134 Q130 138 126 134 Z", "csf");
+    return svg("0 0 260 244", o, "Coronal slice of the brain through the thalamus and hippocampus");
+  }
+
+  // ---------- abdomen, axial slice at about L1/L2 ----------
+  function abdoAxial() {
+    var o = '<path class="fat" d="M160 16 C250 16 312 60 312 128 C312 182 280 224 226 230 C200 233 180 226 160 228 C140 226 120 233 94 230 C40 224 8 182 8 128 C8 60 70 16 160 16 Z"/>';
+    o += '<path class="mu" d="M160 26 C244 26 300 66 300 128 C300 176 272 212 228 218 L92 218 C48 212 20 176 20 128 C20 66 76 26 160 26 Z"/>';
+    o += '<path class="cav" d="M160 34 C238 34 290 70 290 128 C290 168 268 196 236 202 L84 202 C52 196 30 168 30 128 C30 70 82 34 160 34 Z"/>';
+    o += '<path class="mu mu3" d="M120 196 C122 186 140 184 146 196 L146 222 L118 222 Z M200 196 C198 186 180 184 174 196 L174 222 L202 222 Z"/>';
+    o += p("liver", "M34 118 C32 76 66 42 116 38 C134 38 140 48 134 62 C126 80 114 96 98 108 C84 120 70 138 54 148 C40 144 35 132 34 118 Z", "og liv");
+    o += e("gallbladder", 128, 76, 10, 14, "og gb", 25);
+    o += p("stomach", "M168 40 C206 34 248 44 262 70 C268 84 256 92 240 88 C222 82 204 80 188 82 C170 84 158 74 158 60 C158 50 162 42 168 40 Z", "og sto");
+    o += '<g data-p="smallbowel" class="grp"><circle class="sbl" cx="178" cy="98" r="10"/><circle class="sbl" cx="202" cy="100" r="10"/><circle class="sbl" cx="226" cy="102" r="10"/><circle class="sbl" cx="250" cy="106" r="9"/><circle class="sbl" cx="160" cy="84" r="8"/></g>';
+    o += p("colon colon-r", "M44 162 a16 15 0 1 0 0.1 0 Z", "og colf");
+    o += p("colon colon-l", "M270 160 a14 13 0 1 0 0.1 0 Z", "og colf");
+    o += c("duodenum", 112, 126, 9, "og duo");
+    o += p("pancreas", "M124 116 C136 110 158 116 182 118 C204 120 230 116 250 120 C258 124 254 132 244 132 C222 134 198 132 178 132 C156 132 140 136 126 134 C118 130 118 120 124 116 Z", "og pan");
+    o += p("spleen", "M268 96 C284 102 294 120 292 140 C284 134 274 126 264 122 C260 112 262 102 268 96 Z", "og spl");
+    o += '<g data-p="kidney kidney-r" class="grp"><path class="kid" d="M78 146 C90 136 110 140 114 154 C116 162 106 166 106 172 C106 180 112 186 108 192 C100 202 80 196 72 182 C66 170 68 154 78 146 Z"/></g>';
+    o += '<g data-p="kidney kidney-l" class="grp"><path class="kid" d="M242 146 C230 136 210 140 206 154 C204 162 214 166 214 172 C214 180 208 186 212 192 C220 202 240 196 248 182 C254 170 252 154 242 146 Z"/></g>';
+    o += e("psoas psoas-r", 134, 170, 11, 14, "mu");
+    o += e("psoas psoas-l", 186, 170, 11, 14, "mu");
+    o += e("ivc", 138, 146, 12, 8.5, "ven");
+    o += c("aorta", 172, 146, 10, "arty");
+    o += '<circle class="arty" cx="174" cy="128" r="4"/><circle class="ven" cx="160" cy="126" r="4.5"/>';
+    o += '<g data-p="vertebra" class="grp"><path class="bn" d="M140 168 a20 18 0 1 0 40 0 a20 18 0 1 0 -40 0 Z"/><path class="bn" d="M146 186 L174 186 L180 200 L166 212 L163 228 L157 228 L154 212 L140 200 Z"/></g>';
+    o += c("canal", 160, 196, 7.5, "csf");
+    return svg("0 0 320 240", o, "Cross-section of the abdomen at the first and second lumbar vertebrae, viewed from below");
+  }
+
+  // ---------- right arm, mid-humerus cross-section ----------
+  function armAxial() {
+    var o = '<ellipse class="fat" cx="150" cy="116" rx="112" ry="100"/>';
+    o += p("triceps", "M52 116 A98 88 0 0 0 248 116 Z", "mu mu3");
+    o += p("brachialis", "M52 116 A98 88 0 0 1 248 116 Z", "mu mu2");
+    o += '<ellipse class="fas" cx="150" cy="116" rx="98" ry="88"/><path class="ln fas" d="M126 118 L52 116 M172 118 L248 116"/>';
+    o += '<path class="ln mus-ln" d="M150 146 C146 170 150 190 156 204"/>';
+    o += p("biceps", "M86 64 C86 42 116 30 148 30 C182 30 212 42 212 64 C212 84 182 92 148 92 C116 92 86 84 86 64 Z", "mu");
+    o += '<path class="ln mus-ln" d="M148 32 L148 90"/>';
+    o += '<g data-p="humerus" class="grp"><circle class="bn" cx="148" cy="122" r="24"/><circle class="mar" cx="148" cy="122" r="11"/></g>';
+    o += c("musculocutaneous", 108, 94, 5.5, "nv");
+    o += c("cephalic", 68, 58, 6.5, "ven");
+    o += c("brachialartery", 214, 100, 8, "arty");
+    o += c("median", 226, 86, 6.5, "nv");
+    o += c("basilic", 240, 106, 7, "ven");
+    o += c("ulnar", 218, 136, 6.5, "nv");
+    o += '<circle class="arty" cx="140" cy="158" r="4"/>';
+    o += c("radial", 126, 152, 7, "nv");
+    return svg("0 0 300 232", o, "Cross-section of the right arm at mid-humerus, viewed from below");
+  }
+
+  // ---------- right thigh, mid-femur cross-section ----------
+  function thighAxial() {
+    var o = '<ellipse class="fat" cx="150" cy="120" rx="122" ry="108"/><ellipse class="cav" cx="150" cy="120" rx="108" ry="96"/>';
+    o += e("bf hamstrings", 98, 180, 40, 28, "mu mu2", -22);
+    o += e("addmagnus adductors", 184, 182, 38, 26, "mu mu2", 8);
+    o += e("semimem hamstrings", 194, 206, 28, 12, "mu");
+    o += e("semiten hamstrings", 144, 207, 26, 12, "mu mu3");
+    o += e("vl quads", 80, 116, 40, 60, "mu", 10);
+    o += e("vi quads", 140, 96, 40, 27, "mu mu2");
+    o += e("rf quads", 138, 48, 31, 23, "mu mu3");
+    o += e("vm quads", 190, 80, 32, 30, "mu");
+    o += e("addlongus adductors", 220, 154, 24, 19, "mu mu3", -20);
+    o += e("sartorius", 230, 106, 17, 23, "mu mu2", -30);
+    o += e("gracilis", 250, 150, 11, 24, "mu", -10);
+    o += '<ellipse class="fas" cx="150" cy="120" rx="108" ry="96"/>';
+    o += '<g data-p="femur" class="grp"><path class="bn" d="M140 96 a22 22 0 1 1 -0.1 0 Z M135 138 L145 138 L141 150 Z"/><circle class="mar" cx="140" cy="118" r="10"/></g>';
+    o += c("femoralartery", 206, 120, 7.5, "arty");
+    o += c("femoralvein", 202, 136, 7.5, "ven");
+    o += '<circle class="arty" cx="166" cy="140" r="4.5"/>';
+    o += c("sciatic", 140, 174, 8.5, "nv");
+    o += c("gsv", 262, 116, 6.5, "ven");
+    return svg("0 0 300 240", o, "Cross-section of the right thigh at mid-femur, viewed from below");
+  }
+
+  // ---------- right leg (calf), mid-shaft cross-section ----------
+  function legAxial() {
+    var o = '<path class="fat" d="M150 16 C208 16 250 56 252 110 C254 174 214 230 150 232 C86 232 48 180 48 120 C48 62 96 16 150 16 Z"/>';
+    o += '<path class="cav" d="M150 28 C200 28 238 62 240 110 C242 166 208 220 150 220 C94 220 60 176 60 120 C60 70 102 28 150 28 Z"/>';
+    o += p("gastroc", "M74 170 C94 190 120 198 150 198 C186 198 214 188 234 162 C230 198 198 220 150 220 C106 220 80 200 74 170 Z", "mu");
+    o += '<path class="ln mus-ln" d="M146 198 L144 220"/>';
+    o += p("soleus", "M74 168 C92 158 108 150 124 154 C156 164 194 148 214 98 C232 110 240 140 234 160 C216 184 188 196 150 196 C112 196 88 188 74 168 Z", "mu mu2");
+    o += p("fibularis", "M62 110 C64 90 72 74 80 64 L96 116 L98 136 L72 168 C62 150 60 130 62 110 Z", "mu mu3");
+    o += p("ta antcomp", "M180 38 C168 30 150 28 136 32 C132 52 138 78 152 90 L166 92 C166 72 170 52 180 38 Z", "mu");
+    o += p("ext antcomp", "M136 32 C110 36 90 50 80 64 L96 116 C112 106 130 98 152 90 C138 78 132 52 136 32 Z", "mu mu2");
+    o += '<path class="ln mus-ln" d="M110 104 C116 92 126 84 136 80"/>';
+    o += '<g data-p="deeppost" class="grp"><path class="mu mu3" d="M110 120 L164 94 L172 98 C170 112 160 124 146 130 C132 136 118 134 110 128 Z"/><path class="mu mu3" d="M172 98 L214 96 C208 116 196 128 180 132 C170 132 164 126 166 118 Z"/><path class="mu mu3" d="M100 138 C112 132 130 136 146 132 C140 144 126 152 112 150 C104 148 100 144 100 138 Z"/></g>';
+    o += '<path class="ln fas" d="M102 140 C136 160 194 148 214 98 M80 64 L96 112 M98 138 L72 168"/>';
+    o += '<g data-p="tibia" class="grp"><path class="bn" d="M182 38 C190 52 204 72 212 92 C198 98 180 98 166 92 C164 74 170 54 182 38 Z"/><ellipse class="mar" cx="186" cy="78" rx="7" ry="8"/></g>';
+    o += '<g data-p="fibula" class="grp"><circle class="bn" cx="100" cy="126" r="11"/><circle class="mar" cx="100" cy="126" r="4.5"/></g>';
+    o += p("iom", "M110 122 L164 94", "ln iomem", ' stroke-width="3.5"');
+    o += '<g data-p="antnv antcomp" class="grp"><circle data-p="ata" class="arty" cx="134" cy="100" r="6"/><circle data-p="dfn" class="nv" cx="145" cy="92" r="5.5"/></g>';
+    o += '<g data-p="postnv" class="grp"><circle data-p="pta" class="arty" cx="176" cy="136" r="6.5"/><circle data-p="tibn" class="nv" cx="162" cy="140" r="6"/></g>';
+    o += '<circle class="arty" cx="114" cy="140" r="4"/>';
+    o += c("gsv", 242, 100, 6, "ven");
+    return svg("0 0 300 240", o, "Cross-section of the right leg at mid-calf, viewed from below");
+  }
+
+  // ---------- circle of Willis, base of the brain from below ----------
+  function wHalf(s) {
+    var o = "";
+    o += p(sid("vertebral", s), "M116 254 C120 230 136 210 148 200", "ln arty-ln", ' stroke-width="8"');
+    o += p(sid("pica", s), "M126 226 C110 230 96 230 84 222", "ln arty-ln", ' stroke-width="4.5"');
+    o += p(sid("aica", s), "M150 170 C134 172 116 176 100 182", "ln arty-ln", ' stroke-width="4.5"');
+    o += p(sid("sca", s), "M150 124 C134 126 112 126 92 134", "ln arty-ln", ' stroke-width="5.5"');
+    o += p(sid("pca", s), "M150 110 C136 104 118 100 102 102 C84 106 70 118 58 136", "ln arty-ln", ' stroke-width="6.5"');
+    o += p(sid("pcom", s), "M114 101 L110 70", "ln arty-ln", ' stroke-width="4.5"');
+    o += p(sid("mca", s), "M104 60 C86 56 62 58 34 68", "ln arty-ln", ' stroke-width="8"');
+    o += p(sid("aca", s), "M116 56 C126 48 136 44 140 36 C142 26 142 16 142 6", "ln arty-ln", ' stroke-width="6"');
+    o += c(sid("ica", s), 110, 62, 9, "arty");
+    return o;
+  }
+  function willis() {
+    var o = '<path class="brz" d="M150 4 C110 4 70 14 50 40 C40 54 44 70 56 76 C40 92 26 120 30 150 C34 170 52 176 70 168 C90 160 104 150 112 146 L188 146 C196 150 210 160 230 168 C248 176 266 170 270 150 C274 120 260 92 244 76 C256 70 260 54 250 40 C230 14 190 4 150 4 Z"/>';
+    o += '<path class="br bs" d="M120 118 C120 104 180 104 180 118 L176 198 C170 214 130 214 124 198 Z"/>';
+    o += '<path class="ln nv-ln chi" stroke-width="6" d="M130 42 L170 86 M170 42 L130 86"/>';
+    o += wHalf("-r") + mirror(300, wHalf("-l"));
+    o += p("basilar", "M150 202 L150 110", "ln arty-ln", ' stroke-width="10"');
+    o += p("acom", "M139 40 L161 40", "ln arty-ln", ' stroke-width="5"');
+    return svg("0 0 300 260", o, "Circle of Willis seen from below the brain");
+  }
+
+  // ---------- coronary arteries, heart from the front ----------
+  function coronary() {
+    var o = "";
+    o += '<path class="ven" d="M70 104 L70 22 L94 22 L94 100 Z"/>';
+    o += p("aorta", "M100 108 L100 54 C100 18 150 8 170 30 L176 40 L156 52 C146 36 124 40 124 58 L124 108 Z", "vs ar");
+    o += '<path class="myo" d="M58 102 C30 124 28 172 46 202 C70 240 140 260 214 264 C236 254 252 222 252 180 C252 138 236 108 208 96 C190 90 176 92 160 98 L100 98 C84 96 70 96 58 102 Z"/>';
+    o += '<path class="myo laa" d="M58 102 C34 122 32 170 48 200 C62 212 80 216 96 216 C78 204 68 186 70 158 C72 130 88 112 104 104 C88 98 70 96 58 102 Z"/>';
+    o += '<path class="myo laa" d="M196 96 C206 84 226 84 230 98 C230 108 218 112 206 110 Z"/>';
+    o += p("pulmonarytrunk", "M138 104 L140 52 C142 34 170 30 184 40 L196 50 L190 60 L176 54 C168 50 164 58 164 66 L164 104 Z", "vs ptk");
+    o += p("rca", "M112 106 C90 110 74 130 70 158 C68 186 78 204 96 216", "ln arty-ln", ' stroke-width="8"');
+    o += p("rca rcapost", "M96 216 C108 228 124 236 140 242", "ln arty-ln dash", ' stroke-width="6"');
+    o += p("pda", "M140 242 C164 252 186 256 206 258", "ln arty-ln dash", ' stroke-width="6"');
+    o += p("am", "M84 204 C110 216 140 222 168 226", "ln arty-ln", ' stroke-width="5"');
+    o += p("leftmain", "M126 108 C140 110 160 112 180 116", "ln arty-ln", ' stroke-width="9"');
+    o += p("lad", "M180 116 C176 160 186 210 214 260", "ln arty-ln", ' stroke-width="7"');
+    o += p("diag", "M180 148 C196 160 210 176 218 198", "ln arty-ln", ' stroke-width="5"');
+    o += p("cx", "M180 116 C200 112 222 120 238 140", "ln arty-ln", ' stroke-width="7"');
+    o += '<path class="ln arty-ln dash" stroke-width="5" d="M238 140 C246 158 248 176 244 196"/>';
+    o += p("om", "M232 132 C242 162 238 200 228 230", "ln arty-ln", ' stroke-width="5"');
+    return svg("0 0 280 270", o, "Coronary arteries on the front of the heart");
+  }
+
+  // ---------- right shoulder: from behind (left) and from the front (right) ----------
+  function rotatorCuff() {
+    var o = '<path class="ln panel" d="M160 14 L160 246"/>';
+    // from behind: the patient's right is on the viewer's right
+    var b = "";
+    b += '<path class="bn" d="M38 36 L98 50 L108 62 L110 82 L58 204 L44 196 L36 120 Z"/>';
+    b += '<path class="ln bone-ln" stroke-width="18" d="M128 92 L124 238"/>';
+    b += p("teresmajor", "M54 194 L84 160 L126 128 L126 144 L90 184 L62 204 Z", "mu mu2");
+    b += p("supraspinatus cuff", "M40 42 L98 52 C112 54 124 56 140 58 L142 70 C124 72 108 72 96 72 L44 84 Z", "mu");
+    b += p("infraspinatus cuff", "M42 96 L110 68 L142 74 L142 90 L110 102 C90 114 70 132 52 152 Z", "mu mu3");
+    b += p("teresminor cuff", "M60 160 L96 126 L142 94 L140 106 L104 140 L72 172 Z", "mu");
+    b += '<g data-p="humeralhead humerus" class="grp"><circle class="bn" cx="130" cy="76" r="17"/></g>';
+    b += p("scapulaspine", "M40 92 C70 80 96 66 116 52", "ln bone-ln", ' stroke-width="9"');
+    b += e("acromion", 126, 46, 17, 8, "bn", -12);
+    b += p("deltoid", "M128 34 C152 38 158 66 154 100 L140 172 L130 168 L140 100 C144 78 142 60 130 54 Z", "mu mu2");
+    // from the front: the patient's right is on the viewer's left
+    var f = "";
+    f += '<path class="bn" d="M210 62 L282 44 L290 60 L274 200 L262 204 L214 90 Z"/>';
+    f += '<path class="ln bone-ln" stroke-width="18" d="M198 92 L202 238"/>';
+    f += p("subscapularis cuff", "M280 52 L272 194 L246 168 L214 94 L204 88 L206 72 L218 68 Z", "mu mu3");
+    f += '<g data-p="humeralhead humerus" class="grp"><circle class="bn" cx="196" cy="76" r="17"/></g>';
+    f += p("coracoid", "M232 52 C228 62 222 66 214 66", "ln bone-ln", ' stroke-width="7"');
+    f += p("clavicle", "M196 40 C226 30 254 40 300 28", "ln bone-ln", ' stroke-width="9"');
+    f += e("acromion", 196, 44, 15, 7, "bn", 8);
+    f += p("bicepslh", "M212 64 C202 60 198 72 200 92 L204 150", "ln tdn", ' stroke-width="5"');
+    f += e("biceps", 206, 190, 10, 34, "mu");
+    f += p("deltoid", "M198 34 C174 38 168 66 172 100 L186 172 L196 170 L184 100 C180 78 182 60 196 54 Z", "mu mu2");
+    return svg("0 0 320 250", o + b + f, "Right shoulder from behind and from the front, showing the rotator cuff");
+  }
+
+  // ---------- dermatomes, front view ----------
+  function lerp(a, b2, t) { return [a[0] + (b2[0] - a[0]) * t, a[1] + (b2[1] - a[1]) * t]; }
+  function strip(A0, A1, B0, B1, u0, u1, v0, v1) { // limb with outer edge A0->A1 and inner edge B0->B1; u across (0 = outer), v along
+    var q = function (u, v) { return lerp(lerp(A0, A1, v), lerp(B0, B1, v), u); };
+    return "M" + [q(u0, v0), q(u0, v1), q(u1, v1), q(u1, v0)].map(function (pt) { return pt[0].toFixed(1) + " " + pt[1].toFixed(1); }).join(" L") + " Z";
+  }
+  function dHalf(s) {
+    var o = "";
+    // limbs (patient's right side, drawn on the viewer's left); A = outer (lateral) edge, B = inner (medial) edge
+    var UA = [[86, 66], [56, 140], [104, 76], [74, 148]], FA = [[56, 140], [36, 206], [74, 148], [54, 212]];
+    var TH = [[98, 172], [96, 262], [130, 180], [120, 262]], LG = [[96, 262], [98, 322], [120, 262], [116, 322]];
+    o += '<path class="sk" d="M' + [UA[0], UA[1], FA[1], FA[3], FA[2], UA[3], UA[2]].map(function (pt) { return pt.join(" "); }).join(" L") + ' Z"/>';
+    o += '<path class="sk" d="M' + [TH[0], TH[1], LG[1], LG[3], LG[2], TH[3], TH[2]].map(function (pt) { return pt.join(" "); }).join(" L") + ' Z"/>';
+    // hand (palm forward, thumb lateral) and fingers
+    o += '<path class="sk" d="M36 206 L54 212 L52 236 L32 232 Z"/>';
+    var fing = [["th", "M34 214 L26 232"], ["f2", "M35 232 L30 252"], ["f3", "M40 234 L37 256"], ["f4", "M45 235 L44 255"], ["f5", "M50 235 L50 250"]];
+    // foot (seen from the front, toes towards the viewer)
+    o += '<path class="sk" d="M98 322 L116 322 L122 340 L90 340 Z"/>';
+    // dermatome bands
+    o += p(sid("c5", s), strip(UA[0], UA[1], UA[2], UA[3], 0, 0.5, 0.08, 1), "dm");
+    o += p(sid("c6", s), strip(FA[0], FA[1], FA[2], FA[3], 0, 0.45, 0, 1) + " M36 206 L42 208 L40 222 L33 222 Z", "dm dm2");
+    o += p(sid("c8", s), strip(FA[0], FA[1], FA[2], FA[3], 0.6, 1, 0.45, 1) + " M48 210 L54 212 L52 236 L47 235 Z", "dm dm3");
+    o += p(sid("t1", s), strip(UA[0], UA[1], UA[2], UA[3], 0.55, 1, 0.1, 1) + " " + strip(FA[0], FA[1], FA[2], FA[3], 0.6, 1, 0, 0.42), "dm dm2");
+    o += p(sid("l4", s), strip(LG[0], LG[1], LG[2], LG[3], 0.55, 1, 0.05, 1) + " M108 322 L116 322 L122 340 L113 340 Z", "dm dm2");
+    o += p(sid("l5", s), strip(LG[0], LG[1], LG[2], LG[3], 0.16, 0.55, 0.05, 1) + " M100 324 L108 322 L113 340 L96 340 Z", "dm");
+    o += p(sid("s1", s), strip(LG[0], LG[1], LG[2], LG[3], 0, 0.16, 0.55, 1) + " M98 322 L100 324 L96 340 L90 340 Z", "dm dm3");
+    o += p(sid("l1", s), "M98 168 L130 176 L130 186 L98 180 Z", "dm dm3");
+    o += p(sid("l3", s), strip(TH[0], TH[1], TH[2], TH[3], 0.2, 1, 0.72, 1) + " " + strip(LG[0], LG[1], LG[2], LG[3], 0.45, 1, 0, 0.05), "dm dm3");
+    fing.forEach(function (f) {
+      var id = f[0] === "th" ? sid("c6", s) : f[0] === "f3" ? sid("c7", s) : f[0] === "f5" || f[0] === "f4" ? sid("c8", s) : null;
+      var w = f[0] === "th" ? 8 : 6.5;
+      o += id ? p(id, f[1], "ln dm-ln", ' stroke-width="' + w + '"') : '<path class="ln sk-ln" stroke-width="' + w + '" d="' + f[1] + '"/>';
+    });
+    o += p(sid("c7", s), "M40 222 L46 223 L46 235 L40 234 Z", "dm");
+    return o;
+  }
+  function dermatomes() {
+    var o = '<ellipse class="sk" cx="130" cy="30" rx="18" ry="22"/><path class="sk" d="M122 48 L138 48 L140 62 L120 62 Z"/>';
+    o += '<path class="sk" d="M86 66 C100 60 112 58 130 60 C148 58 160 60 174 66 L162 120 L166 172 L130 184 L94 172 L98 120 Z"/>';
+    o += dHalf("-r") + mirror(260, dHalf("-l"));
+    o += p("t4", "M90 86 L170 86 L168 98 L92 98 Z", "dm");
+    o += p("t10", "M98 128 L162 128 L162 140 L98 140 Z", "dm dm2");
+    o += '<circle class="lm" cx="110" cy="92" r="2.4"/><circle class="lm" cx="150" cy="92" r="2.4"/><circle class="lm" cx="130" cy="134" r="2.4"/>';
+    return svg("0 0 260 344", o, "Front view of a body outline showing dermatome bands");
+  }
+
   // ================= Normie mode: animal diagrams (original schematic drawings) =================
   function bz(c, t) { var u = 1 - t; return [u * u * u * c[0] + 3 * u * u * t * c[2] + 3 * u * t * t * c[4] + t * t * t * c[6], u * u * u * c[1] + 3 * u * u * t * c[3] + 3 * u * t * t * c[5] + t * t * t * c[7]]; }
   // a tapered tube along a cubic Bezier; returns {d, pts}
@@ -463,8 +746,14 @@
   }
 
   var ART = { skeleton: skeleton, hand: handBones, palm: function () { return handSkin(false); }, handback: function () { return handSkin(true); }, heart: heart, brain: brain, eye: eye, ear: ear, gut: gut, lungs: lungs, knee: knee, spine: spine,
+    brainaxial: brainAxial, braincoronal: brainCoronal, abdoaxial: abdoAxial, armaxial: armAxial, thighaxial: thighAxial, legaxial: legAxial, willis: willis, coronary: coronary, rotatorcuff: rotatorCuff, dermatomes: dermatomes,
     octopus: octopus, owl: owl, giraffe: giraffe, catface: catface, catpaw: catpaw, elephant: elephant, shark: shark, frog: frog, seastar: seastar, bee: bee, hoof: hoof };
   var CAP = { skeleton: "Front view", hand: "Right hand, palm side", palm: "Right hand, palm side", handback: "Right hand, back", heart: "Heart, front view (schematic)", brain: "Brain, left side", eye: "Eye, sliced across", ear: "Right ear, sliced front-on", gut: "Abdomen, front view", lungs: "Lungs, front view", knee: "Right knee, front (kneecap off)", spine: "Spine, side view (front to the left)",
+    brainaxial: "Brain, cross-section at the basal ganglia (viewed from below, like CT)", braincoronal: "Brain, front-on slice through the thalamus (patient’s right on your left, like MRI)",
+    abdoaxial: "Abdomen, cross-section at L1–L2 (viewed from below, like CT)", armaxial: "Right arm, cross-section at mid-humerus (viewed from below, like CT)",
+    thighaxial: "Right thigh, cross-section at mid-femur (viewed from below, like CT)", legaxial: "Right calf, cross-section at mid-shaft (viewed from below, like CT)",
+    willis: "Arteries at the base of the brain, seen from below (front at the top)", coronary: "Heart, front view (dashed = on the back of the heart)",
+    rotatorcuff: "Right shoulder: from behind (left) and from the front (right)", dermatomes: "Skin nerve-root map, front view (patient’s right on your left)",
     octopus: "Octopus, front view", owl: "Owl, front view", giraffe: "Giraffe, side view", catface: "Cat, face on", catpaw: "Cat’s front paw, underside", elephant: "African elephant, side view", shark: "Shark, side view", frog: "Frog, side view", seastar: "Sea star, from above", bee: "Honeybee, side view", hoof: "Horse’s front hoof, underside (toe at the top)" };
   window.LBL_ART = function (name, hl) {
     var f = ART[name]; if (!f) return "";

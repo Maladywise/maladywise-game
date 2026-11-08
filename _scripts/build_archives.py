@@ -290,7 +290,10 @@ def r_linkase(x, ctx):
 
 REGIONS = {"skeleton": "Skeleton", "hand": "Hand bones", "palm": "Hand, palm side", "handback": "Hand, back",
            "heart": "Heart", "brain": "Brain", "eye": "Eye", "ear": "Ear", "gut": "Abdomen", "lungs": "Lungs",
-           "knee": "Knee", "spine": "Spine"}
+           "knee": "Knee", "spine": "Spine", "brainaxial": "Brain (cross-section)", "braincoronal": "Brain (coronal slice)",
+           "abdoaxial": "Abdomen (cross-section)", "armaxial": "Arm (cross-section)", "thighaxial": "Thigh (cross-section)",
+           "legaxial": "Calf (cross-section)", "willis": "Circle of Willis", "coronary": "Coronary arteries",
+           "rotatorcuff": "Shoulder", "dermatomes": "Dermatomes"}
 
 
 def r_anatomegaly(x, ctx):

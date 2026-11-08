@@ -90,6 +90,33 @@ html[data-theme="dark"] #lbl .chead{color:#16121F}
 #lbl .art .dia{stroke:#C27884}
 #lbl .art .lig{fill:#D6E8EE;stroke:#6E93A0;stroke-width:1.2}
 #lbl .art .men{fill:#DCEBCF;stroke:#7E9A6A;stroke-width:1.2}
+/* sections, vessels and maps */
+#lbl .art .gm{fill:#CDB9C3;stroke:#9A7F8E;stroke-width:1.2} #lbl .art .gp{fill:#BFA8B5} #lbl .art .hip{fill:#B99BAC}
+#lbl .art .gm-ln{stroke:#CDB9C3}
+#lbl .art .wm{fill:#F7F1EF;stroke:#DCCFD3;stroke-width:1} #lbl .art .icap{fill:#FFFFFF;stroke:#BFAFB8;stroke-width:1}
+#lbl .art .cc{stroke:#FFFFFF} #lbl .art .cc-o{stroke:#BFAFB8}
+#lbl .art .lam{fill:none;stroke:#9A7F8E;stroke-width:1.2;stroke-linecap:round}
+#lbl .art .csf{fill:#BFDCF0;stroke:#5E8DB4;stroke-width:1.2} #lbl .art .csf-ln{stroke:#7FB0D8}
+#lbl .art .fat{fill:#FBEBC8;stroke:#C98F6E;stroke-width:1.8}
+#lbl .art .fas{fill:none;stroke:#B49274;stroke-width:1.2;stroke-dasharray:4 3}
+#lbl .art .cav{fill:#F6E2C6}
+#lbl .art .mu{fill:#E39C8E;stroke:#A2584B;stroke-width:1.2} #lbl .art .mu2{fill:#EDB2A4} #lbl .art .mu3{fill:#D88878}
+#lbl .art .mus-ln{fill:none;stroke:#A2584B;stroke-width:1;stroke-dasharray:3 2}
+#lbl .art .mar{fill:#F6D58E;stroke:#C9A25A;stroke-width:.8}
+#lbl .art .arty{fill:#D9443A;stroke:#7E241D;stroke-width:1.2} #lbl .art .arty-ln{stroke:#D9443A}
+#lbl .art .ven{fill:#5D80C8;stroke:#2C4A86;stroke-width:1.2}
+#lbl .art .kid{fill:#B8665C;stroke:#7A4A3A;stroke-width:1.4} #lbl .art .duo{fill:#E4A894}
+#lbl .art .sbl{fill:#F0BFAF;stroke:#B07A68;stroke-width:1.2} #lbl .art .colf{fill:#D9A07E}
+#lbl .art .iomem{stroke:#B49274}
+#lbl .art .brz{fill:#F6E3E6;stroke:#D8B3BA;stroke-width:1.4}
+#lbl .art .myo{fill:#F1C3BB;stroke:#B85A52;stroke-width:2} #lbl .art .laa{fill:#EBB2A9}
+#lbl .art .ptk{fill:#D9BFD6;stroke:#8E5A86;stroke-width:2} #lbl .art .chi{opacity:.75}
+#lbl .art .dash{stroke-dasharray:7 5}
+#lbl .art .panel{stroke:#D9D1E3;stroke-width:1.5;stroke-dasharray:4 4}
+#lbl .art .tdn{stroke:#F7F1E3;filter:drop-shadow(0 0 1px #8E7A5E)}
+#lbl .art .dm{fill:#E9B79A;stroke:#B9805F;stroke-width:.8} #lbl .art .dm2{fill:#DFA585} #lbl .art .dm3{fill:#EFC6AA}
+#lbl .art .dm-ln{stroke:#DFA585} #lbl .art .sk-ln{stroke:#F2CDB4}
+#lbl .art .lm{fill:#B97A5C}
 /* Normie animals */
 #lbl .art .oc{fill:#E8836B;stroke:#A9483A;stroke-width:1.4} #lbl .art .oc2{fill:#EE957F} #lbl .art .oc3{fill:#D96E58;opacity:.85}
 #lbl .art .ocspot{fill:#C7604C} #lbl .art .ocs circle{fill:#F8D2C6;stroke:#A9483A;stroke-width:.8}
