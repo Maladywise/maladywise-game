@@ -174,6 +174,13 @@
 "label": "Blood tests",
 "title": "Blood test results explained"
 },
+"blood-tests-hba1c": {
+"url": "/blood-tests/hba1c/",
+"key": "0edd7b10c078",
+"v": "9d1e167b",
+"label": "Blood test",
+"title": "HbA1c Result"
+},
 "blood-tests-high-alt": {
 "url": "/blood-tests/high-alt/",
 "key": "172c514c0097",
@@ -181,12 +188,26 @@
 "label": "Blood test",
 "title": "High ALT (SGPT)"
 },
+"blood-tests-high-bilirubin": {
+"url": "/blood-tests/high-bilirubin/",
+"key": "b2b30b835aa6",
+"v": "52d19213",
+"label": "Blood test",
+"title": "High Bilirubin"
+},
 "blood-tests-high-calcium": {
 "url": "/blood-tests/high-calcium/",
 "key": "c46a40348e5f",
 "v": "e8ade084",
 "label": "Blood test",
 "title": "High Calcium (Hypercalcaemia)"
+},
+"blood-tests-high-cholesterol": {
+"url": "/blood-tests/high-cholesterol/",
+"key": "83563450fd36",
+"v": "f7ad7957",
+"label": "Blood test",
+"title": "High Cholesterol Result"
 },
 "blood-tests-high-crp": {
 "url": "/blood-tests/high-crp/",
@@ -209,6 +230,20 @@
 "label": "Blood test",
 "title": "High Ferritin"
 },
+"blood-tests-high-platelets": {
+"url": "/blood-tests/high-platelets/",
+"key": "0c123640a1f9",
+"v": "0c7f33c5",
+"label": "Blood test",
+"title": "High Platelets (Thrombocytosis)"
+},
+"blood-tests-high-potassium": {
+"url": "/blood-tests/high-potassium/",
+"key": "80a482271dd2",
+"v": "af6ca55f",
+"label": "Blood test",
+"title": "High Potassium (Hyperkalaemia)"
+},
 "blood-tests-high-tsh": {
 "url": "/blood-tests/high-tsh/",
 "key": "a7fd6d876f1b",
@@ -230,6 +265,13 @@
 "label": "Blood test",
 "title": "Low eGFR"
 },
+"blood-tests-low-ferritin": {
+"url": "/blood-tests/low-ferritin/",
+"key": "d3d4a79e3e46",
+"v": "787ec1c6",
+"label": "Blood test",
+"title": "Low Ferritin"
+},
 "blood-tests-low-neutrophils": {
 "url": "/blood-tests/low-neutrophils/",
 "key": "39aa9c0633c8",
@@ -243,6 +285,13 @@
 "v": "9e8215ba",
 "label": "Blood test",
 "title": "Low Platelets (Thrombocytopenia)"
+},
+"blood-tests-low-sodium": {
+"url": "/blood-tests/low-sodium/",
+"key": "74c315d606e3",
+"v": "626717c2",
+"label": "Blood test",
+"title": "Low Sodium (Hyponatraemia)"
 },
 "boils": {
 "url": "/boils/",
