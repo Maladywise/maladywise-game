@@ -42,6 +42,8 @@ def opa(date):
 
 
 def commons(local, file, author, licence, licence_url, crop=None):
+    if crop and "cropped" not in author:
+        author += " (cropped)"  # CC BY / BY-SA: say the image was changed
     return dict(kind="commons", path=(COMMONS_DIR + "/" + local) if COMMONS_DIR else None, crop=crop,
                 page="https://commons.wikimedia.org/wiki/File:" + file.replace(" ", "_").replace("(", "%28").replace(")", "%29"),
                 file=file, author=author, licence=licence, licence_url=licence_url, source="Wikimedia Commons")
