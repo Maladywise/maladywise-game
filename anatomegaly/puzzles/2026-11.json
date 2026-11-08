@@ -1137,18 +1137,18 @@
     ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bones.",
-    "answer": "Ribs",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle group.",
+    "answer": "Quadriceps",
     "wrong": [
-     "Clavicle",
-     "Sternum",
-     "Scapula"
+     "Hamstrings",
+     "Adductors",
+     "Calf muscles"
     ],
-    "why": "Most people have 12 pairs. Pairs 11 and 12 ‘float’, with no attachment at the front.",
-    "art": "skeleton",
+    "why": "Rectus femoris and the three vasti straighten the knee. Quad strengthening is first-line treatment for knee osteoarthritis.",
+    "art": "thighaxial",
     "hl": [
-     "ribs"
+     "quads"
     ]
    }
   ]
@@ -1216,17 +1216,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted region.",
-    "answer": "Thoracic spine",
+    "q": "Name the highlighted organ.",
+    "answer": "Left kidney",
     "wrong": [
-     "Lumbar spine",
-     "Sacrum",
-     "Coccyx"
+     "Spleen",
+     "Psoas muscle",
+     "Descending colon"
     ],
-    "why": "Twelve vertebrae, one for each pair of ribs. The curve here gives the chest its rounded back.",
-    "art": "spine",
+    "why": "Like a CT, the patient’s left is on your right. The kidneys sit high against the back muscles, which is why kidney pain is felt in the loin.",
+    "art": "abdoaxial",
     "hl": [
-     "thoracic"
+     "kidney-l"
     ]
    }
   ]
@@ -1264,17 +1264,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Transverse colon",
+    "q": "Name the highlighted vessel.",
+    "answer": "Brachial artery",
     "wrong": [
-     "Ascending colon",
-     "Descending colon",
-     "Small intestine"
+     "Basilic vein",
+     "Cephalic vein",
+     "Profunda brachii artery"
     ],
-    "why": "It hangs across the abdomen from the hepatic flexure to the splenic flexure.",
-    "art": "gut",
+    "why": "It runs down the inner arm beside the median nerve. It’s the artery a blood pressure cuff squeezes and you listen over at the elbow.",
+    "art": "armaxial",
     "hl": [
-     "transverse"
+     "brachialartery"
     ]
    },
    {
@@ -1357,32 +1357,32 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted passage.",
-    "answer": "Ear canal",
+    "q": "Name the highlighted cortex.",
+    "answer": "Insula",
     "wrong": [
-     "Eustachian tube",
-     "Cochlea",
-     "Eardrum"
+     "Putamen",
+     "Temporal lobe",
+     "Thalamus"
     ],
-    "why": "About 2.5 cm long. Wax and skin migrate outwards along it, so it cleans itself.",
-    "art": "ear",
+    "why": "Cortex hidden deep in the Sylvian fissure that senses the body’s inner state. Losing the ‘insular ribbon’ on CT is an early sign of a middle cerebral artery stroke.",
+    "art": "braincoronal",
     "hl": [
-     "canal"
+     "insula"
     ]
    },
    {
-    "kind": "Name the structure",
-    "q": "Name the highlighted bone.",
-    "answer": "Sacrum",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
+    "answer": "T10",
     "wrong": [
-     "Coccyx",
-     "Pelvis",
-     "Lumbar spine"
+     "T8",
+     "T12",
+     "L1"
     ],
-    "why": "Five vertebrae fused into one wedge, locking the spine into the pelvis.",
-    "art": "spine",
+    "why": "T10 is the band at the belly button. Early appendicitis pain starts around here because the appendix shares T10 visceral nerves, before it moves to the right iliac fossa.",
+    "art": "dermatomes",
     "hl": [
-     "sacrum"
+     "t10"
     ]
    }
   ]
@@ -1419,15 +1419,19 @@
     "why": "Surgeons often harvest it for nerve grafts. The trade-off is a small numb patch."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Brachioradialis flexes the elbow. Which nerve supplies it?",
-    "answer": "Radial nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Posterior tibial artery",
     "wrong": [
-     "Musculocutaneous nerve",
-     "Median nerve",
-     "Ulnar nerve"
+     "Anterior tibial artery",
+     "Fibular (peroneal) artery",
+     "Popliteal artery"
     ],
-    "why": "A classic trap: a flexor supplied by the extensor nerve."
+    "why": "It runs with the tibial nerve deep in the back of the calf, then behind the medial malleolus, where you feel its pulse when checking a diabetic foot.",
+    "art": "legaxial",
+    "hl": [
+     "pta"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -1445,16 +1449,16 @@
     ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted vertebra.",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
     "answer": "L5",
     "wrong": [
      "L4",
      "S1",
-     "T12"
+     "L3"
     ],
-    "why": "The L5/S1 disc is one of the two commonest to herniate, with L4/5.",
-    "art": "spine",
+    "why": "L5 covers the outer shin and the top of the foot to the big toe. An L4/5 disc usually squashes the L5 root: a numb top of foot and weak big-toe lifting.",
+    "art": "dermatomes",
     "hl": [
      "l5"
     ]
@@ -1497,15 +1501,19 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "The hook of which carpal bone can fracture in golfers and batters?",
-    "answer": "Hamate",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
+    "answer": "C7",
     "wrong": [
-     "Pisiform",
-     "Scaphoid",
-     "Trapezium"
+     "C6",
+     "C8",
+     "T1"
     ],
-    "why": "The club or bat handle presses into the palm right over it."
+    "why": "C7 supplies the middle finger. It’s the root most often squashed in the neck (a C6/7 disc), giving a tingling middle finger and a weak triceps jerk.",
+    "art": "dermatomes",
+    "hl": [
+     "c7"
+    ]
    },
    {
     "kind": "Which nerve?",
@@ -1520,17 +1528,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted region.",
-    "answer": "Thoracic spine",
+    "q": "Name the highlighted white matter.",
+    "answer": "Posterior limb of the internal capsule",
     "wrong": [
-     "Cervical spine",
-     "Lumbar spine",
-     "Sacrum"
+     "Anterior limb of the internal capsule",
+     "External capsule",
+     "Corpus callosum"
     ],
-    "why": "Twelve vertebrae, one for each pair of ribs.",
-    "art": "spine",
+    "why": "Motor fibres to the face, arm and leg are packed tightly here, so a tiny lacunar infarct can cause pure motor weakness of the opposite side.",
+    "art": "brainaxial",
     "hl": [
-     "thoracic"
+     "plic"
     ]
    }
   ]
@@ -1567,30 +1575,35 @@
     "why": "It’s also the thinnest, and the only cranial nerve to leave the back of the brainstem."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Distal phalanx of the thumb",
+    "kind": "Name the structure",
+    "q": "Name the highlighted compartment.",
+    "answer": "Deep posterior compartment",
     "wrong": [
-     "Middle phalanx of the thumb",
-     "Proximal phalanx of the thumb",
-     "First metacarpal"
+     "Superficial posterior compartment",
+     "Lateral compartment",
+     "Anterior compartment"
     ],
-    "why": "The thumb has no middle phalanx. That option was a trap.",
-    "art": "hand",
+    "why": "Tibialis posterior and the long toe flexors, with the posterior tibial vessels and tibial nerve. Buried under soleus, it’s the compartment most easily missed in compartment syndrome.",
+    "art": "legaxial",
     "hl": [
-     "dp1"
+     "deeppost",
+     "postnv"
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve carries the secretomotor supply to the lacrimal gland?",
-    "answer": "Facial nerve (VII)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Superior cerebellar artery",
     "wrong": [
-     "Lacrimal nerve (V1)",
-     "Glossopharyngeal nerve (IX)",
-     "Oculomotor nerve (III)"
+     "Posterior cerebral artery",
+     "Anterior inferior cerebellar artery",
+     "Posterior communicating artery"
     ],
-    "why": "Via the greater petrosal nerve and pterygopalatine ganglion. The lacrimal nerve just hitches the fibres the last part of the way."
+    "why": "It leaves the top of the basilar just below the posterior cerebral artery, with the oculomotor nerve between them. A looping SCA pressing on the trigeminal nerve is the classic cause of trigeminal neuralgia.",
+    "art": "willis",
+    "hl": [
+     "sca"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -1630,15 +1643,19 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which is the smallest bone in the body?",
-    "answer": "Stapes",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Biceps brachii",
     "wrong": [
-     "Incus",
-     "Malleus",
-     "Pisiform"
+     "Triceps brachii",
+     "Brachialis",
+     "Deltoid"
     ],
-    "why": "About 3 mm long, in the middle ear. Shaped like a stirrup, which is what its name means."
+    "why": "It bends the elbow and turns the palm up. A ‘Popeye’ bulge after a pop at the shoulder means the long head tendon has ruptured.",
+    "art": "armaxial",
+    "hl": [
+     "biceps"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -1649,8 +1666,8 @@
      "Liver",
      "Left kidney"
     ],
-    "why": "The spleen filters old red cells and fights infection. You can live without it, with vaccines and care.",
-    "art": "gut",
+    "why": "Like a CT, it sits at the back on the patient’s left, on your right. It filters old red cells and fights infection; you can live without it, with vaccines and care.",
+    "art": "abdoaxial",
     "hl": [
      "spleen"
     ]
@@ -1749,15 +1766,19 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve is squashed in carpal tunnel syndrome?",
-    "answer": "Median nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle group.",
+    "answer": "Hamstrings",
     "wrong": [
-     "Ulnar nerve",
-     "Radial nerve",
-     "Musculocutaneous nerve"
+     "Quadriceps",
+     "Adductors",
+     "Calf muscles"
     ],
-    "why": "Tingling in the thumb, index and middle fingers, often worse at night."
+    "why": "Three muscles at the back of the thigh that bend the knee and extend the hip. Sprinters tear them, most often biceps femoris.",
+    "art": "thighaxial",
+    "hl": [
+     "hamstrings"
+    ]
    }
   ]
  },
@@ -1767,32 +1788,34 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve gives feeling to the highlighted palm-side area?",
-    "answer": "Ulnar nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted structure.",
+    "answer": "Thalamus",
     "wrong": [
-     "Median nerve",
-     "Radial nerve",
-     "Medial cutaneous nerve of the forearm"
+     "Caudate nucleus",
+     "Putamen",
+     "Hypothalamus"
     ],
-    "why": "The little finger and the ulnar half of the ring finger. Pins and needles here after leaning on your elbow? Ulnar.",
-    "art": "palm",
+    "why": "The brain’s relay station for nearly all sensation. A small thalamic stroke can numb one whole side, sometimes followed by burning pain (Dejerine–Roussy syndrome).",
+    "art": "brainaxial",
     "hl": [
-     "little",
-     "ring-u",
-     "palm-u"
+     "thalamus"
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which cranial nerve carries vision?",
-    "answer": "Optic nerve (II)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted vessel.",
+    "answer": "Abdominal aorta",
     "wrong": [
-     "Oculomotor nerve (III)",
-     "Olfactory nerve (I)",
-     "Trigeminal nerve (V)"
+     "Inferior vena cava",
+     "Superior mesenteric artery",
+     "Portal vein"
     ],
-    "why": "Strictly, the optic nerve is part of the brain itself, wrapped in the same layers (meninges)."
+    "why": "It sits just left of the spine, with the IVC on the right. A pulsatile mass here in an older smoker suggests an aneurysm; ultrasound screening finds them before they burst.",
+    "art": "abdoaxial",
+    "hl": [
+     "aorta"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -1873,15 +1896,19 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which is the longest bone in the body?",
-    "answer": "Femur",
+    "kind": "Name the structure",
+    "q": "Name the highlighted rotator cuff muscle.",
+    "answer": "Supraspinatus",
     "wrong": [
-     "Tibia",
-     "Humerus",
-     "Fibula"
+     "Infraspinatus",
+     "Subscapularis",
+     "Teres minor"
     ],
-    "why": "Roughly a quarter of your height."
+    "why": "It starts lifting the arm, and its tendon runs under the acromion, so it’s the cuff tendon most often pinched or torn: think painful arc between about 60 and 120 degrees.",
+    "art": "rotatorcuff",
+    "hl": [
+     "supraspinatus"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -1900,14 +1927,18 @@
    },
    {
     "kind": "Which nerve?",
-    "q": "Wrist drop after a fracture of the humerus shaft. Which nerve?",
+    "q": "Wrist drop after a fracture of the humerus shaft. Which highlighted nerve is hurt?",
     "answer": "Radial nerve",
     "wrong": [
      "Ulnar nerve",
      "Median nerve",
      "Axillary nerve"
     ],
-    "why": "The radial nerve hugs the humerus in the spiral groove. It extends the wrist and fingers."
+    "why": "The radial nerve hugs the back of the humerus in the spiral groove, so a shaft fracture can stretch it. It extends the wrist and fingers.",
+    "art": "armaxial",
+    "hl": [
+     "radial"
+    ]
    }
   ]
  },
@@ -1918,17 +1949,17 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Descending colon",
+    "q": "Name the highlighted compartment.",
+    "answer": "Anterior compartment",
     "wrong": [
-     "Ascending colon",
-     "Sigmoid colon",
-     "Transverse colon"
+     "Lateral compartment",
+     "Superficial posterior compartment",
+     "Deep posterior compartment"
     ],
-    "why": "It runs down the left side, fixed to the back wall of the abdomen.",
-    "art": "gut",
+    "why": "Tight fascia and bone box it in, so swelling after a tibial fracture can cause compartment syndrome: pain on passive toe stretch and a numb first web space (deep fibular nerve).",
+    "art": "legaxial",
     "hl": [
-     "descending"
+     "antcomp"
     ]
    },
    {
@@ -1955,17 +1986,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted wall.",
-    "answer": "Interatrial septum",
+    "q": "Name the highlighted grey matter.",
+    "answer": "Putamen",
     "wrong": [
-     "Interventricular septum",
-     "Crista terminalis",
-     "Moderator band"
+     "Globus pallidus",
+     "Caudate nucleus",
+     "Insula"
     ],
-    "why": "It contains the fossa ovalis, the remnant of the fetal foramen ovale. About a quarter of adults still have a small flap-like gap.",
-    "art": "heart",
+    "why": "The commonest site of hypertensive brain haemorrhage. A bleed here causes sudden weakness of the opposite side, because the internal capsule lies right beside it.",
+    "art": "brainaxial",
     "hl": [
-     "ias"
+     "putamen"
     ]
    },
    {
@@ -2018,17 +2049,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted chamber of the inner ear.",
-    "answer": "Vestibule",
+    "q": "Name the highlighted artery.",
+    "answer": "Left main coronary artery",
     "wrong": [
-     "Cochlea",
-     "Semicircular canals",
-     "Mastoid antrum"
+     "Left anterior descending artery",
+     "Circumflex artery",
+     "Right coronary artery"
     ],
-    "why": "It holds the utricle and saccule, which sense gravity and straight-line movement.",
-    "art": "ear",
+    "why": "A short trunk from the aorta that splits into the LAD and circumflex, so it feeds most of the left ventricle. Significant left main disease often favours bypass surgery.",
+    "art": "coronary",
     "hl": [
-     "vestibule"
+     "leftmain"
     ]
    },
    {
@@ -2044,17 +2075,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted structure.",
-    "answer": "Vitreous humour",
+    "q": "Name the highlighted fluid space.",
+    "answer": "Temporal horn of the lateral ventricle",
     "wrong": [
-     "Aqueous humour",
-     "Lens",
-     "Choroid"
+     "Third ventricle",
+     "Body of the lateral ventricle",
+     "Sylvian fissure"
     ],
-    "why": "A clear gel filling the back of the eye. With age it shrinks and pulls away, giving floaters.",
-    "art": "eye",
+    "why": "Normally just a slit beside the hippocampus. Ballooned temporal horns on a scan are an early sign of hydrocephalus.",
+    "art": "braincoronal",
     "hl": [
-     "vitreous"
+     "temporalhorn"
     ]
    }
   ]
@@ -2080,26 +2111,34 @@
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the posterior belly of digastric?",
-    "answer": "Facial nerve (VII)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted part of the internal capsule.",
+    "answer": "Genu of the internal capsule",
     "wrong": [
-     "Nerve to mylohyoid (V3)",
-     "Hypoglossal nerve (XII)",
-     "Glossopharyngeal nerve (IX)"
+     "Anterior limb of the internal capsule",
+     "Posterior limb of the internal capsule",
+     "Globus pallidus"
     ],
-    "why": "Two bellies, two nerves: the anterior belly gets V3 via the nerve to mylohyoid."
+    "why": "The bend carries corticobulbar fibres to the cranial nerve motor nuclei, so a small infarct here mainly weakens the face, tongue and swallowing.",
+    "art": "brainaxial",
+    "hl": [
+     "genu-ic"
+    ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "Which carpal bone is the first to appear on X-ray in infancy?",
-    "answer": "Capitate",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Acute marginal artery",
     "wrong": [
-     "Hamate",
-     "Scaphoid",
-     "Lunate"
+     "Posterior descending artery",
+     "Obtuse marginal artery",
+     "Diagonal branch"
     ],
-    "why": "Capitate first, closely followed by the hamate. The pisiform comes last."
+    "why": "A branch of the right coronary artery along the sharp lower border of the right ventricle. Right ventricular infarcts can drop the blood pressure with clear lungs, so go gently with nitrates.",
+    "art": "coronary",
+    "hl": [
+     "am"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -2195,15 +2234,19 @@
     ]
    },
    {
-    "kind": "Bone trivia",
-    "q": "What’s the proper name for the shoulder blade?",
-    "answer": "Scapula",
+    "kind": "Name the structure",
+    "q": "Name the highlighted space.",
+    "answer": "Spinal canal",
     "wrong": [
-     "Clavicle",
-     "Sternum",
-     "Acromion"
+     "Aorta",
+     "Inferior vena cava",
+     "Psoas muscle"
     ],
-    "why": "A flat triangle of bone held on almost entirely by muscle. Its only bony link to the rest of the skeleton is through the collarbone."
+    "why": "The bony tunnel behind each vertebral body that protects the cord and nerve roots. The cord ends around L1–L2, so lumbar punctures go lower, at L3/4 or L4/5.",
+    "art": "abdoaxial",
+    "hl": [
+     "canal"
+    ]
    }
   ]
  }

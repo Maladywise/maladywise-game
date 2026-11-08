@@ -72,17 +72,17 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Sigmoid colon",
+    "q": "Name the highlighted artery.",
+    "answer": "Left anterior descending artery",
     "wrong": [
-     "Descending colon",
-     "Rectum",
-     "Ileum"
+     "Circumflex artery",
+     "Right coronary artery",
+     "Diagonal branch"
     ],
-    "why": "An S-shaped loop on a mobile mesentery, which is why it can twist (volvulus).",
-    "art": "gut",
+    "why": "It runs down the front groove between the ventricles, feeding much of the left ventricle and septum. A blocked proximal LAD is nicknamed the ‘widow-maker’.",
+    "art": "coronary",
     "hl": [
-     "sigmoid"
+     "lad"
     ]
    },
    {
@@ -102,17 +102,17 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted layer.",
-    "answer": "Sclera",
+    "q": "Name the highlighted muscle.",
+    "answer": "Vastus lateralis",
     "wrong": [
-     "Cornea",
-     "Choroid",
-     "Conjunctiva"
+     "Vastus medialis",
+     "Rectus femoris",
+     "Biceps femoris"
     ],
-    "why": "The tough white of the eye. It’s continuous with the clear cornea at the front.",
-    "art": "eye",
+    "why": "The biggest quad, on the outer thigh. It’s the usual site for a muscle biopsy and the preferred spot for injections in babies.",
+    "art": "thighaxial",
     "hl": [
-     "sclera"
+     "vl"
     ]
    },
    {
@@ -191,32 +191,32 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted tube.",
-    "answer": "Eustachian tube",
+    "q": "Name the highlighted vessel.",
+    "answer": "Basilic vein",
     "wrong": [
-     "Ear canal",
-     "Internal carotid artery",
-     "Cochlear duct"
+     "Cephalic vein",
+     "Brachial artery",
+     "Brachial vein"
     ],
-    "why": "It equalises middle ear pressure. Shorter and flatter in children, which is one reason they get more ear infections.",
-    "art": "ear",
+    "why": "It runs up the inner arm and dives deep around mid-arm. Big and away from the main nerves, it’s a favourite vein for PICC lines and dialysis fistulas.",
+    "art": "armaxial",
     "hl": [
-     "et"
+     "basilic"
     ]
    },
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted layer.",
-    "answer": "Choroid",
+    "q": "Name the highlighted muscle.",
+    "answer": "Sartorius",
     "wrong": [
-     "Retina",
-     "Sclera",
-     "Ciliary body"
+     "Gracilis",
+     "Rectus femoris",
+     "Adductor longus"
     ],
-    "why": "A blood-rich layer feeding the outer retina. Its pigment helps absorb stray light.",
-    "art": "eye",
+    "why": "The body’s longest muscle forms the roof of the adductor canal, which carries the femoral vessels. Anaesthetists use it as the landmark for an adductor canal block after knee replacement.",
+    "art": "thighaxial",
     "hl": [
-     "choroid"
+     "sartorius"
     ]
    }
   ]
@@ -253,29 +253,33 @@
     "why": "It runs right beside the inner side of the lower third molar, carrying feeling (and, via the chorda tympani, taste) from the front two-thirds of the tongue. Most injuries recover."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve runs through Guyon’s canal at the wrist?",
-    "answer": "Ulnar nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Posterior communicating artery",
     "wrong": [
-     "Median nerve",
-     "Radial nerve",
-     "Anterior interosseous nerve"
+     "Anterior communicating artery",
+     "Posterior cerebral artery",
+     "Superior cerebellar artery"
     ],
-    "why": "Cyclists can compress it from leaning on handlebars: ‘handlebar palsy’."
+    "why": "It links the internal carotid to the posterior cerebral artery. An aneurysm here can press on the oculomotor nerve: a painful third nerve palsy with a blown pupil.",
+    "art": "willis",
+    "hl": [
+     "pcom"
+    ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Second metacarpal",
+    "kind": "Name the structure",
+    "q": "Name the highlighted vessel.",
+    "answer": "Femoral vein",
     "wrong": [
-     "Third metacarpal",
-     "First metacarpal",
-     "Trapezoid"
+     "Femoral artery",
+     "Great saphenous vein",
+     "Profunda femoris vein"
     ],
-    "why": "The longest metacarpal, with the most rigid joint at its base. A stable post for pinching.",
-    "art": "hand",
+    "why": "It travels with the femoral artery through the adductor canal. A deep vein thrombosis here or higher carries more risk of pulmonary embolism than one confined to the calf.",
+    "art": "thighaxial",
     "hl": [
-     "mc2"
+     "femoralvein"
     ]
    },
    {
@@ -316,15 +320,19 @@
     ]
    },
    {
-    "kind": "Anatomy trivia",
-    "q": "Tetanus causes ‘lockjaw’. Spasm of which muscle clamps the jaw shut?",
-    "answer": "Masseter",
+    "kind": "Name the structure",
+    "q": "Name the highlighted grey matter.",
+    "answer": "Lentiform nucleus",
     "wrong": [
-     "Buccinator",
-     "Orbicularis oris",
-     "Platysma"
+     "Thalamus",
+     "Caudate nucleus",
+     "Insula"
     ],
-    "why": "Tetanus spores live in soil. The toxin blocks the nerve signals that tell muscles to relax, and the powerful masseter is often first to clamp. Today is World Soil Day: keep that booster current."
+    "why": "Putamen plus globus pallidus, lens-shaped and lateral to the internal capsule. Copper builds up here in Wilson’s disease, causing tremor and stiffness.",
+    "art": "braincoronal",
+    "hl": [
+     "lentiform"
+    ]
    },
    {
     "kind": "Name the structure",
@@ -353,18 +361,18 @@
     "why": "Its only skin patch. Numbness here can be an early sign of anterior compartment syndrome."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Middle phalanx of the middle finger",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Anterior communicating artery",
     "wrong": [
-     "Proximal phalanx of the middle finger",
-     "Distal phalanx of the middle finger",
-     "Third metacarpal"
+     "Posterior communicating artery",
+     "Anterior cerebral artery",
+     "Middle cerebral artery"
     ],
-    "why": "Each finger has three phalanges: proximal, middle and distal. The thumb has only two.",
-    "art": "hand",
+    "why": "The short bridge between the two anterior cerebral arteries. It’s the commonest site for berry aneurysms, whose rupture causes a thunderclap subarachnoid haemorrhage.",
+    "art": "willis",
     "hl": [
-     "mp3"
+     "acom"
     ]
    }
   ]
@@ -401,18 +409,18 @@
     "why": "Popliteus ‘unlocks’ the fully straightened knee, allowing it to bend."
    },
    {
-    "kind": "Anatomy trivia",
-    "q": "Which artery runs in the groove over the front of the highlighted wall and causes the ‘widow-maker’ heart attack?",
-    "answer": "Left anterior descending artery",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Obtuse marginal artery",
     "wrong": [
-     "Right coronary artery",
-     "Circumflex artery",
+     "Diagonal branch",
+     "Acute marginal artery",
      "Posterior descending artery"
     ],
-    "why": "The LAD feeds the front wall and most of the septum. Finland’s North Karelia Project, begun in 1972, cut heart disease deaths dramatically by changing a whole region’s diet and smoking habits.",
-    "art": "heart",
+    "why": "A branch of the circumflex running down the rounded left border of the heart. Circumflex territory infarcts are the ones most easily missed on a standard 12-lead ECG.",
+    "art": "coronary",
     "hl": [
-     "ivs"
+     "om"
     ]
    },
    {
@@ -427,15 +435,19 @@
     "why": "It runs in the back of the atrioventricular groove. Leads for cardiac resynchronisation pacing are threaded through it to reach the left ventricle."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies adductor pollicis?",
-    "answer": "Ulnar nerve (deep branch)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Anterior inferior cerebellar artery",
     "wrong": [
-     "Median nerve (recurrent branch)",
-     "Radial nerve",
-     "Anterior interosseous nerve"
+     "Posterior inferior cerebellar artery",
+     "Superior cerebellar artery",
+     "Vertebral artery"
     ],
-    "why": "Weak adductor pollicis makes you bend the thumb tip to grip paper: Froment’s sign."
+    "why": "It leaves the lower basilar artery and usually gives off the labyrinthine artery, so an AICA stroke can cause sudden one-sided deafness with vertigo.",
+    "art": "willis",
+    "hl": [
+     "aica"
+    ]
    }
   ]
  },
@@ -461,14 +473,18 @@
    },
    {
     "kind": "Anatomy trivia",
-    "q": "Calf exercises on long flights help pump blood up the leg veins. Which muscle makes most of the calf bulge?",
+    "q": "Calf exercises on long flights help pump blood up the leg veins. Name the highlighted calf muscle.",
     "answer": "Gastrocnemius",
     "wrong": [
-     "Quadriceps",
-     "Hamstrings",
-     "Tibialis anterior"
+     "Soleus",
+     "Tibialis anterior",
+     "Fibularis longus"
     ],
-    "why": "Every squeeze pushes blood back towards the heart through one-way valves. Flex your ankles and walk the aisle on long-haul."
+    "why": "Every squeeze pushes blood back towards the heart through one-way valves. Flex your ankles and walk the aisle on long-haul.",
+    "art": "legaxial",
+    "hl": [
+     "gastroc"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -522,15 +538,19 @@
     "why": "Around 2 square metres in an adult. The liver is the largest internal organ."
    },
    {
-    "kind": "Bone trivia",
-    "q": "How many bones are in one adult hand, wrist included?",
-    "answer": "27",
+    "kind": "Name the structure",
+    "q": "Name the highlighted organ.",
+    "answer": "Large bowel (colon)",
     "wrong": [
-     "19",
-     "33",
-     "45"
+     "Small bowel",
+     "Kidney",
+     "Stomach"
     ],
-    "why": "8 carpals, 5 metacarpals and 14 phalanges. Your two hands hold over a quarter of your 206 bones."
+    "why": "Cut across, the ascending and descending colon sit in the flanks, fixed to the back wall. That’s why diverticulitis pain is felt in the side, usually the left.",
+    "art": "abdoaxial",
+    "hl": [
+     "colon"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -577,18 +597,18 @@
   "difficulty": "Medium",
   "rounds": [
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted wrist bone.",
-    "answer": "Pisiform",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Brachialis",
     "wrong": [
-     "Triquetrum",
-     "Hamate",
-     "Lunate"
+     "Biceps brachii",
+     "Triceps brachii",
+     "Coracobrachialis"
     ],
-    "why": "Pea-sized and sitting on the front of the triquetrum. It’s a sesamoid bone inside a tendon.",
-    "art": "hand",
+    "why": "The workhorse elbow flexor lies under biceps, right on the humerus. After an elbow injury, bleeding into it can calcify (myositis ossificans).",
+    "art": "armaxial",
     "hl": [
-     "pisiform"
+     "brachialis"
     ]
    },
    {
@@ -630,17 +650,17 @@
    },
    {
     "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Third metacarpal",
+    "q": "Name the highlighted part of the shoulder blade.",
+    "answer": "Acromion",
     "wrong": [
-     "Second metacarpal",
-     "Fourth metacarpal",
-     "Capitate"
+     "Coracoid process",
+     "Clavicle",
+     "Spine of the scapula"
     ],
-    "why": "The palm bone behind the middle finger. It’s the only metacarpal with a little styloid process at its base.",
-    "art": "hand",
+    "why": "The flat end of the scapular spine forms the roof of the shoulder. A hooked acromion narrows the space below, which is linked with impingement and cuff tears.",
+    "art": "rotatorcuff",
     "hl": [
-     "mc3"
+     "acromion"
     ]
    }
   ]
@@ -835,18 +855,18 @@
     "why": "It can get trapped at the suprascapular or spinoglenoid notch. Volleyball players are known for wasting of infraspinatus from it."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Distal phalanx of the little finger",
+    "kind": "Name the structure",
+    "q": "Name the highlighted rotator cuff muscle.",
+    "answer": "Teres minor",
     "wrong": [
-     "Middle phalanx of the little finger",
-     "Distal phalanx of the ring finger",
-     "Fifth metacarpal"
+     "Infraspinatus",
+     "Teres major",
+     "Subscapularis"
     ],
-    "why": "Fingertip bones end in a rough tuft that supports the pulp. They’re the most commonly broken bones in the hand, usually from crush injuries.",
-    "art": "hand",
+    "why": "The smallest cuff muscle, an external rotator supplied by the axillary nerve, not the suprascapular. Weak deltoid plus teres minor after a dislocation points to the axillary nerve.",
+    "art": "rotatorcuff",
     "hl": [
-     "dp5"
+     "teresminor"
     ]
    }
   ]
@@ -890,26 +910,34 @@
     "why": "Cardiac surgeons use it to get a clamp or tape around the great arteries. The oblique sinus, behind the left atrium, is a dead end."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies geniohyoid?",
-    "answer": "C1 fibres travelling with the hypoglossal",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery on the back of the heart.",
+    "answer": "Posterior descending artery",
     "wrong": [
-     "Hypoglossal nerve proper",
-     "Nerve to mylohyoid",
-     "Ansa cervicalis"
+     "Acute marginal artery",
+     "Obtuse marginal artery",
+     "Circumflex artery"
     ],
-    "why": "The hypoglossal is just the bus. The passengers are C1 spinal nerve fibres."
+    "why": "It runs in the groove under the heart and feeds the back third of the septum. Whichever artery gives it off, usually the RCA, defines coronary ‘dominance’.",
+    "art": "coronary",
+    "hl": [
+     "pda"
+    ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies flexor pollicis longus?",
-    "answer": "Anterior interosseous nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted grey matter.",
+    "answer": "Globus pallidus",
     "wrong": [
-     "Median nerve proper, in the palm",
-     "Ulnar nerve",
-     "Posterior interosseous nerve"
+     "Putamen",
+     "Caudate nucleus",
+     "Claustrum"
     ],
-    "why": "Lose it and you can’t make an ‘OK’ sign: the thumb and index tips go flat."
+    "why": "The pale inner wedge of the lentiform nucleus. Carbon monoxide poisoning classically damages both globi pallidi, seen as symmetrical lesions on MRI.",
+    "art": "brainaxial",
+    "hl": [
+     "pallidus"
+    ]
    }
   ]
  },
@@ -930,15 +958,19 @@
     "why": "Roughly 7% of body weight. Over about 12 hours in 1799, George Washington’s doctors removed around 2.4 litres, some 40% of his blood. He died that night."
    },
    {
-    "kind": "Anatomy trivia",
-    "q": "Which vessels carry blood back to the heart?",
-    "answer": "Veins",
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Lumbar vertebra",
     "wrong": [
-     "Arteries",
-     "Capillaries",
-     "Lymphatics"
+     "Sacrum",
+     "Rib",
+     "Pelvis"
     ],
-    "why": "Bloodletting usually opened an arm vein at the inner elbow, the same spot used for blood tests today."
+    "why": "A lumbar vertebra seen end-on: the chunky body carries weight and the spinal canal sits behind it. Osteoporotic crush fractures here cause sudden back pain and lost height.",
+    "art": "abdoaxial",
+    "hl": [
+     "vertebra"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -1152,18 +1184,18 @@
     "why": "Their long, narrow drainage duct blocks easily when you have a cold. The Wright brothers first flew on this day in 1903."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted vertebra.",
-    "answer": "Axis (C2)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Basilar artery",
     "wrong": [
-     "Atlas (C1)",
-     "C3",
-     "C7 (vertebra prominens)"
+     "Vertebral artery",
+     "Internal carotid artery",
+     "Posterior cerebral artery"
     ],
-    "why": "Its tooth-like dens is the pivot the atlas turns on when you shake your head ‘no’.",
-    "art": "spine",
+    "why": "Formed where the two vertebral arteries join on the front of the brainstem. A basilar blockage can cause coma or ‘locked-in’ syndrome, so sudden vertigo with double vision is urgent.",
+    "art": "willis",
     "hl": [
-     "c2"
+     "basilar"
     ]
    },
    {
@@ -1185,19 +1217,18 @@
   "difficulty": "Hard",
   "rounds": [
    {
-    "kind": "Anatomy trivia",
-    "q": "Reactivated tuberculosis classically affects which part of the lungs?",
-    "answer": "Upper lobes (apices)",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Adductor magnus",
     "wrong": [
-     "Lower lobes",
-     "Lingula only",
-     "Right middle lobe"
+     "Adductor longus",
+     "Semimembranosus",
+     "Gracilis"
     ],
-    "why": "The apices are oxygen-rich with poorer lymph drainage, which suits TB. Many countries offer screening for latent TB to new arrivals; it’s very treatable.",
-    "art": "lungs",
+    "why": "The biggest adductor, with a ‘hamstring part’ supplied by the tibial nerve. The femoral vessels pass through a gap in its tendon (the adductor hiatus) to become the popliteal vessels.",
+    "art": "thighaxial",
     "hl": [
-     "rul",
-     "lul"
+     "addmagnus"
     ]
    },
    {
@@ -1223,16 +1254,16 @@
     "why": "From S2–4 (‘keeps the poo off the floor’). It’s the target of a pudendal block in childbirth."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted vertebra.",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
     "answer": "T4",
     "wrong": [
-     "T3",
-     "T5",
-     "T6"
+     "T2",
+     "T6",
+     "T8"
     ],
-    "why": "Count down from the top of the thoracic curve. The T4–T5 level lines up with the sternal angle, where the trachea splits.",
-    "art": "spine",
+    "why": "T4 runs across the chest at nipple level. Shingles here stays in a one-sided band like this, and a spinal cord lesion can leave a numb ‘sensory level’.",
+    "art": "dermatomes",
     "hl": [
      "t4"
     ]
@@ -1279,14 +1310,18 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Which is the body’s strongest ligament, across the front of the hip?",
-    "answer": "Iliofemoral ligament",
+    "q": "Name the highlighted muscles.",
+    "answer": "Fibularis (peroneus) longus and brevis",
     "wrong": [
-     "Pubofemoral ligament",
-     "Ischiofemoral ligament",
-     "Ligamentum teres"
+     "Tibialis anterior",
+     "Tibialis posterior",
+     "Soleus"
     ],
-    "why": "The Y ligament of Bigelow stops the hip bending backwards, so you can stand upright with little muscle effort."
+    "why": "The lateral compartment muscles hug the fibula and turn the foot out. They’re supplied by the superficial fibular nerve, so weak eversion with foot drop points to the common fibular nerve at the knee.",
+    "art": "legaxial",
+    "hl": [
+     "fibularis"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -1356,14 +1391,18 @@
    },
    {
     "kind": "Name the structure",
-    "q": "Which tendon forms the ulnar (inner) border of the anatomical snuffbox?",
-    "answer": "Extensor pollicis longus",
+    "q": "Name the highlighted part of the internal capsule.",
+    "answer": "Anterior limb of the internal capsule",
     "wrong": [
-     "Extensor pollicis brevis",
-     "Abductor pollicis longus",
-     "Extensor carpi radialis longus"
+     "Genu of the internal capsule",
+     "Posterior limb of the internal capsule",
+     "External capsule"
     ],
-    "why": "EPB and APL form the other side. EPL hooks around Lister’s tubercle and can snap weeks after a wrist fracture."
+    "why": "It runs between the caudate head and the lentiform nucleus, carrying frontal–thalamic connections. It’s a deep brain stimulation target for severe, treatment-resistant OCD.",
+    "art": "brainaxial",
+    "hl": [
+     "alic"
+    ]
    },
    {
     "kind": "Which nerve?",
@@ -1432,15 +1471,19 @@
     "why": "Biceps is a powerful twister (supinator) as well as a flexor. The real workhorse for bending the elbow, brachialis, hides underneath."
    },
    {
-    "kind": "Bone trivia",
-    "q": "How many vertebrae are in the human neck?",
-    "answer": "Seven",
+    "kind": "Name the structure",
+    "q": "Name the highlighted calf muscle.",
+    "answer": "Soleus",
     "wrong": [
-     "Five",
-     "Nine",
-     "Twelve"
+     "Gastrocnemius",
+     "Tibialis anterior",
+     "Tibialis posterior"
     ],
-    "why": "Seven, the same as a giraffe. Theirs are just much longer."
+    "why": "The flat muscle under gastrocnemius; together they form the Achilles tendon. Its veins power the calf pump, and they’re a common spot for calf DVT.",
+    "art": "legaxial",
+    "hl": [
+     "soleus"
+    ]
    }
   ]
  },
@@ -1487,15 +1530,19 @@
     "why": "They hugely increase the surface for absorbing food. Coeliac disease flattens them."
    },
    {
-    "kind": "Anatomy trivia",
-    "q": "How many teeth are in a full adult set?",
-    "answer": "32",
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted part of the shoulder.",
+    "answer": "Head of the humerus",
     "wrong": [
-     "28",
-     "30",
-     "36"
+     "Acromion",
+     "Glenoid",
+     "Coracoid process"
     ],
-    "why": "32 including the four wisdom teeth, which many people never fully get. Children have 20."
+    "why": "The ball of the shoulder’s ball-and-socket joint. Its socket is shallow, so the shoulder is the big joint that dislocates most often, usually forwards.",
+    "art": "rotatorcuff",
+    "hl": [
+     "humeralhead"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -1579,17 +1626,17 @@
   "rounds": [
    {
     "kind": "Name the structure",
-    "q": "Name the highlighted part of the bowel.",
-    "answer": "Ascending colon",
+    "q": "Name the highlighted muscle.",
+    "answer": "Psoas major",
     "wrong": [
-     "Descending colon",
-     "Transverse colon",
-     "Caecum"
+     "Quadratus lumborum",
+     "Erector spinae",
+     "Iliacus"
     ],
-    "why": "You’re facing the patient, so their right is on your left. It carries the post-feast leftovers up from the caecum.",
-    "art": "gut",
+    "why": "It runs beside the lumbar spine to the hip and flexes the thigh. Pus tracking along it (a psoas abscess) causes a limp and pain on hip extension, the psoas sign.",
+    "art": "abdoaxial",
     "hl": [
-     "ascending"
+     "psoas"
     ]
    },
    {
@@ -1666,29 +1713,33 @@
     "why": "It runs under the pterion, the thin spot at the side of the skull. Classic story: a knock, a lucid spell, then rapid decline."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the skin of the inner (medial) forearm?",
-    "answer": "Medial antebrachial cutaneous nerve",
+    "kind": "Name the structure",
+    "q": "Name the highlighted vessel.",
+    "answer": "Cephalic vein",
     "wrong": [
-     "Ulnar nerve",
-     "Musculocutaneous nerve",
-     "Intercostobrachial nerve"
+     "Basilic vein",
+     "Brachial artery",
+     "Profunda brachii artery"
     ],
-    "why": "It comes straight off the medial cord. The outer side belongs to the musculocutaneous nerve, via its lateral antebrachial cutaneous branch."
+    "why": "It runs up the outer arm and into the groove between deltoid and pectoralis major. Surgeons often use it to pass pacemaker leads into the heart.",
+    "art": "armaxial",
+    "hl": [
+     "cephalic"
+    ]
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted vertebra.",
-    "answer": "L4",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Posterior cerebral artery",
     "wrong": [
-     "L3",
-     "L5",
-     "L2"
+     "Superior cerebellar artery",
+     "Middle cerebral artery",
+     "Posterior communicating artery"
     ],
-    "why": "A line across the tops of the iliac crests (Tuffier’s line) crosses about L4, the landmark for a lumbar puncture.",
-    "art": "spine",
+    "why": "It curves round the midbrain to supply the occipital lobe, so a PCA stroke typically causes a homonymous hemianopia, often with macular sparing.",
+    "art": "willis",
     "hl": [
-     "l4"
+     "pca"
     ]
    },
    {
@@ -1743,30 +1794,34 @@
     "why": "Same column of the periodic table. The ‘Radium Girls’ who licked their brushes to paint watch dials developed jaw necrosis and bone cancers."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Middle phalanx of the index finger",
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Circumflex artery",
     "wrong": [
-     "Proximal phalanx of the index finger",
-     "Middle phalanx of the middle finger",
-     "Distal phalanx of the index finger"
+     "Left anterior descending artery",
+     "Right coronary artery",
+     "Obtuse marginal artery"
     ],
-    "why": "Every finger has three phalanges, the thumb just two. Marie Curie’s fingertips were left scarred and cracked from years of handling radium.",
-    "art": "hand",
+    "why": "It runs in the groove between the left atrium and ventricle, round to the back. Posterior infarcts in its territory show as ST depression in V1–V3 on a standard ECG.",
+    "art": "coronary",
     "hl": [
-     "mp2"
+     "cx"
     ]
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerves carry ‘shoulder tip pain’ when the diaphragm is irritated?",
-    "answer": "Supraclavicular nerves",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
+    "answer": "C6",
     "wrong": [
-     "Axillary nerve",
-     "Suprascapular nerve",
-     "Long thoracic nerve"
+     "C5",
+     "C7",
+     "C8"
     ],
-    "why": "They share the C3–4 roots with the phrenic nerve, so the brain blames the shoulder for the diaphragm’s problem."
+    "why": "C6 runs down the outer forearm to the thumb. A C5/6 disc squashes the C6 root: a tingling thumb, weak biceps and a reduced brachioradialis reflex.",
+    "art": "dermatomes",
+    "hl": [
+     "c6"
+    ]
    }
   ]
  },
@@ -1787,15 +1842,19 @@
     "why": "Unlike most palate muscles it’s supplied by V3, not the vagus. Young children’s shorter, flatter tubes help explain all those ear infections."
    },
    {
-    "kind": "Which nerve?",
-    "q": "Which nerve supplies the parotid gland’s secretions?",
-    "answer": "Glossopharyngeal nerve (IX)",
+    "kind": "Which dermatome?",
+    "q": "Which skin segment (dermatome) is highlighted?",
+    "answer": "C5",
     "wrong": [
-     "Facial nerve (VII)",
-     "Auriculotemporal nerve only",
-     "Vagus nerve (X)"
+     "C6",
+     "C7",
+     "T1"
     ],
-    "why": "Via the lesser petrosal nerve and otic ganglion, then hitching a ride on the auriculotemporal nerve. The facial nerve just runs through the gland."
+    "why": "C5 covers the outer upper arm. Numbness over the deltoid after a shoulder dislocation is more often the axillary nerve’s ‘regimental badge’ patch, so check deltoid power too.",
+    "art": "dermatomes",
+    "hl": [
+     "c5"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -1842,15 +1901,19 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "kind": "Anatomy trivia",
-    "q": "What’s the biggest muscle in the body?",
-    "answer": "Gluteus maximus",
+    "kind": "Name the structure",
+    "q": "Name the highlighted structure.",
+    "answer": "Corpus callosum",
     "wrong": [
-     "Quadriceps",
-     "Latissimus dorsi",
-     "Pectoralis major"
+     "Fornix",
+     "Thalamus",
+     "Brainstem"
     ],
-    "why": "Your buttock muscle, the powerhouse for climbing stairs and standing up. A superhero muscle, just less photogenic."
+    "why": "About 200 million nerve fibres linking the two hemispheres. Surgeons once cut it to stop severe seizures spreading, revealing ‘split-brain’ effects.",
+    "art": "braincoronal",
+    "hl": [
+     "cc"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -1930,15 +1993,19 @@
     "why": "About 25–30 cm long. Urine is pushed along by squeezing waves, not just gravity, so you could wee upside down."
    },
    {
-    "kind": "Anatomy trivia",
-    "q": "What connects muscle to bone?",
-    "answer": "Tendon",
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Triceps brachii",
     "wrong": [
-     "Ligament",
-     "Cartilage",
-     "Fascia"
+     "Biceps brachii",
+     "Brachialis",
+     "Deltoid"
     ],
-    "why": "Tendons pull, ligaments hold bone to bone. Both are springy, but nowhere near as stretchy as rubber."
+    "why": "The only muscle in the back of the arm, it straightens the elbow. Tapping its tendon above the elbow tests the C7 reflex.",
+    "art": "armaxial",
+    "hl": [
+     "triceps"
+    ]
    },
    {
     "kind": "Anatomy trivia",
@@ -2073,18 +2140,18 @@
     "why": "Burns deep enough to destroy the dermis’s nerve endings can hurt less than shallow ones. Enjoy the fireworks from a safe distance tonight."
    },
    {
-    "kind": "What’s this bone?",
-    "q": "Name the highlighted bone.",
-    "answer": "Proximal phalanx of the thumb",
+    "kind": "Name the structure",
+    "q": "Name the highlighted grey matter.",
+    "answer": "Caudate nucleus",
     "wrong": [
-     "First metacarpal",
-     "Distal phalanx of the thumb",
-     "Trapezium"
+     "Putamen",
+     "Thalamus",
+     "Globus pallidus"
     ],
-    "why": "The thumb has only two phalanges; the fingers have three. Hands are the body part most often hurt by fireworks, so keep yours away from the fuse.",
-    "art": "hand",
+    "why": "It bulges into the side of the lateral ventricle’s frontal horn. In Huntington’s disease it wastes away, so the frontal horns look rounded and enlarged on scans.",
+    "art": "brainaxial",
     "hl": [
-     "pp1"
+     "caudate"
     ]
    },
    {
