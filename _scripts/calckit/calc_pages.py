@@ -78,7 +78,7 @@ PREG_KEYDATES = '''<h2>Key dates in pregnancy (Australia)</h2>
 </ul>'''
 
 DUE = dict(
-    path="/tools/due-date-calculator/", crumb="Due date calculator", kind="Calculator",
+    path="/tools/due-date-calculator/", ldname="Due Date Calculator: Due Date from Your Period or IVF", crumb="Due date calculator", kind="Calculator",
     title="Due Date Calculator: From Your Period or IVF",
     h1="Due date calculator",
     desc="Free pregnancy due date calculator: works from your last period (with cycle length), conception date or IVF transfer, plus Australian scan and test dates.",
@@ -112,7 +112,7 @@ DUE = dict(
 
 WEEK = dict(DUE)
 WEEK.update(
-    path="/tools/pregnancy-week-calculator/", crumb="Pregnancy week calculator",
+    path="/tools/pregnancy-week-calculator/", ldname="Pregnancy Week Calculator: How Many Weeks Pregnant Am I?", crumb="Pregnancy week calculator",
     title="Pregnancy Week Calculator: How Many Weeks?",
     h1="How many weeks pregnant am I?",
     desc="Free pregnancy week calculator: see how many weeks and days pregnant you are today, your trimester, due date and upcoming Australian scans and tests.",
@@ -148,7 +148,7 @@ WEEK["body"] = WEEK["body"].replace("Many people feel the first movements betwee
 
 # ---------------- ovulation ----------------
 OVU = dict(
-    path="/tools/ovulation-calculator/", crumb="Ovulation calculator", kind="Calculator",
+    path="/tools/ovulation-calculator/", ldname="Ovulation Calculator: Fertile Window and Ovulation Date", crumb="Ovulation calculator", kind="Calculator",
     title="Ovulation Calculator: Your Fertile Window",
     h1="Ovulation calculator",
     desc="Free ovulation calculator: estimate your fertile window and ovulation date for the next 3 cycles from your period and cycle length, with honest caveats.",
@@ -417,7 +417,8 @@ EGFR = dict(
     ],
     revnote="Education for health professionals. Check results against your laboratory report and local guidance.",
     related=[("Tools", "Iron infusion dose calculator", "/tools/iron-infusion/"), ("Calculator", "CHA₂DS₂-VASc calculator", "/tools/cha2ds2-vasc/"),
-             ("Fact sheet", "Type 2 diabetes", "/type-2-diabetes/"), ("Fact sheet", "Blood pressure", "/blood-pressure/")],
+             ("Fact sheet", "Type 2 diabetes", "/type-2-diabetes/"), ("Fact sheet", "Blood pressure", "/blood-pressure/"),
+             ("Blood test", "Low eGFR", "/blood-tests/low-egfr/"), ("Guide", "Blood Test Results Explained", "/blood-tests/")],
 )
 
 # ---------------- CHA2DS2-VASc ----------------
@@ -425,7 +426,7 @@ ITEMS = [("chf", "Heart failure, or reduced left ventricular function", 1), ("ht
          ("dm", "Diabetes", 1), ("stroke", "Previous stroke, TIA or blood clot (thromboembolism)", 2),
          ("vasc", "Vascular disease: past heart attack, peripheral arterial disease or aortic plaque", 1)]
 CHA = dict(
-    path="/tools/cha2ds2-vasc/", crumb="CHA₂DS₂-VASc calculator", kind="Clinician calculator", pro=True,
+    path="/tools/cha2ds2-vasc/", ldname="CHA2DS2-VASc and CHA2DS2-VA Calculator for AF Stroke Risk", crumb="CHA₂DS₂-VASc calculator", kind="Clinician calculator", pro=True,
     title="CHA2DS2-VASc and CHA2DS2-VA Calculator (AF)",
     h1="CHA₂DS₂-VASc and CHA₂DS₂-VA calculator",
     desc="CHA2DS2-VASc and sex-free CHA2DS2-VA stroke risk scores for atrial fibrillation, with the Australian 2018 AF guideline thresholds for anticoagulation.",

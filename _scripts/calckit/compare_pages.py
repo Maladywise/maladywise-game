@@ -1,7 +1,7 @@
 """Comparison page text. Built by build.py. Generic names first; brands only where they match how people search."""
 
 OZ = dict(
-    path="/compare/ozempic-vs-mounjaro/", crumb="Semaglutide vs tirzepatide", kind="Medicines",
+    path="/compare/ozempic-vs-mounjaro/", crumb="Ozempic vs Mounjaro", kind="Medicines",
     title="Semaglutide vs Tirzepatide (Ozempic vs Mounjaro)",
     h1="Semaglutide vs Tirzepatide (Ozempic vs Mounjaro)",
     blurb="Weight loss in the head-to-head trial, diabetes, heart benefits, side effects and PBS status in Australia.",

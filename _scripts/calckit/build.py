@@ -7,7 +7,7 @@ HOW TO RUN (from the repo root)
 
 Calculation code lives in tools/calckit/calc.js (pure functions, shared by every calculator page);
 styles in tools/calckit/calc.css. Page text lives in calc_pages.py and compare_pages.py next to this file.
-Asset <script>/<link> tags are copied from tools/iron-infusion/index.html so versions stay in step.
+Asset ?v= numbers are copied from tools/iron-infusion/index.html so versions stay in step.
 """
 import html, json, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -20,11 +20,22 @@ REV_DATE = "2026-11-08"
 REV = "Updated 8 November 2026"
 CALC_V = "1"
 
-ref = open(os.path.join(ROOT, "tools", "iron-infusion", "index.html"), encoding="utf-8").read()
-m = re.search(r'(<link rel="preconnect".*?<script src="/assets/shell\.js\?v=\d+"></script>)', ref, re.S)
-if not m:
-    m = re.search(r'(<link rel="stylesheet" href="/assets/shell\.css.*?<script src="/assets/shell\.js\?v=\d+"></script>)', ref, re.S)
-ASSETS = m.group(1)
+def _assets():
+    """Shared stylesheet/script tags, with ?v= numbers copied from a live tools page so versions stay in step.
+    Works with both the old head (Google Fonts, plain scripts) and the new one (self-hosted fonts, deferred
+    scripts): calculator pages keep plain, in-order scripts because their inline code calls MW straight away."""
+    ref = open(os.path.join(ROOT, "tools", "iron-infusion", "index.html"), encoding="utf-8").read()
+    def v(name):
+        m = re.search(r'/assets/' + re.escape(name) + r'\?v=(\d+)', ref)
+        if not m:
+            raise SystemExit("build.py: can't find %s?v= in tools/iron-infusion/index.html" % name)
+        return m.group(1)
+    return ('<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
+            '<link rel="stylesheet" href="/assets/shell.css?v=%s">\n'
+            '<script src="/assets/games.js?v=%s"></script>\n'
+            '<script src="/assets/site.js?v=%s"></script>\n'
+            '<script src="/assets/shell.js?v=%s"></script>' % (v("shell.css"), v("games.js"), v("site.js"), v("shell.js")))
+ASSETS = _assets()
 
 def esc(s): return html.escape(s, quote=True)
 def strip(s): return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip()
@@ -97,7 +108,7 @@ def calc_page(c):
     path = c["path"]
     pro = c.get("pro")
     crumb = crumbs([("Malady Wise", "/"), ("Tools", "/tools/"), (c["crumb"], path)])
-    page = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": c["title"], "description": c["desc"],
+    page = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": c.get("ldname", c["title"]), "description": c["desc"],
             "url": BASE + path, "inLanguage": "en-AU",
             "audience": {"@type": "MedicalAudience", "audienceType": "Clinician" if pro else "Patient"},
             "author": ORG, "publisher": ORG,
