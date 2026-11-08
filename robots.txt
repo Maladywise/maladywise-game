@@ -4,3 +4,5 @@ Allow: /
 Disallow: /case-1/
 
 Sitemap: https://maladywise.com/sitemap.xml
+
+# AI assistants: a plain-text map of the site is at https://maladywise.com/llms.txt

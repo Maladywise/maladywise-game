@@ -23,12 +23,14 @@ jobs:
           python-version: "3.12"
       - name: Rebuild data/days-soon.json
         run: python3 _scripts/build_days.py --soon-only
+      - name: Rebuild llms.txt (site map for AI assistants)
+        run: python3 _scripts/build_llms.py
       - name: Save it
         run: |
-          if [ -n "$(git status --porcelain -- data/days-soon.json)" ]; then
+          if [ -n "$(git status --porcelain -- data/days-soon.json llms.txt)" ]; then
             git config user.name "Maladywise"
             git config user.email "maladywise@gmail.com"
-            git add data/days-soon.json
+            git add data/days-soon.json llms.txt
             git commit -m "Refresh home page health days (days-soon.json)"
             for i in 1 2 3; do git pull --rebase --autostash && git push && break; sleep 5; done
           fi

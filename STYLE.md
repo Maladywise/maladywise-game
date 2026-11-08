@@ -133,3 +133,4 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
   - art: an original, simple flat SVG drawing of the topic in the site palette, with at most 1–2 tiny labels. No copied figures. Escape `</` as `<\/` inside the JSON.
 - Every deep dive also has ONE inline SVG diagram (`<figure class="ddfig">`) in its Pathophysiology or Diagnosis section: accurate to the page's own cited content, site colours (CSS variables, so it works in dark mode), an aria-label describing it in words, and a one-line caption. Check at 390px that no text overflows its box.
 - After publishing, run `python3 _scripts/og_cards.py` (draws the deep dive card and refreshes the /deep-dives/ collage card), then `python3 _scripts/static_nav.py`, and commit the cards and pages.
+- /llms.txt is a plain-text map of the site for AI assistants (llmstxt.org). It is rebuilt daily by the days-soon GitHub Action; run python3 _scripts/build_llms.py after adding pages.
