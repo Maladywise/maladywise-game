@@ -12,12 +12,12 @@ import hashlib, html, json, os, random, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
-ROOT = "/home/claude/maladywise-game"
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SITE = "https://maladywise.com"
 PATH = "/x-ray-quiz/"
 ISO = "2026-11-08"
 REVIEWED = "8 November 2026"
-QKV = "2"  # quizkit.css with .qk-xr image styles
+QKV = "3"  # quizkit.css with .qk-xr image styles (3: new diagram colours)
 CUTOFF = "2026-11-08"  # Opacitis images used must be on or before this date
 
 COMMONS_DIR = sys.argv[sys.argv.index("--commons") + 1] if "--commons" in sys.argv else None

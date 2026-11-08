@@ -8,12 +8,12 @@ from other import ECG, TERMS
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
-ROOT = "/home/claude/maladywise-game"
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://maladywise.com"
 REVIEWED = "8 November 2026"
 ISO = "2026-11-08"
-QKV = "1"
+QKV = "3"  # 3: section/vessel/dermatome diagram colours
 
 
 def esc(s):

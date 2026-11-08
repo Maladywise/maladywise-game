@@ -1,6 +1,6 @@
 // node art.js '<json [[name,[hl...]],...]>' -> JSON array of SVG strings with "hl" class added
 const fs = require("fs");
-let src = fs.readFileSync("/home/claude/maladywise-game/anatomegaly/art.js", "utf8");
+let src = fs.readFileSync(require("path").join(__dirname, "../../anatomegaly/art.js"), "utf8");
 src = src.replace("window.LBL_CAP = CAP;", "window.LBL_CAP = CAP; window.__ART = ART;");
 const window = {};
 eval(src);
