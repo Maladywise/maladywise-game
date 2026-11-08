@@ -1,0 +1,80 @@
+name: Weekly X Short
+# Once a week: picks a PAST puzzle (Arrhythmix ECG, Glimpsis sign, Zebritis rarest answer, rotating weekly),
+# renders a 1080x1920 MP4 as a check, and adds a queue entry for the coming Thursday at 7:30am Sydney
+# (or the next free weekday that week) to _social/queue.json, with "short": {series, puzzle_date}.
+# The MP4 is NOT committed: typefully_push.py renders it again and uploads it to Typefully.
+# The rendered preview is kept as a workflow artifact for 14 days.
+on:
+  schedule:
+    - cron: "17 22 * * 3"   # Thursday about 9:17am Sydney (summer; 8:17am in winter), before the Friday batch
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Target Thursday (YYYY-MM-DD); blank = the coming Thursday"
+        required: false
+        default: ""
+      dry_run:
+        description: "Render and show the post, but don't queue it"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: typefully-queue
+  cancel-in-progress: false
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright, Chromium and ffmpeg
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Render and queue this week's Short
+        id: q
+        env:
+          TARGET_DATE: ${{ inputs.date }}
+          DRY: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          args=(queue --out "$RUNNER_TEMP/short" --github-output)
+          if [ -n "${TARGET_DATE:-}" ]; then args+=(--date "$TARGET_DATE"); fi
+          if [ "${DRY:-}" = "true" ]; then args+=(--dry-run); fi
+          python3 _scripts/shorts/shorts.py "${args[@]}"
+      - name: Keep the preview video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-short
+          path: ${{ runner.temp }}/short/*.mp4
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Save the queue entry and log
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- _social/queue.json _social/shorts-log.json; then
+            echo "Nothing queued."; exit 0
+          fi
+          git config user.name "Maladywise"
+          git config user.email "maladywise@gmail.com"
+          git add _social/queue.json _social/shorts-log.json
+          git commit -m "Weekly X Short: queue video post"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Pushed on attempt $i."
+              gh workflow run typefully.yml || echo "Could not start the Typefully run; its daily schedule will send it."
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 10))
+          done
+          echo "::error::Could not push the Short's queue entry after 5 attempts."
+          exit 1
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -1,7 +1,8 @@
 name: Queue X posts in Typefully
 # Sends _social/queue.json posts to Typefully as scheduled drafts (7:30am Sydney each day),
 # as image post + link-in-first-reply threads (day cards, page og images or game cards via _scripts/day_card.py),
-# plus auto World Day posts on empty dates.
+# plus auto World Day posts on empty dates. Weekly Short entries ("short" in the queue) are rendered to MP4
+# here (Playwright + ffmpeg, never committed) and uploaded as post 1's video.
 on:
   schedule:
     - cron: "23 18 * * *"   # about 5:23am Sydney (summer), daily
@@ -22,9 +23,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install Playwright + Chromium (World Day and game cards)
+      - name: Install Playwright + Chromium (World Day and game cards, weekly Short video)
         continue-on-error: true   # if this fails, posts still go out with page/share images instead of drawn cards
         run: pip install playwright && python -m playwright install --with-deps chromium
+      - name: Install ffmpeg (weekly Short video)
+        continue-on-error: true   # if this fails, a Short is held back and retried next run (or posted with a picture near its slot)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Send due posts to Typefully
         id: send
         env:

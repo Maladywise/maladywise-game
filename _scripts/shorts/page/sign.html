@@ -1,0 +1,70 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>Spot the sign</title><link rel="stylesheet" href="common.css">
+<style>
+#imgw{position:absolute;left:90px;top:348px;width:900px;height:600px;border-radius:28px;overflow:hidden;background:#222;box-shadow:0 14px 34px rgba(43,35,64,.22)}
+#imgw img{position:absolute;left:0;top:0;width:900px;height:600px;object-fit:cover;transform-origin:50% 50%}
+#rg{right:22px;top:22px}
+#tag{position:absolute;left:24px;right:24px;bottom:24px;height:118px;background:rgba(43,35,64,.88);color:#fff;border-radius:20px;padding:0 26px;font-weight:600;line-height:1.25;text-align:center}
+#credit{position:absolute;left:90px;right:90px;top:960px;height:40px;color:var(--muted);text-align:center}
+#credit .in{font-size:24px}
+#ctx{position:absolute;left:90px;right:90px;top:1030px;height:300px;padding:28px 34px}
+#ctx .fit{height:100%}
+#ctx .in{line-height:1.36;font-weight:500}
+#q{position:absolute;left:90px;right:90px;top:1022px;height:74px;font-family:Lora;font-weight:700;color:var(--brand);text-align:center}
+#opts{position:absolute;left:90px;right:90px;top:1110px}
+#why{position:absolute;left:90px;right:90px;top:1110px;height:340px;padding:30px 36px}
+#why .fit{height:100%}
+#why .in{line-height:1.38;font-weight:500}
+</style></head><body><div id="stage">
+<div class="layer" id="main">
+  <div id="head"><div class="kicker">Glimpsis</div><div class="h1">Spot the sign</div></div>
+  <div id="imgw" class="chk"><img id="im" alt=""><div class="ring" id="rg"></div><div id="tag" class="fit" data-fit="36,24"><span class="in" id="tagt"></span></div></div>
+  <div id="credit" class="fit one chk" data-fit="24,15"><span class="in" id="credt"></span></div>
+  <div class="card chk" id="ctx"><div class="fit" data-fit="44,28"><span class="in" id="ctxt"></span></div></div>
+  <div id="q" class="fit one chk" data-fit="52,34"><span class="in">What’s the diagnosis?</span></div>
+  <div id="opts"></div>
+  <div class="card chk" id="why"><div class="fit feat" data-fit="40,26"><div class="in"><span class="k">What gives it away</span><span id="whyt"></span></div></div></div>
+</div>
+<div class="layer" id="end"><img class="mascot" alt=""><div class="wm"></div><div class="ln"></div><div class="url"></div></div>
+<div class="layer" id="intro"><img class="mascot" alt=""><div class="wm">Malady Wise</div><div class="gm"></div></div>
+</div>
+<script src="common.js"></script>
+<script>
+var OK, NOPT, HINT, T0 = 6.0, T1 = 11.0, RV = 11.0, END = 20.0;
+window.setup = function (D) {
+  brand("Glimpsis", "glimpsis", "Spot the sign", D.end_line, "maladywise.com/glimpsis");
+  $("im").src = D.image;
+  $("credt").textContent = D.credit;
+  $("ctxt").textContent = D.context;
+  $("q").querySelector(".in").textContent = D.question || "What’s the diagnosis?";
+  HINT = !!D.hint; $("tagt").textContent = D.hint ? "Hint: " + D.hint : "";
+  $("whyt").textContent = D.why;
+  $("opts").innerHTML = optsHtml(D.options); OK = D.correct; NOPT = D.options.length;
+  $("rg").innerHTML = RING;
+  window.DUR = END + 3.2;
+  window.CHECK_TIMES = [3, 9, 12.5, 17, END + 1.5];
+  fitAll();
+};
+window.render = function (t) {
+  introAt(t);
+  appear($("head"), t, .7, .35);
+  css($("imgw"), { opacity: R(t, .75, 1.0) });
+  var s = 1 + .14 * eio(R(t, .8, 10.8)) - .1 * eio(R(t, 11.2, 12.4));
+  $("im").style.transform = "scale(" + s.toFixed(4) + ")";
+  appear($("credit"), t, 1.0, .3);
+  appear($("ctx"), t, 1.4, .35, 5.0, .3);
+  appear($("q"), t, 5.2, .3, 14.8, .3, 20);
+  var left = C(T1 - t, 0, 5);
+  pop($("rg"), t, 5.6, .3); if (t > RV + .1) $("rg").style.opacity = 1 - R(t, RV + .1, RV + .4);
+  ring($("rg"), t < T0 ? 1 : left / 5, t < T1 ? Math.ceil(t < T0 ? 5 : left) : "0");
+  if (t > T1 - 3 && t < T1) { var p = (T1 - t) % 1; $("rg").style.transform = "scale(" + (1 + .08 * Math.max(0, p - .7) / .3) + ")"; }
+  if (HINT) appear($("tag"), t, 8.0, .35, RV, .3, 30); else $("tag").style.opacity = 0;
+  for (var i = 0; i < NOPT; i++) {
+    var el = $("o" + i); appear(el, t, 5.4 + i * .15, .3, 15.0, .3, 60);
+    el.classList.toggle("ok", i === OK && t >= RV);
+    if (t >= RV && i !== OK) el.style.opacity = Math.min(+el.style.opacity, 1 - .65 * R(t, RV, RV + .3));
+    if (i === OK && t >= RV && t < 15) { var k = R(t, RV, RV + .4); el.style.transform = "scale(" + (1 + .06 * Math.sin(k * Math.PI)) + ")"; }
+  }
+  appear($("why"), t, 15.2, .35);
+  endAt(t, END);
+};
+</script></body></html>

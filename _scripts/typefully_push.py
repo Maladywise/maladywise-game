@@ -18,15 +18,21 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["pos
   straight away (auto posts are added to the queue too), so a later failure never causes a re-send.
 - Every post is length-checked (X counts each link as 23) before anything is sent. A post over 280
   characters is skipped with an error, the rest still go, and the script exits with status 1.
+- Weekly Short: an entry with "short": {"series": "ecg|sign|rarest", "puzzle_date": "YYYY-MM-DD"} gets a
+  1080x1920 MP4 rendered on the fly by _scripts/shorts/shorts.py (needs Playwright + Chromium + ffmpeg)
+  and uploaded as post 1's media instead of an image. MP4s are never committed. If the render or upload
+  fails, the entry is held back (exit status 1) and retried on the next run; within 36 hours of its slot
+  it goes out with the game's picture instead, so the day is never left empty.
 - Needs env TYPEFULLY_API_KEY (a GitHub Actions secret; never stored in the repo).
 
     python3 _scripts/typefully_push.py --dry-run [--days 14] [--today YYYY-MM-DD] [--out DIR]
---dry-run (or DRY_RUN=1) prints what would be sent and saves the cards as PNGs in a temp folder.
+--dry-run (or DRY_RUN=1) prints what would be sent and saves the cards (PNG) and Shorts (MP4) in a temp folder.
 """
 import argparse, datetime, html, http.client, json, os, re, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "shorts"))
 import day_card  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -68,22 +74,34 @@ def put_file(url, data):
         conn.close()
 
 
-def upload_card(sid, png_path, day):
-    """Create an upload, PUT the image, wait until Typefully has processed it. Returns the media_id."""
-    ext = os.path.splitext(png_path)[1].lower() or ".png"
-    res = call("POST", "/social-sets/%s/media/upload" % sid, {"file_name": "maladywise-%s%s" % (day, ext)})
+VIDEO_EXT = (".mp4", ".mov")
+POLL_SECONDS = 3
+
+
+def upload_card(sid, path, day, alt=None):
+    """Create an upload, PUT the file (image or MP4), wait until Typefully has processed it. Returns the media_id.
+    Typefully detects the type from file_name's extension (.png/.jpg/.mp4/.mov ...); the PUT carries no headers.
+    Then GET /media/{id} is polled until its status is "ready" (videos take longer: up to 10 minutes)."""
+    ext = os.path.splitext(path)[1].lower() or ".png"
+    video = ext in VIDEO_EXT
+    body = {"file_name": "maladywise-%s%s%s" % ("short-" if video else "", day, ext)}
+    if alt:
+        body["alt_text"] = alt[:1000]
+    res = call("POST", "/social-sets/%s/media/upload" % sid, body)
     mid, url = res.get("media_id"), res.get("upload_url")
     if not mid or not url:
         raise RuntimeError("no media_id/upload_url in %r" % res)
-    put_file(url, open(png_path, "rb").read())
-    for _ in range(30):
-        st = call("GET", "/social-sets/%s/media/%s" % (sid, mid)).get("status", "ready")
+    with open(path, "rb") as f:
+        put_file(url, f.read())
+    tries = 200 if video else 30
+    for _ in range(tries):
+        st = (call("GET", "/social-sets/%s/media/%s" % (sid, mid)).get("status") or "ready").lower()
         if st == "ready":
             return mid
-        if st == "failed":
-            raise RuntimeError("Typefully could not process the image")
-        time.sleep(2)
-    raise RuntimeError("image still processing after 60 s")
+        if st in ("failed", "error"):
+            raise RuntimeError("Typefully could not process the %s" % ("video" if video else "image"))
+        time.sleep(POLL_SECONDS)
+    raise RuntimeError("%s still processing after %d s" % ("video" if video else "image", tries * POLL_SECONDS))
 
 
 def social_set_id():
@@ -430,6 +448,7 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
 
     browser = pw = None
+    held = []   # Shorts that failed to render/upload; retried next run
 
     def card_for(day):
         nonlocal browser, pw
@@ -439,6 +458,19 @@ def main():
             browser = pw.chromium.launch()
         path = os.path.join(out_dir, "day-card-%s.png" % day)
         return path if day_card.render(day, path, browser) else None
+
+    def short_for(p):
+        """Render this entry's weekly Short to an MP4 in out_dir. Returns (path, alt text)."""
+        nonlocal browser, pw
+        import shorts
+        if browser is None:
+            from playwright.sync_api import sync_playwright
+            pw = sync_playwright().start()
+            browser = pw.chromium.launch()
+        s = p["short"]
+        path = os.path.join(out_dir, "short-%s-%s.mp4" % (p["date"], shorts.GAME[s["series"]]))
+        shorts.render_short(s["series"], s["puzzle_date"], path, browser)
+        return path, shorts.alt_text(s["series"], shorts.puzzle(s["series"], s["puzzle_date"]))
 
     def image_for(p, url):
         """Local image path for post 1: day card, page og image, generated game card, or the share card."""
@@ -485,25 +517,43 @@ def main():
             post0 = {"text": xs[0]}
             body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in xs[1:]]}},
                     "publish_at": when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
-            png = image_for(p, url)
+            alt = None
+            if p.get("short"):
+                try:
+                    png, alt = short_for(p)
+                except Exception as e:  # noqa: BLE001
+                    if when - now > datetime.timedelta(hours=36):
+                        print("ERROR: Short render failed for %s (%s); holding it back to retry next run." % (p["date"], e), file=sys.stderr)
+                        held.append(p["date"])
+                        continue
+                    print("Short render failed for %s (%s); slot is close, posting with the game picture instead." % (p["date"], e))
+                    png = image_for(p, url)
+            else:
+                png = image_for(p, url)
             if dry:
                 print("DRY", p["date"], body["publish_at"], "AUTO" if p.get("auto") else "queue",
-                      len(xs), "post(s) + image", os.path.relpath(png, ROOT) if png.startswith(ROOT) else png)
+                      len(xs), "post(s) + %s" % ("video" if (png or "").endswith(VIDEO_EXT) else "image"),
+                      os.path.relpath(png, ROOT) if png.startswith(ROOT) else png)
                 for i, t in enumerate(xs, 1):
                     print("   [%d] " % i + t.replace("\n", "\n       "))
                 continue
             if png:
                 try:
-                    post0["media_ids"] = [upload_card(sid, png, p["date"])]
+                    post0["media_ids"] = [upload_card(sid, png, p["date"], alt)]
                 except (Exception, SystemExit) as e:
-                    print("Image upload failed for %s (%s); posting without it." % (p["date"], e))
+                    if (png or "").endswith(VIDEO_EXT) and when - now > datetime.timedelta(hours=36):
+                        print("ERROR: video upload failed for %s (%s); holding it back to retry next run." % (p["date"], e), file=sys.stderr)
+                        held.append(p["date"])
+                        continue
+                    print("%s upload failed for %s (%s); posting without it." % ("Video" if (png or "").endswith(VIDEO_EXT) else "Image", p["date"], e))
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             p["typefully_id"] = str(res.get("id", "ok"))
             p["queued_at"] = datetime.datetime.now(SYD).isoformat(timespec="minutes")
             if p.pop("auto", None):
                 posts.append(p)
             save()  # write back now, so a crash on a later post can't cause a duplicate
-            print("Queued", p["date"], "->", p["typefully_id"], "with image" if "media_ids" in post0 else "WITHOUT image")
+            print("Queued", p["date"], "->", p["typefully_id"],
+                  ("with video" if (png or "").endswith(VIDEO_EXT) else "with image") if "media_ids" in post0 else "WITHOUT media")
         if dry:  # preview every card in the window, attached or not
             d = today
             while d <= last:
@@ -516,8 +566,8 @@ def main():
             browser.close()
             pw.stop()
     if dry:
-        print("Cards saved in", out_dir)
-    return 1 if bad else 0
+        print("Cards and videos saved in", out_dir)
+    return 1 if bad or held else 0
 
 
 if __name__ == "__main__":
