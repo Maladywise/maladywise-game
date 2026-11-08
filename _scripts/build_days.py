@@ -19,6 +19,7 @@ import os
 import re
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import static_nav  # plain footer links
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 try:
@@ -259,8 +260,9 @@ def main():
 
     page = fix_html(page)
     old = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""
-    if old != page:
+    if static_nav.strip(old) != page:
         open(OUT, "w", encoding="utf-8").write(page)
+        static_nav.postbuild()
         sm = open(SITEMAP, encoding="utf-8").read()
         sm2 = re.sub(r"(<loc>https://maladywise\.com/days/</loc><lastmod>)[0-9-]+(</lastmod>)",
                      r"\g<1>%s\g<2>" % TODAY.isoformat(), sm)

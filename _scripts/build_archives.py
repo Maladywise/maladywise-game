@@ -27,6 +27,7 @@ import sys
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import static_nav  # plain footer links (run again at the end of main)
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -572,7 +573,7 @@ def main():
         page = fix_html(render_page(g, past, today, versions))
         out = os.path.join(out_dir, "index.html")
         old = open(out, encoding="utf-8").read() if os.path.exists(out) else None
-        if old != page:
+        if old is None or static_nav.strip(old) != page:
             with open(out, "w", encoding="utf-8") as f:
                 f.write(page)
         urls.append("%s/%s/archive/" % (SITE, g["folder"]))
@@ -583,6 +584,8 @@ def main():
     subprocess.run([sys.executable, os.path.join(ROOT, "_scripts", "add_breadcrumbs.py")], check=False)
     print("Sydney today: " + today)
     print("\n".join(report))
+    # footer links and share-card tags for new or rebuilt pages (STYLE.md)
+    static_nav.postbuild()
 
 
 if __name__ == "__main__":

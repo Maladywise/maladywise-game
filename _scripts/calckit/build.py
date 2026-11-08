@@ -188,3 +188,8 @@ if __name__ == "__main__":
         a, w = compare_page(c)
         print("   answer words", a, "total words", w)
     compare_hub(COMPARES)
+    # footer links and share-card tags for new or rebuilt pages (STYLE.md)
+    sys.path.insert(0, os.path.join(ROOT, "_scripts"))
+    import static_nav
+    static_nav.postbuild()
+

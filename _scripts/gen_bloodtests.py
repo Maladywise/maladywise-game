@@ -195,3 +195,5 @@ if __name__ == "__main__":
     done = [build_hub()] + [build_page(P) for P in PAGES]
     qr(done)
     print("\n".join(done))
+    import static_nav  # footer links and share-card tags (STYLE.md)
+    static_nav.postbuild()

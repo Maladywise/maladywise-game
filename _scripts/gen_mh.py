@@ -331,3 +331,5 @@ s += f'''<p class="meta">Self-checks</p>
 '''
 s += FOOT.format(rev=REV, scripts="")
 write(path, s)
+import static_nav  # footer links and share-card tags for new or rebuilt pages (STYLE.md)
+static_nav.postbuild()

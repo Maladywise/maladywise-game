@@ -395,3 +395,5 @@ for q, ans in Q:
     for k in ORDER:
         mx[k] += max([sc.get(k, 0) for _, sc in ans])
 print("max points", mx)
+import static_nav  # footer links and share-card tags for new or rebuilt pages (STYLE.md)
+static_nav.postbuild()

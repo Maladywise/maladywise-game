@@ -276,3 +276,5 @@ write("/medical-terminology-quiz/", page("/medical-terminology-quiz/", TERMS["ti
                                          [quiz_ld("Medical terminology quiz", SITE + "/medical-terminology-quiz/", allq, "Medical terminology"), faq_ld(TERMS["faqs"])]))
 print("versions", V)
 print("counts", {q["slug"]: len(q["qs"]) for q in QUIZZES}, "ecg", len(ECG["qs"]), "terms", len(allq))
+import static_nav  # footer links and share-card tags for new or rebuilt pages (STYLE.md)
+static_nav.postbuild()
