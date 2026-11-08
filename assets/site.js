@@ -15,7 +15,7 @@ window.MW_HOME = {
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
       { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" },
-      { t: "MBS billing guide", href: "/mbs-billing/", d: "Items, fees, rules and worked examples" }
+      { t: "GP MBS billing guide", href: "/mbs-billing/", d: "Items, fees, rules and worked examples" }
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
