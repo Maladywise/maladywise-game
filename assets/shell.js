@@ -140,6 +140,16 @@
       };
     }
   } catch (e) {}
+  // ---------- "Share this page" card (written by _scripts/share_block.py): native share, else copy the link ----------
+  document.addEventListener("click", function (ev) {
+    var b = ev.target && ev.target.closest && ev.target.closest("[data-mw-share]");
+    if (!b) return;
+    var c = document.querySelector('link[rel="canonical"]'), url = (c && c.href) || location.href.split("#")[0];
+    if (navigator.share) { navigator.share({ title: document.title, url: url }).catch(function () {}); return; }
+    var done = function () { b.textContent = "Link copied"; setTimeout(function () { b.textContent = "Share link"; }, 2000); };
+    try { navigator.clipboard.writeText(url + (url.indexOf("?") < 0 ? "?s=share" : "")).then(done, function () { prompt("Copy this link", url); }); }
+    catch (e) { prompt("Copy this link", url); }
+  });
   // ---------- live counts (players online + games played today) ----------
   // Anonymous: a random ID that lives only in this tab's memory. No cookies, no storage, no personal data.
   var LIVE = { url: "https://mw-presence.onrender.com", id: Math.random().toString(36).slice(2, 12), last: null, MIN_ON: 5, MIN_TODAY: 10, MIN_SOLVED: 10 };
@@ -1033,12 +1043,15 @@ function arcadeCard() { // one card, two arcade games, so the grid stays 4 acros
 
     var allg = document.getElementById("mw-allgames"); // static, crawlable list of every game (Medical only)
     if (allg) allg.parentNode.removeChild(allg);
+    var shc = main.querySelector(".mw-sharecard"); // static "Share this page" card (share_block.py): keep it above the footer
+    if (shc) shc.parentNode.removeChild(shc);
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + todays3(t3) + progress() +
         sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
         '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="medical-games/">All games</a> · <a href="about/">About</a> · <a href="disclaimer/">Disclaimer</a> · <a href="privacy/">Privacy</a> · <a href="contact/">Contact</a></footer>';
       if (allg && !NORMIE) main.insertBefore(allg, main.querySelector("footer.site"));
+      if (shc) main.insertBefore(shc, main.querySelector("footer.site"));
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();

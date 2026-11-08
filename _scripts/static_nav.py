@@ -327,13 +327,18 @@ def strip(src):
 
 
 def postbuild():
-    """For page generators: refresh footer links, then point pages at their share cards (no drawing)."""
+    """For page generators: refresh footer links, then point pages at their share cards (no drawing),
+    and copy each card into the page's JSON-LD and "Share this page" block."""
     run()
     try:
         import og_cards
         og_cards.update_meta()
+        import key_cards
+        key_cards.update_meta()
+        import share_block   # share card -> JSON-LD image + visible "Share this page" block
+        share_block.run()
     except Exception as e:  # never fail a build over share-card tags
-        print("og_cards skipped: %s" % e)
+        print("share cards skipped: %s" % e)
 
 
 def report():
