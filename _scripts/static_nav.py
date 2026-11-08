@@ -61,6 +61,7 @@ LABELS = {
     "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",
     "/specialists/": "Specialists", "/compare/": "Comparisons", "/tools/": "Tools", "/deep-dives/": "Deep dives",
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
+    "/glp-1/": "GLP-1 medicines guide",
 }
 # Pages for doctors, curious minds and practice quizzes: they link to each other, round-robin.
 EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
@@ -68,14 +69,15 @@ EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-speci
 # Nested sections that borrow links from a partner section when they are small.
 PARTNERS = {
     "medicines": ["compare", "tools"], "compare": ["medicines", "fact"], "blood-tests": ["fact", "tools"],
+    "glp-1": ["medicines", "compare"],
     "exercises": ["fact"], "deep-dives": ["extra", "tools"], "tools": ["extra", "blood-tests"],
     "specialists": [], "anatomy-quiz": ["game", "extra"], "mental-health-check": ["fact"],
     "zebra-mail": ["game", "extra"], "game": ["extra"], "extra": ["game"], "fact": ["blood-tests"],
     "hub": ["game"], "sub": ["exercises"],
 }
-MEDICAL_SECTIONS = {"fact", "medicines", "compare", "blood-tests", "exercises", "tools", "deep-dives", "specialists",
+MEDICAL_SECTIONS = {"fact", "medicines", "compare", "blood-tests", "glp-1", "exercises", "tools", "deep-dives", "specialists",
                     "mental-health-check", "sub"}
-HUBS = {"/conditions/", "/medicines/", "/blood-tests/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
+HUBS = {"/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
 WANT = 8   # related links per page (6-10)
@@ -200,7 +202,7 @@ def section_of(u, facts, games, idx):
         if facts.get(u, {}).get("k") == "tool":
             return "tools"
         return "extra"
-    if parts[0] in ("medicines", "compare", "blood-tests", "exercises", "tools", "deep-dives", "specialists",
+    if parts[0] in ("medicines", "compare", "blood-tests", "glp-1", "exercises", "tools", "deep-dives", "specialists",
                     "anatomy-quiz", "mental-health-check", "zebra-mail"):
         return parts[0]
     if "/" + parts[0] + "/" in games or "/" + parts[0] + "/archive/" in idx:

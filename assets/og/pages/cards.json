@@ -755,6 +755,69 @@
 "label": "Condition",
 "title": "Glandular Fever"
 },
+"glp-1-compounded-counterfeit": {
+"url": "/glp-1/compounded-counterfeit/",
+"key": "2d0ef4a4774b",
+"v": "527d8964",
+"label": "GLP-1 medicines",
+"title": "Compounded and Fake GLP-1 Products"
+},
+"glp-1-faq": {
+"url": "/glp-1/faq/",
+"key": "26c0154e1288",
+"v": "602749a2",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Questions Answered"
+},
+"glp-1-muscle-loss": {
+"url": "/glp-1/muscle-loss/",
+"key": "5e8ede6c6f06",
+"v": "dc4706fd",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Medicines and Muscle Loss"
+},
+"glp-1-pbs-cost-australia": {
+"url": "/glp-1/pbs-cost-australia/",
+"key": "a0c5614cefd2",
+"v": "512feda3",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Medicines"
+},
+"glp-1-pregnancy-contraception": {
+"url": "/glp-1/pregnancy-contraception/",
+"key": "884190b81dae",
+"v": "e35b6f8c",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Medicines, Pregnancy and Contraception"
+},
+"glp-1-serious-risks": {
+"url": "/glp-1/serious-risks/",
+"key": "5a6922157214",
+"v": "3f779e8c",
+"label": "GLP-1 medicines",
+"title": "Rare GLP-1 Risks"
+},
+"glp-1-side-effects": {
+"url": "/glp-1/side-effects/",
+"key": "806c66b49a34",
+"v": "9bee8a7f",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Side Effects"
+},
+"glp-1-stopping": {
+"url": "/glp-1/stopping/",
+"key": "c0315aa2434e",
+"v": "3616164a",
+"label": "GLP-1 medicines",
+"title": "Stopping GLP-1 Medicines"
+},
+"glp-1-surgery-anaesthesia": {
+"url": "/glp-1/surgery-anaesthesia/",
+"key": "7169feead055",
+"v": "1edf5355",
+"label": "GLP-1 medicines",
+"title": "GLP-1 Medicines Before Surgery"
+},
 "gout": {
 "url": "/gout/",
 "key": "77f422514385",

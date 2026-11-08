@@ -57,6 +57,7 @@ SECTIONS = {
     "fact": ("Condition", "days/stethoscope.svg"),
     "medicines": ("Medicine", "days/syringe.svg"),
     "blood-tests": ("Blood test", "mascots/panelysis.svg"),
+    "glp-1": ("GLP-1 medicines", "days/syringe.svg"),
     "exercises": ("Exercise handout", "days/tess-bone.svg"),
     "sub": ("Exercise handout", "days/tess-bone.svg"),
     "deep-dives": ("Deep dive for clinicians", "days/zebra-rare.svg"),
