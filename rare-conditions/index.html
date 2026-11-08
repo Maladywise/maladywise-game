@@ -43,7 +43,7 @@
 .rc-list li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 2px;border-bottom:1px solid var(--line)}
 .rc-list a{color:var(--ink);text-decoration:none;font-weight:500;min-width:0}
 .rc-list a:hover{color:var(--brand);text-decoration:underline}
-.rc-r{font:600 13px var(--body);color:var(--brand);text-align:right;white-space:nowrap}
+.rc-o{font-size:12px;color:var(--muted);margin-left:4px}.rc-r{font:600 13px var(--body);color:var(--brand);text-align:right;white-space:nowrap}
 .rc-m{grid-column:1/-1;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
 .rc-t{background:#F1ECF8;border-radius:6px;padding:0 7px}
 :root[data-theme="dark"] .rc-t{background:#2A2240}
@@ -65,7 +65,7 @@
 <body>
 <main class="wrap doc">
 <h1>Zebra Atlas</h1>
-<p class="lede">4,800 rare conditions and how rare each one is. Tap a name for its Orphanet entry.</p>
+<p class="lede">4,800 rare conditions and how rare each one is. Tap a name for its Orphanet entry, or our fact sheet where we have one.</p>
 <div class="rc-bar">
 <input id="rc-q" type="search" placeholder="Search, e.g. Fabry, Wilson, Marfan" autocomplete="off" aria-label="Search rare conditions">
 <select id="rc-cat" aria-label="Body system"><option value="">All body systems</option></select>
@@ -78,7 +78,7 @@
 <button id="rc-more" class="btn" type="button" hidden>Show 100 more</button>
 <p class="note"><b>How to read it.</b> Most figures are prevalence: how many people have it at any one time. Some are new cases a year, rates at birth, or a count of reported cases where no rate exists. A region is shown when the only figure comes from one country or group, which can make a condition look commoner than it is worldwide. Many figures are bands (for example 1–9 in 100,000), shown as ranges.</p>
 <p class="note"><b>Source.</b> Orphanet, <a href="https://github.com/Orphanet/Orphadata_aggregated" target="_blank" rel="noopener">Orphadata rare disease epidemiology and classifications</a> (data dated 23 Jun 2026), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Conditions with no usable figure are left out.</p>
-<p class="note"><b>Malady Wise fact sheets.</b> Plain-English guides to some rarer conditions: <a href="/ehlers-danlos-syndrome/">Ehlers-Danlos syndromes</a>, <a href="/sarcoidosis/">sarcoidosis</a>, <a href="/eosinophilic-oesophagitis/">eosinophilic oesophagitis</a>, <a href="/myasthenia-gravis/">myasthenia gravis</a>, <a href="/addisons-disease/">Addison’s disease</a>, <a href="/porphyria/">porphyria</a>, <a href="/lupus/">lupus</a>, <a href="/scleroderma/">scleroderma</a>, <a href="/raynauds/">Raynaud’s</a>, <a href="/deep-dives/behcets/">Behçet’s disease</a>. Rare disease days are in our <a href="/days/">health days calendar</a>.</p>
+<p class="note"><b>Malady Wise fact sheets.</b> Plain-English guides to some rarer conditions: <a href="/ehlers-danlos-syndrome/">Ehlers-Danlos syndromes</a>, <a href="/sarcoidosis/">sarcoidosis</a>, <a href="/eosinophilic-oesophagitis/">eosinophilic oesophagitis</a>, <a href="/myasthenia-gravis/">myasthenia gravis</a>, <a href="/addisons-disease/">Addison’s disease</a>, <a href="/porphyria/">porphyria</a>, <a href="/lupus/">lupus</a>, <a href="/scleroderma/">scleroderma</a>, <a href="/raynauds/">Raynaud’s</a>, <a href="/deep-dives/behcets/">Behçet’s disease</a>, <a href="/smith-magenis-syndrome/">Smith-Magenis syndrome</a>, <a href="/cteph/">CTEPH</a>. Rare disease days are in our <a href="/days/">health days calendar</a>.</p>
 <div id="nl-slot"></div>
 <!-- share-card -->
 <aside class="mw-sharecard" aria-label="Share this page"><p class="mw-sc-h">Share this page</p><img src="/assets/share.png?v=27f4d4d6" width="1200" height="630" loading="lazy" decoding="async" alt="Share card: 18 free daily medical puzzles – Diagnose, read the ECG, name the scan, crack the cryptic"><p class="mw-sc-row"><button type="button" class="mw-sc-btn" data-mw-share>Share link</button></p></aside>
@@ -93,7 +93,7 @@
 (function(){
 var T={prev:"Prevalence",inc:"New cases a year",birth:"At birth",life:"Lifetime",cases:"Case reports only"};
 var B=[["all","All",function(){return true}],["c","1 in 1,000 or commoner",function(r){return r[5]>=100}],["a","1 in 1,000 to 10,000",function(r){return r[5]>=10&&r[5]<100}],["b","1 in 10,000 to 100,000",function(r){return r[5]>=1&&r[5]<10}],["d","1 in 100,000 to a million",function(r){return r[5]>=0.1&&r[5]<1}],["e","Rarer than 1 in a million",function(r){return r[5]<0.1&&r[2]!=="cases"}],["f","Case reports only",function(r){return r[2]==="cases"}]];
-var R=[],cat="",band="all",shown=100,sort="rare",letter="",el=function(i){return document.getElementById(i)};
+var R=[],M={},cat="",band="all",shown=100,sort="rare",letter="",el=function(i){return document.getElementById(i)};
 function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function render(){
@@ -108,10 +108,10 @@ function render(){
  el("rc-bands").innerHTML=B.map(function(b){var n=R.filter(function(r){return b[2](r)&&m(r)}).length;return '<button type="button" class="rc-chip" data-b="'+b[0]+'" aria-pressed="'+(b[0]===band)+'">'+b[1]+'<b>'+n.toLocaleString("en-AU")+'</b></button>'}).join("");
  el("rc-count").textContent=hits.length.toLocaleString("en-AU")+" condition"+(hits.length===1?"":"s")+(sort==="az"?(letter?" starting with "+letter:", A to Z"):", most common first");
  var last="";
- el("rc-list").innerHTML=hits.slice(0,shown).map(function(r){var hd="";if(sort==="az"&&L(r)!==last){last=L(r);hd='<li class="rc-h">'+last+"</li>"}return hd+(function(){var g=r[4]&&r[4]!=="Worldwide"?"<span>"+esc(r[4])+"</span>":"";return '<li><a href="https://www.orpha.net/en/disease/detail/'+r[1]+'" target="_blank" rel="noopener">'+esc(r[0])+'</a><span class="rc-r">'+esc(r[3])+'</span><span class="rc-m"><span class="rc-t">'+T[r[2]]+'</span><span class="rc-c">'+esc(r[6])+"</span>"+g+"</span></li>"})()}).join("");
+ el("rc-list").innerHTML=hits.slice(0,shown).map(function(r){var hd="";if(sort==="az"&&L(r)!==last){last=L(r);hd='<li class="rc-h">'+last+"</li>"}return hd+(function(){var g=r[4]&&r[4]!=="Worldwide"?"<span>"+esc(r[4])+"</span>":"";var mw=M[r[1]];return '<li>'+(mw?'<a href="'+mw+'">'+esc(r[0])+'</a> <a class="rc-o" href="https://www.orpha.net/en/disease/detail/'+r[1]+'" target="_blank" rel="noopener">Orphanet</a>':'<a href="https://www.orpha.net/en/disease/detail/'+r[1]+'" target="_blank" rel="noopener">'+esc(r[0])+'</a>')+'<span class="rc-r">'+esc(r[3])+'</span><span class="rc-m"><span class="rc-t">'+T[r[2]]+'</span><span class="rc-c">'+esc(r[6])+"</span>"+g+"</span></li>"})()}).join("");
  el("rc-more").hidden=hits.length<=shown;
 }
-fetch("/data/rare-conditions.json").then(function(r){return r.json()}).then(function(d){R=d.rows;var cc={};R.forEach(function(r){r.push(norm(r[0]));cc[r[6]]=(cc[r[6]]||0)+1});el("rc-cat").insertAdjacentHTML("beforeend",Object.keys(cc).sort(function(a,b){return a==="Other"?1:b==="Other"?-1:a<b?-1:1}).map(function(k){return '<option value="'+esc(k)+'">'+esc(k)+" ("+cc[k].toLocaleString("en-AU")+")</option>"}).join(""));render()}).catch(function(){el("rc-count").textContent="Couldn’t load the list. Try refreshing."});
+fetch("/data/rare-conditions.json").then(function(r){return r.json()}).then(function(d){R=d.rows;M=d.mw||{};var cc={};R.forEach(function(r){r.push(norm(r[0]));cc[r[6]]=(cc[r[6]]||0)+1});el("rc-cat").insertAdjacentHTML("beforeend",Object.keys(cc).sort(function(a,b){return a==="Other"?1:b==="Other"?-1:a<b?-1:1}).map(function(k){return '<option value="'+esc(k)+'">'+esc(k)+" ("+cc[k].toLocaleString("en-AU")+")</option>"}).join(""));render()}).catch(function(){el("rc-count").textContent="Couldn’t load the list. Try refreshing."});
 el("rc-cat").addEventListener("change",function(){cat=this.value;letter="";shown=sort==="az"?400:100;render()});
 el("rc-q").addEventListener("input",function(){shown=100;render()});
 el("rc-bands").addEventListener("click",function(e){var b=e.target.closest(".rc-chip");if(!b)return;band=b.dataset.b;shown=100;render()});
