@@ -126,7 +126,7 @@
   "number": 38,
   "difficulty": "Medium",
   "patient": "Teresa, 63, female",
-  "story": "Living well for two years with a left ventricular assist device (LVAD), a pump keeping her heart failure in check. Now tired, breathless, with cola-coloured urine. The pump's power reading has been creeping up. She takes warfarin as prescribed.",
+  "story": "Living well for two years with a left ventricular assist device (LVAD), a pump keeping her heart failure in check. Now tired, breathless, with cola-coloured urine. Her device clinic called after her latest pump log download. She takes warfarin as prescribed.",
   "theme": "First artificial heart",
   "panels": [
    {
@@ -235,7 +235,7 @@
     ]
    ],
    [
-    "The platelets and INR are fine. What's different about her circulation, and why is the pump working harder?",
+    "The platelets and INR are fine. What's different about her circulation, and why might her device clinic be interested?",
     [
      "Platelets",
      "INR"
@@ -247,7 +247,7 @@
    "Haptoglobin",
    "Direct antiglobulin test"
   ],
-  "why": "Sky-high LDH, absent haptoglobin, raised reticulocytes, a negative antiglobulin test and blood in the urine with no red cells (free haemoglobin) add up to intravascular haemolysis that isn't immune. Add a rising pump power reading and the likely culprit is a clot inside the LVAD, shredding red cells as they pass. TTP would drop the platelets. Bleeding wouldn't send LDH this high.",
+  "why": "Sky-high LDH, absent haptoglobin, raised reticulocytes, a negative antiglobulin test and blood in the urine with no red cells (free haemoglobin) add up to intravascular haemolysis that isn't immune. In someone with an LVAD the likely culprit is a clot inside the pump, shredding red cells as they pass; the pump log typically shows its power use creeping up. TTP would drop the platelets. Bleeding wouldn't send LDH this high.",
   "pearl": "LDH is one of the most watched blood tests in LVAD clinics, because a sudden rise can be the first sign of pump thrombosis. Barney Clark's 1982 artificial heart was tethered to a large air compressor. Today's LVADs run off batteries worn on the body."
  },
  {
@@ -1253,7 +1253,7 @@
   "number": 47,
   "difficulty": "Hard",
   "patient": "Liam, 26, male",
-  "story": "Trekking in Nepal’s Khumbu region, now at a clinic at about 3,400 m. Taking acetazolamide 250 mg twice daily for five days to prevent altitude sickness. Tingling fingers and lips, tired, and says fizzy drinks taste flat.",
+  "story": "Trekking in Nepal’s Khumbu region, now at a clinic at about 3,400 m. Five days ago he started a twice-daily tablet his travel clinic gave him to help him acclimatise, and he can't remember its name. Tingling fingers and lips, tired, and says fizzy drinks taste flat.",
   "theme": "International Mountain Day",
   "panels": [
    {
@@ -1348,7 +1348,7 @@
   "wrong": [
    "Diabetic ketoacidosis",
    "Lactic acidosis from hypoxia",
-   "Acute kidney injury",
+   "Salicylate (aspirin) toxicity",
    "Diarrhoea-related acidosis",
    "Primary respiratory alkalosis"
   ],
@@ -1361,7 +1361,7 @@
     ]
    ],
    [
-    "Ketones and lactate are fine, and the kidneys work. Look at his medicine list.",
+    "Ketones and lactate are fine, and the kidneys work. What did the travel clinic give him?",
     [
      "Ketones (blood)",
      "Lactate",
@@ -2396,7 +2396,7 @@
   "number": 56,
   "difficulty": "Genius",
   "patient": "Sanda, 23, female",
-  "story": "Three months after giving birth, in a camp for displaced people where rations are mostly polished white rice. Breathless, with swollen legs and tingling feet. Her heart is racing but her hands are warm, and her pulse is bounding. No fever. A chest X-ray shows a large heart and wet lungs.",
+  "story": "Three months after giving birth, in a camp for displaced people where the rations have barely changed in months. Breathless, with swollen legs and tingling feet. Her heart is racing but her hands are warm, and her pulse is bounding. No fever. A chest X-ray shows a large heart and wet lungs.",
   "theme": "International Human Solidarity Day",
   "panels": [
    {
@@ -3097,7 +3097,7 @@
     ]
    }
   ],
-  "answer": "Haemophilia B (Christmas disease)",
+  "answer": "Haemophilia B (factor IX deficiency)",
   "wrong": [
    "Haemophilia A",
    "Von Willebrand disease",
@@ -3114,7 +3114,7 @@
     ]
    ],
    [
-    "Which factor is missing? It has a festive name.",
+    "Which factor is low? Check each one against its range.",
     [
      "Factor IX"
     ]

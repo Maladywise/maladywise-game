@@ -368,7 +368,7 @@
   "date": "2026-11-11",
   "number": 18,
   "difficulty": "Medium",
-  "title": "Press and look",
+  "title": "Look at the shin",
   "context": "A woman in a community where the staple food is polished white rice, with weakness and swollen legs.",
   "question": "What's the sign?",
   "img": {
@@ -405,8 +405,8 @@
   "date": "2026-11-12",
   "number": 19,
   "difficulty": "Medium",
-  "title": "Look at the fingertips",
-  "context": "A person with a long-standing lung problem and chronic cough. Check the hand.",
+  "title": "Look at the hand",
+  "context": "A person with a long-standing lung problem and chronic cough.",
   "question": "What's the sign?",
   "img": {
    "url": "img/2026-11-12.jpg",
@@ -514,8 +514,8 @@
   "date": "2026-11-15",
   "number": 22,
   "difficulty": "Genius",
-  "title": "A pale patch",
-  "context": "A 35-year-old from a country where it's endemic, with a pale patch on the skin that feels numb to touch.",
+  "title": "On the forearm",
+  "context": "A 35-year-old who grew up in a rural farming village, with a pale patch on the forearm that has been there for months. No itch.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-11-15.jpg",
@@ -841,7 +841,7 @@
   "date": "2026-11-24",
   "number": 31,
   "difficulty": "Easy",
-  "title": "Patches of white",
+  "title": "Look at the trunk",
   "context": "A 19-year-old with painless, flat pale patches on the trunk that burn easily in the sun. No itch, no scale.",
   "question": "What's the diagnosis?",
   "img": {

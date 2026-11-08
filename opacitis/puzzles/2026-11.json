@@ -638,7 +638,7 @@
   "date": "2026-11-18",
   "number": 25,
   "difficulty": "Medium",
-  "title": "A veil over one side",
+  "title": "Coughing up blood",
   "context": "A 67-year-old long-term smoker has had weeks of cough and breathlessness, and has now coughed up a little blood.",
   "question": "What's the diagnosis?",
   "img": {
@@ -827,7 +827,7 @@
   "date": "2026-11-23",
   "number": 30,
   "difficulty": "Easy",
-  "title": "Lucid, then drowsy",
+  "title": "Hit on the head",
   "context": "A 24-year-old was hit on the side of the head, seemed fine for an hour, and is now increasingly drowsy.",
   "question": "What's the diagnosis?",
   "img": {
@@ -1092,7 +1092,7 @@
   "date": "2026-11-30",
   "number": 37,
   "difficulty": "Easy",
-  "title": "Heart sounds on the right",
+  "title": "A pre-employment check",
   "context": "A well 28-year-old has a pre-employment chest X-ray. The doctor hears the heart sounds best on the right.",
   "question": "What's the diagnosis?",
   "img": {

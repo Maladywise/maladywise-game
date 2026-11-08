@@ -260,7 +260,7 @@
   "number": 32,
   "difficulty": "Medium",
   "title": "Head start",
-  "context": "A shark with a head shaped like a very wide T.",
+  "context": "A shark with very widely spaced eyes and an unusual head.",
   "question": "What is it?",
   "img": {
    "source": "Wikimedia Commons",
@@ -483,7 +483,7 @@
   "date": "2026-12-16",
   "number": 39,
   "difficulty": "Medium",
-  "title": "Full moon",
+  "title": "Open ocean",
   "context": "A big, round, plate-shaped fish from the open ocean.",
   "question": "What is it?",
   "img": {
@@ -804,7 +804,7 @@
   "number": 49,
   "difficulty": "Hard",
   "title": "Glow in the dark",
-  "context": "A small, thin deep-sea fish shaped like a chopping tool.",
+  "context": "A small, flat-sided deep-sea fish with a deep belly and big upturned eyes.",
   "question": "What is it?",
   "img": {
    "source": "Wikimedia Commons",
@@ -964,7 +964,7 @@
   "number": 54,
   "difficulty": "Medium",
   "title": "Razor edge",
-  "context": "A thin, deep fish shaped like a half moon, with a sharp belly.",
+  "context": "A thin, very deep-bodied fish with a sharp belly edge.",
   "question": "What is it?",
   "img": {
    "source": "Wikimedia Commons",

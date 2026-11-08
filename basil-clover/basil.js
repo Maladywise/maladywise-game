@@ -1615,8 +1615,8 @@
     var e1 = $("bk-endless"), ev = $("bk-endlessv"), s1 = $("bk-start"), sv = $("bk-start2"), c2 = $("bk-sc2");
     if (e1) { e1.disabled = !k1; e1.classList.toggle("locked", !k1); e1.innerHTML = k1 ? "Endless" : "\ud83d\udd12 Endless"; e1.title = k1 ? "The original never-ending bench" : "Beat round 10 to unlock"; }
     if (ev) { ev.disabled = !k2; ev.classList.toggle("locked", !k2); ev.innerHTML = k2 ? "Endless" : "\ud83d\udd12 Endless"; ev.title = k2 ? "The never-ending waiting room" : "Beat the Vet’s round 10 to unlock"; }
-    if (s1) { s1.textContent = k1 ? "Play" : "Let’s effing go!"; s1.classList.toggle("gh", k1); }
-    if (sv) { sv.disabled = !kv; sv.textContent = kv ? "Let’s effing go!" : "\ud83d\udd12 Beat 3AM in the Kitchen"; }
+    if (s1) { s1.textContent = k1 ? "Play" : "Let’s go, go, go!"; s1.classList.toggle("gh", k1); }
+    if (sv) { sv.disabled = !kv; sv.textContent = kv ? "Let’s go, go, go!" : "\ud83d\udd12 Beat 3AM in the Kitchen"; }
     if (c2) c2.classList.toggle("locked", !kv);
     if ($("bk-new2")) $("bk-new2").hidden = !kv || !!seen;
     if ($("bk-st1")) $("bk-st1").innerHTML = k1 ? "\ud83d\udc51 Conquered" + (b1 ? " \u00b7 best <b>" + fmt(b1) + "</b>" : "") : b1 ? "Best <b>" + fmt(b1) + "</b>" : "10 rounds \u00b7 the VAC-3000 is waiting";
