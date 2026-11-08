@@ -7,8 +7,10 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["pos
 - Empty dates with a strong day (priority 1-3) get an automatic single World Day post with its card,
   but only from AUTO_FROM, only once that week's Friday batch has been written (so the weekly mix
   always wins), and only if Typefully has nothing already scheduled that day (hand-made posts).
-- After success the script writes back "typefully_id" and "queued_at" (auto posts are added to the
-  queue too), so nothing is sent twice.
+- After each successful post the script writes back "typefully_id" and "queued_at" to the queue file
+  straight away (auto posts are added to the queue too), so a later failure never causes a re-send.
+- Every post is length-checked (X counts each link as 23) before anything is sent. A post over 280
+  characters is skipped with an error, the rest still go, and the script exits with status 1.
 - Needs env TYPEFULLY_API_KEY (a GitHub Actions secret; never stored in the repo).
 
     python3 _scripts/typefully_push.py --dry-run [--days 14] [--today YYYY-MM-DD] [--out DIR]
@@ -152,6 +154,22 @@ def x_len(text):
     return len(re.sub(r"https?://\S+", "x" * 23, text))
 
 
+def invalid_posts(todo):
+    """[(entry, reason)] for queue entries that must not be sent: empty or over 280 X characters."""
+    out = []
+    for p in todo:
+        th = p.get("thread")
+        if not isinstance(th, list) or not th or not all(isinstance(t, str) and t.strip() for t in th):
+            out.append((p, "empty or malformed thread"))
+            continue
+        for i, t in enumerate(th, 1):
+            n = x_len(t)
+            if n > 280:
+                out.append((p, "post %d is %d characters (max 280, links count as 23): %r" % (i, n, t[:60])))
+                break
+    return out
+
+
 def auto_post(day):
     """Text for an automatic World Day post on ISO date `day`, or None if the day doesn't qualify."""
     import re
@@ -225,9 +243,13 @@ def main():
                     autos.append(e)
         d += datetime.timedelta(days=1)
     todo = sorted(todo + autos, key=lambda p: p["date"])
+    bad = invalid_posts(todo)
+    for p, why in bad:
+        print("ERROR: not sending %s: %s" % (p["date"], why), file=sys.stderr)
+    todo = [p for p in todo if p not in [b[0] for b in bad]]
     if not todo:
         print("Nothing to queue.")
-        return 0
+        return 1 if bad else 0
     if not KEY and not dry:
         raise SystemExit("TYPEFULLY_API_KEY is not set.")
     sid = None if dry else social_set_id()
@@ -246,7 +268,14 @@ def main():
         path = os.path.join(out_dir, "day-card-%s.png" % day)
         return path if day_card.render(day, path, browser) else None
 
-    changed = False
+    def save():
+        posts.sort(key=lambda p: p["date"])
+        tmp = QUEUE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(q, f, ensure_ascii=False, indent=1)
+            f.write("\n")
+        os.replace(tmp, QUEUE)
+
     try:
         for p in todo:
             d = datetime.date.fromisoformat(p["date"])
@@ -255,9 +284,6 @@ def main():
                 print("Skip (slot already passed):", p["date"]); continue
             if p.get("auto") and (busy is None or p["date"] in busy):
                 print("Skip auto post (Typefully already has a post that day):", p["date"]); continue
-            for t in p["thread"]:
-                if x_len(t) > 280:
-                    raise SystemExit("Post over 280 characters on %s: %r" % (p["date"], t[:60]))
             post0 = {"text": p["thread"][0]}
             body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in p["thread"][1:]]}},
                     "publish_at": when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
@@ -284,7 +310,7 @@ def main():
             p["queued_at"] = datetime.datetime.now(SYD).isoformat(timespec="minutes")
             if p.pop("auto", None):
                 posts.append(p)
-            changed = True
+            save()  # write back now, so a crash on a later post can't cause a duplicate
             print("Queued", p["date"], "->", p["typefully_id"], "with card" if "media_ids" in post0 else "")
         if dry:  # preview every card in the window, attached or not
             d = today
@@ -299,12 +325,7 @@ def main():
             pw.stop()
     if dry:
         print("Cards saved in", out_dir)
-    if changed:
-        posts.sort(key=lambda p: p["date"])
-        with open(QUEUE, "w", encoding="utf-8") as f:
-            json.dump(q, f, ensure_ascii=False, indent=1)
-            f.write("\n")
-    return 0
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":

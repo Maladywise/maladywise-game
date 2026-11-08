@@ -25,16 +25,29 @@ jobs:
         continue-on-error: true   # if this fails, posts still go out, just without cards
         run: pip install playwright && python -m playwright install --with-deps chromium
       - name: Send due posts to Typefully
+        id: send
         env:
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
         run: python3 _scripts/typefully_push.py
       - name: Save what was queued
+        # always() so ids written before a failure are still saved (stops duplicate posts next run)
+        if: always()
         run: |
-          if ! git diff --quiet -- _social/queue.json; then
-            git config user.name "Maladywise"
-            git config user.email "maladywise@gmail.com"
-            git add _social/queue.json
-            git commit -m "Typefully: mark queued posts"
-            git pull --rebase --autostash || true
-            git push
+          set -euo pipefail
+          if git diff --quiet -- _social/queue.json; then
+            echo "Queue unchanged."; exit 0
           fi
+          git config user.name "Maladywise"
+          git config user.email "maladywise@gmail.com"
+          git add _social/queue.json
+          git commit -m "Typefully: mark queued posts"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Pushed on attempt $i."; exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Push attempt $i failed; retrying in $((i * 10)) s."
+            sleep $((i * 10))
+          done
+          echo "::error::Could not push _social/queue.json after 5 attempts. Posts were sent to Typefully but their ids are not saved; check the queue before the next run."
+          exit 1
