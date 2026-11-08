@@ -46,7 +46,7 @@ sources=[
 ("https://pubmed.ncbi.nlm.nih.gov/29672840/", "Cullis et al, British Journal of Haematology 2018: BSH guideline on investigating a raised serum ferritin"),
 ("https://www.nnuh.nhs.uk/publication/download/investigations-of-a-raised-ferritin-result-guidance-8568-v7", "Norfolk and Norwich University Hospitals NHS: Investigating a raised ferritin result (GP guidance)"),
 ],
-related=[HUB_R, ("/iron/", "Fact sheet", "Iron Deficiency"), ("/fatty-liver/", "Fact sheet", "Fatty Liver (MASLD)"), ("/blood-tests/high-alt/", "Blood test", "High ALT (SGPT)")],
+related=[HUB_R, ("/iron/", "Fact sheet", "Iron Deficiency"), ("/fatty-liver/", "Fact sheet", "Fatty Liver (MASLD)"), ("/blood-tests/high-alt/", "Blood test", "High ALT (SGPT)"), ("/blood-tests/low-ferritin/", "Blood test", "Low Ferritin")],
 ),
 # ---------------------------------------------------------------- platelets
 dict(
@@ -87,7 +87,7 @@ sources=[
 ("https://www.aafp.org/pubs/afp/issues/2022/0900/thrombocytopenia.html", "Gauer and Whitaker, American Family Physician 2022: Thrombocytopenia, evaluation and management (severity, red flags, pseudothrombocytopenia)"),
 ("https://www.hematology.org/-/media/Hematology/Files/Education/Clinicians/Guidelines-Quality/Documents/ASH-ITP-Pocket-Guide-FOR-WEB-1204.pdf", "American Society of Hematology 2019: ITP guideline pocket guide (admission under 20 × 10⁹/L, treatment under 30)"),
 ],
-related=[HUB_R, ("/blood-tests/low-neutrophils/", "Blood test", "Low Neutrophils"), ("/heavy-periods/", "Fact sheet", "Heavy Periods"), ("/glandular-fever/", "Fact sheet", "Glandular Fever")],
+related=[HUB_R, ("/blood-tests/low-neutrophils/", "Blood test", "Low Neutrophils"), ("/heavy-periods/", "Fact sheet", "Heavy Periods"), ("/glandular-fever/", "Fact sheet", "Glandular Fever"), ("/blood-tests/high-platelets/", "Blood test", "High Platelets")],
 ),
 # ---------------------------------------------------------------- CRP
 dict(
@@ -173,7 +173,7 @@ sources=[
 ("https://pubmed.ncbi.nlm.nih.gov/29122851/", "Newsome et al, Gut 2018: British Society of Gastroenterology guideline on abnormal liver blood tests"),
 ("https://doi.org/10.1038/ajg.2016.517", "Kwo, Cohen and Lim, American Journal of Gastroenterology 2017: ACG guideline on abnormal liver chemistries"),
 ],
-related=[HUB_R, ("/fatty-liver/", "Fact sheet", "Fatty Liver (MASLD)"), ("/blood-tests/high-ferritin/", "Blood test", "High Ferritin"), ("/coeliac/", "Fact sheet", "Coeliac Disease")],
+related=[HUB_R, ("/fatty-liver/", "Fact sheet", "Fatty Liver (MASLD)"), ("/blood-tests/high-ferritin/", "Blood test", "High Ferritin"), ("/coeliac/", "Fact sheet", "Coeliac Disease"), ("/blood-tests/high-bilirubin/", "Blood test", "High Bilirubin")],
 ),
 # ---------------------------------------------------------------- eGFR
 dict(
@@ -217,7 +217,7 @@ sources=[
 ("https://kdigo.org/guidelines/ckd-evaluation-and-management/", "KDIGO 2024 clinical practice guideline for the evaluation and management of CKD"),
 ("https://kidney.org.au/your-kidneys/what-is-kidney-disease/stages-of-kidney-disease/", "Kidney Health Australia: Stages of kidney disease"),
 ],
-related=[HUB_R, ("/tools/egfr-calculator/", "Tool", "eGFR Calculator"), ("/blood-pressure/", "Fact sheet", "High Blood Pressure"), ("/type-2-diabetes/", "Fact sheet", "Type 2 Diabetes"), ("/medicines/sglt2-inhibitors/", "Medicine", "SGLT2 inhibitors")],
+related=[HUB_R, ("/tools/egfr-calculator/", "Tool", "eGFR Calculator"), ("/blood-pressure/", "Fact sheet", "High Blood Pressure"), ("/type-2-diabetes/", "Fact sheet", "Type 2 Diabetes"), ("/medicines/sglt2-inhibitors/", "Medicine", "SGLT2 inhibitors"), ("/blood-tests/high-potassium/", "Blood test", "High Potassium")],
 ),
 # ---------------------------------------------------------------- TSH
 dict(
@@ -425,12 +425,318 @@ sources=[
 ],
 related=[HUB_R, ("/b12/", "Fact sheet", "Vitamin B12 Deficiency"), ("/medicines/metformin/", "Medicine", "Metformin"), ("/medicines/ppis/", "Medicine", "Proton pump inhibitors (PPIs)")],
 ),
+# ---------------------------------------------------------------- low ferritin
+dict(
+slug="low-ferritin", crumb="Low ferritin", test="Serum ferritin", group="Iron", cls="l",
+title="Low Ferritin: What It Means for Your Iron Stores",
+h1="Low Ferritin",
+desc="Low ferritin explained: the cut-offs for low iron stores, why it matters even with normal haemoglobin, common and serious causes, next tests and red flags.",
+card="The clearest sign of low iron stores. Common causes, why the cause matters, and when gut checks are needed.",
+lede="Ferritin is the protein that stores iron. A low ferritin is the most reliable sign that your iron stores are running out, often before you become anaemic. The fix is usually simple, but finding out why you’re low matters just as much. Treatment is covered in our <a href=\"/iron/\">iron deficiency fact sheet</a>.",
+qa="A ferritin under 30 µg/L means low iron stores in adults, and under 15 µg/L means they’re almost empty. Heavy periods, pregnancy, low-iron diets and blood donation are the usual causes. Men and women after menopause with iron deficiency usually need bowel and stomach checks, because hidden gut bleeding is possible.",
+body="""
+<h2>What the test measures</h2>
+<p>Ferritin stores iron inside your cells, and the small amount in your blood mirrors those stores. It falls first when you run short of iron, often months before your haemoglobin drops and you become anaemic. It’s usually ordered as part of <b>iron studies</b>, with serum iron, transferrin and transferrin saturation.</p>
+<p>The catch: ferritin is also an <b>acute-phase protein</b>, so it rises with inflammation, infection and liver disease. That can push a low ferritin up into the normal range and hide iron deficiency.</p>
+<h2>Typical adult cut-offs</h2>
+<ul><li><b>Under 15 µg/L:</b> iron stores are essentially empty. This is very specific for iron deficiency.</li><li><b>Under 30 µg/L:</b> low iron stores. This is the cut-off most widely used in Australia and the UK, even if your haemoglobin is normal.</li><li><b>30–100 µg/L with inflammation</b> (for example inflammatory bowel disease, kidney disease or a recent infection): iron deficiency is still possible. A transferrin saturation under 20% supports it.</li><li><b>Over 150 µg/L:</b> iron deficiency is unlikely, even with inflammation.</li><li>µg/L is the same number as ng/mL, the unit used in the US. Some labs print a lower limit of 15–20 µg/L, so a result in the 20s may not be flagged even though it’s low.</li><li><b>Anaemia</b> (WHO): haemoglobin under 130 g/L (13.0 g/dL) in men and under 120 g/L (12.0 g/dL) in women who aren’t pregnant.</li></ul>
+<h2>What a low result usually means</h2>
+<p><b>Common causes:</b></p>
+<ul><li><b>Heavy periods</b>, the commonest cause in women before menopause. See <a href="/heavy-periods/">heavy periods</a>.</li><li><b>Pregnancy and breastfeeding</b>, when iron needs rise sharply.</li><li><b>A diet low in iron</b>: vegetarian or vegan eating without planning, restrictive diets, or small appetites in older people.</li><li><b>Regular blood donation.</b></li><li><b>Growth spurts</b> in teenagers, and endurance sport.</li><li><b>Medicines</b>: aspirin and anti-inflammatories (such as ibuprofen) can cause slow bleeding from the stomach, and long-term acid-reducing medicines reduce iron absorption.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Bowel or stomach cancer</b>, which can bleed slowly without any visible blood.</li><li><b>Coeliac disease</b>, found in about 3–5% of people with unexplained iron-deficiency anaemia. See <a href="/coeliac/">coeliac disease</a>.</li><li><b>Stomach ulcers, inflammatory bowel disease</b> and <i>Helicobacter pylori</i> infection.</li><li><b>Weight-loss (bariatric) surgery</b> and other stomach or bowel surgery.</li><li><b>Blood loss in the urine</b>, which can come from the kidneys or bladder.</li></ul>
+<h2>Symptoms</h2>
+<ul><li>Often none, especially early on.</li><li>Tiredness, poor concentration, headaches, and breathlessness or a racing heart on exertion.</li><li>Restless legs, hair shedding, brittle or spoon-shaped nails, and a sore tongue.</li><li>Craving ice or non-food items (pica).</li><li>Pale skin once anaemia develops.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>A full blood count</b> to check for anaemia, and CRP if inflammation might be hiding a low ferritin.</li><li><b>Look for the cause</b>: a history of periods, diet, medicines, blood donation and gut symptoms, a coeliac blood test for most people, and a urine test for blood.</li><li><b>Men of any age and women after menopause</b> with iron-deficiency anaemia are usually offered a gastroscopy and colonoscopy, as the British Society of Gastroenterology recommends. Younger women with heavy periods usually don’t need them unless there are red flags or a strong family history of bowel cancer.</li><li><b>Treatment</b>: iron tablets, often every second day, for about 3 months after haemoglobin returns to normal to refill stores. An <a href="/iron-infusion/">iron infusion</a> helps when tablets fail or aren’t tolerated.</li><li><b>Repeat the blood test</b> after 2–4 weeks if you’re anaemic, to check haemoglobin is rising, and again once the course is finished.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for chest pain, fainting, severe breathlessness, vomiting blood, or black or bloody bowel motions. <b>See your GP within a week or two</b> if you’re a man or past menopause with iron deficiency, or have unexplained weight loss, a change in bowel habit, ongoing tummy pain or trouble swallowing: the cause needs checking. <b>See your GP soon</b> if you’re pregnant with low iron, or still low after 3 months of tablets.",
+faqs=[
+("What ferritin level is too low?", "In adults, a ferritin under 30 µg/L (30 ng/mL) means low iron stores, and under 15 µg/L means they’re almost empty. If you have inflammation, iron deficiency is still possible with a ferritin up to about 100 µg/L, and your doctor will look at transferrin saturation too."),
+("Can you have low ferritin without anaemia?", "Yes. Ferritin falls before haemoglobin does, so many people have low iron stores with a normal blood count. This iron deficiency without anaemia can still cause tiredness and restless legs, and it’s worth treating and finding the cause."),
+("Is a ferritin of 20 low?", "Yes. A ferritin of 20 µg/L is below the 30 µg/L cut-off widely used for low iron stores, even though some labs don’t flag it. Your GP will usually suggest iron and look for the cause."),
+("Can my ferritin be normal if I’m iron deficient?", "Yes. Inflammation, infection, liver disease and kidney disease all raise ferritin, which can hide low iron. In those situations, a transferrin saturation under 20% or a ferritin under about 100 µg/L can still point to iron deficiency."),
+("How long does it take to raise ferritin?", "Haemoglobin usually starts rising within 2–4 weeks of starting iron tablets. Refilling iron stores takes longer: guidelines suggest continuing for about 3 months after haemoglobin is back to normal, then rechecking."),
+("Why do I need a colonoscopy for low iron?", "In men and in women after menopause, iron deficiency is often caused by slow bleeding from the gut that you can’t see, and a small number have bowel or stomach cancer. A gastroscopy and colonoscopy find the cause so it can be treated."),
+("Should I take iron supplements without a blood test?", "It’s better to test first. Iron can mask a slowly bleeding problem, isn’t needed if your stores are full, and can build up in people with haemochromatosis. Keep iron tablets away from children, as an overdose can be fatal."),
+],
+sources=[
+(PTEX + "Ferritin", "Pathology Tests Explained (RCPA): Ferritin"),
+(PTEX + "Iron+studies", "Pathology Tests Explained (RCPA): Iron studies"),
+("https://doi.org/10.1136/gutjnl-2021-325210", "Snook et al, Gut 2021: British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults (ferritin cut-offs, coeliac, who needs endoscopy)"),
+("https://www.mja.com.au/journal/2010/193/9/diagnosis-and-management-iron-deficiency-anaemia-clinical-update", "Pasricha et al, Medical Journal of Australia 2010: Diagnosis and management of iron deficiency anaemia, a clinical update"),
+],
+related=[HUB_R, ("/iron/", "Fact sheet", "Iron Deficiency"), ("/heavy-periods/", "Fact sheet", "Heavy Periods"), ("/coeliac/", "Fact sheet", "Coeliac Disease"), ("/blood-tests/high-ferritin/", "Blood test", "High Ferritin"), ("/tools/iron-infusion/", "Tool", "Iron Infusion Dose Calculator")],
+),
+# ---------------------------------------------------------------- high platelets
+dict(
+slug="high-platelets", crumb="High platelets", test="Platelet count", group="Blood count", cls="n",
+title="High Platelets (Thrombocytosis): Causes and Next Steps",
+h1="High Platelets (Thrombocytosis)",
+desc="High platelets explained: why most high counts are a reaction to infection, inflammation or low iron, when to suspect a bone marrow cause, and red flags.",
+card="Usually a reaction to infection, inflammation or low iron. When it’s the bone marrow, and when to worry.",
+lede="Platelets are tiny cell fragments that help blood clot. A high count is usually the bone marrow responding to something else going on in the body, such as an infection, inflammation, surgery or low iron. Less often, the marrow itself is overactive.",
+qa="Platelets above 400–450 × 10⁹/L are high. About 9 in 10 high counts are reactive: a response to infection, inflammation, surgery, bleeding or iron deficiency, and they settle when the cause does. A count that stays high without a reason needs checking for a bone marrow condition such as essential thrombocythaemia.",
+body="""
+<h2>What the test measures</h2>
+<p>The platelet count is part of a full blood count (FBC). Platelets are made in the bone marrow and live about a week. The body makes more when it’s inflamed, injured or short of iron, so a high count is often a sign of something else rather than a problem in itself. A high count is called <b>thrombocytosis</b>.</p>
+<h2>Typical adult ranges</h2>
+<ul><li><b>Normal:</b> 150–400 × 10⁹/L (150,000–400,000 per microlitre in US units)</li><li><b>Raised:</b> most labs flag over 400. Guidelines use <b>450 or more</b> when looking for a bone marrow cause.</li><li><b>Extreme:</b> over 1000 × 10⁹/L.</li></ul>
+<h2>What a high result usually means</h2>
+<p><b>Common causes</b> (reactive thrombocytosis, about 9 in 10 high counts):</p>
+<ul><li><b>Tissue damage</b>: recent surgery, injury, fractures or burns. This was the biggest single group in a large hospital study.</li><li><b>Infection</b>: chest, urine, skin or bone infections, and the recovery phase afterwards.</li><li><b>Inflammation</b>: rheumatoid arthritis, inflammatory bowel disease, polymyalgia rheumatica.</li><li><b>Iron deficiency</b>, often from bleeding. See <a href="/blood-tests/low-ferritin/">low ferritin</a>.</li><li><b>No spleen</b>: after the spleen is removed, platelets often stay a little high for life.</li><li><b>Rebound</b> after a low count, for example after stopping heavy drinking or after chemotherapy.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Cancer.</b> A raised count can be an early clue. In a large UK primary care study, 11.6% of men and 6.2% of women with platelets over 400 were diagnosed with cancer within a year, compared with 4.1% and 2.2% of those with normal counts. Lung and bowel cancers were among the commonest.</li><li><b>Essential thrombocythaemia (ET)</b>: the bone marrow makes too many platelets. Most people with ET have a change in the <i>JAK2</i>, <i>CALR</i> or <i>MPL</i> gene.</li><li><b>Other myeloproliferative neoplasms</b>: polycythaemia vera, myelofibrosis and chronic myeloid leukaemia (CML).</li><li>Some types of myelodysplastic syndrome.</li></ul>
+<h2>Symptoms</h2>
+<ul><li>Usually none from the count itself. Reactive thrombocytosis causes the symptoms of whatever triggered it.</li><li>In ET and related conditions: headaches, visual disturbance, burning, red and painful hands or feet (erythromelalgia), and clots such as stroke, heart attack or deep vein thrombosis.</li><li>At very high counts, easy bruising or bleeding, because the platelets don’t work properly.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>Repeat the full blood count</b>, with a blood film, a few weeks after any illness has settled. Most reactive counts come back down.</li><li><b>Look for a cause</b>: CRP or ESR, iron studies, and other tests guided by symptoms, such as a chest X-ray.</li><li><b>Haematology referral</b> for a count that stays at 450 or more for 2–3 months with no clear cause, or one with other abnormal blood counts, a clot or an enlarged spleen. Tests include <i>JAK2</i>, <i>CALR</i>, <i>MPL</i> and <i>BCR::ABL1</i> gene tests, and sometimes a bone marrow biopsy.</li><li><b>Reactive thrombocytosis</b> rarely causes clots on its own and usually needs no treatment beyond treating the cause.</li><li><b>ET</b> is treated according to clot risk: many people take low-dose aspirin, and some need medicine to lower the count.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for signs of stroke (face drooping, arm weakness, slurred speech), chest pain, a painful swollen leg with breathlessness, or heavy bleeding. <b>See your GP within days</b> if your platelets are over 1000 × 10⁹/L (1,000,000 per microlitre): at these levels, people with a bone marrow cause become more likely to bleed, and prompt haematology advice is needed. <b>See your GP soon</b> for a count that stays high, or a high count with weight loss, a persistent cough, coughing blood, ongoing tummy pain or a change in bowel habit.",
+faqs=[
+("What platelet count is too high?", "Most labs flag a count over 400 × 10⁹/L, and guidelines investigate counts that stay at 450 or more for a bone marrow cause. Counts over 1000 × 10⁹/L are called extreme and need prompt medical advice, whatever the cause."),
+("Is a platelet count of 450 bad?", "Usually not. A mildly high count is most often a reaction to a recent infection, inflammation, injury or low iron, and it settles once the cause does. Your GP will usually repeat it after a few weeks and check your iron."),
+("Can low iron cause high platelets?", "Yes. Iron deficiency is one of the commonest causes of a raised platelet count, often from heavy periods or bleeding from the gut. The count usually returns to normal once iron is replaced, but the cause of the iron loss still needs finding."),
+("Can high platelets be a sign of cancer?", "Sometimes. In a large UK study, about 1 in 9 men and 1 in 16 women with a platelet count over 400 were diagnosed with cancer within a year, so doctors take an unexplained high count seriously. Most people with high platelets don’t have cancer."),
+("What is essential thrombocythaemia?", "Essential thrombocythaemia (ET) is a slow-growing bone marrow condition where too many platelets are made. Most people have a change in the JAK2, CALR or MPL gene. Treatment aims to prevent clots, often with low-dose aspirin, and many people live a normal lifespan."),
+("Do high platelets cause blood clots?", "Reactive thrombocytosis rarely causes clots on its own. Bone marrow conditions such as essential thrombocythaemia do raise the risk of clots, and at very high counts they can cause bleeding too, which is why a persistent unexplained high count is checked."),
+],
+sources=[
+(PTEX + "Platelet+count", "Pathology Tests Explained (RCPA): Platelet count"),
+("https://pubmed.ncbi.nlm.nih.gov/20331456/", "Harrison et al, British Journal of Haematology 2010: BSH guideline for investigation and management of adults and children presenting with a thrombocytosis"),
+("https://doi.org/10.1046/j.1365-2796.1999.00452.x", "Griesshammer et al, Journal of Internal Medicine 1999: Aetiology and clinical significance of thrombocytosis in 732 patients (88% reactive)"),
+("https://bjgp.org/content/67/659/e405", "Bailey et al, British Journal of General Practice 2017: Thrombocytosis in primary care and cancer incidence"),
+("https://www.nnuh.nhs.uk/publication/download/thrombocytosis-advice-leaflet-h-a005-v9", "Norfolk and Norwich University Hospitals NHS: Thrombocytosis advice for GPs (persistent counts, referral, counts over 1000)"),
+],
+related=[HUB_R, ("/blood-tests/low-platelets/", "Blood test", "Low Platelets"), ("/blood-tests/low-ferritin/", "Blood test", "Low Ferritin"), ("/blood-tests/high-crp/", "Blood test", "High CRP"), ("/iron/", "Fact sheet", "Iron Deficiency")],
+),
+# ---------------------------------------------------------------- potassium
+dict(
+slug="high-potassium", crumb="High potassium", test="Serum potassium", group="Electrolytes", cls="m",
+title="High Potassium (Hyperkalaemia): Causes and Red Flags",
+h1="High Potassium (Hyperkalaemia)",
+desc="High potassium explained: normal range, why many high results are a damaged sample, kidney and medicine causes, and the levels that need same-day care.",
+card="Often a damaged sample. Kidney and medicine causes, and why 6.5 or more is an emergency.",
+lede="Potassium keeps your heart and muscles firing normally. A high result on a routine test is often a false alarm caused by the sample itself, but a true high level can upset the heart rhythm, so it’s always rechecked promptly.",
+qa="Potassium above about 5.2 mmol/L is high. Mild results of 5.5–5.9 are often from a haemolysed or delayed sample, or from medicines and kidney disease, and are repeated within days. 6.0–6.4 needs a repeat within a day. 6.5 or more is severe and needs hospital assessment straight away.",
+body="""
+<h2>What the test measures</h2>
+<p>Almost all your potassium sits inside your cells, and only a little is in the blood. The kidneys keep the blood level in a narrow range. Because cells are so full of potassium, anything that damages blood cells in the tube releases potassium and makes the result look falsely high.</p>
+<h2>Typical adult ranges</h2>
+<ul><li><b>Normal:</b> about 3.5–5.2 mmol/L. US labs report mEq/L, which is the same number.</li><li><b>Mild hyperkalaemia:</b> 5.5–5.9 mmol/L</li><li><b>Moderate:</b> 6.0–6.4 mmol/L</li><li><b>Severe:</b> 6.5 mmol/L or more</li><li>These severity bands come from the UK Kidney Association guideline. Use the range on your own report.</li></ul>
+<h2>False highs (pseudohyperkalaemia)</h2>
+<ul><li><b>Haemolysis</b>: red cells burst during a difficult blood draw, with a tight tourniquet left on too long, or from clenching your fist. The lab often reports the sample as haemolysed.</li><li><b>A delay</b> getting the sample to the lab, especially over 6 hours, or a sample that’s been refrigerated before it was spun.</li><li><b>Contamination</b> from another tube’s preservative (EDTA), which labs usually detect.</li><li><b>Very high platelet or white cell counts.</b> See <a href="/blood-tests/high-platelets/">high platelets</a>.</li></ul>
+<h2>What a true high result usually means</h2>
+<p><b>Common causes:</b></p>
+<ul><li><b>Kidney disease</b>, long-term or a sudden drop in kidney function, often with dehydration. See <a href="/blood-tests/low-egfr/">low eGFR</a>.</li><li><b>Medicines</b>: ACE inhibitors, sartans (ARBs), spironolactone and eplerenone, potassium supplements, trimethoprim, anti-inflammatories and heparin. See <a href="/medicines/ace-inhibitors/">ACE inhibitors</a>.</li><li><b>Salt substitutes</b>, which are often potassium chloride, especially with kidney disease.</li><li><b>Uncontrolled diabetes</b>: a lack of insulin lets potassium shift out of cells.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Addison’s disease</b> (adrenal insufficiency), often with low sodium. See <a href="/addisons-disease/">Addison’s disease</a>.</li><li><b>Muscle breakdown</b> (rhabdomyolysis) after a crush injury, a long lie on the floor, extreme exercise or some drugs.</li><li><b>Diabetic ketoacidosis</b> and other severe acid build-up in the blood.</li><li><b>Tumour lysis</b>: cancer cells breaking down quickly after treatment.</li></ul>
+<h2>Symptoms</h2>
+<ul><li>Often none, even at quite high levels, which is why the number matters.</li><li>Muscle weakness, tiredness, nausea or tingling.</li><li>Palpitations, a slow or irregular heartbeat, fainting or, at worst, cardiac arrest, sometimes without warning.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>Repeat the test</b>, with a fresh sample that reaches the lab quickly. Many mild results are normal on repeat.</li><li><b>An ECG</b> (heart tracing) if potassium is 6.0 or more, or with symptoms.</li><li><b>Kidney function, glucose and a medicine review.</b> Your doctor may pause or lower a medicine, but don’t stop prescribed medicines without advice.</li><li><b>Timing</b> (UK Kidney Association): mild results are repeated within about 3 days if unexpected; moderate results within 1 day; severe results need hospital assessment immediately.</li><li><b>In hospital</b>, treatment protects the heart and moves potassium back into cells, then removes it from the body.</li><li><b>Longer term</b>: adjusting medicines, a lower-potassium diet with a dietitian if you have kidney disease, and sometimes medicines that bind potassium in the gut.</li></ul>
+""",
+urgent="<b>Go to an emergency department now</b> (call 000 in Australia, or your local emergency number, if you’re unwell) if a doctor tells you your potassium is 6.5 mmol/L or more: UK Kidney Association guidance is immediate hospital assessment. The same applies at any raised level with palpitations, a very slow or irregular pulse, chest pain, fainting or new muscle weakness. <b>See a doctor the same day</b> for a result of 6.0–6.4 mmol/L: it should be repeated within a day, usually with an ECG. Labs phone doctors about very high results, so if you get a call, act on it.",
+faqs=[
+("What potassium level is dangerous?", "Severe hyperkalaemia is 6.5 mmol/L or more and needs hospital assessment straight away, because it can cause dangerous heart rhythms. 6.0–6.4 is moderate and should be repeated within a day. Lower levels can still matter if they’re rising fast or causing symptoms."),
+("Can a blood test show high potassium by mistake?", "Yes, often. If red blood cells break in the tube, or the sample sits too long before reaching the lab, potassium leaks out and the result looks high. Very high platelet or white cell counts can do the same. A repeat sample usually sorts it out."),
+("Is a potassium of 5.6 bad?", "It’s mildly high. It’s often a sample problem, a medicine effect or a sign of reduced kidney function, and it’s usually repeated within a few days along with kidney tests. Your GP may review medicines such as ACE inhibitors or spironolactone."),
+("Which medicines raise potassium?", "Common ones include ACE inhibitors, sartans (ARBs), spironolactone, eplerenone, potassium supplements, trimethoprim, anti-inflammatories such as ibuprofen, and heparin. The risk is higher when several are combined, or with kidney disease or dehydration."),
+("Can eating bananas cause high potassium?", "Not if your kidneys work normally: they get rid of extra potassium from food. With kidney disease or certain medicines, high-potassium foods and potassium-based salt substitutes can matter, and a dietitian can help."),
+("What are the symptoms of high potassium?", "Often there are none. Some people get muscle weakness, tiredness, nausea or palpitations. Very high levels can cause a slow or irregular heartbeat or cardiac arrest, sometimes without warning, which is why high results are acted on quickly."),
+],
+sources=[
+(PTEX + "Potassium", "Pathology Tests Explained (RCPA): Potassium"),
+("https://www.ukkidney.org/sites/default/files/documents/FINAL%20VERSION%20-%20UKKA%20CLINICAL%20PRACTICE%20GUIDELINE%20-%20MANAGEMENT%20OF%20HYPERKALAEMIA%20IN%20ADULTS%20-%20UPDATED%20JULY%202026_0.pdf", "UK Kidney Association: Clinical practice guideline, management of hyperkalaemia in adults (severity bands, repeat timing, community referral)"),
+("https://www.ruh.nhs.uk/pathology/documents/clinical_guidelines/PATH-020_Hyperkalaemia_A_Guide_for_GPs.pdf", "Royal United Hospitals Bath NHS: Hyperkalaemia, a guide for GPs (spurious results, when to admit)"),
+],
+related=[HUB_R, ("/blood-tests/low-egfr/", "Blood test", "Low eGFR"), ("/blood-tests/low-sodium/", "Blood test", "Low Sodium"), ("/medicines/ace-inhibitors/", "Medicine", "ACE inhibitors"), ("/addisons-disease/", "Fact sheet", "Addison’s Disease")],
+),
+# ---------------------------------------------------------------- sodium
+dict(
+slug="low-sodium", crumb="Low sodium", test="Serum sodium", group="Electrolytes", cls="m",
+title="Low Sodium (Hyponatraemia): Causes and When to Worry",
+h1="Low Sodium (Hyponatraemia)",
+desc="Low sodium explained: mild, moderate and profound levels, common causes like water tablets and antidepressants, symptoms, and when it’s an emergency.",
+card="Mild, moderate and profound levels, medicine causes, and the symptoms that mean hospital.",
+lede="Sodium is the main salt in your blood, and its level mostly reflects the balance of water in your body. A low result usually means too much water for the amount of sodium, not too little salt in your diet.",
+qa="Sodium below 135 mmol/L is low. Mild results of 130–134 are common, often from water tablets, antidepressants or vomiting, and many people feel fine. Under 125 is profound. Confusion, drowsiness, vomiting or a seizure with low sodium is an emergency, whatever the number.",
+body="""
+<h2>What the test measures</h2>
+<p>The sodium level is part of the electrolytes (often reported as “UEC” or “EUC” in Australia, or “U&amp;E” in the UK). Your kidneys and a hormone called antidiuretic hormone (ADH, or vasopressin) control how much water you keep. When the body holds on to too much water, sodium is diluted and the level falls. Speed matters: a fall over less than 48 hours is more dangerous than one that has crept down over weeks.</p>
+<h2>Typical adult ranges</h2>
+<ul><li><b>Normal:</b> 135–145 mmol/L. US labs report mEq/L, which is the same number.</li><li><b>Mild hyponatraemia:</b> 130–134 mmol/L</li><li><b>Moderate:</b> 125–129 mmol/L</li><li><b>Profound:</b> under 125 mmol/L</li><li>These bands come from the European hyponatraemia guideline. Symptoms don’t always match the number, so how you are matters as much as the result.</li><li><b>False lows</b> can happen with very high blood sugar, very high fats or proteins in the blood, or a sample taken from an arm with a drip running.</li></ul>
+<h2>What a low result usually means</h2>
+<p><b>Common causes:</b></p>
+<ul><li><b>Medicines</b>: thiazide-type water tablets (hydrochlorothiazide, indapamide, chlortalidone), SSRI and SNRI antidepressants such as <a href="/medicines/sertraline/">sertraline</a>, carbamazepine and oxcarbazepine. The risk is higher in older people and in the first weeks.</li><li><b>Vomiting or diarrhoea</b>, especially when lost fluid is replaced with plain water.</li><li><b>Fluid build-up conditions</b>: heart failure, liver cirrhosis and some kidney diseases.</li><li><b>Drinking a lot of water</b>: during long endurance events, or with compulsive drinking.</li><li><b>Very low food intake with lots of fluid</b>, such as a “tea and toast” diet in older people, or heavy beer drinking with little food.</li><li><b>SIAD (syndrome of inappropriate antidiuresis)</b>: the body releases too much ADH, from chest infections, lung disease, brain conditions, pain, nausea or after surgery.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Adrenal insufficiency</b> (Addison’s disease or pituitary problems), often with high potassium. See <a href="/addisons-disease/">Addison’s disease</a>.</li><li><b>A severely underactive thyroid.</b> See <a href="/underactive-thyroid/">underactive thyroid</a>.</li><li><b>Cancers that make ADH</b>, especially small-cell lung cancer.</li><li><b>MDMA (ecstasy)</b>, particularly with large amounts of water.</li></ul>
+<h2>Symptoms</h2>
+<ul><li>Often none when mild or slow.</li><li>Nausea, headache, tiredness, muscle cramps and poor concentration.</li><li>In older people: unsteadiness, falls and new confusion.</li><li>Severe: vomiting, drowsiness, seizures or reduced consciousness.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>Repeat the test</b> with glucose, kidney function and other checks, often thyroid function and a morning cortisol.</li><li><b>Paired blood and urine tests</b> (osmolality and urine sodium) help show the cause.</li><li><b>A medicine review.</b> A doctor may stop or swap a water tablet or antidepressant. Don’t stop prescribed medicines without advice.</li><li><b>Treat the cause</b>: for SIAD, this often means drinking less fluid for a while, as advised by your doctor.</li><li><b>In hospital</b>, profound or symptomatic hyponatraemia is corrected carefully: guidelines limit the rise to 10 mmol/L in the first 24 hours, because correcting too fast can damage the brain (osmotic demyelination).</li><li>Don’t take salt tablets or drink salty drinks to fix it yourself unless a doctor advises it.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for low sodium with vomiting, confusion, drowsiness or a seizure, or for headache, vomiting or confusion after an endurance event or a party where you drank a lot of water. <b>See a doctor the same day</b> if your sodium is under 125 mmol/L, or under 130 with nausea, headache, unsteadiness or new confusion. <b>See your GP within a week or so</b> for a mild result, especially after starting a new medicine.",
+faqs=[
+("What sodium level is dangerous?", "Under 125 mmol/L is called profound hyponatraemia and usually needs urgent medical review. But symptoms matter more than the number: vomiting, confusion, drowsiness or a seizure with any low sodium is an emergency, and a fast fall is more dangerous than a slow one."),
+("Is a sodium of 132 bad?", "It’s mildly low. Many people feel fine, and it’s often due to a water tablet, an antidepressant or a recent tummy bug. Your GP will usually repeat it and review your medicines. In older people even mild low sodium can add to falls and unsteadiness."),
+("Can drinking too much water lower sodium?", "Yes. Drinking far more than you need, especially during long endurance events or with MDMA, can dilute sodium dangerously. Drink to thirst during exercise rather than forcing fluids."),
+("Which medicines cause low sodium?", "The commonest are thiazide-type water tablets (such as hydrochlorothiazide and indapamide), SSRI and SNRI antidepressants, and the epilepsy medicines carbamazepine and oxcarbazepine. The risk is highest in older people and in the first weeks of treatment."),
+("Should I eat more salt if my sodium is low?", "Usually not. Low sodium is mostly about too much water rather than too little salt, and extra salt can make fluid build-up worse in heart or liver disease. Your doctor will treat the cause, which may mean drinking less, not eating more salt."),
+("What are the symptoms of low sodium in older people?", "Often subtle: unsteadiness, falls, tiredness, poor concentration and new confusion. Because these are easy to blame on age, doctors often check sodium when an older person becomes more confused or starts falling."),
+],
+sources=[
+(PTEX + "Sodium", "Pathology Tests Explained (RCPA): Sodium"),
+("https://doi.org/10.1530/EJE-13-1020", "Spasovski et al, European Journal of Endocrinology 2014: Clinical practice guideline on diagnosis and treatment of hyponatraemia (severity bands, correction limits)"),
+("https://www.endocrinology.org/media/xhrhxhxm/emergency-management-of-severe-and-moderately-severely-symptomatic-hyponatraemia-in-adult-patients-2022.pdf", "Society for Endocrinology 2022: Emergency management of severe and moderately severe symptomatic hyponatraemia in adults"),
+],
+related=[HUB_R, ("/blood-tests/high-potassium/", "Blood test", "High Potassium"), ("/addisons-disease/", "Fact sheet", "Addison’s Disease"), ("/underactive-thyroid/", "Fact sheet", "Underactive Thyroid"), ("/medicines/sertraline/", "Medicine", "Sertraline")],
+),
+# ---------------------------------------------------------------- bilirubin
+dict(
+slug="high-bilirubin", crumb="High bilirubin", test="Serum bilirubin", group="Liver", cls="l",
+title="High Bilirubin: Gilbert’s, Liver and Other Causes",
+h1="High Bilirubin",
+desc="High bilirubin explained: normal range, why a mild rise is usually Gilbert’s syndrome, liver and red-cell causes, direct vs indirect, and jaundice red flags.",
+card="Usually harmless Gilbert’s syndrome. Liver and red-cell causes, and which jaundice can’t wait.",
+lede="Bilirubin is the yellow pigment made when old red blood cells are recycled. The liver processes it and sends it out in bile. A mildly high level with otherwise normal liver tests is very often Gilbert’s syndrome, which is harmless.",
+qa="Total bilirubin above about 20 µmol/L (1.2 mg/dL) is high. A mild rise that’s mostly unconjugated, with normal liver tests and blood count, is usually Gilbert’s syndrome. Liver disease, blocked bile ducts and red cells breaking down are the other main causes. Yellow skin with dark urine, pale stools, fever or pain needs prompt review.",
+body="""
+<h2>What the test measures</h2>
+<p>Bilirubin comes in two forms, and labs can split the total:</p>
+<ul><li><b>Unconjugated (indirect) bilirubin</b> is made when red cells are broken down, before the liver has processed it. It rises in Gilbert’s syndrome and when red cells break down too fast (haemolysis).</li><li><b>Conjugated (direct) bilirubin</b> has been processed by the liver. It rises with liver disease and blocked bile ducts.</li></ul>
+<p>The split, plus the other liver tests and a full blood count, tells your doctor where to look.</p>
+<h2>Typical adult ranges</h2>
+<ul><li><b>Total bilirubin:</b> up to about 20 µmol/L (about 1.2 mg/dL in US units).</li><li><b>Conjugated bilirubin:</b> usually under about 4–7 µmol/L, depending on the lab.</li><li>To convert, multiply mg/dL by 17.1 to get µmol/L.</li><li><b>Visible jaundice</b> (yellow eyes or skin) usually appears once total bilirubin is above about 50 µmol/L (3 mg/dL).</li><li>This page is about adults. Jaundice in newborns is different and is checked by the baby’s midwife or doctor.</li></ul>
+<h2>What a high result usually means</h2>
+<p><b>Common causes:</b></p>
+<ul><li><b>Gilbert’s syndrome</b>: a harmless inherited quirk affecting about 5–8% of people. Bilirubin is mostly unconjugated and rises with fasting, illness, dehydration or stress. See <a href="/gilbert-syndrome/">Gilbert’s syndrome</a>.</li><li><b>Liver inflammation</b> from fatty liver, alcohol or viral hepatitis, usually with a raised ALT. See <a href="/blood-tests/high-alt/">high ALT</a>.</li><li><b>Gallstones</b> blocking the bile duct, often with pain under the right ribs. See <a href="/gallstones/">gallstones</a>.</li><li><b>Medicines</b>: some antibiotics (such as amoxicillin with clavulanic acid) and other medicines can slow bile flow.</li><li><b>Red cells breaking down</b> (haemolysis): inherited conditions such as hereditary spherocytosis, G6PD deficiency, sickle cell disease or thalassaemia, or immune causes.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Cancer of the pancreas, bile ducts or liver</b>, which can block bile flow. The classic sign is painless jaundice with itch, dark urine, pale stools or weight loss.</li><li><b>Autoimmune and bile duct diseases</b>: autoimmune hepatitis, primary biliary cholangitis, primary sclerosing cholangitis.</li><li><b>Acute liver failure</b>, for example after a paracetamol overdose.</li><li><b>Rare inherited conditions</b> such as Crigler–Najjar, Dubin–Johnson and Rotor syndromes.</li></ul>
+<h2>Symptoms</h2>
+<ul><li>Often none, especially in Gilbert’s syndrome.</li><li>Yellowing of the whites of the eyes, then the skin.</li><li>Dark urine, pale or clay-coloured stools and itch suggest bile isn’t draining.</li><li>Tiredness, tummy pain, fever or weight loss, depending on the cause.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>Repeat the liver tests</b> with the bilirubin split into unconjugated and conjugated, and a full blood count.</li><li><b>Mostly unconjugated, normal blood count and normal other liver tests:</b> almost always Gilbert’s syndrome. No further tests or treatment are usually needed.</li><li><b>Anaemia as well:</b> tests for haemolysis, such as a reticulocyte count, LDH, haptoglobin and a blood film.</li><li><b>Unconjugated bilirubin over about 40 µmol/L</b>: guidelines suggest considering rarer inherited causes.</li><li><b>Mostly conjugated, or other liver tests abnormal:</b> a liver screen (hepatitis, iron, autoimmune tests) and a liver ultrasound to look for a blockage.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for jaundice with confusion or drowsiness, vomiting blood or black bowel motions, or after taking too much paracetamol. <b>See a doctor the same day</b> for jaundice with fever, shivers or pain under the right ribs: this can be a blocked, infected bile duct (cholangitis). <b>See your GP within a week</b> for new yellowing with dark urine, pale stools, itch or weight loss, especially if you’re 40 or over: NICE advises urgent suspected-cancer referral for jaundice from age 40.",
+faqs=[
+("Is high bilirubin dangerous?", "Usually not when it’s mild and mostly unconjugated with otherwise normal tests, which is typical of Gilbert’s syndrome. It matters more when the conjugated part is high, other liver tests are abnormal, or you have jaundice with dark urine, pale stools, fever or pain."),
+("What bilirubin level is concerning?", "Above about 20 µmol/L (1.2 mg/dL) is outside the usual range, and jaundice usually shows above about 50 µmol/L (3 mg/dL). The type of bilirubin, your other liver tests and your symptoms matter more than the exact number."),
+("What’s the difference between direct and indirect bilirubin?", "Indirect (unconjugated) bilirubin hasn’t yet been processed by the liver, and rises in Gilbert’s syndrome and when red cells break down. Direct (conjugated) bilirubin has been processed, and rises with liver disease or blocked bile ducts."),
+("Can fasting raise bilirubin?", "Yes, in people with Gilbert’s syndrome. Skipping meals, illness, dehydration, hard exercise and stress can all push bilirubin up for a while. It settles once you eat normally and recover."),
+("Is Gilbert’s syndrome serious?", "No. It’s a common, harmless inherited condition that doesn’t damage the liver, needs no treatment and doesn’t shorten life. Guidelines advise doctors to reassure people once the diagnosis is clear."),
+("Why are my eyes yellow but I feel fine?", "Mild yellowing that comes and goes, especially when you’re unwell or haven’t eaten, is often Gilbert’s syndrome. A blood test can confirm it. New yellowing with dark urine, pale stools or itch needs checking within days."),
+],
+sources=[
+(PTEX + "Bilirubin", "Pathology Tests Explained (RCPA): Bilirubin"),
+("https://doi.org/10.1136/gutjnl-2017-314924", "Newsome et al, Gut 2018: Guidelines on the management of abnormal liver blood tests (Gilbert’s syndrome, isolated raised bilirubin)"),
+("https://www.aafp.org/pubs/afp/issues/2017/0201/p164.html", "Fargo, Grogan and Saguil, American Family Physician 2017: Evaluation of jaundice in adults"),
+("https://www.nice.org.uk/guidance/ng12", "NICE NG12: Suspected cancer, recognition and referral (jaundice from age 40)"),
+],
+related=[HUB_R, ("/gilbert-syndrome/", "Fact sheet", "Gilbert’s Syndrome"), ("/blood-tests/high-alt/", "Blood test", "High ALT (SGPT)"), ("/gallstones/", "Fact sheet", "Gallstones"), ("/fatty-liver/", "Fact sheet", "Fatty Liver (MASLD)")],
+),
+# ---------------------------------------------------------------- HbA1c
+dict(
+slug="hba1c", crumb="HbA1c", test="Haemoglobin A1c (HbA1c)", group="Diabetes", cls="s",
+title="HbA1c Test: What Your Result Means (mmol/mol and %)",
+h1="HbA1c Result",
+desc="HbA1c explained: normal, prediabetes and diabetes cut-offs in mmol/mol and %, why Australia and the US differ, what can throw the result off, and targets.",
+card="Normal, prediabetes and diabetes cut-offs in mmol/mol and %, and what can throw the number off.",
+lede="HbA1c measures how much sugar has stuck to your red blood cells, which gives an average of your blood glucose over the past 2–3 months. It’s used to diagnose type 2 diabetes and prediabetes, and to track diabetes control. You don’t need to fast for it.",
+qa="An HbA1c of 48 mmol/mol (6.5%) or more means diabetes, confirmed with a second test if you have no symptoms. 42–47 mmol/mol (6.0–6.4%) is prediabetes in Australia and the UK; US guidelines start at 39 (5.7%). Below 42 (6.0%) is normal. Anaemia, pregnancy and kidney disease can make results misleading.",
+body="""
+<h2>What the test measures</h2>
+<p>Glucose in your blood sticks to haemoglobin, the oxygen-carrying protein in red blood cells. Red cells live about 3 months, so the percentage of “glycated” haemoglobin reflects your average sugar over that time, weighted towards the last few weeks. A single high or low day barely moves it.</p>
+<h2>Units: mmol/mol and %</h2>
+<p>Australia, the UK and New Zealand report mmol/mol, and many Australian reports show % as well. The US uses %.</p>
+<ul><li>39 mmol/mol = 5.7%</li><li>42 mmol/mol = 6.0%</li><li>48 mmol/mol = 6.5%</li><li>53 mmol/mol = 7.0%</li><li>64 mmol/mol = 8.0%</li><li>75 mmol/mol = 9.0%</li></ul>
+<h2>Cut-offs in adults</h2>
+<ul><li><b>Under 42 mmol/mol (6.0%):</b> normal in Australia and the UK.</li><li><b>42–47 mmol/mol (6.0–6.4%):</b> prediabetes (the Australian Diabetes Society and RACGP), called non-diabetic hyperglycaemia in the UK.</li><li><b>39–47 mmol/mol (5.7–6.4%):</b> prediabetes in the American Diabetes Association’s criteria, so a US report may flag a result that an Australian one wouldn’t.</li><li><b>48 mmol/mol (6.5%) or more:</b> diabetes. Without symptoms, a second test on a different day is needed to confirm it.</li><li>A fasting glucose of 7.0 mmol/L (126 mg/dL) or more, or a random glucose of 11.1 mmol/L (200 mg/dL) or more with symptoms, also diagnoses diabetes.</li><li>A result under 48 doesn’t completely rule out diabetes, and a glucose tolerance test is sometimes used.</li></ul>
+<h2>If you already have diabetes</h2>
+<ul><li>A common target is <b>53 mmol/mol (7.0%) or less</b>, but targets are set individually: often higher for older or frail people, or anyone at risk of low sugars.</li><li>HbA1c is usually checked every 3–6 months, and about 3 months after a change in treatment.</li></ul>
+<h2>What a high result usually means</h2>
+<p><b>Common causes:</b> type 2 diabetes and prediabetes, linked to family history, age, weight around the waist and inactivity. Steroid tablets and some antipsychotic medicines can also raise blood sugar.</p>
+<p><b>Less common but important:</b> type 1 diabetes or slow-onset autoimmune diabetes in adults (LADA), pancreas disease (pancreatitis, cystic fibrosis, haemochromatosis) and hormone conditions such as Cushing’s syndrome.</p>
+<h2>When HbA1c can mislead</h2>
+<ul><li><b>Falsely high:</b> iron deficiency and B12 or folate deficiency (red cells live longer).</li><li><b>Falsely low:</b> recent bleeding or transfusion, red cells breaking down (haemolysis), recent iron or B12 treatment, pregnancy, advanced kidney disease, and some medicines such as dapsone.</li><li><b>Either way:</b> inherited haemoglobin variants, which some labs flag.</li><li><b>Not used</b> to diagnose diabetes in pregnancy, in children, or when sugar is rising fast, as in type 1 diabetes.</li></ul>
+<h2>Symptoms</h2>
+<p>Most people with prediabetes or early type 2 diabetes have none. High sugar can cause thirst, passing a lot of urine, tiredness, blurred vision, thrush or slow-healing infections, and weight loss.</p>
+<h2>What happens next</h2>
+<ul><li><b>Normal:</b> recheck according to your risk, usually every few years if you’re at higher risk.</li><li><b>Prediabetes:</b> weight loss of 5–10% and more activity roughly halve the risk of type 2 diabetes. Recheck HbA1c yearly. See <a href="/prediabetes/">prediabetes</a>.</li><li><b>48 mmol/mol (6.5%) or more:</b> a confirming test, then checks of kidneys, eyes, feet, blood pressure and cholesterol. See <a href="/type-2-diabetes/">type 2 diabetes</a>.</li><li><b>Very high results, or weight loss in a young or slim person:</b> tests for type 1 diabetes, including ketones.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for high sugar with vomiting, tummy pain, fast deep breathing, drowsiness or confusion: these can be signs of diabetic ketoacidosis. <b>See a doctor the same day</b> for thirst, passing lots of urine and weight loss you can’t explain, especially if you’re young or slim, or a glucose of 11.1 mmol/L (200 mg/dL) or more with symptoms: this can be type 1 diabetes, which needs prompt insulin. <b>See your GP within a week or two</b> for a new HbA1c of 48 mmol/mol (6.5%) or more without symptoms.",
+faqs=[
+("What is a normal HbA1c?", "In Australia and the UK, under 42 mmol/mol (6.0%) is normal for adults without diabetes. US guidelines use a lower cut-off of under 39 mmol/mol (5.7%). If you have diabetes, your target is set with your doctor, often 53 mmol/mol (7.0%) or less."),
+("Is an HbA1c of 6.0% prediabetes?", "In Australia and the UK, yes: 6.0–6.4% (42–47 mmol/mol) is the prediabetes range. In the US it starts lower, at 5.7% (39 mmol/mol). Either way, it’s a signal to act, and lifestyle changes work well."),
+("How do I convert HbA1c % to mmol/mol?", "Subtract 2.15 from the percentage, then multiply by 10.929. So 6.5% is about 48 mmol/mol and 7.0% is about 53 mmol/mol. Many Australian reports show both."),
+("Do I need to fast for an HbA1c test?", "No. HbA1c reflects your average sugar over the past 2–3 months, so a recent meal doesn’t change it. A fasting glucose test, often done at the same time, does need fasting."),
+("Can prediabetes be reversed?", "Often, yes. Losing 5–10% of your body weight and being more active roughly halves the chance of developing type 2 diabetes, and many people’s HbA1c falls back into the normal range."),
+("Can anaemia affect HbA1c?", "Yes. Iron and B12 deficiency can make HbA1c read falsely high, while bleeding, transfusion, haemolysis and recent iron treatment can make it read falsely low. If your HbA1c doesn’t match your glucose results, your doctor may use glucose tests instead."),
+("How often should HbA1c be checked?", "With diabetes, usually every 3–6 months, and about 3 months after a treatment change. With prediabetes, once a year. If you’re at higher risk but your result is normal, your GP will advise when to recheck."),
+],
+sources=[
+(PTEX + "HbA1c", "Pathology Tests Explained (RCPA): HbA1c"),
+("https://www.racgp.org.au/getattachment/7a2da393-b76f-405a-a2fe-0c9c0c0d5ac8/20635-DBHB-clinical-summary-web-alt-V9.pdf.aspx", "RACGP and Diabetes Australia 2020: Management of type 2 diabetes, clinical summary (diagnostic cut-offs, repeat test, general target)"),
+("https://diabetessociety.com.au/downloads/covid-19-articles/20200615%20ADS_Summary_Prediabetes_Position_Statement.pdf", "Australian Diabetes Society 2020: Prediabetes position statement summary (HbA1c 6.0–6.4%, yearly testing)"),
+("https://doi.org/10.2337/dc25-S002", "American Diabetes Association, Diabetes Care 2025: Standards of Care, diagnosis and classification of diabetes (A1C 5.7–6.4% prediabetes)"),
+],
+related=[HUB_R, ("/type-2-diabetes/", "Fact sheet", "Type 2 Diabetes"), ("/prediabetes/", "Fact sheet", "Prediabetes"), ("/medicines/metformin/", "Medicine", "Metformin"), ("/blood-tests/low-ferritin/", "Blood test", "Low Ferritin")],
+),
+# ---------------------------------------------------------------- cholesterol
+dict(
+slug="high-cholesterol", crumb="High cholesterol", test="Lipid profile (cholesterol and triglycerides)", group="Heart", cls="n",
+title="High Cholesterol Result: LDL, HDL and Triglycerides",
+h1="High Cholesterol Result",
+desc="Cholesterol results explained: total, LDL, HDL, non-HDL and triglyceride flags in mmol/L and mg/dL, why heart risk matters more, and familial hypercholesterolaemia signs.",
+card="LDL, HDL, non-HDL and triglycerides, why your heart risk score matters more, and FH red flags.",
+lede="This page is about reading the numbers on a lipid profile. For food, statins and the treatment ladder, see our <a href=\"/cholesterol/\">high cholesterol fact sheet</a>.",
+qa="Australian labs flag total cholesterol over 5.5 mmol/L, LDL over 3.0, non-HDL over 4.0, triglycerides over 2.0 and HDL under 1.0 (men) or 1.2 (women). Flags aren’t targets: your 5-year heart attack and stroke risk mostly decides treatment. LDL over 5.0 mmol/L in an adult raises the possibility of familial hypercholesterolaemia.",
+body="""
+<h2>What the test measures</h2>
+<ul><li><b>LDL cholesterol</b> (“bad”): the main driver of fatty plaque in arteries. It’s usually calculated rather than measured, so it’s less accurate when triglycerides are high.</li><li><b>HDL cholesterol</b> (“good”): carries cholesterol away from arteries.</li><li><b>Triglycerides</b>: fats that rise after meals, with alcohol, extra weight and diabetes.</li><li><b>Non-HDL cholesterol</b>: total minus HDL, covering all the artery-clogging particles. It works on non-fasting samples.</li><li><b>Total cholesterol</b>, and sometimes a total-to-HDL ratio.</li></ul>
+<p>Fasting usually isn’t needed. Your doctor may ask for a fasting sample if triglycerides were high.</p>
+<h2>Australian lab flags</h2>
+<p>Australian labs share common flag levels (AACB 2018). They prompt a look at your overall heart risk; they aren’t normal ranges or personal targets.</p>
+<ul><li><b>Total cholesterol:</b> over 5.5 mmol/L (213 mg/dL)</li><li><b>LDL:</b> over 3.0 mmol/L (116 mg/dL)</li><li><b>HDL:</b> under 1.0 mmol/L (39 mg/dL) in men, under 1.2 mmol/L (46 mg/dL) in women</li><li><b>Non-HDL:</b> over 4.0 mmol/L (155 mg/dL)</li><li><b>Triglycerides:</b> over 2.0 mmol/L (177 mg/dL)</li><li>To convert cholesterol, multiply mmol/L by 38.67 to get mg/dL. For triglycerides, multiply by 88.57.</li><li>People with heart disease, diabetes or high risk are usually aimed at much lower LDL levels, set with their doctor.</li></ul>
+<h2>Your heart risk matters more</h2>
+<p>Australian guidelines combine cholesterol with age, sex, blood pressure, smoking, diabetes and other factors in the <a href="https://www.cvdcheck.org.au/" rel="noopener">Aus CVD Risk Calculator</a> to estimate your chance of a heart attack or stroke in the next 5 years: <b>low</b> under 5%, <b>intermediate</b> 5% to under 10%, <b>high</b> 10% or more. It’s recommended for people aged 45–79, from 35 with diabetes, and from 30 for Aboriginal and Torres Strait Islander people. More calculators are on our <a href="/tools/">tools page</a>.</p>
+<h2>What a high result usually means</h2>
+<p><b>Common causes:</b></p>
+<ul><li><b>Genes</b>: many small inherited effects, the commonest reason for a high LDL in people who eat well.</li><li><b>Food high in saturated and trans fats</b>, extra weight and not moving much.</li><li><b>High triglycerides</b>: alcohol, extra weight, type 2 diabetes or a non-fasting sample.</li><li><b>Other conditions</b>: an underactive thyroid, kidney disease (especially with protein in the urine), liver problems and pregnancy.</li><li><b>Medicines</b>: some steroids, acne retinoids, some antipsychotics and some HIV medicines.</li></ul>
+<p><b>Less common but important:</b></p>
+<ul><li><b>Familial hypercholesterolaemia (FH)</b>: an inherited condition affecting about 1 in 250 people, causing high LDL from birth and early heart disease if untreated. Fewer than 1 in 10 people with FH have been diagnosed.</li><li><b>Very high triglycerides</b> (over 10 mmol/L, 886 mg/dL), which raise the risk of pancreatitis. Rare inherited conditions can push them far higher.</li></ul>
+<h2>Signs of familial hypercholesterolaemia</h2>
+<ul><li>LDL over 5.0 mmol/L (193 mg/dL) in an adult not on treatment.</li><li>Thickened tendons from cholesterol deposits (tendon xanthomas), often at the back of the ankle or over the knuckles.</li><li>A pale ring around the coloured part of the eye (corneal arcus) before age 45.</li><li>Heart disease at a young age in you or a close relative: men under 55, women under 60.</li><li>A parent, brother, sister or child with very high cholesterol.</li></ul>
+<h2>Symptoms</h2>
+<p>High cholesterol causes no symptoms. The first sign can be angina, a heart attack or a stroke, which is why testing matters. FH can cause the skin, tendon and eye signs above.</p>
+<h2>What happens next</h2>
+<ul><li><b>Repeat the test</b> if the result is unexpected, fasting if triglycerides were high.</li><li><b>Check for other causes</b>: thyroid, glucose or HbA1c, kidney and liver tests, and a urine test for protein.</li><li><b>A heart health check</b> with your GP to work out your 5-year risk.</li><li><b>Suspected FH</b>: a second LDL test, a Dutch Lipid Clinic Network score, specialist referral and often genetic testing. Close relatives, including children, should then be tested.</li><li><b>Treatment</b>: lifestyle for everyone; <a href="/medicines/statins/">statins</a> and other medicines depending on your risk or an FH diagnosis.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for chest pain or pressure, or signs of stroke (face drooping, arm weakness, slurred speech), whatever your cholesterol. <b>See a doctor the same day</b> for severe upper tummy pain with high triglycerides, or triglycerides over 20 mmol/L (1771 mg/dL): NICE advises urgent specialist review at this level because of pancreatitis risk. <b>See your GP soon</b> for LDL over 5.0 mmol/L (193 mg/dL), triglycerides over 10 mmol/L, or total cholesterol over 7.5 mmol/L (290 mg/dL) with a close relative who had heart disease young: these can be inherited conditions that run in families.",
+faqs=[
+("What is a normal cholesterol level?", "Australian labs flag total cholesterol over 5.5 mmol/L, LDL over 3.0, non-HDL over 4.0, triglycerides over 2.0 and HDL under 1.0 in men or 1.2 in women. These flags aren’t personal targets: people with heart disease, diabetes or high heart risk aim much lower."),
+("Is an LDL of 4 high?", "An LDL of 4.0 mmol/L (155 mg/dL) is above the 3.0 flag. Whether you need medicine depends on your overall 5-year heart risk, which your GP can estimate with the Aus CVD Risk Calculator. If you already have heart disease, it’s well above target."),
+("What is non-HDL cholesterol?", "It’s your total cholesterol minus your HDL, so it counts all the cholesterol carried in artery-clogging particles. It doesn’t need a fasting sample and stays accurate when triglycerides are high. Australian labs flag non-HDL over 4.0 mmol/L."),
+("Do I need to fast for a cholesterol test?", "Usually not. Non-fasting samples are fine for most people. Your doctor may ask for a fasting test if your triglycerides were high, because food raises them for several hours."),
+("What are the signs of familial hypercholesterolaemia?", "An LDL over 5.0 mmol/L in an adult, thickened tendons at the ankles or knuckles, a pale ring around the iris before 45, and heart disease in you or close relatives at a young age (men under 55, women under 60). It affects about 1 in 250 people."),
+("Why is my cholesterol high when I eat well?", "Genes have a big influence on LDL, so many people with healthy diets still have high cholesterol. A very high LDL despite a good diet can point to familial hypercholesterolaemia. Thyroid, kidney and liver problems and some medicines can also raise it."),
+("How do I find out my heart risk?", "Ask your GP for a heart health check. They combine your cholesterol with age, sex, blood pressure, smoking, diabetes and other factors in the Aus CVD Risk Calculator, which gives your chance of a heart attack or stroke in the next 5 years."),
+],
+sources=[
+(PTEX + "Cholesterol", "Pathology Tests Explained (RCPA): Cholesterol"),
+("https://aacblm.imiscloud.com/common/Uploaded%20files/aacb/guidelines%20and%20position%20statements/guidelines/AACB-endorsed%20Harmonisation%20Guidelines/20180801%20GPS%20Guideline%20for%20harmonisation%20of%20lipid%20reporting.pdf", "AACB 2018: Guideline for harmonisation of lipid reporting in Australia (flag levels)"),
+("https://doi.org/10.5694/mja2.52280", "Medical Journal of Australia 2024: 2023 Australian guideline for assessing and managing cardiovascular disease risk (who to assess, 5-year risk categories)"),
+("https://doi.org/10.1016/j.hlc.2020.09.943", "Watts et al, Heart, Lung and Circulation 2021: Integrated guidance for enhancing the care of familial hypercholesterolaemia in Australia"),
+("https://www.nice.org.uk/guidance/ng238", "NICE NG238: Cardiovascular disease, risk assessment and reduction, including lipid modification (triglyceride and FH referral thresholds)"),
+],
+related=[HUB_R, ("/cholesterol/", "Fact sheet", "High Cholesterol"), ("/medicines/statins/", "Medicine", "Statins"), ("/blood-tests/hba1c/", "Blood test", "HbA1c Result"), ("/tools/", "Tools", "Health calculators")],
+),
 ]
 
 HUB = dict(
 title="Blood Test Results Explained: Plain-English Guides",
 h1="Blood Test Results Explained",
-desc="Blood test results explained in plain English: high ferritin, low platelets, high CRP, ALT, eGFR, TSH and more, with next steps and red flags.",
+desc="Blood test results explained in plain English: ferritin, platelets, CRP, ALT, eGFR, HbA1c, cholesterol, sodium, potassium and more, with red flags.",
 lede="Got a result flagged H or L and a few days until your appointment? These guides explain what each test measures, the usual reasons it’s high or low, what happens next, and the numbers that can’t wait.",
 qa="A result outside the reference range isn’t automatically a problem: ranges cover about 95% of healthy people, so some healthy results land just outside. What matters is how far out it is, your symptoms and the trend. Each guide below lists common causes first, and the numbers that need same-day care.",
 intro="""
