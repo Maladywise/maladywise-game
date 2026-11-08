@@ -3,7 +3,7 @@
    Physics by Matter.js (MIT), vendored as matter.min.js. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -201,10 +201,13 @@
   // from 8 Nov 2026: the five smallest drop evenly (18.6% each, like Suika), plus rare bladder 3%, stomach 2%, heart 1% and a wild piece 1%.
   // Outbreak Sundays also drop a cure 3%, taken evenly from the five smallest (18% each).
   var ODDS = [0.186, 0.186, 0.186, 0.186, 0.186, 0.03, 0.02, 0.01, 0.01], ODDS_OUT = [0.18, 0.18, 0.18, 0.18, 0.18, 0.03, 0.02, 0.01, 0.01, 0.03];
+  // from 9 Nov 2026: only the five smallest drop (19.8% each); bladder, stomach and heart are made by merging only. Wild 1%; Outbreak Sunday cure 3%.
+  var FIVEDAY = "2026-11-09", FIVE = true;
+  var ODDS5 = [0.198, 0.198, 0.198, 0.198, 0.198, 0, 0, 0, 0.01], ODDS5_OUT = [0.192, 0.192, 0.192, 0.192, 0.192, 0, 0, 0, 0.01, 0.03];
   function roll1() {
     var x = rnd();
     if (!NOREP) return x < 0.3 ? 0 : x < 0.57 ? 1 : x < 0.77 ? 2 : x < 0.92 ? 3 : 4; // older dailies keep their original odds
-    var od = OUT ? ODDS_OUT : ODDS;
+    var od = FIVE ? (OUT ? ODDS5_OUT : ODDS5) : (OUT ? ODDS_OUT : ODDS);
     for (var i = 0, c = 0; i < od.length; i++) { c += od[i]; if (x < c) return i === 8 ? WILD : i === 9 ? CURE : i; }
     return 0;
   }
@@ -212,7 +215,7 @@
   function newRun(isPractice) {
     practice = !!isPractice; over = false; score = 0; top = -1; merges = []; canDrop = true;
     rnd = mulberry32(isPractice ? (Math.random() * 4294967296) >>> 0 : dayNum(day) * 2654435761 >>> 0);
-    NOREP = practice || String(day) >= NEWDAY; NEW = NOREP; OUT = NEW && weekday(day) === 0;
+    NOREP = practice || String(day) >= NEWDAY; NEW = NOREP; OUT = NEW && weekday(day) === 0; FIVE = practice || String(day) >= FIVEDAY;
     // separate PRNGs for the shake and infections, so the drop order never changes
     var seed2 = isPractice ? (Math.random() * 4294967296) >>> 0 : (dayNum(day) * 2246822519) >>> 0;
     srnd = mulberry32((seed2 ^ 0x5BD1E995) >>> 0); irnd = mulberry32((seed2 ^ 0x27D4EB2F) >>> 0);
