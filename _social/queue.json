@@ -1,42 +1,53 @@
 {
-  "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
-  "posts": [
-    {
-      "date": "2026-11-19",
-      "note": "Weekly Short (video): Zebritis #1, 18 Oct 2026",
-      "thread": [
-        "Name a blood thinner or antiplatelet. Easy, right? The common answer scores 1 point. The rarest scores 20. Did you know the unicorn before the end of the video? #MedTwitter",
-        "Can you find the unicorn? → https://maladywise.com/zebritis/"
-      ],
-      "short": {
-        "series": "rarest",
-        "puzzle_date": "2026-10-18"
-      },
-      "typefully_id": "11781134",
-      "queued_at": "2026-11-08T21:03+11:00"
-    },
-    {
-      "date": "2026-11-17",
-      "note": "Tue deep dive",
-      "thread": [
-        "POTS: heart races when you stand, settles when you lie down. In an Australian registry of 500 people, diagnosis took 6.7 years on average, and anxiety got the blame first for 64.6%. A watch and a bed would have been quicker. New deep dive for clinicians 🧵",
-        "The criteria: heart rate up ≥30 bpm within 10 min of standing (≥40 at ages 12–19), no drop in blood pressure, symptoms for 3+ months, nothing else explains it. You can run the test in a GP room. No tilt table needed for most.",
-        "The active stand test: 5–10 min lying down, then heart rate and BP at 1, 3, 5, 8 and 10 min standing. Morning testing picks up more. Ten minutes, zero dollars, and it cuts years off the \"maybe it's stress\" phase.",
-        "Boring basics carry the evidence: 2–3 L of fluid, salt if safe, waist-high compression (knee-highs don't cut it), exercise that starts lying down. One registry: 71% who finished a 3-month programme no longer met criteria. Uncontrolled, but still.",
-        "Medicines: none is approved for POTS in Australia; all off-label. Low-dose propranolol has the best data (low beat high in one trial). In the largest RCT, ivabradine lowered heart rate but not symptoms. A heart rate isn't a quality of life.",
-        "Hype check: \"POTS autoantibody\" panels? Patients and healthy controls test positive alike. IVIG? No better than albumin in its RCT. The POTS + hEDS + MCAS \"triad\"? Overlap in clinics, not established. Your wallet deserves better evidence.",
-        "Red flags that need more than a POTS label: fainting during exercise, chest pain, family history of sudden death, an abnormal ECG. Refer those promptly. Everyone else: start the basics while they wait for a specialist.",
-        "The full deep dive covers criteria, a step-by-step stand test, what to exclude, evidence-graded treatment, long COVID, pregnancy, teens and myths. General education, not personal advice.\nhttps://maladywise.com/deep-dives/pots/"
-      ],
-      "typefully_id": "11764141",
-      "queued_at": "2026-11-07T22:54+11:00"
-    },
-    {
-      "date": "2026-11-21",
-      "note": "Sat arcade",
-      "thread": [
-        "New bonus game: Stackulus 🫀\n\nOrgans fall, you stack them. Clear rows, chain combos, and beat today's daily challenge on the world leaderboard.\n\nPlay it in Normie mode and the organs become sea creatures. 🐙\n\nhttps://maladywise.com/stackulus/"
-      ]
-    }
-  ]
+ "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
+ "posts": [
+  {
+   "date": "2026-11-17",
+   "note": "Tue deep dive",
+   "thread": [
+    "POTS: heart races when you stand, settles when you lie down. In an Australian registry of 500 people, diagnosis took 6.7 years on average, and anxiety got the blame first for 64.6%. A watch and a bed would have been quicker. New deep dive for clinicians 🧵",
+    "The criteria: heart rate up ≥30 bpm within 10 min of standing (≥40 at ages 12–19), no drop in blood pressure, symptoms for 3+ months, nothing else explains it. You can run the test in a GP room. No tilt table needed for most.",
+    "The active stand test: 5–10 min lying down, then heart rate and BP at 1, 3, 5, 8 and 10 min standing. Morning testing picks up more. Ten minutes, zero dollars, and it cuts years off the \"maybe it's stress\" phase.",
+    "Boring basics carry the evidence: 2–3 L of fluid, salt if safe, waist-high compression (knee-highs don't cut it), exercise that starts lying down. One registry: 71% who finished a 3-month programme no longer met criteria. Uncontrolled, but still.",
+    "Medicines: none is approved for POTS in Australia; all off-label. Low-dose propranolol has the best data (low beat high in one trial). In the largest RCT, ivabradine lowered heart rate but not symptoms. A heart rate isn't a quality of life.",
+    "Hype check: \"POTS autoantibody\" panels? Patients and healthy controls test positive alike. IVIG? No better than albumin in its RCT. The POTS + hEDS + MCAS \"triad\"? Overlap in clinics, not established. Your wallet deserves better evidence.",
+    "Red flags that need more than a POTS label: fainting during exercise, chest pain, family history of sudden death, an abnormal ECG. Refer those promptly. Everyone else: start the basics while they wait for a specialist.",
+    "The full deep dive covers criteria, a step-by-step stand test, what to exclude, evidence-graded treatment, long COVID, pregnancy, teens and myths. General education, not personal advice.\nhttps://maladywise.com/deep-dives/pots/"
+   ],
+   "typefully_id": "11764141",
+   "queued_at": "2026-11-07T22:54+11:00"
+  },
+  {
+   "date": "2026-11-18",
+   "note": "GLP-1 hub thread (image: the /glp-1/ page card via its og:image; no \"card\": true, which would attach the World AMR Awareness Week day card)",
+   "thread": [
+    "GLP-1 medicines: the internet says miracle, the trials say something more useful. Semaglutide: 14.9% average weight loss vs 2.4% on placebo over 68 weeks. Tirzepatide: 15–21% vs 3.1% over 72 weeks. Real effects. Not magic. The fine print 🧵",
+    "The evidence, minus the hype → https://maladywise.com/glp-1/",
+    "What people feel first: the gut. In the weight-loss trials, nausea hit 44% on semaglutide (16% on placebo) and 25–29% on tirzepatide (8% on placebo). Mostly mild and early, while the dose is stepped up. Hard going? Talk to your doctor before changing anything.",
+    "Stopping: the weight usually comes back. A year after stopping semaglutide, people in the STEP 1 extension had regained about two-thirds of what they'd lost. Not a willpower failure. It's what stopping a medicine for a long-term condition looks like.",
+    "Two safety notes. Before surgery (2025 Australian advice): keep taking it, clear fluids only for 24 hours first, and tell your anaesthetist. Compounded copies were banned in Australia from October 2024, and fake pens have turned up. Prescription and a registered pharmacy only."
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "note": "Weekly Short (video): Zebritis #1, 18 Oct 2026",
+   "thread": [
+    "Name a blood thinner or antiplatelet. Easy, right? The common answer scores 1 point. The rarest scores 20. Did you know the unicorn before the end of the video? #MedTwitter",
+    "Can you find the unicorn? → https://maladywise.com/zebritis/"
+   ],
+   "short": {
+    "series": "rarest",
+    "puzzle_date": "2026-10-18"
+   },
+   "typefully_id": "11781134",
+   "queued_at": "2026-11-08T21:03+11:00"
+  },
+  {
+   "date": "2026-11-21",
+   "note": "Sat arcade",
+   "thread": [
+    "New bonus game: Stackulus 🫀\n\nOrgans fall, you stack them. Clear rows, chain combos, and beat today's daily challenge on the world leaderboard.\n\nPlay it in Normie mode and the organs become sea creatures. 🐙\n\nhttps://maladywise.com/stackulus/"
+   ]
+  }
+ ]
 }

@@ -309,10 +309,10 @@
 },
 "bunions": {
 "url": "/bunions/",
-"key": "e4e435b26fcd",
-"v": "9d1fecd2",
-"label": "Condition",
-"title": "Bunions (Hallux Valgus)"
+"key": "0ec7e6765f8a",
+"v": "9e999e09",
+"label": "Fact sheet",
+"title": "Bunions"
 },
 "cancer-screening": {
 "url": "/cancer-screening/",
@@ -680,10 +680,10 @@
 },
 "fibroids": {
 "url": "/fibroids/",
-"key": "8b19c0f16181",
-"v": "f2a2845a",
-"label": "Condition",
-"title": "Fibroids (Uterine Fibroids)"
+"key": "90cc313e1827",
+"v": "90048bac",
+"label": "Fact sheet",
+"title": "Fibroids"
 },
 "fibromyalgia": {
 "url": "/fibromyalgia/",
@@ -754,6 +754,13 @@
 "v": "f185ec62",
 "label": "Condition",
 "title": "Glandular Fever"
+},
+"glp-1": {
+"url": "/glp-1/",
+"key": "dea959807492",
+"v": "78392129",
+"label": "Medicines guide",
+"title": "GLP-1 medicines"
 },
 "glp-1-compounded-counterfeit": {
 "url": "/glp-1/compounded-counterfeit/",
@@ -827,10 +834,10 @@
 },
 "h-pylori": {
 "url": "/h-pylori/",
-"key": "f4e17e2fcb6b",
-"v": "6336f41e",
-"label": "Condition",
-"title": "H. pylori and Stomach Ulcers"
+"key": "e2c4be39f804",
+"v": "3404b6d1",
+"label": "Fact sheet",
+"title": "H. pylori"
 },
 "haemochromatosis": {
 "url": "/haemochromatosis/",
@@ -995,10 +1002,10 @@
 },
 "keratosis-pilaris": {
 "url": "/keratosis-pilaris/",
-"key": "25df65fe384e",
-"v": "6410ea77",
-"label": "Condition",
-"title": "Keratosis Pilaris (Chicken Skin)"
+"key": "16e1d96e9553",
+"v": "c3490a69",
+"label": "Fact sheet",
+"title": "Keratosis pilaris"
 },
 "kidney-stones": {
 "url": "/kidney-stones/",
@@ -1023,16 +1030,16 @@
 },
 "lactose-intolerance": {
 "url": "/lactose-intolerance/",
-"key": "89b19b05d749",
-"v": "af85d649",
-"label": "Condition",
-"title": "Lactose Intolerance"
+"key": "8bfb02e14f74",
+"v": "21d6002f",
+"label": "Fact sheet",
+"title": "Lactose intolerance"
 },
 "long-covid": {
 "url": "/long-covid/",
-"key": "a276bb42cf13",
-"v": "7fc2fc41",
-"label": "Condition",
+"key": "5e0711413e95",
+"v": "2147bdd9",
+"label": "Fact sheet",
 "title": "Long COVID"
 },
 "low-libido-women": {
@@ -1338,10 +1345,10 @@
 },
 "ovarian-cysts": {
 "url": "/ovarian-cysts/",
-"key": "373e0c1d9e89",
-"v": "350e2521",
-"label": "Condition",
-"title": "Ovarian Cysts"
+"key": "0ba76f9a6267",
+"v": "6ffebfc7",
+"label": "Fact sheet",
+"title": "Ovarian cysts"
 },
 "palpitations": {
 "url": "/palpitations/",
@@ -2171,10 +2178,10 @@
 },
 "varicose-veins": {
 "url": "/varicose-veins/",
-"key": "9ee82d0875b2",
-"v": "b3d55af3",
-"label": "Condition",
-"title": "Varicose Veins"
+"key": "b97f71d1adc1",
+"v": "fbf1070e",
+"label": "Fact sheet",
+"title": "Varicose veins"
 },
 "vitamin-d": {
 "url": "/vitamin-d/",

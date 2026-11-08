@@ -7,6 +7,7 @@ Content lives in _scripts/glp1_data.py (one dict per page). Shares the page shel
 (same head, footer, JSON-LD helpers and headkit.fix_html()). After a brand-new page: add it to sitemap.xml,
 then run og_cards.py, share_block.py, static_nav.py, build_llms.py and site_check.py (STYLE.md).
 """
+import json
 import os
 import sys
 
@@ -27,6 +28,12 @@ def page_ld(path, name, desc, trail):
     d = gb.page_ld(path, name, desc, trail, ABOUT)
     d["dateModified"] = UPDATED_ISO
     return d
+
+
+def og_card_block():
+    """The hub's custom share card data (one fact, its source, a flat drawing): _scripts/glp1_og_card.json."""
+    d = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "glp1_og_card.json"), encoding="utf-8"))
+    return '<script type="application/json" id="og-card">%s</script>\n' % json.dumps(d, ensure_ascii=False).replace("</", "<\\/")
 
 
 def check(P, title, qa, faqs, sources):
@@ -70,6 +77,7 @@ def build_hub():
     pld["mainEntity"] = {"@type": "ItemList", "itemListElement": items}
     lds = [("mw-page-ld", pld), ("mw-faq-ld", gb.faq_ld(H["faqs"]))]
     s = gb.head(HUB_PATH, H["title"], H["desc"], lds)
+    s = s.replace("</head>", og_card_block() + "</head>", 1)   # custom share card (og_cards.py)
     s += "<h1>%s</h1>\n" % H["h1"] + TRUST
     s += '<p class="lede">%s</p>\n' % H["lede"]
     s += '<p class="quick-answer"><b>Quick answer:</b> %s</p>\n' % H["qa"]

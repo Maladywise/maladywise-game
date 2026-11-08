@@ -27,6 +27,11 @@ DEEP DIVE CARDS
     The fact must already be stated and cited on the page (about 70 characters); the drawing is an original
     flat SVG in the site palette (viewBox 0 0 420 400, at most 1-2 tiny <text> labels). Optional "title" overrides
     the card title. No block: the generic card. The /deep-dives/ hub card is a collage of the newest drawings.
+
+CUSTOM FACT CARDS (any other page: fact sheets, medicines, hubs such as /glp-1/)
+    The same og-card block works on any page; "number" is then left out and an optional "label" sets the pill
+    (default: the section label). A page with a block gets this card even if it's a hub (remove it from
+    key_cards.py CARDS so the two don't fight over the tags).
     Deep dive cards are kept under DD_MAX_BYTES.
 """
 import base64
@@ -96,7 +101,9 @@ def og_card_data(p):
     except ValueError:
         print("Warning: og-card JSON on %s doesn't parse; using the generic card" % p.get("fp"), file=sys.stderr)
         return None
-    if not (isinstance(d, dict) and d.get("fact") and d.get("art") and d.get("number")):
+    if not (isinstance(d, dict) and d.get("fact") and d.get("art")):
+        return None
+    if p.get("sec") == "deep-dives" and not d.get("number"):
         return None
     return d
 
@@ -107,7 +114,7 @@ def dd_hub_spec(pages):
     for u, p in pages.items():
         if p.get("sec") == "deep-dives" and u.count("/") == 3 and u not in static_nav.HUBS:
             d = og_card_data(p)
-            if d:
+            if d and d.get("number"):
                 dds.append((d["number"], d.get("title") or p["label"], d["art"]))
     if not dds:
         return None
@@ -123,6 +130,13 @@ def spec_for(u, p, pages=None):
         hub = dd_hub_spec(pages)
         if hub:
             return hub
+    if p.get("sec") != "deep-dives":
+        d = og_card_data(p)
+        if d:   # custom fact card on any other page (fact sheets, hubs): label, title, one fact + source, drawing
+            label = d.get("label") or SECTIONS.get(p.get("sec"), ("Malady Wise", ""))[0]
+            fact = "%s (%s)" % (d["fact"], d["source"]) if d.get("source") else d["fact"]
+            return (label, d.get("title") or p["label"], fact, SECTIONS.get(p.get("sec"), ("", "days/stethoscope.svg"))[1],
+                    {"art": d["art"]})
     import key_cards   # home, hubs, quizzes and games have hand-designed cards (key_cards.py)
     if u in key_cards.URLS:
         return None
