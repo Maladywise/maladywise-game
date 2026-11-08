@@ -50,6 +50,7 @@ SECTIONS = {
     "days": "World health days",
     "normie": "Normie mode",
     "rare-conditions": "Zebra Atlas",
+    "blood-tests": "Blood test results",
 }
 # Top-level pages that live under a hub even though their URL is /<name>/.
 ARCADE = {"basil-clover", "stackulus", "mergeon"}
