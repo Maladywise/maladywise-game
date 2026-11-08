@@ -167,6 +167,12 @@
 "v": "ac7b5fa3",
 "title": "Sensitosis"
 },
+"specialty-quiz": {
+"file": "assets/og/key/specialty-quiz.png",
+"key": "685d225cfbeb",
+"v": "18541876",
+"title": "Which medical specialty suits you?"
+},
 "stackulus": {
 "file": "assets/og/stackulus.png",
 "key": "9b4853637f20",
@@ -184,6 +190,12 @@
 "key": "ec089b819fb8",
 "v": "0260c5f8",
 "title": "Suturix"
+},
+"terminology-quiz": {
+"file": "assets/og/key/terminology-quiz.png",
+"key": "08de724f952d",
+"v": "cc0f2187",
+"title": "Medical terminology quiz"
 },
 "tools": {
 "file": "assets/og/key/tools.png",
