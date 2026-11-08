@@ -58,7 +58,8 @@ out = ["# Malady Wise", "",
        "- Audience: the public, students and health professionals worldwide; Australian details where relevant.",
        "- Spelling: Australian/British English. Units: SI.",
        "- How pages are made: https://maladywise.com/about/#how-we-make-pages",
-       "- Privacy: https://maladywise.com/privacy/", ""]
+       "- Privacy: https://maladywise.com/privacy/",
+       "- Sponsorship and advertising policy: https://maladywise.com/sponsorship/", ""]
 for name in order:
     items = sorted(groups.get(name, []), key=lambda x: x[1].lower())
     if not items:

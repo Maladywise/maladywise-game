@@ -58,7 +58,7 @@ LABELS = {
     "/weird/": "Weird and wonderful", "/days/": "World Health Days", "/zebra-mail/": "Zebra Mail",
     "/arcade/": "Arcade games", "/mental-health-check/": "Mental health check", "/basil-clover/": "Basil + Clover",
     "/grandrounds/": "Grand Rounds", "/dx/": "Dxtective", "/about/": "About", "/contact/": "Contact",
-    "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/conditions/": "Conditions A–Z",
+    "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",
     "/specialists/": "Specialists", "/compare/": "Comparisons", "/tools/": "Tools", "/deep-dives/": "Deep dives",
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
 }
@@ -76,7 +76,7 @@ PARTNERS = {
 MEDICAL_SECTIONS = {"fact", "medicines", "compare", "blood-tests", "exercises", "tools", "deep-dives", "specialists",
                     "mental-health-check", "sub"}
 HUBS = {"/conditions/", "/medicines/", "/blood-tests/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
-        "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/",
+        "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
 WANT = 8   # related links per page (6-10)
 
