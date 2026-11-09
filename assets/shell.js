@@ -816,7 +816,8 @@
   var NL_HTML = '<section class="nl" id="newsletter"><div class="nl-txt"><b>Get Zebra Mail \ud83e\udd93</b><span>The Weekly Dose: a quick, funny breakdown of the week in health and medicine, every Friday, with puzzles at the end. From an Australian GP. Unsubscribe any time.</span></div>' +
     '<form class="mw-nl" action="https://buttondown.com/api/emails/embed-subscribe/maladywise" method="post" target="_blank">' +
     '<label class="sr" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">' +
-    '<input type="hidden" name="embed" value="1"><button type="submit">Subscribe</button></form><p class="nl-msg" aria-live="polite"></p></section>';
+    '<input type="hidden" name="embed" value="1"><button type="submit">Subscribe</button>' +
+    '<label class="nl-opt"><input type="checkbox" name="tag" value="daily-3"> Plus a daily 7am puzzle reminder</label></form><p class="nl-msg" aria-live="polite"></p></section>';
   document.addEventListener("submit", function (e) {
     var f = e.target; if (!f.classList || !f.classList.contains("mw-nl") || !window.fetch) return;
     e.preventDefault();

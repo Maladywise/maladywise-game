@@ -1179,3 +1179,4 @@ html[data-theme="dark"] .sp-card .sp-np-limited{color:#F0B940}html[data-theme="d
 .pv-body em{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--pa);color:#fff;font:700 9px/15px var(--body);font-style:normal;text-align:center}
 .pv-body em:nth-of-type(1){left:44px;top:2px}.pv-body em:nth-of-type(2){left:48px;top:22px}.pv-body em:nth-of-type(3){left:2px;top:30px}.pv-body em:nth-of-type(4){left:44px;top:44px}.pv-body em:nth-of-type(5){left:6px;top:56px}
 html[data-theme="dark"] .sp-prev i.blk{background:#06050A;border-color:#06050A}html[data-theme="dark"] .sp-prev i{border-color:#4A4160}
+.mw-nl .nl-opt{flex:1 0 100%;display:flex;align-items:center;gap:8px;min-height:44px;font:500 13.5px var(--body);color:var(--muted);cursor:pointer}.mw-nl .nl-opt input{width:18px;height:18px;margin:0;accent-color:var(--brand);flex:none}
