@@ -932,6 +932,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function bonusCard() {
       return '<a class="card house bonus" href="/basil-clover/" style="--accent:' + (root.getAttribute("data-theme") === "dark" ? "#8EB8E8" : "#2B5E80") + '"><div class="band"><span style="display:inline-flex;align-items:flex-end;gap:0"><img src="/assets/mascots/basil.svg?v=2" alt="" width="38" height="50" style="width:38px;height:50px;object-fit:contain"><img src="/assets/mascots/clover.svg?v=1" alt="" width="36" height="47" style="width:36px;height:47px;object-fit:contain;margin-left:-5px"></span></div><div class="cbody"><h2 class="name">Basil + Clover</h2><p class="kind">Bonus arcade game</p><p class="tag">Basil kicks. Clover eats. Nothing is safe.</p><div class="cfoot"><span class="play">Play</span></div></div></a>';
     }
+    // Health self-checks, near the top of the home page (Medical mode only).
+    function healthLinks() {
+      if (NORMIE) return "";
+      return '<nav class="mw-hc" aria-label="Health checks"><a class="mw-hc-main" href="/tools/health-check/"><span><small>What health checks do I need?</small><b>Health check by age</b></span><i aria-hidden="true">\u2192</i></a>' +
+        '<a href="/mental-health-check/"><span><small>How are you going?</small><b>Mental health check</b></span><i aria-hidden="true">\u2192</i></a></nav>';
+    }
     // Non-game links: a slim strip under the game sections.
     function house() {
       var h = MW_SITE.house, dk = root.getAttribute("data-theme") === "dark";
@@ -1053,7 +1059,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var snav = document.querySelector(".static-nav"); // static hub links (static_nav.py): kept in the footer across redraws
     function draw() {
       var t3 = startList();
-      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + todays3(t3) + progress() +
+      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
         sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) main.insertBefore(allg, main.querySelector("footer.site"));
