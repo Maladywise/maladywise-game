@@ -1,31 +1,44 @@
-/* Specialists: text search/filter plus inclusive-care badge chips. */
+/* Specialists: "find by interest" search (text with synonyms, interest chips, practical toggles) plus inclusive-care badge chips. Data comes from build.py; no libraries. */
 (function () {
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
-  var chips = [].slice.call(document.querySelectorAll(".sp-chip"));
-  function sel() { return chips.filter(function (c) { return c.getAttribute("aria-pressed") === "true"; }).map(function (c) { return c.getAttribute("data-badge"); }); }
+  var PHR = [[/post[- ]?traumatic( stress)?( disorder)?/g, "trauma"], [/post[- ]?natal|post[- ]?partum|ante[- ]?natal|pre[- ]?natal|pregnan\w*/g, "perinatal"], [/eating disorders?/g, "eating disorders"], [/lgbt\w*\+?|queer|gay|lesbian/g, "lgbtiqa"], [/transgender|gender[- ]diverse/g, "trans"], [/chronic fatigue( syndrome)?/g, "me/cfs"]];
+  var SYN = { ptsd: "trauma", asd: "autism", autistic: "autism", add: "adhd", anorexia: "eating", bulimia: "eating", binge: "eating", arfid: "eating", kids: "child", children: "child", kid: "child", teen: "adolescent", teens: "adolescent", teenager: "adolescent", teenagers: "adolescent", youth: "adolescent", indigenous: "first nations", aboriginal: "first nations", dysautonomia: "pots", cfs: "me/cfs", mito: "mitochondrial", lymphedema: "lymphoedema", pediatric: "paediatric", hypermobile: "hypermobility", eds: "hypermobility", obsessive: "ocd", depressed: "depression", anxious: "anxiety", couple: "couples", marriage: "couples", relationship: "couples" };
+  function terms(raw) {
+    var q = norm(raw).trim(); if (!q) return [];
+    PHR.forEach(function (r) { q = q.replace(r[0], function (m) { return " \u0001" + r[1].replace(/ /g, "\u0002") + " "; }); });
+    return q.split(/[\s,;]+/).filter(Boolean).map(function (t) { var x = t.replace(/\u0001/g, "").replace(/\u0002/g, " "); return [x, SYN[x] || null]; });
+  }
+  function hit(hay, ts) { return ts.every(function (t) { return hay.indexOf(t[0]) >= 0 || (t[1] && hay.indexOf(t[1]) >= 0); }); }
+  function pressed(sel, attr) { return [].slice.call(document.querySelectorAll(sel + '[aria-pressed="true"]')).map(function (c) { return c.getAttribute(attr); }); }
+  function wire(sel, run) { [].slice.call(document.querySelectorAll(sel)).forEach(function (c) { c.addEventListener("click", function () { c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") === "true" ? "false" : "true"); run(); }); }); }
+  function has(list, need) { return need.every(function (x) { return list.indexOf(x) >= 0; }); }
   var f = document.querySelector("[data-sp-filter]"), cnt = document.querySelector(".sp-count");
   function runPage() {
-    var q = norm(f.value).trim(), bs = sel(), n = 0, ls = document.querySelector("[data-sp-lang]"), lg = ls ? ls.value : "";
+    var ts = terms(f.value), bs = pressed(".sp-chip[data-badge]", "data-badge"), tg = pressed(".sp-ichip", "data-tag"), fl = pressed(".sp-tog", "data-flag"), n = 0, ls = document.querySelector("[data-sp-lang]"), lg = ls ? ls.value : "";
     document.querySelectorAll(".sp-card").forEach(function (c) {
-      var have = (c.getAttribute("data-b") || "").split(" ");
-      var show = (!q || norm(c.getAttribute("data-q")).indexOf(q) >= 0) && bs.every(function (b) { return have.indexOf(b) >= 0; }) && (!lg || (c.getAttribute("data-l") || "").split("|").indexOf(lg) >= 0);
+      var show = hit(norm(c.getAttribute("data-q")), ts) && has((c.getAttribute("data-b") || "").split(" "), bs) && has((c.getAttribute("data-t") || "").split("|"), tg) && has((c.getAttribute("data-f") || "").split(" "), fl) && (!lg || (c.getAttribute("data-l") || "").split("|").indexOf(lg) >= 0);
       c.hidden = !show; if (show) n++;
     });
-    if (cnt) cnt.textContent = q || bs.length || lg ? n + (n === 1 ? " match" : " matches") : "";
+    if (cnt) cnt.textContent = ts.length || bs.length || tg.length || fl.length || lg ? n + (n === 1 ? " match" : " matches") : "";
   }
   var s = document.querySelector("[data-sp-search]"), out = document.querySelector(".sp-results");
   function runIndex() {
-    var q = norm(s.value).trim(), bs = sel();
-    if (q.length < 2 && !bs.length) { out.hidden = true; out.innerHTML = ""; return; }
-    var hits = SP_ALL.filter(function (x) { return (q.length < 2 || norm(x.q).indexOf(q) >= 0) && bs.every(function (b) { return (x.b || []).indexOf(b) >= 0; }); }).slice(0, 80);
-    out.hidden = false;
-    out.innerHTML = hits.length ? hits.map(function (x) { var t = document.createElement("li"), a = document.createElement("a"); a.href = x.u; a.innerHTML = "<b></b><span></span>"; a.firstChild.textContent = x.n; a.lastChild.textContent = x.s + (x.sub ? " · " + x.sub : ""); t.appendChild(a); return t.outerHTML; }).join("") : '<li class="none">No matches. Try fewer filters.</li>';
+    var ts = terms(s.value), bs = pressed(".sp-chip[data-badge]", "data-badge"), tg = pressed(".sp-ichip", "data-tag"), fl = pressed(".sp-tog", "data-flag");
+    var on = norm(s.value).trim().length >= 2 || bs.length || tg.length || fl.length;
+    if (!on) { out.hidden = true; out.innerHTML = ""; if (cnt) cnt.textContent = ""; return; }
+    var all = SP_ALL.filter(function (x) { return hit(norm(x.q), ts) && has(x.b || [], bs) && has(x.t || [], tg) && has(x.f || [], fl); }), hits = all.slice(0, 80);
+    if (cnt) cnt.textContent = all.length + (all.length === 1 ? " match" : " matches") + (all.length > 80 ? " (showing 80)" : "");
+    out.hidden = false; out.innerHTML = "";
+    if (!hits.length) { var li0 = document.createElement("li"); li0.className = "none"; li0.textContent = "No matches. Try fewer filters or another word."; out.appendChild(li0); return; }
+    hits.forEach(function (x) { var li = document.createElement("li"), a = document.createElement("a"), b = document.createElement("b"), sp = document.createElement("span"); a.href = x.u; b.textContent = x.n; sp.textContent = x.s + (x.sub ? " · " + x.sub : ""); a.appendChild(b); a.appendChild(sp); li.appendChild(a); out.appendChild(li); });
   }
   var run = f ? runPage : (s && out && window.SP_ALL ? runIndex : null);
   if (!run) return;
   (f || s).addEventListener("input", run);
   var lsel = document.querySelector("[data-sp-lang]"); if (lsel && f) lsel.addEventListener("change", run);
-  chips.forEach(function (c) { c.addEventListener("click", function () { c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") === "true" ? "false" : "true"); run(); }); });
+  wire(".sp-chip[data-badge]", run); wire(".sp-ichip", run); wire(".sp-tog", run);
+  try { var pq = new URLSearchParams(location.search).get("q"); if (pq) { (f || s).value = pq; run(); } } catch (e) {}
+  if (f && location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t && t.classList.contains("sp-card")) { t.classList.add("sp-hit"); setTimeout(function () { t.scrollIntoView({ block: "start" }); }, 60); } }
 })();
 /* Visitor-suggested tags: fixed list, no free text. Shown only after several visitors agree and Malady Wise approves. */
 (function () {

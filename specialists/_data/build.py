@@ -5,7 +5,7 @@ import json, html, os, re, sys, glob, datetime, urllib.parse
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "_scripts"))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 DD = sys.argv[1] if len(sys.argv) > 1 else 'specialists/_data'
-CHECKED = "31 October 2026"
+CHECKED = "9 November 2026"
 PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin Park|Mater Mental Health|CAMHS|Nexus|headspace|Pacific Clinic|Child Development Team|Integrated Pain Service|Newcastle Eye Hospital|Belmont Hospital|Maitland Hospital|Royal Newcastle|District Health|outreach|public", re.I)
 PRIV = re.compile(r"Private|GenesisCare|Hunter Eye Surgeons|rooms", re.I)
 NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "ortho-hand-upper-limb": "Orthopaedics: hand and wrist", "ortho-shoulder": "Orthopaedics: shoulder and elbow", "ortho-hip-knee": "Orthopaedics: hip and knee", "ortho-foot-ankle": "Orthopaedics: foot and ankle", "ortho-spine": "Orthopaedics: spine", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers", "psychology-children": "Psychology (children)", "geriatric-medicine": "Geriatric medicine", "medical-oncology": "Medical oncology", "pain-medicine": "Pain medicine", "plastic-surgery": "Plastic and reconstructive surgery", "radiation-oncology": "Radiation oncology", "rehabilitation": "Rehabilitation medicine"}
@@ -91,6 +91,7 @@ for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswi
         for p in sec["people"]:
             if is_public(p): removed.append(p["name"]); continue
             labs = ortho_labels(p) if slug == "orthopaedics" else [label]
+            if slug == "psychology-children" and re.search(r"adult", str((p.get("practical") or {}).get("ages") or "") + " " + p.get("specialty", ""), re.I): labs.append("Psychology")
             if slug == "psychology" and re.search(r"child|adolesc|teen|youth|paediatric|kids|infant|parent", " ".join([str((p.get("practical") or {}).get("ages") or ""), " ".join(p.get("interests") or []), p.get("specialty", "")]), re.I): labs.append("Psychology (children)")
             key = re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower())
             if key in people:
@@ -99,13 +100,101 @@ for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswi
                     if label2 not in q["_labels"]: q["_labels"].append(label2)
                 if p.get("practice") and p["practice"] != q.get("practice") and all(p["practice"] != x[0] for x in q.setdefault("_also", [])):
                     q["_also"].append((p["practice"], p.get("suburb") or p.get("address", ""), p.get("phone", "")))
-                for k in ("interests", "inclusive", "sources"):
+                for k in ("interests", "inclusive", "sources", "listed_by"):
                     for x in p.get(k) or []:
                         if x not in q.setdefault(k, []): q[k].append(x)
             else:
                 p = dict(p); p["_labels"] = list(labs); people[key] = p
 L = sorted(people.values(), key=lambda p: sortkey(p["name"]))
 e = lambda s: html.escape(str(s or ""), quote=True)
+
+# "Find by interest": canonical interest tags from free-text interests, with a small synonym map.
+TAGMAP = [
+ ("ADHD", r"\badhd\b|attention[- ]deficit"), ("autism", r"autis|\basd\b|ados|asperger"), ("trauma", r"trauma|ptsd|post[- ]?traumatic"),
+ ("EMDR", r"\bemdr\b|eye movement desensiti"), ("eating disorders", r"eating disorder|disordered eating|anorexi|bulimi|binge|arfid|osfed|cbt-e|body image"),
+ ("perinatal", r"perinatal|post[- ]?natal|postpartum|ante[- ]?natal|pre[- ]?natal|pregnan|birth trauma|new parents|infertility|fertility"),
+ ("child and adolescent", r"child|adolesc|\bteen|youth|paediatric|\bkids\b|infant|toddler|young people|school"),
+ ("couples", r"couple|relationship counsel|marriage|relationship therap"), ("family", r"\bfamil"),
+ ("OCD", r"\bocd\b|obsessive"), ("anxiety", r"anxi|panic|phobi|worry"), ("depression", r"depress|low mood|mood disorder|\bmood\b"),
+ ("DBT", r"\bdbt\b|dialectical"), ("CBT", r"\bcbt|cognitive behaviour"), ("ACT", r"\bact\b|acceptance and commitment"), ("schema therapy", r"schema"),
+ ("chronic pain", r"chronic pain|persistent pain|pain management|pain psych|pain program|chronic illness and pain"),
+ ("LGBTIQA+-affirming", r"lgbt|queer|rainbow|sexualit|gender and sexual"), ("trans and gender-affirming", r"\btrans\b|transgender|gender[- ]affirm|gender dysphoria|gender[- ]diverse|non-binary|auspath"),
+ ("First Nations", r"aboriginal|torres strait|first nations|indigenous"), ("neuropsychology", r"neuropsych|cognitive (and|assess)|\biq\b|acquired brain|intellectual disab|capacity assess|dementia assess"),
+ ("grief", r"grief|bereave"), ("addiction", r"addict|substance|alcohol|\bdrug|gambl"), ("personality disorders", r"personality disorder|\bbpd\b|borderline"),
+ ("veterans", r"veteran|\bdva\b|defence|military|\badf\b"), ("sleep", r"sleep|insomnia"), ("bipolar", r"bipolar"), ("self-harm", r"self[- ]harm|suicid"),
+ ("stress and burnout", r"stress|burnout"), ("assessment", r"assessment"), ("women's health", r"women|menopaus|perimenopaus|pelvic|pcos|endometrios"),
+ ("men's health", r"\bmen's|\bmen\b|prostate"), ("pelvic health", r"pelvic|continence|incontinence|bladder|bowel|prolapse"),
+ ("sports injuries", r"sport"), ("falls and balance", r"falls|balance|vestibular|dizz|vertigo"), ("lymphoedema", r"lymph"),
+ ("diabetes", r"diabet"), ("swallowing", r"swallow|dysphagia"), ("stuttering", r"stutter|fluency"), ("hand therapy", r"hand therap|\bhand\b|wrist"),
+ ("concussion", r"concussion"), ("stroke and neuro rehab", r"stroke|neurolog|parkinson|multiple sclerosis|\bms\b"), ("hypermobility", r"hypermobil|ehlers|\beds\b"),
+ ("ME/CFS", r"chronic fatigue|me/cfs|\bcfs\b|myalgic"), ("POTS/dysautonomia", r"\bpots\b|dysautonomia|postural orthostatic"), ("mitochondrial disease", r"mitochondri"),
+ ("gut health and IBS", r"\bibs\b|fodmap|irritable bowel|gut health|gastro"), ("coeliac", r"coeliac|celiac"), ("weight", r"weight"), ("kidney", r"kidney|renal"),
+ ("heart health", r"cardiac|heart|cholesterol"), ("cancer", r"cancer|oncolog"), ("older adults", r"older adult|ageing|aged care|elderly|dementia"),
+ ("feeding", r"feeding|fussy eat"), ("language and literacy", r"language|literacy|dyslex|reading"), ("voice", r"\bvoice\b"),
+ ("foot care", r"foot|feet|nail|orthotic|heel"), ("hearing and tinnitus", r"hearing|tinnitus|audiolog"), ("work injury", r"workers comp|work(place)? injur|icare|ctp\b"),
+]
+TAGRX = [(t, re.compile(rx, re.I)) for t, rx in TAGMAP]
+KIDRX = re.compile(r"child|adolesc|\bteen|youth|paediatric|\bkids\b|infant|toddler|young people|babies|preschool|school", re.I)
+def itags(p):
+    txt = " | ".join([p.get("specialty", ""), " ; ".join(p.get("interests") or []), " ; ".join(p.get("inclusive") or []), " ".join(x.get("tag", "") for x in p.get("listed_by") or [])])
+    out = [t for t, rx in TAGRX if rx.search(txt)]
+    for b in badges(p):
+        if b[0] == "ga" and "LGBTIQA+-affirming" not in out: out.append("LGBTIQA+-affirming")
+        if b[0] == "ab" and "First Nations" not in out: out.append("First Nations")
+    return out
+def flags(p):
+    pr = p.get("practical") or {}; f = []
+    if pr.get("telehealth") is True: f.append("tele")
+    if pr.get("bulk_billing") in ("yes", "some"): f.append("bb")
+    if pr.get("ndis") is True: f.append("ndis")
+    if KIDRX.search(" ".join([str(pr.get("ages") or ""), " ".join(p["_labels"]), p.get("specialty", "")])) and not re.match(r"^\s*adults?\b", str(pr.get("ages") or ""), re.I): f.append("kids")
+    if pr.get("new_patients") in ("yes", "limited"): f.append("np")
+    return f
+def pid(p): return "p-" + re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]
+TOGGLES = [("tele", "Telehealth"), ("bb", "Bulk billing stated"), ("ndis", "NDIS"), ("kids", "Kids"), ("np", "Accepting new patients (as stated)")]
+FINDNOTE = '<p class="sp-note">Listings are from public professional directories and practice websites, checked on the date shown. Not endorsements. Confirm details with the practice.</p>'
+def finder(ppl, hub=False):
+    from collections import Counter
+    c = Counter(t for p in ppl for t in itags(p) if t not in ("assessment",))
+    top = [t for t, n in c.most_common(14) if n >= (2 if len(ppl) > 6 else 1)]
+    lab = "Search by name, interest or suburb" + (" (all specialties)" if hub else "")
+    ph = "e.g. ADHD, perinatal, Maitland"
+    h = (f'<div class="sp-find" role="search"><label class="sp-search"><span>{lab}</span><input type="search" autocomplete="off" placeholder="{ph}" {"data-sp-search" if hub else "data-sp-filter"} aria-describedby="sp-find-note"></label>')
+    if top: h += '<div class="sp-chips sp-ichips" role="group" aria-labelledby="sp-gl-i"><span class="sp-gl" id="sp-gl-i">Interests</span>' + "".join(f'<button type="button" class="sp-chip sp-ichip" data-tag="{e(t)}" aria-pressed="false">{e(t)}</button>' for t in top) + "</div>"
+    h += '<div class="sp-chips sp-toggles" role="group" aria-labelledby="sp-gl-f"><span class="sp-gl" id="sp-gl-f">Show only</span>' + "".join(f'<button type="button" class="sp-chip sp-tog" data-flag="{k}" aria-pressed="false">{e(v)}</button>' for k, v in TOGGLES) + "</div>"
+    return h + f'<p class="sp-note" id="sp-find-note">Listings are from public professional directories and practice websites, checked on the date shown. Not endorsements. Confirm details with the practice.</p></div>'
+
+# Condition support organisations with their own provider lists (checked Nov 2026). "used": names matched to our listings (shown as badges);
+# otherwise link only (results not readable without a search app, no Hunter listings seen, or no public list).
+ORGS = [
+ ("AusPATH", "Find a provider", "https://auspath.org.au/providers/", "Trans and gender-diverse affirming health providers (GPs, specialists, psychologists, allied health).", True, ["psychology", "endocrinology", "psychiatry", "mental-health-social-workers", "sexual-health", "speech-pathology-adults"]),
+ ("TransHub (ACON)", "Find a doctor", "https://www.transhub.org.au/doctor/", "Gender-affirming doctors in NSW.", False, ["endocrinology", "sexual-health", "psychiatry"]),
+ ("InsideOut Institute", "Treatment Services Database", "https://insideoutinstitute.org.au/treatment-team-builder", "Eating disorder clinicians and services (psychologists, dietitians, psychiatrists).", True, ["psychology", "psychology-children", "dietitians", "psychiatry"]),
+ ("ANZAED", "Find eating disorder help (credentialed clinicians)", "https://connected.anzaed.org.au/Connected/Connected/Find-Eating-Disorder-Help/Find-Eating-Disorder-Help.aspx", "ANZAED-credentialed eating disorder clinicians, by location or telehealth.", False, ["psychology", "psychology-children", "dietitians", "mental-health-social-workers"]),
+ ("Butterfly Foundation", "Find a professional", "https://butterfly.org.au/get-support/butterflys-referral-database/", "Eating disorder and body image referral database.", False, ["psychology", "dietitians"]),
+ ("AADPA", "ADHD Professionals Directory", "https://directory.aadpa.com.au/", "ADHD clinicians: psychiatrists, paediatricians, GPs, psychologists, coaches.", False, ["psychology", "psychology-children", "psychiatry", "psychiatry-telehealth", "developmental-paediatrics", "occupational-therapy-children"]),
+ ("ADHD Australia", "ADHD treatment by state", "https://www.adhdaustralia.org.au/adhd-treatment-by-state/", "Where to start with ADHD care in each state.", False, ["psychology", "psychiatry"]),
+ ("Amaze (Autism Connect)", "National autism helpline", "https://www.amaze.org.au/support/", "Free helpline that helps find autism assessment and supports (no public practitioner list).", False, ["psychology-children", "developmental-paediatrics", "speech-pathology-children", "occupational-therapy-children"]),
+ ("Aspect", "Autism assessments", "https://www.autismspectrum.org.au/how-can-we-help/getting-a-diagnosis", "Aspect's own autism assessment and therapy services.", False, ["psychology-children", "developmental-paediatrics"]),
+ ("Australian POTS Foundation", "Clinician directory", "https://potsfoundation.org.au/clinician-directory/", "Clinicians with an interest in POTS and dysautonomia.", False, ["cardiology", "neurology", "exercise-physiology", "physiotherapy"]),
+ ("Mito Foundation", "Find a health professional", "https://www.mito.org.au/find-a-professional/", "Mito-aware clinicians and clinics (details via the Mito helpline).", False, ["neurology", "dietitians", "exercise-physiology"]),
+ ("Emerge Australia", "ME/CFS health practitioner directory", "https://directory.emerge.org.au/", "ME/CFS-aware GPs and health practitioners.", False, ["exercise-physiology", "physiotherapy", "occupational-therapy-adults", "dietitians"]),
+ ("Australasian Lymphology Association", "Find an accredited lymphoedema practitioner", "https://www.lymphoedema.org.au/accreditation-nlpr/find-a-practitioner/", "ALA-accredited lymphoedema practitioners (mostly physios and OTs).", False, ["physiotherapy", "occupational-therapy-adults", "medical-oncology", "radiation-oncology"]),
+ ("MS Australia", "MS clinics", "https://www.msaustralia.org.au/clinics/", "MS clinics by state (the Hunter listing is a public hospital clinic).", False, ["neurology", "physiotherapy"]),
+ ("Parkinson's NSW", "Parkinson's InfoLine", "https://www.parkinsonsnsw.org.au/have-you-called-the-parkinsons-infoline-yet/", "Phone line for finding Parkinson's nurses, clinics and allied health.", False, ["neurology", "physiotherapy", "speech-pathology-adults"]),
+ ("Coeliac Australia", "Ongoing management", "https://coeliac.org.au/learn/ongoing-management/", "Advice on seeing an accredited practising dietitian for coeliac disease.", False, ["dietitians", "gastroenterology"]),
+ ("Jean Hailes", "Persistent pelvic pain", "https://www.jeanhailes.org.au/health-topics/persistent-pelvic-pain/", "Pelvic pain and endometriosis information, and who can help.", False, ["obstetrics-and-gynaecology", "physiotherapy", "pain-medicine"]),
+ ("PANDA", "Perinatal mental health helpline", "https://www.panda.org.au/", "National perinatal anxiety and depression helpline.", False, ["psychology", "perinatal-psychiatry"]),
+ ("Gidget Foundation", "Gidget House", "https://www.gidgetfoundation.org.au/support/gidget-house", "Free perinatal psychology, including Gidget House Green Hills (East Maitland).", True, ["psychology", "perinatal-psychiatry", "obstetrics-and-gynaecology"]),
+]
+def orgsection():
+    li = "".join(f'<li><a href="{e(u)}" rel="noopener"><b>{e(o)}</b>: {e(t)}</a> {e(w)}</li>' for o, t, u, w, used, sl in ORGS)
+    return ('<section class="sp-orgs" id="condition-orgs"><h2>Condition support organisations with their own provider lists</h2>'
+            '<p>These organisations keep their own lists. Where we found one of our listings on a list, its card shows a small badge, e.g. “Listed by AusPATH”. Checked ' + CHECKED + '.</p><ul>' + li + '</ul></section>')
+def orgbox(slug):
+    hits = [(o, t, u) for o, t, u, w, used, sl in ORGS if slug in sl]
+    if not hits: return ""
+    return '<details class="sp-orgbox"><summary>Find a specialist through a condition organisation</summary><ul>' + "".join(f'<li><a href="{e(u)}" rel="noopener">Find through {e(o)}</a>: {e(t)}</li>' for o, t, u in hits) + '</ul><p><a href="/specialists/#condition-orgs">All condition organisations</a></p></details>'
 def card(p):
     pr = p.get("practical") or {}; lines = []
     if p.get("practice") and p["practice"] != p["name"]: lines.append(f'<span class="sp-prac">{e(p["practice"])}</span>')
@@ -154,8 +243,11 @@ def card(p):
     rest = [x for x in (p.get("inclusive") or []) if x not in used]
     if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
-    q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p))]).lower()
-    return (f'<li class="sp-card" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
+    lb = p.get("listed_by") or []
+    if lb: extra.append('<p class="sp-lb">' + "".join(f'<a class="sp-lbb" href="{e(x.get("url", ""))}" rel="noopener" title="Checked {e(x.get("checked", ""))}">{e(x.get("label") or ("Listed by " + x.get("org", "")))}</a>' for x in lb) + "</p>")
+    tg = itags(p)
+    q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p)), " ".join(tg), " ".join(x.get("org", "") for x in lb)]).lower()
+    return (f'<li class="sp-card" id="{pid(p)}" data-t="{e("|".join(tg))}" data-f="{" ".join(flags(p))}" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p><p class="sp-act"><button type="button" class="sp-sug">Suggest a tag</button> · <button type="button" class="sp-pr1">Print</button> · <a href="/contact/">Something wrong?</a></p></li>')
 CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><details class="sp-pf"><summary>More filters: fees, e-referrals, wait, access</summary><div class="sp-chips sp-pchips" role="group" aria-label="Practical">' + "".join(f'<button type="button" class="sp-chip sp-pb sp-pb-{c}" data-badge="{c}" aria-pressed="false">{e(lab)}</button>' for c, lab in PB) + '</div></details><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording and source. Many practices offer this care without advertising it.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
@@ -170,9 +262,10 @@ def head(title, desc, url):
     h = re.sub(r"<title>[^<]*</title>", f"<title>{e(title)}</title>", h)
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
-    return h + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
+    return h + SPCSS + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
 foot = src[src.index("<footer"):]
-SPJS = '<script src="/specialists/sp.js?v=6"></script>'
+SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-ichip,.sp-chip.sp-tog{padding:5px 11px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600;font-size:12.5px;min-height:32px}.sp-chip.sp-ichip[aria-pressed=true]{background:#4A3480;border-color:#4A3480;color:#fff}.sp-chip.sp-tog[aria-pressed=true]{background:#1F6457;border-color:#1F6457;color:#fff}.sp-chip.sp-tog[aria-pressed=true]::before,.sp-chip.sp-ichip[aria-pressed=true]::before{content:\"\\2713\";margin-right:2px}.sp-chip:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-gl{align-self:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}.sp-toggles{margin-top:6px}.sp-note{font-size:12px;color:var(--muted);margin:4px 0 8px}.sp-card .sp-lb{margin-top:4px}.sp-lbb{display:inline-block;margin:2px 6px 0 0;padding:2px 9px;border-radius:999px;border:1px solid #A8C3EE;background:#E6EFFC;color:#17468F;font-size:12px;font-weight:600;text-decoration:none}.sp-card.sp-hit,.sp-card:target{outline:3px solid #D4A017;outline-offset:2px}.sp-card{scroll-margin-top:80px}.sp-orgbox{margin:4px 0 10px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card)}.sp-orgbox summary{cursor:pointer;font-weight:600;font-size:14px}.sp-orgbox ul,.sp-orgs ul{margin:6px 0;padding-left:18px;font-size:14px}.sp-orgs li{margin:4px 0}.sp-results b{overflow-wrap:anywhere}@media print{.sp-find,.sp-orgbox{display:none!important}}</style>"
+SPJS = '<script src="/specialists/sp.js?v=7"></script>'
 if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
 else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
@@ -214,7 +307,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<p class="meta"><a href="/specialists/">Specialists and allied health</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
             f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
-            '<label class="sp-search"><span>Filter</span><input type="search" placeholder="Name, suburb or interest" data-sp-filter></label>' + langsel(ppl) + CHIPS + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
+            finder(ppl) + langsel(ppl) + CHIPS + orgbox(slug) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
@@ -224,13 +317,14 @@ SHORT = {"Orthopaedics: shoulder and elbow": "Ortho: shoulder & elbow", "Orthopa
 def tiles(keys):
     keys = sorted(keys, key=lambda k: SHORT.get(k, k).lower())
     return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/" title="{e(k)}"><b>{e(SHORT.get(k, k))}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
-allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/", "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or [])]).lower(), "sub": p.get("suburb", ""), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
+allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/#" + pid(p), "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(itags(p)), " ".join(x.get("org", "") for x in p.get("listed_by") or [])]).lower(), "sub": p.get("suburb", ""), "t": itags(p), "f": flags(p), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
+json.dump({"checked": CHECKED, "items": allc}, open("specialists/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
 desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
 page = (head(title, desc, "/specialists/") + '<h1>Specialists and allied health</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
         f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
-        '<label class="sp-search"><span>Search everyone</span><input type="search" placeholder="Name, specialty, suburb or interest" data-sp-search></label>' + CHIPS + '<ul class="sp-results" hidden></ul>'
-        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + DISC +
+        + finder(L, hub=True) + CHIPS + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
+        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + orgsection() + DISC +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(fix_html(page))
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))

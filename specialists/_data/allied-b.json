@@ -246,10 +246,20 @@
      "Aboriginal and Torres Strait Islander people listed as patient focus"
     ],
     "sources": [
-     "https://www.halaxy.com/profile/kelly-penniment-saich/psychologist/1759531"
+     "https://www.halaxy.com/profile/kelly-penniment-saich/psychologist/1759531",
+     "https://auspath.org.au/providers/"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "AusPATH",
+      "label": "Listed by AusPATH",
+      "url": "https://auspath.org.au/providers/",
+      "checked": "9 November 2026",
+      "tag": "trans and gender-affirming"
+     }
+    ]
    },
    {
     "name": "Newcastle Perinatal Place",
@@ -489,10 +499,20 @@
      "Welcomes people from all backgrounds, identities and neurotypes (stated)"
     ],
     "sources": [
-     "https://www.psychologytoday.com/au/counselling/marnie-britton-tundra-psychology-charlestown-nsw/1824358"
+     "https://www.psychologytoday.com/au/counselling/marnie-britton-tundra-psychology-charlestown-nsw/1824358",
+     "https://auspath.org.au/providers/"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "AusPATH",
+      "label": "Listed by AusPATH",
+      "url": "https://auspath.org.au/providers/",
+      "checked": "9 November 2026",
+      "tag": "trans and gender-affirming"
+     }
+    ]
    },
    {
     "name": "Myrtle Oak Clinic",
@@ -531,7 +551,16 @@
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/myrtle-oak-clinic-optimum-intake-dietitians/dietetics/5f54108c-8ba5-4fb7-8965-75a305b456fa"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "InsideOut Institute",
+      "label": "Listed by InsideOut Institute",
+      "url": "https://insideoutinstitute.org.au/treatment-services/myrtle-oak-clinic-wallsend",
+      "checked": "9 November 2026",
+      "tag": "eating disorders"
+     }
+    ]
    }
   ]
  },

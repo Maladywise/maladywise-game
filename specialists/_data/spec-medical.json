@@ -1306,10 +1306,20 @@
     ],
     "sources": [
      "https://maracas-roadrunner-zr9y.squarespace.com/dr-katie-wynne",
-     "https://maracas-roadrunner-zr9y.squarespace.com/"
+     "https://maracas-roadrunner-zr9y.squarespace.com/",
+     "https://auspath.org.au/providers/"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "AusPATH",
+      "label": "Listed by AusPATH",
+      "url": "https://auspath.org.au/providers/",
+      "checked": "9 November 2026",
+      "tag": "trans and gender-affirming"
+     }
+    ]
    },
    {
     "name": "Dr Judy Luu",
@@ -1384,10 +1394,20 @@
     ],
     "sources": [
      "https://maracas-roadrunner-zr9y.squarespace.com/dr-aiden-cheung",
-     "https://maracas-roadrunner-zr9y.squarespace.com/"
+     "https://maracas-roadrunner-zr9y.squarespace.com/",
+     "https://auspath.org.au/providers/"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "AusPATH",
+      "label": "Listed by AusPATH",
+      "url": "https://auspath.org.au/providers/",
+      "checked": "9 November 2026",
+      "tag": "trans and gender-affirming"
+     }
+    ]
    },
    {
     "name": "Dr Damien Jackel",
