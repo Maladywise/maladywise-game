@@ -907,39 +907,6 @@
   "name": "Pain Medicine",
   "people": [
    {
-    "name": "Dr Simon Tame",
-    "specialty": "Pain medicine (anaesthesia/pain)",
-    "practice": "Newcastle Pain Management",
-    "address": "Suite 3, 20 Smith Street, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "(02) 4923 8900",
-    "fax": "(02) 4947 8991",
-    "email": "",
-    "ereferral": "",
-    "website": "https://www.newcastlepainmanagement.com.au/",
-    "interests": [
-     "Chronic pain management"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [
-      "Lingard Private Hospital",
-      "Maitland Private Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://forsterprivate.cms.healthecare.com.au/specialists/dr-simon-tame"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Dr John Prickett",
     "specialty": "Pain medicine (anaesthesia/pain)",
     "practice": "Newcastle Pain Management",
