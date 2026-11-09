@@ -5,7 +5,11 @@
    dose (antibiotic / sponge, hold 2), armed from the pill button then tapped on an infected piece (cures it and infected neighbours).
    Untreated for 20 s, an infection turns resistant (needs 2 doses, spreads twice as fast, immune merge-cure no longer works).
    Infected pieces swell up to +15%. Wasted dose −10. +50 per cure (+20 if resistant). Earlier Sundays play exactly as before.
-   Determinism: only the drop PRNG (rnd) sets the drop order; infections use irnd, shake srnd; nothing new draws from rnd. */
+   From 16 Nov 2026 (Sydney date of the run): weekly specials (Mon Microgravity/Moon, Tue/Thu/Sat a mutation, Wed Blood Bank/Potluck,
+   Fri Sick Day/Grumpy, Sun Outbreak), 3 ward round goals, a collection book with hidden finds, learn mode, seasonal skins, Fever combos,
+   clutch saves and an end-of-game tally. From 15 Nov: infections drain points. ?debug=1 adds &sp=, &mut=, &skin=, &nofeat=1 and MW_mrg hooks.
+   Determinism: only the drop PRNG (rnd) sets the drop order; infections use irnd, shake srnd, and each new feature its own
+   (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
   var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
@@ -514,7 +518,7 @@
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
       if (chain > 1) { var bonus = NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0; score += bonus; TL.combo += bonus; combo(chain, bonus); if (JUICE) juiceChain(x, y, chain); }
-      if (JUICE && feverS > 0) { var fx = pts + (chain > 1 && NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0); score += fx; TL.fever += fx; floatTxt(x + 18, y - 30, "×2"); } // Fever doubles this merge's points
+      if (JUICE && feverS > 0) { var fx = pts + (chain > 1 && NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0); score += fx; TL.fever += fx; } // Fever doubles this merge's points
       if (JUICE && chain >= 3 && feverS <= 0) { meter = Math.min(METER, meter + 1); if (meter >= METER) startFever(); }
     });
     if (merges.length) { hud(); goalTick(false); }

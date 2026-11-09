@@ -94,6 +94,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
   - **Wed:** Blood Bank Wednesday (Normie: Potluck Wednesday). Pieces carry blood groups (flavours) and merge only if compatible. O− is everyone's favourite donor.
   - **Fri:** Sick Day Friday (Normie: Grumpy Friday). Every organ is a bit poorly: bloodshot eye, coughing lungs, brain freeze.
   - **Sun:** Outbreak Sunday (Normie: Slick Sunday). Infections drain your score until you treat them.
+- Also from 16 Nov: chains of 3+ merges fill a Fever meter (10 s of double points), a small "Saved!" bonus for pulling the pile back from the line, and an honest score tally at the end.
 - Also daily: 3 "Ward round" goals (Normie: "Today's jobs") with a sticker for all 3, a Collection book with hidden bonus finds, Learn mode, and seasonal skins (Christmas 1–26 Dec, Halloween 25–31 Oct, Easter week).
 - Teasers: playful, never mocking patients; no pressure to donate blood. Don't reveal hidden-find triggers beyond the in-game clues.
 
