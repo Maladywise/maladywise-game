@@ -1098,6 +1098,13 @@
 "label": "Condition",
 "title": "Measles"
 },
+"medicine-recalls": {
+"url": "/medicine-recalls/",
+"key": "925331c8d976",
+"v": "44480634",
+"label": "Medicine safety",
+"title": "Medicine recalls"
+},
 "medicines-ace-inhibitors": {
 "url": "/medicines/ace-inhibitors/",
 "key": "aa9d91a44232",
