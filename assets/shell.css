@@ -96,6 +96,7 @@ footer.site .static-nav a,.static-nav a{color:var(--ink);text-decoration:none;fo
 html[data-mode="normie"] .static-nav .sn-med{display:none}
 body>.static-nav{padding:0 16px 24px}
 footer.site .ft-base{font-size:12.5px;line-height:1.5;color:var(--muted)}
+footer.site .ft-ack{font-size:12px;line-height:1.5;color:var(--muted);margin:8px auto 0;max-width:640px}
 .ft-note{margin-right:12px}
 .ft-links{display:inline-flex;flex-wrap:wrap;justify-content:center;vertical-align:baseline}
 footer.site .ft-links>a,.ft-links>button{display:inline-block;padding:5px 1px;text-decoration:none;color:var(--muted);font-size:12.5px}
