@@ -665,38 +665,38 @@
   "date": "2026-12-19",
   "number": 56,
   "difficulty": "Hard",
-  "title": "A lone pustule",
-  "context": "A 24-year-old woman with fever, migrating joint pains and a few tender skin spots on her limbs.",
-  "question": "What's the diagnosis?",
+  "title": "Look at the edge of the iris",
+  "context": "A 32-year-old with a year of slurred speech and a tremor in both hands. Liver tests are mildly abnormal.",
+  "question": "What's the sign?",
   "img": {
    "url": "img/2026-12-19.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6384",
-   "author": "CDC/ Dr. Wiesner",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "Skin on a limb with a single pustule on a red base and a small paper ruler beside it."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Kayser-Fleischer_ring.jpg",
+   "author": "Herbert L. Fred, MD, and Hendrik A. van Dijk (cropped)",
+   "licence": "CC BY 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by/3.0/",
+   "alt": "Close-up of a grey-blue iris with a thin golden-brown band around its outer edge."
   },
-  "answer": "Disseminated gonococcal infection",
+  "answer": "Kayser–Fleischer ring",
   "wrong": [
-   "Infective endocarditis",
-   "Meningococcaemia",
-   "Rocky Mountain spotted fever",
-   "Reactive arthritis",
-   "Ecthyma gangrenosum"
+   "Arcus senilis",
+   "Corneal foreign body rust ring",
+   "Limbal ring",
+   "Iris naevus",
+   "Heterochromia iridis"
   ],
   "hints": [
-   "A sparse grey-centred pustule on a red base, with sore tendons and joints.",
-   "A sexually transmitted organism has spread through the blood."
+   "Look at the outer rim of the cornea: a golden-brown band that runs right up to the limbus, with no clear gap.",
+   "A metal is building up in a deep layer of the cornea, and in the liver and brain."
   ],
-  "why": "A small pustule with a grey centre and a red halo on a limb, one of only a few scattered lesions.",
+  "why": "A golden-brown band at the limbus, around the outer edge of the iris. It is copper laid down in Descemet's membrane, the deep inner layer of the cornea. It usually starts as a crescent at the top, and early rings may only be seen with a slit lamp. It points to Wilson's disease, but it is missing in about half of people whose Wilson's shows up as liver disease alone.",
   "assoc": [
-   "Neisseria gonorrhoeae",
-   "Tenosynovitis",
-   "Complement deficiency",
-   "Pregnancy"
+   "Wilson's disease",
+   "ATP7B gene",
+   "Low caeruloplasmin",
+   "Sunflower cataract"
   ],
-  "pearl": "The 'arthritis-dermatitis syndrome' is more common in women, especially around menstruation and pregnancy. Genital infection is often silent, so swabs from the cervix, urethra, throat and rectum matter even with no local symptoms."
+  "pearl": "Kayser–Fleischer rings are present in over 95% of people with neurological or psychiatric Wilson's disease, but in only about half of those who present with liver disease. A normal eye exam doesn't rule out Wilson's in a young person with unexplained liver disease."
  },
  {
   "date": "2026-12-20",
@@ -813,38 +813,38 @@
   "date": "2026-12-23",
   "number": 60,
   "difficulty": "Medium",
-  "title": "Streaks on the arm",
-  "context": "A bushwalker with an itchy rash in streaks along the forearm, two days after a hike.",
-  "question": "What's the diagnosis?",
+  "title": "A ring around the iris",
+  "context": "A 66-year-old woman with fatty liver and a mild tremor in her hands, in for a routine check. Her daughter has noticed a ring in both of her eyes.",
+  "question": "What's the sign?",
   "img": {
    "url": "img/2026-12-23.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=4484",
-   "author": "CDC",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "A forearm with raised red bumps and small blisters arranged in lines."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Arcus_Senilis.jpg",
+   "author": "Afrodriguezg (cropped)",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "alt": "Close-up of a brown iris with a pale ring around its outer edge."
   },
-  "answer": "Allergic contact dermatitis (plant)",
+  "answer": "Arcus senilis",
   "wrong": [
-   "Phytophotodermatitis",
-   "Shingles",
-   "Scabies",
-   "Insect bites",
-   "Cutaneous larva migrans"
+   "Kayser–Fleischer ring",
+   "Limbal ring",
+   "Band keratopathy",
+   "Corneal foreign body rust ring",
+   "Pinguecula"
   ],
   "hints": [
-   "Straight lines show where a leaf brushed the skin.",
-   "A delayed (type IV) allergy to plant oil."
+   "Very common at her age, and usually harmless.",
+   "Check the colour (white-grey, not golden-brown) and the thin clear band between the ring and the limbus."
   ],
-  "why": "Red papules and small vesicles in linear streaks along the forearm, matching where a plant touched the skin.",
+  "why": "A white-grey ring of lipid in the outer cornea, with a thin clear band between it and the limbus (the lucid interval of Vogt). Arcus usually starts at the top and bottom and fills in to a full circle. A Kayser–Fleischer ring is golden-brown copper in Descemet's membrane, runs right up to the limbus with no clear gap, and usually appears at the top first. Arcus in someone under 50 warrants a lipid check.",
   "assoc": [
-   "Urushiol",
-   "Poison ivy and poison oak",
-   "Rhus tree",
-   "Grevillea"
+   "Ageing",
+   "High cholesterol",
+   "Familial hypercholesterolaemia",
+   "Lucid interval of Vogt"
   ],
-  "pearl": "Linear streaks point to an outside cause. Worldwide, poison ivy and poison oak are the textbook triggers; in Australia, Rhus trees and some grevilleas can do the same. The blister fluid does not spread it, but oil left on clothes or tools can."
+  "pearl": "Tremor plus a ring in the eye doesn't always mean Wilson's disease. Colour and the clear gap tell arcus and Kayser–Fleischer rings apart. Arcus is usually harmless in older people, but under 50 it can be a clue to high cholesterol, including familial hypercholesterolaemia."
  },
  {
   "date": "2026-12-24",
