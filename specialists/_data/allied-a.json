@@ -853,6 +853,80 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Darren Glendenning",
+    "specialty": "Physiotherapy (sports)",
+    "practice": "Trinity Specialist Clinic",
+    "address": "92-94 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4062 0841",
+    "fax": "",
+    "email": "hello@trinityspecialist.com.au",
+    "ereferral": "",
+    "website": "https://www.trinityspecialist.com.au/team/darren-glendenning-trinity-specialist-clinic/",
+    "interests": [
+     "Shoulder, back and lower limb injuries",
+     "Rehabilitation before and after surgery",
+     "Pain science"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.trinityspecialist.com.au/meet-the-team/",
+     "https://www.trinityspecialist.com.au/team/darren-glendenning-trinity-specialist-clinic/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Anna Perkins",
+    "specialty": "Physiotherapy (clinical Pilates)",
+    "practice": "Trinity Specialist Clinic",
+    "address": "92-94 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4062 0841",
+    "fax": "",
+    "email": "hello@trinityspecialist.com.au",
+    "ereferral": "",
+    "website": "https://www.trinityspecialist.com.au/team/anna-perkins-physiotherapist-trinity-specialist-clinic-newcastle-nsw/",
+    "interests": [
+     "Complex and long-term conditions in adults",
+     "Spinal and neurological conditions",
+     "Clinical Pilates"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.trinityspecialist.com.au/meet-the-team/",
+     "https://www.trinityspecialist.com.au/team/anna-perkins-physiotherapist-trinity-specialist-clinic-newcastle-nsw/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -1182,6 +1256,44 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Mitchell Bowd",
+    "specialty": "Exercise physiology",
+    "practice": "Trinity Specialist Clinic",
+    "address": "92-94 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4062 0841",
+    "fax": "",
+    "email": "hello@trinityspecialist.com.au",
+    "ereferral": "",
+    "website": "https://www.trinityspecialist.com.au/team/mitchell-bowd-trinity-specialist-clinic/",
+    "interests": [
+     "Pain science",
+     "Exercise for people with cancer",
+     "Occupational health",
+     "Health coaching"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.trinityspecialist.com.au/meet-the-team/",
+     "https://www.trinityspecialist.com.au/team/mitchell-bowd-trinity-specialist-clinic/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },

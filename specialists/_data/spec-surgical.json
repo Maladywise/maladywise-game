@@ -1511,6 +1511,163 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Associate Professor Felicity Park",
+    "specialty": "Obstetrician (maternal fetal medicine)",
+    "practice": "Obstetrics Newcastle",
+    "address": "Suite 1.6, Level 1, Newcastle Private Medical Suites, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "02 4952 6299",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.obstetricsnewcastle.com.au/our-team",
+    "interests": [
+     "Maternal fetal medicine",
+     "Preventing pregnancy complications"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.obstetricsnewcastle.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Ken Tan",
+    "specialty": "Obstetrician and obstetric ultrasound",
+    "practice": "Obstetrics Newcastle",
+    "address": "Suite 1.6, Level 1, Newcastle Private Medical Suites, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "02 4952 6299",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.obstetricsnewcastle.com.au/our-team",
+    "interests": [
+     "Pregnancy ultrasound",
+     "Saline infusion sonography for fertility"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.obstetricsnewcastle.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Professor Craig Pennell",
+    "specialty": "Obstetrician (maternal fetal medicine)",
+    "practice": "Obstetrics Newcastle",
+    "address": "Suite 1.6, Level 1, Newcastle Private Medical Suites, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "02 4952 6299",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.obstetricsnewcastle.com.au/our-team",
+    "interests": [
+     "Maternal fetal medicine"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.obstetricsnewcastle.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Ailsa Borbolla Foster",
+    "specialty": "Obstetrician (maternal fetal medicine)",
+    "practice": "Obstetrics Newcastle",
+    "address": "Suite 1.6, Level 1, Newcastle Private Medical Suites, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "02 4952 6299",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.obstetricsnewcastle.com.au/our-team",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.obstetricsnewcastle.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Rina Fyfe",
+    "specialty": "Obstetrician (maternal fetal medicine and ultrasound)",
+    "practice": "Obstetrics Newcastle",
+    "address": "Suite 1.6, Level 1, Newcastle Private Medical Suites, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6555",
+    "fax": "02 4952 6299",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.obstetricsnewcastle.com.au/our-team",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.obstetricsnewcastle.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -3167,6 +3324,41 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Professor Aniruddh Deshpande",
+    "specialty": "Paediatric urology surgeon",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/prof-aniruddh-deshpande/",
+    "interests": [
+     "Bladder problems and complex incontinence in children",
+     "Keyhole paediatric urology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/",
+     "https://ishana.com.au/specialists/prof-aniruddh-deshpande/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -6141,6 +6333,110 @@
     "sources": [
      "https://www.lakemacpaediatrics.com.au/",
      "https://www.lakemacpaediatrics.com.au/dr-krista-monkhouse/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Shirleen Balbir Singh",
+    "specialty": "Consultant paediatrician",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/shirleen-balbir-singh/",
+    "interests": [
+     "Acute and complex general paediatrics"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "newborns to adolescents",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/",
+     "https://ishana.com.au/specialists/shirleen-balbir-singh/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Rebecca Healey",
+    "specialty": "General paediatrician",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/rebecca-healey/",
+    "interests": [
+     "Aboriginal health",
+     "Rural health",
+     "Children in out-of-home care",
+     "Refugee health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/",
+     "https://ishana.com.au/specialists/rebecca-healey/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Prima Paul",
+    "specialty": "Consultant paediatrician",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/dr-prima-paul/",
+    "interests": [
+     "General paediatrics",
+     "Developmental paediatrics",
+     "Children's kidney problems",
+     "Children's neurology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/",
+     "https://ishana.com.au/specialists/dr-prima-paul/"
     ],
     "checked": "9 November 2026"
    }

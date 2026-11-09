@@ -1546,6 +1546,74 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jack Ao",
+    "specialty": "Ophthalmology (cornea, cataract and refractive surgery)",
+    "practice": "personalEYES Morisset",
+    "address": "64 Newcastle Street, Morisset NSW 2264",
+    "suburb": "Morisset",
+    "phone": "02 4977 3325",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.personaleyes.com.au/our-doctors-and-ophthalmologists/dr-jack-ao",
+    "interests": [
+     "Cornea",
+     "Cataract",
+     "Laser and lens vision correction",
+     "Corneal transplant"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.personaleyes.com.au/locations/morisset",
+     "https://www.personaleyes.com.au/our-doctors-and-ophthalmologists/dr-jack-ao"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Professor Andrew White",
+    "specialty": "Ophthalmology (glaucoma)",
+    "practice": "personalEYES Morisset",
+    "address": "64 Newcastle Street, Morisset NSW 2264",
+    "suburb": "Morisset",
+    "phone": "02 4977 3325",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.personaleyes.com.au/our-doctors-and-ophthalmologists/proffessor-andrew-white",
+    "interests": [
+     "Glaucoma",
+     "Cataract surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.personaleyes.com.au/locations/morisset",
+     "https://www.personaleyes.com.au/our-doctors-and-ophthalmologists/proffessor-andrew-white"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -2468,6 +2536,41 @@
     "sources": [
      "https://www.newcastlepaediatric.com.au/our-team/",
      "https://www.newcastlepaediatric.com.au/our-team/dr-komal-vora/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Alice Tang",
+    "specialty": "Endocrinology (adult)",
+    "practice": "Hunter Endocrinology",
+    "address": "Newcastle Healthcare Building, Suite 2B, 282 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4935 9000",
+    "fax": "02 4957 6964",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterendo.com.au/about/",
+    "interests": [
+     "Excess weight",
+     "Type 2 diabetes",
+     "Thyroid disease",
+     "Osteoporosis",
+     "Calcium disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterendo.com.au/about/"
     ],
     "checked": "9 November 2026"
    }
