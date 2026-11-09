@@ -135,6 +135,7 @@ DEEP_DIVES = {
     "mould": ("mould-damp-health-effects-pathways-diagram", "Mould and damp health effects diagram: allergy, irritation, HP, ABPA and invasive disease; CIRS unproven"),
     "pots": ("pots-active-stand-test-flowchart", "POTS active stand test flowchart: lying, then standing 10 minutes with heart rate checks"),
     "prostate-cancer": ("prostate-cancer-psa-testing-pathway-flowchart", "Prostate cancer pathway flowchart: PSA testing, repeat PSA, MRI, biopsy and staging"),
+    "type-2-diabetes": ("type-2-diabetes-ectopic-fat-beta-cell-pathophysiology-diagram", "Type 2 diabetes diagram: genes and excess energy, ectopic fat, insulin resistance and beta-cell failure, hyperglycaemia"),
     "stroke": ("stroke-types-ischaemic-haemorrhagic-flowchart", "Stroke types flowchart: ischaemic stroke causes and intracerebral and subarachnoid haemorrhage"),
 }
 

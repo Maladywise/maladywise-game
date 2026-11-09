@@ -498,8 +498,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "f545b633f41a",
-"v": "c8c8b8db",
+"key": "70c994e7fdd7",
+"v": "8310e76d",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -558,6 +558,13 @@
 "v": "7c6ba894",
 "label": "Deep dive for clinicians · #1",
 "title": "Stroke"
+},
+"deep-dives-type-2-diabetes": {
+"url": "/deep-dives/type-2-diabetes/",
+"key": "1f29c9e3ba7a",
+"v": "f7492053",
+"label": "Deep dive for clinicians · #9",
+"title": "Type 2 diabetes"
 },
 "dementia-prevention": {
 "url": "/dementia-prevention/",
@@ -1727,6 +1734,13 @@
 "v": "a1849213",
 "label": "Specialists",
 "title": "Specialists and allied health"
+},
+"specialists-aboriginal-and-torres-strait-islander-health": {
+"url": "/specialists/aboriginal-and-torres-strait-islander-health/",
+"key": "4a6301c8e12f",
+"v": "7c8a9afc",
+"label": "Specialists",
+"title": "Aboriginal and Torres Strait Islander health"
 },
 "specialists-audiology": {
 "url": "/specialists/audiology/",
