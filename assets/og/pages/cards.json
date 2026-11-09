@@ -1049,6 +1049,13 @@
 "label": "Fact sheet",
 "title": "Lactose intolerance"
 },
+"leptospirosis": {
+"url": "/leptospirosis/",
+"key": "c099fe4f7bac",
+"v": "98c37637",
+"label": "Fact sheet",
+"title": "Leptospirosis"
+},
 "long-covid": {
 "url": "/long-covid/",
 "key": "5e0711413e95",
