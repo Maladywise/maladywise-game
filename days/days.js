@@ -215,14 +215,15 @@
   }
 
   // ---------- 3. Full-year list: search + filters ----------
-  var listEl = document.getElementById("dl-list"), q = document.getElementById("dl-q"), listYr = null, F = "", IDX = [];
+  var listEl = document.getElementById("dl-list"), q = document.getElementById("dl-q"), listYr = null, F = "", IDX = [], OPEN = {};
   function norm(t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’']/g, ""); }
   function renderList(yr) {
+    if (listYr !== yr) { OPEN = {}; OPEN["m-" + yr + "-" + (yr === TODAY.slice(0, 4) ? TODAY.slice(5, 7) : "01")] = true; }
     listYr = yr; document.getElementById("all-yr").textContent = yr;
     var evs = ofYear(yr), h = "";
     for (var m = 0; m < 12; m++) {
       var mm = ("0" + (m + 1)).slice(-2), its = evs.filter(function (x) { return x.dates[yr].start.slice(5, 7) === mm; });
-      if (its.length) h += '<section class="dl-mo" id="m-' + yr + "-" + mm + '"><h3>' + MONTHS[m] + " " + yr + '</h3><ol class="dl">' + its.map(function (x) { return item(x, yr, true); }).join("") + "</ol></section>";
+      if (its.length) h += '<section class="dl-mo" id="m-' + yr + "-" + mm + '"><h3><button type="button" class="dl-tog" aria-expanded="false">' + MONTHS[m] + " " + yr + ' <span class="dl-n">' + its.length + ' days</span></button></h3><ol class="dl">' + its.map(function (x) { return item(x, yr, true); }).join("") + "</ol></section>";
     }
     listEl.innerHTML = h;
     IDX = [].map.call(listEl.querySelectorAll(".dl-i"), function (li) {
@@ -238,11 +239,19 @@
       var ok = (!F || o.k.indexOf(" " + F + " ") >= 0) && w.every(function (t) { return o.t.indexOf(t) >= 0; });
       o.li.hidden = !ok; if (ok) n++;
     });
-    [].forEach.call(listEl.querySelectorAll(".dl-mo"), function (s) { s.hidden = !s.querySelector(".dl-i:not([hidden])"); });
+    var act = w.length > 0 || !!F; // searching or filtering opens every month with a match; otherwise one month at a time
+    [].forEach.call(listEl.querySelectorAll(".dl-mo"), function (s) {
+      s.hidden = !s.querySelector(".dl-i:not([hidden])");
+      var open = act || !!OPEN[s.id], ol = s.querySelector("ol"), b = s.querySelector(".dl-tog");
+      if (ol) ol.hidden = !open; if (b) { b.setAttribute("aria-expanded", open ? "true" : "false"); b.disabled = act; }
+    });
     document.getElementById("dl-none").hidden = n > 0;
     document.getElementById("dl-count").textContent = n === IDX.length ? n + " days, weeks and months" : "Showing " + n + " of " + IDX.length;
   }
   function initList() {
+    function openHash() { var t = location.hash && document.getElementById(location.hash.slice(1)); var sm = t && t.closest && t.closest(".dl-mo"); if (sm && !OPEN[sm.id]) { OPEN[sm.id] = true; filter(); t.scrollIntoView(); } }
+    window.addEventListener("hashchange", openHash); setTimeout(openHash, 0);
+    listEl.addEventListener("click", function (e) { var b = e.target.closest(".dl-tog"); if (!b) return; var s = b.closest(".dl-mo"); OPEN[s.id] = !OPEN[s.id]; filter(); });
     document.querySelector(".dl-tools").hidden = false;
     q.addEventListener("input", filter);
     var chips = document.querySelector(".dl-chips");
@@ -256,6 +265,7 @@
       if (q.value || F) { q.value = ""; F = ""; [].forEach.call(chips.children, function (c, i) { c.setAttribute("aria-pressed", i === 0); }); filter(); }
       var li = IDX.map(function (o) { return o.li; }).filter(function (li) { return li.getAttribute("data-e") >= TODAY && li.getAttribute("data-k").indexOf("month") < 0; })[0];
       if (!li) return;
+      var sm = li.closest(".dl-mo"); if (sm && !OPEN[sm.id]) { OPEN[sm.id] = true; filter(); }
       [].forEach.call(listEl.querySelectorAll(".is-now"), function (x) { x.classList.remove("is-now"); });
       li.classList.add("is-now"); li.scrollIntoView({ block: "start", behavior: "smooth" });
     };

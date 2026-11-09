@@ -330,12 +330,12 @@
   var Q = [], busy = false;
   function show(sc) {
     busy = true;
-    var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to continue</span></div>');
+    var o = el('<div class="cb ' + sc.cls + (quiet() ? " still" : "") + '" role="status" aria-live="polite">' + sc.html + '<span class="cb-tap">Tap to skip</span></div>');
     var done = false;
     function bye() { if (done) return; done = true; o.classList.add("out"); setTimeout(function () { o.remove(); busy = false; if (Q.length) show(Q.shift()); }, 260); }
     try { var cap0 = o.querySelector(".cb-cap"), bub0 = o.querySelector(".cb-bub"); if (cap0 && bub0 && cap0.textContent.toLowerCase().indexOf(bub0.textContent.toLowerCase().replace(/[.!]+$/, "")) >= 0) { var M0 = window.MW_MASCOTS || {}, alt = null; Object.keys(M0).forEach(function (k) { var c = M0[k].cheer || []; if (!alt && c.indexOf(bub0.textContent) >= 0) { var opts = c.filter(function (x) { return cap0.textContent.toLowerCase().indexOf(x.toLowerCase().replace(/[.!]+$/, "")) < 0; }); if (opts.length) alt = opts[Math.floor(Math.random() * opts.length)]; } }); if (alt) bub0.textContent = alt; } } catch (e) {}
     o.addEventListener("click", bye); document.body.appendChild(o);
-    setTimeout(bye, sc.ms || (quiet() ? 1800 : 2600));
+    setTimeout(bye, sc.ms || (quiet() ? 1200 : 1700));
   }
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function mascotHelp(g) {
@@ -354,7 +354,7 @@
     var sc0 = f(st); if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
-    if (g && st.win) { var t = sydToday(); if ((!g.weekly && !g.dailyLine || ((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] && (((g.nmode ? MW_EINSTEIN_N : MW_EINSTEIN)[g.id]) || []).indexOf(t) >= 0) && diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 3000, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
+    if (g && st.win) { var t = sydToday(); if ((!g.weekly && !g.dailyLine || ((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] && (((g.nmode ? MW_EINSTEIN_N : MW_EINSTEIN)[g.id]) || []).indexOf(t) >= 0) && diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 2200, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
   }
   var BADGES = { 3: ["Intern", "\ud83e\ude7a"], 7: ["Registrar", "\ud83e\udd47"], 14: ["Fellow", "\ud83c\udf93"], 30: ["Consultant", "\ud83c\udfc6"], 100: ["Professor", "\ud83d\udc51"] };
   if (NORMIE) BADGES = { 3: ["Regular", "\u2b50"], 7: ["Enthusiast", "\ud83e\udd47"], 14: ["Expert", "\ud83c\udf93"], 30: ["Legend", "\ud83c\udfc6"], 100: ["Grandmaster", "\ud83d\udc51"] };
@@ -362,13 +362,13 @@
     var t = sydToday(), sk = siteStreak().n, b = BADGES[sk];
     if (b && get(mk("mw-badge-" + sk), "") !== t && !get(mk("mw-badge-" + sk + "-got"), 0)) {
       set(mk("mw-badge-" + sk + "-got"), 1);
-      queue({ cls: "cb-badge", ms: 3200, html: '<div class="cb-medal">' + b[1] + '</div><p class="cb-cap">\ud83d\udd25 ' + sk + "-day streak. Promoted to " + b[0] + ".</p>" });
+      queue({ cls: "cb-badge", ms: 2400, html: '<div class="cb-medal">' + b[1] + '</div><p class="cb-cap">\ud83d\udd25 ' + sk + "-day streak. Promoted to " + b[0] + ".</p>" });
     }
     var daily = (window.MW_GAMES || []).filter(function (x) { return x.live && !x.weekly && x.store && inMode(x); });
     var all = daily.every(function (x) { var s2 = get(x.store.day + t, null); return s2 && s2.done; });
     if (all && get(mk("mw-wrc"), "") !== t) {
       set(mk("mw-wrc"), t);
-      queue({ cls: "cb-wrc", ms: 3600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">' + (NORMIE ? "Clean<br>sweep" : "Ward round<br>complete") + '</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
+      queue({ cls: "cb-wrc", ms: 2600, html: confetti(["#4A3480", "#2E7D6B", "#B23A6F", "#B07A0C", "#2F5DA8", "#C2553A", "#1F7A8C"], 60) + '<div class="cb-big">' + (NORMIE ? "Clean<br>sweep" : "Ward round<br>complete") + '</div><p class="cb-cap">All ' + daily.length + " done. Go home. Hydrate.</p>" });
     }
   }
   window.MW_celebrate = celebrate;
@@ -838,9 +838,10 @@
 
   // ---------- top bar ----------
   function topBar(g, home) {
+    var ARC = !g && /^\/(stackulus|mergeon|basil-clover)\//.test(location.pathname); // arcade games get the same back-arrow bar as the daily games
     var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
     var bar = el('<header class="bar"><div class="bar-in">' +
-      (g ? '<a class="back" href="../" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
+      (g || ARC ? '<a class="back" href="' + (g ? "../" : "/") + '" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
       (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + navHTML() +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +

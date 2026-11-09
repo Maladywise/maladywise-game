@@ -100,3 +100,10 @@
 @media (max-width:420px){.dl-i{grid-template-columns:1fr;gap:2px}.dl-i time{padding:0}}
 @media (min-width:640px){.cal-c{min-height:56px}}
 @media (min-width:640px){.cal-pick{flex:0 1 260px}.cal-nav .cal-today{margin-right:auto}}
+
+.dl-tog{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:44px;cursor:pointer;font:inherit;color:inherit}
+.dl-tog::after{content:"▾";font-size:14px;color:var(--muted);transition:transform .15s}
+.dl-tog[aria-expanded="false"]::after{transform:rotate(-90deg)}
+.dl-tog:disabled{cursor:default}.dl-tog:disabled::after{display:none}
+.dl-tog:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
+.dl-n{margin-left:auto;font:500 13px var(--body);color:var(--muted)}

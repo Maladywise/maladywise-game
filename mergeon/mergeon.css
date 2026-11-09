@@ -186,3 +186,7 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg .tpb{margin:4px 0 0;text-align:center;font-weight:700;color:var(--gold);opacity:0;transform:scale(.8);transition:all .3s}
 #mrg .tpb.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){#mrg .trow,#mrg .tpb{transition:none}}
+
+.mrg-help-more{margin:0 0 12px;border-top:1px solid var(--line,#D9D1E3);padding-top:6px}
+.mrg-help-more summary{cursor:pointer;font-weight:600;font-size:14.5px;min-height:44px;display:flex;align-items:center;color:var(--accent,#4A3480)}
+.mrg-help-more ul{margin-top:6px}

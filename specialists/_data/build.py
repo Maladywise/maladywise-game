@@ -393,8 +393,8 @@ for lab, ppl in CATS.items():
     slug = slugify(lab); url = f"/specialists/{slug}/"; urls.append(url)
     os.makedirs("specialists/" + slug, exist_ok=True)
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
-    desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
-    if lab in SERVICE_LABELS: desc = f"{lab} services in Newcastle and the Hunter, NSW: Aboriginal Community Controlled Health Organisations, Aboriginal Health Workers, care coordination and hospital liaison, from official pages."
+    desc = f"{lab} in Newcastle and the Hunter, NSW: practice contacts, addresses and stated interests. A directory, not a recommendation."
+    if lab in SERVICE_LABELS: desc = f"{lab} services in Newcastle and the Hunter, NSW: Aboriginal medical services, health workers and hospital liaison."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
             finder(ppl, extra=langsel(ppl)) + LANGNOTE + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC_SVC if lab in SERVICE_LABELS else DISC}{FINDNOTE}\n')
@@ -409,7 +409,7 @@ def tiles(keys):
 allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/#" + pid(p), "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(itags(p)), " ".join(x.get("org", "") for x in p.get("listed_by") or []), " ".join(langs(p)), fwords(p)]).lower(), "sub": p.get("suburb", ""), "t": itags(p), "f": flags(p), "l": lkeys(p), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
 json.dump({"checked": CHECKED, "items": allc}, open("specialists/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
-desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
+desc = "Specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, interests, languages and inclusive-practice notes."
 page = (head(title, desc, "/specialists/", hub=True) + '<h1>Specialists and allied health</h1>'
         f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'
         + finder(L, hub=True, extra=langsel(L)) + LANGBOX + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'

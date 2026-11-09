@@ -73,12 +73,12 @@ function lbName(s, b) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "
 // boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge),
 // sdaily (Sudokrine: today's fastest times; s = seconds, r = 1 Medical or 2 Normie),
 // mdaily, mall (Mergeon: today's daily run and best daily run of all time; r = top piece level 0-10)
-const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily", "sdaily", "mdaily", "mall"];
-const DAILY_BOARDS = ["daily", "vdaily", "odaily", "sdaily", "mdaily"];
+const BOARDS = ["all", "daily", "vall", "vdaily", "oall", "odaily", "sdaily", "mdaily", "mall", "ndaily", "nall"];
+const DAILY_BOARDS = ["daily", "vdaily", "odaily", "sdaily", "mdaily", "ndaily"];
 const ASC_BOARDS = ["sdaily"]; // lower score is better
 function lbAsc(b) { return ASC_BOARDS.indexOf(b) >= 0; }
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
-function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : "lb:all"; }
+function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : b === "nall" ? "lb:nall" : "lb:all"; }
 // score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
 // Hard per-board ceilings on top of the shape checks below (score s, round/level r). The live boards couldn't be read
 // when these were set, so they come from each game's scoring rules with generous headroom; rejected posts are logged
@@ -86,7 +86,7 @@ function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydD
 const SCORE_MAX = Object.assign({
   all: [10000000, 500], daily: [5000000, 500], vall: [10000000, 500], vdaily: [5000000, 500], // Basil + Clover
   oall: [10000000, 300], odaily: [5000000, 300],                                              // Stackulus
-  mdaily: [20000, 10], mall: [20000, 10],                                                       // Mergeon
+  mdaily: [2000000, 10], mall: [2000000, 10], ndaily: [2000000, 10], nall: [2000000, 10],     // Mergeon (n = Normie)
   sdaily: [7200, 2],                                                                            // Sudokrine (seconds)
 }, (() => { try { return JSON.parse(process.env.SCORE_MAX || "{}"); } catch (e) { console.error("SCORE_MAX is not valid JSON; ignoring it"); return {}; } })());
 const scoreHits = new Map();     // per-IP-hash timestamps of recent /score posts (memory only)
@@ -103,7 +103,7 @@ function lbPlausible(b, s, r) { const m = SCORE_MAX[b]; return !m || (s <= m[0] 
 function lbValid(b, s, r, raw) {
   if (!Number.isFinite(s) || !Number.isFinite(r) || !lbPlausible(b, s, r)) return false;
   if (b === "sdaily") return /^\d{1,5}$/.test(String(raw || "")) && s >= 20 && s <= 7200 && (r === 1 || r === 2); // 20 s to 2 h, whole seconds
-  if (b === "mdaily" || b === "mall") return /^\d{1,5}$/.test(String(raw || "")) && s > 0 && s <= 20000 && r >= 0 && r <= 10; // Mergeon: r = top piece level
+  if (b === "mdaily" || b === "mall" || b === "ndaily" || b === "nall") return /^\d{1,7}$/.test(String(raw || "")) && s > 0 && s <= 2000000 && r >= 0 && r <= 10; // Mergeon: r = top piece level
   if (b.charAt(0) === "o") return s > 0 && r >= 1 && r <= 999 && s <= 4000 * r * r && s <= 50000000;
   return s > 0 && r >= 1 && r <= 500 && s <= 6000 * r * r && s <= 50000000;
 }

@@ -36,8 +36,8 @@ SOON = os.path.join(ROOT, "data", "days-soon.json")  # home page day box (see wr
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 BASE = "https://maladywise.com/days/"
 PUZZLES_FROM = "2026-10-17"  # first day of Malady Wise puzzles; keep in step with days.js
-JS_V = "4"
-CSS_V = 3
+JS_V = 5
+CSS_V = 4
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
           "September", "October", "November", "December"]

@@ -1136,3 +1136,17 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 /* game pages: keep the About, archive and "More games" boxes the same width as the game and newsletter card */
 .mw-about,.mwx{max-width:650px;margin-left:auto;margin-right:auto;box-sizing:border-box}
 .mw-sharecard{max-width:650px;margin-left:auto;margin-right:auto;box-sizing:border-box}
+/* review fixes (Nov 2026): on-palette links in game "About" boxes; 44px touch targets without changing the look */
+.mw-about a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:2px}
+.icon-btn,.mw-mode button,.back,.logo{position:relative}
+.icon-btn::after,.mw-mode button::after{content:"";position:absolute;inset:-5px -3px}
+.back::after{content:"";position:absolute;inset:-13px -10px}
+.mw-about details summary,.mw-faq summary,details.od-rules summary,main details>summary{min-height:44px;padding-top:11px;padding-bottom:11px;box-sizing:border-box;cursor:pointer}
+.static-nav a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center}
+footer.site .soc a,footer.site .ft-links a,footer.site .mw-fbl{min-height:44px;display:inline-flex;align-items:center}
+.mw-sc-btn{min-height:44px}
+.mwx-all{display:inline-flex;align-items:center;min-height:44px}
+html[data-theme="dark"] .mwstreak b{color:#F08A6E}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) .mwstreak b{color:#F08A6E}}
+.sp-card .sp-np-limited{color:#8A5E00}.sp-card .sp-np-no{color:#B0432B}
+html[data-theme="dark"] .sp-card .sp-np-limited{color:#F0B940}html[data-theme="dark"] .sp-card .sp-np-yes{color:#6CCFB6}html[data-theme="dark"] .sp-card .sp-np-no{color:#F08A6E}

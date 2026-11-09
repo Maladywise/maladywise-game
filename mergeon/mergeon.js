@@ -291,7 +291,8 @@
       '<p class="mrg-help-chain">' + chain + '</p><ul>' +
       '<li><b>Aim and drop.</b> Move left or right (drag, mouse or arrow keys), then tap or press Space to drop the ' + thing + '.</li>' +
       '<li><b>Two the same merge</b> into the next one up the chain, from ' + O[0].n.toLowerCase() + ' to ' + O[O.length - 1].n.toLowerCase() + '. Bigger merges score more.</li>' +
-      '<li><b>Don’t cross the dashed line.</b> If the pile stays above it for a couple of seconds, it’s game over.</li>' +
+      '<li><b>Don’t cross the dashed line.</b> If the pile stays above it for a couple of seconds, it’s game over.</li></ul>' +
+      '<details class="mrg-help-more"><summary>More rules, tools and today’s twist</summary><ul>' +
       '<li><b>Chain reactions:</b> quick merges in a row multiply your points.</li>' +
       '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
       '<li>' + pic(WILD, 22) + ' <b>' + (NORMIE ? "Pearl" : "Stem cell") + ' (wild):</b> a rare drop that merges with any ' + thing + ' and turns it into the next one up.</li>' +
@@ -305,7 +306,7 @@
         "<li><b>Fever:</b> chains of 3+ merges fill the slim meter at the top. Fill it for 10 s of double points. Pull the pile back from the line for a <b>Saved!</b> bonus.</li>" +
         "<li><b>" + esc(K.GOALW) + ":</b> 3 small goals a day (tap 📋). Tick all 3 in your daily run for a sticker. Sparkles hide bonus finds for your 📖 collection.</li>" +
         '<li><label class="mrg-help-learn"><input type="checkbox" id="mrg-help-learn"' + (LEARN ? " checked" : "") + "> <b>Learn mode:</b> names on pieces and a fact with each merge.</label></li>" : "") +
-      '</ul><button type="button" class="mrg-help-go" id="mrg-help-go">Got it</button></div>';
+      '</ul></details><button type="button" class="mrg-help-go" id="mrg-help-go">Let’s play</button></div>';
   }
   function showHelp() {
     var o = document.getElementById("mrg-help-ov"); if (o) o.remove();
@@ -337,7 +338,8 @@
   var day = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && dayNum(qd) <= dayNum(REAL)) ? qd : REAL;
   function isLive() { return day === REAL; }
   function num(d) { return dayNum(d) - dayNum(FIRST) + 1; }
-  var SKEY = "mrg-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, hi: 0, dist: [0, 0, 0, 0, 0] });
+  var MK = NORMIE ? "n-" : "", BD = NORMIE ? "ndaily" : "mdaily", BA = NORMIE ? "nall" : "mall"; // Normie keeps its own daily run, stats and leaderboards
+  var SKEY = "mrg-stats" + (NORMIE ? "-n" : ""), stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, hi: 0, dist: [0, 0, 0, 0, 0] });
   var KEY, st;
   var NEWDAY = "2026-11-08"; // new features start with this daily; earlier dailies (incl. 7 Nov) stay exactly as dealt
   function weekday(d) { return (dayNum(d) + 4) % 7; } // 0 = Sunday
@@ -1321,9 +1323,9 @@
 
   // ---------- world leaderboards (Malady Wise counter server): today's daily (mdaily) and all-time (mall) ----------
   // Used ONLY once the server echoes board === "mdaily": an older server maps unknown boards to Basil + Clover's "all", so until then nothing shows or posts.
-  var LB = "https://mw-presence.onrender.com", MLB = false, lbs = { mdaily: null, mall: null }, lbTab = "mdaily";
+  var LB = "https://mw-presence.onrender.com", MLB = false, lbs = {}, lbTab = BD; lbs[BD] = null; lbs[BA] = null;
   var lbBox = document.createElement("div"); lbBox.className = "lb"; lbBox.hidden = true;
-  lbBox.innerHTML = '<div class="lbtabs" role="tablist"><button type="button" data-b="mdaily">Today’s top 10</button><button type="button" data-b="mall">All-time</button></div>' +
+  lbBox.innerHTML = '<div class="lbtabs" role="tablist"><button type="button" data-b="' + BD + '">Today’s top 10</button><button type="button" data-b="' + BA + '">All-time</button></div>' +
     '<form class="lbform" hidden><input maxlength="14" autocomplete="nickname" placeholder="Nickname (not your real name)" aria-label="Nickname for the world board (not your real name)"><button class="btn solid" type="submit">Post score</button></form><ol></ol><p class="note"></p>';
   var lbQ = function (s) { return lbBox.querySelector(s); };
   function pid() { var p = load("mrg-pid", null); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); put("mrg-pid", p); } return p; }
@@ -1336,14 +1338,14 @@
   function lbFetch(k) { if (!window.fetch) return; lbs[k] = "wait"; fetch(LB + "/top?b=" + k + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); }); }
   function lbProbe() {
     if (!window.fetch) return;
-    fetch(LB + "/top?b=mdaily&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j && j.board === "mdaily" && Array.isArray(j.rows)) { MLB = true; lbs.mdaily = j.rows; lbFetch("mall"); lbRender(); }
+    fetch(LB + "/top?b=" + BD + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.board === BD && Array.isArray(j.rows)) { MLB = true; lbs[BD] = j.rows; lbFetch(BA); lbRender(); }
     }).catch(function () {});
   }
   function lbPost(n) {
     if (!lbCan()) return;
     st.posted = true; put(KEY, st); put("mrg-name", n);
-    ["mdaily", "mall"].forEach(function (k) {
+    [BD, BA].forEach(function (k) {
       lbs[k] = "wait";
       var u = LB + "/score?b=" + k + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(st.score) + "&r=" + Math.max(0, Math.min(10, st.top));
       fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); });
@@ -1363,7 +1365,7 @@
     if (!rows.length) { el.innerHTML = '<li class="none">No scores yet. Be the first.</li>'; return; }
     var mine = -1;
     el.innerHTML = rows.map(function (r, i) { if (r.me && mine < 0) mine = i; var lv = Math.max(0, Math.min(10, r.r | 0)); return "<li" + (r.me ? ' class="me"' : "") + '><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + "</span>" + pic(lv, 18) + '<span class="sc">' + fmt(r.s) + "</span></li>"; }).join("");
-    note.textContent = mine >= 0 ? "You’re #" + (mine + 1) + (lbTab === "mdaily" ? " today." : " of all time.") : lbTab === "mdaily" ? "Daily runs only. Sydney time. Names are public." : "Best daily run per player. Names are public.";
+    note.textContent = mine >= 0 ? "You’re #" + (mine + 1) + (lbTab === BD ? " today." : " of all time.") : lbTab === BD ? "Daily runs only. Sydney time. Names are public." : "Best daily run per player. Names are public.";
   }
   lbBox.querySelector(".lbtabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; lbTab = b.getAttribute("data-b"); lbRender(); });
   lbQ(".lbform").addEventListener("submit", function (e) {
@@ -1443,7 +1445,7 @@
 
   // ---------- days ----------
   function show(d) {
-    day = d; KEY = "mrg-day-" + day; st = load(KEY, { done: false });
+    day = d; KEY = "mrg-day-" + MK + day; st = load(KEY, { done: false });
     $("eyebrow").textContent = (isLive() ? "Mergeon" : "Archive") + " · #" + num(day) + " · " + nice(day);
     if (st.done) renderResult(); else $("result").hidden = true;
     newRun(st.done);
@@ -1453,7 +1455,7 @@
     var days = [], n = dayNum(REAL), first = dayNum(FIRST);
     for (var k = n - 1; k >= first; k--) days.push(new Date(k * 864e5).toISOString().slice(0, 10));
     var rows = days.map(function (d) {
-      var s = load("mrg-day-" + d, null), mark = s && s.done ? " ✓" : "";
+      var s = load("mrg-day-" + MK + d, null), mark = s && s.done ? " ✓" : "";
       return '<button type="button" class="arow' + (d === day ? " on" : "") + '" data-d="' + d + '"><span>' + nice(d) + mark + "</span><span>#" + num(d) + "</span></button>";
     }).join("");
     var back = isLive() ? "" : '<button type="button" class="btn" id="mrg-back">Back to today</button>';
