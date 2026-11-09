@@ -30,53 +30,63 @@
 <script src="/assets/site.js?v=52"></script>
 <script src="/assets/shell.js?v=201"></script>
 <style>
-.rc-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:grid;gap:10px}
-#rc-q{width:100%;box-sizing:border-box;font:inherit;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
-.rc-chips{display:flex;flex-wrap:wrap;gap:6px}
-.rc-chip{font:500 13px var(--body);border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer}
-.rc-chip b{font-weight:600;color:var(--muted);margin-left:4px}
-.rc-chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
-.rc-chip[aria-pressed="true"] b{color:inherit}
-:root[data-theme="dark"] .rc-chip[aria-pressed="true"]{color:#16121F}
+.rc-top{display:grid;grid-template-columns:72px 1fr;gap:2px 12px;align-items:center;margin:0 0 4px}
+.rc-top h1{margin:0}
+.rc-zig{width:72px;height:72px;grid-row:span 2;animation:mascBob 2.4s ease-in-out infinite}
+.rc-bub{position:relative;margin:0;justify-self:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:7px 11px;font:600 13.5px/1.35 var(--body);color:var(--ink)}
+.rc-bub::before{content:"";position:absolute;left:-7px;top:50%;margin-top:-6px;border:6px solid transparent;border-left:0;border-right:7px solid var(--line)}
+.rc-bub::after{content:"";position:absolute;left:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left:0;border-right:6px solid var(--card)}
+@media (prefers-reduced-motion:reduce){.rc-zig{animation:none}}
+.rc-intro{margin:0 0 4px;font-size:15px;color:var(--muted)}
+.rc-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:6px 0;display:grid;gap:7px}
+#rc-q{width:100%;box-sizing:border-box;font:inherit;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.rc-f{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rc-f select{width:100%;min-width:0;font:500 14px var(--body);padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.rc-cs{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .rc-count{font-size:13px;color:var(--muted);margin:0}
-.rc-list{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--line)}
-.rc-list li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 2px;border-bottom:1px solid var(--line)}
-.rc-list a{color:var(--ink);text-decoration:none;font-weight:500;min-width:0}
+.rc-sort{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rc-sort button{font:500 13px var(--body);border:0;background:var(--card);color:var(--ink);padding:5px 12px;cursor:pointer}
+.rc-sort button[aria-pressed="true"]{background:var(--brand);color:#fff}
+:root[data-theme="dark"] .rc-sort button[aria-pressed="true"]{color:#16121F}
+.rc-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rc-list li{padding:10px 2px;border-bottom:1px solid var(--line)}
+.rc-n{display:block;font-weight:600;line-height:1.35}
+.rc-list a{color:var(--ink);text-decoration:none}
 .rc-list a:hover{color:var(--brand);text-decoration:underline}
-.rc-o{font-size:12px;color:var(--muted);margin-left:4px}.rc-r{font:600 13px var(--body);color:var(--brand);text-align:right;white-space:nowrap}
-.rc-m{grid-column:1/-1;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
-.rc-t{background:#F1ECF8;border-radius:6px;padding:0 7px}
-:root[data-theme="dark"] .rc-t{background:#2A2240}
-@media (max-width:520px){.rc-list li{grid-template-columns:1fr}.rc-r{text-align:left;white-space:normal}}
+.rc-o{font-size:12px;font-weight:500;color:var(--muted)!important;margin-left:4px}
+.rc-s{display:block;font-size:14px;color:var(--ink);margin:2px 0 5px;line-height:1.4}
+.rc-lf{font-size:12px;color:var(--muted)}
+.rc-p{display:inline-flex;align-items:center;gap:5px;font:500 12px var(--body);color:var(--ink);background:color-mix(in srgb,var(--c) 14%,var(--card));border-radius:999px;padding:1px 9px 1px 7px}
+.rc-p::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
 #rc-more{margin:18px auto 0;display:block}
-#rc-cat{font:500 14px var(--body);padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);max-width:100%}
-.rc-c{color:var(--brand);font-weight:600}
-.rc-sort{display:flex;gap:6px}
-.rc-az{display:flex;flex-wrap:wrap;gap:4px}
-.rc-az button{font:600 13px var(--body);width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;padding:0}
+.rc-az{display:flex;gap:4px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.rc-az button{flex:none;font:600 13px var(--body);width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;padding:0}
 .rc-az button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
 .rc-az button:disabled{opacity:.3;cursor:default}
 @media (max-width:700px){.rc-bar{position:static}}
-.rc-list li.rc-h{display:block;padding:16px 2px 6px;font:700 20px var(--title);color:var(--brand);border-bottom:1px solid var(--line)}
+.rc-list li.rc-h{padding:16px 2px 6px;font:700 20px var(--title);color:var(--brand)}
+.rc-empty{display:flex;align-items:center;gap:10px;margin:14px 0;color:var(--muted)}
+.rc-empty img{width:44px;height:44px;flex:none}
+.rc-empty[hidden]{display:none}
+@media print{.rc-bar,.rc-az,#rc-more,.rc-zig{display:none}.rc-top{grid-template-columns:1fr}.rc-bub::before,.rc-bub::after{display:none}.rc-p{border:1px solid #999}}
 </style>
 <script type="application/ld+json" id="mw-breadcrumb-ld">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Malady Wise","item":"https://maladywise.com/"},{"@type":"ListItem","position":2,"name":"Zebra Atlas","item":"https://maladywise.com/rare-conditions/"}]}</script>
 <script type="application/ld+json" id="mw-share-ld">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://maladywise.com/rare-conditions/#webpage", "url": "https://maladywise.com/rare-conditions/", "name": "Zebra Atlas: Rare Conditions by Rarity | Malady Wise", "image": {"@type": "ImageObject", "url": "https://maladywise.com/assets/share.png?v=27f4d4d6", "width": 1200, "height": 630}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://maladywise.com/assets/share.png?v=27f4d4d6", "width": 1200, "height": 630}}</script>
 </head>
 <body>
 <main class="wrap doc">
-<h1>Zebra Atlas</h1>
-<p class="lede">4,800 rare conditions and how rare each one is. Tap a name for its Orphanet entry, or our fact sheet where we have one.</p>
+<div class="rc-top"><img class="rc-zig" src="/assets/mascots/zebritis.svg" width="72" height="72" alt="Ziggy, the Malady Wise baby zebra"><h1>Zebra Atlas</h1><p class="rc-bub">When you hear hoofbeats, think horses… but not always. I’m the not-always.</p></div>
+<p class="rc-intro">4,800 rare conditions and how rare each one is. Tap a name for its Orphanet entry.</p>
 <div class="rc-bar">
 <input id="rc-q" type="search" placeholder="Search, e.g. Fabry, Wilson, Marfan" autocomplete="off" aria-label="Search rare conditions">
-<select id="rc-cat" aria-label="Body system"><option value="">All body systems</option></select>
-<div class="rc-sort" role="group" aria-label="Sort"><button type="button" class="rc-chip" data-s="rare" aria-pressed="true">Most common first</button><button type="button" class="rc-chip" data-s="az" aria-pressed="false">A–Z</button></div>
-<div class="rc-chips" id="rc-bands" role="group" aria-label="How rare"></div>
+<div class="rc-f"><select id="rc-cat" aria-label="Body system"><option value="">Body system: all</option></select><select id="rc-band" aria-label="How rare"><option value="all">How rare: all</option></select></div>
+<div class="rc-cs"><p class="rc-count" id="rc-count" aria-live="polite">Loading…</p><div class="rc-sort" role="group" aria-label="Sort"><button type="button" data-s="az" aria-pressed="false">A–Z</button><button type="button" data-s="rare" aria-pressed="true">Most common first</button></div></div>
 <div class="rc-az" id="rc-az" role="group" aria-label="Jump to letter" hidden></div>
-<p class="rc-count" id="rc-count">Loading…</p>
 </div>
 <ol class="rc-list" id="rc-list"></ol>
+<p class="rc-empty" id="rc-empty" hidden><img src="/assets/mascots/zebritis.svg" width="44" height="44" alt="" aria-hidden="true"><span>No zebras by that name. Try another spelling.</span></p>
 <button id="rc-more" class="btn" type="button" hidden>Show 100 more</button>
-<p class="note"><b>How to read it.</b> Most figures are prevalence: how many people have it at any one time. Some are new cases a year, rates at birth, or a count of reported cases where no rate exists. A region is shown when the only figure comes from one country or group, which can make a condition look commoner than it is worldwide. Many figures are bands (for example 1–9 in 100,000), shown as ranges.</p>
+<p class="note"><b>How to read it.</b> Most figures are prevalence: how many people have it at any one time. Some are new cases a year, rates at birth, or a count of reported cases where no rate exists. Figures from a single country or group are marked “local figure”, because they can make a condition look commoner than it is worldwide. “Most common first” lists worldwide and Europe-wide figures before local ones. Names use Australian spelling (haemoglobin, oedema); the original Orphanet spelling still finds them. Many figures are bands (for example 1–9 in 100,000), shown as ranges.</p>
 <p class="note"><b>Source.</b> Orphanet, <a href="https://github.com/Orphanet/Orphadata_aggregated" target="_blank" rel="noopener">Orphadata rare disease epidemiology and classifications</a> (data dated 23 Jun 2026), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Conditions with no usable figure are left out.</p>
 <p class="note"><b>Malady Wise fact sheets.</b> Plain-English guides to some rarer conditions: <a href="/ehlers-danlos-syndrome/">Ehlers-Danlos syndromes</a>, <a href="/sarcoidosis/">sarcoidosis</a>, <a href="/eosinophilic-oesophagitis/">eosinophilic oesophagitis</a>, <a href="/myasthenia-gravis/">myasthenia gravis</a>, <a href="/addisons-disease/">Addison’s disease</a>, <a href="/porphyria/">porphyria</a>, <a href="/lupus/">lupus</a>, <a href="/scleroderma/">scleroderma</a>, <a href="/raynauds/">Raynaud’s</a>, <a href="/deep-dives/behcets/">Behçet’s disease</a>, <a href="/smith-magenis-syndrome/">Smith-Magenis syndrome</a>, <a href="/cteph/">CTEPH</a>. Rare disease days are in our <a href="/days/">health days calendar</a>.</p>
 <div id="nl-slot"></div>
@@ -90,31 +100,51 @@
 <script>MW.page();</script>
 <script>
 (function(){
-var T={prev:"Prevalence",inc:"New cases a year",birth:"At birth",life:"Lifetime",cases:"Case reports only"};
-var B=[["all","All",function(){return true}],["c","1 in 1,000 or commoner",function(r){return r[5]>=100}],["a","1 in 1,000 to 10,000",function(r){return r[5]>=10&&r[5]<100}],["b","1 in 10,000 to 100,000",function(r){return r[5]>=1&&r[5]<10}],["d","1 in 100,000 to a million",function(r){return r[5]>=0.1&&r[5]<1}],["e","Rarer than 1 in a million",function(r){return r[5]<0.1&&r[2]!=="cases"}],["f","Case reports only",function(r){return r[2]==="cases"}]];
+var NOUN={prev:"people",inc:"new cases a year",birth:"births",life:"people over a lifetime"};
+var BROAD={Worldwide:1,Europe:1,Africa:1};
+var PLACE={"South East Asia":"South-East Asia","Korea, Republic of":"South Korea","Specific population":"a specific population","United States":"the United States","United Kingdom":"the United Kingdom","Netherlands":"the Netherlands","Czech Republic":"the Czech Republic","United Arab Emirates":"the United Arab Emirates"};
+var COL={"Blood":"#D6334A","Gut":"#C9822B","Infection":"#5C9E31","Congenital":"#7A5BC4","Brain & nerves":"#3F6FD8","Bone":"#8C7B6B","Cancer & tumours":"#B0407E","Metabolic":"#D9A400","Skin":"#E07A5F","Immune":"#2A9D8F","Eye":"#1F8FB8","Rheumatology":"#9C5B2E","Hormones":"#C2559B","Kidney & urinary":"#C79A00","Lung":"#5B8DEF","Heart":"#E04848","Liver":"#7D8B2A","Mitochondrial":"#6A4C93","Ear, nose & throat":"#3BA3A3","Blood vessels":"#A23B3B","Toxic":"#6B8E23","Women's health":"#D45D9E","Teeth & mouth":"#5E9BB0","Other":"#888"};
+// US to Australian/British display spelling; the Orphanet name stays searchable
+var SP=[[/\b(met|hypo|hyper)?hem(?=o|at|angi)/gi,"$1haem"],[/([^a])emia\b/gi,"$1aemia"],[/\b(an|isch|leuk|ur|hypox)emic\b/gi,"$1aemic"],[/\b(isch)emi/gi,"$1aemi"],[/\bangioedem(?=a)/gi,"angio-oedem"],[/(\b|lymph|myx)edem(?=a)/gi,"$1oedem"],[/choroideraemia/gi,"choroideremia"],[/\besophag/gi,"oesophag"],[/([a-z])o(esophag)/gi,"$1o-o$2"],[/([a-np-z])esophag/gi,"$1oesophag"],[/\btumor(?!u)/gi,"tumour"],[/tumor(?!u)/gi,"tumour"],[/\bpediatr/gi,"paediatr"],[/\bestrogen/gi,"oestrogen"],[/\bnev(?=us|i\b|oid)/gi,"naev"],[/\bceliac/gi,"coeliac"],[/diarrhea/gi,"diarrhoea"],[/pnea\b/gi,"pnoea"],[/behavior/gi,"behaviour"],[/\bfiber/gi,"fibre"],[/\bgynecolog/gi,"gynaecolog"],[/\borthoped/gi,"orthopaed"],[/\banesthe/gi,"anaesthe"],[/ization\b/gi,"isation"]];
+function au(n){SP.forEach(function(x){n=n.replace(x[0],function(m){var a=arguments,r=x[1].replace(/\$(\d)/g,function(_,i){return typeof a[i]==="string"?a[i]:""});return m.charAt(0)!==m.charAt(0).toLowerCase()?r.charAt(0).toUpperCase()+r.slice(1):r})});return n}
+var B=[["all","How rare: all",function(){return true}],["c","Not so rare (1 in 1,000+)",function(r){return r[5]>=100}],["a","Rare (1 in 1,000–10,000)",function(r){return r[5]>=10&&r[5]<100}],["b","Very rare (1 in 10,000–100,000)",function(r){return r[5]>=1&&r[5]<10}],["d","Ultra-rare (1 in 100,000–1 million)",function(r){return r[5]>=0.1&&r[5]<1}],["e","Rarer than 1 in a million",function(r){return r[5]<0.1&&r[2]!=="cases"}],["f","Case reports only",function(r){return r[2]==="cases"}]];
 var R=[],M={},cat="",band="all",shown=100,sort="rare",letter="",el=function(i){return document.getElementById(i)};
-function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+function norm(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1)}
+function local(r){return !BROAD[r[4]]}
+function sentence(r){
+ var g=r[4],w=g==="Worldwide"?" worldwide":local(r)?" (in "+(PLACE[g]||g)+")":" ("+(PLACE[g]||g)+")";
+ if(r[2]==="cases")return "Case reports only: "+r[3].replace(" cases or families reported"," reported cases or families")+(g==="Worldwide"?"":w);
+ return cap(r[3])+" "+NOUN[r[2]]+w;
+}
 function render(){
  var q=norm(el("rc-q").value.trim()),f=B.filter(function(b){return b[0]===band})[0][2];
- var m=function(r){return (!cat||r[6]===cat)&&(!q||r[7].indexOf(q)>-1)};
+ var m=function(r){return (!cat||r[6]===cat)&&(!q||r[8].indexOf(q)>-1)};
  var L=function(r){var c=r[7].charAt(0).toUpperCase();return /[A-Z]/.test(c)?c:"#"};
  var hits=R.filter(function(r){return f(r)&&m(r)});
  if(sort==="az"){hits=hits.slice().sort(function(a,b){return a[7]<b[7]?-1:a[7]>b[7]?1:0});var have={};hits.forEach(function(r){have[L(r)]=1});
   el("rc-az").innerHTML="#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(c){return '<button type="button" data-l="'+c+'" aria-pressed="'+(c===letter)+'"'+(have[c]?"":" disabled")+'>'+c+"</button>"}).join("");
   if(letter)hits=hits.filter(function(r){return L(r)===letter})}
+ else hits.sort(function(a,b){return (local(a)-local(b))||(b[5]-a[5])||(a[7]<b[7]?-1:1)});
  el("rc-az").hidden=sort!=="az";
- el("rc-bands").innerHTML=B.map(function(b){var n=R.filter(function(r){return b[2](r)&&m(r)}).length;return '<button type="button" class="rc-chip" data-b="'+b[0]+'" aria-pressed="'+(b[0]===band)+'">'+b[1]+'<b>'+n.toLocaleString("en-AU")+'</b></button>'}).join("");
- el("rc-count").textContent=hits.length.toLocaleString("en-AU")+" condition"+(hits.length===1?"":"s")+(sort==="az"?(letter?" starting with "+letter:", A to Z"):", most common first");
+ var bs=el("rc-band");B.forEach(function(b,i){var n=R.filter(function(r){return b[2](r)&&m(r)}).length;bs.options[i].textContent=i?b[1]+" ("+n.toLocaleString("en-AU")+")":b[1]});
+ el("rc-count").textContent=hits.length.toLocaleString("en-AU")+" condition"+(hits.length===1?"":"s")+(sort==="az"&&letter?" starting with "+letter:"");
+ el("rc-empty").hidden=hits.length>0;
  var last="";
- el("rc-list").innerHTML=hits.slice(0,shown).map(function(r){var hd="";if(sort==="az"&&L(r)!==last){last=L(r);hd='<li class="rc-h">'+last+"</li>"}return hd+(function(){var g=r[4]&&r[4]!=="Worldwide"?"<span>"+esc(r[4])+"</span>":"";var mw=M[r[1]];return '<li>'+(mw?'<a href="'+mw+'">'+esc(r[0])+'</a> <a class="rc-o" href="https://www.orpha.net/en/disease/detail/'+r[1]+'" target="_blank" rel="noopener">Orphanet</a>':'<a href="https://www.orpha.net/en/disease/detail/'+r[1]+'" target="_blank" rel="noopener">'+esc(r[0])+'</a>')+'<span class="rc-r">'+esc(r[3])+'</span><span class="rc-m"><span class="rc-t">'+T[r[2]]+'</span><span class="rc-c">'+esc(r[6])+"</span>"+g+"</span></li>"})()}).join("");
+ el("rc-list").innerHTML=hits.slice(0,shown).map(function(r){var hd="";if(sort==="az"&&L(r)!==last){last=L(r);hd='<li class="rc-h">'+last+"</li>"}
+  var mw=M[r[1]],orp='https://www.orpha.net/en/disease/detail/'+r[1];
+  var nm=mw?'<a href="'+mw+'">'+esc(r[0])+'</a> <a class="rc-o" href="'+orp+'" target="_blank" rel="noopener">Orphanet</a>':'<a href="'+orp+'" target="_blank" rel="noopener">'+esc(r[0])+'</a>';
+  return hd+'<li><span class="rc-n">'+nm+'</span><span class="rc-s">'+esc(sentence(r))+(local(r)&&r[2]!=="cases"?' <span class="rc-lf">(local figure)</span>':"")+'</span><span class="rc-p" style="--c:'+(COL[r[6]]||"#888")+'">'+esc(r[6])+"</span></li>"}).join("");
  el("rc-more").hidden=hits.length<=shown;
 }
-fetch("/data/rare-conditions.json").then(function(r){return r.json()}).then(function(d){R=d.rows;M=d.mw||{};var cc={};R.forEach(function(r){r.push(norm(r[0]));cc[r[6]]=(cc[r[6]]||0)+1});el("rc-cat").insertAdjacentHTML("beforeend",Object.keys(cc).sort(function(a,b){return a==="Other"?1:b==="Other"?-1:a<b?-1:1}).map(function(k){return '<option value="'+esc(k)+'">'+esc(k)+" ("+cc[k].toLocaleString("en-AU")+")</option>"}).join(""));render()}).catch(function(){el("rc-count").textContent="Couldn’t load the list. Try refreshing."});
+fetch("/data/rare-conditions.json").then(function(r){return r.json()}).then(function(d){R=d.rows;M=d.mw||{};var cc={};R.forEach(function(r){var o=r[0];r[0]=au(o);r.push(norm(r[0]),norm(r[0])+" | "+norm(o));cc[r[6]]=(cc[r[6]]||0)+1});
+ el("rc-cat").insertAdjacentHTML("beforeend",Object.keys(cc).sort(function(a,b){return a==="Other"?1:b==="Other"?-1:a<b?-1:1}).map(function(k){return '<option value="'+esc(k)+'">'+esc(k)+" ("+cc[k].toLocaleString("en-AU")+")</option>"}).join(""));
+ el("rc-band").innerHTML=B.map(function(b){return '<option value="'+b[0]+'">'+b[1]+"</option>"}).join("");render()}).catch(function(){el("rc-count").textContent="Couldn’t load the list. Try refreshing."});
 el("rc-cat").addEventListener("change",function(){cat=this.value;letter="";shown=sort==="az"?400:100;render()});
+el("rc-band").addEventListener("change",function(){band=this.value;letter="";shown=100;render()});
 el("rc-q").addEventListener("input",function(){shown=100;render()});
-el("rc-bands").addEventListener("click",function(e){var b=e.target.closest(".rc-chip");if(!b)return;band=b.dataset.b;shown=100;render()});
-document.querySelector(".rc-sort").addEventListener("click",function(e){var b=e.target.closest(".rc-chip");if(!b)return;sort=b.dataset.s;letter="";shown=sort==="az"?400:100;Array.prototype.forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});render()});
+document.querySelector(".rc-sort").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;sort=b.dataset.s;letter="";shown=sort==="az"?400:100;Array.prototype.forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});render()});
 el("rc-az").addEventListener("click",function(e){var b=e.target.closest("button");if(!b||b.disabled)return;letter=letter===b.dataset.l?"":b.dataset.l;shown=400;render()});
 el("rc-more").addEventListener("click",function(){shown+=100;render()});
 })();
