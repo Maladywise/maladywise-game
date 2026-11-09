@@ -1,0 +1,1560 @@
+{
+ "psychology": {
+  "name": "Psychology",
+  "people": [
+   {
+    "name": "Anona House",
+    "specialty": "Psychology (clinical psychologists and psychologists) and psychiatry",
+    "practice": "Anona House",
+    "address": "36 Gordon Avenue, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4927 6890",
+    "fax": "(02) 4927 6249",
+    "email": "admin@anonahouse.com.au",
+    "ereferral": "",
+    "website": "https://anonahouse.com.au/",
+    "interests": [
+     "Mood and anxiety",
+     "Trauma and PTSD",
+     "Grief and loss",
+     "ADHD and autism",
+     "Relationship issues and self-esteem",
+     "Cognitive assessments (children and adolescents up to 16)",
+     "Parenting support",
+     "Sport psychology (athletes, coaches and teams)",
+     "Psychiatrist on site (GP referral)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://anonahouse.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Activated Concepts",
+    "specialty": "Psychology, assessment and NDIS services",
+    "practice": "Activated Concepts",
+    "address": "87 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4023 3122",
+    "fax": "",
+    "email": "hello@activatedconcepts.com.au",
+    "ereferral": "",
+    "website": "https://activatedconcepts.com.au/mental-health-services/",
+    "interests": [
+     "Anxiety, depression and stress",
+     "Trauma (clinicians trained in trauma-informed care)",
+     "Adjustment and change",
+     "Autism and ADHD assessment (full age range)",
+     "Cognitive, developmental and functional assessment",
+     "Parenting capacity assessment",
+     "Victims of crime counselling (NSW Victims Services)",
+     "Couples and families",
+     "Medicare (Better Access), NDIS, DVA and workers compensation (as stated)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults, couples and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"trained in trauma informed care\"",
+     "\"We work with people of every culture, faith and ability, and with LGBTQIA+ people and their families.\""
+    ],
+    "sources": [
+     "https://activatedconcepts.com.au/mental-health-services/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "ATUNE Health Centres (psychology)",
+    "specialty": "Psychology (psychologists, clinical psychologists and provisional psychologists)",
+    "practice": "ATUNE Health Centres",
+    "address": "52 Ada Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4954 4511",
+    "fax": "02 4954 4566",
+    "email": "reception@atune.com.au",
+    "ereferral": "",
+    "website": "https://atune.com.au/psychology-lake-macquarie-newcastle/",
+    "interests": [
+     "Anxiety and stress",
+     "Grief and loss",
+     "Self-esteem and communication skills",
+     "Couples and group sessions",
+     "Medicare rebates with GP referral; WorkCover may cover some costs (as stated)",
+     "Also at ATUNE Belmont (02 4945 4245); psychology location not stated, call to check"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://atune.com.au/psychology-lake-macquarie-newcastle/",
+     "https://atune.com.au/atune-cardiff/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Alliance Psychology",
+    "specialty": "Psychology (Clinical) - sex therapy and couples",
+    "practice": "Alliance Psychology",
+    "address": "Level 1, 118 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4940 7284",
+    "fax": "(02) 4961 0709",
+    "email": "admin@alliancepsyc.com.au",
+    "ereferral": "",
+    "website": "https://alliancepsyc.com.au/",
+    "interests": [
+     "Sex therapy",
+     "Relationship and couples counselling",
+     "Online sessions Australia-wide (Coviu)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://alliancepsyc.com.au/contact-us"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Bernard Goldman Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Bernard Goldman Psychology",
+    "address": "Swansea (Lake Macquarie) NSW",
+    "suburb": "Swansea",
+    "phone": "0427 710 155",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.bernardgoldmanpsychology.com/",
+    "interests": [
+     "Adults",
+     "Older adults",
+     "Clinical supervision"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.bernardgoldmanpsychology.com/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "BodyMatters Australasia (Maitland)",
+    "specialty": "Psychology - eating disorders",
+    "practice": "BodyMatters Australasia",
+    "address": "Suite 12, Level 1, 14 Bulwer Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 9908 3833",
+    "fax": "02 9908 3844",
+    "email": "",
+    "ereferral": "",
+    "website": "https://bodymatters.com.au/MaitlandOffice/",
+    "interests": [
+     "Eating disorders",
+     "Family therapy",
+     "Cognitive assessments",
+     "Dietetics by telehealth"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://bodymatters.com.au/MaitlandOffice/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "AusPsych",
+    "specialty": "Psychology (psychologists and a clinical psychologist); EAP and workers compensation",
+    "practice": "AusPsych",
+    "address": "Level 3, Room 308, 17 Bolton Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4926 1688",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://auspsych.com.au/",
+    "interests": [
+     "Trauma",
+     "Anxiety and depression",
+     "Grief",
+     "Substance use",
+     "Workplace stress and job loss",
+     "Pain management",
+     "Neurodiverse clients (autism, ADHD)",
+     "Teenagers and youth",
+     "Art therapy",
+     "Workers compensation and psychological assessment reports",
+     "CBT, ACT, DBT and EMDR",
+     "Also at Hunter St Newcastle, Mayfield (40 Gavey St), Merewether (6/18 Morgan St), Cardiff (6 Pendlebury Rd) and Muswellbrook (196 Bridge St)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (some clinicians), teenagers, adults, couples and older people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"Trauma-informed, neurodiversity-affirming\" (clinician profile)"
+    ],
+    "sources": [
+     "https://auspsych.com.au/our-team/",
+     "https://auspsych.com.au/practice-locations/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Brightwell Health (psychology)",
+    "specialty": "Psychology (Clinical) - perinatal, fertility and chronic pain",
+    "practice": "Brightwell Health",
+    "address": "Suite 1, 710 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4092 8000",
+    "fax": "02 4092 8001",
+    "email": "",
+    "ereferral": "",
+    "website": "https://brightwellhealth.com.au/psychologist-newcastle/",
+    "interests": [
+     "Perinatal and postpartum depression and anxiety",
+     "Fertility and reproductive health",
+     "Birth preparation and birth trauma",
+     "Miscarriage and perinatal loss",
+     "Premature birth",
+     "Parent-infant bonding and parenting",
+     "Fathers and non-birthing partners",
+     "Chronic pain",
+     "Grief, trauma and relationship difficulties",
+     "CBT, ACT, compassion-focused therapy and DBT skills"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"trauma-sensitive care\" (clinician profile)",
+     "\"acknowledges and respects the diverse neurological experiences of individuals\" (clinician profile)"
+    ],
+    "sources": [
+     "https://brightwellhealth.com.au/psychologist-newcastle/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Causley Psychology",
+    "specialty": "Psychology (adults and adolescents)",
+    "practice": "Causley Psychology",
+    "address": "East Maitland, Maitland and Tenambit NSW",
+    "suburb": "East Maitland",
+    "phone": "0406 362 449",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://causleypsychology.com.au/",
+    "interests": [
+     "Counselling for adults and adolescents"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://causleypsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "CK Health (psychology)",
+    "specialty": "Psychology (clinical psychologist and psychologists)",
+    "practice": "CK Health and Wellbeing",
+    "address": "136 Glebe Road, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "(02) 4077 3803",
+    "fax": "(02) 4081 2849",
+    "email": "admin@ckhealth.com.au",
+    "ereferral": "",
+    "website": "https://ckhealth.com.au/psychologist-newcastle/",
+    "interests": [
+     "Stress, anxiety and depression",
+     "Trauma and PTSD",
+     "EMDR",
+     "Sleep",
+     "Chronic pain and chronic health conditions (low-cost pain support group)",
+     "Couples counselling",
+     "Child psychology",
+     "Child developmental and psychological assessments",
+     "Telehealth psychology"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ckhealth.com.au/about-ckhealth/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Clinpsych Services",
+    "specialty": "Psychology (Clinical) - formerly Anne Sharkey and Associates",
+    "practice": "Clinpsych Services",
+    "address": "74 Elder Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "(02) 4952 4467",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.clinpsych.com.au/",
+    "interests": [
+     "Clinical psychologists and consulting psychologists"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.clinpsych.com.au/our-psychologists/",
+     "https://www.clinpsych.com.au/lambton-psychology-practice/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Connect Clinical Forensic Psychology",
+    "specialty": "Psychology (clinical and forensic)",
+    "practice": "Connect Clinical Forensic Psychology",
+    "address": "29 High Street, Greta NSW 2334",
+    "suburb": "Greta",
+    "phone": "0412 115 275",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Clinical and forensic psychology consultations",
+     "By appointment, Monday to Thursday"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/greta-2334-nsw/connect-clinical-forensic-psychology/psychology/19f34bb8-2cd2-59a6-a361-5289da337551"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Courageous Steps Psychology",
+    "specialty": "Psychology (adult mental health)",
+    "practice": "Courageous Steps Psychology",
+    "address": "Clarus Cottage, 9 Moore Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "0478 131 244",
+    "fax": "",
+    "email": "admin@courageoussteps.com.au",
+    "ereferral": "",
+    "website": "https://courageoussteps.com.au/",
+    "interests": [
+     "Relationship and attachment difficulties",
+     "Depression and anxiety",
+     "Life transitions and adjustment",
+     "Grief and loss",
+     "Adult survivors of complex developmental trauma",
+     "Work-related difficulties",
+     "Transactional analysis, brief psychodynamic therapy, DBT, schema therapy, ACT",
+     "Maitland on Mondays and Fridays"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://courageoussteps.com.au/practice-locations/",
+     "https://courageoussteps.com.au/psychology-services/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "DG Broadbent & Associates",
+    "specialty": "Psychology - trauma",
+    "practice": "David G Broadbent Psychology",
+    "address": "Alliance House, 12 Ken Tubman Drive, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4934 2351",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://dgbroadbent.com/",
+    "interests": [
+     "Trauma and PTSD",
+     "Chronic pain and injury recovery",
+     "Anxiety, stress and adjustment",
+     "Veterans and first responders",
+     "EMDR, Eye Movement Integration Therapy and Accelerated Resolution Therapy",
+     "DVA, WorkCover and Comcare listed",
+     "Telehealth Australia-wide"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://dgbroadbent.com/",
+     "https://www.halaxy.com/profile/dg-broadbent-associates/location/82576"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "East Maitland Clinical Psychology Services",
+    "specialty": "Psychology (Clinical)",
+    "practice": "East Maitland Clinical Psychology Services",
+    "address": "Shop 5, 128 Lawes Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4934 6811",
+    "fax": "02 4934 3685",
+    "email": "",
+    "ereferral": "",
+    "website": "https://eastmaitlandpsychology.com.au/",
+    "interests": [
+     "Assessment, diagnosis and treatment of mental disorders",
+     "Children, adolescents, adults, families and couples",
+     "Self-managed NDIS participants (directory listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults, families and couples",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"We are welcoming and supportive of everyone who chooses to engage with us\""
+    ],
+    "sources": [
+     "https://eastmaitlandpsychology.com.au/",
+     "https://infoqore.com.au/directory/health-and-wellbeing/east-maitland-clinical-psychology-service"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "East Maitland Holistic Psychology Clinic",
+    "specialty": "Psychology",
+    "practice": "East Maitland Holistic Psychology Clinic",
+    "address": "5/28 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "0411 942 900",
+    "fax": "02 9058 8106",
+    "email": "",
+    "ereferral": "",
+    "website": "https://eastmaitlandholisticpsychology.com.au/",
+    "interests": [
+     "Individuals, couples, families and groups",
+     "Adolescents (12+), adults and older adults",
+     "Disabled access and on-site parking"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adolescents (12+), adults and older adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/east-maitland-holistic-psychology-clinic/location/1349393"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "ELD Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "ELD Psychology",
+    "address": "Suite 3, Level 1, 744 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "0448 721 866",
+    "fax": "(02) 9182 5441",
+    "email": "info@eldpsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.eldpsychology.com.au/",
+    "interests": [
+     "Anxiety and depression",
+     "Trauma and PTSD",
+     "Eating disorders",
+     "OCD",
+     "ADHD-related difficulties",
+     "ADHD, autism and AuDHD assessment",
+     "Specific learning disorder and cognitive assessment",
+     "CBT, schema therapy, DBT skills, ACT, psychodynamic therapy",
+     "Saturday appointments (one clinician)",
+     "Telehealth across Australia"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (16+ or 18+ by clinician); assessments all ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Therapy and assessments “Currently accepting referrals”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.eldpsychology.com.au/for-gps",
+     "https://www.eldpsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Essence Psychology",
+    "specialty": "Psychology (Clinical) - trauma",
+    "practice": "Essence Psychology",
+    "address": "Bank Corner, Newcastle West NSW 2302 (Mondays); postal PO Box 82, Salamander Bay",
+    "suburb": "Newcastle West",
+    "phone": "0417 224 795",
+    "fax": "(02) 9198 9588",
+    "email": "kate@essencepsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.essencepsychology.com.au/",
+    "interests": [
+     "Trauma recovery and complex trauma",
+     "Nervous system-based and body-aware therapy",
+     "Emotional regulation",
+     "Anxiety and mood",
+     "Low self-esteem",
+     "Telehealth across NSW and Australia (Tuesdays and Fridays)",
+     "Medicare rebates available (as stated)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"culturally safe, respectful practice and welcome clients from diverse backgrounds\""
+    ],
+    "sources": [
+     "https://www.essencepsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Esteem Psychology",
+    "specialty": "Psychology (Clinical) - children and adults",
+    "practice": "Esteem Psychology",
+    "address": "Suite 2, Level 5, 55-57 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4926 4198",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.esteempsychology.com.au/",
+    "interests": [
+     "Depression and anxiety",
+     "Relationship difficulties",
+     "Grief",
+     "Adjusting to life changes",
+     "Group education and skills programs",
+     "Clinical supervision",
+     "Telehealth or phone appointments on request"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.esteempsychology.com.au/",
+     "https://www.esteempsychology.com.au/contact-us/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Fusion Healthcare (psychology)",
+    "specialty": "Psychology",
+    "practice": "FUSION Healthcare",
+    "address": "Unit 2, 46 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 8014 4162",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://fusionhealthcare.com.au/",
+    "interests": [
+     "Psychologist within a multidisciplinary clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/amir-salem/psychologist/1732527"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Greenhills Clinical Psychology",
+    "specialty": "Psychology",
+    "practice": "Greenhills Clinical Psychology",
+    "address": "Suite 4, 19 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "CBT",
+     "Schema therapy",
+     "Weekend hours listed (Saturday and Sunday mornings)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/greenhills-clinical-psychology"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Valley Psychology and Wellbeing",
+    "specialty": "Psychology (clinical psychologist, psychologist and provisional psychologist)",
+    "practice": "Hunter Valley Psychology and Wellbeing",
+    "address": "3/1A Johnson Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4934 1190",
+    "fax": "",
+    "email": "admin@hvpw.com.au",
+    "ereferral": "",
+    "website": "https://hvpw.com.au/",
+    "interests": [
+     "Anxiety and depression",
+     "Trauma",
+     "Relationship issues and couples counselling",
+     "Grief",
+     "Family and group counselling",
+     "Cognitive and academic assessment (including dyslexia and dysgraphia)",
+     "Clinical supervision"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hvpw.com.au/about/",
+     "https://hvpw.com.au/contact/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Inner Balance Psychology",
+    "specialty": "Psychology (counselling and clinical) - perinatal and life transitions",
+    "practice": "Inner Balance Psychology",
+    "address": "T&G Building, 41-45 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4058 2927",
+    "fax": "",
+    "email": "kylie@innerbalancepsychology.com.au",
+    "ereferral": "",
+    "website": "https://innerbalancepsychology.com.au/",
+    "interests": [
+     "Pregnancy",
+     "Grief and loss in pregnancy",
+     "Early motherhood and parenthood",
+     "Major life changes and transitions",
+     "Counselling"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://innerbalancepsychology.com.au/about"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "John Groth",
+    "specialty": "Psychology (Clinical)",
+    "practice": "John Groth Psychology",
+    "address": "Broadmeadow and Maitland NSW",
+    "suburb": "Broadmeadow",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Trauma",
+     "Veterans",
+     "Anger management",
+     "Abuse (emotional, physical, sexual)",
+     "Self-harm",
+     "Psychodynamic, person-centred, ACT, CBT, family and marital therapy",
+     "Online sessions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Profile says “Available to take clients”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://talklink.com.au/clinical-psychologist/john-groth"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Jon Grainger Psychology",
+    "specialty": "Psychology",
+    "practice": "Jon Grainger Psychology",
+    "address": "108b George Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Anxiety",
+     "Depression",
+     "Psychotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/jon-grainger-psychology"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kim Kalousek Psychology",
+    "specialty": "Psychology",
+    "practice": "Kim Kalousek Psychology",
+    "address": "Singleton, Muswellbrook and Newcastle NSW",
+    "suburb": "Singleton",
+    "phone": "0421 193 261",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kimkalousek.com/",
+    "interests": [
+     "Teenagers and youth",
+     "Fitness-for-work assessments",
+     "Also sees clients through AusPsych (Singleton, Newcastle, Muswellbrook)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Teenagers, youth and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.kimkalousek.com/contact-us",
+     "https://auspsych.com.au/our-team/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lacuna Clinical Psychology",
+    "specialty": "Psychology (Clinical) - adults",
+    "practice": "Lacuna Clinical Psychology",
+    "address": "36 Crebert Street, Mayfield NSW 2304",
+    "suburb": "Mayfield",
+    "phone": "(02) 4003 4804",
+    "fax": "(02) 4003 4827",
+    "email": "reception@lacunapsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.lacunapsychology.com.au/",
+    "interests": [
+     "Trauma and PTSD",
+     "Anxiety and depression",
+     "Stress and anger",
+     "Pain and addiction",
+     "Relationship issues",
+     "Personality disorders",
+     "Eating disorders",
+     "Somatic problems and medically unexplained pain",
+     "ADF members, veterans and families seen at no cost (DVA, Open Arms, ADF referrals)",
+     "NDIS referrals at no out-of-pocket cost",
+     "Medicare (Better Access); EAP"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lacunapsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "MacHenry Psychology",
+    "specialty": "Psychology",
+    "practice": "MacHenry Psychology",
+    "address": "Toronto NSW",
+    "suburb": "Toronto",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.machenrypsychology.com.au/",
+    "interests": [
+     "Anxiety and depression",
+     "Trauma and complex PTSD",
+     "Alcohol and drugs",
+     "Domestic violence",
+     "Relationships",
+     "Cognitive/IQ, autism and ADHD assessment",
+     "NDIS assessment and school reports",
+     "CBT, ACT, DBT and motivational interviewing"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"I value and respect diversity among individuals, groups, cultures, and various ways of life and belief systems\""
+    ],
+    "sources": [
+     "https://www.machenrypsychology.com.au/about"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mindinsight",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Mindinsight Psychology",
+    "address": "Suite 2GA, T&G Building, 45 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4942 7660",
+    "fax": "02 4081 2804",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.mindinsight.com.au/",
+    "interests": [
+     "Counselling",
+     "EMDR",
+     "Schema therapy",
+     "Mentalization-based treatment",
+     "Clinical hypnosis",
+     "Art therapy",
+     "Couples therapy",
+     "Chronic fatigue and pain syndromes",
+     "PTSD",
+     "Executive coaching and clinical supervision"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.mindinsight.com.au/about-mindinsight"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "My Healthy Mind Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "My Healthy Mind Psychology",
+    "address": "Suite A, Level 1, 118 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4940 7295",
+    "fax": "02 4961 0709",
+    "email": "ashley@myhealthymindpsychology.com.au",
+    "ereferral": "",
+    "website": "https://myhealthymindpsychology.com.au/",
+    "interests": [
+     "OCD (including online therapy)",
+     "Online therapy",
+     "GP and psychiatrist referrals by email or fax"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "“We are currently accepting new clients with no long wait list.”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://myhealthymindpsychology.com.au/contact/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle NeuroPsych",
+    "specialty": "Clinical neuropsychology",
+    "practice": "Newcastle NeuroPsych",
+    "address": "Newcastle NSW",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleneuropsych.com.au/",
+    "interests": [
+     "Neuropsychological assessment (clinical and medico-legal)",
+     "Known or suspected neurological and mental health conditions",
+     "Dementia",
+     "Cognitive rehabilitation and supportive counselling",
+     "Referrals by email, fax, post or contact page"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "16 years and over",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleneuropsych.com.au/",
+     "https://newcastleneuropsych.com.au/dr-amee-baird/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Trauma Centre",
+    "specialty": "Psychology and counselling - childhood trauma",
+    "practice": "Heal For Life",
+    "address": "72 Belford Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4998 6003",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastletraumacentre.com.au/",
+    "interests": [
+     "Childhood trauma",
+     "Child and family therapy",
+     "Counselling and psychotherapy",
+     "Residential healing retreats (5 days)",
+     "CBT, ACT, motivational interviewing, trauma-sensitive yoga",
+     "Video and phone sessions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "8 years and above",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "limited",
+     "np_note": "One psychologist's “books are currently full” (open to new client possibilities)",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastletraumacentre.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "NewPsych Psychologists",
+    "specialty": "Psychology (psychologists, clinical psychologists, couples and family therapists)",
+    "practice": "NewPsych Psychologists",
+    "address": "Levels 2 and 4, 77 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4926 5005",
+    "fax": "(02) 4927 0915",
+    "email": "reception@newpsych.com.au",
+    "ereferral": "",
+    "website": "https://www.newpsych.com.au/",
+    "interests": [
+     "Individual counselling",
+     "Couples",
+     "Children and adolescents",
+     "Indigenous experience",
+     "NDIS counselling",
+     "EAP, mediation and critical incident response",
+     "Psychological assessments",
+     "Open to 8pm Monday to Thursday"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"NewPsych is committed to diversity, fairness, overcoming injustice and social inclusion\""
+    ],
+    "sources": [
+     "https://www.newpsych.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Northern Integrated Pain Management (pain psychology)",
+    "specialty": "Psychology (clinical and health psychologists) - chronic pain",
+    "practice": "Northern Integrated Pain Management",
+    "address": "Suite 3, 20 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4923 8900",
+    "fax": "(02) 4947 8991",
+    "email": "info@nipm.com.au",
+    "ereferral": "eReferral link on website",
+    "website": "https://www.newcastlepainmanagement.com.au/",
+    "interests": [
+     "Pain psychology",
+     "Chronic pain",
+     "Also at Newcastle, Maitland, Singleton and Nelson Bay"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepainmanagement.com.au/contact-us/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Ocean Blue Psychology",
+    "specialty": "Psychology (clinical psychologist and psychologists)",
+    "practice": "Ocean Blue Psychology",
+    "address": "Suite 3, 179 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "(02) 4063 2075",
+    "fax": "(02) 8016 0849",
+    "email": "admin@oceanbluepsychology.com.au",
+    "ereferral": "",
+    "website": "https://oceanbluepsychology.com.au/",
+    "interests": [
+     "Trauma, including childhood and adult sexual assault",
+     "Mood, personality, anxiety and eating disorders",
+     "Gender-related concerns",
+     "Suicidal ideation and self-harm (moderate risk)",
+     "Couples and family work",
+     "Addiction and court-mandated clients"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults and families (by clinician)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"I strive to create a safe and empowering environment for people identifying with the LGBTQ+ community\" (clinician profile)",
+     "\"culturally safe and responsive psychological care\" (clinician profile)"
+    ],
+    "sources": [
+     "https://oceanbluepsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Gidget House Kotara",
+    "specialty": "Psychology (perinatal, free service)",
+    "practice": "Gidget Foundation Australia",
+    "address": "Shop 4-WD100, Mezzanine entry of Car park 2M, Westfield Kotara, Northcott Drive, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "1300 443 438",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.gidgetfoundation.org.au/support/gidget-house",
+    "interests": [
+     "Perinatal mental health",
+     "Expecting, new and potential parents",
+     "Free individual counselling (Medicare bulk billed with GP referral and mental health care plan)",
+     "Face-to-face or Start Talking telehealth"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "Location marked “Bookings open”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.gidgetfoundation.org.au/support/gidget-house"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychology-children": {
+  "name": "Psychology (children)",
+  "people": [
+   {
+    "name": "EDUCARE (psychology)",
+    "specialty": "Psychology (children), speech pathology and behaviour support",
+    "practice": "EDUCARE",
+    "address": "Level 3, Sky Central West, 28-38 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4943 4444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.educare.net.au/services/child-psychologist-newcastle/",
+    "interests": [
+     "Child psychology",
+     "Speech pathology and behaviour support"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://seekhelp.com.au/listing/educare-speech-pathology-psychology-and-behavioural-support/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "social-work": {
+  "name": "Social Work and Counselling (Accredited Mental Health Social Workers)",
+  "people": [
+   {
+    "name": "Hunter Clinical Services (mental health social work)",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Hunter Clinical Services",
+    "address": "49A Railway Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4072 1449",
+    "fax": "",
+    "email": "hello@huntercs.au",
+    "ereferral": "",
+    "website": "https://hunterclinicalservices.com.au/",
+    "interests": [
+     "Trauma",
+     "EMDR",
+     "Neurodiversity",
+     "Menopause and wellbeing",
+     "Anxiety, burnout and life transitions",
+     "Grief and loss",
+     "Depression",
+     "LGBTQIA+ affirming therapy",
+     "Clinical supervision",
+     "Medicare rebates with GP, psychiatrist or paediatrician referral"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"LGBTQIA+ affirming therapy\""
+    ],
+    "sources": [
+     "https://hunterclinicalservices.com.au/about-us/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
