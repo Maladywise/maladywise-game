@@ -1,0 +1,1409 @@
+{
+ "tests-radiology": {
+  "name": "Radiology and imaging",
+  "group": "tests",
+  "note": "<p class=\"sp-note\">Bone density (DEXA) is listed by site below. Hearing tests: see <a href=\"/specialists/audiology/\">Audiology</a>.</p>",
+  "people": [
+   {
+    "name": "PRP Diagnostic Imaging Adamstown",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "156 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "(02) 4940 8599",
+    "fax": "(02) 4081 2846",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "MRI",
+     "Mammography (mammogram)",
+     "DEXA bone density (BMD)",
+     "Nuclear medicine",
+     "Cardiac imaging",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Cessnock",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "9/10 Darwin Street, Cessnock NSW 2325",
+    "suburb": "Cessnock",
+    "phone": "1300 220 818",
+    "fax": "(02) 8024 2652",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "DEXA bone density (BMD)",
+     "Injections and biopsies",
+     "Screening",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Charlestown",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "95 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4920 8555",
+    "fax": "(02) 4081 2847",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region/charlestown",
+    "interests": [
+     "X-ray and OPG",
+     "Ultrasound (including pregnancy, vascular and musculoskeletal)",
+     "CT (low dose), CT angiogram",
+     "MRI (including prostate, paediatric and foetal MRI)",
+     "Cardiac: echocardiography (echo), CT calcium score",
+     "Injections and biopsies (including breast biopsy)",
+     "Lung cancer screening (National Lung Cancer Screening Program)",
+     "Bulk billing available at this location for some services (as stated)",
+     "Online booking via the PRP website (appt.prpimaging.com.au)",
+     "Mon–Fri 8am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region/charlestown",
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging East Maitland",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "83 George Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "(02) 4929 7222",
+    "fax": "(02) 9167 7186",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "Nuclear medicine",
+     "PET/CT",
+     "DEXA bone density (BMD)",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Glendale",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "334-342 Lake Road, Glendale NSW 2285",
+    "suburb": "Glendale",
+    "phone": "(02) 4929 7222",
+    "fax": "(02) 8244 1984",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "MRI",
+     "Mammography (mammogram)",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Maitland",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "262 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4004 5500",
+    "fax": "(02) 4013 6216",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "MRI",
+     "Mammography (mammogram)",
+     "DEXA bone density (BMD)",
+     "Nuclear medicine",
+     "Cardiac imaging",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Mayfield",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "99 Maitland Road, Mayfield NSW 2304",
+    "suburb": "Mayfield",
+    "phone": "(02) 4929 7222",
+    "fax": "(02) 8244 1974",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "Cardiac imaging",
+     "Injections and biopsies",
+     "Screening",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Salamander Bay",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "Shop 2/2 Town Centre Circuit, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "(02) 4929 7222",
+    "fax": "(02) 8287 2536",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray and OPG",
+     "Ultrasound",
+     "CT (low dose)",
+     "MRI",
+     "DEXA bone density (BMD)",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Singleton",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "157 John Street, Singleton NSW 2330",
+    "suburb": "Singleton",
+    "phone": "(02) 4929 7222",
+    "fax": "(02) 8529 0330",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT (low dose)",
+     "MRI",
+     "DEXA bone density (BMD)",
+     "Cardiac imaging",
+     "Injections and biopsies",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Thornton",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging (formerly GXU Radiology Specialists)",
+    "address": "Suite 1/2 Poynton Place, Thornton NSW 2322",
+    "suburb": "Thornton",
+    "phone": "(02) 4999 6499",
+    "fax": "(02) 4999 6400",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "CT (low dose)",
+     "CT coronary angiography (CTCA)",
+     "Cardiac imaging",
+     "Injections and biopsies (lung, liver and bone biopsies; pain injections)",
+     "Screening",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Gateshead PET CT and MRI Centre",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group (Lumus Imaging)",
+    "address": "10 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.lumusimaging.com.au/locations/hunter-imaging-group-gateshead-pet-ct-and-mri-centre",
+    "interests": [
+     "MRI",
+     "PET/CT",
+     "Mon–Fri 9am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://adf.lumusimaging.com.au/locations/hunter-imaging-group-gateshead-pet-ct-and-mri-centre"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lumus Imaging Lingard Private Hospital",
+    "specialty": "Radiology and imaging",
+    "practice": "Lumus Imaging",
+    "address": "Lingard Private Hospital, 23 Merewether Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4964 2700",
+    "fax": "02 4964 2701",
+    "email": "",
+    "ereferral": "Lumus online eReferrals (see website)",
+    "website": "https://www.lumusimaging.com.au/locations/lumus-imaging-lingard-private-hospital",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT",
+     "MRI",
+     "Angiography (DSA) and interventional procedures",
+     "Online eReferrals for referrers (as stated on the Lumus site)",
+     "Mon–Fri 8am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://adf.lumusimaging.com.au/locations/lumus-imaging-lingard-private-hospital"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lumus Imaging Charlestown",
+    "specialty": "Radiology and imaging",
+    "practice": "Lumus Imaging",
+    "address": "Charlestown Medical and Dental Centre, 316 Charlestown Road, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4985 2541",
+    "fax": "02 4985 2576",
+    "email": "",
+    "ereferral": "Lumus online eReferrals (see website)",
+    "website": "https://lumusimaging.com.au/locations/lumus-imaging-charlestown",
+    "interests": [
+     "X-ray and dental X-ray (OPG)",
+     "Ultrasound",
+     "CT",
+     "Interventional procedures",
+     "Online eReferrals for referrers (as stated on the Lumus site)",
+     "Mon–Fri 8am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lumusimaging.com.au/locations/lumus-imaging-charlestown"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Charlestown",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "Ground Floor, Suite 103, 99 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "X-ray",
+     "CT",
+     "Interventional CT",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Mon–Fri 8:30am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/hunter-imaging-charlestown/radiology-service/b37f0491-be29-43b3-be43-e0df4c3bd53f"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Adamstown",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "Suite 2A, 282 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Ultrasound",
+     "Interventional ultrasound",
+     "Vascular laboratory",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Tue–Fri 8:30am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/adamstown-2289-nsw/hunter-imaging-adamstown/ultrasound-scan/36f689b4-7714-4b17-b0fe-7c79b9ff596a"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Rutherford",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "Shop 1, 9 North Mall, Rutherford NSW 2320",
+    "suburb": "Rutherford",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "X-ray and OPG (no appointment needed, as stated)",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Mon–Fri 9am–4:30pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/rutherford-2320-nsw/hunter-imaging-rutherford/radiology-service/9dff56ef-1981-4d8c-8def-24f55b89dae0"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Toronto",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "132 Brighton Avenue, Toronto NSW 2283",
+    "suburb": "Toronto",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "X-ray",
+     "CT",
+     "Interventional CT",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Mon–Fri 9am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/toronto-2283-nsw/hunter-imaging-toronto/radiology-service/c8b74718-feba-438f-ad33-a046c3874714"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Salamander Bay",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "Suite 2, 6 Central Avenue, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "X-ray",
+     "CT",
+     "Interventional CT",
+     "Mammography (mammogram)",
+     "DEXA bone density (BMD)",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Mon–Fri 8am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/salamander-bay-2317-nsw/hunter-imaging-salamander-bay/radiology-service/0abf3bff-bb81-4086-a30e-8359398d45b2"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Williamtown",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group",
+    "address": "Williamtown Aerospace Centre, Building A, Suite 4, 2 Technology Place, Williamtown NSW 2318",
+    "suburb": "Williamtown",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "X-ray (no appointment needed, as stated)",
+     "CT",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Tue–Fri 9am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/williamtown-2318-nsw/hunter-imaging-williamtown/radiology-service/a2e5f3d3-4789-4a7a-abfb-49041c20ee99"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Alpenglow Australia Muswellbrook Diagnostic Imaging",
+    "specialty": "Radiology and imaging",
+    "practice": "Alpenglow Australia",
+    "address": "64 Brook Street, Muswellbrook NSW 2333",
+    "suburb": "Muswellbrook",
+    "phone": "02 6543 3427",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://alpenglow.com.au",
+    "interests": [
+     "X-ray",
+     "Ultrasound",
+     "CT",
+     "Saturday 9am–5pm (as stated on Healthdirect)",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": true,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/muswellbrook-2333-nsw/alpenglow-australia-muswellbrook-diagnostic-imaging/radiology-service/06772589-ee46-4329-e3c8-00b771975bdb"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "tests-ncs-eeg": {
+  "name": "Nerve conduction studies, EMG and EEG",
+  "group": "tests",
+  "note": "<p class=\"sp-note\">Many neurologists do nerve conduction studies and EMG in their own rooms: see <a href=\"/specialists/neurology/\">Neurology</a>. Public: ask your GP to refer to <a href=\"https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/outpatient-services\" rel=\"noopener\">John Hunter Hospital Neurology</a>.</p>",
+  "people": [
+   {
+    "name": "Seer Medical Newcastle",
+    "specialty": "Home video-EEG (EEG with ECG) monitoring",
+    "practice": "Seer Medical",
+    "address": "Cooks Hill Healthcare Hub, Suite 3, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "1300 399 904",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://seermedical.com/au/patients/home-video-eeg/",
+    "interests": [
+     "EEG: 3–10 day ambulatory video EEG-ECG monitoring at home, for epilepsy diagnosis (as stated)",
+     "Needs a GP or specialist referral (as stated)",
+     "Mixed billing: Seer states an out-of-pocket fee, with Medicare rebates and fee exemptions in some cases"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cooks-hill-2300-nsw/seer-medical-newcastle/neurology/48410677-fcbf-4b68-87eb-f3d045f958b9",
+     "https://seermedical.com/au/patients/home-video-eeg/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "tests-sleep": {
+  "name": "Sleep studies",
+  "group": "tests",
+  "note": "",
+  "people": [
+   {
+    "name": "Hunter Respiratory and Sleep Centre",
+    "specialty": "Sleep studies and lung function testing",
+    "practice": "Hunter Respiratory and Sleep Centre",
+    "address": "25 Molly Morgan Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4018 7506",
+    "fax": "02 4915 5351",
+    "email": "",
+    "ereferral": "Online referral request form",
+    "website": "https://hunterrespiratorysleepcentre.snapforms.com.au/form/referral-request",
+    "interests": [
+     "Sleep study: diagnostic polysomnography, home or in-lab",
+     "CPAP/BiPAP titration studies; MSLT and MWT",
+     "Lung function: spirometry, diffusion capacity, lung volumes, bronchial provocation, FENO",
+     "Skin allergy testing",
+     "Online referral request form (as stated)",
+     "NATA/ASA accredited sleep laboratory (ages 15+)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterrespiratorysleepcentre.snapforms.com.au/form/referral-request",
+     "https://nata.com.au/accredited-organisation/hunter-respiratory-and-sleep-centre-21388-25769/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Warners Bay Private Hospital Sleep Laboratory",
+    "specialty": "Sleep studies",
+    "practice": "Sleep Medicine Sleep Laboratory, Warners Bay Private Hospital",
+    "address": "42 Fairfax Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Sleep study: in-lab diagnostic polysomnography",
+     "CPAP titration studies; MSLT and MWT",
+     "NATA/ASA accredited sleep laboratory (ages 15+)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://nata.com.au/accredited-organisation/sleep-medicine-sleep-laboratory-warners-bay-private-hospital-19833-23142/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "tests-lung-function": {
+  "name": "Lung function and spirometry",
+  "group": "tests",
+  "note": "",
+  "people": [
+   {
+    "name": "Hunter Respiratory and Sleep Centre",
+    "specialty": "Sleep studies and lung function testing",
+    "practice": "Hunter Respiratory and Sleep Centre",
+    "address": "25 Molly Morgan Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4018 7506",
+    "fax": "02 4915 5351",
+    "email": "",
+    "ereferral": "Online referral request form",
+    "website": "https://hunterrespiratorysleepcentre.snapforms.com.au/form/referral-request",
+    "interests": [
+     "Sleep study: diagnostic polysomnography, home or in-lab",
+     "CPAP/BiPAP titration studies; MSLT and MWT",
+     "Lung function: spirometry, diffusion capacity, lung volumes, bronchial provocation, FENO",
+     "Skin allergy testing",
+     "Online referral request form (as stated)",
+     "NATA/ASA accredited sleep laboratory (ages 15+)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterrespiratorysleepcentre.snapforms.com.au/form/referral-request",
+     "https://nata.com.au/accredited-organisation/hunter-respiratory-and-sleep-centre-21388-25769/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Pulmonary Function Laboratory",
+    "specialty": "Lung function testing",
+    "practice": "Newcastle Pulmonary Function Laboratory",
+    "address": "Suite 2, 20 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4965 3053",
+    "fax": "02 4940 8001",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newlung.com.au/newcastle-pulmonary-function-laboratory/",
+    "interests": [
+     "Lung function testing (pulmonary function, spirometry)",
+     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
+     "Tue–Fri 9am–4pm (as stated)",
+     "Asthma Australia's lab list shows a Broadmeadow address: check when booking"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/newcastle-pulmonary-function-laboratory/pulmonary-medicine-service/887b039c-30b3-4f03-8947-62602a6c0bc3",
+     "https://asthma.org.au/respiratorylabs/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "tests-cardiac": {
+  "name": "Cardiac testing",
+  "group": "tests",
+  "note": "<p class=\"sp-note\">Dedicated testing services only. Many cardiologists also do echo, Holter and stress tests in their rooms: see <a href=\"/specialists/cardiology/\">Cardiology</a>.</p>",
+  "people": [
+   {
+    "name": "Healthe Heart Lingard",
+    "specialty": "Cardiac testing",
+    "practice": "Healthe Heart cardiac testing service",
+    "address": "Lingard Private Hospital, Level 1, 23 Merewether Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4918 0150",
+    "fax": "02 4929 8700",
+    "email": "",
+    "ereferral": "Online referral (Lingard Private Hospital website)",
+    "website": "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+    "interests": [
+     "Echocardiogram (echo) and exercise stress echo",
+     "Exercise stress test",
+     "Holter monitor (24–48 hours, up to 2 weeks)",
+     "Event monitor",
+     "Bulk billed with a GP referral (as stated: “a bulk-billing rapid access cardiac testing service”)",
+     "Online referral and GP referral pad on the Lingard Private Hospital website"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-cardiac-testing-service"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Healthe Heart Maitland",
+    "specialty": "Cardiac testing",
+    "practice": "Healthe Heart cardiac testing service",
+    "address": "Maitland Private Hospital, Medical Centre 1, Level 1, Suite 5, 175 Chisholm Road, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4918 0150",
+    "fax": "02 4929 8700",
+    "email": "",
+    "ereferral": "Online referral (Lingard Private Hospital website)",
+    "website": "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+    "interests": [
+     "Echocardiogram (echo) and exercise stress echo",
+     "Exercise stress test",
+     "Holter monitor (24–48 hours, up to 2 weeks)",
+     "Event monitor",
+     "Bulk billed with a GP referral (as stated: “a bulk-billing rapid access cardiac testing service”)",
+     "Online referral and GP referral pad on the Lingard Private Hospital website"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-cardiac-testing-service"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Healthe Heart Charlestown",
+    "specialty": "Cardiac testing",
+    "practice": "Healthe Heart cardiac testing service",
+    "address": "Charlestown Specialist Centre, Level 1, 43 Dickinson Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4918 0150",
+    "fax": "02 4929 8700",
+    "email": "",
+    "ereferral": "Online referral (Lingard Private Hospital website)",
+    "website": "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+    "interests": [
+     "Echocardiogram (echo) and exercise stress echo",
+     "Exercise stress test",
+     "Holter monitor (24–48 hours, up to 2 weeks)",
+     "Event monitor",
+     "Bulk billed with a GP referral (as stated: “a bulk-billing rapid access cardiac testing service”)",
+     "Online referral and GP referral pad on the Lingard Private Hospital website"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-patient-information",
+     "https://lingardprivate.com.au/specialties/heart-centre/healthe-heart-cardiac-testing-service"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Charlestown",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging",
+    "address": "95 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4920 8555",
+    "fax": "(02) 4081 2847",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region/charlestown",
+    "interests": [
+     "X-ray and OPG",
+     "Ultrasound (including pregnancy, vascular and musculoskeletal)",
+     "CT (low dose), CT angiogram",
+     "MRI (including prostate, paediatric and foetal MRI)",
+     "Cardiac: echocardiography (echo), CT calcium score",
+     "Injections and biopsies (including breast biopsy)",
+     "Lung cancer screening (National Lung Cancer Screening Program)",
+     "Bulk billing available at this location for some services (as stated)",
+     "Online booking via the PRP website (appt.prpimaging.com.au)",
+     "Mon–Fri 8am–5pm (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region/charlestown",
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PRP Diagnostic Imaging Thornton",
+    "specialty": "Radiology and imaging",
+    "practice": "PRP Diagnostic Imaging (formerly GXU Radiology Specialists)",
+    "address": "Suite 1/2 Poynton Place, Thornton NSW 2322",
+    "suburb": "Thornton",
+    "phone": "(02) 4999 6499",
+    "fax": "(02) 4999 6400",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.prpimaging.com.au/practices/hunter-region",
+    "interests": [
+     "CT (low dose)",
+     "CT coronary angiography (CTCA)",
+     "Cardiac imaging",
+     "Injections and biopsies (lung, liver and bone biopsies; pain injections)",
+     "Screening",
+     "Online booking via the PRP website (appt.prpimaging.com.au)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.prpimaging.com.au/practices/hunter-region"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "tests-pathology": {
+  "name": "Pathology collection",
+  "group": "tests",
+  "note": "",
+  "people": [
+   {
+    "name": "NSW Health Pathology",
+    "specialty": "Pathology collection (public)",
+    "practice": "NSW Health Pathology",
+    "address": "Collection centres across the Hunter, including John Hunter Hospital",
+    "suburb": "Newcastle",
+    "phone": "02 4920 4000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pathology.health.nsw.gov.au/contact-us/locations-services/find-a-collection-centre/",
+    "interests": [
+     "Find a collection centre: pathology.health.nsw.gov.au (Find a Collection Centre)",
+     "“We bulk bill all pathology tests covered under the Medicare Benefits Schedule (MBS)” (as stated)",
+     "No booking needed for standard tests; some tests (e.g. ECG, glucose tolerance test) need a booking (as stated)",
+     "Accepts all test referrals (as stated)",
+     "Phone listed is the Newcastle corporate office"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://pathology.health.nsw.gov.au/contact-us",
+     "https://pathology.health.nsw.gov.au/tests/patient-faqs"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Laverty Pathology",
+    "specialty": "Pathology collection",
+    "practice": "Laverty Pathology",
+    "address": "Collection centres across Newcastle and the Hunter",
+    "suburb": "Newcastle",
+    "phone": "(02) 8552 1011",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.laverty.com.au/locations",
+    "interests": [
+     "Find a collection centre: laverty.com.au/locations",
+     "Saturday collection (as stated): Charlestown, Suite 2, 2/28 Smith Street, Sat 8am–12pm, Mon–Fri 7:30am–5pm",
+     "Other Newcastle centres seen: Newcastle (205 Hunter Street), Newcastle West (Marketown), Merewether (33 Llewellyn Street), weekdays only"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": true,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.laverty.com.au/locations/charlestown-hlch",
+     "https://www.laverty.com.au/locations/newcastle-ncas",
+     "https://www.laverty.com.au/locations/newcastle-west-neww",
+     "https://www.laverty.com.au/locations/merewether-mwar"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Australian Clinical Labs",
+    "specialty": "Pathology collection",
+    "practice": "Australian Clinical Labs",
+    "address": "Collection centres across NSW, including Lake Macquarie",
+    "suburb": "Lake Macquarie",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://clinicallabs.com.au/location",
+    "interests": [
+     "Find a collection centre: clinicallabs.com.au/location (filter for weekend opening)",
+     "Hunter example: Cooranbong (Suite 7, 567 Freemans Drive), weekdays only"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://clinicallabs.com.au/location",
+     "https://www.clinicallabs.com.au/location/220"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}

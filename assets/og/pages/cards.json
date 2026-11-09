@@ -1735,6 +1735,13 @@
 "label": "Specialists",
 "title": "Audiology"
 },
+"specialists-cardiac-testing": {
+"url": "/specialists/cardiac-testing/",
+"key": "d6f510d66d42",
+"v": "53adeb75",
+"label": "Specialists",
+"title": "Cardiac testing"
+},
 "specialists-cardiology": {
 "url": "/specialists/cardiology/",
 "key": "b83f1071ba05",
@@ -1861,6 +1868,13 @@
 "label": "Specialists",
 "title": "Lactation consultants"
 },
+"specialists-lung-function-and-spirometry": {
+"url": "/specialists/lung-function-and-spirometry/",
+"key": "981a9cc459e6",
+"v": "349da1fd",
+"label": "Specialists",
+"title": "Lung function and spirometry"
+},
 "specialists-medical-oncology": {
 "url": "/specialists/medical-oncology/",
 "key": "235280418864",
@@ -1881,6 +1895,13 @@
 "v": "8b945edf",
 "label": "Specialists",
 "title": "Nephrology"
+},
+"specialists-nerve-conduction-studies-emg-and-eeg": {
+"url": "/specialists/nerve-conduction-studies-emg-and-eeg/",
+"key": "b65b2dc24832",
+"v": "1f9966a6",
+"label": "Specialists",
+"title": "Nerve conduction studies, EMG and EEG"
 },
 "specialists-neurology": {
 "url": "/specialists/neurology/",
@@ -1980,6 +2001,13 @@
 "label": "Specialists",
 "title": "Pain medicine"
 },
+"specialists-pathology-collection": {
+"url": "/specialists/pathology-collection/",
+"key": "516c674dda92",
+"v": "add28a35",
+"label": "Specialists",
+"title": "Pathology collection"
+},
 "specialists-perinatal-psychiatry": {
 "url": "/specialists/perinatal-psychiatry/",
 "key": "85dac8334e3e",
@@ -2043,6 +2071,13 @@
 "label": "Specialists",
 "title": "Radiation oncology"
 },
+"specialists-radiology-and-imaging": {
+"url": "/specialists/radiology-and-imaging/",
+"key": "7081492a761e",
+"v": "0f01fcff",
+"label": "Specialists",
+"title": "Radiology and imaging"
+},
 "specialists-rehabilitation-medicine": {
 "url": "/specialists/rehabilitation-medicine/",
 "key": "4e26779a67d3",
@@ -2070,6 +2105,13 @@
 "v": "66a3b4df",
 "label": "Specialists",
 "title": "Sexual health"
+},
+"specialists-sleep-studies": {
+"url": "/specialists/sleep-studies/",
+"key": "ee15c6d658ad",
+"v": "42531c14",
+"label": "Specialists",
+"title": "Sleep studies"
 },
 "specialists-speech-pathology-adults": {
 "url": "/specialists/speech-pathology-adults/",

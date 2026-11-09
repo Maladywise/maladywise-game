@@ -14,5 +14,74 @@
    "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/chronic-disease-management/multiple-sclerosis-clinic",
    "checked": "9 November 2026"
   }
+ ],
+ "Radiology and imaging": [
+  {
+   "name": "John Hunter Hospital medical imaging",
+   "where": "New Lambton Heights",
+   "how": "X-ray, CT, ultrasound, MRI, DSA, fluoroscopy, nuclear medicine, interventional radiology. Phone (02) 4921 3456. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Calvary Mater Newcastle medical imaging",
+   "where": "Waratah",
+   "how": "X-ray, CT, ultrasound, MRI, mammography, fluoroscopy, nuclear medicine. Phone (02) 4014 4600. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Maitland Hospital medical imaging",
+   "where": "Maitland",
+   "how": "X-ray, CT, ultrasound, MRI. Phone (02) 4087 1400. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Belmont Hospital medical imaging",
+   "where": "Belmont",
+   "how": "X-ray, CT, ultrasound. Phone (02) 4923 2219. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Cessnock Hospital medical imaging",
+   "where": "Cessnock",
+   "how": "X-ray, ultrasound, fluoroscopy. Phone (02) 4991 0555. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Singleton Hospital medical imaging",
+   "where": "Singleton",
+   "how": "X-ray. Phone (02) 6571 9224. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Muswellbrook Hospital medical imaging",
+   "where": "Muswellbrook",
+   "how": "X-ray. Phone (02) 6542 2093. HNE Imaging states: “We bulk bill for outpatient imaging services so there is no out of pocket cost for any Medicare funded service.” Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/medical-imaging",
+   "checked": "9 November 2026"
+  }
+ ],
+ "Sleep studies": [
+  {
+   "name": "Newcastle Sleep Disorders Centre (HNE Health)",
+   "where": "Hunter New England Health",
+   "how": "Public diagnostic lab for sleep-related breathing disorders such as sleep apnoea, including overnight sleep studies. Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/lung-health",
+   "checked": "9 November 2026"
+  }
+ ],
+ "Lung function and spirometry": [
+  {
+   "name": "John Hunter Hospital Pulmonary Function Laboratory",
+   "where": "Diagnostic Centre, John Hunter Hospital, New Lambton Heights",
+   "how": "Spirometry, gas transfer, lung volumes, bronchial provocation, cardiopulmonary exercise testing, overnight oximetry and altitude simulation testing. Needs a referral.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/lung-health",
+   "checked": "9 November 2026"
+  }
  ]
 }
