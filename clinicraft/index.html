@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Clinicraft prototype | Malady Wise</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Early prototype of Clinicraft, a merge game about rebuilding a country clinic.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<style>
+@font-face{font-family:Lora;font-weight:700;font-display:swap;src:url(/assets/fonts/lora-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format("woff2")}
+:root{--bg:#F7F3EC;--card:#FFFFFF;--ink:#2E1F57;--muted:#5B4A86;--line:#E2DCEA;--brand:#6B4FB3;--gold:#E9A23B;--board:#D8CDEE;--cell:#F1ECFA}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.app{max-width:440px;margin:0 auto;padding:12px 14px 40px;display:flex;flex-direction:column;gap:12px}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+header a{color:var(--muted);text-decoration:none;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+h1{font:700 26px Lora,Georgia,serif;margin:0}
+.proto{font:600 10px Poppins;letter-spacing:.12em;color:#fff;background:var(--gold);border-radius:999px;padding:3px 8px;vertical-align:middle}
+.hud{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:6px 10px;border-radius:999px;background:var(--card);font-size:13px;font-weight:600;box-shadow:0 1px 0 rgba(46,31,87,.12)}
+.orders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.ord{background:var(--card);border-radius:14px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 2px 0 rgba(46,31,87,.08);text-align:center}
+.ord .who{font-size:11px;font-weight:600;line-height:1.2}
+.ord .need{font-size:10.5px;color:var(--muted);line-height:1.2;min-height:26px}
+.ord button{border:0;border-radius:999px;padding:6px 12px;min-height:34px;font:600 12px Poppins;background:var(--line);color:var(--muted)}
+.ord button.ok{background:var(--brand);color:#fff;cursor:pointer;animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.board{background:var(--board);border-radius:18px;padding:8px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;touch-action:none;user-select:none;-webkit-user-select:none}
+.cell{aspect-ratio:1;border-radius:11px;background:var(--cell);display:flex;align-items:center;justify-content:center;position:relative}
+.cell.over{box-shadow:inset 0 0 0 3px var(--gold)}
+.it{width:88%;height:88%;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:grab;position:relative}
+.it svg{width:86%;height:86%}
+.it .lv{position:absolute;right:2px;bottom:0;font:700 9px Poppins;color:var(--muted)}
+.it.c0{background:#EFE8FB}.it.c1{background:#FFF4E2}.it.c2{background:#E6F2FC}
+.it.match{box-shadow:0 0 0 3px var(--gold)}
+.it.pop{animation:pop .35s ease-out}
+@keyframes pop{0%{transform:scale(.5)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.ghost{position:fixed;pointer-events:none;z-index:50;width:56px;height:56px;transform:translate(-50%,-60%) scale(1.15);filter:drop-shadow(0 8px 10px rgba(46,31,87,.3))}
+.row{display:flex;gap:8px;align-items:center}
+.box{flex:none;border:0;border-radius:16px;background:#FDEFD9;padding:6px 12px;display:flex;align-items:center;gap:8px;font:600 14px Poppins;color:var(--ink);min-height:56px;cursor:pointer;box-shadow:0 3px 0 #E9C995}
+.box svg{width:40px;height:40px}.box:active{transform:translateY(2px);box-shadow:0 1px 0 #E9C995}
+.tip{flex:1;font-size:12.5px;line-height:1.4;color:var(--muted);background:var(--card);border-radius:14px;padding:8px 10px;min-height:56px;display:flex;align-items:center}
+.tip b{color:var(--ink)}
+.room{background:var(--card);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.room h2{font:700 18px Lora,serif;margin:0;display:flex;justify-content:space-between;align-items:baseline}
+.room h2 small{font:500 12px Poppins;color:var(--muted)}
+.room svg.scene{width:100%;height:auto;border-radius:12px;display:block}
+.task{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14px}
+.task button{border:0;border-radius:999px;padding:10px 16px;min-height:44px;font:600 14px Poppins;background:var(--brand);color:#fff;cursor:pointer}
+.task button:disabled{background:var(--line);color:var(--muted);cursor:default}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--brand);transition:width .4s}
+.fact{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(420px,calc(100% - 24px));background:var(--card);border:2px solid var(--gold);border-radius:16px;padding:10px 12px;display:flex;gap:10px;align-items:center;box-shadow:0 10px 30px rgba(46,31,87,.25);z-index:40;font-size:13px;line-height:1.4}
+.fact svg{width:44px;height:44px;flex:none}.fact b{display:block;color:#B9761C;font-size:12px}
+.fact[hidden]{display:none}
+.toast{position:fixed;left:50%;top:18px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:999px;padding:8px 16px;font:600 13px Poppins;z-index:60}
+.toast[hidden]{display:none}
+.foot{font-size:12px;color:var(--muted);text-align:center;line-height:1.5}
+.foot button{border:0;background:none;color:var(--muted);text-decoration:underline;font:inherit;cursor:pointer;min-height:44px}
+.win{text-align:center;padding:6px 0;font:700 18px Lora,serif;color:#2F7D4A}
+@media (prefers-reduced-motion:reduce){.ord button.ok,.it.pop{animation:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header><div><h1>Clinicraft <span class="proto">PROTOTYPE</span></h1></div><a href="/">‹ Malady Wise</a></header>
+  <div class="hud"><span class="chip" id="en">⚡ 40</span><span class="chip" id="co">🪙 0</span><span class="chip" id="fo">📖 0/15</span></div>
+  <div class="orders" id="orders"></div>
+  <div class="board" id="board" aria-label="Merge board"></div>
+  <div class="row"><button class="box" id="box" type="button" aria-label="Open the supply box"><svg viewBox="0 0 64 64"><path d="M10 24l22-10 22 10v24L32 58 10 48z" fill="#E9A23B"/><path d="M10 24l22 10 22-10M32 34v24" fill="none" stroke="#B9761C" stroke-width="2.5"/><path d="M26 22h12M32 16v12" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg><span>Supply<br>box</span></button><div class="tip" id="tip"><span><b>Ziggy:</b> Tap the supply box for kit. Drag two the same together to make something better.</span></div></div>
+  <section class="room" aria-labelledby="rh"><h2 id="rh">Waiting room <small id="rp">0 of 5 fixed</small></h2><div id="scene"></div><div class="bar"><i id="rbar" style="width:0"></i></div><div id="task"></div></section>
+  <p class="foot">An early test of a Malady Wise merge game. Facts are general education, not medical advice.<br><button type="button" id="reset">Start again</button></p>
+</div>
+<div class="fact" id="fact" hidden></div>
+<div class="toast" id="toast" hidden></div>
+<script>
+(function () {
+  var I = {"tubing": "<path d=\"M14 40c0-10 8-16 18-16s18 6 18 14-7 12-14 12-12-4-12-9 4-8 9-8 8 3 8 6\" fill=\"none\" stroke=\"#7B5CC4\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"14\" cy=\"42\" r=\"4\" fill=\"#4A2A86\"/>", "stethoscope": "<path d=\"M20 10v16a12 12 0 0 0 24 0V10\" fill=\"none\" stroke=\"#4A2A86\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M32 38v8a8 8 0 0 0 16 0v-4\" fill=\"none\" stroke=\"#7B5CC4\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"48\" cy=\"38\" r=\"7\" fill=\"#C9D4E3\" stroke=\"#4A2A86\" stroke-width=\"3\"/><circle cx=\"20\" cy=\"9\" r=\"3\" fill=\"#2E1F57\"/><circle cx=\"44\" cy=\"9\" r=\"3\" fill=\"#2E1F57\"/>", "cuff": "<rect x=\"8\" y=\"14\" width=\"34\" height=\"22\" rx=\"6\" fill=\"#3E5BA9\"/><rect x=\"12\" y=\"18\" width=\"26\" height=\"14\" rx=\"3\" fill=\"#5B79C9\"/><path d=\"M42 26c8 0 8 12 0 14\" fill=\"none\" stroke=\"#2E1F57\" stroke-width=\"3\"/><circle cx=\"46\" cy=\"48\" r=\"8\" fill=\"#2E1F57\"/><circle cx=\"24\" cy=\"48\" r=\"9\" fill=\"#FFF\" stroke=\"#2E1F57\" stroke-width=\"3\"/><path d=\"M24 48l4-5\" stroke=\"#D2453D\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>", "monitor": "<rect x=\"10\" y=\"12\" width=\"44\" height=\"40\" rx=\"8\" fill=\"#F4F6FA\" stroke=\"#2E1F57\" stroke-width=\"3\"/><rect x=\"16\" y=\"18\" width=\"32\" height=\"18\" rx=\"3\" fill=\"#1F3B2D\"/><text x=\"32\" y=\"31\" font-size=\"10\" font-family=\"monospace\" fill=\"#7CF2A8\" text-anchor=\"middle\">120/80</text><circle cx=\"24\" cy=\"44\" r=\"3\" fill=\"#3E8E63\"/><circle cx=\"40\" cy=\"44\" r=\"3\" fill=\"#D2453D\"/>", "holter": "<rect x=\"14\" y=\"18\" width=\"30\" height=\"34\" rx=\"7\" fill=\"#6B4FB3\"/><rect x=\"19\" y=\"23\" width=\"20\" height=\"12\" rx=\"2\" fill=\"#E8E1FA\"/><path d=\"M20 30h4l2-4 3 8 2-4h7\" fill=\"none\" stroke=\"#D2453D\" stroke-width=\"2\"/><path d=\"M29 18c0-8 12-10 18-6\" fill=\"none\" stroke=\"#2E1F57\" stroke-width=\"3\"/><text x=\"29\" y=\"47\" font-size=\"8\" fill=\"#FFF\" text-anchor=\"middle\" font-family=\"Poppins\">24h</text>", "swab": "<path d=\"M16 48L44 20\" stroke=\"#E8DCC0\" stroke-width=\"4\" stroke-linecap=\"round\"/><ellipse cx=\"46\" cy=\"18\" rx=\"7\" ry=\"5\" transform=\"rotate(-45 46 18)\" fill=\"#FFFFFF\" stroke=\"#BFB39A\" stroke-width=\"2\"/>", "gauze": "<rect x=\"12\" y=\"14\" width=\"40\" height=\"36\" rx=\"4\" fill=\"#FFFFFF\" stroke=\"#C7BFD9\" stroke-width=\"2\"/><path d=\"M12 24h40M12 34h40M22 14v36M32 14v36M42 14v36\" stroke=\"#E3DDF0\" stroke-width=\"2\"/>", "bandage": "<rect x=\"8\" y=\"22\" width=\"48\" height=\"20\" rx=\"10\" fill=\"#F2C9A0\" transform=\"rotate(-20 32 32)\"/><rect x=\"24\" y=\"24\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#E8B07E\" transform=\"rotate(-20 32 32)\"/><circle cx=\"29\" cy=\"30\" r=\"1.2\" fill=\"#C58A57\"/><circle cx=\"35\" cy=\"34\" r=\"1.2\" fill=\"#C58A57\"/>", "box": "<path d=\"M10 24l22-10 22 10v24L32 58 10 48z\" fill=\"#E9A23B\"/><path d=\"M10 24l22 10 22-10M32 34v24\" fill=\"none\" stroke=\"#B9761C\" stroke-width=\"2.5\"/><path d=\"M26 22h12M32 16v12\" stroke=\"#FFF\" stroke-width=\"4\" stroke-linecap=\"round\"/>", "thermo": "<rect x=\"27\" y=\"8\" width=\"10\" height=\"38\" rx=\"5\" fill=\"#FFF\" stroke=\"#2E1F57\" stroke-width=\"3\"/><circle cx=\"32\" cy=\"48\" r=\"8\" fill=\"#D2453D\" stroke=\"#2E1F57\" stroke-width=\"3\"/><rect x=\"30\" y=\"24\" width=\"4\" height=\"22\" fill=\"#D2453D\"/>", "vial": "<rect x=\"24\" y=\"10\" width=\"16\" height=\"8\" rx=\"2\" fill=\"#3E8E63\"/><rect x=\"25\" y=\"18\" width=\"14\" height=\"34\" rx=\"5\" fill=\"#E9F6EF\" stroke=\"#2E1F57\" stroke-width=\"3\"/><rect x=\"28\" y=\"34\" width=\"8\" height=\"15\" rx=\"3\" fill=\"#7CC4E8\"/>", "fridge": "<rect x=\"14\" y=\"8\" width=\"36\" height=\"48\" rx=\"5\" fill=\"#F4F6FA\" stroke=\"#2E1F57\" stroke-width=\"3\"/><path d=\"M14 26h36\" stroke=\"#2E1F57\" stroke-width=\"3\"/><rect x=\"42\" y=\"14\" width=\"3\" height=\"8\" rx=\"1.5\" fill=\"#2E1F57\"/><rect x=\"42\" y=\"32\" width=\"3\" height=\"10\" rx=\"1.5\" fill=\"#2E1F57\"/><text x=\"28\" y=\"20\" font-size=\"7\" fill=\"#3E5BA9\" font-family=\"monospace\" text-anchor=\"middle\">4\u00b0C</text>", "lock": "<rect x=\"18\" y=\"28\" width=\"28\" height=\"22\" rx=\"5\" fill=\"#B9AEDB\"/><path d=\"M24 28v-6a8 8 0 0 1 16 0v6\" fill=\"none\" stroke=\"#B9AEDB\" stroke-width=\"4\"/>", "dressing": "<rect x=\"10\" y=\"14\" width=\"44\" height=\"36\" rx=\"6\" fill=\"#F4F6FA\" stroke=\"#2E1F57\" stroke-width=\"3\"/><path d=\"M32 22v20M22 32h20\" stroke=\"#D2453D\" stroke-width=\"5\" stroke-linecap=\"round\"/>", "woundkit": "<rect x=\"8\" y=\"20\" width=\"48\" height=\"32\" rx=\"6\" fill=\"#3E8E63\"/><rect x=\"24\" y=\"12\" width=\"16\" height=\"10\" rx=\"3\" fill=\"none\" stroke=\"#2E1F57\" stroke-width=\"3\"/><path d=\"M32 28v16M24 36h16\" stroke=\"#FFF\" stroke-width=\"5\" stroke-linecap=\"round\"/>", "eskyice": "<rect x=\"10\" y=\"20\" width=\"44\" height=\"32\" rx=\"6\" fill=\"#3E5BA9\"/><rect x=\"10\" y=\"14\" width=\"44\" height=\"10\" rx=\"4\" fill=\"#5B79C9\"/><rect x=\"26\" y=\"30\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#E9F6FF\"/>", "coldroom": "<rect x=\"8\" y=\"8\" width=\"48\" height=\"48\" rx=\"6\" fill=\"#DCEBFA\" stroke=\"#2E1F57\" stroke-width=\"3\"/><path d=\"M32 16v32M18 24l28 16M46 24L18 40\" stroke=\"#3E5BA9\" stroke-width=\"3\" stroke-linecap=\"round\"/>"};
+  var CH = [
+    { n: "Diagnostics", it: [["tubing", "Tubing", "Laennec invented the stethoscope in 1816 by rolling paper into a tube."], ["stethoscope", "Stethoscope", "The bell hears low sounds; the diaphragm hears high ones."], ["cuff", "BP cuff", "A cuff that's too small reads falsely high."], ["monitor", "Automatic BP monitor", "Sit quietly for about 5 minutes before a blood pressure reading."], ["holter", "24-hour BP monitor", "Ambulatory monitoring can unmask 'white coat' high blood pressure."]] },
+    { n: "Wound care", it: [["swab", "Swab", "For most small cuts, clean running tap water works as well as antiseptic."], ["gauze", "Gauze", "Plain gauze can stick to a healing wound. Non-stick dressings hurt less coming off."], ["bandage", "Bandage", "Too tight cuts off circulation. Fingers and toes should stay pink and warm."], ["dressing", "Dressing pack", "Wounds generally heal faster kept moist and covered than left to dry out."], ["woundkit", "Wound kit", "After a wound, check tetanus. Many people are due a booster without knowing."]] },
+    { n: "Cold chain", it: [["thermo", "Thermometer", "Normal body temperature varies a little through the day and between people."], ["vial", "Vaccine", "Most vaccines must stay between 2 and 8 °C. That's the cold chain."], ["eskyice", "Vaccine cool box", "Cool boxes carry vaccines to outreach clinics, with a thermometer inside."], ["fridge", "Vaccine fridge", "Clinics use purpose-built vaccine fridges; household fridges swing too much."], ["coldroom", "Cold room", "If the cold chain breaks, vaccines are set aside until the experts say they're safe."]] }
+  ];
+  var WHO = ["Mrs Nguyen", "Jack", "Ruby", "Aunty May", "Dr Bea", "Priya (NP)", "Mr Kowalski", "Ava", "Sione", "Grace"];
+  var TASKS = [["Fix the leaking roof", 20], ["Paint the walls", 30], ["New chairs", 40], ["A plant and a clock", 40], ["Noticeboard and kids' corner", 60]];
+  var COLS = 6, ROWS = 6, N = COLS * ROWS, EMAX = 60, EREG = 10000, KEY = "ccr-proto-1";
+  var S = load() || fresh();
+  function fresh() { var g = new Array(N).fill(null); [[0, 0], [0, 0], [1, 0], [2, 0], [1, 1]].forEach(function (x, i) { g[[7, 9, 14, 20, 27][i]] = { c: x[0], l: x[1] }; }); return { g: g, e: EMAX, et: Date.now(), coins: 0, found: {}, orders: [], room: 0, seen: false }; }
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+  function $(id) { return document.getElementById(id); }
+  function svg(k) { return '<svg viewBox="0 0 64 64">' + I[k] + "</svg>"; }
+  function info(c, l) { return CH[c].it[l]; }
+  function rnd(n) { return Math.floor(Math.random() * n); }
+  // energy regen
+  function regen() { var now = Date.now(), k = Math.floor((now - S.et) / EREG); if (k > 0) { S.e = Math.min(EMAX, S.e + k); S.et += k * EREG; if (S.e === EMAX) S.et = now; } }
+  // orders
+  function newOrder() { var c = rnd(3), l = 1 + rnd(S.room >= 2 ? 3 : 2); return { w: WHO[rnd(WHO.length)], c: c, l: l }; }
+  function fill() { while (S.orders.length < 3) S.orders.push(newOrder()); }
+  function has(c, l) { for (var i = 0; i < N; i++) if (S.g[i] && S.g[i].c === c && S.g[i].l === l) return i; return -1; }
+  function render() {
+    regen(); fill();
+    $("en").textContent = "⚡ " + S.e + (S.e < EMAX ? " · +1 in " + Math.ceil((EREG - (Date.now() - S.et)) / 1000) + "s" : "");
+    $("co").textContent = "🪙 " + S.coins; $("fo").textContent = "📖 " + Object.keys(S.found).length + "/15";
+    $("orders").innerHTML = S.orders.map(function (o, k) { var it = info(o.c, o.l), ok = has(o.c, o.l) >= 0; return '<div class="ord"><span class="who">' + o.w + '</span><div style="width:38px;height:38px">' + svg(it[0]) + '</div><span class="need">' + it[1] + '</span><button type="button" data-o="' + k + '" class="' + (ok ? "ok" : "") + '"' + (ok ? "" : " disabled") + ">" + (ok ? "Give · 🪙" + (o.l + 1) * 5 : "Need it") + "</button></div>"; }).join("");
+    var b = $("board"), h = "";
+    for (var i = 0; i < N; i++) { var x = S.g[i]; h += '<div class="cell" data-i="' + i + '">' + (x ? '<div class="it c' + x.c + (x.p ? " pop" : "") + '" data-i="' + i + '">' + svg(info(x.c, x.l)[0]) + '<span class="lv">' + (x.l + 1) + "</span></div>" : "") + "</div>"; if (x) delete x.p; }
+    b.innerHTML = h;
+    var done = S.room >= TASKS.length;
+    $("rp").textContent = S.room + " of " + TASKS.length + " fixed"; $("rbar").style.width = (S.room / TASKS.length * 100) + "%";
+    $("scene").innerHTML = scene(S.room);
+    $("task").innerHTML = done ? '<p class="win">Waiting room restored! Next up: the treatment room.</p>' : '<div class="task"><span>' + TASKS[S.room][0] + '</span><button type="button" id="fix"' + (S.coins < TASKS[S.room][1] ? " disabled" : "") + ">Fix · 🪙" + TASKS[S.room][1] + "</button></div>";
+    save();
+  }
+  function scene(n) {
+    var wall = n >= 2 ? "#F7E7C6" : "#C9BBA5", floor = "#D9C3A3", s = '<svg class="scene" viewBox="0 0 360 170" role="img" aria-label="The waiting room, ' + n + ' of 5 jobs done"><rect width="360" height="170" fill="' + wall + '"/><rect y="128" width="360" height="42" fill="' + floor + '"/>';
+    s += '<rect x="20" y="30" width="90" height="60" rx="4" fill="' + (n >= 1 ? "#BFE3F2" : "#8E8696") + '" stroke="#2E1F57" stroke-width="3"/>';
+    if (n < 1) s += '<path d="M150 0v40" stroke="#7CA9C9" stroke-width="4" stroke-dasharray="6 8"/><ellipse cx="150" cy="150" rx="26" ry="6" fill="#7CA9C9" opacity=".6"/>';
+    if (n < 2) s += '<path d="M240 20l20 30-12 10 16 22" stroke="#8A7F6E" stroke-width="2" fill="none"/>';
+    if (n >= 3) [130, 180, 230].forEach(function (x) { s += '<rect x="' + x + '" y="104" width="40" height="26" rx="6" fill="#6B4FB3"/><rect x="' + x + '" y="90" width="40" height="16" rx="5" fill="#8A70CC"/><rect x="' + (x + 4) + '" y="128" width="4" height="12" fill="#2E1F57"/><rect x="' + (x + 32) + '" y="128" width="4" height="12" fill="#2E1F57"/>'; });
+    else s += '<rect x="170" y="112" width="44" height="18" rx="3" fill="#7A6450" transform="rotate(-8 192 120)"/>';
+    if (n >= 4) s += '<circle cx="300" cy="40" r="16" fill="#FFF" stroke="#2E1F57" stroke-width="3"/><path d="M300 40V30M300 40l7 4" stroke="#2E1F57" stroke-width="2.5" stroke-linecap="round"/><rect x="316" y="104" width="22" height="26" rx="4" fill="#B9761C"/><circle cx="327" cy="94" r="16" fill="#3E8E63"/><circle cx="318" cy="86" r="10" fill="#4FA474"/>';
+    if (n >= 5) s += '<rect x="20" y="96" width="70" height="30" rx="4" fill="#FFF" stroke="#2E1F57" stroke-width="2"/><rect x="26" y="102" width="20" height="8" fill="#F2C14E"/><rect x="52" y="102" width="30" height="5" fill="#C9C3D9"/><rect x="52" y="112" width="24" height="5" fill="#C9C3D9"/><circle cx="105" cy="140" r="8" fill="#E86FA0"/><rect x="112" y="132" width="14" height="14" rx="2" fill="#F2C14E"/>';
+    return s + "</svg>";
+  }
+  var toastT; function toast(t) { var e = $("toast"); e.textContent = t; e.hidden = false; clearTimeout(toastT); toastT = setTimeout(function () { e.hidden = true; }, 1600); }
+  var factT; function fact(c, l) { var it = info(c, l), e = $("fact"); e.innerHTML = svg(it[0]) + "<div><b>New find: " + it[1] + " 📖</b>" + it[2] + "</div>"; e.hidden = false; clearTimeout(factT); factT = setTimeout(function () { e.hidden = true; }, 4200); }
+  function tip(t) { $("tip").innerHTML = "<span>" + t + "</span>"; }
+  function spawn() {
+    regen(); if (S.e <= 0) { toast("Out of energy. Have a cuppa ☕"); return; }
+    var empty = []; for (var i = 0; i < N; i++) if (!S.g[i]) empty.push(i);
+    if (!empty.length) { toast("Board's full. Merge or give something."); return; }
+    if (S.e === EMAX) S.et = Date.now(); S.e--;
+    var c = rnd(3); S.g[empty[rnd(empty.length)]] = { c: c, l: 0, p: 1 }; disc(c, 0); render();
+  }
+  function disc(c, l) { var k = c + "-" + l; if (!S.found[k]) { S.found[k] = 1; if (l > 0 || Object.keys(S.found).length > 3) fact(c, l); } }
+  $("box").addEventListener("click", spawn);
+  $("orders").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-o]"); if (!b || b.disabled) return;
+    var o = S.orders[+b.getAttribute("data-o")], i = has(o.c, o.l); if (i < 0) return;
+    S.g[i] = null; var pay = (o.l + 1) * 5; S.coins += pay; S.orders.splice(+b.getAttribute("data-o"), 1);
+    toast(o.w + " is sorted. +" + pay + " 🪙"); tip("<b>Ziggy:</b> " + ["Patient happy. Paperwork pending.", "Another satisfied customer. No wait-list jokes, please.", "Coins in. Spend them on the room below."][rnd(3)]); render();
+  });
+  document.addEventListener("click", function (e) {
+    if (e.target.id === "fix") { var t = TASKS[S.room]; if (S.coins < t[1]) return; S.coins -= t[1]; S.room++; toast(t[0] + " ✓"); tip(S.room >= TASKS.length ? "<b>Ziggy:</b> The waiting room looks better than my stripes. That's the prototype done!" : "<b>Ziggy:</b> Lovely. " + (S.room === 2 ? "Patients now want fancier kit." : "Keep going.")); render(); }
+    if (e.target.id === "reset") { if (S.room || S.coins) { S = fresh(); render(); toast("Fresh start"); } }
+  });
+  // drag and drop (pointer events: mouse, touch, pen)
+  var drag = null, ghost = null, overEl = null;
+  $("board").addEventListener("pointerdown", function (e) {
+    var it = e.target.closest(".it"); if (!it) return; e.preventDefault();
+    var i = +it.getAttribute("data-i"), x = S.g[i]; drag = { i: i, x0: e.clientX, y0: e.clientY, moved: false };
+    ghost = document.createElement("div"); ghost.className = "ghost"; ghost.innerHTML = svg(info(x.c, x.l)[0]); ghost.style.left = e.clientX + "px"; ghost.style.top = e.clientY + "px"; ghost.hidden = true; document.body.appendChild(ghost);
+    Array.prototype.forEach.call(document.querySelectorAll(".it"), function (el) { var j = +el.getAttribute("data-i"), y = S.g[j]; if (j !== i && y && y.c === x.c && y.l === x.l && x.l < 4) el.classList.add("match"); });
+  });
+  window.addEventListener("pointermove", function (e) {
+    if (!drag) return; if (Math.abs(e.clientX - drag.x0) + Math.abs(e.clientY - drag.y0) > 6) { drag.moved = true; ghost.hidden = false; }
+    ghost.style.left = e.clientX + "px"; ghost.style.top = e.clientY + "px";
+    var el = document.elementFromPoint(e.clientX, e.clientY), cell = el && el.closest && el.closest(".cell");
+    if (overEl && overEl !== cell) overEl.classList.remove("over"); overEl = cell; if (cell) cell.classList.add("over");
+  });
+  function end(e) {
+    if (!drag) return; var d = drag; drag = null; if (ghost) ghost.remove(); if (overEl) overEl.classList.remove("over");
+    Array.prototype.forEach.call(document.querySelectorAll(".it.match"), function (el) { el.classList.remove("match"); });
+    var a = S.g[d.i];
+    if (!d.moved) { var it = info(a.c, a.l); tip("<b>" + it[1] + "</b> (" + CH[a.c].n + ", level " + (a.l + 1) + " of 5). " + (a.l < 4 ? "Merge two to make: " + info(a.c, a.l + 1)[1] + "." : "Top of the chain!")); return; }
+    var el = document.elementFromPoint(e.clientX, e.clientY), cell = el && el.closest && el.closest(".cell"); if (!cell) return;
+    var j = +cell.getAttribute("data-i"); if (j === d.i) return; var b = S.g[j];
+    if (b && b.c === a.c && b.l === a.l && a.l < 4) { S.g[j] = { c: a.c, l: a.l + 1, p: 1 }; S.g[d.i] = null; disc(a.c, a.l + 1); if (!S.seen) { S.seen = true; tip("<b>Ziggy:</b> Nice merge. Patients up top tell you what they need."); } }
+    else { S.g[j] = a; S.g[d.i] = b; }
+    render();
+  }
+  window.addEventListener("pointerup", end); window.addEventListener("pointercancel", function () { if (drag) { drag = null; if (ghost) ghost.remove(); render(); } });
+  setInterval(function () { var before = S.e; regen(); $("en").textContent = "⚡ " + S.e + (S.e < EMAX ? " · +1 in " + Math.max(1, Math.ceil((EREG - (Date.now() - S.et)) / 1000)) + "s" : ""); if (S.e !== before) save(); }, 1000);
+  render();
+})();
+</script>
+</body>
+</html>
