@@ -1427,6 +1427,46 @@
      "https://ishana.com.au/specialists/louise-cook/"
     ],
     "checked": "9 November 2026"
+   },
+   {
+    "name": "Margaret Cole",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Open Mind Psychologists",
+    "address": "362 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 8359 1961",
+    "fax": "(02) 8530 7907",
+    "email": "",
+    "ereferral": "",
+    "website": "https://openmindpsychologists.com.au/our-team/",
+    "interests": [
+     "Relationship counselling",
+     "Depression and mood disorders",
+     "Anxiety",
+     "Trauma and PTSD",
+     "OCD",
+     "Grief and loss",
+     "Adjusting to life changes"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://openmindpsychologists.com.au/our-team/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  }

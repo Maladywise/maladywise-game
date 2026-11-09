@@ -927,6 +927,43 @@
      "https://www.trinityspecialist.com.au/team/anna-perkins-physiotherapist-trinity-specialist-clinic-newcastle-nsw/"
     ],
     "checked": "9 November 2026"
+   },
+   {
+    "name": "Tailor Allied Health – Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Tailor Allied Health",
+    "address": "Shop 2/251 Soldiers Point Road, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "(02) 4981 0416",
+    "fax": "",
+    "email": "reception@tailoralliedhealth.com.au",
+    "ereferral": "",
+    "website": "https://tailoralliedhealth.com.au/our-team",
+    "interests": [
+     "Spinal cord injury and neuromuscular disease",
+     "Rehabilitation after brain injury",
+     "NDIS clients",
+     "Sports injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://tailoralliedhealth.com.au/our-team"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },

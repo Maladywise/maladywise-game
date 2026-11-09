@@ -1119,7 +1119,7 @@
      "High cholesterol",
      "Allergies and intolerances",
      "Disordered eating",
-     "Mobile consults at home, a caf\u00e9 or work"
+     "Mobile consults at home, a café or work"
     ],
     "practical": {
      "telehealth": true,
@@ -1723,6 +1723,43 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Andrew Maher",
+    "specialty": "Diabetes nurse practitioner and credentialled diabetes educator",
+    "practice": "Hunter Endocrinology",
+    "address": "Newcastle Healthcare Building, Suite 2B, 282 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4935 9000",
+    "fax": "02 4957 6964",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterendo.com.au/about/",
+    "interests": [
+     "Diabetes and exercise",
+     "Men's health in diabetes",
+     "Insulin pumps and glucose monitors",
+     "Telehealth clinic for rural patients"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterendo.com.au/about/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
