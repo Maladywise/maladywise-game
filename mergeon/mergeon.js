@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -327,13 +327,16 @@
   function sydToday() { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); } catch (e) { return new Date().toISOString().slice(0, 10); } }
   function dayNum(d) { var p = d.split("-").map(Number); return Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 864e5); }
   function nice(d) { return new Date(dayNum(d) * 864e5).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" }); }
-  function load(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
-  function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function load(k, d) { if (PREVIEW && /^mrg-day-/.test(k)) return d; try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch (e) { return d; } }
+  var PREVIEW = (/[?&]preview=(\d{4}-\d\d-\d\d)\b/.exec(location.search) || [])[1] || null; // ?preview=YYYY-MM-DD: play any day's run; nothing is saved or posted
+  function put(k, v) { if (PREVIEW && !/^mrg-(help-seen|mute)/.test(k)) return; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return n.toLocaleString("en-AU"); }
   function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
   var REAL = sydToday(), qd = new URLSearchParams(location.search).get("date");
+  if (PREVIEW) REAL = PREVIEW;
+  if (PREVIEW) root.insertAdjacentHTML("afterbegin", '<p class="note" style="margin:0 0 8px;padding:8px 12px;border-radius:12px;background:#FDF3DA;color:#6B4A00;font-weight:600">Preview of ' + PREVIEW + ': practice only, nothing is saved or posted.</p>');
   if (DEBUG) { var dq = /[?&]day=(\d{4}-\d\d-\d\d)\b/.exec(location.search); if (dq) REAL = dq[1]; else if (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && qd > REAL) REAL = qd; } // test hook: pretend today is another Sydney date
   var day = (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && dayNum(qd) <= dayNum(REAL)) ? qd : REAL;
   function isLive() { return day === REAL; }
@@ -1340,7 +1343,7 @@
   }
   function lbFetch(k) { if (!window.fetch) return; lbs[k] = "wait"; fetch(LB + "/top?b=" + k + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); }); }
   function lbProbe() {
-    if (!window.fetch) return;
+    if (!window.fetch || PREVIEW) return;
     fetch(LB + "/top?b=" + BD + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
       if (j && j.board === BD && Array.isArray(j.rows)) { MLB = true; lbs[BD] = j.rows; lbFetch(BA); lbRender(); }
     }).catch(function () {});
