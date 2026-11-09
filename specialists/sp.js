@@ -32,8 +32,40 @@
     if (!hits.length) { var li0 = document.createElement("li"); li0.className = "none"; li0.textContent = "No matches. Try fewer filters or another word."; out.appendChild(li0); return; }
     hits.forEach(function (x) { var li = document.createElement("li"), a = document.createElement("a"), b = document.createElement("b"), sp = document.createElement("span"); a.href = x.u; b.textContent = x.n; sp.textContent = x.s + (x.sub ? " · " + x.sub : ""); a.appendChild(b); a.appendChild(sp); li.appendChild(a); out.appendChild(li); });
   }
-  var run = f ? runPage : (s && out && window.SP_ALL ? runIndex : null);
-  if (!run) return;
+  var run0 = f ? runPage : (s && out && window.SP_ALL ? runIndex : null);
+  if (!run0) return;
+  /* Filters panel: collapsed by default; active filters show as removable chips under the search box. */
+  var fb = document.querySelector(".sp-fbtn"), fp = document.getElementById("sp-fpanel"), act = document.querySelector(".sp-active"), fn = document.querySelector(".sp-fn");
+  function setPanel(open) { if (!fb || !fp) return; fb.setAttribute("aria-expanded", open ? "true" : "false"); fp.hidden = !open; }
+  if (fb && fp) {
+    fb.addEventListener("click", function () { setPanel(fb.getAttribute("aria-expanded") !== "true"); });
+    fp.addEventListener("keydown", function (ev) { if (ev.key === "Escape") { setPanel(false); fb.focus(); } });
+  }
+  var im = document.querySelector(".sp-imore"), ir = document.getElementById("sp-irest");
+  if (im && ir) im.addEventListener("click", function () { var o = im.getAttribute("aria-expanded") !== "true"; im.setAttribute("aria-expanded", o ? "true" : "false"); ir.hidden = !o; im.textContent = o ? "Fewer interests" : "More interests"; });
+  function syncActive() {
+    if (!act) return;
+    var on = [].slice.call(document.querySelectorAll('.sp-fpanel .sp-chip[aria-pressed="true"]')), ls = document.querySelector("[data-sp-lang]");
+    act.innerHTML = "";
+    on.forEach(function (c) {
+      var b = document.createElement("button"), x = document.createElement("b"), name = c.textContent.trim();
+      b.type = "button"; b.className = "sp-ac"; b.setAttribute("aria-label", "Remove filter: " + name); b.textContent = name; x.setAttribute("aria-hidden", "true"); x.textContent = "\u00d7"; b.appendChild(x);
+      b.addEventListener("click", function () { c.setAttribute("aria-pressed", "false"); run(); var n = act.querySelector(".sp-ac"); (n || fb || document.body).focus(); });
+      act.appendChild(b);
+    });
+    var n = on.length;
+    if (ls && ls.value) {
+      n++; var lb = document.createElement("button"), lx = document.createElement("b");
+      lb.type = "button"; lb.className = "sp-ac"; lb.setAttribute("aria-label", "Remove filter: speaks " + ls.value); lb.textContent = "Speaks " + ls.value; lx.setAttribute("aria-hidden", "true"); lx.textContent = "\u00d7"; lb.appendChild(lx);
+      lb.addEventListener("click", function () { ls.value = ""; run(); (act.querySelector(".sp-ac") || fb).focus(); });
+      act.appendChild(lb);
+    }
+    if (n > 1) { var cl = document.createElement("button"); cl.type = "button"; cl.className = "sp-acx"; cl.textContent = "Clear all"; cl.addEventListener("click", function () { on.forEach(function (c) { c.setAttribute("aria-pressed", "false"); }); if (ls) ls.value = ""; run(); if (fb) fb.focus(); }); act.appendChild(cl); }
+    act.hidden = !n;
+    if (fn) fn.textContent = n ? " (" + n + ")" : "";
+    if (fb) fb.setAttribute("aria-label", n ? "Filters, " + n + " on" : "Filters");
+  }
+  function run() { run0(); syncActive(); }
   (f || s).addEventListener("input", run);
   var lsel = document.querySelector("[data-sp-lang]"); if (lsel && f) lsel.addEventListener("change", run);
   wire(".sp-chip[data-badge]", run); wire(".sp-ichip", run); wire(".sp-tog", run);

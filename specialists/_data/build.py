@@ -152,17 +152,26 @@ def flags(p):
     return f
 def pid(p): return "p-" + re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]
 TOGGLES = [("tele", "Telehealth"), ("bb", "Bulk billing stated"), ("ndis", "NDIS"), ("kids", "Kids"), ("np", "Accepting new patients (as stated)")]
-FINDNOTE = '<p class="sp-note">Listings are from public professional directories and practice websites, checked on the date shown. Not endorsements. Confirm details with the practice.</p>'
-def finder(ppl, hub=False):
+FINDNOTE = '<p class="sp-note sp-foot" id="sp-find-note">Listings come from public professional directories and practice websites, checked on the date shown. Not endorsements: confirm details with the practice. Badges show only where a practice says so publicly; many offer this care without advertising it.</p>'
+SHORTDATE = re.sub(r"^(\d+ [A-Z][a-z]{2})[a-z]*", r"\1", CHECKED)
+def finder(ppl, hub=False, extra=""):
+    """Search box + Filters button + active-filter chips; every filter lives in a collapsed panel."""
     from collections import Counter
     c = Counter(t for p in ppl for t in itags(p) if t not in ("assessment",))
-    top = [t for t, n in c.most_common(14) if n >= (2 if len(ppl) > 6 else 1)]
+    top = [t for t, n in c.most_common(30) if n >= (2 if len(ppl) > 6 else 1)]
     lab = "Search by name, interest or suburb" + (" (all specialties)" if hub else "")
-    ph = "e.g. ADHD, perinatal, Maitland"
-    h = (f'<div class="sp-find" role="search"><label class="sp-search"><span>{lab}</span><input type="search" autocomplete="off" placeholder="{ph}" {"data-sp-search" if hub else "data-sp-filter"} aria-describedby="sp-find-note"></label>')
-    if top: h += '<div class="sp-chips sp-ichips" role="group" aria-labelledby="sp-gl-i"><span class="sp-gl" id="sp-gl-i">Interests</span>' + "".join(f'<button type="button" class="sp-chip sp-ichip" data-tag="{e(t)}" aria-pressed="false">{e(t)}</button>' for t in top) + "</div>"
+    h = ('<div class="sp-find" role="search"><div class="sp-srow"><label class="sp-search"><span class="sp-vh">' + lab + '</span>'
+         f'<input type="search" autocomplete="off" placeholder="Name, interest or suburb" {"data-sp-search" if hub else "data-sp-filter"} aria-describedby="sp-find-note"></label>'
+         '<button type="button" class="sp-fbtn" aria-expanded="false" aria-controls="sp-fpanel">Filters<span class="sp-fn"></span></button></div>'
+         '<div class="sp-active" aria-label="Active filters" hidden></div>'
+         '<div class="sp-fpanel" id="sp-fpanel" hidden>')
     h += '<div class="sp-chips sp-toggles" role="group" aria-labelledby="sp-gl-f"><span class="sp-gl" id="sp-gl-f">Show only</span>' + "".join(f'<button type="button" class="sp-chip sp-tog" data-flag="{k}" aria-pressed="false">{e(v)}</button>' for k, v in TOGGLES) + "</div>"
-    return h + f'<p class="sp-note" id="sp-find-note">Listings are from public professional directories and practice websites, checked on the date shown. Not endorsements. Confirm details with the practice.</p></div>'
+    if top:
+        chip = lambda t: f'<button type="button" class="sp-chip sp-ichip" data-tag="{e(t)}" aria-pressed="false">{e(t)}</button>'
+        h += '<div class="sp-chips sp-ichips" role="group" aria-labelledby="sp-gl-i"><span class="sp-gl" id="sp-gl-i">Interests</span>' + "".join(chip(t) for t in top[:8])
+        if len(top) > 8: h += '<span class="sp-irest" id="sp-irest" hidden>' + "".join(chip(t) for t in top[8:]) + '</span><button type="button" class="sp-imore" aria-expanded="false" aria-controls="sp-irest">More interests</button>'
+        h += "</div>"
+    return h + extra + CHIPS + "</div></div>"
 
 # Condition support organisations with their own provider lists (checked Nov 2026). "used": names matched to our listings (shown as badges);
 # otherwise link only (results not readable without a search app, no Hunter listings seen, or no public list).
@@ -251,7 +260,7 @@ def card(p):
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p)), " ".join(tg), " ".join(x.get("org", "") for x in lb)]).lower()
     return (f'<li class="sp-card" id="{pid(p)}" data-t="{e("|".join(tg))}" data-f="{" ".join(flags(p))}" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p><p class="sp-act"><button type="button" class="sp-sug">Suggest a tag</button> · <button type="button" class="sp-pr1">Print</button> · <a href="/contact/">Something wrong?</a></p></li>')
-CHIPS = '<div class="sp-chips" role="group" aria-label="Show only">' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><details class="sp-pf"><summary>More filters: fees, e-referrals, wait, access</summary><div class="sp-chips sp-pchips" role="group" aria-label="Practical">' + "".join(f'<button type="button" class="sp-chip sp-pb sp-pb-{c}" data-badge="{c}" aria-pressed="false">{e(lab)}</button>' for c, lab in PB) + '</div></details><p class="sp-bnote">Badges show only where a practice says so publicly. Tap a badge to see its wording and source. Many practices offer this care without advertising it.</p>'
+CHIPS = '<div class="sp-chips sp-bchips" role="group" aria-labelledby="sp-gl-b"><span class="sp-gl" id="sp-gl-b">Badges</span>' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><details class="sp-pf"><summary>More filters: fees, e-referrals, wait, access</summary><div class="sp-chips sp-pchips" role="group" aria-label="Practical">' + "".join(f'<button type="button" class="sp-chip sp-pb sp-pb-{c}" data-badge="{c}" aria-pressed="false">{e(lab)}</button>' for c, lab in PB) + '</div></details><p class="sp-bnote">Badges show only where a practice says so publicly. Tap one on a card to see its source.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 CATS = {}
 for p in L:
@@ -259,15 +268,19 @@ for p in L:
 src = open("deep-dives/index.html").read()
 headtpl = src[:src.index("</head>")]
 def sub(h, pat, val): return re.sub(pat, lambda m: m.group(1) + val, h)
-def head(title, desc, url):
-    h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="https://maladywise.com{url}">', headtpl)
+def crumbld(url, name, hub):
+    it = [("Malady Wise", "/"), ("Specialists and allied health", "/specialists/")] + ([] if hub else [(name, url)])
+    return '<script type="application/ld+json" id="mw-breadcrumb-ld">' + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": "https://maladywise.com" + u} for i, (n, u) in enumerate(it)]}, ensure_ascii=False) + "</script>"
+def head(title, desc, url, hub=False):
+    h = re.sub(r'<script type="application/ld\+json" id="mw-breadcrumb-ld">.*?</script>', lambda m: crumbld(url, title.split(" in Newcastle")[0], hub), headtpl, flags=re.S)
+    h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="https://maladywise.com{url}">', h)
     h = re.sub(r"<title>[^<]*</title>", f"<title>{e(title)}</title>", h)
     for prop in ('name="description"', 'property="og:description"'): h = sub(h, r'(<meta ' + prop + r' content=")[^"]*', e(desc))
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + SPCSS + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
 foot = src[src.index("<footer"):]
-SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-ichip,.sp-chip.sp-tog{padding:5px 11px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600;font-size:12.5px;min-height:32px}.sp-chip.sp-ichip[aria-pressed=true]{background:#4A3480;border-color:#4A3480;color:#fff}.sp-chip.sp-tog[aria-pressed=true]{background:#1F6457;border-color:#1F6457;color:#fff}.sp-chip.sp-tog[aria-pressed=true]::before,.sp-chip.sp-ichip[aria-pressed=true]::before{content:\"\\2713\";margin-right:2px}.sp-chip:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-gl{align-self:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}.sp-toggles{margin-top:6px}.sp-note{font-size:12px;color:var(--muted);margin:4px 0 8px}.sp-card .sp-lb{margin-top:4px}.sp-lbb{display:inline-block;margin:2px 6px 0 0;padding:2px 9px;border-radius:999px;border:1px solid #A8C3EE;background:#E6EFFC;color:#17468F;font-size:12px;font-weight:600;text-decoration:none}.sp-card.sp-hit,.sp-card:target{outline:3px solid #D4A017;outline-offset:2px}.sp-card{scroll-margin-top:80px}.sp-orgbox{margin:4px 0 10px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card)}.sp-orgbox summary{cursor:pointer;font-weight:600;font-size:14px}.sp-orgbox ul,.sp-orgs ul{margin:6px 0;padding-left:18px;font-size:14px}.sp-orgs li{margin:4px 0}.sp-results b{overflow-wrap:anywhere}@media print{.sp-find,.sp-orgbox{display:none!important}}</style>"
-SPJS = '<script src="/specialists/sp.js?v=7"></script>'
+SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-ichip,.sp-chip.sp-tog{padding:5px 11px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600;font-size:12.5px;min-height:32px}.sp-chip.sp-ichip[aria-pressed=true]{background:#4A3480;border-color:#4A3480;color:#fff}.sp-chip.sp-tog[aria-pressed=true]{background:#1F6457;border-color:#1F6457;color:#fff}.sp-chip.sp-tog[aria-pressed=true]::before,.sp-chip.sp-ichip[aria-pressed=true]::before{content:\"\\2713\";margin-right:2px}.sp-chip:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-gl{align-self:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}.sp-toggles{margin-top:6px}.sp-note{font-size:12px;color:var(--muted);margin:4px 0 8px}.sp-card .sp-lb{margin-top:4px}.sp-lbb{display:inline-block;margin:2px 6px 0 0;padding:2px 9px;border-radius:999px;border:1px solid #A8C3EE;background:#E6EFFC;color:#17468F;font-size:12px;font-weight:600;text-decoration:none}.sp-card.sp-hit,.sp-card:target{outline:3px solid #D4A017;outline-offset:2px}.sp-card{scroll-margin-top:80px}.sp-orgbox{margin:4px 0 10px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card)}.sp-orgbox summary{cursor:pointer;font-weight:600;font-size:14px}.sp-orgbox ul,.sp-orgs ul{margin:6px 0;padding-left:18px;font-size:14px}.sp-orgs li{margin:4px 0}.sp-results b{overflow-wrap:anywhere}.sp-sum{margin:2px 0 10px;font-size:14px;color:var(--muted)}.sp-vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sp-srow{display:flex;gap:8px;align-items:stretch}.sp-srow .sp-search{flex:1;min-width:0;margin:0}.sp-fbtn{flex:none;display:inline-flex;align-items:center;gap:4px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 14px Poppins,system-ui,sans-serif;cursor:pointer;min-height:44px}.sp-fbtn[aria-expanded=true]{border-color:#4A3480;color:#4A3480}html[data-theme=dark] .sp-fbtn[aria-expanded=true]{border-color:#CDBDF5;color:#CDBDF5}.sp-fbtn::after{content:\"\\25BE\";font-size:11px}.sp-fbtn[aria-expanded=true]::after{content:\"\\25B4\"}.sp-fbtn:focus-visible,.sp-imore:focus-visible,.sp-ac:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-active{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.sp-active[hidden]{display:none}.sp-ac{display:inline-flex;align-items:center;gap:4px;padding:3px 6px 3px 10px;border-radius:999px;border:1px solid #4A3480;background:#F3EEFF;color:#4A3480;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer;min-height:28px}.sp-ac b{font-size:14px;line-height:1;padding:0 3px}html[data-theme=dark] .sp-ac{background:#2C2346;color:#CDBDF5;border-color:#CDBDF5}.sp-acx{border:0;background:none;color:var(--muted);font:600 12px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:3px 4px}.sp-fpanel{margin:8px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}.sp-fpanel[hidden]{display:none}.sp-fpanel .sp-chips{margin:0 0 8px}.sp-fpanel .sp-toggles{margin-top:0}.sp-irest{display:contents}.sp-irest[hidden]{display:none}.sp-imore{border:0;background:none;padding:5px 4px;font:600 12.5px Poppins,system-ui,sans-serif;color:var(--brand,#4A3480);text-decoration:underline;cursor:pointer}.sp-fpanel .sp-lang{display:flex;align-items:center;gap:8px;margin:0 0 8px}.sp-fpanel .sp-lang span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.sp-fpanel .sp-lang select{flex:1;min-width:0;font:500 14px Poppins,system-ui,sans-serif;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.sp-fpanel .sp-pf{margin:0 0 6px;font-size:13px}.sp-fpanel .sp-pf summary{cursor:pointer;font-weight:600}.sp-fpanel .sp-bnote{margin:0;font-size:12px!important;color:var(--muted)}.sp-tools{margin:10px 0 6px}.sp-prall{font-size:12.5px!important;text-decoration:underline}.sp-orgbox{margin:12px 0 10px!important}.sp-note.sp-foot{margin:14px 0 6px;font-size:12px!important;line-height:1.45;color:var(--muted)}.sp-page h1 + .sp-sum + .sp-find, .sp-page .sp-sum + .callout{margin-top:6px}@media print{.sp-find,.sp-orgbox{display:none!important}}</style>"
+SPJS = '<script src="/specialists/sp.js?v=8"></script>'
 if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
 else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
@@ -307,10 +320,9 @@ for lab, ppl in CATS.items():
     os.makedirs("specialists/" + slug, exist_ok=True)
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
-    body = (f'<p class="meta"><a href="/specialists/">Specialists and allied health</a> · Newcastle and the Hunter</p><h1>{e(lab)}</h1>'
-            f'<p class="lede">{len(ppl)} listed, A–Z. Last checked {CHECKED}.</p>' + PAGE_NOTE.get(lab, "") +
-            finder(ppl) + langsel(ppl) + CHIPS + orgbox(slug) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">🖨️ Print this list</button></p>'
-            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{keep_going(slug)}{DISC}<p class="meta"><em>Last checked {CHECKED}.</em></p>\n')
+    body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
+            finder(ppl, extra=langsel(ppl)) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
+            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{orgbox(slug)}{keep_going(slug)}{DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
 SURG = re.compile(r"surg|ENT \(|Obstetrics|Ophthalm|Orthopaed|^Urology", re.I)
@@ -323,10 +335,10 @@ allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + 
 json.dump({"checked": CHECKED, "items": allc}, open("specialists/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
 desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
-page = (head(title, desc, "/specialists/") + '<h1>Specialists and allied health</h1><p class="lede">Private specialists and allied health in Newcastle and the Hunter.</p>'
-        f'<p class="evkey"><span class="ev m">Newcastle and the Hunter</span> {len(L)} listings across {len(CATS)} specialties. Last checked {CHECKED}.</p>'
-        + finder(L, hub=True) + CHIPS + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
-        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + orgsection() + DISC +
+page = (head(title, desc, "/specialists/", hub=True) + '<h1>Specialists and allied health</h1>'
+        f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'
+        + finder(L, hub=True) + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
+        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + orgsection() + DISC + FINDNOTE +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(fix_html(page))
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
