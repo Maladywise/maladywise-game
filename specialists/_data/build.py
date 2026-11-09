@@ -244,7 +244,9 @@ def card(p):
     if rest: extra.append('<p class="sp-inc">' + "".join(f"<span>{e(x)}</span>" for x in rest) + "</p>")
     srcs = " ".join(f'<a href="{e(u)}" rel="noopener">[{i+1}]</a>' for i, u in enumerate(p.get("sources") or []))
     lb = p.get("listed_by") or []
-    if lb: extra.append('<p class="sp-lb">' + "".join(f'<a class="sp-lbb" href="{e(x.get("url", ""))}" rel="noopener" title="Checked {e(x.get("checked", ""))}">{e(x.get("label") or ("Listed by " + x.get("org", "")))}</a>' for x in lb) + "</p>")
+    ah = p.get("ahpra") if isinstance(p.get("ahpra"), dict) else None  # public register check only; never registration numbers
+    ahb = (f'<a class="sp-lbb" href="https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx" rel="noopener" title="{e(ah.get("profession", ""))} on the Ahpra public register">Ahpra registered (checked {e(re.sub(r"^(\d+ [A-Z][a-z]{2})[a-z]*", r"\1", ah.get("checked", "")))})</a>') if ah else ""
+    if lb or ahb: extra.append('<p class="sp-lb">' + "".join(f'<a class="sp-lbb" href="{e(x.get("url", ""))}" rel="noopener" title="Checked {e(x.get("checked", ""))}">{e(x.get("label") or ("Listed by " + x.get("org", "")))}</a>' for x in lb) + ahb + "</p>")
     tg = itags(p)
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p)), " ".join(tg), " ".join(x.get("org", "") for x in lb)]).lower()
     return (f'<li class="sp-card" id="{pid(p)}" data-t="{e("|".join(tg))}" data-f="{" ".join(flags(p))}" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'

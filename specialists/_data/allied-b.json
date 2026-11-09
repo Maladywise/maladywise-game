@@ -247,10 +247,14 @@
     ],
     "sources": [
      "https://www.halaxy.com/profile/kelly-penniment-saich/psychologist/1759531",
-     "https://auspath.org.au/providers/"
+     "https://auspath.org.au/providers/",
+     "https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked",
+    "ahpra": {
+     "profession": "Psychologist",
+     "checked": "9 November 2026"
+    },
     "listed_by": [
      {
       "org": "AusPATH",
@@ -500,10 +504,14 @@
     ],
     "sources": [
      "https://www.psychologytoday.com/au/counselling/marnie-britton-tundra-psychology-charlestown-nsw/1824358",
-     "https://auspath.org.au/providers/"
+     "https://auspath.org.au/providers/",
+     "https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked",
+    "ahpra": {
+     "profession": "Psychologist",
+     "checked": "9 November 2026"
+    },
     "listed_by": [
      {
       "org": "AusPATH",
@@ -607,38 +615,51 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Optimum Intake Dietitians (Merewether)",
+    "name": "Optimum Intake Dietitians",
     "specialty": "Dietetics",
     "practice": "Optimum Intake Dietitians",
-    "address": "Hunter Children's Clinic, 25 Llewellyn Street, Merewether NSW 2291",
-    "suburb": "Merewether",
-    "phone": "02 4011 5938",
-    "fax": "",
+    "address": "Level 2, 163 Lambton Road, Broadmeadow NSW 2292 (also Hunter Children's Clinic, 25 Llewellyn Street, Merewether)",
+    "suburb": "Broadmeadow",
+    "phone": "0499 008 451",
+    "fax": "02 4362 2998",
     "email": "admin@optimumintake.com.au",
     "ereferral": "",
     "website": "https://www.optimumintake.com.au/",
     "interests": [
-     "Clinic sessions at Hunter Children's Clinic (Thursdays)"
+     "Gut health, IBS and digestive conditions",
+     "Eating disorders and disordered eating",
+     "Diabetes and chronic disease management",
+     "Weight and metabolic health",
+     "Children's nutrition and fussy eating",
+     "Disability nutrition and NDIS support",
+     "Women's health and pregnancy nutrition",
+     "Sports nutrition",
+     "Bariatric surgery nutrition and aftercare",
+     "Healthy ageing and aged care nutrition",
+     "Clinic sessions at Hunter Children's Clinic, Merewether"
     ],
     "practical": {
-     "telehealth": null,
+     "telehealth": true,
      "bulk_billing": "no",
      "wait": "",
      "ages": "",
      "hospitals": [],
      "languages": [],
      "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
+     "ndis": true,
+     "medicare_cdm": true,
      "new_patients": null,
      "np_note": ""
     },
     "inclusive": [],
     "sources": [
+     "https://www.optimumintake.com.au/",
+     "https://www.optimumintake.com.au/dietitian-newcastle/",
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/optimum-intake-dietitians-merewether/dietetics/22253d6c-d6a2-4362-8fbd-e4b8d422f9d4"
     ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "checked": "9 November 2026",
+    "ahpra": "not checked",
+    "credential": "Accredited Practising Dietitian (APD), per the practice website"
    },
    {
     "name": "Tidal Health Clinic",
@@ -1038,6 +1059,129 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Return Nutrition",
+    "specialty": "Dietetics",
+    "practice": "Return Nutrition",
+    "address": "Level 1, 5 Brunker Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "",
+    "fax": "02 4062 7575",
+    "email": "",
+    "ereferral": "",
+    "website": "https://returnnutrition.com.au/",
+    "interests": [
+     "Eating disorders across the lifespan (Credentialed Eating Disorder Clinician, as stated)",
+     "Neurodiversity-affirming support for food and eating challenges",
+     "Nutrition for PMDD and perimenopause",
+     "Malnutrition with age-related degenerative disorders",
+     "Health at Every Size (HAES) principles"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "Neurodiversity-affirming support for food and eating challenges (stated)"
+    ],
+    "sources": [
+     "https://returnnutrition.com.au/",
+     "https://returnnutrition.com.au/about"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked",
+    "credential": "Accredited Practising Dietitian (APD), per the practice website"
+   },
+   {
+    "name": "Nutritionist On The Go",
+    "specialty": "Dietetics",
+    "practice": "Nutritionist On The Go",
+    "address": "Mobile consults across Newcastle, Lake Macquarie, Maitland and the Hunter; clinic sessions at 203 Lang Street, Kurri Kurri NSW 2327 and Fitness Revolution, 26 Oakdale Road, Gateshead",
+    "suburb": "Kurri Kurri",
+    "phone": "02 4937 5177",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.nutritionistonthego.com.au/",
+    "interests": [
+     "Weight loss",
+     "Diabetes management",
+     "High cholesterol",
+     "Allergies and intolerances",
+     "Disordered eating",
+     "Mobile consults at home, a caf\u00e9 or work"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nutritionistonthego.com.au/",
+     "https://www.nutritionistonthego.com.au/services"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked",
+    "credential": "Accredited Practising Dietitian (APD), per the practice website"
+   },
+   {
+    "name": "Dietitian With A Difference",
+    "specialty": "Dietetics",
+    "practice": "Dietitian With A Difference",
+    "address": "Adamstown clinic; NDIS home visits (Lake Macquarie based)",
+    "suburb": "Adamstown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.dietitianwithadifference.com/",
+    "interests": [
+     "NDIS clients, at home or online",
+     "Male factor infertility (men starting a family with their partner)",
+     "Perimenopausal weight gain",
+     "Private and Medicare care plan (EPC) clients"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.dietitianwithadifference.com/about",
+     "https://www.dietitianwithadifference.com/copy-of-ndis",
+     "https://www.dietitianwithadifference.com/copy-of-male-factor-infertility"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked",
+    "credential": "Accredited Practising Dietitian (APD), per the practice website"
    }
   ]
  },

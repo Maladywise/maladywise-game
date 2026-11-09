@@ -674,10 +674,14 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.infoqore.com.au/directory/health-and-wellbeing/amber-jayne-stirling"
+     "https://www.infoqore.com.au/directory/health-and-wellbeing/amber-jayne-stirling",
+     "https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
+    "ahpra": {
+     "profession": "Physiotherapist",
+     "checked": "9 November 2026"
+    }
    },
    {
     "name": "Rise Kids Physio",
