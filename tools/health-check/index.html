@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/tools/health-check/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="max-image-preview:large">
+<title>What Health Checks Do I Need? Free Australian Checklist | Malady Wise</title>
+<meta name="description" content="Free personal checklist of the screening tests, check-ups and vaccines recommended in Australia for your age, sex and history, based on the RACGP Red Book.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maladywise.com/tools/health-check/">
+<meta property="og:title" content="What Health Checks Do I Need? Free Australian Checklist | Malady Wise">
+<meta property="og:description" content="Free personal checklist of the screening tests, check-ups and vaccines recommended in Australia for your age, sex and history, based on the RACGP Red Book.">
+<meta property="og:image" content="https://maladywise.com/assets/og/pages/tools-health-check.png?v=02212ef5">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Free tool: What health checks do I need?. Bowel cancer screening now starts at 45, with a free home test kit (NBCSP). Malady Wise">
+<meta name="twitter:image" content="https://maladywise.com/assets/og/pages/tools-health-check.png?v=02212ef5">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="/assets/shell.css?v=180">
+<script defer src="/assets/games.js?v=104"></script>
+<script defer src="/assets/site.js?v=50"></script>
+<script defer src="/assets/shell.js?v=198"></script>
+<link rel="stylesheet" href="/tools/calckit/calc.css?v=1">
+<style>
+#hc .hc-q{gap:6px 8px}
+#hc .hc-ql{flex-basis:100%;font-size:13px;font-weight:600;color:var(--ink)}
+#hc .hc-note{font-size:12.5px;color:var(--muted);margin:0;line-height:1.45}
+#hc .hc-fh summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);padding:8px 0;min-height:24px}
+#hc .hc-fh .checks{margin-top:6px}
+#hc .out{display:block}
+#hc .hc-sum{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:0 0 10px}
+#hc .hc-count{font-size:16px;margin:0 0 2px}
+#hc .hc-count b{font:700 26px/1.1 var(--title);color:var(--brand);margin-right:4px}
+#hc .hc-tip{font-size:13.5px;margin:6px 0 0}
+#hc .hc-group h2{font-size:18px;margin:18px 0 8px}
+#hc .hc-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:10px 14px;margin:0 0 10px;min-width:0;overflow-wrap:anywhere}
+#hc .hc-card h3{margin:2px 0 6px;font-size:16px;line-height:1.3}
+#hc .hc-tag{display:inline-block;vertical-align:2px;font:600 11.5px/1.4 var(--body);border:1px solid var(--brand);color:var(--brand);border-radius:999px;padding:1px 8px;margin-left:4px;white-space:nowrap}
+#hc .hc-card p{font-size:14px;margin:4px 0;line-height:1.5}
+#hc .hc-links{font-size:13.5px}
+#hc .hc-src{font-size:12px!important;color:var(--muted)}
+#hc .hc-printnote{display:none}
+#hc .hc-row{margin:8px 0 0}
+#hc .fs-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+@media print{
+  #hc #hc-form,#hc .hc-row,#hc .hc-tip,#hc .related,#hc .faq,#hc .mw-sharecard,#hc #nl-slot{display:none!important}
+  #hc .hc-card{break-inside:avoid;border:1px solid #999;border-left:4px solid #4A3480;padding:6px 10px;margin:0 0 6px}
+  #hc .hc-card p{font-size:11.5px;margin:2px 0}
+  #hc .hc-card h3{font-size:13px}
+  #hc .hc-group h2{font-size:15px;margin:10px 0 4px;break-after:avoid}
+  #hc .hc-printnote{display:block;font-size:11px;border-top:1px solid #999;padding-top:6px}
+  #hc a{color:inherit;text-decoration:none}
+}
+</style>
+<script type="application/json" id="og-card">{"label": "Free tool", "title": "What health checks do I need?", "fact": "Bowel cancer screening now starts at 45, with a free home test kit", "source": "NBCSP", "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 400\"><g stroke=\"#2A2140\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><rect x=\"70\" y=\"62\" width=\"230\" height=\"300\" rx=\"22\" fill=\"#FFF7EC\"/><rect x=\"135\" y=\"40\" width=\"100\" height=\"46\" rx=\"12\" fill=\"#9A7BC4\"/><rect x=\"102\" y=\"124\" width=\"36\" height=\"36\" rx=\"8\" fill=\"#9ED9C2\"/><path d=\"M109 142 L118 152 L133 131\" fill=\"none\"/><path d=\"M160 142 L268 142\" fill=\"none\"/><rect x=\"102\" y=\"192\" width=\"36\" height=\"36\" rx=\"8\" fill=\"#9ED9C2\"/><path d=\"M109 210 L118 220 L133 199\" fill=\"none\"/><path d=\"M160 210 L250 210\" fill=\"none\"/><rect x=\"102\" y=\"260\" width=\"36\" height=\"36\" rx=\"8\" fill=\"#fff\"/><path d=\"M160 278 L262 278\" fill=\"none\"/><path d=\"M318 214 C318 186 356 180 364 206 C372 180 410 186 410 214 C410 250 364 272 364 290 C364 272 318 250 318 214 Z\" fill=\"#F4A6C0\"/><\/g><\/svg>"}</script>
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "What health checks do I need? Australian preventive health checklist", "description": "Free personal checklist of the screening tests, check-ups and vaccines recommended in Australia for your age, sex and history, based on the RACGP Red Book.", "url": "https://maladywise.com/tools/health-check/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "isAccessibleForFree": true, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://maladywise.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Health check list", "item": "https://maladywise.com/tools/health-check/"}]}, "about": {"@type": "MedicalTest", "name": "Preventive health checks", "alternateName": ["Cancer screening", "Health check", "Adult vaccination"]}, "dateModified": "2026-11-09", "image": {"@type": "ImageObject", "url": "https://maladywise.com/assets/og/pages/tools-health-check.png?v=02212ef5", "width": 1200, "height": 630}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://maladywise.com/assets/og/pages/tools-health-check.png?v=02212ef5", "width": 1200, "height": 630}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "What health checks do I need? checklist", "url": "https://maladywise.com/tools/health-check/", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "en-AU", "isAccessibleForFree": true, "description": "Free personal checklist of the screening tests, check-ups and vaccines recommended in Australia for your age, sex and history, based on the RACGP Red Book.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}}</script>
+<script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What health checks do I need at 40?", "acceptedAnswer": {"@type": "Answer", "text": "In Australia: a blood pressure check at least every 2 years, a type 2 diabetes risk check (AUSDRISK) every 3 years from 40, cervical screening every 5 years if you have a cervix, and a yearly flu vaccine. Women can have free breast screening from 40, though invitations start at 50. Aboriginal and Torres Strait Islander people should also have a heart risk check (from 30) and a yearly 715 health check."}}, {"@type": "Question", "name": "What health checks do I need at 50?", "acceptedAnswer": {"@type": "Answer", "text": "A free bowel screening kit every 2 years (from 45), a heart risk check (from 45 to 79), blood pressure and diabetes risk checks, cervical screening every 5 years and breast screening every 2 years for women. Lung screening is free from 50 to 70 for people with at least 30 pack-years who smoke or quit within 10 years. Men can talk with their GP about PSA testing. A whooping cough booster is recommended at 50."}}, {"@type": "Question", "name": "What health checks do I need at 65?", "acceptedAnswer": {"@type": "Answer", "text": "Keep up bowel, breast and cervical screening (to 74) and heart risk checks (to 79). From 65 the flu, COVID-19 and shingles vaccines are free, a whooping cough booster is recommended if you haven’t had one in 10 years, and a yearly hearing check and falls check are advised. The pneumococcal vaccine is free from 70, and the RSV vaccine from 75."}}, {"@type": "Question", "name": "When does bowel cancer screening start in Australia?", "acceptedAnswer": {"@type": "Answer", "text": "At 45. People aged 45 to 49 can request a free home test kit online or on 1800 627 701; from 50 to 74 a kit is posted every 2 years."}}, {"@type": "Question", "name": "Who can have lung cancer screening in Australia?", "acceptedAnswer": {"@type": "Answer", "text": "People aged 50 to 70 with no symptoms who have at least 30 pack-years of smoking and either still smoke or quit in the past 10 years. It’s a free low-dose CT scan every 2 years, arranged by your GP."}}]}</script>
+</head>
+<body>
+<main class="wrap doc cx" id="hc">
+<div class="fs-top"><p class="meta"><a href="/tools/">Tools</a> · Checklist</p><button class="printbtn" type="button" onclick="window.print()">🖨 Print or save as PDF</button></div>
+<h1>What health checks do I need?</h1>
+<p class="lede">Enter a few details and get a personal list of the screening tests, check-ups and vaccines recommended in Australia for someone like you. It updates as you type.</p>
+<p class="quick-answer"><b>Quick answer:</b> Most Australian adults need a blood pressure check at least every 2 years and a yearly flu vaccine. Add cervical screening every 5 years from 25, a free bowel test kit every 2 years from 45, a heart risk check from 45 (30 for Aboriginal and Torres Strait Islander people), breast screening every 2 years from 50, and extra vaccines from 65. Your list depends on your age, sex, background and smoking history.</p>
+<p class="callout hc-safe"><b>General information for people without symptoms, based on Australian guidelines.</b> Your GP may recommend different checks based on your history. If you have symptoms, see a doctor; don’t wait for a screening test. <b>In an emergency, call 000</b> (Australia) or your local emergency number; from a mobile, 112 works in most countries. If you’re thinking about suicide or don’t feel safe, call Lifeline on 13 11 14 or 13YARN on 13 92 76 (both 24/7).</p>
+<form class="form" id="hc-form" onsubmit="return false" autocomplete="off">
+<label>Age (years)<input id="hc-age" type="number" inputmode="numeric" min="18" max="120" step="1" placeholder="e.g. 52"><small>For adults 18 and over</small></label>
+<div class="chips hc-q" role="group" aria-label="Sex at birth"><span class="hc-ql">Sex at birth</span><button type="button" class="chip" data-k="sex" data-v="f" aria-pressed="false">Female</button><button type="button" class="chip" data-k="sex" data-v="m" aria-pressed="false">Male</button></div>
+<p class="hc-note full">Trans and gender-diverse people: check with your GP which tests fit your body (for example, cervical screening if you have a cervix, or breast screening after some hormone treatments).</p>
+<div class="chips hc-q" role="group" aria-label="Aboriginal and/or Torres Strait Islander"><span class="hc-ql">Aboriginal and/or Torres Strait Islander</span><button type="button" class="chip" data-k="fn" data-v="y" aria-pressed="false">Yes</button><button type="button" class="chip" data-k="fn" data-v="n" aria-pressed="false">No</button><button type="button" class="chip" data-k="fn" data-v="u" aria-pressed="false">Prefer not to say</button></div>
+<label class="full">Smoking<select id="hc-smoke"><option value="never">Never smoked (or fewer than 100 cigarettes)</option><option value="current">I smoke now</option><option value="ex">I used to smoke</option></select></label>
+<label class="hc-sm full" hidden>Pack-years (optional)<input id="hc-py" type="number" inputmode="decimal" min="0" max="200" step="1" placeholder="e.g. 30"><small>Packs a day × years smoked. 1 pack a day for 30 years = 30</small></label>
+<label class="hc-ex full" hidden>Years since you quit<input id="hc-quit" type="number" inputmode="numeric" min="0" max="90" step="1" placeholder="e.g. 5"></label>
+<div class="checks hc-f" hidden><label><input type="checkbox" id="hc-preg"> I’m pregnant or planning a pregnancy</label></div>
+<details class="full hc-fh"><summary>Family history (optional)</summary><div class="checks"><label><input type="checkbox" id="hc-fh-bowel"> Bowel cancer in a close relative</label><label><input type="checkbox" id="hc-fh-breast"> Breast or ovarian cancer in the family</label><label><input type="checkbox" id="hc-fh-prostate"> Prostate cancer in a brother, or a father diagnosed before 65</label><label><input type="checkbox" id="hc-fh-heart"> Heart disease in a parent, brother or sister at a young age</label><label><input type="checkbox" id="hc-fh-diabetes"> Type 2 diabetes in a parent, brother or sister</label></div></details>
+<p class="hc-note full">Nothing you enter leaves this device or is saved.</p>
+</form>
+<div class="out" id="hc-out" aria-live="polite"><p class="meta">Enter your age to see your checks.</p></div>
+<h2>Outside Australia?</h2>
+<p>Screening programs, ages and free vaccines differ from country to country, so check your own national program. In the UK, see the <a href="https://www.nhs.uk/conditions/nhs-screening/" rel="noopener">NHS screening guide</a>; in the US, the <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics" rel="noopener">USPSTF recommendations</a>.</p>
+<h2>Checks at a glance, by age</h2>
+<ul>
+<li><b>18 and over:</b> blood pressure at least every 2 years, yearly flu vaccine (recommended for everyone), dental check-ups, skin awareness. A yearly STI check if you’re sexually active and under 30.</li>
+<li><b>25 to 74:</b> cervical screening every 5 years for women and people with a cervix.</li>
+<li><b>40 and over:</b> diabetes risk check (AUSDRISK) every 3 years. Free breast screening is available from 40.</li>
+<li><b>45 to 74:</b> free bowel screening kit every 2 years (request it at 45 to 49). Heart risk check from 45 to 79.</li>
+<li><b>50 to 74:</b> invited breast screening every 2 years. Lung screening from 50 to 70 for people with a heavy smoking history. Whooping cough booster recommended at 50.</li>
+<li><b>65 and over:</b> free flu, COVID-19 and shingles vaccines, whooping cough booster, yearly hearing and falls checks.</li>
+<li><b>70 and over:</b> free pneumococcal vaccine; bone density scan covered by Medicare.</li>
+<li><b>75 and over:</b> free RSV vaccine, 2 COVID-19 doses a year, yearly health assessment.</li>
+<li><b>Aboriginal and Torres Strait Islander people:</b> a free yearly health check at any age, heart risk checks from 30, diabetes risk checks from 18, and free vaccines at younger ages.</li>
+</ul>
+<h2>How we made this list</h2>
+<ul>
+<li>It follows the RACGP <a href="https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/preventive-activities-in-general-practice/about-the-red-book" rel="noopener">Guidelines for preventive activities in general practice</a> (the “Red Book”, 10th edition), the national screening programs, the National Immunisation Program and the Australian Immunisation Handbook. Each card names its source and section. The wording is our own plain-English summary, not the guideline text.</li>
+<li>Every age, interval and eligibility rule was checked against its source on 9 November 2026. Programs change, so we review the rules regularly.</li>
+<li>It covers people without symptoms. If you have a long-term condition such as diabetes, kidney disease or a weakened immune system, you’ll usually need more checks, more often. Your GP will tailor them.</li>
+</ul>
+<section class="faq"><h2>Common questions</h2><details><summary>What health checks do I need at 40?</summary><p>In Australia: a blood pressure check at least every 2 years, a type 2 diabetes risk check (AUSDRISK) every 3 years from 40, cervical screening every 5 years if you have a cervix, and a yearly flu vaccine. Women can have free breast screening from 40, though invitations start at 50. Aboriginal and Torres Strait Islander people should also have a heart risk check (from 30) and a yearly 715 health check.</p></details><details><summary>What health checks do I need at 50?</summary><p>A free bowel screening kit every 2 years (from 45), a heart risk check (from 45 to 79), blood pressure and diabetes risk checks, cervical screening every 5 years and breast screening every 2 years for women. Lung screening is free from 50 to 70 for people with at least 30 pack-years who smoke or quit within 10 years. Men can talk with their GP about PSA testing. A whooping cough booster is recommended at 50.</p></details><details><summary>What health checks do I need at 65?</summary><p>Keep up bowel, breast and cervical screening (to 74) and heart risk checks (to 79). From 65 the flu, COVID-19 and shingles vaccines are free, a whooping cough booster is recommended if you haven’t had one in 10 years, and a yearly hearing check and falls check are advised. The pneumococcal vaccine is free from 70, and the RSV vaccine from 75.</p></details><details><summary>When does bowel cancer screening start in Australia?</summary><p>At 45. People aged 45 to 49 can request a free home test kit online or on 1800 627 701; from 50 to 74 a kit is posted every 2 years.</p></details><details><summary>Who can have lung cancer screening in Australia?</summary><p>People aged 50 to 70 with no symptoms who have at least 30 pack-years of smoking and either still smoke or quit in the past 10 years. It’s a free low-dose CT scan every 2 years, arranged by your GP.</p></details></section>
+<h2>Sources</h2>
+<ul class="src">
+<li><a href="https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/preventive-activities-in-general-practice/about-the-red-book" rel="noopener">RACGP. Guidelines for preventive activities in general practice, 10th edition (Red Book)</a>. Sections 7 (cancer), 8 (cardiovascular and kidney), 11 (infections and immunisation), 12.3 (falls), 13 (mental health and substance use), 14 (metabolic), 15.2 (osteoporosis), 16 (reproductive health), 17 (hearing, oral health, vision)</li>
+<li><a href="https://www.health.gov.au/our-work/national-bowel-cancer-screening-program/about-the-national-bowel-cancer-screening-program" rel="noopener">Australian Government: National Bowel Cancer Screening Program</a>. ages 45 to 74, every 2 years</li>
+<li><a href="https://www.health.gov.au/our-work/national-cervical-screening-program" rel="noopener">Australian Government: National Cervical Screening Program</a>. 25 to 74, every 5 years, self-collection</li>
+<li><a href="https://www.health.gov.au/our-work/breastscreen-australia-program/having-a-breast-screen/who-should-have-a-breast-screen" rel="noopener">Australian Government: Who should have a breast screen</a>. invited 50 to 74; eligible 40 to 49 and 75+</li>
+<li><a href="https://www.health.gov.au/our-work/nlcsp/how-it-works" rel="noopener">Australian Government: How the National Lung Cancer Screening Program works</a>. 50 to 70, 30 pack-years, smoking now or quit within 10 years</li>
+<li><a href="https://www.prostate.org.au/wp-content/uploads/2026/08/2026-Guidelines-for-the-Early-Detection-of-Prostate-Cancer-Summary-of-Recommendations.pdf" rel="noopener">PCFA. 2026 Guidelines for the early detection of prostate cancer: summary of recommendations (NHMRC-approved)</a></li>
+<li><a href="https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk" rel="noopener">2023 Australian guideline for assessing and managing cardiovascular disease risk. MJA 2024</a>. 45 to 79; First Nations 30 to 79; reassessment intervals</li>
+<li><a href="https://www.heartfoundation.org.au/heart-health-education/heart-health-checks" rel="noopener">Heart Foundation: Heart Health Checks</a></li>
+<li><a href="https://kidney.org.au/your-kidneys/prevent/risk-factors" rel="noopener">Kidney Health Australia: Know if you are at risk</a>. yearly and 2-yearly Kidney Health Checks</li>
+<li><a href="https://health.gov.au/topics/immunisation/when-to-get-vaccinated/immunisation-for-adults" rel="noopener">Australian Government: Immunisation for adults</a>. free flu, pneumococcal and shingles vaccines; pregnancy vaccines</li>
+<li><a href="https://immunisationhandbook.health.gov.au/recommendations/all-people-aged-6-months-are-recommended-to-receive-influenza-vaccine-every-year" rel="noopener">Australian Immunisation Handbook: influenza</a>. everyone 6 months and older, every year</li>
+<li><a href="https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pertussis-whooping-cough" rel="noopener">Australian Immunisation Handbook: pertussis</a>. boosters at 50 and 65; 20 to 32 weeks of every pregnancy</li>
+<li><a href="https://www.health.gov.au/sites/default/files/2026-09/atagi-statement-on-transition-of-covid-19-vaccines-to-the-national-immunisation-program.pdf" rel="noopener">ATAGI statement on the transition of COVID-19 vaccines to the National Immunisation Program (September 2026)</a></li>
+<li><a href="https://www.health.gov.au/sites/default/files/2026-04/respiratory-syncytial-virus-rsv-vaccine-for-older-australians-consumer-fact-sheet.pdf" rel="noopener">Australian Government: RSV vaccine for older Australians, consumer fact sheet (2026)</a>. free from 75, and from 60 for First Nations people</li>
+<li><a href="https://www.health.gov.au/maternal-vaccinations/rsv-vaccine" rel="noopener">Australian Government: RSV vaccine in pregnancy</a>. free at 28 to 36 weeks</li>
+<li><a href="https://healthybonesaustralia.org.au/wp-content/uploads/2024/03/hba-racgp-gp-flowchart-2-side-web.pdf" rel="noopener">Healthy Bones Australia and RACGP: osteoporosis management flowchart</a>. and <a href="https://healthdirect.gov.au/bone-density-scan" rel="noopener">healthdirect: bone density scan</a></li>
+<li><a href="https://www.health.gov.au/sites/default/files/2023-06/supporting-patients-with-hearing-loss.pdf" rel="noopener">Australian Government: Supporting patients with hearing loss</a>. checks from 50; yearly from 65</li>
+<li><a href="https://www.health.gov.au/topics/aboriginal-and-torres-strait-islander-health/primary-care/annual-health-checks" rel="noopener">Australian Government: Annual health checks for Aboriginal and Torres Strait Islander people</a></li>
+<li><a href="https://cesphn.org.au/general-practice/help-my-patients-with/aged-care/75-health-assessments" rel="noopener">CESPHN: 75+ health assessments</a></li>
+<li><a href="https://www.health.wa.gov.au/WA-STI-and-BBV-guidelines/STI-screening-recommendations-for-priority-populations" rel="noopener">WA Health: STI screening recommendations for priority populations</a></li>
+<li><a href="https://www.health.nsw.gov.au/kidsfamilies/MCFhealth/pregnancy/Pages/vitamins-minerals.aspx" rel="noopener">NSW Health: folate and iodine in pregnancy</a></li>
+</ul>
+<p class="callout hc-safe"><b>General information for people without symptoms, based on Australian guidelines.</b> Your GP may recommend different checks based on your history. If you have symptoms, see a doctor; don’t wait for a screening test. <b>In an emergency, call 000</b> (Australia) or your local emergency number. For crisis support, call Lifeline on 13 11 14 or 13YARN on 13 92 76 (both 24/7).</p>
+<p class="meta"><em>Updated 9 November 2026. General education, not personal medical advice. Talk to your GP about the checks that suit you.</em></p>
+<div id="nl-slot"></div>
+<!-- share-card -->
+<aside class="mw-sharecard" aria-label="Share this page"><p class="mw-sc-h">Share this page</p><img src="/assets/og/pages/tools-health-check.png?v=02212ef5" width="1200" height="630" loading="lazy" decoding="async" alt="Share card: What health checks do I need? – free tool"><p class="mw-sc-row"><button type="button" class="mw-sc-btn" data-mw-share>Share link</button></p></aside>
+<!-- /share-card -->
+<section class="related"><h2>Related</h2><ul><li><a href="/cancer-screening/"><span>Fact sheet</span>Cancer screening</a></li><li><a href="/blood-pressure/"><span>Fact sheet</span>Blood pressure</a></li><li><a href="/cholesterol/"><span>Fact sheet</span>High cholesterol</a></li><li><a href="/flu-and-covid/"><span>Fact sheet</span>Flu and COVID-19</a></li><li><a href="/osteoporosis/"><span>Fact sheet</span>Osteoporosis</a></li><li><a href="/mental-health-check/"><span>Tool</span>Mental health check</a></li></ul></section>
+<p class="print-url">maladywise.com/tools/health-check/</p>
+<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+</main>
+<!-- static-nav -->
+<nav class="static-nav" aria-label="Site sections"><p class="sn-main"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/compare/" class="sn-med">Compare</a> <a href="/medical-games/#quizzes">Quizzes</a> <a href="/deep-dives/" class="sn-med">Deep dives</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">World Health Days</a> <a href="/arcade/">Arcade</a> <a href="/zebra-mail/">Zebra Mail</a></p><p class="sn-rel"><span>See also</span> <a href="/tools/iron-infusion/" class="sn-med">Iron Infusion Dose Calculator</a> <a href="/tools/ovulation-calculator/" class="sn-med">Ovulation calculator</a> <a href="/tools/pregnancy-week-calculator/" class="sn-med">How many weeks pregnant am I?</a> <a href="/tools/vertigo/" class="sn-med">Vertigo Sorter</a> <a href="/tools/bmi-calculator/" class="sn-med">BMI calculator for adults</a> <a href="/tools/cha2ds2-vasc/" class="sn-med">CHA₂DS₂-VASc and CHA₂DS₂-VA calculator</a> <a href="/tools/due-date-calculator/" class="sn-med">Due date calculator</a> <a href="/tools/egfr-calculator/" class="sn-med">eGFR calculator (CKD-EPI 2021)</a></p></nav>
+<!-- /static-nav -->
+<script>
+(function () {
+  "use strict";
+  /* Rules: one object per recommendation. who(p) decides if it shows; how_often, why and tag can be text or a function of p.
+     p = {age, sex: "f"|"m"|"", fn: "y"|"n"|"u"|"", smoke: "never"|"current"|"ex", py: number|null, quit: number|null, preg, fh: {bowel, breast, prostate, heart, diabetes}}
+     "checked" is the date each rule was last checked against its source. */
+  var RB = "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/preventive-activities-in-general-practice/";
+  var NIP = "https://health.gov.au/topics/immunisation/when-to-get-vaccinated/immunisation-for-adults";
+  function fnY(p) { return p.fn === "y"; }
+  function smoked(p) { return p.smoke === "current" || p.smoke === "ex"; }
+  function cvdAge(p) { return (p.age >= 45 && p.age <= 79) || (fnY(p) && p.age >= 30 && p.age <= 79); }
+  function lungStatus(p) {
+    if (p.age < 50 || p.age > 70 || !smoked(p)) return null;
+    if (p.py !== null && p.py < 30) return null;
+    if (p.smoke === "ex" && p.quit !== null && p.quit > 10) return null;
+    if (p.py === null || (p.smoke === "ex" && p.quit === null)) return "maybe";
+    return "yes";
+  }
+  function freeFlu(p) { return p.age >= 65 || fnY(p) || p.preg; }
+  function covidBand(p) {
+    if (p.age >= 75) return "two";
+    if (p.age >= 65 || (fnY(p) && p.age >= 50)) return "one";
+    return "consider";
+  }
+  var RULES = [
+    { group: "cancer", title: "Bowel cancer screening", who: function (p) { return p.age >= 45 && p.age <= 74; },
+      tag: "Free program",
+      how_often: function (p) { return p.age < 50 ? "Every 2 years. Ask for your first free kit online or on 1800 627 701; from 50 it’s posted to you." : "Every 2 years. A free kit is posted to you."; },
+      why: "A simple poo test you do at home (FIT). It finds hidden blood that can be an early sign of bowel cancer or polyps, when they’re easier to treat. You need a Medicare or DVA card.",
+      link: ["https://www.health.gov.au/our-work/national-bowel-cancer-screening-program/about-the-national-bowel-cancer-screening-program", "National Bowel Cancer Screening Program"], sheet: ["/cancer-screening/", "Cancer screening fact sheet"],
+      source: "National Bowel Cancer Screening Program; Red Book 7.4", checked: "2026-11-09" },
+    { group: "cancer", title: "Bowel cancer in the family", who: function (p) { return p.fh.bowel; },
+      tag: "Talk to your GP", how_often: "Ask your GP whether you need to start earlier or have a different test.",
+      why: "A close relative with bowel cancer, especially at a young age, can raise your own risk.",
+      link: [RB + "cancer/colorectal-cancer", "Red Book: colorectal cancer"], source: "Red Book 7.4", checked: "2026-11-09" },
+    { group: "cancer", title: "Cervical screening", who: function (p) { return p.sex === "f" && p.age >= 25 && p.age <= 74; },
+      tag: "National program",
+      how_often: "Every 5 years if your result is normal. You can choose to take your own vaginal swab (self-collection).",
+      why: "An HPV test, which looks for the virus behind almost all cervical cancers. For women and people with a cervix who have ever been sexually active, including after the HPV vaccine.",
+      link: ["https://www.health.gov.au/our-work/national-cervical-screening-program", "National Cervical Screening Program"], sheet: ["/cancer-screening/", "Cancer screening fact sheet"],
+      source: "National Cervical Screening Program; Red Book 7.3", checked: "2026-11-09" },
+    { group: "cancer", title: "Breast screening (mammogram)", who: function (p) { return p.sex === "f" && p.age >= 40; },
+      tag: function (p) { return p.age >= 50 && p.age <= 74 ? "Free program" : "Your choice"; },
+      how_often: function (p) { return p.age >= 50 && p.age <= 74 ? "A free mammogram every 2 years. BreastScreen sends you an invitation." : "You can book a free mammogram every 2 years, but you won’t be sent an invitation. Talk it through with your GP."; },
+      why: "A breast X-ray can find breast cancer before it can be felt. Screening is only for people without breast symptoms: see your GP about any lump or change.",
+      link: ["https://www.health.gov.au/our-work/breastscreen-australia-program/having-a-breast-screen/who-should-have-a-breast-screen", "BreastScreen Australia: who should screen"], sheet: ["/cancer-screening/", "Cancer screening fact sheet"],
+      source: "BreastScreen Australia; Red Book 7.2", checked: "2026-11-09" },
+    { group: "cancer", title: "Breast or ovarian cancer in the family", who: function (p) { return p.fh.breast; },
+      tag: "Talk to your GP", how_often: "Ask your GP whether you need earlier or more frequent checks.",
+      why: "A strong family history, or a known gene change such as BRCA1 or BRCA2, can raise the risk of breast and ovarian cancer.",
+      link: [RB + "cancer/breast-cancer", "Red Book: breast cancer"], source: "Red Book 7.2 and 7.7", checked: "2026-11-09" },
+    { group: "cancer", title: "Lung cancer screening", who: function (p) { return lungStatus(p) !== null; },
+      tag: function (p) { return lungStatus(p) === "yes" ? "Free program" : "Check eligibility"; },
+      how_often: function (p) { return lungStatus(p) === "yes" ? "A free low-dose CT scan of the chest every 2 years. Your GP checks you’re eligible and refers you. You don’t have to quit to take part." : "You may be eligible if you have at least 30 pack-years and smoke now or quit within the last 10 years. Add your smoking history above, or ask your GP."; },
+      why: "For people aged 50 to 70 with no symptoms and a heavy smoking history. Finding lung cancer early makes it more treatable.",
+      link: ["https://www.health.gov.au/our-work/nlcsp/how-it-works", "National Lung Cancer Screening Program"], sheet: ["/quit-smoking/", "Quit smoking fact sheet"],
+      source: "National Lung Cancer Screening Program; Red Book 7.5", checked: "2026-11-09" },
+    { group: "cancer", title: "Skin checks", who: function () { return true; },
+      tag: "No national program", how_often: "Get to know your own skin and show a doctor any new or changing spot. Routine skin checks aren’t recommended for people at average risk.",
+      why: "Skin cancer is very common in Australia. If you’ve had melanoma before, a full skin check at least once a year is suggested.",
+      link: [RB + "cancer/skin-cancer", "Red Book: skin cancer"], sheet: ["/moles/", "Moles and melanoma checks"],
+      source: "Red Book 7.10", checked: "2026-11-09" },
+    { group: "cancer", title: "Prostate (PSA) testing", who: function (p) { return p.sex === "m" && p.age >= 45; },
+      tag: "Your choice",
+      how_often: function (p) {
+        if (p.age >= 70) return "Testing is only offered after your GP checks your overall health and it’s likely to help.";
+        if (p.fh.prostate) return "Because of your family history, PSA testing every 2 years from 45 is suggested if you choose to test, after talking it through with your GP.";
+        if (p.age < 50) return "Not routine yet. If you’re interested, talk with your GP about a first PSA blood test.";
+        return "If you choose to test after talking it through with your GP, a PSA blood test every 2 years.";
+      },
+      why: "There’s no national prostate screening program. Testing can find serious cancers earlier, but it also leads to false alarms and to treating slow cancers that would never cause harm. Men at higher risk include those with a brother with prostate cancer or a father diagnosed before 65, men of sub-Saharan African ancestry and men with a BRCA2 gene change.",
+      link: ["https://www.prostate.org.au/wp-content/uploads/2026/08/2026-Guidelines-for-the-Early-Detection-of-Prostate-Cancer-Summary-of-Recommendations.pdf", "2026 Australian prostate guidelines (summary)"], sheet: ["/deep-dives/prostate-cancer/", "Prostate cancer deep dive"],
+      source: "2026 Guidelines for the Early Detection of Prostate Cancer (NHMRC-approved); Red Book 7.9", checked: "2026-11-09" },
+
+    { group: "heart", title: "Heart Health Check (heart and stroke risk)", who: cvdAge,
+      tag: "Medicare-covered",
+      how_often: "Your GP works out your chance of a heart attack or stroke in the next 5 years. Repeat in 5 years if your risk is low, or in 2 years if it’s in the middle. If it’s high, your GP will talk about treatment instead.",
+      why: function (p) { return "It combines your blood pressure, cholesterol, blood sugar, smoking and more into one number, so you can decide together what’s worth doing." + (fnY(p) ? " For Aboriginal and Torres Strait Islander people it starts from 30." : " It’s recommended from 45 to 79."); },
+      link: ["https://www.heartfoundation.org.au/heart-health-education/heart-health-checks", "Heart Foundation: Heart Health Checks"],
+      source: "2023 Australian CVD risk guideline; Red Book 8.2", checked: "2026-11-09" },
+    { group: "heart", title: "Heart disease in the family", who: function (p) { return p.fh.heart; },
+      tag: "Tell your GP", how_often: "Mention it at your next check-up: it counts towards your heart risk.",
+      why: "Heart disease in a parent, brother or sister at a young age (a man before 55, a woman before 65) raises your own risk.",
+      link: [RB + "cardiovascular/cardiovascular-disease-cvd-risk", "Red Book: CVD risk"], source: "Red Book 8.2", checked: "2026-11-09" },
+    { group: "heart", title: "Blood pressure", who: function () { return true; },
+      tag: "Routine", how_often: "At least every 2 years from 18, and more often if it’s been high.",
+      why: "High blood pressure usually has no symptoms, but it raises the risk of stroke, heart attack and kidney disease.",
+      link: [RB + "cardiovascular/cardiovascular-disease-cvd-risk", "Red Book: CVD risk"], sheet: ["/blood-pressure/", "Blood pressure fact sheet"],
+      source: "Red Book 8.2", checked: "2026-11-09" },
+    { group: "heart", title: "Cholesterol (lipids)", who: function (p) { return cvdAge(p) || p.fh.heart; },
+      tag: function (p) { return cvdAge(p) ? "With your heart check" : "Ask your GP"; },
+      how_often: function (p) { return cvdAge(p) ? "A blood test as part of your heart risk check." : "Routine testing before 45 isn’t usually needed, but ask your GP if very high cholesterol runs in your family."; },
+      why: "High cholesterol has no symptoms and is one of the main risk factors for heart attack and stroke.",
+      link: [RB + "cardiovascular/cardiovascular-disease-cvd-risk", "Red Book: CVD risk"], sheet: ["/cholesterol/", "Cholesterol fact sheet"],
+      source: "Red Book 8.2", checked: "2026-11-09" },
+    { group: "heart", title: "Type 2 diabetes risk", who: function (p) { return p.age >= 40 || fnY(p) || p.fh.diabetes; },
+      tag: "Routine",
+      how_often: function (p) { return (p.age >= 40 || fnY(p)) ? "A short risk questionnaire (AUSDRISK) every 3 years, with a blood test if your risk is high." : "Not routine before 40, but your family history raises your risk: ask your GP whether to check sooner."; },
+      why: function (p) { return "Type 2 diabetes can be silent for years. The AUSDRISK score adds up age, family history, waist size, activity and more." + (fnY(p) ? " For Aboriginal and Torres Strait Islander people, checks start from 18." : ""); },
+      link: [RB + "metabolic/diabetes", "Red Book: diabetes"], sheet: ["/prediabetes/", "Prediabetes fact sheet"],
+      source: "Red Book 14.2", checked: "2026-11-09" },
+    { group: "heart", title: "Kidney Health Check", who: function (p) { return fnY(p) || smoked(p) || p.age > 60; },
+      tag: function (p) { return fnY(p) ? "Yearly" : "Every 2 years"; },
+      how_often: function (p) { return (fnY(p) ? "Every year." : "Every 2 years.") + " A blood test (eGFR), a urine test (albumin to creatinine ratio) and a blood pressure check."; },
+      why: function (p) {
+        var r = [];
+        if (fnY(p)) r.push("Aboriginal and Torres Strait Islander people from 18 have higher rates of kidney disease");
+        if (smoked(p)) r.push("smoking now or in the past raises your risk");
+        if (p.age > 60) r.push("risk rises after 60");
+        return "Kidney disease has no symptoms until it’s advanced. For you: " + r.join("; ") + ". It’s yearly for anyone with diabetes or high blood pressure.";
+      },
+      link: ["https://kidney.org.au/your-kidneys/prevent/risk-factors", "Kidney Health Australia: are you at risk?"], sheet: ["/chronic-kidney-disease/", "Chronic kidney disease fact sheet"],
+      source: "Kidney Health Australia; Red Book 8.3", checked: "2026-11-09" },
+
+    { group: "vax", title: "Flu vaccine", who: function () { return true; },
+      tag: function (p) { return freeFlu(p) ? "Free (NIP)" : "Recommended"; },
+      how_often: "Every year.",
+      why: function (p) { return freeFlu(p) ? "Free for you through the National Immunisation Program. Flu can be serious, especially in pregnancy, in older people and for Aboriginal and Torres Strait Islander people." : "Recommended for everyone 6 months and older. It’s free for people 65 and over, Aboriginal and Torres Strait Islander people, pregnant women and people with some medical conditions; otherwise there may be a cost."; },
+      link: ["https://immunisationhandbook.health.gov.au/recommendations/all-people-aged-6-months-are-recommended-to-receive-influenza-vaccine-every-year", "Immunisation Handbook: influenza"], sheet: ["/flu-and-covid/", "Flu and COVID-19 fact sheet"],
+      source: "Australian Immunisation Handbook; National Immunisation Program", checked: "2026-11-09" },
+    { group: "vax", title: "COVID-19 vaccine", who: function () { return true; },
+      tag: function (p) { return covidBand(p) === "consider" ? "Your choice" : "Free (NIP)"; },
+      how_often: function (p) {
+        var b = covidBand(p);
+        if (b === "two") return "2 doses a year, about 6 months apart.";
+        if (b === "one") return "1 dose a year. People with some medical conditions can consider a second dose 6 months later.";
+        return "You can consider 1 dose a year. It’s free at your age only if you’re severely immunocompromised.";
+      },
+      why: "COVID-19 vaccines have been part of the National Immunisation Program since 1 October 2026. Protection against severe illness matters more with age and some health conditions.",
+      link: ["https://www.health.gov.au/sites/default/files/2026-09/atagi-statement-on-transition-of-covid-19-vaccines-to-the-national-immunisation-program.pdf", "ATAGI COVID-19 advice (2026)"], sheet: ["/flu-and-covid/", "Flu and COVID-19 fact sheet"],
+      source: "ATAGI statement, September 2026", checked: "2026-11-09" },
+    { group: "vax", title: "Pneumococcal vaccine", who: function (p) { return p.age >= 70 || (fnY(p) && p.age >= 50); },
+      tag: "Free (NIP)", how_often: "Ask your GP or pharmacist whether you’re due.",
+      why: function (p) { return "Protects against pneumococcal disease, a common cause of pneumonia, blood infection and meningitis. Free from 70" + (fnY(p) ? ", and from 50 for Aboriginal and Torres Strait Islander people." : "."); },
+      link: [NIP, "Immunisation for adults"], source: "National Immunisation Program", checked: "2026-11-09" },
+    { group: "vax", title: "Shingles vaccine", who: function (p) { return p.age >= 65 || (fnY(p) && p.age >= 50); },
+      tag: "Free (NIP)", how_often: "A 2-dose course.",
+      why: "Shingles gets more common with age and can leave long-lasting nerve pain. Free from 65, from 50 for Aboriginal and Torres Strait Islander people, and from 18 for people at higher risk from some medical conditions or treatments.",
+      link: [NIP, "Immunisation for adults"], sheet: ["/shingles/", "Shingles fact sheet"],
+      source: "National Immunisation Program", checked: "2026-11-09" },
+    { group: "vax", title: "RSV vaccine", who: function (p) { return p.age >= 60; },
+      tag: function (p) { return (p.age >= 75 || fnY(p)) ? "Free (NIP)" : "Your choice"; },
+      how_often: function (p) { return (p.age >= 75 || fnY(p)) ? "One dose, which protects for at least 2 years. Any time of year, ideally before RSV season (usually April to September)." : "You can consider a dose, but it isn’t free at your age."; },
+      why: "RSV is a common cause of chest infections and can be serious in older people. Free since May 2026 for people 75 and over, and Aboriginal and Torres Strait Islander people 60 and over.",
+      link: ["https://www.health.gov.au/sites/default/files/2026-04/respiratory-syncytial-virus-rsv-vaccine-for-older-australians-consumer-fact-sheet.pdf", "RSV vaccine for older Australians"],
+      source: "Australian Government RSV fact sheet (2026); National Immunisation Program", checked: "2026-11-09" },
+    { group: "vax", title: "Whooping cough booster (dTpa)", who: function (p) { return p.age >= 50; },
+      tag: "Recommended",
+      how_often: function (p) { return p.age < 65 ? "One booster at about 50. It isn’t funded by the NIP, so there’s usually a cost." : "A booster at 65 if you haven’t had one in the last 10 years. It isn’t funded by the NIP, so there’s usually a cost."; },
+      why: "Whooping cough can be serious in older adults, and you can pass it to babies too young to be fully vaccinated. The vaccine also boosts tetanus and diphtheria protection.",
+      link: ["https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pertussis-whooping-cough", "Immunisation Handbook: whooping cough"],
+      source: "Australian Immunisation Handbook", checked: "2026-11-09" },
+
+    { group: "other", title: "Bone health (osteoporosis)", who: function (p) { return (p.sex === "f" && p.age >= 45) || (p.sex === "m" && p.age > 50); },
+      tag: function (p) { return p.age >= 70 ? "Medicare-covered" : "If at risk"; },
+      how_often: function (p) { return p.age >= 70 ? "Medicare covers a bone density (DXA) scan at your age. Ask your GP." : (p.sex === "f" ? "After menopause, ask" : "Ask") + " your GP about your fracture risk if you have risk factors: a broken bone from a minor fall, a parent who broke a hip, smoking, heavy drinking, low body weight or some medicines."; },
+      why: "Osteoporosis has no symptoms until a bone breaks. Finding it early means treatment can lower the chance of fractures.",
+      link: ["https://healthybonesaustralia.org.au/wp-content/uploads/2024/03/hba-racgp-gp-flowchart-2-side-web.pdf", "Healthy Bones Australia guideline flowchart"], sheet: ["/osteoporosis/", "Osteoporosis fact sheet"],
+      source: "RACGP and Healthy Bones Australia osteoporosis guideline; Red Book 15.2", checked: "2026-11-09" },
+    { group: "other", title: "Eyes", who: function (p) { return p.age >= 50; },
+      tag: "If at risk",
+      how_often: "There’s no routine eye screening for everyone. See an optometrist about glaucoma checks if you have diabetes, are short-sighted, use steroids long term or have had an eye injury. Keep your glasses up to date.",
+      why: "Glaucoma can steal sight slowly and painlessly. Good vision also helps prevent falls.",
+      link: [RB + "miscellaneous/vision", "Red Book: vision"], source: "Red Book 17.6", checked: "2026-11-09" },
+    { group: "other", title: "Hearing", who: function (p) { return p.age >= 50; },
+      tag: function (p) { return p.age >= 65 ? "Yearly" : "Worth considering"; },
+      how_often: function (p) { return p.age >= 65 ? "Ask for a hearing check every year as part of your general health check." : "Consider a hearing check, especially if other people say you miss things."; },
+      why: "Hearing loss becomes more common from 50 and often creeps up without you noticing.",
+      link: ["https://www.health.gov.au/sites/default/files/2023-06/supporting-patients-with-hearing-loss.pdf", "Australian Government: hearing loss"],
+      source: "Australian Government Department of Health; Red Book 17.2", checked: "2026-11-09" },
+    { group: "other", title: "Falls risk", who: function (p) { return p.age >= 65 || (fnY(p) && p.age >= 50); },
+      tag: "Yearly", how_often: "Your GP should ask once a year whether you’ve had a fall, and offer advice to prevent them.",
+      why: "About 3 in 10 people aged 65 and over fall each year. Strength and balance exercise, a medicine review and a home safety check can lower the risk.",
+      link: [RB + "injury-prevention/falls", "Red Book: falls"], source: "Red Book 12.3", checked: "2026-11-09" },
+    { group: "other", title: "Teeth and mouth", who: function () { return true; },
+      tag: "Everyone",
+      how_often: function (p) { return "Regular dental check-ups. Brush twice a day with fluoride toothpaste." + (p.smoke === "current" && p.age > 50 ? " Because you smoke and you’re over 50, ask your GP or dentist to check inside your mouth." : ""); },
+      why: "Tooth decay and gum disease are common and largely preventable. Less sugar, not smoking and a mouthguard for contact sport all help.",
+      link: [RB + "miscellaneous/oral-health", "Red Book: oral health"], source: "Red Book 17.4", checked: "2026-11-09" },
+    { group: "other", title: "Mental health and wellbeing", who: function () { return true; },
+      tag: "Any time",
+      how_often: "There’s no routine screening test. Talk to your GP whenever mood, worry, sleep, alcohol or drug use is affecting your life.",
+      why: "Depression and anxiety are common and treatable. Our free, private mental health check can help you put things into words before you see someone.",
+      link: [RB + "mental-health/depression", "Red Book: depression"], sheet: ["/mental-health-check/", "Mental health check"],
+      source: "Red Book 13.4", checked: "2026-11-09" },
+    { group: "other", title: "Smoking, alcohol, weight and activity", who: function () { return true; },
+      tag: "Any visit",
+      how_often: function (p) { return p.smoke === "current" ? "Ask your GP or pharmacist for help to quit: it’s the biggest single change for your health. They can also help with alcohol, activity and weight." : "Your GP can help with alcohol, physical activity, healthy eating and weight at any check-up."; },
+      why: "Smoking, alcohol, inactivity and extra weight drive many of the conditions on this list. Small changes add up.",
+      link: [RB + "mental-health/smoking", "Red Book: smoking and vaping"], sheet: function (p) { return p.smoke === "current" ? ["/quit-smoking/", "Quit smoking fact sheet"] : ["/weight/", "Weight fact sheet"]; },
+      source: "Red Book 13 and 14", checked: "2026-11-09" },
+    { group: "other", title: "Sexual health (STI checks)", who: function () { return true; },
+      tag: function (p) { return (p.age < 30 || (fnY(p) && p.age < 40)) ? "Yearly if sexually active" : "When needed"; },
+      how_often: function (p) { return (p.age < 30 || (fnY(p) && p.age < 40)) ? "If you’re sexually active, a check every year (usually a urine test or self-swab, plus blood tests), or sooner after a new partner." : "Ask for a check after a new partner, if a partner has an STI, or whenever you’re unsure."; },
+      why: "Many STIs, such as chlamydia, cause no symptoms but are easy to treat once found. Testing is confidential.",
+      link: [RB + "infectious-diseases/sexually-transmitted-infections-stis-and-hepatitis", "Red Book: STIs"], sheet: ["/sexually-transmitted-infections/", "STI fact sheet"],
+      source: "Red Book 11.3; WA STI guidelines", checked: "2026-11-09" },
+    { group: "other", title: "Aboriginal and Torres Strait Islander health check (715)", who: fnY,
+      tag: "Free, yearly", how_often: "Once a year, at any age. Free at Aboriginal Medical Services and bulk-billing clinics.",
+      why: "A full check of your physical, social and emotional health, with free follow-up care if you need it.",
+      link: ["https://www.health.gov.au/topics/aboriginal-and-torres-strait-islander-health/primary-care/annual-health-checks", "Annual health checks (health.gov.au)"],
+      source: "Australian Government Department of Health and Aged Care", checked: "2026-11-09" },
+    { group: "other", title: "Health assessment for people 75 and over", who: function (p) { return p.age >= 75; },
+      tag: "Medicare, yearly", how_often: "Once a year with your GP.",
+      why: "A longer, structured check to spot problems early and help you stay independent, active and connected. It’s also a good time to talk about advance care planning.",
+      link: ["https://cesphn.org.au/general-practice/help-my-patients-with/aged-care/75-health-assessments", "75+ health assessments (CESPHN)"],
+      source: "Medicare Benefits Schedule health assessments", checked: "2026-11-09" },
+
+    { group: "preg", title: "Folic acid and iodine", who: function (p) { return p.preg; },
+      tag: "Start now",
+      how_often: "Folic acid: from at least 1 month before pregnancy until the end of the first 3 months. Iodine: while planning, during pregnancy and while breastfeeding.",
+      why: "Folic acid lowers the risk of neural tube defects such as spina bifida, and iodine supports your baby’s brain development. Choose a supplement made for pregnancy, and if you have a thyroid condition, check with your doctor before taking iodine.",
+      link: ["https://www.health.nsw.gov.au/kidsfamilies/MCFhealth/pregnancy/Pages/vitamins-minerals.aspx", "NSW Health: folate and iodine"],
+      source: "NSW Health; Red Book 16.1", checked: "2026-11-09" },
+    { group: "preg", title: "Pregnancy vaccines", who: function (p) { return p.preg; },
+      tag: "Free (NIP)",
+      how_often: "In each pregnancy: whooping cough vaccine at 20 to 32 weeks, a flu vaccine, and RSV vaccine at 28 to 36 weeks, all free. A COVID-19 dose can be considered from 20 weeks (not free).",
+      why: "These vaccines protect you and pass antibodies to your baby for the first months of life.",
+      link: ["https://www.health.gov.au/maternal-vaccinations/rsv-vaccine", "Pregnancy vaccines (health.gov.au)"],
+      source: "National Immunisation Program; Australian Immunisation Handbook; ATAGI", checked: "2026-11-09" },
+    { group: "preg", title: "Pre-pregnancy and early pregnancy check", who: function (p) { return p.preg; },
+      tag: "See your GP", how_often: "Before pregnancy if you can, or as early in pregnancy as possible.",
+      why: "Your GP can review your medicines and health conditions, check your vaccines are up to date and arrange routine pregnancy blood tests, including for HIV, syphilis and hepatitis B and C.",
+      link: [RB + "reproductive-and-womens-health/preconception", "Red Book: preconception"],
+      source: "Red Book 16.1 and 11.3", checked: "2026-11-09" }
+  ];
+  var GROUPS = [["cancer", "Cancer screening"], ["heart", "Heart, diabetes and kidneys"], ["vax", "Vaccines"], ["preg", "Pregnancy or planning a pregnancy"], ["other", "Other checks"]];
+  window.MW_HEALTH_CHECK_RULES = RULES;
+
+  var $ = function (i) { return document.getElementById(i); }, out = $("hc-out"), state = { sex: "", fn: "" };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function val(x, p) { return typeof x === "function" ? x(p) : x; }
+  function num(id) { var v = $(id).value; if (v === "" || v === null) return null; var n = parseFloat(v); return isFinite(n) && n >= 0 ? n : null; }
+  function profile() {
+    var smoke = $("hc-smoke").value;
+    return {
+      age: num("hc-age"), sex: state.sex, fn: state.fn, smoke: smoke,
+      py: smoke === "never" ? null : num("hc-py"), quit: smoke === "ex" ? num("hc-quit") : null,
+      preg: state.sex === "f" && $("hc-preg").checked,
+      fh: { bowel: $("hc-fh-bowel").checked, breast: $("hc-fh-breast").checked, prostate: $("hc-fh-prostate").checked, heart: $("hc-fh-heart").checked, diabetes: $("hc-fh-diabetes").checked }
+    };
+  }
+  function card(r, p) {
+    var sheet = val(r.sheet, p);
+    return '<article class="hc-card"><h3>' + esc(r.title) + ' <span class="hc-tag">' + esc(val(r.tag, p)) + '</span></h3>' +
+      '<p><b>How often:</b> ' + esc(val(r.how_often, p)) + '</p><p><b>Why:</b> ' + esc(val(r.why, p)) + '</p>' +
+      '<p class="hc-links"><a href="' + esc(r.link[0]) + '" rel="noopener">' + esc(r.link[1]) + '</a>' + (sheet ? ' · <a href="' + esc(sheet[0]) + '">' + esc(sheet[1]) + '</a>' : '') + '</p>' +
+      '<p class="hc-src">Source: ' + esc(r.source) + '</p></article>';
+  }
+  function run() {
+    var p = profile();
+    document.querySelectorAll(".hc-sm").forEach(function (x) { x.hidden = p.smoke === "never"; });
+    document.querySelectorAll(".hc-ex").forEach(function (x) { x.hidden = p.smoke !== "ex"; });
+    document.querySelectorAll(".hc-f").forEach(function (x) { x.hidden = state.sex !== "f"; });
+    if (p.age === null) { out.innerHTML = '<p class="meta">Enter your age to see your checks.</p>'; return; }
+    p.age = Math.floor(p.age);
+    if (p.age < 18) { out.innerHTML = '<div class="res"><h2>This list is for adults</h2><p>Children and teenagers have different checks and vaccines, such as the school vaccine program. Ask your GP or child health nurse, or see the <a href="https://www.health.gov.au/topics/immunisation/when-to-get-vaccinated" rel="noopener">immunisation schedule</a>.</p></div>'; return; }
+    if (p.age > 120) { out.innerHTML = '<p class="warn">Check the age you entered.</p>'; return; }
+    var shown = RULES.filter(function (r) { return r.who(p); });
+    var who = [p.age + " years"];
+    if (p.sex) who.push(p.sex === "f" ? "female at birth" : "male at birth");
+    if (p.fn === "y") who.push("Aboriginal and/or Torres Strait Islander");
+    if (p.smoke === "current") who.push("smokes" + (p.py !== null ? " (" + p.py + " pack-years)" : ""));
+    if (p.smoke === "ex") who.push("ex-smoker" + (p.py !== null ? " (" + p.py + " pack-years" + (p.quit !== null ? ", quit " + p.quit + " years ago" : "") + ")" : (p.quit !== null ? " (quit " + p.quit + " years ago)" : "")));
+    if (p.preg) who.push("pregnant or planning");
+    var h = '<div class="hc-sum"><p class="hc-count"><b>' + shown.length + '</b> checks and vaccines for you</p><p class="meta">Based on: ' + esc(who.join(", ")) + '.</p>';
+    var tips = [];
+    if (!p.sex) tips.push("Choose your sex at birth to see breast, cervical and prostate checks.");
+    if (p.fn === "u") tips.push("Aboriginal and Torres Strait Islander people get extra free checks and vaccines, some at younger ages. Choosing Yes shows them; nothing leaves your device.");
+    if (tips.length) h += '<p class="hc-tip">' + tips.map(esc).join(" ") + '</p>';
+    h += '</div>';
+    GROUPS.forEach(function (g) {
+      var list = shown.filter(function (r) { return r.group === g[0]; });
+      if (!list.length) return;
+      h += '<section class="hc-group" data-group="' + g[0] + '"><h2>' + esc(g[1]) + '</h2>' + list.map(function (r) { return card(r, p); }).join("") + '</section>';
+    });
+    h += '<p class="hc-printnote">General information for people without symptoms, based on Australian guidelines. Your GP may recommend different checks based on your history. If you have symptoms, see a doctor; don’t wait for a screening test. Made with the free checklist at maladywise.com/tools/health-check/</p>';
+    h += '<p class="hc-row"><button class="printbtn" type="button" onclick="window.print()">🖨 Print or save as PDF</button></p>';
+    out.innerHTML = h;
+  }
+  document.querySelectorAll("#hc-form .chip").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = b.dataset.k;
+      state[k] = state[k] === b.dataset.v ? "" : b.dataset.v;
+      document.querySelectorAll('#hc-form .chip[data-k="' + k + '"]').forEach(function (x) { x.setAttribute("aria-pressed", String(x.dataset.v === state[k])); });
+      run();
+    });
+  });
+  document.querySelectorAll("#hc-form input, #hc-form select").forEach(function (el) { el.addEventListener("input", run); el.addEventListener("change", run); });
+  run();
+})();
+</script>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
+</body>
+</html>
