@@ -1,0 +1,378 @@
+{
+ "aboriginal-and-torres-strait-islander-health": {
+  "name": "Aboriginal and Torres Strait Islander health",
+  "group": "services",
+  "note": "<p class=\"callout\"><b>Culturally safe care run by and for Aboriginal and Torres Strait Islander communities,</b> plus primary care and hospital services with Aboriginal Health Workers and Aboriginal Liaison Officers. If you are Aboriginal or Torres Strait Islander and have a Medicare card, you can get a free <a href=\"https://www.health.gov.au/topics/aboriginal-and-torres-strait-islander-health/primary-care/annual-health-checks\" rel=\"noopener\">715 health check</a> every year at an Aboriginal Medical Service or bulk-billing clinic. Ask your GP or Aboriginal Health Practitioner about <a href=\"https://www.pbs.gov.au/info/publication/factsheets/closing-the-gap-pbs-co-payment-measure\" rel=\"noopener\">Closing the Gap PBS co-payment support</a> too (check eligibility): after a one-off registration, people who usually pay full price for PBS medicines pay the concession price, and people who usually pay the concession price pay nothing. Our <a href=\"/tools/health-check/\">health check tool</a> shows other free checks and vaccines.</p>",
+  "people": [
+   {
+    "name": "Awabakal Medical Service Hamilton",
+    "specialty": "Aboriginal Community Controlled Health Organisation (ACCHO)",
+    "practice": "Awabakal",
+    "address": "Cnr Denison St and 38A Samdon St, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "1300 174 908",
+    "website": "https://www.awabakal.org/services/gp-and-medical/",
+    "eligibility": "Aboriginal and Torres Strait Islander people and their families. Dental: Aboriginal and Torres Strait Islander active patients who have had a 715 health check.",
+    "interests": [
+     "GP clinic: general practice and primary health care",
+     "715 health check (needed before using Awabakal dental)",
+     "Chronic disease management",
+     "Antenatal clinic; men's, women's and children's health",
+     "Immunisations and preventive health screening",
+     "Allied health and visiting specialists",
+     "Mental health and social wellbeing support; Wiyala social and emotional wellbeing (SEWB), family wellbeing, psychology and psychiatry",
+     "Dental at Hamilton (most dental services free)",
+     "Transport for aged care patients to medical, dental and specialist appointments (book 24 hours ahead)",
+     "Quit smoking support (Tackling Indigenous Smoking)",
+     "Monday to Friday 8:30am to 5pm; wheelchair accessible"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "Aims to provide care to “Aboriginal people and their families in our community”",
+     "“Awabakal Medical Service bulk bills as long as you have a valid Medicare card.”"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "715 health check",
+     "social and emotional wellbeing",
+     "Closing the Gap"
+    ],
+    "sources": [
+     "https://www.awabakal.org/services/gp-and-medical/",
+     "https://www.awabakal.org/services/dental/",
+     "https://www.awabakal.org/services/wiyala/",
+     "https://www.awabakal.org/support-and-resources/faq",
+     "https://www.awabakal.org/contact/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Awabakal Medical Service Raymond Terrace",
+    "specialty": "Aboriginal Community Controlled Health Organisation (ACCHO)",
+    "practice": "Awabakal",
+    "address": "88 Port Stephens St, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "1300 174 908",
+    "website": "https://www.awabakal.org/services/gp-and-medical/",
+    "eligibility": "Aboriginal and Torres Strait Islander people and their families in Port Stephens.",
+    "interests": [
+     "GP clinic: general practice and primary health care",
+     "715 health check",
+     "Chronic disease management",
+     "Antenatal clinic; men's, women's and children's health",
+     "Immunisations and preventive health screening",
+     "Mental health and social wellbeing support; Wiyala social and emotional wellbeing (SEWB)",
+     "Transport for aged care patients to medical, dental and specialist appointments (book 24 hours ahead)",
+     "Monday to Friday 8:30am to 5pm; wheelchair accessible"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "Aims to provide care to “Aboriginal people and their families in our community”",
+     "“Awabakal Medical Service bulk bills as long as you have a valid Medicare card.”"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "715 health check",
+     "social and emotional wellbeing",
+     "Closing the Gap"
+    ],
+    "sources": [
+     "https://www.awabakal.org/services/gp-and-medical/",
+     "https://www.awabakal.org/services/wiyala/",
+     "https://www.awabakal.org/support-and-resources/faq"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Awabakal Medical Service Cardiff",
+    "specialty": "Aboriginal Community Controlled Health Organisation (ACCHO)",
+    "practice": "Awabakal",
+    "address": "52 Pendlebury Rd, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "1300 174 908",
+    "website": "https://www.awabakal.org/services/gp-and-medical/",
+    "eligibility": "Aboriginal and Torres Strait Islander people and their families in Lake Macquarie.",
+    "interests": [
+     "GP clinic: general practice and primary health care",
+     "715 health check",
+     "Chronic disease management",
+     "Antenatal clinic; men's, women's and children's health",
+     "Immunisations and preventive health screening",
+     "Mental health and social wellbeing support; Wiyala social and emotional wellbeing (SEWB)",
+     "Transport for aged care patients to medical, dental and specialist appointments (book 24 hours ahead)",
+     "Monday to Friday 8:30am to 5pm; wheelchair accessible"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "Aims to provide care to “Aboriginal people and their families in our community”",
+     "“Awabakal Medical Service bulk bills as long as you have a valid Medicare card.”"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "715 health check",
+     "social and emotional wellbeing",
+     "Closing the Gap"
+    ],
+    "sources": [
+     "https://www.awabakal.org/services/gp-and-medical/",
+     "https://www.awabakal.org/services/wiyala/",
+     "https://www.awabakal.org/contact/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Ungooroo GP and Health Services",
+    "specialty": "Aboriginal Community Controlled Health Organisation (ACCHO)",
+    "practice": "Ungooroo Aboriginal Corporation",
+    "address": "157-159 John Street, Singleton NSW 2330",
+    "suburb": "Singleton",
+    "phone": "(02) 6571 5111",
+    "website": "https://www.ungooroo.com.au/",
+    "eligibility": "GP services for Aboriginal and Torres Strait Islander people and for non-Aboriginal people.",
+    "interests": [
+     "GP clinic (general practice)",
+     "Disability, social and recreational activity service",
+     "Telehealth capable",
+     "AH&MRC member service (Aboriginal community controlled)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "yes",
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "“GP services to Aboriginal and Torres Strait Islander people and non Aboriginal and Torres Strait Islander people”",
+     "Bulk billing: “No fee for eligible services with a Medicare card presented.” (healthdirect)"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "Closing the Gap"
+    ],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/9fc503d4-278f-4001-bb7d-a51095de6938/ungooroo-gp--health-services/services/singleton-2330-157-159-john-street",
+     "https://www.healthdirect.gov.au/australian-health-services/20094003/ungooroo-aboriginal-corporation/services/singleton-2330-157-159-john-street",
+     "https://www.ahmrc.org.au/locate-a-member/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Hunter Primary Care: Aboriginal Care Coordination (CCSS)",
+    "specialty": "Care coordination for long-term illness",
+    "practice": "Hunter Primary Care",
+    "address": "7 Warabrook Boulevard, Warabrook NSW 2304",
+    "suburb": "Warabrook",
+    "phone": "(02) 4925 2259",
+    "website": "https://hunterprimarycare.com.au/aboriginal-care-coordination/",
+    "eligibility": "Aboriginal and/or Torres Strait Islander people living in Newcastle and the Hunter with a complex long-term illness. Referral from a health professional only: ask your GP.",
+    "interests": [
+     "Chronic disease care coordination (diabetes and related eye conditions, heart, lung and kidney disease, cancer, mental health)",
+     "A care coordinator helps you manage your health and wellbeing",
+     "Funding may be available for some health costs (assessed by your care coordinator)",
+     "Online lifestyle support groups with Aboriginal health workers, an exercise physiologist, dietitian, OTs and nurses"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "For people who identify as Aboriginal and/or Torres Strait Islander; Aboriginal health workers support cultural wellbeing and safety in its lifestyle groups"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander"
+    ],
+    "sources": [
+     "https://hunterprimarycare.com.au/aboriginal-care-coordination/",
+     "https://hunterprimarycare.com.au/contact/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Hunter Primary Care: Aboriginal and Torres Strait Islander Health Worker Service",
+    "specialty": "Aboriginal and Torres Strait Islander Health Workers",
+    "practice": "Hunter Primary Care",
+    "address": "7 Warabrook Boulevard, Warabrook NSW 2304",
+    "suburb": "Warabrook",
+    "phone": "(02) 4925 2259",
+    "website": "https://hunterprimarycare.com.au/aboriginal-health-worker-service/",
+    "eligibility": "People who identify as Aboriginal or Torres Strait Islander. Self-referral online, or referral from your GP or health provider.",
+    "interests": [
+     "Information about local health services",
+     "Help to reach community and social services",
+     "Referrals to culturally appropriate providers",
+     "Help getting to appointments with GPs, specialists, tests and allied health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "Aboriginal and Torres Strait Islander Health Worker team, funded by the Hunter New England and Central Coast PHN"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander"
+    ],
+    "sources": [
+     "https://hunterprimarycare.com.au/aboriginal-health-worker-service/",
+     "https://hunterprimarycare.com.au/contact/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Yudhilidin (Hunter Primary Care)",
+    "specialty": "Social and emotional wellbeing care coordination",
+    "practice": "Hunter Primary Care",
+    "address": "7 Warabrook Boulevard, Warabrook NSW 2304",
+    "suburb": "Warabrook",
+    "phone": "(02) 4925 2259",
+    "website": "https://hunterprimarycare.com.au/yudhilidin-aboriginal-health/",
+    "eligibility": "Aboriginal and Torres Strait Islander people aged 16 and over whose mental health or wellbeing affects daily life, living in Newcastle, Port Stephens, Lake Macquarie or the lower Hunter. Self-referral or professional referral.",
+    "interests": [
+     "Yudhilidin means guidance: culturally safe social and emotional wellbeing (SEWB) support",
+     "Time-limited care coordination by Aboriginal Peer Navigators, with clinical support as needed",
+     "Links to GPs, counsellors and psychologists, alcohol and other drug services, financial counselling, domestic and family violence support, housing and cultural connection groups"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null,
+     "ages": "16 and over"
+    },
+    "inclusive": [
+     "“Culturally safe social and emotional wellbeing support” for Aboriginal and Torres Strait Islander people"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "social and emotional wellbeing"
+    ],
+    "sources": [
+     "https://hunterprimarycare.com.au/yudhilidin-aboriginal-health/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Integrated Team Care (ITC) Program",
+    "specialty": "Care coordination for chronic conditions",
+    "practice": "Hunter New England and Central Coast PHN",
+    "phone": "1300 859 028",
+    "website": "https://thephn.com.au/what-we-do/first-nations-health",
+    "eligibility": "Aboriginal and Torres Strait Islander people with chronic conditions such as heart disease, diabetes or COPD. The PHN page does not name local providers: ask your GP or Aboriginal Medical Service, or call the PHN.",
+    "interests": [
+     "Integrated Team Care (ITC): “improves access to culturally appropriate, mainstream primary care services, including but not limited to, general practice, allied health and specialists”",
+     "Care coordinators (nurses or Aboriginal and Torres Strait Islander health workers) arrange GP care plan services and reviews, and faster access to allied health and specialists",
+     "Outreach workers encourage appointments and medication pick-up and arrange transport",
+     "Can help with GP-approved medical aids"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "For Aboriginal and Torres Strait Islander people with chronic conditions (Australian Government ITC program)"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander",
+     "ITC"
+    ],
+    "sources": [
+     "https://thephn.com.au/what-we-do/first-nations-health",
+     "https://www.health.gov.au/our-work/integrated-team-care-program"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Calvary Mater Newcastle: Aboriginal Hospital Liaison Officer",
+    "specialty": "Hospital Aboriginal liaison",
+    "practice": "Calvary Mater Newcastle",
+    "address": "Edith Street, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "(02) 4921 1211",
+    "website": "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/brochures-and-links-3",
+    "eligibility": "Aboriginal and Torres Strait Islander patients and families at the hospital.",
+    "interests": [
+     "Aboriginal Hospital Liaison Officer (brochure on the hospital site)",
+     "Aboriginal and Torres Strait Islander brochures for the oncology ward and the Psycho-Oncology Service"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "Aboriginal Hospital Liaison Officer listed for Aboriginal and Torres Strait Islander peoples"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander"
+    ],
+    "sources": [
+     "https://www.calvarycare.org.au/hospitals/calvary-mater-newcastle/brochures-and-links-3"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Hunter New England Health hospitals: Aboriginal Liaison Officers and Yallarwah Place",
+    "specialty": "Hospital Aboriginal liaison",
+    "practice": "John Hunter Hospital",
+    "address": "John Hunter Hospital, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "website": "https://www.health.nsw.gov.au/Hospitals/Going_To_hospital/Pages/support.aspx",
+    "eligibility": "Aboriginal and Torres Strait Islander patients and families in NSW public hospitals, including John Hunter and Maitland. Yallarwah Place is for Aboriginal and Torres Strait Islander patients and families travelling to John Hunter Hospital.",
+    "interests": [
+     "Aboriginal Liaison Officers: “If you’d like support from an Aboriginal Liaison Officer, just let a staff member know.”",
+     "Help talking with clinical staff, understanding your care and planning discharge",
+     "Yallarwah Place: culturally welcoming accommodation and support on the John Hunter Hospital grounds"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": null,
+     "ndis": null,
+     "new_patients": null
+    },
+    "inclusive": [
+     "NSW Health: “Our hospitals are committed to providing culturally safe care for Aboriginal and Torres Strait Islander peoples.”"
+    ],
+    "tags": [
+     "Aboriginal",
+     "Torres Strait Islander"
+    ],
+    "sources": [
+     "https://www.health.nsw.gov.au/Hospitals/Going_To_hospital/Pages/support.aspx",
+     "https://www.health.nsw.gov.au/news/Pages/20240220_01.aspx"
+    ],
+    "checked": "9 November 2026"
+   }
+  ]
+ }
+}

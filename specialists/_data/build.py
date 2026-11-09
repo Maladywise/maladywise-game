@@ -91,14 +91,15 @@ def sortkey(n):
         base = TITLE.sub("", n); base = re.sub(r"\s*\(.*?\)", "", base).strip()
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
     return re.sub(r"^the\s+", "", n.lower())
-people = {}; removed = []; ALLIED_LABELS = {"Psychology (children)"}; TEST_LABELS = {}  # "Tests and imaging" hub group: label -> page note (data sections with "group": "tests")
+people = {}; removed = []; ALLIED_LABELS = {"Psychology (children)"}; TEST_LABELS = {}; SERVICE_LABELS = {}  # SERVICE_LABELS: "Community health services" hub group (data sections with "group": "services"; public and community services kept on purpose)  # "Tests and imaging" hub group: label -> page note (data sections with "group": "tests")
 for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswith("sp-urls.json")):
     for slug, sec in json.load(open(f)).items():
         label = NAMES.get(slug, sec.get("name", slug))
         if slug in ALLIED: ALLIED_LABELS.add(label)
         if sec.get("group") == "tests": TEST_LABELS[label] = sec.get("note", "")
+        if sec.get("group") == "services": SERVICE_LABELS[label] = sec.get("note", "")
         for p in sec["people"]:
-            if is_public(p): removed.append(p["name"]); continue
+            if sec.get("group") != "services" and is_public(p): removed.append(p["name"]); continue
             labs = ortho_labels(p) if slug == "orthopaedics" else [label]
             if slug == "psychology-children" and re.search(r"adult", str((p.get("practical") or {}).get("ages") or "") + " " + p.get("specialty", ""), re.I): labs.append("Psychology")
             if slug == "psychology" and re.search(r"child|adolesc|teen|youth|paediatric|kids|infant|parent", " ".join([str((p.get("practical") or {}).get("ages") or ""), " ".join(p.get("interests") or []), p.get("specialty", "")]), re.I): labs.append("Psychology (children)")
@@ -148,13 +149,14 @@ TAGMAP = [
  ("MRI", r"\bmri\b"), ("CT", r"\bct\b|computed tomography"), ("ultrasound", r"ultrasound|sonograph"), ("mammogram", r"mammo"), ("DEXA", r"\bdexa\b|bone densit|\bbmd\b"),
  ("nerve conduction", r"nerve conduction"), ("EMG", r"\bemg\b|electromyogra"), ("EEG", r"\beeg\b|electroencephalo"), ("sleep study", r"sleep stud|polysomnogra"),
  ("spirometry", r"spirometr|lung function|pulmonary function"), ("echo", r"\becho"), ("Holter", r"holter"), ("CT coronary", r"ct coronary|coronary ct|\bctca\b|ct angiogra"),
- ("calcium score", r"calcium score"), ("bulk billing", r"bulk[- ]bill"), ("Saturday", r"saturday"),
+ ("calcium score", r"calcium score"), ("715 health check", r"\b715\b"), ("Closing the Gap", r"closing the gap"), ("ITC", r"integrated team care"), ("social and emotional wellbeing", r"social and emotional wellbeing|\bsewb\b"), ("bulk billing", r"bulk[- ]bill"), ("Saturday", r"saturday"),
 ]
 TAGRX = [(t, re.compile(rx, re.I)) for t, rx in TAGMAP]
 KIDRX = re.compile(r"child|adolesc|\bteen|youth|paediatric|\bkids\b|infant|toddler|young people|babies|preschool|school", re.I)
 def itags(p):
     txt = " | ".join([p.get("specialty", ""), " ; ".join(p.get("interests") or []), " ; ".join(p.get("inclusive") or []), " ".join(x.get("tag", "") for x in p.get("listed_by") or [])])
     out = [t for t, rx in TAGRX if rx.search(txt)]
+    out += [t for t in p.get("tags") or [] if t not in out]  # explicit search tags from the data
     for b in badges(p):
         if b[0] == "ga" and "LGBTIQA+-affirming" not in out: out.append("LGBTIQA+-affirming")
         if b[0] == "ab" and "First Nations" not in out: out.append("First Nations")
@@ -277,6 +279,7 @@ def card(p):
     if pr.get("ndis") is True: tags.append(("", "NDIS"))
     if pr.get("medicare_cdm") is True: tags.append(("", "Medicare care plans"))
     if tags: extra.append('<p class="sp-tags">' + "".join(f'<span class="sp-t {("sp-t-" + c) if c else ""}">{e(t)}</span>' for c, t in tags) + "</p>")
+    if p.get("eligibility"): extra.append(f'<p class="sp-facts"><b>Who it’s for:</b> {e(p["eligibility"])}</p>')
     if pr.get("ages"): facts.append("Ages: " + pr["ages"])
     if pr.get("wait"): facts.append("Wait: " + pr["wait"])
     if pr.get("hospitals"): facts.append("Hospitals: " + ", ".join(pr["hospitals"]))
@@ -321,6 +324,7 @@ SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-
 SPJS = '<script src="/specialists/sp.js?v=9"></script>'
 if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
 else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
+DISC_SVC = '<p class="callout"><b>A directory, not a recommendation.</b> Community, primary care and hospital services, from each service’s own official pages or government directories. Details and eligibility change: confirm with the service. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
@@ -329,9 +333,12 @@ PAGE_NOTE = {"Dentists and dental specialists": '<p class="callout"><b>Public de
 
 REL_SPEC = {"dentists-and-dental-specialists":["ent-ear-nose-and-throat","plastic-and-reconstructive-surgery","paediatrics"],"psychology-children":["child-and-adolescent-psychiatry","developmental-paediatrics","speech-pathology-children"],"cardiology":["vascular-surgery","endocrinology","respiratory-and-sleep-medicine"],"dermatology":["plastic-and-reconstructive-surgery","immunology-and-allergy","rheumatology"],"endocrinology":["diabetes-educators","dietitians","cardiology"],"gastroenterology":["general-surgery","dietitians","immunology-and-allergy"],"general-surgery":["gastroenterology","vascular-surgery","plastic-and-reconstructive-surgery"],"rheumatology":["immunology-and-allergy","physiotherapy","pain-medicine"],"neurology":["neurosurgery","rehabilitation-medicine","pain-medicine"],"neurosurgery":["orthopaedics-spine","neurology","pain-medicine"],"psychiatry":["psychiatry-telehealth","psychology","mental-health-social-workers"],"psychiatry-telehealth":["psychiatry","psychology","perinatal-psychiatry"],"psychology":["psychiatry","mental-health-social-workers","psychiatry-telehealth"],"paediatrics":["developmental-paediatrics","child-and-adolescent-psychiatry","speech-pathology-children"],"developmental-paediatrics":["occupational-therapy-children","speech-pathology-children","child-and-adolescent-psychiatry"],"obstetrics-and-gynaecology":["perinatal-psychiatry","lactation-consultants","continence-services"],"urology":["continence-services","nephrology","general-surgery"],"nephrology":["urology","endocrinology","cardiology"],"respiratory-and-sleep-medicine":["ent-ear-nose-and-throat","cardiology","immunology-and-allergy"],"ent-ear-nose-and-throat":["audiology","immunology-and-allergy","respiratory-and-sleep-medicine"],"ophthalmology":["neurology","endocrinology","dermatology"],"physiotherapy":["exercise-physiology","podiatry","orthopaedics-general-and-trauma"],"podiatry":["orthopaedics-foot-and-ankle","physiotherapy","diabetes-educators"],"medical-oncology":["radiation-oncology","haematology","palliative-care"],"radiation-oncology":["medical-oncology","haematology","general-surgery"],"haematology":["medical-oncology","immunology-and-allergy","infectious-diseases"],"geriatric-medicine":["rehabilitation-medicine","neurology","occupational-therapy-adults"]}
 REL_SPEC.update({"radiology-and-imaging": ["cardiac-testing", "endocrinology", "audiology"], "nerve-conduction-studies-emg-and-eeg": ["neurology", "orthopaedics-hand-and-wrist", "rehabilitation-medicine"], "sleep-studies": ["respiratory-and-sleep-medicine", "lung-function-and-spirometry", "ent-ear-nose-and-throat"], "lung-function-and-spirometry": ["respiratory-and-sleep-medicine", "sleep-studies", "immunology-and-allergy"], "cardiac-testing": ["cardiology", "radiology-and-imaging", "pathology-collection"], "pathology-collection": ["radiology-and-imaging", "haematology", "endocrinology"]})
+REL_SPEC["aboriginal-and-torres-strait-islander-health"] = ["psychology", "dentists-and-dental-specialists", "diabetes-educators"]
 REL_SPEC.setdefault("cardiology", []).append("cardiac-testing"); REL_SPEC.setdefault("respiratory-and-sleep-medicine", []).extend(["sleep-studies", "lung-function-and-spirometry"]); REL_SPEC.setdefault("neurology", []).append("nerve-conduction-studies-emg-and-eeg")
+for _l, _n in SERVICE_LABELS.items(): PAGE_NOTE[_l] = _n
 for _l, _n in TEST_LABELS.items(): PAGE_NOTE[_l] = '<p class="sp-note">Medicare rebates and bulk billing vary by test and eligibility; check with the provider.</p>' + _n
 REL_FACT = {"dentists-and-dental-specialists":["mouth-ulcers","cold-sores"],"psychology-children":["adhd","autism","sleep"],"cardiology":["blood-pressure","pots"],"dermatology":["acne","eczema","psoriasis","rosacea"],"endocrinology":["osteoporosis","b12","addisons-disease"],"gastroenterology":["coeliac","reflux","ibs","gallstones","inflammatory-bowel-disease","eosinophilic-oesophagitis","haemochromatosis"],"general-surgery":["gallstones","haemorrhoids","diverticulitis"],"rheumatology":["gout","knee-oa","lupus","scleroderma","ehlers-danlos-syndrome"],"neurology":["migraine","restless-legs","myasthenia-gravis"],"psychiatry":["adhd","ptsd","sleep"],"psychiatry-telehealth":["adhd","ptsd","sleep"],"psychology":["ptsd","sleep","adhd"],"developmental-paediatrics":["autism","adhd"],"child-and-adolescent-psychiatry":["adhd","autism"],"obstetrics-and-gynaecology":["endometriosis","period-pain","pms"],"urology":["uti"],"respiratory-and-sleep-medicine":["sleep-apnoea","sleep","sarcoidosis"],"ent-ear-nose-and-throat":["tinnitus","eustachian-tube","hay-fever"],"immunology-and-allergy":["hay-fever","hives","mcas","eosinophilic-oesophagitis"],"audiology":["tinnitus"],"orthopaedics-hip-and-knee":["knee-oa","hip-pain"],"orthopaedics-foot-and-ankle":["plantar-fasciitis","ankle-sprain"],"orthopaedics-shoulder-and-elbow":["tennis-elbow"],"orthopaedics-spine":["back-pain"],"physiotherapy":["back-pain","ankle-sprain","tennis-elbow"],"podiatry":["plantar-fasciitis","ankle-sprain"],"pain-medicine":["back-pain","migraine"],"dietitians":["coeliac","ibs","iron"],"geriatric-medicine":["dementia-prevention","osteoporosis"],"haematology":["iron","b12","haemochromatosis","porphyria"],"sexual-health":["thrush","uti"]}
+REL_FACT["aboriginal-and-torres-strait-islander-health"] = ["type-2-diabetes", "chronic-kidney-disease"]
 REL_FACT.update({"radiology-and-imaging": ["osteoporosis"], "nerve-conduction-studies-emg-and-eeg": ["carpal-tunnel", "sciatica"], "sleep-studies": ["sleep-apnoea", "sleep"], "lung-function-and-spirometry": ["asthma", "copd"], "cardiac-testing": ["palpitations", "atrial-fibrillation"], "pathology-collection": ["blood-tests"]})
 GAMES = [("/wordemic/","Wordemic","Guess the medical word"),("/triviosis/","Triviosis","Ten quick questions"),("/dx/","Dxtective","Crack today's diagnosis"),("/glimpsis/","Glimpsis","Spot the sign"),("/linkase/","Linkase","Chain the medical words"),("/basil/","Basil + Clover","Kick things off the bench")]
 def _title(path):
@@ -362,9 +369,10 @@ for lab, ppl in CATS.items():
     os.makedirs("specialists/" + slug, exist_ok=True)
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
+    if lab in SERVICE_LABELS: desc = f"{lab} services in Newcastle and the Hunter, NSW: Aboriginal Community Controlled Health Organisations, Aboriginal Health Workers, care coordination and hospital liaison, from official pages."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
             finder(ppl, extra=langsel(ppl)) + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
-            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC}{FINDNOTE}\n')
+            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC_SVC if lab in SERVICE_LABELS else DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
 SURG = re.compile(r"surg|ENT \(|Obstetrics|Ophthalm|Orthopaed|^Urology", re.I)
@@ -380,7 +388,7 @@ desc = "Directory of private specialists and allied health in Newcastle and the 
 page = (head(title, desc, "/specialists/", hub=True) + '<h1>Specialists and allied health</h1>'
         f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'
         + finder(L, hub=True) + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
-        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and k not in TEST_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + ('<h2 id="tests-and-imaging">Tests and imaging</h2>' + tiles([k for k in labs if k in TEST_LABELS]) if any(k in TEST_LABELS for k in labs) else '') + orgsection() + DISC + FINDNOTE +
+        '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and k not in TEST_LABELS and k not in SERVICE_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + ('<h2 id="tests-and-imaging">Tests and imaging</h2>' + tiles([k for k in labs if k in TEST_LABELS]) if any(k in TEST_LABELS for k in labs) else '') + ('<h2 id="community-services">Community health services</h2>' + tiles([k for k in labs if k in SERVICE_LABELS]) if any(k in SERVICE_LABELS for k in labs) else '') + orgsection() + DISC + FINDNOTE +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(fix_html(page))
 json.dump(urls, open(os.path.join(DD, "sp-urls.json"), "w"))
