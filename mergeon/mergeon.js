@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1219,11 +1219,11 @@
     var prevHi = stats.hi || 0, best = score > prevHi && prevHi > 0;
     sfx("over"); factQ = []; nextFact();
     var ov = $("over"), rq = K.REACT[top >= 8 ? 2 : top >= 6 ? 1 : 0];
-    ov.innerHTML = (best ? '<p class="best">🏆 Best ever!</p>' : "") +
+    ov.innerHTML = '<div class="ovcard">' + (best ? '<p class="best">🏆 Best ever!</p>' : "") +
       '<div class="react">' + pic(top >= 0 ? top : 0, 56) + '<span class="bub">' + esc(pick(rq)) + "</span></div>" +
       "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
       (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
-      (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "");
+      (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") + "</div>";
     ov.hidden = false;
     if (best) { burst(W / 2, H / 3, 8); sfx("target"); }
     if (!practice && !st.done) {
