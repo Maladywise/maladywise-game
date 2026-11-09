@@ -2118,6 +2118,427 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Denis Crimmins",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/denis-crimmins-associate-professor/",
+    "interests": [
+     "General neurology",
+     "Also at the Procognition (memory) Clinic, Tumbi Umbi (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Hospital",
+      "Wyong Hospital",
+      "Gosford Private Hospital",
+      "Brisbane Waters Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/denis-crimmins-associate-professor/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michael Hayes",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-michael-hayes/",
+    "interests": [
+     "Parkinson's disease and movement disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-michael-hayes/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Scott Whyte",
+    "specialty": "Neurologist and geriatrician",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/associate-professor-scott-whyte/",
+    "interests": [
+     "Parkinson's disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/associate-professor-scott-whyte/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Anna Schutz",
+    "specialty": "Neurologist and neurophysiologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-anna-schutz/",
+    "interests": [
+     "Neuromuscular neurology",
+     "Neurophysiology (nerve conduction studies, EMG)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Hospital",
+      "Wyong Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": false,
+     "np_note": "Not taking new patients at present (as stated)"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-anna-schutz/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Yun Tae Hwang",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-yun-tae-hwang/",
+    "interests": [
+     "Dementia and cognitive disorders, especially under 65",
+     "Parkinson's disease and neurodegenerative disorders",
+     "Complex headache"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-yun-tae-hwang/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Benjamin Cheah",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-benjamin-cheah/",
+    "interests": [
+     "Peripheral nerve disorders and neuromuscular disease, especially motor neurone disease",
+     "Functional neurological disorder",
+     "Neurophysiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-benjamin-cheah/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Andrew Bleasel",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/associate-professor-andrew-bleasel/",
+    "interests": [
+     "Epilepsy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Westmead Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/associate-professor-andrew-bleasel/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sai Nagaratnam",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-sai-nagaratnam/",
+    "interests": [
+     "Movement disorders: Parkinson's disease, tremor, dystonia (ProMotion Clinic)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-sai-nagaratnam/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Chris Blair",
+    "specialty": "Neurologist and stroke physician",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-chris-blair/",
+    "interests": [
+     "Stroke"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-chris-blair/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Jonathan Sturm",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Suite 4, Level 1, Mingara Health, 7 Mingara Drive, Tumbi Umbi NSW 2261",
+    "suburb": "Tumbi Umbi (Central Coast)",
+    "phone": "02 4394 0366",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/jonathan-sturm-associate-professor/",
+    "interests": [
+     "General neurology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Hospital",
+      "Wyong Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/jonathan-sturm-associate-professor/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Khaled Alanati",
+    "specialty": "Neurologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Suite 4, Level 1, Mingara Health, 7 Mingara Drive, Tumbi Umbi NSW 2261",
+    "suburb": "Tumbi Umbi (Central Coast)",
+    "phone": "02 4394 0366",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-khaled-alanati/",
+    "interests": [
+     "General neurology, including headache, epilepsy and neuromuscular disorders"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Hospital",
+      "Wyong Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-khaled-alanati/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Harsh Oza",
+    "specialty": "Neurologist and neuroimmunologist",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Suite 4, Level 1, Mingara Health, 7 Mingara Drive, Tumbi Umbi NSW 2261",
+    "suburb": "Tumbi Umbi (Central Coast)",
+    "phone": "02 4394 0366",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-specialists/dr-harsh-oza/",
+    "interests": [
+     "Multiple sclerosis and related autoimmune neurological conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-specialists/dr-harsh-oza/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },

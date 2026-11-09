@@ -1049,6 +1049,86 @@
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Central Coast Neurosciences Erina",
+    "specialty": "EEG, nerve conduction studies and EMG",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Element Building, Suite 202, Level 2, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4323 4843",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-services/eeg/",
+    "interests": [
+     "EEG, nerve conduction studies and EMG, reported by a neurologist (as stated)",
+     "Medicare rebate applies, except workers' compensation or third-party claims (as stated)",
+     "Practice runs rooms at Erina and Tumbi Umbi: call to check which site does your test"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-services/",
+     "https://www.neurosciences.com.au/our-services/eeg/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Central Coast Neurosciences Tumbi Umbi",
+    "specialty": "EEG, nerve conduction studies and EMG",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Suite 4, Level 1, Mingara Health, 7 Mingara Drive, Tumbi Umbi NSW 2261",
+    "suburb": "Tumbi Umbi (Central Coast)",
+    "phone": "02 4394 0366",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neurosciences.com.au/our-services/eeg/",
+    "interests": [
+     "EEG, nerve conduction studies and EMG, reported by a neurologist (as stated)",
+     "Medicare rebate applies, except workers' compensation or third-party claims (as stated)",
+     "Practice runs rooms at Erina and Tumbi Umbi: call to check which site does your test"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neurosciences.com.au/our-services/",
+     "https://www.neurosciences.com.au/our-services/eeg/",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
