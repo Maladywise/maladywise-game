@@ -25,6 +25,14 @@ _pf = os.path.join(DD, "extra", "practical.json")
 PRACT = json.load(open(_pf)) if os.path.exists(_pf) else {}
 PB = [("fees", "💲 Fees online"), ("eref", "📨 E-referrals"), ("short", "⏱️ Short wait"), ("urg", "🚨 Urgent GP slots"), ("wc", "♿ Wheelchair access"), ("tr", "🚆 Near transport"), ("int", "🗣️ Interpreters or languages"), ("sen", "🎧 Sensory-friendly")]
 PBL = dict(PB)
+# Public clinics shown on a specialty page (official HNE Health or NSW Health pages only), keyed by page label.
+_pc = os.path.join(DD, "extra", "public-clinics.json")
+PUBC = json.load(open(_pc)) if os.path.exists(_pc) else {}
+def pubclinics(lab):
+    L2 = PUBC.get(lab) or []
+    if not L2: return ""
+    return ('<section class="related sp-pubc"><h2>Public clinics</h2><p>Public hospital clinics, from official Hunter New England Health pages. Most need a GP or specialist referral.</p><ul>'
+            + "".join(f'<li><a href="{e(c["url"])}" rel="noopener"><span>Public · {e(c.get("where", ""))}</span>{e(c["name"])}</a><p class="sp-facts">{e(c.get("how", ""))} <span>(checked {e(c.get("checked", ""))})</span></p></li>' for c in L2) + "</ul></section>")
 def pbadges(p):
     d = PRACT.get(p.get("practice") or "") or PRACT.get(p["name"]) or {}
     out = []
@@ -327,7 +335,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
             finder(ppl, extra=langsel(ppl)) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
-            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{orgbox(slug)}{keep_going(slug)}{DISC}{FINDNOTE}\n')
+            f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
 SURG = re.compile(r"surg|ENT \(|Obstetrics|Ophthalm|Orthopaed|^Urology", re.I)

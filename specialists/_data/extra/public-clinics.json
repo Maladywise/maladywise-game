@@ -1,0 +1,18 @@
+{
+ "Neurology": [
+  {
+   "name": "John Hunter Hospital Neurology Clinic (including stroke service)",
+   "where": "North Block, John Hunter Hospital, New Lambton Heights",
+   "how": "Needs a referral from a GP or specialist. Referral and appointment enquiries: Neurology Unit Secretary, (02) 4921 3490. Not booked through the hospital's general outpatient line.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/outpatient-services",
+   "checked": "9 November 2026"
+  },
+  {
+   "name": "Multiple Sclerosis Clinic Newcastle",
+   "where": "North Block, John Hunter Hospital (Monday to Thursday); Belmont Hospital (Fridays)",
+   "how": "For MS, NMO and MOGAD, with an MS nurse at each visit. GP referral by fax to (02) 4921 3488. Clinic (02) 4921 3540.",
+   "url": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/chronic-disease-management/multiple-sclerosis-clinic",
+   "checked": "9 November 2026"
+  }
+ ]
+}
