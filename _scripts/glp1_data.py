@@ -17,6 +17,7 @@ S_SURM5 = ("https://doi.org/10.1056/NEJMoa2416394", "Aronne et al, NEJM 2025: SU
 S_SELECT = ("https://doi.org/10.1056/NEJMoa2307563", "Lincoff et al, NEJM 2023: SELECT, semaglutide and heart outcomes in people without diabetes")
 S_WEG = ("https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215256s033lbl.pdf", "US FDA prescribing information for Wegovy (semaglutide), February 2026: side-effect table, warnings")
 S_ZEP = ("https://medlibrary.org/lib/rx/meds/zepbound/page/3/", "US prescribing information for Zepbound (tirzepatide): side-effect table, gallbladder and pancreatitis rates")
+S_ABC_TAB = ("https://www.abc.net.au/news/2026-11-03/weight-loss-tablet-cleared-for-use-in-australia/107343340", "ABC News, 3 November 2026: Daily weight-loss tablet Wegovy cleared by TGA for use in Australia (strengths, PBS status, availability)")
 S_TGA_OC = ("https://www.tga.gov.au/news/safety-updates/updated-contraception-advice-mounjaro-tirzepatide", "TGA: Updated contraception advice for Mounjaro (tirzepatide)")
 S_UK = ("https://www.gov.uk/government/publications/glp-1-medicines-for-weight-loss-and-diabetes-what-you-need-to-know/glp-1-medicines-for-weight-loss-and-diabetes-what-you-need-to-know", "UK MHRA: GLP-1 medicines for weight loss and diabetes, what you need to know (updated February 2026)")
 S_ADV = ("https://pmc.ncbi.nlm.nih.gov/articles/PMC12264624/", "Mozaffarian et al, 2025: Nutritional priorities to support GLP-1 therapy for obesity (joint advisory of four US obesity and nutrition societies)")
@@ -242,7 +243,8 @@ related=[HUB_R, ("/glp-1/pbs-cost-australia/", "Guide", "PBS and cost in Austral
 ),
 # ---------------------------------------------------------------- PBS and cost
 dict(
-slug="pbs-cost-australia", crumb="PBS and cost in Australia", group="Access", cls="l",
+slug="pbs-cost-australia", crumb="PBS and cost in Australia", group="Access", cls="l", updated="Updated 9 November 2026", updated_iso="2026-11-09",
+og_card={"label": "GLP-1 guide", "title": "GLP-1 cost and the PBS", "fact": "Oral semaglutide (Wegovy tablets) was TGA-approved on 3 Nov 2026 but isn’t on the PBS", "source": "ABC News", "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 400\"><g stroke=\"#2A2140\" stroke-width=\"6\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"90\" width=\"300\" height=\"200\" rx=\"26\" fill=\"#C9C2D6\"/><g fill=\"#ffffff\"><circle cx=\"135\" cy=\"150\" r=\"34\"/><circle cx=\"210\" cy=\"150\" r=\"34\"/><circle cx=\"285\" cy=\"150\" r=\"34\"/><circle cx=\"135\" cy=\"232\" r=\"34\"/><circle cx=\"210\" cy=\"232\" r=\"34\"/></g><circle cx=\"285\" cy=\"232\" r=\"34\" fill=\"#F4C9D2\" stroke-dasharray=\"10 8\"/></g><g fill=\"#9A7BC4\" stroke=\"#2A2140\" stroke-width=\"4\"><ellipse cx=\"135\" cy=\"150\" rx=\"20\" ry=\"13\"/><ellipse cx=\"210\" cy=\"150\" rx=\"20\" ry=\"13\"/><ellipse cx=\"285\" cy=\"150\" rx=\"20\" ry=\"13\"/><ellipse cx=\"135\" cy=\"232\" rx=\"20\" ry=\"13\"/><ellipse cx=\"210\" cy=\"232\" rx=\"20\" ry=\"13\"/></g><text x=\"210\" y=\"350\" font-family=\"Poppins\" font-size=\"20\" font-weight=\"600\" fill=\"#5B4C99\" text-anchor=\"middle\">once-daily tablet</text></svg>"},
 title="Ozempic, Wegovy and Mounjaro on the PBS: Cost in Australia",
 h1="GLP-1 medicines on the PBS: access and cost in Australia",
 desc="Which GLP-1 medicines are on the PBS in November 2026: Ozempic for type 2 diabetes, Wegovy’s pending listing, Mounjaro, private costs, plus US and UK.",
@@ -251,7 +253,7 @@ lede="Who pays $25 and who pays thousands comes down to one thing: whether you h
 qa="As of 1 November 2026, Ozempic and Trulicity are PBS-subsidised for type 2 diabetes only, when criteria are met. No GLP-1 medicine is on the PBS for weight loss. Wegovy was recommended for people with obesity and heart disease but isn’t listed yet. Mounjaro isn’t on the PBS for anything.",
 body="""
 <h2>PBS status (1 November 2026)</h2>
-<ul><li><b>Ozempic (semaglutide) and Trulicity (dulaglutide):</b> PBS-subsidised for type 2 diabetes in certain circumstances. A PBS script costs up to $25, or $7.70 with a concession card.</li><li><b>Wegovy (semaglutide):</b> the PBAC recommended it in November 2025 for adults with established heart or blood vessel disease (a previous heart attack, stroke or symptomatic peripheral arterial disease) and a BMI of 35 or more. As of 1 November 2026, the PBS says listing “has not yet occurred”.</li><li><b>Mounjaro (tirzepatide):</b> the PBAC recommended it for type 2 diabetes in March 2026, but the company has advised it isn’t proceeding with PBS listing. It isn’t subsidised for any use.</li><li><b>Weight management alone:</b> no GLP-1 medicine is subsidised. It’s a private script.</li></ul>
+<ul><li><b>Ozempic (semaglutide) and Trulicity (dulaglutide):</b> PBS-subsidised for type 2 diabetes in certain circumstances. A PBS script costs up to $25, or $7.70 with a concession card.</li><li><b>Wegovy (semaglutide):</b> the PBAC recommended it in November 2025 for adults with established heart or blood vessel disease (a previous heart attack, stroke or symptomatic peripheral arterial disease) and a BMI of 35 or more. As of 1 November 2026, the PBS says listing “has not yet occurred”.</li><li><b>Mounjaro (tirzepatide):</b> the PBAC recommended it for type 2 diabetes in March 2026, but the company has advised it isn’t proceeding with PBS listing. It isn’t subsidised for any use.</li><li><b>Oral semaglutide (Wegovy tablets):</b> TGA-approved on 3 November 2026 but not yet in pharmacies, and not on the PBS. No Australian price has been announced.</li><li><b>Weight management alone:</b> no GLP-1 medicine is subsidised. It’s a private script.</li></ul>
 <h2>Private cost</h2>
 <ul><li>More than 400,000 Australians were paying full price for GLP-1 medicines in early 2026, and the ABC reported some pay $4,000 to $5,000 a year.</li><li>Prices vary with the dose and the pharmacy. Ask your pharmacist for a quote.</li><li>PBS-subsidised Ozempic is for type 2 diabetes only, so it can’t be used on the PBS for weight loss.</li><li>Compounded “cheaper copies” aren’t an option: they’ve been banned since October 2024. See <a href="/glp-1/compounded-counterfeit/">compounded and fake products</a>.</li></ul>
 <h2>Global note</h2>
@@ -264,13 +266,14 @@ faqs=[
 ("Is Mounjaro on the PBS?", "No, not for any use as of November 2026. The PBAC recommended it for type 2 diabetes in March 2026, but the company advised it isn’t proceeding with listing."),
 ("How much does a PBS script for Ozempic cost?", "Up to $25 a script, or $7.70 with a concession card, if you meet the PBS criteria for type 2 diabetes."),
 ("Why does weight-loss use cost so much?", "Because no GLP-1 medicine is subsidised for weight management alone, you pay the full private price, which varies with dose and pharmacy."),
+("Is the Wegovy pill on the PBS?", "No. The TGA approved oral semaglutide (Wegovy tablets) on 3 November 2026, but they aren’t PBS-listed and no Australian price had been announced as of 9 November 2026. Novo Nordisk expects supply before the end of 2026."),
 ],
 sources=[
 ("https://www.pbs.gov.au/medicinestatus/document/1460", "PBS medicine status: Semaglutide (Wegovy) for established cardiovascular disease with obesity (current at 1 November 2026)"),
 ("https://www.pbs.gov.au/medicinestatus/document/1609.html", "PBS medicine status: Tirzepatide (Mounjaro) for type 2 diabetes (current at 1 November 2026)"),
 ("https://www.abc.net.au/news/2026-01-12/wegovy-to-be-added-to-pbs/106218104", "ABC News, January 2026: Wegovy to be subsidised for Australians with severe obesity and heart disease (criteria, costs)"),
 ("https://www.diabetesaustralia.com.au/news/wegovy-to-be-listed-on-pbs/", "Diabetes Australia, January 2026: Wegovy to be listed on PBS"),
-S_TGA_OC,
+S_ABC_TAB,
 ("https://www.npr.org/2026/05/06/nx-s1-5812662/medicare-bridge-glp1-drugs-copay", "NPR, May 2026: Medicare GLP-1 Bridge, $50 a month"),
 ("https://www.cheshireandmerseyside.nhs.uk/your-health/prescribing/statements/mounjaro-tirzepatide/", "NHS Cheshire and Merseyside: Tirzepatide for obesity, phased NHS rollout"),
 ],
@@ -358,13 +361,16 @@ related=[HUB_R, ("/glp-1/stopping/", "Guide", "Stopping and weight regain"), ("/
 
 HUB = dict(
 title="GLP-1 Medicines Guide: Ozempic, Wegovy and Mounjaro",
+updated="Updated 9 November 2026", updated_iso="2026-11-09",
 h1="GLP-1 medicines: the evidence, minus the hype",
 desc="GLP-1 medicines explained: how semaglutide (Ozempic, Wegovy) and tirzepatide (Mounjaro) work, who they’re for, side effects, stopping, PBS cost and safety.",
 lede="Semaglutide (Ozempic, Wegovy), tirzepatide (Mounjaro) and their relatives copy gut hormones that control blood sugar and appetite. They’re genuinely effective. They’re also not magic, not cheating, and not for everyone.",
 qa="GLP-1 medicines are weekly injections (and some tablets) that copy gut hormones, lowering blood sugar and appetite. They’re used for type 2 diabetes and, for some brands, weight management. In the main trials, people lost about 15% (semaglutide) to 21% (tirzepatide) of their weight. Gut side effects are common, and weight usually returns after stopping.",
 intro="""
 <h2>What they are</h2>
-<ul><li><b>Semaglutide:</b> Ozempic (type 2 diabetes) and Wegovy (weight management).</li><li><b>Tirzepatide:</b> Mounjaro. It copies two gut hormones, GIP and GLP-1.</li><li><b>Older relatives:</b> liraglutide and dulaglutide (Trulicity).</li><li>Brand names are listed so you can recognise them, not as a recommendation.</li></ul>
+<ul><li><b>Semaglutide:</b> Ozempic (type 2 diabetes) and Wegovy (weight management).</li><li><b>Tirzepatide:</b> Mounjaro. It copies two gut hormones, GIP and GLP-1.</li><li><b>Oral semaglutide:</b> Wegovy tablets for weight management, newly approved in Australia (see below).</li><li><b>Older relatives:</b> liraglutide and dulaglutide (Trulicity).</li><li>Brand names are listed so you can recognise them, not as a recommendation.</li></ul>
+<h2>New: oral semaglutide tablets (Wegovy)</h2>
+<ul><li>The TGA approved oral semaglutide for weight management (brand name Wegovy tablets), a once-daily tablet, on 3 November 2026. They’re the first GLP-1 tablets approved for weight management in Australia.</li><li><b>Strengths:</b> 1.5 mg, 4 mg, 9 mg and 25 mg, taken once a day on an empty stomach.</li><li><b>Approved uses:</b> the same as injectable Wegovy, according to the Department of Health: weight management alongside a reduced-calorie diet and more physical activity, and lowering the risk of heart attack and stroke in eligible adults.</li><li><b>Not in pharmacies yet:</b> the TGA still has to check packaging and manufacturing before release. Novo Nordisk expects supply before the end of 2026.</li><li><b>Cost:</b> not on the PBS, and no Australian price has been announced. See <a href="/glp-1/pbs-cost-australia/">PBS and cost</a>.</li><li>It’s the same medicine as the injection in a different form, so the same side effects and cautions apply. A tablet is a choice about convenience, not a gentler drug.</li></ul>
 <h2>How they work</h2>
 <ul><li>They boost insulin when blood sugar is high.</li><li>They slow stomach emptying, so you feel full sooner and for longer.</li><li>They act on the brain’s appetite centres, turning down hunger and “food noise”.</li></ul>
 <h2>Who they’re for</h2>
@@ -383,6 +389,7 @@ faqs=[
 ("Which GLP-1 medicine causes the most weight loss?", "On current evidence, tirzepatide. In the head-to-head SURMOUNT-5 trial, people lost 20.2% of their weight on tirzepatide versus 13.7% on semaglutide over 72 weeks."),
 ("Do I have to take a GLP-1 medicine forever?", "The benefits last only while you take it. In trials, most people regained much of the weight within a year of stopping. How long to continue is a decision for you and your doctor."),
 ("Are GLP-1 medicines on the PBS?", "Only for type 2 diabetes (Ozempic and Trulicity, when criteria are met) as of November 2026. None are subsidised for weight loss, and Mounjaro isn’t on the PBS for any use."),
+("Is there a GLP-1 weight-loss pill in Australia?", "The TGA approved oral semaglutide tablets (Wegovy) for weight management on 3 November 2026, in 1.5 mg, 4 mg, 9 mg and 25 mg strengths. They aren’t in pharmacies yet, aren’t on the PBS and have no announced Australian price."),
 ],
-sources=[S_STEP1, S_SURM1, S_SURM5, S_SELECT, S_TGA_OC, S_WEG],
+sources=[S_STEP1, S_SURM1, S_SURM5, S_SELECT, S_WEG, S_ABC_TAB, ("https://thenightly.com.au/society/health/tga-approves-new-form-of-weightloss-medicine-wegovy-pill-with-daily-pill-set-to-be-available-before-christmas-c-23112105", "The Nightly, 3 November 2026: TGA approves Wegovy pill (Department of Health on the approved uses)")],
 )

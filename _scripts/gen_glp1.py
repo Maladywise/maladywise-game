@@ -19,14 +19,19 @@ HUB_PATH = "/glp-1/"
 HUB_NAME = "GLP-1 medicines"
 ABOUT = {"@type": "DrugClass", "name": "GLP-1 receptor agonists",
          "alternateName": ["GLP-1 medicines", "semaglutide", "tirzepatide"]}
-TRUST = '<p class="trust"><a href="/about/#how-we-make-pages">Made with AI tools and overseen by an Australian GP</a> · %s</p>\n' % UPDATED
+TRUST_T = '<p class="trust"><a href="/about/#how-we-make-pages">Made with AI tools and overseen by an Australian GP</a> · %s</p>\n'
+
+
+def upd(P):
+    """A page's own date line ("updated"/"updated_iso" keys) or the hub-wide UPDATED."""
+    return P.get("updated", UPDATED), P.get("updated_iso", UPDATED_ISO)
 NOTE = ("General education, not personal medical advice, and not a recommendation for any medicine. "
         "Whether a medicine suits you depends on your health and other medicines, so talk to your doctor or pharmacist.")
 
 
-def page_ld(path, name, desc, trail):
+def page_ld(path, name, desc, trail, iso=UPDATED_ISO):
     d = gb.page_ld(path, name, desc, trail, ABOUT)
-    d["dateModified"] = UPDATED_ISO
+    d["dateModified"] = iso
     return d
 
 
@@ -48,10 +53,13 @@ def build_page(P):
     path = HUB_PATH + P["slug"] + "/"
     check(P["slug"], P["title"], P["qa"], P["faqs"], P["sources"])
     trail = [("Malady Wise", "/"), (HUB_NAME, HUB_PATH), (P["crumb"], path)]
-    lds = [("mw-page-ld", page_ld(path, P["title"], P["desc"], trail)), ("mw-faq-ld", gb.faq_ld(P["faqs"]))]
+    u, iso = upd(P)
+    lds = [("mw-page-ld", page_ld(path, P["title"], P["desc"], trail, iso)), ("mw-faq-ld", gb.faq_ld(P["faqs"]))]
     s = gb.head(path, P["title"], P["desc"], lds)
+    if P.get("og_card"):   # optional custom share card for a topic page (og_cards.py)
+        s = s.replace("</head>", '<script type="application/json" id="og-card">%s</script>\n' % json.dumps(P["og_card"], ensure_ascii=False).replace("</", "<\\/") + "</head>", 1)
     s += '<div class="fs-top"><p class="meta"><a href="/glp-1/">GLP-1 medicines guide</a></p><button class="printbtn" type="button" onclick="window.print()">🖨 Print or save as PDF</button></div>\n'
-    s += "<h1>%s</h1>\n" % P["h1"] + TRUST
+    s += "<h1>%s</h1>\n" % P["h1"] + TRUST_T % u
     s += '<p class="lede">%s</p>\n' % P["lede"]
     s += '<p class="quick-answer"><b>Quick answer:</b> %s</p>\n' % P["qa"]
     s += P["body"].strip() + "\n"
@@ -59,7 +67,7 @@ def build_page(P):
     s += GAME + "\n"
     s += gb.faq_html(P["faqs"])
     s += gb.sources(P["sources"])
-    s += '<p class="meta"><em>%s. %s</em></p>\n' % (UPDATED, NOTE)
+    s += '<p class="meta"><em>%s. %s</em></p>\n' % (u, NOTE)
     s += gb.related(P["related"])
     s += '<p class="print-url">maladywise.com%s</p>\n' % path
     s += gb.FOOT
@@ -73,12 +81,13 @@ def build_hub():
     trail = [("Malady Wise", "/"), (HUB_NAME, HUB_PATH)]
     items = [{"@type": "ListItem", "position": i + 1, "url": gb.BASE + HUB_PATH + P["slug"] + "/", "name": gb.strip(P["h1"])}
              for i, P in enumerate(PAGES)]
-    pld = page_ld(HUB_PATH, H["title"], H["desc"], trail)
+    u, iso = upd(H)
+    pld = page_ld(HUB_PATH, H["title"], H["desc"], trail, iso)
     pld["mainEntity"] = {"@type": "ItemList", "itemListElement": items}
     lds = [("mw-page-ld", pld), ("mw-faq-ld", gb.faq_ld(H["faqs"]))]
     s = gb.head(HUB_PATH, H["title"], H["desc"], lds)
     s = s.replace("</head>", og_card_block() + "</head>", 1)   # custom share card (og_cards.py)
-    s += "<h1>%s</h1>\n" % H["h1"] + TRUST
+    s += "<h1>%s</h1>\n" % H["h1"] + TRUST_T % u
     s += '<p class="lede">%s</p>\n' % H["lede"]
     s += '<p class="quick-answer"><b>Quick answer:</b> %s</p>\n' % H["qa"]
     s += H["intro"].strip() + "\n"
@@ -92,7 +101,7 @@ def build_hub():
     s += GAME + "\n"
     s += gb.faq_html(H["faqs"])
     s += gb.sources(H["sources"])
-    s += '<p class="meta"><em>%s. %s</em></p>\n' % (UPDATED, NOTE)
+    s += '<p class="meta"><em>%s. %s</em></p>\n' % (u, NOTE)
     s += '<p class="print-url">maladywise.com%s</p>\n' % HUB_PATH
     s += gb.FOOT
     gb.write(HUB_PATH, s)
