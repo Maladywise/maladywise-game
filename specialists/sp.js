@@ -123,3 +123,12 @@
     if (one) { var c = one.closest(".sp-card"); c.classList.add("sp-one"); head(h1); go("sp-print1"); }
   });
 })();
+
+/* "Something wrong?" on a listing opens the site's Report a problem form, pre-filled with the listing. */
+document.addEventListener("click", function (ev) {
+  var b = ev.target.closest && ev.target.closest(".sp-rep"); if (!b) return;
+  var c = b.closest(".sp-card"), h = c && c.querySelector("h3, h2, .sp-name"), n = h ? h.textContent.trim() : "";
+  var where = "Listing: " + n + " (" + location.pathname + ")";
+  if (window.MW_report) window.MW_report("fact", where);
+  else location.href = "/contact/";
+});

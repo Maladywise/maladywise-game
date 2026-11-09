@@ -1218,17 +1218,18 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
 
 
   // ---------- feedback: report puzzle errors, image licence problems, bugs ----------
-  function feedback(pre) {
+  function feedback(pre, where) {
     var cats = [["puzzle", "Puzzle is wrong"], ["fact", "Fact or health info is wrong"], ["image", "Image licence or credit problem"], ["bug", "Something's broken"], ["idea", "Idea"], ["other", "Other"]];
     var page = location.pathname + location.search, d = "";
     try { d = new URLSearchParams(location.search).get("date") || ""; } catch (e) {}
     if (!d) page += " (" + sydToday() + ")";
+    if (where) page = where;
     var s = modal("Report a problem", '<form class="mw-fb" novalidate><p class="mw-fbp">Spotted a wrong answer, a dodgy fact or an image that shouldn\u2019t be here? Tell us. We read every one.</p>' +
       '<label><span>What kind?</span><select name="cat">' + cats.map(function (c) { return '<option value="' + c[0] + '"' + (pre === c[0] ? " selected" : "") + ">" + c[1] + "</option>"; }).join("") + "</select></label>" +
       '<label><span>Where</span><input name="page" value="' + esc2(page) + (d ? "" : "") + '"></label>' +
       '<label><span>What\u2019s wrong?</span><textarea name="msg" rows="4" maxlength="2000" required placeholder="e.g. Today\u2019s answer should be X because\u2026"></textarea></label>' +
       '<label><span>Your email (optional, only if you want a reply)</span><input name="email" type="email" maxlength="120" autocomplete="email"></label>' +
-      '<p class="mw-fbnote">Please don\u2019t include personal health details.</p>' +
+      '<p class="mw-fbnote">For site problems only, not medical questions. Please don\u2019t include personal health details.</p>' +
       '<button type="submit" class="mw-fbsend">Send</button><p class="mw-fbmsg" aria-live="polite"></p></form>');
     var f = s.querySelector("form"), m = s.querySelector(".mw-fbmsg");
     f.onsubmit = function (e) {
@@ -1243,6 +1244,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       }).catch(function () { btn.disabled = false; m.innerHTML = 'Couldn\u2019t send just now. <a href="' + mail + '">Email it instead</a>.'; });
     };
   }
+
+  window.MW_report = function (cat, where) { feedback(cat, where); };
 
   // ---------- footer: hub row (static_nav.py), follow links, one compact legal line ----------
   // Static pages ship <footer class="site"><nav class="static-nav">…</nav><p class="ft-base">note + links</p></footer>.
