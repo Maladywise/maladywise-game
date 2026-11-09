@@ -124,6 +124,32 @@
     "comorbix normie"
    ],
    "note": "Google Trends pages could not be fetched this run; trends taken from data/trends.json and news searches."
+  },
+  {
+   "date": "2026-11-10",
+   "main_theme": "World Science Day + World Neuroendocrine Cancer Day + World Keratoconus Day (kept from monthly build)",
+   "source": "world day",
+   "terms_used": [
+    "Bundibugyo virus / Ebola (WHO DON625, DRC)",
+    "high-dose flu vaccine and Alzheimer's risk (Neurology study)",
+    "vitamin B6 peripheral neuropathy (TGA warning consultation)",
+    "andrographis (TGA recall, allergy risk)",
+    "Kyle Larson NASCAR Cup title (Normie)",
+    "All Blacks 43-21 Scotland, Nations Championship (Normie)"
+   ],
+   "niche_terms": [
+    "Bundibugyo virus",
+    "pyridoxine neuropathy",
+    "andrographis"
+   ],
+   "games": [
+    "triviosis",
+    "comorbix",
+    "gridectomy",
+    "comorbix normie",
+    "gridectomy normie"
+   ],
+   "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches."
   }
  ],
  "suggested_days": [
