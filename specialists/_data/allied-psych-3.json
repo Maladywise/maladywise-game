@@ -352,7 +352,19 @@
     "ereferral": "",
     "website": "https://causleypsychology.com.au/",
     "interests": [
-     "Counselling for adults and adolescents"
+     "Anxiety and depression",
+     "Grief and loss",
+     "Anger management",
+     "Alcohol and other drugs",
+     "Bullying and harassment",
+     "Return to work and workers compensation",
+     "Trauma",
+     "Adolescent issues",
+     "Relationship and family issues",
+     "Stress and adjustment",
+     "Current and former military and emergency services personnel",
+     "Also sees clients at Tenambit Medical Centre",
+     "Medicare, NSW workers compensation, DVA and EAP (as stated)"
     ],
     "practical": {
      "telehealth": null,
@@ -370,7 +382,8 @@
     },
     "inclusive": [],
     "sources": [
-     "https://causleypsychology.com.au/"
+     "https://causleypsychology.com.au/",
+     "https://tenambitmedical.net.au/about-tmc"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -1459,6 +1472,1030 @@
     "inclusive": [],
     "sources": [
      "https://www.gidgetfoundation.org.au/support/gidget-house"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Psych4life Psychology",
+    "specialty": "Psychology",
+    "practice": "Psych4life Psychology",
+    "address": "53 Denison Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "(02) 4961 2200",
+    "fax": "",
+    "email": "gstamell@psych4life.com.au",
+    "ereferral": "",
+    "website": "https://www.psych4life.com.au/",
+    "interests": [
+     "Anxiety",
+     "Depression",
+     "Trauma",
+     "Counselling for everyday stressors",
+     "Assessments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.psych4life.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PsychFocus",
+    "specialty": "Psychology",
+    "practice": "PsychFocus",
+    "address": "Level 2, T&G Building, Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "0412 050 066",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.psychfocus.com.au/",
+    "interests": [
+     "Anxiety and depression",
+     "Eating disorders",
+     "Relationship issues",
+     "Self-esteem and stress",
+     "Workplace issues",
+     "Family therapy",
+     "ACT",
+     "Couples and families"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents, adults, couples and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.psychfocus.com.au/about-us",
+     "https://www.mycommunitydirectory.com.au/Outlet/221798/PsychFocus"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Psychology One",
+    "specialty": "Psychology (clinical and consultant psychologists)",
+    "practice": "Psychology One",
+    "address": "1/70 Northcott Drive, Kotara NSW 2289",
+    "suburb": "Kotara",
+    "phone": "02 4952 2558",
+    "fax": "02 4952 2559",
+    "email": "reception@psychologyone.com.au",
+    "ereferral": "",
+    "website": "https://www.psychologyone.com.au/",
+    "interests": [
+     "Depression and stress",
+     "Grief",
+     "Relationships",
+     "Sexuality",
+     "Weight",
+     "Clinical health psychology clinic",
+     "Eating disorder plans (EDP)",
+     "Children and adolescents",
+     "Parenting and perinatal",
+     "Medicare, EAP, NDIS and DVA (as stated)",
+     "Some evening and Saturday appointments",
+     "Video or phone sessions if needed"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"We celebrate, value and include people of all backgrounds, genders, sexualities, cultures, bodies and abilities.\""
+    ],
+    "sources": [
+     "https://www.psychologyone.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rogers & Wells Psychology",
+    "specialty": "Psychology",
+    "practice": "Rogers & Wells Psychology",
+    "address": "122 Kelly Street, Scone NSW 2337 (entrance via St Aubins St)",
+    "suburb": "Scone",
+    "phone": "02 6545 9212",
+    "fax": "",
+    "email": "admin@sharonwellspsychology.com.au",
+    "ereferral": "",
+    "website": "https://rogersandwellspsychology.com.au/",
+    "interests": [
+     "Scone and the Upper Hunter",
+     "Better Access (Medicare)",
+     "WorkCover approved",
+     "CTP (motor vehicle injuries)",
+     "Self-managed NDIS participants",
+     "No referral needed for private appointments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://rogersandwellspsychology.com.au/contact-us/",
+     "https://rogersandwellspsychology.com.au/referral-pathways/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Singleton Clinical Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Singleton Clinical Psychology",
+    "address": "Unit 2, 122 George Street, Singleton NSW 2330",
+    "suburb": "Singleton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.facebook.com/singletonpsychology",
+    "interests": [
+     "Ongoing therapy for the Hunter Valley",
+     "Mental health care plans (Medicare), DVA and WorkCover (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.halaxy.com/profile/singleton-clinical-psychology/location/338069"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Suzanne Osei",
+    "specialty": "Psychology (Clinical) - pain and mental health",
+    "practice": "Suzanne Osei Clinical Psychology",
+    "address": "Hunter region (also at Northern Integrated Pain Management)",
+    "suburb": "Maitland",
+    "phone": "0421 665 361",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Chronic pain",
+     "Pain and mental health",
+     "CBT",
+     "Occupational rehabilitation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepainmanagement.com.au/staff/ms-suzanne-osei-2/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Base Health and Community",
+    "specialty": "Psychology, psychiatry, social work and therapies",
+    "practice": "The Base Health",
+    "address": "3 Tudor Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4963 1387",
+    "fax": "02 9167 7157",
+    "email": "admin@thebasehealth.com.au",
+    "ereferral": "",
+    "website": "https://www.thebasehealth.com.au/",
+    "interests": [
+     "Psychology and psychiatry",
+     "Mental health social work and counselling",
+     "Couples and family therapy",
+     "Art, yoga, dance and play therapy",
+     "Outdoor therapy",
+     "Aboriginal health",
+     "Victims Services counselling",
+     "EAP counselling",
+     "Mental health OT and dietitian"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "\"Our aim while you are with us is to make you feel valued, welcomed and empowered.\""
+    ],
+    "sources": [
+     "https://www.thebasehealth.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Family Psychology Clinic",
+    "specialty": "Psychology - therapy and assessment",
+    "practice": "The Family Psychology Clinic",
+    "address": "39 Platt Street, Waratah NSW 2298",
+    "suburb": "Waratah",
+    "phone": "02 4041 0481",
+    "fax": "",
+    "email": "admin@familypsychologyclinic.com",
+    "ereferral": "",
+    "website": "https://familypsychologyclinic.com/",
+    "interests": [
+     "Learning, mood, autism, behavioural and psychopathology assessments",
+     "Gifted and talented assessment",
+     "Therapy in person or by telehealth",
+     "Better Access (Medicare) and NDIS rebated services",
+     "Referrals by email; triage form online"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children (focus) and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://familypsychologyclinic.com/",
+     "https://familypsychologyclinic.com/contact-us/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Lorn Surgery (psychology)",
+    "specialty": "Psychology (psychologists and a clinical psychologist) at a GP practice",
+    "practice": "The Lorn Surgery",
+    "address": "67 Bulwer Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4933 2622",
+    "fax": "(02) 4933 1800",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lornsurgery.com.au/services/mental-health/",
+    "interests": [
+     "Rapid access mental health consultations for urgent conditions",
+     "Children, teens and adults (by psychologist)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "GP and psychologist appointments within 48 hours (Mon-Fri) for urgent mental health conditions (as stated)",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lornsurgery.com.au/services/mental-health/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Therese French",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Dr Therese French Clinical Psychologist",
+    "address": "Level 1, 118A Belford Street, Broadmeadow NSW 2292 (entrance on Chatham Street)",
+    "suburb": "Broadmeadow",
+    "phone": "0417 855 922",
+    "fax": "(02) 4913 5432",
+    "email": "info@theresefrench.com.au",
+    "ereferral": "",
+    "website": "https://theresefrench.com.au/",
+    "interests": [
+     "Anxiety",
+     "Effects of childhood experiences on adult life",
+     "Depression and emotional exhaustion",
+     "Relationship patterns and assertiveness",
+     "Parenting under strain",
+     "Postnatal support",
+     "Trauma",
+     "Life changes and stress",
+     "Online appointments Australia-wide"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://theresefrench.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Wave Psychology & Coaching",
+    "specialty": "Psychology - neurodiverse adults",
+    "practice": "Wave Psychology & Coaching",
+    "address": "Unit 2, 6 Alma Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "0414 690 067",
+    "fax": "02 4027 5750",
+    "email": "",
+    "ereferral": "",
+    "website": "https://wavepsychology.com.au/",
+    "interests": [
+     "Neurodiverse adults",
+     "Identity discovery (neurodiversity)",
+     "Face to face or teleconference"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://wavepsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "We Care NSW (psychology)",
+    "specialty": "Psychology and NDIS behaviour support",
+    "practice": "We Care NSW",
+    "address": "1/500 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4013 6079",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.wecarensw.com.au/services/allied-health/psychology/",
+    "interests": [
+     "Depression, anxiety, grief and loss",
+     "Relationship difficulties and stress",
+     "Behavioural difficulties",
+     "Better Access (Medicare) therapy",
+     "NDIS behaviour support and psychology",
+     "Cognitive (adults and children), autism, diagnostic, psychometric and adaptive behaviour assessments"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.wecarensw.com.au/services/allied-health/psychology/",
+     "https://www.halaxy.com/profile/we-care-nsw/location/393571"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Emerge Psychology (telehealth)",
+    "specialty": "Psychology and mental health social work - telehealth only",
+    "practice": "Emerge Psychology (telehealth)",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 963 723",
+    "fax": "03 8677 2540",
+    "email": "intake@emergepsychology.com.au",
+    "ereferral": "",
+    "website": "https://emergepsychology.com.au/",
+    "interests": [
+     "Telehealth (VideoLink) only",
+     "Rural and remote Australians",
+     "Mild to moderate anxiety and depression (CBT)",
+     "Children, teens, parents and families",
+     "Better Access, NDIS, WorkCover and EAP",
+     "Bulk billing limited to current health care card holders (as stated)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "Average wait before first appointment 12 to 21 days (as stated)",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://emergepsychology.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mosh (online therapy)",
+    "specialty": "Online psychologists and counsellors - telehealth only",
+    "practice": "Mosh",
+    "address": "Online (Australia)",
+    "suburb": "Online (Australia)",
+    "phone": "",
+    "fax": "",
+    "email": "therapy@getmosh.com",
+    "ereferral": "",
+    "website": "https://www.getmosh.com.au/therapy",
+    "interests": [
+     "100% online therapy",
+     "Psychologists and counsellors",
+     "Some psychologists bulk bill with a valid mental health care plan (as stated)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.getmosh.com.au/therapy"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Nourished Not Deprived (telehealth psychology)",
+    "specialty": "Psychology - telehealth (eating disorders, neurodivergent-affirming)",
+    "practice": "Nourished Not Deprived",
+    "address": "Online (Australia-wide); Newcastle-based team",
+    "suburb": "Online (Australia-wide)",
+    "phone": "(02) 4003 7505",
+    "fax": "",
+    "email": "admin@nourishednotdeprived.com",
+    "ereferral": "",
+    "website": "https://www.nourishednotdeprived.com/telehealth/psychologist",
+    "interests": [
+     "Eating disorders (credentialed clinicians)",
+     "Anxiety, panic and depression",
+     "PTSD and trauma-informed care",
+     "ADHD and learning difficulties",
+     "Stress and sleep",
+     "Relationship and adjustment difficulties",
+     "Deaf awareness",
+     "Paediatric early intervention",
+     "NDIS (We Love NDIS)",
+     "Medicare with a GP mental health treatment plan; not bulk billed"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "“No waitlist on Telehealth mental health supports”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [
+     "\"Neurodivergent-affirming psychology\"",
+     "\"trauma-informed care\""
+    ],
+    "sources": [
+     "https://www.nourishednotdeprived.com/telehealth/psychologist"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Nova Psychology (telehealth)",
+    "specialty": "Psychology - telehealth only",
+    "practice": "Nova Psychology",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://novapsychology.com.au/",
+    "interests": [
+     "Telehealth video sessions across Australia",
+     "Women, men, teens and couples",
+     "Rural and remote residents",
+     "NDIS participants",
+     "Some weekend and after-hours sessions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "10 years and over",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://novapsychology.com.au/faqs/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PsychHelp (telehealth)",
+    "specialty": "Psychology (Clinical) - telehealth only",
+    "practice": "PsychHelp",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 14 4357",
+    "fax": "(07) 3540 8136",
+    "email": "",
+    "ereferral": "",
+    "website": "https://psychhelp.com.au/",
+    "interests": [
+     "Depression and anxiety",
+     "Addiction",
+     "Trauma",
+     "Eating disorders",
+     "Parenting (Circle of Security)",
+     "ASD and ADHD assessments",
+     "DBT and trauma-focused therapies"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://psychhelp.com.au/about/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Pynk Health (telehealth)",
+    "specialty": "Psychology - female psychologists, telehealth only",
+    "practice": "Pynk Health",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 915 604",
+    "fax": "",
+    "email": "info@pynkhealth.com.au",
+    "ereferral": "",
+    "website": "https://pynkhealth.com.au/",
+    "interests": [
+     "All-female team",
+     "Depression, anxiety, stress and burnout",
+     "Trauma and PTSD",
+     "Grief and relationships",
+     "Body image and eating difficulties",
+     "Perinatal and postnatal mental health",
+     "Perimenopause and menopause",
+     "ADHD and autism assessments for women",
+     "OCD",
+     "EMDR, CBT, ACT, schema therapy",
+     "NDIS registered",
+     "Evening and limited weekend appointments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "no",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://pynkhealth.com.au/female-psychologist-sydney/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Remote Therapy (telehealth)",
+    "specialty": "Psychology - telehealth, bulk billed",
+    "practice": "Remote Therapy Telehealth Psychology",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "",
+    "fax": "+61 7 3319 6866",
+    "email": "admin@remotetherapy.com.au",
+    "ereferral": "HealthLink: rtherapy; Medical Objects: Remote Therapy",
+    "website": "https://www.remotetherapy.com.au/",
+    "interests": [
+     "100% bulk-billed telehealth psychology with a mental health treatment plan (10 sessions a year)",
+     "Weekend and after-hours appointments",
+     "Letters to GP after first session and at review"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "5 to 65+",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "“We have no wait times.”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.remotetherapy.com.au/referrers"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rising People Psychology (telehealth)",
+    "specialty": "Psychology - online across Australia",
+    "practice": "Rising People Psychology",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1800 878 883",
+    "fax": "",
+    "email": "info@risingpeoplepsychology.com.au",
+    "ereferral": "",
+    "website": "https://risingpeoplepsychology.com.au/",
+    "interests": [
+     "Anxiety, depression and stress",
+     "Grief and loss",
+     "Self-esteem and relationship difficulties",
+     "Work-related stress",
+     "Emotional regulation and behavioural concerns",
+     "Neurodivergence-related support",
+     "Autism, ADHD and learning assessments",
+     "NDIS (self- and plan-managed)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children 12+, teenagers, adults and families",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://risingpeoplepsychology.com.au/online-services/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rural Health Connect (telehealth)",
+    "specialty": "Psychology (psychologists and clinical psychologists) - telehealth for rural Australia",
+    "practice": "Rural Health Connect",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1800 841 045",
+    "fax": "",
+    "email": "info@ruralhealthconnect.com.au",
+    "ereferral": "",
+    "website": "https://ruralhealthconnect.com.au/",
+    "interests": [
+     "Affordable mental health care for rural Australia",
+     "Bulk billing for health care card holders or hardship; reduced gap option (as stated)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ruralhealthconnect.com.au/pricing/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Starfish Psychology (telehealth)",
+    "specialty": "Psychology (educational and developmental) - telehealth only",
+    "practice": "Starfish Psychology",
+    "address": "Online (formerly Newcastle harbour)",
+    "suburb": "Online (Newcastle-based)",
+    "phone": "0481 566 110",
+    "fax": "",
+    "email": "barb@starfishpsychology.com.au",
+    "ereferral": "",
+    "website": "https://starfishpsychology.com.au/",
+    "interests": [
+     "Emotional and behavioural conditions",
+     "Learning difficulties",
+     "Assessment and diagnosis"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://starfishpsychology.com.au/about-2/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Tele-Psych (telehealth)",
+    "specialty": "Psychology - telehealth only",
+    "practice": "Tele-Psych",
+    "address": "Online (Australia-wide)",
+    "suburb": "Online (Australia-wide)",
+    "phone": "1300 820 031",
+    "fax": "",
+    "email": "reception@tele-psychs.com.au",
+    "ereferral": "",
+    "website": "https://www.tele-psychs.com.au/",
+    "interests": [
+     "Anxiety, depression and trauma",
+     "OCD, phobias and social anxiety",
+     "Grief and loss",
+     "Stress, burnout and workplace stress",
+     "Insomnia and sleep",
+     "LGBTQIA+ support",
+     "Perinatal and parenting",
+     "Eating and body image",
+     "ADHD and PTSD",
+     "WorkCover, CTP and return-to-work therapy",
+     "NDIS",
+     "Bulk billing on request (page linked)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.tele-psychs.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Indigo Project (online)",
+    "specialty": "Psychology (psychologists, clinical psychologists) and counselling - telehealth only",
+    "practice": "The Indigo Project",
+    "address": "Online (Australia-wide); based in Surry Hills NSW",
+    "suburb": "Online (Sydney-based)",
+    "phone": "(02) 9212 5469",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.theindigoproject.com.au/",
+    "interests": [
+     "Depression and anxiety",
+     "Relationships and couples",
+     "Grief and loss",
+     "Work stress and burnout",
+     "Trauma",
+     "ADHD",
+     "LGBTQIA+ therapy",
+     "Sexuality, gender and identity",
+     "Children and adolescents (some clinicians)",
+     "Medicare rebates for telehealth"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "“Our therapists typically have capacity to see several new clients each month.”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [
+     "\"LGBTQIA+ therapy\"",
+     "\"welcoming, safe, culturally appropriate and inclusive\""
+    ],
+    "sources": [
+     "https://www.theindigoproject.com.au/online-psychologist/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Therapy Near Me (telehealth)",
+    "specialty": "Psychology and behaviour support - telehealth Australia-wide",
+    "practice": "Therapy Near Me",
+    "address": "Online (Australia-wide); based in Brisbane",
+    "suburb": "Online (Brisbane-based)",
+    "phone": "1800 632 763",
+    "fax": "",
+    "email": "office@therapynearme.com.au",
+    "ereferral": "",
+    "website": "https://therapynearme.com.au/",
+    "interests": [
+     "Anxiety, depression and stress",
+     "Trauma and PTSD",
+     "ADHD and autism",
+     "Relationship and family support",
+     "BPD and bipolar",
+     "Workplace and EAP sessions",
+     "CBT, ACT, DBT, EMDR, schema therapy",
+     "NDIS provider (self- and plan-managed)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": "yes",
+     "np_note": "“Secure, convenient, no waitlists”",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://therapynearme.com.au/telehealth-psychologist/"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"

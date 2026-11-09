@@ -213,6 +213,24 @@ def orgsection():
     li = "".join(f'<li><a href="{e(u)}" rel="noopener"><b>{e(o)}</b>: {e(t)}</a> {e(w)}</li>' for o, t, u, w, used, sl in ORGS)
     return ('<section class="sp-orgs" id="condition-orgs"><h2>Condition support organisations with their own provider lists</h2>'
             '<p>These organisations keep their own lists. Where we found one of our listings on a list, its card shows a small badge, e.g. “Listed by AusPATH”. Checked ' + CHECKED + '.</p><ul>' + li + '</ul></section>')
+# Public and low-cost mental health services (official or service pages, checked Nov 2026). Psychology page only.
+PUBLIC_PSY = [
+ ("Hunter Primary Care: PHN-funded psychology", "https://hunterprimarycare.com.au/psychology-services/", "Free for eligible people (e.g. financial hardship, First Nations, LGBTQ+, perinatal, suicide risk). GP referral or Medicare Mental Health 1800 595 212. Intake (02) 4925 2259."),
+ ("Hunter New England and Central Coast PHN: psychological services", "https://thephn.com.au/what-we-do/mental-health/psychological-services", "PHN-funded care for moderate mental illness when other services are out of reach. Ask your GP or call 1800 595 212."),
+ ("Muswellbrook Medicare Mental Health Centre", "https://socialfutures.org.au/service/medicarementalhealthcentre/", "Free, no referral: walk in or call 1800 595 212. 160 Bridge St, Muswellbrook; outreach in Scone and Singleton."),
+ ("Gidget Foundation: Start Talking telehealth", "https://www.gidgetfoundation.org.au/support/start-talking-telehealth", "Free perinatal video counselling for expecting and new parents and after pregnancy loss. GP referral and mental health treatment plan. 1300 443 438."),
+ ("Open Arms: Veterans and Families Counselling", "https://www.openarms.gov.au/get-support/counselling", "Free counselling for ex-ADF members, partners and children. Newcastle centre; phone, online or face to face. 1800 011 046 (24/7)."),
+ ("NSW Victims Services: counselling", "https://www.nsw.gov.au/legal-and-justice/information-for-victims-of-crime/victims-support-scheme/counselling", "Up to 22 hours of free counselling for victims of violent crime in NSW. Victims Access Line 1800 633 063."),
+ ("Relationships Australia NSW: Hunter centre", "https://www.relationshipsnsw.org.au/locations/hunter/", "Individual, couples and family counselling, men's behaviour change and children's contact service. 6 Heddon Rd, Broadmeadow. 1300 364 277."),
+ ("University of Newcastle Psychology Clinic", "https://directory.wayahead.org.au/service/1109/", "Low-cost CBT for children, teens and adults with supervised trainees ($25 a session, $15 low income, as listed). Callaghan or Zoom. (02) 4921 5075."),
+ ("ACON counselling", "https://www.acon.org.au/what-we-are-here-for/mental-health/", "Counselling for LGBTQ+ people, up to 12 sessions, by phone or telehealth anywhere in NSW. Hunter office, Islington: (02) 4962 7700."),
+ ("Hunter New England Health: Farmgate Support Program", "https://www.health.nsw.gov.au/awards/2025/Pages/farmgate-support-program.aspx", "Mental health support for farmers and farming communities, including farm visits and peer workers."),
+ ("Hunter New England Health: hospital social work", "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/allied-health", "Counselling, crisis and bereavement support for patients and families in hospital. Ask your nurse or doctor for a referral."),
+]
+def publicbox(lab):
+    if lab != "Psychology": return ""
+    return ('<details class="sp-orgbox" id="public-low-cost"><summary>Public and low-cost services</summary><ul>' + "".join(f'<li><a href="{e(u)}" rel="noopener"><b>{e(n)}</b></a>: {e(t)}</li>' for n, u, t in PUBLIC_PSY) +
+            '<li>Crisis: Lifeline 13 11 14 or NSW Mental Health Line 1800 011 511. Emergency: 000.</li></ul><p class="sp-note">From official or service pages, checked ' + CHECKED + '. Eligibility and costs change: check with the service.</p></details>')
 def orgbox(slug):
     hits = [(o, t, u) for o, t, u, w, used, sl in ORGS if slug in sl]
     if not hits: return ""
@@ -334,7 +352,7 @@ for lab, ppl in CATS.items():
     title = f"{lab} in Newcastle and the Hunter | Malady Wise"
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
-            finder(ppl, extra=langsel(ppl)) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
+            finder(ppl, extra=langsel(ppl)) + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
