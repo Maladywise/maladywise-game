@@ -244,6 +244,13 @@
 "label": "Blood test",
 "title": "High TSH"
 },
+"blood-tests-lipoprotein-a": {
+"url": "/blood-tests/lipoprotein-a/",
+"key": "84305e0ae348",
+"v": "970df9a6",
+"label": "Blood test",
+"title": "Lipoprotein(a)"
+},
 "blood-tests-low-b12": {
 "url": "/blood-tests/low-b12/",
 "key": "e322985c34ff",

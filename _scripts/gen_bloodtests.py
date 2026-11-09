@@ -46,7 +46,10 @@ def head(path, title, desc, lds):
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{esc(t)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4A3480">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -80,7 +83,7 @@ def crumbs(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": BASE + u} for i, (n, u) in enumerate(items)]}
 
 
-def page_ld(path, name, desc, trail, about):
+def page_ld(path, name, desc, trail, about, iso=None):
     d = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": name, "description": desc, "url": BASE + path,
          "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"},
          "author": {"@type": "Organization", "name": "Malady Wise", "url": BASE + "/"},
@@ -88,7 +91,7 @@ def page_ld(path, name, desc, trail, about):
          "breadcrumb": crumbs(trail)}
     if about:
         d["about"] = about
-    d["dateModified"] = UPDATED_ISO
+    d["dateModified"] = iso or UPDATED_ISO
     return d
 
 
@@ -132,8 +135,10 @@ def build_page(P):
     assert 3 <= len(P["sources"]) <= 6, P["slug"]
     trail = [("Malady Wise", "/"), (HUB_NAME, HUB_PATH), (P["crumb"], path)]
     about = {"@type": "MedicalTest", "name": P["test"]}
-    lds = [("mw-page-ld", page_ld(path, P["title"], P["desc"], trail, about)), ("mw-faq-ld", faq_ld(P["faqs"]))]
+    lds = [("mw-page-ld", page_ld(path, P["title"], P["desc"], trail, about, P.get("updated_iso"))), ("mw-faq-ld", faq_ld(P["faqs"]))]
     s = head(path, P["title"], P["desc"], lds)
+    if P.get("og_card"):   # optional custom share card (og_cards.py)
+        s = s.replace("</head>", '<script type="application/json" id="og-card">%s</script>\n' % json.dumps(P["og_card"], ensure_ascii=False).replace("</", "<\\/") + "</head>", 1)
     s += '<div class="fs-top"><p class="meta"><a href="/blood-tests/">Blood test results</a></p><button class="printbtn" type="button" onclick="window.print()">🖨 Print or save as PDF</button></div>\n'
     s += "<h1>%s</h1>\n" % P["h1"]
     s += '<p class="lede">%s</p>\n' % P["lede"]
@@ -143,7 +148,7 @@ def build_page(P):
     s += PANELYSIS + "\n"
     s += faq_html(P["faqs"])
     s += sources(P["sources"])
-    s += '<p class="meta"><em>%s. General education, not personal medical advice. Reference ranges differ between laboratories, so use the range printed on your own report and talk to your GP about your result.</em></p>\n' % UPDATED
+    s += '<p class="meta"><em>%s. General education, not personal medical advice. Reference ranges differ between laboratories, so use the range printed on your own report and talk to your GP about your result.</em></p>\n' % P.get("updated", UPDATED)
     s += related(P["related"])
     s += '<p class="print-url">maladywise.com%s</p>\n' % path
     s += FOOT

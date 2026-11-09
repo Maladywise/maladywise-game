@@ -4,6 +4,7 @@ UPDATED_ISO = "2026-11-08"
 
 PTEX = "https://ptex.au/ptests.php?q="
 HUB_R = ("/blood-tests/", "Guide", "Blood Test Results Explained")
+LPA_CARD = {"label": "Blood test", "title": "Lipoprotein(a)", "fact": "Over 90% of your Lp(a) level is set by your genes, so one test is usually enough", "source": "EAS 2022 consensus", "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 400\"><g fill=\"none\" stroke-width=\"8\" stroke-linecap=\"round\"><path d=\"M70 40 C150 90 150 150 70 200 C-10 250 -10 310 70 360\" stroke=\"#9A7BC4\" transform=\"translate(30 0)\"/><path d=\"M70 40 C-10 90 -10 150 70 200 C150 250 150 310 70 360\" stroke=\"#5B4C99\" transform=\"translate(30 0)\"/></g><g stroke=\"#C9C2D6\" stroke-width=\"5\"><path d=\"M68 70 L132 70\"/><path d=\"M60 130 L140 130\"/><path d=\"M68 270 L132 270\"/><path d=\"M60 330 L140 330\"/></g><g stroke=\"#2A2140\" stroke-width=\"6\" stroke-linejoin=\"round\"><circle cx=\"280\" cy=\"210\" r=\"78\" fill=\"#F2B544\"/><path d=\"M340 160 C380 130 400 160 380 190 C404 206 396 240 368 236\" fill=\"none\" stroke-linecap=\"round\"/></g><g fill=\"#2A2140\"><circle cx=\"252\" cy=\"190\" r=\"8\"/><circle cx=\"296\" cy=\"236\" r=\"8\"/><circle cx=\"300\" cy=\"180\" r=\"6\"/><circle cx=\"256\" cy=\"240\" r=\"6\"/></g><text x=\"290\" y=\"340\" font-family=\"Poppins\" font-size=\"20\" font-weight=\"600\" fill=\"#5B4C99\" text-anchor=\"middle\">Lp(a) particle</text></svg>"}
 
 PAGES = [
 # ---------------------------------------------------------------- ferritin
@@ -729,14 +730,62 @@ sources=[
 ("https://doi.org/10.1016/j.hlc.2020.09.943", "Watts et al, Heart, Lung and Circulation 2021: Integrated guidance for enhancing the care of familial hypercholesterolaemia in Australia"),
 ("https://www.nice.org.uk/guidance/ng238", "NICE NG238: Cardiovascular disease, risk assessment and reduction, including lipid modification (triglyceride and FH referral thresholds)"),
 ],
-related=[HUB_R, ("/cholesterol/", "Fact sheet", "High Cholesterol"), ("/medicines/statins/", "Medicine", "Statins"), ("/blood-tests/hba1c/", "Blood test", "HbA1c Result"), ("/tools/", "Tools", "Health calculators")],
+related=[HUB_R, ("/blood-tests/lipoprotein-a/", "Blood test", "Lipoprotein(a) Test"), ("/cholesterol/", "Fact sheet", "High Cholesterol"), ("/medicines/statins/", "Medicine", "Statins"), ("/blood-tests/hba1c/", "Blood test", "HbA1c Result"), ("/tools/", "Tools", "Health calculators")],
+),
+# ---------------------------------------------------------------- lipoprotein(a)
+dict(
+slug="lipoprotein-a", crumb="Lipoprotein(a)", test="Lipoprotein(a) [Lp(a)]", group="Heart", cls="n",
+updated="Updated 9 November 2026", updated_iso="2026-11-09",
+og_card=LPA_CARD,
+title="Lipoprotein(a) Test: What a High Lp(a) Result Means",
+h1="Lipoprotein(a) (Lp(a)) Test",
+desc="Lp(a) blood test explained: why it’s mostly genetic, who should test once, mg/dL vs nmol/L, what a high result means, and the pelacarsen trial result.",
+card="Mostly genetic, test once. What a high result means, units, and where new drugs stand.",
+lede="Lipoprotein(a) is the cholesterol test most people have never had. It’s mostly set by your genes, so one test usually tells you what you need to know for life.",
+qa="Lp(a) is a cholesterol-carrying particle whose level is over 90% set by your genes, so one test is usually enough. European experts advise testing every adult once. Above 50 mg/dL (about 125 nmol/L) means higher heart attack, stroke and aortic stenosis risk. No Lp(a)-lowering medicine is approved yet, so treatment targets your other risks.",
+body="""
+<h2>What the test measures</h2>
+<ul><li><b>Lp(a)</b> is an LDL-like cholesterol particle with an extra protein, apolipoprotein(a), attached.</li><li>High levels add to the build-up of fatty plaque in arteries and to calcium in the aortic valve. They’re linked to heart attack, stroke and narrowing of the aortic valve (aortic stenosis).</li><li>It’s not part of a routine cholesterol test. Your doctor has to ask for it.</li></ul>
+<h2>Why it’s mostly genetic</h2>
+<ul><li>Over 90% of your Lp(a) level is set by one gene (<i>LPA</i>), inherited from your parents.</li><li>Diet and exercise barely change it, and it stays fairly stable through adult life, so a single test is usually enough.</li><li>Levels differ by ancestry: on average they’re highest in people of African ancestry, then South Asian, White and Chinese ancestry. Women’s levels run about 5–10% higher than men’s.</li><li>About 1.4 billion people worldwide have high Lp(a).</li><li>Kidney disease, hormones and acute illness can shift results, so your doctor may interpret them in that context.</li></ul>
+<h2>Who should test</h2>
+<ul><li><b>Europe (EAS 2022 consensus, European Heart Journal):</b> measure Lp(a) at least once in every adult, ideally with the first cholesterol test.</li><li><b>Australia (Australian Atherosclerosis Society 2023):</b> test people with early (premature) heart or blood vessel disease and people at intermediate to high heart risk. It doesn’t yet advise testing everyone.</li><li>Also worth discussing if you have familial hypercholesterolaemia, or a parent, brother or sister with high Lp(a) or early heart disease.</li><li>If yours is high, close relatives may want testing too (cascade testing).</li><li>Ask whether there’s an out-of-pocket fee before the test.</li></ul>
+<h2>Units: mg/dL vs nmol/L</h2>
+<ul><li><b>nmol/L</b> counts particles. <b>mg/dL</b> weighs them. The Australian position statement recommends nmol/L.</li><li>The apolipoprotein(a) part comes in many sizes, so particle weight differs between people. That’s why there’s <b>no exact conversion</b>.</li><li>The EAS panel advises against converting with a fixed factor. Rough guides of 2 to 2.5 nmol/L per mg/dL exist, but compare your result in the unit your lab reports.</li></ul>
+<h2>What a high result means</h2>
+<p>The EAS 2022 consensus uses these interim levels:</p>
+<ul><li><b>Under 30 mg/dL (under 75 nmol/L):</b> no extra risk from Lp(a).</li><li><b>30–50 mg/dL (75–125 nmol/L):</b> grey zone.</li><li><b>Over 50 mg/dL (over 125 nmol/L):</b> higher risk of heart attack, stroke and aortic stenosis.</li><li>Risk keeps climbing with the level: around 100 mg/dL (about 250 nmol/L) roughly doubles the risk of heart and blood vessel disease.</li><li>A high result isn’t a diagnosis. It adds to your other risks, which is why your doctor looks at the whole picture.</li></ul>
+<h2>What happens next</h2>
+<ul><li><b>Lower everything else:</b> LDL cholesterol, blood pressure, smoking, diabetes, weight and activity. Lifestyle doesn’t lower Lp(a) much, but it lowers your overall risk.</li><li><b>Cholesterol medicines</b> such as statins, ezetimibe and, for some, PCSK9 inhibitors, aimed at your overall risk. See <a href="/cholesterol/">high cholesterol</a> and <a href="/medicines/statins/">statins</a>.</li><li><b>Lipoprotein apheresis</b> (filtering the blood) is an option for a few people whose heart disease keeps progressing despite best treatment.</li><li>Niacin and aspirin aren’t recommended just to treat a high Lp(a).</li></ul>
+<h2>New drugs: promising numbers, no proof yet</h2>
+<ul><li><b>Pelacarsen</b> (an antisense medicine) was the first to finish a heart outcome trial. In Lp(a)HORIZON, 8,323 people with heart or blood vessel disease and Lp(a) of 70 mg/dL or more were followed for a median of 4.7 years.</li><li>It cut Lp(a) by about 78%, but heart attacks, strokes, urgent stent procedures and heart deaths didn’t fall: 12.3% on pelacarsen vs 12.1% on placebo. Results were presented on 7 November 2026 and published in the <i>New England Journal of Medicine</i>.</li><li><b>Olpasiran</b>, <b>lepodisiran</b> and <b>zerlasiran</b> (small interfering RNA medicines) also lower Lp(a) sharply. None is approved, and their outcome trials are still to report.</li><li>The lesson: lowering a number isn’t the same as preventing heart attacks. Testing still matters, because a high Lp(a) helps your doctor judge how hard to treat your other risks.</li></ul>
+""",
+urgent="<b>Get urgent help</b> (000 in Australia, or your local emergency number) for chest pain or pressure, or signs of stroke (face drooping, arm weakness, slurred speech), whatever your Lp(a). <b>See your GP soon</b> if you have a high Lp(a) and notice chest discomfort, breathlessness, dizziness or fainting when you exert yourself: these can be signs of heart disease or a narrowed aortic valve.",
+faqs=[
+("Who should get an Lp(a) test?", "The 2022 European Atherosclerosis Society consensus advises testing every adult at least once. Australian experts advise testing people with early heart or blood vessel disease and those at intermediate to high heart risk. A family history of high Lp(a) or early heart disease is another reason to ask."),
+("Do I need to repeat an Lp(a) test?", "Usually not. Lp(a) is mostly set by your genes and stays fairly stable in adult life, so one test is usually enough. Your doctor may repeat it if you were unwell at the time or have kidney disease."),
+("Can I convert Lp(a) from mg/dL to nmol/L?", "Not exactly. The size of the particle varies between people, so there’s no fixed conversion. Rough factors of 2 to 2.5 are sometimes quoted, but it’s best to use the unit your lab reports and its reference levels."),
+("What is a high Lp(a) level?", "In the EAS 2022 consensus, over 50 mg/dL (over 125 nmol/L) means higher risk, under 30 mg/dL (under 75 nmol/L) means no extra risk, and in between is a grey zone. Risk keeps rising at higher levels."),
+("Can diet or exercise lower Lp(a)?", "Not much. Lp(a) is mostly genetic. Healthy habits still matter because they lower your overall risk of heart attack and stroke."),
+("Did pelacarsen work?", "It lowered Lp(a) by about 78%, but in the Lp(a)HORIZON trial it didn’t reduce heart attacks, strokes or heart deaths compared with placebo. The results were reported in November 2026."),
+("Is there a medicine to lower Lp(a)?", "Not an approved one, as of November 2026. Several are in trials. For now, treatment focuses on lowering LDL cholesterol, blood pressure and other risks."),
+],
+sources=[
+("https://www.portailvasculaire.fr/sites/default/files/docs/2022_eas_consensus_lpa_ehj.pdf", "Kronenberg et al, Eur Heart J 2022: Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis, a European Atherosclerosis Society consensus statement"),
+("https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2022/09/07/14/43/Lipoproteina-in-ASCVD-ESC-2022", "American College of Cardiology: Key points of the 2022 EAS Lp(a) consensus"),
+("https://research-repository.uwa.edu.au/en/publications/australian-atherosclerosis-society-position-statement-on-lipoprot/", "Ward et al, Heart Lung Circ 2023: Australian Atherosclerosis Society position statement on lipoprotein(a)"),
+("https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral", "American Heart Association, 7 November 2026: Lp(a) HORIZON trial results"),
+("https://www.hcplive.com/view/lp-a-horizon-shows-pelacarsen-lowers-lp-a-78-but-not-cardiovascular-events", "HCPLive, November 2026: Lp(a)HORIZON event rates (Cho et al, NEJM 2026)"),
+("https://www.tctmd.com/news/lpahorizon-top-line-results-dash-hopes-pelacarsen", "TCTMD, September 2026: Lp(a)HORIZON top-line results and other Lp(a) drugs in development"),
+],
+related=[HUB_R, ("/blood-tests/high-cholesterol/", "Blood test", "High Cholesterol Result"), ("/cholesterol/", "Fact sheet", "High Cholesterol"), ("/medicines/statins/", "Medicine", "Statins"), ("/tools/", "Tools", "Health calculators")],
 ),
 ]
 
 HUB = dict(
 title="Blood Test Results Explained: Plain-English Guides",
 h1="Blood Test Results Explained",
-desc="Blood test results explained in plain English: ferritin, platelets, CRP, ALT, eGFR, HbA1c, cholesterol, sodium, potassium and more, with red flags.",
+desc="Blood test results explained in plain English: ferritin, platelets, CRP, ALT, eGFR, HbA1c, cholesterol, Lp(a), sodium, potassium and more, with red flags.",
 lede="Got a result flagged H or L and a few days until your appointment? These guides explain what each test measures, the usual reasons it’s high or low, what happens next, and the numbers that can’t wait.",
 qa="A result outside the reference range isn’t automatically a problem: ranges cover about 95% of healthy people, so some healthy results land just outside. What matters is how far out it is, your symptoms and the trend. Each guide below lists common causes first, and the numbers that need same-day care.",
 intro="""
