@@ -378,7 +378,7 @@ page = head() + f'''<p class="meta">Quiz · Just for fun</p>
 </section>
 <section class="faq"><h2>Common questions</h2>{"".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in FAQS)}</section>
 <p class="meta"><em>Updated 8 November 2026. Training times are typical full-time minimums and change over time; check the relevant college for current requirements. Just for fun, not careers advice.</em></p>
-<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<footer class="site"><p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 {JS}
 <script>MW.page();</script>

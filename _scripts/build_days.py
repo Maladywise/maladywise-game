@@ -345,7 +345,7 @@ TEMPLATE = """<!doctype html>
 <p class="note">Dates are Sydney time. Some days only show to visitors in the country that marks them. Links go to the organisers or a reputable source. 🧩 = themed puzzles that day.</p>
 {faq}
 <div id="nl-slot"></div>
-<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<footer class="site"><p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script>MW.page();</script>
 <script src="/days/days.js?v={jsv}"></script>

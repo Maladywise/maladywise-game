@@ -9,15 +9,18 @@ HOW TO RUN (from the repo root)
 Run it after adding or rebuilding pages (STYLE.md). Page generators call run() at the end too.
 
 What it writes
-    Between <!-- static-nav --> and <!-- /static-nav --> markers, right after </main>
-    (or before </body>), a small <nav class="static-nav"> with:
-      - the main sections (games hub, conditions, medicines, blood tests, ... about), and
-      - 6 to 10 related links picked by section: the page's own "related" list in assets/site.js
-        (MW_FACTS), its parent page, then its neighbours in the same section (in path order,
-        wrapping round), so every page gets inbound links from the pages just before it.
-    Links that the page already has in its body or footer are skipped, so nothing shows twice.
+    Between <!-- static-nav --> and <!-- /static-nav --> markers, at the top of the page's
+    <footer class="site"> (or, with no footer, right after </main> / before </body>), one
+    <nav class="static-nav"> row of the main hubs (SECTIONS, at most 9). shell.js moves a block
+    that sits outside the footer (the home page, whose footer is drawn by JS) into it.
     Medical-only links carry class "sn-med" and are hidden in Normie mode (assets/shell.css).
     Pages that are noindex, redirects or 404 get no block (and lose any old one).
+    It also tidies every <footer class="site"> into one compact line (FOOT_LINKS):
+      <p class="ft-base"><span class="ft-note">note</span> <span class="ft-links">About ... Contact</span></p>
+    shell.js adds the follow links and "Report a problem" to it.
+
+Every other page must be linked from the BODY of some page (a hub list, a related list, a
+"For clinicians" block): there is no per-page "See also" list any more. --report checks this.
 """
 import html
 import json
@@ -31,7 +34,8 @@ BASE = "https://maladywise.com"
 START, END = "<!-- static-nav -->", "<!-- /static-nav -->"
 BLOCK_RE = re.compile(r"\n?" + re.escape(START) + r".*?" + re.escape(END) + r"\n?", re.S)
 
-# Main sections: (label, href, medical-only). Same places as the JS top menu (assets/site.js MW_HOME.nav).
+# Main hubs, one footer row (max 9): (label, href, medical-only). Compare, Arcade, Zebra Mail and Deep dives
+# are reached from their hubs' bodies (Medicines/Conditions, Puzzles, subscribe boxes, Conditions).
 SECTIONS = [
     ("Puzzles", "/medical-games/", False),
     ("Conditions", "/conditions/", True),
@@ -39,17 +43,15 @@ SECTIONS = [
     ("Blood tests", "/blood-tests/", True),
     ("Exercises", "/exercises/", True),
     ("Tools", "/tools/", True),
-    ("Compare", "/compare/", True),
     ("Quizzes", "/medical-games/#quizzes", False),
-    ("Deep dives", "/deep-dives/", True),
     ("Specialists", "/specialists/", True),
-    ("World Health Days", "/days/", False),
-    ("Arcade", "/arcade/", False),
-    ("Zebra Mail", "/zebra-mail/", False),
-    ("About", "/about/", False),
+    ("Health days", "/days/", False),
 ]
-# Links the home page's JS-drawn footer already shows (the home page has no static footer).
-HOME_FOOTER = {"/medical-games/", "/about/", "/disclaimer/", "/privacy/", "/contact/"}
+# The compact footer line: these links, in this order (the logo already links home).
+FOOT_LINKS = [("About", "/about/"), ("Disclaimer", "/disclaimer/"), ("Privacy", "/privacy/"), ("Contact", "/contact/")]
+FOOT_NOTE = "General education, not personal medical advice."
+FOOT_RE = re.compile(r'<footer class="site">(.*?)</footer>', re.S)
+INFOOT_RE = re.compile(r'(<footer class="site">)\n?' + re.escape(START) + r".*?" + re.escape(END) + r"\n?", re.S)
 
 # Short link names where the page's own <h1>/<title> is too long or missing.
 LABELS = {
@@ -63,24 +65,12 @@ LABELS = {
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
     "/glp-1/": "GLP-1 medicines guide",
 }
-# Pages for doctors, curious minds and practice quizzes: they link to each other, round-robin.
+# Pages for doctors, curious minds and practice quizzes (their section is "extra"; og_cards.py uses sections).
 EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
          "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/", "/arcade/"]
-# Nested sections that borrow links from a partner section when they are small.
-PARTNERS = {
-    "medicines": ["compare", "tools"], "compare": ["medicines", "fact"], "blood-tests": ["fact", "tools"],
-    "glp-1": ["medicines", "compare"],
-    "exercises": ["fact"], "deep-dives": ["extra", "tools"], "tools": ["extra", "blood-tests"],
-    "specialists": [], "anatomy-quiz": ["game", "extra"], "mental-health-check": ["fact"],
-    "zebra-mail": ["game", "extra"], "game": ["extra"], "extra": ["game"], "fact": ["blood-tests"],
-    "hub": ["game"], "sub": ["exercises"],
-}
-MEDICAL_SECTIONS = {"fact", "medicines", "compare", "blood-tests", "glp-1", "exercises", "tools", "deep-dives", "specialists",
-                    "mental-health-check", "sub"}
 HUBS = {"/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
-WANT = 8   # related links per page (6-10)
 
 
 # ---------- reading the site ----------
@@ -155,7 +145,7 @@ def label_from(src, url, facts=None):
 
 def links_in(src, keep_nav=False):
     """Internal page links already in the page (outside any static-nav block unless keep_nav)."""
-    s = src if keep_nav else BLOCK_RE.sub("\n", src)
+    s = src if keep_nav else strip(src)
     out = set()
     for h in re.findall(r'href="([^"#?]*)', s):
         if h.startswith(BASE):
@@ -210,89 +200,43 @@ def section_of(u, facts, games, idx):
     return "sub"   # e.g. /back-pain/exercises/: handouts under a fact sheet
 
 
-# ---------- choosing links ----------
-def groups(pages, idx, facts):
-    g = {}
-    for u in sorted(idx):
-        g.setdefault(pages[u]["sec"], []).append(u)
-    # fact sheets: neighbours within the same body-system group first
-    fg = {}
-    for u in g.get("fact", []):
-        key = (facts.get(u, {}).get("g") or ["Other"])[0]
-        fg.setdefault(key, []).append(u)
-    extra = [u for u in EXTRA if u in idx]
-    g["extra"] = extra + [u for u in g.get("extra", []) if u not in extra]
-    return g, fg
-
-
-def ring(lst, me, n, offset=1):
-    """n items after `me` in lst, wrapping round (or from a stable offset if `me` isn't in it)."""
-    if not lst:
-        return []
-    i = lst.index(me) if me in lst else (sum(map(ord, me)) % len(lst)) - 1
-    return [lst[(i + offset + k) % len(lst)] for k in range(min(n, len(lst)))]
-
-
-def related(u, pages, idx, facts, g, fg):
-    sec = pages[u]["sec"]
-    have = links_in(pages[u]["src"])
-    cand = []
-    cand += [r for r in facts.get(u, {}).get("r", [])]
-    parts = u.strip("/").split("/")
-    if len(parts) > 1:
-        parent = "/" + "/".join(parts[:-1]) + "/"
-        cand.append(parent)
-        if sec == "sub":
-            cand += [x for x in idx if x.startswith(parent) and x != u and x.count("/") == u.count("/")]
-    if sec == "fact":
-        key = (facts.get(u, {}).get("g") or ["Other"])[0]
-        cand += ring(fg.get(key, []), u, 4)
-        cand += ring(g.get("fact", []), u, 4)
-    elif sec == "hub":
-        cand += ring(g.get("extra", []), u, WANT, offset=HUB_OFFSET.get(u, 0))
-    else:
-        cand += ring(g.get(sec, []), u, WANT)
-    for p in PARTNERS.get(sec, []):
-        cand += ring(g.get(p, []), u, 4)
-    out = []
-    for c in cand:
-        if c == u or c not in idx or c in out or c in have or c in SECTION_HREFS:
-            continue
-        out.append(c)
-        if len(out) >= WANT:
-            break
-    return out
-
-
-SECTION_HREFS = {h for _, h, _ in SECTIONS}
-HUB_OFFSET = {}
-
-
-def block(u, pages, idx, facts, g, fg):
-    p = pages[u]
-    have = links_in(p["src"])
-    foot = re.search(r'<footer class="site".*?</footer>', p["src"], re.S)
-    infoot = links_in(foot.group(0)) if foot else (HOME_FOOTER if u == "/" else set())
-    e = lambda s: html.escape(s, quote=True)
+# ---------- writing ----------
+def block(u):
+    e = lambda t: html.escape(t, quote=True)
     main = []
     for t, h, med in SECTIONS:
-        if h.split("#")[0] == u and "#" not in h or h in infoot:
+        if h == u:
             continue
         main.append('<a href="%s"%s>%s</a>' % (h, ' class="sn-med"' if med else "", e(t)))
-    rel = []
-    for r in related(u, pages, idx, facts, g, fg):
-        med = pages[r]["sec"] in MEDICAL_SECTIONS or r in ("/rare-conditions/", "/mbs-billing/", "/unspecialist/")
-        rel.append('<a href="%s"%s>%s</a>' % (r, ' class="sn-med"' if med else "", e(pages[r]["label"])))
-    inner = '<p class="sn-main">' + " ".join(main) + "</p>"
-    if rel:
-        inner += '<p class="sn-rel"><span>See also</span> ' + " ".join(rel) + "</p>"
-    return START + '\n<nav class="static-nav" aria-label="Site sections">' + inner + "</nav>\n" + END
+    return START + '<nav class="static-nav" aria-label="Site sections">' + " ".join(main) + "</nav>" + END
+
+
+def foot_fix(src):
+    """Every <footer class="site"> as one compact line: note, then About · Disclaimer · Privacy · Contact."""
+    def fix(m):
+        inner = INFOOT_RE.sub(r"\1", m.group(0))[len('<footer class="site">'):-len("</footer>")]
+        if 'class="ft-base"' in inner:
+            return m.group(0)
+        parts = re.split(r"<br\s*/?>", inner)
+        note = parts[0].strip() if len(parts) > 1 or not parts[0].lstrip().startswith("<a") else ""
+        note = note or FOOT_NOTE
+        links = " ".join('<a href="%s">%s</a>' % (h, t) for t, h in FOOT_LINKS)
+        return ('<footer class="site"><p class="ft-base"><span class="ft-note">%s</span> <span class="ft-links">%s</span></p></footer>'
+                % (note, links))
+    return FOOT_RE.sub(fix, src)
+
+
+FOOT_HTML = foot_fix('<footer class="site">' + FOOT_NOTE + "</footer>")   # for page generators
 
 
 def place(src, blk):
-    s = BLOCK_RE.sub("\n", src) if START in src else src
+    s = foot_fix(strip(src))
     if blk is None:
         return s
+    i = s.find('<footer class="site">')
+    if i >= 0:
+        j = i + len('<footer class="site">')
+        return s[:j] + "\n" + blk + "\n" + s[j:]
     i = s.rfind("</main>")
     if i >= 0:
         j = i + len("</main>")
@@ -306,12 +250,11 @@ def place(src, blk):
 def run(quiet=False):
     """Refresh the block on every page. Returns the number of files changed."""
     pages, idx, facts, games = load()
-    g, fg = groups(pages, idx, facts)
     n = 0
     for u, p in sorted(pages.items()):
         if u in idx:
-            new = place(p["src"], block(u, pages, idx, facts, g, fg))
-        elif START in p["src"]:
+            new = place(p["src"], block(u))
+        elif START in p["src"] or '<footer class="site">' in p["src"]:
             new = place(p["src"], None)
         else:
             continue
@@ -325,7 +268,9 @@ def run(quiet=False):
 
 def strip(src):
     """A page without its footer-links block (generators compare against this before rewriting)."""
-    return BLOCK_RE.sub("\n", src) if START in src else src
+    if START not in src:
+        return src
+    return BLOCK_RE.sub("\n", INFOOT_RE.sub(r"\1", src))
 
 
 def postbuild():
@@ -344,19 +289,27 @@ def postbuild():
 
 
 def report():
+    """Every sitemap page needs an inbound link from the body of another page (not the footer)."""
     pages, idx, facts, games = load()
-    inbound = {u: set() for u in idx}
-    for u in idx:
-        for h in links_in(pages[u]["src"], keep_nav=True):
+    try:
+        sm = open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8").read()
+        want = [x[len(BASE):] if x.startswith(BASE) else x for x in re.findall(r"<loc>([^<]+)</loc>", sm)]
+    except OSError:
+        want = sorted(idx)
+    inbound = {u: set() for u in want}
+    for u, p in pages.items():
+        body = FOOT_RE.sub("", strip(p["src"]))
+        for h in links_in(body, keep_nav=True):
+            h = h[:-len("index.html")] if h.endswith("/index.html") else h
             if h in inbound and h != u:
                 inbound[h].add(u)
-    low = sorted((len(v), u) for u, v in inbound.items() if len(v) < 2)
+    low = sorted(u for u, v in inbound.items() if not v and u != "/")
     counts = sorted(len(v) for v in inbound.values())
-    print("Indexable pages: %d" % len(idx))
-    print("Static inbound links (distinct pages): min %d, median %d" % (counts[0], counts[len(counts) // 2]))
-    print("Pages with fewer than 2: %d" % len(low))
-    for c, u in low:
-        print("  %d  %s" % (c, u))
+    print("Sitemap pages: %d" % len(want))
+    print("Body inbound links (distinct pages): min %d, median %d" % (counts[0], counts[len(counts) // 2]))
+    print("Orphans (no body link from any other page): %d" % len(low))
+    for u in low:
+        print("  " + u)
     return 1 if low else 0
 
 

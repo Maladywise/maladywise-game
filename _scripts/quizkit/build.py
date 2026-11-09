@@ -148,7 +148,7 @@ def page(path, title, desc, og, body, lds, ecg=False):
 <body>
 <main class="wrap doc">
 {body}
-<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<footer class="site"><p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 {ecgjs}<script src="/assets/quizkit.js?v={qkv}"></script>
 <script>MW.page();</script>

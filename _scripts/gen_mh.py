@@ -117,7 +117,7 @@ def page_ld(path, name, desc, crumbs, about=None):
     return d
 
 FOOT = '''<p class="meta"><em>{rev}. General education, not personal medical advice. These checks don’t diagnose any condition; talk to your GP or doctor about your results.</em></p>
-<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<footer class="site"><p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 {scripts}<script>MW.page();</script>
 </body>

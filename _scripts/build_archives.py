@@ -517,7 +517,7 @@ def render_page(g, past, today, versions):
 <p class="note">{count} past puzzle{plural}, up to {last}. Today&#8217;s and future puzzles are never shown here.</p>
 {body}
 <div id="nl-slot"></div>
-<footer class="site">General education, not personal medical advice.<br><a href="/">Malady Wise</a> · <a href="/about/">About</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<footer class="site"><p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script>MW.page();</script>
 </body>

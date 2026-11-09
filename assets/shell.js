@@ -1050,13 +1050,16 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     if (allg) allg.parentNode.removeChild(allg);
     var shc = main.querySelector(".mw-sharecard"); // static "Share this page" card (share_block.py): keep it above the footer
     if (shc) shc.parentNode.removeChild(shc);
+    var snav = document.querySelector(".static-nav"); // static hub links (static_nav.py): kept in the footer across redraws
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + todays3(t3) + progress() +
         sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
-        '<footer class="site">' + (MW_SITE.quip ? MW_SITE.quip + "<br>" : "") + MW_SITE.footer + '<br><a href="medical-games/">All games</a> · <a href="about/">About</a> · <a href="disclaimer/">Disclaimer</a> · <a href="privacy/">Privacy</a> · <a href="contact/">Contact</a></footer>';
+        '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) main.insertBefore(allg, main.querySelector("footer.site"));
       if (shc) main.insertBefore(shc, main.querySelector("footer.site"));
+      if (snav) main.querySelector("footer.site").insertBefore(snav, main.querySelector("footer.site").firstChild);
+      social();
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();
@@ -1234,14 +1237,27 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     };
   }
 
-  // ---------- social links in every footer (edit MW_SITE.social to add more) ----------
+  // ---------- footer: hub row (static_nav.py), follow links, one compact legal line ----------
+  // Static pages ship <footer class="site"><nav class="static-nav">…</nav><p class="ft-base">note + links</p></footer>.
+  // Here: pull a static-nav that sits outside the footer (the home page) into it, add the follow links
+  // (edit MW_SITE.social to add more) and "Report a problem" at the end of the legal links.
   function social() {
     var f = document.querySelector("footer.site"), L = (window.MW_SITE && MW_SITE.social) || [];
-    if (!f || !L.length || f.querySelector(".soc")) return;
-    var d = document.createElement("div"); d.className = "soc";
-    d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
-    f.insertBefore(d, f.firstChild);
-    if (!f.querySelector(".mw-fbl")) { var a = document.createElement("p"); a.className = "mw-fbl"; a.innerHTML = '<button type="button">\u26a0\ufe0f Report a problem</button>'; a.firstChild.onclick = function () { feedback(); }; f.appendChild(a); }
+    if (!f) return;
+    var sn = document.querySelector(".static-nav");
+    if (sn && !f.contains(sn)) f.insertBefore(sn, f.firstChild);
+    var base = f.querySelector(".ft-base"), links = base && base.querySelector(".ft-links");
+    if (L.length && !f.querySelector(".soc")) {
+      var d = document.createElement("div"); d.className = "soc";
+      d.innerHTML = '<span>Follow</span>' + L.map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[0] + ' ' + x[2] + '">' + x[3] + "<b>" + x[2] + "</b></a>"; }).join("");
+      f.insertBefore(d, base || null);
+    }
+    if (!f.querySelector(".mw-fbl")) {
+      var btn = '<button type="button" class="mw-fbl">Report a problem</button>';
+      if (links) links.insertAdjacentHTML("beforeend", " " + btn);
+      else f.insertAdjacentHTML("beforeend", '<p class="ft-base"><span class="ft-links">' + btn + "</span></p>");
+      f.querySelector(".mw-fbl").onclick = function () { feedback(); };
+    }
   }
   // Auto search box for list pages (medicines, deep dives, …) that don't have one yet.
   function listSearch() {

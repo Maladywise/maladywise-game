@@ -85,16 +85,27 @@ html[data-theme="dark"] .mwbar i{background:#9C8CC4}
 .mwprog p{margin:0;font-size:14px;color:var(--muted)}
 .mwprog b{color:var(--ink)}
 a.card:hover .play{opacity:.85}
-footer.site{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px;text-align:center;line-height:1.6}
+/* Footer: one hub row (static-nav, written by _scripts/static_nav.py so crawlers without JS find the hubs),
+   then follow links + one compact legal line (side by side on wide screens). shell.js adds .soc and the report button. */
+footer.site{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:12.5px;text-align:center;line-height:1.5;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 24px}
+footer.site>*{margin:0}
 footer.site a{color:var(--muted)}
-/* static-nav: plain footer links written by _scripts/static_nav.py so crawlers without JS find every page */
-.static-nav{max-width:1040px;margin:-28px auto 0;padding:0 max(16px,env(safe-area-inset-right,0px)) 28px max(16px,env(safe-area-inset-left,0px));text-align:center;font-size:12px;line-height:1.85;color:var(--muted)}
-.static-nav p{margin:0 auto;max-width:780px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:14px;row-gap:0}
-.static-nav .sn-rel{margin-top:6px;opacity:.85}
-.static-nav .sn-rel span{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:10.5px}
-.static-nav a{color:var(--muted);text-decoration:none}
-.static-nav a:hover,.static-nav a:focus-visible{color:var(--ink);text-decoration:underline}
+.static-nav{flex:1 0 100%;display:flex;flex-wrap:wrap;justify-content:center;gap:0 2px;font-size:13.5px;line-height:1.3;max-width:1040px;margin:0 auto}
+footer.site .static-nav a,.static-nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:7px 9px;border-radius:8px}
+.static-nav a:hover,.static-nav a:focus-visible{background:var(--line);text-decoration:none}
 html[data-mode="normie"] .static-nav .sn-med{display:none}
+body>.static-nav{padding:0 16px 24px}
+footer.site .ft-base{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.ft-note{margin-right:12px}
+.ft-links{display:inline-flex;flex-wrap:wrap;justify-content:center;vertical-align:baseline}
+footer.site .ft-links>a,.ft-links>button{display:inline-block;padding:5px 1px;text-decoration:none;color:var(--muted);font-size:12.5px}
+.ft-links>*+*::before{content:"\00b7";display:inline-block;margin:0 8px;color:var(--muted)}
+.ft-links>a:hover,.ft-links>button:hover{color:var(--ink)}
+.ft-links>button.mw-fbl{border:0;background:none;font:inherit;cursor:pointer;margin:0}
+@media (max-width:640px){.ft-note{display:block;margin-right:0}.ft-links{column-gap:18px}.ft-links>*+*::before{content:none}
+  .static-nav{display:grid;grid-template-columns:repeat(3,1fr)}.static-nav a{padding:8px 4px}}
+/* narrow reading columns (fact sheets, directories): let the footer span wider so the hub row fits on one line */
+@media (min-width:760px){.doc>footer.site{--fw:min(960px,calc(100vw - 48px));width:var(--fw);max-width:none;margin-left:calc(50% - var(--fw) / 2);box-sizing:border-box}}
 @media print{.static-nav{display:none!important}}
 
 /* splash */
@@ -231,12 +242,12 @@ html{touch-action:manipulation}
 html,body{overflow-x:clip}
 #grx .wrap>*,#wde .wrap>*,#lnk .wrap>*{min-width:0}
 
-footer.site .soc{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-footer.site .soc>span{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-footer.site .soc a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--card)}
-footer.site .soc a:hover{border-color:var(--brand)}
-footer.site .soc svg{width:14px;height:14px}
-footer.site .soc b{font-weight:600;font-size:13px}
+footer.site .soc{display:flex;justify-content:center;align-items:center;gap:2px 12px;flex-wrap:wrap}
+footer.site .soc>span{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+footer.site .soc a{display:inline-flex;align-items:center;gap:5px;padding:5px 2px;text-decoration:none;color:var(--muted)}
+footer.site .soc a:hover{color:var(--ink)}
+footer.site .soc svg{width:13px;height:13px}
+footer.site .soc b{font-weight:500;font-size:12.5px}
 
 .gtitle{display:block;width:100%;align-self:stretch;text-align:left;margin:-4px 0 2px;padding:0}
 .gtitle h1{margin:0;font-family:Lora,Georgia,serif;font-weight:700;font-size:clamp(26px,5.5vw,32px);line-height:1.05;color:var(--ga)}
@@ -814,7 +825,6 @@ html[data-theme="dark"] .sp-pb,html[data-theme="dark"] details.sp-pb summary{bac
 }
 .me-prog{display:block;margin-top:2px;font-style:normal;font-weight:600;color:var(--brand,#4A3480)}
 /* feedback */
-.mw-fbl{margin:10px 0 0;text-align:center}.mw-fbl button{border:0;background:none;color:var(--muted);font:500 13px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:6px}
 button.mw-melink{border:0;background:none;width:100%;text-align:left;font:inherit;cursor:pointer;padding:0}
 .mw-fb{display:grid;gap:10px}.mw-fb label{display:grid;gap:4px;font:600 13px Poppins,system-ui,sans-serif;color:var(--muted)}
 .mw-fb select,.mw-fb input,.mw-fb textarea{font:400 15px Poppins,system-ui,sans-serif;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;box-sizing:border-box}
