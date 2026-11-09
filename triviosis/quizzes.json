@@ -2811,107 +2811,107 @@
   "date": "2026-11-13",
   "number": 27,
   "difficulty": "Hard",
-  "theme": "The science of kindness",
+  "theme": "Symbols and signs: medicine\u2019s odd objects",
   "questions": [
    {
-    "q": "Today is World Kindness Day. Oxytocin is made in the hypothalamus and released from the?",
-    "a": "Posterior pituitary",
+    "q": "Medicine\u2019s proper symbol is the rod of Asclepius: one snake, one staff. The winged, two-snake caduceus belongs to?",
+    "a": "Hermes, messenger of the gods",
     "w": [
-     "Anterior pituitary",
-     "Adrenal medulla",
-     "Pineal gland"
+     "Apollo, father of Asclepius",
+     "Hygieia, goddess of health",
+     "Panacea, goddess of cures"
     ],
-    "e": "It travels down nerve fibres to be stored and released, just like ADH."
+    "e": "The caduceus is Hermes\u2019 herald\u2019s staff, tied to trade, travel and messages rather than healing. Two snakes, zero medical credentials."
    },
    {
-    "q": "Which hypothalamic nuclei make most of the body\u2019s oxytocin?",
-    "a": "Paraventricular and supraoptic",
+    "q": "A child with five days of fever, cracked red lips, red eyes without pus and a \u2018strawberry tongue\u2019 most likely has?",
+    "a": "Kawasaki disease",
     "w": [
-     "Suprachiasmatic and arcuate",
-     "Ventromedial and dorsomedial",
-     "Mammillary and preoptic"
+     "Measles",
+     "Glandular fever",
+     "Hand, foot and mouth disease"
     ],
-    "e": "The same two nuclei also make ADH (vasopressin)."
+    "e": "Kawasaki disease, where the real worry is coronary artery aneurysms. Scarlet fever does strawberries too, but not the pus-free red eyes."
    },
    {
-    "q": "Vincent du Vigneaud won the 1955 Nobel Prize in Chemistry for the first synthesis of a peptide hormone. Which one?",
-    "a": "Oxytocin",
+    "q": "The caduceus mix-up in American medicine is often traced to which body putting it on uniforms in 1902?",
+    "a": "The US Army Medical Corps",
     "w": [
-     "Insulin",
-     "Adrenaline",
-     "Thyroxine"
+     "The American Medical Association",
+     "The Royal Army Medical Corps",
+     "The World Health Organization"
     ],
-    "e": "Just nine amino acids, but it was a first."
+    "e": "Captain Frederick Reynolds lobbied for it, and the Army put the caduceus on its collars in 1902. The AMA, Britain\u2019s RAMC and WHO stuck with Asclepius, so that guess was in good company, just wrong."
    },
    {
-    "q": "After birth, synthetic oxytocin is routinely given mainly to prevent?",
-    "a": "Postpartum haemorrhage",
+    "q": "Koilonychia, nails scooped enough to hold a drop of water, is classically linked to?",
+    "a": "Iron deficiency",
     "w": [
-     "Mastitis",
-     "Neonatal jaundice",
-     "Pre-eclampsia"
+     "Lung cancer",
+     "Infective endocarditis",
+     "Liver cirrhosis"
     ],
-    "e": "Part of active management of the third stage. It makes the uterus contract."
+    "e": "Spoon nails are the textbook nail of iron deficiency, though they can be normal in babies. Clubbing, splinter haemorrhages and white nails belong to the other options."
    },
    {
-    "q": "A 2010 meta-analysis of 148 studies found that strong social relationships raised the odds of survival by about?",
-    "a": "50%",
+    "q": "The six arms of the blue Star of Life on ambulances stand for?",
+    "a": "Six stages of emergency care",
     "w": [
-     "5%",
-     "15%",
-     "200%"
+     "Six vital signs paramedics record",
+     "The six founding ambulance services",
+     "Six levels of triage"
     ],
-    "e": "Holt-Lunstad and colleagues. The effect was similar in size to quitting smoking."
+    "e": "Detection, reporting, response, on-scene care, care in transit and transfer to definitive care, a meaning added by Leo Schwartz at the US road safety agency NHTSA. Not a tribute to six heroic paramedics, sadly."
    },
    {
-    "q": "In 2018, which country became the first to appoint a minister for loneliness?",
-    "a": "United Kingdom",
+    "q": "An \u2018apple-core\u2019 narrowing of the colon on a barium enema should make you think of?",
+    "a": "Colorectal cancer",
     "w": [
-     "Japan",
-     "Denmark",
-     "Canada"
+     "Ulcerative colitis",
+     "Sigmoid volvulus",
+     "Diverticular disease"
     ],
-    "e": "Japan followed in 2021."
+    "e": "A tumour circling the bowel leaves shouldered edges and a narrow middle. Volvulus gets the coffee bean and colitis the lead pipe; the fruit bowl was already taken."
    },
    {
-    "q": "In a 2008 BMJ trial in irritable bowel syndrome, which group improved most?",
-    "a": "Sham acupuncture with a warm, attentive practitioner",
+    "q": "In 2005, a third protective emblem with no religious or national meaning joined the red cross and red crescent. It\u2019s the red?",
+    "a": "Crystal",
     "w": [
-     "Sham acupuncture with minimal chat",
-     "Waiting list",
-     "Real acupuncture alone"
+     "Lion and sun",
+     "Shield",
+     "Star"
     ],
-    "e": "Kaptchuk and colleagues showed the relationship itself is part of the treatment."
+    "e": "The red crystal, a red square stood on its point, came in with a third Additional Protocol to the Geneva Conventions in December 2005. The lion and sun was real, but Iran\u2019s, and retired long before."
    },
    {
-    "q": "Schwartz Rounds, where hospital staff talk about the emotional side of care, are named after a?",
-    "a": "Lawyer who wrote about the kindness he got as a patient",
+    "q": "On a hand X-ray, a \u2018pencil-in-cup\u2019 joint is classically seen in?",
+    "a": "Psoriatic arthritis",
     "w": [
-     "Surgeon who invented debriefing",
-     "Nurse killed on duty",
-     "Hospital chaplain"
+     "Gout",
+     "Osteoarthritis",
+     "Haemochromatosis"
     ],
-    "e": "Ken Schwartz wrote about it before he died of lung cancer in 1995."
+    "e": "In arthritis mutilans one bone end whittles to a point and the next hollows into a cup. Gout prefers punched-out erosions; this one is pure woodwork."
    },
    {
-    "q": "The #hellomynameis campaign, urging staff to introduce themselves, was started in 2013 by?",
-    "a": "Dr Kate Granger",
+    "q": "WHO\u2019s emblem, chosen at the first World Health Assembly in 1948, sets the UN world map behind?",
+    "a": "A staff with one snake coiled around it",
     "w": [
-     "Atul Gawande",
-     "Henry Marsh",
-     "Siddhartha Mukherjee"
+     "A winged staff with two snakes",
+     "A bowl with a snake drinking from it",
+     "A six-armed blue star"
     ],
-    "e": "A UK geriatrician with terminal cancer, she noticed how often staff didn\u2019t say who they were."
+    "e": "It\u2019s the rod of Asclepius, so WHO got the snake count right. If you went for the caduceus, so have plenty of logo designers."
    },
    {
-    "q": "In 2023, which organisation launched a Commission on Social Connection to tackle loneliness?",
-    "a": "World Health Organization",
+    "q": "A 72-year-old has sudden painless vision loss in one eye. The retina is pale with a cherry-red spot at the macula. Diagnosis?",
+    "a": "Central retinal artery occlusion",
     "w": [
-     "UNICEF",
-     "The Red Cross",
-     "The World Bank"
+     "Central retinal vein occlusion",
+     "Retinal detachment",
+     "Vitreous haemorrhage"
     ],
-    "e": "Around the same time, the US Surgeon General called loneliness an epidemic."
+    "e": "The starved retina turns pale while the thin fovea still shows the choroid\u2019s blood supply beneath: treat it as an eye stroke. Vein occlusion looks more like a \u2018blood and thunder\u2019 storm."
    }
   ]
  },
