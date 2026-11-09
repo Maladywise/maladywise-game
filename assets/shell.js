@@ -583,10 +583,69 @@
       b.setAttribute("data-mws", "1");
       if (!b.parentNode.classList.contains("mw-sharerow")) { var row = document.createElement("div"); row.className = "mw-sharerow"; b.parentNode.insertBefore(row, b); row.appendChild(b); }
       var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
+      if (pre && window.HTMLCanvasElement && window.Blob) {
+        var pb = document.createElement("button"); pb.type = "button"; pb.className = b.className.replace(/\bsolid\b/, "") + " mw-pic"; var canPic = false; try { canPic = !!(navigator.canShare && navigator.canShare({ files: [new File([""], "a.png", { type: "image/png" })] })); } catch (e) {} pb.textContent = canPic ? "Share picture" : "Save picture";
+        pb.onclick = function () { picShare(pre, pb); };
+        b.parentNode.appendChild(pb);
+      }
       if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
       sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, ""), url: shareURL() }).catch(function () {}); };
       b.parentNode.insertBefore(sb, b.nextSibling);
+    });
+  }
+
+  // ---------- picture share: draw the result ticket as a 1080x1350 PNG (fits X and Instagram), then share or save it ----------
+  function picShare(pre, btn) {
+    var tk = pre.previousElementSibling && pre.previousElementSibling._d ? pre.previousElementSibling : null;
+    var d = tk ? tk._d : { title: document.title.split("|")[0].trim(), pill: "", big: "", ems: [], lines: pre.textContent.split("\n").slice(0, 6), acc: "#4A3480", url: "" };
+    var old = btn.textContent; btn.textContent = "Making picture…"; btn.disabled = true;
+    var fontsOk = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("700 80px Lora"), document.fonts.load("600 40px Poppins")]).catch(function () {}) : Promise.resolve();
+    fontsOk.then(function () {
+      var W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H; var x = c.getContext("2d");
+      var acc = d.acc || "#4A3480", ink = "#2B2340", mut = "#6B6280", EM = '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
+      x.fillStyle = "#F4EFE6"; x.fillRect(0, 0, W, H);
+      x.fillStyle = acc; x.globalAlpha = .12; x.beginPath(); x.arc(W - 60, 110, 260, 0, Math.PI * 2); x.fill(); x.beginPath(); x.arc(80, H - 80, 200, 0, Math.PI * 2); x.fill(); x.globalAlpha = 1;
+      function rr(X, Y, w, h, r) { x.beginPath(); x.moveTo(X + r, Y); x.arcTo(X + w, Y, X + w, Y + h, r); x.arcTo(X + w, Y + h, X, Y + h, r); x.arcTo(X, Y + h, X, Y, r); x.arcTo(X, Y, X + w, Y, r); x.closePath(); }
+      x.shadowColor = "rgba(43,35,64,.18)"; x.shadowBlur = 40; x.shadowOffsetY = 12; x.fillStyle = "#FFFFFF"; rr(70, 150, W - 140, H - 300, 44); x.fill(); x.shadowColor = "transparent";
+      x.save(); rr(70, 150, W - 140, H - 300, 44); x.clip(); x.fillStyle = acc; x.fillRect(70, 150, W - 140, 22); x.restore();
+      x.textAlign = "center"; x.fillStyle = mut; x.font = "600 30px Poppins,system-ui,sans-serif"; x.fillText("M A L A D Y   W I S E", W / 2, 105);
+      function fit(t, f, max) { var s = f; x.font = s; while (x.measureText(t).width > max && /\d+px/.test(s)) { s = s.replace(/(\d+)px/, function (m, n) { return (n - 2) + "px"; }); x.font = s; } }
+      // lay out title, theme pill, emoji rows and text lines as one block, centred in the card
+      var items = [{ k: "t", t: d.title, f: "700 88px Lora,Georgia,serif", h: 100 }];
+      if (d.pill) items.push({ k: "p", t: d.pill, f: "600 34px Poppins,system-ui,sans-serif", h: 90 });
+      var ems = (d.big ? [d.big] : []).concat(d.ems || []), body = (d.lines || []).slice(0, 4);
+      var es = ems.length <= 2 ? 120 : ems.length <= 4 ? 96 : Math.max(48, Math.floor(560 / ems.length) - 8);
+      if (ems.length) items.push({ k: "gap", h: 30 });
+      ems.forEach(function (ln) { items.push({ k: "e", t: ln, f: es + "px " + EM, h: es + 18 }); });
+      if (body.length) items.push({ k: "gap", h: 26 });
+      body.forEach(function (ln, i) { items.push({ k: "b", t: ln, f: i ? "500 36px Poppins,system-ui,sans-serif" : "700 50px Poppins,system-ui,sans-serif", h: i ? 56 : 70 }); });
+      var tot = items.reduce(function (a, it) { return a + it.h; }, 0), top = 172, bot = H - 280;
+      var y = top + Math.max(30, (bot - top - tot) / 2);
+      items.forEach(function (it) {
+        if (it.k === "gap") { y += it.h; return; }
+        y += it.h; var base = y - (it.k === "p" ? 26 : it.k === "e" ? 14 : 18);
+        fit(it.t, it.f, W - 240);
+        if (it.k === "p") { var pw = x.measureText(it.t).width + 60; x.fillStyle = acc; x.globalAlpha = .14; rr(W / 2 - pw / 2, base - 44, pw, 62, 31); x.fill(); x.globalAlpha = 1; x.fillStyle = acc; }
+        else x.fillStyle = ink;
+        x.fillText(it.t, W / 2, base);
+      });
+      var path = (d.url || shareURL()).replace(/^https?:\/\//, "").replace(/\?.*$/, "").replace(/\/$/, ""), cta = "Play free: " + path;
+      fit(cta, "600 36px Poppins,system-ui,sans-serif", 640); var cw = Math.min(W - 200, x.measureText(cta).width + 90);
+      x.fillStyle = acc; rr(W / 2 - cw / 2, H - 252, cw, 80, 40); x.fill(); x.fillStyle = "#FFFFFF"; x.fillText(cta, W / 2, H - 199);
+      x.fillStyle = mut; x.font = "500 26px Poppins,system-ui,sans-serif"; x.fillText("Free daily medical puzzles", W / 2, H - 60);
+      var gm = window.MW_curGame, mid = gm && gm.id, mi = new Image(), done1 = false;
+      function finish() { if (done1) return; done1 = true; c.toBlob(after, "image/png"); }
+      if (mid) { mi.onload = function () { try { x.drawImage(mi, W - 300, H - 470, 210, 210); } catch (e) {} finish(); }; mi.onerror = finish; mi.src = (NORMIE && gm.normieMascot ? "/assets/mascots/normie/" : "/assets/mascots/") + mid + ".svg"; setTimeout(finish, 2500); } else finish();
+      function after(blob) {
+        btn.textContent = old; btn.disabled = false; if (!blob) return;
+        var g = window.MW_curGame, name = ((g && g.id) || "malady-wise") + "-result.png", file = null;
+        try { file = new File([blob], name, { type: "image/png" }); } catch (e) {}
+        var text = pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, "");
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) { navigator.share({ files: [file], text: text + "\n" + shareURL() }).catch(function () {}); track("sharepic/" + shareGame(), "Share picture " + shareGame()); return; }
+        var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+        btn.textContent = "Saved ✓"; setTimeout(function () { btn.textContent = old; }, 2000); track("sharepic/" + shareGame(), "Save picture " + shareGame());
+      }
     });
   }
   // ---------- share "ticket" card built from each game's share text ----------
@@ -616,6 +675,7 @@
       var emh = ems.length ? '<div class="em' + (ems.length === 1 && Array.from(ems[0].replace(/\s/g, "")).length <= 4 ? " bigem" : "") + '">' + ems.map(esc2).join("<br>") + "</div>" : "";
       if (sc0) rest += '<div class="sc">' + esc2(sc0) + "</div>";
       var tk = el('<div class="mw-ticket" style="--a:' + acc + '"><div class="t">' + esc2(title) + "</div>" + (pill ? '<div class="d">' + esc2(pill) + "</div>" : "") + q + body + emh + rest + (url ? '<div class="u">MALADYWISE.COM</div>' : "") + "</div>");
+      tk._d = { title: title, pill: pill, big: big0, ems: ems.slice(), lines: lines.map(function (l) { return l.trim(); }).filter(function (l) { return l && /[A-Za-z0-9]/.test(l); }).map(function (l) { var m = l.match(/^([^A-Za-z0-9\u201c"]+?)\s+([A-Za-z0-9].*)$/); return m ? m[2] : l; }).concat(sc0 ? [sc0] : []), acc: acc, url: url };
       pre.parentNode.insertBefore(tk, pre); pre.classList.add("mw-sr");
     });
   }
