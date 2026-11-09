@@ -887,6 +887,187 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jascha Kehr",
+    "specialty": "Paediatric cardiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au/our-staff/dr-jascha-kehr/",
+    "interests": [
+     "General paediatric cardiology",
+     "Fetal cardiology",
+     "Heart rhythm problems",
+     "Inherited heart disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://naphc.com.au/our-staff/",
+     "https://naphc.com.au/our-staff/dr-jascha-kehr/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Nitin Arora",
+    "specialty": "Paediatric cardiologist",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au/our-staff/dr-nitin-arora/",
+    "interests": [
+     "Complex congenital heart conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://naphc.com.au/our-staff/",
+     "https://naphc.com.au/our-staff/dr-nitin-arora/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Peter Hayes",
+    "specialty": "Cardiologist (non-invasive cardiac imaging)",
+    "practice": "Hunter Cardiac Investigations",
+    "address": "324 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7477",
+    "fax": "02 4952 7199",
+    "email": "hci@hci.net.au",
+    "ereferral": "",
+    "website": "https://www.hci.net.au/our-doctors",
+    "interests": [
+     "Non-invasive cardiac imaging",
+     "Echocardiography"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hci.net.au/our-doctors",
+     "https://www.hci.net.au/contact"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Professor Aaron Sverdlov",
+    "specialty": "Cardiologist (heart failure, cardio-oncology and general cardiology)",
+    "practice": "Newcastle Heart",
+    "address": "Suite 1, Level C6, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4929 2444",
+    "fax": "02 4929 2449",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleheart.com.au/our-team/professor-aaron-sverdlov/",
+    "interests": [
+     "Heart failure",
+     "Cardio-oncology",
+     "Heart effects of cancer treatment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Calvary Mater Newcastle"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleheart.com.au/our-team/",
+     "https://newcastleheart.com.au/our-team/professor-aaron-sverdlov/",
+     "https://newcastleheart.com.au/contact-us/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Stuart Sugito",
+    "specialty": "Cardiologist and cardiac imaging specialist",
+    "practice": "Newcastle Heart",
+    "address": "Suite 1, Level C6, 291 King Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4929 2444",
+    "fax": "02 4929 2449",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleheart.com.au/our-team/dr-stuart-sugito/",
+    "interests": [
+     "Structural and valve heart disease",
+     "Inherited heart conditions",
+     "Heart disease prevention",
+     "Echocardiography and cardiac CT"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Maitland Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleheart.com.au/our-team/",
+     "https://newcastleheart.com.au/our-team/dr-stuart-sugito/",
+     "https://newcastleheart.com.au/contact-us/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -2046,6 +2227,108 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Steve Bruce",
+    "specialty": "Pain medicine specialist and anaesthetist",
+    "practice": "Newcastle Pain Management (NIPM)",
+    "address": "Suite 3, 20 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4923 8900",
+    "fax": "02 4947 8991",
+    "email": "info@nipm.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlepainmanagement.com.au/staff/dr-steve-bruce/",
+    "interests": [
+     "Interventional pain treatments",
+     "Cancer pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepainmanagement.com.au/position/pain-physicians/",
+     "https://www.newcastlepainmanagement.com.au/staff/dr-steve-bruce/",
+     "https://www.newcastlepainmanagement.com.au/pain-management-clinic-newcastle/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Willem Volschenk",
+    "specialty": "Pain medicine specialist",
+    "practice": "Hunter Pain Specialists",
+    "address": "Hunter Specialist Medical Centre, 91 Chatham Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4985 1800",
+    "fax": "02 4940 0322",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterpainspecialists.com.au/our-team/dr-willem-volschenk",
+    "interests": [
+     "Persistent pain",
+     "Multidisciplinary pain management"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterpainspecialists.com.au/our-team",
+     "https://hunterpainspecialists.com.au/our-team/dr-willem-volschenk"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Aidan McParland",
+    "specialty": "Pain medicine and emergency medicine specialist",
+    "practice": "Hunter Pain Specialists",
+    "address": "Hunter Specialist Medical Centre, 91 Chatham Street, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4985 1800",
+    "fax": "02 4940 0322",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterpainspecialists.com.au/our-team/dr-aidan-mcparland",
+    "interests": [
+     "Interventional pain treatments and neuromodulation",
+     "Nerve pain",
+     "Spinal cord stimulation",
+     "Cannabinoids"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterpainspecialists.com.au/our-team",
+     "https://hunterpainspecialists.com.au/our-team/dr-aidan-mcparland"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -2716,6 +2999,41 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Geoff Tyler",
+    "specialty": "Respiratory physician",
+    "practice": "Newcastle Lung Group",
+    "address": "26 John Street, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4940 8000",
+    "fax": "",
+    "email": "referrals@newlung.com.au",
+    "ereferral": "",
+    "website": "https://www.newlung.com.au/dr-geoff-tyler/",
+    "interests": [
+     "Occupational lung disease",
+     "Interstitial lung disease"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Private practice limited to occupational lung disease and medicolegal work (practice website)"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newlung.com.au/our-doctors/",
+     "https://www.newlung.com.au/dr-geoff-tyler/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -3124,6 +3442,41 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Stephen Oakley",
+    "specialty": "Rheumatologist",
+    "practice": "Nova Dermatology",
+    "address": "221 Broadmeadow Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4033 1510",
+    "fax": "",
+    "email": "reception@novadermatology.com.au",
+    "ereferral": "",
+    "website": "https://www.novadermatology.com.au/stephen-oakley",
+    "interests": [
+     "Autoimmune disease affecting the joints",
+     "Autoimmune conditions that affect the skin, with dermatologists"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Practice website: pause on referrals"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.novadermatology.com.au/ourteam",
+     "https://www.novadermatology.com.au/stephen-oakley"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },

@@ -2434,6 +2434,42 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Komal Vora",
+    "specialty": "Paediatric endocrinologist",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-komal-vora/",
+    "interests": [
+     "Paediatric diabetes",
+     "Thyroid and pituitary conditions",
+     "Growth and puberty"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/",
+     "https://www.newcastlepaediatric.com.au/our-team/dr-komal-vora/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },

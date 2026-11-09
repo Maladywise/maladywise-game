@@ -397,6 +397,40 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jenna Besley",
+    "specialty": "Ophthalmologist (comprehensive)",
+    "practice": "Ophthalmic Associates",
+    "address": "106 Victoria Street, East Maitland NSW 2323 (also Warners Bay)",
+    "suburb": "East Maitland",
+    "phone": "02 4003 4881",
+    "fax": "02 8287 4778",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ophthalmicassociates.com.au/dr-jenna-besley/",
+    "interests": [
+     "Cataract",
+     "Pterygium",
+     "Eyelid (oculoplastic) surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ophthalmicassociates.com.au/doctors/",
+     "https://www.ophthalmicassociates.com.au/dr-jenna-besley/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -3761,6 +3795,159 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rajendra Kumar",
+    "specialty": "Paediatric surgeon",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-rajendra-kumar/",
+    "interests": [
+     "Keyhole surgery in children",
+     "Children's chest surgery",
+     "Newborn surgery",
+     "Circumcision and hypospadias"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children up to 16",
+     "hospitals": [
+      "John Hunter Children's Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/",
+     "https://www.newcastlepaediatric.com.au/our-team/dr-rajendra-kumar/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Jodie-Kate Williams",
+    "specialty": "General surgeon",
+    "practice": "Surgery Central",
+    "address": "Level 2, Suite 1, Lake Macquarie Specialist Medical Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 8177",
+    "fax": "",
+    "email": "admin@surgerycentral.com.au",
+    "ereferral": "",
+    "website": "https://surgerycentral.co/dr-jodie-kate-williams",
+    "interests": [
+     "Gallbladder",
+     "Hernia",
+     "Reflux"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Belmont Hospital",
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://surgerycentral.co/meet-our-team",
+     "https://surgerycentral.co/dr-jodie-kate-williams"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Suzanne Di Sano",
+    "specialty": "General, upper GI and bariatric surgeon",
+    "practice": "Surgery Central",
+    "address": "Level 2, Suite 1, Lake Macquarie Specialist Medical Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 8177",
+    "fax": "",
+    "email": "admin@surgerycentral.com.au",
+    "ereferral": "",
+    "website": "https://surgerycentral.co/dr-suzanne-di-sano",
+    "interests": [
+     "Keyhole and robotic surgery",
+     "Upper GI and weight loss surgery",
+     "Complex hernia repair"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Maitland Private Hospital",
+      "Newcastle Private Hospital",
+      "Maitland Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://surgerycentral.co/meet-our-team",
+     "https://surgerycentral.co/dr-suzanne-di-sano"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Nicholas Bull",
+    "specialty": "General surgeon (liver, pancreas and bile duct)",
+    "practice": "Surgery Central",
+    "address": "Level 2, Suite 1, Lake Macquarie Specialist Medical Centre, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4947 8177",
+    "fax": "",
+    "email": "admin@surgerycentral.com.au",
+    "ereferral": "",
+    "website": "https://surgerycentral.co/dr-nicholas-bull",
+    "interests": [
+     "Liver, pancreas, gallbladder and bile duct surgery",
+     "Hernia repair"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital",
+      "Lake Macquarie Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://surgerycentral.co/meet-our-team",
+     "https://surgerycentral.co/dr-nicholas-bull"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },
@@ -5641,6 +5828,321 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr James Cush",
+    "specialty": "Consultant paediatrician",
+    "practice": "Hunter ENT",
+    "address": "Konara, Suite 1, Level 3, 15 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "02 4965 5684",
+    "email": "bookings@hunterent.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterent.com.au/doctors/dr-james-cush/",
+    "interests": [
+     "Indigenous health",
+     "Neonatology",
+     "Paediatric diabetes",
+     "Bronchoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterent.com.au/your-team/",
+     "https://www.hunterent.com.au/doctors/dr-james-cush/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Fergus Elder",
+    "specialty": "General paediatrician",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-fergus-elder/",
+    "interests": [
+     "Children's breathing and sleep problems"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "Maitland Hospital",
+      "Maitland Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Practice website: accepts referrals"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/",
+     "https://www.newcastlepaediatric.com.au/our-team/dr-fergus-elder/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Alison Freeth",
+    "specialty": "General paediatrician",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-alison-freeth/",
+    "interests": [
+     "General paediatrics"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/",
+     "https://www.newcastlepaediatric.com.au/our-team/dr-alison-freeth/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Coen Butters",
+    "specialty": "General paediatrician and paediatric infectious diseases physician",
+    "practice": "The Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-coen-butters/",
+    "interests": [
+     "Infections in children with weak immune systems",
+     "Common and unusual infections",
+     "Recurrent fever",
+     "Immunisation and travel advice"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/",
+     "https://www.newcastlepaediatric.com.au/our-team/dr-coen-butters/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Ciara Shun",
+    "specialty": "General paediatrician",
+    "practice": "Hunter Valley Paediatrics",
+    "address": "Level 2, 182A Maitland Road, Mayfield NSW 2304",
+    "suburb": "Mayfield",
+    "phone": "02 4070 9200",
+    "fax": "02 4070 9211",
+    "email": "reception@hvpaeds.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleypaeds.com.au/dr-ciara-shun",
+    "interests": [
+     "General paediatrics",
+     "Medical and developmental concerns"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Practice website: new paediatrician, starting soon"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleypaeds.com.au/about-us",
+     "https://huntervalleypaeds.com.au/dr-ciara-shun"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Anil Lakkundi",
+    "specialty": "Neonatologist (baby clinic)",
+    "practice": "Hunter Children's Clinics",
+    "address": "25 Llewellyn Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4072 1877",
+    "fax": "02 4027 5754",
+    "email": "admin@hcc.com.au",
+    "ereferral": "",
+    "website": "https://hunterchildrensclinics.com.au/team/anillakkundi/index.html",
+    "interests": [
+     "Babies born extremely early",
+     "Baby clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "babies",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterchildrensclinics.com.au/",
+     "https://hunterchildrensclinics.com.au/team/anillakkundi/index.html"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Sarahn Lovett",
+    "specialty": "Paediatrician",
+    "practice": "Lake Macquarie Paediatrics",
+    "address": "Level 1, Suite 11, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4910 0805",
+    "fax": "02 4910 0848",
+    "email": "admin@lakemacpaediatrics.com.au",
+    "ereferral": "",
+    "website": "https://www.lakemacpaediatrics.com.au/dr-sarahn-lovett-bmedsci-mbbs-dip-clin-ed/",
+    "interests": [
+     "Development",
+     "Follow-up of babies after neonatal intensive care",
+     "Autism",
+     "Healthy lifestyles",
+     "Chronic and complex conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacpaediatrics.com.au/",
+     "https://www.lakemacpaediatrics.com.au/dr-sarahn-lovett-bmedsci-mbbs-dip-clin-ed/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Elizabeth (Liz) Percival",
+    "specialty": "Paediatrician",
+    "practice": "Lake Macquarie Paediatrics",
+    "address": "Level 1, Suite 11, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4910 0805",
+    "fax": "02 4910 0848",
+    "email": "admin@lakemacpaediatrics.com.au",
+    "ereferral": "",
+    "website": "https://www.lakemacpaediatrics.com.au/dr-elizabeth-liz-percival-b-med-fracp/",
+    "interests": [
+     "Children of all ages, simple to complex problems",
+     "Food allergy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacpaediatrics.com.au/",
+     "https://www.lakemacpaediatrics.com.au/dr-elizabeth-liz-percival-b-med-fracp/"
+    ],
+    "checked": "9 November 2026"
+   },
+   {
+    "name": "Dr Krista Monkhouse",
+    "specialty": "General paediatrician",
+    "practice": "Lake Macquarie Paediatrics",
+    "address": "Level 1, Suite 11, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4910 0805",
+    "fax": "02 4910 0848",
+    "email": "admin@lakemacpaediatrics.com.au",
+    "ereferral": "",
+    "website": "https://www.lakemacpaediatrics.com.au/dr-krista-monkhouse/",
+    "interests": [
+     "Birth to adolescence",
+     "Young people and substance use",
+     "Nicotine and vaping cessation for young people"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "birth to adolescence",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacpaediatrics.com.au/",
+     "https://www.lakemacpaediatrics.com.au/dr-krista-monkhouse/"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  },

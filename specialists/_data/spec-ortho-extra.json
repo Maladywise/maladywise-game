@@ -1787,6 +1787,45 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Daniel Benz",
+    "specialty": "Orthopaedic surgery (shoulder, knee and trauma)",
+    "practice": "Hunter Orthopaedic Surgery",
+    "address": "Medical Centre 2, Suite 13, 173 Chisholm Road, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 3776",
+    "fax": "",
+    "email": "admin@hunterortho.com.au",
+    "ereferral": "",
+    "website": "https://www.hunterortho.com.au/dr_daniel_benz",
+    "interests": [
+     "Shoulder",
+     "Knee",
+     "General orthopaedic trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital",
+      "Maitland Hospital",
+      "John Hunter Hospital",
+      "Belmont Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterortho.com.au/",
+     "https://www.hunterortho.com.au/dr_daniel_benz"
+    ],
+    "checked": "9 November 2026"
    }
   ]
  }
