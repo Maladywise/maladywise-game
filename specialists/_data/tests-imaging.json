@@ -843,6 +843,175 @@
   "note": "<p class=\"sp-note\">Many neurologists do nerve conduction studies and EMG in their own rooms: see <a href=\"/specialists/neurology/\">Neurology</a>. Public: ask your GP to refer to <a href=\"https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/outpatient-services\" rel=\"noopener\">John Hunter Hospital Neurology</a>.</p>",
   "people": [
    {
+    "name": "Hunter Neurology Neurodiagnostic (Shortland)",
+    "specialty": "Nerve conduction studies, EEG and vestibular testing",
+    "practice": "Hunter Neurology",
+    "address": "20 Mawson Street, Shortland NSW 2307",
+    "suburb": "Shortland",
+    "phone": "02 4963 7837",
+    "fax": "02 8313 5733",
+    "email": "info@hunterneurology.com.au",
+    "ereferral": "",
+    "website": "https://hunterneurology.com.au/",
+    "interests": [
+     "Nerve conduction studies (NCS)",
+     "EEG: routine, sleep-deprived and prolonged recordings",
+     "Vestibular testing (hearing and balance studies)",
+     "Online bookings (as stated)",
+     "Neurologists: Dr Keith Burton; A/Prof Andrew Bleasel (epilepsy and neurophysiology)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterneurology.com.au/contact/",
+     "https://hunterneurology.com.au/tests/",
+     "https://hunterneurology.com.au/dr-keith-burton/",
+     "https://hunterneurology.com.au/dr-bleasel/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Neurology Neurodiagnostic (East Maitland)",
+    "specialty": "Nerve conduction studies, EEG and vestibular testing",
+    "practice": "Hunter Neurology",
+    "address": "6/23 Mitchell Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4963 7837",
+    "fax": "02 8313 5733",
+    "email": "info@hunterneurology.com.au",
+    "ereferral": "",
+    "website": "https://hunterneurology.com.au/",
+    "interests": [
+     "Nerve conduction studies (NCS)",
+     "EEG: routine, sleep-deprived and prolonged recordings",
+     "Vestibular testing (hearing and balance studies)",
+     "Online bookings (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://hunterneurology.com.au/contact/",
+     "https://hunterneurology.com.au/tests/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Pacific Neurology",
+    "specialty": "Neurology and neurodiagnostics: NCS/EMG, EEG, evoked potentials, vestibular tests",
+    "practice": "Pacific Neurology (Dr V Krishnamurthy)",
+    "address": "481 Pacific Highway, Belmont NSW 2280; also Suite 3, Albion Centre, 2 Albion Street, Maitland NSW 2320",
+    "suburb": "Belmont and Maitland",
+    "phone": "02 4001 0506",
+    "fax": "02 4027 5826",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pacificneurology.com.au/public/",
+    "interests": [
+     "Nerve conduction studies and needle EMG",
+     "Adult and paediatric EEG, routine and sleep-deprived",
+     "Evoked potentials",
+     "Vestibular function (hearing and balance) testing",
+     "Injectable therapies: chronic migraine, dystonia, hemifacial spasm",
+     "Urgent EEG, NCS/EMG and vestibular tests: about 1–2 weeks (as stated); consultations 6–9 months (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "Tests 1–2 weeks; new consults 6–9 months (as stated)",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://pacificneurology.com.au/public/find-us/",
+     "https://pacificneurology.com.au/public/about-us/",
+     "https://pacificneurology.com.au/public/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/belmont-2280-nsw/pacific-neurology"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Broadmeadow Neurology: neurophysiology testing clinic",
+    "specialty": "Nerve conduction studies, EMG and EEG",
+    "practice": "Broadmeadow Neurology (Dr Andre Loiselle, ANZAN-accredited neurophysiologist)",
+    "address": "20 Lambton Road, Broadmeadow NSW 2292",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 3203",
+    "fax": "02 8211 5193",
+    "email": "refer@20lambtonroad.com.au",
+    "ereferral": "",
+    "website": "https://broadmeadowneurology.com.au/",
+    "interests": [
+     "Nerve conduction studies and EMG",
+     "EEG testing",
+     "Carpal tunnel syndrome and neuropathy testing",
+     "Testing clinic accepting new referrals; consultation books closed (as stated)",
+     "$50 non-refundable booking deposit for NCS (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": true,
+     "np_note": "Testing clinic open to new referrals; neurology consultation books closed (as stated)",
+     "np_checked": "9 November 2026"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://broadmeadowneurology.com.au/for-referrers/",
+     "https://broadmeadowneurology.com.au/contact-us/",
+     "https://broadmeadowneurology.com.au/about-us/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
     "name": "Seer Medical Newcastle",
     "specialty": "Home video-EEG (EEG with ECG) monitoring",
     "practice": "Seer Medical",
