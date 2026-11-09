@@ -934,6 +934,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     }
     // Health self-checks, near the top of the home page (Medical mode only).
     function healthLinks() {
+      return ""; // paused: health check stays in Tools only (beta)
       if (NORMIE) return "";
       return '<nav class="mw-hc" aria-label="Health checks"><a class="mw-hc-main" href="/tools/health-check/"><span><small>What health checks do I need?</small><b>Health check by age</b></span><i aria-hidden="true">\u2192</i></a>' +
         '<a href="/mental-health-check/"><span><small>How are you going?</small><b>Mental health check</b></span><i aria-hidden="true">\u2192</i></a></nav>';

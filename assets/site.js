@@ -8,8 +8,7 @@ window.MW_HOME = {
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
-      { t: "Specialists", href: "/specialists/", d: "Hunter referral list", au: true },
-      { t: "Health check", href: "/tools/health-check/", d: "Checks by age" }
+      { t: "Specialists", href: "/specialists/", d: "Hunter referral list", au: true }
     ] },
     { t: "For doctors", medical: true, items: [
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
