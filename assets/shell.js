@@ -1209,7 +1209,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     if (medOnly || q.get("date") || q.get("play") !== null) { start(); return; }
     sp.style.setProperty("--accent", accentOf(g));
     var einToday = (!g.weekly && !g.dailyLine || (((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] || []).indexOf(today) >= 0) && diffFor(g, today, dow) === "Einstein";
-    sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
+    sp.innerHTML = '<div class="splash-in">' + medNote + (g.nmode ? '<span class="mw-npill">\ud83d\ude42 Normie mode</span>' : "") + (g.special && g.special.dow === dow && !(g.special.from && today < g.special.from) ? '<span class="pill sup">' + g.special.label + "</span>" : "") + (einToday ? '<span class="pill ein">' + EIN + " Einstein day</span>" : "") + '<div class="tile' + (einToday ? " ein" : "") + '">' + g.icon + "</div><p class=\"sp-title\" role=\"heading\" aria-level=\"2\">" + g.name + "</p><p>" + g.tagline + "</p>" + spPrev(g.id) + (g.quip ? '<p class="meta">' + g.quip + "</p>" : "") +
       '<button class="big" type="button" id="mw-play">' + (st && st.done ? "Review" : "Play") + "</button>" +
       '<div class="meta"><b>' + nice(today, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</b><br>" + (g.dailyLine ? g.dailyLine : g.weekly ? (g.weeklyLine || "A new quiz every Monday. Ten questions, one theme.") : "Today: " + diffFor(g, today, dow) + ". " + DIFFQ[diffFor(g, today, dow)]) +
       (st && st.s.streak ? " &middot; Streak &#128293; " + st.s.streak : "") + "</div><p class=\"mw-live\" hidden></p></div>";
@@ -1217,6 +1217,34 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     window.MW_onTheme = function () { sp.style.setProperty("--accent", accentOf(g)); };
   }
 
+
+
+  // ---------- splash previews: a tiny, spoiler-free picture of each game under the tagline ----------
+  function spPrev(id) {
+    function cells(n, f) { var h = ""; for (var i = 0; i < n; i++) h += f(i); return h; }
+    function t(c, x) { return '<i class="' + (c || "") + '">' + (x || "") + "</i>"; }
+    var W = "w", Y = "y", G = "g", A = "a", K = "k", h = "";
+    switch (id) {
+      case "wordemic": h = '<div class="pv-grid c5">' + [K, Y, K, G, K].map(function (c) { return t(c); }).join("") + [G, K, G, G, Y].map(function (c) { return t(c); }).join("") + cells(5, function () { return t(); }) + "</div>"; break;
+      case "comorbix": h = '<div class="pv-grid c4 wide">' + cells(4, function () { return t(A); }) + cells(8, function () { return t(); }) + "</div>"; break;
+      case "morphemia": h = '<div class="pv-hex">' + cells(7, function (i) { return t(i === 3 ? A : ""); }) + "</div>"; break;
+      case "linkase": h = '<div class="pv-chain">' + t(A) + "<b></b>" + t(A) + "<b></b>" + t() + "<b></b>" + t() + "</div>"; break;
+      case "gridectomy": case "cryptogenic": var bl = id === "gridectomy" ? [4, 6, 18, 20] : [1, 3, 11, 13, 21, 23]; h = '<div class="pv-grid c5 sq">' + cells(25, function (i) { return t(bl.indexOf(i) >= 0 ? K + " blk" : (i < 5 ? A + " soft" : "")); }) + "</div>"; break;
+      case "suturix": h = '<div class="pv-grid c6 sq ws">' + cells(18, function (i) { return t([1, 8, 15].indexOf(i) >= 0 ? A : ""); }) + "</div>"; break;
+      case "triviosis": case "grandrounds": h = '<div class="pv-quiz"><b></b>' + cells(id === "triviosis" ? 4 : 0, function (i) { return t(i === 2 ? A : ""); }) + (id === "grandrounds" ? '<div class="pv-dots">' + cells(20, function (i) { return t(i < 6 ? A : ""); }) + "</div>" : "") + "</div>"; break;
+      case "dx": h = '<div class="pv-clues">' + cells(3, function (i) { return '<b class="' + (i ? "" : "on") + '"><em>' + (i + 1) + "</em></b>"; }) + "</div>"; break;
+      case "zebritis": h = '<div class="pv-meter"><b></b><span><i style="width:72%"></i></span><small>Rarer = more points</small></div>'; break;
+      case "panelysis": h = '<div class="pv-lab">' + ["Na|138|", "K|5.9|▲", "Cr|210|▲", "Hb|128|"].map(function (r) { var c = r.split("|"); return "<p><span>" + c[0] + "</span><b>" + c[1] + "</b><em>" + c[2] + "</em></p>"; }).join("") + "</div>"; break;
+      case "arrhythmix": h = '<svg class="pv-ecg" viewBox="0 0 220 50" aria-hidden="true"><path d="M0 30h20l5-6 5 6h8l4 4 6-30 6 40 4-14h22l5-6 5 6h8l4 4 6-30 6 40 4-14h22l5-6 5 6h8l4 4 6-30 6 40 4-14h12"/></svg>'; break;
+      case "sudokrine": h = '<div class="pv-grid c4 sq">' + cells(16, function (i) { return t(i % 5 === 0 ? A : (i === 2 || i === 7 || i === 9 ? "soft n" : ""), i === 2 ? "3" : i === 7 ? "1" : i === 9 ? "4" : ""); }) + "</div>"; break;
+      case "glimpsis": h = '<div class="pv-photo"><span></span><b></b></div>'; break;
+      case "opacitis": h = '<div class="pv-photo scan"><span></span><b></b></div>'; break;
+      case "labelosis": h = '<div class="pv-body"><svg viewBox="0 0 60 70" aria-hidden="true"><circle cx="30" cy="11" r="8"/><path d="M18 22h24l6 22h-6l-4-14v38h-6V48h-4v20h-6V30l-4 14h-6z"/></svg>' + cells(5, function (i) { return "<em>" + (i + 1) + "</em>"; }) + "</div>"; break;
+      case "sensitosis": h = '<div class="pv-meter"><b></b><span><i style="width:85%"></i><u style="left:62%"></u></span><small>Your guess vs the real number</small></div>'; break;
+      default: return "";
+    }
+    return '<div class="sp-prev" aria-hidden="true">' + h + "</div>";
+  }
 
   // ---------- feedback: report puzzle errors, image licence problems, bugs ----------
   function feedback(pre, where) {
