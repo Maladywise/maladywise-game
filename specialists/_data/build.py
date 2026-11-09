@@ -130,7 +130,9 @@ TAGMAP = [
  ("ME/CFS", r"chronic fatigue|me/cfs|\bcfs\b|myalgic"), ("POTS/dysautonomia", r"\bpots\b|dysautonomia|postural orthostatic"), ("mitochondrial disease", r"mitochondri"),
  ("gut health and IBS", r"\bibs\b|fodmap|irritable bowel|gut health|gastro"), ("coeliac", r"coeliac|celiac"), ("weight", r"weight"), ("kidney", r"kidney|renal"),
  ("heart health", r"cardiac|heart|cholesterol"), ("cancer", r"cancer|oncolog"), ("older adults", r"older adult|ageing|aged care|elderly|dementia"),
- ("feeding", r"feeding|fussy eat"), ("language and literacy", r"language|literacy|dyslex|reading"), ("voice", r"\bvoice\b"),
+ ("feeding", r"feeding|fussy eat"),
+ ("endometriosis", r"endometrios"), ("urogynaecology", r"urogyn|pelvic floor surg|uterovaginal prolapse|incontinence surg|continence surg|mesh (complication|removal)"), ("fertility", r"fertility|\bivf\b|infertil|egg freez"),
+ ("menopause", r"menopaus"), ("colposcopy", r"colposcop|cervical screening|pap smear"), ("adolescent gynaecology", r"adolescent gyn|paediatric and adolescent gyn"), ("language and literacy", r"language|literacy|dyslex|reading"), ("voice", r"\bvoice\b"),
  ("foot care", r"foot|feet|nail|orthotic|heel"), ("hearing and tinnitus", r"hearing|tinnitus|audiolog"), ("work injury", r"workers comp|work(place)? injur|icare|ctp\b"),
 ]
 TAGRX = [(t, re.compile(rx, re.I)) for t, rx in TAGMAP]

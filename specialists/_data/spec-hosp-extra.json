@@ -1243,6 +1243,296 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John Bailey",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr John Bailey",
+    "address": "119 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4959 3883",
+    "fax": "",
+    "email": "info@hunterwomens.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Obstetrics",
+     "Gynaecology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-john-bailey/",
+     "https://specialists.healthscope.com.au/specialist/john-bailey-med0001196065"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lauren Ferris",
+    "specialty": "Gynaecology (urogynaecology)",
+    "practice": "Brightwell Health",
+    "address": "Suite 1, 710 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4943 3122 (Lake Macquarie Private Hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Urogynaecology",
+     "Pelvic floor surgery",
+     "Pelvic organ prolapse",
+     "Urinary incontinence",
+     "Mesh complications",
+     "Fistulas",
+     "Birth injury",
+     "Bladder pain conditions"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital",
+      "John Hunter Hospital (staff specialist)"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-lauren-ferris/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Mohamed Galal",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr Mohamed Galal",
+    "address": "Suite 12, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "02 4958 4288 (Warners Bay Private Hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "All aspects of obstetrics and gynaecology",
+     "Advanced obstetric ultrasound"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-mohamed-galal/",
+     "https://www.ramsayhealth.com.au/Specialists/warners-bay-private-hospital/gynaecology/106165/dr-mohamed-galal"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jason Mak",
+    "specialty": "Gynaecology",
+    "practice": "Gaiacology",
+    "address": "Level 2, Suite 11, 6-8 Sydney Street, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122 (Lake Macquarie Private Hospital)",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Endometriosis",
+     "Chronic pelvic pain",
+     "General gynaecology",
+     "Gynaecology ultrasound (through the practice)",
+     "Pelvic floor physiotherapy and dietetics at the practice"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-jason-mak/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ljiljana Miljkovic-Petkovic",
+    "specialty": "Fertility (IVF) and gynaecology",
+    "practice": "Dr Ljiljana Miljkovic-Petkovic",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4957 2743",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Fertility (IVF)",
+     "Laparoscopy (minimally invasive surgery)",
+     "Heavy periods, fibroids and uterovaginal prolapse",
+     "Colposcopy and abnormal Pap smears",
+     "MonaLisa Touch vaginal laser"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/ljiljana-miljkovic-petkovic-med0001183387"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Geoffrey Otton",
+    "specialty": "Gynaecological oncology",
+    "practice": "Lambton Women's Health",
+    "address": "Suite 5, 25 Morehead Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4952 1037",
+    "fax": "02 4952 1017",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Gynaecological oncology (gynaecological cancer)",
+     "Member of the Hunter New England gynaecological cancer team"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/geoffrey-otton-med0001151064",
+     "https://menopause.org.au/find-an-ams-member/item/dr-geoffrey-otton",
+     "https://www.canrefer.org.au/Specialists/Geoffrey-Otton"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked",
+    "listed_by": [
+     {
+      "org": "Australasian Menopause Society",
+      "label": "Listed by Australasian Menopause Society",
+      "url": "https://menopause.org.au/find-an-ams-member/item/dr-geoffrey-otton",
+      "checked": "9 November 2026",
+      "tag": "menopause"
+     }
+    ]
+   },
+   {
+    "name": "Dr Leila Usher",
+    "specialty": "Obstetrics and gynaecology",
+    "practice": "Dr Leila Usher",
+    "address": "Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "admin@drleilausher.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Prenatal counselling",
+     "High-risk pregnancies",
+     "Pregnancy after loss",
+     "Gender diverse families",
+     "Heavy or painful periods",
+     "Ovarian cysts",
+     "Pelvic pain and endometriosis",
+     "Sexual health and fertility",
+     "Contraception",
+     "Perimenopause and menopause",
+     "Prolapse and urinary incontinence",
+     "Abnormal cervical screening and colposcopy",
+     "Vulval disorders",
+     "Minimally invasive surgery (laparoscopy, hysteroscopy) and vaginal surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [
+     "Gender diverse families"
+    ],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-leila-usher"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
    }
   ]
  },
