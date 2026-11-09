@@ -498,10 +498,17 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "d287f1727e9e",
-"v": "f55ed898",
+"key": "f545b633f41a",
+"v": "c8c8b8db",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
+},
+"deep-dives-adhd": {
+"url": "/deep-dives/adhd/",
+"key": "aec1ee00d9b2",
+"v": "94b23f1a",
+"label": "Deep dive for clinicians · #8",
+"title": "ADHD"
 },
 "deep-dives-autism": {
 "url": "/deep-dives/autism/",

@@ -128,6 +128,7 @@ EXERCISES = {
 
 # deep dive folder -> (file name, alt / short caption)
 DEEP_DIVES = {
+    "adhd": ("adhd-genes-cortical-maturation-diagnosis-diagram", "ADHD diagram: genes, delayed cortical maturation, inattention and hyperactivity-impulsivity, diagnosis, stimulants"),
     "autism": ("autism-genes-development-support-needs-diagram", "Autism diagram: genes and prenatal factors, brain development, core features and support needs; MMR not a cause"),
     "behcets": ("behcets-disease-pathophysiology-flowchart", "Behçet's disease pathophysiology flowchart: genes and triggers to neutrophils, T cells and vasculitis"),
     "coeliac": ("coeliac-disease-pathophysiology-flowchart", "Coeliac disease flowchart: gluten, tTG and HLA-DQ2/DQ8 to positive serology and a flat biopsy"),
