@@ -1,0 +1,1618 @@
+{
+ "physiotherapy": {
+  "name": "Physiotherapy",
+  "people": [
+   {
+    "name": "Recovery Station - Maitland",
+    "specialty": "Physiotherapy",
+    "practice": "Recovery Station - Maitland",
+    "address": "12 Ken Tubman Drive, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "1300 588 851",
+    "fax": "1300 522 216",
+    "email": "admin@recoverystation.com.au",
+    "ereferral": "",
+    "website": "https://recoverystation.com.au",
+    "interests": [
+     "Physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/recovery-station-maitland/physiotherapy/23b307d8-6834-fcf5-ed6c-3555600e39b9"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Peak Physio - Rutherford",
+    "specialty": "Physiotherapy",
+    "practice": "Peak Physio",
+    "address": "Suite 1, 15-17 West Mall, Rutherford NSW 2320",
+    "suburb": "Rutherford",
+    "phone": "02 4932 5555",
+    "fax": "02 4932 6555",
+    "email": "rutherford@peak-physio.com.au",
+    "ereferral": "",
+    "website": "https://www.peak-physio.com.au/",
+    "interests": [
+     "Physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/rutherford-2320-nsw/peak-physio-rutherford/physiotherapy/97ed8e89-6931-4464-8a2c-2b9beb095a9e"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "East Maitland Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "East Maitland Physiotherapy",
+    "address": "253 Newcastle Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4934 5300",
+    "fax": "",
+    "email": "admin@eastmaitphysio.com.au",
+    "ereferral": "",
+    "website": "http://www.eastmaitphysio.com.au",
+    "interests": [
+     "Physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/east-maitland-physiotherapy/physiotherapy/5eacaf40-b061-417c-1983-4db7604c817e"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Macquarie Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Macquarie Physiotherapy",
+    "address": "1 Skyline Way, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4942 1322",
+    "fax": "02 4947 8123",
+    "email": "gateshead@macphysiotherapy.com",
+    "ereferral": "",
+    "website": "https://macquariephysiotherapy.com.au",
+    "interests": [
+     "Manual therapy",
+     "Exercise therapy",
+     "Dry needling",
+     "Joint mobilisation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/macquarie-physiotherapy/physiotherapy/c3c9c2de-ccac-2426-5453-f2be624f59fb"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Advanced Physiotherapy & Exercise Physiology",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "Advanced Physiotherapy & Exercise Physiology",
+    "address": "Building 2, Unit 2, 335 Hillsborough Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4954 5330",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastle-physiotherapy.com.au/",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Levaro Allied Health",
+    "specialty": "Physiotherapy (including neurological)",
+    "practice": "Levaro Allied Health",
+    "address": "Unit 2, 17 Templar Place, Bennetts Green NSW 2290",
+    "suburb": "Bennetts Green",
+    "phone": "02 4001 0525",
+    "fax": "",
+    "email": "contact@levaro.com.au",
+    "ereferral": "",
+    "website": "https://levaro.com.au",
+    "interests": [
+     "Neurological physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/bennetts-green-2290-nsw/levaro-allied-health/physiotherapy/d2bf540f-7001-4a41-b647-25caef8994a7"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Beyond Boundaries Rehab",
+    "specialty": "Physiotherapy, OT and speech pathology (paediatric and adult rehab)",
+    "practice": "Beyond Boundaries Rehab",
+    "address": "4 Ida Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4911 2308",
+    "fax": "",
+    "email": "admin@bbrehab.com.au",
+    "ereferral": "",
+    "website": "https://beyondboundariesrehab.com.au",
+    "interests": [
+     "Paediatric and adult rehabilitation",
+     "Hip surveillance",
+     "Orthopaedic and musculoskeletal physiotherapy",
+     "Casting and splinting",
+     "Hydrotherapy",
+     "Complex equipment prescription",
+     "Communication and swallowing difficulties",
+     "Modified barium swallow",
+     "Saliva management",
+     "Tone management clinic",
+     "NDIS assessments and reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mitchell Physiotherapy",
+    "specialty": "Physiotherapy, exercise physiology and OT",
+    "practice": "Mitchell Physiotherapy",
+    "address": "314 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 6895",
+    "fax": "02 4934 1186",
+    "email": "admin@mitchellphysio.com.au",
+    "ereferral": "",
+    "website": "http://www.mitchellphysio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology",
+     "Occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/exercise-physiology/9e9c513d-5498-4b16-8144-da414d00eb59",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/physiotherapy/f00aad21-3908-66b9-efdb-79fafb716ff2"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PhysioStudio",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "PhysioStudio",
+    "address": "2 Verdant Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 9893",
+    "fax": "",
+    "email": "admin@physiostudio.com.au",
+    "ereferral": "",
+    "website": "https://physiostudio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology",
+     "Also Thornton Health Centre rooms"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/physiostudio/exercise-physiology/1289b85c-16f5-4e93-eeaf-a7e4a28859fe"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Victory Allied Health",
+    "specialty": "Exercise physiology and physiotherapy",
+    "practice": "Victory Allied Health",
+    "address": "2 Tenambit Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "1300 853 867",
+    "fax": "",
+    "email": "info@victoryalliedhealth.com.au",
+    "ereferral": "",
+    "website": "https://victoryalliedhealth.com.au",
+    "interests": [
+     "Exercise plans for health and fitness",
+     "Chronic disease management",
+     "Injury recovery",
+     "Athletes and sport",
+     "Also Cessnock rooms (2 North Avenue)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/victory-allied-health/exercise-physiology/0a012733-e647-4c6b-8d4d-d548375259b8"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Back In Motion - Kurri Kurri",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "Back In Motion - Kurri Kurri",
+    "address": "Kurri Professional Centre, Unit 2, 114 Barton Street, Kurri Kurri NSW 2327",
+    "suburb": "Kurri Kurri",
+    "phone": "02 4937 4964",
+    "fax": "02 4936 4174",
+    "email": "",
+    "ereferral": "",
+    "website": "https://bodyworxphysio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/kurri-kurri-2327-nsw/back-in-motion-kurri-kurri/exercise-physiology/9e88bf97-0ccd-73e9-993b-bdff835519e5"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "exercise-physiology": {
+  "name": "Exercise physiology",
+  "people": [
+   {
+    "name": "Advanced Physiotherapy & Exercise Physiology",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "Advanced Physiotherapy & Exercise Physiology",
+    "address": "Building 2, Unit 2, 335 Hillsborough Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4954 5330",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastle-physiotherapy.com.au/",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mitchell Physiotherapy",
+    "specialty": "Physiotherapy, exercise physiology and OT",
+    "practice": "Mitchell Physiotherapy",
+    "address": "314 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 6895",
+    "fax": "02 4934 1186",
+    "email": "admin@mitchellphysio.com.au",
+    "ereferral": "",
+    "website": "http://www.mitchellphysio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology",
+     "Occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/exercise-physiology/9e9c513d-5498-4b16-8144-da414d00eb59",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/physiotherapy/f00aad21-3908-66b9-efdb-79fafb716ff2"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PhysioStudio",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "PhysioStudio",
+    "address": "2 Verdant Drive, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 9893",
+    "fax": "",
+    "email": "admin@physiostudio.com.au",
+    "ereferral": "",
+    "website": "https://physiostudio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology",
+     "Also Thornton Health Centre rooms"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/physiostudio/exercise-physiology/1289b85c-16f5-4e93-eeaf-a7e4a28859fe"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Victory Allied Health",
+    "specialty": "Exercise physiology and physiotherapy",
+    "practice": "Victory Allied Health",
+    "address": "2 Tenambit Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "1300 853 867",
+    "fax": "",
+    "email": "info@victoryalliedhealth.com.au",
+    "ereferral": "",
+    "website": "https://victoryalliedhealth.com.au",
+    "interests": [
+     "Exercise plans for health and fitness",
+     "Chronic disease management",
+     "Injury recovery",
+     "Athletes and sport",
+     "Also Cessnock rooms (2 North Avenue)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/victory-allied-health/exercise-physiology/0a012733-e647-4c6b-8d4d-d548375259b8"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Back In Motion - Kurri Kurri",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "Back In Motion - Kurri Kurri",
+    "address": "Kurri Professional Centre, Unit 2, 114 Barton Street, Kurri Kurri NSW 2327",
+    "suburb": "Kurri Kurri",
+    "phone": "02 4937 4964",
+    "fax": "02 4936 4174",
+    "email": "",
+    "ereferral": "",
+    "website": "https://bodyworxphysio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/kurri-kurri-2327-nsw/back-in-motion-kurri-kurri/exercise-physiology/9e88bf97-0ccd-73e9-993b-bdff835519e5"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Leanda Howard Accredited Exercise Physiologist",
+    "specialty": "Exercise physiology",
+    "practice": "Leanda Howard Accredited Exercise Physiologist",
+    "address": "The North Wing, Suite 1, 2 Ocean Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4926 5616",
+    "fax": "02 4023 5115",
+    "email": "info@leandahoward.com",
+    "ereferral": "",
+    "website": "https://leandahoward.com",
+    "interests": [
+     "Exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/leanda-howard-accredited-exercise-physiologist/exercise-physiology/0eb59344-989c-75ea-58ad-a4e50785e454"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "podiatry": {
+  "name": "Podiatry",
+  "people": [
+   {
+    "name": "Port Stephens Foot Clinic - Raymond Terrace",
+    "specialty": "Podiatry",
+    "practice": "Port Stephens Foot Clinic",
+    "address": "Unit 1, 199 Adelaide Street, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "02 4040 0557",
+    "fax": "",
+    "email": "admin@pspodiatry.com",
+    "ereferral": "",
+    "website": "https://psfootclinic.com.au/locations/raymond-terrace",
+    "interests": [
+     "Podiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/raymond-terrace-2324-nsw/port-stephens-foot-clinic-raymond-terrace/podiatry/13c44bf3-1253-8745-f3df-64bc355f4dd2"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "PodCare Podiatry Health - Cessnock",
+    "specialty": "Podiatry",
+    "practice": "PodCare Podiatry Health - Cessnock",
+    "address": "1 Westcott Street, Cessnock NSW 2325",
+    "suburb": "Cessnock",
+    "phone": "0476 376 373",
+    "fax": "02 4991 1922",
+    "email": "reception@podcarehealth.com.au",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Lower limb, foot and nail assessment",
+     "Treatment plans and care management"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cessnock-2325-nsw/podcare-podiatry-health-cessnock/podiatry/1b969166-d10a-450e-0dcc-d1e3dae0de4d"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Alan Wigney Podiatry - Cessnock",
+    "specialty": "Podiatry",
+    "practice": "Alan Wigney Podiatry - Cessnock",
+    "address": "Cumberland Street Clinic, 45 Cumberland Street, Cessnock NSW 2325",
+    "suburb": "Cessnock",
+    "phone": "02 4990 3222",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Podiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cessnock-2325-nsw/alan-wigney-podiatry-cessnock/podiatry/7d1551c1-ab3f-f986-083c-122d7095c266"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Damian Mather Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Damian Mather Podiatry",
+    "address": "Andrew Nash Centre, Suite 4, 73-75 Cowper Street, Wallsend NSW 2287",
+    "suburb": "Wallsend",
+    "phone": "02 4951 1008",
+    "fax": "02 4951 5516",
+    "email": "reception@matherpodiatry.com.au",
+    "ereferral": "",
+    "website": "https://matherpodiatry.com.au",
+    "interests": [
+     "Podiatry",
+     "Veterans (DVA card accepted)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wallsend-2287-nsw/damian-mather-podiatry/podiatry/155d81ed-d3e4-d673-e0a8-a9a5fcfd0245"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Foot Feat Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Foot Feat Podiatry",
+    "address": "Jesmond Central, Level 1, Shop G01-G07, 28 Blue Gum Road, Jesmond NSW 2299",
+    "suburb": "Jesmond",
+    "phone": "0434 273 532",
+    "fax": "02 8078 0216",
+    "email": "reception@footfeat.com.au",
+    "ereferral": "",
+    "website": "https://footfeat.com.au",
+    "interests": [
+     "Podiatry",
+     "Home visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/jesmond-2299-nsw/foot-feat-podiatry/podiatry/3030efb7-9d09-45a5-aaa2-7eb07493de69"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Charlestown Podiatry Clinic",
+    "specialty": "Podiatry",
+    "practice": "Charlestown Podiatry Clinic",
+    "address": "48 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 2599",
+    "fax": "02 4943 1011",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Podiatry"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/charlestown-podiatry-clinic/podiatry/7a897590-6fff-ae6d-ca1e-949009f6cb17"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Natural Fit Podiatry & Footwear",
+    "specialty": "Podiatry",
+    "practice": "Natural Fit Podiatry & Footwear",
+    "address": "190 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4966 0799",
+    "fax": "",
+    "email": "charlestown@naturalfit.com.au",
+    "ereferral": "",
+    "website": "https://naturalfitfootwear.com.au",
+    "interests": [
+     "General foot care",
+     "Biomechanical and gait assessment",
+     "Orthotic therapy",
+     "Footwear assessment",
+     "Nail surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/natural-fit-podiatry-footwear/podiatry/3bae8c26-d54c-4177-bdaf-d34475d78ec4"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "occupational-therapy-adult": {
+  "name": "Occupational therapy (adults)",
+  "people": [
+   {
+    "name": "Mitchell Physiotherapy",
+    "specialty": "Physiotherapy, exercise physiology and OT",
+    "practice": "Mitchell Physiotherapy",
+    "address": "314 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 6895",
+    "fax": "02 4934 1186",
+    "email": "admin@mitchellphysio.com.au",
+    "ereferral": "",
+    "website": "http://www.mitchellphysio.com.au",
+    "interests": [
+     "Physiotherapy",
+     "Exercise physiology",
+     "Occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/exercise-physiology/9e9c513d-5498-4b16-8144-da414d00eb59",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mitchell-physiotherapy/physiotherapy/f00aad21-3908-66b9-efdb-79fafb716ff2"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Better Rehab Newcastle",
+    "specialty": "Occupational therapy, speech pathology and behaviour support",
+    "practice": "Better Rehab",
+    "address": "Suite 29, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "1300 073 422",
+    "fax": "",
+    "email": "admin@betterrehab.com.au",
+    "ereferral": "",
+    "website": "https://betterrehab.com.au/newcastle/",
+    "interests": [
+     "Occupational therapy",
+     "Speech pathology",
+     "Positive behaviour support",
+     "Video consultations"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cooks-hill-2300-nsw/better-rehab-newcastle/occupational-therapy/6c42ca7d-3686-451e-cd97-e46d2dcd801d"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Absolute Injury Solutions",
+    "specialty": "Occupational therapy",
+    "practice": "Absolute Injury Solutions",
+    "address": "Suite 107, 10-16 Kenrick Street, The Junction NSW 2291",
+    "suburb": "The Junction",
+    "phone": "02 4962 2802",
+    "fax": "",
+    "email": "admin@absoluteinjury.com.au",
+    "ereferral": "",
+    "website": "http://www.absoluteinjury.com.au/",
+    "interests": [
+     "Occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/the-junction-2291-nsw/absolute-injury-solutions/occupational-therapy/e0744761-df15-dcfe-23bd-275216c7f4e9"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Recovery Station - Newcastle",
+    "specialty": "Occupational therapy",
+    "practice": "Recovery Station - Newcastle",
+    "address": "32 Union Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "1300 588 851",
+    "fax": "1300 522 216",
+    "email": "admin@recoverystation.com.au",
+    "ereferral": "",
+    "website": "https://recoverystation.com.au",
+    "interests": [
+     "Occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/recovery-station-newcastle/occupational-therapy/6277b1e8-fe91-727d-1839-83ef7b183f91"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Unified Health",
+    "specialty": "Occupational therapy and dietetics",
+    "practice": "Unified Health",
+    "address": "86 Lawson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 6555 9607",
+    "fax": "",
+    "email": "hunter@unifiedhealth.com.au",
+    "ereferral": "",
+    "website": "https://unifiedhealth.com.au",
+    "interests": [
+     "Occupational therapy",
+     "Dietetics",
+     "All ability levels and care needs"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/unified-health/occupational-therapy/cbd91d0a-cfe9-4e2e-8381-c1c4007c699a",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/unified-health/dietetics/7695d197-fc8b-4d82-8263-73f9ab26d50f"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Humanomics - Edgeworth",
+    "specialty": "Occupational therapy and occupational health",
+    "practice": "Humanomics",
+    "address": "Suite 2, 13 Arnott Street, Edgeworth NSW 2285",
+    "suburb": "Edgeworth",
+    "phone": "02 4965 8199",
+    "fax": "02 4953 0673",
+    "email": "enquiry@humanomics.com.au",
+    "ereferral": "",
+    "website": "http://www.humanomics.com.au",
+    "interests": [
+     "Functional and return-to-work assessments",
+     "Workplace and workstation assessments",
+     "Job analysis",
+     "Manual handling and ergonomics training",
+     "Pre-employment and industry medicals"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/edgeworth-2285-nsw/humanomics-edgeworth/occupational-therapy/0898cd24-dea6-182f-b4ef-66c55c87f8d8"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "occupational-therapy-paediatric": {
+  "name": "Occupational therapy (children)",
+  "people": [
+   {
+    "name": "Beyond Boundaries Rehab",
+    "specialty": "Physiotherapy, OT and speech pathology (paediatric and adult rehab)",
+    "practice": "Beyond Boundaries Rehab",
+    "address": "4 Ida Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4911 2308",
+    "fax": "",
+    "email": "admin@bbrehab.com.au",
+    "ereferral": "",
+    "website": "https://beyondboundariesrehab.com.au",
+    "interests": [
+     "Paediatric and adult rehabilitation",
+     "Hip surveillance",
+     "Orthopaedic and musculoskeletal physiotherapy",
+     "Casting and splinting",
+     "Hydrotherapy",
+     "Complex equipment prescription",
+     "Communication and swallowing difficulties",
+     "Modified barium swallow",
+     "Saliva management",
+     "Tone management clinic",
+     "NDIS assessments and reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Stepping Stones Therapy For Children",
+    "specialty": "Occupational therapy (children)",
+    "practice": "Stepping Stones Therapy For Children",
+    "address": "Suite 3, 228 Union Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4951 2116",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://steppingstonesforchildren.com.au",
+    "interests": [
+     "Comprehensive OT assessments",
+     "Individual and group therapy",
+     "School and home visits",
+     "Training for parents and teachers"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/stepping-stones-therapy-for-children/occupational-therapy/dbcaed9b-cf88-08ed-f4fa-7310302cafe3"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-paediatric": {
+  "name": "Speech pathology (children)",
+  "people": [
+   {
+    "name": "Beyond Boundaries Rehab",
+    "specialty": "Physiotherapy, OT and speech pathology (paediatric and adult rehab)",
+    "practice": "Beyond Boundaries Rehab",
+    "address": "4 Ida Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4911 2308",
+    "fax": "",
+    "email": "admin@bbrehab.com.au",
+    "ereferral": "",
+    "website": "https://beyondboundariesrehab.com.au",
+    "interests": [
+     "Paediatric and adult rehabilitation",
+     "Hip surveillance",
+     "Orthopaedic and musculoskeletal physiotherapy",
+     "Casting and splinting",
+     "Hydrotherapy",
+     "Complex equipment prescription",
+     "Communication and swallowing difficulties",
+     "Modified barium swallow",
+     "Saliva management",
+     "Tone management clinic",
+     "NDIS assessments and reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Leaps & Bounds Speech Pathology - Charlestown",
+    "specialty": "Speech pathology",
+    "practice": "Leaps & Bounds Speech Pathology",
+    "address": "11 Canberra Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4942 2480",
+    "fax": "02 4943 6659",
+    "email": "admin@leapsandbounds.net.au",
+    "ereferral": "",
+    "website": "https://leapsandbounds.net.au",
+    "interests": [
+     "Speech pathology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/leaps-bounds-speech-pathology-charlestown/speech-pathology/cd9c3456-3c41-bc9d-4350-e40d0f0a8de1"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Quinn Health & Development",
+    "specialty": "Speech pathology, OT and psychology",
+    "practice": "Quinn Health & Development",
+    "address": "C4, 26 Oakdale Road, Gateshead NSW 2290",
+    "suburb": "Gateshead",
+    "phone": "02 4048 0857",
+    "fax": "",
+    "email": "contact@quinnhealth.com.au",
+    "ereferral": "",
+    "website": "https://quinnhealth.com.au",
+    "interests": [
+     "Speech pathology",
+     "Occupational therapy",
+     "Psychology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/quinn-health-develeopment/speech-pathology/daefa87e-9153-4858-b533-6cd75e6cf8d6"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Articulate Speech Pathology",
+    "specialty": "Speech pathology (children and adults)",
+    "practice": "Articulate Speech Pathology",
+    "address": "Unit 2, 30 Harrison Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "0401 347 766",
+    "fax": "",
+    "email": "info@articulatespeech.com.au",
+    "ereferral": "",
+    "website": "https://articulatespeech.com.au",
+    "interests": [
+     "Speech pathology for children and adults",
+     "Individualised therapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cardiff-2285-nsw/articulate-speech-pathology/speech-pathology/8aeb5024-84b0-4940-9564-244c0991597b"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Speech Pathology",
+    "specialty": "Speech pathology (children and adults)",
+    "practice": "Hunter Speech Pathology",
+    "address": "Lorn Surgery, Shop 10, 420-422 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 2622",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterspeechpathology.com",
+    "interests": [
+     "Speech and language delays and disorders in children",
+     "Fluency and stuttering",
+     "Voice",
+     "Early literacy",
+     "Adult swallowing (dysphagia)",
+     "Voice and speech therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-adult": {
+  "name": "Speech pathology (adults)",
+  "people": [
+   {
+    "name": "Beyond Boundaries Rehab",
+    "specialty": "Physiotherapy, OT and speech pathology (paediatric and adult rehab)",
+    "practice": "Beyond Boundaries Rehab",
+    "address": "4 Ida Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4911 2308",
+    "fax": "",
+    "email": "admin@bbrehab.com.au",
+    "ereferral": "",
+    "website": "https://beyondboundariesrehab.com.au",
+    "interests": [
+     "Paediatric and adult rehabilitation",
+     "Hip surveillance",
+     "Orthopaedic and musculoskeletal physiotherapy",
+     "Casting and splinting",
+     "Hydrotherapy",
+     "Complex equipment prescription",
+     "Communication and swallowing difficulties",
+     "Modified barium swallow",
+     "Saliva management",
+     "Tone management clinic",
+     "NDIS assessments and reports"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Articulate Speech Pathology",
+    "specialty": "Speech pathology (children and adults)",
+    "practice": "Articulate Speech Pathology",
+    "address": "Unit 2, 30 Harrison Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "0401 347 766",
+    "fax": "",
+    "email": "info@articulatespeech.com.au",
+    "ereferral": "",
+    "website": "https://articulatespeech.com.au",
+    "interests": [
+     "Speech pathology for children and adults",
+     "Individualised therapy"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cardiff-2285-nsw/articulate-speech-pathology/speech-pathology/8aeb5024-84b0-4940-9564-244c0991597b"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Speech Pathology",
+    "specialty": "Speech pathology (children and adults)",
+    "practice": "Hunter Speech Pathology",
+    "address": "Lorn Surgery, Shop 10, 420-422 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 2622",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://hunterspeechpathology.com",
+    "interests": [
+     "Speech and language delays and disorders in children",
+     "Fluency and stuttering",
+     "Voice",
+     "Early literacy",
+     "Adult swallowing (dysphagia)",
+     "Voice and speech therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "dietetics": {
+  "name": "Dietitians",
+  "people": [
+   {
+    "name": "Unified Health",
+    "specialty": "Occupational therapy and dietetics",
+    "practice": "Unified Health",
+    "address": "86 Lawson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "02 6555 9607",
+    "fax": "",
+    "email": "hunter@unifiedhealth.com.au",
+    "ereferral": "",
+    "website": "https://unifiedhealth.com.au",
+    "interests": [
+     "Occupational therapy",
+     "Dietetics",
+     "All ability levels and care needs"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/unified-health/occupational-therapy/cbd91d0a-cfe9-4e2e-8381-c1c4007c699a",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/unified-health/dietetics/7695d197-fc8b-4d82-8263-73f9ab26d50f"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Ethos Health",
+    "specialty": "Dietetics, physiotherapy and exercise physiology",
+    "practice": "Ethos Health",
+    "address": "Unit 1, 21 Annie Street, Wickham NSW 2293",
+    "suburb": "Wickham",
+    "phone": "02 4962 8700",
+    "fax": "",
+    "email": "enquiries@ethoshealth.com.au",
+    "ereferral": "",
+    "website": "https://ethoshealth.com.au",
+    "interests": [
+     "Dietetics",
+     "Personalised care for health goals"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wickham-2293-nsw/ethos-health/dietetics/323d4532-122d-a688-40ac-593b848b0e1f"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
