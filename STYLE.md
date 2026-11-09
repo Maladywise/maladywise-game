@@ -145,6 +145,18 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Every deep dive also has ONE inline SVG diagram (`<figure class="ddfig">`) in its Pathophysiology or Diagnosis section: accurate to the page's own cited content, site colours (CSS variables, so it works in dark mode), an aria-label describing it in words, and a one-line caption. Check at 390px that no text overflows its box.
 - After publishing, run `python3 _scripts/og_cards.py` (draws the deep dive card and refreshes the /deep-dives/ collage card), then `python3 _scripts/static_nav.py`, and commit the cards and pages.
 - /llms.txt is a plain-text map of the site for AI assistants (llmstxt.org). It is rebuilt daily by the days-soon GitHub Action; run python3 _scripts/build_llms.py after adding pages.
+## Image sources (from 9 Nov 2026; overrides narrower source lists in older task prompts)
+- **Licences:** only Public domain, CC0, CC BY or CC BY-SA (any version). Never NC, ND, "educational use only" or "free to view". Record title, author, source page, licence and licence URL; add " (cropped)" when cropped. CC BY-SA crops stay CC BY-SA.
+- **Allowed sources** (check the licence on EACH item's own page, never assume):
+  - Wikimedia Commons, including the "Images of Memorable Cases" collection (Herbert L. Fred and Hendrik A. van Dijk, CC BY).
+  - CDC Public Health Image Library (public domain items only).
+  - US government libraries: National Eye Institute (NEI) media, NIH/NCI Visuals Online, NIAID, NLM Digital Collections, USDA, NOAA and NASA (public-domain items only; some carry third-party copyright, so check).
+  - Wellcome Collection (CC BY or public domain items; good for history and trivia).
+  - Open-access journal figures, ONLY if the article page states CC BY or CC BY-SA (e.g. many Cureus, BMC, PLOS, Frontiers and MDPI case reports; search via PubMed Central's open-access subset or NLM Open-i). Use one clear panel, crop out labels that give the answer, and credit "Author et al., Journal Year, CC BY 4.0" with the DOI as the source page.
+  - Flickr or museum open-access images only with a PD, CC0, CC BY or CC BY-SA licence shown on the item.
+- **Never:** DermNet, Radiopaedia, EyeRounds (Iowa), AAO EyeWiki, LITFL, MSD/Merck Manuals, Medscape, UpToDate, StatPearls figures, textbook scans, Google Images results, or anything whose licence you can't see.
+- **Consent and privacy still apply whatever the licence:** no identifiable faces (crop to the sign), no children's faces, no genitals, no names or record numbers, and no patient details. Take an image down if anyone asks.
+
 ## Images for search (from Nov 2026)
 - Goal: the site's original diagrams rank in Google Images and Discover.
 - **Descriptive filenames** for content images: keyword-led, lowercase, hyphenated, in a sensible folder, e.g. `/img/exercises/side-lying-shoulder-external-rotation.webp`, `/img/deep-dives/stroke-types-ischaemic-haemorrhagic-flowchart.webp`.
