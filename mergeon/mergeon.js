@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "17";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "18";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -200,12 +200,21 @@
   // Daily mutations (Tue/Thu/Sat). Physics or scoring tweaks only; never the drop order.
   var MUTS = [
     { id: "bouncy", e: "🏀", n: ["Bouncy castle", "Bouncy castle"], d: ["Pieces have extra spring.", "Everything has extra spring."] },
-    { id: "slippery", e: "🧼", n: ["Freshly mopped", "Slippery deck"], d: ["The ward floor is slippery.", "Someone just mopped the deck."] },
+    { id: "slippery", e: "⛸️", n: ["Ice rink", "Ice rink"], d: ["Almost no friction: pieces slide right across.", "Almost no friction: creatures slide right across."] },
     { id: "narrow", e: "📏", n: ["Tight squeeze", "Narrow tank"], d: ["The board is a bit narrower.", "The tank is a bit narrower."] },
     { id: "double", e: "✖️", n: ["Double chains", "Double chains"], d: ["Chain reaction bonuses score double.", "Chain reaction bonuses score double."] },
     { id: "preview", e: "👀", n: ["Sneak peek", "Sneak peek"], d: ["See the next two pieces.", "See the next two creatures."] },
     { id: "slowmo", e: "🐌", n: ["Slow-mo merges", "Slow-mo merges"], d: ["Time slows for a moment after each merge.", "Time slows for a moment after each merge."] },
-    { id: "heavy", e: "🪨", n: ["Heavy day", "Heavy day"], d: ["Pieces fall fast and don’t bounce.", "Creatures sink fast and don’t bounce."] }
+    { id: "heavy", e: "🪨", n: ["Heavy day", "Heavy day"], d: ["Pieces fall fast and don’t bounce.", "Creatures sink fast and don’t bounce."] },
+    // environments (from 17 Nov 2026)
+    { id: "water", e: "🫧", n: ["Underwater ward", "Deep dive"], d: ["Everything sinks slowly, and bubbles lift the little pieces.", "Everything sinks slowly, and bubbles lift the little creatures."] },
+    { id: "flow", e: "🌊", n: ["Bloodstream", "Rip current"], d: ["A current pushes pieces sideways. It flips every 30 seconds.", "A current pushes creatures sideways. It flips every 30 seconds."] },
+    { id: "acid", e: "🧪", n: ["Stomach acid", "Toxic tide"], d: ["Pieces left on the floor too long dissolve down a level.", "Creatures left on the seabed too long shrink down a level."] },
+    { id: "quake", e: "📳", n: ["Tremor ward", "Stormy deck"], d: ["Every 20 seconds the board shakes.", "Every 20 seconds a big wave rocks the tank."] },
+    { id: "jelly", e: "🫠", n: ["Sticky ward", "Jellyfish soup"], d: ["Everything’s sticky: pieces stay roughly where they land.", "Everything’s sticky: creatures stay roughly where they land."] },
+    { id: "tilt", e: "📐", n: ["Wonky bed", "Listing ship"], d: ["The board leans one way all game.", "The tank leans one way all game."] },
+    { id: "lights", e: "🔦", n: ["Night shift", "Midnight dive"], d: ["Lights out: you only see near your aim and recent merges.", "Lights out: you only see near your aim and recent merges."] },
+    { id: "gust", e: "🤧", n: ["Sneeze season", "Gale warning"], d: ["Big sneezes blow the top pieces sideways.", "Strong gusts blow the top creatures sideways."] }
   ];
   // Seasonal skins (purely cosmetic) and their collection cards
   MED.SKIN = { xmas: { e: "🎅", n: "Christmas organs", lv: 7, fact: "Haemophilia B is also called Christmas disease, after Stephen Christmas, the first patient described with it in 1952." },
@@ -380,9 +389,12 @@
   function mutation(d) { // its own date PRNG; never two mutation days in a row with the same rule
     if (special(d) !== "mut") return null;
     var f = qp("mut"); if (f) for (var i = 0; i < MUTS.length; i++) if (MUTS[i].id === f) return MUTS[i];
-    var k = rawMut(d), pd = new Date((dayNum(d) - (weekday(d) === 2 ? 3 : 2)) * 864e5).toISOString().slice(0, 10); // previous Sat (for Tue) or Tue/Thu
-    if (String(pd) >= "2026-11-17" && rawMut(pd) === k) k = (k + 1) % MUTS.length;
-    return MUTS[k];
+    // rotation: every mutation once per cycle in a shuffled order, so all of them come round regularly
+    var N = MUTS.length, k = dayNum(d) - dayNum("2026-11-17"), c = 3 * Math.floor(k / 7) + [0, 1, 1, 2, 2, 3, 3][k % 7];
+    function perm(cy) { var a = [], r = mulberry32((cy * 7919 + 11) >>> 0), i, j, t; for (i = 0; i < N; i++) a.push(i); for (i = N - 1; i > 0; i--) { j = Math.floor(r() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+    var cy = Math.floor(c / N), pos = c % N, P = perm(cy);
+    if (cy > 0) { var Q = perm(cy - 1); if (P[0] === Q[N - 1]) { var t0 = P[0]; P[0] = P[1]; P[1] = t0; } }
+    return MUTS[P[pos]];
   }
   function easter(y) { // anonymous Gregorian computus: Easter Sunday as "YYYY-MM-DD"
     var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3),
@@ -455,7 +467,8 @@
     RX = OUT && String(day) >= RXDAY; doses = 0; rxProg = 0; resCleared = 0; // practice runs on those Sundays too
     // separate PRNGs for the shake and infections, so the drop order never changes
     var seed2 = isPractice ? (Math.random() * 4294967296) >>> 0 : (dayNum(day) * 2246822519) >>> 0;
-    srnd = mulberry32((seed2 ^ 0x5BD1E995) >>> 0); irnd = mulberry32((seed2 ^ 0x27D4EB2F) >>> 0);
+    srnd = mulberry32((seed2 ^ 0x5BD1E995) >>> 0); irnd = mulberry32((seed2 ^ 0x27D4EB2F) >>> 0); ernd = mulberry32((seed2 ^ 0x9E3779B9) >>> 0);
+    TILT = Math.floor(dayNum(day) / 7) % 2 ? 1 : -1; FLOW = ernd() < 0.5 ? 1 : -1; envFx = []; lights = [];
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day); GOALS = goalsFor(day); gDone = [false, false, false]; madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
@@ -467,7 +480,7 @@
     driftA = 0.035 + drnd() * 0.02; driftP = 900 + drnd() * 600; driftPh = drnd() * Math.PI * 2;
     if (SP === "blood") { curG = drawG(); nxtG = drawG(); }
     shakeLeft = NEW ? 1 : 0; cuts = NEW ? 3 : 0; arm = false; parts = []; nextBeat = 0; drops = 0; steps = 0; infN = 0; infCleared = 0;
-    engine = E.create(); engine.gravity.y = SP === "micro" ? 0.6 : mut("heavy") ? 1.6 : 1.15; engine.positionIterations = 8; engine.velocityIterations = 6;
+    engine = E.create(); engine.gravity.y = SP === "micro" ? 0.6 : mut("heavy") ? 1.6 : mut("water") ? 0.75 : 1.15; if (mut("tilt")) engine.gravity.x = 0.2 * TILT; engine.positionIterations = 8; engine.velocityIterations = 6;
     var opt = { isStatic: true, friction: mut("slippery") ? 0 : 0.2, restitution: mut("bouncy") ? 0.4 : 0.1, label: "wall" };
     C.add(engine.world, [B.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, opt), B.rectangle(-WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W + WALL / 2, H / 2, WALL, H * 2, opt)]);
     if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
@@ -520,7 +533,7 @@
       else {
         var o = add(n, x, y), v = wild ? a.velocity : { x: (a.velocity.x + b.velocity.x) / 2, y: Math.min(a.velocity.y, b.velocity.y) };
         Bd.setVelocity(o, { x: v.x, y: Math.min(v.y, 0) - 1 });
-        o.born = now; pts = (n + 1) * (n + 2) / 2; score += pts; TL.merge += pts;
+        o.born = now; if (mut("lights")) lights.push({ x: x, y: y, t: now }); pts = (n + 1) * (n + 2) / 2; score += pts; TL.merge += pts;
         if (SP === "blood") bloodMerge(o, a, b, wild, m[3]);
         if (SP === "sick" && n === O.length - 1) { o.frz = steps + 50; toast(K.SICKT[n]); }
         if (n > top) { top = n; if (SASS[n]) toast(pick(SASS[n])); }
@@ -554,6 +567,7 @@
     var rs = 0.1, fr = 0.12, fa = 0.004, fs = 0.5;
     if (SP === "micro") { rs = 0.05; fa = 0.012; }
     if (mut("bouncy")) rs = 0.55; if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
+    if (mut("water")) fa = 0.05; if (mut("jelly")) { rs = 0; fr = 1; fs = 2; fa = 0.03; }
     if (SP === "sick" && lv < O.length && QUIRK[lv] === "slip") fr = 0.03;
     var r = info(lv).r, opt = { restitution: rs, friction: fr, frictionStatic: fs, frictionAir: fa, density: 0.0012 + (lv < O.length ? lv : 0) * 0.0002, slop: 0.01 }, o = null, off = { x: 0, y: 0 };
     if (HULL[lv]) try {
@@ -691,6 +705,7 @@
         if (slowN) { slowN--; engine.timing.timeScale = slowN ? 0.45 : 1; }
         E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread();
         if (feverS > 0 && --feverS === 0) endFever();
+        if (MUT) envTick();
         if (SP === "sick") sickTick(); if (DRAIN && infN) drainTick(); if (SP === "micro" && steps === 10800) hidTick();
       }
       danger = checkOver(now);
@@ -806,7 +821,7 @@
       if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
     drawParts(dt || 16);
-    drawFG(dark, now); drawJuice(now);
+    drawFG(dark, now); if (MUT) drawEnvFG(dark, now); drawJuice(now);
   }
   // ---------- particles: sparkles, confetti, poofs, floating points ----------
   var SPK = ["#F5C842", "#FF7A9A", "#5EC8F2", "#B48CF0", "#7CC36A"];
@@ -929,6 +944,7 @@
 
   // ---------- weekly features: runtime ----------
   var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 24;
+  var ernd = Math.random, TILT = 1, FLOW = 1, envFx = [], lights = [];
   var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
   var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
   var LEARN = false, learnT, learnI = {};
@@ -1072,6 +1088,47 @@
   }
   var FLAKES = []; for (var fi = 0; fi < 46; fi++) FLAKES.push([Math.random() * W, Math.random() * H, 1 + Math.random() * 2.2, 0.2 + Math.random() * 0.5]);
   var STARS = []; for (var si = 0; si < 60; si++) STARS.push([(si * 97.31) % W, (si * 53.7 + (si % 7) * 31) % H, 0.6 + (si % 3) * 0.5]);
+
+  // ---------- environment mutations (from 17 Nov 2026). Seeded with ernd so everyone gets the same events on the same day ----------
+  function envTick() {
+    var t = steps;
+    if (mut("flow")) engine.gravity.x = 0.14 * FLOW * (Math.floor(t / 1800) % 2 ? -1 : 1);
+    if (mut("water") && t % 90 === 45) pieces().forEach(function (o) { if (o.lv <= 1 && o.position.y > LINE + 60) { Bd.setVelocity(o, { x: o.velocity.x, y: o.velocity.y - 2.2 }); envFx.push({ k: "b", x: o.position.x, y: o.position.y, t: 0 }); } });
+    if (mut("quake") && t > 600 && t % 1200 === 0) { shakeBoard(2); toast(NORMIE ? "🌊 Big wave!" : "📳 Tremor!"); sfx("snip");
+      pieces().forEach(function (o) { var k = 1 / Math.sqrt(1 + (o.lv < O.length ? o.lv : 0) * 0.3); Bd.setVelocity(o, { x: o.velocity.x + (ernd() - 0.5) * 6 * k, y: o.velocity.y - (1.5 + ernd() * 2) * k }); }); }
+    if (mut("gust") && t > 450 && t % 900 === 450) { var dir = ernd() < 0.5 ? -1 : 1; toast(NORMIE ? (dir > 0 ? "💨 Gust from the left!" : "💨 Gust from the right!") : (dir > 0 ? "🤧 Achoo! (from the left)" : "🤧 Achoo! (from the right)")); envFx.push({ k: "w", d: dir, t: 0 });
+      pieces().forEach(function (o) { if (o.position.y < H * 0.55) { var k = 1 / Math.sqrt(1 + (o.lv < O.length ? o.lv : 0) * 0.35); Bd.setVelocity(o, { x: o.velocity.x + dir * 4 * k, y: o.velocity.y - 0.6 }); } }); }
+    if (mut("acid") && t % 6 === 0) pieces().forEach(function (o) {
+      if (o.lv >= O.length) return;
+      if (o.position.y + rad(o) > H - 16 && Math.abs(o.velocity.y) < 0.5) o.acid = (o.acid || 0) + 6; else if (o.acid) o.acid = Math.max(0, o.acid - 3);
+      if (o.acid >= 1500) { var x = o.position.x, y = o.position.y, lv = o.lv; C.remove(engine.world, o); o.gone = true; poof(x, y, info(lv).r);
+        if (lv > 0) { var n = add(lv - 1, x, y); n.acid = 0; } toast(NORMIE ? "🧪 The toxic tide shrank one!" : "🧪 Acid ate a bit of " + info(lv).n + "."); }
+    });
+  }
+  function drawEnvBG(dark, now) {
+    if (mut("water")) { var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, dark ? "rgba(40,80,140,.25)" : "rgba(150,205,240,.25)"); g.addColorStop(1, dark ? "rgba(20,50,110,.45)" : "rgba(90,160,220,.35)"); ctx.fillStyle = g; ctx.fillRect(0, LINE, W, H - LINE); }
+    if (mut("flow")) { var dir = FLOW * (Math.floor(steps / 1800) % 2 ? -1 : 1), off = quiet() ? 0 : (now / 25 * dir) % 40; ctx.strokeStyle = dark ? "rgba(240,120,130,.18)" : "rgba(200,60,80,.12)"; ctx.lineWidth = 3;
+      for (var yy = LINE + 40; yy < H; yy += 70) for (var xx = -40; xx < W + 40; xx += 40) { var cx = xx + off; ctx.beginPath(); ctx.moveTo(cx - 6 * dir, yy - 8); ctx.lineTo(cx + 6 * dir, yy); ctx.lineTo(cx - 6 * dir, yy + 8); ctx.stroke(); }
+      if (mut("flow") && NORMIE === false) { ctx.fillStyle = dark ? "rgba(140,30,50,.12)" : "rgba(220,90,100,.07)"; ctx.fillRect(0, LINE, W, H - LINE); } }
+    if (mut("acid")) { var a = ctx.createLinearGradient(0, H - 40, 0, H); a.addColorStop(0, "rgba(150,210,60,0)"); a.addColorStop(1, dark ? "rgba(150,210,60,.6)" : "rgba(120,185,30,.55)"); ctx.fillStyle = a; ctx.fillRect(0, H - 40, W, 40); }
+    if (mut("jelly")) { ctx.fillStyle = dark ? "rgba(120,220,160,.08)" : "rgba(120,200,150,.1)"; ctx.fillRect(0, LINE, W, H - LINE); }
+    if (mut("tilt")) { ctx.save(); ctx.fillStyle = dark ? "rgba(180,168,207,.18)" : "rgba(107,90,147,.12)"; ctx.beginPath(); if (TILT > 0) { ctx.moveTo(0, H); ctx.lineTo(W, H); ctx.lineTo(W, H - 26); } else { ctx.moveTo(0, H - 26); ctx.lineTo(0, H); ctx.lineTo(W, H); } ctx.closePath(); ctx.fill();
+      ctx.font = "600 13px Poppins,system-ui,sans-serif"; ctx.textAlign = TILT > 0 ? "right" : "left"; ctx.fillStyle = dark ? "rgba(220,210,240,.6)" : "rgba(80,64,120,.55)"; ctx.fillText(TILT > 0 ? "leaning this way →" : "← leaning this way", TILT > 0 ? W - 10 : 10, LINE + 22); ctx.restore(); }
+  }
+  function drawEnvFG(dark, now) {
+    for (var i = envFx.length - 1; i >= 0; i--) { var f = envFx[i]; f.t++;
+      if (f.k === "b") { ctx.strokeStyle = dark ? "rgba(200,230,255,.8)" : "rgba(80,150,210,.7)"; ctx.lineWidth = 1.5; for (var j = 0; j < 3; j++) { ctx.beginPath(); ctx.arc(f.x + (j - 1) * 8 + Math.sin(f.t / 6 + j) * 3, f.y - f.t * 1.4 - j * 9, 3 + j, 0, Math.PI * 2); ctx.stroke(); } if (f.t > 50) envFx.splice(i, 1); }
+      else if (f.k === "w") { if (!quiet()) { ctx.strokeStyle = dark ? "rgba(230,230,255,.5)" : "rgba(120,110,160,.35)"; ctx.lineWidth = 2; for (var k = 0; k < 7; k++) { var y = LINE + 20 + k * 34, x0 = f.d > 0 ? -60 + f.t * 12 : W + 60 - f.t * 12; ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x0 - f.d * 50, y); ctx.stroke(); } } if (f.t > 45) envFx.splice(i, 1); }
+    }
+    if (mut("acid")) pieces().forEach(function (o) { if (o.acid > 0) { ctx.strokeStyle = "rgba(130,190,40," + Math.min(0.9, o.acid / 1500) + ")"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) + 2, Math.PI * 0.15, Math.PI * 0.85); ctx.stroke(); } });
+    if (mut("lights") && !over) {
+      lights = lights.filter(function (l) { return now - l.t < 2600; });
+      ctx.save(); ctx.beginPath(); ctx.rect(0, LINE, W, H - LINE);
+      var ax = aimClamp(info(cur).r), bw = Math.max(26, info(cur).r + 10); ctx.rect(ax + bw, LINE, -2 * bw, H - LINE); // a torch beam straight down from your aim
+      lights.forEach(function (l) { var r = 95 * Math.min(1, (2600 - (now - l.t)) / 900); if (r > 4) { ctx.moveTo(l.x + r, l.y); ctx.arc(l.x, l.y, r, 0, Math.PI * 2, true); } });
+      ctx.fillStyle = dark ? "rgba(8,6,16,.88)" : "rgba(30,24,50,.82)"; ctx.fill("evenodd"); ctx.restore();
+    }
+  }
   function drawBG(dark, now) {
     if (SP === "micro") { ctx.fillStyle = dark ? "#151226" : "#F1F0FA"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = dark ? "rgba(230,230,255,.6)" : "rgba(90,80,140,.25)";
       STARS.forEach(function (s, i) { ctx.globalAlpha = quiet() ? 1 : 0.6 + 0.4 * Math.sin(now / 700 + i); ctx.beginPath(); ctx.arc(s[0], s[1], s[2], 0, Math.PI * 2); ctx.fill(); }); ctx.globalAlpha = 1; }
@@ -1080,6 +1137,7 @@
     else if (SKIN === "hall") { var g2 = ctx.createLinearGradient(0, 0, 0, H); g2.addColorStop(0, "#2B1D3F"); g2.addColorStop(1, dark ? "#1A1426" : "#4A3466"); ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
       ctx.fillStyle = "#F5C35A"; ctx.beginPath(); ctx.arc(W - 60, 150, 26, 0, Math.PI * 2); ctx.fill(); }
     else if (SKIN === "easter") { ctx.fillStyle = dark ? "#252033" : "#FBF6EC"; ctx.fillRect(0, 0, W, H); ["#F7C8D8", "#C8E6F7", "#D8F2C8", "#F7EBC0"].forEach(function (c, i) { ctx.fillStyle = c; ctx.globalAlpha = 0.6; ctx.beginPath(); ctx.ellipse(40 + i * 105, H - 16, 11, 14, 0, 0, Math.PI * 2); ctx.fill(); }); ctx.globalAlpha = 1; }
+    if (MUT) drawEnvBG(dark, now);
     if (mut("narrow")) { ctx.fillStyle = dark ? "rgba(180,168,207,.14)" : "rgba(107,90,147,.10)"; ctx.fillRect(0, 0, NARROW, H); ctx.fillRect(W - NARROW, 0, NARROW, H); }
   }
   function drawFG(dark, now) {
