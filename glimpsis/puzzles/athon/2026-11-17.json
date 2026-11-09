@@ -1,0 +1,236 @@
+{
+ "date": "2026-11-17",
+ "number": 1,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "Painful, tender lump on the upper lid margin for three days.",
+   "img": {
+    "url": "img/athon/2026-11-17-01.jpg",
+    "source": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Stye02.jpg",
+    "author": "Andre Riemann (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Close view of an eye with a red, swollen upper lid and a small yellow pus point at the lash line."
+   },
+   "answer": "Stye (hordeolum)",
+   "wrong": [
+    "Chalazion",
+    "Blepharitis",
+    "Xanthelasma",
+    "Basal cell carcinoma",
+    "Conjunctivitis"
+   ],
+   "why": "A tender red swelling pointing at the lash line: an infected eyelash follicle or gland.",
+   "pearl": "Most styes settle with warm compresses in a week or two. A painless lump that lingers is more likely a chalazion."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Back from a day at the cricket. Hot, tight and tender by evening.",
+   "img": {
+    "url": "img/athon/2026-11-17-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22126",
+    "author": "CDC/ R. Turnball",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "An arm with bright red skin ending in a sharp straight line on the upper arm."
+   },
+   "answer": "Sunburn",
+   "wrong": [
+    "Cellulitis",
+    "Contact dermatitis",
+    "Phytophotodermatitis",
+    "Erysipelas",
+    "Drug eruption"
+   ],
+   "why": "Uniform redness that stops at a sharp line where clothing covered the skin.",
+   "pearl": "Sunburn peaks 12–24 hours after exposure. In Australia, sun protection is needed whenever the UV index is 3 or above."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Noticed after a bushwalk.",
+   "img": {
+    "url": "img/athon/2026-11-17-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=31562",
+    "author": "CDC/ Division of Vector-Borne Diseases Rickettsial Zoonoses Branch (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A small dark eight-legged creature embedded in the skin of an ankle above a folded-down sock."
+   },
+   "answer": "Attached tick",
+   "wrong": [
+    "Mole",
+    "Seborrhoeic keratosis",
+    "Splinter",
+    "Blood blister",
+    "Skin tag"
+   ],
+   "why": "A small dark body with legs, firmly embedded by its mouthparts.",
+   "pearl": "In Australia, the advice is 'freeze it, don't squeeze it': an ether spray kills the tick before removal, which may lower the risk of allergic reactions."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Sore spots on the palms a week after a cold sore.",
+   "img": {
+    "url": "img/athon/2026-11-17-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=17527",
+    "author": "CDC/ Dr. N.J. Fiumara",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A palm covered in round red lesions, many with a darker centre and paler ring."
+   },
+   "answer": "Erythema multiforme",
+   "wrong": [
+    "Urticaria (hives)",
+    "Secondary syphilis",
+    "Hand, foot and mouth disease",
+    "Scabies",
+    "Fixed drug eruption"
+   ],
+   "why": "Target lesions with a dark centre and concentric rings, favouring the hands.",
+   "pearl": "Herpes simplex is the most common trigger. Unlike hives, the lesions stay put for a week or more."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Dark lines under two fingernails in a woman with fever and aching muscles.",
+   "img": {
+    "url": "img/athon/2026-11-17-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26784",
+    "author": "CDC/ Dr. Thomas F. Sellers; Emory University",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Two fingertips with tiny dark red-brown lines running lengthways under the nails."
+   },
+   "answer": "Splinter haemorrhages",
+   "wrong": [
+    "Subungual haematoma",
+    "Longitudinal melanonychia",
+    "Beau's lines",
+    "Nail pitting",
+    "Onychomycosis"
+   ],
+   "why": "Tiny dark red streaks running lengthways in the nail bed.",
+   "pearl": "Minor trauma is the commonest cause. Endocarditis, vasculitis and trichinosis (in this case) are the ones not to miss."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Grew up drinking water from a deep bore with very high fluoride.",
+   "img": {
+    "url": "img/athon/2026-11-17-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16248",
+    "author": "CDC (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Teeth with mottled white and brown patches and streaks in the enamel."
+   },
+   "answer": "Dental fluorosis",
+   "wrong": [
+    "Tetracycline staining",
+    "Dental caries",
+    "Amelogenesis imperfecta",
+    "Enamel hypoplasia",
+    "Hutchinson's teeth"
+   ],
+   "why": "Mottled white and brown enamel from too much fluoride while the teeth were forming.",
+   "pearl": "It only happens while teeth are developing, in early childhood. Australia's fluoridated tap water is set well below the levels that cause this."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "An itchy, wandering red line on the foot after a beach holiday in Thailand.",
+   "img": {
+    "url": "img/athon/2026-11-17-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=27584",
+    "author": "CDC (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "The top of a foot with thin, raised, wiggly red tracks."
+   },
+   "answer": "Cutaneous larva migrans",
+   "wrong": [
+    "Tinea pedis",
+    "Larva currens (strongyloides)",
+    "Erythema migrans",
+    "Phytophotodermatitis",
+    "Scabies"
+   ],
+   "why": "Raised, itchy, serpiginous tracks that creep a few millimetres to centimetres a day.",
+   "pearl": "Dog and cat hookworm larvae from sand can't get past human skin, so they wander. One dose of ivermectin or albendazole fixes it."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A painless brown patch on the palm after a trip to coastal Brazil.",
+   "img": {
+    "url": "img/athon/2026-11-17-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21012",
+    "author": "CDC/ Dr. Lucille K. Georg (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A palm with a flat, irregular, light brown patch."
+   },
+   "answer": "Tinea nigra",
+   "wrong": [
+    "Acral lentiginous melanoma",
+    "Junctional naevus",
+    "Post-inflammatory hyperpigmentation",
+    "Addison's disease",
+    "Fixed drug eruption"
+   ],
+   "why": "A flat, painless brown patch on the palm that scrapes positive for fungus.",
+   "pearl": "Caused by Hortaea werneckii in warm coastal regions. A skin scraping spares people an unneeded melanoma excision."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A stressed student who smokes, with painful bleeding gums and bad breath.",
+   "img": {
+    "url": "img/athon/2026-11-17-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=8598",
+    "author": "CDC/ Minnesota Department of Health, R.N. Barr Library; Librarians Melissa Rethlefsen and Marie Jones (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Gums with red, swollen margins and eroded tips between the front teeth."
+   },
+   "answer": "Acute necrotising ulcerative gingivitis",
+   "wrong": [
+    "Periodontitis",
+    "Herpetic gingivostomatitis",
+    "Scorbutic gums",
+    "Leukaemic gum infiltration",
+    "Pregnancy gingivitis"
+   ],
+   "why": "Painful, bleeding gums with punched-out, cratered tips between the teeth.",
+   "pearl": "Once called 'trench mouth'. Debridement, chlorhexidine and metronidazole work; consider HIV testing if it's severe."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "Itchy toe webs under a Wood's lamp.",
+   "img": {
+    "url": "img/athon/2026-11-17-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12637",
+    "author": "CDC/ Dr. Lucille K. Georg",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Toe web under ultraviolet light showing a bright coral-pink glow."
+   },
+   "answer": "Erythrasma",
+   "wrong": [
+    "Tinea pedis",
+    "Pseudomonas toe-web infection",
+    "Candida intertrigo",
+    "Pitted keratolysis",
+    "Pityriasis versicolor"
+   ],
+   "why": "Coral-red fluorescence under a Wood's lamp from porphyrins made by Corynebacterium minutissimum.",
+   "pearl": "Tinea doesn't fluoresce this way and Pseudomonas glows green, so a Wood's lamp sorts the toe web quickly."
+  }
+ ]
+}

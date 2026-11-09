@@ -1,0 +1,236 @@
+{
+ "date": "2026-12-01",
+ "number": 3,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "A rough lump on the finger for months.",
+   "img": {
+    "url": "img/athon/2026-12-01-01.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19094",
+    "author": "CDC/ Richard S. Hibbets (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A finger with a round, rough, raised growth on its back."
+   },
+   "answer": "Common wart",
+   "wrong": [
+    "Molluscum contagiosum",
+    "Seborrhoeic keratosis",
+    "Squamous cell carcinoma",
+    "Corn",
+    "Pyogenic granuloma"
+   ],
+   "why": "A rough, raised papule with a cauliflower surface: verruca vulgaris from HPV.",
+   "pearl": "Most warts go away on their own within two years. Freezing or salicylic acid can speed things up."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Gums bleed when brushing. No pain.",
+   "img": {
+    "url": "img/athon/2026-12-01-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=3898",
+    "author": "CDC (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Front teeth with red, puffy gum margins."
+   },
+   "answer": "Gingivitis",
+   "wrong": [
+    "Periodontitis",
+    "Acute necrotising ulcerative gingivitis",
+    "Scorbutic gums",
+    "Pregnancy epulis",
+    "Leukaemic gum infiltration"
+   ],
+   "why": "Red, swollen gum margins that bleed easily, with no loss of the bone holding the teeth.",
+   "pearl": "Fully reversible with good brushing and flossing. Left alone, it can progress to periodontitis and loose teeth."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Stung while gardening near a mound of small reddish ants.",
+   "img": {
+    "url": "img/athon/2026-12-01-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25045",
+    "author": "CDC/ Harold George Scott, PhD (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Hairy skin with a small red bump topped by a white pustule."
+   },
+   "answer": "Fire ant sting",
+   "wrong": [
+    "Folliculitis",
+    "Mosquito bite",
+    "Bed bug bite",
+    "Herpes simplex",
+    "Spider bite"
+   ],
+   "why": "A sterile white pustule on a red base that forms within a day of a fire ant sting.",
+   "pearl": "Red imported fire ants are spreading in south-east Queensland and have been found in NSW; report suspected nests."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "A child with fever, sore throat and a sandpaper rash.",
+   "img": {
+    "url": "img/athon/2026-12-01-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24409",
+    "author": "CDC/ Heinz F. Eichenwald, MD (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Open mouth with a red throat and a tongue with a white coat dotted by red papillae."
+   },
+   "answer": "Strawberry tongue",
+   "wrong": [
+    "Geographic tongue",
+    "Oral candidiasis",
+    "Black hairy tongue",
+    "Atrophic glossitis",
+    "Fissured tongue"
+   ],
+   "why": "Swollen red papillae poking through a white coat on the tongue.",
+   "pearl": "Classic in scarlet fever, but also in Kawasaki disease and toxic shock syndrome. The white coat peels to a red tongue after a few days."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Weeks of broad-spectrum antibiotics and barely eating. Now large bruises.",
+   "img": {
+    "url": "img/athon/2026-12-01-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28716",
+    "author": "CDC (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "An upper arm with several large purple bruises."
+   },
+   "answer": "Vitamin K deficiency bleeding",
+   "wrong": [
+    "Senile purpura",
+    "Immune thrombocytopenia",
+    "Scurvy",
+    "Henoch–Schönlein purpura",
+    "Non-accidental injury"
+   ],
+   "why": "Large bruises from too little vitamin K to make clotting factors.",
+   "pearl": "Factors II, VII, IX and X need vitamin K, so the INR rises. It's why newborns get vitamin K at birth."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Blisters on the neck the morning after swatting a beetle on a summer night.",
+   "img": {
+    "url": "img/athon/2026-12-01-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=29391",
+    "author": "CDC/ Dr. Henry D. Pratt",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Skin of the neck with several clear, fluid-filled blisters."
+   },
+   "answer": "Blister beetle dermatitis",
+   "wrong": [
+    "Rove beetle (Paederus) dermatitis",
+    "Shingles",
+    "Bullous impetigo",
+    "Phytophotodermatitis",
+    "Bullous pemphigoid"
+   ],
+   "why": "Clear blisters where a crushed beetle released the blistering chemical cantharidin.",
+   "pearl": "Cantharidin from these beetles is also used on purpose, in tiny doses, to treat warts and molluscum."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A farm worker with a tender, boggy lump on the back of the neck.",
+   "img": {
+    "url": "img/athon/2026-12-01-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26896",
+    "author": "CDC/ Dr. Lucille K. Georg",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Back of a neck with a raised, round, swollen plaque with hair loss."
+   },
+   "answer": "Kerion",
+   "wrong": [
+    "Carbuncle",
+    "Epidermoid cyst",
+    "Cutaneous anthrax",
+    "Pyoderma gangrenosum",
+    "Folliculitis decalvans"
+   ],
+   "why": "A boggy, inflamed plaque with hair loss from a fungus caught from cattle.",
+   "pearl": "Often mistaken for an abscess. It needs oral antifungals, not cutting; draining it doesn't help."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A barefoot farmer from volcanic highlands with years of swollen, warty feet.",
+   "img": {
+    "url": "img/athon/2026-12-01-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24394",
+    "author": "CDC/ Dr. Martin D. Hicklin",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A swollen foot with thickened, warty, moss-like skin over the toes."
+   },
+   "answer": "Podoconiosis",
+   "wrong": [
+    "Lymphatic filariasis",
+    "Chromoblastomycosis",
+    "Mycetoma",
+    "Leprosy",
+    "Lipoedema"
+   ],
+   "why": "Warty, 'mossy' swelling of both feet from years of barefoot contact with volcanic clay soil.",
+   "pearl": "A non-infectious elephantiasis, entirely preventable with shoes and foot hygiene."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Fever and headache a week after camping near Litchfield, NT.",
+   "img": {
+    "url": "img/athon/2026-12-01-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23438",
+    "author": "CDC/ Margaret A. Parsons",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Skin with a small black-crusted sore on a red base."
+   },
+   "answer": "Scrub typhus eschar",
+   "wrong": [
+    "Cutaneous anthrax",
+    "Spider bite",
+    "Ecthyma",
+    "Tick bite",
+    "Pyoderma gangrenosum"
+   ],
+   "why": "A painless black scab where an infected mite larva fed: the calling card of Orientia tsutsugamushi.",
+   "pearl": "Found in far north Queensland, the Torres Strait and the Top End. Doxycycline works fast, so look hard for an eschar in skin folds."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "Rough, bumpy skin on the elbows of a man living on a very limited diet.",
+   "img": {
+    "url": "img/athon/2026-12-01-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28701",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Skin of the elbow covered in many tiny raised, spiky bumps."
+   },
+   "answer": "Phrynoderma",
+   "wrong": [
+    "Keratosis pilaris",
+    "Lichen spinulosus",
+    "Pityriasis rubra pilaris",
+    "Perifollicular haemorrhages",
+    "Follicular eczema"
+   ],
+   "why": "Dense, horny follicular bumps on the elbows and knees from nutritional deficiency, classically vitamin A.",
+   "pearl": "The name means 'toad skin'. Look for night blindness, dry eyes and a poor diet."
+  }
+ ]
+}

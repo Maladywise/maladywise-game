@@ -1,0 +1,236 @@
+{
+ "date": "2026-11-17",
+ "number": 1,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "Scuttles out when the kitchen light goes on.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-01.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28479",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A small, flat, light brown insect with long antennae and spiny legs."
+   },
+   "answer": "Cockroach",
+   "wrong": [
+    "Beetle",
+    "Cricket",
+    "Silverfish",
+    "Earwig",
+    "Termite"
+   ],
+   "why": "A German cockroach: flat body, long antennae and spiny legs built for speed.",
+   "pearl": "A cockroach can live for about a week without its head. It finally dies of thirst."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Found on a gravel path in the desert at night.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25675",
+    "author": "CDC/ Mr. Graham Heid (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A pale yellow creature with pincers and a curled tail on gravel."
+   },
+   "answer": "Scorpion",
+   "wrong": [
+    "Spider",
+    "Crab",
+    "Centipede",
+    "Ant",
+    "Pseudoscorpion"
+   ],
+   "why": "A desert scorpion: grasping pincers and a tail ending in a stinger.",
+   "pearl": "Scorpions glow blue-green under ultraviolet light, which is how people find them at night."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Spotted under pine trees after autumn rain.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23545",
+    "author": "CDC/ James M. Stewart",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Several round caps with white spots on a reddish surface, on short white stalks."
+   },
+   "answer": "Fly agaric toadstool",
+   "wrong": [
+    "Strawberry",
+    "Button mushroom",
+    "Puffball",
+    "Coral",
+    "Ladybird"
+   ],
+   "why": "The red-capped, white-spotted fly agaric, the classic fairy-tale toadstool.",
+   "pearl": "It isn't native to Australia: it arrived with pine trees and now pops up in pine plantations. It's poisonous, so look but don't eat."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Found in a garden pond.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=32170",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A dark, flat, tightly coiled shell with a soft body peeking out beneath."
+   },
+   "answer": "Ramshorn snail",
+   "wrong": [
+    "Ammonite fossil",
+    "Cinnamon roll",
+    "Seashell",
+    "Nautilus",
+    "Millipede curled up"
+   ],
+   "why": "A freshwater ramshorn snail with its flat, coiled shell.",
+   "pearl": "Most snails have blue blood, but ramshorn snails carry haemoglobin like us, so their blood is red."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Watching you from a bare winter tree.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=27053",
+    "author": "CDC (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A bird with big round eyes, ear-like tufts and streaky brown feathers among branches."
+   },
+   "answer": "Owl",
+   "wrong": [
+    "Hawk",
+    "Cat",
+    "Possum",
+    "Kookaburra",
+    "Pine cone"
+   ],
+   "why": "A great horned owl, with feather tufts and huge forward-facing eyes.",
+   "pearl": "Those 'horns' are just feathers. Owls can't move their eyes, so they turn their heads up to about 270 degrees."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Very loud on summer evenings.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=20266",
+    "author": "CDC/ James Gathany",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A stout insect with red eyes, an orange-patterned body and clear veined wings, on black."
+   },
+   "answer": "Cicada",
+   "wrong": [
+    "Fly",
+    "Bee",
+    "Grasshopper",
+    "Moth",
+    "Dragonfly"
+   ],
+   "why": "A cicada: wide head, red eyes and clear, veined wings folded like a roof.",
+   "pearl": "Male cicadas sing by rapidly buckling drum-like plates called tymbals on their sides."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Found in an old bag of flour.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28852",
+    "author": "CDC/ Margaret A. Parsons",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Two small dark brown beetles and three pale segmented larvae on a sandy-coloured surface."
+   },
+   "answer": "Flour beetles",
+   "wrong": [
+    "Mealworms",
+    "Termites",
+    "Ants",
+    "Weevils",
+    "Ticks"
+   ],
+   "why": "Confused flour beetles and their larvae, common pantry pests.",
+   "pearl": "The 'confused' flour beetle got its name because it's so often confused with its cousin, the red flour beetle."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Electron microscope view, about 12 times life size.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=10125",
+    "author": "CDC/ Janice Haney Carr (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A grey electron microscope image of a small insect tangled in fine strands."
+   },
+   "answer": "Spider web",
+   "wrong": [
+    "Cotton wool",
+    "Feather",
+    "Dandelion seed",
+    "Fishing net",
+    "Steel wool"
+   ],
+   "why": "An ant caught in sticky spider silk, seen under an electron microscope.",
+   "pearl": "Weight for weight, some spider silk is as strong as steel and far stretchier."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Spotted on a leaf in late summer. Don't touch.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24372",
+    "author": "CDC/ Harold G. Scott (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A short creature with spiky brown ends and a bright green middle with a brown oval patch."
+   },
+   "answer": "Saddleback caterpillar",
+   "wrong": [
+    "Beetle",
+    "Sea slug",
+    "Frog",
+    "Pine cone",
+    "Spider"
+   ],
+   "why": "A saddleback caterpillar, named for the green 'saddle cloth' with a brown 'seat'.",
+   "pearl": "Its spines are hollow and deliver a sting that can hurt for hours."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "Hiding in plain sight on a leaf.",
+   "img": {
+    "url": "img/athon/normie/2026-11-17-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=23352",
+    "author": "CDC/ Dr. Frank Shaw (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A brown, hairy, oddly shaped lump with curled arm-like flaps on a green leaf."
+   },
+   "answer": "Hag moth caterpillar",
+   "wrong": [
+    "Dead leaf",
+    "Spider",
+    "Tarantula moult",
+    "Seed pod",
+    "Burr"
+   ],
+   "why": "A hag moth caterpillar, whose fleshy curled flaps make it look like shed spider skin or leaf litter.",
+   "pearl": "It's also called the monkey slug caterpillar. Birds tend to pass it by, thinking it isn't food."
+  }
+ ]
+}

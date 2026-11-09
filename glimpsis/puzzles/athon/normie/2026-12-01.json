@@ -1,0 +1,236 @@
+{
+ "date": "2026-12-01",
+ "number": 3,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "Buzzing around the tomato plants.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-01.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26905",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A fuzzy, round black-and-yellow insect with dark wings."
+   },
+   "answer": "Bumblebee",
+   "wrong": [
+    "Honey bee",
+    "Hoverfly",
+    "Wasp",
+    "Moth",
+    "Beetle"
+   ],
+   "why": "A bumblebee: round, fuzzy and striped black and yellow.",
+   "pearl": "In Australia, bumblebees live wild only in Tasmania, where they arrived in the 1990s."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Living in a fish tank.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=11838",
+    "author": "CDC/ Christine Prue",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A small spotted brown frog with webbed feet clinging to green and red plastic."
+   },
+   "answer": "Frog",
+   "wrong": [
+    "Toad",
+    "Lizard",
+    "Gecko",
+    "Newt",
+    "Fish"
+   ],
+   "why": "An African dwarf frog, a tiny frog that lives its whole life underwater.",
+   "pearl": "It has no tongue. It shovels food into its mouth with its hands."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Out on the desert gravel at night.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25674",
+    "author": "CDC/ Mr. Graham Heid",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A long, flat, orange-brown segmented creature with many legs on gravel."
+   },
+   "answer": "Centipede",
+   "wrong": [
+    "Millipede",
+    "Worm",
+    "Caterpillar",
+    "Scorpion",
+    "Earwig"
+   ],
+   "why": "A centipede, with one pair of legs per body segment.",
+   "pearl": "Centipedes always have an odd number of leg pairs, so none has exactly 100 legs."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Lives in quiet corners and old boxes.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=29504",
+    "author": "CDC/ Dr. J. L. Conrad",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A long-legged light brown spider with a darker mark on its front half."
+   },
+   "answer": "Brown recluse spider",
+   "wrong": [
+    "Huntsman",
+    "Daddy long-legs",
+    "Wolf spider",
+    "Redback",
+    "Harvestman"
+   ],
+   "why": "A brown recluse, with the violin-shaped mark on its front body.",
+   "pearl": "Most spiders have eight eyes; the brown recluse has six, arranged in pairs."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Very close up. Sometimes found in old mattresses.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12705",
+    "author": "CDC/ CDC-DPDx; Blaine Mathison",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A shiny reddish-brown flat body with short antennae, seen very close."
+   },
+   "answer": "Bed bug",
+   "wrong": [
+    "Tick",
+    "Flea",
+    "Ladybird",
+    "Cockroach",
+    "Ant"
+   ],
+   "why": "A bed bug: flat, reddish-brown and oval.",
+   "pearl": "Bed bugs can go months between meals, which makes them hard to starve out."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "In a measuring scoop.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=15031",
+    "author": "CDC/ Fenley (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A pile of small, dark, wrinkled pieces of dried fruit in a white scoop."
+   },
+   "answer": "Raisins",
+   "wrong": [
+    "Coffee beans",
+    "Chocolate chips",
+    "Dates",
+    "Prunes",
+    "Currants"
+   ],
+   "why": "Raisins: dried grapes, all wrinkles and sugar.",
+   "pearl": "Drop raisins into fizzy drink and they 'dance' as bubbles lift them up and then pop at the surface."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Very close up and staring right back.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25012",
+    "author": "CDC/ Harold George Scott, PhD (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A dark, shiny head covered in large plates with a round eye."
+   },
+   "answer": "Snake",
+   "wrong": [
+    "Lizard",
+    "Turtle",
+    "Fish",
+    "Eel",
+    "Frog"
+   ],
+   "why": "A coachwhip snake's head, with big smooth scales and a lidless eye.",
+   "pearl": "Snakes have no eyelids. A clear scale covers each eye and is shed with the skin."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Face to face, very close up.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26497",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A close insect face with two big dark eyes, three tiny eyes between them and two broken antennae."
+   },
+   "answer": "Wasp",
+   "wrong": [
+    "Ant",
+    "Fly",
+    "Grasshopper",
+    "Beetle",
+    "Dragonfly"
+   ],
+   "why": "A wasp's face: two big compound eyes and three tiny simple eyes in a triangle.",
+   "pearl": "Those three little eyes, called ocelli, sense light and help with steady flight."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Electron microscope view of the underside, about 22 times life size.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=7774",
+    "author": "CDC/ Janice Haney Carr (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A grey electron microscope image of body segments, each with pairs of jointed legs."
+   },
+   "answer": "Millipede",
+   "wrong": [
+    "Centipede",
+    "Caterpillar",
+    "Prawn",
+    "Woodlouse",
+    "Earthworm"
+   ],
+   "why": "A millipede's underside, with two pairs of legs on each segment.",
+   "pearl": "For years no millipede had 1,000 legs. Then in 2021, one found deep underground in Western Australia turned out to have 1,306."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "About 26 times life size, on a paddle left in water.",
+   "img": {
+    "url": "img/athon/normie/2026-12-01-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=20798",
+    "author": "CDC/ Dr. Pratt (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Many tiny dark, oval, textured objects packed together on a fibrous pale surface."
+   },
+   "answer": "Mosquito eggs",
+   "wrong": [
+    "Rice grains",
+    "Sesame seeds",
+    "Poppy seeds",
+    "Ant eggs",
+    "Grass seeds"
+   ],
+   "why": "Aedes mosquito eggs laid on a damp paddle.",
+   "pearl": "These eggs can survive dried out for months and hatch when rain floods them. Tip out water from pots and buckets."
+  }
+ ]
+}

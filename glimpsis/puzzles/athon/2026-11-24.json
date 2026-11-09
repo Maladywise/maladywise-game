@@ -1,0 +1,236 @@
+{
+ "date": "2026-11-24",
+ "number": 2,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "Woke with this. No pain, no discharge, vision normal.",
+   "img": {
+    "url": "img/athon/2026-11-24-01.jpg",
+    "source": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Human_eye_showing_subconjunctival_hemorrhage.jpg",
+    "author": "James Heilman, MD (cropped)",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "alt": "An eye with a flat, bright red patch covering much of the white, sparing the clear cornea."
+   },
+   "answer": "Subconjunctival haemorrhage",
+   "wrong": [
+    "Acute angle-closure glaucoma",
+    "Bacterial conjunctivitis",
+    "Episcleritis",
+    "Anterior uveitis (iritis)",
+    "Hyphaema"
+   ],
+   "why": "Flat, sharply edged blood under the conjunctiva in a painless eye with normal vision.",
+   "pearl": "Usually from a cough, strain or rub and clears in 1–2 weeks. Check blood pressure, and the INR if they take warfarin."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "A firm lump on the neck that slowly grew after a cut years ago.",
+   "img": {
+    "url": "img/athon/2026-11-24-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=20279",
+    "author": "CDC/ Robert S. Craig (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A large, shiny, lobulated dark lump on the side of the neck."
+   },
+   "answer": "Keloid",
+   "wrong": [
+    "Hypertrophic scar",
+    "Lipoma",
+    "Epidermoid cyst",
+    "Neurofibroma",
+    "Dermatofibrosarcoma protuberans"
+   ],
+   "why": "Firm, rubbery scar tissue that has grown well beyond the original wound.",
+   "pearl": "More common in darker skin. Unlike hypertrophic scars, keloids spread past the wound edge and rarely fade; steroid injections help."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Itchy lumps after an evening by the river.",
+   "img": {
+    "url": "img/athon/2026-11-24-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28630",
+    "author": "CDC/ Division of Vector-Borne Diseases Rickettsial Zoonoses Branch",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A forearm with several swollen pink welts merging together."
+   },
+   "answer": "Mosquito bites",
+   "wrong": [
+    "Scabies",
+    "Urticaria (hives)",
+    "Cellulitis",
+    "Bed bug bites",
+    "Impetigo"
+   ],
+   "why": "Itchy, swollen pink welts on exposed skin that merge together.",
+   "pearl": "Big local reactions are common, especially in children. In Australia, mosquitoes also spread Ross River and Barmah Forest viruses."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Raised red-purple spots on the legs after a sore throat. Joints ache.",
+   "img": {
+    "url": "img/athon/2026-11-24-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25167",
+    "author": "CDC/ Dr. Charles N. Farmer (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Knees and legs with scattered raised purple spots."
+   },
+   "answer": "Henoch–Schönlein purpura (IgA vasculitis)",
+   "wrong": [
+    "Meningococcal septicaemia",
+    "Immune thrombocytopenia",
+    "Erythema nodosum",
+    "Drug eruption",
+    "Rocky Mountain spotted fever"
+   ],
+   "why": "Palpable purpura on the legs from small-vessel IgA vasculitis.",
+   "pearl": "Mostly in children. Check the urine and blood pressure for weeks afterwards, because kidney involvement can appear late."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "A burning feeling inside both cheeks with spicy food.",
+   "img": {
+    "url": "img/athon/2026-11-24-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12632",
+    "author": "CDC/ Robert E. Sumpter (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Inside of the cheek with a lacy network of fine white lines."
+   },
+   "answer": "Oral lichen planus",
+   "wrong": [
+    "Oral candidiasis",
+    "Leukoplakia",
+    "Frictional keratosis",
+    "Lupus",
+    "Aphthous ulcers"
+   ],
+   "why": "A lacy white network (Wickham striae) on the inner cheeks, usually on both sides.",
+   "pearl": "Unlike thrush, it doesn't wipe off. It carries a small cancer risk, so long-standing or ulcerated areas need review."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Fever, sore throat and no cough.",
+   "img": {
+    "url": "img/athon/2026-11-24-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=3183",
+    "author": "CDC/ Heinz F. Eichenwald, MD",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Open mouth showing a red throat with small red spots on the soft palate."
+   },
+   "answer": "Streptococcal pharyngitis",
+   "wrong": [
+    "Glandular fever",
+    "Viral pharyngitis",
+    "Herpangina",
+    "Diphtheria",
+    "Oral candidiasis"
+   ],
+   "why": "An angry red throat with petechiae on the soft palate, fever and no cough.",
+   "pearl": "In Aboriginal and Torres Strait Islander communities, treating strep throat with penicillin helps prevent rheumatic fever."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A gardener with a sore that started after a rose-thorn prick, then new lumps up the arm.",
+   "img": {
+    "url": "img/athon/2026-11-24-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26852",
+    "author": "CDC/ Dr. Lucille K. Georg",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A forearm with crusted, ulcerated lesions in a line running up from the hand."
+   },
+   "answer": "Sporotrichosis",
+   "wrong": [
+    "Cutaneous leishmaniasis",
+    "Mycobacterium marinum infection",
+    "Cellulitis",
+    "Pyoderma gangrenosum",
+    "Nocardiosis"
+   ],
+   "why": "Nodules and ulcers marching up the arm along the lymphatics after a thorn injury.",
+   "pearl": "Known as 'rose gardener's disease'. Itraconazole is the usual treatment, often for months."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A painful, fast-growing foot ulcer in a man from the Papua New Guinea highlands.",
+   "img": {
+    "url": "img/athon/2026-11-24-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=12174",
+    "author": "CDC/ K. Mae Lennon, Tulane Medical School; Clement Benjamin",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A deep, raw, red ulcer with raised edges on the side of a dark-skinned foot."
+   },
+   "answer": "Tropical ulcer",
+   "wrong": [
+    "Buruli ulcer",
+    "Venous ulcer",
+    "Diabetic foot ulcer",
+    "Cutaneous leishmaniasis",
+    "Yaws"
+   ],
+   "why": "A painful, rapidly enlarging ulcer on the lower leg or foot in a hot, humid climate.",
+   "pearl": "Fusobacteria and spirochaetes are usually involved. Penicillin or metronidazole plus good wound care and nutrition heal most."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "A villager from rural West Africa with a burning blister on the ankle.",
+   "img": {
+    "url": "img/athon/2026-11-24-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=1342",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "An ankle with a small sore from which a thin white thread is being wound around a matchstick."
+   },
+   "answer": "Guinea worm (dracunculiasis)",
+   "wrong": [
+    "Loiasis",
+    "Myiasis",
+    "Tungiasis",
+    "Cutaneous larva migrans",
+    "Onchocerciasis"
+   ],
+   "why": "A long thin worm emerging from a painful blister, slowly wound out on a stick.",
+   "pearl": "Close to eradication: fewer than 20 human cases a year recently, down from millions in the 1980s, thanks to filtered drinking water."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "Itchy, patterned rash for years in a man from a remote Pacific island.",
+   "img": {
+    "url": "img/athon/2026-11-24-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=32288",
+    "author": "CDC/ Dr. Libero Ajello (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A back and shoulder covered in overlapping concentric rings of fine scale, like wood grain."
+   },
+   "answer": "Tinea imbricata",
+   "wrong": [
+    "Tinea corporis",
+    "Erythema annulare centrifugum",
+    "Ichthyosis",
+    "Pityriasis rotunda",
+    "Erythema gyratum repens"
+   ],
+   "why": "Concentric, overlapping rings of scale like lace or wood grain, from Trichophyton concentricum.",
+   "pearl": "Found in the Pacific islands, South-East Asia and the Amazon, and tends to run in families. It needs oral antifungals."
+  }
+ ]
+}

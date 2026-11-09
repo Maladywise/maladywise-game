@@ -1,0 +1,236 @@
+{
+ "date": "2026-11-24",
+ "number": 2,
+ "items": [
+  {
+   "difficulty": "Easy",
+   "context": "Whining in your ear at bedtime.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-01.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=26045",
+    "author": "CDC/ Amy E. Lockwood, MS",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A slim black-and-white striped insect with long legs on a green leaf."
+   },
+   "answer": "Mosquito",
+   "wrong": [
+    "Crane fly",
+    "Gnat",
+    "Midge",
+    "Wasp",
+    "Spider"
+   ],
+   "why": "An Aedes mosquito with its striped legs and slender body.",
+   "pearl": "Only female mosquitoes bite; they need blood to make eggs. Males sip nectar."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "Lurking in a corner of the shed.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-02.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28786",
+    "author": "CDC/ M. Parsons",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A shiny black spider with a round abdomen hanging in a web."
+   },
+   "answer": "Black widow spider",
+   "wrong": [
+    "Huntsman",
+    "Funnel-web",
+    "Ant",
+    "Beetle",
+    "Cockroach"
+   ],
+   "why": "A black widow: glossy black with a round abdomen, related to Australia's redback.",
+   "pearl": "The red hourglass is on the underside. Our redback wears its red stripe on the back instead."
+  },
+  {
+   "difficulty": "Easy",
+   "context": "In a bowl on the kitchen bench.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-03.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=13651",
+    "author": "CDC/ Amanda Mills (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Shiny round dark red fruit piled in a white bowl."
+   },
+   "answer": "Grapes",
+   "wrong": [
+    "Cherries",
+    "Plums",
+    "Olives",
+    "Blueberries",
+    "Cherry tomatoes"
+   ],
+   "why": "Red grapes, glossy and round.",
+   "pearl": "Cut a grape almost in half, microwave it and it can make a spark of glowing plasma. Please don't try it at home."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Hanging under the eaves.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-04.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25405",
+    "author": "CDC/ Dr. Henry D. Pratt",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A grey, papery structure covered in six-sided cells."
+   },
+   "answer": "Paper wasp nest",
+   "wrong": [
+    "Honeycomb",
+    "Lotus seed pod",
+    "Pine cone",
+    "Coral",
+    "Bird's nest"
+   ],
+   "why": "A paper wasp nest, built from chewed wood fibre into six-sided cells.",
+   "pearl": "Wasps invented paper long before people did: they chew wood and mix it with saliva."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Sunbaking on a rock in a pond.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-05.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=15620",
+    "author": "CDC/ Eric Grafman (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A domed dark shell with yellow-striped skin and a pointed head."
+   },
+   "answer": "Red-eared slider turtle",
+   "wrong": [
+    "Tortoise",
+    "Crocodile",
+    "Snake",
+    "Lizard",
+    "Frog"
+   ],
+   "why": "A red-eared slider turtle with its striped head and domed shell.",
+   "pearl": "In Australia it's a declared invasive pest. If you see one in the wild, report it."
+  },
+  {
+   "difficulty": "Medium",
+   "context": "Coiled up and not happy about it.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-06.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=25010",
+    "author": "CDC/ Harold George Scott, PhD (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "Patterned scales in brown and black chevrons ending in a segmented tail tip."
+   },
+   "answer": "Rattlesnake",
+   "wrong": [
+    "Python",
+    "Lizard",
+    "Eel",
+    "Pine cone",
+    "Crocodile"
+   ],
+   "why": "A timber rattlesnake: chevron-patterned scales and a segmented rattle on the tail.",
+   "pearl": "A new rattle segment is added each time the snake sheds, not once a year, so you can't count them to get its age."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Pouring out of a crack in the floorboards.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-07.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=28487",
+    "author": "CDC",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A crowd of tiny pale insects with dark wings lined up along a gap in pale timber."
+   },
+   "answer": "Termites",
+   "wrong": [
+    "Ants",
+    "Rice grains",
+    "Mosquitoes",
+    "Flying ants",
+    "Seeds"
+   ],
+   "why": "A swarm of winged termites leaving the colony to start new ones.",
+   "pearl": "In the Northern Territory, magnetic termites build flat mounds that all point north–south to manage the heat."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Electron microscope view, about 100 times life size, with some cat fur.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-08.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=9977",
+    "author": "CDC/ Callie Carr (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A grey electron microscope image of a rounded, pitted body with hairs across it."
+   },
+   "answer": "Tick",
+   "wrong": [
+    "Flea",
+    "Bed bug",
+    "Ladybird",
+    "Seed",
+    "Dust mite"
+   ],
+   "why": "A swollen tick, still attached, seen under an electron microscope among strands of cat fur.",
+   "pearl": "Ticks aren't insects. They have eight legs and are related to spiders."
+  },
+  {
+   "difficulty": "Hard",
+   "context": "Munching on an oak leaf.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-09.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24371",
+    "author": "CDC/ Harold G. Scott (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A fat green body covered in clusters of fine spines."
+   },
+   "answer": "Io moth caterpillar",
+   "wrong": [
+    "Cactus",
+    "Pine cone",
+    "Sea cucumber",
+    "Burr",
+    "Moss"
+   ],
+   "why": "An Io moth caterpillar, bristling with green stinging spines.",
+   "pearl": "The adult Io moth flashes two huge eyespots on its back wings to startle birds."
+  },
+  {
+   "difficulty": "Genius",
+   "context": "Electron microscope view, about 24 times life size.",
+   "img": {
+    "url": "img/athon/normie/2026-11-24-10.jpg",
+    "source": "CDC Public Health Image Library",
+    "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=8814",
+    "author": "CDC/ William L. Nicholson, Ph.D.; Cal Welbourn, Ph.D., Gary R. Mullen (cropped)",
+    "licence": "Public domain",
+    "licence_url": "",
+    "alt": "A grey electron microscope image of a scaly limb ending in thin clawed toes."
+   },
+   "answer": "Lizard's foot",
+   "wrong": [
+    "Bird's foot",
+    "Frog's foot",
+    "Beetle's leg",
+    "Crab's leg",
+    "Tree root"
+   ],
+   "why": "A small lizard's foot, armoured in scales, with clawed toes.",
+   "pearl": "Lizard scales are made of keratin, the same protein as your fingernails."
+  }
+ ]
+}
