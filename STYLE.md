@@ -87,6 +87,16 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Organ Drop is now **Stackulus** at `stackulus/` (https://maladywise.com/stackulus/). `organ-drop/` and `dropsy/` are redirects only.
 - Mergeon is the organ merge arcade game at https://maladywise.com/mergeon/.
 
+## Mergeon weekly schedule (from 16 Nov 2026)
+- Every day has a twist (Sydney date), in Medical and Normie modes. X tasks can tease the day's special (e.g. Saturday arcade posts); link https://maladywise.com/mergeon/.
+  - **Mon:** Microgravity Monday (Normie: Moon Monday). Floaty pieces and a gentle drift.
+  - **Tue, Thu, Sat:** a daily mutation picked by date (bouncy, slippery, narrow board, double chains, sneak peek, slow-mo merges, heavy). Shown as "Today's mutation".
+  - **Wed:** Blood Bank Wednesday (Normie: Potluck Wednesday). Pieces carry blood groups (flavours) and merge only if compatible. O− is everyone's favourite donor.
+  - **Fri:** Sick Day Friday (Normie: Grumpy Friday). Every organ is a bit poorly: bloodshot eye, coughing lungs, brain freeze.
+  - **Sun:** Outbreak Sunday (Normie: Slick Sunday). Infections drain your score until you treat them.
+- Also daily: 3 "Ward round" goals (Normie: "Today's jobs") with a sticker for all 3, a Collection book with hidden bonus finds, Learn mode, and seasonal skins (Christmas 1–26 Dec, Halloween 25–31 Oct, Easter week).
+- Teasers: playful, never mocking patients; no pressure to donate blood. Don't reveal hidden-find triggers beyond the in-game clues.
+
 ## Characters: default female
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
 

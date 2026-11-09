@@ -8,7 +8,7 @@
    Determinism: only the drop PRNG (rnd) sets the drop order; infections use irnd, shake srnd; nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -62,6 +62,8 @@
       "The brain is about 2% of your body weight but uses about 20% of its energy."
     ],
     WFACT: "Wild piece! It merges with anything. Stem cells in your bone marrow make hundreds of billions of new blood cells a day.",
+    WFACT2: "Stem cells can copy themselves and turn into specialised cells. The blood-forming ones live in your bone marrow and make every type of blood cell.",
+    WTIP: "Stem cell: merges with any piece and turns it into the next organ up.", WLAB: "STEM CELL",
     BIG: "Mind blown!", TOOL: { e: "🔪", n: "Scalpel", hint: "Scalpel ready. Tap a piece to remove it." }, ANON: "Anonymous medic",
     REACT: [["Early days. Rest, fluids, try again.", "Even brains start as microbes. Go again."], ["Stable. Observations look good.", "Not bad. Solid vital signs."], ["Textbook. Literally.", "Admit it, you’re showing off."]]
   };
@@ -106,23 +108,153 @@
       "Despite the ‘killer whale’ nickname, orcas are the biggest members of the dolphin family.",
       "The blue whale is the largest animal known to have ever lived, bigger than any dinosaur."
     ],
+    WFACT2: "Natural pearls are rare: most pearls sold today are cultured, grown on pearl farms.",
+    WTIP: "Pearl: pairs with any creature and turns it into the next one up.", WLAB: "PEARL · WILD",
     WFACT: "Wild piece! It merges with anything. Oysters make pearls by coating a speck of grit in layer after layer of mother-of-pearl.",
     BIG: "Big splash!", TOOL: { e: "🥅", n: "Net", hint: "Net ready. Tap a creature to scoop it out." }, ANON: "Anonymous sailor",
     REACT: [["Small fry today. Dive back in.", "Shell of a try. Go again."], ["Swimmingly done.", "Not bad for a day at the beach."], ["Fin-tastic run!", "Making waves, you are."]]
   };
   // Outbreak Sunday extras (Normie: an oil slick, cleaned with a sponge). Non-medical wording in Normie.
   MED.OUT = { RX: { dose: "Antibiotic", doses: "doses", hit: "Germ landed! Merge to earn 💊, then treat it early.", earned: "Dose earned! 💊", res: "Resistant! Needs a full course: 2 doses", resWord: "resistant", half: "Half a course. One more dose to finish it.", cure: "Treated! Keep an eye on the rest.", clear: "All clear! Infection gone.", wasted: "Antibiotics don’t work on nothing.", ready: "Antibiotic ready. Tap an infected piece.",
+      drain: "Infections drain your score until you treat them.",
       tip: ["Earn a 💊 dose every 6 merges (hold 2).", "Treat early: after 20 s a germ turns resistant and needs 2 doses.", "Don’t waste them: no germ, −10 points."],
       first: "First cure", fact: "Antibiotics only work on bacteria, and every unnecessary course helps resistance grow. Finish the course your doctor prescribes." },
     badge: "🦠 Outbreak Sunday", share: "🦠", hit: "Germ landed! It can’t merge.", spread: "The infection is spreading!", cure: "Immune response!", clear: "Infection cleared! +50", cleared: "Infections cleared", wasted: "Antibiotic wasted. No germs there.", tint: "rgba(96,190,60,.38)", P: { e: "💊", n: "Antibiotic", r: 17, c: "#FDE2E2" },
     ART: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><g transform=\"rotate(-35 50 50)\"><path d=\"M50 14 L30 14 Q8 14 8 50 Q8 86 30 86 L50 86Z\" fill=\"#EF4B4B\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M50 14 L70 14 Q92 14 92 50 Q92 86 70 86 L50 86Z\" fill=\"#FFFFFF\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M22 34 Q24 24 34 22\" stroke=\"#FFA3A3\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/></g>" + FACE(50, 54, 0.9) + "</svg>",
     fact: "Antibiotic! It cures every infected piece it bumps into. Penicillin was discovered by Alexander Fleming in 1928." };
   SEA.OUT = { RX: { dose: "Sponge", doses: "sponges", hit: "Oil slick! Merge to earn 🧽, then clean it early.", earned: "Sponge earned! 🧽", res: "Stubborn slick! Needs 2 sponges.", resWord: "stubborn", half: "Half clean. One more sponge to finish it.", cure: "Cleaned! Keep an eye on the rest.", clear: "All clean! Spill gone.", wasted: "Sponge wasted. Nothing to clean.", ready: "Sponge ready. Tap a slicked creature.",
+      drain: "Oil slicks drain your score until you clean them.",
       tip: ["Earn a 🧽 sponge every 6 merges (hold 2).", "Clean early: after 20 s a slick turns stubborn and needs 2 sponges.", "Don’t waste them: no oil, −10 points."],
       first: "First clean-up", fact: "Oil spill crews fence oil in with floating booms, then skim and soak it up. Some ocean microbes even eat oil, helping clean up spills naturally." },
     badge: "🛢️ Slick Sunday", share: "🛢️", hit: "Oil slick! It can’t merge.", spread: "The slick is spreading!", cure: "Clean-up crew!", clear: "Spill cleaned up! +50", cleared: "Slicks cleaned", wasted: "Sponge wasted. Nothing to clean there.", tint: "rgba(40,30,60,.42)", P: { e: "🧽", n: "Sponge", r: 17, c: "#FFF3BF" },
     ART: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><path d=\"M14 22 Q14 12 26 12 L74 12 Q86 12 86 22 L88 80 Q88 90 76 90 L24 90 Q12 90 12 80Z\" fill=\"#F7D24A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M12 74 L88 74\" stroke=\"#3A2A55\" stroke-width=\"3\"/><path d=\"M12 74 L88 74 L88 80 Q88 90 76 90 L24 90 Q12 90 12 80Z\" fill=\"#7CC36A\" stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"26\" cy=\"26\" r=\"4\" fill=\"#E0B22E\"/><circle cx=\"76\" cy=\"30\" r=\"5\" fill=\"#E0B22E\"/><circle cx=\"30\" cy=\"62\" r=\"3.5\" fill=\"#E0B22E\"/><circle cx=\"74\" cy=\"60\" r=\"3\" fill=\"#E0B22E\"/></svg>".replace("</svg>", FACE(50, 44, 1) + "</svg>"),
     fact: "Sponge! It cleans every slicked creature it bumps into. Real sea sponges are animals, and some have lived for thousands of years." };
+
+  // ---------- Weekly specials, mutations, goals, collection, learn mode, skins, hidden finds (from 16 Nov 2026) ----------
+  // Second fun fact per piece (collection book and learn mode). Plain words, checked.
+  MED.FACTS2 = [
+    "In ideal lab conditions, some bacteria (like E. coli) can double in number about every 20 minutes.",
+    "Blood makes up roughly 7–8% of your body weight.",
+    "Your blind spot is where the optic nerve leaves the eye. There are no light sensors there, and your brain fills in the gap.",
+    "The liver makes bile. The gallbladder just stores and concentrates it, then squeezes it out after a fatty meal.",
+    "Most people have two kidneys, but you can live a normal life with just one.",
+    "You usually feel the first urge to go well before your bladder is actually full.",
+    "An adult stomach can stretch to hold around a litre or more after a big meal.",
+    "Your heart has its own built-in pacemaker, the sinoatrial node, so it keeps its own beat.",
+    "At rest you breathe roughly 12 to 20 times a minute: about 20,000 breaths a day.",
+    "The liver is your largest internal organ, about 1.5 kg in an adult.",
+    "Your brain has about 86 billion nerve cells (neurons)."
+  ];
+  SEA.FACTS2 = [
+    "‘Plankton’ comes from a Greek word meaning ‘wanderer’ or ‘drifter’.",
+    "A shrimp’s heart sits up front, in the same body section as its head.",
+    "Crabs usually walk sideways because of the way their leg joints bend.",
+    "A slimy coat of mucus helps protect a clownfish from its anemone’s stings.",
+    "A group of jellyfish is called a smack, or a bloom.",
+    "Many pufferfish carry tetrodotoxin, a toxin far more deadly than cyanide.",
+    "An octopus can squeeze through any gap bigger than its beak, the only hard part of its body.",
+    "A turtle can’t climb out of its shell: the shell is part of its skeleton, joined to its spine and ribs.",
+    "Sharks grow new teeth all their lives. Some get through thousands.",
+    "Orca families have their own calls, a bit like family dialects.",
+    "Blue whales live mostly on krill, eating several tonnes of it a day when feeding."
+  ];
+  // Blood Bank Wednesday. Groups as antigen bits (A = 1, B = 2, RhD = 4): a donor is compatible when it carries no antigen the recipient lacks.
+  // Weights: Australian Red Cross Lifeblood, "Blood types" (lifeblood.com.au/blood/learn-about-blood/blood-types, checked Nov 2026):
+  // O+ 38%, O− 7%, A+ 32%, A− 6%, B+ 12%, B− 2%, AB+ 4%, AB− 1% (sums to 102 from rounding; normalised below).
+  MED.BG = { names: ["O−", "A−", "B−", "AB−", "O+", "A+", "B+", "AB+"], w: [7, 6, 2, 1, 38, 32, 12, 4],
+    col: ["#1F7A6E", "#B4472F", "#3460A8", "#7A3F8F", "#1F7A6E", "#B4472F", "#3460A8", "#7A3F8F"], donor: 0, recip: 7,
+    no: ["Incompatible! The recipient’s antibodies are not having it.", "Those two don’t match. Check the blood groups.", "Incompatible. That transfusion would end in tears."],
+    donorT: "O negative: everyone’s favourite donor.", recipT: "AB positive: takes anything. Very relaxed.", mixed: "Compatible! Transfusion complete." };
+  // Potluck Wednesday (Normie): Plain = 0 goes with anything, Sweet = 1, Savoury = 2, Spicy = 3 (= sweet|savoury bits) goes with anything; sweet + savoury clash.
+  SEA.BG = { names: ["Plain", "Sweet", "Savoury", "Spicy"], w: [12, 34, 34, 20], col: ["#6B6680", "#C2477E", "#A86A12", "#C83A24"], donor: 0, recip: 3,
+    no: ["Sweet and savoury? Not at this potluck.", "Those flavours clash. Find a better match.", "Nope. That dish is not happening."],
+    donorT: "Plain: goes with everything.", recipT: "Spicy: gets along with everyone.", mixed: "Tasty pairing!" };
+  function bgOK(d, r) { return (d & ~r) === 0; } // donor d can give to recipient r
+  MED.SPEC = {
+    micro: { e: "🚀", n: "Microgravity Monday", short: "Microgravity", line: "floaty pieces and a gentle drift.",
+      fact: { t: "Microgravity", x: "In space, body fluids shift towards the head (hello, puffy face), weight-bearing bones lose about 1–1.5% of their density a month, and some astronauts get eye changes called SANS." } },
+    blood: { e: "🩸", n: "Blood Bank Wednesday", short: "Blood Bank", line: "compatible groups only.",
+      fact: { t: "Blood groups", x: "Your group comes from A and B markers on red cells plus the Rh factor (the + or −). O negative red cells can go to almost anyone in an emergency. In Australia, donations are collected by Lifeblood." } },
+    sick: { e: "🤒", n: "Sick Day Friday", short: "Sick Day", line: "everyone’s a bit poorly.",
+      fact: { t: "Why we feel sick", x: "Feeling rotten is partly your immune system’s plan. Fever makes life harder for many germs and speeds up immune cells, and ‘sickness behaviour’ (tired, off your food) saves energy for the fight." } }
+  };
+  SEA.SPEC = {
+    micro: { e: "🌙", n: "Moon Monday", short: "Moon", line: "floaty pieces and a gentle drift.",
+      fact: { t: "Moon gravity", x: "Gravity on the Moon is about one-sixth of Earth’s. Apollo astronauts found it easier to bunny-hop than walk." } },
+    blood: { e: "🥘", n: "Potluck Wednesday", short: "Potluck", line: "matching flavours only.",
+      fact: { t: "Potluck", x: "The word ‘potluck’ goes back to the 1500s: a guest got whatever luck had put in the pot." } },
+    sick: { e: "😤", n: "Grumpy Friday", short: "Grumpy", line: "everyone’s in a mood.",
+      fact: { t: "Grumpy", x: "The internet’s famous Grumpy Cat wasn’t actually grumpy. Her real name was Tardar Sauce." } }
+  };
+  // Sick Day quirks by chain level (the same mechanics in Normie, where the creatures sulk)
+  var QUIRK = ["brows", "sway", "slip", "rattle", "shiver", "drip", "toot", "fib", "cough", "spew", "freeze"];
+  MED.SICKT = ["The microbe is grumpy today. Fair enough.", "Blood drop’s feeling a bit woozy.", "Eye’s all bloodshot. Late night?", "Gallbladder’s rattling. Probably a stone.",
+    "Kidneys have the shivers.", "Bladder sprang a tiny leak. Don’t look.", "Toot! Pardon the stomach.", "Heart’s all of a flutter. Deep breaths.", "Bless you, lungs.",
+    "Liver had a little spew. Lovely.", "Brain freeze!"];
+  SEA.SICKT = ["Plankton’s in a mood.", "Shrimp is sulking. Give it space.", "Crab’s being crabby. Obviously.", "Clownfish has the hiccups.", "Jellyfish has the wobbles.",
+    "Pufferfish dripped on the floor. Rude.", "Octopus let off an ink puff. Charming.", "Turtle’s in a huff.", "Bless you, shark.", "Orca sprayed everyone from the blowhole.", "Whale’s gone all frosty."];
+  // Daily mutations (Tue/Thu/Sat). Physics or scoring tweaks only; never the drop order.
+  var MUTS = [
+    { id: "bouncy", e: "🏀", n: ["Bouncy castle", "Bouncy castle"], d: ["Pieces have extra spring.", "Everything has extra spring."] },
+    { id: "slippery", e: "🧼", n: ["Freshly mopped", "Slippery deck"], d: ["The ward floor is slippery.", "Someone just mopped the deck."] },
+    { id: "narrow", e: "📏", n: ["Tight squeeze", "Narrow tank"], d: ["The board is a bit narrower.", "The tank is a bit narrower."] },
+    { id: "double", e: "✖️", n: ["Double chains", "Double chains"], d: ["Chain reaction bonuses score double.", "Chain reaction bonuses score double."] },
+    { id: "preview", e: "👀", n: ["Sneak peek", "Sneak peek"], d: ["See the next two pieces.", "See the next two creatures."] },
+    { id: "slowmo", e: "🐌", n: ["Slow-mo merges", "Slow-mo merges"], d: ["Time slows for a moment after each merge.", "Time slows for a moment after each merge."] },
+    { id: "heavy", e: "🪨", n: ["Heavy day", "Heavy day"], d: ["Pieces fall fast and don’t bounce.", "Creatures sink fast and don’t bounce."] }
+  ];
+  // Seasonal skins (purely cosmetic) and their collection cards
+  MED.SKIN = { xmas: { e: "🎅", n: "Christmas organs", lv: 7, fact: "Haemophilia B is also called Christmas disease, after Stephen Christmas, the first patient described with it in 1952." },
+    hall: { e: "🎃", n: "Zombie organs", lv: 10, fact: "Goosebumps come from tiny muscles at the base of each hair, called arrector pili, which pull the hair upright." },
+    easter: { e: "🐰", n: "Easter organs", lv: 4, fact: "Chocolate is toxic to dogs because they break down theobromine, a chemical in cocoa, very slowly." } };
+  SEA.SKIN = { xmas: { e: "🎅", n: "Christmas creatures", lv: 7, fact: "Reindeer eyes change colour with the seasons: golden in the bright Arctic summer, deep blue in the dark winter." },
+    hall: { e: "🎃", n: "Zombie creatures", lv: 10, fact: "Botanically, a pumpkin is a kind of berry." },
+    easter: { e: "🐰", n: "Easter creatures", lv: 4, fact: "Baby hares are born furry with their eyes open. Baby rabbits are born hairless with their eyes shut." } };
+  // Ward round goals (Normie: "Today's jobs"). Each: [id, Medical text, Normie text]. Level goals fill in the piece name.
+  MED.GOALW = "Ward round"; SEA.GOALW = "Today’s jobs";
+  MED.STICK = "🩺"; SEA.STICK = "🐚";
+  // Hidden finds (item 9): bonus collectables, never part of the chain and never scored. Art in 0–100 units with the usual face.
+  function HSVG(body, fx, fy, fk) { return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-4 -4 108 108\"><g stroke=\"#3A2A55\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\">" + body + "</g>" + (fx ? FACE(fx, fy, fk || 1) : "") + "</svg>"; }
+  MED.HID = [
+    { id: "thymus", n: "Thymus", clue: "Catch me young. I shrink as you grow.", fact: "The thymus, in your chest behind the breastbone, is where T cells (a kind of white blood cell) learn their job. It’s biggest for its size in childhood and slowly turns to fat after puberty.",
+      art: HSVG("<path d=\"M48 18 Q30 14 24 34 Q14 62 26 84 Q36 96 48 86 Q52 60 48 18Z\" fill=\"#F2A7B8\"/><path d=\"M52 18 Q70 14 76 34 Q86 62 74 84 Q64 96 52 86 Q48 60 52 18Z\" fill=\"#F7BCCB\"/>", 50, 58, 0.8) },
+    { id: "pineal", n: "Pineal gland", clue: "Look for me when the lights go out.", fact: "This tiny pine-cone-shaped gland deep in the brain releases melatonin when it’s dark, helping set your body clock.",
+      art: HSVG("<path d=\"M50 6 Q80 30 78 60 Q74 92 50 96 Q26 92 22 60 Q20 30 50 6Z\" fill=\"#C9A06A\"/><path d=\"M30 44 L50 56 L70 44 M26 64 L50 76 L74 64 M38 28 L50 36 L62 28\" fill=\"none\" stroke=\"#8A6A3A\"/>", 50, 60, 0.85) },
+    { id: "spleen", n: "Spleen", clue: "Introduce the universal donor to the universal recipient.", fact: "Your spleen filters old and worn-out red blood cells from your blood and helps fight some infections. It also holds about a third of your platelets.",
+      art: HSVG("<path d=\"M30 14 Q70 4 88 30 Q98 54 82 76 Q64 96 38 90 Q50 72 44 56 Q36 40 20 38 Q14 22 30 14Z\" fill=\"#9C3D5A\"/><path d=\"M40 22 Q60 16 76 28\" stroke=\"#C9708A\" stroke-width=\"5\" fill=\"none\"/>", 64, 56, 0.9) },
+    { id: "colon", n: "Colon", clue: "Follow the wind.", fact: "Your colon (large bowel) is about 1.5 metres long. It soaks water back out of what’s left of your food, and its bacteria make gas. Passing wind every day is completely normal.",
+      art: HSVG("<path d=\"M18 92 L18 30 Q18 12 36 12 L64 12 Q82 12 82 30 L82 80 Q82 92 70 92\" fill=\"none\" stroke=\"#3A2A55\" stroke-width=\"22\"/><path d=\"M18 92 L18 30 Q18 12 36 12 L64 12 Q82 12 82 30 L82 80 Q82 92 70 92\" fill=\"none\" stroke=\"#E8A87C\" stroke-width=\"16\"/>", 50, 14, 0.6) },
+    { id: "bone", n: "Bone", clue: "Survive the float, or count to 206.", fact: "Adults have 206 bones; babies start with around 300 that fuse as they grow. In space, weight-bearing bones lose about 1–1.5% of their density a month.",
+      art: HSVG("<path d=\"M26 30 Q12 18 22 10 Q32 4 38 16 L62 16 Q68 4 78 10 Q88 18 74 30 L74 70 Q88 82 78 90 Q68 96 62 84 L38 84 Q32 96 22 90 Q12 82 26 70Z\" fill=\"#F4EEDC\"/>", 50, 52, 0.9) },
+    { id: "ovary", n: "Ovary", clue: "Rare, precious, monthly-ish.", fact: "Each ovary is about the size of an almond. A baby girl is born with all the eggs she’ll ever have: around a million or more.",
+      art: HSVG("<ellipse cx=\"50\" cy=\"56\" rx=\"34\" ry=\"26\" fill=\"#F5B8C4\"/><circle cx=\"34\" cy=\"50\" r=\"5\" fill=\"#FFE3EA\"/><circle cx=\"68\" cy=\"64\" r=\"4\" fill=\"#FFE3EA\"/><circle cx=\"60\" cy=\"42\" r=\"3\" fill=\"#FFE3EA\"/>", 50, 60, 0.8) },
+    { id: "testicle", n: "Testicles", clue: "We always come as a pair.", fact: "Testicles hang outside the body because sperm develop best a few degrees cooler than your core temperature. One usually hangs a little lower than the other.",
+      art: HSVG("<ellipse cx=\"32\" cy=\"56\" rx=\"22\" ry=\"28\" fill=\"#F2C9B0\"/><ellipse cx=\"68\" cy=\"60\" rx=\"22\" ry=\"28\" fill=\"#EDBEA2\"/>", 0) + "" },
+    { id: "uterus", n: "Uterus", clue: "Grow something big.", fact: "The uterus is about the size of a pear, but in pregnancy it stretches to hold a full-term baby, the placenta and fluid, then shrinks back over about six weeks.",
+      art: HSVG("<path d=\"M30 30 Q50 22 70 30 Q72 60 58 78 L58 94 L42 94 L42 78 Q28 60 30 30Z\" fill=\"#F09AAE\"/><path d=\"M30 32 Q18 26 10 34 M70 32 Q82 26 90 34\" fill=\"none\" stroke=\"#3A2A55\" stroke-width=\"4\"/><ellipse cx=\"8\" cy=\"40\" rx=\"6\" ry=\"8\" fill=\"#F5B8C4\"/><ellipse cx=\"92\" cy=\"40\" rx=\"6\" ry=\"8\" fill=\"#F5B8C4\"/>", 50, 50, 0.8) }
+  ];
+  // the testicles get two small faces
+  MED.HID[6].art = MED.HID[6].art.replace("</svg>", FACE(32, 56, 0.6) + FACE(68, 60, 0.6) + "</svg>");
+  SEA.HID = [
+    { id: "thymus", n: "Baby seahorse", clue: "Catch me early. I only turn up at the start.", fact: "Seahorse dads carry the babies: the male has a pouch where the eggs develop until they hatch.",
+      art: HSVG("<path d=\"M58 10 Q76 10 76 26 Q76 36 64 40 Q78 52 70 70 Q64 84 50 92 Q40 96 38 86 Q46 84 46 76 Q34 70 38 54 Q42 42 50 38 Q42 34 44 22 Q46 10 58 10Z\" fill=\"#F5C842\"/><path d=\"M76 22 L92 20\" stroke=\"#3A2A55\" stroke-width=\"6\"/>", 60, 26, 0.6) },
+    { id: "pineal", n: "Firefly squid", clue: "Look for me when the lights go out.", fact: "Firefly squid glow blue. Each spring they gather in huge numbers in Toyama Bay, Japan, lighting up the water at night.",
+      art: HSVG("<path d=\"M50 6 Q72 24 70 54 L66 70 L34 70 L30 54 Q28 24 50 6Z\" fill=\"#6EA8F0\"/><path d=\"M36 70 L30 94 M44 70 L42 96 M56 70 L58 96 M64 70 L70 94\" stroke=\"#6EA8F0\" stroke-width=\"5\"/><circle cx=\"40\" cy=\"30\" r=\"3\" fill=\"#CFF4FF\" stroke=\"none\"/><circle cx=\"60\" cy=\"34\" r=\"3\" fill=\"#CFF4FF\" stroke=\"none\"/>", 50, 50, 0.8) },
+    { id: "spleen", n: "Golden truffle", clue: "Introduce the plainest dish to the spiciest.", fact: "Truffles grow underground, so they’re found by smell. Trained dogs (and traditionally pigs) sniff them out.",
+      art: HSVG("<path d=\"M50 12 Q80 14 88 44 Q94 76 66 88 Q40 96 20 80 Q6 60 16 36 Q26 12 50 12Z\" fill=\"#C9962E\"/><circle cx=\"34\" cy=\"34\" r=\"3\" fill=\"#8A6418\" stroke=\"none\"/><circle cx=\"70\" cy=\"74\" r=\"3\" fill=\"#8A6418\" stroke=\"none\"/><circle cx=\"72\" cy=\"30\" r=\"2.5\" fill=\"#8A6418\" stroke=\"none\"/>", 50, 56, 0.9) },
+    { id: "colon", n: "Rubber duck", clue: "Follow the puffs.", fact: "In 1992 a shipping container of about 28,800 bath toys fell into the Pacific. Their drift helped oceanographers study ocean currents.",
+      art: HSVG("<path d=\"M30 30 Q30 10 50 10 Q70 10 68 32 Q92 34 92 60 Q90 90 54 90 Q14 90 14 64 Q14 46 34 44 Q28 38 30 30Z\" fill=\"#F7D24A\"/><path d=\"M66 26 Q84 24 88 30 Q82 36 66 34Z\" fill=\"#F2913D\"/>", 48, 28, 0.6) },
+    { id: "bone", n: "Moon rock", clue: "Survive the float, or count to 206.", fact: "The six Apollo landings brought back about 382 kg of Moon rock and soil.",
+      art: HSVG("<path d=\"M24 20 Q50 6 76 18 Q96 40 88 70 Q72 94 42 90 Q12 84 10 56 Q8 32 24 20Z\" fill=\"#B9B6C6\"/><circle cx=\"34\" cy=\"36\" r=\"7\" fill=\"#9692A8\"/><circle cx=\"70\" cy=\"70\" r=\"9\" fill=\"#9692A8\"/>", 54, 54, 0.9) },
+    { id: "ovary", n: "Four-leaf clover", clue: "Rare, lucky, monthly-ish.", fact: "Only about 1 in every 5,000 to 10,000 clovers has four leaves.",
+      art: HSVG("<circle cx=\"34\" cy=\"34\" r=\"18\" fill=\"#5FB55A\"/><circle cx=\"66\" cy=\"34\" r=\"18\" fill=\"#6CC266\"/><circle cx=\"34\" cy=\"66\" r=\"18\" fill=\"#6CC266\"/><circle cx=\"66\" cy=\"66\" r=\"18\" fill=\"#5FB55A\"/><path d=\"M60 70 Q70 86 84 94\" stroke=\"#3E8A3A\" stroke-width=\"6\" fill=\"none\"/>", 50, 50, 0.8) },
+    { id: "testicle", n: "Pair of dice", clue: "We always come as a pair.", fact: "On a standard die, opposite faces always add up to 7.",
+      art: HSVG("<rect x=\"8\" y=\"30\" width=\"40\" height=\"40\" rx=\"8\" fill=\"#FFFFFF\"/><rect x=\"52\" y=\"36\" width=\"40\" height=\"40\" rx=\"8\" fill=\"#FFF6E0\"/><circle cx=\"20\" cy=\"42\" r=\"4\" fill=\"#3A2A55\" stroke=\"none\"/><circle cx=\"36\" cy=\"58\" r=\"4\" fill=\"#3A2A55\" stroke=\"none\"/><circle cx=\"72\" cy=\"56\" r=\"4\" fill=\"#3A2A55\" stroke=\"none\"/>", 0) },
+    { id: "uterus", n: "Pot of gold", clue: "Grow something big.", fact: "Rainbows are really full circles. From the ground we usually only see the top arc; from a plane you can sometimes see the whole ring.",
+      art: HSVG("<path d=\"M14 44 L86 44 Q92 90 50 92 Q8 90 14 44Z\" fill=\"#3A3550\"/><circle cx=\"32\" cy=\"40\" r=\"10\" fill=\"#F5C842\"/><circle cx=\"52\" cy=\"34\" r=\"11\" fill=\"#F5C842\"/><circle cx=\"70\" cy=\"40\" r=\"10\" fill=\"#F5C842\"/><path d=\"M8 46 L92 46\" stroke-width=\"6\"/>", 50, 70, 0.8) }
+  ];
+  MED.FULL = { n: "Full Anatomy", d: "You found every hidden organ." }; SEA.FULL = { n: "Full Treasure Hunt", d: "You found every hidden treasure." };
+  MED.HIDW = "Hidden organ"; SEA.HIDW = "Hidden treasure";
 
   var K = NORMIE ? SEA : MED, O = K.O, ART = K.ART, HULL = K.HULL, SASS = K.SASS, POPS = K.POPS, DIST = K.DIST, OUTK = K.OUT;
   var WILD = O.length, CURE = O.length + 1, WO = K.W, PO = OUTK.P; // special pieces live after the chain: wild (stem cell / pearl) and cure (antibiotic / sponge)
@@ -135,9 +267,10 @@
 
   root.innerHTML =
     '<div class="wrap">' +
-    ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-help" aria-label="How to play">?</button><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
+    ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-help" aria-label="How to play">?</button><button type="button" class="mute" id="mrg-more" aria-label="More: goals, collection and learn mode" hidden>⋯</button><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
+    ' <p class="today" id="mrg-today" hidden></p>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
-    ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
+    ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
     ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button></span></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
@@ -157,10 +290,17 @@
       '<li><b>Don’t cross the dashed line.</b> If the pile stays above it for a couple of seconds, it’s game over.</li>' +
       '<li><b>Chain reactions:</b> quick merges in a row multiply your points.</li>' +
       '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
-      '<li><b>' + (NORMIE ? "🦪 Pearl" : "🧬 Stem cell") + ':</b> a rare wild card that levels up whatever it touches.</li>' +
+      '<li>' + pic(WILD, 22) + ' <b>' + (NORMIE ? "Pearl" : "Stem cell") + ' (wild):</b> a rare drop that merges with any ' + thing + ' and turns it into the next one up.</li>' +
       '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐.</li>' +
-      (String(day) >= RXDAY ? '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil slicks land and spread, and slicked creatures can’t merge." : "germs land and spread, and infected organs can’t merge.") + "<br>" + OUTK.RX.tip.join("<br>") + "</li>" :
+      (String(day) >= RXDAY ? '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil slicks land and spread, and slicked creatures can’t merge." : "germs land and spread, and infected organs can’t merge.") + "<br>" + OUTK.RX.tip.join("<br>") + "<br>" + OUTK.RX.drain + "</li>" :
       '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>') +
+      (featUI() ? '<li><b>Every day has a twist:</b><br>' + (NORMIE ? "Mon: Moon Monday (floaty)<br>Tue, Thu, Sat: a random mutation<br>Wed: Potluck Wednesday<br>Fri: Grumpy Friday<br>Sun: Slick Sunday"
+        : "Mon: Microgravity Monday<br>Tue, Thu, Sat: a random mutation<br>Wed: Blood Bank Wednesday<br>Fri: Sick Day Friday<br>Sun: Outbreak Sunday") + "</li>" +
+        (NORMIE ? "<li><b>Potluck Wednesday:</b> creatures carry a flavour. Same flavours pair. Plain and spicy go with anything. Sweet and savoury clash. A pair keeps the bolder flavour.</li>"
+          : "<li><b>Blood Bank Wednesday:</b> pieces carry a blood group and merge only if one could give blood to the other. O− gives to anyone; AB+ takes from anyone. A gives to A and AB, B to B and AB; a negative can give to a positive, not the other way. The merged piece keeps the recipient’s group.</li>") +
+        "<li><b>Fever:</b> chains of 3+ merges fill the slim meter at the top. Fill it for 10 s of double points. Pull the pile back from the line for a <b>Saved!</b> bonus.</li>" +
+        "<li><b>" + esc(K.GOALW) + ":</b> 3 small goals a day (tap 📋). Tick all 3 in your daily run for a sticker. Sparkles hide bonus finds for your 📖 collection.</li>" +
+        '<li><label class="mrg-help-learn"><input type="checkbox" id="mrg-help-learn"' + (LEARN ? " checked" : "") + "> <b>Learn mode:</b> names on pieces and a fact with each merge.</label></li>" : "") +
       '</ul><button type="button" class="mrg-help-go" id="mrg-help-go">Got it</button></div>';
   }
   function showHelp() {
@@ -170,8 +310,10 @@
     o.addEventListener("click", function (e) { if (e.target === o || e.target.id === "mrg-help-go") close(); });
     document.addEventListener("keydown", function k(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", k); } });
     var b = document.getElementById("mrg-help-go"); if (b) b.focus();
+    var lt = document.getElementById("mrg-help-learn"); if (lt) lt.onchange = function () { setLearn(this.checked); };
   }
   document.getElementById("mrg-help").addEventListener("click", showHelp);
+  document.getElementById("mrg-more").addEventListener("click", function () { openMore(); });
   try { if (!localStorage.getItem("mrg-help-seen")) setTimeout(showHelp, 400); } catch (e) {}
   if ($("lede")) $("lede").textContent = K.lede;
   function normFoot() { var ft = document.querySelector("footer.site"); if (ft) Array.prototype.forEach.call(ft.childNodes, function (t) { if (t.nodeType === 3 && /medical/i.test(t.nodeValue)) t.nodeValue = "A bonus game. Just for fun."; }); }
@@ -200,6 +342,65 @@
     if (String(d) < NEWDAY) return -1;
     var n = dayNum(d), wd = weekday(d), hard = wd === 0 || wd >= 5, h = mulberry32((n * 2654435761 ^ 0x9E3779B9) >>> 0)();
     return hard ? (h < 0.5 ? 8 : 9) : (h < 0.5 ? 6 : 7);
+  }
+  // ---------- weekly features (from 16 Nov 2026). All keyed to the run's date; earlier dailies play exactly as before. ----------
+  var FEATDAY = "2026-11-16", NOFEAT = DEBUG && /[?&]nofeat=1\b/.test(location.search);
+  function qp(k) { var m = new RegExp("[?&]" + k + "=([a-z0-9-]+)").exec(location.search); return DEBUG && m ? m[1] : null; }
+  function special(d) { // "micro" | "blood" | "sick" | "mut" | ""
+    if (NOFEAT) return "";
+    var f = qp("sp"); if (f) return f === "none" ? "" : f; if (qp("mut")) return "mut";
+    var wd = weekday(d); d = String(d);
+    if (wd === 1 && d >= "2026-11-16") return "micro";
+    if (wd === 3 && d >= "2026-11-18") return "blood";
+    if (wd === 5 && d >= "2026-11-20") return "sick";
+    if ((wd === 2 || wd === 4 || wd === 6) && d >= "2026-11-17") return "mut";
+    return "";
+  }
+  function rawMut(d) { return Math.floor(mulberry32((dayNum(d) * 2654435761 ^ 0x3C6EF372) >>> 0)() * MUTS.length); }
+  function mutation(d) { // its own date PRNG; never two mutation days in a row with the same rule
+    if (special(d) !== "mut") return null;
+    var f = qp("mut"); if (f) for (var i = 0; i < MUTS.length; i++) if (MUTS[i].id === f) return MUTS[i];
+    var k = rawMut(d), pd = new Date((dayNum(d) - (weekday(d) === 2 ? 3 : 2)) * 864e5).toISOString().slice(0, 10); // previous Sat (for Tue) or Tue/Thu
+    if (String(pd) >= "2026-11-17" && rawMut(pd) === k) k = (k + 1) % MUTS.length;
+    return MUTS[k];
+  }
+  function easter(y) { // anonymous Gregorian computus: Easter Sunday as "YYYY-MM-DD"
+    var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3),
+      h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451),
+      mo = Math.floor((h + l - 7 * m + 114) / 31), dy = (h + l - 7 * m + 114) % 31 + 1;
+    return y + "-" + (mo < 10 ? "0" : "") + mo + "-" + (dy < 10 ? "0" : "") + dy;
+  }
+  function skinOf(d) { // purely cosmetic
+    if (NOFEAT) return ""; var f = qp("skin"); if (f) return f === "none" ? "" : f;
+    d = String(d); if (d < FEATDAY) return "";
+    var md = d.slice(5), es = dayNum(easter(+d.slice(0, 4))), n = dayNum(d);
+    if (md >= "12-01" && md <= "12-26") return "xmas";
+    if (md >= "10-25" && md <= "10-31") return "hall";
+    if (n >= es - 6 && n <= es + 1) return "easter"; // Easter week: Monday before to Easter Monday
+    return "";
+  }
+  function goalsOn(d) { return !NOFEAT && String(d) >= FEATDAY; }
+  function featUI() { return !NOFEAT && String(REAL) >= FEATDAY; } // More menu, learn mode, collection book, schedule in How to play
+  // ward round goals: 3 a day, the same for everyone (own date PRNG)
+  function goalsFor(d) {
+    if (!goalsOn(d)) return null;
+    var g0 = mulberry32((dayNum(d) * 2246822519 ^ 0x1B873593) >>> 0); g0(); g0(); var g = mulberry32((g0() * 4294967296) >>> 0), wd = weekday(d), sp = special(d), out = [];
+    var LV = NORMIE ? SEA.O : MED.O;
+    function plural(lv, n) { var nm = LV[lv].n.toLowerCase(); return n === 1 ? (nm === "lungs" ? "a pair of lungs" : (/^[aeiou]/.test(nm) ? "an " : "a ") + nm) : n + " " + (nm === "lungs" ? "pairs of lungs" : nm === "jellyfish" || nm === "shrimp" ? nm : nm === "octopus" ? "octopuses" : nm + "s"); }
+    if (wd === 0 && String(d) >= RXDAY) out.push({ id: "inf3", t: NORMIE ? "Clean 3 slicks" : "Clear 3 infections" });
+    if (sp === "blood") out.push({ id: "mix4", t: NORMIE ? "Pair 4 mixed flavours" : "Merge 4 compatible blood groups" });
+    var pool = [
+      function () { var lv = g() < 0.5 ? 6 : 7, n = lv === 6 ? 3 : 2; return { id: "make", lv: lv, n: n, t: "Make " + plural(lv, n) }; },
+      function () { return { id: "make", lv: 8, n: 1, t: "Make " + plural(8, 1) }; },
+      function () { var s = [1000, 1500, 2000, 2500][Math.floor(g() * 4)]; return { id: "score", n: s, t: "Score " + fmt(s) + "+" }; },
+      function () { return { id: "nocut", t: "Finish without the " + (NORMIE ? "net" : "scalpel") }; },
+      function () { return { id: "noshake", t: "Finish without shaking" }; },
+      function () { return { id: "chain", n: 3, t: "Set off a ×3 chain reaction" }; },
+      function () { var n = [30, 40][Math.floor(g() * 2)]; return { id: "merges", n: n, t: "Merge " + n + " times" }; }
+    ];
+    var used = {};
+    while (out.length < 3) { var k = Math.floor(g() * pool.length); if (used[k] || (k === 1 && used[0]) || (k === 0 && used[1]) || (k === 3 && used[4]) || (k === 4 && used[3])) continue; used[k] = 1; out.push(pool[k]()); }
+    return out;
   }
   function aName(lv) { var n = O[lv].n; return n === "Lungs" ? "a pair of Lungs" : (/^[AEIOU]/.test(n) ? "an " : "a ") + n; }
 
@@ -236,18 +437,30 @@
     var seed2 = isPractice ? (Math.random() * 4294967296) >>> 0 : (dayNum(day) * 2246822519) >>> 0;
     srnd = mulberry32((seed2 ^ 0x5BD1E995) >>> 0); irnd = mulberry32((seed2 ^ 0x27D4EB2F) >>> 0);
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
+    // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
+    SP = special(day); MUT = mutation(day); SKIN = skinOf(day); GOALS = goalsFor(day); gDone = [false, false, false]; madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
+    sparks = []; hidRun = { sp: {}, tc: 0 }; noPairs = {}; LEARN = featUI() && load("mrg-learn", 0) === 1; $("learn").hidden = true;
+    brnd = mulberry32((seed2 ^ 0x85EBCA6B) >>> 0); qrnd = mulberry32((seed2 ^ 0xC2B2AE35) >>> 0); drnd = mulberry32((seed2 ^ 0x165667B1) >>> 0); hrnd = mulberry32((seed2 ^ 0x68E31DA4) >>> 0);
+    DRAIN = !NOFEAT && String(day) >= DRAINDAY; drained = 0;
+    JUICE = goalsOn(day); meter = 0; feverS = 0; dangerT = 0; lastSave = -1e9; saves = 0; TL = { merge: 0, combo: 0, fever: 0, cure: 0, waste: 0, save: 0 };
+    var dh = 0; "drain".split("").forEach(function (c) { dh = (Math.imul(dh, 31) + c.charCodeAt(0)) | 0; }); xrnd = mulberry32((seed2 ^ dh ^ 0x7F4A7C15) >>> 0);
+    driftA = 0.035 + drnd() * 0.02; driftP = 900 + drnd() * 600; driftPh = drnd() * Math.PI * 2;
+    if (SP === "blood") { curG = drawG(); nxtG = drawG(); }
     shakeLeft = NEW ? 1 : 0; cuts = NEW ? 3 : 0; arm = false; parts = []; nextBeat = 0; drops = 0; steps = 0; infN = 0; infCleared = 0;
-    engine = E.create(); engine.gravity.y = 1.15; engine.positionIterations = 8; engine.velocityIterations = 6;
-    var opt = { isStatic: true, friction: 0.2, restitution: 0.1, label: "wall" };
+    engine = E.create(); engine.gravity.y = SP === "micro" ? 0.6 : mut("heavy") ? 1.6 : 1.15; engine.positionIterations = 8; engine.velocityIterations = 6;
+    var opt = { isStatic: true, friction: mut("slippery") ? 0 : 0.2, restitution: mut("bouncy") ? 0.4 : 0.1, label: "wall" };
     C.add(engine.world, [B.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, opt), B.rectangle(-WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W + WALL / 2, H / 2, WALL, H * 2, opt)]);
+    if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
-    cur = roll(); nxt = roll(cur);
+    cur = roll(); nxt = roll(cur); PREV = mut("preview"); nx2 = PREV ? roll(nxt) : -1; // same chain of roll() calls, just read one ahead
     $("over").hidden = true; $("result").hidden = !(!practice && st.done); hud();
     $("mode").textContent = practice ? "Practice mode: today’s run is done, so these games don’t count. Play as often as you like." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
     $("badge").textContent = practice ? "Practice" : ""; lastT = 0; acc = 0;
-    tbarUI(); size();
+    todayUI(); tbarUI(); size();
     if (!raf) raf = requestAnimationFrame(loop);
   }
+  function aimClamp(r) { var L = mut("narrow") ? NARROW : 0; return Math.max(L + r + 1, Math.min(W - L - r - 1, aimX)); }
+  var dropLog = [];
   function pieces() { return C.allBodies(engine.world).filter(function (o) { return o.lv !== undefined && !o.gone; }); }
   function rad(o) { return info(o.lv).r * (o.sw || 1); } // o.sw: swelling of an infected piece (RX Sundays only; 1 otherwise)
   function touching(a, b, pad) { var dx = a.position.x - b.position.x, dy = a.position.y - b.position.y, r = rad(a) + rad(b) + (pad || 3); return dx * dx + dy * dy < r * r; }
@@ -259,8 +472,15 @@
       if (a.inf || b.inf) return; // infected pieces can't merge
       if (a.lv === WILD || b.lv === WILD) { if (a.lv === b.lv) return; a.gone = b.gone = true; merges.push(a.lv === WILD ? [b, a, "wild"] : [a, b, "wild"]); return; }
       if (a.lv !== b.lv) return;
-      a.gone = b.gone = true; merges.push([a, b]);
+      var g;
+      if (SP === "blood" && a.bg !== undefined && b.bg !== undefined && a.lv < O.length) { g = bgPair(a.bg, b.bg); if (g < 0) { noMatch(a, b); return; } }
+      a.gone = b.gone = true; merges.push([a, b, null, g]);
     });
+  }
+  function noMatch(a, b) { // Blood Bank: incompatible pair touching (toast throttled)
+    var k = Math.min(a.id, b.id) + "-" + Math.max(a.id, b.id), now = performance.now();
+    if (noPairs[k] && now - noPairs[k] < 5000) return; noPairs[k] = now;
+    if (now - lastNoT > 3000) { lastNoT = now; toast(pick(BG.no)); }
   }
   function doMerges() {
     var now = performance.now();
@@ -276,26 +496,46 @@
       var x = wild ? a.position.x : (a.position.x + b.position.x) / 2, y = wild ? a.position.y : (a.position.y + b.position.y) / 2;
       chain = now - lastMT <= 1200 ? chain + 1 : 1; lastMT = now; if (chain > bestChain) bestChain = chain;
       var pts, n = lv + 1, big = lv === O.length - 1;
-      if (big) { pts = 100; score += pts; toast(pick(POPS)); confetti(); sfx("big"); }
+      if (big) { pts = 100; score += pts; TL.merge += pts; toast(pick(POPS)); confetti(); sfx("big"); }
       else {
         var o = add(n, x, y), v = wild ? a.velocity : { x: (a.velocity.x + b.velocity.x) / 2, y: Math.min(a.velocity.y, b.velocity.y) };
         Bd.setVelocity(o, { x: v.x, y: Math.min(v.y, 0) - 1 });
-        o.born = now; pts = (n + 1) * (n + 2) / 2; score += pts;
+        o.born = now; pts = (n + 1) * (n + 2) / 2; score += pts; TL.merge += pts;
+        if (SP === "blood") bloodMerge(o, a, b, wild, m[3]);
+        if (SP === "sick" && n === O.length - 1) { o.frz = steps + 50; toast(K.SICKT[n]); }
         if (n > top) { top = n; if (SASS[n]) toast(pick(SASS[n])); }
         collect(n);
         if (tgt >= 0 && n === tgt && !tgtHit) hitTarget();
       }
       var L = Math.min(n, O.length - 1);
+      madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
+      hidMerge(x, y, n);
       burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
-      if (chain > 1) { var bonus = NEW ? pts * (chain - 1) : 0; score += bonus; combo(chain, bonus); }
+      if (chain > 1) { var bonus = NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0; score += bonus; TL.combo += bonus; combo(chain, bonus); if (JUICE) juiceChain(x, y, chain); }
+      if (JUICE && feverS > 0) { var fx = pts + (chain > 1 && NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0); score += fx; TL.fever += fx; floatTxt(x + 18, y - 30, "×2"); } // Fever doubles this merge's points
+      if (JUICE && chain >= 3 && feverS <= 0) { meter = Math.min(METER, meter + 1); if (meter >= METER) startFever(); }
     });
-    if (merges.length) hud();
+    if (merges.length) { hud(); goalTick(false); }
     merges = [];
   }
+  function bloodMerge(o, a, b, wild, g) { // Blood Bank / Potluck: the merged piece takes the recipient's group
+    if (wild) { o.bg = a.bg; return; }
+    o.bg = g === undefined ? a.bg : g;
+    if (a.bg === undefined || b.bg === undefined || a.bg === b.bg) return;
+    mixN++;
+    var pair = [a.bg, b.bg];
+    if (pair.indexOf(BG.donor) >= 0 && pair.indexOf(BG.recip) >= 0) hidSpawn("spleen", o.position.x, o.position.y - 20);
+    if (pair.indexOf(BG.donor) >= 0) { toast(BG.donorT); unlockCard("o-", NORMIE ? "Plain: the easy guest" : "O negative donor"); }
+    else if (pair.indexOf(BG.recip) >= 0) toast(BG.recipT);
+  }
   function add(lv, x, y) {
-    var r = info(lv).r, opt = { restitution: 0.1, friction: 0.12, frictionAir: 0.004, density: 0.0012 + (lv < O.length ? lv : 0) * 0.0002, slop: 0.01 }, o = null, off = { x: 0, y: 0 };
+    var rs = 0.1, fr = 0.12, fa = 0.004, fs = 0.5;
+    if (SP === "micro") { rs = 0.05; fa = 0.012; }
+    if (mut("bouncy")) rs = 0.55; if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
+    if (SP === "sick" && lv < O.length && QUIRK[lv] === "slip") fr = 0.03;
+    var r = info(lv).r, opt = { restitution: rs, friction: fr, frictionStatic: fs, frictionAir: fa, density: 0.0012 + (lv < O.length ? lv : 0) * 0.0002, slop: 0.01 }, o = null, off = { x: 0, y: 0 };
     if (HULL[lv]) try {
       var vs = HULL[lv].map(function (q) { return { x: (q[0] - 50) * r / 50, y: (q[1] - 50) * r / 50 }; });
       var c = M.Vertices.centre(vs); off = { x: -c.x, y: -c.y };
@@ -306,13 +546,15 @@
   }
   function drop() {
     if (!canDrop || over || arm) return;
-    var r = info(cur).r, x = Math.max(r + 1, Math.min(W - r - 1, aimX));
+    var r = info(cur).r, x = aimClamp(r);
     var o = add(cur, x, DROP_Y); o.fresh = performance.now();
+    if (SP === "blood") { o.bg = curG; curG = nxtG; nxtG = drawG(); }
     collect(cur);
     if (cur < O.length && cur > top) top = cur;
-    cur = nxt; nxt = roll(cur); canDrop = false; hud(); sfx("drop");
+    if (PREV) { cur = nxt; nxt = nx2; nx2 = roll(nxt); } else { cur = nxt; nxt = roll(cur); }
+    canDrop = false; hud(); sfx("drop");
     setTimeout(function () { canDrop = true; }, 260);
-    drops++;
+    drops++; if (drops === 1) onFirstDrop(); hidTick(); if (DEBUG) dropLog.push(o.lv);
     if (OUT && (drops === 15 || (drops > 15 && (drops - 15) % 20 === 0))) infect(o);
   }
   // ---------- Outbreak Sunday ----------
@@ -336,14 +578,14 @@
     if (!q.inf) return;
     if (RX) { rxCure(q); if (msg && infN) toast(msg); return; }
     setInf(q, false); infCleared++; burst(q.position.x, q.position.y, 3); if (msg) toast(msg); sfx("chime");
-    if (!infN) { score += 50; toast(OUTK.clear); floatTxt(q.position.x, q.position.y - 14, "+50"); hud(); }
+    if (!infN) { score += 50; TL.cure += 50; toast(OUTK.clear); floatTxt(q.position.x, q.position.y - 14, "+50"); hud(); }
   }
   // ---------- "Treat it properly" (RX Sundays from 15 Nov 2026) ----------
   var RXK = OUTK.RX;
   function rxCure(q) { // cure one piece: +50 if caught before it turned resistant, +20 if it had been resistant
     var was = !!q.wasRes, pts = was ? 20 : 50;
     setInf(q, false); infCleared++; if (was) resCleared++; q.wasRes = false;
-    score += pts; burst(q.position.x, q.position.y, 3); floatTxt(q.position.x, q.position.y - 14, "+" + pts); sfx("chime");
+    score += pts; TL.cure += pts; burst(q.position.x, q.position.y, 3); floatTxt(q.position.x, q.position.y - 14, "+" + pts); sfx("chime");
     if (!infN) toast(RXK.clear);
     factOnce("rx"); hud();
   }
@@ -353,7 +595,7 @@
     tbarUI();
   }
   function waste(x, y) {
-    doses--; arm = false; score = Math.max(0, score - RX_WASTE);
+    doses--; arm = false; TL.waste += Math.min(score, RX_WASTE); score = Math.max(0, score - RX_WASTE);
     toast(RXK.wasted); floatTxt(x, y, "−" + RX_WASTE); sfx("snip"); buzz(30); tbarUI(); hud();
   }
   function treat(q) { // a dose on infected piece q: also treats every infected piece touching it
@@ -400,7 +642,7 @@
     var n = 0, wasInf = infN;
     pieces().forEach(function (q) { if (q !== c && q.inf && touching(q, c, 10)) { setInf(q, false); infCleared++; n++; burst(q.position.x, q.position.y, 3); } });
     C.remove(engine.world, c); poof(c.position.x, c.position.y, PO.r);
-    if (n && !infN && wasInf) { score += 50; toast(OUTK.clear); hud(); } else toast(n ? OUTK.cure : OUTK.wasted);
+    if (n && !infN && wasInf) { score += 50; TL.cure += 50; toast(OUTK.clear); hud(); } else toast(n ? OUTK.cure : OUTK.wasted);
     sfx(n ? "chime" : "snip");
   }
   function checkOver(now) {
@@ -409,6 +651,7 @@
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
       // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
       var SLACK = FIVE ? 14 : 0, GRACE = FIVE ? 3200 : 1800, FRESH = FIVE ? 2000 : 1500;
+      if (SP === "micro" || mut("bouncy")) { GRACE += 1000; FRESH += 600; } // floatier days settle more slowly
       if (o.fresh && now - o.fresh < FRESH) continue;
       if (o.position.y - rad(o) < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
       else o.overT = 0;
@@ -423,8 +666,15 @@
     var danger = 0, now = performance.now();
     if (!over) {
       acc += dt;
-      while (acc >= 1000 / 60) { E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread(); }
+      while (acc >= 1000 / 60) {
+        if (SP === "micro") engine.gravity.x = driftA * Math.sin(steps / driftP * Math.PI * 2 + driftPh); // a gentle seeded drift
+        if (slowN) { slowN--; engine.timing.timeScale = slowN ? 0.45 : 1; }
+        E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread();
+        if (feverS > 0 && --feverS === 0) endFever();
+        if (SP === "sick") sickTick(); if (DRAIN && infN) drainTick(); if (SP === "micro" && steps === 10800) hidTick();
+      }
       danger = checkOver(now);
+      if (JUICE && !over) clutch(danger, now);
       // danger tension: a heartbeat (Normie: a sonar ping) that speeds up the longer a piece sits over the line
       if (danger && !over) { if (now >= nextBeat) { sfx(NORMIE ? "sonar" : "beat"); nextBeat = now + (NORMIE ? 1100 - 650 * Math.min(1, danger) : 900 - 560 * Math.min(1, danger)); } }
       else nextBeat = 0;
@@ -460,11 +710,11 @@
     cv.width = Math.round(w * dpr); cv.height = Math.round(H * scale * dpr);
   }
   var EMF = '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
-  function organ(lv, x, y, ang, alpha, off, sc) {
+  function organ(lv, x, y, ang, alpha, off, sc, bd) {
     var o = info(lv); sc = sc || 1;
     ctx.save(); ctx.globalAlpha = alpha || 1; ctx.translate(x, y); ctx.rotate(ang || 0); if (off) ctx.translate(off.x, off.y);
     var im = IMG[lv];
-    if (im.complete && im.naturalWidth) { var d = o.r * sc * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); }
+    if (im.complete && im.naturalWidth) { var d = o.r * sc * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); deco(lv, bd, o.r * sc, performance.now()); }
     else { ctx.beginPath(); ctx.arc(0, 0, o.r * sc, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill(); ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.e, 0, o.r * 0.06); }
     ctx.restore();
   }
@@ -499,16 +749,18 @@
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
     ctx.setTransform(dpr * scale, 0, 0, dpr * scale, 0, 0);
     ctx.fillStyle = dark ? "#211B2E" : "#FFFFFF"; ctx.fillRect(0, 0, W, H);
+    drawBG(dark, now);
     var pulse = danger ? (quiet() ? 1 : 0.5 + 0.5 * Math.sin(now / (130 - 60 * Math.min(1, danger)))) : 0;
     if (danger) { ctx.fillStyle = "rgba(208,87,62," + (0.05 + 0.09 * pulse) + ")"; ctx.fillRect(0, 0, W, LINE); }
     ctx.save(); ctx.setLineDash([8, 8]); ctx.lineWidth = danger ? 2 + 2 * pulse : 2;
     ctx.strokeStyle = danger ? "rgba(208,87,62," + (0.55 + 0.45 * pulse) + ")" : (dark ? "rgba(180,168,207,.5)" : "rgba(107,90,147,.35)");
     ctx.beginPath(); ctx.moveTo(0, LINE); ctx.lineTo(W, LINE); ctx.stroke(); ctx.restore();
     if (!over && engine) {
-      var r = info(cur).r, x = Math.max(r + 1, Math.min(W - r - 1, aimX));
+      var r = info(cur).r, x = aimClamp(r);
       if (canDrop && !arm) { ctx.save(); ctx.strokeStyle = dark ? "rgba(180,168,207,.35)" : "rgba(107,90,147,.25)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x, DROP_Y + r); ctx.lineTo(x, H); ctx.stroke(); ctx.restore(); }
-      organ(cur, x, DROP_Y, 0, 1); // always full opacity: no blink after a drop
+      organ(cur, x, DROP_Y, 0, 1, null, 1, null); // always full opacity: no blink after a drop
       if (cur >= O.length) aura(cur, x, DROP_Y, now);
+      tags(cur, SP === "blood" ? curG : undefined, x, DROP_Y, r);
     }
     if (engine) C.allBodies(engine.world).forEach(function (o) {
       if (o.lv === undefined || o.gone) return;
@@ -519,17 +771,22 @@
           var sx, sy;
           if (quiet()) { sx = sy = 0.75 + 0.25 * Math.min(1, k * 2); }
           else { var g = 0.6 + 0.4 * Math.min(1, k * 2.2), w = 0.2 * Math.sin(k * Math.PI * 3) * (1 - k); sx = g * (1 + w); sy = g * (1 - w); } // squash-and-bounce
-          ctx.save(); ctx.translate(o.position.x, o.position.y); ctx.scale(sx, sy); organ(o.lv, 0, 0, o.angle, 1, o.off, o.sw); ctx.restore();
+          ctx.save(); ctx.translate(o.position.x, o.position.y); ctx.scale(sx, sy); organ(o.lv, 0, 0, o.angle, 1, o.off, o.sw, o); ctx.restore();
+          tags(o.lv, o.bg, o.position.x, o.position.y, rad(o));
           if (o.inf) germ(o);
           return;
         }
       }
-      organ(o.lv, o.position.x, o.position.y, o.angle, 1, o.off, o.sw);
+      var jx = 0, ja = 0, js = 1;
+      if (SP === "sick" && o.lv < O.length && !quiet()) { if (QUIRK[o.lv] === "fib") { ja = 0.05 * Math.sin(now / 32); js = 1 + 0.03 * Math.sin(now / 21); } if (o.shiv > steps) jx = 1.6 * Math.sin(now / 16); if (o.rat > steps) jx = 1.2 * Math.sin(now / 12); if (QUIRK[o.lv] === "sway") ja = 0.06 * Math.sin(now / 400); }
+      organ(o.lv, o.position.x + jx, o.position.y, o.angle + ja, 1, o.off, (o.sw || 1) * js, o);
+      tags(o.lv, o.bg, o.position.x, o.position.y, rad(o));
       if (o.lv >= O.length) aura(o.lv, o.position.x, o.position.y, now);
       if (o.inf) germ(o);
       if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
     drawParts(dt || 16);
+    drawFG(dark, now); drawJuice(now);
   }
   // ---------- particles: sparkles, confetti, poofs, floating points ----------
   var SPK = ["#F5C842", "#FF7A9A", "#5EC8F2", "#B48CF0", "#7CC36A"];
@@ -552,16 +809,17 @@
       ctx.save(); ctx.globalAlpha = Math.max(0, al); ctx.fillStyle = p.c;
       if (p.k === "s") { var s = p.sz; ctx.translate(p.x, p.y); ctx.beginPath(); ctx.moveTo(0, -s); ctx.quadraticCurveTo(0, 0, s, 0); ctx.quadraticCurveTo(0, 0, 0, s); ctx.quadraticCurveTo(0, 0, -s, 0); ctx.quadraticCurveTo(0, 0, 0, -s); ctx.fill(); }
       else if (p.k === "r") { p.a += p.va * f; ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillRect(-p.sz / 2, -p.sz / 4, p.sz, p.sz / 2); }
+      else if (p.k === "d") { ctx.beginPath(); ctx.moveTo(p.x, p.y - p.sz * 1.6); ctx.quadraticCurveTo(p.x + p.sz, p.y, p.x, p.y + p.sz); ctx.quadraticCurveTo(p.x - p.sz, p.y, p.x, p.y - p.sz * 1.6); ctx.fill(); }
       else if (p.k === "c") { ctx.globalAlpha = al * 0.6; ctx.beginPath(); ctx.arc(p.x, p.y, p.sz * (1 + p.t / p.max), 0, Math.PI * 2); ctx.fill(); }
-      else { ctx.font = "700 20px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.lineWidth = 4; ctx.strokeStyle = dark ? "#211B2E" : "#FFFFFF"; ctx.strokeText(p.txt, p.x, p.y); ctx.fillStyle = dark ? "#F1ECF8" : "#3A2A55"; ctx.fillText(p.txt, p.x, p.y); }
+      else { ctx.font = "700 " + (p.big || 20) + "px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.lineWidth = 4; ctx.strokeStyle = dark ? "#211B2E" : "#FFFFFF"; ctx.strokeText(p.txt, p.x, p.y); ctx.fillStyle = p.red ? (dark ? "#FF7A6E" : "#D0342C") : p.gold ? "#D9415E" : dark ? "#F1ECF8" : "#3A2A55"; ctx.fillText(p.txt, p.x, p.y); }
       ctx.restore();
     }
   }
   function shakeBoard(k) { if (quiet()) return; var b = $("board"); b.classList.remove("shk1", "shk2"); void b.offsetWidth; b.classList.add(k > 1 ? "shk2" : "shk1"); }
   function hud() {
-    $("score").textContent = fmt(score);
+    $("score").textContent = fmt(score); wildTip();
     $("top").innerHTML = top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
-    $("next").innerHTML = pic(nxt, 26);
+    $("next").innerHTML = pic(nxt, 26) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
   }
   function toast(m) {
     var t = $("toast"); t.textContent = m; t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
@@ -570,7 +828,7 @@
   function combo(n, bonus) {
     var c = $("combo"); c.textContent = "Chain reaction! ×" + n + (bonus ? " +" + fmt(bonus) : "");
     c.hidden = false; c.classList.remove("on", "big"); void c.offsetWidth; c.classList.add("on");
-    sfx("combo", n); clearTimeout(comboT); comboT = setTimeout(function () { c.hidden = true; }, 1000);
+    sfx(JUICE ? "note" : "combo", n); clearTimeout(comboT); comboT = setTimeout(function () { c.hidden = true; }, 1000);
   }
   function toastBig(m) { var c = $("combo"); c.textContent = m; c.hidden = false; c.classList.remove("on"); void c.offsetWidth; c.classList.add("on", "big"); clearTimeout(comboT); comboT = setTimeout(function () { c.hidden = true; }, 1300); }
   function hitTarget() {
@@ -582,7 +840,8 @@
     if (OUT) html += '<span class="ob"' + (RX ? ' title="' + esc(RXK.tip.join("\n")) + '"' : "") + ">" + OUTK.badge + "</span> ";
     if (on) html += tgtHit ? '<span class="hit">⭐ Target hit: ' + esc(O[tgt].n) + (practice ? " (practice)" : "") + "</span>"
       : "🎯 " + (practice ? "Practice target" : OUT ? "Target" : "Today’s target") + ": make " + esc(aName(tgt));
-    t.innerHTML = html; t.title = on ? "Today’s target: make " + aName(tgt) + (RX ? "\n" + RXK.tip.join("\n") : "") : "";
+    if (GOALS) { var gn = practice ? 0 : gDone.filter(Boolean).length; html = '<button type="button" class="gl" id="mrg-gl" aria-label="' + esc(K.GOALW) + " goals: " + gn + ' of 3 done">📋 ' + gn + "/3</button> " + html; }
+    t.innerHTML = html; if ($("gl")) $("gl").onclick = openMore; t.title = on ? "Today’s target: make " + aName(tgt) + (RX ? "\n" + RXK.tip.join("\n") : "") : "";
     $("tools").hidden = !NEW;
     var c = $("cut"); c.textContent = K.TOOL.e + " " + cuts; c.disabled = !cuts || over;
     c.classList.toggle("on", arm === "cut");
@@ -616,12 +875,13 @@
     var f = $("fact"); clearTimeout(factT);
     if (!factQ.length) { factOn = false; f.hidden = true; return; }
     var lv = factQ.shift();
-    if (lv === "rx") { factOn = true; f.innerHTML = pic(CURE, 32) + "<div><b>" + esc(RXK.first) + "</b><span>" + esc(RXK.fact) + "</span></div>"; }
-    else { var tx = lv === WILD ? K.WFACT : lv === CURE ? OUTK.fact : K.FACTS[lv]; factOn = true; f.innerHTML = pic(lv, 32) + "<div><b>New: " + esc(info(lv).n) + "</b><span>" + esc(tx) + "</span></div>"; }
+    if (typeof lv === "object") { factOn = true; f.innerHTML = lv.pic + "<div><b>" + esc(lv.t) + "</b><span>" + esc(lv.x) + "</span></div>"; }
+    else if (lv === "rx") { factOn = true; f.innerHTML = pic(CURE, 32) + "<div><b>" + esc(RXK.first) + "</b><span>" + esc(RXK.fact) + "</span></div>"; }
+    else { var tx = lv === WILD ? K.WFACT : lv === CURE ? OUTK.fact : K.FACTS[lv]; factOn = true; f.innerHTML = pic(lv, 32) + "<div><b>New: " + esc(info(lv).n) + (featUI() ? " 📖" : "") + "</b><span>" + esc(tx) + "</span></div>"; }
     f.hidden = false; f.classList.remove("on"); void f.offsetWidth; f.classList.add("on"); sfx("chime");
     factT = setTimeout(nextFact, 3000);
   }
-  function factOnce(k) { if (coll[k]) return; coll[k] = 1; put(CKEY, coll); factQ.push(k); if (!factOn) nextFact(); } // once per device
+  function factOnce(k, obj) { if (coll[k]) return; coll[k] = 1; put(CKEY, coll); factQ.push(obj || k); if (!factOn) nextFact(); } // once per device
   $("fact").addEventListener("pointerdown", function (e) { e.stopPropagation(); e.preventDefault(); nextFact(); });
   // ---------- power-ups: scalpel (Normie: net) and shake ----------
   $("cut").onclick = function () { if (!cuts || over) return; arm = arm === "cut" ? false : "cut"; if (arm) { toast(K.TOOL.hint); factQ = []; nextFact(); } tbarUI(); this.blur(); };
@@ -631,7 +891,7 @@
     var bs = pieces(), hit = null, best = 1e9;
     bs.forEach(function (o) { var dx = o.position.x - px, dy = o.position.y - py, d = Math.sqrt(dx * dx + dy * dy) - rad(o); if (d < 12 && d < best) { best = d; hit = o; } });
     if (!hit) return false;
-    hit.gone = true; if (hit.inf) { var wr = hit.wasRes; setInf(hit, false); infCleared++; if (RX) { if (wr) resCleared++; if (!infN) toast(RXK.clear); } else if (!infN) { score += 50; toast(OUTK.clear); } }
+    hit.gone = true; if (hit.inf) { var wr = hit.wasRes; setInf(hit, false); infCleared++; if (RX) { if (wr) resCleared++; if (!infN) toast(RXK.clear); } else if (!infN) { score += 50; TL.cure += 50; toast(OUTK.clear); } }
     C.remove(engine.world, hit); cuts--; arm = false; poof(hit.position.x, hit.position.y, info(hit.lv).r);
     sfx("snip"); buzz(12); tbarUI(); hud(); return true;
   }
@@ -647,11 +907,310 @@
     shakeBoard(2); sfx("rumble"); buzz([20, 30, 20]); tbarUI();
   }
 
+  // ---------- weekly features: runtime ----------
+  var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 24;
+  var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
+  var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
+  var LEARN = false, learnT, learnI = {};
+  // items 12-15 (from 16 Nov 2026): combo meter + Fever, rising combo notes, clutch saves, end-of-game tally. Cosmetic randomness only (particles).
+  var JUICE = false, METER = 8, FEVER_STEPS = 600, meter = 0, feverS = 0, dangerT = 0, lastSave = -1e9, saves = 0, TL = {};
+  function juiceChain(x, y, n) { // "×n" at the merge point, growing with the chain; shake and sparkle escalate (none when reduced motion)
+    parts.push({ k: "t", x: x, y: y - 26, vx: 0, vy: -0.9, g: 0, t: 0, max: 900, c: "#D9415E", txt: "×" + n, big: Math.min(34, 18 + n * 3), gold: true });
+    burst(x, y, Math.min(10, 2 + n * 1.5)); if (n >= 3) shakeBoard(n >= 5 ? 2 : 1);
+  }
+  function startFever() { feverS = FEVER_STEPS; meter = METER; toastBig("FEVER! ×2"); sfx("big"); buzz([20, 30, 20, 30, 20]); }
+  function endFever() { meter = 0; toast(NORMIE ? "Fever’s over. Back to normal tides." : "Fever’s broken. Back to normal."); }
+  function clutch(danger, now) { // a real save: the warning state was on for at least 1 s, and the pile came back below the line
+    if (danger) { if (!dangerT) dangerT = now; return; }
+    if (dangerT && now - dangerT >= 1000 && now - lastSave >= 20000) { lastSave = now; saves++; score += 25; TL.save += 25; slowN = 24; toastBig("Saved! +25"); sfx("chime"); hud(); }
+    dangerT = 0;
+  }
+  function drawJuice(now) {
+    if (!JUICE) return;
+    var fr = feverS > 0 ? feverS / FEVER_STEPS : meter / METER;
+    ctx.save(); ctx.fillStyle = "rgba(107,90,147,.15)"; ctx.fillRect(0, 0, W, 5);
+    ctx.fillStyle = feverS > 0 ? "hsl(" + (quiet() ? 45 : 40 + 15 * Math.sin(now / 90)) + ",95%,55%)" : "#D9415E"; ctx.fillRect(0, 0, W * fr, 5);
+    if (feverS > 0) { // gold sparkle border
+      ctx.lineWidth = 6; ctx.strokeStyle = "rgba(245,200,66,.85)"; ctx.setLineDash([14, 8]); ctx.lineDashOffset = quiet() ? 0 : -now / 25; ctx.strokeRect(3, 3, W - 6, H - 6); ctx.setLineDash([]);
+      ctx.fillStyle = "#B8860B"; ctx.font = "800 15px Poppins,system-ui,sans-serif"; ctx.textAlign = "right"; ctx.fillText("FEVER ×2 · " + Math.ceil(feverS / 60) + "s", W - 12, 24);
+      if (!quiet() && Math.random() < 0.35) { var e = Math.random() * 4 | 0, px = e < 2 ? Math.random() * W : (e === 2 ? 4 : W - 4), py = e < 2 ? (e ? H - 4 : 4) : Math.random() * H; parts.push({ k: "s", x: px, y: py, vx: (Math.random() - 0.5), vy: (Math.random() - 0.5), g: 0, t: 0, max: 500, c: "#F5C842", sz: 3 + Math.random() * 3 }); }
+    }
+    ctx.restore();
+  }
+  // item 10: infection point drain (from 15 Nov 2026), own PRNG seeded from the date plus "drain"
+  var DRAINDAY = "2026-11-15", DRAIN = false, xrnd, drained = 0;
+  function drainTick() {
+    var all = pieces();
+    for (var i = 0; i < all.length; i++) {
+      var o = all[i]; if (!o.inf) { o.drT = 0; continue; }
+      if (!o.drT) { o.drT = steps + 150 + Math.floor(xrnd() * 120); continue; } // 2.5–4.5 s
+      if (steps < o.drT) continue;
+      o.drT = steps + 150 + Math.floor(xrnd() * 120);
+      var amt = 3 + Math.floor(xrnd() * 13); if (o.res) amt = Math.round(amt * 1.5);
+      var lost = Math.min(score, amt); score -= lost; drained += lost;
+      parts.push({ k: "t", red: true, x: o.position.x + (xrnd() - 0.5) * 10, y: o.position.y - rad(o) * 0.4, vx: 0, vy: -0.6, g: 0, t: 0, max: 900, c: "#D0342C", txt: "−" + amt });
+      hud();
+    }
+  }
+  function wildTip() { if (featUI() && (cur === WILD || nxt === WILD) && !coll["t-wild"]) { coll["t-wild"] = 1; put(CKEY, coll); toast(K.WTIP); } }
+  function mut(id) { return !!(MUT && MUT.id === id); }
+  function drawG() { var tot = 0, i, x; for (i = 0; i < BG.w.length; i++) tot += BG.w[i]; x = brnd() * tot; for (i = 0; i < BG.w.length; i++) { x -= BG.w[i]; if (x < 0) return i; } return 0; }
+  function bgPair(a, b) { return bgOK(a, b) ? b : bgOK(b, a) ? a : -1; } // merged piece takes the recipient's group; -1 = incompatible
+  var FACES = ART.map(function (s) { var f = [], re = /translate\(([\d.]+) ([\d.]+)\) scale\(([\d.]+)\)/g, m; while ((m = re.exec(s))) f.push([+m[1], +m[2], +m[3]]); return f; });
+  var TOPS = HULL.map(function (h) { var t = h[0]; h.forEach(function (p) { if (p[1] < t[1]) t = p; }); return t; });
+  function todayUI() {
+    var t = $("today"), h = "", L = NORMIE ? 1 : 0;
+    if (SP === "mut" && MUT) h = MUT.e + " " + (isLive() ? "Today’s mutation" : "Mutation") + ": <b>" + esc(MUT.n[L]) + "</b>. " + esc(MUT.d[L]);
+    else if (SPEC[SP]) h = SPEC[SP].e + " <b>" + esc(SPEC[SP].n) + "</b>: " + esc(SPEC[SP].line);
+    t.innerHTML = h; t.hidden = !h;
+    $("more").hidden = !featUI();
+  }
+  // Sick Day Friday (Normie: Grumpy Friday): gentle, seeded quirks (qrnd only)
+  function sickTick() {
+    var all = pieces(), now = performance.now();
+    for (var i = 0; i < all.length; i++) {
+      var o = all[i]; if (o.lv >= O.length) continue;
+      if (o.frz > steps) { Bd.setVelocity(o, { x: 0, y: 0 }); Bd.setAngularVelocity(o, 0); }
+      if (!o.qT) { o.qT = steps + 120 + Math.floor(qrnd() * 300); continue; }
+      if (steps < o.qT) continue;
+      o.qT = steps + 240 + Math.floor(qrnd() * 360);
+      quirk(o, now);
+    }
+  }
+  function quirk(o, now) {
+    var q = QUIRK[o.lv], x = o.position.x, y = o.position.y, r = rad(o), v = o.velocity, i;
+    if (q === "brows") Bd.setVelocity(o, { x: v.x, y: v.y - 1.2 });
+    else if (q === "sway") Bd.setAngularVelocity(o, o.angularVelocity + (qrnd() - 0.5) * 0.12);
+    else if (q === "slip") o.blink = steps + 14;
+    else if (q === "rattle") { o.rat = steps + 30; Bd.setVelocity(o, { x: v.x + (qrnd() - 0.5) * 1.6, y: v.y }); }
+    else if (q === "shiver") { o.shiv = steps + 50; Bd.setVelocity(o, { x: v.x + (qrnd() - 0.5) * 1.0, y: v.y }); }
+    else if (q === "drip") parts.push({ k: "d", x: x + (qrnd() - 0.5) * r * 0.4, y: y + r * 0.8, vx: 0, vy: 0.4, g: 0.12, t: 0, max: 900, c: NORMIE ? "#7EC4F0" : "#F2D85A", sz: 4 });
+    else if (q === "toot" || q === "spew") {
+      var dir = q === "toot" ? 0 : (qrnd() < 0.5 ? -1 : 1), px = x + dir * r * 0.75, py = q === "toot" ? y + r * 0.75 : y;
+      var col = q === "toot" ? (NORMIE ? "rgba(70,50,110,1)" : "rgba(150,190,90,1)") : (NORMIE ? "rgba(120,190,240,1)" : "rgba(120,190,60,1)");
+      for (i = 0; i < 6; i++) parts.push({ k: "c", x: px + (qrnd() - 0.5) * 10, y: py + (qrnd() - 0.5) * 8, vx: (dir || (qrnd() - 0.5)) * (0.4 + qrnd() * 0.6), vy: q === "toot" ? 0.3 : -0.3, g: 0, t: 0, max: 700, c: col, sz: 5 + qrnd() * 4 });
+      pieces().forEach(function (t) { if (t === o || !touching(o, t, 6)) return; var dx = t.position.x - x, dy = t.position.y - y, d = Math.sqrt(dx * dx + dy * dy) || 1;
+        if (dir && dx * dir <= 0) return; Bd.setVelocity(t, { x: t.velocity.x + dx / d * 1.2, y: t.velocity.y + Math.min(0, dy / d) * 1.2 }); });
+      if (q === "toot") { tootN++; if (tootN === 5) hidSpawn("colon", x, y - r); }
+    }
+    else if (q === "fib") { Bd.setAngularVelocity(o, o.angularVelocity + (qrnd() - 0.5) * 0.08); Bd.setVelocity(o, { x: v.x + (qrnd() - 0.5) * 0.8, y: v.y }); }
+    else if (q === "cough") { Bd.setVelocity(o, { x: v.x, y: Math.min(v.y, 0) - 2.2 }); for (i = 0; i < 4; i++) parts.push({ k: "c", x: x + (qrnd() - 0.5) * r * 0.6, y: y - r * 0.9, vx: (qrnd() - 0.5), vy: -0.6, g: 0, t: 0, max: 500, c: "rgba(200,210,230,1)", sz: 4 + qrnd() * 3 }); }
+    else if (q === "freeze") { o.frz = steps + 45; burst(x, y, 2); }
+    if (now - lastQT > 6000 && qrnd() < 0.5) { lastQT = now; toast(K.SICKT[o.lv]); }
+  }
+  // art-unit decorations drawn on top of a piece (inside its rotation): sick looks and seasonal skins. Cosmetic only.
+  function deco(lv, bd, r, now) {
+    if (lv >= O.length || (SP !== "sick" && !SKIN)) return;
+    ctx.save(); ctx.scale(r / 50, r / 50); ctx.translate(-50, -50); ctx.lineCap = "round"; ctx.lineJoin = "round";
+    if (SP === "sick") {
+      var q = QUIRK[lv];
+      if (q === "brows" || NORMIE) FACES[lv].forEach(function (f) { var k = f[2]; ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = (lv === 0 ? 5 : 3) * k; ctx.beginPath();
+        ctx.moveTo(f[0] - 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] - 4 * k, f[1] - 5 * k); ctx.moveTo(f[0] + 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] + 4 * k, f[1] - 5 * k); ctx.stroke(); });
+      if (!NORMIE && q === "slip") { ctx.strokeStyle = "#D9364E"; ctx.lineWidth = 1.6; ctx.beginPath();
+        [0.3, 1.2, 2.2, 3.1, 4.0, 5.2].forEach(function (a) { var c = Math.cos(a), s = Math.sin(a); ctx.moveTo(50 + c * 44, 50 + s * 44); ctx.lineTo(50 + c * 36 + s * 3, 50 + s * 36 - c * 3); ctx.lineTo(50 + c * 28, 50 + s * 28); ctx.moveTo(50 + c * 36 + s * 3, 50 + s * 36 - c * 3); ctx.lineTo(50 + c * 33 - s * 5, 50 + s * 33 + c * 5); });
+        ctx.stroke(); if (bd && bd.blink > steps) { ctx.fillStyle = "#F5D7D7"; ctx.beginPath(); ctx.arc(50, 50, 45, 0, Math.PI * 2); ctx.fill(); ctx.strokeStyle = "#3A2A55"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(18, 52); ctx.quadraticCurveTo(50, 66, 82, 52); ctx.stroke(); } }
+      if (!NORMIE && q === "sway") { ctx.fillStyle = "rgba(255,255,255,.3)"; ctx.beginPath(); ctx.arc(50, 64, 30, 0, Math.PI * 2); ctx.fill(); }
+      if (q === "freeze") { ctx.fillStyle = "rgba(160,215,255,.42)"; ctx.beginPath(); ctx.arc(50, 50, 44, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(225,245,255,.95)"; ctx.strokeStyle = "#5A8FC0"; ctx.lineWidth = 1.5; [30, 44, 58, 70].forEach(function (x, i) { ctx.beginPath(); ctx.moveTo(x - 4, 84); ctx.lineTo(x + 4, 84); ctx.lineTo(x, 92 + (i % 2) * 5); ctx.closePath(); ctx.fill(); ctx.stroke(); }); }
+    }
+    if (SKIN) {
+      var t = TOPS[lv], tx = t[0], ty = t[1];
+      if (SKIN === "xmas") {
+        ctx.fillStyle = "#D93A3A"; ctx.strokeStyle = "#3A2A55"; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(tx - 19, ty + 6); ctx.quadraticCurveTo(tx - 6, ty - 30, tx + 22, ty - 22); ctx.quadraticCurveTo(tx + 6, ty - 10, tx + 19, ty + 6); ctx.closePath(); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.ellipse(tx, ty + 6, 22, 6, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.arc(tx + 23, ty - 22, 6, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      } else if (SKIN === "easter") {
+        [-1, 1].forEach(function (s) { ctx.save(); ctx.translate(tx + s * 11, ty - 12); ctx.rotate(s * 0.25); ctx.fillStyle = "#FFFFFF"; ctx.strokeStyle = "#3A2A55"; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.ellipse(0, 0, 8, 20, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.fillStyle = "#F7B6CC"; ctx.beginPath(); ctx.ellipse(0, 2, 4, 13, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore(); });
+      } else if (SKIN === "hall") {
+        ctx.fillStyle = "rgba(110,170,90,.38)"; ctx.beginPath(); ctx.arc(50, 50, 42, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = "#3A2A55"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(26, 30); ctx.lineTo(48, 24); for (var s2 = 0; s2 < 4; s2++) { var sx = 29 + s2 * 6, sy = 29 - s2 * 1.6; ctx.moveTo(sx, sy - 4); ctx.lineTo(sx + 1, sy + 4); } ctx.stroke();
+      }
+    }
+    ctx.restore();
+  }
+  // unrotated labels: blood group / flavour badge and learn-mode names
+  function tags(lv, g, x, y, r) {
+    if (SP === "blood" && g !== undefined && lv < O.length) {
+      var s = BG.names[g], fs = NORMIE ? 10 : 12; ctx.save(); ctx.font = "700 " + fs + "px Poppins,system-ui,sans-serif"; var w = ctx.measureText(s).width + 8, bx = x + r * 0.42, by = y + r * 0.42;
+      ctx.fillStyle = BG.col[g]; ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(bx - w / 2, by - fs * 0.75, w, fs * 1.5, fs * 0.75) : ctx.rect(bx - w / 2, by - fs * 0.75, w, fs * 1.5); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#FFFFFF"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(s, bx, by + 0.5); ctx.restore();
+    }
+    if (lv === WILD && featUI()) { // item 11: make the wild piece read as special
+      ctx.save(); ctx.font = "800 9px Poppins,system-ui,sans-serif"; var lw = ctx.measureText(K.WLAB).width + 10, ly2 = y + r + 9;
+      ctx.fillStyle = "#7A3FB8"; ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x - lw / 2, ly2 - 7, lw, 14, 7) : ctx.rect(x - lw / 2, ly2 - 7, lw, 14); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#FFFFFF"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(K.WLAB, x, ly2 + 0.5);
+      var tw = performance.now() / 260; ctx.fillStyle = "#F5C842"; [0, 2.1, 4.2].forEach(function (a) { var sx = x + Math.cos(a + tw) * (r + 6), sy = y + Math.sin(a + tw) * (r + 6), z = quiet() ? 2.5 : 2 + Math.sin(tw * 2 + a); ctx.beginPath(); ctx.moveTo(sx, sy - z * 2); ctx.lineTo(sx + z * 0.6, sy); ctx.lineTo(sx, sy + z * 2); ctx.lineTo(sx - z * 0.6, sy); ctx.closePath(); ctx.fill(); });
+      ctx.restore();
+    }
+    if (LEARN && lv === WILD) { ctx.save(); ctx.font = "700 11px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.lineWidth = 3.5; ctx.strokeStyle = "rgba(255,255,255,.95)"; ctx.fillStyle = "#2A1E3D"; ctx.strokeText(WO.n + " (wild)", x, y - r - 6); ctx.fillText(WO.n + " (wild)", x, y - r - 6); ctx.restore(); }
+    if (LEARN && lv < O.length) {
+      ctx.save(); ctx.font = "700 11px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.lineWidth = 3.5; ctx.strokeStyle = "rgba(255,255,255,.95)"; ctx.fillStyle = "#2A1E3D";
+      var ly = y - r * 0.62; ctx.strokeText(O[lv].n, x, ly); ctx.fillText(O[lv].n, x, ly); ctx.restore();
+    }
+  }
+  var FLAKES = []; for (var fi = 0; fi < 46; fi++) FLAKES.push([Math.random() * W, Math.random() * H, 1 + Math.random() * 2.2, 0.2 + Math.random() * 0.5]);
+  var STARS = []; for (var si = 0; si < 60; si++) STARS.push([(si * 97.31) % W, (si * 53.7 + (si % 7) * 31) % H, 0.6 + (si % 3) * 0.5]);
+  function drawBG(dark, now) {
+    if (SP === "micro") { ctx.fillStyle = dark ? "#151226" : "#F1F0FA"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = dark ? "rgba(230,230,255,.6)" : "rgba(90,80,140,.25)";
+      STARS.forEach(function (s, i) { ctx.globalAlpha = quiet() ? 1 : 0.6 + 0.4 * Math.sin(now / 700 + i); ctx.beginPath(); ctx.arc(s[0], s[1], s[2], 0, Math.PI * 2); ctx.fill(); }); ctx.globalAlpha = 1; }
+    if (SKIN === "xmas") { var gr = ctx.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, dark ? "#1B2340" : "#E4F1FB"); gr.addColorStop(1, dark ? "#2A2F4A" : "#FFFFFF"); ctx.fillStyle = gr; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = dark ? "#DDE6F5" : "#F7FBFF"; ctx.beginPath(); ctx.moveTo(0, H); for (var x = 0; x <= W; x += 20) ctx.lineTo(x, H - 14 - 6 * Math.sin(x / 37)); ctx.lineTo(W, H); ctx.fill(); }
+    else if (SKIN === "hall") { var g2 = ctx.createLinearGradient(0, 0, 0, H); g2.addColorStop(0, "#2B1D3F"); g2.addColorStop(1, dark ? "#1A1426" : "#4A3466"); ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#F5C35A"; ctx.beginPath(); ctx.arc(W - 60, 150, 26, 0, Math.PI * 2); ctx.fill(); }
+    else if (SKIN === "easter") { ctx.fillStyle = dark ? "#252033" : "#FBF6EC"; ctx.fillRect(0, 0, W, H); ["#F7C8D8", "#C8E6F7", "#D8F2C8", "#F7EBC0"].forEach(function (c, i) { ctx.fillStyle = c; ctx.globalAlpha = 0.6; ctx.beginPath(); ctx.ellipse(40 + i * 105, H - 16, 11, 14, 0, 0, Math.PI * 2); ctx.fill(); }); ctx.globalAlpha = 1; }
+    if (mut("narrow")) { ctx.fillStyle = dark ? "rgba(180,168,207,.14)" : "rgba(107,90,147,.10)"; ctx.fillRect(0, 0, NARROW, H); ctx.fillRect(W - NARROW, 0, NARROW, H); }
+  }
+  function drawFG(dark, now) {
+    if (SKIN === "xmas") {
+      if (!quiet()) FLAKES.forEach(function (f) { f[1] += f[3]; f[0] += Math.sin(now / 900 + f[1] / 50) * 0.2; if (f[1] > H) { f[1] = -4; f[0] = Math.random() * W; } });
+      ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.strokeStyle = "rgba(120,150,190,.5)"; ctx.lineWidth = 0.6; FLAKES.forEach(function (f) { ctx.beginPath(); ctx.arc(f[0], f[1], f[2], 0, Math.PI * 2); ctx.fill(); ctx.stroke(); });
+      ctx.lineWidth = 4; for (var x = 0, i = 0; x < W; x += 40, i++) { ctx.strokeStyle = i % 2 ? "#D93A3A" : "#2F9A55"; ctx.beginPath(); ctx.moveTo(x, 2); ctx.quadraticCurveTo(x + 20, 18, x + 40, 2); ctx.stroke(); ctx.fillStyle = ["#F5C842", "#5EC8F2", "#FF7A9A"][i % 3]; ctx.beginPath(); ctx.arc(x + 20, 11, 4, 0, Math.PI * 2); ctx.fill(); }
+    }
+    drawSparks(now);
+  }
+  // learn mode: names on pieces and a rotating fact on each merge
+  function learnFact(lv) {
+    if (!LEARN || lv >= O.length) return;
+    var i = learnI[lv] = ((learnI[lv] === undefined ? -1 : learnI[lv]) + 1) % 2, tx = i ? K.FACTS2[lv] : K.FACTS[lv], el = $("learn");
+    el.innerHTML = pic(lv, 20) + "<span>" + esc(tx) + "</span>"; el.hidden = false; clearTimeout(learnT); learnT = setTimeout(function () { el.hidden = true; }, 4200);
+  }
+  // ward round goals
+  function goalVal(g, fin) {
+    if (g.id === "make") return (madeN[g.lv] || 0) >= g.n;
+    if (g.id === "score") return score >= g.n;
+    if (g.id === "chain") return bestChain >= g.n;
+    if (g.id === "merges") return nMerge >= g.n;
+    if (g.id === "inf3") return infCleared >= 3;
+    if (g.id === "mix4") return mixN >= 4;
+    if (g.id === "nocut") return fin && cuts >= 3;
+    if (g.id === "noshake") return fin && shakeLeft > 0;
+    return false;
+  }
+  function goalTick(fin) {
+    if (!GOALS || practice || over && !fin) return;
+    GOALS.forEach(function (g, i) { if (!gDone[i] && goalVal(g, fin)) { gDone[i] = true; if (!fin) { toast(K.GOALW + ": ✅ " + g.t); sfx("target"); } } });
+    tbarUI();
+  }
+  function ticks(a) { return a.map(function (x) { return x ? "✅" : "⬜"; }).join(""); }
+  function stickers() { return load("mrg-stick-" + (NORMIE ? "sea" : "med"), {}); }
+  // collection cards
+  function unlockCard(key, name) { if (coll[key]) return; coll[key] = 1; put(CKEY, coll); if (featUI()) setTimeout(function () { toast("📖 New card: " + name); }, 1200); }
+  function specFact(key, f, lv, badge) { factOnce(key, { pic: pic(lv, 32), t: f.t, x: f.x }); }
+  function onFirstDrop() {
+    if (SPEC[SP]) { specFact("f-" + SP, SPEC[SP].fact, SP === "blood" ? 1 : SP === "micro" ? O.length - 1 : 8); if (SP !== "blood") unlockCard(SP, SPEC[SP].n); }
+    if (SKIN && K.SKIN[SKIN]) unlockCard("s-" + SKIN, K.SKIN[SKIN].n);
+  }
+  // ---------- hidden finds (from 16 Nov 2026): bonus sparkles, own PRNG (hrnd), never scored ----------
+  function hidOn() { return goalsOn(day) && !over; }
+  function hidFound(id) { return !!coll["h-" + id]; }
+  function hidDef(id) { for (var i = 0; i < HID.length; i++) if (HID[i].id === id) return HID[i]; return null; }
+  function hidSpawn(id, x, y, force) {
+    if (!force && (!hidOn() || hidFound(id) || hidRun.sp[id] && id !== "testicle")) return false;
+    if (sparks.some(function (s) { return s.id === id; })) return false;
+    hidRun.sp[id] = 1; sparks.push({ id: id, x: Math.max(30, Math.min(W - 30, x)), y: Math.max(LINE + 20, Math.min(H - 30, y)), t0: performance.now() });
+    sfx("chime"); return true;
+  }
+  function hidMerge(x, y, n) { // per-merge chances, all from hrnd so the same day plays the same for everyone
+    if (!hidOn()) return;
+    var h = hrnd(), h2 = hrnd(), h3 = hrnd(), hr = new Date().getHours(), dark = document.documentElement.getAttribute("data-theme") === "dark";
+    if (steps < 3600 && h < 0.03) hidSpawn("thymus", x, y);
+    if ((hr >= 21 || hr < 5 || dark) && h2 < 0.02) hidSpawn("pineal", x, y);
+    if (h3 < 0.0006) hidSpawn("ovary", x, y); // about one in 1,700 merges: roughly once a month for a daily player
+    if (!hidFound("testicle") && hrnd() < (hidRun.tc ? 0.03 : 0.004)) hidSpawn("testicle", x, y);
+    if (n === O.length - 1 && hidFound("ovary")) hidSpawn("uterus", x, y);
+  }
+  function hidTick() { // time and drop based triggers
+    if (!hidOn()) return;
+    if (SP === "micro" && steps === 10800) hidSpawn("bone", W / 2, H / 2); // 3 minutes of game time
+    if (practice && drops === 206 && !hidRun.sp.bone) hidSpawn("bone", aimX, H / 2);
+  }
+  function drawSparks(now) {
+    for (var i = sparks.length - 1; i >= 0; i--) {
+      var s = sparks[i], k = (now - s.t0) / 4000; if (k >= 1) { sparks.splice(i, 1); continue; }
+      var x = s.x + Math.sin(k * 9) * 6, y = s.y - 60 * k, al = k > 0.8 ? (1 - k) / 0.2 : 1, rr = 14 + 2 * Math.sin(now / 120);
+      ctx.save(); ctx.globalAlpha = al; ctx.translate(x, y); ctx.rotate(quiet() ? 0 : now / 600);
+      ctx.fillStyle = "hsla(" + (quiet() ? 45 : (now / 6) % 360) + ",90%,65%,.35)"; ctx.beginPath(); ctx.arc(0, 0, rr + 8, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#FFE680"; ctx.strokeStyle = "#B8860B"; ctx.lineWidth = 2; ctx.beginPath();
+      for (var j = 0; j < 10; j++) { var a = j * Math.PI / 5 - Math.PI / 2, d = j % 2 ? rr * 0.45 : rr; ctx.lineTo(Math.cos(a) * d, Math.sin(a) * d); } ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.restore(); s.cx = x; s.cy = y;
+    }
+  }
+  function sparkAt(px, py) {
+    for (var i = sparks.length - 1; i >= 0; i--) { var s = sparks[i], dx = (s.cx || s.x) - px, dy = (s.cy || s.y) - py; if (dx * dx + dy * dy < 34 * 34) { sparks.splice(i, 1); catchSpark(s); return true; } }
+    return false;
+  }
+  function catchSpark(s) {
+    var d = hidDef(s.id); if (!d) return;
+    burst(s.cx || s.x, s.cy || s.y, 6); sfx("target"); buzz([15, 25, 15]);
+    if (s.id === "testicle" && !hidFound("testicle")) { hidRun.tc++; if (hidRun.tc < 2) { toast(NORMIE ? "🎲 One die! It needs its partner…" : "✨ One down. They always come as a pair…"); return; } }
+    if (hidFound(s.id)) return;
+    coll["h-" + s.id] = 1; put(CKEY, coll);
+    toast("🎉 " + K.HIDW + " found: " + d.n + "! It’s in your Collection.");
+    if (HID.every(function (h) { return hidFound(h.id); }) && !coll.full) { coll.full = 1; put(CKEY, coll); setTimeout(function () { toastBig("🏅 " + K.FULL.n + "!"); toast("🏅 " + K.FULL.n + " unlocked! " + K.FULL.d); }, 2400); }
+  }
+  // ---------- More menu (goals, collection, learn mode) and the collection book ----------
+  function overlay(id, html) {
+    var o = document.getElementById(id); if (o) o.remove();
+    o = document.createElement("div"); o.id = id; o.className = "mrg-help-ov"; o.innerHTML = html; document.body.appendChild(o);
+    function close() { o.remove(); document.removeEventListener("keydown", k); }
+    function k(e) { if (e.key === "Escape") close(); }
+    o.addEventListener("click", function (e) { if (e.target === o || e.target.closest("[data-close]")) close(); });
+    document.addEventListener("keydown", k);
+    var b = o.querySelector("[data-close]"); if (b) try { b.focus({ preventScroll: true }); } catch (e) {}
+    var cd = o.querySelector(".mrg-help-card"); if (cd) cd.scrollTop = 0;
+    return o;
+  }
+  function goalsHTML() {
+    if (!GOALS) return '<p class="mrg-mm-note">Ward round goals start on Monday 16 November.</p>';
+    var fin = st && st.done && st.goals, done = practice ? (fin ? st.goals : []) : gDone;
+    return '<ul class="mrg-goals">' + GOALS.map(function (g, i) { return "<li>" + (done[i] ? "✅" : "⬜") + " " + esc(g.t) + "</li>"; }).join("") + "</ul>" +
+      '<p class="mrg-mm-note">' + (practice ? "Practice games don’t tick goals." + (fin ? " These are from your daily run." : "") : "Same goals for everyone today. Tick all 3 for a " + K.STICK + " sticker.") + "</p>";
+  }
+  function openMore() {
+    var o = overlay("mrg-more-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-mm-h"><h2 id="mrg-mm-h">' + esc(K.GOALW) + "</h2>" + goalsHTML() +
+      '<button type="button" class="mrg-mm-btn" id="mrg-mm-book">📖 Collection book</button>' +
+      '<label class="mrg-mm-tog"><input type="checkbox" id="mrg-mm-learn"' + (LEARN ? " checked" : "") + "> <span><b>Learn mode</b><br>Names on pieces and a fact with each merge. Doesn’t change scoring.</span></label>" +
+      '<button type="button" class="mrg-help-go" data-close>Done</button></div>');
+    o.querySelector("#mrg-mm-book").onclick = function () { o.remove(); openBook(); };
+    o.querySelector("#mrg-mm-learn").onchange = function () { setLearn(this.checked); };
+  }
+  function setLearn(on) { LEARN = !!on && featUI(); put("mrg-learn", LEARN ? 1 : 0); if (!LEARN) $("learn").hidden = true; }
+  function card(art, name, facts, got, hint, extra) {
+    return '<div class="mrg-card' + (got ? "" : " locked") + '"><div class="mrg-card-art">' + art + (extra && got ? '<span class="mrg-card-x">' + extra + "</span>" : "") + "</div><b>" + esc(got ? name : "???") + "</b>" +
+      (got ? facts.map(function (f) { return "<p>" + esc(f) + "</p>"; }).join("") : '<p class="hint">' + esc(hint) + "</p>") + "</div>";
+  }
+  function bookHTML() {
+    var L = NORMIE ? 1 : 0, cards = [], n = 0, tot = 0;
+    function add2(html, got) { cards.push(html); tot++; if (got) n++; }
+    O.forEach(function (o, i) { add2(card(pic(i, 56), o.n, [K.FACTS[i], K.FACTS2[i]], !!coll[i], "Make it to unlock."), !!coll[i]); });
+    var sp = [
+      ["w", pic(WILD, 56), WO.n + " (wild)", [K.WTIP, K.WFACT.replace(/^Wild piece! It merges with anything\. /, ""), K.WFACT2], "A rare wild drop.", "✨"],
+      ["c", pic(CURE, 56), PO.n, [OUTK.fact.replace(/^[^!]+! [^.]+\. /, "")], NORMIE ? "Slick Sunday." : "Outbreak Sunday.", ""],
+      ["o-", pic(NORMIE ? 0 : 1, 56), NORMIE ? "Plain: the easy guest" : "O negative donor", [NORMIE ? "Plain goes with every flavour, a bit like O negative blood goes with every group." : "O negative red cells can be given to almost anyone, so it’s called the universal donor. About 7% of Australians are O negative (Lifeblood)."], (NORMIE ? "Potluck" : "Blood Bank") + " Wednesday: pair a " + BG.names[BG.donor] + ".", NORMIE ? "Plain" : "O−"],
+      ["micro", pic(O.length - 1, 56), SPEC.micro.n, [SPEC.micro.fact.x], "Play a " + SPEC.micro.n + ".", SPEC.micro.e],
+      ["sick", pic(8, 56), SPEC.sick.n, [SPEC.sick.fact.x], "Play a " + SPEC.sick.n + ".", SPEC.sick.e]
+    ];
+    ["xmas", "hall", "easter"].forEach(function (s) { var d = K.SKIN[s]; sp.push(["s-" + s, pic(d.lv, 56), d.n, [d.fact], s === "xmas" ? "Play 1–26 December." : s === "hall" ? "Play 25–31 October." : "Play in Easter week.", d.e]); });
+    var spc = sp.map(function (c) { var got = !!coll[c[0]]; tot++; if (got) n++; return card(c[1], c[2], c[3], got, c[4], c[5]); });
+    var hid = HID.map(function (h) { var got = hidFound(h.id); tot++; if (got) n++; return card('<img src="data:image/svg+xml,' + encodeURIComponent(h.art) + '" width="56" height="56" alt="">', h.n, [h.fact], got, "Clue: " + h.clue, ""); });
+    var hn = HID.filter(function (h) { return hidFound(h.id); }).length;
+    var sk = stickers(), row = "", today = dayNum(REAL);
+    for (var k = 13; k >= 0; k--) { var d = new Date((today - k) * 864e5).toISOString().slice(0, 10); row += '<span class="mrg-st' + (sk[d] ? " got" : "") + '" title="' + nice(d) + '"><i>' + (sk[d] ? K.STICK : "") + "</i>" + (+d.slice(8)) + "</span>"; }
+    return '<div class="mrg-help-card mrg-book" role="dialog" aria-modal="true" aria-labelledby="mrg-bk-h"><h2 id="mrg-bk-h">📖 Collection <small>' + n + "/" + tot + "</small></h2>" +
+      '<h3>' + (NORMIE ? "Sea creatures" : "Organs") + '</h3><div class="mrg-cards">' + cards.join("") + "</div>" +
+      "<h3>Specials</h3><div class=\"mrg-cards\">" + spc.join("") + "</div>" +
+      "<h3>" + (NORMIE ? "Hidden treasures" : "Hidden organs") + " <small>" + hn + "/" + HID.length + "</small></h3>" +
+      '<p class="mrg-mm-note">Bonus sparkles turn up now and then. Tap one before it floats away.' + (coll.full ? " <b>🏅 " + esc(K.FULL.n) + "</b>" : "") + '</p><div class="mrg-cards">' + hid.join("") + "</div>" +
+      "<h3>" + esc(K.GOALW) + " stickers</h3><div class=\"mrg-strow\">" + row + "</div>" +
+      '<button type="button" class="mrg-help-go" data-close>Close</button></div>';
+  }
+  function openBook() { overlay("mrg-book-ov", bookHTML()); }
+
   // ---------- end of run ----------
   var verdict = K.verdict;
   function band(tp) { return tp >= 10 ? 0 : tp >= 9 ? 1 : tp >= 8 ? 2 : tp >= 7 ? 3 : 4; }
   function gridOf(tp) { return O.map(function (o, i) { return i <= tp ? o.e : "⬜"; }).join(""); }
   function end() {
+    goalTick(true); sparks = [];
     over = true; arm = false; tbarUI();
     var prevHi = stats.hi || 0, best = score > prevHi && prevHi > 0;
     sfx("over"); factQ = []; nextFact();
@@ -659,11 +1218,15 @@
     ov.innerHTML = (best ? '<p class="best">🏆 Best ever!</p>' : "") +
       '<div class="react">' + pic(top >= 0 ? top : 0, 56) + '<span class="bub">' + esc(pick(rq)) + "</span></div>" +
       "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
-      (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "");
+      (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
+      (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "");
     ov.hidden = false;
     if (best) { burst(W / 2, H / 3, 8); sfx("target"); }
     if (!practice && !st.done) {
-      st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared, rx: RX, res: resCleared }; put(KEY, st);
+      st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared, rx: RX, res: resCleared }; if (DRAIN) st.drain = drained;
+      if (JUICE) { st.tally = { merge: TL.merge, combo: TL.combo, fever: TL.fever, cure: TL.cure, waste: TL.waste, drain: drained, save: TL.save, saves: saves, pb: best }; tallyAnim = true; }
+      if (GOALS) { st.goals = gDone.slice(); st.sp = SP; st.mut = MUT ? MUT.id : ""; } put(KEY, st);
+      if (GOALS && gDone.every(Boolean)) { var sk = stickers(); sk[day] = 1; put("mrg-stick-" + (NORMIE ? "sea" : "med"), sk); setTimeout(function () { toast("All 3 done! " + K.STICK + " sticker earned."); }, 600); }
       if (isLive() && stats.last !== day) {
         var consecutive = stats.last && dayNum(day) - dayNum(stats.last) === 1;
         stats.played++; if (st.win) stats.wins++;
@@ -683,7 +1246,41 @@
   function shareText() {
     var s = st.score, tp = st.top;
     var grid = gridOf(tp) + (st.wild ? " " + WO.e : "") + (st.out ? " " + OUTK.share + (st.rx ? " cleared " + (st.cleared || 0) : "") : "") + (st.star ? " ⭐" : "");
-    return "Mergeon #" + num(day) + (isLive() ? "" : " (archive)") + " " + (tp >= 0 ? O[tp].e : "") + "\n" + grid + "\nScore " + fmt(s) + " · " + K.top + ": " + (tp >= 0 ? O[tp].n : "none") + (st.chain > 1 ? " · Chain ×" + st.chain : "") + "\nmaladywise.com";
+    var wk = "";
+    if (st.goals) { var mm = null; MUTS.forEach(function (m) { if (m.id === st.mut) mm = m; }); wk = "\n" + (SPEC[st.sp] ? SPEC[st.sp].e + " " + SPEC[st.sp].short + " · " : mm ? mm.e + " " + mm.n[NORMIE ? 1 : 0] + " · " : "") + K.GOALW + " " + ticks(st.goals); }
+    return "Mergeon #" + num(day) + (isLive() ? "" : " (archive)") + " " + (tp >= 0 ? O[tp].e : "") + "\n" + grid + wk + "\nScore " + fmt(s) + " · " + K.top + ": " + (tp >= 0 ? O[tp].n : "none") + (st.chain > 1 ? " · Chain ×" + st.chain : "") + "\nmaladywise.com";
+  }
+  // item 15: honest end-of-game tally. Every line is a real part of the score; they add up to the total.
+  var tallyAnim = false, tallyT = [];
+  function tallyRows(t, s) {
+    var rows = [["Merges", t.merge]];
+    if (t.combo || t.fever) rows.push([t.fever ? "Combo + Fever bonus" : "Combo bonus", t.combo + t.fever]);
+    if (st.goals) rows.push([K.GOALW + " goals " + ticks(st.goals), null, st.goals.every(Boolean) ? K.STICK + " sticker" : "no points"]);
+    if (t.cure || t.drain || t.waste || st.out) { rows.push([NORMIE ? "Clean-ups" : "Infection cures", t.cure]); rows.push([NORMIE ? "Lost to oil" : "Lost to infection", -(t.drain + t.waste)]); }
+    if (t.save) rows.push(["Clutch saves ×" + t.saves, t.save]);
+    rows.push(["Total", s, null, true]);
+    return rows;
+  }
+  function tallyHTML(t, s) {
+    return '<div class="tally" id="mrg-tally" role="list">' + tallyRows(t, s).map(function (r, i) {
+      return '<div class="trow on' + (r[3] ? " tot" : "") + '" role="listitem" data-i="' + i + '"><span>' + esc(r[0]) + '</span><b data-v="' + (r[1] === null ? "" : r[1]) + '">' + (r[1] === null ? esc(r[2]) : (r[1] < 0 ? "−" : r[3] ? "" : "+") + fmt(Math.abs(r[1]))) + "</b></div>";
+    }).join("") + (t.pb ? '<p class="tpb">🏆 New personal best!</p>' : "") + "</div>";
+  }
+  function tallyRun(t) {
+    var box = $("tally"); if (!box) return; var rows = box.querySelectorAll(".trow"), pb = box.querySelector(".tpb"), i = 0, done = false;
+    tallyT.forEach(clearTimeout); tallyT = [];
+    function finish() { if (done) return; done = true; tallyT.forEach(clearTimeout); Array.prototype.forEach.call(rows, function (r) { r.classList.add("on"); var b = r.querySelector("b"), v = b.getAttribute("data-v"); if (v !== "") b.textContent = (v < 0 ? "−" : r.classList.contains("tot") ? "" : "+") + fmt(Math.abs(+v)); }); if (pb) { pb.classList.add("on"); confetti(); } }
+    if (quiet()) { finish(); return; }
+    Array.prototype.forEach.call(rows, function (r) { r.classList.remove("on"); });
+    box.addEventListener("click", finish); box.title = "Tap to skip";
+    function next() {
+      if (done) return; if (i >= rows.length) { if (pb) { pb.classList.add("on"); confetti(); sfx("target"); } done = true; return; }
+      var r = rows[i++], b = r.querySelector("b"), v = b.getAttribute("data-v"); r.classList.add("on");
+      if (v === "") { sfx("tick"); tallyT.push(setTimeout(next, 350)); return; }
+      v = +v; var k = 0, N = 12, tot = r.classList.contains("tot");
+      (function step() { if (done) return; k++; var c = Math.round(v * k / N); b.textContent = (c < 0 ? "−" : tot ? "" : "+") + fmt(Math.abs(c)); sfx("tick"); if (k < N) tallyT.push(setTimeout(step, 28)); else tallyT.push(setTimeout(next, 260)); })();
+    }
+    tallyT.push(setTimeout(next, 300));
   }
   function renderResult(practiceScore) {
     var r = $("result"), s = st.score, tp = st.top;
@@ -693,9 +1290,13 @@
     r.innerHTML = (practiceScore !== undefined ? '<p class="prac">Practice: <b>' + fmt(practiceScore) + "</b> · " + (practiceScore > s ? "Better than your real run. Typical." : "Your daily run still stands.") + "</p>" : "") +
       '<p class="em-row">' + pic(tp >= 0 ? tp : 0, 64) + '</p><p class="score">' + fmt(s) + '<span> pts</span></p><p class="verdict">' + esc(verdict(tp)) + "</p>" +
       (st.tgt >= 0 ? '<p class="note">' + (st.star ? "⭐ Today’s target hit: " : "🎯 Today’s target missed: ") + esc(O[st.tgt].n) + (st.out ? " · " + OUTK.cleared + ": " + (st.cleared || 0) + (st.rx ? " (" + RXK.resWord + ": " + (st.res || 0) + ")" : "") : "") + "</p>" : "") +
+      (st.drain !== undefined && st.out ? '<p class="note">' + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(st.drain) + "</p>" : "") +
+      (st.tally ? tallyHTML(st.tally, s) : "") +
+      (st.goals && goalsFor(day) ? '<p class="note">' + esc(K.GOALW) + ": " + goalsFor(day).map(function (g, i) { return (st.goals[i] ? "✅ " : "⬜ ") + esc(g.t); }).join(" · ") + "</p>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + K.win + '</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
       '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><span class="again-note">Practice game, doesn’t count</span></div>';
     r.appendChild(lbBox); lbRender();
+    if (st.tally && tallyAnim) { tallyAnim = false; tallyRun(st.tally); }
     $("copy").onclick = function () {
       var b = this;
       function selx() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); b.textContent = "Selected. Copy it"; }
@@ -797,7 +1398,9 @@
         if (NORMIE) { tone(a, f * 0.7, t, 0.09, { type: "triangle", to: f * 1.6, vol: 0.1 }); tone(a, f * 1.1, t + 0.05, 0.08, { type: "triangle", to: f * 1.8, vol: 0.06 }); }
         else tone(a, f * 0.8, t, 0.11, { to: f * 1.3, vol: 0.12 });
         if (n >= 7) tone(a, 120, t, 0.2, { to: 55, vol: 0.2 });
-      } else if (kind === "combo") tone(a, Math.min(1760, 600 + n * 120), t + 0.06, 0.12, { type: "triangle", vol: 0.07 });
+      } else if (kind === "note") { var PENT = [523.25, 587.33, 659.25, 783.99, 880, 1046.5, 1174.66, 1318.51, 1567.98, 1760], fq = PENT[Math.min(PENT.length - 1, n - 2)]; tone(a, fq, t + 0.05, 0.16, { type: "triangle", vol: 0.045 }); tone(a, fq * 2, t + 0.05, 0.1, { vol: 0.012 }); } // rising C major pentatonic
+      else if (kind === "tick") tone(a, 1500, t, 0.03, { type: "square", vol: 0.012 });
+      else if (kind === "combo") tone(a, Math.min(1760, 600 + n * 120), t + 0.06, 0.12, { type: "triangle", vol: 0.07 });
       else if (kind === "beat") { tone(a, 72, t, 0.12, { to: 46, vol: 0.3 }); tone(a, 64, t + 0.16, 0.1, { to: 42, vol: 0.22 }); }
       else if (kind === "sonar") { tone(a, 1250, t, 0.5, { vol: 0.05 }); tone(a, 1250, t + 0.3, 0.35, { vol: 0.018 }); }
       else if (kind === "chime") { tone(a, 1047, t, 0.15, { type: "triangle", vol: 0.06 }); tone(a, 1568, t + 0.08, 0.2, { type: "triangle", vol: 0.05 }); }
@@ -821,6 +1424,7 @@
   cv.addEventListener("pointermove", function (e) { if (!arm) aim(e); });
   cv.addEventListener("pointerup", function (e) {
     if (arm) { var b = cv.getBoundingClientRect(), ux = (e.clientX - b.left) / scale, uy = (e.clientY - b.top) / scale; if (down && !over) { if (arm === "rx") doseAt(ux, uy); else cutAt(ux, uy); } down = false; return; }
+    var sb = cv.getBoundingClientRect(); if (down && sparks.length && sparkAt((e.clientX - sb.left) / scale, (e.clientY - sb.top) / scale)) { down = false; return; }
     aim(e); if (down) drop(); down = false;
   });
   cv.addEventListener("pointercancel", function () { down = false; });
@@ -874,6 +1478,25 @@
     X.dose = function (x, y) { return doseAt(x, y); };
     X.swellTo = function (id, v) { pieces().forEach(function (o) { if (o.id === id) swell(o, v); }); };
     X.share = function () { return st.done ? shareText() : ""; };
+    // weekly features hooks
+    X.drained = function () { return drained; };
+    X.juice = function () { return { JUICE: JUICE, meter: meter, fever: feverS, saves: saves, TL: TL, score: score }; };
+    X.fever = function () { meter = METER; startFever(); }; X.fillMeter = function (n) { meter = n; };
+    X.clutch = function (ms) { var n = performance.now(); dangerT = n - ms; clutch(0, n); return saves; };
+    X.tally = function () { return st.tally || null; }; X.tallyRows = function () { return Array.prototype.map.call(document.querySelectorAll("#mrg-tally .trow"), function (r) { return [r.children[0].textContent, r.children[1].textContent, r.classList.contains("on")]; }); };
+    X.sfxLog = sfxLog;
+    X.feat = function () { return { sp: SP, mut: MUT ? MUT.id : null, skin: SKIN, goals: GOALS, gDone: gDone.slice(), made: madeN.slice(), merges: nMerge, mix: mixN, toots: tootN, learn: LEARN, gravity: engine.gravity.y, today: $("today").hidden ? "" : $("today").textContent, prev: PREV, nx2: nx2 }; };
+    X.dropLog = dropLog; X.special = special; X.mutation = function (d) { var m = mutation(d); return m && m.id; }; X.skinOf = skinOf; X.goalsFor = goalsFor; X.easter = easter;
+    X.compat = bgPair; X.BG = BG; X.groups = function () { return pieces().map(function (o) { return { id: o.id, lv: o.lv, g: o.bg, name: o.bg === undefined ? null : BG.names[o.bg] }; }); };
+    X.spawnG = function (lv, g, x, y) { var o = add(lv, x, y); o.bg = g; return o.id; };
+    X.clear = function () { pieces().forEach(function (o) { C.remove(engine.world, o); }); };
+    X.quirk = function (id) { pieces().forEach(function (o) { if (o.id === id) quirk(o, performance.now()); }); };
+    X.goalTick = goalTick; X.openBook = openBook; X.openMore = openMore; X.setLearn = setLearn; X.coll = function () { return coll; };
+    // hidden finds: force a sparkle (bypasses the trigger) and catch it; or fire the real triggers
+    X.hid = { spawn: function (id) { return hidSpawn(id, W / 2, H / 2, true); }, catchAll: function () { var n = 0; while (sparks.length) { var s = sparks.shift(); catchSpark(s); n++; } return n; },
+      sparks: function () { return sparks.map(function (s) { return s.id; }); }, found: function () { return HID.filter(function (h) { return hidFound(h.id); }).map(function (h) { return h.id; }); },
+      merge: function (n) { hidMerge(W / 2, H / 2, n === undefined ? 3 : n); }, setSteps: function (n) { steps = n; }, setDrops: function (n) { drops = n; }, tick: hidTick, toots: function (n) { tootN = n; }, run: function () { return hidRun; },
+      tap: function () { var s = sparks[0]; if (!s) return false; return sparkAt(s.cx || s.x, s.cy || s.y); } };
   }
 
   // The board sits inside a hidden section until Play is tapped, so size on first view.
