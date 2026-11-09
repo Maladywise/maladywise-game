@@ -130,6 +130,7 @@ EXERCISES = {
 DEEP_DIVES = {
     "behcets": ("behcets-disease-pathophysiology-flowchart", "Behçet's disease pathophysiology flowchart: genes and triggers to neutrophils, T cells and vasculitis"),
     "coeliac": ("coeliac-disease-pathophysiology-flowchart", "Coeliac disease flowchart: gluten, tTG and HLA-DQ2/DQ8 to positive serology and a flat biopsy"),
+    "mould": ("mould-damp-health-effects-pathways-diagram", "Mould and damp health effects diagram: allergy, irritation, HP, ABPA and invasive disease; CIRS unproven"),
     "pots": ("pots-active-stand-test-flowchart", "POTS active stand test flowchart: lying, then standing 10 minutes with heart rate checks"),
     "prostate-cancer": ("prostate-cancer-psa-testing-pathway-flowchart", "Prostate cancer pathway flowchart: PSA testing, repeat PSA, MRI, biopsy and staging"),
     "stroke": ("stroke-types-ischaemic-haemorrhagic-flowchart", "Stroke types flowchart: ischaemic stroke causes and intracerebral and subarachnoid haemorrhage"),
