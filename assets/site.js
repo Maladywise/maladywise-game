@@ -8,18 +8,19 @@ window.MW_HOME = {
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
-      { t: "Specialists and allied health", href: "/specialists/", d: "Newcastle and Hunter", au: true }
+      { t: "Specialists", href: "/specialists/", d: "Hunter referral list", au: true },
+      { t: "Health check", href: "/tools/health-check/", d: "Checks by age" }
     ] },
     { t: "For doctors", medical: true, items: [
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
       { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" },
-      { t: "GP MBS billing guide", href: "/mbs-billing/", d: "Items, fees, rules and worked examples" }
+      { t: "GP MBS billing guide", href: "/mbs-billing/", d: "Items, fees and rules" }
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
-      { t: "World Health Days", href: "/days/", d: "Today's theme and what's coming up" }
+      { t: "World Health Days", href: "/days/", d: "Today and coming up" }
     ] }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
