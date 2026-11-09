@@ -1,0 +1,1003 @@
+{
+ "dental": {
+  "name": "Dentists and dental specialists",
+  "people": [
+   {
+    "name": "Hunter New England Oral Health (public dental)",
+    "specialty": "NSW public dental service (free for eligible people)",
+    "practice": "Hunter New England Oral Health",
+    "address": "Clinics include Newcastle Community Dental (670 Hunter Street), Wallsend, Windale, Toronto, Beresfield (children), Maitland Hospital, Nelson Bay and Raymond Terrace",
+    "suburb": "Newcastle",
+    "phone": "1800 679 336",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/dental-oral-health",
+    "interests": [
+     "Free for children under 18 (NSW residents)",
+     "Free for adults with a Medicare card plus a Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card",
+     "Child Dental Benefits Schedule (CDBS) for eligible children",
+     "Urgent problems are triaged and seen sooner",
+     "Public dental vouchers for private treatment may be issued",
+     "Book through the Oral Health Contact Centre, 8:30am to 4:30pm weekdays"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "yes",
+     "wait": "",
+     "ages": "Children under 18 and eligible adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/dental-oral-health",
+     "https://www.nsw.gov.au/departments-and-agencies/hnelhd/about-us/contact-us",
+     "https://www.health.nsw.gov.au/oralhealth/prevention/Publications/public-dental-services-brochure.pdf"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Oral & Maxillofacial Surgery",
+    "specialty": "Oral and maxillofacial surgery (Dr Benjamin Gupta, Prof Gary Hoffman, Dr Alan Samakeh)",
+    "practice": "Hunter Oral & Maxillofacial Surgery",
+    "address": "Suite 213, Level 2, 99 Pacific Highway, Charlestown NSW 2290 (also Hunter Dental Group, 29 High Street, Greta)",
+    "suburb": "Charlestown",
+    "phone": "(02) 4962 4343",
+    "fax": "",
+    "email": "info@hunteroms.com.au",
+    "ereferral": "Online referral form on the practice website",
+    "website": "https://www.hunteroms.com.au/",
+    "interests": [
+     "Wisdom teeth removal",
+     "Dental implants and All-on-4",
+     "Corrective jaw surgery",
+     "Facial trauma and reconstruction",
+     "Bone grafting",
+     "Oral cancer",
+     "TMJ dysfunction",
+     "Local anaesthetic with or without IV sedation, or under general anaesthetic in hospital",
+     "3D cone-beam imaging",
+     "GP or dentist referral needed for Medicare rebates"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunteroms.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "OMS Specialists (Newcastle)",
+    "specialty": "Oral and maxillofacial surgery (Dr Deegesh Shah, Dr Benjamin Ghaly, Dr Andrew Watkins)",
+    "practice": "OMS Specialists",
+    "address": "Suite 12, Level 1, 20-22 Smith Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4023 7756",
+    "fax": "(02) 4038 1432",
+    "email": "newcastle@omsspecialists.com.au",
+    "ereferral": "Online referrals on the practice website",
+    "website": "https://www.omsspecialists.com.au/",
+    "interests": [
+     "Wisdom teeth and extractions",
+     "Dental implants, bone grafts and sinus lifts",
+     "Corrective jaw surgery",
+     "Trauma and reconstruction",
+     "Pathology of the mouth, head and neck",
+     "TMJ disorder and facial pain",
+     "Secondary cleft lip and palate surgery",
+     "Sleep apnoea",
+     "IV sedation in the rooms with an anaesthetist, or general anaesthetic",
+     "Formerly Newcastle Oral and Facial Surgery (NOFS)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.omsspecialists.com.au/",
+     "https://simone-pillacoutinhp-894l.squarespace.com/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Barry Reed",
+    "specialty": "Oral and maxillofacial surgeon",
+    "practice": "Newcastle Oral Surgery Centre",
+    "address": "252 Charlestown Road, Charlestown NSW 2290 (also 420 High Street, Maitland)",
+    "suburb": "Charlestown",
+    "phone": "02 4942 5888",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleoralsurgery.com.au/",
+    "interests": [
+     "Wisdom teeth",
+     "Dental implant surgery",
+     "TMJ surgery",
+     "Facial fractures and facial pain",
+     "Jaw pathology",
+     "Infections"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleoralsurgery.com.au/",
+     "https://www.newcastleoralsurgery.com.au/dr-barry-e-reed"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Wood Street Specialists",
+    "specialty": "Oral and maxillofacial surgery (Dr Patrick Mehanna)",
+    "practice": "Wood Street Specialists",
+    "address": "18 Wood Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "(02) 4023 5504",
+    "fax": "",
+    "email": "reception@woodstreetspecialists.com.au",
+    "ereferral": "",
+    "website": "https://www.woodstreetspecialists.com.au/",
+    "interests": [
+     "Wisdom teeth and extractions",
+     "Exposure of impacted teeth",
+     "Dental implants and All-on-4",
+     "Bone grafting and sinus lifts",
+     "Corrective jaw surgery",
+     "TMJ disorders",
+     "Facial trauma",
+     "Microsurgery and reconstruction",
+     "Oral pathology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.woodstreetspecialists.com.au/",
+     "https://www.woodstreetspecialists.com.au/dr-patrick-mehanna/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Eileen Tan-Gore",
+    "specialty": "Oral and maxillofacial surgeon (head and neck)",
+    "practice": "Tan-Gore Surgical",
+    "address": "Suite 2, Ground Floor, 20 Smart Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "02 4072 1876",
+    "fax": "02 4006 3882",
+    "email": "info@dreileentangore.com.au",
+    "ereferral": "Online referral form on the practice website",
+    "website": "https://www.dreileentangore.com.au/",
+    "interests": [
+     "Head and neck cancer and reconstruction",
+     "Facial trauma and facial nerve injury",
+     "Salivary gland disease",
+     "Wisdom teeth and dentoalveolar surgery",
+     "Oral pathology and skin cancer",
+     "TMJ dysfunction (minimally invasive)",
+     "Dental implants",
+     "Also consults at Konara Cancer Care, Broadmeadow"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "John Hunter Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.dreileentangore.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr George Tsai",
+    "specialty": "Periodontist and implant specialist",
+    "practice": "GT Periodontics",
+    "address": "Broadmeadow (Newcastle)",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4023 7181",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://gtperio.com.au/",
+    "interests": [
+     "Gum disease (periodontitis)",
+     "Gum grafts and root coverage",
+     "Crown lengthening",
+     "Peri-implantitis",
+     "Bone grafts and sinus lifts",
+     "Dental implants",
+     "No formal referral needed"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gtperio.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Periodontics",
+    "specialty": "Specialist periodontal practice",
+    "practice": "Newcastle Periodontics",
+    "address": "Hamilton (near Beaumont Street; parking on Donald Street)",
+    "suburb": "Hamilton",
+    "phone": "(02) 4911 9040",
+    "fax": "(02) 4961 5040",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastleperio.com/dental-implants-dental-surgery/",
+    "interests": [
+     "Gum disease",
+     "Oral plastic surgery",
+     "Dental implants with bone and soft tissue grafting",
+     "Twilight sedation with a visiting dental sedationist"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleperio.com/dental-implants-dental-surgery/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Meredith Owen",
+    "specialty": "Periodontist",
+    "practice": "Merewether Periodontics & Implants",
+    "address": "71 Turnbull Street, Merewether NSW 2291",
+    "suburb": "Merewether",
+    "phone": "02 4040 0588",
+    "fax": "",
+    "email": "reception@merewetherperio.com.au",
+    "ereferral": "",
+    "website": "https://www.merewetherperio.com.au/",
+    "interests": [
+     "Gum treatment (periodontitis)",
+     "Gum recession coverage",
+     "Dental implants, bone grafts and sinus lifts",
+     "Peri-implant disease",
+     "Exposure of impacted teeth",
+     "Treatment under general anaesthetic",
+     "Pre-orthodontic assessment"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.merewetherperio.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Smile Specialists Suite (Newcastle)",
+    "specialty": "Periodontics",
+    "practice": "Smile Specialists Suite",
+    "address": "Suite 1, Level 2, 55-57 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4009 1428",
+    "fax": "",
+    "email": "admin.newcastle@smilespecialistssuite.com.au",
+    "ereferral": "",
+    "website": "https://www.smilespecialistssuite.com.au/periodontist-newcastle-east/",
+    "interests": [
+     "Periodontal treatment and maintenance",
+     "Gum recession and aesthetic gum surgery",
+     "Bone grafting and dental implants",
+     "Periodontal emergencies, abscesses and mouth infections",
+     "Paediatric and older-adult periodontal care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.smilespecialistssuite.com.au/periodontist-newcastle-east/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Specialist Endodontics",
+    "specialty": "Endodontics (Dr David Van Eldik, Dr Mark O'Sullivan, Dr Mark Stenhouse, Dr Sally Cochrane, Dr Peter Case, Dr CeCe Chan, Dr Helen McHugh)",
+    "practice": "Specialist Endodontics",
+    "address": "Suite 1, LG Level, 40 Ridley Street, Charlestown NSW 2290 (also 144A George Street, East Maitland, (02) 4944 4044)",
+    "suburb": "Charlestown",
+    "phone": "02 4944 4000",
+    "fax": "02 4944 4099",
+    "email": "reception@specialist-endo.com",
+    "ereferral": "",
+    "website": "https://specialist-endo.com/",
+    "interests": [
+     "Root canal treatment and retreatment",
+     "Endodontic microsurgery",
+     "Cone beam CT",
+     "Regenerative endodontics and vital pulp therapy",
+     "By referral from your dentist"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialist-endo.com/",
+     "https://specialist-endo.com/about-us/specialists/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Orthodontics",
+    "specialty": "Specialist orthodontics (Dr Morgan Wishney)",
+    "practice": "Newcastle Orthodontics",
+    "address": "Suite C102, 215-217 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4942 3769",
+    "fax": "",
+    "email": "reception@newcastleorthodontics.com.au",
+    "ereferral": "",
+    "website": "https://newcastleorthodontics.com.au/",
+    "interests": [
+     "Braces and clear aligners",
+     "Early (interceptive) treatment for children",
+     "Adult orthodontics",
+     "No referral needed",
+     "Interest-free payment plans"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, teens and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastleorthodontics.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Valley Orthodontics",
+    "specialty": "Specialist orthodontics (Dr Steven Cave, Dr Kay Kanthathas, Dr Danny Yang, Dr David Day)",
+    "practice": "Hunter Valley Orthodontics",
+    "address": "1st Floor, 464 The Esplanade, Warners Bay NSW 2282 (also Hamilton South, Maitland, Salamander Bay and Singleton)",
+    "suburb": "Warners Bay",
+    "phone": "02 4047 1878",
+    "fax": "",
+    "email": "info@hvortho.com.au",
+    "ereferral": "",
+    "website": "https://huntervalleyorthodontics.com.au/",
+    "interests": [
+     "Orthodontics for children and adults",
+     "Five Hunter offices including Maitland (52 Ken Tubman Drive) and Salamander Bay"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntervalleyorthodontics.com.au/our-offices/",
+     "https://huntervalleyorthodontics.com.au/department/specialist-orthodontists/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Matthew Ma",
+    "specialty": "Specialist prosthodontist",
+    "practice": "Newcastle Specialist Prosthodontics",
+    "address": "17 Canberra Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4957 9747",
+    "fax": "(02) 4957 8045",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleprosthodontics.com.au/",
+    "interests": [
+     "Crowns, bridges and veneers",
+     "Dental implants and All-on-4",
+     "Full-mouth dental rehabilitation",
+     "Dentures",
+     "TMJ disorders",
+     "No referral needed"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleprosthodontics.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "KidsSmile Paediatric Dental",
+    "specialty": "Specialist paediatric dentistry (Dr Helen Cornwell, Dr William Tang, Dr Nivethanan Kamalendran)",
+    "practice": "KidsSmile Paediatric Dental",
+    "address": "40 Brown Road, Broadmeadow NSW 2292 (also 52 Ken Tubman Drive, Maitland)",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4962 7300",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kidssmile.com.au/",
+    "interests": [
+     "Dental care for infants, children and teens",
+     "Treatment under general anaesthetic",
+     "Happy gas (relative analgesia)",
+     "Special needs dentistry and medically complex children"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Infants to adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.kidssmile.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Sleep Dental",
+    "specialty": "Dentistry under IV sedation (specialist anaesthetists)",
+    "practice": "Newcastle Sleep Dental",
+    "address": "18 Frederick Street, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "(02) 4943 6884",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://newcastlesleepdental.com.au/why-choose-us/",
+    "interests": [
+     "IV sedation given by specialist medical anaesthetists",
+     "Severely anxious and phobic patients",
+     "Wisdom teeth, implants and general treatment under sedation",
+     "Takes referrals from dentists across the Hunter",
+     "Children 12 and over",
+     "General anaesthetic cases at Lingard Private Hospital (Newcastle Dental group)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "12 and over",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlesleepdental.com.au/why-choose-us/",
+     "https://newcastledental.com.au/services/sleep-dental/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rutherford Dental",
+    "specialty": "General dentistry",
+    "practice": "Rutherford Dental",
+    "address": "268 New England Highway, Rutherford NSW 2320",
+    "suburb": "Rutherford",
+    "phone": "(02) 4932 8366",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://rutherforddental.com.au/",
+    "interests": [
+     "Bulk bills eligible children under the Child Dental Benefits Schedule (CDBS)",
+     "Accepts NSW public dental vouchers for eligible adults",
+     "DVA approved provider",
+     "Emergency dentist appointments",
+     "Evening hours (to 7pm Monday and Wednesday)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://rutherforddental.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Morrin Dental",
+    "specialty": "General dentistry",
+    "practice": "Morrin Dental",
+    "address": "First Floor, 196 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4929 3077",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.morrindental.com.au/news/details/how-to-use-your-child-dental-benefits-schedule-cdbs-efficiently-in-newcastle/",
+    "interests": [
+     "Bulk bills all Child Dental Benefits Schedule (CDBS) treatment",
+     "Emergency dentistry",
+     "DVA (logo shown)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.morrindental.com.au/news/details/how-to-use-your-child-dental-benefits-schedule-cdbs-efficiently-in-newcastle/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "MS Dental",
+    "specialty": "General dentistry",
+    "practice": "MS Dental",
+    "address": "20 Newcastle Street, Cardiff NSW 2285 (also 9 Churnwood Drive, Fletcher, (02) 4953 8614; and 181 Maitland Road, Mayfield, (02) 4023 3885)",
+    "suburb": "Cardiff",
+    "phone": "(02) 4954 7722",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.msdental.com.au/blog/affordable-dental-care-newcastle/",
+    "interests": [
+     "Bulk bills the Child Dental Benefits Schedule (CDBS) at all three clinics",
+     "Emergency dentistry",
+     "Saturday appointments (Cardiff; Fletcher every second week)",
+     "Interest-free payment plans"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": "",
+     "weekend": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.msdental.com.au/blog/affordable-dental-care-newcastle/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Warners Bay Dental",
+    "specialty": "General dentistry",
+    "practice": "Warners Bay Dental",
+    "address": "Unit 6, 2-4 King Street, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "(02) 4948 5233",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://warnersbaydental.com.au/government-vouchers/",
+    "interests": [
+     "Child Dental Benefits Schedule (CDBS) bulk billing",
+     "Information on NSW public dental vouchers",
+     "DVA patients",
+     "Emergency appointments",
+     "IV sedation information",
+     "Saturday mornings and evenings to 7pm Monday and Tuesday"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": "",
+     "weekend": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://warnersbaydental.com.au/government-vouchers/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Watagan Dental",
+    "specialty": "General dentistry",
+    "practice": "Watagan Dental",
+    "address": "646 Freemans Drive, Cooranbong NSW 2265",
+    "suburb": "Cooranbong",
+    "phone": "(02) 4977 1222",
+    "fax": "",
+    "email": "info@watagandental.com.au",
+    "ereferral": "",
+    "website": "https://www.watagandental.com.au/post/bulkbillingcdbs",
+    "interests": [
+     "Bulk billing for all services covered by the Child Dental Benefits Schedule (CDBS)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.watagandental.com.au/post/bulkbillingcdbs"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Bonnells Bay Dental",
+    "specialty": "General dentistry",
+    "practice": "Bonnells Bay Dental",
+    "address": "Shop 14/330 Fishery Point Road, Bonnells Bay NSW 2264",
+    "suburb": "Bonnells Bay",
+    "phone": "(02) 4970 5400",
+    "fax": "",
+    "email": "reception@bonnellsbaydental.com.au",
+    "ereferral": "",
+    "website": "https://bonnellsbaydental.com.au/emergency-dentist/",
+    "interests": [
+     "Emergency dentist SMS line (see website); emergencies prioritised by need",
+     "Child Dental Benefits Schedule (CDBS) for eligible children's emergencies",
+     "Sedation and sleep dentistry",
+     "Saturday mornings"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": "",
+     "weekend": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://bonnellsbaydental.com.au/emergency-dentist/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle City Dental",
+    "specialty": "General dentistry",
+    "practice": "Newcastle City Dental",
+    "address": "Suite 1/7-9 Watt Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "(02) 4926 2066",
+    "fax": "",
+    "email": "reception@newcastlecitydental.com.au",
+    "ereferral": "",
+    "website": "https://newcastlecitydental.com.au/",
+    "interests": [
+     "Emergency dentistry: phone advice and same-day appointments when possible",
+     "Child Dental Benefits Schedule (CDBS)",
+     "Veterans' Affairs (DVA) patients"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://newcastlecitydental.com.au/services/patient-information/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Pacific Smiles Dental Raymond Terrace",
+    "specialty": "General dentistry",
+    "practice": "Pacific Smiles Dental",
+    "address": "MarketPlace Raymond Terrace, William Street, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "02 4988 7400",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pacificsmilesdental.com.au/locations/raymond-terrace/",
+    "interests": [
+     "Emergency dental appointments six days a week (alternate Saturdays)",
+     "IV sedation and sleep dentistry",
+     "Child Dental Benefits Schedule (CDBS) information"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": "",
+     "weekend": true
+    },
+    "inclusive": [],
+    "sources": [
+     "https://pacificsmilesdental.com.au/locations/raymond-terrace/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Tomaree Dentistry",
+    "specialty": "General dentistry",
+    "practice": "Tomaree Dentistry",
+    "address": "6 Tomaree Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "(02) 4981 3114",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://tomareedentistry.com.au/services/",
+    "interests": [
+     "Urgent care for pain, facial swelling or dental trauma",
+     "Child Dental Benefits Schedule (CDBS)",
+     "DVA arrangements"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://tomareedentistry.com.au/services/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}

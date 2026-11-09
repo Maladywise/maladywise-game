@@ -1,0 +1,544 @@
+{
+ "exercise-physiology": {
+  "name": "Exercise physiology",
+  "people": [
+   {
+    "name": "AMC Exercise Physiology",
+    "specialty": "Exercise physiology (ESSA accredited)",
+    "practice": "AMC Exercise Physiology",
+    "address": "4/420-422 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4934 5577",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.amcexercisephysiology.com.au/",
+    "interests": [
+     "Chronic conditions: diabetes, high blood pressure, high cholesterol",
+     "Heart attack and stroke recovery",
+     "Parkinson's disease and multiple sclerosis",
+     "Balance",
+     "Chronic pain",
+     "Musculoskeletal injury rehab",
+     "Small group classes",
+     "Home visits",
+     "NDIS, DVA and WorkCover (logos shown)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.amcexercisephysiology.com.au/",
+     "https://www.amcexercisephysiology.com.au/exercise-physiology"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kinetic Medicine – East Maitland",
+    "specialty": "Exercise physiology and physiotherapy",
+    "practice": "Kinetic Medicine",
+    "address": "1/30 Metford Road, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "(02) 4984 6200",
+    "fax": "",
+    "email": "info@kineticmedicine.com.au",
+    "ereferral": "",
+    "website": "https://kineticmedicine.com.au/east-maitland",
+    "interests": [
+     "Chronic disease: diabetes, heart disease, osteoporosis, arthritis",
+     "Chronic pain",
+     "Injury and post-surgical rehab",
+     "Healthy ageing and falls prevention",
+     "NDIS exercise physiology (registered provider)",
+     "WorkCover and CTP rehab",
+     "GP care plan (Medicare) consults"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://kineticmedicine.com.au/east-maitland",
+     "https://kinetic-medicine.squarespace.com/all-locations"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Kinetic Medicine – Salamander Bay",
+    "specialty": "Exercise physiology and physiotherapy",
+    "practice": "Kinetic Medicine",
+    "address": "3/263 Soldiers Point Road, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "(02) 4984 6200",
+    "fax": "",
+    "email": "info@kineticmedicine.com.au",
+    "ereferral": "",
+    "website": "https://kineticmedicine.com.au/salamander-bay",
+    "interests": [
+     "Port Stephens, including Nelson Bay and Anna Bay",
+     "Chronic disease: diabetes, heart disease, osteoporosis, arthritis",
+     "Chronic pain",
+     "Injury and post-surgical rehab",
+     "Healthy ageing and falls prevention",
+     "NDIS exercise physiology (registered provider)",
+     "WorkCover and CTP rehab",
+     "GP care plan (Medicare) consults",
+     "Also a Medowie clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://kineticmedicine.com.au/salamander-bay",
+     "https://kinetic-medicine.squarespace.com/all-locations"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "University of Newcastle Exercise Physiology Clinic",
+    "specialty": "Exercise physiology (teaching clinic; AEP and supervised student sessions)",
+    "practice": "University of Newcastle Exercise Physiology Clinic",
+    "address": "Level 2, Hunter Sports Centre, 43 Stockland Drive, Glendale NSW 2285",
+    "suburb": "Glendale",
+    "phone": "(02) 4055 2580",
+    "fax": "",
+    "email": "exphysclinic@newcastle.edu.au",
+    "ereferral": "",
+    "website": "https://www.newcastle.edu.au/school/biomedical-sciences-and-pharmacy/exercise-physiology-clinic",
+    "interests": [
+     "Low-cost student-led sessions under supervision",
+     "Group exercise and home programs",
+     "Body composition, aerobic capacity and musculoskeletal testing",
+     "Medicare care plans bulk billed",
+     "DVA (no gap)",
+     "NDIS self-managed plans",
+     "Self-referral accepted"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastle.edu.au/school/biomedical-sciences-and-pharmacy/exercise-physiology-clinic"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Physiology Collective",
+    "specialty": "Exercise physiology (mobile; Accredited Exercise Physiologists)",
+    "practice": "The Physiology Collective",
+    "address": "Mobile (Belmont and Lake Macquarie)",
+    "suburb": "Belmont",
+    "phone": "",
+    "fax": "",
+    "email": "admin@thephysiologycollective.com.au",
+    "ereferral": "",
+    "website": "https://thephysiologycollective.com.au/exercise-physiologists-in-belmont/",
+    "interests": [
+     "Home visits with equipment supplied",
+     "Women's health: pregnancy, postpartum, menopause and bone health",
+     "Heart, metabolic, kidney and lung conditions",
+     "Type 2 diabetes",
+     "Neurological conditions",
+     "Cancer",
+     "Mental health",
+     "NDIS exercise physiology",
+     "Also occupational therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thephysiologycollective.com.au/exercise-physiologists-in-belmont/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "NeuroPilates Method",
+    "specialty": "Exercise physiology and physiotherapy (neurological and clinical Pilates)",
+    "practice": "NeuroPilates Method",
+    "address": "Dudley NSW 2290 (by appointment)",
+    "suburb": "Dudley",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.neuropilatesmethod.com.au/",
+    "interests": [
+     "Neurological conditions",
+     "Healthy ageing",
+     "Clinical Pilates",
+     "Home and community visits",
+     "NDIS (self and plan managed)",
+     "Support at Home (aged care)",
+     "Medicare, workers compensation and CTP"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.neuropilatesmethod.com.au/",
+     "https://www.neuropilatesmethod.com.au/neurological-conditions"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Enjoy Therapy Exercise Physiology",
+    "specialty": "Exercise physiology (mobile; Accredited Exercise Physiologist)",
+    "practice": "Enjoy Therapy Exercise Physiology",
+    "address": "Mobile (Newcastle)",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.enjoytherapyep.com/medicare",
+    "interests": [
+     "Medicare care plan (CDM) sessions bulk billed",
+     "Home visits",
+     "Support at Home (aged care)",
+     "DVA veteran support",
+     "Clinical reformer Pilates",
+     "Back pain, arthritis, heart conditions, diabetes, post-surgical rehab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.enjoytherapyep.com/medicare"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Physio Inq – Mobile Exercise Physiology",
+    "specialty": "Exercise physiology (mobile; Accredited Exercise Physiologists)",
+    "practice": "Physio Inq",
+    "address": "Mobile (Newcastle suburbs)",
+    "suburb": "Newcastle",
+    "phone": "1300 731 733",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.physioinq.com.au/home/nsw/newcastle/mobile-exercise-physiology",
+    "interests": [
+     "Home visits across Newcastle",
+     "Chronic disease: heart, diabetes, lung",
+     "Disability and NDIS exercise physiology (registered)",
+     "Older adults: strength and balance",
+     "Cancer rehab",
+     "Mental health",
+     "Neurological and post-surgical rehab",
+     "Home Care Packages",
+     "DVA clients seen in clinic only"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.physioinq.com.au/home/nsw/newcastle/mobile-exercise-physiology"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "social-work": {
+  "name": "Mental health social workers",
+  "people": [
+   {
+    "name": "Rohan Holt",
+    "specialty": "Social Work (Accredited Mental Health Social Worker)",
+    "practice": "Benwerrin Counselling",
+    "address": "11 Belmore Road, Lorn NSW 2320",
+    "suburb": "Lorn",
+    "phone": "",
+    "fax": "",
+    "email": "rohan@benwerrincounselling.com.au",
+    "ereferral": "",
+    "website": "https://benwerrincounselling.com.au/",
+    "interests": [
+     "Family intervention",
+     "Couples counselling",
+     "Medicare rebates with a GP Mental Health Care Plan (Better Access)",
+     "Open Arms veterans counselling",
+     "Telehealth and telephone counselling"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "Trauma-informed practice (stated)"
+    ],
+    "sources": [
+     "https://benwerrincounselling.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Deborah Constance",
+    "specialty": "Social Work (Accredited Mental Health Social Worker; EMDR)",
+    "practice": "The Base Health",
+    "address": "3 Tudor Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "02 4963 1387",
+    "fax": "",
+    "email": "admin@thebasehealth.com.au",
+    "ereferral": "",
+    "website": "https://www.thebasehealth.com.au/services/mental-health-social-work",
+    "interests": [
+     "EMDR",
+     "Counselling across the lifespan"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "“We work from a trauma informed perspective.”"
+    ],
+    "sources": [
+     "https://www.thebasehealth.com.au/services/mental-health-social-work"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Rebecca Butler",
+    "specialty": "Social Work (Accredited Mental Health Social Worker; Imago couple therapist)",
+    "practice": "Rebecca Butler Relationship Therapy (at The Base Health)",
+    "address": "3 Tudor Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.rebeccabutlerrelationshiptherapy.com.au/",
+    "interests": [
+     "Couples therapy (Imago)",
+     "Individual therapy",
+     "Couples weekend workshops",
+     "Clinical supervision",
+     "Out-of-hours appointments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.rebeccabutlerrelationshiptherapy.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Bree Collins",
+    "specialty": "Social Work (Accredited Mental Health Social Worker; family therapist)",
+    "practice": "Bree Collins Therapy",
+    "address": "45 Hunter Street, Newcastle NSW 2300 (The SWIFT Clinic and The Base Health East End office)",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.breecollinstherapy.com.au/",
+    "interests": [
+     "Family therapy",
+     "Individuals, couples and families of all ages",
+     "Medicare rebates with a GP Mental Health Care Plan",
+     "Concession rates for low income earners"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.breecollinstherapy.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Jo Bronwyn",
+    "specialty": "Social Work (AASW-approved mental health social worker)",
+    "practice": "Seeds for Growth",
+    "address": "Shop 6, 470 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "(02) 4933 3939",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://seedsforgrowth.com.au/",
+    "interests": [
+     "Medicare rebates available",
+     "Alcohol and other drugs and mental health",
+     "Practice also offers NDIS support coordination"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://seedsforgrowth.com.au/"
+    ],
+    "checked": "9 November 2026",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
