@@ -135,3 +135,9 @@ html[data-motion="reduce"] #mrg .combo.on,html[data-motion="reduce"] #mrg .fact.
 #mrg.desk #mrg-mode{grid-column:2;grid-row:5;text-align:left}
 #mrg.desk .result,#mrg.desk #mrg-nextday,#mrg.desk .archive{grid-column:1/-1}
 #mrg.desk .result{max-width:560px;width:100%;justify-self:center}
+
+/* No tap flash on phones (grey/blue highlight, text selection or focus ring when tapping the board) */
+#mrg, #mrg *{-webkit-tap-highlight-color:transparent}
+#mrg canvas{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;outline:none}
+#mrg button{-webkit-user-select:none;user-select:none}
+#mrg canvas:focus, #mrg canvas:focus-visible{outline:none}

@@ -8,7 +8,7 @@
    Determinism: only the drop PRNG (rnd) sets the drop order; infections use irnd, shake srnd; nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
