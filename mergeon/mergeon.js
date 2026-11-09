@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -845,7 +845,7 @@
     var t = $("tgt"), on = tgt >= 0, html = "";
     if (OUT) html += '<span class="ob"' + (RX ? ' title="' + esc(RXK.tip.join("\n")) + '"' : "") + ">" + OUTK.badge + "</span> ";
     if (on) html += tgtHit ? '<span class="hit">⭐ Target hit: ' + esc(O[tgt].n) + (practice ? " (practice)" : "") + "</span>"
-      : "🎯 " + (practice ? "Practice target" : OUT ? "Target" : "Today’s target") + ": make " + esc(aName(tgt));
+      : "🎯 " + (practice ? "Practice: make " : "Make ") + esc(aName(tgt));
     if (GOALS) { var gn = practice ? 0 : gDone.filter(Boolean).length; html = '<button type="button" class="gl" id="mrg-gl" aria-label="' + esc(K.GOALW) + " goals: " + gn + ' of 3 done">📋 ' + gn + "/3</button> " + html; }
     t.innerHTML = html; if ($("gl")) $("gl").onclick = openMore; t.title = on ? "Today’s target: make " + aName(tgt) + (RX ? "\n" + RXK.tip.join("\n") : "") : "";
     $("tools").hidden = !NEW;
@@ -1010,6 +1010,9 @@
     ctx.save(); ctx.scale(r / 50, r / 50); ctx.translate(-50, -50); ctx.lineCap = "round"; ctx.lineJoin = "round";
     if (SP === "sick") {
       var q = QUIRK[lv];
+      // everyone looks a bit poorly: a queasy tint and a sweat drop on every piece
+      ctx.fillStyle = "rgba(140,200,110,.2)"; ctx.beginPath(); ctx.arc(50, 50, 44, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#9FD3F5"; ctx.strokeStyle = "#3A6E99"; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(82, 10); ctx.quadraticCurveTo(90, 24, 82, 28); ctx.quadraticCurveTo(74, 24, 82, 10); ctx.closePath(); ctx.fill(); ctx.stroke();
       if (q === "brows" || NORMIE) FACES[lv].forEach(function (f) { var k = f[2]; ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = (lv === 0 ? 5 : 3) * k; ctx.beginPath();
         ctx.moveTo(f[0] - 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] - 4 * k, f[1] - 5 * k); ctx.moveTo(f[0] + 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] + 4 * k, f[1] - 5 * k); ctx.stroke(); });
       if (!NORMIE && q === "slip") { ctx.strokeStyle = "#D9364E"; ctx.lineWidth = 1.6; ctx.beginPath();
