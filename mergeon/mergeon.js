@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "17";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -264,6 +264,17 @@
   var WILD = O.length, CURE = O.length + 1, WO = K.W, PO = OUTK.P; // special pieces live after the chain: wild (stem cell / pearl) and cure (antibiotic / sponge)
   function info(lv) { return lv === WILD ? WO : lv === CURE ? PO : O[lv]; }
   var IMG = ART.concat([K.WART, OUTK.ART]).map(function (svg) { var im = new Image(); im.src = "data:image/svg+xml," + encodeURIComponent(svg); return im; });
+  // Sick Day faces: every piece's smiley face swapped for a poorly one (sad, cross, queasy, miserable or woozy), varied by piece
+  var D = "#2A1E3D", ST = ' stroke="' + D + '" stroke-width="2.4" fill="none" stroke-linecap="round"', ST3 = ST.replace("2.4", "3"), ST18 = ST.replace("2.4", "1.8");
+  var MOODS = [
+    '<circle cx="-9" cy="1" r="3.4" fill="' + D + '"/><circle cx="9" cy="1" r="3.4" fill="' + D + '"/><path d="M-14 -6 L-5 -8 M14 -6 L5 -8"' + ST + '/><path d="M-5 10 Q0 5.5 5 10"' + ST + '/><path d="M-11 5 Q-13 10 -11 12 Q-9 10 -11 5Z" fill="#7CC4F0"/>',
+    '<circle cx="-9" cy="1" r="3.4" fill="' + D + '"/><circle cx="9" cy="1" r="3.4" fill="' + D + '"/><path d="M-15 -8 L-4 -3 M15 -8 L4 -3"' + ST3 + '/><path d="M-6 9 L6 9"' + ST + '/><ellipse cx="-15" cy="6" rx="4" ry="2.4" fill="#E0412F" opacity=".5"/><ellipse cx="15" cy="6" rx="4" ry="2.4" fill="#E0412F" opacity=".5"/>',
+    '<path d="M-12 0 Q-9 -3 -6 0 M6 0 Q9 -3 12 0"' + ST + '/><path d="M-7 9 Q-5 6 -3 9 T1 9 T5 9 T8 9"' + ST + '/><ellipse cx="0" cy="4" rx="17" ry="11" fill="#8FCB5E" opacity=".35"/>',
+    '<path d="M-12 1 Q-9 -2 -6 1 M6 1 Q9 -2 12 1"' + ST + '/><path d="M-14 -7 L-5 -9 M14 -7 L5 -9"' + ST + '/><path d="M-6 12 Q0 4 6 12"' + ST + '/><path d="M-9 4 L-10 14 M9 4 L10 14" stroke="#7CC4F0" stroke-width="2.6" stroke-linecap="round"/>',
+    '<path d="M-12 -3 L-6 3 M-6 -3 L-12 3 M6 -3 L12 3 M12 -3 L6 3"' + ST + '/><ellipse cx="0" cy="9" rx="3" ry="3.6"' + ST + '/><path d="M-6 -12 q3 -3 6 0 t6 0"' + ST18 + '/>'
+  ];
+  var FRE = /(<g transform="translate\([^)]*\) scale\([^)]*\)">)<circle cx="-9"[\s\S]*?<\/g>/g;
+  var SICKIMG = ART.map(function (svg, lv) { if (!FRE.test(svg)) return null; FRE.lastIndex = 0; var im = new Image(); im.src = "data:image/svg+xml," + encodeURIComponent(svg.replace(FRE, function (m, g) { return g + MOODS[lv % MOODS.length] + "</g>"; })); return im; });
   function pic(i, px) { return '<img class="mrg-pic" src="' + IMG[i].src + '" alt="' + info(i).n + '" width="' + px + '" height="' + px + '">'; }
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
   var DEBUG = /[?&]debug=1\b/.test(location.search);
@@ -722,7 +733,7 @@
   function organ(lv, x, y, ang, alpha, off, sc, bd) {
     var o = info(lv); sc = sc || 1;
     ctx.save(); ctx.globalAlpha = alpha || 1; ctx.translate(x, y); ctx.rotate(ang || 0); if (off) ctx.translate(off.x, off.y);
-    var im = IMG[lv];
+    var im = (SP === "sick" && SICKIMG[lv] && SICKIMG[lv].complete && SICKIMG[lv].naturalWidth) ? SICKIMG[lv] : IMG[lv];
     if (im.complete && im.naturalWidth) { var d = o.r * sc * 2 * 108 / 100; ctx.drawImage(im, -d / 2, -d / 2, d, d); deco(lv, bd, o.r * sc, performance.now()); }
     else { ctx.beginPath(); ctx.arc(0, 0, o.r * sc, 0, Math.PI * 2); ctx.fillStyle = o.c; ctx.fill(); ctx.font = Math.round(o.r * 1.15) + "px " + EMF; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.e, 0, o.r * 0.06); }
     ctx.restore();
@@ -1016,7 +1027,7 @@
       // everyone looks a bit poorly: a queasy tint and a sweat drop on every piece
       ctx.fillStyle = "rgba(140,200,110,.2)"; ctx.beginPath(); ctx.arc(50, 50, 44, 0, Math.PI * 2); ctx.fill();
       ctx.fillStyle = "#9FD3F5"; ctx.strokeStyle = "#3A6E99"; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(82, 10); ctx.quadraticCurveTo(90, 24, 82, 28); ctx.quadraticCurveTo(74, 24, 82, 10); ctx.closePath(); ctx.fill(); ctx.stroke();
-      if (q === "brows" || NORMIE) FACES[lv].forEach(function (f) { var k = f[2]; ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = (lv === 0 ? 5 : 3) * k; ctx.beginPath();
+      if ((q === "brows" || NORMIE) && !SICKIMG[lv]) FACES[lv].forEach(function (f) { var k = f[2]; ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = (lv === 0 ? 5 : 3) * k; ctx.beginPath();
         ctx.moveTo(f[0] - 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] - 4 * k, f[1] - 5 * k); ctx.moveTo(f[0] + 14 * k, f[1] - 9 * k); ctx.lineTo(f[0] + 4 * k, f[1] - 5 * k); ctx.stroke(); });
       if (!NORMIE && q === "slip") { ctx.strokeStyle = "#D9364E"; ctx.lineWidth = 1.6; ctx.beginPath();
         [0.3, 1.2, 2.2, 3.1, 4.0, 5.2].forEach(function (a) { var c = Math.cos(a), s = Math.sin(a); ctx.moveTo(50 + c * 44, 50 + s * 44); ctx.lineTo(50 + c * 36 + s * 3, 50 + s * 36 - c * 3); ctx.lineTo(50 + c * 28, 50 + s * 28); ctx.moveTo(50 + c * 36 + s * 3, 50 + s * 36 - c * 3); ctx.lineTo(50 + c * 33 - s * 5, 50 + s * 33 + c * 5); });
