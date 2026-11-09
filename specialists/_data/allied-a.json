@@ -1697,14 +1697,20 @@
      "medicare_cdm": null,
      "new_patients": "yes",
      "np_note": "OT \"Accepting referrals\" (capacity page reviewed 26 Oct 2026)",
-     "np_checked": "2026-11-01"
+     "np_checked": "2026-11-01",
+     "deaf_friendly": {
+      "quote": "Enquiry form offers an “Auslan / signing support worker”",
+      "url": "https://www.carealliance.com.au/services/psychology",
+      "checked": "9 November 2026"
+     }
     },
     "inclusive": [
      "Practitioner profile states neuro-affirming approach"
     ],
     "sources": [
      "https://www.carealliance.com.au/services/occupational-therapy",
-     "https://www.carealliance.com.au/capacity"
+     "https://www.carealliance.com.au/capacity",
+     "https://www.carealliance.com.au/services/psychology"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"

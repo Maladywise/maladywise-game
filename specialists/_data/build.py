@@ -55,8 +55,14 @@ def langs(p):
     out = []
     for x in l:
         x = re.sub(r"\s*\((basic|partial)\)", "", x).strip()
+        if x.lower() == "auslan": x = "Auslan"
         if x and x.lower() != "english" and x not in out: out.append(x)
     return out
+def deaf(p):  # Auslan or a stated Deaf-friendly service (practical.deaf_friendly)
+    return "Auslan" in langs(p) or bool((p.get("practical") or {}).get("deaf_friendly"))
+def interp(p):  # interpreters stated by the practice itself (practical.interpreters, or an interpreter quote in extra/practical.json)
+    d = PRACT.get(p.get("practice") or "") or PRACT.get(p["name"]) or {}
+    return bool((p.get("practical") or {}).get("interpreters")) or bool(re.search(r"interpret|translat|\bTIS\b", (d.get("interpreters") or {}).get("quote", ""), re.I))
 def badges(p):
     out = []
     if re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower()) in APPROVED: out.append(("mw", "Malady Wise approved", MW_SVG, [APPROVED_TXT]))
@@ -168,12 +174,15 @@ def flags(p):
     if pr.get("ndis") is True: f.append("ndis")
     if KIDRX.search(" ".join([str(pr.get("ages") or ""), " ".join(p["_labels"]), p.get("specialty", "")])) and not re.match(r"^\s*adults?\b", str(pr.get("ages") or ""), re.I): f.append("kids")
     if pr.get("new_patients") in ("yes", "limited"): f.append("np")
+    if deaf(p): f.append("auslan")
+    if interp(p): f.append("interp")
     return f
 def fwords(p):  # practical flags as searchable words, so typing "telehealth" or "bulk billing" finds them
-    w = {"tele": "telehealth", "bb": "bulk billing", "ndis": "ndis", "np": "new patients"}
+    w = {"tele": "telehealth", "bb": "bulk billing", "ndis": "ndis", "np": "new patients", "auslan": "auslan deaf-friendly sign language", "interp": "interpreter-friendly interpreters"}
     return " ".join(w[f] for f in flags(p) if f in w)
 def pid(p): return "p-" + re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]
-TOGGLES = [("tele", "Telehealth"), ("bb", "Bulk billing stated"), ("ndis", "NDIS"), ("kids", "Kids"), ("np", "Accepting new patients (as stated)")]
+TOGGLES = [("tele", "Telehealth"), ("bb", "Bulk billing stated"), ("ndis", "NDIS"), ("kids", "Kids"), ("np", "Accepting new patients (as stated)"), ("auslan", "Auslan / Deaf-friendly"), ("interp", "Interpreter-friendly")]
+TOG_IF_ANY = {"auslan", "interp"}  # shown only on pages where at least one listing has it
 FINDNOTE = '<p class="sp-note sp-foot" id="sp-find-note">Listings come from public professional directories and practice websites, checked on the date shown. Not endorsements: confirm details with the practice. Badges show only where a practice says so publicly; many offer this care without advertising it.</p>'
 SHORTDATE = re.sub(r"^(\d+ [A-Z][a-z]{2})[a-z]*", r"\1", CHECKED)
 def finder(ppl, hub=False, extra=""):
@@ -187,7 +196,7 @@ def finder(ppl, hub=False, extra=""):
          '<button type="button" class="sp-fbtn" aria-expanded="false" aria-controls="sp-fpanel">Filters<span class="sp-fn"></span></button></div>'
          '<div class="sp-active" aria-label="Active filters" hidden></div>'
          '<div class="sp-fpanel" id="sp-fpanel" hidden>')
-    h += '<div class="sp-chips sp-toggles" role="group" aria-labelledby="sp-gl-f"><span class="sp-gl" id="sp-gl-f">Show only</span>' + "".join(f'<button type="button" class="sp-chip sp-tog" data-flag="{k}" aria-pressed="false">{e(v)}</button>' for k, v in TOGGLES) + "</div>"
+    h += '<div class="sp-chips sp-toggles" role="group" aria-labelledby="sp-gl-f"><span class="sp-gl" id="sp-gl-f">Show only</span>' + "".join(f'<button type="button" class="sp-chip sp-tog" data-flag="{k}" aria-pressed="false">{e(v)}</button>' for k, v in TOGGLES if k not in TOG_IF_ANY or any(k in flags(p) for p in ppl)) + "</div>"
     if top:
         chip = lambda t: f'<button type="button" class="sp-chip sp-ichip" data-tag="{e(t)}" aria-pressed="false">{e(t)}</button>'
         h += '<div class="sp-chips sp-ichips" role="group" aria-labelledby="sp-gl-i"><span class="sp-gl" id="sp-gl-i">Interests</span>' + "".join(chip(t) for t in top[:8])
@@ -236,6 +245,15 @@ PUBLIC_PSY = [
  ("Hunter New England Health: Farmgate Support Program", "https://www.health.nsw.gov.au/awards/2025/Pages/farmgate-support-program.aspx", "Mental health support for farmers and farming communities, including farm visits and peer workers."),
  ("Hunter New England Health: hospital social work", "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/allied-health", "Counselling, crisis and bereavement support for patients and families in hospital. Ask your nurse or doctor for a referral."),
 ]
+# Languages, Auslan and interpreters: hub help box (official pages, checked 9 November 2026) and a one-line note on each specialty page.
+LANGBOX = ('<details class="sp-orgbox sp-langbox" id="languages"><summary>Languages, Auslan and free interpreters</summary><ul>'
+  '<li><b>Find a language:</b> open Filters and use “Speaks”, or type a language (e.g. Mandarin, Auslan) in the search box. We only list languages stated on a practice or practitioner’s own public pages, never guessed from a name.</li>'
+  '<li><b>Auslan:</b> free sign language interpreting for health and medical appointments is now through the National Sign Language Program (it replaced NABS from 1 July 2024). It is for Deaf people aged 65 and over without an NDIS plan (50 and over for Aboriginal and Torres Strait Islander people). Book with Deaf Connect: <a href="https://bookings.deafconnect.org.au/" rel="noopener">book online</a>, call 1300 773 803 or SMS 0476 857 251. '
+  '<a href="https://deafconnect.org.au/services/interpreting/free-sign-language-interpreting-for-deaf-seniors" rel="noopener">Details</a>. Under 65: interpreting is funded through your NDIS plan.</li>'
+  '<li><b>Other languages, private doctors:</b> GPs and specialists can book a free phone interpreter through TIS National’s Free Interpreting Service, using the Medical Practitioner Priority Line (often called the Doctors Priority Line) on 1300 131 450, 24 hours a day, for Medicare-rebatable appointments. Ask the practice to use it. <a href="https://www.tisnational.gov.au/Our-services/Free-Interpreting-Service/Eligible-groups/Private-medical-practitioners" rel="noopener">TIS National</a>.</li>'
+  '<li><b>Public hospitals:</b> the Hunter New England Health Care Interpreter Service is free for all patients, 24 hours a day, 7 days a week: ask staff or call (02) 4924 6285. <a href="https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/multicultural-health" rel="noopener">HNE multicultural health</a>.</li>'
+  '</ul><p class="sp-note">From official pages, checked ' + CHECKED + '. Rules change: check with the service.</p></details>')
+LANGNOTE = '<p class="sp-note sp-langnote">Need Auslan or another language? Use “Speaks” in Filters, or see <a href="/specialists/#languages">free interpreters</a>.</p>'
 def publicbox(lab):
     if lab != "Psychology": return ""
     return ('<details class="sp-orgbox" id="public-low-cost"><summary>Public and low-cost services</summary><ul>' + "".join(f'<li><a href="{e(u)}" rel="noopener"><b>{e(n)}</b></a>: {e(t)}</li>' for n, u, t in PUBLIC_PSY) +
@@ -266,7 +284,6 @@ def card(p):
     np_txt = {"yes": "Taking new patients", "limited": "Limited new patients", "no": "Not taking new patients"}.get(np_)
     if np_txt: extra.append(f'<p class="sp-np sp-np-{e(np_)}">{np_txt}' + (f' · {e(pr["np_note"])}' if pr.get("np_note") else "") + (f' <span>(as stated {e(pr.get("np_checked") or p.get("checked", ""))})</span>' if True else "") + '</p>')
     tags = []
-    if langs(p): tags.append(("lang", "🗣️ Speaks " + ", ".join(langs(p))))
     if pr.get("pets") == "therapy_dog": tags.append(("pet", "🐶 Therapy dog on staff"))
     elif pr.get("pets") == "pets_welcome": tags.append(("pet", "🐾 Pet friendly"))
     if pr.get("telehealth") is True: tags.append(("", "Telehealth (pants optional)"))
@@ -278,6 +295,9 @@ def card(p):
     if pr.get("parking") == "free": tags.append(("", "Free parking (a Newcastle miracle)"))
     if pr.get("ndis") is True: tags.append(("", "NDIS"))
     if pr.get("medicare_cdm") is True: tags.append(("", "Medicare care plans"))
+    if langs(p): extra.append(f'<p class="sp-speaks"><b>Speaks:</b> {e(", ".join(langs(p)))}</p>')
+    df = pr.get("deaf_friendly")
+    if df and "Auslan" not in langs(p): extra.append(f'<p class="sp-speaks"><b>Deaf-friendly:</b> {e(df.get("quote", "") if isinstance(df, dict) else "as stated")}</p>')
     if tags: extra.append('<p class="sp-tags">' + "".join(f'<span class="sp-t {("sp-t-" + c) if c else ""}">{e(t)}</span>' for c, t in tags) + "</p>")
     if p.get("eligibility"): extra.append(f'<p class="sp-facts"><b>Who it’s for:</b> {e(p["eligibility"])}</p>')
     if pr.get("ages"): facts.append("Ages: " + pr["ages"])
@@ -299,7 +319,7 @@ def card(p):
     if lb or ahb: extra.append('<p class="sp-lb">' + "".join(f'<a class="sp-lbb" href="{e(x.get("url", ""))}" rel="noopener" title="Checked {e(x.get("checked", ""))}">{e(x.get("label") or ("Listed by " + x.get("org", "")))}</a>' for x in lb) + ahb + "</p>")
     tg = itags(p)
     q = " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(p.get("inclusive") or []), " ".join(langs(p)), " ".join(tg), " ".join(x.get("org", "") for x in lb), fwords(p)]).lower()
-    return (f'<li class="sp-card" id="{pid(p)}" data-t="{e("|".join(tg))}" data-f="{" ".join(flags(p))}" data-l="{e("|".join(langs(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
+    return (f'<li class="sp-card" id="{pid(p)}" data-t="{e("|".join(tg))}" data-f="{" ".join(flags(p))}" data-l="{e("|".join(lkeys(p)))}" data-id="{re.sub(r"[^a-z0-9]", "", TITLE.sub("", p["name"]).lower())[:60]}" data-q="{e(q)}" data-b="{" ".join([b[0] for b in badges(p)] + [b[0] for b in pbadges(p)])}"><h3>{e(p["name"])}</h3><p class="sp-sub">{e(p.get("specialty") if p.get("specialty") and len(p["_labels"]) == 1 else " · ".join(p["_labels"]))}</p>'
             f'<p class="sp-lines">{"".join(lines)}</p>{"".join(extra)}<p class="sp-src">Checked {e(p.get("checked", ""))} · Sources {srcs}</p><p class="sp-act"><button type="button" class="sp-sug">Suggest a tag</button> · <button type="button" class="sp-pr1">Print</button> · <button type="button" class="sp-rep">Something wrong?</button></p></li>')
 CHIPS = '<div class="sp-chips sp-bchips" role="group" aria-labelledby="sp-gl-b"><span class="sp-gl" id="sp-gl-b">Badges</span>' + "".join(f'<button type="button" class="sp-chip sp-b-{c}" data-badge="{c}" aria-pressed="false">{svg}{e(lab)}</button>' for c, lab, svg in ([("mw", "Malady Wise approved", MW_SVG)] if APPROVED else []) + [(c, lab, svg) for c, lab, rx, svg in BADGES]) + '</div><details class="sp-pf"><summary>More filters: fees, e-referrals, wait, access</summary><div class="sp-chips sp-pchips" role="group" aria-label="Practical">' + "".join(f'<button type="button" class="sp-chip sp-pb sp-pb-{c}" data-badge="{c}" aria-pressed="false">{e(lab)}</button>' for c, lab in PB) + '</div></details><p class="sp-bnote">Badges show only where a practice says so publicly. Tap one on a card to see its source.</p>'
 def slugify(t): return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
@@ -320,8 +340,8 @@ def head(title, desc, url, hub=False):
     h = sub(h, r'(<meta property="og:title" content=")[^"]*', e(title))
     return h + SPCSS + '</head>\n<body>\n<main class="wrap doc sp-page">\n'
 foot = src[src.index("<footer"):]
-SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-ichip,.sp-chip.sp-tog{padding:5px 11px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600;font-size:12.5px;min-height:32px}.sp-chip.sp-ichip[aria-pressed=true]{background:#4A3480;border-color:#4A3480;color:#fff}.sp-chip.sp-tog[aria-pressed=true]{background:#1F6457;border-color:#1F6457;color:#fff}.sp-chip.sp-tog[aria-pressed=true]::before,.sp-chip.sp-ichip[aria-pressed=true]::before{content:\"\\2713\";margin-right:2px}.sp-chip:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-gl{align-self:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}.sp-toggles{margin-top:6px}.sp-note{font-size:12px;color:var(--muted);margin:4px 0 8px}.sp-card .sp-lb{margin-top:4px}.sp-lbb{display:inline-block;margin:2px 6px 0 0;padding:2px 9px;border-radius:999px;border:1px solid #A8C3EE;background:#E6EFFC;color:#17468F;font-size:12px;font-weight:600;text-decoration:none}.sp-card.sp-hit,.sp-card:target{outline:3px solid #D4A017;outline-offset:2px}.sp-card{scroll-margin-top:80px}.sp-orgbox{margin:4px 0 10px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card)}.sp-orgbox summary{cursor:pointer;font-weight:600;font-size:14px}.sp-orgbox ul,.sp-orgs ul{margin:6px 0;padding-left:18px;font-size:14px}.sp-orgs li{margin:4px 0}.sp-results b{overflow-wrap:anywhere}.sp-sum{margin:2px 0 10px;font-size:14px;color:var(--muted)}.sp-vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sp-srow{display:flex;gap:8px;align-items:stretch}.sp-srow .sp-search{flex:1;min-width:0;margin:0}.sp-fbtn{flex:none;display:inline-flex;align-items:center;gap:4px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 14px Poppins,system-ui,sans-serif;cursor:pointer;min-height:44px}.sp-fbtn[aria-expanded=true]{border-color:#4A3480;color:#4A3480}html[data-theme=dark] .sp-fbtn[aria-expanded=true]{border-color:#CDBDF5;color:#CDBDF5}.sp-fbtn::after{content:\"\\25BE\";font-size:11px}.sp-fbtn[aria-expanded=true]::after{content:\"\\25B4\"}.sp-fbtn:focus-visible,.sp-imore:focus-visible,.sp-ac:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-active{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.sp-active[hidden]{display:none}.sp-ac{display:inline-flex;align-items:center;gap:4px;padding:3px 6px 3px 10px;border-radius:999px;border:1px solid #4A3480;background:#F3EEFF;color:#4A3480;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer;min-height:28px}.sp-ac b{font-size:14px;line-height:1;padding:0 3px}html[data-theme=dark] .sp-ac{background:#2C2346;color:#CDBDF5;border-color:#CDBDF5}.sp-acx{border:0;background:none;color:var(--muted);font:600 12px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:3px 4px}.sp-fpanel{margin:8px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}.sp-fpanel[hidden]{display:none}.sp-fpanel .sp-chips{margin:0 0 8px}.sp-fpanel .sp-toggles{margin-top:0}.sp-irest{display:contents}.sp-irest[hidden]{display:none}.sp-imore{border:0;background:none;padding:5px 4px;font:600 12.5px Poppins,system-ui,sans-serif;color:var(--brand,#4A3480);text-decoration:underline;cursor:pointer}.sp-fpanel .sp-lang{display:flex;align-items:center;gap:8px;margin:0 0 8px}.sp-fpanel .sp-lang span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.sp-fpanel .sp-lang select{flex:1;min-width:0;font:500 14px Poppins,system-ui,sans-serif;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.sp-fpanel .sp-pf{margin:0 0 6px;font-size:13px}.sp-fpanel .sp-pf summary{cursor:pointer;font-weight:600}.sp-fpanel .sp-bnote{margin:0;font-size:12px!important;color:var(--muted)}.sp-tools{margin:10px 0 6px}.sp-prall{font-size:12.5px!important;text-decoration:underline}.sp-orgbox{margin:12px 0 10px!important}.sp-note.sp-foot{margin:14px 0 6px;font-size:12px!important;line-height:1.45;color:var(--muted)}.sp-page h1 + .sp-sum + .sp-find, .sp-page .sp-sum + .callout{margin-top:6px}@media print{.sp-find,.sp-orgbox{display:none!important}}</style>"
-SPJS = '<script src="/specialists/sp.js?v=9"></script>'
+SPCSS = "<style>.sp-find{margin:4px 0 6px}.sp-ichips{margin-top:2px}.sp-chip.sp-ichip,.sp-chip.sp-tog{padding:5px 11px;background:var(--card);border-color:var(--line);color:var(--ink);font-weight:600;font-size:12.5px;min-height:32px}.sp-chip.sp-ichip[aria-pressed=true]{background:#4A3480;border-color:#4A3480;color:#fff}.sp-chip.sp-tog[aria-pressed=true]{background:#1F6457;border-color:#1F6457;color:#fff}.sp-chip.sp-tog[aria-pressed=true]::before,.sp-chip.sp-ichip[aria-pressed=true]::before{content:\"\\2713\";margin-right:2px}.sp-chip:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-gl{align-self:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}.sp-toggles{margin-top:6px}.sp-note{font-size:12px;color:var(--muted);margin:4px 0 8px}.sp-card .sp-lb{margin-top:4px}.sp-lbb{display:inline-block;margin:2px 6px 0 0;padding:2px 9px;border-radius:999px;border:1px solid #A8C3EE;background:#E6EFFC;color:#17468F;font-size:12px;font-weight:600;text-decoration:none}.sp-card.sp-hit,.sp-card:target{outline:3px solid #D4A017;outline-offset:2px}.sp-card{scroll-margin-top:80px}.sp-orgbox{margin:4px 0 10px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--card)}.sp-orgbox summary{cursor:pointer;font-weight:600;font-size:14px}.sp-orgbox ul,.sp-orgs ul{margin:6px 0;padding-left:18px;font-size:14px}.sp-orgs li{margin:4px 0}.sp-results b{overflow-wrap:anywhere}.sp-sum{margin:2px 0 10px;font-size:14px;color:var(--muted)}.sp-vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sp-srow{display:flex;gap:8px;align-items:stretch}.sp-srow .sp-search{flex:1;min-width:0;margin:0}.sp-fbtn{flex:none;display:inline-flex;align-items:center;gap:4px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 14px Poppins,system-ui,sans-serif;cursor:pointer;min-height:44px}.sp-fbtn[aria-expanded=true]{border-color:#4A3480;color:#4A3480}html[data-theme=dark] .sp-fbtn[aria-expanded=true]{border-color:#CDBDF5;color:#CDBDF5}.sp-fbtn::after{content:\"\\25BE\";font-size:11px}.sp-fbtn[aria-expanded=true]::after{content:\"\\25B4\"}.sp-fbtn:focus-visible,.sp-imore:focus-visible,.sp-ac:focus-visible{outline:2px solid #4A3480;outline-offset:2px}.sp-active{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.sp-active[hidden]{display:none}.sp-ac{display:inline-flex;align-items:center;gap:4px;padding:3px 6px 3px 10px;border-radius:999px;border:1px solid #4A3480;background:#F3EEFF;color:#4A3480;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer;min-height:28px}.sp-ac b{font-size:14px;line-height:1;padding:0 3px}html[data-theme=dark] .sp-ac{background:#2C2346;color:#CDBDF5;border-color:#CDBDF5}.sp-acx{border:0;background:none;color:var(--muted);font:600 12px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:3px 4px}.sp-fpanel{margin:8px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}.sp-fpanel[hidden]{display:none}.sp-fpanel .sp-chips{margin:0 0 8px}.sp-fpanel .sp-toggles{margin-top:0}.sp-irest{display:contents}.sp-irest[hidden]{display:none}.sp-imore{border:0;background:none;padding:5px 4px;font:600 12.5px Poppins,system-ui,sans-serif;color:var(--brand,#4A3480);text-decoration:underline;cursor:pointer}.sp-fpanel .sp-lang{display:flex;align-items:center;gap:8px;margin:0 0 8px}.sp-fpanel .sp-lang span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.sp-fpanel .sp-lang select{flex:1;min-width:0;font:500 14px Poppins,system-ui,sans-serif;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.sp-speaks{margin:4px 0 0;font-size:13px;color:var(--muted)}.sp-speaks b{color:var(--ink);font-weight:600}.sp-langbox ul{padding-left:18px}.sp-langbox li{margin:6px 0;line-height:1.45}.sp-langnote{margin:6px 0 2px}.sp-fpanel .sp-pf{margin:0 0 6px;font-size:13px}.sp-fpanel .sp-pf summary{cursor:pointer;font-weight:600}.sp-fpanel .sp-bnote{margin:0;font-size:12px!important;color:var(--muted)}.sp-tools{margin:10px 0 6px}.sp-prall{font-size:12.5px!important;text-decoration:underline}.sp-orgbox{margin:12px 0 10px!important}.sp-note.sp-foot{margin:14px 0 6px;font-size:12px!important;line-height:1.45;color:var(--muted)}.sp-page h1 + .sp-sum + .sp-find, .sp-page .sp-sum + .callout{margin-top:6px}@media print{.sp-find,.sp-orgbox{display:none!important}}</style>"
+SPJS = '<script src="/specialists/sp.js?v=10"></script>'
 if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
 else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
 DISC_SVC = '<p class="callout"><b>A directory, not a recommendation.</b> Community, primary care and hospital services, from each service’s own official pages or government directories. Details and eligibility change: confirm with the service. Spot an error? <a href="/contact/">Tell us</a>.</p>'
@@ -346,10 +366,15 @@ def _title(path):
         t = re.search(r"<h1[^>]*>(.*?)</h1>", open(path.strip("/") + "/index.html").read(), re.S).group(1)
         return re.sub(r"<[^>]+>", "", t).strip()
     except Exception: return None
+def lkeys(p):  # language filter keys: languages, plus "Auslan" for any Auslan or Deaf-friendly listing
+    return langs(p) + (["Auslan"] if deaf(p) and "Auslan" not in langs(p) else [])
 def langsel(ppl):
-    L = sorted({x for p in ppl for x in langs(p)})
-    if not L: return ""
-    return '<label class="sp-lang"><span>Speaks</span><select data-sp-lang><option value="">Any language</option>' + "".join(f'<option>{e(x)}</option>' for x in L) + "</select></label>"
+    from collections import Counter
+    c = Counter(x for p in ppl for x in lkeys(p))
+    if not c: return ""
+    L = sorted(c, key=lambda x: (x != "Auslan", -c[x], x))  # most listings first, Auslan pinned at the top
+    lab = lambda x: ("Auslan / Deaf-friendly" if x == "Auslan" else x) + f" ({c[x]})"
+    return '<label class="sp-lang"><span>Speaks</span><select data-sp-lang aria-label="Speaks a language"><option value="">Any language</option>' + "".join(f'<option value="{e(x)}">{e(lab(x))}</option>' for x in L) + "</select></label>"
 def keep_going(slug):
     items = []
     for s2 in REL_SPEC.get(slug, []):
@@ -371,7 +396,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: private practice contacts, addresses, stated interests and inclusive-practice notes. A directory, not a recommendation."
     if lab in SERVICE_LABELS: desc = f"{lab} services in Newcastle and the Hunter, NSW: Aboriginal Community Controlled Health Organisations, Aboriginal Health Workers, care coordination and hospital liaison, from official pages."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
-            finder(ppl, extra=langsel(ppl)) + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
+            finder(ppl, extra=langsel(ppl)) + LANGNOTE + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC_SVC if lab in SERVICE_LABELS else DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
@@ -381,13 +406,13 @@ SHORT = {"Nerve conduction studies, EMG and EEG": "Nerve tests (NCS, EMG, EEG)",
 def tiles(keys):
     keys = sorted(keys, key=lambda k: SHORT.get(k, k).lower())
     return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/" title="{e(k)}"><b>{e(SHORT.get(k, k))}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
-allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/#" + pid(p), "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(itags(p)), " ".join(x.get("org", "") for x in p.get("listed_by") or []), fwords(p)]).lower(), "sub": p.get("suburb", ""), "t": itags(p), "f": flags(p), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
+allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/#" + pid(p), "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(itags(p)), " ".join(x.get("org", "") for x in p.get("listed_by") or []), " ".join(langs(p)), fwords(p)]).lower(), "sub": p.get("suburb", ""), "t": itags(p), "f": flags(p), "l": lkeys(p), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
 json.dump({"checked": CHECKED, "items": allc}, open("specialists/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
 title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
 desc = "Directory of private specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, stated interests and inclusive-practice notes from public sources."
 page = (head(title, desc, "/specialists/", hub=True) + '<h1>Specialists and allied health</h1>'
         f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'
-        + finder(L, hub=True) + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
+        + finder(L, hub=True, extra=langsel(L)) + LANGBOX + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
         '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and k not in TEST_LABELS and k not in SERVICE_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + ('<h2 id="tests-and-imaging">Tests and imaging</h2>' + tiles([k for k in labs if k in TEST_LABELS]) if any(k in TEST_LABELS for k in labs) else '') + ('<h2 id="community-services">Community health services</h2>' + tiles([k for k in labs if k in SERVICE_LABELS]) if any(k in SERVICE_LABELS for k in labs) else '') + orgsection() + DISC + FINDNOTE +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(fix_html(page))

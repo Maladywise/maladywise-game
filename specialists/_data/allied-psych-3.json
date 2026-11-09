@@ -2075,7 +2075,12 @@
      "medicare_cdm": null,
      "new_patients": "yes",
      "np_note": "“No waitlist on Telehealth mental health supports”",
-     "np_checked": "9 November 2026"
+     "np_checked": "9 November 2026",
+     "deaf_friendly": {
+      "quote": "“Our psychologists are trained in deaf awareness”",
+      "url": "https://www.nourishednotdeprived.com/telehealth/psychologist",
+      "checked": "9 November 2026"
+     }
     },
     "inclusive": [
      "\"Neurodivergent-affirming psychology\"",
@@ -2485,17 +2490,21 @@
      "wait": "",
      "ages": "Children, adolescents and adults",
      "hospitals": [],
-     "languages": [],
+     "languages": [
+      "Spanish"
+     ],
      "after_hours": null,
      "ndis": true,
      "medicare_cdm": null,
      "new_patients": "yes",
      "np_note": "“Secure, convenient, no waitlists”",
-     "np_checked": "9 November 2026"
+     "np_checked": "9 November 2026",
+     "lang_checked": "9 November 2026"
     },
     "inclusive": [],
     "sources": [
-     "https://therapynearme.com.au/telehealth-psychologist/"
+     "https://therapynearme.com.au/telehealth-psychologist/",
+     "https://therapynearme.com.au/"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"

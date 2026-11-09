@@ -307,19 +307,22 @@
      "hospitals": [],
      "languages": [
       "French",
-      "Sinhala"
+      "Sinhala",
+      "Spanish"
      ],
      "after_hours": null,
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": "yes",
      "np_note": "“now welcoming new clients”",
-     "np_checked": "9 November 2026"
+     "np_checked": "9 November 2026",
+     "lang_checked": "9 November 2026"
     },
     "inclusive": [],
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/hunter-psychological-services/psychology/5757af16-40fb-4759-ab5b-0e1e7ad10193",
-     "https://hunterpsych.com.au/services/"
+     "https://hunterpsych.com.au/services/",
+     "https://hunterpsych.com.au/team/"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -348,20 +351,24 @@
      "wait": "",
      "ages": "",
      "hospitals": [],
-     "languages": [],
+     "languages": [
+      "Dutch"
+     ],
      "after_hours": null,
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
      "np_note": "",
-     "np_checked": ""
+     "np_checked": "",
+     "lang_checked": "9 November 2026"
     },
     "inclusive": [
      "Dedicated “LGBTQ Help at NPH” service"
     ],
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/newcastle-psychology-health/psychology/bb13f2ab-620b-416c-a748-dcfd9652cf90",
-     "https://www.nph.net.au/"
+     "https://www.nph.net.au/",
+     "https://www.nph.net.au/nph/staff/"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -1285,7 +1292,12 @@
      "medicare_cdm": true,
      "new_patients": null,
      "np_note": "",
-     "np_checked": ""
+     "np_checked": "",
+     "deaf_friendly": {
+      "quote": "Enquiry form offers an “Auslan / signing support worker”",
+      "url": "https://www.carealliance.com.au/services/psychology",
+      "checked": "9 November 2026"
+     }
     },
     "inclusive": [
      "“neuro-affirming and trauma-informed psychological support”"

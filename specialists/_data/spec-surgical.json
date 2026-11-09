@@ -3720,16 +3720,21 @@
      "hospitals": [
       "Lake Macquarie Private Hospital"
      ],
-     "languages": [],
+     "languages": [
+      "Mandarin",
+      "Cantonese"
+     ],
      "after_hours": null,
      "new_patients": "yes",
      "np_note": "Taking new referrals (private and public patients)",
-     "np_checked": "2026-11-01"
+     "np_checked": "2026-11-01",
+     "lang_checked": "9 November 2026"
     },
     "inclusive": [],
     "sources": [
      "https://newcastlecolorectalsurgery.com.au/",
-     "https://www.lakemacquarieprivate.com/Our-Doctors/Specialists/lake-macquarie-private-hospital/colorectal-surgery/108653/dr-michelle-chen"
+     "https://www.lakemacquarieprivate.com/Our-Doctors/Specialists/lake-macquarie-private-hospital/colorectal-surgery/108653/dr-michelle-chen",
+     "https://newcastlecolorectalsurgery.com.au/staff"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3821,15 +3826,20 @@
      "wait": "",
      "ages": "",
      "hospitals": [],
-     "languages": [],
+     "languages": [
+      "Spanish",
+      "Italian"
+     ],
      "after_hours": null,
      "new_patients": "limited",
      "np_note": "Taking new referrals for private patients only",
-     "np_checked": "2026-11-01"
+     "np_checked": "2026-11-01",
+     "lang_checked": "9 November 2026"
     },
     "inclusive": [],
     "sources": [
-     "https://newcastlecolorectalsurgery.com.au/"
+     "https://newcastlecolorectalsurgery.com.au/",
+     "https://newcastlecolorectalsurgery.com.au/staff"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"

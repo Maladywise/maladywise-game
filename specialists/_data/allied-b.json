@@ -2313,7 +2313,12 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "",
+     "deaf_friendly": {
+      "quote": "Profile lists \u201cDeaf Allied\u201d under communities",
+      "url": "https://www.psychologytoday.com/au/counselling/olaga-therapeutic-support-counselling-maitland-nsw/1420539",
+      "checked": "9 November 2026"
+     }
     },
     "inclusive": [
      "Welcomes multicultural, marginalised and minority communities (stated)",

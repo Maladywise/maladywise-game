@@ -2,7 +2,7 @@
 (function () {
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
   var PHR = [[/post[- ]?traumatic( stress)?( disorder)?/g, "trauma"], [/post[- ]?natal|post[- ]?partum|ante[- ]?natal|pre[- ]?natal|pregnan\w*/g, "perinatal"], [/eating disorders?/g, "eating disorders"], [/lgbt\w*\+?|queer|gay|lesbian/g, "lgbtiqa"], [/transgender|gender[- ]diverse/g, "trans"], [/chronic fatigue( syndrome)?/g, "me/cfs"]];
-  var SYN = { ptsd: "trauma", asd: "autism", autistic: "autism", add: "adhd", anorexia: "eating", bulimia: "eating", binge: "eating", arfid: "eating", kids: "child", children: "child", kid: "child", teen: "adolescent", teens: "adolescent", teenager: "adolescent", teenagers: "adolescent", youth: "adolescent", indigenous: "first nations", aboriginal: "first nations", dysautonomia: "pots", cfs: "me/cfs", mito: "mitochondrial", lymphedema: "lymphoedema", pediatric: "paediatric", hypermobile: "hypermobility", eds: "hypermobility", obsessive: "ocd", depressed: "depression", anxious: "anxiety", couple: "couples", marriage: "couples", relationship: "couples" };
+  var SYN = { ptsd: "trauma", asd: "autism", autistic: "autism", add: "adhd", anorexia: "eating", bulimia: "eating", binge: "eating", arfid: "eating", kids: "child", children: "child", kid: "child", teen: "adolescent", teens: "adolescent", teenager: "adolescent", teenagers: "adolescent", youth: "adolescent", indigenous: "first nations", aboriginal: "first nations", dysautonomia: "pots", cfs: "me/cfs", mito: "mitochondrial", lymphedema: "lymphoedema", pediatric: "paediatric", hypermobile: "hypermobility", eds: "hypermobility", obsessive: "ocd", depressed: "depression", anxious: "anxiety", couple: "couples", marriage: "couples", relationship: "couples", deaf: "auslan", signing: "auslan", interpreter: "interpreters", interpreting: "interpreters" };
   function terms(raw) {
     var q = norm(raw).trim(); if (!q) return [];
     PHR.forEach(function (r) { q = q.replace(r[0], function (m) { return " \u0001" + r[1].replace(/ /g, "\u0002") + " "; }); });
@@ -23,10 +23,10 @@
   }
   var s = document.querySelector("[data-sp-search]"), out = document.querySelector(".sp-results");
   function runIndex() {
-    var ts = terms(s.value), bs = pressed(".sp-chip[data-badge]", "data-badge"), tg = pressed(".sp-ichip", "data-tag"), fl = pressed(".sp-tog", "data-flag");
-    var on = norm(s.value).trim().length >= 2 || bs.length || tg.length || fl.length;
+    var ts = terms(s.value), bs = pressed(".sp-chip[data-badge]", "data-badge"), tg = pressed(".sp-ichip", "data-tag"), fl = pressed(".sp-tog", "data-flag"), ls = document.querySelector("[data-sp-lang]"), lg = ls ? ls.value : "";
+    var on = norm(s.value).trim().length >= 2 || bs.length || tg.length || fl.length || lg;
     if (!on) { out.hidden = true; out.innerHTML = ""; if (cnt) cnt.textContent = ""; return; }
-    var all = SP_ALL.filter(function (x) { return hit(norm(x.q), ts) && has(x.b || [], bs) && has(x.t || [], tg) && has(x.f || [], fl); }), hits = all.slice(0, 80);
+    var all = SP_ALL.filter(function (x) { return hit(norm(x.q), ts) && has(x.b || [], bs) && has(x.t || [], tg) && has(x.f || [], fl) && (!lg || (x.l || []).indexOf(lg) >= 0); }), hits = all.slice(0, 80);
     if (cnt) cnt.textContent = all.length + (all.length === 1 ? " match" : " matches") + (all.length > 80 ? " (showing 80)" : "");
     out.hidden = false; out.innerHTML = "";
     if (!hits.length) { var li0 = document.createElement("li"); li0.className = "none"; li0.textContent = "No matches. Try fewer filters or another word."; out.appendChild(li0); return; }
@@ -56,7 +56,7 @@
     var n = on.length;
     if (ls && ls.value) {
       n++; var lb = document.createElement("button"), lx = document.createElement("b");
-      lb.type = "button"; lb.className = "sp-ac"; lb.setAttribute("aria-label", "Remove filter: speaks " + ls.value); lb.textContent = "Speaks " + ls.value; lx.setAttribute("aria-hidden", "true"); lx.textContent = "\u00d7"; lb.appendChild(lx);
+      lb.type = "button"; lb.className = "sp-ac"; lb.setAttribute("aria-label", "Remove filter: speaks " + ls.value); lb.textContent = ls.value === "Auslan" ? "Auslan / Deaf-friendly" : "Speaks " + ls.value; lx.setAttribute("aria-hidden", "true"); lx.textContent = "\u00d7"; lb.appendChild(lx);
       lb.addEventListener("click", function () { ls.value = ""; run(); (act.querySelector(".sp-ac") || fb).focus(); });
       act.appendChild(lb);
     }
@@ -67,7 +67,7 @@
   }
   function run() { run0(); syncActive(); }
   (f || s).addEventListener("input", run);
-  var lsel = document.querySelector("[data-sp-lang]"); if (lsel && f) lsel.addEventListener("change", run);
+  var lsel = document.querySelector("[data-sp-lang]"); if (lsel) lsel.addEventListener("change", run);
   wire(".sp-chip[data-badge]", run); wire(".sp-ichip", run); wire(".sp-tog", run);
   try { var pq = new URLSearchParams(location.search).get("q"); if (pq) { (f || s).value = pq; run(); } } catch (e) {}
   if (f && location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t && t.classList.contains("sp-card")) { t.classList.add("sp-hit"); setTimeout(function () { t.scrollIntoView({ block: "start" }); }, 60); } }
