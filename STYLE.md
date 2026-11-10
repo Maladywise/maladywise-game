@@ -103,6 +103,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## X posts: automated daily queue (from Nov 2026)
 - One X post (or thread) per day, published at **7:30am Sydney** via Typefully. Don't plan any other daily slot.
+- **Never two posts in one slot.** Before adding a post anywhere (queue or straight into Typefully with the MCP tools), list Typefully's scheduled drafts and `_social/queue.json` and use a free date. A post made by hand in Typefully must also get a queue entry with its `typefully_id`, so automation sees the day as taken. The push script moves a queue entry off a taken date to the next free 7:30am slot (`"pin": true` makes it wait instead).
 - Never post specialist or allied health directory pages (/specialists/) to X, and never name individual practitioners in posts. Games, fact sheets, deep dives and tools are fine. The push script refuses any post linking /specialists/.
 - The Friday Weekly Dose task writes the next 7 days' posts (Sat–Fri; the first automated date is 16 Nov 2026 — earlier dates were scheduled by hand) into `_social/queue.json` as entries `{"date": "YYYY-MM-DD", "note": "...", "thread": ["post", ...]}` — one entry per date, skipping dates that already have an entry. Each post ≤ 280 characters (a link counts as 23). This overrides any older "only add/change" limits in that task: it may edit `_social/queue.json`.
 - Never edit or delete entries that already have a `typefully_id` (already sent). Never put API keys in the repo or tasks; the GitHub Action uses the TYPEFULLY_API_KEY secret.

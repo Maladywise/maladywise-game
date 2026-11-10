@@ -23,6 +23,9 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["pos
   and uploaded as post 1's media instead of an image. MP4s are never committed. If the render or upload
   fails, the entry is held back (exit status 1) and retried on the next run; within 36 hours of its slot
   it goes out with the game's picture instead, so the day is never left empty.
+- ONE POST PER SLOT: before sending, the script lists Typefully's scheduled drafts. A queue entry whose date
+  already has a post moves to the next free 7:30am slot (entries with "pin": true wait instead), and auto
+  World Day posts skip taken days. If Typefully can't be checked, nothing is sent that run.
 - Needs env TYPEFULLY_API_KEY (a GitHub Actions secret; never stored in the repo).
 
     python3 _scripts/typefully_push.py --dry-run [--days 14] [--today YYYY-MM-DD] [--out DIR]
@@ -443,7 +446,8 @@ def main():
     if not KEY and not dry:
         raise SystemExit("TYPEFULLY_API_KEY is not set.")
     sid = None if dry else social_set_id()
-    busy = set() if dry or not autos else scheduled_dates(sid)
+    # ONE POST PER SLOT: dates that already have a scheduled Typefully draft (hand-made or earlier runs).
+    busy = set() if dry else scheduled_dates(sid)
     out_dir = a.out or tempfile.mkdtemp(prefix="mw-cards-")
     os.makedirs(out_dir, exist_ok=True)
 
@@ -513,6 +517,23 @@ def main():
                 print("Skip (slot already passed):", p["date"]); continue
             if p.get("auto") and (busy is None or p["date"] in busy):
                 print("Skip auto post (Typefully already has a post that day):", p["date"]); continue
+            if busy is None and not dry:
+                print("Hold (couldn't check Typefully for clashes; retry next run):", p["date"]); continue
+            if busy and p["date"] in busy:
+                # never two posts in one slot: a "pin": true entry waits for its own day (retried next run, dropped
+                # once its slot passes); anything else moves to the next free 7:30am slot within the window
+                if p.get("pin"):
+                    print("Hold pinned post (slot taken in Typefully):", p["date"]); continue
+                nd, moved = d, False
+                while nd <= last:
+                    nd += datetime.timedelta(days=1)
+                    iso = nd.isoformat()
+                    if iso not in busy and iso not in {x["date"] for x in posts if x is not p}:
+                        print("Moved %s -> %s (slot taken in Typefully)" % (p["date"], iso))
+                        p["moved_from"] = p["date"]; p["date"] = iso; d = nd; when = slot(d); moved = True
+                        break
+                if not moved:
+                    print("Hold (no free slot in the next %d days):" % a.days, p["date"]); continue
             xs, url = to_x_thread(p["thread"])
             post0 = {"text": xs[0]}
             body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in xs[1:]]}},
@@ -546,7 +567,10 @@ def main():
                         held.append(p["date"])
                         continue
                     print("%s upload failed for %s (%s); posting without it." % ("Video" if (png or "").endswith(VIDEO_EXT) else "Image", p["date"], e))
+            body["publish_at"] = when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
+            if busy is not None:
+                busy.add(p["date"])
             p["typefully_id"] = str(res.get("id", "ok"))
             p["queued_at"] = datetime.datetime.now(SYD).isoformat(timespec="minutes")
             if p.pop("auto", None):

@@ -2,6 +2,15 @@
  "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
  "posts": [
   {
+   "date": "2026-11-13",
+   "note": "Fri 13th peptides (made in Typefully by hand)",
+   "thread": [
+    "Friday the 13th. Fear of it is called paraskevidekatriaphobia, which is longer than most people's bad luck.\n\nGenuinely unlucky: injecting a \"research use only\" peptide you bought online.\n\nBPC-157, TB-500, CJC-1295: what they claim, what the evidence shows, and why the TGA is worried 👇\nmaladywise.com/peptides/"
+   ],
+   "typefully_id": "11826915",
+   "queued_at": "2026-11-10T20:20+11:00"
+  },
+  {
    "date": "2026-11-14",
    "note": "World Diabetes Day (approved by owner)",
    "thread": [
@@ -78,6 +87,15 @@
    "thread": [
     "New bonus game: Stackulus 🫀\n\nOrgans fall, you stack them. Clear rows, chain combos, and beat today's daily challenge on the world leaderboard.\n\nPlay it in Normie mode and the organs become sea creatures. 🐙\n\nhttps://maladywise.com/stackulus/"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "note": "Sun Basil + Clover Vet now open (made in Typefully by hand; moved from 16 Nov clash)",
+   "thread": [
+    "Basil + Clover have a vet appointment. They are not going quietly.\n\nStage 2, now open to everyone: wriggle out of towels, jump the thermometer, beat Dr Pokesworth. Nurse Burrito brings more towels for the finale. 🐾\n\nhttps://maladywise.com/basil-clover/"
+   ],
+   "typefully_id": "11694280",
+   "queued_at": "2026-11-10T20:38+11:00"
   },
   {
    "date": "2026-11-23",
