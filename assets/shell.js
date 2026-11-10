@@ -340,7 +340,7 @@
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
   function mascotHelp(g) {
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
-    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<p><b>Hi, I\u2019m ' + m.name + ',</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p></div>';
+    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<div><p><b>Hi, I\u2019m ' + m.name + ',</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p>' + (m.vibe && !(NORMIE && g.nmode && g.normieMascot) ? '<p class="mw-masc-vibe">' + m.vibe + '</p>' : '') + '</div></div>';
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";

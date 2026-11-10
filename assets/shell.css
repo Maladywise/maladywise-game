@@ -491,6 +491,7 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mw-masc-help{display:flex;align-items:center;gap:12px;margin:0 0 10px}
 .mw-masc-help img{flex:none;width:72px;height:72px;animation:mascBob 2.4s ease-in-out infinite}
 .mw-masc-help p{margin:0;font-size:14.5px;line-height:1.4}
+.mw-masc-help .mw-masc-vibe{margin-top:4px;font-size:13px;font-style:italic;color:var(--muted)}
 .cb-masc{position:absolute;right:max(14px,4vw);bottom:max(70px,10vh);display:flex;flex-direction:column;align-items:center;gap:2px;animation:mascIn .5s cubic-bezier(.3,1.6,.5,1) .35s both}
 .cb-masc img{width:96px;height:96px;animation:mascHop .7s ease-in-out .9s 3}
 .cb-bub{background:#fff;color:#2B2340;font:700 13.5px Poppins,system-ui,sans-serif;padding:7px 11px;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.15);max-width:170px;text-align:center;position:relative;margin-bottom:4px}
