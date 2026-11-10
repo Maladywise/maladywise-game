@@ -57,7 +57,7 @@ INFOOT_RE = re.compile(r'(<footer class="site">)\n?' + re.escape(START) + r".*?"
 LABELS = {
     "/": "Today's puzzles", "/medical-games/": "All medical games", "/unspecialist/": "GP School",
     "/rare-conditions/": "Zebra Atlas", "/mbs-billing/": "GP MBS billing guide", "/normie/": "Normie mode",
-    "/weird/": "Weird and wonderful", "/days/": "World Health Days", "/zebra-mail/": "Zebra Mail",
+    "/weird/": "Weird and wonderful", "/days/": "Health Calendar", "/zebra-mail/": "Zebra Mail",
     "/arcade/": "Arcade games", "/mental-health-check/": "Mental health check", "/basil-clover/": "Basil + Clover",
     "/grandrounds/": "Grand Rounds", "/dx/": "Dxtective", "/about/": "About", "/contact/": "Contact",
     "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",

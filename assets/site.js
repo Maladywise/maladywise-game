@@ -19,7 +19,7 @@ window.MW_HOME = {
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
-      { t: "World Health Days", href: "/days/", d: "Today and coming up" },
+      { t: "Health Calendar", href: "/days/", d: "Today and coming up" },
       { t: "Research", href: "/research/", d: "New studies and trials to watch" }
     ] }
   ],
