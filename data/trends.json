@@ -140,6 +140,32 @@
    "date": "2026-11-10",
    "source": "World Pneumonia Day 12 Nov; no site page yet",
    "niche": true
+  },
+  {
+   "term": "yellow fever (WHO DON624, West and Central Africa)",
+   "region": "Global",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-10",
+   "source": "WHO DON624, 6 Nov 2026: 67 confirmed cases, 18 deaths in 9 countries to 12 Oct",
+   "niche": true
+  },
+  {
+   "term": "Northern Taurid meteor shower peak (11-12 Nov)",
+   "region": "Global",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-10",
+   "source": "EarthSky Taurid guide (N. Taurids peak 12 Nov 2026 18 UTC)",
+   "niche": false,
+   "general": true
+  },
+  {
+   "term": "ATP Finals, Turin (15-22 Nov 2026)",
+   "region": "Global",
+   "volume": "n/a (Google Trends not reachable)",
+   "date": "2026-11-10",
+   "source": "2026 ATP Finals (Wikipedia)",
+   "niche": false,
+   "general": true
   }
  ],
  "used": [
@@ -198,6 +224,34 @@
     "gridectomy normie"
    ],
    "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches."
+  },
+  {
+   "date": "2026-11-11",
+   "main_theme": "Remembrance Day: war and medicine (kept from monthly build; gentle)",
+   "source": "world day",
+   "terms_used": [
+    "yellow fever (WHO DON624) + Walter Reed 1900",
+    "bacterial pneumonia in 1918 flu (World Pneumonia Day 12 Nov)",
+    "Aedes-borne infections: dengue, chikungunya, Zika",
+    "Marburg",
+    "diphtheria (AU 2026 outbreak) via 6-in-1 vaccine prompt",
+    "Ebola (already in Comorbix)",
+    "Northern Taurids meteor shower (Normie)",
+    "ATP Finals Turin (Normie)"
+   ],
+   "niche_terms": [
+    "yellow fever",
+    "Marburg",
+    "Haemophilus influenzae type b"
+   ],
+   "games": [
+    "triviosis",
+    "comorbix",
+    "zebritis",
+    "comorbix normie",
+    "gridectomy normie"
+   ],
+   "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches. Replaced Triviosis Q2 (Guinea Pig Club) and Q5 (Paré), Comorbix group 'Bacteria named after people' and ZIKA->MARBURG, Zebritis brachial plexus prompt, Normie Comorbix 'Rivers'."
   }
  ],
  "suggested_days": [

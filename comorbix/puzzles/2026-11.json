@@ -495,13 +495,13 @@
     ]
    },
    {
-    "label": "Bacteria named after people",
+    "label": "Spread by Aedes mosquitoes",
     "level": 3,
     "words": [
-     "SALMONELLA",
-     "LISTERIA",
-     "SHIGELLA",
-     "BRUCELLA"
+     "DENGUE",
+     "CHIKUNGUNYA",
+     "YELLOW FEVER",
+     "ZIKA"
     ]
    },
    {
@@ -510,7 +510,7 @@
     "words": [
      "LYME",
      "EBOLA",
-     "ZIKA",
+     "MARBURG",
      "NOROVIRUS"
     ]
    }
