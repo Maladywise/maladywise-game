@@ -1497,6 +1497,13 @@
 "label": "Condition",
 "title": "PMS and PMDD"
 },
+"pneumonia": {
+"url": "/pneumonia/",
+"key": "c95366d9cd27",
+"v": "13fa1035",
+"label": "Condition",
+"title": "Pneumonia"
+},
 "polymyalgia": {
 "url": "/polymyalgia/",
 "key": "240a4b00c7bb",
@@ -1763,6 +1770,13 @@
 "label": "Specialists",
 "title": "Cardiology"
 },
+"specialists-cardiothoracic-surgery": {
+"url": "/specialists/cardiothoracic-surgery/",
+"key": "c108218ac1ea",
+"v": "236a6bd8",
+"label": "Specialists",
+"title": "Cardiothoracic surgery"
+},
 "specialists-child-and-adolescent-psychiatry": {
 "url": "/specialists/child-and-adolescent-psychiatry/",
 "key": "b90d16a3e3e2",
@@ -2000,6 +2014,13 @@
 "v": "f44c68e5",
 "label": "Specialists",
 "title": "Orthopaedics: spine"
+},
+"specialists-paediatric-surgery": {
+"url": "/specialists/paediatric-surgery/",
+"key": "678f6b450a24",
+"v": "1668053b",
+"label": "Specialists",
+"title": "Paediatric surgery"
 },
 "specialists-paediatrics": {
 "url": "/specialists/paediatrics/",
