@@ -433,3 +433,10 @@ if os.environ.get("SP_SCORES"):
         if p.get("phone") and p.get("website"): sc += 1; why.append("phone and website +1")
         out.append({"n": p["name"], "s": " · ".join(p["_labels"]), "sub": p.get("suburb", ""), "sc": sc, "why": why})
     json.dump(out, open(os.environ["SP_SCORES"], "w"), ensure_ascii=False)
+
+# keep share cards and og:image tags right after every rebuild (pages are built from the deep dives head)
+try:
+    import subprocess, sys as _s
+    subprocess.run([_s.executable, "_scripts/og_cards.py", "--meta"], check=False)
+except Exception as _e:
+    print("og_cards --meta skipped:", _e)

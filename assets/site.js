@@ -8,7 +8,7 @@ window.MW_HOME = {
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
-      { t: "Specialists", href: "/specialists/", d: "Hunter referral list", au: true }
+      { t: "Specialists", href: "/specialists/", d: "Newcastle + Hunter Region", au: true }
     ] },
     { t: "For doctors", medical: true, items: [
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },

@@ -77,13 +77,13 @@ SPECIAL = {
     "/compare/": ("Compare", "Medicines and symptoms, side by side", "", "mascots/sensitosis.svg"),
     "/deep-dives/": ("Deep dives for clinicians", "Evidence-dense topic reviews", "", "days/zebra-rare.svg"),
     "/exercises/": ("Exercise handouts", "Printable rehab plans", "", "days/tess-bone.svg"),
-    "/specialists/": ("Specialists", "Specialists and allied health", "Newcastle and the Hunter", "days/cadi-rod.svg"),
+    "/specialists/": ("Specialists", "Specialists and allied health", "Newcastle + Hunter Region", "days/cadi-rod.svg"),
     "/mental-health-check/": ("Tool", "Mental health check", "Free, private self-checks", "days/heart-calm.svg"),
     "/words/": ("Medical word of the week", "Word of the week", "Where medical words come from", "mascots/morphemia.svg"),
     "/sponsorship/": ("Policy", "Sponsorship and advertising", "Sponsors never touch medical content or puzzle answers", "days/stethoscope.svg"),
     "/mergeon/": ("Arcade game", "Mergeon", "Drop, match and merge from microbe to brain", "days/brain.svg"),
 }
-SUBTITLE = {"specialists": "Newcastle and the Hunter"}
+SUBTITLE = {"specialists": "Newcastle + Hunter Region"}
 
 
 def slug(u):
