@@ -194,7 +194,7 @@ window.MW_GAMES = [
   { id: "zebritis", normieMascot: true, kind: "Rarest answer wins", name: "Zebritis", path: "zebritis/", live: true, special: { dow: 3, from: "2026-10-28", short: "\ud83e\udd84 Super Wed", label: "\ud83e\udd84 Super Zebritis \u00b7 5 prompts" }, store: { stats: "zbr-stats", day: "zbr-day-", labels: ["25+", "18-24", "10-17", "1-9", "0"], distTitle: " (scores)" },
     normie: { kind: "Rarest answer wins", tagline: "Name an answer. The rarer, the better.", quip: "Say \u2018Paris\u2019 if you must. It scores like a horse.", help: [
       "Three everyday prompts a day, like \u2018Name a country in Africa\u2019. Wednesdays are Super Zebritis: five prompts.",
-      "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93). Each prompt has one unicorn (\ud83e\udd84): the single rarest answer, worth 20.",
+      "Type any correct answer. Every answer scores 1 to 20 by how rare it is: horses (\ud83d\udc34) 1\u20134, ponies (\ud83d\udc0e) 5\u20138, donkeys (\ud83e\udecf) 9\u201313, zebras (\ud83e\udd93) 14\u201317 and unicorns (\ud83e\udd84) 18\u201320. The single rarest answer always scores 20.",
       "Three tries per prompt. Answers not on our list don\u2019t count against you, they just use a try.",
       "Spelling is forgiven within reason. New prompts every day at midnight, Sydney time."
     ] },
@@ -203,7 +203,7 @@ window.MW_GAMES = [
     helpQuip: "Lung cancer causes clubbing. So does thyroid acropachy. Guess which scores more.",
     help: [
       "Three prompts a day, like \u2018Name a cause of finger clubbing\u2019. Wednesdays are Super Zebritis: five prompts.",
-      "Type any correct answer. Common answers score 1 (\ud83d\udc34), then 3 (\ud83d\udc0e), 6 (\ud83e\udecf) and 10 for a true zebra (\ud83e\udd93). Each prompt has one unicorn (\ud83e\udd84): the single rarest answer, worth 20.",
+      "Type any correct answer. Every answer scores 1 to 20 by how rare it is: horses (\ud83d\udc34) 1\u20134, ponies (\ud83d\udc0e) 5\u20138, donkeys (\ud83e\udecf) 9\u201313, zebras (\ud83e\udd93) 14\u201317 and unicorns (\ud83e\udd84) 18\u201320. The single rarest answer always scores 20.",
       "Three tries per prompt. Answers not on our list don\u2019t count against you, they just use a try.",
       "Spelling is forgiven within reason. New prompts every day at midnight, Sydney time."
     ],

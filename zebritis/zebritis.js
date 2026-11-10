@@ -1,11 +1,14 @@
 /* Zebritis: name a correct answer; the rarer it is, the more it scores. Three prompts a day (Sydney time).
    Puzzles in puzzles/YYYY-MM.json: [{date, number, difficulty, prompts:[{q, a:[[name, tier, [synonyms]]...]}]}]
-   Tiers: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt).
+   Tiers in the data: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt).
+   Scoring is scaled 1-20 by rarity within each prompt (scaleP): the data unicorn scores 20; every other answer scores 1-19
+   by its rarity rank (ties share the middle rank). Bands: horse 1-4, pony 5-8, donkey 9-13, zebra 14-17, unicorn 18-20.
+   Later: swap the rank source for real player answer shares once there are enough players.
    Ranked statistics prompts (optional): answer = [name, tier, [synonyms], "Wiki_Title" or null, rank, "value"?] and prompt "src" (short source line).
    Ties share a rank number. Never reorder a: saved picks are indices into it. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14", TRIES = 3, WIN = 10;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15", TRIES = 3, WIN = 24;
   var root = document.getElementById("zbr");
   // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
@@ -19,11 +22,27 @@
     10: { e: "\ud83e\udd93", n: "Zebra", m: ["Zebra! Hoofbeats, but stripes.", "Zebra! Someone read the footnotes.", "Zebra! Frame it. Then go outside.", "Zebra! That\u2019s a case report.", "Zebra! The registrar is googling it.", "Zebra! Absolute stripes."] },
     20: { e: "\ud83e\udd84", n: "Unicorn", m: ["UNICORN! The single rarest answer. Mythical.", "Unicorn! Nobody else will get that. Probably.", "Unicorn! That\u2019s not a diagnosis, that\u2019s a legend.", "Unicorn! Write it up. Submit it. Retire.", "Unicorn! The textbook authors are taking notes."] }
   };
+  var BANDK = function (v) { return v >= 18 ? 20 : v >= 14 ? 10 : v >= 9 ? 6 : v >= 5 ? 3 : 1; };
+  (function () { for (var v = 1; v <= 20; v++) if (!TIER[v] || [1, 3, 6, 10, 20].indexOf(v) < 0) TIER[v] = TIER[BANDK(v)]; })();
+  function scaleP(Q) { // data tiers -> scaled points (1-20), once per prompt
+    if (!Q) return;
+    (Q.prompts || []).concat(Q.spare ? [Q.spare] : []).forEach(function (x) {
+      if (!x || x._scaled) return; x._scaled = 1;
+      var t = x.a.map(function (a) { return a[1]; }), nu = t.filter(function (v) { return v < 20; }).length;
+      var pts = t.map(function (v) {
+        if (v >= 20) return 20;
+        var lower = 0, eq = 0; t.forEach(function (w) { if (w < 20) { if (w < v) lower++; else if (w === v) eq++; } });
+        var pr = nu > 1 ? (lower + (eq - 1) / 2) / (nu - 1) : 0;
+        return Math.max(1, Math.min(19, Math.round(1 + 18 * pr)));
+      });
+      x.a.forEach(function (a, i) { a[1] = pts[i]; });
+    });
+  }
   var MISS = ["Not on our list. Try another.", "Hmm, not one we\u2019ve got. Another?", "Not on the list. Could be right, could be a guess. Try again.", "Nope. Think wider.", "Not on our list. Might be true, but not today.", "No match. Try a different angle.", "Not one of ours. Next.", "Not on the list. Think about mechanisms.", "No luck. Try another system.", "Not on our list. Spelling check?"];
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="zbr-eyebrow">Zebritis</span><span class="badge" id="zbr-badge"></span></div>' +
-    ' <p class="legend"><span>\ud83d\udc34 1</span><span>\ud83d\udc0e 3</span><span>\ud83e\udecf 6</span><span>\ud83e\udd93 10</span><span>\ud83e\udd84 20</span></p>' +
+    ' <p class="legend"><span>\ud83d\udc34 1\u20134</span><span>\ud83d\udc0e 5\u20138</span><span>\ud83e\udecf 9\u201313</span><span>\ud83e\udd93 14\u201317</span><span>\ud83e\udd84 18\u201320</span></p>' +
     ' <div class="prog" id="zbr-prog"></div>' +
     ' <div class="zcard" id="zbr-card"></div>' +
     ' <div class="result" id="zbr-result" hidden></div>' +
@@ -147,7 +166,7 @@
         (msg ? '<p class="say' + (bad ? " bad" : "") + '">' + esc(msg) + "</p>" : '<p class="hint">Any correct answer scores. Rarer answers score more.</p>');
     } else {
       var p = st.picks[i];
-      h += p >= 0 ? '<div class="hit t' + x.a[p][1] + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span>" + (rk(x.a[p]) !== null ? '<span class="rkl">' + esc(rline(x, x.a[p])) + "</span>" : "") + "</div><i>+" + x.a[p][1] + "</i></div>"
+      h += p >= 0 ? '<div class="hit t' + BANDK(x.a[p][1]) + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span>" + (rk(x.a[p]) !== null ? '<span class="rkl">' + esc(rline(x, x.a[p])) + "</span>" : "") + "</div><i>+" + x.a[p][1] + "</i></div>"
         : '<div class="hit t0"><span class="em">\u274c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
       if (tries.length) {
         var sent = (st.sug || {})[i] || [];
@@ -164,9 +183,9 @@
     if (isRanked(x)) return revealRanked(x, p);
     var tiers = [20, 10, 6, 3, 1];
     return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers</summary>' + tiers.map(function (t) {
-      var items = x.a.filter(function (a) { return a[1] === t; });
+      var items = x.a.filter(function (a) { return BANDK(a[1]) === t; });
       if (!items.length) return "";
-      return '<div class="tier"><span class="th">' + TIER[t].e + " " + TIER[t].n + " \u00b7 " + t + '</span><span class="ti">' + items.map(function (a) { return (x.a.indexOf(a) === p ? "<mark>" + esc(cap(a[0])) + "</mark>" : esc(cap(a[0]))); }).join(", ") + "</span></div>";
+      return '<div class="tier"><span class="th">' + TIER[t].e + " " + TIER[t].n + '</span><span class="ti">' + items.map(function (a) { return (x.a.indexOf(a) === p ? "<mark>" + esc(cap(a[0])) + "</mark>" : esc(cap(a[0]))) + " <small>" + a[1] + "</small>"; }).join(", ") + "</span></div>";
     }).join("") + "</details>";
   }
   function revealRanked(x, p) {
@@ -176,7 +195,7 @@
     function nm(i) { return i === p ? "<mark>" + esc(cap(x.a[i][0])) + "</mark>" : esc(cap(x.a[i][0])); }
     return '<details class="list"' + (p < 0 ? " open" : "") + '><summary>All answers, ranked</summary><ol class="rank">' + on.map(function (i) {
       var a = x.a[i];
-      return '<li' + (i === p ? ' class="me"' : "") + '><span class="rn">' + rlab(x, a) + '</span><span class="rnm">' + esc(cap(a[0])) + (a[5] ? "<small>" + esc(a[5]) + "</small>" : "") + '</span><span class="pill t' + a[1] + '" title="' + TIER[a[1]].n + '">' + TIER[a[1]].e + " +" + a[1] + "</span></li>";
+      return '<li' + (i === p ? ' class="me"' : "") + '><span class="rn">' + rlab(x, a) + '</span><span class="rnm">' + esc(cap(a[0])) + (a[5] ? "<small>" + esc(a[5]) + "</small>" : "") + '</span><span class="pill t' + BANDK(a[1]) + '" title="' + TIER[a[1]].n + '">' + TIER[a[1]].e + " +" + a[1] + "</span></li>";
     }).join("") + "</ol>" + (rest.length ? '<p class="rest">Also accepted: ' + rest.map(nm).join(", ") + "</p>" : "") +
       (rsrc(x) ? '<p class="rsrc">Ranked: ' + esc(rsrc(x)) + "</p>" : "") + "</details>";
   }
@@ -185,10 +204,10 @@
     var em = P.prompts.map(function (x, i) { var p = st.picks[i]; return p >= 0 ? TIER[x.a[p][1]].e : "\u274c"; }).join("");
     var share = (P.prompts.length > 3 ? "Super Zebritis" : "Zebritis") + (NORMIE ? " (Normie)" : "") + " #" + P.number + (isLive() ? "" : " (archive)") + "\n" + em + " " + s + "/" + max + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
-    var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }) ? "A unicorn sighting. Mythical. Unbearable." : sc3(s) >= 25 ? "A dazzle of zebras. Unbearable." : sc3(s) >= 18 ? "Strong stripes. Consultant material." : sc3(s) >= 10 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
+    var verdict = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] >= 18; }) ? "A unicorn sighting. Mythical. Unbearable." : sc3(s) >= 45 ? "A dazzle of zebras. Unbearable." : sc3(s) >= 36 ? "Strong stripes. Consultant material." : sc3(s) >= 24 ? "Solid. A few stripes showing." : s >= 1 ? "Mostly horses. Safe, sensible, forgettable." : "Nothing on the list. Bold strategy.";
     r.hidden = false;
     r.innerHTML = '<p class="em-row">' + em + '</p><p class="score">' + s + "<span>/" + max + '</span></p><p class="verdict">' + esc(verdict) + "</p>" +
-      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>10+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
+      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<pre id="zbr-share">' + esc(share) + '</pre><button class="btn solid" type="button" id="zbr-copy">Copy result</button>' +
       '<div class="review">' + P.prompts.map(function (x, i) {
         var p = st.picks[i];
@@ -213,12 +232,12 @@
 
   // ---------- play ----------
   function finish() {
-    st.done = true; var s = score(), s3 = sc3(s); st.win = s3 >= WIN; st.uni = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 20; }); st.zeb = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] === 10; }); put(KEY, st);
+    st.done = true; var s = score(), s3 = sc3(s); st.win = s3 >= WIN; st.uni = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && x.a[p][1] >= 18; }); st.zeb = P.prompts.some(function (x, i) { var p = st.picks[i]; return p >= 0 && BANDK(x.a[p][1]) === 10; }); put(KEY, st);
     if (isLive() && stats.last !== day) {
       var consecutive = stats.last && dayNum(day) - dayNum(stats.last) === 1;
       stats.played++; if (st.win) stats.wins++;
       stats.streak = consecutive ? stats.streak + 1 : 1; stats.best = Math.max(stats.best, stats.streak);
-      stats.dist[s3 >= 25 ? 0 : s3 >= 18 ? 1 : s3 >= 10 ? 2 : s3 >= 1 ? 3 : 4]++; stats.last = day; put(SKEY, stats);
+      stats.dist[s3 >= 45 ? 0 : s3 >= 36 ? 1 : s3 >= 24 ? 2 : s3 >= 1 ? 3 : 4]++; stats.last = day; put(SKEY, stats);
     }
   }
   function logAns(name) {
@@ -265,7 +284,7 @@
   function show(d) {
     day = d; loadDay(); pend = null;
     month(d).then(function (list) {
-      P = list.filter(function (x) { return x.date === d; })[0] || null;
+      P = list.filter(function (x) { return x.date === d; })[0] || null; scaleP(P);
       if (!P) { $("card").hidden = false; $("card").innerHTML = NORMIE && window.MW_noNormie ? MW_noNormie("prompts") : '<p class="note">No prompts for this day. The zebras are resting.</p>'; $("prog").innerHTML = ""; $("result").hidden = true; renderArchive(); return; }
       if (P.spare && st.swap !== undefined && st.swap !== null) P.prompts[st.swap] = P.spare;
       $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
