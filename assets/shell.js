@@ -585,8 +585,19 @@
       var pfx = b.id.slice(0, -5), pre = document.getElementById(pfx + "-share") || document.getElementById(pfx + "-sharetext");
       if (pre && window.HTMLCanvasElement && window.Blob) {
         var pb = document.createElement("button"); pb.type = "button"; pb.className = b.className.replace(/\bsolid\b/, "") + " mw-pic"; var canPic = false; try { canPic = !!(navigator.canShare && navigator.canShare({ files: [new File([""], "a.png", { type: "image/png" })] })); } catch (e) {} pb.textContent = canPic ? "Share picture" : "Save picture";
-        pb.onclick = function () { picShare(pre, pb); };
+        pb.onclick = function () { picShare(pre, pb); try { localStorage.setItem("mw-picnudge", "done"); } catch (e) {} var nn = document.querySelector(".mw-picnudge"); if (nn) nn.remove(); };
         b.parentNode.appendChild(pb);
+        // one gentle nudge, on the player's 3rd finished game (and again on the 10th if they still haven't tried it)
+        var nudge = function () { try {
+          var seen = +(localStorage.getItem("mw-results-n") || 0) + 1, nd = localStorage.getItem("mw-picnudge");
+          localStorage.setItem("mw-results-n", String(seen));
+          if (nd !== "done" && (seen === 3 || seen === 10)) {
+            var nu = document.createElement("p"); nu.className = "mw-picnudge"; nu.innerHTML = "📸 <b>Nice run.</b> Share it as a picture: it looks great on X, Instagram and the group chat.";
+            b.parentNode.parentNode.insertBefore(nu, b.parentNode); pb.classList.add("mw-pic-hi");
+          }
+        } catch (e) {} };
+        // count a finished game only when its share buttons are actually on screen (some games build the result panel early, hidden)
+        if (window.IntersectionObserver) { var io = new IntersectionObserver(function (en) { if (en.some(function (x) { return x.isIntersecting; })) { io.disconnect(); nudge(); } }); io.observe(pb); }
       }
       if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
