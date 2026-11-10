@@ -1074,7 +1074,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         if (++n < 2) return;
         var h = "";
         if (R && R.deep) h += card(R.deep.href, "deepdives", "Deep dive", R.deep.title, R.deep.text);
-        if (R && R.zebra) h += card(R.zebra.href, "zebritis", "Zebra of the week", R.zebra.title, R.zebra.text);
+        if (R && R.guide) h += card(R.guide.href, "dx", "Health guide", R.guide.title, R.guide.text);
         if (R && R.dose) h += card(R.dose.href, "triviosis", "The Weekly Dose", R.dose.title, R.dose.text);
         if (D) h += card("/days/", "gridectomy", "Health Calendar", "Coming up: " + D.name.replace(/\s*\([^()]+\)\s*$/, ""), nice(D.dates[today.slice(0, 4)].start, { weekday: "long", day: "numeric", month: "short" }) + ". Every health day in one place.");
         if (!h) return;

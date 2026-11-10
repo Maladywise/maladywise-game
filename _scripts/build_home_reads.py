@@ -47,7 +47,33 @@ def zebra():
     name = r[0][0].upper() + r[0][1:]
     return {"href": "/rare-conditions/?q=" + quote(r[0]), "title": name, "text": r[3][0].upper() + r[3][1:] + " people. One of %s rare conditions, ranked by rarity." % format(len(d["rows"]), ",")}
 
-out = {k: v for k, v in (("deep", deep_dive()), ("zebra", zebra()), ("research", research()), ("dose", dose())) if v}
+def guide():
+    """Health guide: the newest fact sheet (added in the last 14 days, by git history), else a weekly rotation."""
+    import subprocess
+    from datetime import date, timedelta
+    m = re.search(r"window\.MW_FACTS = (\{.*?\});\n", open("assets/site.js", encoding="utf-8").read(), re.S)
+    if not m: return None
+    F = json.loads(m.group(1)); facts = sorted(k for k, v in F.items() if v.get("k") == "fact" and os.path.exists("." + k + "index.html"))
+    if not facts: return None
+    pick, cut = None, (date.today() - timedelta(days=14)).isoformat()
+    try:
+        log = subprocess.run(["git", "log", "--diff-filter=A", "--format=@%as", "--name-only", "--since=" + cut, "--", "*/index.html"], capture_output=True, text=True, timeout=60).stdout
+        when = ""
+        for line in log.splitlines():
+            if line.startswith("@"): when = line[1:]; continue
+            k = "/" + line.strip()[:-len("index.html")] if line.strip().endswith("/index.html") else None
+            if k in F and F[k].get("k") == "fact": pick = k; break  # newest first
+    except Exception: pass
+    if not pick:
+        y, w, _ = date.today().isocalendar(); pick = facts[(y * 53 + w) * 7919 % len(facts)]
+    h = open("." + pick + "index.html", encoding="utf-8").read()
+    d = re.search(r'<meta name="description" content="([^"]*)"', h); t = html.unescape(d.group(1)) if d else ""
+    t = t.split(":", 1)[1].strip() if ":" in t[:60] else t
+    t = t[0].upper() + t[1:] if t else t
+    t = t if len(t) <= 95 else t[:t.rfind(" ", 0, 92)].rstrip(",;:") + "…"
+    return {"href": pick, "title": F[pick]["t"], "text": t}
+
+out = {k: v for k, v in (("deep", deep_dive()), ("guide", guide()), ("zebra", zebra()), ("research", research()), ("dose", dose())) if v}
 os.makedirs("data", exist_ok=True)
 old = open("data/home-reads.json").read() if os.path.exists("data/home-reads.json") else ""
 new = json.dumps(out, ensure_ascii=False, indent=1)
