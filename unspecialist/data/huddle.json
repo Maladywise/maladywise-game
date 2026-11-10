@@ -1,51 +1,2927 @@
 [
-  {"id":"c1","room":"consult","q":"Mrs Nguyen has limited English. Her 15-year-old son offers to interpret today's consult about a breast lump. Best move?","options":["Let her son interpret: it's quicker","Book a credentialed interpreter (TIS National's free service covers Medicare-rebatable GP consults)","Speak slowly and clearly in English","Use a phone translation app and hope"],"answer":1,"why":"For consent, crises and complex news, a credentialed interpreter is the recommended standard. TIS National's Free Interpreting Service covers GPs providing Medicare-rebatable services in private practice, and the Doctors Priority Line runs 24/7 on 1300 131 450. A teenager shouldn't be the one translating his mum's possible cancer.","source":"https://www.tisnational.gov.au/-/media/FIS/Free-Interpreting-Service---private-medical-practitioners-information-sheet.pdf"},
-  {"id":"c2","room":"consult","q":"You've just explained a new insulin routine. What's the best way to check it actually landed?","options":["Ask \"Any questions?\"","Ask them to explain back, in their own words, how they'll take it (teach-back)","Hand over a leaflet","Repeat the explanation, slower"],"answer":1,"why":"Teach-back means asking the person to restate the key points in their own words and what they mean for them. It checks your explanation, not their intelligence: the responsibility for being clear sits with the clinician. \"Any questions?\" mostly gets a polite \"No\".","source":"https://www.safetyandquality.gov.au/sites/default/files/2019-05/health-literacy-fact-sheet-5-supporting-staff-to-meet-health-literacy-needs.pdf"},
-  {"id":"c3","room":"consult","q":"An abnormal result was filed without action and a patient's diagnosis was delayed. How do you open the conversation?","options":["Avoid the word \"sorry\": it's an admission of liability","Say sorry, acknowledge what happened, stick to known facts and explain what's being done","Explain it was a reception system problem","Say nothing until the practice review is finished"],"answer":1,"why":"Under the Australian Open Disclosure Framework, an apology should include the word \"sorry\", acknowledge the event, stick to known facts and avoid speculation or blame. Apology laws in every Australian jurisdiction aim to separate an apology from legal liability (the detail varies by state, so know your local rules).","source":"https://www.safetyandquality.gov.au/sites/default/files/resources/attachments/saying_sorry_-_a_guide_to_apologising_and_expressing_regret_during_open_disclosure.pdf"},
-  {"id":"c4","room":"consult","q":"A mum says her son \"just isn't himself\". His observations are borderline. How should her worry change your assessment?","options":["It shouldn't: parents worry","A high level of family concern is a red flag that warrants a closer look","It only matters if there's a rash","Document it and move on"],"answer":1,"why":"The national Sepsis Clinical Care Standard treats a high level of family or carer concern as a red flag that warrants investigation. Families know their person's baseline; \"not himself\" is data.","source":"https://www.safetyandquality.gov.au/sites/default/files/2022-06/sepsis_clinical_care_standard_2022.pdf"},
-
-  {"id":"d1","room":"desk","q":"A 15-minute in-person consult in your rooms. Which GP time-tier fits?","options":["Level A (item 3)","Level B (item 23)","Level C (item 36)","Level D (item 44)"],"answer":1,"why":"Level B covers attendances of at least 6 minutes and less than 20 minutes. Level C starts at 20 minutes. Billing is about time and content, not vibes.","source":"https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"},
-  {"id":"d2","room":"desk","q":"You spent 27 minutes with a complex patient in the rooms, with a detailed history. Which level?","options":["Level B (item 23)","Level C (item 36)","Level D (item 44)","Level E (item 123)"],"answer":1,"why":"Level C is at least 20 and less than 40 minutes, including a detailed history. Level D starts at 40 minutes and Level E at 60.","source":"https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"},
-  {"id":"d3","room":"desk","q":"Your referral to a specialist doesn't state a duration. How long is it valid for Medicare?","options":["3 months from the date you wrote it","12 months from the specialist's first consultation","12 months from the date you wrote it","Indefinitely"],"answer":1,"why":"A GP referral to a specialist is valid for 12 months by default, and the clock starts when the specialist first sees the patient, not when you wrote it. You can specify a longer or indefinite period for ongoing care; a new, unrelated problem still needs a new referral.","source":"https://www.servicesaustralia.gov.au/referrals-for-specialist-treatment"},
-  {"id":"d4","room":"desk","q":"The Aboriginal and Torres Strait Islander peoples health assessment (item 715) can't be claimed if a related health assessment was done in the preceding...","options":["3 months","9 months","2 years","5 years"],"answer":1,"why":"Item 715 applies only if a listed related health assessment item hasn't been provided in the preceding 9 months. It also unlocks follow-up allied health items for identified needs.","source":"https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps"},
-
-  {"id":"r1","room":"resus","q":"Anaphylaxis in a 70 kg adult in your treatment room. First drug, dose and route?","options":["Adrenaline 0.5 mg IM into the outer mid-thigh","Adrenaline 1 mg IV push","Promethazine IM","Hydrocortisone IV"],"answer":0,"why":"ASCIA: adrenaline 0.01 mg/kg IM (1:1,000), maximum 0.5 mg, into the outer mid-thigh without delay. Repeat every 5 minutes if there's no response. Antihistamines and steroids don't treat the airway or the blood pressure.","source":"https://allergy.org.au/hp/papers/acute-management-of-anaphylaxis-guidelines"},
-  {"id":"r2","room":"resus","q":"Just after IM adrenaline for anaphylaxis, the patient asks to walk to the toilet. Your answer?","options":["Fine, they look better","No: keep them lying flat (or sitting with legs out if breathing is hard), no standing or walking","Stand them up to test for dizziness","Sit them upright in a chair"],"answer":1,"why":"Standing or walking during anaphylaxis can cause sudden collapse. ASCIA advises lying flat, or sitting with legs outstretched if breathing is difficult, and no standing until stable. Observe for at least 4 hours after the last adrenaline dose.","source":"https://allergy.org.au/hp/papers/acute-management-of-anaphylaxis-guidelines"},
-  {"id":"r3","room":"resus","q":"Suspected acute coronary syndrome in your rooms. The patient already takes daily low-dose aspirin. Aspirin now?","options":["Skip it: already on aspirin","300 mg chewed or dissolved now, while organising urgent transfer","100 mg only","Wait for the ECG result first"],"answer":1,"why":"Give 300 mg aspirin, chewed or dissolved, as soon as possible even if they take regular low-dose aspirin (unless contraindicated). Get a 12-lead ECG and arrange urgent transfer; don't let either delay the other.","source":"https://bpac.org.nz/b-quick/acs.aspx"},
-  {"id":"r4","room":"resus","q":"A 64-year-old's facial droop and slurred speech fully resolved after 10 minutes. What now?","options":["Book a routine review","Call 000: stroke signs need emergency care however long they last","Start aspirin and see them tomorrow","Reassure: it's gone"],"answer":1,"why":"The Stroke Foundation's message is blunt: if you see the F.A.S.T. signs, call 000 immediately, no matter how long they last. Resolving symptoms are not a reason to wait.","source":"https://strokefoundation.org.au/About-Stroke/Learn/signs-of-stroke"},
-
-  {"id":"g1","room":"drugs","q":"New methotrexate script for rheumatoid arthritis. Which instruction prevents a classic, sometimes fatal, error?","options":["Take one daily with food","Take once a week, on the same named day each week","Take when joints flare","Take twice daily"],"answer":1,"why":"Accidental daily dosing of weekly methotrexate has caused deaths in Australia, with serious toxicity after as few as 3 days. Name the day on the script and the label, and counsel first-time users carefully.","source":"https://www.mja.com.au/journal/2016/204/10/decade-australian-methotrexate-dosing-errors"},
-  {"id":"g2","room":"drugs","q":"A patient on empagliflozin has gastro and can't keep food down. Advice about the empagliflozin?","options":["Double the dose","Pause it while they're unwell","Carry on as usual","Take it at night instead"],"answer":1,"why":"The RACGP diabetes handbook advises stopping SGLT2 inhibitors during intercurrent illness (the concern is ketoacidosis), and restarting once eating and drinking normally.","source":"https://www.racgp.org.au/getattachment/7a2da393-b76f-405a-a2fe-0c9c0c0d5ac8/20635-DBHB-clinical-summary-web-alt-V9.pdf.aspx"},
-  {"id":"g3","room":"drugs","q":"INR 6.0 on warfarin. No bleeding, no high bleeding-risk features. Best plan?","options":["Carry on and recheck in a month","Stop warfarin for now, look for the cause, recheck the INR; vitamin K usually isn't needed","IV vitamin K 10 mg","Send to ED for Prothrombinex"],"answer":1,"why":"Australasian consensus: for INR 4.5 to 10 with no bleeding, withhold warfarin, review why it's high, and resume at a lower dose as the INR nears range. Vitamin K is usually unnecessary unless bleeding risk is high.","source":"https://clinicaldata.nzblood.co.nz/resourcefolder/documents/Warfarin%20reversal%20MJA%202013.pdf"},
-  {"id":"g4","room":"drugs","q":"Which of these can push potassium UP, a worry if they're already on an ACE inhibitor?","options":["Trimethoprim","Furosemide","Salbutamol","Insulin"],"answer":0,"why":"Trimethoprim is on the list of drugs that add to hyperkalaemia risk, alongside potassium-sparing diuretics, NSAIDs and potassium supplements. The other three tend to lower potassium.","source":"https://ukkidney.org/sites/renal.org/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf"},
-
-  {"id":"k1","room":"kids","q":"A 7-week-old has a temperature of 38.2°C but is feeding fine. Risk level?","options":["Low: feeding well","High: any baby under 3 months with 38°C or more needs urgent assessment","Medium: review in 48 hours","High only if there's a rash"],"answer":1,"why":"In NICE's traffic-light system, a child under 3 months with a temperature of 38°C or higher is a red (high-risk) feature on its own. Good feeding doesn't cancel it. (Some vaccines cause fever in this age group, which is worth asking about.)","source":"https://nice.org.uk/guidance/ng143/resources/fever-in-under-5s-assessment-and-initial-management-pdf-66141778137541"},
-  {"id":"k2","room":"kids","q":"Under the National Immunisation Program, measles-containing vaccines are given at...","options":["6 and 12 months","12 months (MMR) and 18 months (MMRV)","18 months and 4 years","4 years only"],"answer":1,"why":"Dose 1 is MMR at 12 months; dose 2 is MMRV at 18 months. MMRV isn't recommended as the first dose for children under 4.","source":"https://immunisationhandbook.health.gov.au/node/634"},
-  {"id":"k3","room":"kids","q":"A 4-month-old with bronchiolitis: mild work of breathing, feeding OK. Which treatment does the Australasian guideline advise against?","options":["Salbutamol","Supportive care","Small, frequent feeds","Planned review"],"answer":0,"why":"The Australasian bronchiolitis guideline (PREDICT) advises against salbutamol: no benefit and some harm. Steroids and antibiotics aren't recommended either. Bronchiolitis is a supportive-care illness.","source":"https://dontforgetthebubbles.com/bronchiolitis-guidelines/"},
-  {"id":"k4","room":"kids","q":"A 2-year-old with croup has stridor when upset and mild chest recession. Best GP treatment?","options":["An oral corticosteroid (e.g. dexamethasone) now","Antibiotics","A salbutamol puffer","A steam shower"],"answer":0,"why":"Children with croup and stridor or increased work of breathing should get an oral steroid (dexamethasone, or prednisolone). Croup is viral, and it's an upper-airway problem, so salbutamol doesn't help.","source":"https://dontforgetthebubbles.com/croup/"},
-
-  {"id":"t1","room":"treatment","q":"A 45-year-old gardener has a deep puncture wound full of soil. Last tetanus vaccine was 7 years ago. Booster?","options":["No: 10 years covers it","Yes: tetanus-prone wound and last dose more than 5 years ago","Only if it gets infected","Tetanus immunoglobulin only"],"answer":1,"why":"For tetanus-prone wounds, people aged 10 and over need a dT or dTpa booster if their last dose was more than 5 years ago. The 10-year rule is for clean, minor wounds.","source":"https://immunisationhandbook.health.gov.au/recommendations/people-aged-10-years-with-tetanus-prone-wounds-are-recommended-to-receive-a-booster-dose-of-dt-or-dtpa-if-their-last-dose-was-more-than-5-years-ago"},
-  {"id":"t2","room":"treatment","q":"Maximum dose of lidocaine WITH adrenaline for local infiltration?","options":["3 mg/kg","4.5 mg/kg","7 mg/kg","10 mg/kg"],"answer":2,"why":"About 7 mg/kg with adrenaline, and about 4.5 mg/kg without. Adrenaline slows absorption, so more can be used safely. Check your local product information before a big excision.","source":"https://em.umaryland.edu/educational_pearls/828/"},
-  {"id":"t3","room":"treatment","q":"A changing pigmented lesion looks like melanoma. Best first biopsy?","options":["Shave the darkest part","Complete excision with a narrow (about 2 mm) margin","Go straight to a wide 2 cm excision","Cryotherapy"],"answer":1,"why":"Cancer Council guidance: a complete excision biopsy with a narrow 2 to 5 mm margin gives the pathologist the whole lesion and an accurate thickness. The wider definitive margin is planned once the Breslow thickness is known.","source":"https://cdn.craft.cloud/019efd17-dcc2-707f-8e07-011d00d1146a/assets/issues/10.5694mja17.00278.pdf"},
-  {"id":"t4","room":"treatment","q":"Rolled ankle. Under the Ottawa ankle rules, which finding means you need an X-ray?","options":["Swelling over the outside of the ankle","Bony tenderness at the back edge or tip of a malleolus","Bruising","Pain when you invert the foot"],"answer":1,"why":"The Ottawa rules use bone tenderness (back edge or tip of either malleolus, navicular, base of the fifth metatarsal) and inability to take four steps. Swelling and bruising don't count. Pooled sensitivity is about 98%.","source":"https://www.aafp.org/afp/2003/0815/p745a"},
-
-  {"id":"w1","room":"womens","q":"Routine cervical screening in Australia is for...","options":["Women aged 18 to 69, every 2 years","Women and people with a cervix aged 25 to 74, every 5 years","Sexually active women, yearly","Ages 30 to 65, every 3 years"],"answer":1,"why":"The National Cervical Screening Program invites women and people with a cervix aged 25 to 74 every 5 years for an HPV test. Self-collection is an option for everyone eligible.","source":"https://ncsr.gov.au/cervical-program/faqs-cervical-program"},
-  {"id":"w2","room":"womens","q":"Unprotected sex 4 days ago. Most effective emergency contraception?","options":["Levonorgestrel pill","Ulipristal pill","Copper IUD","Nothing works after 72 hours"],"answer":2,"why":"A copper IUD inserted within 5 days is more than 99% effective. Ulipristal works up to 120 hours and is slightly better than levonorgestrel (best within 72 hours, some effect to 96).","source":"https://www.fpnsw.org.au/health-information/contraception/emergency-contraception"},
-  {"id":"w3","room":"womens","q":"A woman with a uterus is starting oestrogen MHT for hot flushes. What must be added?","options":["Nothing","A progestogen, to protect the endometrium","Testosterone","Calcium"],"answer":1,"why":"Oestrogen alone thickens the uterine lining and raises endometrial cancer risk, so anyone with a uterus needs a progestogen as well. After a hysterectomy, oestrogen alone is usually fine.","source":"https://menopause.org.au/hp/information-sheets/combined-menopausal-hormone-therapy-mht"},
-  {"id":"w4","room":"womens","q":"Planning a pregnancy, BMI 34. Folic acid?","options":["Not needed with a good diet","400 to 500 micrograms daily","5 mg daily (higher-risk group), from before conception to 12 weeks","Start at 12 weeks"],"answer":2,"why":"Most people need at least 400 micrograms daily from a month before conception through the first trimester. A BMI over 30 (like diabetes, epilepsy medicines or a previous neural tube defect) puts her in the group where a doctor may prescribe 5 mg daily until 12 weeks.","source":"https://www.pregnancybirthbaby.org.au/pregnancy/nutrition-and-lifestyle/folate-and-pregnancy"},
-
-  {"id":"m1","room":"mind","q":"You're worried a patient with depression might be suicidal. Does asking directly put the idea in their head?","options":["Yes: hint at it indirectly","No: asking directly is safe, and it's the most reliable way to find out","Only ask if they raise it","Leave it to the psychiatrist"],"answer":1,"why":"Asking about suicide is unlikely to make things worse and is one of the few reliable ways to know. People often won't volunteer suicidal thoughts unless they're specifically asked.","source":"https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths"},
-  {"id":"m2","room":"mind","q":"On sertraline, recently started another serotonergic drug. Now agitated, sweaty, with inducible clonus. Most likely?","options":["Serotonin toxicity","Neuroleptic malignant syndrome","A panic attack","Hypoglycaemia"],"answer":0,"why":"Under the Hunter criteria, serotonergic drug exposure plus inducible clonus with agitation or sweating points to serotonin toxicity. Clonus is the giveaway, most marked in the legs.","source":"https://www.statpearls.com/point-of-care/28918"},
-  {"id":"m3","room":"mind","q":"8-week postnatal check: Edinburgh Postnatal Depression Scale total is 14 (question 10 scores zero). Next step?","options":["Reassure: baby blues","Arrange further assessment (13 or more)","Repeat it in a year","Start an antidepressant today, no further assessment"],"answer":1,"why":"COPE's guideline: an EPDS of 13 or more needs further assessment; 10 to 12 means monitor and repeat in 4 to 6 weeks. Any positive answer to question 10 (self-harm) needs immediate assessment.","source":"https://www.cope.org.au/health-professionals/health-professional-information-hubs/for-general-practitioners/perinatal-mental-health-guideline-summary-for-general-practitioners"},
-  {"id":"m4","room":"mind","q":"Lithium level 2.0 mmol/L in someone who's newly shaky and unsteady. Action?","options":["File: close enough","Same-day emergency assessment: this is lithium toxicity","Increase the dose","Recheck in 3 months"],"answer":1,"why":"Therapeutic levels are around 1 mmol/L or below; 1.5 to 2.5 is mild toxicity, and neurological symptoms (tremor, ataxia, confusion) matter more than the number. NSAIDs, ACE inhibitors, diuretics and kidney problems are common culprits.","source":"https://emergencycarebc.ca/clinical_resource/clinical-summary/lithium-toxicity/"},
-
-  {"id":"h1","room":"chronic","q":"A 52-year-old's Aus CVD Risk Calculator result is 11% over 5 years. Category and default plan?","options":["Low: lifestyle only","Intermediate: consider other factors","High: blood pressure- and lipid-lowering medicines plus lifestyle, after shared decision-making","Can't be interpreted"],"answer":2,"why":"In the 2023 Australian guideline, 10% or more over 5 years is high risk. Unless contraindicated or unsuitable, offer both BP-lowering and lipid-modifying medicines, after discussing benefits and harms.","source":"https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk"},
-  {"id":"h2","room":"chronic","q":"From what age should the Aus CVD Risk Calculator be used for First Nations people?","options":["18","30","45","60"],"answer":1,"why":"From age 30 for First Nations people (18 to 29: assess individual risk factors), from 35 for people with diabetes, and 45 to 79 for everyone else.","source":"https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk"},
-  {"id":"h3","room":"chronic","q":"A Kidney Health Check for someone with diabetes means...","options":["Creatinine only","eGFR, urine albumin-creatinine ratio and blood pressure","A urine dipstick","A renal ultrasound"],"answer":1,"why":"Kidney Health Australia's check is eGFR, urine ACR and blood pressure, yearly for people with diabetes. CKD means abnormal results persisting for at least 3 months.","source":"https://www.nps.org.au/news/ckd-integrating-kidney-health-into-patient-care"},
-  {"id":"h4","room":"chronic","q":"General HbA1c target for most adults with type 2 diabetes?","options":["6.0% or less","7.0% (53 mmol/mol) or less, individualised","8.5% or less","There isn't one"],"answer":1,"why":"The RACGP handbook's general target is 7% (53 mmol/mol) or less, adjusted for the person: tighter for some, looser for frail older people or those at risk of hypos.","source":"https://www.racgp.org.au/getattachment/7a2da393-b76f-405a-a2fe-0c9c0c0d5ac8/20635-DBHB-clinical-summary-web-alt-V9.pdf.aspx"},
-
-  {"id":"o1","room":"outreach","q":"A 9-year-old Aboriginal boy from a remote community has a sore throat. Guideline approach?","options":["No antibiotics: probably viral","Treat with penicillin: he's in a population at high risk of rheumatic fever","Lozenges and fluids","Swab and wait a week"],"answer":1,"why":"The 2020 Australian guideline recommends empirical antibiotic treatment, with penicillin first-line, for sore throats in people at high risk of acute rheumatic fever. That includes Aboriginal and Torres Strait Islander people in rural and remote settings.","source":"https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic"},
-  {"id":"o2","room":"outreach","q":"First-line secondary prophylaxis after acute rheumatic fever?","options":["IM benzathine benzylpenicillin every 28 days","Oral amoxicillin when unwell","Weekly azithromycin","None needed"],"answer":0,"why":"Long-acting benzathine benzylpenicillin G every 28 days is the first-line recommendation. On time, every time: missed doses mean recurrences and heart damage.","source":"https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic"},
-  {"id":"o3","room":"outreach","q":"A recently arrived refugee adult feels well. Which test is recommended for ALL new arrivals?","options":["Strongyloides serology","Malaria testing","Schistosoma serology","H. pylori stool antigen"],"answer":0,"why":"Strongyloides serology, hepatitis B serology, HIV, full blood exam and TB screening (by age and risk) are for everyone. Malaria and schistosoma depend on country of origin; H. pylori on symptoms or family history.","source":"https://www.rch.org.au/uploadedFiles/Main/Content/immigranthealth/Quick%20guide%20to%20screening%20tests%20in%20adults.pdf"},
-  {"id":"o4","room":"outreach","q":"A bushwalker is bitten on the calf by a brown snake. First aid?","options":["Wash the bite and apply a tourniquet","Firm bandage over the whole limb, splint, keep still, don't wash the bite","Cut and suck","Walk quickly back to the car"],"answer":1,"why":"Pressure immobilisation: a firm broad bandage from the toes up as high as possible, a splint, and keep the person still. Don't wash, cut or suck the bite, and no arterial tourniquet. Bring help to them, and leave the bandage on until they reach care.","source":"https://biomedicalsciences.unimelb.edu.au/departments/pharmacology/engage/avru/discover/first-aid/pressure-immobilisation-first-aid"}
+ {
+  "id": "c1",
+  "room": "consult",
+  "q": "Mrs Nguyen has limited English. Her 15-year-old son offers to interpret today's consult about a breast lump. Best move?",
+  "options": [
+   "Let her son interpret: it's quicker",
+   "Book a credentialed interpreter (TIS National's free service covers Medicare-rebatable GP consults)",
+   "Speak slowly and clearly in English",
+   "Use a phone translation app and hope"
+  ],
+  "answer": 1,
+  "why": "For consent, crises and complex news, a credentialed interpreter is the recommended standard. TIS National's Free Interpreting Service covers GPs providing Medicare-rebatable services in private practice, and the Doctors Priority Line runs 24/7 on 1300 131 450. A teenager shouldn't be the one translating his mum's possible cancer.",
+  "source": "https://www.tisnational.gov.au/-/media/FIS/Free-Interpreting-Service---private-medical-practitioners-information-sheet.pdf",
+  "cu": "Communication"
+ },
+ {
+  "id": "c2",
+  "room": "consult",
+  "q": "You've just explained a new insulin routine. What's the best way to check it actually landed?",
+  "options": [
+   "Ask \"Any questions?\"",
+   "Ask them to explain back, in their own words, how they'll take it (teach-back)",
+   "Hand over a leaflet",
+   "Repeat the explanation, slower"
+  ],
+  "answer": 1,
+  "why": "Teach-back means asking the person to restate the key points in their own words and what they mean for them. It checks your explanation, not their intelligence: the responsibility for being clear sits with the clinician. \"Any questions?\" mostly gets a polite \"No\".",
+  "source": "https://www.safetyandquality.gov.au/sites/default/files/2019-05/health-literacy-fact-sheet-5-supporting-staff-to-meet-health-literacy-needs.pdf",
+  "cu": "Communication"
+ },
+ {
+  "id": "c3",
+  "room": "consult",
+  "q": "An abnormal result was filed without action and a patient's diagnosis was delayed. How do you open the conversation?",
+  "options": [
+   "Avoid the word \"sorry\": it's an admission of liability",
+   "Say sorry, acknowledge what happened, stick to known facts and explain what's being done",
+   "Explain it was a reception system problem",
+   "Say nothing until the practice review is finished"
+  ],
+  "answer": 1,
+  "why": "Under the Australian Open Disclosure Framework, an apology should include the word \"sorry\", acknowledge the event, stick to known facts and avoid speculation or blame. Apology laws in every Australian jurisdiction aim to separate an apology from legal liability (the detail varies by state, so know your local rules).",
+  "source": "https://www.safetyandquality.gov.au/sites/default/files/resources/attachments/saying_sorry_-_a_guide_to_apologising_and_expressing_regret_during_open_disclosure.pdf",
+  "cu": "Quality and safety"
+ },
+ {
+  "id": "c4",
+  "room": "consult",
+  "q": "A mum says her son \"just isn't himself\". His observations are borderline. How should her worry change your assessment?",
+  "options": [
+   "It shouldn't: parents worry",
+   "A high level of family concern is a red flag that warrants a closer look",
+   "It only matters if there's a rash",
+   "Document it and move on"
+  ],
+  "answer": 1,
+  "why": "The national Sepsis Clinical Care Standard treats a high level of family or carer concern as a red flag that warrants investigation. Families know their person's baseline; \"not himself\" is data.",
+  "source": "https://www.safetyandquality.gov.au/sites/default/files/2022-06/sepsis_clinical_care_standard_2022.pdf",
+  "cu": "Child and youth"
+ },
+ {
+  "id": "d1",
+  "room": "desk",
+  "q": "A 15-minute in-person consult in your rooms. Which GP time-tier fits?",
+  "options": [
+   "Level A (item 3)",
+   "Level B (item 23)",
+   "Level C (item 36)",
+   "Level D (item 44)"
+  ],
+  "answer": 1,
+  "why": "Level B covers attendances of at least 6 minutes and less than 20 minutes. Level C starts at 20 minutes. Billing is about time and content, not vibes.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps",
+  "cu": "Practice and business"
+ },
+ {
+  "id": "d2",
+  "room": "desk",
+  "q": "You spent 27 minutes with a complex patient in the rooms, with a detailed history. Which level?",
+  "options": [
+   "Level B (item 23)",
+   "Level C (item 36)",
+   "Level D (item 44)",
+   "Level E (item 123)"
+  ],
+  "answer": 1,
+  "why": "Level C is at least 20 and less than 40 minutes, including a detailed history. Level D starts at 40 minutes and Level E at 60.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps",
+  "cu": "Practice and business"
+ },
+ {
+  "id": "d3",
+  "room": "desk",
+  "q": "Your referral to a specialist doesn't state a duration. How long is it valid for Medicare?",
+  "options": [
+   "3 months from the date you wrote it",
+   "12 months from the specialist's first consultation",
+   "12 months from the date you wrote it",
+   "Indefinitely"
+  ],
+  "answer": 1,
+  "why": "A GP referral to a specialist is valid for 12 months by default, and the clock starts when the specialist first sees the patient, not when you wrote it. You can specify a longer or indefinite period for ongoing care; a new, unrelated problem still needs a new referral.",
+  "source": "https://www.servicesaustralia.gov.au/referrals-for-specialist-treatment",
+  "cu": "Practice and business"
+ },
+ {
+  "id": "d4",
+  "room": "desk",
+  "q": "The Aboriginal and Torres Strait Islander peoples health assessment (item 715) can't be claimed if a related health assessment was done in the preceding...",
+  "options": [
+   "3 months",
+   "9 months",
+   "2 years",
+   "5 years"
+  ],
+  "answer": 1,
+  "why": "Item 715 applies only if a listed related health assessment item hasn't been provided in the preceding 9 months. It also unlocks follow-up allied health items for identified needs.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/aboriginal-and-torres-strait-islander-health/guides/racgp-mbs-guide-for-gps",
+  "cu": "Aboriginal and Torres Strait Islander health"
+ },
+ {
+  "id": "r1",
+  "room": "resus",
+  "q": "Anaphylaxis in a 70 kg adult in your treatment room. First drug, dose and route?",
+  "options": [
+   "Adrenaline 0.5 mg IM into the outer mid-thigh",
+   "Adrenaline 1 mg IV push",
+   "Promethazine IM",
+   "Hydrocortisone IV"
+  ],
+  "answer": 0,
+  "why": "ASCIA: adrenaline 0.01 mg/kg IM (1:1,000), maximum 0.5 mg, into the outer mid-thigh without delay. Repeat every 5 minutes if there's no response. Antihistamines and steroids don't treat the airway or the blood pressure.",
+  "source": "https://allergy.org.au/hp/papers/acute-management-of-anaphylaxis-guidelines",
+  "cu": "Emergency"
+ },
+ {
+  "id": "r2",
+  "room": "resus",
+  "q": "Just after IM adrenaline for anaphylaxis, the patient asks to walk to the toilet. Your answer?",
+  "options": [
+   "Fine, they look better",
+   "No: keep them lying flat (or sitting with legs out if breathing is hard), no standing or walking",
+   "Stand them up to test for dizziness",
+   "Sit them upright in a chair"
+  ],
+  "answer": 1,
+  "why": "Standing or walking during anaphylaxis can cause sudden collapse. ASCIA advises lying flat, or sitting with legs outstretched if breathing is difficult, and no standing until stable. Observe for at least 4 hours after the last adrenaline dose.",
+  "source": "https://allergy.org.au/hp/papers/acute-management-of-anaphylaxis-guidelines",
+  "cu": "Emergency"
+ },
+ {
+  "id": "r3",
+  "room": "resus",
+  "q": "Suspected acute coronary syndrome in your rooms. The patient already takes daily low-dose aspirin. Aspirin now?",
+  "options": [
+   "Skip it: already on aspirin",
+   "300 mg chewed or dissolved now, while organising urgent transfer",
+   "100 mg only",
+   "Wait for the ECG result first"
+  ],
+  "answer": 1,
+  "why": "Give 300 mg aspirin, chewed or dissolved, as soon as possible even if they take regular low-dose aspirin (unless contraindicated). Get a 12-lead ECG and arrange urgent transfer; don't let either delay the other.",
+  "source": "https://bpac.org.nz/b-quick/acs.aspx",
+  "cu": "Cardiovascular"
+ },
+ {
+  "id": "r4",
+  "room": "resus",
+  "q": "A 64-year-old's facial droop and slurred speech fully resolved after 10 minutes. What now?",
+  "options": [
+   "Book a routine review",
+   "Call 000: stroke signs need emergency care however long they last",
+   "Start aspirin and see them tomorrow",
+   "Reassure: it's gone"
+  ],
+  "answer": 1,
+  "why": "The Stroke Foundation's message is blunt: if you see the F.A.S.T. signs, call 000 immediately, no matter how long they last. Resolving symptoms are not a reason to wait.",
+  "source": "https://strokefoundation.org.au/About-Stroke/Learn/signs-of-stroke",
+  "cu": "Neurology"
+ },
+ {
+  "id": "g1",
+  "room": "drugs",
+  "q": "New methotrexate script for rheumatoid arthritis. Which instruction prevents a classic, sometimes fatal, error?",
+  "options": [
+   "Take one daily with food",
+   "Take once a week, on the same named day each week",
+   "Take when joints flare",
+   "Take twice daily"
+  ],
+  "answer": 1,
+  "why": "Accidental daily dosing of weekly methotrexate has caused deaths in Australia, with serious toxicity after as few as 3 days. Name the day on the script and the label, and counsel first-time users carefully.",
+  "source": "https://www.mja.com.au/journal/2016/204/10/decade-australian-methotrexate-dosing-errors",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "g2",
+  "room": "drugs",
+  "q": "A patient on empagliflozin has gastro and can't keep food down. Advice about the empagliflozin?",
+  "options": [
+   "Double the dose",
+   "Pause it while they're unwell",
+   "Carry on as usual",
+   "Take it at night instead"
+  ],
+  "answer": 1,
+  "why": "The RACGP diabetes handbook advises stopping SGLT2 inhibitors during intercurrent illness (the concern is ketoacidosis), and restarting once eating and drinking normally.",
+  "source": "https://www.racgp.org.au/getattachment/7a2da393-b76f-405a-a2fe-0c9c0c0d5ac8/20635-DBHB-clinical-summary-web-alt-V9.pdf.aspx",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "g3",
+  "room": "drugs",
+  "q": "INR 6.0 on warfarin. No bleeding, no high bleeding-risk features. Best plan?",
+  "options": [
+   "Carry on and recheck in a month",
+   "Stop warfarin for now, look for the cause, recheck the INR; vitamin K usually isn't needed",
+   "IV vitamin K 10 mg",
+   "Send to ED for Prothrombinex"
+  ],
+  "answer": 1,
+  "why": "Australasian consensus: for INR 4.5 to 10 with no bleeding, withhold warfarin, review why it's high, and resume at a lower dose as the INR nears range. Vitamin K is usually unnecessary unless bleeding risk is high.",
+  "source": "https://clinicaldata.nzblood.co.nz/resourcefolder/documents/Warfarin%20reversal%20MJA%202013.pdf",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "g4",
+  "room": "drugs",
+  "q": "Which of these can push potassium UP, a worry if they're already on an ACE inhibitor?",
+  "options": [
+   "Trimethoprim",
+   "Furosemide",
+   "Salbutamol",
+   "Insulin"
+  ],
+  "answer": 0,
+  "why": "Trimethoprim is on the list of drugs that add to hyperkalaemia risk, alongside potassium-sparing diuretics, NSAIDs and potassium supplements. The other three tend to lower potassium.",
+  "source": "https://ukkidney.org/sites/renal.org/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "k1",
+  "room": "kids",
+  "q": "A 7-week-old has a temperature of 38.2°C but is feeding fine. Risk level?",
+  "options": [
+   "Low: feeding well",
+   "High: any baby under 3 months with 38°C or more needs urgent assessment",
+   "Medium: review in 48 hours",
+   "High only if there's a rash"
+  ],
+  "answer": 1,
+  "why": "In NICE's traffic-light system, a child under 3 months with a temperature of 38°C or higher is a red (high-risk) feature on its own. Good feeding doesn't cancel it. (Some vaccines cause fever in this age group, which is worth asking about.)",
+  "source": "https://nice.org.uk/guidance/ng143/resources/fever-in-under-5s-assessment-and-initial-management-pdf-66141778137541",
+  "cu": "Child and youth"
+ },
+ {
+  "id": "k2",
+  "room": "kids",
+  "q": "Under the National Immunisation Program, measles-containing vaccines are given at...",
+  "options": [
+   "6 and 12 months",
+   "12 months (MMR) and 18 months (MMRV)",
+   "18 months and 4 years",
+   "4 years only"
+  ],
+  "answer": 1,
+  "why": "Dose 1 is MMR at 12 months; dose 2 is MMRV at 18 months. MMRV isn't recommended as the first dose for children under 4.",
+  "source": "https://immunisationhandbook.health.gov.au/node/634",
+  "cu": "Immunisation"
+ },
+ {
+  "id": "k3",
+  "room": "kids",
+  "q": "A 4-month-old with bronchiolitis: mild work of breathing, feeding OK. Which treatment does the Australasian guideline advise against?",
+  "options": [
+   "Salbutamol",
+   "Supportive care",
+   "Small, frequent feeds",
+   "Planned review"
+  ],
+  "answer": 0,
+  "why": "The Australasian bronchiolitis guideline (PREDICT) advises against salbutamol: no benefit and some harm. Steroids and antibiotics aren't recommended either. Bronchiolitis is a supportive-care illness.",
+  "source": "https://dontforgetthebubbles.com/bronchiolitis-guidelines/",
+  "cu": "Child and youth"
+ },
+ {
+  "id": "k4",
+  "room": "kids",
+  "q": "A 2-year-old with croup has stridor when upset and mild chest recession. Best GP treatment?",
+  "options": [
+   "An oral corticosteroid (e.g. dexamethasone) now",
+   "Antibiotics",
+   "A salbutamol puffer",
+   "A steam shower"
+  ],
+  "answer": 0,
+  "why": "Children with croup and stridor or increased work of breathing should get an oral steroid (dexamethasone, or prednisolone). Croup is viral, and it's an upper-airway problem, so salbutamol doesn't help.",
+  "source": "https://dontforgetthebubbles.com/croup/",
+  "cu": "Child and youth"
+ },
+ {
+  "id": "t1",
+  "room": "treatment",
+  "q": "A 45-year-old gardener has a deep puncture wound full of soil. Last tetanus vaccine was 7 years ago. Booster?",
+  "options": [
+   "No: 10 years covers it",
+   "Yes: tetanus-prone wound and last dose more than 5 years ago",
+   "Only if it gets infected",
+   "Tetanus immunoglobulin only"
+  ],
+  "answer": 1,
+  "why": "For tetanus-prone wounds, people aged 10 and over need a dT or dTpa booster if their last dose was more than 5 years ago. The 10-year rule is for clean, minor wounds.",
+  "source": "https://immunisationhandbook.health.gov.au/recommendations/people-aged-10-years-with-tetanus-prone-wounds-are-recommended-to-receive-a-booster-dose-of-dt-or-dtpa-if-their-last-dose-was-more-than-5-years-ago",
+  "cu": "Procedures"
+ },
+ {
+  "id": "t2",
+  "room": "treatment",
+  "q": "Maximum dose of lidocaine WITH adrenaline for local infiltration?",
+  "options": [
+   "3 mg/kg",
+   "4.5 mg/kg",
+   "7 mg/kg",
+   "10 mg/kg"
+  ],
+  "answer": 2,
+  "why": "About 7 mg/kg with adrenaline, and about 4.5 mg/kg without. Adrenaline slows absorption, so more can be used safely. Check your local product information before a big excision.",
+  "source": "https://em.umaryland.edu/educational_pearls/828/",
+  "cu": "Procedures"
+ },
+ {
+  "id": "t3",
+  "room": "treatment",
+  "q": "A changing pigmented lesion looks like melanoma. Best first biopsy?",
+  "options": [
+   "Shave the darkest part",
+   "Complete excision with a narrow (about 2 mm) margin",
+   "Go straight to a wide 2 cm excision",
+   "Cryotherapy"
+  ],
+  "answer": 1,
+  "why": "Cancer Council guidance: a complete excision biopsy with a narrow 2 to 5 mm margin gives the pathologist the whole lesion and an accurate thickness. The wider definitive margin is planned once the Breslow thickness is known.",
+  "source": "https://cdn.craft.cloud/019efd17-dcc2-707f-8e07-011d00d1146a/assets/issues/10.5694mja17.00278.pdf",
+  "cu": "Dermatology"
+ },
+ {
+  "id": "t4",
+  "room": "treatment",
+  "q": "Rolled ankle. Under the Ottawa ankle rules, which finding means you need an X-ray?",
+  "options": [
+   "Swelling over the outside of the ankle",
+   "Bony tenderness at the back edge or tip of a malleolus",
+   "Bruising",
+   "Pain when you invert the foot"
+  ],
+  "answer": 1,
+  "why": "The Ottawa rules use bone tenderness (back edge or tip of either malleolus, navicular, base of the fifth metatarsal) and inability to take four steps. Swelling and bruising don't count. Pooled sensitivity is about 98%.",
+  "source": "https://www.aafp.org/afp/2003/0815/p745a",
+  "cu": "MSK and sports"
+ },
+ {
+  "id": "w1",
+  "room": "womens",
+  "q": "Routine cervical screening in Australia is for...",
+  "options": [
+   "Women aged 18 to 69, every 2 years",
+   "Women and people with a cervix aged 25 to 74, every 5 years",
+   "Sexually active women, yearly",
+   "Ages 30 to 65, every 3 years"
+  ],
+  "answer": 1,
+  "why": "The National Cervical Screening Program invites women and people with a cervix aged 25 to 74 every 5 years for an HPV test. Self-collection is an option for everyone eligible.",
+  "source": "https://ncsr.gov.au/cervical-program/faqs-cervical-program",
+  "cu": "Women's health"
+ },
+ {
+  "id": "w2",
+  "room": "womens",
+  "q": "Unprotected sex 4 days ago. Most effective emergency contraception?",
+  "options": [
+   "Levonorgestrel pill",
+   "Ulipristal pill",
+   "Copper IUD",
+   "Nothing works after 72 hours"
+  ],
+  "answer": 2,
+  "why": "A copper IUD inserted within 5 days is more than 99% effective. Ulipristal works up to 120 hours and is slightly better than levonorgestrel (best within 72 hours, some effect to 96).",
+  "source": "https://www.fpnsw.org.au/health-information/contraception/emergency-contraception",
+  "cu": "Sexual and reproductive health"
+ },
+ {
+  "id": "w3",
+  "room": "womens",
+  "q": "A woman with a uterus is starting oestrogen MHT for hot flushes. What must be added?",
+  "options": [
+   "Nothing",
+   "A progestogen, to protect the endometrium",
+   "Testosterone",
+   "Calcium"
+  ],
+  "answer": 1,
+  "why": "Oestrogen alone thickens the uterine lining and raises endometrial cancer risk, so anyone with a uterus needs a progestogen as well. After a hysterectomy, oestrogen alone is usually fine.",
+  "source": "https://menopause.org.au/hp/information-sheets/combined-menopausal-hormone-therapy-mht",
+  "cu": "Women's health"
+ },
+ {
+  "id": "w4",
+  "room": "womens",
+  "q": "Planning a pregnancy, BMI 34. Folic acid?",
+  "options": [
+   "Not needed with a good diet",
+   "400 to 500 micrograms daily",
+   "5 mg daily (higher-risk group), from before conception to 12 weeks",
+   "Start at 12 weeks"
+  ],
+  "answer": 2,
+  "why": "Most people need at least 400 micrograms daily from a month before conception through the first trimester. A BMI over 30 (like diabetes, epilepsy medicines or a previous neural tube defect) puts her in the group where a doctor may prescribe 5 mg daily until 12 weeks.",
+  "source": "https://www.pregnancybirthbaby.org.au/pregnancy/nutrition-and-lifestyle/folate-and-pregnancy",
+  "cu": "Obstetrics and pregnancy"
+ },
+ {
+  "id": "m1",
+  "room": "mind",
+  "q": "You're worried a patient with depression might be suicidal. Does asking directly put the idea in their head?",
+  "options": [
+   "Yes: hint at it indirectly",
+   "No: asking directly is safe, and it's the most reliable way to find out",
+   "Only ask if they raise it",
+   "Leave it to the psychiatrist"
+  ],
+  "answer": 1,
+  "why": "Asking about suicide is unlikely to make things worse and is one of the few reliable ways to know. People often won't volunteer suicidal thoughts unless they're specifically asked.",
+  "source": "https://lifeinmind.org.au/about-suicide/suicide-prevention/suicide-myths",
+  "cu": "Mental health"
+ },
+ {
+  "id": "m2",
+  "room": "mind",
+  "q": "On sertraline, recently started another serotonergic drug. Now agitated, sweaty, with inducible clonus. Most likely?",
+  "options": [
+   "Serotonin toxicity",
+   "Neuroleptic malignant syndrome",
+   "A panic attack",
+   "Hypoglycaemia"
+  ],
+  "answer": 0,
+  "why": "Under the Hunter criteria, serotonergic drug exposure plus inducible clonus with agitation or sweating points to serotonin toxicity. Clonus is the giveaway, most marked in the legs.",
+  "source": "https://www.statpearls.com/point-of-care/28918",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "m3",
+  "room": "mind",
+  "q": "8-week postnatal check: Edinburgh Postnatal Depression Scale total is 14 (question 10 scores zero). Next step?",
+  "options": [
+   "Reassure: baby blues",
+   "Arrange further assessment (13 or more)",
+   "Repeat it in a year",
+   "Start an antidepressant today, no further assessment"
+  ],
+  "answer": 1,
+  "why": "COPE's guideline: an EPDS of 13 or more needs further assessment; 10 to 12 means monitor and repeat in 4 to 6 weeks. Any positive answer to question 10 (self-harm) needs immediate assessment.",
+  "source": "https://www.cope.org.au/health-professionals/health-professional-information-hubs/for-general-practitioners/perinatal-mental-health-guideline-summary-for-general-practitioners",
+  "cu": "Mental health"
+ },
+ {
+  "id": "m4",
+  "room": "mind",
+  "q": "Lithium level 2.0 mmol/L in someone who's newly shaky and unsteady. Action?",
+  "options": [
+   "File: close enough",
+   "Same-day emergency assessment: this is lithium toxicity",
+   "Increase the dose",
+   "Recheck in 3 months"
+  ],
+  "answer": 1,
+  "why": "Therapeutic levels are around 1 mmol/L or below; 1.5 to 2.5 is mild toxicity, and neurological symptoms (tremor, ataxia, confusion) matter more than the number. NSAIDs, ACE inhibitors, diuretics and kidney problems are common culprits.",
+  "source": "https://emergencycarebc.ca/clinical_resource/clinical-summary/lithium-toxicity/",
+  "cu": "Prescribing"
+ },
+ {
+  "id": "h1",
+  "room": "chronic",
+  "q": "A 52-year-old's Aus CVD Risk Calculator result is 11% over 5 years. Category and default plan?",
+  "options": [
+   "Low: lifestyle only",
+   "Intermediate: consider other factors",
+   "High: blood pressure- and lipid-lowering medicines plus lifestyle, after shared decision-making",
+   "Can't be interpreted"
+  ],
+  "answer": 2,
+  "why": "In the 2023 Australian guideline, 10% or more over 5 years is high risk. Unless contraindicated or unsuitable, offer both BP-lowering and lipid-modifying medicines, after discussing benefits and harms.",
+  "source": "https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk",
+  "cu": "Cardiovascular"
+ },
+ {
+  "id": "h2",
+  "room": "chronic",
+  "q": "From what age should the Aus CVD Risk Calculator be used for First Nations people?",
+  "options": [
+   "18",
+   "30",
+   "45",
+   "60"
+  ],
+  "answer": 1,
+  "why": "From age 30 for First Nations people (18 to 29: assess individual risk factors), from 35 for people with diabetes, and 45 to 79 for everyone else.",
+  "source": "https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk",
+  "cu": "Aboriginal and Torres Strait Islander health"
+ },
+ {
+  "id": "h3",
+  "room": "chronic",
+  "q": "A Kidney Health Check for someone with diabetes means...",
+  "options": [
+   "Creatinine only",
+   "eGFR, urine albumin-creatinine ratio and blood pressure",
+   "A urine dipstick",
+   "A renal ultrasound"
+  ],
+  "answer": 1,
+  "why": "Kidney Health Australia's check is eGFR, urine ACR and blood pressure, yearly for people with diabetes. CKD means abnormal results persisting for at least 3 months.",
+  "source": "https://www.nps.org.au/news/ckd-integrating-kidney-health-into-patient-care",
+  "cu": "Renal and urology"
+ },
+ {
+  "id": "h4",
+  "room": "chronic",
+  "q": "General HbA1c target for most adults with type 2 diabetes?",
+  "options": [
+   "6.0% or less",
+   "7.0% (53 mmol/mol) or less, individualised",
+   "8.5% or less",
+   "There isn't one"
+  ],
+  "answer": 1,
+  "why": "The RACGP handbook's general target is 7% (53 mmol/mol) or less, adjusted for the person: tighter for some, looser for frail older people or those at risk of hypos.",
+  "source": "https://www.racgp.org.au/getattachment/7a2da393-b76f-405a-a2fe-0c9c0c0d5ac8/20635-DBHB-clinical-summary-web-alt-V9.pdf.aspx",
+  "cu": "Endocrine"
+ },
+ {
+  "id": "o1",
+  "room": "outreach",
+  "q": "A 9-year-old Aboriginal boy from a remote community has a sore throat. Guideline approach?",
+  "options": [
+   "No antibiotics: probably viral",
+   "Treat with penicillin: he's in a population at high risk of rheumatic fever",
+   "Lozenges and fluids",
+   "Swab and wait a week"
+  ],
+  "answer": 1,
+  "why": "The 2020 Australian guideline recommends empirical antibiotic treatment, with penicillin first-line, for sore throats in people at high risk of acute rheumatic fever. That includes Aboriginal and Torres Strait Islander people in rural and remote settings.",
+  "source": "https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic",
+  "cu": "Aboriginal and Torres Strait Islander health"
+ },
+ {
+  "id": "o2",
+  "room": "outreach",
+  "q": "First-line secondary prophylaxis after acute rheumatic fever?",
+  "options": [
+   "IM benzathine benzylpenicillin every 28 days",
+   "Oral amoxicillin when unwell",
+   "Weekly azithromycin",
+   "None needed"
+  ],
+  "answer": 0,
+  "why": "Long-acting benzathine benzylpenicillin G every 28 days is the first-line recommendation. On time, every time: missed doses mean recurrences and heart damage.",
+  "source": "https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic",
+  "cu": "Aboriginal and Torres Strait Islander health"
+ },
+ {
+  "id": "o3",
+  "room": "outreach",
+  "q": "A recently arrived refugee adult feels well. Which test is recommended for ALL new arrivals?",
+  "options": [
+   "Strongyloides serology",
+   "Malaria testing",
+   "Schistosoma serology",
+   "H. pylori stool antigen"
+  ],
+  "answer": 0,
+  "why": "Strongyloides serology, hepatitis B serology, HIV, full blood exam and TB screening (by age and risk) are for everyone. Malaria and schistosoma depend on country of origin; H. pylori on symptoms or family history.",
+  "source": "https://www.rch.org.au/uploadedFiles/Main/Content/immigranthealth/Quick%20guide%20to%20screening%20tests%20in%20adults.pdf",
+  "cu": "Refugee and migrant health"
+ },
+ {
+  "id": "o4",
+  "room": "outreach",
+  "q": "A bushwalker is bitten on the calf by a brown snake. First aid?",
+  "options": [
+   "Wash the bite and apply a tourniquet",
+   "Firm bandage over the whole limb, splint, keep still, don't wash the bite",
+   "Cut and suck",
+   "Walk quickly back to the car"
+  ],
+  "answer": 1,
+  "why": "Pressure immobilisation: a firm broad bandage from the toes up as high as possible, a splint, and keep the person still. Don't wash, cut or suck the bite, and no arterial tourniquet. Bring help to them, and leave the bandage on until they reach care.",
+  "source": "https://biomedicalsciences.unimelb.edu.au/departments/pharmacology/engage/avru/discover/first-aid/pressure-immobilisation-first-aid",
+  "cu": "Rural and remote"
+ },
+ {
+  "id": "n1",
+  "room": "consult",
+  "cu": "Communication",
+  "q": "A patient starts crying while describing her divorce. Best first response?",
+  "options": [
+   "Hand her a tissue and move on to the next question",
+   "Refer her to a psychologist straight away",
+   "Pause, acknowledge it (\"This sounds really hard\") and give her a moment",
+   "Remind her you only have 15 minutes"
+  ],
+  "answer": 2,
+  "why": "Naming the emotion and pausing (empathic acknowledgement) builds trust and usually shortens the consult overall. Silence is a skill.",
+  "source": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+ },
+ {
+  "id": "n2",
+  "room": "consult",
+  "cu": "Communication",
+  "q": "You need to break bad news (a likely cancer on a scan). Which step comes first?",
+  "options": [
+   "Give the diagnosis in the first sentence",
+   "Find out what they already know and how much they want to know",
+   "Hand over the report to read",
+   "Book a follow-up and tell them then"
+  ],
+  "answer": 1,
+  "why": "SPIKES: set up, then Perception (what they know), Invitation (how much they want), then Knowledge, Emotions, Strategy.",
+  "source": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+ },
+ {
+  "id": "n3",
+  "room": "consult",
+  "cu": "Communication",
+  "q": "Best way to check a patient understood your plan?",
+  "options": [
+   "Ask \"Do you understand?\"",
+   "Give a printed handout only",
+   "Repeat it louder",
+   "Ask them to explain it back in their own words (teach-back)"
+  ],
+  "answer": 3,
+  "why": "\"Do you understand?\" almost always gets a yes. Teach-back reveals the gaps, and it's quick.",
+  "source": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+ },
+ {
+  "id": "n4",
+  "room": "consult",
+  "cu": "Professionalism",
+  "q": "Your mum asks you to write her a script for her usual blood pressure tablets. Code of conduct?",
+  "options": [
+   "Avoid treating close family except in an emergency or when no one else is available",
+   "Fine: you know her history best",
+   "Fine if you document it",
+   "Fine if it's not a Schedule 8 medicine"
+  ],
+  "answer": 0,
+  "why": "The Medical Board code says avoid providing care to people you have a close personal relationship with, apart from minor or emergency care. Objectivity and records suffer.",
+  "source": "https://www.medicalboard.gov.au/codes-guidelines-policies/code-of-conduct.aspx"
+ },
+ {
+  "id": "n5",
+  "room": "consult",
+  "cu": "Professionalism",
+  "q": "A colleague turns up to work smelling of alcohol and seems impaired. What's required?",
+  "options": [
+   "Make sure patients are safe now, and a mandatory notification to Ahpra if there's a reasonable belief of substantial risk to the public",
+   "Nothing unless a patient is harmed",
+   "Tell the practice manager and hope it stops",
+   "Post a warning in the staff group chat"
+  ],
+  "answer": 0,
+  "why": "Practitioners must notify Ahpra when they reasonably believe a colleague's impairment places the public at substantial risk of harm. Patient safety first, then report.",
+  "source": "https://www.ahpra.gov.au/Notifications/mandatorynotifications.aspx"
+ },
+ {
+  "id": "n6",
+  "room": "consult",
+  "cu": "Ethics and law",
+  "q": "A 15-year-old asks for the pill and doesn't want her parents told. She understands the risks and benefits. You can...",
+  "options": [
+   "Prescribe if you assess her as a mature minor (Gillick competent), and document it",
+   "Never prescribe without a parent",
+   "Prescribe only if she's 16",
+   "Call her parents to check"
+  ],
+  "answer": 0,
+  "why": "A young person who understands the treatment, risks and alternatives can consent (mature minor). Assess, document, and screen for safety (HEADSS) and coercion.",
+  "source": "https://headspace.org.au"
+ },
+ {
+  "id": "n7",
+  "room": "consult",
+  "cu": "Ethics and law",
+  "q": "Something went wrong: a script error meant a patient took the wrong dose. First step in open disclosure?",
+  "options": [
+   "Wait for a complaint",
+   "Fix the record quietly",
+   "Acknowledge it to the patient promptly, say sorry, and explain what happened and what's next",
+   "Get the patient to sign a waiver"
+  ],
+  "answer": 2,
+  "why": "Open disclosure: acknowledge, apologise (saying sorry isn't an admission of liability in Australia), explain, and act to prevent recurrence.",
+  "source": "https://www.safetyandquality.gov.au/our-work/open-disclosure"
+ },
+ {
+  "id": "n8",
+  "room": "consult",
+  "cu": "Ethics and law",
+  "q": "A patient's adult son phones asking for his father's test results. Dad hasn't given consent. You...",
+  "options": [
+   "Don't share without the patient's consent (unless there's a serious threat or legal authority)",
+   "Share them: he's family",
+   "Share only the normal ones",
+   "Email them instead"
+  ],
+  "answer": 0,
+  "why": "Health information is protected under the Privacy Act. Ask the patient. Exceptions are narrow (serious threat to life, legal requirement).",
+  "source": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+ },
+ {
+  "id": "n9",
+  "room": "consult",
+  "cu": "Communication",
+  "q": "A deaf patient who uses Auslan books a consult about new chest pain. Best set-up?",
+  "options": [
+   "Write notes back and forth",
+   "Book an Auslan interpreter (in person or video)",
+   "Ask her daughter to interpret",
+   "Speak slowly so she can lip-read"
+  ],
+  "answer": 1,
+  "why": "Lip-reading catches a fraction of speech and family interpreters compromise privacy. Book a professional Auslan interpreter; plan extra time.",
+  "source": "https://www.health.gov.au/topics/disability-and-carers"
+ },
+ {
+  "id": "n10",
+  "room": "consult",
+  "cu": "Disability",
+  "q": "Adults with intellectual disability can have a yearly health assessment. Why does it matter?",
+  "options": [
+   "They have high rates of unrecognised illness and early death, so a structured yearly check finds treatable problems",
+   "It doesn't: they see specialists",
+   "It's needed for NDIS funding",
+   "Only for people in group homes"
+  ],
+  "answer": 0,
+  "why": "People with intellectual disability die decades earlier on average, often from preventable causes. The MBS health assessment (items 701 to 707) for this group finds missed problems.",
+  "source": "https://www.health.gov.au/topics/disability-and-carers"
+ },
+ {
+  "id": "n11",
+  "room": "consult",
+  "cu": "Genetics",
+  "q": "A 38-year-old's mum had ovarian cancer at 52 and her aunt breast cancer at 40. Next step?",
+  "options": [
+   "Take a three-generation family history and consider referral to a familial cancer service",
+   "Reassure: cancer is common",
+   "Order BRCA testing on everyone",
+   "Start annual mammograms at 30 without discussion"
+  ],
+  "answer": 0,
+  "why": "This pattern can suggest BRCA1/2. A careful family history decides whether to refer to a familial cancer clinic for counselling and testing.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/genomics-in-general-practice"
+ },
+ {
+  "id": "n12",
+  "room": "consult",
+  "cu": "Men's health",
+  "q": "A 52-year-old man asks about erectile dysfunction pills. What else should this prompt?",
+  "options": [
+   "Nothing: just prescribe",
+   "A testosterone level for everyone",
+   "A urology referral",
+   "A cardiovascular risk check: ED is often an early marker of vascular disease"
+  ],
+  "answer": 3,
+  "why": "ED often predates heart disease by a few years. Check blood pressure, lipids, glucose and smoking, and ask about mood and relationships.",
+  "source": "https://www.cvdcheck.org.au"
+ },
+ {
+  "id": "n13",
+  "room": "consult",
+  "cu": "LGBTIQ+ health",
+  "q": "A new patient says they're non-binary. Best practice?",
+  "options": [
+   "Use their legal name to avoid confusion",
+   "Ask what they were \"born as\" first",
+   "Skip sexual history to avoid offence",
+   "Use the name and pronouns they tell you, and record them"
+  ],
+  "answer": 3,
+  "why": "Using affirmed names and pronouns builds trust. Ask about anatomy only when it's clinically relevant (e.g. screening), and explain why.",
+  "source": "https://www.auspath.org.au"
+ },
+ {
+  "id": "n14",
+  "room": "consult",
+  "cu": "Digital health",
+  "q": "Which is true about telehealth GP consults covered by Medicare?",
+  "options": [
+   "Generally the patient must have an established clinical relationship (seen at the practice in the last 12 months), with some exemptions",
+   "Anyone can have them with any GP",
+   "They're video only",
+   "They're always bulk billed"
+  ],
+  "answer": 0,
+  "why": "The established-relationship rule applies to most GP telehealth items, with exemptions (e.g. under 12 months old, homeless, urgent after-hours, some blood-borne virus and sexual health services).",
+  "source": "https://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/Factsheet-Telehealth-Arrangements"
+ },
+ {
+  "id": "n15",
+  "room": "consult",
+  "cu": "Communication",
+  "q": "A patient brings a long printout from the internet about a rare disease. Most helpful stance?",
+  "options": [
+   "Tell them not to Google",
+   "Explore what worried them, then share your reasoning and agree a plan",
+   "Order every test it suggests",
+   "Refer to a specialist to settle it"
+  ],
+  "answer": 1,
+  "why": "Patients research. Curiosity about their concerns plus transparent reasoning beats dismissal, and avoids low-value testing.",
+  "source": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+ },
+ {
+  "id": "n16",
+  "room": "consult",
+  "cu": "Quality and safety",
+  "q": "Which is the best example of a quality improvement cycle?",
+  "options": [
+   "Plan-Do-Study-Act: audit recall rates, change the reminder system, re-audit",
+   "An annual staff party",
+   "Reading a journal article",
+   "Buying new software"
+  ],
+  "answer": 0,
+  "why": "PDSA cycles test small changes and measure the effect. They count towards CPD and accreditation.",
+  "source": "https://www.racgp.org.au/running-a-practice/practice-standards"
+ },
+ {
+  "id": "n17",
+  "room": "consult",
+  "cu": "Professionalism",
+  "q": "CPD for GPs in Australia each year needs about...",
+  "options": [
+   "10 hours",
+   "100 hours of lectures",
+   "Nothing once you're a Fellow",
+   "50 hours, mixing education, reviewing performance and measuring outcomes"
+  ],
+  "answer": 3,
+  "why": "The Medical Board's CPD standard is 50 hours a year, with at least 25 hours on reviewing performance and measuring outcomes, plus a professional development plan.",
+  "source": "https://www.medicalboard.gov.au/Professional-Performance-Framework.aspx"
+ },
+ {
+  "id": "n18",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "A 25-minute consult with a complex patient, all face-to-face. Which MBS level?",
+  "options": [
+   "Level C (36)",
+   "Level B (23)",
+   "Level D (44)",
+   "Level E (123)"
+  ],
+  "answer": 0,
+  "why": "Level C is at least 20 and under 40 minutes. Time counts for clinical work with the patient (and related notes done during the consult).",
+  "source": "https://www.mbsonline.gov.au"
+ },
+ {
+  "id": "n19",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "An Aboriginal and Torres Strait Islander health assessment (715) can be claimed...",
+  "options": [
+   "Once every 9 months",
+   "Every 3 months",
+   "Only once in a lifetime",
+   "Only by a nurse"
+  ],
+  "answer": 0,
+  "why": "Item 715 has a 9-month minimum gap. It's a full health check with follow-up items for allied health and nurse/Aboriginal health worker care.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/atsi/guides/national-guide"
+ },
+ {
+  "id": "n20",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "Better Access mental health: how many individual psychology sessions a year under a GP mental health treatment plan?",
+  "options": [
+   "6",
+   "Up to 10",
+   "20",
+   "Unlimited"
+  ],
+  "answer": 1,
+  "why": "Up to 10 individual sessions a calendar year (with a review after the first 6). The temporary extra 10 sessions ended in 2022.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n21",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "Since 1 July 2025, GP management plans and team care arrangements were replaced by...",
+  "options": [
+   "A single GP chronic condition management plan (GPCCMP, items 965/967)",
+   "Nothing",
+   "Mental health plans",
+   "Health assessments"
+  ],
+  "answer": 0,
+  "why": "GPCCMPs replaced the old GPMP (721) and TCA (723). Allied health referrals now flow from the GPCCMP.",
+  "source": "https://www.mbsonline.gov.au"
+ },
+ {
+  "id": "n22",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "Who can sign a medical certificate of cause of death?",
+  "options": [
+   "Only a specialist",
+   "The funeral director",
+   "Only the hospital",
+   "Any doctor who knew the patient, if satisfied of the cause and it's not reportable to the coroner"
+  ],
+  "answer": 3,
+  "why": "If you can state the cause and the death isn't reportable (e.g. unexpected, violent, unnatural, unknown cause), you can certify. Otherwise report to the coroner.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n23",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "Which death must be reported to the coroner?",
+  "options": [
+   "An unexpected death where the cause isn't known",
+   "An 89-year-old in palliative care dying of known metastatic cancer",
+   "A death in hospital after a long illness with a clear cause",
+   "A death at home of expected heart failure"
+  ],
+  "answer": 0,
+  "why": "Unexpected, unnatural, violent or unknown-cause deaths (and some others, such as deaths in custody or after a medical procedure) are reportable.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n24",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "A worker hurt his back lifting at work in NSW. Which form?",
+  "options": [
+   "A standard medical certificate",
+   "A SIRA certificate of capacity",
+   "A Centrelink form",
+   "No form needed"
+  ],
+  "answer": 1,
+  "why": "In NSW workers compensation uses the SIRA certificate of capacity: diagnosis, capacity, and what work they can do (suitable duties). Focus on function.",
+  "source": "https://www.sira.nsw.gov.au"
+ },
+ {
+  "id": "n25",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "A patient asks for a copy of her full medical record. Generally...",
+  "options": [
+   "Provide access (fees may apply), unless an exception applies such as serious threat to life or health",
+   "Refuse: records belong to the practice",
+   "Only give a summary",
+   "Only via a lawyer"
+  ],
+  "answer": 0,
+  "why": "Under the Australian Privacy Principles patients have a right to access their records, with limited exceptions.",
+  "source": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+ },
+ {
+  "id": "n26",
+  "room": "desk",
+  "cu": "Digital health",
+  "q": "Patient wants their shared health summary uploaded to My Health Record. Who can see it?",
+  "options": [
+   "Anyone",
+   "Registered health providers involved in their care, subject to access controls the patient can set",
+   "Only their GP",
+   "Their employer"
+  ],
+  "answer": 1,
+  "why": "Patients can set access codes and control documents. Uploading a current shared health summary helps emergency and after-hours care.",
+  "source": "https://www.digitalhealth.gov.au/healthcare-providers/initiatives-and-programs/my-health-record"
+ },
+ {
+  "id": "n27",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "A patient asks you to backdate a sick certificate for last week when you didn't see them. You...",
+  "options": [
+   "Write it: they're honest",
+   "Refuse to see them",
+   "Only certify what you can verify; if you write about past days, state it's based on the patient's report",
+   "Charge extra"
+  ],
+  "answer": 2,
+  "why": "Certificates are legal documents. Say what you observed and when, and if you note past illness, say it's what the patient told you.",
+  "source": "https://www.medicalboard.gov.au/codes-guidelines-policies/code-of-conduct.aspx"
+ },
+ {
+  "id": "n28",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "Your 12-lead ECG, which you interpret yourself in a GP consult, is billed as...",
+  "options": [
+   "11707",
+   "It's included in the consult",
+   "11700",
+   "11714"
+  ],
+  "answer": 3,
+  "why": "Since 1 March 2026, 11714 covers a GP-performed and interpreted 12-lead ECG with a clinical note. 11707 is for a trace sent for a specialist report.",
+  "source": "https://www.mbsonline.gov.au"
+ },
+ {
+  "id": "n29",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "An after-hours home visit to a palliative patient. Which matters most for correct billing?",
+  "options": [
+   "The patient's age",
+   "The time of day and the urgency (urgent after-hours items have conditions)",
+   "Whether you drove",
+   "The weather"
+  ],
+  "answer": 1,
+  "why": "Urgent after-hours attendance items have specific time windows and requirements. Non-urgent after-hours and home visit items differ.",
+  "source": "https://www.mbsonline.gov.au"
+ },
+ {
+  "id": "n30",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "Fitness to drive: a patient had a first unprovoked seizure 2 months ago and drives a private car. Austroads standard?",
+  "options": [
+   "Not fit to drive for a minimum period (generally 6 months seizure-free for a private licence), and the patient should tell the licensing authority",
+   "Fine to drive now",
+   "Only stop driving at night",
+   "Fine if on medication"
+  ],
+  "answer": 0,
+  "why": "Assessing Fitness to Drive sets non-driving periods. Advise the patient in writing and document. Commercial licences have stricter rules.",
+  "source": "https://austroads.gov.au/drivers-and-vehicles/assessing-fitness-to-drive"
+ },
+ {
+  "id": "n31",
+  "room": "desk",
+  "cu": "Admin and legal",
+  "q": "Can you tell the licensing authority about an unsafe driver without consent?",
+  "options": [
+   "Never",
+   "Only with a court order",
+   "Yes: in most states you may report in good faith if the patient continues to drive unsafely, with legal protection",
+   "Only if they've crashed"
+  ],
+  "answer": 2,
+  "why": "Most jurisdictions protect practitioners who report in good faith. Try to work with the patient first, and document.",
+  "source": "https://austroads.gov.au/drivers-and-vehicles/assessing-fitness-to-drive"
+ },
+ {
+  "id": "n32",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "An Aboriginal patient has a Close the Gap PBS annotation. What does it do?",
+  "options": [
+   "Free GP visits",
+   "Lower (or no) PBS co-payment for eligible medicines",
+   "Free specialist visits",
+   "Access to private hospitals"
+  ],
+  "answer": 1,
+  "why": "The CTG PBS co-payment program reduces medicine costs for eligible First Nations people. Any PBS prescriber can register eligible patients.",
+  "source": "https://www.pbs.gov.au"
+ },
+ {
+  "id": "n33",
+  "room": "desk",
+  "cu": "Practice and business",
+  "q": "Which item best fits a structured yearly health check for a 47-year-old at risk of chronic disease?",
+  "options": [
+   "The 45 to 49 year old health assessment (once only, if at risk)",
+   "Standard consult",
+   "715",
+   "A mental health plan"
+  ],
+  "answer": 0,
+  "why": "The 45-49 health assessment is a one-off for people at risk of chronic disease. Time-based items 701 to 707 apply.",
+  "source": "https://www.mbsonline.gov.au"
+ },
+ {
+  "id": "n34",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Adult cardiac arrest in your clinic. Compression to breath ratio for CPR?",
+  "options": [
+   "15:2",
+   "30:2",
+   "5:1",
+   "Compressions only, never breaths"
+  ],
+  "answer": 1,
+  "why": "ANZCOR: 30 compressions to 2 breaths, about 100 to 120 a minute, at least a third of chest depth. Get the AED on early.",
+  "source": "https://www.anzcor.org/guidelines/"
+ },
+ {
+  "id": "n35",
+  "room": "resus",
+  "cu": "Occupational and environmental",
+  "q": "Bushwalker bitten on the leg by an unseen snake. First aid?",
+  "options": [
+   "Wash the bite, apply a tourniquet",
+   "Ice and elevate",
+   "Pressure immobilisation bandage over the bite and whole limb, splint, keep still, call 000. Don't wash the bite",
+   "Cut and suck"
+  ],
+  "answer": 2,
+  "why": "Pressure immobilisation slows venom spread. Leave the bite unwashed (venom can be swabbed). Tourniquets and cutting are harmful.",
+  "source": "https://www.healthdirect.gov.au/snake-bites"
+ },
+ {
+  "id": "n36",
+  "room": "resus",
+  "cu": "Occupational and environmental",
+  "q": "Redback spider bite with local pain. First aid?",
+  "options": [
+   "Ice pack for pain; no pressure bandage",
+   "Pressure immobilisation",
+   "Tourniquet",
+   "Antivenom for everyone"
+  ],
+  "answer": 0,
+  "why": "Redback venom moves slowly. Pressure bandaging makes the pain worse. Seek care if pain is severe or spreading, or if there's sweating or systemic symptoms.",
+  "source": "https://www.toxinology.com"
+ },
+ {
+  "id": "n37",
+  "room": "resus",
+  "cu": "Occupational and environmental",
+  "q": "Suspected funnel-web spider bite. First aid?",
+  "options": [
+   "Pressure immobilisation bandage and call 000: it can be life-threatening",
+   "Ice only",
+   "Wash and go home",
+   "Wait and see"
+  ],
+  "answer": 0,
+  "why": "Funnel-web envenoming can progress fast. Treat like a snake bite: pressure immobilisation and urgent transfer for possible antivenom.",
+  "source": "https://www.toxinology.com"
+ },
+ {
+  "id": "n38",
+  "room": "resus",
+  "cu": "Occupational and environmental",
+  "q": "Bitten or scratched by a bat in Australia. Next step?",
+  "options": [
+   "Wash the wound for 15 minutes and arrange post-exposure prophylaxis (Australian bat lyssavirus) urgently via public health",
+   "Nothing if the bat looked healthy",
+   "Antibiotics only",
+   "Tetanus only"
+  ],
+  "answer": 0,
+  "why": "Any bat bite or scratch in Australia needs ABLV assessment and post-exposure prophylaxis (rabies vaccine, plus immunoglobulin if not previously vaccinated).",
+  "source": "https://www.health.gov.au/diseases/australian-bat-lyssavirus-infection"
+ },
+ {
+  "id": "n39",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Which features make a headache an emergency?",
+  "options": [
+   "Gradual onset over weeks with stress",
+   "Sudden \"worst ever\" thunderclap onset, or with fever and neck stiffness, or new neuro deficit",
+   "Pain after a long day at the screen",
+   "Pain relieved by paracetamol"
+  ],
+  "answer": 1,
+  "why": "Thunderclap headache needs urgent exclusion of subarachnoid haemorrhage. Fever plus stiff neck suggests meningitis.",
+  "source": "https://www.healthdirect.gov.au/headache"
+ },
+ {
+  "id": "n40",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Adult with suspected sepsis in a rural clinic, transfer 2 hours away. Priority?",
+  "options": [
+   "Wait for blood results",
+   "Oral antibiotics and review tomorrow",
+   "Paracetamol and fluids only",
+   "Recognise it, take cultures if quick, give IV/IM antibiotics early and arrange transfer"
+  ],
+  "answer": 3,
+  "why": "The Sepsis Clinical Care Standard stresses early recognition and antibiotics within the first hour. Don't let transfer delay treatment.",
+  "source": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/sepsis-clinical-care-standard"
+ },
+ {
+  "id": "n41",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Someone has stroke symptoms that started 40 minutes ago. Best action?",
+  "options": [
+   "Book a CT for tomorrow",
+   "Give aspirin first",
+   "Wait an hour to see if it resolves",
+   "Call 000: time-critical clot treatments (thrombolysis, clot retrieval) are possible"
+  ],
+  "answer": 3,
+  "why": "Time is brain. Don't give aspirin before imaging rules out bleeding. Note the time last seen well.",
+  "source": "https://informme.org.au/guidelines"
+ },
+ {
+  "id": "n42",
+  "room": "resus",
+  "cu": "Rural and remote",
+  "q": "STEMI in a remote clinic, and PCI is more than 2 hours away. Typical approach?",
+  "options": [
+   "Wait for the plane",
+   "Aspirin only",
+   "Pre-hospital or clinic thrombolysis per protocol (if no contraindications) plus retrieval",
+   "Discharge with GTN"
+  ],
+  "answer": 2,
+  "why": "When primary PCI can't happen within about 120 minutes, fibrinolysis is recommended, followed by transfer. Rural doctors drive this.",
+  "source": "https://www.flyingdoctor.org.au"
+ },
+ {
+  "id": "n43",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "A child has stridor at rest, drooling and looks toxic, sitting forward. You should...",
+  "options": [
+   "Examine the throat with a tongue depressor",
+   "Give nebulised salbutamol",
+   "Send home with steroids",
+   "Keep them calm and upright with a parent, avoid upsetting interventions, call for urgent retrieval/airway help"
+  ],
+  "answer": 3,
+  "why": "Think epiglottitis or bacterial tracheitis. Agitating the child can trigger complete obstruction.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n44",
+  "room": "resus",
+  "cu": "Occupational and environmental",
+  "q": "Marathon runner collapses on a 38°C day, confused, hot skin. First priority?",
+  "options": [
+   "Give paracetamol",
+   "Fluids by mouth only",
+   "Let them rest in the shade",
+   "Rapid cooling (cold water immersion or ice packs and wetting) and call 000"
+  ],
+  "answer": 3,
+  "why": "Exertional heat stroke: confusion plus high temperature. Cool first and fast: every minute counts.",
+  "source": "https://www.healthdirect.gov.au/heat-stress-and-heat-related-illness"
+ },
+ {
+  "id": "n45",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Adult anaphylaxis: after the first adrenaline dose there's no improvement in 5 minutes. Next?",
+  "options": [
+   "Give an antihistamine and wait",
+   "Give oral steroids",
+   "Repeat IM adrenaline every 5 minutes as needed and call 000",
+   "Lie them sitting upright if hypotensive"
+  ],
+  "answer": 2,
+  "why": "Adrenaline is the only first-line drug. Lie flat (or sit if breathing is hard), never stand or walk them.",
+  "source": "https://www.allergy.org.au/hp/anaphylaxis"
+ },
+ {
+  "id": "n46",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "A patient has chest pain at rest for 20 minutes. Which is correct in the clinic?",
+  "options": [
+   "Arrange a stress test next week",
+   "Send them to drive to ED",
+   "Call 000, aspirin (if no allergy), ECG, and stay with them",
+   "Reassure if the ECG is normal"
+  ],
+  "answer": 2,
+  "why": "A normal ECG doesn't exclude acute coronary syndrome. Ambulance transfer, not private car.",
+  "source": "https://www.heartfoundation.org.au/for-professionals"
+ },
+ {
+  "id": "n47",
+  "room": "resus",
+  "cu": "Emergency",
+  "q": "Box jellyfish sting in tropical northern Australia. First aid?",
+  "options": [
+   "Fresh water rinse",
+   "Pour vinegar on the sting for at least 30 seconds, call 000, CPR if needed",
+   "Rub sand on it",
+   "Pressure bandage"
+  ],
+  "answer": 1,
+  "why": "Vinegar inactivates undischarged stingers of box jellyfish. Major stings can cause cardiac arrest within minutes.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n48",
+  "room": "resus",
+  "cu": "Rural and remote",
+  "q": "You're the only doctor for 200 km. What's the core ACRRM extra?",
+  "options": [
+   "Nothing different",
+   "Emergency, procedural and retrieval skills, plus working with limited resources and coordinating transfer",
+   "Only more paperwork",
+   "Only telehealth"
+  ],
+  "answer": 1,
+  "why": "Rural generalists need emergency care, procedures, population health and resource management. ACRRM's curriculum builds this in.",
+  "source": "https://www.acrrm.org.au/fellowship/curriculum"
+ },
+ {
+  "id": "n49",
+  "room": "drugs",
+  "cu": "Addiction",
+  "q": "Alcohol-dependent man presents in early withdrawal. Which vitamin before glucose?",
+  "options": [
+   "Vitamin C",
+   "Thiamine (vitamin B1)",
+   "Vitamin D",
+   "Folate only"
+  ],
+  "answer": 1,
+  "why": "Thiamine prevents Wernicke encephalopathy. Give it routinely in alcohol withdrawal and before glucose where possible.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/drugs-of-dependence"
+ },
+ {
+  "id": "n50",
+  "room": "drugs",
+  "cu": "Addiction",
+  "q": "Which screening tool is quick for risky drinking?",
+  "options": [
+   "AUDIT-C",
+   "PHQ-9",
+   "K10",
+   "MMSE"
+  ],
+  "answer": 0,
+  "why": "AUDIT-C (3 questions) screens for risky drinking. NHMRC: no more than 10 standard drinks a week and 4 on any one day for healthy adults.",
+  "source": "https://www.nhmrc.gov.au/health-advice/alcohol"
+ },
+ {
+  "id": "n51",
+  "room": "drugs",
+  "cu": "Addiction",
+  "q": "A patient on opioids for chronic pain asks about naloxone. You should...",
+  "options": [
+   "Avoid: it suggests you think they'll overdose",
+   "Only for heroin users",
+   "Offer it: take-home naloxone is free without a script for anyone at risk of opioid overdose",
+   "Only in hospital"
+  ],
+  "answer": 2,
+  "why": "The Take Home Naloxone program provides it free, no prescription, to anyone who may experience or witness an overdose.",
+  "source": "https://www.health.gov.au/our-work/take-home-naloxone-program"
+ },
+ {
+  "id": "n52",
+  "room": "drugs",
+  "cu": "Addiction",
+  "q": "Best evidence-based treatment for opioid dependence in general practice?",
+  "options": [
+   "Detox alone",
+   "Clonidine alone",
+   "Counselling only",
+   "Opioid agonist treatment (buprenorphine, including long-acting injections, or methadone)"
+  ],
+  "answer": 3,
+  "why": "Opioid agonist treatment reduces deaths and crime. GPs can prescribe buprenorphine including long-acting injectables (check your state's requirements).",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/drugs-of-dependence"
+ },
+ {
+  "id": "n53",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Before writing a Schedule 8 opioid script in NSW, which check is important?",
+  "options": [
+   "Their star sign",
+   "Their Medicare card colour",
+   "Real-time prescription monitoring (SafeScript NSW)",
+   "Nothing"
+  ],
+  "answer": 2,
+  "why": "Real-time prescription monitoring shows other recent controlled-drug scripts and helps prevent harm. Check state rules for when it's mandatory.",
+  "source": "https://www.health.nsw.gov.au/pharmaceutical/safescript"
+ },
+ {
+  "id": "n54",
+  "room": "drugs",
+  "cu": "Pain",
+  "q": "Acute non-specific low back pain. First-line treatment?",
+  "options": [
+   "Opioids",
+   "Bed rest for a week",
+   "Lumbar X-ray",
+   "Reassurance, staying active, heat and simple analgesia; avoid imaging without red flags"
+  ],
+  "answer": 3,
+  "why": "The Low Back Pain Clinical Care Standard: no routine imaging, avoid opioids where possible, keep active.",
+  "source": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/low-back-pain-clinical-care-standard"
+ },
+ {
+  "id": "n55",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "An older person is on 12 medicines and keeps falling. Best step?",
+  "options": [
+   "Add vitamin D only",
+   "Stop all medicines",
+   "Structured medication review and deprescribing, focusing on sedatives, antihypertensives and anticholinergics",
+   "Refer to a geriatrician and change nothing"
+  ],
+  "answer": 2,
+  "why": "Polypharmacy is a major falls risk. A home medicines review (HMR) with a pharmacist helps.",
+  "source": "https://www.safetyandquality.gov.au/our-work/comprehensive-care/related-topics/falls-prevention"
+ },
+ {
+  "id": "n56",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Which combination is the classic 'triple whammy' for acute kidney injury?",
+  "options": [
+   "ACE inhibitor (or ARB), diuretic, and an NSAID",
+   "Paracetamol, codeine, aspirin",
+   "Statin, aspirin, metformin",
+   "SSRI, PPI, antihistamine"
+  ],
+  "answer": 0,
+  "why": "ACEi/ARB plus diuretic plus NSAID can tip kidneys into failure, especially in older people when dehydrated.",
+  "source": "https://kidney.org.au/health-professionals"
+ },
+ {
+  "id": "n57",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Starting metformin, which long-term deficiency should you check for periodically?",
+  "options": [
+   "Vitamin B12",
+   "Vitamin A",
+   "Vitamin K",
+   "Iron"
+  ],
+  "answer": 0,
+  "why": "Long-term metformin lowers B12 absorption. Check if there's neuropathy, anaemia or every few years.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/diabetes"
+ },
+ {
+  "id": "n58",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Patient on warfarin is prescribed a course of antibiotics. Why care?",
+  "options": [
+   "No interaction",
+   "It lowers INR so double the dose",
+   "Only if they're over 80",
+   "Many antibiotics raise the INR: check it within a few days"
+  ],
+  "answer": 3,
+  "why": "Antibiotics (e.g. some macrolides, quinolones, co-trimoxazole) often raise the INR. Monitor and adjust.",
+  "source": "https://www.safetyandquality.gov.au"
+ },
+ {
+  "id": "n59",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Sick-day rules: a patient with type 2 diabetes on an SGLT2 inhibitor has gastro and can't eat. Advice?",
+  "options": [
+   "Keep taking everything",
+   "Pause the SGLT2 inhibitor (and metformin) while unwell and dehydrated; seek help if vomiting persists",
+   "Double the dose",
+   "Only stop insulin"
+  ],
+  "answer": 1,
+  "why": "SGLT2 inhibitors can cause euglycaemic ketoacidosis when unwell, fasting or dehydrated.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/diabetes"
+ },
+ {
+  "id": "n60",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "A woman of reproductive age needs a new medicine. Which needs strict pregnancy prevention?",
+  "options": [
+   "Paracetamol",
+   "Amoxicillin",
+   "Sodium valproate",
+   "Salbutamol"
+  ],
+  "answer": 2,
+  "why": "Valproate is highly teratogenic. Avoid in women who could become pregnant unless there's no alternative and effective contraception is in place.",
+  "source": "https://www.safetyandquality.gov.au"
+ },
+ {
+  "id": "n61",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "An SSRI is started for a 19-year-old with depression. Key safety counselling?",
+  "options": [
+   "None",
+   "Watch for increased agitation or suicidal thoughts early on, especially under 25; review within 1 to 2 weeks",
+   "Stop it if it doesn't work in 3 days",
+   "Take it with alcohol"
+  ],
+  "answer": 1,
+  "why": "Young people can have a rise in suicidal thinking early in treatment. Early review and a safety plan matter.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n62",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Antibiotics for an otherwise healthy adult with a cold and green sputum for 4 days?",
+  "options": [
+   "Amoxicillin",
+   "Doxycycline",
+   "Azithromycin",
+   "No antibiotics: it's viral; colour doesn't mean bacterial"
+  ],
+  "answer": 3,
+  "why": "Antimicrobial stewardship: antibiotics don't help viral URTIs and cause harm. Explain, give a safety net.",
+  "source": "https://www.safetyandquality.gov.au/our-work/antimicrobial-resistance"
+ },
+ {
+  "id": "n63",
+  "room": "drugs",
+  "cu": "Prescribing",
+  "q": "Gout: starting allopurinol after a flare. Best approach?",
+  "options": [
+   "High dose straight away",
+   "Stop it during any flare",
+   "Only if they have tophi",
+   "Start low, titrate up to reach a urate target (below 0.36 mmol/L), with flare prophylaxis (e.g. colchicine)"
+  ],
+  "answer": 3,
+  "why": "Treat-to-target urate-lowering prevents flares. Start low (especially with kidney disease) and go slow.",
+  "source": "https://www.rheumatology.org.au"
+ },
+ {
+  "id": "n64",
+  "room": "drugs",
+  "cu": "Pain",
+  "q": "After minor surgery, a patient asks for oxycodone 'just in case'. Best practice?",
+  "options": [
+   "If needed, the smallest effective supply for a few days, with a plan to stop, and avoid slow-release forms",
+   "A big box to be safe",
+   "Repeat scripts",
+   "Refuse all analgesia"
+  ],
+  "answer": 0,
+  "why": "The Opioid Analgesic Stewardship standard: short course, immediate-release, clear stop plan, and talk about safe disposal.",
+  "source": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/opioid-analgesic-stewardship-acute-pain-clinical-care-standard"
+ },
+ {
+  "id": "n65",
+  "room": "treatment",
+  "cu": "Procedures",
+  "q": "Laceration on the face of a 30-year-old. When should sutures generally come out?",
+  "options": [
+   "After 3 to 5 days",
+   "After 14 days",
+   "After 21 days",
+   "They never need removing"
+  ],
+  "answer": 0,
+  "why": "Face: about 3 to 5 days. Scalp and trunk 7 to 10 days, limbs 10 to 14, over joints longer.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n66",
+  "room": "treatment",
+  "cu": "Procedures",
+  "q": "Local anaesthetic with adrenaline: which site was traditionally avoided but is now considered safe with care?",
+  "options": [
+   "The eye",
+   "The spine",
+   "Fingers and toes (digital blocks) in healthy people",
+   "The heart"
+  ],
+  "answer": 2,
+  "why": "Evidence shows adrenaline in digital blocks is safe in healthy patients. Caution in peripheral vascular disease.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n67",
+  "room": "treatment",
+  "cu": "MSK and sports",
+  "q": "Ankle injury. Ottawa ankle rules say X-ray if...",
+  "options": [
+   "Any swelling",
+   "Bruising",
+   "Bone tenderness at the back edge or tip of either malleolus, or can't weight-bear 4 steps (now and in ED)",
+   "Pain for 2 days"
+  ],
+  "answer": 2,
+  "why": "The Ottawa rules safely cut unnecessary X-rays.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n68",
+  "room": "treatment",
+  "cu": "MSK and sports",
+  "q": "Knee osteoarthritis. Which treatment has the strongest evidence?",
+  "options": [
+   "Arthroscopic washout",
+   "Glucosamine",
+   "Exercise and weight loss (e.g. GLA:D education and exercise)",
+   "Hyaluronic injections"
+  ],
+  "answer": 2,
+  "why": "Arthroscopy for OA doesn't help. Exercise, weight management and education are first line.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/knee-and-hip-osteoarthritis"
+ },
+ {
+  "id": "n69",
+  "room": "treatment",
+  "cu": "Dermatology",
+  "q": "Which skin lesion feature most suggests nodular melanoma?",
+  "options": [
+   "Flat and slowly growing over years",
+   "Scaly and itchy",
+   "Many similar moles",
+   "Elevated, Firm and Growing over weeks to months (EFG)"
+  ],
+  "answer": 3,
+  "why": "Nodular melanomas often don't fit ABCD. EFG: elevated, firm, growing for more than a month: excise urgently.",
+  "source": "https://www.cancer.org.au/clinical-guidelines/skin-cancer/melanoma"
+ },
+ {
+  "id": "n70",
+  "room": "treatment",
+  "cu": "Dermatology",
+  "q": "Scabies in a remote community household. Approach?",
+  "options": [
+   "Treat only the person with the rash",
+   "Antibiotic cream",
+   "Wait to see if it resolves",
+   "Treat everyone in the household at the same time, and wash bedding and clothes"
+  ],
+  "answer": 3,
+  "why": "Scabies spreads by close contact. Treat contacts simultaneously (e.g. permethrin) and treat secondary skin infection; scabies drives skin sores and ARF risk.",
+  "source": "https://www.remotephcmanuals.com.au"
+ },
+ {
+  "id": "n71",
+  "room": "treatment",
+  "cu": "Eye",
+  "q": "Sudden painless loss of vision in one eye in a 70-year-old. Action?",
+  "options": [
+   "Same-day emergency referral: think central retinal artery occlusion (a stroke of the eye)",
+   "Book an optometrist next week",
+   "Eye drops",
+   "Wait for it to recover"
+  ],
+  "answer": 0,
+  "why": "CRAO is an ophthalmic emergency and a stroke equivalent. Send now.",
+  "source": "https://www.ranzco.edu"
+ },
+ {
+  "id": "n72",
+  "room": "treatment",
+  "cu": "Eye",
+  "q": "New flashes of light and a shower of floaters in one eye. Action?",
+  "options": [
+   "Same-day eye assessment for retinal tear or detachment",
+   "Reassure",
+   "Antibiotic drops",
+   "Check blood pressure only"
+  ],
+  "answer": 0,
+  "why": "Sudden flashes and floaters (especially with a shadow or curtain) need urgent dilated retinal examination.",
+  "source": "https://www.ranzco.edu"
+ },
+ {
+  "id": "n73",
+  "room": "treatment",
+  "cu": "Eye",
+  "q": "Red eye with which feature is NOT a red flag?",
+  "options": [
+   "Reduced vision",
+   "Severe pain or photophobia",
+   "Itchy watery eyes with sticky discharge in the morning, normal vision",
+   "A fixed, irregular pupil"
+  ],
+  "answer": 2,
+  "why": "Itchy, gritty or sticky with normal vision is usually conjunctivitis. Reduced vision, pain, photophobia or abnormal pupils need same-day review.",
+  "source": "https://www.healthdirect.gov.au/red-eye"
+ },
+ {
+  "id": "n74",
+  "room": "treatment",
+  "cu": "ENT",
+  "q": "Sudden hearing loss in one ear over 1 day, no wax or infection. Action?",
+  "options": [
+   "Wait 2 weeks",
+   "Ear drops",
+   "Syringe the ear",
+   "Urgent (same or next day) ENT referral: possible sudden sensorineural hearing loss, where early steroids may help"
+  ],
+  "answer": 3,
+  "why": "Sudden sensorineural hearing loss is time-sensitive. A tuning-fork test (Weber/Rinne) helps tell it apart from conductive loss.",
+  "source": "https://www.hearing.com.au"
+ },
+ {
+  "id": "n75",
+  "room": "treatment",
+  "cu": "ENT",
+  "q": "Unilateral persistent nosebleed in an older patient, pressure works. Best first-aid instruction?",
+  "options": [
+   "Lean forward and pinch the soft part of the nose for 10 to 15 minutes without letting go",
+   "Tilt head back",
+   "Lie flat",
+   "Blow the nose hard"
+  ],
+  "answer": 0,
+  "why": "Leaning forward stops blood going down the throat. Firm, continuous pressure on the soft part.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n76",
+  "room": "treatment",
+  "cu": "Procedures",
+  "q": "Ingrown toenail with recurrent infection. Most effective definitive procedure?",
+  "options": [
+   "Partial nail avulsion with phenolisation of the matrix",
+   "Repeated antibiotics",
+   "Cutting a V in the nail",
+   "Taping only"
+  ],
+  "answer": 0,
+  "why": "Wedge resection with phenol reduces recurrence. Antibiotics don't fix the cause.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n77",
+  "room": "treatment",
+  "cu": "Oncology",
+  "q": "Which skin cancer is most common in Australia?",
+  "options": [
+   "Melanoma",
+   "Merkel cell carcinoma",
+   "Basal cell carcinoma",
+   "Squamous cell carcinoma"
+  ],
+  "answer": 2,
+  "why": "BCC is the most common, followed by SCC. Melanoma is the deadliest of the three.",
+  "source": "https://www.cancer.org.au/clinical-guidelines/skin-cancer"
+ },
+ {
+  "id": "n78",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "A 10-month-old with bronchiolitis, feeding well, sats normal. Which treatment helps?",
+  "options": [
+   "Salbutamol",
+   "Oral steroids",
+   "Antibiotics",
+   "Supportive care: small frequent feeds, saline drops, watch for red flags"
+  ],
+  "answer": 3,
+  "why": "Bronchiolitis is viral. Salbutamol, steroids and antibiotics don't help. Red flags: poor feeding (under half usual), apnoea, working hard to breathe, low sats.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n79",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "Croup with a barking cough and stridor only when upset. Treatment?",
+  "options": [
+   "Antibiotics",
+   "Salbutamol",
+   "A single dose of oral steroid (dexamethasone or prednisolone)",
+   "Nothing"
+  ],
+  "answer": 2,
+  "why": "Oral steroids reduce severity and return visits. Stridor at rest or distress means hospital.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n80",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "An 18-month-old isn't saying any words and doesn't point to show you things. Next step?",
+  "options": [
+   "Wait until 3",
+   "Speech is fine as long as they understand",
+   "Tell parents to read more",
+   "Developmental assessment and hearing test; consider autism screening"
+  ],
+  "answer": 3,
+  "why": "No words by 16 to 18 months, or no pointing, are red flags. Check hearing and refer early: early support works.",
+  "source": "https://raisingchildren.net.au"
+ },
+ {
+  "id": "n81",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "A 4-year-old with fever for 6 days, red eyes, red cracked lips, rash and swollen hands. Think...",
+  "options": [
+   "Viral rash",
+   "Scarlet fever",
+   "Kawasaki disease: urgent paediatric review",
+   "Measles only"
+  ],
+  "answer": 2,
+  "why": "Kawasaki disease needs IV immunoglobulin to prevent coronary artery aneurysms. Fever 5+ days plus the features.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n82",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "A 9-month-old has intermittent screaming episodes, pulling legs up, then pale and floppy between. Think...",
+  "options": [
+   "Intussusception: urgent ED",
+   "Colic",
+   "Teething",
+   "Constipation"
+  ],
+  "answer": 0,
+  "why": "Classic intussusception. Redcurrant jelly stool is a late sign. Don't wait for it.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n83",
+  "room": "kids",
+  "cu": "Immunisation",
+  "q": "Routine National Immunisation Program visits in infancy are at...",
+  "options": [
+   "Only 12 months",
+   "Every month to 2 years",
+   "Only at school",
+   "Birth, 2, 4, 6, 12 and 18 months, and 4 years"
+  ],
+  "answer": 3,
+  "why": "Birth (hep B), 6 weeks to 2 months, 4 months, 6 months, 12 months, 18 months and 4 years. Catch-up schedules exist for late starters.",
+  "source": "https://immunisationhandbook.health.gov.au"
+ },
+ {
+  "id": "n84",
+  "room": "kids",
+  "cu": "Adolescent health",
+  "q": "Best framework for a psychosocial check-in with a 15-year-old?",
+  "options": [
+   "Ask only with parents present",
+   "Skip it unless they bring something up",
+   "HEEADSSS (home, education/employment, eating, activities, drugs, sexuality, suicide/mood, safety), with time alone and confidentiality explained",
+   "A written questionnaire only"
+  ],
+  "answer": 2,
+  "why": "Seeing young people alone for part of the consult (with limits of confidentiality explained) uncovers issues they won't raise in front of parents.",
+  "source": "https://headspace.org.au"
+ },
+ {
+  "id": "n85",
+  "room": "kids",
+  "cu": "Family violence and child protection",
+  "q": "A toddler has bruises on the ears, neck and torso with an unclear story. You must...",
+  "options": [
+   "Ask the parents to explain and leave it",
+   "Treat as possible non-accidental injury: make sure the child is safe and make a report (GPs are mandatory reporters)",
+   "Wait for a second episode",
+   "Order a skin biopsy"
+  ],
+  "answer": 1,
+  "why": "Bruising in protected areas (ears, neck, torso, buttocks) or any bruising in a non-mobile baby is a red flag. Use your state's reporting pathway.",
+  "source": "https://reporter.childstory.nsw.gov.au"
+ },
+ {
+  "id": "n86",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "A 2-year-old swallowed a button battery 1 hour ago and seems fine. Action?",
+  "options": [
+   "Call 000 or go to ED now; call the Poisons Information Centre on 13 11 26",
+   "Watch at home",
+   "Give milk and wait",
+   "Make them vomit"
+  ],
+  "answer": 0,
+  "why": "Button batteries can burn through the oesophagus within hours even when the child seems well.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n87",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "Feeding advice for an infant at high risk of peanut allergy?",
+  "options": [
+   "Avoid peanut until age 3",
+   "Only after a skin prick test",
+   "Avoid all nuts until school",
+   "Introduce smooth peanut butter (and other allergens) in the first year, around 6 months, when ready"
+  ],
+  "answer": 3,
+  "why": "ASCIA: introduce common allergens, including peanut and egg, in the first year. Delaying increases allergy risk.",
+  "source": "https://www.allergy.org.au/hp/anaphylaxis"
+ },
+ {
+  "id": "n88",
+  "room": "kids",
+  "cu": "Adolescent health",
+  "q": "A 16-year-old's BMI has dropped fast, she exercises compulsively and her heart rate is 45. Action?",
+  "options": [
+   "Treat as a possible eating disorder with medical instability: same-day hospital assessment",
+   "Reassure: she's fit",
+   "Refer to a dietitian next month",
+   "Tell her to eat more"
+  ],
+  "answer": 0,
+  "why": "Bradycardia under 50 in an adolescent with weight loss is a sign of medical instability. Admission criteria include HR, BP, temperature and electrolytes.",
+  "source": "https://insideoutinstitute.org.au"
+ },
+ {
+  "id": "n89",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "Fever in a 2-year-old: which is a red flag for serious bacterial infection?",
+  "options": [
+   "Fever of 38.5°C",
+   "Non-blanching rash, drowsiness or hard to rouse, or reduced fluid intake and urine",
+   "Runny nose",
+   "Fever that comes down with paracetamol"
+  ],
+  "answer": 1,
+  "why": "Traffic-light features: colour, activity, breathing, hydration, rash. A non-blanching rash with fever is meningococcal until proven otherwise.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n90",
+  "room": "kids",
+  "cu": "Child and youth",
+  "q": "School-age child with a limp and no injury, fever and refusing to bear weight. Think first of...",
+  "options": [
+   "Growing pains",
+   "Transient synovitis, no tests needed",
+   "Septic arthritis or osteomyelitis: urgent assessment",
+   "Flat feet"
+  ],
+  "answer": 2,
+  "why": "Fever plus non-weight-bearing needs bloods and imaging today. Transient synovitis is a diagnosis of exclusion.",
+  "source": "https://www.rch.org.au/clinicalguide/"
+ },
+ {
+  "id": "n91",
+  "room": "kids",
+  "cu": "Immunisation",
+  "q": "A parent is hesitant about vaccines. Most effective approach?",
+  "options": [
+   "Dismiss them from the practice",
+   "Listen to their specific concerns, give clear information, and use a presumptive recommendation",
+   "Scare them with statistics",
+   "Skip it this visit and never raise it"
+  ],
+  "answer": 1,
+  "why": "A strong, respectful recommendation and addressing specific concerns works better than debate. Keep the door open.",
+  "source": "https://immunisationhandbook.health.gov.au"
+ },
+ {
+  "id": "n93",
+  "room": "womens",
+  "cu": "Sexual and reproductive health",
+  "q": "Migraine with aura. Which contraception is contraindicated?",
+  "options": [
+   "Copper IUD",
+   "Combined oestrogen-containing pill",
+   "Progestogen implant",
+   "Hormonal IUD"
+  ],
+  "answer": 1,
+  "why": "Oestrogen plus migraine with aura raises stroke risk. Progestogen-only and non-hormonal methods are fine.",
+  "source": "https://www.fpnsw.org.au"
+ },
+ {
+  "id": "n94",
+  "room": "womens",
+  "cu": "Sexual and reproductive health",
+  "q": "Uncomplicated chlamydia in a 22-year-old. First-line treatment in Australian guidelines?",
+  "options": [
+   "Azithromycin 1 g once",
+   "Amoxicillin",
+   "Ciprofloxacin",
+   "Doxycycline 100 mg twice daily for 7 days"
+  ],
+  "answer": 3,
+  "why": "Doxycycline is now preferred (more effective, especially for rectal infection). Do contact tracing and retest at 3 months.",
+  "source": "https://sti.guidelines.org.au"
+ },
+ {
+  "id": "n95",
+  "room": "womens",
+  "cu": "Sexual and reproductive health",
+  "q": "Which is true about HIV pre-exposure prophylaxis (PrEP)?",
+  "options": [
+   "Only specialists can prescribe it",
+   "It's only for people with HIV",
+   "It replaces condoms for all STIs",
+   "GPs can prescribe it on the PBS; it needs HIV, kidney and STI testing and regular review"
+  ],
+  "answer": 3,
+  "why": "PrEP is highly effective against HIV. 3-monthly HIV and STI testing, kidney function monitoring.",
+  "source": "https://ashm.org.au/resources/prep-guidelines/"
+ },
+ {
+  "id": "n96",
+  "room": "womens",
+  "cu": "Obstetrics and pregnancy",
+  "q": "Glucose tolerance test for gestational diabetes is usually done at...",
+  "options": [
+   "8 weeks",
+   "36 weeks",
+   "After birth only",
+   "24 to 28 weeks (earlier if high risk)"
+  ],
+  "answer": 3,
+  "why": "75 g OGTT at 24 to 28 weeks. Early testing for women with risk factors.",
+  "source": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
+ },
+ {
+  "id": "n97",
+  "room": "womens",
+  "cu": "Immunisation",
+  "q": "Which vaccines are recommended in every pregnancy?",
+  "options": [
+   "Pertussis (from 20 weeks, ideally by 32), influenza (any stage), and RSV (Abrysvo, 28 to 36 weeks)",
+   "MMR and varicella",
+   "Hepatitis A",
+   "None"
+  ],
+  "answer": 0,
+  "why": "All free. Live vaccines (MMR, varicella) are contraindicated in pregnancy.",
+  "source": "https://immunisationhandbook.health.gov.au"
+ },
+ {
+  "id": "n98",
+  "room": "womens",
+  "cu": "Obstetrics and pregnancy",
+  "q": "A woman at 34 weeks has headache, visual disturbance and BP 160/105. Action?",
+  "options": [
+   "Paracetamol and review tomorrow",
+   "Treat as severe pre-eclampsia: urgent hospital transfer",
+   "Advise rest",
+   "Recheck BP next week"
+  ],
+  "answer": 1,
+  "why": "Severe hypertension plus symptoms in pregnancy is an emergency (risk of eclampsia, stroke, abruption).",
+  "source": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
+ },
+ {
+  "id": "n99",
+  "room": "womens",
+  "cu": "Obstetrics and pregnancy",
+  "q": "Edinburgh Postnatal Depression Scale: which item always needs action regardless of total score?",
+  "options": [
+   "Sleep",
+   "Anxiety",
+   "Crying",
+   "Question 10 (thoughts of self-harm)"
+  ],
+  "answer": 3,
+  "why": "Any positive answer to Q10 needs immediate safety assessment. Scores of 13 or more suggest probable depression.",
+  "source": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
+ },
+ {
+  "id": "n100",
+  "room": "womens",
+  "cu": "Women's health",
+  "q": "Breast lump in a 45-year-old. The standard work-up is the triple test:",
+  "options": [
+   "Mammogram only",
+   "Ultrasound and wait 3 months",
+   "Tumour markers",
+   "Clinical exam, imaging (mammogram and/or ultrasound) and biopsy (FNA or core)"
+  ],
+  "answer": 3,
+  "why": "All three parts are needed. A single normal result doesn't rule out cancer.",
+  "source": "https://www.cancer.org.au/health-professionals/optimal-cancer-care-pathways"
+ },
+ {
+  "id": "n101",
+  "room": "womens",
+  "cu": "Women's health",
+  "q": "Menopausal hormone therapy: which route has lower clot risk?",
+  "options": [
+   "Oral oestrogen",
+   "Both the same",
+   "Transdermal oestrogen (patch or gel)",
+   "Vaginal oestrogen has the highest risk"
+  ],
+  "answer": 2,
+  "why": "Transdermal oestrogen doesn't raise VTE risk the way oral does. Women with a uterus need a progestogen too.",
+  "source": "https://www.menopause.org.au/hp"
+ },
+ {
+  "id": "n102",
+  "room": "womens",
+  "cu": "Women's health",
+  "q": "Postmenopausal bleeding in a 62-year-old. Next step?",
+  "options": [
+   "Reassure",
+   "Pelvic (transvaginal) ultrasound and gynaecology referral to exclude endometrial cancer",
+   "Start HRT",
+   "Wait 6 months"
+  ],
+  "answer": 1,
+  "why": "Endometrial thickness on ultrasound guides biopsy. Postmenopausal bleeding is cancer until proven otherwise.",
+  "source": "https://ranzcog.edu.au/resources/"
+ },
+ {
+  "id": "n103",
+  "room": "womens",
+  "cu": "Family violence and child protection",
+  "q": "Best way to ask about family violence?",
+  "options": [
+   "Only if there are injuries",
+   "Ask in front of the partner to be transparent",
+   "Leave a pamphlet",
+   "Ask directly and privately, e.g. \"Has anyone hurt you or made you feel afraid?\", with no partner present"
+  ],
+  "answer": 3,
+  "why": "Ask alone. Believe, validate, assess safety (especially strangulation, which predicts homicide), and offer 1800RESPECT.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/abuse-and-violence"
+ },
+ {
+  "id": "n104",
+  "room": "womens",
+  "cu": "Women's health",
+  "q": "PCOS diagnosis in adults (Rotterdam) needs two of...",
+  "options": [
+   "Obesity, acne, hair loss",
+   "High prolactin, low TSH, acne",
+   "Irregular or absent ovulation, clinical or biochemical high androgens, polycystic ovaries on ultrasound",
+   "Pelvic pain, heavy periods, infertility"
+  ],
+  "answer": 2,
+  "why": "After excluding other causes. In adolescents, ultrasound isn't used for diagnosis.",
+  "source": "https://ranzcog.edu.au/resources/"
+ },
+ {
+  "id": "n105",
+  "room": "womens",
+  "cu": "Oncology",
+  "q": "Cervical screening: a 30-year-old's HPV test shows HPV 16. Next step?",
+  "options": [
+   "Repeat in 5 years",
+   "Repeat HPV in 12 months",
+   "Nothing",
+   "Refer for colposcopy"
+  ],
+  "answer": 3,
+  "why": "HPV 16/18 always goes to colposcopy, whatever the cytology.",
+  "source": "https://www.health.gov.au/our-work/national-cervical-screening-program"
+ },
+ {
+  "id": "n106",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "A patient with depression has a plan to end their life tonight. Most important action?",
+  "options": [
+   "Book a psychology appointment next week",
+   "Prescribe an antidepressant",
+   "Don't leave them alone; arrange urgent mental health assessment (crisis team or ED), involve supports, and remove means",
+   "Ask them to sign a no-harm contract"
+  ],
+  "answer": 2,
+  "why": "Safety first. No-suicide contracts don't work. Collaborative safety planning and urgent assessment do.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n107",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "First-line treatment for chronic insomnia in adults?",
+  "options": [
+   "Benzodiazepines",
+   "Antihistamines",
+   "Alcohol at night",
+   "Cognitive behavioural therapy for insomnia (CBT-i)"
+  ],
+  "answer": 3,
+  "why": "CBT-i (including digital programs) beats medicines long term.",
+  "source": "https://www.sleephealthfoundation.org.au"
+ },
+ {
+  "id": "n108",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "A 72-year-old is newly confused over 2 days, drowsy, with poor attention. Most likely?",
+  "options": [
+   "Dementia",
+   "Delirium: find the cause (infection, drugs, retention, constipation, dehydration)",
+   "Depression",
+   "Normal ageing"
+  ],
+  "answer": 1,
+  "why": "Delirium is acute, fluctuating and inattentive. The 4AT is a quick screen. It's a medical emergency.",
+  "source": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/delirium-clinical-care-standard"
+ },
+ {
+  "id": "n109",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "Which is a useful cognitive screen for people from culturally and linguistically diverse backgrounds?",
+  "options": [
+   "MMSE",
+   "RUDAS (Rowland Universal Dementia Assessment Scale)",
+   "AUDIT",
+   "K10"
+  ],
+  "answer": 1,
+  "why": "RUDAS is less affected by culture and education level. Use an interpreter.",
+  "source": "https://cdpc.sydney.edu.au/research/clinical-guidelines-for-dementia/"
+ },
+ {
+  "id": "n110",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "Lithium: which test is needed regularly?",
+  "options": [
+   "Lithium levels, kidney function and thyroid function (plus calcium)",
+   "Liver enzymes only",
+   "Iron studies",
+   "Nothing once stable"
+  ],
+  "answer": 0,
+  "why": "Lithium affects the kidneys and thyroid and has a narrow therapeutic range. Dehydration and NSAIDs raise levels.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n111",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "A patient on an antipsychotic has gained 8 kg. What should you monitor?",
+  "options": [
+   "Nothing",
+   "Weight, waist, blood pressure, glucose/HbA1c and lipids (metabolic monitoring)",
+   "Only weight",
+   "Only liver tests"
+  ],
+  "answer": 1,
+  "why": "Antipsychotics (especially olanzapine, clozapine) cause metabolic syndrome. People with severe mental illness die years earlier, mostly from physical illness.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n112",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "Generalised anxiety disorder, first-line management?",
+  "options": [
+   "Benzodiazepines long-term",
+   "Psychological therapy (CBT), with an SSRI or SNRI if needed",
+   "Antipsychotics",
+   "Beta-blockers alone"
+  ],
+  "answer": 1,
+  "why": "CBT and SSRIs/SNRIs are first line. Benzodiazepines cause dependence.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n113",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "How often should someone on clozapine have their blood count checked long term?",
+  "options": [
+   "Never",
+   "Regularly (weekly at first, then monthly) for neutropenia, per the monitoring protocol",
+   "Only if they feel unwell",
+   "Every 5 years"
+  ],
+  "answer": 1,
+  "why": "Clozapine can cause severe neutropenia and myocarditis (early). Shared-care monitoring is mandatory.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n114",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "A man says he's 'fine' but has stopped seeing friends, is drinking more and gave away his tools. You should...",
+  "options": [
+   "Accept that he's fine",
+   "Ask directly about suicidal thoughts",
+   "Tell him to cut back on drinking",
+   "Refer to a gym"
+  ],
+  "answer": 1,
+  "why": "Withdrawal, more drinking and giving away possessions are warning signs. Asking directly doesn't plant the idea.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n115",
+  "room": "mind",
+  "cu": "Mental health",
+  "q": "Adult ADHD: what should be checked before starting a stimulant?",
+  "options": [
+   "Blood pressure, heart rate, cardiac history, substance use, and confirmation of the diagnosis",
+   "Nothing",
+   "Only a urine drug screen",
+   "Only weight"
+  ],
+  "answer": 0,
+  "why": "Stimulants raise heart rate and BP. Ask about palpitations, syncope and family history of sudden death. Check your state's prescribing rules.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/gp-mental-health-standards-collaboration"
+ },
+ {
+  "id": "n116",
+  "room": "chronic",
+  "cu": "Cardiovascular",
+  "q": "New AF in a 68-year-old with hypertension. How do you decide on anticoagulation in Australia?",
+  "options": [
+   "Aspirin for everyone",
+   "Only if they've had a stroke",
+   "Warfarin only",
+   "CHA2DS2-VA score: anticoagulate (usually a DOAC) if 2 or more, consider at 1"
+  ],
+  "answer": 3,
+  "why": "The Australian guideline uses CHA2DS2-VA (no sex point). Aspirin isn't an alternative for stroke prevention.",
+  "source": "https://www.heartlungcirc.org/article/S1443-9506(18)31763-2/fulltext"
+ },
+ {
+  "id": "n117",
+  "room": "chronic",
+  "cu": "Cardiovascular",
+  "q": "Clinic BP is 152/94 in someone without known heart disease. Next step?",
+  "options": [
+   "Start two drugs today",
+   "Confirm with ambulatory or home BP monitoring, and assess absolute CVD risk",
+   "Recheck in a year",
+   "Diagnose white-coat and ignore"
+  ],
+  "answer": 1,
+  "why": "Out-of-clinic readings confirm hypertension. Treatment depends on BP level and absolute risk.",
+  "source": "https://www.heartfoundation.org.au/for-professionals"
+ },
+ {
+  "id": "n118",
+  "room": "chronic",
+  "cu": "Cardiovascular",
+  "q": "Heart failure with reduced ejection fraction. Which four medicine classes improve survival?",
+  "options": [
+   "Diuretics, digoxin, aspirin, statins",
+   "Calcium channel blockers and nitrates",
+   "ACEi/ARB/ARNI, beta-blocker, MRA (spironolactone), SGLT2 inhibitor",
+   "Only diuretics"
+  ],
+  "answer": 2,
+  "why": "The four pillars. Diuretics help symptoms but don't improve survival.",
+  "source": "https://www.heartfoundation.org.au/for-professionals/heart-failure-guidelines"
+ },
+ {
+  "id": "n119",
+  "room": "chronic",
+  "cu": "Respiratory",
+  "q": "How is COPD confirmed?",
+  "options": [
+   "Chest X-ray",
+   "Peak flow",
+   "Spirometry: post-bronchodilator FEV1/FVC below 0.7",
+   "Symptoms alone"
+  ],
+  "answer": 2,
+  "why": "Spirometry confirms airflow limitation that doesn't fully reverse. Then COPD-X guides stepwise care.",
+  "source": "https://copdx.org.au"
+ },
+ {
+  "id": "n120",
+  "room": "chronic",
+  "cu": "Respiratory",
+  "q": "Mild asthma in an adult using salbutamol twice a week. Preferred treatment?",
+  "options": [
+   "As-needed low-dose budesonide-formoterol (anti-inflammatory reliever)",
+   "Salbutamol alone",
+   "Montelukast",
+   "Oral steroids"
+  ],
+  "answer": 0,
+  "why": "Salbutamol-only treatment raises the risk of severe attacks. As-needed ICS-formoterol is preferred for mild asthma in adults and adolescents.",
+  "source": "https://www.asthmahandbook.org.au"
+ },
+ {
+  "id": "n121",
+  "room": "chronic",
+  "cu": "Respiratory",
+  "q": "Community-acquired pneumonia in a clinic. Which tool helps decide home versus hospital?",
+  "options": [
+   "CHA2DS2-VA",
+   "CURB-65 (or CORB), plus clinical judgement and social factors",
+   "Wells score",
+   "GCS only"
+  ],
+  "answer": 1,
+  "why": "Confusion, urea, respiratory rate, BP, age 65+. Low oxygen saturation and frailty matter too.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n122",
+  "room": "chronic",
+  "cu": "Endocrine",
+  "q": "Diabetes screening for a 45-year-old non-Indigenous adult starts with...",
+  "options": [
+   "HbA1c for everyone yearly",
+   "Fasting glucose monthly",
+   "Nothing until symptoms",
+   "AUSDRISK every 3 years from 40; test if high risk"
+  ],
+  "answer": 3,
+  "why": "AUSDRISK from 40 (from 18 for First Nations people). HbA1c 6.5% (48 mmol/mol) or more is diagnostic.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/preventive-activities-in-general-practice"
+ },
+ {
+  "id": "n123",
+  "room": "chronic",
+  "cu": "Endocrine",
+  "q": "Type 2 diabetes with established cardiovascular disease. Which medicine classes have proven CV benefit?",
+  "options": [
+   "Sulfonylureas",
+   "DPP-4 inhibitors",
+   "SGLT2 inhibitors and GLP-1 receptor agonists",
+   "Insulin"
+  ],
+  "answer": 2,
+  "why": "Choose agents with outcome benefit when there's CVD, heart failure or kidney disease.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/diabetes"
+ },
+ {
+  "id": "n124",
+  "room": "chronic",
+  "cu": "Renal and urology",
+  "q": "CKD: which two tests define and stage it?",
+  "options": [
+   "Urine culture and ultrasound",
+   "Creatinine only",
+   "eGFR and urine albumin-creatinine ratio (uACR)",
+   "Potassium and sodium"
+  ],
+  "answer": 2,
+  "why": "Staging uses both, on at least two occasions 3 months apart. Kidney Health Australia has an action plan.",
+  "source": "https://kidney.org.au/health-professionals"
+ },
+ {
+  "id": "n125",
+  "room": "chronic",
+  "cu": "Renal and urology",
+  "q": "Visible blood in the urine in a 60-year-old smoker, no infection. Next step?",
+  "options": [
+   "Repeat urine in 3 months",
+   "Urology referral for cystoscopy and imaging (CT urogram)",
+   "Antibiotics",
+   "Reassure"
+  ],
+  "answer": 1,
+  "why": "Painless visible haematuria is bladder or kidney cancer until proven otherwise.",
+  "source": "https://www.cancer.org.au/health-professionals/optimal-cancer-care-pathways"
+ },
+ {
+  "id": "n126",
+  "room": "chronic",
+  "cu": "Gastro and liver",
+  "q": "Testing for coeliac disease: what must the patient be doing?",
+  "options": [
+   "Eating gluten (daily, for at least 6 weeks) before serology",
+   "Gluten-free for 6 weeks",
+   "Fasting",
+   "Nothing special"
+  ],
+  "answer": 0,
+  "why": "A gluten-free diet causes false negatives. Then confirm with biopsy (or no-biopsy pathways in some children).",
+  "source": "https://coeliac.org.au/health-professionals"
+ },
+ {
+  "id": "n127",
+  "room": "chronic",
+  "cu": "Gastro and liver",
+  "q": "Iron deficiency anaemia in a 64-year-old man. Next step?",
+  "options": [
+   "Iron tablets and review in a year",
+   "Vitamin B12",
+   "Dietitian only",
+   "Iron plus gastroscopy and colonoscopy to find the source"
+  ],
+  "answer": 3,
+  "why": "In men and postmenopausal women, iron deficiency needs a GI source excluded (including coeliac serology).",
+  "source": "https://www.blood.gov.au/iron-product-choice-and-dose-calculation-guide-adults"
+ },
+ {
+  "id": "n128",
+  "room": "chronic",
+  "cu": "Gastro and liver",
+  "q": "Fatty liver on ultrasound with mild ALT rise. Best first step for fibrosis risk?",
+  "options": [
+   "Liver biopsy",
+   "Repeat ultrasound monthly",
+   "Nothing",
+   "FIB-4 score (age, AST, ALT, platelets), then elastography if indeterminate or high"
+  ],
+  "answer": 3,
+  "why": "FIB-4 is a simple first triage. MASLD is the new name for metabolic fatty liver disease.",
+  "source": "https://www.gesa.org.au"
+ },
+ {
+  "id": "n129",
+  "room": "chronic",
+  "cu": "Gastro and liver",
+  "q": "H. pylori breath test: what should be stopped first?",
+  "options": [
+   "Nothing",
+   "Paracetamol",
+   "Statins",
+   "PPIs for 2 weeks and antibiotics for 4 weeks before testing"
+  ],
+  "answer": 3,
+  "why": "PPIs and recent antibiotics cause false negatives.",
+  "source": "https://www.gesa.org.au"
+ },
+ {
+  "id": "n130",
+  "room": "chronic",
+  "cu": "Neurology",
+  "q": "Headache in a 70-year-old with jaw pain when chewing and scalp tenderness. Action?",
+  "options": [
+   "Simple analgesia",
+   "MRI next month",
+   "Massage",
+   "Urgent ESR/CRP and start high-dose prednisolone the same day if strongly suspected; urgent referral"
+  ],
+  "answer": 3,
+  "why": "Giant cell arteritis can cause permanent blindness. Don't wait for biopsy to treat.",
+  "source": "https://www.rheumatology.org.au"
+ },
+ {
+  "id": "n131",
+  "room": "chronic",
+  "cu": "Neurology",
+  "q": "TIA symptoms that fully resolved 1 hour ago. Best approach?",
+  "options": [
+   "Routine outpatient appointment",
+   "Aspirin and see in a week",
+   "Nothing as it's resolved",
+   "Urgent same-day assessment (ED or rapid TIA clinic), don't rely on the ABCD2 score alone"
+  ],
+  "answer": 3,
+  "why": "Stroke risk is highest in the first days. Urgent imaging and specialist assessment.",
+  "source": "https://informme.org.au/guidelines"
+ },
+ {
+  "id": "n132",
+  "room": "chronic",
+  "cu": "Aged care",
+  "q": "Which is the best single test to assess falls risk quickly?",
+  "options": [
+   "Timed Up and Go (TUG): over about 12 to 14 seconds suggests increased risk",
+   "Romberg",
+   "Grip strength",
+   "Hearing test"
+  ],
+  "answer": 0,
+  "why": "Plus ask about falls, review medicines, vision, feet, home hazards and strength and balance exercise.",
+  "source": "https://www.safetyandquality.gov.au/our-work/comprehensive-care/related-topics/falls-prevention"
+ },
+ {
+  "id": "n133",
+  "room": "chronic",
+  "cu": "Aged care",
+  "q": "Osteoporosis: who should have a bone density scan covered by Medicare without prior fracture?",
+  "options": [
+   "Everyone at 50",
+   "Only women",
+   "Nobody",
+   "People aged 70 and over, and those with certain risk factors"
+  ],
+  "answer": 3,
+  "why": "Over 70s are eligible for DXA. Minimal-trauma fracture after 50 means osteoporosis treatment should be considered regardless.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/osteoporosis"
+ },
+ {
+  "id": "n134",
+  "room": "chronic",
+  "cu": "Palliative care",
+  "q": "Advance care planning is best started...",
+  "options": [
+   "In the last week of life",
+   "Only by specialists",
+   "Only if family request it",
+   "Early, while the person can take part, and revisited over time"
+  ],
+  "answer": 3,
+  "why": "Includes choosing a substitute decision-maker and documenting values and preferences.",
+  "source": "https://www.advancecareplanning.org.au"
+ },
+ {
+  "id": "n135",
+  "room": "chronic",
+  "cu": "Palliative care",
+  "q": "Breathlessness in a dying patient with advanced cancer, already on oxygen if needed. Which medicine helps?",
+  "options": [
+   "Low-dose opioid (e.g. morphine)",
+   "Antibiotics",
+   "Salbutamol",
+   "Vitamin C"
+  ],
+  "answer": 0,
+  "why": "Low-dose opioids relieve breathlessness. A fan to the face and positioning help too.",
+  "source": "https://www.caresearch.com.au"
+ },
+ {
+  "id": "n136",
+  "room": "chronic",
+  "cu": "Palliative care",
+  "q": "A patient is dying at home and has a terminal 'death rattle'. Most important intervention?",
+  "options": [
+   "Deep suctioning",
+   "Repositioning and explaining to the family that it isn't distressing for the patient; anticholinergic medicine may help",
+   "IV fluids",
+   "Oxygen"
+  ],
+  "answer": 1,
+  "why": "Noisy breathing mainly distresses family. Explanation is key. IV fluids can make secretions worse.",
+  "source": "https://www.caresearch.com.au"
+ },
+ {
+  "id": "n137",
+  "room": "chronic",
+  "cu": "Sleep",
+  "q": "Snoring, witnessed apnoeas and daytime sleepiness. Useful screening questionnaire?",
+  "options": [
+   "STOP-BANG (and Epworth Sleepiness Scale)",
+   "PHQ-9",
+   "AUDIT",
+   "Wells"
+  ],
+  "answer": 0,
+  "why": "Then sleep study. Remember driving safety with excessive sleepiness.",
+  "source": "https://www.sleephealthfoundation.org.au"
+ },
+ {
+  "id": "n138",
+  "room": "chronic",
+  "cu": "Nutrition and obesity",
+  "q": "Obesity management: which has the most weight-loss effect long term?",
+  "options": [
+   "Diet supplements",
+   "Bariatric surgery, then newer GLP-1-based medicines, alongside lifestyle support",
+   "Juice cleanses",
+   "Exercise alone"
+  ],
+  "answer": 1,
+  "why": "Lifestyle is the base. Medicines and surgery give larger, more durable loss in suitable patients.",
+  "source": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/management-of-obesity"
+ },
+ {
+  "id": "n139",
+  "room": "chronic",
+  "cu": "Haematology",
+  "q": "Raised platelet count of 650 found incidentally on two tests. Think about...",
+  "options": [
+   "Ignore",
+   "Aspirin for everyone",
+   "Repeat in 5 years",
+   "Reactive causes (iron deficiency, infection, inflammation, cancer) and, if none, a myeloproliferative cause: haematology referral"
+  ],
+  "answer": 3,
+  "why": "Persistent unexplained thrombocytosis needs work-up. In adults over 40, consider underlying cancer.",
+  "source": "https://www.healthdirect.gov.au"
+ },
+ {
+  "id": "n140",
+  "room": "chronic",
+  "cu": "Oncology",
+  "q": "Australian lung cancer screening program (from July 2025). Who's eligible?",
+  "options": [
+   "Everyone over 40",
+   "Age 50 to 70, no symptoms, at least 30 pack-years and smoking now or quit in the last 10 years: low-dose CT every 2 years",
+   "Only current smokers over 65",
+   "Only people with a cough"
+  ],
+  "answer": 1,
+  "why": "The National Lung Cancer Screening Program uses low-dose CT. GPs are central to eligibility and smoking cessation.",
+  "source": "https://www.health.gov.au/our-work/nlcsp"
+ },
+ {
+  "id": "n141",
+  "room": "chronic",
+  "cu": "Oncology",
+  "q": "National Bowel Cancer Screening Program: what's the age range?",
+  "options": [
+   "45 to 74, every 2 years (kits mailed from 50; 45 to 49 can request one)",
+   "50 to 74",
+   "60 to 80",
+   "Only with symptoms"
+  ],
+  "answer": 0,
+  "why": "A positive iFOBT needs colonoscopy within 30 days. Symptoms (bleeding, change in habit) need diagnostic work-up, not screening.",
+  "source": "https://www.health.gov.au/our-work/national-bowel-cancer-screening-program"
+ },
+ {
+  "id": "n142",
+  "room": "chronic",
+  "cu": "Population health",
+  "q": "A 48-year-old asks about the shingles vaccine. Who gets Shingrix free?",
+  "options": [
+   "Everyone over 18",
+   "Only over 80s",
+   "People 65+, First Nations people 50+, and immunocompromised people 18+ with certain conditions",
+   "Nobody"
+  ],
+  "answer": 2,
+  "why": "Two doses of Shingrix, 2 to 6 months apart. Check eligibility on the National Immunisation Program.",
+  "source": "https://immunisationhandbook.health.gov.au"
+ },
+ {
+  "id": "n143",
+  "room": "chronic",
+  "cu": "Cardiovascular",
+  "q": "Familial hypercholesterolaemia: when should you suspect it?",
+  "options": [
+   "Very high LDL (e.g. 5 or more in adults), early heart disease in the person or family, tendon xanthomata",
+   "LDL over 2",
+   "Low HDL only",
+   "High triglycerides"
+  ],
+  "answer": 0,
+  "why": "Use the Dutch Lipid Clinic score. Cascade testing of relatives saves lives.",
+  "source": "https://www.heartfoundation.org.au/for-professionals/clinical-information"
+ },
+ {
+  "id": "n144",
+  "room": "outreach",
+  "cu": "Aboriginal and Torres Strait Islander health",
+  "q": "From what age is cardiovascular risk assessment recommended for First Nations people?",
+  "options": [
+   "30 (and 18 for diabetes risk screening)",
+   "45",
+   "60",
+   "Never"
+  ],
+  "answer": 0,
+  "why": "Earlier assessment reflects earlier onset of disease. The National Guide sets the ages.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/atsi/guides/national-guide"
+ },
+ {
+  "id": "n145",
+  "room": "outreach",
+  "cu": "Aboriginal and Torres Strait Islander health",
+  "q": "What does culturally safe care mean?",
+  "options": [
+   "Care defined by the patient: reflecting on your own biases and power, and making care safe from the patient's perspective",
+   "Treating everyone the same",
+   "Hiring an Aboriginal staff member",
+   "A one-off training course"
+  ],
+  "answer": 0,
+  "why": "Cultural safety is judged by the patient. It goes beyond awareness to changing practice.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/atsi/guides/national-guide"
+ },
+ {
+  "id": "n146",
+  "room": "outreach",
+  "cu": "Aboriginal and Torres Strait Islander health",
+  "q": "Chronic ear discharge (otitis media) in an Aboriginal child. Why does it matter so much?",
+  "options": [
+   "It doesn't",
+   "High rates of persistent middle ear disease cause hearing loss, affecting language, school and life chances",
+   "Only cosmetic",
+   "It always settles alone"
+  ],
+  "answer": 1,
+  "why": "Regular ear checks, treatment and hearing follow-up are core. The National Guide covers it.",
+  "source": "https://www.racgp.org.au/the-racgp/faculties/atsi/guides/national-guide"
+ },
+ {
+  "id": "n147",
+  "room": "outreach",
+  "cu": "Refugee and migrant health",
+  "q": "Newly arrived refugee adult from a high-prevalence country. Usual post-arrival screening includes...",
+  "options": [
+   "FBC, iron studies, hep B, hep C, HIV, syphilis, TB screen (IGRA), strongyloides, and schistosomiasis serology based on origin; vitamin D; catch-up vaccines",
+   "Nothing if they look well",
+   "Only a chest X-ray",
+   "Only blood pressure"
+  ],
+  "answer": 0,
+  "why": "ASID/RHeANA guidelines. Use an interpreter, take a trauma-informed approach and check immunisation history.",
+  "source": "https://refugeehealthguide.org.au"
+ },
+ {
+  "id": "n148",
+  "room": "outreach",
+  "cu": "Refugee and migrant health",
+  "q": "A patient seeking asylum isn't eligible for Medicare. What can you do?",
+  "options": [
+   "Turn them away",
+   "Bill the full private fee",
+   "Know the local options: refugee health services, asylum seeker clinics, bulk-billing where possible, and charities",
+   "Only treat emergencies"
+  ],
+  "answer": 2,
+  "why": "Eligibility varies. Many states have refugee health services and specialised clinics.",
+  "source": "https://refugeehealthguide.org.au"
+ },
+ {
+  "id": "n149",
+  "room": "outreach",
+  "cu": "Travel medicine",
+  "q": "Traveller to sub-Saharan Africa. Which certificate may be required to enter?",
+  "options": [
+   "Yellow fever vaccination (given only at approved centres)",
+   "Measles",
+   "Typhoid",
+   "Hepatitis A"
+  ],
+  "answer": 0,
+  "why": "Yellow fever vaccine must be given by an approved provider and recorded on the international certificate at least 10 days before travel.",
+  "source": "https://www.health.gov.au/topics/travel-health"
+ },
+ {
+  "id": "n150",
+  "room": "outreach",
+  "cu": "Travel medicine",
+  "q": "Returned traveller from a malaria area with fever. Action?",
+  "options": [
+   "Urgent same-day malaria testing (thick and thin films or rapid test), even months after return",
+   "Treat as flu",
+   "Wait 3 days",
+   "Antibiotics"
+  ],
+  "answer": 0,
+  "why": "Falciparum malaria can kill fast. Ask every febrile patient about travel.",
+  "source": "https://www.health.gov.au/topics/travel-health"
+ },
+ {
+  "id": "n151",
+  "room": "outreach",
+  "cu": "Occupational and environmental",
+  "q": "Stonemason with breathlessness and a dry cough. Think of...",
+  "options": [
+   "Asthma",
+   "Silicosis from engineered stone dust",
+   "Hay fever",
+   "Anxiety"
+  ],
+  "answer": 1,
+  "why": "Engineered stone was banned in Australia from July 2024 because of silicosis. Take an occupational history.",
+  "source": "https://www.safeworkaustralia.gov.au/safety-topic/hazards/crystalline-silica-and-silicosis"
+ },
+ {
+  "id": "n152",
+  "room": "outreach",
+  "cu": "Rural and remote",
+  "q": "In a small rural town you're also the patient's netball coach. Main ethical risk?",
+  "options": [
+   "None",
+   "You can't treat them",
+   "Billing problems",
+   "Blurred boundaries and confidentiality: plan how to keep roles separate"
+  ],
+  "answer": 3,
+  "why": "Dual relationships are common in rural practice. Be explicit about confidentiality and boundaries.",
+  "source": "https://www.acrrm.org.au/fellowship/curriculum"
+ },
+ {
+  "id": "n153",
+  "room": "outreach",
+  "cu": "Rural and remote",
+  "q": "A remote patient needs an urgent CT that's 400 km away. Who helps coordinate?",
+  "options": [
+   "Nobody",
+   "Retrieval services (e.g. RFDS) and the regional hospital, with telehealth specialist input",
+   "The patient drives themselves",
+   "Wait for the monthly specialist visit"
+  ],
+  "answer": 1,
+  "why": "Retrieval coordination and telehealth are core rural skills.",
+  "source": "https://www.flyingdoctor.org.au"
+ },
+ {
+  "id": "n154",
+  "room": "outreach",
+  "cu": "Population health",
+  "q": "A child in your practice has measles. What must you do?",
+  "options": [
+   "Nothing",
+   "Wait for lab confirmation to notify",
+   "Notify public health immediately on suspicion, isolate the patient, and identify contacts",
+   "Only tell the school"
+  ],
+  "answer": 2,
+  "why": "Measles is notifiable on clinical suspicion. Public health arranges contact tracing and post-exposure prophylaxis.",
+  "source": "https://www.health.gov.au/diseases/measles"
+ },
+ {
+  "id": "n155",
+  "room": "outreach",
+  "cu": "Aboriginal and Torres Strait Islander health",
+  "q": "Rheumatic heart disease: what's the secondary prevention?",
+  "options": [
+   "Nothing",
+   "Daily aspirin",
+   "Regular benzathine benzylpenicillin injections (every 21 to 28 days) for years",
+   "Annual echo only"
+  ],
+  "answer": 2,
+  "why": "Secondary prophylaxis stops recurrences that cause valve damage. Adherence support is key.",
+  "source": "https://www.rhdaustralia.org.au/arf-rhd-guideline"
+ },
+ {
+  "id": "n156",
+  "room": "outreach",
+  "cu": "Disability",
+  "q": "A man with cerebral palsy and communication difficulties seems distressed. First step?",
+  "options": [
+   "Give a sedative",
+   "Assume behaviour issue",
+   "Use his communication method and ask his support person, and look for pain sources (teeth, constipation, reflux, pressure areas)",
+   "Refer to psychiatry"
+  ],
+  "answer": 2,
+  "why": "Distress is often unrecognised pain. Adapt communication and look for physical causes.",
+  "source": "https://www.ndis.gov.au"
+ }
 ]

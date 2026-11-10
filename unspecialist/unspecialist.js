@@ -1,4 +1,4 @@
-/* Unspecialist: free, game-style GP training. Plain JS, no build step.
+/* GP School: free, game-style GP training. Plain JS, no build step.
    Screens: home, huddle, clinic (waiting room), consult, result, inbox, desk (Front desk billing), cheat (MBS cheat sheet). State lives in localStorage ("us-v1"). */
 (function () {
   "use strict";
@@ -19,7 +19,15 @@
     { id: "chronic", name: "Chronic care room", sub: "Chronic disease, prevention" },
     { id: "outreach", name: "Outreach", sub: "Rural, First Nations, refugee health" }
   ];
-  var RANKS = [[0, "Med student"], [150, "Intern"], [400, "Resident"], [800, "Registrar · GPT1"], [1400, "Registrar · GPT2"], [2200, "Registrar · GPT3"], [3200, "Fellow"], [4500, "Senior partner"], [6000, "Unspecialist"]];
+  var CURR = [
+    ["The consult", ["Communication", "Professionalism", "Ethics and law", "Quality and safety", "Digital health", "Admin and legal", "Practice and business"]],
+    ["Acute and procedural", ["Emergency", "Procedures", "Pain", "Eye", "ENT", "MSK and sports", "Dermatology"]],
+    ["Life stages", ["Child and youth", "Adolescent health", "Women's health", "Obstetrics and pregnancy", "Sexual and reproductive health", "Men's health", "Aged care", "Palliative care"]],
+    ["Body systems", ["Cardiovascular", "Respiratory", "Endocrine", "Renal and urology", "Gastro and liver", "Neurology", "Haematology", "Oncology", "Sleep", "Nutrition and obesity", "Genetics", "Prescribing"]],
+    ["Mind", ["Mental health", "Addiction", "Family violence and child protection"]],
+    ["Communities and context", ["Aboriginal and Torres Strait Islander health", "Rural and remote", "Refugee and migrant health", "Disability", "LGBTIQ+ health", "Population health", "Immunisation", "Travel medicine", "Occupational and environmental"]]
+  ];
+  var RANKS = [[0, "Med student"], [150, "Intern"], [400, "Resident"], [800, "Registrar · GPT1"], [1400, "Registrar · GPT2"], [2200, "Registrar · GPT3"], [3200, "Fellow"], [4500, "Senior partner"], [6000, "GP legend"]];
   var INTERVALS = [1, 3, 7, 14, 30, 60]; // Leitner box -> days until next review
   var LEVELS = [
     { n: "Level A", item: "item 3", d: "Short, straightforward problem" },
@@ -113,6 +121,29 @@
     return { ok: ok, n: ids.length, pct: ids.length ? Math.round(100 * ok / ids.length) : 0 };
   }
 
+  function unitIds(u) {
+    var ids = [];
+    D.huddle.forEach(function (q) { if (q.cu === u) ids.push("h:" + q.id); });
+    D.cases.forEach(function (c) { if (c.cu === u) ids.push("c:" + c.id); });
+    D.results.forEach(function (x) { if (x.cu === u) ids.push("r:" + x.id); });
+    if (u === "Practice and business") D.billing.scenarios.forEach(function (s) { ids.push("b:" + s.id); });
+    return ids;
+  }
+  function curriculum() {
+    var tot = 0, seenAll = 0;
+    var groups = CURR.map(function (g) {
+      return '<div class="us-sec"><span class="us-kick">' + esc(g[0]) + '</span><div class="us-rooms">' + g[1].map(function (u) {
+        var ids = unitIds(u), seen = 0, ok = 0;
+        ids.forEach(function (id) { if (S.items[id] != null) seen++; if (S.items[id] === 1) ok++; });
+        tot += ids.length; seenAll += seen;
+        var pct = ids.length ? Math.round(100 * seen / ids.length) : 0;
+        return '<div class="us-room"><b>' + esc(u) + "</b><span>" + ids.length + " items · " + ok + ' right</span><div class="us-bar"><i style="width:' + pct + '%"></i></div><small>' + pct + "% seen</small></div>";
+      }).join("") + "</div></div>";
+    }).join("");
+    return topRow("#", "Practice") + head("Curriculum map", "Every corner of general practice", "Built around the RACGP and ACRRM curricula. Bars fill as you see items in each unit. " + seenAll + " of " + tot + " seen so far.") +
+      groups + '<p class="us-note">New patients arrive every month. Thin units get topped up first.</p>';
+  }
+
   // ---------- day state ----------
   function day() {
     if (!S.days[TODAY]) {
@@ -198,7 +229,7 @@
   function render(keep) {
     stopTimer();
     var h = (location.hash || "").replace("#", "");
-    var fn = { huddle: huddle, clinic: clinic, consult: consult, result: result, inbox: inbox, desk: desk, cheat: cheat }[h] || home;
+    var fn = { huddle: huddle, clinic: clinic, consult: consult, result: result, inbox: inbox, desk: desk, cheat: cheat, curriculum: curriculum }[h] || home;
     app.innerHTML = fn();
     app.setAttribute("data-screen", h || "home");
     if (h === "inbox") startInboxTimer();
@@ -225,7 +256,7 @@
       return '<div class="us-room"><b>' + esc(r.name) + "</b><span>" + esc(r.sub) + '</span><div class="us-bar"><i style="width:' + p.pct + '%"></i></div><small>' + p.pct + "% · " + p.ok + "/" + p.n + " right</small></div>";
     }).join("");
     return '<div class="us-home">' +
-      '<div class="us-brand"><div><span class="us-kick">Free GP training</span><span class="us-title">Unspecialist</span></div>' +
+      '<div class="us-brand"><div><span class="us-kick">Free GP training</span><span class="us-title">GP School</span></div>' +
       '<span class="us-pill">' + (st ? st + "-day streak" : "Day 1 starts now") + "</span></div>" +
       '<div class="us-rank"><span class="us-kick">Your rank · ' + (S.points || 0).toLocaleString("en-AU") + " points</span><span class=\"us-rname\">" + esc(rk.name) + "</span>" +
       '<div class="us-rbar"><i style="width:' + Math.round(rk.pct * 100) + '%"></i></div>' +
@@ -235,7 +266,7 @@
       todo("#clinic", "Clinic Day", clSeen >= cl.ids.length ? "All " + cl.ids.length + " seen · average " + clAvg + "/100" : (clSeen ? clSeen + " of " + cl.ids.length + " seen" : cl.ids.length + " patients waiting. One is a curveball."), clSeen >= cl.ids.length) +
       todo("#inbox", "Results inbox", ib.done ? ib.score + "/8 sorted correctly" : "8 results from yesterday's patients. 60 seconds.", ib.done) +
       (dk.ids.length ? todo("#desk", "Front desk: Bill it right", dk.done ? dOk + "/" + dk.ids.length + " billed right. The accountant is pleased." : (dk.ans.length ? "Claim " + (dk.ans.length + 1) + " of " + dk.ids.length : dk.ids.length + " claims to check. Money on the table, or a letter from Medicare?"), dk.done) : "") +
-      '<a class="us-link" href="#cheat">MBS cheat sheet</a>' +
+      '<a class="us-link" href="#cheat">MBS cheat sheet</a> <a class="us-link" href="#curriculum">Curriculum map</a>' +
       "</div>" +
       '<div class="us-sec"><span class="us-kick">Your practice · 10 rooms</span><div class="us-rooms">' + rooms + "</div>" +
       '<p class="us-note">Every huddle question, patient and result belongs to a room. Get them right to fill the room.</p></div>' +
@@ -632,7 +663,8 @@
       "<li><b>Scoring:</b> Safety, Accuracy, Time, Patient-centred and Billing, each out of 100. Miss a key safety step and that patient may come back on a later day. Unhappier.</li>" +
       "<li><b>Results inbox:</b> 8 results, 60 seconds. File, Recall or Urgent.</li>" +
       "<li><b>Front desk:</b> 5 billing scenarios. Bill it right: the right item, legitimate co-claims, no audit bait. Fills the Front desk room.</li>" +
-      "<li><b>Points</b> build your rank, from Med student to Unspecialist. <b>Rooms</b> fill as you get their topics right.</li></ul>" +
+      "<li><b>Curriculum map:</b> every item is tagged to a RACGP/ACRRM curriculum area, so you can see your gaps.</li>" +
+      "<li><b>Points</b> build your rank, from Med student to GP legend. <b>Rooms</b> fill as you get their topics right.</li></ul>" +
       '<p class="us-small">Beta: content is under GP review. Every item links to its source. Education for health professionals, not patient advice. All patients are fictional. Progress is saved on this device only.</p>';
     if (window.MW && MW.modal) MW.modal("How it works", html);
   }
@@ -673,7 +705,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON("data/huddle.json?v=2"), getJSON("data/cases.json?v=5"), getJSON("data/results.json?v=2"), getJSON("data/billing.json?v=3").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON("data/huddle.json?v=3"), getJSON("data/cases.json?v=6"), getJSON("data/results.json?v=3"), getJSON("data/billing.json?v=3").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();

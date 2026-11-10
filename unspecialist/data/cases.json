@@ -191,7 +191,8 @@
     "t": "2023 Australian CVD risk guideline (MJA)",
     "url": "https://www.mja.com.au/journal/2024/220/9/2023-australian-guideline-assessing-and-managing-cardiovascular-disease-risk"
    }
-  ]
+  ],
+  "cu": "Cardiovascular"
  },
  {
   "id": "graham2",
@@ -355,7 +356,8 @@
      }
     }
    ]
-  }
+  },
+  "cu": "Emergency"
  },
  {
   "id": "maya",
@@ -501,7 +503,8 @@
     "t": "Sepsis Clinical Care Standard",
     "url": "https://www.safetyandquality.gov.au/sites/default/files/2022-06/sepsis_clinical_care_standard_2022.pdf"
    }
-  ]
+  ],
+  "cu": "Child and youth"
  },
  {
   "id": "priya",
@@ -675,7 +678,8 @@
     "t": "Lifeblood: causes of iron deficiency anaemia",
     "url": "https://www.lifeblood.com.au/health-professionals/clinical-practice/clinical-indications/iron-deficiency-anaemia/determining-the-underlying-causes"
    }
-  ]
+  ],
+  "cu": "Women's health"
  },
  {
   "id": "tom",
@@ -813,7 +817,8 @@
     "t": "Low Back Pain Clinical Care Standard",
     "url": "https://www.safetyandquality.gov.au/sites/default/files/2022-08/low_back_pain_clinical_care_standard.pdf"
    }
-  ]
+  ],
+  "cu": "Pain"
  },
  {
   "id": "june",
@@ -965,7 +970,8 @@
     "t": "NICE NG232 head injury (RCEM summary)",
     "url": "https://rcem.ac.uk/wp-content/uploads/2024/03/Nice_Head_Injury_Position_Statement_October_2023.pdf"
    }
-  ]
+  ],
+  "cu": "Aged care"
  },
  {
   "id": "jayden",
@@ -1102,7 +1108,8 @@
     "t": "2020 Australian ARF and RHD guideline (MJA)",
     "url": "https://www.mja.com.au/journal/2021/214/5/2020-australian-guideline-prevention-diagnosis-and-management-acute-rheumatic"
    }
-  ]
+  ],
+  "cu": "Aboriginal and Torres Strait Islander health"
  },
  {
   "id": "mei",
@@ -1224,7 +1231,8 @@
     "t": "Australasian Menopause Society: combined MHT",
     "url": "https://menopause.org.au/hp/information-sheets/combined-menopausal-hormone-therapy-mht"
    }
-  ]
+  ],
+  "cu": "Women's health"
  },
  {
   "id": "sam",
@@ -1376,7 +1384,8 @@
      }
     }
    ]
-  }
+  },
+  "cu": "Mental health"
  },
  {
   "id": "sam2",
@@ -1509,7 +1518,8 @@
     "t": "RANZCP mood disorders guideline (2020)",
     "url": "https://www.ranzcp.org/getmedia/a4678cf4-91f5-4746-99d4-03dc7379ae51/mood-disorders-clinical-practice-guideline-2020.pdf"
    }
-  ]
+  ],
+  "cu": "Mental health"
  },
  {
   "id": "abdi",
@@ -1648,7 +1658,8 @@
     "t": "TIS National Free Interpreting Service",
     "url": "https://www.tisnational.gov.au/-/media/FIS/Free-Interpreting-Service---private-medical-practitioners-information-sheet.pdf"
    }
-  ]
+  ],
+  "cu": "Refugee and migrant health"
  },
  {
   "id": "lachlan",
@@ -1771,7 +1782,8 @@
     "t": "Pathology Tests Explained: free T4 and TSH",
     "url": "https://pathologytestsexplained.org.au/learning/test-index/ft4"
    }
-  ]
+  ],
+  "cu": "Disability"
  },
  {
   "id": "ron",
@@ -1943,7 +1955,8 @@
     "t": "Services Australia: skin lesion and biopsy billing",
     "url": "https://www.servicesaustralia.gov.au/mbs-billing-for-skin-lesion-treatment-and-biopsy-items"
    }
-  ]
+  ],
+  "cu": "Dermatology"
  },
  {
   "id": "zara",
@@ -2102,7 +2115,8 @@
     "t": "Australian Government: Pregnancy Care Guidelines",
     "url": "https://www.health.gov.au/resources/pregnancy-care-guidelines"
    }
-  ]
+  ],
+  "cu": "Sexual and reproductive health"
  },
  {
   "id": "noor",
@@ -2312,7 +2326,8 @@
     "t": "RACGP: IUD and IUS checklist for GPs",
     "url": "https://www.racgp.org.au/FSDEDEV/media/documents/Clinical%20Resources/Resources/IUD-IUS-GP-checklist.pdf"
    }
-  ]
+  ],
+  "cu": "Procedures"
  },
  {
   "id": "dean",
@@ -2501,6 +2516,2855 @@
    {
     "t": "Frontiers in Microbiology 2016: GP management of staphylococcal skin abscesses in Australia",
     "url": "https://frontiersin.org/articles/10.3389/fmicb.2016.00802/full"
+   }
+  ],
+  "cu": "Procedures"
+ },
+ {
+  "id": "helen",
+  "room": "consult",
+  "cu": "Communication",
+  "name": "Helen",
+  "age": 61,
+  "who": "Retired teacher. Came alone.",
+  "blurb": "CT results",
+  "opening": "\"The radiology place said you'd go through the scan with me.\"",
+  "actions": [
+   {
+    "id": "know",
+    "g": "h",
+    "label": "What she knows already",
+    "min": 2,
+    "text": "\"They were checking my weight loss. I've been expecting something.\"",
+    "key": true,
+    "why": "Start with what the patient knows before giving news."
+   },
+   {
+    "id": "warn",
+    "g": "h",
+    "label": "Warning shot",
+    "min": 1,
+    "text": "\"I'm afraid the scan has shown something serious.\" She nods and goes quiet.",
+    "key": true,
+    "why": "A warning shot gives a moment to prepare."
+   },
+   {
+    "id": "support",
+    "g": "h",
+    "label": "Who's with her",
+    "min": 1,
+    "text": "Her husband's at work. Her sister lives nearby."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "She's frightened of pain. Wants to know \"how long\" but isn't sure she wants the answer yet.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Will I still be able to see my grandson's graduation in March?\"",
+    "flag": "else"
+   },
+   {
+    "id": "ct",
+    "g": "t",
+    "label": "Read the CT report",
+    "min": 1,
+    "text": "Mass in the pancreatic head with liver lesions, likely metastases."
+   },
+   {
+    "id": "hist",
+    "g": "h",
+    "label": "Ask how much detail she wants",
+    "min": 1,
+    "text": "\"Just the main bits today please.\"",
+    "key": true,
+    "why": "People vary in how much they want at once. Ask."
+   },
+   {
+    "id": "jargon",
+    "g": "h",
+    "label": "Explain the scan word for word",
+    "min": 3,
+    "text": "You read out the radiology report. She looks lost.",
+    "flag": "low",
+    "why": "Reading out jargon isn't explaining. Chunk and check."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Benign cyst",
+    "Likely advanced pancreatic cancer: needs urgent specialist work-up",
+    "Gallstones",
+    "Pancreatitis"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Urgent referral to a hepatobiliary or oncology team, and call the specialist yourself",
+    "Share news in small chunks and check understanding",
+    "Offer to call her sister or husband to come in",
+    "Give a prognosis in months today",
+    "Book a follow-up within days and give her a direct number"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 1,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back or call any time this week; book a review in a few days",
+    "Wait for the specialist letter",
+    "Come back in 3 months",
+    "No need to come back"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a long consult (40+ minutes) item if you spent that time",
+     "ok": true,
+     "why": "Time-based items reflect total time, including the conversation and arranging care.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Breaking bad news: set it up, find out what they know, ask how much they want, warn, give it in chunks, sit with the emotion, and make a plan with a next contact.",
+  "sources": [
+   {
+    "t": "RACGP curriculum: communication",
+    "url": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+   }
+  ]
+ },
+ {
+  "id": "darren",
+  "room": "consult",
+  "cu": "Professionalism",
+  "name": "Darren",
+  "age": 44,
+  "who": "Tradie. Waited 50 minutes.",
+  "blurb": "Angry about waiting",
+  "opening": "\"Fifty minutes! I've lost half a day's pay for this.\"",
+  "actions": [
+   {
+    "id": "ack",
+    "g": "h",
+    "label": "Acknowledge and apologise for the wait",
+    "min": 1,
+    "text": "\"Fair enough. Sorry for the wait, that's frustrating.\" His shoulders drop a bit.",
+    "key": true,
+    "why": "Acknowledging emotion first defuses most anger."
+   },
+   {
+    "id": "defend",
+    "g": "h",
+    "label": "Explain the doctor was busy",
+    "min": 1,
+    "text": "\"Everyone's busy, mate.\" He gets louder.",
+    "flag": "low",
+    "why": "Defending yourself first escalates. Acknowledge, then move on."
+   },
+   {
+    "id": "why",
+    "g": "h",
+    "label": "Reason for visit",
+    "min": 1,
+    "text": "Right shoulder pain for 3 weeks. Worse lifting overhead."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Worried he'll lose work. Wants a scan and \"a cortisone shot\".",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"No. Just want to get back to work.\"",
+    "flag": "else"
+   },
+   {
+    "id": "shoulder",
+    "g": "e",
+    "label": "Shoulder exam",
+    "min": 2,
+    "text": "Painful arc. Strength OK. Pain on resisted abduction.",
+    "key": true,
+    "why": "Examination guides whether imaging is needed at all."
+   },
+   {
+    "id": "work",
+    "g": "h",
+    "label": "Work duties",
+    "min": 1,
+    "text": "Lifts plasterboard overhead most days."
+   },
+   {
+    "id": "us",
+    "g": "t",
+    "label": "Order shoulder ultrasound today",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Most rotator cuff tendinopathy doesn't need imaging at first. Try 6 weeks of rehab."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Frozen shoulder",
+    "Rotator cuff tendinopathy",
+    "Shoulder dislocation",
+    "Referred cardiac pain"
+   ],
+   "answer": 1,
+   "danger": []
+  },
+  "plan": {
+   "options": [
+    "Explain the likely diagnosis and a 6-week physio and load plan",
+    "Discuss modified duties at work",
+    "Steroid injection today on demand",
+    "Simple analgesia as needed",
+    "Urgent orthopaedic referral"
+   ],
+   "correct": [
+    0,
+    1,
+    3
+   ],
+   "danger": [],
+   "explain": 0,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if not improving in 6 weeks, or sooner if he loses strength or can't lift his arm",
+    "Come back in a year",
+    "No need to come back",
+    "Only come back for a scan"
+   ],
+   "answer": 0,
+   "danger": [
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a workers compensation claim to Medicare",
+     "ok": false,
+     "why": "If it's a work injury claim, it's billed to the insurer, not Medicare. Here, it's not a claim yet: discuss whether it's work-related.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Anger is usually fear or frustration. Acknowledge it first, then the consult can start.",
+  "sources": [
+   {
+    "t": "RACGP Code of conduct and professionalism",
+    "url": "https://www.racgp.org.au/education/education-providers/curriculum/curriculum-and-syllabus/home"
+   }
+  ]
+ },
+ {
+  "id": "isla",
+  "room": "kids",
+  "cu": "Child and youth",
+  "name": "Isla",
+  "age": 2,
+  "who": "Here with her dad, Josh.",
+  "blurb": "Not talking much",
+  "opening": "Josh: \"She's two and only says about five words. Her cousin talks heaps.\"",
+  "actions": [
+   {
+    "id": "dev",
+    "g": "h",
+    "label": "Developmental history",
+    "min": 2,
+    "text": "Walked at 13 months. Few gestures. Doesn't point to show things.",
+    "key": true,
+    "why": "Missing pointing and social gestures matter more than word count."
+   },
+   {
+    "id": "hear",
+    "g": "h",
+    "label": "Hearing and ear infections",
+    "min": 1,
+    "text": "Lots of ear infections last winter.",
+    "key": true,
+    "why": "Always check hearing in speech delay."
+   },
+   {
+    "id": "social",
+    "g": "h",
+    "label": "Eye contact and play",
+    "min": 2,
+    "text": "Lines up toys. Doesn't respond much to her name.",
+    "key": true,
+    "why": "Social communication differences suggest autism should be assessed."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Josh worries it's \"something we did\". Wants to know if it's autism.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Her mum thinks I'm overreacting.\"",
+    "flag": "else"
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Observe play and interaction",
+    "min": 2,
+    "text": "Little shared attention. Engaged with a spinning top."
+   },
+   {
+    "id": "growth",
+    "g": "e",
+    "label": "Growth and head circumference",
+    "min": 1,
+    "text": "On her centiles."
+   },
+   {
+    "id": "wait",
+    "g": "h",
+    "label": "Reassure: \"some kids talk late\"",
+    "min": 1,
+    "text": "Josh looks relieved but unconvinced.",
+    "flag": "low",
+    "why": "\"Wait and see\" delays early help."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Normal late talker",
+    "Possible autism and/or hearing loss: needs assessment",
+    "Selective mutism",
+    "Intellectual disability confirmed"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Formal hearing test (audiology)",
+    "Refer for developmental assessment (paediatrician or child development service)",
+    "Speech pathology referral now, not after diagnosis",
+    "Reassure and recheck at 3",
+    "Tell Josh it's not his fault"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 4,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if she loses any skills, or for review in 4 to 6 weeks to check referrals are moving",
+    "Come back at 4 years",
+    "No need to come back",
+    "Only if she gets an ear infection"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a GP item for autism or developmental assessment as a referral to a paediatrician",
+     "ok": false,
+     "why": "GPs refer; the specific diagnostic and treatment-plan items are for paediatricians and psychiatrists. A normal GP consult item applies.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Loss of skills at any age, or no pointing or babbling by 12 months, needs prompt assessment. Early help works best.",
+  "sources": [
+   {
+    "t": "Raising Children Network: autism signs",
+    "url": "https://raisingchildren.net.au/autism"
+   }
+  ]
+ },
+ {
+  "id": "kai",
+  "room": "kids",
+  "cu": "Family violence and child protection",
+  "name": "Kai",
+  "age": "5 months",
+  "who": "Here with his mum, Tash.",
+  "blurb": "Swollen arm",
+  "opening": "Tash: \"His arm's been swollen since yesterday. Not sure what happened.\"",
+  "actions": [
+   {
+    "id": "story",
+    "g": "h",
+    "label": "How it happened",
+    "min": 2,
+    "text": "Unsure. Says he \"might've rolled\" on the change table.",
+    "key": true,
+    "why": "A vague or changing story in a non-mobile baby is a red flag."
+   },
+   {
+    "id": "dev",
+    "g": "h",
+    "label": "Can he roll yet?",
+    "min": 1,
+    "text": "Not yet.",
+    "key": true,
+    "why": "Injury that doesn't match developmental stage raises concern."
+   },
+   {
+    "id": "home",
+    "g": "h",
+    "label": "Who's at home",
+    "min": 1,
+    "text": "Tash, her new partner, and Kai."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Tash is anxious and tearful. Wants it fixed quickly.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I'm just so tired. He cries all night.\"",
+    "flag": "else"
+   },
+   {
+    "id": "arm",
+    "g": "e",
+    "label": "Arm exam",
+    "min": 1,
+    "text": "Swollen and tender upper arm."
+   },
+   {
+    "id": "skin",
+    "g": "e",
+    "label": "Full skin check",
+    "min": 2,
+    "text": "Small bruises on his chest and behind his ear.",
+    "key": true,
+    "why": "Any bruise in a baby who can't move about on his own needs explaining."
+   },
+   {
+    "id": "xray",
+    "g": "t",
+    "label": "X-ray arm",
+    "min": 1,
+    "text": "Spiral fracture of the humerus."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Accidental fracture from rolling",
+    "Suspected non-accidental injury",
+    "Bone disease",
+    "Normal bruising"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Send to the children's hospital ED today for assessment (skeletal survey, child protection team)",
+    "Make a mandatory report to child protection",
+    "Support Tash, be honest that you need to involve others",
+    "Sling and review in a week",
+    "Ask Tash's partner to come in and explain"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 2,
+   "critical": [
+    0,
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Today's plan is hospital, not home. You'll follow up with Tash after",
+    "Come back next week",
+    "No need to come back",
+    "Come back if it swells more"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a normal consult item",
+     "ok": true,
+     "why": "Time and complexity apply. There's no special child protection item.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Bruises in babies who don't cruise rarely bruise. Unexplained injury in an infant needs hospital assessment and a report.",
+  "sources": [
+   {
+    "t": "NSW Mandatory Reporter Guide",
+    "url": "https://reporter.childstory.nsw.gov.au"
+   }
+  ]
+ },
+ {
+  "id": "ethan",
+  "room": "mind",
+  "cu": "Mental health",
+  "name": "Ethan",
+  "age": 27,
+  "who": "Apprentice electrician. Booked for a \"check-up\".",
+  "blurb": "Not sleeping",
+  "opening": "\"Just need something to help me sleep.\"",
+  "actions": [
+   {
+    "id": "mood",
+    "g": "h",
+    "label": "Mood",
+    "min": 1,
+    "text": "\"Flat. Not enjoying anything.\" Broke up with his partner a month ago."
+   },
+   {
+    "id": "ask",
+    "g": "h",
+    "label": "Ask directly about suicide",
+    "min": 2,
+    "text": "\"Yeah... I've thought about it. Last week I looked up ways.\"",
+    "key": true,
+    "why": "Asking directly doesn't put the idea there. It opens the door."
+   },
+   {
+    "id": "plan",
+    "g": "h",
+    "label": "Plans, means, protective factors",
+    "min": 2,
+    "text": "Has a plan. Access to medicines at home. Loves his dog and his younger sister.",
+    "key": true,
+    "needs": "ask",
+    "why": "Plan and access to means change the urgency and the safety plan."
+   },
+   {
+    "id": "alc",
+    "g": "h",
+    "label": "Alcohol and drugs",
+    "min": 1,
+    "text": "Drinking more. 8 beers most nights."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Embarrassed. Doesn't want his boss to know.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I don't want to end up in hospital.\"",
+    "flag": "else"
+   },
+   {
+    "id": "k10",
+    "g": "t",
+    "label": "K10 questionnaire",
+    "min": 2,
+    "text": "High (35)."
+   },
+   {
+    "id": "sleep",
+    "g": "t",
+    "label": "Prescribe sleeping tablets",
+    "min": 1,
+    "text": "A month of temazepam.",
+    "flag": "low",
+    "why": "Sedatives give access to means and don't treat the cause."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Insomnia only",
+    "Depression with suicidal thoughts and a plan",
+    "Alcohol dependence only",
+    "Normal grief"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Collaborate on a written safety plan, including reducing access to medicines",
+    "Same-day contact with mental health crisis team or ED if risk can't be managed",
+    "Arrange close follow-up in days and involve a support person with consent",
+    "Start a month of sleeping tablets",
+    "Refer for psychology under a mental health treatment plan",
+    "Explain that depression is treatable and check he understands the plan"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 5,
+   "critical": [
+    0,
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Call 000 or go to ED if he feels unsafe; give Lifeline 13 11 14 and book review in a day or two",
+    "Review in 3 months",
+    "No need to come back",
+    "Come back if sleep doesn't improve"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Prepare a GP mental health treatment plan today",
+     "ok": true,
+     "why": "If time allows and it's appropriate. Safety comes first; the plan can be the next visit.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Ask about suicide directly. A safety plan, reduced access to means and close follow-up are the core of GP care.",
+  "sources": [
+   {
+    "t": "Beyond Blue: suicide prevention",
+    "url": "https://www.beyondblue.org.au"
+   },
+   {
+    "t": "Lifeline",
+    "url": "https://www.lifeline.org.au"
+   }
+  ]
+ },
+ {
+  "id": "marg",
+  "room": "mind",
+  "cu": "Addiction",
+  "name": "Marg",
+  "age": 58,
+  "who": "Bookkeeper. Here for blood results.",
+  "blurb": "\"Just my liver tests\"",
+  "opening": "\"The pharmacist said my liver tests were up?\"",
+  "actions": [
+   {
+    "id": "lfts",
+    "g": "t",
+    "label": "Review LFTs",
+    "min": 1,
+    "text": "GGT 240, ALT 55. Others normal."
+   },
+   {
+    "id": "audit",
+    "g": "h",
+    "label": "AUDIT-C alcohol questions",
+    "min": 2,
+    "text": "Four glasses of wine most nights, more on weekends.",
+    "key": true,
+    "why": "Ask about alcohol with a validated tool, without judgement."
+   },
+   {
+    "id": "withdrawal",
+    "g": "h",
+    "label": "Morning shakes or drinking to steady",
+    "min": 1,
+    "text": "Sometimes a drink in the morning to settle her nerves.",
+    "key": true,
+    "why": "Withdrawal symptoms change how you stop safely."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's \"just the wine\". Worried she's an alcoholic. Wants a liver scan.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Since my husband died last year it's how I get to sleep.\"",
+    "flag": "else"
+   },
+   {
+    "id": "liver",
+    "g": "e",
+    "label": "Abdominal and liver exam",
+    "min": 1,
+    "text": "No signs of chronic liver disease."
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Blood pressure",
+    "min": 1,
+    "text": "148/92."
+   },
+   {
+    "id": "lecture",
+    "g": "h",
+    "label": "Tell her she must stop",
+    "min": 1,
+    "text": "She goes quiet and defensive.",
+    "flag": "low",
+    "why": "Confrontation reduces change. Motivational interviewing works better."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Fatty liver from weight",
+    "Harmful alcohol use, likely dependence, with grief",
+    "Hepatitis B",
+    "Normal results"
+   ],
+   "answer": 1,
+   "danger": [
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Brief intervention using motivational interviewing",
+    "Don't stop suddenly: plan supervised or medicated withdrawal",
+    "Discuss relapse prevention medicine (acamprosate or naltrexone)",
+    "Offer grief support",
+    "Liver fibrosis assessment (FIB-4)"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "danger": [],
+   "explain": 0,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Seek help if she gets shaky, sweaty, confused or has a seizure when cutting down. Review in 1 to 2 weeks",
+    "Come back in a year",
+    "No need to come back",
+    "Come back once she's stopped"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a mental health treatment plan for alcohol use alone",
+     "ok": false,
+     "why": "Plans need a mental disorder. Alcohol use disorder can qualify, but the plan must be prepared properly.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Sudden stopping after heavy daily drinking can cause seizures. Plan withdrawal, then relapse prevention.",
+  "sources": [
+   {
+    "t": "National Alcohol Guidelines",
+    "url": "https://www.nhmrc.gov.au/health-advice/alcohol"
+   }
+  ]
+ },
+ {
+  "id": "ivan",
+  "room": "treatment",
+  "cu": "Procedures",
+  "name": "Ivan",
+  "age": 35,
+  "who": "Chef. Cut his hand at work.",
+  "blurb": "Cut hand",
+  "opening": "\"Knife slipped. Just needs a couple of stitches.\"",
+  "actions": [
+   {
+    "id": "mech",
+    "g": "h",
+    "label": "How and when",
+    "min": 1,
+    "text": "Two hours ago. Clean kitchen knife."
+   },
+   {
+    "id": "tet",
+    "g": "h",
+    "label": "Tetanus status",
+    "min": 1,
+    "text": "Last booster 12 years ago.",
+    "key": true,
+    "why": "Over 10 years since last dose: give a booster for a clean minor wound."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Wants to get back to work tonight.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"No, that's it.\"",
+    "flag": "else"
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Check finger sensation and movement (before anaesthetic)",
+    "min": 2,
+    "text": "Numbness on one side of the index finger tip.",
+    "key": true,
+    "why": "Check nerves and tendons before you numb anything."
+   },
+   {
+    "id": "tendon",
+    "g": "e",
+    "label": "Test tendons individually",
+    "min": 1,
+    "text": "Flexors intact."
+   },
+   {
+    "id": "sutures",
+    "g": "t",
+    "label": "Suture it",
+    "min": 5,
+    "text": "Done neatly.",
+    "proc": true
+   },
+   {
+    "id": "hosp",
+    "g": "t",
+    "label": "Refer to hand surgery",
+    "min": 1,
+    "text": "Accepted for tomorrow's clinic."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Simple laceration",
+    "Laceration with digital nerve injury",
+    "Tendon injury",
+    "Infection"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Refer urgently to hand surgery for nerve repair",
+    "Tetanus booster",
+    "Clean and close the skin or dress as advised by the hand team",
+    "Suture and send back to work, no referral",
+    "Antibiotics for everyone",
+    "Explain why the nerve matters and check he understands the plan"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if redness, swelling, fever or pus. Attend the hand clinic",
+    "Remove sutures in 3 weeks",
+    "No need to come back",
+    "Come back in 6 months"
+   ],
+   "answer": 0,
+   "danger": [
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill Medicare for this work injury",
+     "ok": false,
+     "why": "Work injuries with a workers compensation claim are billed to the insurer.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Test nerve and tendon function before local anaesthetic. A missed digital nerve injury is a lifelong loss.",
+  "sources": [
+   {
+    "t": "Royal Children's Hospital: lacerations (adult principles)",
+    "url": "https://www.rch.org.au/clinicalguide/guideline_index/Lacerations/"
+   }
+  ]
+ },
+ {
+  "id": "bree",
+  "room": "treatment",
+  "cu": "Eye",
+  "name": "Bree",
+  "age": 36,
+  "who": "Wears contact lenses.",
+  "blurb": "Painful red eye",
+  "opening": "\"My eye's been sore and red since yesterday. Light hurts.\"",
+  "actions": [
+   {
+    "id": "cl",
+    "g": "h",
+    "label": "Contact lens use",
+    "min": 1,
+    "text": "Sleeps in them sometimes. Swims with them in.",
+    "key": true,
+    "why": "Contact lens wear plus pain is microbial keratitis until proven otherwise."
+   },
+   {
+    "id": "va",
+    "g": "e",
+    "label": "Visual acuity",
+    "min": 1,
+    "text": "6/18 in the sore eye, 6/6 in the other.",
+    "key": true,
+    "why": "Always check vision: reduced acuity is a red flag."
+   },
+   {
+    "id": "fl",
+    "g": "e",
+    "label": "Fluorescein stain",
+    "min": 2,
+    "text": "A bright white-staining ulcer on the cornea.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's conjunctivitis. Wants drops.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"No, that's it.\"",
+    "flag": "else"
+   },
+   {
+    "id": "lid",
+    "g": "e",
+    "label": "Lids and discharge",
+    "min": 1,
+    "text": "Watery. Lids normal."
+   },
+   {
+    "id": "chlor",
+    "g": "t",
+    "label": "Prescribe chloramphenicol and review in a week",
+    "min": 1,
+    "text": "Script written.",
+    "flag": "low",
+    "why": "A corneal ulcer in a lens wearer needs same-day specialist care, not just chloramphenicol."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Viral conjunctivitis",
+    "Microbial keratitis (corneal ulcer)",
+    "Dry eye",
+    "Subconjunctival haemorrhage"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Same-day ophthalmology or eye emergency referral",
+    "Stop contact lens wear and bring the lenses and case",
+    "Chloramphenicol and review in a week",
+    "Steroid drops",
+    "Explain why it's urgent"
+   ],
+   "correct": [
+    0,
+    1,
+    4
+   ],
+   "danger": [
+    2,
+    3
+   ],
+   "explain": 4,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Go to the eye emergency service today",
+    "Come back in a week",
+    "No need to come back",
+    "Come back if it spreads to the other eye"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a normal consult item",
+     "ok": true,
+     "why": "Standard consultation.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Red flags in a red eye: pain, light sensitivity, reduced vision, contact lens wear. That's same-day specialist territory.",
+  "sources": [
+   {
+    "t": "Healthdirect: red eye",
+    "url": "https://www.healthdirect.gov.au/red-eye"
+   }
+  ]
+ },
+ {
+  "id": "frank",
+  "room": "chronic",
+  "cu": "Aged care",
+  "name": "Frank",
+  "age": 88,
+  "who": "Lives in a residential aged care home. Nurse called.",
+  "blurb": "\"More confused\"",
+  "opening": "Nurse: \"Frank's been agitated since yesterday and isn't himself.\"",
+  "actions": [
+   {
+    "id": "onset",
+    "g": "h",
+    "label": "Onset and fluctuation",
+    "min": 1,
+    "text": "Sudden, worse at night. Normally mild dementia but chatty.",
+    "key": true,
+    "why": "Sudden change and fluctuation point to delirium, not dementia progressing."
+   },
+   {
+    "id": "meds",
+    "g": "h",
+    "label": "Medicine review",
+    "min": 2,
+    "text": "Oxybutynin started last week for bladder urgency.",
+    "key": true,
+    "why": "Anticholinergics are a common cause of delirium in older people."
+   },
+   {
+    "id": "bowels",
+    "g": "h",
+    "label": "Bowels and urine",
+    "min": 1,
+    "text": "No bowel motion for 5 days.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Family worry he's \"going downhill\". Nurse asks for something to calm him.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"He's not eating or drinking much.\"",
+    "flag": "else"
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Observations",
+    "min": 1,
+    "text": "Temp 37.4, pulse 96, BP 112/68."
+   },
+   {
+    "id": "abdo",
+    "g": "e",
+    "label": "Abdomen",
+    "min": 1,
+    "text": "Distended, faecal loading."
+   },
+   {
+    "id": "antipsy",
+    "g": "t",
+    "label": "Prescribe an antipsychotic for agitation",
+    "min": 1,
+    "text": "Charted.",
+    "flag": "low",
+    "why": "Antipsychotics treat symptoms, add risk and don't fix causes. Use only for severe distress or danger."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Worsening dementia",
+    "Delirium (medicine side effect and constipation)",
+    "Stroke",
+    "Depression"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Stop oxybutynin",
+    "Treat constipation",
+    "Encourage fluids and check urine and bloods",
+    "Non-drug strategies: familiar people, glasses, hearing aids, lighting",
+    "Start an antipsychotic",
+    "Explain delirium to the family and nurses, and check understanding"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Review in 24 to 48 hours; hospital if he gets worse, isn't drinking or has a fever",
+    "Review in a month",
+    "No need to come back",
+    "Review only if family ask"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a residential aged care attendance item",
+     "ok": true,
+     "why": "Use the aged care attendance items, not in-rooms items.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Delirium is acute, fluctuating and often has several causes. Look at medicines, constipation, urine retention, infection and dehydration.",
+  "sources": [
+   {
+    "t": "Delirium Clinical Care Standard (ACSQHC)",
+    "url": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/delirium-clinical-care-standard"
+   }
+  ]
+ },
+ {
+  "id": "rita",
+  "room": "chronic",
+  "cu": "Palliative care",
+  "name": "Rita",
+  "age": 79,
+  "who": "Advanced lung cancer. Home visit. Daughter, Kim, is carer.",
+  "blurb": "\"She's in more pain\"",
+  "opening": "Kim: \"Mum's in a lot more pain and won't eat.\"",
+  "actions": [
+   {
+    "id": "pain",
+    "g": "h",
+    "label": "Pain history",
+    "min": 2,
+    "text": "Back pain, worse over a week. Taking oxycodone 10 mg twice daily.",
+    "key": true
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Leg strength and sensation",
+    "min": 2,
+    "text": "Legs weaker. New numbness. Hasn't passed urine since morning.",
+    "key": true,
+    "why": "New back pain plus leg weakness in cancer is spinal cord compression until proven otherwise."
+   },
+   {
+    "id": "goals",
+    "g": "h",
+    "label": "Her goals of care",
+    "min": 2,
+    "text": "\"I want to stay home. But I don't want to be a burden.\"",
+    "key": true,
+    "why": "What she wants guides every decision."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Kim is exhausted. Worried about doing it alone.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Is she dying?\"",
+    "flag": "else"
+   },
+   {
+    "id": "acd",
+    "g": "h",
+    "label": "Check advance care directive",
+    "min": 1,
+    "text": "Has one. Wants comfort care but would accept treatment that helps her stay home."
+   },
+   {
+    "id": "bowel",
+    "g": "h",
+    "label": "Bowels",
+    "min": 1,
+    "text": "Constipated for 4 days."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Worsening bony pain only",
+    "Malignant spinal cord compression",
+    "Opioid toxicity",
+    "Urinary infection"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Urgent discussion with palliative care and oncology about steroids and radiotherapy, in line with her wishes",
+    "High-dose dexamethasone now if appropriate",
+    "Treat constipation and bladder retention",
+    "Increase opioid regularly with breakthrough doses",
+    "Nothing until next week",
+    "Explain to Rita and Kim what's happening and what the options are"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    0,
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Call the community palliative team or you any time; review tomorrow",
+    "Review in a fortnight",
+    "No need to come back",
+    "Call only if she stops breathing"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a home visit (out-of-rooms) consult item",
+     "ok": true,
+     "why": "Home visits use out-of-rooms items.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "In cancer, new back pain plus leg weakness or bladder trouble is spinal cord compression until proven otherwise. Hours matter.",
+  "sources": [
+   {
+    "t": "Palliative Care Australia",
+    "url": "https://palliativecare.org.au"
+   },
+   {
+    "t": "eviQ: spinal cord compression",
+    "url": "https://www.eviq.org.au"
+   }
+  ]
+ },
+ {
+  "id": "barry",
+  "room": "outreach",
+  "cu": "Rural and remote",
+  "name": "Barry",
+  "age": 63,
+  "who": "Farmer. Clinic is 3 hours from the nearest cath lab.",
+  "blurb": "Chest pain",
+  "opening": "\"Had this crushing pain since I was feeding the cattle. Hour or so.\"",
+  "actions": [
+   {
+    "id": "pain",
+    "g": "h",
+    "label": "Pain features",
+    "min": 1,
+    "text": "Central, heavy, into the jaw. Sweaty.",
+    "key": true
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "12-lead ECG",
+    "min": 1,
+    "text": "ST elevation in II, III and aVF.",
+    "key": true,
+    "why": "ECG within 10 minutes of arrival for chest pain."
+   },
+   {
+    "id": "asp",
+    "g": "t",
+    "label": "Aspirin 300 mg",
+    "min": 1,
+    "text": "Given.",
+    "key": true
+   },
+   {
+    "id": "contra",
+    "g": "h",
+    "label": "Thrombolysis contraindications checklist",
+    "min": 2,
+    "text": "None. No recent bleeding, surgery or stroke.",
+    "key": true,
+    "needs": "ecg",
+    "why": "If PCI can't happen within about 2 hours, thrombolysis is usually indicated."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Wants to know if he can drive home to tell his wife.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I've had a bit of indigestion all week.\"",
+    "flag": "else"
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Observations",
+    "min": 1,
+    "text": "BP 128/80, pulse 58, sats 97%."
+   },
+   {
+    "id": "call",
+    "g": "t",
+    "label": "Call retrieval and cardiology hotline",
+    "min": 2,
+    "text": "Retrieval coordinated; telehealth cardiologist advises thrombolysis.",
+    "key": true
+   }
+  ],
+  "dx": {
+   "options": [
+    "Indigestion",
+    "Inferior STEMI",
+    "Pericarditis",
+    "Stable angina"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Thrombolysis (after cardiology advice and consent), then transfer for angiography",
+    "Aspirin and anticoagulation as per protocol",
+    "Organise retrieval to a PCI hospital",
+    "Drive himself to hospital",
+    "Wait to see if pain settles",
+    "Explain the heart attack and treatment, and check he understands"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "danger": [
+    3,
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    0,
+    2
+   ]
+  },
+  "safety": {
+   "options": [
+    "Staying with him until retrieval arrives; continuous monitoring and defibrillator ready",
+    "Go home and rest",
+    "Come back tomorrow",
+    "Drive to hospital in the morning"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill an after-hours or emergency attendance item if eligible",
+     "ok": true,
+     "why": "Rural generalists often provide emergency care; check the specific item rules.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "In rural STEMI, time is muscle. If PCI isn't possible within 2 hours of first contact, thrombolysis plus transfer is usual.",
+  "sources": [
+   {
+    "t": "Heart Foundation ACS guideline",
+    "url": "https://www.heartfoundation.org.au/for-professionals/acs-guideline"
+   },
+   {
+    "t": "ACRRM curriculum",
+    "url": "https://www.acrrm.org.au/fellowship/curriculum"
+   }
+  ]
+ },
+ {
+  "id": "amina",
+  "room": "outreach",
+  "cu": "Refugee and migrant health",
+  "name": "Amina",
+  "age": 34,
+  "who": "Arrived from Afghanistan 4 months ago. Speaks Dari.",
+  "blurb": "Headaches",
+  "opening": "Her husband: \"She has headaches. I translate.\"",
+  "actions": [
+   {
+    "id": "int",
+    "g": "h",
+    "label": "Book a phone interpreter (TIS)",
+    "min": 2,
+    "text": "A female Dari interpreter joins. Amina speaks more freely.",
+    "key": true,
+    "flag": "pc",
+    "why": "Family members shouldn't interpret, especially for women's health or sensitive topics."
+   },
+   {
+    "id": "head",
+    "g": "h",
+    "label": "Headache story",
+    "min": 2,
+    "text": "Daily tension-type headaches. No red flags.",
+    "needs": "int"
+   },
+   {
+    "id": "sleep",
+    "g": "h",
+    "label": "Sleep and mood",
+    "min": 2,
+    "text": "Nightmares about the journey. Startles easily.",
+    "key": true,
+    "needs": "int",
+    "why": "Trauma symptoms are common and often present as physical complaints."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "She worries she has a brain tumour. Wants painkillers.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I'm also worried about my periods. And my children haven't had their needles.\"",
+    "flag": "else",
+    "needs": "int"
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Neuro exam and fundi",
+    "min": 2,
+    "text": "Normal."
+   },
+   {
+    "id": "screen",
+    "g": "t",
+    "label": "Refugee health screening bloods",
+    "min": 1,
+    "text": "Ordered: FBC, iron, vitamin D, hep B and C, HIV, syphilis, strongyloides, IGRA, schistosoma."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Brain tumour",
+    "Tension headaches with likely trauma-related symptoms (PTSD)",
+    "Migraine with aura",
+    "Meningitis"
+   ],
+   "answer": 1,
+   "danger": []
+  },
+  "plan": {
+   "options": [
+    "Use a professional interpreter at every visit",
+    "Arrange post-arrival health screening and catch-up vaccines for the whole family",
+    "Refer to a torture and trauma counselling service",
+    "CT head today",
+    "Strong opioids for headache"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 0,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if headaches change, wake her, or with weakness or vomiting. Review in 2 weeks with an interpreter",
+    "No need to come back",
+    "Come back in a year",
+    "Ask her husband to call"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill the patient for the interpreter",
+     "ok": false,
+     "why": "TIS National provides free interpreting for GP consults that are Medicare-rebatable.",
+     "src": {
+      "t": "TIS National",
+      "url": "https://www.tisnational.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Use a professional interpreter. Family interpreting misses trauma, women's health and safety issues.",
+  "sources": [
+   {
+    "t": "Refugee Health Network Australia",
+    "url": "https://refugeehealthaustralia.org"
+   },
+   {
+    "t": "TIS National",
+    "url": "https://www.tisnational.gov.au"
+   }
+  ]
+ },
+ {
+  "id": "chloe2",
+  "room": "womens",
+  "cu": "Family violence and child protection",
+  "name": "Chloe",
+  "age": 29,
+  "who": "Two young kids. Partner waits in the car.",
+  "blurb": "Bruised wrist",
+  "opening": "\"I tripped over the kids' toys. It's fine, just sore.\"",
+  "actions": [
+   {
+    "id": "alone",
+    "g": "h",
+    "label": "Make sure she's seen alone",
+    "min": 1,
+    "text": "Her partner's outside; she seems more relaxed.",
+    "key": true,
+    "why": "Ask about violence only when it's safe and private."
+   },
+   {
+    "id": "ask",
+    "g": "h",
+    "label": "Ask directly about safety at home",
+    "min": 2,
+    "text": "Pause. \"He gets angry. He grabbed me.\"",
+    "key": true,
+    "needs": "alone",
+    "why": "Asking directly, kindly, is how disclosure happens."
+   },
+   {
+    "id": "risk",
+    "g": "h",
+    "label": "Risk assessment: strangulation, threats, weapons, escalation",
+    "min": 2,
+    "text": "He choked her once last month.",
+    "key": true,
+    "needs": "ask",
+    "why": "Non-fatal strangulation is a strong predictor of later homicide."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Scared that if she tells, the kids will be taken.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Don't write anything down. He reads my phone.\"",
+    "flag": "else",
+    "needs": "ask"
+   },
+   {
+    "id": "wrist",
+    "g": "e",
+    "label": "Wrist exam",
+    "min": 1,
+    "text": "Finger-pattern bruising. Bones fine."
+   },
+   {
+    "id": "couples",
+    "g": "h",
+    "label": "Suggest couples counselling",
+    "min": 1,
+    "text": "She looks worried.",
+    "flag": "low",
+    "why": "Couples counselling isn't safe in family violence."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Accidental injury",
+    "Intimate partner violence with high-risk features",
+    "Domestic argument, not violence",
+    "Wrist sprain only"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Listen, believe and validate",
+    "Safety plan, including a safe way to contact her",
+    "Connect with specialist family violence services (1800RESPECT)",
+    "Document carefully in the record, with privacy settings",
+    "Couples counselling"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 0,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Agree a safe way to follow up; 000 if in danger",
+    "Come back in 6 months",
+    "No need to come back",
+    "Send a reminder text"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Send an SMS appointment reminder",
+     "ok": false,
+     "why": "Her partner reads her phone. Ask about safe contact methods first.",
+     "src": {
+      "t": "RACGP White Book",
+      "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/abuse-and-violence"
+     }
+    }
+   ]
+  },
+  "pearl": "Ask about strangulation. It's one of the strongest warning signs of future lethal violence.",
+  "sources": [
+   {
+    "t": "RACGP White Book",
+    "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/abuse-and-violence"
+   },
+   {
+    "t": "1800RESPECT",
+    "url": "https://www.1800respect.org.au"
+   }
+  ]
+ },
+ {
+  "id": "josh2",
+  "room": "womens",
+  "cu": "Sexual and reproductive health",
+  "name": "Jake",
+  "age": 24,
+  "who": "Uni student. Partner just tested positive.",
+  "blurb": "\"Got a text\"",
+  "opening": "\"Got a text from a contact tracing service. A guy I hooked up with has gonorrhoea.\"",
+  "actions": [
+   {
+    "id": "sexhx",
+    "g": "h",
+    "label": "Sexual history (partners, practices, protection)",
+    "min": 2,
+    "text": "Two male partners in 3 months. Receptive anal and oral sex. Condoms sometimes.",
+    "key": true,
+    "why": "Sites tested depend on practices."
+   },
+   {
+    "id": "sx",
+    "g": "h",
+    "label": "Symptoms",
+    "min": 1,
+    "text": "None."
+   },
+   {
+    "id": "prep",
+    "g": "h",
+    "label": "PrEP",
+    "min": 1,
+    "text": "Not on PrEP. Hasn't heard much about it.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Embarrassed. Wants to \"get it sorted today\".",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Do I need to tell the other guy?\"",
+    "flag": "else"
+   },
+   {
+    "id": "tests",
+    "g": "t",
+    "label": "Test throat, rectal swab and urine, plus HIV, syphilis, hep B serology",
+    "min": 2,
+    "text": "Done.",
+    "key": true
+   },
+   {
+    "id": "urine",
+    "g": "t",
+    "label": "Urine test only",
+    "min": 1,
+    "text": "Done.",
+    "flag": "low",
+    "why": "Urine alone misses throat and rectal infections."
+   }
+  ],
+  "dx": {
+   "options": [
+    "No risk",
+    "Gonorrhoea contact: test all sites and treat as contact",
+    "Chlamydia only",
+    "HIV infection"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Treat as a contact today (ceftriaxone IM + azithromycin as per guideline)",
+    "Test all exposed sites and blood tests",
+    "Offer PrEP and hep A and B vaccination",
+    "Partner notification help",
+    "Wait for results before treating"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [],
+   "explain": 2,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Test of cure as advised; no sex for 7 days after treatment and until partners treated",
+    "No follow-up needed",
+    "Come back in a year",
+    "Only if symptoms"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a normal consult item",
+     "ok": true,
+     "why": "Sexual health consults are standard Medicare items.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Test sites according to practices. Treat contacts on the day. Every STI visit is a chance to offer PrEP and vaccines.",
+  "sources": [
+   {
+    "t": "Australian STI Management Guidelines",
+    "url": "https://sti.guidelines.org.au"
+   }
+  ]
+ },
+ {
+  "id": "zoe",
+  "room": "consult",
+  "cu": "Adolescent health",
+  "name": "Zoe",
+  "age": 15,
+  "who": "Year 10. Mum brought her in, then waits outside.",
+  "blurb": "Tummy aches",
+  "opening": "\"Mum made me come. My stomach hurts before school.\"",
+  "actions": [
+   {
+    "id": "conf",
+    "g": "h",
+    "label": "Explain confidentiality and its limits",
+    "min": 1,
+    "text": "\"So you won't tell Mum?\" She relaxes a bit.",
+    "key": true,
+    "flag": "pc",
+    "why": "Young people open up when they know what stays private and the safety exceptions."
+   },
+   {
+    "id": "headss",
+    "g": "h",
+    "label": "HEEADSSS psychosocial assessment",
+    "min": 3,
+    "text": "Being bullied online. Skipping lunch to avoid people. Sleeping badly.",
+    "key": true,
+    "needs": "conf",
+    "why": "Somatic symptoms in teens often have psychosocial drivers."
+   },
+   {
+    "id": "safe",
+    "g": "h",
+    "label": "Self-harm and safety",
+    "min": 2,
+    "text": "Some thoughts of not wanting to be here, no plan.",
+    "key": true,
+    "needs": "headss"
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Wants the tummy aches to stop. Scared Mum will find out about the bullying.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Can I come back by myself?\"",
+    "flag": "else"
+   },
+   {
+    "id": "abdo",
+    "g": "e",
+    "label": "Abdominal exam",
+    "min": 1,
+    "text": "Normal."
+   },
+   {
+    "id": "scope",
+    "g": "t",
+    "label": "Refer for a gastroscopy",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "A normal exam and no red flags don't need scoping."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Coeliac disease",
+    "Functional abdominal pain with anxiety, low mood and bullying",
+    "Appendicitis",
+    "Peptic ulcer"
+   ],
+   "answer": 1,
+   "danger": [
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Safety plan and close follow-up",
+    "Link to youth mental health support (headspace)",
+    "With her consent, involve Mum or school",
+    "Gastroscopy",
+    "Tell Mum everything now"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 2,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back by herself in a week; Kids Helpline 1800 55 1800 any time",
+    "No need to come back",
+    "Come back in 6 months",
+    "Only with Mum"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "She can have her own Medicare card from 14",
+     "ok": true,
+     "why": "Young people 14 and over can get their own Medicare card.",
+     "src": {
+      "t": "Services Australia",
+      "url": "https://www.servicesaustralia.gov.au/medicare-card-for-young-people"
+     }
+    }
+   ]
+  },
+  "pearl": "See young people on their own for part of the consult. Explain confidentiality first.",
+  "sources": [
+   {
+    "t": "headspace",
+    "url": "https://headspace.org.au"
+   }
+  ]
+ },
+ {
+  "id": "lou",
+  "room": "chronic",
+  "cu": "Endocrine",
+  "name": "Lou",
+  "age": 67,
+  "who": "Type 2 diabetes for 20 years.",
+  "blurb": "\"Sore on my foot\"",
+  "opening": "\"Got a blister on my foot. Doesn't hurt much.\"",
+  "actions": [
+   {
+    "id": "dur",
+    "g": "h",
+    "label": "How long",
+    "min": 1,
+    "text": "Three weeks. Didn't notice till he saw blood on his sock."
+   },
+   {
+    "id": "feet",
+    "g": "e",
+    "label": "Foot exam: pulses, monofilament, ulcer probe",
+    "min": 3,
+    "text": "No pedal pulses. Can't feel monofilament. Ulcer probes to bone.",
+    "key": true,
+    "why": "Probe-to-bone suggests osteomyelitis."
+   },
+   {
+    "id": "infect",
+    "g": "e",
+    "label": "Signs of infection",
+    "min": 1,
+    "text": "Redness spreading 3 cm. Warm.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Worried about \"losing the foot\". Wants a cream.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My sugars have been high.\"",
+    "flag": "else"
+   },
+   {
+    "id": "hba1c",
+    "g": "t",
+    "label": "HbA1c",
+    "min": 1,
+    "text": "9.4%."
+   },
+   {
+    "id": "cream",
+    "g": "t",
+    "label": "Antiseptic cream and review in 2 weeks",
+    "min": 1,
+    "text": "Prescribed.",
+    "flag": "low",
+    "why": "Infected deep diabetic ulcers with poor circulation need urgent specialist care."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Simple blister",
+    "Infected diabetic foot ulcer with likely osteomyelitis and ischaemia",
+    "Gout",
+    "Cellulitis only"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Same-day referral to the high-risk foot service or hospital",
+    "Offload pressure",
+    "Start antibiotics as per guideline after cultures",
+    "Vascular assessment",
+    "Cream and review in 2 weeks",
+    "Explain why it's urgent and check he understands"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Today: high-risk foot service or ED",
+    "Review in a month",
+    "No need to come back",
+    "Podiatry next year"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Refer to podiatry with a chronic disease management plan",
+     "ok": true,
+     "why": "Allied health items need a GP chronic condition management plan.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Diabetes plus foot ulcer with infection or ischaemia is a limb emergency.",
+  "sources": [
+   {
+    "t": "Australian diabetes-related foot disease guidelines",
+    "url": "https://www.diabetesfeetaustralia.org/new-guidelines/"
+   }
+  ]
+ },
+ {
+  "id": "nick",
+  "room": "outreach",
+  "cu": "Occupational and environmental",
+  "name": "Nick",
+  "age": 41,
+  "who": "Stonemason for 15 years.",
+  "blurb": "Breathless",
+  "opening": "\"Getting puffed carrying slabs. Mate said I should get checked.\"",
+  "actions": [
+   {
+    "id": "occ",
+    "g": "h",
+    "label": "Occupational history: dust, masks, ventilation",
+    "min": 2,
+    "text": "Cut engineered stone dry for years, often without a mask.",
+    "key": true,
+    "why": "Ask \"What do you do, and what are you exposed to?\""
+   },
+   {
+    "id": "smoke",
+    "g": "h",
+    "label": "Smoking",
+    "min": 1,
+    "text": "Never."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Worried about his job and his family's income.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"A few blokes I worked with have the same.\"",
+    "flag": "else"
+   },
+   {
+    "id": "chest",
+    "g": "e",
+    "label": "Chest exam",
+    "min": 1,
+    "text": "Fine crackles at the bases."
+   },
+   {
+    "id": "spiro",
+    "g": "t",
+    "label": "Spirometry",
+    "min": 2,
+    "text": "Restrictive pattern.",
+    "key": true
+   },
+   {
+    "id": "hrct",
+    "g": "t",
+    "label": "Chest CT (HRCT)",
+    "min": 1,
+    "text": "Small nodules in upper lobes.",
+    "key": true
+   }
+  ],
+  "dx": {
+   "options": [
+    "Asthma",
+    "Silicosis",
+    "Anxiety",
+    "Heart failure"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Refer to a respiratory physician",
+    "Notify under state dust disease scheme and workers compensation",
+    "Advise no further exposure",
+    "Inhalers and review in 6 months",
+    "Screen for TB (silica raises risk)",
+    "Explain silicosis, what it means for work, and check understanding"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if more breathless or coughing blood; respiratory review booked",
+    "No need to come back",
+    "Come back in a year",
+    "Only if he stops work"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill Medicare for the workers compensation consult",
+     "ok": false,
+     "why": "If it becomes a claim, consults are billed to the insurer.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Always take an occupational history. Engineered stone was banned in Australia from July 2024 because of silicosis.",
+  "sources": [
+   {
+    "t": "Safe Work Australia: engineered stone",
+    "url": "https://www.safeworkaustralia.gov.au/safety-topic/hazards/crystalline-silica-and-silicosis"
+   }
+  ]
+ },
+ {
+  "id": "vince",
+  "room": "consult",
+  "cu": "Men's health",
+  "name": "Vince",
+  "age": 56,
+  "who": "Accountant.",
+  "blurb": "\"Something for the bedroom\"",
+  "opening": "\"Bit awkward. Things aren't working downstairs. Can I get the blue pills?\"",
+  "actions": [
+   {
+    "id": "ed",
+    "g": "h",
+    "label": "Erectile history",
+    "min": 1,
+    "text": "Gradual over a year. No morning erections."
+   },
+   {
+    "id": "cvd",
+    "g": "h",
+    "label": "Cardiovascular risk factors",
+    "min": 2,
+    "text": "Smokes. Father had a heart attack at 60. Never had cholesterol checked.",
+    "key": true,
+    "why": "Erectile dysfunction is an early marker of cardiovascular disease."
+   },
+   {
+    "id": "nitr",
+    "g": "h",
+    "label": "Nitrates or chest pain",
+    "min": 1,
+    "text": "No nitrates. Sometimes chest tightness on hills.",
+    "key": true,
+    "why": "PDE5 inhibitors with nitrates can drop BP dangerously."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Embarrassed. Wants a quick script.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My wife thinks I'm stressed.\"",
+    "flag": "else"
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "BP, BMI, cardiovascular exam",
+    "min": 2,
+    "text": "BP 156/96. BMI 31."
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "Lipids, HbA1c, morning testosterone",
+    "min": 1,
+    "text": "Ordered."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Psychological ED only",
+    "ED as a marker of vascular disease, with possible angina",
+    "Low testosterone only",
+    "Normal ageing"
+   ],
+   "answer": 1,
+   "danger": [
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Assess cardiovascular risk and investigate the exertional chest tightness",
+    "Discuss PDE5 inhibitor once cardiac status is clear",
+    "Smoking cessation support",
+    "Script for sildenafil today without further checks",
+    "Reassure"
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "danger": [
+    3,
+    4
+   ],
+   "explain": 1,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back with results in 1 to 2 weeks; ambulance if chest pain at rest or lasting over 10 minutes",
+    "No need to come back",
+    "Come back in a year",
+    "Only if the pills don't work"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a heart health check",
+     "ok": true,
+     "why": "If he meets the criteria and it's done properly, a heart health assessment item may apply.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Erectile dysfunction often appears years before heart disease. Treat it as a vascular warning sign.",
+  "sources": [
+   {
+    "t": "Healthy Male",
+    "url": "https://www.healthymale.org.au"
+   },
+   {
+    "t": "Aus CVD Risk Calculator",
+    "url": "https://www.cvdcheck.org.au"
+   }
+  ]
+ },
+ {
+  "id": "ruth",
+  "room": "desk",
+  "cu": "Digital health",
+  "name": "Ruth",
+  "age": 72,
+  "who": "Phone telehealth. You saw her 3 months ago.",
+  "blurb": "Repeat scripts by phone",
+  "opening": "\"Can you just do my repeats over the phone, love?\"",
+  "actions": [
+   {
+    "id": "id",
+    "g": "h",
+    "label": "Confirm identity and location",
+    "min": 1,
+    "text": "Name, DOB confirmed. She's at home.",
+    "key": true,
+    "why": "Confirm identity and where they are in case of emergency."
+   },
+   {
+    "id": "meds",
+    "g": "h",
+    "label": "Medicine review",
+    "min": 2,
+    "text": "On warfarin, ramipril, metformin. Bruising more easily.",
+    "key": true
+   },
+   {
+    "id": "inr",
+    "g": "t",
+    "label": "Check INR record",
+    "min": 1,
+    "text": "Last INR 4.1 two weeks ago, no follow-up recorded.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Hates driving to the clinic. Wants e-scripts sent.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I had a little fall last week, nothing much.\"",
+    "flag": "else"
+   },
+   {
+    "id": "fall",
+    "g": "h",
+    "label": "Ask about the fall",
+    "min": 2,
+    "text": "Hit her head. Mild headache since.",
+    "key": true,
+    "needs": "else",
+    "why": "Head injury on warfarin needs a CT."
+   },
+   {
+    "id": "escr",
+    "g": "t",
+    "label": "Send e-scripts",
+    "min": 1,
+    "text": "Sent."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Routine repeat",
+    "Head injury on warfarin with a high INR",
+    "Medicine side effect only",
+    "Normal bruising"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Urgent CT head today (ED)",
+    "Check INR today",
+    "Send e-scripts for other medicines",
+    "Repeat scripts and review in 3 months",
+    "Book face-to-face review after",
+    "Explain why she needs a scan today, and check she understands"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Go to ED today; call 000 if drowsy, vomiting or confused",
+    "Review in 3 months",
+    "No need to come back",
+    "Next telehealth in a month"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a phone telehealth item",
+     "ok": true,
+     "why": "She's an established patient (seen in the last 12 months), so the telehealth items apply.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Telehealth still needs a proper history. \"Anything else?\" can reveal the emergency.",
+  "sources": [
+   {
+    "t": "RACGP telehealth guide",
+    "url": "https://www.racgp.org.au/running-a-practice/technology/business-technology/telehealth"
+   }
+  ]
+ },
+ {
+  "id": "pam",
+  "room": "treatment",
+  "cu": "ENT",
+  "name": "Pam",
+  "age": 64,
+  "who": "Retired nurse.",
+  "blurb": "Room spinning",
+  "opening": "\"Woke up and the room was spinning. Vomited twice.\"",
+  "actions": [
+   {
+    "id": "onset",
+    "g": "h",
+    "label": "Onset and triggers",
+    "min": 1,
+    "text": "Constant since waking, not just with head movement.",
+    "key": true,
+    "why": "Continuous vertigo is different from brief positional vertigo."
+   },
+   {
+    "id": "neuro",
+    "g": "h",
+    "label": "Other neuro symptoms",
+    "min": 1,
+    "text": "Some trouble walking. No speech change."
+   },
+   {
+    "id": "hint",
+    "g": "e",
+    "label": "HINTS exam (head impulse, nystagmus, test of skew)",
+    "min": 3,
+    "text": "Normal head impulse. Direction-changing nystagmus.",
+    "key": true,
+    "why": "Normal head impulse plus direction-changing nystagmus suggests a central (stroke) cause."
+   },
+   {
+    "id": "gait",
+    "g": "e",
+    "label": "Gait",
+    "min": 1,
+    "text": "Can't walk without help.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's \"an inner ear thing\". Wants tablets for nausea.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I've got high blood pressure and AF.\"",
+    "flag": "else"
+   },
+   {
+    "id": "epley",
+    "g": "t",
+    "label": "Epley manoeuvre",
+    "min": 2,
+    "text": "Makes it worse.",
+    "flag": "low",
+    "why": "Epley is for BPPV, not continuous vertigo."
+   }
+  ],
+  "dx": {
+   "options": [
+    "BPPV",
+    "Vestibular neuritis",
+    "Posterior circulation stroke",
+    "Ménière's disease"
+   ],
+   "answer": 2,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Ambulance to ED for stroke assessment",
+    "Prochlorperazine and home",
+    "Epley manoeuvre",
+    "Explain why it's urgent",
+    "Wait and see"
+   ],
+   "correct": [
+    0,
+    3
+   ],
+   "danger": [
+    1,
+    2,
+    4
+   ],
+   "explain": 3,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Ambulance now",
+    "Review tomorrow",
+    "No need to come back",
+    "Come back if it lasts a week"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2,
+    3
+   ]
+  },
+  "billing": {
+   "extras": [
+    {
+     "label": "Bill a normal consult item",
+     "ok": true,
+     "why": "Standard consultation.",
+     "src": {
+      "t": "MBS Online",
+      "url": "https://www.mbsonline.gov.au"
+     }
+    }
+   ]
+  },
+  "pearl": "Continuous vertigo plus can't walk, or HINTS pointing central, needs stroke assessment.",
+  "sources": [
+   {
+    "t": "Stroke Foundation guidelines",
+    "url": "https://informme.org.au/guidelines"
    }
   ]
  }
