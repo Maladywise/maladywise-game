@@ -1233,3 +1233,10 @@ a.tl:hover{border-color:var(--accent)}
 .wd .mw-crumbs li{background:none;border:0;border-radius:0;padding:0;font-size:12.5px;line-height:1.4;color:var(--muted)}
 .wd .mw-crumbs li a{font-weight:400;color:var(--muted);text-decoration:none}
 .wd .mw-crumbs [aria-current]{color:var(--ink)}
+
+/* done today: mascot goes black and white (tick stays green) */
+.tl.done{opacity:1}
+.tl.done .tl-ic{background:color-mix(in srgb,var(--muted) 14%,transparent)}
+.tl.done .tl-ic img,.tl.done .tl-ic svg,.t3.done .t3-ic img,.t3.done .t3-ic svg,.card.done .band-masc{filter:grayscale(1);opacity:.75}
+.tl.done b,.tl.done small{color:var(--muted)}
+.t3.done .t3-ic{background:#A8A1B5}
