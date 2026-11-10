@@ -48,6 +48,7 @@
       CAMP_TIP: [null, "A farm stay. Basil hates it already. Kick everything off the hay bale.", "Clover’s turn: eat the farm food. Not the onion (toxic to cats).", "Faster. More prickly things. The flies are out.", "Mud everywhere. Faster again. The fleas are hopping.", "BOSS: Farmer Fern. Hit the glowing spots. Jump the rake. Wriggle out of the sack.", "Faster. The rooster is restless.", "Faster. Rotten food everywhere. Spot it.", "Faster. Heavier things. The barn cat is cockier.", "Faster. Harvest: everyone’s yawning.", "Sunset. Top speed. One life. Then Farmer Fern and Farmhand Pip."],
       CTITLES: [[5, "Unruly"], [10, "Feral"], [15, "Needs Two Farmhands"], [25, "Banned from the Barn"], [40, "Farm Show Legend"]],
       SPOTS: ["CLIPBOARD", "HAT", "TEA"],
+      NURSELABEL: "FARMHAND PIP · SACKS", KEY: "farm",
       SAY: {
         "FRAZZLED!": "FURIOUS!", " · FRAZZLED": " · FURIOUS", ": The Vet": ": The Farm",
         "Clean bill of health · all 10 vet rounds": "Farm show champions · all 10 farm rounds", "Check-up Legend": "Farm Legend",

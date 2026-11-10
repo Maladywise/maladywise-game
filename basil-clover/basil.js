@@ -12,10 +12,11 @@
   // ---------- stages: 1 = the Kitchen (original), 2 = the Vet (vet.js) ----------
   var STAGE = 1, V = null, VM = {}, ST1 = null;
   var KEYS = { 1: { best: "mw-basil-best2", won: "mw-basil-won", hs: "mw-basil-hs" }, 2: { best: "mw-basil-vet-best", won: "mw-basil-vet-won", hs: "mw-basil-vet-hs" }, 3: { best: "mw-basil-farm-best", won: "mw-basil-farm-won", hs: "mw-basil-farm-hs" } };
+  var LCFG = window.MW_LEVEL_CFG || {}; Object.keys(LCFG).forEach(function (n) { var k = LCFG[n].key; KEYS[n] = { best: "mw-basil-" + k + "-best", won: "mw-basil-" + k + "-won", hs: "mw-basil-" + k + "-hs" }; });
   function s2(a, b) { return STAGE >= 2 ? say(b) : a; }
   // the Farm (stage 3) reuses the Vet's copy, swapped through farm.js TEXT.SAY (exact lines) and TEXT.SAYRE (word swaps)
   function say(x) {
-    if (STAGE !== 3 || !V || !V.TEXT || !V.TEXT.SAY || x == null) return x;
+    if (STAGE < 3 || !V || !V.TEXT || !V.TEXT.SAY || x == null) return x;
     if (Array.isArray(x)) return x.map(say);
     if (typeof x !== "string") return x;
     if (V.TEXT.SAY[x] != null) return V.TEXT.SAY[x];
@@ -25,10 +26,20 @@
   try { var vq = new URLSearchParams(location.search).get("vetpass"); if (vq !== null) localStorage.setItem("mw-basil-vetpass", vq === "0" ? "0" : "1"); } catch (e) {}
   function kitchenWon() { return true; } // the Vet is open to everyone (Nov 2026); beating the Kitchen now earns a crown, not a key
   // daily challenge rotates the stage by Sydney weekday (Sun..Sat). Add new stages here as they are built.
-  var DAILYMAP = [3, 1, 2, 1, 2, 1, 2], STNAME = { 1: "Kitchen", 2: "Vet", 3: "Farm" }, DAYN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var DAILYMAP = [3, 1, 2, 4, 5, 6, 7], STNAME = { 1: "Kitchen", 2: "Vet", 3: "Farm", 4: "Beach", 5: "Ward", 6: "Hell", 7: "Bath Time", 8: "Christmas", 9: "Easter", 10: "Halloween" }, DAYN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   function sydWd() { try { return new Date(sydDay() + "T12:00:00Z").getUTCDay(); } catch (e) { return new Date().getDay(); } }
-  function dailyStage() { var n = DAILYMAP[sydWd()] || 1; return n > 1 && !VM[n] ? 1 : n; }
-  function track(n) { if (STAGE >= 2) n = String(n).replace(/^basil\//, STAGE === 3 ? "basil/farm-" : "basil/vet-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
+  function easterUTC(y) { // anonymous Gregorian algorithm
+    var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+    return Date.UTC(y, Math.floor((h + l - 7 * m + 114) / 31) - 1, ((h + l - 7 * m + 114) % 31) + 1);
+  }
+  function seasonStage() { // Christmas 18-26 Dec, Halloween 25-31 Oct, Easter Good Friday to Easter Monday (Sydney date)
+    var d = sydDay(), y = +d.slice(0, 4), md = d.slice(5);
+    if (md >= "12-18" && md <= "12-26") return 8; if (md >= "10-25" && md <= "10-31") return 10;
+    var diff = (Date.UTC(y, +md.slice(0, 2) - 1, +md.slice(3)) - easterUTC(y)) / 864e5;
+    return diff >= -2 && diff <= 1 ? 9 : 0;
+  }
+  function dailyStage() { var n = seasonStage() || DAILYMAP[sydWd()] || 1; return n > 1 && !VM[n] ? 1 : n; }
+  function track(n) { if (STAGE >= 2) n = String(n).replace(/^basil\//, "basil/" + (STAGE >= 3 && V && V.TEXT.KEY ? V.TEXT.KEY : "vet") + "-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
   function $(id) { return document.getElementById(id); }
   function rnd(a, b) { return a + Math.random() * (b - a); }
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
@@ -105,7 +116,7 @@
   // ---------- state ----------
   var S, raf = 0, last = 0, paused = false, running = false;
   function reset() {
-    G = DAILY ? seeded((STAGE === 3 ? "basil-farm-" : STAGE >= 2 ? "basil-vet-" : "basil-") + sydDay()) : Math.random;
+    G = DAILY ? seeded((STAGE >= 3 && V && V.TEXT.KEY ? "basil-" + V.TEXT.KEY + "-" : STAGE === 2 ? "basil-vet-" : "basil-") + sydDay()) : Math.random;
     S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: grnd(10, 16), boss: null, bosses: 0, nightK: 0, zoom: null, zoomT: grnd(9, 13), rb: null, rbT: grnd(40, 55), dust: [], parts: [], rT0: 0, finale: false, ev: null, evT: grnd(8, 11), butterT: 0, towelT: 0, leapT: 0, flashT: 0, rFail: false, dogSeen: 0, rain: [], nipT: 0, nips: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: grnd(5, 8), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: grnd(2.5, 4.5), frenzyT: 0, eaten: 0, smashed: 0,
       sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: grnd(10, 14), tom: null, tomT: grnd(30, 40), dog: null, dogT: grnd(16, 22), laser: null, laserT: grnd(11, 15), bestCombo: 0, ctitle: null, hairballs: 0, raids: 0,
       rStart: 0, rPen: false, perfects: 0, celeb: null, won: false, newWin: false, yawnT: 0, nipAt: 0, flea: null, fleaT: STAGE >= 2 ? grnd(12, 18) : 0, itchT: 0, stripe: null };
@@ -573,7 +584,7 @@
     rr(70, 46, 220, 10, 5); ctx.fillStyle = "rgba(43,35,64,.15)"; ctx.fill(); rr(70, 46, Math.max(0.1, 220 * b.hp / b.hpMax), 10, 5); ctx.fillStyle = b.angry ? "#E0302A" : "#C2553A"; ctx.fill();
     ctx.strokeStyle = "rgba(43,35,64,.35)"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(180, 44); ctx.lineTo(180, 58); ctx.stroke();
     ctx.fillStyle = "#2B2340"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(s2("VAC-3000 · ", "DR POKESWORTH · ") + b.hp + "/" + b.hpMax + (b.angry ? s2(" · ANGRY", " · FRAZZLED") : ""), 180, 70);
-    if (b.nurse && !b.nurse.gone) { rr(96, 78, 168, 18, 9); ctx.fillStyle = "rgba(122,63,181,.92)"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "800 9px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(STAGE === 3 ? "FARMHAND PIP · SACKS" : "NURSE BURRITO · TOWELS", 162, 91); for (var nt0 = 0; nt0 < 3; nt0++) { rr(228 + nt0 * 11, 82, 9, 10, 2); ctx.fillStyle = nt0 < b.nurse.towels ? "#FFFFFF" : "rgba(255,255,255,.3)"; ctx.fill(); } }
+    if (b.nurse && !b.nurse.gone) { rr(96, 78, 168, 18, 9); ctx.fillStyle = "rgba(122,63,181,.92)"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "800 9px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(STAGE >= 3 && V.TEXT.NURSELABEL ? V.TEXT.NURSELABEL : "NURSE BURRITO · TOWELS", 162, 91); for (var nt0 = 0; nt0 < 3; nt0++) { rr(228 + nt0 * 11, 82, 9, 10, 2); ctx.fillStyle = nt0 < b.nurse.towels ? "#FFFFFF" : "rgba(255,255,255,.3)"; ctx.fill(); } }
   }
   // explosion debris (dust cloud and parts) lives on after the boss is gone
   function debrisStep(dt) {
@@ -1132,6 +1143,13 @@
   var CAMEO = {
     1: [["dx", "Who left the bench like this?"], ["wordemic", "Wash your paws."], ["comorbix", "I’d sort this into four groups."], ["triviosis", "Fun fact: cats sleep about 15 hours a day."], ["linkase", "Just passing through."], ["gridectomy", "Slow down. Nobody’s chasing you."]],
     2: [["morphemia", "Next patient, please!"], ["panelysis", "Just here for a blood test."], ["arrhythmix", "Heart rate: 180. Stay calm."], ["grandrounds", "Night shift again."], ["glimpsis", "I see everything."], ["opacitis", "X-ray room’s that way."]],
+    4: [["opacitis", "Don’t touch me. I sting. Gently."], ["comorbix", "Eight arms. Eight sunscreens."], ["zebritis", "Stripes: SPF 0."], ["triviosis", "Squawk! Seagulls can drink seawater."]],
+    5: [["morphemia", "Bed 4 needs a bedpan."], ["panelysis", "Your bloods are back. Fabulous."], ["arrhythmix", "Sinus rhythm. Smug rhythm."], ["grandrounds", "Ward round in five."], ["dx", "Who ordered this many tests?"]],
+    6: [["cryptogenic", "Basil’s evil twin, reporting for duty."], ["suturix", "Lovely cobwebs down here."], ["panelysis", "It’s warm. I’m clotting."], ["grandrounds", "Night shift never ends here."]],
+    7: [["wordemic", "Scrub, scrub. I’m doomed."], ["gridectomy", "I take baths slowly."], ["opacitis", "Finally, some water."], ["comorbix", "Eight arms. Eight sponges."]],
+    8: [["dx", "Who ate Santa’s biscuits? Investigating."], ["triviosis", "Jingle bells! Squawk!"], ["morphemia", "Merry Christmas from the nurse bee."], ["zebritis", "Reindeer? No. Zebra."]],
+    9: [["gridectomy", "I won the egg hunt. Eventually."], ["morphemia", "Busy as a bee in spring."], ["dx", "Following the egg trail."], ["sudokrine", "Whoo hid the eggs?"]],
+    10: [["grandrounds", "Finally, my night."], ["cryptogenic", "Black cat. Bad luck. For you."], ["suturix", "Love what you’ve done with the webs."], ["panelysis", "Vampire mode: activated."]],
     3: [["zebritis", "Escaped the paddock. Don’t tell."], ["sudokrine", "Whoo’s making all this noise?"], ["dx", "Investigating the hen house. Officially."], ["triviosis", "Polly wants a carrot."], ["gridectomy", "Farm life suits me. Slow."], ["suturix", "Lovely barn. Great corners."]]
   };
   var CAMIMG = {};
@@ -1184,6 +1202,7 @@
   var VAPI = { ctx: function () { return ctx; }, S: function () { return S; }, rr: rr, circ: circ, ell: ell, spr: spr, catEyes: catEyes, sprImg: function (n) { return sprOK(n) ? SPR[n] : null; }, W: W, H: H, BENCH: BENCH };
   try { VM[2] = window.MW_VET ? window.MW_VET(VAPI) : null; } catch (e) { VM[2] = null; }
   try { VM[3] = window.MW_FARM ? window.MW_FARM(VAPI) : null; } catch (e) { VM[3] = null; } // Stage 3 (the Farm) lives in farm.js
+  Object.keys(LCFG).forEach(function (n) { try { VM[n] = window.MW_LEVEL(VAPI, +n); } catch (e) { VM[n] = null; } }); // stages 4-10 live in levels.js
   V = VM[2];
   var sprLeft = 6;
   ["basil-body", "basil-head", "clover-body", "clover-head", "basil-body-lion", "basil-head-lion"].forEach(function (n) { var im = new Image(); im.onload = im.onerror = function () { if (--sprLeft === 0 && typeof drawThumbs === "function") drawThumbs(); }; im.src = SBASE + "sprites/" + n + ".svg?v=2"; SPR[n] = im; });
@@ -1509,7 +1528,7 @@
       ctx.font = "800 12px Poppins, sans-serif"; ctx.lineWidth = 4; ctx.strokeText(ct.n + " in a row", 0, 20); ctx.fillStyle = "#FFFFFF"; ctx.fillText(ct.n + " in a row", 0, 20); ctx.restore();
     }
     if (S.ann && S.ann.t > 0) {
-      if (STAGE === 3 && !S.ann.said) { S.ann.a = say(S.ann.a); S.ann.b = say(S.ann.b); S.ann.said = 1; }
+      if (STAGE >= 3 && !S.ann.said) { S.ann.a = say(S.ann.a); S.ann.b = say(S.ann.b); S.ann.said = 1; }
       var at = S.ann.t, k = Math.min(1, (1.8 - at) / 0.25), cl2 = S.ann.b === "NOM!", fade = Math.min(1, at / 0.3);
       ctx.save(); ctx.globalAlpha = fade; ctx.fillStyle = "rgba(20,13,40,.35)"; ctx.fillRect(0, 120, W, 120);
       ctx.translate(180, 168); ctx.scale(0.6 + 0.4 * k, 0.6 + 0.4 * k); ctx.textAlign = "center"; ctx.lineJoin = "round";
@@ -1549,7 +1568,7 @@
       if (STAGE >= 2) $("bk-omsg").textContent = "All ten vet rounds. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all. Basil: " + bn + ". Clover: " + cn + "." + (S.perfects ? " Perfect rounds: " + S.perfects + "." : "") + (S.newWin ? " Vet Endless unlocked." : "");
       else $("bk-omsg").textContent = "All ten rounds. The bench is empty, the vacuum is retired and the hedgehog is still asleep. Basil: " + bn + ". Clover: " + cn + "." + (S.perfects ? " Perfect rounds: " + S.perfects + "." : "") + (S.newWin ? " Endless mode unlocked." : ""); }
     if (S.bestCombo >= 5) $("bk-omsg").textContent += " Best streak: " + comboTitle(S.bestCombo) + ".";
-    if (STAGE === 3) ["bk-omsg", "bk-ofeat", "bk-otitle"].forEach(function (id) { $(id).textContent = say($(id).textContent); });
+    if (STAGE >= 3) ["bk-omsg", "bk-ofeat", "bk-otitle"].forEach(function (id) { $(id).textContent = say($(id).textContent); });
     $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = fmt(S.bPts); $("bk-onom").textContent = fmt(S.cPts);
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + fmt(best); ob.className = "bk-obest" + (pb ? " pb" : "");
     $("bk-over").hidden = false; track("basil/end");
@@ -1578,11 +1597,11 @@
   var LB = "https://mw-presence.onrender.com", boards = { world: null, daily: null, vworld: null, vdaily: null, fworld: null, fdaily: null }, tabSel = { "bk-hslist0": "world", "bk-hstab": "world" }, hsSt = { "bk-hslist0": 1 }, lastHi = -1, VETLB = false, FARMLB = false;
   var SRV = { world: "all", daily: "daily", vworld: "vall", vdaily: "vdaily", fworld: "fall", fdaily: "fdaily" };
   // a stage's World/Today boards are used only once the server has echoed that board back (older servers map unknown boards to "all")
-  function lbOff(st) { return st === 2 ? !VETLB : st === 3 ? !FARMLB : false; }
-  function lbOffK(k) { return k.charAt(0) === "v" ? !VETLB : k.charAt(0) === "f" ? !FARMLB : false; }
+  function lbOff(st) { return st === 2 ? !VETLB : st === 3 ? !FARMLB : st >= 4; }
+  function lbOffK(k) { return k.charAt(0) === "v" ? !VETLB : k.charAt(0) === "f" ? !FARMLB : k.charAt(0) === "x"; }
   function boardSt(id) { return id === "bk-hstab" ? STAGE : hsSt[id] || 1; }
-  function bkey(which, st) { return st === 2 ? (which === "daily" ? "vdaily" : "vworld") : st === 3 ? (which === "daily" ? "fdaily" : "fworld") : which; }
-  function isVet(k) { return k.charAt(0) === "v" || k.charAt(0) === "f"; }
+  function bkey(which, st) { return st === 2 ? (which === "daily" ? "vdaily" : "vworld") : st === 3 ? (which === "daily" ? "fdaily" : "fworld") : st >= 4 ? "x" + st + which : which; }
+  function isVet(k) { return k.charAt(0) === "v" || k.charAt(0) === "f" || k.charAt(0) === "x"; }
   function pid() { var p = lget("mw-basil-pid"); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); lset("mw-basil-pid", p); } return p; }
   function dayLabel() { var d = sydDay().split("-"); return +d[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+d[1] - 1]; }
   function lbGot(k, j) {
@@ -1627,7 +1646,7 @@
     tabSel[id] = which;
     document.querySelectorAll('.bk-tabs[data-for="' + id + '"] button').forEach(function (b) { var on = b.getAttribute("data-b") === which; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
     var note = $(id + "-note");
-    if (which === "me") { renderHS(el, id === "bk-hstab" ? lastHi : -1, st); if (note) note.textContent = (st === 3 ? "The Farm: kept" : st === 2 ? "The Vet: kept" : "Kept") + " on this device only."; return; }
+    if (which === "me") { renderHS(el, id === "bk-hstab" ? lastHi : -1, st); if (note) note.textContent = (st >= 4 ? (STNAME[st] || "This stage") + ": kept" : st === 3 ? "The Farm: kept" : st === 2 ? "The Vet: kept" : "Kept") + " on this device only."; return; }
     if (note) note.textContent = (st === 3 ? "The Farm: " : st === 2 ? "The Vet: " : "") + (which === "daily" ? "Today’s daily challenge (Sydney time). Names are public." : "Top 10 worldwide. Names are public.");
     var k = bkey(which, st), rows = boards[k];
     if (rows == null) { el.innerHTML = '<li class="bk-hsnone">Loading…</li>'; boards[k] = "wait"; lbFetch(k); return; }
@@ -1678,7 +1697,7 @@
     if (e3) { e3.disabled = !k3; e3.classList.toggle("locked", !k3); e3.innerHTML = k3 ? "Endless" : "\ud83d\udd12 Endless"; e3.title = k3 ? "The never-ending farm" : "Beat the Farm’s round 10 to unlock"; }
     if ($("bk-sc3")) $("bk-sc3").hidden = !VM[3];
     if ($("bk-st3")) $("bk-st3").innerHTML = k3 ? "\ud83c\udf80 Farm show champions" + (b3 ? " \u00b7 best <b>" + fmt(b3) + "</b>" : "") : b3 ? "Farm stay \u00b7 best <b>" + fmt(b3) + "</b>" : "Farm stay";
-    if ($("bk-crowns")) $("bk-crowns").innerHTML = "<b>" + ((k1 ? 1 : 0) + (k2 ? 1 : 0) + (k3 ? 1 : 0)) + " of 3</b>stage crowns";
+    if ($("bk-crowns")) $("bk-crowns").innerHTML = "<b>" + Object.keys(KEYS).filter(function (n) { return (+n <= 3 || VM[n]) && lget(KEYS[n].won); }).length + " of " + Object.keys(KEYS).filter(function (n) { return +n <= 3 || VM[n]; }).length + "</b>stage crowns"; moreUI();
     if ($("bk-daily2")) $("bk-daily2").hidden = true;
     if ($("bk-daily")) { var ds = dailyStage(); $("bk-daily").innerHTML = "Today’s daily<small>" + DAYN[sydWd()] + " · " + STNAME[ds] + "</small>"; }
     document.querySelectorAll(".bk-htabs button[data-p='2'], .bk-htabs button[data-p='3']").forEach(function (b) { b.hidden = !k1; });
@@ -1690,8 +1709,8 @@
     ITEMS = T.ITEMS; FOOD = T.FOOD; BADFOOD = T.BADFOOD; SPIKY = T.SPIKY; KICKQ = T.KICKQ; BOREDQ = T.BOREDQ; HUNGRYQ = T.HUNGRYQ; MOTHQ = T.MOTHQ; OUCHQ = T.OUCHQ; HEDGEQ = T.HEDGEQ; BADQ = T.BADQ; SMASHQ = T.SMASHQ; CAMP_NAME = T.CAMP_NAME; CAMP_TIP = T.CAMP_TIP; CTITLES = T.CTITLES; SPOTS = T.SPOTS;
     BEST = KEYS[n].best; WON = KEYS[n].won; HS = KEYS[n].hs;
     if (n === 2) lset("mw-basil-vet-seen", 1);
-    $("bk-game").classList.toggle("bk-vet", n === 2); $("bk-game").classList.toggle("bk-farm", n === 3);
-    $("bk-canvas").setAttribute("aria-label", n === 3 ? "Basil the cat on a hay bale in a barn, kicking things off" : n === 2 ? "Basil the cat on a vet’s exam table, kicking things off" : "Basil the cat on a kitchen bench, kicking things off");
+    $("bk-game").classList.toggle("bk-vet", n === 2); $("bk-game").classList.toggle("bk-farm", n === 3); var th = n >= 4 && V.TEXT.THEME, hud = document.querySelector("#bk-game .bk-hud"), stg = document.querySelector("#bk-game .bk-stage"); if (hud) hud.style.background = th ? th.hud : ""; if (stg) stg.style.background = th ? th.stage : "";
+    $("bk-canvas").setAttribute("aria-label", n >= 4 ? "Basil the cat in " + (STNAME[n] || "a new place") + ", kicking things off" : n === 3 ? "Basil the cat on a hay bale in a barn, kicking things off" : n === 2 ? "Basil the cat on a vet’s exam table, kicking things off" : "Basil the cat on a kitchen bench, kicking things off");
   }
   // stage card pictures, drawn with the game's own art
   // the kitchen flyers: moth, butterfly, wasp (drawn at the origin; fl = wing flap)
@@ -1753,7 +1772,7 @@
   }
   function drawThumbs() {
     var keep = ctx, st = STAGE;
-    var V0 = V; [["bk-th1", 1], ["bk-th2", 2], ["bk-th3", 3]].forEach(function (q) {
+    var V0 = V; [["bk-th1", 1], ["bk-th2", 2], ["bk-th3", 3]].concat(Object.keys(LCFG).map(function (n) { return ["bk-th" + n, +n]; })).forEach(function (q) {
       var c = $(q[0]); if (!c || (q[1] >= 2 && !VM[q[1]])) return; if (q[1] >= 2) V = VM[q[1]]; var x = c.getContext("2d"); x.setTransform(c.width / W, 0, 0, c.height / H, 0, 0); ctx = x; STAGE = q[1];
       if (q[1] === 1) { scene(); ctx.save(); ctx.translate(180, BENCH + 4); ctx.scale(0.66, 0.66); ctx.translate(-120, -246); spr("basil-body"); spr("basil-head"); catEyes("b", "open"); ctx.restore(); }
       else { V.thumb(); [["b", 64, 0.5], ["c", 312, 0.42]].forEach(function (d) { ctx.save(); ctx.translate(d[1], BENCH + 4); ctx.scale(d[0] === "c" ? -d[2] : d[2], d[2]); ctx.translate(-120, -246); spr(d[0] === "b" ? "basil-body" : "clover-body"); spr(d[0] === "b" ? "basil-head" : "clover-head"); catEyes(d[0], d[0] === "b" ? "wide" : "open"); ctx.restore(); }); }
@@ -1778,6 +1797,20 @@
   $("bk-start2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = false; ENDLESS = false; start(); }; $("bk-daily2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = true; ENDLESS = false; track("basil/daily"); start(); }; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   if ($("bk-start3")) $("bk-start3").onclick = function () { if (!VM[3]) return; setStage(3); DAILY = false; ENDLESS = false; start(); };
   if ($("bk-endlessf")) $("bk-endlessf").onclick = function () { if (!VM[3]) return; setStage(3); goEndless(); };
+  // stages 4-10: a compact grid of cards built from levels.js
+  function moreUI() {
+    var box = $("bk-more"); if (!box) return;
+    if (!box.firstChild) {
+      box.innerHTML = Object.keys(LCFG).filter(function (n) { return VM[n]; }).map(function (n) { var c = LCFG[n];
+        return '<div class="bk-mc"><canvas class="bk-th" id="bk-th' + n + '" width="236" height="282" aria-hidden="true"></canvas><b>' + c.name + '</b><small>' + (c.season ? "Daily in " + c.day : "Daily on " + c.day + "s") + '</small><span class="bk-mbest" id="bk-mb' + n + '"></span><button class="bk-sbn" type="button" data-play="' + n + '">Play</button><button class="bk-sbn gh bk-endless" type="button" data-end="' + n + '">Endless</button></div>'; }).join("");
+      box.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; var p = +b.getAttribute("data-play"), en = +b.getAttribute("data-end");
+        if (p && VM[p]) { setStage(p); DAILY = false; ENDLESS = false; start(); } else if (en && VM[en]) { setStage(en); goEndless(); } });
+      if (!sprLeft && typeof drawThumbs === "function") setTimeout(drawThumbs, 0);
+    }
+    Object.keys(LCFG).forEach(function (n) { if (!KEYS[n]) return; var won = !!lget(KEYS[n].won), best = lget(KEYS[n].best) || 0, el = $("bk-mb" + n), eb = box.querySelector('[data-end="' + n + '"]');
+      if (el) el.innerHTML = won ? "👑 Conquered" + (best ? " · <b>" + fmt(best) + "</b>" : "") : best ? "Best <b>" + fmt(best) + "</b>" : "New";
+      if (eb) { eb.disabled = !won; eb.classList.toggle("locked", !won); eb.innerHTML = won ? "Endless" : "\ud83d\udd12 Endless"; } });
+  }
   function goEndless() { if (!lget(WON)) return; DAILY = false; ENDLESS = true; track("basil/endless"); start(); }
   $("bk-endless").onclick = function () { setStage(1); goEndless(); }; $("bk-endlessv").onclick = function () { if (!kitchenWon()) return; setStage(2); goEndless(); }; $("bk-endless2").onclick = goEndless; endlessUI();
   $("bk-sharebtn").onclick = function () {

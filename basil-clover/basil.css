@@ -210,3 +210,8 @@
 .bk-sc.farm{background:linear-gradient(160deg,rgba(242,194,48,.28),rgba(181,86,58,.38));border-color:#F2C230;box-shadow:0 0 0 2px rgba(242,194,48,.3)}
 .bk-game.bk-farm .bk-hud{background:#8A3E28}
 .bk-game.bk-farm .bk-stage{background:#EADBB8}
+.bk-more{width:min(100%,520px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 auto 8px}
+.bk-mc{display:grid;gap:4px;justify-items:center;text-align:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:8px}
+.bk-mc .bk-th{width:100%;max-width:120px;height:auto;aspect-ratio:236/282;border-radius:10px}
+.bk-mc b{font:700 15px Lora,serif;color:#FFF}.bk-mc small{font-size:11px;opacity:.8}.bk-mc .bk-mbest{font-size:11px;opacity:.9}
+.bk-mc .bk-sbn{width:100%;min-height:40px}
