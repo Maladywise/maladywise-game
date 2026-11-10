@@ -971,7 +971,7 @@
     function homeTop() {
       var H = window.MW_HOME || {}, line = (NORMIE ? H.taglineN : H.tagline) || (NORMIE ? "Free daily puzzles. No medicine required." : "Free daily medical puzzles, made by a GP.");
       return '<section class="mw-top" id="puzzles"><div class="mt-meta"><span class="mt-day">' + nice(today, { weekday: "long", day: "numeric", month: "short" }) + '</span><span class="pill daypill d-' + DIFF[dow] + '">' + DIFF[dow] + '</span><span class="nextin">New in <b id="mw-count">' + countdown() + '</b></span><span class="mw-live" hidden></span></div>' +
-        '<div class="mt-head"><h1>' + line + "</h1>" + (NORMIE ? normImg("mt-norm", 52) : "") + "</div>" +
+        '<div class="mt-head"><h1>' + line + "</h1>" + (NORMIE ? normImg("mt-norm", 52) : '<a class="mt-cats" href="/basil-clover/" aria-label="Basil + Clover arcade game"><img src="/assets/mascots/basil.svg?v=2" alt="" width="54" height="70"><img src="/assets/mascots/clover.svg?v=1" alt="" width="52" height="68"></a>') + "</div>" +
         '<p class="mt-sub">' + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" +
         (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>";
     }
@@ -1040,6 +1040,56 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var sm = (html.match(/class="gsec sm"/g) || []).length, k = 0;
       html = html.replace(/class="gsec sm"/g, function () { var i = k++, full = sm - sm % 3, rest = sm % 3, span = i < full ? 2 : rest === 1 ? (sm === 1 ? 6 : 3) : 3; if (rest === 1 && sm > 1 && i >= full - 3) span = 3; return 'class="gsec sm" data-span="' + span + '"'; });
       return '<div class="gsecs">' + html + "</div>";
+    }
+
+    // Compact game tiles (new home layout): mascot, name, short kind, small tag. Today's 3 are skipped.
+    function shortDay(r) { return r.split(/\s*&\s*/).map(function (x) { return x.slice(0, 3); }).join(" + "); }
+    function tile(g) {
+      var st = g.live ? readStats(g) : null, dn = st && st.done, sp = g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from);
+      var tag = sp ? g.special.short : g.weekly ? (g.relday ? shortDay(g.relday) : "Weekly") : g.live && !g.dailyLine && diffFor(g, today, dow) === "Einstein" ? EIN : !g.live ? "Soon" : "";
+      var t = g.live ? "a" : "div";
+      return "<" + t + ' class="tl' + (dn ? " done" : "") + (g.live ? "" : " soon") + '" data-g="' + g.id + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
+        (tag ? '<span class="tl-tag">' + tag + "</span>" : "") + '<span class="tl-ic">' + (window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 46) : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : "") + "</span>" +
+        "<b>" + g.name + "</b><small>" + (g.kind || "") + "</small></" + t + ">";
+    }
+    function tiles(skip) {
+      var list = order().filter(function (g) { return skip.indexOf(g.id) < 0; });
+      if (!list.length) return "";
+      return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + '</span></div><div class="tl-grid">' + list.map(tile).join("") + "</div></section>";
+    }
+    function arcadeRow() {
+      return '<section class="tls" id="g-arcade"><div class="t3-head"><h2>Arcade</h2><span>Bonus games. Play all day.</span></div><div class="tl-grid tl-arc">' + ARCADE.map(function (a) {
+        var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<span class="tl-cats"><img src="/assets/mascots/basil.svg?v=2" alt="" width="30" height="40"><img src="/assets/mascots/clover.svg?v=1" alt="" width="29" height="38"></span>' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="46" height="46">';
+        var sub = { "basil-clover": "Cat chaos", stackulus: "Organ drop", mergeon: "Organ merge" }[a[0]] || "Arcade";
+        return '<a class="tl" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><span class="tl-ic">' + ic + "</span><b>" + a[1] + "</b><small>" + sub + "</small></a>";
+      }).join("") + "</div></section>";
+    }
+    // Read this week (Medical only): newest deep dive, research week, Weekly Dose (data/home-reads.json) + next health day.
+    function readsSlot() { return NORMIE ? "" : '<section class="rds" id="mw-reads" hidden><div class="t3-head"><h2>Read this week</h2><span>Short and evidence based</span></div><div class="rd-grid"></div></section>'; }
+    function fillReads() {
+      var box = document.getElementById("mw-reads"); if (!box) return;
+      function card(href, img, k, t, x) { return '<a class="rd" href="' + esc2(href) + '"><img src="/assets/mascots/' + img + '.svg" alt="" width="44" height="44"><span class="rd-k">' + k + "</span><b>" + esc2(t) + "</b><small>" + esc2(x) + "</small></a>"; }
+      var R = null, D = null, n = 0;
+      function done() {
+        if (++n < 2) return;
+        var h = "";
+        if (R && R.deep) h += card(R.deep.href, "deepdives", "Deep dive", R.deep.title, R.deep.text);
+        if (R && R.research) h += card(R.research.href, "deepdives", "Research", R.research.title, R.research.text);
+        if (R && R.dose) h += card(R.dose.href, "triviosis", "The Weekly Dose", R.dose.title, R.dose.text);
+        if (D) h += card("/days/", "gridectomy", "Health Calendar", "Coming up: " + D.name.replace(/\s*\([^()]+\)\s*$/, ""), nice(D.dates[today.slice(0, 4)].start, { weekday: "long", day: "numeric", month: "short" }) + ". Every health day in one place.");
+        if (!h) return;
+        box.querySelector(".rd-grid").innerHTML = h; box.hidden = false;
+      }
+      fetch("/data/home-reads.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { R = j; done(); }).catch(done);
+      fetch("/data/days-soon.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+        var yr = today.slice(0, 4);
+        D = ((j && j.days) || []).filter(function (x) { var d = x.dates && x.dates[yr]; return d && d.start > today && x.kind !== "month" && (x.priority || 9) <= 2 && (x.tags || []).indexOf("sensitive") < 0 && inRegion(regionOf(x)); })
+          .sort(function (a, b) { return a.dates[yr].start < b.dates[yr].start ? -1 : a.dates[yr].start > b.dates[yr].start ? 1 : (a.priority || 9) - (b.priority || 9); })[0] || null;
+        done();
+      }).catch(done);
+    }
+    function gpsBanner() {
+      return NORMIE ? "" : '<a class="gps-b" href="/unspecialist/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
     }
 
     function order() {
@@ -1134,7 +1184,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + homeBottom() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
@@ -1148,7 +1198,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       }
       if (shc) main.insertBefore(shc, main.querySelector("footer.site"));
       if (snav) main.querySelector("footer.site").insertBefore(snav, main.querySelector("footer.site").firstChild);
-      social();
+      social(); try { fillReads(); } catch (e) {}
     }
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();

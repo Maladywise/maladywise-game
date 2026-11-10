@@ -72,3 +72,7 @@ for name in order:
     out.append("")
 open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(out))
 print("llms.txt:", sum(len(v) for v in groups.values()), "pages")
+
+# Home page "Read this week" row (data/home-reads.json)
+import subprocess as _sp, sys as _sys
+_sp.run([_sys.executable, __import__("os").path.join(__import__("os").path.dirname(__file__), "build_home_reads.py")])
