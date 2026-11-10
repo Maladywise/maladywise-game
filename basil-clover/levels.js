@@ -4,6 +4,15 @@
 (function () {
   "use strict";
   var EF = "'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif";
+  // Drawn props (Nov 2026): every emoji prop is drawn from a local illustration (OpenMoji, CC BY-SA 4.0, in art/)
+  // so props look the same on every phone. Falls back to the device emoji until the picture has loaded.
+  var ARTMAP = {"⏳": "23F3", "☀️": "2600", "⚱️": "26B1", "⛓️": "26D3", "⛱️": "26F1", "⛵": "26F5", "✂️": "2702", "✨": "2728", "⭐": "2B50", "🌊": "1F30A", "🌡️": "1F321", "🌭": "1F32D", "🌴": "1F334", "🌵": "1F335", "🌶️": "1F336", "🌷": "1F337", "🌸": "1F338", "🌹": "1F339", "🌼": "1F33C", "🌿": "1F33F", "🍇": "1F347", "🍉": "1F349", "🍎": "1F34E", "🍕": "1F355", "🍖": "1F356", "🍗": "1F357", "🍞": "1F35E", "🍫": "1F36B", "🍬": "1F36C", "🍭": "1F36D", "🍮": "1F36E", "🍰": "1F370", "🍳": "1F373", "🍵": "1F375", "🎀": "1F380", "🎁": "1F381", "🎃": "1F383", "🎄": "1F384", "🎈": "1F388", "🎊": "1F38A", "🎨": "1F3A8", "🎻": "1F3BB", "🏐": "1F3D0", "🏰": "1F3F0", "🏺": "1F3FA", "🐇": "1F407", "🐚": "1F41A", "🐟": "1F41F", "🐡": "1F421", "🐦": "1F426", "💀": "1F480", "💊": "1F48A", "💐": "1F490", "💦": "1F4A6", "💧": "1F4A7", "💰": "1F4B0", "📋": "1F4CB", "📌": "1F4CC", "📎": "1F4CE", "📜": "1F4DC", "📠": "1F4E0", "📺": "1F4FA", "📻": "1F4FB", "🔔": "1F514", "🔥": "1F525", "🔮": "1F52E", "🔱": "1F531", "🕊️": "1F54A", "🕯️": "1F56F", "🕶️": "1F576", "🕸️": "1F578", "🗝️": "1F5DD", "🚿": "1F6BF", "🛁": "1F6C1", "🛎️": "1F6CE", "🛟": "1F6DF", "🛷": "1F6F7", "🥕": "1F955", "🥚": "1F95A", "🥛": "1F95B", "🥣": "1F963", "🥤": "1F964", "🥧": "1F967", "🥪": "1F96A", "🥫": "1F96B", "🦀": "1F980", "🦂": "1F982", "🦆": "1F986", "🦇": "1F987", "🦌": "1F98C", "🦐": "1F990", "🦴": "1F9B4", "🧀": "1F9C0", "🧁": "1F9C1", "🧃": "1F9C3", "🧄": "1F9C4", "🧅": "1F9C5", "🧢": "1F9E2", "🧦": "1F9E6", "🧪": "1F9EA", "🧯": "1F9EF", "🧴": "1F9F4", "🧸": "1F9F8", "🧹": "1F9F9", "🧺": "1F9FA", "🧻": "1F9FB", "🧼": "1F9FC", "🧽": "1F9FD", "🩴": "1FA74", "🩹": "1FA79", "🩺": "1FA7A", "🩼": "1FA7C", "🪀": "1FA80", "🪁": "1FA81", "🪒": "1FA92", "🪞": "1FA9E", "🪣": "1FAA3", "🪤": "1FAA4", "🪥": "1FAA5", "🪦": "1FAA6", "🪮": "1FAAE", "🪴": "1FAB4", "🪸": "1FAB8", "🪺": "1FABA", "🫕": "1FAD5", "🫖": "1FAD6", "🫧": "1FAE7"};
+  var ARTBASE = (function () { try { return new URL("art/", document.currentScript.src).href; } catch (e) { return "/basil-clover/art/"; } })(), ART = {}, artT = 0;
+  function artImg(ch) {
+    var k = ARTMAP[ch]; if (!k) return null; var im = ART[k];
+    if (!im) { im = ART[k] = new Image(); im.decoding = "async"; im.onload = function () { clearTimeout(artT); artT = setTimeout(function () { try { if (window.MW_ART_cb) window.MW_ART_cb(); } catch (e) {} }, 120); }; im.src = ARTBASE + k + ".svg"; }
+    return im.complete && im.naturalWidth ? im : null;
+  }
 
   // ---------- hats (drawn in the Vet module's head space: c, hx, hy, frazzled) ----------
   var HAT = {
@@ -133,7 +142,7 @@
     function w(f) { return function () { sync(); return f.apply(null, arguments); }; }
     function t() { return S ? S.t : 0; }
     function txt(s, x, y, font, col, align, stroke, sw) { ctx.font = font; ctx.textAlign = align || "center"; ctx.lineJoin = "round"; if (stroke) { ctx.lineWidth = sw || 4; ctx.strokeStyle = stroke; ctx.strokeText(s, x, y); } ctx.fillStyle = col; ctx.fillText(s, x, y); }
-    function emo(ch, size, x, y) { ctx.save(); ctx.font = size + "px " + EF; ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = "#000"; ctx.fillText(ch, x || 0, y == null ? -size * 0.12 : y); ctx.restore(); }
+    function emo(ch, size, x, y) { var im = artImg(ch), yy = y == null ? -size * 0.12 : y; if (im) { var d = size * 1.22; ctx.drawImage(im, (x || 0) - d / 2, yy - size * 0.98, d, d); return; } ctx.save(); ctx.font = size + "px " + EF; ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = "#000"; ctx.fillText(ch, x || 0, y == null ? -size * 0.12 : y); ctx.restore(); }
     var skin = Object.assign({}, C.skin); skin.hat = HAT[C.skin.hat];
     var V = window.MW_VET(Object.assign({}, A, { skin: skin })); if (!V) return null;
     var N = C.N;
@@ -204,6 +213,7 @@
 
     // ---------- props ----------
     var EM = {}; [C.items, C.food, C.bad, C.spiky].forEach(function (o) { Object.keys(o).forEach(function (k) { EM[k] = o[k]; }); });
+    C.deco.forEach(function (d) { artImg(d[0]); }); [C.bath, C.cone, C.visitor].forEach(function (ch) { if (ch) artImg(ch); }); Object.keys(EM).forEach(function (k) { artImg(EM[k]); });
     var ALIAS = { vase: "_vase", tv: "_tv", tank: "_tank" }; EM._vase = C.smash.vase; EM._tv = C.smash.tv; EM._tank = C.smash.tank;
     function has(k) { if (k === "hedgehog") return false; return !!(EM[ALIAS[k] || k]) || V.has(k); }
     function item(kind) { var k = ALIAS[kind] || kind; if (EM[k]) { emo(EM[k], k.charAt(0) === "_" ? 50 : 34, 0); return true; } return V.item(kind); }

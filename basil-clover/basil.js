@@ -32,13 +32,15 @@
     var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
     return Date.UTC(y, Math.floor((h + l - 7 * m + 114) / 31) - 1, ((h + l - 7 * m + 114) % 31) + 1);
   }
-  function seasonStage() { // Christmas 18-26 Dec, Halloween 25-31 Oct, Easter Good Friday to Easter Monday (Sydney date)
-    var d = sydDay(), y = +d.slice(0, 4), md = d.slice(5);
+  function seasonStage(d0) { // Christmas 18-26 Dec, Halloween 25-31 Oct, Easter Good Friday to Easter Monday (Sydney date)
+    var d = d0 || sydDay(), y = +d.slice(0, 4), md = d.slice(5);
     if (md >= "12-18" && md <= "12-26") return 8; if (md >= "10-25" && md <= "10-31") return 10;
     var diff = (Date.UTC(y, +md.slice(0, 2) - 1, +md.slice(3)) - easterUTC(y)) / 864e5;
     return diff >= -2 && diff <= 1 ? 9 : 0;
   }
   function dailyStage() { var n = seasonStage() || DAILYMAP[sydWd()] || 1; return n > 1 && !VM[n] ? 1 : n; }
+  // the stage for a day offset from today (Sydney): used for the "Coming up" line
+  function stageOn(off) { var t = new Date(sydDay() + "T12:00:00Z").getTime() + off * 864e5, d = new Date(t).toISOString().slice(0, 10), wd = new Date(t).getUTCDay(); var n = seasonStage(d) || DAILYMAP[wd] || 1; return { n: n > 1 && !VM[n] ? 1 : n, wd: wd }; }
   function track(n) { if (STAGE >= 2) n = String(n).replace(/^basil\//, "basil/" + (STAGE >= 3 && V && V.TEXT.KEY ? V.TEXT.KEY : "vet") + "-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
   function $(id) { return document.getElementById(id); }
   function rnd(a, b) { return a + Math.random() * (b - a); }
@@ -1701,6 +1703,20 @@
     if ($("bk-daily2")) $("bk-daily2").hidden = true;
     if ($("bk-daily")) { var ds = dailyStage(); $("bk-daily").innerHTML = "Today’s daily<small>" + DAYN[sydWd()] + " · " + STNAME[ds] + "</small>"; }
     document.querySelectorAll(".bk-htabs button[data-p='2'], .bk-htabs button[data-p='3']").forEach(function (b) { b.hidden = !k1; });
+    todayUI();
+  }
+  // One level a day (Nov 2026): only today's stage is playable. Endless for it opens once that stage's round 10 is beaten.
+  var SDESC = { 1: "The Kitchen bench. The VAC-3000 is waiting.", 2: "The vet clinic. Two Vet vs Cat boss fights.", 3: "The barn. Farmer Fern, a rooster and an onion you must not eat.", 4: "Sand, sun and Lifeguard Lou on whistle duty.", 5: "Matron Maude runs a very tight ward.", 6: "Ms Brimstone's place. Everything is on fire.", 7: "Bath Boss Bev wants two clean cats. Good luck.", 8: "Mrs Claus's workshop. Hands off the pudding.", 9: "Bunny Bonnie hid the eggs. Clover found them.", 10: "Wilhelmina's haunted kitchen. Spooky snacks." };
+  function todayUI() {
+    var n = dailyStage(), K = KEYS[n], won = K && !!lget(K.won), best = K ? lget(K.best) || 0 : 0, nm = n <= 3 ? ["", "The Kitchen", "The Vet", "The Farm"][n] : (LCFG[n] && LCFG[n].name) || STNAME[n];
+    if ($("bk-tday")) $("bk-tday").textContent = DAYN[sydWd()] + (seasonStage() ? " · holiday level" : "");
+    if ($("bk-tname")) $("bk-tname").textContent = nm;
+    if ($("bk-tst")) $("bk-tst").innerHTML = won ? "\ud83d\udc51 Conquered" + (best ? " \u00b7 best <b>" + fmt(best) + "</b>" : "") : best ? "Best <b>" + fmt(best) + "</b>" : "10 rounds";
+    if ($("bk-tsd")) $("bk-tsd").textContent = (SDESC[n] || (LCFG[n] && LCFG[n].blurb) || "") + " Same rounds for everyone today.";
+    var te = $("bk-tend"); if (te) { te.disabled = !won; te.classList.toggle("locked", !won); te.innerHTML = won ? "Endless" : "\ud83d\udd12 Endless"; te.title = won ? "Endless mode" : "Beat round 10 to unlock"; }
+    var c = $("bk-today"); if (c) { c.classList.toggle("vet", n === 2); c.classList.toggle("farm", n === 3); var th = n >= 4 && VM[n] && VM[n].TEXT.THEME; c.style.background = th ? "linear-gradient(160deg," + th.hud + "cc," + th.hud + "88)" : ""; c.style.borderColor = th ? th.hud : ""; }
+    var up = $("bk-up"); if (up) { var seen = {}, L = []; for (var i = 1; i <= 6; i++) { var q = stageOn(i), nn = q.n <= 3 ? ["", "Kitchen", "Vet", "Farm"][q.n] : STNAME[q.n]; L.push(DAYN[q.wd].slice(0, 3) + " " + nn); } up.innerHTML = "<b>Coming up</b> " + L.join(" \u00b7 "); }
+    var src = $("bk-th" + n), dst = $("bk-thT"); if (src && dst) { try { var x = dst.getContext("2d"); x.clearRect(0, 0, dst.width, dst.height); x.drawImage(src, 0, 0); } catch (e) {} }
   }
   function setStage(n) {
     if (n >= 2 && !VM[n]) n = 1; if (n >= 2) V = VM[n];
@@ -1778,7 +1794,7 @@
       else { V.thumb(); [["b", 64, 0.5], ["c", 312, 0.42]].forEach(function (d) { ctx.save(); ctx.translate(d[1], BENCH + 4); ctx.scale(d[0] === "c" ? -d[2] : d[2], d[2]); ctx.translate(-120, -246); spr(d[0] === "b" ? "basil-body" : "clover-body"); spr(d[0] === "b" ? "basil-head" : "clover-head"); catEyes(d[0], d[0] === "b" ? "wide" : "open"); ctx.restore(); }); }
     });
     ctx = keep; STAGE = st; V = V0;
-    drawGuide();
+    drawGuide(); try { todayUI(); } catch (e) {}
   }
   // end-of-game: back to the intro and stage select (the "Back to puzzles" link is plain HTML)
   function exitToStart() { running = false; paused = false; try { cancelAnimationFrame(raf); } catch (e) {} $("bk-over").hidden = true; $("bk-game").hidden = true; $("bk-intro").hidden = false; if (typeof stageUI === "function") stageUI(); window.scrollTo({ top: 0, behavior: "auto" }); }
@@ -1795,6 +1811,8 @@
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = function () { setStage(1); DAILY = false; ENDLESS = false; start(); }; $("bk-daily").onclick = function () { setStage(dailyStage()); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
   $("bk-start2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = false; ENDLESS = false; start(); }; $("bk-daily2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = true; ENDLESS = false; track("basil/daily"); start(); }; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
+  if ($("bk-tplay")) $("bk-tplay").onclick = function () { setStage(dailyStage()); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
+  if ($("bk-tend")) $("bk-tend").onclick = function () { setStage(dailyStage()); goEndless(); };
   if ($("bk-start3")) $("bk-start3").onclick = function () { if (!VM[3]) return; setStage(3); DAILY = false; ENDLESS = false; start(); };
   if ($("bk-endlessf")) $("bk-endlessf").onclick = function () { if (!VM[3]) return; setStage(3); goEndless(); };
   // stages 4-10: a compact grid of cards built from levels.js
@@ -1830,5 +1848,6 @@
   window.addEventListener("resize", function () { if (running) size(); });
   renderBoard("bk-hslist0", "world"); hsUI(); vetProbe();
   buildGuide(); reset(); size(); draw(); if (!sprLeft) drawThumbs();
+  window.MW_ART_cb = function () { try { if (!running) { if (!sprLeft) drawThumbs(); draw(); } } catch (e) {} }; // redraw thumbnails once the drawn props arrive
   if (DEVSTAGE >= 2 && kitchenWon()) setStage(2);
 })();

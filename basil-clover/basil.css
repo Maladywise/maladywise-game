@@ -215,3 +215,8 @@
 .bk-mc .bk-th{width:100%;max-width:120px;height:auto;aspect-ratio:236/282;border-radius:10px}
 .bk-mc b{font:700 15px Lora,serif;color:#FFF}.bk-mc small{font-size:11px;opacity:.8}.bk-mc .bk-mbest{font-size:11px;opacity:.9}
 .bk-mc .bk-sbn{width:100%;min-height:40px}
+
+/* one level a day (Nov 2026) */
+.bk-sc.today{background:linear-gradient(160deg,rgba(255,255,255,.2),rgba(255,255,255,.1));border-color:rgba(255,255,255,.55);box-shadow:0 0 0 2px rgba(255,255,255,.18)}
+.bk-up{margin:2px 0 0;font-size:12.5px;line-height:1.5;opacity:.9;max-width:520px;text-align:center}
+.bk-up b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}

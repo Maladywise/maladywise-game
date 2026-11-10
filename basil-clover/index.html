@@ -33,7 +33,7 @@
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
 <link rel="stylesheet" href="../assets/shell.css?v=195">
-<link rel="stylesheet" href="basil.css?v=26">
+<link rel="stylesheet" href="basil.css?v=27">
 <script defer src="../assets/games.js?v=109"></script>
 <script defer src="../assets/shell.js?v=215"></script>
 <script type="application/ld+json" id="mw-game-ld">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Basil + Clover", "alternateName": "Basil + Clover: Free Cat Arcade Game", "description": "Basil + Clover is a free cat arcade game: help Basil kick everything off the kitchen bench, then survive a trip to the vet with his sister Clover.", "url": "https://maladywise.com/basil-clover/", "applicationCategory": "GameApplication", "genre": "Arcade", "operatingSystem": "Any (web browser)", "inLanguage": "en-AU", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "audience": {"@type": "Audience", "audienceType": "Medical and nursing students, health professionals and curious people"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "image": {"@type": "ImageObject", "url": "https://maladywise.com/assets/og/basil.png?v=3476f15c", "width": 1200, "height": 630}}</script>
@@ -48,6 +48,14 @@
     <p class="bk-found">&#128062; Bonus game</p>
     <h1>Basil + Clover</h1>
     <p class="bk-lede">Basil is a smug, fluffy white cat who kicks. Clover, the spicy little muffin, eats everything. Nothing is safe.</p>
+    <p class="bk-pick" id="bk-tpick">Today’s level</p>
+    <div class="bk-sc today" id="bk-today">
+      <canvas class="bk-th" id="bk-thT" width="236" height="282" aria-hidden="true"></canvas>
+      <div class="bk-sci"><span class="bk-sk" id="bk-tday">Today</span><h2 id="bk-tname">The Kitchen</h2><p class="bk-sst" id="bk-tst"></p><p class="bk-sd" id="bk-tsd">Same 10 rounds and surprises for everyone today.</p>
+        <div class="bk-sbs"><button class="bk-sbn" type="button" id="bk-tplay">Let’s go, go, go!</button><button class="bk-sbn gh bk-endless locked" type="button" id="bk-tend" disabled>&#128274; Endless</button></div></div>
+    </div>
+    <p class="bk-up" id="bk-up"></p>
+    <div id="bk-old" hidden>
     <p class="bk-pick">Choose your stage</p>
     <div class="bk-sc" id="bk-sc1">
       <canvas class="bk-th" id="bk-th1" width="236" height="282" aria-hidden="true"></canvas>
@@ -67,7 +75,8 @@
     <p class="bk-pick" style="margin-top:6px">More stages</p>
     <div class="bk-more" id="bk-more"></div>
     <div class="bk-srow"><span class="bk-chip" id="bk-crowns"><b>0 of 2</b>stage crowns</span><button class="bk-dbtn" type="button" id="bk-daily">Daily<small>Kitchen</small></button><button class="bk-dbtn" type="button" id="bk-daily2" disabled>Daily<small>Vet</small></button></div>
-    <p class="bk-dnote">Daily challenge: same 10 rounds and surprises for everyone today. A different stage each day of the week.</p>
+    </div>
+    <p class="bk-dnote">One level a day, a new one each day of the week. Holiday levels drop in for Christmas, Easter and Halloween.</p>
     <p class="bk-how"><b>Tap</b> or <b>click</b> the items, or use the keys <b class="nw">← ↓ → ↑</b> or <b class="nw">A S D W</b>.</p>
     <button class="bk-howbtn" type="button" id="bk-howbtn">How to play</button>
     <details class="bk-rules bk-guide">
@@ -188,12 +197,12 @@
 <!-- /share-card -->
   <footer class="site">
 <!-- static-nav --><nav class="static-nav" aria-label="Site sections"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/medical-games/#quizzes">Quizzes</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">Health days</a></nav><!-- /static-nav -->
-<p class="ft-base"><span class="ft-note">A bonus game. No cats were harmed. Several mugs were.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
+<p class="ft-base"><span class="ft-note">A bonus game. No cats were harmed. Several mugs were. Props in stages 4–10 drawn by <a href="https://openmoji.org" target="_blank" rel="noopener">OpenMoji</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>).</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
 <script defer src="vet.js?v=6"></script>
 <script defer src="farm.js?v=2"></script>
-<script defer src="levels.js?v=1"></script>
-<script defer src="basil.js?v=59"></script>
+<script defer src="levels.js?v=2"></script>
+<script defer src="basil.js?v=60"></script>
 </body>
 </html>

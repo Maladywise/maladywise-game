@@ -190,3 +190,15 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
   - writes **sitemap-images.xml** (the image sitemap entry for each page; listed in robots.txt).
 - When adding a new exercise figure or deep dive, add its file name and alt text to EXERCISES or DEEP_DIVES in `_scripts/export_diagrams.py`, run it, then `python3 _scripts/site_check.py` (it checks the image sitemap's pages and files), and commit the images, pages and sitemap-images.xml.
 - `_scripts/headkit.py` adds `<meta name="robots" content="max-image-preview:large">` to every indexable page (not noindex pages); run it on new pages as usual.
+
+## Basil and Clover: character reference (from the owner's photos, Nov 2026)
+- **Basil** (male, "smug fluffy white cat"):
+  - Pure white long-haired cat, often in a **lion cut**: a fluffy mane on the head and neck, a short-clipped body, fluffy "boots" on the lower legs and a big plume tail.
+  - Pink nose and pink inner ears, pale green eyes, long white whiskers.
+  - Default face is half-lidded, smug, unimpressed. Grumpy hiss when annoyed.
+  - Loaf pose on the cat tree is signature. Suits dramatic costumes (black and red vampire cape, velvet bow tie with a tiny skull).
+- **Clover** (female, "the spicy little muffin"):
+  - Long-haired **dilute calico/tortie**: blue-grey coat with soft peach/cream patches, including a split face (one side grey, a peach blaze on the other).
+  - White bib and chest, white-tipped paws, dark grey nose, big yellow-green eyes.
+  - Sits in cardboard boxes. Looks up hopefully at food. Small and round.
+- Draw them as flat cartoons in the site palette (see /assets/mascots/basil.svg and clover.svg). Never use the owner's photos on the site; they're reference only.
