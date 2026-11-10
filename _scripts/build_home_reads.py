@@ -33,7 +33,21 @@ def dose():
     y, mo, da = map(int, p.strip("/").split("/")[-1].split("-"))
     return {"href": "/" + p, "title": "The Weekly Dose, " + date(y, mo, da).strftime("%-d %b"), "text": t}
 
-out = {k: v for k, v in (("deep", deep_dive()), ("research", research()), ("dose", dose())) if v}
+def zebra():
+    """Zebra of the week from the Zebra Atlas: a worldwide condition, 1 in 10,000 to 1 in a million, rotating by ISO week."""
+    try: d = json.load(open("data/rare-conditions.json", encoding="utf-8"))
+    except Exception: return None
+    rows = [r for r in d["rows"] if r[2] == "prev" and r[4] == "Worldwide" and 1 <= r[5] <= 100 and "," not in r[0] and len(r[0]) <= 40 and not re.search(r"\b(type|due to|deficiency of)\b", r[0], re.I)]
+    if not rows: return None
+    rows.sort(key=lambda r: r[1])
+    from datetime import date
+    y, w, _ = date.today().isocalendar()
+    r = rows[(y * 53 + w) * 7919 % len(rows)]
+    from urllib.parse import quote
+    name = r[0][0].upper() + r[0][1:]
+    return {"href": "/rare-conditions/?q=" + quote(r[0]), "title": name, "text": r[3][0].upper() + r[3][1:] + " people. One of %s rare conditions, ranked by rarity." % format(len(d["rows"]), ",")}
+
+out = {k: v for k, v in (("deep", deep_dive()), ("zebra", zebra()), ("research", research()), ("dose", dose())) if v}
 os.makedirs("data", exist_ok=True)
 old = open("data/home-reads.json").read() if os.path.exists("data/home-reads.json") else ""
 new = json.dumps(out, ensure_ascii=False, indent=1)
