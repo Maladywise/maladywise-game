@@ -15,7 +15,11 @@
   function s2(a, b) { return STAGE === 2 ? b : a; }
   // hidden playtest pass: /basil-clover/?vetpass opens the Vet on this device without beating the Kitchen (?vetpass=0 removes it)
   try { var vq = new URLSearchParams(location.search).get("vetpass"); if (vq !== null) localStorage.setItem("mw-basil-vetpass", vq === "0" ? "0" : "1"); } catch (e) {}
-  function kitchenWon() { var p = false; try { p = localStorage.getItem("mw-basil-vetpass") === "1"; } catch (e) {} return p || !!lget(KEYS[1].won); }
+  function kitchenWon() { return true; } // the Vet is open to everyone (Nov 2026); beating the Kitchen now earns a crown, not a key
+  // daily challenge rotates the stage by Sydney weekday (Sun..Sat). Add new stages here as they are built.
+  var DAILYMAP = [1, 1, 2, 1, 2, 1, 2], STNAME = { 1: "Kitchen", 2: "Vet" }, DAYN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  function sydWd() { try { return new Date(sydDay() + "T12:00:00Z").getUTCDay(); } catch (e) { return new Date().getDay(); } }
+  function dailyStage() { var n = DAILYMAP[sydWd()] || 1; return n === 2 && !V ? 1 : n; }
   function track(n) { if (STAGE === 2) n = String(n).replace(/^basil\//, "basil/vet-"); try { if (window.MW_track) MW_track(n); else if (window.goatcounter && goatcounter.count) goatcounter.count({ path: n, title: n, event: true }); } catch (e) {} }
   function $(id) { return document.getElementById(id); }
   function rnd(a, b) { return a + Math.random() * (b - a); }
@@ -1623,7 +1627,8 @@
     if ($("bk-st2")) $("bk-st2").innerHTML = !kv ? "Locked" : k2 ? "\ud83e\ude7a Clean bill of health" + (bv ? " \u00b7 best <b>" + fmt(bv) + "</b>" : "") : bv ? "Annual Check-up \u00b7 best <b>" + fmt(bv) + "</b>" : "Annual Check-up";
     if ($("bk-sd2")) $("bk-sd2").textContent = kv ? "10 rounds at the vet. Two Vet vs Cat boss fights. Starts spicier." : "Beat round 10 in the Kitchen to open the clinic.";
     if ($("bk-crowns")) $("bk-crowns").innerHTML = "<b>" + ((k1 ? 1 : 0) + (k2 ? 1 : 0)) + " of 2</b>stage crowns";
-    if ($("bk-daily2")) $("bk-daily2").disabled = !k1;
+    if ($("bk-daily2")) $("bk-daily2").hidden = true;
+    if ($("bk-daily")) { var ds = dailyStage(); $("bk-daily").innerHTML = "Today’s daily<small>" + DAYN[sydWd()] + " · " + STNAME[ds] + "</small>"; }
     document.querySelectorAll(".bk-htabs button[data-p='2'], .bk-htabs button[data-p='3']").forEach(function (b) { b.hidden = !k1; });
   }
   function setStage(n) {
@@ -1717,7 +1722,7 @@
     var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
   function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
-  $("bk-start").onclick = function () { setStage(1); DAILY = false; ENDLESS = false; start(); }; $("bk-daily").onclick = function () { setStage(1); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
+  $("bk-start").onclick = function () { setStage(1); DAILY = false; ENDLESS = false; start(); }; $("bk-daily").onclick = function () { setStage(dailyStage()); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
   $("bk-start2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = false; ENDLESS = false; start(); }; $("bk-daily2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = true; ENDLESS = false; track("basil/daily"); start(); }; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   function goEndless() { if (!lget(WON)) return; DAILY = false; ENDLESS = true; track("basil/endless"); start(); }
   $("bk-endless").onclick = function () { setStage(1); goEndless(); }; $("bk-endlessv").onclick = function () { if (!kitchenWon()) return; setStage(2); goEndless(); }; $("bk-endless2").onclick = goEndless; endlessUI();
