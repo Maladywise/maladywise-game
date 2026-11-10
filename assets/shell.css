@@ -1183,3 +1183,5 @@ html[data-theme="dark"] .sp-prev i.blk{background:#06050A;border-color:#06050A}h
 .mw-picnudge{margin:10px 0 6px;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--brand) 10%,var(--card));color:var(--ink);font-size:14px;line-height:1.45;text-align:center}
 .mw-pic-hi{box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 45%,transparent);animation:mwpic 1.4s ease-in-out 3}
 @keyframes mwpic{50%{transform:scale(1.05)}}@media (prefers-reduced-motion:reduce){.mw-pic-hi{animation:none}}
+.mw-allg-tog{display:block;width:100%;min-height:44px;margin:6px 0 4px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--brand);font:600 15px var(--body);cursor:pointer}
+.mw-allg-shut>*:not(h2):not(.mw-allg-tog){display:none}

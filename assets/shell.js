@@ -1136,7 +1136,16 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
         sections(t3.map(function (o) { return o.g.id; })) + house() + homeBottom() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
-      if (allg && !NORMIE) main.insertBefore(allg, main.querySelector("footer.site"));
+      if (allg && !NORMIE) {
+        main.insertBefore(allg, main.querySelector("footer.site"));
+        // phones: the full list repeats the game sections above, so fold it behind one button (still in the page for search engines)
+        if (!allg.querySelector(".mw-allg-tog") && window.matchMedia && matchMedia("(max-width: 760px)").matches) {
+          allg.classList.add("mw-allg-shut");
+          var tg = document.createElement("button"); tg.type = "button"; tg.className = "mw-allg-tog"; tg.setAttribute("aria-expanded", "false"); tg.textContent = "Show every game and quiz";
+          tg.onclick = function () { var sh = allg.classList.toggle("mw-allg-shut"); tg.setAttribute("aria-expanded", sh ? "false" : "true"); tg.textContent = sh ? "Show every game and quiz" : "Hide the full list"; };
+          var h2 = allg.querySelector("h2"); if (h2) h2.insertAdjacentElement("afterend", tg); else allg.insertBefore(tg, allg.firstChild);
+        }
+      }
       if (shc) main.insertBefore(shc, main.querySelector("footer.site"));
       if (snav) main.querySelector("footer.site").insertBefore(snav, main.querySelector("footer.site").firstChild);
       social();

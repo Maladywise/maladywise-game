@@ -38,7 +38,10 @@
   // st.found: indexes into P.words in order found; st.log: share sequence ("t","s","h"); st.extra: non-theme words; st.pts: hint points; st.hint: word index or -1
   function loadDay() { KEY = PFX + "stx-day-" + today; st = load(KEY, { found: [], log: [], extra: [], pts: 0, hints: 0, hint: -1, done: false, win: false }); }
   loadDay();
-  fetch(BASE + "words.txt?v=" + BUILD).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { dict = new Set(t.split("\n")); }).catch(function () { dict = new Set(); });
+  // the 580 KB bonus-word list only loads once the player first touches the board (it's only needed for non-theme words)
+  var dictP = null;
+  function loadDict() { if (!dictP) dictP = fetch(BASE + "words.txt?v=" + BUILD).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { dict = new Set(t.split("\n")); }).catch(function () { dict = new Set(); }); return dictP; }
+  document.addEventListener("pointerdown", function once() { document.removeEventListener("pointerdown", once, true); loadDict(); }, true);
 
   // ---------- sass ----------
   function pick(a) { if (a.length < 2) return a[0]; var k = "mw-last-" + a[0].slice(0, 12), last; try { last = sessionStorage.getItem(k); } catch (e) {} var x, n = 0; do { x = a[Math.floor(Math.random() * a.length)]; } while (x === last && ++n < 8); try { sessionStorage.setItem(k, x); } catch (e) {} return x; }
@@ -151,7 +154,8 @@
     }
     var lw = w.toLowerCase();
     if (st.extra.indexOf(lw) >= 0) { say(pick(SASS.dupe)); render(); return; }
-    if (dict && dict.has(lw)) { st.extra.push(lw); st.pts++; say(pick(SASS.extra)); put(KEY, st); render(); return; }
+    if (!dict) { loadDict().then(function () { if (dict && dict.has(lw) && st.extra.indexOf(lw) < 0) { st.extra.push(lw); st.pts++; say(pick(SASS.extra)); put(KEY, st); } else say(pick(SASS.nope)); render(); }); return; }
+    if (dict.has(lw)) { st.extra.push(lw); st.pts++; say(pick(SASS.extra)); put(KEY, st); render(); return; }
     say(pick(SASS.nope)); render();
   }
   // pointer handling: drag to trace (submits on release), or tap letters one by one (tap the last letter again to submit)
