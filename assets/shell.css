@@ -1224,3 +1224,7 @@ a.tl:hover{border-color:var(--accent)}
 .gps-b small{display:block;font-size:13px;line-height:1.45;color:#DDD3F0}
 .gps-go{display:inline-block;margin-top:9px;background:#fff;color:#2E1F57;border-radius:99px;padding:6px 14px;font-weight:600;font-size:13px}
 [data-theme="dark"] .gps-b{background:#3A2B6E}
+
+/* home: no stacked margins around Zebra Mail, all-games and share blocks (grid gap does the spacing) */
+#hub>.mw-allg,#hub>.mw-sharecard,#hub>.nl{margin-top:0;margin-bottom:0}
+#hub>footer.site{margin-top:0}
