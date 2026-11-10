@@ -36,11 +36,224 @@
   }
  ],
  "trials": [
-  {"name": "TRIUMPH (retatrutide)", "q": "A weekly triple-hormone weight-loss injection. Phase 3 trials showed about 21–23% weight loss at 80 weeks.", "when": "US approval filing planned early 2027", "url": "https://www.epocrates.com/online/article/retatrutide-heads-toward-fda-filing-after-positive-phase-3-obesity-trial-results"},
-  {"name": "OCEAN(a)-Outcomes (olpasiran)", "q": "After pelacarsen’s miss, does a stronger, longer-acting Lp(a)-lowering drug prevent heart attacks and strokes?", "when": "Completion expected March 2028", "url": "https://familyheart.org/lpa-clinical-trials"},
-  {"name": "ACCLAIM-Lp(a) (lepodisiran)", "q": "Another Lp(a)-lowering injection, given twice a year, tested on heart attacks and strokes.", "when": "Completion expected March 2029", "url": "https://familyheart.org/lpa-clinical-trials"},
-  {"name": "TRAILBLAZER-ALZ 3 (donanemab)", "q": "Can an anti-amyloid antibody delay Alzheimer’s in people with amyloid on scans but no symptoms yet?", "when": "Main results expected late 2027", "url": "https://api.ai-analytics.org/clinical/NCT05026866.md"},
-  {"name": "AHEAD 3-45 (lecanemab)", "q": "Treating preclinical Alzheimer’s years before memory problems start.", "when": "Main results expected late 2028", "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"},
-  {"name": "MIDAS (metformin)", "q": "Can a cheap diabetes tablet slow memory decline in mild cognitive impairment or early Alzheimer’s?", "when": "Results due after September 2026 completion", "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"}
- ]
+  {
+   "name": "TRIUMPH (retatrutide)",
+   "q": "A weekly triple-hormone weight-loss injection. Phase 3 trials showed about 21–23% weight loss at 80 weeks.",
+   "when": "US approval filing planned early 2027",
+   "url": "https://www.epocrates.com/online/article/retatrutide-heads-toward-fda-filing-after-positive-phase-3-obesity-trial-results"
+  },
+  {
+   "name": "OCEAN(a)-Outcomes (olpasiran)",
+   "q": "After pelacarsen’s miss, does a stronger, longer-acting Lp(a)-lowering drug prevent heart attacks and strokes?",
+   "when": "Completion expected March 2028",
+   "url": "https://familyheart.org/lpa-clinical-trials"
+  },
+  {
+   "name": "ACCLAIM-Lp(a) (lepodisiran)",
+   "q": "Another Lp(a)-lowering injection, given twice a year, tested on heart attacks and strokes.",
+   "when": "Completion expected March 2029",
+   "url": "https://familyheart.org/lpa-clinical-trials"
+  },
+  {
+   "name": "TRAILBLAZER-ALZ 3 (donanemab)",
+   "q": "Can an anti-amyloid antibody delay Alzheimer’s in people with amyloid on scans but no symptoms yet?",
+   "when": "Main results expected late 2027",
+   "url": "https://api.ai-analytics.org/clinical/NCT05026866.md"
+  },
+  {
+   "name": "AHEAD 3-45 (lecanemab)",
+   "q": "Treating preclinical Alzheimer’s years before memory problems start.",
+   "when": "Main results expected late 2028",
+   "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"
+  },
+  {
+   "name": "MIDAS (metformin)",
+   "q": "Can a cheap diabetes tablet slow memory decline in mild cognitive impairment or early Alzheimer’s?",
+   "when": "Results due after September 2026 completion",
+   "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"
+  }
+ ],
+ "recruiting": {
+  "checked": "2026-11-11",
+  "local": [
+   {
+    "name": "Diabetic foot ulcer trial (CYWC628)",
+    "what": "Tests an experimental cell therapy added to usual wound care for slow-healing ulcers.",
+    "who": "Adults with a diabetic foot ulcer that hasn't healed with standard care.",
+    "org": "HMRI",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/diabetic-foot-ulcer-clinical-trial/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Minimising steroid tablets in asthma",
+    "what": "Tests a more personalised asthma plan to cut the need for prednisolone courses.",
+    "who": "Adults with asthma who've needed steroid tablets in the past 2 years.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/minimising-oral-corticosteroid-use-in-asthma/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "SHE study: sex hormones and asthma",
+    "what": "How periods, the pill and menopause affect asthma.",
+    "who": "Women 18+ with asthma.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/sex-hormone-effects-on-asthma-she-study/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Understanding breathlessness in asthma",
+    "what": "Looks at the many causes of breathlessness in asthma.",
+    "who": "Adults 18+ with asthma.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/understanding-breathlessness-in-asthma/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "IDEAL study",
+    "what": "A personalised nutrition and activity program for asthma.",
+    "who": "Adults 18+ with asthma and a BMI of 27 or more.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/the-ideal-study/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Asthma in pregnancy: treatable traits",
+    "what": "Whether targeting asthma 'traits' improves pregnancy outcomes.",
+    "who": "Pregnant women with asthma.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/treatable-traits-for-asthma-management-in-pregnancy/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "ANTIC: nutrition trial in COPD",
+    "what": "Whether dietary supplements improve health in COPD.",
+    "who": "People with COPD.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/antic-study-a-nutritional-trial-in-copd/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Integrated care for memory problems",
+    "what": "Tests nurse-led integrated support for people with dementia and their carers.",
+    "who": "People 65+ with dementia, and their carers.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/integrated-care-for-people-living-with-memory-problems/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "ESTEEM after stroke",
+    "what": "Community workshops to support stroke recovery.",
+    "who": "Stroke survivors and carers.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/esteem-stroke-workshops/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "FoCCuS4HEART: stroke carers",
+    "what": "Co-designing tools to help carers look after their own health.",
+    "who": "Women caring for a stroke survivor.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/foccus4heart/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Pregnancy immunity and MS",
+    "what": "How the immune system changes in pregnancy, including in MS and NMOSD.",
+    "who": "Women who are pregnant or planning pregnancy, with or without MS or NMOSD.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/immunobiology-of-pregnancy-study/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "NF1 consortium",
+    "what": "How genes affect the number of skin neurofibromas in NF1.",
+    "who": "Adults with neurofibromatosis type 1.",
+    "org": "HMRI (international study)",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/neurofibromatosis-type-1-nf1-consortium/",
+    "mode": "Hunter-based. Check the listing for visit details."
+   }
+  ],
+  "online": [
+   {
+    "name": "Diabeating Nutrition",
+    "what": "Telehealth dietitian support alongside a GLP-1 medicine.",
+    "who": "People with type 2 diabetes taking Ozempic, Trulicity, Mounjaro or similar.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/diabeating-nutrition/",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Nutrition for cancer survivors",
+    "what": "Online survey on what people eat during and after cancer.",
+    "who": "People living with and beyond cancer.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/enhancing-nutrition-for-cancer-survivors-online-survey/",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Dietary reporting: app vs paper",
+    "what": "Compares a food diary app with a paper diary over two 4-day periods.",
+    "who": "Adults with type 2 diabetes, LADA or MODY, with a smartphone or tablet.",
+    "org": "University of Newcastle",
+    "url": "https://redcap.link/7xdh76z7",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "MIND-MAP",
+    "what": "Four online surveys over 3 years on emotional wellbeing with diabetes.",
+    "who": "Adults with any type of diabetes (not gestational) living in Australia.",
+    "org": "ACBRD / Deakin University",
+    "url": "https://acbrd.org.au/join-the-mind-map-study/",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Heatwave text messages",
+    "what": "Tests text-message tips for staying healthy in hot weather.",
+    "who": "Adults with a chronic condition, a smartphone and an Australian number (not in aged care).",
+    "org": "Macquarie University",
+    "url": "https://redcap.mq.edu.au/surveys/?s=HTF3JXT9DYEXCJCR",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Lonely older adults program",
+    "what": "A free online program for loneliness and chronic conditions.",
+    "who": "Adults 60+ with a chronic physical condition who feel lonely or isolated.",
+    "org": "Macquarie University (eCentreClinic)",
+    "url": "https://www.ecentreclinic.org",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Driving with diabetes",
+    "what": "Questionnaire on everyday driving experiences.",
+    "who": "Adults with diabetes and a valid licence who've driven in the past 6 months.",
+    "org": "QUT",
+    "url": "https://qsurvey.qut.edu.au/jfe/form/SV_cIattgwkphdNrIG",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Gestational diabetes care needs",
+    "what": "Short survey on support needs in and after pregnancy.",
+    "who": "Women with gestational diabetes, 32+ weeks pregnant or up to 12 weeks after birth.",
+    "org": "University of Canberra",
+    "url": "https://redcap.canberra.edu.au/surveys/?s=7APMYFNXELCXH4YL",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Endometriosis and heart-metabolic health",
+    "what": "Survey on awareness of cardiometabolic conditions in endometriosis.",
+    "who": "Women 18–45 in Australia with endometriosis and type 2 diabetes or a similar condition.",
+    "org": "Epworth",
+    "url": "https://rc.epworth.org.au/redcap/surveys/?s=PLK48NN7PDWT7FDN",
+    "mode": "Online or by phone, anywhere in Australia."
+   },
+   {
+    "name": "Parents of kids with chronic conditions",
+    "what": "Survey on whether parents seek help for themselves.",
+    "who": "Parents of children 4–18 with a diagnosed chronic condition.",
+    "org": "Macquarie University",
+    "url": "https://mquni.au1.qualtrics.com/jfe/form/SV_bJkxVXywzUlxrpA",
+    "mode": "Online or by phone, anywhere in Australia."
+   }
+  ]
+ }
 }

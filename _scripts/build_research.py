@@ -19,7 +19,7 @@ head = re.sub(r'/assets/og/pages/deep-dives\.png\?v=[0-9a-f]+', "/assets/og/page
 head = head.replace("Deep dives for clinicians: Evidence-dense topic reviews", "Research hub: New studies and trials to watch")
 ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Research hub", "item": "https://maladywise.com/research/"}]}
 head += '<script type="application/ld+json" id="mw-breadcrumb-ld">' + json.dumps(ld, ensure_ascii=False) + "</script>\n"
-head += "<style>.rh-ev{display:inline-block;font:700 11px Poppins,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 9px;margin-right:6px}.rh-ev.Strong{background:#DDF3E6;color:#1F6B3A}.rh-ev.Moderate{background:#FFF1CC;color:#7A5300}.rh-ev.Early{background:#FBE1DC;color:#9A3220}.rh-card{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;background:var(--card)}.rh-card h3{margin:0 0 6px;font-size:18px}.rh-card p{margin:6px 0}.rh-src{font-size:13px;color:var(--muted)}.rh-trials li{margin:10px 0}.rh-when{display:block;font-size:13px;color:#6B5A93;font-weight:600}</style>\n"
+head += "<style>.rh-ev{display:inline-block;font:700 11px Poppins,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 9px;margin-right:6px}.rh-ev.Strong{background:#DDF3E6;color:#1F6B3A}.rh-ev.Moderate{background:#FFF1CC;color:#7A5300}.rh-ev.Early{background:#FBE1DC;color:#9A3220}.rh-card{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;background:var(--card)}.rh-card h3{margin:0 0 6px;font-size:18px}.rh-card p{margin:6px 0}.rh-src{font-size:13px;color:var(--muted)}.rh-trials li{margin:10px 0}.rh-when{display:block;font-size:13px;color:#6B5A93;font-weight:600}.rc-who{display:block;font-size:14px;margin-top:2px}</style>\n"
 foot = src[src.index('<p class="print-url">') if '<p class="print-url">' in src else src.index("<footer"):].replace("maladywise.com/deep-dives/", "maladywise.com/research/")
 def card(s):
     return ('<div class="rh-card"><h3>' + e(s["title"]) + '</h3><p><span class="rh-ev ' + e(s["evidence"]) + '">' + e(s["evidence"]) + " evidence</span>" + e(s.get("evnote", "")) + "</p>"
@@ -30,6 +30,19 @@ body = ['</head>\n<body>\n<main class="wrap doc">',
   '<p class="lede">The week’s most interesting medical studies in plain English, how much to trust each one, and the big trials still to come.</p>',
   '<h2>This week in research</h2><p class="meta">' + e(w0["week"]) + "</p>"] + [card(s) for s in w0["studies"]]
 body += ['<h2>Trials to watch</h2><p class="evkey">Big studies still running. Results could change practice.</p><ul class="rh-trials">'] + ['<li><b><a href="' + e(t["url"]) + '" rel="noopener">' + e(t["name"]) + "</a></b> " + e(t["q"]) + '<span class="rh-when">' + e(t["when"]) + "</span></li>" for t in D["trials"]] + ["</ul>"]
+RC = D.get("recruiting")
+if RC and (RC.get("local") or RC.get("online")):
+    from datetime import date as _d
+    ck = _d.fromisoformat(RC["checked"]).strftime("%-d %b %Y")
+    def rli(t):
+        return ('<li class="rc"><b><a href="' + e(t["url"]) + '" rel="noopener" target="_blank">' + e(t["name"]) + "</a></b> " + e(t["what"]) +
+                '<span class="rc-who"><b>Who:</b> ' + e(t["who"]) + "</span>" + '<span class="rh-when">' + e(t["org"]) + (" · Closes " + e(t["closes"]) if t.get("closes") else "") + "</span></li>")
+    body += ['<h2 id="join">Studies recruiting now</h2><p class="evkey">Real studies looking for volunteers. Checked ' + ck + '. Talk to your GP before joining a trial. Listing isn’t endorsement.</p>']
+    if RC.get("local"):
+        body += ['<div class="rc-local"><h3>In person: Newcastle and the Hunter</h3><ul class="rh-trials">'] + [rli(t) for t in RC["local"]] + ["</ul></div>",
+                 '<script>(function(){try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"";if(!/^Australia\\//.test(tz)&&!/-AU$/i.test(navigator.language||""))document.querySelectorAll(".rc-local").forEach(function(x){x.hidden=true})}catch(e){}})();</script>']
+    if RC.get("online"):
+        body += ['<h3>Online: anywhere in Australia</h3><ul class="rh-trials">'] + [rli(t) for t in RC["online"]] + ["</ul>"]
 if len(D["weeks"]) > 1:
     body.append("<h2>Earlier weeks</h2>")
     for w in D["weeks"][1:8]:
