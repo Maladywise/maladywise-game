@@ -427,7 +427,7 @@ CARDS = [
     hub("exercises", "/exercises/", "Exercise handouts", "Rehab plans",
         "Printable home exercise plans with clear diagrams.",
         ["days/tess-bone.svg", "svg:T_STRETCH", "svg:T_DUMBBELL", "days/octavia-ot.svg"], cols=2, foot="Free · print on one page"),
-    hub("days", "/days/", "World Health Days", "Calendar",
+    hub("days", "/days/", "Health Calendar", "Calendar",
         "Every health awareness day of the year, in one place.",
         ["svg:T_CAL", "days/ribbon-pink.svg", "days/daffodil.svg", "days/ribbon-teal.svg", "days/heart-rainbow.svg", "days/star.svg"]),
     hub("zebra-mail", "/zebra-mail/", "Zebra Mail", "The Weekly Dose",

@@ -256,7 +256,7 @@
       return '<div class="us-room"><b>' + esc(r.name) + "</b><span>" + esc(r.sub) + '</span><div class="us-bar"><i style="width:' + p.pct + '%"></i></div><small>' + p.pct + "% · " + p.ok + "/" + p.n + " right</small></div>";
     }).join("");
     return '<div class="us-home">' +
-      '<div class="us-brand"><div><span class="us-kick">Free GP training</span><span class="us-title">GP School</span></div>' +
+      '<div class="us-brand"><img src="/assets/mascots/morphemia.svg" width="52" height="52" alt="Bea the nurse bee" style="flex:0 0 auto"><div style="flex:1"><span class="us-kick">Free GP training</span><span class="us-title">GP School</span></div>' +
       '<span class="us-pill">' + (st ? st + "-day streak" : "Day 1 starts now") + "</span></div>" +
       '<div class="us-rank"><span class="us-kick">Your rank · ' + (S.points || 0).toLocaleString("en-AU") + " points</span><span class=\"us-rname\">" + esc(rk.name) + "</span>" +
       '<div class="us-rbar"><i style="width:' + Math.round(rk.pct * 100) + '%"></i></div>' +
