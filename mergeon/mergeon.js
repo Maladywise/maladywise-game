@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "18";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "19";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1300,8 +1300,12 @@
       '<div class="react">' + pic(top >= 0 ? top : 0, 56) + '<span class="bub">' + esc(pick(rq)) + "</span></div>" +
       "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
       (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
-      (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") + "</div>";
+      (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") +
+      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-ovagain">Play again</button><button class="btn" type="button" id="mrg-ovres">' + (practice ? "Results" : "Share result") + "</button></div>" +
+      (practice ? "" : '<span class="ovnote">Next games are practice</span>') + "</div>";
     ov.hidden = false;
+    $("ovagain").onclick = function () { newRun(true); };
+    $("ovres").onclick = function () { $("result").scrollIntoView({ behavior: "smooth", block: "start" }); };
     if (best) { burst(W / 2, H / 3, 8); sfx("target"); }
     if (!practice && !st.done) {
       st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared, rx: RX, res: resCleared }; if (DRAIN) st.drain = drained;
@@ -1322,7 +1326,6 @@
       if (!st.done) renderResult();
       else renderResult(score);
     }
-    setTimeout(function () { $("result").scrollIntoView({ behavior: "smooth", block: "start" }); }, 900);
   }
   function shareText() {
     var s = st.score, tp = st.top;

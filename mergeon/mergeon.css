@@ -190,3 +190,6 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 .mrg-help-more{margin:0 0 12px;border-top:1px solid var(--line,#D9D1E3);padding-top:6px}
 .mrg-help-more summary{cursor:pointer;font-weight:600;font-size:14.5px;min-height:44px;display:flex;align-items:center;color:var(--accent,#4A3480)}
 .mrg-help-more ul{margin-top:6px}
+#mrg .over .ovbtns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+#mrg .over .ovbtns .btn{min-height:44px}
+#mrg .over .ovnote{font-size:12px;color:var(--muted,#7a7090)}
