@@ -2791,5 +2791,221 @@
     "ahpra": "not checked"
    }
   ]
+ },
+ "psychology": {
+  "name": "Psychology",
+  "people": [
+   {
+    "name": "Platform Psychology",
+    "specialty": "Psychology",
+    "practice": "Platform Psychology",
+    "address": "Warners Bay and Broadmeadow",
+    "suburb": "Warners Bay",
+    "phone": "02 8029 0780",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.platformpsychology.com.au",
+    "interests": [
+     "adult mental health",
+     "chronic health conditions (cancer, pain, heart disease)",
+     "CTP and workers compensation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.platformpsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Redstone Psychology",
+    "specialty": "Psychology",
+    "practice": "Redstone Psychology",
+    "address": "Newcastle",
+    "suburb": "Newcastle",
+    "phone": "02 4072 2027",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://redstonepsychology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://redstonepsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Wise Mind Psychology",
+    "specialty": "Psychology",
+    "practice": "Wise Mind Psychology",
+    "address": "New Lambton",
+    "suburb": "New Lambton",
+    "phone": "02 4091 0100",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.wisemindnewcastle.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.wisemindnewcastle.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mindsource Psychology and Counselling",
+    "specialty": "Psychology",
+    "practice": "Mindsource Psychology and Counselling",
+    "address": "Hamilton",
+    "suburb": "Hamilton",
+    "phone": "02 4962 1996",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mindsourcepsychologyandcounselling.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mindsourcepsychologyandcounselling.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Strive Hive Psychology",
+    "specialty": "Psychology",
+    "practice": "Strive Hive Psychology",
+    "address": "Nelson Bay",
+    "suburb": "Nelson Bay",
+    "phone": "02 4033 2717",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://strivehive.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://strivehive.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Sana Psychology",
+    "specialty": "Psychology",
+    "practice": "Sana Psychology",
+    "address": "Newcastle",
+    "suburb": "Newcastle",
+    "phone": "02 4072 7082",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://sanapsych.com.au",
+    "interests": [
+     "work-related injury",
+     "telehealth"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://sanapsych.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
  }
 }
