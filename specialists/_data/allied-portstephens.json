@@ -1,0 +1,529 @@
+{
+ "physiotherapy": {
+  "name": "Physiotherapy",
+  "people": [
+   {
+    "name": "Nelson Plaza Clinic",
+    "specialty": "Physiotherapy (multidisciplinary clinic)",
+    "practice": "Nelson Plaza Clinic",
+    "address": "29 Stockton Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4981 2555",
+    "fax": "02 4981 2755",
+    "email": "",
+    "ereferral": "",
+    "website": "https://nelsonplaza.com.au",
+    "interests": [
+     "Physiotherapy, podiatry and psychology at one clinic (Healthdirect listing)",
+     "Mixed billing (Healthdirect)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Nelson Bay Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Nelson Bay Physiotherapy",
+    "address": "210 Salamander Way, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "02 4981 3461",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.nelsonbayphysiotherapy.com",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Physiotherapy - Salamander Bay",
+    "specialty": "Physiotherapy",
+    "practice": "Hunter Physiotherapy",
+    "address": "Shop 10, 3-5 Town Centre Circuit, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "02 4982 0811",
+    "fax": "02 4984 6036",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Physio Port Stephens",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "The Physio Port Stephens",
+    "address": "29 Sandy Point Road, Corlette NSW 2315",
+    "suburb": "Corlette",
+    "phone": "02 4072 1759",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://thephysio.net.au",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)",
+     "Exercise physiology (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Terrace Physio Plus",
+    "specialty": "Physiotherapy",
+    "practice": "Terrace Physio Plus",
+    "address": "Shop 3, 7 Johnson Close, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "02 4983 1765",
+    "fax": "02 4987 7300",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.terracephysioplus.com.au",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/raymond-terrace-2324-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "All Elite Physiotherapy & Performance",
+    "specialty": "Physiotherapy",
+    "practice": "All Elite Physiotherapy & Performance",
+    "address": "17 Port Stephens Street, Raymond Terrace NSW 2324",
+    "suburb": "Raymond Terrace",
+    "phone": "02 4981 9501",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/raymond-terrace-2324-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Medowie Physiotherapy and Sports Injuries",
+    "specialty": "Physiotherapy",
+    "practice": "Medowie Physiotherapy and Sports Injuries",
+    "address": "777 Medowie Road, Medowie NSW 2318",
+    "suburb": "Medowie",
+    "phone": "02 4981 8400",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)",
+     "Sports injuries (as named)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/medowie-2318-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Go Physio Medowie",
+    "specialty": "Physiotherapy",
+    "practice": "Go Physio Medowie",
+    "address": "Shop 11, 37E Ferodale Road, Medowie NSW 2318",
+    "suburb": "Medowie",
+    "phone": "02 4981 8103",
+    "fax": "02 4981 8124",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General physiotherapy (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/medowie-2318-nsw/physiotherapy/722140001"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "podiatry": {
+  "name": "Podiatry",
+  "people": [
+   {
+    "name": "Port Stephens Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Port Stephens Podiatry",
+    "address": "Nelson Plaza, Level 1, 29 Stockton Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4981 2555",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.pspodiatry.com",
+    "interests": [
+     "General podiatry (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/podiatry/310087009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dynamic Stride Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Dynamic Stride Podiatry",
+    "address": "Shop 1, 57 Donald Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4981 5155",
+    "fax": "02 4981 5255",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.dspodiatry.com.au",
+    "interests": [
+     "General podiatry (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/podiatry/310087009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Footprints at the Bay",
+    "specialty": "Podiatry",
+    "practice": "Footprints at the Bay",
+    "address": "Shop 8, 3 Town Centre Circuit, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "02 4984 6088",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "General podiatry (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/nelson-bay-2315-nsw/podiatry/310087009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-paediatric": {
+  "name": "Speech pathology (children)",
+  "people": [
+   {
+    "name": "Communication Therapy - Salamander Bay",
+    "specialty": "Speech pathology",
+    "practice": "Communication Therapy",
+    "address": "Shop 8, 5 Town Centre Circuit, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "02 4982 9876",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://communicationtherapy.com.au",
+    "interests": [
+     "Speech pathology (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/salamander-bay-2317-nsw/speech-pathology/310101009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Leaps & Bounds Speech Pathology - East Maitland",
+    "specialty": "Speech pathology",
+    "practice": "Leaps & Bounds Speech Pathology",
+    "address": "20 Bruce Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 7171",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://leapsandbounds.org.au",
+    "interests": [
+     "Speech pathology (Healthdirect listing)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/east-maitland-2323-nsw/speech-pathology/310101009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-adult": {
+  "name": "Speech pathology (adults)",
+  "people": [
+   {
+    "name": "Maitland Hospital - Speech Pathology Clinic",
+    "specialty": "Speech pathology (public hospital clinic)",
+    "practice": "Maitland Hospital",
+    "address": "Maitland Hospital, 51 Metford Road, Metford NSW 2323",
+    "suburb": "Metford",
+    "phone": "02 6592 9111",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Public hospital speech pathology clinic (Healthdirect listing): ask your GP about referral"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/east-maitland-2323-nsw/speech-pathology/310101009"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}

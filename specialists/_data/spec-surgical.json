@@ -4644,6 +4644,151 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Marc Coughlan",
+    "specialty": "Neurosurgeon and spine surgeon",
+    "practice": "Coastal Neurosurgery (Central Coast)",
+    "address": "Level 1, Suite 14–15, 12 Jarrett Street, North Gosford NSW 2250",
+    "suburb": "North Gosford (Central Coast)",
+    "phone": "02 4322 7556",
+    "fax": "02 8322 4034",
+    "email": "",
+    "ereferral": "",
+    "website": "https://coastalneurosurgery.com.au/our-team/dr-marc-coughlan/",
+    "interests": [
+     "Spine surgery: motion preservation, artificial discs, dynamic stabilisation, interbody fusion",
+     "Minimally invasive spine surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://coastalneurosurgery.com.au/our-team/dr-marc-coughlan/",
+     "https://coastalneurosurgery.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Prakash Damodaran",
+    "specialty": "Neurosurgeon and spine surgeon",
+    "practice": "Coastal Neurosurgery (Central Coast)",
+    "address": "Level 1, Suite 14–15, 12 Jarrett Street, North Gosford NSW 2250",
+    "suburb": "North Gosford (Central Coast)",
+    "phone": "02 4322 7556",
+    "fax": "02 8322 4034",
+    "email": "",
+    "ereferral": "",
+    "website": "https://coastalneurosurgery.com.au/our-team/dr-prakash-damodaran/",
+    "interests": [
+     "Brain tumour surgery, with neuromonitoring and brain mapping",
+     "Endoscopic pituitary surgery",
+     "Complex and minimally invasive spine surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://coastalneurosurgery.com.au/our-team/dr-prakash-damodaran/",
+     "https://coastalneurosurgery.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Vanessa Sammons",
+    "specialty": "Neurosurgeon",
+    "practice": "Central Coast Neurosciences (Central Coast)",
+    "address": "Suite 202, 200 Central Coast Highway, Erina NSW 2250",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 9056 0877",
+    "fax": "02 9056 0819",
+    "email": "",
+    "ereferral": "",
+    "website": "https://gosfordprivate.com.au/specialists/dr-vanessa-sammons",
+    "interests": [
+     "Peripheral nerve surgery: nerve entrapments (carpal tunnel, ulnar, peroneal, tarsal tunnel, meralgia paraesthetica), brachial plexus injuries, thoracic outlet syndrome, nerve tumours",
+     "Spinal cord and nerve root compression, brain and spinal tumours",
+     "Chiari malformation, hydrocephalus, trigeminal neuralgia, hemifacial spasm"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.com.au/specialists/dr-vanessa-sammons",
+     "https://www.neurosciences.com.au/contact-us/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Sebastian Eibach",
+    "specialty": "Neurosurgeon (adult and paediatric)",
+    "practice": "Gosford Private Consulting Suites (Central Coast)",
+    "address": "Suite 4, 12 Jarrett Street, North Gosford NSW 2250",
+    "suburb": "North Gosford (Central Coast)",
+    "phone": "02 4323 8110",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://gosfordprivate.com.au/specialists/assoc-professor-sebastian-eibach",
+    "interests": [
+     "Paediatric and adult neurosurgery: brain and spine",
+     "Hydrocephalus and Chiari malformation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.com.au/specialists/assoc-professor-sebastian-eibach"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
