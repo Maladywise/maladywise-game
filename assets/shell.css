@@ -1228,3 +1228,8 @@ a.tl:hover{border-color:var(--accent)}
 /* home: no stacked margins around Zebra Mail, all-games and share blocks (grid gap does the spacing) */
 #hub>.mw-allg,#hub>.mw-sharecard,#hub>.nl{margin-top:0;margin-bottom:0}
 #hub>footer.site{margin-top:0}
+
+/* Weekly Dose: keep the breadcrumb a plain line (its li are not story cards) */
+.wd .mw-crumbs li{background:none;border:0;border-radius:0;padding:0;font-size:12.5px;line-height:1.4;color:var(--muted)}
+.wd .mw-crumbs li a{font-weight:400;color:var(--muted);text-decoration:none}
+.wd .mw-crumbs [aria-current]{color:var(--ink)}

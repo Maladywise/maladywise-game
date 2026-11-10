@@ -1576,6 +1576,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     });
     var used = {};
     Array.prototype.forEach.call(m.querySelectorAll("li, h2:not(.wd-title) + p"), function (el) {
+      if (el.closest(".mw-crumbs, nav")) return; // breadcrumb and menu items aren't stories
       el.innerHTML = el.innerHTML.replace(/Why it(?:'|’)s interesting:/, '<span class="why">Why it’s interesting</span>');
       Array.prototype.forEach.call(el.querySelectorAll("a"), function (a) { if (/^write-up$/i.test(a.textContent.trim())) a.className = "wu"; });
       var st = el.firstElementChild, story = false;
