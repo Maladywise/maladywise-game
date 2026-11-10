@@ -1848,6 +1848,81 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "The Kaden Centre",
+    "specialty": "Exercise physiology and physiotherapy (cancer and chronic conditions)",
+    "practice": "The Kaden Centre",
+    "address": "Shop 2, 4 Ironbark Close",
+    "suburb": "Warabrook",
+    "phone": "02 4001 0113",
+    "fax": "02 4006 3032",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.activeandhealthy.nsw.gov.au/program/view/4784",
+    "interests": [
+     "exercise oncology",
+     "chronic conditions",
+     "lymphoedema",
+     "clinical Pilates",
+     "home exercise programs"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.activeandhealthy.nsw.gov.au/program/view/4784",
+     "https://kadencentre.org.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Coastline Performance and Health",
+    "specialty": "Exercise physiology",
+    "practice": "Coastline Performance and Health",
+    "address": "Lake Macquarie",
+    "suburb": "Cardiff",
+    "phone": "02 7226 9384",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.coastlineperformance.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.coastlineperformance.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -2276,6 +2351,101 @@
     "inclusive": [],
     "sources": [
      "https://serenityclinic.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "infectious-diseases": {
+  "name": "Infectious diseases",
+  "people": [
+   {
+    "name": "Dr Mel Kelly",
+    "specialty": "Infectious diseases and sexual health physician",
+    "practice": "Brightwell Health",
+    "address": "Suite 1, 710 Hunter Street",
+    "suburb": "Newcastle West",
+    "phone": "02 4092 8000",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/specialist/melissa-kelly",
+    "interests": [
+     "HIV",
+     "hepatitis B and C",
+     "sexually transmitted infections",
+     "infections in immunocompromised people",
+     "gender-affirming hormone therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [
+     "Gender-affirming care, including hormone therapy, and support for the LGBTQ+ community (Doctify profile)"
+    ],
+    "sources": [
+     "https://www.doctify.com/au/specialist/melissa-kelly",
+     "https://brightwellhealth.com.au/psychologist-newcastle/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "rehabilitation": {
+  "name": "Rehabilitation medicine",
+  "people": [
+   {
+    "name": "Dr Glenda Widdup",
+    "specialty": "Rehabilitation physician",
+    "practice": "Warners Bay Private Hospital",
+    "address": "42 Fairfax Road",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 4288",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-glenda-widdup/",
+    "interests": [
+     "reconditioning after illness or surgery",
+     "stroke",
+     "neurological conditions",
+     "cancer rehab",
+     "chronic pain"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-glenda-widdup/"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
