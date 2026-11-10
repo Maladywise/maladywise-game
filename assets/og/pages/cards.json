@@ -1854,6 +1854,13 @@
 "label": "Specialists",
 "title": "Gastroenterology"
 },
+"specialists-general-medicine": {
+"url": "/specialists/general-medicine/",
+"key": "3192e72fa46d",
+"v": "0184762c",
+"label": "Specialists",
+"title": "General medicine"
+},
 "specialists-general-surgery": {
 "url": "/specialists/general-surgery/",
 "key": "cff9feeb62ec",
@@ -2035,6 +2042,13 @@
 "v": "ff18959f",
 "label": "Specialists",
 "title": "Pain medicine"
+},
+"specialists-palliative-care": {
+"url": "/specialists/palliative-care/",
+"key": "83fcf2c5e159",
+"v": "dd8cd9dc",
+"label": "Specialists",
+"title": "Palliative care"
 },
 "specialists-pathology-collection": {
 "url": "/specialists/pathology-collection/",

@@ -749,6 +749,88 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Nick Bull",
+    "specialty": "General and HPB surgeon",
+    "practice": "Lake Macquarie Private Hospital rooms",
+    "address": "Level 2, Suite 1, 6-8 Sydney St",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-nick-bull/",
+    "interests": [
+     "liver, pancreas and gallbladder (HPB) surgery",
+     "advanced endoscopy",
+     "minimally invasive surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-nick-bull/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Scarlett Shackleton",
+    "specialty": "General surgeon",
+    "practice": "Lake Macquarie Private Hospital rooms",
+    "address": "Level 2, Suite 7, 6-8 Sydney St",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-scarlett-shackleton/",
+    "interests": [
+     "hernia repair",
+     "gallbladder surgery",
+     "melanoma",
+     "endoscopy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-scarlett-shackleton/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -3002,6 +3084,366 @@
     "inclusive": [],
     "sources": [
      "https://sanapsych.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "neurology": {
+  "name": "Neurology",
+  "people": [
+   {
+    "name": "Dr Thomas Wellings",
+    "specialty": "Neurologist",
+    "practice": "Broadmeadow Neurology",
+    "address": "20 Lambton Road",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 3203",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/practice/broadmeadow-neurology",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/broadmeadow-neurology",
+     "https://healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/dr-andre-loiselle-s-rooms/neurology/05f737c4-688a-9cf1-5872-6ec8939e2fb5"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "dental": {
+  "name": "Dentists and dental specialists",
+  "people": [
+   {
+    "name": "Dr Ben Gupta",
+    "specialty": "Oral and maxillofacial surgeon",
+    "practice": "Dr Ben Gupta (oral and maxillofacial surgery)",
+    "address": "Suite 213, Second Floor, 99 Pacific Highway",
+    "suburb": "Charlestown",
+    "phone": "02 4962 4343",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-ben-gupta/",
+    "interests": [
+     "wisdom teeth and difficult extractions",
+     "jaw surgery",
+     "dental implants",
+     "TMJ surgery",
+     "surgery for sleep apnoea",
+     "facial trauma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-ben-gupta/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-spine": {
+  "name": "Orthopaedic surgery: spine",
+  "people": [
+   {
+    "name": "Dr Patrick Lim",
+    "specialty": "Orthopaedic spine surgeon",
+    "practice": "The Orthopaedic Clinic",
+    "address": "Suite 16, Level 1, Eastpoint Building, 50 Glebe Road",
+    "suburb": "The Junction",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.drpatricklim.com",
+    "interests": [
+     "scoliosis and spinal deformity (adults and children)",
+     "minimally invasive spine surgery",
+     "robotic spine surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Lingard Private Hospital",
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-patrick-lim"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "nephrology": {
+  "name": "Nephrology",
+  "people": [
+   {
+    "name": "Dr Thida Myint",
+    "specialty": "Nephrologist",
+    "practice": "Maitland Private Hospital",
+    "address": "",
+    "suburb": "East Maitland",
+    "phone": "02 4937 9558",
+    "fax": "02 4937 9560",
+    "email": "",
+    "ereferral": "",
+    "website": "https://healthwoodsendoscopy.cms.healthecare.com.au/specialists/dr-thida-myint",
+    "interests": [
+     "chronic kidney disease",
+     "diabetic kidney disease",
+     "protein or blood in the urine",
+     "glomerulonephritis",
+     "dialysis",
+     "kidney transplant follow-up",
+     "hypertension"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthwoodsendoscopy.cms.healthecare.com.au/specialists/dr-thida-myint"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "general-medicine": {
+  "name": "General medicine",
+  "people": [
+   {
+    "name": "Dr Shehan Atapattu",
+    "specialty": "General physician",
+    "practice": "Lake Macquarie Private Hospital rooms",
+    "address": "Level 2, Suite 7, 6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "02 4947 5397",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/general-medicine/106090/dr-shehan-atapattu",
+    "interests": [
+     "older adults with several conditions",
+     "dementia",
+     "polypharmacy",
+     "osteoporosis",
+     "type 2 diabetes",
+     "unexplained breathlessness",
+     "infections"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/general-medicine/106090/dr-shehan-atapattu"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Farah Qayyum",
+    "specialty": "General physician",
+    "practice": "Hunter Valley Private Hospital",
+    "address": "20 Mawson Street",
+    "suburb": "Shortland",
+    "phone": "02 7205 4698",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://specialists.healthscope.com.au/specialist/dr-farah-qayyum",
+    "interests": [
+     "complex general medicine",
+     "perioperative medicine"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Hunter Valley Private Hospital",
+      "Newcastle Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/dr-farah-qayyum"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sergio Diez Alvarez",
+    "specialty": "General physician",
+    "practice": "Lingard and Maitland Private Hospitals",
+    "address": "",
+    "suburb": "Merewether",
+    "phone": "02 4911 2336",
+    "fax": "02 4911 2337",
+    "email": "",
+    "ereferral": "",
+    "website": "https://dubboprivate.cms.healthecare.com.au/specialists/dr-sergio-diez-alvarez",
+    "interests": [
+     "type 2 diabetes",
+     "people with several conditions",
+     "complex general medicine"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://dubboprivate.cms.healthecare.com.au/specialists/dr-sergio-diez-alvarez"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "palliative-care": {
+  "name": "Palliative care",
+  "people": [
+   {
+    "name": "Dr Susan Newton",
+    "specialty": "Palliative medicine specialist",
+    "practice": "Gosford Private Hospital (Central Coast)",
+    "address": "",
+    "suburb": "Gosford (Central Coast)",
+    "phone": "02 4304 3387",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://healthecare.cms.healthecare.com.au/specialists/dr-susan-newton",
+    "interests": [
+     "palliative and end-of-life care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://healthecare.cms.healthecare.com.au/specialists/dr-susan-newton"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
