@@ -2149,6 +2149,46 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Fix It Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Fix It Physiotherapy",
+    "address": "1/73-75 Cowper Street",
+    "suburb": "Wallsend",
+    "phone": "02 4023 2797",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.fixitphysio.com.au",
+    "interests": [
+     "sports physiotherapy",
+     "dry needling",
+     "orthotics",
+     "workers compensation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.fixitphysio.com.au",
+     "https://www.healthdirect.gov.au/australian-health-services/20150107/fix-it-physiotherapy-wallsend/services/wallsend-2287-cowper"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -3087,6 +3127,393 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Jarrah Tree Practice",
+    "specialty": "Psychology",
+    "practice": "Jarrah Tree Practice",
+    "address": "Suite A, Level 1, 118 Belford Street",
+    "suburb": "Broadmeadow",
+    "phone": "02 4003 4143",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.jarrahtreepractice.com",
+    "interests": [
+     "clinical psychology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.jarrahtreepractice.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Wren Psychology",
+    "specialty": "Psychology",
+    "practice": "Wren Psychology",
+    "address": "127 Maitland Road",
+    "suburb": "Islington",
+    "phone": "02 4072 1754",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.wrenpsychology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.wrenpsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Worldview Psychology (Geoff Bowser)",
+    "specialty": "Psychology",
+    "practice": "Worldview Psychology (Geoff Bowser)",
+    "address": "Offices on Hudson, 8 Hudson Street",
+    "suburb": "Hamilton",
+    "phone": "02 3814 8624",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://worldviewpsychology.au",
+    "interests": [
+     "clinical psychology",
+     "telehealth Australia-wide"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://worldviewpsychology.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "BCBM Psychology (Veronica Lange)",
+    "specialty": "Psychology",
+    "practice": "BCBM Psychology (Veronica Lange)",
+    "address": "40 Gavey Street",
+    "suburb": "Mayfield",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.bcbmpsychology.com.au",
+    "interests": [
+     "adult counselling",
+     "occupational rehabilitation"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.bcbmpsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Pearl Psychology",
+    "specialty": "Psychology",
+    "practice": "Pearl Psychology",
+    "address": "32 Ernest Street",
+    "suburb": "Belmont",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.pearl-psychology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.pearl-psychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "SWITCH Psychology",
+    "specialty": "Psychology",
+    "practice": "SWITCH Psychology",
+    "address": "4/26 Lake Street",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.switchpsychology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.switchpsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Begin Again Therapy",
+    "specialty": "Psychology",
+    "practice": "Begin Again Therapy",
+    "address": "88 Hunter Street",
+    "suburb": "Newcastle",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.beginagaintherapy.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.beginagaintherapy.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Holistix",
+    "specialty": "Psychology",
+    "practice": "Hunter Holistix",
+    "address": "Unit 101/119 Pacific Highway",
+    "suburb": "Charlestown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hunterholistix.com",
+    "interests": [
+     "Internal Family Systems (IFS) therapy",
+     "NDIS"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterholistix.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "MVB Psychology (Michael Bazaley)",
+    "specialty": "Psychology",
+    "practice": "MVB Psychology (Michael Bazaley)",
+    "address": "107/17 Bolton Street",
+    "suburb": "Newcastle",
+    "phone": "02 4910 4005",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mvbpsychology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mvbpsychology.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Monica Ortiger Psychology",
+    "specialty": "Psychology",
+    "practice": "Monica Ortiger Psychology",
+    "address": "14 Howard Street",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ortigerpsychology.com",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ortigerpsychology.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Seva House",
+    "specialty": "Psychology",
+    "practice": "Seva House",
+    "address": "599 High Street",
+    "suburb": "Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.sevahouse.com.au",
+    "interests": [
+     "psychologists and mental health social workers"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.sevahouse.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -3444,6 +3871,94 @@
     "inclusive": [],
     "sources": [
      "https://healthecare.cms.healthecare.com.au/specialists/dr-susan-newton"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "podiatry": {
+  "name": "Podiatry",
+  "people": [
+   {
+    "name": "Beyond Podiatry",
+    "specialty": "Podiatry",
+    "practice": "Beyond Podiatry",
+    "address": "Shop 5, 34 John Street",
+    "suburb": "Warners Bay",
+    "phone": "02 4947 3199",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.beyondpodiatry.com.au",
+    "interests": [
+     "clinics at Warners Bay and Glendale"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.beyondpodiatry.com.au",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/beyond-podiatry-warners-bay/podiatry/6b412bdc-b9ba-a45d-ce56-d7c5aed8532e"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "occupational-therapy-paediatric": {
+  "name": "Occupational therapy (children)",
+  "people": [
+   {
+    "name": "KidSkills OT",
+    "specialty": "Paediatric occupational therapy",
+    "practice": "KidSkills OT",
+    "address": "9/710 Hunter Street",
+    "suburb": "Newcastle West",
+    "phone": "02 4942 0700",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.kidskillsot.com.au",
+    "interests": [
+     "ages 0-18",
+     "autism, cerebral palsy and complex disability",
+     "equipment and wheelchair prescription",
+     "home modifications",
+     "sensory processing and emotional regulation",
+     "school inclusion"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "0-18",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.kidskillsot.com.au"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
