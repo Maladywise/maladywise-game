@@ -707,6 +707,48 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Simon Ghosh",
+    "specialty": "General and bariatric surgeon",
+    "practice": "Coast Surgery (Central Coast)",
+    "address": "Suite 202, Level 1, Element Building, 200 Central Coast Highway",
+    "suburb": "Erina (Central Coast)",
+    "phone": "02 4304 5902",
+    "fax": "02 8212 5825",
+    "email": "",
+    "ereferral": "",
+    "website": "https://gosfordprivate.com.au/specialists/dr-simon-ghosh",
+    "interests": [
+     "weight loss surgery (sleeve, bypass)",
+     "revisional weight loss surgery",
+     "hernias",
+     "gallbladder surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital",
+      "Tuggerah Lakes Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://gosfordprivate.com.au/specialists/dr-simon-ghosh"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -980,6 +1022,191 @@
     "inclusive": [],
     "sources": [
      "https://ishana.com.au/specialists/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Meenakshi Rattan",
+    "specialty": "Paediatrician",
+    "practice": "The Kidzz Practice (Central Coast)",
+    "address": "56 Hills Street",
+    "suburb": "North Gosford (Central Coast)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://kidzzpractice.com.au",
+    "interests": [
+     "ADHD",
+     "autism",
+     "child development",
+     "asthma",
+     "eczema"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/the-kidzz-practice-gosford"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sunita Gurnasinghani",
+    "specialty": "Paediatrician",
+    "practice": "The Kidzz Practice (Central Coast)",
+    "address": "56 Hills Street",
+    "suburb": "North Gosford (Central Coast)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://kidzzpractice.com.au",
+    "interests": [
+     "ADHD",
+     "autism",
+     "child development",
+     "asthma",
+     "eczema"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/the-kidzz-practice-gosford"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John De Courcy",
+    "specialty": "Paediatrician",
+    "practice": "KidsPoint Specialist (Central Coast)",
+    "address": "14 Lindsey Street",
+    "suburb": "Gosford (Central Coast)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/practice/kidspoint-specialist",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/kidspoint-specialist"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Vishal Malhotra",
+    "specialty": "Paediatrician",
+    "practice": "KidsPoint Specialist (Central Coast)",
+    "address": "14 Lindsey Street",
+    "suburb": "Gosford (Central Coast)",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/practice/kidspoint-specialist",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children and adolescents",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/practice/kidspoint-specialist"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Reka Sankar",
+    "specialty": "Paediatrician",
+    "practice": "The LifeWise Centre",
+    "address": "123A Mount Pleasant Street",
+    "suburb": "Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/specialist/reka-sankar",
+    "interests": [
+     "neurodevelopmental conditions (ADHD, autism)",
+     "general paediatrics"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/reka-sankar"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
@@ -1766,6 +1993,80 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Tiny Tots Physiotherapy",
+    "specialty": "Paediatric physiotherapy",
+    "practice": "Tiny Tots Physiotherapy",
+    "address": "C4/26 Oakdale Rd (also home and community visits)",
+    "suburb": "Gateshead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.disabilitysupportguide.com.au/profile/tiny-tots-physiotherapy",
+    "interests": [
+     "babies, children and teens",
+     "early intervention"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Babies to teens",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.disabilitysupportguide.com.au/profile/tiny-tots-physiotherapy"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Firefly Therapy Services",
+    "specialty": "Paediatric physiotherapy (mobile)",
+    "practice": "Firefly Therapy Services",
+    "address": "Mobile service across the Hunter (home and community)",
+    "suburb": "Croudace Bay",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.disabilitysupportguide.com.au/profile/firefly-therapy-services",
+    "interests": [
+     "early intervention",
+     "home and community visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.disabilitysupportguide.com.au/profile/firefly-therapy-services"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -1920,6 +2221,45 @@
     "inclusive": [],
     "sources": [
      "https://www.coastlineperformance.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Macquarie Exercise Centre",
+    "specialty": "Exercise physiology",
+    "practice": "Macquarie Exercise Centre",
+    "address": "1 Skyline Way",
+    "suburb": "Gateshead",
+    "phone": "02 4942 1622",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/macquarie-exercise-centre/exercise-physiology/394ecda0-9e33-4895-889e-469a882db39a",
+    "interests": [
+     "chronic disease management",
+     "injury rehab",
+     "preventive health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "some",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/macquarie-exercise-centre/exercise-physiology/394ecda0-9e33-4895-889e-469a882db39a",
+     "https://macquariephysiotherapy.com.au/"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
