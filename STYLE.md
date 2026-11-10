@@ -193,12 +193,13 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Basil and Clover: character reference (from the owner's photos, Nov 2026)
 - **Basil** (male, "smug fluffy white cat"):
-  - Pure white long-haired cat, often in a **lion cut**: a fluffy mane on the head and neck, a short-clipped body, fluffy "boots" on the lower legs and a big plume tail.
+  - Pure white long-haired cat. His **default look is the full long coat**: one big fluffy loaf with a plume tail. Sometimes he has a **lion cut** (fluffy mane, short-clipped body, fluffy "boots", plume tail); the game uses this at the Vet (sprites/*-lion.svg).
+  - Signature poses: loaf on the cat tree, and sprawled along the TV unit with one back leg dangling off the edge.
   - Pink nose and pink inner ears, pale green eyes, long white whiskers.
   - Default face is half-lidded, smug, unimpressed. Grumpy hiss when annoyed.
   - Loaf pose on the cat tree is signature. Suits dramatic costumes (black and red vampire cape, velvet bow tie with a tiny skull).
 - **Clover** (female, "the spicy little muffin"):
-  - Long-haired **dilute calico/tortie**: blue-grey coat with soft peach/cream patches, including a split face (one side grey, a peach blaze on the other).
+  - Long-haired **dilute calico/tortie**: blue-grey coat mottled with soft peach/cream. The face is split: one side grey, the other a peach blaze that runs from a streak on the forehead down beside the nose to the cheek, with fine dark flecks.
   - White bib and chest, white-tipped paws, dark grey nose, big yellow-green eyes.
   - Sits in cardboard boxes. Looks up hopefully at food. Small and round.
 - Draw them as flat cartoons in the site palette (see /assets/mascots/basil.svg and clover.svg). Never use the owner's photos on the site; they're reference only.
