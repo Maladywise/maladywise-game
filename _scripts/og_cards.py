@@ -82,6 +82,7 @@ SPECIAL = {
     "/words/": ("Medical word of the week", "Word of the week", "Where medical words come from", "mascots/morphemia.svg"),
     "/sponsorship/": ("Policy", "Sponsorship and advertising", "Sponsors never touch medical content or puzzle answers", "days/stethoscope.svg"),
     "/mergeon/": ("Arcade game", "Mergeon", "Drop, match and merge from microbe to brain", "days/brain.svg"),
+    "/research/": ("Research hub", "New studies, plain English", "And the big trials still to come", "mascots/deepdives.svg"),
 }
 SUBTITLE = {"specialists": "Newcastle + Hunter Region"}
 

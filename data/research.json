@@ -1,0 +1,46 @@
+{
+ "_about": "Research hub data. The weekly research task adds a new week at the TOP of weeks[] (3-5 studies) and keeps trials[] current. Build with: python3 _scripts/build_research.py",
+ "weeks": [
+  {
+   "week": "3–10 November 2026",
+   "date": "2026-11-10",
+   "studies": [
+    {
+     "title": "Lowering Lp(a) didn’t prevent heart attacks",
+     "what": "Lp(a)HORIZON: 8,322 people with heart or vessel disease and very high lipoprotein(a). Pelacarsen injections cut Lp(a) by 78%, but heart attacks, strokes and urgent procedures happened just as often as on placebo over about 4.7 years (12.3% vs 12.1%).",
+     "sowhat": "Lp(a) is still a useful risk marker, but this drug didn’t turn a lower number into fewer events. Treat the other risk factors you can change, and be wary of anyone selling Lp(a) fixes.",
+     "evidence": "Strong",
+     "evnote": "large randomised trial",
+     "source": "HCPLive summary of the NEJM paper (7 Nov 2026)",
+     "url": "https://www.hcplive.com/view/lp-a-horizon-shows-pelacarsen-lowers-lp-a-78-but-not-cardiovascular-events"
+    },
+    {
+     "title": "A weight-loss pill eased sleep apnoea",
+     "what": "ATTAIN-OSA: two trials, 712 adults with overweight or obesity and moderate to severe sleep apnoea. A year of daily oral orforglipron (a GLP-1 tablet) cut breathing interruptions by about 13 more an hour than placebo, with about 10% weight loss. Gut side effects affected about 7 in 10.",
+     "sowhat": "Tablet versions of weight-loss medicines are coming, and sleep apnoea is one of the clearest benefits. CPAP still works best for most people while they lose weight.",
+     "evidence": "Strong",
+     "evnote": "two randomised trials, 52 weeks",
+     "source": "JAMA (9 Nov 2026)",
+     "url": "https://jamanetwork.com/journals/jama/fullarticle/2856406"
+    },
+    {
+     "title": "Stents for stable angina: still no longer life, 13 years on",
+     "what": "ISCHEMIA-EXTEND followed people with stable coronary disease for up to 13 years. Death rates were the same whether they had early stents or bypass surgery or started with medicines alone (26% vs 27%).",
+     "sowhat": "For stable chest pain, procedures help symptoms but don’t add years. Good medicines and lifestyle do the heavy lifting. Unstable or worsening pain is different: get it checked urgently.",
+     "evidence": "Strong",
+     "evnote": "long-term follow-up of a large randomised trial",
+     "source": "NYU Langone news (7 Nov 2026), published in JAMA",
+     "url": "https://nyulangone.org/news/routine-invasive-procedures-stable-heart-disease-offer-no-long-term-survival-advantage-over-drug-therapy"
+    }
+   ]
+  }
+ ],
+ "trials": [
+  {"name": "TRIUMPH (retatrutide)", "q": "A weekly triple-hormone weight-loss injection. Phase 3 trials showed about 21–23% weight loss at 80 weeks.", "when": "US approval filing planned early 2027", "url": "https://www.epocrates.com/online/article/retatrutide-heads-toward-fda-filing-after-positive-phase-3-obesity-trial-results"},
+  {"name": "OCEAN(a)-Outcomes (olpasiran)", "q": "After pelacarsen’s miss, does a stronger, longer-acting Lp(a)-lowering drug prevent heart attacks and strokes?", "when": "Completion expected March 2028", "url": "https://familyheart.org/lpa-clinical-trials"},
+  {"name": "ACCLAIM-Lp(a) (lepodisiran)", "q": "Another Lp(a)-lowering injection, given twice a year, tested on heart attacks and strokes.", "when": "Completion expected March 2029", "url": "https://familyheart.org/lpa-clinical-trials"},
+  {"name": "TRAILBLAZER-ALZ 3 (donanemab)", "q": "Can an anti-amyloid antibody delay Alzheimer’s in people with amyloid on scans but no symptoms yet?", "when": "Main results expected late 2027", "url": "https://api.ai-analytics.org/clinical/NCT05026866.md"},
+  {"name": "AHEAD 3-45 (lecanemab)", "q": "Treating preclinical Alzheimer’s years before memory problems start.", "when": "Main results expected late 2028", "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"},
+  {"name": "MIDAS (metformin)", "q": "Can a cheap diabetes tablet slow memory decline in mild cognitive impairment or early Alzheimer’s?", "when": "Results due after September 2026 completion", "url": "https://www.geneonline.com/eight-phase-3-trials-29-phase-2-readouts-and-a-diversifying-pipeline-eyes-on-alzheimers-in-2026/"}
+ ]
+}
