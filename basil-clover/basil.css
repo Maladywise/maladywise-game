@@ -207,3 +207,6 @@
 .bk-hsst{margin-bottom:0}
 .bk-hsst[hidden],.bk-tabs button[hidden]{display:none}
 .bk-hsst button{font-size:11.5px;padding:4px 10px}
+.bk-sc.farm{background:linear-gradient(160deg,rgba(242,194,48,.28),rgba(181,86,58,.38));border-color:#F2C230;box-shadow:0 0 0 2px rgba(242,194,48,.3)}
+.bk-game.bk-farm .bk-hud{background:#8A3E28}
+.bk-game.bk-farm .bk-stage{background:#EADBB8}
