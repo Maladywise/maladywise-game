@@ -1,289 +1,342 @@
 {
- "_about": "Medical search trends gathered by the daily briefing; used by the weekly topical puzzle refresh and Weekly Dose.",
- "items": [
-  {
-   "term": "diphtheria outbreak",
-   "region": "AU",
-   "volume": "n/a (RSS unavailable)",
-   "date": "2026-11-08",
-   "source": "cdc.gov.au diphtheria outbreak update (230 cases in 2026)"
-  },
-  {
-   "term": "measles",
-   "region": "US",
-   "volume": "n/a (RSS unavailable)",
-   "date": "2026-11-08",
-   "source": "news search: US cases >2,000 for 2nd year running"
-  },
-  {
-   "term": "lenacapavir generic (HIV PrEP)",
-   "region": "US",
-   "volume": "n/a (RSS unavailable)",
-   "date": "2026-11-08",
-   "source": "goodgoodgood.co good news 7 Nov 2026"
-  },
-  {
-   "term": "bird flu",
-   "region": "GB/EU",
-   "volume": "n/a (RSS unavailable)",
-   "date": "2026-11-08",
-   "source": "Reuters health summary 7 Nov 2026 (wild goose, Germany)"
-  },
-  {
-   "term": "Mpox (WA case spike)",
-   "region": "AU",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "news: WA Health 7 notifications in a week, 22 in 2026 (The West Australian via Ground News)",
-   "niche": false
-  },
-  {
-   "term": "Ebola Bundibugyo (DRC/Uganda)",
-   "region": "Global",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "WHO AFRO situation report 24, data to 1 Nov 2026",
-   "niche": true
-  },
-  {
-   "term": "Niemann-Pick disease type C (infantile-onset) FDA decision",
-   "region": "US",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview (17-27 Nov)",
-   "niche": true
-  },
-  {
-   "term": "FKRP limb-girdle muscular dystrophy R9 (LGMD2I) FDA decision",
-   "region": "US",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
-   "niche": true
-  },
-  {
-   "term": "Gaucher disease type 3 neurological FDA decision",
-   "region": "US",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
-   "niche": true
-  },
-  {
-   "term": "deramiocel Duchenne muscular dystrophy",
-   "region": "US",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
-   "niche": true
-  },
-  {
-   "term": "CTEPH (chronic thromboembolic pulmonary hypertension)",
-   "region": "US",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "PHA PH Awareness Month calendar (CTEPH Awareness Day 11 Nov)",
-   "niche": true
-  },
-  {
-   "term": "Smith-Magenis syndrome",
-   "region": "Global",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-09",
-   "source": "Global Genes: SMS Awareness Day 17 Nov",
-   "niche": true
-  },
-  {
-   "term": "unapproved peptides (CJC-1295, ipamorelin) coroner finding",
-   "region": "AU",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "1news.co.nz / thenightly.com.au, coroner finding 29 Oct 2026; TGA action urged",
-   "niche": true
-  },
-  {
-   "term": "Bundibugyo virus disease (Ebola) DRC, largest recorded",
-   "region": "Global",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "UKHSA outbreaks under monitoring wk 44 (10,532 confirmed cases DRC to 1 Nov)",
-   "niche": false
-  },
-  {
-   "term": "H5N1 bird flu human cases, dairy-linked (Washington), 1 death",
-   "region": "US",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "UKHSA outbreaks under monitoring wk 44",
-   "niche": false
-  },
-  {
-   "term": "swine influenza A(H1N1)v variant, fatal case Brazil",
-   "region": "Global",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "UKHSA outbreaks under monitoring wk 44 (new)",
-   "niche": true
-  },
-  {
-   "term": "diphtheria outbreak (worst on record)",
-   "region": "AU",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "thedailyaus.com.au health; cdc.gov.au",
-   "niche": false
-  },
-  {
-   "term": "pneumonia not clearing / follow-up chest X-ray",
-   "region": "AU",
-   "volume": "n/a (Google Trends unavailable)",
-   "date": "2026-11-10",
-   "source": "World Pneumonia Day 12 Nov; no site page yet",
-   "niche": true
-  },
-  {
-   "term": "yellow fever (WHO DON624, West and Central Africa)",
-   "region": "Global",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-10",
-   "source": "WHO DON624, 6 Nov 2026: 67 confirmed cases, 18 deaths in 9 countries to 12 Oct",
-   "niche": true
-  },
-  {
-   "term": "Northern Taurid meteor shower peak (11-12 Nov)",
-   "region": "Global",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-10",
-   "source": "EarthSky Taurid guide (N. Taurids peak 12 Nov 2026 18 UTC)",
-   "niche": false,
-   "general": true
-  },
-  {
-   "term": "ATP Finals, Turin (15-22 Nov 2026)",
-   "region": "Global",
-   "volume": "n/a (Google Trends not reachable)",
-   "date": "2026-11-10",
-   "source": "2026 ATP Finals (Wikipedia)",
-   "niche": false,
-   "general": true
-  }
- ],
- "used": [
-  {
-   "date": "2026-11-09",
-   "main_theme": "Microtia Awareness Day (ear anatomy and development)",
-   "source": "world day",
-   "terms_used": [
-    "microtia",
-    "measles (US >2,000 cases, 2nd year)",
-    "diphtheria (AU outbreak)",
-    "generic twice-yearly lenacapavir PrEP (FDA tentative approval)",
-    "Shamonda virus / Culicoides midges (WHO DON623)",
-    "São Paulo Grand Prix (Normie)",
-    "Ireland v Argentina, Los Pumas (Normie)"
-   ],
-   "niche_terms": [
-    "Shamonda virus",
-    "biting midges",
-    "lenacapavir generic",
-    "botulism/cholera toxins"
-   ],
-   "games": [
-    "triviosis",
-    "wordemic",
-    "comorbix",
-    "gridectomy",
-    "zebritis",
-    "zebritis normie",
-    "comorbix normie"
-   ],
-   "note": "Google Trends pages could not be fetched this run; trends taken from data/trends.json and news searches."
-  },
-  {
-   "date": "2026-11-10",
-   "main_theme": "World Science Day + World Neuroendocrine Cancer Day + World Keratoconus Day (kept from monthly build)",
-   "source": "world day",
-   "terms_used": [
-    "Bundibugyo virus / Ebola (WHO DON625, DRC)",
-    "high-dose flu vaccine and Alzheimer's risk (Neurology study)",
-    "vitamin B6 peripheral neuropathy (TGA warning consultation)",
-    "andrographis (TGA recall, allergy risk)",
-    "Kyle Larson NASCAR Cup title (Normie)",
-    "All Blacks 43-21 Scotland, Nations Championship (Normie)"
-   ],
-   "niche_terms": [
-    "Bundibugyo virus",
-    "pyridoxine neuropathy",
-    "andrographis"
-   ],
-   "games": [
-    "triviosis",
-    "comorbix",
-    "gridectomy",
-    "comorbix normie",
-    "gridectomy normie"
-   ],
-   "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches."
-  },
-  {
-   "date": "2026-11-11",
-   "main_theme": "Remembrance Day: war and medicine (kept from monthly build; gentle)",
-   "source": "world day",
-   "terms_used": [
-    "yellow fever (WHO DON624) + Walter Reed 1900",
-    "bacterial pneumonia in 1918 flu (World Pneumonia Day 12 Nov)",
-    "Aedes-borne infections: dengue, chikungunya, Zika",
-    "Marburg",
-    "diphtheria (AU 2026 outbreak) via 6-in-1 vaccine prompt",
-    "Ebola (already in Comorbix)",
-    "Northern Taurids meteor shower (Normie)",
-    "ATP Finals Turin (Normie)"
-   ],
-   "niche_terms": [
-    "yellow fever",
-    "Marburg",
-    "Haemophilus influenzae type b"
-   ],
-   "games": [
-    "triviosis",
-    "comorbix",
-    "zebritis",
-    "comorbix normie",
-    "gridectomy normie"
-   ],
-   "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches. Replaced Triviosis Q2 (Guinea Pig Club) and Q5 (Paré), Comorbix group 'Bacteria named after people' and ZIKA->MARBURG, Zebritis brachial plexus prompt, Normie Comorbix 'Rivers'."
-  }
- ],
- "suggested_days": [
-  {
-   "name": "CTEPH Awareness Day",
-   "date": "2026-11-11",
-   "url": "https://phassociation.org/awarenessmonth"
-  },
-  {
-   "name": "Pulmonary Hypertension Awareness Month (US, PHA)",
-   "date": "2026-11 (month)",
-   "url": "https://phassociation.org/awarenessmonth"
-  },
-  {
-   "name": "Smith-Magenis Syndrome Awareness Day",
-   "date": "2026-11-17",
-   "url": "https://globalgenes.org/?p=412940"
-  },
-  {
-   "name": "Crohn's and Colitis Awareness Week (UK)",
-   "date": "2026-12-01 to 2026-12-07",
-   "url": "https://www.crohnsandcolitis.org.uk/awarenessweek"
-  },
-  {
-   "name": "GERD Awareness Week (US, IFFGD; week of Thanksgiving, approx 22-28 Nov 2026)",
-   "date": "2026-11-22 (approx)",
-   "url": "https://iffgd.org/get-involved/raising-awareness/awareness-months/"
-  },
-  {
-   "name": "Constipation Awareness Month (IFFGD)",
-   "date": "2026-12 (month)",
-   "url": "https://iffgd.org/get-involved/raising-awareness/awareness-months/"
-  }
- ]
+  "_about": "Medical search trends gathered by the daily briefing; used by the weekly topical puzzle refresh and Weekly Dose.",
+  "items": [
+    {
+      "term": "diphtheria outbreak",
+      "region": "AU",
+      "volume": "n/a (RSS unavailable)",
+      "date": "2026-11-08",
+      "source": "cdc.gov.au diphtheria outbreak update (230 cases in 2026)"
+    },
+    {
+      "term": "measles",
+      "region": "US",
+      "volume": "n/a (RSS unavailable)",
+      "date": "2026-11-08",
+      "source": "news search: US cases >2,000 for 2nd year running"
+    },
+    {
+      "term": "lenacapavir generic (HIV PrEP)",
+      "region": "US",
+      "volume": "n/a (RSS unavailable)",
+      "date": "2026-11-08",
+      "source": "goodgoodgood.co good news 7 Nov 2026"
+    },
+    {
+      "term": "bird flu",
+      "region": "GB/EU",
+      "volume": "n/a (RSS unavailable)",
+      "date": "2026-11-08",
+      "source": "Reuters health summary 7 Nov 2026 (wild goose, Germany)"
+    },
+    {
+      "term": "Mpox (WA case spike)",
+      "region": "AU",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "news: WA Health 7 notifications in a week, 22 in 2026 (The West Australian via Ground News)",
+      "niche": false
+    },
+    {
+      "term": "Ebola Bundibugyo (DRC/Uganda)",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "WHO AFRO situation report 24, data to 1 Nov 2026",
+      "niche": true
+    },
+    {
+      "term": "Niemann-Pick disease type C (infantile-onset) FDA decision",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview (17-27 Nov)",
+      "niche": true
+    },
+    {
+      "term": "FKRP limb-girdle muscular dystrophy R9 (LGMD2I) FDA decision",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+      "niche": true
+    },
+    {
+      "term": "Gaucher disease type 3 neurological FDA decision",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+      "niche": true
+    },
+    {
+      "term": "deramiocel Duchenne muscular dystrophy",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "Contemporary Pediatrics: Nov 2026 PDUFA preview",
+      "niche": true
+    },
+    {
+      "term": "CTEPH (chronic thromboembolic pulmonary hypertension)",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "PHA PH Awareness Month calendar (CTEPH Awareness Day 11 Nov)",
+      "niche": true
+    },
+    {
+      "term": "Smith-Magenis syndrome",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-09",
+      "source": "Global Genes: SMS Awareness Day 17 Nov",
+      "niche": true
+    },
+    {
+      "term": "unapproved peptides (CJC-1295, ipamorelin) coroner finding",
+      "region": "AU",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "1news.co.nz / thenightly.com.au, coroner finding 29 Oct 2026; TGA action urged",
+      "niche": true
+    },
+    {
+      "term": "Bundibugyo virus disease (Ebola) DRC, largest recorded",
+      "region": "Global",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "UKHSA outbreaks under monitoring wk 44 (10,532 confirmed cases DRC to 1 Nov)",
+      "niche": false
+    },
+    {
+      "term": "H5N1 bird flu human cases, dairy-linked (Washington), 1 death",
+      "region": "US",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "UKHSA outbreaks under monitoring wk 44",
+      "niche": false
+    },
+    {
+      "term": "swine influenza A(H1N1)v variant, fatal case Brazil",
+      "region": "Global",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "UKHSA outbreaks under monitoring wk 44 (new)",
+      "niche": true
+    },
+    {
+      "term": "diphtheria outbreak (worst on record)",
+      "region": "AU",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "thedailyaus.com.au health; cdc.gov.au",
+      "niche": false
+    },
+    {
+      "term": "pneumonia not clearing / follow-up chest X-ray",
+      "region": "AU",
+      "volume": "n/a (Google Trends unavailable)",
+      "date": "2026-11-10",
+      "source": "World Pneumonia Day 12 Nov; no site page yet",
+      "niche": true
+    },
+    {
+      "term": "yellow fever (WHO DON624, West and Central Africa)",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-10",
+      "source": "WHO DON624, 6 Nov 2026: 67 confirmed cases, 18 deaths in 9 countries to 12 Oct",
+      "niche": true
+    },
+    {
+      "term": "Northern Taurid meteor shower peak (11-12 Nov)",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-10",
+      "source": "EarthSky Taurid guide (N. Taurids peak 12 Nov 2026 18 UTC)",
+      "niche": false,
+      "general": true
+    },
+    {
+      "term": "ATP Finals, Turin (15-22 Nov 2026)",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-10",
+      "source": "2026 ATP Finals (Wikipedia)",
+      "niche": false,
+      "general": true
+    },
+    {
+      "term": "Ebola (Bundibugyo virus) outbreak, 10,910 confirmed cases / 5,306 deaths to 6 Nov",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "CDC Ebola situation summary (updated 9 Nov 2026)",
+      "niche": false
+    },
+    {
+      "term": "Bundibugyo Ebola vaccine / treatment",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "CDC Ebola situation summary",
+      "niche": true
+    },
+    {
+      "term": "Listeria recall: Lidl Gelatelli coffee & vanilla gelato (FDA Class I)",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "FOX 10 Phoenix, 7 Nov 2026",
+      "niche": true
+    },
+    {
+      "term": "Listeria in pregnancy (foods to avoid)",
+      "region": "AU/US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "Derived from US Class I listeria recall",
+      "niche": true
+    },
+    {
+      "term": "Sanfilippo syndrome (MPS III), World Sanfilippo Awareness Day 16 Nov",
+      "region": "Global",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "Cure Sanfilippo Foundation",
+      "niche": true
+    },
+    {
+      "term": "Deramiocel (Duchenne) and Niemann-Pick C FDA decisions due 17-27 Nov",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "Contemporary Pediatrics, 4 Nov 2026",
+      "niche": true
+    }
+  ],
+  "used": [
+    {
+      "date": "2026-11-09",
+      "main_theme": "Microtia Awareness Day (ear anatomy and development)",
+      "source": "world day",
+      "terms_used": [
+        "microtia",
+        "measles (US >2,000 cases, 2nd year)",
+        "diphtheria (AU outbreak)",
+        "generic twice-yearly lenacapavir PrEP (FDA tentative approval)",
+        "Shamonda virus / Culicoides midges (WHO DON623)",
+        "São Paulo Grand Prix (Normie)",
+        "Ireland v Argentina, Los Pumas (Normie)"
+      ],
+      "niche_terms": [
+        "Shamonda virus",
+        "biting midges",
+        "lenacapavir generic",
+        "botulism/cholera toxins"
+      ],
+      "games": [
+        "triviosis",
+        "wordemic",
+        "comorbix",
+        "gridectomy",
+        "zebritis",
+        "zebritis normie",
+        "comorbix normie"
+      ],
+      "note": "Google Trends pages could not be fetched this run; trends taken from data/trends.json and news searches."
+    },
+    {
+      "date": "2026-11-10",
+      "main_theme": "World Science Day + World Neuroendocrine Cancer Day + World Keratoconus Day (kept from monthly build)",
+      "source": "world day",
+      "terms_used": [
+        "Bundibugyo virus / Ebola (WHO DON625, DRC)",
+        "high-dose flu vaccine and Alzheimer's risk (Neurology study)",
+        "vitamin B6 peripheral neuropathy (TGA warning consultation)",
+        "andrographis (TGA recall, allergy risk)",
+        "Kyle Larson NASCAR Cup title (Normie)",
+        "All Blacks 43-21 Scotland, Nations Championship (Normie)"
+      ],
+      "niche_terms": [
+        "Bundibugyo virus",
+        "pyridoxine neuropathy",
+        "andrographis"
+      ],
+      "games": [
+        "triviosis",
+        "comorbix",
+        "gridectomy",
+        "comorbix normie",
+        "gridectomy normie"
+      ],
+      "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches."
+    },
+    {
+      "date": "2026-11-11",
+      "main_theme": "Remembrance Day: war and medicine (kept from monthly build; gentle)",
+      "source": "world day",
+      "terms_used": [
+        "yellow fever (WHO DON624) + Walter Reed 1900",
+        "bacterial pneumonia in 1918 flu (World Pneumonia Day 12 Nov)",
+        "Aedes-borne infections: dengue, chikungunya, Zika",
+        "Marburg",
+        "diphtheria (AU 2026 outbreak) via 6-in-1 vaccine prompt",
+        "Ebola (already in Comorbix)",
+        "Northern Taurids meteor shower (Normie)",
+        "ATP Finals Turin (Normie)"
+      ],
+      "niche_terms": [
+        "yellow fever",
+        "Marburg",
+        "Haemophilus influenzae type b"
+      ],
+      "games": [
+        "triviosis",
+        "comorbix",
+        "zebritis",
+        "comorbix normie",
+        "gridectomy normie"
+      ],
+      "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches. Replaced Triviosis Q2 (Guinea Pig Club) and Q5 (Paré), Comorbix group 'Bacteria named after people' and ZIKA->MARBURG, Zebritis brachial plexus prompt, Normie Comorbix 'Rivers'."
+    }
+  ],
+  "suggested_days": [
+    {
+      "name": "CTEPH Awareness Day",
+      "date": "2026-11-11",
+      "url": "https://phassociation.org/awarenessmonth"
+    },
+    {
+      "name": "Pulmonary Hypertension Awareness Month (US, PHA)",
+      "date": "2026-11 (month)",
+      "url": "https://phassociation.org/awarenessmonth"
+    },
+    {
+      "name": "Smith-Magenis Syndrome Awareness Day",
+      "date": "2026-11-17",
+      "url": "https://globalgenes.org/?p=412940"
+    },
+    {
+      "name": "Crohn's and Colitis Awareness Week (UK)",
+      "date": "2026-12-01 to 2026-12-07",
+      "url": "https://www.crohnsandcolitis.org.uk/awarenessweek"
+    },
+    {
+      "name": "GERD Awareness Week (US, IFFGD; week of Thanksgiving, approx 22-28 Nov 2026)",
+      "date": "2026-11-22 (approx)",
+      "url": "https://iffgd.org/get-involved/raising-awareness/awareness-months/"
+    },
+    {
+      "name": "Constipation Awareness Month (IFFGD)",
+      "date": "2026-12 (month)",
+      "url": "https://iffgd.org/get-involved/raising-awareness/awareness-months/"
+    },
+    {
+      "name": "World Sanfilippo Awareness Day",
+      "date": "2026-11-16 (annual, 16 Nov)",
+      "url": "https://curesanfilippofoundation.org/worldsanfilippoawarenessday/world-sanfilippo-awareness-day-for-families/"
+    }
+  ]
 }
