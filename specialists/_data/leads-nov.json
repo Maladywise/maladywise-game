@@ -1,0 +1,2285 @@
+{
+ "psychiatry-adult": {
+  "name": "Psychiatry (adult)",
+  "people": [
+   {
+    "name": "Dr Martin Cohen",
+    "specialty": "Psychiatrist",
+    "practice": "Procare",
+    "address": "22 Turton Road",
+    "suburb": "Waratah",
+    "phone": "02 4960 1523",
+    "fax": "02 4968 2953",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.procare.org.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.procare.org.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Narayani Nair",
+    "specialty": "Psychiatrist",
+    "practice": "Procare",
+    "address": "22 Turton Road",
+    "suburb": "Waratah",
+    "phone": "02 4960 1523",
+    "fax": "02 4968 2953",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.procare.org.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.procare.org.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Michael Breakspear",
+    "specialty": "Psychiatrist",
+    "practice": "Procare",
+    "address": "22 Turton Road",
+    "suburb": "Waratah",
+    "phone": "02 4960 1523",
+    "fax": "02 4968 2953",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.procare.org.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.procare.org.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sally Lambert",
+    "specialty": "Psychiatrist",
+    "practice": "Procare",
+    "address": "22 Turton Road",
+    "suburb": "Waratah",
+    "phone": "02 4960 1523",
+    "fax": "02 4968 2953",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.procare.org.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.procare.org.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Tolulope Fajumi",
+    "specialty": "Psychiatrist",
+    "practice": "Procare",
+    "address": "22 Turton Road",
+    "suburb": "Waratah",
+    "phone": "02 4960 1523",
+    "fax": "02 4968 2953",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.procare.org.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.procare.org.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Lindsay Gale",
+    "specialty": "Psychiatrist",
+    "practice": "Hummingbird Centre",
+    "address": "22 Brunker Rd",
+    "suburb": "Broadmeadow",
+    "phone": "02 4946 0919",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hummingbirdcentre.com.au/psychiatry/",
+    "interests": [
+     "perinatal mental health",
+     "eating disorders",
+     "anxiety",
+     "OCD",
+     "PTSD",
+     "women's mental health"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hummingbirdcentre.com.au/psychiatry/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Suraiya Moisey",
+    "specialty": "Psychiatrist",
+    "practice": "ATUNE Health Centres",
+    "address": "",
+    "suburb": "Cardiff",
+    "phone": "02 4954 4511",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://atune.com.au/the-team/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": false,
+     "np_note": "Listed as books closed",
+     "np_checked": "2026-11-10"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://atune.com.au/the-team/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Matthew Pols",
+    "specialty": "Psychiatrist",
+    "practice": "Anona House",
+    "address": "36 Gordon Avenue",
+    "suburb": "Hamilton",
+    "phone": "02 4927 6890",
+    "fax": "02 4927 6249",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.anonahouse.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.anonahouse.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Ashwinder Anand",
+    "specialty": "Psychiatrist",
+    "practice": "Newpsych",
+    "address": "15 Queen Street",
+    "suburb": "Cooks Hill",
+    "phone": "02 4926 5005",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/specialist/ashwinder-anand",
+    "interests": [
+     "ADHD"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/ashwinder-anand",
+     "https://www.newpsych.com.au/our-team"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "general-surgery": {
+  "name": "General surgery (incl. breast, endocrine, colorectal, upper GI)",
+  "people": [
+   {
+    "name": "Dr Guillermo Regalo",
+    "specialty": "Breast and general surgeon",
+    "practice": "Breast and Endocrine Centre, Lake Macquarie Private Hospital",
+    "address": "6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "02 4942 2600",
+    "fax": "02 4942 2899",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/guillermo-regalo",
+    "interests": [
+     "breast surgery",
+     "breast cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/guillermo-regalo",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr--guillermo-regalo/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Shanta Velaiutham",
+    "specialty": "Breast and general surgeon",
+    "practice": "Integrated Breast Reconstructive Surgical Team, Lake Macquarie Private Hospital",
+    "address": "6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "02 4942 2600",
+    "fax": "02 4942 2899",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/shanta-velaiutham",
+    "interests": [
+     "breast surgery",
+     "breast cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/shanta-velaiutham"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Linda Fenton",
+    "specialty": "General and endocrine surgeon",
+    "practice": "Consulting rooms, Ashtonfield",
+    "address": "167 Chisholm Road",
+    "suburb": "Ashtonfield",
+    "phone": "02 4934 6310",
+    "fax": "02 4934 6313",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/linda-fenton",
+    "interests": [
+     "thyroid and parathyroid surgery",
+     "endocrine surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/linda-fenton",
+     "https://www.endocrinesurgeons.org.au/dr-linda-fenton.html"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Munish Heer",
+    "specialty": "General surgeon",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4031 4444",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://specialists.healthscope.com.au/specialist/munish-heer-med0001198146",
+    "interests": [
+     "laparoscopic gallbladder and hernia surgery",
+     "dialysis access surgery",
+     "kidney transplant surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/munish-heer-med0001198146"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Bernard Beldholm",
+    "specialty": "General surgeon",
+    "practice": "Dr Bernard Beldholm",
+    "address": "30 Belmore Road",
+    "suburb": "Lorn",
+    "phone": "02 4934 5700",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://beldholm.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://beldholm.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Logan",
+    "specialty": "General surgeon",
+    "practice": "Dr David Logan",
+    "address": "Lookout Road",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 4946",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://drdavidlogan.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://drdavidlogan.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Richard Levy",
+    "specialty": "General surgeon",
+    "practice": "Consulting rooms, Waratah",
+    "address": "29 Bridge Street",
+    "suburb": "Waratah",
+    "phone": "02 4967 4077",
+    "fax": "02 4960 2045",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/richard-levy",
+    "interests": [
+     "melanoma",
+     "breast cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/richard-levy"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Charles Douglas",
+    "specialty": "General surgeon",
+    "practice": "The Breast and Endocrine Centre, Lake Macquarie Private Hospital",
+    "address": "6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "02 4942 2600",
+    "fax": "02 4942 2899",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/charles-douglas",
+    "interests": [
+     "breast surgery",
+     "melanoma"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/charles-douglas",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-charles-douglas"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Anna Wilkes",
+    "specialty": "General and colorectal surgeon",
+    "practice": "Hunter Colorectal",
+    "address": "120 Mount Pleasant Street",
+    "suburb": "Maitland",
+    "phone": "02 4932 1113",
+    "fax": "02 4932 1116",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/anna-wilkes",
+    "interests": [
+     "colorectal surgery",
+     "bowel cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/anna-wilkes"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Sean Park",
+    "specialty": "Breast and general surgeon",
+    "practice": "Lake Macquarie Specialist Medical Centre",
+    "address": "Ground Floor, 6-8 Sydney St",
+    "suburb": "Gateshead",
+    "phone": "02 4943 3122",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-sean-park/",
+    "interests": [
+     "breast cancer surgery",
+     "high-risk breast patients",
+     "general surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-sean-park/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ent": {
+  "name": "ENT (otolaryngology)",
+  "people": [
+   {
+    "name": "Dr Indu Gunawardena",
+    "specialty": "ENT and head and neck surgeon",
+    "practice": "ENT Gosford (Central Coast)",
+    "address": "29 Hills Street",
+    "suburb": "Gosford (Central Coast)",
+    "phone": "02 4324 5677",
+    "fax": "02 4324 5408",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.canrefer.org.au/specialists/indu-gunawardena",
+    "interests": [
+     "head and neck cancer"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Gosford Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.canrefer.org.au/specialists/indu-gunawardena",
+     "https://gosfordprivate.com.au/specialists/dr-indu-gunawardena"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Thya Thiruchelvam",
+    "specialty": "ENT surgeon",
+    "practice": "Newcastle ENT",
+    "address": "Suite 5, Cambridge Building, 9 Jacaranda Drive",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4929 1430",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastleent.com",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastleent.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Evan Tseros",
+    "specialty": "ENT surgeon",
+    "practice": "Central Coast ENT (Central Coast)",
+    "address": "1 Gertrude Place",
+    "suburb": "Gosford (Central Coast)",
+    "phone": "02 4324 6488",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://centralcoastent.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://centralcoastent.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "paediatric-surgery": {
+  "name": "Paediatric surgery",
+  "people": [
+   {
+    "name": "Dr Jill Orford",
+    "specialty": "Paediatric surgeon",
+    "practice": "Lake Macquarie Specialist Medical Centre",
+    "address": "Level 1, Suite 2, 6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "1300 375 455",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-jill-orford/",
+    "interests": [
+     "hernias and hydrocoeles",
+     "undescended testes",
+     "hypospadias",
+     "laparoscopic surgery",
+     "neck lumps",
+     "circumcision and tongue tie",
+     "neonatal surgery"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-jill-orford/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rajendra Kumar",
+    "specialty": "Paediatric surgeon",
+    "practice": "Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Rd",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rajendra-kumar/",
+    "interests": [
+     "minimally invasive paediatric surgery",
+     "thoracoscopic surgery",
+     "neonatal surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Up to 16 years",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rajendra-kumar/",
+     "https://www.canrefer.org.au/specialists/rajendra-kumar"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "paediatrics-general": {
+  "name": "Paediatrics (general)",
+  "people": [
+   {
+    "name": "Dr Francois Abel",
+    "specialty": "Paediatrician",
+    "practice": "Newcastle Paediatric Clinic",
+    "address": "Suite 2, Level 1, Newcastle Specialist Centre, 26 Lookout Rd",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 6599",
+    "fax": "02 4952 6659",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.newcastlepaediatric.com.au/our-team/dr-francois-abel/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlepaediatric.com.au/our-team/dr-francois-abel/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Rabin Rai",
+    "specialty": "Paediatrician",
+    "practice": "Ishana",
+    "address": "Edgeworth (street address not on profile)",
+    "suburb": "Edgeworth",
+    "phone": "02 4908 1213",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://ishana.com.au/specialists/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ishana.com.au/specialists/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ophthalmology": {
+  "name": "Ophthalmology",
+  "people": [
+   {
+    "name": "Dr Dan Polya",
+    "specialty": "Ophthalmologist",
+    "practice": "Hunter Eye Centre",
+    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street",
+    "suburb": "Charlestown",
+    "phone": "02 4920 6911",
+    "fax": "02 4920 6922",
+    "email": "",
+    "ereferral": "",
+    "website": "https://huntereyecentre.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntereyecentre.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David Manning",
+    "specialty": "Ophthalmologist",
+    "practice": "Hunter Eye Centre",
+    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street",
+    "suburb": "Charlestown",
+    "phone": "02 4920 6911",
+    "fax": "02 4920 6922",
+    "email": "",
+    "ereferral": "",
+    "website": "https://huntereyecentre.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntereyecentre.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Gregory Outteridge",
+    "specialty": "Ophthalmologist",
+    "practice": "Charlestown Eye Centre",
+    "address": "12 Smith Street",
+    "suburb": "Charlestown",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/specialist/gregory-outteridge",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/gregory-outteridge"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr David McKeag",
+    "specialty": "Ophthalmologist",
+    "practice": "Warners Bay Private Hospital",
+    "address": "Fairfax Road",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 4288",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-david-mckeag/",
+    "interests": [
+     "cataract surgery",
+     "oculoplastic surgery (children and adults)",
+     "pterygium surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-david-mckeag/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "gastroenterology": {
+  "name": "Gastroenterology",
+  "people": [
+   {
+    "name": "Dr Marie Ooi",
+    "specialty": "Gastroenterologist (interventional endoscopist)",
+    "practice": "Rooms, Hamilton East",
+    "address": "48 Denison Street",
+    "suburb": "Hamilton East",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lingardprivate.com.au/specialists/dr-marie-ooi",
+    "interests": [
+     "bowel cancer screening",
+     "reflux and swallowing problems",
+     "coeliac disease",
+     "inflammatory bowel disease",
+     "iron deficiency",
+     "endoscopic ultrasound"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lingard Private Hospital",
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lingardprivate.com.au/specialists/dr-marie-ooi",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-marie-ooi/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "ortho-shoulder": {
+  "name": "Orthopaedic surgery: shoulder",
+  "people": [
+   {
+    "name": "Dr Daniel Posel",
+    "specialty": "Orthopaedic surgeon",
+    "practice": "Maitland Private Hospital",
+    "address": "173 Chisholm Road",
+    "suburb": "East Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.doctify.com/au/specialist/daniel-posel",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Maitland Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.doctify.com/au/specialist/daniel-posel"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "obstetrics-gynaecology": {
+  "name": "Obstetrics and gynaecology (incl. menopause, endometriosis, fertility)",
+  "people": [
+   {
+    "name": "Dr Mary Norris",
+    "specialty": "Obstetrician and gynaecologist",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road",
+    "suburb": "New Lambton Heights",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://specialists.healthscope.com.au/specialist/mary-norris-med0001184075",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/mary-norris-med0001184075"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Jillian Spilsbury",
+    "specialty": "Obstetrician",
+    "practice": "Newcastle Private Specialist Centre",
+    "address": "Suite 2.8, 26 Lookout Rd",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4075 2747",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.drjillianspilsbury.com.au",
+    "interests": [
+     "pregnancy care",
+     "obstetric ultrasound"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.drjillianspilsbury.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "physiotherapy": {
+  "name": "Physiotherapy",
+  "people": [
+   {
+    "name": "Brightside Physio",
+    "specialty": "Physiotherapy",
+    "practice": "Brightside Physio",
+    "address": "90 Elder St",
+    "suburb": "Lambton",
+    "phone": "02 4062 8862",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://brightsidephysio.com.au",
+    "interests": [
+     "sports and running injuries",
+     "dance physio",
+     "back, neck and hip pain",
+     "postpartum care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://brightsidephysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Action Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Action Physiotherapy",
+    "address": "Suite 27, 235 Darby St",
+    "suburb": "Cooks Hill",
+    "phone": "02 4940 8300",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://actionphysio.net.au",
+    "interests": [
+     "neck and back pain",
+     "sports injury rehab",
+     "pre- and post-surgery rehab",
+     "veterans and DVA",
+     "chronic disease management"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://actionphysio.net.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Regent Street Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Regent Street Physiotherapy",
+    "address": "Shop 5, 71 Regent St",
+    "suburb": "New Lambton",
+    "phone": "02 4950 9805",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://regentstphysio.com.au",
+    "interests": [
+     "BPPV and vestibular",
+     "shoulder hydrodilatation",
+     "sports injuries",
+     "headaches",
+     "tendinopathy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://regentstphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Broadmeadow Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Broadmeadow Physiotherapy",
+    "address": "Level 1, 154 Lambton Road",
+    "suburb": "Broadmeadow",
+    "phone": "02 4957 9800",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://broadmeadowphysio.com.au",
+    "interests": [
+     "orthotics",
+     "casting and splinting",
+     "dry needling",
+     "NDIS physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://broadmeadowphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lambton Physiotherapy & Sports Medicine",
+    "specialty": "Physiotherapy",
+    "practice": "Lambton Physiotherapy & Sports Medicine",
+    "address": "110 Elder St",
+    "suburb": "Lambton",
+    "phone": "02 4965 5655",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lambtonphysio.com.au",
+    "interests": [
+     "GLA:D hip and knee arthritis program",
+     "clinical Pilates",
+     "TMJ and headaches",
+     "women's health",
+     "running injuries"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lambtonphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "NUmoves Physio",
+    "specialty": "Physiotherapy",
+    "practice": "NUmoves Physio",
+    "address": "The Forum Sports & Aquatic Centre, University of Newcastle",
+    "suburb": "Callaghan",
+    "phone": "02 4921 6879",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://numovesphysio.com.au",
+    "interests": [
+     "football and running injuries",
+     "post-surgery rehab",
+     "hydrotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://numovesphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Fitness Physio",
+    "specialty": "Physiotherapy",
+    "practice": "Fitness Physio",
+    "address": "224 Union St",
+    "suburb": "Merewether",
+    "phone": "02 4963 1140",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://fitnessphysio.com",
+    "interests": [
+     "ONERO osteoporosis classes",
+     "ACL and knee rehab",
+     "running physio",
+     "rehab gym"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://fitnessphysio.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Pulsford Physio",
+    "specialty": "Specialist musculoskeletal physiotherapist",
+    "practice": "Pulsford Physio",
+    "address": "Konara Suite 1, Level 3, 15 Lambton Road (within Hunter ENT)",
+    "suburb": "Broadmeadow",
+    "phone": "02 4965 5411",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://pulsfordphysio.com.au",
+    "interests": [
+     "persistent musculoskeletal pain",
+     "dizziness and vertigo (vestibular)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://pulsfordphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "NextGen Physio",
+    "specialty": "Physiotherapy",
+    "practice": "NextGen Physio",
+    "address": "Unit 7, 70 Northcott Drive",
+    "suburb": "Kotara",
+    "phone": "02 4965 5712",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://nextgenphysio.com.au",
+    "interests": [
+     "women's health physio",
+     "pregnancy massage",
+     "sports injuries",
+     "post-surgery rehab"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://nextgenphysio.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Scott Bradley Paediatric Physiotherapy",
+    "specialty": "Paediatric physiotherapy",
+    "practice": "Scott Bradley Paediatric Physiotherapy",
+    "address": "7/83 Broadmeadow Road",
+    "suburb": "Broadmeadow",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://sbpp.com.au",
+    "interests": [
+     "children's physiotherapy",
+     "mobile visits (home, school, community)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "2 to 18 years",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://sbpp.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Lucinda Kids Physio",
+    "specialty": "Paediatric physiotherapy",
+    "practice": "Lucinda Kids Physio",
+    "address": "Redhead (by appointment)",
+    "suburb": "Redhead",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://lucindakidsphysio.com",
+    "interests": [
+     "babies, toddlers and children"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Babies and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://lucindakidsphysio.com"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Zest Therapy Service",
+    "specialty": "Disability physiotherapy",
+    "practice": "Zest Therapy Service",
+    "address": "Mobile service, Newcastle and Lake Macquarie",
+    "suburb": "Valentine",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://zesttherapy.com.au",
+    "interests": [
+     "physiotherapy for people with disability",
+     "home, school and community visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children, young people and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://zesttherapy.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "exercise-physiology": {
+  "name": "Exercise physiology",
+  "people": [
+   {
+    "name": "Transcend Health",
+    "specialty": "Exercise physiology and physiotherapy",
+    "practice": "Transcend Health",
+    "address": "4/10 William St",
+    "suburb": "Adamstown",
+    "phone": "02 4961 3399",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://transcendhealth.com.au",
+    "interests": [
+     "STRONG Bones osteoporosis program",
+     "chronic pain rehab",
+     "running physio",
+     "NDIS"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://transcendhealth.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Vitality in Movement",
+    "specialty": "Exercise physiology",
+    "practice": "Vitality in Movement",
+    "address": "Mayfield and Warners Bay; 128 Chelmsford Rd, Charmhaven (Central Coast)",
+    "suburb": "Mayfield",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://vitalityinmovement.com.au",
+    "interests": [
+     "musculoskeletal rehab",
+     "chronic disease management",
+     "group classes"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://vitalityinmovement.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "dietetics": {
+  "name": "Dietitians",
+  "people": [
+   {
+    "name": "Arubah Health Dietitians",
+    "specialty": "Dietitians",
+    "practice": "Arubah Health Dietitians",
+    "address": "Hamilton East",
+    "suburb": "Hamilton East",
+    "phone": "02 4081 1828",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://arubahhealth.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://arubahhealth.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Help Yourself Dietitians",
+    "specialty": "Dietitians (Dr Kerith Duncanson, Dr Georgina Williams)",
+    "practice": "Help Yourself Dietitians",
+    "address": "Beechnut Medical Rooms, 55 Lindsay Street",
+    "suburb": "Hamilton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.helpyourself.com.au/contact/",
+    "interests": [
+     "gut and digestive health",
+     "dumping syndrome",
+     "eosinophilic oesophagitis"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.helpyourself.com.au/contact/"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-paediatric": {
+  "name": "Speech pathology (children)",
+  "people": [
+   {
+    "name": "Little Star Speech Therapy",
+    "specialty": "Speech pathology (children)",
+    "practice": "Little Star Speech Therapy",
+    "address": "2 Koree Road",
+    "suburb": "Broadmeadow",
+    "phone": "02 4952 3856",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.littlestarspeechtherapy.com.au/contact",
+    "interests": [
+     "speech and language disorders",
+     "stuttering"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.littlestarspeechtherapy.com.au/contact"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "cardiothoracic-surgery": {
+  "name": "Cardiothoracic surgery",
+  "people": [
+   {
+    "name": "Dr Pankaj Saxena",
+    "specialty": "Cardiothoracic surgeon",
+    "practice": "Newcastle Adult and Paediatric Heart Centre",
+    "address": "16 Grainger Street",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardio-thoracic-surgery/108694/dr-pankaj-saxena",
+    "interests": [
+     "coronary artery bypass (arterial grafting)",
+     "mitral valve repair",
+     "heart failure surgery",
+     "hypertrophic cardiomyopathy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardio-thoracic-surgery/108694/dr-pankaj-saxena",
+     "https://lingardprivate.com.au/specialists/dr-pankaj-saxena"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "cardiology": {
+  "name": "Cardiology",
+  "people": [
+   {
+    "name": "Dr Simon Mylabathula",
+    "specialty": "Interventional cardiologist",
+    "practice": "Newcastle Private Hospital",
+    "address": "14 Lookout Road",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4933 8585",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://specialists.healthscope.com.au/specialist/simon-mylabathula-med0001169916",
+    "interests": [
+     "coronary angiography and angioplasty",
+     "acute coronary syndromes"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://specialists.healthscope.com.au/specialist/simon-mylabathula-med0001169916"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "audiology": {
+  "name": "Audiology",
+  "people": [
+   {
+    "name": "Glynis McPherson Hearing Clinic",
+    "specialty": "Audiology",
+    "practice": "Glynis McPherson Hearing Clinic",
+    "address": "48 Hudson Street",
+    "suburb": "Hamilton",
+    "phone": "02 4961 6770",
+    "fax": "02 4961 6550",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+     "https://www.gmhc.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Audiology Centre",
+    "specialty": "Audiology",
+    "practice": "Newcastle Audiology Centre",
+    "address": "Suite 1, 102 Glebe Road",
+    "suburb": "The Junction",
+    "phone": "02 4969 1062",
+    "fax": "02 4961 6530",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hearing Australia Kotara",
+    "specialty": "Audiology (Hearing Australia)",
+    "practice": "Hearing Australia Kotara",
+    "address": "Otp House, 10 Bradford Close",
+    "suburb": "Kotara",
+    "phone": "13 44 32",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+     "https://www.hearing.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychiatry-telehealth": {
+  "name": "Psychiatry (telehealth)",
+  "people": [
+   {
+    "name": "My ADHD Australia",
+    "specialty": "Telepsychiatry service (ADHD)",
+    "practice": "My ADHD Australia (Sydney International ADHD Centre)",
+    "address": "",
+    "suburb": "Online (Sydney-based)",
+    "phone": "02 9870 0252",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://myadhdaustralia.com.au",
+    "interests": [
+     "adult ADHD"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://myadhdaustralia.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "My Mind Clinic",
+    "specialty": "Telepsychiatry and psychology service",
+    "practice": "My Mind Clinic",
+    "address": "",
+    "suburb": "Online (Victoria-based)",
+    "phone": "03 5410 0750",
+    "fax": "03 7000 5079",
+    "email": "",
+    "ereferral": "",
+    "website": "https://mymindclinic.com.au",
+    "interests": [
+     "ADHD assessment",
+     "autism assessment"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "6 to 60 years",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": true,
+     "np_note": "Site says it is accepting new referrals for ADHD and ASD assessments",
+     "np_checked": "2026-11-10"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://mymindclinic.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Serenity Clinic",
+    "specialty": "Psychiatry (Sydney rooms and telehealth)",
+    "practice": "Serenity Clinic",
+    "address": "",
+    "suburb": "Online (Sydney-based)",
+    "phone": "02 8425 2333",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://serenityclinic.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://serenityclinic.com.au"
+    ],
+    "checked": "2026-11-10",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
