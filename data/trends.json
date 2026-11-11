@@ -334,6 +334,70 @@
    "date": "2026-11-12",
    "source": "emanuelsyndrome.org; Google Trends unavailable today",
    "niche": true
+  },
+  {
+   "term": "Vitamin K deficiency bleeding (newborn vitamin K refusal)",
+   "region": "AU",
+   "approx volume": "1k+ (+400%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": true
+  },
+  {
+   "term": "Meningococcal disease (MenB case, WA child)",
+   "region": "AU",
+   "approx volume": "500+ (+100%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": false
+  },
+  {
+   "term": "Semaglutide",
+   "region": "AU",
+   "approx volume": "1k+ (+500%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": false
+  },
+  {
+   "term": "Weight training",
+   "region": "AU",
+   "approx volume": "5k+ (+500%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": false
+  },
+  {
+   "term": "Stiff person syndrome: recent breakthroughs",
+   "region": "AU",
+   "approx volume": "200+ (+400%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": true
+  },
+  {
+   "term": "GLP-1 side effects: vision loss (NAION)",
+   "region": "US",
+   "approx volume": "2k+ (+100%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": true
+  },
+  {
+   "term": "US measles elimination status at risk; measles symptoms",
+   "region": "US",
+   "approx volume": "2k+ (+75%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": false
+  },
+  {
+   "term": "Washington State sues DaVita and Fresenius (dialysis)",
+   "region": "US",
+   "approx volume": "1k+ (+75%)",
+   "date": "2026-11-12",
+   "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
+   "niche": true
   }
  ],
  "used": [
