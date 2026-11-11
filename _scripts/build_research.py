@@ -26,7 +26,7 @@ def card(s):
             '<p><b>What they found.</b> ' + e(s["what"]) + '</p><p><b>So what.</b> ' + e(s["sowhat"]) + '</p><p class="rh-src">Source: <a href="' + e(s["url"]) + '" rel="noopener">' + e(s["source"]) + "</a></p></div>")
 w0 = D["weeks"][0]
 body = ['</head>\n<body>\n<main class="wrap doc">',
-  '<div class="dd-hero" style="display:flex;align-items:center;gap:12px;margin:8px 0 4px"><img src="/assets/mascots/deepdives.svg" width="84" height="84" alt="Pebble the penguin in a diving mask, holding a pebble" style="flex:0 0 auto"><div><h1 style="margin:0">Research hub</h1><p style="margin:2px 0 0;font:600 13px Poppins,sans-serif;color:#6B5A93">Pebble dives into the journals so you don’t have to.</p></div></div>',
+  '<div class="dd-hero" style="display:flex;align-items:center;gap:12px;margin:8px 0 4px"><img src="/assets/mascots/research.svg" width="84" height="84" alt="Mei the lab mouse, who reads the studies so you don\'t have to" style="flex:0 0 auto"><div><h1 style="margin:0">Research hub</h1><p style="margin:2px 0 0;font:600 13px Poppins,sans-serif;color:#6B5A93">Mei, a former lab mouse, reads the studies so you don’t have to.</p></div></div>',
   '<p class="lede">The week’s most interesting medical studies in plain English, how much to trust each one, and the big trials still to come.</p>',
   '<h2>This week in research</h2><p class="meta">' + e(w0["week"]) + "</p>"] + [card(s) for s in w0["studies"]]
 body += ['<h2>Trials to watch</h2><p class="evkey">Big studies still running. Results could change practice.</p><ul class="rh-trials">'] + ['<li><b><a href="' + e(t["url"]) + '" rel="noopener">' + e(t["name"]) + "</a></b> " + e(t["q"]) + '<span class="rh-when">' + e(t["when"]) + "</span></li>" for t in D["trials"]] + ["</ul>"]

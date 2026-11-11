@@ -1473,7 +1473,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var gp = gpReviewed(), upd = "";
     if (ld0) upd = ld0.dateModified || ld0.lastReviewed || "";
     if (!upd) { var mt = document.body.textContent.match(/(?:Reviewed|Updated)\s+(\d{1,2} )?([A-Z][a-z]+) (\d{4})/); if (mt && MONTHS.indexOf(mt[2]) >= 0) upd = mt[3] + "-" + ("0" + (MONTHS.indexOf(mt[2]) + 1)).slice(-2) + (mt[1] ? "-" + ("0" + mt[1].trim()).slice(-2) : ""); }
-    if (!main.querySelector(".trust")) h1.insertAdjacentHTML("afterend", gp ? '<p class="trust gp">✔ Reviewed by an Australian GP on ' + longDate(gp) + "</p>"
+    if (!main.querySelector(".trust")) (h1.closest(".mw-sec-hero") || h1).insertAdjacentHTML("afterend", gp ? '<p class="trust gp">✔ Reviewed by an Australian GP on ' + longDate(gp) + "</p>"
       : '<p class="trust"><a href="/about/#how-we-make-pages">Made with AI tools and overseen by an Australian GP</a>' + (longDate(upd) ? " · Updated " + longDate(upd) : "") + "</p>");
     var foot = main.querySelector("footer.site"), anchor = main.querySelector(".print-url") || foot;
     if (me) {
