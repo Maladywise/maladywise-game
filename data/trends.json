@@ -214,6 +214,38 @@
       "date": "2026-11-11",
       "source": "Contemporary Pediatrics, 4 Nov 2026",
       "niche": true
+    },
+    {
+      "term": "asundexian (Sunharbo), first factor XIa inhibitor, FDA approved 9 Nov 2026 for secondary stroke prevention",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "AJMC, Nov 2026 (OCEANIC-STROKE)",
+      "niche": true
+    },
+    {
+      "term": "pimicotinib (Pimjetmi) for tenosynovial giant cell tumour, FDA approved 10 Nov 2026",
+      "region": "US",
+      "volume": "n/a (Google Trends not reachable)",
+      "date": "2026-11-11",
+      "source": "FDA oncology approvals",
+      "niche": true
+    },
+    {
+      "term": "'Doomsday: Friday, 13 November 2026' (von Foerster et al., Science 1960)",
+      "region": "Global",
+      "volume": "n/a",
+      "date": "2026-11-11",
+      "source": "ScienceDaily, Oct 2026",
+      "niche": false
+    },
+    {
+      "term": "Rugby League World Cup final, Australia v New Zealand, Brisbane 15 Nov",
+      "region": "AU/NZ",
+      "volume": "n/a",
+      "date": "2026-11-11",
+      "source": "Rugby League Zone semi-final review; Wikipedia",
+      "niche": false
     }
   ],
   "used": [
@@ -300,6 +332,34 @@
         "gridectomy normie"
       ],
       "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches. Replaced Triviosis Q2 (Guinea Pig Club) and Q5 (Paré), Comorbix group 'Bacteria named after people' and ZIKA->MARBURG, Zebritis brachial plexus prompt, Normie Comorbix 'Rivers'."
+    },
+    {
+      "date": "2026-11-12",
+      "main_theme": "World Pneumonia Day (kept from monthly build)",
+      "source": "world day",
+      "terms_used": [
+        "Mycoplasma pneumoniae comeback 2023-24 (Danish surveillance study)",
+        "Listeria recalls / foods to avoid in pregnancy",
+        "Sanfilippo syndrome and other mucopolysaccharidoses (World Sanfilippo Day 16 Nov)",
+        "medicine recall lot numbers (TGA recalls)",
+        "Rugby League World Cup final, Australia v New Zealand (Normie)",
+        "'Doomsday' 13 Nov 2026 forecast, von Foerster 1960 (Normie)"
+      ],
+      "niche_terms": [
+        "Sanfilippo syndrome",
+        "mucopolysaccharidoses",
+        "Listeria in pregnancy",
+        "Mycoplasma pneumoniae"
+      ],
+      "games": [
+        "triviosis",
+        "comorbix",
+        "gridectomy",
+        "zebritis",
+        "zebritis normie",
+        "comorbix normie"
+      ],
+      "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json and news searches. Comorbix '___coccus' (contained PNEUMO, near-giveaway) replaced with MPS eponyms; Zebritis 'muscle of respiration' replaced with pregnancy food-safety prompt; Gridectomy LOT clue; Triviosis Mycoplasma explanation; Normie Zebritis Paris 2024 medal table replaced with RLWC 2026 teams; Normie Comorbix 'Rhymes with PUNK' replaced with ___DAY (DOOMS)."
     }
   ],
   "suggested_days": [
