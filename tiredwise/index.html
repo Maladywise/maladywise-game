@@ -5,14 +5,14 @@
 <link rel="canonical" href="https://maladywise.com/tiredwise/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,follow">
-<title>Tiredwise: the tiredness map | Malady Wise</title>
+<title>Tiredwise: maps for unexplained symptoms | Malady Wise</title>
 <meta name="description" content="What causes tiredness, ranked from common to rare with the data, plus a clickable map linking causes to clues, mechanisms and treatment trials.">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4A3480">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Tiredwise: the tiredness map | Malady Wise">
+<meta property="og:title" content="Tiredwise: maps for unexplained symptoms | Malady Wise">
 <meta property="og:description" content="What causes tiredness, ranked from common to rare with the data, plus a clickable map linking causes to clues, mechanisms and treatment trials.">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
@@ -129,20 +129,66 @@ html[data-theme="dark"] #tm{--accent:#F2A541;--accent-ink:#F7C27A;--t1:#EDE8F7;-
 #tm .src li{font-size:13px;color:var(--muted)}
 #tm .src a{color:var(--teal)}
 #tm a{color:var(--teal)}
-@media (prefers-reduced-motion:no-preference){#tm .nd circle{transition:r .2s,opacity .2s}#tm .nd:hover circle{opacity:.85}}#tm .host{display:flex;gap:12px;align-items:center}#tm .host img{flex:0 0 auto}#tm .host h1{margin:0}</style>
-<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Tiredwise: the tiredness map", "inLanguage": "en-AU", "url": "https://maladywise.com/tiredwise/"}</script>
+@media (prefers-reduced-motion:no-preference){#tm .nd circle{transition:r .2s,opacity .2s}#tm .nd:hover circle{opacity:.85}}#tm .host{display:flex;gap:12px;align-items:center}#tm .host img{flex:0 0 auto}#tm .host h1{margin:0}
+html,body{overflow-x:clip}
+#tm .mapsec{width:100%}
+#tm .mapin{max-width:1560px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px));display:grid;gap:12px}
+#tm .mapwrap{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(300px,1fr);gap:14px;align-items:start}
+@media (max-width:900px){#tm .mapwrap{grid-template-columns:1fr}}
+#tm .panel{position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto}
+@media (max-width:900px){#tm .panel{position:static;max-height:none}}
+#tm .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#tm .chip.ghost{font-size:12.5px;min-height:32px;padding:5px 11px}
+#tm .chip.mini{font-size:12.5px;min-height:30px;padding:4px 10px;cursor:pointer}
+#tm span.chip.mini{cursor:default;opacity:.8}
+#tm .chips{display:flex;flex-wrap:wrap;gap:6px}
+#tm .behind{background:var(--bg);border:1px dashed var(--accent);border-radius:10px;padding:8px 10px;display:grid;gap:6px}
+#tm .behind .k{margin:0;color:var(--accent-ink)}
+#tm .nd.sel circle{stroke:var(--accent);stroke-width:4}
+#tm .nd:focus{outline:none}#tm .nd:focus-visible circle{stroke:var(--accent);stroke-width:4}
+#tm h2.part{font-size:26px;border-top:1px solid var(--line);padding-top:24px;margin-top:6px}
+#tm .legend i{box-sizing:border-box}
+</style>
+
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Tiredwise: maps for tiredness, brain fog, pain, headache, gut and bladder symptoms", "inLanguage": "en-AU", "url": "https://maladywise.com/tiredwise/"}</script>
 </head>
 <body>
 <main class="wrap doc" id="tm">
-
   <header class="sec">
     <p class="eyebrow">Tiredwise · <span class="beta">BETA</span></p>
-    <div class="host"><img src="/assets/mascots/layla.svg" width="72" height="72" alt="Layla the sloth, who knows a thing or two about pacing"><h1>Tiredwise: the tiredness map</h1></div>
-    <p class="lede">What actually causes tiredness in general practice, ranked from common to rare with the data behind each rank. Then the next layer: when the standard tests are normal, which features and mechanisms are worth chasing, and what the treatment trials have shown so far.</p>
-    <div class="battery" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><span>energy: low</span></div>
+    <div class="host"><img src="/assets/mascots/layla.svg" width="72" height="72" alt="Layla the sloth, who knows a thing or two about pacing"><h1>Tiredwise</h1></div>
+    <p class="lede">Maps for symptoms that don't come with an easy answer: tiredness, brain fog, pain, headache, gut and bladder. Common causes are big bubbles, rare ones small. Tap a bubble for clues, mechanisms, tests and what trials have shown.</p>
   </header>
-
-  <section class="sec" aria-labelledby="bl">
+  <section class="sec mapsec" aria-labelledby="mp">
+   <div class="mapin">
+    <h2 id="mp" class="vh">Symptom maps</h2>
+    <div class="controls" id="tabs" role="group" aria-label="Choose a symptom">
+      <button class="chip" type="button" data-map="fatigue" aria-pressed="true">Tiredness</button>
+      <button class="chip" type="button" data-map="fog" aria-pressed="false">Brain fog</button>
+      <button class="chip" type="button" data-map="pain" aria-pressed="false">Pain</button>
+      <button class="chip" type="button" data-map="head" aria-pressed="false">Headache</button>
+      <button class="chip" type="button" data-map="gut" aria-pressed="false">Gut</button>
+      <button class="chip" type="button" data-map="bladder" aria-pressed="false">Bladder</button>
+    </div>
+    <div class="controls" role="group" aria-label="Map filters">
+      <button class="chip ghost" type="button" id="f-all" aria-pressed="true">Everything</button>
+      <button class="chip ghost" type="button" id="f-norm" aria-pressed="false">Tests normal: now what?</button>
+      <button class="chip ghost" type="button" id="f-red" aria-pressed="false">Don't miss</button>
+    </div>
+    <div class="legend"><span><i style="background:var(--t1)"></i>Very common</span><span><i style="background:var(--t2)"></i>Common</span><span><i style="background:var(--t3)"></i>Less common</span><span><i style="background:var(--t4)"></i>Rare</span><span><i style="background:transparent;border:2px dashed var(--accent)"></i>Hidden driver</span></div>
+    <div class="mapwrap">
+      <div class="map"><svg id="svg" viewBox="0 0 1400 1000" role="img" aria-label="Symptom mind map"></svg></div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+   </div>
+  </section>
+  <section class="sec" aria-labelledby="lb">
+    <h2 id="lb">Look behind the label</h2>
+    <p>A diagnosis can be the end of the story or a waypoint. Someone labelled with depression may be depressed because they're exhausted, and exhausted because of sleep apnoea, low iron or a thyroid problem. "Anxiety" can be a racing heart from POTS. "IBS" can be coeliac disease or bile acid diarrhoea. Tap any bubble to see dashed arrows from the hidden drivers to the label they can sit behind.</p>
+    <p class="note">These links are clinical reasoning, not proof. Many labels are correct, and treating them helps. The point is to check the drivers once, especially when standard treatment isn't working.</p>
+  </section>
+  <h2 class="part">Tiredness: the evidence</h2>
+<section class="sec" aria-labelledby="bl">
     <h2 id="bl">Bottom line</h2>
     <ul class="b">
       <li><b>Mood, sleep and life load dominate.</b> Depression alone is found in about 18.5% of tired GP patients (pooled, 26 studies).</li>
@@ -152,30 +198,11 @@ html[data-theme="dark"] #tm{--accent:#F2A541;--accent-ink:#F7C27A;--t1:#EDE8F7;-
       <li><b>For the unexplained group, the best-supported leads are features you can measure:</b> post-exertional malaise, orthostatic intolerance, small fibre neuropathy, iron deficiency without anaemia, sleep disorders.</li>
       <li><b>The immune/autoantibody story is promising but repeatedly fails in proper trials</b> (rituximab, IVIG, efgartigimod, BC007). Open-label wins keep shrinking under placebo control. Subgrouping by biomarker looks like the way forward.</li>
     </ul>
-  </section>
-
-  <section class="sec" aria-labelledby="rk">
+  </section><section class="sec" aria-labelledby="rk">
     <h2 id="rk">Ranked causes, common to rare</h2>
     <p class="note">Bars only for figures measured in tired primary care patients. <span class="kind gp">GP data</span> = measured in tired GP patients. <span class="kind">population</span> = how common in everyone (not a fatigue-specific rate). <span class="kind">clinic</span> = specialist clinic data, inflated by referral. <span class="kind">no data</span> = clinically common, no good fatigue-specific number.</p>
     <div class="rank" id="ranklist"></div>
-  </section>
-
-  <section class="sec" aria-labelledby="mp">
-    <h2 id="mp">The map</h2>
-    <p>Bubble size follows how common each cause is. Tap one for clues, mechanisms, tests and trials. "Tests normal" fades out what a standard workup usually catches, leaving the causes worth a closer look when the usual tests come back normal.</p>
-    <div class="controls" role="group" aria-label="Map filters">
-      <button class="chip" type="button" id="f-all" aria-pressed="true">Everything</button>
-      <button class="chip" type="button" id="f-norm" aria-pressed="false">Tests normal: now what?</button>
-      <button class="chip" type="button" id="f-red" aria-pressed="false">Don't miss</button>
-    </div>
-    <div class="legend"><span><i style="background:var(--t1)"></i>Very common</span><span><i style="background:var(--t2)"></i>Common</span><span><i style="background:var(--t3)"></i>Less common</span><span><i style="background:var(--t4)"></i>Rare</span></div>
-    <div class="mapwrap">
-      <div class="map"><svg id="svg" viewBox="0 0 1100 1100" role="img" aria-label="Mind map of causes of tiredness grouped by body system"></svg></div>
-      <aside class="panel" id="panel" aria-live="polite"></aside>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="ly">
+  </section><section class="sec" aria-labelledby="ly">
     <h2 id="ly">How to read the map</h2>
     <p>Each layer leads to the next: from the symptom to the likely causes, the clues that point to each one, why it might happen, and what has been tested.</p>
     <div class="layers">
@@ -185,28 +212,23 @@ html[data-theme="dark"] #tm{--accent:#F2A541;--accent-ink:#F7C27A;--t1:#EDE8F7;-
       <div class="ly"><span class="eyebrow">4 · Mechanisms</span><h3>Why it might happen</h3><p>Low preload, small fibre loss, autoantibodies, mast cell mediators, iron stores.</p></div>
       <div class="ly"><span class="eyebrow">5 · Trials</span><h3>What's been tested</h3><p>Honest results, then studies recruiting now (Research hub feed).</p></div>
     </div>
-  </section>
-
-  <section class="sec" aria-labelledby="tl">
+  </section><section class="sec" aria-labelledby="tl">
     <h2 id="tl">Treatment trials for the unexplained group</h2>
     <p class="note">Green = positive randomised result · amber = mixed, small or uncontrolled · red = negative randomised trial.</p>
     <div class="trials" id="trials"></div>
     <p>The pattern: small open-label studies look good, then larger placebo-controlled trials don't. Placebo and volume effects are big here (in the IVIG trial, both arms improved). The next generation of trials targets biomarker-defined subgroups, such as people with high NK cells for daratumumab, or confirmed antibody positivity.</p>
-  </section>
-
-  
-
-  <section class="sec" aria-labelledby="sr">
+  </section><section class="sec" aria-labelledby="sr">
     <h2 id="sr">Sources</h2>
     <ol class="src" id="srcs"></ol>
     <p class="note">Journal articles are linked by DOI where available. Prevalence figures marked "population" or "clinic" aren't rates in tired GP patients.</p>
   </section>
-
   <section class="sec">
     <div class="row"><a class="btn" href="/tiredwise/check/">Do the 5-minute self-check</a><a class="btn ghost" href="/tools/tiredwise/">Clinician version</a></div>
     <p class="note">Beta. General education, not a diagnosis or personal medical advice. Always see your GP about ongoing tiredness. In an emergency, call 000; to talk now, Lifeline 13 11 14.</p>
     <p class="meta">Updated 11 November 2026.</p>
   </section>
+</main>
+
 </main>
 <script>
 (function(){
@@ -235,7 +257,13 @@ var SRC = {
   raj:["Raj SR et al. Low-dose propranolol in POTS. Circulation 2009","https://doi.org/10.1161/CIRCULATIONAHA.108.846501"],
   recover:["RECOVER-Adult: post-COVID ME/CFS 4.5% vs 0.6%","https://pmc.ncbi.nlm.nih.gov/articles/PMC11968624/"],
   ascia:["ASCIA. Mast cell disorders (2025)","https://www.allergy.org.au/images/stories/pospapers/ASCIA_HP_Mast_Cell_Disorders_2025.pdf"],
-  nice:["NICE NG206. ME/CFS (2021)","https://www.nice.org.uk/guidance/ng206"]
+  nice:["NICE NG206. ME/CFS (2021)","https://www.nice.org.uk/guidance/ng206"],
+  ldnfm:["Bruun KD et al. Low-dose naltrexone vs placebo in fibromyalgia: RCT. Lancet Rheumatol 2024","https://doi.org/10.1016/S2665-9913(23)00278-3"],
+  atlantis:["Ford AC et al. Low-dose amitriptyline for IBS in primary care (ATLANTIS). Lancet 2023","https://doi.org/10.1016/S0140-6736(23)01523-4"],
+  wedlake:["Wedlake L et al. Bile acid malabsorption in IBS-D: systematic review. Aliment Pharmacol Ther 2009","https://doi.org/10.1111/j.1365-2036.2009.04081.x"],
+  rome:["Sperber AD et al. Worldwide prevalence of functional GI disorders (Rome Foundation). Gastroenterology 2021","https://doi.org/10.1053/j.gastro.2020.04.014"],
+  altar:["Harding C et al. Methenamine vs antibiotic prophylaxis for recurrent UTI (ALTAR). BMJ 2022","https://doi.org/10.1136/bmj-2021-068229"],
+  cranberry:["Williams G et al. Cranberries for preventing UTI. Cochrane 2023","https://doi.org/10.1002/14651858.CD001321.pub7"],
 };
 var order = Object.keys(SRC), num = {}; order.forEach(function(k,i){num[k]=i+1;});
 document.getElementById("srcs").innerHTML = order.map(function(k){return '<li><a href="'+SRC[k][1]+'" target="_blank" rel="noopener">'+SRC[k][0]+'</a></li>';}).join("");
@@ -268,107 +296,220 @@ document.getElementById("ranklist").innerHTML = R.map(function(r,i){
   return '<div class="rk"><span class="n">'+(i+1)+'</span><b>'+r[0]+lab+'</b><span class="fq">'+r[1]+'</span>'+bar+'<span class="src">'+r[4]+' '+cite(r[5])+'</span></div>';
 }).join("");
 
-// ---------- map data ----------
-// tier: 1 very common, 2 common, 3 less common, 4 rare. std: usually found by standard workup. red: don't miss.
-var G = [
-  {id:"mind",n:"Mind & mood"},{id:"sleep",n:"Sleep"},{id:"blood",n:"Blood & nutrients"},{id:"horm",n:"Hormones"},
-  {id:"inf",n:"Infection & post-viral"},{id:"auto",n:"Autonomic"},{id:"imm",n:"Immune"},{id:"neuro",n:"Nerve & muscle"},
-  {id:"drug",n:"Medicines"},{id:"ser",n:"Serious"}
-];
-var C = [
-  {g:"mind",n:"Depression",t:1,std:1,f:"18.5% of tired GP patients",cl:["Low mood, anhedonia","Early waking","Fatigue present even at rest"],me:["Altered reward and sleep circuitry","Inflammation linked in a subgroup"],te:["PHQ-9"],tr:[["Treat depression","good","Effective treatments exist; fatigue often improves with mood"]],s:["stadje"]},
-  {g:"mind",n:"Anxiety & stress",sn:"Anxiety, stress",t:1,std:1,f:"Common, no pooled rate",cl:["Worry, tension, poor sleep"],me:["Sustained arousal, poor sleep quality"],te:["GAD-7"],tr:[],s:["afp"]},
-  {g:"mind",n:"ADHD / autistic burnout",sn:"ADHD / autism",t:2,f:"Clinic data only",cl:["Lifelong patterns","Sensory and social load","Crash after masking"],me:["Executive load, sensory overload","Overlaps with hypermobility and dysautonomia"],te:["ASRS v1.1","AQ-10"],tr:[["ADHD treatment","good","Improves function; stimulants raise HR"]],s:[]},
-  {g:"sleep",n:"Insomnia",t:1,std:1,f:"Common",cl:["Trouble falling or staying asleep"],me:["Hyperarousal"],te:["Sleep diary"],tr:[["CBT for insomnia","good","First-line, durable"]],s:[]},
-  {g:"sleep",n:"Sleep apnoea",sn:"Sleep apnoea",t:2,f:"20% men / 10% women (mid-age, population)",cl:["Snoring, witnessed apnoeas","Morning headache","Sleepy driving"],me:["Fragmented sleep, intermittent hypoxia"],te:["STOP-BANG","Home sleep study"],tr:[["CPAP or mandibular splint","good","Improves sleepiness"]],s:["osa"]},
-  {g:"sleep",n:"Body clock / shift work",sn:"Body clock",t:2,f:"Common",cl:["Night owl since teens","Shift work"],me:["Circadian misalignment"],te:["Sleep diary"],tr:[["Morning light, timed melatonin","mixed","Helps delayed sleep phase"]],s:[]},
-  {g:"sleep",n:"Narcolepsy / hypersomnia",sn:"Narco- lepsy",t:4,red:1,f:"Rare",cl:["Sleep attacks","Cataplexy","Long sleep, still unrefreshed"],me:["Orexin loss (type 1)"],te:["Sleep study + MSLT"],tr:[],s:[]},
-  {g:"blood",n:"Iron deficiency (no anaemia)",sn:"Low iron",t:2,f:"Common in menstruating women",cl:["Heavy periods, vegetarian, blood donor","Restless legs"],me:["Low iron stores affect muscle and brain energy use"],te:["Ferritin (with CRP)"],tr:[["Oral iron, ferritin <50","good","Fatigue fell 47.7% vs 28.8% placebo (n=198)"]],s:["vaucher"]},
-  {g:"blood",n:"Anaemia",t:2,std:1,f:"2.8% of tired GP patients",cl:["Breathless, pale","Bleeding"],me:["Reduced oxygen delivery"],te:["FBC"],tr:[["Treat the cause","good","Investigate bleeding in men and post-menopause"]],s:["stadje"]},
-  {g:"blood",n:"B12 / folate",sn:"B12 / folate",t:3,std:1,f:"Less common",cl:["Neuropathy, glossitis","Metformin, PPI, vegan"],me:["Impaired DNA synthesis and myelin"],te:["B12, folate"],tr:[["Replace","good",""]],s:[]},
-  {g:"blood",n:"Coeliac disease",sn:"Coeliac",t:3,std:1,f:"About 1% of people",cl:["Bloating, loose stools","Iron deficiency"],me:["Malabsorption, inflammation"],te:["tTG-IgA + total IgA"],tr:[["Gluten-free diet","good",""]],s:[]},
-  {g:"blood",n:"Haemochromatosis",sn:"Haemo- chrom.",t:4,std:1,f:"1 in 325 tired patients",cl:["Joint pain (2nd/3rd MCP)","Raised LFTs"],me:["Iron overload"],te:["Ferritin + transferrin saturation"],tr:[["Venesection","good",""]],s:["koch"]},
-  {g:"horm",n:"Hypothyroidism",sn:"Thyroid",t:2,std:1,f:"Among most frequent serious causes",cl:["Cold, weight gain, constipation"],me:["Low metabolic rate"],te:["TSH"],tr:[["Thyroxine","good","Fatigue often lags normal TSH"]],s:["stadje"]},
-  {g:"horm",n:"Diabetes",t:2,std:1,f:"Among most frequent serious causes",cl:["Thirst, urination"],me:["Hyperglycaemia"],te:["HbA1c"],tr:[],s:["stadje"]},
-  {g:"horm",n:"Perimenopause / pregnancy",sn:"Meno- pause",t:2,std:1,f:"Common",cl:["Cycle change, flushes","Missed period"],me:["Hormonal shifts, sleep disruption"],te:["Clinical; hCG"],tr:[["MHT for vasomotor symptoms","good",""]],s:[]},
-  {g:"horm",n:"Addison's disease",sn:"Addison's",t:4,red:1,f:"Rare",cl:["Weight loss, salt craving","Pigmentation, low Na/high K"],me:["Cortisol and aldosterone deficiency"],te:["Morning cortisol, then short Synacthen"],tr:[["Steroid replacement","good","Can be fatal if missed"]],s:[]},
-  {g:"horm",n:"Kidney disease",sn:"Kidney",t:3,std:1,f:"Less common",cl:["Nocturia, oedema"],me:["Uraemia, anaemia"],te:["UEC, eGFR, urine ACR"],tr:[],s:[]},
-  {g:"inf",n:"Post-viral fatigue",sn:"Post-viral",t:1,f:"Common",cl:["Clear start after an infection"],me:["Immune activation, usually self-limiting"],te:["Time"],tr:[["Pacing early","mixed","NICE: give energy advice from 6 weeks"]],s:["nice"]},
-  {g:"inf",n:"ME/CFS",t:3,f:"0.7–1.9% of tired GP patients",cl:["Post-exertional malaise (crash 12–72 h later)","Unrefreshing sleep","Brain fog, orthostatic intolerance"],me:["Impaired preload and O2 extraction on exercise","Immune and autoantibody hypotheses","Plasma cell / NK cell signals (pilot)"],te:["DSQ-PEM","IOM 2015 criteria"],tr:[["Pacing (NICE 2021)","mixed","Standard of care; no GET"],["Pyridostigmine (single dose)","good","Peak VO2 +54 mL/min vs placebo, n=45"],["Rituximab","bad","Response 26% vs 35% placebo, n=151"],["Daratumumab","mixed","Open pilot: 6/10 improved; NK-high responded"]],s:["stadje","pyr","fluge19","dara","nice"]},
-  {g:"inf",n:"Long COVID",t:2,f:"4.5% of infected develop ME/CFS",cl:["Symptoms 3+ months after COVID"],me:["Persistent virus, immune, clotting and autonomic theories"],te:["NASEM 2024 definition"],tr:[["BC 007 (GPCR antibody neutraliser)","bad","Phase 2 n=119 unsuccessful; small crossover positive"],["Efgartigimod (POTS)","bad","Phase 2 not meaningful (2024)"],["Low-dose naltrexone","mixed","Retrospective n=59 positive; RCT running (n=160)"]],s:["recover","bc007","efg","ldn","ldnrct"]},
-  {g:"inf",n:"Glandular fever",sn:"Glandular fever",t:3,std:1,f:"2 in 325 tired patients",cl:["Sore throat, nodes, young adult"],me:["EBV"],te:["FBC film, EBV serology"],tr:[],s:["koch"]},
-  {g:"inf",n:"HIV / hepatitis C",sn:"HIV / Hep C",t:4,red:1,std:1,f:"Rare",cl:["Risk factors"],me:["Chronic infection"],te:["Serology"],tr:[["Antivirals","good",""]],s:[]},
-  {g:"auto",n:"POTS / orthostatic intolerance",sn:"POTS",t:3,f:"Clinic data; 32% of ME/CFS cohort",cl:["Worse upright, better lying","HR rise ≥30 on standing","Heat and showers worse"],me:["Low blood volume","Small fibre neuropathy (neuropathic POTS)","Hyperadrenergic","Autoantibodies (contested)"],te:["10-minute stand / NASA lean"],tr:[["Fluids, salt, compression","mixed","Guideline-backed, limited trials"],["Low-dose propranolol","good","10–20 mg beat 80 mg for symptoms"],["IVIG","bad","No difference vs albumin; both improved (n=30)"]],s:["raj","istand","hall"]},
-  {g:"auto",n:"Hypermobility-related",sn:"Hyper- mobility",t:3,f:"Common in ND and POTS clinics",cl:["Bendy joints, subluxations","Pain, dizziness"],me:["Connective tissue laxity, venous pooling"],te:["Beighton score"],tr:[["Physio, strengthening","mixed",""]],s:[]},
-  {g:"auto",n:"Heart failure / arrhythmia",sn:"Heart",t:3,red:1,std:1,f:"Less common",cl:["Breathless, oedema","Palpitations, syncope"],me:["Low cardiac output"],te:["ECG, BNP, echo"],tr:[],s:[]},
-  {g:"imm",n:"Fibromyalgia",sn:"Fibro- myalgia",t:2,f:"2–4% of people (population)",cl:["Widespread pain 3+ months","Unrefreshing sleep"],me:["Central sensitisation","Small fibre pathology in ~49%"],te:["ACR 2016 criteria"],tr:[["Exercise (graded to tolerance)","good","EULAR strong-for"],["Amitriptyline, duloxetine, pregabalin","mixed","Modest effects"]],s:["grayston"]},
-  {g:"imm",n:"Autoimmune (RA, lupus, Sjögren's)",sn:"Auto- immune",t:3,std:1,f:"Less common",cl:["Joint swelling, rash","Dry eyes/mouth"],me:["Systemic inflammation, cytokines"],te:["ESR/CRP, ANA if clues"],tr:[["Disease-specific","good",""]],s:[]},
-  {g:"imm",n:"MCAS / mastocytosis",sn:"MCAS",t:4,f:"Rare when ASCIA criteria used",cl:["Episodic flushing + gut/wheeze/low BP","Triggers: heat, food, stress"],me:["Mast cell mediator release; KIT D816V in mastocytosis"],te:["Acute + baseline tryptase (20% + 2)"],tr:[["H1/H2 antihistamines","mixed","Standard, limited RCTs"]],s:["ascia"]},
-  {g:"imm",n:"Sarcoidosis",sn:"Sarcoid",t:4,red:1,f:"Rare",cl:["Cough, rash, uveitis","High calcium"],me:["Granulomatous inflammation"],te:["Ca, ACE, chest X-ray"],tr:[],s:[]},
-  {g:"neuro",n:"Small fibre neuropathy",sn:"Small fibre",t:3,f:"~49% in fibromyalgia (clinic)",cl:["Burning feet or hands","Sweating changes, dizziness"],me:["Loss of small sensory and autonomic fibres; some antibody-linked"],te:["Skin biopsy (IENFD)"],tr:[["IVIG (antibody-positive SFN)","bad","Pilot RCT n=17: no benefit"]],s:["grayston","sfnivig"]},
-  {g:"neuro",n:"Myasthenia gravis",sn:"Myas- thenia",t:4,red:1,f:"Rare",cl:["Fatigable weakness","Droopy eyelids, double vision"],me:["Antibodies to acetylcholine receptor"],te:["AChR antibodies"],tr:[["Pyridostigmine, immunotherapy","good",""]],s:[]},
-  {g:"neuro",n:"Multiple sclerosis",sn:"MS",t:4,red:1,f:"Rare",cl:["Past neuro episodes","Heat sensitivity"],me:["CNS demyelination"],te:["MRI"],tr:[],s:[]},
-  {g:"drug",n:"Medicines",t:1,f:"Common",cl:["Beta blockers, antihistamines","Opioids, gabapentinoids, antidepressants"],me:["Sedation, bradycardia"],te:["Medicine review"],tr:[["Deprescribe or swap","good",""]],s:[]},
-  {g:"drug",n:"Alcohol & cannabis",sn:"Alcohol, cannabis",t:2,f:"Common",cl:["Daily use"],me:["Sleep disruption"],te:["AUDIT-C"],tr:[],s:[]},
-  {g:"ser",n:"Cancer",t:3,red:1,std:1,f:"0.6% pooled; 1.1–2.2% at 9 months",cl:["Weight loss, night sweats","Age 60+, abdominal pain","Anaemia"],me:["Cytokines, anaemia, cachexia"],te:["Guided by clues; FBC"],tr:[],s:["stadje","white"]}
-];
-var gIdx = {}; G.forEach(function(g,i){gIdx[g.id]=i;});
-var svg = document.getElementById("svg"), NS = "http://www.w3.org/2000/svg", CX=550, CY=550, RG=250;
+// Map data. Node: [group, name, short label, tier 1-4, flags ("s" = usually found by standard tests, "r" = don't miss), how common, clues, mechanisms, tests, trials [[name, good|mixed|bad, note]], behind (labels this can sit behind or drive), source keys]
+var MAPS = {
+fatigue: {label:"Tiredness", centre:"Tired", groups:[["mind","Mind & mood"],["sleep","Sleep"],["blood","Blood & nutrients"],["horm","Hormones"],["inf","Infection & post-viral"],["auto","Autonomic"],["imm","Immune"],["neuro","Nerve & muscle"],["drug","Medicines"],["ser","Serious"]],
+ nodes:[
+ ["mind","Depression","",1,"s","18.5% of tired GP patients",["Low mood, loss of interest","Early waking"],["Altered reward and sleep circuits","Inflammation in a subgroup"],["PHQ-9"],[["Treat depression","good","Effective treatments; fatigue often improves"]],[],["stadje"]],
+ ["mind","Anxiety & stress","Anxiety, stress",1,"s","Common, no pooled rate",["Worry, tension, poor sleep"],["Sustained arousal, poor sleep quality"],["GAD-7"],[],[],["afp"]],
+ ["mind","ADHD / autistic burnout","ADHD / autism",2,"","Clinic data only",["Lifelong patterns","Crash after masking or sensory load"],["Executive and sensory load","Overlaps with hypermobility and dysautonomia"],["ASRS v1.1","AQ-10"],[["ADHD treatment","good","Improves function; stimulants raise HR"]],["Depression","Anxiety & stress","Insomnia"],[]],
+ ["sleep","Insomnia","",1,"s","Common",["Trouble falling or staying asleep"],["Hyperarousal"],["Sleep diary"],[["CBT for insomnia","good","First-line and durable"]],["Depression","Anxiety & stress"],[]],
+ ["sleep","Sleep apnoea","",2,"","20% men / 10% women (mid-age, population)",["Snoring, witnessed apnoeas","Morning headache"],["Fragmented sleep, intermittent low oxygen"],["STOP-BANG","Home sleep study"],[["CPAP or splint","good","Improves sleepiness"]],["Depression","Insomnia","Fibromyalgia"],["osa"]],
+ ["sleep","Body clock / shift work","Body clock",2,"","Common",["Night owl since teens","Shift work"],["Circadian misalignment"],["Sleep diary"],[["Morning light, timed melatonin","mixed","Helps delayed sleep phase"]],["Insomnia","Depression"],[]],
+ ["blood","Iron deficiency (no anaemia)","Low iron",2,"","Common in menstruating women",["Heavy periods, vegetarian, blood donor","Restless legs"],["Low iron stores affect muscle and brain energy"],["Ferritin (with CRP)"],[["Oral iron, ferritin <50","good","Fatigue fell 47.7% vs 28.8% placebo (n=198)"]],["Depression","Restless sleep"],["vaucher"]],
+ ["blood","Anaemia","",2,"s","2.8% of tired GP patients",["Breathless, pale","Bleeding"],["Less oxygen delivered"],["FBC"],[["Treat the cause","good","Investigate bleeding"]],[],["stadje"]],
+ ["blood","B12 / folate","",3,"s","Less common",["Pins and needles, sore tongue","Metformin, PPI, vegan"],["Impaired DNA synthesis and myelin"],["B12, folate"],[["Replace","good",""]],["Depression"],[]],
+ ["blood","Coeliac disease","Coeliac",3,"s","About 1% of people",["Bloating, loose stools","Iron deficiency"],["Malabsorption, inflammation"],["tTG-IgA + total IgA"],[["Gluten-free diet","good",""]],["Iron deficiency (no anaemia)","Depression"],[]],
+ ["horm","Hypothyroidism","Thyroid",2,"s","Among the most frequent serious causes",["Cold, weight gain, constipation"],["Low metabolic rate"],["TSH"],[["Thyroxine","good","Fatigue can lag a normal TSH"]],["Depression"],["stadje"]],
+ ["horm","Diabetes","",2,"s","Among the most frequent serious causes",["Thirst, urination"],["High glucose"],["HbA1c"],[],[],["stadje"]],
+ ["horm","Perimenopause","Meno- pause",2,"","Common",["Cycle change, hot flushes","Night waking"],["Hormonal shifts disrupt sleep and mood"],["Clinical history"],[["MHT for hot flushes","good","Often improves sleep too"]],["Depression","Insomnia","Anxiety & stress"],[]],
+ ["horm","Addison's disease","Addison's",4,"r","Rare",["Weight loss, salt craving","Pigmentation, low sodium"],["Cortisol and aldosterone deficiency"],["Morning cortisol, then Synacthen test"],[["Steroid replacement","good","Can be fatal if missed"]],["Depression"],[]],
+ ["inf","Post-viral fatigue","Post-viral",1,"","Common",["Clear start after an infection"],["Immune activation, usually settles"],["Time and pacing"],[["Pacing early","mixed","NICE: energy advice from 6 weeks"]],[],["nice"]],
+ ["inf","ME/CFS","",3,"","0.7–1.9% of tired GP patients",["Crash 12–72 h after effort","Unrefreshing sleep, brain fog"],["Impaired preload and oxygen extraction on exercise","Immune and autoantibody hypotheses","Plasma cell / NK cell signals (pilot)"],["DSQ-PEM","IOM 2015 criteria"],[["Pacing (NICE 2021)","mixed","Standard of care; no graded exercise"],["Pyridostigmine (single dose)","good","Peak VO2 +54 mL/min vs placebo, n=45"],["Rituximab","bad","Response 26% vs 35% placebo, n=151"],["Daratumumab","mixed","Open pilot: 6/10 improved"]],["Depression","Anxiety & stress","Fibromyalgia"],["stadje","pyr","fluge19","dara","nice"]],
+ ["inf","Long COVID","",2,"","4.5% of infected develop ME/CFS",["Symptoms 3+ months after COVID"],["Persistent virus, immune, clotting and autonomic theories"],["NASEM 2024 definition"],[["BC 007","bad","Phase 2 n=119 unsuccessful"],["Low-dose naltrexone","mixed","Retrospective positive; RCT running"]],["Depression","Anxiety & stress"],["recover","bc007","ldn","ldnrct"]],
+ ["auto","POTS / orthostatic intolerance","POTS",3,"","Clinic data; 32% of one ME/CFS cohort",["Worse upright, better lying","HR rise ≥30 on standing"],["Low blood volume","Small fibre neuropathy","Hyperadrenergic","Autoantibodies (contested)"],["10-minute stand"],[["Fluids, salt, compression","mixed","Guideline-backed"],["Low-dose propranolol","good","10–20 mg beat 80 mg"],["IVIG","bad","No better than albumin (n=30)"]],["Anxiety & stress","Depression"],["raj","istand","hall"]],
+ ["auto","Hypermobility-related","Hyper- mobility",3,"","Common in ND and POTS clinics",["Bendy joints, subluxations","Pain, dizziness"],["Lax connective tissue, venous pooling"],["Beighton score"],[["Physio, strengthening","mixed",""]],["POTS / orthostatic intolerance","Fibromyalgia","Anxiety & stress"],[]],
+ ["imm","Fibromyalgia","Fibro- myalgia",2,"","2–4% of people",["Widespread pain 3+ months","Unrefreshing sleep"],["Central sensitisation","Small fibre pathology in ~49%"],["ACR 2016 criteria"],[["Exercise to tolerance","good","EULAR strong-for"],["Low-dose naltrexone","bad","RCT n=99: no better than placebo"]],["Depression"],["grayston","ldnfm"]],
+ ["imm","MCAS / mastocytosis","MCAS",4,"","Rare when ASCIA criteria used",["Episodic flushing plus gut, wheeze or low BP"],["Mast cell mediator release"],["Acute + baseline tryptase"],[["H1/H2 antihistamines","mixed","Limited trials"]],["Anxiety & stress"],["ascia"]],
+ ["neuro","Small fibre neuropathy","Small fibre",3,"","~49% in fibromyalgia (clinic)",["Burning feet or hands","Sweating changes"],["Loss of small sensory and autonomic fibres"],["Skin biopsy"],[["IVIG (antibody-positive)","bad","Pilot RCT n=17: no benefit"]],["Fibromyalgia","POTS / orthostatic intolerance"],["grayston","sfnivig"]],
+ ["neuro","Myasthenia gravis","Myas- thenia",4,"r","Rare",["Weakness that worsens with use","Droopy eyelids, double vision"],["Antibodies to acetylcholine receptor"],["AChR antibodies"],[["Pyridostigmine, immunotherapy","good",""]],[],[]],
+ ["drug","Medicines","",1,"","Common",["Beta blockers, antihistamines","Opioids, gabapentinoids"],["Sedation, slow heart rate"],["Medicine review"],[["Deprescribe or swap","good",""]],["Depression"],[]],
+ ["drug","Alcohol & cannabis","Alcohol, cannabis",2,"","Common",["Daily use"],["Sleep disruption"],["AUDIT-C"],[],["Insomnia","Depression","Anxiety & stress"],[]],
+ ["ser","Cancer","",3,"rs","0.6% pooled; 1.1–2.2% at 9 months",["Weight loss, night sweats","Age 60+, anaemia"],["Cytokines, anaemia, weight loss"],["Guided by clues"],[],[],["stadje","white"]]
+ ]},
+fog: {label:"Brain fog", centre:"Foggy", groups:[["sleep","Sleep"],["mind","Mind & wiring"],["horm","Hormones"],["blood","Blood & nutrients"],["auto","Blood flow"],["inf","Post-viral"],["drug","Medicines"],["neuro","Brain"]],
+ nodes:[
+ ["sleep","Poor or short sleep","Poor sleep",1,"","Very common",["Fewer than 7 hours, shift work","Weekend catch-up"],["Sleep loss impairs attention and memory"],["Sleep diary"],[["Sleep extension, CBT for insomnia","good",""]],["Depression & anxiety"],[]],
+ ["sleep","Sleep apnoea","",2,"","20% men / 10% women (mid-age)",["Snoring, morning headache"],["Intermittent low oxygen, fragmented sleep"],["STOP-BANG, sleep study"],[["CPAP","good","Improves sleepiness"]],["Depression & anxiety","ADHD"],["osa"]],
+ ["mind","Depression & anxiety","Mood",1,"s","Very common",["Low mood, worry","Concentration worse with stress"],["Attention captured by worry; slowed processing"],["PHQ-9, GAD-7"],[["Treat mood","good",""]],[],[]],
+ ["mind","ADHD","",2,"","Common; often missed in women",["Lifelong distractibility","Time blindness"],["Executive function differences"],["ASRS v1.1, then assessment"],[["Stimulants","good","Large effects on attention"]],["Depression & anxiety","Poor or short sleep"],[]],
+ ["mind","Autistic burnout","Burnout",3,"","Described mainly in qualitative research",["Shutdowns after masking","Sensory overload"],["Chronic load exceeding capacity"],["AQ-10, history"],[["Reduce load, accommodations","mixed",""]],["Depression & anxiety"],[]],
+ ["horm","Perimenopause","Meno- pause",2,"","Very common in 40s–50s",["Cycle change, hot flushes, word-finding"],["Oestrogen fluctuation, night waking"],["Clinical history"],[["MHT","mixed","Helps hot flushes and sleep; not proven for memory"]],["Depression & anxiety","Poor or short sleep"],[]],
+ ["horm","Thyroid","",2,"s","Common",["Cold, slowed, constipated"],["Low metabolic rate"],["TSH"],[["Thyroxine","good",""]],["Depression & anxiety"],[]],
+ ["horm","Low blood sugar","Hypo- glycaemia",3,"","Mainly with diabetes treatment",["Fog before meals, shaky"],["Brain glucose supply falls"],["Glucose during symptoms"],[],[],[]],
+ ["blood","Low iron","",2,"","Common in menstruating women",["Heavy periods, restless legs"],["Iron needed for brain energy and neurotransmitters"],["Ferritin"],[["Iron if ferritin low","good","Improves fatigue (RCT)"]],["Depression & anxiety"],["vaucher"]],
+ ["blood","B12 deficiency","B12",3,"s","Less common",["Pins and needles, vegan, metformin"],["Impaired myelin"],["B12"],[["Replace","good",""]],["Depression & anxiety"],[]],
+ ["blood","Coeliac disease","Coeliac",3,"s","About 1% of people",["Gut symptoms, iron deficiency"],["Malabsorption, inflammation"],["tTG-IgA"],[["Gluten-free diet","good",""]],["Low iron"],[]],
+ ["auto","POTS / orthostatic intolerance","POTS",3,"","Clinic data",["Fog worse upright and in heat"],["Reduced blood flow to the brain when upright"],["10-minute stand"],[["Fluids, salt, compression","mixed",""]],["Depression & anxiety","ADHD"],["raj"]],
+ ["inf","Long COVID","",2,"","Brain fog is among its commonest symptoms",["Started after COVID"],["Neuroinflammation, microclots, autonomic theories"],["NASEM 2024 definition"],[["Cognitive rehab, pacing","mixed","No proven drug"]],["Depression & anxiety"],["recover"]],
+ ["inf","ME/CFS","",3,"","Brain fog is a core criterion",["Crash after mental effort too"],["Post-exertional malaise affects cognition"],["DSQ-PEM"],[["Pacing","mixed",""]],["Depression & anxiety","ADHD"],["nice"]],
+ ["drug","Anticholinergic medicines","Anti- cholinergics",1,"","Common, especially in older people",["Antihistamines, bladder drugs, amitriptyline"],["Block acetylcholine needed for memory"],["Medicine review (ACB score)"],[["Deprescribe","good",""]],["Early dementia"],[]],
+ ["drug","Alcohol, cannabis, benzodiazepines","Alcohol etc",2,"","Common",["Daily use"],["Sedation, poorer sleep"],["AUDIT-C"],[],["Poor or short sleep","Depression & anxiety"],[]],
+ ["neuro","Early dementia","Dementia",3,"r","Mainly over 65",["Getting lost, repeating questions","Family notices"],["Neurodegeneration"],["Cognitive screen, bloods, imaging"],[],["Depression & anxiety"],[]],
+ ["neuro","Multiple sclerosis","MS",4,"r","Rare",["Past numbness or vision episodes"],["Demyelination"],["MRI"],[],["Depression & anxiety"],[]],
+ ["neuro","Autoimmune encephalitis","Encepha- litis",4,"r","Rare",["Rapid change, seizures, psychiatric change"],["Antibodies to brain receptors"],["Specialist: MRI, CSF, antibodies"],[["Immunotherapy","good","Treatable if caught"]],["Depression & anxiety"],[]]
+ ]},
+pain: {label:"Pain", centre:"Pain", groups:[["msk","Joints & muscles"],["nerve","Nerves"],["central","Pain processing"],["imm","Immune & inflammatory"],["horm","Hormones & metabolism"],["pelvic","Pelvic"],["drug","Medicines"],["ser","Serious"]],
+ nodes:[
+ ["msk","Osteoarthritis","OA",1,"s","Very common after 50",["Worse with use, morning stiffness <30 min"],["Joint cartilage and bone change"],["Clinical; X-ray if needed"],[["Exercise, weight loss (GLA:D)","good",""]],["Depression & sleep"],[]],
+ ["msk","Non-specific back or neck pain","Back pain",1,"","Very common",["Mechanical, varies with posture"],["Tissue sensitivity, deconditioning"],["Clinical"],[["Stay active, exercise","good",""],["Long-term opioids","bad","Poor function, harms"]],["Depression & sleep"],[]],
+ ["msk","Hypermobility","Hyper- mobility",2,"","Common in neurodivergent people",["Bendy joints, subluxations"],["Joint instability, muscle overwork"],["Beighton score"],[["Physio, strengthening","mixed",""]],["Fibromyalgia","Depression & sleep"],[]],
+ ["msk","Statin muscle pain","Statin",2,"","Common complaint; usually not caused by the statin in blinded trials",["Started after statin"],["Rarely true myopathy"],["CK if weak"],[["N-of-1 rechallenge","good","Most symptoms also on placebo"]],[],[]],
+ ["nerve","Small fibre neuropathy","Small fibre",3,"","~49% in fibromyalgia (clinic)",["Burning, tingling feet and hands"],["Loss of small nerve fibres"],["Skin biopsy"],[["IVIG","bad","Pilot RCT n=17: no benefit"]],["Fibromyalgia"],["grayston","sfnivig"]],
+ ["nerve","Diabetic neuropathy","Diabetes",2,"s","Common in diabetes",["Burning feet at night"],["Nerve damage from glucose"],["HbA1c, foot exam"],[["Duloxetine, pregabalin, amitriptyline","mixed","Modest effects"]],[],[]],
+ ["nerve","B12 deficiency","B12",3,"s","Less common",["Tingling, unsteady"],["Myelin damage"],["B12"],[["Replace","good",""]],[],[]],
+ ["central","Fibromyalgia","Fibro- myalgia",2,"","2–4% of people",["Widespread pain, unrefreshing sleep"],["Central sensitisation"],["ACR 2016 criteria"],[["Exercise","good","EULAR strong-for"],["Low-dose naltrexone","bad","RCT n=99: no better than placebo"]],["Depression & sleep"],["ldnfm"]],
+ ["central","Depression & poor sleep","Depression & sleep",1,"","Very common companions",["Low mood, broken sleep"],["Shared brain pathways amplify pain"],["PHQ-9, sleep history"],[["Treat both","good",""]],[],[]],
+ ["central","CRPS","",4,"","Rare",["Burning, colour and swelling change after injury"],["Nerve and immune changes"],["Budapest criteria"],[["Early physio, specialist","mixed",""]],["Depression & sleep"],[]],
+ ["imm","Inflammatory arthritis","Arthritis",3,"s","Less common",["Swollen joints, morning stiffness >1 h"],["Immune attack on joints"],["CRP, RF, anti-CCP"],[["DMARDs","good",""]],["Fibromyalgia"],[]],
+ ["imm","Polymyalgia rheumatica","PMR",3,"rs","Over 50s",["Shoulder and hip girdle stiffness"],["Inflammation"],["ESR/CRP"],[["Prednisolone","good","Dramatic response"]],[],[]],
+ ["imm","Spondyloarthritis","Spondylo- arthritis",3,"","Often diagnosed years late",["Back pain under 45, better with exercise, night pain"],["Spinal and joint inflammation"],["HLA-B27, MRI SI joints"],[["Biologics","good",""]],["Non-specific back or neck pain"],[]],
+ ["horm","Hypothyroidism","Thyroid",2,"s","Common",["Aches, cold, tired"],["Muscle metabolism slows"],["TSH, CK"],[["Thyroxine","good",""]],[],[]],
+ ["horm","Low vitamin D (osteomalacia)","Vit D",3,"s","Low levels common; osteomalacia rare",["Bone pain, little sun"],["Poor bone mineralisation"],["Vitamin D, calcium, ALP"],[["Replace if deficient","mixed","Little effect on pain if levels normal"]],[],[]],
+ ["pelvic","Endometriosis","Endo",2,"","About 1 in 7–9 women",["Painful periods, pain with sex or bowels"],["Endometrial-like tissue outside the uterus"],["Ultrasound, laparoscopy"],[["Hormonal treatment, surgery","good",""]],["Depression & sleep","Fibromyalgia"],[]],
+ ["drug","Opioid-induced hyperalgesia","Opioid hyper.",3,"","Under-recognised",["Pain spreads as dose rises"],["Opioids sensitise pain pathways"],["Medicine review"],[["Taper","mixed",""]],["Fibromyalgia"],[]],
+ ["ser","Cancer or infection","Cancer / infection",4,"r","Rare",["Night pain, weight loss, fever"],["Bone metastases, myeloma, abscess"],["FBC, ESR, imaging"],[],[],[]]
+ ]},
+head: {label:"Headache", centre:"Headache", groups:[["prim","Primary headache"],["mo","Medicine overuse"],["sleep","Sleep & breathing"],["face","Neck, jaw & sinus"],["press","Pressure"],["vasc","Blood vessels"],["horm","Hormones"],["ser","Serious"]],
+ nodes:[
+ ["prim","Tension-type headache","Tension-type",1,"","Most common headache worldwide",["Band-like, both sides, no nausea"],["Pericranial muscle tenderness, central sensitisation"],["Clinical"],[["Amitriptyline (chronic)","mixed",""]],["Medication overuse headache"],[]],
+ ["prim","Migraine","",1,"","About 1 in 7 people",["One-sided, throbbing, nausea, light sensitivity"],["Trigeminovascular activation, CGRP release"],["Clinical (ICHD-3)"],[["CGRP antibodies","good","Positive RCTs in prevention"],["Botox (chronic migraine)","good","Positive RCTs"]],["Medication overuse headache"],[]],
+ ["prim","Cluster headache","Cluster",4,"","About 1 in 1,000",["Severe one-sided eye pain, watery eye, restless"],["Hypothalamic activation"],["Clinical"],[["High-flow oxygen, triptan injection","good",""]],[],[]],
+ ["mo","Medication overuse headache","Medication overuse",2,"","1–2% of people",["Painkillers 10–15+ days a month"],["Frequent analgesics lower the headache threshold"],["Medicine diary"],[["Withdrawal plus prevention","good",""]],[],[]],
+ ["mo","Caffeine withdrawal","Caffeine",2,"","Common",["Weekend headache, late coffee"],["Withdrawal vasodilation"],["History"],[],[],[]],
+ ["sleep","Sleep apnoea","",2,"","20% men / 10% women (mid-age)",["Morning headache, snoring"],["Overnight carbon dioxide rise"],["Sleep study"],[["CPAP","good",""]],["Tension-type headache","Migraine"],["osa"]],
+ ["sleep","Poor sleep","",1,"","Common",["Short or broken sleep"],["Lowers headache threshold"],["Sleep diary"],[],["Migraine","Tension-type headache"],[]],
+ ["face","Neck (cervicogenic)","Neck",2,"","Common",["Starts in the neck, worse with neck movement"],["Referred pain from upper neck joints"],["Clinical"],[["Physio","mixed",""]],["Tension-type headache"],[]],
+ ["face","Jaw (TMD) and teeth grinding","Jaw",2,"","Common",["Jaw clicking, morning jaw ache"],["Muscle overuse, referred pain"],["Clinical, dental"],[["Splint, physio","mixed",""]],["Tension-type headache"],[]],
+ ["face","Sinusitis","Sinus",3,"","Over-diagnosed; most 'sinus headache' is migraine",["Facial pain with fever and pus"],["Sinus infection"],["Clinical"],[],["Migraine"],[]],
+ ["press","Raised pressure (IIH)","IIH",4,"r","Rare; mostly young women with higher weight",["Worse lying down, pulsing noise in ears, vision blurs"],["Raised brain fluid pressure"],["Eye exam for swollen discs"],[["Weight loss, acetazolamide","good",""]],["Migraine"],[]],
+ ["press","Low pressure (CSF leak)","CSF leak",4,"","Rare; linked to hypermobility",["Worse upright, better lying within minutes"],["Spinal fluid leak"],["MRI with contrast"],[["Blood patch","good",""]],["Migraine","POTS"],[]],
+ ["vasc","Giant cell arteritis","GCA",3,"r","Over 50s",["New headache, jaw pain on chewing, scalp tender"],["Inflamed arteries; risk of blindness"],["ESR/CRP, temporal artery ultrasound"],[["Urgent steroids","good",""]],[],[]],
+ ["vasc","POTS","",3,"","Clinic data",["Headache worse upright"],["Reduced brain blood flow when upright"],["10-minute stand"],[["Fluids, salt","mixed",""]],["Migraine"],[]],
+ ["horm","Menstrual migraine","Menstrual",2,"","Common in women with migraine",["Around periods"],["Oestrogen drop"],["Headache diary"],[["Short-term prevention","mixed",""]],[],[]],
+ ["ser","Bleed, tumour or infection","Serious",4,"r","Rare",["Thunderclap, fever, new neuro signs, age >50 new headache"],["Subarachnoid bleed, mass, meningitis"],["Urgent CT, specialist"],[],[],[]]
+ ]},
+gut: {label:"Gut", centre:"Gut", groups:[["func","Gut-brain"],["food","Food"],["absorb","Absorption"],["infl","Inflammation"],["motor","Movement"],["pelvic","Pelvic"],["drug","Medicines"],["ser","Serious"]],
+ nodes:[
+ ["func","Irritable bowel syndrome","IBS",1,"","About 4% of people (Rome IV)",["Pain linked to bowel habit change"],["Gut-brain signalling, visceral sensitivity"],["Rome IV; FBC, CRP, coeliac to exclude"],[["Low-FODMAP diet","good",""],["Low-dose amitriptyline","good","ATLANTIS RCT, n=463: better than placebo"],["Gut-directed hypnotherapy or CBT","good",""]],[],["rome","atlantis"]],
+ ["func","Functional dyspepsia","Dyspepsia",1,"","About 7% of people",["Early fullness, upper abdominal pain"],["Stomach sensitivity and emptying"],["H. pylori test"],[["H. pylori eradication if positive","good",""]],[],["rome"]],
+ ["food","Lactose or fructose malabsorption","Lactose",2,"","Common, varies by ancestry",["Bloating after dairy or fruit"],["Sugars fermented by gut bacteria"],["Diet trial"],[["Reduce trigger","good",""]],["Irritable bowel syndrome"],[]],
+ ["absorb","Coeliac disease","Coeliac",2,"s","About 1% of people",["Bloating, loose stools, low iron"],["Gluten triggers immune damage"],["tTG-IgA (eating gluten)"],[["Gluten-free diet","good",""]],["Irritable bowel syndrome"],[]],
+ ["absorb","Bile acid diarrhoea","Bile acid",2,"","About 1 in 3 with IBS-diarrhoea",["Watery diarrhoea, urgency, post-gallbladder"],["Excess bile acids reach the colon"],["SeHCAT (limited in Australia); trial of binder"],[["Colestyramine","good","Response 70–96% by severity"]],["Irritable bowel syndrome"],["wedlake"]],
+ ["absorb","Pancreatic insufficiency","Pancreas",3,"","Under-recognised, older adults and diabetes",["Pale, greasy stools, weight loss"],["Too few digestive enzymes"],["Faecal elastase"],[["Enzyme replacement","good",""]],["Irritable bowel syndrome"],[]],
+ ["infl","Inflammatory bowel disease","IBD",3,"r","Less common",["Blood, night diarrhoea, weight loss"],["Immune inflammation of the gut"],["Faecal calprotectin, colonoscopy"],[["Disease-specific","good",""]],["Irritable bowel syndrome"],[]],
+ ["infl","Microscopic colitis","Micro colitis",3,"","Mostly older women",["Watery diarrhoea; PPI, NSAID, SSRI use"],["Inflammation seen only on biopsy"],["Colonoscopy with biopsies"],[["Budesonide","good",""]],["Irritable bowel syndrome"],[]],
+ ["infl","MCAS","",4,"","Rare when ASCIA criteria used",["Episodes with flushing or wheeze"],["Mast cell mediators"],["Acute + baseline tryptase"],[["Antihistamines","mixed",""]],["Irritable bowel syndrome"],["ascia"]],
+ ["motor","Constipation","",1,"","Very common",["Straining, hard stools, bloating"],["Slow transit or pelvic floor dyssynergia"],["Clinical; X-ray rarely"],[["Fibre, laxatives, biofeedback","good",""]],["Irritable bowel syndrome"],[]],
+ ["motor","Dysmotility (POTS, hypermobility)","Dysmotility",3,"","Clinic data",["Gut symptoms plus dizziness or bendy joints"],["Autonomic nerve control of the gut"],["Gastric emptying study"],[],["Irritable bowel syndrome","Functional dyspepsia"],[]],
+ ["motor","SIBO","",3,"","Testing contested",["Bloating soon after meals"],["Bacteria in the small bowel"],["Breath test (limited accuracy)"],[["Rifaximin","mixed","Modest benefit in IBS"]],["Irritable bowel syndrome"],[]],
+ ["pelvic","Endometriosis","Endo",2,"","About 1 in 7–9 women",["Pain with periods or bowel movements"],["Bowel involvement or shared nerves"],["Ultrasound, laparoscopy"],[["Hormonal, surgical","good",""]],["Irritable bowel syndrome"],[]],
+ ["drug","Medicines","",1,"","Common",["Metformin, magnesium, PPIs, GLP-1 drugs, opioids"],["Direct gut effects"],["Medicine review"],[["Swap or adjust","good",""]],["Irritable bowel syndrome","Constipation"],[]],
+ ["ser","Bowel or ovarian cancer","Cancer",4,"r","Rare, rises with age",["Blood, weight loss, change over 50, bloating in older women"],["Tumour"],["FIT, CA-125, colonoscopy"],[],["Irritable bowel syndrome"],[]]
+ ]},
+bladder: {label:"Bladder", centre:"Bladder", groups:[["blad","Bladder"],["floor","Pelvic floor"],["horm","Hormones"],["inf","Infection"],["urine","Urine output"],["nerve","Nerves"],["male","Prostate"],["ser","Serious"]],
+ nodes:[
+ ["blad","Overactive bladder","OAB",1,"","About 1 in 8 adults",["Urgency, frequency, getting up at night"],["Detrusor overactivity, sensory sensitivity"],["Bladder diary"],[["Bladder training","good",""],["Mirabegron, antimuscarinics","mixed","Antimuscarinics add anticholinergic load"],["Botox to bladder","good",""]],[],[]],
+ ["blad","Bladder pain syndrome","Bladder pain",3,"","Less common",["Pain as the bladder fills, relieved by emptying","Sterile urine"],["Bladder lining and nerve sensitisation"],["Exclude infection; cystoscopy"],[["Amitriptyline, bladder instillations","mixed",""]],["Recurrent UTI","Overactive bladder"],[]],
+ ["floor","Pelvic floor weakness","Weak floor",1,"","Common after childbirth",["Leaks with cough or exercise"],["Weak support of the urethra"],["Pelvic floor assessment"],[["Pelvic floor training","good",""]],["Overactive bladder"],[]],
+ ["floor","Overactive (tight) pelvic floor","Tight floor",2,"","Under-recognised",["Hesitancy, pain, constipation"],["Muscles can't relax"],["Pelvic physio assessment"],[["Down-training physio","mixed",""]],["Bladder pain syndrome","Recurrent UTI"],[]],
+ ["horm","Genitourinary syndrome of menopause","Menopause",1,"","Very common after menopause",["Dryness, urgency, recurrent UTI"],["Low oestrogen thins tissues"],["Examination"],[["Vaginal oestrogen","good","Also cuts recurrent UTI"]],["Overactive bladder","Recurrent UTI"],[]],
+ ["inf","Recurrent UTI","",2,"s","Common in women",["Burning, frequency, positive cultures"],["Bacterial infection, sometimes persisting in the bladder wall"],["Urine culture each time"],[["Methenamine","good","Non-inferior to antibiotic prophylaxis (ALTAR)"],["Cranberry","good","Reduces UTI in recurrent UTI (Cochrane)"]],["Overactive bladder"],["altar","cranberry"]],
+ ["inf","STI","",3,"s","Common in younger adults",["Discharge, new partner"],["Chlamydia, gonorrhoea, mycoplasma"],["NAAT"],[["Treat","good",""]],["Recurrent UTI"],[]],
+ ["urine","Diabetes or high calcium","Diabetes",2,"s","Common",["Thirst, large volumes"],["Osmotic diuresis"],["HbA1c, calcium"],[],["Overactive bladder"],[]],
+ ["urine","Night-time urine (nocturnal polyuria)","Nocturnal polyuria",2,"","Common in older adults",["Large volumes at night"],["Sleep apnoea, heart failure, evening fluids"],["Frequency-volume chart"],[["Treat cause","good",""]],["Overactive bladder"],[]],
+ ["urine","Caffeine and alcohol","Caffeine",1,"","Common",["Coffee, tea, energy drinks"],["Bladder irritation, diuresis"],["Diary"],[["Cut down","good",""]],["Overactive bladder"],[]],
+ ["nerve","MS or spinal cord problem","MS / spine",4,"r","Rare",["Leg numbness, back pain, saddle numbness"],["Nerve control of bladder lost"],["Neuro exam, MRI"],[],["Overactive bladder"],[]],
+ ["nerve","Constipation","",1,"","Very common",["Hard stools"],["Full bowel presses on bladder"],["History"],[["Treat constipation","good",""]],["Overactive bladder","Recurrent UTI"],[]],
+ ["male","Enlarged prostate","Prostate",1,"s","Common over 50",["Weak stream, dribbling, getting up at night"],["Prostate narrows the outlet"],["Exam, PSA after counselling"],[["Tamsulosin, finasteride","good",""]],["Overactive bladder"],[]],
+ ["male","Chronic prostatitis / pelvic pain","CPPS",3,"","Common under-50s men",["Pelvic or perineal pain, sterile urine"],["Pelvic floor and nerve sensitisation"],["Exclude infection"],[["Multimodal (physio, alpha-blocker)","mixed",""]],["Recurrent UTI"],[]],
+ ["ser","Bladder or kidney cancer","Cancer",4,"r","Rare",["Visible blood in urine, smoker"],["Tumour"],["Urine cytology, CT, cystoscopy"],[],["Recurrent UTI","Overactive bladder"],[]]
+ ]}
+};
+
+function sb(){var m=document.querySelector("#tm .mapsec");if(!m)return;m.style.marginLeft="0px";m.style.width="";var l=m.getBoundingClientRect().left,w=document.documentElement.clientWidth;m.style.width=w+"px";m.style.marginLeft=(-l)+"px";} sb(); addEventListener("resize",sb);
+// ---------- maps ----------
+var svg = document.getElementById("svg"), NS = "http://www.w3.org/2000/svg", W = 1400, H = 1000, CX = 700, CY = 500;
 var R_T = {1:40,2:34,3:28,4:23}, FILL = {1:"var(--t1)",2:"var(--t2)",3:"var(--t3)",4:"var(--t4)"}, TXT = {1:"var(--bg)",2:"var(--bg)",3:"var(--ink)",4:"var(--ink)"};
 function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e;}
 function wrap(s,max){var w=s.split(" "),l=[""];w.forEach(function(x){if((l[l.length-1]+" "+x).trim().length>max)l.push(x);else l[l.length-1]=(l[l.length-1]+" "+x).trim();});return l;}
-// central node
-var lines = el("g",{});
-el("circle",{cx:CX,cy:CY,r:62,fill:"var(--accent)"});
-var ct = el("text",{x:CX,y:CY+8,"text-anchor":"middle","font-family":"Sora, sans-serif","font-size":"26","font-weight":"700",fill:"#16202B"}); ct.textContent="Tired";
-var nodes = [];
-G.forEach(function(g,gi){
-  var a = gi/G.length*Math.PI*2 - Math.PI/2, gx = CX+Math.cos(a)*RG*0.62, gy = CY+Math.sin(a)*RG*0.62;
-  el("line",{x1:CX,y1:CY,x2:gx,y2:gy,stroke:"var(--line)","stroke-width":"2"},lines);
-  var kids = C.filter(function(c){return c.g===g.id;});
-  kids.forEach(function(c,k){
-    var spread = Math.PI*2/G.length*0.7, ka = a + (kids.length>1 ? (k/(kids.length-1)-0.5)*spread : 0), rr = RG + 100 + (k%2)*105;
-    c.x = CX+Math.cos(ka)*rr; c.y = CY+Math.sin(ka)*rr; c.gx = gx; c.gy = gy;
-  });
-  var gg = el("g",{class:"grp"}); el("circle",{cx:gx,cy:gy,r:8,fill:"var(--teal)"},gg);
-  var lab = wrap(g.n,14), ty = gy + (Math.sin(a)>0.3?26:-14 - (lab.length-1)*17);
-  lab.forEach(function(l,i){var t=el("text",{x:gx,y:ty+i*17,"text-anchor":"middle"},gg);t.textContent=l;});
-});
-// push overlapping bubbles apart (and away from the centre), then draw the links
-for (var it=0; it<300; it++) {
-  for (var i1=0;i1<C.length;i1++) for (var j1=i1+1;j1<C.length;j1++) {
-    var A=C[i1],B=C[j1],dx=B.x-A.x,dy=B.y-A.y,d=Math.sqrt(dx*dx+dy*dy)||1,m=R_T[A.t]+R_T[B.t]+8;
-    if (d<m){var k2=(m-d)/2/d;A.x-=dx*k2;A.y-=dy*k2;B.x+=dx*k2;B.y+=dy*k2;}
-  }
-  C.forEach(function(c){var r=R_T[c.t],dx=c.x-CX,dy=c.y-CY,d=Math.sqrt(dx*dx+dy*dy)||1;if(d<RG+60){c.x=CX+dx/d*(RG+60);c.y=CY+dy/d*(RG+60);}c.x=Math.min(1100-r-6,Math.max(r+6,c.x));c.y=Math.min(1100-r-6,Math.max(r+6,c.y));});
-}
-C.forEach(function(c){el("line",{x1:c.gx,y1:c.gy,x2:c.x,y2:c.y,stroke:"var(--line)","stroke-width":"1.5"},lines);});
-C.forEach(function(c,i){
-  var g = el("g",{class:"nd",tabindex:"0",role:"button","aria-label":c.n});
-  var r = R_T[c.t]; el("circle",{cx:c.x,cy:c.y,r:r,fill:FILL[c.t],stroke:c.red?"var(--bad)":"none","stroke-width":c.red?"3":"0"},g);
-  var lab = wrap(c.sn||c.n, r>35?11:9).slice(0,3), fs = r>35?13:11;
-  lab.forEach(function(l,j){var t=el("text",{x:c.x,y:c.y+(j-(lab.length-1)/2)*fs*1.1+4,"text-anchor":"middle","font-size":fs,"font-weight":"600",fill:TXT[c.t]},g);t.style.fill=TXT[c.t];t.textContent=l;});
-  g.addEventListener("click",function(){show(i);}); g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();show(i);}});
-  c.node = g; nodes.push(g);
-});
-var panel = document.getElementById("panel");
 function li(a){return a&&a.length?"<ul>"+a.map(function(x){return "<li>"+x+"</li>";}).join("")+"</ul>":"";}
+var panel = document.getElementById("panel"), cur = null, C = [], G = [], mode = "all";
+function render(key){
+  var M = MAPS[key]; if (!M) return; cur = key; while (svg.firstChild) svg.removeChild(svg.firstChild);
+  G = M.groups; C = M.nodes.map(function(n){return {g:n[0],n:n[1],sn:n[2]||n[1],t:n[3],std:n[4].indexOf("s")>=0,red:n[4].indexOf("r")>=0,f:n[5],cl:n[6],me:n[7],te:n[8],tr:n[9],bh:n[10],s:n[11]};});
+  var defs = el("defs",{}); var mk = el("marker",{id:"arw",viewBox:"0 0 10 10",refX:"9",refY:"5",markerWidth:"7",markerHeight:"7",orient:"auto-start-reverse"},defs); el("path",{d:"M0 0L10 5L0 10z",fill:"var(--accent)"},mk);
+  var lines = el("g",{}), arrows = el("g",{id:"arrows"});
+  el("circle",{cx:CX,cy:CY,r:64,fill:"var(--accent)"});
+  var ct = el("text",{x:CX,y:CY+8,"text-anchor":"middle","font-size":"24","font-weight":"700",fill:"#16202B"}); ct.textContent = M.centre;
+  var RX = 300, RY = 185;
+  G.forEach(function(g,gi){
+    var a = gi/G.length*Math.PI*2 - Math.PI/2, gx = CX+Math.cos(a)*RX, gy = CY+Math.sin(a)*RY;
+    el("line",{x1:CX,y1:CY,x2:gx,y2:gy,stroke:"var(--line)","stroke-width":"2"},lines);
+    var kids = C.filter(function(c){return c.g===g[0];});
+    kids.forEach(function(c,k){
+      var spread = Math.PI*2/G.length*0.7, ka = a + (kids.length>1 ? (k/(kids.length-1)-0.5)*spread : 0), rr = 1.55 + (k%2)*0.42;
+      c.x = CX+Math.cos(ka)*RX*rr*1.12; c.y = CY+Math.sin(ka)*RY*rr; c.gx = gx; c.gy = gy;
+    });
+    var gg = el("g",{class:"grp"}); el("circle",{cx:gx,cy:gy,r:8,fill:"var(--teal)"},gg);
+    var lab = wrap(g[1],14), ty = gy + (Math.sin(a)>0.3?26:-14-(lab.length-1)*17);
+    lab.forEach(function(l,i){var t=el("text",{x:gx,y:ty+i*17,"text-anchor":"middle"},gg); t.textContent=l;});
+  });
+  for (var it=0; it<300; it++) {
+    for (var i1=0;i1<C.length;i1++) for (var j1=i1+1;j1<C.length;j1++) {
+      var A=C[i1],B=C[j1],dx=B.x-A.x,dy=B.y-A.y,d=Math.sqrt(dx*dx+dy*dy)||1,m=R_T[A.t]+R_T[B.t]+10;
+      if (d<m){var k2=(m-d)/2/d;A.x-=dx*k2;A.y-=dy*k2;B.x+=dx*k2;B.y+=dy*k2;}
+    }
+    C.forEach(function(c){var r=R_T[c.t],dx=(c.x-CX)/RX,dy=(c.y-CY)/RY,d=Math.sqrt(dx*dx+dy*dy)||1;if(d<1.32){c.x=CX+dx/d*1.32*RX;c.y=CY+dy/d*1.32*RY;}c.x=Math.min(W-r-6,Math.max(r+6,c.x));c.y=Math.min(H-r-6,Math.max(r+6,c.y));});
+  }
+  C.forEach(function(c){el("line",{x1:c.gx,y1:c.gy,x2:c.x,y2:c.y,stroke:"var(--line)","stroke-width":"1.5"},lines);});
+  C.forEach(function(c,i){
+    var g = el("g",{class:"nd",tabindex:"0",role:"button","aria-label":c.n});
+    var r = R_T[c.t]; el("circle",{cx:c.x,cy:c.y,r:r,fill:FILL[c.t],stroke:c.red?"var(--bad)":"none","stroke-width":c.red?"3":"0"},g);
+    var lab = wrap(c.sn, r>35?11:9).slice(0,3), fs = r>35?13:11;
+    lab.forEach(function(l,j){var t=el("text",{x:c.x,y:c.y+(j-(lab.length-1)/2)*fs*1.1+4,"text-anchor":"middle","font-size":fs,"font-weight":"600"},g); t.style.fill=TXT[c.t]; t.textContent=l;});
+    g.addEventListener("click",function(){show(i);}); g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();show(i);}});
+    c.node = g;
+  });
+  document.querySelectorAll("#tabs .chip").forEach(function(b){b.setAttribute("aria-pressed", String(b.dataset.map===key));});
+  svg.setAttribute("aria-label","Mind map of causes of "+M.label.toLowerCase()+", grouped by body system");
+  filt(mode, true);
+  var first = C.findIndex(function(c){return c.bh.length===0 && C.some(function(o){return o.bh.indexOf(c.n)>=0;});});
+  show(first>=0?first:0);
+}
+function byName(n){return C.findIndex(function(c){return c.n===n;});}
 function show(i){
-  var c = C[i];
-  panel.innerHTML = '<p class="eyebrow">'+G[gIdx[c.g]].n+(c.red?' · <span style="color:var(--bad)">don\'t miss</span>':'')+'</p><h3>'+c.n+'</h3><p class="freq">'+c.f+'</p>'+
+  var c = C[i]; if (!c) return;
+  var arrows = document.getElementById("arrows"); while (arrows.firstChild) arrows.removeChild(arrows.firstChild);
+  C.forEach(function(o){o.node.classList.remove("sel");}); c.node.classList.add("sel");
+  // causes that can hide behind this label point at it; this cause points at the labels it can hide behind
+  var hidden = C.filter(function(o){return o.bh.indexOf(c.n)>=0;});
+  var masks = c.bh.map(byName).filter(function(j){return j>=0;}).map(function(j){return C[j];});
+  function arrow(a,b){var dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||1,ra=R_T[a.t]+3,rb=R_T[b.t]+6,x1=a.x+dx/d*ra,y1=a.y+dy/d*ra,x2=b.x-dx/d*rb,y2=b.y-dy/d*rb,mx=(x1+x2)/2-dy*0.12,my=(y1+y2)/2+dx*0.12;
+    el("path",{d:"M"+x1+" "+y1+" Q"+mx+" "+my+" "+x2+" "+y2,fill:"none",stroke:"var(--accent)","stroke-width":"2.5","stroke-dasharray":"6 5","marker-end":"url(#arw)"},arrows);}
+  hidden.forEach(function(o){arrow(o,c);}); masks.forEach(function(o){arrow(c,o);});
+  var chip = function(o){return '<button type="button" class="chip mini" data-go="'+o.n.replace(/"/g,"&quot;")+'">'+o.n+'</button>';};
+  var other = c.bh.filter(function(n){return byName(n)<0;});
+  panel.innerHTML = '<p class="eyebrow">'+(G.filter(function(g){return g[0]===c.g;})[0]||["",""])[1]+(c.red?' · <span style="color:var(--bad)">don\'t miss</span>':'')+'</p><h3>'+c.n+'</h3><p class="freq">'+c.f+'</p>'+
+    (hidden.length?'<div class="behind"><p class="k">Look behind this label</p><p class="note">These can drive it, or be mistaken for it:</p><div class="chips">'+hidden.map(chip).join("")+'</div></div>':'')+
+    (masks.length||other.length?'<div class="behind"><p class="k">Can hide behind</p><div class="chips">'+masks.map(chip).join("")+other.map(function(n){return '<span class="chip mini">'+n+'</span>';}).join("")+'</div></div>':'')+
     '<p class="k">Clues</p>'+li(c.cl)+'<p class="k">Mechanisms</p>'+li(c.me)+'<p class="k">Tests</p>'+li(c.te)+
-    (c.tr.length?'<p class="k">Treatments and trials</p><div style="display:grid;gap:8px">'+c.tr.map(function(t){return '<div class="tr '+t[1]+'"><span class="verdict">'+({good:"Positive trial",mixed:"Mixed / early",bad:"Negative RCT"})[t[1]]+'</span><b>'+t[0]+'</b>'+(t[2]?'<span>'+t[2]+'</span>':'')+'</div>';}).join("")+'</div>':'')+
+    (c.tr.length?'<p class="k">Treatments and trials</p><div style="display:grid;gap:8px">'+c.tr.map(function(t){return '<div class="tr '+t[1]+'"><span class="verdict">'+({good:"Positive trial or standard care",mixed:"Mixed / early",bad:"Negative RCT"})[t[1]]+'</span><b>'+t[0]+'</b>'+(t[2]?'<span>'+t[2]+'</span>':'')+'</div>';}).join("")+'</div>':'')+
     (c.s.length?'<p class="note">Sources '+cite(c.s)+'</p>':'');
 }
-// filters
-function filt(mode){
-  ["f-all","f-norm","f-red"].forEach(function(id){document.getElementById(id).setAttribute("aria-pressed", String(id==="f-"+mode));});
-  C.forEach(function(c){var dim = mode==="norm" ? !!c.std : mode==="red" ? !c.red : false; c.node.classList.toggle("dim",dim);});
+panel.addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(b){var j=byName(b.dataset.go);if(j>=0)show(j);}});
+function filt(m, quiet){
+  mode = m;
+  ["f-all","f-norm","f-red"].forEach(function(id){document.getElementById(id).setAttribute("aria-pressed", String(id==="f-"+m));});
+  C.forEach(function(c){var dim = m==="norm" ? c.std : m==="red" ? !c.red : false; c.node.classList.toggle("dim",dim);});
 }
 document.getElementById("f-all").onclick=function(){filt("all");};
-document.getElementById("f-norm").onclick=function(){filt("norm");show(C.findIndex(function(c){return c.n==="ME/CFS";}));};
-document.getElementById("f-red").onclick=function(){filt("red");show(C.findIndex(function(c){return c.n==="Cancer";}));};
-show(C.findIndex(function(c){return c.n==="POTS / orthostatic intolerance";}));
+document.getElementById("f-norm").onclick=function(){filt("norm");};
+document.getElementById("f-red").onclick=function(){filt("red");};
+var KEYS = {fatigue:"fatigue","brain-fog":"fog",pain:"pain",headache:"head",gut:"gut",bladder:"bladder"};
+document.getElementById("tabs").addEventListener("click",function(e){var b=e.target.closest("[data-map]");if(!b)return;var h=Object.keys(KEYS).filter(function(k){return KEYS[k]===b.dataset.map;})[0];if(location.hash!=="#"+h)history.replaceState(null,"","#"+h);render(b.dataset.map);});
+function fromHash(){var k=KEYS[(location.hash||"").slice(1)];render(k||"fatigue");}
+window.addEventListener("hashchange",fromHash); fromHash();
 
 // ---------- trials list ----------
 var T = [
