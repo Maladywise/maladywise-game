@@ -223,3 +223,20 @@
 
 .bk-omasc.sprawl{width:150px;height:80px;object-fit:contain}
 @media (max-height:640px){.bk-omasc.sprawl{display:block;width:120px;height:64px}}
+
+/* purr meter (Purr Fever) */
+.bk-purr{position:absolute;left:12px;right:12px;top:6px;height:6px;border-radius:3px;background:rgba(43,35,64,.14);z-index:3;overflow:hidden;pointer-events:none}.bk-purr i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#E05A8A,#FFB547);transition:width .15s}.bk-purr.on i{background:linear-gradient(90deg,#FFB547,#FFE08A,#E05A8A);animation:bkpurr .45s linear infinite alternate}@keyframes bkpurr{to{filter:brightness(1.35)}}@media (prefers-reduced-motion:reduce){.bk-purr.on i{animation:none}}
+@media (max-width:400px){.bk-hud{gap:6px;padding-left:10px}.bk-hud .bk-ibtn{width:34px;height:34px}}
+
+/* intro: narrower and shorter (Nov 2026) */
+.bk-intro{max-width:560px;margin-inline:auto;padding:18px 16px 20px;gap:8px}
+.bk-intro .bk-masc{width:84px;height:110px}.bk-intro .bk-masc2{width:78px;height:102px}
+.bk-intro h1{font-size:clamp(32px,7vw,44px)}
+.bk-lede{font-size:15px;line-height:1.4}
+.bk-sc.today #bk-thT{cursor:pointer}
+.bk-sc.today .bk-sbs{display:grid;grid-template-columns:1fr;gap:6px}
+.bk-go{font:800 17px var(--body)!important;padding:13px 16px!important;background:#FFD23F!important;color:#2E1F57;box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,.7);animation:bkgo 1.6s ease-out infinite;min-height:48px}
+.bk-go:hover{transform:translateY(-1px)}.bk-go:active{transform:translateY(3px);box-shadow:0 1px 0 #C99A10}
+@keyframes bkgo{0%{box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,.65)}70%{box-shadow:0 4px 0 #C99A10,0 0 0 14px rgba(255,210,63,0)}100%{box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,0)}}
+@media (prefers-reduced-motion:reduce){.bk-go{animation:none}}
+:root[data-motion="reduce"] .bk-go{animation:none}

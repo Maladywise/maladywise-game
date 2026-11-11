@@ -33,7 +33,7 @@
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
 <link rel="stylesheet" href="../assets/shell.css?v=196">
-<link rel="stylesheet" href="basil.css?v=28">
+<link rel="stylesheet" href="basil.css?v=29">
 <script defer src="../assets/games.js?v=110"></script>
 <script defer src="../assets/shell.js?v=216"></script>
 <script type="application/ld+json" id="mw-game-ld">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Basil + Clover", "alternateName": "Basil + Clover: Free Cat Arcade Game", "description": "Basil + Clover is a free cat arcade game: help Basil kick everything off the kitchen bench, then survive a trip to the vet with his sister Clover.", "url": "https://maladywise.com/basil-clover/", "applicationCategory": "GameApplication", "genre": "Arcade", "operatingSystem": "Any (web browser)", "inLanguage": "en-AU", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "audience": {"@type": "Audience", "audienceType": "Medical and nursing students, health professionals and curious people"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "image": {"@type": "ImageObject", "url": "https://maladywise.com/assets/og/basil.png?v=3476f15c", "width": 1200, "height": 630}}</script>
@@ -52,7 +52,7 @@
     <div class="bk-sc today" id="bk-today">
       <canvas class="bk-th" id="bk-thT" width="236" height="282" aria-hidden="true"></canvas>
       <div class="bk-sci"><span class="bk-sk" id="bk-tday">Today</span><h2 id="bk-tname">The Kitchen</h2><p class="bk-sst" id="bk-tst"></p><p class="bk-sd" id="bk-tsd">Same 10 rounds and surprises for everyone today.</p>
-        <div class="bk-sbs"><button class="bk-sbn" type="button" id="bk-tplay">Let’s go, go, go!</button><button class="bk-sbn gh bk-endless locked" type="button" id="bk-tend" disabled>&#128274; Endless</button></div></div>
+        <div class="bk-sbs"><button class="bk-sbn bk-go" type="button" id="bk-tplay">&#9654; Let’s go, go, go!</button><button class="bk-sbn gh bk-endless locked" type="button" id="bk-tend" disabled>&#128274; Endless</button></div></div>
     </div>
     <p class="bk-up" id="bk-up"></p>
     <div id="bk-old" hidden>
@@ -77,12 +77,11 @@
     <div class="bk-srow"><span class="bk-chip" id="bk-crowns"><b>0 of 2</b>stage crowns</span><button class="bk-dbtn" type="button" id="bk-daily">Daily<small>Kitchen</small></button><button class="bk-dbtn" type="button" id="bk-daily2" disabled>Daily<small>Vet</small></button></div>
     </div>
     <p class="bk-dnote">One level a day, a new one each day of the week. Holiday levels drop in for Christmas, Easter and Halloween.</p>
-    <p class="bk-how"><b>Tap</b> or <b>click</b> the items, or use the keys <b class="nw">← ↓ → ↑</b> or <b class="nw">A S D W</b>.</p>
-    <button class="bk-howbtn" type="button" id="bk-howbtn">How to play</button>
     <details class="bk-rules bk-guide">
-      <summary>How it works</summary>
+      <summary>How to play</summary>
       <ul class="bk-grules">
-        <li><b>Tap</b> a thing (or ← ↓ →): Basil kicks it, Clover eats it. <b>↑ / W</b> grabs anything flying.</li>
+        <li><b>Tap</b> or <b>click</b> a thing (or keys <b class="nw">← ↓ →</b> / <b class="nw">A S D</b>): Basil kicks it, Clover eats it. <b class="nw">↑ / W</b> grabs anything flying.</li>
+        <li><b>Chain hits fast</b> for combos. Fill the pink purr bar for <b>Purr Fever</b>: double points for 7 s.</li>
         <li><b>Red ⦸ = hands off.</b> Let a timer ring run out and you lose health.</li>
         <li><b>10 rounds</b>, faster every round. <b>3 lives</b>. Bosses in rounds 5 and 10.</li>
         <li>Beat round 10 for a 👑 and Endless on that stage.</li>
@@ -102,9 +101,11 @@
       <span class="bk-cof" id="bk-combo"></span>
       <span class="bk-lives" id="bk-lives" aria-label="Lives"></span>
       <button class="bk-ibtn" type="button" id="bk-helpbtn" aria-label="How to play">?</button>
+      <button class="bk-ibtn" type="button" id="bk-snd" aria-label="Sound">&#128266;</button>
       <button class="bk-ibtn" type="button" id="bk-pause" aria-label="Pause">&#10074;&#10074;</button>
     </div>
     <div class="bk-stage" id="bk-stage">
+      <div class="bk-purr" id="bk-purr" aria-hidden="true"><i></i></div>
       <div class="bk-toast" id="bk-toast" role="status" aria-live="polite" hidden></div>
       <canvas id="bk-canvas" aria-label="Basil the cat on a kitchen bench, kicking things off"></canvas>
       <div class="bk-over" id="bk-over" hidden>
@@ -202,7 +203,8 @@
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
 <script defer src="vet.js?v=6"></script>
 <script defer src="farm.js?v=2"></script>
-<script defer src="levels.js?v=2"></script>
-<script defer src="basil.js?v=61"></script>
+<script defer src="levels.js?v=3"></script>
+<script defer src="sound.js?v=1"></script>
+<script defer src="basil.js?v=63"></script>
 </body>
 </html>

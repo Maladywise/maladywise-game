@@ -120,7 +120,7 @@
   function reset() {
     G = DAILY ? seeded((STAGE >= 3 && V && V.TEXT.KEY ? "basil-" + V.TEXT.KEY + "-" : STAGE === 2 ? "basil-vet-" : "basil-") + sydDay()) : Math.random;
     S = { t: 0, bPts: 0, cPts: 0, round: 1, roundT: ROUND, ann: { t: 1.8, a: "ROUND 1", b: "KICK!" }, score: 0, hb: 100, hc: 100, sneak: null, sneakT: 4, treat: null, treatT: grnd(10, 16), boss: null, bosses: 0, nightK: 0, zoom: null, zoomT: grnd(9, 13), rb: null, rbT: grnd(40, 55), dust: [], parts: [], rT0: 0, finale: false, ev: null, evT: grnd(8, 11), butterT: 0, towelT: 0, leapT: 0, flashT: 0, rFail: false, dogSeen: 0, rain: [], nipT: 0, nips: 0, lives: 3, combo: 0, lastKick: -9, spawnT: 0.8, lanes: [null, null, null], fly: [], fx: [], clover: null, cloverT: grnd(5, 8), swiped: 0, cross: false, bonus: 0, nextBonus: 60, ouchT: 0, scratchT: 0, ouches: 0, bonuses: 0, kicks: 0, dirt: 0, wet: 0, dripT: 0, slash: [], gulp: [], flops: [], eatenFood: 0, shards: [], moth: null, mothT: grnd(2.5, 4.5), frenzyT: 0, eaten: 0, smashed: 0,
-      sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: grnd(10, 14), tom: null, tomT: grnd(30, 40), dog: null, dogT: grnd(16, 22), laser: null, laserT: grnd(11, 15), bestCombo: 0, ctitle: null, hairballs: 0, raids: 0,
+      sinkT: 0, paw: null, lean: 0, blink: 0, over: false, drops: [], specialT: grnd(10, 14), tom: null, tomT: grnd(30, 40), dog: null, dogT: grnd(16, 22), laser: null, laserT: grnd(11, 15), bestCombo: 0, ctitle: null, purr: 0, purrT: 0, fevers: 0, wear: {}, wearR: 0, hairballs: 0, raids: 0,
       rStart: 0, rPen: false, perfects: 0, celeb: null, won: false, newWin: false, yawnT: 0, nipAt: 0, flea: null, fleaT: STAGE >= 2 ? grnd(12, 18) : 0, itchT: 0, stripe: null };
   }
   // seconds between new things: 0.95 in round 1 down to 0.38 in round 10 (endless keeps going to about 0.24). The dog halves it.
@@ -141,6 +141,7 @@
     if (!kind && !S.lanes.some(function (l) { return l && l.kind === "tank"; }) && G() < rp("tank")) kind = "tank";
     if (!kind && G() < rp("tv")) kind = "tv";
     if (!kind && G() < rp("vase")) kind = "vase";
+    if (!kind) { kind = gpick(ITEMS); if (WEAR[kind] && (S.wear[kind] || G() < 0.7)) { var plain = ITEMS.filter(function (k) { return !WEAR[k]; }); if (plain.length) kind = gpick(plain); } } // wearables are rare
     var i = gpick(free), hv = HEAVY[kind], p = kind === "tap" || kind === "fish" ? 2.6 : isSpiky(kind) || isBad(kind) || kind === "hedgehog" ? 2.3 : hv ? hv.life : kind === "toast" ? 3 : patience();
     S.lanes[i] = { kind: kind || gpick(ITEMS), y: -40, vy: 0, landed: false, life: p, max: p, wob: rnd(0, 6) };
     if (kind === "hairball") { S.lanes[i].y = BENCH - 110; S.lanes[i].life = S.lanes[i].max = 2.4; float(180, BENCH - 150, "*hack*", "#6B5A93"); }
@@ -150,9 +151,25 @@
 
   // combo streak titles
   var CTITLES = [[5, "Menace"], [10, "Agent of Chaos"], [15, "Kitchen Overlord"], [25, "Gravity’s Favourite"], [40, "Unstoppable Fluff"]];
+  // Purr Fever (Nov 2026): chained hits fill the purr meter; full = 7 s of double points and faster music. Ouches halve it.
+  var PURRMAX = 16, PURRT = 7;
+  function PF() { return S && S.purrT > 0 ? 2 : 1; }
+  function snd(k, n) { if (window.BCSND) BCSND.sfx(k, n); }
+  // wearables (Nov 2026): rare items; the first one kicked in a round is worn for the rest of that round
+  var WEAR = { sunnies: ["shades", "Sunnies on!", ["@ is wearing the sunnies now. Too cool for this.", "Sunnies on. @ has never looked smugger."]], cap: ["cap", "Cap on!", ["@ kept the cap. Backwards is next.", "Cap acquired. @ is now a tradie."]], bow: ["bow", "Bow on!", ["@ is wearing the bow. Fabulous, and furious.", "Bow on. @ refuses to discuss it."]], visor: ["cap", "Visor on!", ["@ has a visor now. Pro.", "Visor on. Very sporty."]] };
+  function drawWear(CL) {
+    var ey = CL ? 92 : 88;
+    Object.keys(S.wear || {}).forEach(function (k) {
+      var w = WEAR[k] && WEAR[k][0];
+      if (w === "shades") { ctx.fillStyle = "#1E1A2B"; ell(103, ey, 16, 12, "#1E1A2B"); ell(137, ey, 16, 12, "#1E1A2B"); ctx.strokeStyle = "#1E1A2B"; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(118, ey - 4); ctx.quadraticCurveTo(120, ey - 8, 122, ey - 4); ctx.moveTo(88, ey - 3); ctx.lineTo(74, ey - 7); ctx.moveTo(152, ey - 3); ctx.lineTo(166, ey - 7); ctx.stroke(); ctx.globalAlpha = 0.5; ell(97, ey - 4, 5, 3, "#FFFFFF"); ell(131, ey - 4, 5, 3, "#FFFFFF"); ctx.globalAlpha = 1; }
+      else if (w === "cap") { ctx.fillStyle = "#2E8B57"; ctx.beginPath(); ctx.ellipse(120, 52, 40, 24, 0, Math.PI, 2 * Math.PI); ctx.fill(); ell(150, 52, 34, 8, "#256F46"); ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.arc(120, 29, 4, 0, 7); ctx.fill(); }
+      else if (w === "bow") { ctx.save(); ctx.translate(156, 40); ctx.rotate(0.3); ctx.fillStyle = "#F06C9B"; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-20, -12); ctx.lineTo(-20, 12); ctx.closePath(); ctx.fill(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(20, -12); ctx.lineTo(20, 12); ctx.closePath(); ctx.fill(); ell(0, 0, 6, 6, "#C94E7A"); ctx.restore(); }
+    });
+  }
   function comboTitle(n) { var t = ""; CTITLES.forEach(function (c) { if (n >= c[0]) t = c[1]; }); return t; }
   function comboUp() {
     S.combo = S.t - S.lastKick < 1.05 ? S.combo + 1 : 0; S.lastKick = S.t; if (S.combo > S.bestCombo) S.bestCombo = S.combo;
+    if (S.combo > 0 && S.purrT <= 0) { S.purr += S.combo >= 10 ? 2 : 1; if (S.purr >= PURRMAX) { S.purr = 0; S.purrT = PURRT; S.fevers++; S.ann = { t: 1.4, a: "PURR FEVER", b: "x2" }; snd("fever"); track("basil/fever"); } else snd("meter", S.purr); }
     CTITLES.forEach(function (c) { if (S.combo === c[0]) { S.ctitle = { t: 1.4, txt: c[1], n: c[0] + 1 }; if (c[0] >= 15) track("basil/streak-" + c[0]); } });
   }
   // ---------- input ----------
@@ -176,7 +193,7 @@
       it.hp -= S.frenzyT > 0 ? 2 : 1; it.hit = 0.18; it.wob = rnd(0, 6); S.kicks++;
       if (it.hp > 0) return;
       S.lanes[i] = null; S.smashed++; shake(); S.dirt = Math.min(1, S.dirt + (it.kind === "tank" ? 0.15 : 0.05)); if (it.kind === "tank") S.wet = Math.min(1, S.wet + 0.7);
-      var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1), pts = HEAVY[it.kind].pts * m0 * U();
+      var m0 = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1) * PF(), pts = HEAVY[it.kind].pts * m0 * U();
       addPts(pts); float(LANES[i], BENCH - 80, "SMASH +" + fmt(pts), "#C2553A"); toast(pick(SMASHQ[it.kind]));
       if (it.kind === "tank") { heal("b", 40); for (var fq = 0; fq < 3; fq++) S.flops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 30, vx: rnd(-90, 90), vy: -rnd(200, 320), r: 0, l: 2.2 }); float(LANES[i], BENCH - 110, "+40% health", "#E05A8A"); for (var w = 0; w < 50; w++) S.drops.push({ x: LANES[i] + rnd(-30, 30), y: BENCH - 40, vx: rnd(-220, 220), vy: -rnd(100, 380), l: rnd(.7, 1.4) }); }
       for (var q = 0; q < 26; q++) S.shards.push({ x: LANES[i] + rnd(-14, 14), y: BENCH - rnd(10, 50), vx: rnd(-260, 260), vy: -rnd(120, 420), r: rnd(0, 6), vr: rnd(-12, 12), s: rnd(3, 8), c: it.kind === "tv" ? pick(["#2B2340", "#6FA8C9", "#3B3B44", "#AEB8C0"]) : pick(["#2F5DA8", "#F1ECF8", "#6FA8C9", "#E0703A"]), l: 1.4 });
@@ -201,7 +218,8 @@
     if (it.kind === "fish") { heal(S.bonus > 0 ? "c" : "b", 25); float(LANES[i], BENCH - 60, "+25% health", "#E05A8A"); toast(s2("Fish acquired. Briefly nice.", "Heat pack. Toasty. Briefly nice.")); return; }
     if (S.bonus > 0) { S.slash.push({ x: LANES[i], y: BENCH - 22, l: 0.35 }); }
     comboUp();
-    var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1) * U();
+    if (WEAR[it.kind] && !S.wear[it.kind]) { S.wear[it.kind] = 1; addPts(10 * U()); float(180, BENCH - 190, WEAR[it.kind][1] + " +" + fmt(10 * U()), "#B5308A"); toast(pick(WEAR[it.kind][2]).replace("@", catName())); snd("title"); track("basil/wear-" + it.kind); }
+    var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.sinkT > 0 ? 2 : 1) * (S.frenzyT > 0 ? 2 : 1) * PF() * U();
     if (S.bonus <= 0) { S.dirt = Math.min(1, S.dirt + 0.008); if (it.kind === "glass") S.wet = Math.min(1, S.wet + 0.15); }
     S.kicks++; addPts(mult); float(LANES[i], BENCH - 60, "+" + fmt(mult) + (S.bonus > 0 ? " " + pick(CSWIPE) : ""), S.bonus > 0 ? "#B07A0C" : mult > 1 ? "#B5308A" : "#2B5E80");
     if (S.score % 9 === 0 && S.bonus <= 0) toast(pick(KICKQ));
@@ -214,7 +232,7 @@
     }
     S.gulp.push({ kind: it.kind, x: LANES[i], y: BENCH, t: 0 });
     comboUp();
-    var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.frenzyT > 0 ? 2 : 1) * U();
+    var mult = Math.min(4, 1 + Math.floor(S.combo / 3)) * (S.frenzyT > 0 ? 2 : 1) * PF() * U();
     addPts(mult); S.eatenFood++; float(LANES[i], BENCH - 60, "+" + fmt(mult) + " " + pick(NOMQ), "#B07A0C");
     if (Math.random() < (it.kind === "steak" || it.kind === "drumstick" || it.kind === "catfood" ? 0.6 : 0.3)) { S.happyT = 1; float(180 + rnd(-30, 30), BENCH - 170, pick(["\u2665", "\u2665 purr", "\u2665 yum"]), "#E05A8A"); }
   }
@@ -999,6 +1017,8 @@
     if (S.yawnT > 0) S.yawnT -= dt;
     if (S.flashT > 0) S.flashT -= dt; if (S.butterT > 0) S.butterT -= dt; if (S.towelT > 0) S.towelT -= dt; if (S.leapT > 0) S.leapT -= dt;
     if (S.wet > 0) S.wet = Math.max(0, S.wet - dt * 0.015);
+    if (S.wearR !== S.round) { S.wear = {}; S.wearR = S.round; }
+    if (S.purrT > 0) { S.purrT -= dt; if (S.purrT <= 0) { S.purrT = 0; snd("feverEnd"); toast("Purr Fever over. Build the streak again."); } }
     if (S.frenzyT > 0) { S.frenzyT -= dt; if (S.frenzyT <= 0) { S.frenzyT = 0; toast("Frenzy over. Back to regular evil."); } }
     if (!S.boss) S.mothT -= dt;
     if (!S.moth && S.mothT <= 0) { var fromL = Math.random() < .5, mv = 1 + 0.6 * lvl(); S.moth = { kind: G() < rp("wasp") ? "wasp" : G() < .5 ? "moth" : "butterfly", x: fromL ? -20 : W + 20, y: rnd(110, 200), vx: (fromL ? 1 : -1) * rnd(50, 80) * mv, ph: rnd(0, 6), life: 9 / mv }; S.mothT = every("moth"); }
@@ -1130,10 +1150,35 @@
     S.drops = S.drops.filter(function (d) { d.vy += 700 * dt; d.x += d.vx * dt; d.y += d.vy * dt; d.l -= dt; return d.l > 0; });
     hud();
   }
+  // sound watcher: compares state each frame and plays the matching blip (keeps the game logic untouched)
+  var SP = null;
+  function sndTick() {
+    if (!window.BCSND) return;
+    var b = S.boss, c = { kicks: S.kicks, eat: S.eatenFood, smash: S.smashed, ouch: S.ouches, hb: S.hb, hc: S.hc, lives: S.lives, ann: S.ann, ct: S.ctitle, m: Math.min(4, 1 + Math.floor(S.combo / 3)), nip: S.nipT > 0, fr: S.frenzyT > 0, bon: S.bonus > 0, bhp: b ? b.hp : null, boss: !!b, treats: S.treats || 0, score: S.score };
+    if (SP && SP.s === S) {
+      var p = SP.c;
+      if (c.ouch > p.ouch) { snd(S.bonus > 0 ? "bleurgh" : "ouch"); S.purr = Math.floor(S.purr / 2); }
+      else if (c.smash > p.smash) snd("smash");
+      else if (c.eat > p.eat) snd("nom", S.combo);
+      else if (c.kicks > p.kicks) snd("kick", S.combo);
+      if (c.m > p.m && c.m > 1) snd("step", c.m - 1);
+      if (c.lives < p.lives) snd("life");
+      else if (c.ann && c.ann !== p.ann && S.purrT < PURRT - 0.1) snd(c.boss && !p.boss ? "boss" : "ann");
+      if (c.ct && c.ct !== p.ct) snd("title");
+      if ((c.hb > p.hb + 2 || c.hc > p.hc + 2) && c.lives === p.lives) snd("heal");
+      if (c.nip && !p.nip) snd("catnip");
+      if (c.fr && !p.fr) snd("sparkle");
+      if (c.bon !== p.bon) snd("swap");
+      if (c.boss && p.boss && c.bhp < p.bhp) snd("bosshit");
+      if (c.score - p.score >= 500 && c.kicks === p.kicks && c.eat === p.eat && c.smash === p.smash) snd("treat");
+    }
+    SP = { s: S, c: c };
+    BCSND.music({ on: running && !paused && !S.over, stage: STAGE, mode: S.boss ? "boss" : S.purrT > 0 ? "fever" : S.bonus > 0 ? "clover" : "calm" });
+  }
   function frame(ts) {
     if (!running) return;
     var dt = Math.min(0.05, (ts - (last || ts)) / 1000); last = ts;
-    if (!paused && S.celeb) celebStep(dt); else if (!paused && !S.over) step(dt);
+    if (!paused && S.celeb) celebStep(dt); else if (!paused && !S.over) { step(dt); sndTick(); }
     if (S.celeb) celebDraw(); else draw(); raf = requestAnimationFrame(frame);
   }
 
@@ -1257,7 +1302,7 @@
     ctx.save(); ctx.translate(0, hy); spr(CL ? "clover-head" : "basil-head");
     if (!CL && S.wet > 0.3) { ctx.globalAlpha = Math.min(0.6, S.wet - 0.2); ctx.strokeStyle = "#9FB7C9"; ctx.lineWidth = 3; [[96, 60, 74], [144, 58, 72], [120, 54, 66]].forEach(function (l) { ctx.beginPath(); ctx.moveTo(l[0], l[1]); ctx.lineTo(l[0], l[2]); ctx.stroke(); }); ctx.globalAlpha = 1; }
     var mode = S.leapT > 0 || S.ev && !S.ev.done && (S.ev.m === "cucumber" || S.ev.m === "bath" || S.ev.m === "clipper") ? "wide" : S.towelT > 0 ? "shut" : S.ouchT > 0 ? "ouch" : CL && S.happyT > 0 ? "happy" : S.frenzyT > 0 || S.dog ? "wide" : (S.blink > 0 || sink || S.yawnT > 0) ? "shut" : "open";
-    catEyes(CL ? "c" : "b", mode, false);
+    catEyes(CL ? "c" : "b", mode, false); if (S.wear) drawWear(CL);
     if (S.scratchT > 0) { ctx.strokeStyle = "rgba(194,85,58," + Math.min(1, S.scratchT * 2) + ")"; ctx.lineWidth = 5; ctx.lineCap = "round"; for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(86 + k * 16, 56); ctx.lineTo(108 + k * 16, 104); ctx.stroke(); } }
     ctx.restore();
     // kicking (or grabbing) paw
@@ -1546,7 +1591,8 @@
   function hud() {
     $("bk-score").textContent = fmt(S.score);
     var mult = Math.min(4, 1 + Math.floor(S.combo / 3));
-    $("bk-combo").textContent = S.t - S.lastKick < 1.05 && mult > 1 ? "Combo x" + mult : "";
+    $("bk-combo").textContent = S.purrT > 0 ? "Purr x2!" : S.t - S.lastKick < 1.05 && mult > 1 ? "Combo x" + mult : "";
+    var pe = $("bk-purr"); if (pe) { pe.firstChild.style.width = (S.purrT > 0 ? 100 * S.purrT / PURRT : 100 * S.purr / PURRMAX) + "%"; pe.classList.toggle("on", S.purrT > 0); }
     var lv = CAMP ? S.lives : -1;
     if (lv !== hud.lv) { hud.lv = lv; var lh = ""; if (CAMP) for (var q = 0; q < 3; q++) lh += q < S.lives ? "\u2665" : '<span class="off">\u2665</span>'; $("bk-lives").innerHTML = lh; $("bk-lives").setAttribute("aria-label", CAMP ? S.lives + (S.lives === 1 ? " life" : " lives") : "Lives"); }
   }
@@ -1556,10 +1602,11 @@
   function end() {
     shakeT = 0; clearTimeout(toastT); $("bk-toast").hidden = true;
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
+    if (window.BCSND) { BCSND.music({ on: false }); snd(S.won ? "win" : "over"); if (pb && S.score > 0) snd("pb"); }
     var cl = S.bonus > 0, bn = nameFor(S.bPts), cn = nameFor(S.cPts, CNAMES);
     $("bk-otrophy").hidden = !S.won; $("bk-omasc").hidden = S.won; $("bk-over").classList.toggle("win", S.won); endlessUI();
     var sprawl = !cl && !S.won && STAGE !== 2; // Basil gives up: the dangling-leg sprawl
-    $("bk-omasc").src = cl ? "/assets/mascots/clover.svg?v=1" : STAGE === 2 ? SBASE + "sprites/basil-lion.svg?v=2" : sprawl ? SBASE + "sprites/basil-sprawl.svg?v=1" : "/assets/mascots/basil.svg?v=2"; $("bk-omasc").alt = cl ? "Clover" : sprawl ? "Basil, sprawled and unimpressed" : "Basil"; $("bk-omasc").classList.toggle("sprawl", sprawl);
+    $("bk-omasc").src = cl ? "/assets/mascots/clover.svg?v=1" : STAGE === 2 ? SBASE + "sprites/basil-lion.svg?v=2" : sprawl ? SBASE + "sprites/basil-sprawl.svg?v=2" : "/assets/mascots/basil.svg?v=2"; $("bk-omasc").alt = cl ? "Clover" : sprawl ? "Basil, sprawled and unimpressed" : "Basil"; $("bk-omasc").classList.toggle("sprawl", sprawl);
     $("bk-otitle").textContent = cl ? cn : bn;
     $("bk-ofeat").textContent = DAILY ? "Daily challenge \u00b7 " + dayLabel() : cl ? "Clover ended it. Mid-snack." : "Basil’s verdict";
     $("bk-omsg").textContent = cl ? (S.cPts < 3000 ? "Barely a snack. She’ll be complaining about this for days." : S.cPts < 30000 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
@@ -1571,6 +1618,7 @@
       if (STAGE >= 2) $("bk-omsg").textContent = "All ten vet rounds. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all. Basil: " + bn + ". Clover: " + cn + "." + (S.perfects ? " Perfect rounds: " + S.perfects + "." : "") + (S.newWin ? " Vet Endless unlocked." : "");
       else $("bk-omsg").textContent = "All ten rounds. The bench is empty, the vacuum is retired and the hedgehog is still asleep. Basil: " + bn + ". Clover: " + cn + "." + (S.perfects ? " Perfect rounds: " + S.perfects + "." : "") + (S.newWin ? " Endless mode unlocked." : ""); }
     if (S.bestCombo >= 5) $("bk-omsg").textContent += " Best streak: " + comboTitle(S.bestCombo) + ".";
+    if (S.fevers) $("bk-omsg").textContent += " Purr Fevers: " + S.fevers + ".";
     if (STAGE >= 3) ["bk-omsg", "bk-ofeat", "bk-otitle"].forEach(function (id) { $(id).textContent = say($(id).textContent); });
     $("bk-opts").textContent = fmt(S.score); if ($("bk-orounds")) $("bk-orounds").textContent = S.round; $("bk-okick").textContent = fmt(S.bPts); $("bk-onom").textContent = fmt(S.cPts);
     var ob = $("bk-obest"); ob.textContent = pb ? "New personal best!" : "Best: " + fmt(best); ob.className = "bk-obest" + (pb ? " pb" : "");
@@ -1809,7 +1857,8 @@
     size(); running = true; last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); hud(); track("basil/start");
     var gt = $("bk-game").getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: Math.max(0, gt), behavior: quiet() ? "auto" : "smooth" });
   }
-  function togglePause() { if (!running || S.over) return; paused = !paused; $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
+  if (window.BCSND && $("bk-snd")) BCSND.btn($("bk-snd"));
+  function togglePause() { if (!running || S.over) return; paused = !paused; if (window.BCSND) BCSND.music({ on: !paused }); $("bk-pause").innerHTML = paused ? "&#9654;" : "&#10074;&#10074;"; }
   $("bk-start").onclick = function () { setStage(1); DAILY = false; ENDLESS = false; start(); }; $("bk-daily").onclick = function () { setStage(dailyStage()); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
   $("bk-start2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = false; ENDLESS = false; start(); }; $("bk-daily2").onclick = function () { if (!kitchenWon()) return; setStage(2); DAILY = true; ENDLESS = false; track("basil/daily"); start(); }; $("bk-again").onclick = start; $("bk-pause").onclick = togglePause;
   if ($("bk-tplay")) $("bk-tplay").onclick = function () { setStage(dailyStage()); DAILY = true; ENDLESS = false; track("basil/daily"); start(); };
@@ -1842,7 +1891,7 @@
   function helpPage(n) { document.querySelectorAll(".bk-hp").forEach(function (u) { u.hidden = u.getAttribute("data-p") !== String(n); }); document.querySelectorAll(".bk-htabs button").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-p") === String(n) ? "true" : "false"); }); }
   function helpOpen() { helpPaused = running && S && !S.over && !paused; if (helpPaused) togglePause(); helpPage(STAGE >= 2 && running ? 2 : 0); $("bk-help").hidden = false; $("bk-hgo").focus(); track("basil/help"); }
   function helpClose() { $("bk-help").hidden = true; if (helpPaused && paused) togglePause(); helpPaused = false; }
-  $("bk-howbtn").onclick = helpOpen; $("bk-helpbtn").onclick = helpOpen; $("bk-hx").onclick = helpClose; $("bk-hgo").onclick = helpClose;
+  if ($("bk-howbtn")) $("bk-howbtn").onclick = helpOpen; if ($("bk-thT")) $("bk-thT").onclick = function () { $("bk-tplay").click(); }; $("bk-helpbtn").onclick = helpOpen; $("bk-hx").onclick = helpClose; $("bk-hgo").onclick = helpClose;
   $("bk-help").addEventListener("click", function (e) { if (e.target === this) helpClose(); var b = e.target.closest(".bk-htabs button"); if (b) helpPage(b.getAttribute("data-p")); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !$("bk-help").hidden) { e.stopImmediatePropagation(); helpClose(); } }, true);
   document.addEventListener("visibilitychange", function () { if (document.hidden && running && !S.over && !paused) togglePause(); });
