@@ -203,3 +203,10 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
   - White bib and chest, white-tipped paws, dark grey nose, big yellow-green eyes.
   - Sits in cardboard boxes. Looks up hopefully at food. Small and round.
 - Draw them as flat cartoons in the site palette (see /assets/mascots/basil.svg and clover.svg). Never use the owner's photos on the site; they're reference only.
+
+## Anatomegaly balance and day themes (from 11 Nov 2026)
+- January 2027 is already written with a named theme on every day. Don't overwrite it; the monthly build starts from February.
+- Each day may have an optional `"theme"` field (shown after the date, e.g. "Hand Day"). Give most days one.
+- Recurring themes: **Muscle Monday** every Monday, and a **Hand Day** about once a week. Other good themes: feet and ankles, pelvis and pelvic floor, neck and throat, face and jaw, hormone glands, back muscles, forearm, lower leg.
+- Balance per month (Nov–Dec 2026 were heavy on brain and heart and light on muscles): aim for about 30% muscles and tendons, and regular foot, hand muscle, pelvis, neck, face and endocrine rounds. Brain and heart no more than ~10% each.
+- Still no answer repeated within 6 weeks; use the diagram art where a part exists (check with LBL_PARTS in anatomegaly/art.js).
