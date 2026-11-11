@@ -220,3 +220,6 @@
 .bk-sc.today{background:linear-gradient(160deg,rgba(255,255,255,.2),rgba(255,255,255,.1));border-color:rgba(255,255,255,.55);box-shadow:0 0 0 2px rgba(255,255,255,.18)}
 .bk-up{margin:2px 0 0;font-size:12.5px;line-height:1.5;opacity:.9;max-width:520px;text-align:center}
 .bk-up b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+
+.bk-omasc.sprawl{width:150px;height:80px;object-fit:contain}
+@media (max-height:640px){.bk-omasc.sprawl{display:block;width:120px;height:64px}}

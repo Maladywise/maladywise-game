@@ -1207,7 +1207,7 @@
   Object.keys(LCFG).forEach(function (n) { try { VM[n] = window.MW_LEVEL(VAPI, +n); } catch (e) { VM[n] = null; } }); // stages 4-10 live in levels.js
   V = VM[2];
   var sprLeft = 6;
-  ["basil-body", "basil-head", "clover-body", "clover-head", "basil-body-lion", "basil-head-lion"].forEach(function (n) { var im = new Image(); im.onload = im.onerror = function () { if (--sprLeft === 0 && typeof drawThumbs === "function") drawThumbs(); }; im.src = SBASE + "sprites/" + n + ".svg?v=2"; SPR[n] = im; });
+  ["basil-body", "basil-head", "clover-body", "clover-head", "basil-body-lion", "basil-head-lion"].forEach(function (n) { var im = new Image(); im.onload = im.onerror = function () { if (--sprLeft === 0 && typeof drawThumbs === "function") drawThumbs(); }; im.src = SBASE + "sprites/" + n + ".svg?v=3"; SPR[n] = im; });
   function sprOK(n) { var im = SPR[n]; return im && im.complete && im.naturalWidth > 0; }
   function spr(n) { if (STAGE === 2 && (n === "basil-body" || n === "basil-head") && sprOK(n + "-lion")) n += "-lion"; /* the Vet: Basil has had a lion cut */ if (sprOK(n)) ctx.drawImage(SPR[n], 0, 0, 240, 260); }
   function cloverFat() { return 1 + Math.min(1, Math.max(0, (S.bonuses || 1) - 1) * 0.1 + S.eatenFood / 240); }
@@ -1558,7 +1558,8 @@
     S.over = true; var best = lget(BEST) || 0, pb = S.score > best; if (pb) lset(BEST, S.score);
     var cl = S.bonus > 0, bn = nameFor(S.bPts), cn = nameFor(S.cPts, CNAMES);
     $("bk-otrophy").hidden = !S.won; $("bk-omasc").hidden = S.won; $("bk-over").classList.toggle("win", S.won); endlessUI();
-    $("bk-omasc").src = cl ? "/assets/mascots/clover.svg?v=1" : STAGE === 2 ? SBASE + "sprites/basil-lion.svg?v=2" : "/assets/mascots/basil.svg?v=2"; $("bk-omasc").alt = cl ? "Clover" : "Basil";
+    var sprawl = !cl && !S.won && STAGE !== 2; // Basil gives up: the dangling-leg sprawl
+    $("bk-omasc").src = cl ? "/assets/mascots/clover.svg?v=1" : STAGE === 2 ? SBASE + "sprites/basil-lion.svg?v=2" : sprawl ? SBASE + "sprites/basil-sprawl.svg?v=1" : "/assets/mascots/basil.svg?v=2"; $("bk-omasc").alt = cl ? "Clover" : sprawl ? "Basil, sprawled and unimpressed" : "Basil"; $("bk-omasc").classList.toggle("sprawl", sprawl);
     $("bk-otitle").textContent = cl ? cn : bn;
     $("bk-ofeat").textContent = DAILY ? "Daily challenge \u00b7 " + dayLabel() : cl ? "Clover ended it. Mid-snack." : "Basil’s verdict";
     $("bk-omsg").textContent = cl ? (S.cPts < 3000 ? "Barely a snack. She’ll be complaining about this for days." : S.cPts < 30000 ? "A solid feed. Room for dessert, obviously." : "Royalty. The fridge fears her.") + " Basil: " + bn + "."
