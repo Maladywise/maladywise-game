@@ -6,8 +6,8 @@
     "name": "Recovery Station - Maitland",
     "specialty": "Physiotherapy",
     "practice": "Recovery Station - Maitland",
-    "address": "12 Ken Tubman Drive, Maitland NSW 2320",
-    "suburb": "Maitland",
+    "address": "Suite B, 66 King Street, East Maitland NSW 2320",
+    "suburb": "East Maitland",
     "phone": "1300 588 851",
     "fax": "1300 522 216",
     "email": "admin@recoverystation.com.au",
@@ -17,7 +17,7 @@
      "Physiotherapy"
     ],
     "practical": {
-     "telehealth": null,
+     "telehealth": true,
      "bulk_billing": "unknown",
      "wait": "",
      "ages": "",
@@ -32,9 +32,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/recovery-station-maitland/physiotherapy/23b307d8-6834-fcf5-ed6c-3555600e39b9"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/recovery-station-maitland/physiotherapy/23b307d8-6834-fcf5-ed6c-3555600e39b9",
+     "https://www.recoverystation.com.au/contact-us/"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -176,9 +177,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/exercise-physiology/f2d9d450-377e-479d-3f02-03f3679730a2"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -256,9 +258,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7",
+     "https://www.healthdirect.gov.au/australian-health-services/cd36a4d3-b606-4c1c-ab87-6aab06896ee6/beyond-boundaries-rehab/services/adamstown-2289-281-293-brunker-road"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -447,9 +450,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/physiotherapy/16f46960-65c7-8fb2-b22d-d8c51aeaff34",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/advanced-physiotherapy-exercise-physiology/exercise-physiology/f2d9d450-377e-479d-3f02-03f3679730a2"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1014,7 +1018,7 @@
     "name": "Recovery Station - Newcastle",
     "specialty": "Occupational therapy",
     "practice": "Recovery Station - Newcastle",
-    "address": "32 Union Street, Newcastle NSW 2300",
+    "address": "17 Bolton Street, Newcastle NSW 2300",
     "suburb": "Newcastle",
     "phone": "1300 588 851",
     "fax": "1300 522 216",
@@ -1025,7 +1029,7 @@
      "Occupational therapy"
     ],
     "practical": {
-     "telehealth": null,
+     "telehealth": true,
      "bulk_billing": "unknown",
      "wait": "",
      "ages": "",
@@ -1040,9 +1044,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/recovery-station-newcastle/occupational-therapy/6277b1e8-fe91-727d-1839-83ef7b183f91"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/recovery-station-newcastle/occupational-therapy/6277b1e8-fe91-727d-1839-83ef7b183f91",
+     "https://www.recoverystation.com.au/contact-us/"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1167,9 +1172,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7",
+     "https://www.healthdirect.gov.au/australian-health-services/cd36a4d3-b606-4c1c-ab87-6aab06896ee6/beyond-boundaries-rehab/services/adamstown-2289-281-293-brunker-road"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1255,9 +1261,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7",
+     "https://www.healthdirect.gov.au/australian-health-services/cd36a4d3-b606-4c1c-ab87-6aab06896ee6/beyond-boundaries-rehab/services/adamstown-2289-281-293-brunker-road"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1365,16 +1372,16 @@
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cardiff-2285-nsw/articulate-speech-pathology/speech-pathology/8aeb5024-84b0-4940-9564-244c0991597b"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
     "name": "Hunter Speech Pathology",
     "specialty": "Speech pathology (children and adults)",
     "practice": "Hunter Speech Pathology",
-    "address": "Lorn Surgery, Shop 10, 420-422 High Street, Maitland NSW 2320",
+    "address": "The Colonial Centre, 9-10/420 High Street, Maitland NSW 2320",
     "suburb": "Maitland",
-    "phone": "02 4933 2622",
+    "phone": "02 4086 7211",
     "fax": "",
     "email": "",
     "ereferral": "",
@@ -1403,9 +1410,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636",
+     "https://www.hunterspeechpathology.com/"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -1453,9 +1461,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/beyond-boundaries-rehab/physiotherapy/7d28d04c-218f-4ada-1611-77681d5bbfa7",
+     "https://www.healthdirect.gov.au/australian-health-services/cd36a4d3-b606-4c1c-ab87-6aab06896ee6/beyond-boundaries-rehab/services/adamstown-2289-281-293-brunker-road"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1491,16 +1500,16 @@
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cardiff-2285-nsw/articulate-speech-pathology/speech-pathology/8aeb5024-84b0-4940-9564-244c0991597b"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
     "name": "Hunter Speech Pathology",
     "specialty": "Speech pathology (children and adults)",
     "practice": "Hunter Speech Pathology",
-    "address": "Lorn Surgery, Shop 10, 420-422 High Street, Maitland NSW 2320",
+    "address": "The Colonial Centre, 9-10/420 High Street, Maitland NSW 2320",
     "suburb": "Maitland",
-    "phone": "02 4933 2622",
+    "phone": "02 4086 7211",
     "fax": "",
     "email": "",
     "ereferral": "",
@@ -1529,9 +1538,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-speech-pathology/speech-pathology/5888e0c1-dd9e-38a5-dd8c-875e9d21c636",
+     "https://www.hunterspeechpathology.com/"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]

@@ -225,9 +225,10 @@
     "inclusive": [],
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/mind-care-psychology-psychiatry-neurology/clinical-psychology/fbcca28a-59d5-4990-a6dc-55c631682b6a",
-     "https://www.mind-care.net.au/services/"
+     "https://www.mind-care.net.au/services/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/mind-care-psychology-psychiatry-neurology/psychology/d5bf85ca-5194-4cae-8c80-616347a4ed93"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1249,9 +1250,10 @@
     "inclusive": [],
     "sources": [
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychology/3726e3fa-fb19-1c75-73f9-7a4da7bd07dd",
-     "https://www.procare.org.au/"
+     "https://www.procare.org.au/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychiatry/65a7c187-ae2a-01dc-c002-ba950fc3fcfa"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1396,9 +1398,10 @@
     ],
     "sources": [
      "https://restinessence.com.au/team/",
-     "https://restinessence.com.au/services/psychology/"
+     "https://restinessence.com.au/services/psychology/",
+     "https://doccy.com.au/specialist/newcastle/psychiatrist/james-ulrick-rest-in-essence-mental-health-clinic-and-psychologists-newcastle"
     ],
-    "checked": "9 November 2026"
+    "checked": "11 November 2026"
    },
    {
     "name": "Louise Cook",
@@ -1438,7 +1441,7 @@
      "https://ishana.com.au/specialists/",
      "https://ishana.com.au/specialists/louise-cook/"
     ],
-    "checked": "9 November 2026"
+    "checked": "11 November 2026"
    },
    {
     "name": "Margaret Cole",
@@ -1478,7 +1481,7 @@
     "sources": [
      "https://openmindpsychologists.com.au/our-team/"
     ],
-    "checked": "9 November 2026"
+    "checked": "11 November 2026"
    }
   ]
  }

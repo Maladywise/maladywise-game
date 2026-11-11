@@ -37,9 +37,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/neurology/108436/dr-james-thomas"
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/neurology/108436/dr-james-thomas",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-james-thomas/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -192,9 +193,10 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/albert-tiu-med0001184007",
      "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/dr-albert-tiu-urology/urology/ee1e1027-d6ed-4bd0-cb6f-e95e5c365f2f",
-     "https://lingardprivate.com.au/specialties/urology"
+     "https://lingardprivate.com.au/specialties/urology",
+     "https://lingardprivate.com.au/specialists/dr-albert-tiu"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -570,7 +572,7 @@
     "sources": [
      "https://selfpaysurgery.cms.healthecare.com.au/specialists/dr-manique-wijesinghe"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -675,7 +677,7 @@
     "sources": [
      "https://lingardprivate.cms.healthecare.com.au/specialists/dr-sivathasan-sellathurai"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -747,9 +749,10 @@
     "inclusive": [],
     "sources": [
      "https://laytheng.com/",
-     "https://huntergastroenterology.com.au/"
+     "https://huntergastroenterology.com.au/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -789,9 +792,10 @@
     "inclusive": [],
     "sources": [
      "https://huntergastroenterology.com.au/dr-tom-goodsall/",
-     "https://prod.ramsaysurgicalcentrecharlestown.com.au/en/specialists/find-a-specialist/"
+     "https://prod.ramsaysurgicalcentrecharlestown.com.au/en/specialists/find-a-specialist/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -824,9 +828,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://huntergastroenterology.com.au/dr-robert-gibson/"
+     "https://huntergastroenterology.com.au/dr-robert-gibson/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -861,9 +866,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://huntergastroenterology.com.au/dr-dane-cook/"
+     "https://huntergastroenterology.com.au/dr-dane-cook/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -896,9 +902,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://huntergastroenterology.com.au/dr-james-lavender/"
+     "https://huntergastroenterology.com.au/dr-james-lavender/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -981,7 +988,7 @@
     "sources": [
      "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-anwar-shahzad"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1538,7 +1545,7 @@
     "sources": [
      "https://tuggerahlakesprivate.cms.healthecare.com.au/specialists/dr-khalil-cassim"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1579,7 +1586,7 @@
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/general-medicine/104370/dr-tun-l-myat"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1614,7 +1621,7 @@
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/respiratory/106291/dr-ken-goon"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1648,7 +1655,7 @@
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/respiratory/108707/dr-emily-dunn"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1851,7 +1858,7 @@
     "practice": "Hunter Eye Surgeons",
     "address": "182 Christo Road, Waratah NSW 2298 (also Belmont and East Maitland)",
     "suburb": "Waratah",
-    "phone": "",
+    "phone": "02 4967 6677",
     "fax": "",
     "email": "",
     "ereferral": "",
@@ -1869,9 +1876,10 @@
     "inclusive": [],
     "sources": [
      "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons",
-     "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons-belmont"
+     "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons-belmont",
+     "https://www.huntereyesurgeons.com/locations"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1880,7 +1888,7 @@
     "practice": "Hunter Eye Surgeons",
     "address": "182 Christo Road, Waratah NSW 2298 (also Belmont and East Maitland)",
     "suburb": "Waratah",
-    "phone": "",
+    "phone": "02 4967 6677",
     "fax": "",
     "email": "",
     "ereferral": "",
@@ -1898,9 +1906,10 @@
     "inclusive": [],
     "sources": [
      "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons",
-     "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons-east-maitland"
+     "https://doccy.com.au/specialist/newcastle/practice/hunter-eye-surgeons-east-maitland",
+     "https://www.huntereyesurgeons.com/locations"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2085,7 +2094,7 @@
     "name": "Dr Louise Clarke",
     "specialty": "Colorectal and general surgery",
     "practice": "Coastal Colorectal",
-    "address": "Cooks Hill, Newcastle NSW",
+    "address": "Suite 17, Level 1, 235 Darby Street, Cooks Hill NSW 2300",
     "suburb": "Cooks Hill",
     "phone": "(02) 4941 5999",
     "fax": "",
@@ -2104,6 +2113,7 @@
      "wait": "",
      "ages": "adults",
      "hospitals": [
+      "John Hunter Hospital",
       "Newcastle Private Hospital"
      ],
      "languages": [],
@@ -2111,9 +2121,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://specialists.healthscope.com.au/specialist/louise-clarke-med0000989734"
+     "https://specialists.healthscope.com.au/specialist/louise-clarke-med0000989734",
+     "https://www.canrefer.org.au/specialists/louise-clarke"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2257,9 +2268,10 @@
     "inclusive": [],
     "sources": [
      "https://www.canrefer.org.au/specialists/stan-chen",
-     "https://huntergastroenterology.com.au/"
+     "https://huntergastroenterology.com.au/",
+     "https://huntergastroenterology.com.au/our-doctors/"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2336,9 +2348,10 @@
     "inclusive": [],
     "sources": [
      "https://gosfordprivate.cms.healthecare.com.au/specialists/dr-brendan-mcmanus",
-     "https://lingardprivate.com.au/specialties/colorectal"
+     "https://lingardprivate.com.au/specialties/colorectal",
+     "https://lingardprivate.com.au/specialists/dr-brendan-mcmanus"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2488,7 +2501,7 @@
     "sources": [
      "https://www.canrefer.org.au/specialists/asma-ashraf"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2525,7 +2538,7 @@
      "https://www.canrefer.org.au/specialists/aung-thant",
      "https://www.canrefer.org.au/services/maitland-private-hospital"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -2564,7 +2577,7 @@
     "sources": [
      "https://www.canrefer.org.au/specialists/benjamin-mcguigan"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2850,7 +2863,7 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/vanessa-cairns-med0001190133"
     ],
-    "checked": "2026-10-31",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]

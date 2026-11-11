@@ -40,9 +40,10 @@
     "inclusive": [],
     "sources": [
      "https://www.psychologytoday.com/au/counselling/alex-kildey-simpson-newcastle-nsw/1528866",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/open-mind-psychologists/psychology/1774682a-1a3f-413f-9945-a3c55bf26799"
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/open-mind-psychologists/psychology/1774682a-1a3f-413f-9945-a3c55bf26799",
+     "https://openmindpsychologists.com.au/our-team/"
     ],
-    "checked": "2026-11-01",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -274,8 +275,8 @@
      "Also at 93A Young Street, Carrington"
     ],
     "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
+     "telehealth": true,
+     "bulk_billing": "Bulk billing available with conditions; fees may apply",
      "wait": "",
      "ages": "Children and young people",
      "hospitals": [],
@@ -292,9 +293,10 @@
      "Describes therapy as \"neuroaffirming\""
     ],
     "sources": [
-     "https://hunterchildrensclinics.com.au/services/psychology/"
+     "https://hunterchildrensclinics.com.au/services/psychology/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
     ],
-    "checked": "2026-11-01",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {

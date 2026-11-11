@@ -31,9 +31,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.procare.org.au/our-team"
+     "https://www.procare.org.au/our-team",
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -65,9 +66,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.procare.org.au/our-team"
+     "https://www.procare.org.au/our-team",
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -99,9 +101,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.procare.org.au/our-team"
+     "https://www.procare.org.au/our-team",
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -133,9 +136,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.procare.org.au/our-team"
+     "https://www.procare.org.au/our-team",
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -167,9 +171,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.procare.org.au/our-team"
+     "https://www.procare.org.au/our-team",
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -244,7 +249,7 @@
     "sources": [
      "https://atune.com.au/the-team/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -477,7 +482,7 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/munish-heer-med0001198146"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -712,7 +717,7 @@
     "name": "Dr Simon Ghosh",
     "specialty": "General and bariatric surgeon",
     "practice": "Coast Surgery (Central Coast)",
-    "address": "Suite 202, Level 1, Element Building, 200 Central Coast Highway",
+    "address": "Suite 202, Level 1, Element Building, 200 Central Coast Highway, Erina NSW 2250",
     "suburb": "Erina (Central Coast)",
     "phone": "02 4304 5902",
     "fax": "02 8212 5825",
@@ -747,7 +752,7 @@
     "sources": [
      "https://gosfordprivate.com.au/specialists/dr-simon-ghosh"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -787,7 +792,7 @@
     "sources": [
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-nick-bull/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -829,7 +834,7 @@
     "sources": [
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-scarlett-shackleton/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -1034,6 +1039,46 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Aneetha Pasupati",
+    "specialty": "Paediatric Surgeon (paediatric urology)",
+    "practice": "Dr Aneetha Pasupati (Warners Bay Private Hospital)",
+    "address": "Warners Bay Private Hospital, Fairfax Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4958 4288",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-aneetha-pasupati/",
+    "interests": [
+     "General paediatric surgery",
+     "Paediatric urology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [
+      "Warners Bay Private Hospital",
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-aneetha-pasupati/",
+     "https://www.surgeons.org/Profile/dr-aneetha-pasupati"
+    ],
+    "checked": "11 November 2026",
+    "ahpra": "not checked",
+    "notes": "Also consults at Newcastle Health Enterprise, 218 Pacific Highway, Charlestown NSW 2290 (no separate phone published)",
+    "phone_note": "Hospital main number"
    }
   ]
  },
@@ -1105,7 +1150,7 @@
     "sources": [
      "https://ishana.com.au/specialists/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1302,7 +1347,7 @@
     "name": "Dr Dan Polya",
     "specialty": "Ophthalmologist",
     "practice": "Hunter Eye Centre",
-    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street",
+    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street, Charlestown NSW 2290",
     "suburb": "Charlestown",
     "phone": "02 4920 6911",
     "fax": "02 4920 6922",
@@ -1327,16 +1372,17 @@
     },
     "inclusive": [],
     "sources": [
-     "https://huntereyecentre.com.au"
+     "https://huntereyecentre.com.au",
+     "https://www.huntereyecentre.com.au/contact-us/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
     "name": "Dr David Manning",
     "specialty": "Ophthalmologist",
     "practice": "Hunter Eye Centre",
-    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street",
+    "address": "Suite 4, Level 3, Sky Central East, 18 Smart Street, Charlestown NSW 2290",
     "suburb": "Charlestown",
     "phone": "02 4920 6911",
     "fax": "02 4920 6922",
@@ -1361,9 +1407,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://huntereyecentre.com.au"
+     "https://huntereyecentre.com.au",
+     "https://www.huntereyecentre.com.au/contact-us/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1488,7 +1535,7 @@
      "https://lingardprivate.com.au/specialists/dr-marie-ooi",
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-marie-ooi/"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -1570,7 +1617,7 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/mary-norris-med0001184075"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -2462,6 +2509,46 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Breanna Elphick",
+    "specialty": "Dietitian (eating disorders)",
+    "practice": "Hunter Mind Body Clinic",
+    "address": "8/555 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "02 4933 2622",
+    "fax": "",
+    "email": "enquiries@huntermindbodyclinic.com.au",
+    "ereferral": "",
+    "website": "https://www.huntermindbodyclinic.com.au",
+    "interests": [
+     "Anorexia nervosa",
+     "Bulimia nervosa",
+     "Binge eating disorder",
+     "OSFED",
+     "Unspecified feeding or eating disorder",
+     "Night eating syndrome",
+     "Disordered eating",
+     "Non-diet, weight-neutral approach"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "Medicare rebate available",
+     "wait": "",
+     "ages": "Youth (14–24) and adults (18+)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://insideoutinstitute.org.au/treatment-services/breanna-elphick"
+    ],
+    "checked": "11 November 2026",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -2517,7 +2604,7 @@
     "address": "16 Grainger Street",
     "suburb": "Lambton",
     "phone": "02 4962 1811",
-    "fax": "",
+    "fax": "02 4969 3835",
     "email": "",
     "ereferral": "",
     "website": "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardio-thoracic-surgery/108694/dr-pankaj-saxena",
@@ -2547,9 +2634,90 @@
     "inclusive": [],
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardio-thoracic-surgery/108694/dr-pankaj-saxena",
-     "https://lingardprivate.com.au/specialists/dr-pankaj-saxena"
+     "https://lingardprivate.com.au/specialists/dr-pankaj-saxena",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Peng Seah",
+    "specialty": "Cardiothoracic Surgeon",
+    "practice": "Newcastle Cardiothoracic Surgery",
+    "address": "Ground Floor Suite 6, Newcastle Private Hospital, 14 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4920 8777",
+    "fax": "02 4920 8077",
+    "email": "office@newcastlects.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlects.com.au",
+    "interests": [
+     "Adult cardiac surgery",
+     "General thoracic surgery",
+     "Pacemaker and defibrillator surgery",
+     "Mitral valve repair",
+     "Minimal access cardiac surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "Fees apply",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [
+      "Newcastle Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "Referral and appointment required",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/newcastle-cardiothoracic-surgery/cardiothoracic-surgery/fb1508d7-3393-4b74-81ac-6e05bd4443c7",
+     "https://www.surgeons.org/Profile/mr-peng-seah",
+     "https://specialists.healthscope.com.au/specialist/peng-seah-med0001142979"
+    ],
+    "checked": "11 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Allen James",
+    "specialty": "Cardiothoracic Surgeon (adult and paediatric)",
+    "practice": "Newcastle Private Specialist Centre",
+    "address": "Suite 2.6, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "suburb": "New Lambton Heights",
+    "phone": "02 4952 5911",
+    "fax": "02 4952 5922",
+    "email": "",
+    "ereferral": "",
+    "website": "https://specialists.healthscope.com.au/specialist/dr-allen-james",
+    "interests": [
+     "Cardiac surgery",
+     "Thoracic surgery",
+     "Paediatric cardiothoracic surgery"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and children",
+     "hospitals": [
+      "Newcastle Private Hospital",
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.surgeons.org/Profile/allen-james",
+     "https://specialists.healthscope.com.au/specialist/dr-allen-james"
+    ],
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -2593,7 +2761,7 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/simon-mylabathula-med0001169916"
     ],
-    "checked": "2026-11-10",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -2703,6 +2871,82 @@
      "https://www.hearing.com.au"
     ],
     "checked": "2026-11-10",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Port Stephens Audiology",
+    "specialty": "Audiology clinic",
+    "practice": "Port Stephens Audiology",
+    "address": "Suite 4, 29 Stockton Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4033 2729",
+    "fax": "",
+    "email": "reception@portstephensaudiology.com",
+    "ereferral": "",
+    "website": "https://portstephensaudiology.com",
+    "interests": [
+     "Hearing tests",
+     "Hearing aids and fittings",
+     "Earwax removal",
+     "WorkCover and pre-employment hearing assessments",
+     "Hearing aid maintenance and servicing",
+     "TV headphones",
+     "Home visits",
+     "Second clinic: Shop 11-12, 37 Ferodale Road, Medowie NSW 2318"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "Bulk billing available with conditions, fees may apply",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/nelson-bay-2315-nsw/port-stephens-audiology/hearing-clinic/4ae6a7a8-da54-4b0b-be49-67340d85b9b3"
+    ],
+    "checked": "11 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Valley Audiology",
+    "specialty": "Audiology clinic",
+    "practice": "Hunter Valley Audiology",
+    "address": "18 East Mall, Rutherford NSW 2320",
+    "suburb": "Rutherford",
+    "phone": "0448 187 960",
+    "fax": "",
+    "email": "info@huntervalleyaudiology.com.au",
+    "ereferral": "",
+    "website": "https://www.huntervalleyaudiology.com.au/",
+    "interests": [
+     "Hearing tests",
+     "Hearing aid fitting",
+     "Ear wax removal",
+     "Tinnitus care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "Fees apply",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/rutherford-2320-nsw/hunter-valley-audiology/hearing-clinic/4bcb9d8e-d854-487f-9f8e-d80a83d73f55"
+    ],
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]

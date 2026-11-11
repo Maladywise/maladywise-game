@@ -129,7 +129,7 @@
      "https://atune.com.au/psychology-lake-macquarie-newcastle/",
      "https://atune.com.au/atune-cardiff/"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -1822,8 +1822,8 @@
      "Children, teens and adults (by psychologist)"
     ],
     "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
+     "telehealth": true,
+     "bulk_billing": "no",
      "wait": "GP and psychologist appointments within 48 hours (Mon-Fri) for urgent mental health conditions (as stated)",
      "ages": "Children, teens and adults",
      "hospitals": [],
@@ -1837,9 +1837,10 @@
     },
     "inclusive": [],
     "sources": [
-     "https://lornsurgery.com.au/services/mental-health/"
+     "https://lornsurgery.com.au/services/mental-health/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/the-lorn-surgery-maitland/psychology/2a95edfb-5bf0-4916-94ed-7ea71f402257"
     ],
-    "checked": "9 November 2026",
+    "checked": "11 November 2026",
     "ahpra": "not checked"
    },
    {
