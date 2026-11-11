@@ -189,7 +189,7 @@
       P = list.filter(function (x) { return x.date === date; })[0] || null;
       if (!P) { hidePlay(date < "2026-11-02" ? '<p class="empty">Anatomegaly opens Monday 2 November. ' + (NORMIE ? "The octopus is still stretching." : "The skeleton is still warming up.") + "</p>" : NORMIE && window.MW_noNormie ? MW_noNormie("anatomy puzzle") : '<p class="empty">Today’s set is still being labelled. Back tomorrow.</p>'); renderArchive(); return; }
       ["pips", "opts"].forEach(function (k) { $(k).hidden = false; });
-      $("eyebrow").textContent = (isLive() ? NAME : "Archive") + " · #" + P.number + " · " + nice(date);
+      $("eyebrow").textContent = (isLive() ? NAME : "Archive") + " · #" + P.number + " · " + nice(date) + (P.theme ? " · " + P.theme : "");
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       view = st.done ? N - 1 : Math.min(st.picks.length, N - 1);
       say("");

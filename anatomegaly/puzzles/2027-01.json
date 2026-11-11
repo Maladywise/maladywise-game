@@ -1,0 +1,2023 @@
+[
+ {
+  "date": "2027-01-01",
+  "number": 61,
+  "difficulty": "Hard",
+  "theme": "Hand Day",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Proximal phalanx of the thumb",
+    "wrong": [
+     "Distal phalanx of the thumb",
+     "First metacarpal",
+     "Trapezium"
+    ],
+    "why": "The thumb has only two phalanges. Skier’s thumb, a torn ligament at the joint at its base, is one of the commonest hand injuries.",
+    "art": "hand",
+    "hl": [
+     "pp1"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies most of the small muscles inside the hand?",
+    "answer": "Deep branch of the ulnar nerve",
+    "wrong": [
+     "Recurrent branch of the median nerve",
+     "Superficial radial nerve",
+     "Anterior interosseous nerve"
+    ],
+    "why": "It supplies the interossei, the two inner lumbricals, adductor pollicis and the little finger muscles. Damage causes clawing and a weak pinch."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscles bend the knuckles while straightening the finger joints, making a ‘tabletop’ hand?",
+    "answer": "Lumbricals",
+    "wrong": [
+     "Dorsal interossei",
+     "Flexor digitorum profundus",
+     "Extensor digitorum"
+    ],
+    "why": "Odd little muscles: they start on the deep flexor tendons and finish on the extensor hood, linking the two systems."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "In de Quervain’s tenosynovitis, which tendon is inflamed along with extensor pollicis brevis?",
+    "answer": "Abductor pollicis longus",
+    "wrong": [
+     "Extensor pollicis longus",
+     "Flexor carpi radialis",
+     "Extensor carpi radialis longus"
+    ],
+    "why": "They share the first tunnel on the thumb side of the wrist. Common in new parents lifting babies."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "In trigger finger, the flexor tendon catches on which pulley?",
+    "answer": "A1 pulley",
+    "wrong": [
+     "A2 pulley",
+     "A4 pulley",
+     "C1 pulley"
+    ],
+    "why": "The A1 pulley sits over the knuckle in the palm. A steroid injection or a small release fixes most cases."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-02",
+  "number": 62,
+  "difficulty": "Hard",
+  "theme": "Feet and ankles",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ligament is torn in most ankle sprains?",
+    "answer": "Anterior talofibular ligament",
+    "wrong": [
+     "Calcaneofibular ligament",
+     "Deltoid ligament",
+     "Anterior inferior tibiofibular ligament"
+    ],
+    "why": "Rolling the foot inwards with the toes pointed stresses it first. The calcaneofibular ligament goes next in worse sprains."
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Which bone sits on top of the heel bone and forms the lower half of the ankle joint?",
+    "answer": "Talus",
+    "wrong": [
+     "Navicular",
+     "Cuboid",
+     "Calcaneus"
+    ],
+    "why": "No muscles attach to it and most of it is cartilage, so a fracture of its neck can cut off its blood supply."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Tibialis anterior",
+    "wrong": [
+     "Extensor digitorum longus",
+     "Fibularis longus",
+     "Tibialis posterior"
+    ],
+    "why": "It lifts the foot at the ankle. Weakness causes foot drop, often from pressure on the nerve at the top of the fibula.",
+    "art": "legaxial",
+    "hl": [
+     "ta"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Morton’s neuroma most often affects the nerve between which toes?",
+    "answer": "Third and fourth toes",
+    "wrong": [
+     "First and second toes",
+     "Second and third toes",
+     "Fourth and fifth toes"
+    ],
+    "why": "It’s a thickened nerve between the metatarsal heads. Tight, narrow shoes and heels make it worse."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Where is plantar fasciitis pain usually felt?",
+    "answer": "Under the heel, towards the inner side",
+    "wrong": [
+     "Back of the heel, where the Achilles attaches",
+     "Ball of the foot",
+     "Outer edge of the midfoot"
+    ],
+    "why": "The plantar fascia anchors on the inner front of the heel bone. Pain is classically worst with the first steps in the morning."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-03",
+  "number": 63,
+  "difficulty": "Genius",
+  "theme": "Pelvis and pelvic floor",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle forms most of the pelvic floor?",
+    "answer": "Levator ani",
+    "wrong": [
+     "Coccygeus",
+     "Obturator internus",
+     "Piriformis"
+    ],
+    "why": "Its parts (puborectalis, pubococcygeus and iliococcygeus) form a sling that holds up the pelvic organs."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve carries the signal that lifts the testis in the cremasteric reflex?",
+    "answer": "Genitofemoral nerve (genital branch)",
+    "wrong": [
+     "Ilioinguinal nerve",
+     "Pudendal nerve",
+     "Obturator nerve"
+    ],
+    "why": "Stroke the inner thigh and the testis rises. Its motor side runs in the genital branch (L1–L2)."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle leaves the pelvis through the greater sciatic notch, with the sciatic nerve usually just below it?",
+    "answer": "Piriformis",
+    "wrong": [
+     "Obturator internus",
+     "Gluteus minimus",
+     "Gemellus superior"
+    ],
+    "why": "In some people the nerve passes through it, a variant linked, controversially, with ‘piriformis syndrome’."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which two ligaments turn the sciatic notches into the greater and lesser sciatic foramina?",
+    "answer": "Sacrospinous and sacrotuberous",
+    "wrong": [
+     "Iliolumbar and sacroiliac",
+     "Inguinal and lacunar",
+     "Pubofemoral and ischiofemoral"
+    ],
+    "why": "The pudendal nerve leaves through the greater foramen and hooks back in through the lesser, around the ischial spine."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "The perineal body anchors the pelvic floor. What injures it most often?",
+    "answer": "Tears in childbirth",
+    "wrong": [
+     "Hip replacement",
+     "Prostate biopsy",
+     "Inguinal hernia repair"
+    ],
+    "why": "It sits between the vagina and anus. Third- and fourth-degree tears reach the anal sphincter and need careful repair."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-04",
+  "number": 64,
+  "difficulty": "Easy",
+  "theme": "Muscle Monday",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the biggest muscle in the body?",
+    "answer": "Gluteus maximus",
+    "wrong": [
+     "Latissimus dorsi",
+     "Pectoralis major",
+     "Rectus abdominis"
+    ],
+    "why": "It powers stairs, standing up from a chair and running uphill."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle gives the ‘six-pack’?",
+    "answer": "Rectus abdominis",
+    "wrong": [
+     "External oblique",
+     "Transversus abdominis",
+     "Serratus anterior"
+    ],
+    "why": "Tendon bands across it make the blocks. Everyone has one; body fat decides if it shows."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which chest muscle do push-ups mostly work?",
+    "answer": "Pectoralis major",
+    "wrong": [
+     "Pectoralis minor",
+     "Serratus anterior",
+     "Latissimus dorsi"
+    ],
+    "why": "It pulls the arm across and down in front of the chest. Pec minor sits underneath."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which broad back muscle powers a chin-up?",
+    "answer": "Latissimus dorsi",
+    "wrong": [
+     "Trapezius",
+     "Rhomboid major",
+     "Teres major"
+    ],
+    "why": "The ‘lats’ run from the lower back and pelvis to the front of the upper arm. Swimmers build big ones."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which neck muscle stands out when you turn your head to one side?",
+    "answer": "Sternocleidomastoid",
+    "wrong": [
+     "Trapezius",
+     "Scalenes",
+     "Platysma"
+    ],
+    "why": "It runs from behind the ear to the breastbone and collarbone. Turning left uses the right one."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-05",
+  "number": 65,
+  "difficulty": "Easy",
+  "theme": "Face and neck",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle bulges at the angle of the jaw when you clench?",
+    "answer": "Masseter",
+    "wrong": [
+     "Temporalis",
+     "Buccinator",
+     "Lateral pterygoid"
+    ],
+    "why": "Pound for pound one of the strongest muscles. Teeth grinding can make it bulky and sore."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle closes your eyes?",
+    "answer": "Orbicularis oculi",
+    "wrong": [
+     "Levator palpebrae superioris",
+     "Frontalis",
+     "Corrugator supercilii"
+    ],
+    "why": "A ring of muscle round the eye. In Bell’s palsy it weakens, so the eye needs protecting."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which gland sits in front of the ear and swells in mumps?",
+    "answer": "Parotid gland",
+    "wrong": [
+     "Submandibular gland",
+     "Thyroid gland",
+     "Sublingual gland"
+    ],
+    "why": "The biggest salivary gland. The facial nerve runs right through it."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What forms the ‘Adam’s apple’?",
+    "answer": "Thyroid cartilage",
+    "wrong": [
+     "Cricoid cartilage",
+     "Hyoid bone",
+     "Thyroid gland"
+    ],
+    "why": "Its two plates meet at a sharper angle after a testosterone-driven puberty, so it sticks out more. The vocal cords attach just behind it."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle raises your eyebrows and wrinkles your forehead?",
+    "answer": "Frontalis",
+    "wrong": [
+     "Corrugator supercilii",
+     "Procerus",
+     "Orbicularis oculi"
+    ],
+    "why": "Botox here smooths forehead lines. Too much and the brows drop."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-06",
+  "number": 66,
+  "difficulty": "Medium",
+  "theme": "Hormone glands",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which part of the body makes cortisol?",
+    "answer": "Adrenal cortex",
+    "wrong": [
+     "Adrenal medulla",
+     "Anterior pituitary",
+     "Thyroid gland"
+    ],
+    "why": "The outer layer makes cortisol and aldosterone; the inner medulla makes adrenaline. The pituitary only sends the signal (ACTH)."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hormone starts labour contractions and milk let-down?",
+    "answer": "Oxytocin",
+    "wrong": [
+     "Prolactin",
+     "Vasopressin",
+     "Luteinising hormone"
+    ],
+    "why": "Made in the hypothalamus, released from the back of the pituitary. Prolactin makes milk; oxytocin squeezes it out."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which pancreatic cells make insulin?",
+    "answer": "Beta cells",
+    "wrong": [
+     "Alpha cells",
+     "Delta cells",
+     "Acinar cells"
+    ],
+    "why": "They sit in the islets of Langerhans. Type 1 diabetes destroys them. Alpha cells make glucagon."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted organ.",
+    "answer": "Pancreas",
+    "wrong": [
+     "Duodenum",
+     "Spleen",
+     "Left kidney"
+    ],
+    "why": "It lies across the back of the abdomen behind the stomach, which is why pancreatic pain often goes through to the back.",
+    "art": "abdoaxial",
+    "hl": [
+     "pancreas"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hormone do the thyroid’s C cells make?",
+    "answer": "Calcitonin",
+    "wrong": [
+     "Thyroxine (T4)",
+     "Parathyroid hormone",
+     "Thyroglobulin"
+    ],
+    "why": "It slightly lowers blood calcium but does little in adults. It’s a tumour marker for medullary thyroid cancer."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-07",
+  "number": 67,
+  "difficulty": "Medium",
+  "theme": "Hip and thigh",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Gracilis",
+    "wrong": [
+     "Sartorius",
+     "Adductor longus",
+     "Semitendinosus"
+    ],
+    "why": "A long strap on the inner thigh. Surgeons borrow it for tendon grafts and flaps.",
+    "art": "thighaxial",
+    "hl": [
+     "gracilis"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Rectus femoris",
+    "wrong": [
+     "Vastus intermedius",
+     "Vastus medialis",
+     "Sartorius"
+    ],
+    "why": "The only quadriceps muscle that crosses the hip as well as the knee, so it’s the one strained in kicking sports.",
+    "art": "thighaxial",
+    "hl": [
+     "rf"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which small hip muscle lies under gluteus medius and tears along with it?",
+    "answer": "Gluteus minimus",
+    "wrong": [
+     "Piriformis",
+     "Tensor fasciae latae",
+     "Quadratus femoris"
+    ],
+    "why": "Both tendons attach to the greater trochanter. Tears cause outer hip pain, often labelled ‘trochanteric bursitis’."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the hamstrings?",
+    "answer": "Sciatic nerve (tibial division)",
+    "wrong": [
+     "Femoral nerve",
+     "Obturator nerve",
+     "Inferior gluteal nerve"
+    ],
+    "why": "The odd one out is the short head of biceps femoris, supplied by the common fibular division."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle stops your pelvis dropping on the other side when you stand on one leg?",
+    "answer": "Gluteus medius",
+    "wrong": [
+     "Gluteus maximus",
+     "Iliopsoas",
+     "Adductor magnus"
+    ],
+    "why": "If it’s weak, the pelvis sags on the lifted side: the Trendelenburg sign."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-08",
+  "number": 68,
+  "difficulty": "Hard",
+  "theme": "Shoulder muscles",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Subscapularis",
+    "wrong": [
+     "Infraspinatus",
+     "Teres major",
+     "Serratus anterior"
+    ],
+    "why": "The only cuff muscle on the front of the shoulder blade. It turns the arm inwards; test it with the belly-press.",
+    "art": "rotatorcuff",
+    "hl": [
+     "subscapularis"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Infraspinatus",
+    "wrong": [
+     "Supraspinatus",
+     "Teres minor",
+     "Teres major"
+    ],
+    "why": "It turns the arm outwards. Test with resisted external rotation, elbow tucked at the side.",
+    "art": "rotatorcuff",
+    "hl": [
+     "infraspinatus"
+    ]
+   },
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bony hook.",
+    "answer": "Coracoid process",
+    "wrong": [
+     "Acromion",
+     "Greater tubercle",
+     "Spine of the scapula"
+    ],
+    "why": "Pec minor, short head of biceps and coracobrachialis all attach here.",
+    "art": "rotatorcuff",
+    "hl": [
+     "coracoid"
+    ]
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies the trapezius?",
+    "answer": "Accessory nerve (XI)",
+    "wrong": [
+     "Dorsal scapular nerve",
+     "Long thoracic nerve",
+     "Suprascapular nerve"
+    ],
+    "why": "It runs just under the skin in the back of the neck, so a lymph node biopsy there can damage it and drop the shoulder."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted tendon.",
+    "answer": "Long head of biceps tendon",
+    "wrong": [
+     "Short head of biceps tendon",
+     "Subscapularis tendon",
+     "Supraspinatus tendon"
+    ],
+    "why": "It runs in a groove and into the shoulder joint. A rupture gives the ‘Popeye’ bulge in the upper arm.",
+    "art": "rotatorcuff",
+    "hl": [
+     "bicepslh"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2027-01-09",
+  "number": 69,
+  "difficulty": "Hard",
+  "theme": "The foot",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which tendon behind the inner ankle holds up the arch, and fails in adult flatfoot?",
+    "answer": "Tibialis posterior",
+    "wrong": [
+     "Flexor hallucis longus",
+     "Fibularis longus",
+     "Tibialis anterior"
+    ],
+    "why": "The commonest cause of flatfoot developing in adults. Ask them to rise on tiptoe on one leg."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which small bones sit under the head of the first metatarsal?",
+    "answer": "Sesamoids",
+    "wrong": [
+     "Cuneiforms",
+     "Accessory navicular",
+     "Os trigonum"
+    ],
+    "why": "They act like a kneecap for the big toe. Dancers and runners can fracture or inflame them."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "A fracture at the base of the fifth metatarsal, where the shaft starts, is called a…",
+    "answer": "Jones fracture",
+    "wrong": [
+     "Lisfranc injury",
+     "March fracture",
+     "Fibularis brevis avulsion"
+    ],
+    "why": "A poor blood supply there means slow healing. It often needs strict rest from weight-bearing, or surgery."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which joints are injured in a Lisfranc injury?",
+    "answer": "Tarsometatarsal joints",
+    "wrong": [
+     "Talonavicular joint",
+     "Subtalar joint",
+     "Metatarsophalangeal joints"
+    ],
+    "why": "Easily missed. Bruising on the sole of the midfoot is a classic clue."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve supplies most of the skin on the sole?",
+    "answer": "Medial plantar nerve",
+    "wrong": [
+     "Sural nerve",
+     "Saphenous nerve",
+     "Deep fibular nerve"
+    ],
+    "why": "A branch of the tibial nerve. The lateral plantar nerve covers the rest, and the heel has its own branches."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-10",
+  "number": 70,
+  "difficulty": "Genius",
+  "theme": "The neck",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "The brachial plexus passes between which two muscles in the neck?",
+    "answer": "Anterior and middle scalenes",
+    "wrong": [
+     "Middle and posterior scalenes",
+     "Sternocleidomastoid and trapezius",
+     "Longus colli and anterior scalene"
+    ],
+    "why": "The subclavian artery goes with it, while the vein passes in front. It’s where an ‘interscalene’ shoulder block goes."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "At what level does the common carotid artery usually split?",
+    "answer": "Upper border of the thyroid cartilage (C3–C4)",
+    "wrong": [
+     "Cricoid cartilage (C6)",
+     "Angle of the mandible (C2)",
+     "Sternal notch (T2)"
+    ],
+    "why": "The carotid sinus here senses blood pressure. Pressing on it can slow the heart."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which structure is the landmark for an emergency surgical airway?",
+    "answer": "Cricothyroid membrane",
+    "wrong": [
+     "Thyrohyoid membrane",
+     "Cricotracheal ligament",
+     "Thyroid isthmus"
+    ],
+    "why": "Feel the dip between the thyroid and cricoid cartilages. It’s thin and sits just under the skin."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve loop supplies the ‘strap’ muscles of the neck?",
+    "answer": "Ansa cervicalis",
+    "wrong": [
+     "Hypoglossal nerve",
+     "Phrenic nerve",
+     "Cervical sympathetic chain"
+    ],
+    "why": "A loop from C1–C3 lying on the carotid sheath. Thyroid surgeons cut the straps high to spare it."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Infection in which space behind the throat, mainly in young children, can spread into the chest?",
+    "answer": "Retropharyngeal space",
+    "wrong": [
+     "Parapharyngeal space",
+     "Submandibular space",
+     "Peritonsillar space"
+    ],
+    "why": "Abscesses come from infected lymph nodes there. Neck stiffness, drooling and a muffled voice are red flags."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-11",
+  "number": 71,
+  "difficulty": "Easy",
+  "theme": "Muscle Monday",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which thigh muscle makes the ‘teardrop’ just above the inner knee?",
+    "answer": "Vastus medialis",
+    "wrong": [
+     "Vastus lateralis",
+     "Rectus femoris",
+     "Sartorius"
+    ],
+    "why": "Its lowest fibres help keep the kneecap tracking straight."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "‘Groin strains’ usually involve which muscle group?",
+    "answer": "Adductors",
+    "wrong": [
+     "Hamstrings",
+     "Glutes",
+     "Abdominals"
+    ],
+    "why": "Adductor longus is the most commonly strained, especially in sports with quick changes of direction."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which forearm muscle bulges near the elbow when you bend it with your thumb pointing up?",
+    "answer": "Brachioradialis",
+    "wrong": [
+     "Biceps brachii",
+     "Pronator teres",
+     "Extensor carpi radialis longus"
+    ],
+    "why": "It works best in this ‘holding a cup’ position. Its reflex is tested just above the wrist."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Tennis elbow affects where which muscles attach?",
+    "answer": "Forearm extensors",
+    "wrong": [
+     "Forearm flexors",
+     "Biceps",
+     "Triceps"
+    ],
+    "why": "Their shared tendon attaches to the outer elbow. Golfer’s elbow is the flexors on the inner side."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscles squeeze blood in the leg veins back up to the heart when you walk?",
+    "answer": "Calf muscles",
+    "wrong": [
+     "Thigh muscles",
+     "Glutes",
+     "Shin muscles"
+    ],
+    "why": "The calf muscle pump. Long flights switch it off, so walk and flex your ankles."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-12",
+  "number": 72,
+  "difficulty": "Easy",
+  "theme": "Hand Day",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Distal phalanx",
+    "wrong": [
+     "Middle phalanx",
+     "Proximal phalanx",
+     "Metacarpal"
+    ],
+    "why": "The fingertip bone. Crushing it in a door is common, and the nail bed may need repair.",
+    "art": "hand",
+    "hl": [
+     "dp2"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the fleshy mound at the base of the thumb called?",
+    "answer": "Thenar eminence",
+    "wrong": [
+     "Hypothenar eminence",
+     "Anatomical snuffbox",
+     "Palmar aponeurosis"
+    ],
+    "why": "Its muscles let you bring the thumb across the palm. Wasting here suggests carpal tunnel syndrome."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve gives feeling to the little finger?",
+    "answer": "Ulnar nerve",
+    "wrong": [
+     "Median nerve",
+     "Radial nerve",
+     "Musculocutaneous nerve"
+    ],
+    "why": "Bumping your ‘funny bone’ hits this nerve, which is why the tingle runs to the little finger."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "How many bones are in one hand, including the wrist?",
+    "answer": "27",
+    "wrong": [
+     "19",
+     "23",
+     "32"
+    ],
+    "why": "8 wrist bones, 5 metacarpals and 14 phalanges. Your two hands hold over a quarter of your bones."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which joint is the knuckle when you make a fist?",
+    "answer": "Metacarpophalangeal (MCP) joint",
+    "wrong": [
+     "Proximal interphalangeal (PIP) joint",
+     "Distal interphalangeal (DIP) joint",
+     "Carpometacarpal (CMC) joint"
+    ],
+    "why": "A ‘boxer’s fracture’ breaks the neck of the fifth metacarpal, just behind this knuckle."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-13",
+  "number": 73,
+  "difficulty": "Medium",
+  "theme": "Lower leg",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted artery.",
+    "answer": "Anterior tibial artery",
+    "wrong": [
+     "Posterior tibial artery",
+     "Fibular artery",
+     "Popliteal artery"
+    ],
+    "why": "It becomes the dorsalis pedis artery, the pulse you feel on the top of the foot.",
+    "art": "legaxial",
+    "hl": [
+     "ata"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted sheet joining the two leg bones.",
+    "answer": "Interosseous membrane",
+    "wrong": [
+     "Deep fascia",
+     "Anterior intermuscular septum",
+     "Tibiofibular ligament"
+    ],
+    "why": "It ties the tibia and fibula together. A ‘high ankle sprain’ can tear up into it.",
+    "art": "legaxial",
+    "hl": [
+     "iom"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the earliest warning sign of compartment syndrome?",
+    "answer": "Pain out of proportion, worse with passive stretch",
+    "wrong": [
+     "Absent foot pulses",
+     "Pale, cold foot",
+     "Complete numbness"
+    ],
+    "why": "Pulses often stay present until late. Don’t wait for them; it’s a surgical emergency."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which skinny calf muscle has a very long tendon, is missing in some people, and gets borrowed for grafts?",
+    "answer": "Plantaris",
+    "wrong": [
+     "Popliteus",
+     "Soleus",
+     "Flexor digitorum longus"
+    ],
+    "why": "Its thin tendon runs between gastrocnemius and soleus."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Where do shin splints (medial tibial stress syndrome) hurt?",
+    "answer": "Along the inner border of the tibia",
+    "wrong": [
+     "Over the front of the fibula",
+     "Behind the knee",
+     "At the Achilles insertion"
+    ],
+    "why": "Common in new runners who build up too fast. Pain at one sharp spot that hurts to hop suggests a stress fracture."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-14",
+  "number": 74,
+  "difficulty": "Medium",
+  "theme": "Pelvis and hips",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Sacrum",
+    "wrong": [
+     "Coccyx",
+     "Ilium",
+     "Fifth lumbar vertebra"
+    ],
+    "why": "Five vertebrae fused into one, wedged between the hip bones at the sacroiliac joints.",
+    "art": "skeleton",
+    "hl": [
+     "sacrum"
+    ]
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "What’s the bony bump you sit on?",
+    "answer": "Ischial tuberosity",
+    "wrong": [
+     "Greater trochanter",
+     "Pubic symphysis",
+     "Anterior superior iliac spine"
+    ],
+    "why": "The hamstrings start here. Teen sprinters can pull a piece of it off before it fuses."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which bony point at the front of the hip do your hands find on your hips?",
+    "answer": "Anterior superior iliac spine (ASIS)",
+    "wrong": [
+     "Greater trochanter",
+     "Pubic tubercle",
+     "Anterior inferior iliac spine"
+    ],
+    "why": "Sartorius and the inguinal ligament start here. A skin nerve passes just inside it and can get pinched by tight belts."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which joint joins the two pubic bones at the front?",
+    "answer": "Pubic symphysis",
+    "wrong": [
+     "Sacroiliac joint",
+     "Sacrococcygeal joint",
+     "Acetabulum"
+    ],
+    "why": "It softens and widens slightly in pregnancy, which can cause pelvic girdle pain."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which hip bone forms the top of the hip socket and the crest you rest your hands on?",
+    "answer": "Ilium",
+    "wrong": [
+     "Ischium",
+     "Pubis",
+     "Sacrum"
+    ],
+    "why": "Ilium, ischium and pubis fuse at the hip socket by the late teens. The back of the iliac crest is where bone marrow is sampled."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-15",
+  "number": 75,
+  "difficulty": "Hard",
+  "theme": "Face muscles",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which cheek muscle do trumpet players use?",
+    "answer": "Buccinator",
+    "wrong": [
+     "Masseter",
+     "Zygomaticus major",
+     "Orbicularis oris"
+    ],
+    "why": "It keeps the cheeks firm and pushes food back between the teeth."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle pulls the corners of the mouth up into a smile?",
+    "answer": "Zygomaticus major",
+    "wrong": [
+     "Risorius",
+     "Levator labii superioris",
+     "Depressor anguli oris"
+    ],
+    "why": "A genuine smile also crinkles the eyes, using orbicularis oculi."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which facial nerve branch is at risk in surgery near the angle of the jaw, causing a lopsided smile?",
+    "answer": "Marginal mandibular branch",
+    "wrong": [
+     "Buccal branch",
+     "Zygomatic branch",
+     "Cervical branch"
+    ],
+    "why": "It loops below the jaw line. Damage weakens the lower lip on that side."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "With a weak side of the face, which finding points to a stroke rather than Bell’s palsy?",
+    "answer": "Forehead is spared",
+    "wrong": [
+     "Forehead is also weak",
+     "Taste is lost",
+     "Eye can’t close"
+    ],
+    "why": "The forehead gets supply from both sides of the brain, so a stroke spares it. A facial nerve problem doesn’t."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which chewing muscle opens the jaw and is often tender in jaw joint pain?",
+    "answer": "Lateral pterygoid",
+    "wrong": [
+     "Medial pterygoid",
+     "Temporalis",
+     "Masseter"
+    ],
+    "why": "It attaches to the jaw joint’s disc. It’s the only chewing muscle that opens the mouth."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-16",
+  "number": 76,
+  "difficulty": "Hard",
+  "theme": "Forearm",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which forearm muscle can trap the median nerve near the elbow?",
+    "answer": "Pronator teres",
+    "wrong": [
+     "Pronator quadratus",
+     "Supinator",
+     "Flexor carpi radialis"
+    ],
+    "why": "Pronator syndrome mimics carpal tunnel, but numbness also reaches the palm."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle can trap the posterior interosseous nerve, causing finger drop without wrist drop?",
+    "answer": "Supinator",
+    "wrong": [
+     "Brachioradialis",
+     "Extensor carpi radialis brevis",
+     "Anconeus"
+    ],
+    "why": "The nerve passes through it under a fibrous arch. Wrist extension is spared because those muscles are supplied higher up."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which thumb tendon can snap weeks after a wrist fracture, even an undisplaced one?",
+    "answer": "Extensor pollicis longus",
+    "wrong": [
+     "Extensor indicis",
+     "Abductor pollicis longus",
+     "Extensor carpi ulnaris"
+    ],
+    "why": "It hooks round a bony bump on the back of the radius and can fray there. The thumb tip then can’t lift."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle bends the fingertip joint?",
+    "answer": "Flexor digitorum profundus",
+    "wrong": [
+     "Flexor digitorum superficialis",
+     "Lumbricals",
+     "Interossei"
+    ],
+    "why": "Hold the middle finger joint still and ask for a tip bend. ‘Jersey finger’ is when its tendon tears off."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve branch is damaged if someone can’t make an ‘OK’ sign but has no numbness?",
+    "answer": "Anterior interosseous nerve",
+    "wrong": [
+     "Posterior interosseous nerve",
+     "Recurrent branch of the median nerve",
+     "Superficial radial nerve"
+    ],
+    "why": "A purely motor branch of the median nerve. With no numbness, it’s often mistaken for a tendon rupture."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-17",
+  "number": 77,
+  "difficulty": "Genius",
+  "theme": "Foot and ankle",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which tendon runs in a groove under a ledge of the heel bone, and troubles ballet dancers?",
+    "answer": "Flexor hallucis longus",
+    "wrong": [
+     "Flexor digitorum longus",
+     "Tibialis posterior",
+     "Fibularis longus"
+    ],
+    "why": "‘Dancer’s tendinitis’ hurts behind the inner ankle when rising onto the toes."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ligament, the ‘spring’ ligament, cradles the head of the talus?",
+    "answer": "Plantar calcaneonavicular ligament",
+    "wrong": [
+     "Long plantar ligament",
+     "Deltoid ligament",
+     "Bifurcate ligament"
+    ],
+    "why": "It holds up the inner arch and often fails along with the tibialis posterior tendon."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which inner midfoot bone is where tibialis posterior mainly attaches, and sometimes has an extra bone?",
+    "answer": "Navicular",
+    "wrong": [
+     "Cuboid",
+     "Intermediate cuneiform",
+     "Talus"
+    ],
+    "why": "An accessory navicular is a common painful bump on the inner midfoot."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which nerve is trapped in ‘Baxter’s nerve’ heel pain?",
+    "answer": "First branch of the lateral plantar nerve",
+    "wrong": [
+     "Medial calcaneal nerve",
+     "Sural nerve",
+     "Medial plantar nerve"
+    ],
+    "why": "An easily missed cause of stubborn heel pain, often blamed on plantar fasciitis."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which small bone behind the talus causes back-of-ankle pain in ballet dancers and fast bowlers?",
+    "answer": "Os trigonum",
+    "wrong": [
+     "Os peroneum",
+     "Os naviculare",
+     "Os vesalianum"
+    ],
+    "why": "An unfused piece of the talus. Pointing the foot pinches it."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-18",
+  "number": 78,
+  "difficulty": "Easy",
+  "theme": "Muscle Monday: core",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which deep abdominal muscle wraps round the waist like a corset?",
+    "answer": "Transversus abdominis",
+    "wrong": [
+     "Rectus abdominis",
+     "External oblique",
+     "Internal oblique"
+    ],
+    "why": "It tightens the abdomen and helps brace the spine before you lift."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which long muscles run either side of the spine and straighten your back?",
+    "answer": "Erector spinae",
+    "wrong": [
+     "Latissimus dorsi",
+     "Quadratus lumborum",
+     "Trapezius"
+    ],
+    "why": "Most ‘back strains’ involve them."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which diamond-shaped muscle spans your upper back and shrugs your shoulders?",
+    "answer": "Trapezius",
+    "wrong": [
+     "Rhomboids",
+     "Levator scapulae",
+     "Latissimus dorsi"
+    ],
+    "why": "The upper part is where many people carry neck and shoulder tension."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscles between the ribs help you breathe?",
+    "answer": "Intercostals",
+    "wrong": [
+     "Scalenes",
+     "Serratus anterior",
+     "Pectoralis minor"
+    ],
+    "why": "Nerves and vessels run under each rib, so chest drains go in just above a rib."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which deep muscle between the lowest rib and the pelvis is often tight in low back pain?",
+    "answer": "Quadratus lumborum",
+    "wrong": [
+     "Psoas major",
+     "Gluteus medius",
+     "Multifidus"
+    ],
+    "why": "It hitches the hip and steadies the spine when you stand on one leg."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-19",
+  "number": 79,
+  "difficulty": "Easy",
+  "theme": "Hormones",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hormone does the pancreas release when blood sugar is high?",
+    "answer": "Insulin",
+    "wrong": [
+     "Glucagon",
+     "Cortisol",
+     "Adrenaline"
+    ],
+    "why": "It moves glucose into cells. Glucagon does the opposite when sugar is low."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hormone rises at night to make you sleepy?",
+    "answer": "Melatonin",
+    "wrong": [
+     "Serotonin",
+     "Cortisol",
+     "Oxytocin"
+    ],
+    "why": "Bright screens at night suppress it. Morning light helps reset the body clock."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ovarian hormone builds up the lining of the uterus in the first half of the cycle?",
+    "answer": "Oestrogen",
+    "wrong": [
+     "Progesterone",
+     "Prolactin",
+     "Luteinising hormone"
+    ],
+    "why": "After ovulation, progesterone takes over and readies the lining for a pregnancy."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hormone do the testes mainly make?",
+    "answer": "Testosterone",
+    "wrong": [
+     "Oestrogen",
+     "Progesterone",
+     "Prolactin"
+    ],
+    "why": "It drives puberty changes, muscle and sperm production."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ‘hunger hormone’ rises before meals?",
+    "answer": "Ghrelin",
+    "wrong": [
+     "Leptin",
+     "Insulin",
+     "Glucagon"
+    ],
+    "why": "Made mainly in the stomach. Leptin, from fat tissue, signals fullness over the long term."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-20",
+  "number": 80,
+  "difficulty": "Medium",
+  "theme": "Neck and throat",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ring of cartilage is the only complete ring in the airway?",
+    "answer": "Cricoid cartilage",
+    "wrong": [
+     "Thyroid cartilage",
+     "First tracheal ring",
+     "Arytenoid cartilage"
+    ],
+    "why": "It sits at C6. It was long taught as the narrowest part of a child’s airway."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which thin muscle just under the skin of the neck tightens when you grimace?",
+    "answer": "Platysma",
+    "wrong": [
+     "Sternocleidomastoid",
+     "Omohyoid",
+     "Sternohyoid"
+    ],
+    "why": "A face muscle that has slipped into the neck. The neck ‘bands’ that come with age are its edges."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which two-bellied strap muscle runs from the shoulder blade to the hyoid bone?",
+    "answer": "Omohyoid",
+    "wrong": [
+     "Digastric",
+     "Stylohyoid",
+     "Sternothyroid"
+    ],
+    "why": "Its middle tendon lies over the internal jugular vein, a handy surgical landmark."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Damage to what in the neck causes a droopy eyelid, small pupil and less sweating on one side of the face?",
+    "answer": "Cervical sympathetic chain",
+    "wrong": [
+     "Oculomotor nerve",
+     "Facial nerve",
+     "Accessory nerve"
+    ],
+    "why": "That’s Horner syndrome. Neck causes include carotid dissection and tumours at the top of the lung."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which neck vein can you see swell when you strain?",
+    "answer": "External jugular vein",
+    "wrong": [
+     "Internal jugular vein",
+     "Anterior jugular vein",
+     "Vertebral vein"
+    ],
+    "why": "It crosses sternocleidomastoid. Venous pressure (JVP) is judged from the deeper internal jugular."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-21",
+  "number": 81,
+  "difficulty": "Medium",
+  "theme": "Hand Day: muscles",
+  "rounds": [
+   {
+    "kind": "What’s this bone?",
+    "q": "Name the highlighted bone.",
+    "answer": "Second metacarpal",
+    "wrong": [
+     "Third metacarpal",
+     "First metacarpal",
+     "Trapezoid"
+    ],
+    "why": "The stiffest metacarpal, locked onto the wrist, giving the index finger a solid base for pinch.",
+    "art": "hand",
+    "hl": [
+     "mc2"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscles spread the fingers apart?",
+    "answer": "Dorsal interossei",
+    "wrong": [
+     "Palmar interossei",
+     "Lumbricals",
+     "Extensor digitorum"
+    ],
+    "why": "Memory aid: DAB (dorsal abduct) and PAD (palmar adduct). All are supplied by the ulnar nerve."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which thumb muscle wastes in severe carpal tunnel syndrome?",
+    "answer": "Abductor pollicis brevis",
+    "wrong": [
+     "Adductor pollicis",
+     "Flexor pollicis longus",
+     "Opponens digiti minimi"
+    ],
+    "why": "Test by lifting the thumb straight up off the palm against resistance."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "A finger held slightly bent, swollen and agony to straighten after a puncture suggests infection where?",
+    "answer": "Flexor tendon sheath",
+    "wrong": [
+     "Extensor tendon",
+     "Nail fold (paronychia)",
+     "Fingertip pulp (felon)"
+    ],
+    "why": "These are Kanavel’s signs. It’s a hand surgery emergency."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle pulls the thumb against the side of the hand, as in holding a key?",
+    "answer": "Adductor pollicis",
+    "wrong": [
+     "Opponens pollicis",
+     "Flexor pollicis brevis",
+     "First dorsal interosseous"
+    ],
+    "why": "If it’s weak, the thumb tip bends to grip paper: Froment’s sign."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-22",
+  "number": 82,
+  "difficulty": "Hard",
+  "theme": "Pelvic floor",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which part of levator ani forms a sling behind the rectum?",
+    "answer": "Puborectalis",
+    "wrong": [
+     "Iliococcygeus",
+     "Pubococcygeus",
+     "Coccygeus"
+    ],
+    "why": "It kinks the rectum to help keep you continent. If it won’t relax, it causes one type of constipation."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which anal sphincter can you squeeze on purpose?",
+    "answer": "External anal sphincter",
+    "wrong": [
+     "Internal anal sphincter",
+     "Sphincter of Oddi",
+     "Ileocaecal valve"
+    ],
+    "why": "It’s skeletal muscle. The internal sphincter is smooth muscle and keeps resting tone automatically."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which spinal nerve roots mainly supply the pelvic floor and sphincters?",
+    "answer": "S2–S4",
+    "wrong": [
+     "L1–L2",
+     "L4–S1",
+     "T10–L1"
+    ],
+    "why": "That’s why cauda equina compression causes saddle numbness and bladder or bowel trouble. It’s an emergency."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which reflex checks the pelvic floor’s nerve supply by stroking near the anus?",
+    "answer": "Anal wink reflex",
+    "wrong": [
+     "Cremasteric reflex",
+     "Plantar reflex",
+     "Abdominal reflex"
+    ],
+    "why": "A quick squeeze of the external sphincter. If it’s missing, think S2–S4 or cauda equina."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ligament at the base of the broad ligament runs sideways from the cervix and carries the uterine artery?",
+    "answer": "Cardinal ligament",
+    "wrong": [
+     "Round ligament",
+     "Uterosacral ligament",
+     "Suspensory ligament of the ovary"
+    ],
+    "why": "The ureter passes just under the uterine artery here: ‘water under the bridge’, a known trap in hysterectomy."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-23",
+  "number": 83,
+  "difficulty": "Hard",
+  "theme": "Back muscles",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which deep back muscle, in short bundles over a few vertebrae, often shrinks after low back pain?",
+    "answer": "Multifidus",
+    "wrong": [
+     "Erector spinae",
+     "Rotatores",
+     "Semispinalis"
+    ],
+    "why": "Scans often show it smaller and fattier in people with long-term back pain."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscles pull the shoulder blades together?",
+    "answer": "Rhomboids",
+    "wrong": [
+     "Levator scapulae",
+     "Serratus anterior",
+     "Teres major"
+    ],
+    "why": "They join the inner border of the shoulder blade to the spine."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle runs from the upper neck to the top corner of the shoulder blade and is sore in stiff necks?",
+    "answer": "Levator scapulae",
+    "wrong": [
+     "Upper trapezius",
+     "Splenius capitis",
+     "Scalenus medius"
+    ],
+    "why": "Its lower end is a classic tender spot in desk workers."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle pulls the shoulder blade forward round the chest, as in a punch?",
+    "answer": "Serratus anterior",
+    "wrong": [
+     "Pectoralis minor",
+     "Rhomboid major",
+     "Subscapularis"
+    ],
+    "why": "If its nerve is damaged, the shoulder blade ‘wings’ when pushing against a wall."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which small muscles at the top of the neck tilt the head and feature in tension headaches?",
+    "answer": "Suboccipital muscles",
+    "wrong": [
+     "Scalenes",
+     "Erector spinae",
+     "Longus colli"
+    ],
+    "why": "Four small muscles between the skull and the top two vertebrae, close to the greater occipital nerve."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-24",
+  "number": 84,
+  "difficulty": "Genius",
+  "theme": "Hand Day: Genius",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "What passes through Guyon’s canal at the wrist?",
+    "answer": "Ulnar nerve and ulnar artery",
+    "wrong": [
+     "Median nerve and flexor tendons",
+     "Ulnar nerve and flexor carpi ulnaris tendon",
+     "Radial artery and superficial radial nerve"
+    ],
+    "why": "The canal lies between the pisiform and the hook of the hamate. Long-distance cyclists can squash the nerve here."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which structure tears in a boutonnière deformity?",
+    "answer": "Central slip of the extensor tendon",
+    "wrong": [
+     "Terminal extensor tendon",
+     "Volar plate",
+     "Lateral bands"
+    ],
+    "why": "The middle joint pokes through like a button through a buttonhole. Early splinting prevents it becoming fixed."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "A mallet finger is a tear of which structure?",
+    "answer": "Terminal extensor tendon",
+    "wrong": [
+     "Central slip",
+     "Flexor digitorum profundus",
+     "Collateral ligament"
+    ],
+    "why": "The fingertip droops and can’t straighten. Six weeks or more of continuous splinting usually works."
+   },
+   {
+    "kind": "Which nerve?",
+    "q": "Which lumbricals are supplied by the median nerve?",
+    "answer": "First and second",
+    "wrong": [
+     "Third and fourth",
+     "All four",
+     "None"
+    ],
+    "why": "The ulnar nerve supplies the third and fourth, which is why ulnar palsy claws mainly the ring and little fingers."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ligament is torn in skier’s (gamekeeper’s) thumb?",
+    "answer": "Ulnar collateral ligament of the thumb MCP joint",
+    "wrong": [
+     "Radial collateral ligament of the thumb MCP joint",
+     "Volar plate of the thumb IP joint",
+     "Scapholunate ligament"
+    ],
+    "why": "If the torn end flips behind a tendon sheet (a Stener lesion), it won’t heal without surgery."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-25",
+  "number": 85,
+  "difficulty": "Easy",
+  "theme": "Muscle Monday: sport",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which hamstring tears most often in sprinting?",
+    "answer": "Biceps femoris",
+    "wrong": [
+     "Semitendinosus",
+     "Semimembranosus",
+     "Gracilis"
+    ],
+    "why": "Usually the long head, as the leg reaches forward at top speed."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "A ‘corked thigh’ is a bruise of which muscle group?",
+    "answer": "Quadriceps",
+    "wrong": [
+     "Hamstrings",
+     "Adductors",
+     "Calf"
+    ],
+    "why": "Gentle movement and no early massage lower the risk of bone forming in the muscle."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle tears in ‘tennis leg’?",
+    "answer": "Medial head of gastrocnemius",
+    "wrong": [
+     "Lateral head of gastrocnemius",
+     "Soleus",
+     "Plantaris"
+    ],
+    "why": "Sudden sharp pain in the inner calf, like being hit with a stone, typically in middle age."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Pec tears in weightlifters usually happen during which exercise?",
+    "answer": "Bench press",
+    "wrong": [
+     "Deadlift",
+     "Squat",
+     "Biceps curl"
+    ],
+    "why": "The tendon tears near the arm as the bar comes down. Surgery is usually advised in active people."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which tendon is affected in ‘jumper’s knee’?",
+    "answer": "Patellar tendon",
+    "wrong": [
+     "Quadriceps tendon",
+     "Iliotibial band",
+     "Pes anserinus"
+    ],
+    "why": "Pain at the lower tip of the kneecap. Loading exercises are the main treatment."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-26",
+  "number": 86,
+  "difficulty": "Easy",
+  "theme": "Feet and ankles",
+  "rounds": [
+   {
+    "kind": "Bone trivia",
+    "q": "How many bones are in each foot?",
+    "answer": "26",
+    "wrong": [
+     "19",
+     "22",
+     "33"
+    ],
+    "why": "7 tarsals, 5 metatarsals and 14 phalanges. Your hands and feet hold over half your bones."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "Which bone forms the bump on the inside of the ankle?",
+    "answer": "Tibia (medial malleolus)",
+    "wrong": [
+     "Fibula (lateral malleolus)",
+     "Talus",
+     "Navicular"
+    ],
+    "why": "The outer bump is the fibula, and it sits lower."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the arch along the inner side of the foot called?",
+    "answer": "Medial longitudinal arch",
+    "wrong": [
+     "Lateral longitudinal arch",
+     "Transverse arch",
+     "Metatarsal arch"
+    ],
+    "why": "Most flexible flat feet in children are normal and need no treatment."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "What’s the thick band under the sole that supports the arch?",
+    "answer": "Plantar fascia",
+    "wrong": [
+     "Achilles tendon",
+     "Spring ligament",
+     "Tibialis posterior tendon"
+    ],
+    "why": "It works like a bowstring for the arch."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Gout most often first strikes which joint?",
+    "answer": "Big toe joint (first MTP)",
+    "wrong": [
+     "Ankle",
+     "Knee",
+     "Thumb base"
+    ],
+    "why": "Crystals form more easily in cooler joints. A hot, red, exquisitely tender joint overnight is typical."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-27",
+  "number": 87,
+  "difficulty": "Medium",
+  "theme": "Thigh and knee",
+  "rounds": [
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Semimembranosus",
+    "wrong": [
+     "Semitendinosus",
+     "Biceps femoris",
+     "Gracilis"
+    ],
+    "why": "The broadest hamstring. Its tendon helps support the back of the knee joint.",
+    "art": "thighaxial",
+    "hl": [
+     "semimem"
+    ]
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted vein.",
+    "answer": "Great saphenous vein",
+    "wrong": [
+     "Femoral vein",
+     "Small saphenous vein",
+     "Popliteal vein"
+    ],
+    "why": "The longest vein in the body. The commonest site of varicose veins and a favourite bypass graft.",
+    "art": "thighaxial",
+    "hl": [
+     "gsv"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which three tendons form the pes anserinus on the inner knee?",
+    "answer": "Sartorius, gracilis, semitendinosus",
+    "wrong": [
+     "Semimembranosus, gracilis, sartorius",
+     "Sartorius, adductor longus, gracilis",
+     "Semitendinosus, semimembranosus, biceps femoris"
+    ],
+    "why": "Memory aid: ‘Say Grace before Tea’. Bursitis here hurts just below the inner joint line."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which small muscle behind the knee unlocks the straight knee?",
+    "answer": "Popliteus",
+    "wrong": [
+     "Plantaris",
+     "Gastrocnemius",
+     "Semimembranosus"
+    ],
+    "why": "It twists the knee slightly to unlock it. Its tendon runs inside the joint near the lateral meniscus."
+   },
+   {
+    "kind": "Bone trivia",
+    "q": "The iliotibial band attaches to which bump on the outer tibia?",
+    "answer": "Gerdy’s tubercle",
+    "wrong": [
+     "Tibial tuberosity",
+     "Fibular head",
+     "Lateral epicondyle"
+    ],
+    "why": "ITB friction pain is usually felt higher, over the outer femur just above the joint."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-28",
+  "number": 88,
+  "difficulty": "Medium",
+  "theme": "Jaw and chewing",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which fan-shaped chewing muscle sits at the temple?",
+    "answer": "Temporalis",
+    "wrong": [
+     "Masseter",
+     "Lateral pterygoid",
+     "Occipitalis"
+    ],
+    "why": "Feel it tighten when you clench. New temple pain over 50 also raises giant cell arteritis."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "In jaw joint (TMJ) disorder, what usually causes the clicking?",
+    "answer": "Articular disc slipping",
+    "wrong": [
+     "Condyle fracture",
+     "Masseter tendon snapping",
+     "Coronoid process catching"
+    ],
+    "why": "The disc slips forward and pops back as the mouth opens. Most cases settle with jaw rest and less clenching."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle purses your lips to whistle?",
+    "answer": "Orbicularis oris",
+    "wrong": [
+     "Buccinator",
+     "Mentalis",
+     "Risorius"
+    ],
+    "why": "A ring of muscle round the mouth, supplied by the facial nerve."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which salivary gland most often forms stones?",
+    "answer": "Submandibular gland",
+    "wrong": [
+     "Parotid gland",
+     "Sublingual gland",
+     "Minor salivary glands"
+    ],
+    "why": "Its saliva is thicker and its duct runs uphill. Swelling under the jaw at mealtimes is the clue."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle wrinkles your chin when you sulk?",
+    "answer": "Mentalis",
+    "wrong": [
+     "Depressor anguli oris",
+     "Platysma",
+     "Depressor labii inferioris"
+    ],
+    "why": "It pushes up the lower lip. An overactive one gives a dimpled ‘orange peel’ chin."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-29",
+  "number": 89,
+  "difficulty": "Hard",
+  "theme": "Hormone glands",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which layer of the adrenal cortex makes aldosterone?",
+    "answer": "Zona glomerulosa",
+    "wrong": [
+     "Zona fasciculata",
+     "Zona reticularis",
+     "Adrenal medulla"
+    ],
+    "why": "From outside in: salt, sugar, sex (aldosterone, cortisol, androgens)."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Excess of which pituitary hormone causes acromegaly?",
+    "answer": "Growth hormone",
+    "wrong": [
+     "Prolactin",
+     "ACTH",
+     "TSH"
+    ],
+    "why": "Growth plates have closed in adults, so hands, feet, jaw and soft tissues enlarge. IGF-1 is the screening test."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which structure connects the hypothalamus to the pituitary?",
+    "answer": "Pituitary stalk",
+    "wrong": [
+     "Optic chiasm",
+     "Mammillary body",
+     "Pineal stalk"
+    ],
+    "why": "Pressure on it can raise prolactin, because the brake signal (dopamine) can’t get through."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "A pituitary tumour pressing upwards classically causes which visual field loss?",
+    "answer": "Bitemporal hemianopia",
+    "wrong": [
+     "Homonymous hemianopia",
+     "Central scotoma",
+     "Superior quadrantanopia"
+    ],
+    "why": "It presses on the optic chiasm, where fibres serving the outer visual fields cross."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which thyroid hormone is the more active form inside cells?",
+    "answer": "T3 (triiodothyronine)",
+    "wrong": [
+     "T4 (thyroxine)",
+     "Reverse T3",
+     "TSH"
+    ],
+    "why": "The thyroid mainly releases T4, which tissues convert to T3. That’s why T4 replacement alone works for most people."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-30",
+  "number": 90,
+  "difficulty": "Hard",
+  "theme": "Hip muscles",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which short hip rotator leaves the pelvis through the lesser sciatic foramen?",
+    "answer": "Obturator internus",
+    "wrong": [
+     "Piriformis",
+     "Obturator externus",
+     "Quadratus femoris"
+    ],
+    "why": "It wraps sharply around the ischium, using it like a pulley."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle runs from the front of the pelvis into the iliotibial band?",
+    "answer": "Tensor fasciae latae",
+    "wrong": [
+     "Sartorius",
+     "Rectus femoris",
+     "Gluteus minimus"
+    ],
+    "why": "It tightens the ITB. Runners and cyclists can overload it."
+   },
+   {
+    "kind": "Name the structure",
+    "q": "Name the highlighted muscle.",
+    "answer": "Adductor longus",
+    "wrong": [
+     "Adductor magnus",
+     "Gracilis",
+     "Pectineus"
+    ],
+    "why": "The tendon you feel in the groin. It forms the inner edge of the femoral triangle.",
+    "art": "thighaxial",
+    "hl": [
+     "addlongus"
+    ]
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which ligament, among the strongest in the body, reinforces the front of the hip?",
+    "answer": "Iliofemoral ligament",
+    "wrong": [
+     "Ischiofemoral ligament",
+     "Pubofemoral ligament",
+     "Ligamentum teres"
+    ],
+    "why": "Its Y shape stops the hip over-extending, so you can stand with little muscle effort."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which artery mainly supplies the femoral head in adults?",
+    "answer": "Medial circumflex femoral artery",
+    "wrong": [
+     "Lateral circumflex femoral artery",
+     "Artery of the ligamentum teres",
+     "Obturator artery"
+    ],
+    "why": "Displaced hip fractures inside the joint tear its branches, which is why they’re often replaced rather than fixed."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-31",
+  "number": 91,
+  "difficulty": "Genius",
+  "theme": "Genius muscles",
+  "rounds": [
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle belly on top of the foot helps tell a deep fibular nerve or L5 problem?",
+    "answer": "Extensor digitorum brevis",
+    "wrong": [
+     "Extensor hallucis longus",
+     "Fibularis tertius",
+     "Abductor digiti minimi"
+    ],
+    "why": "It’s the only muscle mass on the top of the foot. Wasting suggests a nerve problem."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle lifts the upper eyelid?",
+    "answer": "Levator palpebrae superioris",
+    "wrong": [
+     "Superior tarsal (Müller’s) muscle",
+     "Orbicularis oculi",
+     "Superior rectus"
+    ],
+    "why": "An oculomotor palsy drops the lid fully. Horner syndrome causes only a mild droop, through Müller’s muscle."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which middle ear muscle damps loud sounds, alongside stapedius?",
+    "answer": "Tensor tympani",
+    "wrong": [
+     "Tensor veli palatini",
+     "Levator veli palatini",
+     "Posterior auricular"
+    ],
+    "why": "It tenses the eardrum via the malleus. It’s supplied by V3, while stapedius gets the facial nerve."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle forms the floor of the mouth?",
+    "answer": "Mylohyoid",
+    "wrong": [
+     "Geniohyoid",
+     "Digastric (anterior belly)",
+     "Hyoglossus"
+    ],
+    "why": "Infection from lower molars spreading below it can cause Ludwig’s angina, which threatens the airway."
+   },
+   {
+    "kind": "Anatomy trivia",
+    "q": "Which muscle forms the outer floor of the femoral triangle?",
+    "answer": "Iliopsoas",
+    "wrong": [
+     "Sartorius",
+     "Adductor longus",
+     "Vastus medialis"
+    ],
+    "why": "Inside the triangle lie the femoral nerve, artery and vein: NAV, from outside in."
+   }
+  ]
+ }
+]
