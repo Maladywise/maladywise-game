@@ -8,7 +8,7 @@
   --wk:#4A3D6B; --today:#2A2240;
 }
 .doc.days-doc{max-width:1040px}
-.days-doc>h1,.days-doc>.lede,.days-doc>.days-jump,.days-doc>.note,.days-doc>.faq,.days-doc>#upcoming,.days-doc>#all-days,.days-doc>.nl,.days-doc>footer.site{max-width:640px;margin-left:auto;margin-right:auto}
+.days-doc>h1,.days-doc>.mw-sec-hero,.days-doc>.lede,.days-doc>.days-jump,.days-doc>.note,.days-doc>.faq,.days-doc>#upcoming,.days-doc>#all-days,.days-doc>.nl,.days-doc>footer.site{max-width:640px;margin-left:auto;margin-right:auto}
 .days-doc .note{color:var(--muted);font-size:13px;line-height:1.5}
 .days-sec{margin-top:26px;scroll-margin-top:70px}
 .doc .days-sec>h2,.cal-head h2{font:700 21px var(--title);margin:0 0 6px}
@@ -107,3 +107,4 @@
 .dl-tog:disabled{cursor:default}.dl-tog:disabled::after{display:none}
 .dl-tog:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
 .dl-n{margin-left:auto;font:500 13px var(--body);color:var(--muted)}
+.days-doc>.mw-sec-hero{margin-left:auto!important;margin-right:auto!important}
