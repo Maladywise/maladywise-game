@@ -11,6 +11,7 @@ window.MW_HOME = {
       { t: "Specialists", href: "/specialists/", d: "Newcastle + Hunter Region", au: true }
     ] },
     { t: "For doctors", medical: true, items: [
+      { t: "Doctors’ hub", href: "/doctors/", d: "Everything for clinicians, in one place" },
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },

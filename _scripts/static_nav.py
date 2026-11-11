@@ -63,12 +63,12 @@ LABELS = {
     "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",
     "/specialists/": "Specialists", "/compare/": "Comparisons", "/tools/": "Tools", "/deep-dives/": "Deep dives",
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
-    "/glp-1/": "GLP-1 medicines guide",
+    "/glp-1/": "GLP-1 medicines guide", "/doctors/": "For doctors",
 }
 # Pages for doctors, curious minds and practice quizzes (their section is "extra"; og_cards.py uses sections).
 EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
          "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/", "/arcade/"]
-HUBS = {"/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
+HUBS = {"/doctors/", "/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
 

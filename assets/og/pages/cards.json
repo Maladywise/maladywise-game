@@ -587,6 +587,13 @@
 "label": "Condition",
 "title": "Diverticulitis"
 },
+"doctors": {
+"url": "/doctors/",
+"key": "e0a03373e931",
+"v": "a66e45b5",
+"label": "For doctors",
+"title": "For doctors"
+},
 "dry-eye": {
 "url": "/dry-eye/",
 "key": "40e493a92ac7",
