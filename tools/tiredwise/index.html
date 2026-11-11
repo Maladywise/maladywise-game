@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/tools/tiredwise/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<title>Tiredwise: workup tool for the tired, complex patient | Malady Wise</title>
+<meta name="description" content="A clinician workup tool for chronic fatigue with overlap: ME/CFS, long COVID, POTS, fibromyalgia, hypermobility, MCAS, autism and ADHD. Criteria checkers, baseline tests, red flags and a plan.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta property="og:title" content="Tiredwise: workup tool for the tired, complex patient | Malady Wise">
+<meta property="og:description" content="A clinician workup tool for chronic fatigue with overlap: ME/CFS, long COVID, POTS, fibromyalgia, hypermobility, MCAS, autism and ADHD. Criteria checkers, baseline tests, red flags and a plan.">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="/assets/shell.css?v=196">
+<script defer src="/assets/games.js?v=110"></script>
+<script defer src="/assets/site.js?v=58"></script>
+<script defer src="/assets/shell.js?v=216"></script>
+<style>
+#tw .beta{display:inline-block;font:700 11px var(--body);letter-spacing:.08em;background:#FFD23F;color:#2E1F57;border-radius:999px;padding:2px 9px;vertical-align:middle;margin-left:6px}
+#tw .flags{background:#FBEDE9;border:1px solid #E9B7A8;border-left:4px solid #B23A1E;border-radius:10px;padding:10px 14px;margin:10px 0}
+#tw .flags h2,#tw .flags h3{margin:0 0 4px;font-size:15px;color:#8A2F1C}
+html[data-theme="dark"] #tw .flags{background:#3E231C;border-color:#6B3A2E;border-left-color:#F0A898}
+html[data-theme="dark"] #tw .flags h2,html[data-theme="dark"] #tw .flags h3{color:#F0A898}
+#tw .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:12px 0}
+#tw details.card>summary{font:600 16px var(--body);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center}
+#tw details.card>summary::-webkit-details-marker{display:none}
+#tw details.card>summary::after{content:"+";font-size:20px;color:var(--muted)}
+#tw details.card[open]>summary::after{content:"–"}
+#tw .res{font:600 13px var(--body);border-radius:999px;padding:3px 10px;background:var(--bg);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+#tw .res.yes{background:#E3F4EA;border-color:#9BD3B0;color:#1F6B3F}
+#tw .res.maybe{background:#FFF4D6;border-color:#EBCB78;color:#7A5A00}
+html[data-theme="dark"] #tw .res.yes{background:#1E3A2A;color:#9BE3B8;border-color:#2F6B47}
+html[data-theme="dark"] #tw .res.maybe{background:#3A3018;color:#F5D98A;border-color:#6B5A2A}
+#tw label.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14.5px;line-height:1.4;cursor:pointer;border-bottom:1px dashed var(--line)}
+#tw label.ck:last-of-type{border-bottom:0}
+#tw label.ck input{width:20px;height:20px;flex:0 0 auto;margin-top:1px;accent-color:#4A3480}
+#tw .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 12px}
+#tw .grid label.ck{border-bottom:0;padding:5px 0}
+#tw .num{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:6px 0}
+#tw .num label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;justify-content:flex-end;gap:3px}
+#tw .num input,#tw select{font:500 15px var(--body);padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:44px;width:100%;box-sizing:border-box}
+#tw .out{margin:10px 0 2px;padding:10px 12px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-size:14.5px;line-height:1.5}
+#tw .out b{color:var(--brand)}
+#tw .note{font-size:13px;color:var(--muted);margin:6px 0}
+#tw h3.sub{font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+#tw ul.tight{margin:4px 0;padding-left:18px}#tw ul.tight li{font-size:14.5px;line-height:1.5;margin:2px 0}
+#tw .btn{font:600 14px var(--body);border:0;background:#4A3480;color:#fff;border-radius:999px;padding:11px 18px;min-height:44px;cursor:pointer}
+#tw .btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+#tw .row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+#tw #tw-sum{white-space:pre-wrap;font:13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-height:420px;overflow:auto}
+#tw .tag{font-size:12px;font-weight:600;color:#7A5A00}
+#tw .ev{font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-right:4px;background:#E3F4EA;color:#1F6B3F}
+#tw .ev.m{background:#FFF4D6;color:#7A5A00}#tw .ev.l{background:#F1E9FB;color:#5B3E91}#tw .ev.x{background:#FBEDE9;color:#8A2F1C}
+</style>
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Tiredwise: workup tool for the tired, complex patient", "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "inLanguage": "en-AU", "url": "https://maladywise.com/tools/tiredwise/"}</script>
+</head>
+<body>
+<main class="wrap doc" id="tw">
+<p class="meta">Clinician tool · for registered health professionals only <span class="beta">BETA</span></p>
+<h1>Tiredwise</h1>
+<p class="lede">For the tired, complex patient who's been told it's "just stress". Rule out the mimics, check each overlap condition against its real criteria, and leave with a plan.</p>
+<p class="note">Work through the cards in any order. Nothing you enter is saved or sent anywhere. <a href="/tools/tiredwise/evidence/">See the evidence</a>.</p>
+
+<div class="flags" role="note"><h2>Red flags: investigate before labelling</h2>
+<label class="ck"><input type="checkbox" id="rf0"> <span>Unintended weight loss, fevers or night sweats</span></label><label class="ck"><input type="checkbox" id="rf1"> <span>Lymph nodes, new lumps, or abnormal baseline bloods</span></label><label class="ck"><input type="checkbox" id="rf2"> <span>New fatigue over age 50, or rapid decline</span></label><label class="ck"><input type="checkbox" id="rf3"> <span>Exertional chest pain, palpitations with fainting, or breathless at rest</span></label><label class="ck"><input type="checkbox" id="rf4"> <span>New focal neurology, severe headache or visual loss</span></label><label class="ck"><input type="checkbox" id="rf5"> <span>Inflammatory joints, rash, or features of a connective tissue disease</span></label><label class="ck"><input type="checkbox" id="rf6"> <span>Witnessed apnoeas or falling asleep driving</span></label><label class="ck"><input type="checkbox" id="rf7"> <span>Severe depression, or thoughts of self-harm</span></label><label class="ck"><input type="checkbox" id="rf8"> <span>Possible pregnancy, or new medicines or substances</span></label><div class="out" id="o-rf" hidden></div></div>
+<details class="card" id="c-story" open><summary><span>1. The fatigue story</span><span class="res" id="r-story">Not started</span></summary><div class="num"><label>Weeks of fatigue<input type="number" inputmode="decimal" id="dur" placeholder="e.g. 26"></label></div><label class="ck"><input type="checkbox" id="onsetInf"> <span>Started after an infection</span></label><label class="ck"><input type="checkbox" id="onsetCovid"> <span>Infection was (or may have been) COVID-19</span></label><label class="ck"><input type="checkbox" id="func"> <span>Clear drop in work, study or social activity</span></label><label class="ck"><input type="checkbox" id="rest"> <span>Not relieved by rest or sleep</span></label><div class="out" id="o-story" hidden></div></details><details class="card" id="c-mecfs"><summary><span>2. ME/CFS and post-exertional malaise (IOM 2015)</span><span class="res" id="r-mecfs">Not started</span></summary><p class="q note">PEM: symptoms worsen after ordinary physical, mental or emotional effort, often delayed 12–72 hours, and take days or longer to recover.</p><label class="ck"><input type="checkbox" id="m1"> <span>Substantial drop in activity for more than 6 months, with profound new fatigue not relieved by rest</span></label><label class="ck"><input type="checkbox" id="m2"> <span>Post-exertional malaise</span></label><label class="ck"><input type="checkbox" id="m3"> <span>Unrefreshing sleep</span></label><label class="ck"><input type="checkbox" id="m4"> <span>Cognitive impairment (brain fog, slowed thinking)</span></label><label class="ck"><input type="checkbox" id="m5"> <span>Orthostatic intolerance (worse upright, better lying down)</span></label><label class="ck"><input type="checkbox" id="m6"> <span>Symptoms at least half the time, moderate or worse</span></label><div class="out" id="o-mecfs" hidden></div></details><details class="card" id="c-pots"><summary><span>3. Orthostatic test (10-minute stand or NASA lean)</span><span class="res" id="r-pots">Not started</span></summary><p class="note">Lie 5 minutes, then stand (or lean heels 15 cm from a wall) for 10 minutes. Record HR and BP each minute.</p><div class="num"><label>Age<input type="number" inputmode="decimal" id="age" placeholder=""></label><label>Lying HR<input type="number" inputmode="decimal" id="hr0" placeholder=""></label><label>Lying systolic<input type="number" inputmode="decimal" id="sb0" placeholder=""></label><label>Lying diastolic<input type="number" inputmode="decimal" id="db0" placeholder=""></label><label>Highest standing HR (10 min)<input type="number" inputmode="decimal" id="hrM" placeholder=""></label><label>Lowest standing systolic (3 min)<input type="number" inputmode="decimal" id="sbM" placeholder=""></label><label>Lowest standing diastolic (3 min)<input type="number" inputmode="decimal" id="dbM" placeholder=""></label></div><label class="ck"><input type="checkbox" id="o3m"> <span>Orthostatic symptoms for 3 months or more</span></label><label class="ck"><input type="checkbox" id="oOther"> <span>Another cause found (dehydration, bleeding, medicines, thyroid)</span></label><div class="out" id="o-pots" hidden></div></details><details class="card" id="c-fibro"><summary><span>4. Fibromyalgia (ACR 2016)</span><span class="res" id="r-fibro">Not started</span></summary><h3 class="sub">Pain in the last week (Widespread Pain Index)</h3><div class="grid"><label class="ck"><input type="checkbox" id="w_jawL"> <span>Left jaw</span></label><label class="ck"><input type="checkbox" id="w_shL"> <span>Left shoulder</span></label><label class="ck"><input type="checkbox" id="w_uaL"> <span>Left upper arm</span></label><label class="ck"><input type="checkbox" id="w_laL"> <span>Left lower arm</span></label><label class="ck"><input type="checkbox" id="w_jawR"> <span>Right jaw</span></label><label class="ck"><input type="checkbox" id="w_shR"> <span>Right shoulder</span></label><label class="ck"><input type="checkbox" id="w_uaR"> <span>Right upper arm</span></label><label class="ck"><input type="checkbox" id="w_laR"> <span>Right lower arm</span></label><label class="ck"><input type="checkbox" id="w_hipL"> <span>Left hip or buttock</span></label><label class="ck"><input type="checkbox" id="w_ulL"> <span>Left upper leg</span></label><label class="ck"><input type="checkbox" id="w_llL"> <span>Left lower leg</span></label><label class="ck"><input type="checkbox" id="w_hipR"> <span>Right hip or buttock</span></label><label class="ck"><input type="checkbox" id="w_ulR"> <span>Right upper leg</span></label><label class="ck"><input type="checkbox" id="w_llR"> <span>Right lower leg</span></label><label class="ck"><input type="checkbox" id="w_neck"> <span>Neck</span></label><label class="ck"><input type="checkbox" id="w_ub"> <span>Upper back</span></label><label class="ck"><input type="checkbox" id="w_lb"> <span>Lower back</span></label><label class="ck"><input type="checkbox" id="w_chest"> <span>Chest</span></label><label class="ck"><input type="checkbox" id="w_abdo"> <span>Abdomen</span></label></div><h3 class="sub">Symptom severity, last week</h3><div class="num"><label>Fatigue<select id="s1"><option value="0">0 None</option><option value="1">1 Mild</option><option value="2">2 Moderate</option><option value="3">3 Severe</option></select></label><label>Waking unrefreshed<select id="s2"><option value="0">0 None</option><option value="1">1 Mild</option><option value="2">2 Moderate</option><option value="3">3 Severe</option></select></label><label>Cognitive symptoms<select id="s3"><option value="0">0 None</option><option value="1">1 Mild</option><option value="2">2 Moderate</option><option value="3">3 Severe</option></select></label></div><h3 class="sub">In the last 6 months</h3><label class="ck"><input type="checkbox" id="s4"> <span>Headaches</span></label><label class="ck"><input type="checkbox" id="s5"> <span>Pain or cramps in the lower abdomen</span></label><label class="ck"><input type="checkbox" id="s6"> <span>Depression</span></label><label class="ck"><input type="checkbox" id="f3m"> <span>Symptoms present at a similar level for 3 months or more</span></label><div class="out" id="o-fibro" hidden></div></details><details class="card" id="c-hyper"><summary><span>5. Hypermobility (Beighton + 5-part questionnaire)</span><span class="res" id="r-hyper">Not started</span></summary><div class="grid"><label class="ck"><input type="checkbox" id="b0"> <span>Left little finger bends back past 90°</span></label><label class="ck"><input type="checkbox" id="b1"> <span>Right little finger bends back past 90°</span></label><label class="ck"><input type="checkbox" id="b2"> <span>Left thumb touches forearm</span></label><label class="ck"><input type="checkbox" id="b3"> <span>Right thumb touches forearm</span></label><label class="ck"><input type="checkbox" id="b4"> <span>Left elbow over-extends &gt;10°</span></label><label class="ck"><input type="checkbox" id="b5"> <span>Right elbow over-extends &gt;10°</span></label><label class="ck"><input type="checkbox" id="b6"> <span>Left knee over-extends &gt;10°</span></label><label class="ck"><input type="checkbox" id="b7"> <span>Right knee over-extends &gt;10°</span></label><label class="ck"><input type="checkbox" id="b8"> <span>Palms flat on floor, knees straight</span></label></div><h3 class="sub">5-part questionnaire (now or ever)</h3><label class="ck"><input type="checkbox" id="q0"> <span>Could put hands flat on the floor without bending knees</span></label><label class="ck"><input type="checkbox" id="q1"> <span>Could bend thumb back to touch forearm</span></label><label class="ck"><input type="checkbox" id="q2"> <span>As a child, amused friends by contorting, or could do the splits</span></label><label class="ck"><input type="checkbox" id="q3"> <span>Dislocated a shoulder or kneecap more than once</span></label><label class="ck"><input type="checkbox" id="q4"> <span>Considers themselves double-jointed</span></label><label class="ck"><input type="checkbox" id="hpub"> <span>Before puberty</span></label><div class="out" id="o-hyper" hidden></div></details><details class="card" id="c-mcas"><summary><span>6. Mast cell activation (ASCIA 2025)</span><span class="res" id="r-mcas">Not started</span></summary><p class="note">All three are needed. POTS or hEDS on their own aren't criteria.</p><label class="ck"><input type="checkbox" id="mc1"> <span>Episodic typical symptoms in 2 or more systems at once (flushing, hives, swelling, wheeze, low BP, cramps, diarrhoea)</span></label><h3 class="sub">Tryptase (ng/mL)</h3><div class="num"><label>Baseline (24 h+ after)<input type="number" inputmode="decimal" id="tB" placeholder=""></label><label>Acute (30 min to 2 h after)<input type="number" inputmode="decimal" id="tA" placeholder=""></label></div><label class="ck"><input type="checkbox" id="mc3"> <span>Clear response to mediator-blocking treatment (H1/H2 antihistamines, etc.)</span></label><label class="ck"><input type="checkbox" id="mcx"> <span>Other causes excluded (allergy, mastocytosis, drug reactions, endocrine causes)</span></label><div class="out" id="o-mcas" hidden></div></details><details class="card" id="c-lc"><summary><span>7. Long COVID (NASEM 2024)</span><span class="res" id="r-lc">Not started</span></summary><label class="ck"><input type="checkbox" id="lc1"> <span>Confirmed, probable or possible SARS-CoV-2 infection</span></label><label class="ck"><input type="checkbox" id="lc2"> <span>Symptoms lasting 3 months or more since</span></label><label class="ck"><input type="checkbox" id="lc3"> <span>Continuous, relapsing or progressive, affecting 1 or more systems</span></label><div class="out" id="o-lc" hidden></div></details><details class="card" id="c-nd"><summary><span>8. Autism and ADHD (lifelong patterns)</span><span class="res" id="r-nd">Not started</span></summary><p class="note">Neurodivergence is common in this group and changes management. These prompts suggest screening, not diagnosis.</p><label class="ck"><input type="checkbox" id="n0"> <span>Lifelong trouble with attention, organisation or restlessness, from childhood</span></label><label class="ck"><input type="checkbox" id="n1"> <span>Impulsivity, time blindness or chronic lateness</span></label><label class="ck"><input type="checkbox" id="n2"> <span>Sensory sensitivities (noise, light, textures, labels)</span></label><label class="ck"><input type="checkbox" id="n3"> <span>Social exhaustion or masking, needing long recovery afterwards</span></label><label class="ck"><input type="checkbox" id="n4"> <span>Strong routines or intense interests; distress with change</span></label><label class="ck"><input type="checkbox" id="n5"> <span>Delayed sleep pattern (night owl since teens)</span></label><label class="ck"><input type="checkbox" id="n6"> <span>Family member with autism or ADHD</span></label><div class="out" id="o-nd" hidden></div></details><details class="card" id="c-sm"><summary><span>9. Sleep, mood and medicines</span><span class="res" id="r-sm">Not started</span></summary><label class="ck"><input type="checkbox" id="z0"> <span>Loud snoring, witnessed apnoeas or STOP-BANG ≥3</span></label><label class="ck"><input type="checkbox" id="z1"> <span>Insomnia most nights</span></label><label class="ck"><input type="checkbox" id="z2"> <span>PHQ-9 ≥10 or GAD-7 ≥10</span></label><label class="ck"><input type="checkbox" id="z3"> <span>Sedating medicines, alcohol or cannabis most days</span></label><label class="ck"><input type="checkbox" id="z4"> <span>Shift work or major carer load</span></label><div class="out" id="o-sm" hidden></div></details><details class="card" id="c-tests"><summary><span>10. Baseline tests</span><span class="res" id="r-tests">Not started</span></summary><p class="note">NICE 2021 baseline, plus common additions. Tick when done and normal.</p><div class="grid"><label class="ck"><input type="checkbox" id="t0"> <span>Urinalysis</span></label><label class="ck"><input type="checkbox" id="t1"> <span>FBC</span></label><label class="ck"><input type="checkbox" id="t2"> <span>UEC</span></label><label class="ck"><input type="checkbox" id="t3"> <span>LFTs</span></label><label class="ck"><input type="checkbox" id="t4"> <span>TFTs</span></label><label class="ck"><input type="checkbox" id="t5"> <span>ESR or CRP</span></label><label class="ck"><input type="checkbox" id="t6"> <span>Calcium and phosphate</span></label><label class="ck"><input type="checkbox" id="t7"> <span>HbA1c</span></label><label class="ck"><input type="checkbox" id="t8"> <span>Ferritin</span></label><label class="ck"><input type="checkbox" id="t9"> <span>Coeliac serology</span></label><label class="ck"><input type="checkbox" id="t10"> <span>CK</span></label><label class="ck"><input type="checkbox" id="t11"> <span>B12 and folate</span></label><label class="ck"><input type="checkbox" id="t12"> <span>Vitamin D</span></label><label class="ck"><input type="checkbox" id="t13"> <span>ECG</span></label><label class="ck"><input type="checkbox" id="t14"> <span>Pregnancy test (if relevant)</span></label></div><div class="out" id="o-tests" hidden></div></details>
+<div class="card"><h2 style="margin:2px 0 6px;font-size:17px">Working picture and plan</h2>
+<p class="note">Builds as you go. Copy it into your notes, then edit. No patient identifiers are included.</p>
+<div id="tw-sum">Tick some boxes to start.</div>
+<div class="row"><button class="btn" type="button" id="tw-copy">Copy summary</button><button class="btn ghost" type="button" id="tw-reset">Clear all</button></div></div>
+
+<p class="note">Beta: built from IOM 2015, NICE NG206, ACR 2016, HRS 2015, the 2017 EDS classification, ASCIA 2025 and NASEM 2024. It supports, and never replaces, clinical judgement. <a href="/tools/tiredwise/evidence/">Evidence and sources</a>.</p>
+<p class="meta">Updated 11 November 2026. General education for health professionals; not a substitute for clinical judgement or local protocols.</p>
+</main>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var on = function (id) { var e = $(id); return !!(e && e.checked); };
+  var val = function (id) { var e = $(id); if (!e || e.value === "") return null; var v = parseFloat(e.value); return isNaN(v) ? null : v; };
+  var WPI = [["jawL", "lu"], ["shL", "lu"], ["uaL", "lu"], ["laL", "lu"], ["jawR", "ru"], ["shR", "ru"], ["uaR", "ru"], ["laR", "ru"], ["hipL", "ll"], ["ulL", "ll"], ["llL", "ll"], ["hipR", "rl"], ["ulR", "rl"], ["llR", "rl"], ["neck", "ax"], ["ub", "ax"], ["lb", "ax"], ["chest", "ax"], ["abdo", "ax"]];
+  var TESTS = ["Urinalysis","FBC","UEC","LFTs","TFTs","ESR or CRP","Calcium and phosphate","HbA1c","Ferritin","Coeliac serology","CK","B12 and folate","Vitamin D","ECG","Pregnancy test (if relevant)"];
+  function set(id, cls, label, html) {
+    var r = $("r-" + id), o = $("o-" + id);
+    if (r) { r.className = "res" + (cls ? " " + cls : ""); r.textContent = label; }
+    if (o) { o.hidden = !html; o.innerHTML = html || ""; }
+  }
+  function count(pfx, n) { var c = 0; for (var i = 0; i < n; i++) if (on(pfx + i)) c++; return c; }
+  function calc() {
+    var S = [], plan = [], touched = function (sel) { return [].some.call(document.querySelectorAll(sel), function (e) { return e.type === "checkbox" ? e.checked : e.value !== "" && e.value !== "0"; }); };
+    // red flags
+    var rf = count("rf", 9), o = $("o-rf");
+    o.hidden = !rf; o.innerHTML = rf ? "<b>" + rf + " red flag" + (rf > 1 ? "s" : "") + ".</b> Investigate and treat these first. Overlap labels come after serious causes are excluded." : "";
+    if (rf) S.push("RED FLAGS: " + rf + " present. Investigate before attributing to overlap conditions.");
+    // story
+    var dur = val("dur");
+    if (dur !== null || touched("#c-story input")) {
+      var t = [];
+      if (dur !== null) t.push(dur + " weeks of fatigue");
+      if (on("onsetInf")) t.push("post-infectious onset" + (on("onsetCovid") ? " (possible COVID-19)" : ""));
+      if (on("func")) t.push("functional decline");
+      if (on("rest")) t.push("not relieved by rest");
+      var msg = dur !== null && dur >= 6 && dur < 13 ? "Past 6 weeks: NICE says <b>suspect ME/CFS</b> if PEM is present, and give interim energy-management advice now." : dur !== null && dur >= 13 ? "3 months or more: formal criteria can now be applied." : "";
+      set("story", dur !== null && dur >= 6 ? "maybe" : "", dur !== null ? dur + " wk" : "Started", msg);
+      S.push("Story: " + t.join(", ") + ".");
+    } else set("story", "", "Not started", "");
+    // ME/CFS
+    var core = on("m1") && on("m2") && on("m3"), plus = on("m4") || on("m5"), me = core && plus && on("m6");
+    if (touched("#c-mecfs input")) {
+      var miss = [];
+      if (!on("m1")) miss.push(">6 months reduced activity"); if (!on("m2")) miss.push("PEM"); if (!on("m3")) miss.push("unrefreshing sleep"); if (!plus) miss.push("cognitive impairment or orthostatic intolerance"); if (!on("m6")) miss.push("frequency/severity");
+      set("mecfs", me ? "yes" : on("m2") ? "maybe" : "", me ? "Meets IOM" : on("m2") ? "PEM present" : "Not met", me ? "<b>Meets IOM 2015 criteria for ME/CFS.</b> Start pacing; avoid graded exercise." : on("m2") ? "<b>PEM present</b>: manage as possible ME/CFS (pacing) while you complete the picture. Missing: " + miss.join(", ") + "." : "Missing: " + miss.join(", ") + ".");
+      if (me) { S.push("ME/CFS: meets IOM 2015 criteria."); plan.push("Pacing and energy management; no graded exercise therapy (NICE 2021). Consider an energy diary or heart-rate-guided pacing."); }
+      else if (on("m2")) { S.push("PEM present; IOM criteria not yet met (" + miss.join(", ") + ")."); plan.push("Treat as possible ME/CFS: pace within the energy envelope; review at 3 and 6 months."); }
+      else S.push("ME/CFS: criteria not met (no PEM).");
+    } else set("mecfs", "", "Not started", "");
+    // POTS
+    var hr0 = val("hr0"), hrM = val("hrM"), sb0 = val("sb0"), sbM = val("sbM"), db0 = val("db0"), dbM = val("dbM"), age = val("age");
+    if (hr0 !== null && hrM !== null) {
+      var d = Math.round(hrM - hr0), thr = age !== null && age >= 12 && age <= 19 ? 40 : 30;
+      var oh = (sb0 !== null && sbM !== null && sb0 - sbM >= 20) || (db0 !== null && dbM !== null && db0 - dbM >= 10);
+      var pots = d >= thr && !oh;
+      var lab = oh ? "Orthostatic hypotension" : pots ? (on("o3m") && !on("oOther") ? "POTS criteria" : "HR rise ≥" + thr) : "Not met";
+      var txt = "HR rise <b>" + d + " bpm</b> (threshold " + thr + ")" + (oh ? "; <b>BP drop meets orthostatic hypotension</b>: look for volume loss, medicines, autonomic failure." : ".") +
+        (pots && !on("o3m") ? " Need 3 months of symptoms to call it POTS." : "") + (pots && on("oOther") ? " Another cause is present: treat that first, then retest." : "") + (pots && on("o3m") && !on("oOther") ? " <b>Consistent with POTS.</b>" : "");
+      set("pots", oh ? "maybe" : pots ? (on("o3m") && !on("oOther") ? "yes" : "maybe") : "", lab, txt);
+      S.push("Orthostatic test: HR +" + d + " bpm" + (oh ? ", orthostatic hypotension" : "") + (pots && on("o3m") && !on("oOther") ? "; consistent with POTS (HRS 2015)." : "."));
+      if (pots || oh) plan.push((oh ? "Orthostatic hypotension: review medicines and volume; consider autonomic causes. " : "") + "Orthostatic measures: 2–3 L fluid and extra salt if safe, waist-high compression, counter-manoeuvres, recumbent exercise within the energy envelope. Consider low-dose propranolol or specialist referral if disabling.");
+    } else set("pots", "", touched("#c-pots input") ? "Enter HRs" : "Not started", "");
+    // Fibro
+    var wpi = 0, reg = {}; WPI.forEach(function (w) { if (on("w_" + w[0])) { wpi++; if (["jawL","jawR","chest","abdo"].indexOf(w[0]) < 0) reg[w[1]] = 1; } });
+    var nreg = Object.keys(reg).length, sss = (+$("s1").value) + (+$("s2").value) + (+$("s3").value) + (on("s4") ? 1 : 0) + (on("s5") ? 1 : 0) + (on("s6") ? 1 : 0);
+    if (wpi || sss) {
+      var fm = ((wpi >= 7 && sss >= 5) || (wpi >= 4 && wpi <= 6 && sss >= 9)) && nreg >= 4 && on("f3m");
+      var near = ((wpi >= 7 && sss >= 5) || (wpi >= 4 && wpi <= 6 && sss >= 9)) && nreg >= 4;
+      set("fibro", fm ? "yes" : near ? "maybe" : "", "WPI " + wpi + " · SSS " + sss, "WPI <b>" + wpi + "</b>/19, SSS <b>" + sss + "</b>/12, regions <b>" + nreg + "</b>/5. " + (fm ? "<b>Meets ACR 2016 fibromyalgia criteria.</b>" : near ? "Meets the score thresholds; needs 3 months of symptoms." : "Doesn't meet criteria."));
+      S.push("Fibromyalgia: WPI " + wpi + ", SSS " + sss + ", " + nreg + "/5 regions" + (fm ? "; meets ACR 2016." : "; not met."));
+      if (fm) plan.push("Fibromyalgia: education, graded activity only if no PEM (otherwise pacing), sleep care; consider low-dose amitriptyline, duloxetine or pregabalin for severe pain or sleep (EULAR 2017). Avoid strong opioids.");
+    } else set("fibro", "", "Not started", "");
+    // Hypermobility
+    var bei = count("b", 9), pq = count("q", 5);
+    if (bei || pq || age !== null) {
+      var cut = on("hpub") ? 6 : age !== null && age > 50 ? 4 : 5, gjh = bei >= cut || (bei === cut - 1 && pq >= 2);
+      set("hyper", gjh ? "yes" : bei || pq ? "" : "", "Beighton " + bei + "/9", "Beighton <b>" + bei + "</b>/9 (cut-off " + cut + (age === null && !on("hpub") ? ", assuming age 50 or under" : "") + "), questionnaire " + pq + "/5. " + (gjh ? "<b>Generalised joint hypermobility.</b> Check the full 2017 criteria for hEDS; most people will have HSD, managed the same way." : "No generalised joint hypermobility."));
+      S.push("Hypermobility: Beighton " + bei + "/9, 5PQ " + pq + "/5" + (gjh ? "; generalised joint hypermobility (consider HSD vs hEDS, 2017 criteria)." : "."));
+      if (gjh) plan.push("Hypermobility: physio for strength, proprioception and joint control; OT for joint protection. Genetics referral only if features of another connective tissue disorder.");
+    } else set("hyper", "", "Not started", "");
+    // MCAS
+    var tB = val("tB"), tA = val("tA"), trise = null;
+    if (tB !== null && tA !== null) trise = tA >= tB * 1.2 + 2;
+    if (touched("#c-mcas input")) {
+      var thrT = tB !== null ? (tB * 1.2 + 2).toFixed(1) : null;
+      var all = on("mc1") && trise === true && on("mc3") && on("mcx");
+      var tx = (thrT ? "Acute tryptase needed: <b>≥ " + thrT + "</b> ng/mL" + (tA !== null ? " (entered " + tA + ": " + (trise ? "<b>meets</b>" : "doesn't meet") + ")." : ".") : "Enter a baseline tryptase to calculate the 20% + 2 threshold.") + " ";
+      tx += all ? "<b>All three ASCIA criteria met.</b> Refer to clinical immunology/allergy if not already involved." : "Not diagnosable as MCAS yet: all three criteria are needed, with objective mediator evidence.";
+      set("mcas", all ? "yes" : on("mc1") ? "maybe" : "", all ? "Criteria met" : "Not met", tx);
+      S.push("MCAS (ASCIA 2025): " + (all ? "all three criteria met." : "criteria not met" + (on("mc1") ? " (episodic multisystem symptoms; needs acute + baseline tryptase and treatment response)." : ".")));
+      if (all) plan.push("MCAS: trigger avoidance; non-sedating H1 antihistamine, then H2, montelukast or cromoglicate with immunology input. Adrenaline autoinjector if anaphylaxis.");
+      else if (on("mc1")) plan.push("Possible mast cell episodes: give a tryptase request to take 30 min to 2 h after the next episode, plus a baseline 24 h+ later.");
+    } else set("mcas", "", "Not started", "");
+    // Long COVID
+    if (touched("#c-lc input")) {
+      var lc = on("lc1") && on("lc2") && on("lc3");
+      set("lc", lc ? "yes" : "", lc ? "Meets NASEM" : "Not met", lc ? "<b>Meets the NASEM 2024 long COVID definition.</b> Screen for ME/CFS (PEM) and orthostatic intolerance; about 1 in 20 infected people go on to meet ME/CFS criteria." : "Needs infection (no test required), 3 months or more, and ongoing symptoms.");
+      S.push("Long COVID: " + (lc ? "meets NASEM 2024 definition." : "definition not met."));
+      if (lc) plan.push("Long COVID: treat components (PEM, orthostatic intolerance, sleep, mood, breathlessness); consider long COVID clinic or research participation.");
+    } else set("lc", "", "Not started", "");
+    // ND
+    var adhd = (on("n0") ? 1 : 0) + (on("n1") ? 1 : 0) + (on("n5") ? 1 : 0), asd = (on("n2") ? 1 : 0) + (on("n3") ? 1 : 0) + (on("n4") ? 1 : 0), fam = on("n6");
+    if (adhd || asd || fam) {
+      var tx2 = []; if (adhd >= 2 || (adhd && fam)) tx2.push("Screen for ADHD (ASRS v1.1)"); if (asd >= 2 || (asd && fam)) tx2.push("screen for autism (AQ-10)");
+      set("nd", tx2.length ? "maybe" : "", tx2.length ? "Screen" : "Noted", tx2.length ? "<b>" + tx2.join("; ") + ".</b> Refer for assessment if positive. Stimulants raise HR: monitor if POTS." : "Patterns noted. Not enough to suggest screening yet.");
+      S.push("Neurodivergence prompts: ADHD features " + adhd + "/3, autism features " + asd + "/3" + (fam ? ", family history" : "") + (tx2.length ? "; " + tx2.join("; ") + "." : "."));
+      if (tx2.length) plan.push("Neurodivergence: " + tx2.join("; ") + ". Adjust care: written plans, longer appointments, low-sensory setting, reasonable adjustments at work or study.");
+    } else set("nd", "", "Not started", "");
+    // sleep/mood
+    var sm = count("z", 5);
+    if (sm) {
+      var it = []; if (on("z0")) it.push("sleep study (OSA risk)"); if (on("z1")) it.push("CBT for insomnia"); if (on("z2")) it.push("treat depression/anxiety (they coexist; not an alternative explanation)"); if (on("z3")) it.push("review sedating medicines and substances"); if (on("z4")) it.push("address shift work or carer load");
+      set("sm", "maybe", sm + " found", "Consider: <b>" + it.join("; ") + "</b>.");
+      S.push("Sleep/mood/medicines: " + it.join("; ") + "."); plan.push("Also: " + it.join("; ") + ".");
+    } else set("sm", "", "Not started", "");
+    // tests
+    var done = [], todo = []; TESTS.forEach(function (t, i) { (on("t" + i) ? done : todo).push(t); });
+    if (done.length) { set("tests", done.length >= 11 ? "yes" : "maybe", done.length + "/" + TESTS.length, todo.length ? "Still to do or review: " + todo.join(", ") + "." : "All baseline tests done and normal."); S.push("Baseline tests normal: " + done.join(", ") + "." + (todo.length ? " Outstanding: " + todo.join(", ") + "." : "")); }
+    else { set("tests", "", "Not started", ""); if (S.length) plan.unshift("Baseline tests (NICE 2021): " + TESTS.slice(0, 11).join(", ") + ". Add B12/folate, vitamin D, ECG and pregnancy test as relevant."); }
+    if (done.length < 11 && /meets|consistent/i.test(S.join(" ")) && done.length) plan.unshift("Finish the baseline tests before confirming any label: rule out the mimics first.");
+    // summary
+    if (!S.length) { $("tw-sum").textContent = "Tick some boxes to start."; return; }
+    plan.push("Validate and document function. Review in 4–6 weeks; reassess criteria at 3 and 6 months.");
+    $("tw-sum").textContent = "TIREDWISE WORKUP (beta) " + new Date().toLocaleDateString("en-AU") + "\n\nFINDINGS\n- " + S.join("\n- ") + "\n\nPLAN\n- " + plan.join("\n- ") + "\n\nCriteria: IOM 2015, ACR 2016, HRS 2015, 2017 EDS, ASCIA 2025, NASEM 2024. Clinical judgement applies.";
+  }
+  $("tw").addEventListener("input", calc); $("tw").addEventListener("change", calc);
+  $("tw-copy").onclick = function () { var t = $("tw-sum").textContent, b = this; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy summary"; }, 1500); }, function () { var r = document.createRange(); r.selectNodeContents($("tw-sum")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }); };
+  $("tw-reset").onclick = function () { [].forEach.call(document.querySelectorAll("#tw input, #tw select"), function (e) { if (e.type === "checkbox") e.checked = false; else e.value = e.tagName === "SELECT" ? "0" : ""; }); calc(); };
+  calc();
+})();
+</script>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
+</body>
+</html>
