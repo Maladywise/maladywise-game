@@ -5,15 +5,15 @@
 <link rel="canonical" href="https://maladywise.com/tiredwise/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,follow">
-<title>Tiredwise: why am I always tired? A self-check for your GP | Malady Wise</title>
-<meta name="description" content="Always tired, and told it's just stress? A free self-check covering crashes after activity, dizziness on standing, pain, flexibility, flushing, long COVID, ADHD and autism traits. Print a summary for your GP.">
+<title>Tiredwise: the tiredness map | Malady Wise</title>
+<meta name="description" content="What causes tiredness, ranked from common to rare with the data, plus a clickable map linking causes to clues, mechanisms and treatment trials.">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4A3480">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Tiredwise: why am I always tired? A self-check for your GP | Malady Wise">
-<meta property="og:description" content="Always tired, and told it's just stress? A free self-check covering crashes after activity, dizziness on standing, pain, flexibility, flushing, long COVID, ADHD and autism traits. Print a summary for your GP.">
+<meta property="og:title" content="Tiredwise: the tiredness map | Malady Wise">
+<meta property="og:description" content="What causes tiredness, ranked from common to rare with the data, plus a clickable map linking causes to clues, mechanisms and treatment trials.">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
 <link rel="stylesheet" href="/assets/shell.css?v=198">
@@ -21,113 +21,371 @@
 <script defer src="/assets/site.js?v=59"></script>
 <script defer src="/assets/shell.js?v=217"></script>
 <style>
-#tw .beta{display:inline-block;font:700 11px var(--body);letter-spacing:.08em;background:#FFD23F;color:#2E1F57;border-radius:999px;padding:2px 9px;vertical-align:middle;margin-left:6px}
-#tw .flags{background:#FBEDE9;border:1px solid #E9B7A8;border-left:4px solid #B23A1E;border-radius:10px;padding:10px 14px;margin:10px 0}
-#tw .flags h2,#tw .flags h3{margin:0 0 4px;font-size:15px;color:#8A2F1C}
-html[data-theme="dark"] #tw .flags{background:#3E231C;border-color:#6B3A2E;border-left-color:#F0A898}
-html[data-theme="dark"] #tw .flags h2,html[data-theme="dark"] #tw .flags h3{color:#F0A898}
-#tw .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:12px 0}
-#tw details.card>summary{font:600 16px var(--body);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center}
-#tw details.card>summary::-webkit-details-marker{display:none}
-#tw details.card>summary::after{content:"+";font-size:20px;color:var(--muted)}
-#tw details.card[open]>summary::after{content:"–"}
-#tw .res{font:600 13px var(--body);border-radius:999px;padding:3px 10px;background:var(--bg);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
-#tw .res.yes{background:#E3F4EA;border-color:#9BD3B0;color:#1F6B3F}
-#tw .res.maybe{background:#FFF4D6;border-color:#EBCB78;color:#7A5A00}
-html[data-theme="dark"] #tw .res.yes{background:#1E3A2A;color:#9BE3B8;border-color:#2F6B47}
-html[data-theme="dark"] #tw .res.maybe{background:#3A3018;color:#F5D98A;border-color:#6B5A2A}
-#tw label.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14.5px;line-height:1.4;cursor:pointer;border-bottom:1px dashed var(--line)}
-#tw label.ck:last-of-type{border-bottom:0}
-#tw label.ck input{width:20px;height:20px;flex:0 0 auto;margin-top:1px;accent-color:#4A3480}
-#tw .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 12px}
-#tw .grid label.ck{border-bottom:0;padding:5px 0}
-#tw .num{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:6px 0}
-#tw .num label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;justify-content:flex-end;gap:3px}
-#tw .num input,#tw select{font:500 15px var(--body);padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:44px;width:100%;box-sizing:border-box}
-#tw .out{margin:10px 0 2px;padding:10px 12px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-size:14.5px;line-height:1.5}
-#tw .out b{color:var(--brand)}
-#tw .note{font-size:13px;color:var(--muted);margin:6px 0}
-#tw h3.sub{font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
-#tw ul.tight{margin:4px 0;padding-left:18px}#tw ul.tight li{font-size:14.5px;line-height:1.5;margin:2px 0}
-#tw .btn{font:600 14px var(--body);border:0;background:#4A3480;color:#fff;border-radius:999px;padding:11px 18px;min-height:44px;cursor:pointer}
-#tw .btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-#tw .row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
-#tw #tw-sum{white-space:pre-wrap;font:13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-height:420px;overflow:auto}
-#tw .tag{font-size:12px;font-weight:600;color:#7A5A00}
-#tw .ev{font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-right:4px;background:#E3F4EA;color:#1F6B3F}
-#tw .ev.m{background:#FFF4D6;color:#7A5A00}#tw .ev.l{background:#F1E9FB;color:#5B3E91}#tw .ev.x{background:#FBEDE9;color:#8A2F1C}
-#tw .host{display:flex;gap:12px;align-items:center;margin:8px 0 4px}#tw .host img{flex:0 0 auto}#tw .host h1{margin:0}</style>
-<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Tiredwise: why am I always tired? A self-check to take to your GP", "audience": {"@type": "PeopleAudience", "audienceType": "Patient"}, "inLanguage": "en-AU", "url": "https://maladywise.com/tiredwise/"}</script>
+#tm .beta{display:inline-block;font:700 11px var(--body);letter-spacing:.08em;background:#FFD23F;color:#2E1F57;border-radius:999px;padding:2px 9px;vertical-align:middle;margin-left:6px}
+#tm .flags{background:#FBEDE9;border:1px solid #E9B7A8;border-left:4px solid #B23A1E;border-radius:10px;padding:10px 14px;margin:10px 0}
+#tm .flags h2,#tm .flags h3{margin:0 0 4px;font-size:15px;color:#8A2F1C}
+html[data-theme="dark"] #tm .flags{background:#3E231C;border-color:#6B3A2E;border-left-color:#F0A898}
+html[data-theme="dark"] #tm .flags h2,html[data-theme="dark"] #tm .flags h3{color:#F0A898}
+#tm .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:12px 0}
+#tm details.card>summary{font:600 16px var(--body);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center}
+#tm details.card>summary::-webkit-details-marker{display:none}
+#tm details.card>summary::after{content:"+";font-size:20px;color:var(--muted)}
+#tm details.card[open]>summary::after{content:"–"}
+#tm .res{font:600 13px var(--body);border-radius:999px;padding:3px 10px;background:var(--bg);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+#tm .res.yes{background:#E3F4EA;border-color:#9BD3B0;color:#1F6B3F}
+#tm .res.maybe{background:#FFF4D6;border-color:#EBCB78;color:#7A5A00}
+html[data-theme="dark"] #tm .res.yes{background:#1E3A2A;color:#9BE3B8;border-color:#2F6B47}
+html[data-theme="dark"] #tm .res.maybe{background:#3A3018;color:#F5D98A;border-color:#6B5A2A}
+#tm label.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14.5px;line-height:1.4;cursor:pointer;border-bottom:1px dashed var(--line)}
+#tm label.ck:last-of-type{border-bottom:0}
+#tm label.ck input{width:20px;height:20px;flex:0 0 auto;margin-top:1px;accent-color:#4A3480}
+#tm .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 12px}
+#tm .grid label.ck{border-bottom:0;padding:5px 0}
+#tm .num{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:6px 0}
+#tm .num label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;justify-content:flex-end;gap:3px}
+#tm .num input,#tm select{font:500 15px var(--body);padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:44px;width:100%;box-sizing:border-box}
+#tm .out{margin:10px 0 2px;padding:10px 12px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-size:14.5px;line-height:1.5}
+#tm .out b{color:var(--brand)}
+#tm .note{font-size:13px;color:var(--muted);margin:6px 0}
+#tm h3.sub{font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+#tm ul.tight{margin:4px 0;padding-left:18px}#tm ul.tight li{font-size:14.5px;line-height:1.5;margin:2px 0}
+#tm .btn{font:600 14px var(--body);border:0;background:#4A3480;color:#fff;border-radius:999px;padding:11px 18px;min-height:44px;cursor:pointer}
+#tm .btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+#tm .row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+#tm #tm-sum{white-space:pre-wrap;font:13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-height:420px;overflow:auto}
+#tm .tag{font-size:12px;font-weight:600;color:#7A5A00}
+#tm .ev{font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-right:4px;background:#E3F4EA;color:#1F6B3F}
+#tm .ev.m{background:#FFF4D6;color:#7A5A00}#tm .ev.l{background:#F1E9FB;color:#5B3E91}#tm .ev.x{background:#FBEDE9;color:#8A2F1C}
+#tm{--surface:var(--card);--accent:#E08A1E;--accent-ink:#8A4B00;--teal:var(--brand);--t1:#2B2340;--t2:#4A3480;--t3:#9A8CC4;--t4:#D6CEEA;--good:#1F7A4A;--mixed:#9A6A00;--bad:#A3361F;--pill:var(--bg);--display:var(--title,inherit);--mono:ui-monospace,Menlo,Consolas,monospace}
+html[data-theme="dark"] #tm{--accent:#F2A541;--accent-ink:#F7C27A;--t1:#EDE8F7;--t2:#B7A6E8;--t3:#6F5FA3;--t4:#3A3156;--good:#6FD39C;--mixed:#E7C25E;--bad:#F08B72}
+#tm{display:grid;gap:30px}
+#tm h2,#tm h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+#tm h1{font-size:clamp(30px,5vw,44px);letter-spacing:-.01em}
+#tm h2{font-size:22px}
+#tm h3{font-size:16px}
+#tm p{margin:0}
+#tm .eyebrow{font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+#tm .lede{font-size:17px;color:var(--muted);max-width:66ch}
+#tm .sec{display:grid;gap:14px}
+#tm .sec>p{max-width:68ch}
+#tm ul.b{margin:0;padding-left:18px;display:grid;gap:6px}
+#tm ul.b li{max-width:70ch}
+#tm .note{font-size:13px;color:var(--muted)}
+#tm .mono{font-family:var(--mono)}
+#tm /* energy bar in the header: the subject's own instrument */
+.battery{display:flex;gap:4px;align-items:center;margin-top:6px}
+#tm .battery i{width:22px;height:10px;border-radius:2px;background:var(--line)}
+#tm .battery i.on{background:var(--accent)}
+#tm .battery span{font:500 12px var(--mono);color:var(--muted);margin-left:8px}
+#tm /* ranked list */
+.rank{display:grid;gap:8px}
+#tm .rk{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+#tm .rk b{font-weight:600}
+#tm .rk .n{font:500 12px var(--mono);color:var(--muted);text-align:right}
+#tm .rk .fq{font:500 13px var(--mono);white-space:nowrap}
+#tm .rk .src{grid-column:2/4;font-size:12.5px;color:var(--muted)}
+#tm .bar{grid-column:2/4;height:6px;border-radius:3px;background:var(--pill);overflow:hidden}
+#tm .bar i{display:block;height:100%;background:var(--accent)}
+#tm .kind{display:inline-block;font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px;background:var(--pill);color:var(--muted)}
+#tm .kind.gp{color:var(--teal)}
+#tm /* map */
+.mapwrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:780px){#tm .mapwrap{grid-template-columns:1fr}}
+#tm .map{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden}
+#tm .map svg{display:block;width:100%;height:auto;max-width:100%}
+#tm .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#tm .chip{font:500 13px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 12px;cursor:pointer;min-height:36px}
+#tm .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#tm .chip:focus-visible,#tm .nd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#tm .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--muted)}
+#tm .legend span{display:inline-flex;gap:6px;align-items:center}
+#tm .legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+#tm .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;position:sticky;top:12px}
+@media (max-width:780px){#tm .panel{position:static}}
+#tm .panel h3{font-size:19px}
+#tm .panel .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+#tm .panel ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+#tm .freq{font:500 14px var(--mono);color:var(--accent-ink)}
+#tm .tr{display:grid;gap:2px;font-size:14px;border-left:3px solid var(--line);padding-left:10px}
+#tm .tr.good{border-color:var(--good)}
+#tm .tr.mixed{border-color:var(--mixed)}
+#tm .tr.bad{border-color:var(--bad)}
+#tm .tr b{font-weight:600}
+#tm .verdict{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+#tm .good .verdict{color:var(--good)}
+#tm .mixed .verdict{color:var(--mixed)}
+#tm .bad .verdict{color:var(--bad)}
+#tm /* svg text */
+.nd{cursor:pointer}
+#tm .nd text{font-family:var(--body);fill:var(--ink);pointer-events:none}
+#tm .nd.dim{opacity:.18}
+#tm .grp text{font:600 15px var(--display);fill:var(--ink)}
+#tm /* layers */
+.layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+#tm .ly{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:4px;align-content:start}
+#tm .ly .eyebrow{color:var(--teal)}
+#tm .ly p{font-size:13.5px;color:var(--muted)}
+#tm .trials{display:grid;gap:10px}
+#tm .src li{font-size:13px;color:var(--muted)}
+#tm .src a{color:var(--teal)}
+#tm a{color:var(--teal)}
+@media (prefers-reduced-motion:no-preference){#tm .nd circle{transition:r .2s,opacity .2s}#tm .nd:hover circle{opacity:.85}}#tm .host{display:flex;gap:12px;align-items:center}#tm .host img{flex:0 0 auto}#tm .host h1{margin:0}</style>
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Tiredwise: the tiredness map", "inLanguage": "en-AU", "url": "https://maladywise.com/tiredwise/"}</script>
 </head>
 <body>
-<main class="wrap doc" id="tw">
-<p class="meta">Self-check <span class="beta">BETA</span></p>
-<div class="host"><img src="/assets/mascots/layla.svg" width="72" height="72" alt="Layla the sloth, who knows a thing or two about pacing"><h1>Tiredwise: why am I always tired?</h1></div>
-<p class="lede">Tired for months, and told it's "just stress"? Tick what fits. At the end you'll get a summary to take to your GP. It isn't a diagnosis: it helps you and your GP ask the right questions.</p>
-<p class="note">Nothing you tick is saved or sent anywhere. Takes about 5 minutes.</p>
+<main class="wrap doc" id="tm">
 
-<div class="flags" role="note"><h2>See a doctor soon (or call 000 in an emergency) if you have:</h2>
-<label class="ck"><input type="checkbox" id="rf0"> <span>Weight loss you didn't try for, fevers or drenching night sweats</span></label><label class="ck"><input type="checkbox" id="rf1"> <span>New lumps, or bleeding you can't explain</span></label><label class="ck"><input type="checkbox" id="rf2"> <span>Chest pain, fainting, or a racing heart when you exercise</span></label><label class="ck"><input type="checkbox" id="rf3"> <span>Short of breath at rest</span></label><label class="ck"><input type="checkbox" id="rf4"> <span>New weakness, numbness, a severe headache or vision changes</span></label><label class="ck"><input type="checkbox" id="rf5"> <span>Someone has seen you stop breathing in your sleep, or you nod off while driving</span></label><label class="ck"><input type="checkbox" id="rf6"> <span>Thoughts of harming yourself</span></label><div class="out" id="o-rf" hidden></div></div>
-<details class="card" id="c-story" open><summary><span>1. Your tiredness</span><span class="res" id="r-story">Not started</span></summary><div class="num"><label>How many months?<input type="number" inputmode="decimal" id="mon" placeholder="e.g. 6"></label></div><label class="ck"><input type="checkbox" id="st0"> <span>It started after an infection, like the flu or glandular fever</span></label><label class="ck"><input type="checkbox" id="st1"> <span>It started after COVID-19 (or an illness that might have been COVID)</span></label><label class="ck"><input type="checkbox" id="st2"> <span>I can do much less work, study or socialising than before</span></label><label class="ck"><input type="checkbox" id="st3"> <span>Rest and sleep don't fix it</span></label><div class="out" id="o-story" hidden></div></details><details class="card" id="c-pem"><summary><span>2. Crashes after activity</span><span class="res" id="r-pem">Not started</span></summary><label class="ck"><input type="checkbox" id="pem0"> <span>After a normal day out, a shower, shopping or a busy work day, I feel much worse</span></label><label class="ck"><input type="checkbox" id="pem1"> <span>The crash often comes the next day or the day after</span></label><label class="ck"><input type="checkbox" id="pem2"> <span>It takes days or longer to get back to my usual</span></label><label class="ck"><input type="checkbox" id="pem3"> <span>Thinking hard (emails, study) can also cause a crash</span></label><label class="ck"><input type="checkbox" id="pem4"> <span>Brain fog: trouble finding words, focusing or remembering</span></label><div class="out" id="o-pem" hidden></div></details><details class="card" id="c-ortho"><summary><span>3. Standing up</span><span class="res" id="r-ortho">Not started</span></summary><label class="ck"><input type="checkbox" id="ortho0"> <span>I feel dizzy, faint or foggy when I stand, and better when I lie down</span></label><label class="ck"><input type="checkbox" id="ortho1"> <span>My heart races when I stand up</span></label><label class="ck"><input type="checkbox" id="ortho2"> <span>Standing still in a queue or a hot shower makes me feel awful</span></label><label class="ck"><input type="checkbox" id="ortho3"> <span>I've fainted or nearly fainted</span></label><div class="out" id="o-ortho" hidden></div></details><details class="card" id="c-pain"><summary><span>4. Pain</span><span class="res" id="r-pain">Not started</span></summary><label class="ck"><input type="checkbox" id="pain0"> <span>I have pain in many parts of my body, on both sides and above and below the waist</span></label><label class="ck"><input type="checkbox" id="pain1"> <span>The pain has lasted more than 3 months</span></label><label class="ck"><input type="checkbox" id="pain2"> <span>I'm very sensitive to touch or pressure</span></label><label class="ck"><input type="checkbox" id="pain3"> <span>Headaches or tummy cramps are common for me</span></label><div class="out" id="o-pain" hidden></div></details><details class="card" id="c-flex"><summary><span>5. Bendy joints</span><span class="res" id="r-flex">Not started</span></summary><label class="ck"><input type="checkbox" id="flex0"> <span>I can put my hands flat on the floor without bending my knees (or could once)</span></label><label class="ck"><input type="checkbox" id="flex1"> <span>I can bend my thumb back to touch my forearm (or could once)</span></label><label class="ck"><input type="checkbox" id="flex2"> <span>As a child I could do the splits or contort for fun</span></label><label class="ck"><input type="checkbox" id="flex3"> <span>I've dislocated a shoulder or kneecap more than once</span></label><label class="ck"><input type="checkbox" id="flex4"> <span>I think of myself as double-jointed</span></label><div class="out" id="o-flex" hidden></div></details><details class="card" id="c-mast"><summary><span>6. Flushing and reactions</span><span class="res" id="r-mast">Not started</span></summary><label class="ck"><input type="checkbox" id="mast0"> <span>I get episodes of flushing, hives or swelling</span></label><label class="ck"><input type="checkbox" id="mast1"> <span>During those episodes I also get tummy cramps, diarrhoea, wheeze or feel faint</span></label><label class="ck"><input type="checkbox" id="mast2"> <span>These episodes come and go, often with a trigger (heat, food, stress)</span></label><div class="out" id="o-mast" hidden></div></details><details class="card" id="c-nd"><summary><span>7. How your brain works</span><span class="res" id="r-nd">Not started</span></summary><label class="ck"><input type="checkbox" id="nd0"> <span>Since childhood: trouble with focus, organising, or sitting still</span></label><label class="ck"><input type="checkbox" id="nd1"> <span>Often late, or lose track of time</span></label><label class="ck"><input type="checkbox" id="nd2"> <span>Noise, light, crowds or clothing textures wear me out</span></label><label class="ck"><input type="checkbox" id="nd3"> <span>Social time drains me; I need a long time to recover</span></label><label class="ck"><input type="checkbox" id="nd4"> <span>I'm a night owl and always have been</span></label><label class="ck"><input type="checkbox" id="nd5"> <span>A family member has ADHD or autism</span></label><div class="out" id="o-nd" hidden></div></details><details class="card" id="c-sleep"><summary><span>8. Sleep, mood and lifestyle</span><span class="res" id="r-sleep">Not started</span></summary><label class="ck"><input type="checkbox" id="sleep0"> <span>I snore loudly, or someone has noticed I stop breathing</span></label><label class="ck"><input type="checkbox" id="sleep1"> <span>I struggle to get to sleep or stay asleep most nights</span></label><label class="ck"><input type="checkbox" id="sleep2"> <span>I've felt down or anxious most days for 2 weeks or more</span></label><label class="ck"><input type="checkbox" id="sleep3"> <span>I drink alcohol or use cannabis most days, or take sleeping or pain tablets</span></label><label class="ck"><input type="checkbox" id="sleep4"> <span>I do shift work or care for someone a lot</span></label><div class="out" id="o-sleep" hidden></div></details>
-<div class="card"><h2 style="margin:2px 0 6px;font-size:17px">Your summary for your GP</h2>
-<p class="note">Print it or show it on your phone. Booking a longer appointment helps.</p>
-<div id="tw-sum">Tick some boxes to see your summary.</div>
-<div class="row"><button class="btn" type="button" id="tw-copy">Copy</button><button class="btn ghost" type="button" id="tw-print">Print</button><button class="btn ghost" type="button" id="tw-reset">Clear all</button></div>
-<div id="tw-read" hidden><h3 class="sub">Worth reading</h3><ul class="tight" id="tw-links"></ul></div>
-</div>
+  <header class="sec">
+    <p class="eyebrow">Tiredwise · <span class="beta">BETA</span></p>
+    <div class="host"><img src="/assets/mascots/layla.svg" width="72" height="72" alt="Layla the sloth, who knows a thing or two about pacing"><h1>Tiredwise: the tiredness map</h1></div>
+    <p class="lede">What actually causes tiredness in general practice, ranked from common to rare with the data behind each rank. Then the next layer: when the standard tests are normal, which features and mechanisms are worth chasing, and what the treatment trials have shown so far.</p>
+    <div class="battery" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><span>energy: low</span></div>
+  </header>
 
-<h2>Things that help many people while you wait</h2>
-<ul class="tight">
-<li><b>Pace, don't push.</b> If activity causes crashes, do a bit less than you think you can, and rest before you're exhausted. Pushing through often backfires.</li>
-<li><b>Keep a simple diary</b> for 2 weeks: activity, sleep, symptoms and crashes. Your GP will find it very useful.</li>
-<li><b>If standing makes you dizzy:</b> drink plenty of water, stand up slowly, and ask your GP whether extra salt or compression stockings suit you.</li>
-<li><b>Protect your sleep:</b> a regular wake-up time and morning light help the body clock.</li>
-<li><b>Feeling low or anxious is common</b> with long-term tiredness, and treatable. It doesn't mean it's "all in your head".</li>
-</ul>
-<p class="callout"><b>Need to talk now?</b> Lifeline 13 11 14 or text 0477 13 11 14, any time. In an emergency, call 000.</p>
-<p class="note">Health professional? Try the <a href="/tools/tiredwise/">clinician version</a> with criteria checkers, or read <a href="/tools/tiredwise/evidence/">the evidence</a>.</p>
-<p class="meta">Updated 11 November 2026. General information, not a diagnosis or personal medical advice. Always see your GP about ongoing tiredness.</p>
+  <section class="sec" aria-labelledby="bl">
+    <h2 id="bl">Bottom line</h2>
+    <ul class="b">
+      <li><b>Mood, sleep and life load dominate.</b> Depression alone is found in about 18.5% of tired GP patients (pooled, 26 studies).</li>
+      <li><b>Blood tests find little.</b> Only 8% of tired patients had a somatic illness detectable by bloods. A 17-test panel added almost nothing over 4 tests but more than doubled the false positives (38 → 96).</li>
+      <li><b>Serious disease is rare but real.</b> Pooled serious somatic disease is about 4.3%; cancer about 0.6%. In a UK cohort of 285,382, 9-month cancer risk after a fatigue visit was 2.2% in men and 1.1% in women aged 30+, rising above 3% in older men with weight loss or abdominal pain.</li>
+      <li><b>Large unexplained group.</b> In one Dutch study about 43% ended with no diagnosis beyond "tiredness". That's a lot of people with real symptoms and no answer yet.</li>
+      <li><b>For the unexplained group, the best-supported leads are features you can measure:</b> post-exertional malaise, orthostatic intolerance, small fibre neuropathy, iron deficiency without anaemia, sleep disorders.</li>
+      <li><b>The immune/autoantibody story is promising but repeatedly fails in proper trials</b> (rituximab, IVIG, efgartigimod, BC007). Open-label wins keep shrinking under placebo control. Subgrouping by biomarker looks like the way forward.</li>
+    </ul>
+  </section>
+
+  <section class="sec" aria-labelledby="rk">
+    <h2 id="rk">Ranked causes, common to rare</h2>
+    <p class="note">Bars only for figures measured in tired primary care patients. <span class="kind gp">GP data</span> = measured in tired GP patients. <span class="kind">population</span> = how common in everyone (not a fatigue-specific rate). <span class="kind">clinic</span> = specialist clinic data, inflated by referral. <span class="kind">no data</span> = clinically common, no good fatigue-specific number.</p>
+    <div class="rank" id="ranklist"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="mp">
+    <h2 id="mp">The map</h2>
+    <p>Bubble size follows how common each cause is. Tap one for clues, mechanisms, tests and trials. "Tests normal" fades out what a standard workup usually catches, leaving the causes worth a closer look when the usual tests come back normal.</p>
+    <div class="controls" role="group" aria-label="Map filters">
+      <button class="chip" type="button" id="f-all" aria-pressed="true">Everything</button>
+      <button class="chip" type="button" id="f-norm" aria-pressed="false">Tests normal: now what?</button>
+      <button class="chip" type="button" id="f-red" aria-pressed="false">Don't miss</button>
+    </div>
+    <div class="legend"><span><i style="background:var(--t1)"></i>Very common</span><span><i style="background:var(--t2)"></i>Common</span><span><i style="background:var(--t3)"></i>Less common</span><span><i style="background:var(--t4)"></i>Rare</span></div>
+    <div class="mapwrap">
+      <div class="map"><svg id="svg" viewBox="0 0 1100 1100" role="img" aria-label="Mind map of causes of tiredness grouped by body system"></svg></div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="ly">
+    <h2 id="ly">How to read the map</h2>
+    <p>Each layer leads to the next: from the symptom to the likely causes, the clues that point to each one, why it might happen, and what has been tested.</p>
+    <div class="layers">
+      <div class="ly"><span class="eyebrow">1 · Symptom</span><h3>Tired</h3><p>Duration, onset (sudden after infection?), what makes it worse.</p></div>
+      <div class="ly"><span class="eyebrow">2 · Causes</span><h3>Ranked bubbles</h3><p>Common first. Red flags pinned. "Tests normal" filter.</p></div>
+      <div class="ly"><span class="eyebrow">3 · Features</span><h3>Measurable clues</h3><p>Crash after effort, worse upright, burning feet, flushing episodes, snoring.</p></div>
+      <div class="ly"><span class="eyebrow">4 · Mechanisms</span><h3>Why it might happen</h3><p>Low preload, small fibre loss, autoantibodies, mast cell mediators, iron stores.</p></div>
+      <div class="ly"><span class="eyebrow">5 · Trials</span><h3>What's been tested</h3><p>Honest results, then studies recruiting now (Research hub feed).</p></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="tl">
+    <h2 id="tl">Treatment trials for the unexplained group</h2>
+    <p class="note">Green = positive randomised result · amber = mixed, small or uncontrolled · red = negative randomised trial.</p>
+    <div class="trials" id="trials"></div>
+    <p>The pattern: small open-label studies look good, then larger placebo-controlled trials don't. Placebo and volume effects are big here (in the IVIG trial, both arms improved). The next generation of trials targets biomarker-defined subgroups, such as people with high NK cells for daratumumab, or confirmed antibody positivity.</p>
+  </section>
+
+  
+
+  <section class="sec" aria-labelledby="sr">
+    <h2 id="sr">Sources</h2>
+    <ol class="src" id="srcs"></ol>
+    <p class="note">Journal articles are linked by DOI where available. Prevalence figures marked "population" or "clinic" aren't rates in tired GP patients.</p>
+  </section>
+
+  <section class="sec">
+    <div class="row"><a class="btn" href="/tiredwise/check/">Do the 5-minute self-check</a><a class="btn ghost" href="/tools/tiredwise/">Clinician version</a></div>
+    <p class="note">Beta. General education, not a diagnosis or personal medical advice. Always see your GP about ongoing tiredness. In an emergency, call 000; to talk now, Lifeline 13 11 14.</p>
+    <p class="meta">Updated 11 November 2026.</p>
+  </section>
 </main>
 <script>
-(function () {
-  "use strict";
-  var $ = function (id) { return document.getElementById(id); };
-  var on = function (id) { var e = $(id); return !!(e && e.checked); };
-  function n(p, k) { var c = 0; for (var i = 0; i < k; i++) if (on(p + i)) c++; return c; }
-  function lab(p, k) { var o = []; for (var i = 0; i < k; i++) if (on(p + i)) o.push($(p + i).parentNode.textContent.trim()); return o.join("; "); }
-  function set(id, cls, label, html) { var r = $("r-" + id), o = $("o-" + id); if (r) { r.className = "res" + (cls ? " " + cls : ""); r.textContent = label; } if (o) { o.hidden = !html; o.innerHTML = html || ""; } }
-  function calc() {
-    var S = [], A = [], L = {}, mon = parseFloat($("mon").value);
-    var rf = n("rf", 7), o = $("o-rf"); o.hidden = !rf;
-    o.innerHTML = rf ? (on("rf6") ? "<b>Please reach out now:</b> Lifeline 13 11 14, or 000 in an emergency. " : "") + "<b>Book a GP appointment soon</b> and mention " + (rf > 1 ? "these" : "this") + " first." : "";
-    if (rf) S.push("Warning signs ticked: " + rf + ". Please check these first.");
-    var st = n("st", 4);
-    if (!isNaN(mon) || st) { set("story", "", !isNaN(mon) ? mon + " months" : "Started", ""); S.push("Tired for " + (!isNaN(mon) ? mon + " months" : "a while") + (on("st0") ? ", started after an infection" : "") + (on("st1") ? " (possibly COVID-19)" : "") + (on("st2") ? ", doing much less than before" : "") + (on("st3") ? ", not fixed by rest" : "") + "."); L["/tired-all-the-time/"] = "Tired all the time"; } else set("story", "", "Not started", "");
-    var pem = n("pem", 5);
-    if (pem) { var crash = on("pem0") && (on("pem1") || on("pem2")); set("pem", crash ? "yes" : "maybe", crash ? "Sounds like PEM" : pem + " ticked", crash ? "This sounds like <b>post-exertional malaise</b> (a crash after activity). It's a key feature of ME/CFS. Ask your GP about it, and about pacing." : ""); S.push("Crashes after activity: " + lab("pem", 5) + (crash ? " (sounds like post-exertional malaise)." : ".")); if (crash) { A.push("Could this be ME/CFS? I crash after activity."); L["/chronic-fatigue-syndrome/"] = "ME/CFS (chronic fatigue syndrome)"; } } else set("pem", "", "Not started", "");
-    var ort = n("ortho", 4);
-    if (ort) { set("ortho", ort >= 2 ? "yes" : "maybe", ort + " ticked", ort >= 2 ? "Feeling worse upright can be checked simply: your GP can measure your heart rate and blood pressure lying, then standing for 10 minutes." : ""); S.push("On standing: " + lab("ortho", 4) + "."); if (ort >= 2) { A.push("Can we do a lying and standing heart rate and blood pressure test (10-minute stand)?"); L["/pots/"] = "POTS"; } } else set("ortho", "", "Not started", "");
-    var pn = n("pain", 4);
-    if (pn) { var fm = on("pain0") && on("pain1"); set("pain", fm ? "yes" : "maybe", pn + " ticked", fm ? "Widespread pain for 3 months or more is worth checking against the fibromyalgia criteria." : ""); S.push("Pain: " + lab("pain", 4) + "."); if (fm) { A.push("Could my widespread pain be fibromyalgia?"); L["/fibromyalgia/"] = "Fibromyalgia"; } } else set("pain", "", "Not started", "");
-    var fx = n("flex", 5);
-    if (fx) { var hm = fx >= 2; set("flex", hm ? "yes" : "", fx + "/5", hm ? "Two or more ticks suggests <b>joint hypermobility</b>. Your GP can check with a quick 9-point test (the Beighton score)." : ""); S.push("Bendy joints (" + fx + "/5): " + lab("flex", 5) + "."); if (hm) { A.push("Could I have joint hypermobility? Could you check my Beighton score?"); L["/ehlers-danlos-syndrome/"] = "Hypermobility and Ehlers–Danlos syndromes"; } } else set("flex", "", "Not started", "");
-    var ms = n("mast", 3);
-    if (ms) { var mc = on("mast0") && on("mast1"); set("mast", mc ? "maybe" : "", ms + " ticked", mc ? "Episodes affecting skin plus gut, breathing or blood pressure are worth reporting. A blood test (tryptase) taken within 2 hours of an episode is the most useful check." : ""); S.push("Flushing or reactions: " + lab("mast", 3) + "."); if (mc) { A.push("I get flushing episodes with other symptoms. Can I have a tryptase test form to use during the next one?"); L["/mcas/"] = "Mast cell activation syndrome (MCAS)"; } } else set("mast", "", "Not started", "");
-    var nd = n("nd", 6), ad = (on("nd0") ? 1 : 0) + (on("nd1") ? 1 : 0) + (on("nd4") ? 1 : 0), au = (on("nd2") ? 1 : 0) + (on("nd3") ? 1 : 0);
-    if (nd) { var sA = ad >= 2 || (ad && on("nd5")), sU = au >= 2 || (au && on("nd5")); set("nd", sA || sU ? "maybe" : "", nd + " ticked", sA || sU ? "These traits are common in people with ongoing tiredness, and worth mentioning: knowing about " + (sA && sU ? "ADHD or autism" : sA ? "ADHD" : "autism") + " can change what helps." : ""); S.push("Brain and senses: " + lab("nd", 6) + "."); if (sA) { A.push("Could I have ADHD? I'd like a screening questionnaire."); L["/adhd-adults/"] = "ADHD in adults"; } if (sU) { A.push("Could I be autistic? Sensory and social load really drain me."); L["/autism-adults/"] = "Autism in adults"; } } else set("nd", "", "Not started", "");
-    var sl = n("sleep", 5);
-    if (sl) { set("sleep", "maybe", sl + " ticked", ""); S.push("Sleep, mood and lifestyle: " + lab("sleep", 5) + "."); if (on("sleep0")) { A.push("Do I need a sleep study for sleep apnoea?"); L["/sleep-apnoea/"] = "Sleep apnoea"; } if (on("sleep2")) { A.push("I've been feeling down or anxious. Can we talk about that too?"); L["/depression/"] = "Depression"; } if (on("sleep3")) A.push("Could any of my medicines, alcohol or other substances be adding to the tiredness?"); } else set("sleep", "", "Not started", "");
-    if (S.length && on("st1")) { L["/long-covid/"] = "Long COVID"; }
-    if (!S.length) { $("tw-sum").textContent = "Tick some boxes to see your summary."; $("tw-read").hidden = true; return; }
-    A.push("Which blood tests make sense for me? (Common ones include a blood count, iron, thyroid, kidney and liver tests, sugar, inflammation markers and coeliac screening.)");
-    $("tw-sum").textContent = "MY TIREDNESS: NOTES FOR MY GP (Tiredwise self-check, " + new Date().toLocaleDateString("en-AU") + ")\n\nWHAT I TICKED\n- " + S.join("\n- ") + "\n\nQUESTIONS I'D LIKE TO ASK\n- " + A.join("\n- ") + "\n\nThis is a self-check, not a diagnosis.";
-    var ks = Object.keys(L); $("tw-read").hidden = !ks.length; $("tw-links").innerHTML = ks.map(function (k) { return '<li><a href="' + k + '">' + L[k] + "</a></li>"; }).join("");
+(function(){
+"use strict";
+// ---------- sources ----------
+var SRC = {
+  stadje:["Stadje R et al. The differential diagnosis of tiredness: a systematic review. BMC Fam Pract 2016","https://doi.org/10.1186/s12875-016-0545-5"],
+  koch:["Koch H et al. Diagnostic value of blood tests in fatigued primary care patients. Br J Gen Pract 2009","https://bjgp.org/content/59/561/e93"],
+  white:["White B et al. Cancer risk after a first fatigue presentation in primary care (CPRD, 285,382 patients). Br J Gen Pract 2023","https://discovery.ucl.ac.uk/10158576/1/e75.full.pdf"],
+  afp:["Fatigue: a practical approach. Aust Fam Physician 2014 (BEACH data, Dutch 43% figure)","https://www.racgp.org.au/afp/2014/july/fatigue"],
+  osa:["Diagnosis of obstructive sleep apnoea. AJGP 2024","https://www1.racgp.org.au/ajgp/2024/june/diagnosis-of-obstructive-sleep-apnoea"],
+  vaucher:["Vaucher P et al. Iron for non-anaemic fatigued women (ferritin <50): RCT. CMAJ 2012","https://pubmed.ncbi.nlm.nih.gov/22777991/"],
+  grayston:["Grayston R et al. Small fibre pathology in fibromyalgia: meta-analysis. Semin Arthritis Rheum 2019","https://www.pubmed.gov/30314675/"],
+  loebel:["Loebel M et al. Antibodies to β-adrenergic and muscarinic receptors in CFS. Brain Behav Immun 2016","https://doi.org/10.1016/j.bbi.2015.09.013"],
+  hall:["Hall J et al. GPCR autoantibodies in POTS using standard methodology. Circulation 2022","https://doi.org/10.1161/CIRCULATIONAHA.122.059971"],
+  fluge19:["Fluge Ø et al. Rituximab in ME/CFS: RCT. Ann Intern Med 2019","https://doi.org/10.7326/M18-1451"],
+  dara:["Fluge Ø et al. Daratumumab in ME/CFS: pilot. Front Med 2025","https://www.frontiersin.org/articles/10.3389/fmed.2025.1607353/full"],
+  pyr:["Joseph P et al. Pyridostigmine in ME/CFS: RCT. Chest 2022","https://doi.org/10.1016/j.chest.2022.04.146"],
+  istand:["Vernino S et al. IVIG for autoimmune POTS (iSTAND): RCT. Clin Auton Res 2024","https://doi.org/10.1007/s10286-024-01020-9"],
+  sfnivig:["Gibbons CH et al. IVIG for antibody-positive small fibre neuropathy: pilot RCT. Muscle Nerve 2023","https://doi.org/10.1002/mus.27745"],
+  efg:["argenx: efgartigimod in post-COVID POTS (ALPHA) not clinically meaningful, June 2024","https://thepharmaletter.com/in-brief/brief-efgartigimod-in-pc-pots-is-not-clinically-meaningful"],
+  bc007:["BC 007 long COVID phase 2 (n=119) unsuccessful; Erlangen crossover preprint. The Sick Times 2025","https://thesicktimes.org/2025/07/22/berlin-cures-failed-long-covid-clinical-trial-yields-lessons-on-study-design"],
+  ia:["IA-PACS-CFS: sham-controlled immunoadsorption trial in CFS and post-COVID CFS","https://pmc.ncbi.nlm.nih.gov/articles/PMC10919018/"],
+  ldn:["Bonilla H et al. Low-dose naltrexone in long COVID: retrospective cohort. Int Immunopharmacol 2023","https://doi.org/10.1016/j.intimp.2023.110966"],
+  ldnrct:["Naik H et al. LDN for post-COVID fatigue: RCT protocol (n=160). BMJ Open 2024","https://doi.org/10.1136/bmjopen-2024-085272"],
+  raj:["Raj SR et al. Low-dose propranolol in POTS. Circulation 2009","https://doi.org/10.1161/CIRCULATIONAHA.108.846501"],
+  recover:["RECOVER-Adult: post-COVID ME/CFS 4.5% vs 0.6%","https://pmc.ncbi.nlm.nih.gov/articles/PMC11968624/"],
+  ascia:["ASCIA. Mast cell disorders (2025)","https://www.allergy.org.au/images/stories/pospapers/ASCIA_HP_Mast_Cell_Disorders_2025.pdf"],
+  nice:["NICE NG206. ME/CFS (2021)","https://www.nice.org.uk/guidance/ng206"]
+};
+var order = Object.keys(SRC), num = {}; order.forEach(function(k,i){num[k]=i+1;});
+document.getElementById("srcs").innerHTML = order.map(function(k){return '<li><a href="'+SRC[k][1]+'" target="_blank" rel="noopener">'+SRC[k][0]+'</a></li>';}).join("");
+function cite(ks){return ks.map(function(k){return '<a href="'+SRC[k][1]+'" target="_blank" rel="noopener">['+num[k]+']</a>';}).join(" ");}
+
+// ---------- ranked list ----------
+var R = [
+  ["Depression","18.5%",18.5,"gp","Pooled across 6 studies; ~17% on structured interview",["stadje"]],
+  ["No diagnosis beyond \"tiredness\"","~43%",43,"gp","One Dutch primary care study, quoted in AFP 2014",["afp"]],
+  ["Any somatic illness found on bloods","8%",8,"gp","14 of 173 tested; same rate across all 325 patients",["koch"]],
+  ["Serious somatic disease (anaemia, cancer, other)","4.3%",4.3,"gp","Pooled; diabetes, anaemia and hypothyroidism most frequent",["stadje"]],
+  ["Anaemia","2.8%",2.8,"gp","Pooled; range 0–6.9%",["stadje"]],
+  ["ME/CFS","0.7–1.9%",1.9,"gp","Two primary care studies (a third, selective one: 31%)",["stadje"]],
+  ["Cancer","0.6%",0.6,"gp","Pooled. UK cohort: 9-month risk 2.2% men, 1.1% women aged 30+",["stadje","white"]],
+  ["Anxiety, stress, life load","common","","none","Top \"probability diagnosis\" in Australian guidance; no pooled rate",["afp"]],
+  ["Post-viral fatigue","common","","none","Usually settles within weeks to months",["afp"]],
+  ["Obstructive sleep apnoea","20% men / 10% women","","pop","Moderate–severe, middle-aged adults (population, not fatigue-specific)",["osa"]],
+  ["Iron deficiency without anaemia","common","","none","Treatable: RCT showed fatigue fell 47.7% with iron vs 28.8% placebo (ferritin <50)",["vaucher"]],
+  ["Medicines and substances","common","","none","Beta blockers, sedating antihistamines, opioids, gabapentinoids, alcohol, cannabis",["afp"]],
+  ["Hypothyroidism, diabetes","listed as most frequent serious","","gp","Named but not separately quantified in the pooled review",["stadje"]],
+  ["Long COVID → ME/CFS","4.5% of infected","","pop","vs 0.6% uninfected; hazard ratio 4.93",["recover"]],
+  ["Small fibre neuropathy (in fibromyalgia)","49%","","clinic","Pooled, 8 studies, 222 patients (skin biopsy 45%)",["grayston"]],
+  ["Glandular fever, haemochromatosis","rare","","gp","2 and 1 cases in 325 tired patients",["koch"]],
+  ["Addison's, myasthenia, MS, sarcoid, mastocytosis","rare","","none","Each well under 1 in 1,000 tired patients; think when clues fit",[]]
+];
+var mx = 43;
+document.getElementById("ranklist").innerHTML = R.map(function(r,i){
+  var lab = {gp:'<span class="kind gp">GP data</span>',pop:'<span class="kind">population</span>',clinic:'<span class="kind">clinic</span>',none:'<span class="kind">no data</span>'}[r[3]];
+  var bar = r[2]!=="" && r[3]==="gp" ? '<div class="bar"><i style="width:'+Math.max(2,r[2]/mx*100)+'%"></i></div>' : "";
+  return '<div class="rk"><span class="n">'+(i+1)+'</span><b>'+r[0]+lab+'</b><span class="fq">'+r[1]+'</span>'+bar+'<span class="src">'+r[4]+' '+cite(r[5])+'</span></div>';
+}).join("");
+
+// ---------- map data ----------
+// tier: 1 very common, 2 common, 3 less common, 4 rare. std: usually found by standard workup. red: don't miss.
+var G = [
+  {id:"mind",n:"Mind & mood"},{id:"sleep",n:"Sleep"},{id:"blood",n:"Blood & nutrients"},{id:"horm",n:"Hormones"},
+  {id:"inf",n:"Infection & post-viral"},{id:"auto",n:"Autonomic"},{id:"imm",n:"Immune"},{id:"neuro",n:"Nerve & muscle"},
+  {id:"drug",n:"Medicines"},{id:"ser",n:"Serious"}
+];
+var C = [
+  {g:"mind",n:"Depression",t:1,std:1,f:"18.5% of tired GP patients",cl:["Low mood, anhedonia","Early waking","Fatigue present even at rest"],me:["Altered reward and sleep circuitry","Inflammation linked in a subgroup"],te:["PHQ-9"],tr:[["Treat depression","good","Effective treatments exist; fatigue often improves with mood"]],s:["stadje"]},
+  {g:"mind",n:"Anxiety & stress",sn:"Anxiety, stress",t:1,std:1,f:"Common, no pooled rate",cl:["Worry, tension, poor sleep"],me:["Sustained arousal, poor sleep quality"],te:["GAD-7"],tr:[],s:["afp"]},
+  {g:"mind",n:"ADHD / autistic burnout",sn:"ADHD / autism",t:2,f:"Clinic data only",cl:["Lifelong patterns","Sensory and social load","Crash after masking"],me:["Executive load, sensory overload","Overlaps with hypermobility and dysautonomia"],te:["ASRS v1.1","AQ-10"],tr:[["ADHD treatment","good","Improves function; stimulants raise HR"]],s:[]},
+  {g:"sleep",n:"Insomnia",t:1,std:1,f:"Common",cl:["Trouble falling or staying asleep"],me:["Hyperarousal"],te:["Sleep diary"],tr:[["CBT for insomnia","good","First-line, durable"]],s:[]},
+  {g:"sleep",n:"Sleep apnoea",sn:"Sleep apnoea",t:2,f:"20% men / 10% women (mid-age, population)",cl:["Snoring, witnessed apnoeas","Morning headache","Sleepy driving"],me:["Fragmented sleep, intermittent hypoxia"],te:["STOP-BANG","Home sleep study"],tr:[["CPAP or mandibular splint","good","Improves sleepiness"]],s:["osa"]},
+  {g:"sleep",n:"Body clock / shift work",sn:"Body clock",t:2,f:"Common",cl:["Night owl since teens","Shift work"],me:["Circadian misalignment"],te:["Sleep diary"],tr:[["Morning light, timed melatonin","mixed","Helps delayed sleep phase"]],s:[]},
+  {g:"sleep",n:"Narcolepsy / hypersomnia",sn:"Narco- lepsy",t:4,red:1,f:"Rare",cl:["Sleep attacks","Cataplexy","Long sleep, still unrefreshed"],me:["Orexin loss (type 1)"],te:["Sleep study + MSLT"],tr:[],s:[]},
+  {g:"blood",n:"Iron deficiency (no anaemia)",sn:"Low iron",t:2,f:"Common in menstruating women",cl:["Heavy periods, vegetarian, blood donor","Restless legs"],me:["Low iron stores affect muscle and brain energy use"],te:["Ferritin (with CRP)"],tr:[["Oral iron, ferritin <50","good","Fatigue fell 47.7% vs 28.8% placebo (n=198)"]],s:["vaucher"]},
+  {g:"blood",n:"Anaemia",t:2,std:1,f:"2.8% of tired GP patients",cl:["Breathless, pale","Bleeding"],me:["Reduced oxygen delivery"],te:["FBC"],tr:[["Treat the cause","good","Investigate bleeding in men and post-menopause"]],s:["stadje"]},
+  {g:"blood",n:"B12 / folate",sn:"B12 / folate",t:3,std:1,f:"Less common",cl:["Neuropathy, glossitis","Metformin, PPI, vegan"],me:["Impaired DNA synthesis and myelin"],te:["B12, folate"],tr:[["Replace","good",""]],s:[]},
+  {g:"blood",n:"Coeliac disease",sn:"Coeliac",t:3,std:1,f:"About 1% of people",cl:["Bloating, loose stools","Iron deficiency"],me:["Malabsorption, inflammation"],te:["tTG-IgA + total IgA"],tr:[["Gluten-free diet","good",""]],s:[]},
+  {g:"blood",n:"Haemochromatosis",sn:"Haemo- chrom.",t:4,std:1,f:"1 in 325 tired patients",cl:["Joint pain (2nd/3rd MCP)","Raised LFTs"],me:["Iron overload"],te:["Ferritin + transferrin saturation"],tr:[["Venesection","good",""]],s:["koch"]},
+  {g:"horm",n:"Hypothyroidism",sn:"Thyroid",t:2,std:1,f:"Among most frequent serious causes",cl:["Cold, weight gain, constipation"],me:["Low metabolic rate"],te:["TSH"],tr:[["Thyroxine","good","Fatigue often lags normal TSH"]],s:["stadje"]},
+  {g:"horm",n:"Diabetes",t:2,std:1,f:"Among most frequent serious causes",cl:["Thirst, urination"],me:["Hyperglycaemia"],te:["HbA1c"],tr:[],s:["stadje"]},
+  {g:"horm",n:"Perimenopause / pregnancy",sn:"Meno- pause",t:2,std:1,f:"Common",cl:["Cycle change, flushes","Missed period"],me:["Hormonal shifts, sleep disruption"],te:["Clinical; hCG"],tr:[["MHT for vasomotor symptoms","good",""]],s:[]},
+  {g:"horm",n:"Addison's disease",sn:"Addison's",t:4,red:1,f:"Rare",cl:["Weight loss, salt craving","Pigmentation, low Na/high K"],me:["Cortisol and aldosterone deficiency"],te:["Morning cortisol, then short Synacthen"],tr:[["Steroid replacement","good","Can be fatal if missed"]],s:[]},
+  {g:"horm",n:"Kidney disease",sn:"Kidney",t:3,std:1,f:"Less common",cl:["Nocturia, oedema"],me:["Uraemia, anaemia"],te:["UEC, eGFR, urine ACR"],tr:[],s:[]},
+  {g:"inf",n:"Post-viral fatigue",sn:"Post-viral",t:1,f:"Common",cl:["Clear start after an infection"],me:["Immune activation, usually self-limiting"],te:["Time"],tr:[["Pacing early","mixed","NICE: give energy advice from 6 weeks"]],s:["nice"]},
+  {g:"inf",n:"ME/CFS",t:3,f:"0.7–1.9% of tired GP patients",cl:["Post-exertional malaise (crash 12–72 h later)","Unrefreshing sleep","Brain fog, orthostatic intolerance"],me:["Impaired preload and O2 extraction on exercise","Immune and autoantibody hypotheses","Plasma cell / NK cell signals (pilot)"],te:["DSQ-PEM","IOM 2015 criteria"],tr:[["Pacing (NICE 2021)","mixed","Standard of care; no GET"],["Pyridostigmine (single dose)","good","Peak VO2 +54 mL/min vs placebo, n=45"],["Rituximab","bad","Response 26% vs 35% placebo, n=151"],["Daratumumab","mixed","Open pilot: 6/10 improved; NK-high responded"]],s:["stadje","pyr","fluge19","dara","nice"]},
+  {g:"inf",n:"Long COVID",t:2,f:"4.5% of infected develop ME/CFS",cl:["Symptoms 3+ months after COVID"],me:["Persistent virus, immune, clotting and autonomic theories"],te:["NASEM 2024 definition"],tr:[["BC 007 (GPCR antibody neutraliser)","bad","Phase 2 n=119 unsuccessful; small crossover positive"],["Efgartigimod (POTS)","bad","Phase 2 not meaningful (2024)"],["Low-dose naltrexone","mixed","Retrospective n=59 positive; RCT running (n=160)"]],s:["recover","bc007","efg","ldn","ldnrct"]},
+  {g:"inf",n:"Glandular fever",sn:"Glandular fever",t:3,std:1,f:"2 in 325 tired patients",cl:["Sore throat, nodes, young adult"],me:["EBV"],te:["FBC film, EBV serology"],tr:[],s:["koch"]},
+  {g:"inf",n:"HIV / hepatitis C",sn:"HIV / Hep C",t:4,red:1,std:1,f:"Rare",cl:["Risk factors"],me:["Chronic infection"],te:["Serology"],tr:[["Antivirals","good",""]],s:[]},
+  {g:"auto",n:"POTS / orthostatic intolerance",sn:"POTS",t:3,f:"Clinic data; 32% of ME/CFS cohort",cl:["Worse upright, better lying","HR rise ≥30 on standing","Heat and showers worse"],me:["Low blood volume","Small fibre neuropathy (neuropathic POTS)","Hyperadrenergic","Autoantibodies (contested)"],te:["10-minute stand / NASA lean"],tr:[["Fluids, salt, compression","mixed","Guideline-backed, limited trials"],["Low-dose propranolol","good","10–20 mg beat 80 mg for symptoms"],["IVIG","bad","No difference vs albumin; both improved (n=30)"]],s:["raj","istand","hall"]},
+  {g:"auto",n:"Hypermobility-related",sn:"Hyper- mobility",t:3,f:"Common in ND and POTS clinics",cl:["Bendy joints, subluxations","Pain, dizziness"],me:["Connective tissue laxity, venous pooling"],te:["Beighton score"],tr:[["Physio, strengthening","mixed",""]],s:[]},
+  {g:"auto",n:"Heart failure / arrhythmia",sn:"Heart",t:3,red:1,std:1,f:"Less common",cl:["Breathless, oedema","Palpitations, syncope"],me:["Low cardiac output"],te:["ECG, BNP, echo"],tr:[],s:[]},
+  {g:"imm",n:"Fibromyalgia",sn:"Fibro- myalgia",t:2,f:"2–4% of people (population)",cl:["Widespread pain 3+ months","Unrefreshing sleep"],me:["Central sensitisation","Small fibre pathology in ~49%"],te:["ACR 2016 criteria"],tr:[["Exercise (graded to tolerance)","good","EULAR strong-for"],["Amitriptyline, duloxetine, pregabalin","mixed","Modest effects"]],s:["grayston"]},
+  {g:"imm",n:"Autoimmune (RA, lupus, Sjögren's)",sn:"Auto- immune",t:3,std:1,f:"Less common",cl:["Joint swelling, rash","Dry eyes/mouth"],me:["Systemic inflammation, cytokines"],te:["ESR/CRP, ANA if clues"],tr:[["Disease-specific","good",""]],s:[]},
+  {g:"imm",n:"MCAS / mastocytosis",sn:"MCAS",t:4,f:"Rare when ASCIA criteria used",cl:["Episodic flushing + gut/wheeze/low BP","Triggers: heat, food, stress"],me:["Mast cell mediator release; KIT D816V in mastocytosis"],te:["Acute + baseline tryptase (20% + 2)"],tr:[["H1/H2 antihistamines","mixed","Standard, limited RCTs"]],s:["ascia"]},
+  {g:"imm",n:"Sarcoidosis",sn:"Sarcoid",t:4,red:1,f:"Rare",cl:["Cough, rash, uveitis","High calcium"],me:["Granulomatous inflammation"],te:["Ca, ACE, chest X-ray"],tr:[],s:[]},
+  {g:"neuro",n:"Small fibre neuropathy",sn:"Small fibre",t:3,f:"~49% in fibromyalgia (clinic)",cl:["Burning feet or hands","Sweating changes, dizziness"],me:["Loss of small sensory and autonomic fibres; some antibody-linked"],te:["Skin biopsy (IENFD)"],tr:[["IVIG (antibody-positive SFN)","bad","Pilot RCT n=17: no benefit"]],s:["grayston","sfnivig"]},
+  {g:"neuro",n:"Myasthenia gravis",sn:"Myas- thenia",t:4,red:1,f:"Rare",cl:["Fatigable weakness","Droopy eyelids, double vision"],me:["Antibodies to acetylcholine receptor"],te:["AChR antibodies"],tr:[["Pyridostigmine, immunotherapy","good",""]],s:[]},
+  {g:"neuro",n:"Multiple sclerosis",sn:"MS",t:4,red:1,f:"Rare",cl:["Past neuro episodes","Heat sensitivity"],me:["CNS demyelination"],te:["MRI"],tr:[],s:[]},
+  {g:"drug",n:"Medicines",t:1,f:"Common",cl:["Beta blockers, antihistamines","Opioids, gabapentinoids, antidepressants"],me:["Sedation, bradycardia"],te:["Medicine review"],tr:[["Deprescribe or swap","good",""]],s:[]},
+  {g:"drug",n:"Alcohol & cannabis",sn:"Alcohol, cannabis",t:2,f:"Common",cl:["Daily use"],me:["Sleep disruption"],te:["AUDIT-C"],tr:[],s:[]},
+  {g:"ser",n:"Cancer",t:3,red:1,std:1,f:"0.6% pooled; 1.1–2.2% at 9 months",cl:["Weight loss, night sweats","Age 60+, abdominal pain","Anaemia"],me:["Cytokines, anaemia, cachexia"],te:["Guided by clues; FBC"],tr:[],s:["stadje","white"]}
+];
+var gIdx = {}; G.forEach(function(g,i){gIdx[g.id]=i;});
+var svg = document.getElementById("svg"), NS = "http://www.w3.org/2000/svg", CX=550, CY=550, RG=250;
+var R_T = {1:40,2:34,3:28,4:23}, FILL = {1:"var(--t1)",2:"var(--t2)",3:"var(--t3)",4:"var(--t4)"}, TXT = {1:"var(--bg)",2:"var(--bg)",3:"var(--ink)",4:"var(--ink)"};
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e;}
+function wrap(s,max){var w=s.split(" "),l=[""];w.forEach(function(x){if((l[l.length-1]+" "+x).trim().length>max)l.push(x);else l[l.length-1]=(l[l.length-1]+" "+x).trim();});return l;}
+// central node
+var lines = el("g",{});
+el("circle",{cx:CX,cy:CY,r:62,fill:"var(--accent)"});
+var ct = el("text",{x:CX,y:CY+8,"text-anchor":"middle","font-family":"Sora, sans-serif","font-size":"26","font-weight":"700",fill:"#16202B"}); ct.textContent="Tired";
+var nodes = [];
+G.forEach(function(g,gi){
+  var a = gi/G.length*Math.PI*2 - Math.PI/2, gx = CX+Math.cos(a)*RG*0.62, gy = CY+Math.sin(a)*RG*0.62;
+  el("line",{x1:CX,y1:CY,x2:gx,y2:gy,stroke:"var(--line)","stroke-width":"2"},lines);
+  var kids = C.filter(function(c){return c.g===g.id;});
+  kids.forEach(function(c,k){
+    var spread = Math.PI*2/G.length*0.7, ka = a + (kids.length>1 ? (k/(kids.length-1)-0.5)*spread : 0), rr = RG + 100 + (k%2)*105;
+    c.x = CX+Math.cos(ka)*rr; c.y = CY+Math.sin(ka)*rr; c.gx = gx; c.gy = gy;
+  });
+  var gg = el("g",{class:"grp"}); el("circle",{cx:gx,cy:gy,r:8,fill:"var(--teal)"},gg);
+  var lab = wrap(g.n,14), ty = gy + (Math.sin(a)>0.3?26:-14 - (lab.length-1)*17);
+  lab.forEach(function(l,i){var t=el("text",{x:gx,y:ty+i*17,"text-anchor":"middle"},gg);t.textContent=l;});
+});
+// push overlapping bubbles apart (and away from the centre), then draw the links
+for (var it=0; it<300; it++) {
+  for (var i1=0;i1<C.length;i1++) for (var j1=i1+1;j1<C.length;j1++) {
+    var A=C[i1],B=C[j1],dx=B.x-A.x,dy=B.y-A.y,d=Math.sqrt(dx*dx+dy*dy)||1,m=R_T[A.t]+R_T[B.t]+8;
+    if (d<m){var k2=(m-d)/2/d;A.x-=dx*k2;A.y-=dy*k2;B.x+=dx*k2;B.y+=dy*k2;}
   }
-  $("tw").addEventListener("input", calc); $("tw").addEventListener("change", calc);
-  $("tw-copy").onclick = function () { var b = this; (navigator.clipboard ? navigator.clipboard.writeText($("tw-sum").textContent) : Promise.reject()).then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); }, function () {}); };
-  $("tw-print").onclick = function () { var w = window.open("", "_blank"); if (!w) return; w.document.write("<pre style='font:14px/1.5 system-ui;white-space:pre-wrap;padding:20px'>" + $("tw-sum").textContent.replace(/[<&]/g, function (c) { return c === "<" ? "&lt;" : "&amp;"; }) + "</pre>"); w.document.close(); w.focus(); w.print(); };
-  $("tw-reset").onclick = function () { [].forEach.call(document.querySelectorAll("#tw input"), function (e) { if (e.type === "checkbox") e.checked = false; else e.value = ""; }); calc(); };
-  calc();
+  C.forEach(function(c){var r=R_T[c.t],dx=c.x-CX,dy=c.y-CY,d=Math.sqrt(dx*dx+dy*dy)||1;if(d<RG+60){c.x=CX+dx/d*(RG+60);c.y=CY+dy/d*(RG+60);}c.x=Math.min(1100-r-6,Math.max(r+6,c.x));c.y=Math.min(1100-r-6,Math.max(r+6,c.y));});
+}
+C.forEach(function(c){el("line",{x1:c.gx,y1:c.gy,x2:c.x,y2:c.y,stroke:"var(--line)","stroke-width":"1.5"},lines);});
+C.forEach(function(c,i){
+  var g = el("g",{class:"nd",tabindex:"0",role:"button","aria-label":c.n});
+  var r = R_T[c.t]; el("circle",{cx:c.x,cy:c.y,r:r,fill:FILL[c.t],stroke:c.red?"var(--bad)":"none","stroke-width":c.red?"3":"0"},g);
+  var lab = wrap(c.sn||c.n, r>35?11:9).slice(0,3), fs = r>35?13:11;
+  lab.forEach(function(l,j){var t=el("text",{x:c.x,y:c.y+(j-(lab.length-1)/2)*fs*1.1+4,"text-anchor":"middle","font-size":fs,"font-weight":"600",fill:TXT[c.t]},g);t.style.fill=TXT[c.t];t.textContent=l;});
+  g.addEventListener("click",function(){show(i);}); g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();show(i);}});
+  c.node = g; nodes.push(g);
+});
+var panel = document.getElementById("panel");
+function li(a){return a&&a.length?"<ul>"+a.map(function(x){return "<li>"+x+"</li>";}).join("")+"</ul>":"";}
+function show(i){
+  var c = C[i];
+  panel.innerHTML = '<p class="eyebrow">'+G[gIdx[c.g]].n+(c.red?' · <span style="color:var(--bad)">don\'t miss</span>':'')+'</p><h3>'+c.n+'</h3><p class="freq">'+c.f+'</p>'+
+    '<p class="k">Clues</p>'+li(c.cl)+'<p class="k">Mechanisms</p>'+li(c.me)+'<p class="k">Tests</p>'+li(c.te)+
+    (c.tr.length?'<p class="k">Treatments and trials</p><div style="display:grid;gap:8px">'+c.tr.map(function(t){return '<div class="tr '+t[1]+'"><span class="verdict">'+({good:"Positive trial",mixed:"Mixed / early",bad:"Negative RCT"})[t[1]]+'</span><b>'+t[0]+'</b>'+(t[2]?'<span>'+t[2]+'</span>':'')+'</div>';}).join("")+'</div>':'')+
+    (c.s.length?'<p class="note">Sources '+cite(c.s)+'</p>':'');
+}
+// filters
+function filt(mode){
+  ["f-all","f-norm","f-red"].forEach(function(id){document.getElementById(id).setAttribute("aria-pressed", String(id==="f-"+mode));});
+  C.forEach(function(c){var dim = mode==="norm" ? !!c.std : mode==="red" ? !c.red : false; c.node.classList.toggle("dim",dim);});
+}
+document.getElementById("f-all").onclick=function(){filt("all");};
+document.getElementById("f-norm").onclick=function(){filt("norm");show(C.findIndex(function(c){return c.n==="ME/CFS";}));};
+document.getElementById("f-red").onclick=function(){filt("red");show(C.findIndex(function(c){return c.n==="Cancer";}));};
+show(C.findIndex(function(c){return c.n==="POTS / orthostatic intolerance";}));
+
+// ---------- trials list ----------
+var T = [
+  ["Iron in non-anaemic women (ferritin <50)","good","RCT, n=198: fatigue fell 47.7% vs 28.8% placebo",["vaucher"]],
+  ["Low-dose propranolol in POTS","good","Crossover RCT: 20 mg improved symptoms more than 80 mg",["raj"]],
+  ["Pyridostigmine in ME/CFS","good","RCT, n=45, single dose: peak VO2 +54 mL/min vs placebo (exercise physiology, not symptoms)",["pyr"]],
+  ["Rituximab in ME/CFS","bad","RCT, n=151: response 26% vs 35% placebo; more serious adverse events",["fluge19"]],
+  ["IVIG in autoimmune POTS (iSTAND)","bad","RCT, n=30: no difference vs albumin; both arms improved",["istand"]],
+  ["IVIG in antibody-positive small fibre neuropathy","bad","Pilot RCT, n=17: no change in nerve density or pain",["sfnivig"]],
+  ["Efgartigimod in post-COVID POTS","bad","Phase 2 (ALPHA): not clinically meaningful, June 2024",["efg"]],
+  ["BC 007 in long COVID","bad","Phase 2, n=119: unsuccessful (Nov 2024). Erlangen crossover n=30 preprint positive; new sponsor planning restart",["bc007"]],
+  ["Daratumumab (plasma cells) in ME/CFS","mixed","Open pilot, n=10: 6 improved, 5 sustained; high NK cells predicted response. RCT needed",["dara"]],
+  ["Immunoadsorption in CFS / post-COVID CFS","mixed","Sham-controlled exploratory trial (IA-PACS-CFS) testing antibody removal",["ia"]],
+  ["Low-dose naltrexone in long COVID","mixed","Retrospective n=59 positive; 160-person RCT in progress",["ldn","ldnrct"]],
+  ["GPCR autoantibodies as a test","bad","Raised in 29.5% of CFS (2016), but no difference POTS vs controls on standard ELISA (2022)",["loebel","hall"]]
+];
+document.getElementById("trials").innerHTML = T.map(function(t){return '<div class="tr '+t[1]+'"><span class="verdict">'+({good:"Positive RCT",mixed:"Mixed / early",bad:"Negative or not useful"})[t[1]]+'</span><b>'+t[0]+'</b><span>'+t[2]+' '+cite(t[3])+'</span></div>';}).join("");
 })();
 </script>
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
