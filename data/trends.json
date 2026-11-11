@@ -398,6 +398,70 @@
    "date": "2026-11-12",
    "source": "Google Trends (Health, past 24–48h), checked 08:32 AEDT",
    "niche": true
+  },
+  {
+   "term": "HPV chewing gum cuts oral HPV levels by up to 93% (early study)",
+   "region": "Global",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "ScienceDaily 10 Nov 2026; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Ancient virus DNA found in 1,000-year-old manuscripts",
+   "region": "Global",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "ScienceDaily 11 Nov 2026; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Acorns and Lyme disease link",
+   "region": "US",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "ScienceDaily 9 Nov 2026; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Obesity linked to lower risk of death in dementia (obesity paradox)",
+   "region": "Global",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "ScienceDaily 11 Nov 2026; Google Trends not reachable this pass",
+   "niche": false
+  },
+  {
+   "term": "Molgramostim (inhaled GM-CSF) FDA decision 22 Nov, rare autoimmune lung disease",
+   "region": "US",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "Assyro PDUFA calendar Nov 2026; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Venglustat for type 3 Gaucher disease, FDA decision 25 Nov",
+   "region": "US",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "Assyro PDUFA calendar Nov 2026; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Andrographis immune supplement recall (anaphylaxis)",
+   "region": "AU",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "TGA urgent recall Oct 2026 via The Nightly; Google Trends not reachable this pass",
+   "niche": true
+  },
+  {
+   "term": "Fatal familial insomnia / prion disease awareness day 12 Nov",
+   "region": "Global",
+   "approx volume": "n/a",
+   "date": "2026-11-12",
+   "source": "checkrare.com rare-disease calendar (not verified with organiser); Google Trends not reachable this pass",
+   "niche": true
   }
  ],
  "used": [
@@ -559,6 +623,11 @@
    "name": "Emanuel Syndrome Awareness Day",
    "date": "2026-11-22 (annual, 22 Nov)",
    "url": "https://emanuelsyndrome.org/"
+  },
+  {
+   "name": "International Paget's Awareness Day",
+   "date": "2027-01-11 (annual, 11 Jan)",
+   "url": "https://paget.org.uk/pagets-awareness-day"
   }
  ]
 }
