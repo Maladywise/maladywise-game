@@ -1465,6 +1465,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       '<span class="mwt-tx"><small>Today’s puzzle</small><b>' + g.name + "</b><span>" + (g.kind || g.tagline || "") + " · about " + pick.min + ' min</span></span><span class="mwt-play">Play ›</span></a>' +
       '<a class="mwt-all" href="/medical-games/">All medical games ›</a></section>';
   }
+  // tap a section mascot to make it wiggle
+  document.addEventListener("click", function (e) {
+    var im = e.target && e.target.closest && e.target.closest(".mw-sec-hero>img,.host>img");
+    if (!im) return; im.classList.remove("mw-wig"); void im.offsetWidth; im.classList.add("mw-wig");
+    setTimeout(function () { im.classList.remove("mw-wig"); }, 650);
+  });
   function infoExtras() {
     var F = window.MW_FACTS || {}, p = location.pathname.replace(/index\.html$/, ""), me = F[p] || null;
     if (!me && !INFO_RX.test(p)) return;

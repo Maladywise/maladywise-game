@@ -1240,3 +1240,12 @@ a.tl:hover{border-color:var(--accent)}
 .tl.done .tl-ic img,.tl.done .tl-ic svg,.t3.done .t3-ic img,.t3.done .t3-ic svg,.card.done .band-masc{filter:grayscale(1);opacity:.75}
 .tl.done b,.tl.done small{color:var(--muted)}
 .t3.done .t3-ic{background:#A8A1B5}
+/* mascot animations (Nov 2026): hello hop on load, gentle idle bob, wiggle on hover or tap */
+@keyframes mwhop{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-10px) scale(1.04,.96)}55%{transform:translateY(0) scale(1.06,.92)}75%{transform:translateY(-3px) scale(.98,1.02)}100%{transform:none}}
+@keyframes mwbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-1.5deg)}}
+@keyframes mwwig{0%,100%{transform:rotate(0)}20%{transform:rotate(-10deg) scale(1.06)}45%{transform:rotate(8deg) scale(1.06)}70%{transform:rotate(-4deg)}}
+.mw-sec-hero>img,.host>img,.mt-norm{transform-origin:50% 85%;animation:mwhop .8s cubic-bezier(.3,1.4,.5,1) .25s 1 both,mwbob 4.5s ease-in-out 1.4s infinite;cursor:pointer}
+.mw-sec-hero>img:hover,.host>img:hover,.mt-norm:hover,.mw-sec-hero>img.mw-wig,.host>img.mw-wig{animation:mwwig .6s ease-in-out}
+.dh-c:hover img,.tl:hover .tl-m img{animation:mwwig .6s ease-in-out}
+@media (prefers-reduced-motion:reduce){.mw-sec-hero>img,.host>img,.mt-norm,.dh-c img{animation:none!important}}
+html[data-motion="reduce"] .mw-sec-hero>img,html[data-motion="reduce"] .host>img,html[data-motion="reduce"] .mt-norm,html[data-motion="reduce"] .dh-c img{animation:none!important}
