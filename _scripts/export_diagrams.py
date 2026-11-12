@@ -128,6 +128,7 @@ EXERCISES = {
 
 # deep dive folder -> (file name, alt / short caption)
 DEEP_DIVES = {
+    "pelvic-congestion-syndrome": ("pelvic-congestion-syndrome-venous-reflux-pathophysiology-diagram", "Pelvic congestion syndrome diagram: pregnancy and vein compression, venous reflux, pelvic varices, pain and escape points"),
     "adhd": ("adhd-genes-cortical-maturation-diagnosis-diagram", "ADHD diagram: genes, delayed cortical maturation, inattention and hyperactivity-impulsivity, diagnosis, stimulants"),
     "autism": ("autism-genes-development-support-needs-diagram", "Autism diagram: genes and prenatal factors, brain development, core features and support needs; MMR not a cause"),
     "behcets": ("behcets-disease-pathophysiology-flowchart", "Behçet's disease pathophysiology flowchart: genes and triggers to neutrophils, T cells and vasculitis"),

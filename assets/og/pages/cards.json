@@ -519,8 +519,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "70c994e7fdd7",
-"v": "8310e76d",
+"key": "28a6cf1d328e",
+"v": "18514d7b",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -558,6 +558,13 @@
 "v": "f1661324",
 "label": "Deep dive for clinicians · #6",
 "title": "Mould exposure and health"
+},
+"deep-dives-pelvic-congestion-syndrome": {
+"url": "/deep-dives/pelvic-congestion-syndrome/",
+"key": "9e00aecf0257",
+"v": "844fa61b",
+"label": "Deep dive for clinicians · #10",
+"title": "Pelvic congestion syndrome"
 },
 "deep-dives-pots": {
 "url": "/deep-dives/pots/",
