@@ -10,7 +10,7 @@ PUB = re.compile(r"John Hunter|Calvary Mater|\bHNE\b|Hunter New England|Rankin P
 PRIV = re.compile(r"Private|GenesisCare|Hunter Eye Surgeons|rooms", re.I)
 NAMES = {"ent": "ENT (ear, nose and throat)", "obstetrics-gynaecology": "Obstetrics and gynaecology", "ortho-hand-upper-limb": "Orthopaedics: hand and wrist", "ortho-shoulder": "Orthopaedics: shoulder and elbow", "ortho-hip-knee": "Orthopaedics: hip and knee", "ortho-foot-ankle": "Orthopaedics: foot and ankle", "ortho-spine": "Orthopaedics: spine", "general-surgery": "General surgery", "psychiatry-adult": "Psychiatry", "psychiatry-child-adolescent": "Child and adolescent psychiatry", "psychiatry-perinatal": "Perinatal psychiatry", "paediatrics-general": "Paediatrics", "paediatrics-developmental": "Developmental paediatrics", "immunology-allergy": "Immunology and allergy", "respiratory-sleep": "Respiratory and sleep medicine", "exercise-physiology": "Exercise physiology", "occupational-therapy-adult": "Occupational therapy (adults)", "occupational-therapy-paediatric": "Occupational therapy (children)", "speech-pathology-paediatric": "Speech pathology (children)", "speech-pathology-adult": "Speech pathology (adults)", "dietetics": "Dietitians", "diabetes-education": "Diabetes educators", "continence": "Continence services", "lactation": "Lactation consultants", "social-work": "Mental health social workers", "dental": "Dentists and dental specialists", "psychology-children": "Psychology (children)", "geriatric-medicine": "Geriatric medicine", "medical-oncology": "Medical oncology", "pain-medicine": "Pain medicine", "plastic-surgery": "Plastic and reconstructive surgery", "radiation-oncology": "Radiation oncology", "rehabilitation": "Rehabilitation medicine"}
 BADGES = [
- ("nd", "Neuro-affirming", r"neuro\s*-?\s*(diversity|divergen\w*)?\s*-?\s*affirm|neuroaffirm|neurodiversity|neurodivergen|autism[- ]affirm|adhd[- ]affirm",
+ ("nd", "Neuro-affirming", r"neuro\s*-?\s*(diversity|divergen\w*|divers\w*)?\s*-?\s*affirm|neuroaffirm|neurodivers\w*|neurodivergen\w*|neuro[- ]?inclusiv\w*|autism[- ]affirm|adhd[- ]affirm",
   '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5C3.5 8.5 2 10.3 2 12s1.5 3.5 4.5 3.5c3.5 0 7.5-7 11-7 3 0 4.5 1.8 4.5 3.5s-1.5 3.5-4.5 3.5c-3.5 0-7.5-7-11-7z" fill="none" stroke="#D4A017" stroke-width="2.4" stroke-linecap="round"/></svg>'),
  ("ga", "LGBTQIA+ affirming", r"gender[- ]affirm|gender[- ]diverse|transgender|\btrans\b|lgbt|rainbow|queer|non-binary|nonbinary",
   '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="2.3" fill="#E40303"/><rect x="2" y="7.3" width="20" height="2.3" fill="#FF8C00"/><rect x="2" y="9.6" width="20" height="2.3" fill="#FFED00"/><rect x="2" y="11.9" width="20" height="2.3" fill="#008026"/><rect x="2" y="14.2" width="20" height="2.3" fill="#004DFF"/><rect x="2" y="16.5" width="20" height="2.3" fill="#750787"/><path d="M2 5 L9 11.9 L2 18.8z" fill="#fff"/><path d="M2 6.6 L7.4 11.9 L2 17.2z" fill="#F5A9B8"/><path d="M2 8.2 L5.8 11.9 L2 15.6z" fill="#5BCEFA"/><path d="M2 9.8 L4.2 11.9 L2 14z" fill="#613915"/></svg>'),
@@ -67,7 +67,10 @@ def badges(p):
     out = []
     if re.sub(r"\W+", "", TITLE.sub("", p["name"]).lower()) in APPROVED: out.append(("mw", "Malady Wise approved", MW_SVG, [APPROVED_TXT]))
     for code, label, rx, svg in BADGES:
-        hits = [x for x in (p.get("inclusive") or []) if re.search(rx, x, re.I) and not re.search(r"flag displayed|acknowledgement of country|article", x, re.I)]
+        src = list(p.get("inclusive") or [])
+        if code == "nd":  # owner (Nov 2026): any listing that says neurodivergent/neurodiverse/neurodiversity etc. is shown as Neuro-affirming
+            src += [p.get("specialty", "")] + list(p.get("interests") or [])
+        hits = [x for x in src if x and re.search(rx, x, re.I) and not re.search(r"flag displayed|acknowledgement of country|article", x, re.I)]
         if hits: out.append((code, label, svg, hits))
     return out
 def ortho_labels(p):
@@ -135,7 +138,7 @@ TAGMAP = [
  ("DBT", r"\bdbt\b|dialectical"), ("CBT", r"\bcbt|cognitive behaviour"), ("ACT", r"\bact\b|acceptance and commitment"), ("schema therapy", r"schema"),
  ("chronic pain", r"chronic pain|persistent pain|pain management|pain psych|pain program|chronic illness and pain"),
  ("LGBTIQA+-affirming", r"lgbt|queer|rainbow|sexualit|gender and sexual"), ("trans and gender-affirming", r"\btrans\b|transgender|gender[- ]affirm|gender dysphoria|gender[- ]diverse|non-binary|auspath"),
- ("First Nations", r"aboriginal|torres strait|first nations|indigenous"), ("neuropsychology", r"neuropsych|cognitive (and|assess)|\biq\b|acquired brain|intellectual disab|capacity assess|dementia assess"),
+ ("First Nations", r"aboriginal|torres strait|first nations|indigenous"), ("neuro-affirming", r"neuro\s*-?\s*affirm|neuroaffirm|neurodivers|neurodivergen|neuro[- ]?inclusiv"), ("neuropsychology", r"neuropsych|cognitive (and|assess)|\biq\b|acquired brain|intellectual disab|capacity assess|dementia assess"),
  ("grief", r"grief|bereave"), ("addiction", r"addict|substance|alcohol|\bdrug|gambl"), ("personality disorders", r"personality disorder|\bbpd\b|borderline"),
  ("veterans", r"veteran|\bdva\b|defence|military|\badf\b"), ("sleep", r"sleep|insomnia"), ("bipolar", r"bipolar"), ("self-harm", r"self[- ]harm|suicid"),
  ("stress and burnout", r"stress|burnout"), ("assessment", r"assessment"), ("women's health", r"women|menopaus|perimenopaus|pelvic|pcos|endometrios"),
