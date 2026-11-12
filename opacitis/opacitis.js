@@ -6,7 +6,7 @@
    images self-hosted in img/normie/, "n-" storage keys, no medicine. Missing Normie file -> MW_noNormie. Check with opacitis/check.py. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", TRIES = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", TRIES = 3;
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Opacitis (Normie)" : "Opacitis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
   var NT = { q: "What’s inside?", foot: "Real X-rays and CT scans of everyday objects, animals and plants (never people), from Wikimedia Commons and museum open-access collections under free licences, credited under each image. Just for fun.", alt: "Mystery X-ray for today’s puzzle", unit: "X-ray" };
   var root = document.getElementById("opc");

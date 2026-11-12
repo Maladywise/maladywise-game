@@ -11,7 +11,7 @@
    stored in "glm-athon-<date>" (separate from daily stats). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", TRIES = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", TRIES = 3;
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Glimpsis (Normie)" : "Glimpsis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
   var NT = { q: "What is it?", foot: "Real close-ups and microscope images of everyday things, animals and plants, from Wikimedia Commons under free licences (public domain, CC0, CC BY, CC BY-SA), credited under each image. Just for fun.", alt: "Mystery close-up for today’s puzzle", unit: "close-up" };
   var root = document.getElementById("glm");

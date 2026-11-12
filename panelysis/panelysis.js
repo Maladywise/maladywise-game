@@ -5,7 +5,7 @@
    range = typical range), "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "2", TRIES = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", TRIES = 3;
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Panelysis (Normie)" : "Panelysis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
   // Normie wording swaps
   var T = NORMIE ? { aria: "Mystery stats", q: "What’s the mystery?", past: "Past cards", foot: "Stats are real-world figures, rounded. Just for fun.", head: "Mystery stats", lab: "Malady Wise · for fun", ref: "Typical ", key: "The giveaways", pearl: "Fun fact", unit: "card" }
