@@ -444,5 +444,6 @@ try:
     import subprocess, sys as _s
     subprocess.run([_s.executable, "_scripts/og_cards.py", "--meta"], check=False)
     subprocess.run([_s.executable, "_scripts/share_block.py"], check=False)  # each page's own share JSON-LD
+    subprocess.run([_s.executable, "_scripts/static_nav.py"], check=False)  # site menu block on the hub
 except Exception as _e:
     print("og_cards --meta skipped:", _e)
