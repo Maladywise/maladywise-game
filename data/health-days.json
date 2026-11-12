@@ -212,7 +212,8 @@
    "link": "https://www.worldobesityday.org",
    "blurb": "Obesity is a chronic disease, not a character flaw. Today's puzzles take it seriously.",
    "puzzle_theme": "Obesity medicine: metabolism, hormones (leptin, GLP-1), bariatrics. No body-shaming.",
-   "icon": "apple"
+   "icon": "apple",
+   "page": "/weight/"
   },
   {
    "id": "kidney",
@@ -268,7 +269,8 @@
    "normie": {
     "name": "World Sleep Day",
     "blurb": "Why we yawn, why we dream and how cats sleep 15 hours a day."
-   }
+   },
+   "page": "/sleep/"
   },
   {
    "id": "oral",
@@ -433,7 +435,8 @@
    "link": "https://www.un.org/en/observances/autism-day",
    "blurb": "Neurodiversity day. Different brains, not broken ones.",
    "puzzle_theme": "Neurodiversity: autism history, sensory processing, strengths. Respectful.",
-   "icon": "infinity"
+   "icon": "infinity",
+   "page": "/autism/"
   },
   {
    "id": "health",
@@ -669,7 +672,8 @@
    "normie": {
     "name": "World Asthma Day",
     "blurb": "Breathe easy: how your airways work, and famous athletes with asthma."
-   }
+   },
+   "page": "/asthma/"
   },
   {
    "id": "midwife",
@@ -783,7 +787,8 @@
    "normie": {
     "name": "World Lupus Day",
     "blurb": "Why a butterfly became the symbol of this autoimmune disease."
-   }
+   },
+   "page": "/lupus/"
   },
   {
    "id": "nurses",
@@ -1800,7 +1805,8 @@
    "normie": {
     "name": "World Osteoporosis Day",
     "blurb": "You have 206 bones. Bones, calcium and the skeleton crew."
-   }
+   },
+   "page": "/osteoporosis/"
   },
   {
    "id": "polio",
@@ -1910,7 +1916,8 @@
    "blurb": "More than skin deep. Today is about psoriasis.",
    "puzzle_theme": "Dermatology: psoriasis, plaques, nail signs, psoriatic arthritis",
    "icon": "hippo",
-   "icon_fact": "Hippos ooze a red-orange 'blood sweat' that works as a natural sunscreen and may fight germs."
+   "icon_fact": "Hippos ooze a red-orange 'blood sweat' that works as a natural sunscreen and may fight germs.",
+   "page": "/psoriasis/"
   },
   {
    "id": "radiology",
@@ -1992,7 +1999,8 @@
    "normie": {
     "name": "World Diabetes Day",
     "blurb": "Banting's birthday: insulin, sugar and a Nobel Prize."
-   }
+   },
+   "page": "/type-2-diabetes/"
   },
   {
    "id": "prematurity",
@@ -2044,7 +2052,8 @@
    "link": "https://www.who.int/campaigns/world-cervical-cancer-elimination-day",
    "blurb": "The first cancer we could eliminate. HPV vaccines and screening make it possible.",
    "puzzle_theme": "Cervical cancer: HPV, Pap smear history, screening, vaccines",
-   "icon": "syringe"
+   "icon": "syringe",
+   "page": "/cancer-screening/"
   },
   {
    "id": "copd",
@@ -2068,7 +2077,8 @@
    "blurb": "Breathless isn't just getting older. Today is about COPD.",
    "puzzle_theme": "COPD: emphysema, bronchitis, spirometry, smoking",
    "icon": "goose",
-   "icon_fact": "Bar-headed geese fly over the Himalayas, where each breath holds only about a third of the oxygen at sea level."
+   "icon_fact": "Bar-headed geese fly over the Himalayas, where each breath holds only about a third of the oxygen at sea level.",
+   "page": "/copd/"
   },
   {
    "id": "amr",
@@ -2101,7 +2111,8 @@
    "normie": {
     "name": "Superbug Week",
     "blurb": "Germs fight back. Why you shouldn't take antibiotics for a cold."
-   }
+   },
+   "page": "/antibiotics/"
   },
   {
    "id": "gbv",
@@ -2155,7 +2166,8 @@
    "link": "https://www.who.int/campaigns/world-aids-day",
    "blurb": "From a death sentence to a manageable condition. Today is about HIV.",
    "puzzle_theme": "HIV and immunology: CD4, antiretrovirals, history. No jokes about patients.",
-   "icon": "ribbon-red"
+   "icon": "ribbon-red",
+   "page": "/hiv/"
   },
   {
    "id": "disability",
@@ -2857,7 +2869,8 @@
    "puzzle_theme": "Psychology: memory, perception, famous experiments, CBT history. Respectful tone about mental illness.",
    "_note": "Dates move (2025 was 29 Sep-5 Oct; 2026 is 16-22 Nov). 2027-2028 not yet announced.",
    "icon": "dog",
-   "icon_fact": "Ten minutes of patting a dog or cat lowered students' cortisol, the stress hormone, in a 2019 study."
+   "icon_fact": "Ten minutes of patting a dog or cat lowered students' cortisol, the stress hormone, in a 2019 study.",
+   "page": "/seeing-a-psychologist/"
   },
   {
    "id": "socialjustice",
@@ -2965,7 +2978,8 @@
    "link": "https://endometriosisaustralia.org",
    "blurb": "About 1 in 7 Australian women are diagnosed with endometriosis by their late 40s.",
    "puzzle_theme": "Endometriosis and pelvic pain: symptoms, diagnosis, diagnostic delay",
-   "icon": "ribbon-yellow"
+   "icon": "ribbon-yellow",
+   "page": "/endometriosis/"
   },
   {
    "id": "closethegap",
@@ -4645,7 +4659,8 @@
    "normie": {
     "name": "Mediterranean Diet Day",
     "blurb": "Olive oil, tomatoes, fish and long lunches. Why this way of eating keeps topping the charts."
-   }
+   },
+   "page": "/mediterranean-diet/"
   },
   {
    "id": "mountain",
@@ -7462,7 +7477,8 @@
    "normie": {
     "name": "World Thyroid Day",
     "blurb": "The small gland in your neck that sets your speed."
-   }
+   },
+   "page": "/underactive-thyroid/"
   },
   {
    "id": "sallyride",
@@ -8062,7 +8078,8 @@
    "link": "https://www.canada.ca/en/health-canada/services/calendar-health-promotion-days.html",
    "blurb": "Held on the day the painter Paul Klee died, who had it. Skin turns tight and organs can stiffen too.",
    "puzzle_theme": "Scleroderma: systemic sclerosis, Raynaud's, CREST, autoantibodies",
-   "icon": "zebra-rare"
+   "icon": "zebra-rare",
+   "page": "/scleroderma/"
   },
   {
    "id": "asteroid",
@@ -9813,7 +9830,8 @@
    "link": "https://en.wikipedia.org/wiki/World_Contraception_Day",
    "blurb": "From condoms to implants, there are more options than ever. Today is choice and access.",
    "puzzle_theme": "Contraception: LARCs, the Pill, emergency contraception, condoms, IUDs",
-   "icon": "ribbon-pink"
+   "icon": "ribbon-pink",
+   "page": "/contraception/"
   },
   {
    "id": "tourism",
@@ -10146,7 +10164,8 @@
    "link": "https://www.imsociety.org",
    "blurb": "Half the population will go through it, yet most get little warning. Hot flushes, sleep, bones and options.",
    "puzzle_theme": "Menopause: perimenopause, hot flushes, MHT, osteoporosis, cardiovascular risk",
-   "icon": "ribbon-lavender"
+   "icon": "ribbon-lavender",
+   "page": "/menopause/"
   },
   {
    "id": "stuttering",
@@ -10953,7 +10972,8 @@
    "normie": {
     "name": "Gluten-Free Day",
     "blurb": "Wheat, bread and the science of gluten."
-   }
+   },
+   "page": "/coeliac/"
   },
   {
    "id": "ibd",
@@ -11428,7 +11448,8 @@
    "normie": {
     "name": "Restless Legs Day",
     "blurb": "Fidgeting, sleep and why legs twitch at night."
-   }
+   },
+   "page": "/restless-legs/"
   },
   {
    "id": "alzmonth",
@@ -11590,7 +11611,8 @@
    "link": "https://pancreaticcancer.org.uk/get-involved/make-a-difference/pancreatic-cancer-awareness-month-pcam/world-pancreatic-cancer-day",
    "blurb": "Pancreatic cancer is often found late. Today the world goes purple to change that.",
    "puzzle_theme": "Pancreatic cancer: painless jaundice, Courvoisier's law, CA19-9, Whipple procedure",
-   "icon": "ribbon-purple"
+   "icon": "ribbon-purple",
+   "page": "/pancreatic-cancer/"
   },
   {
    "id": "toilet",
@@ -14625,7 +14647,8 @@
     "name": "World Keratoconus Day",
     "blurb": "The clear window at the front of your eye, and when it bulges."
    },
-   "_note": "Shares 10 November with World Neuroendocrine Cancer Day and World Science Day."
+   "_note": "Shares 10 November with World Neuroendocrine Cancer Day and World Science Day.",
+   "page": "/keratoconus/"
   },
   {
    "id": "del22q",
@@ -14714,7 +14737,8 @@
     "name": "World Haemochromatosis Week",
     "blurb": "Iron overload, and why some people are told to give blood."
    },
-   "_note": "First week of June (1-7 June)."
+   "_note": "First week of June (1-7 June).",
+   "page": "/haemochromatosis/"
   },
   {
    "id": "hsweek",
@@ -14745,7 +14769,8 @@
     "name": "HS Awareness Week",
     "blurb": "A common skin condition many people have never heard of."
    },
-   "_note": "First full week of June, Monday to Sunday."
+   "_note": "First full week of June, Monday to Sunday.",
+   "page": "/hidradenitis-suppurativa/"
   },
   {
    "id": "ebweek",
@@ -14894,7 +14919,8 @@
    "link": "https://www.santelog.com/actualites-sante-nasdaq/fsr-celebrates-congressional-recognition-april-sarcoidosis-awareness-month",
    "blurb": "Non-caseating granulomas, swollen hilar lymph nodes and sometimes high calcium. Sarcoidosis loves to mimic other diseases.",
    "puzzle_theme": "Granulomatous disease: sarcoidosis, hilar lymphadenopathy, ACE, hypercalcaemia",
-   "icon": "zebra-rare"
+   "icon": "zebra-rare",
+   "page": "/sarcoidosis/"
   },
   {
    "id": "pwsmonth",
@@ -15065,7 +15091,8 @@
    "link": "https://myastheniagravisnews.com/news/myasthenia-gravis-awareness-month-features-worldwide-events/",
    "blurb": "Weakness that worsens with use: droopy eyelids and double vision by evening. Ice on the eyelid can briefly help.",
    "puzzle_theme": "Neuromuscular junction: myasthenia gravis, acetylcholine receptor antibodies, thymoma, ice pack test",
-   "icon": "zebra-rare"
+   "icon": "zebra-rare",
+   "page": "/myasthenia-gravis/"
   },
   {
    "id": "lipoedemamonth",
@@ -15209,7 +15236,8 @@
    "normie": {
     "name": "PCOS Awareness Month",
     "blurb": "A common hormone condition and the clues that point to it."
-   }
+   },
+   "page": "/pcos/"
   },
   {
    "id": "rettmonth",
@@ -15270,7 +15298,8 @@
    "normie": {
     "name": "ADHD Awareness Month",
     "blurb": "Focus, distraction and how different brains manage attention."
-   }
+   },
+   "page": "/adhd/"
   },
   {
    "id": "dyslexiamonth",
@@ -15359,7 +15388,8 @@
    "blurb": "The porphyrias are rare faults in making haem. Acute attacks cause severe abdominal pain and are easily mistaken for other emergencies.",
    "puzzle_theme": "Haem synthesis, acute porphyria, porphobilinogen, photosensitivity, drug triggers",
    "icon": "ribbon-purple",
-   "_note": "best-guess date: set yearly by the American Porphyria Foundation (Apr 13-20 in 2024, May 12-18 in 2025); using the 2025 pattern, Mon-Sun from the 2nd Monday of May"
+   "_note": "best-guess date: set yearly by the American Porphyria Foundation (Apr 13-20 in 2024, May 12-18 in 2025); using the 2025 pattern, Mon-Sun from the 2nd Monday of May",
+   "page": "/porphyria/"
   },
   {
    "id": "batten",

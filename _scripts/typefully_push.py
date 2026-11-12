@@ -165,8 +165,10 @@ def weekly_batch_written(day, today):
 
 
 def site_link(x):
-    """Matching fact sheet, else the day's entry on /days/, else the home page."""
+    """Matching fact sheet ("page" in health-days.json first), else the day's entry on /days/, else the home page."""
     import re
+    if x.get("page") and os.path.isfile(os.path.join(ROOT, x["page"].strip("/"), "index.html")):
+        return SITE + x["page"].strip("/") + "/"
     gen = set("world international national global day days week month awareness of the for and on to a in "
               "elimination remembrance victims".split())
     core = " ".join(w for w in re.findall(r"[A-Za-z0-9']+", re.sub(r"\([^)]*\)", "", x["name"])) if w.lower() not in gen).lower()

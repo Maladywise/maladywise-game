@@ -36,8 +36,8 @@ SOON = os.path.join(ROOT, "data", "days-soon.json")  # home page day box (see wr
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 BASE = "https://maladywise.com/days/"
 PUZZLES_FROM = "2026-10-17"  # first day of Malady Wise puzzles; keep in step with days.js
-JS_V = 5
-CSS_V = 4
+JS_V = 8
+CSS_V = 7
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
           "September", "October", "November", "December"]
@@ -132,6 +132,8 @@ def item_html(x, yr):
     puz = ' <span class="dl-pz" title="Themed puzzles">🧩</span>' if themed(x, yr) else ""
     link = ('<a href="%s" target="_blank" rel="noopener">Learn more<span class="sr"> about %s</span></a>'
             % (esc(x["link"]), esc(display_name(x)))) if x.get("link") else ""
+    if x.get("page"):  # our own matching fact sheet first
+        link = ('<a class="dl-fs" href="%s">Read our fact sheet<span class="sr"> on %s</span></a> ' % (esc(x["page"]), esc(display_name(x)))) + link
     return ('<li class="dl-i t-%s" id="day-%s" data-s="%s" data-e="%s" data-k="%s">'
             '<time datetime="%s">%s</time><div class="dl-tx"><h4>%s%s</h4>'
             '<p class="dl-m"><span class="dl-b">%s</span></p><p>%s</p>%s</div></li>'

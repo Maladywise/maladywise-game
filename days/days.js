@@ -93,7 +93,8 @@
     var when = idx === 0 ? "Today" : idx === 1 ? "Tomorrow" : nice(day, true);
     var s0 = x.dates[r.yr].start, s1 = x.dates[r.yr].end;
     var span = x.kind === "week" && s1 ? "Runs " + (s0.slice(5, 7) === s1.slice(5, 7) ? Number(s0.slice(8)) + "–" + nice(s1) : nice(s0) + " – " + nice(s1)) : "";
-    var link = x.link ? '<a class="dd-go" href="' + esc(x.link) + '" target="_blank" rel="noopener">Learn more<span class="sr"> about ' + nm(x) + "</span></a>" : "";
+    var link = (x.page && !NORMIE ? '<a class="dd-go dd-fs" href="' + esc(x.page) + '">Read our fact sheet<span class="sr"> on ' + nm(x) + "</span></a>" : "") +
+      (x.link ? '<a class="dd-go" href="' + esc(x.link) + '" target="_blank" rel="noopener">Learn more<span class="sr"> about ' + nm(x) + "</span></a>" : "");
     return '<li class="dd' + (idx === 0 ? " dd-today" : "") + (quiet ? " dd-quiet" : "") + '"' + (hide ? " hidden" : "") + ">" +
       '<div class="dd-top"><time class="dd-pill" datetime="' + day + '">' + esc(when) + "</time>" +
       (th ? '<span class="dd-tag">🧩 Themed puzzles</span>' : "") + "</div>" +
@@ -101,7 +102,7 @@
       (x.icon && !quiet ? '<img class="dd-ic" src="/assets/days/' + esc(x.icon) + '.svg" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">' : "") +
       '<div class="dd-tx"><h3>' + nm(x) + "</h3>" + (span ? '<p class="dd-span">' + esc(span) + "</p>" : "") +
       "<p>" + esc(x.blurb || "") + "</p>" +
-      (r.also.length ? '<p class="dd-also">Also: ' + r.also.map(function (y) { return y.link ? '<a href="' + esc(y.link) + '" target="_blank" rel="noopener">' + nm(y) + "</a>" : nm(y); }).join(", ") + "</p>" : "") +
+      (r.also.length ? '<p class="dd-also">Also: ' + r.also.map(function (y) { return y.page && !NORMIE ? '<a href="' + esc(y.page) + '">' + nm(y) + "</a>" : y.link ? '<a href="' + esc(y.link) + '" target="_blank" rel="noopener">' + nm(y) + "</a>" : nm(y); }).join(", ") + "</p>" : "") +
       link + "</div></div></li>";
   }
   function renderUpcoming(vis) {
@@ -129,6 +130,7 @@
       '<time datetime="' + d.start + '">' + esc(spanText(x, yr)) + '</time><div class="dl-tx"><h4>' + nm(x) +
       (themed(x, yr) ? ' <span class="dl-pz" title="Themed puzzles">🧩</span>' : "") + "</h4>" +
       '<p class="dl-m"><span class="dl-b">' + esc(badge) + "</span></p><p>" + esc(x.blurb || "") + "</p>" +
+      (x.page && !NORMIE ? '<a class="dl-fs" href="' + esc(x.page) + '">Read our fact sheet<span class="sr"> on ' + nm(x) + "</span></a> " : "") +
       (x.link ? '<a href="' + esc(x.link) + '" target="_blank" rel="noopener">Learn more<span class="sr"> about ' + nm(x) + "</span></a>" : "") + "</div></li>";
   }
   var KORD = { month: 0, week: 1, day: 2 };

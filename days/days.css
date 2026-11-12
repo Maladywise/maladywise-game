@@ -32,6 +32,7 @@
 .dd p{margin:0;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
 .dd-span{color:var(--muted);font-size:12.5px!important}
 .dd-also{color:var(--muted);font-size:13px!important}
+.dd-fs{color:var(--brand)!important}.dl-fs{font-weight:600;margin-right:12px}
 .dd-go{justify-self:start;margin-top:4px;font-weight:600;font-size:14px}
 .dd-empty{color:var(--muted)}
 .dd-more,.cal-today{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--brand);font:600 14px var(--body);border-radius:999px;padding:8px 16px}

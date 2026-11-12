@@ -69,6 +69,13 @@
 "label": "Exercise handout",
 "title": "Ankle Sprain Exercises"
 },
+"antibiotics": {
+"url": "/antibiotics/",
+"key": "30cfd2e6b5c6",
+"v": "417072e7",
+"label": "Condition",
+"title": "Do I Need Antibiotics?"
+},
 "anxiety": {
 "url": "/anxiety/",
 "key": "f15cd2cc89ba",
@@ -1007,6 +1014,13 @@
 "label": "Exercise handout",
 "title": "Hip Pain Exercises"
 },
+"hiv": {
+"url": "/hiv/",
+"key": "3a021284a86d",
+"v": "4c4973d6",
+"label": "Condition",
+"title": "HIV, PrEP and PEP"
+},
 "hives": {
 "url": "/hives/",
 "key": "eec0da4f00ae",
@@ -1315,6 +1329,13 @@
 "label": "Medicine",
 "title": "Weight-loss medicines"
 },
+"mediterranean-diet": {
+"url": "/mediterranean-diet/",
+"key": "a02ae6069dab",
+"v": "8eb3f8f8",
+"label": "Condition",
+"title": "Mediterranean Diet"
+},
 "menopause": {
 "url": "/menopause/",
 "key": "c6df78877bf1",
@@ -1447,6 +1468,13 @@
 "v": "e2564c1a",
 "label": "Condition",
 "title": "Heart Palpitations"
+},
+"pancreatic-cancer": {
+"url": "/pancreatic-cancer/",
+"key": "db8e3556b91f",
+"v": "9390a22a",
+"label": "Condition",
+"title": "Pancreatic Cancer"
 },
 "paronychia": {
 "url": "/paronychia/",
@@ -1678,6 +1706,13 @@
 "v": "6bb5aeb0",
 "label": "Condition",
 "title": "Seborrhoeic Keratoses"
+},
+"seeing-a-psychologist": {
+"url": "/seeing-a-psychologist/",
+"key": "28d20c5b6625",
+"v": "a19d295f",
+"label": "Condition",
+"title": "Seeing a Psychologist"
 },
 "sexually-transmitted-infections": {
 "url": "/sexually-transmitted-infections/",
