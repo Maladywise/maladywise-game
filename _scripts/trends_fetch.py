@@ -59,7 +59,7 @@ def trending_now(geo, hours=24):
     raw = get("https://trends.google.com/_/TrendsUi/data/batchexecute?rpcids=i0OFE&source-path=%2Ftrending&hl=en-US&rt=c",
               data=body, headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
     if DEBUG:
-        print("RAW", geo, raw[:3000])
+        print("RAW", geo, repr(raw[:1500]))
     rows = []
     for line in raw.splitlines():
         line = line.strip()
