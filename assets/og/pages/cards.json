@@ -83,6 +83,13 @@
 "label": "Condition",
 "title": "Anxiety"
 },
+"arsenic": {
+"url": "/arsenic/",
+"key": "cc1e40564729",
+"v": "98bf8488",
+"label": "Condition",
+"title": "Arsenic"
+},
 "asthma": {
 "url": "/asthma/",
 "key": "d3acc82b061f",
@@ -327,6 +334,13 @@
 "v": "9e999e09",
 "label": "Fact sheet",
 "title": "Bunions"
+},
+"cadmium": {
+"url": "/cadmium/",
+"key": "9a349a50c06a",
+"v": "25865647",
+"label": "Condition",
+"title": "Cadmium"
 },
 "cancer-screening": {
 "url": "/cancer-screening/",
@@ -972,6 +986,13 @@
 "label": "Condition",
 "title": "Heart Failure"
 },
+"heavy-metal-testing": {
+"url": "/heavy-metal-testing/",
+"key": "4b0a43e2520f",
+"v": "4d8c4d12",
+"label": "Condition",
+"title": "Heavy Metal Testing and “Detox”"
+},
 "heavy-periods": {
 "url": "/heavy-periods/",
 "key": "c054fec4acc2",
@@ -1125,6 +1146,13 @@
 "v": "21d6002f",
 "label": "Fact sheet",
 "title": "Lactose intolerance"
+},
+"lead": {
+"url": "/lead/",
+"key": "183d7c252100",
+"v": "456ba6d0",
+"label": "Condition",
+"title": "Lead Exposure and Lead Poisoning"
 },
 "leptospirosis": {
 "url": "/leptospirosis/",
@@ -1377,6 +1405,13 @@
 "v": "23865e7c",
 "label": "Tool",
 "title": "Psychological distress self-check (K10)"
+},
+"mercury": {
+"url": "/mercury/",
+"key": "d1490f569b27",
+"v": "f0e6502a",
+"label": "Condition",
+"title": "Mercury"
 },
 "migraine": {
 "url": "/migraine/",
@@ -2322,6 +2357,13 @@
 "v": "7f9e2acb",
 "label": "Condition",
 "title": "Tension-Type Headache"
+},
+"thallium": {
+"url": "/thallium/",
+"key": "a018abb35cf0",
+"v": "6f849276",
+"label": "Condition",
+"title": "Thallium Poisoning"
 },
 "thiamine": {
 "url": "/thiamine/",
