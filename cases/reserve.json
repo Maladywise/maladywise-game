@@ -740,5 +740,44 @@
    }
   ],
   "pearl": "The ductus arteriosus usually closes within days of birth. In very premature babies it often stays open, so extra blood floods the lungs and runs off from the body: bounding pulses and a wide pulse pressure are the clues. Many close on their own; the NICU team decides whether it needs help. Happy World Prematurity Day to every early arrival and their families."
+ },
+ {
+  "difficulty": "Hard",
+  "title": "Cream crackers",
+  "answer": "Sjögren's syndrome",
+  "accept": [
+   "sjogrens",
+   "sjogren's",
+   "sjogren",
+   "sjogrens syndrome",
+   "sjogren's syndrome",
+   "sjogren syndrome",
+   "sjögren's syndrome",
+   "sjögren",
+   "sicca syndrome",
+   "primary sjogrens"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old woman whose eyes feel gritty, like sand under the lids."
+   },
+   {
+    "t": "She can't eat a dry cracker without a glass of water."
+   },
+   {
+    "t": "Her dentist found five new cavities this year."
+   },
+   {
+    "t": "Both cheeks near her jaw are swollen and puffy."
+   },
+   {
+    "t": "Aching joints. Tired all the time."
+   },
+   {
+    "t": "Anti-Ro and anti-La antibodies positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Dry eyes plus dry mouth is the core of it. Schirmer's test measures tear production. Lymphoma risk is raised, so a persistently enlarged parotid gland needs review."
  }
 ]

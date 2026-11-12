@@ -760,42 +760,45 @@
   "date": "2026-11-20",
   "number": 35,
   "difficulty": "Hard",
-  "title": "Cream crackers",
-  "answer": "Sjögren's syndrome",
+  "title": "Long-haul flight",
+  "answer": "Spaceflight-associated neuro-ocular syndrome (SANS)",
   "accept": [
-   "sjogrens",
-   "sjogren's",
-   "sjogren",
-   "sjogrens syndrome",
-   "sjogren's syndrome",
-   "sjogren syndrome",
-   "sjögren's syndrome",
-   "sjögren",
-   "sicca syndrome",
-   "primary sjogrens"
+   "sans",
+   "spaceflight associated neuro-ocular syndrome",
+   "spaceflight-associated neuro-ocular syndrome",
+   "spaceflight associated neuro ocular syndrome",
+   "spaceflight associated neuroocular syndrome",
+   "space flight associated neuro-ocular syndrome",
+   "space flight associated neuro ocular syndrome",
+   "spaceflight neuro-ocular syndrome",
+   "viip",
+   "viip syndrome",
+   "visual impairment intracranial pressure syndrome",
+   "vision impairment and intracranial pressure"
   ],
   "clues": [
    {
-    "t": "52-year-old woman whose eyes feel gritty, like sand under the lids."
+    "t": "47-year-old woman, home for a week after a six-month work trip. Suddenly she needs reading glasses for everything."
    },
    {
-    "t": "She can't eat a dry cracker without a glass of water."
+    "t": "Her near vision began blurring a few months into the trip. No headache, no double vision."
    },
    {
-    "t": "Her dentist found five new cavities this year."
+    "t": "Colleagues on the trip teased her about her puffy face and skinny legs the whole time."
    },
    {
-    "t": "Both cheeks near her jaw are swollen and puffy."
-   },
-   {
-    "t": "Aching joints. Tired all the time."
-   },
-   {
-    "t": "Anti-Ro and anti-La antibodies positive",
+    "t": "Refraction: hyperopic shift of +1.0 dioptre in both eyes",
     "d": 1
+   },
+   {
+    "t": "Fundoscopy: mild swelling of both optic discs, with choroidal folds",
+    "d": 1
+   },
+   {
+    "t": "MRI: flattening of the back of both eyeballs. Her office was the International Space Station."
    }
   ],
-  "pearl": "Dry eyes plus dry mouth is the core of it. Schirmer's test measures tear production. Lymphoma risk is raised, so a persistently enlarged parotid gland needs review."
+  "pearl": "Without gravity, body fluid shifts towards the head for months and the back of the eye flattens. In a NASA survey, about 60% of long-duration astronauts reported worse near or distance vision after flight. Unlike papilloedema on Earth, headache is uncommon and pressure in the skull is only mildly raised, if at all. With Moon and Mars crews being planned, it's a hot topic."
  },
  {
   "date": "2026-11-21",

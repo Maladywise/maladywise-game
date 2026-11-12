@@ -3459,107 +3459,107 @@
   "date": "2026-11-19",
   "number": 33,
   "difficulty": "Medium",
-  "theme": "Abbreviations and jargon",
+  "theme": "Plumbing, inside and out",
   "questions": [
    {
-    "q": "\u2018NBM\u2019 on a chart means?",
-    "a": "Nil by mouth",
+    "q": "In 1854, John Snow traced a London cholera outbreak to a water pump on which street?",
+    "a": "Broad Street",
     "w": [
-     "No bowel movement",
-     "Not before morning",
-     "Normal blood measurement"
+     "Baker Street",
+     "Fleet Street",
+     "Downing Street"
     ],
-    "e": "Nil by mouth means nothing to eat or drink, usually before surgery or a procedure."
+    "e": "He had the pump handle removed. The street is now Broadwick Street in Soho, where a replica pump marks the spot."
    },
    {
-    "q": "\u2018PRN\u2019 on a medication chart means?",
-    "a": "As needed",
+    "q": "Which nurse\u2019s \u2018rose diagrams\u2019 showed that soldiers in the Crimean War died far more often from disease and poor sanitation than from wounds?",
+    "a": "Florence Nightingale",
     "w": [
-     "Every morning",
-     "Before meals",
-     "Twice a day"
+     "Mary Seacole",
+     "Edith Cavell",
+     "Clara Barton"
     ],
-    "e": "Pro re nata."
+    "e": "Her charts pushed the government to clean up army hospitals. In 1858 she became the first woman elected to the Royal Statistical Society."
    },
    {
-    "q": "\u2018BD\u2019 on a prescription means?",
-    "a": "Twice a day",
+    "q": "London\u2019s \u2018Great Stink\u2019 of 1858 led to a vast new sewer network designed by which engineer?",
+    "a": "Joseph Bazalgette",
     "w": [
-     "Before dinner",
-     "At bedtime",
-     "Every two days"
+     "Isambard Kingdom Brunel",
+     "Thomas Crapper",
+     "Thomas Telford"
     ],
-    "e": "Bis die."
+    "e": "Bazalgette made his pipes bigger than needed, just in case. Good call: they still carry London\u2019s sewage today."
    },
    {
-    "q": "\u2018NAD\u2019 in the notes usually means?",
-    "a": "No abnormality detected",
+    "q": "Cholera\u2019s \u2018rice-water\u2019 stools happen because its toxin makes the gut?",
+    "a": "Pour out salt and water",
     "w": [
-     "Not available today",
-     "Normal adult dose",
-     "Needs another doctor"
+     "Bleed into the bowel",
+     "Stop moving",
+     "Absorb too much water"
     ],
-    "e": "NAD means no abnormality detected. Cynics insist it stands for \u2018not actually done\u2019."
+    "e": "The toxin jams a chloride channel open and water follows. Oral rehydration solution, just sugar, salt and water, has saved millions of lives."
    },
    {
-    "q": "\u2018SOB\u2019 in the notes means?",
-    "a": "Shortness of breath",
+    "q": "Roughly how many people worldwide lacked safely managed sanitation in 2024 (WHO/UNICEF)?",
+    "a": "About 3.4 billion",
     "w": [
-     "Sick on bed",
-     "Swelling of bowel",
-     "Start of bleeding"
+     "About 50 million",
+     "About 500 million",
+     "About 6 billion"
     ],
-    "e": "Context matters."
+    "e": "That\u2019s around 4 in 10 people. About 354 million still had no toilet at all. Hence World Toilet Day, every 19 November."
    },
    {
-    "q": "To \u2018turf\u2019 a patient means to?",
-    "a": "Transfer them to another team",
+    "q": "The main pancreatic duct usually joins the common bile duct to drain into the?",
+    "a": "Duodenum",
     "w": [
-     "Discharge them home",
-     "Sedate them",
-     "Admit them overnight"
+     "Stomach",
+     "Jejunum",
+     "Gallbladder"
     ],
-    "e": "To \u2018turf\u2019 a patient is hospital slang for transferring them to another team, ideally without anyone noticing."
+    "e": "They meet at the ampulla of Vater, guarded by the sphincter of Oddi. Body plumbing at its finest."
    },
    {
-    "q": "DNR stands for?",
-    "a": "Do not resuscitate",
+    "q": "A tumour in the head of the pancreas can squash the bile duct. A classic early sign is?",
+    "a": "Painless jaundice",
     "w": [
-     "Did not respond",
-     "Discharge, no review",
-     "Daily nursing review"
+     "Crushing chest pain",
+     "Ankle swelling",
+     "A dry cough"
     ],
-    "e": "DNR means do not resuscitate: no CPR if the heart stops. Many hospitals now use wording like \u2018not for CPR\u2019 instead."
+    "e": "Bile backs up into the blood: yellow skin and eyes, dark urine, pale stools and itch. Jaundice without pain always deserves prompt tests."
    },
    {
-    "q": "\u2018Obs\u2019 are the patient\u2019s?",
-    "a": "Vital signs",
+    "q": "Courvoisier\u2019s law: a jaundiced patient with a palpable, non-tender gallbladder is unlikely to have?",
+    "a": "Gallstones",
     "w": [
-     "Obstetric history",
-     "Observation ward notes",
-     "Objective symptoms"
+     "A tumour at the head of the pancreas",
+     "A blocked common bile duct",
+     "Bile duct cancer"
     ],
-    "e": "Obs (observations) are the vital signs: pulse, blood pressure, temperature, breathing rate and oxygen level."
+    "e": "Stones scar the gallbladder so it can\u2019t stretch. A big, smooth one suggests a slower blockage, often a tumour. Swiss surgeon Ludwig Courvoisier described it in 1890."
    },
    {
-    "q": "On a full blood count report, \u2018eosinophilia\u2019 means?",
-    "a": "A raised eosinophil count",
+    "q": "Besides the head of the pancreas, a classic Whipple procedure removes the?",
+    "a": "Duodenum, gallbladder and part of the bile duct",
     "w": [
-     "A low eosinophil count",
-     "Eosinophils with abnormal shapes",
-     "Eosinophils found in urine"
+     "Spleen and left kidney",
+     "Oesophagus and spleen",
+     "Appendix and caecum"
     ],
-    "e": "Here \u2018-philia\u2019 means too many, not love. Eosinophils are named for soaking up the acidic red dye eosin. Think allergy, asthma, parasites and drug reactions."
+    "e": "Then the surgeon re-plumbs the pancreas, bile duct and stomach into the small bowel. Allen Whipple reported his version in 1935."
    },
    {
-    "q": "\u2018TTO\u2019 or \u2018TTA\u2019 medications are?",
-    "a": "Medications to take home",
+    "q": "The insulin-making islets of Langerhans make up roughly what share of the pancreas?",
+    "a": "About 1\u20132%",
     "w": [
-     "Medications to avoid",
-     "Trial treatment only",
-     "Medications given at the time of admission"
+     "About 25%",
+     "About half",
+     "About 90%"
     ],
-    "e": "To take out, or to take away."
+    "e": "The rest is exocrine tissue, pumping digestive enzymes down the duct. Paul Langerhans spotted the islets as a medical student in 1869."
    }
   ]
  },
