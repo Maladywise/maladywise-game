@@ -2407,6 +2407,13 @@
 "label": "Condition",
 "title": "Vitamin D Deficiency"
 },
+"vitamin-k": {
+"url": "/vitamin-k/",
+"key": "94b8b1de0552",
+"v": "c76ff5e4",
+"label": "Condition",
+"title": "Vitamin K"
+},
 "warts": {
 "url": "/warts/",
 "key": "9f7e8ce8e2e0",

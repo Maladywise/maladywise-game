@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Send queued X posts to Typefully (API v2), one per day at 7:30am Sydney, always as an image post + link reply.
+"""Send queued X posts to Typefully (API v2), one per slot (7:30am and 12:30pm Sydney), always as an image post + link reply.
 
-Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["post 1", ...], "note": "...", "card": true}]}
+Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon", "thread": ["post 1", ...], "note": "...", "card": true}]}
+- Two slots a day: "am" = 7:30am (the weekly mix; the default when "slot" is missing) and "noon" = 12:30pm
+  (world health day posts: history, facts, why it matters). One post per slot.
 - Entries without "typefully_id" whose date is today..today+10 (Sydney) are created as scheduled drafts.
 - X shows posts with links to far fewer people, so every draft is sent as a thread: post 1 has an image
   and NO link; the link goes in post 2 (the first reply), e.g. "Play today's puzzle → https://...".
@@ -11,7 +13,8 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "thread": ["pos
   linked page's og:image read from its HTML at push time (games: assets/og/<game>.png; deep dives:
   their own page card); a game whose og:image is the generic share card gets a generated card with its
   name and teaser; fallback assets/og/<first path segment>.png, then the site share card.
-- Empty dates with a strong day (priority 1-3) get an automatic single World Day post with its card,
+- Empty NOON slots with a strong day (priority 1-3) get an automatic single World Day post with its card
+  (skipped when that day's 7:30am entry already carries the day card),
   but only from AUTO_FROM, only once that week's Friday batch has been written (so the weekly mix
   always wins), and only if Typefully has nothing already scheduled that day (hand-made posts).
 - After each successful post the script writes back "typefully_id" and "queued_at" to the queue file
@@ -42,7 +45,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(ROOT, "_social", "queue.json")
 API = "https://api.typefully.com/v2"
 SYD = ZoneInfo("Australia/Sydney")
-SLOT = (7, 30)          # 7:30am Sydney
+SLOTS = {"am": (7, 30), "noon": (12, 30)}   # 7:30am Sydney (weekly mix); 12:30pm Sydney (world health day posts)
+
+
+def slot_of(p):
+    return p.get("slot") or "am"
+
+
+def key_of(p):
+    return "%s|%s" % (p["date"], slot_of(p))
 AHEAD_DAYS = 10
 AUTO_FROM = datetime.date(2026, 11, 16)   # first automated queue date; earlier dates were scheduled by hand
 SITE = "https://maladywise.com/"
@@ -132,7 +143,8 @@ def scheduled_dates(sid):
     for d in data.get("results", []):
         s = d.get("scheduled_date") or d.get("publish_at")
         if s:
-            out.add(datetime.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(SYD).date().isoformat())
+            t = datetime.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(SYD)
+            out.add("%s|%s" % (t.date().isoformat(), "noon" if t.hour >= 11 else "am"))
     return out
 
 
@@ -236,7 +248,7 @@ def auto_post(day):
             reply += "\nRead more → %s" % link
     for t in texts:
         if x_len(t) <= 280:
-            return {"date": day, "note": "Auto World Day: %s" % name, "thread": [t, reply], "card": True, "auto": True}
+            return {"date": day, "slot": "noon", "note": "Auto World Day: %s" % name, "thread": [t, reply], "card": True, "auto": True}
     return None
 
 
@@ -410,10 +422,21 @@ def main():
         now = datetime.datetime(today.year, today.month, today.day, 5, 0, tzinfo=SYD)
     last = today + datetime.timedelta(days=a.days)
     posts = q.setdefault("posts", [])
-    have = {p["date"] for p in posts}
+    have = {key_of(p) for p in posts}
 
-    def slot(d):
-        return datetime.datetime(d.year, d.month, d.day, SLOT[0], SLOT[1], tzinfo=SYD)
+    def slot(d, k="am"):
+        h, m = SLOTS[k]
+        return datetime.datetime(d.year, d.month, d.day, h, m, tzinfo=SYD)
+
+    def day_already_marked(iso):
+        """The 7:30am post that day is already about the day (World Day card, or names the day), so no extra noon post."""
+        x = day_card.main_day(iso)
+        name = (x or {}).get("name", "").lower()
+        for e in posts:
+            if e["date"] == iso and slot_of(e) == "am":
+                if e.get("card") or (name and name in (e.get("note", "") + " " + " ".join(e.get("thread") or [])).lower()):
+                    return True
+        return False
 
     todo = []
     for p in posts:
@@ -426,7 +449,7 @@ def main():
     d = max(today, AUTO_FROM)
     while d <= last:
         iso = d.isoformat()
-        if iso not in have and slot(d) > now + datetime.timedelta(minutes=10):
+        if iso + "|noon" not in have and not day_already_marked(iso) and slot(d, "noon") > now + datetime.timedelta(minutes=10):
             if not weekly_batch_written(d, today):
                 if auto_post(iso):
                     print("Wait (weekly batch not written yet):", iso, auto_post(iso)["note"])
@@ -435,7 +458,7 @@ def main():
                 if e:
                     autos.append(e)
         d += datetime.timedelta(days=1)
-    todo = sorted(todo + autos, key=lambda p: p["date"])
+    todo = sorted(todo + autos, key=lambda p: (p["date"], slot_of(p)))
     bad = invalid_posts(todo)
     for p, why in bad:
         print("ERROR: not sending %s: %s" % (p["date"], why), file=sys.stderr)
@@ -512,14 +535,15 @@ def main():
     try:
         for p in todo:
             d = datetime.date.fromisoformat(p["date"])
-            when = slot(d)
+            k = slot_of(p)
+            when = slot(d, k)
             if when <= now + datetime.timedelta(minutes=10):
-                print("Skip (slot already passed):", p["date"]); continue
-            if p.get("auto") and (busy is None or p["date"] in busy):
+                print("Skip (slot already passed):", key_of(p)); continue
+            if p.get("auto") and (busy is None or key_of(p) in busy):
                 print("Skip auto post (Typefully already has a post that day):", p["date"]); continue
             if busy is None and not dry:
                 print("Hold (couldn't check Typefully for clashes; retry next run):", p["date"]); continue
-            if busy and p["date"] in busy:
+            if busy and key_of(p) in busy:
                 # never two posts in one slot: a "pin": true entry waits for its own day (retried next run, dropped
                 # once its slot passes); anything else moves to the next free 7:30am slot within the window
                 if p.get("pin"):
@@ -528,9 +552,9 @@ def main():
                 while nd <= last:
                     nd += datetime.timedelta(days=1)
                     iso = nd.isoformat()
-                    if iso not in busy and iso not in {x["date"] for x in posts if x is not p}:
-                        print("Moved %s -> %s (slot taken in Typefully)" % (p["date"], iso))
-                        p["moved_from"] = p["date"]; p["date"] = iso; d = nd; when = slot(d); moved = True
+                    if iso + "|" + k not in busy and iso + "|" + k not in {key_of(x) for x in posts if x is not p}:
+                        print("Moved %s -> %s (%s slot taken in Typefully)" % (p["date"], iso, k))
+                        p["moved_from"] = p["date"]; p["date"] = iso; d = nd; when = slot(d, k); moved = True
                         break
                 if not moved:
                     print("Hold (no free slot in the next %d days):" % a.days, p["date"]); continue
@@ -552,7 +576,7 @@ def main():
             else:
                 png = image_for(p, url)
             if dry:
-                print("DRY", p["date"], body["publish_at"], "AUTO" if p.get("auto") else "queue",
+                print("DRY", key_of(p), body["publish_at"], "AUTO" if p.get("auto") else "queue",
                       len(xs), "post(s) + %s" % ("video" if (png or "").endswith(VIDEO_EXT) else "image"),
                       os.path.relpath(png, ROOT) if png.startswith(ROOT) else png)
                 for i, t in enumerate(xs, 1):
@@ -570,7 +594,7 @@ def main():
             body["publish_at"] = when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             if busy is not None:
-                busy.add(p["date"])
+                busy.add(key_of(p))
             p["typefully_id"] = str(res.get("id", "ok"))
             p["queued_at"] = datetime.datetime.now(SYD).isoformat(timespec="minutes")
             if p.pop("auto", None):

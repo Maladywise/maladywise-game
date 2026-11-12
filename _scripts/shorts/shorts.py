@@ -331,7 +331,9 @@ def typefully_dates():
             for d in data.get("results", []):
                 sd = d.get("scheduled_date")
                 if sd:
-                    out.add(datetime.datetime.fromisoformat(sd.replace("Z", "+00:00")).astimezone(SYD).date().isoformat())
+                    t = datetime.datetime.fromisoformat(sd.replace("Z", "+00:00")).astimezone(SYD)
+                    if t.hour < 11:   # only the 7:30am slot; 12:30pm is for world health day posts
+                        out.add(t.date().isoformat())
             if not data.get("next"):
                 break
             offset += 50
@@ -345,7 +347,7 @@ def plan_day(today, posts, target=None, extra_taken=()):
     A day counts as taken if the queue has an entry OR Typefully already has a scheduled post that day."""
     thu = target or today + datetime.timedelta(days=(3 - today.weekday()) % 7 or 7)
     mon = thu - datetime.timedelta(days=thu.weekday())
-    taken = {e["date"] for e in posts} | set(extra_taken)
+    taken = {e["date"] for e in posts if (e.get("slot") or "am") == "am"} | set(extra_taken)
     week = {(mon + datetime.timedelta(days=i)).isoformat() for i in range(7)}
     if any(e.get("short") and e["date"] in week for e in posts):
         return None, "this week (from %s) already has a Short" % mon
