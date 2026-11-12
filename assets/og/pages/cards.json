@@ -769,6 +769,13 @@
 "label": "Condition",
 "title": "Flu, COVID-19 and Colds"
 },
+"folate": {
+"url": "/folate/",
+"key": "daee96e1ad5b",
+"v": "1d3b3db9",
+"label": "Condition",
+"title": "Folate and Folic Acid"
+},
 "foot-oa": {
 "url": "/foot-oa/",
 "key": "591547a1afd2",
@@ -1434,6 +1441,13 @@
 "label": "Condition",
 "title": "Neck Pain"
 },
+"niacin": {
+"url": "/niacin/",
+"key": "288ed64c14b1",
+"v": "ff8b7d56",
+"label": "Condition",
+"title": "Niacin (Vitamin B3)"
+},
 "osteoarthritis": {
 "url": "/osteoarthritis/",
 "key": "3cf67e53a079",
@@ -1636,6 +1650,13 @@
 "v": "2c8deebc",
 "label": "Condition",
 "title": "Restless Legs"
+},
+"riboflavin": {
+"url": "/riboflavin/",
+"key": "da79c259c42d",
+"v": "3b95ad8c",
+"label": "Condition",
+"title": "Riboflavin (Vitamin B2)"
 },
 "rosacea": {
 "url": "/rosacea/",
@@ -2302,6 +2323,13 @@
 "label": "Condition",
 "title": "Tension-Type Headache"
 },
+"thiamine": {
+"url": "/thiamine/",
+"key": "253fe47174dd",
+"v": "47fb420e",
+"label": "Condition",
+"title": "Thiamine (Vitamin B1) Deficiency"
+},
 "threadworms": {
 "url": "/threadworms/",
 "key": "610a9a7d14d5",
@@ -2435,12 +2463,40 @@
 "label": "Fact sheet",
 "title": "Varicose veins"
 },
+"vitamin-a": {
+"url": "/vitamin-a/",
+"key": "491797e16774",
+"v": "5d10256b",
+"label": "Condition",
+"title": "Vitamin A"
+},
+"vitamin-b6": {
+"url": "/vitamin-b6/",
+"key": "c5dd24275a52",
+"v": "ffcd6763",
+"label": "Condition",
+"title": "Vitamin B6"
+},
+"vitamin-c": {
+"url": "/vitamin-c/",
+"key": "93320dfdf085",
+"v": "026fcd77",
+"label": "Condition",
+"title": "Vitamin C Deficiency and Scurvy"
+},
 "vitamin-d": {
 "url": "/vitamin-d/",
 "key": "74b63dc23aeb",
 "v": "affae624",
 "label": "Condition",
 "title": "Vitamin D Deficiency"
+},
+"vitamin-e": {
+"url": "/vitamin-e/",
+"key": "309fa1d03d94",
+"v": "df244d42",
+"label": "Condition",
+"title": "Vitamin E"
 },
 "vitamin-k": {
 "url": "/vitamin-k/",
