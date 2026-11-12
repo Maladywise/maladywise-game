@@ -6,8 +6,8 @@ Runs in GitHub Actions (cloud sessions can't reach Google Trends reliably). Writ
 Each item: {"term", "volume", "started", "related"}. The morning briefing and evening puzzle refresh read it.
 
 Two sources per region:
-- the Trending now page's own data call (batchexecute, rpc i0OFE), which returns every trend with its
-  category ids; Health is category 7.
+- the Trending now page (past 24h and 48h), which embeds every trend with its category ids;
+  Health is category 7 (the site filters by category in the browser).
 - the public RSS feed (top trends, all categories) as a fallback.
 """
 import datetime, json, os, re, sys, urllib.parse, urllib.request
@@ -50,76 +50,53 @@ def walk_trends(node, found):
     """Trend rows look like [term, null, geo, [start_secs], [end_secs]|null, null, volume, null, pct, [related...], [cat ids], ...].
     Find lists whose first item is a string and that contain an int list of category ids."""
     if isinstance(node, list):
-        if len(node) > 10 and isinstance(node[0], str) and isinstance(node[2], str) and len(node[2]) == 2:
+        if len(node) > 8 and isinstance(node[0], str) and isinstance(node[2], str) and len(node[2]) == 2:
             found.append(node)
             return
         for x in node:
             walk_trends(x, found)
 
 
-VARIANT = [None, None, "GEO", 0, "en-US", 24, 1]
-
-
 def trending_now(geo, hours=24):
-    if not getattr(trending_now, "warm", False):
-        try: get("https://trends.google.com/trending?geo=%s" % geo); trending_now.warm = True
-        except Exception as e: print("warm-up failed", e)
-    inner = json.dumps([geo if x == "GEO" else (hours if x == 24 else x) for x in VARIANT])
-    freq = json.dumps([[["i0OFE", inner, None, "generic"]]])
-    body = urllib.parse.urlencode({"f.req": freq}).encode()
-    raw = get("https://trends.google.com/_/TrendsUi/data/batchexecute?rpcids=i0OFE&source-path=%2Ftrending&hl=en-US&rt=c",
-              data=body, headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", "X-Same-Domain": "1",
-                                  "Origin": "https://trends.google.com", "Referer": "https://trends.google.com/trending?geo=%s" % geo})
-    if DEBUG:
-        print("RAW", geo, repr(raw[:1500]))
+    """The Trending now page embeds every trend (all categories) in an AF_initDataCallback script;
+    the site filters by category in the browser. Row: [term, _, geo, [start], [end]|None, _, volume, _, pct, [related], [cat ids], ...]"""
+    html = get("https://trends.google.com/trending?geo=%s&hours=%d" % (geo, hours))
+    blocks = re.findall(r"AF_initDataCallback\((\{.*?\})\);</script>", html, re.S)
     rows = []
-    for line in raw.splitlines():
-        line = line.strip()
-        if not line.startswith("[["):
+    for b in blocks:
+        i, j = b.find("data:"), b.rfind(", sideChannel")
+        if i < 0 or j < 0:
             continue
         try:
-            outer = json.loads(line)
-        except Exception:
-            continue
-        for part in outer:
-            if isinstance(part, list) and len(part) > 2 and part[0] == "wrb.fr" and isinstance(part[2], str):
-                walk_trends(json.loads(part[2]), rows)
+            walk_trends(json.loads(b[i + 5:j]), rows)
+        except Exception as e:
+            if DEBUG: print("parse fail", e)
+    if DEBUG:
+        print("RAW", geo, hours, "blocks", len(blocks), "rows", len(rows), "html", len(html))
     items = []
     for r in rows:
-        cats = next((x for x in r[9:] if isinstance(x, list) and x and all(isinstance(c, int) for c in x)), [])
-        rel = next((x for x in r[9:] if isinstance(x, list) and x and all(isinstance(c, str) for c in x)), [])
-        vol = r[6] if len(r) > 6 and isinstance(r[6], int) else None
+        cats = r[10] if len(r) > 10 and isinstance(r[10], list) else []
+        rel = r[9] if len(r) > 9 and isinstance(r[9], list) else []
         start = r[3][0] if isinstance(r[3], list) and r[3] and isinstance(r[3][0], int) else None
-        items.append({"term": r[0], "volume": vol, "pct": r[8] if len(r) > 8 and isinstance(r[8], (int, float)) else None,
+        items.append({"term": r[0], "volume": r[6] if isinstance(r[6], int) else None,
+                      "pct": r[8] if len(r) > 8 and isinstance(r[8], (int, float)) else None,
+                      "active": r[4] is None,
                       "started": datetime.datetime.utcfromtimestamp(start).isoformat() + "Z" if start else None,
-                      "related": rel[:5], "cats": cats})
+                      "related": [x for x in rel if isinstance(x, str)][:5], "cats": cats})
     return items
 
 
-def probe():
-    global VARIANT
-    for v in ([None, None, "GEO", 0, "en-US", 24, 1], [None, None, "GEO", 0, None, 24, 1], [None, None, "GEO", 0, "en", 24, 1],
-              [None, None, "GEO", 0, "en-US", 24, 1, None, None], [None, None, "GEO", 0, "en-US", 48, 1]):
-        VARIANT = v
-        try:
-            n = trending_now("AU")
-            print("PROBE", json.dumps(v), "->", len(n))
-            if n: return v
-        except Exception as e:
-            print("PROBE", json.dumps(v), "ERR", e)
-    return None
-
-
 def main():
-    if "--probe" in sys.argv:
-        print("BEST", probe()); return
     out = {"_about": "Google Trends fetched by GitHub Actions (.github/workflows/trends.yml) each morning ~5:40am Sydney. "
                      "health = 'Trending now' Health category (past 24h); all = every category; rss = public RSS top list.",
            "fetched": datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z", "regions": {}, "errors": []}
     for geo in REGIONS:
         reg = {}
         try:
-            allt = trending_now(geo)
+            seen, allt = set(), []
+            for h in (24, 48):
+                for t in trending_now(geo, h):
+                    if t["term"].lower() not in seen: seen.add(t["term"].lower()); allt.append(t)
             reg["all"] = [{k: v for k, v in t.items() if k != "cats"} | {"health": HEALTH in t["cats"]} for t in allt]
             reg["health"] = [{k: v for k, v in t.items() if k != "cats"} for t in allt if HEALTH in t["cats"]]
         except Exception as e:
