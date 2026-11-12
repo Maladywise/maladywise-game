@@ -2811,7 +2811,7 @@
   "date": "2026-11-13",
   "number": 27,
   "difficulty": "Hard",
-  "theme": "Symbols and signs: medicine\u2019s odd objects",
+  "theme": "Symbols, signs and stimulants",
   "questions": [
    {
     "q": "Medicine\u2019s proper symbol is the rod of Asclepius: one snake, one staff. The winged, two-snake caduceus belongs to?",
@@ -2824,14 +2824,14 @@
     "e": "The caduceus is Hermes\u2019 herald\u2019s staff, tied to trade, travel and messages rather than healing. Two snakes, zero medical credentials."
    },
    {
-    "q": "A child with five days of fever, cracked red lips, red eyes without pus and a \u2018strawberry tongue\u2019 most likely has?",
-    "a": "Kawasaki disease",
+    "q": "A 2026 American Heart Association abstract on FDA adverse-event reports linked energy drinks and stimulant supplements to how many times more cardiac arrest reports than non-stimulant products?",
+    "a": "About 11 times",
     "w": [
-     "Measles",
-     "Glandular fever",
-     "Hand, foot and mouth disease"
+     "About 2 times",
+     "About 50 times",
+     "No more often"
     ],
-    "e": "Kawasaki disease, where the real worry is coronary artery aneurysms. Scarlet fever does strawberries too, but not the pus-free red eyes."
+    "e": "Voluntary reports show an association, not proof of cause: nobody knows how many people had them without a problem. About 45% of the heart reports involved adults aged 18 to 34."
    },
    {
     "q": "The caduceus mix-up in American medicine is often traced to which body putting it on uniforms in 1902?",
@@ -2844,14 +2844,14 @@
     "e": "Captain Frederick Reynolds lobbied for it, and the Army put the caduceus on its collars in 1902. The AMA, Britain\u2019s RAMC and WHO stuck with Asclepius, so that guess was in good company, just wrong."
    },
    {
-    "q": "Koilonychia, nails scooped enough to hold a drop of water, is classically linked to?",
-    "a": "Iron deficiency",
+    "q": "Caffeine keeps you alert mainly by blocking receptors for which chemical that builds up in the brain while you\u2019re awake?",
+    "a": "Adenosine",
     "w": [
-     "Lung cancer",
-     "Infective endocarditis",
-     "Liver cirrhosis"
+     "Dopamine",
+     "GABA",
+     "Melatonin"
     ],
-    "e": "Spoon nails are the textbook nail of iron deficiency, though they can be normal in babies. Clubbing, splinter haemorrhages and white nails belong to the other options."
+    "e": "Adenosine slowly nudges you towards sleep; caffeine sits in its receptors without switching them on. Friedrich Runge first isolated fairly pure caffeine in 1819."
    },
    {
     "q": "The six arms of the blue Star of Life on ambulances stand for?",
@@ -2864,14 +2864,14 @@
     "e": "Detection, reporting, response, on-scene care, care in transit and transfer to definitive care, a meaning added by Leo Schwartz at the US road safety agency NHTSA. Not a tribute to six heroic paramedics, sadly."
    },
    {
-    "q": "An \u2018apple-core\u2019 narrowing of the colon on a barium enema should make you think of?",
-    "a": "Colorectal cancer",
+    "q": "Taurine, a regular on energy-drink labels, is named after the Latin for bull or ox because it was first isolated in 1827 from?",
+    "a": "Ox bile",
     "w": [
-     "Ulcerative colitis",
-     "Sigmoid volvulus",
-     "Diverticular disease"
+     "Bull\u2019s blood",
+     "Cow\u2019s milk",
+     "Calf liver"
     ],
-    "e": "A tumour circling the bowel leaves shouldered edges and a narrow middle. Volvulus gets the coffee bean and colitis the lead pipe; the fruit bowl was already taken."
+    "e": "Friedrich Tiedemann and Leopold Gmelin found it in ox bile. Latin taurus means bull or ox. Your own body makes taurine too."
    },
    {
     "q": "In 2005, a third protective emblem with no religious or national meaning joined the red cross and red crescent. It\u2019s the red?",
@@ -2884,14 +2884,14 @@
     "e": "The red crystal, a red square stood on its point, came in with a third Additional Protocol to the Geneva Conventions in December 2005. The lion and sun was real, but Iran\u2019s, and retired long before."
    },
    {
-    "q": "On a hand X-ray, a \u2018pencil-in-cup\u2019 joint is classically seen in?",
-    "a": "Psoriatic arthritis",
+    "q": "A 35-year US study (PNAS, 2026) found a big acorn crop predicts more Lyme-carrying nymphal ticks two years later. The key middle link?",
+    "a": "A boom in mice",
     "w": [
-     "Gout",
-     "Osteoarthritis",
-     "Haemochromatosis"
+     "More deer",
+     "Warmer winters",
+     "More songbirds"
     ],
-    "e": "In arthritis mutilans one bone end whittles to a point and the next hollows into a cup. Gout prefers punched-out erosions; this one is pure woodwork."
+    "e": "Acorns feed mice, and mice are very good at passing Borrelia burgdorferi to young ticks. Surprisingly, deer numbers showed no clear link with nymph numbers."
    },
    {
     "q": "WHO\u2019s emblem, chosen at the first World Health Assembly in 1948, sets the UN world map behind?",
@@ -2904,14 +2904,14 @@
     "e": "It\u2019s the rod of Asclepius, so WHO got the snake count right. If you went for the caduceus, so have plenty of logo designers."
    },
    {
-    "q": "A 72-year-old has sudden painless vision loss in one eye. The retina is pale with a cherry-red spot at the macula. Diagnosis?",
-    "a": "Central retinal artery occlusion",
+    "q": "DNA of which livestock virus was recently recovered from the parchment of medieval books, including the 1,000-year-old York Gospels?",
+    "a": "Sheeppox virus",
     "w": [
-     "Central retinal vein occlusion",
-     "Retinal detachment",
-     "Vitreous haemorrhage"
+     "Foot-and-mouth disease virus",
+     "Cowpox virus",
+     "Rabies virus"
     ],
-    "e": "The starved retina turns pale while the thin fovea still shows the choroid\u2019s blood supply beneath: treat it as an eye stroke. Vein occlusion looks more like a \u2018blood and thunder\u2019 storm."
+    "e": "Parchment is animal skin, so the pages kept the virus\u2019s DNA. The Science Advances study traced its lineage back about 3,500 years. Sheeppox doesn\u2019t infect humans."
    }
   ]
  },
