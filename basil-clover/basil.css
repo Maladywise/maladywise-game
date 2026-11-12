@@ -234,9 +234,6 @@
 .bk-intro h1{font-size:clamp(32px,7vw,44px)}
 .bk-lede{font-size:15px;line-height:1.4}
 .bk-sc.today #bk-thT{cursor:pointer}
-.bk-sc.today .bk-sbs{display:grid;grid-template-columns:1fr;gap:6px}
-.bk-go{font:800 17px var(--body)!important;padding:13px 16px!important;background:#FFD23F!important;color:#2E1F57;box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,.7);animation:bkgo 1.6s ease-out infinite;min-height:48px}
-.bk-go:hover{transform:translateY(-1px)}.bk-go:active{transform:translateY(3px);box-shadow:0 1px 0 #C99A10}
-@keyframes bkgo{0%{box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,.65)}70%{box-shadow:0 4px 0 #C99A10,0 0 0 14px rgba(255,210,63,0)}100%{box-shadow:0 4px 0 #C99A10,0 0 0 0 rgba(255,210,63,0)}}
-@media (prefers-reduced-motion:reduce){.bk-go{animation:none}}
-:root[data-motion="reduce"] .bk-go{animation:none}
+.bk-sc.today{align-items:start}.bk-sc.today .bk-sbs{align-items:center}
+.bk-go{background:#FFD23F!important;color:#2E1F57;box-shadow:0 2px 0 #C99A10}
+.bk-go:hover{background:#FFC61A!important}.bk-go:active{transform:translateY(1px);box-shadow:none}
