@@ -18,7 +18,7 @@ html[data-theme="dark"] #mph{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #mph .rank-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 #mph .rank-name{font:700 18px var(--title)}
 #mph .rank-score{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-#mph .bar{position:relative;height:6px;background:var(--line);border-radius:3px}
+#mph .bar{position:relative;top:auto;z-index:auto;border-bottom:0;height:6px;background:var(--line);border-radius:3px}
 #mph .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--gold);border-radius:3px;transition:width .3s}
 #mph .ticks{display:flex;justify-content:space-between;margin-top:-10px;pointer-events:none}
 #mph .ticks span{width:10px;height:10px;border-radius:50%;background:var(--line);border:2px solid var(--bg)}
