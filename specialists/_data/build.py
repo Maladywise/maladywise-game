@@ -331,6 +331,8 @@ for p in L:
     for lab in p["_labels"]: CATS.setdefault(lab, []).append(p)
 src = open("deep-dives/index.html").read()
 headtpl = src[:src.index("</head>")]
+# The deep-dives head carries its own share JSON-LD; drop it so each page gets its own from share_block.py
+headtpl = re.sub(r'\n?<script type="application/ld\+json" id="mw-share-ld">.*?</script>', "", headtpl, flags=re.S)
 def sub(h, pat, val): return re.sub(pat, lambda m: m.group(1) + val, h)
 def crumbld(url, name, hub):
     it = [("Malady Wise", "/"), ("Specialists and allied health", "/specialists/")] + ([] if hub else [(name, url)])
@@ -441,5 +443,6 @@ if os.environ.get("SP_SCORES"):
 try:
     import subprocess, sys as _s
     subprocess.run([_s.executable, "_scripts/og_cards.py", "--meta"], check=False)
+    subprocess.run([_s.executable, "_scripts/share_block.py"], check=False)  # each page's own share JSON-LD
 except Exception as _e:
     print("og_cards --meta skipped:", _e)
