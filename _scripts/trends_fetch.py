@@ -21,11 +21,16 @@ HEALTH = 7
 DEBUG = "--debug" in sys.argv
 
 
+import http.cookiejar
+_JAR = http.cookiejar.CookieJar()
+_OPEN = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_JAR))
+
+
 def get(url, data=None, headers=None):
     h = {"User-Agent": UA, "Accept-Language": "en-AU,en;q=0.9"}
     h.update(headers or {})
     req = urllib.request.Request(url, data=data, headers=h)
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with _OPEN.open(req, timeout=30) as r:
         return r.read().decode("utf-8", "replace")
 
 
@@ -52,12 +57,19 @@ def walk_trends(node, found):
             walk_trends(x, found)
 
 
+VARIANT = [None, None, "GEO", 0, "en-US", 24, 1]
+
+
 def trending_now(geo, hours=24):
-    inner = json.dumps([None, None, geo, 0, "en-US", hours, 1])
+    if not getattr(trending_now, "warm", False):
+        try: get("https://trends.google.com/trending?geo=%s" % geo); trending_now.warm = True
+        except Exception as e: print("warm-up failed", e)
+    inner = json.dumps([geo if x == "GEO" else (hours if x == 24 else x) for x in VARIANT])
     freq = json.dumps([[["i0OFE", inner, None, "generic"]]])
     body = urllib.parse.urlencode({"f.req": freq}).encode()
     raw = get("https://trends.google.com/_/TrendsUi/data/batchexecute?rpcids=i0OFE&source-path=%2Ftrending&hl=en-US&rt=c",
-              data=body, headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+              data=body, headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", "X-Same-Domain": "1",
+                                  "Origin": "https://trends.google.com", "Referer": "https://trends.google.com/trending?geo=%s" % geo})
     if DEBUG:
         print("RAW", geo, repr(raw[:1500]))
     rows = []
@@ -84,7 +96,23 @@ def trending_now(geo, hours=24):
     return items
 
 
+def probe():
+    global VARIANT
+    for v in ([None, None, "GEO", 0, "en-US", 24, 1], [None, None, "GEO", 0, None, 24, 1], [None, None, "GEO", 0, "en", 24, 1],
+              [None, None, "GEO", 0, "en-US", 24, 1, None, None], [None, None, "GEO", 0, "en-US", 48, 1]):
+        VARIANT = v
+        try:
+            n = trending_now("AU")
+            print("PROBE", json.dumps(v), "->", len(n))
+            if n: return v
+        except Exception as e:
+            print("PROBE", json.dumps(v), "ERR", e)
+    return None
+
+
 def main():
+    if "--probe" in sys.argv:
+        print("BEST", probe()); return
     out = {"_about": "Google Trends fetched by GitHub Actions (.github/workflows/trends.yml) each morning ~5:40am Sydney. "
                      "health = 'Trending now' Health category (past 24h); all = every category; rss = public RSS top list.",
            "fetched": datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z", "regions": {}, "errors": []}
