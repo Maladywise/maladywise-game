@@ -132,6 +132,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Owner's request: build fact sheets ahead for upcoming world days. Each Friday, the task that writes the week's X posts checks priority 1–3 days in the next 3 weeks with no `page`. Where a useful patient topic exists (the condition, a test, a treatment decision such as /antibiotics/ for AMR week or /seeing-a-psychologist/ for Psychology Week), write the fact sheet in the usual template (verified facts, Australian sources, sources list, Updated date, no "Reviewed"), add it to the Conditions hub and MW_FACTS in site.js, set `page`, then run the normal page pipeline. Skip country/national days, remembrance and sensitive days.
 - After adding pages, run `python3 _scripts/build_days.py` (and bump CSS_V/JS_V there when days.css/days.js change).
 
+## Google Trends data (from 13 Nov 2026)
+- Cloud tasks can't reach trends.google.com. A GitHub Action (.github/workflows/trends.yml, ~5:40am and ~6:40pm Sydney) runs `_scripts/trends_fetch.py` and saves `data/trends-google.json`: for AU, US and GB, `health` = the Trending now Health category (past 24–48h), `all` = every category, `rss` = the public top list. Read that file; never try to fetch Google Trends from a task.
+
 ## Trending themes (from Nov 2026)
 - A daily evening task (7:43pm Sydney) re-themes TOMORROW's puzzles from Google Trends. Main theme = tomorrow's world/health day if there's a clear one (priority 1–3 or who/specialty/zebra tag); otherwise the top medical trend. Then weave in as many other trending terms as fit (Medical: 3–6; Normie: 2–4 general trends).
 - All the usual rules apply: no giveaways, 180-day uniqueness, weekday difficulty, sensitive topics handled kindly (no jokes about deaths/outbreaks), Normie non-medical, verified facts. Monthly/weekly tasks should not undo a trend swap already logged in data/trends.json "used" for that date.
