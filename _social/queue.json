@@ -3,12 +3,12 @@
  "posts": [
   {
    "date": "2026-11-13",
-   "note": "Fri 13th peptides (made in Typefully by hand)",
+   "note": "Fri 13th peptides (rebuilt by script: image + link reply)",
    "thread": [
-    "Friday the 13th. Fear of it is called paraskevidekatriaphobia, which is longer than most people's bad luck.\n\nGenuinely unlucky: injecting a \"research use only\" peptide you bought online.\n\nBPC-157, TB-500, CJC-1295: what they claim, what the evidence shows, and why the TGA is worried 👇\nmaladywise.com/peptides/"
+    "Friday the 13th. Fear of it is called paraskevidekatriaphobia, which is longer than most people's bad luck.\n\nGenuinely unlucky: injecting a \"research use only\" peptide you bought online.\n\nBPC-157, TB-500, CJC-1295: the claims, the evidence, and why the TGA is worried.",
+    "Peptides, minus the hype → https://maladywise.com/peptides/"
    ],
-   "typefully_id": "11826915",
-   "queued_at": "2026-11-10T20:20+11:00"
+   "pin": true
   },
   {
    "date": "2026-11-13",
@@ -34,6 +34,15 @@
    "queued_at": "2026-11-09T09:29+11:00"
   },
   {
+   "date": "2026-11-15",
+   "pin": true,
+   "note": "Sun Normie mode + Normie Grand Rounds (was hand-made in Typefully; rebuilt with image + link reply)",
+   "thread": [
+    "For your friends who aren't medical: Normie mode. Same daily puzzles, zero medicine.\n\nToday there's Normie Grand Rounds: twenty questions on the week that was. Also a letter sudoku with a hidden word. 🙂",
+    "Play Normie mode → https://maladywise.com/normie/"
+   ]
+  },
+  {
    "date": "2026-11-16",
    "note": "Mon Mergeon launch week (new specials, goals, collection)",
    "thread": [
@@ -45,16 +54,14 @@
   {
    "date": "2026-11-16",
    "slot": "noon",
-   "card": true,
+   "card": "meddiet",
    "note": "International Day of the Mediterranean Diet (history + facts)",
    "thread": [
     "On 16 November 2010, UNESCO added the Mediterranean diet to its list of humanity's intangible cultural heritage. Not a recipe: a way of growing, cooking and sharing food. 🫒\n\nIt also has some of the best trial evidence of any diet.",
     "More health days → https://maladywise.com/days/#day-meddiet",
     "PREDIMED: 7,447 Spaniards at high heart risk. A Mediterranean diet with extra olive oil or nuts cut heart attacks, strokes and heart deaths by about 30% over 4.8 years, versus advice to eat low fat.",
     "Plot twist: the 2013 paper was retracted in 2018 after randomisation problems at some sites. Re-analysed without them, it held up: hazard ratio 0.69 with olive oil, 0.72 with nuts."
-   ],
-   "typefully_id": "11870591",
-   "queued_at": "2026-11-12T13:02+11:00"
+   ]
   },
   {
    "date": "2026-11-17",
@@ -132,16 +139,14 @@
   {
    "date": "2026-11-19",
    "slot": "noon",
-   "card": true,
+   "card": "toilet",
    "note": "World Toilet Day (history + facts)",
    "thread": [
     "Happy World Toilet Day. 🚽 Singapore's Jack Sim started it in 2001; the UN made it official in 2013.\n\nBehind the jokes: about 3.5 billion people still lack safely managed sanitation, and around 419 million have no toilet at all.",
     "More health days → https://maladywise.com/days/#day-toilet",
     "In 2007, over 11,000 BMJ readers voted for the greatest medical milestone since 1840. Sanitation won with 1,795 votes, ahead of antibiotics (1,642) and anaesthesia (1,574).",
     "In 1854, John Snow traced a London cholera outbreak to a single water pump on Broad Street, and the handle was removed. Clean water and sewers may have saved more lives than any drug."
-   ],
-   "typefully_id": "11870594",
-   "queued_at": "2026-11-12T13:03+11:00"
+   ]
   },
   {
    "date": "2026-11-20",
@@ -163,12 +168,12 @@
   },
   {
    "date": "2026-11-22",
-   "note": "Sun Basil + Clover Vet now open (made in Typefully by hand; moved from 16 Nov clash)",
+   "note": "Sun Basil + Clover Vet now open (rebuilt by script: image + link reply)",
    "thread": [
-    "Basil + Clover have a vet appointment. They are not going quietly.\n\nStage 2, now open to everyone: wriggle out of towels, jump the thermometer, beat Dr Pokesworth. Nurse Burrito brings more towels for the finale. 🐾\n\nhttps://maladywise.com/basil-clover/"
+    "Basil + Clover have a vet appointment. They are not going quietly.\n\nStage 2, now open to everyone: wriggle out of towels, jump the thermometer, beat Dr Pokesworth. Nurse Burrito brings more towels for the finale. 🐾",
+    "Play it free → https://maladywise.com/basil-clover/"
    ],
-   "typefully_id": "11694280",
-   "queued_at": "2026-11-10T20:38+11:00"
+   "pin": true
   },
   {
    "date": "2026-11-22",

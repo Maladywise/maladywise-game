@@ -249,8 +249,12 @@
     document.getElementById("dl-count").textContent = n === IDX.length ? n + " days, weeks and months" : "Showing " + n + " of " + IDX.length;
   }
   function initList() {
-    function openHash() { var t = location.hash && document.getElementById(location.hash.slice(1)); var sm = t && t.closest && t.closest(".dl-mo"); if (sm && !OPEN[sm.id]) { OPEN[sm.id] = true; filter(); t.scrollIntoView(); } }
+    // Links like /days/#day-amr (from X posts and the home page): open that month, then scroll to the day.
+    // Always scroll (the browser's own jump happens before the list is built), and again once fonts and
+    // the page above have settled, so a fresh visit lands on the right day.
+    function openHash() { var t = location.hash && document.getElementById(location.hash.slice(1)); var sm = t && t.closest && t.closest(".dl-mo"); if (!sm) return; if (!OPEN[sm.id]) { OPEN[sm.id] = true; filter(); } t.scrollIntoView({ block: "start" }); }
     window.addEventListener("hashchange", openHash); setTimeout(openHash, 0);
+    if (location.hash) { setTimeout(openHash, 400); if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(openHash, 50); }); window.addEventListener("load", function () { setTimeout(openHash, 50); }); }
     listEl.addEventListener("click", function (e) { var b = e.target.closest(".dl-tog"); if (!b) return; var s = b.closest(".dl-mo"); OPEN[s.id] = !OPEN[s.id]; filter(); });
     document.querySelector(".dl-tools").hidden = false;
     q.addEventListener("input", filter);

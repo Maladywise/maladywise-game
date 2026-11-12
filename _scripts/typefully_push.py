@@ -9,7 +9,8 @@ Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"n
   and NO link; the link goes in post 2 (the first reply), e.g. "Play today's puzzle → https://...".
   Queue text is converted at send time: links are moved out of post 1 (into post 2, or a new post 2 if
   it won't fit), and a single post gets a reply with its link (or the home page if it had none).
-- Image on post 1: "card": true -> that date's World Day card (_scripts/day_card.py); otherwise the
+- Image on post 1: "card": true -> that date's World Day card (_scripts/day_card.py); "card": "<day id>" -> the
+  card for that specific day from data/health-days.json (when the post isn't about the home page's lead day); otherwise the
   linked page's og:image read from its HTML at push time (games: assets/og/<game>.png; deep dives:
   their own page card); a game whose og:image is the generic share card gets a generated card with its
   name and teaser; fallback assets/og/<first path segment>.png, then the site share card.
@@ -477,14 +478,14 @@ def main():
     browser = pw = None
     held = []   # Shorts that failed to render/upload; retried next run
 
-    def card_for(day):
+    def card_for(day, day_id=None):
         nonlocal browser, pw
         if browser is None:
             from playwright.sync_api import sync_playwright
             pw = sync_playwright().start()
             browser = pw.chromium.launch()
-        path = os.path.join(out_dir, "day-card-%s.png" % day)
-        return path if day_card.render(day, path, browser) else None
+        path = os.path.join(out_dir, "day-card-%s%s.png" % (day, "-" + day_id if day_id else ""))
+        return path if day_card.render(day, path, browser, day_id) else None
 
     def short_for(p):
         """Render this entry's weekly Short to an MP4 in out_dir. Returns (path, alt text)."""
@@ -503,7 +504,7 @@ def main():
         """Local image path for post 1: day card, page og image, generated game card, or the share card."""
         if p.get("card"):
             try:
-                png = card_for(p["date"])
+                png = card_for(p["date"], p["card"] if isinstance(p["card"], str) else None)
                 if png:
                     return png
                 print("No strong day on %s, so no day card." % p["date"])

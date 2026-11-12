@@ -226,9 +226,10 @@ def font_css():
     return _FONTS
 
 
-def render(day, out_path, browser=None):
-    """Render the card for ISO date `day` to out_path. Returns the chosen day dict, or None (no card)."""
-    x = main_day(day)
+def render(day, out_path, browser=None, day_id=None):
+    """Render the card for ISO date `day` to out_path. Returns the chosen day dict, or None (no card).
+    day_id picks a specific event on that date (e.g. "meddiet") instead of the home page's lead."""
+    x = next((e for e in on_date(day) if e.get("id") == day_id), None) if day_id else main_day(day)
     if not x:
         return None
     doc = card_html(x, day)
