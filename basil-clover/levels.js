@@ -43,8 +43,8 @@
       deco: [["🌴", 40, 286, 112], ["⛵", 120, 240, 26], ["☀️", 120, 50, 30]],
       bench: ["#F06C9B", "#F7A8C4", "#C94E7A", "#F6E7C1"] },
     5: { key: "ward", name: "The Ward", day: "Thursday", theme: { hud: "#2B4A80", stage: "#EEF4F8" },
-      skin: { coat: "#2B4A80", collar: "#FFFFFF", lapel: "#22406E", badge: "#C2553A", name: "MATRON MAUDE", hair: "#B8B8C0", hat: "nursecap", sleeve: "#2B4A80", glove: "#FFFFFF", prop: "#2E9C8F", propLabel: "37.0°", mug: "MATRON", towel: "#FFFFFF", towelStripe: "#8BC4E8", nurse: "#2E9C8F", nurseName: "REGISTRAR" },
-      N: { boss: "Matron Maude", nurse: "the Registrar", towel: "blanket", prop: "thermometer", bird: "pigeon", sound: "COO", place: "ward", bench: "hospital bed", champs: "Discharged", legend: "Ward Legend", ang: "FUMING" },
+      skin: { coat: "#2B4A80", collar: "#FFFFFF", lapel: "#22406E", badge: "#C2553A", name: "MATRON MAUDE", hair: "#B8B8C0", hat: "nursecap", sleeve: "#2B4A80", glove: "#FFFFFF", prop: "#3A4256", propLabel: "", mug: "MATRON", towel: "#FFFFFF", towelStripe: "#8BC4E8", nurse: "#2E9C8F", nurseName: "REGISTRAR" },
+      N: { boss: "Matron Maude", nurse: "the Registrar", towel: "blanket", prop: "defib paddle", bird: "pigeon", sound: "COO", place: "ward", bench: "hospital bed", champs: "Discharged", legend: "Ward Legend", ang: "FUMING" },
       items: { steth2: "🩺", pills2: "💊", plaster: "🩹", tube: "🧪", chart: "📋", thermo2: "🌡️", roll: "🧻", crutch: "🩼", socks: "🧦", bell: "🛎️" },
       food: { jelly: "🍮", toast: "🍞", apple2: "🍎", juice: "🧃" }, bad: { choc: "🍫", onion: "🧅", stew: "🥫", tea: "🍵" }, spiky: { cactus: "🌵", clip: "📎", scissors: "✂️", pin: "📌" },
       smash: { vase: "💐", tv: "📺", tank: "🎁" },
@@ -53,9 +53,75 @@
       camp: ["ADMISSION", "TEA TROLLEY", "VISITING HOURS", "NIGHT SHIFT", "MATRON MAUDE", "CALL BELL", "HOSPITAL FOOD", "WARD ROUND", "HANDOVER", "DISCHARGE DAY"],
       ev: { cucumber: ["OBS TIME! STAY STILL", "Don’t tap anything for 2 s or the obs go haywire"], fridge: ["TEA TROLLEY! EAT FAST", "Eat fast, then tap the Registrar’s hand before the blanket comes out"], cone: ["BEDPAN ON HEAD!", "@ can only see the middle. Tap the bedpan 3× to shake it off"], xray: ["X-RAY!", "The ward flips. Look closely: bad food shows up"], bath: ["SPONGE BATH!", "Tap @ (or ↑ / W) to spin round and dodge the sponge"], box: ["LINEN CUPBOARD! BOTH CATS WANT IN", "Tap fast to claim the hiding spot: #"], clipper: ["FLOOR POLISHER!", "Tap @ (or ↑ / W) just as the polisher arrives to jump it"], shaker: "Just a little scratch… 3…" },
       bath: "🧽", cone: "🥣", visitor: "🕊️",
-      wall: function (c, W, B) { c.fillStyle = "#DCEAF3"; c.fillRect(0, 0, W, B); c.fillStyle = "#C3D9E7"; c.fillRect(0, B - 80, W, 80); c.fillStyle = "#FFFFFF"; c.fillRect(0, B - 84, W, 4); c.fillStyle = "#2B2340"; c.fillRect(110, 40, 70, 46); c.strokeStyle = "#5BD08A"; c.lineWidth = 2; c.beginPath(); c.moveTo(114, 64); [[128, 64], [134, 50], [140, 76], [146, 64], [176, 64]].forEach(function (p) { c.lineTo(p[0], p[1]); }); c.stroke(); },
-      view: function (c) { c.fillStyle = "#9AA6B2"; [[230, 60, 20, 50], [256, 46, 22, 64], [286, 70, 18, 40], [310, 54, 24, 56]].forEach(function (b) { c.fillRect(b[0], b[1], b[2], b[3]); }); },
-      deco: [["💧", 40, 70, 26], ["🪴", 52, 170, 34]],
+      wall: function (c, W, B) {
+        // A hospital bay (redrawn Nov 2026): curtain track, bedhead panel, monitor on a swing arm, IV stand, clock, hand gel.
+        function R(x, y, w, h, r, f) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); c.fillStyle = f; c.fill(); }
+        c.fillStyle = "#E4EEF1"; c.fillRect(0, 0, W, B);
+        c.fillStyle = "#C9DCE2"; c.fillRect(0, B - 80, W, 80);                       // wipe-clean lower wall
+        c.fillStyle = "#A9BFC8"; c.fillRect(0, B - 86, W, 6); c.fillStyle = "#D7E3E8"; c.fillRect(0, B - 86, W, 2); // bed-bumper rail
+        // ceiling curtain track + bunched privacy curtain (left)
+        c.fillStyle = "#B8C4CC"; c.fillRect(0, 4, W, 3);
+        for (var i = 0; i < 6; i++) { c.fillStyle = i % 2 ? "#8FC1D6" : "#A9D2E3"; c.beginPath(); c.moveTo(i * 8, 8); c.lineTo(i * 8 + 8, 8); c.lineTo(i * 8 + 10, B - 26); c.lineTo(i * 8 + 1, B - 26); c.closePath(); c.fill(); }
+        c.fillStyle = "#7FB3C9"; for (var j = 0; j < 6; j++) c.fillRect(j * 8 + 3, 6, 2, 4);
+        c.fillStyle = "rgba(255,255,255,.35)"; for (var k = 0; k < 5; k++) c.fillRect(k * 10 + 4, 60 + k * 34, 30, 2);
+        // bedhead service panel
+        R(122, 192, 186, 24, 5, "#F5F8FA"); c.fillStyle = "#D2DEE4"; c.fillRect(122, 212, 186, 4);
+        R(132, 172, 14, 34, 4, "#DDE5EA"); R(135, 176, 8, 22, 3, "#EAF6FB"); c.fillStyle = "#2EA44F"; c.beginPath(); c.arc(139, 190, 3, 0, 7); c.fill(); c.beginPath(); c.arc(139, 172, 4, 0, 7); c.fill(); // O2 flowmeter
+        c.fillStyle = "#FFFFFF"; c.beginPath(); c.arc(160, 204, 6, 0, 7); c.fill(); c.strokeStyle = "#3A7BD5"; c.lineWidth = 2; c.stroke(); c.fillStyle = "#3A7BD5"; c.fillRect(158, 202, 4, 4); // suction
+        [244, 260].forEach(function (x) { R(x, 198, 12, 12, 2, "#FFFFFF"); c.fillStyle = "#9AA6B2"; c.fillRect(x + 3, 202, 2, 4); c.fillRect(x + 7, 202, 2, 4); });   // power points
+        R(278, 196, 18, 16, 3, "#FFFFFF"); c.fillStyle = "#E03A3A"; c.beginPath(); c.arc(287, 204, 5, 0, 7); c.fill();  // nurse call
+        // crash cart with a defibrillator on top (left of the bed)
+        R(50, 162, 66, 8, 3, "#B9C3CB"); R(54, 168, 58, B - 192, 4, "#D93636");
+        [188, 214, 240, 266].forEach(function (y) { c.fillStyle = "#B02A2A"; c.fillRect(56, y, 54, 2); c.fillStyle = "#E8ECEF"; c.fillRect(76, y + 8, 14, 3); });
+        R(58, 126, 50, 36, 5, "#3A4256"); R(62, 130, 30, 22, 2, "#1C2233"); R(56, 134, 6, 22, 2, "#F2C230"); R(104, 134, 6, 22, 2, "#F2C230");
+        c.strokeStyle = "#5BD08A"; c.lineWidth = 1.4; c.beginPath(); c.moveTo(63, 143); [[70, 143], [72, 137], [75, 149], [77, 143], [91, 143]].forEach(function (p) { c.lineTo(p[0], p[1]); }); c.stroke();
+        c.fillStyle = "#F28C28"; c.beginPath(); c.arc(100, 138, 3.5, 0, 7); c.fill(); c.fillStyle = "#E03A3A"; c.beginPath(); c.arc(100, 148, 3, 0, 7); c.fill();
+        c.font = "700 6px Poppins, sans-serif"; c.textAlign = "left"; c.fillStyle = "#F2C230"; c.fillText("DEFIB", 64, 159);
+        // wall clock
+        c.fillStyle = "#FFFFFF"; c.beginPath(); c.arc(198, 92, 13, 0, 7); c.fill(); c.strokeStyle = "#55607A"; c.lineWidth = 2.5; c.stroke();
+        c.strokeStyle = "#2B2340"; c.lineWidth = 1.8; c.beginPath(); c.moveTo(198, 92); c.lineTo(198, 84); c.moveTo(198, 92); c.lineTo(204, 95); c.stroke();
+        // hand gel dispenser
+        R(140, 104, 16, 24, 3, "#FFFFFF"); c.fillStyle = "#3A7BD5"; c.fillRect(142, 110, 12, 7); c.fillStyle = "#9AA6B2"; c.fillRect(145, 128, 6, 3);
+        // IV stand, bag and line
+        c.fillStyle = "#AEB8C2"; c.fillRect(313, 116, 3, B - 140); c.fillRect(304, 116, 21, 3);
+        R(305, 121, 18, 28, 5, "rgba(214,236,248,.95)"); c.fillStyle = "rgba(150,205,235,.8)"; c.fillRect(307, 131, 14, 15); c.fillStyle = "#FFFFFF"; c.fillRect(308, 125, 12, 5);
+        c.fillStyle = "#DDEAF2"; c.fillRect(311, 150, 6, 10);
+        c.strokeStyle = "rgba(120,150,170,.8)"; c.lineWidth = 1.5; c.beginPath(); c.moveTo(314, 160); c.quadraticCurveTo(306, 200, 309, B - 26); c.stroke();
+      },
+      view: function (c) {
+        c.fillStyle = "#9AA6B2"; [[230, 60, 20, 50], [256, 46, 22, 64], [286, 70, 18, 40], [310, 54, 24, 56]].forEach(function (b) { c.fillRect(b[0], b[1], b[2], b[3]); });
+        c.fillStyle = "rgba(255,255,255,.55)"; [[234, 66], [240, 76], [260, 54], [268, 66], [314, 62], [322, 74]].forEach(function (w) { c.fillRect(w[0], w[1], 4, 5); });
+        c.fillStyle = "#F1E9D6"; c.fillRect(222, 24, 118, 14); c.fillStyle = "#DCCFB2"; c.fillRect(222, 36, 118, 3); c.strokeStyle = "#B9A988"; c.lineWidth = 1; c.beginPath(); c.moveTo(330, 39); c.lineTo(330, 58); c.stroke();
+      },
+      drawVisitor: function (c, x, y, s) { // a proper street pigeon, facing left
+        var k = s / 46; c.save(); c.translate(x, y); c.scale(k, k);
+        c.fillStyle = "#5E6670"; c.beginPath(); c.moveTo(8, -14); c.lineTo(26, -10); c.lineTo(24, -4); c.lineTo(6, -8); c.closePath(); c.fill();
+        c.fillStyle = "#9AA3AE"; c.beginPath(); c.ellipse(0, -14, 16, 11, -0.12, 0, 7); c.fill();
+        c.fillStyle = "#B9C0C8"; c.beginPath(); c.ellipse(5, -15, 10, 7, -0.2, 0, 7); c.fill();
+        c.strokeStyle = "#3E434B"; c.lineWidth = 1.8; c.beginPath(); c.moveTo(2, -13); c.lineTo(11, -15); c.moveTo(3, -10); c.lineTo(12, -12); c.stroke();
+        var g = c.createLinearGradient(-14, -32, -4, -18); g.addColorStop(0, "#3E8E6E"); g.addColorStop(1, "#7A4E8E");
+        c.fillStyle = g; c.beginPath(); c.ellipse(-9, -23, 7, 8, 0.2, 0, 7); c.fill();
+        c.fillStyle = "#8C95A0"; c.beginPath(); c.arc(-12, -31, 6.5, 0, 7); c.fill();
+        c.fillStyle = "#E8762B"; c.beginPath(); c.arc(-14, -32, 1.9, 0, 7); c.fill(); c.fillStyle = "#111"; c.beginPath(); c.arc(-14.3, -32, 0.9, 0, 7); c.fill();
+        c.fillStyle = "#F2F2F2"; c.beginPath(); c.ellipse(-18.2, -31.6, 1.6, 1.1, 0, 0, 7); c.fill();
+        c.fillStyle = "#3A3A3A"; c.beginPath(); c.moveTo(-18, -31); c.lineTo(-23.5, -29.6); c.lineTo(-18, -28.6); c.closePath(); c.fill();
+        c.strokeStyle = "#D9737A"; c.lineWidth = 2; c.beginPath(); c.moveTo(-3, -4); c.lineTo(-4, 0); c.moveTo(3, -4); c.lineTo(4, 0); c.stroke();
+        c.restore();
+      },
+      deco: [],
+      benchFn: function (c, W, B) { // hospital bed: sheet edge + chrome side rail
+        c.fillStyle = "#CFE6F3"; c.fillRect(0, B - 24, W, 6); c.fillStyle = "#B7D6E8"; c.fillRect(0, B - 18, W, 1.5);
+        c.fillStyle = "#C3CCD3"; c.fillRect(64, B - 14, 232, 3); c.fillRect(64, B - 7, 232, 3); [64, 140, 220, 293].forEach(function (x) { c.fillRect(x, B - 16, 3, 14); });
+        c.fillStyle = "#E8EEF2"; c.fillRect(64, B - 14, 232, 1); c.fillRect(64, B - 7, 232, 1);
+      },
+      propFn: function (c, side, len, glow) { // defibrillator paddle instead of a thermometer
+        c.strokeStyle = "#2B2340"; c.lineWidth = 2.2; c.beginPath(); c.moveTo(side * 8, 4); c.quadraticCurveTo(-side * 10, 30, -side * 26, 22); c.stroke();
+        c.beginPath(); c.moveTo(side * 4, -5); c.lineTo(side * (len - 16), -5); c.lineTo(side * (len - 16), 5); c.lineTo(side * 4, 5); c.closePath(); c.fillStyle = "#3A4256"; c.fill();
+        c.fillStyle = "#F28C28"; c.beginPath(); c.arc(side * 18, -5, 3.2, 0, 7); c.fill();
+        var px = side * (len - 8); c.fillStyle = "#F2C230"; c.beginPath(); c.ellipse(px, 0, 10, 16, 0, 0, 7); c.fill();
+        c.fillStyle = "#D9DEE3"; c.beginPath(); c.ellipse(px + side * 2, 0, 7, 13, 0, 0, 7); c.fill();
+        if (glow > 0.3) { c.strokeStyle = "#FFE14D"; c.lineWidth = 2; c.beginPath(); c.moveTo(px + side * 10, -10); c.lineTo(px + side * 16, -4); c.lineTo(px + side * 12, -2); c.lineTo(px + side * 19, 6); c.stroke(); }
+      },
       bench: ["#FFFFFF", "#EEF3F6", "#9AA6B2", "#E3ECF2"] },
     6: { key: "hell", name: "Hell", day: "Friday", theme: { hud: "#5A0E1E", stage: "#3A1418" },
       skin: { coat: "#B3122E", collar: "#2B2340", lapel: "#8A0E22", badge: "#2B2340", name: "MS BRIMSTONE", noSteth: true, hair: "#2B2340", hat: "horns", sleeve: "#B3122E", glove: "#2B2340", prop: "#2B2340", propLabel: "", mug: "DEVIL", towel: "#E03A3A", towelStripe: "#8A0E22", nurse: "#5A1F2B", nurseName: "IMP" },
@@ -143,7 +209,7 @@
     function t() { return S ? S.t : 0; }
     function txt(s, x, y, font, col, align, stroke, sw) { ctx.font = font; ctx.textAlign = align || "center"; ctx.lineJoin = "round"; if (stroke) { ctx.lineWidth = sw || 4; ctx.strokeStyle = stroke; ctx.strokeText(s, x, y); } ctx.fillStyle = col; ctx.fillText(s, x, y); }
     function emo(ch, size, x, y) { var im = artImg(ch), yy = y == null ? -size * 0.12 : y; if (im) { var d = size * 1.22; ctx.drawImage(im, (x || 0) - d / 2, yy - size * 0.98, d, d); return; } ctx.save(); ctx.font = size + "px " + EF; ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = "#000"; ctx.fillText(ch, x || 0, y == null ? -size * 0.12 : y); ctx.restore(); }
-    var skin = Object.assign({}, C.skin); skin.hat = HAT[C.skin.hat];
+    var skin = Object.assign({}, C.skin); skin.hat = HAT[C.skin.hat]; if (C.propFn) skin.propFn = C.propFn;
     var V = window.MW_VET(Object.assign({}, A, { skin: skin })); if (!V) return null;
     var N = C.N;
 
@@ -195,7 +261,7 @@
       ctx.save(); rr(222, 24, 118, 86, 8); ctx.clip();
       if (nk > 0.5) circ(312, 44, 9, "#F4F1DE"); else circ(310, 46 + nk * 120, 10, nk > 0.15 ? "#F6A04D" : "#FFE08A");
       C.view(ctx);
-      if (S && S.dog) { var dy = 86 + (1 - S.dog.k) * 80 - Math.abs(Math.sin(t() * 12)) * 4 + (S.dog.gone ? (0.45 - Math.min(0.45, S.dog.t)) * 160 : 0); emo(C.visitor, 46, 281, dy + 14); }
+      if (S && S.dog) { var dy = 86 + (1 - S.dog.k) * 80 - Math.abs(Math.sin(t() * 12)) * 4 + (S.dog.gone ? (0.45 - Math.min(0.45, S.dog.t)) * 160 : 0); if (C.drawVisitor) C.drawVisitor(ctx, 281, dy + 14, 46); else emo(C.visitor, 46, 281, dy + 14); }
       if (S && S.tom) V.ginger(281 + (S.tom.hitT > 0 ? Math.sin(t() * 80) * 4 : 0), 98 + (1 - S.tom.k) * 80, 0.4, true);
       ctx.restore();
       rr(222, 24, 118, 86, 8); ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 6; ctx.stroke();
@@ -208,6 +274,7 @@
       if (S && S.sinkT > 0) { ctx.fillStyle = "rgba(120,190,230,.35)"; ctx.fillRect(0, BENCH - 24, W, 8); }
       ctx.fillStyle = b[2]; ctx.fillRect(0, BENCH + 2, W, 6); ctx.fillStyle = b[3]; ctx.fillRect(0, BENCH + 8, W, H - BENCH);
       ctx.strokeStyle = "rgba(0,0,0,.06)"; ctx.lineWidth = 2; for (var i = 1; i < 3; i++) { ctx.beginPath(); ctx.moveTo(i * 120, BENCH + 14); ctx.lineTo(i * 120, H); ctx.stroke(); }
+      if (C.benchFn) C.benchFn(ctx, W, BENCH);
     }
     function heatPad(sleeping) { if (sleeping) V.heatPad(true); }
 

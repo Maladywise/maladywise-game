@@ -360,6 +360,7 @@
     function thermoProp(hx, hy, side, glow, len) {
       len = len || 72; ctx.save(); ctx.translate(hx, hy - 3);
       if (glow) { ctx.save(); ctx.globalAlpha = glow; rr(side < 0 ? -len - 10 : -6, -14, len + 16, 28, 14); ctx.fillStyle = "#FF3B30"; ctx.fill(); ctx.restore(); }
+      if (SK.propFn) { SK.propFn(ctx, side, len, glow || 0); ctx.restore(); return; }
       rr(side < 0 ? -len : 4, -6, len - 4, 12, 6); ctx.fillStyle = SK.prop || "#2E9C8F"; ctx.fill(); if (SK.propLabel !== "") { rr(side < 0 ? -36 : 10, -4, 24, 8, 2); ctx.fillStyle = "#D7F5E9"; ctx.fill(); txt(SK.propLabel || "38.6°", side < 0 ? -24 : 22, 2.6, "800 6.5px " + P, "#2B5E80"); }
       circ(side * len, 0, 5, "#E3E9EC"); circ(side * len, 0, 2.6, "#AEB8C0"); ctx.restore();
     }
