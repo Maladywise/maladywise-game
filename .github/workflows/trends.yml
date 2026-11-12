@@ -1,0 +1,32 @@
+name: Google Trends fetch
+# Saves Google "Trending now" (incl. Health category) for AU, US, GB to data/trends-google.json
+# before the 6:13am Sydney briefing. Cloud Claude sessions can't reach Google Trends; GitHub can.
+on:
+  schedule:
+    - cron: "40 18 * * *"   # 5:40am AEDT (4:40am AEST)
+    - cron: "40 7 * * *"    # 6:40pm AEDT, before the evening puzzle refresh
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: "Print raw responses"
+        required: false
+        default: "no"
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 _scripts/trends_fetch.py ${{ github.event.inputs.debug == 'yes' && '--debug' || '' }}
+      - name: Commit
+        run: |
+          git config user.name "Maladywise"
+          git config user.email "maladywise@gmail.com"
+          git add data/trends-google.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Trends: Google Trending now snapshot"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
