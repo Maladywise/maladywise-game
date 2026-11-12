@@ -1,0 +1,264 @@
+{
+ "_about": "Google Trends fetched by GitHub Actions (.github/workflows/trends.yml) each morning ~5:40am Sydney. health = 'Trending now' Health category (past 24h); all = every category; rss = public RSS top list.",
+ "fetched": "2026-11-12T21:30:51Z",
+ "regions": {
+  "AU": {
+   "all": [],
+   "health": [],
+   "rss": [
+    {
+     "term": "coco gauff",
+     "volume": "100+",
+     "news": [
+      "United Cup 2027 field announced | United Cup | Tennis",
+      "Gauff, Shelton, Coboli, Bencic highlight 2027 United Cup Perth field"
+     ]
+    },
+    {
+     "term": "wordle answer today",
+     "volume": "500+",
+     "news": [
+      "Today’s NYT Wordle Hints, Answer and Help for Thursday, Nov. 12, #1972",
+      "Today’s Wordle #1972 Hints, Clues And Answer For Thursday November 12"
+     ]
+    },
+    {
+     "term": "microsoft share price",
+     "volume": "200+",
+     "news": [
+      "Anthropic's new Claude product drop just sent a message to these 3 tech stocks",
+      "Anthropic Unveils Office Tools Ahead of IPO, Taking on Microsoft"
+     ]
+    },
+    {
+     "term": "mail",
+     "volume": "100+",
+     "news": [
+      "New allegations against convicted rapist Ralph Carr revealed: ‘I was blacking out while saying no’",
+      "Morning Mail: New Ralph Carr allegations; Nvidia CEO quits; and Tasmania’s message for tourists"
+     ]
+    },
+    {
+     "term": "pokemon 30th anniversary",
+     "volume": "100+",
+     "news": [
+      "New Era celebrates three decades of Pokémon with new 30th anniversary cap line [Photos]",
+      "Pokémon Officially Returns To Kanto November 12"
+     ]
+    },
+    {
+     "term": "humble bundle",
+     "volume": "100+",
+     "news": [
+      "Humble Bundle's new redesign inexplicably removes 2-factor authentication, dramatically weakening account security",
+      "Humble Bundle Undergoes A Vibecoded-Looking Redesign, Forgets To Implement Full Account Security"
+     ]
+    },
+    {
+     "term": "u2",
+     "volume": "200+",
+     "news": [
+      "U2 & Dolly Parton, \"Torn,\" The Final Song Dolly Recorded World Premieres Thursday, Nov. 12",
+      "How U2 recruited Dolly Parton for posthumous duet Torn"
+     ]
+    },
+    {
+     "term": "hello",
+     "volume": "200+",
+     "news": [
+      "Years of onscreen jokes suggest Walliams’ reputation was ‘in plain sight’ within industry, insider says",
+      "No plans to remove Walliams books from West libraries"
+     ]
+    },
+    {
+     "term": "bhp cost cutting iron ore",
+     "volume": "100+",
+     "news": [
+      "BHP Plans Overhaul of Australia Iron Ore Business to Cut Costs",
+      "BHP Eyes Restructuring of Australian Iron Ore Business"
+     ]
+    },
+    {
+     "term": "날씨",
+     "volume": "200+",
+     "news": [
+      "주말 전국 비…다음 주 영하권 6년 만에 ’수능 한파’",
+      "낮 최고 20도 '포근'‥새벽 안개 주의"
+     ]
+    }
+   ]
+  },
+  "US": {
+   "all": [],
+   "health": [],
+   "rss": [
+    {
+     "term": "csco stock",
+     "volume": "1000+",
+     "news": [
+      "Cisco tests the data-centre boom",
+      "Cisco stock jumps 5% on earnings and revenue beat"
+     ]
+    },
+    {
+     "term": "cbrs stock",
+     "volume": "1000+",
+     "news": [
+      "CBRS Stock Alert: What to Do as Wedbush Slashes Its Cerebras Stock Price Target by $100",
+      "Cerebras Must Prove It Can Expand Beyond OpenAI in Its Earnings Report"
+     ]
+    },
+    {
+     "term": "amat stock price",
+     "volume": "500+",
+     "news": [
+      "Applied Materials forecasts quarterly revenue above estimates on strong AI chip demand",
+      "Applied Materials Stock At $395: Can It Do What CoreWeave Did?"
+     ]
+    },
+    {
+     "term": "saúl lisazo",
+     "volume": "200+",
+     "news": [
+      "¿Recuerdas a Saúl Lisazo? Así luce actualmente el galán de telenovelas de los años 90 como \"Acapulco, cuerpo y alma\""
+     ]
+    },
+    {
+     "term": "mark zuckerberg",
+     "volume": "200+",
+     "news": [
+      "Mark Zuckerberg Net Worth Tops $225 Billion: Meta Founder’s Shares Won’t Go to Family",
+      "Mark Zuckerberg’s fortune tops $200 billion. His 3 daughters won’t inherit most of it"
+     ]
+    },
+    {
+     "term": "montenegro vs latvia",
+     "volume": "1000+",
+     "news": [
+      "[Live/fREE]** Montenegro Football Team V Latvia Football Team 𝐋𝐈ＶＥ Ｓｔｒｅａｍｓ",
+      "For our little ones: bring a stuffed toy and cheer for the \"falcons\""
+     ]
+    },
+    {
+     "term": "hegseth awards medal to soldier who reprimanded him and aides at arlington cemetery",
+     "volume": "20000+",
+     "news": [
+      "Hegseth awards medal to soldier who reprimanded him and aides at Arlington Cemetery",
+      "Soldier Shouts Toward Hegseth to Show ‘Respect’ at Tomb of the Unknown Soldier"
+     ]
+    },
+    {
+     "term": "aaron taylor johnson",
+     "volume": "1000+",
+     "news": [
+      "'Werwulf' Gets Hard 'R' Rating for Disturbing Violence, Gore, Sexual Assault & Graphic Nudity",
+      "“Werwulf,” “Cliff Booth” Land ‘R’ Ratings"
+     ]
+    },
+    {
+     "term": "marta kostyuk",
+     "volume": "1000+",
+     "news": [
+      "Hot Shot: Tabilo stands tall after clever net play in Stockholm 2026",
+      "November 12, 2026: Marta Kostyuk vs Coco Gauff: Set 2 Winner Tennis Prediction Market"
+     ]
+    },
+    {
+     "term": "mbappe",
+     "volume": "500+",
+     "news": [
+      "Kylian Mbappé (hamstring) to miss France clash with Italy",
+      "Mbappe out for France's Nations League fixture"
+     ]
+    }
+   ]
+  },
+  "GB": {
+   "all": [],
+   "health": [],
+   "rss": [
+    {
+     "term": "ben white",
+     "volume": "2000+",
+     "news": [
+      "Ben White: England defender says people don't know 'full story' behind his self-inflicted exile from national team",
+      "Ben White says he has no complaints at boos from England fans over self-imposed exile"
+     ]
+    },
+    {
+     "term": "james garner",
+     "volume": "500+",
+     "news": [
+      "Everything to Know About The Rockford Files",
+      "‘Rockford Files’ Reboot Sets NBC Release Date, Launches Jim Rockford Hotline"
+     ]
+    },
+    {
+     "term": "amy childs",
+     "volume": "500+",
+     "news": [
+      "Towie star Amy Childs spills her wedding day secrets",
+      "Amy Childs’ wedding wasn’t the end - the vow‑renewal talk is already starting"
+     ]
+    },
+    {
+     "term": "viktor gyökeres",
+     "volume": "200+",
+     "news": [
+      "Arsenal Invincible who 'regretted' leaving issues Viktor Gyokeres transfer message",
+      "Gyökeres makes Arsenal future clear amid transfer speculation"
+     ]
+    },
+    {
+     "term": "alice bell",
+     "volume": "5000+",
+     "news": [
+      "Hunting Alice Bell review – this conspiracy theory thriller starring Simon Pegg is a hot mess",
+      "Hunting Alice Bell review — a nightmarish drama about mob mentality"
+     ]
+    },
+    {
+     "term": "piddington",
+     "volume": "200+",
+     "news": [
+      "Planning permission granted for MoD Bicester asylum centre plans",
+      "Rayner approves Piddington migrant camp plans"
+     ]
+    },
+    {
+     "term": "italia francia",
+     "volume": "500+",
+     "news": [
+      "¿A qué hora es el partido Italia vs Francia y cómo verlo en TV y streaming online?",
+      "😱 ¡Error garrafal de Donnarumma! Le regala el gol a una estrella del Bayern"
+     ]
+    },
+    {
+     "term": "coco gauff",
+     "volume": "500+",
+     "news": [
+      "Rivalry Rewind: The best of Coco Gauff vs. Marta Kostyuk",
+      "Brad Gilbert picks the three best ‘movers’ on the WTA Tour and predicts Coco Gauff vs Marta Kostyuk"
+     ]
+    },
+    {
+     "term": "clima para amanhã",
+     "volume": "200+",
+     "news": [
+      "Chuvas intensas provocam deslizamento de terra e queda de árvores em Porto Seguro",
+      "Acumulado de chuva"
+     ]
+    },
+    {
+     "term": "download",
+     "volume": "2000+",
+     "news": [
+      "Pre-Load Grand Theft Auto VI Now",
+      "Grand Theft Auto VI Comes to XBOX One and XBOX Series X|S Through XBOX Cloud Gaming on November 19"
+     ]
+    }
+   ]
+  }
+ },
+ "errors": []
+}
