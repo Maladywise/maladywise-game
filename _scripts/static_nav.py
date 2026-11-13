@@ -63,12 +63,12 @@ LABELS = {
     "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",
     "/specialists/": "Specialists", "/compare/": "Comparisons", "/tools/": "Tools", "/deep-dives/": "Deep dives",
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
-    "/glp-1/": "GLP-1 medicines guide", "/doctors/": "For doctors",
+    "/glp-1/": "GLP-1 medicines guide", "/doctors/": "For doctors", "/algorithms/": "Treatment algorithms",
 }
 # Pages for doctors, curious minds and practice quizzes (their section is "extra"; og_cards.py uses sections).
 EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
          "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/", "/arcade/"]
-HUBS = {"/doctors/", "/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
+HUBS = {"/algorithms/", "/doctors/", "/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
 
@@ -192,7 +192,7 @@ def section_of(u, facts, games, idx):
         if facts.get(u, {}).get("k") == "tool":
             return "tools"
         return "extra"
-    if parts[0] in ("medicines", "compare", "blood-tests", "glp-1", "exercises", "tools", "deep-dives", "specialists",
+    if parts[0] in ("medicines", "compare", "blood-tests", "glp-1", "exercises", "tools", "deep-dives", "algorithms", "specialists",
                     "anatomy-quiz", "mental-health-check", "zebra-mail"):
         return parts[0]
     if "/" + parts[0] + "/" in games or "/" + parts[0] + "/archive/" in idx:

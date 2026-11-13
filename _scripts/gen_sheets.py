@@ -167,6 +167,22 @@ def med(slug, title, desc, h1, name, tags, lede, quick, glance, sass, brands, ho
     REG.append((url, h1, "drug", [], [u for _, u in related], index_label or tags[0][1], blurb or esc_text(lede), ""))
 
 
+def page(url, title, desc, h1, name, kind, crumbs, body, faq, src, related, audience="Clinician", about_type="MedicalCondition"):
+    """A free-form page (clinician guides, algorithms, hubs) with the same head, FAQ, sources and Related."""
+    out = head(url, title, desc, faq, name, kind, about_type, crumbs)
+    if audience != "Patient":
+        out = out.replace('"audienceType": "Patient"', '"audienceType": "%s"' % audience)
+    out += "<h1>%s</h1>\n%s\n" % (h1, body)
+    f, t = tail(url, faq, related, label_of)
+    if faq:
+        out += f
+    if src:
+        out += "<h2>Evidence and references</h2>\n<ul class=\"src\">" + "".join('<li><a href="%s">%s</a></li>' % (u, n) for n, u in src) + "</ul>\n"
+    out += "<p class=\"meta\"><em>Updated %s. For health professionals. General information, not a substitute for clinical judgement.</em></p>\n\n" % UPDATED
+    out += t
+    write(url, out)
+
+
 def write(url, s):
     d = os.path.join(ROOT, url.strip("/"))
     os.makedirs(d, exist_ok=True)
@@ -216,7 +232,7 @@ def register():
 
 
 if __name__ == "__main__":
-    env = {"fact": fact, "med": med, "ul": ul, "ladder": ladder, "skip": skip, "h2": h2}
+    env = {"fact": fact, "med": med, "ul": ul, "ladder": ladder, "skip": skip, "h2": h2, "page": page}
     for f in sys.argv[1:]:
         exec(compile(open(f, encoding="utf-8").read(), f, "exec"), env)
     register()

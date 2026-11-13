@@ -41,6 +41,20 @@
 "label": "Condition",
 "title": "ADHD in Children"
 },
+"algorithms": {
+"url": "/algorithms/",
+"key": "7bb37f76337c",
+"v": "f5a1367d",
+"label": "For clinicians",
+"title": "Treatment algorithms"
+},
+"algorithms-me-cfs-long-covid": {
+"url": "/algorithms/me-cfs-long-covid/",
+"key": "72c5afe486d3",
+"v": "28ade48d",
+"label": "Algorithm for clinicians",
+"title": "ME/CFS and Long COVID"
+},
 "anal-fissure": {
 "url": "/anal-fissure/",
 "key": "939d51410122",
