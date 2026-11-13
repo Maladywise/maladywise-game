@@ -391,6 +391,13 @@
 "label": "Condition",
 "title": "Chronic Kidney Disease (CKD)"
 },
+"chronic-rhinosinusitis": {
+"url": "/chronic-rhinosinusitis/",
+"key": "0d2815cff635",
+"v": "788cd5c6",
+"label": "Condition",
+"title": "Chronic Rhinosinusitis"
+},
 "coeliac": {
 "url": "/coeliac/",
 "key": "bfb4fdbc29a5",
@@ -502,6 +509,13 @@
 "v": "3e5b3155",
 "label": "Condition",
 "title": "Cough and Acute Bronchitis"
+},
+"covid": {
+"url": "/covid/",
+"key": "5139517fa8a9",
+"v": "b638407e",
+"label": "Condition",
+"title": "COVID-19"
 },
 "cramps": {
 "url": "/cramps/",
@@ -1125,6 +1139,13 @@
 "v": "24571236",
 "label": "Condition",
 "title": "Inflammatory Bowel Disease (Crohn’s and Colitis)"
+},
+"influenza": {
+"url": "/influenza/",
+"key": "deabdc4747d3",
+"v": "7c4ffeb1",
+"label": "Condition",
+"title": "Flu (Influenza)"
 },
 "ingrown-toenail": {
 "url": "/ingrown-toenail/",
