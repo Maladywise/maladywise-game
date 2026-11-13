@@ -31,6 +31,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Neurology and psychiatry curiosities
 - data/neuro-psych-bank.json holds ~60 checked seeds (Oliver Sacks cases, odd syndromes, psychiatric history). Puzzle writers (Triviosis, Grand Rounds, Zebritis, Dxtective, Word of the week, Cryptoplexy clues) should use at least 2–3 a month, spread across games, without repeating a seed within 3 months.
+- data/weird-bank.json holds ~50 weird and wonderful conditions (scombroid, ciguatera, carotenaemia, foreign accent syndrome, purple urine bag syndrome…) plus starter questions. Use 2–3 a month across Triviosis, Grand Rounds, Zebritis and Dxtective; link the fact sheet when an item has a "page"; mark used items.
 - Tone: fascinated and respectful. These are real people's experiences; never mock patients or make a diagnosis the punchline.
 - Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
 

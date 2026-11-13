@@ -1,0 +1,306 @@
+{
+ "_about": "Weird and wonderful conditions (food poisonings, odd syndromes, strange colours and smells) for puzzle writers: Triviosis, Grand Rounds, Zebritis, Dxtective, Cryptogenic clues. Each item is a checked core fact; write all puzzle wording fresh and re-check details before publishing. Tone: fascinated, never mocking patients. Mark items used with \"used\": \"YYYY-MM-DD game\".",
+ "updated": "2026-11-14",
+ "items": [
+  {
+   "name": "Scombroid fish poisoning",
+   "group": "food",
+   "fact": "Histamine from badly stored tuna or mackerel causes flushing, a peppery taste and hives within an hour. Cooking doesn’t destroy histamine; it isn’t an allergy.",
+   "page": "/scombroid/"
+  },
+  {
+   "name": "Ciguatera",
+   "group": "food",
+   "fact": "Reef-fish toxin (ciguatoxin) from algae concentrates up the food chain. Classic sign: cold things feel hot (temperature reversal). Symptoms can linger for months."
+  },
+  {
+   "name": "Tetrodotoxin (fugu)",
+   "group": "food",
+   "fact": "Pufferfish toxin blocks sodium channels, causing numbness then paralysis with a clear mind. Licensed fugu chefs in Japan train for years. Also in blue-ringed octopus."
+  },
+  {
+   "name": "Paralytic shellfish poisoning",
+   "group": "food",
+   "fact": "Saxitoxin from algal blooms concentrates in mussels and oysters; tingling lips then paralysis. Cooking doesn’t help; shellfish beds are closed during blooms."
+  },
+  {
+   "name": "Honey intoxication (mad honey)",
+   "group": "food",
+   "fact": "Grayanotoxin in honey from some rhododendrons (notably Turkey’s Black Sea region) causes slow heart rate and low blood pressure. Used against Pompey’s soldiers in 67 BC."
+  },
+  {
+   "name": "Ackee poisoning",
+   "group": "food",
+   "fact": "Unripe ackee fruit (Jamaica’s national fruit) contains hypoglycin A, causing severe low blood sugar: ‘Jamaican vomiting sickness’."
+  },
+  {
+   "name": "Favism",
+   "group": "food",
+   "fact": "Broad (fava) beans trigger red cell breakdown in G6PD deficiency, the world’s most common enzyme deficiency. Pythagoras reputedly forbade his followers to eat beans."
+  },
+  {
+   "name": "Cassava konzo",
+   "group": "food",
+   "fact": "Poorly processed bitter cassava releases cyanide; in droughts it causes konzo, a sudden permanent leg paralysis seen in parts of Africa."
+  },
+  {
+   "name": "Bracken and potato green toxicity",
+   "group": "food",
+   "fact": "Green potatoes contain solanine; large amounts cause gut upset and confusion. Peel and discard green or sprouting parts."
+  },
+  {
+   "name": "Liquorice hypertension",
+   "group": "food",
+   "fact": "Glycyrrhizin in real liquorice blocks an enzyme protecting the kidney from cortisol, causing high blood pressure and low potassium. Black jelly-bean binges have caused heart rhythm problems."
+  },
+  {
+   "name": "Nutmeg intoxication",
+   "group": "food",
+   "fact": "Two tablespoons or more of nutmeg (myristicin) can cause hallucinations, a racing heart and a miserable day. Peaks hours after eating."
+  },
+  {
+   "name": "Beer potomania",
+   "group": "food",
+   "fact": "Drinking lots of beer with little food lowers sodium dangerously because the kidneys can’t excrete enough free water without solute."
+  },
+  {
+   "name": "Auto-brewery syndrome",
+   "group": "gut",
+   "fact": "Gut yeast or bacteria ferment carbohydrates into alcohol, causing drunkenness without drinking. Has been used as a defence in drink-driving cases."
+  },
+  {
+   "name": "Carotenaemia",
+   "group": "skin",
+   "fact": "Lots of carrots, pumpkin or sweet potato turn palms and soles orange-yellow, but not the whites of the eyes (unlike jaundice). Harmless."
+  },
+  {
+   "name": "Argyria",
+   "group": "skin",
+   "fact": "Colloidal silver supplements permanently turn skin blue-grey. Famous ‘blue man’ cases followed home-made silver tonics."
+  },
+  {
+   "name": "Methaemoglobinaemia",
+   "group": "blood",
+   "fact": "Some drugs (dapsone, topical benzocaine) or inherited enzyme defects make blood chocolate-brown and skin blue. The ‘Blue Fugates’ of Kentucky carried an inherited form. Treated with methylene blue."
+  },
+  {
+   "name": "Purple urine bag syndrome",
+   "group": "urine",
+   "fact": "Catheter bags turn purple when gut bacteria and certain urine bacteria break down tryptophan products to indigo and indirubin, usually in constipated, catheterised older people."
+  },
+  {
+   "name": "Green urine from propofol",
+   "group": "urine",
+   "fact": "Propofol and amitriptyline, among others, can turn urine green. Alarming, but harmless."
+  },
+  {
+   "name": "Beeturia",
+   "group": "urine",
+   "fact": "About 1 in 10 people pass pink or red urine after eating beetroot, more often with iron deficiency."
+  },
+  {
+   "name": "Asparagus urine smell",
+   "group": "urine",
+   "fact": "Asparagusic acid breaks down into sulfur compounds that make urine smell. Some people can’t smell it, due to a genetic variant."
+  },
+  {
+   "name": "Foreign accent syndrome",
+   "group": "neuro",
+   "fact": "A stroke or brain injury changes speech rhythm so a person sounds foreign. First described in 1907; a famous case was a Norwegian woman hit by shrapnel in 1941 who sounded German."
+  },
+  {
+   "name": "Exploding head syndrome",
+   "group": "neuro",
+   "fact": "A loud bang heard while falling asleep or waking, with no pain. Harmless and surprisingly common."
+  },
+  {
+   "name": "Alice in Wonderland syndrome",
+   "group": "neuro",
+   "fact": "Distorted perception of body size or objects (things look tiny or huge), most often with migraine or Epstein-Barr virus in children."
+  },
+  {
+   "name": "Capgras delusion",
+   "group": "psych",
+   "fact": "Belief that a loved one has been replaced by an identical impostor. Linked to a disconnect between face recognition and emotional response."
+  },
+  {
+   "name": "Cotard delusion",
+   "group": "psych",
+   "fact": "Belief that one is dead or lacks organs or blood. Named after Jules Cotard, 1880; usually with severe depression or psychosis, and treatable."
+  },
+  {
+   "name": "Alien hand syndrome",
+   "group": "neuro",
+   "fact": "One hand acts on its own, e.g. unbuttoning a shirt the other hand is buttoning. Seen after corpus callosum or frontal lobe damage."
+  },
+  {
+   "name": "Synaesthesia",
+   "group": "neuro",
+   "fact": "Senses blend: letters have colours, music has shapes. Found in a few per cent of people; often runs in families."
+  },
+  {
+   "name": "Brain freeze",
+   "group": "neuro",
+   "fact": "Sphenopalatine ganglioneuralgia: cold on the palate triggers rapid blood vessel changes and referred headache. Pressing the tongue to the roof of the mouth helps."
+  },
+  {
+   "name": "Photic sneeze reflex",
+   "group": "neuro",
+   "fact": "ACHOO syndrome: sneezing when moving into bright light, found in roughly 1 in 5 to 1 in 4 people; inherited as a dominant trait."
+  },
+  {
+   "name": "Hiccups (singultus)",
+   "group": "gut",
+   "fact": "Charles Osborne hiccupped for 68 years (1922–1990), a world record. Persistent hiccups can signal stroke, tumours or medicines."
+  },
+  {
+   "name": "Fish odour syndrome",
+   "group": "metabolic",
+   "fact": "Trimethylaminuria: an enzyme (FMO3) defect leaves breath, sweat and urine smelling of rotting fish. Diet low in choline helps."
+  },
+  {
+   "name": "Maple syrup urine disease",
+   "group": "metabolic",
+   "fact": "An inherited inability to break down branched-chain amino acids makes urine smell sweet like maple syrup. Found on newborn screening."
+  },
+  {
+   "name": "Stone man syndrome",
+   "group": "rare",
+   "fact": "Fibrodysplasia ossificans progressiva: muscles and tendons slowly turn to bone. Injury or surgery can trigger new bone. About 1 in 2 million people."
+  },
+  {
+   "name": "Hypertrichosis",
+   "group": "rare",
+   "fact": "‘Werewolf syndrome’: excessive hair growth over the body, inherited or acquired; the Gonzales family of the 1500s inspired ‘Beauty and the Beast’ tales."
+  },
+  {
+   "name": "Pica",
+   "group": "psych",
+   "fact": "Craving non-food items. Pagophagia, chewing ice, is a strong clue to iron deficiency and often stops with iron."
+  },
+  {
+   "name": "Geophagia",
+   "group": "psych",
+   "fact": "Eating soil or clay, seen in pregnancy and iron deficiency in many cultures."
+  },
+  {
+   "name": "Stendhal syndrome",
+   "group": "psych",
+   "fact": "Dizziness, palpitations or fainting when overwhelmed by great art; named after the writer’s 1817 visit to Florence."
+  },
+  {
+   "name": "Paris syndrome",
+   "group": "psych",
+   "fact": "Severe disappointment and anxiety on visiting Paris, described mostly in Japanese tourists."
+  },
+  {
+   "name": "Jerusalem syndrome",
+   "group": "psych",
+   "fact": "Religious delusions triggered by visiting Jerusalem. (Keep puzzle wording neutral and non-religious in tone.)"
+  },
+  {
+   "name": "Takotsubo cardiomyopathy",
+   "group": "heart",
+   "fact": "‘Broken heart syndrome’: sudden heart muscle weakness after severe stress, mostly in older women. The heart balloons into the shape of a Japanese octopus trap (takotsubo)."
+  },
+  {
+   "name": "Holiday heart syndrome",
+   "group": "heart",
+   "fact": "Atrial fibrillation after binge drinking, classically after holiday weekends."
+  },
+  {
+   "name": "Saturday night palsy",
+   "group": "neuro",
+   "fact": "Radial nerve compression from sleeping with an arm draped over a chair, often after drinking: wrist drop."
+  },
+  {
+   "name": "Honeymoon cystitis",
+   "group": "urine",
+   "fact": "Bladder infections linked to frequent sex. Passing urine after sex may help."
+  },
+  {
+   "name": "Gamekeeper’s thumb",
+   "group": "bones",
+   "fact": "Ulnar collateral ligament injury of the thumb, originally from Scottish gamekeepers breaking rabbits’ necks; now ‘skier’s thumb’ from ski poles."
+  },
+  {
+   "name": "Housemaid’s knee",
+   "group": "bones",
+   "fact": "Prepatellar bursitis from kneeling. Clergyman’s knee is the infrapatellar version."
+  },
+  {
+   "name": "Cherry red spot",
+   "group": "eyes",
+   "fact": "A red spot at the macula seen in central retinal artery occlusion and Tay-Sachs disease."
+  },
+  {
+   "name": "Heterochromia",
+   "group": "eyes",
+   "fact": "Different coloured eyes; can be inherited, from injury, or Horner syndrome in babies. David Bowie’s ‘different eyes’ were actually one permanently dilated pupil (anisocoria) from a fight."
+  },
+  {
+   "name": "Hiccup-cure vagal manoeuvres",
+   "group": "trivia",
+   "fact": "Swallowing sugar, holding breath and the ‘rectal massage’ cure (yes, in a published case report) all stimulate the vagus nerve."
+  },
+  {
+   "name": "Morgellons",
+   "group": "psych",
+   "fact": "Belief that fibres emerge from the skin; studies find the fibres are cotton or other common materials. A form of delusional infestation; treat kindly."
+  }
+ ],
+ "starter_questions": [
+  {
+   "q": "Scombroid poisoning after eating tuna is caused by?",
+   "a": "Histamine made by bacteria in poorly chilled fish",
+   "w": [
+    "An allergy to fish protein",
+    "A toxin from reef algae",
+    "Mercury"
+   ],
+   "e": "Fish rich in histidine (tuna, mackerel) let bacteria make histamine if not kept cold. Cooking doesn’t destroy it, and it isn’t an allergy.",
+   "source": "/scombroid/"
+  },
+  {
+   "q": "Which clue points to scombroid rather than a fish allergy?",
+   "a": "Several people who ate the same fish react together",
+   "w": [
+    "Symptoms start within an hour",
+    "Hives",
+    "It responds to antihistamines"
+   ],
+   "e": "Allergies are individual. A table of flushed diners points to histamine in the fish.",
+   "source": "/scombroid/"
+  },
+  {
+   "q": "Eating ciguatera-contaminated reef fish can cause which odd symptom?",
+   "a": "Cold things feeling hot",
+   "w": [
+    "Seeing everything yellow",
+    "Purple urine",
+    "Hiccups for days"
+   ],
+   "e": "Temperature reversal is a classic sign of ciguatera, caused by ciguatoxin from algae concentrating up the reef food chain."
+  },
+  {
+   "q": "Orange palms but normal whites of the eyes after weeks of pumpkin soup suggest?",
+   "a": "Carotenaemia",
+   "w": [
+    "Jaundice",
+    "Argyria",
+    "Addison’s disease"
+   ],
+   "e": "Carotene stains the skin but not the sclera, unlike jaundice. Harmless."
+  },
+  {
+   "q": "Chewing ice compulsively (pagophagia) is a classic clue to?",
+   "a": "Iron deficiency",
+   "w": [
+    "Vitamin C deficiency",
+    "Diabetes",
+    "Low sodium"
+   ],
+   "e": "Pagophagia often resolves within days to weeks of iron treatment."
+  }
+ ]
+}
