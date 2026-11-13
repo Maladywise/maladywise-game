@@ -1280,11 +1280,11 @@ html.medp-on .medp .glance dl{display:grid;grid-template-columns:auto 1fr auto 1
 html.medp-on .medp .glance dt{font:700 7px Poppins,system-ui,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;color:#6B5A93!important;padding-top:1.5px;margin:0}
 html.medp-on .medp .glance dd{font-size:8.6px!important;line-height:1.3;margin:0}
 html.medp-on .medp .glance .sass{font-size:8px!important;margin:3px 0 0!important;font-style:italic;color:#5C4E7E!important}
-html.medp-on .medp .medp-cols{columns:2;column-gap:16px}
-html.medp-on .medp .medp-cols>:not(ol,ul,details,.se){break-inside:avoid}
-html.medp-on .medp .medp-cols li{break-inside:avoid}
+html.medp-on body.medp main.doc>.medp-cols.medp-split{display:grid!important;grid-template-columns:1fr 1fr;gap:0 16px;align-items:start}
+html.medp-on .medp .medp-col>:first-child{margin-top:0!important}
+html.medp-on .medp .medp-cols{break-inside:avoid}
 html.medp-on .medp .medp-cols h2{font:700 10.5px Poppins,system-ui,sans-serif!important;color:#4A3480!important;margin:5px 0 1px!important;break-after:avoid;padding:0;border:0}
-html.medp-on .medp .medp-cols h2:first-child{margin-top:0!important}
+html.medp-on .medp .medp-col>h2:first-child{margin-top:0!important}
 html.medp-on .medp .medp-cols :is(p,li){font-size:8.4px!important;line-height:1.32!important}
 html.medp-on .medp .medp-cols p{margin:0 0 3px!important}
 html.medp-on .medp .medp-cols ul,html.medp-on .medp .medp-cols ol{margin:0 0 3px!important;padding-left:12px!important}
