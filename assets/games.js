@@ -23,7 +23,7 @@ window.MW_NORMIE_CHEER = ["Day off and still winning.", "Feet up. Score up.", "B
 /* "Start here: today's 3" on the home page, also followed by the in-game "Next" button: [game id, rough minutes].
    normie = the Normie list (games with a Normie version only). Topped up from MW_ORDER if one is missing in a mode. */
 window.MW_START = { medical: [["dx", 3], ["wordemic", 3], ["triviosis", 4]], normie: [["dx", 3], ["wordemic", 3], ["triviosis", 4]] };
-window.MW_ORDER = ["dx", "wordemic", "panelysis", "glimpsis", "opacitis", "triviosis", "comorbix", "linkase", "zebritis", "gridectomy", "sudokrine", "suturix", "morphemia", "arrhythmix", "cryptogenic", "grandrounds"];
+window.MW_ORDER = ["dx", "wordemic", "triviosis", "glimpsis", "opacitis", "panelysis", "comorbix", "labelosis", "linkase", "zebritis", "gridectomy", "suturix", "morphemia", "sensitosis", "sudokrine", "arrhythmix", "cryptogenic", "grandrounds"];
 window.MW_GAMES = [
   { id: "dx", normieMascot: true, kind: "Guess the diagnosis", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
     normie: { kind: "What am I?", tagline: "Six clues, one answer. Guess early.", quip: "Animal, landmark, invention or icon. Six fun facts to work it out.", helpQuip: "Typing \"a thing\" will be judged. Harshly.", help: [
