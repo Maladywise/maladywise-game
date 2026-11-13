@@ -659,6 +659,35 @@
     "comorbix normie"
    ],
    "note": "Google Trends pages not reachable (permission timeout); trends from data/trends.json, ScienceDaily and news searches. World Kindness Day is priority 4 (nod only): kept as a nod in Normie Triviosis, Suturix and one Zebritis prompt; Wordemic OXYTOCIN and THANKFUL moved to reserve."
+  },
+  {
+   "date": "2026-11-14",
+   "main_theme": "World Diabetes Day (priority 3; kept from monthly build)",
+   "source": "world day",
+   "terms_used": [
+    "BMI misclassification (GB 10k+): NICE lower BMI thresholds 23/27.5 for higher-risk ethnic groups (Triviosis)",
+    "body fat measurement: DEXA, skinfolds, bioimpedance, underwater weighing (Comorbix)",
+    "GLP-1 vision loss / NAION, FDA class warning Nov 2026 (US 'side effect' 2k+) (Triviosis)",
+    "semaglutide (AU 1k+) and other GLP-1 receptor agonists (Zebritis)",
+    "vitamin D (GB) via existing Opacitis rickets case",
+    "England v Croatia, Italy v France Nations League (Normie Comorbix)",
+    "winter storm warnings / polar vortex (Normie Wordemic SLEET)"
+   ],
+   "niche_terms": [
+    "NAION",
+    "orforglipron",
+    "beinaglutide",
+    "PEG-loxenatide",
+    "bioimpedance"
+   ],
+   "games": [
+    "triviosis",
+    "comorbix",
+    "zebritis",
+    "comorbix normie",
+    "wordemic normie"
+   ],
+   "note": "trends-google.json fetched 2026-11-12T21:34Z. Replaced Triviosis Q2 (University of Toronto) and Q10 (Charcot foot), Comorbix 'Pancreas eponyms', Zebritis 'part of the pancreas', Normie Comorbix 'Toys', Normie Wordemic SQUID->SLEET (SQUID to reserve). Skipped Marsha Linehan (person-focused, sensitive) and outbreak trends (no kind fit on a diabetes day)."
   }
  ],
  "suggested_days": [

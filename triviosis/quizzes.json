@@ -2932,14 +2932,14 @@
     "e": "Born in 1891 in Ontario."
    },
    {
-    "q": "Banting and Best first isolated insulin in 1921 at which university?",
-    "a": "University of Toronto",
+    "q": "Type 2 diabetes risk climbs at lower weights in some groups, so NICE uses a lower BMI cut-off for obesity in adults of South Asian, Chinese, Middle Eastern, Black African or African-Caribbean family background. What is it?",
+    "a": "27.5",
     "w": [
-     "McGill University",
-     "Harvard University",
-     "University of Edinburgh"
+     "25",
+     "30",
+     "32.5"
     ],
-    "e": "Frederick Banting and Charles Best isolated insulin at the University of Toronto in 1921. It was first given to a patient in January 1922."
+    "e": "For these groups overweight starts at 23 rather than 25. BMI can misclassify people both ways, which is why a waist measurement helps too."
    },
    {
     "q": "In January 1922, the first person treated with insulin was 14-year-old?",
@@ -3012,14 +3012,14 @@
     "e": "Usually done at 24 to 28 weeks."
    },
    {
-    "q": "Charcot foot in diabetes is?",
-    "a": "Destructive joint disease in a numb foot",
+    "q": "In November 2026 the US FDA required a warning across GLP-1 medicines (used for diabetes and weight loss) about NAION, a rare cause of sudden, painless vision loss. What does NAION damage?",
+    "a": "The optic nerve",
     "w": [
-     "A fungal nail infection",
-     "A type of gout",
-     "A blocked foot artery"
+     "The macula",
+     "The lens",
+     "The cornea"
     ],
-    "e": "Neuropathy hides the pain, so a hot, swollen foot can be the only clue."
+    "e": "Non-arteritic anterior ischaemic optic neuropathy: a drop in blood flow to the front of the optic nerve. Very rare, but sudden vision change in one eye needs same-day review."
    }
   ]
  },
