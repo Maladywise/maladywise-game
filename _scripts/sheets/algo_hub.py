@@ -1,5 +1,7 @@
 # Algorithms hub. Keep the list in sync as algorithms are added.
 ALGOS = [
+ ("/algorithms/adhd/", "ADHD (children and adults)", "Assessment and co-occurring conditions, parent training and CBT, stimulant titration, non-stimulants and monitoring."),
+ ("/algorithms/autism/", "Autism", "Recognise and refer, neurodiversity-affirming supports, co-occurring ADHD, anxiety, sleep and irritability, and what to avoid."),
  ("/algorithms/me-cfs-long-covid/", "ME/CFS and long COVID", "Exclusions, PEM and pacing, then evidence-graded options by symptom cluster, from guideline-backed to anecdotal."),
 ]
 body = '<p class="lede">Step-by-step treatment paths for general practice, with every option graded from strong evidence to anecdotal. Built for the consult room: confirm, exclude, then treat what matters most.</p>\n<ul class="tx">' + "".join(

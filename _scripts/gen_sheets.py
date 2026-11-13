@@ -183,6 +183,11 @@ def page(url, title, desc, h1, name, kind, crumbs, body, faq, src, related, audi
     write(url, out)
 
 
+def reg(url, t, groups=("Other",), related=(), blurb="", search="", kind="fact"):
+    """Register a page() in MW_FACTS, the Conditions index and the sitemap (like fact())."""
+    REG.append((url, t, kind, list(groups), list(related), None, blurb, search))
+
+
 def write(url, s):
     d = os.path.join(ROOT, url.strip("/"))
     os.makedirs(d, exist_ok=True)
@@ -232,7 +237,7 @@ def register():
 
 
 if __name__ == "__main__":
-    env = {"fact": fact, "med": med, "ul": ul, "ladder": ladder, "skip": skip, "h2": h2, "page": page}
+    env = {"fact": fact, "med": med, "ul": ul, "ladder": ladder, "skip": skip, "h2": h2, "page": page, "reg": reg}
     for f in sys.argv[1:]:
         exec(compile(open(f, encoding="utf-8").read(), f, "exec"), env)
     register()

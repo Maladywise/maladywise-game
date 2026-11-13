@@ -48,6 +48,20 @@
 "label": "For clinicians",
 "title": "Treatment algorithms"
 },
+"algorithms-adhd": {
+"url": "/algorithms/adhd/",
+"key": "85ae15f69d03",
+"v": "348b3d6b",
+"label": "Algorithm for clinicians",
+"title": "ADHD"
+},
+"algorithms-autism": {
+"url": "/algorithms/autism/",
+"key": "dc3af691d8b7",
+"v": "358eec44",
+"label": "Algorithm for clinicians",
+"title": "Autism"
+},
 "algorithms-me-cfs-long-covid": {
 "url": "/algorithms/me-cfs-long-covid/",
 "key": "72c5afe486d3",
@@ -818,6 +832,13 @@
 "label": "Exercise handout",
 "title": "Shoulder Impingement Exercises"
 },
+"explaining-adhd-autism-to-kids": {
+"url": "/explaining-adhd-autism-to-kids/",
+"key": "b088d94ddec4",
+"v": "c488c4dc",
+"label": "Condition",
+"title": "Explaining ADHD and Autism to Kids"
+},
 "fatty-liver": {
 "url": "/fatty-liver/",
 "key": "aa77614e250f",
@@ -1244,6 +1265,13 @@
 "v": "21d6002f",
 "label": "Fact sheet",
 "title": "Lactose intolerance"
+},
+"late-diagnosis-adhd-autism": {
+"url": "/late-diagnosis-adhd-autism/",
+"key": "bed1e2d4d5ba",
+"v": "2e77be74",
+"label": "Condition",
+"title": "Late Diagnosis Starter Kit"
 },
 "lead": {
 "url": "/lead/",
