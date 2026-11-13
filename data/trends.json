@@ -510,6 +510,142 @@
    "date": "2026-11-13",
    "source": "checkrare.com rare-disease calendar (not verified with organiser); news search; live Google Trends not reachable this pass",
    "niche": true
+  },
+  {
+   "term": "measles",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "bruce willis (frontotemporal dementia interest)",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "thunderstorm warning",
+   "region": "AU",
+   "approx volume": "20K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (all categories, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "measles outbreak pennsylvania",
+   "region": "US",
+   "approx volume": "1K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "travel vaccine",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "measles symptoms",
+   "region": "US",
+   "approx volume": "100+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "christina applegate (multiple sclerosis interest)",
+   "region": "US",
+   "approx volume": "5K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "costco whipped cream recall",
+   "region": "US",
+   "approx volume": "20K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (all categories, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "body mass index misclassification uk",
+   "region": "GB",
+   "approx volume": "10K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "antimicrobial resistance",
+   "region": "GB",
+   "approx volume": "1K+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "cholesterol",
+   "region": "GB",
+   "approx volume": "500+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "pharmacogenomics",
+   "region": "GB",
+   "approx volume": "200+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": true
+  },
+  {
+   "term": "long covid",
+   "region": "GB",
+   "approx volume": "200+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": false
+  },
+  {
+   "term": "tourette syndrome",
+   "region": "GB",
+   "approx volume": "100+",
+   "date": "2026-11-14",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-13T19:15:24Z)",
+   "niche": true
+  },
+  {
+   "term": "Pennsylvania measles: 1,505 cases and 6 deaths in 2026",
+   "region": "US",
+   "approx volume": "n/a",
+   "date": "2026-11-14",
+   "source": "PA Department of Health statewide update, 9 Nov 2026; news search",
+   "niche": true
+  },
+  {
+   "term": "Perth measles alert: 3 unlinked cases since 27 Oct",
+   "region": "AU",
+   "approx volume": "n/a",
+   "date": "2026-11-14",
+   "source": "WA Health measles alert, updated 5 Nov 2026; news search",
+   "niche": true
+  },
+  {
+   "term": "BMI thresholds for minority ethnic adults (Nesta: ~1 million miscounted in England)",
+   "region": "GB",
+   "approx volume": "n/a",
+   "date": "2026-11-14",
+   "source": "The Guardian / Nesta analysis; news search",
+   "niche": true
   }
  ],
  "used": [
