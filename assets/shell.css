@@ -481,6 +481,13 @@ html[data-theme="dark"] .mw-ticket .d{color:#16121F}
 .mw-sharerow>button{margin:0!important}
 .cb-dx .cb-cap{margin-top:34px}
 .card .pill.einc{margin:4px 0 6px;font-size:9.5px;padding:3px 8px}
+.azbar{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px}
+.azbar a,.azbar span{flex:0 0 auto;min-width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font:700 13px Poppins,system-ui,sans-serif;text-decoration:none}
+.azbar a{background:var(--card);border:1px solid var(--line);color:var(--accent,#4A3480)}
+.azbar a:hover,.azbar a:focus-visible{background:var(--accent,#4A3480);color:#fff}
+.azbar span{color:var(--line);border:1px solid transparent}
+#fs-list li[id^="az-"],ul.tx li[id^="az-"]{scroll-margin-top:84px}
+@media print{.azbar{display:none}}
 .doc .lsrch,.doc #fs-q{width:100%;box-sizing:border-box;font:500 16px Poppins,system-ui,sans-serif;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);margin:6px 0 10px}
 .doc ul.fslist{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 .doc ul.fslist li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 14px;line-height:1.4}

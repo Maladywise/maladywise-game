@@ -1444,6 +1444,25 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var idx = li.map(function (x) { return norm(x.textContent + " " + (x.getAttribute("data-q") || "")); });
     box.addEventListener("input", function () { var w = norm(box.value).split(/\s+/).filter(Boolean), n = 0; li.forEach(function (x, i) { var ok = w.every(function (t) { return idx[i].indexOf(t) >= 0; }); x.hidden = !ok; if (ok) n++; }); no.hidden = n > 0; });
   }
+  // A–Z jump bar under the search box on the big alphabetical lists (Conditions, Medicines).
+  function azBar() {
+    if (!/^\/(conditions|medicines)\/$/.test(location.pathname)) return;
+    var main = document.querySelector("main.doc"); if (!main || main.querySelector(".azbar")) return;
+    var ul = main.querySelector("#fs-list, ul.tx"); if (!ul) return;
+    var q = document.getElementById("fs-q") || main.querySelector(".lsrch");
+    var first = {};
+    [].slice.call(ul.children).forEach(function (li) {
+      if (li.tagName !== "LI") return; var b = li.querySelector("b, strong"); var t = (b || li).textContent.trim();
+      var L = t.normalize("NFD").charAt(0).toUpperCase(); if (!/[A-Z]/.test(L)) L = "#";
+      if (!first[L]) { first[L] = li; li.id = li.id || "az-" + (L === "#" ? "0" : L.toLowerCase()); }
+    });
+    var h = '<nav class="azbar" aria-label="Jump to letter">' + (first["#"] ? '<a href="#az-0">#</a>' : "");
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(function (L) { h += first[L] ? '<a href="#' + first[L].id + '">' + L + "</a>" : '<span aria-hidden="true">' + L + "</span>"; });
+    h += "</nav>";
+    (q || ul).insertAdjacentHTML(q ? "afterend" : "beforebegin", h);
+    var bar = main.querySelector(".azbar");
+    if (q) q.addEventListener("input", function () { bar.hidden = !!q.value.trim(); });
+  }
   // ---------- health pages: honest authorship badge, newsletter box, today's puzzle card ----------
   // Fact sheets, medicines, handouts, deep dives, tools and compare pages. Pages are drafted with AI tools and
   // overseen by a GP; a page the GP has personally reviewed carries data-gp-reviewed="YYYY-MM-DD" on <body> (or <main>).
@@ -1552,7 +1571,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
