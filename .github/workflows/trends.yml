@@ -3,8 +3,11 @@ name: Google Trends fetch
 # before the 6:13am Sydney briefing. Cloud Claude sessions can't reach Google Trends; GitHub can.
 on:
   schedule:
-    - cron: "40 18 * * *"   # 5:40am AEDT (4:40am AEST)
-    - cron: "40 7 * * *"    # 6:40pm AEDT, before the evening puzzle refresh
+    # GitHub can skip or delay scheduled runs, so each fetch has a backup time.
+    - cron: "12 18 * * *"   # 5:12am AEDT
+    - cron: "47 18 * * *"   # 5:47am AEDT (before the 6:13am briefing)
+    - cron: "11 7 * * *"    # 6:11pm AEDT
+    - cron: "37 7 * * *"    # 6:37pm AEDT (before the 7:43pm puzzle refresh)
   workflow_dispatch:
     inputs:
       debug:
