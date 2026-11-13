@@ -447,6 +447,13 @@
 "label": "Compare",
 "title": "Vitamin D3 vs D2"
 },
+"concussion": {
+"url": "/concussion/",
+"key": "b120d129ce39",
+"v": "0d761a80",
+"label": "Condition",
+"title": "Concussion"
+},
 "conjunctivitis": {
 "url": "/conjunctivitis/",
 "key": "862ad99a2586",
@@ -509,6 +516,13 @@
 "v": "1c42ee87",
 "label": "Condition",
 "title": "Croup"
+},
+"cte": {
+"url": "/cte/",
+"key": "771e37c94ee3",
+"v": "43a19fb7",
+"label": "Condition",
+"title": "Chronic Traumatic Encephalopathy (CTE)"
 },
 "cteph": {
 "url": "/cteph/",
