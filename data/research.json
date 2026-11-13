@@ -1,5 +1,5 @@
 {
- "_about": "Research hub data. The weekly research task adds a new week at the TOP of weeks[] (3-5 studies) and keeps trials[] current. Build with: python3 _scripts/build_research.py",
+ "_about": "Research hub data. The weekly research task adds a new week at the TOP of weeks[] (3-5 studies) and keeps trials[] current. Build with: python3 _scripts/build_research.py worldwide.items lists studies or citizen-science projects anyone can join online from any country (verified on official pages).",
  "weeks": [
   {
    "week": "3–10 November 2026",
@@ -253,6 +253,51 @@
     "org": "Macquarie University",
     "url": "https://mquni.au1.qualtrics.com/jfe/form/SV_bJkxVXywzUlxrpA",
     "mode": "Online or by phone, anywhere in Australia."
+   }
+  ]
+ },
+ "worldwide": {
+  "checked": "2026-11-14",
+  "items": [
+   {
+    "name": "You + ME Registry",
+    "what": "An online registry and symptom-tracking app building a picture of ME/CFS and long COVID over time.",
+    "who": "Adults with ME/CFS or long COVID, plus healthy volunteers for comparison. International; an Australian arm runs with Emerge Australia.",
+    "org": "Solve M.E. (US non-profit)",
+    "url": "https://youandmeregistry.com/",
+    "mode": "Online survey and app, from anywhere."
+   },
+   {
+    "name": "Autism Research Centre volunteer database",
+    "what": "Join a database and get invited to online autism studies; starts with short online questionnaires.",
+    "who": "Autistic and non-autistic people and families; registration asks your country of residence.",
+    "org": "Autism Research Centre, University of Cambridge",
+    "url": "https://autismresearchcentre.com/volunteer",
+    "mode": "Online sign-up; many studies online."
+   },
+   {
+    "name": "Zooniverse medical citizen science",
+    "what": "Help researchers by classifying real images, such as cells in tissue and placenta scans, in your browser.",
+    "who": "Anyone, any age, no expertise needed.",
+    "org": "Zooniverse (University of Oxford and partners)",
+    "url": "https://www.zooniverse.org/projects?discipline=medicine",
+    "mode": "Online, from anywhere."
+   },
+   {
+    "name": "Folding@home",
+    "what": "Donate your computer’s spare processing power to simulate protein folding for research into cancer, Alzheimer’s and infectious diseases.",
+    "who": "Anyone with a computer.",
+    "org": "Folding@home consortium (Washington University in St. Louis and partners)",
+    "url": "https://foldingathome.org/",
+    "mode": "Software you install; runs in the background."
+   },
+   {
+    "name": "Foldit",
+    "what": "A puzzle game where players design and fold proteins; player solutions have contributed to published research.",
+    "who": "Anyone; free.",
+    "org": "University of Washington and partners",
+    "url": "https://fold.it/",
+    "mode": "Online game, from anywhere."
    }
   ]
  }
