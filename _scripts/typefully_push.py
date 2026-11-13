@@ -150,6 +150,32 @@ def scheduled_dates(sid):
     return out
 
 
+def hide_double_previews(sid):
+    """Scheduled drafts whose first post has a picture: hide the link-preview card on later link posts,
+    so the thread shows the picture once instead of the picture plus a second copy as a link card."""
+    try:
+        data = call("GET", "/social-sets/%s/drafts?status=scheduled&limit=50" % sid)
+    except SystemExit as e:
+        print("Could not list scheduled drafts for link previews (%s)." % e); return
+    for d in data.get("results", []):
+        try:
+            full = call("GET", "/social-sets/%s/drafts/%s?exclude_comment_markers=false" % (sid, d["id"]))
+            posts = ((full.get("platforms") or {}).get("x") or {}).get("posts") or []
+            if not posts or not posts[0].get("media_ids"):
+                continue
+            todo = [i for i, q in enumerate(posts) if i > 0 and "http" in (q.get("text") or "") and not q.get("hide_link_preview")]
+            if not todo:
+                continue
+            keep = ("text", "media_ids", "quote_post_url", "reply_settings", "hide_link_preview")
+            new = [{k: q[k] for k in keep if q.get(k) not in (None, [])} for q in posts]
+            for i in todo:
+                new[i]["hide_link_preview"] = True
+            call("PATCH", "/social-sets/%s/drafts/%s" % (sid, d["id"]), {"platforms": {"x": {"enabled": True, "posts": new}}})
+            print("Link preview hidden on draft", d["id"])
+        except (Exception, SystemExit) as e:  # noqa: BLE001
+            print("Link preview fix skipped for draft %s (%s)" % (d.get("id"), e))
+
+
 # ---------- automatic World Day post ----------
 TAILS = ["Themed puzzles are up. Diagnose them before your coffee goes cold.",
          "Today's puzzles are themed. No referral needed.",
@@ -475,6 +501,8 @@ def main():
     sid = None if dry else social_set_id()
     # ONE POST PER SLOT: dates that already have a scheduled Typefully draft (hand-made or earlier runs).
     busy = set() if dry else scheduled_dates(sid)
+    if not dry:
+        hide_double_previews(sid)
     out_dir = a.out or tempfile.mkdtemp(prefix="mw-cards-")
     os.makedirs(out_dir, exist_ok=True)
 
@@ -595,6 +623,10 @@ def main():
                         held.append(p["date"])
                         continue
                     print("%s upload failed for %s (%s); posting without it." % ("Video" if (png or "").endswith(VIDEO_EXT) else "Image", p["date"], e))
+            if "media_ids" in post0:  # the picture is the visual: link replies show as plain links, not a second card
+                for q in body["platforms"]["x"]["posts"][1:]:
+                    if "http" in q["text"]:
+                        q["hide_link_preview"] = True
             body["publish_at"] = when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             if busy is not None:
