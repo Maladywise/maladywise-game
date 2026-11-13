@@ -1463,6 +1463,37 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var bar = main.querySelector(".azbar");
     if (q) q.addEventListener("input", function () { bar.hidden = !!q.value.trim(); });
   }
+  // ---------- medicine pages: a one-page, branded print (Nov 2026) ----------
+  // The print button (and Ctrl+P) lay the page out as a two-column A4 sheet, open the side-effect list,
+  // drop the FAQ, sources and site chrome, then shrink the whole sheet just enough to fit one page.
+  function medPrint() {
+    if (!/^\/medicines\/[^\/]+\/$/.test(location.pathname)) return;
+    var main = document.querySelector("main.doc"); if (!main || main.querySelector(".medp-head")) return;
+    document.body.classList.add("medp");
+    var h1 = main.querySelector("h1"); if (!h1) return;
+    h1.insertAdjacentHTML("beforebegin", '<div class="medp-head"><b>Malady Wise</b><span>Medicine guide · maladywise.com' + location.pathname + "</span></div>");
+    var start = main.querySelector(".glance") || main.querySelector(".lede") || h1, n = start.nextElementSibling, box = document.createElement("div");
+    box.className = "medp-cols";
+    var stop = function (el) { return !el || el.matches("section.faq, .callout, ul.src, .mw-sharecard, section.related, .print-url, .print-qr, footer, .nl, .mwx, .mw-about") || (el.tagName === "H2" && /^(More information|Sources|Evidence)/i.test(el.textContent.trim())); };
+    if (start.classList.contains("glance")) { var gh = start.previousElementSibling; if (gh && gh.tagName === "H2") gh.classList.add("medp-glance-h"); }
+    var take = []; while (n && !stop(n)) { take.push(n); n = n.nextElementSibling; }
+    if (!take.length) return;
+    take[0].parentNode.insertBefore(box, take[0]); take.forEach(function (el) { box.appendChild(el); });
+    [].forEach.call(main.querySelectorAll(":scope > p.meta"), function (m) { if (/Updated/.test(m.textContent)) m.classList.add("medp-upd"); });
+    var opened = [];
+    function on() {
+      document.documentElement.classList.add("medp-on"); main.style.zoom = "";
+      [].forEach.call(main.querySelectorAll("details.se-more:not([open])"), function (d) { d.open = true; opened.push(d); });
+      // Fill one page: shrink long guides, enlarge short ones. The sheet is laid out at (page width / zoom) so it
+      // always spans the page; a few passes settle the height, which changes as the width does.
+      var W = 710, fit = 975, z = 1; // px: 188 mm wide; A4 and US Letter height less the page margins
+      for (var i = 0; i < 5; i++) { main.style.zoom = ""; main.style.width = main.style.maxWidth = (W / z) + "px"; var h = main.getBoundingClientRect().height; if (!h) return; z = Math.min(1.4, Math.max(0.5, fit / h)); }
+      z = Math.floor(z * 1000) / 1000; main.style.width = main.style.maxWidth = (W / z) + "px"; main.style.zoom = String(z);
+    }
+    function off() { document.documentElement.classList.remove("medp-on"); main.style.zoom = main.style.width = main.style.maxWidth = ""; opened.forEach(function (d) { d.open = false; }); opened = []; }
+    window.addEventListener("beforeprint", on); window.addEventListener("afterprint", off);
+    window.MW_medPrint = { on: on, off: off };
+  }
   // ---------- health pages: honest authorship badge, newsletter box, today's puzzle card ----------
   // Fact sheets, medicines, handouts, deep dives, tools and compare pages. Pages are drafted with AI tools and
   // overseen by a GP; a page the GP has personally reviewed carries data-gp-reviewed="YYYY-MM-DD" on <body> (or <main>).
@@ -1571,7 +1602,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
