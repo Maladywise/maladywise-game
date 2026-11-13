@@ -595,6 +595,7 @@
       else if (a.kind === "suck" && a.ph === "warn") { msg = "SUCTION INCOMING"; sub = "Get ready to tap"; col = "#7A3FB5"; }
       else if (a.kind === "suck" && a.ph === "go") { msg = "TAP TAP TAP!"; sub = "Hold on or get sucked up"; col = "#7A3FB5"; }
       else if (a.ph === "stun") { msg = "STUNNED!"; sub = "Smash the core"; col = "#B5308A"; }
+      msg = say(msg); sub = say(sub); // levels swap towel/thermometer words (e.g. the Ward: blanket, defib paddle)
       var my = STAGE >= 2 ? BENCH + 50 : 104, mf = 22; ctx.save(); ctx.textAlign = "center"; ctx.lineJoin = "round"; ctx.font = "900 22px Poppins, sans-serif"; if (ctx.measureText(msg).width > W - 24) mf = Math.floor(22 * (W - 24) / ctx.measureText(msg).width);
       ctx.font = "900 " + (a.ph === "go" && a.kind === "suck" ? mf + 2 + Math.sin(S.t * 20) * 2 : mf) + "px Poppins, sans-serif"; ctx.lineWidth = 6; ctx.strokeStyle = "#FFFFFF"; ctx.strokeText(msg, 180, my); ctx.fillStyle = col; ctx.fillText(msg, 180, my);
       ctx.font = "800 11px Poppins, sans-serif"; ctx.lineWidth = 4; ctx.strokeText(sub, 180, my + 16); ctx.fillStyle = "#2B2340"; ctx.fillText(sub, 180, my + 16); ctx.restore();

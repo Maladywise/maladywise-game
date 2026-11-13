@@ -199,6 +199,203 @@
       deco: [["🕸️", 340, 140, 30], ["🦇", 150, 60, 24], ["🎃", 60, 170, 34]],
       bench: ["#6E6A7A", "#8E8A9A", "#4A4656", "#1B1430"] }
   };
+  // ---------- realistic scenery for Beach, Hell, Bath Time, Christmas, Easter, Halloween (Nov 2026) ----------
+  // Same layout rules as the Ward: wall art behind everything, the window (222-340 × 24-110) drawn by back(),
+  // the carrier bottom-left, and nothing bright behind the three item lanes (x 72, 180, 288) near the bench.
+  (function () {
+    function R(c, x, y, w, h, r, f) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); if (f) { c.fillStyle = f; c.fill(); } }
+    function O(c, x, y, r, f) { c.beginPath(); c.arc(x, y, r, 0, 7); c.fillStyle = f; c.fill(); }
+    function E(c, x, y, rx, ry, a, f) { c.beginPath(); c.ellipse(x, y, rx, ry, a || 0, 0, 7); c.fillStyle = f; c.fill(); }
+    function L(c, pts, col, w) { c.beginPath(); c.moveTo(pts[0][0], pts[0][1]); for (var i = 1; i < pts.length; i++) c.lineTo(pts[i][0], pts[i][1]); c.strokeStyle = col; c.lineWidth = w; c.stroke(); }
+    function now() { return (window.performance ? performance.now() : Date.now()) / 1000; }
+    function flame(c, x, y, s, k) { var f = 1 + Math.sin(now() * 9 + k) * 0.12; c.beginPath(); c.moveTo(x - 3 * s, y); c.quadraticCurveTo(x - 4 * s, y - 6 * s * f, x, y - 11 * s * f); c.quadraticCurveTo(x + 4 * s, y - 6 * s * f, x + 3 * s, y); c.closePath(); c.fillStyle = "#F6A04D"; c.fill(); E(c, x, y - 3 * s, 1.6 * s, 3 * s * f, 0, "#FFE08A"); }
+    function palm(c, x, y, h, lean) { // trunk from (x, y) up h px, fronds at the top
+      c.strokeStyle = "#8A6A45"; c.lineWidth = 7; c.lineCap = "round"; c.beginPath(); c.moveTo(x, y); c.quadraticCurveTo(x + lean * 0.3, y - h * 0.6, x + lean, y - h); c.stroke();
+      c.strokeStyle = "#6E5234"; c.lineWidth = 1.2; for (var i = 1; i < 9; i++) { var k = i / 9, px = x + lean * k * k, py = y - h * k; c.beginPath(); c.moveTo(px - 4, py); c.lineTo(px + 4, py - 2); c.stroke(); }
+      var tx = x + lean, ty = y - h; [[-1.0, 34], [-0.35, 30], [0.25, 32], [0.9, 30], [2.6, 30], [3.4, 26]].forEach(function (a, j) {
+        c.save(); c.translate(tx, ty); c.rotate(a[0]); c.fillStyle = j % 2 ? "#3E8E4E" : "#2E7D3E"; c.beginPath(); c.moveTo(0, 0); c.quadraticCurveTo(a[1] * 0.5, -12, a[1], 6); c.quadraticCurveTo(a[1] * 0.5, -2, 0, 0); c.fill(); c.restore(); });
+      O(c, tx - 3, ty + 3, 3.5, "#7A5230"); O(c, tx + 3, ty + 4, 3.5, "#6E4630"); c.lineCap = "butt";
+    }
+
+    // ---- Beach: drawn palm, sun, boat and flags instead of emoji ----
+    var beachWall = CFG[4].wall;
+    CFG[4].wall = function (c, W, B) {
+      beachWall(c, W, B);
+      O(c, 70, 44, 22, "rgba(255,224,138,.35)"); O(c, 70, 44, 15, "#FFD23F");                                // sun
+      c.fillStyle = "#6FAFC9"; c.beginPath(); c.moveTo(0, B - 90); c.quadraticCurveTo(40, B - 112, 96, B - 98); c.quadraticCurveTo(140, B - 90, 150, B - 90); c.closePath(); c.fill(); // headland
+      c.fillStyle = "#FFFFFF"; c.beginPath(); c.moveTo(150, B - 104); c.lineTo(150, B - 128); c.lineTo(164, B - 106); c.closePath(); c.fill(); // sailboat
+      c.fillStyle = "#E03A3A"; c.beginPath(); c.moveTo(148, B - 106); c.lineTo(148, B - 122); c.lineTo(138, B - 106); c.closePath(); c.fill();
+      c.fillStyle = "#2B4A80"; c.beginPath(); c.moveTo(136, B - 103); c.lineTo(166, B - 103); c.lineTo(160, B - 97); c.lineTo(141, B - 97); c.closePath(); c.fill();
+      c.strokeStyle = "rgba(255,255,255,.7)"; c.lineWidth = 1.5; [[20, B - 74], [90, B - 66], [170, B - 78], [250, B - 70]].forEach(function (p) { c.beginPath(); c.moveTo(p[0], p[1]); c.quadraticCurveTo(p[0] + 10, p[1] - 4, p[0] + 22, p[1]); c.stroke(); });
+      palm(c, 34, B - 40, 150, 22);
+      [[118, B - 46], [196, B - 44]].forEach(function (p) { c.fillStyle = "#5A5A5A"; c.fillRect(p[0], p[1] - 30, 2, 30); c.fillStyle = "#E23B2E"; c.fillRect(p[0] + 2, p[1] - 30, 12, 6); c.fillStyle = "#F4C430"; c.fillRect(p[0] + 2, p[1] - 24, 12, 6); }); // red-and-yellow flags: swim between them
+    };
+    CFG[4].deco = [];
+
+    // ---- Hell: a cavern office. Rock, glowing cracks, filing cabinets and a take-a-number machine ----
+    CFG[6].wall = function (c, W, B) {
+      var g = c.createLinearGradient(0, 0, 0, B); g.addColorStop(0, "#1E0508"); g.addColorStop(0.7, "#4A0E12"); g.addColorStop(1, "#7A1A14"); c.fillStyle = g; c.fillRect(0, 0, W, B);
+      c.fillStyle = "rgba(0,0,0,.22)"; [[40, 60, 34, 18], [150, 30, 40, 14], [110, 140, 30, 20], [300, 160, 36, 16], [190, 200, 44, 18], [60, 230, 30, 14]].forEach(function (b) { E(c, b[0], b[1], b[2], b[3], 0.3, c.fillStyle); });
+      c.fillStyle = "#14030A"; for (var x = 0; x < 220; x += 22) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x + 22, 0); c.lineTo(x + 11, 14 + (x * 7 % 22)); c.closePath(); c.fill(); }  // stalactites
+      var p = 0.6 + Math.sin(now() * 2) * 0.25;
+      [[[8, 120], [26, 140], [20, 168], [38, 190]], [[168, 96], [186, 112], [178, 136]], [[330, 140], [312, 168], [326, 196], [312, 220]]].forEach(function (k) { L(c, k, "#7A1A08", 5); L(c, k, "rgba(255,140,40," + p + ")", 2); });
+      var lg = c.createLinearGradient(0, B - 70, 0, B); lg.addColorStop(0, "rgba(255,110,30,0)"); lg.addColorStop(1, "rgba(255,110,30,.55)"); c.fillStyle = lg; c.fillRect(0, B - 70, W, 70);
+      // filing cabinets (forms in triplicate, for eternity)
+      [[54, 170], [92, 196]].forEach(function (f) { var h = B - 26 - f[1]; R(c, f[0], f[1], 36, h, 3, "#5E5A62"); for (var y = f[1] + 4; y < B - 34; y += 30) { R(c, f[0] + 3, y, 30, 26, 2, "#6E6A74"); c.fillStyle = "#2B2340"; c.fillRect(f[0] + 13, y + 6, 10, 3); R(c, f[0] + 11, y + 13, 14, 8, 1, "#EDE6D6"); } });
+      c.fillStyle = "#EDE6D6"; c.save(); c.translate(70, 168); c.rotate(-0.15); c.fillRect(-12, -6, 24, 6); c.restore(); c.fillStyle = "#C2251E"; c.fillRect(56, 160, 30, 3);  // paperwork + red tape
+      // take-a-number machine on a pole (right)
+      c.fillStyle = "#3A2B2B"; c.fillRect(312, 186, 4, B - 212); R(c, 298, 146, 32, 42, 4, "#B3122E"); R(c, 302, 152, 24, 12, 2, "#1A0A0A");
+      c.font = "700 8px Poppins, sans-serif"; c.textAlign = "center"; c.fillStyle = "#FF5A3A"; c.fillText((((now() / 4) | 0) % 900 + 100).toString(), 314, 162);
+      c.fillStyle = "#FFFFFF"; c.font = "800 5px Poppins, sans-serif"; c.fillText("TAKE A", 314, 174); c.fillText("NUMBER", 314, 181);
+      c.fillStyle = "#F4ECD8"; c.fillRect(310, 188, 8, 6);
+    };
+    CFG[6].view = function (c) {
+      var g = c.createLinearGradient(0, 24, 0, 110); g.addColorStop(0, "#3A0A0A"); g.addColorStop(1, "#C2401E"); c.fillStyle = g; c.fillRect(222, 24, 118, 86);
+      c.fillStyle = "#1A0606"; c.beginPath(); c.moveTo(222, 92); [[236, 58], [250, 78], [266, 46], [284, 80], [302, 62], [320, 84], [340, 66], [340, 110], [222, 110]].forEach(function (q) { c.lineTo(q[0], q[1]); }); c.fill();
+      c.fillStyle = "#F26A1E"; c.beginPath(); c.moveTo(222, 104); c.quadraticCurveTo(280, 92, 340, 100); c.lineTo(340, 110); c.lineTo(222, 110); c.fill();
+      c.strokeStyle = "#FFD23F"; c.lineWidth = 1.5; var s = (now() * 12) % 40; [0, 40, 80].forEach(function (o) { c.beginPath(); c.moveTo(226 + o + s, 104); c.lineTo(238 + o + s, 103); c.stroke(); });
+      c.fillStyle = "rgba(60,40,40,.55)"; [[250, 44, 8], [262, 38, 10], [276, 32, 8]].forEach(function (q) { O(c, q[0], q[1], q[2], c.fillStyle); });
+    };
+    CFG[6].deco = [];
+    CFG[6].benchFn = function (c, W, B) { c.fillStyle = "#2B1E1E"; c.fillRect(0, B - 24, W, 8); var p = 0.55 + Math.sin(now() * 3) * 0.25; L(c, [[30, B - 20], [60, B - 14], [96, B - 18]], "rgba(255,120,40," + p + ")", 1.5); L(c, [[200, B - 22], [230, B - 15], [262, B - 19], [300, B - 13]], "rgba(255,120,40," + p + ")", 1.5); };
+
+    // ---- Bath Time: subway tiles, mirror cabinet, shower curtain, towel rail, bath rim ----
+    CFG[7].wall = function (c, W, B) {
+      c.fillStyle = "#F7FAFB"; c.fillRect(0, 0, W, B);
+      c.strokeStyle = "#DCE6EB"; c.lineWidth = 1; for (var y = 0, r = 0; y < B - 92; y += 14, r++) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); for (var x = r % 2 ? 14 : 0; x < W; x += 28) { c.beginPath(); c.moveTo(x, y); c.lineTo(x, y + 14); c.stroke(); } }
+      c.fillStyle = "#BFE3EC"; c.fillRect(0, B - 92, W, 92); c.strokeStyle = "#A6D2DE"; for (x = 0; x < W; x += 24) { c.beginPath(); c.moveTo(x, B - 92); c.lineTo(x, B); c.stroke(); } for (y = B - 92; y < B; y += 24) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); }
+      c.fillStyle = "#7FB8C9"; c.fillRect(0, B - 96, W, 5);
+      // extractor fan
+      R(c, 150, 12, 28, 28, 4, "#FFFFFF"); c.strokeStyle = "#C9D2D8"; c.lineWidth = 1.5; for (var k = 18; k < 36; k += 4) { c.beginPath(); c.moveTo(155, k); c.lineTo(173, k); c.stroke(); }
+      // mirror cabinet + shelf
+      R(c, 70, 44, 72, 66, 5, "#D6DEE2"); var mg = c.createLinearGradient(74, 48, 138, 106); mg.addColorStop(0, "#EAF4F8"); mg.addColorStop(1, "#C7DDE6"); R(c, 74, 48, 64, 58, 3, mg);
+      c.strokeStyle = "rgba(255,255,255,.9)"; c.lineWidth = 3; c.beginPath(); c.moveTo(86, 98); c.lineTo(110, 56); c.moveTo(98, 100); c.lineTo(116, 70); c.stroke();
+      R(c, 64, 116, 84, 6, 2, "#FFFFFF"); c.fillStyle = "#D6DEE2"; c.fillRect(64, 121, 84, 2);
+      R(c, 74, 98 + 6, 12, 12, 3, "#8BC4E8"); c.fillStyle = "#E05A8A"; c.fillRect(77, 92, 2, 14); c.fillStyle = "#5AA9DC"; c.fillRect(81, 94, 2, 12);       // toothbrush cup
+      R(c, 120, 100, 12, 16, 3, "#F4A6C0"); c.fillStyle = "#9AA6B2"; c.fillRect(124, 94, 4, 6); c.fillRect(124, 94, 8, 2);                                   // soap pump
+      // shower curtain on a rail (left)
+      c.fillStyle = "#B8C4CC"; c.fillRect(0, 6, 64, 3);
+      for (var i = 0; i < 6; i++) { c.fillStyle = i % 2 ? "#F4A6C0" : "#F8C3D5"; c.beginPath(); c.moveTo(i * 9, 9); c.lineTo(i * 9 + 9, 9); c.lineTo(i * 9 + 11, B - 30); c.lineTo(i * 9 + 1, B - 30); c.closePath(); c.fill(); }
+      c.fillStyle = "rgba(255,255,255,.75)"; [[8, 40], [24, 72], [14, 110], [34, 140], [10, 180], [28, 214]].forEach(function (q) { O(c, q[0], q[1], 3, c.fillStyle); });
+      // towel rail + towel (right)
+      c.fillStyle = "#B8C4CC"; c.fillRect(288, 146, 50, 4); O(c, 288, 148, 3, "#9AA6B2"); O(c, 338, 148, 3, "#9AA6B2");
+      R(c, 294, 148, 38, 70, 3, "#FFFFFF"); c.fillStyle = "#E05A8A"; c.fillRect(294, 196, 38, 5); c.fillRect(294, 205, 38, 2); c.fillStyle = "rgba(0,0,0,.05)"; c.fillRect(294, 148, 38, 6);
+      // toilet roll holder
+      c.fillStyle = "#B8C4CC"; c.fillRect(302, 240, 26, 3); E(c, 315, 250, 11, 9, 0, "#FFFFFF"); E(c, 315, 250, 3, 3, 0, "#D6DEE2");
+    };
+    CFG[7].view = function (c) {
+      c.fillStyle = "rgba(240,248,252,.82)"; c.fillRect(222, 24, 118, 86);
+      c.strokeStyle = "rgba(255,255,255,.9)"; c.lineWidth = 1; for (var x = 222; x < 360; x += 8) { c.beginPath(); c.moveTo(x, 24); c.lineTo(x - 30, 110); c.stroke(); }
+      R(c, 236, 92, 18, 14, 2, "#D9734A"); E(c, 239, 86, 6, 9, -0.5, "#3E8E4E"); E(c, 251, 85, 6, 10, 0.5, "#2E7D3E"); E(c, 245, 82, 4, 10, 0, "#4FA35E");   // pot plant on the sill
+      E(c, 318, 102, 9, 7, 0, "#FFD84D"); O(c, 323, 94, 5, "#FFD84D"); c.fillStyle = "#F28C28"; c.beginPath(); c.moveTo(327, 94); c.lineTo(333, 95); c.lineTo(327, 97); c.fill(); O(c, 324, 92, 1, "#2B2340"); // rubber duck
+    };
+    CFG[7].deco = [];
+    CFG[7].benchFn = function (c, W, B) { R(c, -6, B - 26, W + 12, 12, 6, "#FFFFFF"); c.fillStyle = "#E6EEF2"; c.fillRect(0, B - 17, W, 3); c.fillStyle = "#C9D2D8"; c.fillRect(326, B - 40, 6, 16); R(c, 316, B - 44, 26, 6, 3, "#C9D2D8"); O(c, 329, B - 46, 4, "#5AA9DC"); };
+
+    // ---- Christmas: lounge room with a real tree, garland, a framed picture and a wreath ----
+    CFG[8].wall = function (c, W, B) {
+      c.fillStyle = "#1F5C3A"; c.fillRect(0, 0, W, B); c.fillStyle = "#1A5233"; for (var x = 0; x < W; x += 36) c.fillRect(x, 0, 14, B);
+      c.fillStyle = "#E9DFC8"; c.fillRect(0, B - 98, W, 6); c.fillStyle = "#2A6B47"; c.fillRect(0, B - 92, W, 92);
+      c.strokeStyle = "#245E3E"; c.lineWidth = 2; for (x = 10; x < W; x += 70) c.strokeRect(x, B - 84, 54, 54);
+      // garland with lights across the top
+      var cols = ["#F2C230", "#E03A3A", "#5AA9DC", "#FFFFFF"], tw = now();
+      c.strokeStyle = "#2E7D4E"; c.lineWidth = 7; c.beginPath(); c.moveTo(0, 12); for (x = 0; x < 220; x += 44) c.quadraticCurveTo(x + 22, 34, x + 44, 12); c.stroke();
+      c.strokeStyle = "#3E9A5E"; c.lineWidth = 2; c.stroke();
+      for (x = 11; x < 220; x += 22) { var on = ((x / 22 | 0) + (tw * 2 | 0)) % 3 !== 0, yy = 12 + Math.sin(((x % 44) / 44) * Math.PI) * 15; O(c, x, yy + 4, 3.5, on ? cols[(x / 22 | 0) % 4] : "#5A6A5A"); }
+      // framed picture: a snowy cabin
+      R(c, 118, 54, 74, 56, 3, "#C9A24A"); R(c, 124, 60, 62, 44, 1, "#BFD8E8"); c.fillStyle = "#FFFFFF"; c.fillRect(124, 92, 62, 12);
+      c.fillStyle = "#8A5A3B"; c.fillRect(146, 80, 18, 14); c.fillStyle = "#C2253A"; c.beginPath(); c.moveTo(142, 81); c.lineTo(155, 70); c.lineTo(168, 81); c.closePath(); c.fill(); c.fillStyle = "#FFE08A"; c.fillRect(152, 84, 5, 5);
+      // the tree (left), presents underneath
+      c.fillStyle = "#6E4630"; c.fillRect(48, B - 70, 10, 26); R(c, 38, B - 50, 30, 22, 3, "#C2253A");
+      [[B - 78, 46], [B - 116, 38], [B - 150, 28], [B - 178, 18]].forEach(function (tr, j) { c.fillStyle = j % 2 ? "#2E8A4E" : "#2A7D46"; c.beginPath(); c.moveTo(53 - tr[1], tr[0]); c.lineTo(53, tr[0] - 48); c.lineTo(53 + tr[1], tr[0]); c.closePath(); c.fill(); });
+      c.strokeStyle = "#F2C230"; c.lineWidth = 1.5; [[B - 140, 22], [B - 108, 32], [B - 86, 40]].forEach(function (s) { c.beginPath(); c.moveTo(53 - s[1], s[0] - 6); c.quadraticCurveTo(53, s[0] + 6, 53 + s[1], s[0] - 10); c.stroke(); });
+      [[40, B - 96, "#E03A3A"], [68, B - 100, "#5AA9DC"], [50, B - 130, "#F2C230"], [62, B - 152, "#E03A3A"], [30, B - 84, "#F2C230"], [78, B - 82, "#FFFFFF"]].forEach(function (b) { O(c, b[0], b[1], 4, b[2]); O(c, b[0] - 1.3, b[1] - 1.3, 1.2, "rgba(255,255,255,.8)"); });
+      c.save(); c.translate(53, B - 230); c.fillStyle = "#FFD23F"; c.beginPath(); for (var k = 0; k < 10; k++) { var rr2 = k % 2 ? 4 : 10, a = -Math.PI / 2 + k * Math.PI / 5; c.lineTo(Math.cos(a) * rr2, Math.sin(a) * rr2); } c.closePath(); c.fill(); c.restore();
+      R(c, 82, B - 46, 22, 18, 2, "#5AA9DC"); c.fillStyle = "#FFFFFF"; c.fillRect(91, B - 46, 4, 18); c.fillRect(82, B - 39, 22, 4);
+      // wreath (right)
+      c.strokeStyle = "#2E7D4E"; c.lineWidth = 9; c.beginPath(); c.arc(314, 176, 17, 0, 7); c.stroke(); c.strokeStyle = "#3E9A5E"; c.lineWidth = 3; c.stroke();
+      [[300, 168], [326, 166], [318, 192], [302, 188]].forEach(function (b) { O(c, b[0], b[1], 2.8, "#E03A3A"); });
+      c.fillStyle = "#C2253A"; c.beginPath(); c.moveTo(314, 160); c.lineTo(304, 154); c.lineTo(304, 166); c.closePath(); c.fill(); c.beginPath(); c.moveTo(314, 160); c.lineTo(324, 154); c.lineTo(324, 166); c.closePath(); c.fill(); O(c, 314, 160, 3, "#A81E30");
+    };
+    CFG[8].view = function (c) {
+      c.fillStyle = "#1E2850"; c.fillRect(222, 24, 118, 86);
+      c.fillStyle = "#141B3A"; [[226, 70, 30, 40], [262, 60, 34, 50], [302, 74, 36, 36]].forEach(function (h) { c.fillRect(h[0], h[1], h[2], h[3]); c.beginPath(); c.moveTo(h[0] - 3, h[1]); c.lineTo(h[0] + h[2] / 2, h[1] - 14); c.lineTo(h[0] + h[2] + 3, h[1]); c.fill(); });
+      c.fillStyle = "#FFE08A"; [[232, 80], [244, 92], [270, 72], [284, 86], [310, 84], [326, 92]].forEach(function (w) { c.fillRect(w[0], w[1], 6, 6); });
+      c.fillStyle = "#FFFFFF"; c.fillRect(222, 102, 118, 8); var s = now() * 14;
+      for (var i = 0; i < 18; i++) { O(c, 222 + (i * 37 + Math.sin(i + s / 20) * 6) % 118, 24 + (i * 23 + s) % 86, 1.4, "rgba(255,255,255,.9)"); }
+    };
+    CFG[8].deco = [];
+    CFG[8].benchFn = function (c, W, B) { c.fillStyle = "#6E4630"; c.fillRect(0, B - 24, W, 4); c.strokeStyle = "#2E7D4E"; c.lineWidth = 5; c.beginPath(); c.moveTo(0, B - 18); for (var x = 0; x < W; x += 60) c.quadraticCurveTo(x + 30, B - 8, x + 60, B - 18); c.stroke(); [30, 90, 150, 210, 270, 330].forEach(function (x, i) { O(c, x, B - 12, 2.6, ["#E03A3A", "#F2C230"][i % 2]); }); };
+
+    // ---- Easter: a spring garden. Blossom tree, bunting, hedge, picket fence, tulips, a garden shed ----
+    CFG[9].wall = function (c, W, B) {
+      var g = c.createLinearGradient(0, 0, 0, B); g.addColorStop(0, "#BFE6FA"); g.addColorStop(1, "#EAF7FD"); c.fillStyle = g; c.fillRect(0, 0, W, B);
+      E(c, 60, 40, 26, 9, 0, "#FFFFFF"); E(c, 80, 34, 18, 10, 0, "#FFFFFF"); E(c, 160, 58, 22, 7, 0, "#FFFFFF");
+      c.fillStyle = "#A8D88A"; c.beginPath(); c.moveTo(0, 190); c.quadraticCurveTo(90, 160, 180, 186); c.quadraticCurveTo(260, 204, 360, 176); c.lineTo(360, B); c.lineTo(0, B); c.fill();
+      // garden shed (its window is the level's window)
+      R(c, 212, 14, 140, 150, 2, "#B98B5E"); c.strokeStyle = "#A07448"; c.lineWidth = 1.5; for (var x = 222; x < 352; x += 12) { c.beginPath(); c.moveTo(x, 14); c.lineTo(x, 164); c.stroke(); }
+      c.fillStyle = "#7A5236"; c.beginPath(); c.moveTo(204, 18); c.lineTo(282, 0); c.lineTo(360, 18); c.lineTo(360, 22); c.lineTo(204, 22); c.closePath(); c.fill();
+      // hedge and fence
+      c.fillStyle = "#4F8F3E"; for (x = 0; x < W; x += 22) O(c, x + 11, 214, 16, "#4F8F3E"); c.fillRect(0, 214, W, 26);
+      c.fillStyle = "#FFFFFF"; c.fillRect(0, 248, W, 5); c.fillRect(0, 270, W, 5);
+      for (x = 4; x < W; x += 18) { c.beginPath(); c.moveTo(x, B - 24); c.lineTo(x, 238); c.lineTo(x + 5, 230); c.lineTo(x + 10, 238); c.lineTo(x + 10, B - 24); c.closePath(); c.fillStyle = "#FFFFFF"; c.fill(); c.fillStyle = "rgba(0,0,0,.06)"; c.fillRect(x + 8, 238, 2, B - 262); }
+      // blossom tree (left)
+      c.fillStyle = "#7A5236"; c.beginPath(); c.moveTo(70, B - 26); c.lineTo(80, 120); c.lineTo(90, 120); c.lineTo(96, B - 26); c.closePath(); c.fill();
+      L(c, [[84, 140], [60, 110]], "#7A5236", 5); L(c, [[86, 130], [112, 100]], "#7A5236", 4);
+      [[58, 96, 26], [90, 78, 30], [120, 98, 22], [76, 114, 20], [106, 120, 18]].forEach(function (b) { O(c, b[0], b[1], b[2], "#F8C3D5"); });
+      c.fillStyle = "#FFFFFF"; [[50, 90], [70, 74], [96, 66], [118, 90], [84, 104], [64, 112], [104, 112], [126, 104]].forEach(function (b) { O(c, b[0], b[1], 2.4, "#FFFFFF"); O(c, b[0], b[1], 1, "#E05A8A"); });
+      // bunting from the tree to the shed
+      var bc = ["#E05A8A", "#F2C230", "#7FC4B0", "#B79AE0"]; c.strokeStyle = "#8A6A45"; c.lineWidth = 1.2; c.beginPath(); c.moveTo(120, 70); c.quadraticCurveTo(168, 96, 212, 60); c.stroke();
+      for (var i = 0; i < 7; i++) { var k = (i + 0.5) / 7, bx = 120 + 92 * k, by = (1 - k) * (1 - k) * 70 + 2 * (1 - k) * k * 96 + k * k * 60; c.fillStyle = bc[i % 4]; c.beginPath(); c.moveTo(bx - 5, by); c.lineTo(bx + 5, by); c.lineTo(bx, by + 11); c.closePath(); c.fill(); }
+      // tulips along the fence (away from the item lanes) and a hidden egg
+      [[118, "#E03A3A"], [134, "#F2C230"], [226, "#E05A8A"], [242, "#E03A3A"], [330, "#F2C230"], [346, "#B79AE0"]].forEach(function (f) { L(c, [[f[0], B - 24], [f[0], B - 48]], "#3E8E4E", 2); E(c, f[0] + 5, B - 40, 5, 2.5, -0.5, "#4F8F3E"); c.fillStyle = f[1]; c.beginPath(); c.moveTo(f[0] - 5, B - 56); c.lineTo(f[0] - 2, B - 51); c.lineTo(f[0], B - 57); c.lineTo(f[0] + 2, B - 51); c.lineTo(f[0] + 5, B - 56); c.quadraticCurveTo(f[0] + 6, B - 44, f[0], B - 46); c.quadraticCurveTo(f[0] - 6, B - 44, f[0] - 5, B - 56); c.fill(); });
+      E(c, 248, B - 30, 6, 8, 0.2, "#B79AE0"); c.strokeStyle = "#FFFFFF"; c.lineWidth = 1.5; c.beginPath(); c.moveTo(243, B - 31); c.lineTo(253, B - 29); c.stroke();
+    };
+    CFG[9].view = function (c) {
+      c.fillStyle = "#5A4030"; c.fillRect(222, 24, 118, 86);
+      c.fillStyle = "#3E2C20"; c.fillRect(222, 88, 118, 22);
+      L(c, [[240, 30], [244, 88]], "#C9A66B", 2.5); c.strokeStyle = "#8E8A9A"; c.lineWidth = 2; for (var k = 0; k < 5; k++) { c.beginPath(); c.moveTo(234 + k * 3, 30); c.lineTo(234 + k * 3, 38); c.stroke(); } // rake
+      R(c, 268, 70, 26, 20, 4, "#5AA9DC"); L(c, [[294, 76], [308, 66]], "#5AA9DC", 4); c.strokeStyle = "#3E7BB0"; c.lineWidth = 3; c.beginPath(); c.arc(281, 70, 9, Math.PI, 2 * Math.PI); c.stroke(); // watering can
+      [[318, 80], [332, 84]].forEach(function (p) { R(c, p[0] - 6, p[1], 12, 10, 2, "#D9734A"); O(c, p[0], p[1] - 4, 6, "#4F8F3E"); });
+    };
+    CFG[9].deco = [];
+    CFG[9].benchFn = function (c, W, B) { for (var x = 0; x < W; x += 12) { c.fillStyle = (x / 12) % 2 ? "#FFFFFF" : "#F4A6C0"; c.fillRect(x, B - 24, 12, 6); c.fillStyle = (x / 12) % 2 ? "#F4A6C0" : "#FFFFFF"; c.fillRect(x, B - 18, 12, 6); } };
+
+    // ---- Halloween: haunted parlour. Wainscoting, cobwebs, a portrait with blinking eyes, candelabra, moonlit tree ----
+    CFG[10].wall = function (c, W, B) {
+      c.fillStyle = "#3B2A5A"; c.fillRect(0, 0, W, B); c.fillStyle = "#33244E"; for (var x = 0; x < W; x += 30) c.fillRect(x, 0, 12, B);
+      c.fillStyle = "#4A3A2A"; c.fillRect(0, B - 100, W, 6); c.fillStyle = "#2A1E2E"; c.fillRect(0, B - 94, W, 94);
+      c.strokeStyle = "#3A2A3E"; c.lineWidth = 2; for (x = 8; x < W; x += 60) c.strokeRect(x, B - 86, 46, 56);
+      // cobweb, top-left
+      c.strokeStyle = "rgba(230,225,240,.55)"; c.lineWidth = 1; for (var a = 0; a <= 6; a++) { var an = a / 6 * Math.PI / 2; c.beginPath(); c.moveTo(0, 0); c.lineTo(Math.cos(an) * 70, Math.sin(an) * 70); c.stroke(); }
+      [18, 34, 52].forEach(function (r) { c.beginPath(); for (var a = 0; a <= 6; a++) { var an = a / 6 * Math.PI / 2, rr2 = r - (a % 2 ? 4 : 0); c.lineTo(Math.cos(an) * rr2, Math.sin(an) * rr2); } c.stroke(); });
+      L(c, [[40, 50], [40, 76]], "rgba(230,225,240,.55)", 1); O(c, 40, 80, 4, "#14101E"); [-1, 1].forEach(function (s) { L(c, [[40, 80], [40 + s * 7, 76]], "#14101E", 1); L(c, [[40, 81], [40 + s * 7, 85]], "#14101E", 1); });
+      // portrait with eyes that follow you (blink every few seconds)
+      R(c, 110, 40, 66, 82, 6, "#8A6A2A"); R(c, 116, 46, 54, 70, 4, "#1B1430"); E(c, 143, 80, 18, 22, 0, "#2E2440");
+      c.fillStyle = "#2E2440"; c.beginPath(); c.moveTo(127, 66); c.lineTo(130, 52); c.lineTo(137, 62); c.fill(); c.beginPath(); c.moveTo(159, 66); c.lineTo(156, 52); c.lineTo(149, 62); c.fill();
+      var bl = (now() % 4) > 3.85; [136, 150].forEach(function (ex) { if (bl) { c.fillStyle = "#FFE14D"; c.fillRect(ex - 3, 77, 6, 1.5); } else { E(c, ex, 78, 3, 4, 0, "#FFE14D"); O(c, ex + 1, 78, 1.3, "#14101E"); } });
+      R(c, 132, 124, 22, 8, 2, "#8A6A2A");
+      // side table with a candelabra (right)
+      c.fillStyle = "#4A3426"; c.fillRect(290, 212, 52, 6); c.fillRect(296, 218, 4, B - 244); c.fillRect(332, 218, 4, B - 244);
+      c.fillStyle = "#B8A16A"; c.fillRect(314, 176, 4, 36); c.fillRect(300, 186, 32, 3); c.fillRect(300, 176, 3, 12); c.fillRect(329, 176, 3, 12); E(c, 316, 212, 10, 3, 0, "#B8A16A");
+      [[301, 166], [316, 162], [330, 166]].forEach(function (cd, i) { c.fillStyle = "#EDE6D6"; c.fillRect(cd[0] - 2.5, cd[1], 5, 12); flame(c, cd[0], cd[1], 0.7, i); });
+      // jack-o'-lantern by the wall
+      E(c, 104, B - 40, 15, 12, 0, "#F28C28"); E(c, 104, B - 40, 6, 12, 0, "#E07A1E"); c.fillStyle = "#3E7A2E"; c.fillRect(102, B - 56, 4, 6);
+      c.fillStyle = "#FFE08A"; [[98, B - 44], [110, B - 44]].forEach(function (e) { c.beginPath(); c.moveTo(e[0] - 3, e[1] + 2); c.lineTo(e[0], e[1] - 3); c.lineTo(e[0] + 3, e[1] + 2); c.fill(); });
+      c.beginPath(); c.moveTo(96, B - 36); c.lineTo(112, B - 36); c.lineTo(109, B - 32); c.lineTo(104, B - 34); c.lineTo(99, B - 32); c.closePath(); c.fill();
+    };
+    CFG[10].view = function (c) {
+      var g = c.createLinearGradient(0, 24, 0, 110); g.addColorStop(0, "#14101E"); g.addColorStop(1, "#3B2A5A"); c.fillStyle = g; c.fillRect(222, 24, 118, 86);
+      O(c, 306, 48, 14, "#F4F1DE"); O(c, 300, 44, 3, "#E2DEC8"); O(c, 311, 54, 2.5, "#E2DEC8");
+      c.fillStyle = "#0E0A16"; c.beginPath(); c.moveTo(222, 100); c.quadraticCurveTo(280, 88, 340, 98); c.lineTo(340, 110); c.lineTo(222, 110); c.fill();
+      L(c, [[250, 100], [252, 70], [240, 52]], "#0E0A16", 4); L(c, [[252, 72], [266, 58], [276, 54]], "#0E0A16", 2.5); L(c, [[251, 82], [236, 74]], "#0E0A16", 2); L(c, [[244, 58], [232, 50]], "#0E0A16", 1.5);
+      var f = Math.sin(now() * 10) * 3, bx = 280 + Math.sin(now() * 0.7) * 20, by = 66 + Math.cos(now() * 0.9) * 6;
+      c.fillStyle = "#0E0A16"; c.beginPath(); c.moveTo(bx, by); c.quadraticCurveTo(bx - 6, by - 6 - f, bx - 12, by - 2); c.quadraticCurveTo(bx - 7, by, bx, by + 2); c.quadraticCurveTo(bx + 7, by, bx + 12, by - 2); c.quadraticCurveTo(bx + 6, by - 6 - f, bx, by); c.fill();
+    };
+    CFG[10].deco = [];
+    CFG[10].benchFn = function (c, W, B) { c.fillStyle = "#5E5A6A"; c.fillRect(0, B - 24, W, 6); L(c, [[40, B - 24], [52, B - 18], [48, B - 12]], "#3A3646", 1.2); L(c, [[230, B - 24], [238, B - 16]], "#3A3646", 1.2); c.fillStyle = "#EDE6D6"; [[150, 5], [210, 4]].forEach(function (d) { c.fillRect(d[0], B - 24, 3, d[1]); }); };
+  })();
+
   window.MW_LEVEL_CFG = CFG;
 
   window.MW_LEVEL = function (A, n) {
@@ -249,6 +446,7 @@
       [/All ten vet rounds\. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all\./, "All ten rounds. " + N.boss + " gave up, " + N.nurse + " waved a white flag and the hedgehog slept through it all."],
       [/Vet Endless unlocked/g, C.name + " Endless unlocked"], [/Temperature taken\. 38\.6°\. Dignity: 0%\./g, "Got you. Dignity: 0%."],
       [/Dr Pokesworth/g, N.boss], [/Nurse Burrito/g, N.nurse], [/\bnurse\b/g, N.nurse.replace(/^the /, "")], [/\bthe vet\b/g, N.boss], [/\bvet\b/g, N.place], [/\bVet\b/g, C.name], [/\bVET\b/g, UP(N.place)],
+      [/\bhimself\b/g, "herself"], [/before he gets/g, "before she gets"], [/Caught\. Vaccinated\./g, "Caught."], [/^Vaccinated\. /, "Got you. "], [/^CONE TOSS!$/, "INCOMING!"], [/^SWAT THE CONE!$/, "SWAT IT!"],
       [/cockatoo/g, N.bird], [/Cockatoo/g, cap(N.bird)], [/thermometer/g, N.prop], [/Thermometer/g, cap(N.prop)], [/THERMOMETER/g, UP(N.prop)],
       [/towel/g, N.towel], [/Towel/g, cap(N.towel)], [/TOWEL/g, UP(N.towel)], [/clinic/g, N.place], [/exam table/g, N.bench], [/[Rr]eception/g, "the boss"], [/waiting room/g, N.place]
     ];
