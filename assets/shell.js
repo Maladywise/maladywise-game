@@ -1467,14 +1467,16 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // The print button (and Ctrl+P) lay the page out as a two-column A4 sheet, open the side-effect list,
   // drop the FAQ, sources and site chrome, then shrink the whole sheet just enough to fit one page.
   function medPrint() {
-    if (!/^\/medicines\/[^\/]+\/$/.test(location.pathname)) return;
     var main = document.querySelector("main.doc"); if (!main || main.querySelector(".medp-head")) return;
+    var kind = /^\/medicines\/[^\/]+\/$/.test(location.pathname) ? "Medicine guide" : "";
+    var ft = main.querySelector(".fs-top .meta"); if (!kind && ft && /^Fact sheet$/i.test(ft.textContent.trim())) kind = "Fact sheet";
+    if (!kind) return; var fact = kind === "Fact sheet";
     document.body.classList.add("medp");
     var h1 = main.querySelector("h1"); if (!h1) return;
-    h1.insertAdjacentHTML("beforebegin", '<div class="medp-head"><b>Malady Wise</b><span>Medicine guide · maladywise.com' + location.pathname + "</span></div>");
+    h1.insertAdjacentHTML("beforebegin", '<div class="medp-head"><b>Malady Wise</b><span>' + kind + ' · maladywise.com' + location.pathname + "</span></div>");
     var start = main.querySelector(".glance") || main.querySelector(".lede") || h1, n = start.nextElementSibling, box = document.createElement("div");
     box.className = "medp-cols";
-    var stop = function (el) { return !el || el.matches("section.faq, .callout, ul.src, .mw-sharecard, section.related, .print-url, .print-qr, footer, .nl, .mwx, .mw-about") || (el.tagName === "H2" && /^(More information|Sources|Evidence)/i.test(el.textContent.trim())); };
+    var stop = function (el) { return !el || el.matches((fact ? "" : ".callout, ") + "section.faq, ul.src, ul.res, .mw-sharecard, section.related, .print-url, .print-qr, footer, .nl, .mwx, .mw-about") || (el.tagName === "H2" && /^(More information|Sources|Evidence|Helpful resources|Common questions)/i.test(el.textContent.trim())); };
     if (start.classList.contains("glance")) { var gh = start.previousElementSibling; if (gh && gh.tagName === "H2") gh.classList.add("medp-glance-h"); }
     var take = []; while (n && !stop(n)) { take.push(n); n = n.nextElementSibling; }
     if (!take.length) return;
