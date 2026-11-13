@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Send queued X posts to Typefully (API v2), one per slot (7:30am and 12:30pm Sydney), always as an image post + link reply.
 
-Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon", "thread": ["post 1", ...], "note": "...", "card": true}]}
+Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon"|"pm", "thread": ["post 1", ...], "note": "...", "card": true}]}
 - Two slots a day: "am" = 7:30am (the weekly mix; the default when "slot" is missing) and "noon" = 12:30pm
   (world health day posts: history, facts, why it matters). One post per slot.
 - Entries without "typefully_id" whose date is today..today+10 (Sydney) are created as scheduled drafts.
@@ -46,7 +46,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(ROOT, "_social", "queue.json")
 API = "https://api.typefully.com/v2"
 SYD = ZoneInfo("Australia/Sydney")
-SLOTS = {"am": (7, 30), "noon": (12, 30)}   # 7:30am Sydney (weekly mix); 12:30pm Sydney (world health day posts)
+SLOTS = {"am": (7, 30), "noon": (12, 30), "pm": (18, 0)}   # pm = 6pm Sydney (extra world-day or teaser posts)
+#    # 7:30am Sydney (weekly mix); 12:30pm Sydney (world health day posts)
 
 
 def slot_of(p):
@@ -145,7 +146,7 @@ def scheduled_dates(sid):
         s = d.get("scheduled_date") or d.get("publish_at")
         if s:
             t = datetime.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(SYD)
-            out.add("%s|%s" % (t.date().isoformat(), "noon" if t.hour >= 11 else "am"))
+            out.add("%s|%s" % (t.date().isoformat(), "pm" if t.hour >= 16 else "noon" if t.hour >= 11 else "am"))
     return out
 
 

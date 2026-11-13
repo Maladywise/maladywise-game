@@ -2027,7 +2027,8 @@
    "puzzle_theme": "Neonatology: prematurity, NICU, surfactant, newborn care",
    "_note": "Real date is 17 Nov (WHO). Shares the date with Cervical Cancer Elimination Day, which leads; prematurity shows as \"Also\".",
    "icon": "kangaroo",
-   "icon_fact": "A newborn joey is jellybean-sized and finishes growing in the pouch, the idea behind 'kangaroo care' skin-to-skin for preterm babies."
+   "icon_fact": "A newborn joey is jellybean-sized and finishes growing in the pouch, the idea behind 'kangaroo care' skin-to-skin for preterm babies.",
+   "page": "/premature-birth/"
   },
   {
    "id": "cervical",
