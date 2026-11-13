@@ -174,6 +174,13 @@
 "label": "Condition",
 "title": "Insect Bites and Stings"
 },
+"bladder-cancer": {
+"url": "/bladder-cancer/",
+"key": "3d8b400d215d",
+"v": "5e84c22f",
+"label": "Condition",
+"title": "Bladder Cancer"
+},
 "bladder-leaks": {
 "url": "/bladder-leaks/",
 "key": "a2c841dbfc72",
@@ -769,6 +776,13 @@
 "label": "Condition",
 "title": "Fatty Liver (MASLD)"
 },
+"female-infertility": {
+"url": "/female-infertility/",
+"key": "0f29b7f9857e",
+"v": "a4ce57bb",
+"label": "Condition",
+"title": "Female Infertility"
+},
 "fever-in-children": {
 "url": "/fever-in-children/",
 "key": "334abefdfbd1",
@@ -1189,6 +1203,13 @@
 "label": "Fact sheet",
 "title": "Long COVID"
 },
+"low-libido-men": {
+"url": "/low-libido-men/",
+"key": "718952cb39c1",
+"v": "30be1821",
+"label": "Condition",
+"title": "Low Libido in Men"
+},
 "low-libido-women": {
 "url": "/low-libido-women/",
 "key": "c9f737c70f2f",
@@ -1202,6 +1223,13 @@
 "v": "d90e226d",
 "label": "Condition",
 "title": "Lupus (SLE)"
+},
+"male-infertility": {
+"url": "/male-infertility/",
+"key": "1999084921f1",
+"v": "3eacd578",
+"label": "Condition",
+"title": "Male Infertility"
 },
 "marine-stings": {
 "url": "/marine-stings/",
@@ -1252,12 +1280,26 @@
 "label": "Medicine",
 "title": "Amitriptyline"
 },
+"medicines-atomoxetine": {
+"url": "/medicines/atomoxetine/",
+"key": "dffc1d6e12d1",
+"v": "31ee769e",
+"label": "Medicine",
+"title": "Atomoxetine"
+},
 "medicines-beta-blockers": {
 "url": "/medicines/beta-blockers/",
 "key": "84d6aed44712",
 "v": "4d6ed880",
 "label": "Medicine",
 "title": "Beta blockers"
+},
+"medicines-bupropion": {
+"url": "/medicines/bupropion/",
+"key": "51b47a5e8b60",
+"v": "d94cbc8a",
+"label": "Medicine",
+"title": "Bupropion"
 },
 "medicines-clonidine": {
 "url": "/medicines/clonidine/",
@@ -1272,6 +1314,20 @@
 "v": "e72a3524",
 "label": "Medicine",
 "title": "Dexamfetamine"
+},
+"medicines-dienogest": {
+"url": "/medicines/dienogest/",
+"key": "93192c555fff",
+"v": "9001562c",
+"label": "Medicine",
+"title": "Visanne (Dienogest)"
+},
+"medicines-duloxetine": {
+"url": "/medicines/duloxetine/",
+"key": "8e071b1b897f",
+"v": "0db016f1",
+"label": "Medicine",
+"title": "Duloxetine"
 },
 "medicines-escitalopram": {
 "url": "/medicines/escitalopram/",
@@ -1294,12 +1350,33 @@
 "label": "Medicine",
 "title": "GLP-1 medicines"
 },
+"medicines-goserelin": {
+"url": "/medicines/goserelin/",
+"key": "262444df4975",
+"v": "b594e094",
+"label": "Medicine",
+"title": "Zoladex (Goserelin)"
+},
 "medicines-guanfacine": {
 "url": "/medicines/guanfacine/",
 "key": "d219a987925e",
 "v": "11afbce1",
 "label": "Medicine",
 "title": "Guanfacine"
+},
+"medicines-lamotrigine": {
+"url": "/medicines/lamotrigine/",
+"key": "1b02e1c6e1d5",
+"v": "5e7bd412",
+"label": "Medicine",
+"title": "Lamotrigine"
+},
+"medicines-memantine": {
+"url": "/medicines/memantine/",
+"key": "163afafd986c",
+"v": "ae4715e9",
+"label": "Medicine",
+"title": "Memantine"
 },
 "medicines-metformin": {
 "url": "/medicines/metformin/",
@@ -1329,12 +1406,26 @@
 "label": "Medicine",
 "title": "Modafinil"
 },
+"medicines-pde5-inhibitors": {
+"url": "/medicines/pde5-inhibitors/",
+"key": "d8727340b68a",
+"v": "8a11671e",
+"label": "Medicine",
+"title": "PDE5 inhibitors"
+},
 "medicines-ppis": {
 "url": "/medicines/ppis/",
 "key": "6d8cf873f587",
 "v": "ec8bd0c1",
 "label": "Medicine",
 "title": "Proton pump inhibitors (PPIs)"
+},
+"medicines-pregabalin": {
+"url": "/medicines/pregabalin/",
+"key": "d9ba5d43fe04",
+"v": "919ff645",
+"label": "Medicine",
+"title": "Pregabalin"
 },
 "medicines-quetiapine": {
 "url": "/medicines/quetiapine/",
@@ -1679,6 +1770,13 @@
 "label": "Condition",
 "title": "Premature Birth"
 },
+"prostate-cancer": {
+"url": "/prostate-cancer/",
+"key": "2f1689e9deea",
+"v": "2c53b71f",
+"label": "Condition",
+"title": "Prostate Cancer"
+},
 "psoriasis": {
 "url": "/psoriasis/",
 "key": "c566760f9bc4",
@@ -1790,6 +1888,13 @@
 "v": "59e21a2e",
 "label": "Condition",
 "title": "Scleroderma (Systemic Sclerosis)"
+},
+"scombroid": {
+"url": "/scombroid/",
+"key": "e6a6c90d32f1",
+"v": "8f2dd433",
+"label": "Condition",
+"title": "Scombroid Fish Poisoning"
 },
 "seb-derm": {
 "url": "/seb-derm/",
