@@ -493,6 +493,8 @@ def main():
     for p, why in bad:
         print("ERROR: not sending %s: %s" % (p["date"], why), file=sys.stderr)
     todo = [p for p in todo if p not in [b[0] for b in bad]]
+    if KEY and not dry:  # every run, even with nothing new: one picture per thread, no second link card
+        hide_double_previews(social_set_id())
     if not todo:
         print("Nothing to queue.")
         return 1 if bad else 0
@@ -501,8 +503,6 @@ def main():
     sid = None if dry else social_set_id()
     # ONE POST PER SLOT: dates that already have a scheduled Typefully draft (hand-made or earlier runs).
     busy = set() if dry else scheduled_dates(sid)
-    if not dry:
-        hide_double_previews(sid)
     out_dir = a.out or tempfile.mkdtemp(prefix="mw-cards-")
     os.makedirs(out_dir, exist_ok=True)
 
