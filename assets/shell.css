@@ -986,7 +986,10 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 #game .head{min-width:0}#game .head .eyebrow{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .hday-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
 .hday-row .hday-go{margin:0}
-.hday-up{font:600 14px Poppins,system-ui,sans-serif;color:var(--brand);text-decoration:none;white-space:nowrap}
+.hday-row{flex-wrap:wrap}.hday-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.hday-off{padding:6px 14px;border-radius:999px;border:1.5px solid var(--brand);color:var(--brand)!important;text-decoration:none;font-weight:600;font-size:14px}
+.hday-off:hover{background:var(--brand);color:#fff!important}
+.hday-up{font:600 14px Poppins,system-ui,sans-serif;color:var(--brand);text-decoration:none;white-space:nowrap;margin-left:auto}
 .hday-up:hover{text-decoration:underline}
 /* desktop: original cards on a fixed 4-column grid; 1-2 game sections take half a row so two sit side by side */
 @media (min-width:900px){

@@ -1167,12 +1167,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead) || (lead.priority || 9) >= 4; // priority 4+ = a small nod, never the main day
       var themed = !NORMIE && !quiet && lead.puzzle_theme && (lead.kind === "day" || first) && !/puzzle/i.test(lead.blurb || "");
       var nm = function (x) { return esc2(regionOf(x) ? x.name.replace(/\s*\([^()]+\)\s*$/, "") : x.name); };
-      var also = normal.filter(function (x) { return x !== lead && (x.priority || 9) <= 3; }).slice(0, 2);
+      var also = normal.filter(function (x) { return x !== lead && (x.priority || 9) <= 4; }).slice(0, 5); // several other days, most important first
       var html = quiet ? '<section class="hday quiet"><p><b>' + nm(lead) + ".</b> " + esc2(lead.blurb || "") + (lead.page && !NORMIE ? ' <a href="' + esc2(lead.page) + '">Fact sheet</a>' : lead.link ? ' <a href="' + esc2(lead.link) + '" target="_blank" rel="noopener">More</a>' : "") + "</p></section>" :
         '<section class="hday' + (lead.icon ? " has-ic" : "") + '">' + (lead.icon ? '<img class="hday-ic" src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="84" height="84">' : "") + '<span class="hday-k">' + (lead.kind === "week" ? "This week" : "Today") + "</span>" +
         "<h2>" + nm(lead) + "</h2><p>" + esc2(lead.blurb || "") + (themed ? " <b>Look out for themed puzzles today.</b>" : "") + "</p>" +
         (also.length ? '<p class="hday-also">Also: ' + also.map(function (x) { return x.page && !NORMIE ? '<a href="' + esc2(x.page) + '">' + nm(x) + "</a>" : x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + nm(x) + "</a>" : nm(x); }).join(", ") + "</p>" : "") +
-        '<div class="hday-row">' + (lead.page && !NORMIE ? '<a class="hday-go" href="' + esc2(lead.page) + '">Read our fact sheet</a>' : lead.link ? '<a class="hday-go" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">Learn more</a>' : "<span></span>") + '<a class="hday-up" href="/days/">Coming up \u203a</a></div>' + "</section>";
+        '<div class="hday-row"><span class="hday-btns">' + (lead.page && !NORMIE ? '<a class="hday-go" href="' + esc2(lead.page) + '">Read our fact sheet</a>' : "") + (lead.link ? '<a class="' + (lead.page && !NORMIE ? "hday-off" : "hday-go") + '" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">' + (lead.page && !NORMIE ? "Official site \u2197" : "Learn more \u2197") + "</a>" : "") + '</span><a class="hday-up" href="/days/">Coming up \u203a</a></div>' + "</section>";
       slot.innerHTML = html;
     }
 
