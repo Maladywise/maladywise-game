@@ -1,4 +1,339 @@
 {
- "text": "Play today's Wordemic → https://maladywise.com/wordemic/",
- "hide_link_preview": true
+ "_about": "X posts queued for Typefully. One entry per day, posted at 7:30am Sydney. The GitHub Action (.github/workflows/typefully.yml) sends entries up to 10 days ahead and writes back typefully_id so nothing is sent twice. Add entries; never edit ones that already have typefully_id. 'thread' is a list of posts, each <= 280 characters. Post 1 gets an image and NO link; put the link in post 2 (the first reply), e.g. \"Play today's puzzle → https://...\". The script moves any link out of post 1 at send time. Never store API keys here.",
+ "posts": [
+  {
+   "date": "2026-11-13",
+   "note": "Fri 13th peptides (rebuilt by script: image + link reply)",
+   "thread": [
+    "Friday the 13th. Fear of it is called paraskevidekatriaphobia, which is longer than most people's bad luck.\n\nGenuinely unlucky: injecting a \"research use only\" peptide you bought online.\n\nBPC-157, TB-500, CJC-1295: the claims, the evidence, and why the TGA is worried.",
+    "Peptides, minus the hype → https://maladywise.com/peptides/"
+   ],
+   "pin": true,
+   "typefully_id": "11870977",
+   "queued_at": "2026-11-12T13:40+11:00"
+  },
+  {
+   "date": "2026-11-13",
+   "slot": "noon",
+   "note": "Vitamin K (trending in AU: vitamin K deficiency bleeding); new fact sheet",
+   "thread": [
+    "Vitamin K deficiency bleeding is trending in Australia this week. The short version:\n\nEvery baby is born low on vitamin K. Without the birth dose, about 5–20 in 100,000 bleed later, often into the brain. One injection cuts that to under 0.3 in 100,000. 💉",
+    "Injection vs oral drops, the cancer myth, and greens on warfarin → https://maladywise.com/vitamin-k/",
+    "The leukaemia worry came from a 1992 study. Later, better-quality studies didn't confirm it. Australia's paediatric, obstetric, GP and midwifery colleges all recommend vitamin K at birth.",
+    "History: in 1929 Henrik Dam's chicks on a fat-free diet started bleeding. He named the missing factor the coagulation vitamin: vitamin K. He shared the 1943 Nobel Prize."
+   ],
+   "typefully_id": "11870590",
+   "queued_at": "2026-11-12T13:02+11:00"
+  },
+  {
+   "date": "2026-11-14",
+   "note": "World Diabetes Day (approved by owner)",
+   "thread": [
+    "World Diabetes Day is Frederick Banting's birthday. He co-discovered insulin in 1921, and the team sold the patent for $1 each to keep it affordable.\n\n800+ million adults now live with diabetes.\n\nIn prediabetes, lifestyle change cut the risk by 58% in a landmark trial. 🩸",
+    "Type 2 diabetes and prediabetes, minus the hype → https://maladywise.com/type-2-diabetes/"
+   ],
+   "typefully_id": "11792605",
+   "queued_at": "2026-11-09T09:29+11:00"
+  },
+  {
+   "date": "2026-11-15",
+   "pin": true,
+   "note": "Sun Normie mode + Normie Grand Rounds (was hand-made in Typefully; rebuilt with image + link reply)",
+   "thread": [
+    "For your friends who aren't medical: Normie mode. Same daily puzzles, zero medicine.\n\nToday there's Normie Grand Rounds: twenty questions on the week that was. Also a letter sudoku with a hidden word. 🙂",
+    "Play Normie mode → https://maladywise.com/normie/"
+   ],
+   "typefully_id": "11870980",
+   "queued_at": "2026-11-12T13:40+11:00"
+  },
+  {
+   "date": "2026-11-16",
+   "note": "Mon TIL: Tourette syndrome swearing myth (replaced Mergeon, archived)",
+   "thread": [
+    "TIL only about 1 in 10 people with Tourette syndrome have swearing tics. 🧠\n\nMost tics are blinks, sniffs, shrugs and throat clearing. They usually peak in the early teens, and by adulthood about a third of people have no tics at all.",
+    "Tics, myths and what actually helps → https://maladywise.com/tourette-syndrome/"
+   ],
+   "queued_at": "2026-11-13T23:10+11:00",
+   "typefully_id": "11902503"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "noon",
+   "card": "meddiet",
+   "note": "International Day of the Mediterranean Diet (history + facts)",
+   "thread": [
+    "On 16 November 2010, UNESCO added the Mediterranean diet to its list of humanity's intangible cultural heritage. Not a recipe: a way of growing, cooking and sharing food. 🫒\n\nIt also has some of the best trial evidence of any diet.",
+    "What to eat, the trials and easy swaps → https://maladywise.com/mediterranean-diet/",
+    "PREDIMED: 7,447 Spaniards at high heart risk. A Mediterranean diet with extra olive oil or nuts cut heart attacks, strokes and heart deaths by about 30% over 4.8 years, versus advice to eat low fat.",
+    "Plot twist: the 2013 paper was retracted in 2018 after randomisation problems at some sites. Re-analysed without them, it held up: hazard ratio 0.69 with olive oil, 0.72 with nuts.",
+    "And mood: in Australia's SMILES trial, 32% of people with depression were in remission after 12 weeks of help to eat this way, versus 8% with social support. Small trial, big signal."
+   ],
+   "typefully_id": "11870982",
+   "queued_at": "2026-11-12T13:40+11:00"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "pm",
+   "note": "Glimpsathon #1 teaser (tomorrow)",
+   "thread": [
+    "New tomorrow: Glimpsathon 🔎\n\nEvery Tuesday, 10 real clinical signs in one go. 3 Easy, 3 Medium, 3 Hard, 1 Genius. One pick each, one scored attempt, a score out of 10.\n\nThe daily Glimpsis image stays too.",
+    "Warm up on today's sign → https://maladywise.com/glimpsis/"
+   ],
+   "queued_at": "2026-11-13T22:30+11:00",
+   "typefully_id": "11901701"
+  },
+  {
+   "date": "2026-11-17",
+   "note": "Tue deep dive",
+   "thread": [
+    "POTS: heart races when you stand, settles when you lie down. In an Australian registry of 500 people, diagnosis took 6.7 years on average, and anxiety got the blame first for 64.6%. A watch and a bed would have been quicker. New deep dive for clinicians 🧵",
+    "The criteria: heart rate up ≥30 bpm within 10 min of standing (≥40 at ages 12–19), no drop in blood pressure, symptoms for 3+ months, nothing else explains it. You can run the test in a GP room. No tilt table needed for most.",
+    "The active stand test: 5–10 min lying down, then heart rate and BP at 1, 3, 5, 8 and 10 min standing. Morning testing picks up more. Ten minutes, zero dollars, and it cuts years off the \"maybe it's stress\" phase.",
+    "Boring basics carry the evidence: 2–3 L of fluid, salt if safe, waist-high compression (knee-highs don't cut it), exercise that starts lying down. One registry: 71% who finished a 3-month programme no longer met criteria. Uncontrolled, but still.",
+    "Medicines: none is approved for POTS in Australia; all off-label. Low-dose propranolol has the best data (low beat high in one trial). In the largest RCT, ivabradine lowered heart rate but not symptoms. A heart rate isn't a quality of life.",
+    "Hype check: \"POTS autoantibody\" panels? Patients and healthy controls test positive alike. IVIG? No better than albumin in its RCT. The POTS + hEDS + MCAS \"triad\"? Overlap in clinics, not established. Your wallet deserves better evidence.",
+    "Red flags that need more than a POTS label: fainting during exercise, chest pain, family history of sudden death, an abnormal ECG. Refer those promptly. Everyone else: start the basics while they wait for a specialist.",
+    "The full deep dive covers criteria, a step-by-step stand test, what to exclude, evidence-graded treatment, long COVID, pregnancy, teens and myths. General education, not personal advice.\nhttps://maladywise.com/deep-dives/pots/"
+   ],
+   "typefully_id": "11764141",
+   "queued_at": "2026-11-07T22:54+11:00"
+  },
+  {
+   "date": "2026-11-17",
+   "slot": "noon",
+   "card": true,
+   "note": "World Cervical Cancer Elimination Day (history + facts)",
+   "thread": [
+    "Today is World Cervical Cancer Elimination Day. In 2020, WHO set out to make cervical cancer rare enough to stop being a public health problem: under 4 cases per 100,000 women. 🧵",
+    "Cervical screening and the HPV test → https://maladywise.com/cancer-screening/",
+    "The 2030 targets, 90-70-90: 90% of girls fully vaccinated against HPV by 15. 70% of women screened with a high-performance test by 35 and again by 45. 90% of women with pre-cancer or cancer treated.",
+    "Australia is on track to get there first, by 2035. The HPV vaccine came from Ian Frazer and Jian Zhou in Queensland, and in 2007 Australia became the first country to fund a national HPV vaccination program.",
+    "Screening moved from 2-yearly Pap smears to 5-yearly HPV tests in 2017. Worldwide, cervical cancer still killed almost 350,000 women in 2022, about 94% of them in low- and middle-income countries."
+   ],
+   "typefully_id": "11870592",
+   "queued_at": "2026-11-12T13:03+11:00"
+  },
+  {
+   "date": "2026-11-17",
+   "slot": "pm",
+   "card": "prematurity",
+   "note": "World Prematurity Day (history + facts)",
+   "thread": [
+    "Today is World Prematurity Day. About 13.4 million babies were born too early in 2020, more than 1 in 10 births worldwide. 👶🧵",
+    "Signs of early labour, risks and what helps → https://maladywise.com/premature-birth/",
+    "From 1903 to 1943, Coney Island had a sideshow of premature babies in incubators. Visitors paid to watch. Martin Couney wasn't a doctor, but he gave babies care hospitals then wouldn't, and claimed to have saved about 6,500.",
+    "Kangaroo care began in Bogotá around 1978, because the hospital didn't have enough incubators. Skin-to-skin on a parent's chest keeps preterm babies warm and supports feeding and growth. Cheap, simple, and it works.",
+    "Preterm birth complications are the leading cause of death in children under 5. WHO says three-quarters could be prevented with proven care: steroid injections before birth, warmth, breastfeeding support and treating infections.",
+    "In Australia, 8.4% of babies were born preterm in 2023. Smoking matters: 14% of babies of mothers who smoked arrived early, versus 7.8% of non-smokers. Signs of early labour before 37 weeks? Call your maternity unit straight away."
+   ],
+   "queued_at": "2026-11-13T22:31+11:00",
+   "typefully_id": "11901704"
+  },
+  {
+   "date": "2026-11-18",
+   "note": "GLP-1 hub thread (image: the /glp-1/ page card via its og:image; no \"card\": true, which would attach the World AMR Awareness Week day card)",
+   "thread": [
+    "GLP-1 medicines: the internet says miracle, the trials say something more useful. Semaglutide: 14.9% average weight loss vs 2.4% on placebo over 68 weeks. Tirzepatide: 15–21% vs 3.1% over 72 weeks. Real effects. Not magic. The fine print 🧵",
+    "The evidence, minus the hype → https://maladywise.com/glp-1/",
+    "What people feel first: the gut. In the weight-loss trials, nausea hit 44% on semaglutide (16% on placebo) and 25–29% on tirzepatide (8% on placebo). Mostly mild and early, while the dose is stepped up. Hard going? Talk to your doctor before changing anything.",
+    "Stopping: the weight usually comes back. A year after stopping semaglutide, people in the STEP 1 extension had regained about two-thirds of what they'd lost. Not a willpower failure. It's what stopping a medicine for a long-term condition looks like.",
+    "Two safety notes. Before surgery (2025 Australian advice): keep taking it, clear fluids only for 24 hours first, and tell your anaesthetist. Compounded copies were banned in Australia from October 2024, and fake pens have turned up. Prescription and a registered pharmacy only."
+   ],
+   "typefully_id": "11784846",
+   "queued_at": "2026-11-09T00:48+11:00"
+  },
+  {
+   "date": "2026-11-18",
+   "slot": "noon",
+   "card": true,
+   "note": "World AMR Awareness Week starts (history + facts)",
+   "thread": [
+    "World AMR Awareness Week starts today. Alexander Fleming saw it coming: in his 1945 Nobel lecture he warned that underdosing penicillin could breed resistant microbes. 🦠🧵",
+    "Do I need antibiotics? When they help and when they don't → https://maladywise.com/antibiotics/",
+    "Antibiotic-resistant bacteria directly caused 1.14 million deaths in 2021. Forecasts suggest 39 million more between 2025 and 2050 (GRAM study, The Lancet, 2024).",
+    "Deaths among people aged 70 and over rose more than 80% between 1990 and 2021. Older adults carry the heaviest load.",
+    "What helps: antibiotics only when they're needed, the right one at the right dose, vaccination and handwashing. Most coughs, colds and sore throats are viral, and antibiotics do nothing for viruses."
+   ],
+   "typefully_id": "11870593",
+   "queued_at": "2026-11-12T13:03+11:00"
+  },
+  {
+   "date": "2026-11-18",
+   "slot": "pm",
+   "card": "copd",
+   "note": "World COPD Day (facts)",
+   "thread": [
+    "Today is World COPD Day. About 1 in 13 Australians over 40 has COPD, and almost half don't know it. Breathless on the stairs isn't always just getting older. 🫁🧵",
+    "Symptoms, the breathing test and what helps → https://maladywise.com/copd/",
+    "The test is simple: spirometry. You blow hard and fast into a tube, before and after an inhaled medicine. No needles, no scans. Over 35, have smoked or worked with dust or fumes, and breathless or coughing? Ask your GP.",
+    "Aboriginal and Torres Strait Islander people are 2.2 times more likely to have COPD. About 1 in 5 people with COPD also have asthma.",
+    "The damage can't be undone, but quitting smoking, lung rehab and the right inhalers help people breathe easier and do more. Quitting helps at any age."
+   ],
+   "queued_at": "2026-11-13T22:31+11:00",
+   "typefully_id": "11901706"
+  },
+  {
+   "date": "2026-11-19",
+   "note": "Weekly Short (video): Zebritis #1, 18 Oct 2026",
+   "thread": [
+    "Name a blood thinner or antiplatelet. Easy, right? The common answer scores 1 point. The rarest scores 20. Did you know the unicorn before the end of the video? #MedTwitter",
+    "Can you find the unicorn? → https://maladywise.com/zebritis/"
+   ],
+   "short": {
+    "series": "rarest",
+    "puzzle_date": "2026-10-18"
+   },
+   "typefully_id": "11781134",
+   "queued_at": "2026-11-08T21:03+11:00"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "noon",
+   "card": "toilet",
+   "note": "World Toilet Day (history + facts)",
+   "thread": [
+    "Happy World Toilet Day. 🚽 Singapore's Jack Sim started it in 2001; the UN made it official in 2013.\n\nBehind the jokes: about 3.5 billion people still lack safely managed sanitation, and around 419 million have no toilet at all.",
+    "More health days → https://maladywise.com/days/#day-toilet",
+    "In 2007, over 11,000 BMJ readers voted for the greatest medical milestone since 1840. Sanitation won with 1,795 votes, ahead of antibiotics (1,642) and anaesthesia (1,574).",
+    "In 1854, John Snow traced a London cholera outbreak to a single water pump on Broad Street, and the handle was removed. Clean water and sewers may have saved more lives than any drug."
+   ],
+   "typefully_id": "11870984",
+   "queued_at": "2026-11-12T13:40+11:00"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "pm",
+   "card": "pancreatic",
+   "note": "World Pancreatic Cancer Day (gentle)",
+   "thread": [
+    "Today is World Pancreatic Cancer Day. Landmarks around the world light up purple. 💜\n\nPancreatic cancer is often found late because early symptoms are vague. Knowing the signs helps.",
+    "Symptoms, risks and treatment → https://maladywise.com/pancreatic-cancer/",
+    "Signs to get checked: yellow skin or eyes, weight loss without trying, upper tummy or back pain that won't settle, pale oily stools, or new diabetes after 50 with weight loss. Usually something else, but worth a GP visit. Yellow eyes: same day.",
+    "In Australia, five-year survival has risen from about 3% in the late 1980s to 14% now. Still low, but moving. Thinking of everyone affected today."
+   ],
+   "queued_at": "2026-11-13T22:31+11:00",
+   "typefully_id": "11901709"
+  },
+  {
+   "date": "2026-11-20",
+   "note": "Fri puzzles: Wordemic Long Friday (replaced Mergeon, archived)",
+   "thread": [
+    "Long Friday on Wordemic. 🔤\n\nOne 8-letter medical word, 7 guesses. Green means right letter, right spot. Every answer is a real medical or health word, Australian spelling.\n\nHow many guesses did you need?",
+    "Play today's Wordemic → https://maladywise.com/wordemic/"
+   ],
+   "queued_at": "2026-11-13T23:10+11:00",
+   "typefully_id": "11902504"
+  },
+  {
+   "date": "2026-11-20",
+   "slot": "noon",
+   "card": "psychweek",
+   "note": "Psychology Week (history + facts)",
+   "thread": [
+    "It's Psychology Week. Psychology as a lab science is younger than the telephone: Wilhelm Wundt opened the first psychology laboratory in Leipzig in 1879. 🧠",
+    "Seeing a psychologist: plans, Medicare sessions and costs → https://maladywise.com/seeing-a-psychologist/",
+    "In Australia, 2 in 5 people aged 16–85 have had a mental disorder at some point, and 1 in 5 in the past year. Anxiety is the most common (17%). Source: ABS, 2020–22.",
+    "Among 16–24-year-olds, it's 39% in the past year. Yet only 45% of people with a mental disorder saw a health professional about it.",
+    "Medicare-funded psychology under Better Access began in November 2006. Today it covers up to 10 individual sessions a year with a mental health plan from your usual GP."
+   ],
+   "typefully_id": "11878661",
+   "queued_at": "2026-11-12T22:12+11:00"
+  },
+  {
+   "date": "2026-11-21",
+   "note": "Sat arcade",
+   "thread": [
+    "New bonus game: Stackulus 🫀\n\nOrgans fall, you stack them. Clear rows, chain combos, and beat today's daily challenge on the world leaderboard.\n\nPlay it in Normie mode and the organs become sea creatures. 🐙\n\nhttps://maladywise.com/stackulus/"
+   ],
+   "typefully_id": "11844111",
+   "queued_at": "2026-11-11T10:28+11:00"
+  },
+  {
+   "date": "2026-11-22",
+   "note": "Sun Basil + Clover Vet now open (rebuilt by script: image + link reply)",
+   "thread": [
+    "Basil + Clover have a vet appointment. They are not going quietly.\n\nStage 2, now open to everyone: wriggle out of towels, jump the thermometer, beat Dr Pokesworth. Nurse Burrito brings more towels for the finale. 🐾",
+    "Play it free → https://maladywise.com/basil-clover/"
+   ],
+   "pin": true,
+   "typefully_id": "11870985",
+   "queued_at": "2026-11-12T13:40+11:00"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "noon",
+   "card": true,
+   "note": "22q11.2 Awareness Day (rare disease)",
+   "thread": [
+    "Today is 22q11.2 Awareness Day. A tiny missing piece of chromosome 22, found in about 1 in 2,148 newborns, and often missed because it looks so different from person to person. 🧬",
+    "More health days → https://maladywise.com/days/#day-del22q",
+    "It can affect the heart, the palate and speech, calcium levels, immunity, learning and mental health. Most deletions are new, not inherited from a parent.",
+    "It used to go by different names, including DiGeorge syndrome and velo-cardio-facial syndrome. Same deletion, with different specialists each seeing a different part of it."
+   ],
+   "typefully_id": "11870596",
+   "queued_at": "2026-11-12T13:03+11:00"
+  },
+  {
+   "date": "2026-11-23",
+   "note": "Mon: deep dive #6 thread (mould)",
+   "thread": [
+    "1/9 Damp homes and lungs: this part is settled. In a meta-analysis of 16 studies, a mouldy smell at home came with 73% higher odds of new asthma. New deep dive for clinicians on what mould does, and doesn't, do 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/mould/",
+    "3/9 Scale: WHO estimates dampness affects 10–50% of indoor environments in Europe, North America, Australia, India and Japan. In Australian rental data, 27% of renters report mould.",
+    "4/9 Established effects: cough, wheeze, upper airway symptoms, respiratory infections and asthma flares (IOM 2004, WHO 2009). Plus specific diseases: hypersensitivity pneumonitis, ABPA, and invasive fungal disease in the immunocompromised.",
+    "5/9 Fixing the building works. In a Cochrane review of 12 studies, repairing mould-damaged homes cut adult wheeze (OR 0.64) and rhinitis (OR 0.57). Evidence in children is less clear.",
+    "6/9 Urine mycotoxin tests: no FDA-approved version exists, healthy people test positive too, and no level has been shown to predict disease (CDC). A positive result doesn't say where the exposure came from.",
+    "7/9 \"CIRS\": Australia's 2023 clinical pathway says it is \"not a recognised disease in Australia, with no scientifically validated or approved diagnostic criteria\". The symptoms are real. The label and its tests are unproven.",
+    "8/9 The cholestyramine study behind the Shoemaker protocol randomised 13 people for 2 weeks (2006). Not replicated independently. That's a hypothesis, not a standard of care.",
+    "9/9 For clinicians: exposure history, spirometry, allergy testing where it changes management, and a torch to find the water source. Skip the biotoxin panels. General education, not personal advice."
+   ],
+   "typefully_id": "11887807",
+   "queued_at": "2026-11-13T05:30+11:00"
+  },
+  {
+   "date": "2026-11-24",
+   "note": "Tue: deep dive #10 thread (pelvic congestion syndrome)",
+   "thread": [
+    "1/9 Pelvic congestion syndrome: varicose veins nobody looks for. A dragging pelvic ache that builds by evening, a \"normal\" pelvic scan, years of clinics. New deep dive for clinicians 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/pelvic-congestion-syndrome/",
+    "3/9 New name: pelvic venous disorders. The 2021 SVP classification sorts them by Symptoms, Varices and Pathophysiology across 4 zones, from the left renal vein to the legs, and retires \"nutcracker\" and \"May–Thurner syndrome\".",
+    "4/9 The clinical clue: ovarian point tenderness plus post-coital ache was 94% sensitive and 77% specific for venous congestion in Beard's 1988 series. Many reviews misquote it as dyspareunia.",
+    "5/9 The catch: ovarian vein reflux was found in 44% of pain-free parous women vs 5% of nulliparous women (Hiromura 2004). Seeing the veins isn't proving the cause.",
+    "6/9 But it isn't all bystander: in a 164 vs 164 case-control study, pelvic vein reflux was 62% vs 19% and pelvic varices 27% vs 2% (Hansrani 2023, BJOG).",
+    "7/9 Embolisation: about 75% early relief across case series of 1,308 women. The first patient-blinded RCT (n=60) found VAS 15 vs 53 at 12 months with coils vs venography alone. Small, and stopped early.",
+    "8/9 History: in 1957 May and Thurner found an iliac vein \"spur\" in 22% of 430 cadavers. In 1993 a Glasgow team reported the first ovarian vein embolisation for pelvic pain: one patient.",
+    "9/9 Frontier: is it veins, or a sensitised nervous system? A sham-controlled trial, EMBOLIZE (n=40), is recruiting now, with results expected after mid-2027. #WomensHealth"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "note": "Wed: deep dive #7 thread (autism)",
+   "thread": [
+    "1/9 1 in 31 US 8-year-olds were identified as autistic in 2022, up from 1 in 36 in 2020 (CDC). In UK records, adult diagnoses are rising fastest. New deep dive for clinicians: autism across the lifespan 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/autism/",
+    "3/9 Genes: heritability about 80% across 2 million people in Denmark, Finland, Sweden, Israel and Western Australia (Bai 2019). Maternal effects: 0.4–1.6%.",
+    "4/9 Sex ratio: about 3:1 male to female in high-quality studies, not the oft-quoted 4:1. Girls who meet criteria are less likely to get a diagnosis (Loomes 2017).",
+    "5/9 Camouflaging: in 92 autistic adults, masking and compensation were driven by wanting to fit in, and cost exhaustion and threats to self-perception (Hull 2017). A smooth consultation doesn't rule autism out.",
+    "6/9 Vaccines: 657,461 Danish children, MMR hazard ratio 0.93 (Hviid 2019). The 1998 paper behind the scare had 12 children, was retracted in 2010, and the BMJ called it \"an elaborate fraud\".",
+    "7/9 Co-occurring conditions are common and often treatable: ADHD 28%, anxiety 20%, sleep-wake disorders 13%, depression 11% (Lai 2019 meta-analysis).",
+    "8/9 No medicine treats core autism. Intranasal oxytocin: no difference from placebo in 290 children (Sikich 2021). Risperidone helps severe irritability (69% vs 12% response), at a weight-gain cost.",
+    "9/9 Australia: 290,900 autistic people in 2022, and 18.2% unemployment among those of working age (ABS). The gap is in support, not potential. #Autism"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "note": "Sat: deep dive #8 thread (ADHD)",
+   "thread": [
+    "1/9 ADHD doesn't end at 18. Worldwide, 2.58% of adults have persistent ADHD with childhood onset: about 140 million people (Song 2021). New deep dive for clinicians, adults in focus 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/adhd/",
+    "3/9 The adult threshold is lower: DSM-5-TR needs ≥5 symptoms in a domain from age 17, vs ≥6 in children, with several present before age 12 and impairment in ≥2 settings.",
+    "4/9 Genes: heritability about 74% (Faraone and Larsson 2019). The largest GWAS found 27 risk loci in 38,691 people with ADHD (Demontis 2023).",
+    "5/9 In a network meta-analysis of 133 RCTs, clinician-rated effect sizes in adults were SMD −0.79 for amphetamines and −0.49 for methylphenidate at about 12 weeks (Cortese 2018). Long-term data were thin.",
+    "6/9 Overdiagnosis is real in places: in WA, children aged 6–10 born in June, youngest in class, were about twice as likely to be medicated as July-born classmates (Whitely 2017, MJA).",
+    "7/9 Under-recognition is real too. In Danish registry data, people with ADHD had a mortality rate ratio of 2.07, mostly from accidents, and 4.25 when diagnosed as adults (Dalsgaard 2015).",
+    "8/9 NSW: trained GPs have continued ADHD scripts since 1 Sept 2025, and training to diagnose and initiate began in March 2026. Queensland, WA, SA, Tasmania and the ACT run different models.",
+    "9/9 Shortages: Australian dispensing of lisdexamfetamine rose 140% from Jan 2024 to May 2025, and methylphenidate ran short nationwide in 2025. Demand outpaced supply. #ADHD"
+   ]
+  }
+ ]
 }

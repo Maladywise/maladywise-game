@@ -624,9 +624,9 @@ def main():
                         continue
                     print("%s upload failed for %s (%s); posting without it." % ("Video" if (png or "").endswith(VIDEO_EXT) else "Image", p["date"], e))
             if "media_ids" in post0:  # the picture is the visual: link replies show as plain links, not a second card
-                for q in body["platforms"]["x"]["posts"][1:]:
-                    if "http" in q["text"]:
-                        q["hide_link_preview"] = True
+                for xp in body["platforms"]["x"]["posts"][1:]:
+                    if "http" in xp["text"]:
+                        xp["hide_link_preview"] = True
             body["publish_at"] = when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             if busy is not None:
