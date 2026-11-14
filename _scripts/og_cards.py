@@ -162,6 +162,7 @@ def spec_for(u, p, pages=None):
 
 
 def data_uri(rel):
+    rel = rel.split("?")[0]  # mascot srcs may carry a ?v= cache-buster
     fp = os.path.join(ROOT, "assets", rel)
     mime = "image/svg+xml" if rel.endswith(".svg") else "image/png"
     return "data:%s;base64,%s" % (mime, base64.b64encode(open(fp, "rb").read()).decode())

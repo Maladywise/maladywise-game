@@ -356,12 +356,26 @@
 "label": "Condition",
 "title": "Boils and Staph Skin Infections"
 },
+"bowel-cancer": {
+"url": "/bowel-cancer/",
+"key": "b8eec9a9f843",
+"v": "4d7f650b",
+"label": "Condition",
+"title": "Bowel Cancer"
+},
 "bppv": {
 "url": "/bppv/",
 "key": "e05d9287f678",
 "v": "0fc50577",
 "label": "Condition",
 "title": "Vertigo (BPPV)"
+},
+"breast-cancer": {
+"url": "/breast-cancer/",
+"key": "002f838ec8b2",
+"v": "fefbba52",
+"label": "Condition",
+"title": "Breast Cancer"
 },
 "bronchiolitis": {
 "url": "/bronchiolitis/",
@@ -1252,6 +1266,13 @@
 "label": "Fact sheet",
 "title": "Keratosis pilaris"
 },
+"kidney-cancer": {
+"url": "/kidney-cancer/",
+"key": "574061e1730e",
+"v": "3692d0da",
+"label": "Condition",
+"title": "Kidney Cancer"
+},
 "kidney-stones": {
 "url": "/kidney-stones/",
 "key": "d8b7a5d270fb",
@@ -1321,6 +1342,13 @@
 "v": "1fdb462b",
 "label": "Condition",
 "title": "Low Libido in Women"
+},
+"lung-cancer": {
+"url": "/lung-cancer/",
+"key": "2b9e62963f7a",
+"v": "900b2e91",
+"label": "Condition",
+"title": "Lung Cancer"
 },
 "lupus": {
 "url": "/lupus/",
@@ -1636,6 +1664,13 @@
 "v": "f0e6502a",
 "label": "Condition",
 "title": "Mercury"
+},
+"mesothelioma": {
+"url": "/mesothelioma/",
+"key": "9356394e1881",
+"v": "a109dfff",
+"label": "Condition",
+"title": "Mesothelioma"
 },
 "migraine": {
 "url": "/migraine/",

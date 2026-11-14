@@ -11,7 +11,7 @@ life-threatening infection, cancers with poor outlook) are left without sass on 
 import glob, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GENTLE = {"frontotemporal-dementia", "premature-birth", "meningococcal", "pancreatic-cancer"}
+GENTLE = {"frontotemporal-dementia", "premature-birth", "meningococcal", "pancreatic-cancer", "mesothelioma"}
 
 SASS = {
  "addisons-disease": "Salt cravings, a tan you didn’t earn and fainting when you stand? That’s not ‘just stress’. Ask for a cortisol test.",
