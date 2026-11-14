@@ -65,7 +65,7 @@ def key_of(p):
     return "%s|%s" % (p["date"], slot_of(p))
 AHEAD_DAYS = 10
 AUTO_FROM = datetime.date(2026, 11, 16)   # first automated queue date; earlier dates were scheduled by hand
-AUTO_UNTIL = datetime.date(2026, 11, 22)  # last date for automatic noon World Day posts (new X strategy from 23 Nov)
+AUTO_UNTIL = datetime.date(2026, 11, 15)  # last date for automatic noon World Day posts (new X strategy from 23 Nov)
 ANSWER_AT = (11, 15)                      # puzzle answers go out as a reply at 11:15am Sydney (the old noon slot)
 SITE = "https://maladywise.com/"
 KEY = os.environ.get("TYPEFULLY_API_KEY", "").strip()
