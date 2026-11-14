@@ -1363,3 +1363,8 @@ html.medp-on .medp .medp-cols ul.skip>li::before{content:"✕"!important;positio
 :root[data-theme="dark"] .mw-heat.h0{background:#163447;color:#BFE3FA}:root[data-theme="dark"] .mw-heat.h1{background:#17352F;color:#BDE8DF}
 :root[data-theme="dark"] .mw-heat.h2{background:#173523;color:#BFEBCF}:root[data-theme="dark"] .mw-heat.h3{background:#3D2C10;color:#FFD99A}
 :root[data-theme="dark"] .mw-heat.h4{background:#45201A;color:#FFC2B3}
+
+/* Beta tags (menu items + page titles) */
+.mw-beta{display:inline-block;font:600 10px/1.5 Poppins,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;background:#FFD23F;color:#2E1F57;border-radius:999px;padding:1px 7px;vertical-align:middle;margin-left:4px;position:relative;top:-2px}
+h1 .mw-beta{font-size:11px;top:-4px}
+@media print{.mw-beta{display:none}}

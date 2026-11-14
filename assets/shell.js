@@ -892,6 +892,15 @@
     var F = window.MW_FACTS && MW_FACTS[p]; // condition fact sheets live at the root, e.g. /acne/
     return !!(F && F.k === "fact" && href === "/conditions/");
   }
+  // Site-wide "Beta" tags (menu items and page titles). Switch off in one place: MW_HOME.beta = false in site.js.
+  var BETA = !window.MW_HOME || MW_HOME.beta !== false;
+  function betaTags() {
+    if (!BETA) return;
+    var path = location.pathname;
+    if (path === "/" || window.MW_curGame || /^\/(about|privacy|disclaimer|contact|normie|arcade)\//.test(path)) return;
+    var h1 = document.querySelector("main h1, h1"); if (!h1 || h1.querySelector(".mw-beta") || document.querySelector(".beta")) return;
+    h1.insertAdjacentHTML("beforeend", ' <i class="mw-beta" title="Still being built and checked. Spot something? Tell us via Contact.">Beta</i>');
+  }
   function navHTML() {
     var n = 0;
     return MW_HOME.nav.map(function (it) { // same menu in Medical and Normie
@@ -899,7 +908,7 @@
       var sub = it.items.filter(function (x) { return !(x.au && !inLocal()); }), on = sub.some(function (x) { return navHere(x.href); }), id = "mw-dd" + (n++);
       return '<div class="nav-dd' + (on ? " on" : "") + '"><button type="button" class="navlink nav-btn' + (on ? " on" : "") + '" aria-expanded="false" aria-controls="' + id + '">' + it.t +
         '<svg class="nav-car" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
-        '<div class="nav-sub" id="' + id + '" role="group" aria-label="' + it.t + '">' + sub.map(function (x) { var h = navHere(x.href); return '<a href="' + x.href + '"' + (h ? ' class="on" aria-current="page"' : "") + "><b>" + x.t + "</b>" + (x.d ? "<span>" + x.d + "</span>" : "") + "</a>"; }).join("") + "</div></div>";
+        '<div class="nav-sub" id="' + id + '" role="group" aria-label="' + it.t + '">' + sub.map(function (x) { var h = navHere(x.href); return '<a href="' + x.href + '"' + (h ? ' class="on" aria-current="page"' : "") + "><b>" + x.t + (BETA ? ' <i class="mw-beta">Beta</i>' : "") + "</b>" + (x.d ? "<span>" + x.d + "</span>" : "") + "</a>"; }).join("") + "</div></div>";
     }).join("");
   }
   // Dropdowns: hover (desktop pointer), click/tap, keyboard (Enter/Space/ArrowDown open, Escape closes). In the phone menu they show as grouped lists.
@@ -1684,7 +1693,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} try { betaTags(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
