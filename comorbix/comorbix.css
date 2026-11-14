@@ -52,3 +52,9 @@ html[data-motion="reduce"] #cmx *{animation:none!important}
 #cmx .arow .badge{font-size:10px;padding:2px 8px}
 #cmx .badge.Einstein{background:linear-gradient(135deg,#1B1430,#4A3480 60%,#B8860B);color:#FFE9A8;display:inline-flex;align-items:center;gap:5px;box-shadow:inset 0 0 0 1px #E8C66A}
 #cmx.einstein{box-shadow:inset 0 3px 0 #E8C66A}
+
+/* hints */
+.cmx .hints,#cmx-hints{margin:2px 0 8px;display:grid;gap:4px}#cmx-hints p{margin:0;padding:7px 12px;border-radius:10px;background:#FFF6D6;color:#4A3B00;font-size:14px}html[data-theme="dark"] #cmx-hints p{background:#3A3216;color:#FFE9A8}
+#cmx .ctrls .giveup{flex-basis:100%;max-width:max-content;margin:2px auto 0;background:none;border-color:transparent;color:var(--muted);font-size:14px;text-decoration:underline}#cmx .ctrls .giveup.sure{color:#B3261E;text-decoration:none;border-color:#B3261E}
+#cmx .ctrls #cmx-submit{order:4;flex-basis:100%;max-width:240px}#cmx .ctrls .giveup{order:5}
+#cmx .ctrls::before,#cmx .ctrls::after{content:"";flex-basis:100%;height:0}#cmx .ctrls::before{order:3}#cmx .ctrls::after{order:5}#cmx .ctrls .giveup{order:6;flex-basis:auto}

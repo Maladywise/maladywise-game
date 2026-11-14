@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", MAXM = 4, K = 4, NG = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", MAXM = 4, K = 4, NG = 4;
   // Normie mode: everyday groups from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Comorbix (Normie)" : "Comorbix";
   var root = document.getElementById("cmx");
@@ -14,9 +14,10 @@
     ' <div class="head"><span class="eyebrow" id="cmx-eyebrow">Comorbix</span><span class="badge" id="cmx-badge" hidden></span></div>' +
     ' <p class="intro" id="cmx-intro">Make four groups of four.</p>' +
     ' <div class="msg" id="cmx-msg" aria-live="polite"></div>' +
+    ' <div class="hints" id="cmx-hints" aria-live="polite" hidden></div>' +
     ' <div class="grid" id="cmx-grid"></div>' +
     ' <div class="mist" id="cmx-mist"></div>' +
-    ' <div class="ctrls" id="cmx-ctrls"><button class="btn" type="button" id="cmx-shuffle">Shuffle</button><button class="btn" type="button" id="cmx-clear">Deselect all</button><button class="btn solid" type="button" id="cmx-submit">Submit</button></div>' +
+    ' <div class="ctrls" id="cmx-ctrls"><button class="btn" type="button" id="cmx-hint">\ud83d\udca1 Hint</button><button class="btn" type="button" id="cmx-shuffle">Shuffle</button><button class="btn" type="button" id="cmx-clear">Deselect all</button><button class="btn solid" type="button" id="cmx-submit">Submit</button><button class="btn giveup" type="button" id="cmx-give">Give up</button></div>' +
     ' <div class="result" id="cmx-result" hidden></div>' +
     ' <p class="note" id="cmx-next"></p>' +
     ' <details class="archive" id="cmx-archive"><summary>Past puzzles</summary><div class="alist" id="cmx-alist"></div></details>' +
@@ -80,14 +81,29 @@
     var m = ""; for (var i = 0; i < MAXM; i++) m += '<i class="' + (i < st.mistakes ? "used" : "") + '"></i>';
     $("mist").innerHTML = st.done ? "" : "Mistakes left " + m;
     $("ctrls").hidden = st.done;
+    // hints: the name of the easiest unsolved group first, then one of its terms
+    var hs = (st.hints || []).filter(function (x) { return st.solved.indexOf(x.g) < 0 && !st.done; });
+    $("hints").hidden = !hs.length;
+    $("hints").innerHTML = hs.map(function (x) { var g = P.groups[x.g]; return "<p>\ud83d\udca1 " + (x.w ? "<b>" + esc(x.w) + "</b> is in <b>" + esc(g.label) + "</b>" : "One group is <b>" + esc(g.label) + "</b>") + "</p>"; }).join("");
+    $("hint").disabled = st.done || !nextHint();
     $("submit").disabled = sel.length !== K; $("clear").disabled = !sel.length;
     renderResult();
+  }
+  function nextHint() {
+    var H = st.hints || [], open = P.groups.map(function (g, gi) { return gi; }).filter(function (gi) { return st.solved.indexOf(gi) < 0; })
+      .sort(function (a, b) { return P.groups[a].level - P.groups[b].level; });
+    for (var i = 0; i < open.length; i++) {
+      var gi = open[i], mine = H.filter(function (x) { return x.g === gi; });
+      if (!mine.length) return { g: gi };
+      if (mine.length === 1) return { g: gi, w: P.groups[gi].words[0] };
+    }
+    return null;
   }
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = st.tries.map(function (t) { return t.map(function (w) { return SQ[P.groups[groupOf(w)].level - 1]; }).join(""); }).join("\n");
-    var share = (P.super ? "Super " : "") + NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + grid + "\nmaladywise.com";
+    var share = (P.super ? "Super " : "") + NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + "\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -116,7 +132,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put(PFX + "mw-einstein", tro); } }
+      if (win && isLive() && !(st.hints || []).length) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[Math.min(st.mistakes, 3)]) : pick(SASS.lose));
   }
   $("grid").addEventListener("click", function (e) {
@@ -126,6 +142,13 @@
     say(""); render();
   });
   $("clear").onclick = function () { sel = []; render(); };
+  // give up: tap twice (no pop-up dialogs), then show every group; counts as a loss
+  $("give").onclick = function () {
+    var b = this; if (st.done) return;
+    if (!b._sure) { b._sure = 1; b.textContent = "Sure? Tap again"; b.classList.add("sure"); setTimeout(function () { b._sure = 0; b.textContent = "Give up"; b.classList.remove("sure"); }, 3000); return; }
+    st.gaveUp = true; sel = []; finish(false); say("Fair enough. Here are the answers. Back tomorrow?"); render();
+  };
+  $("hint").onclick = function () { var h = nextHint(); if (!h || st.done) return; (st.hints = st.hints || []).push(h); put(KEY, st); say(""); render(); };
   $("shuffle").onclick = function () {
     var rest = shuffle(remaining(), Math.random), done = order.filter(function (w) { return rest.indexOf(w) < 0; });
     order = done.concat(rest); st.order = order; put(KEY, st); render();
