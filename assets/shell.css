@@ -1373,3 +1373,9 @@ h1 .mw-beta{font-size:11px;top:-4px}
 .mw-news{margin:22px 0 4px}
 .mw-news .rd-k{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted,#6B5A93)}
 .mw-news p:last-child{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+
+/* phone/tablet menu: scroll inside the panel (the bar is sticky, so the page itself can't scroll the menu into view) */
+@media (max-width:999px){
+  .navwrap.open{max-height:calc(100vh - 76px);max-height:calc(100dvh - 76px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .navwrap .mw-beta{display:none} /* keep the phone menu clean: pages still carry the Beta tag */
+}
