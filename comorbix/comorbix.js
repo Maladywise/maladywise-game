@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", MAXM = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", MAXM = 4, K = 4, NG = 4;
   // Normie mode: everyday groups from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Comorbix (Normie)" : "Comorbix";
   var root = document.getElementById("cmx");
@@ -12,7 +12,7 @@
   root.innerHTML =
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="cmx-eyebrow">Comorbix</span><span class="badge" id="cmx-badge" hidden></span></div>' +
-    ' <p class="intro">Make four groups of four.</p>' +
+    ' <p class="intro" id="cmx-intro">Make four groups of four.</p>' +
     ' <div class="msg" id="cmx-msg" aria-live="polite"></div>' +
     ' <div class="grid" id="cmx-grid"></div>' +
     ' <div class="mist" id="cmx-mist"></div>' +
@@ -66,28 +66,28 @@
 
   // ---------- render ----------
   var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
-  var SQ = ["\ud83d\udfe8", "\ud83d\udfe9", "\ud83d\udfe6", "\ud83d\udfea"];
+  var SQ = ["\ud83d\udfe8", "\ud83d\udfe9", "\ud83d\udfe6", "\ud83d\udfea", "\ud83d\udfe7"];
   function render(shake) {
     if (!P) return;
     var h = st.solved.map(function (gi) { var g = P.groups[gi]; return '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span></div>"; }).join("");
     if (st.done && !st.win) {
       P.groups.forEach(function (g, gi) { if (st.solved.indexOf(gi) < 0) h += '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span></div>"; });
     } else {
-      h += remaining().map(function (w) { return '<button type="button" class="t' + (w.length > 10 ? " long" : "") + (sel.indexOf(w) >= 0 ? " on" : "") + '" data-w="' + esc(w) + '">' + esc(w) + "</button>"; }).join("");
+      h += remaining().map(function (w) { return '<button type="button" class="t' + (w.length > 10 ? " long" : "") + (P.super && /\S{11,}/.test(w) ? " xl" : "") + (sel.indexOf(w) >= 0 ? " on" : "") + '" data-w="' + esc(w) + '">' + esc(w) + "</button>"; }).join("");
     }
     var grid = $("grid"); grid.innerHTML = h;
     if (shake) { grid.classList.remove("shake"); void grid.offsetWidth; grid.classList.add("shake"); }
     var m = ""; for (var i = 0; i < MAXM; i++) m += '<i class="' + (i < st.mistakes ? "used" : "") + '"></i>';
     $("mist").innerHTML = st.done ? "" : "Mistakes left " + m;
     $("ctrls").hidden = st.done;
-    $("submit").disabled = sel.length !== 4; $("clear").disabled = !sel.length;
+    $("submit").disabled = sel.length !== K; $("clear").disabled = !sel.length;
     renderResult();
   }
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var grid = st.tries.map(function (t) { return t.map(function (w) { return SQ[P.groups[groupOf(w)].level - 1]; }).join(""); }).join("\n");
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + grid + "\nmaladywise.com";
+    var share = (P.super ? "Super " : "") + NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + grid + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -112,17 +112,17 @@
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (win) stats.wins++;
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
-      stats.dist[win ? st.mistakes : 4]++; stats.last = today; put(SKEY, stats);
+      stats.dist[win ? Math.min(st.mistakes, 3) : 4]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "comorbix" && t.d === today; })) { tro.push({ g: "comorbix", d: today }); put(PFX + "mw-einstein", tro); } }
-    } else say(win ? pick(SASS.win[st.mistakes]) : pick(SASS.lose));
+    } else say(win ? pick(SASS.win[Math.min(st.mistakes, 3)]) : pick(SASS.lose));
   }
   $("grid").addEventListener("click", function (e) {
     var b = e.target.closest(".t"); if (!b || st.done) return;
     var w = b.getAttribute("data-w"), i = sel.indexOf(w);
-    if (i >= 0) sel.splice(i, 1); else if (sel.length < 4) sel.push(w);
+    if (i >= 0) sel.splice(i, 1); else if (sel.length < K) sel.push(w);
     say(""); render();
   });
   $("clear").onclick = function () { sel = []; render(); };
@@ -131,19 +131,19 @@
     order = done.concat(rest); st.order = order; put(KEY, st); render();
   };
   $("submit").onclick = function () {
-    if (sel.length !== 4 || st.done) return;
+    if (sel.length !== K || st.done) return;
     var key = sel.slice().sort().join("|");
     if (st.tries.some(function (t) { return t.slice().sort().join("|") === key; })) { say(pick(SASS.dupe)); return; }
     st.tries.push(sel.slice());
     var counts = {}; sel.forEach(function (w) { var g = groupOf(w); counts[g] = (counts[g] || 0) + 1; });
     var best = Object.keys(counts).reduce(function (a, k) { return counts[k] > a[1] ? [k, counts[k]] : a; }, [null, 0]);
-    if (best[1] === 4) {
+    if (best[1] === K) {
       st.solved.push(+best[0]); sel = []; say(pick(SASS.right));
-      if (st.solved.length === 4) finish(true); else put(KEY, st);
+      if (st.solved.length === NG) finish(true); else put(KEY, st);
       render(); return;
     }
     st.mistakes++;
-    say(best[1] === 3 ? pick(SASS.one) : pick(SASS.wrong));
+    say(best[1] === K - 1 ? pick(SASS.one) : pick(SASS.wrong));
     if (st.mistakes >= MAXM) { sel = []; finish(false); render(); return; }
     put(KEY, st); render(true);
   };
@@ -166,8 +166,11 @@
         renderArchive(); return;
       }
       var all = []; P.groups.forEach(function (g) { all = all.concat(g.words); });
-      order = st.order && st.order.length === 16 ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
-      $("eyebrow").textContent = (isLive() ? "Comorbix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
+      K = P.groups[0].words.length; NG = P.groups.length; MAXM = P.super ? 5 : 4;
+      $("grid").style.gridTemplateColumns = "repeat(" + K + ",minmax(0,1fr))"; root.classList.toggle("super", !!P.super);
+      $("intro").textContent = P.super ? "Super Comorbix: make five groups of five. Some words fit more than one group. Five mistakes." : "Make four groups of four.";
+      order = st.order && st.order.length === K * NG ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
+      $("eyebrow").textContent = (isLive() ? (P.super ? "Super Comorbix" : "Comorbix") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Solved. Come back tomorrow." : "You've had your go. Back tomorrow.");

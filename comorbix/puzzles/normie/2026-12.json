@@ -2,49 +2,65 @@
  {
   "date": "2026-12-01",
   "number": 39,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "On toast",
+    "label": "Board games",
     "level": 1,
     "words": [
-     "VEGEMITE",
-     "BAKED BEANS",
-     "MARMALADE",
-     "PEANUT BUTTER"
+     "MONOPOLY",
+     "SCRABBLE",
+     "CLUEDO",
+     "RISK",
+     "TWISTER"
     ]
    },
    {
-    "label": "Ways to do eggs",
+    "label": "Card games",
     "level": 2,
     "words": [
-     "POACHED",
-     "SCRAMBLED",
-     "BOILED",
-     "BENEDICT"
+     "SNAP",
+     "BRIDGE",
+     "RUMMY",
+     "SOLITAIRE",
+     "UNO"
     ]
    },
    {
-    "label": "Hot drinks",
+    "label": "At the dentist",
     "level": 3,
     "words": [
-     "TEA",
-     "COCOA",
-     "COFFEE",
-     "MULLED WINE"
+     "CROWN",
+     "FILLING",
+     "CAP",
+     "VENEER",
+     "BRACES"
     ]
    },
    {
-    "label": "French ___",
+    "label": "___ face",
     "level": 4,
     "words": [
-     "PRESS",
-     "FRIES",
-     "HORN",
-     "KISS"
+     "BABY",
+     "ABOUT",
+     "BRAVE",
+     "STRAIGHT",
+     "POKER"
+    ]
+   },
+   {
+    "label": "Hide a fruit",
+    "level": 5,
+    "words": [
+     "PLUMBER",
+     "FIGURE",
+     "SUBLIME",
+     "SPEARHEAD",
+     "DATELINE"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-02",
@@ -331,49 +347,65 @@
  {
   "date": "2026-12-08",
   "number": 46,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Fruit with no core",
+    "label": "Shades of blue",
     "level": 1,
     "words": [
-     "BANANA",
-     "GRAPE",
-     "PLUM",
-     "KIWI"
+     "NAVY",
+     "TEAL",
+     "CYAN",
+     "SKY",
+     "ROYAL"
     ]
    },
    {
-    "label": "Tech giants",
+    "label": "Metals",
     "level": 2,
     "words": [
-     "APPLE",
-     "GOOGLE",
-     "META",
-     "SAMSUNG"
+     "IRON",
+     "TIN",
+     "ZINC",
+     "NICKEL",
+     "COBALT"
     ]
    },
    {
-    "label": "Long rivers",
+    "label": "Golf",
     "level": 3,
     "words": [
-     "CONGO",
-     "NILE",
-     "YANGTZE",
-     "MISSISSIPPI"
+     "WEDGE",
+     "PUTTER",
+     "DRIVER",
+     "TEE",
+     "EAGLE"
     ]
    },
    {
-    "label": "Banana ___",
+    "label": "Microsoft products",
     "level": 4,
     "words": [
-     "SPLIT",
-     "BREAD",
-     "REPUBLIC",
-     "SKIN"
+     "TEAMS",
+     "WORD",
+     "EXCEL",
+     "OUTLOOK",
+     "AZURE"
+    ]
+   },
+   {
+    "label": "Hide a body part",
+    "level": 5,
+    "words": [
+     "SHINDIG",
+     "CHIPMUNK",
+     "CHAIRMAN",
+     "SHEARS",
+     "FLIPPER"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-09",
@@ -660,49 +692,65 @@
  {
   "date": "2026-12-15",
   "number": 53,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Salads",
+    "label": "The Simpsons",
     "level": 1,
     "words": [
-     "CAESAR",
-     "WALDORF",
-     "COBB",
-     "NICOISE"
+     "HOMER",
+     "MARGE",
+     "BART",
+     "LISA",
+     "MAGGIE"
     ]
    },
    {
-    "label": "Languages",
+    "label": "In a deck of cards",
     "level": 2,
     "words": [
-     "ESPERANTO",
-     "SPANISH",
-     "THAI",
-     "DUTCH"
+     "ACE",
+     "KING",
+     "QUEEN",
+     "JACK",
+     "JOKER"
     ]
    },
    {
-    "label": "Roman emperors",
+    "label": "Tennis talk",
     "level": 3,
     "words": [
-     "NERO",
-     "AUGUSTUS",
-     "TRAJAN",
-     "HADRIAN"
+     "LOVE",
+     "DEUCE",
+     "LET",
+     "VOLLEY",
+     "SMASH"
     ]
    },
    {
-    "label": "___ horn",
+    "label": "Bands",
     "level": 4,
     "words": [
-     "FOG",
-     "SHOE",
-     "BULL",
-     "GREEN"
+     "OASIS",
+     "BLUR",
+     "PULP",
+     "ABBA",
+     "KISS"
+    ]
+   },
+   {
+    "label": "Ancient Greek writers",
+    "level": 5,
+    "words": [
+     "SAPPHO",
+     "HESIOD",
+     "PINDAR",
+     "AESOP",
+     "SOPHOCLES"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-16",
@@ -989,49 +1037,65 @@
  {
   "date": "2026-12-22",
   "number": 60,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Maths signs, not multiplying",
+    "label": "Christmas lunch",
     "level": 1,
     "words": [
-     "PLUS",
-     "MINUS",
-     "DIVIDE",
-     "EQUALS"
+     "TURKEY",
+     "HAM",
+     "PUDDING",
+     "PAVLOVA",
+     "PRAWNS"
     ]
    },
    {
-    "label": "Prime numbers",
+    "label": "Santa's reindeer",
     "level": 2,
     "words": [
-     "TWO",
-     "SEVEN",
-     "ELEVEN",
-     "THIRTEEN"
+     "DASHER",
+     "PRANCER",
+     "VIXEN",
+     "COMET",
+     "CUPID"
     ]
    },
    {
-    "label": "Newspaper names",
+    "label": "Countries",
     "level": 3,
     "words": [
-     "TIMES",
-     "GUARDIAN",
-     "POST",
-     "SUN"
+     "CHAD",
+     "PERU",
+     "MALI",
+     "OMAN",
+     "CUBA"
     ]
    },
    {
-    "label": "Hidden TEN",
+    "label": "Roman gods",
     "level": 4,
     "words": [
-     "OFTEN",
-     "TENNIS",
-     "KITTEN",
-     "LISTEN"
+     "MARS",
+     "VENUS",
+     "JUNO",
+     "NEPTUNE",
+     "VULCAN"
+    ]
+   },
+   {
+    "label": "Things you pull",
+    "level": 5,
+    "words": [
+     "CRACKER",
+     "WISHBONE",
+     "PINT",
+     "MUSCLE",
+     "STRINGS"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-23",
@@ -1318,49 +1382,65 @@
  {
   "date": "2026-12-29",
   "number": 67,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Stationery",
+    "label": "In the Bible",
     "level": 1,
     "words": [
-     "ERASER",
-     "STAPLER",
-     "RULER",
-     "PEN"
+     "ADAM",
+     "NOAH",
+     "MOSES",
+     "ABEL",
+     "EVE"
     ]
    },
    {
-    "label": "Party supplies",
+    "label": "___board",
     "level": 2,
     "words": [
-     "BALLOON",
-     "CAKE",
-     "STREAMERS",
-     "PINATA"
+     "DART",
+     "CHESS",
+     "SURF",
+     "KEY",
+     "SKATE"
     ]
    },
    {
-    "label": "Rubbery, not from a party or pencil case",
+    "label": "New Year's Eve staples",
     "level": 3,
     "words": [
-     "WELLIES",
-     "TYRE",
-     "BATH PLUG",
-     "HOT WATER BOTTLE"
+     "RESOLUTION",
+     "FIREWORKS",
+     "AULD LANG SYNE",
+     "HANGOVER",
+     "MIDNIGHT KISS"
     ]
    },
    {
-    "label": "___ band",
+    "label": "TV quiz shows",
     "level": 4,
     "words": [
-     "BOY",
-     "HEAD",
-     "WEDDING",
-     "BIG"
+     "JEOPARDY",
+     "POINTLESS",
+     "MASTERMIND",
+     "THE CHASE",
+     "COUNTDOWN"
+    ]
+   },
+   {
+    "label": "Hide a fish",
+    "level": 5,
+    "words": [
+     "CARPET",
+     "SOLEMN",
+     "CHARMING",
+     "PERCHED",
+     "CODEWORD"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-30",

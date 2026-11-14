@@ -754,49 +754,65 @@
  {
   "date": "2026-11-17",
   "number": 25,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Ice cream flavours",
+    "label": "Planets",
     "level": 1,
     "words": [
-     "VANILLA",
-     "CHOCOLATE",
-     "STRAWBERRY",
-     "PISTACHIO"
+     "VENUS",
+     "MARS",
+     "SATURN",
+     "NEPTUNE",
+     "URANUS"
     ]
    },
    {
-    "label": "Team sports",
+    "label": "Chocolate bars",
     "level": 2,
     "words": [
-     "RUGBY",
-     "HOCKEY",
-     "VOLLEYBALL",
-     "BASEBALL"
+     "BOUNTY",
+     "TWIX",
+     "CRUNCHIE",
+     "SNICKERS",
+     "GALAXY"
     ]
    },
    {
-    "label": "Animals known for jumping",
+    "label": "Things with rings",
     "level": 3,
     "words": [
-     "KANGAROO",
-     "FROG",
-     "FLEA",
-     "GRASSHOPPER"
+     "ONION",
+     "OLYMPICS",
+     "CIRCUS",
+     "BOXING",
+     "TREE"
     ]
    },
    {
-    "label": "___ club",
+    "label": "Famous Freddies",
     "level": 4,
     "words": [
-     "GOLF",
-     "BOOK",
-     "FAN",
-     "NIGHT"
+     "MERCURY",
+     "KRUEGER",
+     "FLINTOFF",
+     "PRINZE",
+     "HIGHMORE"
+    ]
+   },
+   {
+    "label": "Hide a number",
+    "level": 5,
+    "words": [
+     "OFTEN",
+     "CANINE",
+     "FREIGHT",
+     "MONEY",
+     "ATTENTION"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-11-18",
@@ -1083,49 +1099,65 @@
  {
   "date": "2026-11-24",
   "number": 32,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Winter wear",
+    "label": "Pasta",
     "level": 1,
     "words": [
-     "SCARF",
-     "GLOVES",
-     "BEANIE",
-     "MITTENS"
+     "PENNE",
+     "FUSILLI",
+     "RIGATONI",
+     "ORZO",
+     "COUSCOUS"
     ]
    },
    {
-    "label": "Things that orbit the Sun",
+    "label": "Grains and seeds",
     "level": 2,
     "words": [
-     "COMET",
-     "ASTEROID",
-     "EARTH",
-     "JUPITER"
+     "RICE",
+     "QUINOA",
+     "BARLEY",
+     "MILLET",
+     "OATS"
     ]
    },
    {
-    "label": "Baby animals",
+    "label": "Flowers",
+    "level": 3,
     "words": [
-     "KID",
-     "CUB",
-     "KIT",
-     "CALF"
-    ],
-    "level": 3
+     "TULIP",
+     "DAISY",
+     "ORCHID",
+     "POPPY",
+     "IRIS"
+    ]
    },
    {
-    "label": "Honey___",
+    "label": "___ water",
     "level": 4,
     "words": [
-     "COMB",
-     "BEE",
-     "DEW",
-     "POT"
+     "COCONUT",
+     "TONIC",
+     "SPARKLING",
+     "ROSE",
+     "HOLY"
+    ]
+   },
+   {
+    "label": "Famous Allens",
+    "level": 5,
+    "words": [
+     "LILY",
+     "WOODY",
+     "KEITH",
+     "TIM",
+     "PAUL"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-11-25",

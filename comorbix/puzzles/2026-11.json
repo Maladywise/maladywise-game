@@ -754,49 +754,65 @@
  {
   "date": "2026-11-17",
   "number": 32,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "NICU kit",
+    "label": "Signs of appendicitis",
     "level": 1,
     "words": [
-     "INCUBATOR",
-     "VENTILATOR",
-     "FEEDING TUBE",
-     "CPAP"
+     "ROVSING",
+     "PSOAS",
+     "OBTURATOR",
+     "MCBURNEY",
+     "DUNPHY"
     ]
    },
    {
-    "label": "NICU acronyms",
+    "label": "Signs of meningism",
     "level": 2,
     "words": [
-     "RDS",
-     "NEC",
-     "ROP",
-     "PDA"
+     "KERNIG",
+     "BRUDZINSKI",
+     "NECK STIFFNESS",
+     "PHOTOPHOBIA",
+     "JOLT ACCENTUATION"
     ]
    },
    {
-    "label": "Viruses known by initials",
+    "label": "Hernias",
     "level": 3,
     "words": [
-     "HPV",
-     "HIV",
-     "RSV",
-     "EBV"
+     "FEMORAL",
+     "SPIGELIAN",
+     "UMBILICAL",
+     "INCISIONAL",
+     "HIATUS"
     ]
    },
    {
-    "label": "Baby ___",
+    "label": "Hip flexors",
     "level": 4,
     "words": [
-     "BOOMER",
-     "SHOWER",
-     "TEETH",
-     "BUMP"
+     "ILIACUS",
+     "SARTORIUS",
+     "RECTUS FEMORIS",
+     "PECTINEUS",
+     "TENSOR FASCIAE LATAE"
+    ]
+   },
+   {
+    "label": "Hide a body part",
+    "level": 5,
+    "words": [
+     "PHARMACY",
+     "SHINGLES",
+     "WHIPLASH",
+     "LIPOMA",
+     "LEGIONELLA"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-11-18",
@@ -1083,49 +1099,65 @@
  {
   "date": "2026-11-24",
   "number": 39,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Bits of your foot",
+    "label": "ACE inhibitors",
     "level": 1,
     "words": [
-     "ARCH",
-     "HEEL",
-     "INSTEP",
-     "BALL"
+     "RAMIPRIL",
+     "PERINDOPRIL",
+     "ENALAPRIL",
+     "LISINOPRIL",
+     "CAPTOPRIL"
     ]
    },
    {
-    "label": "Foot complaints",
+    "label": "Diuretics",
     "level": 2,
     "words": [
-     "BUNION",
-     "VERRUCA",
-     "CHILBLAIN",
-     "CORN"
+     "FUROSEMIDE",
+     "INDAPAMIDE",
+     "BUMETANIDE",
+     "METOLAZONE",
+     "MANNITOL"
     ]
    },
    {
-    "label": "Fish on the menu",
+    "label": "Can push potassium up",
     "level": 3,
     "words": [
-     "TROUT",
-     "PERCH",
-     "BREAM",
-     "HAKE"
+     "EPLERENONE",
+     "AMILORIDE",
+     "TRIMETHOPRIM",
+     "HEPARIN",
+     "TACROLIMUS"
     ]
    },
    {
-    "label": "___ toe",
+    "label": "Drug levels get checked",
     "level": 4,
     "words": [
-     "TURF",
-     "CLAW",
-     "HAMMER",
-     "BIG"
+     "LITHIUM",
+     "PHENYTOIN",
+     "VANCOMYCIN",
+     "GENTAMICIN",
+     "VALPROATE"
+    ]
+   },
+   {
+    "label": "Hide an animal",
+    "level": 5,
+    "words": [
+     "CATARACT",
+     "PIGMENT",
+     "ANTIBODY",
+     "COWPOX",
+     "HENOCH"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-11-25",

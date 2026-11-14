@@ -2,49 +2,65 @@
  {
   "date": "2026-12-01",
   "number": 46,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Prevention tools",
+    "label": "Carpal bones",
     "level": 1,
     "words": [
-     "PREP",
-     "PEP",
-     "CONDOMS",
-     "NEEDLE EXCHANGE"
+     "SCAPHOID",
+     "LUNATE",
+     "PISIFORM",
+     "HAMATE",
+     "CAPITATE"
     ]
    },
    {
-    "label": "Myths: not how it spreads",
+    "label": "___ stones",
     "level": 2,
     "words": [
-     "SALIVA",
-     "MOSQUITOES",
-     "HUGGING",
-     "TOILET SEATS"
+     "GALL",
+     "KIDNEY",
+     "TONSIL",
+     "PULP",
+     "BLADDER"
     ]
    },
    {
-    "label": "Fluids that can carry a blood-borne virus",
+    "label": "Eponymous fractures",
     "level": 3,
     "words": [
-     "BLOOD",
-     "SEMEN",
-     "BREAST MILK",
-     "VAGINAL FLUID"
+     "COLLES",
+     "SMITH",
+     "BARTON",
+     "BENNETT",
+     "ROLANDO"
     ]
    },
    {
-    "label": "Red ___",
+    "label": "Nobel Prize in Medicine winners",
     "level": 4,
     "words": [
-     "RIBBON",
-     "CROSS",
-     "HERRING",
-     "WINE"
+     "FLOREY",
+     "BURNET",
+     "ECCLES",
+     "BANTING",
+     "FLEMING"
+    ]
+   },
+   {
+    "label": "Fictional doctors",
+    "level": 5,
+    "words": [
+     "HOUSE",
+     "WHO",
+     "ZHIVAGO",
+     "DOOLITTLE",
+     "WATSON"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-02",
@@ -331,49 +347,65 @@
  {
   "date": "2026-12-08",
   "number": 53,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Tooth care at home",
+    "label": "Inhaled-dust lung diseases",
     "level": 1,
     "words": [
-     "BRUSH",
-     "FLOSS",
-     "MOUTHWASH",
-     "FLUORIDE"
+     "SILICOSIS",
+     "ANTHRACOSIS",
+     "BYSSINOSIS",
+     "BERYLLIOSIS",
+     "SIDEROSIS"
     ]
    },
    {
-    "label": "Dental restorations",
+    "label": "Nail signs",
     "level": 2,
     "words": [
-     "CROWN",
-     "BRIDGE",
-     "FILLING",
-     "VENEER"
+     "KOILONYCHIA",
+     "ONYCHOLYSIS",
+     "LEUKONYCHIA",
+     "PITTING",
+     "BEAU'S LINES"
     ]
    },
    {
-    "label": "Types of tooth injury",
+    "label": "Signs of endocarditis",
     "level": 3,
     "words": [
-     "AVULSION",
-     "LUXATION",
-     "INTRUSION",
-     "EXTRUSION"
+     "OSLER NODES",
+     "JANEWAY LESIONS",
+     "ROTH SPOTS",
+     "SPLINTERS",
+     "MURMUR"
     ]
    },
    {
-    "label": "Root ___",
+    "label": "Causes of clubbing",
     "level": 4,
     "words": [
-     "CANAL",
-     "VEGETABLE",
-     "BEER",
-     "CAUSE"
+     "LUNG CANCER",
+     "ENDOCARDITIS",
+     "CIRRHOSIS",
+     "MESOTHELIOMA",
+     "EMPYEMA"
+    ]
+   },
+   {
+    "label": "Start with a fish",
+    "level": 5,
+    "words": [
+     "CARPAL",
+     "SOLEUS",
+     "RAYNAUD",
+     "CODEINE",
+     "CHARCOT"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-09",
@@ -660,49 +692,65 @@
  {
   "date": "2026-12-15",
   "number": 60,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Eye checks",
+    "label": "Vitamins",
     "level": 1,
     "words": [
-     "SNELLEN",
-     "TONOMETRY",
-     "SLIT LAMP",
-     "FUNDOSCOPY"
+     "THIAMINE",
+     "RIBOFLAVIN",
+     "NIACIN",
+     "COBALAMIN",
+     "RETINOL"
     ]
    },
    {
-    "label": "Medical roots for body parts",
+    "label": "Deficiency diseases",
     "level": 2,
     "words": [
-     "NEPHRO",
-     "HEPATO",
-     "OSTEO",
-     "LINGUA"
+     "SCURVY",
+     "BERIBERI",
+     "PELLAGRA",
+     "RICKETS",
+     "WERNICKE"
     ]
    },
    {
-    "label": "Invented languages",
+    "label": "Explorers",
     "level": 3,
     "words": [
-     "ESPERANTO",
-     "KLINGON",
-     "DOTHRAKI",
-     "ELVISH"
+     "COOK",
+     "DRAKE",
+     "MAGELLAN",
+     "TASMAN",
+     "COLUMBUS"
     ]
    },
    {
-    "label": "Hidden real languages",
+    "label": "Eponymous neuroanatomy",
     "level": 4,
     "words": [
-     "GELATIN",
-     "PERSEVERATION",
-     "SCREENING",
-     "TWITCH"
+     "BROCA",
+     "WILLIS",
+     "SYLVIUS",
+     "ROLANDO",
+     "MONRO"
+    ]
+   },
+   {
+    "label": "Hide a vehicle",
+    "level": 5,
+    "words": [
+     "CARTILAGE",
+     "BUSULFAN",
+     "VANCOMYCIN",
+     "CABERGOLINE",
+     "TRAMADOL"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-16",
@@ -989,49 +1037,65 @@
  {
   "date": "2026-12-22",
   "number": 67,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Measures of risk",
+    "label": "Santa's reindeer",
     "level": 1,
     "words": [
-     "ODDS RATIO",
-     "RELATIVE RISK",
-     "NNT",
-     "ARR"
+     "DASHER",
+     "PRANCER",
+     "VIXEN",
+     "COMET",
+     "BLITZEN"
     ]
    },
    {
-    "label": "Measures of test accuracy",
+    "label": "Santa, by other names",
     "level": 2,
     "words": [
-     "SENSITIVITY",
-     "SPECIFICITY",
-     "PPV",
-     "NPV"
+     "KRINGLE",
+     "NICHOLAS",
+     "CLAUS",
+     "PÈRE NOËL",
+     "SINTERKLAAS"
     ]
    },
    {
-    "label": "Greek letters with jobs in statistics",
+    "label": "Clotting factors, by name",
     "level": 3,
     "words": [
-     "ALPHA",
-     "BETA",
-     "SIGMA",
-     "MU"
+     "FIBRINOGEN",
+     "PROTHROMBIN",
+     "HAGEMAN",
+     "CHRISTMAS",
+     "STUART-PROWER"
     ]
    },
    {
-    "label": "___ number",
+    "label": "Famous Rudolfs",
     "level": 4,
     "words": [
-     "PRIME",
-     "TAXICAB",
-     "ATOMIC",
-     "LUCKY"
+     "VIRCHOW",
+     "NUREYEV",
+     "VALENTINO",
+     "DIESEL",
+     "CLAUSIUS"
+    ]
+   },
+   {
+    "label": "Hide an organ",
+    "level": 5,
+    "words": [
+     "COLONEL",
+     "LIVERPOOL",
+     "HEARTH",
+     "LUNGE",
+     "GUTTER"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-23",
@@ -1318,49 +1382,65 @@
  {
   "date": "2026-12-29",
   "number": 74,
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "groups": [
    {
-    "label": "Often made of rubber or latex",
+    "label": "Types of tremor",
     "level": 1,
     "words": [
-     "TOURNIQUET",
-     "CATHETER",
-     "CONDOM",
-     "HOT WATER BOTTLE"
+     "ESSENTIAL",
+     "INTENTION",
+     "RESTING",
+     "CEREBELLAR",
+     "ORTHOSTATIC"
     ]
    },
    {
-    "label": "Latex-fruit allergy foods",
+    "label": "Types of exercise",
     "level": 2,
     "words": [
-     "BANANA",
-     "AVOCADO",
-     "KIWI",
-     "CHESTNUT"
+     "AEROBIC",
+     "ISOMETRIC",
+     "RESISTANCE",
+     "PLYOMETRIC",
+     "ECCENTRIC"
     ]
    },
    {
-    "label": "Primary skin lesions",
+    "label": "Types of amnesia",
     "level": 3,
     "words": [
-     "MACULE",
-     "PAPULE",
-     "VESICLE",
-     "BULLA"
+     "ANTEROGRADE",
+     "RETROGRADE",
+     "GLOBAL",
+     "DISSOCIATIVE",
+     "INFANTILE"
     ]
    },
    {
-    "label": "Rubber ___",
+    "label": "Types of aphasia",
     "level": 4,
     "words": [
-     "DUCK",
-     "BAND",
-     "STAMP",
-     "PLANT"
+     "EXPRESSIVE",
+     "RECEPTIVE",
+     "CONDUCTION",
+     "ANOMIC",
+     "PRIMARY PROGRESSIVE"
+    ]
+   },
+   {
+    "label": "Hide a month",
+    "level": 5,
+    "words": [
+     "FEBRILE",
+     "MARFAN",
+     "AUGMENTIN",
+     "OCTREOTIDE",
+     "NOVOCAINE"
     ]
    }
-  ]
+  ],
+  "super": true
  },
  {
   "date": "2026-12-30",

@@ -1,7 +1,7 @@
 /* Comorbix: scoped under #cmx */
 #cmx{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2340;--muted:#6B5A93;--line:#D9D1E3;--tile:#EFEAE2;--sel:#4E4566;--accent:#B23A6F;
-  --l1:#F2D36B;--l2:#9CC48A;--l3:#93B5E1;--l4:#C29BDB;
+  --l1:#F2D36B;--l2:#9CC48A;--l3:#93B5E1;--l4:#C29BDB;--l5:#EFA77A;
   --easy:#2F7D4A;--medium:#9A6A12;--hard:#B4472F;--genius:#4A3480;
   --title:Lora,Georgia,serif;--body:Poppins,"Segoe UI",system-ui,sans-serif;
   background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.4}
@@ -28,7 +28,8 @@ html[data-motion="reduce"] #cmx *{animation:none!important}
 @keyframes cmxpop{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
 #cmx .solved b{display:block;font:700 13px var(--body);letter-spacing:.06em;text-transform:uppercase}
 #cmx .solved span{font-size:13px}
-#cmx .lv1{background:var(--l1)} #cmx .lv2{background:var(--l2)} #cmx .lv3{background:var(--l3)} #cmx .lv4{background:var(--l4)}
+#cmx .lv1{background:var(--l1)} #cmx .lv2{background:var(--l2)} #cmx .lv3{background:var(--l3)} #cmx .lv4{background:var(--l4)} #cmx .lv5{background:var(--l5)}
+#cmx.super .t{min-height:58px;font-size:clamp(8.5px,2.4vw,13px)} #cmx.super .t.long{font-size:clamp(7.5px,1.95vw,11px)} #cmx.super .grid{gap:5px} #cmx.super .t.xl{font-size:clamp(7px,2.05vw,10px);word-break:normal;overflow-wrap:anywhere;padding:6px 2px}
 #cmx .mist{display:flex;justify-content:center;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
 #cmx .mist i{width:12px;height:12px;border-radius:50%;background:var(--sel);display:inline-block}
 #cmx .mist i.used{background:var(--line)}
