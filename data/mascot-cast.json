@@ -1,5 +1,5 @@
 {
- "_about": "Section and topic mascots (the game mascots live in assets/games.js MW_MASCOTS). key = assets/mascots/<key>.svg. Pronouns default to she unless the role says otherwise.",
+ "_about": "Section and topic mascots (the game mascots live in assets/games.js MW_MASCOTS). key = assets/mascots/<key>.svg. Pronouns default to she unless the role says otherwise (Norm, Percy and Magnus are he).",
  "mascots": {
   "dental": {
    "name": "Kiri",
@@ -70,6 +70,90 @@
    "role": "Medicines A–Z host",
    "vibe": "Calm, careful pharmacist. Reads every label twice and never rushes a dose.",
    "story": "Yuki is a giant panda who spent years in a busy pharmacy, where she learned that most medicine mistakes happen when people are in a hurry. Pandas famously take their time, so the job suits her. She explains what each medicine does, what to watch for and when to ask for help, in plain words. She keeps her own bamboo in a labelled pill bottle, because old habits die hard."
+  },
+  "normie/norm": {
+   "name": "Norm",
+   "animal": "capybara",
+   "role": "Normie mode host",
+   "vibe": "Laid-back, unbothered and friends with everyone. Sunglasses permanently parked on his head.",
+   "story": "Norm is a capybara, the animal every other animal likes to sit on. He hosts Normie mode, where nobody talks about medicine and everybody takes the day off. The game mascots visit him on their days off, and he keeps the snacks stocked and the questions light. He's never once been in a hurry and sees no reason to start."
+  },
+  "gphub": {
+   "name": "Inês",
+   "animal": "manatee",
+   "role": "Doctors' hub host",
+   "vibe": "Calm, unhurried and quietly brilliant. Half-moon glasses, white coat, never raises her voice.",
+   "story": "Inês is a manatee who spent thirty years as a country GP before taking over the doctors' hub. Manatees are sometimes called sea cows, and she finds this hilarious. She has seen everything at least twice, reads every guideline update, and believes the best medicine is a good history and a cup of tea. She drifts, but she always gets there."
+  },
+  "gpschool": {
+   "name": "Saga",
+   "animal": "otter",
+   "role": "GP School host",
+   "vibe": "Bright, playful and a little overcommitted. Always has three tabs and a snack open.",
+   "story": "Saga is an otter GP registrar who keeps her favourite stethoscope in a pouch under her arm, the way otters keep their favourite rock. She learns by doing, asks lots of questions and is never embarrassed to say 'I don't know yet'. She runs GP School because she remembers how scary the first shift was, and she wants yours to feel a little less so."
+  },
+  "specialists": {
+   "name": "Percy",
+   "animal": "pelican",
+   "role": "Specialists directory host",
+   "vibe": "Kindly, well connected and knows everyone. Carries far too much in his beak.",
+   "story": "Percy is a pelican and a retired country GP who spent forty years writing referral letters. He knows every specialist by name, which ones answer the phone and which have a two-year wait. He now runs the specialists directory, carrying contact details around in his enormous beak. He has never lost a referral, though he has accidentally swallowed a few."
+  },
+  "research": {
+   "name": "Mei",
+   "animal": "lab mouse",
+   "role": "Research hub host",
+   "vibe": "Curious, careful and sceptical of anything with a press release. Reads the methods first.",
+   "story": "Mei is a lab mouse who escaped from a research facility after reading one too many badly designed studies about mice. She now reads the studies so you don't have to: every week she sorts the real findings from the hype. She has a soft spot for well-run trials and a deep suspicion of anything that only worked in her cousins."
+  },
+  "mythbusting": {
+   "name": "Ama",
+   "animal": "crow",
+   "role": "Myth-busting pages",
+   "vibe": "Clever, cheeky and impossible to fool. Collects myths the way other crows collect shiny things.",
+   "story": "Ama is a crow, one of the cleverest birds alive, who can solve puzzles and remember faces for years. She spent her youth on the roof of a health-food shop, listening to the claims coming out of the door. Now she collects myths and pecks them apart, one fact at a time. She never mocks the person who believed it, only the person selling it."
+  },
+  "neurology": {
+   "name": "Nalu",
+   "animal": "hammerhead shark",
+   "role": "Neurology pages",
+   "vibe": "Precise, wide-angle thinker. Literally sees both sides of every argument.",
+   "story": "Nalu is a hammerhead shark whose eyes sit so far apart she can see almost all the way around herself. That made her a natural neurologist: she notices the sign on the left and the sign on the right at the same time. She loves the brain because it's the most complicated thing in the ocean, and she finds reflexes genuinely thrilling."
+  },
+  "allergy": {
+   "name": "Hana",
+   "animal": "pufferfish",
+   "role": "Allergy pages",
+   "vibe": "Gentle, careful and very good in a reaction. Puffs up only when absolutely necessary.",
+   "story": "Hana is a pufferfish and an allergy nurse, so she knows exactly what it feels like when the body overreacts. She's spent years teaching families how to read labels, use an adrenaline autoinjector and stay calm in a reaction. She is very patient, but she will puff up if you call a food intolerance an allergy."
+  },
+  "exercises": {
+   "name": "Jett",
+   "animal": "kangaroo",
+   "role": "Exercise handouts",
+   "vibe": "Bouncy, encouraging and relentlessly practical. Thinks every problem improves with a little movement.",
+   "story": "Jett is a kangaroo physio who grew up hopping around the hills of the Hunter. She believes in small, steady movement over heroic bursts, which is a bit rich from a kangaroo. She writes the exercise handouts, demonstrates every move herself and has never once let anyone skip their warm-up."
+  },
+  "sleep": {
+   "name": "Kip",
+   "animal": "koala",
+   "role": "Sleep pages",
+   "vibe": "Drowsy, wise and deeply serious about bedtime routines. Up to 20 hours of sleep a day, for research.",
+   "story": "Kip is a koala and a sleep scientist, which she says was always going to happen. Koalas sleep up to 20 hours a day, so she has done more fieldwork than anyone. She knows the difference between tired and sleepy, can talk about circadian rhythms for hours, and thinks scrolling in bed should be a crime."
+  },
+  "layla": {
+   "name": "Layla",
+   "animal": "sloth",
+   "role": "Pacing and fatigue pages",
+   "vibe": "Slow on purpose. Wise about energy, kind about bad days, and very good at saying no.",
+   "story": "Layla is a sloth who learnt the hard way that pushing through is how you crash. She moves slowly on purpose, plans her energy like a budget and rests before she's empty. She hosts the pacing and fatigue pages because she knows how frustrating it is when people say 'just try harder'. Her motto: slow is a strategy, not a failure."
+  },
+  "stats": {
+   "name": "Hazel",
+   "animal": "squirrel",
+   "role": "My stats host",
+   "vibe": "Organised, proud of every streak and a little obsessive about records.",
+   "story": "Hazel is a squirrel who keeps track of everything, because squirrels bury thousands of nuts and have to remember where. She keeps your streaks, scores and records safe, and celebrates every one. She gets very excited about a personal best and a bit anxious when a streak is about to break, so please play today."
   }
  }
 }
