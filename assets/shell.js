@@ -369,9 +369,26 @@
     if (NORMIE && gg && gg.nmode && NC && NC.length) { var kn = get("mw-ncheer", -1), j = Math.floor(Math.random() * NC.length); if (j === kn) j = (j + 1) % NC.length; set("mw-ncheer", j); line = NC[j]; }
     return '<div class="cb-masc"><span class="cb-bub">' + line + '</span>' + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>";
   }
+  // Lose screen: every game gets one (win scenes above return null on a loss). Sassy at the player, never at patients.
+  var LOSE = {
+    big: ["Not today.", "Plot twist.", "Case unsolved.", "Oof.", "Well, that happened."],
+    bigN: ["Not today.", "Plot twist.", "Oof.", "Well, that happened."],
+    cap: ["The puzzle wins this round. It will be insufferable about it.", "A “learning opportunity”, which is what we call it when it goes badly.", "Good news: nobody saw. Bad news: we did.", "Your streak isn’t dead. It’s resting. Come back tomorrow.", "Tomorrow’s puzzle has already forgiven you.", "Even the setter got this one wrong the first time. Allegedly.", "Second opinion recommended. Ideally your own, tomorrow."],
+    capN: ["The puzzle wins this round. It will be insufferable about it.", "Good news: nobody saw. Bad news: we did.", "Tomorrow’s puzzle has already forgiven you.", "Character building. Very character building.", "Your streak isn’t dead. It’s resting."],
+    gave: ["Tapped out. Honest, at least.", "White flag received. The answers are waiting.", "Strategic retreat. Very dignified.", "Knowing when to stop is a clinical skill. Truly."],
+    bub: ["Chin up. New one at midnight.", "I’d have got it. Probably.", "We go again tomorrow.", "Shake it off. I’ll be here.", "Happens to the best of us. Mostly me."]
+  };
+  function lpick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function loseScene(id, st) {
+    var m = window.MW_MASCOTS && MW_MASCOTS[id], cap = st.gaveUp ? lpick(LOSE.gave) : lpick(NORMIE ? LOSE.capN : LOSE.cap);
+    var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(LOSE.bub) + "</span>" + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
+    return { cls: "cb-lose", ms: 4200, html: '<svg class="cb-flat" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 L120 40 L130 40 L136 22 L142 58 L148 40 L400 40"/></svg>' +
+      '<div class="cb-big">' + lpick(NORMIE ? LOSE.bigN : LOSE.big) + '</div><p class="cb-cap">' + cap + "</p>" + masc };
+  }
   function celebrate(id, st) {
     var f = SCENES[id]; if (!f || !st) return;
     var sc0 = f(st); if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
+    if (!sc0 && st.done && st.win === false) sc0 = loseScene(id, st);
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
     if (g && st.win) { var t = sydToday(); if ((!g.weekly && !g.dailyLine || ((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] && (((g.nmode ? MW_EINSTEIN_N : MW_EINSTEIN)[g.id]) || []).indexOf(t) >= 0) && diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 2200, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
