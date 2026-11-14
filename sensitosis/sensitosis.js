@@ -8,7 +8,7 @@
    and puzzles/normie/YYYY-MM.json, "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", N = 5, OPEN = "2026-11-02", ONE = "2026-11-14"; // from ONE: one test a day (the first round); earlier days and part-played days keep 5
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", N = 5, OPEN = "2026-11-02", ONE = "2026-11-14"; // from ONE: one test a day (the first round); earlier days and part-played days keep 5
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", TFILE = NORMIE ? "tests-normie.json" : "tests.json", NAME = NORMIE ? "Sensitosis (Normie)" : "Sensitosis";
   var root = document.getElementById("sns");
   if (!document.querySelector("link[data-sns]")) {
@@ -187,7 +187,7 @@
     st.g[i] = [s, c, p]; put(KEY, st);
     renderDots(); reveal(i);
     say(pick(p >= 90 ? SASS.top : p >= 70 ? SASS.good : p >= 40 ? SASS.mid : SASS.low));
-    if (i === N - 1) { /* last one: score page after Next */ }
+    if (N === 1) { st.r = 1; finish(); put(KEY, st); renderResult(); } // one-test days: score and Next buttons straight under the reveal
     $("card").scrollIntoView({ behavior: "smooth", block: "start" });
   }
   function bucket(s) { s = s / N; return s >= 90 ? 0 : s >= 70 ? 1 : s >= 50 ? 2 : 3; }
@@ -205,7 +205,7 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    $("card").hidden = true;
+    if (N > 1) $("card").hidden = true;
     var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🔎 " : " 🔬 ") + st.score + "/" + N * 100 + "\n" + st.g.map(function (g) { return emo(g[2]); }).join("") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = bucket(st.score), L = [N * 90 + "+", N * 70 + "+", N * 50 + "+", "<" + N * 50];
     r.hidden = false;
@@ -224,7 +224,7 @@
       function sel() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); b.textContent = "Selected. Copy it"; }
       try { navigator.clipboard.writeText(share).then(function () { b.textContent = "Copied"; }, sel); } catch (e) { sel(); }
     };
-    $("review").onclick = function () { reviewAt(0); };
+    $("review").hidden = N === 1; $("review").onclick = function () { reviewAt(0); };
   }
   function reviewAt(i) {
     $("card").hidden = false; reveal(i);
@@ -234,7 +234,7 @@
   }
   function paint() {
     renderDots();
-    if (st.done) { renderResult(); return; }
+    if (st.done) { if (N === 1 && st.g[0]) { $("card").hidden = false; reveal(0); } renderResult(); return; }
     $("card").hidden = false; $("result").hidden = true;
     if (st.g[st.r]) reveal(st.r); else renderGuess(st.r);
   }
