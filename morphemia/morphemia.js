@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -18,12 +18,14 @@
     ' <div class="rank"><div class="rank-top"><span class="rank-name" id="mph-rank">' + RANKS[0][0] + '</span><span class="rank-score" id="mph-score">0 pts</span></div>' +
     '  <div class="bar"><i id="mph-bar" style="width:0"></i></div><div class="ticks" id="mph-ticks"></div></div>' +
     ' <details class="found" id="mph-found" open><summary><span id="mph-fcount">You have found 0 words</span><span>&#9662;</span></summary><div class="words" id="mph-words"></div></details>' +
+    ' <div class="mw-hints" id="mph-hints" aria-live="polite" hidden></div>' +
     ' <div class="msg" id="mph-msg" aria-live="polite"></div>' +
     ' <div class="entry" id="mph-entry"></div>' +
     ' <form class="pk-form" id="mph-pkform" hidden><input id="mph-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="19" aria-label="Type a word with your phone keyboard, Enter to submit"></form>' +
     ' <div class="hive" id="mph-hive"></div>' +
     ' <div class="ctrls"><button class="btn" type="button" id="mph-del" aria-label="Delete last letter">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter" aria-label="Submit word">Enter</button></div>' +
     ' <div class="pk"><button class="pk-tog" type="button" id="mph-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button></div>' +
+    ' <div class="mw-tools" id="mph-tools"><button class="btn sm" type="button" id="mph-hint">\ud83d\udca1 Hint</button><button class="mw-giveup" type="button" id="mph-give">Give up and show answers</button></div>' +
     ' <details class="legend"><summary>' + (NORMIE ? "Long words earn bonuses." : "<b>Medical words</b> score double. Long words earn bonuses.") + ' <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li>' + (NORMIE ? "" : "<li>Medical word: whole score doubled</li>") + '</ul></details>' +
     ' <div class="result" id="mph-result" hidden></div>' +
     ' <p class="note" id="mph-next"></p>' +
@@ -104,7 +106,8 @@
     $("ticks").innerHTML = RANKS.map(function (x, i) { return '<span class="' + (i <= r ? "on" : "") + '" title="' + x[0] + '"></span>'; }).join("");
     var nMed = st.found.filter(function (w) { return P.medical.indexOf(w) >= 0; }).length;
     $("fcount").textContent = "You have found " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (nMed ? " \u00b7 " + nMed + " medical" : "");
-    var showAll = !isLive() && st.reveal;
+    var showAll = (!isLive() && st.reveal) || st.gaveUp;
+    hintUI();
     var list = (showAll ? P.words : st.found.slice().sort());
     $("words").innerHTML = list.map(function (w) {
       var cls = (P.medical.indexOf(w) >= 0 ? "med " : "") + (P.pangrams.indexOf(w) >= 0 ? "pan " : "") + (st.found.indexOf(w) < 0 ? "miss" : "");
@@ -112,11 +115,25 @@
     }).join("") || '<span class="miss">Nothing yet. The clock is ticking' + (NORMIE ? "" : ", doctor") + '.</span>';
     renderResult(nMed);
   }
+  // hints: the first two letters and length of a word you haven't found (pangrams first, then medical, then the longest)
+  function nextHint() {
+    var H = st.hints || [], left = P.words.filter(function (w) { return st.found.indexOf(w) < 0 && H.indexOf(w) < 0; });
+    left.sort(function (a, b) { var pa = P.pangrams.indexOf(a) >= 0, pb = P.pangrams.indexOf(b) >= 0, ma = P.medical.indexOf(a) >= 0, mb = P.medical.indexOf(b) >= 0;
+      return (pb - pa) || (mb - ma) || (b.length - a.length); });
+    return left[0] || null;
+  }
+  function hintUI() {
+    var H = (st.hints || []).filter(function (w) { return st.found.indexOf(w) < 0; });
+    $("hints").hidden = !H.length || st.gaveUp;
+    $("hints").innerHTML = H.map(function (w) { return "<p>\ud83d\udca1 A " + w.length + "-letter " + (P.pangrams.indexOf(w) >= 0 ? "pangram" : P.medical.indexOf(w) >= 0 && !NORMIE ? "medical word" : "word") + " starting <b>" + w.slice(0, 2).toUpperCase() + "\u2026</b></p>"; }).join("");
+    $("tools").hidden = !!st.gaveUp;
+    $("hint").disabled = !nextHint() || H.length >= 3;
+  }
   function renderResult(nMed) {
     var r = $("result");
     if (!st.found.length) { r.hidden = true; return; }
     var rk = st.found.length === P.words.length ? TOP : RANKS[rankIdx(st.score)][0];
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\nRank: " + rk + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? "" : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty]  + "\nRank: " + rk + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? "" : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
     r.hidden = false;
     r.innerHTML = '<pre id="mph-share">' + esc(share) + '</pre><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid" type="button" id="mph-copy">Copy result</button>' +
       (!isLive() ? '<button class="btn" type="button" id="mph-reveal">' + (st.reveal ? "Hide answers" : "Reveal all answers") + "</button>" : "") + "</div>";
@@ -143,6 +160,7 @@
   var clearT;
   function fail(m) { say(m); drawEntry(true); var was = cur; clearTimeout(clearT); clearT = setTimeout(function () { if (cur === was) { cur = ""; drawEntry(); } }, 450); }
   function submit() {
+    if (st.gaveUp) { say("Answers are out. New hive at midnight."); cur = ""; drawEntry(); return; }
     var w = cur; if (!P) return;
     var sw = window.MW_swear && MW_swear(w); if (sw) { fail(sw); return; }
     if (w.length < MIN()) { fail(MIN() === 5 ? pick(SASS.short5) : pick(SASS.short)); return; }
@@ -166,7 +184,7 @@
         if (after > (st.rank || 0)) { stats.dist[after]++; if (st.rank) stats.dist[st.rank]--; put(SKEY, stats); }
         if (after === RANKS.length - 1 && !st.win) {
           st.done = true; st.win = true; stats.wins++; put(SKEY, stats);
-          if (P.difficulty === "Einstein") { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "morphemia" && t.d === today; })) { tro.push({ g: "morphemia", d: today }); put(PFX + "mw-einstein", tro); } }
+          if (P.difficulty === "Einstein" && !(st.hints || []).length) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "morphemia" && t.d === today; })) { tro.push({ g: "morphemia", d: today }); put(PFX + "mw-einstein", tro); } }
         }
       }
       st.rank = after;
@@ -174,6 +192,14 @@
     if (st.found.length === P.words.length) m = "Every word. " + TOP + ". Absolutely unhinged.";
     put(KEY, st); say(m); drawEntry(); render();
   }
+  $("hint").onclick = function () { this.blur(); if (st.gaveUp) return; var w = nextHint(); if (!w) return; (st.hints = st.hints || []).push(w); put(KEY, st); say(""); render(); };
+  $("give").onclick = function () {
+    var b = this; b.blur(); if (st.gaveUp) return;
+    if (!b._sure) { b._sure = 1; b.textContent = "Sure? Tap again"; b.classList.add("sure"); setTimeout(function () { b._sure = 0; b.textContent = "Give up and show answers"; b.classList.remove("sure"); }, 3000); return; }
+    st.gaveUp = true; if (!st.found.length && isLive()) recordPlay();
+    var was = st.done; st.done = true; if (!was) st.win = false;
+    put(KEY, st); $("found").open = true; say("Here's every word. Missed ones are greyed out."); render();
+  };
   function press(k) {
     if (!P) return;
     if (k === "enter") { submit(); return; }

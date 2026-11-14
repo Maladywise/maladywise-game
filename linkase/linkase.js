@@ -4,7 +4,7 @@
    Long Linkase (every Thursday): chain[9] with 7 hidden words, 7 strikes, flagged "long": true. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", MAXM = 5;
   function LAST() { return P ? P.chain.length - 1 : 5; }
   function HID() { var a = []; for (var k = 1; k < LAST(); k++) a.push(k); return a; }
   // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
@@ -23,6 +23,7 @@
     ' <div class="pk" id="lnk-pk" hidden><button class="pk-tog" type="button" id="lnk-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button>' +
     '  <form class="pk-form" id="lnk-pkform" hidden><input id="lnk-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Type the rest of the highlighted word with your phone keyboard, Enter to submit"></form></div>' +
     ' <div class="kb" id="lnk-kb"></div>' +
+    ' <div class="mw-tools" id="lnk-tools"><button class="btn sm" type="button" id="lnk-hint">\ud83d\udca1 Hint: next letter</button><button class="mw-giveup" type="button" id="lnk-give">Give up</button></div>' +
     ' <div class="result" id="lnk-result" hidden></div>' +
     ' <p class="note" id="lnk-next"></p>' +
     ' <details class="archive" id="lnk-archive"><summary>Past puzzles</summary><div class="alist" id="lnk-alist"></div></details>' +
@@ -80,6 +81,7 @@
   // ---------- render ----------
   var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   function render(shake) {
+    toolsUI();
     if (!P) return;
     fixAct();
     var f = st.done ? [] : frontier(), h = "";
@@ -114,7 +116,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var sq = HID().map(function (i) { var s = st.w[i]; return s.s !== 1 ? "\ud83d\udfe5" : s.rev > 1 ? "\ud83d\udfe8" : "\ud83d\udfe9"; }).join("");
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + ((st.hints || 0) ? " \u00b7 \ud83d\udca1" + st.hints : "") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < LAST() ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" \u00b7 ").toLowerCase() + "</p>" +
@@ -154,7 +156,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days chain, and you held it. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put(PFX + "mw-einstein", tro); } }
+      if (win && isLive() && !st.hints) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "linkase" && t.d === today; })) { tro.push({ g: "linkase", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(SASS.win[Math.min(st.mistakes, 4)]) : pick(SASS.lose));
   }
   function submit() {
@@ -173,6 +175,21 @@
     if (HID().every(function (k) { return st.w[k].s; })) { finish(true); render(); return; }
     fixAct(); put(KEY, st); render(true);
   }
+  // hint: show the next letter of the word you're on, without a strike; give up: show the whole chain (tap twice)
+  function toolsUI() { if (!$("tools") || !P) return; $("tools").hidden = st.done; $("hint").disabled = st.done || !st.act; }
+  $("hint").onclick = function () {
+    this.blur(); if (!P || st.done || !st.act) return;
+    var i = st.act, w = word(i), s = st.w[i]; st.hints = (st.hints || 0) + 1; s.rev++; cur = "";
+    if (s.rev >= w.length) { s.s = 2; say(pick(SASS.given)); } else say("\ud83d\udca1 One more letter, on the house.");
+    if (HID().every(function (k) { return st.w[k].s; })) { finish(st.mistakes < MAXM); render(); return; }
+    fixAct(); put(KEY, st); render();
+  };
+  $("give").onclick = function () {
+    var b = this; b.blur(); if (!P || st.done) return;
+    if (!b._sure) { b._sure = 1; b.textContent = "Sure? Tap again"; b.classList.add("sure"); setTimeout(function () { b._sure = 0; b.textContent = "Give up"; b.classList.remove("sure"); }, 3000); return; }
+    HID().forEach(function (k) { if (!st.w[k].s) { st.w[k].s = 2; st.w[k].rev = word(k).length; } });
+    st.gaveUp = true; cur = ""; finish(false); render();
+  };
   function press(k) {
     if (!P || st.done || !st.act) return;
     var need = word(st.act).length - st.w[st.act].rev;

@@ -5,7 +5,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16";
   var ROWS = 6, LEN = 5, NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
@@ -18,10 +18,12 @@
     ' <div class="head"><span class="eyebrow" id="wde-eyebrow">Wordemic</span><span class="badge" id="wde-badge" hidden></span></div>' +
     ' <p class="longtag" id="wde-long" hidden></p>' +
     ' <div class="msg" id="wde-msg" aria-live="polite"></div>' +
+    ' <div class="mw-hints" id="wde-hints" aria-live="polite" hidden></div>' +
     ' <div class="board" id="wde-board"></div>' +
     ' <div class="pk" id="wde-pk" hidden><button class="pk-tog" type="button" id="wde-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button>' +
     '  <form class="pk-form" id="wde-pkform" hidden><input id="wde-pkin" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="5" aria-label="Type your guess with your phone keyboard, Enter to submit"></form></div>' +
     ' <div class="kb" id="wde-kb"></div>' +
+    ' <div class="mw-tools" id="wde-tools"><button class="btn sm" type="button" id="wde-hint">\ud83d\udca1 Hint</button><button class="mw-giveup" type="button" id="wde-give">Give up</button></div>' +
     ' <div class="result" id="wde-result" hidden></div>' +
     ' <p class="note" id="wde-next"></p>' +
     ' <details class="archive" id="wde-archive"><summary>Past puzzles</summary><div class="alist" id="wde-alist"></div></details>' +
@@ -111,13 +113,31 @@
     pkSync();
     renderResult();
   }
+  // hints: reveal one letter at a time, starting with the first position nobody has got green yet
+  function nextHint() {
+    var w = P.word.toLowerCase(), H = st.hints || [];
+    for (var i = 0; i < w.length; i++) {
+      if (H.indexOf(i) >= 0) continue;
+      if (st.guesses.some(function (g) { return g[i] === w[i]; })) continue;
+      return i;
+    }
+    return -1;
+  }
+  function hintUI() {
+    if (!P || !st) return;
+    var H = st.hints || [], w = P.word.toUpperCase();
+    $("hints").hidden = !H.length || st.done;
+    $("hints").innerHTML = H.map(function (i) { return "<p>\ud83d\udca1 Letter " + (i + 1) + " is <b>" + w[i] + "</b></p>"; }).join("");
+    $("tools").hidden = st.done;
+    $("hint").disabled = nextHint() < 0 || H.length >= Math.max(1, LEN - 2);
+  }
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var word = P.word.toLowerCase();
     var grid = st.guesses.map(function (g) { return score(g, word).map(function (s) { return s === "hit" ? "\ud83d\udfe9" : s === "near" ? "\ud83d\udfe8" : "\u2b1c"; }).join(""); }).join("\n");
     var long = isLong(), title = long ? NAME.replace("Wordemic", "Wordemic Long") : NAME;
-    var share = title + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/" + ROWS + "\n" + grid + "\nmaladywise.com";
+    var share = title + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "  " + (st.win ? st.guesses.length : "X") + "/" + ROWS + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + "\n" + grid + "\nmaladywise.com";
     var S = long ? lstats : stats, dist = S.dist, pct = S.played ? Math.round(S.wins / S.played * 100) : 0, max = Math.max.apply(null, dist.concat([1])), mine = st.win ? st.guesses.length - 1 : ROWS;
     r.hidden = false;
     r.innerHTML = "<h2>" + P.word + '</h2><p class="def">' + P.definition + "</p>" +
@@ -156,7 +176,7 @@
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
-      if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put(PFX + "mw-einstein", tro); } }
+      if (win && isLive() && !(st.hints || []).length) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put(PFX + "mw-einstein", tro); } }
     } else say(win ? pick(st.guesses.length === ROWS ? SASS.last : SASS.win[Math.min(st.guesses.length, 6) - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
@@ -175,6 +195,13 @@
     }
     if (/^[a-z]$/.test(k) && cur.length < LEN) { cur += k; paint(); }
   }
+  var _paint = paint; paint = function (f) { _paint(f); hintUI(); };
+  $("hint").onclick = function () { if (st.done) return; var i = nextHint(); if (i < 0) return; (st.hints = st.hints || []).push(i); put(KEY, st); say(""); paint(); this.blur(); };
+  $("give").onclick = function () {
+    var b = this; b.blur(); if (st.done) return;
+    if (!b._sure) { b._sure = 1; b.textContent = "Sure? Tap again"; b.classList.add("sure"); setTimeout(function () { b._sure = 0; b.textContent = "Give up"; b.classList.remove("sure"); }, 3000); return; }
+    st.gaveUp = true; cur = ""; finish(false); paint(); renderResult();
+  };
   $("kb").addEventListener("click", function (e) { var b = e.target.closest(".key"); if (b) { press(b.getAttribute("data-k")); b.blur(); } });
   document.addEventListener("keydown", function (e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
