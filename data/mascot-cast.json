@@ -1,32 +1,75 @@
 {
  "_about": "Section and topic mascots (the game mascots live in assets/games.js MW_MASCOTS). key = assets/mascots/<key>.svg. Pronouns default to she unless the role says otherwise.",
  "mascots": {
-  "dental": {"name": "Kiri", "animal": "shark", "role": "Dental and oral health pages",
+  "dental": {
+   "name": "Kiri",
+   "animal": "shark",
+   "role": "Dental and oral health pages",
    "vibe": "Cheerful, slightly terrifying smile, flosses after every meal. Grows a new set of teeth whenever she likes and won't stop bragging about it.",
-   "story": "Kiri is a shark who has replaced about 30,000 teeth in her lifetime, so she takes dental hygiene very personally. She trained as a dental nurse after realising nobody else at the reef was brushing. She carries a toothbrush everywhere, counts your teeth when you smile, and is on a lifelong mission to convince humans that their one spare set is not a lot to work with."},
-  "emergency": {"name": "Zola", "animal": "anglerfish", "role": "Emergency and first aid pages",
+   "story": "Kiri is a shark who has replaced about 30,000 teeth in her lifetime, so she takes dental hygiene very personally. She trained as a dental nurse after realising nobody else at the reef was brushing. She carries a toothbrush everywhere, counts your teeth when you smile, and is on a lifelong mission to convince humans that their one spare set is not a lot to work with."
+  },
+  "emergency": {
+   "name": "Zola",
+   "animal": "anglerfish",
+   "role": "Emergency and first aid pages",
    "vibe": "Calm in a crisis, brilliant in the dark. Her headlamp has never once gone flat.",
-   "story": "Zola grew up in the deep sea, where it is always 3am and something is always on fire. That made her a natural emergency nurse. Her glowing lure doubles as a torch for checking pupils, finding veins and reading tiny print on medicine labels. She has a scary grin and a gentle voice, and she will tell you exactly when to call an ambulance and when a cold pack will do."},
-  "immunisation": {"name": "Tembi", "animal": "elephant", "role": "Immunisation and vaccine pages",
+   "story": "Zola grew up in the deep sea, where it is always 3am and something is always on fire. That made her a natural emergency nurse. Her glowing lure doubles as a torch for checking pupils, finding veins and reading tiny print on medicine labels. She has a scary grin and a gentle voice, and she will tell you exactly when to call an ambulance and when a cold pack will do."
+  },
+  "immunisation": {
+   "name": "Tembi",
+   "animal": "elephant",
+   "role": "Immunisation and vaccine pages",
    "vibe": "Kind, patient and never forgets a due date. Gives the gentlest jabs in the business.",
-   "story": "Tembi is an elephant, so she remembers every vaccine schedule, every booster date and every child who was brave last time. She became an immunisation nurse after seeing how quickly measles can spread through a herd. Her trunk is perfect for steady hands, and she keeps a pocket full of stickers for anyone who needs one, adults included."},
-  "menshealth": {"name": "Magnus", "animal": "walrus", "role": "Men's health pages",
+   "story": "Tembi is an elephant, so she remembers every vaccine schedule, every booster date and every child who was brave last time. She became an immunisation nurse after seeing how quickly measles can spread through a herd. Her trunk is perfect for steady hands, and she keeps a pocket full of stickers for anyone who needs one, adults included."
+  },
+  "menshealth": {
+   "name": "Magnus",
+   "animal": "walrus",
+   "role": "Men's health pages",
    "vibe": "Big, gruff and secretly soft. Gets men to see a doctor by pretending it was their idea.",
-   "story": "Magnus is a walrus who avoided doctors for forty years, until a check-up caught a problem early and changed his mind. Now he's on a mission to drag every bloke he knows to a GP, gently, with his tusks if necessary. He talks about prostates, mental health and blood pressure the way other walruses talk about the weather: loudly, often, and without embarrassment."},
-  "mentalhealth": {"name": "Otto", "animal": "golden retriever puppy", "role": "Mental health pages",
+   "story": "Magnus is a walrus who avoided doctors for forty years, until a check-up caught a problem early and changed his mind. Now he's on a mission to drag every bloke he knows to a GP, gently, with his tusks if necessary. He talks about prostates, mental health and blood pressure the way other walruses talk about the weather: loudly, often, and without embarrassment."
+  },
+  "mentalhealth": {
+   "name": "Otto",
+   "animal": "golden retriever puppy",
+   "role": "Mental health pages",
    "vibe": "Warm, steady and a very good listener. Knows when to talk and when to just sit with you.",
-   "story": "Otto started out as a therapy puppy at a children's hospital and discovered he was good at noticing who needed company. He doesn't fix things. He sits beside you, listens properly and reminds you that asking for help is brave, not weak. He still gets excited about tennis balls, but he will always put the ball down if you need to talk."},
-  "nutrition": {"name": "Fig", "animal": "hedgehog", "role": "Nutrition and diet pages",
+   "story": "Otto started out as a therapy puppy at a children's hospital and discovered he was good at noticing who needed company. He doesn't fix things. He sits beside you, listens properly and reminds you that asking for help is brave, not weak. He still gets excited about tennis balls, but he will always put the ball down if you need to talk."
+  },
+  "nutrition": {
+   "name": "Fig",
+   "animal": "hedgehog",
+   "role": "Nutrition and diet pages",
    "vibe": "Practical, food-loving dietitian. No food is banned in her kitchen, except detox tea.",
-   "story": "Fig is a hedgehog who ran a tiny café before training as a dietitian. She got tired of customers asking which superfood would fix everything, so she went to find out properly. Her verdict: vegetables, fibre and actually enjoying your meals. She keeps a carrot behind her ear, has no time for fad diets, and gets visibly prickly whenever anyone says \"clean eating\"."},
-  "pregnancy": {"name": "Marisol", "animal": "seahorse", "role": "Pregnancy and fertility pages",
+   "story": "Fig is a hedgehog who ran a tiny café before training as a dietitian. She got tired of customers asking which superfood would fix everything, so she went to find out properly. Her verdict: vegetables, fibre and actually enjoying your meals. She keeps a carrot behind her ear, has no time for fad diets, and gets visibly prickly whenever anyone says \"clean eating\"."
+  },
+  "pregnancy": {
+   "name": "Marisol",
+   "animal": "seahorse",
+   "role": "Pregnancy and fertility pages",
    "vibe": "Gentle, unflappable and deeply practical. Has seen every kind of family and loves them all.",
-   "story": "Marisol is a seahorse midwife. In her family it was her dad who carried the eggs, which gave her a lifelong interest in the many ways families begin. She guides people through fertility, pregnancy and the newborn blur with calm, honest advice and zero judgement. She curls her tail around the hard questions and answers them straight."},
-  "satire": {"name": "Quill", "animal": "lyrebird", "role": "Satire and April Fools pages",
+   "story": "Marisol is a seahorse midwife. In her family it was her dad who carried the eggs, which gave her a lifelong interest in the many ways families begin. She guides people through fertility, pregnancy and the newborn blur with calm, honest advice and zero judgement. She curls her tail around the hard questions and answers them straight."
+  },
+  "satire": {
+   "name": "Quill",
+   "animal": "lyrebird",
+   "role": "Satire and April Fools pages",
    "vibe": "Mischievous mimic. Can impersonate anyone, especially people who take themselves too seriously.",
-   "story": "Quill is a lyrebird, the world's best mimic, who can copy a chainsaw, a camera shutter and a hospital administrator with equal accuracy. She writes the site's satire because she believes the best way to spot nonsense is to laugh at it. She aims her jokes at hype, jargon and pompous headlines, never at patients, and she always signs her work so nobody mistakes it for real news."},
-  "travel": {"name": "Yara", "animal": "Arctic tern", "role": "Travel health pages",
+   "story": "Quill is a lyrebird, the world's best mimic, who can copy a chainsaw, a camera shutter and a hospital administrator with equal accuracy. She writes the site's satire because she believes the best way to spot nonsense is to laugh at it. She aims her jokes at hype, jargon and pompous headlines, never at patients, and she always signs her work so nobody mistakes it for real news."
+  },
+  "travel": {
+   "name": "Yara",
+   "animal": "Arctic tern",
+   "role": "Travel health pages",
    "vibe": "Restless, organised and always packed. Has a vaccine record longer than most passports.",
-   "story": "Yara is an Arctic tern, a bird that flies from pole to pole every year, so she has done more long-haul travel than anyone you know. She became the site's travel health guide after one trip without the right vaccines taught her a lesson she won't forget. She carries her passport, insurance and a full travel kit, and she will remind you to book your shots six weeks before you fly."}
+   "story": "Yara is an Arctic tern, a bird that flies from pole to pole every year, so she has done more long-haul travel than anyone you know. She became the site's travel health guide after one trip without the right vaccines taught her a lesson she won't forget. She carries her passport, insurance and a full travel kit, and she will remind you to book your shots six weeks before you fly."
+  },
+  "medicines": {
+   "name": "Yuki",
+   "animal": "giant panda",
+   "role": "Medicines A–Z host",
+   "vibe": "Calm, careful pharmacist. Reads every label twice and never rushes a dose.",
+   "story": "Yuki is a giant panda who spent years in a busy pharmacy, where she learned that most medicine mistakes happen when people are in a hurry. Pandas famously take their time, so the job suits her. She explains what each medicine does, what to watch for and when to ask for help, in plain words. She keeps her own bamboo in a labelled pill bottle, because old habits die hard."
+  }
  }
 }
