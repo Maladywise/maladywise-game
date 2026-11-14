@@ -1,4 +1,4 @@
-/* Anatomegaly: a daily anatomy puzzle, one diagram a day from 15 Nov 2026 (five rounds before). Name the highlighted structure, the bone or the nerve; four options per round.
+/* Anatomegaly: a daily anatomy puzzle, one diagram a day from 15 Nov 2026 (five rounds before; Sundays keep all five). Name the highlighted structure, the bone or the nerve; four options per round.
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rounds:[{kind, q, art?, hl?, answer, wrong:[3], why}] x5}.
    art = a diagram name from art.js; hl = the part ids to highlight. Score 3+ out of 5 counts as a win.
    Normie mode ("animal anatomy"): puzzles/normie/YYYY-MM.json, same format, animal diagrams from art.js, "n-" storage keys,
@@ -13,7 +13,7 @@
     tagline: "One body part a day. Name it.",
     quip: "Left is right, right is left. Welcome to anatomy.",
     helpQuip: "Wrong answers get explained. Gently. Mostly.",
-    help: ["Each day brings one diagram with a highlighted structure. Name it.",
+    help: ["Each day brings one diagram with a highlighted structure. Name it. Sundays are Full Body: five diagrams.",
       "Four options per round. One tap, no take-backs.",
       "Every answer comes with a quick explanation and, where we have one, a weird fact.",
       "Get it right to keep your streak alive.",
@@ -29,7 +29,7 @@
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};
   if (!MW_EINSTEIN.labelosis) MW_EINSTEIN.labelosis = ["2026-11-13"];
 
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", N = 5, PASS = 3, ONE = "2026-11-15"; // from ONE: one picture a day (the first round with a diagram)
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", N = 5, PASS = 3, ONE = "2026-11-15"; // from ONE: one picture a day (the first round with a diagram)
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Anatomegaly (Normie)" : "Anatomegaly";
   // Normie wording swaps
   var T = NORMIE ? { foot: "Diagrams are simplified, original sketches, not to scale. Animal facts checked, but nature loves an exception.", noart: "No diagram for this one. Just you and your nature documentaries.", next: "Go and look at a cat’s ears. Respectfully.", emoji: " 🐙 ", masc: "/assets/mascots/normie/labelosis.svg" }
@@ -188,7 +188,7 @@
     today = date; loadDay(); P = null;
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
-      if (P && date >= ONE && st.picks.length <= 1) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { return R.art; })[0] || P.rounds[0]] };
+      if (P && date >= ONE && st.picks.length <= 1 && new Date(dayNum(date) * 864e5).getUTCDay() !== 0) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { return R.art; })[0] || P.rounds[0]] };
       N = P ? P.rounds.length : 5; PASS = N === 1 ? 1 : 3;
       if (!P) { hidePlay(date < "2026-11-02" ? '<p class="empty">Anatomegaly opens Monday 2 November. ' + (NORMIE ? "The octopus is still stretching." : "The skeleton is still warming up.") + "</p>" : NORMIE && window.MW_noNormie ? MW_noNormie("anatomy puzzle") : '<p class="empty">Today’s set is still being labelled. Back tomorrow.</p>'); renderArchive(); return; }
       ["pips", "opts"].forEach(function (k) { $(k).hidden = false; });

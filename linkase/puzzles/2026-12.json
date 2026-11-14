@@ -35,8 +35,12 @@
    "TAG",
    "LINE",
    "DANCE",
-   "FLOOR"
-  ]
+   "FLOOR",
+   "SPACE",
+   "SUIT",
+   "CASE"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-04",
@@ -131,8 +135,12 @@
    "BAND",
    "WAGON",
    "WHEEL",
-   "CHAIR"
-  ]
+   "CHAIR",
+   "LIFT",
+   "OFF",
+   "LABEL"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-11",
@@ -227,8 +235,12 @@
    "LAB",
    "RAT",
    "TRAP",
-   "DOOR"
-  ]
+   "DOOR",
+   "STOP",
+   "WATCH",
+   "DOG"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-18",
@@ -318,8 +330,12 @@
    "DISEASE",
    "CONTROL",
    "GROUP",
-   "THERAPY"
-  ]
+   "THERAPY",
+   "DOG",
+   "HOUSE",
+   "CALL"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-25",
@@ -404,12 +420,16 @@
   "number": 76,
   "difficulty": "Medium",
   "chain": [
-   "PROJECTILE",
-   "VOMIT",
-   "COMET",
-   "TAIL",
-   "GATE",
-   "CRASHER"
-  ]
+   "NEW",
+   "YEAR",
+   "BOOK",
+   "WORM",
+   "HOLE",
+   "PUNCH",
+   "BAG",
+   "PIPE",
+   "DREAM"
+  ],
+  "long": true
  }
 ]

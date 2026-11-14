@@ -42,6 +42,12 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Tone: fascinated and respectful. These are real people's experiences; never mock patients or make a diagnosis the punchline.
 - Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
 
+## Weekly specials: one long or extra version per game (owner's rule, 14 Nov 2026)
+- Mon: Morphemia Max (nine letters). Tue: Glimpsathon (ten images). Wed: Super Zebritis (five prompts). Thu: Long Linkase. Fri: Wordemic Long Friday; Sudokrine 9x9 Fri to Sun. Sat: Sensitosis Saturday (all five tests, from 21 Nov) and Cryptoplexy. Sun: Anatomegaly Full Body (all five diagrams) and Grand Rounds. Arrhythmix runs Mon and Thu.
+- Long Linkase (every Thursday, Medical and Normie): chain of 9 words (7 hidden, 7 strikes), "long": true in the day's JSON. Every adjacent pair must be a real compound or common phrase. The monthly puzzle build writes Thursdays this way.
+- Sensitosis and Anatomegaly day files always hold five rounds. On ordinary days the game shows one (Sensitosis: the first standalone round; Anatomegaly: the first round with a diagram), so put the best standalone item first.
+- Still to come (need engine work): Super Comorbix (five groups), Big Grid Gridectomy, a longer Suturix board, Panelysis and Opacitis double days, Dxtective Hard Case. Don't fake these in puzzle files.
+
 ## Wordemic: Long Friday
 - Every Friday (Sydney date) from 2026-11-06, Wordemic is "Long Friday" in both Medical and Normie modes. All other days stay 5 letters, 6 guesses. The game reads the length from the answer.
 - From 2026-11-20 the Friday word length varies (owner request, Nov 2026): anywhere from 7 to 15 letters. Mix lengths across the month; don't repeat a length on consecutive Fridays; roughly one 14–15-letter "monster" a month (e.g. GASTROENTERITIS, ECHOCARDIOGRAM; Normie e.g. CONGRATULATIONS). 8 letters is still fine sometimes.

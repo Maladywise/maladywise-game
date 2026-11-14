@@ -1,9 +1,12 @@
 /* Linkase: six-word chain, first and last shown. Each word pairs with the next.
    Guess the hidden words from either end. Wrong guess = one more letter shown, one strike.
-   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}} */
+   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, chain[6], alt?{WORD:[...]}, long?}.
+   Long Linkase (every Thursday): chain[9] with 7 hidden words, 7 strikes, flagged "long": true. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10", MAXM = 5;
+  function LAST() { return P ? P.chain.length - 1 : 5; }
+  function HID() { var a = []; for (var k = 1; k < LAST(); k++) a.push(k); return a; }
   // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Linkase (Normie)" : "Linkase";
   var root = document.getElementById("lnk");
@@ -49,7 +52,7 @@
     given: ["Fully spelled out for you. That one doesn't count.", "Gave it away. We all have off days.", "Revealed in full. No credit, no shame.", "Spelt out for you. Moving on."],
     len: function (n) { return "Needs " + n + " letters. Count them, Doctor."; },
     win: [["Flawless chain. Not one slip. Insufferable, frankly.", "Zero slips. Linked like a surgeon.", "Perfect chain. Unbreakable.", "No mistakes. Show-off."], ["One slip. Still a strong chain.", "One slip. Barely a wobble.", "One mistake, then smooth.", "Strong chain. One kink."], ["Two slips. Holding together.", "Two slips. Still solid.", "Two kinks. Chain intact.", "Two slips. Good recovery."], ["Three slips. Rusty links, but it held.", "Three slips. Creaky but intact.", "Three wobbles. It held.", "Three slips. Close call."], ["Four slips. Held together with tape.", "Four slips. Barely attached.", "Held together by hope.", "Four slips. Somehow it held."]],
-    lose: ["Chain snapped. Here's how it went.", "Five strikes. The links win today.", "Dropped it. Rematch tomorrow.", "Chain broken. Here\u2019s the full set.", "Too many slips. The chain gave out.", "Snapped. Tomorrow\u2019s chain is stronger. Probably."]
+    lose: ["Chain snapped. Here's how it went.", "Out of strikes. The links win today.", "Dropped it. Rematch tomorrow.", "Chain broken. Here\u2019s the full set.", "Too many slips. The chain gave out.", "Snapped. Tomorrow\u2019s chain is stronger. Probably."]
   };
   if (NORMIE) {
     SASS.wrong = SASS.wrong.map(function (x) { return x === "Not a phrase. Not even in a discharge summary." ? "Not a phrase. Not even in a group chat." : x; });
@@ -63,8 +66,9 @@
   function word(i) { return P.chain[i]; }
   function frontier() { // open slots adjacent to a known word
     var f = [], i;
-    for (i = 1; i <= 4; i++) if (!st.w[i].s) { f.push(i); break; }
-    for (i = 4; i >= 1; i--) if (!st.w[i].s) { if (f.indexOf(i) < 0) f.push(i); break; }
+    var n = LAST() - 1;
+    for (i = 1; i <= n; i++) if (!st.w[i].s) { f.push(i); break; }
+    for (i = n; i >= 1; i--) if (!st.w[i].s) { if (f.indexOf(i) < 0) f.push(i); break; }
     return f;
   }
   function fixAct() { var f = frontier(); if (f.indexOf(st.act) < 0) st.act = f[0] || 0; }
@@ -79,9 +83,9 @@
     if (!P) return;
     fixAct();
     var f = st.done ? [] : frontier(), h = "";
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i <= LAST(); i++) {
       var w = word(i), cls = "link", tiles = "";
-      if (i === 0 || i === 5) { cls += " end"; tiles = '<span class="full">' + esc(w) + "</span>"; }
+      if (i === 0 || i === LAST()) { cls += " end"; tiles = '<span class="full">' + esc(w) + "</span>"; }
       else {
         var s = st.w[i], show = s.s || st.done;
         if (s.s === 1) cls += " ok"; else if (s.s === 2 || (st.done && !s.s)) cls += " gave";
@@ -94,7 +98,7 @@
         }
       }
       h += '<div class="' + cls + '" data-i="' + i + '"' + (f.indexOf(i) >= 0 && i !== st.act ? ' role="button" tabindex="0" aria-label="Work on this word"' : "") + ">" + tiles + "</div>";
-      if (i < 5) h += '<div class="joint" aria-hidden="true"></div>';
+      if (i < LAST()) h += '<div class="joint" aria-hidden="true"></div>';
     }
     var ch2 = $("chain"); ch2.innerHTML = h;
     if (shake) { var a = ch2.querySelector(".act"); if (a) { a.classList.remove("shake"); void a.offsetWidth; a.classList.add("shake"); } }
@@ -109,11 +113,11 @@
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
-    var sq = [1, 2, 3, 4].map(function (i) { var s = st.w[i]; return s.s !== 1 ? "\ud83d\udfe5" : s.rev > 1 ? "\ud83d\udfe8" : "\ud83d\udfe9"; }).join("");
+    var sq = HID().map(function (i) { var s = st.w[i]; return s.s !== 1 ? "\ud83d\udfe5" : s.rev > 1 ? "\ud83d\udfe8" : "\ud83d\udfe9"; }).join("");
     var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\ud83d\udd17" + sq + "\ud83d\udd17 " + (st.win ? st.mistakes + "/" + MAXM + " strikes" : "snapped") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
-    r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < 5 ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" \u00b7 ").toLowerCase() + "</p>" +
+    r.innerHTML = '<p class="links">' + P.chain.map(function (w, i) { return i < LAST() ? "<b>" + esc(w) + " " + esc(P.chain[i + 1]) + "</b>" : ""; }).filter(Boolean).join(" \u00b7 ").toLowerCase() + "</p>" +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<pre id="lnk-share">' + share + '</pre><button class="btn solid" type="button" id="lnk-copy">Copy result</button>';
     $("copy").onclick = function () {
@@ -160,13 +164,13 @@
     var g = w.slice(0, s.rev) + cur.toUpperCase(); cur = "";
     if (okGuess(i, g)) {
       s.s = 1; say(pick(SASS.right));
-      if ([1, 2, 3, 4].every(function (k) { return st.w[k].s; })) { finish(st.mistakes < MAXM); render(); return; }
+      if (HID().every(function (k) { return st.w[k].s; })) { finish(st.mistakes < MAXM); render(); return; }
       fixAct(); put(KEY, st); render(); return;
     }
     st.mistakes++; s.rev++;
     if (s.rev >= w.length) { s.s = 2; say(pick(SASS.given)); } else say(pick(SASS.wrong));
     if (st.mistakes >= MAXM) { finish(false); render(); return; }
-    if ([1, 2, 3, 4].every(function (k) { return st.w[k].s; })) { finish(true); render(); return; }
+    if (HID().every(function (k) { return st.w[k].s; })) { finish(true); render(); return; }
     fixAct(); put(KEY, st); render(true);
   }
   function press(k) {
@@ -238,13 +242,15 @@
     today = date; loadDay(); cur = ""; P = null; say("");
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
+      MAXM = P && P.chain.length > 6 ? 7 : 5;
+      if (P) while (st.w.length < P.chain.length - 1) st.w.push({ rev: 1, s: 0 });
       if (!P) {
         $("kb").hidden = true; $("pk").hidden = true; $("mist").innerHTML = ""; $("result").hidden = true;
         if (NORMIE && window.MW_noNormie) { say(""); $("chain").innerHTML = MW_noNormie("chain"); }
         else { say("Today\u2019s chain is still in triage. Back tomorrow."); $("chain").innerHTML = ""; }
         renderArchive(); return;
       }
-      $("eyebrow").textContent = (isLive() ? "Linkase" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
+      $("eyebrow").textContent = (isLive() ? "Linkase" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date) + (P.chain.length > 6 ? " \u00b7 Long Linkase" : "");
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive chain. Already done." : "Archive chain. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Linked. Come back tomorrow." : "You've had your go. Back tomorrow.");

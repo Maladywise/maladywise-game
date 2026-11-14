@@ -1,4 +1,4 @@
-/* Sensitosis: guess how good real medical tests are. One test a day from 14 Nov 2026 (five before); two sliders each (sensitivity, specificity).
+/* Sensitosis: guess how good real medical tests are. One test a day from 14 Nov 2026 (five before; Saturdays keep all five); two sliders each (sensitivity, specificity).
    Test bank: tests.json {tests: {id: {test, condition, scenario, sens:{v,lo,hi}, spec:{v,lo,hi}|null, range?, kind?, label?, says, note, src:[[title,url]], checked}}}.
    kind: sign | rule | scan | (none = lab test). Sign and rule rounds are "Signs rounds": same mechanics, different chip and wording.
    Days: puzzles/YYYY-MM.json [{date, number, difficulty, rounds:[{test, twist?:{prev, where, sourced}}]}].
@@ -8,7 +8,7 @@
    and puzzles/normie/YYYY-MM.json, "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", N = 5, OPEN = "2026-11-02", ONE = "2026-11-14"; // from ONE: one test a day (the first round); earlier days and part-played days keep 5
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", N = 5, OPEN = "2026-11-02", ONE = "2026-11-14"; // from ONE: one test a day (the first round); earlier days and part-played days keep 5
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", TFILE = NORMIE ? "tests-normie.json" : "tests.json", NAME = NORMIE ? "Sensitosis (Normie)" : "Sensitosis";
   var root = document.getElementById("sns");
   if (!document.querySelector("link[data-sns]")) {
@@ -258,7 +258,7 @@
     return Promise.all([testsP, month(date.slice(0, 7))]).then(function (a) {
       if (NORMIE) normFoot();
       P = a[1].filter(function (x) { return x.date === date; })[0] || null;
-      if (P && date >= ONE && st.g.length <= 1) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { var T = TESTS[R.test] || {}; return !R.twist && !/^same\b/i.test(T.scenario || ""); })[0] || P.rounds[0]] }; // a round that stands alone
+      if (P && date >= ONE && st.g.length <= 1 && (new Date(dayNum(date) * 864e5).getUTCDay() !== 6 || date < "2026-11-21")) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { var T = TESTS[R.test] || {}; return !R.twist && !/^same\b/i.test(T.scenario || ""); })[0] || P.rounds[0]] }; // a round that stands alone
       if (P) N = P.rounds.length;
       if (!P) {
         $("dots").innerHTML = ""; $("result").hidden = true; $("badge").hidden = true; $("card").hidden = false;

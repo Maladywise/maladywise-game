@@ -243,8 +243,12 @@
    "SHOT",
    "GUN",
    "POWDER",
-   "KEG"
-  ]
+   "KEG",
+   "PARTY",
+   "TIME",
+   "TABLE"
+  ],
+  "long": true
  },
  {
   "date": "2026-11-20",
@@ -333,9 +337,13 @@
    "STONE",
    "WALL",
    "PAPER",
-   "WEIGHT",
-   "LIFTING"
-  ]
+   "CLIP",
+   "BOARD",
+   "GAME",
+   "SHOW",
+   "CASE"
+  ],
+  "long": true
  },
  {
   "date": "2026-11-27",

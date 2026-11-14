@@ -238,13 +238,17 @@
   "number": 34,
   "difficulty": "Medium",
   "chain": [
-   "SPINAL",
-   "TAP",
-   "WATER",
-   "BIRTH",
-   "CONTROL",
-   "PANEL"
-  ]
+   "BLOOD",
+   "PRESSURE",
+   "POINT",
+   "BLANK",
+   "CHEQUE",
+   "BOOK",
+   "CLUB",
+   "FOOT",
+   "NOTE"
+  ],
+  "long": true
  },
  {
   "date": "2026-11-20",
@@ -334,8 +338,12 @@
    "LANE",
    "SWIMMING",
    "POOL",
-   "TABLE"
-  ]
+   "TABLE",
+   "SALT",
+   "WATER",
+   "BIRTH"
+  ],
+  "long": true
  },
  {
   "date": "2026-11-27",

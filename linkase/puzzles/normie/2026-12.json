@@ -35,8 +35,12 @@
    "LANGUAGE",
    "CLASS",
    "ROOM",
-   "MATE"
-  ]
+   "SERVICE",
+   "STATION",
+   "WAGON",
+   "WHEEL"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-04",
@@ -126,8 +130,12 @@
    "BOWL",
    "CUT",
    "GLASS",
-   "HOUSE"
-  ]
+   "HOUSE",
+   "BOAT",
+   "RACE",
+   "TRACK"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-11",
@@ -217,8 +225,12 @@
    "BIRD",
    "BATH",
    "TOWEL",
-   "RAIL"
-  ]
+   "RAIL",
+   "ROAD",
+   "TRIP",
+   "WIRE"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-18",
@@ -313,8 +325,12 @@
    "SUGAR",
    "CUBE",
    "ROOT",
-   "VEGETABLE"
-  ]
+   "VEGETABLE",
+   "PATCH",
+   "WORK",
+   "SHOP"
+  ],
+  "long": true
  },
  {
   "date": "2026-12-25",
@@ -404,7 +420,11 @@
    "STAIRS",
    "WELL",
    "SPRING",
-   "ROLL"
-  ]
+   "ROLL",
+   "CALL",
+   "CENTRE",
+   "STAGE"
+  ],
+  "long": true
  }
 ]
