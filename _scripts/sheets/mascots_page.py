@@ -5,6 +5,7 @@ import json as _j, re as _re, html as _h, os as _os, unicodedata as _ud
 _src = open("assets/games.js", encoding="utf-8").read()
 _M = _j.loads(_re.search(r"window\.MW_MASCOTS = (\{.*?\});\n", _src, _re.S).group(1))
 _C = _j.load(open("data/mascot-cast.json", encoding="utf-8"))["mascots"]
+_PF = _j.load(open("data/mascot-profiles.json", encoding="utf-8"))["mascots"]  # job, home, personality, health quirk
 _GAMES = [("dx", "Dxtective", "/dxtective/"), ("wordemic", "Wordemic", "/wordemic/"), ("triviosis", "Triviosis", "/triviosis/"), ("glimpsis", "Glimpsis", "/glimpsis/"),
           ("opacitis", "Opacitis", "/opacitis/"), ("panelysis", "Panelysis", "/panelysis/"), ("comorbix", "Comorbix", "/comorbix/"), ("labelosis", "Anatomegaly", "/anatomegaly/"),
           ("linkase", "Linkase", "/linkase/"), ("zebritis", "Zebritis", "/zebritis/"), ("gridectomy", "Gridectomy", "/gridectomy/"), ("suturix", "Suturix", "/suturix/"),
@@ -71,6 +72,8 @@ _PCSS = ('<style>.mz-hero{display:flex;align-items:center;gap:16px;margin:8px 0 
          '.mz-cheer li{margin:0!important;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:12px;padding:10px 12px;font-style:italic}'
          '.mz-nav{display:flex;justify-content:space-between;gap:10px;margin:22px 0 6px;flex-wrap:wrap}.mz-nav a{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:600}'
          '.mz-vid{margin:6px 0 18px}.mz-vid summary{cursor:pointer;font-weight:600;color:var(--accent,#4A3480)}.mz-vid video{display:block;margin:10px auto 0;width:min(100%,360px);height:auto;border-radius:14px;background:#1B1430}'
+         '.mz-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0 18px}.mz-facts div{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:12px;padding:9px 12px}'
+         '.mz-facts dt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#4A3480)}.mz-facts dd{margin:2px 0 0;font-size:15px;line-height:1.4}'
          '.mz-nav img{width:40px;height:40px}@media(max-width:520px){.mz-hero img{width:92px;height:92px}}</style>\n')
 for i, a in enumerate(ALL):
     k, name, role, href, what, vibe, story, cheer, kind, slug = a
@@ -78,12 +81,15 @@ for i, a in enumerate(ALL):
     prv, nxt = ALL[i - 1], ALL[(i + 1) % len(ALL)]
     sents = _re.split(r"(?<=[.!?])\s+", story)
     paras = [" ".join(sents[j:j + 3]) for j in range(0, len(sents), 3)] if story else []
-    b = ('<p class="lede">%s</p>\n' % _e(vibe)
+    pf = _PF.get(name)
+    facts = ('<dl class="mz-facts">' + "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (lab, _e(pf[key])) for lab, key in
+             (("Job", "job"), ("From", "from"), ("Personality", "style"), ("Health quirk", "health"))) + '</dl>\n') if pf else ""
+    b = ('<p class="lede">%s</p>\n' % _e(vibe) + facts
          + '<h2>%s story</h2>\n<div class="mz-story">%s</div>\n' % (("His" if pv == "his" else "Her"), "".join("<p>%s</p>" % _e(p) for p in paras))
          + (('<details class="mz-vid"><summary>▶ Watch %s story (short video)</summary><video controls playsinline preload="none" poster="/assets/video/mascots/%s.jpg" width="360" height="640">'
              '<source src="/assets/video/mascots/%s.mp4" type="video/mp4"></video></details>\n') % (pv, slug, slug) if _os.path.exists("assets/video/mascots/%s.mp4" % slug) else "")
          + (('<h2>What %s says when you win</h2>\n<ul class="mz-cheer">' % ("he" if pr == "him" else "she")) + "".join("<li>“%s”</li>" % _e(c) for c in cheer[:6]) + "</ul>\n" if cheer else "")
-         + ('<p>Find %s in <a href="%s">%s</a>.</p>\n' % (pr, href, _e(role.replace(" mascot", "")))) if href else "")
+         + (('<p>Find %s in <a href="%s">%s</a>.</p>\n' % (pr, href, _e(role.replace(" mascot", "")))) if href else ""))
     b += ('<nav class="mz-nav" aria-label="More mascots"><a href="/mascots/%s/"><img src="/assets/mascots/%s.svg" alt="" width="40" height="40" loading="lazy">← %s</a>'
           '<a href="/mascots/">All mascots</a><a href="/mascots/%s/">%s → <img src="/assets/mascots/%s.svg" alt="" width="40" height="40" loading="lazy"></a></nav>\n'
           % (prv[9], prv[0], _e(prv[1]), nxt[9], _e(nxt[1]), nxt[0])) + _PCSS

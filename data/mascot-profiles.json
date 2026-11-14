@@ -1,0 +1,275 @@
+{
+ "_about": "Mascot fact boxes (job, home, personality, health quirk), shown on /mascots/<name>/ pages. Keyed by mascot name.",
+ "mascots": {
+  "Pebble": {
+   "job": "Research librarian and deep diver",
+   "from": "A windy sub-Antarctic island",
+   "style": "Quiet, thorough, overdressed",
+   "health": "Seasick on boats, which is embarrassing for a penguin"
+  },
+  "Dex": {
+   "job": "GP diagnostician",
+   "from": "A village library in the English countryside",
+   "style": "Showy, sharp, loves a monologue",
+   "health": "Needs reading glasses, denies it"
+  },
+  "Vira": {
+   "job": "Self-described influencer",
+   "from": "A Petri dish someone forgot to cover",
+   "style": "Loud, needy, oddly lovable",
+   "health": "Allergic to hand sanitiser"
+  },
+  "Octavia": {
+   "job": "Clinic supply manager, retired",
+   "from": "An Indo-Pacific coral reef",
+   "style": "Orderly, anxious, stress-cleans",
+   "health": "Repetitive strain in arm six"
+  },
+  "Bea": {
+   "job": "Nurse unit manager",
+   "from": "A hive on a lavender farm",
+   "style": "Firm, warm, unflappable",
+   "health": "Hay fever (yes, a bee)"
+  },
+  "Cadi": {
+   "job": "Emergency triage nurse",
+   "from": "An emergency department stethoscope rail",
+   "style": "Charming, competitive, sore loser",
+   "health": "Dry, flaky skin every shedding season"
+  },
+  "Tess": {
+   "job": "Retired ward tortoise, crossword setter",
+   "from": "The Galápagos, via a country hospital",
+   "style": "Calm, dry, rarely wrong",
+   "health": "Knee osteoarthritis, never complains"
+  },
+  "Silk": {
+   "job": "Plastic surgeon",
+   "from": "The corner of an operating theatre",
+   "style": "Precise, theatrical, judgemental",
+   "health": "Faints at a granny knot (vasovagal)"
+  },
+  "Echo": {
+   "job": "Medical lecturer",
+   "from": "Central Africa, via a university lecture theatre",
+   "style": "Bright, chatty, a show-off",
+   "health": "Mild tinnitus from lecture halls"
+  },
+  "Ziggy": {
+   "job": "Rare-disease geneticist",
+   "from": "The Kenyan plains",
+   "style": "Shy, odd, fiercely curious",
+   "health": "Hypermobile joints"
+  },
+  "Cipher": {
+   "job": "Unofficial hospital codebreaker",
+   "from": "Unknown (she came in through a window)",
+   "style": "Aloof, cryptic, mischievous",
+   "health": "Hairballs"
+  },
+  "Locum": {
+   "job": "Night locum doctor",
+   "from": "The overnight medical roster",
+   "style": "Deadpan, sharp, tired",
+   "health": "Shift-work insomnia"
+  },
+  "Ruby": {
+   "job": "Haematology lab scientist",
+   "from": "She claims Transylvania; it was actually the pathology lab, level 2",
+   "style": "Theatrical, exacting, nocturnal",
+   "health": "Vitamin D deficiency"
+  },
+  "Riff": {
+   "job": "Cardiac technician (ECGs)",
+   "from": "A school band",
+   "style": "Steady, rhythmic, alert",
+   "health": "Occasional ectopic beats, which drive her mad"
+  },
+  "Iris": {
+   "job": "Endocrinologist",
+   "from": "A barn, then the night endocrine lab",
+   "style": "Logical, exacting, nocturnal",
+   "health": "Underactive thyroid, perfectly managed"
+  },
+  "Mira": {
+   "job": "Dermatology nurse",
+   "from": "Madagascar, via a skin-clinic pot plant",
+   "style": "Observant, patient, quietly smug",
+   "health": "Eczema that flares when she's stressed"
+  },
+  "Lumo": {
+   "job": "Radiologist",
+   "from": "The ocean, via a storm drain into radiology",
+   "style": "Calm, transparent, kind",
+   "health": "Burns in about four minutes of sun"
+  },
+  "Digby": {
+   "job": "Sign-language interpreter",
+   "from": "North America, behind a school for deaf children",
+   "style": "Curious, restless, hands-on",
+   "health": "Dust-mite allergy"
+  },
+  "Lottie": {
+   "job": "Anatomy demonstrator",
+   "from": "Lake Xochimilco in Mexico, via an anatomy school's jar room",
+   "style": "Easy-going, tidy, forgiving",
+   "health": "None. She regrows everything, and she's smug about it"
+  },
+  "Sunny": {
+   "job": "Screening epidemiologist",
+   "from": "The Kalahari",
+   "style": "Vigilant, sceptical, protective",
+   "health": "Neck strain from lookout duty"
+  },
+  "Brix": {
+   "job": "Builder turned organ stacker",
+   "from": "The Hunter",
+   "style": "Practical, proud, smoko at 10am",
+   "health": "Bad back, refuses to see a physio"
+  },
+  "Noggin": {
+   "job": "Neuroscientist",
+   "from": "A neurology textbook page",
+   "style": "Brilliant, scatty, dreamy",
+   "health": "Migraines"
+  },
+  "Kiri": {
+   "job": "Dental nurse",
+   "from": "A Pacific reef",
+   "style": "Bubbly, bossy about brushing",
+   "health": "Zero cavities in 30,000 teeth"
+  },
+  "Zola": {
+   "job": "Emergency nurse",
+   "from": "The deep Atlantic",
+   "style": "Unflappable, gentle, direct",
+   "health": "Sensitive to bright light"
+  },
+  "Tembi": {
+   "job": "Immunisation nurse",
+   "from": "South Africa",
+   "style": "Patient, warm, watchful",
+   "health": "Very high blood pressure, which is normal for a giraffe"
+  },
+  "Magnus": {
+   "job": "Men's health advocate, retired fisherman",
+   "from": "Svalbard",
+   "style": "Loud, blunt, big-hearted",
+   "health": "High cholesterol, caught early and managed"
+  },
+  "Otto": {
+   "job": "Therapy dog and counsellor",
+   "from": "A children's hospital therapy-dog programme",
+   "style": "Warm, patient, easily delighted",
+   "health": "Itchy ears"
+  },
+  "Fig": {
+   "job": "Dietitian",
+   "from": "A village café in Provence",
+   "style": "Practical, cosy, prickly about fads",
+   "health": "Lactose intolerant (most hedgehogs are)"
+  },
+  "Marisol": {
+   "job": "Midwife",
+   "from": "Spain's Mediterranean coast",
+   "style": "Calm, honest, non-judgemental",
+   "health": "Motion sickness"
+  },
+  "Quill": {
+   "job": "Satirist",
+   "from": "An east-coast rainforest",
+   "style": "Cheeky, clever, never cruel",
+   "health": "Hoarse voice after a big impression"
+  },
+  "Yara": {
+   "job": "Travel health nurse",
+   "from": "Iceland, technically; she lives on the wing",
+   "style": "Organised, restless, prepared",
+   "health": "Permanent jet lag"
+  },
+  "Yuki": {
+   "job": "Pharmacist",
+   "from": "Sichuan",
+   "style": "Calm, methodical, never rushed",
+   "health": "Dry eyes from reading fine print"
+  },
+  "Norm": {
+   "job": "Professional relaxer",
+   "from": "The Brazilian wetlands",
+   "style": "Laid-back, sociable, zero urgency",
+   "health": "An enviable resting heart rate"
+  },
+  "Inês": {
+   "job": "Retired country GP",
+   "from": "The Amazon",
+   "style": "Wise, unhurried, wry",
+   "health": "Feels the cold (manatees really do)"
+  },
+  "Saga": {
+   "job": "GP registrar",
+   "from": "A Swedish river",
+   "style": "Eager, playful, overcommitted",
+   "health": "Reflux from too much coffee"
+  },
+  "Percy": {
+   "job": "Retired GP, referral wrangler",
+   "from": "A coastal country town",
+   "style": "Kindly, well connected, chatty",
+   "health": "A sore shoulder from carrying too much"
+  },
+  "Mei": {
+   "job": "Research reviewer",
+   "from": "An escapee from a research facility",
+   "style": "Curious, careful, sceptical",
+   "health": "Allergic to cats"
+  },
+  "Ama": {
+   "job": "Myth-buster and health journalist",
+   "from": "The roof of a health-food shop",
+   "style": "Clever, cheeky, fair",
+   "health": "None. Just smug"
+  },
+  "Nalu": {
+   "job": "Neurologist",
+   "from": "Hawaii",
+   "style": "Precise, balanced, nerdy about reflexes",
+   "health": "Needs extremely wide glasses"
+  },
+  "Hana": {
+   "job": "Allergy nurse",
+   "from": "Japan",
+   "style": "Gentle, careful, patient",
+   "health": "Peanut allergy, always carries her adrenaline autoinjector"
+  },
+  "Jett": {
+   "job": "Physio",
+   "from": "The Hunter hills",
+   "style": "Encouraging, practical, relentless",
+   "health": "Achilles tendinopathy, doing her own rehab"
+  },
+  "Kip": {
+   "job": "Sleep scientist",
+   "from": "A coastal gum forest",
+   "style": "Sleepy, wise, strict about screens",
+   "health": "Snores, so now uses a CPAP machine"
+  },
+  "Layla": {
+   "job": "Occupational therapist",
+   "from": "Costa Rica",
+   "style": "Steady, kind, boundary queen",
+   "health": "Long-term fatigue, paces like a pro"
+  },
+  "Hazel": {
+   "job": "Data analyst",
+   "from": "A Scottish pine wood",
+   "style": "Organised, excitable, competitive",
+   "health": "Grinds her teeth at night"
+  },
+  "Pippa": {
+   "job": "Practice nurse",
+   "from": "Sri Lanka",
+   "style": "Warm, organised, motherly",
+   "health": "Sore feet from long days on the floor"
+  }
+ }
+}
