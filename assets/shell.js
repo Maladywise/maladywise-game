@@ -267,6 +267,12 @@
     },
     comorbix: function (st) {
       if (!st.win) return null; var m = st.mistakes || 0;
+      if ((st.solved || []).length >= 5) { // Super Comorbix (Tuesdays, 5x5): bigger, five bars, gold stamp, a crown
+        var cs = ["#E9C46A", "#2A9D8F", "#457B9D", "#9B5DE5", "#E76F51"];
+        var sc = m ? (NORMIE ? ["Twenty-five sorted. " + m + " wobble" + (m > 1 ? "s" : "") + ", zero regrets.", "The big one, done. Have a lie down."] : ["Twenty-five terms, five groups, " + m + " slip" + (m > 1 ? "s" : "") + ". Consultant material.", "The big one, filed. Have a lie down."])
+          : (NORMIE ? ["Twenty-five sorted. Not one wobble. Frankly alarming.", "Flawless Super. We are a little scared of you."] : ["Flawless Super. Twenty-five terms, zero slips. Ward round over.", "Not one mistake on the 5x5. The registrar is taking notes."]);
+        return { cls: "cb-bars cb-super", ms: 3600, html: confetti(cs, 90) + '<div class="cb-crown" aria-hidden="true">\ud83d\udc51</div><div class="cb-stack">' + cs.map(function (c) { return '<i style="--c:' + c + '"></i>'; }).join("") + '</div><div class="cb-stamp">SUPER</div><p class="cb-cap">' + sc[Math.floor(Math.random() * sc.length)] + "</p>" };
+      }
       return { cls: "cb-bars", html: confetti(["#E9C46A", "#2A9D8F", "#457B9D", "#9B5DE5"], 40) + '<div class="cb-stack"><i style="--c:#E9C46A"></i><i style="--c:#2A9D8F"></i><i style="--c:#457B9D"></i><i style="--c:#9B5DE5"></i></div><p class="cb-cap">' + (m ? (NORMIE ? "All sorted, with " : "Discharged, with ") + m + " slip" + (m > 1 ? "s" : "") + "." : NORMIE ? "All sorted. Not one mistake." : "Clean discharge. Not one mistake.") + "</p>" };
     },
     morphemia: function (st) {
