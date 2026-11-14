@@ -1153,7 +1153,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       box.hidden = false;
     }
     function gpsBanner() {
-      return NORMIE ? "" : '<a class="gps-b" href="/unspecialist/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
+      return NORMIE ? "" : '<a class="gps-b" href="/gp-school/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
     }
 
     function order() {

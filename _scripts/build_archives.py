@@ -351,7 +351,7 @@ def r_cryptogenic(x, ctx):
 # ---------- game list (ids match MW_GAMES in assets/games.js) ----------
 
 GAMES = [
-    {"id": "dx", "folder": "dx", "name": "Dxtective",
+    {"id": "dx", "folder": "dxtective", "name": "Dxtective",
      "load": lambda: load_months("cases"), "render": r_dx,
      "title": "Diagnosis Game Archive: Past Dxtective Cases", "h1": "Dxtective archive: past diagnosis game cases",
      "desc": "Every past Dxtective daily diagnosis game case: the clues, the diagnosis and a clinical pearl. Free medical mystery cases.",
@@ -417,7 +417,7 @@ GAMES = [
      "title": "Medical Cryptic Crossword Archive: Cryptoplexy", "h1": "Cryptoplexy archive: past medical cryptic crosswords",
      "desc": "Every past Cryptoplexy medical cryptic crossword: each clue with its answer and how the wordplay works.",
      "lede": "Every past Saturday cryptic, with each clue, its answer and the parsing. Newest first."},
-    {"id": "grandrounds", "folder": "grandrounds", "name": "Grand Rounds",
+    {"id": "grandrounds", "folder": "grand-rounds", "name": "Grand Rounds",
      "load": load_grandrounds, "render": r_grandrounds,
      "title": "Hard Medical Trivia Archive: Grand Rounds", "h1": "Grand Rounds archive: past hard medical trivia",
      "desc": "Every past Grand Rounds quiz: twenty hard medical trivia questions a week, with answers and explanations.",

@@ -15,7 +15,7 @@ window.MW_HOME = {
     { t: "For doctors", medical: true, items: [
       { t: "Doctors’ hub", href: "/doctors/", d: "All clinician tools" },
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
-      { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
+      { t: "GP School", href: "/gp-school/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
       { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" }
     ] },

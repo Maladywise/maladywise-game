@@ -25,7 +25,7 @@ window.MW_NORMIE_CHEER = ["Day off and still winning.", "Feet up. Score up.", "B
 window.MW_START = { medical: [["dx", 3], ["wordemic", 3], ["triviosis", 4]], normie: [["dx", 3], ["wordemic", 3], ["triviosis", 4]] };
 window.MW_ORDER = ["dx", "wordemic", "triviosis", "glimpsis", "opacitis", "panelysis", "comorbix", "labelosis", "linkase", "zebritis", "gridectomy", "suturix", "morphemia", "sensitosis", "sudokrine", "arrhythmix", "cryptogenic", "grandrounds"];
 window.MW_GAMES = [
-  { id: "dx", normieMascot: true, kind: "Guess the diagnosis", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dx/", live: true, featured: true,
+  { id: "dx", normieMascot: true, kind: "Guess the diagnosis", name: "Dxtective", store: { stats: "dxw-stats-v2", day: "dxw-day-" }, path: "dxtective/", live: true, featured: true,
     normie: { kind: "What am I?", tagline: "Six clues, one answer. Guess early.", quip: "Animal, landmark, invention or icon. Six fun facts to work it out.", helpQuip: "Typing \"a thing\" will be judged. Harshly.", help: [
       "Read the first clue and guess what I am: an animal, landmark, country, invention, film, famous person or food. Normie mode: no medicine.",
       "Each wrong guess (or Next clue) unlocks another clue. You get six.",
@@ -234,7 +234,7 @@ window.MW_GAMES = [
     ],
     accent: "#7A3E8C", accentDark: "#D59BE6",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="26" height="26" rx="2"/><path d="M17 8v26M25 8v26M8 17h26M8 25h26"/><path d="M30 40l10-10 3 3-10 10h-3z" fill="#fff"/></svg>' },
-  { id: "grandrounds", normieMascot: true, relday: "Sundays", kind: "Hard trivia", name: "Grand Rounds", path: "grandrounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
+  { id: "grandrounds", normieMascot: true, relday: "Sundays", kind: "Hard trivia", name: "Grand Rounds", path: "grand-rounds/", live: true, weekly: true, weeklyLine: "A new quiz every Sunday. Twenty hard medical questions, no options.", store: { stats: "gdr-stats", day: "gdr-week-", weekly: true, weekStart: 0, labels: ["18-20", "14-17", "10-13", "5-9", "0-4"], distTitle: " (scores)" },
     normie: { kind: "Weekly trivia", tagline: "Twenty questions on the week that was.", weeklyLine: "New trivia every Sunday. Twenty questions on the week that was.", quip: "Did you read the news this week, or just the headlines?", helpQuip: "No multiple choice. Just you and whatever you half-remember from the news.", help: [
       "Twenty questions on the week that was. No medicine.",
       "Play solo, or pick Head to head: one reads aloud, the other answers.",

@@ -22,7 +22,7 @@ S_TGA_OC = ("https://www.tga.gov.au/news/safety-updates/updated-contraception-ad
 S_UK = ("https://www.gov.uk/government/publications/glp-1-medicines-for-weight-loss-and-diabetes-what-you-need-to-know/glp-1-medicines-for-weight-loss-and-diabetes-what-you-need-to-know", "UK MHRA: GLP-1 medicines for weight loss and diabetes, what you need to know (updated February 2026)")
 S_ADV = ("https://pmc.ncbi.nlm.nih.gov/articles/PMC12264624/", "Mozaffarian et al, 2025: Nutritional priorities to support GLP-1 therapy for obesity (joint advisory of four US obesity and nutrition societies)")
 
-GAME = ('<p class="callout bt-play"><b>Need a brain break?</b> <a href="/dx/">Play Dxtective, the daily diagnosis puzzle</a>, '
+GAME = ('<p class="callout bt-play"><b>Need a brain break?</b> <a href="/dxtective/">Play Dxtective, the daily diagnosis puzzle</a>, '
         'or browse all <a href="/medical-games/">medical games</a>. Free, no sign-up.</p>')
 
 URGENT_GI = ("<b>Get urgent help</b> (000 in Australia, or your local emergency number) for severe tummy pain that won’t settle, "

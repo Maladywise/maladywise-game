@@ -18,7 +18,7 @@ SECTIONS = [
     ("Deep dives for health professionals", lambda p: p.startswith("/deep-dives/")),
     ("World health days", lambda p: p.startswith("/days/")),
     ("Newsletter (Zebra Mail)", lambda p: p.startswith("/zebra-mail/")),
-    ("For doctors and GPs", lambda p: p.startswith(("/mbs-billing/", "/unspecialist/", "/rare-conditions/"))),
+    ("For doctors and GPs", lambda p: p.startswith(("/mbs-billing/", "/gp-school/", "/rare-conditions/"))),
 ]
 SKIP = ("/archive", "/specialists/", "/tag-review/", "/case-1/", "/mental-health-check/")
 

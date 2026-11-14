@@ -5,14 +5,14 @@ import json as _j, re as _re, html as _h, os as _os, unicodedata as _ud
 _src = open("assets/games.js", encoding="utf-8").read()
 _M = _j.loads(_re.search(r"window\.MW_MASCOTS = (\{.*?\});\n", _src, _re.S).group(1))
 _C = _j.load(open("data/mascot-cast.json", encoding="utf-8"))["mascots"]
-_GAMES = [("dx", "Dxtective", "/dx/"), ("wordemic", "Wordemic", "/wordemic/"), ("triviosis", "Triviosis", "/triviosis/"), ("glimpsis", "Glimpsis", "/glimpsis/"),
+_GAMES = [("dx", "Dxtective", "/dxtective/"), ("wordemic", "Wordemic", "/wordemic/"), ("triviosis", "Triviosis", "/triviosis/"), ("glimpsis", "Glimpsis", "/glimpsis/"),
           ("opacitis", "Opacitis", "/opacitis/"), ("panelysis", "Panelysis", "/panelysis/"), ("comorbix", "Comorbix", "/comorbix/"), ("labelosis", "Anatomegaly", "/anatomegaly/"),
           ("linkase", "Linkase", "/linkase/"), ("zebritis", "Zebritis", "/zebritis/"), ("gridectomy", "Gridectomy", "/gridectomy/"), ("suturix", "Suturix", "/suturix/"),
           ("morphemia", "Morphemia", "/morphemia/"), ("sensitosis", "Sensitosis", "/sensitosis/"), ("sudokrine", "Sudokrine", "/sudokrine/"), ("arrhythmix", "Arrhythmix", "/arrhythmix/"),
-          ("cryptogenic", "Cryptoplexy", "/cryptoplexy/"), ("grandrounds", "Grand Rounds", "/grandrounds/"), ("deepdives", "Deep dives", "/deep-dives/"), ("stackulus", "Stackulus", "/stackulus/"),
+          ("cryptogenic", "Cryptoplexy", "/cryptoplexy/"), ("grandrounds", "Grand Rounds", "/grand-rounds/"), ("deepdives", "Deep dives", "/deep-dives/"), ("stackulus", "Stackulus", "/stackulus/"),
           ("mergeon", "Mergeon", "/mergeon/")]
 # where each host works (only pages that exist and aren't redirects)
-_HOME = {"medicines": "/medicines/", "normie/norm": "/normie/", "gphub": "/doctors/", "gpschool": "/unspecialist/", "specialists": "/specialists/",
+_HOME = {"medicines": "/medicines/", "normie/norm": "/normie/", "gphub": "/doctors/", "gpschool": "/gp-school/", "specialists": "/specialists/",
          "research": "/research/", "exercises": "/exercises/", "layla": "/tiredwise/", "patients": "/patients/", "mentalhealth": "/mental-health/",
          "sleep": "/sleep/", "travel": "/travel/"}
 _HE = ("Norm", "Percy", "Magnus", "Brix", "Otto")

@@ -55,18 +55,18 @@ INFOOT_RE = re.compile(r'(<footer class="site">)\n?' + re.escape(START) + r".*?"
 
 # Short link names where the page's own <h1>/<title> is too long or missing.
 LABELS = {
-    "/": "Today's puzzles", "/medical-games/": "All medical games", "/unspecialist/": "GP School",
+    "/": "Today's puzzles", "/medical-games/": "All medical games", "/gp-school/": "GP School",
     "/rare-conditions/": "Zebra Atlas", "/mbs-billing/": "GP MBS billing guide", "/normie/": "Normie mode",
     "/weird/": "Weird and wonderful", "/days/": "Health Calendar", "/zebra-mail/": "Zebra Mail",
     "/arcade/": "Arcade games", "/mental-health-check/": "Mental health check", "/basil-clover/": "Basil + Clover",
-    "/grandrounds/": "Grand Rounds", "/dx/": "Dxtective", "/about/": "About", "/contact/": "Contact",
+    "/grand-rounds/": "Grand Rounds", "/dxtective/": "Dxtective", "/about/": "About", "/contact/": "Contact",
     "/privacy/": "Privacy", "/disclaimer/": "Disclaimer", "/sponsorship/": "Sponsorship policy", "/conditions/": "Conditions A–Z",
     "/specialists/": "Specialists", "/compare/": "Comparisons", "/tools/": "Tools", "/deep-dives/": "Deep dives",
     "/exercises/": "Exercise handouts", "/medicines/": "Medicines", "/blood-tests/": "Blood tests",
     "/glp-1/": "GLP-1 medicines guide", "/doctors/": "For doctors", "/algorithms/": "Treatment algorithms", "/patients/": "For patients",
 }
 # Pages for doctors, curious minds and practice quizzes (their section is "extra"; og_cards.py uses sections).
-EXTRA = ["/unspecialist/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
+EXTRA = ["/gp-school/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
          "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/", "/arcade/"]
 HUBS = {"/patients/", "/algorithms/", "/doctors/", "/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",

@@ -250,3 +250,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - No sexist or misogynistic jokes or stereotypes anywhere: site copy, sass, mascot lines, puzzle clues, X posts.
 - Don't use "hormonal", "hysterical", "hysteria", "nagging", "bossy", "shrill", "hag" or similar as insults or jokes. "Hysteria" only appears in an explicitly historical medical context, and preferably not at all in games.
 - Don't cast women as carers and men as experts by default. Characters default to female in every role, including doctors, surgeons and scientists.
+
+## Web addresses (changed 14 Nov 2026)
+- Dxtective is /dxtective/ (was /dx/), Grand Rounds is /grand-rounds/ (was /grandrounds/), GP School is /gp-school/ (was /unspecialist/). The old addresses are redirect pages: keep them.
+- Engines and data did not move: Dxtective data is still cases/, Grand Rounds data and JS are still in grandrounds/, GP School JS and data are still in unspecialist/ (unspecialist.js loads data/ from its own folder). Bump unspecialist.js?v= in gp-school/index.html, not unspecialist/index.html.
+- Game ids, storage keys and mascot file names still use the old short names (dx, grandrounds). Don't rename those.
