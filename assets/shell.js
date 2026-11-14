@@ -713,6 +713,23 @@
     });
   }
   if (window.MutationObserver) new MutationObserver(function () { ticketify(); addShare(); }).observe(document.documentElement, { childList: true, subtree: true });
+  // Any mascot picture that isn't already a link or button links to that mascot's page (/mascots/<name>/).
+  // Hosts: file name -> name (keep in step with data/mascot-cast.json). Game mascots come from MW_MASCOTS.
+  var HOSTS = { dental: "Kiri", emergency: "Zola", immunisation: "Tembi", menshealth: "Magnus", mentalhealth: "Otto", nutrition: "Fig", pregnancy: "Marisol", satire: "Quill", travel: "Yara", medicines: "Yuki", norm: "Norm", gphub: "Ines", gpschool: "Saga", specialists: "Percy", research: "Mei", mythbusting: "Ama", neurology: "Nalu", allergy: "Hana", exercises: "Jett", sleep: "Kip", layla: "Layla", stats: "Hazel", patients: "Pippa" };
+  function linkMascots() {
+    var imgs = document.querySelectorAll('img[src*="/assets/mascots/"]');
+    for (var i = 0; i < imgs.length; i++) {
+      var im = imgs[i]; if (im._ml) continue; im._ml = 1;
+      if (im.closest("a,button,label,.cb,.mz-hero,canvas,[data-nolink]")) continue;
+      var m = (im.getAttribute("src") || "").match(/\/assets\/mascots\/(?:normie\/)?([a-z0-9-]+)\.svg/); if (!m) continue;
+      var g = window.MW_MASCOTS && MW_MASCOTS[m[1]], nm = g ? g.name : HOSTS[m[1]]; if (!nm) continue;
+      var url = mascUrl({ name: nm }); if (url === location.pathname) continue;
+      var a = document.createElement("a"); a.href = url; a.className = "masc-link"; a.title = "Meet " + nm; a.setAttribute("aria-label", "Meet " + nm);
+      im.parentNode.insertBefore(a, im); a.appendChild(im);
+    }
+  }
+  linkMascots();
+  if (window.MutationObserver) { var mlT = 0; new MutationObserver(function () { if (!mlT) mlT = setTimeout(function () { mlT = 0; linkMascots(); }, 120); }).observe(document.documentElement, { childList: true, subtree: true }); }
 
   // ---------- add to home screen (PWA) ----------
   var installEvt = null;

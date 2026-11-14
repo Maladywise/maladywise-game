@@ -24,6 +24,7 @@ window.MW_HOME = {
       { t: "Health Calendar", href: "/days/", d: "Today and coming up" },
       { t: "Research", href: "/research/", d: "New studies and trials to watch" }
     ] },
+    { t: "Mascots", href: "/mascots/" },
     { t: "Shop", href: "/shop/" }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
