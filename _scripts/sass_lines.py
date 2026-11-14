@@ -100,6 +100,35 @@ def main():
         open(p, "w", encoding="utf-8").write(s); added += 1
     if not report:
         print("sass_lines: added to %d page(s)" % added)
+        print("sass_lines: extra lines on %d page(s)" % more())
+
+
+def more():
+    """Spread the extra lines in _scripts/sass_more.json through the body: before the 2nd heading and before the last
+    heading ahead of the FAQ. A line already on the page is skipped, so re-runs change nothing."""
+    import json, html
+    extra = json.load(open(os.path.join(ROOT, "_scripts", "sass_more.json"), encoding="utf-8"))
+    done = 0
+    for slug, lines in extra.items():
+        p = os.path.join(ROOT, slug, "index.html")
+        if slug in GENTLE or not os.path.exists(p):
+            continue
+        s = open(p, encoding="utf-8").read()
+        todo = [l for l in lines if html.escape(l, quote=False) not in s and l not in s]
+        if not todo:
+            continue
+        end = min([i for i in (s.find('<section class="faq"'), s.find("<h2>Evidence")) if i > 0] or [len(s)])
+        start = s.find('class="lede"')
+        hs = [m.start() for m in re.finditer(r"<h2[ >]", s) if start < m.start() < end]
+        spots = [hs[1]] if len(hs) > 1 else []
+        if len(hs) > 2:
+            spots.append(hs[-1])
+        while len(spots) < len(todo):
+            spots.append(spots[-1] if spots else end)
+        for pos, line in sorted(zip(spots, todo), reverse=True):
+            s = s[:pos] + '<p class="sass">%s</p>' % html.escape(line, quote=False) + s[pos:]
+        open(p, "w", encoding="utf-8").write(s); done += 1
+    return done
 
 
 if __name__ == "__main__":
