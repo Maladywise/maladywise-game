@@ -663,18 +663,8 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Cranial nerves",
-    "level": 1,
-    "words": [
-     "OPTIC",
-     "VAGUS",
-     "FACIAL",
-     "TRIGEMINAL"
-    ]
-   },
-   {
     "label": "Brachial plexus nerves",
-    "level": 2,
+    "level": 1,
     "words": [
      "MEDIAN",
      "ULNAR",
@@ -684,12 +674,22 @@
    },
    {
     "label": "Lumbosacral plexus nerves",
-    "level": 3,
+    "level": 2,
     "words": [
      "SCIATIC",
      "FEMORAL",
      "TIBIAL",
      "OBTURATOR"
+    ]
+   },
+   {
+    "label": "Eponymous spots",
+    "level": 3,
+    "words": [
+     "KOPLIK",
+     "ROTH",
+     "BRUSHFIELD",
+     "FORCHHEIMER"
     ]
    },
    {

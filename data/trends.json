@@ -824,6 +824,34 @@
     "wordemic normie"
    ],
    "note": "trends-google.json fetched 2026-11-12T21:34Z. Replaced Triviosis Q2 (University of Toronto) and Q10 (Charcot foot), Comorbix 'Pancreas eponyms', Zebritis 'part of the pancreas', Normie Comorbix 'Toys', Normie Wordemic SQUID->SLEET (SQUID to reserve). Skipped Marsha Linehan (person-focused, sensitive) and outbreak trends (no kind fit on a diabetes day)."
+  },
+  {
+   "date": "2026-11-15",
+   "main_theme": "World Cord Blood Day + World Day of Remembrance for Road Traffic Victims (both priority 3; kept from monthly build)",
+   "source": "world day",
+   "terms_used": [
+    "measles (AU Health trend 500+; US 'measles outbreak pennsylvania') via immune amnesia (Mina et al., Science 2019)",
+    "Koplik spots and other eponymous spots (Forchheimer, Roth, Brushfield)",
+    "cholesterol (GB Health trend 2,000+) via xanthomas, corneal arcus, lipaemia retinalis",
+    "BBC Children in Need / Pudsey (GB 50,000+, Normie)",
+    "Microsoft / Outlook outage (AU/GB/US top trend, Normie)",
+    "UK snow and winter storm warnings (GB, Normie)"
+   ],
+   "niche_terms": [
+    "immune amnesia",
+    "Koplik spots",
+    "Forchheimer spots",
+    "palmar crease (striate) xanthoma",
+    "lipaemia retinalis"
+   ],
+   "games": [
+    "triviosis",
+    "comorbix",
+    "zebritis",
+    "triviosis normie",
+    "gridectomy normie"
+   ],
+   "note": "trends-google.json was the morning fetch (2026-11-13T23:53Z); the evening fetch hadn't landed. Triviosis Q9 lethal triad -> measles immune amnesia; Comorbix 'Cranial nerves' -> 'Eponymous spots' (levels reordered); Zebritis preterm-births prompt -> signs of very high cholesterol/triglycerides (preterm theme stays in Suturix; World Prematurity Day is 17 Nov); Normie Triviosis navel orange -> Pudsey/Yorkshire; Normie Gridectomy SEND and ICING clues nod to the Microsoft outage and UK snow. Skipped: paraquat (AU RSS; Parkinson's/poisoning, sensitive), celebrity health items, AMR (saved for AMR week from 18 Nov)."
   }
  ],
  "suggested_days": [
