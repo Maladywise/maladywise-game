@@ -1,4 +1,5 @@
 # ADHD / autism: late-diagnosis starter kit, strengths-first explainer for kids, clinician algorithms.
+# After regenerating these pages, run python3 _scripts/explainers.py to put the ADHD and autism slides + videos back.
 G = {"A": ("s", "A · Strong"), "B": ("m", "B · Moderate"), "C": ("l", "C · Weak / mixed"), "D": ("l", "D · Anecdotal or mechanistic"), "X": ("n", "X · Avoid")}
 def opts(items):
     out = '<ol class="tx ladder">'
