@@ -255,3 +255,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Dxtective is /dxtective/ (was /dx/), Grand Rounds is /grand-rounds/ (was /grandrounds/), GP School is /gp-school/ (was /unspecialist/). The old addresses are redirect pages: keep them.
 - Engines and data did not move: Dxtective data is still cases/, Grand Rounds data and JS are still in grandrounds/, GP School JS and data are still in unspecialist/ (unspecialist.js loads data/ from its own folder). Bump unspecialist.js?v= in gp-school/index.html, not unspecialist/index.html.
 - Game ids, storage keys and mascot file names still use the old short names (dx, grandrounds). Don't rename those.
+
+## IndexNow (Bing, Yandex and others)
+- The key file at the site root (ebec44b4057a6c9d018eb21e921f2de2.txt) proves ownership for IndexNow pings. Keep it. Ping changed URLs with https://api.indexnow.org/indexnow?url=<url>&key=ebec44b4057a6c9d018eb21e921f2de2
