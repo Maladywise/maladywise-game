@@ -1466,6 +1466,27 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // ---------- medicine pages: a one-page, branded print (Nov 2026) ----------
   // The print button (and Ctrl+P) lay the page out as a two-column A4 sheet, open the side-effect list,
   // drop the FAQ, sources and site chrome, then shrink the whole sheet just enough to fit one page.
+
+  // Click-through slides (.mw-slides): one slide at a time, Back/Next buttons, arrow keys and swipe. Reader-paced.
+  function slides() {
+    document.querySelectorAll(".mw-slides").forEach(function (box) {
+      var track = box.querySelector(".mws-track"), items = track.children, n = items.length, i = 0;
+      var prev = box.querySelector(".mws-prev"), next = box.querySelector(".mws-next"), count = box.querySelector(".mws-count");
+      function go(k) {
+        i = Math.max(0, Math.min(n - 1, k));
+        for (var j = 0; j < n; j++) items[j].hidden = j !== i;
+        prev.disabled = i === 0; next.textContent = i === n - 1 ? "Start again" : "Next \u2192";
+        count.textContent = (i + 1) + " of " + n;
+      }
+      prev.addEventListener("click", function () { go(i - 1); });
+      next.addEventListener("click", function () { go(i === n - 1 ? 0 : i + 1); });
+      box.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") go(i + 1); if (e.key === "ArrowLeft") go(i - 1); });
+      var x0 = null;
+      track.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener("touchend", function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1)); x0 = null; });
+      box.classList.add("mws-on"); go(0);
+    });
+  }
   function medPrint() {
     var main = document.querySelector("main.doc"); if (!main || main.querySelector(".medp-head")) return;
     var kind = /^\/medicines\/[^\/]+\/$/.test(location.pathname) ? "Medicine guide" : "";
@@ -1640,7 +1661,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],

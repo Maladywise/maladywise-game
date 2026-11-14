@@ -1,9 +1,14 @@
 # Chronic pain hub (patient-facing). Pain-science ideas are explained in our own words; HIPS is linked, not copied.
+import json as _j, os as _o
+_ALT = _j.load(open('assets/video/what-is-pain-slides/alt.json', encoding='utf-8'))  # run from the repo root; written by build_video.py
+SLIDES = ('<div class="mw-slides" tabindex="0" aria-roledescription="slideshow" aria-label="What is pain? Slides"><div class="mws-track">' + ''.join(
+    '<img src="/assets/video/what-is-pain-slides/%02d.webp" width="720" height="720" loading="lazy" alt="%s">' % (k + 1, a.replace('"', '&quot;')) for k, a in enumerate(_ALT)) +
+    '</div><div class="mws-bar"><button type="button" class="mws-prev">&larr; Back</button><button type="button" class="mws-next">Next &rarr;</button><span class="mws-count" aria-live="polite"></span></div></div>')
 VIDEO = '''<figure class="mw-video" style="margin:1.4em 0">
 <video controls playsinline preload="none" poster="/assets/video/what-is-pain.png" width="1080" height="1080" style="width:100%;max-width:560px;height:auto;border-radius:18px;display:block;background:#FAF7F2">
 <source src="/assets/video/what-is-pain.mp4" type="video/mp4">
 </video>
-<figcaption style="font-size:.9em;color:#6B5A93;margin-top:.4em">What is pain? A 45-second explainer with our mascots. No sound needed: all the words are on screen.</figcaption>
+<figcaption style="font-size:.9em;color:#6B5A93;margin-top:.4em">Prefer it as a video? About 90 seconds, no sound needed.</figcaption>
 </figure>'''
 
 hub = '''<p class="lede">Pain that sticks around for more than three months is common, real and exhausting. It&rsquo;s also more changeable than it feels. This hub explains how long-term pain works, what actually helps, and where to start.</p>
@@ -15,8 +20,9 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 <li><b>Flares happen.</b> A plan for them helps more than avoiding life.</li>
 </ul><p class="sass">Your pain system is a very loyal bodyguard who has started tackling the postie. We&rsquo;re here to retrain the bodyguard, not fire it.</p></div>
 
-<h2>What is pain? (in 45 seconds)</h2>
-''' + VIDEO + '''
+<h2>What is pain? (9 quick slides)</h2>
+<p>Tap <b>Next</b> when you&rsquo;re ready.</p>
+''' + SLIDES + VIDEO + '''
 <p>Pain is your brain&rsquo;s alarm system. It&rsquo;s made by the brain, using information from the body, to protect you. With a fresh injury it does a great job. But when pain goes on for months, the alarm can become <b>too sensitive</b>: it goes off sooner, louder and for longer than it needs to. Doctors call this <b>sensitisation</b>. It&rsquo;s a change in how the nervous system works, and it can change back.</p>
 <p>Prefer a different take? The Victorian Government&rsquo;s Health Translations library hosts <a href="https://healthtranslations.vic.gov.au/resources/understanding-pain-in-less-than-5-minutes-video" rel="noopener">&ldquo;Understanding pain in less than 5 minutes&rdquo;</a>, a well-loved short video with versions in many languages.</p>
 
@@ -106,7 +112,7 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 '''
 
 page("/chronic-pain/", "Chronic Pain Hub: How Long-Term Pain Works and What Helps",
- "Chronic pain explained: why pain can last after healing, what turns it up and down, treatments with good evidence, where medicines fit, a flare plan, and a 45-second explainer video.",
+ "Chronic pain explained: why pain can last after healing, what turns it up and down, treatments with good evidence, where medicines fit, a flare plan, and a click-through explainer and short video.",
  "Chronic Pain Hub", "Chronic pain", "Guide",
  [("Malady Wise", "/"), ("Conditions", "/conditions/"), ("Chronic pain", "/chronic-pain/")], hub,
  [("Is chronic pain real?", "Yes. All pain is made by the brain to protect you, and in chronic pain the nervous system has become extra sensitive. The pain is real even when scans look normal."),
@@ -124,4 +130,4 @@ page("/chronic-pain/", "Chronic Pain Hub: How Long-Term Pain Works and What Help
  audience="Patient", about_type="MedicalCondition")
 
 reg("/chronic-pain/", "Chronic Pain Hub", ["Bones and joints", "Brain and nerves"], ["/fibromyalgia/", "/back-pain/", "/sciatica/", "/medicines/amitriptyline/"],
-    "How long-term pain works, what helps, a flare plan and a 45-second video.", "chronic pain persistent pain sensitisation pacing flare plan pain science hurt harm")
+    "How long-term pain works, what helps, a flare plan and a quick explainer.", "chronic pain persistent pain sensitisation pacing flare plan pain science hurt harm")

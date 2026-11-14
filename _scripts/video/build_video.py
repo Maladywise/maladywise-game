@@ -13,8 +13,23 @@ import os, shutil, subprocess, sys, tempfile, threading, http.server, socketserv
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 W = H = 1080
 FPS = 30
-XF = 0.45   # crossfade between states
-FADE = 0.3  # fade in/out of each scene
+XF = 0.6    # crossfade between states
+FADE = 0.4  # fade in/out of each scene
+WPS = 3.0   # reading speed for on-screen words (slow and comfortable; this is for humans)
+
+
+def words(html):
+    import re, html as h
+    html = re.sub(r'<span class="chip [^"]*ghost">.*?</span>', " ", html)
+    html = re.sub(r"<div class=brand>.*?</div>", " ", html)
+    return h.unescape(re.sub(r"<[^>]+>", " ", html)).split()
+
+
+def hold(inner, sec, prev):
+    """Seconds to hold a state: long enough to read the words that are new on screen, never less than the spec."""
+    new = max(0, len(words(inner)) - len(words(prev))) if prev is not None else len(words(inner))
+    need = (1.5 if prev is None else 1.0) + new / WPS
+    return max(sec, round(need, 1))
 
 CSS = """
 @font-face{font-family:Lora;font-weight:700;src:url(/assets/fonts/lora-latin-700-normal.woff2) format("woff2")}
@@ -62,17 +77,24 @@ def main(spec):
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     os.makedirs(os.path.dirname(out), exist_ok=True)
     from playwright.sync_api import sync_playwright
-    files = []
+    files, alts = [], []
     try:
         with sync_playwright() as pw:
             b = pw.chromium.launch(); pg = b.new_page(viewport={"width": W, "height": H})
             for si, states in enumerate(scenes):
                 pngs = []
+                prev = None
                 for ti, (inner, sec) in enumerate(states):
+                    sec = hold(inner, sec, prev); prev = inner
                     hp = os.path.join(tmp, "s%02d_%02d.html" % (si, ti)); open(hp, "w", encoding="utf-8").write(frame(inner))
                     pg.goto("http://127.0.0.1:%d/%s/%s" % (port, rel, os.path.basename(hp))); pg.wait_for_timeout(250)
                     pg.evaluate("document.fonts.ready")
                     png = hp[:-5] + ".png"; pg.screenshot(path=png); pngs.append((png, sec))
+                if env.get("SLIDES"):
+                    sd = os.path.join(ROOT, env["SLIDES"]); os.makedirs(sd, exist_ok=True)
+                    run(["ffmpeg", "-y", "-i", pngs[-1][0], "-vf", "scale=720:720", "-quality", "82", os.path.join(sd, "%02d.webp" % (si + 1))])
+                    import re as _re
+                    alts.append(_re.sub(r" ([.,;:!?])", r"\1", " ".join(words(_re.sub(r"<svg.*?</svg>", " ", states[-1][0], flags=_re.S)))))
                 if PREVIEW:
                     shutil.copy(pngs[-1][0], os.path.join(PREVIEW, "scene%02d.png" % (si + 1))); continue
                 if si == 0 and env.get("POSTER"):
@@ -100,6 +122,9 @@ def main(spec):
             b.close()
         if PREVIEW:
             print("preview frames in", PREVIEW); return
+        if env.get("SLIDES"):
+            import json
+            json.dump(alts, open(os.path.join(ROOT, env["SLIDES"], "alt.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
         lst = os.path.join(tmp, "list.txt"); open(lst, "w").write("".join("file '%s'\n" % f for f in files))
         os.makedirs(os.path.dirname(out), exist_ok=True)
         tmpout = out[:-4] + ".tmp.mp4"

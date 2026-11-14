@@ -1,6 +1,7 @@
 # Scene spec for "What is pain?" — built by _scripts/video/build_video.py
 OUT = "assets/video/what-is-pain.mp4"
 POSTER = "assets/video/what-is-pain.png"
+SLIDES = "assets/video/what-is-pain-slides"
 
 
 def m(src, size=440, x=None, y=150, extra=""):
@@ -45,7 +46,7 @@ STAIRS = ''.join('<div style="position:absolute;left:%dpx;top:%dpx;width:150px;h
 
 SCENES = [
     # 1 title
-    [('<div style="position:absolute;left:56px;right:56px;top:640px"><div class=k>A 45-second guide</div>'
+    [('<div style="position:absolute;left:56px;right:56px;top:640px"><div class=k>A short guide</div>'
       '<h1>What is pain?</h1><p>And why it can hang around after the injury has healed.</p></div>' + m(BRAIN, 470, y=140), 3.2)],
     # 2 alarm system
     [(m(BRAIN, 420, x=120) + card("Pain is an alarm", "Your brain makes pain to <b>protect you</b>."), 2.6),
