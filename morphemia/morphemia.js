@@ -326,6 +326,7 @@
       if (NORMIE || !P.medical) P.medical = [];
       outer = P.outer.split("");
       root.classList.toggle("max", isMax());
+      var gtp = document.querySelector(".gtitle p"); if (gtp) { if (!gtp.dataset.base) gtp.dataset.base = gtp.textContent; gtp.textContent = isMax() ? gtp.dataset.base.replace(/^Seven letters/, "Nine letters") : gtp.dataset.base; }
       $("eyebrow").textContent = (isLive() ? (isMax() ? "Morphemia Max" : "Morphemia") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty;
       root.classList.toggle("einstein", P.difficulty === "Einstein");
