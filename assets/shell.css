@@ -1344,3 +1344,8 @@ html.medp-on .medp .medp-cols ul.skip>li::before{content:"✕"!important;positio
 .mw-slides .mws-bar button:disabled{opacity:.35;cursor:default}
 .mw-slides .mws-count{margin-left:auto;font-size:.9rem;color:var(--muted,#6B5A93)}
 @media print{.mw-slides,.mw-video{display:none!important}}
+
+/* home: Medical/Normie switch at the bottom */
+.mw-modecta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:26px 0 8px;padding:16px 18px;border-radius:16px;background:var(--card,#fff);border:2px dashed var(--brand,#4A3480);color:var(--ink,#2B2340);text-decoration:none;line-height:1.4}
+.mw-modecta span{font-size:1.5rem}.mw-modecta b{color:var(--brand,#4A3480)}
+.mw-modecta:hover{background:var(--soft,#F1ECF8)}

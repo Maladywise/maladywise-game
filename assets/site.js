@@ -8,7 +8,8 @@ window.MW_HOME = {
       { t: "Pain", href: "/chronic-pain/", d: "Why it lingers, what helps" },
       { t: "Fatigue", href: "/tired-all-the-time/", d: "Causes, tests, what helps" },
       { t: "ADHD and autism", href: "/late-diagnosis-adhd-autism/", d: "Late-diagnosis starter kit" },
-      { t: "GLP-1 medicines", href: "/glp-1/", d: "Ozempic, Mounjaro and co." }
+      { t: "GLP-1 medicines", href: "/glp-1/", d: "Ozempic, Mounjaro and co." },
+      { t: "All hubs", href: "/hubs/", d: "Every hub on the site" }
     ] },
     { t: "For patients", medical: true, items: [
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },

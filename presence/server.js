@@ -6,6 +6,9 @@
 // - Sudokrine daily (sdaily): today's fastest solve times in whole seconds. Lower is better (an ascending board).
 // - Feedback: visitors report puzzle errors, image licence problems and bugs (POST /fb); owner reads them with the admin key.
 // - Specialists tags: visitors suggest tags from a fixed list; shown only after 3 visitors agree and the owner approves.
+// - Page attention (Sydney day): each ping adds 1 to that day's count for the page's first path segment
+//   (about 30 seconds of a visible tab). Only the segment is stored, never the ID. /hubrank sums the last N days;
+//   the weekly hubs workflow uses it to put the most-used hubs in the top menu.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
 const http = require("http");
 const crypto = require("crypto");
@@ -52,6 +55,27 @@ async function solvedToday() {
     try { const h = await kv.hGetAll("games:" + d); const o = {}; for (const k in h) o[k] = Number(h[k] || 0); return o; } catch (e) {}
   }
   return memDay === d ? Object.assign({}, memGames) : {};
+}
+let memViews = {}, memViewsDay = "";
+async function addView(g) {
+  if (!g) return;
+  const d = sydDay();
+  if (memViewsDay !== d) { memViewsDay = d; memViews = {}; }
+  memViews[g] = (memViews[g] || 0) + 1;
+  if (kv && kv.isReady) {
+    try { await kv.hIncrBy("views:" + d, g, 1); await kv.expire("views:" + d, 60 * 60 * 24 * 40); } catch (e) {}
+  }
+}
+async function hubRank(days) {
+  const out = {};
+  for (let i = 0; i < days; i++) {
+    const d = new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney" }).format(new Date(Date.now() - i * 864e5));
+    let h = null;
+    if (kv && kv.isReady) { try { h = await kv.hGetAll("views:" + d); } catch (e) {} }
+    else if (d === memViewsDay) h = memViews;
+    for (const k in h || {}) out[k] = (out[k] || 0) + Number(h[k] || 0);
+  }
+  return out;
 }
 async function addDone(g) {
   const d = sydDay();
@@ -230,12 +254,17 @@ const server = http.createServer(async (req, res) => {
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
-      if (id && !limited(ip, 400)) seen.set(id, { t: Date.now(), g: clean(url.searchParams.get("g"), 24) });
+      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); seen.set(id, { t: Date.now(), g }); await addView(g); }
       res.writeHead(204); return res.end();
     }
     if (url.pathname === "/done" && req.method === "POST") {
       if (!limited(ip, 60)) await addDone(clean(url.searchParams.get("g"), 24));
       res.writeHead(204); return res.end();
+    }
+    if (url.pathname === "/hubrank") {
+      const days = Math.max(1, Math.min(35, Number(url.searchParams.get("days")) || 28));
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end(JSON.stringify({ days, hubs: await hubRank(days) }));
     }
     if (url.pathname === "/stats") {
       const cut = Date.now() - WINDOW, by = {}; let n = 0;

@@ -77,6 +77,7 @@ SPECIAL = {
     "/blood-tests/": ("Blood tests", "Blood test results explained", "What high and low results mean, in plain English", "mascots/panelysis.svg"),
     "/compare/": ("Compare", "Medicines and symptoms, side by side", "", "mascots/sensitosis.svg"),
     "/deep-dives/": ("Deep dives for clinicians", "Evidence-dense topic reviews", "", "days/zebra-rare.svg"),
+    "/hubs/": ("Malady Wise", "All hubs", "Pain, fatigue, ADHD, GLP-1 and more", "days/brain.svg"),
     "/algorithms/": ("For clinicians", "Treatment algorithms", "Evidence-graded, from strong to worth-a-try", "days/zebra-rare.svg"),
     "/exercises/": ("Exercise handouts", "Printable rehab plans", "", "days/tess-bone.svg"),
     "/specialists/": ("Specialists", "Specialists and allied health", "Newcastle + Hunter Region", "days/cadi-rod.svg"),

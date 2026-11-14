@@ -988,6 +988,11 @@
         }).join("") + "</div></section>";
     }
 
+    function modeCta() { // bottom-of-home switch between Medical and Normie
+      return NORMIE
+        ? '<a class="mw-modecta" href="/?mode=medical"><span>\ud83e\ude7a</span><b>Want the medical versions?</b> Switch back to Medical mode &rarr;</a>'
+        : '<a class="mw-modecta" href="/?mode=normie"><span>\ud83d\ude42</span><b>Not a medical person?</b> Try Normie mode: the same daily games, zero medicine &rarr;</a>';
+    }
     function homeBottom() {
       var H = window.MW_HOME; if (!H) return "";
       return H.sections.map(function (sec) {
@@ -1184,7 +1189,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + homeBottom() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + homeBottom() + modeCta() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
