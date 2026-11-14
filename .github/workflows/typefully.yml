@@ -11,6 +11,11 @@ on:
     branches: [main]
     paths: ["_social/queue.json"]
   workflow_dispatch:
+    inputs:
+      days:
+        description: "Days ahead to load (blank = usual 10)"
+        required: false
+        default: ""
 permissions:
   contents: write
 concurrency:
@@ -34,7 +39,7 @@ jobs:
         id: send
         env:
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
-        run: python3 _scripts/typefully_push.py
+        run: python3 _scripts/typefully_push.py ${{ inputs.days && format('--days {0}', inputs.days) || '' }}
       - name: Save what was queued
         # always() so ids written before a failure are still saved (stops duplicate posts next run)
         if: always()
