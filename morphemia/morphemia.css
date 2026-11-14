@@ -80,3 +80,5 @@ html[data-motion="reduce"] #mph *{animation:none!important;transition:none!impor
 #mph .pk-tog:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #mph .pk-form{display:flex;justify-content:center;margin:-4px 0 0}
 #mph .pk-form input{width:min(320px,100%);font:700 20px var(--body);letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:9px 12px;border-radius:12px;border:2px solid var(--accent);background:var(--paper);color:var(--ink);outline:none}
+/* Morphemia Max (Mondays): nine round cells, centre plus a ring of eight */
+#mph .hive.nine .hx{width:24%;height:24%;clip-path:circle(50% at 50% 50%);font-size:clamp(19px,6vw,26px)}

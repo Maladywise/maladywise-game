@@ -37,13 +37,21 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Re-check each fact against a reputable source before publishing and write all wording fresh (no quoting books).
 
 ## Wordemic: Long Friday
-- Every Friday (Sydney date) from 2026-11-06, Wordemic is "Long Friday": an 8-letter answer and 7 guesses, in both Medical and Normie modes. All other days stay 5 letters, 6 guesses. The game reads the length from the answer, so just write an 8-letter word on Fridays.
-- Friday answers are already scheduled to 2027-03-26 in the monthly files (Normie too). When building a month, keep any existing Friday entries, fill the other days around them, sort by date, and keep numbering by date (Medical #1 = 2026-10-17; Normie #9 = 2026-11-01). Displaced words go to reserve.json (puzzles/ or puzzles/normie/).
-- From April 2027, write a new 8-letter answer for every Friday: Medical = a real medical word with Australian/British spelling (no US-only spellings), mixing familiar (MIGRAINE, CATARACT) and harder (DYSPNOEA, ADENOIDS); Normie = an everyday non-medical word. Usual one or two-sentence "definition", plain English, facts checked.
-- Add every new 8-letter answer to wordemic/words8.txt (the 8-letter guess list; lowercase, one per line, sorted). Five-letter answers still go in words.txt.
-- Einstein can land on a Friday: use a genuinely hard 8-letter word (e.g. PSAMMOMA, 2027-01-15) and add the date to MW_EINSTEIN as usual.
-- Hard cap: no Wordemic answer is ever longer than 15 letters, Einstein included. Beyond that there are almost no real words, so players couldn't type a single guess except the answer. Any length other than 5 or 8 needs its own guess list (wordemic/wordsN.txt, built the same way as words8.txt) before it's used. Run `python3 wordemic/check.py` after every Wordemic change (it must print OK).
+- Every Friday (Sydney date) from 2026-11-06, Wordemic is "Long Friday" in both Medical and Normie modes. All other days stay 5 letters, 6 guesses. The game reads the length from the answer.
+- From 2026-11-20 the Friday word length varies (owner request, Nov 2026): anywhere from 7 to 15 letters. Mix lengths across the month; don't repeat a length on consecutive Fridays; roughly one 14–15-letter "monster" a month (e.g. GASTROENTERITIS, ECHOCARDIOGRAM; Normie e.g. CONGRATULATIONS). 8 letters is still fine sometimes.
+- Hard cap: no Wordemic answer is ever longer than 15 letters, Einstein included. Beyond that there are almost no real words, so players couldn't type a single guess except the answer.
+- Tries scale with length (the engine does this): 5 letters 6, 6-9 letters 7, 10-13 letters 8, 14-15 letters 9.
+- Friday answers are scheduled to 2027-03-26 in the monthly files (Normie too). When building a month, keep any existing Friday entries, fill the other days around them, sort by date, and keep numbering by date (Medical #1 = 2026-10-17; Normie #9 = 2026-11-01).
+- From April 2027, write a new long answer for every Friday: Medical = a real medical word with Australian/British spelling (no US-only spellings), mixing familiar and harder words, ideally tied to the day's theme; Normie = an everyday non-medical word. Usual one or two-sentence "definition", plain English, facts checked.
+- Guess lists: every length needs wordemic/wordsN.txt (lowercase, one per line, sorted); words6-7 and words9-15 are built from suturix/words.txt + dictionary/medical-au.txt (words8.txt as before). Add every new answer to its list. Run `python3 wordemic/check.py` after every Wordemic change (it must print OK).
+- Einstein can land on a Friday: use a genuinely hard word (e.g. PSAMMOMA 2027-01-15, SYRINGOMYELIA 2027-02-26) and add the date to MW_EINSTEIN as usual.
 - words8.txt sources: the site's Suturix and medical word lists, Webster's 2nd (public domain, via the MIT english-words package), plus plurals and verb forms of those words found in the wordfreq frequency list.
+
+## Morphemia Max (Mondays, from 2026-11-16)
+- Every Monday (Sydney date) Morphemia is **Morphemia Max** in Medical and Normie modes: nine letters (centre + 8 outer) on a round hive, words of 5+ letters, difficulty "Hard". Always spell it "Morphemia Max" (front-page tag "🐝 Max Monday"). Replaces the archived "Super Morphemia" idea.
+- Puzzle format = the normal one plus `"min": 5` and `"variant": "max"`, with an 8-letter `outer`. The engine switches to the nine-letter hive automatically.
+- When building a month, make every Monday a Max puzzle with `python3 morphemia/build_max.py YYYY-MM-DD:pangram:centre ...` (add `--normie` for Normie) after writing the normal days. Pangram = a word with exactly 9 distinct letters (Medical: a recognisable medical word, e.g. HAEMATOLOGY, AUDIOLOGIST, HIPPOCAMPUS; Normie: an everyday word, e.g. SNOWFLAKE, FLAMINGOS). Pick a centre that gives 30-110 words (the script prints the count). Keep Einstein days (MW_EINSTEIN.morphemia) as normal seven-letter Einstein puzzles, not Max.
+- Scheduled to 2026-12-21 (Medical and Normie).
 
 ## Glimpsis: Glimpsathon Tuesday and practice (from 17 Nov 2026)
 - Every Tuesday (Sydney date) from 2026-11-17 is **Glimpsathon** ("Ten on Tuesday"), in Medical and Normie modes: 10 images in one go, one pick each, one scored attempt, score out of 10 (time shown, not penalised). The normal daily Glimpsis still runs that day. Always spell it "Glimpsathon".

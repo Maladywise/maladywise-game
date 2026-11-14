@@ -1,8 +1,9 @@
 /* Morphemia: seven letters, build words, centre letter required. Medical words score double.
+   Morphemia Max (Mondays): a puzzle with nine letters (8 outer) and "min": 5 plays on a round nine-letter hive.
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -64,6 +65,7 @@
     SASS.not = ["Not in our dictionary.", "Nice try. Not a word.", "Did you just invent a word?", "That's not a word. Your spellcheck is crying.", "Not a word. Lovely sound, though.", "The dictionary declined that one.", "Made up. We can tell.", "That\u2019s not a word. That\u2019s a sneeze.", "Close to a word. Not a word.", "Not in the list. Some real words aren\u2019t either. Sorry."];
     SASS.long = { 8: ["Eight letters. Someone\u2019s been reading.", "Eight letters. Bonus earned."], 9: ["Nine letters. Big vocabulary.", "Nine letters. Big word energy."], 10: ["Ten letters! The dictionary is impressed.", "Ten letters. That\u2019s practically a sentence."], 11: ["Eleven-plus letters. Absolutely unhinged. Love it.", "That word has its own postcode."] };
   }
+  SASS.short5 = ["Max day: five letters minimum.", "Too short. Morphemia Max wants five or more.", "Five letters, please. It\u2019s Max day.", "Short. On Mondays the bar is five letters."];
   function say(t) { $("msg").textContent = t; }
 
   function letters() { return P.centre + P.outer; }
@@ -75,9 +77,14 @@
 
   // ---------- render ----------
   var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
-  var POS = [[33.5, 35.5], [33.5, 4.5], [62, 20], [62, 51], [33.5, 66.5], [5, 51], [5, 20]];
+  var POS7 = [[33.5, 35.5], [33.5, 4.5], [62, 20], [62, 51], [33.5, 66.5], [5, 51], [5, 20]], POS = POS7;
+  // Nine-letter ring: centre plus eight round cells (cell 24% of the hive, ring radius 37%).
+  var POS9 = [[38, 38]].concat([0, 1, 2, 3, 4, 5, 6, 7].map(function (k) { var a = (k * 45 - 90) * Math.PI / 180; return [+(38 + 37 * Math.cos(a)).toFixed(1), +(38 + 37 * Math.sin(a)).toFixed(1)]; }));
+  function MIN() { return (P && P.min) || 4; }
+  function isMax() { return !!(P && P.outer && P.outer.length === 8); }
   function drawHive() {
-    var ls = [P.centre].concat(outer);
+    var ls = [P.centre].concat(outer), nine = ls.length === 9;
+    POS = nine ? POS9 : POS7; HW = nine ? 24 : 33; HH = nine ? 24 : 29; $("hive").classList.toggle("nine", nine);
     $("hive").innerHTML = ls.map(function (c, i) {
       return '<button type="button" class="hx' + (i === 0 ? " ctr" : "") + '" data-l="' + c + '" aria-label="' + (i === 0 ? "Centre letter " : "Letter ") + c + '" style="left:' + POS[i][0] + "%;top:" + POS[i][1] + '%">' + c + "</button>";
     }).join("") + '<svg class="trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline id="mph-trail" points="" fill="none" vector-effect="non-scaling-stroke"/></svg>';
@@ -138,7 +145,7 @@
   function submit() {
     var w = cur; if (!P) return;
     var sw = window.MW_swear && MW_swear(w); if (sw) { fail(sw); return; }
-    if (w.length < 4) { fail(pick(SASS.short)); return; }
+    if (w.length < MIN()) { fail(MIN() === 5 ? pick(SASS.short5) : pick(SASS.short)); return; }
     var L = letters();
     if (w.split("").some(function (c) { return L.indexOf(c) < 0; })) { fail(pick(SASS.bad)); return; }
     if (w.indexOf(P.centre) < 0) { fail(pick(SASS.centre)); return; }
@@ -187,7 +194,7 @@
   function hexAt(x, y) {
     var w = sl.rect.width, best = -1, bd = 1e9, i, d;
     if (sl.cur >= 0 && Math.hypot(x - sl.c[sl.cur].x, y - sl.c[sl.cur].y) < w * 0.17) return sl.cur; // hysteresis: stay put on jitter
-    for (i = 0; i < 7; i++) { d = Math.hypot(x - sl.c[i].x, y - sl.c[i].y); if (d < bd) { bd = d; best = i; } }
+    for (i = 0; i < POS.length; i++) { d = Math.hypot(x - sl.c[i].x, y - sl.c[i].y); if (d < bd) { bd = d; best = i; } }
     return bd < w * 0.14 ? best : -1;
   }
   function drawTrail(x, y) {
@@ -251,7 +258,7 @@
     try { $("hive").releasePointerCapture(d.id); } catch (x) {}
     var t = $("trail"); if (t) t.setAttribute("points", "");
     Array.prototype.forEach.call(hexEls(), function (b) { b.classList.remove("on"); });
-    if (e.type === "pointerup" && cur.length >= 4) submit();
+    if (e.type === "pointerup" && cur.length >= MIN()) submit();
   }
   document.addEventListener("pointerup", endSlide); document.addEventListener("pointercancel", endSlide);
   $("del").onclick = function () { press("back"); };
@@ -318,7 +325,8 @@
       }
       if (NORMIE || !P.medical) P.medical = [];
       outer = P.outer.split("");
-      $("eyebrow").textContent = (isLive() ? "Morphemia" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
+      root.classList.toggle("max", isMax());
+      $("eyebrow").textContent = (isLive() ? (isMax() ? "Morphemia Max" : "Morphemia") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? EIN : "") + P.difficulty;
       root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say("Archive puzzle. Doesn't count towards your streak.");

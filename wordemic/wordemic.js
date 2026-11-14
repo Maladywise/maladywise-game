@@ -1,10 +1,11 @@
 /* Wordemic: guess the five-letter medical word in six tries.
-   Long Friday: Fridays use an eight-letter word and seven tries. The engine reads the length from the answer
-   (rows = 6 for five letters, 7 for longer words) and loads words.txt (5) or wordsN.txt (other lengths).
+   Long Friday: Fridays use a longer word (7 to 15 letters, hard cap 15). The engine reads the length from the answer
+   (tries: 5 letters 6, 6-9 letters 7, 10-13 letters 8, 14-15 letters 9; anything over 15 would wrap onto two lines, but answers are capped at 15)
+   and loads words.txt (5) or wordsN.txt (other lengths; no list = any letters accepted).
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "13";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
   var ROWS = 6, LEN = 5, NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
@@ -40,7 +41,7 @@
   // Long Friday extras live in their own key; the main streak still counts every day. best = fewest guesses.
   var LKEY = PFX + "wde-long-stats", lstats = load(LKEY, { played: 0, wins: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0, 0] });
   function isLong() { return LEN !== 5; }
-  function longLabel(d) { return (new Date(dayNum(d || today) * 864e5).getUTCDay() === 5 ? "Long Friday" : "Long word") + " \u00b7 " + LEN + " letters"; }
+  function longLabel(d) { return (LEN >= 14 ? "Super " : "") + (new Date(dayNum(d || today) * 864e5).getUTCDay() === 5 ? "Long Friday" : "Long word") + " \u00b7 " + LEN + " letters \u00b7 " + ROWS + " tries"; }
   var KEY, st, P = null, WORDS = null;
   function loadDay() { KEY = PFX + "wde-day-" + today; st = load(KEY, { guesses: [], done: false, win: false }); }
   loadDay();
@@ -149,7 +150,7 @@
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved. Roughly a once-in-50-days puzzle, and you nailed it. Screenshot this." : "It was " + P.word + ". Even Einstein needed a few goes. Respect for taking on the rare one.");
       if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "wordemic" && t.d === today; })) { tro.push({ g: "wordemic", d: today }); put(PFX + "mw-einstein", tro); } }
-    } else say(win ? pick(st.guesses.length === ROWS ? SASS.last : SASS.win[st.guesses.length - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
+    } else say(win ? pick(st.guesses.length === ROWS ? SASS.last : SASS.win[Math.min(st.guesses.length, 6) - 1]) : "It was " + P.word + ". " + pick(SASS.lose));
   }
   function press(k) {
     if (!P || st.done) return;
@@ -219,8 +220,8 @@
         else say("Today\u2019s word is still in triage. Back tomorrow.");
         renderArchive(); return;
       }
-      LEN = P.word.length; ROWS = LEN > 5 ? 7 : 6; getWords(LEN);
-      root.classList.toggle("long", isLong()); root.style.setProperty("--n", LEN);
+      LEN = P.word.length; ROWS = LEN <= 5 ? 6 : LEN <= 9 ? 7 : LEN <= 13 ? 8 : 9; getWords(LEN);
+      root.classList.toggle("long", isLong()); root.classList.toggle("xl", LEN > 15); root.style.setProperty("--n", LEN); root.style.setProperty("--cols", LEN > 15 ? Math.ceil(LEN / 2) : LEN);
       pkIn.maxLength = LEN; buildBoard();
       $("long").hidden = !isLong(); $("long").textContent = isLong() ? longLabel(date) : "";
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
