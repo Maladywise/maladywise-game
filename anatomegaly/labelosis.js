@@ -1,4 +1,4 @@
-/* Anatomegaly: a daily five-round anatomy puzzle. Name the highlighted structure, the bone or the nerve; four options per round.
+/* Anatomegaly: a daily anatomy puzzle, one diagram a day from 15 Nov 2026 (five rounds before). Name the highlighted structure, the bone or the nerve; four options per round.
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rounds:[{kind, q, art?, hl?, answer, wrong:[3], why}] x5}.
    art = a diagram name from art.js; hl = the part ids to highlight. Score 3+ out of 5 counts as a win.
    Normie mode ("animal anatomy"): puzzles/normie/YYYY-MM.json, same format, animal diagrams from art.js, "n-" storage keys,
@@ -10,13 +10,13 @@
   var ICON = '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 30l10-10M11 33.5a3.2 3.2 0 1 1-1.5-6 3.2 3.2 0 1 1 6-1.5M27 16.5a3.2 3.2 0 1 1 1.5 6 3.2 3.2 0 1 1-6 1.5"/><path d="M29 30h13v10H29l-5-5z"/><circle cx="28.5" cy="35" r="1.2" fill="#fff"/></svg>';
   var ENTRY = { id: "labelosis", kind: "Anatomy puzzle", name: "Anatomegaly", path: "labelosis/", live: true, from: "2026-11-02",
     store: { stats: "lbl-stats", day: "lbl-day-", labels: ["0", "1", "2", "3", "4", "5"], distTitle: " (score out of 5)" },
-    tagline: "Five body parts. Name every one.",
+    tagline: "One body part a day. Name it.",
     quip: "Left is right, right is left. Welcome to anatomy.",
     helpQuip: "Wrong answers get explained. Gently. Mostly.",
-    help: ["Each day brings five rounds: name the highlighted structure, name the bone, or pick the nerve.",
+    help: ["Each day brings one diagram with a highlighted structure. Name it.",
       "Four options per round. One tap, no take-backs.",
       "Every answer comes with a quick explanation and, where we have one, a weird fact.",
-      "Score 3 or more out of 5 to keep your streak alive.",
+      "Get it right to keep your streak alive.",
       "Front-on diagrams face you, so the patient’s right is on your left.",
       "Difficulty rises through the week: Easy Mon-Tue, Medium Wed-Thu, Hard Fri-Sat, Genius Sun. A new set arrives at midnight, Sydney time."],
     accent: "#0F6E6A", accentDark: "#4FC4B8", icon: ICON };
@@ -25,11 +25,11 @@
   window.MW_MASCOTS = window.MW_MASCOTS || {};
   if (!MW_MASCOTS.labelosis) MW_MASCOTS.labelosis = { name: "Axel", what: "a label-happy axolotl (regrows limbs, never forgets one)", cheer: ["Labelled to perfection.", "Textbook. Literally.", "Every part, accounted for.", "I’d regrow a limb just to watch that again.", "Anatomy lab legend.", "Origin, insertion, genius.", "That was very well innervated.", "Proximal to brilliant.", "Superior. Anatomically and otherwise.", "Gills out. Impressed."] };
   window.MW_ABOUT = window.MW_ABOUT || {};
-  if (!MW_ABOUT.labelosis) MW_ABOUT.labelosis = ["Anatomegaly is a daily anatomy puzzle. Each day brings five rounds: name a highlighted structure on a simple diagram, identify a bone, or work out which nerve supplies what. Four options per round, and every answer comes with a short explanation.", [["Who is it for?", "Students, nurses, physios, paramedics, doctors and anyone curious about the body. Easy days are school-level; Genius days will test a surgeon."], ["Are the diagrams accurate?", "They are simplified teaching sketches drawn for this game, not to scale. Real anatomy varies between people."]]];
+  if (!MW_ABOUT.labelosis) MW_ABOUT.labelosis = ["Anatomegaly is a daily anatomy puzzle. Each day brings one diagram: name the highlighted structure, identify a bone, or work out which nerve supplies what. Four options per round, and every answer comes with a short explanation.", [["Who is it for?", "Students, nurses, physios, paramedics, doctors and anyone curious about the body. Easy days are school-level; Genius days will test a surgeon."], ["Are the diagrams accurate?", "They are simplified teaching sketches drawn for this game, not to scale. Real anatomy varies between people."]]];
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};
   if (!MW_EINSTEIN.labelosis) MW_EINSTEIN.labelosis = ["2026-11-13"];
 
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "4", N = 5, PASS = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", N = 5, PASS = 3, ONE = "2026-11-15"; // from ONE: one picture a day (the first round with a diagram)
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Anatomegaly (Normie)" : "Anatomegaly";
   // Normie wording swaps
   var T = NORMIE ? { foot: "Diagrams are simplified, original sketches, not to scale. Animal facts checked, but nature loves an exception.", noart: "No diagram for this one. Just you and your nature documentaries.", next: "Go and look at a cat’s ears. Respectfully.", emoji: " 🐙 ", masc: "/assets/mascots/normie/labelosis.svg" }
@@ -97,6 +97,7 @@
 
   // ---------- render ----------
   function renderPips() {
+    $("pips").hidden = N === 1;
     $("pips").innerHTML = P.rounds.map(function (R, i) {
       var c = i < st.picks.length ? (st.picks[i] === R.answer ? "ok" : "no") : i === view ? "now" : "";
       return '<i class="' + c + '"></i>';
@@ -104,7 +105,7 @@
   }
   function renderRound() {
     var i = Math.min(view, N - 1), R = P.rounds[i], answered = i < st.picks.length, mine = st.picks[i];
-    $("card").innerHTML = '<div class="chead"><span>Round ' + (i + 1) + " of " + N + "</span><span>" + esc(R.kind) + "</span></div>" +
+    $("card").innerHTML = '<div class="chead"><span>' + (N === 1 ? "Today\u2019s diagram" : "Round " + (i + 1) + " of " + N) + "</span><span>" + esc(R.kind) + "</span></div>" +
       '<p class="q">' + esc(R.q) + "</p>" +
       (R.art && window.LBL_ART ? '<div class="art' + (answered ? " done" : "") + '">' + LBL_ART(R.art, R.hl) + '</div><p class="cap">' + esc((window.LBL_CAP || {})[R.art] || "") + "</p>"
         : '<div class="noart">' + (NORMIE ? PAW : /nerve/i.test(R.kind) ? NERVE : BONE) + "<span>" + T.noart + "</span></div><div style=\"height:12px\"></div>");
@@ -160,7 +161,7 @@
     if (P.difficulty === "Einstein") {
       say(win ? "⚛️ Einstein passed. Roughly a once-in-50-days set, and you named the lot. Screenshot this." : (NORMIE ? "Even Einstein would have asked a zookeeper. Respect for taking on the rare one." : "Even Einstein would have reached for the atlas. Respect for taking on the rare one."));
       if (win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "labelosis" && t.d === today; })) { tro.push({ g: "labelosis", d: today }); put(PFX + "mw-einstein", tro); } }
-    } else say(win ? pick(SASS.win[s - PASS]) : pick(SASS.lose));
+    } else say(win ? pick(N === 1 ? (NORMIE ? ["Named it. The octopus approves.", "Spot on. Wildlife ranger energy."] : ["Named it. The anatomy lab approves.", "Spot on. Textbook."]) : SASS.win[s - PASS]) : pick(SASS.lose));
   }
   $("opts").addEventListener("click", function (e) {
     var b = e.target.closest(".opt"); if (!b || !P || st.done || b.disabled || view !== st.picks.length) return;
@@ -187,6 +188,8 @@
     today = date; loadDay(); P = null;
     return month(date.slice(0, 7)).then(function (list) {
       P = list.filter(function (x) { return x.date === date; })[0] || null;
+      if (P && date >= ONE && st.picks.length <= 1) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { return R.art; })[0] || P.rounds[0]] };
+      N = P ? P.rounds.length : 5; PASS = N === 1 ? 1 : 3;
       if (!P) { hidePlay(date < "2026-11-02" ? '<p class="empty">Anatomegaly opens Monday 2 November. ' + (NORMIE ? "The octopus is still stretching." : "The skeleton is still warming up.") + "</p>" : NORMIE && window.MW_noNormie ? MW_noNormie("anatomy puzzle") : '<p class="empty">Today’s set is still being labelled. Back tomorrow.</p>'); renderArchive(); return; }
       ["pips", "opts"].forEach(function (k) { $(k).hidden = false; });
       $("eyebrow").textContent = (isLive() ? NAME : "Archive") + " · #" + P.number + " · " + nice(date) + (P.theme ? " · " + P.theme : "");

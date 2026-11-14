@@ -167,3 +167,13 @@ html[data-theme="dark"] #skr .dist i.me{color:#16121F}
 #skr .arow.on{border-color:var(--accent)}
 #skr .arow .badge{font-size:10px;padding:2px 8px}
 @media (max-width:400px){#skr .pad{gap:3px}#skr .key{height:50px;border-radius:8px}#skr .key svg{width:26px;height:26px}#skr .pad.n6 .key svg{width:32px;height:32px}#skr .key small{display:none}}
+/* phones: keep grid, keypad and tools on one screen */
+@media (max-width:480px){
+#skr .key{height:46px}
+#skr .tool{display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 2px;font-size:11.5px}
+#skr .tool .ti{font-size:15px}
+#skr .pad{margin-top:4px}
+#skr .msg{min-height:0;margin:4px 0 0}
+#skr .msg:empty{display:none}
+#skr .tbox{margin-top:6px}
+}

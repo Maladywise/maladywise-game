@@ -4,11 +4,11 @@
   "normieMascot": true,
   "normie": {
    "kind": "Animal anatomy",
-   "tagline": "Five animal parts. Name every one.",
+   "tagline": "One animal part a day. Name it.",
    "quip": "Three hearts, blue blood, ears on its legs. Nature is unwell.",
    "helpQuip": "Nature is weird. That’s the whole point.",
    "help": [
-    "Each day brings five rounds: name the highlighted part of an animal, or pick the weird-but-true body fact.",
+    "Each day brings one animal diagram with a highlighted part. Name it.",
     "Four options per round. One tap, no take-backs.",
     "Every answer comes with a quick explanation and usually a strange fact.",
     "Score 3 or more out of 5 to keep your streak alive.",
@@ -19,7 +19,7 @@
  },
  "MW_ABOUT_N": {
   "labelosis": [
-   "Anatomegaly in Normie mode is a daily animal anatomy puzzle. Each day brings five rounds: name the highlighted part of an octopus, owl, giraffe, cat, shark and friends, or pick the weird-but-true body fact. Four options per round, and every answer comes with a short explanation.",
+   "Anatomegaly in Normie mode is a daily animal anatomy puzzle. Each day brings one diagram: name the highlighted part of an octopus, owl, giraffe, cat, shark and friends, or pick the weird-but-true body fact. Four options per round, and every answer comes with a short explanation.",
    [
     [
      "Do my Medical stats change?",

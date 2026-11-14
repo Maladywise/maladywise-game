@@ -11,7 +11,7 @@
    Normie mode: same puzzles, fruit symbols or everyday words, fun facts, "n-" storage keys. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", HINTS = 3, GUESSES = 3, LAUNCH = "2026-10-26";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", HINTS = 3, GUESSES = 3, LAUNCH = "2026-10-26";
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", NAME = NORMIE ? "Sudokrine (Normie)" : "Sudokrine";
   var root = document.getElementById("skr");
   if (!document.querySelector("link[data-skr]")) {
@@ -52,10 +52,8 @@
     ' <div class="head"><span class="eyebrow" id="skr-eyebrow">Sudokrine</span><span class="badge" id="skr-badge" hidden></span></div>' +
     ' <div class="sbar" id="skr-bar"><span class="timer" id="skr-timer" aria-label="Time">0:00</span><span class="iris" id="skr-iris"></span><span class="hintsleft" id="skr-hl"></span></div>' +
     ' <div class="board" id="skr-board" role="grid" aria-label="Sudokrine grid"></div>' +
-    ' <p class="cgnote" id="skr-cgnote" hidden></p>' +
     ' <div class="msg" id="skr-msg" aria-live="polite"></div>' +
     ' <div class="ctl" id="skr-play">' +
-    '  <form class="wg" id="skr-wg" hidden autocomplete="off"><label for="skr-wgi" id="skr-wgl">Guess the word</label><div class="wgrow"><input id="skr-wgi" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go"><button type="submit" class="wgb">Guess</button></div><p class="wgn" id="skr-wgn" aria-live="polite"></p><p class="lkey" id="skr-lkey" hidden></p></form>' +
     '  <div class="pad" id="skr-pad"></div>' +
     '  <div class="tbox">' +
     '   <button type="button" class="tool" id="skr-notes" aria-pressed="false"><span class="ti" aria-hidden="true">✏️</span><span>Notes <b id="skr-noteson">off</b></span></button>' +
@@ -63,6 +61,8 @@
     '   <button type="button" class="tool" id="skr-undo"><span class="ti" aria-hidden="true">↶</span><span>Undo</span></button>' +
     '   <button type="button" class="tool" id="skr-hint"><span class="ti" aria-hidden="true">💡</span><span>Hint <b id="skr-hintn">3</b></span></button>' +
     '  </div>' +
+    '  <p class="cgnote" id="skr-cgnote" hidden></p>' +
+    '  <form class="wg" id="skr-wg" hidden autocomplete="off"><label for="skr-wgi" id="skr-wgl">Guess the word</label><div class="wgrow"><input id="skr-wgi" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go"><button type="submit" class="wgb">Guess</button></div><p class="wgn" id="skr-wgn" aria-live="polite"></p><p class="lkey" id="skr-lkey" hidden></p></form>' +
     '  <div class="opts"><label><input type="checkbox" id="skr-nums"> <span id="skr-numsl">Show numbers instead</span></label><label><input type="checkbox" id="skr-mis"> Show mistakes</label><button type="button" class="giveup" id="skr-giveup">Give up</button></div>' +
     ' </div>' +
     ' <div class="result" id="skr-result" hidden></div>' +
