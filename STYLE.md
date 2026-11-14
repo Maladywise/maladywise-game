@@ -42,6 +42,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - From April 2027, write a new 8-letter answer for every Friday: Medical = a real medical word with Australian/British spelling (no US-only spellings), mixing familiar (MIGRAINE, CATARACT) and harder (DYSPNOEA, ADENOIDS); Normie = an everyday non-medical word. Usual one or two-sentence "definition", plain English, facts checked.
 - Add every new 8-letter answer to wordemic/words8.txt (the 8-letter guess list; lowercase, one per line, sorted). Five-letter answers still go in words.txt.
 - Einstein can land on a Friday: use a genuinely hard 8-letter word (e.g. PSAMMOMA, 2027-01-15) and add the date to MW_EINSTEIN as usual.
+- Hard cap: no Wordemic answer is ever longer than 15 letters, Einstein included. Beyond that there are almost no real words, so players couldn't type a single guess except the answer. Any length other than 5 or 8 needs its own guess list (wordemic/wordsN.txt, built the same way as words8.txt) before it's used. Run `python3 wordemic/check.py` after every Wordemic change (it must print OK).
 - words8.txt sources: the site's Suturix and medical word lists, Webster's 2nd (public domain, via the MIT english-words package), plus plurals and verb forms of those words found in the wordfreq frequency list.
 
 ## Glimpsis: Glimpsathon Tuesday and practice (from 17 Nov 2026)
