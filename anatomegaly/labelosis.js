@@ -23,7 +23,7 @@
   window.MW_GAMES = window.MW_GAMES || [];
   if (!MW_GAMES.some(function (g) { return g.id === "labelosis"; })) MW_GAMES.push(ENTRY);
   window.MW_MASCOTS = window.MW_MASCOTS || {};
-  if (!MW_MASCOTS.labelosis) MW_MASCOTS.labelosis = { name: "Axel", what: "a label-happy axolotl (regrows limbs, never forgets one)", cheer: ["Labelled to perfection.", "Textbook. Literally.", "Every part, accounted for.", "I’d regrow a limb just to watch that again.", "Anatomy lab legend.", "Origin, insertion, genius.", "That was very well innervated.", "Proximal to brilliant.", "Superior. Anatomically and otherwise.", "Gills out. Impressed."] };
+  if (!MW_MASCOTS.labelosis) MW_MASCOTS.labelosis = { name: "Lottie", what: "a label-happy axolotl (regrows limbs, never forgets one)", cheer: ["Labelled to perfection.", "Textbook. Literally.", "Every part, accounted for.", "I’d regrow a limb just to watch that again.", "Anatomy lab legend.", "Origin, insertion, genius.", "That was very well innervated.", "Proximal to brilliant.", "Superior. Anatomically and otherwise.", "Gills out. Impressed."] };
   window.MW_ABOUT = window.MW_ABOUT || {};
   if (!MW_ABOUT.labelosis) MW_ABOUT.labelosis = ["Anatomegaly is a daily anatomy puzzle. Each day brings one diagram: name the highlighted structure, identify a bone, or work out which nerve supplies what. Four options per round, and every answer comes with a short explanation.", [["Who is it for?", "Students, nurses, physios, paramedics, doctors and anyone curious about the body. Easy days are school-level; Genius days will test a surgeon."], ["Are the diagrams accurate?", "They are simplified teaching sketches drawn for this game, not to scale. Real anatomy varies between people."]]];
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};

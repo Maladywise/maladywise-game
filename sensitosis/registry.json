@@ -34,7 +34,7 @@
   "icon": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"17\" width=\"32\" height=\"14\" rx=\"4\"/><path d=\"M16 21v6M21 21v6\" /><circle cx=\"31\" cy=\"24\" r=\"3\" fill=\"#fff\"/><path d=\"M8 40h32\" opacity=\".6\"/><path d=\"M14 10l4 3M24 7v4M34 10l-4 3\"/></svg>"
  },
  "MASCOT": {
-  "name": "Tally",
+  "name": "Sunny",
   "what": "a head-counting meerkat",
   "cheer": [
    "Counted all 100. You got it.",

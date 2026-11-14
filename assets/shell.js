@@ -305,7 +305,7 @@
       return { cls: "cb-clap", html: '<div class="cb-claps"><span>\ud83d\udc4f</span><span>\ud83d\udc4f</span><span>\ud83d\udc4f</span></div><p class="cb-cap">' + (st.sa || 0) + "/20. Applause from the back row.</p>" };
     },
     cryptogenic: function (st) {
-      if ((st.hints || 0) >= 20) return null;
+      if (st.win === false || (st.hints || 0) >= 20) return null;
       var m = Math.floor((st.t || 0) / 60), sec = ("0" + ((st.t || 0) % 60)).slice(-2);
       return { cls: "cb-news", html: '<div class="cb-paper"><span class="mast">The Malady Wise Times</span><b>SOLVED</b><span class="sig">in ' + m + ":" + sec + (st.hints ? " \u00b7 " + st.hints + " hints" : " \u00b7 unaided") + "</span></div>" + '<p class="cb-cap">' + (st.hints ? "Signed, sealed, solved." : "Unaided. Hold the front page.") + "</p>" };
     },
@@ -378,16 +378,39 @@
     gave: ["Tapped out. Honest, at least.", "White flag received. The answers are waiting.", "Strategic retreat. Very dignified.", "Knowing when to stop is a clinical skill. Truly."],
     bub: ["Chin up. New one at midnight.", "I’d have got it. Probably.", "We go again tomorrow.", "Shake it off. I’ll be here.", "Happens to the best of us. Mostly me."]
   };
+  // each game's own lose lines, in its mascot's voice (Medical); Normie keeps the general lines but the mascot's own bubble
+  var LOSE_G = {
+    dx: { big: ["Case cold."], cap: ["The culprit walked. Dex is updating her corkboard.", "Wrong suspect. The real diagnosis is laughing at you."], bub: ["Elementary. Next time.", "I’m adding this to the red string."] },
+    wordemic: { big: ["Didn’t spread."], cap: ["Six guesses. Zero outbreak.", "This word was not contagious enough."], bub: ["Wash your hands of it. I won’t.", "Still going viral tomorrow."] },
+    comorbix: { big: ["Mis-filed."], cap: ["Four groups, one mess. Octavia is stress-cleaning.", "Someone filed gout under toe problems again."], bub: ["I’ll just relabel everything.", "Breathe. Sort. Repeat."] },
+    morphemia: { big: ["Wrong ward."], cap: ["Prefix, root, suffix, oops.", "Those word parts need better triage."], bub: ["Cup of tea, then again tomorrow.", "Nobody’s hurt. Just the word."] },
+    linkase: { big: ["Chain broken."], cap: ["The link snapped. Cadi will hold a grudge.", "So close. One missing link."], bub: ["I’m not mad. I’m remembering.", "Tomorrow, I coil tighter."] },
+    gridectomy: { big: ["Blank squares."], cap: ["Tess finished hers in pen an hour ago.", "Not every grid falls on the first go."], bub: ["I’ve had 147 years. You’ve got tomorrow.", "Slowly does it."] },
+    suturix: { big: ["Wound reopened."], cap: ["Silk has fainted. Again.", "That knot won’t be making the textbook."], bub: ["Neater tomorrow, please.", "I can’t look. I’m looking."] },
+    triviosis: { big: ["Wrong answer!"], cap: ["Echo will be repeating that one for days.", "Fun fact: that wasn’t it."], bub: ["Wrong answer! Wrong answer!", "I’ll remind you. Lovingly."] },
+    zebritis: { big: ["Just a horse."], cap: ["You heard hooves and thought horses. Classic.", "The zebra slipped past you."], bub: ["I’m a horse. Definitely a horse.", "The weird ones are worth it."] },
+    cryptogenic: { big: ["Code uncracked."], cap: ["Cipher has your pen. And the answer.", "The riddle remains a riddle."], bub: ["Meow. That means ‘try again’.", "It was hiding in plain sight."] },
+    grandrounds: { big: ["Rounds ran over."], cap: ["Locum needs another vending machine coffee.", "The consultant has questions."], bub: ["It’s 3am somewhere. Rest.", "Back on the roster next week."] },
+    panelysis: { big: ["Out of range."], cap: ["Ruby is reaching for the reference ranges.", "Surely that sample was haemolysed."], bub: ["Repeat the sample tomorrow.", "Darling, check the units."] },
+    arrhythmix: { big: ["Missed a beat."], cap: ["Riff heard it go out of time.", "That rhythm got away from you."], bub: ["Back in time tomorrow.", "One, two, three, four… again."] },
+    sudokrine: { big: ["Out of balance."], cap: ["The feedback loop has feedback for you.", "One number too many. Iris noticed."], bub: ["Logic first. Coffee second.", "Hoo. Let’s not do that again."] },
+    glimpsis: { big: ["Missed it."], cap: ["The clue was right there. Mira saw it.", "Look closer. Then closer again."], bub: ["I blended in. Sorry.", "The detail always waits."] },
+    opacitis: { big: ["Missed the shadow."], cap: ["Lumo saw straight through it. You didn’t. Yet.", "Not every film reads itself."], bub: ["No hiding it: that was a miss.", "I’ll glow brighter tomorrow."] },
+    labelosis: { big: ["Mislabelled."], cap: ["Lottie is reaching for the label gun.", "Right structure, wrong jar."], bub: ["Mistakes grow back. Like legs.", "I’ll relabel. You relearn."] },
+    sensitosis: { big: ["False negative."], cap: ["Sunny saw that coming from the lookout.", "The test called it wrong. So did you."], bub: ["Check your false-positive rate.", "I’m still on watch."] },
+    dactylosis: { big: ["Fumbled."], cap: ["Digby’s hands are busier than yours.", "Close. Your fingers had other plans."], bub: ["Shake out those hands.", "Again! Again!"] }
+  };
   function lpick(a) { return a[Math.floor(Math.random() * a.length)]; }
   function loseScene(id, st) {
-    var m = window.MW_MASCOTS && MW_MASCOTS[id], cap = st.gaveUp ? lpick(LOSE.gave) : lpick(NORMIE ? LOSE.capN : LOSE.cap);
-    var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(LOSE.bub) + "</span>" + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
+    var m = window.MW_MASCOTS && MW_MASCOTS[id], G = LOSE_G[id], own = G && !NORMIE && Math.random() < 0.75;
+    var cap = st.gaveUp ? lpick(LOSE.gave) : own ? lpick(G.cap) : lpick(NORMIE ? LOSE.capN : LOSE.cap);
+    var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(G && Math.random() < 0.75 ? G.bub : LOSE.bub) + "</span>" + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
     return { cls: "cb-lose", ms: 4800, html: '<svg class="cb-x" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><path d="M38 38 L82 82"/><path d="M82 38 L38 82"/></svg>' +
-      '<div class="cb-big">' + lpick(NORMIE ? LOSE.bigN : LOSE.big) + '</div><p class="cb-cap">' + cap + "</p>" + masc };
+      '<div class="cb-big">' + (G && !NORMIE && Math.random() < 0.8 ? G.big[0] : lpick(NORMIE ? LOSE.bigN : LOSE.big)) + '</div><p class="cb-cap">' + cap + "</p>" + masc };
   }
   function celebrate(id, st) {
-    var f = SCENES[id]; if (!f || !st) return;
-    var sc0 = f(st); if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
+    if (!st) return; var f = SCENES[id];
+    var sc0 = f ? f(st) : null; if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
     if (!sc0 && st.done && st.win === false) sc0 = loseScene(id, st);
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
