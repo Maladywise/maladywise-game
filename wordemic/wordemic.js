@@ -5,7 +5,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "14";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15";
   var ROWS = 6, LEN = 5, NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
@@ -40,6 +40,13 @@
   var SKEY = PFX + "wde-stats", stats = load(SKEY, { played: 0, wins: 0, streak: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0] });
   // Long Friday extras live in their own key; the main streak still counts every day. best = fewest guesses.
   var LKEY = PFX + "wde-long-stats", lstats = load(LKEY, { played: 0, wins: 0, best: 0, last: null, dist: [0, 0, 0, 0, 0, 0, 0, 0] });
+  // Long Friday: the title's subtitle names today's length and tries, e.g. "Guess the 15-letter medical word in nine tries."
+  var SUB0 = null, NUMT = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+  function subtitle() {
+    var el = document.querySelector(".gtitle p"); if (!el) return;
+    if (SUB0 === null) SUB0 = el.textContent;
+    el.textContent = isLong() ? "Guess the " + LEN + "-letter " + (NORMIE ? "" : "medical ") + "word in " + (NUMT[ROWS] || ROWS) + " tries." : SUB0;
+  }
   function isLong() { return LEN !== 5; }
   function longLabel(d) { return (LEN >= 14 ? "Super " : "") + (new Date(dayNum(d || today) * 864e5).getUTCDay() === 5 ? "Long Friday" : "Long word") + " \u00b7 " + LEN + " letters \u00b7 " + ROWS + " tries"; }
   var KEY, st, P = null, WORDS = null;
@@ -223,6 +230,7 @@
       LEN = P.word.length; ROWS = LEN <= 5 ? 6 : LEN <= 9 ? 7 : LEN <= 13 ? 8 : 9; getWords(LEN);
       root.classList.toggle("long", isLong()); root.classList.toggle("xl", LEN > 15); root.style.setProperty("--n", LEN); root.style.setProperty("--cols", LEN > 15 ? Math.ceil(LEN / 2) : LEN);
       pkIn.maxLength = LEN; buildBoard();
+      subtitle(); setTimeout(subtitle, 0); setTimeout(subtitle, 600);
       $("long").hidden = !isLong(); $("long").textContent = isLong() ? longLabel(date) : "";
       $("eyebrow").textContent = (isLive() ? "Wordemic" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
