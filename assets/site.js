@@ -9,7 +9,6 @@ window.MW_HOME = {
       { t: "Pain", href: "/chronic-pain/", d: "Why it lingers, what helps" },
       { t: "Fatigue", href: "/tired-all-the-time/", d: "Causes, tests, what helps" },
       { t: "ADHD and autism", href: "/late-diagnosis-adhd-autism/", d: "Late-diagnosis starter kit" },
-      { t: "GLP-1 medicines", href: "/glp-1/", d: "Ozempic, Mounjaro and co." },
       { t: "All hubs", href: "/hubs/", d: "Every hub on the site" }
     ] },
     { t: "For patients", medical: true, items: [
@@ -23,8 +22,7 @@ window.MW_HOME = {
       { t: "Deep dives", href: "/deep-dives/", d: "Evidence-dense topic reviews" },
       { t: "GP School", href: "/unspecialist/", d: "Free, game-style GP training" },
       { t: "Tools", href: "/tools/", d: "Calculators, scribes and apps" },
-      { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" },
-      { t: "GP MBS billing guide", href: "/mbs-billing/", d: "Items, fees and rules" }
+      { t: "Zebra Atlas", href: "/rare-conditions/", d: "Rare conditions, ranked by rarity" }
     ] },
     { t: "News", items: [
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },

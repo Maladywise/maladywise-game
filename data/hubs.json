@@ -1,34 +1,161 @@
 {
   "_about": "Every hub on the site. /hubs/ lists them all (by group). The top menu's Hubs dropdown shows the most-used topic hubs (menu: true), ranked by time spent on each hub's pages over the last 28 days (mw-presence /hubrank). Updated weekly by .github/workflows/hubs.yml via _scripts/hub_menu.py. Taglines must fit one line (max 28 characters).",
-  "menu_size": 4,
+  "menu_size": 3,
   "groups": [
-    {"t": "Topic hubs", "d": "Everything on one big topic, in one place.", "items": [
-      {"key": "chronic-pain", "t": "Pain", "href": "/chronic-pain/", "d": "Why it lingers, what helps", "long": "How long-term pain works, what turns it up and down, treatments that help and a flare plan.", "menu": true},
-      {"key": "tired-all-the-time", "t": "Fatigue", "href": "/tired-all-the-time/", "d": "Causes, tests, what helps", "long": "Why you might be tired all the time, the tests worth doing and what actually helps.", "menu": true},
-      {"key": "late-diagnosis-adhd-autism", "t": "ADHD and autism", "href": "/late-diagnosis-adhd-autism/", "d": "Late-diagnosis starter kit", "long": "Just diagnosed as an adult? The first 30 days, medication, sensory tools, work and burnout.", "menu": true},
-      {"key": "glp-1", "t": "GLP-1 medicines", "href": "/glp-1/", "d": "Ozempic, Mounjaro and co.", "long": "Ozempic, Wegovy and Mounjaro: how they work, side effects, costs and stopping.", "menu": true},
-      {"key": "tiredwise", "t": "Tiredwise", "href": "/tiredwise/", "d": "Maps for vague symptoms", "long": "Step-by-step maps for unexplained symptoms like tiredness, dizziness and aches.", "menu": true}
-    ]},
-    {"t": "For patients", "d": "Plain-English guides and handouts.", "items": [
-      {"key": "conditions", "t": "Conditions A–Z", "href": "/conditions/", "long": "Plain-English fact sheets on hundreds of conditions."},
-      {"key": "medicines", "t": "Medicines A–Z", "href": "/medicines/", "long": "What each medicine does, side effects and what to watch for."},
-      {"key": "blood-tests", "t": "Blood tests explained", "href": "/blood-tests/", "long": "What your blood test results mean, in plain English."},
-      {"key": "exercises", "t": "Exercise handouts", "href": "/exercises/", "long": "Printable rehab and stretching plans."},
-      {"key": "compare", "t": "Comparisons", "href": "/compare/", "long": "Medicine and symptom face-offs: X vs Y."},
-      {"key": "specialists", "t": "Specialists in Newcastle", "href": "/specialists/", "long": "Specialists and allied health in Newcastle and the Hunter.", "au": true}
-    ]},
-    {"t": "For doctors", "d": "Clinician tools and reviews.", "items": [
-      {"key": "doctors", "t": "Doctors’ hub", "href": "/doctors/", "long": "All the clinician tools in one place."},
-      {"key": "deep-dives", "t": "Deep dives", "href": "/deep-dives/", "long": "Evidence-dense topic reviews."},
-      {"key": "algorithms", "t": "Treatment algorithms", "href": "/algorithms/", "long": "Evidence-graded treatment paths for general practice."},
-      {"key": "unspecialist", "t": "GP School", "href": "/unspecialist/", "long": "Free, game-style GP training."},
-      {"key": "tools", "t": "GP tools", "href": "/tools/", "long": "Calculators, AI scribes and apps."},
-      {"key": "rare-conditions", "t": "Zebra Atlas", "href": "/rare-conditions/", "long": "Rare conditions, ranked by rarity."},
-      {"key": "mbs-billing", "t": "GP MBS billing guide", "href": "/mbs-billing/", "long": "Items, fees and rules."}
-    ]},
-    {"t": "News and research", "d": "What's new in health.", "items": [
-      {"key": "research", "t": "Research hub", "href": "/research/", "long": "New studies, trials to watch and trials you can join."},
-      {"key": "days", "t": "Health calendar", "href": "/days/", "long": "World health days, today and coming up."}
-    ]}
+    {
+      "t": "Topic hubs",
+      "d": "Everything on one big topic, in one place.",
+      "items": [
+        {
+          "key": "chronic-pain",
+          "t": "Pain",
+          "href": "/chronic-pain/",
+          "d": "Why it lingers, what helps",
+          "long": "How long-term pain works, what turns it up and down, treatments that help and a flare plan.",
+          "menu": true
+        },
+        {
+          "key": "tired-all-the-time",
+          "t": "Fatigue",
+          "href": "/tired-all-the-time/",
+          "d": "Causes, tests, what helps",
+          "long": "Why you might be tired all the time, the tests worth doing and what actually helps.",
+          "menu": true
+        },
+        {
+          "key": "late-diagnosis-adhd-autism",
+          "t": "ADHD and autism",
+          "href": "/late-diagnosis-adhd-autism/",
+          "d": "Late-diagnosis starter kit",
+          "long": "Just diagnosed as an adult? The first 30 days, medication, sensory tools, work and burnout.",
+          "menu": true
+        },
+        {
+          "key": "glp-1",
+          "t": "GLP-1 medicines",
+          "href": "/glp-1/",
+          "d": "Ozempic, Mounjaro and co.",
+          "long": "Ozempic, Wegovy and Mounjaro: how they work, side effects, costs and stopping.",
+          "menu": true
+        },
+        {
+          "key": "tiredwise",
+          "t": "Tiredwise",
+          "href": "/tiredwise/",
+          "d": "Maps for vague symptoms",
+          "long": "Step-by-step maps for unexplained symptoms like tiredness, dizziness and aches.",
+          "menu": true
+        }
+      ]
+    },
+    {
+      "t": "For patients",
+      "d": "Plain-English guides and handouts.",
+      "items": [
+        {
+          "key": "conditions",
+          "t": "Conditions A–Z",
+          "href": "/conditions/",
+          "long": "Plain-English fact sheets on hundreds of conditions."
+        },
+        {
+          "key": "medicines",
+          "t": "Medicines A–Z",
+          "href": "/medicines/",
+          "long": "What each medicine does, side effects and what to watch for."
+        },
+        {
+          "key": "blood-tests",
+          "t": "Blood tests explained",
+          "href": "/blood-tests/",
+          "long": "What your blood test results mean, in plain English."
+        },
+        {
+          "key": "exercises",
+          "t": "Exercise handouts",
+          "href": "/exercises/",
+          "long": "Printable rehab and stretching plans."
+        },
+        {
+          "key": "compare",
+          "t": "Comparisons",
+          "href": "/compare/",
+          "long": "Medicine and symptom face-offs: X vs Y."
+        },
+        {
+          "key": "specialists",
+          "t": "Specialists in Newcastle",
+          "href": "/specialists/",
+          "long": "Specialists and allied health in Newcastle and the Hunter.",
+          "au": true
+        }
+      ]
+    },
+    {
+      "t": "For doctors",
+      "d": "Clinician tools and reviews.",
+      "items": [
+        {
+          "key": "doctors",
+          "t": "Doctors’ hub",
+          "href": "/doctors/",
+          "long": "All the clinician tools in one place."
+        },
+        {
+          "key": "deep-dives",
+          "t": "Deep dives",
+          "href": "/deep-dives/",
+          "long": "Evidence-dense topic reviews."
+        },
+        {
+          "key": "algorithms",
+          "t": "Treatment algorithms",
+          "href": "/algorithms/",
+          "long": "Evidence-graded treatment paths for general practice."
+        },
+        {
+          "key": "unspecialist",
+          "t": "GP School",
+          "href": "/unspecialist/",
+          "long": "Free, game-style GP training."
+        },
+        {
+          "key": "tools",
+          "t": "GP tools",
+          "href": "/tools/",
+          "long": "Calculators, AI scribes and apps."
+        },
+        {
+          "key": "rare-conditions",
+          "t": "Zebra Atlas",
+          "href": "/rare-conditions/",
+          "long": "Rare conditions, ranked by rarity."
+        },
+        {
+          "key": "mbs-billing",
+          "t": "GP MBS billing guide",
+          "href": "/mbs-billing/",
+          "long": "Items, fees and rules."
+        }
+      ]
+    },
+    {
+      "t": "News and research",
+      "d": "What's new in health.",
+      "items": [
+        {
+          "key": "research",
+          "t": "Research hub",
+          "href": "/research/",
+          "long": "New studies, trials to watch and trials you can join."
+        },
+        {
+          "key": "days",
+          "t": "Health calendar",
+          "href": "/days/",
+          "long": "World health days, today and coming up."
+        }
+      ]
+    }
   ]
 }
