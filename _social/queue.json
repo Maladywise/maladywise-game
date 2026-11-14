@@ -51,7 +51,10 @@
       "slot": "am",
       "note": "DVT puzzle (made directly in Typefully, 15 Nov)",
       "typefully_id": "11925363",
-      "answer": "DVT (deep vein thrombosis). Wells score: if unlikely, D-dimer; if likely or D-dimer raised, compression ultrasound. Sudden breathlessness or chest pain = possible PE, emergency now.",
+      "answer": [
+        "DVT (deep vein thrombosis). Wells score: if unlikely, D-dimer; if likely or D-dimer raised, compression ultrasound. Sudden breathlessness or chest pain = possible PE, emergency now.",
+        "Play Dxtective → https://maladywise.com/dxtective/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -98,7 +101,10 @@
       "slot": "am",
       "note": "HPV odd one out (made directly in Typefully, 15 Nov)",
       "typefully_id": "11925364",
-      "answer": "HPV 6. It's low-risk and, with HPV 11, causes most genital warts. 16, 18 and 31 are high-risk types behind most cervical cancers. Today is Cervical Cancer Elimination Day: https://maladywise.com/cervical-cancer/",
+      "answer": [
+        "HPV 6. It's low-risk and, with HPV 11, causes most genital warts. 16, 18 and 31 are high-risk types behind most cervical cancers. Today is Cervical Cancer Elimination Day: https://maladywise.com/cervical-cancer/",
+        "Play Super Comorbix (Tuesdays) → https://maladywise.com/comorbix/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -139,7 +145,10 @@
       "slot": "am",
       "note": "MRSA name the bug (made directly in Typefully, 15 Nov)",
       "typefully_id": "11925366",
-      "answer": "MRSA (methicillin-resistant Staphylococcus aureus). Gram-positive cocci in clusters, resistant to flucloxacillin and most beta-lactams. Happy World AMR Awareness Week: use antibiotics only when they're needed.",
+      "answer": [
+        "MRSA (methicillin-resistant Staphylococcus aureus). Gram-positive cocci in clusters, resistant to flucloxacillin and most beta-lactams. Happy World AMR Awareness Week: use antibiotics only when they're needed.",
+        "Play Triviosis → https://maladywise.com/triviosis/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -251,7 +260,10 @@
       "slot": "am",
       "note": "Courvoisier puzzle (made directly in Typefully, 15 Nov)",
       "typefully_id": "11924357",
-      "answer": "Courvoisier's sign. A palpable, non-tender gallbladder with painless jaundice is unlikely to be gallstones (a stone-scarred gallbladder rarely distends). Think a blockage low in the bile duct, like cancer of the head of the pancreas. Needs urgent imaging. Daily diagnosis puzzles: https://maladywise.com/dxtective/",
+      "answer": [
+        "Courvoisier's sign. A palpable, non-tender gallbladder with painless jaundice is unlikely to be gallstones (a stone-scarred gallbladder rarely distends). Think a blockage low in the bile duct, like cancer of the head of the pancreas. Needs urgent imaging.",
+        "Play Dxtective → https://maladywise.com/dxtective/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -289,7 +301,10 @@
       "slot": "am",
       "note": "Rovsing odd one out (made directly in Typefully, 15 Nov)",
       "typefully_id": "11924358",
-      "answer": "Rovsing. Pressing on the left lower tummy hurts on the right: a sign of appendicitis. Kernig, Brudzinski and jolt accentuation are all signs of meningism. More red herrings in Super Comorbix every Tuesday: https://maladywise.com/comorbix/",
+      "answer": [
+        "Rovsing. Pressing on the left lower tummy hurts on the right: a sign of appendicitis. Kernig, Brudzinski and jolt accentuation are all signs of meningism.",
+        "Play Comorbix → https://maladywise.com/comorbix/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -307,7 +322,10 @@
       "slot": "am",
       "note": "Scaphoid puzzle (made directly in Typefully, 15 Nov)",
       "typefully_id": "11924361",
-      "answer": "A scaphoid fracture. Up to about 1 in 5 don't show on the first X-ray, and a missed one can lose its blood supply and fail to heal. Treat it as broken: splint the wrist and thumb, then either an MRI or CT, or a repeat X-ray in 10 to 14 days.",
+      "answer": [
+        "A scaphoid fracture. Up to about 1 in 5 don't show on the first X-ray, and a missed one can lose its blood supply and fail to heal. Treat it as broken: splint the wrist and thumb, then either an MRI or CT, or a repeat X-ray in 10 to 14 days.",
+        "Play Anatomegaly → https://maladywise.com/anatomegaly/"
+      ],
       "queued_at": "2026-11-15"
     },
     {
@@ -352,7 +370,10 @@
         "Monday puzzle 🧠\n\nSudden worst-ever headache at the gym. Normal exam. CT at 8 hours is normal.\n\nHome and hosed, or not? What's next? 👇 #MedTwitter",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: subarachnoid haemorrhage is still on the table. A normal CT within 6 hours of onset almost rules it out; at 8 hours it doesn't. Next: CT angiography or a lumbar puncture for xanthochromia (at least 12 hours after onset), per your local pathway.",
+      "answer": [
+        "Answer: subarachnoid haemorrhage is still on the table. A normal CT within 6 hours of onset almost rules it out; at 8 hours it doesn't. Next: CT angiography or a lumbar puncture for xanthochromia (at least 12 hours after onset), per your local pathway.",
+        "Play Dxtective → https://maladywise.com/dxtective/"
+      ],
       "typefully_id": "11925030",
       "queued_at": "2026-11-15T01:36+11:00"
     },
@@ -391,7 +412,7 @@
       ],
       "answer": [
         "Answer: Kayser–Fleischer rings. They're copper deposits in the cornea, a sign of Wilson's disease. Spoon-shaped nails, cracked mouth corners and a smooth sore tongue all fit iron deficiency.",
-        "Iron, explained → https://maladywise.com/iron/"
+        "Iron, explained → https://maladywise.com/iron/\nPlay Super Comorbix (Tuesdays) → https://maladywise.com/comorbix/"
       ],
       "typefully_id": "11925032",
       "queued_at": "2026-11-15T01:36+11:00"
@@ -431,7 +452,7 @@
       ],
       "answer": [
         "Answer: Gowers' sign. It shows weak hip and thigh muscles, and is the classic sign of Duchenne muscular dystrophy in young boys. William Gowers described it in 1879.",
-        "More rare conditions, ranked by rarity → https://maladywise.com/rare-conditions/"
+        "More rare conditions, ranked by rarity → https://maladywise.com/rare-conditions/\nPlay Zebritis → https://maladywise.com/zebritis/"
       ],
       "typefully_id": "11925033",
       "queued_at": "2026-11-15T01:36+11:00"
@@ -471,7 +492,7 @@
       ],
       "answer": [
         "Answer: De Quervain's tenosynovitis. The thumb-in-fist manoeuvre is strictly Eichhoff's test; Finkelstein's original pulled on the thumb. Almost everyone calls both Finkelstein's. Lifting babies is a classic trigger.",
-        "More → https://maladywise.com/de-quervains/"
+        "More → https://maladywise.com/de-quervains/\nPlay Glimpsis → https://maladywise.com/glimpsis/"
       ]
     },
     {
@@ -491,7 +512,7 @@
       ],
       "answer": [
         "Answer: the liver. After surgery that removes up to about three-quarters of it, a healthy liver grows back to near its normal size within weeks to months. It's why living-donor transplants work.",
-        "Look after yours → https://maladywise.com/fatty-liver/"
+        "Look after yours → https://maladywise.com/fatty-liver/\nPlay Anatomegaly → https://maladywise.com/anatomegaly/"
       ]
     },
     {
@@ -527,7 +548,7 @@
       ],
       "answer": [
         "Answer: Murphy's sign. Breathing in pushes an inflamed gallbladder down onto your hand, so the breath catches. It suggests acute cholecystitis.",
-        "Gallstones, explained → https://maladywise.com/gallstones/"
+        "Gallstones, explained → https://maladywise.com/gallstones/\nPlay Glimpsis → https://maladywise.com/glimpsis/"
       ]
     },
     {
@@ -545,7 +566,10 @@
         "Monday puzzle ⏱️\n\n70 years old. New headache. Jaw aches when chewing. Scalp tender to brush.\n\nWhat's the worry, and how fast do you act? 👇 #MedTwitter",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: giant cell arteritis. The risk is sudden, permanent loss of vision. Same-day bloods (ESR, CRP) and urgent specialist advice, and if it's strongly suspected, high-dose steroids start straight away rather than waiting for a biopsy."
+      "answer": [
+        "Answer: giant cell arteritis. The risk is sudden, permanent loss of vision. Same-day bloods (ESR, CRP) and urgent specialist advice, and if it's strongly suspected, high-dose steroids start straight away rather than waiting for a biopsy.",
+        "Play Dxtective → https://maladywise.com/dxtective/"
+      ]
     },
     {
       "date": "2026-12-01",
@@ -562,7 +586,10 @@
         "Odd one out 💊\n\nThiamine · Niacin · Riboflavin · Retinol\n\nWhich doesn't belong? 👇",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: retinol. It's vitamin A, which is fat-soluble. Thiamine (B1), riboflavin (B2) and niacin (B3) are water-soluble B vitamins. Bonus: lack of thiamine causes beriberi; lack of niacin, pellagra."
+      "answer": [
+        "Answer: retinol. It's vitamin A, which is fat-soluble. Thiamine (B1), riboflavin (B2) and niacin (B3) are water-soluble B vitamins. Bonus: lack of thiamine causes beriberi; lack of niacin, pellagra.",
+        "Play Triviosis → https://maladywise.com/triviosis/"
+      ]
     },
     {
       "date": "2026-12-02",
@@ -581,7 +608,7 @@
       ],
       "answer": [
         "Answer: osteogenesis imperfecta, most often type I. Faulty type I collagen means fragile bones, thin sclerae that look blue, and hearing loss in early adulthood.",
-        "More zebras → https://maladywise.com/rare-conditions/"
+        "More zebras → https://maladywise.com/rare-conditions/\nPlay Zebritis → https://maladywise.com/zebritis/"
       ]
     },
     {
@@ -599,7 +626,10 @@
         "Friday puzzle ⚡\n\nTap just in front of the ear. The corner of the mouth twitches.\n\nName the sign, and the blood test you'd order. 👇",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: Chvostek's sign, a clue to low calcium (check calcium, plus magnesium and PTH). It's not very specific: a fair number of healthy people have it. Its partner is Trousseau's sign, the hand spasm with a blood pressure cuff."
+      "answer": [
+        "Answer: Chvostek's sign, a clue to low calcium (check calcium, plus magnesium and PTH). It's not very specific: a fair number of healthy people have it. Its partner is Trousseau's sign, the hand spasm with a blood pressure cuff.",
+        "Play Glimpsis → https://maladywise.com/glimpsis/"
+      ]
     },
     {
       "date": "2026-12-05",
@@ -616,7 +646,10 @@
         "Saturday trivia 🦴\n\nWhich bone is the only one in the body that doesn't touch any other bone?\n\nAnswers below. 👇",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: the hyoid, the small U-shaped bone in the neck. It's held in place by muscles and ligaments and anchors the tongue. In some deaths, a broken hyoid is a forensic clue."
+      "answer": [
+        "Answer: the hyoid, the small U-shaped bone in the neck. It's held in place by muscles and ligaments and anchors the tongue. In some deaths, a broken hyoid is a forensic clue.",
+        "Play Anatomegaly → https://maladywise.com/anatomegaly/"
+      ]
     },
     {
       "date": "2026-12-06",
@@ -633,7 +666,10 @@
         "Sunday puzzle 🚨\n\nToddler. Bouts of screaming, knees drawn up, calm in between. Then redcurrant jelly-like poo.\n\nWhat's the worry, and how fast? 👇",
         "Play today's medical puzzles → https://maladywise.com/"
       ],
-      "answer": "Answer: intussusception, the bowel telescoping into itself. Same-day emergency department: ultrasound confirms it, and an air or contrast enema often fixes it without surgery. Redcurrant jelly stools are a late sign, so don't wait for them."
+      "answer": [
+        "Answer: intussusception, the bowel telescoping into itself. Same-day emergency department: ultrasound confirms it, and an air or contrast enema often fixes it without surgery. Redcurrant jelly stools are a late sign, so don't wait for them.",
+        "Play Dxtective → https://maladywise.com/dxtective/"
+      ]
     }
   ]
 }
