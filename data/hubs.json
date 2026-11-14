@@ -1,5 +1,5 @@
 {
-  "_about": "Every hub on the site. /hubs/ lists them all (by group). The top menu's Hubs dropdown shows the most-used topic hubs (menu: true), ranked by time spent on each hub's pages over the last 28 days (mw-presence /hubrank). Updated weekly by .github/workflows/hubs.yml via _scripts/hub_menu.py. Taglines must fit one line (max 28 characters).",
+  "_about": "Every hub on the site. /patients/ (the patients' hub) lists the topic hubs. The top menu's For patients dropdown shows the most-used topic hubs (menu: true) after the Patients' hub link, ranked by time spent on each hub's pages over the last 28 days (mw-presence /hubrank). Updated weekly by .github/workflows/hubs.yml via _scripts/hub_menu.py. Taglines must fit one line (max 28 characters).",
   "menu_size": 3,
   "groups": [
     {

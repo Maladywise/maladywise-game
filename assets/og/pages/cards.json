@@ -1189,13 +1189,6 @@
 "label": "Condition",
 "title": "Hives and Swelling"
 },
-"hubs": {
-"url": "/hubs/",
-"key": "3713c0f61925",
-"v": "a7b253cc",
-"label": "Malady Wise",
-"title": "All hubs"
-},
 "ibs": {
 "url": "/ibs/",
 "key": "0e4c21233aee",
@@ -1797,6 +1790,13 @@
 "v": "d93514f9",
 "label": "Condition",
 "title": "Paronychia"
+},
+"patients": {
+"url": "/patients/",
+"key": "e7892c2d8bd0",
+"v": "12146a8a",
+"label": "Malady Wise",
+"title": "For patients"
 },
 "pcos": {
 "url": "/pcos/",

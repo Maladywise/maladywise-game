@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Put the most-used topic hubs in the top menu's Hubs dropdown.
+"""Put the most-used topic hubs in the top menu's For patients dropdown (after the Patients' hub link).
 
     python3 _scripts/hub_menu.py                 # fetch ranking from mw-presence, update assets/site.js
     python3 _scripts/hub_menu.py --rank r.json   # use a saved ranking ({"key": score, ...})
@@ -7,7 +7,7 @@
 
 Score = minutes people spent on each hub's pages over the last 28 days (mw-presence counts the
 "still here" pings every page sends; no personal data). Hubs with "menu": true in data/hubs.json
-compete for menu_size places; ties keep the hubs.json order. An "All hubs" link always ends the list.
+compete for menu_size places; ties keep the hubs.json order. The fixed links in FIXED always follow them.
 With too little data (under MIN_TOTAL pings) the menu is left as it is.
 """
 import json, os, re, sys, urllib.request
@@ -15,6 +15,10 @@ import json, os, re, sys, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 URL = "https://mw-presence.onrender.com/hubrank?days=28"
 MIN_TOTAL = 40
+FIXED = ['      { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" }',
+         '      { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" }',
+         '      { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" }',
+         '      { t: "Specialists", href: "/specialists/", d: "Newcastle + Hunter Region", au: true }']
 
 
 def js(s):
@@ -61,21 +65,22 @@ def main():
     if total < MIN_TOTAL:
         print("only %d pings in total; menu unchanged" % total); return
     pick.sort(key=lambda i: order[i["key"]])  # keep a stable, familiar order inside the menu
-    lines = ['      { t: %s, href: %s, d: %s }' % (js(i["t"]), js(i["href"]), js(i["d"])) for i in pick]
-    lines.append('      { t: "All hubs", href: "/hubs/", d: "Every hub on the site" }')
-    block = '    { t: "Hubs", medical: true, items: [\n' + ",\n".join(lines) + "\n    ] },\n"
+    lines = ['      { t: "Patients’ hub", href: "/patients/", d: "Everything for patients" }']
+    lines += ['      { t: %s, href: %s, d: %s }' % (js(i["t"]), js(i["href"]), js(i["d"])) for i in pick]
+    lines += FIXED
+    block = '    { t: "For patients", medical: true, items: [\n' + ",\n".join(lines) + "\n    ] },\n"
     p = os.path.join(ROOT, "assets", "site.js")
     s = open(p, encoding="utf-8").read()
-    m = re.search(r'    \{ t: "Hubs".*?\n    \] \},\n', s, re.S)
+    m = re.search(r'    \{ t: "For patients".*?\n    \] \},\n', s, re.S)
     if not m:
-        print("Hubs block not found in site.js"); sys.exit(1)
+        print("For patients block not found in site.js"); sys.exit(1)
     if s[m.start():m.end()] == block:
         print("menu already up to date"); return
     if "--dry" in a:
         print(block); return
     open(p, "w", encoding="utf-8").write(s[:m.start()] + block + s[m.end():])
     bump("site.js")
-    print("site.js Hubs menu updated")
+    print("site.js For patients menu updated")
 
 
 if __name__ == "__main__":
