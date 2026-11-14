@@ -5,11 +5,10 @@ window.MW_HOME = {
   nav: [
     { t: "Puzzles", tn: "Games", href: "/" },
     { t: "Hubs", medical: true, items: [
-      { t: "Pain", href: "/chronic-pain/", d: "How long-term pain works, what helps" },
-      { t: "Fatigue", href: "/tired-all-the-time/", d: "Why you’re tired, tests, what helps" },
+      { t: "Pain", href: "/chronic-pain/", d: "Why it lingers, what helps" },
+      { t: "Fatigue", href: "/tired-all-the-time/", d: "Causes, tests, what helps" },
       { t: "ADHD and autism", href: "/late-diagnosis-adhd-autism/", d: "Late-diagnosis starter kit" },
-      { t: "GLP-1 medicines", href: "/glp-1/", d: "Ozempic, Mounjaro and friends" },
-      { t: "Doctors", href: "/doctors/", d: "All clinician tools" }
+      { t: "GLP-1 medicines", href: "/glp-1/", d: "Ozempic, Mounjaro and co." }
     ] },
     { t: "For patients", medical: true, items: [
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
