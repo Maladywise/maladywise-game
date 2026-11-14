@@ -1,4 +1,4 @@
-/* Sensitosis: guess how good real medical tests are. Five tests a day; two sliders each (sensitivity, specificity).
+/* Sensitosis: guess how good real medical tests are. One test a day from 14 Nov 2026 (five before); two sliders each (sensitivity, specificity).
    Test bank: tests.json {tests: {id: {test, condition, scenario, sens:{v,lo,hi}, spec:{v,lo,hi}|null, range?, kind?, label?, says, note, src:[[title,url]], checked}}}.
    kind: sign | rule | scan | (none = lab test). Sign and rule rounds are "Signs rounds": same mechanics, different chip and wording.
    Days: puzzles/YYYY-MM.json [{date, number, difficulty, rounds:[{test, twist?:{prev, where, sourced}}]}].
@@ -8,7 +8,7 @@
    and puzzles/normie/YYYY-MM.json, "n-" storage keys, everyday wording. Missing Normie file -> MW_noNormie. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "3", N = 5, OPEN = "2026-11-02";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "5", N = 5, OPEN = "2026-11-02", ONE = "2026-11-14"; // from ONE: one test a day (the first round); earlier days and part-played days keep 5
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", TFILE = NORMIE ? "tests-normie.json" : "tests.json", NAME = NORMIE ? "Sensitosis (Normie)" : "Sensitosis";
   var root = document.getElementById("sns");
   if (!document.querySelector("link[data-sns]")) {
@@ -103,6 +103,7 @@
   var EIN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>';
   function tOf(i) { return TESTS[P.rounds[i].test]; }
   function renderDots() {
+    $("dots").hidden = N === 1;
     $("dots").innerHTML = P.rounds.map(function (r, i) {
       var g = st.g[i], cls = g ? (g[2] >= 90 ? "a" : g[2] >= 70 ? "b" : g[2] >= 40 ? "c" : "d") : (i === st.r && !st.done ? "on" : "");
       return '<span class="dot ' + cls + '" title="Test ' + (i + 1) + (g ? ": " + g[2] + " points" : "") + '">' + (g ? g[2] : i + 1) + "</span>";
@@ -130,7 +131,7 @@
   function isSign(T) { var k = kindOf(T); return !NORMIE && (k === "sign" || k === "rule"); }
   function chip(T) { var k = kindOf(T); return '<span class="kind ' + k + '">' + esc(T.label || KINDS[k]) + "</span>"; }
   function head(i, T) {
-    return '<p class="kick"><span>' + (isSign(T) ? "Signs round · " : NORMIE ? "Round " : "Test ") + (i + 1) + " of " + N + "</span>" + chip(T) + "</p><h2>" + esc(T.test) + '</h2><p class="for">' + (NORMIE ? "Detecting" : "Looking for") + " <b>" + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>" + (ein() && i === st.r && !st.g[i] ? '<p class="einote">Einstein day: tight scoring. Full marks only inside the real range, zero from 20 off.</p>' : "");
+    return '<p class="kick"><span>' + (N === 1 ? (isSign(T) ? "Today’s sign" : NORMIE ? "Today’s detector" : "Today’s test") : (isSign(T) ? "Signs round · " : NORMIE ? "Round " : "Test ") + (i + 1) + " of " + N) + "</span>" + chip(T) + "</p><h2>" + esc(T.test) + '</h2><p class="for">' + (NORMIE ? "Detecting" : "Looking for") + " <b>" + esc(T.condition) + "</b></p><p class=\"scn\">" + esc(T.scenario) + "</p>" + (ein() && i === st.r && !st.g[i] ? '<p class="einote">Einstein day: tight scoring. Full marks only inside the real range, zero from 20 off.</p>' : "");
   }
   function words(T) {
     if (NORMIE) return [T.pos || "get flagged", T.neg || "get cleared", "detector"];
@@ -189,9 +190,9 @@
     if (i === N - 1) { /* last one: score page after Next */ }
     $("card").scrollIntoView({ behavior: "smooth", block: "start" });
   }
-  function bucket(s) { return s >= 450 ? 0 : s >= 350 ? 1 : s >= 250 ? 2 : 3; }
+  function bucket(s) { s = s / N; return s >= 90 ? 0 : s >= 70 ? 1 : s >= 50 ? 2 : 3; }
   function finish() {
-    st.score = st.g.reduce(function (a, g) { return a + g[2]; }, 0); st.win = st.score >= 250; st.done = true; if (ein()) st.d = "Einstein"; put(KEY, st);
+    st.score = st.g.reduce(function (a, g) { return a + g[2]; }, 0); st.win = st.score >= N * 50; st.done = true; if (ein()) st.d = "Einstein"; put(KEY, st);
     if (ein() && st.win && isLive()) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "sensitosis" && t.d === today; })) { tro.push({ g: "sensitosis", d: today }); put(PFX + "mw-einstein", tro); } }
     if (isLive() && stats.last !== today) {
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
@@ -206,7 +207,7 @@
     if (!st.done) { r.hidden = true; return; }
     $("card").hidden = true;
     var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " · " + P.difficulty + (NORMIE ? " 🔎 " : " 🔬 ") + st.score + "/" + N * 100 + "\n" + st.g.map(function (g) { return emo(g[2]); }).join("") + "\nmaladywise.com";
-    var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = bucket(st.score), L = ["450+", "350+", "250+", "<250"];
+    var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0, max = Math.max.apply(null, stats.dist.concat([1])), mine = bucket(st.score), L = [N * 90 + "+", N * 70 + "+", N * 50 + "+", "<" + N * 50];
     r.hidden = false;
     var verdict = ein() ? (st.win ? (NORMIE ? "⚛️ Einstein day, passed. Roughly a once-in-50-days set, tight scoring and all. Screenshot this." : "⚛️ Einstein day, passed. Roughly a once-in-50-days set, tight scoring and all. Screenshot this.") : (NORMIE ? "Even Einstein would have asked for more data. Respect for taking on the rare one." : "Even Einstein would have ordered more tests. Respect for taking on the rare one.")) : pick(SASS.end[mine]);
     r.innerHTML = '<p class="verdict">' + esc(verdict) + "</p><h2>" + st.score + "<small> / " + N * 100 + "</small></h2>" +
@@ -214,7 +215,7 @@
         var T = TESTS[R.test], g = st.g[i];
         return '<li><span class="e">' + emo(g[2]) + '</span><span class="n"><b>' + esc(T.test) + "</b><small>" + esc(T.label || KINDS[kindOf(T)]) + " · catches " + fmt(T.sens.v) + (T.spec ? " · clears " + fmt(T.spec.v) : "") + " · you " + g[0] + (T.spec ? "/" + g[1] : "") + '</small><a href="' + esc(T.src[0][1]) + '" target="_blank" rel="noopener">Source ↗</a></span><span class="p">' + g[2] + "</span></li>";
       }).join("") + "</ul>" +
-      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>250+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
+      '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + N * 50 + '+ %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
       '<div class="dist">' + stats.dist.map(function (c, i) { return "<div><span>" + L[i] + '</span><i class="' + (i === mine && isLive() ? "me" : "") + '" style="width:' + Math.max(8, Math.round(c / max * 100)) + '%">' + c + "</i></div>"; }).join("") + "</div>" +
       '<pre id="sns-share">' + esc(share) + '</pre><button class="btn" type="button" id="sns-copy">Copy result</button>' +
       '<button class="btn ghost" type="button" id="sns-review">Review the reveals</button>';
@@ -257,6 +258,8 @@
     return Promise.all([testsP, month(date.slice(0, 7))]).then(function (a) {
       if (NORMIE) normFoot();
       P = a[1].filter(function (x) { return x.date === date; })[0] || null;
+      if (P && date >= ONE && st.g.length <= 1) P = { date: P.date, number: P.number, difficulty: P.difficulty, rounds: [P.rounds.filter(function (R) { var T = TESTS[R.test] || {}; return !R.twist && !/^same\b/i.test(T.scenario || ""); })[0] || P.rounds[0]] }; // a round that stands alone
+      if (P) N = P.rounds.length;
       if (!P) {
         $("dots").innerHTML = ""; $("result").hidden = true; $("badge").hidden = true; $("card").hidden = false;
         $("card").innerHTML = date < OPEN ? '<p class="empty">Sensitosis opens Monday 2 November. ' + (NORMIE ? "The detectors are still warming up." : "The tests are still being validated.") + "</p>" :

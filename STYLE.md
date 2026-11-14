@@ -236,3 +236,6 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Recurring themes: **Muscle Monday** every Monday, and a **Hand Day** about once a week. Other good themes: feet and ankles, pelvis and pelvic floor, neck and throat, face and jaw, hormone glands, back muscles, forearm, lower leg.
 - Balance per month (Nov–Dec 2026 were heavy on brain and heart and light on muscles): aim for about 30% muscles and tendons, and regular foot, hand muscle, pelvis, neck, face and endocrine rounds. Brain and heart no more than ~10% each.
 - Still no answer repeated within 6 weeks; use the diagram art where a part exists (check with LBL_PARTS in anatomegaly/art.js).
+
+## Sensitosis: one test a day
+- From 14 Nov 2026 players see ONE test a day (owner's request). Day files still hold 5 rounds; the game shows the first round that has no twist and whose scenario doesn't start with "Same…", so put the day's best standalone test first. Days before 14 Nov keep all 5. Score is out of 100; 50+ counts as a pass.
