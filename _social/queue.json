@@ -275,7 +275,24 @@
   },
   {
    "date": "2026-11-23",
-   "note": "Mon: deep dive #6 thread (mould)",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Thunderclap headache",
+   "puzzle": {
+    "kicker": "What's the worry?",
+    "title": "Thunderclap headache",
+    "body": "A 25-year-old gets a sudden <b>worst-ever headache</b> while lifting weights. Neuro exam normal. <b>CT at 8 hours: normal.</b><br><br>What are you worried about, and what next?",
+    "mascot": "sensitosis"
+   },
+   "thread": [
+    "Monday puzzle 🧠\n\nSudden worst-ever headache at the gym. Normal exam. CT at 8 hours is normal.\n\nHome and hosed, or not? What's next? 👇 #MedTwitter",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: subarachnoid haemorrhage is still on the table. A normal CT within 6 hours of onset almost rules it out; at 8 hours it doesn't. Next: CT angiography or a lumbar puncture for xanthochromia (at least 12 hours after onset), per your local pathway."
+  },
+  {
+   "date": "2026-11-23",
+   "note": "Mon: deep dive #6 thread (mould) (moved to 6pm: new X strategy)",
    "thread": [
     "1/9 Damp homes and lungs: this part is settled. In a meta-analysis of 16 studies, a mouldy smell at home came with 73% higher odds of new asthma. New deep dive for clinicians on what mould does, and doesn't, do 🧵",
     "2/9 Read the deep dive → https://maladywise.com/deep-dives/mould/",
@@ -288,11 +305,32 @@
     "9/9 For clinicians: exposure history, spirometry, allergy testing where it changes management, and a torch to find the water source. Skip the biotoxin panels. General education, not personal advice."
    ],
    "typefully_id": "11887807",
-   "queued_at": "2026-11-13T05:30+11:00"
+   "queued_at": "2026-11-13T05:30+11:00",
+   "slot": "pm"
   },
   {
    "date": "2026-11-24",
-   "note": "Tue: deep dive #10 thread (pelvic congestion syndrome)",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Which one doesn't belong?",
+   "puzzle": {
+    "kicker": "Odd one out",
+    "title": "Which one doesn't belong?",
+    "body": "<b>Koilonychia</b> · <b>Angular cheilitis</b> · <b>Glossitis</b> · <b>Kayser–Fleischer rings</b><br><br>Three point to the same deficiency. Which one is the odd one out, and why?",
+    "mascot": "comorbix"
+   },
+   "thread": [
+    "Odd one out 🔍\n\nKoilonychia · Angular cheilitis · Glossitis · Kayser–Fleischer rings\n\nThree share a cause. One belongs to a different metal entirely. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: Kayser–Fleischer rings. They're copper deposits in the cornea, a sign of Wilson's disease. Spoon-shaped nails, cracked mouth corners and a smooth sore tongue all fit iron deficiency.",
+    "Iron, explained → https://maladywise.com/iron/"
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "note": "Tue: deep dive #10 thread (pelvic congestion syndrome) (moved to 6pm: new X strategy)",
    "thread": [
     "1/9 Pelvic congestion syndrome: varicose veins nobody looks for. A dragging pelvic ache that builds by evening, a \"normal\" pelvic scan, years of clinics. New deep dive for clinicians 🧵",
     "2/9 Read the deep dive → https://maladywise.com/deep-dives/pelvic-congestion-syndrome/",
@@ -305,11 +343,32 @@
     "9/9 Frontier: is it veins, or a sensitised nervous system? A sham-controlled trial, EMBOLIZE (n=40), is recruiting now, with results expected after mid-2027. #WomensHealth"
    ],
    "typefully_id": "11913423",
-   "queued_at": "2026-11-14T10:39+11:00"
+   "queued_at": "2026-11-14T10:39+11:00",
+   "slot": "pm"
   },
   {
    "date": "2026-11-25",
-   "note": "Wed: deep dive #7 thread (autism)",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Climbing up their own legs",
+   "puzzle": {
+    "kicker": "Name the sign",
+    "title": "Climbing up their own legs",
+    "body": "A young boy gets up from the floor by <b>\"walking\" his hands up his thighs</b> to push himself upright.<br><br>Name the sign, and the classic cause.",
+    "mascot": "zebritis"
+   },
+   "thread": [
+    "Zebra Wednesday 🦓\n\nA little boy stands up from the floor by walking his hands up his own legs.\n\nName the sign, and the classic cause. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: Gowers' sign. It shows weak hip and thigh muscles, and is the classic sign of Duchenne muscular dystrophy in young boys. William Gowers described it in 1879.",
+    "More rare conditions, ranked by rarity → https://maladywise.com/rare-conditions/"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "note": "Wed: deep dive #7 thread (autism) (moved to 6pm: new X strategy)",
    "thread": [
     "1/9 1 in 31 US 8-year-olds were identified as autistic in 2022, up from 1 in 36 in 2020 (CDC). In UK records, adult diagnoses are rising fastest. New deep dive for clinicians: autism across the lifespan 🧵",
     "2/9 Read the deep dive → https://maladywise.com/deep-dives/autism/",
@@ -320,11 +379,52 @@
     "7/9 Co-occurring conditions are common and often treatable: ADHD 28%, anxiety 20%, sleep-wake disorders 13%, depression 11% (Lai 2019 meta-analysis).",
     "8/9 No medicine treats core autism. Intranasal oxytocin: no difference from placebo in 290 children (Sikich 2021). Risperidone helps severe irritability (69% vs 12% response), at a weight-gain cost.",
     "9/9 Australia: 290,900 autistic people in 2022, and 18.2% unemployment among those of working age (ABS). The gap is in support, not potential. #Autism"
+   ],
+   "slot": "pm"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Sore thumb, new parent",
+   "puzzle": {
+    "kicker": "Name the test",
+    "title": "Sore thumb, new parent",
+    "body": "A new parent has pain at the <b>base of the thumb</b>. Thumb tucked into a fist, wrist bent towards the little finger: <b>ouch</b>.<br><br>Name the test and the condition.",
+    "mascot": "labelosis"
+   },
+   "thread": [
+    "Friday puzzle 👍\n\nNew parent, sore thumb base. Thumb in fist, wrist bent towards the little finger: ouch.\n\nName the test, and the condition. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: De Quervain's tenosynovitis. The thumb-in-fist manoeuvre is strictly Eichhoff's test; Finkelstein's original pulled on the thumb. Almost everyone calls both Finkelstein's. Lifting babies is a classic trigger.",
+    "More → https://maladywise.com/de-quervains/"
    ]
   },
   {
    "date": "2026-11-28",
-   "note": "Sat: deep dive #8 thread (ADHD)",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: The comeback organ",
+   "puzzle": {
+    "kicker": "Body trivia",
+    "title": "The comeback organ",
+    "body": "Which organ can <b>regrow to full size</b> from as little as about <b>a quarter</b> of its original mass?",
+    "mascot": "triviosis"
+   },
+   "thread": [
+    "Saturday trivia 🧬\n\nWhich organ can regrow to full size from as little as about a quarter of its original mass?\n\nNo googling. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: the liver. After surgery that removes up to about three-quarters of it, a healthy liver grows back to near its normal size within weeks to months. It's why living-donor transplants work.",
+    "Look after yours → https://maladywise.com/fatty-liver/"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "note": "Sat: deep dive #8 thread (ADHD) (moved to 6pm: new X strategy)",
    "thread": [
     "1/9 ADHD doesn't end at 18. Worldwide, 2.58% of adults have persistent ADHD with childhood onset: about 140 million people (Song 2021). New deep dive for clinicians, adults in focus 🧵",
     "2/9 Read the deep dive → https://maladywise.com/deep-dives/adhd/",
@@ -335,7 +435,133 @@
     "7/9 Under-recognition is real too. In Danish registry data, people with ADHD had a mortality rate ratio of 2.07, mostly from accidents, and 4.25 when diagnosed as adults (Dalsgaard 2015).",
     "8/9 NSW: trained GPs have continued ADHD scripts since 1 Sept 2025, and training to diagnose and initiate began in March 2026. Queensland, WA, SA, Tasmania and the ACT run different models.",
     "9/9 Shortages: Australian dispensing of lisdexamfetamine rose 140% from Jan 2024 to May 2025, and methylphenidate ran short nationwide in 2025. Demand outpaced supply. #ADHD"
+   ],
+   "slot": "pm"
+  },
+  {
+   "date": "2026-11-29",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: The breath that stops",
+   "puzzle": {
+    "kicker": "Name the sign",
+    "title": "The breath that stops",
+    "body": "You press under the <b>right ribs</b> and ask the patient to breathe in. They <b>stop mid-breath</b> with pain.<br><br>Name the sign. What does it suggest?",
+    "mascot": "dx"
+   },
+   "thread": [
+    "Sunday puzzle 🦊\n\nPress under the right ribs. Ask for a deep breath. They stop halfway, in pain.\n\nName the sign, and what it suggests. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: Murphy's sign. Breathing in pushes an inflamed gallbladder down onto your hand, so the breath catches. It suggests acute cholecystitis.",
+    "Gallstones, explained → https://maladywise.com/gallstones/"
    ]
+  },
+  {
+   "date": "2026-11-30",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Jaw pain when chewing",
+   "puzzle": {
+    "kicker": "What's the worry?",
+    "title": "Jaw pain when chewing",
+    "body": "A 70-year-old has a <b>new headache</b>, <b>jaw pain when chewing</b> and a <b>tender scalp</b>.<br><br>What are you worried about, and how fast do you act?",
+    "mascot": "sensitosis"
+   },
+   "thread": [
+    "Monday puzzle ⏱️\n\n70 years old. New headache. Jaw aches when chewing. Scalp tender to brush.\n\nWhat's the worry, and how fast do you act? 👇 #MedTwitter",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: giant cell arteritis. The risk is sudden, permanent loss of vision. Same-day bloods (ESR, CRP) and urgent specialist advice, and if it's strongly suspected, high-dose steroids start straight away rather than waiting for a biopsy."
+  },
+  {
+   "date": "2026-12-01",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Vitamin line-up",
+   "puzzle": {
+    "kicker": "Odd one out",
+    "title": "Vitamin line-up",
+    "body": "<b>Thiamine</b> · <b>Niacin</b> · <b>Riboflavin</b> · <b>Retinol</b><br><br>Which one is the odd one out, and why?",
+    "mascot": "morphemia"
+   },
+   "thread": [
+    "Odd one out 💊\n\nThiamine · Niacin · Riboflavin · Retinol\n\nWhich doesn't belong? 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: retinol. It's vitamin A, which is fat-soluble. Thiamine (B1), riboflavin (B2) and niacin (B3) are water-soluble B vitamins. Bonus: lack of thiamine causes beriberi; lack of niacin, pellagra."
+  },
+  {
+   "date": "2026-12-02",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Blue eyes, brittle bones",
+   "puzzle": {
+    "kicker": "Which zebra?",
+    "title": "Blue eyes, brittle bones",
+    "body": "A young woman has <b>blue-tinged whites of the eyes</b>, several <b>fractures after minor falls</b>, and <b>hearing loss</b> starting in her 20s.<br><br>Which zebra?",
+    "mascot": "zebritis"
+   },
+   "thread": [
+    "Zebra Wednesday 🦓\n\nBlue-tinged whites of the eyes. Fractures after minor falls. Hearing loss in her 20s.\n\nWhich zebra? 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": [
+    "Answer: osteogenesis imperfecta, most often type I. Faulty type I collagen means fragile bones, thin sclerae that look blue, and hearing loss in early adulthood.",
+    "More zebras → https://maladywise.com/rare-conditions/"
+   ]
+  },
+  {
+   "date": "2026-12-04",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: The twitching cheek",
+   "puzzle": {
+    "kicker": "Name the sign",
+    "title": "The twitching cheek",
+    "body": "Tap the <b>facial nerve just in front of the ear</b>. The <b>corner of the mouth twitches</b>.<br><br>Name the sign. Which blood test do you want?",
+    "mascot": "glimpsis"
+   },
+   "thread": [
+    "Friday puzzle ⚡\n\nTap just in front of the ear. The corner of the mouth twitches.\n\nName the sign, and the blood test you'd order. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: Chvostek's sign, a clue to low calcium (check calcium, plus magnesium and PTH). It's not very specific: a fair number of healthy people have it. Its partner is Trousseau's sign, the hand spasm with a blood pressure cuff."
+  },
+  {
+   "date": "2026-12-05",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: The loner bone",
+   "puzzle": {
+    "kicker": "Body trivia",
+    "title": "The loner bone",
+    "body": "Which bone is the only one in the body that <b>doesn't connect to any other bone</b>?",
+    "mascot": "triviosis"
+   },
+   "thread": [
+    "Saturday trivia 🦴\n\nWhich bone is the only one in the body that doesn't touch any other bone?\n\nAnswers below. 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: the hyoid, the small U-shaped bone in the neck. It's held in place by muscles and ligaments and anchors the tongue. In some deaths, a broken hyoid is a forensic clue."
+  },
+  {
+   "date": "2026-12-06",
+   "slot": "am",
+   "pin": true,
+   "note": "Daily puzzle: Redcurrant jelly",
+   "puzzle": {
+    "kicker": "What's the worry?",
+    "title": "Redcurrant jelly",
+    "body": "A toddler has bouts of <b>screaming and drawing up the knees</b>, settling in between. Now <b>redcurrant jelly-like poo</b>.<br><br>What's the worry, and how fast?",
+    "mascot": "dx"
+   },
+   "thread": [
+    "Sunday puzzle 🚨\n\nToddler. Bouts of screaming, knees drawn up, calm in between. Then redcurrant jelly-like poo.\n\nWhat's the worry, and how fast? 👇",
+    "Play today's medical puzzles → https://maladywise.com/"
+   ],
+   "answer": "Answer: intussusception, the bowel telescoping into itself. Same-day emergency department: ultrasound confirms it, and an air or contrast enema often fixes it without surgery. Redcurrant jelly stools are a late sign, so don't wait for them."
   }
  ]
 }

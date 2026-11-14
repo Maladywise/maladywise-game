@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Send queued X posts to Typefully (API v2), one per slot (7:30am and 12:30pm Sydney), always as an image post + link reply.
+"""Send queued X posts to Typefully (API v2), one per slot, always as an image post + link reply.
+
+FROM 23 NOV 2026 (owner's X strategy): two posts a day. "am" = 7:30am DAILY PUZZLE (an entry with a "puzzle"
+object gets a drawn puzzle card, _scripts/puzzle_card.py, and an "answer" posted as a reply to it at about
+11:15am the same day, by the late-morning run). "pm" = 6pm value post (thread, TIL, new game, short video,
+or a strong world day). The noon slot is retired: no automatic noon World Day posts from 23 Nov.
+
 
 Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon"|"pm", "thread": ["post 1", ...], "note": "...", "card": true}]}
 - Two slots a day: "am" = 7:30am (the weekly mix; the default when "slot" is missing) and "noon" = 12:30pm
@@ -41,6 +47,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "shorts"))
 import day_card  # noqa: E402
+import puzzle_card  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(ROOT, "_social", "queue.json")
@@ -58,6 +65,8 @@ def key_of(p):
     return "%s|%s" % (p["date"], slot_of(p))
 AHEAD_DAYS = 10
 AUTO_FROM = datetime.date(2026, 11, 16)   # first automated queue date; earlier dates were scheduled by hand
+AUTO_UNTIL = datetime.date(2026, 11, 22)  # last date for automatic noon World Day posts (new X strategy from 23 Nov)
+ANSWER_AT = (11, 15)                      # puzzle answers go out as a reply at 11:15am Sydney (the old noon slot)
 SITE = "https://maladywise.com/"
 KEY = os.environ.get("TYPEFULLY_API_KEY", "").strip()
 
@@ -436,6 +445,36 @@ def page_image(url):
     return ("file", SHARE)
 
 
+def post_answers(sid, posts, now, save):
+    """For each sent puzzle entry with an "answer" (string or list of posts): once X has published the puzzle,
+    schedule the answer as a reply to it at ANSWER_AT Sydney (or 15 minutes from now if that has passed),
+    and record "answer_id". Runs every time the script runs (the late-morning run catches same-day puzzles)."""
+    for p in posts:
+        if not p.get("answer") or not p.get("typefully_id") or p.get("answer_id"):
+            continue
+        d = datetime.date.fromisoformat(p["date"])
+        if d > now.date() or (now.date() - d).days > 2:
+            continue
+        try:
+            dr = call("GET", "/social-sets/%s/drafts/%s" % (sid, p["typefully_id"]))
+        except SystemExit as e:
+            print("Answer for %s: can't read the puzzle draft (%s)" % (p["date"], e)); continue
+        url = dr.get("x_published_url")
+        if not url:
+            print("Answer for %s: puzzle not published yet" % p["date"]); continue
+        texts = p["answer"] if isinstance(p["answer"], list) else [p["answer"]]
+        when = datetime.datetime(now.year, now.month, now.day, ANSWER_AT[0], ANSWER_AT[1], tzinfo=SYD)
+        if when < now + datetime.timedelta(minutes=10):
+            when = now + datetime.timedelta(minutes=15)
+        body = {"platforms": {"x": {"enabled": True, "posts": [{"text": t, "hide_link_preview": True} for t in texts],
+                                    "settings": {"reply_to_url": url}}},
+                "publish_at": when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+        res = call("POST", "/social-sets/%s/drafts" % sid, body)
+        p["answer_id"] = str(res.get("id", "ok"))
+        save()
+        print("Answer reply for", p["date"], "->", p["answer_id"], "at", when.strftime("%d %b %H:%M"))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="print what would be sent; save cards to a temp folder")
@@ -468,6 +507,14 @@ def main():
                     return True
         return False
 
+    def save_queue():
+        posts.sort(key=lambda p: p["date"])
+        tmp = QUEUE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(q, f, ensure_ascii=False, indent=1)
+            f.write("\n")
+        os.replace(tmp, QUEUE)
+
     todo = []
     for p in posts:
         if p.get("typefully_id") or not p.get("thread"):
@@ -477,7 +524,7 @@ def main():
             todo.append(p)
     autos = []
     d = max(today, AUTO_FROM)
-    while d <= last:
+    while d <= min(last, AUTO_UNTIL):
         iso = d.isoformat()
         if iso + "|noon" not in have and not day_already_marked(iso) and slot(d, "noon") > now + datetime.timedelta(minutes=10):
             if not weekly_batch_written(d, today):
@@ -495,6 +542,11 @@ def main():
     todo = [p for p in todo if p not in [b[0] for b in bad]]
     if KEY and not dry:  # every run, even with nothing new: one picture per thread, no second link card
         hide_double_previews(social_set_id())
+    if KEY and not dry:
+        try:
+            post_answers(social_set_id(), posts, now, save_queue)
+        except Exception as e:  # noqa: BLE001  (never block the queue over an answer)
+            print("Answer replies: %s" % e)
     if not todo:
         print("Nothing to queue.")
         return 1 if bad else 0
@@ -532,7 +584,17 @@ def main():
         return path, shorts.alt_text(s["series"], shorts.puzzle(s["series"], s["puzzle_date"]))
 
     def image_for(p, url):
-        """Local image path for post 1: day card, page og image, generated game card, or the share card."""
+        """Local image path for post 1: puzzle card, day card, page og image, generated game card, or the share card."""
+        nonlocal browser, pw
+        if p.get("puzzle"):
+            try:
+                if browser is None:
+                    from playwright.sync_api import sync_playwright
+                    pw = sync_playwright().start()
+                    browser = pw.chromium.launch()
+                return puzzle_card.render(p["puzzle"], os.path.join(out_dir, "puzzle-%s.png" % p["date"]), browser)
+            except Exception as e:  # never lose the post over the picture
+                print("Puzzle card render failed for %s: %s" % (p["date"], e))
         if p.get("card"):
             try:
                 png = card_for(p["date"], p["card"] if isinstance(p["card"], str) else None)
@@ -544,7 +606,6 @@ def main():
         pick = page_image(url)
         if pick[0] == "game":
             try:
-                nonlocal browser, pw
                 if browser is None:
                     from playwright.sync_api import sync_playwright
                     pw = sync_playwright().start()

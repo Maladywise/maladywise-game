@@ -6,6 +6,7 @@ name: Queue X posts in Typefully
 on:
   schedule:
     - cron: "23 18 * * *"   # about 5:23am Sydney (summer), daily
+    - cron: "23 23 * * *"   # about 10:23am Sydney: posts the day's puzzle answer as a reply at 11:15am
   push:
     branches: [main]
     paths: ["_social/queue.json"]
