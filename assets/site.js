@@ -28,7 +28,8 @@ window.MW_HOME = {
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
       { t: "Health Calendar", href: "/days/", d: "Today and coming up" },
       { t: "Research", href: "/research/", d: "New studies and trials to watch" }
-    ] }
+    ] },
+    { t: "Shop", href: "/shop/" }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
   taglineN: "Free daily puzzles. No medicine required.",

@@ -78,6 +78,8 @@ SPECIAL = {
     "/compare/": ("Compare", "Medicines and symptoms, side by side", "", "mascots/sensitosis.svg"),
     "/deep-dives/": ("Deep dives for clinicians", "Evidence-dense topic reviews", "", "days/zebra-rare.svg"),
     "/hubs/": ("Malady Wise", "All hubs", "Pain, fatigue, ADHD, GLP-1 and more", "days/brain.svg"),
+    "/shop/": ("Malady Wise", "Stickers", "Basil, Clover and the game mascots", "mascots/basil.svg"),
+    "/mascots/": ("Malady Wise", "Meet the mascots", "Back stories for every puzzle mascot", "mascots/dx.svg"),
     "/algorithms/": ("For clinicians", "Treatment algorithms", "Evidence-graded, from strong to worth-a-try", "days/zebra-rare.svg"),
     "/exercises/": ("Exercise handouts", "Printable rehab plans", "", "days/tess-bone.svg"),
     "/specialists/": ("Specialists", "Specialists and allied health", "Newcastle + Hunter Region", "days/cadi-rod.svg"),

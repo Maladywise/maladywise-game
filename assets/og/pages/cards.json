@@ -1371,6 +1371,13 @@
 "label": "Condition",
 "title": "Marine Stings"
 },
+"mascots": {
+"url": "/mascots/",
+"key": "01ce0c06a406",
+"v": "14e6ba76",
+"label": "Malady Wise",
+"title": "Meet the mascots"
+},
 "mcas": {
 "url": "/mcas/",
 "key": "daba884934fb",
@@ -2077,6 +2084,13 @@
 "v": "77bdeca4",
 "label": "Condition",
 "title": "Shingles"
+},
+"shop": {
+"url": "/shop/",
+"key": "cd7330908923",
+"v": "45db7ff5",
+"label": "Malady Wise",
+"title": "Stickers"
 },
 "shoulder-oa": {
 "url": "/shoulder-oa/",
