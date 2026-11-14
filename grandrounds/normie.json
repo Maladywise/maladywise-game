@@ -380,127 +380,126 @@
  {
   "week": "2026-11-15",
   "number": 4,
-  "fallback": true,
   "questions": [
    {
-    "c": "Records and firsts",
-    "q": "Who was the first person to walk on the Moon?",
-    "a": "Neil Armstrong",
-    "e": "Accept Armstrong. Buzz Aldrin was second. Nobody remembers second."
+    "c": "Space",
+    "q": "SpaceX tried to catch both halves of its giant rocket with the launch tower’s ‘chopsticks’ on Friday. What is the rocket called?",
+    "a": "Starship",
+    "e": "Flight 15, 13 November (US time) from Starbase, Texas. The Super Heavy booster aborted its catch and ended up in the Gulf of Mexico, while the ship carried on into orbit. Half a double catch is still a catch. Sort of."
    },
    {
-    "c": "Records and firsts",
-    "q": "What is the tallest building in the world?",
-    "a": "The Burj Khalifa",
-    "e": "Accept Burj Khalifa. Dubai, about 828 metres."
+    "c": "Movies",
+    "q": "Which giant monster’s new film, subtitled Minus Zero, opened at No. 1 at the North American box office last weekend?",
+    "a": "Godzilla",
+    "e": "Accept Godzilla Minus Zero. About US$31.6 million over 6–8 November, nearly three times what Godzilla Minus One opened with in 2023. If you said King Kong, wrong lizard. Wrong ape, even."
    },
    {
-    "c": "Records and firsts",
-    "q": "What is the fastest land animal?",
-    "a": "The cheetah",
-    "e": "Accept cheetah. Your Uber driver doesn’t count."
+    "c": "Formula 1",
+    "q": "Who won F1’s São Paulo Grand Prix at Interlagos last Sunday, his second win there in a row?",
+    "a": "Lando Norris",
+    "e": "Accept Norris. 8 November, in a wet-dry-wet race, with Max Verstappen charging from 21st on the grid to second. Rain, chaos, and still a McLaren on top."
    },
    {
-    "c": "Records and firsts",
-    "q": "Which city hosted the first modern Olympic Games, in 1896?",
-    "a": "Athens",
-    "e": "Accept Athens or Greece."
+    "c": "Running",
+    "q": "Canadian human rights lawyer Stephanie Case became the first woman to run 100 continuous miles on which continent, this week?",
+    "a": "Antarctica",
+    "e": "Reported 13 November, at the Antarctica Ice Ultra: 38 laps of a 4.2 km loop, in temperatures dropping below −30 °C, and sunburn from the midnight sun. Meanwhile you’re complaining about the walk to the car."
    },
    {
-    "c": "Records and firsts",
-    "q": "Which is the largest ocean on Earth?",
-    "a": "The Pacific",
-    "e": "Accept Pacific."
+    "c": "Records",
+    "q": "A Guinness World Record making news this week belongs to a Los Angeles artist who paddled 26.37 miles from Catalina Island in a kayak grown from what?",
+    "a": "Mushrooms",
+    "e": "Accept mycelium or fungus. Reported 12 November: Sam Shoemaker’s 12-foot boat took seven weeks to grow and 12 hours to paddle. Record: longest solo journey by a fungal mycelium boat. A fun guy. Sorry."
    },
    {
-    "c": "Records and firsts",
-    "q": "In 1893, which country became the first to give women the vote in national elections?",
-    "a": "New Zealand",
-    "e": "Beat Australia by nine years. Don’t bring it up at the barbecue."
+    "c": "Ships",
+    "q": "The SS United States, still holder of the transatlantic speed record for passenger liners, was deliberately sunk off Florida on Wednesday to become the world’s largest what?",
+    "a": "Artificial reef",
+    "e": "Accept reef. 11 November, in about 55 m of water off Destin. At 302 m it’s longer than the Titanic, and it beats the old record-holder, the aircraft carrier USS Oriskany. Fish have never had it so roomy."
    },
    {
-    "c": "Records and firsts",
-    "q": "Who holds the men’s 100 metres world record?",
-    "a": "Usain Bolt",
-    "e": "Accept Bolt. 9.58 seconds, Berlin, 2009."
+    "c": "Music",
+    "q": "Which country singer’s Choosin’ Texas spent a record-extending 27th week at No. 1 on the Billboard Hot 100, announced on Monday?",
+    "a": "Ella Langley",
+    "e": "Accept Langley. Billboard reported it on 9 November; no song has spent longer at the top. Mariah’s Christmas song can only dream of that many Decembers."
    },
    {
-    "c": "Records and firsts",
-    "q": "Who was the first woman in space?",
-    "a": "Valentina Tereshkova",
-    "e": "Accept Tereshkova. Vostok 6, 1963."
+    "c": "Science",
+    "q": "Researchers at Germany’s University of Tübingen reported on Thursday that which black birds make visual decisions about twice as fast as humans?",
+    "a": "Crows",
+    "e": "Accept carrion crows. Published in Science, 12 November: about 235 milliseconds on a moving-dot task, roughly twice as quick as humans and monkeys. Bird brain is now a compliment."
    },
    {
-    "c": "Records and firsts",
-    "q": "Who led the first expedition to reach the South Pole, in 1911?",
-    "a": "Roald Amundsen",
-    "e": "Accept Amundsen. Beat Scott by about five weeks."
+    "c": "Oceans",
+    "q": "Greenpeace sank a 1.5-tonne limestone boulder into the North Sea on Thursday to block bottom trawlers. Which famous broadcaster was it carved to look like?",
+    "a": "David Attenborough",
+    "e": "Accept Attenborough or Sir David. 12 November, in the Southern North Sea marine protected area. Nicknamed the ‘Attenboulder’. A national treasure, now also a national paperweight."
    },
    {
-    "c": "Records and firsts",
-    "q": "Who is the longest-reigning British monarch?",
-    "a": "Elizabeth II",
-    "e": "Accept Queen Elizabeth II. 70 years. Victoria managed 63."
+    "c": "Tennis",
+    "q": "This week’s WTA Finals moved from Riyadh to which Californian desert venue?",
+    "a": "Indian Wells",
+    "e": "Accept Indian Wells Tennis Garden. Running 8–15 November with the world’s top eight women. If you said Palm Springs, you’re close enough to see it, but no."
    },
    {
-    "c": "Records and firsts",
-    "q": "What was Disney’s first feature-length animated film?",
-    "a": "Snow White and the Seven Dwarfs",
-    "e": "Accept Snow White. 1937."
+    "c": "Books",
+    "q": "At 81, M. John Harrison became the oldest Booker Prize winner on Monday. His novel’s cheerful title is The End of… what?",
+    "a": "Everything",
+    "e": "9 November in London. Picked unanimously by a panel chaired by Mary Beard; he’s also the first winner to come out of the science fiction world. £50,000 and a title that sounds like Monday morning."
    },
    {
-    "c": "Records and firsts",
-    "q": "Which New Zealander was first to the summit of Everest, with Tenzing Norgay?",
-    "a": "Edmund Hillary",
-    "e": "Accept Hillary. 1953."
+    "c": "Football",
+    "q": "Marie-Antoinette Katoto scored a hat-trick on Wednesday as which French club thrashed Juventus 6–0 in Turin in the Women’s Champions League?",
+    "a": "Lyon",
+    "e": "Accept OL Lyonnes or Olympique Lyonnais. 11 November: three goals inside 52 minutes, and Juve barely got a shot on target. Turin, lovely city. Bring a helmet."
    },
    {
-    "c": "Records and firsts",
-    "q": "What is the deepest known point in the ocean?",
-    "a": "The Challenger Deep",
-    "e": "Accept Mariana Trench. About 11 km down."
+    "c": "Travel",
+    "q": "Which became the first US airline on Wednesday to ban AI agents from booking tickets for its customers?",
+    "a": "United Airlines",
+    "e": "Accept United. Announced 11 November, citing privacy and rules such as passengers personally confirming what’s in their bags. Your robot can browse. You still have to click ‘buy’."
    },
    {
-    "c": "Records and firsts",
-    "q": "Measured from base to peak, what is the tallest mountain on Earth?",
-    "a": "Mauna Kea",
-    "e": "About 10,200 m, mostly underwater. Everest wins above sea level only."
+    "c": "History",
+    "q": "Archaeologists said this week that about 8,000 frog bones found in a Roman-era ditch near Cambridge were probably left by which birds?",
+    "a": "Owls",
+    "e": "Accept short-eared owls. Reported 10 November by Bournemouth University and MOLA: frogs eaten during a young-frog boom about 1,700 years ago, with hen harriers probably roosting nearby. Not a Roman frog feast. Toga party cancelled."
    },
    {
-    "c": "Records and firsts",
-    "q": "Which is the longest-running show in Broadway history?",
-    "a": "The Phantom of the Opera",
-    "e": "Accept Phantom. Nearly 14,000 performances before closing in 2023."
+    "c": "Sailing",
+    "q": "Francesca Clapcich became the first woman to win the IMOCA Globe Series after finishing which solo transatlantic race to Guadeloupe on Thursday?",
+    "a": "Route du Rhum",
+    "e": "Accept Route du Rhum – Destination Guadeloupe. 12 November: eighth across the line after 11 days 11 hours, despite a broken bowsprit on day five. Sailing alone across an ocean, with damage. Try that on a pedal boat."
    },
    {
-    "c": "Records and firsts",
-    "q": "In 1926, who became the first woman to swim the English Channel, beating the men’s record by about two hours?",
-    "a": "Gertrude Ederle",
-    "e": "She was 20. New York threw her a ticker-tape parade."
+    "c": "Formula 1",
+    "q": "Mercedes clinched the 2026 F1 constructors’ championship in Brazil. How many constructors’ titles has the team now won?",
+    "a": "9",
+    "e": "Accept nine. Sealed 8 November, after eight in a row from 2014 to 2021, and a week after Kimi Antonelli took the drivers’ title. If you said seven, that’s Lewis Hamilton’s drivers’ titles. Wrong trophy cabinet."
    },
    {
-    "c": "Records and firsts",
-    "q": "Who sent the first email between computers, in 1971, and picked the @ sign for it?",
-    "a": "Ray Tomlinson",
-    "e": "Accept Tomlinson. He said he couldn’t remember what it said."
+    "c": "Nature",
+    "q": "A butterfly treated as a single species for about 200 years turned out, in a study out Thursday, to be how many species?",
+    "a": "Three",
+    "e": "Accept 3. 12 November in Zootaxa, led by Florida Museum doctoral student Anisha Sapkota: ultraviolet wing patterns and DNA gave them away. The new one is Colobura cryptica. Hidden in plain sight for two centuries."
    },
    {
-    "c": "Records and firsts",
-    "q": "What was the first home video game console, released in 1972?",
-    "a": "The Magnavox Odyssey",
-    "e": "Accept Odyssey or Magnavox. Before Atari, believe it or not."
+    "c": "Weather",
+    "q": "On Remembrance Day this week, Lillooet broke a 109-year-old November heat record. Which Canadian province is it in?",
+    "a": "British Columbia",
+    "e": "Accept BC. 11 November: 20.3 °C beat 19.4 °C from 1917, one of 32 records broken or tied that day, as Vancouver and Victoria also hit record highs. Shorts in November, in Canada. Who knew."
    },
    {
-    "c": "Records and firsts",
-    "q": "Which Australian natural wonder is often called the largest structure built by living things?",
-    "a": "The Great Barrier Reef",
-    "e": "Accept Great Barrier Reef. Visible from space, on a clear day."
+    "c": "Tennis",
+    "q": "Jessica Pegula knocked fellow American Coco Gauff out of the WTA Finals on Thursday by beating which Czech player in three sets?",
+    "a": "Linda Nosková",
+    "e": "Accept Noskova. 12 November: 7–6 4–6 7–5, saving a match point in nearly three hours. Gauff won her own match and still went home. Tennis maths is cruel."
    },
    {
     "c": "Brain-melter",
-    "q": "What was the first product scanned by barcode at a supermarket till, in Ohio in 1974?",
-    "a": "A packet of Wrigley’s Juicy Fruit gum",
-    "e": "Accept Juicy Fruit or chewing gum. 10 packs, 67 cents. Now in the Smithsonian."
+    "q": "Sam Shoemaker’s record mushroom kayak was grown from the mycelium of which genus of bracket fungus, the same one as reishi?",
+    "a": "Ganoderma",
+    "e": "The species was Ganoderma polychromum (confirmed 12 November). Reishi, or lingzhi, is a Ganoderma too. If you said Agaricus, that’s the supermarket button mushroom, and it would have sunk. Melted yet?"
    }
   ]
  },
