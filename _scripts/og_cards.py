@@ -148,6 +148,13 @@ def spec_for(u, p, pages=None):
         return None
     if u in SPECIAL:
         return SPECIAL[u]
+    if u.startswith("/mascots/") and u.count("/") == 3:  # one page per mascot: her own drawing on the card
+        try:
+            h = open(os.path.join(ROOT, u.strip("/"), "index.html"), encoding="utf-8").read()
+            m = re.search(r'class="mz-hero"><img src="/assets/(mascots/[^"?]+)[^"]*"[^>]*><div><h1>([^<]+)</h1><p class="mz-role">([^<]+)</p>', h)
+            if m: return ("Malady Wise mascots", html.unescape(m.group(2)), html.unescape(m.group(3)), m.group(1))
+        except OSError:
+            pass
     if p["sec"] not in SECTIONS or u in static_nav.HUBS:
         return None
     label, icon = SECTIONS[p["sec"]]

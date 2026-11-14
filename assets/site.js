@@ -6,10 +6,7 @@ window.MW_HOME = {
   nav: [
     { t: "Puzzles", tn: "Games", href: "/" },
     { t: "For patients", medical: true, items: [
-      { t: "Patients’ hub", href: "/patients/", d: "Everything for patients" },
-      { t: "Pain", href: "/chronic-pain/", d: "Why it lingers, what helps" },
-      { t: "Fatigue", href: "/tired-all-the-time/", d: "Causes, tests, what helps" },
-      { t: "ADHD and autism", href: "/late-diagnosis-adhd-autism/", d: "Late-diagnosis starter kit" },
+      { t: "Patients’ hub", href: "/patients/", d: "Pain, fatigue, ADHD and more" },
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },

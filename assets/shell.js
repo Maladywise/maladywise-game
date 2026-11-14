@@ -356,9 +356,11 @@
     setTimeout(bye, sc.ms || (quiet() ? 1200 : 1700));
   }
   function queue(sc) { if (!sc) return; if (busy) Q.push(sc); else show(sc); }
+  // each mascot has a page at /mascots/<name>/ (names lower-cased, accents dropped: Inês -> ines)
+  function mascUrl(m) { var n = String(m.name || ""); try { n = n.normalize("NFKD"); } catch (e) {} return "/mascots/" + n.replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") + "/"; }
   function mascotHelp(g) {
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
-    return '<div class="mw-masc-help">' + mascImg(g.id, "", 72) + '<div><p><b>Hi, I\u2019m ' + m.name + ',</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p>' + (m.vibe && !(NORMIE && g.nmode && g.normieMascot) ? '<p class="mw-masc-vibe">' + m.vibe + '</p>' : '') + '</div></div>';
+    return '<div class="mw-masc-help"><a href="' + mascUrl(m) + '" aria-label="' + m.name + '\u2019s story">' + mascImg(g.id, "", 72) + '</a><div><p><b>Hi, I\u2019m <a href="' + mascUrl(m) + '">' + m.name + '</a>,</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p>' + (m.vibe && !(NORMIE && g.nmode && g.normieMascot) ? '<p class="mw-masc-vibe">' + m.vibe + ' <a href="' + mascUrl(m) + '">Read my story</a></p>' : '') + '</div></div>';
   }
   function mascotCheer(id) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";

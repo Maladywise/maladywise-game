@@ -248,7 +248,7 @@ PUBLIC_PSY = [
  ("Hunter New England Health: Farmgate Support Program", "https://www.health.nsw.gov.au/awards/2025/Pages/farmgate-support-program.aspx", "Mental health support for farmers and farming communities, including farm visits and peer workers."),
  ("Hunter New England Health: hospital social work", "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/allied-health", "Counselling, crisis and bereavement support for patients and families in hospital. Ask your nurse or doctor for a referral."),
 ]
-# Languages, Auslan and interpreters: hub help box (official pages, checked 9 November 2026) and a one-line note on each specialty page.
+# Languages, Auslan and interpreters: help box inside the Filters panel (owner's choice, 14 Nov 2026) (official pages, checked 9 November 2026) and a one-line note on each specialty page.
 LANGBOX = ('<details class="sp-orgbox sp-langbox" id="languages"><summary>Languages, Auslan and free interpreters</summary><ul>'
   '<li><b>Find a language:</b> open Filters and use “Speaks”, or type a language (e.g. Mandarin, Auslan) in the search box. We only list languages stated on a practice or practitioner’s own public pages, never guessed from a name.</li>'
   '<li><b>Auslan:</b> free sign language interpreting for health and medical appointments is now through the National Sign Language Program (it replaced NABS from 1 July 2024). It is for Deaf people aged 65 and over without an NDIS plan (50 and over for Aboriginal and Torres Strait Islander people). Book with Deaf Connect: <a href="https://bookings.deafconnect.org.au/" rel="noopener">book online</a>, call 1300 773 803 or SMS 0476 857 251. '
@@ -401,7 +401,7 @@ for lab, ppl in CATS.items():
     desc = f"{lab} in Newcastle and the Hunter, NSW: practice contacts, addresses and stated interests. A directory, not a recommendation."
     if lab in SERVICE_LABELS: desc = f"{lab} services in Newcastle and the Hunter, NSW: Aboriginal medical services, health workers and hospital liaison."
     body = (f'<h1>{e(lab)}</h1><p class="sp-sum">{len(ppl)} listed · checked {SHORTDATE}</p>' + PAGE_NOTE.get(lab, "") +
-            finder(ppl, extra=langsel(ppl)) + LANGNOTE + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
+            finder(ppl, extra=langsel(ppl) + LANGBOX) + publicbox(lab) + '<p class="sp-tools"><span class="sp-count" aria-live="polite"></span><button type="button" class="sp-prall">Print this list</button></p>'
             f'<ul class="sp-list">{"".join(card(p) for p in ppl)}</ul>{pubclinics(lab)}{orgbox(slug)}{keep_going(slug)}{DISC_SVC if lab in SERVICE_LABELS else DISC}{FINDNOTE}\n')
     open(f"specialists/{slug}/index.html", "w").write(fix_html(head(title, desc, url) + body + foot))
 labs = sorted(CATS, key=lambda x: x.lower())
@@ -417,7 +417,7 @@ title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise
 desc = "Specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, interests, languages and inclusive-practice notes."
 page = (head(title, desc, "/specialists/", hub=True) + '<div class="mw-sec-hero" style="display:flex;align-items:center;gap:12px;margin:8px 0 4px"><img src="/assets/mascots/specialists.svg?v=2" width="64" height="64" alt="Percy the pelican, retired country GP" style="flex:0 0 auto"><h1 style="margin:0">Specialists and allied health</h1></div>'
         f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'
-        + finder(L, hub=True, extra=langsel(L)) + LANGBOX + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
+        + finder(L, hub=True, extra=langsel(L) + LANGBOX) + '<p class="sp-count" aria-live="polite"></p><ul class="sp-results" hidden></ul>'
         '<h2>Medical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and k not in TEST_LABELS and k not in SERVICE_LABELS and not SURG.search(k)]) + '<h2>Surgical specialists</h2>' + tiles([k for k in labs if k not in ALLIED_LABELS and SURG.search(k)]) + '<h2>Allied health</h2>' + tiles([k for k in labs if k in ALLIED_LABELS]) + ('<h2 id="tests-and-imaging">Tests and imaging</h2>' + tiles([k for k in labs if k in TEST_LABELS]) if any(k in TEST_LABELS for k in labs) else '') + ('<h2 id="community-services">Community health services</h2>' + tiles([k for k in labs if k in SERVICE_LABELS]) if any(k in SERVICE_LABELS for k in labs) else '') + orgsection() + DISC + FINDNOTE +
         '<script>window.SP_ALL=' + json.dumps(allc, ensure_ascii=False).replace("</", "<\\/") + ';</script>\n' + foot)
 open("specialists/index.html", "w").write(fix_html(page))
