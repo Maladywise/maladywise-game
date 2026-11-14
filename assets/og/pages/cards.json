@@ -419,6 +419,13 @@
 "label": "Condition",
 "title": "Chronic Kidney Disease (CKD)"
 },
+"chronic-pain": {
+"url": "/chronic-pain/",
+"key": "1daf2040f69a",
+"v": "ec115914",
+"label": "Condition",
+"title": "Chronic Pain Hub"
+},
 "chronic-rhinosinusitis": {
 "url": "/chronic-rhinosinusitis/",
 "key": "0d2815cff635",
