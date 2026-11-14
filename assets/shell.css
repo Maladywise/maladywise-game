@@ -1349,3 +1349,17 @@ html.medp-on .medp .medp-cols ul.skip>li::before{content:"✕"!important;positio
 .mw-modecta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:26px 0 8px;padding:16px 18px;border-radius:16px;background:var(--card,#fff);border:2px dashed var(--brand,#4A3480);color:var(--ink,#2B2340);text-decoration:none;line-height:1.4}
 .mw-modecta span{font-size:1.5rem}.mw-modecta b{color:var(--brand,#4A3480)}
 .mw-modecta:hover{background:var(--soft,#F1ECF8)}
+
+/* games played today: heat levels (shell.js heatHtml) */
+.mw-heat{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:0 6px;padding:3px 10px;border-radius:12px;font-weight:600;line-height:1.35;white-space:normal}
+.mw-heat small{font-size:inherit;font-weight:400;opacity:.9}
+.mw-heat.h0{background:#E3F1FB;color:#1D5F8C}.mw-heat.h1{background:#E6F3F1;color:#1F6B60}.mw-heat.h2{background:#DDF3E6;color:#1F6B3A}
+.mw-heat.h3{background:#FFF0D6;color:#8A5000}.mw-heat.h4{background:#FDE0D6;color:#A8321C}
+.mw-heat.h5{background:linear-gradient(90deg,#A8321C,#D9480F,#C26A00);color:#fff;animation:mwglow 2.4s ease-in-out infinite}
+.mw-heat.h6{background:#4A3480;color:#fff;animation:mwglow 2.4s ease-in-out infinite}
+@keyframes mwglow{0%,100%{box-shadow:0 0 0 0 rgba(217,72,15,.0)}50%{box-shadow:0 0 0 4px rgba(217,72,15,.25)}}
+:root[data-motion="reduce"] .mw-heat{animation:none}
+@media (prefers-reduced-motion:reduce){.mw-heat{animation:none}}
+:root[data-theme="dark"] .mw-heat.h0{background:#163447;color:#BFE3FA}:root[data-theme="dark"] .mw-heat.h1{background:#17352F;color:#BDE8DF}
+:root[data-theme="dark"] .mw-heat.h2{background:#173523;color:#BFEBCF}:root[data-theme="dark"] .mw-heat.h3{background:#3D2C10;color:#FFD99A}
+:root[data-theme="dark"] .mw-heat.h4{background:#45201A;color:#FFC2B3}

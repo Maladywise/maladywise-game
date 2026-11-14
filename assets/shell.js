@@ -158,11 +158,29 @@
   function liveGame() { return (window.MW_curGame && MW_curGame.id) || (location.pathname === "/" ? "home" : location.pathname.split("/")[1] || "home"); }
   var PRIVATE_PAGE = /^\/mental-health-check\//.test(location.pathname); // no live-player ping or event tracking on mental health self-checks
   function livePing() { if (document.hidden || PRIVATE_PAGE) return; try { fetch(LIVE.url + "/ping?id=" + LIVE.id + "&g=" + encodeURIComponent(liveGame()), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  // Heat level for "games played today": today's count vs the usual pace for this time of day (server: d.heat).
+  var HEAT = [ // [min ratio, emoji, Medical comment, Normie comment]
+    [0, "\u2744\ufe0f", "Quiet in the waiting room", "Sleepy start"],
+    [0.5, "\ud83e\uddca", "Cool and steady", "Warming up"],
+    [0.9, "\ud83e\ude7a", "Within normal range", "Ticking along nicely"],
+    [1.2, "\ud83c\udf21\ufe0f", "Running a temperature", "Getting busy"],
+    [1.6, "\ud83d\udd25", "On fire", "On fire"],
+    [2.5, "\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Febrile. Call a doctor.", "Absolutely popping off"]
+  ];
+  function heatHtml(d) {
+    var n = d.today, num = n.toLocaleString("en-AU") + " games played today", h = d.heat;
+    if (h && h.best && h.best.n >= LIVE.MIN_TODAY && n > h.best.n)
+      return '<span class="mw-heat h6" title="Best day before today: ' + h.best.n + '">\ud83c\udfc6 ' + num + " <small>" + (NORMIE ? "New record!" : "New record. Code purple.") + "</small></span>";
+    if (!h || h.days < 3 || h.expect < 3) return "\ud83e\udde9 " + num; // not enough history yet
+    var r = n / h.expect, k = 0;
+    for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
+    return '<span class="mw-heat h' + k + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
+  }
   function liveShow() {
     var d = LIVE.last; if (!d) return;
     var bits = [];
     if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing now");
-    if (d.today >= LIVE.MIN_TODAY) bits.push("\ud83e\udde9 " + d.today.toLocaleString("en-AU") + " games played today");
+    if (d.today >= LIVE.MIN_TODAY) bits.push(heatHtml(d));
     var sv = d.solved || {};
     Array.prototype.forEach.call(document.querySelectorAll(".card[data-g],.t3[data-g]"), function (c) { var n = sv[c.getAttribute("data-g")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { el.innerHTML = bits.join(" &middot; "); el.hidden = !bits.length; });

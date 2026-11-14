@@ -56,6 +56,36 @@ async function solvedToday() {
   }
   return memDay === d ? Object.assign({}, memGames) : {};
 }
+// ---------- "heat" of today's games-played count, relative to the usual pace for this time of day ----------
+// expect = average, over up to 28 previous days, of games finished by this time of day (hourly counts, or the
+// day total x share of the day elapsed for days with no hourly data). bestPrev = best whole day before today.
+function sydHour() { return Number(new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Sydney", hour: "numeric", hourCycle: "h23" }).format(new Date())) % 24; }
+function sydMinute() { return new Date().getUTCMinutes(); }
+function dayAgo(i) { return new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney" }).format(new Date(Date.now() - i * 864e5)); }
+let heatCache = { t: 0, v: null };
+async function heat() {
+  if (Date.now() - heatCache.t < 5 * 60 * 1000 && heatCache.v) return heatCache.v;
+  let v = null;
+  if (kv && kv.isReady) {
+    try {
+      const h = sydHour(), frac = (h + sydMinute() / 60) / 24;
+      let sum = 0, n = 0, best = { n: 0, day: "" };
+      for (let i = 1; i <= 120; i++) {
+        const d = dayAgo(i), tot = Number(await kv.get("played:" + d) || 0);
+        if (tot > best.n) best = { n: tot, day: d };
+        if (i > 28 || !tot) continue;
+        const hr = await kv.hGetAll("playedh:" + d);
+        let upto;
+        if (hr && Object.keys(hr).length) {
+          upto = 0; for (const k in hr) { const kh = Number(k); if (kh < h) upto += Number(hr[k]); else if (kh === h) upto += Number(hr[k]) * sydMinute() / 60; }
+        } else upto = tot * frac;
+        sum += upto; n++;
+      }
+      v = { expect: n ? Math.round(sum / n * 10) / 10 : 0, days: n, best };
+    } catch (e) { v = null; }
+  }
+  heatCache = { t: Date.now(), v }; return v;
+}
 let memViews = {}, memViewsDay = "";
 async function addView(g) {
   if (!g) return;
@@ -83,7 +113,8 @@ async function addDone(g) {
   memCount++; memGames[g] = (memGames[g] || 0) + 1;
   if (kv && kv.isReady) {
     try {
-      await kv.incr("played:" + d); await kv.expire("played:" + d, 60 * 60 * 24 * 8);
+      await kv.incr("played:" + d); await kv.expire("played:" + d, 60 * 60 * 24 * 400);
+      await kv.hIncrBy("playedh:" + d, String(sydHour()), 1); await kv.expire("playedh:" + d, 60 * 60 * 24 * 40);
       if (g) { await kv.hIncrBy("games:" + d, g, 1); await kv.expire("games:" + d, 60 * 60 * 24 * 8); }
     } catch (e) {}
   }
@@ -270,7 +301,7 @@ const server = http.createServer(async (req, res) => {
       const cut = Date.now() - WINDOW, by = {}; let n = 0;
       for (const v of seen.values()) if (v.t >= cut) { n++; if (v.g) by[v.g] = (by[v.g] || 0) + 1; }
       res.writeHead(200, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ online: n, games: by, today: await today(), solved: await solvedToday(), day: sydDay() }));
+      return res.end(JSON.stringify({ online: n, games: by, today: await today(), heat: await heat(), solved: await solvedToday(), day: sydDay() }));
     }
     if (url.pathname === "/top") {
       const b = lbBoard(url.searchParams.get("b"));
