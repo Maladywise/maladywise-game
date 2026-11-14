@@ -646,6 +646,102 @@
    "date": "2026-11-14",
    "source": "The Guardian / Nesta analysis; news search",
    "niche": true
+  },
+  {
+   "term": "cholesterol",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "measles",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "measles elimination status",
+   "region": "US",
+   "approx volume": "5K+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "measles symptoms",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "fda",
+   "region": "US",
+   "approx volume": "1K+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "cancer",
+   "region": "US",
+   "approx volume": "1K+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "cholesterol",
+   "region": "GB",
+   "approx volume": "2K+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "antimicrobial resistance",
+   "region": "GB",
+   "approx volume": "2K+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": false
+  },
+  {
+   "term": "pharmacogenomics",
+   "region": "GB",
+   "approx volume": "200+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": true
+  },
+  {
+   "term": "tourette syndrome",
+   "region": "GB",
+   "approx volume": "100+",
+   "date": "2026-11-15",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-14T14:26:33Z)",
+   "niche": true
+  },
+  {
+   "term": "enlicitide (oral PCSK9 cholesterol pill, AHA 2026 data)",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-15",
+   "source": "news search: HCPLive 11 Nov 2026, Pharmacy Times 5 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "US loses measles elimination status",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-15",
+   "source": "news search: Honolulu Star-Advertiser 10 Nov 2026, Political Wire 10 Nov 2026",
+   "niche": true
   }
  ],
  "used": [
