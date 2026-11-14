@@ -1,5 +1,6 @@
 /* Main-site settings: top menu for the site pages. */
 window.MW_HOME = {
+  beta: false, // Beta tags on menu items and page titles (shell.js betaTags): true to show
   // Top menu. Items with "items" are dropdowns (grouped lists in the phone menu).
   // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Same menu in Medical and Normie.
   nav: [
