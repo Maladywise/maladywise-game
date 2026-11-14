@@ -21,6 +21,12 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Health days in Normie mode
 - On health-awareness days, Normie gets a light, basic version of the theme: Normie Triviosis on a layperson-friendly, weird-but-true angle (e.g. Stroke Day → your amazing brain; Radiology → X-rays and Marie Curie), plus one other Normie puzzle where it fits naturally. Fun, non-technical, respectful; skip "sensitive" and "au" days.
 
+## Beyond humans: animals, plants, fungi and bees (One Health)
+- Puzzles and questions regularly stretch medicine past humans: animal medicine and vets, zoonoses, bees and pollinators, plant disease and plant medicines, fungi (including the human pathogens and the useful ones, like penicillin), venoms, parasites, marine life. Weird but true wins.
+- Use them on matching days and news: e.g. World Wildlife Day (3 Mar), Fascination of Plants Day (18 May), World Bee Day (20 May), World Zoonoses Day (6 Jul), World Rabies Day (28 Sep), World Animal Day (4 Oct), plus animal and plant stories in the news (outbreaks in animals, bird flu, crop blights, new species, bee die-offs). Check data/health-days.json for the full list.
+- Normie mode can use the plain, fun version (animal facts, plants, nature) with nothing medical.
+- Current news nods: every daily build and the trending refresh work in a few nods to this week's health and science news (from data/trends.json and the latest Weekly Dose), themed sideways and never giving an answer away. Keep tragedies factual and kind.
+
 ## Einstein and Genius must be genuinely hard
 - Einstein puzzles in every game must be clearly harder than Genius: obscure but real and fair (specialist, archaic or rare terms; rare letters; no gimmes). If a doctor would get it in one look, it's not Einstein.
 - Wordemic: take Einstein answers from tier 1 of wordemic/hard-bank.json first, Genius Sunday answers from tier 1 then tier 2, and Hard days may use tier 3. Remove each word from the bank once it's used. When the bank runs low, add similar words (obscure anatomy, archaic terms, histology, rare signs) and add every new answer to wordemic/words.txt.

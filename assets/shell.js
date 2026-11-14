@@ -1109,7 +1109,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         var h = "";
         if (R && R.deep) h += card(R.deep.href, "deepdives", "Deep dive", R.deep.title, R.deep.text);
         if (R && R.guide) h += card(R.guide.href, "dx", "Health guide", R.guide.title, R.guide.text);
-        if (R && R.dose) h += card(R.dose.href, "triviosis", "The Weekly Dose", R.dose.title, R.dose.text);
+        try { fillNews(R); } catch (e) {} // the Weekly Dose has its own news box further down
         if (D) h += card("/days/", "gridectomy", "Health Calendar", "Coming up: " + D.name.replace(/\s*\([^()]+\)\s*$/, ""), nice(D.dates[today.slice(0, 4)].start, { weekday: "long", day: "numeric", month: "short" }) + ". Every health day in one place.");
         if (!h) return;
         box.querySelector(".rd-grid").innerHTML = h; box.hidden = false;
@@ -1121,6 +1121,14 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
           .sort(function (a, b) { return a.dates[yr].start < b.dates[yr].start ? -1 : a.dates[yr].start > b.dates[yr].start ? 1 : (a.priority || 9) - (b.priority || 9); })[0] || null;
         done();
       }).catch(done);
+    }
+    // This week's health news (Medical only): the latest Weekly Dose, below the games, styled like the health-day box.
+    function newsSlot() { return NORMIE ? "" : '<section class="hday mw-news" id="mw-news" hidden></section>'; }
+    function fillNews(R) {
+      var box = document.getElementById("mw-news"); if (!box || !R || !R.dose) return;
+      box.innerHTML = '<span class="rd-k">\ud83d\uddde\ufe0f This week in health news</span><h2>' + esc2(R.dose.title) + "</h2><p>" + esc2(R.dose.text) +
+        ' News, new research, what\u2019s in the media and the weird stuff.</p><p><a class="hday-go" href="' + esc2(R.dose.href) + '">Read this week\u2019s news \u2192</a> <a class="hday-off" href="/zebra-mail/">All issues</a></p>';
+      box.hidden = false;
     }
     function gpsBanner() {
       return NORMIE ? "" : '<a class="gps-b" href="/unspecialist/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
@@ -1218,7 +1226,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + homeBottom() + modeCta() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));

@@ -1368,3 +1368,8 @@ html.medp-on .medp .medp-cols ul.skip>li::before{content:"✕"!important;positio
 .mw-beta{display:inline-block;font:600 10px/1.5 Poppins,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;background:#FFD23F;color:#2E1F57;border-radius:999px;padding:1px 7px;vertical-align:middle;margin-left:4px;position:relative;top:-2px}
 h1 .mw-beta{font-size:11px;top:-4px}
 @media print{.mw-beta{display:none}}
+
+/* home: this week's health news box (below the games) */
+.mw-news{margin:22px 0 4px}
+.mw-news .rd-k{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted,#6B5A93)}
+.mw-news p:last-child{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
