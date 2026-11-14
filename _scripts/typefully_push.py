@@ -129,6 +129,18 @@ def upload_card(sid, path, day, alt=None):
     raise RuntimeError("%s still processing after %d s" % ("video" if video else "image", tries * POLL_SECONDS))
 
 
+def alt_for(p, xs):
+    """Alt text for a picture card, so screen readers can read it: the puzzle's own words, or the first post's text."""
+    z = p.get("puzzle")
+    if z:
+        body = re.sub(r"<br\s*/?>", " ", z.get("body", ""))
+        body = re.sub(r"<[^>]+>", "", body)
+        return ("Malady Wise puzzle card. %s: %s. %s Reply with your guess; answer at 11:15am Sydney time."
+                % (z.get("kicker", "Puzzle"), z.get("title", ""), body)).replace("  ", " ")[:1000]
+    first = re.sub(r"https?://\S+", "", (xs[0] if xs else "")).strip()
+    return ("Malady Wise picture card. " + first)[:1000] if first else "Malady Wise picture card."
+
+
 def social_set_id():
     if os.environ.get("TYPEFULLY_SOCIAL_SET_ID"):
         return os.environ["TYPEFULLY_SOCIAL_SET_ID"]
@@ -675,6 +687,8 @@ def main():
                 for i, t in enumerate(xs, 1):
                     print("   [%d] " % i + t.replace("\n", "\n       "))
                 continue
+            if png and not alt:
+                alt = alt_for(p, xs)
             if png:
                 try:
                     post0["media_ids"] = [upload_card(sid, png, p["date"], alt)]
