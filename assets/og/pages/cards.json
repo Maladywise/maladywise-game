@@ -412,6 +412,13 @@
 "label": "Condition",
 "title": "Carpal Tunnel Syndrome"
 },
+"cervical-cancer": {
+"url": "/cervical-cancer/",
+"key": "866df72a57d4",
+"v": "ba658823",
+"label": "Condition",
+"title": "Cervical Cancer"
+},
 "chickenpox": {
 "url": "/chickenpox/",
 "key": "1bd81afe8a69",
@@ -1350,6 +1357,13 @@
 "label": "Condition",
 "title": "Lupus (SLE)"
 },
+"lymphoma": {
+"url": "/lymphoma/",
+"key": "6831c1a24259",
+"v": "dba841d5",
+"label": "Condition",
+"title": "Lymphoma"
+},
 "male-infertility": {
 "url": "/male-infertility/",
 "key": "1999084921f1",
@@ -1616,6 +1630,13 @@
 "label": "Condition",
 "title": "Mediterranean Diet"
 },
+"melanoma": {
+"url": "/melanoma/",
+"key": "dba4d426ab0c",
+"v": "ec4c3205",
+"label": "Condition",
+"title": "Melanoma"
+},
 "meningococcal": {
 "url": "/meningococcal/",
 "key": "2b0a813d180a",
@@ -1762,6 +1783,13 @@
 "v": "04004641",
 "label": "Exercise handout",
 "title": "Osteoporosis Exercises"
+},
+"ovarian-cancer": {
+"url": "/ovarian-cancer/",
+"key": "71cf30556860",
+"v": "d5ecde89",
+"label": "Condition",
+"title": "Ovarian Cancer"
 },
 "ovarian-cysts": {
 "url": "/ovarian-cysts/",
@@ -2700,6 +2728,13 @@
 "v": "fffefbb2",
 "label": "Condition",
 "title": "Vaginal Thrush"
+},
+"thyroid-cancer": {
+"url": "/thyroid-cancer/",
+"key": "cbd5942ba308",
+"v": "2c7ad9c2",
+"label": "Condition",
+"title": "Thyroid Cancer"
 },
 "tinea": {
 "url": "/tinea/",
