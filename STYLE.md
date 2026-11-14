@@ -239,3 +239,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## Sensitosis: one test a day
 - From 14 Nov 2026 players see ONE test a day (owner's request). Day files still hold 5 rounds; the game shows the first round that has no twist and whose scenario doesn't start with "Same…", so put the day's best standalone test first. Days before 14 Nov keep all 5. Score is out of 100; 50+ counts as a pass.
+
+## Respectful language (owner's rule, 14 Nov 2026)
+- No sexist or misogynistic jokes or stereotypes anywhere: site copy, sass, mascot lines, puzzle clues, X posts.
+- Don't use "hormonal", "hysterical", "hysteria", "nagging", "bossy", "shrill", "hag" or similar as insults or jokes. "Hysteria" only appears in an explicitly historical medical context, and preferably not at all in games.
+- Don't cast women as carers and men as experts by default. Characters default to female in every role, including doctors, surgeons and scientists.
