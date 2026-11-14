@@ -70,6 +70,7 @@ _PCSS = ('<style>.mz-hero{display:flex;align-items:center;gap:16px;margin:8px 0 
          '.mz-story p{font-size:17px;line-height:1.65}.mz-cheer{list-style:none!important;padding:0!important;display:grid;gap:8px}'
          '.mz-cheer li{margin:0!important;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:12px;padding:10px 12px;font-style:italic}'
          '.mz-nav{display:flex;justify-content:space-between;gap:10px;margin:22px 0 6px;flex-wrap:wrap}.mz-nav a{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:600}'
+         '.mz-vid{margin:6px 0 18px}.mz-vid summary{cursor:pointer;font-weight:600;color:var(--accent,#4A3480)}.mz-vid video{display:block;margin:10px auto 0;width:min(100%,360px);height:auto;border-radius:14px;background:#1B1430}'
          '.mz-nav img{width:40px;height:40px}@media(max-width:520px){.mz-hero img{width:92px;height:92px}}</style>\n')
 for i, a in enumerate(ALL):
     k, name, role, href, what, vibe, story, cheer, kind, slug = a
@@ -79,6 +80,8 @@ for i, a in enumerate(ALL):
     paras = [" ".join(sents[j:j + 3]) for j in range(0, len(sents), 3)] if story else []
     b = ('<p class="lede">%s</p>\n' % _e(vibe)
          + '<h2>%s story</h2>\n<div class="mz-story">%s</div>\n' % (("His" if pv == "his" else "Her"), "".join("<p>%s</p>" % _e(p) for p in paras))
+         + (('<details class="mz-vid"><summary>▶ Watch %s story (short video)</summary><video controls playsinline preload="none" poster="/assets/video/mascots/%s.jpg" width="360" height="640">'
+             '<source src="/assets/video/mascots/%s.mp4" type="video/mp4"></video></details>\n') % (pv, slug, slug) if _os.path.exists("assets/video/mascots/%s.mp4" % slug) else "")
          + (('<h2>What %s says when you win</h2>\n<ul class="mz-cheer">' % ("he" if pr == "him" else "she")) + "".join("<li>“%s”</li>" % _e(c) for c in cheer[:6]) + "</ul>\n" if cheer else "")
          + ('<p>Find %s in <a href="%s">%s</a>.</p>\n' % (pr, href, _e(role.replace(" mascot", "")))) if href else "")
     b += ('<nav class="mz-nav" aria-label="More mascots"><a href="/mascots/%s/"><img src="/assets/mascots/%s.svg" alt="" width="40" height="40" loading="lazy">← %s</a>'
