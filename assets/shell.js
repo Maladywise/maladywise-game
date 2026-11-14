@@ -1719,7 +1719,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     [/mushroom|weird|odd|rare|zebra|unicorn/i, "zebritis"]
   ];
   var WD_FALL = ["dx", "triviosis", "gridectomy", "suturix", "morphemia", "cryptogenic", "grandrounds"];
-  var WD_SEC = [[/weekly dose/i, "dx"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/weird/i, "morphemia"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
+  var WD_SEC = [[/weekly dose|health news/i, "dx"], [/in the media/i, "sensitosis"], [/beyond humans/i, "cryptoplexy"], [/useful/i, "sudokrine"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/weird/i, "morphemia"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
   function wdPick(txt, used) {
     for (var i = 0; i < WD_TOPICS.length; i++) if (WD_TOPICS[i][0].test(txt) && !used[WD_TOPICS[i][1]]) return WD_TOPICS[i][1];
     for (var j = 0; j < WD_TOPICS.length; j++) if (WD_TOPICS[j][0].test(txt)) return WD_TOPICS[j][1];
