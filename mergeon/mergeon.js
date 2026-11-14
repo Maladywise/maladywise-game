@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "20";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "21";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -317,6 +317,8 @@
       '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
       '<li>' + pic(WILD, 22) + ' <b>' + (NORMIE ? "Pearl" : "Stem cell") + ' (wild):</b> a rare drop that merges with any ' + thing + ' and turns it into the next one up.</li>' +
       '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐.</li>' +
+      (featUI() ? '<li><b>🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ':</b> ten levels in More, each with a goal and a twist. Wards 5 and 10 have a boss: merge right next to it to wear it down. Clearing wards 3, 6 and 9 unlocks costume sets.</li>' +
+        '<li><b>🆚 Challenge a friend:</b> after your daily run, send a link. They get the same drops and see your score to beat.</li>' : "") +
       (String(day) >= RXDAY ? '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil slicks land and spread, and slicked creatures can’t merge." : "germs land and spread, and infected organs can’t merge.") + "<br>" + OUTK.RX.tip.join("<br>") + "<br>" + OUTK.RX.drain + "</li>" :
       '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>') +
       (featUI() ? '<li><b>Every day has a twist:</b><br>' + (NORMIE ? "Mon: Moon Monday (floaty)<br>Tue, Thu, Sat: a random mutation<br>Wed: Potluck Wednesday<br>Fri: Grumpy Friday<br>Sun: Slick Sunday"
@@ -471,7 +473,10 @@
     TILT = Math.floor(dayNum(day) / 7) % 2 ? 1 : -1; FLOW = ernd() < 0.5 ? 1 : -1; envFx = []; lights = [];
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
-    SP = special(day); MUT = mutation(day); SKIN = skinOf(day); GOALS = goalsFor(day); gDone = [false, false, false]; madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
+    SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
+    BOSS = null; wardWon = false;
+    if (WARD !== null) { var WW = WARDS[WARD]; SP = WW.sp || ""; MUT = WW.mut ? mutById(WW.mut) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1; }
+    madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
     sparks = []; hidRun = { sp: {}, tc: 0 }; noPairs = {}; LEARN = featUI() && load("mrg-learn", 0) === 1; $("learn").hidden = true;
     brnd = mulberry32((seed2 ^ 0x85EBCA6B) >>> 0); qrnd = mulberry32((seed2 ^ 0xC2B2AE35) >>> 0); drnd = mulberry32((seed2 ^ 0x165667B1) >>> 0); hrnd = mulberry32((seed2 ^ 0x68E31DA4) >>> 0);
     DRAIN = !NOFEAT && String(day) >= DRAINDAY; drained = 0;
@@ -486,9 +491,11 @@
     if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
     cur = roll(); nxt = roll(cur); PREV = mut("preview"); nx2 = PREV ? roll(nxt) : -1; // same chain of roll() calls, just read one ahead
+    if (WARD !== null && WARDS[WARD].boss) bossMake(WARDS[WARD].boss);
     $("over").hidden = true; $("result").hidden = !(!practice && st.done); hud();
     $("mode").textContent = practice ? "Practice mode: today’s run is done, so these games don’t count. Play as often as you like." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
-    $("badge").textContent = practice ? "Practice" : ""; lastT = 0; acc = 0;
+    $("badge").textContent = WARD !== null ? "Ward " + (WARD + 1) : practice ? "Practice" : ""; lastT = 0; acc = 0;
+    if (WARD !== null) $("mode").textContent = "Ward rounds · Ward " + (WARD + 1) + ": " + wn(WARDS[WARD]) + ". Goal: " + wardGoal(WARDS[WARD]) + ". Practice run: your daily isn’t affected.";
     todayUI(); tbarUI(); size();
     if (!raf) raf = requestAnimationFrame(loop);
   }
@@ -539,10 +546,12 @@
         if (n > top) { top = n; if (SASS[n]) toast(pick(SASS[n])); }
         collect(n);
         if (tgt >= 0 && n === tgt && !tgtHit) hitTarget();
+        if (WARD !== null && !WARDS[WARD].boss && n >= WARDS[WARD].lv) wardWin();
       }
       var L = Math.min(n, O.length - 1);
       madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
       hidMerge(x, y, n);
+      if (BOSS) bossHit(x, y, n);
       burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
@@ -705,6 +714,7 @@
         if (slowN) { slowN--; engine.timing.timeScale = slowN ? 0.45 : 1; }
         E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread();
         if (feverS > 0 && --feverS === 0) endFever();
+        if (BOSS) bossTick();
         if (MUT) envTick();
         if (SP === "sick") sickTick(); if (DRAIN && infN) drainTick(); if (SP === "micro" && steps === 10800) hidTick();
       }
@@ -820,6 +830,7 @@
       if (o.inf) germ(o);
       if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
+    if (BOSS) bossDraw(now);
     drawParts(dt || 16);
     drawFG(dark, now); if (MUT) drawEnvFG(dark, now); drawJuice(now);
   }
@@ -867,6 +878,7 @@
   }
   function toastBig(m) { var c = $("combo"); c.textContent = m; c.hidden = false; c.classList.remove("on"); void c.offsetWidth; c.classList.add("on", "big"); clearTimeout(comboT); comboT = setTimeout(function () { c.hidden = true; }, 1300); }
   function hitTarget() {
+    if (WARD !== null) { tgtHit = true; tbarUI(); return; }
     tgtHit = true; tbarUI(); sfx("target"); buzz([20, 30, 20]);
     toast(practice ? "Target hit! (Practice, so no ⭐)" : "Target hit! ⭐ " + O[tgt].n);
   }
@@ -946,6 +958,31 @@
   var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 24;
   var ernd = Math.random, TILT = 1, FLOW = 1, envFx = [], lights = [];
   var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
+  // ---------- Ward rounds: a 10-ward campaign (Nov 2026). Each ward has a target piece and a twist; wards 5 and 10 have a boss. ----------
+  // Ward runs are practice runs (the daily is never touched). Progress, unlocked sets and the chosen set live in this browser only.
+  // lv: piece to make; mut: a weekly mutation id; sp: a weekly special; boss: boss HP; set: organ set unlocked by clearing it.
+  var WARDS = [
+    { n: ["Admissions", "Rock pools"], lv: 3, d: ["A gentle first shift.", "A gentle first dip."] },
+    { n: ["Paediatrics", "Splash park"], lv: 4, mut: "bouncy" },
+    { n: ["Night shift", "Midnight reef"], lv: 4, mut: "lights", set: "hall" },
+    { n: ["Respiratory", "Windy bay"], lv: 5, mut: "gust" },
+    { n: ["Isolation ward", "The wreck"], boss: 10, d: ["A superbug has moved in. Merge right next to it to wear it down.", "A grumpy kraken has moved in. Merge right next to it to wear it down."] },
+    { n: ["Cardiology", "The current"], lv: 6, mut: "flow", set: "easter" },
+    { n: ["Space medicine", "Moon pool"], lv: 6, sp: "micro" },
+    { n: ["Blood bank", "Potluck"], lv: 7, sp: "blood" },
+    { n: ["ICU", "Storm deck"], lv: 7, mut: "quake", set: "xmas" },
+    { n: ["The final round", "The deep"], boss: 16, mut: "heavy", d: ["The superbug is back, bigger and meaner, on a heavy day.", "The kraken is back, bigger and meaner, on a heavy day."] }
+  ];
+  var WARDKEY = "mrg-wards-" + (NORMIE ? "sea" : "med"), SETKEY = "mrg-set-" + (NORMIE ? "sea" : "med"), WARD = null, BOSS = null, wardWon = false;
+  function wardsCleared() { return load(WARDKEY, { n: 0 }).n || 0; }
+  function wn(w) { return w.n[NORMIE ? 1 : 0]; }
+  function mutById(id) { for (var i = 0; i < MUTS.length; i++) if (MUTS[i].id === id) return MUTS[i]; return null; }
+  function setsOwned() { var c = wardsCleared(), o = {}; WARDS.forEach(function (w, i) { if (w.set && i < c) o[w.set] = 1; }); ["xmas", "hall", "easter"].forEach(function (k) { if (coll["s-" + k]) o[k] = 1; }); return o; }
+  function chosenSet() { var s0 = load(SETKEY, ""); return s0 && setsOwned()[s0] ? s0 : ""; }
+  function wardTwist(w) { var m = w.mut ? mutById(w.mut) : null; return m ? m.e + " " + m.n[NORMIE ? 1 : 0] + ": " + m.d[NORMIE ? 1 : 0] : w.sp && SPEC[w.sp] ? SPEC[w.sp].e + " " + SPEC[w.sp].short : ""; }
+  function wardGoal(w) { return w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") + (w.lv ? "" : "") : "Make " + aName(w.lv); }
+  // head to head: ?vs=<score> (with ?date=) is a friend's challenge on that day's run
+  var VS = (function () { var m = /[?&]vs=(\d{1,7})\b/.exec(location.search); return m ? +m[1] : null; })();
   var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
   var LEARN = false, learnT, learnI = {};
   // items 12-15 (from 16 Nov 2026): combo meter + Fever, rising combo notes, clutch saves, end-of-game tally. Cosmetic randomness only (particles).
@@ -1248,10 +1285,13 @@
   }
   function openMore() {
     var o = overlay("mrg-more-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-mm-h"><h2 id="mrg-mm-h">' + esc(K.GOALW) + "</h2>" + goalsHTML() +
-      '<button type="button" class="mrg-mm-btn" id="mrg-mm-book">📖 Collection book</button>' +
+      '<button type="button" class="mrg-mm-btn" id="mrg-mm-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + " (" + wardsCleared() + "/10)</button>" +
+      '<button type="button" class="mrg-mm-btn" id="mrg-mm-book">📖 Collection book</button>' + setsHTML() +
       '<label class="mrg-mm-tog"><input type="checkbox" id="mrg-mm-learn"' + (LEARN ? " checked" : "") + "> <span><b>Learn mode</b><br>Names on pieces and a fact with each merge. Doesn’t change scoring.</span></label>" +
       '<button type="button" class="mrg-help-go" data-close>Done</button></div>');
     o.querySelector("#mrg-mm-book").onclick = function () { o.remove(); openBook(); };
+    o.querySelector("#mrg-mm-wards").onclick = function () { o.remove(); openWards(); };
+    Array.prototype.forEach.call(o.querySelectorAll("[data-set]"), function (b) { b.onclick = function () { put(SETKEY, b.getAttribute("data-set")); o.remove(); toast(b.getAttribute("data-set") ? "Set on. It shows from your next game." : "Sets off."); }; });
     o.querySelector("#mrg-mm-learn").onchange = function () { setLearn(this.checked); };
   }
   function setLearn(on) { LEARN = !!on && featUI(); put("mrg-learn", LEARN ? 1 : 0); if (!LEARN) $("learn").hidden = true; }
@@ -1290,7 +1330,118 @@
   var verdict = K.verdict;
   function band(tp) { return tp >= 10 ? 0 : tp >= 9 ? 1 : tp >= 8 ? 2 : tp >= 7 ? 3 : 4; }
   function gridOf(tp) { return O.map(function (o, i) { return i <= tp ? o.e : "⬜"; }).join(""); }
+  // ---------- the boss (wards 5 and 10): sits on the floor, can't be merged, worn down by merges right next to it ----------
+  var BOSS_R = 58;
+  function bossMake(hp) {
+    var o = B.circle(W / 2, H - BOSS_R - 2, BOSS_R, { isStatic: true, friction: 0.3, restitution: 0.1, label: "boss" });
+    C.add(engine.world, o); BOSS = { body: o, hp: hp, max: hp, hitT: 0, spitN: 0, x0: W / 2, ph: 0, dead: false };
+  }
+  function bossHit(x, y, n) {
+    var b = BOSS; if (!b || b.dead) return;
+    var d = Math.hypot(x - b.body.position.x, y - b.body.position.y), reach = BOSS_R + info(Math.min(n, O.length - 1)).r + 26;
+    if (d > reach) return;
+    var dmg = 1 + (n >= 5 ? 1 : 0) + (n >= 8 ? 1 : 0); b.hp = Math.max(0, b.hp - dmg); b.hitT = performance.now();
+    floatTxt(b.body.position.x, b.body.position.y - BOSS_R - 10, "−" + dmg); shakeBoard(1); sfx("pop", 6); buzz(20);
+    if (b.hp <= 0) {
+      b.dead = true; C.remove(engine.world, b.body); poof(b.body.position.x, b.body.position.y, BOSS_R); confetti(); sfx("big");
+      var pts = 50 * b.max; score += pts; TL.merge += pts; floatTxt(W / 2, H / 2, "+" + pts); hud();
+      toastBig(NORMIE ? "KRAKEN DOWN!" : "SUPERBUG BEATEN!"); setTimeout(wardWin, 900);
+    } else if (b.hp <= b.max / 2 && !b.half) { b.half = true; toast(NORMIE ? "The kraken is sulking. Keep going!" : "The superbug is weakening. Keep going!"); }
+  }
+  function bossTick() { // once per physics step: a slow sway, and every so often it coughs out a little piece
+    var b = BOSS; if (!b || b.dead || over) return;
+    b.ph += 1; var nx = b.x0 + Math.sin(b.ph / 240) * 70;
+    Bd.setPosition(b.body, { x: nx, y: b.body.position.y });
+    var every = b.max >= 16 ? 420 : 600;
+    if (b.ph % every === 0) { var o = add(0, nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - BOSS_R - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - BOSS_R - 30, NORMIE ? "blub!" : "cough!"); }
+  }
+  function bossDraw(now) {
+    var b = BOSS; if (!b || b.dead) return;
+    var x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, k = 1 + 0.03 * Math.sin(now / 260);
+    ctx.save(); ctx.translate(x + (hurt ? Math.sin(now / 15) * 3 : 0), y); ctx.scale(k, 1 / k);
+    ctx.lineWidth = 3; ctx.strokeStyle = "#2A1E3D"; ctx.fillStyle = hurt ? "#FFB0B0" : NORMIE ? "#B58AD8" : "#8BC34A";
+    ctx.beginPath(); // spiky body (Medical) or a lumpy kraken (Normie)
+    for (var i = 0; i <= 28; i++) { var a = i / 28 * Math.PI * 2, rr = BOSS_R * (NORMIE ? (i % 2 ? 0.94 : 1.02) : (i % 2 ? 0.86 : 1.06)); ctx[i ? "lineTo" : "moveTo"](Math.cos(a) * rr, Math.sin(a) * rr); }
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,.25)"; ctx.beginPath(); ctx.arc(-18, -22, 14, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#2A1E3D"; [-18, 18].forEach(function (ex) { ctx.beginPath(); ctx.arc(ex, -6, 7, 0, Math.PI * 2); ctx.fill(); });
+    ctx.fillStyle = "#fff"; [-20, 16].forEach(function (ex) { ctx.beginPath(); ctx.arc(ex, -8, 2.4, 0, Math.PI * 2); ctx.fill(); });
+    ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(-28, -20); ctx.lineTo(-10, -14); ctx.moveTo(28, -20); ctx.lineTo(10, -14); ctx.stroke(); // angry brows
+    ctx.beginPath(); ctx.moveTo(-16, 18); ctx.quadraticCurveTo(0, hurt ? 26 : 8, 16, 18); ctx.stroke();
+    ctx.restore();
+    // HP bar
+    var w = 110, f = b.hp / b.max; ctx.save(); ctx.fillStyle = "rgba(42,30,61,.75)"; ctx.fillRect(x - w / 2 - 2, y - BOSS_R - 26, w + 4, 12);
+    ctx.fillStyle = f > 0.5 ? "#E65C86" : "#F5A623"; ctx.fillRect(x - w / 2, y - BOSS_R - 24, w * f, 8); ctx.restore();
+  }
+  // ---------- ward win / lose, and the ward screens ----------
+  function wardWin() {
+    if (WARD === null || wardWon) return; wardWon = true; over = true; arm = false; tbarUI();
+    var i = WARD, prev = wardsCleared(), newly = i + 1 > prev; if (newly) put(WARDKEY, { n: i + 1 });
+    var w = WARDS[i], unl = newly && w.set && K.SKIN[w.set] ? K.SKIN[w.set] : null;
+    confetti(); sfx("target"); buzz([20, 30, 20, 30]);
+    var last = i === WARDS.length - 1;
+    $("over").innerHTML = '<div class="ovcard"><p class="best">' + (last ? "🏆 All 10 wards cleared!" : "✅ Ward " + (i + 1) + " cleared") + "</p><b>" + esc(wn(w)) + "</b><span>" + fmt(score) + " points</span>" +
+      (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Turn it on in More.</span>" : "") +
+      '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button></div></div>';
+    $("over").hidden = false;
+    if ($("wnext")) $("wnext").onclick = function () { startWard(i + 1); };
+    $("wall").onclick = openWards;
+  }
+  function wardLose() {
+    over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
+    $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
+      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
+    $("over").hidden = false;
+    $("wagain").onclick = function () { startWard(i); };
+    $("wall").onclick = openWards;
+  }
+  function startWard(i) {
+    WARD = i; newRun(true); $("result").hidden = true;
+    var w = WARDS[i], tw = wardTwist(w), d0 = w.d ? w.d[NORMIE ? 1 : 0] : "";
+    toast("Ward " + (i + 1) + ": " + wn(w) + " · " + wardGoal(w));
+    var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + ' of 10</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
+      "<p><b>Goal:</b> " + esc(wardGoal(w)) + (w.boss ? " (" + w.boss + " hits)" : "") + "</p>" + (d0 ? "<p>" + esc(d0) + "</p>" : "") + (tw ? "<p><b>Twist:</b> " + esc(tw) + "</p>" : "<p><b>Twist:</b> none. Enjoy it.</p>") +
+      '<button type="button" class="mrg-help-go" data-close>Start</button></div>');
+    try { root.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) {}
+    return o;
+  }
+  function openWards() {
+    var c = wardsCleared();
+    var rows = WARDS.map(function (w, i) {
+      var lock = i > c, done = i < c;
+      return '<button type="button" class="mrg-mm-btn mrg-ward' + (lock ? " locked" : "") + '" data-w="' + i + '"' + (lock ? " disabled" : "") + ">" + (done ? "✅" : lock ? "🔒" : w.boss ? "👾" : "▶️") + " " + (i + 1) + ". " + esc(wn(w)) +
+        '<small>' + esc(wardGoal(w)) + (w.set ? " · unlocks a set" : "") + "</small></button>";
+    }).join("");
+    var o = overlay("mrg-wards-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-ws-h"><h2 id="mrg-ws-h">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + "</h2>" +
+      '<p class="mrg-mm-note">Ten wards, each with a goal and a twist. Clear one to open the next. Wards 5 and 10 have a boss. Practice runs only: your daily is never touched.</p>' + rows +
+      (WARD !== null ? '<button type="button" class="mrg-mm-btn" id="mrg-wdaily">↩ Back to today’s run</button>' : "") + '<button type="button" class="mrg-help-go" data-close>Close</button></div>');
+    Array.prototype.forEach.call(o.querySelectorAll("[data-w]"), function (b) { b.onclick = function () { o.remove(); startWard(+b.getAttribute("data-w")); }; });
+    if (o.querySelector("#mrg-wdaily")) o.querySelector("#mrg-wdaily").onclick = function () { o.remove(); show(day); };
+  }
+  function setsHTML() {
+    var own = setsOwned(), cur0 = load(SETKEY, ""), keys = ["hall", "easter", "xmas"].filter(function (k) { return own[k]; });
+    if (!keys.length) return '<p class="mrg-mm-note">🎁 Organ sets: clear wards 3, 6 and 9 to unlock costume sets for your pieces.</p>';
+    return '<p class="mrg-mm-note"><b>🎁 Your sets</b> (looks only, any day without a seasonal costume)</p><div class="mrg-sets">' +
+      '<button type="button" class="mrg-mm-btn' + (!cur0 ? " on" : "") + '" data-set="">None</button>' +
+      keys.map(function (k) { return '<button type="button" class="mrg-mm-btn' + (cur0 === k ? " on" : "") + '" data-set="' + k + '">' + K.SKIN[k].e + " " + esc(K.SKIN[k].n) + "</button>"; }).join("") + "</div>";
+  }
+  // ---------- head to head: send a friend today's run with your score to beat ----------
+  function vsUI(r, s) {
+    if (!st || !st.done) return;
+    var box = document.createElement("div"); box.className = "mrg-vs";
+    var h = "";
+    if (VS !== null) { var diff = s - VS; h += '<p class="note"><b>🆚 Challenge:</b> your friend scored ' + fmt(VS) + ". " + (diff > 0 ? "You win by " + fmt(diff) + ". 🏆" : diff < 0 ? "They win by " + fmt(-diff) + ". Rematch tomorrow." : "A dead heat!") + "</p>"; }
+    h += '<button class="btn" type="button" id="mrg-vsbtn">🆚 Challenge a friend</button>';
+    box.innerHTML = h; r.appendChild(box);
+    $("vsbtn").onclick = function () {
+      var b = this, url = "https://maladywise.com/mergeon/?date=" + day + "&vs=" + s, txt = "I scored " + fmt(s) + " on Mergeon #" + num(day) + ". Same drops for you. Beat it:";
+      function done() { b.textContent = "Link copied"; }
+      try { if (navigator.share) { navigator.share({ text: txt, url: url }).catch(function () {}); return; } } catch (e) {}
+      try { navigator.clipboard.writeText(txt + " " + url).then(done, function () { prompt("Copy this link", url); }); } catch (e) { prompt("Copy this link", url); }
+    };
+  }
   function end() {
+    if (WARD !== null) { wardLose(); return; }
     goalTick(true); sparks = [];
     over = true; arm = false; tbarUI();
     var prevHi = stats.hi || 0, best = score > prevHi && prevHi > 0;
@@ -1302,10 +1453,12 @@
       (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
       (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") +
       '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-ovagain">Play again</button><button class="btn" type="button" id="mrg-ovres">' + (practice ? "Results" : "Share result") + "</button></div>" +
+      (featUI() ? '<button class="btn" type="button" id="mrg-ovwards" style="margin-top:8px">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + "</button>" : "") +
       (practice ? "" : '<span class="ovnote">Next games are practice</span>') + "</div>";
     ov.hidden = false;
     $("ovagain").onclick = function () { newRun(true); };
     $("ovres").onclick = function () { $("result").scrollIntoView({ behavior: "smooth", block: "start" }); };
+    if ($("ovwards")) $("ovwards").onclick = openWards;
     if (best) { burst(W / 2, H / 3, 8); sfx("target"); }
     if (!practice && !st.done) {
       st = { done: true, win: top >= WIN_LV - 1, score: score, top: top, tgt: tgt, star: tgtHit, chain: bestChain, wild: wildUsed, out: OUT, cleared: infCleared, rx: RX, res: resCleared }; if (DRAIN) st.drain = drained;
@@ -1379,6 +1532,7 @@
       (st.goals && goalsFor(day) ? '<p class="note">' + esc(K.GOALW) + ": " + goalsFor(day).map(function (g, i) { return (st.goals[i] ? "✅ " : "⬜ ") + esc(g.t); }).join(" · ") + "</p>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + K.win + '</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
       '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><span class="again-note">Practice game, doesn’t count</span></div>';
+    if (!practiceScore && practiceScore !== 0) vsUI(r, s);
     r.appendChild(lbBox); lbRender();
     if (st.tally && tallyAnim) { tallyAnim = false; tallyRun(st.tally); }
     $("copy").onclick = function () {
@@ -1523,7 +1677,7 @@
 
   // ---------- days ----------
   function show(d) {
-    day = d; KEY = "mrg-day-" + MK + day; st = load(KEY, { done: false });
+    WARD = null; day = d; KEY = "mrg-day-" + MK + day; st = load(KEY, { done: false });
     $("eyebrow").textContent = (isLive() ? "Mergeon" : "Archive") + " · #" + num(day) + " · " + nice(day);
     if (st.done) renderResult(); else $("result").hidden = true;
     newRun(st.done);
@@ -1587,4 +1741,5 @@
   var vis = new MutationObserver(function () { if (root.offsetParent !== null) size(); });
   var sec = document.getElementById("game"); if (sec) vis.observe(sec, { attributes: true, attributeFilter: ["hidden"] });
   size(); tick(); show(day); lbProbe();
+  if (VS !== null) setTimeout(function () { toast("🆚 A friend scored " + fmt(VS) + " on this run. Beat it!"); }, 1400);
 })();

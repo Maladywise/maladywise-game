@@ -255,3 +255,7 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Dxtective is /dxtective/ (was /dx/), Grand Rounds is /grand-rounds/ (was /grandrounds/), GP School is /gp-school/ (was /unspecialist/). The old addresses are redirect pages: keep them.
 - Engines and data did not move: Dxtective data is still cases/, Grand Rounds data and JS are still in grandrounds/, GP School JS and data are still in unspecialist/ (unspecialist.js loads data/ from its own folder). Bump unspecialist.js?v= in gp-school/index.html, not unspecialist/index.html.
 - Game ids, storage keys and mascot file names still use the old short names (dx, grandrounds). Don't rename those.
+
+## Mergeon extras (owner's request, 15 Nov 2026)
+- Ward rounds (Normie: Dive sites): 10 levels in More (WARDS in mergeon.js), practice runs only, progress in localStorage. Wards 5 and 10 have a boss (merge next to it). Wards 3, 6, 9 unlock costume sets (Halloween, Easter, Christmas) that show any day without a seasonal costume.
+- Challenge a friend: after the daily, a link /mergeon/?date=YYYY-MM-DD&vs=SCORE. The friend gets the same drops and sees the score to beat.
