@@ -328,16 +328,41 @@
   //  SUCTION: intake glows, then it sucks one cat (tail first) towards it. Tap fast to hold on. Sucked in = -25% health.
   // Both end with it stunned and its CORE exposed (big damage). It also eats the food Clover needs. At half health it gets ANGRY.
   var BOSS_ON = true;
+  // ---------- boss personalities (stages 2+ share the Vet's four attacks; each stage gets its own mix and a signature twist) ----------
+  // order: first attacks in sequence; w: weighted pool after that; dbl: charges that bounce straight back; vol: extra cone throws;
+  // fakes: fake-outs per scratch (fakeP = chance); swap: suction switches cats halfway; blink: teleports while pacing;
+  // angryAt: fraction of HP where she gets angry; sp: pacing speed; hp: HP multiplier; food: food every n s and HP she gains eating it.
+  var BP = {
+    2: { intro: null },
+    3: { order: ["charge", "charge", "suck"], w: ["charge", "charge", "charge", "suck", "cone", "scratch"], dbl: 1, sp: 0.9, hp: 1.1,
+         intro: "Farmer Fern swings that rake both ways. Jump, then jump again." },
+    4: { order: ["suck", "cone", "suck"], w: ["suck", "suck", "suck", "cone", "charge", "scratch"], vol: 1, sp: 1.15,
+         intro: "Lifeguard Lou loves a rip current. Hold on tight, and send every bucket back." },
+    5: { order: ["scratch", "scratch", "suck"], w: ["scratch", "scratch", "scratch", "suck", "cone", "charge"], fakes: 2, fakeP: 0.7, sp: 0.8, hp: 1.15,
+         intro: "Matron Maude is the queen of the fake-out. Don’t move until it says BOLT." },
+    6: { order: ["charge", "cone", "scratch", "suck"], w: ["charge", "cone", "scratch", "suck"], angryAt: 0.8, sp: 1.3, dbl: 1, hp: 0.95,
+         intro: "Ms Brimstone starts hot and gets hotter. She’s angry at 80% health." },
+    7: { order: ["suck", "suck", "cone"], w: ["suck", "suck", "suck", "cone", "scratch", "charge"], swap: true, sp: 1,
+         intro: "Bath Boss Bev grabs one cat, then swaps to the other halfway. Watch both." },
+    8: { order: ["cone", "cone", "suck"], w: ["cone", "cone", "cone", "suck", "charge", "scratch"], vol: 2, sp: 1,
+         intro: "Mrs Claus throws presents in threes. Swat every one back." },
+    9: { order: ["charge", "suck", "scratch", "cone"], w: ["charge", "suck", "scratch", "cone"], food: [1.6, 2.6, 4], sp: 1.35, hp: 0.9,
+         intro: "Bunny Bonnie hops about and gobbles every egg to heal. Get to the food first." },
+    10: { order: ["scratch", "cone", "charge"], w: ["scratch", "scratch", "cone", "charge", "suck"], blink: true, fakes: 1, fakeP: 0.6, sp: 1,
+         intro: "Witch Wilhelmina blinks around the room. Hit the glowing spots wherever she lands." }
+  };
+  function bp() { return STAGE >= 2 ? BP[STAGE] || {} : {}; }
   var SPOTS = ["BRUSH", "SENSOR", "DUST BIN"], BHOME = { b: 46, c: W - 46 };
   function startBoss(final) {
     if (!final) S.round++;
     S.bosses = (S.bosses || 0) + 1; S.bonus = 0; S.flea = null; S.itchT = 0; S.sneak = null; S.treat = null; S.clover = null; S.dog = null; S.tom = null; S.laser = null; S.zoom = null; S.nipT = 0; S.ev = null; S.butterT = S.towelT = 0;
     var hpMax = STAGE >= 2 ? (final ? 60 : CAMP ? 40 : 30 + 8 * S.bosses) : final ? 50 : CAMP ? 36 : 28 + 8 * S.bosses;
+    hpMax = Math.round(hpMax * (bp().hp || 1));
     S.boss = { final: !!final, hp: hpMax, hpMax: hpMax, t: final ? 0 : 45, x: 180, vx: 38, face: 1, spot: null, spotT: 1.0, hits: 0, hitT: 0, dent: 0, done: null, doneT: 0, angry: false,
       atk: null, atkT: final ? 2.4 : 3.4, n: 0, flash: 0, food: null, foodT: grnd(3, 5), tips: {}, cats: { b: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 }, c: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 } }, coneT: 0, nurse: STAGE >= 2 && final ? { towels: 3, gone: 0, leave: 0 } : null };
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } S.lanes[j] = null; }
     if (STAGE >= 2) { S.ann = final ? { t: 1.8, a: "THE VET’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 1.8, a: "ROUND " + S.round, b: "VET!" }; shake();
-      toast(final ? "Dr Pokesworth is back, and Nurse Burrito brought towels. Beat them to win." : pick(["Dr Pokesworth will see you now. Hit the glowing spots.", "The vet is in. Both cats, positions.", "Annual check-up. Fight it. Hit the glowing spots."]), 2600); track("basil/boss"); return; }
+      toast(final ? "Dr Pokesworth is back, and Nurse Burrito brought towels. Beat them to win." : bp().intro ? bp().intro : pick(["Dr Pokesworth will see you now. Hit the glowing spots.", "The vet is in. Both cats, positions.", "Annual check-up. Fight it. Hit the glowing spots."]), 3200); track("basil/boss"); return; }
     S.ann = final ? { t: 1.8, a: "IT’S BACK. FINAL BOSS", b: "VAC-3000" } : { t: 1.8, a: "ROUND " + S.round, b: "BOSS!" }; shake();
     toast(final ? "The VAC-3000 is back for revenge. Beat it to win." : pick(["VAC-3000 has entered the kitchen. Hit the glowing spots.", "The vacuum is here. Both cats, positions.", "It sucks. Literally. Hit the glowing spots."]), 2600); track("basil/boss");
   }
@@ -354,7 +379,7 @@
       bossBurst(p0.x, p0.y, core ? 14 : 6, core ? 240 : 160); if (core) shake();
       b.spot = null; b.spotT = i === 2 ? rnd(0.15, 0.35) : rnd(0.3, 0.6);
       if (b.hp <= 0) return bossWin();
-      if (!b.angry && b.hp <= b.hpMax / 2) bossAngry();
+      if (!b.angry && b.hp <= b.hpMax * (bp().angryAt || 0.5)) bossAngry();
     } else if (b.spot && !b.spot.core) {
       float(LANES[i], BENCH - 110, "Wrong spot", "#6B5A93"); hurt(i === 2 ? "c" : "b", 3);
     }
@@ -390,10 +415,13 @@
   }
   function bossAttack() {
     var b = S.boss, side = Math.random() < 0.5 ? -1 : 1, kind = b.n === 0 ? "charge" : b.n === 1 ? "suck" : Math.random() < (b.last === "charge" ? 0.35 : 0.65) ? "charge" : "suck";
-    if (STAGE >= 2) { var ks = ["charge", "suck", "scratch", "cone"]; kind = b.n < 4 ? ks[b.n] : pick(ks.filter(function (k) { return k !== b.last; })); }
+    if (STAGE >= 2) { var P0 = bp(), ks = P0.order || ["charge", "suck", "scratch", "cone"], pw = P0.w || ["charge", "suck", "scratch", "cone"], pw2 = pw.filter(function (k) { return k !== b.last; });
+      kind = b.n < ks.length ? ks[b.n] : (Math.random() < 0.35 || !pw2.length ? pick(pw) : pick(pw2)); }
     b.n++; b.last = kind; b.spot = null; b.face = side;
     var warn = kind === "charge" ? (b.angry ? 0.7 : 1.0) : kind === "scratch" ? (b.angry ? rnd(1.0, 1.5) : rnd(1.3, 1.9)) : kind === "cone" ? (b.angry ? 0.6 : 0.8) : (b.angry ? 0.6 : 0.9);
-    b.atk = { kind: kind, side: side, ph: "warn", t: warn, max: warn, hit: false, taps: 0, fake: kind === "scratch" && Math.random() < 0.3, p: 0 };
+    var P1 = bp();
+    b.atk = { kind: kind, side: side, ph: "warn", t: warn, max: warn, hit: false, taps: 0, fake: kind === "scratch" && Math.random() < (P1.fakeP || 0.3) ? (P1.fakes || 1) : 0, p: 0,
+      dbl: kind === "charge" ? P1.dbl || 0 : 0, vol: kind === "cone" ? P1.vol || 0 : 0, swap: kind === "suck" && !!P1.swap };
     if (!b.tips[kind]) { b.tips[kind] = 1; var who0 = side < 0 ? "Basil" : "Clover";
       toast(STAGE >= 2 ? { charge: "Thermometer lunge! Tap " + who0 + " to jump over it.", suck: "Towel burrito! Tap like mad to wriggle out.", scratch: "“Just a little scratch…” Freeze. Tap only when it says BOLT.", cone: "Cone toss! Tap the cone in the air to send it back." }[kind]
         : kind === "charge" ? "It’s revving up! Tap " + who0 + " to jump over it." : "Suction! Tap like mad to hold on.", 2200); }
@@ -419,7 +447,7 @@
     return hurt(w, amt);
   }
   function bossStep(dt) {
-    var b = S.boss, a = b.atk, sp = b.angry ? 1.75 : 1;
+    var b = S.boss, a = b.atk, P2 = bp(), sp = (b.angry ? 1.75 : 1) * (P2.sp || 1);
     if (b.flash > 0) b.flash -= dt;
     if (b.done) { b.doneT -= dt; if (b.doneT <= 0) bossEnd(); return; }
     if (S.ann && S.ann.t > 0) return;
@@ -429,6 +457,7 @@
     ["b", "c"].forEach(function (w) { var c = b.cats[w]; if (c.coneT > 0) c.coneT -= dt; if (c.jt > 0) c.jt -= dt; if (c.hurtT > 0) c.hurtT -= dt; if (c.gone > 0) c.gone -= dt; if (!a || a.kind !== "suck" || a.ph !== "go") c.pull = Math.max(0, c.pull - dt * 2.5); });
     if (!a) {
       b.x += b.vx * sp * dt; if (b.x > 222 && b.vx > 0 || b.x < 138 && b.vx < 0) b.vx *= -1; if (b.x > 232 || b.x < 128) b.x = Math.max(128, Math.min(232, b.x)); b.face = b.vx > 0 ? 1 : -1;
+      if (P2.blink) { b.blinkT = (b.blinkT == null ? 2.2 : b.blinkT) - dt; if (b.blinkT <= 0) { b.blinkT = b.angry ? rnd(1.4, 2) : rnd(2.2, 3); var ox = b.x; b.x = ox < 180 ? rnd(196, 232) : rnd(128, 164); b.vx = -b.vx; bossBurst(ox, BENCH - 120, 8, 140); float(b.x, BENCH - 214, "POOF!", "#7A3FB5"); } }
       if (!b.spot) { b.spotT -= dt; if (b.spotT <= 0) bossSpot(); }
       else { b.spot.t -= dt; if (b.spot.t <= 0) { b.spot = null; b.spotT = rnd(0.2, 0.45); } }
       b.atkT -= dt; if (b.atkT <= 0) bossAttack();
@@ -440,22 +469,27 @@
         if (!a.hit && Math.abs(b.x - cx) < 74) { a.hit = true;
           if (b.cats[cw].jt > 0) { var dp = 3 * U(); addPts(dp); float(cx, BENCH - 150, "Dodged! +" + fmt(dp), "#2E7D6B"); }
           else if (bossCatHit(cw, 22, "SMACK! -22%")) return; }
-        var stop = a.side < 0 ? 88 : W - 88; if (a.side < 0 ? b.x <= stop : b.x >= stop) { b.x = stop; shake(); bossStun(b.angry ? 1.3 : 1.6, "BONK! Stunned"); }
+        var stop = a.side < 0 ? 88 : W - 88; if (a.side < 0 ? b.x <= stop : b.x >= stop) { b.x = stop; shake();
+          if (a.dbl > 0) { b.atk = { kind: "charge", side: -a.side, ph: "warn", t: b.angry ? 0.5 : 0.7, max: b.angry ? 0.5 : 0.7, hit: false, taps: 0, fake: 0, p: 0, dbl: a.dbl - 1, vol: 0 }; b.face = -a.side; float(b.x, BENCH - 214, "AND BACK!", "#C2553A"); toast("Straight back the other way. Tap " + (a.side < 0 ? "Clover" : "Basil") + " to jump!", 1600); }
+          else bossStun(b.angry ? 1.3 : 1.6, "BONK! Stunned"); }
       } else { a.t -= dt; if (a.t <= 0) { b.atk = null; b.spot = null; b.spotT = 0.3; b.atkT = b.angry ? rnd(2.4, 3.2) : rnd(3.6, 4.6); if (b.nurse && !b.nurse.gone) b.atkT *= 0.8; b.vx = (b.x < 180 ? 1 : -1) * 38; } }
     } else if (a.kind === "scratch") {
-      if (a.ph === "warn") { a.t -= dt; if (a.t <= 0) { if (a.fake) { a.ph = "fake"; a.t = 0.7; a.fake = false; } else { a.ph = "go"; a.t = b.angry ? 0.6 : 0.85; } } }
-      else if (a.ph === "fake") { a.t -= dt; if (a.t <= 0) { a.ph = "go"; a.t = b.angry ? 0.6 : 0.85; } }
+      if (a.ph === "warn") { a.t -= dt; if (a.t <= 0) { if (a.fake) { a.ph = "fake"; a.t = 0.7; a.fake--; } else { a.ph = "go"; a.t = b.angry ? 0.6 : 0.85; } } }
+      else if (a.ph === "fake") { a.t -= dt; if (a.t <= 0) { if (a.fake > 0) { a.ph = "warn"; a.t = a.max = 0.5; } else { a.ph = "go"; a.t = b.angry ? 0.6 : 0.85; } } }
       else if (a.ph === "go") { a.t -= dt; if (a.t <= 0) { bossScratchFail("TOO SLOW!"); if (S.over) return; } }
       else { a.t -= dt; if (a.t <= 0) bossAtkDone(); }
     } else if (a.kind === "cone") {
       if (a.ph === "warn") { a.t -= dt; if (a.t <= 0) { a.ph = "go"; a.p = 0; a.dur = b.angry ? 0.85 : 1.1; } }
       else if (a.ph === "go") { a.p += dt / a.dur; if (a.p >= 1) { var cw2 = a.side < 0 ? "b" : "c"; b.cats[cw2].coneT = 3; bossAtkDone(); toast(pick(["Coned. The cone of shame has claimed another.", "Cone on. Dignity off."])); if (bossCatHit(cw2, 12, "CONED! -12%")) return; } }
-      else if (a.ph === "back") { a.p += dt / 0.4; if (a.p >= 1) { b.coneT = b.angry ? 1.3 : 1.6; var cpt = 2 * U(); addPts(cpt); bossStun(b.coneT, "CONED HIMSELF! +" + fmt(cpt)); } }
+      else if (a.ph === "back") { a.p += dt / 0.4; if (a.p >= 1) {
+        if (a.vol > 0) { var vp = 1 * U(); addPts(vp); float(V ? V.vetX(b) : b.x, BENCH - 214, "ANOTHER ONE! +" + fmt(vp), "#C2553A"); b.atk = { kind: "cone", side: -a.side, ph: "warn", t: 0.4, max: 0.4, hit: false, taps: 0, fake: 0, p: 0, dbl: 0, vol: a.vol - 1 }; b.face = -a.side; }
+        else { b.coneT = b.angry ? 1.3 : 1.6; var cpt = 2 * U(); addPts(cpt); bossStun(b.coneT, s2("CONED HIMSELF! +", "OWN GOAL! +") + fmt(cpt)); } } }
       else { a.t -= dt; if (a.t <= 0) bossAtkDone(); }
     } else { // suction
       var sw = a.side < 0 ? "b" : "c", sc = b.cats[sw];
       if (a.ph === "warn") { a.t -= dt; if (a.t <= 0) { a.ph = "go"; a.t = b.angry ? 3.6 : 3.2; } }
       else if (a.ph === "go") {
+        if (a.swap && !a.swapped && a.t < (b.angry ? 1.8 : 1.6)) { a.swapped = true; sc.pull = 0; a.side = -a.side; b.face = a.side; sw = a.side < 0 ? "b" : "c"; sc = b.cats[sw]; sc.pull = 0.25; float(BHOME[sw], BENCH - 150, "SWITCH!", "#C2553A"); toast("Swapped! Now " + (sw === "b" ? "Basil" : "Clover") + " is getting it. Tap!", 1400); }
         a.t -= dt; sc.pull += (b.angry ? 0.72 : 0.6) * dt;
         if (sc.pull >= 1) { sc.pull = 0; sc.gone = 0.9; b.hp = Math.min(b.hpMax, b.hp + 2); b.atk = null; b.atkT = b.angry ? 2.4 : 3.4; b.spotT = 0.6; if (bossCatHit(sw, 25, s2("SUCKED IN! -25%", "BURRITO’D! -25%"))) return; toast(STAGE >= 2 ? (sw === "b" ? "Basil got towel-burrito’d. Furious. Fluffy. Furious." : "Clover got towel-burrito’d. She’ll be complaining for weeks.") : sw === "b" ? "Basil got sucked up. He’s fine. Mostly fur." : "Clover got sucked up. She’ll be complaining for weeks.", 2000); }
         else if (a.t <= 0) { sc.pull = 0; var rp0 = 2 * U(); addPts(rp0); float(BHOME[sw], BENCH - 130, s2("Held on! +", "Wriggled free! +") + fmt(rp0), "#2E7D6B"); bossStun(b.angry ? 1.3 : 1.6, s2("OVERHEATED!", "TANGLED IN TOWEL!"));
@@ -464,13 +498,13 @@
     }
     // food drops on the bench: Clover wants it, and so does the vacuum
     var f = b.food;
-    if (!f) { b.foodT -= dt; if (b.foodT <= 0) b.food = { kind: gpick(FOOD), x: b.x < 180 ? rnd(212, 268) : rnd(92, 148), y: -30, vy: 0, landed: false, life: 5 }; }
+    if (!f) { b.foodT -= dt; if (b.foodT <= 0) { b.food = { kind: gpick(FOOD), x: b.x < 180 ? rnd(212, 268) : rnd(92, 148), y: -30, vy: 0, landed: false, life: 5 }; } }
     else if (!f.landed) { f.vy += 1400 * dt; f.y += f.vy * dt; if (f.y >= BENCH) { f.y = BENCH; f.landed = true; } }
     else {
       f.life -= dt; var ab = b.atk;
       if (ab && ab.kind === "suck" && ab.ph === "go") f.x += (b.x + ab.side * 40 - f.x) * Math.min(1, dt * 2.2);
-      if (Math.abs(f.x - b.x) < 48 && !(ab && ab.ph === "stun")) { b.food = null; b.foodT = grnd(3.5, 6); b.hp = Math.min(b.hpMax, b.hp + 2); float(f.x, BENCH - 70, s2("It ate Clover’s snack!", "Confiscated! ‘Not on her diet.’"), "#C2553A"); if (hurt("c", 8)) return; }
-      else if (f.life <= 0) { b.food = null; b.foodT = grnd(3, 5); }
+      if (Math.abs(f.x - b.x) < 48 && !(ab && ab.ph === "stun")) { b.food = null; b.foodT = P2.food ? grnd(P2.food[0], P2.food[1]) : grnd(3.5, 6); b.hp = Math.min(b.hpMax, b.hp + (P2.food ? P2.food[2] : 2)); float(f.x, BENCH - 70, s2("It ate Clover’s snack!", "Confiscated! ‘Not on her diet.’"), "#C2553A"); if (hurt("c", 8)) return; }
+      else if (f.life <= 0) { b.food = null; b.foodT = P2.food ? grnd(P2.food[0], P2.food[1]) : grnd(3, 5); }
     }
     if (!b.final && b.t <= 0) { S.rPen = true; b.done = "lose"; b.doneT = 1.6; b.atk = null; b.spot = null; S.ann = { t: 1.6, a: "TIME!", b: s2("IT WON", "THE VET WON") }; toast(pick(s2(["The vacuum wins this round. It ate the bonus.", "VAC-3000 survives. For now.", "Retreat! Regroup! Snacks!"], ["The vet wins this round. Next appointment in 12 months.", "Dr Pokesworth survives. For now.", "Retreat! Regroup! Snacks!"]))); }
   }
@@ -1900,5 +1934,5 @@
   renderBoard("bk-hslist0", "world"); hsUI(); vetProbe();
   buildGuide(); reset(); size(); draw(); if (!sprLeft) drawThumbs();
   window.MW_ART_cb = function () { try { if (!running) { if (!sprLeft) drawThumbs(); draw(); } } catch (e) {} }; // redraw thumbnails once the drawn props arrive
-  if (DEVSTAGE >= 2 && kitchenWon()) setStage(2);
+  if (DEVSTAGE >= 2 && kitchenWon()) { setStage(DEVSTAGE); try { if (new URLSearchParams(location.search).has("go")) { DAILY = false; ENDLESS = false; start(); } } catch (e) {} }
 })();
