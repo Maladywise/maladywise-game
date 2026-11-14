@@ -382,7 +382,7 @@
   function loseScene(id, st) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id], cap = st.gaveUp ? lpick(LOSE.gave) : lpick(NORMIE ? LOSE.capN : LOSE.cap);
     var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(LOSE.bub) + "</span>" + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
-    return { cls: "cb-lose", ms: 4200, html: '<svg class="cb-flat" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 L120 40 L130 40 L136 22 L142 58 L148 40 L400 40"/></svg>' +
+    return { cls: "cb-lose", ms: 4800, html: '<svg class="cb-x" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><path d="M38 38 L82 82"/><path d="M82 38 L38 82"/></svg>' +
       '<div class="cb-big">' + lpick(NORMIE ? LOSE.bigN : LOSE.big) + '</div><p class="cb-cap">' + cap + "</p>" + masc };
   }
   function celebrate(id, st) {
