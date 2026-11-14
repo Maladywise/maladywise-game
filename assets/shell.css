@@ -1394,3 +1394,6 @@ h1 .mw-beta{font-size:11px;top:-4px}
 
 /* mascot pictures link to their story pages (shell.js linkMascots) */
 a.masc-link{display:contents;cursor:pointer}a.masc-link:focus-visible>img{outline:2px solid var(--brand);outline-offset:3px;border-radius:12px}
+
+/* big "Let's play" button at the foot of How to play, stays in view while the rules scroll */
+.mw-play-row{position:sticky;bottom:-1px;margin:14px -4px -4px;padding:10px 4px 4px;background:linear-gradient(transparent,var(--card,#fff) 30%)}.mw-play-go{display:block;width:100%;min-height:52px;border:0;border-radius:999px;background:var(--brand);color:#fff;font:600 17px var(--body,inherit);cursor:pointer}html[data-theme="dark"] .mw-play-go{color:#16121F}.mw-play-go:active{transform:scale(.98)}.mw-masc-help a{color:var(--brand)}
