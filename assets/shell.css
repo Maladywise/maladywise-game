@@ -1343,4 +1343,4 @@ html.medp-on .medp .medp-cols ul.skip>li::before{content:"✕"!important;positio
 .mw-slides .mws-bar .mws-prev{background:transparent;color:var(--brand,#4A3480);border:2px solid currentColor}
 .mw-slides .mws-bar button:disabled{opacity:.35;cursor:default}
 .mw-slides .mws-count{margin-left:auto;font-size:.9rem;color:var(--muted,#6B5A93)}
-@media print{.mw-slides .mws-bar{display:none!important}.mw-slides [hidden]{display:block!important}}
+@media print{.mw-slides,.mw-video{display:none!important}}

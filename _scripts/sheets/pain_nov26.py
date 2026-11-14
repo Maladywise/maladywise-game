@@ -42,6 +42,7 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 <li>Fear that movement will cause damage, and scary explanations (&ldquo;your spine is crumbling&rdquo;)</li>
 <li>Boom-and-bust days: doing heaps on good days, then crashing</li>
 </ul>
+<p class="sass">Feel like punching the next person who tells you to &lsquo;just try yoga&rsquo;? Fair. Pain is never &lsquo;just&rsquo; anything, and no single fix works for everyone.</p>
 
 <h2>What turns it down</h2>
 <ul>
@@ -52,6 +53,7 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 <li><b>People and purpose.</b> Work, hobbies and time with others all calm the nervous system.</li>
 <li><b>Psychological therapies.</b> Not because pain is &lsquo;in your head&rsquo;, but because the brain is where pain is made.</li>
 </ul>
+<p class="sass">Yes, a psychologist for pain. No, nobody thinks you&rsquo;re making it up. Your brain runs the volume knob, so that&rsquo;s where we fiddle.</p>
 
 <h2>Treatments with good evidence</h2>
 <ul>
@@ -71,11 +73,12 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 <li><b>Paracetamol</b> helps less than most people think for back pain and osteoarthritis.</li>
 <li><b>Opioids</b> give small benefits for long-term pain at best, and the risks (dependence, falls, constipation, sleep apnoea, and pain getting worse over time) build up. If you take them already, don&rsquo;t stop suddenly: ask your GP about a slow, supported plan.</li>
 </ul>
+<p class="sass">If a pill could fix chronic pain, you&rsquo;d have found it by now. Medicines are the support act, not the headliner.</p>
 
 <h2>A flare plan</h2>
 <ul>
 <li><b>Remember:</b> a flare is a sensitive alarm, not usually new damage.</li>
-<li><b>Ease back, don&rsquo;t stop.</b> Cut activity to about half for a few days, then build back up.</li>
+<li><b>Ease back, don&rsquo;t stop.</b> Cut activity to about half for a few days, then build back up. Duvet-only days make the next flare worse.</li>
 <li><b>Use your calming tools:</b> heat, a warm shower, slow breathing, gentle stretches, distraction.</li>
 <li><b>Keep sleep and routine</b> as normal as you can.</li>
 <li><b>Write down what helped</b> for next time.</li>
@@ -99,6 +102,7 @@ hub = '''<p class="lede">Pain that sticks around for more than three months is c
 <li><b>Repeated scans for long-term back pain</b><span>Scan changes are common in people with no pain at all, and they rarely change treatment.</span></li>
 <li><b>Long-term bed rest and &lsquo;protecting&rsquo; the sore spot</b><span>It makes the system more sensitive, not less.</span></li>
 <li><b>Expensive gadgets and miracle cures</b><span>If it promises to cure everyone, it cures no one.</span></li>
+<li><b>Being told it&rsquo;s &lsquo;all in your head&rsquo;</b><span>All pain is made in your head. That&rsquo;s neuroscience, not an insult, and it doesn&rsquo;t mean it&rsquo;s imaginary.</span></li>
 </ul>
 
 <h2>Helpful resources</h2>
