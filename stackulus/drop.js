@@ -341,7 +341,7 @@
   }
   function bbox(t) { var m = cells(t, 0), x0 = 9, x1 = -1, y0 = 9, y1 = -1; for (var j = 0; j < m.length; j++) for (var i = 0; i < m.length; i++) if (m[j][i]) { x0 = Math.min(x0, i); x1 = Math.max(x1, i); y0 = Math.min(y0, j); y1 = Math.max(y1, j); } return { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 }; }
   function drawMini(c, t, cx, cy, s, alpha) { var b = bbox(t); drawPiece(c, t, 0, cx - (b.x + b.w / 2) * s, cy - (b.y + b.h / 2) * s, s, alpha); }
-  var MASC = SEAMODE ? "/assets/mascots/normie/labelosis.svg" : "/assets/mascots/labelosis.svg?v=1";
+  var MASC = SEAMODE ? "/assets/mascots/normie/labelosis.svg" : "/assets/mascots/labelosis.svg?v=2";
   var masc = new Image(); masc.src = MASC;
 
   function draw() {

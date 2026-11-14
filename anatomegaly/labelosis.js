@@ -33,7 +33,7 @@
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Anatomegaly (Normie)" : "Anatomegaly";
   // Normie wording swaps
   var T = NORMIE ? { foot: "Diagrams are simplified, original sketches, not to scale. Animal facts checked, but nature loves an exception.", noart: "No diagram for this one. Just you and your nature documentaries.", next: "Go and look at a cat’s ears. Respectfully.", emoji: " 🐙 ", masc: "/assets/mascots/normie/labelosis.svg" }
-    : { foot: "Diagrams are simplified sketches, not to scale. General education, not personal medical advice.", noart: "No diagram for this one. Just you and your anatomy lectures.", next: "Go and find your own scaphoid.", emoji: " 🦴 ", masc: "/assets/mascots/labelosis.svg" };
+    : { foot: "Diagrams are simplified sketches, not to scale. General education, not personal medical advice.", noart: "No diagram for this one. Just you and your anatomy lectures.", next: "Go and find your own scaphoid.", emoji: " 🦴 ", masc: "/assets/mascots/labelosis.svg?v=2" };
   var root = document.getElementById("lbl");
   if (!document.querySelector("link[data-lbl]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "labelosis.css?v=" + BUILD; l.setAttribute("data-lbl", ""); document.head.appendChild(l);
