@@ -2889,7 +2889,8 @@
      "Voice disorders",
      "Voice restoration after laryngectomy",
      "Chronic cough and upper airway disorders",
-     "Lee Silverman Voice Treatment"
+     "Lee Silverman Voice Treatment",
+     "Laryngectomy and tracheostomy care"
     ],
     "practical": {
      "telehealth": null,
@@ -2902,13 +2903,14 @@
      "ndis": null,
      "medicare_cdm": null,
      "new_patients": null,
-     "np_note": ""
+     "np_note": "Also runs the adult speech pathology clinic at Hunter ENT (same address): referrals to bookings@hunterent.com.au or fax 02 4965 5684."
     },
     "inclusive": [],
     "sources": [
-     "https://www.vagusspeechpathology.com.au/about"
+     "https://www.vagusspeechpathology.com.au/about",
+     "https://www.hunterent.com.au/specialty-clinics/adult-speech-pathology/"
     ],
-    "checked": "2026-10-31",
+    "checked": "2026-11-15",
     "ahpra": "not checked"
    },
    {
@@ -3097,6 +3099,350 @@
      "https://www.physioinq.com.au/mobile/nsw/newcastle/speech-therapy-for-adult"
     ],
     "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Communicate Connect Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Communicate Connect Speech Pathology",
+    "address": "Belmont NSW 2280 (clinic; street address not on website)",
+    "suburb": "Belmont",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ccspeech.com.au/",
+    "interests": [
+     "Stroke rehabilitation",
+     "Parkinson's, MND and Huntington's disease",
+     "Traumatic brain injury",
+     "Head and neck cancer",
+     "Complex swallowing incl. modified barium swallow",
+     "Voice disorders",
+     "AAC and complex communication"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (also children)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Phone not listed on the website: book through the website."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ccspeech.com.au/"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Levaro Allied Health – Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Levaro Allied Health",
+    "address": "2/17 Templar Place, Bennetts Green NSW 2290",
+    "suburb": "Bennetts Green",
+    "phone": "02 4001 0525",
+    "fax": "",
+    "email": "contact@levaro.com.au",
+    "ereferral": "",
+    "website": "https://www.levaro.com.au/speech-pathology",
+    "interests": [
+     "Adult communication therapy (speech clarity, fluency, language)",
+     "AAC and assistive technology",
+     "Swallowing and mealtime management",
+     "Aged care"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.levaro.com.au/speech-pathology",
+     "https://www.levaro.com.au/contact"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Enhance Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Enhance Speech Pathology",
+    "address": "Rankin Park NSW 2287 (clinic), plus home visits",
+    "suburb": "Rankin Park",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://enhancespeech.com.au/",
+    "interests": [
+     "Stroke, dementia and head injury",
+     "Progressive neurological conditions incl. MND",
+     "Mealtime and swallowing plans",
+     "AAC and complex communication",
+     "Parkinson's and aphasia groups (past programs)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Book through the website."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://enhancespeech.com.au/"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Voice & Accent Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Voice & Accent Speech Pathology",
+    "address": "Hudson Street Hum, 7 Hudson Street, Hamilton NSW 2303",
+    "suburb": "Hamilton",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.voiceandaccent.com.au/",
+    "interests": [
+     "Voice disorders, vocal overuse and chronic cough",
+     "Parkinson's voice (LSVT LOUD)",
+     "Gender-affirming voice",
+     "Communication after stroke or brain injury",
+     "Swallowing assessment and therapy",
+     "Accent and clarity",
+     "Autistic adults"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adolescents and adults (also children)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Contact through the website."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.voiceandaccent.com.au/",
+     "https://www.yellowpages.com.au/nsw/newcastle/voice-accent-1000000755087-listing.html"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Community Therapy – Adult Speech Pathology (mobile)",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Community Therapy",
+    "address": "Mobile: home and aged care visits across Newcastle, Lake Macquarie, Maitland, Hunter Valley and Port Stephens",
+    "suburb": "Newcastle",
+    "phone": "1300 031 935",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.communitytherapy.com.au/speech-pathology/",
+    "interests": [
+     "Swallowing assessment at home or in aged care (IDDSI)",
+     "Stroke and aphasia",
+     "Speech clarity",
+     "Residential aged care visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults incl. aged care (also children)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "No GP referral needed. NDIS, Support at Home, CHSP or private."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.communitytherapy.com.au/speech-pathology/"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Therapy Alliance (mobile)",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Therapy Alliance",
+    "address": "Mobile service based in Warners Bay (PO Box 729, Warners Bay NSW 2282)",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "hello@therapyalliance.com.au",
+    "ereferral": "",
+    "website": "https://www.therapyalliance.com.au/",
+    "interests": [
+     "Swallowing and mealtime support",
+     "Stroke and brain injury",
+     "Dementia",
+     "Progressive neurological conditions"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults and older people",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Mobile only (home, work, community); telehealth Australia-wide. Referral form on website."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.therapyalliance.com.au/"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "All Areas Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "All Areas Speech Pathology",
+    "address": "2/163 Brighton Avenue, Toronto NSW 2283; also East Maitland, Cessnock, Tanilba Bay (and Central Coast)",
+    "suburb": "Toronto",
+    "phone": "1300 787 136",
+    "fax": "",
+    "email": "office@aaspeech.com.au",
+    "ereferral": "",
+    "website": "https://www.aaspeech.com.au/",
+    "interests": [
+     "Swallowing assessment",
+     "Voice therapy",
+     "Speech and language therapy",
+     "Clinic and mobile visits"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "All ages incl. adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Check which clinic sees adults when booking."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://huntercommunityhub.org.au/community/directory/all-areas-speech-pathology/",
+     "https://www.aaspeech.com.au/"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Recovery Station – Speech Pathology",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "Recovery Station",
+    "address": "Newcastle NSW 2300 (Hunter team; call for clinic address)",
+    "suburb": "Newcastle",
+    "phone": "1300 588 851",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.recoverystation.com.au/",
+    "interests": [
+     "Neurological rehabilitation",
+     "Brain injury and stroke",
+     "Workers compensation and icare clients",
+     "Home, community and telepractice"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "NDIS and icare registered."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.recoverystation.com.au/",
+     "https://www.localsearch.com.au/profile/recovery-station/newcastle-nsw-2300/ZJn6"
+    ],
+    "checked": "2026-11-15",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "University of Newcastle – Aphasia and Stuttering Clinics",
+    "specialty": "Speech Pathology (adult)",
+    "practice": "University of Newcastle Speech Pathology Clinics",
+    "address": "University of Newcastle, Callaghan NSW 2308 (aphasia clinic also online)",
+    "suburb": "Callaghan",
+    "phone": "",
+    "fax": "",
+    "email": "StutteringClinic@newcastle.edu.au",
+    "ereferral": "",
+    "website": "https://www.newcastle.edu.au/engage/school-and-community-programs/clinics/speech-pathology-clinics",
+    "interests": [
+     "Aphasia and motor speech after stroke or neurological injury (any stage of recovery)",
+     "Intensive programs for adults who stutter",
+     "Free stuttering assessments"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "Adults (stuttering clinic all ages)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "Student clinics supervised by university staff. Stuttering assessments free."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastle.edu.au/engage/school-and-community-programs/clinics/speech-pathology-clinics/aphasia-clinic",
+     "https://www.newcastle.edu.au/engage/school-and-community-programs/clinics/speech-pathology-clinics/stuttering-clinic"
+    ],
+    "checked": "2026-11-15",
     "ahpra": "not checked"
    }
   ]
