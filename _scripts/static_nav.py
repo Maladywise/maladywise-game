@@ -263,6 +263,11 @@ def run(quiet=False):
             n += 1
     if not quiet:
         print("static_nav: %d page(s) updated, %d indexable" % (n, len(idx)))
+    try:  # topic mascots beside the h1 (data/topic-heroes.json)
+        import topic_heroes
+        topic_heroes.run(quiet=quiet)
+    except Exception as e:
+        print("topic_heroes skipped: %s" % e)
     try:  # contextual Related links from data/also-read.json (survive page rebuilds)
         import also_read
         also_read.run(quiet=quiet)

@@ -16,7 +16,7 @@ _GAMES = [("dx", "Dxtective", "/dxtective/"), ("wordemic", "Wordemic", "/wordemi
 _HOME = {"medicines": "/medicines/", "normie/norm": "/normie/", "gphub": "/doctors/", "gpschool": "/gp-school/", "specialists": "/specialists/",
          "research": "/research/", "exercises": "/exercises/", "layla": "/tiredwise/", "patients": "/patients/", "mentalhealth": "/mental-health/",
          "sleep": "/sleep/", "travel": "/travel/"}
-_HE = ("Norm", "Percy", "Magnus", "Brix", "Otto")
+_HE = ("Norm", "Percy", "Magnus", "Brix", "Otto", "Hugo")
 _e = _h.escape
 def _slug(n): return _re.sub(r"[^a-z0-9]+", "-", _ud.normalize("NFKD", n).encode("ascii", "ignore").decode().lower()).strip("-")
 def _live(href):

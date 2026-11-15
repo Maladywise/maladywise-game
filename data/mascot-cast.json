@@ -161,6 +161,27 @@
    "role": "Patients' hub host",
    "vibe": "Warm, organised and never forgets a thing. Purple cardigan, pink bow, notebook always in her trunk.",
    "story": "Pippa is an elephant who spent years as a practice nurse, the one who remembered every patient's name, their dog's name and the question they forgot to ask. Elephants really do have long memories, and she uses hers for good: she keeps the patients' hub tidy so the answer you need is never more than two taps away. Her notebook is full of other people's questions. She thinks there is no such thing as a silly one."
+  },
+  "ortho": {
+   "name": "Hugo",
+   "animal": "grizzly bear",
+   "role": "Orthopaedics and bone pages",
+   "vibe": "Ortho bro. Maintains skeletal integrity. Thinks every problem is a fracture until proven otherwise, and is usually right.",
+   "story": "Hugo is a grizzly bear who lifts femurs for fun and calls everyone ‘champ’. He chose orthopaedics because bones are the only part of the body that make sense: they break, you fix them, everyone goes home. He wears his cap backwards in theatre, has never knowingly skipped leg day, and is secretly the gentlest pair of paws in the hospital when it comes to a frightened kid with a broken arm."
+  },
+  "ophthalmology": {
+   "name": "Esme",
+   "animal": "naked mole-rat",
+   "role": "Eye and vision pages",
+   "vibe": "Sharp, patient and unflappable. Barely sees, notices everything.",
+   "story": "Esme is a naked mole-rat. Her species lives underground and has tiny eyes that mostly just tell light from dark, so she grew up finding her way by touch, smell and a very good memory. She became an eye specialist because she knows better than anyone what vision is worth. She reads with a magnifier, uses a white cane on the ward, and has never once missed a detached retina."
+  },
+  "hearing": {
+   "name": "Noor",
+   "animal": "Dalmatian",
+   "role": "Hearing and ear pages",
+   "vibe": "Bright, direct and proudly Deaf. Speaks Auslan and has no patience for people who shout.",
+   "story": "Noor is a Dalmatian, a breed where about 3 in 10 dogs are deaf in at least one ear. She was born Deaf, grew up signing, and became an audiologist so other families would get clear answers early. She lip-reads when she has to, prefers a good interpreter, and will teach you the sign for ‘I love you’ before you’ve finished saying hello."
   }
  }
 }

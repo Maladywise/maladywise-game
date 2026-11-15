@@ -1,0 +1,8 @@
+{
+ "_about": "Topic mascots shown beside the h1 on fact sheets (added by _scripts/topic_heroes.py, run by static_nav.py so they survive rebuilds). key = assets/mascots/<key>.svg; alt names the mascot.",
+ "heroes": {
+  "ortho": {"alt": "Hugo the grizzly bear, orthopaedic surgeon", "pages": ["/osteoporosis/", "/knee-oa/", "/hip-oa/", "/frozen-shoulder/", "/ankle-sprain/", "/back-pain/", "/tennis-elbow/", "/rotator-cuff/", "/plantar-fasciitis/"]},
+  "ophthalmology": {"alt": "Esme the naked mole-rat, eye specialist", "pages": ["/keratoconus/", "/dry-eye/", "/conjunctivitis/"]},
+  "hearing": {"alt": "Noor the Dalmatian, audiologist", "pages": ["/tinnitus/", "/earwax/", "/ear-infection/"]}
+ }
+}

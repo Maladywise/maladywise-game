@@ -815,7 +815,7 @@
   if (window.MutationObserver) new MutationObserver(function () { ticketify(); addShare(); }).observe(document.documentElement, { childList: true, subtree: true });
   // Any mascot picture that isn't already a link or button links to that mascot's page (/mascots/<name>/).
   // Hosts: file name -> name (keep in step with data/mascot-cast.json). Game mascots come from MW_MASCOTS.
-  var HOSTS = { dental: "Kiri", emergency: "Zola", immunisation: "Tembi", menshealth: "Magnus", mentalhealth: "Otto", nutrition: "Fig", pregnancy: "Marisol", satire: "Quill", travel: "Yara", medicines: "Yuki", norm: "Norm", gphub: "Ines", gpschool: "Saga", specialists: "Percy", research: "Mei", mythbusting: "Ama", neurology: "Nalu", allergy: "Hana", exercises: "Jett", sleep: "Kip", layla: "Layla", stats: "Hazel", patients: "Pippa" };
+  var HOSTS = { ortho: "Hugo", ophthalmology: "Esme", hearing: "Noor", dental: "Kiri", emergency: "Zola", immunisation: "Tembi", menshealth: "Magnus", mentalhealth: "Otto", nutrition: "Fig", pregnancy: "Marisol", satire: "Quill", travel: "Yara", medicines: "Yuki", norm: "Norm", gphub: "Ines", gpschool: "Saga", specialists: "Percy", research: "Mei", mythbusting: "Ama", neurology: "Nalu", allergy: "Hana", exercises: "Jett", sleep: "Kip", layla: "Layla", stats: "Hazel", patients: "Pippa" };
   function linkMascots() {
     var imgs = document.querySelectorAll('img[src*="/assets/mascots/"]');
     for (var i = 0; i < imgs.length; i++) {
