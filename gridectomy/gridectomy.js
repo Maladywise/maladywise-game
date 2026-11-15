@@ -1,8 +1,8 @@
 /* Gridectomy: daily 5x5 mini crossword.
-   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block), across/down:[{n,r,c,len,clue}]} */
+   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block); Sundays: rows[7] = Big Gridectomy (7x7), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
   // Normie mode: everyday clues from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Gridectomy (Normie)" : "Gridectomy";
   var root = document.getElementById("grx");
@@ -67,7 +67,9 @@
   function say(t) { $("msg").textContent = t; }
 
   // ---------- model ----------
-  function blk(r, c) { return r < 0 || c < 0 || r > 4 || c > 4 || P.rows[r][c] === "#"; }
+  function N() { return P ? P.rows.length : 5; }  // 5 daily; 7 for Big Gridectomy (Sundays)
+  function big() { return N() > 5; }
+  function blk(r, c) { return r < 0 || c < 0 || r >= N() || c >= N() || P.rows[r][c] === "#"; }
   function ans(r, c) { return P.rows[r][c]; }
   function entryAt(r, c, dir) {
     var list = dir === "a" ? P.across : P.down;
@@ -77,8 +79,8 @@
   }
   function cellsOf(e, dir) { var o = []; for (var i = 0; i < e.len; i++) o.push(dir === "a" ? [e.r, e.c + i] : [e.r + i, e.c]); return o; }
   function allEntries() { return P.across.map(function (e) { return [e, "a"]; }).concat(P.down.map(function (e) { return [e, "d"]; })); }
-  function filled() { for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) if (!blk(r, c) && !st.g[r][c]) return false; return true; }
-  function correct() { for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) if (!blk(r, c) && st.g[r][c] !== ans(r, c)) return false; return true; }
+  function filled() { for (var r = 0; r < N(); r++) for (var c = 0; c < N(); c++) if (!blk(r, c) && !st.g[r][c]) return false; return true; }
+  function correct() { for (var r = 0; r < N(); r++) for (var c = 0; c < N(); c++) if (!blk(r, c) && st.g[r][c] !== ans(r, c)) return false; return true; }
   function fixSel() { if (!entryAt(sel.r, sel.c, sel.dir)) sel.dir = sel.dir === "a" ? "d" : "a"; }
 
   // ---------- render ----------
@@ -88,14 +90,14 @@
     var e = entryAt(sel.r, sel.c, sel.dir), inE = {}, nums = {}, h = "";
     if (e && !st.done) cellsOf(e, sel.dir).forEach(function (x) { inE[x[0] + "," + x[1]] = 1; });
     allEntries().forEach(function (x) { nums[x[0].r + "," + x[0].c] = x[0].n; });
-    for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) {
+    for (var r = 0; r < N(); r++) for (var c = 0; c < N(); c++) {
       if (blk(r, c)) { h += '<div class="cell blk"></div>'; continue; }
       var k = r + "," + c, cls = "cell";
       if (inE[k]) cls += " hl"; if (!st.done && r === sel.r && c === sel.c) cls += " cur";
       if (st.bad.indexOf(k) >= 0) cls += " bad"; if (st.done) cls += st.win ? " won" : " shown";
       h += '<div class="' + cls + '" data-r="' + r + '" data-c="' + c + '" role="gridcell">' + (nums[k] ? "<i>" + nums[k] + "</i>" : "") + "<b>" + esc(st.g[r][c] || "") + "</b></div>";
     }
-    $("grid").innerHTML = h;
+    $("grid").innerHTML = h; $("grid").style.gridTemplateColumns = "repeat(" + N() + ",minmax(0,1fr))"; root.classList.toggle("big", big());
     $("ctext").innerHTML = e && !st.done ? "<b>" + e.n + (sel.dir === "a" ? "A" : "D") + "</b> " + esc(e.clue) : (st.done ? (NORMIE ? "Done. Clues below for the replay." : "Done. Clues below for the post-mortem.") : "");
     var cl = ["a", "d"].map(function (d) {
       var list = d === "a" ? P.across : P.down;
@@ -112,7 +114,7 @@
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
     var extra = st.win ? (st.checks ? " \u00b7 " + st.checks + " check" + (st.checks > 1 ? "s" : "") : " \u00b7 clean") : "";
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "\u23f1 " + fmt(st.t) + extra : "\ud83c\udff3\ufe0f Grid won today") + "\nmaladywise.com";
+    var share = (big() ? NAME.replace("Gridectomy", "Big Gridectomy") : NAME) + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n" + (st.win ? "\u23f1 " + fmt(st.t) + extra : "\ud83c\udff3\ufe0f Grid won today") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>Win %</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + stats.best + "</b><span>Best</span></div></div>" +
@@ -152,14 +154,14 @@
   // ---------- play ----------
   function finish(win) {
     var correct0 = correct(); st.done = true; st.win = win; st.bad = [];
-    if (!win) for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) if (!blk(r, c)) st.g[r][c] = ans(r, c);
+    if (!win) for (var r = 0; r < N(); r++) for (var c = 0; c < N(); c++) if (!blk(r, c)) st.g[r][c] = ans(r, c);
     put(KEY, st);
     if (isLive() && stats.last !== today) {
       var yest = stats.last && dayNum(today) - dayNum(stats.last) === 1;
       stats.played++; if (win) stats.wins++;
       stats.streak = win ? (yest ? stats.streak + 1 : 1) : 0; stats.best = Math.max(stats.best, stats.streak);
       var b = !win ? 6 : st.t < 60 ? 0 : st.t < 120 ? 1 : st.t < 180 ? 2 : st.t < 300 ? 3 : st.t < 600 ? 4 : 5;
-      stats.dist[b]++; stats.last = today; put(SKEY, stats);
+      if (!big()) stats.dist[b]++; stats.last = today; put(SKEY, stats);
     }
     if (P.difficulty === "Einstein") {
       say(win ? "\u269b\ufe0f Einstein solved in " + fmt(st.t) + ". A once-in-50-days grid. Screenshot this." : "Even Einstein needed a few goes. Respect for taking on the rare one.");
@@ -219,7 +221,7 @@
   $("ctext").onclick = function () { sel.dir = sel.dir === "a" ? "d" : "a"; fixSel(); render(); };
   $("check").onclick = function () {
     if (st.done) return; st.checks++; st.bad = [];
-    for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) if (!blk(r, c) && st.g[r][c] && st.g[r][c] !== ans(r, c)) st.bad.push(r + "," + c);
+    for (var r = 0; r < N(); r++) for (var c = 0; c < N(); c++) if (!blk(r, c) && st.g[r][c] && st.g[r][c] !== ans(r, c)) st.bad.push(r + "," + c);
     say(st.bad.length ? pick(SASS.check1) : pick(SASS.check0)); put(KEY, st); render();
   };
   $("reveal").onclick = function () {
@@ -246,8 +248,8 @@
       e.preventDefault();
       if (sel.dir !== mv[2] && entryAt(sel.r, sel.c, mv[2])) { sel.dir = mv[2]; render(); return; }
       var r = sel.r + mv[0], c = sel.c + mv[1];
-      while (r >= 0 && r < 5 && c >= 0 && c < 5 && blk(r, c)) { r += mv[0]; c += mv[1]; }
-      if (r >= 0 && r < 5 && c >= 0 && c < 5) { sel.r = r; sel.c = c; fixSel(); render(); }
+      while (r >= 0 && r < N() && c >= 0 && c < N() && blk(r, c)) { r += mv[0]; c += mv[1]; }
+      if (r >= 0 && r < N() && c >= 0 && c < N()) { sel.r = r; sel.c = c; fixSel(); render(); }
       return;
     }
     if (e.key === "Tab" || e.key === "Enter") { e.preventDefault(); jumpEntry(e.shiftKey ? -1 : 1, false); render(); return; }
@@ -275,9 +277,9 @@
         else { say("Today\u2019s grid is still in theatre. Back tomorrow."); $("clues").innerHTML = ""; }
         renderArchive(); return;
       }
-      if (!st.g) st.g = [0, 1, 2, 3, 4].map(function () { return ["", "", "", "", ""]; });
+      if (!st.g || st.g.length !== N()) st.g = P.rows.map(function (row) { return row.split("").map(function () { return ""; }); });
       var first = P.across[0]; sel = { r: first.r, c: first.c, dir: "a" };
-      $("eyebrow").textContent = (isLive() ? "Gridectomy" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
+      $("eyebrow").textContent = (isLive() ? (big() ? "Big Gridectomy" : "Gridectomy") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive grid. Already done." : "Archive grid. Doesn't count towards your streak.");
       else if (st.done) say(st.win ? "Solved in " + fmt(st.t) + ". Come back tomorrow." : "You've had your go. Back tomorrow.");

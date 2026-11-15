@@ -137,7 +137,7 @@ window.MW_GAMES = [
     tagline: "Link the chain without dropping it.",
     accent: "#2F5DA8", accentDark: "#6E98E0",
     icon: '<svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="5" y="17" width="20" height="14" rx="7"/><rect x="23" y="17" width="20" height="14" rx="7"/></svg>' },
-  { id: "gridectomy", normieMascot: true, kind: "Mini crossword", name: "Gridectomy", path: "gridectomy/", live: true, store: { stats: "grx-stats", day: "grx-day-", labels: ["<1m", "<2m", "<3m", "<5m", "<10m", "10m+", "Help"], distTitle: " (solve time)" },
+  { id: "gridectomy", normieMascot: true, kind: "Mini crossword", name: "Gridectomy", path: "gridectomy/", live: true, special: { dow: 0, from: "2026-11-22", short: "\ud83e\udde9 Big Sunday", label: "\ud83e\udde9 Big Gridectomy \u00b7 7\u00d77", tagline: "Seven-by-seven Sunday crossword. Bigger ego bruise." }, store: { stats: "grx-stats", day: "grx-day-", labels: ["<1m", "<2m", "<3m", "<5m", "<10m", "10m+", "Help"], distTitle: " (solve time)" },
     normie: { kind: "Mini crossword", tagline: "Five-by-five crossword. Big ego bruise.", quip: "Five by five. Done before the kettle boils.", helpQuip: "Speed counts. So does not peeking.", help: [
       "Fill the 5x5 grid. Every row and column is a word. Normie mode: everyday clues, no medicine.",
       "Tap a square to select it. Tap it again, or the clue bar, to switch Across/Down.",

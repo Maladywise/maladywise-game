@@ -67,3 +67,6 @@ html[data-theme="dark"] #grx .cell.cur b{color:#fff}
 #grx .cell,#grx .key,#grx .cluebar{touch-action:manipulation}
 @media (max-width:520px){#grx .wrap{gap:8px}#grx .cluebar{min-height:46px}#grx .key{height:48px}}
 #grx .wrap:has(.kb[hidden]) .grid{width:min(100%,340px)}
+
+/* Big Gridectomy (7x7, Sundays) */
+#grx.big .grid{width:min(100%,max(260px,min(460px,calc(100svh - 470px))))}#grx.big .cell b{font-size:clamp(15px,4.6vw,24px)}#grx.big .cell i{font-size:9px}

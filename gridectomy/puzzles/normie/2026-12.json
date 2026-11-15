@@ -434,11 +434,13 @@
   "number": 44,
   "difficulty": "Genius",
   "rows": [
-   "CAM##",
-   "AWOKE",
-   "SAUNA",
-   "TYRES",
-   "##NET"
+   "FOR#TIP",
+   "AWE#WOE",
+   "RESTING",
+   "##TIN##",
+   "SHOCKER",
+   "PER#LEA",
+   "ARE#ELM"
   ],
   "across": [
    {
@@ -446,35 +448,77 @@
     "r": 0,
     "c": 0,
     "len": 3,
-    "clue": "Web___"
+    "clue": "In favour of"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Came to"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Gratuity"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Finland's great gift, about three million of them"
+    "len": 3,
+    "clue": "Wonder"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Studded ones are common in a Finnish winter"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Sorrow"
    },
    {
     "n": 9,
-    "r": 4,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Taking a break"
+   },
+   {
+    "n": 11,
+    "r": 3,
     "c": 2,
     "len": 3,
-    "clue": "After tax"
+    "clue": "Can"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Terrible performance, informally"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "For each"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Meadow"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Exist"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Shady tree"
    }
   ],
   "down": [
@@ -482,38 +526,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Everyone in the film"
+    "len": 3,
+    "clue": "Distant"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "On holiday"
+    "len": 3,
+    "clue": "Be in debt"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Grieve"
+    "len": 7,
+    "clue": "Bring back"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "What a little star does"
    },
    {
     "n": 5,
-    "r": 1,
-    "c": 3,
-    "len": 4,
-    "clue": "Leg bender"
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Charged particle"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "From Stockholm, Helsinki's direction"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Clothes ___"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Twitch"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Day of pampering"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "That woman"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Slippery fish"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Male sheep"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-07",
@@ -1036,86 +1123,173 @@
   "number": 51,
   "difficulty": "Genius",
   "rows": [
-   "##SEA",
-   "JAPAN",
-   "APART",
-   "VERSE",
-   "ASK##"
+   "ARE#TIP",
+   "WAX#ROE",
+   "ETCHING",
+   "##LOG##",
+   "SMUGGLE",
+   "PAD#EEL",
+   "APE#RAM"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
+    "c": 0,
     "len": 3,
-    "clue": "Mediterranean, say"
+    "clue": "Exist"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Land of the rising sun"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Separated"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Hint"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Song section"
+    "len": 3,
+    "clue": "Candle material"
    },
    {
     "n": 8,
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Fish eggs"
+   },
+   {
+    "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Acid-on-metal artwork"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Firewood piece"
+   },
+   {
+    "n": 12,
     "r": 4,
     "c": 0,
+    "len": 7,
+    "clue": "Sneak past customs"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
     "len": 3,
-    "clue": "Put a question"
+    "clue": "Notebook"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Slippery fish"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Gorilla, for one"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Male sheep"
    }
   ],
   "down": [
    {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Coffee, or an Indonesian island"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 1,
-    "len": 4,
-    "clue": "Copies"
-   },
-   {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Little flash that starts an engine"
+    "c": 0,
+    "len": 3,
+    "clue": "Wonder"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Things that get pierced"
+    "c": 1,
+    "len": 3,
+    "clue": "Cheese thief of cartoons"
    },
    {
     "n": 3,
     "r": 0,
+    "c": 2,
+    "len": 7,
+    "clue": "Leave out"
+   },
+   {
+    "n": 4,
+    "r": 0,
     "c": 4,
-    "len": 4,
-    "clue": "Poker stake"
+    "len": 7,
+    "clue": "Set off"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Charged particle"
+   },
+   {
+    "n": 6,
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Tent ___"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Greedy person"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Hot tub place"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Atlas page"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Meadow"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Shady tree"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-14",
@@ -1638,86 +1812,173 @@
   "number": 58,
   "difficulty": "Genius",
   "rows": [
-   "#SPAR",
-   "SHALE",
-   "TASTE",
-   "OPTED",
-   "PEAR#"
+   "FOR#SHY",
+   "OWE#TIE",
+   "ENDLESS",
+   "##WAR##",
+   "LOOPING",
+   "ADO#LIE",
+   "BED#ELM"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Box for practice"
-   },
-   {
-    "n": 5,
-    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Flaky rock"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Sense of flavour"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Chose"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 4,
-    "clue": "Partridge's tree"
-   }
-  ],
-  "down": [
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Red traffic sign"
-   },
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Circle or square"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Penne or ravioli"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Change"
+    "len": 3,
+    "clue": "In favour of"
    },
    {
     "n": 4,
     "r": 0,
     "c": 4,
-    "len": 4,
-    "clue": "Water plant"
+    "len": 3,
+    "clue": "Bashful"
+   },
+   {
+    "n": 7,
+    "r": 1,
+    "c": 0,
+    "len": 3,
+    "clue": "Be in debt"
+   },
+   {
+    "n": 8,
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Draw"
+   },
+   {
+    "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Never-ending"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Conflict"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Going round and round"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Fuss"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Fib"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Where you sleep"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Shady tree"
    }
-  ]
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "Enemy"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 3,
+    "clue": "Possess"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 7,
+    "clue": "Giant Californian tree"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "Germ-free"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Belonging to him"
+   },
+   {
+    "n": 6,
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Opposite of no"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Circuit of a track"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Retriever, for short"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Poem of praise"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Nothing"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Jewel"
+   }
+  ],
+  "big": true
  },
  {
   "date": "2026-12-21",
@@ -2240,47 +2501,91 @@
   "number": 65,
   "difficulty": "Genius",
   "rows": [
-   "HALO#",
-   "ELECT",
-   "ROACH",
-   "ENSUE",
-   "#GERM"
+   "BED#FAT",
+   "ONE#ARE",
+   "ADVANCE",
+   "##ELF##",
+   "GALLANT",
+   "AGO#RAW",
+   "PEP#EGO"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Ring round an angel's head"
+    "len": 3,
+    "clue": "Where you sleep"
    },
    {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Pick by voting"
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Plump"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Kitchen scuttler"
+    "len": 3,
+    "clue": "Single"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Follow"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Exist"
    },
    {
     "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Move forward"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Santa's helper"
+   },
+   {
+    "n": 12,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "Handwashing's target"
+    "c": 0,
+    "len": 7,
+    "clue": "Brave and chivalrous"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Previously"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Uncooked"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Energy"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Self-importance"
    }
   ],
   "down": [
@@ -2288,38 +2593,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "In this place"
+    "len": 3,
+    "clue": "Feathery scarf"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 5,
-    "clue": "Forward"
+    "len": 3,
+    "clue": "Finish"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Rental deal"
+    "len": 7,
+    "clue": "Grow"
    },
    {
     "n": 4,
     "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Happen"
+    "c": 4,
+    "len": 7,
+    "clue": "Trumpet flourish"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Rainbow shape"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Those people"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Golf peg"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Everything"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Space"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Number of birthdays"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Pester"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Pair"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-28",

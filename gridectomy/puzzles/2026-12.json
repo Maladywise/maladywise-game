@@ -434,11 +434,13 @@
   "number": 51,
   "difficulty": "Genius",
   "rows": [
-   "REF##",
-   "IDEAS",
-   "BIRCH",
-   "STARE",
-   "##LED"
+   "ICE#PAY",
+   "NUT#OWE",
+   "NEEDLES",
+   "##RAY##",
+   "SANDMAN",
+   "ERA#EGO",
+   "EEL#ROW"
   ],
   "across": [
    {
@@ -446,35 +448,77 @@
     "r": 0,
     "c": 0,
     "len": 3,
-    "clue": "Whistle-blowing official"
+    "clue": "First aid for a sprain, briefly"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Brainstorm output"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Wages"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Finnish tree whose sugar gave us xylitol gum"
+    "len": 3,
+    "clue": "Common allergy trigger"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Fixed look, as in an absence seizure"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Be in the red"
    },
    {
     "n": 9,
-    "r": 4,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Acupuncture kit"
+   },
+   {
+    "n": 11,
+    "r": 3,
     "c": 2,
     "len": 3,
-    "clue": "Light source in a modern otoscope"
+    "clue": "Stingray, for short"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Bringer of sleep in folklore"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Long period"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Sense of self"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Slippery fish"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Sit in a line"
    }
   ],
   "down": [
@@ -482,38 +526,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Counted on a chest X-ray to check a good breath in"
+    "len": 3,
+    "clue": "Pub with rooms"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "Fix a typo"
+    "len": 3,
+    "clue": "Signal to start"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Gone wild, like some cats"
+    "len": 7,
+    "clue": "Never-ending"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "Long-chain molecule like nylon"
    },
    {
     "n": 5,
-    "r": 1,
-    "c": 3,
-    "len": 4,
-    "clue": "Unit of land"
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Amazement"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Lost skin, like a snake"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Consent word"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Father"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Notice"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "'We ___ the champions'"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Before now"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Immediately"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-07",
@@ -1036,11 +1123,13 @@
   "number": 58,
   "difficulty": "Genius",
   "rows": [
-   "ART##",
-   "MOIST",
-   "POLIO",
-   "STENT",
-   "##SEE"
+   "EAR#HAD",
+   "VIA#EGO",
+   "EDITION",
+   "##SIR##",
+   "TRICEPS",
+   "ION#SAP",
+   "PEG#SLY"
   ],
   "across": [
    {
@@ -1048,35 +1137,77 @@
     "r": 0,
     "c": 0,
     "len": 3,
-    "clue": "Antiretroviral therapy, or a gallery's contents"
+    "clue": "Organ of balance"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Like a wound under the right dressing"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Owned"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Salk's sworn enemy"
+    "len": 3,
+    "clue": "By way of"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Wire scaffold that keeps a coronary open"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Freud's middle manager"
    },
    {
     "n": 9,
-    "r": 4,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Version of a textbook"
+   },
+   {
+    "n": 11,
+    "r": 3,
     "c": 2,
     "len": 3,
-    "clue": "Diocese, or a bishop's patch"
+    "clue": "Knight's title"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Muscle at the back of the upper arm"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Sodium or potassium in solution"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Tree fluid"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Clothes ___"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Cunning"
    }
   ],
   "down": [
@@ -1084,38 +1215,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Units of the current a defibrillator delivers"
+    "len": 3,
+    "clue": "Night before"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "Aortic ___, a surgeon's target"
+    "len": 3,
+    "clue": "First ___"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Bathroom squares"
+    "len": 7,
+    "clue": "Lifting"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "Wealthy daughter in waiting"
    },
    {
     "n": 5,
-    "r": 1,
-    "c": 3,
-    "len": 4,
-    "clue": "Wave shape, or a Latin 'without'"
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Previously"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Bag for carrying a portable defib"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Put on, as gloves"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Involuntary twitch"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Pointy end"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Fish eggs"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Mate"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Secret agent"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-14",
@@ -1638,11 +1812,13 @@
   "number": 65,
   "difficulty": "Genius",
   "rows": [
-   "LAG##",
-   "ATLAS",
-   "DOULA",
-   "SPELL",
-   "##DYE"
+   "FIT#CAB",
+   "ICY#ORE",
+   "REPLACE",
+   "##HIS##",
+   "ADOPTED",
+   "DUO#ARE",
+   "DEN#LAW"
   ],
   "across": [
    {
@@ -1650,35 +1826,77 @@
     "r": 0,
     "c": 0,
     "len": 3,
-    "clue": "Fall behind, as many a poor region's vaccine rollout has"
+    "clue": "Seizure, informally"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Book of maps, or the bone holding up the head"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Taxi"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Non-medical birth companion, often a lifeline in underserved communities"
+    "len": 3,
+    "clue": "Frosty"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Stint, or a charm"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Mined rock"
    },
    {
     "n": 9,
-    "r": 4,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "What a joint surgeon might do to a hip"
+   },
+   {
+    "n": 11,
+    "r": 3,
     "c": 2,
     "len": 3,
-    "clue": "Contrast, loosely, or a hair job"
+    "clue": "Belonging to him"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Taken in as family"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Pair"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Exist"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Lair"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Rule"
    }
   ],
   "down": [
@@ -1686,38 +1904,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Boys, informally"
+    "len": 3,
+    "clue": "Christmas tree"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "On"
+    "len": 3,
+    "clue": "Cold pack for a bruise"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Stuck, as a small wound in A&E"
+    "len": 7,
+    "clue": "Tropical storm"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "By the sea"
    },
    {
     "n": 5,
-    "r": 1,
-    "c": 3,
-    "len": 4,
-    "clue": "Friend in the fight for equal care"
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Curve"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Knock-down event"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Allergy trigger with a sting"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Site of a cold sore"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Sum"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Expected, like a baby"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Age"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Morning moisture"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-21",
@@ -2240,11 +2501,13 @@
   "number": 72,
   "difficulty": "Genius",
   "rows": [
-   "OLD##",
-   "MORPH",
-   "EBOLA",
-   "NEVER",
-   "##EAT"
+   "HIP#ACT",
+   "ACE#CAR",
+   "DENSITY",
+   "##DID##",
+   "EDITION",
+   "NUN#TWO",
+   "DOG#YET"
   ],
   "across": [
    {
@@ -2252,35 +2515,77 @@
     "r": 0,
     "c": 0,
     "len": 3,
-    "clue": "Elderly, or last season's strain"
+    "clue": "Ball-and-socket joint"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Change form, as a virus between waves"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Behave"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Virus named after a river in the Congo Basin"
+    "len": 3,
+    "clue": "Unreturnable serve"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "___ events (incidents that shouldn't happen on a ward)"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Motor"
    },
    {
     "n": 9,
-    "r": 4,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "What a DEXA scan measures in bone"
+   },
+   {
+    "n": 11,
+    "r": 3,
     "c": 2,
     "len": 3,
-    "clue": "Put away, as dinner"
+    "clue": "Performed"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Printing"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Sister in a habit"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Number of lungs"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Pet that may need a vet"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Still"
    }
   ],
   "down": [
@@ -2288,38 +2593,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Bad sign"
+    "len": 3,
+    "clue": "Possessed"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 4,
-    "clue": "Part of a lung that pandemic flu can consolidate"
+    "len": 3,
+    "clue": "Frozen water"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Powered, as a superspreader an outbreak"
+    "len": 7,
+    "clue": "Awaiting results"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "pH concern in reflux"
    },
    {
     "n": 5,
-    "r": 1,
-    "c": 3,
-    "len": 4,
-    "clue": "Urgent request"
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Pet that may cause hives"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Male deer"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Attempt"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Take a seat"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Finish"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Two"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Be in debt"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Negative word"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-12-28",

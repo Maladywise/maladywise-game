@@ -1810,47 +1810,91 @@
   "number": 30,
   "difficulty": "Genius",
   "rows": [
-   "DAME#",
-   "AGENT",
-   "MATTE",
-   "SIREN",
-   "#NERD"
+   "FOR#ICE",
+   "AWE#NAG",
+   "READING",
+   "##LOT##",
+   "OPINION",
+   "FAT#ARE",
+   "FLY#LET"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Panto role usually played by a bloke"
+    "len": 3,
+    "clue": "In favour of"
    },
    {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Secret ___"
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Frozen water"
    },
    {
     "n": 7,
-    "r": 2,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Not glossy"
+    "len": 3,
+    "clue": "Wonder"
    },
    {
     "n": 8,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Wailing alarm"
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Keep complaining"
    },
    {
     "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Bookworm's hobby"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Auction item"
+   },
+   {
+    "n": 12,
     "r": 4,
-    "c": 1,
-    "len": 4,
-    "clue": "Bookish type"
+    "c": 0,
+    "len": 7,
+    "clue": "View"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Plump"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Exist"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Buzzing insect"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Allow"
    }
   ],
   "down": [
@@ -1858,38 +1902,81 @@
     "n": 1,
     "r": 0,
     "c": 0,
-    "len": 4,
-    "clue": "Hoover and Three Gorges"
+    "len": 3,
+    "clue": "Distant"
    },
    {
     "n": 2,
     "r": 0,
     "c": 1,
-    "len": 5,
-    "clue": "Encore"
+    "len": 3,
+    "clue": "Be in debt"
    },
    {
     "n": 3,
     "r": 0,
     "c": 2,
-    "len": 5,
-    "clue": "Sprinter's unit"
+    "len": 7,
+    "clue": "___ TV"
    },
    {
     "n": 4,
     "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Come in"
+    "c": 4,
+    "len": 7,
+    "clue": "First letter of a name"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Tin"
    },
    {
     "n": 6,
-    "r": 1,
-    "c": 4,
-    "len": 4,
-    "clue": "Look after"
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Omelette ingredient"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Put on"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Not on"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Friend"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Mined rock"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Tennis divider"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-11-23",
@@ -2412,86 +2499,173 @@
   "number": 37,
   "difficulty": "Genius",
   "rows": [
-   "##RIM",
-   "BLADE",
-   "ROTOR",
-   "AGILE",
-   "TOO##"
+   "FOR#WHO",
+   "OWE#AID",
+   "ENDORSE",
+   "##URN##",
+   "RECEIVE",
+   "AYE#NIL",
+   "WED#GEM"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
+    "c": 0,
     "len": 3,
-    "clue": "Basket's edge"
+    "clue": "On behalf of"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Single strand of grass"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Helicopter part that reads the same backwards"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "'Doctor ___'"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Nimble"
+    "len": 3,
+    "clue": "Be in the red"
    },
    {
     "n": 8,
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Help"
+   },
+   {
+    "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Back publicly"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Tea vessel at a big event"
+   },
+   {
+    "n": 12,
     "r": 4,
     "c": 0,
+    "len": 7,
+    "clue": "Get"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
     "len": 3,
-    "clue": "As well"
+    "clue": "Yes, in parliament"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Zero, in footy"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Marry"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Precious stone"
    }
   ],
   "down": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Golden ___"
+    "c": 0,
+    "len": 3,
+    "clue": "Enemy"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Pop star, to a superfan"
+    "c": 1,
+    "len": 3,
+    "clue": "Possess"
    },
    {
     "n": 3,
     "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Nothing more than"
+    "c": 2,
+    "len": 7,
+    "clue": "On sale"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Little terror"
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "Caution"
    },
    {
     "n": 5,
-    "r": 1,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Belonging to him"
+   },
+   {
+    "n": 6,
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Poem of praise"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Rock with metal"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Uncooked"
+   },
+   {
+    "n": 13,
+    "r": 4,
     "c": 1,
-    "len": 4,
-    "clue": "Brand emblem"
+    "len": 3,
+    "clue": "Organ for seeing"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Compete"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Shady tree"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-11-30",

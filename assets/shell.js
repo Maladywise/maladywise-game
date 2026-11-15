@@ -1453,7 +1453,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";
       gt.style.setProperty("--ga", g.accent); gt.style.setProperty("--gad", g.accentDark);
-      gt.innerHTML = "<h1>" + g.name + (g.nmode ? ' <span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + "</h1><p>" + g.tagline + "</p>";
+      var spT = g.special && g.special.tagline && g.special.dow === dow && !(g.special.from && today < g.special.from) ? g.special.tagline : g.tagline;
+      gt.innerHTML = "<h1>" + g.name + (g.nmode ? ' <span class="mw-npill">\ud83d\ude42 Normie</span>' : "") + "</h1><p>" + spT + "</p>";
       var hd = box.querySelector(".head");
       if (hd) hd.parentNode.insertBefore(gt, hd.nextSibling); else box.insertBefore(gt, box.firstChild);
     }

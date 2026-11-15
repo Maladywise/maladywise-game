@@ -1810,86 +1810,173 @@
   "number": 37,
   "difficulty": "Genius",
   "rows": [
-   "##GUT",
-   "ALIVE",
-   "ROVER",
-   "CREAM",
-   "HER##"
+   "GUT#ARK",
+   "ASH#CUE",
+   "PEELING",
+   "##RED##",
+   "STATION",
+   "PEP#TWO",
+   "ANY#YET"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 2,
+    "c": 0,
     "len": 3,
-    "clue": "Feeling that never makes it onto the obs chart"
+    "clue": "Where the microbiome lives"
    },
    {
     "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "One half of Schrödinger's cat's options"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Mars explorer, or a classic name for a dog"
+    "r": 0,
+    "c": 4,
+    "len": 3,
+    "clue": "Noah's boat"
    },
    {
     "n": 7,
-    "r": 3,
+    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Emollient that's also the top of the milk"
+    "len": 3,
+    "clue": "Tree with a dieback problem"
    },
    {
     "n": 8,
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "Snooker stick"
+   },
+   {
+    "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "What sunburnt skin does a few days later"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Inflamed skin colour"
+   },
+   {
+    "n": 12,
     "r": 4,
     "c": 0,
+    "len": 7,
+    "clue": "Nurses' ___"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
     "len": 3,
-    "clue": "Spike Jonze film about falling for an AI"
+    "clue": "Energy, informally"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Number of kidneys most people have"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Not a particular one"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "So far"
    }
   ],
   "down": [
    {
-    "n": 4,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Pharyngeal ___ (embryonic structure affected in 22q11.2 deletion syndrome)"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 1,
-    "len": 4,
-    "clue": "Old wives' tales, collectively"
-   },
-   {
     "n": 1,
     "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Organ donor, in plain Anglo-Saxon"
+    "c": 0,
+    "len": 3,
+    "clue": "Space between front teeth, perhaps"
    },
    {
     "n": 2,
     "r": 0,
-    "c": 3,
-    "len": 4,
-    "clue": "Layer shared by the iris, ciliary body and choroid"
+    "c": 1,
+    "len": 3,
+    "clue": "Use-by date word"
    },
    {
     "n": 3,
     "r": 0,
+    "c": 2,
+    "len": 7,
+    "clue": "Physio, OT or speech, for example"
+   },
+   {
+    "n": 4,
+    "r": 0,
     "c": 4,
-    "len": 4,
-    "clue": "37 weeks onward, on the labour ward"
+    "len": 7,
+    "clue": "What antacids reduce"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Do a parkrun"
+   },
+   {
+    "n": 6,
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Beer barrel"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Allow"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Place for a soak"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Fingers on two hands"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "Be in debt"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "___ for resale"
    }
-  ]
+  ],
+  "big": true
  },
  {
   "date": "2026-11-23",
@@ -2412,86 +2499,173 @@
   "number": 44,
   "difficulty": "Genius",
   "rows": [
-   "#CHAP",
-   "TRACE",
-   "WASTE",
-   "INTER",
-   "NEED#"
+   "ILL#CAR",
+   "TOE#AGO",
+   "STOPPED",
+   "##PUS##",
+   "SCAPULA",
+   "EAR#LAW",
+   "END#EYE"
   ],
   "across": [
    {
     "n": 1,
     "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Split lip's problem, or a fellow"
-   },
-   {
-    "n": 5,
-    "r": 1,
     "c": 0,
-    "len": 5,
-    "clue": "Contact tracer's verb"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Urea, to a nephron"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Prefix meaning between, as in ___costal"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 4,
-    "clue": "Basic requirement on Maslow's pyramid"
-   }
-  ],
-  "down": [
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "One of two born from the same pregnancy"
-   },
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Lifting machine, or a wading bird"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Speed that makes waste, proverbially"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Played a role"
+    "len": 3,
+    "clue": "Unwell"
    },
    {
     "n": 4,
     "r": 0,
     "c": 4,
-    "len": 4,
-    "clue": "___ review (the journal's gatekeeper)"
+    "len": 3,
+    "clue": "Vehicle you shouldn't drive after a sedative"
+   },
+   {
+    "n": 7,
+    "r": 1,
+    "c": 0,
+    "len": 3,
+    "clue": "Hallux, for one"
+   },
+   {
+    "n": 8,
+    "r": 1,
+    "c": 4,
+    "len": 3,
+    "clue": "In the past"
+   },
+   {
+    "n": 9,
+    "r": 2,
+    "c": 0,
+    "len": 7,
+    "clue": "Halted"
+   },
+   {
+    "n": 11,
+    "r": 3,
+    "c": 2,
+    "len": 3,
+    "clue": "Yellow stuff in an abscess"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 7,
+    "clue": "Shoulder blade"
+   },
+   {
+    "n": 16,
+    "r": 5,
+    "c": 0,
+    "len": 3,
+    "clue": "Organ with an anvil and a stirrup"
+   },
+   {
+    "n": 17,
+    "r": 5,
+    "c": 4,
+    "len": 3,
+    "clue": "Act of parliament"
+   },
+   {
+    "n": 18,
+    "r": 6,
+    "c": 0,
+    "len": 3,
+    "clue": "Finish"
+   },
+   {
+    "n": 19,
+    "r": 6,
+    "c": 4,
+    "len": 3,
+    "clue": "Organ with a blind spot"
    }
-  ]
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 0,
+    "len": 3,
+    "clue": "Belonging to it"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 1,
+    "len": 3,
+    "clue": "Car park"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 2,
+    "len": 7,
+    "clue": "Spotted big cat"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 7,
+    "clue": "Gelatin shell for a medicine"
+   },
+   {
+    "n": 5,
+    "r": 0,
+    "c": 5,
+    "len": 3,
+    "clue": "Biggest risk factor for most diseases"
+   },
+   {
+    "n": 6,
+    "r": 0,
+    "c": 6,
+    "len": 3,
+    "clue": "Light-sensing cell in the retina"
+   },
+   {
+    "n": 10,
+    "r": 2,
+    "c": 3,
+    "len": 3,
+    "clue": "Young seal"
+   },
+   {
+    "n": 12,
+    "r": 4,
+    "c": 0,
+    "len": 3,
+    "clue": "Visit your GP: '___ a doctor'"
+   },
+   {
+    "n": 13,
+    "r": 4,
+    "c": 1,
+    "len": 3,
+    "clue": "Tin"
+   },
+   {
+    "n": 14,
+    "r": 4,
+    "c": 5,
+    "len": 3,
+    "clue": "___ person (not a doctor)"
+   },
+   {
+    "n": 15,
+    "r": 4,
+    "c": 6,
+    "len": 3,
+    "clue": "Wonder"
+   }
+  ],
+  "big": true
  },
  {
   "date": "2026-11-30",
