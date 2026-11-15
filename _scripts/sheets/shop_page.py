@@ -6,11 +6,12 @@ def _grid(g):
     return '<ul class="shopg">' + "".join(
         '<li><a href="%s" rel="noopener" target="_blank"><img src="%s" alt="Sticker: %s (%s)" width="360" height="360" loading="lazy"></a></li>' % (
             (x[4] if len(x) > 4 else SHOP), x[1], _h.escape(x[2]), _h.escape(x[3])) for x in _S if x[0] == g) + "</ul>\n"
-body = ('<p class="lede">Stickers starring Basil, Clover and the game mascots. Printed and posted worldwide by Redbubble, so you can stick a sassy jellyfish on your laptop.</p>\n'
+body = ('<p class="lede">Stickers, magnets, T-shirts and mugs starring Basil, Clover and the Malady Wise mascots. Printed and posted worldwide by Redbubble, so you can stick a sassy jellyfish on your laptop. Tap a design to see every product.</p>\n'
         '<p><a class="btn-shop" href="%s" rel="noopener" target="_blank">Open the shop on Redbubble →</a></p>\n' % SHOP +
         '<p class="sass">Clinically questionable, emotionally essential.</p>\n'
         '<h2>Basil and Clover</h2>\n<p>The real cats behind Malady Wise, drawn as cartoons. Basil is the fluffy white one with two brain cells. Clover runs the complaints department.</p>\n' + _grid("cats") +
         '<h2>The game mascots</h2>\n<p>One for every daily puzzle. Meet them properly on the <a href="/mascots/">mascots page</a>.</p>\n' + _grid("mascots") +
+        '<h2>The site hosts</h2>\n<p>The characters who look after the deep dives, research, medicines, sleep, dental and Normie pages, plus the arcade crew.</p>\n' + _grid("hosts") +
         '<p class="meta">Prices, shipping and returns are handled by Redbubble. Buying a sticker helps keep the puzzles free and ad-free.</p>\n'
         '<style>.shopg{list-style:none!important;margin:14px 0 26px!important;padding:0!important;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}'
         '.shopg li{margin:0!important}.shopg a{display:block;text-decoration:none;color:inherit;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:8px;text-align:center}'
