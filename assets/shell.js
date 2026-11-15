@@ -547,6 +547,7 @@
     ["sx_friday", "📠", "Friday Arvo", "Visited at 5 o’clock on a Friday.", "global", "", 0, 1],
     ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
     ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1],
+    ["sx_cab", "🗝️", "Cabinet Keeper", "Opened the Cabinet of Curiosities.", "global", "", 0, 1],
     ["sx_da", "✏️", "Diabolically Clever", "Found every DA in the secret DA room.", "global", "", 0, 1]
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
@@ -626,7 +627,7 @@
       sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0),
       sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0),
       sx_code: !!get("mw-secret-code", 0), sx_scrawl: !!get("mw-secret-scrawl", 0), sx_wait: !!get("mw-secret-wait", 0),
-      sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0), sx_da: !!get("mw-secret-da", 0)
+      sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0), sx_da: !!get("mw-secret-da", 0), sx_cab: !!get("mw-secret-cabinet", 0)
     };
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
@@ -2022,6 +2023,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
+  // 14 Tap the footer tagline 5 times: the Cabinet of Curiosities, a clickable list of the typed secrets plus clues for the rest.
   // 13 Type "astle": the hidden DA room (/da/), a tribute to cryptic setter David Astle; find all five DAs for a badge.
   // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward(). 12 Type "basil" or "clover": paw prints.
   (function () {
@@ -2078,7 +2080,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (/konami$/.test(typed)) { typed = ""; parade(); }
       if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
       if (/scrawl$/.test(typed)) { typed = ""; scrawl(); }
-      if (/astle$/.test(typed)) { typed = ""; flag("daroom"); pill("✏️ Bingo. A secret room for a puzzle legend…", 1600); setTimeout(function () { location.href = "/da/"; }, 1100); }
+      if (/astle$/.test(typed)) { typed = ""; daRoom(); }
       if (/(basil|clover)$/.test(typed)) { var who = /basil$/.test(typed) ? "Basil" : "Clover"; typed = ""; paws(who); }
     });
     function parade() {
@@ -2138,6 +2140,39 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       setTimeout(place, 1500);
     })();
 
+    function daRoom() { flag("daroom"); pill("✏️ Bingo. A secret room for a puzzle legend…", 1600); setTimeout(function () { location.href = "/da/"; }, 1100); }
+    // --- the Cabinet of Curiosities: tap the footer tagline 5 times for a clickable list of the typed secrets (phones can't type) ---
+    var ct = [];
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest(".ft-tag")) return;
+      var now = Date.now(); ct = ct.filter(function (x) { return now - x < 3000; }); ct.push(now);
+      if (ct.length >= 5) { ct = []; cabinet(); }
+    });
+    function cabinet() {
+      if (document.querySelector(".mw-cab")) return;
+      flag("cabinet");
+      var A = [["🦇", "Night Shift", "A hidden game for the 3am crowd.", nightShift], ["🎉", "Mascot parade", "The whole gang, all at once.", parade],
+        ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
+        ["🐾", "Call Basil", "He may ignore you.", function () { paws("Basil"); }], ["🐾", "Call Clover", "She’ll supervise.", function () { paws("Clover"); }],
+        ["✏️", "The DA Room", "A tribute to a cryptic legend.", daRoom]];
+      var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 10 times, quickly.", "🐈 Tap the logo on the home page 7 times.",
+        "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
+      var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
+      d.innerHTML = '<div class="mw-cab-in"><button type="button" class="mw-cab-x" aria-label="Close">×</button><p class="mw-cab-k">You found it</p><h2>The Cabinet of Curiosities</h2>' +
+        '<p class="mw-cab-l">Curiosity is contagious. Pick one:</p><div class="mw-cab-g">' +
+        A.map(function (a, i) { return '<button type="button" data-i="' + i + '"><span>' + a[0] + '</span><b>' + a[1] + '</b><i>' + a[2] + "</i></button>"; }).join("") +
+        '</div><p class="mw-cab-l">Still hidden, with clues:</p><ul>' + H.map(function (h) { return "<li>" + h + "</li>"; }).join("") + "</ul></div>";
+      document.body.appendChild(d);
+      function close() { d.remove(); document.removeEventListener("keydown", esc); }
+      function esc(e) { if (e.key === "Escape") close(); }
+      document.addEventListener("keydown", esc);
+      d.addEventListener("click", function (e) {
+        if (e.target === d || e.target.closest(".mw-cab-x")) return close();
+        var b = e.target.closest("button[data-i]"); if (!b) return;
+        close(); A[+b.getAttribute("data-i")][3]();
+      });
+      setTimeout(function () { var f = d.querySelector("button[data-i]"); if (f) f.focus(); }, 50);
+    }
     // --- code blue ---
     function codeBlue() {
       flag("code");
