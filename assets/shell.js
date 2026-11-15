@@ -540,7 +540,13 @@
     ["sx_konami", "🎮", "Cheat Code", "Summoned the mascot parade.", "global", "", 0, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
-    ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1]
+    ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
+    ["sx_code", "🚨", "Crash Call", "Called a code blue.", "global", "", 0, 1],
+    ["sx_scrawl", "✍️", "Illegible", "Switched on doctor’s handwriting.", "global", "", 0, 1],
+    ["sx_wait", "😴", "Waiting Room", "Sat so still that Kip fell asleep.", "global", "", 0, 1],
+    ["sx_friday", "📠", "Friday Arvo", "Visited at 5 o’clock on a Friday.", "global", "", 0, 1],
+    ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
+    ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1]
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
@@ -617,7 +623,9 @@
       comeback: Object.keys(rec).some(function (id) { var R = rec[id]; return Object.keys(R).some(function (d) { var nx = R[dstr(dayNum(d) + 1)]; return !R[d].win && nx && nx.win; }); }),
       overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; }),
       sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0),
-      sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0)
+      sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0),
+      sx_code: !!get("mw-secret-code", 0), sx_scrawl: !!get("mw-secret-scrawl", 0), sx_wait: !!get("mw-secret-wait", 0),
+      sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0)
     };
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
@@ -1999,6 +2007,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 4 Konami code (keyboard) or type "konami": the mascot parade.
   // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
+  // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
+  // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward(). 12 Type "basil" or "clover": paw prints.
   (function () {
     function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
     function pill(txt, ms) {
@@ -2048,9 +2058,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       keys.push(e.key && e.key.length === 1 ? e.key.toLowerCase() : e.key); keys = keys.slice(-10);
       if (keys.join(" ") === KON) { keys = []; parade(); }
       if (!e.key || e.key.length !== 1) return;
-      typed = (typed + e.key.toLowerCase()).slice(-6);
+      typed = (typed + e.key.toLowerCase()).slice(-10);
       if (/locum$/.test(typed)) nightShift();
-      if (typed === "konami") { typed = ""; parade(); }
+      if (/konami$/.test(typed)) { typed = ""; parade(); }
+      if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
+      if (/scrawl$/.test(typed)) { typed = ""; scrawl(); }
+      if (/(basil|clover)$/.test(typed)) { var who = /basil$/.test(typed) ? "Basil" : "Clover"; typed = ""; paws(who); }
     });
     function parade() {
       flag("konami");
@@ -2108,6 +2121,68 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       }
       setTimeout(place, 1500);
     })();
+
+    // --- code blue ---
+    function codeBlue() {
+      flag("code");
+      var f = document.createElement("div"); f.className = "mw-codeblue"; f.setAttribute("aria-hidden", "true"); document.body.appendChild(f);
+      setTimeout(function () { f.remove(); }, 2600);
+      var where = (document.querySelector("main h1") || {}).textContent || "the waiting room";
+      pill("🚨 Code Blue, " + esc2(where.trim().slice(0, 40)) + ". Clover is doing compressions; Basil is sitting on the defib.", 4200);
+    }
+    // --- doctor's handwriting ---
+    function scrawl() {
+      flag("scrawl");
+      root.classList.add("mw-scrawl");
+      pill("✍️ Doctor’s handwriting mode. Good luck, pharmacist.", 3600);
+      setTimeout(function () { root.classList.remove("mw-scrawl"); }, 15000);
+    }
+    // --- paw prints across the screen ---
+    function paws(who) {
+      flag("paws");
+      var y = 120 + Math.random() * Math.max(60, innerHeight - 300), n = 9, wrap = document.createElement("div");
+      wrap.className = "mw-paws"; wrap.setAttribute("aria-hidden", "true");
+      for (var i = 0; i < n; i++) { var p = document.createElement("span"); p.textContent = "🐾"; p.style.left = (i * (innerWidth / n) + 10) + "px"; p.style.top = (y + (i % 2 ? 18 : -6)) + "px"; p.style.animationDelay = (i * 0.22) + "s"; wrap.appendChild(p); }
+      document.body.appendChild(wrap); setTimeout(function () { wrap.remove(); }, 5200);
+      pill(who === "Basil" ? "🐾 Basil heard his name. He is ignoring you, but walked past to make a point." : "🐾 Clover heard her name and came to supervise.", 3600);
+    }
+    // --- idle: Kip falls asleep in the waiting room ---
+    (function () {
+      try { if (sessionStorage.getItem("mw-kip")) return; } catch (e) {}
+      var t = 0, done = false;
+      function reset() { if (done) return; clearTimeout(t); t = setTimeout(sleep, 180000); }
+      function sleep() {
+        if (done || document.hidden || document.querySelector(".qk.qk-on")) return reset();
+        done = true; try { sessionStorage.setItem("mw-kip", "1"); } catch (e) {}
+        flag("wait");
+        var k = document.createElement("div"); k.className = "mw-kip"; k.setAttribute("aria-hidden", "true");
+        k.innerHTML = '<img src="/assets/mascots/sleep.svg" alt="" width="84" height="84"><span>z</span><span>z</span><span>z</span>';
+        document.body.appendChild(k);
+        pill("😴 You’ve been in the waiting room a while. Kip fell asleep.", 4200);
+        function wake() { k.classList.add("out"); setTimeout(function () { k.remove(); }, 500); ["mousemove", "keydown", "touchstart", "scroll"].forEach(function (ev) { removeEventListener(ev, wake); }); }
+        setTimeout(function () { ["mousemove", "keydown", "touchstart", "scroll"].forEach(function (ev) { addEventListener(ev, wake, { passive: true }); }); }, 800);
+      }
+      ["mousemove", "keydown", "touchstart", "scroll", "click"].forEach(function (ev) { addEventListener(ev, reset, { passive: true }); });
+      reset();
+    })();
+    // --- Friday 4:55 to 5:10pm local time ---
+    (function () {
+      var n = new Date(), m = n.getHours() * 60 + n.getMinutes();
+      if (n.getDay() !== 5 || m < 16 * 60 + 55 || m > 17 * 60 + 10) return;
+      var k = "mw-friday-" + n.toDateString(); if (get(k, 0)) return; set(k, 1);
+      flag("friday");
+      setTimeout(function () { pill("📠 It’s 5 o’clock on a Friday. Every referral is now marked urgent.", 4500); }, 2000);
+    })();
+    // --- console note ---
+    try {
+      console.log("%cMalady Wise%c\nHello, fellow nerd. No jobs here, just puzzles.\nType mw.ward() for a ward round.", "font:700 20px Georgia,serif;color:#4A3480", "font:13px monospace;color:inherit");
+      window.mw = window.mw || {};
+      window.mw.ward = function () {
+        flag("console");
+        console.log("%c  __/\\__/\\_____/\\__/\\_____/\\__/\\___\n  Sinus rhythm, baby. Badge unlocked: Under the Hood.", "font:13px monospace;color:#C2502E");
+        return "Ward round done. Discharge summary: pending (as always).";
+      };
+    } catch (e) {}
     // --- night shift look: midnight to 4am local time ---
     (function () {
       var hr = new Date().getHours();

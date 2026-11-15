@@ -1449,3 +1449,19 @@ html[data-motion="reduce"] .mw-parade img{animation-duration:12s}
 .bar .tools>[data-a="search"]{display:none}
 .navwrap .nav-search{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);background:var(--card,#fff);color:var(--muted);font:500 15px var(--body);padding:11px 14px;border-radius:12px;margin:4px 0 8px;cursor:pointer;text-align:left}
 }
+/* secrets, Nov 2026 (shell.js): code blue flash, doctor's handwriting, cat paws, sleeping Kip */
+.mw-codeblue{position:fixed;inset:0;z-index:94;pointer-events:none;background:rgba(40,110,255,.28);animation:mwcb .65s ease-in-out 4}
+@keyframes mwcb{0%,100%{opacity:0}50%{opacity:1}}
+html.mw-scrawl main{font-family:"Brush Script MT","Segoe Script","Comic Sans MS",cursive !important;transform:skewX(-6deg);letter-spacing:-.04em;transition:transform .4s}
+html.mw-scrawl main *{font-family:inherit !important}
+.mw-paws{position:fixed;inset:0;z-index:94;pointer-events:none}
+.mw-paws span{position:absolute;font-size:26px;opacity:0;animation:mwpaw 2.6s ease forwards;transform:rotate(90deg)}
+@keyframes mwpaw{0%{opacity:0}12%{opacity:.9}70%{opacity:.7}100%{opacity:0}}
+.mw-kip{position:fixed;right:14px;bottom:84px;z-index:94;pointer-events:none;animation:mwkip .8s ease}
+.mw-kip img{display:block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
+.mw-kip span{position:absolute;right:-4px;top:-6px;font:700 18px var(--title,serif);color:var(--brand,#4A3480);opacity:0;animation:mwz 2.4s ease-in-out infinite}
+.mw-kip span:nth-child(3){animation-delay:.8s;font-size:15px}.mw-kip span:nth-child(4){animation-delay:1.6s;font-size:12px}
+.mw-kip.out{opacity:0;transform:translateY(30px);transition:.4s}
+@keyframes mwkip{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mwz{0%{opacity:0;transform:translate(0,0)}30%{opacity:1}100%{opacity:0;transform:translate(16px,-34px)}}
+@media (prefers-reduced-motion:reduce){.mw-codeblue{animation:none;opacity:.5}.mw-paws span{animation:none;opacity:.8}.mw-kip,.mw-kip span{animation:none}.mw-kip span{opacity:1}}
