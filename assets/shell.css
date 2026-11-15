@@ -1221,7 +1221,8 @@ a.tl:hover{border-color:var(--accent)}
 .tl.done{opacity:.72}.tl.soon{opacity:.55}
 .rds{display:grid;gap:10px}
 .rd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(min-width:900px){.rd-grid{grid-template-columns:repeat(4,1fr)}}
+.rd-grid>.rd:last-child:nth-child(odd){grid-column:1/-1}
+@media(min-width:900px){.rd-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.rd-grid>.rd:last-child:nth-child(odd){grid-column:auto}}
 .rd{display:flex;flex-direction:column;gap:3px;padding:12px;background:var(--card);border:1.5px solid var(--line);border-radius:16px;color:var(--ink);text-decoration:none;min-width:0}
 .rd:hover{border-color:var(--brand)}
 .rd img{width:44px;height:44px;margin-bottom:2px}
