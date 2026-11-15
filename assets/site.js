@@ -5,8 +5,8 @@ window.MW_HOME = {
   // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Same menu in Medical and Normie.
   nav: [
     { t: "Puzzles", tn: "Games", items: [
-      { t: "Today’s puzzles", href: "/", d: "The daily games, fresh at midnight" },
-      { t: "Practice quizzes", href: "/medical-games/#quizzes", d: "Anatomy, ECG, X-ray, terminology" },
+      { t: "Today’s puzzles", href: "/", d: "New every midnight" },
+      { t: "Practice quizzes", href: "/quizzes/", d: "Anatomy, ECG, X-ray, words" },
       { t: "All games", href: "/medical-games/", d: "Every game, plus past puzzles" },
       { t: "Arcade", href: "/arcade/", d: "Basil + Clover, Stackulus, Mergeon" }
     ] },
@@ -28,9 +28,7 @@ window.MW_HOME = {
       { t: "Weekly Dose", href: "/zebra-mail/", d: "Zebra Mail: the week in health" },
       { t: "Health Calendar", href: "/days/", d: "Today and coming up" },
       { t: "Research", href: "/research/", d: "New studies and trials to watch" }
-    ] },
-    { t: "Mascots", href: "/mascots/" },
-    { t: "Shop", href: "/shop/" }
+    ] }
   ],
   tagline: "Free daily medical puzzles, made by a GP.",
   taglineN: "Free daily puzzles. No medicine required.",

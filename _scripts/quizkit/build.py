@@ -183,10 +183,10 @@ def more_nav(cur=None, heading="More anatomy quizzes", others=True):
 for qz in QUIZZES:
     path = "/anatomy-quiz/%s/" % qz["slug"]
     n = len(qz["qs"])
-    assert 10 <= n <= 15, (qz["slug"], n)
+    assert 10 <= n <= 20, (qz["slug"], n)
     short = qz["h1"]
     body = "\n".join([
-        '<p class="meta"><a href="/anatomy-quiz/">Anatomy quizzes</a> › %s</p>' % esc(short.replace(" Quiz", "").replace("Bones: The Human Skeleton", "Bones")),
+        '<p class="meta"><a href="/quizzes/">Practice quizzes</a> › <a href="/anatomy-quiz/">Anatomy quizzes</a> › %s</p>' % esc(short.replace(" Quiz", "").replace("Bones: The Human Skeleton", "Bones")),
         "<h1>%s</h1>" % esc(qz["h1"]),
         '<p class="lede">%s</p>' % esc(qz["lede"]),
         quiz_section(qz["qs"], "anat-" + qz["slug"], qz["h1"].split(":")[0], qz["emoji"]),
@@ -196,7 +196,7 @@ for qz in QUIZZES:
         reviewed(" Diagrams are simplified, original sketches, not to scale."),
     ])
     lds = [quiz_ld(qz["h1"], SITE + path, qz["qs"], qz["h1"].replace(" Quiz", "").split(":")[0]), faq_ld(qz["faqs"]),
-           crumbs_ld([("Malady Wise", "/"), ("Medical games", "/medical-games/"), ("Anatomy quizzes", "/anatomy-quiz/"), (qz["h1"], path)])]
+           crumbs_ld([("Malady Wise", "/"), ("Practice quizzes", "/quizzes/"), ("Anatomy quizzes", "/anatomy-quiz/"), (qz["h1"], path)])]
     write(path, page(path, qz["title"], qz["desc"], "anatomegaly", body, lds))
 
 # ---------- anatomy hub (with a mixed sampler) ----------

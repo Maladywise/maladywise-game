@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP = re.compile(r"^/(specialists/(?!$)|mental-health-check/|nightshift/|[a-z-]+/archive/)")
 
 GAMES = {"/%s/" % g for g in "dxtective wordemic comorbix morphemia linkase gridectomy suturix triviosis zebritis glimpsis opacitis panelysis arrhythmix sudokrine cryptoplexy grand-rounds anatomegaly sensitosis basil-clover stackulus mergeon gp-school".split()}
-HUBS = {"/%s/" % h for h in "normie conditions tools zebra-mail medicines deep-dives arcade weird specialists rare-conditions medical-games compare glp-1 blood-tests research doctors mascots shop patients days exercises site-stats".split()}
+HUBS = {"/%s/" % h for h in "normie conditions tools zebra-mail medicines deep-dives arcade weird specialists rare-conditions medical-games compare glp-1 blood-tests research doctors mascots shop patients days exercises site-stats quizzes".split()}
 
 def kind(u):
     p = u.strip("/").split("/")

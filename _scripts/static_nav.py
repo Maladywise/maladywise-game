@@ -43,7 +43,7 @@ SECTIONS = [
     ("Blood tests", "/blood-tests/", True),
     ("Exercises", "/exercises/", True),
     ("Tools", "/tools/", True),
-    ("Quizzes", "/medical-games/#quizzes", False),
+    ("Quizzes", "/quizzes/", False),
     ("Specialists", "/specialists/", True),
     ("Health days", "/days/", False),
 ]

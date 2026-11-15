@@ -2,7 +2,7 @@
  "_about": "Topic mascots shown beside the h1 on fact sheets (added by _scripts/topic_heroes.py, run by static_nav.py so they survive rebuilds). key = assets/mascots/<key>.svg; alt names the mascot.",
  "heroes": {
   "ortho": {
-   "alt": "Hugo the ant, orthopaedic surgeon",
+   "alt": "Hugo the dog, orthopaedic surgeon",
    "pages": [
     "/osteoporosis/",
     "/knee-oa/",

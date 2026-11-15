@@ -103,7 +103,20 @@
       "/site-stats/"
     ],
     "/medical-games/": [
+      "/quizzes/",
       "/site-stats/"
+    ],
+    "/anatomy-quiz/": [
+      "/quizzes/"
+    ],
+    "/ecg-quiz/": [
+      "/quizzes/"
+    ],
+    "/x-ray-quiz/": [
+      "/quizzes/"
+    ],
+    "/medical-terminology-quiz/": [
+      "/quizzes/"
     ]
   }
 }

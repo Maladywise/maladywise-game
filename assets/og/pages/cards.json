@@ -2351,6 +2351,13 @@
 "label": "Condition",
 "title": "Quitting Smoking"
 },
+"quizzes": {
+"url": "/quizzes/",
+"key": "726da2efe666",
+"v": "44821caf",
+"label": "Malady Wise",
+"title": "Practice quizzes"
+},
 "raynauds": {
 "url": "/raynauds/",
 "key": "50fc9baa324d",

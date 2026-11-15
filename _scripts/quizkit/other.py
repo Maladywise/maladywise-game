@@ -190,3 +190,38 @@ TERMS = dict(
         ("What are combining vowels?", "Usually an ‘o’ that links a root to another part to make a word easier to say: gastr + o + scopy = gastroscopy. It’s generally dropped before a suffix starting with a vowel: gastr + itis = gastritis."),
     ],
 )
+
+# ---- ECG extended to 20 (16 Nov 2026): basics moved up with strips, five harder 12-leads/strips at the end ----
+def _strip(d, cfg, seed):
+    d.update(ecg=cfg, seed=seed, lay=cfg.get("layout")); return d
+_q = ECG["qs"]
+_basics = _q[10:15]
+_strip(_basics[0], {"layout": "strip", "rhythm": {"type": "sinus", "rate": 60}, "marks": ["rr"]}, "qk-paper-1")
+_strip(_basics[1], {"layout": "strip", "rhythm": {"type": "sinus", "rate": 70}, "marks": ["pr"]}, "qk-pr-1")
+_strip(_basics[2], {"layout": "strip", "rhythm": {"type": "sinus", "rate": 75}, "marks": ["rr"]}, "qk-rate-1")
+_strip(_basics[3], {"layout": "strip", "rhythm": {"type": "sinus", "rate": 70}, "marks": ["qrs"]}, "qk-qrs-1")
+_HARD = [
+    G("What is this rhythm?", "A 68-year-old man notices his pulse is steady at about 75 but he feels ‘fluttery’. Lead II rhythm strip:",
+      "Atrial flutter with 4:1 block", ["Normal sinus rhythm", "Atrial fibrillation", "First-degree AV block"],
+      "Saw-tooth flutter waves at about 300 a minute, with every fourth one conducted. A rate of exactly 75 or 150 should make you look for flutter.",
+      {"layout": "strip", "rhythm": {"type": "flutter", "arate": 300, "ratios": [4], "famp": 0.26}, "marks": ["flutter"]}, "qk-flut4-1"),
+    G("What does this 12-lead ECG show?", "A 22-year-old woman has had brief bouts of a racing heart since her teens. Between episodes, her 12-lead ECG (scroll sideways on a phone):",
+      "Wolff-Parkinson-White pattern", ["Left bundle branch block", "Inferior STEMI", "Normal ECG"],
+      "A short PR and a slurred upstroke to the QRS (the delta wave): an extra pathway lets the impulse skip the AV node. Avoid AV-node blockers if she develops AF.",
+      {"layout": "12", "preset": "wpw", "rhythm": {"type": "sinus", "rate": 76}, "boxes": [{"leads": ["I", "aVL", "V4", "V5"], "label": "delta wave"}], "marks": ["pr"]}, "qk-wpw-1"),
+    G("What does this 12-lead ECG show?", "A 77-year-old man with heart failure has a routine ECG. 12-lead (scroll sideways on a phone):",
+      "Left bundle branch block", ["Right bundle branch block", "Ventricular tachycardia", "Left ventricular hypertrophy only"],
+      "Broad QRS over 120 ms, a deep S wave in V1 and a broad, notched R wave in I, aVL, V5 and V6. A new LBBB with chest pain is treated like a STEMI.",
+      {"layout": "12", "preset": "lbbb", "rhythm": {"type": "sinus", "rate": 70}, "boxes": [{"leads": ["V1"], "label": "deep S", "tone": 2}, {"leads": ["I", "V6"], "label": "broad R"}], "marks": ["qrs"]}, "qk-lbbb-1"),
+    G("What does this 12-lead ECG show?", "A 35-year-old man fainted during a fever. His father died suddenly at 40. 12-lead (scroll sideways on a phone):",
+      "Brugada pattern (type 1)", ["Right bundle branch block", "Anterior STEMI", "Pericarditis"],
+      "Coved ST elevation of at least 2 mm in V1 to V2 falling into an inverted T wave. Fever can unmask it. Needs urgent cardiology review for sudden-death risk.",
+      {"layout": "12", "preset": "brugada", "rhythm": {"type": "sinus", "rate": 80}, "boxes": [{"leads": ["V1", "V2"], "label": "coved ST"}]}, "qk-brug-1"),
+    G("What does this 12-lead ECG show?", "A 54-year-old woman had chest pain yesterday that has now settled. Pain-free ECG today (scroll sideways on a phone):",
+      "Wellens pattern (critical LAD narrowing)", ["Normal variant T waves", "Pericarditis", "Hypokalaemia"],
+      "Deep or biphasic T waves in V2 to V4 after chest pain that has settled. It warns of a tight LAD narrowing about to block. Don’t stress test: needs urgent angiography.",
+      {"layout": "12", "preset": "wellens", "rhythm": {"type": "sinus", "rate": 68}, "boxes": [{"leads": ["V2", "V3", "V4"], "label": "T waves", "tone": 2}]}, "qk-well-1"),
+]
+ECG["qs"] = _q[:2] + _basics + _q[2:10] + _HARD
+ECG["desc"] = "Free ECG quiz: 20 questions with rhythm strips and 12-leads, from sinus rhythm and heart block to WPW, Brugada and Wellens. Gets harder as you go."
+ECG["lede"] = "Twenty questions, easy to hard: the basics, rhythm strips, then 12-leads from STEMI to Brugada. Tap an answer to see if you’re right, and the key features light up on the trace."

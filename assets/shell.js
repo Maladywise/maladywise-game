@@ -526,6 +526,13 @@
     ["bee10", "🍯", "Beekeeper", "Reach Genius in Morphemia ten times.", "", "genius", 10],
     ["groundhog", "🦫", "Groundhog Day", "Play the same game on 50 different days.", "", "samegame", 50],
     ["perfweek", "💎", "Perfect Week", "Finish every daily game, every day, for seven days straight.", "", "wardrun", 7],
+    // practice quizzes (/quizzes/): best scores in localStorage qk-best-<id>
+    ["qz1", "📝", "Quiz Taster", "Finish any practice quiz.", "global", "qzdone", 1],
+    ["qz5", "📚", "Swot", "Finish five different practice quizzes.", "global", "qzdone", 5],
+    ["anat11", "🦴", "Anatomy Buff", "Finish all 11 anatomy quizzes.", "global", "anatdone", 11],
+    ["perf20", "🎯", "Perfect 20", "Score 20 out of 20 on any practice quiz.", "global", "qzperfect", 1],
+    ["ecg20", "💓", "ECG Ace", "Score 20 out of 20 on the ECG quiz.", "global", "ecgperfect", 1],
+    ["fullbody", "🧍", "Full Body Scan", "Score 20 out of 20 on every anatomy quiz.", "global", "anatperfect", 11],
     // secret badges: shown as ??? until found (b[7] = 1)
     ["sx_night", "🦇", "Pager Goes Off", "Found the hidden Night Shift game.", "global", "", 0, 1],
     ["sx_whisper", "🤫", "Mascot Whisperer", "Heard three mascots’ secrets.", "global", "", 0, 1],
@@ -535,6 +542,7 @@
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1]
   ];
+  var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb".split(" ");
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
     function dstr(n) { return new Date(n * 864e5).toISOString().slice(0, 10); }
@@ -631,6 +639,11 @@
       samegame: Object.keys(rec).reduce(function (a, id) { return Math.max(a, Object.keys(rec[id]).length); }, 0),
       wardrun: (function () { if (!daily.length) return 0; var ok = Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).map(dayNum).sort(function (a, b) { return a - b; }); var b = 0, r = 0, p = null; ok.forEach(function (n) { r = p !== null && n - p === 1 ? r + 1 : 1; p = n; if (r > b) b = r; }); return b; })(),
       cookies: (get("mw-cookies", []) || []).length,
+      qzdone: keys.filter(function (k) { return /^qk-best-/.test(k); }).length,
+      anatdone: QZ_ANAT.filter(function (q) { return get("qk-best-anat-" + q, null) != null; }).length,
+      qzperfect: keys.filter(function (k) { return /^qk-best-/.test(k) && +get(k, 0) >= 20; }).length,
+      ecgperfect: +get("qk-best-ecg", 0) >= 20 ? 1 : 0,
+      anatperfect: QZ_ANAT.filter(function (q) { return +get("qk-best-anat-" + q, 0) >= 20; }).length,
       odgames: od.games || 0, odlines: od.lines || 0, odquad: od.quad || 0, odbest: od.best || 0, oddaily: od.daily || 0
     };
     var NORMIE_BADGE = { od1: ["\ud83d\udc1a", "Dipped a Toe"], od2: ["\u2693", "Deckhand"], od3: ["\ud83c\udf0a", "Tidal Wave"], od4: ["\ud83d\udc0b", "Deep-Sea Legend"], od5: ["\ud83e\udded", "Daily Voyage"] };
@@ -1231,7 +1244,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
       function it(href, ext, acc, svg, b, sm) { return '<a href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ' style="--accent:' + acc + '"><span class="ms-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + svg + "</svg></span><span><b>" + b + "</b><small>" + sm + '</small></span><span class="ms-go" aria-hidden="true">›</span></a>'; }
       return '<nav class="mw-strip" aria-label="More from Malady Wise">' +
-        (NORMIE ? "" : it("/medical-games/#quizzes", 0, dk ? "#E59AB8" : "#B23A6F", '<path d="M10 10h28v22H22l-8 7v-7h-4z"/><path d="M20 18a4 4 0 1 1 5 4v2M25 28v.5"/>', "Practice quizzes", "Anatomy, ECG, X-ray and more")) +
+        (NORMIE ? "" : it("/quizzes/", 0, dk ? "#E59AB8" : "#B23A6F", '<path d="M10 10h28v22H22l-8 7v-7h-4z"/><path d="M20 18a4 4 0 1 1 5 4v2M25 28v.5"/>', "Practice quizzes", "Anatomy, ECG, X-ray and more")) +
         (NORMIE ? "" : it("/conditions/", 0, dk ? "#6FB7A8" : "#2E7D6B", '<path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12"/>', "Health guides", (nf ? nf + " " : "") + "fact sheets, plus medicines")) +
         (h ? it(h.href, 1, dk ? h.accentDark : h.accent, '<path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/>', h.name, "@MaladyWise on X") : "") +
         it("https://ko-fi.com/maladywise", 1, dk ? "#D9A066" : "#A8642A", '<path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/>', "Buy me a coffee", "Free, no ads. Coffee helps.") + "</nav>";
