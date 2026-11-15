@@ -1465,3 +1465,5 @@ html.mw-scrawl main *{font-family:inherit !important}
 @keyframes mwkip{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
 @keyframes mwz{0%{opacity:0;transform:translate(0,0)}30%{opacity:1}100%{opacity:0;transform:translate(16px,-34px)}}
 @media (prefers-reduced-motion:reduce){.mw-codeblue{animation:none;opacity:.5}.mw-paws span{animation:none;opacity:.8}.mw-kip,.mw-kip span{animation:none}.mw-kip span{opacity:1}}
+
+footer.site .ft-tag{font:italic 500 15px var(--title,Lora,serif);color:var(--ink);text-align:center;margin:0 0 12px;opacity:.85}footer.site .ft-tag b{font-style:normal;font-weight:700}

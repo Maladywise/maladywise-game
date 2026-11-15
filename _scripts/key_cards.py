@@ -376,7 +376,7 @@ def archives(path):
 
 
 CARDS = [
-    hub("home", "/", "18 free daily medical puzzles", "Think like a doctor",
+    hub("home", "/", "18 free daily medical puzzles", "Curiosity is contagious",
         "Diagnose, read the ECG, name the scan, crack the cryptic.",
         ["mascots/dx.svg", "mascots/wordemic.svg", "mascots/comorbix.svg", "mascots/opacitis.svg?v=2", "mascots/arrhythmix.svg",
          "mascots/triviosis.svg", "mascots/cryptogenic.svg", "mascots/panelysis.svg", "mascots/zebritis.svg"],

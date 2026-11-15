@@ -1692,6 +1692,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       else f.insertAdjacentHTML("beforeend", '<p class="ft-base"><span class="ft-links">' + btn + "</span></p>");
       f.querySelector(".mw-fbl").onclick = function () { feedback(); };
     }
+    // Tagline (Nov 2026: "Curiosity is contagious.", replacing "Think like a doctor.")
+    if (!f.querySelector(".ft-tag")) f.insertAdjacentHTML("afterbegin", '<p class="ft-tag"><b>Malady Wise</b> · Curiosity is contagious.</p>');
     // Acknowledgement of Country (Newcastle: Awabakal and Worimi peoples).
     if (!f.querySelector(".ft-ack")) f.insertAdjacentHTML("beforeend", '<p class="ft-ack">Malady Wise is made in Newcastle, on the land of the Awabakal and Worimi peoples. We acknowledge them as the Traditional Custodians and pay our respects to Elders past and present.</p>');
   }

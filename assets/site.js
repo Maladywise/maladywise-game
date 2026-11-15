@@ -37,7 +37,7 @@ window.MW_HOME = {
   groups: [
     { id: "word", t: "Word games", d: "Spelling, but make it clinical.", dn: "For people who correct menus.", games: ["wordemic", "comorbix", "linkase", "gridectomy", "suturix"] },
     { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["panelysis", "glimpsis", "opacitis", "labelosis"] },
-    { id: "think", t: "Think like a doctor", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis"] },
+    { id: "think", t: "Work it out", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis"] },
     { id: "weekly", t: "Weekly", d: "Bigger puzzles, fewer days.", games: ["grandrounds", "cryptogenic"] },
     { id: "bonus", t: "Extra credit", d: "ECGs, sudoku and long words.", dn: "Sudoku, long words and charts.", games: ["arrhythmix", "morphemia", "sudokrine"] },
     { id: "arcade", t: "Arcade", d: "Bonus games. Play all day.", games: [], arcade: true }
