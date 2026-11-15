@@ -5,7 +5,7 @@ SHOP = "https://www.redbubble.com/people/MaladyWise/shop"
 def _grid(g):
     return '<ul class="shopg">' + "".join(
         '<li><a href="%s" rel="noopener" target="_blank"><img src="%s" alt="Sticker: %s (%s)" width="360" height="360" loading="lazy"></a></li>' % (
-            SHOP, p, _h.escape(c), _h.escape(w)) for k, p, c, w in _S if k == g) + "</ul>\n"
+            (x[4] if len(x) > 4 else SHOP), x[1], _h.escape(x[2]), _h.escape(x[3])) for x in _S if x[0] == g) + "</ul>\n"
 body = ('<p class="lede">Stickers starring Basil, Clover and the game mascots. Printed and posted worldwide by Redbubble, so you can stick a sassy jellyfish on your laptop.</p>\n'
         '<p><a class="btn-shop" href="%s" rel="noopener" target="_blank">Open the shop on Redbubble →</a></p>\n' % SHOP +
         '<p class="sass">Clinically questionable, emotionally essential.</p>\n'
