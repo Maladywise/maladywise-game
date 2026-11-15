@@ -2043,6 +2043,13 @@
 "label": "Condition",
 "title": "Myasthenia Gravis"
 },
+"nail-psoriasis": {
+"url": "/nail-psoriasis/",
+"key": "7d2c10801490",
+"v": "3e315c8b",
+"label": "Condition",
+"title": "Nail Psoriasis"
+},
 "nappy-rash": {
 "url": "/nappy-rash/",
 "key": "52cf4b35dde6",
@@ -2267,6 +2274,13 @@
 "label": "Condition",
 "title": "Psoriasis"
 },
+"psoriatic-arthritis": {
+"url": "/psoriatic-arthritis/",
+"key": "0745ae5cb4d5",
+"v": "b38b8a77",
+"label": "Condition",
+"title": "Psoriatic Arthritis"
+},
 "ptsd": {
 "url": "/ptsd/",
 "key": "228879b9ffe7",
@@ -2357,6 +2371,13 @@
 "v": "48cadd85",
 "label": "Condition",
 "title": "Scabies"
+},
+"scalp-psoriasis": {
+"url": "/scalp-psoriasis/",
+"key": "09efe129c511",
+"v": "6ddbdb4a",
+"label": "Condition",
+"title": "Scalp Psoriasis"
 },
 "sciatica": {
 "url": "/sciatica/",
