@@ -10,6 +10,7 @@
 //   (about 30 seconds of a visible tab). Only the segment is stored, never the ID. /hubrank sums the last N days;
 //   the weekly hubs workflow uses it to put the most-used hubs in the top menu.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
+//   /history?days=N returns daily totals, per-game counts and the 28-day hourly pattern for the public /site-stats/ page.
 const http = require("http");
 const crypto = require("crypto");
 const { createClient } = require("redis");
@@ -86,6 +87,27 @@ async function heat() {
   }
   heatCache = { t: Date.now(), v }; return v;
 }
+
+// ---------- public history for /site-stats/: daily totals, per-game counts and hourly pattern (all anonymous counts) ----------
+let histCache = { t: 0, k: "", v: null };
+async function history(days) {
+  const key = String(days);
+  if (Date.now() - histCache.t < 10 * 60 * 1000 && histCache.k === key && histCache.v) return histCache.v;
+  const out = { days: [], hours: new Array(24).fill(0), hourDays: 0 };
+  if (kv && kv.isReady) {
+    try {
+      for (let i = days - 1; i >= 0; i--) {
+        const d = dayAgo(i), tot = Number(await kv.get("played:" + d) || 0);
+        const g = await kv.hGetAll("games:" + d), games = {};
+        for (const k in g) games[k] = Number(g[k] || 0);
+        out.days.push({ d, n: tot, g: games });
+        if (i > 0 && i <= 28) { const hr = await kv.hGetAll("playedh:" + d); if (hr && Object.keys(hr).length) { out.hourDays++; for (const k in hr) out.hours[Number(k) % 24] += Number(hr[k] || 0); } }
+      }
+    } catch (e) {}
+  } else if (memDay) out.days.push({ d: memDay, n: memCount, g: Object.assign({}, memGames) });
+  histCache = { t: Date.now(), k: key, v: out };
+  return out;
+}
 let memViews = {}, memViewsDay = "";
 async function addView(g) {
   if (!g) return;
@@ -114,8 +136,8 @@ async function addDone(g) {
   if (kv && kv.isReady) {
     try {
       await kv.incr("played:" + d); await kv.expire("played:" + d, 60 * 60 * 24 * 400);
-      await kv.hIncrBy("playedh:" + d, String(sydHour()), 1); await kv.expire("playedh:" + d, 60 * 60 * 24 * 40);
-      if (g) { await kv.hIncrBy("games:" + d, g, 1); await kv.expire("games:" + d, 60 * 60 * 24 * 8); }
+      await kv.hIncrBy("playedh:" + d, String(sydHour()), 1); await kv.expire("playedh:" + d, 60 * 60 * 24 * 400);
+      if (g) { await kv.hIncrBy("games:" + d, g, 1); await kv.expire("games:" + d, 60 * 60 * 24 * 400); }
     } catch (e) {}
   }
 }
@@ -296,6 +318,11 @@ const server = http.createServer(async (req, res) => {
       const days = Math.max(1, Math.min(35, Number(url.searchParams.get("days")) || 28));
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ days, hubs: await hubRank(days) }));
+    }
+    if (url.pathname === "/history") {
+      const days = Math.max(7, Math.min(365, Number(url.searchParams.get("days")) || 90));
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end(JSON.stringify(Object.assign({ day: sydDay(), today: await today() }, await history(days))));
     }
     if (url.pathname === "/stats") {
       const cut = Date.now() - WINDOW, by = {}; let n = 0;

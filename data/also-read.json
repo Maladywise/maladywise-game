@@ -1,31 +1,109 @@
 {
   "_about": "Extra contextual links added to a page's Related list by _scripts/also_read.py (run automatically by static_nav.run). Use to send links from pages Google already ranks to related pages it hasn't indexed yet. Keys and targets are site paths. Skip any target already linked on the page.",
   "links": {
-    "/blood-tests/high-alt/": ["/gilbert-syndrome/"],
-    "/blood-tests/high-potassium/": ["/chronic-kidney-disease/", "/blood-tests/high-platelets/"],
-    "/medicines/semaglutide/": ["/glp-1/side-effects/", "/glp-1/muscle-loss/", "/glp-1/surgery-anaesthesia/", "/glp-1/faq/"],
-    "/medicines/tirzepatide/": ["/glp-1/side-effects/", "/glp-1/faq/", "/glp-1/muscle-loss/"],
-    "/medicines/dexamfetamine/": ["/medicines/alpha-2-agonists/"],
-    "/medicines/methylphenidate/": ["/medicines/alpha-2-agonists/"],
-    "/medicines/escitalopram/": ["/compare/sertraline-vs-escitalopram/"],
-    "/tools/iron-infusion/": ["/fibroids/", "/heavy-periods/", "/tools/cha2ds2-vasc/"],
-    "/low-libido-women/": ["/contraception/", "/ovarian-cysts/", "/fibroids/"],
-    "/shoulder-pain/": ["/frozen-shoulder/", "/anatomy-quiz/upper-limb/"],
-    "/boils/": ["/tinea/"],
-    "/perioral-dermatitis/": ["/tinea/"],
-    "/marine-stings/": ["/anaphylaxis/"],
-    "/ptsd/": ["/tools/ace-score/"],
-    "/mbs-billing/": ["/tools/cha2ds2-vasc/", "/medicine-recalls/", "/research/"],
-    "/blood-pressure/": ["/blood-tests/high-cholesterol/", "/blood-tests/lipoprotein-a/", "/chronic-kidney-disease/"],
-    "/functional-dyspepsia/": ["/h-pylori/"],
-    "/reflux/": ["/h-pylori/", "/cough/"],
-    "/asthma/": ["/mould/", "/cough/", "/anaphylaxis/"],
-    "/tinnitus/": ["/earwax/"],
-    "/raynauds/": ["/scleroderma/"],
-    "/dry-eye/": ["/keratoconus/"],
-    "/gout/": ["/blood-tests/high-esr/", "/costochondritis/"],
-    "/heavy-periods/": ["/fibroids/", "/ovarian-cysts/"],
-    "/anatomy-quiz/bones/": ["/costochondritis/"],
-    "/blood-tests/high-bilirubin/": ["/gilbert-syndrome/"]
+    "/blood-tests/high-alt/": [
+      "/gilbert-syndrome/"
+    ],
+    "/blood-tests/high-potassium/": [
+      "/chronic-kidney-disease/",
+      "/blood-tests/high-platelets/"
+    ],
+    "/medicines/semaglutide/": [
+      "/glp-1/side-effects/",
+      "/glp-1/muscle-loss/",
+      "/glp-1/surgery-anaesthesia/",
+      "/glp-1/faq/"
+    ],
+    "/medicines/tirzepatide/": [
+      "/glp-1/side-effects/",
+      "/glp-1/faq/",
+      "/glp-1/muscle-loss/"
+    ],
+    "/medicines/dexamfetamine/": [
+      "/medicines/alpha-2-agonists/"
+    ],
+    "/medicines/methylphenidate/": [
+      "/medicines/alpha-2-agonists/"
+    ],
+    "/medicines/escitalopram/": [
+      "/compare/sertraline-vs-escitalopram/"
+    ],
+    "/tools/iron-infusion/": [
+      "/fibroids/",
+      "/heavy-periods/",
+      "/tools/cha2ds2-vasc/"
+    ],
+    "/low-libido-women/": [
+      "/contraception/",
+      "/ovarian-cysts/",
+      "/fibroids/"
+    ],
+    "/shoulder-pain/": [
+      "/frozen-shoulder/",
+      "/anatomy-quiz/upper-limb/"
+    ],
+    "/boils/": [
+      "/tinea/"
+    ],
+    "/perioral-dermatitis/": [
+      "/tinea/"
+    ],
+    "/marine-stings/": [
+      "/anaphylaxis/"
+    ],
+    "/ptsd/": [
+      "/tools/ace-score/"
+    ],
+    "/mbs-billing/": [
+      "/tools/cha2ds2-vasc/",
+      "/medicine-recalls/",
+      "/research/"
+    ],
+    "/blood-pressure/": [
+      "/blood-tests/high-cholesterol/",
+      "/blood-tests/lipoprotein-a/",
+      "/chronic-kidney-disease/"
+    ],
+    "/functional-dyspepsia/": [
+      "/h-pylori/"
+    ],
+    "/reflux/": [
+      "/h-pylori/",
+      "/cough/"
+    ],
+    "/asthma/": [
+      "/mould/",
+      "/cough/",
+      "/anaphylaxis/"
+    ],
+    "/tinnitus/": [
+      "/earwax/"
+    ],
+    "/raynauds/": [
+      "/scleroderma/"
+    ],
+    "/dry-eye/": [
+      "/keratoconus/"
+    ],
+    "/gout/": [
+      "/blood-tests/high-esr/",
+      "/costochondritis/"
+    ],
+    "/heavy-periods/": [
+      "/fibroids/",
+      "/ovarian-cysts/"
+    ],
+    "/anatomy-quiz/bones/": [
+      "/costochondritis/"
+    ],
+    "/blood-tests/high-bilirubin/": [
+      "/gilbert-syndrome/"
+    ],
+    "/about/": [
+      "/site-stats/"
+    ],
+    "/medical-games/": [
+      "/site-stats/"
+    ]
   }
 }

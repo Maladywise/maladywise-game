@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/site-stats/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="max-image-preview:large">
+<title>Malady Wise Stats: Games Played Every Day | Malady Wise</title>
+<meta name="description" content="Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<meta property="og:title" content="Malady Wise Stats: Games Played Every Day | Malady Wise">
+<meta property="og:description" content="Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="/assets/shell.css?v=225">
+<script defer src="/assets/games.js?v=127"></script>
+<script defer src="/assets/site.js?v=83"></script>
+<script defer src="/assets/shell.js?v=253"></script>
+<script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}</script>
+<script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Malady Wise Stats: Games Played Every Day", "description": "Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.", "url": "https://maladywise.com/site-stats/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Games played", "item": "https://maladywise.com/site-stats/"}]}, "about": {"@type": "WebPage", "name": "Malady Wise stats"}, "dateModified": "2026-11"}</script>
+</head>
+<body>
+<main class="wrap doc">
+<h1>Games played</h1>
+<p class="lede">How many Malady Wise puzzles get finished, every day. Live, anonymous counts: one tally when a puzzle is finished, never who finished it.</p>
+<style>
+.ss-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 6px}
+@media(min-width:600px){.ss-kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ss-k{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:12px 14px}
+.ss-k b{display:block;font:700 26px var(--title);color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.15}
+.ss-k span{font-size:12.5px;color:var(--muted)}
+.ss-box{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:12px 14px 10px;margin:10px 0 18px}
+.ss-box svg{display:block;width:100%;height:auto;overflow:visible}
+.ss-box .ax{font:17px var(--body);fill:var(--muted)}@media(min-width:600px){.ss-box .ax{font-size:12px}}
+.ss-bar{fill:var(--brand,#4A3480)}.ss-bar.today{fill:#D69A00}
+.ss-cap{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.doc ul.ss-list{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.ss-list li{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr) auto;gap:10px;align-items:center;font-size:14px}
+.ss-list a{text-decoration:none;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ss-list i{display:block;height:10px;border-radius:5px;background:var(--brand,#4A3480);min-width:3px}
+.ss-list em{font-style:normal;font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+.ss-tabs{display:flex;gap:6px;margin:0 0 10px}
+.ss-tabs button{font:600 13px var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.ss-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#ss-wait{color:var(--muted)}
+</style><div id="ss"><p id="ss-wait">Loading the numbers…</p></div>
+<script>
+(function () {
+  var API = "https://mw-presence.onrender.com/history?days=", box = document.getElementById("ss");
+  function nf(n) { return Math.round(n).toLocaleString("en-AU"); }
+  function nice(d, o) { return new Date(d + "T00:00:00Z").toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, o || { day: "numeric", month: "short" })); }
+  function gname(id) { var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0]; return g ? [g.name, "/" + (g.path || id + "/")] : [id.charAt(0).toUpperCase() + id.slice(1), null]; }
+  function bars(vals, labels, hl, h) {
+    var W = 600, H = h || 160, max = Math.max.apply(null, vals.concat([1])), n = vals.length, bw = W / n, s = "";
+    var step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.ceil(max / step) * step;
+    for (var t = 0; t <= 2; t++) { var y = H - H * t / 2; s += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)" stroke-width="1"/><text class="ax" x="' + W + '" y="' + (y - 3) + '" text-anchor="end">' + nf(top * t / 2) + "</text>"; }
+    vals.forEach(function (v, i) { var bh = v / top * H; s += '<rect class="ss-bar' + (i === hl ? " today" : "") + '" x="' + (i * bw + bw * 0.12) + '" y="' + (H - bh) + '" width="' + Math.max(1, bw * 0.76) + '" height="' + Math.max(v ? 1 : 0, bh) + '" rx="' + Math.min(3, bw * 0.3) + '"><title>' + labels[i] + ": " + nf(v) + "</title></rect>"; });
+    var every = Math.ceil(n / 5);
+    labels.forEach(function (l, i) { if (i % every === 0 || i === n - 1) s += '<text class="ax" x="' + (i * bw + bw / 2) + '" y="' + (H + 15) + '" text-anchor="middle">' + l + "</text>"; });
+    return '<svg viewBox="-2 -6 ' + (W + 4) + " " + (H + 24) + '" role="img" aria-label="Bar chart">' + s + "</svg>";
+  }
+  function list(obj) {
+    var ks = Object.keys(obj).filter(function (k) { return obj[k] > 0 && k !== "home"; }).sort(function (a, b) { return obj[b] - obj[a]; }), max = ks.length ? obj[ks[0]] : 1;
+    if (!ks.length) return '<p class="ss-cap">No games finished yet.</p>';
+    return '<ul class="ss-list">' + ks.map(function (k) { var g = gname(k); return "<li>" + (g[1] ? '<a href="' + g[1] + '">' + g[0] + "</a>" : "<span>" + g[0] + "</span>") + '<i style="width:' + Math.max(2, obj[k] / max * 100) + '%"></i><em>' + nf(obj[k]) + "</em></li>"; }).join("") + "</ul>";
+  }
+  function render(j, span) {
+    var D = j.days || [], first = D.findIndex(function (x) { return x.n > 0; });
+    if (first > 0) D = D.slice(first);
+    var T = D[D.length - 1] || { n: j.today || 0, g: {} }, Y = D[D.length - 2] || { n: 0 };
+    var last7 = D.slice(-8, -1), avg = last7.length ? last7.reduce(function (a, x) { return a + x.n; }, 0) / last7.length : 0;
+    var best = D.slice(0, -1).reduce(function (a, x) { return x.n > a.n ? x : a; }, { n: 0, d: "" });
+    var total = D.reduce(function (a, x) { return a + x.n; }, 0);
+    var wk = {}; D.slice(-7).forEach(function (x) { for (var k in x.g) wk[k] = (wk[k] || 0) + x.g[k]; });
+    var h = '<div class="ss-kpis">' +
+      '<div class="ss-k"><b>' + nf(T.n) + "</b><span>Games played today</span></div>" +
+      '<div class="ss-k"><b>' + nf(Y.n) + "</b><span>Yesterday</span></div>" +
+      '<div class="ss-k"><b>' + nf(avg) + "</b><span>Daily average, last 7 days</span></div>" +
+      '<div class="ss-k"><b>' + nf(best.n) + "</b><span>Best day" + (best.d ? " (" + nice(best.d) + ")" : "") + "</span></div></div>";
+    h += '<h2>Games played each day</h2><div class="ss-tabs" role="group" aria-label="Time span"><button type="button" data-d="30" aria-pressed="' + (span === 30) + '">30 days</button><button type="button" data-d="90" aria-pressed="' + (span === 90) + '">90 days</button><button type="button" data-d="365" aria-pressed="' + (span === 365) + '">1 year</button></div>';
+    h += '<div class="ss-box">' + bars(D.map(function (x) { return x.n; }), D.map(function (x) { return nice(x.d); }), D.length - 1) + '<p class="ss-cap">Sydney days. Today so far in gold. ' + nf(total) + " games in this period.</p></div>";
+    h += "<h2>Today by game</h2>" + '<div class="ss-box">' + list(T.g || {}) + "</div>";
+    h += "<h2>Last 7 days by game</h2>" + '<div class="ss-box">' + list(wk) + "</div>";
+    if (j.hourDays) h += "<h2>When people play</h2>" + '<div class="ss-box">' + bars(j.hours.map(function (v) { return v / j.hourDays; }), j.hours.map(function (v, i) { return (i % 12 || 12) + (i < 12 ? "am" : "pm"); }), -1, 120) + '<p class="ss-cap">Average games finished per hour, Sydney time, over the last ' + j.hourDays + " days.</p></div>";
+    box.innerHTML = h;
+    Array.prototype.forEach.call(box.querySelectorAll(".ss-tabs button"), function (b) { b.onclick = function () { load(+b.getAttribute("data-d")); }; });
+  }
+  var cache = {};
+  function load(span) {
+    if (cache[span]) return render(cache[span], span);
+    fetch(API + span, { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { if (!j) throw 0; cache[span] = j; render(j, span); })
+      .catch(function () { box.innerHTML = '<p id="ss-wait">The stats server is waking up. Try again in a minute.</p>'; });
+  }
+  load(30);
+})();
+</script><p class="meta">Counts come from finished daily puzzles (arcade games aren’t counted). No cookies, names or personal data. Your own streaks and badges live on <a href="/me/">My stats</a>.</p>
+
+<p class="meta">Updated 15 November 2026.</p>
+
+<section class="related"><h2>Related</h2><ul><li><a href="/medical-games/"><span>Games</span>All puzzles</a></li><li><a href="/me/"><span>Malady Wise</span>My stats</a></li><li><a href="/about/"><span>Malady Wise</span>About</a></li></ul></section>
+<p class="print-url">maladywise.com/site-stats/</p>
+<footer class="site">
+<!-- static-nav --><nav class="static-nav" aria-label="Site sections"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/medical-games/#quizzes">Quizzes</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">Health days</a></nav><!-- /static-nav -->
+
+<p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
+</main>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
+</body>
+</html>

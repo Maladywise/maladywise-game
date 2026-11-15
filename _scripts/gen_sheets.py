@@ -113,7 +113,7 @@ def tail(url, faq, related, label_of):
 
 def label_of(u):
     if u in ("/medical-games/", "/normie/", "/arcade/") or u in GAME_URLS: return "Games"
-    if u in ("/about/", "/shop/", "/mascots/", "/zebra-mail/", "/days/", "/research/") or u.startswith("/mascots/"): return "Malady Wise"
+    if u in ("/about/", "/shop/", "/mascots/", "/zebra-mail/", "/days/", "/research/", "/me/", "/site-stats/") or u.startswith("/mascots/"): return "Malady Wise"
     return "Drug" if u.startswith("/medicines/") else "Deep dive" if u.startswith("/deep-dives/") else "Guide" if u.count("/") > 2 else "Fact sheet"
 
 

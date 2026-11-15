@@ -1410,3 +1410,5 @@ a.masc-link{display:contents;cursor:pointer}a.masc-link:focus-visible>img{outlin
 
 /* Post on X button (shell.js addShare) */
 .mw-sharerow a.mw-xpost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#111!important;color:#fff!important;border-color:#111!important}.mw-sharerow a.mw-xpost:hover{background:#333!important}html[data-theme="dark"] .mw-sharerow a.mw-xpost{background:#fff!important;color:#111!important;border-color:#fff!important}
+
+.mw-live a.mw-live-a{color:inherit;text-decoration:none}.mw-live a.mw-live-a:hover{text-decoration:underline;text-underline-offset:3px}
