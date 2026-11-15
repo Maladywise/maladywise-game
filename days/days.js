@@ -142,7 +142,7 @@
   // ---------- 2. Calendar ----------
   var grids = document.getElementById("cal-grids"), panel = document.getElementById("cal-day"), sel = TODAY, g0 = 0;
   var monthSel = document.getElementById("cal-month");
-  function cols() { return window.matchMedia("(min-width:980px)").matches ? 3 : window.matchMedia("(min-width:640px)").matches ? 2 : 1; }
+  function cols() { var g = document.getElementById("cal-grids"), w = g ? g.clientWidth : window.innerWidth; return w >= 590 ? 3 : w >= 400 ? 2 : 1; }
   function gIndex(y, m) { return (Number(y) - Number(YEARS[0])) * 12 + m; }
   function clampG(g) { return Math.max(0, Math.min(g, YEARS.length * 12 - cols())); }
   function onDay(yr, day) {
