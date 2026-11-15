@@ -5,14 +5,15 @@ import collections, glob, hashlib, html, json, os, random, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from anat import QUIZZES
 from other import ECG, TERMS
+from pharm import PHARM
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://maladywise.com"
-REVIEWED = "15 November 2026"
-ISO = "2026-11-15"
+REVIEWED = "16 November 2026"
+ISO = "2026-11-16"
 QKV = "4"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
 
 
@@ -216,7 +217,7 @@ cards = "".join('<li><a href="/anatomy-quiz/%s/"><b>%s</b><span>%s</span><small 
     q["slug"], esc(q["h1"].replace(" Anatomy Quiz", "").replace(" Quiz", "").replace("Bones: The Human Skeleton", "Bones")), esc(q["card"]), q["slug"], len(q["qs"]), len(q["qs"])) for q in QUIZZES)
 hub_body = "\n".join([
     "<h1>Anatomy Quiz: Free Human Anatomy Quizzes</h1>",
-    '<p class="lede">Eleven free anatomy quizzes with diagrams and short explanations: the brain, cranial nerves, skull, muscles, bones, heart, lungs, digestive system, head and neck, and upper and lower limbs. Pick a topic, or warm up with the ten-question mixed quiz below.</p>',
+    '<p class="lede">%d free anatomy quizzes with diagrams and short explanations, 20 questions each, easy to hard: the brain, cranial nerves, skull, spine, muscles, bones, heart and coronary arteries, lungs, gut, eye, ear, dermatomes and limbs. Pick a topic, or warm up with the ten-question mixed quiz below.</p>' % len(QUIZZES),
     '<h2>Choose a topic</h2><ul class="qk-cards">%s</ul>' % cards,
     '<h2>Quick mixed anatomy quiz</h2><p>Ten questions, one from each corner of the body.</p>',
     quiz_section(MIX, "anat-mixed", "Mixed anatomy quiz", "🦴"),
@@ -229,7 +230,7 @@ hub_lds = [{"@context": "https://schema.org", "@type": "CollectionPage", "name":
             "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE + "/anatomy-quiz/%s/" % q["slug"], "name": q["h1"]} for i, q in enumerate(QUIZZES)]}},
            quiz_ld("Mixed anatomy quiz", SITE + "/anatomy-quiz/", MIX, "Human anatomy"), faq_ld(HUB_FAQ)]
 write("/anatomy-quiz/", page("/anatomy-quiz/", "Anatomy Quiz: Free Human Anatomy Quizzes",
-                             "Free anatomy quizzes with diagrams: brain, cranial nerves, skull, muscles, bones, heart, lungs, gut and limbs. Instant answers and explanations.",
+                             "Free anatomy quizzes with diagrams: brain, skull, spine, muscles, bones, heart, lungs, gut, eye, ear, dermatomes and limbs. Instant answers.",
                              "anatomegaly", hub_body, hub_lds))
 
 # ---------- ECG quiz ----------
@@ -246,6 +247,20 @@ ecg_body = "\n".join([
 ])
 write("/ecg-quiz/", page("/ecg-quiz/", ECG["title"], ECG["desc"], "arrhythmix", ecg_body,
                          [quiz_ld("ECG quiz", SITE + "/ecg-quiz/", ECG["qs"], "ECG interpretation"), faq_ld(ECG["faqs"])], ecg=True))
+
+
+# ---------- pharmacology quiz ----------
+pharm_body = "\n".join([
+    "<h1>%s</h1>" % esc(PHARM["h1"]),
+    '<p class="lede">%s</p>' % esc(PHARM["lede"]),
+    quiz_section(PHARM["qs"], "pharmacology", "Pharmacology quiz", "💊"),
+    '<p class="qk-cta"><b>Want the details?</b> Our <a href="/medicines/">medicines A–Z</a> explains what each medicine does and what to watch for, in plain English.</p>',
+    faq_html(PHARM["faqs"]),
+    '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/quizzes/">All practice quizzes</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li></ul></nav>',
+    reviewed(" General education, not medical advice."),
+])
+write("/pharmacology-quiz/", page("/pharmacology-quiz/", PHARM["title"], PHARM["desc"], "drugs", pharm_body,
+                                  [quiz_ld("Pharmacology quiz", SITE + "/pharmacology-quiz/", PHARM["qs"], "Pharmacology"), faq_ld(PHARM["faqs"])]))
 
 # ---------- medical terminology quiz ----------
 R = TERMS["rounds"]

@@ -529,10 +529,10 @@
     // practice quizzes (/quizzes/): best scores in localStorage qk-best-<id>
     ["qz1", "📝", "Quiz Taster", "Finish any practice quiz.", "global", "qzdone", 1],
     ["qz5", "📚", "Swot", "Finish five different practice quizzes.", "global", "qzdone", 5],
-    ["anat11", "🦴", "Anatomy Buff", "Finish all 11 anatomy quizzes.", "global", "anatdone", 11],
+    ["anat11", "🦴", "Anatomy Buff", "Finish every anatomy quiz.", "global", "anatdone", 17],
     ["perf20", "🎯", "Perfect 20", "Score 20 out of 20 on any practice quiz.", "global", "qzperfect", 1],
     ["ecg20", "💓", "ECG Ace", "Score 20 out of 20 on the ECG quiz.", "global", "ecgperfect", 1],
-    ["fullbody", "🧍", "Full Body Scan", "Score 20 out of 20 on every anatomy quiz.", "global", "anatperfect", 11],
+    ["fullbody", "🧍", "Full Body Scan", "Score 20 out of 20 on every anatomy quiz.", "global", "anatperfect", 17],
     // secret badges: shown as ??? until found (b[7] = 1)
     ["sx_night", "🦇", "Pager Goes Off", "Found the hidden Night Shift game.", "global", "", 0, 1],
     ["sx_whisper", "🤫", "Mascot Whisperer", "Heard three mascots’ secrets.", "global", "", 0, 1],
@@ -542,7 +542,7 @@
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1]
   ];
-  var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb".split(" ");
+  var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
     function dstr(n) { return new Date(n * 864e5).toISOString().slice(0, 10); }

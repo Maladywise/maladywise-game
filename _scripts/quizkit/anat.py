@@ -612,3 +612,7 @@ for _qz in QUIZZES:
     for _k in ("desc", "lede"):
         for _w in ("Thirteen", "Fourteen", "Fifteen", "13", "14", "15"):
             if _w + " questions" in _qz[_k]: _qz[_k] = _qz[_k].replace(_w + " questions", ("Twenty" if _w[0].isupper() else "20") + " questions")
+
+# six more quizzes (eye, ear, dermatomes, spine, coronary arteries, circle of Willis) live in anat2.py
+from anat2 import QUIZZES2 as _Q2
+QUIZZES = QUIZZES + _Q2

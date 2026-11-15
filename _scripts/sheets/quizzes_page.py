@@ -3,7 +3,7 @@ import sys as _sys, os as _osq, re as _req
 _sys.path.insert(0, "_scripts/quizkit")
 from anat import QUIZZES as _QZ
 _IMG = {"brain": "neurology", "cranial-nerves": "research", "skull": "dental", "muscles": "ortho", "upper-limb": "ortho", "lower-limb": "exercises",
-        "head-and-neck": "gridectomy", "bones": "ortho", "heart": "arrhythmix", "digestive-system": "nutrition", "lungs": "sleep"}
+        "head-and-neck": "gridectomy", "bones": "ortho", "heart": "arrhythmix", "digestive-system": "nutrition", "lungs": "sleep", "eye": "research", "ear": "gridectomy", "dermatomes": "dactylosis", "spine": "ortho", "coronary-arteries": "arrhythmix", "circle-of-willis": "neurology"}
 def _c(href, img, t, d, best=None, n=None):
     tag = ('<i data-qq="%s" data-n="%s" hidden></i>' % (best, n)) if best else ""
     return ('<a class="dh-c" href="%s"><img src="/assets/mascots/%s.svg" width="48" height="48" alt="" loading="lazy"><span><b>%s</b>%s<span>%s</span></span></a>\n'
@@ -16,7 +16,8 @@ body = ('<p class="lede">Free practice quizzes with diagrams, real X-rays and EC
  + _c("/x-ray-quiz/", "opacitis", "X-ray quiz", "Real chest, abdominal and bone X-rays to read.", "x-ray", None)
  + _c("/anatomy-quiz/", "dx", "Mixed anatomy", "Ten questions from all over the body. A good warm-up.", "anat-mixed", None)
  + '</div>\n<h2>Anatomy</h2>\n<div class="dh-grid">\n' + _anat
- + '</div>\n<h2>Medical words</h2>\n<div class="dh-grid">\n'
+ + '</div>\n<h2>Medicines and words</h2>\n<div class="dh-grid">\n'
+ + _c("/pharmacology-quiz/", "medicines", "Pharmacology", "Drug classes, antidotes and interactions.", "pharmacology", 20)
  + _c("/medical-terminology-quiz/", "morphemia", "Medical terminology", "Prefixes, suffixes and word roots, with a cheat sheet.", "terms-prefixes", None)
  + _c("/morphemia/", "morphemia", "Morphemia", "The daily game: build a long medical word from its parts.")
  + '</div>\n<h2>Want more?</h2>\n<div class="dh-grid">\n'
