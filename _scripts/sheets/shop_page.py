@@ -14,9 +14,17 @@ body = ('<p class="lede">Stickers starring Basil, Clover and the game mascots. P
         '<p class="meta">Prices, shipping and returns are handled by Redbubble. Buying a sticker helps keep the puzzles free and ad-free.</p>\n'
         '<style>.shopg{list-style:none!important;margin:14px 0 26px!important;padding:0!important;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}'
         '.shopg li{margin:0!important}.shopg a{display:block;text-decoration:none;color:inherit;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:8px;text-align:center}'
-        '.shopg img{width:100%;height:auto;display:block}.shopg span{display:block;font-size:13px;line-height:1.3;margin-top:6px;color:var(--muted,#5C4E7E)}'
+        '.shopg a{display:flex;flex-direction:column;justify-content:center;height:100%;box-sizing:border-box;transition:border-color .15s,transform .15s}.shopg a:hover,.shopg a:focus-visible{border-color:var(--brand,#4A3480);transform:translateY(-2px)}.shopg li{display:flex}.shopg li>a{flex:1}.shopg img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;display:block}.shopg span{display:block;font-size:13px;line-height:1.3;margin-top:6px;color:var(--muted,#5C4E7E)}'
         '.btn-shop{display:inline-block;background:#4A3480;color:#fff!important;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}</style>\n')
 page("/shop/", "Malady Wise Stickers: Basil, Clover and the Game Mascots",
      "Malady Wise stickers: Basil and Clover the cats, plus the mascots from every daily medical puzzle. Sold and shipped worldwide through Redbubble.",
      "Stickers", "Malady Wise stickers", "Shop", [("Malady Wise", "/"), ("Stickers", "/shop/")], body, [], [],
      [("All puzzles", "/medical-games/"), ("Basil + Clover game", "/basil-clover/"), ("About", "/about/")], audience="Patient", about_type="WebPage")
+
+import os as _os2, re as _re2
+_f = "shop/index.html"
+if _os2.path.exists(_f):
+    _t = open(_f, encoding="utf-8").read()
+    _t = _re2.sub(r'<div class="fs-top">.*?</div>\n', "", _t, count=1)
+    _t = _re2.sub(r'<p class="meta"><em>Updated ([^.]+)\. For health professionals\.[^<]*</em></p>', r'<p class="meta">Updated \1.</p>', _t)
+    open(_f, "w", encoding="utf-8").write(_t)

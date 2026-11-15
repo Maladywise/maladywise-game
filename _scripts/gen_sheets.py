@@ -112,6 +112,8 @@ def tail(url, faq, related, label_of):
 
 
 def label_of(u):
+    if u in ("/medical-games/", "/normie/", "/arcade/") or u in GAME_URLS: return "Games"
+    if u in ("/about/", "/shop/", "/mascots/", "/zebra-mail/", "/days/", "/research/") or u.startswith("/mascots/"): return "Malady Wise"
     return "Drug" if u.startswith("/medicines/") else "Deep dive" if u.startswith("/deep-dives/") else "Guide" if u.count("/") > 2 else "Fact sheet"
 
 
@@ -166,6 +168,8 @@ def med(slug, title, desc, h1, name, tags, lede, quick, glance, sass, brands, ho
     write(url, out)
     REG.append((url, h1, "drug", [], [u for _, u in related], index_label or tags[0][1], blurb or esc_text(lede), ""))
 
+
+GAME_URLS = {"/basil-clover/", "/stackulus/", "/mergeon/", "/gp-school/"} | {"/%s/" % g for g in "dxtective wordemic comorbix morphemia linkase gridectomy suturix triviosis zebritis glimpsis opacitis panelysis arrhythmix sudokrine cryptoplexy grand-rounds anatomegaly sensitosis".split()}
 
 def page(url, title, desc, h1, name, kind, crumbs, body, faq, src, related, audience="Clinician", about_type="MedicalCondition"):
     """A free-form page (clinician guides, algorithms, hubs) with the same head, FAQ, sources and Related."""
