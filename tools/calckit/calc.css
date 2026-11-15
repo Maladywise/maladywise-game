@@ -38,3 +38,5 @@ html[data-theme="dark"] .cx .warn{color:#F0A898}
 .cx .vs section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px}
 .cx .vs h3{margin:6px 0 2px;font-size:16px}
 @media (max-width:380px){.cx .form{grid-template-columns:1fr;padding:12px}}
+.cx .ace-exit{display:inline-block;margin-top:.5em;padding:.35em .9em;border-radius:999px;background:#2B2340;color:#fff;text-decoration:none;font-weight:600}
+.cx .checks label b{color:#4A3480}

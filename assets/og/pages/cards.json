@@ -3135,6 +3135,13 @@
 "label": "Condition",
 "title": "Tired All the Time"
 },
+"tools-ace-score": {
+"url": "/tools/ace-score/",
+"key": "3acae6195abc",
+"v": "924ab807",
+"label": "Tool",
+"title": "ACE score calculator"
+},
 "tools-bmi-calculator": {
 "url": "/tools/bmi-calculator/",
 "key": "81afa93df2d5",

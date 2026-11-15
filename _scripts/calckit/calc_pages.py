@@ -512,4 +512,96 @@ CHA = dict(
              ("Calculator", "eGFR calculator", "/tools/egfr-calculator/"), ("Game", "Arrhythmix ECG game", "/arrhythmix/")],
 )
 
-CALCS = [DUE, WEEK, OVU, BMI, EGFR, CHA]
+
+# ---------------- ACE score ----------------
+ACE_ITEMS = [
+ ("Emotional abuse", "A parent or other adult at home often swore at you, insulted you, put you down, or made you afraid you might be hurt."),
+ ("Physical abuse", "A parent or other adult at home often pushed, grabbed, slapped or threw something at you, or ever hit you hard enough to leave marks or injure you."),
+ ("Sexual abuse", "An adult, or someone at least 5 years older, ever touched you sexually, made you touch them sexually, or tried to have or had sex with you."),
+ ("Emotional neglect", "You often felt that no one in your family loved you or thought you were special, or your family didn’t look out for each other or feel close."),
+ ("Physical neglect", "You often didn’t have enough to eat, had to wear dirty clothes, had no one to protect you, or your parents were too affected by alcohol or drugs to care for you or take you to the doctor."),
+ ("Losing a parent", "Your parents separated or divorced, or you lost a parent through abandonment, death or another reason."),
+ ("Domestic violence", "A parent or carer was often pushed, grabbed, slapped, kicked, hit or threatened by their partner."),
+ ("Alcohol or drug problems at home", "You lived with someone who had a problem with alcohol or used street drugs."),
+ ("Mental illness at home", "Someone in your household was depressed or mentally unwell, or attempted suicide."),
+ ("Prison", "Someone in your household went to prison."),
+]
+ACE_JS = r"""(function () {
+  var $ = function (i) { return document.getElementById(i); }, out = $("cx-out"), N = 10;
+  var HELP = '<p class="meta">Support: <a href="tel:131114">Lifeline 13 11 14</a> · <a href="tel:1300657380">Blue Knot 1300 657 380</a> (childhood trauma) · <a href="tel:1800737732">1800RESPECT 1800 737 732</a>. Outside Australia, see <a href="https://findahelpline.com/" target="_blank" rel="noopener">Find a Helpline</a>.</p>';
+  function run() {
+    var n = 0;
+    for (var i = 0; i < N; i++) if ($("ace-" + i).checked) n++;
+    var band = n === 0 ? "0" : n < 4 ? "1" : "4";
+    document.querySelectorAll("#cx-bands li").forEach(function (li) { li.classList.toggle("on", li.getAttribute("data-b") === band); });
+    var msg = n === 0
+      ? "No ACEs ticked. Childhood can still have been hard in ways these 10 questions don’t ask about, such as bullying, racism, poverty, illness or being in care."
+      : n < 4
+      ? "About 2 in 3 adults have at least one ACE, so you’re far from alone. On average, risk rises a little with each one, but many people with ACEs stay well."
+      : "4 or more ACEs is linked with higher average rates of some mental and physical health problems. That’s a group average, not a prediction about you: the score can’t tell who will become unwell, and support, safe relationships and treatment make a real difference.";
+    out.innerHTML = '<div class="res"><h2>Your ACE score</h2><p class="cxbig">' + n + ' <small>of 10</small></p><p>' + msg + '</p>' +
+      (n ? '<p>If this brings things up, or you’d like help, a GP is a good place to start: they can arrange counselling or a psychologist through a Mental Health Treatment Plan.</p>' : '') + '</div>' + HELP;
+  }
+  for (var i = 0; i < N; i++) $("ace-" + i).addEventListener("change", run);
+  run();
+})();"""
+ACE_FORM = ('<form class="form" id="cx-form" onsubmit="return false" autocomplete="off">\n'
+            '<p class="meta">Before your 18th birthday:</p>\n<div class="checks">'
+            + "".join(f'<label><input type="checkbox" id="ace-{i}"> <span><b>{t}.</b> {q}</span></label>' for i, (t, q) in enumerate(ACE_ITEMS))
+            + '</div>\n</form>')
+ACE_BODY = """<h2>What the score means</h2>
+<ul class="bands" id="cx-bands">
+<li data-b="0"><b>0</b>No ACEs from this list. Doesn’t rule out other hard experiences.</li>
+<li data-b="1"><b>1 to 3</b>Common: about 2 in 3 adults have at least one.</li>
+<li data-b="4"><b>4 or more</b>About 1 in 6 US adults. Linked with higher average risk of some health problems.</li>
+</ul>
+<h2>What the research shows</h2>
+<ul>
+<li><b>The original study:</b> over 9,500 adults in a US health plan (1998). People with 4 or more categories had 4 to 12 times the rates of alcohol and drug problems, depression and suicide attempts, and more heart, lung and liver disease.</li>
+<li><b>Later reviews:</b> a 2017 meta-analysis (37 studies, about 250,000 people) found the strongest links were with drug problems, violence and self-harm, and weaker links with obesity, inactivity and diabetes.</li>
+<li><b>In Australia:</b> a 2023 national study of 8,503 people found 62% had experienced at least one type of child maltreatment, and 39% more than one type.</li>
+<li><b>It can’t predict individuals:</b> in two long-running cohorts (UK and New Zealand), ACE scores were poor at picking which person would become unwell, only a little better than a coin toss.</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+<li>The score treats every item the same. One severe experience can matter more than several milder ones.</li>
+<li>It leaves out many adversities, such as bullying, racism, discrimination, poverty, serious illness, war, or being in out-of-home care.</li>
+<li>Good things count too. Positive childhood experiences, like feeling heard and safe with at least one adult, are linked with better adult mental health, even after ACEs.</li>
+<li>Trauma-focused therapies help. A GP can talk through options, check how you’re going now, and refer you on.</li>
+<li><b>For clinicians:</b> asking about ACEs works best inside trauma-informed care, with time to respond. Don’t use the score on its own to make treatment decisions.</li>
+</ul>"""
+ACE = dict(
+    path="/tools/ace-score/", ldname="ACE Score Calculator (Adverse Childhood Experiences)", crumb="ACE score calculator", kind="Questionnaire",
+    rev="Updated 15 November 2026", rev_date="2026-11-15",
+    title="ACE Score Calculator: Adverse Childhood Experiences Test",
+    h1="ACE score calculator",
+    desc="Free, private ACE (Adverse Childhood Experiences) score: 10 yes/no questions, what the score does and doesn’t mean, and where to get support.",
+    about={"@type": "MedicalCondition", "name": "Adverse childhood experiences"},
+    lede="Ten yes/no questions about hard things that happened before you turned 18. The score counts types of experience, not how bad they were, and it isn’t a diagnosis.",
+    callout='<b>Take your time.</b> These questions can bring up difficult memories. Stop at any point. Nothing you tick is saved or leaves this device. If you’re unsafe now, call 000 (or your local emergency number). <a class="ace-exit" href="https://www.bom.gov.au/" rel="noopener">Leave this page quickly ›</a>',
+    form=ACE_FORM,
+    empty="Tick any that apply. Leave the rest blank.",
+    js=ACE_JS,
+    body=ACE_BODY,
+    faqs=[
+        ("What is an ACE score?", "A count from 0 to 10 of the types of adverse childhood experience someone had before 18: abuse, neglect, and household problems such as domestic violence, a parent’s mental illness or substance use, separation, or prison."),
+        ("What is a high ACE score?", "A score of 4 or more is usually called high. It’s linked with higher average rates of mental health problems, substance use and some chronic diseases. It doesn’t mean a person will become unwell."),
+        ("Is the ACE test a diagnosis?", "No. It’s a short questionnaire, not a test for any condition. It can’t diagnose trauma, PTSD or anything else, and it’s poor at predicting an individual’s future health."),
+        ("How common are ACEs?", "Very common. In US surveys, about 64% of adults reported at least one ACE and about 17% reported four or more. An Australian national study found 62% had experienced at least one type of child maltreatment."),
+        ("Can the effects of ACEs be reversed?", "Many people with ACEs live well. Safe, supportive relationships, treatment for mental health problems, and trauma-focused therapies all help. A GP can be a good first step."),
+    ],
+    sources=[
+        ("Felitti VJ et al. Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: the ACE Study. Am J Prev Med 1998", "https://doi.org/10.1016/S0749-3797(98)00017-8", "original study; 4 or more categories 4 to 12-fold"),
+        ("Hughes K et al. The effect of multiple adverse childhood experiences on health: a systematic review and meta-analysis. Lancet Public Health 2017", "https://doi.org/10.1016/S2468-2667(17)30118-4", "37 studies, 253,719 people"),
+        ("Swedo EA et al. Prevalence of adverse childhood experiences among US adults: BRFSS 2011–2020. MMWR 2023", "https://www.cdc.gov/mmwr/volumes/72/wr/mm7226a2.htm", "63.9% at least one; 17.3% four or more"),
+        ("Mathews B et al. The prevalence of child maltreatment in Australia: findings from a national survey. Med J Aust 2023", "https://pubmed.ncbi.nlm.nih.gov/37004183/", "62.2% at least one type; 39.4% multi-type"),
+        ("Baldwin JR et al. Population vs individual prediction of poor health from results of adverse childhood experiences screening. JAMA Pediatr 2021", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7835926/", "poor individual prediction"),
+        ("Bethell C et al. Positive childhood experiences and adult mental and relational health. JAMA Pediatr 2019", "https://doi.org/10.1001/jamapediatrics.2019.3007", "positive childhood experiences"),
+        ("Blue Knot Foundation: support for adult survivors of childhood trauma", "https://blueknot.org.au/", "Australian helpline"),
+    ],
+    revnote="General education, not a diagnosis. Questions adapted from the CDC–Kaiser ACE Study questionnaire, with the domestic violence item made gender-neutral.",
+    related=[("Fact sheet", "PTSD", "/ptsd/"), ("Fact sheet", "Depression", "/depression/"), ("Fact sheet", "Anxiety", "/anxiety/"),
+             ("Tools", "What health checks do I need?", "/tools/health-check/")],
+)
+
+CALCS = [DUE, WEEK, OVU, BMI, EGFR, CHA, ACE]

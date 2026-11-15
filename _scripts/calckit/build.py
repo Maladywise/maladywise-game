@@ -18,7 +18,7 @@ sys.path.insert(0, HERE)
 BASE = "https://maladywise.com"
 REV_DATE = "2026-11-08"
 REV = "Updated 8 November 2026"
-CALC_V = "1"
+CALC_V = "2"
 
 def _assets():
     """Shared stylesheet/script tags, with ?v= numbers copied from a live tools page so versions stay in step.
@@ -113,7 +113,7 @@ def calc_page(c):
             "audience": {"@type": "MedicalAudience", "audienceType": "Clinician" if pro else "Patient"},
             "author": ORG, "publisher": ORG,
             "reviewedBy": {"@type": "Person", "jobTitle": "General Practitioner", "description": "Australian GP"},
-            "lastReviewed": REV_DATE, "isAccessibleForFree": True, "breadcrumb": crumb}
+            "lastReviewed": c.get("rev_date", REV_DATE), "isAccessibleForFree": True, "breadcrumb": crumb}
     if c.get("about"): page["about"] = c["about"]
     app = {"@context": "https://schema.org", "@type": "WebApplication", "name": c["h1"], "url": BASE + path,
            "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
@@ -132,7 +132,7 @@ def calc_page(c):
     s += c["body"] + "\n"
     s += faq_html(c["faqs"]) + "\n"
     s += sources(c["sources"]) + "\n"
-    s += f'<p class="meta"><em>{REV}. {c.get("revnote", "General education, not personal medical advice. Talk to your GP or doctor about your own results.")}</em></p>\n'
+    s += f'<p class="meta"><em>{c.get("rev", REV)}. {c.get("revnote", "General education, not personal medical advice. Talk to your GP or doctor about your own results.")}</em></p>\n'
     s += '<div id="nl-slot"></div>\n'
     s += related(c["related"]) + "\n" + FOOTER
     s += f'<script src="/tools/calckit/calc.js?v={CALC_V}"></script>\n<script>\n{c["js"].strip()}\n</script>\n<script>MW.page();</script>\n</body>\n</html>\n'
