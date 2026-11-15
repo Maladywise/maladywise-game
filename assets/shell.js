@@ -667,6 +667,15 @@
         // count a finished game only when its share buttons are actually on screen (some games build the result panel early, hidden)
         if (window.IntersectionObserver) { var io = new IntersectionObserver(function (en) { if (en.some(function (x) { return x.isIntersecting; })) { io.disconnect(); nudge(); } }); io.observe(pb); }
       }
+      if (pre) { // one-tap "Post on X": opens X with the result text ready (works without the native share sheet)
+        var xb = document.createElement("a"); xb.className = b.className.replace(/\bsolid\b/, "") + " mw-xpost"; xb.target = "_blank"; xb.rel = "noopener"; xb.textContent = "Post on \ud835\udd4f";
+        xb.onclick = function () {
+          var txt = pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, "").trim();
+          xb.href = "https://x.com/intent/post?text=" + encodeURIComponent(txt + "\n\n@MaladyWise") + "&url=" + encodeURIComponent(shareURL());
+          try { track("xpost/" + shareGame(), "Post on X " + shareGame()); } catch (e) {}
+        };
+        b.parentNode.appendChild(xb); xb.href = "https://x.com/intent/post"; xb.addEventListener("focus", xb.onclick); xb.addEventListener("mouseenter", xb.onclick);
+      }
       if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
       sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, ""), url: shareURL() }).catch(function () {}); };

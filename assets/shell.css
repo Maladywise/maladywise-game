@@ -1406,3 +1406,6 @@ a.masc-link{display:contents;cursor:pointer}a.masc-link:focus-visible>img{outlin
 
 /* Super Comorbix win */
 .cb-super .cb-stack{width:min(78vw,320px)}.cb-stack i:nth-child(5){animation-delay:.48s}.cb-crown{font-size:56px;line-height:1;animation:cbcrown .6s cubic-bezier(.2,1.6,.4,1) .2s both}.cb-stamp{margin-top:14px;padding:6px 18px;border:5px solid #C9A227;border-radius:10px;color:#C9A227;font:800 34px/1 var(--display,serif);letter-spacing:.12em;transform:rotate(-8deg);animation:cbstamp .45s cubic-bezier(.2,1.6,.4,1) .7s both}@keyframes cbcrown{0%{transform:translateY(-60px) rotate(-20deg);opacity:0}100%{transform:none;opacity:1}}@keyframes cbstamp{0%{transform:scale(2.6) rotate(-8deg);opacity:0}100%{transform:scale(1) rotate(-8deg);opacity:1}}@media (prefers-reduced-motion:reduce){.cb-crown,.cb-stamp{animation:none}}
+
+/* Post on X button (shell.js addShare) */
+.mw-sharerow a.mw-xpost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#111!important;color:#fff!important;border-color:#111!important}.mw-sharerow a.mw-xpost:hover{background:#333!important}html[data-theme="dark"] .mw-sharerow a.mw-xpost{background:#fff!important;color:#111!important;border-color:#fff!important}
