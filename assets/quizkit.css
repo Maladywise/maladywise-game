@@ -205,3 +205,18 @@ svg.ecg .hl-tag.t2{fill:var(--hl2)}
 .qk-credits{margin:18px 0;font-size:13px;color:var(--muted)}
 .qk-credits summary{cursor:pointer;font-weight:600}
 .qk-credits ol{padding-left:22px;overflow-wrap:anywhere}
+
+/* keyboard tip (desktop only) */
+.qk-keys{display:none;margin:-4px 0 8px;font-size:12.5px;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.qk-keys{display:block}}
+/* desktop: wider quiz, picture left and answers right, so no scrolling to answer */
+@media (min-width:1000px){
+  .qk.qk-on{width:min(1060px,calc(100vw - 64px));position:relative;left:50%;transform:translateX(-50%)}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg){display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);column-gap:28px;grid-auto-flow:row dense;align-items:start}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>*{grid-column:1}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-opts,.qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-fb,.qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-next{grid-column:2}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-opts{grid-row:1/span 4;margin-top:0}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-fb{grid-row:5/span 3}
+  .qk.qk-on .qk-q.cur:has(.qk-art,.qk-ecg)>.qk-next{grid-row:8}
+  .qk.qk-on .qk-q.cur .qk-art svg{max-height:52vh;width:auto;max-width:100%;margin:0 auto;display:block}
+}

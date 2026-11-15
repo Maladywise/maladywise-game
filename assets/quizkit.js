@@ -61,10 +61,30 @@
           fb.hidden = false; next.hidden = false;
           var svg = q.querySelector("svg.ecg"); if (svg) svg.classList.add("show");
           upd(); try { next.focus({ preventScroll: true }); } catch (e) {}
+          autoNext(qi, next);
         };
         return b;
       });
-      next.onclick = function () { if (qi < qs.length - 1) show(qi + 1, true); else end(); };
+      next.onclick = function () { stopAuto(); if (qi < qs.length - 1) show(qi + 1, true); else end(); };
+    });
+
+    // auto-advance 3 seconds after an answer (paused while the pointer rests on the explanation); arrows move between questions
+    var autoT = null, autoI = null, hold = false;
+    function stopAuto() { clearTimeout(autoT); clearInterval(autoI); autoT = autoI = null; qs.forEach(function (q) { var b = q.querySelector(".qk-next"); if (b && b._lab) b.textContent = b._lab; }); }
+    function autoNext(qi, btn) {
+      stopAuto(); if (qi === qs.length - 1) return;
+      btn._lab = btn._lab || btn.textContent; var left = 3;
+      btn.textContent = btn._lab + " (" + left + ")";
+      autoI = setInterval(function () { if (hold) return; left--; if (left > 0) btn.textContent = btn._lab + " (" + left + ")"; else { stopAuto(); if (cur === qi) show(qi + 1, true); } }, 1000);
+    }
+    qs.forEach(function (q) { var fb = q.querySelector(".qk-fb"); if (fb) { fb.addEventListener("mouseenter", function () { hold = true; }); fb.addEventListener("mouseleave", function () { hold = false; }); } });
+    document.addEventListener("keydown", function (e) {
+      if (!sec.classList.contains("qk-on") || sec.querySelector(".qk-end") || e.altKey || e.ctrlKey || e.metaKey) return;
+      var tg = e.target && e.target.tagName; if (/^(INPUT|TEXTAREA|SELECT)$/.test(tg)) return;
+      if (document.querySelectorAll("section.qk.qk-on").length > 1 && !sec.contains(document.activeElement) && sec.getBoundingClientRect().top > innerHeight) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); stopAuto(); if (cur < qs.length - 1) show(cur + 1, true); else if (marks.filter(function (m) { return m != null; }).length) end(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); stopAuto(); if (cur > 0) show(cur - 1, true); }
+      else if (/^[a-fA-F1-6]$/.test(e.key)) { var k = /\d/.test(e.key) ? +e.key - 1 : "abcdef".indexOf(e.key.toLowerCase()); var b = qs[cur].querySelectorAll(".qk-opts button")[k]; if (b && !b.disabled) { e.preventDefault(); b.click(); } }
     });
 
     function upd() {
@@ -81,7 +101,8 @@
     function end() {
       var n = qs.length, p = score / n, k = "qk-best-" + id, best = +get(k) || 0;
       if (score > best) put(k, score);
-      var grid = marks.map(function (m) { return m ? "🟩" : "🟥"; }).join("");
+      stopAuto();
+      var grid = qs.map(function (q, i) { return marks[i] == null ? "⬜" : marks[i] ? "🟩" : "🟥"; }).join("");
       var url = location.origin + location.pathname + (sec.id && document.querySelectorAll(".qk").length > 1 ? "#" + sec.id : "");
       var share = "Malady Wise " + title + ": " + score + "/" + n + " " + emoji + "\n" + grid + "\n" + url;
       var box = h("div", "qk-end");
@@ -103,6 +124,8 @@
       try { if (window.gtag) gtag("event", "quiz_complete", { quiz: id, score: score, of: n }); } catch (e) {}
     }
     show(0, false);
+    var hint = h("p", "qk-keys", "Tip: use \u2190 \u2192 to move between questions, or A to F to answer.");
+    bar.insertAdjacentElement("afterend", hint);
   }
 
   function hub() {

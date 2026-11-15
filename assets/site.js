@@ -4,7 +4,12 @@ window.MW_HOME = {
   // Top menu. Items with "items" are dropdowns (grouped lists in the phone menu).
   // Item flags: "au" = Australian visitors only; "medical" = hidden in Normie mode. Same menu in Medical and Normie.
   nav: [
-    { t: "Puzzles", tn: "Games", href: "/" },
+    { t: "Puzzles", tn: "Games", items: [
+      { t: "Today’s puzzles", href: "/", d: "The daily games, fresh at midnight" },
+      { t: "Practice quizzes", href: "/medical-games/#quizzes", d: "Anatomy, ECG, X-ray, terminology" },
+      { t: "All games", href: "/medical-games/", d: "Every game, plus past puzzles" },
+      { t: "Arcade", href: "/arcade/", d: "Basil + Clover, Stackulus, Mergeon" }
+    ] },
     { t: "For patients", medical: true, items: [
       { t: "Patients’ hub", href: "/patients/", d: "Pain, fatigue, ADHD and more" },
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
