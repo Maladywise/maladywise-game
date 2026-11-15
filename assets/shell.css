@@ -1474,3 +1474,4 @@ footer.site .ft-tag{font:italic 500 15px var(--title,Lora,serif);color:var(--ink
 @media (min-width:900px){.wd-grid{columns:2;column-gap:28px}.wd-sec{break-inside:avoid;padding-top:2px}.wd-sec h2{margin-top:22px}}
 .wd-sec{display:block}
 .wd h3+ul{gap:2px}.wd h3+ul li{background:none;border:0;border-radius:0;padding:2px 0;font-size:13px;line-height:1.5}@media (min-width:900px){.wd h3+ul{display:block;columns:2;column-gap:28px}.wd h3+ul li{break-inside:avoid}}
+.callout.heard ul{margin:6px 0 0;padding-left:1.2em}.callout.heard li{margin:3px 0}
