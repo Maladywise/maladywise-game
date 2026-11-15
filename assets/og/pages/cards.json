@@ -69,6 +69,13 @@
 "label": "Algorithm for clinicians",
 "title": "ME/CFS and Long COVID"
 },
+"aluminium": {
+"url": "/aluminium/",
+"key": "1edc291b2c89",
+"v": "ee714918",
+"label": "Condition",
+"title": "Aluminium"
+},
 "anal-fissure": {
 "url": "/anal-fissure/",
 "key": "939d51410122",
@@ -187,6 +194,13 @@
 "v": "ed21c1fe",
 "label": "Condition",
 "title": "Bell’s Palsy"
+},
+"biotin": {
+"url": "/biotin/",
+"key": "6ce9dc8b0b93",
+"v": "d482f6dd",
+"label": "Condition",
+"title": "Biotin (Vitamin B7)"
 },
 "bird-flu": {
 "url": "/bird-flu/",
@@ -433,6 +447,13 @@
 "label": "Condition",
 "title": "High Cholesterol"
 },
+"chromium": {
+"url": "/chromium/",
+"key": "96bda7c9017a",
+"v": "2d301f96",
+"label": "Condition",
+"title": "Chromium"
+},
 "chronic-kidney-disease": {
 "url": "/chronic-kidney-disease/",
 "key": "d96bfe46d202",
@@ -453,6 +474,13 @@
 "v": "788cd5c6",
 "label": "Condition",
 "title": "Chronic Rhinosinusitis"
+},
+"cobalt": {
+"url": "/cobalt/",
+"key": "03229ed5289f",
+"v": "b41d4818",
+"label": "Condition",
+"title": "Cobalt Toxicity"
 },
 "coeliac": {
 "url": "/coeliac/",
@@ -551,6 +579,13 @@
 "v": "abc0d55a",
 "label": "Condition",
 "title": "COPD"
+},
+"copper": {
+"url": "/copper/",
+"key": "75053d76de67",
+"v": "5a33bded",
+"label": "Condition",
+"title": "Copper"
 },
 "costochondritis": {
 "url": "/costochondritis/",
@@ -1371,6 +1406,13 @@
 "label": "Condition",
 "title": "Male Infertility"
 },
+"manganese": {
+"url": "/manganese/",
+"key": "8cb0c2624a32",
+"v": "f637925f",
+"label": "Condition",
+"title": "Manganese Toxicity"
+},
 "marine-stings": {
 "url": "/marine-stings/",
 "key": "0f813c956316",
@@ -2073,10 +2115,10 @@
 },
 "niacin": {
 "url": "/niacin/",
-"key": "288ed64c14b1",
-"v": "ff8b7d56",
+"key": "98e24bf09c75",
+"v": "da83100b",
 "label": "Condition",
-"title": "Niacin (Vitamin B3)"
+"title": "Niacin (Vitamin B3) and Pellagra"
 },
 "osteoarthritis": {
 "url": "/osteoarthritis/",
@@ -2126,6 +2168,13 @@
 "v": "9390a22a",
 "label": "Condition",
 "title": "Pancreatic Cancer"
+},
+"pantothenic-acid": {
+"url": "/pantothenic-acid/",
+"key": "7b2b2cbb04b7",
+"v": "aa77f0b1",
+"label": "Condition",
+"title": "Pantothenic Acid (Vitamin B5)"
 },
 "paronychia": {
 "url": "/paronychia/",
@@ -2325,10 +2374,10 @@
 },
 "riboflavin": {
 "url": "/riboflavin/",
-"key": "da79c259c42d",
-"v": "3b95ad8c",
+"key": "21cc4bb85eb6",
+"v": "ae10bb89",
 "label": "Condition",
-"title": "Riboflavin (Vitamin B2)"
+"title": "Riboflavin (Vitamin B2) Deficiency"
 },
 "rosacea": {
 "url": "/rosacea/",

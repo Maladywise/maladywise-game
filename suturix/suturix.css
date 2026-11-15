@@ -69,3 +69,6 @@ html[data-theme="dark"] #stx .found span{color:#fff}
 #stx .arow .badge{font-size:10px;padding:2px 8px}
 /* phones: grid and buttons on one screen */
 @media (max-width:600px){#stx .wrap{gap:7px;padding-bottom:12px} #stx .board{width:min(100%,292px)} #stx .theme{padding:5px 12px}}
+
+/* Suturix Long (Saturdays, 7x10) */
+#stx.long .board{width:min(100%,360px)}#stx.long .lt{font-size:clamp(15px,4.4vw,21px)}@media (max-width:600px){#stx.long .board{width:min(100%,330px)}}

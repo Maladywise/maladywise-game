@@ -1,8 +1,8 @@
 /* Suturix: 6x8 letter grid. Find the theme words (they fill every square) and the spangram, which runs edge to edge.
-   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram) */
+   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram). Saturdays: Suturix Long, rows[10] of 7 letters. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", R = 8, C = 6, PER_HINT = 3;
   // Normie mode: everyday themes from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Suturix (Normie)" : "Suturix";
   var root = document.getElementById("stx");
@@ -107,7 +107,7 @@
     if (!st.done) { r.hidden = true; return; }
     var em = { t: "\ud83d\udd35", s: "\ud83d\udfe1", h: "\ud83d\udca1" }, seq = st.log.map(function (x) { return em[x]; }), lines = [];
     for (var i = 0; i < seq.length; i += 4) lines.push(seq.slice(i, i + 4).join(""));
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\u201c" + P.clue + "\u201d\n" + lines.join("\n") + "\nmaladywise.com";
+    var share = (R > 8 ? NAME.replace("Suturix", "Suturix Long") : NAME) + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty] + "\n\u201c" + P.clue + "\u201d\n" + lines.join("\n") + "\nmaladywise.com";
     var pct = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
     r.hidden = false;
     r.innerHTML = '<p class="found">' + P.words.map(function (w, i) { return '<span class="' + (i === 0 ? "s" : "") + '">' + esc(w.w) + "</span>"; }).join("") + "</p>" +
@@ -229,7 +229,10 @@
         renderArchive(); return;
       }
       $("clue").textContent = P.clue;
-      $("eyebrow").textContent = (isLive() ? "Suturix" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
+      R = P.rows.length; C = P.rows[0].length; var lg = R > 8;  // Saturdays: Suturix Long (bigger grid)
+      $("svg").setAttribute("viewBox", "0 0 " + C * 100 + " " + R * 100); $("board").style.aspectRatio = C + "/" + R;
+      $("cells").style.gridTemplateColumns = "repeat(" + C + ",minmax(0,1fr))"; $("cells").style.gridTemplateRows = "repeat(" + R + ",minmax(0,1fr))"; root.classList.toggle("long", lg);
+      $("eyebrow").textContent = (isLive() ? (lg ? "Suturix Long" : "Suturix") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? ATOM : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive theme. Already done." : "Archive theme. Doesn't count towards your streak.");
       else if (st.done) say("Closed up. Come back tomorrow.");
