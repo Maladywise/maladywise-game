@@ -157,7 +157,7 @@ window.MW_GAMES = [
     tagline: "Five-by-five crossword. Big ego bruise.",
     accent: "#3A3150", accentDark: "#CFC6E3",
     icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="#fff"><rect x="8" y="8" width="10" height="10"/><rect x="19" y="8" width="10" height="10"/><rect x="30" y="8" width="10" height="10"/><rect x="8" y="19" width="10" height="10"/><rect x="30" y="19" width="10" height="10"/><rect x="8" y="30" width="10" height="10"/><rect x="19" y="30" width="10" height="10"/><rect x="30" y="30" width="10" height="10"/></g></svg>' },
-  { id: "suturix", normieMascot: true, kind: "Theme word search", name: "Suturix", path: "suturix/", live: true, store: { stats: "stx-stats", day: "stx-day-", labels: ["0", "1", "2", "3", "4+"], distTitle: " (hints per solve)" },
+  { id: "suturix", normieMascot: true, kind: "Theme word search", name: "Suturix", path: "suturix/", live: true, special: { dow: 6, from: "2026-11-21", short: "\ud83e\uddf5 Long Saturday", label: "\ud83e\uddf5 Suturix Long \u00b7 70 letters", tagline: "The weekend long stitch. Seventy letters, one theme." }, store: { stats: "stx-stats", day: "stx-day-", labels: ["0", "1", "2", "3", "4+"], distTitle: " (hints per solve)" },
     normie: { kind: "Theme word search", tagline: "Find the hidden theme words. Neat stitches.", quip: "Every letter belongs to something. Like a well-packed suitcase.", helpQuip: "If you're stuck, find any random words. They buy hints.", help: [
       "Find the theme words. Together they use every letter, once. Normie mode: everyday themes, no medicine.",
       "Drag across letters, or tap them one by one, then press Enter. Diagonals count.",

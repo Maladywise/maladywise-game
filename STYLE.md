@@ -270,3 +270,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Mergeon extras (owner's request, 15 Nov 2026)
 - Ward rounds (Normie: Dive sites): 10 levels in More (WARDS in mergeon.js), practice runs only, progress in localStorage. Wards 5 and 10 have a boss (merge next to it). Wards 3, 6, 9 unlock costume sets (Halloween, Easter, Christmas) that show any day without a seasonal costume.
 - Challenge a friend: after the daily, a link /mergeon/?date=YYYY-MM-DD&vs=SCORE. The friend gets the same drops and sees the score to beat.
+
+## Weekly big versions (Big Gridectomy, Suturix Long)
+- Sundays: Big Gridectomy, a 7x7 crossword (rows[7], "big": true), in Medical and Normie. Same format as the daily grid; the engine sizes itself from rows. No 2-letter answers; avoid abbreviations and proper nouns.
+- Saturdays: Suturix Long, a 7-wide by 10-tall grid (rows[10] of 7 letters, "long": true), 70 letters, spangram edge to edge, Medical and Normie. Same word/path format as daily. Paths must not cross diagonally.
+- Other weekly specials: Mon Super Morphemia, Tue Super Comorbix, Wed Super Zebritis, Thu Long Linkase, Fri Wordemic Long.
