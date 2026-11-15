@@ -365,3 +365,94 @@ HEART = dict(
 )
 
 QUIZZES = [BRAIN, SKULL, MUSCLES, UPPER, LOWER, HEADNECK, BONES, HEART]
+
+# ---- added 15 Nov 2026: digestive system, lungs, cranial nerves ----
+GUT = dict(
+    slug="digestive-system", emoji="🍽️", h1="Digestive System Anatomy Quiz",
+    title="Digestive System Quiz: Organs of the Gut and Abdomen",
+    desc="Free digestive system anatomy quiz: 14 questions on the liver, stomach, pancreas, bowel, appendix and more, with diagrams and short explanations.",
+    card="Liver, stomach, pancreas, bowel and appendix.",
+    lede="Fourteen questions on the organs of the abdomen and where food goes. The diagram is a front view, so the patient’s right is on your left. Tap an answer to see if you’re right.",
+    qs=[
+        dict(q="Name the highlighted organ.", a="Liver", w=["Spleen", "Stomach", "Pancreas"], why="The largest solid organ, under the right ribs. It makes bile and clotting factors and clears drugs and toxins.", art=("gut", ["liver"])),
+        dict(q="Name the highlighted organ.", a="Stomach", w=["Spleen", "Transverse colon", "Liver"], why="A muscular bag in the left upper abdomen. Acid and enzymes start breaking down protein.", art=("gut", ["stomach"])),
+        dict(q="Name the highlighted organ.", a="Gallbladder", w=["Pancreas", "Appendix", "Duodenum"], why="Tucked under the liver. It stores and concentrates bile, and gallstones form here.", art=("gut", ["gallbladder"])),
+        dict(q="Name the highlighted organ, which makes insulin and digestive enzymes.", a="Pancreas", w=["Spleen", "Duodenum", "Gallbladder"], why="It lies behind the stomach, its head cupped by the duodenum.", art=("gut", ["pancreas"])),
+        dict(q="Name the highlighted organ, tucked under the left lower ribs.", a="Spleen", w=["Pancreas", "Left kidney", "Stomach"], why="It filters old red cells and fights infection. It can rupture after a blow to the left lower ribs.", art=("gut", ["spleen"])),
+        dict(q="Name the highlighted tube.", a="Oesophagus", w=["Trachea", "Aorta", "Duodenum"], why="About 25 cm long, it carries food from throat to stomach, passing through the diaphragm on the way.", art=("gut", ["oesophagus"])),
+        dict(q="Name the highlighted C-shaped part of the bowel.", a="Duodenum", w=["Stomach", "Jejunum", "Caecum"], why="The first part of the small intestine. Bile and pancreatic juice enter here.", art=("gut", ["duodenum"])),
+        dict(q="Name the highlighted structure.", a="Appendix", w=["Caecum", "Sigmoid colon", "Rectum"], why="A small blind-ended tube off the caecum, usually in the right lower abdomen. Appendicitis is the commonest emergency abdominal operation.", art=("gut", ["appendix"])),
+        dict(q="Name the highlighted pouch where the small bowel meets the large bowel.", a="Caecum", w=["Appendix", "Ascending colon", "Rectum"], why="The start of the large intestine, in the right lower abdomen. The appendix hangs off it.", art=("gut", ["caecum"])),
+        dict(q="Name the highlighted part of the large bowel.", a="Transverse colon", w=["Stomach", "Small intestine", "Descending colon"], why="It hangs across the upper abdomen between the two bends of the colon.", art=("gut", ["transverse"])),
+        dict(q="Name the highlighted S-shaped part of the colon.", a="Sigmoid colon", w=["Descending colon", "Rectum", "Caecum"], why="It joins the descending colon to the rectum, and it’s the commonest site of diverticular disease in Western countries.", art=("gut", ["sigmoid"])),
+        dict(q="Where are most nutrients absorbed?", a="Small intestine", w=["Stomach", "Large intestine", "Oesophagus"], why="Several metres long and lined with villi, it gives a huge surface for absorption. The large bowel mainly takes back water and salt."),
+        dict(q="Which organ makes bile?", a="Liver", w=["Gallbladder", "Pancreas", "Duodenum"], why="The liver makes it; the gallbladder only stores it. Bile helps digest and absorb fats."),
+        dict(q="Where is vitamin B12 absorbed?", a="Terminal ileum", w=["Duodenum", "Stomach", "Colon"], why="The end of the small bowel absorbs B12 bound to intrinsic factor from the stomach. Iron is mostly absorbed in the duodenum."),
+    ],
+    faqs=[
+        ("What are the main organs of the digestive system?", "The mouth, oesophagus, stomach, small intestine (duodenum, jejunum, ileum) and large intestine (caecum, colon, rectum), helped by the liver, gallbladder and pancreas, which add bile and enzymes."),
+        ("How long is the digestive tract?", "In a living adult it’s roughly 5 to 7 metres from mouth to anus, most of it small intestine. Figures vary because the bowel relaxes and lengthens after death."),
+        ("What does the large intestine do?", "It absorbs water and salts, houses trillions of gut bacteria that ferment fibre, and stores and moves out waste."),
+    ],
+)
+
+LUNGS = dict(
+    slug="lungs", emoji="🫁", h1="Lungs and Respiratory System Quiz",
+    title="Lungs Anatomy Quiz: Lobes, Bronchi and Breathing",
+    desc="Free lungs and respiratory system anatomy quiz: 13 questions on the lobes, trachea, bronchi, diaphragm and alveoli, with diagrams and explanations.",
+    card="Lobes, bronchi, diaphragm and alveoli.",
+    lede="Thirteen questions on the airways and lungs. The diagram is a front view, so the patient’s right lung is on your left. Tap an answer to see if you’re right.",
+    qs=[
+        dict(q="Name the highlighted lobe.", a="Right upper lobe", w=["Left upper lobe", "Right middle lobe", "Lingula"], why="The top lobe of the right lung, above the horizontal fissure.", art=("lungs", ["rul"])),
+        dict(q="Name the highlighted lobe.", a="Right middle lobe", w=["Lingula", "Right lower lobe", "Right upper lobe"], why="Only the right lung has a middle lobe, between the horizontal and oblique fissures.", art=("lungs", ["rml"])),
+        dict(q="Name the highlighted lobe.", a="Right lower lobe", w=["Left lower lobe", "Right middle lobe", "Right upper lobe"], why="The biggest lobe, sitting on the diaphragm. Inhaled material often ends up here.", art=("lungs", ["rll"])),
+        dict(q="Name the highlighted lobe.", a="Left upper lobe", w=["Right upper lobe", "Lingula", "Left lower lobe"], why="The left lung has two lobes; this upper one includes the lingula.", art=("lungs", ["lul"])),
+        dict(q="Name the highlighted tongue-shaped part of the left lung.", a="Lingula", w=["Right middle lobe", "Left lower lobe", "Left upper lobe"], why="Part of the left upper lobe, it’s the left lung’s equivalent of the right middle lobe.", art=("lungs", ["lingula"])),
+        dict(q="Name the highlighted lobe.", a="Left lower lobe", w=["Right lower lobe", "Lingula", "Left upper lobe"], why="Below the left oblique fissure, sitting on the diaphragm behind the heart.", art=("lungs", ["lll"])),
+        dict(q="Name the highlighted tube.", a="Trachea", w=["Oesophagus", "Right main bronchus", "Larynx"], why="The windpipe, kept open by C-shaped rings of cartilage.", art=("lungs", ["trachea"])),
+        dict(q="Name the highlighted point where the windpipe splits.", a="Carina", w=["Larynx", "Hilum", "Lingula"], why="The ridge where the trachea divides into the two main bronchi. It’s very sensitive and triggers coughing.", art=("lungs", ["carina"])),
+        dict(q="Name the highlighted airway, where inhaled objects most often lodge.", a="Right main bronchus", w=["Left main bronchus", "Trachea", "Oesophagus"], why="It’s wider, shorter and more vertical than the left, so peanuts and teeth tend to go right.", art=("lungs", ["rmb"])),
+        dict(q="Name the highlighted muscle.", a="Diaphragm", w=["Pericardium", "Intercostal muscle", "Liver"], why="The main breathing muscle. It flattens as it contracts, drawing air in.", art=("lungs", ["diaphragm"])),
+        dict(q="How many lobes does the right lung have?", a="Three", w=["Two", "Four", "Five"], why="Upper, middle and lower. The left has two, leaving room for the heart."),
+        dict(q="Where does gas exchange happen?", a="Alveoli", w=["Bronchi", "Bronchioles", "Trachea"], why="Hundreds of millions of tiny air sacs, each wrapped in capillaries, swap oxygen for carbon dioxide."),
+        dict(q="Which nerve powers the diaphragm?", a="Phrenic nerve", w=["Vagus nerve", "Intercostal nerves", "Accessory nerve"], why="From the C3, C4 and C5 nerve roots: “C3, 4, 5 keeps the diaphragm alive.”"),
+    ],
+    faqs=[
+        ("How many lobes do the lungs have?", "Five in total: three in the right lung (upper, middle, lower) and two in the left (upper and lower). The left upper lobe has a tongue-like part called the lingula."),
+        ("Why is the left lung smaller?", "The heart sits slightly to the left, so the left lung has a notch for it and only two lobes."),
+        ("What are alveoli?", "Tiny air sacs at the ends of the airways where oxygen passes into the blood and carbon dioxide passes out. Adults have hundreds of millions of them."),
+    ],
+)
+
+CN = dict(
+    slug="cranial-nerves", emoji="⚡", h1="Cranial Nerves Quiz",
+    title="Cranial Nerves Quiz: All 12 Nerves, With Answers",
+    desc="Free cranial nerves quiz: 15 questions on the 12 cranial nerves, their jobs and classic signs like Bell’s palsy and a down-and-out eye, with explanations.",
+    card="All 12 nerves, their jobs and classic signs.",
+    lede="Fifteen questions on the twelve cranial nerves: what each one does and the signs when it fails. Tap an answer to see if you’re right.",
+    qs=[
+        dict(q="Which cranial nerve carries the sense of smell?", a="Olfactory nerve (I)", w=["Optic nerve (II)", "Trigeminal nerve (V)", "Facial nerve (VII)"], why="The first cranial nerve. Its fibres pass through the cribriform plate, which is why a head injury can take away smell."),
+        dict(q="Shine a light in one eye. Which nerve carries the signal in?", a="Optic nerve (II)", w=["Oculomotor nerve (III)", "Trigeminal nerve (V)", "Abducens nerve (VI)"], why="The optic nerve carries the light in; the oculomotor nerve carries the order to constrict the pupil back out."),
+        dict(q="An eye that sits “down and out”, with a droopy lid and a big pupil, points to which nerve?", a="Oculomotor nerve (III)", w=["Trochlear nerve (IV)", "Abducens nerve (VI)", "Optic nerve (II)"], why="It moves most eye muscles, lifts the lid and constricts the pupil. A painful third nerve palsy with a big pupil needs urgent scanning for an aneurysm."),
+        dict(q="Which nerve supplies the superior oblique muscle?", a="Trochlear nerve (IV)", w=["Abducens nerve (VI)", "Oculomotor nerve (III)", "Facial nerve (VII)"], why="The smallest cranial nerve. Damage causes double vision that is worst looking down, such as going down stairs."),
+        dict(q="Which nerve gives feeling to the face and powers chewing?", a="Trigeminal nerve (V)", w=["Facial nerve (VII)", "Glossopharyngeal nerve (IX)", "Hypoglossal nerve (XII)"], why="Three branches: ophthalmic, maxillary and mandibular. Trigeminal neuralgia causes electric-shock face pain."),
+        dict(q="Which nerve lets the eye look outwards?", a="Abducens nerve (VI)", w=["Trochlear nerve (IV)", "Oculomotor nerve (III)", "Optic nerve (II)"], why="It supplies the lateral rectus. Its long course inside the skull makes it a common casualty of raised pressure."),
+        dict(q="Bell’s palsy affects which nerve?", a="Facial nerve (VII)", w=["Trigeminal nerve (V)", "Vagus nerve (X)", "Accessory nerve (XI)"], why="The facial nerve moves the muscles of expression. In Bell’s palsy the whole side, forehead included, is weak."),
+        dict(q="Taste from the front two-thirds of the tongue travels in which nerve?", a="Facial nerve (VII)", w=["Glossopharyngeal nerve (IX)", "Hypoglossal nerve (XII)", "Trigeminal nerve (V)"], why="Via its chorda tympani branch. Ordinary touch from the same area goes in the trigeminal nerve."),
+        dict(q="Which nerve carries hearing and balance?", a="Vestibulocochlear nerve (VIII)", w=["Facial nerve (VII)", "Glossopharyngeal nerve (IX)", "Vagus nerve (X)"], why="Cochlear fibres for hearing, vestibular fibres for balance. A vestibular schwannoma presents with one-sided hearing loss."),
+        dict(q="Which nerve carries taste from the back third of the tongue and the sensory side of the gag reflex?", a="Glossopharyngeal nerve (IX)", w=["Vagus nerve (X)", "Hypoglossal nerve (XII)", "Facial nerve (VII)"], why="The vagus nerve then does the motor side of the gag."),
+        dict(q="Which cranial nerve reaches the heart, lungs and gut?", a="Vagus nerve (X)", w=["Glossopharyngeal nerve (IX)", "Accessory nerve (XI)", "Phrenic nerve"], why="“Vagus” means wandering. It slows the heart, moves the gut and supplies the voice box."),
+        dict(q="A hoarse voice after thyroid surgery suggests injury to a branch of which nerve?", a="Vagus nerve (X)", w=["Glossopharyngeal nerve (IX)", "Hypoglossal nerve (XII)", "Accessory nerve (XI)"], why="The recurrent laryngeal nerve, a vagus branch, runs close to the thyroid and supplies most voice-box muscles."),
+        dict(q="Shrugging the shoulders tests which nerve?", a="Accessory nerve (XI)", w=["Vagus nerve (X)", "Hypoglossal nerve (XII)", "Facial nerve (VII)"], why="It supplies trapezius and sternocleidomastoid. It can be injured in neck lymph node surgery."),
+        dict(q="Stick out the tongue and it points to the left. Which nerve is damaged?", a="Left hypoglossal nerve (XII)", w=["Right hypoglossal nerve (XII)", "Left glossopharyngeal nerve (IX)", "Right facial nerve (VII)"], why="The tongue is pushed out by each side’s muscles, so with one side weak it veers towards the weak side."),
+        dict(q="Touch the cornea and the eye blinks. Which nerve carries the touch signal?", a="Trigeminal nerve (V)", w=["Optic nerve (II)", "Facial nerve (VII)", "Oculomotor nerve (III)"], why="Its ophthalmic branch senses the touch; the facial nerve closes the eyelids."),
+    ],
+    faqs=[
+        ("What are the 12 cranial nerves in order?", "I olfactory, II optic, III oculomotor, IV trochlear, V trigeminal, VI abducens, VII facial, VIII vestibulocochlear, IX glossopharyngeal, X vagus, XI accessory and XII hypoglossal."),
+        ("Which cranial nerves move the eyes?", "Three: the oculomotor (III) moves most eye muscles, the trochlear (IV) the superior oblique, and the abducens (VI) the lateral rectus. A handy formula: LR6 SO4, the rest 3."),
+        ("What is the longest cranial nerve?", "The vagus nerve (X). It runs from the brainstem through the neck and chest into the abdomen, supplying the heart, lungs and much of the gut."),
+        ("How do doctors test the cranial nerves?", "In a few minutes at the bedside: smell, eyesight and pupils, eye movements, facial feeling and movement, hearing, swallowing and the gag, a shoulder shrug and sticking out the tongue."),
+    ],
+)
+
+QUIZZES = QUIZZES + [GUT, LUNGS, CN]

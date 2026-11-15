@@ -11,8 +11,8 @@ from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, defer
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://maladywise.com"
-REVIEWED = "8 November 2026"
-ISO = "2026-11-08"
+REVIEWED = "15 November 2026"
+ISO = "2026-11-15"
 QKV = "4"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
 
 
@@ -216,7 +216,7 @@ cards = "".join('<li><a href="/anatomy-quiz/%s/"><b>%s</b><span>%s</span><small 
     q["slug"], esc(q["h1"].replace(" Anatomy Quiz", "").replace(" Quiz", "").replace("Bones: The Human Skeleton", "Bones")), esc(q["card"]), q["slug"], len(q["qs"]), len(q["qs"])) for q in QUIZZES)
 hub_body = "\n".join([
     "<h1>Anatomy Quiz: Free Human Anatomy Quizzes</h1>",
-    '<p class="lede">Eight free anatomy quizzes with diagrams and short explanations: the brain, skull, muscles, bones, heart, head and neck, and upper and lower limbs. Pick a topic, or warm up with the ten-question mixed quiz below.</p>',
+    '<p class="lede">Eleven free anatomy quizzes with diagrams and short explanations: the brain, cranial nerves, skull, muscles, bones, heart, lungs, digestive system, head and neck, and upper and lower limbs. Pick a topic, or warm up with the ten-question mixed quiz below.</p>',
     '<h2>Choose a topic</h2><ul class="qk-cards">%s</ul>' % cards,
     '<h2>Quick mixed anatomy quiz</h2><p>Ten questions, one from each corner of the body.</p>',
     quiz_section(MIX, "anat-mixed", "Mixed anatomy quiz", "🦴"),
@@ -229,7 +229,7 @@ hub_lds = [{"@context": "https://schema.org", "@type": "CollectionPage", "name":
             "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE + "/anatomy-quiz/%s/" % q["slug"], "name": q["h1"]} for i, q in enumerate(QUIZZES)]}},
            quiz_ld("Mixed anatomy quiz", SITE + "/anatomy-quiz/", MIX, "Human anatomy"), faq_ld(HUB_FAQ)]
 write("/anatomy-quiz/", page("/anatomy-quiz/", "Anatomy Quiz: Free Human Anatomy Quizzes",
-                             "Free anatomy quizzes with diagrams: brain, skull, muscles, bones, heart, head and neck, upper and lower limb. Instant answers and explanations.",
+                             "Free anatomy quizzes with diagrams: brain, cranial nerves, skull, muscles, bones, heart, lungs, gut and limbs. Instant answers and explanations.",
                              "anatomegaly", hub_body, hub_lds))
 
 # ---------- ECG quiz ----------
