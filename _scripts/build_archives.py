@@ -348,6 +348,57 @@ def r_cryptogenic(x, ctx):
     return "".join(h)
 
 
+def grid_answer(rows, cl, down):
+    r, c, n = cl.get("r", 0), cl.get("c", 0), cl.get("len", 0)
+    try:
+        return "".join(rows[r + i][c] if down else rows[r][c + i] for i in range(n))
+    except Exception:
+        return ""
+
+
+def r_gridectomy(x, ctx):
+    rows = x.get("rows") or []
+    h = []
+    if x.get("big"):
+        h.append('<p class="ar-m">Big Gridectomy: the 7×7 Sunday crossword.</p>')
+    for key, title in (("across", "Across"), ("down", "Down")):
+        items = []
+        for cl in x.get(key, []):
+            ans = grid_answer(rows, cl, key == "down")
+            items.append("<li>%s. %s: <b>%s</b></li>" % (esc(cl.get("n")), esc(cl.get("clue")), esc(ans)))
+        if items:
+            h.append('<p class="ar-title">%s</p><ul class="ar-rank">%s</ul>' % (title, "".join(items)))
+    return "".join(h)
+
+
+def r_suturix(x, ctx):
+    words = [w.get("w", "") for w in (x.get("words") or [])]
+    sp = x.get("spangram", "")
+    other = [w for w in words if w != sp]
+    h = ['<p class="ar-q">Theme: %s</p>' % esc(x.get("clue"))]
+    if x.get("long"):
+        h.append('<p class="ar-m">Suturix Long: the 70-letter Saturday grid.</p>')
+    h.append('<p class="ar-ans"><b>Spangram:</b> %s</p>' % esc(sp))
+    if other:
+        h.append('<p><b>Theme words:</b> %s</p>' % esc(", ".join(other)))
+    return "".join(h)
+
+
+def r_morphemia(x, ctx):
+    letters = (x.get("centre") or "") + (x.get("outer") or "")
+    pg = x.get("pangrams") or []
+    med = x.get("medical") or []
+    allw = x.get("words") or []
+    h = ['<p class="ar-q">Letters: %s (centre letter %s)</p>' % (esc(" ".join(letters)), esc(x.get("centre")))]
+    if pg:
+        h.append('<p class="ar-ans"><b>Pangram%s:</b> %s</p>' % ("s" if len(pg) > 1 else "", esc(", ".join(pg))))
+    if med:
+        h.append('<p><b>Medical words (double points):</b> %s</p>' % esc(", ".join(med)))
+    if allw:
+        h.append('<p class="ar-m">%d words in all; top score %s.</p>' % (len(allw), esc(x.get("max"))))
+    return "".join(h)
+
+
 # ---------- game list (ids match MW_GAMES in assets/games.js) ----------
 
 GAMES = [
@@ -407,6 +458,21 @@ GAMES = [
      "title": "Medical Word Chain Archive: Past Linkase Answers", "h1": "Linkase archive: past medical word chain answers",
      "desc": "Every past Linkase medical word chain: the full chain and each link in it.",
      "lede": "Every past word chain, with each link spelled out. Newest first."},
+    {"id": "gridectomy", "folder": "gridectomy", "name": "Gridectomy",
+     "load": lambda: load_months("gridectomy/puzzles"), "render": r_gridectomy,
+     "title": "Medical Mini Crossword Archive: Past Gridectomy Answers", "h1": "Gridectomy archive: past medical mini crossword answers",
+     "desc": "Every past Gridectomy medical mini crossword: each across and down clue with its answer, including the 7x7 Big Gridectomy on Sundays.",
+     "lede": "Every past mini crossword, with each clue and its answer. Newest first."},
+    {"id": "suturix", "folder": "suturix", "name": "Suturix",
+     "load": lambda: load_months("suturix/puzzles"), "render": r_suturix,
+     "title": "Medical Word Search Archive: Past Suturix Answers", "h1": "Suturix archive: past medical word search answers",
+     "desc": "Every past Suturix medical theme word search: the theme clue, the spangram and every hidden theme word.",
+     "lede": "Every past theme word search, with the spangram and all the theme words. Newest first."},
+    {"id": "morphemia", "folder": "morphemia", "name": "Morphemia",
+     "load": lambda: load_months("morphemia/puzzles"), "render": r_morphemia,
+     "title": "Medical Spelling Bee Archive: Past Morphemia Answers", "h1": "Morphemia archive: past medical spelling bee answers",
+     "desc": "Every past Morphemia medical spelling bee: the seven letters, the pangram and the medical words worth double points.",
+     "lede": "Every past letter hive, with its pangram and medical words. Newest first."},
     {"id": "labelosis", "folder": "anatomegaly", "name": "Anatomegaly",
      "load": lambda: load_months("anatomegaly/puzzles"), "render": r_anatomegaly,
      "title": "Anatomy Quiz Archive: Past Anatomegaly Questions", "h1": "Anatomegaly archive: past anatomy quiz questions",
