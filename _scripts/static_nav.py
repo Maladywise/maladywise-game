@@ -263,6 +263,11 @@ def run(quiet=False):
             n += 1
     if not quiet:
         print("static_nav: %d page(s) updated, %d indexable" % (n, len(idx)))
+    try:  # contextual Related links from data/also-read.json (survive page rebuilds)
+        import also_read
+        also_read.run(quiet=quiet)
+    except Exception as e:
+        print("also_read skipped: %s" % e)
     return n
 
 
