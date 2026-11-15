@@ -546,7 +546,8 @@
     ["sx_wait", "😴", "Waiting Room", "Sat so still that Kip fell asleep.", "global", "", 0, 1],
     ["sx_friday", "📠", "Friday Arvo", "Visited at 5 o’clock on a Friday.", "global", "", 0, 1],
     ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
-    ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1]
+    ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1],
+    ["sx_da", "✏️", "Diabolically Clever", "Found every DA in the secret DA room.", "global", "", 0, 1]
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
@@ -625,7 +626,7 @@
       sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0),
       sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0),
       sx_code: !!get("mw-secret-code", 0), sx_scrawl: !!get("mw-secret-scrawl", 0), sx_wait: !!get("mw-secret-wait", 0),
-      sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0)
+      sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0), sx_da: !!get("mw-secret-da", 0)
     };
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
@@ -2021,6 +2022,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
+  // 13 Type "astle": the hidden DA room (/da/), a tribute to cryptic setter David Astle; find all five DAs for a badge.
   // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward(). 12 Type "basil" or "clover": paw prints.
   (function () {
     function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
@@ -2076,6 +2078,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (/konami$/.test(typed)) { typed = ""; parade(); }
       if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
       if (/scrawl$/.test(typed)) { typed = ""; scrawl(); }
+      if (/astle$/.test(typed)) { typed = ""; flag("daroom"); pill("✏️ Bingo. A secret room for a puzzle legend…", 1600); setTimeout(function () { location.href = "/da/"; }, 1100); }
       if (/(basil|clover)$/.test(typed)) { var who = /basil$/.test(typed) ? "Basil" : "Clover"; typed = ""; paws(who); }
     });
     function parade() {
