@@ -1943,7 +1943,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     [/mushroom|weird|odd|rare|zebra|unicorn/i, "zebritis"]
   ];
   var WD_FALL = ["dx", "triviosis", "gridectomy", "suturix", "morphemia", "cryptogenic", "grandrounds"];
-  var WD_SEC = [[/weekly dose|health news/i, "dx"], [/in the media/i, "sensitosis"], [/beyond humans/i, "cryptoplexy"], [/useful/i, "sudokrine"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/weird/i, "morphemia"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
+  var WD_SEC = [[/deep dive/i, "deepdives"], [/weekly dose|health news/i, "dx"], [/in the media/i, "sensitosis"], [/beyond humans/i, "cryptoplexy"], [/useful/i, "sudokrine"], [/research/i, "linkase"], [/coming up/i, "triviosis"], [/weird/i, "morphemia"], [/zebra/i, "zebritis"], [/spotlight/i, "opacitis"], [/satire/i, "morphemia"], [/puzzles/i, "gridectomy"]];
   function wdPick(txt, used) {
     for (var i = 0; i < WD_TOPICS.length; i++) if (WD_TOPICS[i][0].test(txt) && !used[WD_TOPICS[i][1]]) return WD_TOPICS[i][1];
     for (var j = 0; j < WD_TOPICS.length; j++) if (WD_TOPICS[j][0].test(txt)) return WD_TOPICS[j][1];
@@ -1958,6 +1958,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var used = {};
     Array.prototype.forEach.call(m.querySelectorAll("li, h2:not(.wd-title) + p"), function (el) {
       if (el.closest(".mw-crumbs, nav")) return; // breadcrumb and menu items aren't stories
+      var pu = el.parentElement; if (el.tagName === "LI" && pu && pu.previousElementSibling && pu.previousElementSibling.tagName === "H3") return; // sources: plain list
       el.innerHTML = el.innerHTML.replace(/Why it(?:'|’)s interesting:/, '<span class="why">Why it’s interesting</span>');
       Array.prototype.forEach.call(el.querySelectorAll("a"), function (a) { if (/^write-up$/i.test(a.textContent.trim())) a.className = "wu"; });
       var st = el.firstElementChild, story = false;
@@ -1978,9 +1979,19 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       el.innerHTML = mascImg(id, "", 44, "wd-m") + '<div class="wd-tx">' + st.outerHTML + '<div class="wd-d">' + body + "</div></div>";
     });
   }
+  // Two-column layout (Nov 2026): each h2 + its list becomes a card; Weird and wonderful goes first.
+  function wdGrid(m) {
+    var hs = Array.prototype.filter.call(m.querySelectorAll("h2:not(.wd-title)"), function (h) { var n = h.nextElementSibling; return n && n.tagName === "UL"; });
+    if (hs.length < 3 || m.querySelector(".wd-grid")) return;
+    var grid = document.createElement("div"); grid.className = "wd-grid";
+    hs[0].parentNode.insertBefore(grid, hs[0]);
+    var secs = hs.map(function (h) { var sec = document.createElement("section"); sec.className = "wd-sec"; var ul = h.nextElementSibling; sec.appendChild(h); sec.appendChild(ul); return sec; });
+    secs.sort(function (a, b) { return (/weird/i.test(b.textContent.slice(0, 60)) ? 1 : 0) - (/weird/i.test(a.textContent.slice(0, 60)) ? 1 : 0); });
+    secs.forEach(function (sec) { grid.appendChild(sec); });
+  }
   function weeklyDose() {
     var path = location.pathname;
-    if (/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(path)) { var m = document.querySelector("main"); if (m) wdDecorate(m); return; }
+    if (/^\/zebra-mail\/\d{4}-\d{2}-\d{2}\//.test(path)) { var m = document.querySelector("main"); if (m) { wdDecorate(m); wdGrid(m); } return; }
     if (!/^\/zebra-mail\/(index\.html)?$/.test(path)) return;
     var slot = document.getElementById("latest");
     if (!slot) return;

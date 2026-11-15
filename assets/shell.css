@@ -1467,3 +1467,10 @@ html.mw-scrawl main *{font-family:inherit !important}
 @media (prefers-reduced-motion:reduce){.mw-codeblue{animation:none;opacity:.5}.mw-paws span{animation:none;opacity:.8}.mw-kip,.mw-kip span{animation:none}.mw-kip span{opacity:1}}
 
 footer.site .ft-tag{font:italic 500 15px var(--title,Lora,serif);color:var(--ink);text-align:center;margin:0 0 12px;opacity:.85}footer.site .ft-tag b{font-style:normal;font-weight:700}
+
+/* Weekly Dose two-column layout (Nov 2026) */
+@media (min-width:900px){main.wd{max-width:min(1100px,calc(100vw - 48px))}main.wd>h1,main.wd>.lede,main.wd>p,main.wd>.meta{max-width:760px}}
+.wd-grid{margin-top:8px}
+@media (min-width:900px){.wd-grid{columns:2;column-gap:28px}.wd-sec{break-inside:avoid;padding-top:2px}.wd-sec h2{margin-top:22px}}
+.wd-sec{display:block}
+.wd h3+ul{gap:2px}.wd h3+ul li{background:none;border:0;border-radius:0;padding:2px 0;font-size:13px;line-height:1.5}@media (min-width:900px){.wd h3+ul{display:block;columns:2;column-gap:28px}.wd h3+ul li{break-inside:avoid}}
