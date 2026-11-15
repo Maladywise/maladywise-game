@@ -1412,3 +1412,18 @@ a.masc-link{display:contents;cursor:pointer}a.masc-link:focus-visible>img{outlin
 .mw-sharerow a.mw-xpost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#111!important;color:#fff!important;border-color:#111!important}.mw-sharerow a.mw-xpost:hover{background:#333!important}html[data-theme="dark"] .mw-sharerow a.mw-xpost{background:#fff!important;color:#111!important;border-color:#fff!important}
 
 .mw-live a.mw-live-a{color:inherit;text-decoration:none}.mw-live a.mw-live-a:hover{text-decoration:underline;text-underline-offset:3px}
+/* secrets (shell.js "secrets") */
+.mw-secret-pill{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:95;display:flex;align-items:center;gap:8px;max-width:min(92vw,460px);background:#2E1F57;color:#fff;font:600 14.5px var(--body);line-height:1.35;padding:11px 18px;border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.35);animation:mwpin .3s ease}
+.mw-secret-pill.out{opacity:0;transition:opacity .35s}
+@keyframes mwpin{from{opacity:0;transform:translate(-50%,12px)}}
+.mw-whisper{position:fixed;z-index:95;width:260px;transform:translateY(-100%);background:var(--card,#fff);color:var(--ink);border:2px solid var(--brand,#4A3480);border-radius:14px;padding:10px 12px;font:14px/1.4 var(--body);box-shadow:0 10px 28px rgba(0,0,0,.2);animation:mwpin2 .25s ease}
+.mw-whisper b{display:block;color:var(--brand,#4A3480)}
+.mw-whisper.out{opacity:0;transition:opacity .35s}
+@keyframes mwpin2{from{opacity:0;transform:translateY(-90%)}}
+.mw-parade{position:fixed;left:0;right:0;bottom:6px;height:86px;z-index:94;pointer-events:none;overflow:hidden}
+.mw-parade img{position:absolute;bottom:0;left:-90px;width:76px;height:76px;animation:mwparade 6.5s linear forwards}
+@keyframes mwparade{0%{transform:translateX(0) translateY(0)}25%{transform:translateX(30vw) translateY(-10px)}50%{transform:translateX(60vw) translateY(0)}75%{transform:translateX(90vw) translateY(-10px)}100%{transform:translateX(calc(100vw + 120px)) translateY(0)}}
+.mw-basil-walk{position:fixed;left:0;width:84px;height:110px;z-index:94;pointer-events:none;object-fit:contain}
+.mw-cookie{border:0;background:none;padding:0 2px;margin:0;font-size:13px;line-height:1;cursor:pointer;opacity:.75;vertical-align:baseline}
+.mw-cookie:hover,.mw-cookie:focus-visible{opacity:1;transform:scale(1.3)}
+html[data-motion="reduce"] .mw-parade img{animation-duration:12s}

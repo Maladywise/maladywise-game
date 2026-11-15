@@ -1,3 +1,13 @@
+# Night Shift unlock (updated 16 Nov 2026)
+
+Night Shift is hidden. The unlock lives in `assets/shell.js` ("secrets" block):
+- tap Locum (the bat, assets/mascots/grandrounds.svg) 7 times within 4 seconds, anywhere he appears without a link (his mascot page, Grand Rounds how-to-play and win screens), or
+- type "locum" on any page.
+
+The logo-tap trick on the home page now sends Basil to knock something off the page instead.
+
+Earlier version, kept for reference:
+
 # Night Shift unlock
 
 Paste into `assets/shell.js`, just before the last line (`window.MW = { ... };`), inside the IIFE.

@@ -525,7 +525,15 @@
     ["uni5", "🦄", "Unicorn Rancher", "Find five Zebritis unicorns.", "", "unicorns", 5],
     ["bee10", "🍯", "Beekeeper", "Reach Genius in Morphemia ten times.", "", "genius", 10],
     ["groundhog", "🦫", "Groundhog Day", "Play the same game on 50 different days.", "", "samegame", 50],
-    ["perfweek", "💎", "Perfect Week", "Finish every daily game, every day, for seven days straight.", "", "wardrun", 7]
+    ["perfweek", "💎", "Perfect Week", "Finish every daily game, every day, for seven days straight.", "", "wardrun", 7],
+    // secret badges: shown as ??? until found (b[7] = 1)
+    ["sx_night", "🦇", "Pager Goes Off", "Found the hidden Night Shift game.", "global", "", 0, 1],
+    ["sx_whisper", "🤫", "Mascot Whisperer", "Heard three mascots’ secrets.", "global", "", 0, 1],
+    ["sx_table", "🐾", "Off the Table", "Let Basil knock something off the home page.", "global", "", 0, 1],
+    ["sx_konami", "🎮", "Cheat Code", "Summoned the mascot parade.", "global", "", 0, 1],
+    ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
+    ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
+    ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1]
   ];
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
@@ -599,7 +607,9 @@
       speedrun: (function () { var b = {}; log.forEach(function (x) { var k = x.at + "|" + x.h; (b[k] = b[k] || {})[x.g] = 1; }); return Object.keys(b).some(function (k) { return Object.keys(b[k]).length >= 5; }); })(),
       time: log.some(function (x) { return /^\d{4}-/.test(x.d || "") && dayNum(x.at) - dayNum(x.d) > 30; }),
       comeback: Object.keys(rec).some(function (id) { var R = rec[id]; return Object.keys(R).some(function (d) { var nx = R[dstr(dayNum(d) + 1)]; return !R[d].win && nx && nx.win; }); }),
-      overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; })
+      overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; }),
+      sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0),
+      sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0)
     };
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
@@ -620,12 +630,14 @@
       genius: cnt("morphemia", function (v) { return v.win || (v.rank || 0) >= 6; }),
       samegame: Object.keys(rec).reduce(function (a, id) { return Math.max(a, Object.keys(rec[id]).length); }, 0),
       wardrun: (function () { if (!daily.length) return 0; var ok = Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).map(dayNum).sort(function (a, b) { return a - b; }); var b = 0, r = 0, p = null; ok.forEach(function (n) { r = p !== null && n - p === 1 ? r + 1 : 1; p = n; if (r > b) b = r; }); return b; })(),
+      cookies: (get("mw-cookies", []) || []).length,
       odgames: od.games || 0, odlines: od.lines || 0, odquad: od.quad || 0, odbest: od.best || 0, oddaily: od.daily || 0
     };
     var NORMIE_BADGE = { od1: ["\ud83d\udc1a", "Dipped a Toe"], od2: ["\u2693", "Deckhand"], od3: ["\ud83c\udf0a", "Tidal Wave"], od4: ["\ud83d\udc0b", "Deep-Sea Legend"], od5: ["\ud83e\udded", "Daily Voyage"] };
     var badges = BADGE_DEFS.filter(function (b) { return !(b[4] === "medical" && N); }).map(function (b) {
       var got = b[5] ? (M[b[5]] || 0) >= b[6] : !!T[b[0]], prog = b[5] && !got && b[6] > 1 ? Math.min(M[b[5]] || 0, b[6]).toLocaleString("en-AU") + " of " + b[6].toLocaleString("en-AU") : "";
       var nb = N && NORMIE_BADGE[b[0]];
+      if (b[7] && !got) return { id: b[0], icon: "\u2754", name: "???", how: "A secret. Keep poking around.", global: true, got: false, prog: "", metric: "", secret: true };
       return { id: b[0], icon: nb ? nb[0] : b[1], name: nb ? nb[1] : b[2], how: b[3], global: b[4] === "global", got: got, prog: prog, metric: b[5] || "" };
     });
     var nextShown = {}; badges.forEach(function (b) { if (!b.metric || b.got) return; if (nextShown[b.metric]) b.later = true; else nextShown[b.metric] = 1; }); // only the next tier of each ladder shows
@@ -1908,33 +1920,133 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       slot.innerHTML = ""; slot.appendChild(box); wdDecorate(box);
     }).catch(function () {});
   }
-  // ---------- secret: Night Shift (5 taps on the logo in 3s, or type "locum" on the home page) ----------
+  // ---------- secrets (Nov 2026). Flags live in localStorage "mw-secret-<id>"; badges show as ??? until found ----------
+  // 1 Night Shift game: tap Locum (the bat) 7 times on any page where he isn't a link, or type "locum" anywhere.
+  // 2 Mascot whispers: tap any unlinked mascot 10 times for its secret.
+  // 3 Logo: tap the logo 7 times on the home page and Basil knocks something off the page.
+  // 4 Konami code (keyboard) or type "konami": the mascot parade.
+  // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
+  // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   (function () {
-    if (!/^\/(index\.html)?$/.test(location.pathname)) return;
-    var taps = [], typed = "", going = false;
-    function unlock() {
-      if (going) return; going = true;
-      var t = document.createElement("div");
-      t.textContent = "🦇 Something stirs…";
-      t.setAttribute("role", "status");
-      t.style.cssText = "position:fixed;left:50%;top:40%;transform:translate(-50%,-50%);z-index:90;background:#2E1F57;color:#fff;font:600 16px var(--body);padding:14px 22px;border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.35)";
-      document.body.appendChild(t);
+    function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
+    function pill(txt, ms) {
+      var t = document.createElement("div"); t.className = "mw-secret-pill"; t.setAttribute("role", "status"); t.innerHTML = txt;
+      document.body.appendChild(t); setTimeout(function () { t.classList.add("out"); setTimeout(function () { t.remove(); }, 400); }, ms || 3200); return t;
+    }
+    var going = false;
+    function nightShift() {
+      if (going) return; going = true; flag("nightshift");
+      pill("🦇 The pager goes off…", 1400);
       setTimeout(function () { location.href = "/nightshift/"; }, 900);
     }
+    // --- mascot taps ---
+    var taps = {}, PROF = null, CAST = null;
+    function mascotKey(img) { var m = (img.getAttribute("src") || "").match(/\/assets\/mascots\/(.+?)\.svg/); return m ? m[1] : ""; }
+    function whisper(img, key) {
+      function go() {
+        var name = "", line = "";
+        var M = window.MW_MASCOTS || {}, mm = M[key];
+        if (mm) name = mm.name; else if (CAST && CAST[key]) name = CAST[key].name;
+        var pf = PROF && PROF[name];
+        line = pf && pf.secret ? "Psst. " + pf.secret : pf ? "Psst. " + pf.health + "." : "Psst. You found a secret. Tell no one.";
+        var r = img.getBoundingClientRect(), b = document.createElement("div");
+        b.className = "mw-whisper"; b.innerHTML = "<b>" + esc2(name || "Psst") + "</b> " + esc2(line);
+        b.style.left = Math.max(10, Math.min(innerWidth - 270, r.left + r.width / 2 - 130)) + "px"; b.style.top = Math.max(10, r.top - 12) + "px";
+        document.body.appendChild(b); setTimeout(function () { b.classList.add("out"); setTimeout(function () { b.remove(); }, 400); }, 5200);
+        var seen = get("mw-whispers", []); if (seen.indexOf(key) < 0) { seen.push(key); set("mw-whispers", seen); }
+        if (seen.length >= 3) flag("whisper");
+      }
+      if (PROF) return go();
+      Promise.all([fetch("/data/mascot-profiles.json").then(function (r) { return r.json(); }), fetch("/data/mascot-cast.json").then(function (r) { return r.json(); })])
+        .then(function (a) { PROF = a[0].mascots || {}; CAST = a[1].mascots || {}; go(); }).catch(function () { PROF = {}; go(); });
+    }
     document.addEventListener("click", function (e) {
-      if (!e.target.closest || !e.target.closest(".bar .logo")) return;
-      e.preventDefault();
-      var now = Date.now();
-      taps = taps.filter(function (x) { return now - x < 3000; }); taps.push(now);
-      if (taps.length >= 5) unlock();
+      var img = e.target && e.target.closest && e.target.closest('img[src*="/assets/mascots/"]');
+      if (!img || img.closest("a,button")) return;
+      var key = mascotKey(img), now = Date.now(), t = (taps[key] || []).filter(function (x) { return now - x < 4000; });
+      t.push(now); taps[key] = t;
+      if (/^(grandrounds|nightshift)$/.test(key) && t.length >= 7) { taps[key] = []; nightShift(); return; }
+      if (t.length >= 10) { taps[key] = []; whisper(img, key); }
     });
+    // --- typed words: "locum" -> Night Shift, "konami" -> parade ---
+    var typed = "", KON = "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight b a", keys = [];
     document.addEventListener("keydown", function (e) {
       var tg = e.target && e.target.tagName;
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(tg) || (e.target && e.target.isContentEditable) || e.ctrlKey || e.metaKey || e.altKey) return;
+      keys.push(e.key && e.key.length === 1 ? e.key.toLowerCase() : e.key); keys = keys.slice(-10);
+      if (keys.join(" ") === KON) { keys = []; parade(); }
       if (!e.key || e.key.length !== 1) return;
-      typed = (typed + e.key.toLowerCase()).slice(-5);
-      if (typed === "locum") unlock();
+      typed = (typed + e.key.toLowerCase()).slice(-6);
+      if (/locum$/.test(typed)) nightShift();
+      if (typed === "konami") { typed = ""; parade(); }
     });
+    function parade() {
+      flag("konami");
+      var list = ["dx", "wordemic", "triviosis", "comorbix", "zebritis", "linkase", "gridectomy", "suturix", "morphemia", "arrhythmix", "sudokrine", "cryptogenic", "grandrounds", "deepdives", "basil", "clover", "normie/norm"];
+      var wrap = document.createElement("div"); wrap.className = "mw-parade"; wrap.setAttribute("aria-hidden", "true");
+      list.forEach(function (k, i) { var im = document.createElement("img"); im.src = "/assets/mascots/" + k + ".svg"; im.alt = ""; im.style.animationDelay = (i * 0.28) + "s"; wrap.appendChild(im); });
+      document.body.appendChild(wrap); pill("🎉 Cheat code accepted. The whole gang’s here.", 3500);
+      setTimeout(function () { wrap.remove(); }, 10000);
+    }
+    // --- logo taps on the home page: Basil knocks something off the table ---
+    if (/^\/(index\.html)?$/.test(location.pathname)) {
+      var lt = [];
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest || !e.target.closest(".bar .logo")) return;
+        e.preventDefault();
+        var now = Date.now(); lt = lt.filter(function (x) { return now - x < 3500; }); lt.push(now);
+        if (lt.length >= 7) { lt = []; basilSwipe(); }
+      });
+    }
+    function basilSwipe() {
+      flag("offtable");
+      var cands = [].slice.call(document.querySelectorAll("main .card, main .t3, main .rd")).filter(function (el) { var r = el.getBoundingClientRect(); return r.top > 60 && r.bottom < innerHeight; });
+      var tgt = cands[Math.floor(Math.random() * cands.length)] || document.querySelector("main h1, main h2");
+      var cat = document.createElement("img"); cat.src = "/assets/mascots/basil.svg"; cat.alt = ""; cat.className = "mw-basil-walk"; document.body.appendChild(cat);
+      var r = tgt ? tgt.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
+      cat.style.top = Math.max(60, r.top + r.height - 90) + "px";
+      var dest = Math.max(0, r.left - 70);
+      cat.animate([{ transform: "translateX(-120px)" }, { transform: "translateX(" + dest + "px)" }], { duration: 1600, easing: "ease-out", fill: "forwards" }).onfinish = function () {
+        if (tgt && tgt.animate) {
+          var a = tgt.animate([{ transform: "none" }, { transform: "translate(30px,-10px) rotate(8deg)", offset: 0.15 }, { transform: "translate(140px," + (innerHeight - r.top + 80) + "px) rotate(70deg)", opacity: 0.2 }], { duration: 1100, easing: "ease-in", fill: "forwards" });
+          a.onfinish = function () { setTimeout(function () { tgt.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); a.cancel(); }, 1800); };
+        }
+        pill("🐾 Basil has entered the chat. Something had to go.", 3000);
+        cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + (innerWidth + 120) + "px)" }], { duration: 1500, delay: 700, easing: "ease-in", fill: "forwards" }).onfinish = function () { cat.remove(); };
+      };
+    }
+    // --- cookie hunt ---
+    (function () {
+      var d = sydToday(), path = location.pathname, h = 0, key = d + "|" + path;
+      for (var i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0;
+      if (h % 23 !== 0 || /^\/(nightshift|me|site-stats|mental-health-check)\//.test(path)) return;
+      var found = get("mw-cookies", []);
+      if (found.indexOf(d) >= 0) return;
+      function place() {
+        var ps = [].slice.call(document.querySelectorAll("main p, main li")).filter(function (p) { return p.offsetParent && p.textContent.length > 40 && !p.closest("nav,footer,.mw-crumbs"); });
+        if (!ps.length) return;
+        var p = ps[h % ps.length], b = document.createElement("button");
+        b.type = "button"; b.className = "mw-cookie"; b.setAttribute("aria-label", "A hidden cookie"); b.textContent = "🍪";
+        b.onclick = function (e) {
+          e.preventDefault(); var f = get("mw-cookies", []); if (f.indexOf(d) < 0) { f.push(d); set("mw-cookies", f); }
+          b.remove(); pill("🍪 You found today’s hidden cookie. " + f.length + (f.length === 1 ? " cookie" : " cookies") + " so far. No tracking, just crumbs.", 3800);
+          try { checkBadges(); } catch (x) {}
+        };
+        p.appendChild(document.createTextNode(" ")); p.appendChild(b);
+      }
+      setTimeout(place, 1500);
+    })();
+    // --- night shift look: midnight to 4am local time ---
+    (function () {
+      var hr = new Date().getHours();
+      if (hr >= 4) return;
+      if (get("mw-theme", "system") === "system") root.setAttribute("data-theme", "dark");
+      root.classList.add("mw-night");
+      flag("nightmode");
+      if (!sessionStorage || sessionStorage.getItem("mw-night-seen")) return;
+      try { sessionStorage.setItem("mw-night-seen", "1"); } catch (e) {}
+      setTimeout(function () { pill('<img src="/assets/mascots/grandrounds.svg" alt="" width="28" height="28"> Night shift. Locum’s on. Go to bed soon.', 4200); }, 1200);
+    })();
   })();
   // ---------- visible breadcrumb line on content pages (Home › Conditions › Gout) ----------
   // Drawn from the page's BreadcrumbList JSON-LD (added by _scripts/add_breadcrumbs.py), so the
