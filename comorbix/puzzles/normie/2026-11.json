@@ -710,23 +710,23 @@
   "difficulty": "Easy",
   "groups": [
    {
-    "label": "Jobs",
-    "level": 1,
-    "words": [
-     "CHEF",
-     "PILOT",
-     "FARMER",
-     "TEACHER"
-    ]
-   },
-   {
     "label": "Kitchen hand tools",
-    "level": 2,
+    "level": 1,
     "words": [
      "WHISK",
      "LADLE",
      "SPATULA",
      "TONGS"
+    ]
+   },
+   {
+    "label": "Rugby union positions",
+    "level": 2,
+    "words": [
+     "HOOKER",
+     "FLANKER",
+     "LOCK",
+     "FULLBACK"
     ]
    },
    {
