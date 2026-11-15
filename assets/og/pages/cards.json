@@ -1476,13 +1476,6 @@
 "label": "Malady Wise mascots",
 "title": "Echo"
 },
-"mascots-esme": {
-"url": "/mascots/esme/",
-"key": "318436a5879a",
-"v": "83dac044",
-"label": "Malady Wise mascots",
-"title": "Esme"
-},
 "mascots-fig": {
 "url": "/mascots/fig/",
 "key": "67d67444a2c6",
@@ -1590,8 +1583,8 @@
 },
 "mascots-mei": {
 "url": "/mascots/mei/",
-"key": "8adc98aa8d99",
-"v": "536f59d2",
+"key": "05825f313ee7",
+"v": "a7ba7b86",
 "label": "Malady Wise mascots",
 "title": "Mei"
 },
@@ -1615,13 +1608,6 @@
 "v": "9bc71208",
 "label": "Malady Wise mascots",
 "title": "Noggin"
-},
-"mascots-noor": {
-"url": "/mascots/noor/",
-"key": "d36b0f1a1278",
-"v": "561a325f",
-"label": "Malady Wise mascots",
-"title": "Noor"
 },
 "mascots-norm": {
 "url": "/mascots/norm/",

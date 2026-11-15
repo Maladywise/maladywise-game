@@ -47,8 +47,8 @@
    "job": "Retired ward tortoise, crossword setter",
    "from": "The Galápagos, via a country hospital",
    "style": "Calm, dry, rarely wrong",
-   "health": "Knee osteoarthritis, never complains",
-   "secret": "Remembers when crosswords were carved into stone."
+   "health": "Hard of hearing; wears hearing aids and loves captions",
+   "secret": "Turns her hearing aids off during boring meetings. Nobody has noticed."
   },
   "Silk": {
    "job": "Plastic surgeon",
@@ -254,7 +254,7 @@
    "secret": "Carries a spare referral letter in his beak at all times."
   },
   "Mei": {
-   "job": "Research reviewer",
+   "job": "Ophthalmologist turned research reviewer",
    "from": "An escapee from a research facility",
    "style": "Curious, careful, sceptical",
    "health": "Allergic to cats",
@@ -318,24 +318,10 @@
   },
   "Hugo": {
    "job": "Orthopaedic surgeon",
-   "from": "A mountain gym in the Canadian Rockies",
+   "from": "A colony under a footy oval",
    "style": "Loud, loyal, protein-first",
-   "health": "Two knee reconstructions, zero regrets",
+   "health": "Six knees, all reconstructed",
    "secret": "Cries at every plaster cast signing. Every single one."
-  },
-  "Esme": {
-   "job": "Ophthalmologist",
-   "from": "A desert burrow in East Africa",
-   "style": "Calm, precise, quietly funny",
-   "health": "Very low vision, from birth",
-   "secret": "Can tell what you had for lunch by smell alone. Please don’t test her."
-  },
-  "Noor": {
-   "job": "Audiologist",
-   "from": "A busy family home in Amman",
-   "style": "Direct, warm, expressive",
-   "health": "Deaf since birth, signs Auslan",
-   "secret": "Her name sign is a paw tapping her spotty cheek."
   }
  }
 }

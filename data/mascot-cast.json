@@ -102,9 +102,9 @@
   "research": {
    "name": "Mei",
    "animal": "lab mouse",
-   "role": "Research hub host",
+   "role": "Research hub host, and eye pages",
    "vibe": "Curious, careful and sceptical of anything with a press release. Reads the methods first.",
-   "story": "Mei is a lab mouse who escaped from a research facility after reading one too many badly designed studies about mice. She now reads the studies so you don't have to: every week she sorts the real findings from the hype. She has a soft spot for well-run trials and a deep suspicion of anything that only worked in her cousins."
+   "story": "Mei is a lab mouse who escaped from a research facility after reading one too many badly designed studies about mice. She now reads the studies so you don't have to: every week she sorts the real findings from the hype. She has a soft spot for well-run trials and a deep suspicion of anything that only worked in her cousins. Before research, she trained as an ophthalmologist, which explains the very good glasses and her habit of checking everyone’s pupils."
   },
   "mythbusting": {
    "name": "Ama",
@@ -164,24 +164,10 @@
   },
   "ortho": {
    "name": "Hugo",
-   "animal": "grizzly bear",
+   "animal": "ant",
    "role": "Orthopaedics and bone pages",
-   "vibe": "Ortho bro. Maintains skeletal integrity. Thinks every problem is a fracture until proven otherwise, and is usually right.",
-   "story": "Hugo is a grizzly bear who lifts femurs for fun and calls everyone ‘champ’. He chose orthopaedics because bones are the only part of the body that make sense: they break, you fix them, everyone goes home. He wears his cap backwards in theatre, has never knowingly skipped leg day, and is secretly the gentlest pair of paws in the hospital when it comes to a frightened kid with a broken arm."
-  },
-  "ophthalmology": {
-   "name": "Esme",
-   "animal": "naked mole-rat",
-   "role": "Eye and vision pages",
-   "vibe": "Sharp, patient and unflappable. Barely sees, notices everything.",
-   "story": "Esme is a naked mole-rat. Her species lives underground and has tiny eyes that mostly just tell light from dark, so she grew up finding her way by touch, smell and a very good memory. She became an eye specialist because she knows better than anyone what vision is worth. She reads with a magnifier, uses a white cane on the ward, and has never once missed a detached retina."
-  },
-  "hearing": {
-   "name": "Noor",
-   "animal": "Dalmatian",
-   "role": "Hearing and ear pages",
-   "vibe": "Bright, direct and proudly Deaf. Speaks Auslan and has no patience for people who shout.",
-   "story": "Noor is a Dalmatian, a breed where about 3 in 10 dogs are deaf in at least one ear. She was born Deaf, grew up signing, and became an audiologist so other families would get clear answers early. She lip-reads when she has to, prefers a good interpreter, and will teach you the sign for ‘I love you’ before you’ve finished saying hello."
+   "vibe": "Ortho bro. Maintains skeletal integrity. Lifts many times his own body weight and will tell you about it.",
+   "story": "Hugo is an ant, which makes him, kilo for kilo, the strongest surgeon in the hospital. Ants can carry many times their own weight, so a femur is a warm-up set. He wears an ORTHO sweatband in theatre, has never knowingly skipped leg day (he has six), and is secretly the gentlest set of feelers in the building when a frightened kid comes in with a broken arm."
   }
  }
 }
