@@ -275,3 +275,4 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Sundays: Big Gridectomy, a 7x7 crossword (rows[7], "big": true), in Medical and Normie. Same format as the daily grid; the engine sizes itself from rows. No 2-letter answers; avoid abbreviations and proper nouns.
 - Saturdays: Suturix Long, a 7-wide by 10-tall grid (rows[10] of 7 letters, "long": true), 70 letters, spangram edge to edge, Medical and Normie. Same word/path format as daily. Paths must not cross diagonally.
 - Other weekly specials: Mon Super Morphemia, Tue Super Comorbix, Wed Super Zebritis, Thu Long Linkase, Fri Wordemic Long.
+- This overrides any "Gridectomy 5x5" or fixed Suturix size in task prompts: the monthly puzzle build MUST write a Big Gridectomy every Sunday and a Suturix Long every Saturday (both modes), and the weekly topical refresh must keep those sizes and flags if it swaps one.
