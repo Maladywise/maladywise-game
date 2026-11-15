@@ -896,7 +896,7 @@
   var SOON = ["In theatre", "Still in the lab", "Awaiting ethics approval", "On the waitlist", "Pending review"];
 
   // ---------- icons ----------
-  var I = { menu: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  var I = { search: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>', menu: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
     help: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.5"/></svg>',
     stats: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
@@ -1058,6 +1058,62 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("open")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); burger.focus(); } });
   }
 
+
+  // ---------- site search (magnifier in the top bar; "/" key opens it). Index: data/search-index.json (_scripts/build_search.py) ----------
+  var SIDX = null;
+  function siteSearch(q0) {
+    if (document.getElementById("mw-search")) return;
+    var wrap = el('<div class="mw-search" id="mw-search" role="dialog" aria-modal="true" aria-label="Search Malady Wise"><div class="ms-box"><div class="ms-row">' + I.search +
+      '<input type="text" id="ms-q" placeholder="Search conditions, medicines, games…" autocomplete="off" enterkeyhint="search" aria-label="Search"><button type="button" class="ms-x" aria-label="Close search">×</button></div>' +
+      '<ul class="ms-res" id="ms-res" role="listbox"></ul><p class="ms-hint" id="ms-hint">Try “gout”, “iron”, “ADHD” or “crossword”.</p></div></div>');
+    document.body.appendChild(wrap); root.classList.add("ms-open");
+    var inp = wrap.querySelector("#ms-q"), res = wrap.querySelector("#ms-res"), hint = wrap.querySelector("#ms-hint"), sel = -1;
+    function close() { wrap.remove(); root.classList.remove("ms-open"); document.removeEventListener("keydown", key); }
+    wrap.addEventListener("click", function (e) { if (e.target === wrap || e.target.closest(".ms-x")) close(); });
+    function norm(t) { return String(t || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim(); }
+    var SYN = { heart: "cardiac cardio", kidney: "renal", liver: "hepatic", sugar: "diabetes glucose", period: "menstrual", ozempic: "semaglutide glp", mounjaro: "tirzepatide glp", wordle: "wordemic", crossword: "gridectomy cryptoplexy", sudoku: "sudokrine", ecg: "arrhythmix", xray: "opacitis", rash: "glimpsis skin", stickers: "shop", merch: "shop", cat: "basil clover" };
+    function score(e, toks) {
+      var t = norm(e[1]), d = norm(e[3] + " " + e[0].replace(/[\/-]/g, " ")), sc = 0;
+      for (var i = 0; i < toks.length; i++) {
+        var w = toks[i], alt = (SYN[w] || "").split(" ").filter(Boolean), hit = 0;
+        [w].concat(alt).forEach(function (x) {
+          if (new RegExp("(^| )" + x).test(t)) hit = Math.max(hit, t.indexOf(x) === 0 ? 12 : 8);
+          else if (t.indexOf(x) >= 0) hit = Math.max(hit, 5);
+          else if (new RegExp("(^| )" + x).test(d)) hit = Math.max(hit, 3);
+          else if (x.length > 3 && d.indexOf(x) >= 0) hit = Math.max(hit, 1);
+        });
+        if (!hit) return 0; sc += hit;
+      }
+      if (/^Mascot/.test(e[2])) sc -= 2;
+      if (/^(Game|Section)/.test(e[2])) sc += 1;
+      return sc;
+    }
+    function run() {
+      var q = norm(inp.value); sel = -1;
+      if (q.length < 2 || !SIDX) { res.innerHTML = ""; hint.hidden = false; return; }
+      var toks = q.split(" "), out = SIDX.map(function (e) { return [score(e, toks), e]; }).filter(function (x) { return x[0] > 0; })
+        .sort(function (a, b) { return b[0] - a[0] || a[1][1].length - b[1][1].length; }).slice(0, 12);
+      hint.hidden = !!out.length; if (!out.length) { hint.hidden = false; hint.textContent = "Nothing found. Try a simpler word."; }
+      res.innerHTML = out.map(function (x, i) { var e = x[1]; return '<li><a href="' + e[0] + '" role="option" data-i="' + i + '"><span class="ms-k">' + esc2(e[2]) + "</span><b>" + esc2(e[1]) + "</b><small>" + esc2(e[3]) + "</small></a></li>"; }).join("");
+      try { if (q.length > 2) { clearTimeout(run._t); run._t = setTimeout(function () { track("search/" + q.replace(/ /g, "-").slice(0, 40), "Search"); }, 1500); } } catch (e) {}
+    }
+    function key(e) {
+      var links = res.querySelectorAll("a");
+      if (e.key === "Escape") { close(); return; }
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); if (!links.length) return; sel = (sel + (e.key === "ArrowDown" ? 1 : -1) + links.length) % links.length; links[sel].focus(); }
+      if (e.key === "Enter" && document.activeElement === inp && links[0]) { e.preventDefault(); location.href = links[0].getAttribute("href"); }
+    }
+    document.addEventListener("keydown", key);
+    inp.addEventListener("input", run);
+    if (q0) inp.value = q0;
+    setTimeout(function () { inp.focus(); }, 30);
+    if (SIDX) run(); else fetch("/data/search-index.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) { SIDX = j; run(); }).catch(function () { hint.textContent = "Search isn’t loading. Try again in a moment."; });
+  }
+  window.MW_search = siteSearch;
+  document.addEventListener("keydown", function (e) {
+    var tg = e.target && e.target.tagName;
+    if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(tg) && !(e.target && e.target.isContentEditable) && !window.MW_curGame) { e.preventDefault(); siteSearch(); }
+  });
   // ---------- top bar ----------
   function topBar(g, home) {
     var ARC = !g && /^\/(stackulus|mergeon|basil-clover)\//.test(location.pathname); // arcade games get the same back-arrow bar as the daily games
@@ -1065,11 +1121,12 @@
     var bar = el('<header class="bar"><div class="bar-in">' +
       (g || ARC ? '<a class="back" href="' + (g ? "../" : "/") + '" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
-      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav">' + navHTML() +
+      (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav"><button type="button" class="nav-search" data-a="search">' + I.search + '<span>Search the site</span></button>' + navHTML() +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +
       (g ? '<button class="icon-btn" data-a="help" aria-label="How to play">' + I.help + "</button>" +
            '<button class="icon-btn" data-a="stats" aria-label="Stats">' + I.stats + "</button>" +
            '<button class="icon-btn" data-a="archive" aria-label="Past puzzles">' + I.archive + "</button>" : "") +
+      (!g ? '<button class="icon-btn" data-a="search" aria-label="Search the site">' + I.search + "</button>" : "") +
       '<button class="icon-btn" data-a="settings" aria-label="Settings">' + I.gear + "</button></nav></div></header>");
     bar.addEventListener("click", function (e) {
       var mb = e.target.closest(".mw-mode [data-mode]");
@@ -1079,6 +1136,7 @@
       if (a === "menu") { var nv = document.getElementById("mw-nav"), op = nv.classList.toggle("open"); b.setAttribute("aria-expanded", op ? "true" : "false"); Array.prototype.forEach.call(nv.querySelectorAll(".nav-btn"), function (x) { x.setAttribute("aria-expanded", op ? "true" : "false"); }); }
       if (a === "sub") { var t = document.getElementById("newsletter"); if (t) { e.preventDefault(); var nv2 = document.getElementById("mw-nav"); if (nv2) nv2.classList.remove("open"); t.scrollIntoView({ behavior: "smooth", block: "center" }); var inp = t.querySelector("input[type=email]"); if (inp) setTimeout(function () { inp.focus({ preventScroll: true }); }, 400); } else { e.preventDefault(); location.href = "/#newsletter"; } }
       if (a === "settings") settings();
+      if (a === "search") siteSearch();
       if (a === "stats") statsModal(g);
       if (a === "help") modal("How to play", mascotHelp(g) + "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + PLAYROW.replace("Let\u2019s play", "Back to the game"));
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }

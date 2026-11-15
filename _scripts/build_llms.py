@@ -76,3 +76,6 @@ print("llms.txt:", sum(len(v) for v in groups.values()), "pages")
 # Home page "Read this week" row (data/home-reads.json)
 import subprocess as _sp, sys as _sys
 _sp.run([_sys.executable, __import__("os").path.join(__import__("os").path.dirname(__file__), "build_home_reads.py")])
+
+# Site search index (data/search-index.json)
+_sp.run([_sys.executable, __import__("os").path.join(__import__("os").path.dirname(__file__), "build_search.py")])
