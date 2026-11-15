@@ -15,11 +15,16 @@ body = ('<p class="lede">Free practice quizzes with diagrams, real X-rays and EC
  + _c("/ecg-quiz/", "arrhythmix", "ECG quiz", "Rhythm strips and 12-leads, from sinus rhythm to Brugada.", "ecg", 20)
  + _c("/x-ray-quiz/", "opacitis", "X-ray quiz", "Real chest, abdominal and bone X-rays to read.", "x-ray", None)
  + _c("/anatomy-quiz/", "dx", "Mixed anatomy", "Ten questions from all over the body. A good warm-up.", "anat-mixed", None)
+ + _c("/physiology-quiz/", "dx", "Physiology", "How the heart, lungs, kidneys and hormones work.", "physiology", 20)
  + '</div>\n<h2>Anatomy</h2>\n<div class="dh-grid">\n' + _anat
  + '</div>\n<h2>Medicines and words</h2>\n<div class="dh-grid">\n'
  + _c("/pharmacology-quiz/", "medicines", "Pharmacology", "Drug classes, antidotes and interactions.", "pharmacology", 20)
  + _c("/medical-terminology-quiz/", "morphemia", "Medical terminology", "Prefixes, suffixes and word roots, with a cheat sheet.", "terms-prefixes", None)
  + _c("/morphemia/", "morphemia", "Morphemia", "The daily game: build a long medical word from its parts.")
+ + _c("/medical-abbreviations-quiz/", "morphemia", "Medical abbreviations", "From BP and PRN to the ones that cause errors.", "abbreviations", 20)
+ + '</div>\n<h2>Clinical skills</h2>\n<div class="dh-grid">\n'
+ + _c("/first-aid-quiz/", "emergency", "CPR and first aid", "DRSABCD, CPR, choking, burns, bites and stings.", "first-aid", 20)
+ + _c("/dosage-calculation-quiz/", "medicines", "Dosage calculation", "Tablets, liquids, IV rates and infusions.", "dosage", 20)
  + '</div>\n<h2>Want more?</h2>\n<div class="dh-grid">\n'
  + _c("/", "dx", "Today’s puzzles", "The daily games, fresh at midnight.")
  + _c("/gp-school/", "gpschool", "GP School", "Free, game-style GP training for clinicians.")

@@ -6,6 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from anat import QUIZZES
 from other import ECG, TERMS
 from pharm import PHARM
+from more import SIMPLE
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
@@ -261,6 +262,22 @@ pharm_body = "\n".join([
 ])
 write("/pharmacology-quiz/", page("/pharmacology-quiz/", PHARM["title"], PHARM["desc"], "drugs", pharm_body,
                                   [quiz_ld("Pharmacology quiz", SITE + "/pharmacology-quiz/", PHARM["qs"], "Pharmacology"), faq_ld(PHARM["faqs"])]))
+
+
+# ---------- simple text quizzes (more.py): first aid, physiology, abbreviations, dosage ----------
+for z in SIMPLE:
+    others = "".join('<li><a href="%s">%s</a></li>' % (o["path"], esc(o["h1"].split(":")[0])) for o in SIMPLE if o is not z)
+    zbody = "\n".join([
+        "<h1>%s</h1>" % esc(z["h1"]),
+        '<p class="lede">%s</p>' % esc(z["lede"]),
+        quiz_section(z["qs"], z["qid"], z["h1"].split(":")[0], z["emoji"]),
+        z["cta"],
+        faq_html(z["faqs"]),
+        '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/quizzes/">All practice quizzes</a></li>%s<li><a href="/pharmacology-quiz/">Pharmacology quiz</a></li></ul></nav>' % others,
+        reviewed(" General education, not medical advice."),
+    ])
+    write(z["path"], page(z["path"], z["title"], z["desc"], z["og"], zbody,
+                          [quiz_ld(z["h1"].split(":")[0], SITE + z["path"], z["qs"], z["h1"].split(":")[0].replace(" Quiz", "")), faq_ld(z["faqs"])]))
 
 # ---------- medical terminology quiz ----------
 R = TERMS["rounds"]
