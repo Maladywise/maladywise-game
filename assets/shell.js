@@ -508,7 +508,24 @@
     ["od2", "🥼", "Chief Surgeon", "Clear 50 lines in one game of Stackulus.", "global", "odlines", 50],
     ["od3", "🫀", "Transplant Team", "Clear four lines at once in Stackulus.", "global", "odquad", 1],
     ["od4", "🎭", "Theatre Legend", "Score 20,000 in Stackulus.", "global", "odbest", 20000],
-    ["od5", "📋", "Daily Rounds", "Finish a Stackulus daily challenge.", "global", "oddaily", 1]
+    ["od5", "📋", "Daily Rounds", "Finish a Stackulus daily challenge.", "global", "oddaily", 1],
+    // fun, weird and hard (added Nov 2026)
+    ["lunch", "🥪", "Lunch Break Locum", "Finish a puzzle between 12 and 1pm."],
+    ["rooster", "🐓", "Rooster Round", "Finish a puzzle between 4 and 6am. Go back to bed."],
+    ["fri13", "🖤", "Friday the 13th", "Finish a puzzle on a Friday the 13th."],
+    ["xmas", "🎄", "Christmas Shift", "Finish a puzzle on Christmas Day."],
+    ["nye", "🎆", "New Year Rounds", "Finish a puzzle on New Year’s Day."],
+    ["speedrun", "⚡", "Speed Round", "Finish five different games inside one clock hour."],
+    ["time", "⏳", "Time Traveller", "Finish a puzzle that’s more than 30 days old."],
+    ["comeback", "🔁", "Comeback Kid", "Lose a game, then win it the very next day."],
+    ["overthink", "🤦", "So Close", "Lose a Wordemic on your sixth guess. Painful."],
+    ["nine", "🐈‍⬛", "Nine Lives", "Lose nine puzzles. Still here. Respect.", "", "losses", 9],
+    ["insom", "🌙", "Chronic Insomniac", "Finish ten puzzles between midnight and 4am.", "", "owl", 10],
+    ["clock", "🕰️", "Round the Clock", "Finish puzzles in 12 different hours of the day.", "", "hours", 12],
+    ["uni5", "🦄", "Unicorn Rancher", "Find five Zebritis unicorns.", "", "unicorns", 5],
+    ["bee10", "🍯", "Beekeeper", "Reach Genius in Morphemia ten times.", "", "genius", 10],
+    ["groundhog", "🦫", "Groundhog Day", "Play the same game on 50 different days.", "", "samegame", 50],
+    ["perfweek", "💎", "Perfect Week", "Finish every daily game, every day, for seven days straight.", "", "wardrun", 7]
   ];
   function myStats(mode) {
     var N = mode === "normie", P = N ? "n-" : "", today = sydToday(), tn = dayNum(today);
@@ -573,7 +590,16 @@
       archive: Object.keys(arch).some(function (d) { return arch[d] >= 5; }),
       owl: log.some(function (x) { return x.h >= 0 && x.h < 4; }),
       tourist: nAny,
-      both: Object.keys(mdays).some(function (d) { return ndays[d]; })
+      both: Object.keys(mdays).some(function (d) { return ndays[d]; }),
+      lunch: log.some(function (x) { return x.h === 12; }),
+      rooster: log.some(function (x) { return x.h >= 4 && x.h < 6; }),
+      fri13: Object.keys(days).some(function (d) { return d.slice(8) === "13" && new Date(dayNum(d) * 864e5).getUTCDay() === 5; }),
+      xmas: Object.keys(days).some(function (d) { return d.slice(5) === "12-25"; }),
+      nye: Object.keys(days).some(function (d) { return d.slice(5) === "01-01"; }),
+      speedrun: (function () { var b = {}; log.forEach(function (x) { var k = x.at + "|" + x.h; (b[k] = b[k] || {})[x.g] = 1; }); return Object.keys(b).some(function (k) { return Object.keys(b[k]).length >= 5; }); })(),
+      time: log.some(function (x) { return /^\d{4}-/.test(x.d || "") && dayNum(x.at) - dayNum(x.d) > 30; }),
+      comeback: Object.keys(rec).some(function (id) { var R = rec[id]; return Object.keys(R).some(function (d) { var nx = R[dstr(dayNum(d) + 1)]; return !R[d].win && nx && nx.win; }); }),
+      overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; })
     };
     function cnt(id, f) { var R = rec[id] || {}; return Object.keys(R).filter(function (d) { return f(R[d], d); }).length; }
     var einN = get(P + "mw-einstein", []).length; Object.keys(EINS).forEach(function (id) { (EINS[id] || []).forEach(function (d) { if (rec[id] && rec[id][d] && rec[id][d].win) einN++; }); });
@@ -587,6 +613,13 @@
       bull: cnt("wordemic", function (v) { return v.win && (v.guesses || []).length === 1; }),
       long: cnt("wordemic", function (v) { return v.win && ((v.guesses || [])[0] || "").length === 8; }),
       basil: get("mw-basil-best2", 0) || 0, basilwon: get("mw-basil-won", 0) ? 1 : 0,
+      losses: Object.keys(rec).reduce(function (a, id) { var R = rec[id]; return a + Object.keys(R).filter(function (d) { return R[d].done && R[d].win === false; }).length; }, 0),
+      owl: log.filter(function (x) { return x.h >= 0 && x.h < 4; }).length,
+      hours: (function () { var h = {}; log.forEach(function (x) { if (x.h != null) h[x.h] = 1; }); return Object.keys(h).length; })(),
+      unicorns: cnt("zebritis", function (v) { return v.uni; }),
+      genius: cnt("morphemia", function (v) { return v.win || (v.rank || 0) >= 6; }),
+      samegame: Object.keys(rec).reduce(function (a, id) { return Math.max(a, Object.keys(rec[id]).length); }, 0),
+      wardrun: (function () { if (!daily.length) return 0; var ok = Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).map(dayNum).sort(function (a, b) { return a - b; }); var b = 0, r = 0, p = null; ok.forEach(function (n) { r = p !== null && n - p === 1 ? r + 1 : 1; p = n; if (r > b) b = r; }); return b; })(),
       odgames: od.games || 0, odlines: od.lines || 0, odquad: od.quad || 0, odbest: od.best || 0, oddaily: od.daily || 0
     };
     var NORMIE_BADGE = { od1: ["\ud83d\udc1a", "Dipped a Toe"], od2: ["\u2693", "Deckhand"], od3: ["\ud83c\udf0a", "Tidal Wave"], od4: ["\ud83d\udc0b", "Deep-Sea Legend"], od5: ["\ud83e\udded", "Daily Voyage"] };
