@@ -124,6 +124,46 @@ for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswi
                         if x not in q.setdefault(k, []): q[k].append(x)
             else:
                 p = dict(p); p["_labels"] = list(labs); people[key] = p
+# Near-duplicate people (Nov 2026): the same clinician listed under two spellings, e.g. "Dr Nick Bull" and "Dr Nicholas Bull",
+# "Dr Lay Gan" and "Dr Lay Theng Gan", "Dr Siva Sellathurai" and "Dr Sivathasan Sellathurai". Same surname, first names that
+# match after nickname/prefix rules, and a shared section or phone number. The fuller name is kept; details are merged.
+NICK = {"nick": "nicholas", "nic": "nicholas", "rob": "robert", "bob": "robert", "bobby": "robert", "bill": "william", "will": "william",
+        "liz": "elizabeth", "beth": "elizabeth", "kate": "katherine", "katie": "katherine", "tom": "thomas", "tim": "timothy",
+        "jim": "james", "jamie": "james", "mike": "michael", "mick": "michael", "dave": "david", "andy": "andrew", "drew": "andrew",
+        "tony": "anthony", "chris": "christopher", "matt": "matthew", "dan": "daniel", "ben": "benjamin", "sam": "samuel",
+        "alex": "alexander", "pete": "peter", "steve": "stephen", "steven": "stephen", "greg": "gregory", "jen": "jennifer",
+        "jenny": "jennifer", "sue": "susan", "pat": "patrick", "phil": "philip", "phillip": "philip", "rick": "richard", "rich": "richard",
+        "ed": "edward", "ted": "edward", "jon": "jonathan", "ken": "kenneth", "geoff": "geoffrey", "jeff": "jeffrey", "charlie": "charles",
+        "bec": "rebecca", "becky": "rebecca", "mel": "melissa", "jess": "jessica", "josh": "joshua", "stu": "stuart", "nikki": "nicola"}
+def _np(n):
+    if not re.match(r"^(Dr|Prof|Professor|A/Prof|Assoc|Associate|Conjoint|Clinical)\b", n.strip(), re.I): return (None, None)
+    b = re.sub(r"\s*\(.*?\)", "", TITLE.sub("", n)).replace(".", " ").lower().split()
+    b = [w for w in b if w not in ("dr", "prof", "mr", "ms", "mrs", "miss")]
+    return (NICK.get(b[0], b[0]), b[-1]) if len(b) >= 2 else (None, None)
+def _same_first(a, b):
+    return a == b or (len(a) >= 3 and len(b) >= 3 and (a.startswith(b) or b.startswith(a)))
+_digits = lambda x: re.sub(r"\D", "", str(x or ""))[:10]
+_keys = list(people.keys())
+for i, ka in enumerate(_keys):
+    if ka not in people: continue
+    for kb in _keys[i + 1:]:
+        if kb not in people or ka not in people: continue
+        a, b = people[ka], people[kb]
+        fa, la = _np(a["name"]); fb, lb = _np(b["name"])
+        if not fa or not fb or la != lb or not _same_first(fa, fb): continue
+        if not (set(a["_labels"]) & set(b["_labels"]) or (_digits(a.get("phone")) and _digits(a.get("phone")) == _digits(b.get("phone")))): continue
+        keep, drop, kk, kd = (a, b, ka, kb) if len(TITLE.sub("", a["name"])) >= len(TITLE.sub("", b["name"])) else (b, a, kb, ka)
+        for l2 in drop["_labels"]:
+            if l2 not in keep["_labels"]: keep["_labels"].append(l2)
+        if drop.get("practice") and drop["practice"] != keep.get("practice") and all(drop["practice"] != x[0] for x in keep.setdefault("_also", [])):
+            keep["_also"].append((drop["practice"], drop.get("suburb") or drop.get("address", ""), drop.get("phone", "")))
+        for k in ("interests", "inclusive", "sources", "listed_by"):
+            for x in drop.get(k) or []:
+                if x not in keep.setdefault(k, []): keep[k].append(x)
+        for k, v in drop.items():
+            if not keep.get(k) and v: keep[k] = v
+        print("merged near-duplicate:", drop["name"], "->", keep["name"])
+        del people[kd]
 L = sorted(people.values(), key=lambda p: sortkey(p["name"]))
 e = lambda s: html.escape(str(s or ""), quote=True)
 
