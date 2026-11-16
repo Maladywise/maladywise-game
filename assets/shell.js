@@ -548,7 +548,7 @@
     ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
     ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1],
     ["sx_cab", "🗝️", "Cabinet Keeper", "Opened the Cabinet of Curiosities.", "global", "", 0, 1],
-    ["sx_da", "✏️", "Diabolically Clever", "Found every DA in the secret DA room.", "global", "", 0, 1]
+    ["sx_da", "✏️", "Diabolically Clever", "Solved the hidden mini cryptic without peeking.", "global", "", 0, 1]
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
@@ -2024,7 +2024,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
   // 14 Tap the footer tagline 5 times: the Cabinet of Curiosities, a clickable list of the typed secrets plus clues for the rest.
-  // 13 Type "astle": the hidden DA room (/da/), a tribute to cryptic setter David Astle; find all five DAs for a badge.
+  // 13 Type "astle": the hidden For DA page (/da/), a nod to cryptic setter DA; solve all six clues without peeking for a badge.
   // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward(). 12 Type "basil" or "clover": paw prints.
   (function () {
     function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
@@ -2140,7 +2140,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       setTimeout(place, 1500);
     })();
 
-    function daRoom() { flag("daroom"); pill("✏️ Bingo. A secret room for a puzzle legend…", 1600); setTimeout(function () { location.href = "/da/"; }, 1100); }
+    function daRoom() { flag("daroom"); pill("✏️ A nod to a cryptic master…", 1600); setTimeout(function () { location.href = "/da/"; }, 1100); }
     // --- the Cabinet of Curiosities: tap the footer tagline 5 times for a clickable list of the typed secrets (phones can't type) ---
     var ct = [];
     document.addEventListener("click", function (e) {
@@ -2154,7 +2154,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var A = [["🦇", "Night Shift", "A hidden game for the 3am crowd.", nightShift], ["🎉", "Mascot parade", "The whole gang, all at once.", parade],
         ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
         ["🐾", "Call Basil", "He may ignore you.", function () { paws("Basil"); }], ["🐾", "Call Clover", "She’ll supervise.", function () { paws("Clover"); }],
-        ["✏️", "The DA Room", "A tribute to a cryptic legend.", daRoom]];
+        ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]];
       var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
