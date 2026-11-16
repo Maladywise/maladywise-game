@@ -682,7 +682,7 @@ html[data-theme="dark"] .doc ol.ex .dose{background:#2A2240}
 .mw-live{font-size:13px;color:var(--muted);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0}
 .mw-live[hidden]{display:none}
 .splash .mw-live{display:flex;justify-content:center;margin-top:8px;white-space:normal}
-.mw-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 0 rgba(46,158,91,.5);animation:mwpulse 2s infinite}
+.mw-dot{display:inline-block;margin-right:6px;vertical-align:1px;width:8px;height:8px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 0 rgba(46,158,91,.5);animation:mwpulse 2s infinite}
 @keyframes mwpulse{70%{box-shadow:0 0 0 6px rgba(46,158,91,0)}100%{box-shadow:0 0 0 0 rgba(46,158,91,0)}}
 :root[data-motion="reduce"] .mw-dot{animation:none}
 @media (prefers-reduced-motion:reduce){.mw-dot{animation:none}}
