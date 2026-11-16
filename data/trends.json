@@ -926,6 +926,134 @@
    "date": "2026-11-16",
    "source": "news search: Medical Dialogues",
    "niche": true
+  },
+  {
+   "term": "gout",
+   "region": "AU",
+   "approx volume": "1000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "autoimmune disease",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "afl concussion assessment",
+   "region": "AU",
+   "approx volume": "1000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "irritable bowel syndrome",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "measles",
+   "region": "AU",
+   "approx volume": "200+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "kratom",
+   "region": "US",
+   "approx volume": "20000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "irritable bowel syndrome",
+   "region": "US",
+   "approx volume": "10000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "autoimmune disease",
+   "region": "US",
+   "approx volume": "2000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "colon cancer",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "barometric pressure",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": true
+  },
+  {
+   "term": "cancer sponge test indigestion",
+   "region": "GB",
+   "approx volume": "10000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": true
+  },
+  {
+   "term": "cancer",
+   "region": "GB",
+   "approx volume": "20000+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "antimicrobial resistance mortality forecast who",
+   "region": "GB",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": true
+  },
+  {
+   "term": "hiv",
+   "region": "GB",
+   "approx volume": "500+",
+   "date": "2026-11-17",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-16T17:21:19Z)",
+   "niche": false
+  },
+  {
+   "term": "kratom 7-OH DEA scheduling",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-17",
+   "source": "news search: Vicente LLP / Pharmacy Times",
+   "niche": true
+  },
+  {
+   "term": "Heartburn Health Check (capsule sponge) in NHS pharmacies",
+   "region": "GB",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-17",
+   "source": "news search: Cambridge Early Cancer Institute / Pharmaceutical Journal",
+   "niche": true
   }
  ],
  "used": [
