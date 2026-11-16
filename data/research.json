@@ -2,6 +2,48 @@
  "_about": "Research hub data. The weekly research task adds a new week at the TOP of weeks[] (3-5 studies) and keeps trials[] current. Build with: python3 _scripts/build_research.py worldwide.items lists studies or citizen-science projects anyone can join online from any country (verified on official pages).",
  "weeks": [
   {
+   "week": "10–16 November 2026",
+   "date": "2026-11-16",
+   "studies": [
+    {
+     "title": "A weight-loss injection worked for teenagers too",
+     "what": "SURMOUNT-ADOLESCENTS: 160 teens aged 12–17 with obesity, plus healthy-lifestyle support. After 72 weeks, weekly tirzepatide cut BMI by 18.5%, while placebo nudged it up 0.5% (about 18 kg lost vs 2 kg gained). Nearly half lost 20% or more of their BMI. Gut side effects were common (vomiting in about half), and 9% stopped because of side effects.",
+     "sowhat": "These medicines can work for teenagers, not just adults, but they come with real side effects and weight tends to return when they stop. It's a decision for a young person, their family and their doctor together, alongside food, sleep and movement, not instead of them.",
+     "evidence": "Strong",
+     "evnote": "randomised trial, but fairly small and 72 weeks only",
+     "source": "JAMA (15 Nov 2026)",
+     "url": "https://jamanetwork.com/journals/jama/fullarticle/2856796"
+    },
+    {
+     "title": "Skipping your blood pressure tablet on surgery day helped",
+     "what": "A double-blind trial of 2,012 adults aged 60–80 on ACE inhibitors or ARBs having non-heart surgery. Skipping the morning dose meant fewer dangerous blood pressure drops under anaesthetic (31% vs 46%) and less need for drugs to raise it (29% vs 41%), with no difference in complications or deaths at 30 days.",
+     "sowhat": "If you take one of these tablets and have an operation coming up, ask your surgeon or anaesthetist whether to skip that morning's dose. Don't stop it on your own at any other time.",
+     "evidence": "Strong",
+     "evnote": "large randomised placebo-controlled trial (China)",
+     "source": "BMJ Group summary of the BMJ paper (12 Nov 2026)",
+     "url": "https://bmjgroup.com/pausing-blood-pressure-meds-on-day-of-surgery-benefits-older-adults/"
+    },
+    {
+     "title": "Which antidepressants keep working long term?",
+     "what": "A review of 115 trials with more than 30,000 people compared 20-odd antidepressants over the longer haul. People who stayed on an antidepressant kept their improvement more often than those switched to placebo (about 62% vs 45%). Escitalopram, duloxetine and agomelatine came out ahead of fluoxetine, but over half the key trials had a high risk of bias and most lasted about six months.",
+     "sowhat": "Staying on treatment that's working helps prevent relapse. If your current medicine suits you, this isn't a reason to switch. If you're starting or changing, it's one more thing to talk through with your doctor.",
+     "evidence": "Moderate",
+     "evnote": "network meta-analysis of randomised trials; many at high risk of bias",
+     "source": "Radboudumc news (11 Nov 2026), published in The Lancet Psychiatry",
+     "url": "https://www.radboudumc.nl/en/news-items/2026/study-identifies-antidepressants-that-get-patients-well-and-keep-them-well"
+    },
+    {
+     "title": "Australia cut pregabalin misuse without taking it off the shelf",
+     "what": "Australian dispensing and Poisons Information Centre data from 2016 to 2024 (3.4 million prescriptions). After media coverage, tighter prescribing rules, boxed warnings and real-time prescription monitoring, dispensing was about 25% below the expected trend and intentional overdose calls about 47% lower.",
+     "sowhat": "Pregabalin (Lyrica) still has a place, but it carries real risks, especially with opioids or alcohol. If you take it, keep to the prescribed dose and talk to your doctor before stopping, as coming off suddenly can be rough.",
+     "evidence": "Moderate",
+     "evnote": "large observational study; can't prove which change did the work",
+     "source": "BMJ Group summary of the BMJ paper (12 Nov 2026)",
+     "url": "https://bmjgroup.com/public-awareness-and-tighter-prescribing-restrictions-linked-to-decline-in-pregabalin-misuse/"
+    }
+   ]
+  },
+  {
    "week": "3–10 November 2026",
    "date": "2026-11-10",
    "studies": [
@@ -74,7 +116,7 @@
   }
  ],
  "recruiting": {
-  "checked": "2026-11-11",
+  "checked": "2026-11-16",
   "local": [
    {
     "name": "Diabetic foot ulcer trial (CYWC628)",
@@ -171,6 +213,38 @@
     "org": "HMRI (international study)",
     "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/neurofibromatosis-type-1-nf1-consortium/",
     "mode": "Hunter-based. Check the listing for visit details."
+   },
+   {
+    "name": "Tailor and Connect: stroke rehab at home",
+    "what": "Tests home-based arm and hand rehabilitation tailored to each person, guided by wearable sensors and an app.",
+    "who": "Adults who had a stroke 3 to 18 months ago and have goals for their arm or hand.",
+    "org": "HMRI / La Trobe University",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/tailor-and-connect-personalised-stroke-recovery-and-rehabilitation/",
+    "mode": "Assessments at HMRI; therapy sessions delivered remotely."
+   },
+   {
+    "name": "Fruit, vegetables and COPD",
+    "what": "Looks at what people with and without COPD eat, and whether fruit and veg intake is linked to symptoms.",
+    "who": "Adults 40+ with diagnosed COPD on medication, or with no lung disease.",
+    "org": "HMRI / University of Newcastle",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/fruits-and-vegetables-for-chronic-obstructive-pulmonary-disease-copd-a-cross-sectional-observational-study/",
+    "mode": "Online questionnaires. Check the listing for eligibility."
+   },
+   {
+    "name": "Digestive Health and Wellbeing Survey",
+    "what": "An online survey on gut symptoms, mood, sleep and lifestyle to understand why some people develop digestive conditions.",
+    "who": "Adults 18+, with or without gut symptoms.",
+    "org": "HMRI",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/digestive-health-and-wellbeing-survey/",
+    "mode": "Online survey. Check the listing for eligibility."
+   },
+   {
+    "name": "ARTiMS: IVF and fertility care in MS",
+    "what": "Building a better care pathway for women with MS or NMOSD who use IVF or other fertility treatment.",
+    "who": "Women diagnosed with MS or NMOSD before trying to conceive with fertility treatment.",
+    "org": "HMRI",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/assisted-reproductive-technology-in-multiple-sclerosis-and-neuromyelitis-optica-spectrum-disorders-artims/",
+    "mode": "Survey plus a phone or video call; optional group chat."
    }
   ],
   "online": [
@@ -257,16 +331,8 @@
   ]
  },
  "worldwide": {
-  "checked": "2026-11-14",
+  "checked": "2026-11-16",
   "items": [
-   {
-    "name": "You + ME Registry",
-    "what": "An online registry and symptom-tracking app building a picture of ME/CFS and long COVID over time.",
-    "who": "Adults with ME/CFS or long COVID, plus healthy volunteers for comparison. International; an Australian arm runs with Emerge Australia.",
-    "org": "Solve M.E. (US non-profit)",
-    "url": "https://youandmeregistry.com/",
-    "mode": "Online survey and app, from anywhere."
-   },
    {
     "name": "Autism Research Centre volunteer database",
     "what": "Join a database and get invited to online autism studies; starts with short online questionnaires.",
