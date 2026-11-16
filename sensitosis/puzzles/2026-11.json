@@ -375,7 +375,10 @@
   "difficulty": "Easy",
   "rounds": [
    {
-    "test": "drawer"
+    "test": "hpv"
+   },
+   {
+    "test": "fit"
    },
    {
     "test": "hpylori_serology"
@@ -385,9 +388,6 @@
    },
    {
     "test": "murphy"
-   },
-   {
-    "test": "fit"
    }
   ]
  },
