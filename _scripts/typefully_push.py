@@ -2,8 +2,9 @@
 """Send queued X posts to Typefully (API v2), one per slot, always as an image post + link reply.
 
 FROM 23 NOV 2026 (owner's X strategy): two posts a day. "am" = 7:30am DAILY PUZZLE (an entry with a "puzzle"
-object gets a drawn puzzle card, _scripts/puzzle_card.py, and an "answer" posted as a reply to it at about
-11:15am the same day, by the late-morning run). "pm" = 6pm value post (thread, TIL, new game, short video,
+object gets a drawn puzzle card, _scripts/puzzle_card.py). Its "answer" goes in the SAME thread as post 2,
+right after the puzzle ("Guess, then check the answer below"), because X blocks scheduled replies via the API
+(17 Nov 2026). The old 11:15am answer-reply run is retired. "pm" = 6pm value post (thread, TIL, new game, short video,
 or a strong world day). The noon slot is retired: no automatic noon World Day posts from 23 Nov.
 
 
@@ -135,7 +136,7 @@ def alt_for(p, xs):
     if z:
         body = re.sub(r"<br\s*/?>", " ", z.get("body", ""))
         body = re.sub(r"<[^>]+>", "", body)
-        return ("Malady Wise puzzle card. %s: %s. %s Reply with your guess; answer at 11:15am Sydney time."
+        return ("Malady Wise puzzle card. %s: %s. %s Reply with your guess; the answer is in the reply below."
                 % (z.get("kicker", "Puzzle"), z.get("title", ""), body)).replace("  ", " ")[:1000]
     first = re.sub(r"https?://\S+", "", (xs[0] if xs else "")).strip()
     return ("Malady Wise picture card. " + first)[:1000] if first else "Malady Wise picture card."
@@ -555,10 +556,7 @@ def main():
     if KEY and not dry:  # every run, even with nothing new: one picture per thread, no second link card
         hide_double_previews(social_set_id())
     if KEY and not dry:
-        try:
-            post_answers(social_set_id(), posts, now, save_queue)
-        except Exception as e:  # noqa: BLE001  (never block the queue over an answer)
-            print("Answer replies: %s" % e)
+        pass  # answers now travel inside the puzzle thread (X blocks scheduled replies); post_answers is retired
     if not todo:
         print("Nothing to queue.")
         return 1 if bad else 0
@@ -664,6 +662,15 @@ def main():
                 if not moved:
                     print("Hold (no free slot in the next %d days):" % a.days, p["date"]); continue
             xs, url = to_x_thread(p["thread"])
+            if p.get("answer"):  # puzzle answer = post 2 of the same thread (X blocks scheduled replies)
+                ans = p["answer"] if isinstance(p["answer"], list) else [p["answer"]]
+                ans = [a.strip() for a in ans if a and a.strip()]
+                if ans and not ans[0].lower().startswith("answer"):
+                    ans[0] = "Answer: " + ans[0]
+                rest = xs[1:]
+                if any("http" in a for a in ans):  # the answer already links somewhere: drop the generic home-page link post
+                    rest = [t for t in rest if not t.startswith("Play today's medical puzzles")] or rest[:0]
+                xs = [re.sub(r"\s*Answer at 11:15am\.?", " Guess, then check the answer below.", xs[0]).replace("  ", " ")] + ans + rest
             post0 = {"text": xs[0]}
             body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in xs[1:]]}},
                     "publish_at": when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
