@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Send queued X posts to Typefully (API v2), one per slot, always as an image post + link reply.
+"""Send queued X posts to Typefully (API v2), one per slot.
+
+TEXT-FIRST (17 Nov 2026, owner's call): posts should be useful, interesting and informative, not maxed for reach.
+Posts are TEXT ONLY unless the entry has "card" (a World Day card: eye-catching fun facts / weird trivia) or
+"image": true, or a "short" video. A link reply is added ONLY when the queue text contains a link; puzzle
+threads are: puzzle, then the answer (with a link only if the answer has one). No generic home-page link post.
 
 FROM 23 NOV 2026 (owner's X strategy): two posts a day. "am" = 7:30am DAILY PUZZLE (an entry with a "puzzle"
 object gets a drawn puzzle card, _scripts/puzzle_card.py). Its "answer" goes in the SAME thread as post 2,
@@ -368,8 +373,7 @@ def to_x_thread(thread):
             th[1] = th[1] + "\n\n" + reply
         else:
             th.insert(1, reply)
-    elif len(th) == 1:
-        th.append(reply)
+    # no link in the queue text -> no link reply (text-first X, 17 Nov 2026: links only when they're useful)
     return th, url
 
 
@@ -668,8 +672,7 @@ def main():
                 if ans and not ans[0].lower().startswith("answer"):
                     ans[0] = "Answer: " + ans[0]
                 rest = xs[1:]
-                if any("http" in a for a in ans):  # the answer already links somewhere: drop the generic home-page link post
-                    rest = [t for t in rest if not t.startswith("Play today's medical puzzles")] or rest[:0]
+                rest = [t for t in rest if not t.startswith("Play today's medical puzzles")]  # links only when useful
                 xs = [re.sub(r"\s*Answer at 11:15am\.?", " Guess, then check the answer below.", xs[0]).replace("  ", " ")] + ans + rest
             post0 = {"text": xs[0]}
             body = {"platforms": {"x": {"enabled": True, "posts": [post0] + [{"text": t} for t in xs[1:]]}},
@@ -685,12 +688,14 @@ def main():
                         continue
                     print("Short render failed for %s (%s); slot is close, posting with the game picture instead." % (p["date"], e))
                     png = image_for(p, url)
-            else:
+            elif p.get("card") or p.get("image") or "/deep-dives/" in (url or ""):  # text-first: a picture only for World Day cards or when asked ("image": true)
                 png = image_for(p, url)
+            else:
+                png = None
             if dry:
                 print("DRY", key_of(p), body["publish_at"], "AUTO" if p.get("auto") else "queue",
-                      len(xs), "post(s) + %s" % ("video" if (png or "").endswith(VIDEO_EXT) else "image"),
-                      os.path.relpath(png, ROOT) if png.startswith(ROOT) else png)
+                      len(xs), "post(s) + %s" % (("video" if png.endswith(VIDEO_EXT) else "image") if png else "text only"),
+                      (os.path.relpath(png, ROOT) if png.startswith(ROOT) else png) if png else "")
                 for i, t in enumerate(xs, 1):
                     print("   [%d] " % i + t.replace("\n", "\n       "))
                 continue

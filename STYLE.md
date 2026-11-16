@@ -124,6 +124,13 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Characters: default female
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
 
+## X posts: TEXT-FIRST, USEFUL OVER REACH (17 Nov 2026, owner's decision; overrides everything below where they conflict)
+- Goal: posts that are **useful, interesting and informative**. Don't chase reach tricks or engagement bait.
+- **Text only by default.** No picture unless it adds something: World Day cards, deep dive cards, short videos, or `"image": true`. Puzzle posts are plain text (no puzzle card).
+- **Links only when useful.** No automatic "Play today's medical puzzles" reply. Add a link only when it points to something relevant: the matching fact sheet, deep dive or game.
+- **Puzzles:** post 1 asks the question and ends "Guess, then check the answer below. 👇"; post 2 is "Answer: …" with a short why (and a relevant link only if there is one). Never "Answer at 11:15am": X blocks scheduled replies.
+- **World Days:** make them eye-catching and fun: a strong hook, then 2–4 genuinely surprising verified facts or weird trivia (history, odd numbers, strange firsts), one practical takeaway, and the matching fact sheet link in the last post. A World Day card picture is fine here. No dry "Today is X Day" openers. Sensitive days stay respectful and factual.
+
 ## X posts: STRATEGY FROM 23 NOV 2026 (owner's decision, overrides older X rules and task prompts)
 - **Two posts a day, no more.** Small accounts grow on replies, not volume.
   - **7:30am (`"slot": "am"`): the DAILY PUZZLE.** One picture card made by `_scripts/puzzle_card.py` from the entry's `"puzzle"` object (`kicker`, `title`, `body` with `<b>` allowed, `mascot` = a file in assets/mascots/). Post 1 asks the question with NO link and invites replies; post 2 is "Play today's medical puzzles → https://maladywise.com/". Add `"answer"` (a string, or a list of posts: answer first, then an optional link to a matching fact sheet or game). The push script puts the answer in the SAME thread as post 2, straight after the puzzle (X blocks scheduled replies via the API, 17 Nov 2026). Post 1 ends "Guess, then check the answer below. 👇", never "Answer at 11:15am". Add `"pin": true`.
