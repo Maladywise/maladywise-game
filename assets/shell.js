@@ -536,7 +536,9 @@
     // secret badges: shown as ??? until found (b[7] = 1)
     ["sx_night", "🦇", "Pager Goes Off", "Found the hidden Night Shift game.", "global", "", 0, 1],
     ["sx_whisper", "🤫", "Mascot Whisperer", "Heard three mascots’ secrets.", "global", "", 0, 1],
-    ["sx_table", "🐾", "Off the Table", "Let Basil knock something off the home page.", "global", "", 0, 1],
+    ["sx_table", "🐾", "Off the Table", "Let Basil knock something off the page.", "global", "", 0, 1],
+    ["sx_stamp", "✅", "Clover Approved", "Got Clover’s stamp on a page.", "global", "", 0, 1],
+    ["sx_cats", "📋", "Incident Report", "Saw both cats on duty at once.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Summoned the mascot parade.", "global", "", 0, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
@@ -624,7 +626,7 @@
       time: log.some(function (x) { return /^\d{4}-/.test(x.d || "") && dayNum(x.at) - dayNum(x.d) > 30; }),
       comeback: Object.keys(rec).some(function (id) { var R = rec[id]; return Object.keys(R).some(function (d) { var nx = R[dstr(dayNum(d) + 1)]; return !R[d].win && nx && nx.win; }); }),
       overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; }),
-      sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0),
+      sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0), sx_stamp: !!get("mw-secret-stamp", 0), sx_cats: !!get("mw-secret-cats", 0),
       sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0),
       sx_code: !!get("mw-secret-code", 0), sx_scrawl: !!get("mw-secret-scrawl", 0), sx_wait: !!get("mw-secret-wait", 0),
       sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0), sx_da: !!get("mw-secret-da", 0), sx_cab: !!get("mw-secret-cabinet", 0)
@@ -2025,7 +2027,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
   // 14 Tap the footer tagline 5 times: the Cabinet of Curiosities, a clickable list of the typed secrets plus clues for the rest.
   // 13 Type "astle": the hidden For DA page (/da/), a nod to cryptic setter DA; solve all six clues without peeking for a badge.
-  // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward(). 12 Type "basil" or "clover": paw prints.
+  // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward().
+  // 12 Type "basil": Basil knocks something off any page. Type "clover": Clover reviews the page and stamps it. Type "bothcats": chaos, then an incident report.
   (function () {
     function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
     function pill(txt, ms) {
@@ -2081,7 +2084,9 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
       if (/scrawl$/.test(typed)) { typed = ""; scrawl(); }
       if (/astle$/.test(typed)) { typed = ""; daRoom(); }
-      if (/(basil|clover)$/.test(typed)) { var who = /basil$/.test(typed) ? "Basil" : "Clover"; typed = ""; paws(who); }
+      if (/bothcats$/.test(typed)) { typed = ""; bothCats(); }
+      else if (/basil$/.test(typed)) { typed = ""; flag("paws"); basilSwipe(); }
+      else if (/clover$/.test(typed)) { typed = ""; flag("paws"); cloverStamp(); }
     });
     function parade() {
       flag("konami");
@@ -2101,22 +2106,87 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         if (lt.length >= 3) { lt = []; basilSwipe(); }
       });
     }
-    function basilSwipe() {
+    // --- the cats (Nov 2026): Basil knocks a real page element off; Clover reviews the page and stamps it; both = chaos then paperwork ---
+    var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function catTarget(avoid) {
+      var c = [].slice.call(document.querySelectorAll("main .card, main .t3, main .rd, main h1, main h2, main h3, main img, main .callout, main p, main li, main button")).filter(function (el) {
+        if (el === avoid || el.closest(".mw-cab, .mw-secret-pill, .mw-stamp, .mt-cats") || /basil|clover/.test(el.src || "")) return false;
+        var r = el.getBoundingClientRect(); return r.width > 40 && r.height > 14 && r.top > 70 && r.bottom < innerHeight - 20 && r.width < innerWidth * 0.95;
+      });
+      var big = c.filter(function (el) { return /^(H1|H2|IMG)$/.test(el.tagName) || el.matches(".card, .t3, .rd, .callout"); });
+      var pool = big.length ? big : c;
+      return pool[Math.floor(Math.random() * pool.length)] || document.querySelector("main h1, main h2, main");
+    }
+    function catImg(name, cls) { var im = document.createElement("img"); im.src = "/assets/mascots/" + name + ".svg?v=2"; im.alt = ""; im.className = "mw-basil-walk " + (cls || ""); im.setAttribute("aria-hidden", "true"); document.body.appendChild(im); return im; }
+    function knockOff(tgt, back, cb) {
+      if (!tgt || !tgt.animate || RM) { if (cb) cb(); return; }
+      var r = tgt.getBoundingClientRect(), spin = (Math.random() < 0.5 ? -1 : 1) * (40 + Math.random() * 60);
+      var a = tgt.animate([{ transform: "none" }, { transform: "translate(18px,-8px) rotate(" + (spin / 8) + "deg)", offset: 0.12 }, { transform: "translate(" + (90 + Math.random() * 120) + "px," + (innerHeight - r.top + 80) + "px) rotate(" + spin + "deg)", opacity: 0.15 }], { duration: 1100, easing: "cubic-bezier(.5,0,.9,.6)", fill: "forwards" });
+      a.onfinish = function () { if (cb) cb(a); if (back !== false) setTimeout(function () { a.cancel(); tgt.animate([{ opacity: 0, transform: "translateY(-14px)" }, { opacity: 1, transform: "none" }], { duration: 450 }); }, back || 2200); };
+      return a;
+    }
+    function basilSwipe(after) {
       flag("offtable");
-      var cands = [].slice.call(document.querySelectorAll("main .card, main .t3, main .rd")).filter(function (el) { var r = el.getBoundingClientRect(); return r.top > 60 && r.bottom < innerHeight; });
-      var tgt = cands[Math.floor(Math.random() * cands.length)] || document.querySelector("main h1, main h2");
-      var cat = document.createElement("img"); cat.src = "/assets/mascots/basil.svg"; cat.alt = ""; cat.className = "mw-basil-walk"; document.body.appendChild(cat);
-      var r = tgt ? tgt.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
-      cat.style.top = Math.max(60, r.top + r.height - 90) + "px";
-      var dest = Math.max(0, r.left - 70);
-      cat.animate([{ transform: "translateX(-120px)" }, { transform: "translateX(" + dest + "px)" }], { duration: 1600, easing: "ease-out", fill: "forwards" }).onfinish = function () {
-        if (tgt && tgt.animate) {
-          var a = tgt.animate([{ transform: "none" }, { transform: "translate(30px,-10px) rotate(8deg)", offset: 0.15 }, { transform: "translate(140px," + (innerHeight - r.top + 80) + "px) rotate(70deg)", opacity: 0.2 }], { duration: 1100, easing: "ease-in", fill: "forwards" });
-          a.onfinish = function () { setTimeout(function () { tgt.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); a.cancel(); }, 1800); };
-        }
-        pill("🐾 Basil has entered the chat. Something had to go.", 3000);
-        cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + (innerWidth + 120) + "px)" }], { duration: 1500, delay: 700, easing: "ease-in", fill: "forwards" }).onfinish = function () { cat.remove(); };
+      var tgt = catTarget(), r = tgt ? tgt.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
+      var cat = catImg("basil"), dest = Math.max(0, Math.min(innerWidth - 90, r.left - 60));
+      cat.style.top = Math.max(60, Math.min(innerHeight - 120, r.top + r.height - 95)) + "px";
+      var lines = ["🐾 Basil has entered the chat. Something had to go.", "🐾 Basil made eye contact. Then he did it anyway.", "🐾 Basil tested gravity. Gravity still works.", "🐾 Basil decided that didn’t belong there."];
+      cat.animate([{ transform: "translateX(-120px)" }, { transform: "translateX(" + dest + "px)" }], { duration: RM ? 10 : 1500, easing: "ease-out", fill: "forwards" }).onfinish = function () {
+        // the paw tap, then the shove
+        cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + (dest + 14) + "px) rotate(-6deg)" }, { transform: "translateX(" + dest + "px)" }], { duration: 260, iterations: 2 }).onfinish = function () {
+          knockOff(tgt, after ? false : 2200, after ? function (a) { after(tgt, a, r); } : null);
+          if (!after) pill(lines[Math.floor(Math.random() * lines.length)], 3000);
+          cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + (innerWidth + 120) + "px)" }], { duration: 1300, delay: 500, easing: "ease-in", fill: "forwards" }).onfinish = function () { cat.remove(); };
+        };
       };
+    }
+    function stamp(tgt, word, sub) {
+      var r = tgt.getBoundingClientRect(), st = document.createElement("div");
+      st.className = "mw-stamp" + (word.length > 9 ? " long" : ""); st.setAttribute("aria-hidden", "true");
+      st.innerHTML = "<b>" + word + "</b><span>" + sub + "</span>";
+      st.style.left = (scrollX + r.left + Math.min(r.width, 320) * (0.35 + Math.random() * 0.3)) + "px";
+      st.style.top = (scrollY + r.top + Math.min(r.height, 160) * 0.5) + "px";
+      st.style.setProperty("--rot", (-14 + Math.random() * 10).toFixed(1) + "deg");
+      document.body.appendChild(st);
+      var w = st.offsetWidth / 2 + 8, x = parseFloat(st.style.left) - scrollX;
+      st.style.left = (scrollX + Math.max(w, Math.min(innerWidth - w, x))) + "px";
+      return st;
+    }
+    function cloverWalk(r, done) {
+      var cat = catImg("clover", "mw-clover-walk"), dest = Math.min(innerWidth - 80, Math.max(10, r.left + Math.min(r.width, 320) + 6));
+      if (dest > innerWidth - 90) dest = Math.max(10, r.left - 80);
+      cat.style.top = Math.max(60, Math.min(innerHeight - 120, r.top + r.height - 95)) + "px";
+      cat.animate([{ transform: "translateX(" + (innerWidth + 40) + "px)" }, { transform: "translateX(" + dest + "px)" }], { duration: RM ? 10 : 1500, easing: "ease-out", fill: "forwards" }).onfinish = function () {
+        // the inspection: a slow head tilt, twice
+        cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + dest + "px) rotate(-8deg)" }, { transform: "translateX(" + dest + "px)" }], { duration: RM ? 10 : 700, iterations: 2 }).onfinish = function () {
+          done();
+          cat.animate([{ transform: "translateX(" + dest + "px)" }, { transform: "translateX(" + (innerWidth + 40) + "px)" }], { duration: 1400, delay: 900, easing: "ease-in", fill: "forwards" }).onfinish = function () { cat.remove(); };
+        };
+      };
+    }
+    function cloverStamp() {
+      flag("stamp");
+      var tgt = catTarget(); if (!tgt) return;
+      var V = [["APPROVED", "Clover, Head of Quality", "🐾 Clover has reviewed this page. Approved. You may continue."], ["APPROVED", "after careful sniffing", "🐾 Clover sniffed it twice. It passes."],
+        ["APPROVED", "with conditions", "🐾 Clover approves, on the condition of dinner at 5."], ["SEEN", "by Clover", "🐾 Clover saw this. She has notes. She is keeping them."]];
+      if (Math.random() < 0.12) V = [["NEEDS MORE TREATS", "Clover, Head of Quality", "🐾 Clover has reviewed this page. Not until there are treats."]];
+      var v = V[Math.floor(Math.random() * V.length)];
+      cloverWalk(tgt.getBoundingClientRect(), function () { stamp(tgt, v[0], v[1]); pill(v[2], 3400); });
+    }
+    function bothCats() {
+      flag("cats"); flag("paws");
+      basilSwipe(function (tgt, a, r) {
+        pill("🐾 Basil knocked something off. Clover is on her way…", 2400);
+        setTimeout(function () {
+          cloverWalk(r, function () {
+            if (a) { a.cancel(); tgt.animate([{ opacity: 0, transform: "translateY(-14px)" }, { opacity: 1, transform: "none" }], { duration: 450 }); }
+            setTimeout(function () {
+              stamp(tgt, "INCIDENT REPORT", "Basil, again. Filed by Clover");
+              pill("🐾 Clover put it back and filed an incident report. Basil is not sorry.", 3800);
+            }, 350);
+          });
+        }, 900);
+      });
     }
     // --- cookie hunt ---
     (function () {
@@ -2153,7 +2223,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       flag("cabinet");
       var A = [["🦇", "Night Shift", "A hidden game for the 3am crowd.", nightShift], ["🎉", "Mascot parade", "The whole gang, all at once.", parade],
         ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
-        ["🐾", "Call Basil", "He may ignore you.", function () { paws("Basil"); }], ["🐾", "Call Clover", "She’ll supervise.", function () { paws("Clover"); }],
+        ["🐈", "Call Basil", "Something on this page has to go.", function () { flag("paws"); basilSwipe(); }], ["🐈‍⬛", "Call Clover", "She’ll review this page.", function () { flag("paws"); cloverStamp(); }],
+        ["🐾", "Both cats", "Chaos, then paperwork.", bothCats],
         ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]];
       var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];

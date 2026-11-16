@@ -1490,3 +1490,12 @@ footer.site .ft-tag{font:italic 500 15px var(--title,Lora,serif);color:var(--ink
 .mw-cab-in ul{margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.7}
 .ft-tag{cursor:default;-webkit-user-select:none;user-select:none}
 @media (max-width:420px){.mw-cab-g{grid-template-columns:1fr}}
+
+.mw-clover-walk{width:80px;height:104px}
+.mw-stamp{position:absolute;z-index:96;pointer-events:none;transform:translate(-50%,-50%) rotate(var(--rot,-10deg));border:3px solid #B3261E;color:#B3261E;border-radius:8px;padding:4px 12px 5px;text-align:center;font-family:Poppins,system-ui,sans-serif;background:rgba(255,255,255,.55);mix-blend-mode:multiply;animation:mwstamp .35s cubic-bezier(.2,1.6,.4,1) both;max-width:260px}
+.mw-stamp b{display:block;white-space:nowrap;font-size:20px;font-weight:800;letter-spacing:.12em;line-height:1.1}
+.mw-stamp span{display:block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+html[data-theme=dark] .mw-stamp{color:#FF8A80;border-color:#FF8A80;background:rgba(30,20,20,.55);mix-blend-mode:normal}
+@keyframes mwstamp{0%{opacity:0;transform:translate(-50%,-50%) rotate(var(--rot,-10deg)) scale(2.2)}100%{opacity:.92;transform:translate(-50%,-50%) rotate(var(--rot,-10deg)) scale(1)}}
+@media (prefers-reduced-motion:reduce){.mw-stamp{animation:none;opacity:.92}}
+.mw-stamp.long b{font-size:15px;letter-spacing:.08em}.mw-stamp{max-width:none;white-space:nowrap}
