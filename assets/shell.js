@@ -2128,7 +2128,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function basilSwipe(after) {
       flag("offtable");
       var tgt = catTarget(), r = tgt ? tgt.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
-      var cat = catImg("basil"), dest = Math.max(0, Math.min(innerWidth - 90, r.left - 60));
+      var cat = catImg("basil", "mw-basil-ol"), dest = Math.max(0, Math.min(innerWidth - 90, r.left - 60));
       cat.style.top = Math.max(60, Math.min(innerHeight - 120, r.top + r.height - 95)) + "px";
       var lines = ["🐾 Basil has entered the chat. Something had to go.", "🐾 Basil made eye contact. Then he did it anyway.", "🐾 Basil tested gravity. Gravity still works.", "🐾 Basil decided that didn’t belong there."];
       cat.animate([{ transform: "translateX(-120px)" }, { transform: "translateX(" + dest + "px)" }], { duration: RM ? 10 : 1500, easing: "ease-out", fill: "forwards" }).onfinish = function () {
