@@ -2016,9 +2016,9 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     }).catch(function () {});
   }
   // ---------- secrets (Nov 2026). Flags live in localStorage "mw-secret-<id>"; badges show as ??? until found ----------
-  // 1 Night Shift game: tap Locum (the bat) 7 times on any page where he isn't a link, or type "locum" anywhere.
-  // 2 Mascot whispers: tap any unlinked mascot 10 times for its secret.
-  // 3 Logo: tap the logo 7 times on the home page and Basil knocks something off the page.
+  // 1 Night Shift game: tap Locum (the bat) 3 times on any page where he isn't a link, or type "locum" anywhere.
+  // 2 Mascot whispers: tap any unlinked mascot 3 times for its secret.
+  // 3 Logo: tap the logo 3 times on the home page and Basil knocks something off the page.
   // 4 Konami code (keyboard) or type "konami": the mascot parade.
   // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
@@ -2064,8 +2064,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!img || img.closest("a,button")) return;
       var key = mascotKey(img), now = Date.now(), t = (taps[key] || []).filter(function (x) { return now - x < 4000; });
       t.push(now); taps[key] = t;
-      if (/^(grandrounds|nightshift)$/.test(key) && t.length >= 7) { taps[key] = []; nightShift(); return; }
-      if (t.length >= 10) { taps[key] = []; whisper(img, key); }
+      if (/^(grandrounds|nightshift)$/.test(key) && t.length >= 3) { taps[key] = []; nightShift(); return; }
+      if (t.length >= 3) { taps[key] = []; whisper(img, key); }
     });
     // --- typed words: "locum" -> Night Shift, "konami" -> parade ---
     var typed = "", KON = "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight b a", keys = [];
@@ -2098,7 +2098,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         if (!e.target.closest || !e.target.closest(".bar .logo")) return;
         e.preventDefault();
         var now = Date.now(); lt = lt.filter(function (x) { return now - x < 3500; }); lt.push(now);
-        if (lt.length >= 7) { lt = []; basilSwipe(); }
+        if (lt.length >= 3) { lt = []; basilSwipe(); }
       });
     }
     function basilSwipe() {
@@ -2155,7 +2155,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
         ["🐾", "Call Basil", "He may ignore you.", function () { paws("Basil"); }], ["🐾", "Call Clover", "She’ll supervise.", function () { paws("Clover"); }],
         ["✏️", "The DA Room", "A tribute to a cryptic legend.", daRoom]];
-      var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 10 times, quickly.", "🐈 Tap the logo on the home page 7 times.",
+      var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
       d.innerHTML = '<div class="mw-cab-in"><button type="button" class="mw-cab-x" aria-label="Close">×</button><p class="mw-cab-k">You found it</p><h2>The Cabinet of Curiosities</h2>' +
