@@ -666,8 +666,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "28a6cf1d328e",
-"v": "18514d7b",
+"key": "4bbe5c3a364f",
+"v": "c2bc257e",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -698,6 +698,13 @@
 "v": "85c9d313",
 "label": "Deep dive for clinicians · #2",
 "title": "Coeliac disease"
+},
+"deep-dives-me-cfs": {
+"url": "/deep-dives/me-cfs/",
+"key": "58de80da0f0a",
+"v": "ce874e4e",
+"label": "Deep dive for clinicians · #11",
+"title": "ME/CFS"
 },
 "deep-dives-mould": {
 "url": "/deep-dives/mould/",
