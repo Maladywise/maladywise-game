@@ -1510,3 +1510,38 @@ html[data-theme=dark] .mw-basil-ol{filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
 .mw-kidchip[aria-pressed=true]{background:var(--brand,#4A3480);color:#fff}
 .mw-kidhide{display:none!important}
 .mw-paw-press{transform:scale(.88)!important;filter:brightness(.85);transition:transform .08s}
+/* secret codes (Nov 2026) */
+.mw-walker{position:fixed;left:0;z-index:95;pointer-events:none;display:flex;align-items:center;justify-content:center;line-height:1;filter:drop-shadow(0 3px 4px rgba(0,0,0,.25))}
+.mw-rain{position:fixed;inset:0;z-index:95;pointer-events:none;overflow:hidden;transition:opacity .6s}
+.mw-rain.out{opacity:0}
+.mw-rain span{position:absolute;top:0;line-height:1;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2))}
+.mw-ov{position:fixed;inset:0;z-index:94;pointer-events:none}
+.mw-ov-red{background:radial-gradient(ellipse at 50% 120%,rgba(255,80,20,.55),rgba(255,40,0,.12) 60%,transparent);animation:mwcb .8s ease-in-out 3}
+.mw-sec{position:fixed;left:0;z-index:95;pointer-events:none;width:96px;height:118px;text-align:center}
+.mw-sec img{width:84px;height:84px;display:block;margin:0 auto}
+.mw-sec-sh{position:absolute;top:22px;left:50%;transform:translateX(-50%);font-size:30px;line-height:1}
+.mw-sec b{display:inline-block;margin-top:2px;background:#111;color:#F2C230;font:800 11px/1 Poppins,sans-serif;letter-spacing:.08em;padding:5px 7px;border-radius:5px}
+.mw-breathe{display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(120,125,135,.35);backdrop-filter:blur(2px)}
+.mw-breathe i{width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.75);animation:mwbr 4s ease-in-out 2}
+.mw-breathe b{margin-top:18px;font:700 20px Poppins,sans-serif;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+@keyframes mwbr{0%,100%{transform:scale(.55)}50%{transform:scale(1.25)}}
+.mw-ecg{display:flex;align-items:center}
+.mw-ecg svg{width:100%;height:110px}
+.mw-ecg path{fill:none;stroke:#E0303A;stroke-width:4;stroke-dasharray:1400;stroke-dashoffset:1400;animation:mwecg 2.4s linear 2}
+@keyframes mwecg{to{stroke-dashoffset:0}}
+.mw-spider{position:fixed;top:0;z-index:95;pointer-events:none;width:70px;animation:mwsp 5s ease-in-out forwards}
+.mw-spider i{display:block;width:2px;height:40vh;margin:0 auto;background:rgba(120,120,120,.7);transform-origin:top;animation:mwthr 5s ease-in-out forwards}
+.mw-spider img{width:70px;height:70px;display:block;margin-top:-4px}
+@keyframes mwsp{0%{transform:translateY(-45vh)}35%,70%{transform:translateY(0)}100%{transform:translateY(-45vh)}}
+@keyframes mwthr{0%,100%{opacity:.9}}
+.mw-popup{position:fixed;left:50%;bottom:-120px;width:110px;height:110px;margin-left:-55px;z-index:95;pointer-events:none;animation:mwpop 3.4s ease-in-out forwards}
+@keyframes mwpop{0%{bottom:-120px}20%,75%{bottom:10px}82%{bottom:24px}100%{bottom:-120px}}
+html.mw-flicker main,html.mw-flicker header{animation:mwflk 3s steps(1) 1}
+@keyframes mwflk{0%,12%,30%,52%,100%{opacity:1}8%,26%,48%{opacity:.15}}
+html.mw-chameleon main{animation:mwcham 4s linear 1}
+@keyframes mwcham{0%{filter:none}25%{filter:hue-rotate(90deg) saturate(1.6)}50%{filter:hue-rotate(200deg) saturate(1.6)}75%{filter:hue-rotate(300deg) saturate(1.6)}100%{filter:none}}
+html.mw-dim main,html.mw-dim header{filter:brightness(.45);transition:filter .5s}
+html.mw-clean main{animation:mwclean 2.4s ease-in-out 1}
+@keyframes mwclean{50%{filter:brightness(1.15) saturate(.6)}}
+html.mw-xray body{filter:invert(1) hue-rotate(180deg) grayscale(.6) contrast(1.1);transition:filter .3s}
+@media (prefers-reduced-motion:reduce){.mw-spider,.mw-popup,.mw-breathe i,.mw-ecg path,html.mw-flicker main,html.mw-chameleon main{animation-duration:.01s}}

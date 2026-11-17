@@ -555,7 +555,9 @@
     ["sx_stamp", "✅", "Clover Approved", "Got Clover’s stamp on a page.", "global", "", 0, 1],
     ["sx_cats", "📋", "Incident Report", "Saw both cats on duty at once.", "global", "", 0, 1],
     ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
-    ["sx_konami", "🎮", "Cheat Code", "Summoned the mascot parade.", "global", "", 0, 1],
+    ["sx_konami", "🎮", "Cheat Code", "Typed march for the mascot parade.", "global", "", 0, 1],
+    ["sx_codes", "🔐", "Code Breaker", "Found 10 secret codes.", "global", "codes", 10, 1],
+    ["sx_codebook", "📖", "Codebook", "Found all 46 secret codes.", "global", "codes", 46, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
@@ -667,6 +669,7 @@
       samegame: Object.keys(rec).reduce(function (a, id) { return Math.max(a, Object.keys(rec[id]).length); }, 0),
       wardrun: (function () { if (!daily.length) return 0; var ok = Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).map(dayNum).sort(function (a, b) { return a - b; }); var b = 0, r = 0, p = null; ok.forEach(function (n) { r = p !== null && n - p === 1 ? r + 1 : 1; p = n; if (r > b) b = r; }); return b; })(),
       cookies: (get("mw-cookies", []) || []).length,
+      codes: (get("mw-codes", []) || []).length,
       qzdone: keys.filter(function (k) { return /^qk-best-/.test(k); }).length,
       anatdone: QZ_ANAT.filter(function (q) { return get("qk-best-anat-" + q, null) != null; }).length,
       qzperfect: keys.filter(function (k) { return /^qk-best-/.test(k) && +get(k, 0) >= 20; }).length,
@@ -2056,7 +2059,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 1 Night Shift game: tap Locum (the bat) 3 times on any page where he isn't a link, or type "locum" anywhere.
   // 2 Mascot whispers: tap any unlinked mascot 3 times for its secret.
   // 3 Logo: tap the logo 3 times on the home page and Basil knocks something off the page.
-  // 4 Konami code (keyboard) or type "konami": the mascot parade.
+  // 4 Konami code (keyboard) or type "march": the mascot parade.
   // 5 Cookie hunt: a tiny cookie hides on a few pages each day. One find per day counts.
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
@@ -2105,32 +2108,142 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (/^(grandrounds|nightshift)$/.test(key) && t.length >= 3) { taps[key] = []; nightShift(); return; }
       if (t.length >= 3) { taps[key] = []; whisper(img, key); }
     });
-    // --- typed words: "locum" -> Night Shift, "konami" -> parade ---
+    // --- typed words: see CODES below ("march" -> parade, "codebrown" -> 💩 …) ---
     var typed = "", KON = "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight b a", keys = [];
     document.addEventListener("keydown", function (e) {
       var tg = e.target && e.target.tagName;
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(tg) || (e.target && e.target.isContentEditable) || e.ctrlKey || e.metaKey || e.altKey) return;
       keys.push(e.key && e.key.length === 1 ? e.key.toLowerCase() : e.key); keys = keys.slice(-10);
       if (keys.join(" ") === KON) { keys = []; parade(); }
+      if (e.key === "Backspace") return onType("\b");
       if (!e.key || e.key.length !== 1) return;
       onType(e.key.toLowerCase());
     });
     // On-screen game keyboards (Wordemic and friends) count as typing too, so "basil" or "clove" can be spelt as a guess.
     document.addEventListener("click", function (e) {
       var k = e.target && e.target.closest && e.target.closest("[data-k]"); if (!k) return;
-      var ch = (k.getAttribute("data-k") || "").toLowerCase(); if (/^[a-z]$/.test(ch)) onType(ch);
+      var ch = (k.getAttribute("data-k") || "").toLowerCase(); if (/^[a-z]$/.test(ch)) onType(ch); else if (/^(back|backspace|del|⌫)$/.test(ch)) onType("\b");
     }, true);
-    function onType(ch) {
-      typed = (typed + ch).slice(-10);
-      if (/locum$/.test(typed)) nightShift();
-      if (/konami$/.test(typed)) { typed = ""; parade(); }
-      if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
-      if (/scrawl$/.test(typed)) { typed = ""; scrawl(); }
-      if (/astle$/.test(typed)) { typed = ""; daRoom(); }
-      if (/bothcats$/.test(typed)) { typed = ""; bothCats(); }
-      else if (/basil$/.test(typed)) { typed = ""; flag("paws"); basilSwipe(); }
-      else if (/clove$/.test(typed)) { typed = ""; flag("paws"); cloverStamp(); }
+    // --- secret codes (Nov 2026): type them anywhere, spell them on a game keyboard (Wordemic), or submit them as an answer.
+    // Spaces don't matter: "code blue" = "codeblue". Found codes are kept in mw-codes for the Code Breaker badges.
+    function M(id) { return "/assets/mascots/" + id + ".svg?v=2"; }
+    function walker(src, o) { // a mascot (or emoji) crosses the screen
+      o = o || {}; if (RM) return;
+      var el = document.createElement(src.length < 5 ? "span" : "img"); if (el.tagName === "IMG") { el.src = src; el.alt = ""; } else el.textContent = src;
+      el.className = "mw-walker"; el.setAttribute("aria-hidden", "true"); var sz = o.size || 84;
+      el.style.cssText = "width:" + sz + "px;height:" + sz + "px;font-size:" + Math.round(sz * 0.8) + "px;top:" + (o.top != null ? o.top : innerHeight - sz - 14) + "px";
+      document.body.appendChild(el);
+      var dir = o.rtl ? -1 : 1, x0 = dir > 0 ? -sz - 20 : innerWidth + 20, x1 = dir > 0 ? innerWidth + 20 : -sz - 20, hop = o.hop == null ? 10 : o.hop, n = o.steps || 14, fr = [];
+      for (var k = 0; k <= n; k++) { var x = x0 + (x1 - x0) * k / n, y = (k % 2 ? -hop : 0) + (o.wave ? Math.sin(k / n * Math.PI * 4) * o.wave : 0); fr.push({ transform: "translate(" + x + "px," + y + "px) scaleX(" + (dir > 0 ? (o.flip ? -1 : 1) : (o.flip ? 1 : -1)) + ")" + (o.spin ? " rotate(" + (k * 30) + "deg)" : "") }); }
+      el.animate(fr, { duration: o.ms || 5200, delay: o.delay || 0, easing: "linear", fill: "both" }).onfinish = function () { el.remove(); };
     }
+    function landSpots() {
+      return [].slice.call(document.querySelectorAll("main h1, main h2, main h3, main p, main li, main img, main .card, main .t3, main button, header, footer")).map(function (el) { return el.getBoundingClientRect(); })
+        .filter(function (r) { return r.width > 30 && r.top > 40 && r.top < innerHeight - 30; });
+    }
+    function rain(emoji, n, o) { // emojis fall (or rise) and land on bits of the page
+      o = o || {}; if (RM) n = Math.min(n, 8);
+      var spots = landSpots(), wrap = document.createElement("div"); wrap.className = "mw-rain"; wrap.setAttribute("aria-hidden", "true"); document.body.appendChild(wrap);
+      for (var k = 0; k < n; k++) (function (k) {
+        var e = document.createElement("span"), ch = Array.isArray(emoji) ? emoji[k % emoji.length] : emoji; e.textContent = ch; wrap.appendChild(e);
+        var sz = o.size || (18 + Math.random() * 14), sp = spots.length && !o.up && o.land !== false ? spots[Math.floor(Math.random() * spots.length)] : null;
+        var x = sp ? sp.left + Math.random() * Math.max(10, sp.width - sz) : Math.random() * (innerWidth - sz), yEnd = sp ? sp.top - sz * 0.9 : (o.up ? -60 : innerHeight - sz - 4);
+        e.style.cssText = "left:" + x + "px;font-size:" + sz + "px";
+        var y0 = o.up ? innerHeight + 20 : -50 - Math.random() * 60, rot = (Math.random() - 0.5) * 70, d = (o.ms || 1300) + Math.random() * 700, dl = Math.random() * (o.spread || 1600);
+        var fr = o.up ? [{ transform: "translate(0," + y0 + "px)", opacity: 1 }, { transform: "translate(" + ((Math.random() - 0.5) * 80) + "px," + yEnd + "px) rotate(" + rot + "deg)", opacity: 0 }]
+          : [{ transform: "translate(0," + y0 + "px) rotate(0deg)" }, { transform: "translate(0," + yEnd + "px) rotate(" + rot + "deg)", offset: 0.82 }, { transform: "translate(0," + (yEnd - 9) + "px) rotate(" + rot + "deg)", offset: 0.9 }, { transform: "translate(0," + yEnd + "px) rotate(" + rot + "deg)" }];
+        e.animate(fr, { duration: d, delay: dl, easing: o.up ? "ease-out" : "cubic-bezier(.5,0,.9,.6)", fill: "both" });
+      })(k);
+      setTimeout(function () { wrap.classList.add("out"); setTimeout(function () { wrap.remove(); }, 700); }, o.stay || 6500);
+    }
+    function shake(n) { if (RM) return; var m = document.querySelector("main") || document.body, fr = []; for (var k = 0; k < (n || 6); k++) fr.push({ transform: "translate(" + (k % 2 ? -8 : 8) + "px," + (k % 3 - 1) * 3 + "px)" }); fr.push({ transform: "none" }); m.animate(fr, { duration: 90 * fr.length }); }
+    function overlay(cls, ms) { var f = document.createElement("div"); f.className = "mw-ov " + cls; f.setAttribute("aria-hidden", "true"); document.body.appendChild(f); setTimeout(function () { f.remove(); }, ms || 3000); return f; }
+    function pageFx(cls, ms) { root.classList.add(cls); setTimeout(function () { root.classList.remove(cls); }, ms || 3000); }
+    function evacuate() { // code orange: page sections file out to the left, then wander back
+      var els = [].slice.call(document.querySelectorAll("main > *, main section > *")).filter(function (el) { var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }).slice(0, 14);
+      els.forEach(function (el, i) { if (!el.animate || RM) return; el.animate([{ transform: "none" }, { transform: "translateX(-115vw)", offset: 0.4 }, { transform: "translateX(-115vw)", offset: 0.62 }, { transform: "translateX(115vw)", offset: 0.621 }, { transform: "none" }], { duration: 4200, delay: i * 90, easing: "ease-in-out" }); });
+    }
+    function security() { // code black: security mascots march through in shades and vests
+      ["dx", "stackulus", "comorbix", "sensitosis"].forEach(function (id, i) {
+        if (RM) return; var w = document.createElement("div"); w.className = "mw-sec"; w.setAttribute("aria-hidden", "true");
+        w.innerHTML = '<img src="' + M(id) + '" alt=""><span class="mw-sec-sh">🕶️</span><b>SECURITY</b>'; w.style.top = (innerHeight - 124) + "px"; document.body.appendChild(w);
+        var fr = []; for (var k = 0; k <= 16; k++) fr.push({ transform: "translate(" + (-110 + (innerWidth + 220) * k / 16) + "px," + (k % 2 ? -6 : 0) + "px)" });
+        w.animate(fr, { duration: 6000, delay: i * 650, fill: "both" }).onfinish = function () { w.remove(); };
+      });
+    }
+    function breathe() { var f = overlay("mw-breathe", 8200); f.innerHTML = "<i></i><b>Breathe in…</b>"; var b = f.querySelector("b"); setTimeout(function () { b.textContent = "…and out."; }, 2000); setTimeout(function () { b.textContent = "Breathe in…"; }, 4000); setTimeout(function () { b.textContent = "…and out. Better."; }, 6000); }
+    function ward3() { var f = overlay("mw-ecg", 5000); f.innerHTML = '<svg viewBox="0 0 600 100" preserveAspectRatio="none"><path d="M0 50 H120 L135 50 L145 20 L155 85 L165 10 L178 50 H300 L315 50 L325 20 L335 85 L345 10 L358 50 H480 L495 50 L505 20 L515 85 L525 10 L538 50 H600"/></svg>'; }
+    var CODES = {
+      // hospital codes (any spacing)
+      codeblue: function () { codeBlue(); },
+      codered: function () { overlay("mw-ov-red", 3200); rain("🔥", 40, { up: true, ms: 2600, spread: 1500, stay: 4200 }); pill("🔥 Code Red: fire! Remember RACE: Rescue, Alarm, Contain, Evacuate.", 4200); },
+      codeblack: function () { security(); pill("🕶️ Code Black: security to the waiting room. Everyone stay calm.", 4600); },
+      codebrown: function () { rain("💩", 100, { spread: 2600, stay: 7500 }); pill("💩 Code Brown. Environmental services to every page, please.", 4800); },
+      codeorange: function () { evacuate(); pill("🟠 Code Orange: evacuate! Walk, don’t run. Take nothing but your puzzle streak.", 4400); },
+      codeyellow: function () { pageFx("mw-flicker", 3200); pill("🟡 Code Yellow: internal emergency. The coffee machine is down.", 4200); },
+      codegrey: function () { breathe(); pill("🩶 Code Grey: everybody take a breath. Nobody needs to shout.", 4800); },
+      // the mascots (5 letters, all valid Wordemic guesses)
+      zebra: function () { walker(M("zebritis"), { size: 96, hop: 12, ms: 5600 }); pill("🦓 Ziggy marches through. Hoofbeats? Think horses… unless it’s Ziggy.", 4200); },
+      march: function () { parade(); },
+      snake: function () { walker(M("linkase"), { size: 90, hop: 0, wave: 16, steps: 30, ms: 6200 }); pill("🐍 Cadi slithers past. Asclepius would be proud.", 3600); },
+      polly: function () { walker(M("triviosis"), { size: 80, top: 90, hop: 18, wave: 26, steps: 24, ms: 4200 }); pill("🦜 Echo wants a cracker. And a quiz.", 3200); },
+      batty: function () { walker(M("grandrounds"), { size: 80, top: 70, hop: 22, wave: 30, steps: 28, ms: 4200, rtl: true }); pill("🦇 Locum flaps through. Who paged the night reg?", 3400); },
+      clues: function () { walker(M("dx"), { size: 90, hop: 8, ms: 6000 }); rain("🔍", 6, { land: true, stay: 4500 }); pill("🦊 Dex is on the case. Six clues, one diagnosis.", 3600); },
+      brrrr: function () { walker(M("deepdives"), { size: 84, hop: 6, steps: 26, ms: 6500 }); rain("❄️", 40, { land: false, stay: 5000 }); pill("🐧 Pebble waddles in from the cold. Brrrr.", 3600); },
+      shell: function () { walker(M("gridectomy"), { size: 84, hop: 3, steps: 30, ms: 11000 }); pill("🐢 Tess is crossing. Slowly. Very slowly.", 4200); },
+      webby: function () { var w = document.createElement("div"); w.className = "mw-spider"; w.innerHTML = '<i></i><img src="' + M("suturix") + '" alt="">'; w.setAttribute("aria-hidden", "true"); w.style.left = (20 + Math.random() * (innerWidth - 120)) + "px"; document.body.appendChild(w); setTimeout(function () { w.remove(); }, 5200); pill("🕷️ Silk drops in to say hello. Perfectly sterile thread.", 3400); },
+      hoots: function () { walker(M("sudokrine"), { size: 80, top: 80, hop: 14, wave: 20, steps: 22, ms: 4500, rtl: true }); pill("🦉 Iris hoots. Your cortisol should be higher in the morning.", 3600); },
+      hides: function () { pageFx("mw-chameleon", 4000); walker(M("glimpsis"), { size: 86, hop: 4, ms: 7000 }); pill("🦎 Mira is somewhere on this page. Probably.", 3800); },
+      jelly: function () { rain(["🪼"], 12, { up: true, ms: 4200, spread: 2000, stay: 6000 }); walker(M("opacitis"), { size: 84, top: innerHeight / 2 - 40, hop: 10, wave: 20, steps: 20, ms: 6000 }); pill("🪼 Lumo floats by. Completely see-through. Like your excuses.", 3800); },
+      trash: function () { walker(M("dactylosis"), { size: 86, hop: 10, ms: 4800 }); rain(["🍌", "🥫", "📄"], 12, { stay: 5000 }); pill("🦝 Digby has been in the bins again.", 3400); },
+      label: function () { rain("🏷️", 24, { stay: 6000 }); walker(M("labelosis"), { size: 84, hop: 8, ms: 5600 }); pill("🏷️ Lottie labelled everything. Including you.", 3600); },
+      alert: function () { var p = document.createElement("img"); p.src = M("sensitosis"); p.alt = ""; p.className = "mw-popup"; p.setAttribute("aria-hidden", "true"); document.body.appendChild(p); setTimeout(function () { p.remove(); }, 3600); pill("🚨 Sunny is on lookout. Nothing gets past her.", 3200); },
+      brick: function () { walker(M("stackulus"), { size: 88, hop: 6, ms: 6200 }); rain("🧱", 14, { stay: 5500 }); pill("🧱 Brix is renovating this page. Hard hats on.", 3600); },
+      honey: function () { walker(M("morphemia"), { size: 74, top: 110, hop: 14, wave: 40, steps: 30, ms: 6000 }); rain("🍯", 6, { stay: 4500 }); pill("🐝 Bea the nurse bee. Buzz off, germs.", 3400); },
+      germs: function () { rain("🦠", 60, { spread: 2400, stay: 6500 }); pill("🦠 Vira multiplied. Wash your hands.", 3600); },
+      music: function () { walker(M("arrhythmix"), { size: 86, hop: 14, steps: 24, ms: 5200 }); rain(["🎵", "🎶"], 18, { up: true, ms: 3000, stay: 5000 }); pill("🎧 Riff drops a beat. 72 bpm, nice and regular.", 3600); },
+      fangs: function () { walker(M("panelysis"), { size: 84, hop: 8, ms: 5200, rtl: true }); rain("🩸", 10, { stay: 4800 }); pill("🧛 Ruby needs just one more tube. Strictly for science.", 3800); },
+      think: function () { var p = document.createElement("img"); p.src = M("mergeon"); p.alt = ""; p.className = "mw-popup"; p.setAttribute("aria-hidden", "true"); document.body.appendChild(p); setTimeout(function () { p.remove(); }, 3600); rain("💡", 10, { up: true, ms: 2600, stay: 4000 }); pill("🧠 Noggin is thinking. Please hold.", 3200); },
+      ninja: function () { pageFx("mw-dim", 2600); walker(M("cryptogenic"), { size: 84, hop: 2, ms: 2600 }); pill("🥷 Cipher was here. You didn’t see anything.", 3200); },
+      octos: function () { walker(M("comorbix"), { size: 88, hop: 10, wave: 10, steps: 22, ms: 6000 }); pill("🐙 Octavia sorted this page into four groups.", 3400); },
+      // just for fun
+      party: function () { rain(["🎉", "🎊", "🥳", "✨"], 70, { spread: 2000, stay: 6000 }); pill("🎉 Party! Somebody finished their discharge summaries.", 3600); },
+      latte: function () { rain("☕", 30, { stay: 6000 }); pill("☕ Coffee for the whole ward. Nurses first.", 3200); },
+      pager: function () { shake(10); pill("📟 BEEP BEEP. Bed 12 would like a sandwich.", 3600); },
+      ouchy: function () { rain("🩹", 24, { spread: 1200, stay: 7000 }); pill("🩹 Band-aids for every boo-boo on this page.", 3400); },
+      snore: function () { rain("💤", 20, { up: true, ms: 3600, stay: 5000 }); pageFx("mw-dim", 4000); pill("😴 Shhh. The night reg finally fell asleep.", 3600); },
+      achoo: function () { shake(4); rain("🦠", 30, { spread: 600, stay: 5000 }); pill("🤧 Achoo! Into your elbow, please.", 3200); },
+      lunch: function () { walker("🥪", { size: 60, hop: 4, ms: 5000 }); pill("🥪 Lunch? In this economy? On this roster?", 3600); },
+      scrub: function () { rain("🫧", 40, { up: true, ms: 3200, stay: 5000 }); pageFx("mw-clean", 2500); pill("🫧 Scrubbed in. Two minutes, under the nails.", 3400); },
+      xrays: function () { pageFx("mw-xray", 3200); pill("🩻 X-ray vision on. No fractures seen on this page.", 3400); },
+      heart: function () { ward3(); rain("❤️", 24, { up: true, ms: 3000, stay: 5000 }); pill("❤️ Sinus rhythm. Lovely.", 3000); },
+      // older secrets
+      locum: function () { nightShift(); },
+      scrawl: function () { scrawl(); },
+      astle: function () { daRoom(); },
+      bothcats: function () { bothCats(); },
+      basil: function () { flag("paws"); basilSwipe(); },
+      clove: function () { flag("paws"); cloverStamp(); }
+    };
+    var CODE_KEYS = Object.keys(CODES).sort(function (a, b) { return b.length - a.length; });
+    window.MW_CODE_COUNT = CODE_KEYS.length;
+    function runCode(code) {
+      var f = get("mw-codes", []) || []; if (f.indexOf(code) < 0) { f.push(code); set("mw-codes", f); }
+      if (code === "codeblue") flag("code");
+      try { CODES[code](); } catch (e) {}
+      try { checkBadges(); } catch (e) {}
+    }
+    function onType(ch) {
+      if (ch === "\b") { typed = typed.slice(0, -1); return; }
+      if (!/^[a-z]$/.test(ch)) return; // spaces and punctuation are ignored, so "code blue" works
+      typed = (typed + ch).slice(-16);
+      for (var i = 0; i < CODE_KEYS.length; i++) { var c = CODE_KEYS[i]; if (typed.slice(-c.length) === c) { typed = ""; runCode(c); return; } }
+    }
+    // Answers count too: submit a code in any answer box (Dxtective, Triviosis…) and it fires.
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter") return; var t = e.target; if (!t || !/^(INPUT|TEXTAREA)$/.test(t.tagName) || /password|email/.test(t.type || "")) return;
+      var v = String(t.value || "").toLowerCase().replace(/[^a-z]/g, ""); if (CODES[v]) setTimeout(function () { runCode(v); }, 250);
+    }, true);
     function parade() {
       flag("konami");
       var list = ["dx", "wordemic", "triviosis", "comorbix", "zebritis", "linkase", "gridectomy", "suturix", "morphemia", "arrhythmix", "sudokrine", "cryptogenic", "grandrounds", "deepdives", "basil", "clover", "normie/norm"];
@@ -2265,7 +2378,6 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         }, 1600);
       }
     }
-    if (location.hash === "#catkb" && /^\/wordemic\//.test(location.pathname)) setTimeout(function () { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} catKeys(); }, 1800);
     function bothCats() {
       flag("cats"); flag("paws");
       basilSwipe(function (tgt, a, r) {
@@ -2314,13 +2426,14 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function cabinet() {
       if (document.querySelector(".mw-cab")) return;
       flag("cabinet");
-      var A = [["🦇", "Night Shift", "A hidden game for the 3am crowd.", nightShift], ["🎉", "Mascot parade", "The whole gang, all at once.", parade],
+      var A = [["🦇", "Night Shift", "A hidden game for the 3am crowd.", nightShift], ["🎉", "March", "The whole gang marches through.", parade],
         ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
         ["🐈", "Call Basil", "Something on this page has to go.", function () { flag("paws"); basilSwipe(); }], ["🐈‍⬛", "Call Clover", "She’ll review this page.", function () { flag("paws"); cloverStamp(); }],
         ["🐾", "Both cats", "Chaos, then paperwork.", bothCats],
         ["⌨️", "Cat on the keyboard", "Basil helps with your Wordemic guess.", catKeys],
+        ["📖", "Codebook", "Secret codes you’ve found so far.", codebook],
         ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]];
-      var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
+      var H = ["🔐 There are " + CODE_KEYS.length + " secret codes. Most are 5-letter words: try them in Wordemic. Hospitals have colour codes too…", "🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
       d.innerHTML = '<div class="mw-cab-in"><button type="button" class="mw-cab-x" aria-label="Close">×</button><p class="mw-cab-k">You found it</p><h2>The Cabinet of Curiosities</h2>' +
@@ -2337,6 +2450,10 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         close(); A[+b.getAttribute("data-i")][3]();
       });
       setTimeout(function () { var f = d.querySelector("button[data-i]"); if (f) f.focus(); }, 50);
+    }
+    function codebook() {
+      var f = get("mw-codes", []) || [];
+      pill("📖 Codebook: " + f.length + " of " + CODE_KEYS.length + " found." + (f.length ? "<br>" + f.map(function (c) { return "<b>" + esc2(c) + "</b>"; }).join(" · ") : " Try a 5-letter word in Wordemic…"), 7000);
     }
     // --- code blue ---
     function codeBlue() {
