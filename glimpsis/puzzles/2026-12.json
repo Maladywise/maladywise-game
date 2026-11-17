@@ -3,17 +3,17 @@
   "date": "2026-12-01",
   "number": 38,
   "difficulty": "Easy",
-  "title": "Sores on the palate",
+  "title": "Inside the lip",
   "context": "World AIDS Day: a 30-year-old with five days of painful mouth sores, which prompted an HIV test that came back positive.",
   "question": "What's the sign?",
   "img": {
    "url": "img/2026-12-01.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=6055",
-   "author": "Sol Silverman, Jr., DDS",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "An open mouth with a retracted cheek, showing several small round ulcers on the palate."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Aphthous_ulcer.jpg",
+   "author": "Genppy",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "alt": "A lower lip pulled down to show a small round ulcer with a pale base and a red rim."
   },
   "answer": "Aphthous ulcers",
   "wrong": [
