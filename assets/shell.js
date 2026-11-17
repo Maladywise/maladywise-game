@@ -2063,7 +2063,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 14 Tap the footer tagline 5 times: the Cabinet of Curiosities, a clickable list of the typed secrets plus clues for the rest.
   // 13 Type "astle": the hidden For DA page (/da/), a nod to cryptic setter DA; solve all six clues without peeking for a badge.
   // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward().
-  // 12 Type "basil": Basil knocks something off any page. Type "clover": Clover reviews the page and stamps it. Type "bothcats": chaos, then an incident report.
+  // 12 Type "basil": Basil knocks something off any page. Type "clove" (works on game keyboards too, e.g. as a Wordemic guess): Clover reviews the page and stamps it. Type "bothcats": chaos, then an incident report.
   (function () {
     function flag(id) { set("mw-secret-" + id, 1); try { checkBadges(); } catch (e) {} }
     function pill(txt, ms) {
@@ -2113,7 +2113,15 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       keys.push(e.key && e.key.length === 1 ? e.key.toLowerCase() : e.key); keys = keys.slice(-10);
       if (keys.join(" ") === KON) { keys = []; parade(); }
       if (!e.key || e.key.length !== 1) return;
-      typed = (typed + e.key.toLowerCase()).slice(-10);
+      onType(e.key.toLowerCase());
+    });
+    // On-screen game keyboards (Wordemic and friends) count as typing too, so "basil" or "clove" can be spelt as a guess.
+    document.addEventListener("click", function (e) {
+      var k = e.target && e.target.closest && e.target.closest("[data-k]"); if (!k) return;
+      var ch = (k.getAttribute("data-k") || "").toLowerCase(); if (/^[a-z]$/.test(ch)) onType(ch);
+    }, true);
+    function onType(ch) {
+      typed = (typed + ch).slice(-10);
       if (/locum$/.test(typed)) nightShift();
       if (/konami$/.test(typed)) { typed = ""; parade(); }
       if (/codeblue$/.test(typed)) { typed = ""; codeBlue(); }
@@ -2121,8 +2129,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (/astle$/.test(typed)) { typed = ""; daRoom(); }
       if (/bothcats$/.test(typed)) { typed = ""; bothCats(); }
       else if (/basil$/.test(typed)) { typed = ""; flag("paws"); basilSwipe(); }
-      else if (/clover$/.test(typed)) { typed = ""; flag("paws"); cloverStamp(); }
-    });
+      else if (/clove$/.test(typed)) { typed = ""; flag("paws"); cloverStamp(); }
+    }
     function parade() {
       flag("konami");
       var list = ["dx", "wordemic", "triviosis", "comorbix", "zebritis", "linkase", "gridectomy", "suturix", "morphemia", "arrhythmix", "sudokrine", "cryptogenic", "grandrounds", "deepdives", "basil", "clover", "normie/norm"];
