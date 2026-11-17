@@ -8,7 +8,8 @@
   "use strict";
   var BEST = "mw-basil-best2", SBASE = new URL(".", document.currentScript.src).href;
   function lget(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
-  function lset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  var TESTM = false; try { TESTM = new URLSearchParams(location.search).has("test"); } catch (e) {} // ?test=N&r=R: play level N from round R; nothing is saved or posted
+  function lset(k, v) { if (TESTM) return; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   // ---------- stages: 1 = the Kitchen (original), 2 = the Vet (vet.js) ----------
   var STAGE = 1, V = null, VM = {}, ST1 = null;
   var KEYS = { 1: { best: "mw-basil-best2", won: "mw-basil-won", hs: "mw-basil-hs" }, 2: { best: "mw-basil-vet-best", won: "mw-basil-vet-won", hs: "mw-basil-vet-hs" }, 3: { best: "mw-basil-farm-best", won: "mw-basil-farm-won", hs: "mw-basil-farm-hs" } };
@@ -1719,6 +1720,7 @@
     }).catch(function () {});
   }
   function postScore(k, n, sc, rd) {
+    if (TESTM) return;
     if (lbOffK(k)) return renderBoard("bk-hstab", "me"); // never post a Vet score where it would land on the Kitchen's board
     var which = isVet(k) ? k.replace(/^(v|f|x\d+)/, "") : k;
     boards[k] = null; renderBoard("bk-hstab", which);
@@ -1767,7 +1769,7 @@
   }
   $("bk-hsform").addEventListener("submit", function (e) { e.preventDefault(); saveHS(); });
   // dev only: on localhost, ?round=N (or ?r=N) starts the campaign at round N
-  var DEVR = 0, DEVSTAGE = 0; try { if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) { var qs = new URLSearchParams(location.search); DEVR = Math.max(0, Math.min(10, parseInt(qs.get("round") || qs.get("r"), 10) || 0)); DEVSTAGE = parseInt(qs.get("stage"), 10) || 0; } } catch (e) {}
+  var DEVR = 0, DEVSTAGE = 0; try { if (TESTM || /^(localhost|127\.0\.0\.1)$/.test(location.hostname)) { var qs = new URLSearchParams(location.search); DEVR = Math.max(0, Math.min(10, parseInt(qs.get("round") || qs.get("r"), 10) || 0)); DEVSTAGE = parseInt(qs.get("stage"), 10) || 0; } } catch (e) {}
   function endlessUI() {
     var won = !!lget(WON), b2 = $("bk-endless2");
     if (b2) b2.hidden = !won;
@@ -1941,5 +1943,6 @@
   renderBoard("bk-hslist0", "world"); hsUI(); vetProbe();
   buildGuide(); reset(); size(); draw(); if (!sprLeft) drawThumbs();
   window.MW_ART_cb = function () { try { if (!running) { if (!sprLeft) drawThumbs(); draw(); } } catch (e) {} }; // redraw thumbnails once the drawn props arrive
-  if (DEVSTAGE >= 2 && kitchenWon()) { setStage(DEVSTAGE); try { if (new URLSearchParams(location.search).has("go")) { DAILY = false; ENDLESS = false; start(); } } catch (e) {} }
+  if (TESTM) { var tq = parseInt(new URLSearchParams(location.search).get("test"), 10) || 1; if (tq >= 1 && KEYS[tq]) { setStage(tq); DAILY = false; ENDLESS = false; start(); toast("Test mode: nothing is saved.", 2600); } }
+  else if (DEVSTAGE >= 2 && kitchenWon()) { setStage(DEVSTAGE); try { if (new URLSearchParams(location.search).has("go")) { DAILY = false; ENDLESS = false; start(); } } catch (e) {} }
 })();
