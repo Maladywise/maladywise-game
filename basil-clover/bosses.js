@@ -30,26 +30,37 @@
   // 3 FARM: Gertrude the Goose. Always a bit cross. Honks when angry.
   A.goose = {
     body: function (c, o) {
-      var W = "#FFFFFF", ed = "#D6DEE2";
-      E(c, 0, -62, 64, 66, W); c.beginPath(); c.ellipse(0, -62, 64, 66, 0, 0, 7); out(c, ed);
-      [-1, 1].forEach(function (s) { c.strokeStyle = "#C9D2D8"; c.lineWidth = 2; [0, 12, 24].forEach(function (k) { c.beginPath(); c.arc(s * 30, -70 + k, 26 - k / 3, s < 0 ? 0.3 : Math.PI - 1.3, s < 0 ? 1.3 : Math.PI - 0.3); c.stroke(); }); });
-      rr(c, -19, -196, 38, 96, 19); c.fillStyle = W; c.fill(); out(c, ed);
-      E(c, 0, -190, 36, 31, W); c.beginPath(); c.ellipse(0, -190, 36, 31, 0, 0, 7); out(c, ed);
-      // red ribbon
-      c.fillStyle = "#C2253A"; c.fillRect(-20, -134, 40, 8); c.beginPath(); c.moveTo(0, -130); c.lineTo(-16, -142); c.lineTo(-16, -118); c.closePath(); c.fill(); c.beginPath(); c.moveTo(0, -130); c.lineTo(16, -142); c.lineTo(16, -118); c.closePath(); c.fill(); C(c, 0, -130, 4, "#8A1A2A");
-      eyes(c, o, [-14, 14], -200, 7.5, 4.2, { mean: true });
-      // beak (opens when angry or hit)
+      var W = "#FFFFFF", ed = "#C9D2D8", gr = "#E6EAEE";
+      // body, side on, tail up at the back
+      c.beginPath(); c.moveTo(-80, -100); c.quadraticCurveTo(-90, -40, -46, -10); c.quadraticCurveTo(4, 8, 48, -20); c.quadraticCurveTo(76, -50, 62, -86); c.quadraticCurveTo(40, -128, -10, -124); c.quadraticCurveTo(-50, -122, -80, -100); c.closePath(); c.fillStyle = W; c.fill(); out(c, ed, 2.5);
+      // folded wing with layered feathers
+      c.beginPath(); c.moveTo(-74, -96); c.quadraticCurveTo(-40, -112, 20, -96); c.quadraticCurveTo(34, -66, 8, -44); c.quadraticCurveTo(-40, -38, -74, -96); c.fillStyle = gr; c.fill(); out(c, ed, 1.6);
+      c.strokeStyle = "#C9D2D8"; c.lineWidth = 1.5; [[-56, -84], [-36, -86], [-16, -84], [2, -78], [-44, -64], [-22, -62], [-2, -58]].forEach(function (q) { c.beginPath(); c.arc(q[0], q[1], 12, 0.2, Math.PI - 0.2); c.stroke(); });
+      c.fillStyle = "#D6DCE2"; [[-82, -102], [-76, -94], [-70, -88]].forEach(function (q, i) { c.beginPath(); c.ellipse(q[0], q[1], 14, 5, -0.5 + i * 0.12, 0, 7); c.fill(); });
+      // neck: a long S rising from the breast
+      var dip = o.fz ? 10 : 0;
+      c.beginPath(); c.moveTo(8, -118); c.bezierCurveTo(-4, -142, -22, -160, -16, -186 + dip); c.lineTo(20, -180 + dip); c.bezierCurveTo(22, -150, 46, -130, 60, -90); c.closePath(); c.fillStyle = W; c.fill();
+      c.strokeStyle = ed; c.lineWidth = 2.5; c.beginPath(); c.moveTo(-16, -186 + dip); c.bezierCurveTo(-22, -160, -4, -142, 6, -120); c.moveTo(20, -180 + dip); c.bezierCurveTo(22, -150, 46, -130, 60, -90); c.stroke();
+      c.strokeStyle = "rgba(170,184,196,.6)"; c.lineWidth = 1.2; [[2, -150], [10, -136], [18, -122]].forEach(function (q) { c.beginPath(); c.moveTo(q[0], q[1]); c.lineTo(q[0] + 8, q[1] + 2); c.stroke(); });
+      // head, side on
+      c.save(); c.translate(2, -192 + dip); if (o.fz) c.rotate(0.12);
+      E(c, 0, 0, 27, 21, W); c.beginPath(); c.ellipse(0, 0, 27, 21, 0, Math.PI * 0.95, Math.PI * 2.2); out(c, ed, 2.2);
       var open = o.fz || o.hit;
-      if (open) { E(c, 0, -170, 16, 9, "#7A2030"); E(c, 0, -178, 24, 8, "#F28C28"); E(c, 0, -162, 19, 6, "#E07A1A"); }
-      else { E(c, 0, -174, 24, 11, "#F28C28"); L(c, [[-18, -173], [18, -173]], "#C2621A", 1.6); }
-      C(c, 0, -186, 4, "#2B2340");
-      if (o.fz && Math.sin(o.t * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#FFFFFF"; c.strokeText("HONK!", 52, -226); c.fillStyle = "#C2553A"; c.fillText("HONK!", 52, -226); }
+      if (open) { c.fillStyle = "#E58A9A"; c.beginPath(); c.moveTo(20, 2); c.lineTo(50, -2); c.lineTo(46, 12); c.closePath(); c.fill(); }
+      c.fillStyle = "#F28C28"; c.beginPath(); c.moveTo(19, -10); c.quadraticCurveTo(48, -12, 58, open ? -2 : 4); c.quadraticCurveTo(42, 6, 19, 4); c.closePath(); c.fill(); out(c, "#D06A18", 1.4);
+      c.save(); if (open) { c.translate(19, 6); c.rotate(0.35); c.translate(-19, -6); } c.beginPath(); c.moveTo(19, 4); c.quadraticCurveTo(40, 8, 52, 6); c.quadraticCurveTo(38, 14, 19, 11); c.closePath(); c.fillStyle = "#E07A1A"; c.fill(); c.restore();
+      C(c, 55, open ? -3 : 2, 2.6, "#F6D2B0"); E(c, 34, -6, 2.4, 1.2, "#B25A14");
+      if (o.hit) { L(c, [[3, -11], [11, -3]], "#2B2340", 2.6); L(c, [[11, -11], [3, -3]], "#2B2340", 2.6); }
+      else { C(c, 8, -6, 4.6, "#2B5E80"); C(c, 8, -6, 2.6, "#1B1430"); C(c, 9.5, -7.5, 1.2, "#FFFFFF"); L(c, [[-2, o.fz ? -16 : -13], [15, -11]], "#9AA6B0", 2.6); }
+      c.restore();
+      if (o.fz && Math.sin(o.t * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#FFFFFF"; c.strokeText("HONK!", 70, -226); c.fillStyle = "#C2553A"; c.fillText("HONK!", 70, -226); }
     },
     arm: function (c, sx, sy, hx, hy, side) {
-      limb(c, sx, sy, hx, hy, side, "#FFFFFF", "#D6DEE2", 19);
-      [-0.5, 0, 0.5].forEach(function (a) { c.save(); c.translate(hx, hy); c.rotate(a - side * 0.3); E(c, side * 8, -6, 6, 13, "#FFFFFF"); c.beginPath(); c.ellipse(side * 8, -6, 6, 13, 0, 0, 7); out(c, "#C9D2D8", 1.4); c.restore(); });
+      limb(c, sx, sy, hx, hy, side, "#F2F4F6", "#C9D2D8", 19);
+      [-0.5, 0, 0.5].forEach(function (a) { c.save(); c.translate(hx, hy); c.rotate(a - side * 0.3); E(c, side * 8, -6, 6, 14, "#F2F4F6"); c.beginPath(); c.ellipse(side * 8, -6, 6, 14, 0, 0, 7); out(c, "#C9D2D8", 1.4); c.restore(); });
     }
   };
+
 
   // 4 BEACH: Captain Pinch, a giant crab with eyes on stalks.
   A.crab = {
@@ -132,27 +143,38 @@
   // 7 BATH TIME: Admiral Quackers, a giant rubber duck in an admiral's hat.
   A.duck = {
     body: function (c, o) {
-      var Y = "#F7D23A", D = "#E0B020";
-      E(c, 0, -58, 74, 58, Y); c.beginPath(); c.ellipse(0, -58, 74, 58, 0, 0, 7); out(c, D, 2.5);
-      E(c, -26, -80, 30, 14, "rgba(255,255,255,.35)", -0.3);
-      C(c, 0, -182, 44, Y); c.beginPath(); c.arc(0, -182, 44, 0, 7); out(c, D, 2.5);
-      E(c, -16, -206, 14, 7, "rgba(255,255,255,.4)", -0.4);
-      eyes(c, o, [-16, 16], -192, 8.5, 5);
-      cheeks(c, [-30, 30], -174);
-      if (o.fz || o.hit) { E(c, 0, -160, 18, 8, "#7A2030"); E(c, 0, -168, 30, 9, "#F28C28"); E(c, 0, -152, 22, 6, "#E07A1A"); }
-      else { E(c, 0, -164, 30, 12, "#F28C28"); L(c, [[-24, -163], [24, -163]], "#C2621A", 1.8); }
+      var Y = "#F7D23A", D = "#E0B020", Y2 = "#EFC22A";
+      // classic rubber duck, side on: tail flicks up at the back, head sits on the front of the body
+      c.beginPath(); c.moveTo(-84, -104); c.quadraticCurveTo(-92, -40, -50, -10); c.quadraticCurveTo(0, 6, 54, -12); c.quadraticCurveTo(84, -36, 74, -86); c.quadraticCurveTo(62, -134, 10, -136); c.quadraticCurveTo(-30, -134, -52, -112); c.quadraticCurveTo(-66, -100, -84, -104); c.closePath(); c.fillStyle = Y; c.fill(); out(c, D, 2.5);
+      E(c, -6, -100, 40, 12, "rgba(255,255,255,.3)", -0.15);
+      c.beginPath(); c.moveTo(-60, -84); c.quadraticCurveTo(-30, -102, 14, -86); c.quadraticCurveTo(22, -60, -6, -44); c.quadraticCurveTo(-44, -44, -60, -84); c.fillStyle = Y2; c.fill(); out(c, D, 1.6);
+      c.strokeStyle = D; c.lineWidth = 1.5; [-40, -22, -4].forEach(function (x) { c.beginPath(); c.moveTo(x, -82); c.quadraticCurveTo(x + 6, -66, x + 2, -54); c.stroke(); });
+      // head
+      var hx = 14, hy = -180;
+      C(c, hx, hy, 48, Y); c.beginPath(); c.arc(hx, hy, 48, Math.PI * 0.62, Math.PI * 2.38); out(c, D, 2.5);
+      E(c, hx - 18, hy - 22, 16, 8, "rgba(255,255,255,.45)", -0.5);
+      E(c, hx + 22, hy + 14, 9, 5.5, "rgba(240,120,100,.4)");
+      // bill pointing right
+      var open = o.fz || o.hit;
+      if (open) { c.fillStyle = "#B8442A"; c.beginPath(); c.moveTo(hx + 38, hy + 4); c.lineTo(hx + 82, hy + 4); c.lineTo(hx + 70, hy + 22); c.closePath(); c.fill(); }
+      c.fillStyle = "#F28C28"; c.beginPath(); c.moveTo(hx + 36, hy - 8); c.quadraticCurveTo(hx + 76, hy - 16, hx + 86, hy + (open ? -2 : 4)); c.quadraticCurveTo(hx + 70, hy + 10, hx + 38, hy + 8); c.closePath(); c.fill(); out(c, "#D06A18", 1.5);
+      c.save(); if (open) { c.translate(hx + 38, hy + 8); c.rotate(0.32); c.translate(-hx - 38, -hy - 8); } c.beginPath(); c.moveTo(hx + 38, hy + 8); c.quadraticCurveTo(hx + 66, hy + 12, hx + 78, hy + 8); c.quadraticCurveTo(hx + 62, hy + 22, hx + 38, hy + 18); c.closePath(); c.fillStyle = "#E07A1A"; c.fill(); c.restore();
+      // eye
+      if (o.hit) { L(c, [[hx + 12, hy - 22], [hx + 24, hy - 10]], "#2B2340", 3); L(c, [[hx + 24, hy - 22], [hx + 12, hy - 10]], "#2B2340", 3); }
+      else { E(c, hx + 18, hy - 15, 9, 11, "#FFFFFF"); C(c, hx + 21, hy - 13, 5.5, "#1B1430"); C(c, hx + 23, hy - 15, 2, "#FFFFFF"); if (o.fz) L(c, [[hx + 6, hy - 34], [hx + 28, hy - 26]], "#2B2340", 3.2); }
       // admiral's bicorne
-      c.save(); c.translate(0, -222); if (o.fz) c.rotate(-0.18);
+      c.save(); c.translate(hx - 4, hy - 42); c.rotate(o.fz ? -0.22 : -0.08);
       c.fillStyle = "#22304F"; c.beginPath(); c.moveTo(-58, 6); c.quadraticCurveTo(0, -46, 58, 6); c.quadraticCurveTo(0, -6, -58, 6); c.fill();
       c.strokeStyle = "#E8B53A"; c.lineWidth = 2.5; c.beginPath(); c.moveTo(-54, 4); c.quadraticCurveTo(0, -8, 54, 4); c.stroke();
       C(c, 0, -12, 8, "#E8B53A"); L(c, [[0, -18], [0, -6]], "#22304F", 2); L(c, [[-4, -10], [4, -10]], "#22304F", 2);
       c.restore();
     },
     arm: function (c, sx, sy, hx, hy, side) {
-      limb(c, sx, sy, hx, hy, side, "#F7D23A", "#E0B020", 20);
-      E(c, hx + side * 4, hy, 12, 10, "#F7D23A"); c.beginPath(); c.ellipse(hx + side * 4, hy, 12, 10, 0, 0, 7); out(c, "#E0B020", 1.8);
+      limb(c, sx, sy, hx, hy, side, "#EFC22A", "#E0B020", 20);
+      E(c, hx + side * 4, hy, 12, 10, "#EFC22A"); c.beginPath(); c.ellipse(hx + side * 4, hy, 12, 10, 0, 0, 7); out(c, "#E0B020", 1.8);
     }
   };
+
 
   // 8 CHRISTMAS: The Snow Queen, a snowman with an icicle crown.
   A.snow = {
@@ -181,24 +203,44 @@
   // 9 EASTER: Mega Bunny, a giant fluffy rabbit with enormous teeth.
   A.bunny = {
     body: function (c, o) {
-      var F = "#CBB8A6", B = "#F4EBDD", ed = "#A8927E", P = "#F2A6B8";
-      E(c, 0, -64, 66, 68, F); c.beginPath(); c.ellipse(0, -64, 66, 68, 0, 0, 7); out(c, ed, 2);
-      E(c, 0, -56, 44, 52, B);
-      [-1, 1].forEach(function (s) { var flop = o.hit && s > 0, tilt = s * (o.fz ? 0.06 : 0.18); c.save(); c.translate(s * 18, -212); c.rotate(flop ? s * 1.4 : tilt); E(c, 0, -34, 13, 40, F); c.beginPath(); c.ellipse(0, -34, 13, 40, 0, 0, 7); out(c, ed, 2); E(c, 0, -32, 6.5, 30, P); c.restore(); });
-      E(c, 0, -182, 44, 40, F); c.beginPath(); c.ellipse(0, -182, 44, 40, 0, 0, 7); out(c, ed, 2);
-      E(c, -14, -166, 16, 12, B); E(c, 14, -166, 16, 12, B);
-      eyes(c, o, [-17, 17], -192, 9, 6);
-      c.fillStyle = "#E07A8A"; c.beginPath(); c.moveTo(-6, -178); c.lineTo(6, -178); c.lineTo(0, -171); c.closePath(); c.fill();
-      c.strokeStyle = "#7A5A4A"; c.lineWidth = 2; c.beginPath(); c.moveTo(0, -171); c.quadraticCurveTo(-5, -164, -10, -167); c.moveTo(0, -171); c.quadraticCurveTo(5, -164, 10, -167); c.stroke();
-      rr(c, -8, -166, 16, o.fz ? 18 : 14, 3); c.fillStyle = "#FFFFFF"; c.fill(); out(c, "#C9BFB0", 1.4); L(c, [[0, -165], [0, -152 + (o.fz ? 4 : 0)]], "#C9BFB0", 1.2);
-      c.strokeStyle = "rgba(90,70,60,.55)"; c.lineWidth = 1.3; [-1, 1].forEach(function (s) { [-4, 2].forEach(function (d) { c.beginPath(); c.moveTo(s * 22, -170 + d); c.lineTo(s * 46, -174 + d * 2); c.stroke(); }); });
-      cheeks(c, [-30, 30], -176);
+      var F = "#A88B6E", F2 = "#937659", B = "#EDE3D3", ed = "#7E6650", P = "#E8B7B0";
+      // sitting up on her haunches: haunches, chest and head overlap so it reads as one animal
+      E(c, -42, -8, 26, 11, F2); E(c, 42, -8, 26, 11, F2);
+      E(c, 0, -58, 66, 60, F); c.beginPath(); c.ellipse(0, -58, 66, 60, 0, 0, 7); out(c, ed, 1.8);
+      c.strokeStyle = F2; c.lineWidth = 3; [-1, 1].forEach(function (s) { c.beginPath(); c.arc(s * 34, -46, 30, s < 0 ? Math.PI * 0.55 : -0.2, s < 0 ? Math.PI * 1.2 : Math.PI * 0.45); c.stroke(); });
+      E(c, 0, -116, 46, 52, F);
+      E(c, 0, -98, 28, 48, B);
+      // ears (flatten back when angry, one flops when hit)
+      [-1, 1].forEach(function (s) {
+        var a = o.hit && s > 0 ? s * 1.5 : s * (o.fz ? 0.55 : 0.14);
+        c.save(); c.translate(s * 13, -206); c.rotate(a);
+        E(c, 0, -36, 12, 40, F); c.beginPath(); c.ellipse(0, -36, 12, 40, 0, 0, 7); out(c, ed, 1.6);
+        E(c, 1, -34, 6.5, 31, P); c.beginPath(); c.ellipse(0, -36, 12, 40, 0, Math.PI * 1.35, Math.PI * 1.65); c.strokeStyle = "#5A4636"; c.lineWidth = 3; c.stroke();
+        c.restore();
+      });
+      // head
+      E(c, 0, -180, 40, 36, F); c.beginPath(); c.ellipse(0, -180, 40, 36, 0, Math.PI * 0.85, Math.PI * 2.15); out(c, ed, 1.6);
+      E(c, -24, -164, 18, 14, F); E(c, 24, -164, 18, 14, F);
+      // eyes sit on the sides, dark brown with a pale ring
+      [-1, 1].forEach(function (s) {
+        var ex = s * 21, ey = -186;
+        if (o.hit) { L(c, [[ex - 5, ey - 5], [ex + 5, ey + 5]], "#2B2340", 2.8); L(c, [[ex + 5, ey - 5], [ex - 5, ey + 5]], "#2B2340", 2.8); return; }
+        E(c, ex, ey, 9, 10, B); E(c, ex, ey, 7, 8.5, "#3A2418"); C(c, ex + 2, ey - 3, 2.2, "#FFFFFF");
+        if (o.fz) L(c, [[ex + s * 12, ey - 15], [ex - s * 8, ey - 9]], "#5A4636", 3);
+      });
+      // muzzle, nose, whiskers
+      E(c, -7, -164, 10, 8, B); E(c, 7, -164, 10, 8, B);
+      c.fillStyle = "#D98C8C"; c.beginPath(); c.moveTo(-5, -174); c.lineTo(5, -174); c.lineTo(0, -169); c.closePath(); c.fill();
+      L(c, [[0, -169], [0, -164]], "#7E6650", 1.6); c.strokeStyle = "#7E6650"; c.lineWidth = 1.6; c.beginPath(); c.moveTo(0, -164); c.quadraticCurveTo(-4, -160, -8, -162); c.moveTo(0, -164); c.quadraticCurveTo(4, -160, 8, -162); c.stroke();
+      if (o.fz) { rr(c, -5, -162, 10, 9, 2); c.fillStyle = "#FFFFFF"; c.fill(); L(c, [[0, -162], [0, -153]], "#C9BFB0", 1); }
+      c.strokeStyle = "rgba(60,45,35,.55)"; c.lineWidth = 1.1; [-1, 1].forEach(function (s) { [-3, 2, 6].forEach(function (d) { c.beginPath(); c.moveTo(s * 14, -166 + d); c.lineTo(s * 48, -172 + d * 2.2); c.stroke(); }); });
     },
     arm: function (c, sx, sy, hx, hy, side) {
-      limb(c, sx, sy, hx, hy, side, "#CBB8A6", "#A8927E", 20);
-      E(c, hx, hy, 11, 10, "#F4EBDD"); [-5, 0, 5].forEach(function (f) { C(c, hx + f + side * 3, hy - 8, 3.4, "#F4EBDD"); }); E(c, hx, hy + 1, 4, 3, "#F2A6B8");
+      limb(c, sx, sy, hx, hy, side, "#A88B6E", "#7E6650", 18);
+      E(c, hx, hy, 10, 9, "#937659"); [-4, 0, 4].forEach(function (f) { C(c, hx + f + side * 3, hy - 7, 3.2, "#937659"); });
     }
   };
+
 
   // 10 HALLOWEEN: Boo, a friendly sheet ghost with a pink bow. Bobs about.
   A.ghost = {
