@@ -1054,6 +1054,134 @@
    "date": "2026-11-17",
    "source": "news search: Cambridge Early Cancer Institute / Pharmaceutical Journal",
    "niche": true
+  },
+  {
+   "term": "weight loss pill australia (Foundayo / orforglipron)",
+   "region": "AU",
+   "approx volume": "2000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": true
+  },
+  {
+   "term": "antimicrobial resistance",
+   "region": "AU",
+   "approx volume": "5000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "avian influenza",
+   "region": "AU",
+   "approx volume": "1000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "glp-1 receptor agonist",
+   "region": "AU",
+   "approx volume": "100+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": true
+  },
+  {
+   "term": "autoimmune disease",
+   "region": "AU",
+   "approx volume": "500+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "propranolol extended release capsules metal recall",
+   "region": "US",
+   "approx volume": "100000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": true
+  },
+  {
+   "term": "measles",
+   "region": "US",
+   "approx volume": "2000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "antidepressant",
+   "region": "US",
+   "approx volume": "1000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "flu symptoms 2026",
+   "region": "US",
+   "approx volume": "200+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "kratom",
+   "region": "US",
+   "approx volume": "20000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "colon cancer",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "gout",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "drug recall",
+   "region": "GB",
+   "approx volume": "5000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": false
+  },
+  {
+   "term": "cancer sponge test indigestion",
+   "region": "GB",
+   "approx volume": "20000+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": true
+  },
+  {
+   "term": "antimicrobial resistance mortality forecast who",
+   "region": "GB",
+   "approx volume": "500+",
+   "date": "2026-11-18",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-17T17:01:19Z)",
+   "niche": true
+  },
+  {
+   "term": "Foundayo (orforglipron) oral GLP-1: Australian interest ahead of TGA decision",
+   "region": "AU",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-18",
+   "source": "news search: The Nightly / Medical Republic",
+   "niche": true
   }
  ],
  "used": [
