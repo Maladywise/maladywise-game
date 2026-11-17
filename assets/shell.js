@@ -159,13 +159,27 @@
   var PRIVATE_PAGE = /^\/mental-health-check\//.test(location.pathname); // no live-player ping or event tracking on mental health self-checks
   function livePing() { if (document.hidden || PRIVATE_PAGE) return; try { fetch(LIVE.url + "/ping?id=" + LIVE.id + "&g=" + encodeURIComponent(liveGame()), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
   // Heat level for "games played today": today's count vs the usual pace for this time of day (server: d.heat).
-  var HEAT = [ // [min ratio, emoji, Medical comment, Normie comment]
-    [0, "\u2744\ufe0f", "Quiet in the waiting room", "Sleepy start"],
-    [0.5, "\ud83e\uddca", "Cool and steady", "Warming up"],
-    [0.9, "\ud83e\ude7a", "Within normal range", "Ticking along nicely"],
-    [1.2, "\ud83c\udf21\ufe0f", "Running a temperature", "Getting busy"],
-    [1.6, "\ud83d\udd25", "On fire", "On fire"],
-    [2.5, "\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Febrile. Call a doctor.", "Absolutely popping off"]
+  var HEAT = [ // [min ratio of the usual pace, emoji, Medical comment, Normie comment, colour band h0–h5] (20 levels, Nov 2026)
+    [0, "\ud83e\udd97", "It\u2019s awfully quiet around here today", "Tumbleweeds", 0],
+    [0.25, "\ud83e\udd10", "Shouldn\u2019t have used the Q word", "Crickets", 0],
+    [0.4, "\u2744\ufe0f", "Hypothermic. Warm blankets, stat.", "Sleepy start", 0],
+    [0.55, "\ud83d\udca4", "Bradycardic but stable", "Slow and steady", 1],
+    [0.7, "\ud83e\uded6", "Quiet in the waiting room", "Warming up", 1],
+    [0.85, "\ud83d\udccb", "Low-normal. Keep an eye on it.", "Nearly there", 1],
+    [0.95, "\ud83e\ude7a", "Within normal range", "Ticking along nicely", 2],
+    [1.05, "\u2705", "Obs stable. Nothing to report.", "Right on track", 2],
+    [1.2, "\ud83c\udf21\ufe0f", "Low-grade temperature", "Getting busy", 3],
+    [1.4, "\ud83d\udc93", "Tachycardic", "Picking up speed", 3],
+    [1.6, "\ud83e\udd75", "Running a fever", "Busy day", 3],
+    [1.8, "\ud83d\udd25", "Inflamed", "On fire", 4],
+    [2, "\ud83d\udd25\ud83d\udd25", "Febrile. Call a doctor.", "Double the usual", 4],
+    [2.25, "\ud83d\udc89", "Febrile neutropaenia. Antibiotics within the hour.", "Seriously busy", 4],
+    [2.5, "\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Malignant hyperthermia. Get the dantrolene.", "Absolutely popping off", 5],
+    [3, "\ud83d\udea8", "Code red", "Triple time", 5],
+    [4, "\ud83d\udcdf", "MET call. All hands.", "Off the charts", 5],
+    [5, "\u26a1", "Shockable rhythm. Stand clear.", "Is this real?", 5],
+    [7, "\ud83d\ude91", "Trauma team activated", "Breaking the internet", 5],
+    [10, "\ud83c\udf0b", "Mass casualty. Call everyone in.", "Legendary", 5]
   ];
   function heatHtml(d) {
     var n = d.today, num = n.toLocaleString("en-AU") + " games played today", h = d.heat;
@@ -174,7 +188,7 @@
     if (!h || h.days < 3 || h.expect < 3) return "\ud83e\udde9 " + num; // not enough history yet
     var r = n / h.expect, k = 0;
     for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
-    return '<span class="mw-heat h' + k + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
+    return '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
   }
   function liveShow() {
     var d = LIVE.last; if (!d) return;
