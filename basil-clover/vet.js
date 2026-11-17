@@ -389,7 +389,20 @@
       ctx.globalAlpha = 0.35; [[-28, -60], [24, -40], [-14, -26], [30, -78]].forEach(function (q) { pawPrint(q[0], q[1], 0.35, "#FFFFFF"); }); ctx.globalAlpha = 1;
       rr(8, -92, 26, 10, 2); ctx.fillStyle = "#FFFFFF"; ctx.fill(); txt(SK.nurseName || "NURSE", 21, -84.6, "800 " + (SK.nurseName ? 3.8 : 5) + "px " + P, SK.nurse || "#7A3FB5");
       rr(-9, -120, 18, 14, 6); ctx.fillStyle = "#C98A63"; ctx.fill();
-      var hy = -146; ell(0, hy, 26, 28, "#D9A27A");
+      var hy = -146;
+      if (!SK.nurse) { // the Vet's Nurse Burrito is a ginger cat in scrubs
+        rr(-9, -120, 18, 14, 6); ctx.fillStyle = "#E0913E"; ctx.fill();
+        [-1, 1].forEach(function (s) { ctx.fillStyle = "#E0913E"; ctx.beginPath(); ctx.moveTo(s * 10, hy - 22); ctx.lineTo(s * 30, hy - 46); ctx.lineTo(s * 30, hy - 12); ctx.closePath(); ctx.fill(); ctx.fillStyle = "#F4B8B0"; ctx.beginPath(); ctx.moveTo(s * 16, hy - 22); ctx.lineTo(s * 27, hy - 38); ctx.lineTo(s * 27, hy - 18); ctx.closePath(); ctx.fill(); });
+        ell(0, hy, 30, 26, "#E0913E"); ctx.strokeStyle = "#C2702A"; ctx.lineWidth = 3; [-10, 0, 10].forEach(function (q) { ctx.beginPath(); ctx.moveTo(q, hy - 25); ctx.lineTo(q * 0.7, hy - 15); ctx.stroke(); });
+        ell(0, hy + 10, 16, 11, "#FBE6CF");
+        [-11, 11].forEach(function (ex) { ell(ex, hy - 2, 5.5, 6.5, "#9ED36F"); ell(ex, hy - 2, 1.8, 5.5, "#1B1430"); circ(ex + 1.5, hy - 4, 1.2, "#FFFFFF"); });
+        ctx.fillStyle = "#E58A9A"; ctx.beginPath(); ctx.moveTo(-4, hy + 5); ctx.lineTo(4, hy + 5); ctx.lineTo(0, hy + 9); ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = "#7A3A2E"; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(0, hy + 9); ctx.quadraticCurveTo(-4, hy + 14, -8, hy + 11); ctx.moveTo(0, hy + 9); ctx.quadraticCurveTo(4, hy + 14, 8, hy + 11); ctx.stroke();
+        ctx.strokeStyle = "rgba(60,40,30,.5)"; ctx.lineWidth = 1; [-1, 1].forEach(function (s) { [0, 4].forEach(function (d) { ctx.beginPath(); ctx.moveTo(s * 12, hy + 8 + d); ctx.lineTo(s * 36, hy + 4 + d * 2); ctx.stroke(); }); });
+        ctx.save(); ctx.translate(0, hy - 30); ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.moveTo(-18, 6); ctx.lineTo(-14, -8); ctx.lineTo(14, -8); ctx.lineTo(18, 6); ctx.closePath(); ctx.fill(); ctx.fillStyle = "#E03A3A"; ctx.fillRect(-2, -6, 4, 10); ctx.fillRect(-5, -3, 10, 4); ctx.restore();
+        ctx.restore(); return;
+      }
+      ell(0, hy, 26, 28, "#D9A27A");
       circ(0, hy - 32, 14, "#3B2A3A"); ctx.fillStyle = "#3B2A3A"; ctx.beginPath(); ctx.ellipse(0, hy - 8, 28, 24, 0, Math.PI, 2 * Math.PI); ctx.fill(); ell(-20, hy - 2, 7, 14, "#3B2A3A"); ell(20, hy - 2, 7, 14, "#3B2A3A");
       rr(-12, hy - 40, 24, 5, 2.5); ctx.fillStyle = "#F2C230"; ctx.fill();
       [-9, 9].forEach(function (ex, i) { circ(ex, hy + 2, 3.2, "#1B1430"); circ(ex + 1, hy + 1, 1, "#FFFFFF"); line([[ex - 6, hy - 6 + (i ? 2 : 0)], [ex + 6, hy - 6 + (i ? 0 : 2)]], "#3B2A3A", 2.6); });

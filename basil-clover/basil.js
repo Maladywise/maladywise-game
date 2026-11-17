@@ -365,7 +365,7 @@
     if (STAGE >= 2) { S.ann = final ? { t: 2.6, card: 1, a: "THE VET’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 2.6, card: 1, a: "ROUND " + S.round, b: "VET!" }; shake();
       toast(final ? "Dr Pokesworth is back, and Nurse Burrito brought towels. Beat them to win." : bp().intro ? bp().intro : pick(["Dr Pokesworth will see you now. Hit the glowing spots.", "The vet is in. Both cats, positions.", "Annual check-up. Fight it. Hit the glowing spots."]), 3200); track("basil/boss"); return; }
     S.ann = final ? { t: 2.6, card: 1, a: "IT’S BACK. FINAL BOSS", b: "VAC-3000" } : { t: 2.6, card: 1, a: "ROUND " + S.round, b: "BOSS!" }; shake();
-    toast(final ? "The VAC-3000 is back for revenge. Beat it to win." : pick(["VAC-3000 has entered the kitchen. Hit the glowing spots.", "The vacuum is here. Both cats, positions.", "It sucks. Literally. Hit the glowing spots."]), 2600); track("basil/boss");
+    toast(final ? "The VAC-3000 is back for revenge, and it brought VAC Junior. Beat it to win." : pick(["VAC-3000 has entered the kitchen. Hit the glowing spots.", "The vacuum is here. Both cats, positions.", "It sucks. Literally. Hit the glowing spots."]), 2600); track("basil/boss");
   }
   function bossSpot() { var b = S.boss; b.spot = { lane: Math.floor(Math.random() * 3), t: b.angry ? rnd(0.85, 1.1) : rnd(1.2, 1.5), name: "" }; b.spot.name = SPOTS[b.spot.lane]; }
   function spotXY(b) { if (STAGE >= 2 && V) return V.spotXY(b); var s = b.spot; if (s.core) return { x: b.x, y: BENCH - 30 }; return { x: b.x + (s.lane - 1) * 42, y: s.lane === 1 ? BENCH - 50 : BENCH - 24 }; }
@@ -616,7 +616,11 @@
     if (a && a.kind === "suck" && a.ph === "go" && STAGE !== 2) { var ix = b.x + a.side * 40, ox = a.side < 0 ? 0 : W; ctx.strokeStyle = "rgba(176,107,255,.55)"; ctx.lineWidth = 2; ctx.lineCap = "round";
       for (var k = 0; k < 12; k++) { var ph = (S.t * 1.8 + k / 12) % 1, y0 = BENCH - 110 + k * 8, px = ox + (ix - ox) * ph, py = y0 + (BENCH - 12 - y0) * ph; ctx.globalAlpha = Math.sin(ph * Math.PI); ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px - (ix - ox) * 0.08, py - (BENCH - 12 - y0) * 0.08); ctx.stroke(); } ctx.globalAlpha = 1; }
     if (STAGE >= 2 && V) V.bossFront(b, { b: { x: bossCatX(b, "b") }, c: { x: bossCatX(b, "c") } });
-    else if (!(b.done === "win" && b.doneT < 2.6)) vacuum(b);
+    else if (!(b.done === "win" && b.doneT < 2.6)) {
+      vacuum(b);
+      if (b.final && !b.done) { var jx = 180 + Math.sin(S.t * 1.3) * 118, jf = Math.cos(S.t * 1.3) >= 0 ? 1 : -1; ctx.save(); ctx.translate(jx, BENCH + 2); ctx.scale(0.42, 0.42); ctx.translate(0, -BENCH); vacuum({ x: 0, atk: null, angry: false, face: jf, hitT: 0, done: null, dent: 0 }); ctx.restore();
+        rr(jx - 26, BENCH - 40, 52, 13, 6.5); ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.fill(); ctx.font = "800 8px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillStyle = "#2B2340"; ctx.fillText("VAC JUNIOR", jx, BENCH - 30.5); }
+    }
     if (a && a.kind === "charge" && a.ph === "warn") { // telegraph: dashed arrow to the target
       var tx = BHOME[a.side < 0 ? "b" : "c"], ay = STAGE >= 2 ? BENCH - 62 : BENCH - 20, ax0 = STAGE >= 2 && V ? V.vetX(b) + a.side * 74 : b.x + a.side * 70; ctx.strokeStyle = "rgba(194,85,58," + (0.5 + 0.5 * Math.sin(S.t * 30)) + ")"; ctx.lineWidth = 4; ctx.setLineDash([10, 8]); ctx.beginPath(); ctx.moveTo(ax0, ay); ctx.lineTo(tx - a.side * 6, ay); ctx.stroke(); ctx.setLineDash([]);
       ctx.fillStyle = "#C2553A"; ctx.beginPath(); ctx.moveTo(tx - a.side * 2, ay); ctx.lineTo(tx - a.side * 16, ay - 10); ctx.lineTo(tx - a.side * 16, ay + 10); ctx.fill();
