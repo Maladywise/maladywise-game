@@ -362,9 +362,9 @@
     S.boss = { final: !!final, hp: hpMax, hpMax: hpMax, t: final ? 0 : 45, x: 180, vx: 38, face: 1, spot: null, spotT: 1.0, hits: 0, hitT: 0, dent: 0, done: null, doneT: 0, angry: false,
       atk: null, atkT: final ? 2.4 : 3.4, n: 0, flash: 0, food: null, foodT: grnd(3, 5), tips: {}, cats: { b: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 }, c: { jt: 0, pull: 0, hurtT: 0, gone: 0, coneT: 0 } }, coneT: 0, nurse: STAGE >= 2 && final ? { towels: 3, gone: 0, leave: 0 } : null };
     for (var j = 0; j < 3; j++) { var o = S.lanes[j]; if (o && o.kind !== "tank") { S.fly.push({ kind: o.kind, x: LANES[j], y: BENCH - 2, vx: (j - 1 || 1) * rnd(200, 300), vy: -rnd(160, 240), r: 0, vr: rnd(-8, 8) }); } S.lanes[j] = null; }
-    if (STAGE >= 2) { S.ann = final ? { t: 1.8, a: "THE VET’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 1.8, a: "ROUND " + S.round, b: "VET!" }; shake();
+    if (STAGE >= 2) { S.ann = final ? { t: 2.6, card: 1, a: "THE VET’S BACK. WITH A NURSE", b: "FINAL!" } : { t: 2.6, card: 1, a: "ROUND " + S.round, b: "VET!" }; shake();
       toast(final ? "Dr Pokesworth is back, and Nurse Burrito brought towels. Beat them to win." : bp().intro ? bp().intro : pick(["Dr Pokesworth will see you now. Hit the glowing spots.", "The vet is in. Both cats, positions.", "Annual check-up. Fight it. Hit the glowing spots."]), 3200); track("basil/boss"); return; }
-    S.ann = final ? { t: 1.8, a: "IT’S BACK. FINAL BOSS", b: "VAC-3000" } : { t: 1.8, a: "ROUND " + S.round, b: "BOSS!" }; shake();
+    S.ann = final ? { t: 2.6, card: 1, a: "IT’S BACK. FINAL BOSS", b: "VAC-3000" } : { t: 2.6, card: 1, a: "ROUND " + S.round, b: "BOSS!" }; shake();
     toast(final ? "The VAC-3000 is back for revenge. Beat it to win." : pick(["VAC-3000 has entered the kitchen. Hit the glowing spots.", "The vacuum is here. Both cats, positions.", "It sucks. Literally. Hit the glowing spots."]), 2600); track("basil/boss");
   }
   function bossSpot() { var b = S.boss; b.spot = { lane: Math.floor(Math.random() * 3), t: b.angry ? rnd(0.85, 1.1) : rnd(1.2, 1.5), name: "" }; b.spot.name = SPOTS[b.spot.lane]; }
@@ -528,6 +528,27 @@
     return fin;
   }
   // a round robot vacuum: squat disc, rubber bumper, spinning side brushes, scanning LED eye, lidar turret, suction intake
+  // "Boss incoming" card: the boss's picture, name and how to beat it, for the first 2.6 s of every boss fight
+  function cardWrap(txt, maxW) { var words = String(txt).split(" "), lines = [], cur = ""; words.forEach(function (w0) { var tr = cur ? cur + " " + w0 : w0; if (ctx.measureText(tr).width > maxW && cur) { lines.push(cur); cur = w0; } else cur = tr; }); if (cur) lines.push(cur); return lines; }
+  function bossCard() {
+    var b = S.boss, at = S.ann.t, el = 2.6 - at, k = Math.min(1, el / 0.22), fade = Math.min(1, at / 0.3);
+    var name = STAGE === 1 ? "VAC-3000" : STAGE === 2 ? "DR POKESWORTH" : ((V && V.TEXT && V.TEXT.BOSSNAME) || "BOSS").toUpperCase();
+    var tip = STAGE === 1 ? "Hit the glowing spots. Jump its charges. Tap like mad when it sucks." : STAGE === 2 ? "Hit the glowing spots. Jump the thermometer. Wriggle out of the towel." : bp().intro || "Hit the glowing spots.";
+    if (b.final) tip = "Back for revenge, and it brought backup. One life. Win this and you win the level.";
+    ctx.save(); ctx.globalAlpha = fade; ctx.fillStyle = "rgba(20,13,40,.72)"; ctx.fillRect(0, 0, W, H);
+    ctx.translate(180, 214); var sc = 0.7 + 0.3 * (1 - Math.pow(1 - k, 3)); ctx.scale(sc, sc);
+    rr(-150, -186, 300, 330, 22); ctx.fillStyle = "#FFFDF8"; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = "#2B2340"; ctx.stroke();
+    rr(-150, -186, 300, 186, 22); ctx.save(); ctx.clip(); ctx.fillStyle = STAGE === 1 ? "#F3E6D3" : (V && V.TEXT && V.TEXT.THEME && V.TEXT.THEME.stage) || "#DDEFE9"; ctx.fillRect(-150, -186, 300, 186);
+    var bob = Math.sin(S.t * 3) * 3;
+    if (STAGE === 1) { ctx.save(); ctx.translate(0, -24 + bob); ctx.scale(1.2, 1.2); ctx.translate(-b.x, -BENCH); vacuum(b); ctx.restore(); }
+    else if (V && V.vetBody) { var VKc = 0.86; ctx.save(); ctx.translate(0, -2 + bob); ctx.scale(0.6 / VKc, 0.6 / VKc); ctx.translate(0, -(BENCH - 24)); V.vetBody(0, { fraz: !!b.final }); ctx.restore(); }
+    ctx.restore();
+    rr(-110, -204, 220, 34, 17); ctx.fillStyle = b.final ? "#B3122E" : "#C2553A"; ctx.fill(); ctx.textAlign = "center"; ctx.fillStyle = "#FFFFFF"; ctx.font = "900 16px Poppins, sans-serif"; ctx.fillText(b.final ? "FINAL BOSS" : "BOSS INCOMING", 0, -181);
+    ctx.font = "900 26px Poppins, sans-serif"; var nw = ctx.measureText(name).width; if (nw > 270) ctx.font = "900 " + Math.floor(26 * 270 / nw) + "px Poppins, sans-serif";
+    ctx.fillStyle = "#2B2340"; ctx.fillText(name, 0, 30);
+    ctx.font = "600 13px Poppins, sans-serif"; ctx.fillStyle = "#4A4060"; cardWrap(tip, 260).slice(0, 4).forEach(function (ln, i) { ctx.fillText(ln, 0, 56 + i * 19); });
+    ctx.restore();
+  }
   function vacuum(b) {
     var a = b.atk, t = S.t, ang = b.angry, warn = a && a.ph === "warn", stun = a && a.ph === "stun", suck = a && a.kind === "suck" && !stun, charge = a && a.kind === "charge" && !stun, face = b.face;
     var vib = warn ? Math.sin(t * 90) * 2.2 : b.hitT > 0 ? Math.sin(t * 70) * 2.5 : b.done === "win" ? Math.sin(t * 80) * 4 : 0, bob = stun ? 0 : Math.sin(t * 9) * 0.8;
@@ -905,7 +926,7 @@
     if (k === "boss") { S.round = n - 1; startBoss(); }
     else if (k === "C") { S.round = n - 1; startBonus(); }
     else { S.round = n; S.bonus = 0; S.roundT = n === 10 ? 40 : ROUND; S.spawnT = 1.6; S.cloverT = grnd(5, 8); S.ann = { t: 1.8 }; }
-    S.ann.a = "ROUND " + n + " · " + CAMP_NAME[n]; S.ann.b = k === "boss" ? "BOSS!" : k === "C" ? "NOM!" : n === 10 ? "ONE LIFE" : "KICK!"; S.ann.t = 1.8;
+    S.ann.a = "ROUND " + n + " · " + CAMP_NAME[n]; S.ann.b = k === "boss" ? "BOSS!" : k === "C" ? "NOM!" : n === 10 ? "ONE LIFE" : "KICK!"; S.ann.t = S.ann.card ? 2.6 : 1.8;
     S.rStart = S.score; S.rPen = false; S.rT0 = S.t;
     // everything ramps: each event timer is pulled in to at most this round's gap, and every round starts lively (a moth or wasp within seconds)
     rearm(); S.mothT = Math.min(S.mothT, grnd(2.2, 4));
@@ -1611,7 +1632,8 @@
       ctx.font = "900 28px Poppins, sans-serif"; ctx.lineWidth = 7; ctx.strokeStyle = "#2B2340"; ctx.strokeText(ct.txt, 0, 0); ctx.fillStyle = "#FF8AD0"; ctx.fillText(ct.txt, 0, 0);
       ctx.font = "800 12px Poppins, sans-serif"; ctx.lineWidth = 4; ctx.strokeText(ct.n + " in a row", 0, 20); ctx.fillStyle = "#FFFFFF"; ctx.fillText(ct.n + " in a row", 0, 20); ctx.restore();
     }
-    if (S.ann && S.ann.t > 0) {
+    if (S.ann && S.ann.t > 0 && S.ann.card && S.boss) bossCard();
+    else if (S.ann && S.ann.t > 0) {
       if (STAGE >= 3 && !S.ann.said) { S.ann.a = say(S.ann.a); S.ann.b = say(S.ann.b); S.ann.said = 1; }
       var at = S.ann.t, k = Math.min(1, (1.8 - at) / 0.25), cl2 = S.ann.b === "NOM!", fade = Math.min(1, at / 0.3);
       ctx.save(); ctx.globalAlpha = fade; ctx.fillStyle = "rgba(20,13,40,.35)"; ctx.fillRect(0, 120, W, 120);

@@ -1,6 +1,6 @@
 /* Basil + Clover, Stage 3: THE FARM. A barn, a hay-bale bench, farm junk to kick and farm food to eat.
    The Farm reuses the Vet's mechanics (events, boss attacks) from vet.js with a farm skin:
-   Dr Pokesworth becomes Gertrude the Goose (overalls, straw hat), Nurse Burrito becomes Farmhand Pip,
+   Dr Pokesworth becomes Gertrude the Goose (overalls, straw hat), Nurse Burrito becomes Pip the Gosling,
    towels become hessian sacks, the thermometer lunge becomes a rake. Copy is swapped via TEXT.SAY / TEXT.SAYRE.
    basil.js calls MW_FARM(api) once; this file returns the same API shape as MW_VET. */
 (function () {
@@ -25,7 +25,7 @@
       c.restore();
     }
     var SKIN = { coat: "#4A78B8", collar: "#C2553A", lapel: "#3E66A0", badge: "#8A5A2B", name: "GERTRUDE THE GOOSE", noSteth: true, noGlasses: true, hair: "#9A5B2E", hat: hat,
-      sleeve: "#C2553A", glove: "#7BA05B", prop: "#8A5A2B", propLabel: "", mug: "FARMER", towel: "#D8BC88", towelStripe: "#9C7A44", nurse: "#5B8C3A", nurseName: "FARMHAND" };
+      sleeve: "#C2553A", glove: "#7BA05B", prop: "#8A5A2B", propLabel: "", mug: "FARMER", towel: "#D8BC88", towelStripe: "#9C7A44", nurse: "#5B8C3A", nurseName: "PIP" };
     if (window.MW_BOSSART && window.MW_BOSSART.goose) { SKIN.body = window.MW_BOSSART.goose.body; SKIN.arm = window.MW_BOSSART.goose.arm; }
     var V = window.MW_VET(Object.assign({}, A, { skin: SKIN }));
     if (!V) return null;
@@ -39,17 +39,17 @@
       TREATS: ["jerky", "sardine"],
       KICKQ: ["Off the hay bale. Gravity: still works.", "Farm-to-floor.", "He calls it crop rotation.", "Harvested. With his foot.", "Smug level: agricultural.", "The bale is clear. Mostly.", "Not a farm cat. A farm critic.", "That’s what the barn floor is for.", "Organic chaos.", "Free range. Free fall.", "Fresh from the farm. Fresh on the floor.", "Paddock to plummet.", "Yeehaw. Smugly."],
       BOREDQ: ["He got bored. Farms are slow.", "One left on the bale. Lazy.", "Missed a kick. He blames the rooster.", "Basil has lodged a complaint with the farmhouse.", "One survived. The scarecrow saw everything.", "Too busy glaring at the cows."],
-      HUNGRYQ: ["Clover is hungry. The chooks are nervous.", "Food left uneaten. On a FARM. Appalling.", "Clover Piggington wants a second helping.", "Hungry. The Whingapotamus whinges at the farmhand.", "Food escaped. Clover will leave a one-star review of the farm stay."],
+      HUNGRYQ: ["Clover is hungry. The chooks are nervous.", "Food left uneaten. On a FARM. Appalling.", "Clover Piggington wants a second helping.", "Hungry. The Whingapotamus whinges at the gosling.", "Food escaped. Clover will leave a one-star review of the farm stay."],
       MOTHQ: ["Fly eaten. FRENZY!", "Crunchy. Buzzy. FRENZY!", "Farm-fresh protein. FRENZY!", "Fly: caught. FRENZY!"],
       OUCHQ: ["Ouch. Thistle: 1, Basil: 0.", "Basil has learned nothing. Again.", "Barbed wire. Barbed regret.", "Paw, meet prickles.", "Some things you don’t kick. Especially on a farm."],
       HEDGEQ: ["That was a hedgehog. Asleep in the hay. Was.", "Never kick a sleeping hedgehog. Farm rule one.", "Prickly lesson. Very prickly.", "The hedgehog has filed a complaint.", "Bold move. Wrong, and also rude."],
       BADQ: { onion: "Onion. Toxic to cats. She spat it out, sensibly.", rottenegg: "Rotten egg. The smell left before she did.", chilli: "Chilli. Clover is now a dragon. A sweaty one.", mouldybread: "Mouldy bread. Even Clover has standards. Low ones." },
       SMASHQ: { vase: ["Milk churn: tipped. Don’t cry over it.", "That was tomorrow’s cream. Was.", "Clang. The cows heard that."], tv: ["The barn radio: silenced. The cows rejoice.", "No more country music. You’re welcome.", "Static. Then nothing."], tank: ["THE FEED BIN. Jackpot. +1 life.", "Feed bin busted. Snacks everywhere. +1 life."] },
       CAMP_NAME: [null, "SUNRISE", "FEED TIME", "HAY FEVER", "MUD SEASON", "GERTRUDE", "ROOSTER HOUR", "MARKET DAY", "SHEARING SHED", "HARVEST", "THE FINAL MILKING"],
-      CAMP_TIP: [null, "A farm stay. Basil hates it already. Kick everything off the hay bale.", "Clover’s turn: eat the farm food. Not the onion (toxic to cats).", "Faster. More prickly things. The flies are out.", "Mud everywhere. Faster again. The fleas are hopping.", "BOSS: Gertrude the Goose. Hit the glowing spots. Jump the rake. Wriggle out of the sack.", "Faster. The rooster is restless.", "Faster. Rotten food everywhere. Spot it.", "Faster. Heavier things. The barn cat is cockier.", "Faster. Harvest: everyone’s yawning.", "Sunset. Top speed. One life. Then Gertrude the Goose and Farmhand Pip."],
+      CAMP_TIP: [null, "A farm stay. Basil hates it already. Kick everything off the hay bale.", "Clover’s turn: eat the farm food. Not the onion (toxic to cats).", "Faster. More prickly things. The flies are out.", "Mud everywhere. Faster again. The fleas are hopping.", "BOSS: Gertrude the Goose. Hit the glowing spots. Jump the rake. Wriggle out of the sack.", "Faster. The rooster is restless.", "Faster. Rotten food everywhere. Spot it.", "Faster. Heavier things. The barn cat is cockier.", "Faster. Harvest: everyone’s yawning.", "Sunset. Top speed. One life. Then Gertrude the Goose and Pip the Gosling."],
       CTITLES: [[5, "Unruly"], [10, "Feral"], [15, "Needs Two Farmhands"], [25, "Banned from the Barn"], [40, "Farm Show Legend"]],
       SPOTS: ["CLIPBOARD", "BEAK", "TEA"],
-      NURSELABEL: "FARMHAND PIP · SACKS", KEY: "farm",
+      NURSELABEL: "PIP THE GOSLING · SACKS", KEY: "farm", BOSSNAME: "Gertrude the Goose",
       SAY: {
         "FRAZZLED!": "FURIOUS!", " · FRAZZLED": " · FURIOUS", ": The Vet": ": The Farm",
         "Clean bill of health · all 10 vet rounds": "Farm show champions · all 10 farm rounds", "Check-up Legend": "Farm Legend",
@@ -61,12 +61,12 @@
         "TANGLED IN TOWEL!": "TANGLED IN A SACK!", "BURRITO’D! -25%": "SACKED! -25%", "TEMPERATURE TAKEN. -10%": "HOSED DOWN. -10%",
         "The cockatoo! SQUAWK: everything falls twice as fast. Tap it to hiss it off.": "The rooster! COCK-A-DOODLE: everything falls twice as fast. Tap it to hiss it off.",
         "Too slow. The vet’s distracted now.": "Too slow. The goose’s distracted now.", "DR POKESWORTH IS": "GERTRUDE THE GOOSE IS", "DR POKESWORTH · ": "GERTRUDE THE GOOSE · ",
-        "VET GIVES UP": "FARMER GIVES UP", "SQUAWK!": "COCK-A-DOODLE!", "VET!": "GOOSE!", "THE VET’S BACK. WITH A NURSE": "THE GOOSE’S BACK. WITH A FARMHAND"
+        "VET GIVES UP": "FARMER GIVES UP", "SQUAWK!": "COCK-A-DOODLE!", "VET!": "GOOSE!", "THE VET’S BACK. WITH A NURSE": "THE GOOSE’S BACK. WITH A GOSLING"
       },
       SAYRE: [
-        [/All ten vet rounds\. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all\./, "All ten farm rounds. Gertrude the Goose handed over the prize ribbon, Farmhand Pip waved a white sack and the hedgehog slept through it all."],
+        [/All ten vet rounds\. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all\./, "All ten farm rounds. Gertrude the Goose handed over the prize ribbon, Pip the Gosling waved a white sack and the hedgehog slept through it all."],
         [/Vet Endless unlocked/g, "Farm Endless unlocked"], [/Temperature taken\. 38\.6°\. Dignity: 0%\./g, "Hosed down. Soggy. Dignity: 0%."],
-        [/Dr Pokesworth/g, "Gertrude the Goose"], [/Nurse Burrito/g, "Farmhand Pip"], [/\bnurse\b/g, "farmhand"], [/\bthe vet\b/g, "the goose"], [/\bvet\b/g, "farm"], [/\bVet\b/g, "Farm"], [/\bVET\b/g, "FARM"],
+        [/Dr Pokesworth/g, "Gertrude the Goose"], [/Nurse Burrito/g, "Pip the Gosling"], [/\bnurse\b/g, "gosling"], [/\bthe vet\b/g, "the goose"], [/\bvet\b/g, "farm"], [/\bVet\b/g, "Farm"], [/\bVET\b/g, "FARM"],
         [/cockatoo/g, "rooster"], [/Cockatoo/g, "Rooster"], [/thermometer/g, "rake"], [/Thermometer/g, "Rake"], [/THERMOMETER/g, "RAKE"],
         [/towel/g, "sack"], [/Towel/g, "Sack"], [/TOWEL/g, "SACK"], [/clinic/g, "farm"], [/exam table/g, "hay bale"], [/[Rr]eception/g, "the farmhouse"], [/waiting room/g, "barn"]
       ]
@@ -209,7 +209,7 @@
       var b = V.bannerFor(e, catName, taps); if (!b) return b;
       var F = {
         cucumber: ["PRIZE WEIGH-IN! STAY STILL", "Don’t tap anything for 2 s or the farm show scales go haywire"],
-        fridge: ["FEED TIME! EAT FAST", "Eat fast, then tap the farmhand’s hand before the sack comes out"],
+        fridge: ["FEED TIME! EAT FAST", "Eat fast, then tap Pip’s wing before the sack comes out"],
         cone: ["BUCKET ON HEAD!", catName + " can only see the middle. Tap the bucket 3× to shake it off"],
         xray: ["LIGHTNING!", "The barn flashes. Look closely: rotten food glows"],
         bath: ["THE HOSE!", "Tap " + catName + " (or ↑ / W) to spin round and dodge the hose"],

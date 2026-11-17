@@ -383,6 +383,7 @@
     }
     function nurse(x, base, k, leave) {
       ctx.save(); ctx.translate(x + (leave || 0) * 150, base); ctx.scale(k, k);
+      if (SK.body) { ctx.scale(0.62, 0.62); SK.body(ctx, { baby: true, fz: false, hit: false, t: t() + 1.3 }); ctx.restore(); return; }
       ctx.fillStyle = SK.nurse || "#7A3FB5"; ctx.beginPath(); ctx.moveTo(-46, 0); ctx.lineTo(-42, -86); ctx.quadraticCurveTo(-38, -104, -20, -108); ctx.lineTo(20, -108); ctx.quadraticCurveTo(38, -104, 42, -86); ctx.lineTo(46, 0); ctx.closePath(); ctx.fill();
       ctx.fillStyle = "#9B6BD0"; ctx.beginPath(); ctx.moveTo(-16, -108); ctx.lineTo(16, -108); ctx.lineTo(0, -82); ctx.closePath(); ctx.fill();
       ctx.globalAlpha = 0.35; [[-28, -60], [24, -40], [-14, -26], [30, -78]].forEach(function (q) { pawPrint(q[0], q[1], 0.35, "#FFFFFF"); }); ctx.globalAlpha = 1;

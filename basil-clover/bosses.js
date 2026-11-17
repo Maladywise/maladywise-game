@@ -30,7 +30,7 @@
   // 3 FARM: Gertrude the Goose. Always a bit cross. Honks when angry.
   A.goose = {
     body: function (c, o) {
-      var W = "#FFFFFF", ed = "#C9D2D8", gr = "#E6EAEE";
+      var W = o.baby ? "#F7E08A" : "#FFFFFF", ed = o.baby ? "#D9B84A" : "#C9D2D8", gr = o.baby ? "#EFD27A" : "#E6EAEE";
       // body, side on, tail up at the back
       c.beginPath(); c.moveTo(-80, -100); c.quadraticCurveTo(-90, -40, -46, -10); c.quadraticCurveTo(4, 8, 48, -20); c.quadraticCurveTo(76, -50, 62, -86); c.quadraticCurveTo(40, -128, -10, -124); c.quadraticCurveTo(-50, -122, -80, -100); c.closePath(); c.fillStyle = W; c.fill(); out(c, ed, 2.5);
       // folded wing with layered feathers
@@ -53,7 +53,7 @@
       if (o.hit) { L(c, [[3, -11], [11, -3]], "#2B2340", 2.6); L(c, [[11, -11], [3, -3]], "#2B2340", 2.6); }
       else { C(c, 8, -6, 4.6, "#2B5E80"); C(c, 8, -6, 2.6, "#1B1430"); C(c, 9.5, -7.5, 1.2, "#FFFFFF"); L(c, [[-2, o.fz ? -16 : -13], [15, -11]], "#9AA6B0", 2.6); }
       c.restore();
-      if (o.fz && Math.sin(o.t * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#FFFFFF"; c.strokeText("HONK!", 70, -226); c.fillStyle = "#C2553A"; c.fillText("HONK!", 70, -226); }
+      if (o.fz && !o.baby && Math.sin(o.t * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#FFFFFF"; c.strokeText("HONK!", 70, -226); c.fillStyle = "#C2553A"; c.fillText("HONK!", 70, -226); }
     },
     arm: function (c, sx, sy, hx, hy, side) {
       limb(c, sx, sy, hx, hy, side, "#F2F4F6", "#C9D2D8", 19);
@@ -163,11 +163,11 @@
       if (o.hit) { L(c, [[hx + 12, hy - 22], [hx + 24, hy - 10]], "#2B2340", 3); L(c, [[hx + 24, hy - 22], [hx + 12, hy - 10]], "#2B2340", 3); }
       else { E(c, hx + 18, hy - 15, 9, 11, "#FFFFFF"); C(c, hx + 21, hy - 13, 5.5, "#1B1430"); C(c, hx + 23, hy - 15, 2, "#FFFFFF"); if (o.fz) L(c, [[hx + 6, hy - 34], [hx + 28, hy - 26]], "#2B2340", 3.2); }
       // admiral's bicorne
-      c.save(); c.translate(hx - 4, hy - 42); c.rotate(o.fz ? -0.22 : -0.08);
+      if (!o.baby) { c.save(); c.translate(hx - 4, hy - 42); c.rotate(o.fz ? -0.22 : -0.08);
       c.fillStyle = "#22304F"; c.beginPath(); c.moveTo(-58, 6); c.quadraticCurveTo(0, -46, 58, 6); c.quadraticCurveTo(0, -6, -58, 6); c.fill();
       c.strokeStyle = "#E8B53A"; c.lineWidth = 2.5; c.beginPath(); c.moveTo(-54, 4); c.quadraticCurveTo(0, -8, 54, 4); c.stroke();
       C(c, 0, -12, 8, "#E8B53A"); L(c, [[0, -18], [0, -6]], "#22304F", 2); L(c, [[-4, -10], [4, -10]], "#22304F", 2);
-      c.restore();
+      c.restore(); }
     },
     arm: function (c, sx, sy, hx, hy, side) {
       limb(c, sx, sy, hx, hy, side, "#EFC22A", "#E0B020", 20);
@@ -256,7 +256,7 @@
       cheeks(c, [-30, 30], -174);
       if (o.fz) E(c, 0, -164, 11, 12, "#2B2340"); else E(c, 0, -166, 6, 7, "#2B2340");
       c.fillStyle = "#F28CB8"; c.save(); c.translate(26, -228); c.rotate(0.3); c.beginPath(); c.moveTo(0, 0); c.lineTo(-12, -8); c.lineTo(-12, 8); c.closePath(); c.moveTo(0, 0); c.lineTo(12, -8); c.lineTo(12, 8); c.closePath(); c.fill(); C(c, 0, 0, 3.5, "#E05A8A"); c.restore();
-      if (o.fz && Math.sin(tt * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#2B2340"; c.strokeText("BOO!", 56, -238); c.fillStyle = "#F7F4FF"; c.fillText("BOO!", 56, -238); }
+      if (o.fz && !o.baby && Math.sin(tt * 4) > 0.3) { c.font = "900 15px Poppins, sans-serif"; c.textAlign = "center"; c.lineWidth = 4; c.strokeStyle = "#2B2340"; c.strokeText("BOO!", 56, -238); c.fillStyle = "#F7F4FF"; c.fillText("BOO!", 56, -238); }
       c.restore();
     },
     arm: function (c, sx, sy, hx, hy, side) {
