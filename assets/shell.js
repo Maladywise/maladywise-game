@@ -554,6 +554,7 @@
     ["sx_table", "🐾", "Off the Table", "Let Basil knock something off the page.", "global", "", 0, 1],
     ["sx_stamp", "✅", "Clover Approved", "Got Clover’s stamp on a page.", "global", "", 0, 1],
     ["sx_cats", "📋", "Incident Report", "Saw both cats on duty at once.", "global", "", 0, 1],
+    ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Summoned the mascot parade.", "global", "", 0, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
@@ -641,7 +642,7 @@
       time: log.some(function (x) { return /^\d{4}-/.test(x.d || "") && dayNum(x.at) - dayNum(x.d) > 30; }),
       comeback: Object.keys(rec).some(function (id) { var R = rec[id]; return Object.keys(R).some(function (d) { var nx = R[dstr(dayNum(d) + 1)]; return !R[d].win && nx && nx.win; }); }),
       overthink: any("wordemic", function (v) { return !v.win && (v.guesses || []).length === 6; }),
-      sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0), sx_stamp: !!get("mw-secret-stamp", 0), sx_cats: !!get("mw-secret-cats", 0),
+      sx_night: !!get("mw-secret-nightshift", 0), sx_whisper: !!get("mw-secret-whisper", 0), sx_table: !!get("mw-secret-offtable", 0), sx_stamp: !!get("mw-secret-stamp", 0), sx_cats: !!get("mw-secret-cats", 0), sx_keys: !!get("mw-secret-keys", 0),
       sx_konami: !!get("mw-secret-konami", 0), sx_owl: !!get("mw-secret-nightmode", 0),
       sx_code: !!get("mw-secret-code", 0), sx_scrawl: !!get("mw-secret-scrawl", 0), sx_wait: !!get("mw-secret-wait", 0),
       sx_friday: !!get("mw-secret-friday", 0), sx_console: !!get("mw-secret-console", 0), sx_paws: !!get("mw-secret-paws", 0), sx_da: !!get("mw-secret-da", 0), sx_cab: !!get("mw-secret-cabinet", 0)
@@ -2207,6 +2208,56 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var v = V[Math.floor(Math.random() * V.length)];
       cloverWalk(tgt.getBoundingClientRect(), function () { stamp(tgt, v[0], v[1]); pill(v[2], 3400); });
     }
+    // Basil on the keyboard (Nov 2026): on Wordemic he walks over the on-screen keyboard and types gibberish into your
+    // current guess, then Clover deletes exactly what he typed. Never submits. Elsewhere it takes you to Wordemic first.
+    function catKeys() {
+      var kb = document.getElementById("wde-kb"), board = document.getElementById("wde-board");
+      if (!kb || !board) { location.href = "/wordemic/#catkb"; return; }
+      var gm = document.getElementById("game");
+      if (gm && gm.hidden) { var pb = [].filter.call(document.querySelectorAll("button"), function (b) { return /^\s*Play\s*$/.test(b.textContent); })[0]; if (pb) { pb.click(); setTimeout(catKeys, 900); return; } }
+      document.querySelectorAll(".scrim .x, .scrim [data-close], .scrim .close").forEach(function (b) { try { b.click(); } catch (e) {} });
+      function filled() { var rows = board.children; for (var r = 0; r < rows.length; r++) { var t = rows[r].children; if (!t.length || /\b(hit|near|miss)\b/.test(t[0].className)) continue; return [].filter.call(t, function (x) { return /\bfilled\b/.test(x.className); }).length; } return -1; }
+      var n0 = filled(); if (n0 < 0) { pill("🐾 Basil sat on the keyboard, but today’s game is already finished. He looks smug anyway.", 3200); return; }
+      flag("keys"); flag("paws");
+      var keys = [].slice.call(kb.querySelectorAll(".key")).filter(function (k) { return /^[a-z]$/.test(k.getAttribute("data-k") || ""); });
+      board.scrollIntoView({ block: "start", behavior: "auto" }); window.scrollBy(0, -70);
+      var r = kb.getBoundingClientRect();
+      var cat = catImg("basil", "mw-basil-ol");
+      cat.style.top = Math.max(60, Math.min(innerHeight - 120, r.top - 60)) + "px";
+      var typed = "", steps = 4 + Math.floor(Math.random() * 3), i = 0;
+      cat.animate([{ transform: "translateX(-120px)" }, { transform: "translateX(" + (innerWidth * 0.15) + "px)" }], { duration: RM ? 10 : 900, fill: "forwards" }).onfinish = function step() {
+        if (i++ >= steps) return after();
+        var k = keys[Math.floor(Math.random() * keys.length)], kr = k.getBoundingClientRect();
+        var x = Math.max(0, Math.min(innerWidth - 90, kr.left - 20)); cat.style.top = Math.max(60, Math.min(innerHeight - 120, kr.top - 75)) + "px";
+        cat.animate([{ transform: getComputedStyle(cat).transform }, { transform: "translateX(" + x + "px) translateY(10px)" }], { duration: RM ? 10 : 320, fill: "forwards" }).onfinish = function () {
+          k.classList.add("mw-paw-press"); setTimeout(function () { k.classList.remove("mw-paw-press"); }, 220);
+          var before = filled(); k.click(); if (filled() > before) typed += k.getAttribute("data-k");
+          setTimeout(step, RM ? 30 : 180);
+        };
+      };
+      function after() {
+        var added = Math.max(0, filled() - n0);
+        cat.animate([{ transform: getComputedStyle(cat).transform }, { transform: "translateX(" + (innerWidth + 120) + "px)" }], { duration: 900, delay: 300, easing: "ease-in", fill: "forwards" }).onfinish = function () { cat.remove(); };
+        if (!added) { pill("🐾 Basil walked across the keyboard. Your row was already full, so he just left fur.", 3200); return; }
+        pill("🐾 Basil typed “" + typed.toUpperCase() + "”. Clover is on her way…", 2200);
+        setTimeout(function () {
+          var back = kb.querySelector('[data-k="back"]'), c2 = catImg("clover", "mw-clover-walk");
+          var br = back ? back.getBoundingClientRect() : r; c2.style.top = Math.max(60, Math.min(innerHeight - 120, br.top - 70)) + "px";
+          var bx = Math.max(0, Math.min(innerWidth - 90, br.left - 20));
+          c2.animate([{ transform: "translateX(" + (innerWidth + 40) + "px)" }, { transform: "translateX(" + bx + "px)" }], { duration: RM ? 10 : 1100, easing: "ease-out", fill: "forwards" }).onfinish = function () {
+            var j = 0; (function del() {
+              if (j++ >= added || !back) {
+                pill("🐾 Clover deleted it. Your guess is back how you left it. Basil has been spoken to.", 3400);
+                c2.animate([{ transform: "translateX(" + bx + "px)" }, { transform: "translateX(" + (innerWidth + 40) + "px)" }], { duration: 1000, delay: 500, easing: "ease-in", fill: "forwards" }).onfinish = function () { c2.remove(); };
+                return;
+              }
+              back.classList.add("mw-paw-press"); setTimeout(function () { back.classList.remove("mw-paw-press"); }, 200); back.click(); setTimeout(del, RM ? 30 : 260);
+            })();
+          };
+        }, 1600);
+      }
+    }
+    if (location.hash === "#catkb" && /^\/wordemic\//.test(location.pathname)) setTimeout(function () { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} catKeys(); }, 1800);
     function bothCats() {
       flag("cats"); flag("paws");
       basilSwipe(function (tgt, a, r) {
@@ -2259,6 +2310,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["🚨", "Code Blue", "Everything is urgent now.", codeBlue], ["✍️", "Doctor’s handwriting", "Good luck reading this page.", scrawl],
         ["🐈", "Call Basil", "Something on this page has to go.", function () { flag("paws"); basilSwipe(); }], ["🐈‍⬛", "Call Clover", "She’ll review this page.", function () { flag("paws"); cloverStamp(); }],
         ["🐾", "Both cats", "Chaos, then paperwork.", bothCats],
+        ["⌨️", "Cat on the keyboard", "Basil helps with your Wordemic guess.", catKeys],
         ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]];
       var H = ["🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];

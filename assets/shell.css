@@ -1509,3 +1509,4 @@ html[data-theme=dark] .mw-basil-ol{filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
 .mw-kidchip small{font-weight:400;opacity:.8}
 .mw-kidchip[aria-pressed=true]{background:var(--brand,#4A3480);color:#fff}
 .mw-kidhide{display:none!important}
+.mw-paw-press{transform:scale(.88)!important;filter:brightness(.85);transition:transform .08s}

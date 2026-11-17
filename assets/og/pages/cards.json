@@ -1399,6 +1399,13 @@
 "label": "Condition",
 "title": "Kidney Stones"
 },
+"klinefelter-syndrome": {
+"url": "/klinefelter-syndrome/",
+"key": "2177c1e226d6",
+"v": "72dc5583",
+"label": "Condition",
+"title": "Klinefelter Syndrome (XXY)"
+},
 "knee-oa": {
 "url": "/knee-oa/",
 "key": "33e7afa63467",
@@ -3226,6 +3233,13 @@
 "label": "Condition",
 "title": "Sunspots and Skin Checks"
 },
+"teen-health": {
+"url": "/teen-health/",
+"key": "415b6a810781",
+"v": "d4aa86f3",
+"label": "Condition",
+"title": "Teen Health"
+},
 "tennis-elbow": {
 "url": "/tennis-elbow/",
 "key": "e56e44a28db5",
@@ -3246,6 +3260,13 @@
 "v": "7f9e2acb",
 "label": "Condition",
 "title": "Tension-Type Headache"
+},
+"testicular-lumps": {
+"url": "/testicular-lumps/",
+"key": "afd7fd56d2b8",
+"v": "7190a442",
+"label": "Condition",
+"title": "Testicular Lumps and Self-Checks"
 },
 "thallium": {
 "url": "/thallium/",
@@ -3435,6 +3456,13 @@
 "v": "35b0ae28",
 "label": "Condition",
 "title": "Urinary Tract Infection"
+},
+"varicocele": {
+"url": "/varicocele/",
+"key": "bee1fdf168c8",
+"v": "d7d5ff81",
+"label": "Condition",
+"title": "Varicocele"
 },
 "varicose-veins": {
 "url": "/varicose-veins/",
