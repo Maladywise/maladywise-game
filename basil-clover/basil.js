@@ -349,7 +349,7 @@
     9: { order: ["charge", "suck", "scratch", "cone"], w: ["charge", "suck", "scratch", "cone"], food: [1.6, 2.6, 4], sp: 1.35, hp: 0.9,
          intro: "Bunny Bonnie hops about and gobbles every egg to heal. Get to the food first." },
     10: { order: ["scratch", "cone", "charge"], w: ["scratch", "scratch", "cone", "charge", "suck"], blink: true, fakes: 1, fakeP: 0.6, sp: 1,
-         intro: "Witch Wilhelmina blinks around the room. Hit the glowing spots wherever she lands." }
+         intro: "Countess Vesper vanishes into bats and pops up somewhere else. Hit the glowing spots wherever she lands." }
   };
   function bp() { return STAGE >= 2 ? BP[STAGE] || {} : {}; }
   var SPOTS = ["BRUSH", "SENSOR", "DUST BIN"], BHOME = { b: 46, c: W - 46 };
@@ -638,6 +638,7 @@
     // health bar
     rr(70, 46, 220, 10, 5); ctx.fillStyle = "rgba(43,35,64,.15)"; ctx.fill(); rr(70, 46, Math.max(0.1, 220 * b.hp / b.hpMax), 10, 5); ctx.fillStyle = b.angry ? "#E0302A" : "#C2553A"; ctx.fill();
     ctx.strokeStyle = "rgba(43,35,64,.35)"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(180, 44); ctx.lineTo(180, 58); ctx.stroke();
+    ctx.font = "700 10px Poppins, sans-serif"; var blbl = s2("VAC-3000 · ", "DR POKESWORTH · ") + b.hp + "/" + b.hpMax + (b.angry ? s2(" · ANGRY", " · FRAZZLED") : ""), blw = ctx.measureText(V && V.TEXT && V.TEXT["DR POKESWORTH · "] ? blbl.replace("DR POKESWORTH · ", V.TEXT["DR POKESWORTH · "]) : blbl).width + 16; rr(180 - blw / 2, 60, blw, 14, 7); ctx.fillStyle = "rgba(255,255,255,.85)"; ctx.fill();
     ctx.fillStyle = "#2B2340"; ctx.font = "700 10px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(s2("VAC-3000 · ", "DR POKESWORTH · ") + b.hp + "/" + b.hpMax + (b.angry ? s2(" · ANGRY", " · FRAZZLED") : ""), 180, 70);
     if (b.nurse && !b.nurse.gone) { rr(96, 78, 168, 18, 9); ctx.fillStyle = "rgba(122,63,181,.92)"; ctx.fill(); ctx.fillStyle = "#FFF"; ctx.font = "800 9px Poppins, sans-serif"; ctx.textAlign = "center"; ctx.fillText(STAGE >= 3 && V.TEXT.NURSELABEL ? V.TEXT.NURSELABEL : "NURSE BURRITO · TOWELS", 162, 91); for (var nt0 = 0; nt0 < 3; nt0++) { rr(228 + nt0 * 11, 82, 9, 10, 2); ctx.fillStyle = nt0 < b.nurse.towels ? "#FFFFFF" : "rgba(255,255,255,.3)"; ctx.fill(); } }
   }
@@ -1796,7 +1797,7 @@
     todayUI();
   }
   // One level a day (Nov 2026): only today's stage is playable. Endless for it opens once that stage's round 10 is beaten.
-  var SDESC = { 1: "The Kitchen bench. The VAC-3000 is waiting.", 2: "The vet clinic. Two Vet vs Cat boss fights.", 3: "The barn. Farmer Fern, a rooster and an onion you must not eat.", 4: "Sand, sun and Lifeguard Lou on whistle duty.", 5: "Matron Maude runs a very tight ward.", 6: "Ms Brimstone's place. Everything is on fire.", 7: "Bath Boss Bev wants two clean cats. Good luck.", 8: "Mrs Claus's workshop. Hands off the pudding.", 9: "Bunny Bonnie hid the eggs. Clover found them.", 10: "Wilhelmina's haunted kitchen. Spooky snacks." };
+  var SDESC = { 1: "The Kitchen bench. The VAC-3000 is waiting.", 2: "The vet clinic. Two Vet vs Cat boss fights.", 3: "The barn. Farmer Fern, a rooster and an onion you must not eat.", 4: "Sand, sun and Lifeguard Lou on whistle duty.", 5: "Matron Maude runs a very tight ward.", 6: "Ms Brimstone's place. Everything is on fire.", 7: "Bath Boss Bev wants two clean cats. Good luck.", 8: "Mrs Claus's workshop. Hands off the pudding.", 9: "Bunny Bonnie hid the eggs. Clover found them.", 10: "Countess Vesper's haunted castle. Spooky snacks." };
   function todayUI() {
     var n = dailyStage(), K = KEYS[n], won = K && !!lget(K.won), best = K ? lget(K.best) || 0 : 0, nm = n <= 3 ? ["", "The Kitchen", "The Vet", "The Farm"][n] : (LCFG[n] && LCFG[n].name) || STNAME[n];
     if ($("bk-tday")) $("bk-tday").textContent = DAYN[sydWd()] + (seasonStage() ? " · holiday level" : "");
