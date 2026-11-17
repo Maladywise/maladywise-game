@@ -179,6 +179,7 @@
     [4, "\ud83d\udcdf", "MET call. All hands.", "Off the charts", 5],
     [5, "\u26a1", "Shockable rhythm. Stand clear.", "Is this real?", 5],
     [7, "\ud83d\ude91", "Trauma team activated", "Breaking the internet", 5],
+    [8.5, "\ud83d\udfe4", "Code brown. Brace yourselves.", "Absolute chaos", 5],
     [10, "\ud83c\udf0b", "Mass casualty. Call everyone in.", "Legendary", 5]
   ];
   function heatHtml(d) {
