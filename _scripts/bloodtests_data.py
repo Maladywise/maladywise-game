@@ -136,9 +136,9 @@ related=[HUB_R, ("/blood-tests/high-esr/", "Blood test", "High ESR"), ("/polymya
 # ---------------------------------------------------------------- ALT
 dict(
 slug="high-alt", crumb="High ALT", test="Alanine aminotransferase (ALT)", group="Liver", cls="l",
-title="High ALT (SGPT): What Raised Liver Enzymes Mean",
+title="High ALT (SGPT): Usually Fatty Liver. What Your Result Means",
 h1="High ALT (SGPT)",
-desc="High ALT (SGPT) explained: normal range, common causes like fatty liver, alcohol and medicines, the other liver tests, next steps and red flags.",
+desc="ALT over 40 (men) or 35 (women)? Fatty liver is the commonest cause, then alcohol, medicines and hard exercise. Mild vs very high ALT, the next tests and red flags.",
 card="ALT and SGPT are the same test. Fatty liver, alcohol and medicines lead the list. The other liver tests, decoded.",
 lede="ALT is an enzyme that sits mostly inside liver cells. When they’re irritated or damaged, ALT leaks into the blood. Its old name is SGPT, so if your report says SGPT, it’s the same test.",
 qa="ALT (also called SGPT) above about 40 U/L in men or 35 U/L in women is raised. Fatty liver is the commonest cause, followed by alcohol, medicines and supplements, hard exercise and viral hepatitis. Even mild rises deserve a cause. ALT over 10 times the upper limit usually means acute hepatitis and needs prompt review.",
@@ -514,9 +514,9 @@ related=[HUB_R, ("/blood-tests/low-platelets/", "Blood test", "Low Platelets"), 
 # ---------------------------------------------------------------- potassium
 dict(
 slug="high-potassium", crumb="High potassium", test="Serum potassium", group="Electrolytes", cls="m",
-title="High Potassium (Hyperkalaemia): Causes and Red Flags",
+title="High Potassium Result: False Alarm or Urgent? (5.5 to 6.5+)",
 h1="High Potassium (Hyperkalaemia)",
-desc="High potassium explained: normal range, why many high results are a damaged sample, kidney and medicine causes, and the levels that need same-day care.",
+desc="Potassium over 5.2 mmol/L? Many high results come from burst cells in the tube, not your body. What 5.5, 6.0 and 6.5+ mean, common causes, and when it’s urgent.",
 card="Often a damaged sample. Kidney and medicine causes, and why 6.5 or more is an emergency.",
 lede="Potassium keeps your heart and muscles firing normally. A high result on a routine test is often a false alarm caused by the sample itself, but a true high level can upset the heart rhythm, so it’s always rechecked promptly.",
 qa="Potassium above about 5.2 mmol/L is high. Mild results of 5.5–5.9 are often from a haemolysed or delayed sample, or from medicines and kidney disease, and are repeated within days. 6.0–6.4 needs a repeat within a day. 6.5 or more is severe and needs hospital assessment straight away.",
