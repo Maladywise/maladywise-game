@@ -1,6 +1,6 @@
 /* Basil + Clover, Stage 3: THE FARM. A barn, a hay-bale bench, farm junk to kick and farm food to eat.
    The Farm reuses the Vet's mechanics (events, boss attacks) from vet.js with a farm skin:
-   Dr Pokesworth becomes Farmer Fern (overalls, straw hat), Nurse Burrito becomes Farmhand Pip,
+   Dr Pokesworth becomes Gertrude the Goose (overalls, straw hat), Nurse Burrito becomes Farmhand Pip,
    towels become hessian sacks, the thermometer lunge becomes a rake. Copy is swapped via TEXT.SAY / TEXT.SAYRE.
    basil.js calls MW_FARM(api) once; this file returns the same API shape as MW_VET. */
 (function () {
@@ -15,7 +15,7 @@
     function line(pts, col, lw) { ctx.strokeStyle = col; ctx.lineWidth = lw; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.beginPath(); pts.forEach(function (p, i) { if (i) ctx.lineTo(p[0], p[1]); else ctx.moveTo(p[0], p[1]); }); ctx.stroke(); }
     function txt(s, x, y, font, col, align, stroke, sw) { ctx.font = font; ctx.textAlign = align || "center"; ctx.lineJoin = "round"; if (stroke) { ctx.lineWidth = sw || 4; ctx.strokeStyle = stroke; ctx.strokeText(s, x, y); } ctx.fillStyle = col; ctx.fillText(s, x, y); }
 
-    // Farmer Fern's straw hat (drawn in the Vet module's head space)
+    // Gertrude the Goose's straw hat (drawn in the Vet module's head space)
     function hat(c, hx, hy, fz) {
       c.save(); c.translate(hx, hy - 30); if (fz) c.rotate(0.22);
       c.fillStyle = "#E8C766"; c.beginPath(); c.ellipse(0, 0, 60, 12, 0, 0, 7); c.fill(); c.strokeStyle = "#C9A23E"; c.lineWidth = 2; c.stroke();
@@ -24,8 +24,9 @@
       c.strokeStyle = "rgba(160,120,40,.5)"; c.lineWidth = 1.2; for (var k = -24; k <= 24; k += 8) { c.beginPath(); c.moveTo(k, -3); c.lineTo(k * 0.8, -30); c.stroke(); }
       c.restore();
     }
-    var SKIN = { coat: "#4A78B8", collar: "#C2553A", lapel: "#3E66A0", badge: "#8A5A2B", name: "FARMER FERN", noSteth: true, noGlasses: true, hair: "#9A5B2E", hat: hat,
+    var SKIN = { coat: "#4A78B8", collar: "#C2553A", lapel: "#3E66A0", badge: "#8A5A2B", name: "GERTRUDE THE GOOSE", noSteth: true, noGlasses: true, hair: "#9A5B2E", hat: hat,
       sleeve: "#C2553A", glove: "#7BA05B", prop: "#8A5A2B", propLabel: "", mug: "FARMER", towel: "#D8BC88", towelStripe: "#9C7A44", nurse: "#5B8C3A", nurseName: "FARMHAND" };
+    if (window.MW_BOSSART && window.MW_BOSSART.goose) { SKIN.body = window.MW_BOSSART.goose.body; SKIN.arm = window.MW_BOSSART.goose.arm; }
     var V = window.MW_VET(Object.assign({}, A, { skin: SKIN }));
     if (!V) return null;
 
@@ -44,10 +45,10 @@
       HEDGEQ: ["That was a hedgehog. Asleep in the hay. Was.", "Never kick a sleeping hedgehog. Farm rule one.", "Prickly lesson. Very prickly.", "The hedgehog has filed a complaint.", "Bold move. Wrong, and also rude."],
       BADQ: { onion: "Onion. Toxic to cats. She spat it out, sensibly.", rottenegg: "Rotten egg. The smell left before she did.", chilli: "Chilli. Clover is now a dragon. A sweaty one.", mouldybread: "Mouldy bread. Even Clover has standards. Low ones." },
       SMASHQ: { vase: ["Milk churn: tipped. Don’t cry over it.", "That was tomorrow’s cream. Was.", "Clang. The cows heard that."], tv: ["The barn radio: silenced. The cows rejoice.", "No more country music. You’re welcome.", "Static. Then nothing."], tank: ["THE FEED BIN. Jackpot. +1 life.", "Feed bin busted. Snacks everywhere. +1 life."] },
-      CAMP_NAME: [null, "SUNRISE", "FEED TIME", "HAY FEVER", "MUD SEASON", "FARMER FERN", "ROOSTER HOUR", "MARKET DAY", "SHEARING SHED", "HARVEST", "THE FINAL MILKING"],
-      CAMP_TIP: [null, "A farm stay. Basil hates it already. Kick everything off the hay bale.", "Clover’s turn: eat the farm food. Not the onion (toxic to cats).", "Faster. More prickly things. The flies are out.", "Mud everywhere. Faster again. The fleas are hopping.", "BOSS: Farmer Fern. Hit the glowing spots. Jump the rake. Wriggle out of the sack.", "Faster. The rooster is restless.", "Faster. Rotten food everywhere. Spot it.", "Faster. Heavier things. The barn cat is cockier.", "Faster. Harvest: everyone’s yawning.", "Sunset. Top speed. One life. Then Farmer Fern and Farmhand Pip."],
+      CAMP_NAME: [null, "SUNRISE", "FEED TIME", "HAY FEVER", "MUD SEASON", "GERTRUDE", "ROOSTER HOUR", "MARKET DAY", "SHEARING SHED", "HARVEST", "THE FINAL MILKING"],
+      CAMP_TIP: [null, "A farm stay. Basil hates it already. Kick everything off the hay bale.", "Clover’s turn: eat the farm food. Not the onion (toxic to cats).", "Faster. More prickly things. The flies are out.", "Mud everywhere. Faster again. The fleas are hopping.", "BOSS: Gertrude the Goose. Hit the glowing spots. Jump the rake. Wriggle out of the sack.", "Faster. The rooster is restless.", "Faster. Rotten food everywhere. Spot it.", "Faster. Heavier things. The barn cat is cockier.", "Faster. Harvest: everyone’s yawning.", "Sunset. Top speed. One life. Then Gertrude the Goose and Farmhand Pip."],
       CTITLES: [[5, "Unruly"], [10, "Feral"], [15, "Needs Two Farmhands"], [25, "Banned from the Barn"], [40, "Farm Show Legend"]],
-      SPOTS: ["CLIPBOARD", "HAT", "TEA"],
+      SPOTS: ["CLIPBOARD", "BEAK", "TEA"],
       NURSELABEL: "FARMHAND PIP · SACKS", KEY: "farm",
       SAY: {
         "FRAZZLED!": "FURIOUS!", " · FRAZZLED": " · FURIOUS", ": The Vet": ": The Farm",
@@ -56,16 +57,16 @@
         "47 KG?! HAYWIRE": "PRIZE PUMPKIN?! HAYWIRE", "Perfect weigh-in +": "Prize-winning stillness +", "COCKATOO! SQUAWK: ": "ROOSTER! COCK-A-DOODLE: ",
         "Sat on that tail! +": "Dodged the hose! +", "Flinched early. Vaccinated. Annoyingly healthy.": "Flinched early. Dipped. Smells of sheep.",
         "TREAT POCKET! ×3": "OVERALLS POCKET! ×3", "Half health. Glasses askew, coffee spilt, and faster now. Rude.": "Half health. Hat askew, tea spilt, and faster now. Rude.",
-        "Echidna!": "Hedgehog!", "THE VET WON": "THE FARMER WON", "Confiscated! ‘Not on her diet.’": "Confiscated! ‘That’s for the chooks.’", "PEN TORCH · ": "TORCH · ",
+        "Echidna!": "Hedgehog!", "THE VET WON": "THE GOOSE WON", "Confiscated! ‘Not on her diet.’": "Confiscated! ‘That’s for the chooks.’", "PEN TORCH · ": "TORCH · ",
         "TANGLED IN TOWEL!": "TANGLED IN A SACK!", "BURRITO’D! -25%": "SACKED! -25%", "TEMPERATURE TAKEN. -10%": "HOSED DOWN. -10%",
         "The cockatoo! SQUAWK: everything falls twice as fast. Tap it to hiss it off.": "The rooster! COCK-A-DOODLE: everything falls twice as fast. Tap it to hiss it off.",
-        "Too slow. The vet’s distracted now.": "Too slow. The farmer’s distracted now.", "DR POKESWORTH IS": "FARMER FERN IS", "DR POKESWORTH · ": "FARMER FERN · ",
-        "VET GIVES UP": "FARMER GIVES UP", "SQUAWK!": "COCK-A-DOODLE!", "VET!": "FARMER!", "THE VET’S BACK. WITH A NURSE": "THE FARMER’S BACK. WITH A FARMHAND"
+        "Too slow. The vet’s distracted now.": "Too slow. The goose’s distracted now.", "DR POKESWORTH IS": "GERTRUDE THE GOOSE IS", "DR POKESWORTH · ": "GERTRUDE THE GOOSE · ",
+        "VET GIVES UP": "FARMER GIVES UP", "SQUAWK!": "COCK-A-DOODLE!", "VET!": "GOOSE!", "THE VET’S BACK. WITH A NURSE": "THE GOOSE’S BACK. WITH A FARMHAND"
       },
       SAYRE: [
-        [/All ten vet rounds\. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all\./, "All ten farm rounds. Farmer Fern handed over the prize ribbon, Farmhand Pip waved a white sack and the hedgehog slept through it all."],
+        [/All ten vet rounds\. Dr Pokesworth handed over the treat jar, Nurse Burrito waved a white towel and the echidna slept through it all\./, "All ten farm rounds. Gertrude the Goose handed over the prize ribbon, Farmhand Pip waved a white sack and the hedgehog slept through it all."],
         [/Vet Endless unlocked/g, "Farm Endless unlocked"], [/Temperature taken\. 38\.6°\. Dignity: 0%\./g, "Hosed down. Soggy. Dignity: 0%."],
-        [/Dr Pokesworth/g, "Farmer Fern"], [/Nurse Burrito/g, "Farmhand Pip"], [/\bnurse\b/g, "farmhand"], [/\bthe vet\b/g, "the farmer"], [/\bvet\b/g, "farm"], [/\bVet\b/g, "Farm"], [/\bVET\b/g, "FARM"],
+        [/Dr Pokesworth/g, "Gertrude the Goose"], [/Nurse Burrito/g, "Farmhand Pip"], [/\bnurse\b/g, "farmhand"], [/\bthe vet\b/g, "the goose"], [/\bvet\b/g, "farm"], [/\bVet\b/g, "Farm"], [/\bVET\b/g, "FARM"],
         [/cockatoo/g, "rooster"], [/Cockatoo/g, "Rooster"], [/thermometer/g, "rake"], [/Thermometer/g, "Rake"], [/THERMOMETER/g, "RAKE"],
         [/towel/g, "sack"], [/Towel/g, "Sack"], [/TOWEL/g, "SACK"], [/clinic/g, "farm"], [/exam table/g, "hay bale"], [/[Rr]eception/g, "the farmhouse"], [/waiting room/g, "barn"]
       ]

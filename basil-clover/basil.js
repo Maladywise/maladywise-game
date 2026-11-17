@@ -335,21 +335,21 @@
   var BP = {
     2: { intro: null },
     3: { order: ["charge", "charge", "suck"], w: ["charge", "charge", "charge", "suck", "cone", "scratch"], dbl: 1, sp: 0.9, hp: 1.1,
-         intro: "Farmer Fern swings that rake both ways. Jump, then jump again." },
+         intro: "Gertrude the Goose charges, turns round and charges straight back. Jump, then jump again." },
     4: { order: ["suck", "cone", "suck"], w: ["suck", "suck", "suck", "cone", "charge", "scratch"], vol: 1, sp: 1.15,
-         intro: "Lifeguard Lou loves a rip current. Hold on tight, and send every bucket back." },
+         intro: "Captain Pinch grabs with her claws and flings buckets. Hold on tight, and send every bucket back." },
     5: { order: ["scratch", "scratch", "suck"], w: ["scratch", "scratch", "scratch", "suck", "cone", "charge"], fakes: 2, fakeP: 0.7, sp: 0.8, hp: 1.15,
-         intro: "Matron Maude is the queen of the fake-out. Don’t move until it says BOLT." },
+         intro: "IV-9000 beeps to fake you out. Don’t move until it says BOLT." },
     6: { order: ["charge", "cone", "scratch", "suck"], w: ["charge", "cone", "scratch", "suck"], angryAt: 0.8, sp: 1.3, dbl: 1, hp: 0.95,
-         intro: "Ms Brimstone starts hot and gets hotter. She’s angry at 80% health." },
+         intro: "Blaze starts hot and gets hotter. She’s angry at 80% health." },
     7: { order: ["suck", "suck", "cone"], w: ["suck", "suck", "suck", "cone", "scratch", "charge"], swap: true, sp: 1,
-         intro: "Bath Boss Bev grabs one cat, then swaps to the other halfway. Watch both." },
+         intro: "Admiral Quackers grabs one cat, then swaps to the other halfway. Watch both." },
     8: { order: ["cone", "cone", "suck"], w: ["cone", "cone", "cone", "suck", "charge", "scratch"], vol: 2, sp: 1,
-         intro: "Mrs Claus throws presents in threes. Swat every one back." },
+         intro: "The Snow Queen flings stockings in threes. Swat every one back." },
     9: { order: ["charge", "suck", "scratch", "cone"], w: ["charge", "suck", "scratch", "cone"], food: [1.6, 2.6, 4], sp: 1.35, hp: 0.9,
-         intro: "Bunny Bonnie hops about and gobbles every egg to heal. Get to the food first." },
+         intro: "Mega Bunny thumps about and gobbles every egg to heal. Get to the food first." },
     10: { order: ["scratch", "cone", "charge"], w: ["scratch", "scratch", "cone", "charge", "suck"], blink: true, fakes: 1, fakeP: 0.6, sp: 1,
-         intro: "Countess Vesper vanishes into bats and pops up somewhere else. Hit the glowing spots wherever she lands." }
+         intro: "Boo fades out and pops up somewhere else. Hit the glowing spots wherever she lands." }
   };
   function bp() { return STAGE >= 2 ? BP[STAGE] || {} : {}; }
   var SPOTS = ["BRUSH", "SENSOR", "DUST BIN"], BHOME = { b: 46, c: W - 46 };
@@ -1797,7 +1797,7 @@
     todayUI();
   }
   // One level a day (Nov 2026): only today's stage is playable. Endless for it opens once that stage's round 10 is beaten.
-  var SDESC = { 1: "The Kitchen bench. The VAC-3000 is waiting.", 2: "The vet clinic. Two Vet vs Cat boss fights.", 3: "The barn. Farmer Fern, a rooster and an onion you must not eat.", 4: "Sand, sun and Lifeguard Lou on whistle duty.", 5: "Matron Maude runs a very tight ward.", 6: "Ms Brimstone's place. Everything is on fire.", 7: "Bath Boss Bev wants two clean cats. Good luck.", 8: "Mrs Claus's workshop. Hands off the pudding.", 9: "Bunny Bonnie hid the eggs. Clover found them.", 10: "Countess Vesper's haunted castle. Spooky snacks." };
+  var SDESC = { 1: "The Kitchen bench. The VAC-3000 is waiting.", 2: "The vet clinic. Two Vet vs Cat boss fights.", 3: "The barn. Gertrude the Goose, a rooster and an onion you must not eat.", 4: "Sand, sun and Captain Pinch on whistle duty.", 5: "IV-9000 runs a very tight ward.", 6: "Blaze's place. Everything is on fire.", 7: "Admiral Quackers wants two clean cats. Good luck.", 8: "The Snow Queen's workshop. Hands off the pudding.", 9: "Mega Bunny hid the eggs. Clover found them.", 10: "Boo's haunted house. Spooky snacks." };
   function todayUI() {
     var n = dailyStage(), K = KEYS[n], won = K && !!lget(K.won), best = K ? lget(K.best) || 0 : 0, nm = n <= 3 ? ["", "The Kitchen", "The Vet", "The Farm"][n] : (LCFG[n] && LCFG[n].name) || STNAME[n];
     if ($("bk-tday")) $("bk-tday").textContent = DAYN[sydWd()] + (seasonStage() ? " · holiday level" : "");

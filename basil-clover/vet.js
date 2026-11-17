@@ -318,6 +318,7 @@
     function vetBody(x, o) {
       o = o || {}; var fz = !!o.fraz, base = VB + (o.ko || 0) * 70;
       ctx.save(); ctx.translate(x, base); ctx.scale(VK, VK); if (o.shake) ctx.translate(Math.sin(t() * 70) * 3, 0);
+      if (SK.body) { if (o.coned) coneRing(0, -186, 70, 64); SK.body(ctx, { fz: fz, hit: !!(o.hit || o.ko), t: t() }); if (o.coned) coneRim(0, -186, 70, 64); ctx.restore(); return; }
       ctx.fillStyle = SK.coat || "#FFFFFF"; ctx.beginPath(); ctx.moveTo(-66, 0); ctx.lineTo(-62, -108); ctx.quadraticCurveTo(-58, -132, -30, -138); ctx.lineTo(30, -138); ctx.quadraticCurveTo(58, -132, 62, -108); ctx.lineTo(66, 0); ctx.closePath(); ctx.fill(); ctx.strokeStyle = "#D6DEE2"; ctx.lineWidth = 2; ctx.stroke();
       ctx.fillStyle = SK.collar || "#2E9C8F"; ctx.beginPath(); ctx.moveTo(-26, -138); ctx.lineTo(26, -138); ctx.lineTo(0, -92); ctx.closePath(); ctx.fill();
       ctx.fillStyle = SK.lapel || "#EEF3F6"; ctx.beginPath(); ctx.moveTo(-30, -138); ctx.lineTo(-6, -84); ctx.lineTo(-22, -84); ctx.lineTo(-40, -128); ctx.closePath(); ctx.fill(); ctx.beginPath(); ctx.moveTo(30, -138); ctx.lineTo(6, -84); ctx.lineTo(22, -84); ctx.lineTo(40, -128); ctx.closePath(); ctx.fill();
@@ -353,6 +354,7 @@
     }
     // an arm from the shoulder to a hand, with a purple-blue glove
     function arm(sx, sy, hx, hy, side) {
+      if (SK.arm) return SK.arm(ctx, sx, sy, hx, hy, side, t());
       ctx.strokeStyle = "#D6DEE2"; ctx.lineWidth = 23; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.quadraticCurveTo(sx + side * 18, (sy + hy) / 2 + 18, hx, hy); ctx.stroke();
       ctx.strokeStyle = SK.sleeve || "#FFFFFF"; ctx.lineWidth = 19; ctx.stroke();
       ell(hx, hy, 10.5, 9.5, SK.glove || "#8BC4E8"); [-5, -2, 2, 5].forEach(function (f) { ell(hx + f + side * 5, hy - 8, 2.4, 4.4, SK.glove || "#8BC4E8"); });
