@@ -11,7 +11,9 @@
     "wrong": [
      "Tibia",
      "Humerus",
-     "Fibula"
+     "Fibula",
+     "First rib",
+     "Scapula"
     ],
     "why": "The thigh bone: your longest and strongest. It’s roughly a quarter of your height, which is how forensic teams estimate stature from a single bone.",
     "art": "skeleton",
@@ -26,7 +28,9 @@
     "wrong": [
      "Right ventricle",
      "Left atrium",
-     "Right atrium"
+     "Right atrium",
+     "Pulmonary vein",
+     "Tricuspid valve"
     ],
     "why": "The muscly one that pumps blood to the whole body. Diagrams face you, so the patient’s left is on your right. Everyone falls for that once.",
     "art": "heart",
@@ -41,7 +45,9 @@
     "wrong": [
      "Parietal lobe",
      "Temporal lobe",
-     "Occipital lobe"
+     "Occipital lobe",
+     "Somatosensory cortex",
+     "Premotor cortex"
     ],
     "why": "Planning, personality and impulse control. In 1848 an iron rod shot through Phineas Gage’s frontal lobe; he survived, but friends said he was ‘no longer Gage’.",
     "art": "brain",
@@ -56,7 +62,9 @@
     "wrong": [
      "Vagus nerve",
      "Intercostal nerves",
-     "Accessory nerve"
+     "Accessory nerve",
+     "Common fibular (peroneal) nerve",
+     "Nerve to obturator internus"
     ],
     "why": "‘C3, 4, 5 keeps the diaphragm alive.’ It starts in the neck because the diaphragm began life up there in the embryo, then migrated down, dragging its nerve along."
    },
@@ -67,7 +75,9 @@
     "wrong": [
      "Scapula",
      "Sternum",
-     "First rib"
+     "First rib",
+     "Lumbar spine",
+     "Mandible"
     ],
     "why": "The collarbone. It’s the first bone in the body to start hardening, around week five or six of pregnancy, and one of the most commonly broken bones in kids.",
     "art": "skeleton",
@@ -89,7 +99,9 @@
     "wrong": [
      "Stomach",
      "Spleen",
-     "Pancreas"
+     "Pancreas",
+     "Gallbladder",
+     "Duodenum"
     ],
     "why": "Your biggest internal organ and a full-time chemistry lab. It can regrow from about a quarter of its tissue, which is why living donors can give a slice.",
     "art": "gut",
@@ -104,7 +116,9 @@
     "wrong": [
      "Cornea",
      "Iris",
-     "Vitreous"
+     "Vitreous",
+     "Lateral rectus",
+     "Ciliary body"
     ],
     "why": "Clear and flexible, it fine-tunes focus. It keeps adding layers all your life, like an onion, and slowly stiffens. Hello, reading glasses at 45.",
     "art": "eye",
@@ -119,7 +133,9 @@
     "wrong": [
      "Femur",
      "Tibia",
-     "Fibula"
+     "Fibula",
+     "First rib",
+     "Pelvis"
     ],
     "why": "The kneecap: the body’s biggest sesamoid bone, meaning it grows inside a tendon. Babies have a cartilage version that only turns to bone at around three to six.",
     "art": "skeleton",
@@ -134,7 +150,9 @@
     "wrong": [
      "Oesophagus",
      "Larynx",
-     "Main bronchus"
+     "Main bronchus",
+     "Left upper lobe",
+     "Hilum"
     ],
     "why": "The windpipe, held open by C-shaped rings of cartilage. The open back of each ‘C’ lets the oesophagus bulge forward when you swallow a big mouthful.",
     "art": "lungs",
@@ -149,7 +167,9 @@
     "wrong": [
      "Radial nerve",
      "Median nerve",
-     "Musculocutaneous nerve"
+     "Musculocutaneous nerve",
+     "T10–L1",
+     "Tibial nerve"
     ],
     "why": "Not funny, not a bone. The ulnar nerve sits just under the skin behind the elbow, so a knock fires off tingles into your ring and little fingers."
    }
@@ -167,7 +187,9 @@
     "wrong": [
      "Ulna",
      "Humerus",
-     "Fibula"
+     "Fibula",
+     "Clavicle",
+     "Sternum"
     ],
     "why": "The thumb-side forearm bone. It rolls around the ulna when you turn a doorknob, and it’s the usual wrist break after a fall on an outstretched hand.",
     "art": "skeleton",
@@ -182,7 +204,9 @@
     "wrong": [
      "Pulmonary trunk",
      "Superior vena cava",
-     "Pulmonary vein"
+     "Pulmonary vein",
+     "Pulmonary arteries",
+     "Left atrium"
     ],
     "why": "The body’s main pipe, about as wide as your thumb. It rises out of the left ventricle, arches over the top and dives down behind the heart.",
     "art": "heart",
@@ -197,7 +221,9 @@
     "wrong": [
      "Median nerve",
      "Ulnar nerve",
-     "Axillary nerve"
+     "Axillary nerve",
+     "Superior gluteal nerve",
+     "Vagus nerve (via the pharyngeal plexus)"
     ],
     "why": "The superficial branch of the radial nerve owns the back of the first web space. It’s the go-to spot for testing radial sensation after an upper arm fracture.",
     "art": "handback",
@@ -212,7 +238,9 @@
     "wrong": [
      "Malleus",
      "Oval window",
-     "Cochlea"
+     "Cochlea",
+     "Back of the nose (nasopharynx)",
+     "Incus"
     ],
     "why": "The eardrum: about a tenth of a millimetre thick, thinner than paper. Small holes often heal on their own within a few weeks.",
     "art": "ear",
@@ -227,7 +255,9 @@
     "wrong": [
      "Radial nerve",
      "Suprascapular nerve",
-     "Musculocutaneous nerve"
+     "Musculocutaneous nerve",
+     "Sciatic nerve",
+     "Third and fourth"
     ],
     "why": "It wraps around the neck of the humerus, so dislocations stretch it. The numb ‘regimental badge’ patch, where a sleeve badge would sit, gives it away."
    }
@@ -245,7 +275,9 @@
     "wrong": [
      "Lunate",
      "Trapezium",
-     "Capitate"
+     "Capitate",
+     "Trapezoid",
+     "Proximal phalanx of the little finger"
     ],
     "why": "Fall on an outstretched hand, tender snuffbox: think scaphoid. Its blood supply enters from the far end, so a break across the middle can starve the near piece.",
     "art": "hand",
@@ -260,7 +292,9 @@
     "wrong": [
      "Brainstem",
      "Occipital lobe",
-     "Temporal lobe"
+     "Temporal lobe",
+     "Primary visual cortex",
+     "Parietal lobe"
     ],
     "why": "Latin for ‘little brain’: about a tenth of brain volume, yet roughly four in five of its neurons. Neuroscientist Suzana Herculano-Houzel counted them by turning brains into soup.",
     "art": "brain",
@@ -275,7 +309,9 @@
     "wrong": [
      "Caecum",
      "Ileum",
-     "Gallbladder"
+     "Gallbladder",
+     "Pancreas",
+     "Small intestine"
     ],
     "why": "Maybe not useless after all: it may act as a safe house for good gut bacteria. Its tip can point in lots of directions, which is why appendicitis pain can wander.",
     "art": "gut",
@@ -290,7 +326,9 @@
     "wrong": [
      "Lens",
      "Sclera",
-     "Iris"
+     "Iris",
+     "Choroid",
+     "Lateral rectus"
     ],
     "why": "The clear front window, doing about two-thirds of the eye’s focusing. It has no blood vessels and takes much of its oxygen straight from the air.",
     "art": "eye",
@@ -305,7 +343,9 @@
     "wrong": [
      "Radial nerve",
      "Median nerve",
-     "Axillary nerve"
+     "Axillary nerve",
+     "Superficial fibular nerve",
+     "Accessory nerve"
     ],
     "why": "It punches through coracobrachialis, powers elbow flexion, then ends as a skin nerve on the outer forearm. Hence ‘musculo’ plus ‘cutaneous’."
    }
@@ -323,7 +363,9 @@
     "wrong": [
      "Capitate",
      "Triquetrum",
-     "Pisiform"
+     "Pisiform",
+     "Scaphoid",
+     "Trapezium"
     ],
     "why": "‘Hamate’ means hooked. Its hook can snap in golfers, cricketers and batters when the grip handle jams into the palm on a mistimed swing.",
     "art": "hand",
@@ -338,7 +380,9 @@
     "wrong": [
      "Malleus",
      "Stapes",
-     "Vestibule"
+     "Vestibule",
+     "Ear canal",
+     "Back of the nose (nasopharynx)"
     ],
     "why": "The anvil, middle of the three ear bones. The ossicles are already close to adult size at birth, so they barely grow while the rest of you does.",
     "art": "ear",
@@ -353,7 +397,9 @@
     "wrong": [
      "Posterior cruciate ligament",
      "Medial collateral ligament",
-     "Lateral meniscus"
+     "Lateral meniscus",
+     "Lateral collateral ligament",
+     "Iliotibial band"
     ],
     "why": "Front of the cross, hence ‘anterior’. Pop, swelling within hours, wobbly knee. Women footballers tear theirs two to eight times more often than men.",
     "art": "knee",
@@ -368,7 +414,9 @@
     "wrong": [
      "Tricuspid valve",
      "Aortic valve",
-     "Pulmonary valve"
+     "Pulmonary valve",
+     "Pulmonary arteries",
+     "Bronchial arteries"
     ],
     "why": "Two leaflets between the left atrium and ventricle. It’s named because someone thought it looked like a bishop’s mitre. Yes, really.",
     "art": "heart",
@@ -383,7 +431,9 @@
     "wrong": [
      "Thoracodorsal nerve",
      "Dorsal scapular nerve",
-     "Suprascapular nerve"
+     "Suprascapular nerve",
+     "Deep branch of the ulnar nerve",
+     "Buccal branch"
     ],
     "why": "It supplies serratus anterior, which pins the shoulder blade to the ribs. It runs long and exposed down the chest wall, so heavy backpacks and surgery can injure it."
    }
@@ -401,7 +451,9 @@
     "wrong": [
      "Scaphoid",
      "Capitate",
-     "Triquetrum"
+     "Triquetrum",
+     "Trapezium",
+     "First metacarpal"
     ],
     "why": "Moon-shaped, in the middle of the first row. It’s the carpal bone that dislocates most often, and it can quietly lose its blood supply in Kienböck disease.",
     "art": "hand",
@@ -416,7 +468,9 @@
     "wrong": [
      "Iris",
      "Choroid",
-     "Lens"
+     "Lens",
+     "Optic nerve",
+     "Vitreous"
     ],
     "why": "A ring of muscle that changes the lens shape so you can focus up close. It also makes aqueous humour, the fluid that keeps the front of your eye inflated.",
     "art": "eye",
@@ -431,7 +485,9 @@
     "wrong": [
      "Tibia",
      "Ulna",
-     "Radius"
+     "Radius",
+     "Humerus",
+     "Coccyx"
     ],
     "why": "The skinny outer leg bone. It carries little weight, so surgeons can borrow a length of it, with its blood supply, to rebuild a jaw.",
     "art": "skeleton",
@@ -446,7 +502,9 @@
     "wrong": [
      "Spleen",
      "Duodenum",
-     "Gallbladder"
+     "Gallbladder",
+     "Small intestine",
+     "Aorta"
     ],
     "why": "Its head nestles in the C-curve of the duodenum. It makes insulin plus over a litre of digestive juice a day, which is why pancreatitis is so nasty.",
     "art": "gut",
@@ -461,7 +519,9 @@
     "wrong": [
      "Tibial nerve",
      "Femoral nerve",
-     "Sural nerve"
+     "Sural nerve",
+     "Ansa cervicalis",
+     "Intercostal nerves"
     ],
     "why": "It wraps around the neck of the fibula just under the skin, so casts, crossed legs and long squats can squash it."
    }
@@ -479,7 +539,9 @@
     "wrong": [
      "Trapezium",
      "Capitate",
-     "Scaphoid"
+     "Scaphoid",
+     "First metacarpal",
+     "Hamate"
     ],
     "why": "The trapezium sits by the thumb; the trapezoid is its little neighbour. Memory trick: trapeziUM by the thUMb. The trapezoid is one of the least often broken carpals.",
     "art": "hand",
@@ -494,7 +556,9 @@
     "wrong": [
      "Wernicke’s area",
      "Primary motor cortex",
-     "Angular gyrus"
+     "Angular gyrus",
+     "Temporal lobe",
+     "Frontal lobe"
     ],
     "why": "In the left frontal lobe, for producing speech. Paul Broca’s famous patient was nicknamed ‘Tan’ because it was almost the only word he could say.",
     "art": "brain",
@@ -509,7 +573,9 @@
     "wrong": [
      "Middle lobe",
      "Left lower lobe",
-     "Cardiac notch"
+     "Cardiac notch",
+     "Hilum",
+     "Pleura"
     ],
     "why": "The left lung has no middle lobe; this tongue-shaped part of the upper lobe does the job. ‘Lingula’ is Latin for little tongue.",
     "art": "lungs",
@@ -524,7 +590,9 @@
     "wrong": [
      "Mandibular nerve (V3)",
      "Facial nerve",
-     "Lesser occipital nerve"
+     "Lesser occipital nerve",
+     "Trigeminal nerve",
+     "Vagus nerve"
     ],
     "why": "The trigeminal skips the angle of the jaw; it belongs to the great auricular (C2–C3). Numbness that includes the jaw angle points away from the trigeminal."
    },
@@ -535,7 +603,9 @@
     "wrong": [
      "Vagus nerve",
      "Glossopharyngeal nerve",
-     "Facial nerve"
+     "Facial nerve",
+     "Thoracodorsal nerve",
+     "Musculocutaneous nerve"
     ],
     "why": "The rebel of the palate: every other palate muscle is vagus. It helps open the Eustachian tube when you yawn or swallow on a plane."
    }
@@ -553,7 +623,9 @@
     "wrong": [
      "Femur",
      "Radius",
-     "Clavicle"
+     "Clavicle",
+     "Sacrum",
+     "Lumbar spine"
     ],
     "why": "The upper arm bone. It sounds like ‘humorous’, which is one theory for the name ‘funny bone’, though the zing is really the ulnar nerve.",
     "art": "skeleton",
@@ -568,7 +640,9 @@
     "wrong": [
      "Liver",
      "Spleen",
-     "Pancreas"
+     "Pancreas",
+     "Caecum",
+     "Sigmoid colon"
     ],
     "why": "A J-shaped muscle bag full of acid around pH 1 to 3. Its surface lining renews every few days so it doesn’t digest itself.",
     "art": "gut",
@@ -583,7 +657,9 @@
     "wrong": [
      "Left atrium",
      "Right ventricle",
-     "Left ventricle"
+     "Left ventricle",
+     "Left ventricular free wall",
+     "Hepatic portal vein"
     ],
     "why": "The receiving bay for blood coming back from the body. It houses the heart’s own pacemaker, the sinoatrial node.",
     "art": "heart",
@@ -598,7 +674,9 @@
     "wrong": [
      "Parietal lobe",
      "Temporal lobe",
-     "Cerebellum"
+     "Cerebellum",
+     "Angular gyrus",
+     "Auditory cortex"
     ],
     "why": "Vision lives at the back of your head, about as far from your eyes as it gets. A hard knock there can make you literally ‘see stars’.",
     "art": "brain",
@@ -613,7 +691,9 @@
     "wrong": [
      "Optic nerve (II)",
      "Trigeminal nerve (V)",
-     "Vagus nerve (X)"
+     "Vagus nerve (X)",
+     "Glossopharyngeal nerve (IX)",
+     "Musculocutaneous nerve"
     ],
     "why": "Cranial nerve number one. Smell skips the thalamus relay that other senses use on the way in, one reason a smell can drag up a memory so fast."
    }
@@ -631,7 +711,9 @@
     "wrong": [
      "Fibula",
      "Femur",
-     "Radius"
+     "Radius",
+     "Lumbar spine",
+     "Humerus"
     ],
     "why": "The shin bone and main weight-bearer of the lower leg. Its front edge sits right under the skin, which is why coffee tables hurt so much.",
     "art": "skeleton",
@@ -646,7 +728,9 @@
     "wrong": [
      "Choroid",
      "Sclera",
-     "Cornea"
+     "Cornea",
+     "Fovea",
+     "Lens"
     ],
     "why": "The light-sensing film at the back. It’s wired backwards: light passes through layers of nerve cells before it reaches the photoreceptors.",
     "art": "eye",
@@ -661,7 +745,9 @@
     "wrong": [
      "Pleura",
      "Pericardium",
-     "Intercostal muscle"
+     "Intercostal muscle",
+     "Trachea",
+     "Main bronchus"
     ],
     "why": "Your main breathing muscle. Hiccups are it spasming, followed by the vocal cords snapping shut. That snap is the ‘hic’.",
     "art": "lungs",
@@ -676,7 +762,9 @@
     "wrong": [
      "Pancreas",
      "Duodenum",
-     "Spleen"
+     "Spleen",
+     "Rectum",
+     "Sigmoid colon"
     ],
     "why": "Stores and concentrates bile from the liver, then squeezes it out after a fatty meal. You can live perfectly well without one.",
     "art": "gut",
@@ -691,7 +779,9 @@
     "wrong": [
      "Semicircular canals",
      "Vestibule",
-     "Eustachian tube"
+     "Eustachian tube",
+     "Oval window",
+     "Eardrum"
     ],
     "why": "Snail-shaped (that’s literally the Greek). Unrolled it’s about 3 cm long. High pitches register at the base, low pitches at the tip.",
     "art": "ear",
@@ -713,7 +803,9 @@
     "wrong": [
      "Trapezium",
      "Proximal phalanx of the thumb",
-     "Scaphoid"
+     "Scaphoid",
+     "Capitate",
+     "Triquetrum"
     ],
     "why": "The thumb’s metacarpal is short, chunky and very mobile on the trapezium. That saddle joint gives you an opposable thumb.",
     "art": "hand",
@@ -728,7 +820,9 @@
     "wrong": [
      "Lateral meniscus",
      "Medial collateral ligament",
-     "Anterior cruciate ligament"
+     "Anterior cruciate ligament",
+     "Lateral collateral ligament",
+     "Iliotibial band"
     ],
     "why": "A C-shaped cartilage cushion on the inner side. It’s anchored to the joint capsule and MCL, so it moves less and tears more often than the lateral one.",
     "art": "knee",
@@ -743,7 +837,9 @@
     "wrong": [
      "Aorta",
      "Superior vena cava",
-     "Pulmonary vein"
+     "Pulmonary vein",
+     "Moderator band",
+     "Hepatic portal vein"
     ],
     "why": "Carries blood from the right ventricle to the lungs. An artery carrying low-oxygen blood: the classic exam trap.",
     "art": "heart",
@@ -758,7 +854,9 @@
     "wrong": [
      "Thoracic spine",
      "Sacrum",
-     "Cervical spine"
+     "Cervical spine",
+     "Coccyx",
+     "Fifth lumbar vertebra"
     ],
     "why": "Five chunky vertebrae carrying most of your upper body weight. No ribs attach here, which is how you tell them from thoracic ones.",
     "art": "spine",
@@ -773,7 +871,9 @@
     "wrong": [
      "Obturator nerve",
      "Sciatic nerve",
-     "Tibial nerve"
+     "Tibial nerve",
+     "Third and fourth",
+     "Common fibular (peroneal) nerve"
     ],
     "why": "Roots L2 to L4. Tap the patellar tendon and you’re testing it: the knee jerk is mostly L3 and L4."
    }
@@ -791,7 +891,9 @@
     "wrong": [
      "Parietal lobe",
      "Frontal lobe",
-     "Occipital lobe"
+     "Occipital lobe",
+     "Primary visual cortex",
+     "Primary somatosensory cortex"
     ],
     "why": "Hearing, memory and understanding language. ‘Temporal’ may come from tempus, time, because grey hairs often show first at the temples.",
     "art": "brain",
@@ -806,7 +908,9 @@
     "wrong": [
      "Retina",
      "Choroid",
-     "Lateral rectus"
+     "Lateral rectus",
+     "Cornea",
+     "Lens"
     ],
     "why": "Over a million fibres leave the eye here, creating a blind spot with no photoreceptors. Your brain quietly fills in the gap.",
     "art": "eye",
@@ -821,7 +925,9 @@
     "wrong": [
      "Clavicle",
      "First rib",
-     "Scapula"
+     "Scapula",
+     "Radius",
+     "Hyoid"
     ],
     "why": "The breastbone, where you push for CPR: lower half, 100 to 120 times a minute. Its tip, the xiphoid, may not fully turn to bone until middle age.",
     "art": "skeleton",
@@ -836,7 +942,9 @@
     "wrong": [
      "Ulnar nerve",
      "Radial nerve",
-     "Musculocutaneous nerve"
+     "Musculocutaneous nerve",
+     "Sural nerve",
+     "First branch of the lateral plantar nerve"
     ],
     "why": "Thumb, index, middle and half the ring finger on the palm side. Squash it in the carpal tunnel and this zone tingles, often at night.",
     "art": "palm",
@@ -855,7 +963,9 @@
     "wrong": [
      "Trochlear nerve (IV)",
      "Oculomotor nerve (III)",
-     "Trigeminal nerve (V)"
+     "Trigeminal nerve (V)",
+     "Greater petrosal nerve",
+     "Accessory nerve (XI)"
     ],
     "why": "Abducens abducts. Its long path along the base of the skull means raised brain pressure can stretch it and cause double vision."
    }
@@ -873,7 +983,9 @@
     "wrong": [
      "Oval window",
      "Promontory",
-     "Aditus to the mastoid antrum"
+     "Aditus to the mastoid antrum",
+     "Trigeminal nerve (V)",
+     "Malleus"
     ],
     "why": "The pressure-release valve. When the stapes pushes the oval window in, the round window bulges out; without it, cochlear fluid couldn’t move at all.",
     "art": "ear",
@@ -888,7 +1000,9 @@
     "wrong": [
      "Facial nerve (VII)",
      "Vagus nerve (X)",
-     "Greater petrosal nerve"
+     "Greater petrosal nerve",
+     "Obturator nerve",
+     "Accessory nerve"
     ],
     "why": "The tympanic branch of IX. It forms the tympanic plexus and carries the parotid’s secretomotor fibres onwards as the lesser petrosal nerve."
    },
@@ -899,7 +1013,9 @@
     "wrong": [
      "Glossopharyngeal nerve (IX)",
      "Chorda tympani",
-     "Lingual nerve"
+     "Lingual nerve",
+     "Oculomotor nerve (III)",
+     "Nerve to obturator internus"
     ],
     "why": "Back third of the tongue is IX, front two-thirds is the chorda tympani, and the epiglottis region is the vagus."
    },
@@ -910,7 +1026,9 @@
     "wrong": [
      "Nerve to obturator internus",
      "Superior gluteal nerve",
-     "Inferior gluteal nerve"
+     "Inferior gluteal nerve",
+     "Lateral cutaneous nerve of the thigh",
+     "Musculocutaneous nerve"
     ],
     "why": "Gemelli split their loyalties: the superior goes with obturator internus, the inferior with quadratus femoris."
    },
@@ -921,7 +1039,9 @@
     "wrong": [
      "Scaphoid",
      "Trapezoid",
-     "Lunate"
+     "Lunate",
+     "Blister",
+     "Cyst"
     ],
     "why": "The capitate shows up first, in early infancy. The pisiform, a pea-sized sesamoid in the flexor carpi ulnaris tendon, waits until around 9 to 12 years."
    }
@@ -939,7 +1059,9 @@
     "wrong": [
      "Lunate",
      "Pisiform",
-     "Hamate"
+     "Hamate",
+     "Fifth metacarpal",
+     "Proximal phalanx of the thumb"
     ],
     "why": "Pyramid-shaped, on the little-finger side of the first row. It’s the second most often broken carpal, usually a small chip off the back from a fall.",
     "art": "hand",
@@ -954,7 +1076,9 @@
     "wrong": [
      "Interatrial septum",
      "Left ventricular free wall",
-     "Moderator band"
+     "Moderator band",
+     "Aortic valve",
+     "Aorta"
     ],
     "why": "The wall between the ventricles, and it pumps too. A hole here, a VSD, is one of the most common heart defects babies are born with.",
     "art": "heart",
@@ -969,7 +1093,9 @@
     "wrong": [
      "Primary somatosensory cortex",
      "Broca’s area",
-     "Premotor cortex"
+     "Premotor cortex",
+     "Occipital lobe",
+     "Primary auditory cortex"
     ],
     "why": "The strip just in front of the central sulcus. It’s mapped upside down: feet near the top, face near the bottom, with huge areas for hands and lips.",
     "art": "brain",
@@ -984,7 +1110,9 @@
     "wrong": [
      "Anterior cruciate ligament",
      "Lateral collateral ligament",
-     "Lateral meniscus"
+     "Lateral meniscus",
+     "Medial meniscus",
+     "Articular cartilage"
     ],
     "why": "Thicker and stronger than the ACL. The classic tear is the ‘dashboard injury’: shin driven backwards in a car crash.",
     "art": "knee",
@@ -999,7 +1127,9 @@
     "wrong": [
      "Inferior gluteal nerve",
      "Sciatic nerve",
-     "Obturator nerve"
+     "Obturator nerve",
+     "Internal laryngeal nerve (vagus)",
+     "Vagus nerve (X)"
     ],
     "why": "That hip drop is the Trendelenburg sign. A badly placed buttock injection is one way to injure this nerve, hence the upper outer quadrant rule."
    }
@@ -1017,7 +1147,9 @@
     "wrong": [
      "Trapezoid",
      "Scaphoid",
-     "First metacarpal"
+     "First metacarpal",
+     "Distal phalanx",
+     "Third metacarpal"
     ],
     "why": "The thumb’s saddle joint sits on it. Arthritis at the thumb base here is especially common in women over 50.",
     "art": "hand",
@@ -1032,7 +1164,9 @@
     "wrong": [
      "Hilum",
      "Right main bronchus",
-     "Cricoid cartilage"
+     "Cricoid cartilage",
+     "Main bronchus",
+     "Left lower lobe"
     ],
     "why": "The keel-shaped ridge where the trachea splits. It’s one of the most cough-sensitive spots in the body, as any suction catheter can confirm.",
     "art": "lungs",
@@ -1047,7 +1181,9 @@
     "wrong": [
      "Optic disc",
      "Ora serrata",
-     "Ciliary body"
+     "Ciliary body",
+     "Retina",
+     "Lens"
     ],
     "why": "A tiny pit packed with cones and no rods, for your sharpest vision. Faint stars look brighter if you look slightly to one side, onto the rods.",
     "art": "eye",
@@ -1062,7 +1198,9 @@
     "wrong": [
      "Glossopharyngeal nerve",
      "Hypoglossal nerve",
-     "Greater petrosal nerve"
+     "Greater petrosal nerve",
+     "Cervical sympathetic chain",
+     "Nerve to quadratus femoris"
     ],
     "why": "A branch of the facial nerve that runs right across the inside of your eardrum. Middle ear surgery can leave a metallic taste."
    },
@@ -1073,7 +1211,9 @@
     "wrong": [
      "Long thoracic nerve",
      "Spinal accessory nerve (XI)",
-     "Thoracodorsal nerve"
+     "Thoracodorsal nerve",
+     "Optic nerve",
+     "Recurrent laryngeal nerve"
     ],
     "why": "It comes straight off the C5 root and also supplies part of levator scapulae. Injury is rare, but it's one cause of aching along the inner edge of the shoulder blade."
    }
@@ -1091,7 +1231,9 @@
     "wrong": [
      "Frontal lobe",
      "Temporal lobe",
-     "Occipital lobe"
+     "Occipital lobe",
+     "Broca’s area",
+     "Brainstem"
     ],
     "why": "The parietal lobe handles touch, body position and spatial awareness.",
     "art": "brain",
@@ -1106,7 +1248,9 @@
     "wrong": [
      "Talus",
      "Navicular",
-     "Cuboid"
+     "Cuboid",
+     "Scaphoid",
+     "Tibial tuberosity"
     ],
     "why": "The largest bone of the foot. The Achilles tendon attaches to it."
    },
@@ -1117,7 +1261,9 @@
     "wrong": [
      "Femoral nerve",
      "Obturator nerve",
-     "Saphenous nerve"
+     "Saphenous nerve",
+     "First and second",
+     "Abducens nerve (VI)"
     ],
     "why": "The body’s thickest nerve, about as wide as your thumb near its origin."
    },
@@ -1128,7 +1274,9 @@
     "wrong": [
      "Right atrium",
      "Left ventricle",
-     "Right ventricle"
+     "Right ventricle",
+     "Inferior vena cava",
+     "Pulmonary valve"
     ],
     "why": "It receives oxygenated blood from the lungs. When it quivers in atrial fibrillation, clots can form in it.",
     "art": "heart",
@@ -1143,7 +1291,9 @@
     "wrong": [
      "Hamstrings",
      "Adductors",
-     "Calf muscles"
+     "Calf muscles",
+     "Semimembranosus",
+     "Vastus lateralis"
     ],
     "why": "Rectus femoris and the three vasti straighten the knee. Quad strengthening is first-line treatment for knee osteoarthritis.",
     "art": "thighaxial",
@@ -1165,7 +1315,9 @@
     "wrong": [
      "Tibia",
      "Patella",
-     "Fibula"
+     "Fibula",
+     "Second metacarpal",
+     "Proximal phalanx of the thumb"
     ],
     "why": "The femur’s two rounded condyles rest on the flatter top of the tibia.",
     "art": "knee",
@@ -1180,7 +1332,9 @@
     "wrong": [
      "Mandible",
      "Atlas",
-     "Hyoid"
+     "Hyoid",
+     "Ulna",
+     "Zygoma"
     ],
     "why": "The adult cranium is several plates joined at sutures, still partly open as fontanelles in babies.",
     "art": "skeleton",
@@ -1195,7 +1349,9 @@
     "wrong": [
      "106",
      "256",
-     "306"
+     "306",
+     "Cyst",
+     "Fibular head"
     ],
     "why": "Babies start with more, around 270 to 300, which fuse as they grow."
    },
@@ -1206,7 +1362,9 @@
     "wrong": [
      "Ear canal",
      "Eardrum",
-     "Mastoid"
+     "Mastoid",
+     "Vestibulocochlear nerve (VIII)",
+     "Vestibule"
     ],
     "why": "The auricle funnels sound in. Its folds help you tell whether a sound is in front or behind.",
     "art": "ear",
@@ -1221,7 +1379,9 @@
     "wrong": [
      "Spleen",
      "Psoas muscle",
-     "Descending colon"
+     "Descending colon",
+     "Superior mesenteric artery",
+     "Duodenum"
     ],
     "why": "Like a CT, the patient’s left is on your right. The kidneys sit high against the back muscles, which is why kidney pain is felt in the loin.",
     "art": "abdoaxial",
@@ -1243,7 +1403,9 @@
     "wrong": [
      "Aorta",
      "Inferior vena cava",
-     "Pulmonary trunk"
+     "Pulmonary trunk",
+     "Left ventricular free wall",
+     "Interatrial septum"
     ],
     "why": "It drains the head, neck and arms into the right atrium.",
     "art": "heart",
@@ -1258,7 +1420,9 @@
     "wrong": [
      "Facial nerve (VII)",
      "Glossopharyngeal nerve (IX)",
-     "Hypoglossal nerve (XII)"
+     "Hypoglossal nerve (XII)",
+     "L1–L2",
+     "First and second"
     ],
     "why": "Via its mandibular branch, V3: masseter, temporalis and both pterygoids."
    },
@@ -1269,7 +1433,9 @@
     "wrong": [
      "Basilic vein",
      "Cephalic vein",
-     "Profunda brachii artery"
+     "Profunda brachii artery",
+     "Deltoid",
+     "Triceps brachii"
     ],
     "why": "It runs down the inner arm beside the median nerve. It’s the artery a blood pressure cuff squeezes and you listen over at the elbow.",
     "art": "armaxial",
@@ -1284,7 +1450,9 @@
     "wrong": [
      "Right middle lobe",
      "Left upper lobe",
-     "Right lower lobe"
+     "Right lower lobe",
+     "Hilum",
+     "Oesophagus"
     ],
     "why": "Smoking-related emphysema favours the upper lobes; alpha-1 antitrypsin deficiency tends to hit the lower lobes first. Today is World COPD Day.",
     "art": "lungs",
@@ -1299,7 +1467,9 @@
     "wrong": [
      "Hamate",
      "Lunate",
-     "Trapezoid"
+     "Trapezoid",
+     "First metacarpal",
+     "Scaphoid"
     ],
     "why": "The biggest carpal bone, sitting in the middle. It’s also the first to show up on X-ray in infancy.",
     "art": "hand",
@@ -1321,7 +1491,9 @@
     "wrong": [
      "Mitral valve",
      "Pulmonary valve",
-     "Aortic valve"
+     "Aortic valve",
+     "Aorta",
+     "Pulmonary veins"
     ],
     "why": "Between the right atrium and right ventricle. Three cusps, as the name says.",
     "art": "heart",
@@ -1336,7 +1508,9 @@
     "wrong": [
      "Femoral nerve",
      "Sciatic nerve",
-     "Genitofemoral nerve"
+     "Genitofemoral nerve",
+     "Vagus nerve",
+     "Suprascapular nerve"
     ],
     "why": "It leaves the pelvis through the obturator foramen, the largest hole in the skeleton."
    },
@@ -1347,7 +1521,9 @@
     "wrong": [
      "Right upper lobe",
      "Lingula",
-     "Right lower lobe"
+     "Right lower lobe",
+     "Left lower lobe",
+     "Left pulmonary artery"
     ],
     "why": "Only the right lung has a middle lobe. The left lung’s lingula is its rough equivalent.",
     "art": "lungs",
@@ -1362,7 +1538,9 @@
     "wrong": [
      "Putamen",
      "Temporal lobe",
-     "Thalamus"
+     "Thalamus",
+     "Third ventricle",
+     "Caudate nucleus"
     ],
     "why": "Cortex hidden deep in the Sylvian fissure that senses the body’s inner state. Losing the ‘insular ribbon’ on CT is an early sign of a middle cerebral artery stroke.",
     "art": "braincoronal",
@@ -1377,7 +1555,9 @@
     "wrong": [
      "T8",
      "T12",
-     "L1"
+     "L1",
+     "C7",
+     "L4"
     ],
     "why": "T10 is the band at the belly button. Early appendicitis pain starts around here because the appendix shares T10 visceral nerves, before it moves to the right iliac fossa.",
     "art": "dermatomes",
@@ -1399,7 +1579,9 @@
     "wrong": [
      "Broca’s area",
      "Angular gyrus",
-     "Primary auditory cortex"
+     "Primary auditory cortex",
+     "Frontal lobe",
+     "Parietal lobe"
     ],
     "why": "Damage here gives fluent but meaningless speech, with poor understanding.",
     "art": "brain",
@@ -1414,7 +1596,9 @@
     "wrong": [
      "Superficial fibular nerve",
      "Tibial nerve",
-     "Saphenous nerve"
+     "Saphenous nerve",
+     "Common fibular nerve",
+     "Ulnar nerve"
     ],
     "why": "Surgeons often harvest it for nerve grafts. The trade-off is a small numb patch."
    },
@@ -1425,7 +1609,9 @@
     "wrong": [
      "Anterior tibial artery",
      "Fibular (peroneal) artery",
-     "Popliteal artery"
+     "Popliteal artery",
+     "Extensor digitorum longus",
+     "Fibularis longus"
     ],
     "why": "It runs with the tibial nerve deep in the back of the calf, then behind the medial malleolus, where you feel its pulse when checking a diabetic foot.",
     "art": "legaxial",
@@ -1440,7 +1626,9 @@
     "wrong": [
      "Cochlea",
      "Vestibule",
-     "Mastoid air cells"
+     "Mastoid air cells",
+     "Trigeminal nerve (V)",
+     "Outer ear canal"
     ],
     "why": "Three canals at right angles sense head rotation. Loose crystals in one cause BPPV.",
     "art": "ear",
@@ -1455,7 +1643,9 @@
     "wrong": [
      "L4",
      "S1",
-     "L3"
+     "L3",
+     "T12",
+     "L1"
     ],
     "why": "L5 covers the outer shin and the top of the foot to the big toe. An L4/5 disc usually squashes the L5 root: a numb top of foot and weak big-toe lifting.",
     "art": "dermatomes",
@@ -1477,7 +1667,9 @@
     "wrong": [
      "Facial nerve (VII)",
      "Glossopharyngeal nerve (IX)",
-     "Trigeminal nerve (V)"
+     "Trigeminal nerve (V)",
+     "Vestibule",
+     "Outer ear canal"
     ],
     "why": "Hearing and balance. A benign tumour on it (vestibular schwannoma) causes one-sided hearing loss.",
     "art": "ear",
@@ -1492,7 +1684,9 @@
     "wrong": [
      "Left lower lobe",
      "Right upper lobe",
-     "Right middle lobe"
+     "Right middle lobe",
+     "Cardiac notch",
+     "Pericardium"
     ],
     "why": "It includes the lingula, the tongue-shaped piece that hugs the heart.",
     "art": "lungs",
@@ -1507,7 +1701,9 @@
     "wrong": [
      "C6",
      "C8",
-     "T1"
+     "T1",
+     "L3",
+     "T2"
     ],
     "why": "C7 supplies the middle finger. It’s the root most often squashed in the neck (a C6/7 disc), giving a tingling middle finger and a weak triceps jerk.",
     "art": "dermatomes",
@@ -1522,7 +1718,9 @@
     "wrong": [
      "Sural nerve",
      "Tibial nerve",
-     "Superficial fibular nerve"
+     "Superficial fibular nerve",
+     "Oculomotor nerve (III)",
+     "Trigeminal nerve (V)"
     ],
     "why": "The longest branch of the femoral nerve, travelling with the great saphenous vein."
    },
@@ -1533,7 +1731,9 @@
     "wrong": [
      "Anterior limb of the internal capsule",
      "External capsule",
-     "Corpus callosum"
+     "Corpus callosum",
+     "Putamen",
+     "Thalamus"
     ],
     "why": "Motor fibres to the face, arm and leg are packed tightly here, so a tiny lacunar infarct can cause pure motor weakness of the opposite side.",
     "art": "brainaxial",
@@ -1555,7 +1755,9 @@
     "wrong": [
      "Sigmoid colon",
      "Descending colon",
-     "Caecum"
+     "Caecum",
+     "Gallbladder",
+     "Pancreas"
     ],
     "why": "About 12 cm long, it stores faeces until it’s convenient to empty it.",
     "art": "gut",
@@ -1570,7 +1772,9 @@
     "wrong": [
      "Abducens nerve (VI)",
      "Oculomotor nerve (III)",
-     "Vagus nerve (X)"
+     "Vagus nerve (X)",
+     "Musculocutaneous nerve",
+     "Infraorbital nerve (V2)"
     ],
     "why": "It’s also the thinnest, and the only cranial nerve to leave the back of the brainstem."
    },
@@ -1581,7 +1785,9 @@
     "wrong": [
      "Superficial posterior compartment",
      "Lateral compartment",
-     "Anterior compartment"
+     "Anterior compartment",
+     "Tibialis posterior",
+     "Tibialis anterior"
     ],
     "why": "Tibialis posterior and the long toe flexors, with the posterior tibial vessels and tibial nerve. Buried under soleus, it’s the compartment most easily missed in compartment syndrome.",
     "art": "legaxial",
@@ -1597,7 +1803,9 @@
     "wrong": [
      "Posterior cerebral artery",
      "Anterior inferior cerebellar artery",
-     "Posterior communicating artery"
+     "Posterior communicating artery",
+     "Internal carotid artery",
+     "Posterior inferior cerebellar artery"
     ],
     "why": "It leaves the top of the basilar just below the posterior cerebral artery, with the oculomotor nerve between them. A looping SCA pressing on the trigeminal nerve is the classic cause of trigeminal neuralgia.",
     "art": "willis",
@@ -1612,7 +1820,9 @@
     "wrong": [
      "Right middle lobe",
      "Left lower lobe",
-     "Right upper lobe"
+     "Right upper lobe",
+     "Cardiac notch",
+     "Larynx"
     ],
     "why": "When you’re upright, inhaled food and fluid most often end up here.",
     "art": "lungs",
@@ -1634,7 +1844,9 @@
     "wrong": [
      "Left ventricle",
      "Right atrium",
-     "Left atrium"
+     "Left atrium",
+     "Interatrial septum",
+     "Pulmonary arteries"
     ],
     "why": "It pumps blood to the lungs. Low pressure, so a much thinner wall than the left ventricle.",
     "art": "heart",
@@ -1649,7 +1861,9 @@
     "wrong": [
      "Triceps brachii",
      "Brachialis",
-     "Deltoid"
+     "Deltoid",
+     "Cephalic vein",
+     "Profunda brachii artery"
     ],
     "why": "It bends the elbow and turns the palm up. A ‘Popeye’ bulge after a pop at the shoulder means the long head tendon has ruptured.",
     "art": "armaxial",
@@ -1664,7 +1878,9 @@
     "wrong": [
      "Pancreas",
      "Liver",
-     "Left kidney"
+     "Left kidney",
+     "Erector spinae",
+     "Spinal canal"
     ],
     "why": "Like a CT, it sits at the back on the patient’s left, on your right. It filters old red cells and fights infection; you can live without it, with vaccines and care.",
     "art": "abdoaxial",
@@ -1679,7 +1895,9 @@
     "wrong": [
      "Radius",
      "Humerus",
-     "Fibula"
+     "Fibula",
+     "Sacrum",
+     "Femur"
     ],
     "why": "The ulna sits on the little-finger side. Its tip is the point of your elbow (the olecranon).",
     "art": "skeleton",
@@ -1694,7 +1912,9 @@
     "wrong": [
      "Cerebellum",
      "Spinal cord",
-     "Temporal lobe"
+     "Temporal lobe",
+     "Broca’s area",
+     "Primary motor cortex"
     ],
     "why": "The brainstem runs breathing, heart rate and consciousness, and is the origin of most cranial nerves.",
     "art": "brain",
@@ -1716,7 +1936,9 @@
     "wrong": [
      "Maxilla",
      "Zygoma",
-     "Hyoid"
+     "Hyoid",
+     "Clavicle",
+     "Coccyx"
     ],
     "why": "The mandible is the only skull bone that moves. It’s also the strongest bone of the face.",
     "art": "skeleton",
@@ -1731,7 +1953,9 @@
     "wrong": [
      "Cornea",
      "Lens",
-     "Retina"
+     "Retina",
+     "Fovea",
+     "Ora serrata"
     ],
     "why": "The iris is a ring of muscle that sets pupil size, and it gives eyes their colour.",
     "art": "eye",
@@ -1746,7 +1970,9 @@
     "wrong": [
      "Trigeminal nerve (V)",
      "Vagus nerve (X)",
-     "Hypoglossal nerve (XII)"
+     "Hypoglossal nerve (XII)",
+     "Common fibular (peroneal) nerve",
+     "Nerve to obturator internus"
     ],
     "why": "Weakness of one whole side of the face, forehead included."
    },
@@ -1757,7 +1983,9 @@
     "wrong": [
      "Trachea",
      "Aorta",
-     "Duodenum"
+     "Duodenum",
+     "Small intestine",
+     "Sigmoid colon"
     ],
     "why": "About 25 cm long. Food is pushed down it by waves of muscle, so you can swallow upside down.",
     "art": "gut",
@@ -1772,7 +2000,9 @@
     "wrong": [
      "Quadriceps",
      "Adductors",
-     "Calf muscles"
+     "Calf muscles",
+     "Profunda femoris vein",
+     "Great saphenous vein"
     ],
     "why": "Three muscles at the back of the thigh that bend the knee and extend the hip. Sprinters tear them, most often biceps femoris.",
     "art": "thighaxial",
@@ -1794,7 +2024,9 @@
     "wrong": [
      "Caudate nucleus",
      "Putamen",
-     "Hypothalamus"
+     "Hypothalamus",
+     "Insula",
+     "Genu of the internal capsule"
     ],
     "why": "The brain’s relay station for nearly all sensation. A small thalamic stroke can numb one whole side, sometimes followed by burning pain (Dejerine–Roussy syndrome).",
     "art": "brainaxial",
@@ -1809,7 +2041,9 @@
     "wrong": [
      "Inferior vena cava",
      "Superior mesenteric artery",
-     "Portal vein"
+     "Portal vein",
+     "Psoas major",
+     "Iliacus"
     ],
     "why": "It sits just left of the spine, with the IVC on the right. A pulsatile mass here in an older smoker suggests an aneurysm; ultrasound screening finds them before they burst.",
     "art": "abdoaxial",
@@ -1824,7 +2058,9 @@
     "wrong": [
      "Jejunum",
      "Pancreas",
-     "Gallbladder"
+     "Gallbladder",
+     "Liver",
+     "Descending colon"
     ],
     "why": "About 25 cm long, curling around the head of the pancreas. Bile and pancreatic juice enter here.",
     "art": "gut",
@@ -1839,7 +2075,9 @@
     "wrong": [
      "Patella",
      "Pisiform",
-     "Coccyx"
+     "Coccyx",
+     "Accessory navicular",
+     "Fibula (lateral malleolus)"
     ],
     "why": "It floats in the neck, held up by muscles and ligaments, anchoring the tongue."
    },
@@ -1850,7 +2088,9 @@
     "wrong": [
      "Medial collateral ligament",
      "Iliotibial band",
-     "Posterior cruciate ligament"
+     "Posterior cruciate ligament",
+     "Patellar tendon",
+     "Anterior cruciate ligament"
     ],
     "why": "A cord-like band from femur to fibular head, separate from the joint capsule.",
     "art": "knee",
@@ -1872,7 +2112,9 @@
     "wrong": [
      "Sacrum",
      "Fifth lumbar vertebra",
-     "Ischium"
+     "Ischium",
+     "Cervical spine",
+     "Lumbar spine"
     ],
     "why": "Three to five tiny fused vertebrae: your vestigial tail.",
     "art": "spine",
@@ -1887,7 +2129,9 @@
     "wrong": [
      "Fourth metacarpal",
      "Proximal phalanx of the little finger",
-     "Hamate"
+     "Hamate",
+     "Trapezium",
+     "Distal phalanx of the thumb"
     ],
     "why": "Punch a wall and this is the one that breaks: a ‘boxer’s fracture’ of its neck.",
     "art": "hand",
@@ -1902,7 +2146,9 @@
     "wrong": [
      "Infraspinatus",
      "Subscapularis",
-     "Teres minor"
+     "Teres minor",
+     "Short head of biceps tendon",
+     "Subscapularis tendon"
     ],
     "why": "It starts lifting the arm, and its tendon runs under the acromion, so it’s the cuff tendon most often pinched or torn: think painful arc between about 60 and 120 degrees.",
     "art": "rotatorcuff",
@@ -1917,7 +2163,9 @@
     "wrong": [
      "Incus",
      "Malleus",
-     "Round window"
+     "Round window",
+     "Oval window",
+     "Trigeminal nerve (V)"
     ],
     "why": "Its footplate sits in the oval window. In otosclerosis it gets stuck.",
     "art": "ear",
@@ -1932,7 +2180,9 @@
     "wrong": [
      "Ulnar nerve",
      "Median nerve",
-     "Axillary nerve"
+     "Axillary nerve",
+     "Common fibular (peroneal) nerve",
+     "Recurrent laryngeal nerve"
     ],
     "why": "The radial nerve hugs the back of the humerus in the spiral groove, so a shaft fracture can stretch it. It extends the wrist and fingers.",
     "art": "armaxial",
@@ -1954,7 +2204,9 @@
     "wrong": [
      "Lateral compartment",
      "Superficial posterior compartment",
-     "Deep posterior compartment"
+     "Deep posterior compartment",
+     "Tibialis anterior",
+     "Soleus"
     ],
     "why": "Tight fascia and bone box it in, so swelling after a tibial fracture can cause compartment syndrome: pain on passive toe stretch and a numb first web space (deep fibular nerve).",
     "art": "legaxial",
@@ -1969,7 +2221,9 @@
     "wrong": [
      "Common fibular nerve",
      "Femoral nerve",
-     "Sural nerve"
+     "Sural nerve",
+     "Long thoracic nerve",
+     "Lesser occipital nerve"
     ],
     "why": "Test it with the ankle jerk (S1)."
    },
@@ -1980,7 +2234,9 @@
     "wrong": [
      "Superior gluteal nerve",
      "Sciatic nerve",
-     "Nerve to obturator internus"
+     "Nerve to obturator internus",
+     "Internal laryngeal nerve (vagus)",
+     "Subscapular nerve"
     ],
     "why": "It powers standing from a chair and climbing stairs."
    },
@@ -1991,7 +2247,9 @@
     "wrong": [
      "Globus pallidus",
      "Caudate nucleus",
-     "Insula"
+     "Insula",
+     "Claustrum",
+     "Thalamus"
     ],
     "why": "The commonest site of hypertensive brain haemorrhage. A bleed here causes sudden weakness of the opposite side, because the internal capsule lies right beside it.",
     "art": "brainaxial",
@@ -2006,7 +2264,9 @@
     "wrong": [
      "T1",
      "C6",
-     "C5"
+     "C5",
+     "T2",
+     "Occipital bone"
     ],
     "why": "Its long spinous process is usually the first bump you feel at the base of the neck.",
     "art": "spine",
@@ -2028,7 +2288,9 @@
     "wrong": [
      "Lateral collateral ligament",
      "Patellar tendon",
-     "Anterior cruciate ligament"
+     "Anterior cruciate ligament",
+     "Articular cartilage",
+     "Lateral meniscus"
     ],
     "why": "A broad band attached to the medial meniscus. A blow to the outside of the knee stretches it.",
     "art": "knee",
@@ -2043,7 +2305,9 @@
     "wrong": [
      "Femoral nerve",
      "Obturator nerve",
-     "Genitofemoral nerve"
+     "Genitofemoral nerve",
+     "Superficial radial nerve",
+     "Common fibular (peroneal) nerve"
     ],
     "why": "Often squeezed under the inguinal ligament by tight belts or weight gain."
    },
@@ -2054,7 +2318,9 @@
     "wrong": [
      "Left anterior descending artery",
      "Circumflex artery",
-     "Right coronary artery"
+     "Right coronary artery",
+     "Diagonal branch",
+     "Acute marginal artery"
     ],
     "why": "A short trunk from the aorta that splits into the LAD and circumflex, so it feeds most of the left ventricle. Significant left main disease often favours bypass surgery.",
     "art": "coronary",
@@ -2069,7 +2335,9 @@
     "wrong": [
      "Long thoracic nerve",
      "Dorsal scapular nerve",
-     "Suprascapular nerve"
+     "Suprascapular nerve",
+     "Olfactory nerve (I)",
+     "Deep branch of the ulnar nerve"
     ],
     "why": "Surgeons can borrow latissimus as a flap for breast reconstruction, keeping this nerve and its artery."
    },
@@ -2080,7 +2348,9 @@
     "wrong": [
      "Third ventricle",
      "Body of the lateral ventricle",
-     "Sylvian fissure"
+     "Sylvian fissure",
+     "Brainstem",
+     "Caudate nucleus"
     ],
     "why": "Normally just a slit beside the hippocampus. Ballooned temporal horns on a scan are an early sign of hydrocephalus.",
     "art": "braincoronal",
@@ -2102,7 +2372,9 @@
     "wrong": [
      "Right main bronchus",
      "Left pulmonary artery",
-     "Oesophagus"
+     "Oesophagus",
+     "Larynx",
+     "Carina"
     ],
     "why": "Longer and more horizontal than the right, because it has to pass under the aortic arch.",
     "art": "lungs",
@@ -2117,7 +2389,9 @@
     "wrong": [
      "Anterior limb of the internal capsule",
      "Posterior limb of the internal capsule",
-     "Globus pallidus"
+     "Globus pallidus",
+     "Insula",
+     "Corpus callosum"
     ],
     "why": "The bend carries corticobulbar fibres to the cranial nerve motor nuclei, so a small infarct here mainly weakens the face, tongue and swallowing.",
     "art": "brainaxial",
@@ -2132,7 +2406,9 @@
     "wrong": [
      "Posterior descending artery",
      "Obtuse marginal artery",
-     "Diagonal branch"
+     "Diagonal branch",
+     "Right coronary artery",
+     "Left anterior descending artery"
     ],
     "why": "A branch of the right coronary artery along the sharp lower border of the right ventricle. Right ventricular infarcts can drop the blood pressure with clear lungs, so go gently with nitrates.",
     "art": "coronary",
@@ -2147,7 +2423,9 @@
     "wrong": [
      "Pulmonary valve",
      "Mitral valve",
-     "Tricuspid valve"
+     "Tricuspid valve",
+     "Aorta",
+     "Pulmonary arteries"
     ],
     "why": "Usually three cusps. About 1 to 2% of people have two (bicuspid), which can wear out early.",
     "art": "heart",
@@ -2162,7 +2440,9 @@
     "wrong": [
      "Third metacarpal",
      "Fifth metacarpal",
-     "Hamate"
+     "Hamate",
+     "Trapezium",
+     "Proximal phalanx"
     ],
     "why": "A short fourth metacarpal (a knuckle ‘dip’) can be a clue to conditions such as Turner syndrome.",
     "art": "hand",
@@ -2195,7 +2475,9 @@
     "wrong": [
      "Sacrum",
      "Coccyx",
-     "Lumbar spine"
+     "Lumbar spine",
+     "Sternum",
+     "Fifth lumbar vertebra"
     ],
     "why": "The pelvis carries your upper body’s weight onto the legs, and is wider and rounder in most women to allow for childbirth.",
     "art": "skeleton",
@@ -2210,7 +2492,9 @@
     "wrong": [
      "Large intestine",
      "Appendix",
-     "Stomach"
+     "Stomach",
+     "Trachea",
+     "Gallbladder"
     ],
     "why": "Several metres long, folded into a small space. Most nutrient absorption happens here.",
     "art": "gut",
@@ -2240,7 +2524,9 @@
     "wrong": [
      "Aorta",
      "Inferior vena cava",
-     "Psoas muscle"
+     "Psoas muscle",
+     "Left kidney",
+     "Kidney"
     ],
     "why": "The bony tunnel behind each vertebral body that protects the cord and nerve roots. The cord ends around L1–L2, so lumbar punctures go lower, at L3/4 or L4/5.",
     "art": "abdoaxial",

@@ -77,7 +77,9 @@
     "wrong": [
      "Circumflex artery",
      "Right coronary artery",
-     "Diagonal branch"
+     "Diagonal branch",
+     "Obtuse marginal artery",
+     "Left main coronary artery"
     ],
     "why": "It runs down the front groove between the ventricles, feeding much of the left ventricle and septum. A blocked proximal LAD is nicknamed the ‘widow-maker’.",
     "art": "coronary",
@@ -92,7 +94,9 @@
     "wrong": [
      "Pulmonary arteries",
      "Bronchial arteries",
-     "Superior vena cava"
+     "Superior vena cava",
+     "Inferior vena cava",
+     "Tricuspid valve"
     ],
     "why": "The veins that carry oxygenated blood: from lungs to left atrium. Usually four of them.",
     "art": "heart",
@@ -107,7 +111,9 @@
     "wrong": [
      "Vastus medialis",
      "Rectus femoris",
-     "Biceps femoris"
+     "Biceps femoris",
+     "Popliteal vein",
+     "Great saphenous vein"
     ],
     "why": "The biggest quad, on the outer thigh. It’s the usual site for a muscle biopsy and the preferred spot for injections in babies.",
     "art": "thighaxial",
@@ -137,7 +143,9 @@
     "wrong": [
      "Left main bronchus",
      "Trachea",
-     "Oesophagus"
+     "Oesophagus",
+     "Hilum",
+     "Intercostal muscle"
     ],
     "why": "Wider, shorter and more vertical than the left, so inhaled peanuts usually go right.",
     "art": "lungs",
@@ -159,7 +167,9 @@
     "wrong": [
      "Medial meniscus",
      "Lateral collateral ligament",
-     "Articular cartilage"
+     "Articular cartilage",
+     "Anterior cruciate ligament",
+     "Posterior cruciate ligament"
     ],
     "why": "More mobile and more circular than the medial meniscus, so it’s injured less often.",
     "art": "knee",
@@ -185,7 +195,9 @@
     "wrong": [
      "Facial nerve",
      "Optic nerve",
-     "Trigeminal nerve"
+     "Trigeminal nerve",
+     "Long thoracic nerve",
+     "Greater petrosal nerve"
     ],
     "why": "It bypasses damaged hair cells and talks straight to the cochlear nerve. Graeme Clark’s team in Melbourne fitted their first multichannel implant in 1978."
    },
@@ -196,7 +208,9 @@
     "wrong": [
      "Cephalic vein",
      "Brachial artery",
-     "Brachial vein"
+     "Brachial vein",
+     "Coracobrachialis",
+     "Deltoid"
     ],
     "why": "It runs up the inner arm and dives deep around mid-arm. Big and away from the main nerves, it’s a favourite vein for PICC lines and dialysis fistulas.",
     "art": "armaxial",
@@ -211,7 +225,9 @@
     "wrong": [
      "Gracilis",
      "Rectus femoris",
-     "Adductor longus"
+     "Adductor longus",
+     "Semitendinosus",
+     "Vastus intermedius"
     ],
     "why": "The body’s longest muscle forms the roof of the adductor canal, which carries the femoral vessels. Anaesthetists use it as the landmark for an adductor canal block after knee replacement.",
     "art": "thighaxial",
@@ -233,7 +249,9 @@
     "wrong": [
      "Axis (C2)",
      "Occipital bone",
-     "C3"
+     "C3",
+     "T10",
+     "L1"
     ],
     "why": "No body and no spinous process. It holds up the skull, like the Titan Atlas.",
     "art": "spine",
@@ -248,7 +266,9 @@
     "wrong": [
      "Hypoglossal nerve (XII)",
      "Inferior alveolar nerve",
-     "Glossopharyngeal nerve (IX)"
+     "Glossopharyngeal nerve (IX)",
+     "Obturator nerve",
+     "Ansa cervicalis"
     ],
     "why": "It runs right beside the inner side of the lower third molar, carrying feeling (and, via the chorda tympani, taste) from the front two-thirds of the tongue. Most injuries recover."
    },
@@ -259,7 +279,9 @@
     "wrong": [
      "Anterior communicating artery",
      "Posterior cerebral artery",
-     "Superior cerebellar artery"
+     "Superior cerebellar artery",
+     "Anterior inferior cerebellar artery",
+     "Internal carotid artery"
     ],
     "why": "It links the internal carotid to the posterior cerebral artery. An aneurysm here can press on the oculomotor nerve: a painful third nerve palsy with a blown pupil.",
     "art": "willis",
@@ -274,7 +296,9 @@
     "wrong": [
      "Femoral artery",
      "Great saphenous vein",
-     "Profunda femoris vein"
+     "Profunda femoris vein",
+     "Adductors",
+     "Hamstrings"
     ],
     "why": "It travels with the femoral artery through the adductor canal. A deep vein thrombosis here or higher carries more risk of pulmonary embolism than one confined to the calf.",
     "art": "thighaxial",
@@ -289,7 +313,9 @@
     "wrong": [
      "Superior vena cava",
      "Descending aorta",
-     "Hepatic portal vein"
+     "Hepatic portal vein",
+     "Interventricular septum",
+     "Interatrial septum"
     ],
     "why": "The largest vein in the body, carrying blood from the legs and abdomen.",
     "art": "heart",
@@ -311,7 +337,9 @@
     "wrong": [
      "Incus",
      "Stapes",
-     "Tympanic membrane"
+     "Tympanic membrane",
+     "Outer ear canal",
+     "Promontory"
     ],
     "why": "The ‘hammer’, attached to the eardrum. You can often see its handle through an otoscope.",
     "art": "ear",
@@ -326,7 +354,9 @@
     "wrong": [
      "Thalamus",
      "Caudate nucleus",
-     "Insula"
+     "Insula",
+     "Temporal horn of the lateral ventricle",
+     "Brainstem"
     ],
     "why": "Putamen plus globus pallidus, lens-shaped and lateral to the internal capsule. Copper builds up here in Wilson’s disease, causing tremor and stiffness.",
     "art": "braincoronal",
@@ -341,7 +371,9 @@
     "wrong": [
      "Aortic valve",
      "Tricuspid valve",
-     "Mitral valve"
+     "Mitral valve",
+     "Superior vena cava",
+     "Right ventricle"
     ],
     "why": "The outflow valve of the right ventricle. The least likely of the four to cause trouble in adults.",
     "art": "heart",
@@ -356,7 +388,9 @@
     "wrong": [
      "Superficial fibular nerve",
      "Sural nerve",
-     "Saphenous nerve"
+     "Saphenous nerve",
+     "Lateral cutaneous nerve of the thigh",
+     "Thoracodorsal nerve"
     ],
     "why": "Its only skin patch. Numbness here can be an early sign of anterior compartment syndrome."
    },
@@ -367,7 +401,9 @@
     "wrong": [
      "Posterior communicating artery",
      "Anterior cerebral artery",
-     "Middle cerebral artery"
+     "Middle cerebral artery",
+     "Internal carotid artery",
+     "Vertebral artery"
     ],
     "why": "The short bridge between the two anterior cerebral arteries. It’s the commonest site for berry aneurysms, whose rupture causes a thunderclap subarachnoid haemorrhage.",
     "art": "willis",
@@ -389,7 +425,9 @@
     "wrong": [
      "C7",
      "T2",
-     "C6"
+     "C6",
+     "C5",
+     "C3"
     ],
     "why": "The first thoracic vertebra, carrying the first rib. Count down from C1 at the top.",
     "art": "spine",
@@ -404,7 +442,9 @@
     "wrong": [
      "Common fibular nerve",
      "Femoral nerve",
-     "Obturator nerve"
+     "Obturator nerve",
+     "Lingual nerve",
+     "Inferior alveolar nerve"
     ],
     "why": "Popliteus ‘unlocks’ the fully straightened knee, allowing it to bend."
    },
@@ -415,7 +455,9 @@
     "wrong": [
      "Diagonal branch",
      "Acute marginal artery",
-     "Posterior descending artery"
+     "Posterior descending artery",
+     "Left main coronary artery",
+     "Left anterior descending artery"
     ],
     "why": "A branch of the circumflex running down the rounded left border of the heart. Circumflex territory infarcts are the ones most easily missed on a standard 12-lead ECG.",
     "art": "coronary",
@@ -430,7 +472,9 @@
     "wrong": [
      "Great cardiac vein",
      "Anterior cardiac veins",
-     "Thebesian veins"
+     "Thebesian veins",
+     "Premotor cortex",
+     "Right main bronchus"
     ],
     "why": "It runs in the back of the atrioventricular groove. Leads for cardiac resynchronisation pacing are threaded through it to reach the left ventricle."
    },
@@ -441,7 +485,9 @@
     "wrong": [
      "Posterior inferior cerebellar artery",
      "Superior cerebellar artery",
-     "Vertebral artery"
+     "Vertebral artery",
+     "Anterior cerebral artery",
+     "Internal carotid artery"
     ],
     "why": "It leaves the lower basilar artery and usually gives off the labyrinthine artery, so an AICA stroke can cause sudden one-sided deafness with vertigo.",
     "art": "willis",
@@ -463,7 +509,9 @@
     "wrong": [
      "Mouth",
      "Inner ear",
-     "Outer ear canal"
+     "Outer ear canal",
+     "Cochlea",
+     "Vestibulocochlear nerve (VIII)"
     ],
     "why": "The Eustachian tube equalises pressure. A blocked one on descent is why flying with a cold makes your ears ache.",
     "art": "ear",
@@ -544,7 +592,9 @@
     "wrong": [
      "Small bowel",
      "Kidney",
-     "Stomach"
+     "Stomach",
+     "Spinal canal",
+     "Pancreas"
     ],
     "why": "Cut across, the ascending and descending colon sit in the flanks, fixed to the back wall. That’s why diverticulitis pain is felt in the side, usually the left.",
     "art": "abdoaxial",
@@ -603,7 +653,9 @@
     "wrong": [
      "Biceps brachii",
      "Triceps brachii",
-     "Coracobrachialis"
+     "Coracobrachialis",
+     "Deltoid",
+     "Profunda brachii artery"
     ],
     "why": "The workhorse elbow flexor lies under biceps, right on the humerus. After an elbow injury, bleeding into it can calcify (myositis ossificans).",
     "art": "armaxial",
@@ -629,7 +681,9 @@
     "wrong": [
      "Appendix",
      "Sigmoid colon",
-     "Ileum"
+     "Ileum",
+     "Pancreas",
+     "Small intestine"
     ],
     "why": "The first part of the large bowel. The appendix hangs from it.",
     "art": "gut",
@@ -644,7 +698,9 @@
     "wrong": [
      "Glossopharyngeal nerve (IX)",
      "Lingual nerve",
-     "Facial nerve (VII)"
+     "Facial nerve (VII)",
+     "Medial calcaneal nerve",
+     "Cervical sympathetic chain"
     ],
     "why": "Damage it and the tongue points towards the weak side when you stick it out."
    },
@@ -655,7 +711,9 @@
     "wrong": [
      "Coracoid process",
      "Clavicle",
-     "Spine of the scapula"
+     "Spine of the scapula",
+     "Head of the humerus",
+     "Greater tubercle"
     ],
     "why": "The flat end of the scapular spine forms the roof of the shoulder. A hooked acromion narrows the space below, which is linked with impingement and cuff tears.",
     "art": "rotatorcuff",
@@ -692,7 +750,9 @@
     "wrong": [
      "Amygdala",
      "Cerebellum",
-     "Thalamus"
+     "Thalamus",
+     "Moderator band",
+     "Tensor tympani"
     ],
     "why": "John O’Keefe found place cells there in 1971; May-Britt and Edvard Moser later found grid cells next door in the entorhinal cortex."
    },
@@ -714,7 +774,9 @@
     "wrong": [
      "Primary motor cortex",
      "Auditory cortex",
-     "Somatosensory cortex"
+     "Somatosensory cortex",
+     "Parietal lobe",
+     "Brainstem"
     ],
     "why": "They found neurons that fire for lines at particular angles, the building blocks of how we see shapes.",
     "art": "brain",
@@ -839,7 +901,9 @@
     "wrong": [
      "Phrenic nerve",
      "Accessory nerve",
-     "Hypoglossal nerve"
+     "Hypoglossal nerve",
+     "Vagus nerve",
+     "Common fibular (peroneal) nerve"
     ],
     "why": "It runs up beside the thyroid to supply most of the voice box muscles. The left one loops under the aortic arch on the way."
    },
@@ -850,7 +914,9 @@
     "wrong": [
      "Axillary nerve",
      "Subscapular nerve",
-     "Dorsal scapular nerve"
+     "Dorsal scapular nerve",
+     "Deep branch of the ulnar nerve",
+     "Buccal branch"
     ],
     "why": "It can get trapped at the suprascapular or spinoglenoid notch. Volleyball players are known for wasting of infraspinatus from it."
    },
@@ -861,7 +927,9 @@
     "wrong": [
      "Infraspinatus",
      "Teres major",
-     "Subscapularis"
+     "Subscapularis",
+     "Supraspinatus",
+     "Long head of biceps tendon"
     ],
     "why": "The smallest cuff muscle, an external rotator supplied by the axillary nerve, not the suprascapular. Weak deltoid plus teres minor after a dislocation points to the axillary nerve.",
     "art": "rotatorcuff",
@@ -883,7 +951,9 @@
     "wrong": [
      "Coronary sulcus",
      "Anterior interventricular groove",
-     "Crista supraventricularis"
+     "Crista supraventricularis",
+     "Temporal lobe",
+     "Peyer’s patches"
     ],
     "why": "The sulcus terminalis outside matches the crista terminalis inside. In 1947 Claude Beck reported shocking a stopped heart back to life during surgery."
    },
@@ -894,7 +964,9 @@
     "wrong": [
      "Left bundle branch",
      "Bundle of His",
-     "Bachmann’s bundle"
+     "Bachmann’s bundle",
+     "Anterior cardiac veins",
+     "Circumflex artery"
     ],
     "why": "The septomarginal trabecula is a shortcut to the anterior papillary muscle, so it tightens in time with the rest of the ventricle."
    },
@@ -905,7 +977,9 @@
     "wrong": [
      "Oblique pericardial sinus",
      "Costodiaphragmatic recess",
-     "Retrocaval space"
+     "Retrocaval space",
+     "Flexor pollicis longus tendon",
+     "Fibular artery"
     ],
     "why": "Cardiac surgeons use it to get a clamp or tape around the great arteries. The oblique sinus, behind the left atrium, is a dead end."
    },
@@ -916,7 +990,9 @@
     "wrong": [
      "Acute marginal artery",
      "Obtuse marginal artery",
-     "Circumflex artery"
+     "Circumflex artery",
+     "Left anterior descending artery",
+     "Left main coronary artery"
     ],
     "why": "It runs in the groove under the heart and feeds the back third of the septum. Whichever artery gives it off, usually the RCA, defines coronary ‘dominance’.",
     "art": "coronary",
@@ -931,7 +1007,9 @@
     "wrong": [
      "Putamen",
      "Caudate nucleus",
-     "Claustrum"
+     "Claustrum",
+     "External capsule",
+     "Corpus callosum"
     ],
     "why": "The pale inner wedge of the lentiform nucleus. Carbon monoxide poisoning classically damages both globi pallidi, seen as symmetrical lesions on MRI.",
     "art": "brainaxial",
@@ -964,7 +1042,9 @@
     "wrong": [
      "Sacrum",
      "Rib",
-     "Pelvis"
+     "Pelvis",
+     "Axis (C2)",
+     "Calcaneus"
     ],
     "why": "A lumbar vertebra seen end-on: the chunky body carries weight and the spinal canal sits behind it. Osteoporotic crush fractures here cause sudden back pain and lost height.",
     "art": "abdoaxial",
@@ -1157,7 +1237,9 @@
     "wrong": [
      "Pineal gland",
      "Pituitary stalk",
-     "Mammillary bodies"
+     "Mammillary bodies",
+     "Aditus to the mastoid antrum",
+     "Pectineus"
     ],
     "why": "It sits just above the optic chiasm and resets from light reaching your eyes. Morning sunlight is the best jet lag cure."
    },
@@ -1168,7 +1250,9 @@
     "wrong": [
      "Great saphenous vein",
      "Femoral artery",
-     "Small saphenous vein"
+     "Small saphenous vein",
+     "Coracobrachialis",
+     "Brachialis"
     ],
     "why": "It drains the calf, and clots here can travel to the lungs. On long flights, flex your ankles and walk the aisle. The Wright brothers flew 12 seconds on this day in 1903, so no DVT risk for them."
    },
@@ -1190,7 +1274,9 @@
     "wrong": [
      "Vertebral artery",
      "Internal carotid artery",
-     "Posterior cerebral artery"
+     "Posterior cerebral artery",
+     "Superior cerebellar artery",
+     "Posterior inferior cerebellar artery"
     ],
     "why": "Formed where the two vertebral arteries join on the front of the brainstem. A basilar blockage can cause coma or ‘locked-in’ syndrome, so sudden vertigo with double vision is urgent.",
     "art": "willis",
@@ -1223,7 +1309,9 @@
     "wrong": [
      "Adductor longus",
      "Semimembranosus",
-     "Gracilis"
+     "Gracilis",
+     "Small saphenous vein",
+     "Pectineus"
     ],
     "why": "The biggest adductor, with a ‘hamstring part’ supplied by the tibial nerve. The femoral vessels pass through a gap in its tendon (the adductor hiatus) to become the popliteal vessels.",
     "art": "thighaxial",
@@ -1238,7 +1326,9 @@
     "wrong": [
      "Deep fibular nerve",
      "Tibial nerve",
-     "Sural nerve"
+     "Sural nerve",
+     "Pudendal nerve",
+     "Superficial radial nerve"
     ],
     "why": "It also supplies most of the skin on top of the foot. The deep branch just gets the first web space."
    },
@@ -1249,7 +1339,9 @@
     "wrong": [
      "Obturator nerve",
      "Genitofemoral nerve",
-     "Ilioinguinal nerve"
+     "Ilioinguinal nerve",
+     "Accessory nerve",
+     "Intercostal nerves"
     ],
     "why": "From S2–4 (‘keeps the poo off the floor’). It’s the target of a pudendal block in childbirth."
    },
@@ -1260,7 +1352,9 @@
     "wrong": [
      "T2",
      "T6",
-     "T8"
+     "T8",
+     "L4",
+     "S1"
     ],
     "why": "T4 runs across the chest at nipple level. Shingles here stays in a one-sided band like this, and a spinal cord lesion can leave a numb ‘sensory level’.",
     "art": "dermatomes",
@@ -1275,7 +1369,9 @@
     "wrong": [
      "Trochlear nerve (IV)",
      "Abducens nerve (VI)",
-     "Optic nerve (II)"
+     "Optic nerve (II)",
+     "Cervical branch",
+     "Sciatic nerve"
     ],
     "why": "It moves most eye muscles and carries pupil-constricting fibres on its outside, so pressure from an aneurysm blows the pupil early."
    }
@@ -1293,7 +1389,9 @@
     "wrong": [
      "Diaphysis",
      "Epiphysis",
-     "Periosteum"
+     "Periosteum",
+     "Fabella",
+     "Anterior superior iliac spine (ASIS)"
     ],
     "why": "The growth plate sits between epiphysis and metaphysis. Low vitamin D lets it widen, a key X-ray sign. Rickets is one of the many guesses at Tiny Tim’s illness."
    },
@@ -1304,7 +1402,9 @@
     "wrong": [
      "Adrenal glands",
      "Thymus",
-     "Pituitary gland"
+     "Pituitary gland",
+     "Coronary sinus",
+     "Right phrenic nerve"
     ],
     "why": "Usually four, each about the size of a grain of rice. They’re easy to remove by accident in thyroid surgery."
    },
@@ -1315,7 +1415,9 @@
     "wrong": [
      "Tibialis anterior",
      "Tibialis posterior",
-     "Soleus"
+     "Soleus",
+     "Gastrocnemius",
+     "Popliteal artery"
     ],
     "why": "The lateral compartment muscles hug the fibula and turn the foot out. They’re supplied by the superficial fibular nerve, so weak eversion with foot drop points to the common fibular nerve at the knee.",
     "art": "legaxial",
@@ -1363,7 +1465,9 @@
     "wrong": [
      "Internal laryngeal nerve",
      "Recurrent laryngeal nerve",
-     "Ansa cervicalis"
+     "Ansa cervicalis",
+     "Posterior interosseous nerve",
+     "Oculomotor nerve (III)"
     ],
     "why": "Cricothyroid tightens the vocal cords for high notes. Damage it in thyroid surgery and your voice can lose its top end."
    },
@@ -1374,7 +1478,9 @@
     "wrong": [
      "Oesophagus",
      "Vagal trunks",
-     "Right phrenic nerve"
+     "Right phrenic nerve",
+     "Levator veli palatini",
+     "Quadriceps"
     ],
     "why": "‘I ate 10 eggs at 12’: IVC at T8, oesophagus at T10, aorta at T12, with the thoracic duct (and often the azygos vein) tagging along."
    },
@@ -1396,7 +1502,9 @@
     "wrong": [
      "Genu of the internal capsule",
      "Posterior limb of the internal capsule",
-     "External capsule"
+     "External capsule",
+     "Thalamus",
+     "Caudate nucleus"
     ],
     "why": "It runs between the caudate head and the lentiform nucleus, carrying frontal–thalamic connections. It’s a deep brain stimulation target for severe, treatment-resistant OCD.",
     "art": "brainaxial",
@@ -1411,7 +1519,9 @@
     "wrong": [
      "Glossopharyngeal nerve (IX)",
      "Facial nerve (VII)",
-     "Auriculotemporal nerve"
+     "Auriculotemporal nerve",
+     "Marginal mandibular branch",
+     "Saphenous nerve"
     ],
     "why": "Its auricular branch. That’s why cleaning some people’s ears makes them cough."
    }
@@ -1477,7 +1587,9 @@
     "wrong": [
      "Gastrocnemius",
      "Tibialis anterior",
-     "Tibialis posterior"
+     "Tibialis posterior",
+     "Anterior tibial artery",
+     "Deep posterior compartment"
     ],
     "why": "The flat muscle under gastrocnemius; together they form the Achilles tendon. Its veins power the calf pump, and they’re a common spot for calf DVT.",
     "art": "legaxial",
@@ -1536,7 +1648,9 @@
     "wrong": [
      "Acromion",
      "Glenoid",
-     "Coracoid process"
+     "Coracoid process",
+     "Clavicle",
+     "Spine of the scapula"
     ],
     "why": "The ball of the shoulder’s ball-and-socket joint. Its socket is shallow, so the shoulder is the big joint that dislocates most often, usually forwards.",
     "art": "rotatorcuff",
@@ -1569,7 +1683,9 @@
     "wrong": [
      "Pancreas",
      "Thymus",
-     "Parathyroid gland"
+     "Parathyroid gland",
+     "Pectineus",
+     "Dermis"
     ],
     "why": "‘Ad-renal’ just means next to the kidney. It makes adrenaline and cortisol."
    },
@@ -1580,7 +1696,9 @@
     "wrong": [
      "Alveolus",
      "Lobule",
-     "Acinus"
+     "Acinus",
+     "Amygdala",
+     "Genu of the internal capsule"
     ],
     "why": "Each kidney has around a million. Joseph Murray’s 1954 transplant in Boston worked because donor and recipient were identical twins, so no rejection."
    },
@@ -1631,7 +1749,9 @@
     "wrong": [
      "Quadratus lumborum",
      "Erector spinae",
-     "Iliacus"
+     "Iliacus",
+     "Small bowel",
+     "Stomach"
     ],
     "why": "It runs beside the lumbar spine to the hip and flexes the thigh. Pus tracking along it (a psoas abscess) causes a limp and pain on hip extension, the psoas sign.",
     "art": "abdoaxial",
@@ -1657,7 +1777,9 @@
     "wrong": [
      "Haustra",
      "Crypts",
-     "Peyer’s patches"
+     "Peyer’s patches",
+     "Mastoid",
+     "Thebesian veins"
     ],
     "why": "They turn milky white after a fatty meal, hence the name. The fat skips the liver at first and enters the blood via the thoracic duct."
    },
@@ -1679,7 +1801,9 @@
     "wrong": [
      "Pyloric sphincter",
      "Ileocaecal valve",
-     "Upper oesophageal sphincter"
+     "Upper oesophageal sphincter",
+     "Quadriceps",
+     "Small saphenous vein"
     ],
     "why": "Helped by the diaphragm. Big meals and lying down straight after Christmas lunch make heartburn more likely."
    }
@@ -1719,7 +1843,9 @@
     "wrong": [
      "Basilic vein",
      "Brachial artery",
-     "Profunda brachii artery"
+     "Profunda brachii artery",
+     "Biceps brachii",
+     "Brachialis"
     ],
     "why": "It runs up the outer arm and into the groove between deltoid and pectoralis major. Surgeons often use it to pass pacemaker leads into the heart.",
     "art": "armaxial",
@@ -1734,7 +1860,9 @@
     "wrong": [
      "Superior cerebellar artery",
      "Middle cerebral artery",
-     "Posterior communicating artery"
+     "Posterior communicating artery",
+     "Anterior communicating artery",
+     "Posterior inferior cerebellar artery"
     ],
     "why": "It curves round the midbrain to supply the occipital lobe, so a PCA stroke typically causes a homonymous hemianopia, often with macular sparing.",
     "art": "willis",
@@ -1800,7 +1928,9 @@
     "wrong": [
      "Left anterior descending artery",
      "Right coronary artery",
-     "Obtuse marginal artery"
+     "Obtuse marginal artery",
+     "Posterior descending artery",
+     "Diagonal branch"
     ],
     "why": "It runs in the groove between the left atrium and ventricle, round to the back. Posterior infarcts in its territory show as ST depression in V1–V3 on a standard ECG.",
     "art": "coronary",
@@ -1815,7 +1945,9 @@
     "wrong": [
      "C5",
      "C7",
-     "C8"
+     "C8",
+     "T4",
+     "T8"
     ],
     "why": "C6 runs down the outer forearm to the thumb. A C5/6 disc squashes the C6 root: a tingling thumb, weak biceps and a reduced brachioradialis reflex.",
     "art": "dermatomes",
@@ -1837,7 +1969,9 @@
     "wrong": [
      "Levator veli palatini",
      "Salpingopharyngeus",
-     "Tensor tympani"
+     "Tensor tympani",
+     "Crypts",
+     "Optic nerve"
     ],
     "why": "Unlike most palate muscles it’s supplied by V3, not the vagus. Young children’s shorter, flatter tubes help explain all those ear infections."
    },
@@ -1848,7 +1982,9 @@
     "wrong": [
      "C6",
      "C7",
-     "T1"
+     "T1",
+     "S1",
+     "L1"
     ],
     "why": "C5 covers the outer upper arm. Numbness over the deltoid after a shoulder dislocation is more often the axillary nerve’s ‘regimental badge’ patch, so check deltoid power too.",
     "art": "dermatomes",
@@ -1889,7 +2025,9 @@
     "wrong": [
      "Flexor pollicis longus tendon",
      "Median nerve",
-     "Flexor digitorum profundus tendons"
+     "Flexor digitorum profundus tendons",
+     "Caudate nucleus",
+     "Fibular artery"
     ],
     "why": "Nine tendons and the median nerve go through. Palmaris longus runs over the top, and about 1 in 7 people don’t have one at all."
    }
@@ -1907,7 +2045,9 @@
     "wrong": [
      "Fornix",
      "Thalamus",
-     "Brainstem"
+     "Brainstem",
+     "Sylvian fissure",
+     "Temporal lobe"
     ],
     "why": "About 200 million nerve fibres linking the two hemispheres. Surgeons once cut it to stop severe seizures spreading, revealing ‘split-brain’ effects.",
     "art": "braincoronal",
@@ -1959,7 +2099,9 @@
     "wrong": [
      "Scab",
      "Cyst",
-     "Blister"
+     "Blister",
+     "Fibularis brevis avulsion",
+     "Accessory navicular"
     ],
     "why": "A soft callus of cartilage hardens into bone over weeks. Bone is one of the few tissues that can heal without a scar."
    }
@@ -1999,7 +2141,9 @@
     "wrong": [
      "Biceps brachii",
      "Brachialis",
-     "Deltoid"
+     "Deltoid",
+     "Cephalic vein",
+     "Profunda brachii artery"
     ],
     "why": "The only muscle in the back of the arm, it straightens the elbow. Tapping its tendon above the elbow tests the C7 reflex.",
     "art": "armaxial",
@@ -2047,7 +2191,9 @@
     "wrong": [
      "T11",
      "L1",
-     "T10"
+     "T10",
+     "C3",
+     "C5"
     ],
     "why": "The last thoracic vertebra, carrying the floating 12th rib. Counting up from L5 is quickest.",
     "art": "spine",
@@ -2062,7 +2208,9 @@
     "wrong": [
      "Ulnar nerve",
      "Radial nerve",
-     "Musculocutaneous nerve"
+     "Musculocutaneous nerve",
+     "Third and fourth",
+     "Vagus nerve (via the pharyngeal plexus)"
     ],
     "why": "Not to be confused with the arcade of Struthers, which can catch the ulnar nerve. Struthers liked naming things."
    },
@@ -2073,7 +2221,9 @@
     "wrong": [
      "Os peroneum",
      "Os trigonum",
-     "Os naviculare"
+     "Os naviculare",
+     "Ischial tuberosity",
+     "Intermediate cuneiform"
     ],
     "why": "Present in about a third of people. Once thought to be vanishing, it’s become more common over the past century."
    },
@@ -2084,7 +2234,9 @@
     "wrong": [
      "Infratrochlear nerve",
      "Infraorbital nerve (V2)",
-     "Supratrochlear nerve"
+     "Supratrochlear nerve",
+     "Hypoglossal nerve",
+     "Lingual nerve"
     ],
     "why": "It’s the end of the nasociliary branch of V1, which also supplies the eye. Hence the warning sign for eye involvement."
    },
@@ -2095,7 +2247,9 @@
     "wrong": [
      "Glossopharyngeal nerve",
      "Facial nerve",
-     "Mandibular nerve (V3)"
+     "Mandibular nerve (V3)",
+     "Musculocutaneous nerve",
+     "Deep branch of the ulnar nerve"
     ],
     "why": "It’s really a palate muscle moonlighting in the tongue, so it follows the palate’s nerve supply: the vagus."
    }
@@ -2135,7 +2289,9 @@
     "wrong": [
      "Epidermis",
      "Hypodermis",
-     "Stratum corneum"
+     "Stratum corneum",
+     "Thalamus",
+     "Aortic valve"
     ],
     "why": "Burns deep enough to destroy the dermis’s nerve endings can hurt less than shallow ones. Enjoy the fireworks from a safe distance tonight."
    },
@@ -2146,7 +2302,9 @@
     "wrong": [
      "Putamen",
      "Thalamus",
-     "Globus pallidus"
+     "Globus pallidus",
+     "Genu of the internal capsule",
+     "Posterior limb of the internal capsule"
     ],
     "why": "It bulges into the side of the lateral ventricle’s frontal horn. In Huntington’s disease it wastes away, so the frontal horns look rounded and enlarged on scans.",
     "art": "brainaxial",
@@ -2161,7 +2319,9 @@
     "wrong": [
      "Cerebellum",
      "Brainstem",
-     "Occipital lobe"
+     "Occipital lobe",
+     "Tibiofibular ligament",
+     "Caudate nucleus"
     ],
     "why": "The prefrontal cortex handles judgement and restraint. Coordination goes next, and at very high doses the brainstem’s breathing centres. Pace yourself tonight."
    }

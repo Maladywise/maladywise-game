@@ -12,7 +12,9 @@
     "wrong": [
      "Distal phalanx of the thumb",
      "First metacarpal",
-     "Trapezium"
+     "Trapezium",
+     "Middle phalanx",
+     "Pisiform"
     ],
     "why": "The thumb has only two phalanges. Skier’s thumb, a torn ligament at the joint at its base, is one of the commonest hand injuries.",
     "art": "hand",
@@ -27,7 +29,9 @@
     "wrong": [
      "Recurrent branch of the median nerve",
      "Superficial radial nerve",
-     "Anterior interosseous nerve"
+     "Anterior interosseous nerve",
+     "Great auricular nerve",
+     "Lesser occipital nerve"
     ],
     "why": "It supplies the interossei, the two inner lumbricals, adductor pollicis and the little finger muscles. Damage causes clawing and a weak pinch."
    },
@@ -90,7 +94,9 @@
     "wrong": [
      "Navicular",
      "Cuboid",
-     "Calcaneus"
+     "Calcaneus",
+     "Glenoid",
+     "Pisiform"
     ],
     "why": "No muscles attach to it and most of it is cartilage, so a fracture of its neck can cut off its blood supply."
    },
@@ -101,7 +107,9 @@
     "wrong": [
      "Extensor digitorum longus",
      "Fibularis longus",
-     "Tibialis posterior"
+     "Tibialis posterior",
+     "Interosseous membrane",
+     "Fibular artery"
     ],
     "why": "It lifts the foot at the ankle. Weakness causes foot drop, often from pressure on the nerve at the top of the fibula.",
     "art": "legaxial",
@@ -157,7 +165,9 @@
     "wrong": [
      "Ilioinguinal nerve",
      "Pudendal nerve",
-     "Obturator nerve"
+     "Obturator nerve",
+     "Internal laryngeal nerve",
+     "Third and fourth"
     ],
     "why": "Stroke the inner thigh and the testis rises. Its motor side runs in the genital branch (L1–L2)."
    },
@@ -179,7 +189,9 @@
     "wrong": [
      "Iliolumbar and sacroiliac",
      "Inguinal and lacunar",
-     "Pubofemoral and ischiofemoral"
+     "Pubofemoral and ischiofemoral",
+     "Ischium",
+     "Cyst"
     ],
     "why": "The pudendal nerve leaves through the greater foramen and hooks back in through the lesser, around the ischial spine."
    },
@@ -368,7 +380,9 @@
     "wrong": [
      "Duodenum",
      "Spleen",
-     "Left kidney"
+     "Left kidney",
+     "Quadratus lumborum",
+     "Stomach"
     ],
     "why": "It lies across the back of the abdomen behind the stomach, which is why pancreatic pain often goes through to the back.",
     "art": "abdoaxial",
@@ -402,7 +416,9 @@
     "wrong": [
      "Sartorius",
      "Adductor longus",
-     "Semitendinosus"
+     "Semitendinosus",
+     "Quadriceps",
+     "Vastus medialis"
     ],
     "why": "A long strap on the inner thigh. Surgeons borrow it for tendon grafts and flaps.",
     "art": "thighaxial",
@@ -417,7 +433,9 @@
     "wrong": [
      "Vastus intermedius",
      "Vastus medialis",
-     "Sartorius"
+     "Sartorius",
+     "Small saphenous vein",
+     "Adductors"
     ],
     "why": "The only quadriceps muscle that crosses the hip as well as the knee, so it’s the one strained in kicking sports.",
     "art": "thighaxial",
@@ -443,7 +461,9 @@
     "wrong": [
      "Femoral nerve",
      "Obturator nerve",
-     "Inferior gluteal nerve"
+     "Inferior gluteal nerve",
+     "Trigeminal nerve (V)",
+     "S2–S4"
     ],
     "why": "The odd one out is the short head of biceps femoris, supplied by the common fibular division."
    },
@@ -473,7 +493,9 @@
     "wrong": [
      "Infraspinatus",
      "Teres major",
-     "Serratus anterior"
+     "Serratus anterior",
+     "Supraspinatus",
+     "Teres minor"
     ],
     "why": "The only cuff muscle on the front of the shoulder blade. It turns the arm inwards; test it with the belly-press.",
     "art": "rotatorcuff",
@@ -488,7 +510,9 @@
     "wrong": [
      "Supraspinatus",
      "Teres minor",
-     "Teres major"
+     "Teres major",
+     "Supraspinatus tendon",
+     "Long head of biceps tendon"
     ],
     "why": "It turns the arm outwards. Test with resisted external rotation, elbow tucked at the side.",
     "art": "rotatorcuff",
@@ -503,7 +527,9 @@
     "wrong": [
      "Acromion",
      "Greater tubercle",
-     "Spine of the scapula"
+     "Spine of the scapula",
+     "Head of the humerus",
+     "Glenoid"
     ],
     "why": "Pec minor, short head of biceps and coracobrachialis all attach here.",
     "art": "rotatorcuff",
@@ -518,7 +544,9 @@
     "wrong": [
      "Dorsal scapular nerve",
      "Long thoracic nerve",
-     "Suprascapular nerve"
+     "Suprascapular nerve",
+     "Infratrochlear nerve",
+     "L1–L2"
     ],
     "why": "It runs just under the skin in the back of the neck, so a lymph node biopsy there can damage it and drop the shoulder."
    },
@@ -529,7 +557,9 @@
     "wrong": [
      "Short head of biceps tendon",
      "Subscapularis tendon",
-     "Supraspinatus tendon"
+     "Supraspinatus tendon",
+     "Infraspinatus",
+     "Subscapularis"
     ],
     "why": "It runs in a groove and into the shoulder joint. A rupture gives the ‘Popeye’ bulge in the upper arm.",
     "art": "rotatorcuff",
@@ -563,7 +593,9 @@
     "wrong": [
      "Cuneiforms",
      "Accessory navicular",
-     "Os trigonum"
+     "Os trigonum",
+     "306",
+     "Ischial tuberosity"
     ],
     "why": "They act like a kneecap for the big toe. Dancers and runners can fracture or inflame them."
    },
@@ -574,7 +606,9 @@
     "wrong": [
      "Lisfranc injury",
      "March fracture",
-     "Fibularis brevis avulsion"
+     "Fibularis brevis avulsion",
+     "Trapezoid",
+     "Pubis"
     ],
     "why": "A poor blood supply there means slow healing. It often needs strict rest from weight-bearing, or surgery."
    },
@@ -596,7 +630,9 @@
     "wrong": [
      "Sural nerve",
      "Saphenous nerve",
-     "Deep fibular nerve"
+     "Deep fibular nerve",
+     "Superior gluteal nerve",
+     "Common fibular (peroneal) nerve"
     ],
     "why": "A branch of the tibial nerve. The lateral plantar nerve covers the rest, and the heel has its own branches."
    }
@@ -648,7 +684,9 @@
     "wrong": [
      "Hypoglossal nerve",
      "Phrenic nerve",
-     "Cervical sympathetic chain"
+     "Cervical sympathetic chain",
+     "Deep fibular nerve",
+     "Internal laryngeal nerve"
     ],
     "why": "A loop from C1–C3 lying on the carotid sheath. Thyroid surgeons cut the straps high to spare it."
    },
@@ -741,7 +779,9 @@
     "wrong": [
      "Middle phalanx",
      "Proximal phalanx",
-     "Metacarpal"
+     "Metacarpal",
+     "Third metacarpal",
+     "Fourth metacarpal"
     ],
     "why": "The fingertip bone. Crushing it in a door is common, and the nail bed may need repair.",
     "art": "hand",
@@ -767,7 +807,9 @@
     "wrong": [
      "Median nerve",
      "Radial nerve",
-     "Musculocutaneous nerve"
+     "Musculocutaneous nerve",
+     "Saphenous nerve",
+     "Phrenic nerve"
     ],
     "why": "Bumping your ‘funny bone’ hits this nerve, which is why the tingle runs to the little finger."
    },
@@ -778,7 +820,9 @@
     "wrong": [
      "19",
      "23",
-     "32"
+     "32",
+     "Greater trochanter",
+     "Fibularis brevis avulsion"
     ],
     "why": "8 wrist bones, 5 metacarpals and 14 phalanges. Your two hands hold over a quarter of your bones."
    },
@@ -808,7 +852,9 @@
     "wrong": [
      "Posterior tibial artery",
      "Fibular artery",
-     "Popliteal artery"
+     "Popliteal artery",
+     "Fibular (peroneal) artery",
+     "Soleus"
     ],
     "why": "It becomes the dorsalis pedis artery, the pulse you feel on the top of the foot.",
     "art": "legaxial",
@@ -823,7 +869,9 @@
     "wrong": [
      "Deep fascia",
      "Anterior intermuscular septum",
-     "Tibiofibular ligament"
+     "Tibiofibular ligament",
+     "Soleus",
+     "Extensor digitorum longus"
     ],
     "why": "It ties the tibia and fibula together. A ‘high ankle sprain’ can tear up into it.",
     "art": "legaxial",
@@ -879,7 +927,9 @@
     "wrong": [
      "Coccyx",
      "Ilium",
-     "Fifth lumbar vertebra"
+     "Fifth lumbar vertebra",
+     "Fibula",
+     "Femur"
     ],
     "why": "Five vertebrae fused into one, wedged between the hip bones at the sacroiliac joints.",
     "art": "skeleton",
@@ -894,7 +944,9 @@
     "wrong": [
      "Greater trochanter",
      "Pubic symphysis",
-     "Anterior superior iliac spine"
+     "Anterior superior iliac spine",
+     "Scaphoid",
+     "Pubofemoral and ischiofemoral"
     ],
     "why": "The hamstrings start here. Teen sprinters can pull a piece of it off before it fuses."
    },
@@ -905,7 +957,9 @@
     "wrong": [
      "Greater trochanter",
      "Pubic tubercle",
-     "Anterior inferior iliac spine"
+     "Anterior inferior iliac spine",
+     "Navicular",
+     "Cuneiforms"
     ],
     "why": "Sartorius and the inguinal ligament start here. A skin nerve passes just inside it and can get pinched by tight belts."
    },
@@ -916,7 +970,9 @@
     "wrong": [
      "Sacroiliac joint",
      "Sacrococcygeal joint",
-     "Acetabulum"
+     "Acetabulum",
+     "Greater trochanter",
+     "Ilium"
     ],
     "why": "It softens and widens slightly in pregnancy, which can cause pelvic girdle pain."
    },
@@ -927,7 +983,9 @@
     "wrong": [
      "Ischium",
      "Pubis",
-     "Sacrum"
+     "Sacrum",
+     "Accessory navicular",
+     "Fibularis brevis avulsion"
     ],
     "why": "Ilium, ischium and pubis fuse at the hip socket by the late teens. The back of the iliac crest is where bone marrow is sampled."
    }
@@ -968,7 +1026,9 @@
     "wrong": [
      "Buccal branch",
      "Zygomatic branch",
-     "Cervical branch"
+     "Cervical branch",
+     "L4–S1",
+     "Thoracodorsal nerve"
     ],
     "why": "It loops below the jaw line. Damage weakens the lower lip on that side."
    },
@@ -1053,7 +1113,9 @@
     "wrong": [
      "Posterior interosseous nerve",
      "Recurrent branch of the median nerve",
-     "Superficial radial nerve"
+     "Superficial radial nerve",
+     "Nerve to quadratus femoris",
+     "Accessory nerve"
     ],
     "why": "A purely motor branch of the median nerve. With no numbness, it’s often mistaken for a tendon rupture."
    }
@@ -1094,7 +1156,9 @@
     "wrong": [
      "Cuboid",
      "Intermediate cuneiform",
-     "Talus"
+     "Talus",
+     "Fibula (lateral malleolus)",
+     "Callus"
     ],
     "why": "An accessory navicular is a common painful bump on the inner midfoot."
    },
@@ -1105,7 +1169,9 @@
     "wrong": [
      "Medial calcaneal nerve",
      "Sural nerve",
-     "Medial plantar nerve"
+     "Medial plantar nerve",
+     "Cochlear nerve",
+     "Internal laryngeal nerve (vagus)"
     ],
     "why": "An easily missed cause of stubborn heel pain, often blamed on plantar fasciitis."
    },
@@ -1116,7 +1182,9 @@
     "wrong": [
      "Os peroneum",
      "Os naviculare",
-     "Os vesalianum"
+     "Os vesalianum",
+     "Accessory navicular",
+     "Sesamoids"
     ],
     "why": "An unfused piece of the talus. Pointing the foot pinches it."
    }
@@ -1294,7 +1362,9 @@
     "wrong": [
      "Oculomotor nerve",
      "Facial nerve",
-     "Accessory nerve"
+     "Accessory nerve",
+     "Auriculotemporal nerve",
+     "Optic nerve (II)"
     ],
     "why": "That’s Horner syndrome. Neck causes include carotid dissection and tumours at the top of the lung."
    },
@@ -1324,7 +1394,9 @@
     "wrong": [
      "Third metacarpal",
      "First metacarpal",
-     "Trapezoid"
+     "Trapezoid",
+     "Proximal phalanx of the thumb",
+     "Hamate"
     ],
     "why": "The stiffest metacarpal, locked onto the wrist, giving the index finger a solid base for pinch.",
     "art": "hand",
@@ -1413,7 +1485,9 @@
     "wrong": [
      "L1–L2",
      "L4–S1",
-     "T10–L1"
+     "T10–L1",
+     "Subscapular nerve",
+     "Third and fourth"
     ],
     "why": "That’s why cauda equina compression causes saddle numbness and bladder or bowel trouble. It’s an emergency."
    },
@@ -1550,7 +1624,9 @@
     "wrong": [
      "Third and fourth",
      "All four",
-     "None"
+     "None",
+     "Phrenic nerve",
+     "Greater petrosal nerve"
     ],
     "why": "The ulnar nerve supplies the third and fourth, which is why ulnar palsy claws mainly the ring and little fingers."
    },
@@ -1643,7 +1719,9 @@
     "wrong": [
      "19",
      "22",
-     "33"
+     "33",
+     "Blister",
+     "27"
     ],
     "why": "7 tarsals, 5 metatarsals and 14 phalanges. Your hands and feet hold over half your bones."
    },
@@ -1654,7 +1732,9 @@
     "wrong": [
      "Fibula (lateral malleolus)",
      "Talus",
-     "Navicular"
+     "Navicular",
+     "Sacrococcygeal joint",
+     "Greater trochanter"
     ],
     "why": "The outer bump is the fibula, and it sits lower."
    },
@@ -1706,7 +1786,9 @@
     "wrong": [
      "Semitendinosus",
      "Biceps femoris",
-     "Gracilis"
+     "Gracilis",
+     "Rectus femoris",
+     "Vastus medialis"
     ],
     "why": "The broadest hamstring. Its tendon helps support the back of the knee joint.",
     "art": "thighaxial",
@@ -1721,7 +1803,9 @@
     "wrong": [
      "Femoral vein",
      "Small saphenous vein",
-     "Popliteal vein"
+     "Popliteal vein",
+     "Femoral artery",
+     "Semimembranosus"
     ],
     "why": "The longest vein in the body. The commonest site of varicose veins and a favourite bypass graft.",
     "art": "thighaxial",
@@ -1758,7 +1842,9 @@
     "wrong": [
      "Tibial tuberosity",
      "Fibular head",
-     "Lateral epicondyle"
+     "Lateral epicondyle",
+     "Patella",
+     "Callus"
     ],
     "why": "ITB friction pain is usually felt higher, over the outer femur just above the joint."
    }
@@ -1925,7 +2011,9 @@
     "wrong": [
      "Adductor magnus",
      "Gracilis",
-     "Pectineus"
+     "Pectineus",
+     "Popliteal vein",
+     "Sartorius"
     ],
     "why": "The tendon you feel in the groin. It forms the inner edge of the femoral triangle.",
     "art": "thighaxial",

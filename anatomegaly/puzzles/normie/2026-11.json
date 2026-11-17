@@ -11,7 +11,9 @@
     "wrong": [
      "Dorsal fin",
      "Side fin",
-     "Belly fin"
+     "Belly fin",
+     "Ears",
+     "Pectoral fin"
     ],
     "why": "The tail fin sweeps side to side to push the shark forwards.",
     "art": "shark",
@@ -48,7 +50,9 @@
     "wrong": [
      "Ears",
      "Nostrils",
-     "Cheeks"
+     "Cheeks",
+     "Beard",
+     "Horns"
     ],
     "why": "An owl’s eyes are fixed in place, so it swivels its whole head instead. Very dramatic.",
     "art": "owl",
@@ -63,7 +67,9 @@
     "wrong": [
      "Nostril",
      "Third eye",
-     "Gill"
+     "Gill",
+     "Front foot",
+     "Gill sac"
     ],
     "why": "Frogs wear their eardrums on the outside. It’s called the tympanum.",
     "art": "frog",
@@ -85,7 +91,9 @@
     "wrong": [
      "Tail",
      "Front foot",
-     "Fin"
+     "Fin",
+     "Gill sac",
+     "Gill"
     ],
     "why": "Long, webbed back feet make frogs strong swimmers and champion jumpers.",
     "art": "frog",
@@ -137,7 +145,9 @@
     "wrong": [
      "Barnacles",
      "Gills",
-     "Eggs"
+     "Eggs",
+     "Shell",
+     "Ink sac"
     ],
     "why": "Each sucker grips on its own, and it’s packed with chemical sensors, so an octopus tastes whatever it touches.",
     "art": "octopus",
@@ -159,7 +169,9 @@
     "wrong": [
      "Claws",
      "Whisker pads",
-     "Knuckles"
+     "Knuckles",
+     "Carpal pad",
+     "Spikes"
     ],
     "why": "Toe pads cushion each step, and cats sweat through their paw pads. Damp paw prints on the vet’s table are a thing.",
     "art": "catpaw",
@@ -233,7 +245,9 @@
     "wrong": [
      "Chin",
      "Tongue",
-     "Lip"
+     "Lip",
+     "Jowls",
+     "Whiskers"
     ],
     "why": "Each cat’s nose leather has its own pattern of ridges and bumps, a bit like a fingerprint.",
     "art": "catface",
@@ -285,7 +299,9 @@
     "wrong": [
      "Spur",
      "Thumbnail",
-     "Hangnail"
+     "Hangnail",
+     "Teeth",
+     "Carpal pad"
     ],
     "why": "The dewclaw is the cat’s first digit, the equivalent of your thumb. Handy for gripping prey.",
     "art": "catpaw",
@@ -333,7 +349,9 @@
     "wrong": [
      "Frog",
      "Wall",
-     "Heel bulb"
+     "Heel bulb",
+     "Seat of corn",
+     "Collateral grooves"
     ],
     "why": "The sole is slightly cupped, so it doesn’t take the full weight. The wall does that.",
     "art": "hoof",
@@ -433,7 +451,9 @@
     "wrong": [
      "Food pouch",
      "Gill sac",
-     "Swim bladder"
+     "Swim bladder",
+     "Back foot",
+     "Front foot"
     ],
     "why": "Male frogs inflate a vocal sac to make their calls louder. Some can be heard a kilometre away.",
     "art": "frog",
@@ -570,7 +590,9 @@
     "wrong": [
      "Nostrils",
      "Ears",
-     "Scars"
+     "Scars",
+     "Ampullae of Lorenzini",
+     "Anal fin"
     ],
     "why": "Water flows in through the mouth and out through the gill slits, which pull oxygen out on the way.",
     "art": "shark",
@@ -585,7 +607,9 @@
     "wrong": [
      "Tail",
      "Tongue",
-     "Antenna"
+     "Antenna",
+     "Hamuli",
+     "Honey sac"
     ],
     "why": "Only female bees have a stinger. It’s a modified egg-laying tube.",
     "art": "bee",
@@ -623,7 +647,9 @@
     "wrong": [
      "Hooves",
      "Flippers",
-     "Paws"
+     "Paws",
+     "Beard",
+     "Ears"
     ],
     "why": "Talons are curved claws for gripping prey. Owls can even swing one outer toe backwards for a better grip.",
     "art": "owl",
@@ -682,7 +708,9 @@
     "wrong": [
      "Brain case",
      "Swim bladder",
-     "Shell"
+     "Shell",
+     "Barnacles",
+     "Ink sac"
     ],
     "why": "The mantle is a muscular bag holding the hearts, gills and gut. The actual head, with eyes and brain, sits just below it.",
     "art": "octopus",
@@ -697,7 +725,9 @@
     "wrong": [
      "Beard",
      "Mane",
-     "Crest"
+     "Crest",
+     "Flippers",
+     "Eyes"
     ],
     "why": "The facial disc works like a satellite dish, funnelling sound towards the ears.",
     "art": "owl",
@@ -712,7 +742,9 @@
     "wrong": [
      "Nostrils",
      "Eardrums",
-     "Vocal sacs"
+     "Vocal sacs",
+     "Gill sac",
+     "Fin"
     ],
     "why": "When a frog swallows, its eyes sink down into its head and help push food down its throat. Yes, really.",
     "art": "frog",
@@ -771,7 +803,9 @@
     "wrong": [
      "Antlers",
      "Horns",
-     "Antennae"
+     "Antennae",
+     "Beard",
+     "Tongue"
     ],
     "why": "Ossicones are bony knobs covered in skin and fur. Both males and females have them.",
     "art": "giraffe",
@@ -786,7 +820,9 @@
     "wrong": [
      "Leg",
      "Tentacle",
-     "Fin"
+     "Fin",
+     "Spines",
+     "Eyespot"
     ],
     "why": "Sea stars can regrow lost arms. It takes months, but it’s still a better repair plan than ours.",
     "art": "seastar",
@@ -830,7 +866,9 @@
     "wrong": [
      "Tragus",
      "Antitragus",
-     "Scapha"
+     "Scapha",
+     "Tongue",
+     "Fin"
     ],
     "why": "Its formal name is the cutaneous marginal pouch. Nobody knows who Henry was, or what the pocket is for.",
     "art": "catface",
@@ -845,7 +883,9 @@
     "wrong": [
      "Collateral grooves",
      "Seat of corn",
-     "White line"
+     "White line",
+     "Sole",
+     "Ankles"
     ],
     "why": "The bars are the hoof wall folding inwards at the heel. They add strength where the hoof flexes.",
     "art": "hoof",
@@ -860,7 +900,9 @@
     "wrong": [
      "Corbiculae",
      "Axillary sclerites",
-     "Tegulae"
+     "Tegulae",
+     "Tail",
+     "Stinger sheath"
     ],
     "why": "A row of tiny hooks on the hind wing catches the forewing, so two wings flap as one.",
     "art": "bee",
@@ -904,7 +946,9 @@
     "wrong": [
      "Stinger",
      "Antenna",
-     "Front leg"
+     "Front leg",
+     "Corbiculae",
+     "Pollen basket"
     ],
     "why": "A honeybee’s long tongue (proboscis) works like a straw for slurping nectar.",
     "art": "bee",
@@ -960,7 +1004,9 @@
     "wrong": [
      "Carpal pad",
      "Toe pad",
-     "Heel pad"
+     "Heel pad",
+     "Hangnail",
+     "Whisker pads"
     ],
     "why": "It’s the main weight-bearing pad of the front paw, behind the four toe pads.",
     "art": "catpaw",
@@ -997,7 +1043,9 @@
     "wrong": [
      "Lungs",
      "Ink glands",
-     "Kidneys"
+     "Kidneys",
+     "Snorkel",
+     "Brain case"
     ],
     "why": "Two gills pull oxygen from seawater. Each gets its own little heart to pump blood through it.",
     "art": "octopus",
@@ -1086,7 +1134,9 @@
     "wrong": [
      "Trunk",
      "Mane",
-     "Leg"
+     "Leg",
+     "Tongue",
+     "Antlers"
     ],
     "why": "Giraffe tails are around a metre long, and that hairy tuft makes a handy fly swat.",
     "art": "giraffe",
@@ -1112,7 +1162,9 @@
     "wrong": [
      "Eyebrows",
      "Antennae",
-     "Fur"
+     "Fur",
+     "Nose",
+     "Tragus"
     ],
     "why": "Whiskers are deep-rooted touch sensors packed with nerves. Never trim them.",
     "art": "catface",
@@ -1160,7 +1212,9 @@
     "wrong": [
      "Toad",
      "Heel",
-     "Tongue"
+     "Tongue",
+     "Heel bulbs",
+     "Sole"
     ],
     "why": "It really is called the frog. It’s a rubbery pad that grips and absorbs shock.",
     "art": "hoof",
@@ -1186,7 +1240,9 @@
     "wrong": [
      "Lip",
      "Beard",
-     "Trunk"
+     "Trunk",
+     "Leg",
+     "Antlers"
     ],
     "why": "A giraffe’s tongue is about 45 to 50 cm long and tough enough to wrap around thorny acacia branches.",
     "art": "giraffe",
@@ -1249,7 +1305,9 @@
     "wrong": [
      "Teeth",
      "Spikes",
-     "Scales"
+     "Scales",
+     "Dewclaw pad",
+     "Metacarpal pad"
     ],
     "why": "Cats keep their claws tucked away until needed, which keeps them sharp and makes walking silent.",
     "art": "catpaw",
@@ -1319,7 +1377,9 @@
     "wrong": [
      "Tentacle",
      "Fin",
-     "Tail"
+     "Tail",
+     "Suckers",
+     "Mantle"
     ],
     "why": "Octopuses have eight arms, not tentacles. Squid and cuttlefish have eight arms plus two longer tentacles for snatching prey.",
     "art": "octopus",
@@ -1334,7 +1394,9 @@
     "wrong": [
      "Toes",
      "Knees",
-     "Ankles"
+     "Ankles",
+     "Frog",
+     "Toad"
     ],
     "why": "The heel bulbs are soft and springy, helping cushion every landing.",
     "art": "hoof",
@@ -1371,7 +1433,9 @@
     "wrong": [
      "Eyelashes",
      "Ear tufts",
-     "Chin whiskers"
+     "Chin whiskers",
+     "Chin",
+     "Cheek pouches"
     ],
     "why": "Touch these and the cat blinks: an early warning system for twigs and nosy fingers.",
     "art": "catface",
@@ -1578,7 +1642,9 @@
     "wrong": [
      "Ears",
      "Horns",
-     "Antennae"
+     "Antennae",
+     "Eyes",
+     "Hooves"
     ],
     "why": "‘Ear tufts’ are just feathers, probably for camouflage and showing mood. The real ears are hidden at the sides of the face.",
     "art": "owl",
@@ -1615,7 +1681,9 @@
     "wrong": [
      "Tail fin",
      "Side fin",
-     "Belly fin"
+     "Belly fin",
+     "Nostrils",
+     "Anal fin"
     ],
     "why": "The dorsal fin on the back keeps the shark steady so it doesn’t roll over.",
     "art": "shark",
@@ -1630,7 +1698,9 @@
     "wrong": [
      "Horn",
      "Crest",
-     "Fin"
+     "Fin",
+     "Chin whiskers",
+     "Tragus"
     ],
     "why": "Cats have around 32 muscles in each ear, so they can aim them like radar dishes.",
     "art": "catface",
@@ -1693,7 +1763,9 @@
     "wrong": [
      "Snorkel",
      "Gill",
-     "Ink gland"
+     "Ink gland",
+     "Fin",
+     "Swim bladder"
     ],
     "why": "Water squirts out of the siphon for breathing and jet propulsion. It’s also how the ink gets aimed.",
     "art": "octopus",
@@ -1726,7 +1798,9 @@
     "wrong": [
      "Pelvic fin",
      "Dorsal fin",
-     "Anal fin"
+     "Anal fin",
+     "Tail fin",
+     "Spiracles"
     ],
     "why": "Pectoral fins work like aeroplane wings, giving lift and steering.",
     "art": "shark",
@@ -1741,7 +1815,9 @@
     "wrong": [
      "Hooves",
      "Claws",
-     "Knuckles"
+     "Knuckles",
+     "Mantle",
+     "Heel bulbs"
     ],
     "why": "Elephants walk on tiptoe. A thick fatty cushion inside the foot takes the weight.",
     "art": "elephant",
@@ -1800,7 +1876,9 @@
     "wrong": [
      "Cheek pouches",
      "Jowls",
-     "Nose pads"
+     "Nose pads",
+     "Eyebrow whiskers",
+     "Chin whiskers"
     ],
     "why": "Most cats have 24 muzzle whiskers, 12 a side in four rows, rooted in these pads.",
     "art": "catface",
@@ -1870,7 +1948,9 @@
     "wrong": [
      "Spines",
      "Eggs",
-     "Gills"
+     "Gills",
+     "Madreporite",
+     "Tentacle"
     ],
     "why": "Hundreds of water-filled tube feet let a sea star creep along and grip rocks.",
     "art": "seastar",
@@ -1896,7 +1976,9 @@
     "wrong": [
      "Frog",
      "Bars",
-     "Heel bulb"
+     "Heel bulb",
+     "Seat of corn",
+     "Wall"
     ],
     "why": "Farriers use the white line as a guide: nails go in outside it.",
     "art": "hoof",
@@ -2014,7 +2096,9 @@
     "wrong": [
      "Dewclaw pad",
      "Heel pad",
-     "Elbow pad"
+     "Elbow pad",
+     "Knuckles",
+     "Claws"
     ],
     "why": "The carpal pad sits at the wrist. It helps with grip and braking when a cat lands.",
     "art": "catpaw",

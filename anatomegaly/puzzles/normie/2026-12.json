@@ -129,7 +129,9 @@
     "wrong": [
      "Honey sac",
      "Wax plate",
-     "Stinger sheath"
+     "Stinger sheath",
+     "Corbiculae",
+     "Front leg"
     ],
     "why": "Bees pack pollen into a hair-fringed hollow on each back leg to carry it home.",
     "art": "bee",
@@ -287,7 +289,9 @@
     "wrong": [
      "Stomach",
      "Venom gland",
-     "Swim bladder"
+     "Swim bladder",
+     "Shell",
+     "Siphon"
     ],
     "why": "The ink sac squirts a dark cloud through the siphon, a smokescreen for a quick escape.",
     "art": "octopus",
@@ -1263,7 +1267,9 @@
     "wrong": [
      "Eyespot",
      "Gill plate",
-     "Ink pore"
+     "Ink pore",
+     "Tube feet",
+     "Gills"
     ],
     "why": "It lets seawater into the sea star’s plumbing that powers its tube feet.",
     "art": "seastar",
@@ -1918,7 +1924,9 @@
     "wrong": [
      "Lateral line pores",
      "Spiracles",
-     "Nares"
+     "Nares",
+     "Side fin",
+     "Anal fin"
     ],
     "why": "Named after Stefano Lorenzini, who described them in 1678. They sense electric fields.",
     "art": "shark",

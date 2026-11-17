@@ -1,5 +1,5 @@
 /* Anatomegaly: a daily anatomy puzzle, one diagram a day from 15 Nov 2026 (five rounds before; Sundays keep all five). Name the highlighted structure, the bone or the nerve; four options per round.
-   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rounds:[{kind, q, art?, hl?, answer, wrong:[3], why}] x5}.
+   Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rounds:[{kind, q, art?, hl?, answer, wrong:[3 to 5], why}] x5}.
    art = a diagram name from art.js; hl = the part ids to highlight. Score 3+ out of 5 counts as a win.
    Normie mode ("animal anatomy"): puzzles/normie/YYYY-MM.json, same format, animal diagrams from art.js, "n-" storage keys,
    own sass, mascot outfit and share line. Missing Normie file -> MW_noNormie. Einstein dates: MW_EINSTEIN / MW_EINSTEIN_N.
