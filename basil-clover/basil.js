@@ -1225,7 +1225,7 @@
       else if (c.kicks > p.kicks) snd("kick", S.combo);
       if (c.m > p.m && c.m > 1) snd("step", c.m - 1);
       if (c.lives < p.lives) snd("life");
-      else if (c.ann && c.ann !== p.ann && S.purrT < PURRT - 0.1) snd(c.boss && !p.boss ? "boss" : "ann");
+      else if (c.ann && c.ann !== p.ann && S.purrT < PURRT - 0.1) (c.boss && !p.boss ? snd("boss", STAGE) : snd("ann"));
       if (c.ct && c.ct !== p.ct) snd("title");
       if ((c.hb > p.hb + 2 || c.hc > p.hc + 2) && c.lives === p.lives) snd("heal");
       if (c.nip && !p.nip) snd("catnip");

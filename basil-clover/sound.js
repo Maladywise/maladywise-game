@@ -44,6 +44,22 @@
   // C major pentatonic ladder for combos (the Mergeon trick: every hit in a streak climbs a note)
   var PENT = [392, 440, 523.25, 587.33, 659.25, 783.99, 880, 1046.5, 1174.66, 1318.51, 1567.98, 1760];
   var lastSfx = {};
+  // each level's boss has its own call after the rumble (n = level)
+  function bossSig(n, t) {
+    var k;
+    switch (n) {
+      case 1: noise(t, 0.7, { f: 600, q: 0.6, vol: 0.06 }); tone(220, t, 0.7, { type: "sawtooth", to: 660, vol: 0.025 }); break; // vacuum whirr
+      case 2: tone(1318.51, t, 0.5, { type: "sine", vol: 0.07 }); tone(1046.5, t + 0.22, 0.6, { type: "sine", vol: 0.06 }); break; // clinic ding-dong
+      case 3: [0, 0.3].forEach(function (d) { tone(360, t + d, 0.22, { type: "square", to: 300, vol: 0.05 }); tone(366, t + d, 0.22, { type: "sawtooth", to: 296, vol: 0.03 }); }); break; // HONK HONK
+      case 4: for (k = 0; k < 7; k++) noise(t + k * 0.07, 0.03, { f: 4500, q: 2, vol: 0.12 }); break; // claw clicks
+      case 5: [0, 0.16, 0.32].forEach(function (d) { tone(988, t + d, 0.09, { type: "square", vol: 0.03 }); }); tone(988, t + 0.55, 0.5, { type: "square", vol: 0.02 }); break; // monitor beeps
+      case 6: noise(t, 0.8, { f: 300, q: 0.4, vol: 0.08 }); for (k = 0; k < 10; k++) noise(t + Math.random() * 0.8, 0.02, { f: 3000, q: 1, vol: 0.12 }); break; // fire crackle
+      case 7: [0, 0.22].forEach(function (d) { tone(1400, t + d, 0.16, { type: "sine", to: 2100, vol: 0.06 }); }); break; // rubber squeak
+      case 8: [1567.98, 2093, 1760, 2349.32, 2093].forEach(function (x, i) { tone(x, t + i * 0.08, 0.25, { type: "triangle", vol: 0.035 }); }); noise(t, 0.5, { hp: true, f: 7000, vol: 0.03 }); break; // jingle
+      case 9: [0, 0.25].forEach(function (d) { tone(90, t + d, 0.18, { type: "sine", to: 40, vol: 0.25 }); noise(t + d, 0.06, { f: 200, vol: 0.08 }); }); break; // thump thump
+      case 10: tone(330, t, 1.0, { type: "sine", to: 200, vol: 0.07, det: 25 }); tone(332, t + 0.05, 1.0, { type: "triangle", to: 198, vol: 0.04 }); break; // booooo
+    }
+  }
   function sfx(kind, n) {
     if (lvl === 0) return; var a = ctx(); if (!a) return;
     var now = a.currentTime; if (lastSfx[kind] && now - lastSfx[kind] < 0.035) return; lastSfx[kind] = now; // no machine-gun stacking
@@ -63,7 +79,7 @@
         case "meter": tone(1200 + n * 40, t, 0.05, { vol: 0.012 }); break;
         case "ann": tone(880, t, 0.18, { type: "triangle", vol: 0.06 }); tone(1318.51, t + 0.14, 0.3, { type: "triangle", vol: 0.06 }); break;
         case "life": [523.25, 415.3, 329.63].forEach(function (x, i) { tone(x, t + i * 0.16, 0.28, { type: "triangle", vol: 0.08 }); }); break;
-        case "boss": tone(65, t, 0.9, { type: "sawtooth", to: 45, vol: 0.06 }); tone(98, t + 0.1, 0.8, { type: "triangle", to: 60, vol: 0.12 }); noise(t, 0.8, { f: 200, vol: 0.06 }); break;
+        case "boss": tone(65, t, 0.9, { type: "sawtooth", to: 45, vol: 0.06 }); tone(98, t + 0.1, 0.8, { type: "triangle", to: 60, vol: 0.12 }); noise(t, 0.8, { f: 200, vol: 0.06 });  bossSig(n, t + 0.45); break;
         case "bosshit": tone(180, t, 0.12, { type: "square", to: 90, vol: 0.05 }); noise(t, 0.1, { f: 1500, vol: 0.08 }); break;
         case "treat": [1318.51, 1975.53].forEach(function (x, i) { tone(x, t + i * 0.06, 0.2, { type: "square", vol: 0.025 }); }); break;
         case "sparkle": for (var k = 0; k < 6; k++) tone(PENT[6 + (k * 5) % 6], t + k * 0.05, 0.18, { vol: 0.03 }); break;
