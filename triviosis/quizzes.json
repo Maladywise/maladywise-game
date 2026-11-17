@@ -3414,14 +3414,14 @@
     "e": "Resistance was spotted before the drug reached the clinic. World AMR Awareness Week starts today."
    },
    {
-    "q": "The NDM-1 carbapenemase, described in 2009, is named after?",
-    "a": "New Delhi",
+    "q": "A November 2026 Oxford study made \u2018molecular glues\u2019 that tag TEM \u03b2-lactamases in E. coli for destruction by which periplasmic protease?",
+    "a": "DegP",
     "w": [
-     "Nairobi",
-     "Dhaka",
-     "Karachi"
+     "Lon",
+     "ClpXP",
+     "OmpT"
     ],
-    "e": "New Delhi metallo-beta-lactamase, first found in a Swedish patient treated in India."
+    "e": "Built from the \u03b2-lactamase inhibitor tazobactam, the degraders boosted piperacillin against resistant E. coli in the lab (Angewandte Chemie, 2026). Lon and ClpXP work in the cytoplasm; OmpT sits in the outer membrane."
    },
    {
     "q": "The mcr-1 gene, reported from China in 2015, spreads resistance to which last-line antibiotic?",
@@ -3441,7 +3441,7 @@
      "4.95 million",
      "12.7 million"
     ],
-    "e": "4.95 million deaths were associated with AMR. 1.27 million were directly caused by it."
+    "e": "4.95 million deaths were associated with AMR. 1.27 million were directly caused by it. This week WHO warned AMR could cause 39 million deaths over the next 25 years, and that in 2023 one in six lab-confirmed bacterial infections reported to it was resistant."
    },
    {
     "q": "VanA vancomycin-resistant enterococci swap the cell-wall end D-Ala-D-Ala for?",
