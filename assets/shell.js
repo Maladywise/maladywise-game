@@ -1714,6 +1714,25 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var idx = li.map(function (x) { return norm(x.textContent + " " + (x.getAttribute("data-q") || "")); });
     box.addEventListener("input", function () { var w = norm(box.value).split(/\s+/).filter(Boolean), n = 0; li.forEach(function (x, i) { var ok = w.every(function (t) { return idx[i].indexOf(t) >= 0; }); x.hidden = !ok; if (ok) n++; }); no.hidden = n > 0; });
   }
+  // "Babies and children" filter chip on the Conditions list (Nov 2026). Uses the groups in MW_FACTS; /conditions/#kids opens it filtered.
+  function kidsChip() {
+    if (location.pathname !== "/conditions/" || !window.MW_FACTS) return;
+    var ul = document.getElementById("fs-list"); if (!ul || document.querySelector(".mw-kidchip")) return;
+    var F = window.MW_FACTS, kids = {};
+    Object.keys(F).forEach(function (u) { if ((F[u].g || []).indexOf("Babies and children") >= 0) kids[u] = 1; });
+    var n = Object.keys(kids).length; if (!n) return;
+    var b = document.createElement("button"); b.type = "button"; b.className = "mw-kidchip"; b.setAttribute("aria-pressed", "false");
+    b.innerHTML = "\ud83d\udc76 Babies and children <small>(" + n + ")</small>";
+    var anchor = document.querySelector(".azbar") || document.getElementById("fs-q") || ul;
+    anchor.insertAdjacentElement("afterend", b);
+    function set(on) {
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      [].slice.call(ul.children).forEach(function (li) { var a = li.querySelector("a"); li.classList.toggle("mw-kidhide", on && !(a && kids[a.getAttribute("href")])); });
+      var bar = document.querySelector(".azbar"); if (bar) bar.classList.toggle("mw-kidhide", on);
+    }
+    b.addEventListener("click", function () { var on = b.getAttribute("aria-pressed") !== "true"; set(on); try { history.replaceState(null, "", on ? "#kids" : location.pathname); } catch (e) {} });
+    if (location.hash === "#kids") set(true);
+  }
   // A–Z jump bar under the search box on the big alphabetical lists (Conditions, Medicines).
   function azBar() {
     if (!/^\/(conditions|medicines)\/$/.test(location.pathname)) return;
@@ -1931,7 +1950,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} try { betaTags(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { kidsChip(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} try { betaTags(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],

@@ -209,6 +209,13 @@
 "label": "Exercise handout",
 "title": "Lower Back Stretches"
 },
+"bedwetting": {
+"url": "/bedwetting/",
+"key": "3c5805390164",
+"v": "fbc5b302",
+"label": "Condition",
+"title": "Bedwetting"
+},
 "bells-palsy": {
 "url": "/bells-palsy/",
 "key": "3686ee3cf3fe",
@@ -965,6 +972,13 @@
 "label": "Condition",
 "title": "Fatty Liver (MASLD)"
 },
+"febrile-seizures": {
+"url": "/febrile-seizures/",
+"key": "55321888ca3c",
+"v": "78dc64f5",
+"label": "Condition",
+"title": "Febrile Seizures"
+},
 "female-infertility": {
 "url": "/female-infertility/",
 "key": "0f29b7f9857e",
@@ -1181,6 +1195,13 @@
 "v": "6f54607b",
 "label": "Condition",
 "title": "Pattern Hair Loss"
+},
+"hand-foot-and-mouth": {
+"url": "/hand-foot-and-mouth/",
+"key": "656c30d6ddcd",
+"v": "1f189f92",
+"label": "Condition",
+"title": "Hand, Foot and Mouth Disease"
 },
 "hand-foot-mouth": {
 "url": "/hand-foot-mouth/",
@@ -2540,6 +2561,13 @@
 "label": "Condition",
 "title": "Scalp Psoriasis"
 },
+"scarlet-fever": {
+"url": "/scarlet-fever/",
+"key": "c48bcbb15583",
+"v": "b3093ce5",
+"label": "Condition",
+"title": "Scarlet Fever"
+},
 "sciatica": {
 "url": "/sciatica/",
 "key": "3f468bcfa6d8",
@@ -2658,6 +2686,13 @@
 "v": "0bac3ef3",
 "label": "Condition",
 "title": "Skin Tags"
+},
+"slapped-cheek": {
+"url": "/slapped-cheek/",
+"key": "92390a0ef45a",
+"v": "f56f3d60",
+"label": "Condition",
+"title": "Slapped Cheek (Fifth Disease)"
 },
 "sleep": {
 "url": "/sleep/",
@@ -3449,6 +3484,13 @@
 "v": "99e59aa5",
 "label": "Condition",
 "title": "Weight and Obesity"
+},
+"whooping-cough": {
+"url": "/whooping-cough/",
+"key": "38c5340ebcd2",
+"v": "1d002f1a",
+"label": "Condition",
+"title": "Whooping Cough (Pertussis)"
 },
 "zinc": {
 "url": "/zinc/",
