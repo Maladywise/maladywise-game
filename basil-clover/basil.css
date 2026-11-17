@@ -237,3 +237,5 @@
 .bk-sc.today{align-items:start}.bk-sc.today .bk-sbs{align-items:center}
 .bk-go{background:#FFD23F!important;color:#2E1F57;box-shadow:0 2px 0 #C99A10}
 .bk-go:hover{background:#FFC61A!important}.bk-go:active{transform:translateY(1px);box-shadow:none}
+.bk-endnote{margin:8px 0 0;font-size:13px;line-height:1.35;opacity:.8;text-align:center}
+.bk-hsst{flex-wrap:wrap;justify-content:center;max-width:100%}.bk-hsst button{flex:0 0 auto}

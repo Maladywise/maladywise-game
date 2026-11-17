@@ -150,12 +150,14 @@ function lbName(s, b) { let n = String(s || "").replace(/[^A-Za-z0-9 '\-\.]/g, "
 // boards: all, daily (Kitchen), vall, vdaily (Stage 2: the Vet), oall, odaily (Organ Drop: endless and the daily challenge),
 // sdaily (Sudokrine: today's fastest times; s = seconds, r = 1 Medical or 2 Normie),
 // mdaily, mall (Mergeon: today's daily run and best daily run of all time; r = top piece level 0-10)
-const BOARDS = ["all", "daily", "vall", "vdaily", "fall", "fdaily", "oall", "odaily", "sdaily", "mdaily", "mall", "ndaily", "nall"];
-const DAILY_BOARDS = ["daily", "vdaily", "fdaily", "odaily", "sdaily", "mdaily", "ndaily"];
+// Basil + Clover stages 4-10 (Beach, Ward, Hell, Bath Time, Christmas, Easter, Halloween): s4all/s4daily ... s10all/s10daily (Nov 2026)
+const STAGE_BOARDS = [4, 5, 6, 7, 8, 9, 10].reduce((a, n) => a.concat(["s" + n + "all", "s" + n + "daily"]), []);
+const BOARDS = ["all", "daily", "vall", "vdaily", "fall", "fdaily", "oall", "odaily", "sdaily", "mdaily", "mall", "ndaily", "nall"].concat(STAGE_BOARDS);
+const DAILY_BOARDS = ["daily", "vdaily", "fdaily", "odaily", "sdaily", "mdaily", "ndaily"].concat(STAGE_BOARDS.filter(b => /daily$/.test(b)));
 const ASC_BOARDS = ["sdaily"]; // lower score is better
 function lbAsc(b) { return ASC_BOARDS.indexOf(b) >= 0; }
 function lbBoard(x) { return BOARDS.indexOf(x) >= 0 ? x : "all"; }
-function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : b === "vall" ? "lb:vall" : b === "fall" ? "lb:fall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : b === "nall" ? "lb:nall" : "lb:all"; }
+function lbKey(b) { return DAILY_BOARDS.indexOf(b) >= 0 ? "lb:" + b + ":" + sydDay() : /^s\d+all$/.test(b) ? "lb:" + b : b === "vall" ? "lb:vall" : b === "fall" ? "lb:fall" : b === "oall" ? "lb:oall" : b === "mall" ? "lb:mall" : b === "nall" ? "lb:nall" : "lb:all"; }
 // score sanity caps. Basil + Clover: r = round. Organ Drop: r = level (a level is 10 lines; a four-line clear is 800 x level, plus drop points)
 // Hard per-board ceilings on top of the shape checks below (score s, round/level r). The live boards couldn't be read
 // when these were set, so they come from each game's scoring rules with generous headroom; rejected posts are logged
@@ -165,7 +167,7 @@ const SCORE_MAX = Object.assign({
   oall: [10000000, 300], odaily: [5000000, 300],                                              // Stackulus
   mdaily: [2000000, 10], mall: [2000000, 10], ndaily: [2000000, 10], nall: [2000000, 10],     // Mergeon (n = Normie)
   sdaily: [7200, 2],                                                                            // Sudokrine (seconds)
-}, (() => { try { return JSON.parse(process.env.SCORE_MAX || "{}"); } catch (e) { console.error("SCORE_MAX is not valid JSON; ignoring it"); return {}; } })());
+}, STAGE_BOARDS.reduce((o, b) => (o[b] = /daily$/.test(b) ? [5000000, 500] : [10000000, 500], o), {}), (() => { try { return JSON.parse(process.env.SCORE_MAX || "{}"); } catch (e) { console.error("SCORE_MAX is not valid JSON; ignoring it"); return {}; } })());
 const scoreHits = new Map();     // per-IP-hash timestamps of recent /score posts (memory only)
 const SCORE_PER_MIN = 10;
 const RATE_SALT = crypto.randomBytes(16).toString("hex"); // per-process; rate limiting works even without TAG_SALT

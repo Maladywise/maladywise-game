@@ -1682,9 +1682,11 @@
   // An older server maps unknown boards to "all", so until then the Vet stays this-device only and never posts.
   var LB = "https://mw-presence.onrender.com", boards = { world: null, daily: null, vworld: null, vdaily: null, fworld: null, fdaily: null }, tabSel = { "bk-hslist0": "world", "bk-hstab": "world" }, hsSt = { "bk-hslist0": 1 }, lastHi = -1, VETLB = false, FARMLB = false;
   var SRV = { world: "all", daily: "daily", vworld: "vall", vdaily: "vdaily", fworld: "fall", fdaily: "fdaily" };
+  // stages 4-10 (Nov 2026): boards s4all/s4daily ... s10all/s10daily, used once the server echoes "s4all" back
+  var SLB = false; for (var sn = 4; sn <= 10; sn++) { SRV["x" + sn + "world"] = "s" + sn + "all"; SRV["x" + sn + "daily"] = "s" + sn + "daily"; boards["x" + sn + "world"] = null; boards["x" + sn + "daily"] = null; }
   // a stage's World/Today boards are used only once the server has echoed that board back (older servers map unknown boards to "all")
-  function lbOff(st) { return st === 2 ? !VETLB : st === 3 ? !FARMLB : st >= 4; }
-  function lbOffK(k) { return k.charAt(0) === "v" ? !VETLB : k.charAt(0) === "f" ? !FARMLB : k.charAt(0) === "x"; }
+  function lbOff(st) { return st === 2 ? !VETLB : st === 3 ? !FARMLB : st >= 4 ? !SLB : false; }
+  function lbOffK(k) { return k.charAt(0) === "v" ? !VETLB : k.charAt(0) === "f" ? !FARMLB : k.charAt(0) === "x" ? !SLB : false; }
   function boardSt(id) { return id === "bk-hstab" ? STAGE : hsSt[id] || 1; }
   function bkey(which, st) { return st === 2 ? (which === "daily" ? "vdaily" : "vworld") : st === 3 ? (which === "daily" ? "fdaily" : "fworld") : st >= 4 ? "x" + st + which : which; }
   function isVet(k) { return k.charAt(0) === "v" || k.charAt(0) === "f" || k.charAt(0) === "x"; }
@@ -1692,7 +1694,7 @@
   function dayLabel() { var d = sydDay().split("-"); return +d[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+d[1] - 1]; }
   function lbGot(k, j) {
     var ok = j && Array.isArray(j.rows) && (!isVet(k) || j.board === SRV[k]);
-    if (isVet(k) && j && !ok) { if (k.charAt(0) === "v") VETLB = false; else FARMLB = false; hsUI(); } // the server stopped knowing the Vet's boards
+    if (isVet(k) && j && !ok) { if (k.charAt(0) === "v") VETLB = false; else if (k.charAt(0) === "x") SLB = false; else FARMLB = false; hsUI(); } // the server stopped knowing the Vet's boards
     boards[k] = ok ? j.rows : "err";
     ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (tabSel[id] !== "me" && bkey(tabSel[id], boardSt(id)) === k) renderBoard(id, tabSel[id]); });
   }
@@ -1706,6 +1708,10 @@
       if (j && j.board === "vall" && Array.isArray(j.rows)) { VETLB = true; boards.vworld = j.rows; }
       hsUI(); ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (boardSt(id) === 2) renderBoard(id, tabSel[id]); });
     }).catch(function () {});
+    fetch(LB + "/top?b=s4all&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.board === "s4all" && Array.isArray(j.rows)) { SLB = true; boards.x4world = j.rows; }
+      hsUI(); ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (boardSt(id) >= 4) renderBoard(id, tabSel[id]); });
+    }).catch(function () {});
     fetch(LB + "/top?b=fall&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
       if (j && j.board === "fall" && Array.isArray(j.rows)) { FARMLB = true; boards.fworld = j.rows; }
       hsUI(); ["bk-hslist0", "bk-hstab"].forEach(function (id) { if (boardSt(id) === 3) renderBoard(id, tabSel[id]); });
@@ -1713,7 +1719,7 @@
   }
   function postScore(k, n, sc, rd) {
     if (lbOffK(k)) return renderBoard("bk-hstab", "me"); // never post a Vet score where it would land on the Kitchen's board
-    var which = isVet(k) ? k.slice(1) : k;
+    var which = isVet(k) ? k.replace(/^(v|f|x\d+)/, "") : k;
     boards[k] = null; renderBoard("bk-hstab", which);
     var u = LB + "/score?b=" + SRV[k] + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(sc) + "&r=" + rd;
     fetch(u, { method: "POST", cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); track("basil/world-score"); }).catch(function () { lbGot(k, null); });
@@ -1797,7 +1803,7 @@
     if ($("bk-tname")) $("bk-tname").textContent = nm;
     if ($("bk-tst")) $("bk-tst").innerHTML = won ? "\ud83d\udc51 Conquered" + (best ? " \u00b7 best <b>" + fmt(best) + "</b>" : "") : best ? "Best <b>" + fmt(best) + "</b>" : "10 rounds";
     if ($("bk-tsd")) $("bk-tsd").textContent = (SDESC[n] || (LCFG[n] && LCFG[n].blurb) || "") + " Same rounds for everyone today.";
-    var te = $("bk-tend"); if (te) { te.disabled = !won; te.classList.toggle("locked", !won); te.innerHTML = won ? "Endless" : "\ud83d\udd12 Endless"; te.title = won ? "Endless mode" : "Beat round 10 to unlock"; }
+    var en0 = $("bk-endnote"); if (en0) en0.hidden = !!won; var te = $("bk-tend"); if (te) { te.disabled = !won; te.classList.toggle("locked", !won); te.innerHTML = won ? "Endless" : "\ud83d\udd12 Endless"; te.title = won ? "Endless mode" : "Beat round 10 to unlock"; }
     var c = $("bk-today"); if (c) { c.classList.toggle("vet", n === 2); c.classList.toggle("farm", n === 3); var th = n >= 4 && VM[n] && VM[n].TEXT.THEME; c.style.background = th ? "linear-gradient(160deg," + th.hud + "cc," + th.hud + "88)" : ""; c.style.borderColor = th ? th.hud : ""; }
     var up = $("bk-up"); if (up) { var seen = {}, L = []; for (var i = 1; i <= 6; i++) { var q = stageOn(i), nn = q.n <= 3 ? ["", "Kitchen", "Vet", "Farm"][q.n] : STNAME[q.n]; L.push(DAYN[q.wd].slice(0, 3) + " " + nn); } up.innerHTML = "<b>Coming up</b> " + L.join(" \u00b7 "); }
     var src = $("bk-th" + n), dst = $("bk-thT"); if (src && dst) { try { var x = dst.getContext("2d"); x.clearRect(0, 0, dst.width, dst.height); x.drawImage(src, 0, 0); } catch (e) {} }
