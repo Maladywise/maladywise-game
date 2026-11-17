@@ -10,7 +10,7 @@ PAGES = [
 # ---------------------------------------------------------------- ferritin
 dict(
 slug="high-ferritin", crumb="High ferritin", test="Serum ferritin", group="Iron", cls="l",
-title="High Ferritin: What It Means and When to Worry",
+title="High Ferritin: Usually Not Iron Overload. What It Means",
 h1="High Ferritin",
 desc="High ferritin explained: normal ranges, why it’s usually fatty liver, alcohol or inflammation, when to test for haemochromatosis, and when to worry.",
 card="Usually fatty liver, alcohol or inflammation, not too much iron. When to check for haemochromatosis.",
@@ -93,7 +93,7 @@ related=[HUB_R, ("/blood-tests/low-neutrophils/", "Blood test", "Low Neutrophils
 # ---------------------------------------------------------------- CRP
 dict(
 slug="high-crp", crumb="High CRP", test="C-reactive protein (CRP)", group="Inflammation", cls="m",
-title="High CRP and hs-CRP: What Your Result Means",
+title="High CRP Result: What Mild vs Very High Levels Mean",
 h1="High CRP (C-Reactive Protein)",
 desc="High CRP explained: normal range, what mild and very high results mean, hs-CRP and heart risk, whether stress raises CRP, and when it’s urgent.",
 card="Mild, moderate and very high results, hs-CRP for heart risk, and whether stress counts.",
@@ -223,7 +223,7 @@ related=[HUB_R, ("/tools/egfr-calculator/", "Tool", "eGFR Calculator"), ("/blood
 # ---------------------------------------------------------------- TSH
 dict(
 slug="high-tsh", crumb="High TSH", test="Thyroid stimulating hormone (TSH)", group="Thyroid", cls="s",
-title="High TSH: What It Means and When to Treat",
+title="High TSH Result: Underactive Thyroid or Just a Blip?",
 h1="High TSH",
 desc="High TSH explained: normal range, subclinical vs overt underactive thyroid, why it’s repeated, when levothyroxine is advised, pregnancy and biotin.",
 card="Subclinical vs overt underactive thyroid, why it’s repeated, and when treatment starts.",
@@ -266,7 +266,7 @@ related=[HUB_R, ("/underactive-thyroid/", "Fact sheet", "Underactive Thyroid"), 
 # ---------------------------------------------------------------- neutrophils
 dict(
 slug="low-neutrophils", crumb="Low neutrophils", test="Absolute neutrophil count", group="Blood count", cls="n",
-title="Low Neutrophils (Neutropenia): Causes and When to Worry",
+title="Low Neutrophils: Common Causes and When It’s an Emergency",
 h1="Low Neutrophils (Neutropenia)",
 desc="Low neutrophils explained: normal range, viral and medicine causes, Duffy-null counts, next tests, and why fever with a count under 0.5 is an emergency.",
 card="Mild to severe, viruses and medicines, Duffy-null counts, and the fever rule under 0.5.",
@@ -308,7 +308,7 @@ related=[HUB_R, ("/blood-tests/low-platelets/", "Blood test", "Low Platelets"), 
 # ---------------------------------------------------------------- ESR
 dict(
 slug="high-esr", crumb="High ESR", test="Erythrocyte sedimentation rate (ESR)", group="Inflammation", cls="m",
-title="High ESR (Sed Rate): What It Means",
+title="High ESR Meaning: Is It Serious? Normal by Age and Over 100",
 h1="High ESR (Sed Rate)",
 desc="High ESR explained: how normal rises with age, common causes, what an ESR over 100 means, ESR vs CRP, and giant cell arteritis warning signs.",
 card="Why normal rises with age, what over 100 means, and the giant cell arteritis warning signs.",
@@ -429,7 +429,7 @@ related=[HUB_R, ("/b12/", "Fact sheet", "Vitamin B12 Deficiency"), ("/medicines/
 # ---------------------------------------------------------------- low ferritin
 dict(
 slug="low-ferritin", crumb="Low ferritin", test="Serum ferritin", group="Iron", cls="l",
-title="Low Ferritin: What It Means for Your Iron Stores",
+title="Low Ferritin With Normal Haemoglobin: What It Means",
 h1="Low Ferritin",
 desc="Low ferritin explained: the cut-offs for low iron stores, why it matters even with normal haemoglobin, common and serious causes, next tests and red flags.",
 card="The clearest sign of low iron stores. Common causes, why the cause matters, and when gut checks are needed.",
@@ -472,7 +472,7 @@ related=[HUB_R, ("/iron/", "Fact sheet", "Iron Deficiency"), ("/heavy-periods/",
 # ---------------------------------------------------------------- high platelets
 dict(
 slug="high-platelets", crumb="High platelets", test="Platelet count", group="Blood count", cls="n",
-title="High Platelets (Thrombocytosis): Causes and Next Steps",
+title="High Platelet Count: Usually a Reaction. When to Look Further",
 h1="High Platelets (Thrombocytosis)",
 desc="High platelets explained: why most high counts are a reaction to infection, inflammation or low iron, when to suspect a bone marrow cause, and red flags.",
 card="Usually a reaction to infection, inflammation or low iron. When it’s the bone marrow, and when to worry.",
@@ -556,9 +556,9 @@ related=[HUB_R, ("/blood-tests/low-egfr/", "Blood test", "Low eGFR"), ("/blood-t
 # ---------------------------------------------------------------- sodium
 dict(
 slug="low-sodium", crumb="Low sodium", test="Serum sodium", group="Electrolytes", cls="m",
-title="Low Sodium (Hyponatraemia): Causes and When to Worry",
+title="Low Sodium (Hyponatraemia): Mild, Moderate or Urgent?",
 h1="Low Sodium (Hyponatraemia)",
-desc="Low sodium explained: mild, moderate and profound levels, common causes like water tablets and antidepressants, symptoms, and when it’s an emergency.",
+desc="Low sodium (hyponatraemia, US: hyponatremia): mild, moderate and profound levels, causes like water tablets and antidepressants, and when it’s an emergency.",
 card="Mild, moderate and profound levels, medicine causes, and the symptoms that mean hospital.",
 lede="Sodium is the main salt in your blood, and its level mostly reflects the balance of water in your body. A low result usually means too much water for the amount of sodium, not too little salt in your diet.",
 qa="Sodium below 135 mmol/L is low. Mild results of 130–134 are common, often from water tablets, antidepressants or vomiting, and many people feel fine. Under 125 is profound. Confusion, drowsiness, vomiting or a seizure with low sodium is an emergency, whatever the number.",
