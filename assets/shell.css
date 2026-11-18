@@ -1545,3 +1545,9 @@ html.mw-clean main{animation:mwclean 2.4s ease-in-out 1}
 @keyframes mwclean{50%{filter:brightness(1.15) saturate(.6)}}
 html.mw-xray body{filter:invert(1) hue-rotate(180deg) grayscale(.6) contrast(1.1);transition:filter .3s}
 @media (prefers-reduced-motion:reduce){.mw-spider,.mw-popup,.mw-breathe i,.mw-ecg path,html.mw-flicker main,html.mw-chameleon main{animation-duration:.01s}}
+.mw-dropbear span{display:block;font-size:56px;line-height:1;margin-top:-4px;text-align:center}
+html.mw-flip main,html.mw-flip header{transform:rotate(180deg);transition:transform .6s}
+html.mw-tiny main{transform:scale(.55);transform-origin:top center;transition:transform .5s}
+html.mw-giant main{transform:scale(1.35);transform-origin:top center;transition:transform .5s}
+html.mw-disco main{animation:mwdisco .5s linear 8}
+@keyframes mwdisco{0%{filter:hue-rotate(0)}100%{filter:hue-rotate(360deg) saturate(1.8)}}

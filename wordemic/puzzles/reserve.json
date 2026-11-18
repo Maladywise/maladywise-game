@@ -57,7 +57,7 @@
  {
   "difficulty": "Einstein",
   "word": "COCCI",
-  "definition": "Round bacteria, plural. Staph and strep are the famous ones. Yes, three Cs. No, that\u2019s not a typo."
+  "definition": "Round bacteria, plural. Staph and strep are the famous ones. Yes, three Cs. No, that’s not a typo."
  },
  {
   "difficulty": "Genius",
@@ -97,7 +97,7 @@
  {
   "difficulty": "Hard",
   "word": "ANEURYSM",
-  "definition": "Bulge in a weakened artery wall. The abdominal aorta and the brain\u2019s \u2018berry\u2019 aneurysms are the famous ones. Usually silent until they aren\u2019t."
+  "definition": "Bulge in a weakened artery wall. The abdominal aorta and the brain’s ‘berry’ aneurysms are the famous ones. Usually silent until they aren’t."
  },
  {
   "difficulty": "Easy",
@@ -112,7 +112,7 @@
  {
   "difficulty": "Hard",
   "word": "DELIRIUM",
-  "definition": "Sudden confusion with wandering attention that comes and goes, often triggered by infection, medicines or surgery in older people. A medical emergency, not \u2018just old age\u2019."
+  "definition": "Sudden confusion with wandering attention that comes and goes, often triggered by infection, medicines or surgery in older people. A medical emergency, not ‘just old age’."
  },
  {
   "difficulty": "Hard",
@@ -142,7 +142,27 @@
  {
   "difficulty": "Hard",
   "word": "OXYTOCIN",
-  "definition": "Posterior pituitary hormone that drives labour contractions and milk let-down. Nicknamed the \u2018cuddle hormone\u2019.",
+  "definition": "Posterior pituitary hormone that drives labour contractions and milk let-down. Nicknamed the ‘cuddle hormone’.",
   "note": "8 letters: Long Friday only"
+ },
+ {
+  "difficulty": "Easy",
+  "word": "ANKLE",
+  "definition": "Hinge joint between shin and foot, and a podiatrist's and physio's steady customer. Sprained by kerbs, netball and bad decisions on stairs."
+ },
+ {
+  "difficulty": "Genius",
+  "word": "XYLOL",
+  "definition": "Old name for xylene, the solvent that clears tissue before wax embedding in histopathology. If you guessed this in one, please step away from the lab."
+ },
+ {
+  "difficulty": "Easy",
+  "word": "BIRTH",
+  "definition": "The grand finale of labour, usually with a midwife close at hand. \"Any minute now\" is rarely accurate."
+ },
+ {
+  "difficulty": "Genius",
+  "word": "PSORA",
+  "definition": "Archaic term for itchy skin disease, used for scabies and psoriasis alike. From the days when \"it's itchy\" counted as a diagnosis."
  }
 ]

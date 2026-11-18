@@ -557,7 +557,7 @@
     ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Typed march for the mascot parade.", "global", "", 0, 1],
     ["sx_codes", "🔐", "Code Breaker", "Found 10 secret codes.", "global", "codes", 10, 1],
-    ["sx_codebook", "📖", "Codebook", "Found all 46 secret codes.", "global", "codes", 46, 1],
+    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 62, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
@@ -2205,7 +2205,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       fangs: function () { walker(M("panelysis"), { size: 84, hop: 8, ms: 5200, rtl: true }); rain("🩸", 10, { stay: 4800 }); pill("🧛 Ruby needs just one more tube. Strictly for science.", 3800); },
       think: function () { var p = document.createElement("img"); p.src = M("mergeon"); p.alt = ""; p.className = "mw-popup"; p.setAttribute("aria-hidden", "true"); document.body.appendChild(p); setTimeout(function () { p.remove(); }, 3600); rain("💡", 10, { up: true, ms: 2600, stay: 4000 }); pill("🧠 Noggin is thinking. Please hold.", 3200); },
       ninja: function () { pageFx("mw-dim", 2600); walker(M("cryptogenic"), { size: 84, hop: 2, ms: 2600 }); pill("🥷 Cipher was here. You didn’t see anything.", 3200); },
-      octos: function () { walker(M("comorbix"), { size: 88, hop: 10, wave: 10, steps: 22, ms: 6000 }); pill("🐙 Octavia sorted this page into four groups.", 3400); },
+      inked: function () { walker(M("comorbix"), { size: 88, hop: 10, wave: 10, steps: 22, ms: 6000 }); pill("🐙 Octavia sorted this page into four groups.", 3400); },
       // just for fun
       party: function () { rain(["🎉", "🎊", "🥳", "✨"], 70, { spread: 2000, stay: 6000 }); pill("🎉 Party! Somebody finished their discharge summaries.", 3600); },
       latte: function () { rain("☕", 30, { stay: 6000 }); pill("☕ Coffee for the whole ward. Nurses first.", 3200); },
@@ -2215,8 +2215,25 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       achoo: function () { shake(4); rain("🦠", 30, { spread: 600, stay: 5000 }); pill("🤧 Achoo! Into your elbow, please.", 3200); },
       lunch: function () { walker("🥪", { size: 60, hop: 4, ms: 5000 }); pill("🥪 Lunch? In this economy? On this roster?", 3600); },
       scrub: function () { rain("🫧", 40, { up: true, ms: 3200, stay: 5000 }); pageFx("mw-clean", 2500); pill("🫧 Scrubbed in. Two minutes, under the nails.", 3400); },
-      xrays: function () { pageFx("mw-xray", 3200); pill("🩻 X-ray vision on. No fractures seen on this page.", 3400); },
+      bones: function () { pageFx("mw-xray", 3200); pill("🩻 X-ray vision on. No fractures seen on this page.", 3400); },
       heart: function () { ward3(); rain("❤️", 24, { up: true, ms: 3000, stay: 5000 }); pill("❤️ Sinus rhythm. Lovely.", 3000); },
+      // everyday words that turn up naturally in Wordemic and the crosswords
+      chart: function () { scrawl(); pill("📋 Chart reviewed. Nobody can read the handwriting.", 3400); },
+      round: function () { ["dx", "comorbix", "triviosis", "labelosis", "sensitosis"].forEach(function (id, i) { walker(M(id), { size: 70, hop: 6, ms: 7000, delay: i * 500 }); }); pill("📋 Ward round! Everyone follow the consultant. Nobody knows where we’re going.", 4200); },
+      audit: function () { cloverStamp(); rain("✅", 20, { stay: 5500 }); pill("✅ Audit complete. Clover found 3 missing signatures.", 3600); },
+      burps: function () { if (!RM) (document.querySelector("main") || document.body).animate([{ transform: "none" }, { transform: "scaleY(1.06) scaleX(.97)" }, { transform: "scaleY(.96) scaleX(1.03)" }, { transform: "none" }], { duration: 700 }); pill("🫧 Pardon you.", 2600); },
+      hiccup: function () { var m = document.querySelector("main") || document.body; [0, 1100, 2200, 3300].forEach(function (d) { setTimeout(function () { if (!RM) m.animate([{ transform: "none" }, { transform: "translateY(-14px)" }, { transform: "none" }], { duration: 260 }); }, d); }); pill("Hic! Try holding your breath. (It probably won’t work.)", 4000); },
+      yawns: function () { pageFx("mw-dim", 3000); rain("🥱", 16, { up: true, ms: 3000, stay: 4500 }); pill("🥱 Yawns are contagious. Did you just yawn?", 3600); },
+      sweat: function () { rain("💦", 40, { spread: 2200, stay: 5500 }); pill("💦 Hot in here. Humans have up to 4 million sweat glands.", 3800); },
+      koala: function () { CODES.dropbear(); },
+      dropbear: function () { var k = document.createElement("div"); k.className = "mw-spider mw-dropbear"; k.innerHTML = "<i></i><span>🐨</span>"; k.setAttribute("aria-hidden", "true"); k.style.left = (20 + Math.random() * (innerWidth - 120)) + "px"; document.body.appendChild(k); setTimeout(function () { k.remove(); }, 5200); pill("🐨 Drop bear! Put some Vegemite behind your ears.", 3600); },
+      santa: function () { var mo = sydToday().slice(5, 7); if (mo !== "12") return pill("🎅 Santa’s on holiday. Come back in December.", 3200); walker("🛷", { size: 70, top: 70, hop: 10, wave: 20, steps: 24, ms: 5200 }); rain("🎁", 24, { stay: 6000 }); pill("🎅 Ho ho ho! Santa checks his list twice. Very good clinical practice.", 4000); },
+      spook: function () { var md = sydToday().slice(5); if (md < "10-24" || md > "11-02") return pill("👻 Too early for spooks. Come back at Halloween.", 3200); rain("👻", 24, { up: true, ms: 3600, stay: 5500 }); pageFx("mw-dim", 3000); pill("👻 Boo! Spooky season is here.", 3400); },
+      eggs: function () { var md = sydToday().slice(5); if (md < "03-20" || md > "04-30") return pill("🥚 The Easter Bunny hasn’t hidden them yet. Try again around Easter.", 3400); rain(["🥚", "🐣", "🍫"], 40, { stay: 6000 }); pill("🐣 You found the eggs! Mega Bunny will be furious.", 3600); },
+      flips: function () { pageFx("mw-flip", 3200); pill("🙃 Australian mode. Everything’s upside down.", 3400); },
+      tiny: function () { pageFx("mw-tiny", 3000); pill("🔬 Honey, I shrunk the website.", 3000); },
+      giant: function () { pageFx("mw-giant", 3000); pill("🔭 Fee-fi-fo-fum. That’s a big website.", 3000); },
+      disco: function () { pageFx("mw-disco", 4000); rain(["🪩", "🕺", "💃"], 14, { up: true, ms: 3200, stay: 4500 }); pill("🪩 Disco! 120 beats per minute, perfect for CPR.", 3800); },
       // older secrets
       locum: function () { nightShift(); },
       scrawl: function () { scrawl(); },
@@ -2433,7 +2450,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["⌨️", "Cat on the keyboard", "Basil helps with your Wordemic guess.", catKeys],
         ["📖", "Codebook", "Secret codes you’ve found so far.", codebook],
         ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]];
-      var H = ["🔐 There are " + CODE_KEYS.length + " secret codes. Most are 5-letter words: try them in Wordemic. Hospitals have colour codes too…", "🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
+      var H = ["🔐 There are " + CODE_KEYS.length + " secret codes. They’re ordinary words: some turn up as Wordemic and crossword answers. Hospitals have colour codes too…", "🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
       d.innerHTML = '<div class="mw-cab-in"><button type="button" class="mw-cab-x" aria-label="Close">×</button><p class="mw-cab-k">You found it</p><h2>The Cabinet of Curiosities</h2>' +
