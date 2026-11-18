@@ -1182,6 +1182,86 @@
    "date": "2026-11-18",
    "source": "news search: The Nightly / Medical Republic",
    "niche": true
+  },
+  {
+   "term": "tuberculosis",
+   "region": "AU",
+   "approx volume": "2000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": false
+  },
+  {
+   "term": "australia antibiotic resistance report ama",
+   "region": "AU",
+   "approx volume": "2000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": true
+  },
+  {
+   "term": "foundayo",
+   "region": "AU",
+   "approx volume": "2000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": true
+  },
+  {
+   "term": "avian influenza",
+   "region": "AU",
+   "approx volume": "1000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": false
+  },
+  {
+   "term": "measles outbreak",
+   "region": "US",
+   "approx volume": "50000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": false
+  },
+  {
+   "term": "measles elimination status",
+   "region": "US",
+   "approx volume": "2000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": true
+  },
+  {
+   "term": "propranolol extended release capsules metal recall",
+   "region": "US",
+   "approx volume": "100000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": true
+  },
+  {
+   "term": "drug recall",
+   "region": "GB",
+   "approx volume": "5000+",
+   "date": "2026-11-19",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-18T16:41:35Z)",
+   "niche": false
+  },
+  {
+   "term": "Ebola outbreak DR Congo passes 11,000 cases",
+   "region": "global",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-19",
+   "source": "news search: Contagion Live",
+   "niche": true
+  },
+  {
+   "term": "FDA approves Gazyva (obinutuzumab) for IgA nephropathy",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-19",
+   "source": "news search: PharmExec",
+   "niche": true
   }
  ],
  "used": [
