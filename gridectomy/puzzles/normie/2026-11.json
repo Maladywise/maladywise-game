@@ -2239,92 +2239,6 @@
  {
   "date": "2026-11-26",
   "number": 34,
-  "difficulty": "Medium",
-  "rows": [
-   "#STEM",
-   "STONE",
-   "LAKES",
-   "ITEMS",
-   "DENY#"
-  ],
-  "across": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 4,
-    "clue": "Flower stalk"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 5,
-    "clue": "Fourteen pounds"
-   },
-   {
-    "n": 6,
-    "r": 2,
-    "c": 0,
-    "len": 5,
-    "clue": "Como and Geneva"
-   },
-   {
-    "n": 7,
-    "r": 3,
-    "c": 0,
-    "len": 5,
-    "clue": "Things on a list"
-   },
-   {
-    "n": 8,
-    "r": 4,
-    "c": 0,
-    "len": 4,
-    "clue": "Refuse"
-   }
-  ],
-  "down": [
-   {
-    "n": 1,
-    "r": 0,
-    "c": 1,
-    "len": 5,
-    "clue": "Texas or Queensland"
-   },
-   {
-    "n": 2,
-    "r": 0,
-    "c": 2,
-    "len": 5,
-    "clue": "Arcade coin"
-   },
-   {
-    "n": 3,
-    "r": 0,
-    "c": 3,
-    "len": 5,
-    "clue": "Foe"
-   },
-   {
-    "n": 4,
-    "r": 0,
-    "c": 4,
-    "len": 4,
-    "clue": "Teenager's bedroom, typically"
-   },
-   {
-    "n": 5,
-    "r": 1,
-    "c": 0,
-    "len": 4,
-    "clue": "Went into base"
-   }
-  ]
- },
- {
-  "date": "2026-11-27",
-  "number": 35,
   "difficulty": "Hard",
   "rows": [
    "#FELT",
@@ -2405,6 +2319,92 @@
     "c": 0,
     "len": 4,
     "clue": "Went by quickly, as time"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "number": 35,
+  "difficulty": "Medium",
+  "rows": [
+   "#STEM",
+   "STONE",
+   "LAKES",
+   "ITEMS",
+   "DENY#"
+  ],
+  "across": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 4,
+    "clue": "Flower stalk"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 5,
+    "clue": "Fourteen pounds"
+   },
+   {
+    "n": 6,
+    "r": 2,
+    "c": 0,
+    "len": 5,
+    "clue": "Como and Geneva"
+   },
+   {
+    "n": 7,
+    "r": 3,
+    "c": 0,
+    "len": 5,
+    "clue": "Things on a list"
+   },
+   {
+    "n": 8,
+    "r": 4,
+    "c": 0,
+    "len": 4,
+    "clue": "Refuse"
+   }
+  ],
+  "down": [
+   {
+    "n": 1,
+    "r": 0,
+    "c": 1,
+    "len": 5,
+    "clue": "Texas or Queensland"
+   },
+   {
+    "n": 2,
+    "r": 0,
+    "c": 2,
+    "len": 5,
+    "clue": "Arcade coin"
+   },
+   {
+    "n": 3,
+    "r": 0,
+    "c": 3,
+    "len": 5,
+    "clue": "Foe"
+   },
+   {
+    "n": 4,
+    "r": 0,
+    "c": 4,
+    "len": 4,
+    "clue": "Teenager's bedroom, typically"
+   },
+   {
+    "n": 5,
+    "r": 1,
+    "c": 0,
+    "len": 4,
+    "clue": "Went into base"
    }
   ]
  },

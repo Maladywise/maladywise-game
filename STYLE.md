@@ -283,3 +283,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Saturdays: Suturix Long, a 7-wide by 10-tall grid (rows[10] of 7 letters, "long": true), 70 letters, spangram edge to edge, Medical and Normie. Same word/path format as daily. Paths must not cross diagonally.
 - Other weekly specials: Mon Super Morphemia, Tue Super Comorbix, Wed Super Zebritis, Thu Long Linkase, Fri Wordemic Long.
 - This overrides any "Gridectomy 5x5" or fixed Suturix size in task prompts: the monthly puzzle build MUST write a Big Gridectomy every Sunday and a Suturix Long every Saturday (both modes), and the weekly topical refresh must keep those sizes and flags if it swaps one.
+
+
+## Secret codes in puzzles (18 Nov 2026)
+- At most ONE secret code word per day across all games.
+- Each code word turns up naturally as a puzzle answer 3 or 4 times a year (Wordemic, Normie Wordemic or the mini crossword).
+- Follow data/secret-seeds.json when writing new puzzle months; check with `python3 _scripts/check_secrets.py`.
