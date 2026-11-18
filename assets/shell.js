@@ -1925,14 +1925,29 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!document.querySelector(".mw-today")) { try { var tc = todayCard(); if (tc) foot.insertAdjacentHTML("beforebegin", tc); } catch (e) {} }
       if (!document.getElementById("newsletter")) { var nl = el(NL_HTML); nl.classList.add("nl-info"); foot.parentNode.insertBefore(nl, foot); }
     }
-    if (window.MW_GAMES && foot) {
+    if (foot) puzzlesPanel(foot);
+  }
+  function puzzlesPanel(foot) { // "Take a break: today's puzzles" box above the footer
+    if (!window.MW_GAMES || !foot || document.querySelector(".mwx")) return;
       var gl = MW_GAMES.filter(function (x) { return x.live && inMode(x); }).map(function (x) { return { g: x, st: readStats(x), m: inMode(x) ? 0 : 1 }; });
       gl.sort(function (a, b) { return a.m - b.m || (a.st && a.st.done ? 1 : 0) - (b.st && b.st.done ? 1 : 0); });
       var left2 = gl.filter(function (o) { return !o.m && !(o.st && o.st.done); }).length;
       foot.insertAdjacentHTML("beforebegin", '<section class="mwx mwx-info"><div class="mwx-head"><b>Take a break: today’s puzzles</b><span>' + (left2 ? left2 + " to play today" : "All done today. Impressive.") + '</span></div><div class="mwx-list">' +
         gl.map(function (o) { var dn = o.st && o.st.done; return '<a class="mwx-row' + (dn ? " done" : "") + (o.m ? " medonly" : "") + '" href="/' + o.g.path + '?play" style="--ga:' + accentOf(o.g) + '">' + mascImg(o.g.id, "", 34, "mwx-masc") + '<span class="mwx-nm">' + o.g.name + (o.m ? '<small class="mw-medtag">Medical only</small>' : "") + '</span><span class="mwx-st">' + (dn ? "✓" : "›") + "</span></a>"; }).join("") +
         '</div><a class="mwx-all" href="/">All puzzles</a></section>');
-    }
+  }
+  // any other content page (mascots, blood tests, specialists, algorithms, research…): today's puzzle + the puzzles box,
+  // so readers have somewhere to go next. Not on game pages, hubs or arcade pages, which have their own.
+  function otherPagesPanel() {
+    var p = location.pathname.replace(/index\.html$/, ""), foot = document.querySelector("main footer.site") || document.querySelector("footer.site");
+    if (!foot || document.querySelector(".mwx, .t3s, .tls")) return;
+    if (/^\/(|medical-games\/|normie\/|me\/|404\.html|search\/)$/.test(p)) return;
+    var seg = p.split("/")[1] || "";
+    if ((window.MW_GAMES || []).some(function (g) { return (g.path || "").replace(/\/$/, "") === seg; })) return;
+    if (ARCADE.some(function (a) { return a[0] === seg; })) return;
+    if (/^(cryptoplexy|da|night-shift|grand-rounds)$/.test(seg)) return;
+    if (!document.querySelector(".mw-today")) { try { var tc = todayCard(); if (tc) foot.insertAdjacentHTML("beforebegin", tc); } catch (e) {} }
+    puzzlesPanel(foot);
   }
   // arcade pages (Stackulus, Mergeon, Basil + Clover): a "more games" box above the footer
   function arcadeBox() {
@@ -1969,7 +1984,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     q.value = ""; run();
   }
   function page() { try { notFound(); } catch (e) {} var sab = document.getElementById("mw-about-static"); if (sab && NORMIE && sab.getAttribute("data-normie") !== "neutral") sab.hidden = true;
-    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { kidsChip(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} try { betaTags(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} }
+    social(); topBar(null, "/"); var slot = document.getElementById("nl-slot"); if (slot) slot.outerHTML = NL_HTML; infoExtras(); listSearch(); try { azBar(); } catch (e) {} try { kidsChip(); } catch (e) {} try { medPrint(); } catch (e) {} try { slides(); } catch (e) {} try { betaTags(); } catch (e) {} weeklyDose(); try { arcadeBox(); } catch (e) {} try { otherPagesPanel(); } catch (e) {} }
   // Zebra Mail issues: card layout, a topic mascot beside every story, short headline + quieter detail (CSS in shell.css .wd)
   var WD_TOPICS = [
     [/heart|cardi|blood pressure|hypertens|ecg|stroke|cholesterol|statin/i, "arrhythmix"],
