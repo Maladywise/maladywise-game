@@ -296,6 +296,11 @@ def postbuild():
         share_block.run()
     except Exception as e:  # never fail a build over share-card tags
         print("share cards skipped: %s" % e)
+    try:
+        import tidy_titles   # keep titles and descriptions short enough for Google
+        tidy_titles.run()
+    except Exception as e:
+        print("tidy_titles skipped: %s" % e)
 
 
 def report():
