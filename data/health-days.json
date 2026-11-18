@@ -2172,7 +2172,11 @@
    "blurb": "From a death sentence to a manageable condition. Today is about HIV.",
    "puzzle_theme": "HIV and immunology: CD4, antiretrovirals, history. No jokes about patients.",
    "icon": "ribbon-red",
-   "page": "/hiv/"
+   "page": "/hiv/",
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Timothy_Ray_Brown",
+    "label": "The man cured of HIV"
+   }
   },
   {
    "id": "disability",
@@ -2201,6 +2205,10 @@
    "normie": {
     "name": "International Day of Persons with Disabilities",
     "blurb": "Paralympians, inventors and the ideas that make the world work for everyone."
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Stoke_Mandeville_Games",
+    "label": "How the Paralympics began"
    }
   },
   {
@@ -2229,6 +2237,10 @@
    "normie": {
     "name": "Health For All Day",
     "blurb": "How countries around the world pay for going to the doctor."
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Medicare_(Australia)",
+    "label": "How Medicare began"
    }
   },
   {
@@ -4692,6 +4704,10 @@
    "normie": {
     "name": "International Mountain Day",
     "blurb": "Why your chips packet puffs up on a mountain, and how Everest climbers breathe."
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Death_zone",
+    "label": "Life in the death zone"
    }
   },
   {
@@ -10543,6 +10559,10 @@
    "normie": {
     "name": "Sustainable Transport Day",
     "blurb": "Trains, trams, bikes and the world's weirdest commutes."
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Penny-farthing",
+    "label": "Meet the penny-farthing"
    }
   },
   {
@@ -10598,7 +10618,11 @@
    "link": "https://www.un.org/en/observances/international-days-and-weeks",
    "blurb": "A new UN day. Conjoined twins are about 1 in 50,000 pregnancies, and separation surgery is a team marathon.",
    "puzzle_theme": "Twins and embryology: conjoined twins, monozygotic twinning, paediatric surgery",
-   "icon": "zebra-rare"
+   "icon": "zebra-rare",
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Chang_and_Eng_Bunker",
+    "label": "Chang and Eng's remarkable story"
+   }
   },
   {
    "id": "jarvik",
@@ -11675,6 +11699,10 @@
    "normie": {
     "name": "Epidemic Preparedness Day",
     "blurb": "Germs, outbreaks and how we stop them spreading."
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Disease_X",
+    "label": "Meet Disease X"
    }
   },
   {
@@ -13449,6 +13477,10 @@
     "name": "World Philosophy Day",
     "blurb": "UNESCO's day for big questions. Why are we here? Is a hot dog a sandwich?",
     "theme": "Famous philosophers, big ideas, logic puzzles"
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Trolley_problem",
+    "label": "Try the trolley problem"
    }
   },
   {
@@ -13509,6 +13541,10 @@
     "name": "Fibonacci Day",
     "blurb": "Written 11/23, today's date spells 1, 1, 2, 3. Celebrating Leonardo of Pisa's famous number sequence.",
     "theme": "Number puzzles, sequences, maths in nature"
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Patterns_in_nature",
+    "label": "Spot the spirals in nature"
    }
   },
   {
@@ -13539,6 +13575,10 @@
     "name": "International Cheetah Day",
     "blurb": "Held on the birthday of Khayam, a cheetah raised by conservationist Dr Laurie Marker. Fastest land animal, fastest puzzles.",
     "theme": "Cheetahs, big cats, speed records"
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Cheetah",
+    "label": "0 to 100 km/h in 3 seconds?"
    }
   },
   {
@@ -13569,6 +13609,10 @@
     "name": "World Soil Day",
     "blurb": "A UN day for the dirt beneath our feet. Worms, roots, gardens and everything that grows.",
     "theme": "Gardening, soil creatures, plants, farming"
+   },
+   "fun": {
+    "url": "https://en.wikipedia.org/wiki/Soil_biology",
+    "label": "The life in a teaspoon of soil"
    }
   },
   {
