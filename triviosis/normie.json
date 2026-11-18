@@ -7450,5 +7450,3353 @@
     "e": "Happy New Year. Best to check your passport too."
    }
   ]
+ },
+ {
+  "date": "2027-01-01",
+  "number": 70,
+  "difficulty": "Hard",
+  "theme": "New year, new you?",
+  "questions": [
+   {
+    "q": "About what share of New Year\u2019s resolutions are still going by February, in many surveys?",
+    "a": "Fewer than half",
+    "w": [
+     "About 90%",
+     "All of them",
+     "Exactly 75%"
+    ],
+    "e": "Small, specific goals tend to last longer."
+   },
+   {
+    "q": "The most common New Year\u2019s resolution is usually about?",
+    "a": "Exercise or losing weight",
+    "w": [
+     "Learning Latin",
+     "Cleaning the garage",
+     "Taking up golf"
+    ],
+    "e": "Gyms are busiest in January."
+   },
+   {
+    "q": "\u2018Dry January\u2019 began as a campaign in which country?",
+    "a": "United Kingdom",
+    "w": [
+     "Australia",
+     "France",
+     "Japan"
+    ],
+    "e": "Alcohol Change UK started it in 2013."
+   },
+   {
+    "q": "Roughly how long does it take to form a new habit, on average, in one well-known study?",
+    "a": "About 66 days",
+    "w": [
+     "21 days",
+     "7 days",
+     "A year"
+    ],
+    "e": "The range was huge: 18 to 254 days."
+   },
+   {
+    "q": "Which Roman god, with two faces, gave January its name?",
+    "a": "Janus",
+    "w": [
+     "Jupiter",
+     "Juno",
+     "Mars"
+    ],
+    "e": "One face looks back, one looks forward."
+   },
+   {
+    "q": "Scots call New Year\u2019s Eve?",
+    "a": "Hogmanay",
+    "w": [
+     "Burns Night",
+     "Halloween",
+     "Michaelmas"
+    ],
+    "e": "First-footing brings luck for the year."
+   },
+   {
+    "q": "Walking 10,000 steps a day began as?",
+    "a": "A Japanese pedometer marketing slogan",
+    "w": [
+     "A WHO rule",
+     "An army fitness test",
+     "A NASA study"
+    ],
+    "e": "Benefits start well below 10,000."
+   },
+   {
+    "q": "A \u2018hangover\u2019 is worst partly because alcohol makes you?",
+    "a": "Lose fluid by blocking a water-saving hormone",
+    "w": [
+     "Grow new taste buds",
+     "Sleep more deeply",
+     "Absorb more vitamins"
+    ],
+    "e": "Plus poor sleep and the breakdown chemical acetaldehyde."
+   },
+   {
+    "q": "Which famous ball drops in New York\u2019s Times Square?",
+    "a": "A glittering crystal ball",
+    "w": [
+     "A giant apple",
+     "A disco ball shaped like a heart",
+     "A football"
+    ],
+    "e": "It started in 1907."
+   },
+   {
+    "q": "In Japan, temples ring their bells how many times at New Year?",
+    "a": "108",
+    "w": [
+     "12",
+     "50",
+     "365"
+    ],
+    "e": "One for each earthly desire in Buddhist belief."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-02",
+  "number": 71,
+  "difficulty": "Hard",
+  "theme": "Robots and sci-fi",
+  "questions": [
+   {
+    "q": "Isaac Asimov, born around this date, wrote the famous Three Laws of?",
+    "a": "Robotics",
+    "w": [
+     "Motion",
+     "Thermodynamics",
+     "Space travel"
+    ],
+    "e": "The first: a robot may not injure a human being."
+   },
+   {
+    "q": "The word \u2018robot\u2019 first appeared in a 1920 play from which country?",
+    "a": "Czechoslovakia",
+    "w": [
+     "Japan",
+     "USA",
+     "Germany"
+    ],
+    "e": "From robota, meaning forced labour."
+   },
+   {
+    "q": "Surgical robots like the da Vinci are controlled by?",
+    "a": "A surgeon at a console",
+    "w": [
+     "Artificial intelligence alone",
+     "The patient",
+     "Nurses by voice"
+    ],
+    "e": "They help with tiny, precise movements."
+   },
+   {
+    "q": "In Star Trek, Dr McCoy\u2019s nickname is?",
+    "a": "Bones",
+    "w": [
+     "Doc Brown",
+     "Sawbones Jr",
+     "Scotty"
+    ],
+    "e": "Short for sawbones, old slang for a surgeon."
+   },
+   {
+    "q": "The handheld scanner Dr McCoy uses is a?",
+    "a": "Tricorder",
+    "w": [
+     "Phaser",
+     "Holodeck",
+     "Transporter"
+    ],
+    "e": "A real XPRIZE challenged teams to build one."
+   },
+   {
+    "q": "Which robot vacuum brand launched the first popular home model in 2002?",
+    "a": "Roomba",
+    "w": [
+     "Dyson",
+     "Hoover",
+     "Tesla"
+    ],
+    "e": "Cats famously ride them."
+   },
+   {
+    "q": "What does \u2018AI\u2019 stand for?",
+    "a": "Artificial intelligence",
+    "w": [
+     "Automatic input",
+     "Advanced internet",
+     "Assisted imaging"
+    ],
+    "e": "AI now helps read some X-rays and eye scans."
+   },
+   {
+    "q": "In the film Fantastic Voyage, a crew is shrunk to travel through a?",
+    "a": "Human body",
+    "w": [
+     "Computer",
+     "Volcano",
+     "Clock"
+    ],
+    "e": "They fight off white blood cells along the way."
+   },
+   {
+    "q": "Baymax, the soft inflatable robot from Big Hero 6, is a?",
+    "a": "Healthcare companion",
+    "w": [
+     "Security guard",
+     "Chef",
+     "Taxi driver"
+    ],
+    "e": "\u2018On a scale of 1 to 10, how would you rate your pain?\u2019"
+   },
+   {
+    "q": "Which famous robot says \u2018Danger, Will Robinson!\u2019?",
+    "a": "The Robot from Lost in Space",
+    "w": [
+     "R2-D2",
+     "WALL-E",
+     "Robby the Robot"
+    ],
+    "e": "It only said it once in the original series."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-03",
+  "number": 72,
+  "difficulty": "Genius",
+  "theme": "Straws, tubes and sips",
+  "questions": [
+   {
+    "q": "The paper drinking straw was patented in 1888 by?",
+    "a": "Marvin Stone",
+    "w": [
+     "Thomas Edison",
+     "Henry Ford",
+     "Alexander Bell"
+    ],
+    "e": "He wound paper around a pencil."
+   },
+   {
+    "q": "Bendy straws were invented after the inventor watched?",
+    "a": "His daughter struggle with a straight straw",
+    "w": [
+     "A garden hose",
+     "A snake",
+     "A trombone"
+    ],
+    "e": "Joseph Friedman, 1930s."
+   },
+   {
+    "q": "Drinking through a straw works because you lower the?",
+    "a": "Air pressure in your mouth",
+    "w": [
+     "Temperature of the drink",
+     "Weight of the cup",
+     "Gravity"
+    ],
+    "e": "Outside air pressure pushes the liquid up."
+   },
+   {
+    "q": "The longest drinking straw world record is around?",
+    "a": "Over 300 metres",
+    "w": [
+     "3 metres",
+     "30 centimetres",
+     "3 kilometres"
+    ],
+    "e": "Sipping from it is another matter."
+   },
+   {
+    "q": "Which creature drinks nectar through a tube-like tongue called a proboscis?",
+    "a": "Butterfly",
+    "w": [
+     "Spider",
+     "Ant",
+     "Beetle"
+    ],
+    "e": "It coils it up when not in use."
+   },
+   {
+    "q": "In hospitals, some patients drink thickened fluids because thin ones risk going down the?",
+    "a": "Windpipe",
+    "w": [
+     "Nose",
+     "Ear",
+     "Food pipe"
+    ],
+    "e": "Swallowing problems are common after strokes."
+   },
+   {
+    "q": "An elephant can suck up about how much water in its trunk at once?",
+    "a": "About 8 litres",
+    "w": [
+     "About 80 mL",
+     "About 800 litres",
+     "About 80 litres"
+    ],
+    "e": "Then it squirts it into its mouth."
+   },
+   {
+    "q": "Ancient Sumerians used long straws, made of gold and reeds, to drink?",
+    "a": "Beer",
+    "w": [
+     "Milk",
+     "Honey",
+     "Wine only"
+    ],
+    "e": "It avoided the floating grain husks."
+   },
+   {
+    "q": "A \u2018bubble tea\u2019 straw is extra wide because?",
+    "a": "Tapioca pearls need to fit through",
+    "w": [
+     "It\u2019s easier to clean",
+     "It\u2019s for two people",
+     "It cools the drink"
+    ],
+    "e": "Chew carefully."
+   },
+   {
+    "q": "Plastic straws were banned or restricted in parts of Australia mainly to reduce?",
+    "a": "Plastic waste in the environment",
+    "w": [
+     "Choking",
+     "Tooth decay",
+     "Germs"
+    ],
+    "e": "Paper and metal straws replaced many."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-04",
+  "number": 73,
+  "difficulty": "Easy",
+  "theme": "Touch and feel",
+  "questions": [
+   {
+    "q": "Braille Day: Braille is read using the?",
+    "a": "Fingertips",
+    "w": [
+     "Ears",
+     "Nose",
+     "Toes"
+    ],
+    "e": "Raised dots in patterns."
+   },
+   {
+    "q": "Louis Braille was how old when he invented his system?",
+    "a": "15",
+    "w": [
+     "40",
+     "8",
+     "60"
+    ],
+    "e": "He based it on a military night-writing code."
+   },
+   {
+    "q": "Which is the body\u2019s largest organ?",
+    "a": "Skin",
+    "w": [
+     "Liver",
+     "Brain",
+     "Lungs"
+    ],
+    "e": "An adult\u2019s weighs about 4 kg."
+   },
+   {
+    "q": "Goosebumps happen when tiny muscles pull up your?",
+    "a": "Hairs",
+    "w": [
+     "Freckles",
+     "Nails",
+     "Veins"
+    ],
+    "e": "Handy for furry animals; less so for us."
+   },
+   {
+    "q": "Which part of the body can feel the lightest touch?",
+    "a": "Fingertips and lips",
+    "w": [
+     "Heels",
+     "Back",
+     "Elbows"
+    ],
+    "e": "Packed with nerve endings."
+   },
+   {
+    "q": "Why can\u2019t you tickle yourself?",
+    "a": "Your brain predicts the touch",
+    "w": [
+     "Your skin is too thick",
+     "Your fingers are too warm",
+     "You can, easily"
+    ],
+    "e": "Surprise is part of tickling."
+   },
+   {
+    "q": "The tiny ridges on your fingertips are?",
+    "a": "Fingerprints",
+    "w": [
+     "Wrinkles",
+     "Scars",
+     "Veins"
+    ],
+    "e": "They help grip and feel texture."
+   },
+   {
+    "q": "Koalas have fingerprints that are?",
+    "a": "Almost identical to humans\u2019",
+    "w": [
+     "Square",
+     "Missing",
+     "Glow in the dark"
+    ],
+    "e": "Police could be fooled, in theory."
+   },
+   {
+    "q": "Pins and needles happen when a nerve is?",
+    "a": "Squashed",
+    "w": [
+     "Cold",
+     "Wet",
+     "Sunburnt"
+    ],
+    "e": "It goes once the pressure\u2019s off."
+   },
+   {
+    "q": "Fingers wrinkle in the bath partly to help?",
+    "a": "Grip wet things",
+    "w": [
+     "Keep warm",
+     "Absorb soap",
+     "Breathe"
+    ],
+    "e": "Nerves control it; it doesn\u2019t happen if they\u2019re cut."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-05",
+  "number": 74,
+  "difficulty": "Easy",
+  "theme": "Birds",
+  "questions": [
+   {
+    "q": "Bird Day. Which bird can fly backwards?",
+    "a": "Hummingbird",
+    "w": [
+     "Eagle",
+     "Penguin",
+     "Magpie"
+    ],
+    "e": "Its wings beat up to 80 times a second."
+   },
+   {
+    "q": "What\u2019s the largest living bird?",
+    "a": "Ostrich",
+    "w": [
+     "Emu",
+     "Albatross",
+     "Condor"
+    ],
+    "e": "Emus come second."
+   },
+   {
+    "q": "Which Australian bird laughs?",
+    "a": "Kookaburra",
+    "w": [
+     "Galah",
+     "Cockatoo",
+     "Magpie"
+    ],
+    "e": "It\u2019s actually a territorial call."
+   },
+   {
+    "q": "Owls can turn their heads about?",
+    "a": "270 degrees",
+    "w": [
+     "90 degrees",
+     "360 degrees",
+     "45 degrees"
+    ],
+    "e": "Special blood vessels stop them fainting."
+   },
+   {
+    "q": "Which bird is famous for swooping people in spring?",
+    "a": "Magpie",
+    "w": [
+     "Pigeon",
+     "Seagull",
+     "Emu"
+    ],
+    "e": "Only a few males do it, protecting their nests."
+   },
+   {
+    "q": "A flamingo is pink because of its?",
+    "a": "Diet of shrimp and algae",
+    "w": [
+     "Sunburn",
+     "Blood showing through",
+     "Paint"
+    ],
+    "e": "Without it, they fade to white."
+   },
+   {
+    "q": "Which bird cannot fly but is a fast swimmer?",
+    "a": "Penguin",
+    "w": [
+     "Pelican",
+     "Duck",
+     "Swan"
+    ],
+    "e": "Some reach about 35 km/h underwater."
+   },
+   {
+    "q": "A group of crows is called a?",
+    "a": "Murder",
+    "w": [
+     "Flock of doom",
+     "Party",
+     "Crowd"
+    ],
+    "e": "Crows can recognise human faces."
+   },
+   {
+    "q": "Which bird has the longest wingspan?",
+    "a": "Wandering albatross",
+    "w": [
+     "Eagle",
+     "Ostrich",
+     "Pelican"
+    ],
+    "e": "Over 3 metres."
+   },
+   {
+    "q": "Cockatoos can live for?",
+    "a": "Over 80 years",
+    "w": [
+     "About 2 years",
+     "About 10 years",
+     "Over 300 years"
+    ],
+    "e": "Some outlive their owners."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-06",
+  "number": 75,
+  "difficulty": "Medium",
+  "theme": "Odd body facts",
+  "questions": [
+   {
+    "q": "Your heart beats about how many times a day?",
+    "a": "100,000",
+    "w": [
+     "1,000",
+     "10,000",
+     "1 million"
+    ],
+    "e": "About 2.5 billion beats in a lifetime."
+   },
+   {
+    "q": "Which organ can grow back after part of it is removed?",
+    "a": "Liver",
+    "w": [
+     "Heart",
+     "Brain",
+     "Kidney"
+    ],
+    "e": "People can donate part of their liver to someone else, and both grow back."
+   },
+   {
+    "q": "Babies are born without?",
+    "a": "Kneecaps that are bone",
+    "w": [
+     "Toes",
+     "Ears",
+     "Hair"
+    ],
+    "e": "They start as cartilage and harden later."
+   },
+   {
+    "q": "You\u2019re about how much taller in the morning than at night?",
+    "a": "About 1 cm",
+    "w": [
+     "About 10 cm",
+     "Not at all",
+     "About 1 metre"
+    ],
+    "e": "Spinal discs squash during the day."
+   },
+   {
+    "q": "Stomach acid is strong enough to?",
+    "a": "Dissolve some metals",
+    "w": [
+     "Melt glass",
+     "Boil water",
+     "Freeze food"
+    ],
+    "e": "The stomach lining renews every few days."
+   },
+   {
+    "q": "The smallest bone in the body is in the?",
+    "a": "Ear",
+    "w": [
+     "Toe",
+     "Nose",
+     "Finger"
+    ],
+    "e": "The stapes, about 3 mm long."
+   },
+   {
+    "q": "Humans share about how much DNA with bananas?",
+    "a": "About 50% of genes have a match",
+    "w": [
+     "0%",
+     "99%",
+     "5%"
+    ],
+    "e": "Lots of basic cell machinery is shared."
+   },
+   {
+    "q": "Your nose can tell apart at least?",
+    "a": "Over a trillion smells, by one estimate",
+    "w": [
+     "About 10",
+     "About 1,000",
+     "Exactly 100"
+    ],
+    "e": "The estimate is debated."
+   },
+   {
+    "q": "How many bones does an adult usually have?",
+    "a": "206",
+    "w": [
+     "106",
+     "306",
+     "1,006"
+    ],
+    "e": "Babies start with about 300, and some fuse."
+   },
+   {
+    "q": "Fingernails grow about how fast compared with toenails?",
+    "a": "Two to three times faster",
+    "w": [
+     "The same",
+     "Half as fast",
+     "Ten times slower"
+    ],
+    "e": "Nails grow faster in summer."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-07",
+  "number": 76,
+  "difficulty": "Medium",
+  "theme": "Space",
+  "questions": [
+   {
+    "q": "Galileo spotted four moons of which planet in January 1610?",
+    "a": "Jupiter",
+    "w": [
+     "Saturn",
+     "Mars",
+     "Venus"
+    ],
+    "e": "Io, Europa, Ganymede and Callisto."
+   },
+   {
+    "q": "Astronauts get taller in space by about?",
+    "a": "Up to 5 cm",
+    "w": [
+     "Up to 50 cm",
+     "Not at all",
+     "1 metre"
+    ],
+    "e": "Their spines stretch without gravity."
+   },
+   {
+    "q": "Who was the first person in space?",
+    "a": "Yuri Gagarin",
+    "w": [
+     "Neil Armstrong",
+     "Buzz Aldrin",
+     "John Glenn"
+    ],
+    "e": "1961, one orbit."
+   },
+   {
+    "q": "Why do astronauts exercise about two hours a day?",
+    "a": "To stop bones and muscles weakening",
+    "w": [
+     "To keep warm",
+     "To make electricity",
+     "For fun only"
+    ],
+    "e": "Space is hard on the skeleton."
+   },
+   {
+    "q": "What do astronauts smell in space, they say?",
+    "a": "Something like seared steak or hot metal",
+    "w": [
+     "Roses",
+     "Nothing at all",
+     "Chocolate"
+    ],
+    "e": "Probably from oxygen atoms on their suits."
+   },
+   {
+    "q": "The International Space Station orbits Earth about every?",
+    "a": "90 minutes",
+    "w": [
+     "24 hours",
+     "1 week",
+     "5 minutes"
+    ],
+    "e": "Sixteen sunrises a day."
+   },
+   {
+    "q": "Who was the first Australian-born astronaut?",
+    "a": "Paul Scully-Power",
+    "w": [
+     "Andy Thomas",
+     "Katherine Bennell-Pegg",
+     "Chris Hadfield"
+    ],
+    "e": "He flew on the Space Shuttle in 1984."
+   },
+   {
+    "q": "Which planet has the longest day?",
+    "a": "Venus",
+    "w": [
+     "Jupiter",
+     "Earth",
+     "Mars"
+    ],
+    "e": "A Venus day lasts longer than its year."
+   },
+   {
+    "q": "Space motion sickness affects about how many astronauts?",
+    "a": "About half or more",
+    "w": [
+     "None",
+     "One in a million",
+     "All of them forever"
+    ],
+    "e": "It usually passes in a few days."
+   },
+   {
+    "q": "On the Moon, you would weigh about?",
+    "a": "One-sixth of your Earth weight",
+    "w": [
+     "The same",
+     "Double",
+     "Nothing"
+    ],
+    "e": "Great for long jump."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-08",
+  "number": 77,
+  "difficulty": "Hard",
+  "theme": "Stephen Hawking and big ideas",
+  "questions": [
+   {
+    "q": "Stephen Hawking was born on this date in 1942, exactly 300 years after the death of?",
+    "a": "Galileo",
+    "w": [
+     "Newton",
+     "Einstein",
+     "Darwin"
+    ],
+    "e": "He liked to point this out."
+   },
+   {
+    "q": "Hawking\u2019s famous bestseller was?",
+    "a": "A Brief History of Time",
+    "w": [
+     "The Selfish Gene",
+     "Cosmos",
+     "The Origin of Species"
+    ],
+    "e": "Over 10 million copies sold."
+   },
+   {
+    "q": "Hawking radiation is given off by?",
+    "a": "Black holes",
+    "w": [
+     "Mobile phones",
+     "The Sun only",
+     "Microwaves"
+    ],
+    "e": "Black holes slowly evaporate, in theory."
+   },
+   {
+    "q": "Hawking spoke using a computer voice he kept because?",
+    "a": "It had become his identity",
+    "w": [
+     "It was free",
+     "He couldn\u2019t afford another",
+     "It was the only one"
+    ],
+    "e": "He even trademarked it."
+   },
+   {
+    "q": "Which TV show did Hawking appear on several times?",
+    "a": "The Simpsons",
+    "w": [
+     "Neighbours",
+     "Friends",
+     "Doctor Who"
+    ],
+    "e": "He also appeared on The Big Bang Theory."
+   },
+   {
+    "q": "Hawking held the same Cambridge professorship as?",
+    "a": "Isaac Newton",
+    "w": [
+     "Charles Darwin",
+     "Alan Turing",
+     "Albert Einstein"
+    ],
+    "e": "The Lucasian Professor of Mathematics."
+   },
+   {
+    "q": "Hawking threw a party for time travellers and?",
+    "a": "Sent the invitations afterwards",
+    "w": [
+     "Nobody was invited",
+     "Served only tea",
+     "Held it on the Moon"
+    ],
+    "e": "Nobody came."
+   },
+   {
+    "q": "Hawking experienced weightlessness on a?",
+    "a": "Zero-gravity flight",
+    "w": [
+     "Trampoline",
+     "Roller coaster",
+     "Submarine"
+    ],
+    "e": "In 2007, aged 65."
+   },
+   {
+    "q": "A black hole\u2019s edge, past which nothing escapes, is the?",
+    "a": "Event horizon",
+    "w": [
+     "Wormhole",
+     "Nebula",
+     "Supernova"
+    ],
+    "e": "Not even light."
+   },
+   {
+    "q": "Hawking died on 14 March 2018, which is also?",
+    "a": "Pi Day and Einstein\u2019s birthday",
+    "w": [
+     "New Year\u2019s Day",
+     "Christmas Eve",
+     "His birthday"
+    ],
+    "e": "A fitting date for a physicist."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-09",
+  "number": 78,
+  "difficulty": "Hard",
+  "theme": "Phones and screens",
+  "questions": [
+   {
+    "q": "The first iPhone was unveiled on this date in?",
+    "a": "2007",
+    "w": [
+     "1997",
+     "2001",
+     "2012"
+    ],
+    "e": "It had no app store at launch."
+   },
+   {
+    "q": "\u2018Nomophobia\u2019 is the fear of?",
+    "a": "Being without your phone",
+    "w": [
+     "Gnomes",
+     "No-one phoning",
+     "Numbers"
+    ],
+    "e": "No-mobile-phone phobia."
+   },
+   {
+    "q": "Roughly how many times a day do people check their phones, in many surveys?",
+    "a": "Around 100 or more",
+    "w": [
+     "About 5",
+     "About 1,000",
+     "Once"
+    ],
+    "e": "Estimates vary a lot."
+   },
+   {
+    "q": "Which emoji was the Oxford Dictionaries\u2019 \u2018Word of the Year\u2019 in 2015?",
+    "a": "Face with tears of joy \ud83d\ude02",
+    "w": [
+     "Thumbs up \ud83d\udc4d",
+     "Red heart \u2764\ufe0f",
+     "Poo \ud83d\udca9"
+    ],
+    "e": "The first pictograph to win."
+   },
+   {
+    "q": "The first text message, in 1992, said?",
+    "a": "Merry Christmas",
+    "w": [
+     "Hello world",
+     "Can you hear me?",
+     "LOL"
+    ],
+    "e": "Sent from a computer to a phone."
+   },
+   {
+    "q": "Phone screens can carry more bacteria than?",
+    "a": "A toilet seat",
+    "w": [
+     "A hospital operating table",
+     "A sterile needle",
+     "Nothing"
+    ],
+    "e": "Wipe it with an alcohol wipe now and then."
+   },
+   {
+    "q": "\u2018Doomscrolling\u2019 means?",
+    "a": "Endlessly scrolling bad news",
+    "w": [
+     "Reading an ancient scroll",
+     "A phone game",
+     "Fixing a broken screen"
+    ],
+    "e": "Set a time limit to help."
+   },
+   {
+    "q": "Which country has the most phone users?",
+    "a": "China",
+    "w": [
+     "USA",
+     "India",
+     "Brazil"
+    ],
+    "e": "India is a close second."
+   },
+   {
+    "q": "Blue light at night can make it harder to?",
+    "a": "Fall asleep",
+    "w": [
+     "Hear",
+     "Taste",
+     "Sneeze"
+    ],
+    "e": "Try night mode or no screens before bed."
+   },
+   {
+    "q": "The first mobile phone call was made in 1973 by an engineer from?",
+    "a": "Motorola",
+    "w": [
+     "Apple",
+     "Nokia",
+     "Samsung"
+    ],
+    "e": "Martin Cooper called a rival company."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-10",
+  "number": 79,
+  "difficulty": "Genius",
+  "theme": "Around the world",
+  "questions": [
+   {
+    "q": "The UN General Assembly first met on this date in 1946 in?",
+    "a": "London",
+    "w": [
+     "New York",
+     "Geneva",
+     "Paris"
+    ],
+    "e": "It moved to New York later."
+   },
+   {
+    "q": "Which country has the most time zones, including overseas territories?",
+    "a": "France",
+    "w": [
+     "Russia",
+     "USA",
+     "China"
+    ],
+    "e": "Twelve, thanks to its far-flung territories."
+   },
+   {
+    "q": "Which is the only country that is also a continent?",
+    "a": "Australia",
+    "w": [
+     "Antarctica",
+     "Greenland",
+     "India"
+    ],
+    "e": "Antarctica isn\u2019t a country."
+   },
+   {
+    "q": "How many countries are UN members?",
+    "a": "193",
+    "w": [
+     "50",
+     "120",
+     "250"
+    ],
+    "e": "Plus two observer states."
+   },
+   {
+    "q": "The world\u2019s smallest country is?",
+    "a": "Vatican City",
+    "w": [
+     "Monaco",
+     "Malta",
+     "Nauru"
+    ],
+    "e": "Under half a square kilometre."
+   },
+   {
+    "q": "Which country has the highest life expectancy, in most rankings?",
+    "a": "Japan",
+    "w": [
+     "USA",
+     "Brazil",
+     "Russia"
+    ],
+    "e": "Hong Kong and Monaco are close."
+   },
+   {
+    "q": "The most spoken language by native speakers is?",
+    "a": "Mandarin Chinese",
+    "w": [
+     "English",
+     "Spanish",
+     "Hindi"
+    ],
+    "e": "English has the most learners."
+   },
+   {
+    "q": "Which country has the most islands?",
+    "a": "Sweden",
+    "w": [
+     "Indonesia",
+     "Philippines",
+     "Greece"
+    ],
+    "e": "Over 200,000, mostly tiny."
+   },
+   {
+    "q": "The WHO is headquartered in?",
+    "a": "Geneva",
+    "w": [
+     "New York",
+     "London",
+     "Rome"
+    ],
+    "e": "Switzerland."
+   },
+   {
+    "q": "Which country sent a ship of orphans around the world in 1803, passing cowpox from arm to arm to vaccinate its colonies?",
+    "a": "Spain",
+    "w": [
+     "England",
+     "USA",
+     "China"
+    ],
+    "e": "The Balmis expedition carried live vaccine in children across the Atlantic."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-11",
+  "number": 80,
+  "difficulty": "Easy",
+  "theme": "Sweet stuff",
+  "questions": [
+   {
+    "q": "Insulin was first given to a patient on this date in 1922. Insulin controls?",
+    "a": "Blood sugar",
+    "w": [
+     "Blood pressure",
+     "Hair growth",
+     "Eyesight"
+    ],
+    "e": "It helps sugar get into cells."
+   },
+   {
+    "q": "Which organ makes insulin?",
+    "a": "Pancreas",
+    "w": [
+     "Heart",
+     "Skin",
+     "Lungs"
+    ],
+    "e": "Tucked behind the stomach."
+   },
+   {
+    "q": "Honey never goes off because it\u2019s?",
+    "a": "Too sugary for germs to grow",
+    "w": [
+     "Full of vitamins",
+     "Always cold",
+     "Made by bees in hives"
+    ],
+    "e": "Edible honey has been found in Egyptian tombs."
+   },
+   {
+    "q": "Which fruit is highest in natural sugar?",
+    "a": "Dates",
+    "w": [
+     "Lemons",
+     "Strawberries",
+     "Avocados"
+    ],
+    "e": "Dried fruit packs it in."
+   },
+   {
+    "q": "Chocolate is poisonous to?",
+    "a": "Dogs",
+    "w": [
+     "Humans",
+     "Rabbits only",
+     "Fish"
+    ],
+    "e": "Theobromine; dark chocolate is worst."
+   },
+   {
+    "q": "Fairy floss was co-invented by a?",
+    "a": "Dentist",
+    "w": [
+     "Baker",
+     "Farmer",
+     "Clown"
+    ],
+    "e": "William Morrison, in 1897. Business plan, perhaps."
+   },
+   {
+    "q": "\u2018Sugar rush\u2019 hyperactivity in children is?",
+    "a": "Mostly a myth",
+    "w": [
+     "Proven fact",
+     "Only with lollies",
+     "Only at parties"
+    ],
+    "e": "Excitement at parties is the more likely cause."
+   },
+   {
+    "q": "Tooth decay is caused by bacteria feeding on?",
+    "a": "Sugar",
+    "w": [
+     "Water",
+     "Salt",
+     "Air"
+    ],
+    "e": "Brush twice a day with fluoride toothpaste."
+   },
+   {
+    "q": "Which drink has about 10 teaspoons of sugar in a can?",
+    "a": "Regular cola",
+    "w": [
+     "Water",
+     "Black coffee",
+     "Milk"
+    ],
+    "e": "That\u2019s about 40 grams."
+   },
+   {
+    "q": "Banting, who co-discovered insulin, sold the patent for?",
+    "a": "$1",
+    "w": [
+     "$1 million",
+     "Nothing: he kept it",
+     "A car"
+    ],
+    "e": "He wanted it to be affordable."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-12",
+  "number": 81,
+  "difficulty": "Easy",
+  "theme": "Fairy tales",
+  "questions": [
+   {
+    "q": "Charles Perrault, born on this date, wrote down which fairy tale?",
+    "a": "Cinderella",
+    "w": [
+     "Frozen",
+     "Peter Pan",
+     "Shrek"
+    ],
+    "e": "His version introduced the glass slipper."
+   },
+   {
+    "q": "Who kissed a frog in the fairy tale?",
+    "a": "A princess",
+    "w": [
+     "A witch",
+     "A giant",
+     "A king"
+    ],
+    "e": "In the original, she threw it at a wall."
+   },
+   {
+    "q": "Goldilocks found which porridge just right?",
+    "a": "Baby Bear\u2019s",
+    "w": [
+     "Daddy Bear\u2019s",
+     "Mummy Bear\u2019s",
+     "None"
+    ],
+    "e": "Just right: now a term in science too."
+   },
+   {
+    "q": "What did Jack climb?",
+    "a": "A beanstalk",
+    "w": [
+     "A castle",
+     "A rope",
+     "A ladder"
+    ],
+    "e": "He traded a cow for magic beans."
+   },
+   {
+    "q": "Which fairy tale character\u2019s nose grows when they lie?",
+    "a": "Pinocchio",
+    "w": [
+     "Shrek",
+     "Puss in Boots",
+     "Hansel"
+    ],
+    "e": "Lying doesn\u2019t really change your nose."
+   },
+   {
+    "q": "Hansel and Gretel found a house made of?",
+    "a": "Gingerbread and sweets",
+    "w": [
+     "Ice",
+     "Straw",
+     "Glass"
+    ],
+    "e": "Dentists everywhere winced."
+   },
+   {
+    "q": "Who let down her long hair from a tower?",
+    "a": "Rapunzel",
+    "w": [
+     "Snow White",
+     "Belle",
+     "Ariel"
+    ],
+    "e": "Hair can stretch about 30% before snapping."
+   },
+   {
+    "q": "How many dwarfs did Snow White live with?",
+    "a": "Seven",
+    "w": [
+     "Five",
+     "Six",
+     "Eight"
+    ],
+    "e": "Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy and Dopey."
+   },
+   {
+    "q": "Which dwarf might need a hay fever tablet?",
+    "a": "Sneezy",
+    "w": [
+     "Grumpy",
+     "Happy",
+     "Doc"
+    ],
+    "e": "Antihistamines help."
+   },
+   {
+    "q": "The Big Bad Wolf blew down the house made of?",
+    "a": "Straw",
+    "w": [
+     "Bricks",
+     "Stone",
+     "Steel"
+    ],
+    "e": "The brick house held up."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-13",
+  "number": 82,
+  "difficulty": "Medium",
+  "theme": "Rubber ducks and bath time",
+  "questions": [
+   {
+    "q": "National Rubber Ducky Day is in January. In 1992, thousands of bath toys fell off a ship and?",
+    "a": "Floated around the world for years",
+    "w": [
+     "Sank straight away",
+     "Were eaten by whales",
+     "Melted"
+    ],
+    "e": "They helped scientists study ocean currents."
+   },
+   {
+    "q": "Why do fingers wrinkle in water?",
+    "a": "To grip wet things better",
+    "w": [
+     "They absorb too much soap",
+     "They\u2019re cold",
+     "They\u2019re tired"
+    ],
+    "e": "It\u2019s controlled by nerves."
+   },
+   {
+    "q": "The ideal bath temperature for babies is about?",
+    "a": "37\u00b0C",
+    "w": [
+     "20\u00b0C",
+     "45\u00b0C",
+     "60\u00b0C"
+    ],
+    "e": "Test with your elbow."
+   },
+   {
+    "q": "Rubber comes from the sap of a?",
+    "a": "Tree",
+    "w": [
+     "Fish",
+     "Mushroom",
+     "Cactus"
+    ],
+    "e": "The rubber tree, originally from the Amazon."
+   },
+   {
+    "q": "Which famous Muppet sings \u2018Rubber Duckie\u2019?",
+    "a": "Ernie",
+    "w": [
+     "Bert",
+     "Elmo",
+     "Big Bird"
+    ],
+    "e": "Released in 1970."
+   },
+   {
+    "q": "Taking a warm bath before bed can help?",
+    "a": "Sleep",
+    "w": [
+     "Hearing",
+     "Eyesight",
+     "Hair growth"
+    ],
+    "e": "It helps your core temperature drop afterwards."
+   },
+   {
+    "q": "Ancient Romans built public baths heated by?",
+    "a": "Fires under the floor",
+    "w": [
+     "Volcanoes",
+     "The Sun only",
+     "Electric heaters"
+    ],
+    "e": "The system was called a hypocaust."
+   },
+   {
+    "q": "A bubble bath\u2019s bubbles are made by?",
+    "a": "Soap trapping air",
+    "w": [
+     "Hot water alone",
+     "Gas from the drain",
+     "Magic"
+    ],
+    "e": "Soap lowers water\u2019s surface tension."
+   },
+   {
+    "q": "Which animal can rotate its ears to hear in bath time chaos? (Hint: Basil\u2019s species)",
+    "a": "Cat",
+    "w": [
+     "Dog",
+     "Duck",
+     "Fish"
+    ],
+    "e": "Cats have over 30 ear muscles; humans have six."
+   },
+   {
+    "q": "Rubber ducks in the bath can hide?",
+    "a": "Mould inside them",
+    "w": [
+     "Gold",
+     "Tiny fish",
+     "Batteries"
+    ],
+    "e": "Squeeze them dry, or seal the hole."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-14",
+  "number": 83,
+  "difficulty": "Medium",
+  "theme": "Kites, wind and weather",
+  "questions": [
+   {
+    "q": "Which famous scientist flew a kite in a thunderstorm?",
+    "a": "Benjamin Franklin",
+    "w": [
+     "Isaac Newton",
+     "Marie Curie",
+     "Charles Darwin"
+    ],
+    "e": "Please don\u2019t try it."
+   },
+   {
+    "q": "Lightning is about how hot?",
+    "a": "Five times hotter than the Sun\u2019s surface",
+    "w": [
+     "As hot as a kettle",
+     "As hot as a candle",
+     "Cooler than lava"
+    ],
+    "e": "Around 30,000\u00b0C."
+   },
+   {
+    "q": "You\u2019re more likely to be struck by lightning if you\u2019re?",
+    "a": "Out in the open or near water",
+    "w": [
+     "In a car",
+     "Indoors",
+     "Under a duvet"
+    ],
+    "e": "Cars protect you, mostly thanks to the metal shell."
+   },
+   {
+    "q": "Thunderstorm asthma happens when storms?",
+    "a": "Burst pollen into tiny pieces",
+    "w": [
+     "Make air too cold",
+     "Bring snow",
+     "Cause floods"
+    ],
+    "e": "Melbourne\u2019s 2016 event sent thousands to hospital."
+   },
+   {
+    "q": "The \u2018Southerly buster\u2019 is a sudden wind change along which coast?",
+    "a": "New South Wales",
+    "w": [
+     "Western Australia",
+     "Tasmania only",
+     "Queensland only"
+    ],
+    "e": "Temperatures can drop 10\u00b0C in minutes."
+   },
+   {
+    "q": "Wind chill makes it feel colder because wind?",
+    "a": "Carries body heat away faster",
+    "w": [
+     "Is made of ice",
+     "Blows away oxygen",
+     "Slows your heart"
+    ],
+    "e": "Cover up on windy winter days."
+   },
+   {
+    "q": "Which instrument measures wind speed?",
+    "a": "Anemometer",
+    "w": [
+     "Barometer",
+     "Thermometer",
+     "Seismometer"
+    ],
+    "e": "Spinning cups on a pole."
+   },
+   {
+    "q": "A rainbow appears when sunlight passes through?",
+    "a": "Raindrops",
+    "w": [
+     "Clouds only",
+     "Wind",
+     "Snowflakes"
+    ],
+    "e": "You need the Sun behind you."
+   },
+   {
+    "q": "\u2018Petrichor\u2019 is the name for?",
+    "a": "The smell of rain on dry ground",
+    "w": [
+     "Fear of storms",
+     "A type of cloud",
+     "A thunder sound"
+    ],
+    "e": "Humans can smell it at very low levels."
+   },
+   {
+    "q": "Which part of Australia has the most tropical cyclones?",
+    "a": "The north",
+    "w": [
+     "Tasmania",
+     "Victoria",
+     "The ACT"
+    ],
+    "e": "Cyclone season runs November to April."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-15",
+  "number": 84,
+  "difficulty": "Hard",
+  "theme": "True or false?",
+  "questions": [
+   {
+    "q": "Wikipedia launched on this date in 2001. True or false: goldfish have a three-second memory?",
+    "a": "False: they remember for months",
+    "w": [
+     "True",
+     "True for pet ones only",
+     "False: two seconds"
+    ],
+    "e": "They can be trained to push levers."
+   },
+   {
+    "q": "Bats are blind?",
+    "a": "False: they can see",
+    "w": [
+     "True",
+     "True at night only",
+     "True for big bats"
+    ],
+    "e": "Many also echolocate."
+   },
+   {
+    "q": "Eating carrots helps you see in the dark?",
+    "a": "Mostly a WWII propaganda myth",
+    "w": [
+     "Completely true",
+     "Only raw carrots",
+     "Only for cats"
+    ],
+    "e": "It hid the use of radar. You do need vitamin A, though."
+   },
+   {
+    "q": "Lightning never strikes the same place twice?",
+    "a": "False",
+    "w": [
+     "True",
+     "Only in summer",
+     "Only on trees"
+    ],
+    "e": "The Empire State Building gets hit around 20 times a year."
+   },
+   {
+    "q": "Chewing gum takes seven years to digest?",
+    "a": "False",
+    "w": [
+     "True",
+     "Only spearmint",
+     "Only if swallowed whole"
+    ],
+    "e": "It passes through in days."
+   },
+   {
+    "q": "Ostriches bury their heads in the sand?",
+    "a": "False",
+    "w": [
+     "True",
+     "Only when scared",
+     "Only at night"
+    ],
+    "e": "They turn their eggs in holes in the ground."
+   },
+   {
+    "q": "You need eight glasses of water a day, no matter what?",
+    "a": "False: needs vary and food counts",
+    "w": [
+     "True",
+     "Only children",
+     "Only in summer"
+    ],
+    "e": "Drink to thirst, more in heat and exercise."
+   },
+   {
+    "q": "The Great Wall of China is visible from the Moon with the naked eye?",
+    "a": "False",
+    "w": [
+     "True",
+     "Only at night",
+     "Only with sunglasses"
+    ],
+    "e": "It\u2019s far too narrow."
+   },
+   {
+    "q": "Humans have five senses?",
+    "a": "False: we have more, like balance and temperature",
+    "w": [
+     "True",
+     "We have three",
+     "We have four"
+    ],
+    "e": "Some count over 20."
+   },
+   {
+    "q": "Toilets flush the opposite way in Australia?",
+    "a": "False: shape matters more than hemisphere",
+    "w": [
+     "True",
+     "Only in Perth",
+     "Only in summer"
+    ],
+    "e": "The Coriolis effect is too weak for toilets."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-16",
+  "number": 85,
+  "difficulty": "Hard",
+  "theme": "Drinks around the world",
+  "questions": [
+   {
+    "q": "In which country did tea drinking begin?",
+    "a": "China",
+    "w": [
+     "India",
+     "England",
+     "Japan"
+    ],
+    "e": "Legend says leaves fell into an emperor\u2019s hot water."
+   },
+   {
+    "q": "Which drink contains the most caffeine per cup, usually?",
+    "a": "Espresso-based coffee",
+    "w": [
+     "Green tea",
+     "Hot chocolate",
+     "Cola"
+    ],
+    "e": "Size matters, though."
+   },
+   {
+    "q": "\u2018Builder\u2019s tea\u2019 in Britain means?",
+    "a": "Strong tea with milk and sugar",
+    "w": [
+     "Green tea",
+     "Tea with concrete",
+     "Iced tea"
+    ],
+    "e": "Bring a biscuit."
+   },
+   {
+    "q": "Kombucha is fermented?",
+    "a": "Tea",
+    "w": [
+     "Milk",
+     "Coconut",
+     "Rice"
+    ],
+    "e": "Its benefits are mostly unproven."
+   },
+   {
+    "q": "Which country drinks the most coffee per person?",
+    "a": "Finland",
+    "w": [
+     "Italy",
+     "USA",
+     "Brazil"
+    ],
+    "e": "Long, dark winters."
+   },
+   {
+    "q": "Coconut water was used in emergencies as a short-term?",
+    "a": "Drip fluid",
+    "w": [
+     "Shampoo",
+     "Cooking oil",
+     "Antiseptic"
+    ],
+    "e": "It\u2019s sterile inside an unopened coconut."
+   },
+   {
+    "q": "The \u2018flat white\u2019 is claimed by both Australia and?",
+    "a": "New Zealand",
+    "w": [
+     "Italy",
+     "UK",
+     "France"
+    ],
+    "e": "Both sides are very sure."
+   },
+   {
+    "q": "What colour is the drink matcha?",
+    "a": "Bright green",
+    "w": [
+     "Bright pink",
+     "Purple",
+     "Clear"
+    ],
+    "e": "Powdered green tea."
+   },
+   {
+    "q": "Milo was invented in which country?",
+    "a": "Australia",
+    "w": [
+     "Switzerland",
+     "UK",
+     "Malaysia"
+    ],
+    "e": "In 1934, by Thomas Mayne."
+   },
+   {
+    "q": "Bubble tea comes from?",
+    "a": "Taiwan",
+    "w": [
+     "Japan",
+     "Korea",
+     "Vietnam"
+    ],
+    "e": "The 1980s."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-17",
+  "number": 86,
+  "difficulty": "Genius",
+  "theme": "Inventions you use every day",
+  "questions": [
+   {
+    "q": "Benjamin Franklin, born on this date, invented?",
+    "a": "Bifocal glasses",
+    "w": [
+     "The light bulb",
+     "The telephone",
+     "Contact lenses"
+    ],
+    "e": "Two lenses, one frame."
+   },
+   {
+    "q": "Who is credited with inventing the World Wide Web?",
+    "a": "Tim Berners-Lee",
+    "w": [
+     "Bill Gates",
+     "Steve Jobs",
+     "Elon Musk"
+    ],
+    "e": "1989, at CERN."
+   },
+   {
+    "q": "Which Australian invention helps people hear?",
+    "a": "The bionic ear (cochlear implant)",
+    "w": [
+     "The telephone",
+     "The microphone",
+     "Headphones"
+    ],
+    "e": "Graeme Clark, 1978."
+   },
+   {
+    "q": "Wi-Fi technology was helped by work at which Australian organisation?",
+    "a": "CSIRO",
+    "w": [
+     "NASA",
+     "Google",
+     "BBC"
+    ],
+    "e": "It earned CSIRO hundreds of millions in licence fees."
+   },
+   {
+    "q": "The black box flight recorder was invented by?",
+    "a": "David Warren, an Australian",
+    "w": [
+     "The Wright brothers",
+     "Thomas Edison",
+     "Amelia Earhart"
+    ],
+    "e": "Inspired by a plane crash that killed his father."
+   },
+   {
+    "q": "Velcro was inspired by?",
+    "a": "Burrs stuck to a dog",
+    "w": [
+     "Spider webs",
+     "Gecko feet",
+     "Bird nests"
+    ],
+    "e": "George de Mestral, 1941."
+   },
+   {
+    "q": "The ultrasound scanner was pioneered in?",
+    "a": "Australia and Scotland",
+    "w": [
+     "Japan only",
+     "USA only",
+     "Russia"
+    ],
+    "e": "Australia\u2019s UI Octoson in the 1970s was world-leading."
+   },
+   {
+    "q": "Who invented the polio vaccine and refused to patent it?",
+    "a": "Jonas Salk",
+    "w": [
+     "Louis Pasteur",
+     "Edward Jenner",
+     "Alexander Fleming"
+    ],
+    "e": "\u2018Could you patent the sun?\u2019"
+   },
+   {
+    "q": "The first electric toothbrush came from?",
+    "a": "Switzerland",
+    "w": [
+     "USA",
+     "Japan",
+     "Australia"
+    ],
+    "e": "1954."
+   },
+   {
+    "q": "Penicillin was discovered by accident when Fleming returned from?",
+    "a": "Holiday",
+    "w": [
+     "Lunch",
+     "A war",
+     "Hospital"
+    ],
+    "e": "Mould had grown on his messy bench."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-18",
+  "number": 87,
+  "difficulty": "Easy",
+  "theme": "Words and where they come from",
+  "questions": [
+   {
+    "q": "Peter Roget, born on this date, wrote the first famous?",
+    "a": "Thesaurus",
+    "w": [
+     "Dictionary",
+     "Encyclopaedia",
+     "Atlas"
+    ],
+    "e": "He was a doctor too."
+   },
+   {
+    "q": "A word that means the same as another is a?",
+    "a": "Synonym",
+    "w": [
+     "Antonym",
+     "Homonym",
+     "Acronym"
+    ],
+    "e": "Happy and glad."
+   },
+   {
+    "q": "\u2018Muscle\u2019 comes from the Latin for?",
+    "a": "Little mouse",
+    "w": [
+     "Strong arm",
+     "Fish",
+     "Rope"
+    ],
+    "e": "A flexing biceps looked like a mouse under the skin."
+   },
+   {
+    "q": "\u2018Vaccine\u2019 comes from the Latin for?",
+    "a": "Cow",
+    "w": [
+     "Needle",
+     "Doctor",
+     "Cure"
+    ],
+    "e": "The first vaccine used cowpox."
+   },
+   {
+    "q": "\u2018Influenza\u2019 comes from Italian for?",
+    "a": "Influence (of the stars)",
+    "w": [
+     "Fever",
+     "Cold",
+     "Sneeze"
+    ],
+    "e": "People blamed the stars."
+   },
+   {
+    "q": "\u2018Malaria\u2019 means?",
+    "a": "Bad air",
+    "w": [
+     "Mosquito fever",
+     "Swamp death",
+     "Shaking sickness"
+    ],
+    "e": "People thought bad air caused it."
+   },
+   {
+    "q": "What does \u2018GP\u2019 stand for?",
+    "a": "General practitioner",
+    "w": [
+     "Good physician",
+     "Great patient",
+     "General pharmacy"
+    ],
+    "e": "Your family doctor."
+   },
+   {
+    "q": "\u2018Laser\u2019 is short for?",
+    "a": "Light amplification by stimulated emission of radiation",
+    "w": [
+     "Light and sun energy ray",
+     "Long-range sensor",
+     "Laser is a person\u2019s name"
+    ],
+    "e": "Words made from initials are acronyms."
+   },
+   {
+    "q": "The longest word in many English dictionaries is a lung disease. It starts with?",
+    "a": "Pneumono\u2026",
+    "w": [
+     "Super\u2026",
+     "Anti\u2026",
+     "Hippo\u2026"
+    ],
+    "e": "Pneumonoultramicroscopicsilicovolcanoconiosis."
+   },
+   {
+    "q": "\u2018Aussie\u2019 slang for a doctor is?",
+    "a": "Doc",
+    "w": [
+     "Bloke",
+     "Mate",
+     "Sparky"
+    ],
+    "e": "\u2018Sparky\u2019 is an electrician."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-19",
+  "number": 88,
+  "difficulty": "Easy",
+  "theme": "Spooky stories",
+  "questions": [
+   {
+    "q": "Edgar Allan Poe, born on this date, wrote a poem about a?",
+    "a": "Raven",
+    "w": [
+     "Cat",
+     "Owl",
+     "Frog"
+    ],
+    "e": "\u2018Quoth the Raven, Nevermore.\u2019"
+   },
+   {
+    "q": "Who created Frankenstein\u2019s monster?",
+    "a": "Mary Shelley",
+    "w": [
+     "Edgar Allan Poe",
+     "Bram Stoker",
+     "Stephen King"
+    ],
+    "e": "She was 18 when she started it."
+   },
+   {
+    "q": "In Frankenstein, the monster is brought to life with?",
+    "a": "Electricity",
+    "w": [
+     "Magic",
+     "Water",
+     "Fire"
+    ],
+    "e": "Inspired by experiments making frog legs twitch."
+   },
+   {
+    "q": "Which writer created Dracula?",
+    "a": "Bram Stoker",
+    "w": [
+     "Mary Shelley",
+     "Charles Dickens",
+     "Roald Dahl"
+    ],
+    "e": "1897."
+   },
+   {
+    "q": "Dracula is a?",
+    "a": "Vampire",
+    "w": [
+     "Werewolf",
+     "Zombie",
+     "Ghost"
+    ],
+    "e": "Afraid of garlic, in legend."
+   },
+   {
+    "q": "Which real disease may have fed vampire legends, making people pale and sensitive to light?",
+    "a": "Porphyria",
+    "w": [
+     "Measles",
+     "Asthma",
+     "Diabetes"
+    ],
+    "e": "A rare blood condition. The link is speculative."
+   },
+   {
+    "q": "A \u2018werewolf\u2019 turns into a wolf during a?",
+    "a": "Full moon",
+    "w": [
+     "Solar eclipse",
+     "Thunderstorm",
+     "Leap year"
+    ],
+    "e": "A&E staff still swear full moons are busier. Studies say not."
+   },
+   {
+    "q": "Which hormone makes your heart race when scared?",
+    "a": "Adrenaline",
+    "w": [
+     "Insulin",
+     "Melatonin",
+     "Oestrogen"
+    ],
+    "e": "The fight-or-flight hormone."
+   },
+   {
+    "q": "Goosebumps when you\u2019re scared are left over from when our ancestors?",
+    "a": "Had more body hair",
+    "w": [
+     "Lived underwater",
+     "Had feathers",
+     "Were tiny"
+    ],
+    "e": "Puffing up fur looks bigger."
+   },
+   {
+    "q": "Fear of spiders is called?",
+    "a": "Arachnophobia",
+    "w": [
+     "Claustrophobia",
+     "Acrophobia",
+     "Hydrophobia"
+    ],
+    "e": "One of the most common phobias."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-20",
+  "number": 89,
+  "difficulty": "Medium",
+  "theme": "Penguins",
+  "questions": [
+   {
+    "q": "Penguin Awareness Day. Where do most penguins live?",
+    "a": "The Southern Hemisphere",
+    "w": [
+     "The North Pole",
+     "The Arctic",
+     "Everywhere"
+    ],
+    "e": "No wild penguins live at the North Pole."
+   },
+   {
+    "q": "The smallest penguin, found in Australia, is the?",
+    "a": "Little penguin",
+    "w": [
+     "Emperor penguin",
+     "King penguin",
+     "Gentoo penguin"
+    ],
+    "e": "About 33 cm tall."
+   },
+   {
+    "q": "Emperor penguin dads keep the egg warm on their?",
+    "a": "Feet",
+    "w": [
+     "Backs",
+     "Heads",
+     "Wings"
+    ],
+    "e": "For about two months, without eating."
+   },
+   {
+    "q": "Penguins drink sea water and get rid of the salt through?",
+    "a": "A gland above their eyes",
+    "w": [
+     "Their feet",
+     "Sweating",
+     "Sneezing out of their ears"
+    ],
+    "e": "Then they sneeze it out of their beaks."
+   },
+   {
+    "q": "Which is the tallest penguin?",
+    "a": "Emperor penguin",
+    "w": [
+     "King penguin",
+     "Adelie penguin",
+     "Little penguin"
+    ],
+    "e": "Over a metre tall."
+   },
+   {
+    "q": "Penguins\u2019 black-and-white colours help with?",
+    "a": "Camouflage while swimming",
+    "w": [
+     "Attracting mates only",
+     "Keeping cool",
+     "Nothing"
+    ],
+    "e": "Dark from above, light from below."
+   },
+   {
+    "q": "Where can you watch little penguins come ashore in Victoria?",
+    "a": "Phillip Island",
+    "w": [
+     "Rottnest Island",
+     "Fraser Island",
+     "Kangaroo Island"
+    ],
+    "e": "The Penguin Parade at sunset."
+   },
+   {
+    "q": "A group of penguins on land is called a?",
+    "a": "Waddle",
+    "w": [
+     "Herd",
+     "Swarm",
+     "Pack"
+    ],
+    "e": "In water, a raft."
+   },
+   {
+    "q": "Penguins can\u2019t fly, but their wings work like?",
+    "a": "Flippers",
+    "w": [
+     "Parachutes",
+     "Arms with hands",
+     "Fans"
+    ],
+    "e": "They \u2018fly\u2019 underwater."
+   },
+   {
+    "q": "Which penguin is the fastest swimmer?",
+    "a": "Gentoo penguin",
+    "w": [
+     "Emperor penguin",
+     "Little penguin",
+     "Rockhopper penguin"
+    ],
+    "e": "Up to about 36 km/h."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-21",
+  "number": 90,
+  "difficulty": "Medium",
+  "theme": "Hugs",
+  "questions": [
+   {
+    "q": "National Hugging Day. A hug releases which \u2018bonding\u2019 hormone?",
+    "a": "Oxytocin",
+    "w": [
+     "Adrenaline",
+     "Insulin",
+     "Cortisol"
+    ],
+    "e": "It may help lower stress."
+   },
+   {
+    "q": "Which animals hug each other to stay warm in huddles of thousands?",
+    "a": "Emperor penguins",
+    "w": [
+     "Lions",
+     "Sharks",
+     "Spiders"
+    ],
+    "e": "They take turns on the cold outside edge."
+   },
+   {
+    "q": "Koalas hug trees mainly to?",
+    "a": "Keep cool",
+    "w": [
+     "Stay awake",
+     "Hide from eagles",
+     "Show off"
+    ],
+    "e": "Tree trunks are cooler than the air in heatwaves."
+   },
+   {
+    "q": "Babies held skin-to-skin often have steadier?",
+    "a": "Heart rate and temperature",
+    "w": [
+     "Eye colour",
+     "Hair growth",
+     "Height"
+    ],
+    "e": "Called kangaroo care."
+   },
+   {
+    "q": "A hug that lasts at least how long is often said to be the most calming?",
+    "a": "20 seconds",
+    "w": [
+     "1 second",
+     "10 minutes",
+     "1 hour"
+    ],
+    "e": "Evidence is light, but it\u2019s nice."
+   },
+   {
+    "q": "Sea otters hold hands while sleeping so they don\u2019t?",
+    "a": "Drift apart",
+    "w": [
+     "Sink",
+     "Get cold",
+     "Snore"
+    ],
+    "e": "Called a raft."
+   },
+   {
+    "q": "Which famous teddy bear is named after a US president?",
+    "a": "Teddy (Theodore Roosevelt)",
+    "w": [
+     "Paddington",
+     "Winnie-the-Pooh",
+     "Rupert"
+    ],
+    "e": "He refused to shoot a tied-up bear."
+   },
+   {
+    "q": "The \u2018Heimlich\u2019 is a kind of hug used for?",
+    "a": "Choking",
+    "w": [
+     "Hiccups",
+     "Fainting",
+     "Cramps"
+    ],
+    "e": "Now taught as back blows then abdominal thrusts."
+   },
+   {
+    "q": "Weighted blankets are designed to feel like a?",
+    "a": "Gentle, firm hug",
+    "w": [
+     "Cold breeze",
+     "Tickle",
+     "Massage chair"
+    ],
+    "e": "Some people find them calming."
+   },
+   {
+    "q": "Group hugs in sport are common after?",
+    "a": "Scoring",
+    "w": [
+     "Losing the toss",
+     "Half-time oranges",
+     "Warm-ups"
+    ],
+    "e": "Celebrate safely."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-22",
+  "number": 91,
+  "difficulty": "Hard",
+  "theme": "Chilly facts",
+  "questions": [
+   {
+    "q": "Francis Bacon, born on this date, reportedly caught his fatal chill stuffing a chicken with?",
+    "a": "Snow",
+    "w": [
+     "Ice cream",
+     "Bread",
+     "Salt"
+    ],
+    "e": "He wanted to see if cold preserved meat. It does."
+   },
+   {
+    "q": "Brain freeze from cold food is called?",
+    "a": "Sphenopalatine ganglioneuralgia",
+    "w": [
+     "Hypothermia",
+     "Frostbite",
+     "Cold sweat"
+    ],
+    "e": "Press your tongue to the roof of your mouth."
+   },
+   {
+    "q": "Which Australian mainland state has the highest mountain?",
+    "a": "New South Wales",
+    "w": [
+     "Victoria",
+     "Tasmania",
+     "Queensland"
+    ],
+    "e": "Mount Kosciuszko, 2,228 m."
+   },
+   {
+    "q": "The coldest temperature recorded on Earth was in?",
+    "a": "Antarctica",
+    "w": [
+     "Siberia",
+     "Canada",
+     "Greenland"
+    ],
+    "e": "About \u221289\u00b0C at Vostok station."
+   },
+   {
+    "q": "Shivering warms you because muscles?",
+    "a": "Make heat when they work",
+    "w": [
+     "Close your pores",
+     "Pump more blood to the skin",
+     "Shrink"
+    ],
+    "e": "It can raise heat production several times over."
+   },
+   {
+    "q": "Frozen peas on a sprain help by?",
+    "a": "Reducing pain and swelling",
+    "w": [
+     "Healing bones faster",
+     "Freezing germs",
+     "Making it go numb forever"
+    ],
+    "e": "Wrap it in a cloth: ice can burn skin."
+   },
+   {
+    "q": "Which animal can survive being frozen solid?",
+    "a": "Wood frog",
+    "w": [
+     "Kangaroo",
+     "Penguin",
+     "Shark"
+    ],
+    "e": "Its heart stops until it thaws."
+   },
+   {
+    "q": "Snow is actually?",
+    "a": "Clear ice crystals that scatter light",
+    "w": [
+     "White water",
+     "Frozen clouds",
+     "Tiny hailstones"
+    ],
+    "e": "Every flake starts as six-sided."
+   },
+   {
+    "q": "Thredbo, in NSW, is known for?",
+    "a": "Snow skiing",
+    "w": [
+     "Surfing",
+     "Wine",
+     "Rainforest"
+    ],
+    "e": "Also the site of a 1997 landslide rescue."
+   },
+   {
+    "q": "A \u2018cold\u2019 is caused by?",
+    "a": "Viruses",
+    "w": [
+     "Cold weather",
+     "Wet hair",
+     "Ice cream"
+    ],
+    "e": "Being cold doesn\u2019t give you one."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-23",
+  "number": 92,
+  "difficulty": "Hard",
+  "theme": "Trailblazing women",
+  "questions": [
+   {
+    "q": "Elizabeth Blackwell got her medical degree on this date in 1849, the first woman in the US to do so. Her classmates thought her application was?",
+    "a": "A joke",
+    "w": [
+     "A spy plot",
+     "A man in disguise",
+     "A mistake"
+    ],
+    "e": "They voted yes as a prank. She graduated top of her class."
+   },
+   {
+    "q": "Who was the first woman to win a Nobel Prize?",
+    "a": "Marie Curie",
+    "w": [
+     "Florence Nightingale",
+     "Mother Teresa",
+     "Rosalind Franklin"
+    ],
+    "e": "Physics, 1903."
+   },
+   {
+    "q": "Who founded modern nursing?",
+    "a": "Florence Nightingale",
+    "w": [
+     "Mary Seacole",
+     "Clara Barton",
+     "Edith Cavell"
+    ],
+    "e": "The Lady with the Lamp."
+   },
+   {
+    "q": "Which Australian woman set up schools of nursing in Sydney in the 1860s?",
+    "a": "Lucy Osburn",
+    "w": [
+     "Caroline Chisholm",
+     "Mary MacKillop",
+     "Edith Cowan"
+    ],
+    "e": "Sent by Florence Nightingale."
+   },
+   {
+    "q": "Who was the first woman to fly solo from England to Australia?",
+    "a": "Amy Johnson",
+    "w": [
+     "Amelia Earhart",
+     "Nancy Bird Walton",
+     "Jessie Miller"
+    ],
+    "e": "1930, in a plane called Jason."
+   },
+   {
+    "q": "Who was Australia\u2019s first female prime minister?",
+    "a": "Julia Gillard",
+    "w": [
+     "Edith Cowan",
+     "Julie Bishop",
+     "Quentin Bryce"
+    ],
+    "e": "2010 to 2013."
+   },
+   {
+    "q": "Ada Lovelace is considered the first?",
+    "a": "Computer programmer",
+    "w": [
+     "Female doctor",
+     "Astronaut",
+     "Pilot"
+    ],
+    "e": "Her notes from 1843 described an algorithm."
+   },
+   {
+    "q": "Which scientist\u2019s photo helped show DNA is a double helix?",
+    "a": "Rosalind Franklin",
+    "w": [
+     "Marie Curie",
+     "Jane Goodall",
+     "Dorothy Hodgkin"
+    ],
+    "e": "Photo 51."
+   },
+   {
+    "q": "Who was Australia\u2019s first female Governor-General?",
+    "a": "Quentin Bryce",
+    "w": [
+     "Julia Gillard",
+     "Marie Bashir",
+     "Linda Dessau"
+    ],
+    "e": "2008 to 2014."
+   },
+   {
+    "q": "Jane Goodall is famous for studying?",
+    "a": "Chimpanzees",
+    "w": [
+     "Penguins",
+     "Whales",
+     "Bees"
+    ],
+    "e": "She saw them using tools."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-24",
+  "number": 93,
+  "difficulty": "Genius",
+  "theme": "Smiles",
+  "questions": [
+   {
+    "q": "Moebius Syndrome Awareness Day: people with it can\u2019t?",
+    "a": "Smile or move their eyes sideways",
+    "w": [
+     "See colours",
+     "Hear",
+     "Walk"
+    ],
+    "e": "Facial nerves don\u2019t develop fully."
+   },
+   {
+    "q": "How many muscles help make a smile, roughly?",
+    "a": "About 12",
+    "w": [
+     "About 2",
+     "About 100",
+     "About 43 exactly"
+    ],
+    "e": "\u2018It takes more muscles to frown\u2019 isn\u2019t really true."
+   },
+   {
+    "q": "A real, happy \u2018Duchenne smile\u2019 also crinkles the?",
+    "a": "Eyes",
+    "w": [
+     "Ears",
+     "Chin",
+     "Forehead only"
+    ],
+    "e": "Hard to fake."
+   },
+   {
+    "q": "Babies first smile socially at about?",
+    "a": "6 weeks",
+    "w": [
+     "6 days",
+     "6 months",
+     "1 year"
+    ],
+    "e": "Earlier smiles are often reflexes."
+   },
+   {
+    "q": "Which painting has the world\u2019s most famous mysterious smile?",
+    "a": "Mona Lisa",
+    "w": [
+     "The Scream",
+     "Starry Night",
+     "Girl with a Pearl Earring"
+    ],
+    "e": "Painted by Leonardo da Vinci."
+   },
+   {
+    "q": "The smiley face \ud83d\ude0a was popularised by an American designer in?",
+    "a": "1963",
+    "w": [
+     "1863",
+     "1993",
+     "2003"
+    ],
+    "e": "Harvey Ball was paid $45."
+   },
+   {
+    "q": "Smiling can make you feel happier, according to?",
+    "a": "Some studies, with small effects",
+    "w": [
+     "No studies ever",
+     "Every study",
+     "Only cats"
+    ],
+    "e": "The \u2018facial feedback\u2019 effect is debated."
+   },
+   {
+    "q": "Which animal is said to \u2018smile\u2019 because of its mouth shape?",
+    "a": "Quokka",
+    "w": [
+     "Crocodile",
+     "Shark",
+     "Wombat"
+    ],
+    "e": "From Rottnest Island, WA."
+   },
+   {
+    "q": "Botox can stop which muscles from moving?",
+    "a": "Facial muscles",
+    "w": [
+     "Heart muscle",
+     "Leg muscles only",
+     "Eye lenses"
+    ],
+    "e": "It blocks nerve signals."
+   },
+   {
+    "q": "The number of teeth in a full adult smile, with wisdom teeth, is?",
+    "a": "32",
+    "w": [
+     "20",
+     "28",
+     "42"
+    ],
+    "e": "Children have 20."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-25",
+  "number": 94,
+  "difficulty": "Easy",
+  "theme": "Burns Night and Scotland",
+  "questions": [
+   {
+    "q": "Burns Night celebrates Scottish poet?",
+    "a": "Robert Burns",
+    "w": [
+     "William Shakespeare",
+     "Roald Dahl",
+     "Banjo Paterson"
+    ],
+    "e": "He wrote Auld Lang Syne."
+   },
+   {
+    "q": "What\u2019s the famous Burns Night dish?",
+    "a": "Haggis",
+    "w": [
+     "Pizza",
+     "Sushi",
+     "Pavlova"
+    ],
+    "e": "Served with neeps and tatties."
+   },
+   {
+    "q": "\u2018Neeps\u2019 are?",
+    "a": "Turnips or swedes",
+    "w": [
+     "Peas",
+     "Carrots",
+     "Onions"
+    ],
+    "e": "And tatties are potatoes."
+   },
+   {
+    "q": "Scotland\u2019s national animal is the?",
+    "a": "Unicorn",
+    "w": [
+     "Lion",
+     "Stag",
+     "Highland cow"
+    ],
+    "e": "Yes, really."
+   },
+   {
+    "q": "Bagpipes make sound by squeezing air from a?",
+    "a": "Bag",
+    "w": [
+     "Drum",
+     "Bottle",
+     "Balloon"
+    ],
+    "e": "Lungs of steel required."
+   },
+   {
+    "q": "Which famous lake supposedly has a monster?",
+    "a": "Loch Ness",
+    "w": [
+     "Lake Eyre",
+     "Lake Geneva",
+     "Loch Lomond"
+    ],
+    "e": "Nessie."
+   },
+   {
+    "q": "Which Scottish doctor discovered penicillin?",
+    "a": "Alexander Fleming",
+    "w": [
+     "Joseph Lister",
+     "John Snow",
+     "Edward Jenner"
+    ],
+    "e": "From Ayrshire, like Burns."
+   },
+   {
+    "q": "Who invented the telephone, born in Edinburgh?",
+    "a": "Alexander Graham Bell",
+    "w": [
+     "Thomas Edison",
+     "Isaac Newton",
+     "James Watt"
+    ],
+    "e": "His mother and wife were deaf."
+   },
+   {
+    "q": "A kilt is traditionally made of?",
+    "a": "Tartan wool",
+    "w": [
+     "Silk",
+     "Leather",
+     "Denim"
+    ],
+    "e": "Each clan has its own tartan."
+   },
+   {
+    "q": "\u2018Auld Lang Syne\u2019 is sung at?",
+    "a": "New Year",
+    "w": [
+     "Easter",
+     "Birthdays",
+     "Halloween"
+    ],
+    "e": "It means \u2018old long since\u2019."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-26",
+  "number": 95,
+  "difficulty": "Easy",
+  "theme": "Hearts",
+  "questions": [
+   {
+    "q": "How many chambers does your heart have?",
+    "a": "Four",
+    "w": [
+     "Two",
+     "Three",
+     "Six"
+    ],
+    "e": "Two atria, two ventricles."
+   },
+   {
+    "q": "A heart is about the size of your?",
+    "a": "Fist",
+    "w": [
+     "Head",
+     "Thumb",
+     "Foot"
+    ],
+    "e": "It grows with you."
+   },
+   {
+    "q": "Which side of the chest is the heart mostly on?",
+    "a": "Left",
+    "w": [
+     "Right",
+     "Exactly the middle",
+     "Behind the stomach"
+    ],
+    "e": "Tilted slightly left."
+   },
+   {
+    "q": "A doctor listens to your heart with a?",
+    "a": "Stethoscope",
+    "w": [
+     "Thermometer",
+     "Telescope",
+     "Microphone"
+    ],
+    "e": "Lub-dub."
+   },
+   {
+    "q": "Which animal has three hearts?",
+    "a": "Octopus",
+    "w": [
+     "Cat",
+     "Dog",
+     "Snake"
+    ],
+    "e": "And blue blood."
+   },
+   {
+    "q": "Doing exercise makes your heart?",
+    "a": "Stronger",
+    "w": [
+     "Smaller",
+     "Weaker",
+     "Stop"
+    ],
+    "e": "A strong heart pumps more with each beat."
+   },
+   {
+    "q": "A blue whale\u2019s heart is about the size of a?",
+    "a": "Small car",
+    "w": [
+     "Football",
+     "House",
+     "Teacup"
+    ],
+    "e": "Its beat can be heard kilometres away."
+   },
+   {
+    "q": "CPR on an adult involves pushing on the chest about how many times a minute?",
+    "a": "100 to 120",
+    "w": [
+     "10 to 20",
+     "40 to 50",
+     "200 to 250"
+    ],
+    "e": "Stayin\u2019 Alive is the right beat."
+   },
+   {
+    "q": "The heart\u2019s own pacemaker is in the?",
+    "a": "Right atrium",
+    "w": [
+     "Left foot",
+     "Brain",
+     "Lungs"
+    ],
+    "e": "Called the sinoatrial node."
+   },
+   {
+    "q": "The \u2764\ufe0f symbol doesn\u2019t look like a real heart. A real heart looks more like a?",
+    "a": "Lumpy cone",
+    "w": [
+     "Star",
+     "Perfect circle",
+     "Square"
+    ],
+    "e": "Nobody\u2019s sure where the classic shape came from."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-27",
+  "number": 96,
+  "difficulty": "Medium",
+  "theme": "Music and the brain",
+  "questions": [
+   {
+    "q": "Mozart was born on this date in 1756. How old was he when he wrote his first music?",
+    "a": "About 5",
+    "w": [
+     "About 15",
+     "About 25",
+     "About 1"
+    ],
+    "e": "Child prodigy."
+   },
+   {
+    "q": "The \u2018Mozart effect\u2019 claimed listening to Mozart makes babies?",
+    "a": "Smarter (it doesn\u2019t, really)",
+    "w": [
+     "Taller",
+     "Sleepier",
+     "Hungrier"
+    ],
+    "e": "The original study was on adults and the effect was tiny."
+   },
+   {
+    "q": "Which composer kept writing music after going deaf?",
+    "a": "Beethoven",
+    "w": [
+     "Mozart",
+     "Bach",
+     "Vivaldi"
+    ],
+    "e": "He\u2019d feel vibrations through the floor."
+   },
+   {
+    "q": "An \u2018earworm\u2019 is?",
+    "a": "A song stuck in your head",
+    "w": [
+     "An ear infection",
+     "A type of headphone",
+     "A bug in your ear"
+    ],
+    "e": "Chewing gum may help shift it."
+   },
+   {
+    "q": "Music therapy is used to help people with?",
+    "a": "Dementia, stroke and anxiety",
+    "w": [
+     "Broken bones only",
+     "Sunburn",
+     "Colds"
+    ],
+    "e": "Familiar songs can unlock memories."
+   },
+   {
+    "q": "Loud music over about how many decibels can damage hearing over time?",
+    "a": "85",
+    "w": [
+     "30",
+     "50",
+     "200"
+    ],
+    "e": "Concerts often top 100."
+   },
+   {
+    "q": "Which instrument has 88 keys?",
+    "a": "Piano",
+    "w": [
+     "Guitar",
+     "Violin",
+     "Drum"
+    ],
+    "e": "52 white and 36 black."
+   },
+   {
+    "q": "\u2018Goosebumps\u2019 from music are called?",
+    "a": "Frisson",
+    "w": [
+     "Rhythm",
+     "Encore",
+     "Tempo"
+    ],
+    "e": "Not everyone gets them."
+   },
+   {
+    "q": "Singing in a group may boost?",
+    "a": "Mood and bonding",
+    "w": [
+     "Eyesight",
+     "Height",
+     "Hair growth"
+    ],
+    "e": "Choirs are good for you."
+   },
+   {
+    "q": "The Australian band behind \u2018Thunderstruck\u2019 is?",
+    "a": "AC/DC",
+    "w": [
+     "INXS",
+     "Midnight Oil",
+     "Men at Work"
+    ],
+    "e": "Formed in Sydney in 1973."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-28",
+  "number": 97,
+  "difficulty": "Medium",
+  "theme": "Secrets and passwords",
+  "questions": [
+   {
+    "q": "Data Privacy Day. The most commonly used (and worst) password is often?",
+    "a": "123456",
+    "w": [
+     "Correct horse battery staple",
+     "Xy7#Qp!",
+     "Your middle name backwards"
+    ],
+    "e": "It can be cracked instantly."
+   },
+   {
+    "q": "Doctors keep what patients tell them?",
+    "a": "Confidential",
+    "w": [
+     "On social media",
+     "In the newspaper",
+     "On the fridge"
+    ],
+    "e": "With rare exceptions for safety."
+   },
+   {
+    "q": "\u2018Two-factor authentication\u2019 means?",
+    "a": "A second check, like a code on your phone",
+    "w": [
+     "Two passwords",
+     "Two computers",
+     "Two people"
+    ],
+    "e": "It stops most account takeovers."
+   },
+   {
+    "q": "A \u2018phishing\u2019 email tries to?",
+    "a": "Trick you into giving details",
+    "w": [
+     "Sell fishing gear",
+     "Fix your computer",
+     "Send you money"
+    ],
+    "e": "Check the sender\u2019s address."
+   },
+   {
+    "q": "The Enigma machine was used in World War II to send?",
+    "a": "Secret coded messages",
+    "w": [
+     "Radio music",
+     "Weather reports",
+     "Food orders"
+    ],
+    "e": "Alan Turing helped crack it."
+   },
+   {
+    "q": "A good password is?",
+    "a": "Long, like a string of random words",
+    "w": [
+     "Your pet\u2019s name",
+     "123456",
+     "Password"
+    ],
+    "e": "Use a password manager."
+   },
+   {
+    "q": "Which emoji is often used to mean \u2018keep it secret\u2019?",
+    "a": "\ud83e\udd2b",
+    "w": [
+     "\ud83c\udf89",
+     "\ud83c\udf55",
+     "\ud83d\udc36"
+    ],
+    "e": "Shushing face."
+   },
+   {
+    "q": "Invisible ink can be made with?",
+    "a": "Lemon juice",
+    "w": [
+     "Milk chocolate",
+     "Salt water only",
+     "Olive oil only"
+    ],
+    "e": "Heat makes it appear."
+   },
+   {
+    "q": "A \u2018diary\u2019 with a lock is meant to keep?",
+    "a": "Private thoughts",
+    "w": [
+     "Money",
+     "Medicine",
+     "Food"
+    ],
+    "e": "Siblings, beware."
+   },
+   {
+    "q": "\u2018Cookies\u2019 on websites are?",
+    "a": "Small files that remember you",
+    "w": [
+     "Biscuits",
+     "Viruses",
+     "Adverts only"
+    ],
+    "e": "You can block many of them."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-29",
+  "number": 98,
+  "difficulty": "Hard",
+  "theme": "Puzzles",
+  "questions": [
+   {
+    "q": "National Puzzle Day. The Rubik\u2019s Cube was invented in which country?",
+    "a": "Hungary",
+    "w": [
+     "Japan",
+     "USA",
+     "Germany"
+    ],
+    "e": "By Ern\u0151 Rubik in 1974."
+   },
+   {
+    "q": "How many squares on a standard Rubik\u2019s Cube?",
+    "a": "54",
+    "w": [
+     "27",
+     "36",
+     "64"
+    ],
+    "e": "Nine on each of six faces."
+   },
+   {
+    "q": "Sudoku puzzles became popular worldwide through?",
+    "a": "Japan and then a UK newspaper",
+    "w": [
+     "China only",
+     "Ancient Rome",
+     "Australia"
+    ],
+    "e": "Its roots go back to 18th-century Latin squares."
+   },
+   {
+    "q": "Crosswords first appeared in a newspaper in?",
+    "a": "1913",
+    "w": [
+     "1813",
+     "1953",
+     "1993"
+    ],
+    "e": "New York World, by Arthur Wynne."
+   },
+   {
+    "q": "A jigsaw puzzle got its name from?",
+    "a": "The saw used to cut it",
+    "w": [
+     "A dance",
+     "A puzzle-maker named Jig",
+     "Its shape"
+    ],
+    "e": "Early ones were maps."
+   },
+   {
+    "q": "Puzzles may help keep the brain?",
+    "a": "Active, though evidence for preventing dementia is mixed",
+    "w": [
+     "Shrinking",
+     "Cold",
+     "Silent"
+    ],
+    "e": "Staying social and active helps too."
+   },
+   {
+    "q": "Which game uses a 9\u00d79 grid with the numbers 1 to 9?",
+    "a": "Sudoku",
+    "w": [
+     "Chess",
+     "Scrabble",
+     "Mahjong"
+    ],
+    "e": "Our Sudokrine has a medical twist."
+   },
+   {
+    "q": "The Tower of Hanoi puzzle uses?",
+    "a": "Discs on three pegs",
+    "w": [
+     "Marbles in a cup",
+     "Cards",
+     "Dice"
+    ],
+    "e": "Move them all, never big on small."
+   },
+   {
+    "q": "Wordle was created by Josh Wardle for?",
+    "a": "His partner",
+    "w": [
+     "The New York Times",
+     "His boss",
+     "A school"
+    ],
+    "e": "She loved word games."
+   },
+   {
+    "q": "Which word game uses tiles worth different points?",
+    "a": "Scrabble",
+    "w": [
+     "Wordle",
+     "Boggle",
+     "Hangman"
+    ],
+    "e": "Q and Z are worth 10."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-30",
+  "number": 99,
+  "difficulty": "Hard",
+  "theme": "Tiny troublemakers",
+  "questions": [
+   {
+    "q": "World NTD Day. Which tiny insect is the deadliest animal to humans?",
+    "a": "Mosquito",
+    "w": [
+     "Bee",
+     "Ant",
+     "Fly"
+    ],
+    "e": "Through malaria, dengue and more."
+   },
+   {
+    "q": "Head lice live on?",
+    "a": "The scalp",
+    "w": [
+     "The feet",
+     "Pillows forever",
+     "Pets"
+    ],
+    "e": "They don\u2019t jump or fly."
+   },
+   {
+    "q": "Bed bugs feed on?",
+    "a": "Blood",
+    "w": [
+     "Dust",
+     "Skin flakes only",
+     "Fabric"
+    ],
+    "e": "Mostly at night."
+   },
+   {
+    "q": "Which worm can grow over 5 metres long in the human gut?",
+    "a": "Tapeworm",
+    "w": [
+     "Earthworm",
+     "Silkworm",
+     "Glow-worm"
+    ],
+    "e": "Mostly from undercooked meat."
+   },
+   {
+    "q": "Ticks in Australia can cause?",
+    "a": "Paralysis and allergies",
+    "w": [
+     "Hair loss only",
+     "Colour blindness",
+     "Nothing"
+    ],
+    "e": "The paralysis tick lives on the east coast."
+   },
+   {
+    "q": "Which fly spreads sleeping sickness in Africa?",
+    "a": "Tsetse fly",
+    "w": [
+     "House fly",
+     "Fruit fly",
+     "Horse fly"
+    ],
+    "e": "Rare outside Africa."
+   },
+   {
+    "q": "Scabies mites burrow into?",
+    "a": "Skin",
+    "w": [
+     "Hair",
+     "Nails",
+     "Eyes"
+    ],
+    "e": "Very itchy, especially at night."
+   },
+   {
+    "q": "Dust mites eat?",
+    "a": "Dead skin flakes",
+    "w": [
+     "Dust",
+     "Plastic",
+     "Hair"
+    ],
+    "e": "Allergies to their droppings are common."
+   },
+   {
+    "q": "Which snail-borne parasite causes a disease affecting over 200 million people?",
+    "a": "Schistosoma",
+    "w": [
+     "Giardia",
+     "Lice",
+     "Fleas"
+    ],
+    "e": "Caught from contaminated fresh water."
+   },
+   {
+    "q": "Fleas can jump about how many times their body length?",
+    "a": "100",
+    "w": [
+     "2",
+     "10",
+     "1,000"
+    ],
+    "e": "With a springy protein called resilin."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-31",
+  "number": 100,
+  "difficulty": "Genius",
+  "theme": "Healers through history",
+  "questions": [
+   {
+    "q": "World Leprosy Day. Which Belgian priest cared for people with leprosy in Hawaii and became a saint?",
+    "a": "Father Damien",
+    "w": [
+     "Saint Patrick",
+     "Mother Teresa",
+     "Saint Francis"
+    ],
+    "e": "He caught leprosy himself."
+   },
+   {
+    "q": "Hippocrates is called the father of?",
+    "a": "Medicine",
+    "w": [
+     "Maths",
+     "Music",
+     "Astronomy"
+    ],
+    "e": "The Hippocratic Oath bears his name."
+   },
+   {
+    "q": "Which ancient Egyptian is one of the first doctors known by name?",
+    "a": "Imhotep",
+    "w": [
+     "Tutankhamun",
+     "Cleopatra",
+     "Ramses"
+    ],
+    "e": "Also an architect of pyramids."
+   },
+   {
+    "q": "Mary Seacole nursed soldiers in which war?",
+    "a": "Crimean War",
+    "w": [
+     "World War I",
+     "Boer War",
+     "Vietnam War"
+    ],
+    "e": "She ran the British Hotel near the front."
+   },
+   {
+    "q": "Which Australian nursing sister survived a WWII massacre on Bangka Island?",
+    "a": "Vivian Bullwinkel",
+    "w": [
+     "Nancy Wake",
+     "Elizabeth Kenny",
+     "Edith Cavell"
+    ],
+    "e": "She hid her wound to avoid capture."
+   },
+   {
+    "q": "Avicenna wrote a medical encyclopaedia used for 600 years called?",
+    "a": "The Canon of Medicine",
+    "w": [
+     "The Iliad",
+     "The Republic",
+     "The Prince"
+    ],
+    "e": "Persian, around 1025."
+   },
+   {
+    "q": "Which Scot introduced antiseptic surgery using carbolic acid?",
+    "a": "Joseph Lister",
+    "w": [
+     "Alexander Fleming",
+     "John Hunter",
+     "James Simpson"
+    ],
+    "e": "Listerine is named after him."
+   },
+   {
+    "q": "Who founded the Royal Flying Doctor Service?",
+    "a": "John Flynn",
+    "w": [
+     "Fred Hollows",
+     "Victor Chang",
+     "Charles Kingsford Smith"
+    ],
+    "e": "He appears on the $20 note."
+   },
+   {
+    "q": "Fred Hollows is famous for restoring?",
+    "a": "Sight",
+    "w": [
+     "Hearing",
+     "Teeth",
+     "Hair"
+    ],
+    "e": "Cheap cataract operations."
+   },
+   {
+    "q": "Professor Kelvin Kong, Australia\u2019s first Aboriginal surgeon, specialises in?",
+    "a": "Ear, nose and throat surgery",
+    "w": [
+     "Heart surgery",
+     "Brain surgery",
+     "Bone surgery"
+    ],
+    "e": "He works to fix ear disease in Aboriginal children, which is far too common."
+   }
+  ]
  }
 ]
