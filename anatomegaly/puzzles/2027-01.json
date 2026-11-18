@@ -42,7 +42,9 @@
     "wrong": [
      "Dorsal interossei",
      "Flexor digitorum profundus",
-     "Extensor digitorum"
+     "Extensor digitorum",
+     "Palmar interossei only",
+     "Flexor digitorum superficialis"
     ],
     "why": "Odd little muscles: they start on the deep flexor tendons and finish on the extensor hood, linking the two systems."
    },
@@ -53,7 +55,9 @@
     "wrong": [
      "Extensor pollicis longus",
      "Flexor carpi radialis",
-     "Extensor carpi radialis longus"
+     "Extensor carpi radialis longus",
+     "Extensor indicis",
+     "Flexor pollicis longus"
     ],
     "why": "They share the first tunnel on the thumb side of the wrist. Common in new parents lifting babies."
    },
@@ -64,7 +68,9 @@
     "wrong": [
      "A2 pulley",
      "A4 pulley",
-     "C1 pulley"
+     "C1 pulley",
+     "A3 pulley",
+     "C3 pulley"
     ],
     "why": "The A1 pulley sits over the knuckle in the palm. A steroid injection or a small release fixes most cases."
    }
@@ -83,7 +89,9 @@
     "wrong": [
      "Calcaneofibular ligament",
      "Deltoid ligament",
-     "Anterior inferior tibiofibular ligament"
+     "Anterior inferior tibiofibular ligament",
+     "Posterior talofibular ligament",
+     "Spring ligament"
     ],
     "why": "Rolling the foot inwards with the toes pointed stresses it first. The calcaneofibular ligament goes next in worse sprains."
    },
@@ -124,7 +132,9 @@
     "wrong": [
      "First and second toes",
      "Second and third toes",
-     "Fourth and fifth toes"
+     "Fourth and fifth toes",
+     "Big toe and the sole",
+     "Fifth toe and the heel"
     ],
     "why": "It’s a thickened nerve between the metatarsal heads. Tight, narrow shoes and heels make it worse."
    },
@@ -135,7 +145,9 @@
     "wrong": [
      "Back of the heel, where the Achilles attaches",
      "Ball of the foot",
-     "Outer edge of the midfoot"
+     "Outer edge of the midfoot",
+     "Top of the foot",
+     "Behind the outer ankle"
     ],
     "why": "The plantar fascia anchors on the inner front of the heel bone. Pain is classically worst with the first steps in the morning."
    }
@@ -154,7 +166,9 @@
     "wrong": [
      "Coccygeus",
      "Obturator internus",
-     "Piriformis"
+     "Piriformis",
+     "Gluteus maximus",
+     "Iliacus"
     ],
     "why": "Its parts (puborectalis, pubococcygeus and iliococcygeus) form a sling that holds up the pelvic organs."
    },
@@ -178,7 +192,9 @@
     "wrong": [
      "Obturator internus",
      "Gluteus minimus",
-     "Gemellus superior"
+     "Gemellus superior",
+     "Quadratus femoris",
+     "Gemellus inferior"
     ],
     "why": "In some people the nerve passes through it, a variant linked, controversially, with ‘piriformis syndrome’."
    },
@@ -202,7 +218,9 @@
     "wrong": [
      "Hip replacement",
      "Prostate biopsy",
-     "Inguinal hernia repair"
+     "Inguinal hernia repair",
+     "Constipation alone",
+     "Appendicectomy"
     ],
     "why": "It sits between the vagina and anus. Third- and fourth-degree tears reach the anal sphincter and need careful repair."
    }
@@ -221,7 +239,9 @@
     "wrong": [
      "Latissimus dorsi",
      "Pectoralis major",
-     "Rectus abdominis"
+     "Rectus abdominis",
+     "Deltoid",
+     "Trapezius"
     ],
     "why": "It powers stairs, standing up from a chair and running uphill."
    },
@@ -232,7 +252,9 @@
     "wrong": [
      "External oblique",
      "Transversus abdominis",
-     "Serratus anterior"
+     "Serratus anterior",
+     "Internal oblique",
+     "Erector spinae"
     ],
     "why": "Tendon bands across it make the blocks. Everyone has one; body fat decides if it shows."
    },
@@ -243,7 +265,9 @@
     "wrong": [
      "Pectoralis minor",
      "Serratus anterior",
-     "Latissimus dorsi"
+     "Latissimus dorsi",
+     "Trapezius",
+     "Rhomboids"
     ],
     "why": "It pulls the arm across and down in front of the chest. Pec minor sits underneath."
    },
@@ -254,7 +278,9 @@
     "wrong": [
      "Trapezius",
      "Rhomboid major",
-     "Teres major"
+     "Teres major",
+     "Infraspinatus",
+     "Serratus posterior"
     ],
     "why": "The ‘lats’ run from the lower back and pelvis to the front of the upper arm. Swimmers build big ones."
    },
@@ -265,7 +291,9 @@
     "wrong": [
      "Trapezius",
      "Scalenes",
-     "Platysma"
+     "Platysma",
+     "Splenius capitis",
+     "Levator scapulae"
     ],
     "why": "It runs from behind the ear to the breastbone and collarbone. Turning left uses the right one."
    }
@@ -284,7 +312,9 @@
     "wrong": [
      "Temporalis",
      "Buccinator",
-     "Lateral pterygoid"
+     "Lateral pterygoid",
+     "Medial pterygoid",
+     "Platysma"
     ],
     "why": "Pound for pound one of the strongest muscles. Teeth grinding can make it bulky and sore."
    },
@@ -295,7 +325,9 @@
     "wrong": [
      "Levator palpebrae superioris",
      "Frontalis",
-     "Corrugator supercilii"
+     "Corrugator supercilii",
+     "Orbicularis oris",
+     "Procerus"
     ],
     "why": "A ring of muscle round the eye. In Bell’s palsy it weakens, so the eye needs protecting."
    },
@@ -306,7 +338,9 @@
     "wrong": [
      "Submandibular gland",
      "Thyroid gland",
-     "Sublingual gland"
+     "Sublingual gland",
+     "Lacrimal gland",
+     "Parathyroid gland"
     ],
     "why": "The biggest salivary gland. The facial nerve runs right through it."
    },
@@ -317,7 +351,9 @@
     "wrong": [
      "Cricoid cartilage",
      "Hyoid bone",
-     "Thyroid gland"
+     "Thyroid gland",
+     "Epiglottis",
+     "Arytenoid cartilage"
     ],
     "why": "Its two plates meet at a sharper angle after a testosterone-driven puberty, so it sticks out more. The vocal cords attach just behind it."
    },
@@ -328,7 +364,9 @@
     "wrong": [
      "Corrugator supercilii",
      "Procerus",
-     "Orbicularis oculi"
+     "Orbicularis oculi",
+     "Temporalis",
+     "Occipitalis"
     ],
     "why": "Botox here smooths forehead lines. Too much and the brows drop."
    }
@@ -347,7 +385,9 @@
     "wrong": [
      "Adrenal medulla",
      "Anterior pituitary",
-     "Thyroid gland"
+     "Thyroid gland",
+     "Posterior pituitary",
+     "Hypothalamus"
     ],
     "why": "The outer layer makes cortisol and aldosterone; the inner medulla makes adrenaline. The pituitary only sends the signal (ACTH)."
    },
@@ -358,7 +398,9 @@
     "wrong": [
      "Prolactin",
      "Vasopressin",
-     "Luteinising hormone"
+     "Luteinising hormone",
+     "Oestrogen",
+     "Relaxin"
     ],
     "why": "Made in the hypothalamus, released from the back of the pituitary. Prolactin makes milk; oxytocin squeezes it out."
    },
@@ -369,7 +411,9 @@
     "wrong": [
      "Alpha cells",
      "Delta cells",
-     "Acinar cells"
+     "Acinar cells",
+     "PP cells",
+     "Ductal cells"
     ],
     "why": "They sit in the islets of Langerhans. Type 1 diabetes destroys them. Alpha cells make glucagon."
    },
@@ -397,7 +441,9 @@
     "wrong": [
      "Thyroxine (T4)",
      "Parathyroid hormone",
-     "Thyroglobulin"
+     "Thyroglobulin",
+     "Triiodothyronine (T3)",
+     "TSH"
     ],
     "why": "It slightly lowers blood calcium but does little in adults. It’s a tumour marker for medullary thyroid cancer."
    }
@@ -450,7 +496,9 @@
     "wrong": [
      "Piriformis",
      "Tensor fasciae latae",
-     "Quadratus femoris"
+     "Quadratus femoris",
+     "Obturator internus",
+     "Gemellus superior"
     ],
     "why": "Both tendons attach to the greater trochanter. Tears cause outer hip pain, often labelled ‘trochanteric bursitis’."
    },
@@ -474,7 +522,9 @@
     "wrong": [
      "Gluteus maximus",
      "Iliopsoas",
-     "Adductor magnus"
+     "Adductor magnus",
+     "Tibialis anterior",
+     "Rectus femoris"
     ],
     "why": "If it’s weak, the pelvis sags on the lifted side: the Trendelenburg sign."
    }
@@ -582,7 +632,9 @@
     "wrong": [
      "Flexor hallucis longus",
      "Fibularis longus",
-     "Tibialis anterior"
+     "Tibialis anterior",
+     "Extensor hallucis longus",
+     "Flexor digitorum longus"
     ],
     "why": "The commonest cause of flatfoot developing in adults. Ask them to rise on tiptoe on one leg."
    },
@@ -619,7 +671,9 @@
     "wrong": [
      "Talonavicular joint",
      "Subtalar joint",
-     "Metatarsophalangeal joints"
+     "Metatarsophalangeal joints",
+     "Ankle (talocrural) joint",
+     "Interphalangeal joints"
     ],
     "why": "Easily missed. Bruising on the sole of the midfoot is a classic clue."
    },
@@ -651,7 +705,9 @@
     "wrong": [
      "Middle and posterior scalenes",
      "Sternocleidomastoid and trapezius",
-     "Longus colli and anterior scalene"
+     "Longus colli and anterior scalene",
+     "Platysma and sternocleidomastoid",
+     "Trapezius and levator scapulae"
     ],
     "why": "The subclavian artery goes with it, while the vein passes in front. It’s where an ‘interscalene’ shoulder block goes."
    },
@@ -662,7 +718,9 @@
     "wrong": [
      "Cricoid cartilage (C6)",
      "Angle of the mandible (C2)",
-     "Sternal notch (T2)"
+     "Sternal notch (T2)",
+     "Mastoid process (C1)",
+     "Hyoid bone (C1)"
     ],
     "why": "The carotid sinus here senses blood pressure. Pressing on it can slow the heart."
    },
@@ -673,7 +731,9 @@
     "wrong": [
      "Thyrohyoid membrane",
      "Cricotracheal ligament",
-     "Thyroid isthmus"
+     "Thyroid isthmus",
+     "Tracheal ring 5",
+     "Sternohyoid muscle"
     ],
     "why": "Feel the dip between the thyroid and cricoid cartilages. It’s thin and sits just under the skin."
    },
@@ -697,7 +757,9 @@
     "wrong": [
      "Parapharyngeal space",
      "Submandibular space",
-     "Peritonsillar space"
+     "Peritonsillar space",
+     "Pretracheal space",
+     "Buccal space"
     ],
     "why": "Abscesses come from infected lymph nodes there. Neck stiffness, drooling and a muffled voice are red flags."
    }
@@ -716,7 +778,9 @@
     "wrong": [
      "Vastus lateralis",
      "Rectus femoris",
-     "Sartorius"
+     "Sartorius",
+     "Gracilis",
+     "Vastus intermedius"
     ],
     "why": "Its lowest fibres help keep the kneecap tracking straight."
    },
@@ -727,7 +791,9 @@
     "wrong": [
      "Hamstrings",
      "Glutes",
-     "Abdominals"
+     "Abdominals",
+     "Quadriceps",
+     "Calves"
     ],
     "why": "Adductor longus is the most commonly strained, especially in sports with quick changes of direction."
    },
@@ -738,7 +804,9 @@
     "wrong": [
      "Biceps brachii",
      "Pronator teres",
-     "Extensor carpi radialis longus"
+     "Extensor carpi radialis longus",
+     "Flexor carpi radialis",
+     "Anconeus"
     ],
     "why": "It works best in this ‘holding a cup’ position. Its reflex is tested just above the wrist."
    },
@@ -749,7 +817,9 @@
     "wrong": [
      "Forearm flexors",
      "Biceps",
-     "Triceps"
+     "Triceps",
+     "Pronators",
+     "Deltoid"
     ],
     "why": "Their shared tendon attaches to the outer elbow. Golfer’s elbow is the flexors on the inner side."
    },
@@ -760,7 +830,9 @@
     "wrong": [
      "Thigh muscles",
      "Glutes",
-     "Shin muscles"
+     "Shin muscles",
+     "Abdominal muscles",
+     "Foot arch muscles"
     ],
     "why": "The calf muscle pump. Long flights switch it off, so walk and flex your ankles."
    }
@@ -796,7 +868,9 @@
     "wrong": [
      "Hypothenar eminence",
      "Anatomical snuffbox",
-     "Palmar aponeurosis"
+     "Palmar aponeurosis",
+     "Carpal tunnel",
+     "Thenar web"
     ],
     "why": "Its muscles let you bring the thumb across the palm. Wasting here suggests carpal tunnel syndrome."
    },
@@ -833,7 +907,9 @@
     "wrong": [
      "Proximal interphalangeal (PIP) joint",
      "Distal interphalangeal (DIP) joint",
-     "Carpometacarpal (CMC) joint"
+     "Carpometacarpal (CMC) joint",
+     "Radiocarpal joint",
+     "Intercarpal joint"
     ],
     "why": "A ‘boxer’s fracture’ breaks the neck of the fifth metacarpal, just behind this knuckle."
    }
@@ -886,7 +962,9 @@
     "wrong": [
      "Absent foot pulses",
      "Pale, cold foot",
-     "Complete numbness"
+     "Complete numbness",
+     "Fever",
+     "Bruising over the muscle"
     ],
     "why": "Pulses often stay present until late. Don’t wait for them; it’s a surgical emergency."
    },
@@ -897,7 +975,9 @@
     "wrong": [
      "Popliteus",
      "Soleus",
-     "Flexor digitorum longus"
+     "Flexor digitorum longus",
+     "Tibialis posterior",
+     "Fibularis brevis"
     ],
     "why": "Its thin tendon runs between gastrocnemius and soleus."
    },
@@ -908,7 +988,9 @@
     "wrong": [
      "Over the front of the fibula",
      "Behind the knee",
-     "At the Achilles insertion"
+     "At the Achilles insertion",
+     "Under the heel",
+     "Over the kneecap"
     ],
     "why": "Common in new runners who build up too fast. Pain at one sharp spot that hurts to hop suggests a stress fracture."
    }
@@ -1004,7 +1086,9 @@
     "wrong": [
      "Masseter",
      "Zygomaticus major",
-     "Orbicularis oris"
+     "Orbicularis oris",
+     "Mentalis",
+     "Platysma"
     ],
     "why": "It keeps the cheeks firm and pushes food back between the teeth."
    },
@@ -1015,7 +1099,9 @@
     "wrong": [
      "Risorius",
      "Levator labii superioris",
-     "Depressor anguli oris"
+     "Depressor anguli oris",
+     "Buccinator",
+     "Mentalis"
     ],
     "why": "A genuine smile also crinkles the eyes, using orbicularis oculi."
    },
@@ -1039,7 +1125,9 @@
     "wrong": [
      "Forehead is also weak",
      "Taste is lost",
-     "Eye can’t close"
+     "Eye can’t close",
+     "Hearing is louder on that side",
+     "Ear pain beforehand"
     ],
     "why": "The forehead gets supply from both sides of the brain, so a stroke spares it. A facial nerve problem doesn’t."
    },
@@ -1050,7 +1138,9 @@
     "wrong": [
      "Medial pterygoid",
      "Temporalis",
-     "Masseter"
+     "Masseter",
+     "Buccinator",
+     "Digastric (posterior belly)"
     ],
     "why": "It attaches to the jaw joint’s disc. It’s the only chewing muscle that opens the mouth."
    }
@@ -1069,7 +1159,9 @@
     "wrong": [
      "Pronator quadratus",
      "Supinator",
-     "Flexor carpi radialis"
+     "Flexor carpi radialis",
+     "Brachialis",
+     "Flexor carpi ulnaris"
     ],
     "why": "Pronator syndrome mimics carpal tunnel, but numbness also reaches the palm."
    },
@@ -1080,7 +1172,9 @@
     "wrong": [
      "Brachioradialis",
      "Extensor carpi radialis brevis",
-     "Anconeus"
+     "Anconeus",
+     "Triceps",
+     "Extensor carpi ulnaris"
     ],
     "why": "The nerve passes through it under a fibrous arch. Wrist extension is spared because those muscles are supplied higher up."
    },
@@ -1091,7 +1185,9 @@
     "wrong": [
      "Extensor indicis",
      "Abductor pollicis longus",
-     "Extensor carpi ulnaris"
+     "Extensor carpi ulnaris",
+     "Flexor pollicis longus",
+     "Extensor digiti minimi"
     ],
     "why": "It hooks round a bony bump on the back of the radius and can fray there. The thumb tip then can’t lift."
    },
@@ -1102,7 +1198,9 @@
     "wrong": [
      "Flexor digitorum superficialis",
      "Lumbricals",
-     "Interossei"
+     "Interossei",
+     "Extensor digitorum",
+     "Palmaris longus"
     ],
     "why": "Hold the middle finger joint still and ask for a tip bend. ‘Jersey finger’ is when its tendon tears off."
    },
@@ -1134,7 +1232,9 @@
     "wrong": [
      "Flexor digitorum longus",
      "Tibialis posterior",
-     "Fibularis longus"
+     "Fibularis longus",
+     "Fibularis brevis",
+     "Extensor hallucis longus"
     ],
     "why": "‘Dancer’s tendinitis’ hurts behind the inner ankle when rising onto the toes."
    },
@@ -1145,7 +1245,9 @@
     "wrong": [
      "Long plantar ligament",
      "Deltoid ligament",
-     "Bifurcate ligament"
+     "Bifurcate ligament",
+     "Anterior talofibular ligament",
+     "Plantar fascia"
     ],
     "why": "It holds up the inner arch and often fails along with the tibialis posterior tendon."
    },
@@ -1203,7 +1305,9 @@
     "wrong": [
      "Rectus abdominis",
      "External oblique",
-     "Internal oblique"
+     "Internal oblique",
+     "Quadratus lumborum",
+     "Serratus anterior"
     ],
     "why": "It tightens the abdomen and helps brace the spine before you lift."
    },
@@ -1214,7 +1318,9 @@
     "wrong": [
      "Latissimus dorsi",
      "Quadratus lumborum",
-     "Trapezius"
+     "Trapezius",
+     "Rhomboids",
+     "Psoas major"
     ],
     "why": "Most ‘back strains’ involve them."
    },
@@ -1225,7 +1331,9 @@
     "wrong": [
      "Rhomboids",
      "Levator scapulae",
-     "Latissimus dorsi"
+     "Latissimus dorsi",
+     "Teres major",
+     "Serratus anterior"
     ],
     "why": "The upper part is where many people carry neck and shoulder tension."
    },
@@ -1236,7 +1344,9 @@
     "wrong": [
      "Scalenes",
      "Serratus anterior",
-     "Pectoralis minor"
+     "Pectoralis minor",
+     "Rhomboids",
+     "Rectus abdominis"
     ],
     "why": "Nerves and vessels run under each rib, so chest drains go in just above a rib."
    },
@@ -1247,7 +1357,9 @@
     "wrong": [
      "Psoas major",
      "Gluteus medius",
-     "Multifidus"
+     "Multifidus",
+     "Rectus abdominis",
+     "Piriformis"
     ],
     "why": "It hitches the hip and steadies the spine when you stand on one leg."
    }
@@ -1266,7 +1378,9 @@
     "wrong": [
      "Glucagon",
      "Cortisol",
-     "Adrenaline"
+     "Adrenaline",
+     "Thyroxine",
+     "Somatostatin"
     ],
     "why": "It moves glucose into cells. Glucagon does the opposite when sugar is low."
    },
@@ -1277,7 +1391,9 @@
     "wrong": [
      "Serotonin",
      "Cortisol",
-     "Oxytocin"
+     "Oxytocin",
+     "Adrenaline",
+     "Growth hormone"
     ],
     "why": "Bright screens at night suppress it. Morning light helps reset the body clock."
    },
@@ -1288,7 +1404,9 @@
     "wrong": [
      "Progesterone",
      "Prolactin",
-     "Luteinising hormone"
+     "Luteinising hormone",
+     "Testosterone",
+     "Follicle-stimulating hormone"
     ],
     "why": "After ovulation, progesterone takes over and readies the lining for a pregnancy."
    },
@@ -1299,7 +1417,9 @@
     "wrong": [
      "Oestrogen",
      "Progesterone",
-     "Prolactin"
+     "Prolactin",
+     "Cortisol",
+     "Oxytocin"
     ],
     "why": "It drives puberty changes, muscle and sperm production."
    },
@@ -1310,7 +1430,9 @@
     "wrong": [
      "Leptin",
      "Insulin",
-     "Glucagon"
+     "Glucagon",
+     "Cortisol",
+     "Melatonin"
     ],
     "why": "Made mainly in the stomach. Leptin, from fat tissue, signals fullness over the long term."
    }
@@ -1329,7 +1451,9 @@
     "wrong": [
      "Thyroid cartilage",
      "First tracheal ring",
-     "Arytenoid cartilage"
+     "Arytenoid cartilage",
+     "Epiglottis",
+     "Corniculate cartilage"
     ],
     "why": "It sits at C6. It was long taught as the narrowest part of a child’s airway."
    },
@@ -1340,7 +1464,9 @@
     "wrong": [
      "Sternocleidomastoid",
      "Omohyoid",
-     "Sternohyoid"
+     "Sternohyoid",
+     "Trapezius",
+     "Digastric"
     ],
     "why": "A face muscle that has slipped into the neck. The neck ‘bands’ that come with age are its edges."
    },
@@ -1351,7 +1477,9 @@
     "wrong": [
      "Digastric",
      "Stylohyoid",
-     "Sternothyroid"
+     "Sternothyroid",
+     "Sternohyoid",
+     "Mylohyoid"
     ],
     "why": "Its middle tendon lies over the internal jugular vein, a handy surgical landmark."
    },
@@ -1375,7 +1503,9 @@
     "wrong": [
      "Internal jugular vein",
      "Anterior jugular vein",
-     "Vertebral vein"
+     "Vertebral vein",
+     "Carotid artery",
+     "Subclavian vein"
     ],
     "why": "It crosses sternocleidomastoid. Venous pressure (JVP) is judged from the deeper internal jugular."
    }
@@ -1411,7 +1541,9 @@
     "wrong": [
      "Palmar interossei",
      "Lumbricals",
-     "Extensor digitorum"
+     "Extensor digitorum",
+     "Flexor digitorum superficialis",
+     "Abductor pollicis brevis"
     ],
     "why": "Memory aid: DAB (dorsal abduct) and PAD (palmar adduct). All are supplied by the ulnar nerve."
    },
@@ -1422,7 +1554,9 @@
     "wrong": [
      "Adductor pollicis",
      "Flexor pollicis longus",
-     "Opponens digiti minimi"
+     "Opponens digiti minimi",
+     "First dorsal interosseous",
+     "Abductor digiti minimi"
     ],
     "why": "Test by lifting the thumb straight up off the palm against resistance."
    },
@@ -1433,7 +1567,9 @@
     "wrong": [
      "Extensor tendon",
      "Nail fold (paronychia)",
-     "Fingertip pulp (felon)"
+     "Fingertip pulp (felon)",
+     "Skin only (cellulitis)",
+     "Wrist joint"
     ],
     "why": "These are Kanavel’s signs. It’s a hand surgery emergency."
    },
@@ -1444,7 +1580,9 @@
     "wrong": [
      "Opponens pollicis",
      "Flexor pollicis brevis",
-     "First dorsal interosseous"
+     "First dorsal interosseous",
+     "Abductor pollicis brevis",
+     "Extensor pollicis longus"
     ],
     "why": "If it’s weak, the thumb tip bends to grip paper: Froment’s sign."
    }
@@ -1463,7 +1601,9 @@
     "wrong": [
      "Iliococcygeus",
      "Pubococcygeus",
-     "Coccygeus"
+     "Coccygeus",
+     "Obturator internus",
+     "External anal sphincter"
     ],
     "why": "It kinks the rectum to help keep you continent. If it won’t relax, it causes one type of constipation."
    },
@@ -1474,7 +1614,9 @@
     "wrong": [
      "Internal anal sphincter",
      "Sphincter of Oddi",
-     "Ileocaecal valve"
+     "Ileocaecal valve",
+     "Pyloric sphincter",
+     "Lower oesophageal sphincter"
     ],
     "why": "It’s skeletal muscle. The internal sphincter is smooth muscle and keeps resting tone automatically."
    },
@@ -1498,7 +1640,9 @@
     "wrong": [
      "Cremasteric reflex",
      "Plantar reflex",
-     "Abdominal reflex"
+     "Abdominal reflex",
+     "Knee jerk",
+     "Gag reflex"
     ],
     "why": "A quick squeeze of the external sphincter. If it’s missing, think S2–S4 or cauda equina."
    },
@@ -1509,7 +1653,9 @@
     "wrong": [
      "Round ligament",
      "Uterosacral ligament",
-     "Suspensory ligament of the ovary"
+     "Suspensory ligament of the ovary",
+     "Ovarian ligament",
+     "Pubocervical ligament"
     ],
     "why": "The ureter passes just under the uterine artery here: ‘water under the bridge’, a known trap in hysterectomy."
    }
@@ -1528,7 +1674,9 @@
     "wrong": [
      "Erector spinae",
      "Rotatores",
-     "Semispinalis"
+     "Semispinalis",
+     "Latissimus dorsi",
+     "Quadratus lumborum"
     ],
     "why": "Scans often show it smaller and fattier in people with long-term back pain."
    },
@@ -1539,7 +1687,9 @@
     "wrong": [
      "Levator scapulae",
      "Serratus anterior",
-     "Teres major"
+     "Teres major",
+     "Pectoralis major",
+     "Infraspinatus"
     ],
     "why": "They join the inner border of the shoulder blade to the spine."
    },
@@ -1550,7 +1700,9 @@
     "wrong": [
      "Upper trapezius",
      "Splenius capitis",
-     "Scalenus medius"
+     "Scalenus medius",
+     "Sternocleidomastoid",
+     "Rhomboid minor"
     ],
     "why": "Its lower end is a classic tender spot in desk workers."
    },
@@ -1561,7 +1713,9 @@
     "wrong": [
      "Pectoralis minor",
      "Rhomboid major",
-     "Subscapularis"
+     "Subscapularis",
+     "Latissimus dorsi",
+     "Teres minor"
     ],
     "why": "If its nerve is damaged, the shoulder blade ‘wings’ when pushing against a wall."
    },
@@ -1572,7 +1726,9 @@
     "wrong": [
      "Scalenes",
      "Erector spinae",
-     "Longus colli"
+     "Longus colli",
+     "Platysma",
+     "Sternocleidomastoid"
     ],
     "why": "Four small muscles between the skull and the top two vertebrae, close to the greater occipital nerve."
    }
@@ -1591,7 +1747,9 @@
     "wrong": [
      "Median nerve and flexor tendons",
      "Ulnar nerve and flexor carpi ulnaris tendon",
-     "Radial artery and superficial radial nerve"
+     "Radial artery and superficial radial nerve",
+     "Radial nerve and cephalic vein",
+     "Palmaris longus tendon"
     ],
     "why": "The canal lies between the pisiform and the hook of the hamate. Long-distance cyclists can squash the nerve here."
    },
@@ -1602,7 +1760,9 @@
     "wrong": [
      "Terminal extensor tendon",
      "Volar plate",
-     "Lateral bands"
+     "Lateral bands",
+     "Flexor digitorum profundus",
+     "A1 pulley"
     ],
     "why": "The middle joint pokes through like a button through a buttonhole. Early splinting prevents it becoming fixed."
    },
@@ -1613,7 +1773,9 @@
     "wrong": [
      "Central slip",
      "Flexor digitorum profundus",
-     "Collateral ligament"
+     "Collateral ligament",
+     "Volar plate",
+     "Lateral band"
     ],
     "why": "The fingertip droops and can’t straighten. Six weeks or more of continuous splinting usually works."
    },
@@ -1637,7 +1799,9 @@
     "wrong": [
      "Radial collateral ligament of the thumb MCP joint",
      "Volar plate of the thumb IP joint",
-     "Scapholunate ligament"
+     "Scapholunate ligament",
+     "Anterior oblique ligament of the thumb base",
+     "Triangular fibrocartilage"
     ],
     "why": "If the torn end flips behind a tendon sheet (a Stener lesion), it won’t heal without surgery."
    }
@@ -1656,7 +1820,9 @@
     "wrong": [
      "Semitendinosus",
      "Semimembranosus",
-     "Gracilis"
+     "Gracilis",
+     "Adductor magnus",
+     "Sartorius"
     ],
     "why": "Usually the long head, as the leg reaches forward at top speed."
    },
@@ -1667,7 +1833,9 @@
     "wrong": [
      "Hamstrings",
      "Adductors",
-     "Calf"
+     "Calf",
+     "Glutes",
+     "Shin muscles"
     ],
     "why": "Gentle movement and no early massage lower the risk of bone forming in the muscle."
    },
@@ -1678,7 +1846,9 @@
     "wrong": [
      "Lateral head of gastrocnemius",
      "Soleus",
-     "Plantaris"
+     "Plantaris",
+     "Tibialis anterior",
+     "Popliteus"
     ],
     "why": "Sudden sharp pain in the inner calf, like being hit with a stone, typically in middle age."
    },
@@ -1689,7 +1859,9 @@
     "wrong": [
      "Deadlift",
      "Squat",
-     "Biceps curl"
+     "Biceps curl",
+     "Pull-up",
+     "Leg press"
     ],
     "why": "The tendon tears near the arm as the bar comes down. Surgery is usually advised in active people."
    },
@@ -1700,7 +1872,9 @@
     "wrong": [
      "Quadriceps tendon",
      "Iliotibial band",
-     "Pes anserinus"
+     "Pes anserinus",
+     "Achilles tendon",
+     "Hamstring tendon"
     ],
     "why": "Pain at the lower tip of the kneecap. Loading exercises are the main treatment."
    }
@@ -1745,7 +1919,9 @@
     "wrong": [
      "Lateral longitudinal arch",
      "Transverse arch",
-     "Metatarsal arch"
+     "Metatarsal arch",
+     "Plantar vault",
+     "Calcaneal arch"
     ],
     "why": "Most flexible flat feet in children are normal and need no treatment."
    },
@@ -1756,7 +1932,9 @@
     "wrong": [
      "Achilles tendon",
      "Spring ligament",
-     "Tibialis posterior tendon"
+     "Tibialis posterior tendon",
+     "Deltoid ligament",
+     "Flexor retinaculum"
     ],
     "why": "It works like a bowstring for the arch."
    },
@@ -1767,7 +1945,9 @@
     "wrong": [
      "Ankle",
      "Knee",
-     "Thumb base"
+     "Thumb base",
+     "Wrist",
+     "Hip"
     ],
     "why": "Crystals form more easily in cooler joints. A hot, red, exquisitely tender joint overnight is typical."
    }
@@ -1820,7 +2000,9 @@
     "wrong": [
      "Semimembranosus, gracilis, sartorius",
      "Sartorius, adductor longus, gracilis",
-     "Semitendinosus, semimembranosus, biceps femoris"
+     "Semitendinosus, semimembranosus, biceps femoris",
+     "Gracilis, adductor magnus, semimembranosus",
+     "Sartorius, rectus femoris, gracilis"
     ],
     "why": "Memory aid: ‘Say Grace before Tea’. Bursitis here hurts just below the inner joint line."
    },
@@ -1831,7 +2013,9 @@
     "wrong": [
      "Plantaris",
      "Gastrocnemius",
-     "Semimembranosus"
+     "Semimembranosus",
+     "Soleus",
+     "Biceps femoris"
     ],
     "why": "It twists the knee slightly to unlock it. Its tendon runs inside the joint near the lateral meniscus."
    },
@@ -1863,7 +2047,9 @@
     "wrong": [
      "Masseter",
      "Lateral pterygoid",
-     "Occipitalis"
+     "Occipitalis",
+     "Buccinator",
+     "Medial pterygoid"
     ],
     "why": "Feel it tighten when you clench. New temple pain over 50 also raises giant cell arteritis."
    },
@@ -1874,7 +2060,9 @@
     "wrong": [
      "Condyle fracture",
      "Masseter tendon snapping",
-     "Coronoid process catching"
+     "Coronoid process catching",
+     "Teeth grinding against each other",
+     "Ear canal popping"
     ],
     "why": "The disc slips forward and pops back as the mouth opens. Most cases settle with jaw rest and less clenching."
    },
@@ -1885,7 +2073,9 @@
     "wrong": [
      "Buccinator",
      "Mentalis",
-     "Risorius"
+     "Risorius",
+     "Zygomaticus minor",
+     "Platysma"
     ],
     "why": "A ring of muscle round the mouth, supplied by the facial nerve."
    },
@@ -1896,7 +2086,9 @@
     "wrong": [
      "Parotid gland",
      "Sublingual gland",
-     "Minor salivary glands"
+     "Minor salivary glands",
+     "Lacrimal gland",
+     "Thyroid gland"
     ],
     "why": "Its saliva is thicker and its duct runs uphill. Swelling under the jaw at mealtimes is the clue."
    },
@@ -1907,7 +2099,9 @@
     "wrong": [
      "Depressor anguli oris",
      "Platysma",
-     "Depressor labii inferioris"
+     "Depressor labii inferioris",
+     "Orbicularis oris",
+     "Zygomaticus major"
     ],
     "why": "It pushes up the lower lip. An overactive one gives a dimpled ‘orange peel’ chin."
    }
@@ -1926,7 +2120,9 @@
     "wrong": [
      "Zona fasciculata",
      "Zona reticularis",
-     "Adrenal medulla"
+     "Adrenal medulla",
+     "Juxtaglomerular apparatus",
+     "Posterior pituitary"
     ],
     "why": "From outside in: salt, sugar, sex (aldosterone, cortisol, androgens)."
    },
@@ -1937,7 +2133,9 @@
     "wrong": [
      "Prolactin",
      "ACTH",
-     "TSH"
+     "TSH",
+     "Oxytocin",
+     "Vasopressin"
     ],
     "why": "Growth plates have closed in adults, so hands, feet, jaw and soft tissues enlarge. IGF-1 is the screening test."
    },
@@ -1948,7 +2146,9 @@
     "wrong": [
      "Optic chiasm",
      "Mammillary body",
-     "Pineal stalk"
+     "Pineal stalk",
+     "Corpus callosum",
+     "Fornix"
     ],
     "why": "Pressure on it can raise prolactin, because the brake signal (dopamine) can’t get through."
    },
@@ -1959,7 +2159,9 @@
     "wrong": [
      "Homonymous hemianopia",
      "Central scotoma",
-     "Superior quadrantanopia"
+     "Superior quadrantanopia",
+     "Total blindness in one eye",
+     "Tunnel vision from glaucoma"
     ],
     "why": "It presses on the optic chiasm, where fibres serving the outer visual fields cross."
    },
@@ -1970,7 +2172,9 @@
     "wrong": [
      "T4 (thyroxine)",
      "Reverse T3",
-     "TSH"
+     "TSH",
+     "Calcitonin",
+     "Thyroglobulin"
     ],
     "why": "The thyroid mainly releases T4, which tissues convert to T3. That’s why T4 replacement alone works for most people."
    }
@@ -1989,7 +2193,9 @@
     "wrong": [
      "Piriformis",
      "Obturator externus",
-     "Quadratus femoris"
+     "Quadratus femoris",
+     "Gluteus medius",
+     "Iliopsoas"
     ],
     "why": "It wraps sharply around the ischium, using it like a pulley."
    },
@@ -2000,7 +2206,9 @@
     "wrong": [
      "Sartorius",
      "Rectus femoris",
-     "Gluteus minimus"
+     "Gluteus minimus",
+     "Gluteus medius",
+     "Iliacus"
     ],
     "why": "It tightens the ITB. Runners and cyclists can overload it."
    },
@@ -2028,7 +2236,9 @@
     "wrong": [
      "Ischiofemoral ligament",
      "Pubofemoral ligament",
-     "Ligamentum teres"
+     "Ligamentum teres",
+     "Inguinal ligament",
+     "Sacrotuberous ligament"
     ],
     "why": "Its Y shape stops the hip over-extending, so you can stand with little muscle effort."
    },
@@ -2039,7 +2249,9 @@
     "wrong": [
      "Lateral circumflex femoral artery",
      "Artery of the ligamentum teres",
-     "Obturator artery"
+     "Obturator artery",
+     "Superior gluteal artery",
+     "Femoral artery directly"
     ],
     "why": "Displaced hip fractures inside the joint tear its branches, which is why they’re often replaced rather than fixed."
    }
@@ -2058,7 +2270,9 @@
     "wrong": [
      "Extensor hallucis longus",
      "Fibularis tertius",
-     "Abductor digiti minimi"
+     "Abductor digiti minimi",
+     "Tibialis anterior",
+     "Flexor digitorum brevis"
     ],
     "why": "It’s the only muscle mass on the top of the foot. Wasting suggests a nerve problem."
    },
@@ -2069,7 +2283,9 @@
     "wrong": [
      "Superior tarsal (Müller’s) muscle",
      "Orbicularis oculi",
-     "Superior rectus"
+     "Superior rectus",
+     "Inferior oblique",
+     "Frontalis"
     ],
     "why": "An oculomotor palsy drops the lid fully. Horner syndrome causes only a mild droop, through Müller’s muscle."
    },
@@ -2080,7 +2296,9 @@
     "wrong": [
      "Tensor veli palatini",
      "Levator veli palatini",
-     "Posterior auricular"
+     "Posterior auricular",
+     "Stylopharyngeus",
+     "Salpingopharyngeus"
     ],
     "why": "It tenses the eardrum via the malleus. It’s supplied by V3, while stapedius gets the facial nerve."
    },
@@ -2091,7 +2309,9 @@
     "wrong": [
      "Geniohyoid",
      "Digastric (anterior belly)",
-     "Hyoglossus"
+     "Hyoglossus",
+     "Genioglossus",
+     "Stylohyoid"
     ],
     "why": "Infection from lower molars spreading below it can cause Ludwig’s angina, which threatens the airway."
    },
@@ -2102,7 +2322,9 @@
     "wrong": [
      "Sartorius",
      "Adductor longus",
-     "Vastus medialis"
+     "Vastus medialis",
+     "Pectineus",
+     "Gracilis"
     ],
     "why": "Inside the triangle lie the femoral nerve, artery and vein: NAV, from outside in."
    }
