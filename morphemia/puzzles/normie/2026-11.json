@@ -1127,7 +1127,17 @@
   "pangrams": [
    "BRILLIANT"
   ],
-  "max": 220
+  "max": 280,
+  "theme": {
+   "name": "Bright sparks",
+   "words": [
+    "BRAIN",
+    "BRILLIANT",
+    "LIBRARIAN",
+    "RABBI",
+    "TITAN"
+   ]
+  }
  },
  {
   "date": "2026-11-20",
@@ -1185,7 +1195,19 @@
   "pangrams": [
    "WEALTHY"
   ],
-  "max": 207
+  "max": 269,
+  "theme": {
+   "name": "Health and wealth",
+   "words": [
+    "HALE",
+    "HEALTH",
+    "HEALTHY",
+    "TELEHEALTH",
+    "WALLET",
+    "WEALTH",
+    "WEALTHY"
+   ]
+  }
  },
  {
   "date": "2026-11-21",
@@ -1264,7 +1286,17 @@
    "ATHLETIC",
    "ETHICAL"
   ],
-  "max": 349
+  "max": 404,
+  "theme": {
+   "name": "Sporty",
+   "words": [
+    "ATHLETIC",
+    "CATCH",
+    "CLEAT",
+    "TACTIC",
+    "TACTICAL"
+   ]
+  }
  },
  {
   "date": "2026-11-22",
@@ -1332,7 +1364,18 @@
   "pangrams": [
    "CHAMBER"
   ],
-  "max": 198
+  "max": 231,
+  "theme": {
+   "name": "Castle life",
+   "words": [
+    "ARCH",
+    "ARCHER",
+    "BREACH",
+    "CHAMBER",
+    "MACE",
+    "MARCH"
+   ]
+  }
  },
  {
   "date": "2026-11-23",
@@ -1414,9 +1457,21 @@
    "SNOWFLAKE",
    "SNOWFLAKES"
   ],
-  "max": 589,
+  "max": 697,
   "min": 5,
-  "variant": "max"
+  "variant": "max",
+  "theme": {
+   "name": "Cold snap",
+   "words": [
+    "FLAKE",
+    "FLAKES",
+    "FLANNEL",
+    "SNOWFALL",
+    "SNOWFALLS",
+    "SNOWFLAKE",
+    "SNOWFLAKES"
+   ]
+  }
  },
  {
   "date": "2026-11-24",
@@ -1453,7 +1508,17 @@
   "pangrams": [
    "UNIFORM"
   ],
-  "max": 81
+  "max": 99,
+  "theme": {
+   "name": "Back to school",
+   "words": [
+    "FORM",
+    "NOON",
+    "NOUN",
+    "ROOM",
+    "UNIFORM"
+   ]
+  }
  },
  {
   "date": "2026-11-25",
@@ -1511,7 +1576,17 @@
   "pangrams": [
    "FREEZING"
   ],
-  "max": 423
+  "max": 473,
+  "theme": {
+   "name": "How you feel",
+   "words": [
+    "FREEZING",
+    "GREEN",
+    "GRIEF",
+    "GRIN",
+    "GRINNING"
+   ]
+  }
  },
  {
   "date": "2026-11-26",
@@ -1575,7 +1650,17 @@
    "NAVIGATION",
    "INNOVATING"
   ],
-  "max": 480
+  "max": 553,
+  "theme": {
+   "name": "Up in the air",
+   "words": [
+    "AVIAN",
+    "AVIATION",
+    "GNAT",
+    "NAVIGATING",
+    "NAVIGATION"
+   ]
+  }
  },
  {
   "date": "2026-11-27",
@@ -1638,7 +1723,19 @@
   "pangrams": [
    "WORLDWIDE"
   ],
-  "max": 229
+  "max": 279,
+  "theme": {
+   "name": "Wild world",
+   "words": [
+    "WEIRD",
+    "WEIRDO",
+    "WIDE",
+    "WILD",
+    "WILDER",
+    "WORLD",
+    "WORLDWIDE"
+   ]
+  }
  },
  {
   "date": "2026-11-28",
@@ -1705,7 +1802,17 @@
   "pangrams": [
    "BATHROOM"
   ],
-  "max": 218
+  "max": 258,
+  "theme": {
+   "name": "Bath time",
+   "words": [
+    "BATHROOM",
+    "BOAT",
+    "BOTTOM",
+    "ROBOT",
+    "TOOTH"
+   ]
+  }
  },
  {
   "date": "2026-11-29",
@@ -1809,7 +1916,18 @@
    "TEMPERATURE",
    "TEMPURA"
   ],
-  "max": 580
+  "max": 666,
+  "theme": {
+   "name": "At the hospital",
+   "words": [
+    "AMPUTEE",
+    "PREMATURE",
+    "PRETERM",
+    "RUPTURE",
+    "TEMPERATURE",
+    "TRAUMA"
+   ]
+  }
  },
  {
   "date": "2026-11-30",
@@ -1907,8 +2025,18 @@
   "pangrams": [
    "FLAMINGOS"
   ],
-  "max": 714,
+  "max": 773,
   "min": 5,
-  "variant": "max"
+  "variant": "max",
+  "theme": {
+   "name": "Wildlife",
+   "words": [
+    "FLAMINGO",
+    "FLAMINGOS",
+    "FOALS",
+    "FOSSA",
+    "FOSSILS"
+   ]
+  }
  }
 ]

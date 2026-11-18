@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "17";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -26,7 +26,7 @@
     ' <div class="ctrls"><button class="btn" type="button" id="mph-del" aria-label="Delete last letter">Delete</button><button class="btn" type="button" id="mph-shuf" aria-label="Shuffle letters">&#8635;</button><button class="btn solid" type="button" id="mph-enter" aria-label="Submit word">Enter</button></div>' +
     ' <div class="pk"><button class="pk-tog" type="button" id="mph-pktog" aria-pressed="false" aria-label="Use phone keyboard">\u2328\ufe0f Phone keyboard</button></div>' +
     ' <div class="mw-tools" id="mph-tools"><button class="btn sm" type="button" id="mph-hint">\ud83d\udca1 Hint</button><button class="mw-giveup" type="button" id="mph-give">Give up and show answers</button></div>' +
-    ' <details class="legend"><summary>' + (NORMIE ? "Long words earn bonuses." : "<b>Medical words</b> score double. Long words earn bonuses.") + ' <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li>' + (NORMIE ? "" : "<li>Medical word: whole score doubled</li>") + '</ul></details>' +
+    '<details class="legend"><summary id="mph-legs">' + (NORMIE ? "Long words earn bonuses." : "<b>Medical words</b> score double. Long words earn bonuses.") + ' <u>Scoring</u></summary><ul><li>4 letters: 1 point</li><li>5+ letters: 1 point per letter</li><li>8 letters: +8 bonus</li><li>9 letters: +10 bonus</li><li>10 letters: +12 bonus</li><li>11+ letters: +15 bonus</li><li>Pangram (all seven letters): +7 bonus</li>' + (NORMIE ? '<li id="mph-legt" hidden>Theme word: whole score doubled</li>' : "<li>Medical word: whole score doubled</li>") + '</ul></details>' +
     ' <div class="result" id="mph-result" hidden></div>' +
     ' <p class="note" id="mph-next"></p>' +
     ' <details class="archive" id="mph-archive"><summary>Past puzzles</summary><div class="alist" id="mph-alist"></div></details>' +
@@ -61,7 +61,9 @@
     genius: "Genius. Go and tell someone who will pretend to care.",
     ein: "\u269b\ufe0f Einstein day, Genius reached. Roughly a once-in-50-days achievement. Screenshot this."
   };
+  var MK = NORMIE ? " \u2b50" : " \u2695";
   if (NORMIE) {
+    SASS.med = ["\u2b50 Theme word. Double points.", "\u2b50 On theme. Double.", "\u2b50 Theme word! Double points.", "\u2b50 Bang on theme. Double.", "\u2b50 That fits today\u2019s theme. Double."];
     SASS.short = ["Four letters minimum. This isn't a text message.", "Too short. Four letters, please.", "Short. Even \u2018cake\u2019 has four letters.", "Needs at least four letters."];
     SASS.centre = ["Forgot the centre letter. It's the important one.", "Centre letter missing. It\u2019s compulsory.", "No centre letter. Like a sandwich with no filling.", "Every word needs the middle letter."];
     SASS.not = ["Not in our dictionary.", "Nice try. Not a word.", "Did you just invent a word?", "That's not a word. Your spellcheck is crying.", "Not a word. Lovely sound, though.", "The dictionary declined that one.", "Made up. We can tell.", "That\u2019s not a word. That\u2019s a sneeze.", "Close to a word. Not a word.", "Not in the list. Some real words aren\u2019t either. Sorry."];
@@ -105,13 +107,13 @@
     $("bar").style.width = Math.min(100, st.score / (P.max * 0.7) * 100) + "%";
     $("ticks").innerHTML = RANKS.map(function (x, i) { return '<span class="' + (i <= r ? "on" : "") + '" title="' + x[0] + '"></span>'; }).join("");
     var nMed = st.found.filter(function (w) { return P.medical.indexOf(w) >= 0; }).length;
-    $("fcount").textContent = "You have found " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (nMed ? " \u00b7 " + nMed + " medical" : "");
+    $("fcount").textContent = "You have found " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (nMed ? " \u00b7 " + nMed + (NORMIE ? " theme" : " medical") : "");
     var showAll = (!isLive() && st.reveal) || st.gaveUp;
     hintUI();
     var list = (showAll ? P.words : st.found.slice().sort());
     $("words").innerHTML = list.map(function (w) {
       var cls = (P.medical.indexOf(w) >= 0 ? "med " : "") + (P.pangrams.indexOf(w) >= 0 ? "pan " : "") + (st.found.indexOf(w) < 0 ? "miss" : "");
-      return '<span class="' + cls + '">' + w.toLowerCase() + (P.medical.indexOf(w) >= 0 ? " \u2695" : "") + "</span>";
+      return '<span class="' + cls + '">' + w.toLowerCase() + (P.medical.indexOf(w) >= 0 ? MK : "") + "</span>";
     }).join("") || '<span class="miss">Nothing yet. The clock is ticking' + (NORMIE ? "" : ", doctor") + '.</span>';
     renderResult(nMed);
   }
@@ -125,7 +127,7 @@
   function hintUI() {
     var H = (st.hints || []).filter(function (w) { return st.found.indexOf(w) < 0; });
     $("hints").hidden = !H.length || st.gaveUp;
-    $("hints").innerHTML = H.map(function (w) { return "<p>\ud83d\udca1 A " + w.length + "-letter " + (P.pangrams.indexOf(w) >= 0 ? "pangram" : P.medical.indexOf(w) >= 0 && !NORMIE ? "medical word" : "word") + " starting <b>" + w.slice(0, 2).toUpperCase() + "\u2026</b></p>"; }).join("");
+    $("hints").innerHTML = H.map(function (w) { return "<p>\ud83d\udca1 A " + w.length + "-letter " + (P.pangrams.indexOf(w) >= 0 ? "pangram" : P.medical.indexOf(w) >= 0 ? (NORMIE ? "theme word" : "medical word") : "word") + " starting <b>" + w.slice(0, 2).toUpperCase() + "\u2026</b></p>"; }).join("");
     $("tools").hidden = !!st.gaveUp;
     $("hint").disabled = !nextHint() || H.length >= 3;
   }
@@ -133,7 +135,7 @@
     var r = $("result");
     if (!st.found.length) { r.hidden = true; return; }
     var rk = st.found.length === P.words.length ? TOP : RANKS[rankIdx(st.score)][0];
-    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty]  + "\nRank: " + rk + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? "" : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
+    var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty]  + "\nRank: " + rk + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? (P.theme ? " \u00b7 " + nMed + " \u2b50 theme" : "") : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
     r.hidden = false;
     r.innerHTML = '<pre id="mph-share">' + esc(share) + '</pre><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid" type="button" id="mph-copy">Copy result</button>' +
       (!isLive() ? '<button class="btn" type="button" id="mph-reveal">' + (st.reveal ? "Hide answers" : "Reveal all answers") + "</button>" : "") + "</div>";
@@ -174,7 +176,7 @@
     if (st.found.length === 1) recordPlay();
     var after = rankIdx(st.score), m;
     if (P.pangrams.indexOf(w) >= 0) m = SASS.pan;
-    else if (w.length >= 8) m = pick(SASS.long[Math.min(w.length, 11)]) + (P.medical.indexOf(w) >= 0 ? " \u2695 Double." : "");
+    else if (w.length >= 8) m = pick(SASS.long[Math.min(w.length, 11)]) + (P.medical.indexOf(w) >= 0 ? MK + " Double." : "");
     else if (P.medical.indexOf(w) >= 0) m = pick(SASS.med);
     else m = pick(SASS.good);
     m += " +" + pts;
@@ -349,7 +351,8 @@
         else say("Today's letters are still in triage. Back tomorrow.");
         renderArchive(); return;
       }
-      if (NORMIE || !P.medical) P.medical = [];
+      if (NORMIE) P.medical = P.theme ? P.theme.words : []; else if (!P.medical) P.medical = [];
+      if (NORMIE) { $("legs").innerHTML = (P.theme ? "\u2b50 Today\u2019s theme: <b>" + P.theme.name + "</b>. Theme words score double. " : "") + "Long words earn bonuses. <u>Scoring</u>"; $("legt").hidden = !P.theme; }
       outer = P.outer.split("");
       root.classList.toggle("max", isMax());
       var gtp = document.querySelector(".gtitle p"); if (gtp) { if (!gtp.dataset.base) gtp.dataset.base = gtp.textContent; gtp.textContent = isMax() ? gtp.dataset.base.replace(/^Seven letters/, "Nine letters") : gtp.dataset.base; }

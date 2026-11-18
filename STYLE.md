@@ -59,6 +59,9 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Einstein can land on a Friday: use a genuinely hard word (e.g. PSAMMOMA 2027-01-15, SYRINGOMYELIA 2027-02-26) and add the date to MW_EINSTEIN as usual.
 - words8.txt sources: the site's Suturix and medical word lists, Webster's 2nd (public domain, via the MIT english-words package), plus plurals and verb forms of those words found in the wordfreq frequency list.
 
+## Normie Morphemia daily theme (from 2026-11-19)
+- Every Normie Morphemia puzzle has `"theme": {"name", "words"}`: a fun everyday category (e.g. "Health and wealth", "Scrooge", "Bath time") with at least 5 puzzle words, always including a pangram. Theme words score double (shown with ⭐). Hand-pick the words, then recompute `max` with theme words doubled. Medical mode keeps medical-word doubling.
+
 ## Morphemia Max (Mondays, from 2026-11-16)
 - Every Monday (Sydney date) Morphemia is **Morphemia Max** in Medical and Normie modes: nine letters (centre + 8 outer) on a round hive, words of 5+ letters, difficulty "Hard". Always spell it "Morphemia Max" (front-page tag "🐝 Max Monday"). Replaces the archived "Super Morphemia" idea.
 - Puzzle format = the normal one plus `"min": 5` and `"variant": "max"`, with an 8-letter `outer`. The engine switches to the nine-letter hive automatically.

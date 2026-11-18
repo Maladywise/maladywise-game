@@ -47,7 +47,17 @@
   "pangrams": [
    "PICTURE"
   ],
-  "max": 220
+  "max": 251,
+  "theme": {
+   "name": "Art gallery",
+   "words": [
+    "CRITIC",
+    "EPIC",
+    "PICTURE",
+    "PIECE",
+    "PRICE"
+   ]
+  }
  },
  {
   "date": "2026-12-02",
@@ -99,7 +109,17 @@
    "MACHINE",
    "MECHANIC"
   ],
-  "max": 183
+  "max": 210,
+  "theme": {
+   "name": "Showtime",
+   "words": [
+    "ANIME",
+    "CINEMA",
+    "MACHINE",
+    "MEME",
+    "MIME"
+   ]
+  }
  },
  {
   "date": "2026-12-03",
@@ -162,7 +182,18 @@
    "INVENTOR",
    "REINVENTION"
   ],
-  "max": 405
+  "max": 521,
+  "theme": {
+   "name": "Inventors",
+   "words": [
+    "INVENT",
+    "INVENTION",
+    "INVENTIVE",
+    "INVENTOR",
+    "REINVENT",
+    "REINVENTION"
+   ]
+  }
  },
  {
   "date": "2026-12-04",
@@ -233,7 +264,20 @@
    "STRIPING",
    "STRIPPING"
   ],
-  "max": 391
+  "max": 473,
+  "theme": {
+   "name": "Get moving",
+   "words": [
+    "SPIN",
+    "SPINNING",
+    "SPRING",
+    "SPRINGING",
+    "SPRINT",
+    "SPRINTING",
+    "SPRINTS",
+    "TRIP"
+   ]
+  }
  },
  {
   "date": "2026-12-05",
@@ -288,7 +332,17 @@
   "pangrams": [
    "CHARITY"
   ],
-  "max": 222
+  "max": 252,
+  "theme": {
+   "name": "Rich and famous",
+   "words": [
+    "CARAT",
+    "CHARITY",
+    "CHART",
+    "RICH",
+    "YACHT"
+   ]
+  }
  },
  {
   "date": "2026-12-06",
@@ -348,7 +402,17 @@
   "pangrams": [
    "UNDERWEAR"
   ],
-  "max": 252
+  "max": 292,
+  "theme": {
+   "name": "Getting dressed",
+   "words": [
+    "DAWN",
+    "DRAWER",
+    "UNDERWEAR",
+    "WEAR",
+    "WEARER"
+   ]
+  }
  },
  {
   "date": "2026-12-07",
@@ -447,9 +511,20 @@
   "pangrams": [
    "BLACKCURRANT"
   ],
-  "max": 636,
+  "max": 702,
   "min": 5,
-  "variant": "max"
+  "variant": "max",
+  "theme": {
+   "name": "In the garden",
+   "words": [
+    "BANANA",
+    "BLACKCURRANT",
+    "CURRANT",
+    "LABLAB",
+    "LANTANA",
+    "RATTAN"
+   ]
+  }
  },
  {
   "date": "2026-12-08",
@@ -506,7 +581,18 @@
    "WORKSHOP",
    "WORKSHOPS"
   ],
-  "max": 195
+  "max": 227,
+  "theme": {
+   "name": "Hard at work",
+   "words": [
+    "HOOK",
+    "PROP",
+    "SHOP",
+    "WORK",
+    "WORKS",
+    "WORKSHOP"
+   ]
+  }
  },
  {
   "date": "2026-12-09",
@@ -571,7 +657,17 @@
   "pangrams": [
    "WATERFALL"
   ],
-  "max": 227
+  "max": 266,
+  "theme": {
+   "name": "On the water",
+   "words": [
+    "FLEET",
+    "RAFT",
+    "RAFTER",
+    "REEF",
+    "WATERFALL"
+   ]
+  }
  },
  {
   "date": "2026-12-10",
@@ -627,7 +723,18 @@
    "CHEMIST",
    "CHEMISTS"
   ],
-  "max": 237
+  "max": 294,
+  "theme": {
+   "name": "Science lab",
+   "words": [
+    "CHEMIST",
+    "CHEMISTS",
+    "SCHIST",
+    "SEISMIC",
+    "TECH",
+    "TECHIE"
+   ]
+  }
  },
  {
   "date": "2026-12-11",
@@ -683,7 +790,17 @@
   "pangrams": [
    "AVALANCHE"
   ],
-  "max": 187
+  "max": 227,
+  "theme": {
+   "name": "Landscapes",
+   "words": [
+    "AVALANCHE",
+    "CANAL",
+    "CHANNEL",
+    "LAVA",
+    "VALE"
+   ]
+  }
  },
  {
   "date": "2026-12-12",
@@ -735,7 +852,18 @@
   "pangrams": [
    "COVERAGE"
   ],
-  "max": 155
+  "max": 198,
+  "theme": {
+   "name": "Sports report",
+   "words": [
+    "AVERAGE",
+    "CAREER",
+    "COVERAGE",
+    "RACE",
+    "RACER",
+    "ROAR"
+   ]
+  }
  },
  {
   "date": "2026-12-13",
@@ -794,7 +922,17 @@
   "pangrams": [
    "VOLTAGE"
   ],
-  "max": 185
+  "max": 220,
+  "theme": {
+   "name": "Science class",
+   "words": [
+    "AGATE",
+    "ALGAE",
+    "EVOLVE",
+    "VALVE",
+    "VOLTAGE"
+   ]
+  }
  },
  {
   "date": "2026-12-14",
@@ -887,9 +1025,23 @@
    "PICTOGRAPH",
    "TOPOGRAPHIC"
   ],
-  "max": 873,
+  "max": 1070,
   "min": 5,
-  "variant": "max"
+  "variant": "max",
+  "theme": {
+   "name": "Pictures and maps",
+   "words": [
+    "CARTOGRAPHIC",
+    "GRAPH",
+    "PARAGRAPH",
+    "PHOTO",
+    "PHOTOGRAPH",
+    "PHOTOGRAPHIC",
+    "PICTOGRAPH",
+    "PORTRAIT",
+    "TOPOGRAPHIC"
+   ]
+  }
  },
  {
   "date": "2026-12-15",
@@ -942,7 +1094,17 @@
   "pangrams": [
    "ALPHABET"
   ],
-  "max": 212
+  "max": 257,
+  "theme": {
+   "name": "Lunch time",
+   "words": [
+    "ALPHABET",
+    "APPLE",
+    "PAELLA",
+    "PALATE",
+    "PLATE"
+   ]
+  }
  },
  {
   "date": "2026-12-16",
@@ -1012,7 +1174,18 @@
    "COMPRESSOR",
    "COMPRESSORS"
   ],
-  "max": 364
+  "max": 427,
+  "theme": {
+   "name": "The arts",
+   "words": [
+    "COMPOSE",
+    "COMPOSER",
+    "COMPOSERS",
+    "POEM",
+    "POEMS",
+    "PROM"
+   ]
+  }
  },
  {
   "date": "2026-12-17",
@@ -1072,7 +1245,17 @@
   "pangrams": [
    "AEROPLANE"
   ],
-  "max": 198
+  "max": 236,
+  "theme": {
+   "name": "Travel",
+   "words": [
+    "AEROPLANE",
+    "APRON",
+    "LANE",
+    "PLAN",
+    "PLANE"
+   ]
+  }
  },
  {
   "date": "2026-12-18",
@@ -1131,7 +1314,18 @@
    "SUITCASE",
    "SUITCASES"
   ],
-  "max": 338
+  "max": 405,
+  "theme": {
+   "name": "Packing for a trip",
+   "words": [
+    "SUIT",
+    "SUITCASE",
+    "SUITCASES",
+    "SUITE",
+    "SUITS",
+    "TISSUES"
+   ]
+  }
  },
  {
   "date": "2026-12-19",
@@ -1196,7 +1390,18 @@
   "pangrams": [
    "MISERLY"
   ],
-  "max": 267
+  "max": 309,
+  "theme": {
+   "name": "Scrooge",
+   "words": [
+    "EERIE",
+    "MERRILY",
+    "MERRY",
+    "MISER",
+    "MISERLY",
+    "MISERY"
+   ]
+  }
  },
  {
   "date": "2026-12-20",
@@ -1272,7 +1477,17 @@
    "COLLIDER",
    "CROCODILE"
   ],
-  "max": 331
+  "max": 375,
+  "theme": {
+   "name": "Animals",
+   "words": [
+    "COLLIE",
+    "CROCODILE",
+    "DRILL",
+    "LICE",
+    "ORIOLE"
+   ]
+  }
  },
  {
   "date": "2026-12-21",
@@ -1376,9 +1591,21 @@
   "pangrams": [
    "BRIDGEWORK"
   ],
-  "max": 653,
+  "max": 764,
   "min": 5,
-  "variant": "max"
+  "variant": "max",
+  "theme": {
+   "name": "At work",
+   "words": [
+    "BRIDGEWORK",
+    "WOODWORK",
+    "WOODWORKER",
+    "WORKBOOK",
+    "WORKED",
+    "WORKER",
+    "WORKWEEK"
+   ]
+  }
  },
  {
   "date": "2026-12-22",
@@ -1430,7 +1657,17 @@
   "pangrams": [
    "NUMBERS"
   ],
-  "max": 206
+  "max": 240,
+  "theme": {
+   "name": "Count me in",
+   "words": [
+    "MEMBER",
+    "MEMBERS",
+    "NUMBER",
+    "NUMBERS",
+    "SUMS"
+   ]
+  }
  },
  {
   "date": "2026-12-23",
@@ -1509,7 +1746,18 @@
    "BOTHERS",
    "BROTHERS"
   ],
-  "max": 316
+  "max": 366,
+  "theme": {
+   "name": "Who's who",
+   "words": [
+    "BOSS",
+    "BOSSES",
+    "BROTHER",
+    "BROTHERS",
+    "ROBBER",
+    "ROBBERS"
+   ]
+  }
  },
  {
   "date": "2026-12-24",
@@ -1574,7 +1822,17 @@
   "pangrams": [
    "STUFFING"
   ],
-  "max": 315
+  "max": 346,
+  "theme": {
+   "name": "Food coma",
+   "words": [
+    "GUTS",
+    "NUTS",
+    "SNUG",
+    "STUFF",
+    "STUFFING"
+   ]
+  }
  },
  {
   "date": "2026-12-25",
@@ -1634,7 +1892,17 @@
   "pangrams": [
    "YULETIDE"
   ],
-  "max": 180
+  "max": 211,
+  "theme": {
+   "name": "Christmas Day",
+   "words": [
+    "DUET",
+    "IDLE",
+    "TEDDY",
+    "TIDY",
+    "YULETIDE"
+   ]
+  }
  },
  {
   "date": "2026-12-26",
@@ -1689,7 +1957,17 @@
   "pangrams": [
    "LUMINOUS"
   ],
-  "max": 180
+  "max": 244,
+  "theme": {
+   "name": "Night at the circus",
+   "words": [
+    "ILLUSION",
+    "ILLUSIONS",
+    "LION",
+    "LIONS",
+    "LUMINOUS"
+   ]
+  }
  },
  {
   "date": "2026-12-27",
@@ -1734,7 +2012,17 @@
   "pangrams": [
    "COUGHING"
   ],
-  "max": 185
+  "max": 245,
+  "theme": {
+   "name": "Action words",
+   "words": [
+    "CHUGGING",
+    "COUGHING",
+    "HOGGING",
+    "HUGGING",
+    "INCHING"
+   ]
+  }
  },
  {
   "date": "2026-12-28",
@@ -1812,7 +2100,17 @@
    "SUPERPOWER",
    "SUPERPOWERS"
   ],
-  "max": 481
+  "max": 576,
+  "theme": {
+   "name": "Super stuff",
+   "words": [
+    "PROSPEROUS",
+    "SUPER",
+    "SUPERPOWER",
+    "SUPERPOWERS",
+    "SUPERS"
+   ]
+  }
  },
  {
   "date": "2026-12-29",
@@ -1864,7 +2162,17 @@
   "pangrams": [
    "BOUNCING"
   ],
-  "max": 207
+  "max": 254,
+  "theme": {
+   "name": "Jungle fun",
+   "words": [
+    "BOBBING",
+    "BONGO",
+    "BONOBO",
+    "BOUNCING",
+    "GIBBON"
+   ]
+  }
  },
  {
   "date": "2026-12-30",
@@ -1920,7 +2228,17 @@
   "pangrams": [
    "FLAGPOLE"
   ],
-  "max": 149
+  "max": 181,
+  "theme": {
+   "name": "Sports day",
+   "words": [
+    "FLAG",
+    "FLAGPOLE",
+    "GALLOP",
+    "GOAL",
+    "LEAP"
+   ]
+  }
  },
  {
   "date": "2026-12-31",
@@ -1962,6 +2280,16 @@
   "pangrams": [
    "COUNTDOWN"
   ],
-  "max": 154
+  "max": 203,
+  "theme": {
+   "name": "New Year's Eve",
+   "words": [
+    "COUNT",
+    "COUNTDOWN",
+    "DOWN",
+    "DOWNTOWN",
+    "TOWN"
+   ]
+  }
  }
 ]
