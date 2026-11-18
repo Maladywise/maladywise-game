@@ -3502,14 +3502,14 @@
     "e": "The toxin jams a chloride channel open and water follows. Oral rehydration solution, just sugar, salt and water, has saved millions of lives."
    },
    {
-    "q": "Roughly how many people worldwide lacked safely managed sanitation in 2024 (WHO/UNICEF)?",
-    "a": "About 3.4 billion",
+    "q": "In 2022, poliovirus turned up in samples from London\u2019s sewers. What did health officials then offer every child aged 1 to 9 in London?",
+    "a": "An extra polio vaccine dose",
     "w": [
-     "About 50 million",
-     "About 500 million",
-     "About 6 billion"
+     "A course of antibiotics",
+     "Free bottled water",
+     "A blood test for antibodies"
     ],
-    "e": "That\u2019s around 4 in 10 people. About 354 million still had no toilet at all. Hence World Toilet Day, every 19 November."
+    "e": "Testing sewage catches viruses before anyone falls ill, which is why polio still makes headlines when it shows up. It has turned up in London\u2019s wastewater again since. Toilets: also an early-warning system."
    },
    {
     "q": "The main pancreatic duct usually joins the common bile duct to drain into the?",
@@ -3542,14 +3542,14 @@
     "e": "Stones scar the gallbladder so it can\u2019t stretch. A big, smooth one suggests a slower blockage, often a tumour. Swiss surgeon Ludwig Courvoisier described it in 1890."
    },
    {
-    "q": "Besides the head of the pancreas, a classic Whipple procedure removes the?",
-    "a": "Duodenum, gallbladder and part of the bile duct",
+    "q": "A \u2018sponge on a string\u2019 test, now trialled in some English pharmacies for people with long-term heartburn, looks for?",
+    "a": "Barrett\u2019s oesophagus",
     "w": [
-     "Spleen and left kidney",
-     "Oesophagus and spleen",
-     "Appendix and caecum"
+     "Stomach ulcers",
+     "Gallstones",
+     "Coeliac disease"
     ],
-    "e": "Then the surgeon re-plumbs the pancreas, bile duct and stomach into the small bowel. Allen Whipple reported his version in 1935."
+    "e": "You swallow a capsule on a thread. It dissolves in the stomach and a small sponge collects cells as it\u2019s pulled back up the food pipe, all in under 10 minutes. Cambridge\u2019s Professor Rebecca Fitzgerald led its development over about 20 years."
    },
    {
     "q": "The insulin-making islets of Langerhans make up roughly what share of the pancreas?",
@@ -3559,7 +3559,7 @@
      "About half",
      "About 90%"
     ],
-    "e": "The rest is exocrine tissue, pumping digestive enzymes down the duct. Paul Langerhans spotted the islets as a medical student in 1869."
+    "e": "The rest is exocrine tissue, pumping digestive enzymes down the duct. Paul Langerhans spotted the islets as a medical student in 1869. GLP-1 medicines work partly by nudging their beta cells to release insulin after meals; in November 2026 Australia\u2019s TGA approved the first GLP-1 pill that isn\u2019t a peptide (orforglipron)."
    }
   ]
  },
