@@ -523,12 +523,12 @@
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-15.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=27180",
-   "author": "CDC",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "An eye held open by fingers, with an inflamed red lining of the lower lid and a white sclera."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Conjunctivitis_eye_2026_5.jpg",
+   "author": "Aykhan Zayedzadeh",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "alt": "A red, watery eye with an inflamed pink lining of the lower lid."
   },
   "answer": "Conjunctivitis",
   "wrong": [
@@ -819,11 +819,11 @@
   "img": {
    "url": "img/2026-12-23.jpg",
    "source": "Wikimedia Commons",
-   "page": "https://commons.wikimedia.org/wiki/File:Arcus_Senilis.jpg",
-   "author": "Afrodriguezg (cropped)",
+   "page": "https://commons.wikimedia.org/wiki/File:Arcus_Senilis_(cropped).jpg",
+   "author": "Afrodriguezg",
    "licence": "CC BY-SA 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-   "alt": "Close-up of a brown iris with a pale ring around its outer edge."
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "alt": "Close-up of an eye with a pale grey ring around the edge of the iris."
   },
   "answer": "Arcus senilis",
   "wrong": [
@@ -961,17 +961,17 @@
   "date": "2026-12-27",
   "number": 64,
   "difficulty": "Genius",
-  "title": "Black toes after a fever",
-  "context": "A Guatemalan villager recovering from a severe fever and rash that went through her crowded household in the cold season, now with blackened toes.",
+  "title": "Fever, then spots",
+  "context": "A Guatemalan villager with a high fever, a pounding headache and a rash that started on the trunk, in a crowded household during the cold season.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-27.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=18840",
-   "author": "CDC/ Dr. D.S. Martin (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "A foot resting on a sheet with blackened toes and dark patches at the outer edge."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Epidemic_Typhus._Macular_rash_1.png",
+   "author": "Georg Jochmann",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "alt": "A man's chest and abdomen covered in small dark-red spots."
   },
   "answer": "Epidemic typhus",
   "wrong": [
@@ -982,7 +982,7 @@
    "Ergotism"
   ],
   "hints": [
-   "Gangrene of the toes after a severe rickettsial illness.",
+   "A severe rickettsial illness: the rash starts on the trunk and spreads outwards, usually sparing the face.",
    "Body lice spread it; war, crowding and cold are the classic settings."
   ],
   "why": "Black, dry gangrene of the toes and dark patches along the outer edge of the foot, from small-vessel vasculitis.",
@@ -1077,11 +1077,11 @@
   "question": "What's the sign?",
   "img": {
    "url": "img/2026-12-30.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=19456",
-   "author": "CDC (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Glossitis_in_Iron-deficiency_Anaemia,_a_Thai_female_patient_(2025).jpg",
+   "author": "Chainwit.",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
    "alt": "An open mouth showing a smooth, pale, shiny tongue with loss of its normal texture."
   },
   "answer": "Atrophic glossitis",
