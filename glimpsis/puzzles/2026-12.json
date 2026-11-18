@@ -45,12 +45,12 @@
   "question": "What's the sign?",
   "img": {
    "url": "img/2026-12-02.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=21280",
-   "author": "CDC (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "The lower face with fingers holding the cheeks, showing cracks at both corners of the mouth and scaly skin on the chin."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Angular_cheilitis1.jpg",
+   "author": "Matthew Ferguson 57",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "alt": "An open mouth with red, cracked skin at both corners."
   },
   "answer": "Angular cheilitis",
   "wrong": [
@@ -230,12 +230,12 @@
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-07.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22314",
-   "author": "CDC/ Dr. Sellers (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "A tongue with smooth red patches edged by raised white lines."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Geographic_tongue_(cropped).jpg",
+   "author": "Geographic_tongue.JPG: Martanopue\nderivative work: Jbarta",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "alt": "A tongue with map-like smooth red patches edged by white borders."
   },
   "answer": "Geographic tongue",
   "wrong": [
@@ -262,16 +262,16 @@
   "number": 45,
   "difficulty": "Easy",
   "title": "A tingle, then a blister",
-  "context": "A 25-year-old man who felt tingling on his lower lip yesterday and now has a small, tender blister.",
+  "context": "A 25-year-old who felt tingling on the lip yesterday and now has small, tender blisters.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-08.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=5434",
-   "author": "CDC/ Dr. Hermann (cropped)",
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Cold_sore.jpg",
+   "author": "Vanished user fijtji34toksdcknqrjn54yoimascj",
    "licence": "Public domain",
    "licence_url": "",
-   "alt": "Close-up of the lips with a small raised blister on the lower lip."
+   "alt": "Side view of the lips with a cluster of crusting blisters at the edge of the lip."
   },
   "answer": "Cold sore (herpes labialis)",
   "wrong": [
@@ -335,17 +335,17 @@
   "date": "2026-12-10",
   "number": 47,
   "difficulty": "Medium",
-  "title": "An itchy arm",
-  "context": "A 60-year-old with dry skin and intensely itchy, round patches on the arm.",
+  "title": "Itchy coins",
+  "context": "A 60-year-old with dry skin and intensely itchy, round patches on the legs.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-10.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=16526",
-   "author": "CDC",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "An arm with two round, red, scaly plaques with tiny crusted spots."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%87%D8%B0%D9%87_%D8%A8%D8%B9%D8%B6_%D9%85%D9%86_%D8%A7%D8%B9%D8%B1%D8%A7%D8%B6_%D8%A7%D9%84%D9%85%D8%B1%D8%B6_2014-05-10_15-42.jpg",
+   "author": "User:Oodai alkassas",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "alt": "Skin of the leg with several round, red, scaly coin-shaped patches."
   },
   "answer": "Discoid eczema",
   "wrong": [
@@ -371,17 +371,17 @@
   "date": "2026-12-11",
   "number": 48,
   "difficulty": "Hard",
-  "title": "Blackened fingertips",
-  "context": "A woman with years of colour changes in her fingers in the cold, tight skin and trouble swallowing, now with painful black fingertips.",
+  "title": "Tight, shiny fingers",
+  "context": "A woman with years of colour changes in her fingers in the cold, tight skin and trouble swallowing, now with a painful sore on a fingertip.",
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-11.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=22313",
-   "author": "CDC/ Dr. Sellers, Grady Hospital (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "A hand with shiny, tapered fingers and black, dying tissue at the fingertips."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Systemic_sclerosis_finger.jpg",
+   "author": "Frank Breuckmann, Thilo Gambichler, Peter Altmeyer and Alexander Kreuter",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "alt": "A finger with tight, shiny skin and a small ulcer near the tip."
   },
   "answer": "Systemic sclerosis (scleroderma)",
   "wrong": [
@@ -413,12 +413,12 @@
   "question": "What's the diagnosis?",
   "img": {
    "url": "img/2026-12-12.jpg",
-   "source": "CDC Public Health Image Library",
-   "page": "https://wwwn.cdc.gov/phil/Details.aspx?pid=24218",
-   "author": "CDC/ Lucille K. Georg (cropped)",
-   "licence": "Public domain",
-   "licence_url": "",
-   "alt": "A swollen foot and lower leg with thickened skin and many small white-capped openings."
+   "source": "Wikimedia Commons",
+   "page": "https://commons.wikimedia.org/wiki/File:Madura_foot..JPG",
+   "author": "haitham alfalah",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "alt": "A swollen foot covered in lumpy nodules and small draining openings."
   },
   "answer": "Mycetoma",
   "wrong": [
