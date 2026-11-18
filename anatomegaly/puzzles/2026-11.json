@@ -2464,7 +2464,9 @@
     "wrong": [
      "Skin",
      "Stomach",
-     "Liver"
+     "Liver",
+     "Kidneys",
+     "Heart"
     ],
     "why": "Gas crosses the paper-thin walls of the air sacs in seconds. In 1847 Simpson tested chloroform on himself and friends at his dining table, and they all ended up under it."
    },
@@ -2509,7 +2511,9 @@
     "wrong": [
      "Hearing",
      "Smell",
-     "Balance"
+     "Balance",
+     "Movement",
+     "Speech"
     ],
     "why": "The occipital lobe at the back is your visual cortex. A hard knock to the back of the head really can make you ‘see stars’.",
     "art": "brain",

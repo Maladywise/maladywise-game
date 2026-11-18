@@ -1264,7 +1264,9 @@
     "wrong": [
      "Through the eyes",
      "Through the nostrils",
-     "They don’t need water"
+     "They don’t need water",
+     "Through their feet only",
+     "By licking dew"
     ],
     "why": "Many frogs soak up water through a thin ‘drinking patch’ on the belly and thighs.",
     "art": "frog",
@@ -1279,7 +1281,9 @@
     "wrong": [
      "Cat",
      "Owl",
-     "Dog"
+     "Dog",
+     "Snake",
+     "Rabbit"
     ],
     "why": "Wide, horizontal pupils give grazing animals a panoramic view for spotting predators."
    },
@@ -1290,7 +1294,9 @@
     "wrong": [
      "They make their own light",
      "Wet corneas",
-     "Red blood vessels"
+     "Red blood vessels",
+     "Reflected moonlight in tears",
+     "Glowing nerve cells"
     ],
     "why": "The tapetum lucidum bounces light back through the eye for a second go. Great for night vision.",
     "art": "catface",
@@ -1322,7 +1328,9 @@
     "wrong": [
      "Six claws each",
      "No pads",
-     "Webbed fingers"
+     "Webbed fingers",
+     "Retractable claws",
+     "Suction pads"
     ],
     "why": "Koalas have two digits that work like thumbs on each front paw. Ideal for gripping branches."
    }
@@ -1340,7 +1348,9 @@
     "wrong": [
      "Nostrils",
      "Ears",
-     "Taste buds"
+     "Taste buds",
+     "Freckles",
+     "Sweat pores"
     ],
     "why": "Bees have five eyes: two big compound eyes and three simple eyes on top.",
     "art": "bee",
@@ -1355,7 +1365,9 @@
     "wrong": [
      "Mouth",
      "Tentacles",
-     "Stinging cells"
+     "Stinging cells",
+     "Skin",
+     "Muscles"
     ],
     "why": "Just a loose net of nerves. No brain, no heart, no bones. Still extremely effective."
    },
@@ -1366,7 +1378,9 @@
     "wrong": [
      "Under its shell",
      "On its foot",
-     "It has no eyes"
+     "It has no eyes",
+     "Inside its mouth",
+     "On its back"
     ],
     "why": "The eyes sit on top of the longer pair of tentacles. Tap one and it rolls back in."
    },
@@ -1418,7 +1432,9 @@
     "wrong": [
      "2 cm",
      "10 cm",
-     "1 metre"
+     "1 metre",
+     "5 cm",
+     "50 cm"
     ],
     "why": "Each giraffe neck vertebra can top 25 cm. Seven of those adds up.",
     "art": "giraffe",
@@ -1450,7 +1466,9 @@
     "wrong": [
      "Green sea turtle",
      "Pig-nosed turtle",
-     "Flatback turtle"
+     "Flatback turtle",
+     "Loggerhead turtle",
+     "Eastern long-necked turtle"
     ],
     "why": "This Queensland turtle absorbs oxygen through its rear end (the cloaca), so it can stay underwater for ages."
    },
@@ -1461,7 +1479,9 @@
     "wrong": [
      "It has none",
      "They’re on its forehead",
-     "There are four"
+     "There are four",
+     "They close underwater",
+     "They whistle"
     ],
     "why": "Kiwis sniff out worms underground with nostrils right at the end of their long beak."
    },
@@ -1472,7 +1492,9 @@
     "wrong": [
      "Cubes",
      "Discs",
-     "Pyramids"
+     "Pyramids",
+     "Spheres, like ours",
+     "Stars"
     ],
     "why": "Long tube-shaped eyes gather lots of light, but can’t move. So the head does the moving.",
     "art": "owl",
@@ -1494,7 +1516,9 @@
     "wrong": [
      "Leaf dye",
      "Bruising from thorns",
-     "It’s dead skin"
+     "It’s dead skin",
+     "Too much iron in its diet",
+     "Ink from berries"
     ],
     "why": "The leading theory: dark pigment stops sunburn during hours of browsing in the sun.",
     "art": "giraffe",
@@ -1509,7 +1533,9 @@
     "wrong": [
      "At the tip of an arm",
      "On top",
-     "It has no mouth"
+     "It has no mouth",
+     "On its back, near the edge",
+     "Between two arms"
     ],
     "why": "The mouth is on the underside, right in the centre. The highlighted spot is directly above it.",
     "art": "seastar",
@@ -1524,7 +1550,9 @@
     "wrong": [
      "Hidden",
      "Smaller than a pea",
-     "Bright red"
+     "Bright red",
+     "Covered in scales",
+     "On its back"
     ],
     "why": "A male bullfrog’s eardrum is larger than its eye; a female’s is about eye-sized.",
     "art": "frog",
@@ -1539,7 +1567,9 @@
     "wrong": [
      "A tenth of its body length",
      "Its own body length exactly",
-     "Ten times its body length"
+     "Ten times its body length",
+     "Half its body length",
+     "Five times its body length"
     ],
     "why": "It fires out in a fraction of a second, with a sticky tip that grips prey."
    },
@@ -1550,7 +1580,9 @@
     "wrong": [
      "Heart",
      "Stomach",
-     "Egg"
+     "Egg",
+     "Wing",
+     "Kidney"
     ],
     "why": "Around 5 cm across: the biggest eye of any land animal."
    }
@@ -1568,7 +1600,9 @@
     "wrong": [
      "Keratin, like rhino horn",
      "Antlers they shed yearly",
-     "Hardened hair"
+     "Hardened hair",
+     "Cartilage that hardens with age",
+     "Teeth that grew upward"
     ],
     "why": "They start as cartilage and turn to bone, then fuse to the skull. Never shed.",
     "art": "giraffe",
@@ -1583,7 +1617,9 @@
     "wrong": [
      "7",
      "10",
-     "28"
+     "28",
+     "12",
+     "20"
     ],
     "why": "Owls have 14 neck bones, twice our seven. Hence the swivel.",
     "art": "owl",
@@ -1598,7 +1634,9 @@
     "wrong": [
      "2 kg",
      "20 kg",
-     "2 tonnes"
+     "2 tonnes",
+     "50 kg",
+     "800 kg"
     ],
     "why": "Huge, but not the car-sized monster of legend. Still the biggest heart on Earth."
    },
@@ -1609,7 +1647,9 @@
     "wrong": [
      "Round",
      "A vertical slit",
-     "W-shaped"
+     "W-shaped",
+     "Heart-shaped",
+     "Star-shaped"
     ],
     "why": "Octopus pupils are wide horizontal slits. W-shaped is a cuttlefish. Nice try.",
     "art": "octopus",
@@ -1624,7 +1664,9 @@
     "wrong": [
      "Feathers on an arm",
      "A flap of rib skin",
-     "A modified tail"
+     "A modified tail",
+     "Scales on a long arm",
+     "Stiff cartilage plates"
     ],
     "why": "Bats fly with their hands. ‘Chiroptera’ means ‘hand wing’."
    }
@@ -1659,7 +1701,9 @@
     "wrong": [
      "Bell",
      "Mouth",
-     "Eyes"
+     "Eyes",
+     "Eyespots",
+     "Top of the bell"
     ],
     "why": "Tentacles are lined with tiny harpoon cells that fire on contact, even after the jellyfish has died."
    },
@@ -1670,7 +1714,9 @@
     "wrong": [
      "Bone",
      "Ivory",
-     "Antler"
+     "Antler",
+     "Tooth enamel",
+     "Cartilage"
     ],
     "why": "Rhino horn is packed keratin, the same stuff as hair and nails. No bone at all."
    },
@@ -1722,7 +1768,9 @@
     "wrong": [
      "The same",
      "Half",
-     "Ten times higher"
+     "Ten times higher",
+     "A quarter",
+     "Five times higher"
     ],
     "why": "Pumping blood two metres up to the brain takes serious pressure. Thick-walled arteries and tight leg skin stop swelling.",
     "art": "giraffe",
@@ -1737,7 +1785,9 @@
     "wrong": [
      "Koala",
      "Echidna",
-     "Platypus"
+     "Platypus",
+     "Kangaroo",
+     "Tasmanian devil"
     ],
     "why": "Wombat intestines squeeze droppings into neat cubes. Handy for marking territory on rocks without them rolling off."
    },
@@ -1748,7 +1798,9 @@
     "wrong": [
      "They only glide",
      "Hollow wings",
-     "They fly very slowly"
+     "They fly very slowly",
+     "Their hearts beat slowly",
+     "They hold their breath"
     ],
     "why": "Comb-like edges and velvety feathers break up the turbulence that makes wing noise.",
     "art": "owl",
@@ -1780,7 +1832,9 @@
     "wrong": [
      "No, their legs are straight bones",
      "Only chicks do",
-     "Only emperor penguins"
+     "Only emperor penguins",
+     "No, they bend at the hips only",
+     "Only male penguins"
     ],
     "why": "Penguin knees sit up inside the body under the feathers. Hence the waddle."
    }
@@ -1832,7 +1886,9 @@
     "wrong": [
      "On its head",
      "On its wings",
-     "It has none"
+     "It has none",
+     "On its tail",
+     "Under its wings"
     ],
     "why": "Crickets hear through eardrums on their front legs. Imagine listening with your shins."
    },
@@ -1843,7 +1899,9 @@
     "wrong": [
      "Yes, two on each eye",
      "Yes, but only one",
-     "Only when asleep"
+     "Only when asleep",
+     "Only baby snakes",
+     "Yes, but they never use them"
     ],
     "why": "That clear scale (the brille) is shed with the skin. It’s why snakes seem to stare."
    },
@@ -1854,7 +1912,9 @@
     "wrong": [
      "Stinger",
      "Shell",
-     "Fang"
+     "Fang",
+     "Tooth",
+     "Spine"
     ],
     "why": "A parrot-like beak is the only hard part of an octopus, so it can squeeze through any gap its beak fits through.",
     "art": "octopus",
@@ -1893,7 +1953,9 @@
     "wrong": [
      "They turn invisible",
      "They go red",
-     "Nothing"
+     "Nothing",
+     "They glow bright pink",
+     "They hiss"
     ],
     "why": "Something in their outer shell fluoresces. Why is still debated."
    },
@@ -1904,7 +1966,9 @@
     "wrong": [
      "Ears",
      "Gill slits",
-     "Spiracles"
+     "Spiracles",
+     "Tear ducts",
+     "Sweat pores"
     ],
     "why": "Shark nostrils are dead-end pockets for smelling. Breathing happens through the mouth and gills.",
     "art": "shark",
@@ -1919,7 +1983,9 @@
     "wrong": [
      "Puffing up like a balloon",
      "Gliding on its tail",
-     "Walking on floating weed"
+     "Walking on floating weed",
+     "Running on its tail",
+     "Jumping between bubbles"
     ],
     "why": "Fast slaps and strokes push air pockets into the water, keeping it up for a few metres."
    },
@@ -1930,7 +1996,9 @@
     "wrong": [
      "Bone",
      "Keratin",
-     "Shell"
+     "Shell",
+     "Coral",
+     "Hollow bone"
     ],
     "why": "Cartilage is the bendy stuff in your nose and ears. It’s lighter than bone."
    }
@@ -1965,7 +2033,9 @@
     "wrong": [
      "Only on the lower jaw",
      "On both jaws",
-     "On the tongue"
+     "On the tongue",
+     "In the throat only",
+     "None at all, ever"
     ],
     "why": "Most frogs have small upper teeth for gripping, and nothing below. Then they swallow whole."
    },
@@ -1993,7 +2063,9 @@
     "wrong": [
      "The same way",
      "Sideways",
-     "They don’t bend"
+     "They don’t bend",
+     "Up and down",
+     "Like springs, in circles"
     ],
     "why": "Bat legs are rotated so the knees face backwards. Perfect for hanging upside down."
    },
@@ -2004,7 +2076,9 @@
     "wrong": [
      "About 10 cm",
      "About 1 metre",
-     "About 5 cm"
+     "About 5 cm",
+     "About 2 metres",
+     "About 25 cm"
     ],
     "why": "Long enough to wrap round thorny branches, and to clean its own nostrils. Charming.",
     "art": "giraffe",
@@ -2026,7 +2100,9 @@
     "wrong": [
      "Legs",
      "Head",
-     "Wings"
+     "Wings",
+     "Antennae",
+     "Back"
     ],
     "why": "Four pairs of wax glands on the underside of the abdomen produce thin wax flakes.",
     "art": "bee",
@@ -2041,7 +2117,9 @@
     "wrong": [
      "Tusks",
      "Tail",
-     "Toenails"
+     "Toenails",
+     "Ears only",
+     "Trunk tip only"
     ],
     "why": "Low rumbles travel through the ground, and sensitive feet help elephants feel them."
    },
@@ -2052,7 +2130,9 @@
     "wrong": [
      "Platypus",
      "Echidna",
-     "Aardvark"
+     "Aardvark",
+     "Anteater",
+     "Wombat"
     ],
     "why": "The pink ‘star’ is packed with touch sensors. It can find and gulp down a tiny meal in a fraction of a second."
    },
@@ -2063,7 +2143,9 @@
     "wrong": [
      "Salty",
      "Bitter",
-     "Sour"
+     "Sour",
+     "Savoury (umami)",
+     "Fishy"
     ],
     "why": "Cats lack a working sweet-taste receptor. That cake you’re guarding is safe."
    },
@@ -2074,7 +2156,9 @@
     "wrong": [
      "Swim bladder",
      "Stomach",
-     "Lung"
+     "Lung",
+     "Fins",
+     "Heart"
     ],
     "why": "Sharks have no swim bladder. A huge oily liver adds lift. In basking sharks it can be a quarter of body weight.",
     "art": "shark",
@@ -2113,7 +2197,9 @@
     "wrong": [
      "1 cm a year",
      "1 cm a day",
-     "It doesn’t grow"
+     "It doesn’t grow",
+     "5 cm a month",
+     "1 mm a year"
     ],
     "why": "Roughly 6 to 10 mm a month. A whole new hoof takes about a year.",
     "art": "hoof",
@@ -2128,7 +2214,9 @@
     "wrong": [
      "Smells",
      "Salt levels",
-     "Sound"
+     "Sound",
+     "Heat",
+     "Light"
     ],
     "why": "Jelly-filled pores pick up the tiny electric signals from muscles of hidden prey.",
     "art": "shark",
@@ -2143,7 +2231,9 @@
     "wrong": [
      "They hold their breath",
      "Their brains need no blood",
-     "The head detaches. Kidding"
+     "The head detaches. Kidding",
+     "Their necks are made of rubber",
+     "Their heart moves into the neck"
     ],
     "why": "Their neck arteries pass through roomy bony channels and have little blood reservoirs that keep the brain supplied.",
     "art": "owl",
@@ -2158,7 +2248,9 @@
     "wrong": [
      "Catfish",
      "Sea snake",
-     "True eel"
+     "True eel",
+     "Lungfish",
+     "Stingray"
     ],
     "why": "Its closest relatives are South American knifefish. It can still deliver over 800 volts."
    }
@@ -2176,7 +2268,9 @@
     "wrong": [
      "Six",
      "Ten",
-     "Twelve"
+     "Twelve",
+     "Four",
+     "Sixteen"
     ],
     "why": "Eight arms, and they’re arms, not tentacles. Squid and cuttlefish have two extra tentacles for grabbing.",
     "art": "octopus",
@@ -2191,7 +2285,9 @@
     "wrong": [
      "Once in their life",
      "Every ten years",
-     "Only after a fight"
+     "Only after a fight",
+     "Every five years",
+     "Every month"
     ],
     "why": "Antlers drop off in late winter and regrow, bigger, in a few months. They’re among the fastest-growing tissues of any mammal."
    },
@@ -2202,7 +2298,9 @@
     "wrong": [
      "Sugar glider",
      "Flying squirrel",
-     "Colugo"
+     "Colugo",
+     "Gliding possum",
+     "Flying fish"
     ],
     "why": "Gliders just glide. Bats flap and power their own flight. (A flying fox is a bat, too.)"
    },
@@ -2213,7 +2311,9 @@
     "wrong": [
      "Whole flat feet",
      "Heels",
-     "Knuckles"
+     "Knuckles",
+     "Elbows",
+     "Wrists"
     ],
     "why": "Cats are ‘toe-walkers’. The big pad is under the ball of the foot; the heel sits way up the leg.",
     "art": "catpaw",
@@ -2228,7 +2328,9 @@
     "wrong": [
      "Tennis ball",
      "Loaf of bread",
-     "House cat"
+     "House cat",
+     "Watermelon",
+     "Grain of sand"
     ],
     "why": "About 2 cm long at birth. It crawls up into the pouch on its own and stays there for months."
    }
