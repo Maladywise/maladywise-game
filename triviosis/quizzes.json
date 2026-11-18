@@ -8108,6 +8108,546 @@
   ]
  },
  {
+  "date": "2027-01-01",
+  "number": 76,
+  "difficulty": "Hard",
+  "theme": "Out of copyright: medical firsts",
+  "questions": [
+   {
+    "q": "Public Domain Day frees old works. Which 1628 book by William Harvey first described the circulation of blood?",
+    "a": "De Motu Cordis",
+    "w": [
+     "De Humani Corporis Fabrica",
+     "The Canon of Medicine",
+     "Micrographia"
+    ],
+    "e": "Harvey showed the heart pumps blood round in a circuit, overturning 1,400 years of Galen."
+   },
+   {
+    "q": "Andreas Vesalius\u2019s 1543 anatomy masterpiece is called?",
+    "a": "De Humani Corporis Fabrica",
+    "w": [
+     "De Motu Cordis",
+     "Gray\u2019s Anatomy",
+     "Anatomia Mundini"
+    ],
+    "e": "Its woodcut illustrations are still reproduced, freely, almost 500 years on."
+   },
+   {
+    "q": "Robert Hooke coined the word \u2018cell\u2019 in Micrographia (1665) after looking at?",
+    "a": "Cork",
+    "w": [
+     "Blood",
+     "Pond water",
+     "Onion skin"
+    ],
+    "e": "The empty boxes reminded him of monks\u2019 cells."
+   },
+   {
+    "q": "Edward Jenner\u2019s 1798 paper on vaccination described protection using material from?",
+    "a": "Cowpox",
+    "w": [
+     "Smallpox scabs from monkeys",
+     "Horse serum",
+     "Chickenpox"
+    ],
+    "e": "The word vaccine comes from the Latin vacca, cow."
+   },
+   {
+    "q": "Who wrote \u2018Notes on Nursing\u2019 in 1859?",
+    "a": "Florence Nightingale",
+    "w": [
+     "Mary Seacole",
+     "Clara Barton",
+     "Edith Cavell"
+    ],
+    "e": "It was written for ordinary households, not just nurses, and sold widely."
+   },
+   {
+    "q": "John Snow\u2019s famous 1854 map linked cholera deaths in London to?",
+    "a": "A water pump on Broad Street",
+    "w": [
+     "A sewer outlet on the Thames",
+     "A butcher\u2019s shop",
+     "A crowded workhouse"
+    ],
+    "e": "The pump handle was removed. Germ theory was still decades away."
+   },
+   {
+    "q": "Gray\u2019s Anatomy was first published in which year?",
+    "a": "1858",
+    "w": [
+     "1758",
+     "1908",
+     "1958"
+    ],
+    "e": "Henry Gray died three years later, aged 34, of smallpox caught from a nephew."
+   },
+   {
+    "q": "Which 1847 discovery by Ignaz Semmelweis was mocked by his colleagues?",
+    "a": "Handwashing prevents childbed fever",
+    "w": [
+     "Ether as an anaesthetic",
+     "Germs cause tuberculosis",
+     "Blood groups"
+    ],
+    "e": "He used chlorinated lime. Doctors were offended at being called the cause."
+   },
+   {
+    "q": "Ren\u00e9 Laennec invented which instrument in 1816, partly from embarrassment about putting his ear to a young woman\u2019s chest?",
+    "a": "Stethoscope",
+    "w": [
+     "Thermometer",
+     "Sphygmomanometer",
+     "Otoscope"
+    ],
+    "e": "His first one was a rolled-up roll of paper."
+   },
+   {
+    "q": "Which 1895 discovery by Wilhelm R\u00f6ntgen won the first Nobel Prize in Physics?",
+    "a": "X-rays",
+    "w": [
+     "Radioactivity",
+     "The electron",
+     "Radio waves"
+    ],
+    "e": "He never patented it, so it spread round the world within months."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-02",
+  "number": 77,
+  "difficulty": "Hard",
+  "theme": "Fantastic voyage: a trip through the body",
+  "questions": [
+   {
+    "q": "Isaac Asimov, born around this date, was also a professor of?",
+    "a": "Biochemistry",
+    "w": [
+     "Neurology",
+     "Astronomy",
+     "Anatomy"
+    ],
+    "e": "He taught at Boston University\u2019s medical school and wrote a biochemistry textbook."
+   },
+   {
+    "q": "Swallowed food leaves the stomach through which valve?",
+    "a": "Pylorus",
+    "w": [
+     "Cardia",
+     "Ileocaecal valve",
+     "Sphincter of Oddi"
+    ],
+    "e": "Pylorus is Greek for gatekeeper."
+   },
+   {
+    "q": "A red blood cell squeezes through capillaries narrower than itself. About how wide is it?",
+    "a": "7 to 8 micrometres",
+    "w": [
+     "70 to 80 micrometres",
+     "0.7 micrometres",
+     "1 millimetre"
+    ],
+    "e": "Its doughnut shape lets it fold up like a taco."
+   },
+   {
+    "q": "Roughly how long does a red blood cell take to do one full lap of the body at rest?",
+    "a": "About a minute",
+    "w": [
+     "About a second",
+     "About an hour",
+     "About a day"
+    ],
+    "e": "Cardiac output at rest is about 5 litres a minute, roughly your whole blood volume."
+   },
+   {
+    "q": "Which is the only artery to carry oxygen-poor blood after birth?",
+    "a": "Pulmonary artery",
+    "w": [
+     "Aorta",
+     "Carotid artery",
+     "Renal artery"
+    ],
+    "e": "Arteries carry blood away from the heart, whatever its oxygen level."
+   },
+   {
+    "q": "Bile is stored in the gallbladder but made in the?",
+    "a": "Liver",
+    "w": [
+     "Pancreas",
+     "Spleen",
+     "Duodenum"
+    ],
+    "e": "The liver makes up to about a litre a day."
+   },
+   {
+    "q": "About how long is the small intestine in a living adult?",
+    "a": "3 to 5 metres",
+    "w": [
+     "30 centimetres",
+     "1 metre",
+     "20 metres"
+    ],
+    "e": "It\u2019s longer at autopsy, when the muscle has relaxed."
+   },
+   {
+    "q": "Air travels from the trachea into tiny sacs. Roughly how many alveoli do adult lungs have?",
+    "a": "About 480 million",
+    "w": [
+     "About 480",
+     "About 480,000",
+     "About 480 billion"
+    ],
+    "e": "Spread flat, their surface would cover roughly half a tennis court."
+   },
+   {
+    "q": "In the kidney, blood is first filtered in a tuft of capillaries called the?",
+    "a": "Glomerulus",
+    "w": [
+     "Loop of Henle",
+     "Collecting duct",
+     "Renal pelvis"
+    ],
+    "e": "Together the kidneys filter about 180 litres a day, and return all but a litre or two."
+   },
+   {
+    "q": "Fantastic Voyage\u2019s miniaturised crew aimed to destroy a blood clot in the?",
+    "a": "Brain",
+    "w": [
+     "Heart",
+     "Lung",
+     "Leg"
+    ],
+    "e": "Asimov wrote the novelisation of the 1966 film."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-03",
+  "number": 78,
+  "difficulty": "Genius",
+  "theme": "Through a tube: tubes in medicine",
+  "questions": [
+   {
+    "q": "The drinking straw was patented in 1888. A nasogastric tube passes through the nose into the?",
+    "a": "Stomach",
+    "w": [
+     "Trachea",
+     "Duodenum only",
+     "Oesophagus only"
+    ],
+    "e": "Checking its tip is in the stomach, not the lung, before feeding is critical."
+   },
+   {
+    "q": "Which tube is named after an Italian anatomist and connects the middle ear to the throat?",
+    "a": "Eustachian tube",
+    "w": [
+     "Fallopian tube",
+     "Bartholin\u2019s duct",
+     "Stensen\u2019s duct"
+    ],
+    "e": "Bartolomeo Eustachi described it in the 1500s."
+   },
+   {
+    "q": "The Sengstaken\u2013Blakemore tube is used to stop bleeding from?",
+    "a": "Oesophageal varices",
+    "w": [
+     "Nosebleeds",
+     "Stomach ulcers",
+     "Haemorrhoids"
+    ],
+    "e": "Balloons press on the bleeding veins as a temporary measure."
+   },
+   {
+    "q": "A Swan-Ganz catheter is floated through the heart into the?",
+    "a": "Pulmonary artery",
+    "w": [
+     "Aorta",
+     "Coronary arteries",
+     "Left atrium directly"
+    ],
+    "e": "A small balloon on its tip lets blood flow carry it there."
+   },
+   {
+    "q": "Which tube\u2019s cuff, if over-inflated for a long time, can damage the trachea?",
+    "a": "Endotracheal tube",
+    "w": [
+     "Nasogastric tube",
+     "Chest drain",
+     "Urinary catheter"
+    ],
+    "e": "Cuff pressure is kept low to protect the tracheal lining."
+   },
+   {
+    "q": "A chest drain for a pneumothorax is classically inserted in the \u2018triangle of safety\u2019. Which muscle forms its front border?",
+    "a": "Pectoralis major",
+    "w": [
+     "Latissimus dorsi",
+     "Serratus anterior",
+     "Trapezius"
+    ],
+    "e": "The back border is latissimus dorsi; the base is about the level of the nipple."
+   },
+   {
+    "q": "A Foley catheter is held in the bladder by?",
+    "a": "A water-filled balloon",
+    "w": [
+     "A spring coil",
+     "A suture",
+     "A suction cup"
+    ],
+    "e": "Frederic Foley designed it in the 1930s."
+   },
+   {
+    "q": "An underwater seal on a chest drain works because?",
+    "a": "Air can bubble out but water stops it getting back in",
+    "w": [
+     "Water pumps air out",
+     "Water cools the lung",
+     "Water filters out blood"
+    ],
+    "e": "It acts like a one-way valve."
+   },
+   {
+    "q": "Which Australian invented the CPAP machine for sleep apnoea, using a vacuum cleaner motor?",
+    "a": "Colin Sullivan",
+    "w": [
+     "Graeme Clark",
+     "Fiona Wood",
+     "Victor Chang"
+    ],
+    "e": "Sydney, 1980. The company it spawned became ResMed."
+   },
+   {
+    "q": "The Minnesota tube differs from the Sengstaken\u2013Blakemore by adding?",
+    "a": "A port to suck out the oesophagus above the balloon",
+    "w": [
+     "A camera",
+     "A feeding port into the jejunum",
+     "A heating coil"
+    ],
+    "e": "It reduces the risk of patients inhaling saliva and blood."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-04",
+  "number": 79,
+  "difficulty": "Easy",
+  "theme": "Seeing with your fingers: Braille, eyes and touch",
+  "questions": [
+   {
+    "q": "World Braille Day marks the birthday of Louis Braille. How did he lose his sight?",
+    "a": "An accident with a tool in his father\u2019s workshop, then infection",
+    "w": [
+     "Measles",
+     "Glaucoma",
+     "He was born blind"
+    ],
+    "e": "He was three. The infection spread to both eyes."
+   },
+   {
+    "q": "Each Braille cell is made of up to how many raised dots?",
+    "a": "Six",
+    "w": [
+     "Four",
+     "Eight",
+     "Ten"
+    ],
+    "e": "Two columns of three."
+   },
+   {
+    "q": "Which part of the body has the highest density of touch receptors?",
+    "a": "Fingertips",
+    "w": [
+     "Back",
+     "Elbows",
+     "Shins"
+    ],
+    "e": "Lips and tongue are close behind."
+   },
+   {
+    "q": "The clear front window of the eye is the?",
+    "a": "Cornea",
+    "w": [
+     "Lens",
+     "Retina",
+     "Iris"
+    ],
+    "e": "It does most of the eye\u2019s focusing."
+   },
+   {
+    "q": "Which part of the eye is coloured?",
+    "a": "Iris",
+    "w": [
+     "Pupil",
+     "Sclera",
+     "Retina"
+    ],
+    "e": "Its muscles widen and narrow the pupil."
+   },
+   {
+    "q": "What\u2019s the most common cause of blindness worldwide?",
+    "a": "Cataract",
+    "w": [
+     "Glaucoma",
+     "Diabetes",
+     "Injury"
+    ],
+    "e": "And it\u2019s fixable with a short operation."
+   },
+   {
+    "q": "The light-sensing layer at the back of the eye is the?",
+    "a": "Retina",
+    "w": [
+     "Cornea",
+     "Choroid",
+     "Conjunctiva"
+    ],
+    "e": "It\u2019s actually part of the brain, grown outwards in the embryo."
+   },
+   {
+    "q": "Glaucoma damages which nerve?",
+    "a": "Optic nerve",
+    "w": [
+     "Facial nerve",
+     "Olfactory nerve",
+     "Trigeminal nerve"
+    ],
+    "e": "Often from raised pressure inside the eye."
+   },
+   {
+    "q": "Which vitamin deficiency causes night blindness?",
+    "a": "Vitamin A",
+    "w": [
+     "Vitamin C",
+     "Vitamin D",
+     "Vitamin K"
+    ],
+    "e": "It\u2019s needed to make the light-sensing pigment in rods."
+   },
+   {
+    "q": "Braille readers often read at about how many words a minute?",
+    "a": "About 100 to 150",
+    "w": [
+     "About 5",
+     "About 1,000",
+     "About 10"
+    ],
+    "e": "Close to typical reading-aloud speed."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-05",
+  "number": 80,
+  "difficulty": "Easy",
+  "theme": "Bird-brained: birds and medicine",
+  "questions": [
+   {
+    "q": "\u2018Canary in a coal mine\u2019 comes from miners using canaries to detect?",
+    "a": "Carbon monoxide",
+    "w": [
+     "Gold",
+     "Methane fires",
+     "Earthquakes"
+    ],
+    "e": "Birds breathe fast and show poisoning before people do."
+   },
+   {
+    "q": "Which flu is carried by wild water birds?",
+    "a": "Bird flu (avian influenza)",
+    "w": [
+     "Swine flu",
+     "Man flu",
+     "Spanish flu only"
+    ],
+    "e": "H5N1 is the best-known strain."
+   },
+   {
+    "q": "In folklore, which bird delivers babies?",
+    "a": "Stork",
+    "w": [
+     "Owl",
+     "Pelican",
+     "Crow"
+    ],
+    "e": "Stork bites are also the nickname for pink birthmarks on a baby\u2019s neck."
+   },
+   {
+    "q": "Psittacosis, a pneumonia, is caught from?",
+    "a": "Parrots and other birds",
+    "w": [
+     "Dogs",
+     "Fish",
+     "Cows"
+    ],
+    "e": "Breathing in dried droppings or feather dust."
+   },
+   {
+    "q": "\u2018Crow\u2019s feet\u2019 are?",
+    "a": "Wrinkles at the corners of the eyes",
+    "w": [
+     "Bunions",
+     "Cracked heels",
+     "Ingrown toenails"
+    ],
+    "e": "Laughing earns them."
+   },
+   {
+    "q": "A \u2018pigeon chest\u2019 is when the breastbone?",
+    "a": "Sticks out",
+    "w": [
+     "Sinks in",
+     "Is missing",
+     "Is split"
+    ],
+    "e": "Its medical name is pectus carinatum."
+   },
+   {
+    "q": "Bird eggs can cause allergy in some children. Most grow out of egg allergy by?",
+    "a": "School age or adolescence",
+    "w": [
+     "Never",
+     "Age one",
+     "Age 40"
+    ],
+    "e": "Many children tolerate baked egg first."
+   },
+   {
+    "q": "The plague doctor\u2019s beaked mask was stuffed with?",
+    "a": "Herbs and spices",
+    "w": [
+     "Cotton to block bacteria",
+     "Ice",
+     "Charcoal filters"
+    ],
+    "e": "They believed bad smells (miasma) spread disease."
+   },
+   {
+    "q": "A \u2018goose egg\u2019 on the head is a?",
+    "a": "Bump from a bruise and swelling",
+    "w": [
+     "Cyst",
+     "Skull fracture",
+     "Wart"
+    ],
+    "e": "Scalp bleeds a lot because it has a rich blood supply."
+   },
+   {
+    "q": "Which bird lays the largest egg relative to its body size?",
+    "a": "Kiwi",
+    "w": [
+     "Ostrich",
+     "Emu",
+     "Chicken"
+    ],
+    "e": "A kiwi egg is about 20% of the mother\u2019s weight."
+   }
+  ]
+ },
+ {
   "date": "2027-01-06",
   "number": 81,
   "difficulty": "Hard",
@@ -8216,6 +8756,2718 @@
      "Magnesium"
     ],
     "e": "High potassium can stop the heart, so it's one of the few blood results that gets a phone call at 3 am."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-07",
+  "number": 82,
+  "difficulty": "Medium",
+  "theme": "Space medicine",
+  "questions": [
+   {
+    "q": "Astronauts on long missions lose bone density at roughly what rate?",
+    "a": "About 1% a month",
+    "w": [
+     "About 1% a year",
+     "About 10% a month",
+     "None, if they exercise"
+    ],
+    "e": "Weight-bearing matters: bones need load to stay strong."
+   },
+   {
+    "q": "Why do astronauts\u2019 faces look puffy in orbit?",
+    "a": "Fluid shifts towards the head",
+    "w": [
+     "Radiation burns",
+     "Weight gain",
+     "Low oxygen"
+    ],
+    "e": "Without gravity, fluid no longer pools in the legs: \u2018puffy face, bird legs\u2019."
+   },
+   {
+    "q": "Spaceflight-associated neuro-ocular syndrome mainly affects?",
+    "a": "Vision",
+    "w": [
+     "Hearing",
+     "Smell",
+     "Balance only"
+    ],
+    "e": "Swelling at the back of the eye can blur sight for months."
+   },
+   {
+    "q": "Which inner-ear organs sense gravity and get confused in space?",
+    "a": "Otolith organs",
+    "w": [
+     "Cochlea",
+     "Semicircular canals only",
+     "Eardrum"
+    ],
+    "e": "Hence space motion sickness in the first few days."
+   },
+   {
+    "q": "Astronauts grow taller in space by about?",
+    "a": "Up to 3% (a few centimetres)",
+    "w": [
+     "Up to 30%",
+     "Nothing",
+     "1 millimetre"
+    ],
+    "e": "The discs between vertebrae expand. They shrink back on Earth."
+   },
+   {
+    "q": "The first person to perform a self-operation in Antarctica, removing his own appendix in 1961, was?",
+    "a": "Leonid Rogozov",
+    "w": [
+     "Yuri Gagarin",
+     "Douglas Mawson",
+     "Jerri Nielsen"
+    ],
+    "e": "A Soviet doctor, using a mirror and local anaesthetic."
+   },
+   {
+    "q": "What\u2019s the main radiation risk outside Earth\u2019s magnetic field?",
+    "a": "Galactic cosmic rays and solar storms",
+    "w": [
+     "Microwaves",
+     "UV from the spacecraft lights",
+     "Radio waves"
+    ],
+    "e": "A Mars mission would roughly double the lifetime radiation limit of current astronauts."
+   },
+   {
+    "q": "Which Galilean moon of Jupiter is thought to have a liquid ocean under its ice?",
+    "a": "Europa",
+    "w": [
+     "Io",
+     "Callisto only",
+     "Ganymede has none"
+    ],
+    "e": "Galileo first saw the four big moons around this date in 1610."
+   },
+   {
+    "q": "In microgravity, the heart?",
+    "a": "Shrinks a little and becomes rounder",
+    "w": [
+     "Grows much larger",
+     "Stops needing to beat",
+     "Moves into the abdomen"
+    ],
+    "e": "It doesn\u2019t have to pump blood uphill."
+   },
+   {
+    "q": "Astronauts on the ISS exercise about how long a day?",
+    "a": "About 2 hours",
+    "w": [
+     "About 10 minutes",
+     "About 6 hours",
+     "Not at all"
+    ],
+    "e": "Treadmill with a harness, cycling and resistance machines."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-08",
+  "number": 83,
+  "difficulty": "Hard",
+  "theme": "Motor neurone disease and the nervous system",
+  "questions": [
+   {
+    "q": "Stephen Hawking, born on this date in 1942, lived with motor neurone disease for about?",
+    "a": "55 years",
+    "w": [
+     "5 years",
+     "15 years",
+     "25 years"
+    ],
+    "e": "Most people with MND live 2 to 5 years from diagnosis. His was unusually slow."
+   },
+   {
+    "q": "Motor neurone disease (ALS) affects?",
+    "a": "Both upper and lower motor neurones",
+    "w": [
+     "Sensory nerves only",
+     "Only the muscles",
+     "Only the cerebellum"
+    ],
+    "e": "That\u2019s why stiffness and wasting appear together."
+   },
+   {
+    "q": "Which senses are usually spared in MND?",
+    "a": "Sensation and eye movements",
+    "w": [
+     "Hearing only",
+     "None",
+     "Smell only"
+    ],
+    "e": "Eye-tracking can let people communicate late in the illness."
+   },
+   {
+    "q": "Fasciculations are?",
+    "a": "Visible flickering twitches of muscle",
+    "w": [
+     "Joint clicks",
+     "Skin blisters",
+     "Fast heartbeats"
+    ],
+    "e": "Common and harmless on their own; worrying with weakness and wasting."
+   },
+   {
+    "q": "Riluzole for MND works roughly by?",
+    "a": "Reducing glutamate activity",
+    "w": [
+     "Replacing dopamine",
+     "Killing viruses",
+     "Suppressing immunity"
+    ],
+    "e": "It extends survival modestly, by a few months."
+   },
+   {
+    "q": "Which gene expansion is the commonest genetic cause of MND and frontotemporal dementia?",
+    "a": "C9orf72",
+    "w": [
+     "SOD1",
+     "HTT",
+     "BRCA1"
+    ],
+    "e": "SOD1 was found first, in 1993."
+   },
+   {
+    "q": "Lou Gehrig, whose name is given to ALS in the US, played?",
+    "a": "Baseball",
+    "w": [
+     "American football",
+     "Basketball",
+     "Ice hockey"
+    ],
+    "e": "He retired in 1939."
+   },
+   {
+    "q": "The \u2018split hand\u2019 in MND means wasting of?",
+    "a": "Thumb-side muscles more than little-finger side",
+    "w": [
+     "Little-finger side more than thumb side",
+     "The whole hand equally",
+     "Only the fingertips"
+    ],
+    "e": "A clue doctors look for."
+   },
+   {
+    "q": "Hawking spoke through a computer controlled late in life by?",
+    "a": "A cheek muscle",
+    "w": [
+     "His tongue",
+     "His eyebrows only",
+     "Brain implants"
+    ],
+    "e": "An infrared sensor on his glasses detected cheek twitches."
+   },
+   {
+    "q": "Edaravone, used for MND in some countries, is?",
+    "a": "An antioxidant",
+    "w": [
+     "An antibiotic",
+     "A steroid",
+     "A gene therapy"
+    ],
+    "e": "Evidence for benefit is limited."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-09",
+  "number": 84,
+  "difficulty": "Hard",
+  "theme": "Screens, thumbs and phones",
+  "questions": [
+   {
+    "q": "The iPhone was unveiled on this date in 2007. \u2018Texting thumb\u2019 is usually?",
+    "a": "De Quervain\u2019s tenosynovitis",
+    "w": [
+     "Carpal tunnel syndrome",
+     "Trigger thumb only",
+     "Gout"
+    ],
+    "e": "Inflamed tendons at the base of the thumb."
+   },
+   {
+    "q": "\u2018Cubital tunnel syndrome\u2019 from holding a phone to your ear with a bent elbow squeezes the?",
+    "a": "Ulnar nerve",
+    "w": [
+     "Median nerve",
+     "Radial nerve",
+     "Axillary nerve"
+    ],
+    "e": "Tingling in the ring and little fingers."
+   },
+   {
+    "q": "Blue light from screens at night mainly affects sleep by suppressing?",
+    "a": "Melatonin",
+    "w": [
+     "Cortisol",
+     "Insulin",
+     "Adrenaline"
+    ],
+    "e": "Light, of any colour, tells the brain it\u2019s daytime."
+   },
+   {
+    "q": "\u2018Text neck\u2019 refers to?",
+    "a": "Neck and upper back strain from looking down",
+    "w": [
+     "A rash from phone cases",
+     "A swollen thyroid",
+     "Hearing loss"
+    ],
+    "e": "Tilting the head forward multiplies the load on the neck."
+   },
+   {
+    "q": "Phones carry bacteria. Compared with a toilet seat, studies often find phones carry?",
+    "a": "More bacteria",
+    "w": [
+     "Far fewer",
+     "None",
+     "Only viruses"
+    ],
+    "e": "Toilet seats get cleaned more often."
+   },
+   {
+    "q": "Which eye problem from screen use causes dry, tired eyes?",
+    "a": "Digital eye strain",
+    "w": [
+     "Glaucoma",
+     "Cataract",
+     "Retinal detachment"
+    ],
+    "e": "We blink less when staring at screens."
+   },
+   {
+    "q": "The \u201820-20-20 rule\u2019 suggests every 20 minutes, look at something 20 feet away for?",
+    "a": "20 seconds",
+    "w": [
+     "20 minutes",
+     "2 seconds",
+     "20 breaths"
+    ],
+    "e": "It relaxes the focusing muscles."
+   },
+   {
+    "q": "\u2018Phantom vibration syndrome\u2019 is?",
+    "a": "Feeling a phone buzz that didn\u2019t",
+    "w": [
+     "Hearing a ring in your ear",
+     "A heart rhythm problem",
+     "Tingling from a phone battery"
+    ],
+    "e": "Most heavy phone users report it."
+   },
+   {
+    "q": "Which phone feature helps paramedics even when your phone is locked?",
+    "a": "Medical ID (emergency health info)",
+    "w": [
+     "Face ID",
+     "Do Not Disturb",
+     "Airplane mode"
+    ],
+    "e": "Paramedics can see allergies, medicines and contacts."
+   },
+   {
+    "q": "Hearing damage from earbuds depends on volume and?",
+    "a": "How long you listen",
+    "w": [
+     "Phone brand",
+     "Song genre",
+     "Battery level"
+    ],
+    "e": "The 60/60 rule: under 60% volume, under 60 minutes at a time."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-10",
+  "number": 85,
+  "difficulty": "Genius",
+  "theme": "Global health",
+  "questions": [
+   {
+    "q": "The UN General Assembly first met on this date in 1946. The WHO\u2019s constitution came into force in?",
+    "a": "1948",
+    "w": [
+     "1946",
+     "1952",
+     "1960"
+    ],
+    "e": "7 April 1948, now World Health Day."
+   },
+   {
+    "q": "Which disease is the only human disease eradicated so far?",
+    "a": "Smallpox",
+    "w": [
+     "Polio",
+     "Measles",
+     "Guinea worm"
+    ],
+    "e": "Declared eradicated in 1980."
+   },
+   {
+    "q": "Polio remains endemic in which two countries?",
+    "a": "Pakistan and Afghanistan",
+    "w": [
+     "Nigeria and India",
+     "Brazil and Peru",
+     "Egypt and Sudan"
+    ],
+    "e": "Wild poliovirus cases have fallen by over 99% since 1988."
+   },
+   {
+    "q": "Guinea worm disease is close to eradication, largely through?",
+    "a": "Filtering drinking water and health education",
+    "w": [
+     "A vaccine",
+     "A new drug",
+     "Gene drive mosquitoes"
+    ],
+    "e": "The Carter Center led the campaign."
+   },
+   {
+    "q": "Which infection kills the most people worldwide each year?",
+    "a": "Tuberculosis",
+    "w": [
+     "Malaria",
+     "HIV",
+     "Dengue"
+    ],
+    "e": "Over a million deaths a year."
+   },
+   {
+    "q": "The \u2018Alma-Ata Declaration\u2019 of 1978 championed?",
+    "a": "Primary health care",
+    "w": [
+     "Hospital building",
+     "Space medicine",
+     "Private insurance"
+    ],
+    "e": "Health for all through community-based care."
+   },
+   {
+    "q": "Which country has the highest life expectancy at birth, in most recent estimates?",
+    "a": "Japan, Monaco or Hong Kong (they trade the top spot)",
+    "w": [
+     "United States",
+     "Nigeria",
+     "Russia"
+    ],
+    "e": "Australia sits in the top ten."
+   },
+   {
+    "q": "\u2018Universal health coverage\u2019 means?",
+    "a": "Everyone gets needed care without financial hardship",
+    "w": [
+     "Free private hospitals",
+     "Insurance for travellers",
+     "Mandatory vaccines"
+    ],
+    "e": "One of the UN Sustainable Development Goals."
+   },
+   {
+    "q": "Oral rehydration solution is a mix of water, salt and?",
+    "a": "Sugar",
+    "w": [
+     "Vinegar",
+     "Milk",
+     "Charcoal"
+    ],
+    "e": "The glucose helps the gut absorb the salt and water. It has saved millions of children."
+   },
+   {
+    "q": "Which mosquito-borne disease has a vaccine (RTS,S) recommended by WHO since 2021?",
+    "a": "Malaria",
+    "w": [
+     "Dengue only",
+     "Zika",
+     "Chikungunya"
+    ],
+    "e": "A second, R21, followed in 2023."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-11",
+  "number": 86,
+  "difficulty": "Easy",
+  "theme": "Insulin",
+  "questions": [
+   {
+    "q": "On this date in 1922, Leonard Thompson became the first person given insulin. He was?",
+    "a": "A 14-year-old boy",
+    "w": [
+     "A 60-year-old man",
+     "A newborn",
+     "A dog"
+    ],
+    "e": "In Toronto. A purer second dose worked."
+   },
+   {
+    "q": "Which organ makes insulin?",
+    "a": "Pancreas",
+    "w": [
+     "Liver",
+     "Kidney",
+     "Thyroid"
+    ],
+    "e": "In the islets of Langerhans."
+   },
+   {
+    "q": "Insulin lowers blood sugar by?",
+    "a": "Helping cells take in glucose",
+    "w": [
+     "Burning sugar in the blood",
+     "Making you wee it out",
+     "Turning sugar into protein"
+    ],
+    "e": "Muscle, fat and liver all respond."
+   },
+   {
+    "q": "Type 1 diabetes happens because?",
+    "a": "The immune system destroys insulin-making cells",
+    "w": [
+     "Eating too much sugar",
+     "Not drinking enough water",
+     "Too much insulin"
+    ],
+    "e": "It\u2019s not caused by lifestyle."
+   },
+   {
+    "q": "A \u2018hypo\u2019 is when blood sugar is too?",
+    "a": "Low",
+    "w": [
+     "High",
+     "Normal",
+     "Salty"
+    ],
+    "e": "Sweaty, shaky and confused: give fast sugar."
+   },
+   {
+    "q": "Which two scientists shared the 1923 Nobel Prize for insulin?",
+    "a": "Banting and Macleod",
+    "w": [
+     "Banting and Best",
+     "Watson and Crick",
+     "Pasteur and Koch"
+    ],
+    "e": "Banting shared his money with Best, who was left out."
+   },
+   {
+    "q": "Insulin is usually injected, not swallowed, because?",
+    "a": "Stomach acid and enzymes digest it",
+    "w": [
+     "It tastes bad",
+     "It\u2019s too big a tablet",
+     "It\u2019s radioactive"
+    ],
+    "e": "It\u2019s a protein."
+   },
+   {
+    "q": "Which number test shows average blood sugar over the past 2 to 3 months?",
+    "a": "HbA1c",
+    "w": [
+     "INR",
+     "eGFR",
+     "PSA"
+    ],
+    "e": "It measures sugar stuck to haemoglobin."
+   },
+   {
+    "q": "Early insulin was extracted from?",
+    "a": "Cow and pig pancreases",
+    "w": [
+     "Sharks",
+     "Plants",
+     "Bacteria"
+    ],
+    "e": "Since the 1980s, it\u2019s been made by genetically engineered microbes."
+   },
+   {
+    "q": "World Diabetes Day is held on Frederick Banting\u2019s birthday, which is?",
+    "a": "14 November",
+    "w": [
+     "11 January",
+     "1 December",
+     "7 April"
+    ],
+    "e": "The blue circle is its symbol."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-12",
+  "number": 87,
+  "difficulty": "Easy",
+  "theme": "Fairy-tale medicine",
+  "questions": [
+   {
+    "q": "Charles Perrault, born on this date, wrote Sleeping Beauty. Sleeping for years is a bit like which real condition?",
+    "a": "Kleine-Levin syndrome",
+    "w": [
+     "Narcolepsy",
+     "Insomnia",
+     "Jet lag"
+    ],
+    "e": "Rare episodes of sleeping up to 20 hours a day for weeks."
+   },
+   {
+    "q": "Rapunzel\u2019s hair could hold a prince. A single human hair can hold about?",
+    "a": "100 grams",
+    "w": [
+     "1 gram",
+     "10 kilograms",
+     "100 kilograms"
+    ],
+    "e": "A full head of hair could, in theory, hold a couple of elephants."
+   },
+   {
+    "q": "Snow White fell asleep after eating?",
+    "a": "A poisoned apple",
+    "w": [
+     "A spinning wheel prick",
+     "A pea",
+     "A frog"
+    ],
+    "e": "Apple seeds do contain a little cyanide-releasing chemical, but you\u2019d need to chew a lot."
+   },
+   {
+    "q": "Pinocchio\u2019s nose grew when he lied. A long, bulbous red nose is called?",
+    "a": "Rhinophyma",
+    "w": [
+     "Rhinitis",
+     "Rhinoplasty",
+     "Rhinorrhoea"
+    ],
+    "e": "A complication of rosacea."
+   },
+   {
+    "q": "The Princess and the Pea: feeling a pea through mattresses is a sign of?",
+    "a": "Very sensitive touch (fun, not medical)",
+    "w": [
+     "Diabetes",
+     "A broken back",
+     "A cold"
+    ],
+    "e": "In real life, prolonged pressure on the same spot causes pressure sores."
+   },
+   {
+    "q": "Puss in Boots is a cat. Cats can\u2019t taste?",
+    "a": "Sweet things",
+    "w": [
+     "Salt",
+     "Sour",
+     "Bitter"
+    ],
+    "e": "They lack a working sweet-taste gene."
+   },
+   {
+    "q": "Rumpelstiltskin spun straw into gold. Gold has been used in medicine to treat?",
+    "a": "Rheumatoid arthritis",
+    "w": [
+     "Asthma",
+     "Malaria",
+     "Diabetes"
+    ],
+    "e": "Gold injections were common before modern drugs."
+   },
+   {
+    "q": "Little Red Riding Hood\u2019s grandmother had big eyes. Bulging eyes can be a sign of an overactive?",
+    "a": "Thyroid",
+    "w": [
+     "Liver",
+     "Bladder",
+     "Pancreas"
+    ],
+    "e": "Graves\u2019 disease."
+   },
+   {
+    "q": "Sleeping Beauty pricked her finger on a?",
+    "a": "Spindle",
+    "w": [
+     "Rose thorn",
+     "Needle",
+     "Sword"
+    ],
+    "e": "Finger-prick tests today check blood sugar."
+   },
+   {
+    "q": "Cinderella\u2019s glass slipper: tight shoes can cause a painful bump at the big toe called a?",
+    "a": "Bunion",
+    "w": [
+     "Corn",
+     "Verruca",
+     "Chilblain"
+    ],
+    "e": "Medically, hallux valgus."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-13",
+  "number": 88,
+  "difficulty": "Hard",
+  "theme": "Deranged: ICU oddities II",
+  "questions": [
+   {
+    "q": "In carbon monoxide poisoning, a pulse oximeter usually reads?",
+    "a": "Falsely normal",
+    "w": [
+     "Falsely low",
+     "Zero",
+     "Exactly 85%"
+    ],
+    "e": "It can\u2019t tell carboxyhaemoglobin from oxyhaemoglobin. A blood gas with co-oximetry can."
+   },
+   {
+    "q": "Methaemoglobinaemia classically makes a pulse oximeter read about?",
+    "a": "85%, whatever the real oxygen level",
+    "w": [
+     "100%",
+     "50%",
+     "Nothing at all"
+    ],
+    "e": "Chocolate-brown blood is the bedside clue."
+   },
+   {
+    "q": "Why does a patient on ECMO sometimes have bright red blood in the legs but blue fingers?",
+    "a": "\u2018Harlequin\u2019 or north\u2013south syndrome from mixing of flows",
+    "w": [
+     "A blood clot in one arm",
+     "A dye reaction",
+     "Hypothermia"
+    ],
+    "e": "Well-oxygenated ECMO blood meets poorly oxygenated blood from the patient\u2019s own heart."
+   },
+   {
+    "q": "The \u2018P\u2019 in PEEP stands for?",
+    "a": "Positive",
+    "w": [
+     "Pulmonary",
+     "Peak",
+     "Pressure-limited"
+    ],
+    "e": "Positive end-expiratory pressure keeps small airways open."
+   },
+   {
+    "q": "A tension pneumothorax on a ventilator often first shows as?",
+    "a": "Rising airway pressure and falling blood pressure",
+    "w": [
+     "A rash",
+     "A slow heart rate only",
+     "Better oxygen levels"
+    ],
+    "e": "Needle or finger decompression comes before the X-ray."
+   },
+   {
+    "q": "Propofol infusion syndrome is a rare but deadly problem with?",
+    "a": "High doses for a long time",
+    "w": [
+     "A single small dose",
+     "Mixing with milk",
+     "Cold infusion bags"
+    ],
+    "e": "Acidosis, heart failure and muscle breakdown."
+   },
+   {
+    "q": "Which drug, given for ventricular arrhythmias, can turn skin blue-grey with long use?",
+    "a": "Amiodarone",
+    "w": [
+     "Adenosine",
+     "Lignocaine",
+     "Digoxin"
+    ],
+    "e": "It also affects the thyroid, lungs and liver."
+   },
+   {
+    "q": "The \u2018lethal triad\u2019 in major trauma is hypothermia, acidosis and?",
+    "a": "Coagulopathy",
+    "w": [
+     "Hypoglycaemia",
+     "Fever",
+     "Hypertension"
+    ],
+    "e": "Each makes the others worse."
+   },
+   {
+    "q": "Why can giving oxygen raise carbon dioxide in some people with COPD?",
+    "a": "Mostly through changes in lung blood flow and the Haldane effect",
+    "w": [
+     "Oxygen turns into CO2 in the lungs",
+     "Oxygen blocks the nose",
+     "Oxygen is contaminated"
+    ],
+    "e": "\u2018Loss of hypoxic drive\u2019 is only a small part of the story."
+   },
+   {
+    "q": "A \u2018Lazarus sign\u2019 in brain death is?",
+    "a": "A spinal reflex that can raise the arms",
+    "w": [
+     "Breathing returning",
+     "The heart restarting",
+     "Eyes opening on command"
+    ],
+    "e": "It comes from the spinal cord, not the brain, and can distress families."
+   }
+  ],
+  "more": {
+   "url": "https://derangedphysiology.com/main/",
+   "label": "More ICU oddities on Deranged Physiology"
+  }
+ },
+ {
+  "date": "2027-01-14",
+  "number": 89,
+  "difficulty": "Medium",
+  "theme": "Jungle doctors: tropical medicine",
+  "questions": [
+   {
+    "q": "Albert Schweitzer, born on this date in 1875, founded a hospital in?",
+    "a": "Gabon (Lambar\u00e9n\u00e9)",
+    "w": [
+     "Congo",
+     "India",
+     "Brazil"
+    ],
+    "e": "He was also an organist and won the 1952 Nobel Peace Prize."
+   },
+   {
+    "q": "Malaria is caused by a parasite called?",
+    "a": "Plasmodium",
+    "w": [
+     "Trypanosoma",
+     "Leishmania",
+     "Giardia"
+    ],
+    "e": "Plasmodium falciparum is the most dangerous."
+   },
+   {
+    "q": "Which insect spreads sleeping sickness?",
+    "a": "Tsetse fly",
+    "w": [
+     "Sandfly",
+     "Mosquito",
+     "Kissing bug"
+    ],
+    "e": "African trypanosomiasis."
+   },
+   {
+    "q": "Chagas disease is spread by?",
+    "a": "Kissing bugs",
+    "w": [
+     "Ticks",
+     "Tsetse flies",
+     "Lice"
+    ],
+    "e": "They bite near the lips at night, hence the name."
+   },
+   {
+    "q": "Dengue is spread by which mosquito?",
+    "a": "Aedes",
+    "w": [
+     "Anopheles",
+     "Culex",
+     "Mansonia"
+    ],
+    "e": "Aedes bite in the daytime."
+   },
+   {
+    "q": "Which drug, from cinchona bark, was the first effective malaria treatment?",
+    "a": "Quinine",
+    "w": [
+     "Artemisinin",
+     "Chloroquine",
+     "Penicillin"
+    ],
+    "e": "It gives tonic water its bitter taste."
+   },
+   {
+    "q": "Artemisinin, from sweet wormwood, won Tu Youyou a Nobel Prize in?",
+    "a": "2015",
+    "w": [
+     "1975",
+     "1995",
+     "2025"
+    ],
+    "e": "She found the method in a 1,600-year-old Chinese text."
+   },
+   {
+    "q": "Leprosy mainly damages the skin and?",
+    "a": "Nerves",
+    "w": [
+     "Liver",
+     "Bones only",
+     "Heart"
+    ],
+    "e": "Loss of feeling leads to unnoticed injuries."
+   },
+   {
+    "q": "Yellow fever gets its name from?",
+    "a": "Jaundice",
+    "w": [
+     "Yellow vomit",
+     "Yellow mosquitoes",
+     "Yellow sweat"
+    ],
+    "e": "It damages the liver."
+   },
+   {
+    "q": "Australia\u2019s tropical north has which melioidosis-causing bacterium in its soil?",
+    "a": "Burkholderia pseudomallei",
+    "w": [
+     "Mycobacterium ulcerans",
+     "Coxiella burnetii",
+     "Leptospira"
+    ],
+    "e": "Cases spike after heavy wet-season rain."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-15",
+  "number": 90,
+  "difficulty": "Hard",
+  "theme": "Fact or myth?",
+  "questions": [
+   {
+    "q": "Wikipedia launched on this date in 2001. Myth or fact: we only use 10% of our brains?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "True only when asleep",
+     "True for children"
+    ],
+    "e": "Scans show activity across the whole brain."
+   },
+   {
+    "q": "Cracking your knuckles causes arthritis?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "Only in thumbs",
+     "Only after age 60"
+    ],
+    "e": "A doctor cracked one hand for 60 years and found no difference."
+   },
+   {
+    "q": "Hair and nails keep growing after death?",
+    "a": "Myth: the skin shrinks back",
+    "w": [
+     "Fact",
+     "Only hair",
+     "Only nails"
+    ],
+    "e": "Drying skin retracts, making them look longer."
+   },
+   {
+    "q": "You lose most of your body heat through your head?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "True for babies only",
+     "True only in wind"
+    ],
+    "e": "Any uncovered part loses heat. Babies\u2019 heads are relatively big, though."
+   },
+   {
+    "q": "Sugar makes children hyperactive?",
+    "a": "Myth, in controlled trials",
+    "w": [
+     "Fact",
+     "Only with chocolate",
+     "Only after 8 pm"
+    ],
+    "e": "Parents who think their child had sugar rate them as more hyperactive."
+   },
+   {
+    "q": "Reading in dim light ruins your eyesight?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "Only for children",
+     "Only with glasses"
+    ],
+    "e": "It can tire your eyes, but no lasting harm."
+   },
+   {
+    "q": "Shaving makes hair grow back thicker?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "Only on legs",
+     "Only on faces"
+    ],
+    "e": "The blunt tip just feels coarser."
+   },
+   {
+    "q": "Swallowed gum stays in your gut for seven years?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "Only for two years",
+     "Only in children"
+    ],
+    "e": "It passes through like other indigestible things."
+   },
+   {
+    "q": "You should wait 30 minutes after eating to swim?",
+    "a": "Myth",
+    "w": [
+     "Fact",
+     "Only in the ocean",
+     "Only after big meals"
+    ],
+    "e": "No good evidence of cramps causing drowning."
+   },
+   {
+    "q": "Vaccines cause autism?",
+    "a": "Myth: disproved by huge studies",
+    "w": [
+     "Fact",
+     "Only MMR",
+     "Unknown"
+    ],
+    "e": "The original 1998 paper was retracted and its author struck off."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-16",
+  "number": 91,
+  "difficulty": "Hard",
+  "theme": "Alcohol and the body",
+  "questions": [
+   {
+    "q": "US Prohibition was ratified on this date in 1919. Which enzyme does most of the work breaking down alcohol in the liver?",
+    "a": "Alcohol dehydrogenase",
+    "w": [
+     "Lipase",
+     "Amylase",
+     "Catalase only"
+    ],
+    "e": "It turns ethanol into acetaldehyde."
+   },
+   {
+    "q": "The \u2018Asian flush\u2019 after drinking is due to?",
+    "a": "Slow breakdown of acetaldehyde",
+    "w": [
+     "An allergy to grapes",
+     "Fast breakdown of alcohol",
+     "Low blood sugar"
+    ],
+    "e": "A variant of ALDH2. It also raises oesophageal cancer risk."
+   },
+   {
+    "q": "Disulfiram (Antabuse) makes people sick when they drink by blocking?",
+    "a": "Aldehyde dehydrogenase",
+    "w": [
+     "Alcohol dehydrogenase",
+     "Stomach emptying",
+     "Liver blood flow"
+    ],
+    "e": "Acetaldehyde builds up."
+   },
+   {
+    "q": "Wernicke\u2019s encephalopathy in heavy drinkers is from lack of which vitamin?",
+    "a": "Thiamine (B1)",
+    "w": [
+     "Vitamin C",
+     "Vitamin B12",
+     "Vitamin D"
+    ],
+    "e": "Give thiamine before glucose."
+   },
+   {
+    "q": "Australia\u2019s guideline is no more than how many standard drinks a week?",
+    "a": "10",
+    "w": [
+     "4",
+     "21",
+     "28"
+    ],
+    "e": "And no more than 4 on any one day."
+   },
+   {
+    "q": "A standard drink in Australia contains how much pure alcohol?",
+    "a": "10 grams",
+    "w": [
+     "5 grams",
+     "20 grams",
+     "30 grams"
+    ],
+    "e": "A pint of full-strength beer is about 2."
+   },
+   {
+    "q": "Alcohol makes you wee more by blocking which hormone?",
+    "a": "Antidiuretic hormone",
+    "w": [
+     "Insulin",
+     "Aldosterone",
+     "Thyroxine"
+    ],
+    "e": "Hence the dehydrated hangover."
+   },
+   {
+    "q": "Delirium tremens from alcohol withdrawal usually starts?",
+    "a": "2 to 3 days after the last drink",
+    "w": [
+     "Within an hour",
+     "After a month",
+     "Only while drinking"
+    ],
+    "e": "It can be fatal without treatment."
+   },
+   {
+    "q": "Methanol poisoning damages which organ especially?",
+    "a": "The eyes",
+    "w": [
+     "The ears",
+     "The skin",
+     "The teeth"
+    ],
+    "e": "Its breakdown product, formic acid, harms the optic nerve."
+   },
+   {
+    "q": "A \u2018holiday heart\u2019 after a binge is usually which rhythm?",
+    "a": "Atrial fibrillation",
+    "w": [
+     "Complete heart block",
+     "Ventricular fibrillation",
+     "Normal sinus rhythm"
+    ],
+    "e": "Often settles once sober."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-17",
+  "number": 92,
+  "difficulty": "Genius",
+  "theme": "Inventor-doctors: Franklin and friends",
+  "questions": [
+   {
+    "q": "Benjamin Franklin, born on this date in 1706, is credited with inventing?",
+    "a": "Bifocal glasses",
+    "w": [
+     "The stethoscope",
+     "The thermometer",
+     "Contact lenses"
+    ],
+    "e": "He cut two lenses in half and joined them."
+   },
+   {
+    "q": "Franklin also designed a flexible urinary catheter for?",
+    "a": "His brother",
+    "w": [
+     "Himself",
+     "George Washington",
+     "His dog"
+    ],
+    "e": "His brother John had bladder stones."
+   },
+   {
+    "q": "Who invented the modern clinical thermometer, small enough to read in five minutes?",
+    "a": "Thomas Clifford Allbutt",
+    "w": [
+     "Galileo",
+     "Fahrenheit",
+     "Celsius"
+    ],
+    "e": "Earlier ones were a foot long and took 20 minutes."
+   },
+   {
+    "q": "The first successful human-to-human blood transfusion with blood typing was possible after Karl Landsteiner discovered blood groups in?",
+    "a": "1901",
+    "w": [
+     "1801",
+     "1951",
+     "1981"
+    ],
+    "e": "He won a Nobel Prize in 1930."
+   },
+   {
+    "q": "Willem Einthoven built the first practical ECG machine, weighing about?",
+    "a": "270 kg",
+    "w": [
+     "2 kg",
+     "27 kg",
+     "2,700 kg"
+    ],
+    "e": "Patients put their limbs in buckets of salty water."
+   },
+   {
+    "q": "The Australian-invented bionic ear (cochlear implant) was pioneered by?",
+    "a": "Graeme Clark",
+    "w": [
+     "Fiona Wood",
+     "Howard Florey",
+     "Colin Sullivan"
+    ],
+    "e": "First implanted in Melbourne in 1978."
+   },
+   {
+    "q": "Spray-on skin for burns was developed by?",
+    "a": "Fiona Wood",
+    "w": [
+     "Graeme Clark",
+     "Ian Frazer",
+     "Barry Marshall"
+    ],
+    "e": "Used after the 2002 Bali bombings."
+   },
+   {
+    "q": "Which Australian developed the HPV vaccine technology with Jian Zhou?",
+    "a": "Ian Frazer",
+    "w": [
+     "Howard Florey",
+     "Fiona Stanley",
+     "Peter Doherty"
+    ],
+    "e": "Now preventing cervical cancer worldwide."
+   },
+   {
+    "q": "Franklin noticed lead poisoning among?",
+    "a": "Printers and other tradespeople",
+    "w": [
+     "Sailors",
+     "Farmers",
+     "Soldiers"
+    ],
+    "e": "He linked \u2018dry gripes\u2019 to handling lead type."
+   },
+   {
+    "q": "Franklin\u2019s \u2018glass armonica\u2019 was later blamed, wrongly, for?",
+    "a": "Causing madness",
+    "w": [
+     "Curing gout",
+     "Causing deafness",
+     "Spreading smallpox"
+    ],
+    "e": "People thought its eerie tones overstimulated the nerves."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-18",
+  "number": 93,
+  "difficulty": "Easy",
+  "theme": "Word roots: medical words",
+  "questions": [
+   {
+    "q": "Peter Roget, born on this date, wrote the first thesaurus and was also a?",
+    "a": "Doctor",
+    "w": [
+     "Sailor",
+     "Priest",
+     "Farmer"
+    ],
+    "e": "He started his word lists to cope with depression."
+   },
+   {
+    "q": "\u2018-itis\u2019 at the end of a word means?",
+    "a": "Inflammation",
+    "w": [
+     "Removal",
+     "Pain",
+     "Tumour"
+    ],
+    "e": "Tonsillitis: inflamed tonsils."
+   },
+   {
+    "q": "\u2018-ectomy\u2019 means?",
+    "a": "Cutting something out",
+    "w": [
+     "Looking inside",
+     "A scar",
+     "A blockage"
+    ],
+    "e": "Appendicectomy: removing the appendix."
+   },
+   {
+    "q": "\u2018Cardio\u2019 refers to the?",
+    "a": "Heart",
+    "w": [
+     "Lungs",
+     "Brain",
+     "Skin"
+    ],
+    "e": "From Greek kardia."
+   },
+   {
+    "q": "\u2018Derma\u2019 refers to the?",
+    "a": "Skin",
+    "w": [
+     "Blood",
+     "Teeth",
+     "Stomach"
+    ],
+    "e": "Dermatologists are skin doctors."
+   },
+   {
+    "q": "\u2018Hepato\u2019 refers to the?",
+    "a": "Liver",
+    "w": [
+     "Heart",
+     "Kidney",
+     "Hip"
+    ],
+    "e": "Hepatitis: liver inflammation."
+   },
+   {
+    "q": "\u2018Nephro\u2019 and \u2018renal\u2019 both refer to the?",
+    "a": "Kidneys",
+    "w": [
+     "Nerves",
+     "Nose",
+     "Neck"
+    ],
+    "e": "Greek and Latin, respectively."
+   },
+   {
+    "q": "\u2018Brady-\u2019 means?",
+    "a": "Slow",
+    "w": [
+     "Fast",
+     "Big",
+     "Broken"
+    ],
+    "e": "Bradycardia: slow heart rate."
+   },
+   {
+    "q": "\u2018Haem-\u2019 or \u2018hem-\u2019 refers to?",
+    "a": "Blood",
+    "w": [
+     "Head",
+     "Half",
+     "Heat"
+    ],
+    "e": "Haemorrhage: bleeding."
+   },
+   {
+    "q": "\u2018-scope\u2019 means an instrument for?",
+    "a": "Looking",
+    "w": [
+     "Cutting",
+     "Listening only",
+     "Measuring weight"
+    ],
+    "e": "Endoscope, microscope, stethoscope."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-19",
+  "number": 94,
+  "difficulty": "Easy",
+  "theme": "Gothic medicine: Poe and premature burial",
+  "questions": [
+   {
+    "q": "Edgar Allan Poe, born on this date in 1809, wrote about being buried alive. Fear of this is called?",
+    "a": "Taphophobia",
+    "w": [
+     "Arachnophobia",
+     "Claustrophobia only",
+     "Hydrophobia"
+    ],
+    "e": "Some Victorian coffins had bells for the \u2018dead\u2019 to ring."
+   },
+   {
+    "q": "Poe\u2019s \u2018The Tell-Tale Heart\u2019 is about a heartbeat. A normal adult resting heart rate is?",
+    "a": "60 to 100 beats a minute",
+    "w": [
+     "10 to 20",
+     "150 to 200",
+     "300"
+    ],
+    "e": "Athletes can sit lower."
+   },
+   {
+    "q": "What\u2019s the medical name for a death-like trance with rigid limbs?",
+    "a": "Catalepsy",
+    "w": [
+     "Narcolepsy",
+     "Epilepsy",
+     "Cataplexy"
+    ],
+    "e": "Victorians feared it was mistaken for death."
+   },
+   {
+    "q": "Which disease killed Poe\u2019s wife, Virginia, and was called \u2018consumption\u2019?",
+    "a": "Tuberculosis",
+    "w": [
+     "Cholera",
+     "Typhoid",
+     "Smallpox"
+    ],
+    "e": "It \u2018consumed\u2019 the body."
+   },
+   {
+    "q": "Ravens are clever. Which part of the brain handles memory?",
+    "a": "Hippocampus",
+    "w": [
+     "Cerebellum",
+     "Brainstem",
+     "Pituitary"
+    ],
+    "e": "Named for its seahorse shape."
+   },
+   {
+    "q": "Poe\u2019s \u2018Masque of the Red Death\u2019 features a disease that makes victims bleed from the?",
+    "a": "Pores",
+    "w": [
+     "Ears only",
+     "Eyes only",
+     "Knees"
+    ],
+    "e": "Fictional, but echoing plague and cholera fears."
+   },
+   {
+    "q": "Doctors today confirm death with checks including no breathing, no heartbeat and?",
+    "a": "Fixed, unresponsive pupils",
+    "w": [
+     "Cold hands",
+     "A blue tongue",
+     "Closed eyes"
+    ],
+    "e": "Done carefully, over several minutes."
+   },
+   {
+    "q": "Stiffening of the body after death is called?",
+    "a": "Rigor mortis",
+    "w": [
+     "Livor mortis",
+     "Algor mortis",
+     "Rigor vitae"
+    ],
+    "e": "It starts in a few hours and passes in a day or two."
+   },
+   {
+    "q": "Poe died aged 40 in mysterious circumstances in which city?",
+    "a": "Baltimore",
+    "w": [
+     "Boston",
+     "New York",
+     "Richmond"
+    ],
+    "e": "Theories range from rabies to beating."
+   },
+   {
+    "q": "A \u2018safety coffin\u2019 often had a?",
+    "a": "Bell connected by string",
+    "w": [
+     "Window",
+     "Phone",
+     "Heater"
+    ],
+    "e": "\u2018Saved by the bell\u2019 is often linked to these, probably wrongly."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-20",
+  "number": 95,
+  "difficulty": "Hard",
+  "theme": "Deranged: ICU oddities III",
+  "questions": [
+   {
+    "q": "Penguin Awareness Day: emperor penguins dive for over 20 minutes partly by?",
+    "a": "Storing oxygen in muscle myoglobin and slowing the heart",
+    "w": [
+     "Breathing through their skin",
+     "Carrying air bubbles in feathers",
+     "Having gills"
+    ],
+    "e": "Their heart rate can drop to a few beats a minute."
+   },
+   {
+    "q": "The mammalian diving reflex is triggered mainly by?",
+    "a": "Cold water on the face",
+    "w": [
+     "Warm water on the feet",
+     "Holding your nose",
+     "Eating fish"
+    ],
+    "e": "It slows the heart: one trick for stopping SVT."
+   },
+   {
+    "q": "Adenosine for SVT is given as a fast push because it?",
+    "a": "Lasts only seconds in the blood",
+    "w": [
+     "Burns the vein",
+     "Is very thick",
+     "Needs to reach the brain"
+    ],
+    "e": "Patients often describe a brief sense of doom."
+   },
+   {
+    "q": "Why does an endotracheal tube sometimes end up in the right main bronchus?",
+    "a": "It\u2019s wider and more vertical than the left",
+    "w": [
+     "It\u2019s shorter",
+     "The left is blocked by the heart",
+     "Tubes are curved to the right"
+    ],
+    "e": "Listening to both sides checks for it."
+   },
+   {
+    "q": "\u2018Auto-PEEP\u2019 in asthma on a ventilator happens because?",
+    "a": "There\u2019s not enough time to breathe out fully",
+    "w": [
+     "The machine leaks",
+     "The patient breathes too slowly",
+     "Oxygen is too high"
+    ],
+    "e": "Air trapping can drop blood pressure. Disconnect and let them breathe out."
+   },
+   {
+    "q": "Which electrolyte is given urgently for torsades de pointes?",
+    "a": "Magnesium",
+    "w": [
+     "Potassium only",
+     "Sodium",
+     "Phosphate"
+    ],
+    "e": "Even if the magnesium level is normal."
+   },
+   {
+    "q": "Neuromuscular blockers stop movement but do not?",
+    "a": "Cause sleep or pain relief",
+    "w": [
+     "Stop breathing",
+     "Relax muscles",
+     "Last long"
+    ],
+    "e": "Sedation must always come first: awareness is horrific."
+   },
+   {
+    "q": "Sugammadex reverses which muscle relaxant by wrapping it up?",
+    "a": "Rocuronium",
+    "w": [
+     "Suxamethonium",
+     "Morphine",
+     "Propofol"
+    ],
+    "e": "It\u2019s a ring-shaped sugar molecule."
+   },
+   {
+    "q": "Succinylcholine can dangerously raise which blood level in burns or crush patients?",
+    "a": "Potassium",
+    "w": [
+     "Sodium",
+     "Calcium",
+     "Glucose"
+    ],
+    "e": "From extra receptors spread across damaged muscle."
+   },
+   {
+    "q": "Why might an ICU patient on long-term sedation get \u2018ICU-acquired weakness\u2019?",
+    "a": "Nerve and muscle damage from critical illness and immobility",
+    "w": [
+     "Too much protein",
+     "Low oxygen in the room",
+     "Too much physiotherapy"
+    ],
+    "e": "Early mobilisation helps prevent it."
+   }
+  ],
+  "more": {
+   "url": "https://derangedphysiology.com/main/",
+   "label": "More ICU oddities on Deranged Physiology"
+  }
+ },
+ {
+  "date": "2027-01-21",
+  "number": 96,
+  "difficulty": "Medium",
+  "theme": "Hug it out: touch and oxytocin",
+  "questions": [
+   {
+    "q": "National Hugging Day: which hormone rises with hugs and touch?",
+    "a": "Oxytocin",
+    "w": [
+     "Cortisol",
+     "Adrenaline",
+     "Glucagon"
+    ],
+    "e": "Sometimes called the bonding hormone."
+   },
+   {
+    "q": "\u2018Kangaroo care\u2019 for newborns means?",
+    "a": "Skin-to-skin contact on a parent\u2019s chest",
+    "w": [
+     "Carrying in a pouch-like sling only",
+     "Feeding with formula",
+     "Sleeping on their tummy"
+    ],
+    "e": "It helps regulate temperature, breathing and feeding."
+   },
+   {
+    "q": "Kangaroo care was pioneered in 1978 in?",
+    "a": "Colombia",
+    "w": [
+     "Australia",
+     "Sweden",
+     "Japan"
+    ],
+    "e": "Bogot\u00e1, when incubators were scarce."
+   },
+   {
+    "q": "Which touch receptors respond to slow, gentle stroking?",
+    "a": "C-tactile fibres",
+    "w": [
+     "Pacinian corpuscles only",
+     "Pain fibres",
+     "Muscle spindles"
+    ],
+    "e": "They prefer touch at skin temperature."
+   },
+   {
+    "q": "Oxytocin is released from which gland?",
+    "a": "Posterior pituitary",
+    "w": [
+     "Thyroid",
+     "Adrenal cortex",
+     "Pineal"
+    ],
+    "e": "It\u2019s made in the hypothalamus."
+   },
+   {
+    "q": "Oxytocin is also used in hospitals to?",
+    "a": "Start or strengthen labour contractions",
+    "w": [
+     "Treat asthma",
+     "Lower blood sugar",
+     "Stop seizures"
+    ],
+    "e": "And to reduce bleeding after birth."
+   },
+   {
+    "q": "Babies deprived of touch in old orphanages showed slowed growth. This is called?",
+    "a": "Psychosocial dwarfism",
+    "w": [
+     "Rickets",
+     "Marasmus only",
+     "Achondroplasia"
+    ],
+    "e": "Growth often catches up with care."
+   },
+   {
+    "q": "Which part of the skin has the highest density of touch receptors?",
+    "a": "Fingertips and lips",
+    "w": [
+     "Back",
+     "Thighs",
+     "Upper arm"
+    ],
+    "e": "The two-point test shows the difference."
+   },
+   {
+    "q": "Hugs that last at least about how long are often quoted as most calming?",
+    "a": "20 seconds",
+    "w": [
+     "1 second",
+     "5 minutes",
+     "1 hour"
+    ],
+    "e": "Evidence is thin, but it\u2019s a nice excuse."
+   },
+   {
+    "q": "Weighted blankets mimic which kind of touch?",
+    "a": "Deep pressure",
+    "w": [
+     "Light tickle",
+     "Vibration",
+     "Heat"
+    ],
+    "e": "Evidence for anxiety and sleep is mixed."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-22",
+  "number": 97,
+  "difficulty": "Hard",
+  "theme": "Cold science",
+  "questions": [
+   {
+    "q": "Francis Bacon, born on this date, reportedly died after stuffing a chicken with?",
+    "a": "Snow",
+    "w": [
+     "Salt",
+     "Ice cream",
+     "Sawdust"
+    ],
+    "e": "Testing whether cold preserves meat. He caught a chill, probably pneumonia."
+   },
+   {
+    "q": "Moderate hypothermia starts below which core temperature?",
+    "a": "32\u00b0C",
+    "w": [
+     "36\u00b0C",
+     "28\u00b0C",
+     "35.5\u00b0C"
+    ],
+    "e": "Mild is 32 to 35\u00b0C."
+   },
+   {
+    "q": "\u2018Nobody is dead until warm and dead\u2019 refers to?",
+    "a": "Resuscitating hypothermic patients longer",
+    "w": [
+     "Warming bodies before autopsy",
+     "Fever after death",
+     "Frostbite"
+    ],
+    "e": "Cold protects the brain. People have survived hours of CPR."
+   },
+   {
+    "q": "\u2018Paradoxical undressing\u2019 in hypothermia happens because?",
+    "a": "Constricted blood vessels suddenly dilate, causing a feeling of heat",
+    "w": [
+     "Clothes freeze",
+     "Confusion about colour",
+     "Shivering stops"
+    ],
+    "e": "Rescuers find people partly undressed in the snow."
+   },
+   {
+    "q": "Frostbitten tissue should be rewarmed?",
+    "a": "In warm water, once there\u2019s no risk of refreezing",
+    "w": [
+     "By rubbing with snow",
+     "Near a fire",
+     "Never"
+    ],
+    "e": "Refreezing does more damage."
+   },
+   {
+    "q": "Brown fat generates heat using which protein?",
+    "a": "UCP1 (thermogenin)",
+    "w": [
+     "Myoglobin",
+     "Insulin",
+     "Collagen"
+    ],
+    "e": "Babies have lots, around the shoulders and neck."
+   },
+   {
+    "q": "Which part of the brain switches on shivering?",
+    "a": "Hypothalamus",
+    "w": [
+     "Cerebellum",
+     "Pituitary",
+     "Occipital lobe"
+    ],
+    "e": "It works like the body\u2019s thermostat."
+   },
+   {
+    "q": "Therapeutic hypothermia has been used to protect the brain after?",
+    "a": "Cardiac arrest and in newborns with oxygen starvation",
+    "w": [
+     "Broken legs",
+     "Asthma attacks",
+     "Migraine"
+    ],
+    "e": "Benefit in adults is now debated; in newborns it\u2019s standard."
+   },
+   {
+    "q": "Cold urticaria causes?",
+    "a": "Hives on exposure to cold",
+    "w": [
+     "Frostbite",
+     "Chilblains only",
+     "Fever"
+    ],
+    "e": "Jumping into cold water can be dangerous for these people."
+   },
+   {
+    "q": "Chilblains (pernio) are?",
+    "a": "Itchy, red-purple swellings after cold exposure",
+    "w": [
+     "Blisters from heat",
+     "A fungal infection",
+     "Bruises from falls"
+    ],
+    "e": "Rewarming too fast makes them worse."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-23",
+  "number": 98,
+  "difficulty": "Hard",
+  "theme": "Women in medicine",
+  "questions": [
+   {
+    "q": "Elizabeth Blackwell became the first woman to earn a US medical degree on this date in?",
+    "a": "1849",
+    "w": [
+     "1749",
+     "1899",
+     "1929"
+    ],
+    "e": "Her classmates voted to admit her, thinking it was a joke."
+   },
+   {
+    "q": "Who was the first woman to qualify as a doctor in Britain, by passing the Apothecaries\u2019 exam?",
+    "a": "Elizabeth Garrett Anderson",
+    "w": [
+     "Florence Nightingale",
+     "Sophia Jex-Blake",
+     "Mary Seacole"
+    ],
+    "e": "The Society then changed its rules to stop other women doing the same."
+   },
+   {
+    "q": "James Barry, a 19th-century British army surgeon, was found after death to be?",
+    "a": "Assigned female at birth",
+    "w": [
+     "Not a qualified doctor",
+     "Two different people",
+     "A famous poet"
+    ],
+    "e": "Barry performed one of the first successful caesareans in Africa."
+   },
+   {
+    "q": "Who was Australia\u2019s first registered female doctor?",
+    "a": "Constance Stone",
+    "w": [
+     "Fiona Stanley",
+     "Lilian Cooper",
+     "Elizabeth Kenny"
+    ],
+    "e": "She founded the Queen Victoria Hospital in Melbourne."
+   },
+   {
+    "q": "Marie Curie won Nobel Prizes in physics and?",
+    "a": "Chemistry",
+    "w": [
+     "Medicine",
+     "Peace",
+     "Literature"
+    ],
+    "e": "She remains the only person to win in two sciences."
+   },
+   {
+    "q": "Virginia Apgar\u2019s score for newborns checks five things, including?",
+    "a": "Heart rate and breathing",
+    "w": [
+     "Weight and length",
+     "Blood type",
+     "Eye colour"
+    ],
+    "e": "Scored at 1 and 5 minutes."
+   },
+   {
+    "q": "Gertrude Elion won a Nobel Prize for developing drugs including?",
+    "a": "Aciclovir and azathioprine",
+    "w": [
+     "Penicillin",
+     "Insulin",
+     "Aspirin"
+    ],
+    "e": "She never finished a PhD."
+   },
+   {
+    "q": "Which Australian nurse developed a controversial polio treatment using hot packs and movement?",
+    "a": "Sister Elizabeth Kenny",
+    "w": [
+     "Vivian Bullwinkel",
+     "Nancy Wake",
+     "Olive Pink"
+    ],
+    "e": "Her methods influenced modern physiotherapy."
+   },
+   {
+    "q": "Rosalind Franklin\u2019s Photo 51 helped reveal the structure of?",
+    "a": "DNA",
+    "w": [
+     "Insulin",
+     "Haemoglobin",
+     "Viruses"
+    ],
+    "e": "She died at 37, before the 1962 Nobel Prize."
+   },
+   {
+    "q": "Fran\u00e7oise Barr\u00e9-Sinoussi shared a Nobel Prize for discovering?",
+    "a": "HIV",
+    "w": [
+     "Hepatitis C",
+     "Prions",
+     "H. pylori"
+    ],
+    "e": "With Luc Montagnier, in 2008."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-24",
+  "number": 99,
+  "difficulty": "Genius",
+  "theme": "Cranial nerves",
+  "questions": [
+   {
+    "q": "Moebius Syndrome Awareness Day. Moebius syndrome mainly affects cranial nerves?",
+    "a": "6 and 7",
+    "w": [
+     "1 and 2",
+     "9 and 10",
+     "11 and 12"
+    ],
+    "e": "People can\u2019t smile or move their eyes sideways."
+   },
+   {
+    "q": "Which cranial nerve has the longest course inside the skull?",
+    "a": "Abducens (6)",
+    "w": [
+     "Olfactory (1)",
+     "Vagus (10)",
+     "Hypoglossal (12)"
+    ],
+    "e": "Why it\u2019s often affected by raised pressure."
+   },
+   {
+    "q": "Which cranial nerve is the only one to leave the back of the brainstem?",
+    "a": "Trochlear (4)",
+    "w": [
+     "Oculomotor (3)",
+     "Abducens (6)",
+     "Facial (7)"
+    ],
+    "e": "It\u2019s also the thinnest."
+   },
+   {
+    "q": "Bell\u2019s palsy affects which nerve?",
+    "a": "Facial (7)",
+    "w": [
+     "Trigeminal (5)",
+     "Vestibulocochlear (8)",
+     "Hypoglossal (12)"
+    ],
+    "e": "The forehead is weak too."
+   },
+   {
+    "q": "Which nerve carries taste from the front two-thirds of the tongue?",
+    "a": "Facial nerve (chorda tympani)",
+    "w": [
+     "Glossopharyngeal",
+     "Hypoglossal",
+     "Trigeminal"
+    ],
+    "e": "It passes through the middle ear."
+   },
+   {
+    "q": "Trigeminal neuralgia causes?",
+    "a": "Electric-shock face pain",
+    "w": [
+     "Facial droop",
+     "Loss of smell",
+     "Double vision"
+    ],
+    "e": "Carbamazepine is first-line."
+   },
+   {
+    "q": "Which cranial nerve drives saliva from the parotid gland?",
+    "a": "Glossopharyngeal (9)",
+    "w": [
+     "Facial (7)",
+     "Trigeminal (5)",
+     "Vagus (10)"
+    ],
+    "e": "Its fibres hitch a ride with a branch of the trigeminal to get there."
+   },
+   {
+    "q": "A \u2018down and out\u2019 eye with a droopy lid and big pupil suggests a problem with?",
+    "a": "Oculomotor (3)",
+    "w": [
+     "Trochlear (4)",
+     "Abducens (6)",
+     "Optic (2)"
+    ],
+    "e": "A painful one can mean an aneurysm."
+   },
+   {
+    "q": "Shrugging the shoulders tests cranial nerve?",
+    "a": "11 (accessory)",
+    "w": [
+     "10 (vagus)",
+     "12 (hypoglossal)",
+     "9 (glossopharyngeal)"
+    ],
+    "e": "It supplies trapezius and sternocleidomastoid."
+   },
+   {
+    "q": "When the hypoglossal nerve is damaged, the tongue points?",
+    "a": "Towards the damaged side",
+    "w": [
+     "Away from the damaged side",
+     "Straight up",
+     "It can\u2019t move at all"
+    ],
+    "e": "The healthy side pushes it over."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-25",
+  "number": 100,
+  "difficulty": "Easy",
+  "theme": "Burns Night: offal anatomy",
+  "questions": [
+   {
+    "q": "Haggis, eaten on Burns Night, traditionally contains a sheep\u2019s heart, liver and?",
+    "a": "Lungs",
+    "w": [
+     "Brain",
+     "Kidneys only",
+     "Tongue"
+    ],
+    "e": "Lungs are banned in haggis sold in the US."
+   },
+   {
+    "q": "Haggis is traditionally cooked inside a sheep\u2019s?",
+    "a": "Stomach",
+    "w": [
+     "Bladder",
+     "Intestine",
+     "Lung"
+    ],
+    "e": "Most now use synthetic casings."
+   },
+   {
+    "q": "Which organ cleans your blood and makes bile?",
+    "a": "Liver",
+    "w": [
+     "Heart",
+     "Lungs",
+     "Spleen"
+    ],
+    "e": "The largest internal organ."
+   },
+   {
+    "q": "How many chambers does a human heart have?",
+    "a": "Four",
+    "w": [
+     "Two",
+     "Three",
+     "Six"
+    ],
+    "e": "Two atria and two ventricles."
+   },
+   {
+    "q": "Sweetbreads are usually the thymus or?",
+    "a": "Pancreas",
+    "w": [
+     "Brain",
+     "Liver",
+     "Heart"
+    ],
+    "e": "Despite the name, they\u2019re not sweet or bread."
+   },
+   {
+    "q": "Tripe is the lining of a cow\u2019s?",
+    "a": "Stomach",
+    "w": [
+     "Lung",
+     "Intestine",
+     "Bladder"
+    ],
+    "e": "Cows have four stomach compartments."
+   },
+   {
+    "q": "Liver is very high in which vitamin, enough to be risky in pregnancy?",
+    "a": "Vitamin A",
+    "w": [
+     "Vitamin C",
+     "Vitamin D",
+     "Vitamin K"
+    ],
+    "e": "Pregnant women are advised to limit it."
+   },
+   {
+    "q": "Which organ, eaten as a delicacy, is the body\u2019s main filter of urine?",
+    "a": "Kidney",
+    "w": [
+     "Heart",
+     "Lung",
+     "Spleen"
+    ],
+    "e": "Steak and kidney pie, anyone?"
+   },
+   {
+    "q": "Robert Burns died aged 37, possibly of?",
+    "a": "Rheumatic heart disease",
+    "w": [
+     "Scurvy",
+     "Plague",
+     "Diabetes"
+    ],
+    "e": "His doctors also prescribed sea bathing."
+   },
+   {
+    "q": "The lungs float in water because they\u2019re full of?",
+    "a": "Air",
+    "w": [
+     "Fat",
+     "Water",
+     "Blood"
+    ],
+    "e": "The French call them \u2018mou\u2019, meaning soft."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-26",
+  "number": 101,
+  "difficulty": "Easy",
+  "theme": "Kids\u2019 hearts",
+  "questions": [
+   {
+    "q": "Kawasaki Disease Awareness Day. Kawasaki disease mainly affects?",
+    "a": "Children under five",
+    "w": [
+     "Teenagers",
+     "Older adults",
+     "Newborns only"
+    ],
+    "e": "Fever for five days or more is the key feature."
+   },
+   {
+    "q": "Kawasaki disease can damage which blood vessels?",
+    "a": "Coronary arteries",
+    "w": [
+     "Leg veins",
+     "Lung capillaries",
+     "Kidney arteries only"
+    ],
+    "e": "Early treatment with immunoglobulin protects them."
+   },
+   {
+    "q": "A child\u2019s normal heart rate is?",
+    "a": "Faster than an adult\u2019s",
+    "w": [
+     "Slower than an adult\u2019s",
+     "The same as an adult\u2019s",
+     "Irregular"
+    ],
+    "e": "A newborn\u2019s can be 120 to 160."
+   },
+   {
+    "q": "A \u2018hole in the heart\u2019 between the lower chambers is a?",
+    "a": "Ventricular septal defect",
+    "w": [
+     "Heart attack",
+     "Murmur only",
+     "Valve infection"
+    ],
+    "e": "Small ones often close on their own."
+   },
+   {
+    "q": "Many children have harmless heart sounds called?",
+    "a": "Innocent murmurs",
+    "w": [
+     "Gallops",
+     "Rubs",
+     "Clicks"
+    ],
+    "e": "They often come and go with fever or exercise."
+   },
+   {
+    "q": "Which bacterial throat infection can lead to rheumatic heart disease if untreated?",
+    "a": "Strep throat",
+    "w": [
+     "Common cold",
+     "Tonsil stones",
+     "Glandular fever"
+    ],
+    "e": "Rheumatic heart disease is still common in some Aboriginal and Torres Strait Islander communities."
+   },
+   {
+    "q": "A blue baby may have a heart problem letting?",
+    "a": "Oxygen-poor blood bypass the lungs",
+    "w": [
+     "Too much oxygen in",
+     "Blood clot",
+     "Fast heartbeat"
+    ],
+    "e": "Tetralogy of Fallot is a classic cause."
+   },
+   {
+    "q": "Which test uses sound waves to see inside a child\u2019s heart?",
+    "a": "Echocardiogram",
+    "w": [
+     "X-ray",
+     "ECG",
+     "Blood test"
+    ],
+    "e": "Painless, often with a cartoon on the screen."
+   },
+   {
+    "q": "Kawasaki disease is named after a doctor from?",
+    "a": "Japan",
+    "w": [
+     "Korea",
+     "China",
+     "Thailand"
+    ],
+    "e": "Tomisaku Kawasaki described it in 1967."
+   },
+   {
+    "q": "Kawasaki disease often causes red eyes, a rash and?",
+    "a": "Red, cracked lips and a \u2018strawberry tongue\u2019",
+    "w": [
+     "Hair loss",
+     "Yellow skin",
+     "Blue nails"
+    ],
+    "e": "Hands and feet swell, then peel."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-27",
+  "number": 102,
+  "difficulty": "Hard",
+  "theme": "Deranged: ICU oddities IV",
+  "questions": [
+   {
+    "q": "Mozart was born on this date. One theory blames his death on?",
+    "a": "Kidney failure after a strep infection",
+    "w": [
+     "A poisoned pastry",
+     "Dehydration",
+     "Scurvy"
+    ],
+    "e": "Hundreds of theories exist; poisoning by Salieri is a myth."
+   },
+   {
+    "q": "Why can a central line placed in the neck cause a pneumothorax?",
+    "a": "The lung\u2019s top sits just behind the vein",
+    "w": [
+     "The needle pops the heart",
+     "Air in the drip",
+     "The patient coughs"
+    ],
+    "e": "Ultrasound guidance makes this rarer."
+   },
+   {
+    "q": "\u2018Refeeding syndrome\u2019 is dangerous mainly because of a sudden drop in?",
+    "a": "Phosphate",
+    "w": [
+     "Sodium",
+     "Glucose",
+     "Calcium"
+    ],
+    "e": "Feeding drives phosphate into cells. Start slowly."
+   },
+   {
+    "q": "In sepsis, lactate rises partly because adrenaline?",
+    "a": "Speeds up glycolysis",
+    "w": [
+     "Blocks the liver",
+     "Is made of lactate",
+     "Slows the heart"
+    ],
+    "e": "High lactate isn\u2019t always from lack of oxygen."
+   },
+   {
+    "q": "Hyperbaric oxygen is used for carbon monoxide poisoning and?",
+    "a": "Decompression illness",
+    "w": [
+     "Asthma",
+     "Heart attack",
+     "Migraine"
+    ],
+    "e": "Also some stubborn wounds."
+   },
+   {
+    "q": "Why do burns patients need huge amounts of fluid early?",
+    "a": "Leaky capillaries lose fluid into tissues",
+    "w": [
+     "They sweat it out",
+     "The kidneys stop working",
+     "They can\u2019t drink"
+    ],
+    "e": "The Parkland formula estimates how much."
+   },
+   {
+    "q": "\u2018Permissive hypercapnia\u2019 on a ventilator means?",
+    "a": "Allowing CO2 to rise to protect the lungs",
+    "w": [
+     "Forcing CO2 down quickly",
+     "Giving extra CO2 by mask",
+     "Turning off the ventilator"
+    ],
+    "e": "Small breaths avoid overstretching damaged lungs."
+   },
+   {
+    "q": "Prone positioning (lying patients on their tummy) helps ARDS because?",
+    "a": "More lung gets air and blood together",
+    "w": [
+     "It stops coughing",
+     "It warms the patient",
+     "It prevents pressure sores"
+    ],
+    "e": "A 2013 trial showed lower deaths."
+   },
+   {
+    "q": "Why might a patient with a very high sodium level need it lowered slowly?",
+    "a": "To avoid brain swelling",
+    "w": [
+     "To avoid kidney stones",
+     "To stop shivering",
+     "To prevent hair loss"
+    ],
+    "e": "The brain adapts to the high level; rapid change draws water in."
+   },
+   {
+    "q": "Correcting low sodium too fast risks?",
+    "a": "Osmotic demyelination",
+    "w": [
+     "A stroke from clots",
+     "Hypothermia",
+     "Liver failure"
+    ],
+    "e": "Damage to the brainstem: \u2018locked-in\u2019 in severe cases."
+   }
+  ],
+  "more": {
+   "url": "https://derangedphysiology.com/main/",
+   "label": "More ICU oddities on Deranged Physiology"
+  }
+ },
+ {
+  "date": "2027-01-28",
+  "number": 103,
+  "difficulty": "Medium",
+  "theme": "Keeping secrets: medical privacy",
+  "questions": [
+   {
+    "q": "Data Privacy Day. Which ancient oath includes keeping patients\u2019 secrets?",
+    "a": "The Hippocratic Oath",
+    "w": [
+     "The Nightingale Pledge only",
+     "The Olympic Oath",
+     "Magna Carta"
+    ],
+    "e": "\u2018Whatever I see or hear\u2026 I will not divulge.\u2019"
+   },
+   {
+    "q": "In Australia, the national online health summary is called?",
+    "a": "My Health Record",
+    "w": [
+     "Medicare Online",
+     "HealthBook",
+     "Patient Cloud"
+    ],
+    "e": "People can set access controls or opt out."
+   },
+   {
+    "q": "A doctor may break confidentiality when?",
+    "a": "There\u2019s a serious risk of harm to someone",
+    "w": [
+     "A friend asks nicely",
+     "The patient is famous",
+     "Never, under any circumstance"
+    ],
+    "e": "And when the law requires, such as some notifiable diseases."
+   },
+   {
+    "q": "Which diseases must doctors report to public health, even without consent?",
+    "a": "Notifiable diseases like measles and tuberculosis",
+    "w": [
+     "Colds and flu-like illness",
+     "Allergies",
+     "Sprains"
+    ],
+    "e": "So outbreaks can be traced."
+   },
+   {
+    "q": "At what age can a young person in Australia usually have their own Medicare card?",
+    "a": "15",
+    "w": [
+     "10",
+     "18",
+     "21"
+    ],
+    "e": "Many get confidential care from teen years."
+   },
+   {
+    "q": "A \u2018mature minor\u2019 can consent to treatment if they?",
+    "a": "Understand the treatment and its risks",
+    "w": [
+     "Are over 6 feet tall",
+     "Have a phone",
+     "Are working"
+    ],
+    "e": "Sometimes called Gillick competence."
+   },
+   {
+    "q": "Leaving patient notes on a public train is a breach of?",
+    "a": "Privacy and confidentiality",
+    "w": [
+     "Copyright",
+     "Trade law",
+     "Road rules"
+    ],
+    "e": "Health data breaches must be reported in Australia."
+   },
+   {
+    "q": "De-identified data means?",
+    "a": "Names and details removed so people can\u2019t be identified",
+    "w": [
+     "Data deleted",
+     "Encrypted only",
+     "Printed on paper"
+    ],
+    "e": "Combined datasets can sometimes re-identify people."
+   },
+   {
+    "q": "Which Australian law sets the main rules for health information held by private practices?",
+    "a": "Privacy Act 1988",
+    "w": [
+     "Health Insurance Act 1973",
+     "Therapeutic Goods Act 1989",
+     "Freedom of Information Act 1982"
+    ],
+    "e": "Its Australian Privacy Principles cover collecting, using and sharing health data."
+   },
+   {
+    "q": "In Australia, patients generally have the right to?",
+    "a": "Access their own medical records",
+    "w": [
+     "Change their doctor\u2019s notes",
+     "Delete hospital records",
+     "See other patients\u2019 files"
+    ],
+    "e": "There can be rare exceptions."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-29",
+  "number": 104,
+  "difficulty": "Hard",
+  "theme": "Diagnostic puzzles",
+  "questions": [
+   {
+    "q": "National Puzzle Day. A woman with fatigue, cold intolerance, weight gain and constipation most likely has?",
+    "a": "Hypothyroidism",
+    "w": [
+     "Hyperthyroidism",
+     "Diabetes",
+     "Anaemia only"
+    ],
+    "e": "TSH is high."
+   },
+   {
+    "q": "Fever, neck stiffness and a non-blanching rash in a teenager means?",
+    "a": "Meningococcal disease until proven otherwise",
+    "w": [
+     "Measles",
+     "Allergy",
+     "Sunburn"
+    ],
+    "e": "Give antibiotics immediately."
+   },
+   {
+    "q": "Sudden worst-ever headache, \u2018like a thunderclap\u2019, suggests?",
+    "a": "Subarachnoid haemorrhage",
+    "w": [
+     "Migraine",
+     "Tension headache",
+     "Sinusitis"
+    ],
+    "e": "Needs urgent CT."
+   },
+   {
+    "q": "A young man with back stiffness worse in the morning, better with exercise, has?",
+    "a": "Ankylosing spondylitis (axial spondyloarthritis)",
+    "w": [
+     "Disc prolapse",
+     "Muscle strain",
+     "Kidney stones"
+    ],
+    "e": "Inflammatory back pain pattern."
+   },
+   {
+    "q": "Red, painful big toe joint overnight after a big night out suggests?",
+    "a": "Gout",
+    "w": [
+     "Bunion",
+     "Fracture",
+     "Cellulitis only"
+    ],
+    "e": "Uric acid crystals."
+   },
+   {
+    "q": "Pain starting near the belly button then moving to the right lower abdomen suggests?",
+    "a": "Appendicitis",
+    "w": [
+     "Gallstones",
+     "Kidney stones",
+     "Ulcer"
+    ],
+    "e": "The classic migration."
+   },
+   {
+    "q": "A smoker with clubbing, weight loss and coughing blood needs checking for?",
+    "a": "Lung cancer",
+    "w": [
+     "Asthma",
+     "Hay fever",
+     "Reflux"
+    ],
+    "e": "Chest imaging is needed."
+   },
+   {
+    "q": "Excessive thirst, weeing a lot and weight loss in a child suggests?",
+    "a": "Type 1 diabetes",
+    "w": [
+     "Urine infection",
+     "Growth spurt",
+     "Hay fever"
+    ],
+    "e": "Check a finger-prick sugar the same day."
+   },
+   {
+    "q": "Painless jaundice with weight loss in an older adult raises concern for?",
+    "a": "Pancreatic cancer",
+    "w": [
+     "Hepatitis A",
+     "Gilbert\u2019s syndrome",
+     "Gallstones only"
+    ],
+    "e": "Courvoisier\u2019s sign: a palpable gallbladder."
+   },
+   {
+    "q": "Tearing chest pain going to the back, with unequal arm blood pressures, suggests?",
+    "a": "Aortic dissection",
+    "w": [
+     "Heart attack",
+     "Pneumonia",
+     "Reflux"
+    ],
+    "e": "An emergency."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-30",
+  "number": 105,
+  "difficulty": "Hard",
+  "theme": "Neglected tropical diseases",
+  "questions": [
+   {
+    "q": "World NTD Day. About how many people are affected by neglected tropical diseases?",
+    "a": "Over 1 billion",
+    "w": [
+     "About 1 million",
+     "About 10 million",
+     "About 100 million"
+    ],
+    "e": "Mostly the world\u2019s poorest communities."
+   },
+   {
+    "q": "River blindness (onchocerciasis) is spread by?",
+    "a": "Blackflies",
+    "w": [
+     "Mosquitoes",
+     "Ticks",
+     "Snails"
+    ],
+    "e": "Ivermectin, donated since 1987, has transformed control."
+   },
+   {
+    "q": "Which NTD is spread by freshwater snails?",
+    "a": "Schistosomiasis",
+    "w": [
+     "Leprosy",
+     "Trachoma",
+     "Dengue"
+    ],
+    "e": "Larvae burrow through skin in contaminated water."
+   },
+   {
+    "q": "Trachoma, the leading infectious cause of blindness, is still found in?",
+    "a": "Some remote Aboriginal communities in Australia",
+    "w": [
+     "Only Africa",
+     "Only South America",
+     "Nowhere since 2000"
+    ],
+    "e": "Australia is working to eliminate it."
+   },
+   {
+    "q": "The \u2018SAFE\u2019 strategy for trachoma includes surgery, antibiotics, facial cleanliness and?",
+    "a": "Environmental improvement",
+    "w": [
+     "Spectacles",
+     "Sunscreen",
+     "Exercise"
+    ],
+    "e": "Clean water and toilets."
+   },
+   {
+    "q": "Lymphatic filariasis causes?",
+    "a": "Elephantiasis",
+    "w": [
+     "Blindness",
+     "Paralysis",
+     "Hair loss"
+    ],
+    "e": "Spread by mosquitoes."
+   },
+   {
+    "q": "Which NTD was the 2015 Nobel Prize partly awarded for treating, with ivermectin?",
+    "a": "River blindness and filariasis",
+    "w": [
+     "Malaria",
+     "Leprosy",
+     "Rabies"
+    ],
+    "e": "William Campbell and Satoshi \u014cmura."
+   },
+   {
+    "q": "Scabies was added to the WHO NTD list in?",
+    "a": "2017",
+    "w": [
+     "1957",
+     "1987",
+     "2025"
+    ],
+    "e": "Common in remote Australian communities, where it can lead to kidney and heart disease."
+   },
+   {
+    "q": "Snakebite envenoming was added as an NTD because it kills about?",
+    "a": "100,000 people a year",
+    "w": [
+     "100 people a year",
+     "1,000 people a year",
+     "10 million a year"
+    ],
+    "e": "Antivenom access is the big problem."
+   },
+   {
+    "q": "Which NTD causes \u2018dog-bite\u2019 deaths almost entirely preventable by vaccinating dogs?",
+    "a": "Rabies",
+    "w": [
+     "Leptospirosis",
+     "Toxoplasmosis",
+     "Tetanus"
+    ],
+    "e": "Almost always fatal once symptoms start."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-31",
+  "number": 106,
+  "difficulty": "Genius",
+  "theme": "Leprosy (Hansen\u2019s disease)",
+  "questions": [
+   {
+    "q": "World Leprosy Day falls on the last Sunday of January. Leprosy is caused by?",
+    "a": "Mycobacterium leprae",
+    "w": [
+     "Mycobacterium tuberculosis",
+     "Treponema pallidum",
+     "Borrelia"
+    ],
+    "e": "Gerhard Hansen identified it in 1873."
+   },
+   {
+    "q": "Which animal can naturally carry leprosy in the Americas?",
+    "a": "Nine-banded armadillo",
+    "w": [
+     "Kangaroo",
+     "Bat",
+     "Pig"
+    ],
+    "e": "Its cool body temperature suits the bacteria."
+   },
+   {
+    "q": "Leprosy prefers cooler parts of the body, so it affects?",
+    "a": "Skin, nerves near the surface, nose and eyes",
+    "w": [
+     "Liver and brain",
+     "Heart only",
+     "Bone marrow"
+    ],
+    "e": "Hence loss of eyebrows and a collapsed nose."
+   },
+   {
+    "q": "Is leprosy highly contagious?",
+    "a": "No: most people are naturally immune",
+    "w": [
+     "Yes, by touch",
+     "Yes, by sharing food",
+     "Only through blood"
+    ],
+    "e": "Spread is mainly by droplets after long close contact."
+   },
+   {
+    "q": "Multidrug therapy for leprosy includes rifampicin, dapsone and?",
+    "a": "Clofazimine",
+    "w": [
+     "Penicillin",
+     "Isoniazid",
+     "Metronidazole"
+    ],
+    "e": "Free from WHO since 1995."
+   },
+   {
+    "q": "Clofazimine can turn skin?",
+    "a": "Reddish-brown",
+    "w": [
+     "Bright blue",
+     "Yellow",
+     "Green"
+    ],
+    "e": "It fades after stopping."
+   },
+   {
+    "q": "Why do people with leprosy lose fingers and toes?",
+    "a": "Numbness leads to unnoticed injuries and infection",
+    "w": [
+     "The bacteria eat bone",
+     "Frostbite",
+     "Surgery"
+    ],
+    "e": "The disease itself doesn\u2019t make digits fall off."
+   },
+   {
+    "q": "Which famous Hawaiian settlement isolated people with leprosy?",
+    "a": "Kalaupapa on Molokai",
+    "w": [
+     "Waikiki",
+     "Pearl Harbor",
+     "Hilo"
+    ],
+    "e": "Father Damien worked there and died of leprosy."
+   },
+   {
+    "q": "Leprosy\u2019s Hansen\u2019s disease name was promoted partly to reduce?",
+    "a": "Stigma",
+    "w": [
+     "Confusion with TB",
+     "Spelling errors",
+     "Costs"
+    ],
+    "e": "\u2018Leper\u2019 is a stigmatising word to avoid."
+   },
+   {
+    "q": "A leprosy reaction where nerves suddenly become painful and swollen is treated with?",
+    "a": "Steroids",
+    "w": [
+     "More antibiotics only",
+     "Surgery first",
+     "Nothing"
+    ],
+    "e": "To prevent permanent nerve damage."
    }
   ]
  }
