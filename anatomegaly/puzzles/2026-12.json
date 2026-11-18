@@ -1239,7 +1239,9 @@
     "wrong": [
      "Sense balance",
      "Drain the middle ear",
-     "Make earwax"
+     "Make earwax",
+     "Equalise ear pressure",
+     "Protect the eardrum from wax"
     ],
     "why": "The ossicles work as a lever, boosting pressure about 20-fold so sound can move the fluid of the inner ear. Beethoven, born around today in 1770, lost his hearing gradually from his late twenties.",
     "art": "ear",
@@ -1256,7 +1258,9 @@
     "wrong": [
      "Semicircular canals",
      "Utricle",
-     "Tympanic membrane"
+     "Tympanic membrane",
+     "Round window",
+     "Spiral ganglion"
     ],
     "why": "Its hair cells are where most noise and age-related hearing loss starts. Beethoven, born around this day in 1770, wrote his Ninth Symphony while profoundly deaf."
    },
@@ -1267,7 +1271,9 @@
     "wrong": [
      "Tensor tympani",
      "Tensor veli palatini",
-     "Levator veli palatini"
+     "Levator veli palatini",
+     "Posterior auricular",
+     "Stylohyoid"
     ],
     "why": "About a millimetre long and supplied by the facial nerve. Bell’s palsy can knock it out and make everyday sounds painfully loud."
    },
@@ -1278,7 +1284,9 @@
     "wrong": [
      "Sebum",
      "Vernix",
-     "Exudate"
+     "Exudate",
+     "Mucus",
+     "Keratin plug"
     ],
     "why": "Made by glands in the outer ear canal. The canal skin slowly migrates outwards and cleans itself, so cotton buds mostly just push wax in."
    },
@@ -1289,7 +1297,9 @@
     "wrong": [
      "Air conduction",
      "Lip reading",
-     "Nerve regrowth"
+     "Nerve regrowth",
+     "A hearing horn",
+     "Vibration felt in the feet"
     ],
     "why": "Vibrations travel through the skull straight to the cochlea, skipping the middle ear. It’s the idea behind the Rinne test and bone-anchored hearing aids."
    }
@@ -1333,7 +1343,9 @@
     "wrong": [
      "Maxillary sinuses",
      "Sphenoid sinuses",
-     "Ethmoid air cells"
+     "Ethmoid air cells",
+     "Mastoid air cells",
+     "Nasal turbinates"
     ],
     "why": "Their long, narrow drainage duct blocks easily when you have a cold. The Wright brothers first flew on this day in 1903."
    },
@@ -1361,7 +1373,9 @@
     "wrong": [
      "Bronchioles",
      "Bronchi",
-     "Pleura"
+     "Pleura",
+     "Trachea",
+     "Capillaries of the nose"
     ],
     "why": "Hundreds of millions of them, with a combined surface of around 70 square metres."
    }
@@ -1502,7 +1516,9 @@
     "wrong": [
      "PCL, LCL and lateral meniscus",
      "ACL, LCL and medial meniscus",
-     "PCL, MCL and patellar tendon"
+     "PCL, MCL and patellar tendon",
+     "ACL, PCL and lateral meniscus",
+     "MCL, LCL and patella"
     ],
     "why": "Described by O’Donoghue in 1950. The MCL is attached to the medial meniscus, though lateral meniscus tears turn out to be common in these injuries too.",
     "art": "knee",
@@ -1517,7 +1533,9 @@
     "wrong": [
      "Schmorl’s nodes",
      "Heberden’s nodes",
-     "Bouchard’s nodes"
+     "Bouchard’s nodes",
+     "Osler's nodes",
+     "Tophi"
     ],
     "why": "Too little vitamin D, so bone doesn’t mineralise. One theory for Tiny Tim in A Christmas Carol, published on this day in 1843, is rickets with tuberculosis."
    }
@@ -1561,7 +1579,9 @@
     "wrong": [
      "Lateral cricoarytenoid",
      "Cricothyroid",
-     "Thyroarytenoid"
+     "Thyroarytenoid",
+     "Vocalis",
+     "Transverse arytenoid"
     ],
     "why": "Lose both and the cords can’t open, which threatens the airway."
    },
@@ -1609,7 +1629,9 @@
     "wrong": [
      "The kneecap slipping sideways",
      "The knee bending",
-     "The ankle rolling"
+     "The ankle rolling",
+     "The shin sliding backward",
+     "The knee straightening"
     ],
     "why": "The ACL stops the tibia shooting forward under the femur. Awkward landings from a jump tear it, which is why basketballers dread it. Today is World Basketball Day.",
     "art": "knee",
@@ -1624,7 +1646,9 @@
     "wrong": [
      "Inner side",
      "Front",
-     "Back"
+     "Back",
+     "Under the heel",
+     "Top of the foot only"
     ],
     "why": "Rolling the foot inwards stretches the outer ligaments, most often the anterior talofibular. It’s one of basketball’s commonest injuries."
    },
@@ -1635,7 +1659,9 @@
     "wrong": [
      "Lungs",
      "Liver",
-     "Heart"
+     "Heart",
+     "Pancreas",
+     "Spleen"
     ],
     "why": "The adrenal glands sit on the kidneys like little hats. Slow breathing and meditation can help dial the stress response down. Today is World Meditation Day."
    },
@@ -1646,7 +1672,9 @@
     "wrong": [
      "Triceps",
      "Deltoid",
-     "Pectoralis major"
+     "Pectoralis major",
+     "Brachioradialis",
+     "Pronator teres"
     ],
     "why": "Biceps is a powerful twister (supinator) as well as a flexor. The real workhorse for bending the elbow, brachialis, hides underneath."
    },
@@ -1681,7 +1709,9 @@
     "wrong": [
      "Makes bile",
      "Makes insulin",
-     "Filters blood"
+     "Filters blood",
+     "Absorbs fat",
+     "Stores iron"
     ],
     "why": "The liver makes bile and the gallbladder stores it, squeezing it out after a fatty meal. You can live fine without one.",
     "art": "gut",
@@ -1696,7 +1726,9 @@
     "wrong": [
      "Upper left",
      "Lower right",
-     "Lower left"
+     "Lower left",
+     "Middle of the pelvis",
+     "Behind the stomach"
     ],
     "why": "Tucked under the right ribs. Srinivasa Ramanujan, born today in 1887, probably died of a parasitic liver infection at just 32."
    },
@@ -1707,7 +1739,9 @@
     "wrong": [
      "Cilia",
      "Alveoli",
-     "Papillae"
+     "Papillae",
+     "Rugae",
+     "Crypts of the stomach"
     ],
     "why": "They hugely increase the surface for absorbing food. Coeliac disease flattens them."
    },
@@ -1735,7 +1769,9 @@
     "wrong": [
      "Left lobe",
      "Caudate lobe",
-     "Quadrate lobe"
+     "Quadrate lobe",
+     "Gallbladder bed",
+     "Hilum"
     ],
     "why": "The right lobe is bigger and gets most of the portal blood from the gut. Mathematician Srinivasa Ramanujan, born today in 1887, probably died of one."
    }
@@ -1779,7 +1815,9 @@
     "wrong": [
      "Left, pushed down by the spleen",
      "Right, pushed down by the heart",
-     "Neither, they sit level"
+     "Neither, they sit level",
+     "Left, pushed down by the stomach",
+     "Right, pushed down by the gallbladder"
     ],
     "why": "The bulky liver nudges the right kidney a little lower than the left."
    },
@@ -1790,7 +1828,9 @@
     "wrong": [
      "Where the old kidney was",
      "Behind the liver",
-     "Under the spleen"
+     "Under the spleen",
+     "Inside the bladder",
+     "In the chest"
     ],
     "why": "The native kidneys usually stay put. Joseph Murray did the first successful kidney transplant, between identical twins, on this day in 1954."
    },
@@ -1801,7 +1841,9 @@
     "wrong": [
      "Renal vein",
      "Portal vein",
-     "Ureter"
+     "Ureter",
+     "Inferior vena cava",
+     "Splenic artery"
     ],
     "why": "The kidneys get around a fifth of the heart’s output, a huge share for organs the size of a fist."
    }
@@ -1836,7 +1878,9 @@
     "wrong": [
      "Lipase",
      "Pepsin",
-     "Trypsin"
+     "Trypsin",
+     "Lactase",
+     "Bile"
     ],
     "why": "Chew bread long enough and it starts to taste sweet: that’s amylase turning starch into sugar."
    },
@@ -1860,7 +1904,9 @@
     "wrong": [
      "Cerebellum",
      "Pons",
-     "Thalamus"
+     "Thalamus",
+     "Medulla",
+     "Pineal gland"
     ],
     "why": "It balances heat made (including from your Christmas lunch) against heat lost through skin and sweat. James Joule was born today in 1818."
    },
@@ -1891,7 +1937,9 @@
     "wrong": [
      "Popliteal artery",
      "Great saphenous vein",
-     "Internal iliac artery"
+     "Internal iliac artery",
+     "Profunda femoris vein",
+     "Inferior epigastric artery"
     ],
     "why": "High and tight stops femoral bleeding. Clara Barton, born on Christmas Day 1821, nursed wounded soldiers before founding the American Red Cross."
    },
@@ -1902,7 +1950,9 @@
     "wrong": [
      "Superior sagittal sinus",
      "Bridging veins",
-     "Anterior cerebral artery"
+     "Anterior cerebral artery",
+     "Middle cerebral artery",
+     "Vertebral artery"
     ],
     "why": "It runs under the pterion, the thin spot at the side of the skull. Classic story: a knock, a lucid spell, then rapid decline."
    },
@@ -1947,7 +1997,9 @@
     "wrong": [
      "Left anterior descending artery",
      "Left main coronary artery",
-     "Posterior descending artery"
+     "Posterior descending artery",
+     "Circumflex artery in everyone",
+     "Internal thoracic artery"
     ],
     "why": "The RCA does it in a bit over half of people; the circumflex covers most of the rest."
    }
@@ -1965,7 +2017,9 @@
     "wrong": [
      "Osteoclasts",
      "Chondrocytes",
-     "Fibroblasts"
+     "Fibroblasts",
+     "Osteocytes",
+     "Megakaryocytes"
     ],
     "why": "Osteoblasts build, osteoclasts break down. Radium behaves like calcium, so it’s built into bone and irradiates it from inside. The Curies announced radium on this day in 1898."
    },
@@ -1976,7 +2030,9 @@
     "wrong": [
      "Thymus",
      "Parathyroid glands",
-     "Pituitary gland"
+     "Pituitary gland",
+     "Adrenal glands",
+     "Pineal gland"
     ],
     "why": "The thyroid hoards iodine to make hormones. Flooding it with ordinary iodide stops it soaking up the radioactive kind."
    },
@@ -1987,7 +2043,9 @@
     "wrong": [
      "Iron",
      "Iodine",
-     "Sodium"
+     "Sodium",
+     "Potassium",
+     "Phosphorus"
     ],
     "why": "Same column of the periodic table. The ‘Radium Girls’ who licked their brushes to paint watch dials developed jaw necrosis and bone cancers."
    },
@@ -2069,7 +2127,9 @@
     "wrong": [
      "Spreading through the bloodstream",
      "Moving through lymph nodes",
-     "Crossing the skin to the spine"
+     "Crossing the skin to the spine",
+     "Travelling in white blood cells",
+     "Floating in spinal fluid from the skin"
     ],
     "why": "Retrograde axonal transport, which is why bites near the head have a shorter incubation. Louis Pasteur, born today in 1822, made the first rabies vaccine."
    },
@@ -2080,7 +2140,9 @@
     "wrong": [
      "Two",
      "Three",
-     "Six"
+     "Six",
+     "One",
+     "Eight"
     ],
     "why": "Two from each lung, though three or five is a common variant. Muscle sleeves around their openings spark most AF.",
     "art": "heart",
@@ -2132,7 +2194,9 @@
     "wrong": [
      "Dermis",
      "Hypodermis",
-     "Fascia"
+     "Fascia",
+     "Basement membrane",
+     "Subcutis"
     ],
     "why": "You shed millions of skin cells a day and renew the whole outer layer every month or two. Real-life regeneration."
    },
@@ -2143,7 +2207,9 @@
     "wrong": [
      "Thyroid",
      "Adrenal",
-     "Pineal"
+     "Pineal",
+     "Pancreas",
+     "Hypothalamus only"
     ],
     "why": "If it starts before the growth plates close you get gigantism; after, acromegaly. Comic writer Stan Lee was born today in 1922."
    },
@@ -2154,7 +2220,9 @@
     "wrong": [
      "Vision",
      "Smell",
-     "Memory"
+     "Memory",
+     "Hearing",
+     "Breathing rhythm"
     ],
     "why": "The cerebellum fine-tunes movement. Alcohol upsets it early, which is why police ask people to walk a straight line.",
     "art": "brain",
@@ -2189,7 +2257,9 @@
     "wrong": [
      "Ureter",
      "Oesophagus",
-     "Vas deferens"
+     "Vas deferens",
+     "Fallopian tube",
+     "Rectum"
     ],
     "why": "The urethra carries urine out. Rubber made catheters flexible, thanks to vulcanisation by Charles Goodyear, born today in 1800."
    },
@@ -2200,7 +2270,9 @@
     "wrong": [
      "Urethra",
      "Renal arteries",
-     "Fallopian tubes"
+     "Fallopian tubes",
+     "Vas deferens",
+     "Renal veins"
     ],
     "why": "About 25–30 cm long. Urine is pushed along by squeezing waves, not just gravity, so you could wee upside down."
    },
@@ -2228,7 +2300,9 @@
     "wrong": [
      "Oxygen-poor blood from the body",
      "Blood from the liver",
-     "Lymph from the gut"
+     "Lymph from the gut",
+     "Blood straight from the brain",
+     "Oxygen-poor blood from the lungs"
     ],
     "why": "The left atrium collects freshly oxygenated blood from the pulmonary veins and passes it to the left ventricle.",
     "art": "heart",
@@ -2243,7 +2317,9 @@
     "wrong": [
      "Bone",
      "Muscle",
-     "Fat"
+     "Fat",
+     "Tendon",
+     "Keratin"
     ],
     "why": "Flexible, a bit like rubber, but with no blood vessels of its own, which is why it heals so slowly."
    }
@@ -2337,7 +2413,9 @@
     "wrong": [
      "Aldosterone",
      "Insulin",
-     "Cortisol"
+     "Cortisol",
+     "Thyroxine",
+     "Adrenaline"
     ],
     "why": "ADH from the posterior pituitary tells the kidneys to hold onto water. Block it and you lose more than you drink. Hello, New Year’s Day headache."
    },
@@ -2348,7 +2426,9 @@
     "wrong": [
      "Right side of the upper oesophagus",
      "Front of the cervical oesophagus",
-     "Just below the cricopharyngeus"
+     "Just below the cricopharyngeus",
+     "Middle third, front wall",
+     "Gastric fundus"
     ],
     "why": "The lower left wall is the weakest. Herman Boerhaave, born today in 1668, described it in a Dutch admiral after a feast."
    },

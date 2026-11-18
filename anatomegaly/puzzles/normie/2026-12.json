@@ -1161,7 +1161,9 @@
     "wrong": [
      "Two",
      "Six",
-     "None: ears can’t move"
+     "None: ears can’t move",
+     "Exactly four",
+     "About 100"
     ],
     "why": "That’s why cats can swivel each ear separately towards a sound.",
     "art": "catface",
@@ -1176,7 +1178,9 @@
     "wrong": [
      "Bat",
      "Dolphin",
-     "Dog"
+     "Dog",
+     "Owl",
+     "Mouse"
     ],
     "why": "It can pick up sounds up to about 300 kHz, far higher than bats can squeak. Likely an arms race with bats."
    },
@@ -1187,7 +1191,9 @@
     "wrong": [
      "On its antennae",
      "Behind its eyes",
-     "On its wings"
+     "On its wings",
+     "Under its chin",
+     "On its back legs"
     ],
     "why": "Many grasshoppers have an eardrum on each side of the first belly segment."
    },
@@ -1198,7 +1204,9 @@
     "wrong": [
      "Glowing eyes",
      "Smell alone",
-     "Magnetic fields"
+     "Magnetic fields",
+     "Heat from prey",
+     "Following moths' smell trails"
     ],
     "why": "Echolocation: they shout, mostly too high for us to hear, then listen for what bounces back."
    },
@@ -1209,7 +1217,9 @@
     "wrong": [
      "Through their tongue",
      "Through their eyes",
-     "They can’t at all"
+     "They can’t at all",
+     "Through their scales only",
+     "Through little holes on their back"
     ],
     "why": "Their jaw bones pass ground vibrations, and some low airborne sounds, to the inner ear."
    }
@@ -1227,7 +1237,9 @@
     "wrong": [
      "Flapping their tails in the air",
      "Riding on birds",
-     "Puffing up with air"
+     "Puffing up with air",
+     "Bouncing off the waves with their belly",
+     "Shooting out jets of water"
     ],
     "why": "They burst out of the water and glide, sometimes for dozens of metres, to escape predators."
    },
@@ -1238,7 +1250,9 @@
     "wrong": [
      "Fat",
      "Water",
-     "Marrow, like ours"
+     "Marrow, like ours",
+     "Sand",
+     "Blood"
     ],
     "why": "Air sacs from the lungs reach into some bones, making them light and part of the breathing system. Humans first flew a plane on this day in 1903."
    },
@@ -1249,7 +1263,9 @@
     "wrong": [
      "Hollow feathers full of helium",
      "Wings made of skin",
-     "Webbed feet used as sails"
+     "Webbed feet used as sails",
+     "Eating only once a month",
+     "Never sleeping"
     ],
     "why": "With wings locked out, they barely spend energy, so they can travel huge distances over the ocean."
    },
@@ -1260,7 +1276,9 @@
     "wrong": [
      "1,350 km",
      "4,000 km",
-     "40,000 km"
+     "40,000 km",
+     "800 km",
+     "100,000 km"
     ],
     "why": "About 13,560 km in 11 days without landing, a world record for nonstop bird flight."
    },
@@ -1271,7 +1289,9 @@
     "wrong": [
      "Antifreeze in their feathers",
      "Wearing a layer of fat on their toes",
-     "Standing on one foot only"
+     "Standing on one foot only",
+     "Shivering their toes",
+     "Hot water bottles in their legs"
     ],
     "why": "Warm blood heading down warms the cold blood coming up, so little heat is lost through the feet."
    }
@@ -1289,7 +1309,9 @@
     "wrong": [
      "Wings",
      "Eyes",
-     "Feathers"
+     "Feathers",
+     "Beak",
+     "Lungs"
     ],
     "why": "They shrink digestive organs they won’t need in flight and bulk up on fuel and flight muscle."
    },
@@ -1300,7 +1322,9 @@
     "wrong": [
      "Around 700 km",
      "Around 7,000 km",
-     "Around 700,000 km"
+     "Around 700,000 km",
+     "Around 70 km",
+     "Around 7 million km"
     ],
     "why": "Pole to pole and back. Over a lifetime that’s like flying to the Moon and back about three times."
    },
@@ -1311,7 +1335,9 @@
     "wrong": [
      "Sight",
      "Taste of the salt",
-     "Following other fish"
+     "Following other fish",
+     "Ocean currents only",
+     "The stars"
     ],
     "why": "Each river has its own scent mix, and young salmon memorise it."
    },
@@ -1322,7 +1348,9 @@
     "wrong": [
      "Moonlight",
      "The smell of flowers",
-     "Earthquakes"
+     "Earthquakes",
+     "Wind direction only",
+     "Tree shapes"
     ],
     "why": "The antennae help keep time, so they can correct for the sun moving across the sky."
    },
@@ -1333,7 +1361,9 @@
     "wrong": [
      "Lighthouses",
      "Ship noise",
-     "The smell of sunscreen"
+     "The smell of sunscreen",
+     "Wave colour",
+     "Following dolphins"
     ],
     "why": "Each stretch of coast has its own magnetic ‘signature’ that turtles seem to remember."
    }
@@ -1351,7 +1381,9 @@
     "wrong": [
      "Wattle",
      "Comb",
-     "Crop"
+     "Crop",
+     "Beard",
+     "Mane"
     ],
     "why": "Male turkeys can stretch the snood longer when showing off. The wattle is the dangly bit under the chin."
    },
@@ -1362,7 +1394,9 @@
     "wrong": [
      "Molars",
      "Barbels",
-     "Scutes"
+     "Scutes",
+     "Fangs",
+     "Combs"
     ],
     "why": "Serrated bill edges help grip and tear grass. They can give a nasty pinch."
    },
@@ -1373,7 +1407,9 @@
     "wrong": [
      "Cane toad",
      "Green tree frog",
-     "Poison dart frog"
+     "Poison dart frog",
+     "Bullfrog",
+     "Corroboree frog"
     ],
     "why": "Some glass frogs even hide their blood in their liver while sleeping, turning almost fully see-through."
    },
@@ -1384,7 +1420,9 @@
     "wrong": [
      "Singing louder",
      "Keeping eggs warm",
-     "Holding spare feathers"
+     "Holding spare feathers",
+     "Breathing underwater",
+     "Storing water like a camel"
     ],
     "why": "A stretchy bulge in the throat lets birds grab lots of food fast, then digest later."
    },
@@ -1395,7 +1433,9 @@
     "wrong": [
      "Green and gold",
      "Black and orange",
-     "Pink and purple"
+     "Pink and purple",
+     "Yellow and grey",
+     "Purple and silver"
     ],
     "why": "Blood flow changes the colour with mood. Bright red usually means he’s fired up."
    }
@@ -1430,7 +1470,9 @@
     "wrong": [
      "Giraffe",
      "Horse",
-     "Manatee"
+     "Manatee",
+     "Camel",
+     "Sea lion"
     ],
     "why": "Most mammals have seven. Three-toed sloths have extra, manatees and two-toed sloths fewer."
    },
@@ -1441,7 +1483,9 @@
     "wrong": [
      "Stores fat",
      "Helps it hear",
-     "Nothing. It’s random"
+     "Nothing. It’s random",
+     "Scares off fish",
+     "Helps it sleep"
     ],
     "why": "The lopsided tail pushes the shark forwards and slightly up, which helps without a swim bladder.",
     "art": "shark",
@@ -1456,7 +1500,9 @@
     "wrong": [
      "Otoliths",
      "Ocelli",
-     "Chromatophores"
+     "Chromatophores",
+     "Spiracles",
+     "Photophores"
     ],
     "why": "A tiny stone rolls inside a fluid-filled sac lined with sensors, telling the animal which way is down."
    },
@@ -1467,7 +1513,9 @@
     "wrong": [
      "Pinna",
      "Plastron",
-     "Pinnule"
+     "Pinnule",
+     "Carapace",
+     "Dewlap"
     ],
     "why": "It stretches from wrist to ankle, so the glider can sail up to about 50 metres between trees."
    }
@@ -1485,7 +1533,9 @@
     "wrong": [
      "Golf ball",
      "Marble",
-     "Car tyre"
+     "Car tyre",
+     "Tennis ball",
+     "Coin"
     ],
     "why": "About 27 cm across, the largest eye known in the animal kingdom."
    },
@@ -1496,7 +1546,9 @@
     "wrong": [
      "40 seconds",
      "4 minutes",
-     "4 hours"
+     "4 hours",
+     "4 seconds",
+     "40 hours"
     ],
     "why": "Longer than dolphins can. Handy for a surprisingly good swimmer."
    },
@@ -1507,7 +1559,9 @@
     "wrong": [
      "Kangaroo",
      "Emu",
-     "Wombat"
+     "Wombat",
+     "Platypus",
+     "Echidna"
     ],
     "why": "Gum leaves are low in energy, so koalas save energy by resting most of the day."
    },
@@ -1518,7 +1572,9 @@
     "wrong": [
      "Its belly",
      "Its nose",
-     "Its tail"
+     "Its tail",
+     "Its whiskers",
+     "Its heart"
     ],
     "why": "Muscles and tissues in the voice box vibrate as the cat breathes in and out."
    },
@@ -1529,7 +1585,9 @@
     "wrong": [
      "African elephant",
      "Ostrich",
-     "Moose"
+     "Moose",
+     "Camel",
+     "Saltwater crocodile"
     ],
     "why": "Males can reach about 5.5 metres. Their legs alone are taller than many people."
    }
@@ -1547,7 +1605,9 @@
     "wrong": [
      "Eyes",
      "Antennae",
-     "Body colours"
+     "Body colours",
+     "Teeth",
+     "Segments of the head"
     ],
     "why": "Anywhere from 15 to 191 pairs, but always odd. So no centipede has exactly 100 legs."
    },
@@ -1558,7 +1618,9 @@
     "wrong": [
      "Circles",
      "Squares",
-     "Triangles"
+     "Triangles",
+     "Pentagons",
+     "Octagons"
     ],
     "why": "Hexagons fit together with no gaps and use the least wax for the space."
    },
@@ -1569,7 +1631,9 @@
     "wrong": [
      "To the left",
      "Straight up",
-     "It’s random"
+     "It’s random",
+     "Up and down in waves",
+     "In a figure eight"
     ],
     "why": "About 9 in 10 snail species coil to the right. Left-coiling snails struggle to find mates."
    },
@@ -1580,7 +1644,9 @@
     "wrong": [
      "About 20",
      "About 200",
-     "About 20,000"
+     "About 20,000",
+     "About 2",
+     "About 2 million"
     ],
     "why": "A common octopus has a couple of hundred on each arm. Each one can grip, feel and taste.",
     "art": "octopus",
@@ -1595,7 +1661,9 @@
     "wrong": [
      "Eyes",
      "Claws",
-     "Hearts"
+     "Hearts",
+     "Tails",
+     "Teeth"
     ],
     "why": "Decapods: ‘deca’ means ten. The front pair is often the big claws."
    }
@@ -1613,7 +1681,9 @@
     "wrong": [
      "One baby",
      "Twins",
-     "A clutch of eggs"
+     "A clutch of eggs",
+     "Triplets, never identical",
+     "Ten at a time"
     ],
     "why": "One fertilised egg splits into four, so all four pups are identical."
    },
@@ -1624,7 +1694,9 @@
     "wrong": [
      "Its eyes",
      "Its shell",
-     "Its legs"
+     "Its legs",
+     "Its spines",
+     "Its tail"
     ],
     "why": "Threatened, some throw out their insides to distract predators, then regrow them in weeks."
    },
@@ -1635,7 +1707,9 @@
     "wrong": [
      "Swim off as half a worm",
      "Join back together",
-     "Turn into a snail"
+     "Turn into a snail",
+     "Grow wings",
+     "Stop moving forever"
     ],
     "why": "Planarian flatworms are regeneration champions. Even a tiny fragment can rebuild a head."
    },
@@ -1646,7 +1720,9 @@
     "wrong": [
      "About 60",
      "About 200",
-     "About 10,000"
+     "About 10,000",
+     "About 30",
+     "About 100,000"
     ],
     "why": "Tiny bodies burn energy fast. At night, some hummingbirds drop into a torpor and slow it right down to save fuel."
    },
@@ -1657,7 +1733,9 @@
     "wrong": [
      "20 cm",
      "5 metres",
-     "50 cm"
+     "50 cm",
+     "10 metres",
+     "5 cm"
     ],
     "why": "Mums give birth standing up. The calf is usually standing within an hour."
    }
@@ -1675,7 +1753,9 @@
     "wrong": [
      "A built-in light bulb",
      "Thick fur inside the nostrils only",
-     "A layer of fat"
+     "A layer of fat",
+     "Hot air from their antlers",
+     "Built-in earmuffs"
     ],
     "why": "Lots of blood flow warms the air they breathe in. A red nose isn’t just for Rudolph."
    },
@@ -1686,7 +1766,9 @@
     "wrong": [
      "Males have no antlers",
      "Antlers never fall off",
-     "Babies are born with antlers"
+     "Babies are born with antlers",
+     "Antlers are made of keratin",
+     "Males grow two sets a year"
     ],
     "why": "Females keep theirs through winter, so Santa’s team, still antlered in December, may be mostly girls."
    },
@@ -1697,7 +1779,9 @@
     "wrong": [
      "Breathing",
      "A heartbeat",
-     "Moving at all"
+     "Moving at all",
+     "Dreaming",
+     "Growing fur"
     ],
     "why": "They live off stored fat and recycle waste. No midnight snacks."
    },
@@ -1708,7 +1792,9 @@
     "wrong": [
      "A bathtub",
      "A bucket",
-     "A swimming pool, times ten"
+     "A swimming pool, times ten",
+     "A teaspoon",
+     "A cup of tea"
     ],
     "why": "Its pleated throat balloons out, then it pushes the water out through its baleen and keeps the krill."
    },
@@ -1719,7 +1805,9 @@
     "wrong": [
      "Their feet",
      "Their feathers",
-     "Sweating"
+     "Sweating",
+     "Their beak tip",
+     "Their tail"
     ],
     "why": "The salt gland drips salty liquid out through the beak. Penguins often look like they have a runny nose."
    }
@@ -1737,7 +1825,9 @@
     "wrong": [
      "Changing their blood colour",
      "Swallowing coloured food",
-     "Holding their breath"
+     "Holding their breath",
+     "Sweating coloured oils",
+     "Changing shape"
     ],
     "why": "Layers of nanocrystals shift spacing, changing which colours of light bounce back."
    },
@@ -1748,7 +1838,9 @@
     "wrong": [
      "They glue themselves on",
      "They hold on with their teeth",
-     "They float slightly"
+     "They float slightly",
+     "They're magnetic",
+     "Their wings act like hooks"
     ],
     "why": "Gravity does the work. They actually have to use muscle to let go."
    },
@@ -1759,7 +1851,9 @@
     "wrong": [
      "Blue and green pigments",
      "Oil from flowers",
-     "Reflected sky"
+     "Reflected sky",
+     "Coloured blood in the feathers",
+     "Dust they roll in"
     ],
     "why": "Structural colour, like a soap bubble: change the angle and the colour shifts."
    },
@@ -1770,7 +1864,9 @@
     "wrong": [
      "Dogs",
      "Cows",
-     "Horses"
+     "Horses",
+     "Humans",
+     "Gorillas"
     ],
     "why": "In snowy Arctic light, UV vision makes urine, lichen and wolves stand out against the snow."
    },
@@ -1781,7 +1877,9 @@
     "wrong": [
      "Blind",
      "Short-sighted only",
-     "Unable to see blue"
+     "Unable to see blue",
+     "Able to see 10 colours",
+     "Only able to see red"
     ],
     "why": "They have just one type of light sensor in their eyes. How they match colours is still a puzzle."
    }
@@ -1799,7 +1897,9 @@
     "wrong": [
      "Turned black",
      "Nothing at all",
-     "Glowed bright red"
+     "Glowed bright red",
+     "Turned see-through",
+     "Glowed gold"
     ],
     "why": "Found in 2020 with museum specimens. Nobody is sure if it does anything useful."
    },
@@ -1810,7 +1910,9 @@
     "wrong": [
      "Smell",
      "Sound",
-     "Colour"
+     "Colour",
+     "Light at all",
+     "Sparkle"
     ],
     "why": "A chemical reaction makes ‘cold light’. Nearly all the energy goes into glow."
    },
@@ -1821,7 +1923,9 @@
     "wrong": [
      "Worms",
      "Beetles",
-     "Fungi"
+     "Fungi",
+     "Glowing snails",
+     "Tiny jellyfish"
     ],
     "why": "They’re young fungus gnats. They dangle sticky threads to catch insects drawn to the glow."
    },
@@ -1832,7 +1936,9 @@
     "wrong": [
      "Swallowed plankton",
      "A battery-like organ",
-     "Moonlight"
+     "Moonlight",
+     "Its own blood",
+     "Reflecting sunlight from above"
     ],
     "why": "Bacteria living in the lure make the light. The fish just provides a home."
    },
@@ -1843,7 +1949,9 @@
     "wrong": [
      "Jellyfish stings",
      "Moon reflections",
-     "Salt crystals"
+     "Salt crystals",
+     "Glowing sand",
+     "Sunlight stored in the water"
     ],
     "why": "Single-celled algae flash when the water moves, so breaking waves light up."
    }
@@ -1861,7 +1969,9 @@
     "wrong": [
      "Beak",
      "Feathers",
-     "Gizzard"
+     "Gizzard",
+     "Belly",
+     "Eggshell"
     ],
     "why": "Both parents make crop milk, a rich, cheesy paste. Flamingos and male emperor penguins make something similar."
    },
@@ -1872,7 +1982,9 @@
     "wrong": [
      "120",
      "300",
-     "10,000"
+     "10,000",
+     "60",
+     "100,000"
     ],
     "why": "Over 1,200 beats a minute in flight. At night it can slow right down to save energy."
    },
@@ -1883,7 +1995,9 @@
     "wrong": [
      "An extra claw",
      "A fused toenail",
-     "A fat-filled sac"
+     "A fat-filled sac",
+     "A sixth toenail only",
+     "A hollow air pocket"
     ],
     "why": "This ‘predigit’ props up the foot’s fatty heel pad, a bit like a hidden high heel.",
     "art": "elephant",
@@ -1898,7 +2012,9 @@
     "wrong": [
      "Seven",
      "Five",
-     "Nine"
+     "Nine",
+     "Twelve",
+     "Three"
     ],
     "why": "Manatees are rare mammals with fewer than seven. They can’t turn their heads much."
    },
@@ -1909,7 +2025,9 @@
     "wrong": [
      "Lorenzini’s organ",
      "Henry’s pocket",
-     "The syrinx"
+     "The syrinx",
+     "Organ of Corti",
+     "Swim bladder"
     ],
     "why": "Also called the vomeronasal organ. The forked tongue helps tell which side a smell is coming from."
    }
@@ -1927,7 +2045,9 @@
     "wrong": [
      "Wood",
      "Glass",
-     "Paper"
+     "Paper",
+     "Rubber",
+     "Concrete"
     ],
     "why": "Spider-Man’s writers didn’t make that up. Some silks are also stretchier than nylon."
    },
@@ -1938,7 +2058,9 @@
     "wrong": [
      "Ant",
      "Flea",
-     "Earthworm"
+     "Earthworm",
+     "Mosquito",
+     "Snail"
     ],
     "why": "In 2007, ‘water bears’ rode on a satellite outside, and some survived. Superhero material."
    },
@@ -1949,7 +2071,9 @@
     "wrong": [
      "Freeze",
      "Turn red",
-     "Glow green forever"
+     "Glow green forever",
+     "Boil for an hour",
+     "Turn to jelly"
     ],
     "why": "The strike is so quick that collapsing bubbles hit prey a second time and give off a tiny flash of light."
    },
@@ -1960,7 +2084,9 @@
     "wrong": [
      "Number of arms",
      "Size of its eyes",
-     "Blood colour"
+     "Blood colour",
+     "Number of hearts",
+     "Bone shape"
     ],
     "why": "Little bumps rise up to mimic rocks, coral or seaweed. Camouflage superpower.",
     "art": "octopus",
@@ -1975,7 +2101,9 @@
     "wrong": [
      "Great white shark",
      "Lion",
-     "Hippo"
+     "Hippo",
+     "Gorilla",
+     "Grizzly bear"
     ],
     "why": "A big saltie clamped down with over 16,000 newtons in tests, the most measured for a living animal."
    }
@@ -1993,7 +2121,9 @@
     "wrong": [
      "Air from the surface only",
      "Sand",
-     "Plankton"
+     "Plankton",
+     "Seaweed",
+     "Its own blood"
     ],
     "why": "They swallow water fast, ballooning to several times their size. Many are also very poisonous."
    },
@@ -2004,7 +2134,9 @@
     "wrong": [
      "In small flakes",
      "Only in winter",
-     "Every day"
+     "Every day",
+     "Only from the tail",
+     "Never: snakes don't shed"
     ],
     "why": "It peels back from the lips like a sock. Even the clear eye scales come off."
    },
@@ -2015,7 +2147,9 @@
     "wrong": [
      "Hard as glass",
      "Spiky",
-     "Liquid"
+     "Liquid",
+     "Bright pink",
+     "Magnetic"
     ],
     "why": "Special stretchy tissue lets them stiffen up or go limp in seconds, handy for squeezing into cracks."
    },
@@ -2026,7 +2160,9 @@
     "wrong": [
      "Get tired quickly",
      "Only work uphill",
-     "Make a squeaking sound"
+     "Make a squeaking sound",
+     "Pump blood",
+     "Glow in the dark"
     ],
     "why": "Stretchy tendons spring back, so a fast hop costs a kangaroo very little extra energy."
    },
@@ -2037,7 +2173,9 @@
     "wrong": [
      "Their front paws only",
      "Their belly fur",
-     "A pouch like a kangaroo"
+     "A pouch like a kangaroo",
+     "Their ears",
+     "A little basket on their back"
     ],
     "why": "The pouches stretch back to their shoulders. ‘Hamstern’ in German means to hoard."
    }
@@ -2055,7 +2193,9 @@
     "wrong": [
      "Pump ink",
      "Push water out the siphon",
-     "Supply only the arms"
+     "Supply only the arms",
+     "Pump blood to the brain only",
+     "Make the octopus change colour"
     ],
     "why": "They’re branchial hearts. The bigger one in the middle then sends that oxygen-rich blood around the body.",
     "art": "octopus",
@@ -2087,7 +2227,9 @@
     "wrong": [
      "Mystacial whiskers",
      "Superciliary whiskers",
-     "Genal whiskers"
+     "Genal whiskers",
+     "Eyebrow whiskers",
+     "Tail whiskers"
     ],
     "why": "Mystacial are the muzzle ones, superciliary over the eyes and genal on the cheeks. Carpal whiskers sense wriggling prey.",
     "art": "catpaw",
@@ -2102,7 +2244,9 @@
     "wrong": [
      "Fungiform papillae",
      "Circumvallate papillae",
-     "Foliate papillae"
+     "Foliate papillae",
+     "Taste buds",
+     "Sweat glands"
     ],
     "why": "Filiform papillae are the rough, backward-hooked ones. Their hollow tips wick saliva into the fur."
    },
@@ -2113,7 +2257,9 @@
     "wrong": [
      "Scopa",
      "Tegula",
-     "Pulvillus"
+     "Pulvillus",
+     "Proboscis",
+     "Ocellus"
     ],
     "why": "A scopa is the pollen brush of many solitary bees, a tegula covers the wing base and a pulvillus is a foot pad."
    }
@@ -2131,7 +2277,9 @@
     "wrong": [
      "40 years",
      "4 years",
-     "4,000 years"
+     "4,000 years",
+     "15 years",
+     "1,000,000 years"
     ],
     "why": "Eye-lens dating in 2016 suggested the oldest was about 400. Some alive today may have been born before Isaac Newton."
    },
@@ -2142,7 +2290,9 @@
     "wrong": [
      "Lobster",
      "Tortoise",
-     "Axolotl"
+     "Axolotl",
+     "Seahorse",
+     "Sea star"
     ],
     "why": "Turritopsis dohrnii can turn back into a young polyp and start life again. New year, new jellyfish."
    },
@@ -2153,7 +2303,9 @@
     "wrong": [
      "Nothing at all",
      "Only low sounds",
-     "Colours"
+     "Colours",
+     "Ultraviolet",
+     "Their own heartbeat"
     ],
     "why": "Dogs hear higher pitches than we do, and loud bangs come with no warning."
    },
@@ -2164,7 +2316,9 @@
     "wrong": [
      "Stretch their shell",
      "Swap shells with others",
-     "Stop eating"
+     "Stop eating",
+     "Grow a second shell on top",
+     "Hibernate"
     ],
     "why": "They wriggle out, puff up with water and wait for a new, larger shell to harden."
    },
@@ -2175,7 +2329,9 @@
     "wrong": [
      "One day",
      "Six years",
-     "Sixty years"
+     "Sixty years",
+     "Six months",
+     "Six hours"
     ],
     "why": "They wear themselves out foraging. Winter workers and queens live much longer."
    }
