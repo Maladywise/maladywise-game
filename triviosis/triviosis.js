@@ -108,7 +108,7 @@
         if (chosen !== null) { if (o === x.a) cls += " right"; else if (o === chosen) cls += " wrong"; else cls += " dim"; }
         return '<button type="button" class="' + cls + '" data-o="' + esc(o) + '"' + (chosen !== null ? " disabled" : "") + ">" + esc(o) + "</button>";
       }).join("") + "</div>" +
-      (chosen !== null ? '<div class="explain"><b>' + esc(msg || (chosen === x.a ? "Correct." : "Not quite.")) + "</b> " + esc(x.e) + '</div><div class="navrow">' + (i > 0 ? '<button type="button" class="nav" id="trv-prev">\u2190 Back</button>' : "<span></span>") + '<button type="button" class="next" id="trv-go"><span>' + (i + 1 < total ? "Next question" : "See your score") + '</span><i class="cd" id="trv-cd"></i></button></div>' : (i > 0 ? '<div class="navrow"><button type="button" class="nav" id="trv-prev">\u2190 Back</button><span></span></div>' : ""));
+      (chosen !== null ? '<div class="explain"><b>' + esc(msg || (chosen === x.a ? "Correct." : "Not quite.")) + "</b> " + esc(x.e) + (x.more && /^https:/.test(x.more.url) ? ' <a class="more" href="' + esc(x.more.url) + '" target="_blank" rel="noopener">' + esc(x.more.label || "Read more") + " \u2197</a>" : "") + '</div><div class="navrow">' + (i > 0 ? '<button type="button" class="nav" id="trv-prev">\u2190 Back</button>' : "<span></span>") + '<button type="button" class="next" id="trv-go"><span>' + (i + 1 < total ? "Next question" : "See your score") + '</span><i class="cd" id="trv-cd"></i></button></div>' : (i > 0 ? '<div class="navrow"><button type="button" class="nav" id="trv-prev">\u2190 Back</button><span></span></div>' : ""));
     if ($("prev")) $("prev").onclick = function () { stopAuto(); view = i - 1; render(); };
     if ($("go")) {
       $("go").onclick = goNext;
@@ -134,7 +134,7 @@
       '<details class="review"><summary>Review answers</summary><ol>' + Z.questions.map(function (x, i) {
         var ok = st.ans[i] === x.a;
         return "<li><b>" + esc(x.q) + '</b><span class="' + (ok ? "ok" : "no") + '">' + (ok ? "\u2713 " : "\u2715 ") + esc(st.ans[i] || "") + "</span>" + (ok ? "" : '<span class="ok">Answer: ' + esc(x.a) + "</span>") + "<em>" + esc(x.e) + "</em></li>";
-      }).join("") + "</ol></details>";
+      }).join("") + "</ol></details>" + (Z.more && /^https:/.test(Z.more.url) ? '<p class="more-q"><a href="' + esc(Z.more.url) + '" target="_blank" rel="noopener">' + esc(Z.more.label || "Read more") + " \u2197</a></p>" : "");
     $("copy").onclick = function () {
       var b = this;
       function selx() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); b.textContent = "Selected. Copy it"; }

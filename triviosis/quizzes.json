@@ -4893,7 +4893,11 @@
      "Cow lungs",
      "Horse serum"
     ],
-    "e": "Heparin mostly comes from pig gut. Cardiac theatre is more of a farm than it looks."
+    "e": "Heparin mostly comes from pig gut. Cardiac theatre is more of a farm than it looks.",
+    "more": {
+     "url": "https://derangedphysiology.com/main/required-reading/haematology-and-oncology/Chapter-142/reversal-agents-anticoagulants",
+     "label": "More on Deranged Physiology"
+    }
    },
    {
     "q": "Cardioplegia solution stops the heart mainly using high levels of?",
@@ -5865,7 +5869,11 @@
      "Aspiration of snow",
      "Bacterial pneumonia"
     ],
-    "e": "The lungs\u2019 blood vessels clamp down, and fluid is pushed through. A non-cardiac cause of very wet lungs."
+    "e": "The lungs\u2019 blood vessels clamp down, and fluid is pushed through. A non-cardiac cause of very wet lungs.",
+    "more": {
+     "url": "https://derangedphysiology.com/main/cicm-primary-exam/respiratory-system/Chapter-064/factors-which-affect-pulmonary-vascular-resistance",
+     "label": "More on Deranged Physiology"
+    }
    },
    {
     "q": "Acetazolamide, used to prevent altitude sickness, is a?",
@@ -8096,6 +8104,118 @@
      "Hyperemesis gravidarum"
     ],
     "e": "Hot showers ease it for a while. Stopping long-term heavy cannabis use is what actually fixes it. Happy New Year."
+   }
+  ]
+ },
+ {
+  "date": "2027-01-06",
+  "number": 81,
+  "difficulty": "Hard",
+  "theme": "Deranged: ICU oddities",
+  "more": {
+   "url": "https://derangedphysiology.com/main/",
+   "label": "More ICU oddities on Deranged Physiology"
+  },
+  "questions": [
+   {
+    "q": "A cylinder of inhaled nitric oxide, used in intensive care, is mostly?",
+    "a": "Nitrogen",
+    "w": [
+     "Nitric oxide",
+     "Oxygen",
+     "Helium"
+    ],
+    "e": "Medical nitric oxide comes very diluted, around 800 parts per million, in nitrogen. Neat nitric oxide is toxic and reacts with oxygen."
+   },
+   {
+    "q": "Heliox helps air get past a narrowed airway because helium is?",
+    "a": "Much less dense than nitrogen",
+    "w": [
+     "Better at carrying oxygen",
+     "A muscle relaxant",
+     "Absorbed faster by the lungs"
+    ],
+    "e": "Lighter gas flows more smoothly through tight spots. It also makes you sound like a cartoon chipmunk."
+   },
+   {
+    "q": "Propofol, the anaesthetic drug, is nicknamed \u2018milk of amnesia\u2019 because it?",
+    "a": "Is a white, milky emulsion",
+    "w": [
+     "Is made from cow\u2019s milk",
+     "Was first given in milk",
+     "Makes people crave milk"
+    ],
+    "e": "It's dissolved in a soybean oil emulsion, which is why it looks like milk."
+   },
+   {
+    "q": "Rising pressure inside the skull classically causes Cushing\u2019s reflex: high blood pressure, irregular breathing and?",
+    "a": "A slow heart rate",
+    "w": [
+     "A fast heart rate",
+     "A fever",
+     "A rash"
+    ],
+    "e": "The body pushes blood pressure up to keep blood reaching the brain. A slowing pulse is a late, worrying sign."
+   },
+   {
+    "q": "Methylene blue, used for some poisonings and shock, can turn urine?",
+    "a": "Blue-green",
+    "w": [
+     "Bright red",
+     "Black",
+     "Fluorescent orange"
+    ],
+    "e": "Patients are warned in advance. It still surprises the night nurse."
+   },
+   {
+    "q": "In deep hypothermia, the ECG can show an extra bump at the end of the QRS called the?",
+    "a": "Osborn (J) wave",
+    "w": [
+     "Delta wave",
+     "Epsilon wave",
+     "Pardee wave"
+    ],
+    "e": "Named after John Osborn, who described it in cold dogs in 1953."
+   },
+   {
+    "q": "The \u2018Lazarus phenomenon\u2019 is?",
+    "a": "The heart restarting on its own after CPR has stopped",
+    "w": [
+     "Waking up during surgery",
+     "A drug that reverses death",
+     "Recovery from coma after years"
+    ],
+    "e": "It's rare, and one reason doctors wait and watch for several minutes before confirming death."
+   },
+   {
+    "q": "On 100% oxygen, healthy lungs can push the oxygen level in arterial blood above about?",
+    "a": "500 mmHg",
+    "w": [
+     "100 mmHg",
+     "150 mmHg",
+     "2,000 mmHg"
+    ],
+    "e": "On room air it's about 80 to 100 mmHg. More oxygen in, much more in the blood, up to a point."
+   },
+   {
+    "q": "Decompression sickness (the bends) is treated in a hyperbaric chamber because high pressure?",
+    "a": "Shrinks the gas bubbles",
+    "w": [
+     "Warms the blood",
+     "Kills bacteria",
+     "Slows the heart"
+    ],
+    "e": "Higher pressure shrinks the bubbles and pushes nitrogen back into solution, then it's breathed off slowly."
+   },
+   {
+    "q": "Which electrolyte, when too high, gives tall \u2018peaked\u2019 T waves on the ECG?",
+    "a": "Potassium",
+    "w": [
+     "Sodium",
+     "Calcium",
+     "Magnesium"
+    ],
+    "e": "High potassium can stop the heart, so it's one of the few blood results that gets a phone call at 3 am."
    }
   ]
  }

@@ -81,3 +81,5 @@ html[data-theme="dark"] #trv .next{background:#7E68C8}
   #trv .theme{padding:6px 12px}
   #trv .theme b{font-size:19px}
 }
+#trv .explain a.more,.more-q a{font-weight:600;white-space:nowrap}
+.more-q{text-align:center;margin:12px 0 0}
