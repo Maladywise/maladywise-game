@@ -458,7 +458,7 @@ def tiles(keys):
     return '<ul class="sp-specs">' + "".join(f'<li><a href="/specialists/{slugify(k)}/" title="{e(k)}"><b>{e(SHORT.get(k, k))}</b><span>{len(CATS[k])}</span></a></li>' for k in keys) + "</ul>"
 allc = [{"n": p["name"], "s": " · ".join(p["_labels"]), "u": "/specialists/" + slugify(p["_labels"][0]) + "/#" + pid(p), "q": " ".join([p["name"], p.get("practice", ""), p.get("suburb", ""), p.get("address", ""), " ".join(p["_labels"]), " ".join(p.get("interests") or []), " ".join(itags(p)), " ".join(x.get("org", "") for x in p.get("listed_by") or []), " ".join(langs(p)), fwords(p)]).lower(), "sub": p.get("suburb", ""), "t": itags(p), "f": flags(p), "l": lkeys(p), "b": [b[0] for b in badges(p)] + [b[0] for b in pbadges(p)]} for p in L]
 json.dump({"checked": CHECKED, "items": allc}, open("specialists/search-index.json", "w"), ensure_ascii=False, separators=(",", ":"))
-title = "Specialists and allied health in Newcastle and the Hunter | Malady Wise"
+title = "Newcastle and Hunter Specialists and Allied Health | Malady Wise"
 desc = "Specialists and allied health in Newcastle and the Hunter, NSW, by specialty: practice contacts, interests, languages and inclusive-practice notes."
 page = (head(title, desc, "/specialists/", hub=True) + '<div class="mw-sec-hero" style="display:flex;align-items:center;gap:12px;margin:8px 0 4px"><img src="/assets/mascots/specialists.svg?v=2" width="64" height="64" alt="Percy the pelican, retired country GP" style="flex:0 0 auto"><h1 style="margin:0">Specialists and allied health</h1></div>'
         f'<p class="sp-sum">{len(L)} listings · {len(CATS)} specialties · Newcastle and the Hunter</p>'

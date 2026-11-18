@@ -472,7 +472,7 @@ related=[HUB_R, ("/iron/", "Fact sheet", "Iron Deficiency"), ("/heavy-periods/",
 # ---------------------------------------------------------------- high platelets
 dict(
 slug="high-platelets", crumb="High platelets", test="Platelet count", group="Blood count", cls="n",
-title="High Platelet Count: Usually a Reaction. When to Look Further",
+title="High Platelets: Usually a Reaction. When to Look Further",
 h1="High Platelets (Thrombocytosis)",
 desc="High platelets explained: why most high counts are a reaction to infection, inflammation or low iron, when to suspect a bone marrow cause, and red flags.",
 card="Usually a reaction to infection, inflammation or low iron. When it’s the bone marrow, and when to worry.",
@@ -514,7 +514,7 @@ related=[HUB_R, ("/blood-tests/low-platelets/", "Blood test", "Low Platelets"), 
 # ---------------------------------------------------------------- potassium
 dict(
 slug="high-potassium", crumb="High potassium", test="Serum potassium", group="Electrolytes", cls="m",
-title="High Potassium Result: False Alarm or Urgent? (5.5 to 6.5+)",
+title="High Potassium: False Alarm or Urgent? (5.5 to 6.5+)",
 h1="High Potassium (Hyperkalaemia)",
 desc="Potassium over 5.2 mmol/L? Many high results come from burst cells in the tube, not your body. What 5.5, 6.0 and 6.5+ mean, common causes, and when it’s urgent.",
 card="Often a damaged sample. Kidney and medicine causes, and why 6.5 or more is an emergency.",

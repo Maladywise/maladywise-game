@@ -51,7 +51,7 @@ fact("low-sperm-count",
  search="low sperm count oligospermia azoospermia semen analysis sperm test results normal sperm count motility morphology WHO 2021 male fertility improve sperm steroids testosterone ICSI")
 
 fact("low-testosterone",
- "Low Testosterone in Men: Real Deficiency vs Normal Ageing",
+ "Low Testosterone: Real Deficiency vs Normal Ageing",
  "Low testosterone (androgen deficiency, hypogonadism) in men: symptoms, how it’s properly tested, causes like Klinefelter syndrome, when testosterone treatment helps, and why it harms fertility.",
  "Low Testosterone", "low testosterone",
  "Tired, low libido, losing muscle? It might be testosterone, but often it isn’t. True testosterone deficiency is a medical condition that treatment helps a lot. A low number on one test, especially with ageing, weight gain or illness, is a different thing, and testosterone can do more harm than good.",
