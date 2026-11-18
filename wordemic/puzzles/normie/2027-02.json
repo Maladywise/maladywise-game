@@ -1,10 +1,70 @@
 [
  {
+  "date": "2027-02-01",
+  "difficulty": "Easy",
+  "word": "PIZZA",
+  "definition": "Flatbread with toppings, from Naples."
+ },
+ {
+  "date": "2027-02-02",
+  "difficulty": "Easy",
+  "word": "CANDY",
+  "definition": "Sweets, in American English."
+ },
+ {
+  "date": "2027-02-03",
+  "difficulty": "Medium",
+  "word": "LLAMA",
+  "definition": "A South American animal that can spit when annoyed."
+ },
+ {
+  "date": "2027-02-04",
+  "difficulty": "Medium",
+  "word": "BASIL",
+  "definition": "A fragrant herb. Also the name of a famously chaotic cat."
+ },
+ {
   "date": "2027-02-05",
   "number": 105,
   "difficulty": "Hard",
   "word": "MASQUERADE",
   "definition": "Party where guests wear masks and costumes. Carnival season is just before Lent."
+ },
+ {
+  "date": "2027-02-06",
+  "difficulty": "Hard",
+  "word": "GIANT",
+  "definition": "Something huge."
+ },
+ {
+  "date": "2027-02-07",
+  "difficulty": "Genius",
+  "word": "TOPAZ",
+  "definition": "A yellow-gold gemstone."
+ },
+ {
+  "date": "2027-02-08",
+  "difficulty": "Easy",
+  "word": "EAGLE",
+  "definition": "A large bird of prey with very sharp eyesight."
+ },
+ {
+  "date": "2027-02-09",
+  "difficulty": "Easy",
+  "word": "PANDA",
+  "definition": "A black-and-white bear that eats bamboo up to 14 hours a day."
+ },
+ {
+  "date": "2027-02-10",
+  "difficulty": "Medium",
+  "word": "OLIVE",
+  "definition": "A small fruit pressed for oil."
+ },
+ {
+  "date": "2027-02-11",
+  "difficulty": "Medium",
+  "word": "ROBIN",
+  "definition": "A small bird with a red breast."
  },
  {
   "date": "2027-02-12",
@@ -14,6 +74,42 @@
   "definition": "Someone you love. Valentine’s Day is Sunday."
  },
  {
+  "date": "2027-02-13",
+  "difficulty": "Hard",
+  "word": "LABEL",
+  "definition": "A tag that tells you what something is."
+ },
+ {
+  "date": "2027-02-14",
+  "difficulty": "Genius",
+  "word": "POLKA",
+  "definition": "A lively dance, or a pattern of dots."
+ },
+ {
+  "date": "2027-02-15",
+  "difficulty": "Easy",
+  "word": "WHALE",
+  "definition": "The largest animal ever. A blue whale’s heart weighs about as much as a small car."
+ },
+ {
+  "date": "2027-02-16",
+  "difficulty": "Easy",
+  "word": "PEACH",
+  "definition": "A soft, fuzzy stone fruit."
+ },
+ {
+  "date": "2027-02-17",
+  "difficulty": "Medium",
+  "word": "TULIP",
+  "definition": "A cup-shaped spring flower."
+ },
+ {
+  "date": "2027-02-18",
+  "difficulty": "Medium",
+  "word": "CHESS",
+  "definition": "A board game of kings, queens and checkmate."
+ },
+ {
   "date": "2027-02-19",
   "number": 119,
   "difficulty": "Hard",
@@ -21,10 +117,58 @@
   "definition": "Huge river animal of Africa whose name means ‘river horse’. One of the most dangerous large animals on Earth."
  },
  {
+  "date": "2027-02-20",
+  "difficulty": "Hard",
+  "word": "CLOVE",
+  "definition": "A dried flower bud used as a spice. Clove oil is an old toothache remedy."
+ },
+ {
+  "date": "2027-02-21",
+  "difficulty": "Genius",
+  "word": "YODEL",
+  "definition": "To sing switching quickly between high and low notes."
+ },
+ {
+  "date": "2027-02-22",
+  "difficulty": "Easy",
+  "word": "DAISY",
+  "definition": "A small white flower with a yellow centre."
+ },
+ {
+  "date": "2027-02-23",
+  "difficulty": "Easy",
+  "word": "GHOST",
+  "definition": "The spirit of a dead person in stories."
+ },
+ {
+  "date": "2027-02-24",
+  "difficulty": "Medium",
+  "word": "FROST",
+  "definition": "A thin layer of ice on cold mornings."
+ },
+ {
+  "date": "2027-02-25",
+  "difficulty": "Medium",
+  "word": "PEARL",
+  "definition": "A shiny gem made inside an oyster."
+ },
+ {
   "date": "2027-02-26",
   "number": 126,
   "difficulty": "Hard",
   "word": "RAINBOW",
   "definition": "Arc of colours when sunlight shines through raindrops. Red on the outside, violet on the inside."
+ },
+ {
+  "date": "2027-02-27",
+  "difficulty": "Hard",
+  "word": "VOUCH",
+  "definition": "To confirm someone is honest or reliable. Would anyone vouch for that guess?"
+ },
+ {
+  "date": "2027-02-28",
+  "difficulty": "Genius",
+  "word": "SNAIL",
+  "definition": "A slow creature that carries its shell."
  }
 ]

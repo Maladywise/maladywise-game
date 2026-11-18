@@ -1,108 +1,13 @@
 [
  {
-  "difficulty": "Medium",
-  "word": "COLON",
-  "definition": "Large intestine. Absorbs water and forms stool."
- },
- {
-  "difficulty": "Easy",
-  "word": "COUGH",
-  "definition": "Reflex that clears the airways."
- },
- {
-  "difficulty": "Hard",
-  "word": "UVULA",
-  "definition": "Fleshy tag hanging from the back of the soft palate."
- },
- {
-  "difficulty": "Medium",
-  "word": "ULCER",
-  "definition": "Break in skin or mucous membrane that fails to heal."
- },
- {
-  "difficulty": "Genius",
-  "word": "SELLA",
-  "definition": "Saddle-shaped hollow in the skull base that holds the pituitary (sella turcica)."
- },
- {
-  "difficulty": "Medium",
-  "word": "GLAND",
-  "definition": "Organ that makes and releases substances such as hormones."
- },
- {
-  "difficulty": "Hard",
-  "word": "PINNA",
-  "definition": "The visible outer ear flap."
- },
- {
-  "difficulty": "Genius",
-  "word": "HILUM",
-  "definition": "Notch where vessels and nerves enter an organ such as the lung or kidney."
- },
- {
-  "difficulty": "Hard",
-  "word": "NARES",
-  "definition": "The nostrils."
- },
- {
-  "difficulty": "Easy",
-  "word": "LIVER",
-  "definition": "Largest internal organ. Processes nutrients, makes bile, clears drugs and toxins."
- },
- {
-  "difficulty": "Genius",
-  "word": "TOPHI",
-  "definition": "Chalky urate deposits under the skin in chronic gout."
- },
- {
   "difficulty": "Einstein",
   "word": "COCCI",
   "definition": "Round bacteria, plural. Staph and strep are the famous ones. Yes, three Cs. No, that’s not a typo."
  },
  {
-  "difficulty": "Genius",
-  "word": "TESLA",
-  "definition": "Unit of magnetic field strength. Most MRI scanners run at 1.5 or 3 of them."
- },
- {
-  "difficulty": "Genius",
-  "word": "APGAR",
-  "definition": "Newborn score out of 10, checked at 1 and 5 minutes after birth."
- },
- {
-  "difficulty": "Hard",
-  "word": "BOLUS",
-  "definition": "A rounded mass of chewed food, or a single large dose of a drug."
- },
- {
-  "difficulty": "Hard",
-  "word": "CILIA",
-  "definition": "Tiny hair-like projections that sweep mucus out of the airways."
- },
- {
-  "difficulty": "Hard",
-  "word": "TALUS",
-  "definition": "Ankle bone that links the leg to the foot."
- },
- {
-  "difficulty": "Easy",
-  "word": "NERVE",
-  "definition": "Bundle of fibres carrying signals between the brain and body."
- },
- {
-  "difficulty": "Medium",
-  "word": "TIBIA",
-  "definition": "Shin bone. The larger of the two lower-leg bones."
- },
- {
   "difficulty": "Hard",
   "word": "ANEURYSM",
   "definition": "Bulge in a weakened artery wall. The abdominal aorta and the brain’s ‘berry’ aneurysms are the famous ones. Usually silent until they aren’t."
- },
- {
-  "difficulty": "Easy",
-  "word": "TOOTH",
-  "definition": "Hard structure in the jaw for biting and chewing."
  },
  {
   "difficulty": "Hard",
@@ -121,23 +26,8 @@
  },
  {
   "difficulty": "Hard",
-  "word": "CURIE",
-  "definition": "Old unit of radioactivity, named after Marie and Pierre Curie."
- },
- {
-  "difficulty": "Hard",
   "word": "GLAUCOMA",
   "definition": "Optic nerve damage, often with raised eye pressure, that quietly steals side vision first. Usually painless, so regular eye checks matter."
- },
- {
-  "difficulty": "Easy",
-  "word": "SKULL",
-  "definition": "Bones of the head that protect the brain."
- },
- {
-  "difficulty": "Easy",
-  "word": "TRIAL",
-  "definition": "A test of a treatment in people. The randomised controlled trial is the gold standard."
  },
  {
   "difficulty": "Hard",
@@ -147,22 +37,12 @@
  },
  {
   "difficulty": "Easy",
-  "word": "ANKLE",
-  "definition": "Hinge joint between shin and foot, and a podiatrist's and physio's steady customer. Sprained by kerbs, netball and bad decisions on stairs."
- },
- {
-  "difficulty": "Genius",
-  "word": "XYLOL",
-  "definition": "Old name for xylene, the solvent that clears tissue before wax embedding in histopathology. If you guessed this in one, please step away from the lab."
+  "word": "TOOTH",
+  "definition": "Hard structure in the jaw for biting and chewing."
  },
  {
   "difficulty": "Easy",
-  "word": "BIRTH",
-  "definition": "The grand finale of labour, usually with a midwife close at hand. \"Any minute now\" is rarely accurate."
- },
- {
-  "difficulty": "Genius",
-  "word": "PSORA",
-  "definition": "Archaic term for itchy skin disease, used for scabies and psoriasis alike. From the days when \"it's itchy\" counted as a diagnosis."
+  "word": "ANKLE",
+  "definition": "Hinge joint between shin and foot, and a podiatrist's and physio's steady customer. Sprained by kerbs, netball and bad decisions on stairs."
  }
 ]

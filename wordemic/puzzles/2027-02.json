@@ -1,10 +1,70 @@
 [
  {
+  "date": "2027-02-01",
+  "difficulty": "Easy",
+  "word": "GERMS",
+  "definition": "Microbes that cause disease. Twenty seconds of soap and water shifts most of them."
+ },
+ {
+  "date": "2027-02-02",
+  "difficulty": "Easy",
+  "word": "BIRTH",
+  "definition": "The grand finale of labour, usually with a midwife close at hand. \"Any minute now\" is rarely accurate."
+ },
+ {
+  "date": "2027-02-03",
+  "difficulty": "Medium",
+  "word": "CROUP",
+  "definition": "A viral illness in young children with a barking, seal-like cough."
+ },
+ {
+  "date": "2027-02-04",
+  "difficulty": "Medium",
+  "word": "COLIC",
+  "definition": "Long bouts of crying in a healthy young baby. It settles by about 3 to 4 months."
+ },
+ {
   "date": "2027-02-05",
   "number": 112,
   "difficulty": "Hard",
   "word": "ATHEROSCLEROSIS",
   "definition": "Fatty plaques that stiffen and narrow arteries, behind most heart attacks and strokes. Heart disease is a leading killer of Australian women too. Wear Red Day."
+ },
+ {
+  "date": "2027-02-06",
+  "difficulty": "Hard",
+  "word": "CILIA",
+  "definition": "Tiny hair-like projections that sweep mucus out of the airways."
+ },
+ {
+  "date": "2027-02-07",
+  "difficulty": "Genius",
+  "word": "XYLOL",
+  "definition": "Old name for xylene, the solvent that clears tissue before wax embedding in histopathology. If you guessed this in one, please step away from the lab."
+ },
+ {
+  "date": "2027-02-08",
+  "difficulty": "Easy",
+  "word": "AUDIT",
+  "definition": "A check of care against a standard, repeated after changes to see if things improved."
+ },
+ {
+  "date": "2027-02-09",
+  "difficulty": "Easy",
+  "word": "CHEST",
+  "definition": "The part of the body between the neck and the belly, holding the heart and lungs."
+ },
+ {
+  "date": "2027-02-10",
+  "difficulty": "Medium",
+  "word": "GAUZE",
+  "definition": "Thin woven fabric used for dressings."
+ },
+ {
+  "date": "2027-02-11",
+  "difficulty": "Medium",
+  "word": "LUPUS",
+  "definition": "An autoimmune disease that can affect skin, joints and kidneys. Its name is Latin for wolf."
  },
  {
   "date": "2027-02-12",
@@ -14,6 +74,42 @@
   "definition": "Sideways curve of the spine, often first noticed in the teens as one shoulder or hip sitting higher. Most cases are mild and just need watching."
  },
  {
+  "date": "2027-02-13",
+  "difficulty": "Hard",
+  "word": "TALUS",
+  "definition": "Ankle bone that links the leg to the foot."
+ },
+ {
+  "date": "2027-02-14",
+  "difficulty": "Genius",
+  "word": "PSORA",
+  "definition": "Archaic term for itchy skin disease, used for scabies and psoriasis alike. From the days when \"it's itchy\" counted as a diagnosis."
+ },
+ {
+  "date": "2027-02-15",
+  "difficulty": "Easy",
+  "word": "ELBOW",
+  "definition": "The hinge joint between the upper arm and forearm. The ‘funny bone’ is really the ulnar nerve."
+ },
+ {
+  "date": "2027-02-16",
+  "difficulty": "Easy",
+  "word": "THUMB",
+  "definition": "The digit with two bones that lets us grip. It has its own big patch of brain."
+ },
+ {
+  "date": "2027-02-17",
+  "difficulty": "Medium",
+  "word": "NASAL",
+  "definition": "Relating to the nose."
+ },
+ {
+  "date": "2027-02-18",
+  "difficulty": "Medium",
+  "word": "OPTIC",
+  "definition": "Relating to the eye or vision, as in the optic nerve."
+ },
+ {
   "date": "2027-02-19",
   "number": 126,
   "difficulty": "Hard",
@@ -21,10 +117,58 @@
   "definition": "Air leaking into the space around a lung so it partly collapses: sudden one-sided chest pain and breathlessness. Tall, thin young men and smokers are most at risk."
  },
  {
+  "date": "2027-02-20",
+  "difficulty": "Hard",
+  "word": "CURIE",
+  "definition": "Old unit of radioactivity, named after Marie and Pierre Curie."
+ },
+ {
+  "date": "2027-02-21",
+  "difficulty": "Genius",
+  "word": "ILIUM",
+  "definition": "The large flat pelvic bone. Spelled with an ‘i’; the ileum is the gut."
+ },
+ {
+  "date": "2027-02-22",
+  "difficulty": "Easy",
+  "word": "WRIST",
+  "definition": "The joint between the forearm and the hand, built from eight small carpal bones."
+ },
+ {
+  "date": "2027-02-23",
+  "difficulty": "Easy",
+  "word": "MOUTH",
+  "definition": "Where digestion starts. Saliva begins breaking down starch straight away."
+ },
+ {
+  "date": "2027-02-24",
+  "difficulty": "Medium",
+  "word": "HEART",
+  "definition": "A fist-sized pump that beats about 100,000 times a day."
+ },
+ {
+  "date": "2027-02-25",
+  "difficulty": "Medium",
+  "word": "OVARY",
+  "definition": "One of two organs that release eggs and make oestrogen and progesterone."
+ },
+ {
   "date": "2027-02-26",
   "number": 133,
   "difficulty": "Einstein",
   "word": "SYRINGOMYELIA",
   "definition": "A fluid-filled cavity (syrinx) inside the spinal cord, often linked to a Chiari malformation. Classic sign: losing pain and temperature feeling across the shoulders in a ‘cape’ pattern."
+ },
+ {
+  "date": "2027-02-27",
+  "difficulty": "Hard",
+  "word": "ILEUM",
+  "definition": "The last part of the small intestine, where vitamin B12 is absorbed."
+ },
+ {
+  "date": "2027-02-28",
+  "difficulty": "Genius",
+  "word": "LUMEN",
+  "definition": "The hollow inside of a tube, like a blood vessel or bowel."
  }
 ]

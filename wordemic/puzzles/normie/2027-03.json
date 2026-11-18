@@ -1,10 +1,70 @@
 [
  {
+  "date": "2027-03-01",
+  "difficulty": "Easy",
+  "word": "CAMEL",
+  "definition": "A desert animal that stores fat, not water, in its hump."
+ },
+ {
+  "date": "2027-03-02",
+  "difficulty": "Easy",
+  "word": "OTTER",
+  "definition": "A playful water mammal. Sea otters hold hands while they sleep."
+ },
+ {
+  "date": "2027-03-03",
+  "difficulty": "Medium",
+  "word": "ACORN",
+  "definition": "The nut of an oak tree."
+ },
+ {
+  "date": "2027-03-04",
+  "difficulty": "Medium",
+  "word": "ZEBRA",
+  "definition": "A striped African animal related to horses."
+ },
+ {
   "date": "2027-03-05",
   "number": 133,
   "difficulty": "Hard",
   "word": "UNCOPYRIGHTABLE",
   "definition": "Fifteen letters and not one repeated: one of the longest everyday English words with no repeated letter."
+ },
+ {
+  "date": "2027-03-06",
+  "difficulty": "Hard",
+  "word": "EPOCH",
+  "definition": "A distinct period in history or geology."
+ },
+ {
+  "date": "2027-03-07",
+  "difficulty": "Genius",
+  "word": "BISON",
+  "definition": "A huge, shaggy wild ox."
+ },
+ {
+  "date": "2027-03-08",
+  "difficulty": "Easy",
+  "word": "STORM",
+  "definition": "Strong winds with rain or thunder."
+ },
+ {
+  "date": "2027-03-09",
+  "difficulty": "Easy",
+  "word": "LUNCH",
+  "definition": "The midday meal."
+ },
+ {
+  "date": "2027-03-10",
+  "difficulty": "Medium",
+  "word": "SHELL",
+  "definition": "The hard outer case of an egg, nut or sea creature."
+ },
+ {
+  "date": "2027-03-11",
+  "difficulty": "Medium",
+  "word": "CORAL",
+  "definition": "Tiny animals that build reefs."
  },
  {
   "date": "2027-03-12",
@@ -14,6 +74,42 @@
   "definition": "Bursting with joy. How you feel when you solve this in three."
  },
  {
+  "date": "2027-03-13",
+  "difficulty": "Hard",
+  "word": "KOALA",
+  "definition": "An Australian marsupial that eats gum leaves and sleeps most of the day."
+ },
+ {
+  "date": "2027-03-14",
+  "difficulty": "Genius",
+  "word": "FLUTE",
+  "definition": "A wind instrument played sideways."
+ },
+ {
+  "date": "2027-03-15",
+  "difficulty": "Easy",
+  "word": "TRAIL",
+  "definition": "A path through the bush."
+ },
+ {
+  "date": "2027-03-16",
+  "difficulty": "Easy",
+  "word": "BRICK",
+  "definition": "A block for building walls."
+ },
+ {
+  "date": "2027-03-17",
+  "difficulty": "Medium",
+  "word": "IGLOO",
+  "definition": "A dome-shaped house made of snow."
+ },
+ {
+  "date": "2027-03-18",
+  "difficulty": "Medium",
+  "word": "MAPLE",
+  "definition": "A tree whose sap makes syrup."
+ },
+ {
   "date": "2027-03-19",
   "number": 147,
   "difficulty": "Hard",
@@ -21,10 +117,76 @@
   "definition": "Getting up and moving around while still asleep. Common in kids, who usually grow out of it. World Sleep Day."
  },
  {
+  "date": "2027-03-20",
+  "difficulty": "Hard",
+  "word": "TRASH",
+  "definition": "Rubbish."
+ },
+ {
+  "date": "2027-03-21",
+  "difficulty": "Genius",
+  "word": "PASTA",
+  "definition": "Italian dough shaped into noodles."
+ },
+ {
+  "date": "2027-03-22",
+  "difficulty": "Easy",
+  "word": "SUSHI",
+  "definition": "Japanese rice with fish or vegetables."
+ },
+ {
+  "date": "2027-03-23",
+  "difficulty": "Easy",
+  "word": "WHEAT",
+  "definition": "A grain ground into flour."
+ },
+ {
+  "date": "2027-03-24",
+  "difficulty": "Medium",
+  "word": "KAZOO",
+  "definition": "Tiny instrument you hum into, not blow. Nobody has ever played one quietly."
+ },
+ {
+  "date": "2027-03-25",
+  "difficulty": "Medium",
+  "word": "SQUID",
+  "definition": "Ten-armed sea creature. Calamari before it got crumbed."
+ },
+ {
   "date": "2027-03-26",
   "number": 154,
   "difficulty": "Hard",
   "word": "BREATHTAKINGLY",
   "definition": "In a way so impressive it leaves you speechless. Fourteen letters, one breath."
+ },
+ {
+  "date": "2027-03-27",
+  "difficulty": "Hard",
+  "word": "KIOSK",
+  "definition": "Small booth selling newspapers, snacks or tickets."
+ },
+ {
+  "date": "2027-03-28",
+  "difficulty": "Genius",
+  "word": "ELVER",
+  "definition": "A young eel. In spring, elvers swim in from the sea and wriggle up rivers in their thousands."
+ },
+ {
+  "date": "2027-03-29",
+  "difficulty": "Easy",
+  "word": "KNACK",
+  "definition": "A natural skill for something."
+ },
+ {
+  "date": "2027-03-30",
+  "difficulty": "Easy",
+  "word": "PIXEL",
+  "definition": "One tiny dot in a digital picture."
+ },
+ {
+  "date": "2027-03-31",
+  "difficulty": "Medium",
+  "word": "VIVID",
+  "definition": "Bright and intense."
  }
 ]

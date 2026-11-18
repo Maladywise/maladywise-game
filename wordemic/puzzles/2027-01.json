@@ -7,11 +7,83 @@
   "definition": "Morning-after headache, nausea and regret. Fancy name: veisalgia. Water and time help; no hangover cure beats the second-last drink."
  },
  {
+  "date": "2027-01-02",
+  "difficulty": "Hard",
+  "word": "CHART",
+  "definition": "A patient’s record. Paper ones used to hang at the end of the hospital bed."
+ },
+ {
+  "date": "2027-01-03",
+  "difficulty": "Genius",
+  "word": "SELLA",
+  "definition": "Saddle-shaped hollow in the skull base that holds the pituitary (sella turcica)."
+ },
+ {
+  "date": "2027-01-04",
+  "difficulty": "Easy",
+  "word": "COUGH",
+  "definition": "Reflex that clears the airways."
+ },
+ {
+  "date": "2027-01-05",
+  "difficulty": "Easy",
+  "word": "LIVER",
+  "definition": "Largest internal organ. Processes nutrients, makes bile, clears drugs and toxins."
+ },
+ {
+  "date": "2027-01-06",
+  "difficulty": "Medium",
+  "word": "COLON",
+  "definition": "Large intestine. Absorbs water and forms stool."
+ },
+ {
+  "date": "2027-01-07",
+  "difficulty": "Medium",
+  "word": "ULCER",
+  "definition": "Break in skin or mucous membrane that fails to heal."
+ },
+ {
   "date": "2027-01-08",
   "number": 84,
   "difficulty": "Hard",
   "word": "GASTROENTERITIS",
   "definition": "Gastro: vomiting and diarrhoea from a bug in the gut, usually a virus like norovirus. Small, frequent sips of oral rehydration solution beat sports drinks."
+ },
+ {
+  "date": "2027-01-09",
+  "difficulty": "Hard",
+  "word": "UVULA",
+  "definition": "Fleshy tag hanging from the back of the soft palate."
+ },
+ {
+  "date": "2027-01-10",
+  "difficulty": "Genius",
+  "word": "HILUM",
+  "definition": "Notch where vessels and nerves enter an organ such as the lung or kidney."
+ },
+ {
+  "date": "2027-01-11",
+  "difficulty": "Easy",
+  "word": "NERVE",
+  "definition": "Bundle of fibres carrying signals between the brain and body."
+ },
+ {
+  "date": "2027-01-12",
+  "difficulty": "Easy",
+  "word": "ROUND",
+  "definition": "The team’s daily visit to every patient on the ward. Juniors write very fast."
+ },
+ {
+  "date": "2027-01-13",
+  "difficulty": "Medium",
+  "word": "BURPS",
+  "definition": "Gas escaping from the stomach. Fizzy drinks and eating quickly cause more of them."
+ },
+ {
+  "date": "2027-01-14",
+  "difficulty": "Medium",
+  "word": "GLAND",
+  "definition": "Organ that makes and releases substances such as hormones."
  },
  {
   "date": "2027-01-15",
@@ -21,6 +93,42 @@
   "definition": "As in psammoma bodies: tiny layered calcium specks seen down the microscope in papillary thyroid cancer, meningioma and serous ovarian tumours. Greek psammos, sand."
  },
  {
+  "date": "2027-01-16",
+  "difficulty": "Hard",
+  "word": "PINNA",
+  "definition": "The visible outer ear flap."
+ },
+ {
+  "date": "2027-01-17",
+  "difficulty": "Genius",
+  "word": "TOPHI",
+  "definition": "Chalky urate deposits under the skin in chronic gout."
+ },
+ {
+  "date": "2027-01-18",
+  "difficulty": "Easy",
+  "word": "SWEAT",
+  "definition": "Cooling fluid from skin glands. Palms and soles have the most glands."
+ },
+ {
+  "date": "2027-01-19",
+  "difficulty": "Easy",
+  "word": "BONES",
+  "definition": "Living tissue that is constantly rebuilt. Your skeleton is replaced roughly every ten years."
+ },
+ {
+  "date": "2027-01-20",
+  "difficulty": "Medium",
+  "word": "TIBIA",
+  "definition": "Shin bone. The larger of the two lower-leg bones."
+ },
+ {
+  "date": "2027-01-21",
+  "difficulty": "Medium",
+  "word": "MUMPS",
+  "definition": "A viral infection that swells the salivary glands by the jaw. Vaccines made it rare."
+ },
+ {
   "date": "2027-01-22",
   "number": 98,
   "difficulty": "Hard",
@@ -28,10 +136,58 @@
   "definition": "Hearing specialist who tests hearing and fits aids and implants. The multichannel cochlear implant was pioneered in Melbourne by Graeme Clark’s team, first implanted in 1978."
  },
  {
+  "date": "2027-01-23",
+  "difficulty": "Hard",
+  "word": "NARES",
+  "definition": "The nostrils."
+ },
+ {
+  "date": "2027-01-24",
+  "difficulty": "Genius",
+  "word": "TESLA",
+  "definition": "Unit of magnetic field strength. Most MRI scanners run at 1.5 or 3 of them."
+ },
+ {
+  "date": "2027-01-25",
+  "difficulty": "Easy",
+  "word": "SKULL",
+  "definition": "Bones of the head that protect the brain."
+ },
+ {
+  "date": "2027-01-26",
+  "difficulty": "Easy",
+  "word": "TRIAL",
+  "definition": "A test of a treatment in people. The randomised controlled trial is the gold standard."
+ },
+ {
+  "date": "2027-01-27",
+  "difficulty": "Medium",
+  "word": "POLIO",
+  "definition": "A virus that can paralyse. Vaccination has cut cases by more than 99%."
+ },
+ {
+  "date": "2027-01-28",
+  "difficulty": "Medium",
+  "word": "HIVES",
+  "definition": "Itchy, raised welts (urticaria), often from an allergy or infection."
+ },
+ {
   "date": "2027-01-29",
   "number": 105,
   "difficulty": "Hard",
   "word": "TRACHOMA",
   "definition": "Chlamydial eye infection that scars the eyelids and can blind. Australia is the only high-income country where it’s still endemic, in some remote Aboriginal communities. Clean faces and safe water help end it."
+ },
+ {
+  "date": "2027-01-30",
+  "difficulty": "Hard",
+  "word": "BOLUS",
+  "definition": "A rounded mass of chewed food, or a single large dose of a drug."
+ },
+ {
+  "date": "2027-01-31",
+  "difficulty": "Genius",
+  "word": "APGAR",
+  "definition": "Newborn score out of 10, checked at 1 and 5 minutes after birth."
  }
 ]

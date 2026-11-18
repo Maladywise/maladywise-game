@@ -1,10 +1,70 @@
 [
  {
+  "date": "2027-03-01",
+  "difficulty": "Easy",
+  "word": "NURSE",
+  "definition": "A health professional who cares for patients. Florence Nightingale made it a profession."
+ },
+ {
+  "date": "2027-03-02",
+  "difficulty": "Easy",
+  "word": "PULSE",
+  "definition": "The beat felt in an artery each time the heart pumps. Usually 60 to 100 a minute at rest."
+ },
+ {
+  "date": "2027-03-03",
+  "difficulty": "Medium",
+  "word": "SCALP",
+  "definition": "The skin of the head. It bleeds a lot when cut because of its rich blood supply."
+ },
+ {
+  "date": "2027-03-04",
+  "difficulty": "Medium",
+  "word": "SERUM",
+  "definition": "The clear fluid left when blood clots. Many blood tests are run on it."
+ },
+ {
   "date": "2027-03-05",
   "number": 140,
   "difficulty": "Hard",
   "word": "OTOLARYNGOLOGY",
   "definition": "Ear, nose and throat surgery, ENT for short. The full name is otorhinolaryngology, which is why nobody says it out loud."
+ },
+ {
+  "date": "2027-03-06",
+  "difficulty": "Hard",
+  "word": "ILIAC",
+  "definition": "Relating to the ilium, the big wing-shaped bone of the pelvis."
+ },
+ {
+  "date": "2027-03-07",
+  "difficulty": "Genius",
+  "word": "ATLAS",
+  "definition": "The top vertebra, which holds up the skull, named after the Titan who held up the sky."
+ },
+ {
+  "date": "2027-03-08",
+  "difficulty": "Easy",
+  "word": "WOUND",
+  "definition": "A break in the skin or tissue. Clean it, cover it, and watch for redness spreading."
+ },
+ {
+  "date": "2027-03-09",
+  "difficulty": "Easy",
+  "word": "URINE",
+  "definition": "Liquid waste made by the kidneys. Pale straw-coloured usually means well hydrated."
+ },
+ {
+  "date": "2027-03-10",
+  "difficulty": "Medium",
+  "word": "SINUS",
+  "definition": "An air-filled space in the skull bones around the nose."
+ },
+ {
+  "date": "2027-03-11",
+  "difficulty": "Medium",
+  "word": "TOXIN",
+  "definition": "A poison made by a living thing, like tetanus toxin."
  },
  {
   "date": "2027-03-12",
@@ -14,6 +74,42 @@
   "definition": "Eye specialist doctor, who does cataract surgery, among other things. Note the PH before the TH: ‘opthalmologist’ is the most common misspelling in medicine. World Glaucoma Week."
  },
  {
+  "date": "2027-03-13",
+  "difficulty": "Hard",
+  "word": "STOMA",
+  "definition": "An opening made on the belly so the bowel or bladder can empty into a bag."
+ },
+ {
+  "date": "2027-03-14",
+  "difficulty": "Genius",
+  "word": "LOCUM",
+  "definition": "A doctor filling in for another for a while. From the Latin locum tenens, place-holder."
+ },
+ {
+  "date": "2027-03-15",
+  "difficulty": "Easy",
+  "word": "THIGH",
+  "definition": "The upper leg, home to the femur, the body’s longest and strongest bone."
+ },
+ {
+  "date": "2027-03-16",
+  "difficulty": "Easy",
+  "word": "TEARS",
+  "definition": "Salty fluid that keeps the eyes moist. Emotional ones contain more protein."
+ },
+ {
+  "date": "2027-03-17",
+  "difficulty": "Medium",
+  "word": "STENT",
+  "definition": "A small mesh tube that props an artery open."
+ },
+ {
+  "date": "2027-03-18",
+  "difficulty": "Medium",
+  "word": "SCRUB",
+  "definition": "To wash thoroughly before surgery. Theatre scrubs went green and blue to cut glare and hide blood."
+ },
+ {
   "date": "2027-03-19",
   "number": 154,
   "difficulty": "Hard",
@@ -21,10 +117,76 @@
   "definition": "Brain disorder of overwhelming daytime sleepiness and sudden sleep attacks, sometimes with cataplexy: muscles going floppy with laughter or surprise. World Sleep Day."
  },
  {
+  "date": "2027-03-20",
+  "difficulty": "Hard",
+  "word": "ULNAR",
+  "definition": "Relating to the ulna, the forearm bone on the little-finger side."
+ },
+ {
+  "date": "2027-03-21",
+  "difficulty": "Genius",
+  "word": "SNORE",
+  "definition": "Noisy breathing in sleep from a vibrating airway. Losing weight and sleeping on your side often help."
+ },
+ {
+  "date": "2027-03-22",
+  "difficulty": "Easy",
+  "word": "PAGER",
+  "definition": "A beeper still carried in many hospitals because it’s so reliable."
+ },
+ {
+  "date": "2027-03-23",
+  "difficulty": "Easy",
+  "word": "FLUID",
+  "definition": "Any liquid. About 60% of an adult’s body is water."
+ },
+ {
+  "date": "2027-03-24",
+  "difficulty": "Medium",
+  "word": "STREP",
+  "definition": "Short for streptococcus, the bacteria behind strep throat."
+ },
+ {
+  "date": "2027-03-25",
+  "difficulty": "Medium",
+  "word": "MUCUS",
+  "definition": "Slimy protective fluid lining the nose, airways and gut."
+ },
+ {
   "date": "2027-03-26",
   "number": 161,
   "difficulty": "Hard",
   "word": "EPILEPSY",
   "definition": "Tendency to repeated unprovoked seizures. Seizure first aid: time it, protect the head, nothing in the mouth, recovery position once it stops. Purple Day."
+ },
+ {
+  "date": "2027-03-27",
+  "difficulty": "Hard",
+  "word": "YAWNS",
+  "definition": "Big open-mouthed breaths that may help cool the brain. Contagious, even reading about them."
+ },
+ {
+  "date": "2027-03-28",
+  "difficulty": "Genius",
+  "word": "DIGIT",
+  "definition": "A finger or toe."
+ },
+ {
+  "date": "2027-03-29",
+  "difficulty": "Easy",
+  "word": "SUGAR",
+  "definition": "Sweet carbohydrate. Glucose is the brain’s main fuel."
+ },
+ {
+  "date": "2027-03-30",
+  "difficulty": "Easy",
+  "word": "PANIC",
+  "definition": "A sudden rush of intense fear, with racing heart and breathlessness. Attacks pass within minutes."
+ },
+ {
+  "date": "2027-03-31",
+  "difficulty": "Medium",
+  "word": "SMEAR",
+  "definition": "A thin layer of sample spread on a slide. The old cervical test was called a Pap smear."
  }
 ]
