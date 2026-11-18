@@ -11,7 +11,9 @@
     "wrong": [
      "Three",
      "Eight",
-     "Twelve"
+     "Twelve",
+     "Four",
+     "Six, always"
     ],
     "why": "Five is the classic, but some species have 20 or more. Australia’s crown-of-thorns starfish can have over 20.",
     "art": "seastar",
@@ -26,7 +28,9 @@
     "wrong": [
      "Hairballs",
      "Eggs",
-     "Nests"
+     "Nests",
+     "Feathers",
+     "Owlets"
     ],
     "why": "Scientists pull owl pellets apart to see exactly what the owl had for dinner."
    },
@@ -37,7 +41,9 @@
     "wrong": [
      "Black and white only",
      "Reds and greens",
-     "Every colour we see"
+     "Every colour we see",
+     "Ultraviolet only",
+     "Pinks and purples"
     ],
     "why": "Dogs have two kinds of colour cone, not three. Red and green look much the same to them."
    },
@@ -48,7 +54,9 @@
     "wrong": [
      "Digging",
      "Keeping warm",
-     "Catching flies"
+     "Catching flies",
+     "Climbing trees",
+     "Gliding"
     ],
     "why": "Webbing turns each kick into a paddle stroke.",
     "art": "frog",
@@ -63,7 +71,9 @@
     "wrong": [
      "Wobbling",
      "Changing colour",
-     "Falling out"
+     "Falling out",
+     "Glowing",
+     "Shrinking"
     ],
     "why": "They grow all their lives and are worn down by gnawing. That’s why rats and mice chew everything."
    }
@@ -81,7 +91,9 @@
     "wrong": [
      "1 kg",
      "300 g",
-     "60 kg"
+     "60 kg",
+     "3 kg",
+     "30 kg"
     ],
     "why": "About 11 kg, with very thick walls. It has to push blood about two metres up the neck to the brain.",
     "art": "giraffe",
@@ -96,7 +108,9 @@
     "wrong": [
      "A separate case it can leave",
      "Keratin only",
-     "Hardened skin it sheds"
+     "Hardened skin it sheds",
+     "Wood-hard cartilage",
+     "Borrowed from another animal"
     ],
     "why": "The shell is part of the skeleton. A turtle can no more leave its shell than you can leave your ribcage."
    },
@@ -107,7 +121,9 @@
     "wrong": [
      "Lungs",
      "Eyes",
-     "Stomachs"
+     "Stomachs",
+     "Brains",
+     "Noses"
     ],
     "why": "Five pairs of muscly loops near the front squeeze blood along. Often called its ten ‘hearts’."
    },
@@ -118,7 +134,9 @@
     "wrong": [
      "Crab",
      "Jellyfish",
-     "Starfish"
+     "Starfish",
+     "Shark",
+     "Lobster"
     ],
     "why": "Two hearts pump blood through the gills, one pumps it round the body. Crabs have blue blood but just one heart. The first permanent artificial heart was fitted on this day in 1982."
    },
@@ -153,7 +171,9 @@
     "wrong": [
      "Two",
      "Three, all facing forwards",
-     "Five"
+     "Five",
+     "Six",
+     "Three, and two swivel"
     ],
     "why": "Owls can grip with two toes forward and two back, or three forward and one back.",
     "art": "owl",
@@ -168,7 +188,9 @@
     "wrong": [
      "Hip",
      "Elbow",
-     "Knee, obviously"
+     "Knee, obviously",
+     "Wrist",
+     "Shin"
     ],
     "why": "The real knee is hidden up under the feathers. The joint you see bend is the ankle."
    },
@@ -179,7 +201,9 @@
     "wrong": [
      "One",
      "Two",
-     "Seven"
+     "Seven",
+     "Three",
+     "Twelve"
     ],
     "why": "Rumen, reticulum, omasum and abomasum. Grass takes a long journey."
    },
@@ -190,7 +214,9 @@
     "wrong": [
      "Glue",
      "Suction cups",
-     "Sticky spit"
+     "Sticky spit",
+     "Gluey sweat",
+     "Magnetic scales"
     ],
     "why": "Each toe pad carries millions of microscopic hairs that cling to surfaces with weak molecular forces. No glue involved."
    },
@@ -201,7 +227,9 @@
     "wrong": [
      "A sixth finger with a nail",
      "A claw",
-     "A tooth"
+     "A tooth",
+     "A toe on its hand",
+     "Its tail"
     ],
     "why": "Pandas’ real thumbs are busy being normal paw digits. Evolution improvised with a wrist bone."
    }
@@ -219,7 +247,9 @@
     "wrong": [
      "One is for each eye",
      "Uneven feathers",
-     "One is only for daytime"
+     "One is only for daytime",
+     "To hear underwater",
+     "Damage from fighting"
     ],
     "why": "In owls like the barn owl, lopsided ears let them locate a mouse in total darkness.",
     "art": "owl",
@@ -234,7 +264,9 @@
     "wrong": [
      "They have no tongue",
      "It’s too short",
-     "It’s stuck behind their teeth"
+     "It’s stuck behind their teeth",
+     "It's split in two",
+     "It's covered in spikes"
     ],
     "why": "The tongue is tied down. A flap at the back of the throat seals out water instead."
    },
@@ -245,7 +277,9 @@
     "wrong": [
      "Ink",
      "Air",
-     "Oil"
+     "Oil",
+     "Mud",
+     "Sand"
     ],
     "why": "A water-filled plumbing system powers the tube feet and moves things around.",
     "art": "seastar",
@@ -260,7 +294,9 @@
     "wrong": [
      "Fully retract like a cat’s",
      "Are made of bone",
-     "Fall out each year"
+     "Fall out each year",
+     "Are hollow",
+     "Are only on the back feet"
     ],
     "why": "Always half out, they work like running spikes for grip at top speed."
    },
@@ -271,7 +307,9 @@
     "wrong": [
      "To swat flies",
      "To store fat",
-     "To signal danger to cubs"
+     "To signal danger to cubs",
+     "To grip branches",
+     "To keep its back warm"
     ],
     "why": "At full speed the tail works like a rudder, so the cheetah can swerve after a zig-zagging gazelle."
    }
@@ -306,7 +344,9 @@
     "wrong": [
      "About 5%",
      "About a third",
-     "All of them"
+     "All of them",
+     "About 90%",
+     "About 1%"
     ],
     "why": "Each arm can taste, feel and react with surprising independence. Group project energy."
    },
@@ -317,7 +357,9 @@
     "wrong": [
      "A horn",
      "A bony nose",
-     "A fin spine"
+     "A fin spine",
+     "A whisker",
+     "A bone growing from the jaw"
     ],
     "why": "It’s a long spiral tooth, usually the left one, growing through the upper lip."
    },
@@ -328,7 +370,9 @@
     "wrong": [
      "Smelling the soil",
      "Feeling the wind",
-     "Following the scent of other beetles"
+     "Following the scent of other beetles",
+     "Following the Moon only",
+     "Using the Earth's magnetism"
     ],
     "why": "South African experiments found they use the glow of the Milky Way to keep their bearings. In a planetarium, too."
    },
@@ -339,7 +383,9 @@
     "wrong": [
      "Mouth",
      "Tail end",
-     "Tiny gills"
+     "Tiny gills",
+     "Saddle",
+     "Feet"
     ],
     "why": "Oxygen soaks in through damp skin. That’s why worms come up when soil floods: they need air."
    }
@@ -357,7 +403,9 @@
     "wrong": [
      "Red",
      "Green",
-     "Black"
+     "Black",
+     "White",
+     "Purple"
     ],
     "why": "A reflective layer at the back of the eye shifts colour, which helps scatter light in the long winter dark."
    },
@@ -368,7 +416,9 @@
     "wrong": [
      "3",
      "4",
-     "100"
+     "100",
+     "1",
+     "1,000"
     ],
     "why": "We have three. They have about 12, but oddly don’t seem better at telling colours apart."
    },
@@ -379,7 +429,9 @@
     "wrong": [
      "To store water",
      "To taste meat",
-     "To suck up milk"
+     "To suck up milk",
+     "To breathe through",
+     "To drink water faster"
     ],
     "why": "Scoop-shaped tips soak up saliva and deliver it to the skin during grooming."
    },
@@ -390,7 +442,9 @@
     "wrong": [
      "Storing food",
      "Hearing high notes",
-     "Draining tears"
+     "Draining tears",
+     "Holding whiskers",
+     "Smelling"
     ],
     "why": "Henry’s pocket may help with hearing high-pitched sounds or let the ear fold. Science shrugs.",
     "art": "catface",
@@ -405,7 +459,9 @@
     "wrong": [
      "Hooves knocking together",
      "Teeth chattering",
-     "Antlers rattling"
+     "Antlers rattling",
+     "Grinding bones in the knees",
+     "Clicking their tongues"
     ],
     "why": "The clicks help a herd stay together in snowstorms and the dark. Finns and Sámi herders know the sound well."
    }
@@ -423,7 +479,9 @@
     "wrong": [
      "Paddle",
      "Sail",
-     "Parachute"
+     "Parachute",
+     "Kite",
+     "Bicycle pump"
     ],
     "why": "Jet propulsion: suck water into the mantle, squeeze it out of the siphon, shoot off backwards.",
     "art": "octopus",
@@ -438,7 +496,9 @@
     "wrong": [
      "10 hours",
      "10 days",
-     "10 years"
+     "10 years",
+     "10 weeks",
+     "10 minutes"
     ],
     "why": "Tracking showed some swifts flew for about 10 months straight, eating and even napping on the wing."
    },
@@ -449,7 +509,9 @@
     "wrong": [
      "Pelican",
      "Kookaburra",
-     "Pigeon"
+     "Pigeon",
+     "Seagull",
+     "Hummingbird"
     ],
     "why": "In a hunting dive a peregrine is the fastest animal on Earth."
    },
@@ -460,7 +522,9 @@
     "wrong": [
      "Magpie",
      "Galah",
-     "Kookaburra"
+     "Kookaburra",
+     "Rosella",
+     "Lorikeet"
     ],
     "why": "Emus have tiny wings and run instead, up to about 50 km/h."
    },
@@ -471,7 +535,9 @@
     "wrong": [
      "It hangs upside down",
      "It eats all night",
-     "It sleeps in a group hug"
+     "It sleeps in a group hug",
+     "It wraps itself in leaves",
+     "It stops breathing"
     ],
     "why": "In torpor its heart rate and body temperature plunge, then it warms back up by morning."
    }
@@ -489,7 +555,9 @@
     "wrong": [
      "Tiny round dots",
      "Horizontal bars",
-     "Stars"
+     "Stars",
+     "Triangles",
+     "Crosses"
     ],
     "why": "Slits can close down much further than round pupils, handy for an animal that hunts at dawn, dusk and night.",
     "art": "catface",
@@ -504,7 +572,9 @@
     "wrong": [
      "Eyebrows",
      "Webbed toes",
-     "A chin dimple"
+     "A chin dimple",
+     "Belly buttons that glow",
+     "A thumbprint on their tail"
     ],
     "why": "Koala fingerprints are so like human ones that even under a microscope they’re hard to tell apart."
    },
@@ -515,7 +585,9 @@
     "wrong": [
      "Female, and some turn male",
      "Blind",
-     "Without fins"
+     "Without fins",
+     "Without stripes",
+     "Both at once, forever"
     ],
     "why": "The biggest fish in a group is the female. If she disappears, the top male changes to take her place."
    },
@@ -526,7 +598,9 @@
     "wrong": [
      "The mum",
      "Both, taking turns",
-     "Nobody: they float free"
+     "Nobody: they float free",
+     "The grandparents",
+     "A seaweed nest"
     ],
     "why": "Mum puts the eggs in dad’s pouch, and he carries them until the babies pop out."
    },
@@ -537,7 +611,9 @@
     "wrong": [
      "They sneeze constantly",
      "They hide their head in their hump",
-     "They sleep through storms"
+     "They sleep through storms",
+     "They close their ears only",
+     "They tie their tails over their noses"
     ],
     "why": "Slit-like nostrils seal shut, and two rows of long eyelashes guard the eyes."
    }
@@ -555,7 +631,9 @@
     "wrong": [
      "About 4",
      "About 40",
-     "About 400"
+     "About 400",
+     "About 4,000 bones",
+     "About 1 million"
     ],
     "why": "Usually put at around 40,000 muscle units, which is why a trunk can pick up a peanut or rip down a branch.",
     "art": "elephant",
@@ -570,7 +648,9 @@
     "wrong": [
      "In and out of two balloons",
      "Only through the beak",
-     "Through the feathers"
+     "Through the feathers",
+     "Through their bones",
+     "Only when flying"
     ],
     "why": "Air sacs push air one way through stiff lungs, so birds get fresh air on the way in and out."
    },
@@ -581,7 +661,9 @@
     "wrong": [
      "Tree sap stains",
      "Carrot juice",
-     "Rust from river water"
+     "Rust from river water",
+     "Clay from riverbanks",
+     "Too much vitamin C"
     ],
     "why": "Iron makes the enamel tougher, perfect for felling trees."
    },
@@ -592,7 +674,9 @@
     "wrong": [
      "None",
      "2",
-     "8"
+     "8",
+     "100",
+     "4"
     ],
     "why": "Four clusters of six eyes, some of them with lenses. Not bad for an animal without a brain."
    },
@@ -603,7 +687,9 @@
     "wrong": [
      "1 litre",
      "50 litres",
-     "A cupful"
+     "A cupful",
+     "100 litres",
+     "3 litres"
     ],
     "why": "Roughly three US gallons. It scoops, drains the water out, then swallows the fish."
    }
@@ -621,7 +707,9 @@
     "wrong": [
      "Two",
      "Four",
-     "Eight"
+     "Eight",
+     "Six",
+     "Three"
     ],
     "why": "Two compound eyes for seeing and three simple eyes on top for sensing light.",
     "art": "bee",
@@ -636,7 +724,9 @@
     "wrong": [
      "Hum a tune",
      "Leave arrows of wax",
-     "Flash their wings"
+     "Flash their wings",
+     "Leave smelly footprints",
+     "Buzz in Morse code"
     ],
     "why": "The ‘waggle dance’ points the way and shows how far. He shared the 1973 Nobel Prize."
    },
@@ -647,7 +737,9 @@
     "wrong": [
      "Twice",
      "5 times",
-     "500 times"
+     "500 times",
+     "10 times",
+     "2,000 times"
     ],
     "why": "A spare tooth waits under each one, ready to move in."
    },
@@ -658,7 +750,9 @@
     "wrong": [
      "About 10%",
      "About 30%",
-     "About 50%"
+     "About 50%",
+     "About 75%",
+     "About 5%"
     ],
     "why": "They predict where the prey is heading and fly to intercept. Among the best hunters on Earth."
    },
@@ -669,7 +763,9 @@
     "wrong": [
      "White all the way through",
      "Black",
-     "Made of feathers"
+     "Made of feathers",
+     "Pale yellow and solid",
+     "Grey and flat"
     ],
     "why": "The clear hairs scatter light, so the coat looks white. The skin underneath is black."
    }
@@ -687,7 +783,9 @@
     "wrong": [
      "A fly swatter",
      "A snorkel",
-     "A fat store"
+     "A fat store",
+     "A pillow for cubs",
+     "A rudder for swimming"
     ],
     "why": "It helps it balance on steep rock and wraps around its face when it sleeps in the cold."
    },
@@ -698,7 +796,9 @@
     "wrong": [
      "The Alps",
      "The Andes",
-     "The Rockies"
+     "The Rockies",
+     "The Pyrenees",
+     "The Atlas Mountains"
     ],
     "why": "Their blood grabs oxygen extra tightly, so they cope with air that would leave us gasping. Today is International Mountain Day."
    },
@@ -709,7 +809,9 @@
     "wrong": [
      "Metal-hard spikes",
      "Suction cups",
-     "Sticky hair"
+     "Sticky hair",
+     "Fur-covered soles",
+     "Toes that lock like pliers"
     ],
     "why": "The hard rim digs in and the soft pad grips, like a climbing shoe."
    },
@@ -720,7 +822,9 @@
     "wrong": [
      "Beak",
      "Second tongue",
-     "Row of bristles"
+     "Row of bristles",
+     "Set of tusks",
+     "Bony ridge of horn"
     ],
     "why": "Bottom teeth press grass against the tough pad, a bit like a cow."
    },
@@ -731,7 +835,9 @@
     "wrong": [
      "Mouth",
      "Skin spikes",
-     "Tentacle tips"
+     "Tentacle tips",
+     "Ears",
+     "Back"
     ],
     "why": "They pump water in and out of the rear end to feed branching ‘respiratory trees’ inside."
    }
@@ -749,7 +855,9 @@
     "wrong": [
      "Until age 5",
      "Only in winter",
-     "Only after a fight"
+     "Only after a fight",
+     "Until age 20",
+     "Only in males"
     ],
     "why": "Tusks are giant incisor teeth that keep growing, which is why old elephants can have very long ones.",
     "art": "elephant",
@@ -764,7 +872,9 @@
     "wrong": [
      "Coils up in the beak",
      "Folds into the throat",
-     "Sits in a nostril"
+     "Sits in a nostril",
+     "Sits in its stomach",
+     "Hangs out of the beak"
     ],
     "why": "The tongue bones loop round the back of the skull and may help cushion all that hammering."
    },
@@ -775,7 +885,9 @@
     "wrong": [
      "One",
      "Three",
-     "Five"
+     "Five",
+     "Four",
+     "Six"
     ],
     "why": "The only bird with just two toes. The big one has a thick claw and does most of the work."
    },
@@ -786,7 +898,9 @@
     "wrong": [
      "Confuse lions",
      "Keep them cool at night",
-     "Attract mates"
+     "Attract mates",
+     "Hide them in long grass",
+     "Reflect moonlight"
     ],
     "why": "In tests in Kenya and elsewhere, flies struggled to land on stripes. Horses in striped coats got fewer landings too."
    },
@@ -797,7 +911,9 @@
     "wrong": [
      "Inside the shell",
      "On its foot",
-     "It has none"
+     "It has none",
+     "In its eyestalks",
+     "Around its shell rim"
     ],
     "why": "The radula is a rasping ribbon with thousands of microscopic teeth."
    }
@@ -815,7 +931,9 @@
     "wrong": [
      "1%",
      "Half",
-     "Three-quarters"
+     "Three-quarters",
+     "5%",
+     "90%"
     ],
     "why": "Up to around 20 to 25%. Oil is lighter than water, so it works like a built-in float.",
     "art": "shark",
@@ -830,7 +948,9 @@
     "wrong": [
      "Heel",
      "Knuckle",
-     "Thumb"
+     "Thumb",
+     "Fingernail",
+     "Ankle"
     ],
     "why": "Horses walk on the tip of one middle toe. The hoof is a supersized toenail."
    },
@@ -841,7 +961,9 @@
     "wrong": [
      "It changes colour with mood",
      "It’s shed every week",
-     "It glows at night"
+     "It glows at night",
+     "It's made of feathers",
+     "It's bright blue"
     ],
     "why": "Grooves in the hairs hold algae, which may give a greenish camouflage. Sloth fur also grows from belly to back, so rain runs off when they hang upside down."
    },
@@ -852,7 +974,9 @@
     "wrong": [
      "About 6",
      "About 100",
-     "About 500"
+     "About 500",
+     "About 50",
+     "About 12"
     ],
     "why": "Usually 12 a side, in four rows. The top two rows can move independently of the bottom two.",
     "art": "catface",
@@ -867,7 +991,9 @@
     "wrong": [
      "Elytra",
      "Pedipalps",
-     "Spiracles"
+     "Spiracles",
+     "Antennae",
+     "Ocelli"
     ],
     "why": "Halteres beat like tiny gyroscopes and help a fly sense turns. It’s why flies are so hard to swat."
    }
@@ -885,7 +1011,9 @@
     "wrong": [
      "Write messages",
      "Catch fish",
-     "Clean its gills"
+     "Clean its gills",
+     "Signal to friends",
+     "Dye the water to hide eggs"
     ],
     "why": "A dark cloud, sometimes shaped roughly like an octopus, while the real one jets away.",
     "art": "octopus",
@@ -900,7 +1028,9 @@
     "wrong": [
      "One",
      "Two",
-     "Ten"
+     "Ten",
+     "Four",
+     "Six"
     ],
     "why": "Three tiny saw-like jaws, each with rows of teeth."
    },
@@ -911,7 +1041,9 @@
     "wrong": [
      "Unhooks from the skull completely",
      "Is made of rubber",
-     "Folds in three"
+     "Folds in three",
+     "Is made of cartilage only",
+     "Dissolves in saliva"
     ],
     "why": "The two halves aren’t fused at the chin, and stretchy tissue lets them spread wide. They don’t ‘unhinge’."
    },
@@ -922,7 +1054,9 @@
     "wrong": [
      "Cat",
      "Rabbit",
-     "Mouse"
+     "Mouse",
+     "Dog",
+     "Kangaroo"
     ],
     "why": "Big eyes on the sides of the head give horses an almost all-round view."
    },
@@ -933,7 +1067,9 @@
     "wrong": [
      "Only males",
      "Both",
-     "Only babies"
+     "Only babies",
+     "Only young males",
+     "Neither: they only drink nectar"
     ],
     "why": "Females need a meal of blood to make eggs. Males just drink nectar."
    }
@@ -951,7 +1087,9 @@
     "wrong": [
      "Sea spider",
      "Ink fish",
-     "Eight brains"
+     "Eight brains",
+     "Many arms",
+     "Sea snake"
     ],
     "why": "Okto (eight) plus pous (foot). Linguists argue about the plural, too: octopuses is fine."
    },
@@ -962,7 +1100,9 @@
     "wrong": [
      "Big beast",
      "Armoured one",
-     "Mud lover"
+     "Mud lover",
+     "Mud horse",
+     "Grey giant"
     ],
     "why": "Rhino (nose) plus keras (horn)."
    },
@@ -973,7 +1113,9 @@
     "wrong": [
      "Fat pig",
      "Water cow",
-     "Big mouth"
+     "Big mouth",
+     "Swamp elephant",
+     "Horse that sinks"
     ],
     "why": "Hippos (horse) plus potamos (river). Their closest living relatives are actually whales."
    },
@@ -984,7 +1126,9 @@
     "wrong": [
      "Prickly cat",
      "Pointy mouse",
-     "Arrow tree"
+     "Arrow tree",
+     "Spiky rat",
+     "Pine-cone animal"
     ],
     "why": "From Old French porc espin, from Latin for pig and spine."
    },
@@ -995,7 +1139,9 @@
     "wrong": [
      "A horse and a tiger",
      "A deer and a zebra",
-     "A cow and a cheetah"
+     "A cow and a cheetah",
+     "A camel and a lion",
+     "A giraffe and a goat"
     ],
     "why": "Long neck like a camel, spots like a leopard. The name stuck.",
     "art": "giraffe",

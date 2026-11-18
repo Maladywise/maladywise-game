@@ -11,7 +11,9 @@
     "wrong": [
      "Salivary glands",
      "Adrenal glands",
-     "Taste buds"
+     "Taste buds",
+     "Parathyroid glands",
+     "Sebaceous glands"
     ],
     "why": "You have hundreds of them. Swollen neck nodes usually just mean your immune system is busy, which is exactly its job."
    },
@@ -22,7 +24,9 @@
     "wrong": [
      "Spleen",
      "Liver",
-     "Heart"
+     "Heart",
+     "Kidneys",
+     "Lymph nodes"
     ],
     "why": "Red marrow makes billions of new blood cells every day. In adults it’s mostly in flat bones like the pelvis, sternum and skull."
    },
@@ -33,7 +37,9 @@
     "wrong": [
      "Red blood cells",
      "Platelets",
-     "Neutrophils"
+     "Neutrophils",
+     "Eosinophils",
+     "Basophils"
     ],
     "why": "CD4 helper T cells coordinate the immune response. With effective treatment today, most people living with HIV can expect a near-normal lifespan."
    },
@@ -44,7 +50,9 @@
     "wrong": [
      "Bone marrow",
      "Spleen",
-     "Tonsils"
+     "Tonsils",
+     "Lymph nodes",
+     "Liver"
     ],
     "why": "T for thymus. HIV infects CD4 helper T cells; treatment now keeps the count up and the virus undetectable. Today is World AIDS Day."
    },
@@ -55,7 +63,9 @@
     "wrong": [
      "Making bile",
      "Making insulin",
-     "Storing urine"
+     "Storing urine",
+     "Making bile salts",
+     "Storing glycogen"
     ],
     "why": "The spleen recycles worn-out red cells and stores immune cells. You can live without one, but you’ll need some extra vaccines.",
     "art": "gut",
@@ -128,7 +138,9 @@
     "wrong": [
      "About 5 mL",
      "About 500 mL",
-     "About 1 litre"
+     "About 1 litre",
+     "About 20 mL",
+     "About 200 mL"
     ],
     "why": "Stroke volume is usually 60–100 mL; at around 70 beats a minute that’s about 5 litres a minute. Barney Clark lived 112 days on the Jarvik-7 artificial heart from 2 December 1982.",
     "art": "heart",
@@ -184,7 +196,9 @@
     "wrong": [
      "T10",
      "L4–L5",
-     "S2"
+     "S2",
+     "T6",
+     "S4"
     ],
     "why": "Below that, nerve roots run on as the cauda equina, which is why lumbar punctures go lower. Today is International Day of Persons with Disabilities."
    },
@@ -526,7 +540,9 @@
     "wrong": [
      "Soleus",
      "Tibialis anterior",
-     "Fibularis longus"
+     "Fibularis longus",
+     "Tibialis posterior",
+     "Plantaris"
     ],
     "why": "Every squeeze pushes blood back towards the heart through one-way valves. Flex your ankles and walk the aisle on long-haul.",
     "art": "legaxial",
@@ -541,7 +557,9 @@
     "wrong": [
      "Thyroid gland",
      "Pituitary gland",
-     "Adrenal gland"
+     "Adrenal gland",
+     "Hypothalamus",
+     "Thymus"
     ],
     "why": "A pea-sized gland deep in the brain that releases melatonin when it gets dark. Descartes thought it was the seat of the soul."
    },
@@ -552,7 +570,9 @@
     "wrong": [
      "Arteries",
      "Veins",
-     "Arterioles"
+     "Arterioles",
+     "Venules",
+     "Lymphatic vessels"
     ],
     "why": "They’re so narrow that red blood cells squeeze through in single file."
    },
@@ -563,7 +583,9 @@
     "wrong": [
      "Stomach",
      "Middle ear",
-     "Eardrum"
+     "Eardrum",
+     "Cerebellum",
+     "Eustachian tube"
     ],
     "why": "The vestibular system in the inner ear says ‘we’re moving’, your eyes say ‘still cabin’, and your brain responds with motion sickness."
    }
@@ -581,7 +603,9 @@
     "wrong": [
      "Liver",
      "Lungs",
-     "Brain"
+     "Brain",
+     "Heart",
+     "Large intestine"
     ],
     "why": "Around 2 square metres in an adult. The liver is the largest internal organ."
    },
@@ -609,7 +633,9 @@
     "wrong": [
      "Bone",
      "Dentine",
-     "Cartilage"
+     "Cartilage",
+     "Nail",
+     "Cementum"
     ],
     "why": "Tooth enamel is about 96% mineral. It can’t regrow, so be nice to it."
    },
@@ -620,7 +646,9 @@
     "wrong": [
      "Focuses light",
      "Detects colour",
-     "Makes tears"
+     "Makes tears",
+     "Produces aqueous humour",
+     "Protects the retina from UV"
     ],
     "why": "The iris is a ring of muscle that widens or narrows the pupil. Its pattern is so individual that it’s used in ID scanners.",
     "art": "eye",
@@ -635,7 +663,9 @@
     "wrong": [
      "Patellar tendon",
      "Hamstring tendon",
-     "Plantar fascia"
+     "Plantar fascia",
+     "Tibialis anterior tendon",
+     "Quadriceps tendon"
     ],
     "why": "The body’s thickest, strongest tendon, named after the Greek hero who was held by the heel when dipped in the river Styx."
    }
@@ -670,7 +700,9 @@
     "wrong": [
      "Biceps",
      "Trapezius",
-     "Pectoralis major"
+     "Pectoralis major",
+     "Triceps",
+     "Latissimus dorsi"
     ],
     "why": "Aim for the meaty part a few finger-breadths below the bony tip of the shoulder. Too high risks a painful shoulder injury."
    },
@@ -735,7 +767,9 @@
     "wrong": [
      "E. coli",
      "Salmonella",
-     "Campylobacter"
+     "Campylobacter",
+     "Streptococcus pyogenes",
+     "Clostridioides difficile"
     ],
     "why": "Marshall and Robin Warren won the 2005 Nobel Prize. The stomach was meant to be too acidic for bacteria; H. pylori disagreed.",
     "art": "gut",
@@ -763,7 +797,9 @@
     "wrong": [
      "Node of Ranvier",
      "Axon hillock",
-     "Dendrite"
+     "Dendrite",
+     "Myelin sheath",
+     "Axon terminal"
     ],
     "why": "Signals usually cross it as chemical messengers. Eccles shared the prize with Alan Hodgkin and Andrew Huxley."
    },
@@ -791,7 +827,9 @@
     "wrong": [
      "One continuous net of fibres",
      "Hollow tubes carrying fluid",
-     "Fused muscle fibres"
+     "Fused muscle fibres",
+     "Blood vessels",
+     "One giant cell"
     ],
     "why": "He shared it with Camillo Golgi, whose silver stain he used and who still backed the ‘continuous net’ idea. Today is Nobel Prize Day."
    }
@@ -809,7 +847,9 @@
     "wrong": [
      "Bezold–Jarisch reflex",
      "Cushing reflex",
-     "Hering–Breuer reflex"
+     "Hering–Breuer reflex",
+     "Bainbridge reflex",
+     "Diving reflex"
     ],
     "why": "Handy for diverting blood from poorly aired patches of lung, but at altitude it squeezes the whole lot, raising pressure and paving the way for HAPE."
    },
@@ -820,7 +860,9 @@
     "wrong": [
      "Juxtaglomerular cells",
      "Macula densa cells",
-     "Podocytes"
+     "Podocytes",
+     "Proximal tubule cells",
+     "Collecting duct cells"
     ],
     "why": "They sense low oxygen, and EPO rises within hours of arriving up high. The extra red cells take weeks to build up. Juxtaglomerular cells make renin. Today is International Mountain Day."
    },
@@ -831,7 +873,9 @@
     "wrong": [
      "Carotid sinus",
      "Aortic arch baroreceptors",
-     "Central chemoreceptors in the medulla"
+     "Central chemoreceptors in the medulla",
+     "Pulmonary stretch receptors",
+     "Hypothalamic osmoreceptors"
     ],
     "why": "Tiny clusters at the carotid fork with a huge blood flow for their size. The central chemoreceptors mostly track carbon dioxide, not oxygen."
    },
@@ -842,7 +886,9 @@
     "wrong": [
      "C6",
      "T8",
-     "T10–T11"
+     "T10–T11",
+     "C2",
+     "L1"
     ],
     "why": "Level with the sternal angle. An endotracheal tube tip should sit a few centimetres above it.",
     "art": "lungs",
@@ -857,7 +903,9 @@
     "wrong": [
      "Jugular foramen",
      "Foramen ovale",
-     "Superior orbital fissure"
+     "Superior orbital fissure",
+     "Optic canal",
+     "Foramen spinosum"
     ],
     "why": "Herniation through the foramen magnum squashes the brainstem’s breathing centres. That’s why HACE means going down, fast."
    }
@@ -875,7 +923,9 @@
     "wrong": [
      "Red bone marrow cells",
      "Spleen cells",
-     "Lymph node cells"
+     "Lymph node cells",
+     "White blood cells",
+     "Kidney cells"
     ],
     "why": "They hide in the liver for about a week before bursting out into red cells. The RTS,S vaccine, piloted for young children in Kenya, Ghana and Malawi from 2019, targets that early stage."
    },
@@ -886,7 +936,9 @@
     "wrong": [
      "Up under the left armpit",
      "Back towards the left kidney only",
-     "Straight down into the pelvis"
+     "Straight down into the pelvis",
+     "Up into the chest",
+     "Across to the left shoulder"
     ],
     "why": "It grows down and across the abdomen, with a notch you can sometimes feel. You can’t get your hand above it, which helps tell it from a big kidney.",
     "art": "gut",
@@ -1031,7 +1083,9 @@
     "wrong": [
      "About 1 litre",
      "About 10 litres",
-     "About 15 litres"
+     "About 15 litres",
+     "About 2 litres",
+     "About 20 litres"
     ],
     "why": "Roughly 7% of body weight. Over about 12 hours in 1799, George Washington’s doctors removed around 2.4 litres, some 40% of his blood. He died that night."
    },
@@ -1059,7 +1113,9 @@
     "wrong": [
      "Uvula",
      "Soft palate",
-     "Vocal cords"
+     "Vocal cords",
+     "Tongue",
+     "Thyroid cartilage"
     ],
     "why": "George Washington probably died of acute epiglottitis on this day in 1799, after his doctors drained a large share of his blood."
    },
@@ -1070,7 +1126,9 @@
     "wrong": [
      "To the body",
      "To the brain only",
-     "To the liver"
+     "To the liver",
+     "To the kidneys",
+     "To the arms"
     ],
     "why": "The right ventricle sends blood on a short, low-pressure trip to the lungs, so its wall is much thinner than the left’s.",
     "art": "heart",
@@ -1085,7 +1143,9 @@
     "wrong": [
      "Adenoids",
      "Uvula",
-     "Salivary glands"
+     "Salivary glands",
+     "Thyroid lobes",
+     "Lymph nodes of the jaw"
     ],
     "why": "Part of a ring of immune tissue guarding the entrance to your airway and gut. Removing them was once almost a childhood rite of passage."
    }
@@ -1103,7 +1163,9 @@
     "wrong": [
      "Detects light",
      "Controls how much light gets in",
-     "Makes tears"
+     "Makes tears",
+     "Drains fluid from the eye",
+     "Moves the eyeball"
     ],
     "why": "The cornea does most of the bending; the lens adjusts for near or far. L. L. Zamenhof, born today in 1859, was an eye doctor who also invented Esperanto.",
     "art": "eye",
@@ -1118,7 +1180,9 @@
     "wrong": [
      "Lens",
      "Fovea",
-     "Cornea"
+     "Cornea",
+     "Sclera",
+     "Macula"
     ],
     "why": "It’s not a thing, it’s a hole. It looks black because the light that goes in mostly doesn’t come back out."
    },
@@ -1129,7 +1193,9 @@
     "wrong": [
      "Rods",
      "Ganglion cells",
-     "Bipolar cells"
+     "Bipolar cells",
+     "Amacrine cells",
+     "Pigment cells"
     ],
     "why": "About 6 million cones handle colour and detail; around 120 million rods take the night shift in black and white."
    },
@@ -1140,7 +1206,9 @@
     "wrong": [
      "Parotid gland",
      "Thyroid gland",
-     "Pineal gland"
+     "Pineal gland",
+     "Submandibular gland",
+     "Meibomian gland"
     ],
     "why": "It sits above the outer corner of each eye. Tears drain through tiny holes in the inner corner into your nose, which is why crying makes it run."
    },
@@ -1151,7 +1219,9 @@
     "wrong": [
      "Fovea",
      "Pupil",
-     "Iris"
+     "Iris",
+     "Macula",
+     "Lens"
     ],
     "why": "Each eye has one, but your brain fills the gap so neatly that you never notice."
    }
