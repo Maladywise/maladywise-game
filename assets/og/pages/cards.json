@@ -722,8 +722,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "66dd89f2e98b",
-"v": "d946a194",
+"key": "4f599bb516a4",
+"v": "1f4e1a3d",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -754,6 +754,13 @@
 "v": "e0d72653",
 "label": "Deep dive for clinicians · #2",
 "title": "Coeliac disease"
+},
+"deep-dives-hypermobility": {
+"url": "/deep-dives/hypermobility/",
+"key": "852a23c06331",
+"v": "26d4037f",
+"label": "Deep dive for clinicians · #12",
+"title": "Hypermobility (hEDS, HSD): deep dive"
 },
 "deep-dives-me-cfs": {
 "url": "/deep-dives/me-cfs/",
